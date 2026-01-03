@@ -28,16 +28,16 @@ on:
 
   # Scheduled runs (UTC time)
   schedule:
-    # TEST: Run at 15:07 UTC for general blog
-    - cron: '7 15 * * *'
-    # Run at 14:00 UTC (23:00 KST) for tech blog (disabled for now)
+    # Run at 08:00 UTC (17:00 KST) for general blog
+    - cron: '0 8 * * *'
+    # Run at 14:00 UTC (23:00 KST) for tech blog (disabled until configured)
     # - cron: '0 14 * * *'
 
 jobs:
   post-general:
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule' && github.event.schedule == '7 15 * * *'
+      github.event_name == 'schedule' && github.event.schedule == '0 8 * * *'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -105,6 +105,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           if [ -f "data/post_registry.json" ]; then
+            git pull --rebase origin main || true
             git add data/post_registry.json
             git diff --staged --quiet || git commit -m "chore: update post registry [skip ci]"
             git push || echo "Warning: Failed to push registry, but post was created successfully"
@@ -189,6 +190,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           if [ -f "data/post_registry.json" ]; then
+            git pull --rebase origin main || true
             git add data/post_registry.json
             git diff --staged --quiet || git commit -m "chore: update post registry [skip ci]"
             git push || echo "Warning: Failed to push registry, but post was created successfully"

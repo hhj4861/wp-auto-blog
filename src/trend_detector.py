@@ -613,9 +613,12 @@ class TrendDetector:
                     if current_category:
                         clean_category = re.sub(r'\s*\([^)]*\)', '', current_category).strip()
 
+                    # 한국어 제목에서 키워드 재추출 (영어 원본 키워드 대신)
+                    korean_keywords = self._extract_keywords(current_korean_title)
+
                     new_topic = Topic(
                         topic=current_korean_title,
-                        keywords=matched_orig.keywords,
+                        keywords=korean_keywords if korean_keywords else matched_orig.keywords,
                         source=matched_orig.source,
                         score=matched_orig.score + 10,
                         suggested_title=current_korean_title,

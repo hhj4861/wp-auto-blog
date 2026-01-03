@@ -240,8 +240,14 @@ class WordPressClient:
         tag_ids = self._get_or_create_tags(all_tags)
 
         # Create post with SEO optimization
-        # Focus keyword: 첫 번째 키워드 사용
-        focus_keyword = content.keywords[0] if content.keywords else ""
+        # Focus keyphrase: 상위 2개 키워드를 조합하여 구문 생성 (Yoast SEO 최적화)
+        # 예: ["스탠딩데스크", "추천"] → "스탠딩데스크 추천"
+        if content.keywords and len(content.keywords) >= 2:
+            focus_keyword = f"{content.keywords[0]} {content.keywords[1]}"
+        elif content.keywords:
+            focus_keyword = content.keywords[0]
+        else:
+            focus_keyword = ""
 
         # Excerpt: meta_description 사용 (카드에 표시될 간결한 요약)
         excerpt = content.meta_description

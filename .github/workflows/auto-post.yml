@@ -28,16 +28,16 @@ on:
 
   # Scheduled runs (UTC time)
   schedule:
-    # Run at 08:00 UTC (17:00 KST) for general blog
-    - cron: '0 8 * * *'
-    # Run at 14:00 UTC (23:00 KST) for tech blog
-    - cron: '0 14 * * *'
+    # TEST: Run at 15:07 UTC for general blog
+    - cron: '7 15 * * *'
+    # Run at 14:00 UTC (23:00 KST) for tech blog (disabled for now)
+    # - cron: '0 14 * * *'
 
 jobs:
   post-general:
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule' && github.event.schedule == '0 8 * * *'
+      github.event_name == 'schedule' && github.event.schedule == '7 15 * * *'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 

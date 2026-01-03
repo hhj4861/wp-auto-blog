@@ -74,6 +74,15 @@
       ],
       "category": "테크",
       "created_at": "2026-01-03T15:50:45.234999"
+    },
+    {
+      "topic": "2026년 개발자 생산성 도구, FracturedJson으로 JSON 가독성 3배 높이기",
+      "title": "2026년 개발자 생산성 도구",
+      "keywords": [
+        "json"
+      ],
+      "category": "테크",
+      "created_at": "2026-01-03T16:01:19.122895"
     }
   ],
   "tech": []

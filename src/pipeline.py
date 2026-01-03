@@ -265,6 +265,7 @@ class BlogPipeline:
                 keywords=topic.keywords,
                 content_type=self.config.content_type,
                 category=category,
+                mode=self.config.mode,
             )
 
             logger.debug(f"Generated content: {content.word_count} words")

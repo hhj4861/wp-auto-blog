@@ -798,6 +798,7 @@ Output only the HTML content, no markdown.
         keywords: list[str],
         content_type: ContentType,
         category: Optional[str] = None,
+        mode: str = "general",
     ) -> GeneratedContent:
         """Generate blog content for a topic.
 
@@ -806,6 +807,7 @@ Output only the HTML content, no markdown.
             keywords: Target SEO keywords
             content_type: Type of content to generate
             category: Optional category for context-aware generation
+            mode: Blog mode (general or tech)
 
         Returns:
             GeneratedContent object with the generated post
@@ -833,8 +835,8 @@ Output only the HTML content, no markdown.
 
         # Extract title and remove H1 from content (WordPress adds H1 automatically)
         title = self._extract_title(html) or topic
-        # 제목 길이 체크 (30자 초과시 경고 + 백업 축약)
-        if len(title) > 30:
+        # 제목 길이 체크: tech 모드는 전체 제목 유지, general 모드만 30자로 축약
+        if mode != "tech" and len(title) > 30:
             logger.warning(f"Title too long ({len(title)} chars): {title}")
             title = self._shorten_title(title, max_length=30)
         html = self._remove_h1(html)

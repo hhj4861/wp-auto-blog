@@ -249,14 +249,8 @@ class WordPressClient:
         tag_ids = self._get_or_create_tags(all_tags)
 
         # Create post with SEO optimization
-        # Focus keyphrase: 상위 2개 키워드를 조합하여 구문 생성 (Yoast SEO 최적화)
-        # 예: ["스탠딩데스크", "추천"] → "스탠딩데스크 추천"
-        if content.keywords and len(content.keywords) >= 2:
-            focus_keyword = f"{content.keywords[0]} {content.keywords[1]}"
-        elif content.keywords:
-            focus_keyword = content.keywords[0]
-        else:
-            focus_keyword = ""
+        # Focus keyphrase: VS 비교글은 제목에서 추출, 일반글은 키워드 조합
+        focus_keyword = self._generate_focus_keyphrase(content.title, content.keywords)
 
         # Excerpt: 카드에 표시될 요약 (meta_description보다 길게)
         # meta_description은 SEO용 150-160자, excerpt는 카드 표시용 300자
@@ -544,6 +538,28 @@ class WordPressClient:
             result = hero_html + result
 
         return result
+
+    def _generate_focus_keyphrase(self, title: str, keywords: list[str]) -> str:
+        """Generate focus keyphrase for Yoast SEO.
+
+        Args:
+            title: Post title
+            keywords: List of keywords
+
+        Returns:
+            Focus keyphrase string
+        """
+        # VS 비교글: 제목에서 "A vs B vs C" 패턴 추출
+        vs_match = re.search(r'^([A-Za-z0-9]+(?:\s+vs\s+[A-Za-z0-9]+)+)', title, re.IGNORECASE)
+        if vs_match:
+            return vs_match.group(1).strip()
+
+        # 일반글: 키워드 조합
+        if keywords and len(keywords) >= 2:
+            return f"{keywords[0]} {keywords[1]}"
+        elif keywords:
+            return keywords[0]
+        return ""
 
     def _prepare_excerpt(self, html: str) -> str:
         """Prepare excerpt from content.

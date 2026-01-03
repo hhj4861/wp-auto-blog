@@ -19,7 +19,7 @@ on:
       publish:
         description: 'Publish immediately'
         required: false
-        default: false
+        default: true
         type: boolean
       category:
         description: 'Filter by category (optional)'
@@ -172,12 +172,12 @@ jobs:
           # Uses Claude Agent SDK (claude_agent_query) which reads ANTHROPIC_API_KEY
           CMD="python -m src.main --mode tech --max-posts 1"
 
-          # Add publish flag if requested
-          if [ "${{ github.event.inputs.publish }}" == "true" ]; then
+          # Add publish flag: always publish for scheduled runs, or if manually requested
+          if [ "${{ github.event_name }}" == "schedule" ] || [ "${{ github.event.inputs.publish }}" == "true" ]; then
             CMD="$CMD --auto-publish"
           fi
 
-          # Add category filter if specified
+          # Add category filter if specified (manual trigger only)
           if [ -n "${{ github.event.inputs.category }}" ]; then
             CMD="$CMD --category '${{ github.event.inputs.category }}'"
           fi

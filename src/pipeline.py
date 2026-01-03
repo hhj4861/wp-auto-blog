@@ -337,7 +337,7 @@ class BlogPipeline:
 
                 if union:
                     similarity = len(intersection) / len(union)
-                    if similarity >= 0.5:  # 50% similarity threshold
+                    if similarity >= 0.3:  # 30% similarity threshold
                         logger.warning(
                             f"Skipping duplicate topic: '{topic.topic}' "
                             f"(similar to '{existing['title']}', similarity: {similarity:.2f})"

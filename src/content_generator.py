@@ -508,23 +508,28 @@ GENERAL RULES:
   </p>
 </div>
 
-2. COMPARISON TABLE (clean, readable):
-<table style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95em;">
+2. COMPARISON TABLE (MUST wrap in scrollable div for mobile!):
+<div style="overflow-x: auto; margin: 24px 0;">
+<table style="width: 100%; min-width: 500px; border-collapse: collapse; font-size: 0.95em;">
   <thead>
     <tr style="background: #1e3a5f;">
-      <th style="padding: 16px; color: #00d9ff; text-align: left;">Feature</th>
-      <th style="padding: 16px; color: #00d9ff; text-align: center;">Tool A</th>
-      <th style="padding: 16px; color: #00d9ff; text-align: center;">Tool B</th>
+      <th style="padding: 12px; color: #00d9ff; text-align: left; white-space: nowrap;">Feature</th>
+      <th style="padding: 12px; color: #00d9ff; text-align: center; white-space: nowrap;">Tool A</th>
+      <th style="padding: 12px; color: #00d9ff; text-align: center; white-space: nowrap;">Tool B</th>
+      <th style="padding: 12px; color: #00d9ff; text-align: center; white-space: nowrap;">Winner</th>
     </tr>
   </thead>
   <tbody>
     <tr style="background: #1a1a2e;">
-      <td style="padding: 14px; border-bottom: 1px solid #333; color: #e8e8e8;">Price</td>
-      <td style="padding: 14px; border-bottom: 1px solid #333; text-align: center; color: #e8e8e8;">$X/mo</td>
-      <td style="padding: 14px; border-bottom: 1px solid #333; text-align: center; color: #e8e8e8;">$Y/mo ✓</td>
+      <td style="padding: 10px; border-bottom: 1px solid #333; color: #e8e8e8;">Price</td>
+      <td style="padding: 10px; border-bottom: 1px solid #333; text-align: center; color: #e8e8e8;">$X/mo</td>
+      <td style="padding: 10px; border-bottom: 1px solid #333; text-align: center; color: #e8e8e8;">$Y/mo</td>
+      <td style="padding: 10px; border-bottom: 1px solid #333; text-align: center; color: #00d9ff;">Tool B ✓</td>
     </tr>
   </tbody>
 </table>
+</div>
+CRITICAL: ALL tables MUST be wrapped in <div style="overflow-x: auto;"> for mobile scroll!
 
 3. WINNER INDICATOR (simple, not colorful badges):
 Use ✓ symbol next to winner, or: <span style="color: #00d9ff; font-weight: 600;">✓ Winner</span>

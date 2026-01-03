@@ -474,7 +474,11 @@ IMPORTANT: Do NOT use CSS grid layouts (display: grid). They break on WordPress.
 === YOAST SEO OPTIMIZATION (CRITICAL!) ===
 1. **Section Length**: MAX 300 WORDS per H2 section! If longer, add H3 subheadings.
 2. **Keyphrase in H2/H3**: Include main keyphrase (e.g., "Vercel vs Netlify") or synonyms in at least 30% of subheadings.
-3. **Internal Links**: Add 2-3 internal links like: <a href="/category/saas-reviews/">See more SaaS reviews</a>
+3. **Internal Links**: Add 2-3 internal links to REAL categories:
+   - <a href="/category/ai-tools/">AI Tools</a>
+   - <a href="/category/dev-productivity/">Dev Productivity</a>
+   - <a href="/category/saas-reviews/">SaaS Reviews</a>
+   Example: "Want more comparisons? Check out our <a href=\"/category/dev-productivity/\">Dev Productivity</a> guides."
 4. **Meta Description**: MUST include keyphrase AND be 150-160 characters.
 5. **SEO Title**: Keep under 60 characters (shorter is better for mobile).
 

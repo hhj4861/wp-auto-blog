@@ -566,9 +566,11 @@ class TrendDetector:
 
 각 토픽에 대해 다음 형식으로 답변:
 [순위]. [토픽제목]
-- 카테고리: [생산성/리뷰/테크/비즈니스/건강]
+- 카테고리: [하나만 선택: 생산성 | 리뷰 | 테크 | 비즈니스 | 건강]
 - 한국어 제목 제안: [SEO 최적화된 한국어 제목]
 - 추천 이유: [1줄 설명]
+
+중요: 카테고리는 반드시 하나만 선택! "생산성/테크" 같은 복합 카테고리 금지.
 
 ## 한국어 제목 작성 규칙 (구글 SEO 최적화)
 
@@ -662,11 +664,13 @@ From the topics above, recommend 5 topics suitable for BytePulse.io.
 
 Format your response EXACTLY like this:
 [Rank]. [Original Topic]
-- Category: [AI Tools/Dev Productivity/SaaS Reviews]
-- Suggested Title: [SEO-optimized ENGLISH title]
+- Category: [Pick ONE: AI Tools | Dev Productivity | SaaS Reviews]
+- Suggested Title: [SEO-optimized ENGLISH title under 60 chars]
 - Content Type: [VS Comparison/Migration Guide/Tool Review]
 - Monetization: [Affiliate opportunity or AdSense potential]
 - Reason: [1-line explanation]
+
+IMPORTANT: Category must be EXACTLY ONE of: "AI Tools", "Dev Productivity", or "SaaS Reviews". Do NOT combine them.
 
 ## English Title Rules (Google SEO Optimized)
 - Include year (2026) for freshness

@@ -10,14 +10,19 @@ FR-001: Trend Detection
 
 from __future__ import annotations
 
+import json
 import os
 import re
 from dataclasses import dataclass, field
 from enum import Enum
+from pathlib import Path
 from typing import Optional
 
 import requests
 from loguru import logger
+
+# Post registry path for duplicate detection
+POST_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "post_registry.json"
 
 try:
     from pytrends.request import TrendReq
@@ -433,6 +438,34 @@ class TrendDetector:
             logger.error(f"LLM analysis failed: {e}, using raw topics")
             return raw_topics
 
+    def _load_existing_posts(self) -> list[str]:
+        """Load existing post titles from registry for duplicate detection.
+
+        Returns:
+            List of existing post titles
+        """
+        if not POST_REGISTRY_PATH.exists():
+            return []
+
+        try:
+            with open(POST_REGISTRY_PATH, "r", encoding="utf-8") as f:
+                registry = json.load(f)
+
+            existing_titles = []
+            for mode_posts in registry.values():
+                for post in mode_posts:
+                    title = post.get("title", "")
+                    topic = post.get("topic", "")
+                    if title:
+                        existing_titles.append(title)
+                    if topic and topic != title:
+                        existing_titles.append(topic)
+
+            return existing_titles
+        except Exception as e:
+            logger.warning(f"Failed to load existing posts: {e}")
+            return []
+
     def _analyze_topics_with_llm(self, topics: list[Topic]) -> list[Topic]:
         """Use LLM to analyze and prioritize topics.
 
@@ -448,7 +481,25 @@ class TrendDetector:
             for i, t in enumerate(topics[:20])  # Max 20 topics
         ])
 
+        # Load existing posts for duplicate detection
+        existing_posts = self._load_existing_posts()
+        existing_posts_section = ""
+        if existing_posts:
+            existing_list = "\n".join([f"- {title}" for title in existing_posts[:20]])
+            existing_posts_section = f"""
+## ⚠️ 이미 발행된 포스트 (중복 제외 필수!)
+다음 주제와 **의미적으로 유사한 토픽은 절대 추천하지 마세요**:
+{existing_list}
+
+예시:
+- "POSSE 전략" ≈ "내 사이트 우선 발행" ≈ "콘텐츠 신디케이션" → 중복!
+- "텍스트 가계부" ≈ "메모장 가계부" ≈ "플레인텍스트 재무관리" → 중복!
+- "스탠딩데스크 추천" ≈ "스탠딩데스크 비교" ≈ "서서 일하기" → 중복!
+
+"""
+
         prompt = f"""당신은 TrendPulse 블로그의 콘텐츠 전략가입니다.
+{existing_posts_section}
 
 ## TrendPulse 컨셉
 "더 나은 나를 위한 트렌드와 도구들"

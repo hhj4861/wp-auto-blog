@@ -27,11 +27,12 @@ on:
         type: string
 
   # Scheduled runs (UTC time) - 하루 2회, 수익 우선순위 카테고리 자동 선택
+  # GitHub Actions 지연 고려하여 30분 앞당김
   schedule:
-    # 오전: 00:00 UTC (09:00 KST)
-    - cron: '0 0 * * *'
-    # 오후: 12:00 UTC (21:00 KST)
-    - cron: '0 12 * * *'
+    # 오전: 23:30 UTC (08:30 KST) → 실제 ~09:00 KST
+    - cron: '30 23 * * *'
+    # 오후: 11:30 UTC (20:30 KST) → 실제 ~21:00 KST
+    - cron: '30 11 * * *'
 
 jobs:
   post-general:

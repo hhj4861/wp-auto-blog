@@ -304,6 +304,19 @@ class WordPressClient:
             )
 
             logger.info(f"Post created: {created_post.url}")
+
+            # Yoast SEO 분석 트리거를 위해 재저장 (PUT 요청)
+            try:
+                requests.put(
+                    f"{self._api_base}/posts/{created_post.id}",
+                    headers=self._get_auth_headers(),
+                    json={"id": created_post.id},
+                    timeout=10,
+                )
+                logger.debug("Triggered Yoast SEO analysis via re-save")
+            except Exception as e:
+                logger.warning(f"Failed to trigger Yoast analysis: {e}")
+
             return created_post
 
         except Exception as e:

@@ -28,8 +28,8 @@ on:
 
   # Scheduled runs (UTC time)
   schedule:
-    # Run at 08:00 UTC (17:00 KST) for general blog
-    - cron: '0 8 * * *'
+    # TEST: Run at 15:15 UTC for general blog
+    - cron: '15 15 * * *'
     # Run at 14:00 UTC (23:00 KST) for tech blog (disabled until configured)
     # - cron: '0 14 * * *'
 
@@ -37,7 +37,7 @@ jobs:
   post-general:
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule' && github.event.schedule == '0 8 * * *'
+      github.event_name == 'schedule' && github.event.schedule == '15 15 * * *'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -82,15 +82,14 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
           # Build command with optional flags
-          # Uses Claude Agent SDK (claude_agent_query) which reads ANTHROPIC_API_KEY
           CMD="python -m src.main --mode general --max-posts 1"
 
-          # Add publish flag if requested
-          if [ "${{ github.event.inputs.publish }}" == "true" ]; then
+          # Add publish flag: always publish for scheduled runs, or if manually requested
+          if [ "${{ github.event_name }}" == "schedule" ] || [ "${{ github.event.inputs.publish }}" == "true" ]; then
             CMD="$CMD --auto-publish"
           fi
 
-          # Add category filter if specified
+          # Add category filter if specified (manual trigger only)
           if [ -n "${{ github.event.inputs.category }}" ]; then
             CMD="$CMD --category '${{ github.event.inputs.category }}'"
           fi

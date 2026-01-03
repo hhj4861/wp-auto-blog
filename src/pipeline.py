@@ -5,8 +5,11 @@ Coordinates trend detection, content generation, image fetching, and publishing.
 
 from __future__ import annotations
 
+import json
+import re
 from dataclasses import dataclass, field
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 from loguru import logger
@@ -15,6 +18,10 @@ from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
+
+
+# Post registry file path
+POST_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "post_registry.json"
 
 
 @dataclass
@@ -27,6 +34,7 @@ class PipelineConfig:
         auto_publish: Whether to publish immediately (vs draft)
         dry_run: If True, don't actually publish
         category: Default category for posts
+        mode: Blog mode - 'tech' or 'general' for WordPress site selection
     """
 
     max_posts_per_run: int = 3
@@ -34,6 +42,8 @@ class PipelineConfig:
     auto_publish: bool = False
     dry_run: bool = False
     category: Optional[str] = None
+    mode: str = "general"  # 'tech' for bytepulse.io, 'general' for trendpulse.blog
+    use_llm_topics: bool = True  # Use LLM to analyze and prioritize topics
 
     # Sub-configs (optional)
     trend_config: Optional[TrendConfig] = None
@@ -95,7 +105,13 @@ class BlogPipeline:
         self.trend_detector = TrendDetector(config=self.config.trend_config)
         self.content_generator = ContentGenerator(config=self.config.content_config)
         self.image_fetcher = ImageFetcher(config=self.config.image_config)
-        self.wp_client = WordPressClient()
+
+        # Only initialize WordPress client if not in dry-run mode
+        if not self.config.dry_run:
+            wp_config = WPConfig.from_env(mode=self.config.mode)
+            self.wp_client = WordPressClient(config=wp_config)
+        else:
+            self.wp_client = None  # type: ignore
 
         logger.info("BlogPipeline initialized")
 
@@ -108,14 +124,37 @@ class BlogPipeline:
         logger.info("Starting pipeline run...")
         results: list[PipelineResult] = []
 
-        # Step 1: Collect trending topics
-        topics = self.trend_detector.collect()
+        # Step 1: Collect trending topics (optionally with LLM analysis)
+        if self.config.use_llm_topics:
+            logger.info("Using LLM-based topic analysis...")
+            topics = self.trend_detector.collect_with_llm(use_llm=True)
+        else:
+            topics = self.trend_detector.collect()
 
         if not topics:
             logger.warning("No trending topics found")
             return results
 
         logger.info(f"Found {len(topics)} topics to process")
+
+        # Filter by category if specified
+        if self.config.category:
+            filtered_topics = [
+                t for t in topics
+                if t.category == self.config.category
+            ]
+            if filtered_topics:
+                logger.info(f"Filtered to {len(filtered_topics)} topics matching category: {self.config.category}")
+                topics = filtered_topics
+            else:
+                logger.warning(f"No topics match category '{self.config.category}', using all topics")
+
+        # Filter out duplicate topics using local registry
+        topics = self._filter_duplicates(topics)
+
+        if not topics:
+            logger.warning("No topics remaining after duplicate filtering")
+            return results
 
         # Limit to max_posts_per_run
         topics_to_process = topics[: self.config.max_posts_per_run]
@@ -145,17 +184,35 @@ class BlogPipeline:
         logger.info(f"Processing topic: {topic.topic}")
 
         try:
-            # Generate content
+            # Category priority: CLI flag > LLM analysis > auto-detect
+            category = self.config.category
+            if not category and topic.category:
+                # Use LLM-analyzed category (more accurate)
+                category = topic.category
+                logger.info(f"Using LLM-analyzed category: {category}")
+            elif not category:
+                # Fallback to auto-detect
+                category = TrendDetector.detect_category(
+                    topic=topic.topic,
+                    mode=self.config.mode,
+                )
+                logger.info(f"Auto-detected category: {category}")
+
+            # Generate content with category context
             content = self.content_generator.generate(
                 topic=topic.topic,
                 keywords=topic.keywords,
                 content_type=self.config.content_type,
+                category=category,
             )
 
             logger.debug(f"Generated content: {content.word_count} words")
 
-            # Fetch images
-            images = self.image_fetcher.fetch(keywords=topic.keywords)
+            # Fetch images - pass topic as fallback for Korean topics
+            images = self.image_fetcher.fetch(
+                keywords=topic.keywords,
+                topic=topic.topic,
+            )
             logger.debug(f"Fetched {len(images)} images")
 
             # Create post (or simulate in dry run)
@@ -173,10 +230,18 @@ class BlogPipeline:
                     content=content,
                     images=images,
                     status=status,
-                    category=self.config.category,
+                    category=category,
                 )
 
             duration = (datetime.now() - start_time).total_seconds()
+
+            # Save to local registry for duplicate detection
+            self._save_to_registry(
+                topic=topic.topic,
+                title=content.title,
+                keywords=topic.keywords,
+                category=category or "",
+            )
 
             return PipelineResult(
                 topic=topic.topic,
@@ -225,3 +290,156 @@ class BlogPipeline:
         )
 
         return self._process_topic(topic_obj)
+
+    def _filter_duplicates(self, topics: list[Topic]) -> list[Topic]:
+        """Filter out topics that are similar to previously published posts.
+
+        Uses local JSON registry instead of WordPress API for efficiency.
+
+        Args:
+            topics: List of topics to filter
+
+        Returns:
+            Filtered list of topics
+        """
+        # Load existing posts from local registry
+        registry = self._load_post_registry()
+        mode_posts = registry.get(self.config.mode, [])
+
+        if not mode_posts:
+            logger.info(f"No existing posts in registry for mode '{self.config.mode}', skipping duplicate check")
+            return topics
+
+        logger.info(f"Checking against {len(mode_posts)} existing posts in registry")
+
+        # Extract keywords from existing posts
+        existing_keywords_list = []
+        for post in mode_posts:
+            keywords = self._extract_keywords(post.get("title", "") + " " + post.get("topic", ""))
+            existing_keywords_list.append({
+                "title": post.get("title", ""),
+                "topic": post.get("topic", ""),
+                "keywords": set(keywords),
+            })
+
+        filtered_topics = []
+        for topic in topics:
+            topic_words = set(self._extract_keywords(topic.topic))
+
+            is_duplicate = False
+            for existing in existing_keywords_list:
+                if not topic_words or not existing["keywords"]:
+                    continue
+
+                # Calculate Jaccard similarity
+                intersection = topic_words & existing["keywords"]
+                union = topic_words | existing["keywords"]
+
+                if union:
+                    similarity = len(intersection) / len(union)
+                    if similarity >= 0.5:  # 50% similarity threshold
+                        logger.warning(
+                            f"Skipping duplicate topic: '{topic.topic}' "
+                            f"(similar to '{existing['title']}', similarity: {similarity:.2f})"
+                        )
+                        is_duplicate = True
+                        break
+
+            if not is_duplicate:
+                filtered_topics.append(topic)
+
+        skipped_count = len(topics) - len(filtered_topics)
+        if skipped_count > 0:
+            logger.info(f"Filtered out {skipped_count} duplicate topics, {len(filtered_topics)} remaining")
+
+        return filtered_topics
+
+    def _load_post_registry(self) -> dict:
+        """Load the post registry from JSON file.
+
+        Returns:
+            Dictionary with mode as key and list of posts as value
+        """
+        if not POST_REGISTRY_PATH.exists():
+            return {}
+
+        try:
+            with open(POST_REGISTRY_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            logger.warning(f"Failed to load post registry: {e}")
+            return {}
+
+    def _save_to_registry(self, topic: str, title: str, keywords: list[str], category: str) -> None:
+        """Save a published post to the local registry.
+
+        Args:
+            topic: Original topic
+            title: Published post title
+            keywords: Keywords used
+            category: Post category
+        """
+        # Ensure directory exists
+        POST_REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+        # Load existing registry
+        registry = self._load_post_registry()
+
+        # Initialize mode list if not exists
+        if self.config.mode not in registry:
+            registry[self.config.mode] = []
+
+        # Add new post entry
+        registry[self.config.mode].append({
+            "topic": topic,
+            "title": title,
+            "keywords": keywords,
+            "category": category,
+            "created_at": datetime.now().isoformat(),
+        })
+
+        # Save registry
+        try:
+            with open(POST_REGISTRY_PATH, "w", encoding="utf-8") as f:
+                json.dump(registry, f, ensure_ascii=False, indent=2)
+            logger.info(f"Saved post to registry: {title}")
+        except Exception as e:
+            logger.error(f"Failed to save post registry: {e}")
+
+    @staticmethod
+    def _extract_keywords(text: str) -> list[str]:
+        """Extract keywords from text for similarity comparison.
+
+        Args:
+            text: Text to extract keywords from
+
+        Returns:
+            List of lowercase keywords
+        """
+        # Common stopwords to ignore
+        stopwords = {
+            # Korean
+            "의", "를", "을", "이", "가", "에", "와", "과", "으로", "로", "에서",
+            "하는", "한", "할", "된", "되는", "있는", "없는", "위한", "통한",
+            "대한", "관한", "따른", "같은", "다른", "모든", "어떤",
+            # English
+            "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
+            "of", "with", "by", "from", "is", "are", "was", "were", "be", "been",
+            "being", "have", "has", "had", "do", "does", "did", "will", "would",
+            "could", "should", "may", "might", "must", "can", "this", "that",
+            "these", "those", "what", "which", "who", "how", "why", "when", "where",
+            # Common words
+            "top", "best", "review", "guide", "tips", "ways", "things",
+            "2024", "2025", "2026",
+        }
+
+        # Remove special characters and split
+        words = re.sub(r"[^\w\s가-힣]", " ", text.lower()).split()
+
+        # Filter short words and stopwords
+        keywords = [
+            w for w in words
+            if len(w) >= 2 and w not in stopwords
+        ]
+
+        return keywords

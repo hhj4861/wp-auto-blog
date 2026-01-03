@@ -67,7 +67,7 @@ class ImageConfig:
         orientation: Preferred orientation (landscape, portrait, squarish)
     """
 
-    images_per_post: int = 4
+    images_per_post: int = 8  # More images for image-centric posts
     min_width: int = 1200
     min_height: int = 800
     primary_source: ImageSource = ImageSource.UNSPLASH
@@ -97,21 +97,66 @@ class ImageFetcher:
         self._unsplash_key = os.getenv("UNSPLASH_ACCESS_KEY")
         self._pexels_key = os.getenv("PEXELS_API_KEY")
 
-    def fetch(self, keywords: list[str]) -> list[FetchedImage]:
+    def fetch(
+        self,
+        keywords: list[str],
+        topic: Optional[str] = None,
+    ) -> list[FetchedImage]:
         """Fetch images for given keywords.
 
         Args:
             keywords: List of search keywords
+            topic: Optional topic string as fallback for image search
 
         Returns:
             List of FetchedImage objects
         """
-        logger.info(f"Fetching images for keywords: {keywords}")
+        logger.info(f"Fetching images for keywords: {keywords}, topic: {topic}")
 
         all_images: list[FetchedImage] = []
 
-        # Build search query
-        query = " ".join(keywords[:3])  # Use first 3 keywords
+        # Build search query - use keywords or fallback to topic
+        if keywords:
+            query = " ".join(keywords[:3])  # Use first 3 keywords
+        elif topic:
+            # Extract English words from topic for image search
+            import re
+            english_words = re.findall(r"[a-zA-Z]+", topic)
+            if english_words:
+                query = " ".join(english_words[:3])
+            else:
+                # Translate common Korean terms to English for image search
+                korean_to_english = {
+                    "다이어트": "diet food healthy",
+                    "식단": "meal plan food",
+                    "홈오피스": "home office workspace",
+                    "인테리어": "interior design",
+                    "생산성": "productivity work",
+                    "앱": "mobile app technology",
+                    "트렌드": "trend modern",
+                    "건강": "health wellness",
+                    "운동": "exercise fitness",
+                    "요리": "cooking food",
+                    "여행": "travel vacation",
+                    "패션": "fashion style",
+                    "뷰티": "beauty cosmetics",
+                    "테크": "technology gadget",
+                    "금융": "finance money",
+                    "부동산": "real estate home",
+                    "자기계발": "self improvement",
+                    "독서": "reading books",
+                    "음악": "music listening",
+                    "영화": "movie cinema",
+                }
+                query_parts = []
+                for kr, en in korean_to_english.items():
+                    if kr in topic:
+                        query_parts.append(en)
+                query = " ".join(query_parts[:2]) if query_parts else "lifestyle modern"
+        else:
+            query = "lifestyle modern"
+
+        logger.info(f"Image search query: {query}")
 
         # Try primary source first
         if self.config.primary_source == ImageSource.UNSPLASH:

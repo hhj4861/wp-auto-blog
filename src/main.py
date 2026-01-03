@@ -2,17 +2,20 @@
 """Main entry point for wp-auto-blog pipeline.
 
 Usage:
-    # Run full pipeline (detect trends, generate, publish as draft)
-    python -m src.main
+    # Run full pipeline for general blog (trendpulse.blog)
+    python -m src.main --mode general
+
+    # Run full pipeline for tech blog (bytepulse.io)
+    python -m src.main --mode tech
 
     # Run with specific topic
-    python -m src.main --topic "Claude 3.5 Sonnet Review"
+    python -m src.main --mode tech --topic "Claude 3.5 Sonnet Review"
 
     # Dry run (no actual publishing)
-    python -m src.main --dry-run
+    python -m src.main --mode general --dry-run
 
     # Auto-publish (not recommended initially)
-    python -m src.main --auto-publish
+    python -m src.main --mode general --auto-publish
 """
 
 import argparse
@@ -23,7 +26,8 @@ from dotenv import load_dotenv
 from loguru import logger
 
 from src.pipeline import BlogPipeline, PipelineConfig
-from src.content_generator import ContentType
+from src.content_generator import ContentType, ContentConfig
+from src.trend_detector import TrendConfig, TrendMode
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -61,6 +65,14 @@ def parse_args() -> argparse.Namespace:
         description="WordPress Auto Blog Pipeline",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
+    )
+
+    parser.add_argument(
+        "--mode",
+        type=str,
+        choices=["tech", "general"],
+        required=True,
+        help="Blog mode: 'tech' for bytepulse.io, 'general' for trendpulse.blog",
     )
 
     parser.add_argument(
@@ -115,6 +127,18 @@ def parse_args() -> argparse.Namespace:
         help="Enable verbose/debug output",
     )
 
+    parser.add_argument(
+        "--use-api",
+        action="store_true",
+        help="Use Anthropic API instead of Claude CLI (for server deployment)",
+    )
+
+    parser.add_argument(
+        "--no-llm-topics",
+        action="store_true",
+        help="Disable LLM-based topic analysis (use raw trending topics)",
+    )
+
     return parser.parse_args()
 
 
@@ -133,8 +157,15 @@ def main() -> int:
     # Setup logging
     setup_logging(verbose=args.verbose)
 
+    # Mode-specific site info
+    site_info = {
+        "tech": "bytepulse.io (Tech)",
+        "general": "trendpulse.blog (General)",
+    }
+
     logger.info("=" * 50)
     logger.info("WordPress Auto Blog Pipeline")
+    logger.info(f"Mode: {args.mode.upper()} -> {site_info[args.mode]}")
     logger.info("=" * 50)
 
     # Map content type string to enum
@@ -146,6 +177,27 @@ def main() -> int:
         "news": ContentType.NEWS,
     }
 
+    # Map mode to TrendMode
+    trend_mode_map = {
+        "tech": TrendMode.TECH,
+        "general": TrendMode.GENERAL,
+    }
+
+    # Create trend config based on mode
+    trend_config = TrendConfig(mode=trend_mode_map[args.mode])
+
+    # Map mode to language: general (trendpulse.blog) = Korean, tech (bytepulse.io) = English
+    language_map = {
+        "general": "ko",  # trendpulse.blog - 한국어
+        "tech": "en",     # bytepulse.io - English
+    }
+
+    # Create content config (CLI vs API mode + language)
+    content_config = ContentConfig(
+        use_cli=not args.use_api,  # Default: CLI mode, --use-api switches to API
+        language=language_map.get(args.mode, "ko"),
+    )
+
     # Create pipeline config
     config = PipelineConfig(
         max_posts_per_run=args.max_posts,
@@ -153,6 +205,10 @@ def main() -> int:
         auto_publish=args.auto_publish,
         dry_run=args.dry_run,
         category=args.category,
+        mode=args.mode,  # 'tech' or 'general'
+        use_llm_topics=not args.no_llm_topics,  # Default: True, --no-llm-topics disables
+        trend_config=trend_config,
+        content_config=content_config,
     )
 
     if args.dry_run:

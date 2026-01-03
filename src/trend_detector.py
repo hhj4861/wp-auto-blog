@@ -29,6 +29,16 @@ try:
 except ImportError:
     praw = None  # type: ignore
 
+# Claude Agent SDK for LLM-based topic analysis
+try:
+    from claude_agent_sdk import query as claude_agent_query
+    import asyncio
+    CLAUDE_SDK_AVAILABLE = True
+except ImportError:
+    claude_agent_query = None
+    asyncio = None
+    CLAUDE_SDK_AVAILABLE = False
+
 
 class TrendSource(Enum):
     """Enumeration of trend sources."""
@@ -48,6 +58,7 @@ class Topic:
         source: Where the topic was found
         score: Relevance score (0-100)
         suggested_title: SEO-friendly blog title suggestion
+        category: LLM-analyzed category (optional, used instead of auto-detect)
     """
 
     topic: str
@@ -55,6 +66,7 @@ class Topic:
     source: TrendSource
     score: int
     suggested_title: str
+    category: Optional[str] = None  # LLM이 분석한 카테고리
 
     def to_dict(self) -> dict:
         """Convert Topic to dictionary."""
@@ -64,7 +76,16 @@ class Topic:
             "source": self.source.value,
             "score": self.score,
             "suggested_title": self.suggested_title,
+            "category": self.category,
         }
+
+
+class TrendMode(Enum):
+    """Trend detection mode."""
+
+    GENERAL = "general"  # Hot topics EXCLUDING tech (lifestyle, business, entertainment)
+    TECH = "tech"  # Tech/programming focused only
+    ALL = "all"  # Everything including tech and general
 
 
 @dataclass
@@ -74,35 +95,100 @@ class TrendConfig:
     Attributes:
         min_score: Minimum score threshold (0-100)
         max_topics: Maximum number of topics to return
-        niche_keywords: Keywords defining the niche
+        mode: TrendMode.GENERAL for hot topics, TrendMode.TECH for tech-focused
+        niche_keywords: Keywords defining the niche (auto-set based on mode)
         hn_limit: Number of HN stories to fetch
-        reddit_subreddits: Subreddits to monitor
+        reddit_subreddits: Subreddits to monitor (auto-set based on mode)
         reddit_limit: Posts per subreddit
+        enable_google_trends: Enable Google Trends (deprecated, may not work)
     """
 
-    min_score: int = 50
-    max_topics: int = 5
-    niche_keywords: list[str] = field(
-        default_factory=lambda: [
-            "ai",
-            "artificial intelligence",
-            "machine learning",
-            "automation",
-            "productivity",
-            "developer",
-            "programming",
-            "tech",
-            "saas",
-            "startup",
-            "tool",
-            "app",
+    min_score: int = 20  # Lower threshold for general hot topics
+    max_topics: int = 10
+    mode: TrendMode = TrendMode.GENERAL  # Default: general hot topics
+    enable_google_trends: bool = False  # Disabled by default (pytrends deprecated)
+    niche_keywords: list[str] = field(default_factory=list)
+    hn_limit: int = 50  # More stories for better coverage
+    reddit_subreddits: list[str] = field(default_factory=list)
+    reddit_limit: int = 15
+
+    def __post_init__(self):
+        """Set keywords and subreddits based on mode if not provided."""
+        if not self.niche_keywords:
+            self.niche_keywords = self._get_keywords_for_mode()
+        if not self.reddit_subreddits:
+            self.reddit_subreddits = self._get_subreddits_for_mode()
+
+    def _get_keywords_for_mode(self) -> list[str]:
+        """Get keywords based on trend mode."""
+        if self.mode == TrendMode.TECH:
+            # Tech-only keywords
+            return [
+                "ai", "artificial intelligence", "machine learning",
+                "automation", "developer", "programming", "code",
+                "tech", "saas", "startup", "software", "api",
+                "cloud", "devops", "frontend", "backend", "app",
+                "github", "open source", "framework", "database",
+            ]
+        elif self.mode == TrendMode.GENERAL:
+            # Non-tech hot topics (EXCLUDE tech)
+            return [
+                # Viral/trending indicators
+                "breaking", "viral", "trending", "popular", "best",
+                "top", "new", "latest", "update", "announced",
+                # Lifestyle & wellness
+                "health", "fitness", "wellness", "lifestyle", "travel",
+                "food", "recipe", "diet", "self-improvement",
+                # Business & money (non-tech)
+                "money", "finance", "investing", "career", "job",
+                "business", "economy", "market", "real estate",
+                # Entertainment
+                "movie", "music", "celebrity", "entertainment", "sports",
+                "gaming", "netflix", "streaming",
+                # General interest
+                "science", "space", "environment", "education",
+            ]
+        # ALL mode - everything
+        return [
+            "breaking", "viral", "trending", "popular", "best",
+            "ai", "tech", "money", "health", "science",
+            "business", "startup", "innovation", "future",
+            "how to", "guide", "tips", "review", "comparison",
         ]
-    )
-    hn_limit: int = 30
-    reddit_subreddits: list[str] = field(
-        default_factory=lambda: ["technology", "programming", "artificial", "MachineLearning"]
-    )
-    reddit_limit: int = 10
+
+    def _get_subreddits_for_mode(self) -> list[str]:
+        """Get subreddits based on trend mode."""
+        if self.mode == TrendMode.TECH:
+            # Tech-only subreddits
+            return [
+                "technology", "programming", "artificial",
+                "MachineLearning", "webdev", "startups",
+                "Python", "javascript", "devops", "opensource",
+            ]
+        elif self.mode == TrendMode.GENERAL:
+            # Non-tech subreddits (EXCLUDE tech)
+            return [
+                # General hot topics
+                "popular", "news", "worldnews",
+                # Lifestyle & interests
+                "LifeProTips", "todayilearned", "GetMotivated",
+                "selfimprovement", "productivity",
+                # Business & money
+                "business", "Entrepreneur", "PersonalFinance",
+                "investing", "RealEstate",
+                # Entertainment & viral
+                "movies", "television", "Music", "sports",
+                # Health & wellness
+                "Fitness", "nutrition", "science",
+            ]
+        # ALL mode - everything
+        return [
+            "popular", "all", "news", "worldnews",
+            "technology", "programming", "MachineLearning",
+            "LifeProTips", "todayilearned", "Futurology",
+            "business", "Entrepreneur", "PersonalFinance",
+            "movies", "television", "gaming",
+        ]
 
 
 class TrendDetector:
@@ -116,6 +202,127 @@ class TrendDetector:
     """
 
     HN_API_BASE = "https://hacker-news.firebaseio.com/v0"
+
+    # Category detection keywords (order matters - first match wins)
+    # TrendPulse.blog 사일로 구조: 테크, 비즈니스, 생산성, 리뷰, 건강
+    CATEGORY_KEYWORDS = {
+        # === trendpulse.blog (Korean) - 한국어 카테고리 ===
+
+        # 건강: 웰니스/바이오해킹 트렌드 (YMYL 피하고 트렌드 관점)
+        # 나쁜 예: "당뇨병 치료법" / 좋은 예: "실리콘밸리 CEO 단식 트렌드"
+        "건강": [
+            "바이오해킹", "biohacking", "누트로픽", "nootropic",
+            "웰니스", "wellness", "웰빙",
+            "단식", "간헐적단식", "fasting",
+            "뇌효율", "집중력", "인지기능",
+            "수면해킹", "수면루틴",
+            "명상", "마인드풀니스", "mindfulness",
+            "콜드플런지", "냉수샤워", "사우나",
+            "장건강", "마이크로바이옴", "프로바이오틱스",
+            "실리콘밸리", "테크CEO", "루틴",
+        ],
+
+        # 생산성: 업무 툴, 자기계발, 생산성 팁 (체류시간 증대)
+        "생산성": [
+            "생산성", "업무효율", "업무자동화", "자동화", "효율", "시간관리",
+            "노션", "Notion", "템플릿", "워크플로우",
+            "자기계발", "습관", "루틴", "목표", "성장",
+            "원격근무", "재택", "재택근무", "홈오피스", "데스크세팅", "데스크 세팅",
+            "협업툴", "업무툴", "업무환경",
+            "productivity", "workflow", "automation", "habit", "home office", "desk setup",
+            "ChatGPT 활용", "AI 활용", "GPT 활용",
+        ],
+
+        # 리뷰: IT 기기 + 건강 보조 기구 (직접적인 수익 - 제휴 마케팅)
+        # 구매 직전 사람들이 검색 → 전환율 높음
+        "리뷰": [
+            "리뷰", "언박싱", "사용기", "후기", "개봉기",
+            "가성비", "순위", "랭킹", "vs",
+            "노트북", "스마트폰", "태블릿", "모니터", "키보드", "마우스",
+            "데스크테리어", "스마트홈", "가젯", "기기",
+            "review", "setup", "unboxing",
+            # 건강 보조 기구 (리뷰 카테고리에서 다룸)
+            "마사지건", "안마기", "거북목", "자세교정",
+            "스탠딩데스크", "모션데스크", "인체공학",
+            "애플워치", "갤럭시워치", "핏빗",
+            "추천", "비교", "베스트", "TOP",  # 범용 키워드는 뒤로
+        ],
+
+        # 비즈니스: 기업 분석, 마케팅, 경제 이슈 해설 (브랜딩)
+        "비즈니스": [
+            "기업", "회사", "전략", "마케팅", "브랜드",
+            "산업", "트렌드", "미래", "전망", "분석",
+            "스타트업", "창업", "비즈니스", "경영",
+            "취업", "이직", "커리어", "직업", "취준",
+            "애플", "삼성", "구글", "테슬라", "아마존", "메타",
+            "반도체", "배터리", "전기차", "로봇",
+            "business", "strategy", "industry", "career",
+        ],
+
+        # 테크: AI + 헬스테크/슬립테크 (트래픽 유입, 높은 애드센스 단가)
+        # 전략: "이 기술이 우리 삶(건강/생산성)을 어떻게 바꾸나" 관점
+        "테크": [
+            "AI", "인공지능", "ChatGPT", "GPT", "LLM", "Claude", "Gemini",
+            "머신러닝", "딥러닝", "생성형",
+            "신기술", "테크", "출시", "업데이트", "발표",
+            "개발", "코딩", "프로그래밍", "API", "오픈소스",
+            "영상편집", "이미지생성", "음성합성",
+            "artificial intelligence", "machine learning",
+            # 헬스테크/슬립테크 (테크 관점에서 다룸)
+            "슬립테크", "sleep tech", "헬스테크", "health tech",
+            "웨어러블", "wearable", "스마트워치", "오라링", "Oura",
+            "수면측정", "심박변이", "HRV",
+            "AI영양제", "맞춤영양", "개인화건강",
+        ],
+
+        # === bytepulse.io (English) ===
+        "AI Tools": [
+            "AI tool", "LLM", "GPT", "Claude", "Gemini", "Copilot",
+            "automation", "AI assistant", "chatbot",
+        ],
+        "Dev Productivity": [
+            "developer", "IDE", "VS Code", "vim", "workflow",
+            "productivity", "coding", "programming",
+        ],
+        "SaaS Reviews": [
+            "SaaS", "software review", "platform", "service",
+            "pricing", "alternative",
+        ],
+    }
+
+    @classmethod
+    def detect_category(cls, topic: str, mode: str = "general") -> str:
+        """Detect appropriate category based on topic keywords.
+
+        TrendPulse.blog 우선순위: 건강 > 생산성 > 리뷰 > 비즈니스 > 테크
+
+        Args:
+            topic: Topic title to analyze
+            mode: 'general' for trendpulse.blog (Korean), 'tech' for bytepulse.io
+
+        Returns:
+            Category name (e.g., "테크", "비즈니스", "생산성", "리뷰", "건강")
+        """
+        topic_lower = topic.lower()
+
+        if mode == "general":
+            # Korean blog - TrendPulse 컨셉: "더 나은 나를 위한 트렌드와 도구들"
+            # 생산성(수익효율) > 리뷰(현금) > 테크(트래픽) > 비즈니스(권위) > 건강(웰니스)
+            priority_order = ["생산성", "리뷰", "테크", "비즈니스", "건강"]
+        else:
+            # English tech blog
+            priority_order = ["AI Tools", "Dev Productivity", "SaaS Reviews"]
+
+        for category in priority_order:
+            if category not in cls.CATEGORY_KEYWORDS:
+                continue
+            for keyword in cls.CATEGORY_KEYWORDS[category]:
+                if keyword.lower() in topic_lower:
+                    logger.debug(f"Category detected: {category} (matched: {keyword})")
+                    return category
+
+        # Default fallback
+        return "테크" if mode == "general" else "AI Tools"
     STOP_WORDS = {
         "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
         "have", "has", "had", "do", "does", "did", "will", "would", "could",
@@ -187,6 +394,280 @@ class TrendDetector:
         logger.info(f"Returning {len(result)} topics")
 
         return result
+
+    def collect_with_llm(self, use_llm: bool = True) -> list[Topic]:
+        """Collect topics and optionally filter/prioritize with LLM.
+
+        TrendPulse 컨셉에 맞는 토픽을 LLM이 분석하여 추천합니다:
+        - 한국 시장에 맞는 토픽 필터링
+        - 카테고리별 최적 토픽 추천
+        - 수익화 가능성 평가
+
+        Args:
+            use_llm: Whether to use LLM for analysis (default: True)
+
+        Returns:
+            List of recommended Topic objects
+        """
+        # First, collect topics from sources
+        raw_topics = self.collect()
+
+        if not use_llm or not CLAUDE_SDK_AVAILABLE:
+            logger.info("LLM analysis skipped (disabled or SDK unavailable)")
+            return raw_topics
+
+        if not raw_topics:
+            logger.warning("No topics to analyze")
+            return raw_topics
+
+        logger.info(f"Analyzing {len(raw_topics)} topics with LLM...")
+
+        try:
+            analyzed = self._analyze_topics_with_llm(raw_topics)
+            if analyzed:
+                return analyzed
+            else:
+                logger.warning("LLM analysis returned no results, using raw topics")
+                return raw_topics
+        except Exception as e:
+            logger.error(f"LLM analysis failed: {e}, using raw topics")
+            return raw_topics
+
+    def _analyze_topics_with_llm(self, topics: list[Topic]) -> list[Topic]:
+        """Use LLM to analyze and prioritize topics.
+
+        Args:
+            topics: List of raw topics to analyze
+
+        Returns:
+            Filtered and prioritized list of topics
+        """
+        # Prepare topic list for LLM
+        topic_list = "\n".join([
+            f"{i+1}. [{t.source.value}] {t.topic} (score: {t.score})"
+            for i, t in enumerate(topics[:20])  # Max 20 topics
+        ])
+
+        prompt = f"""당신은 TrendPulse 블로그의 콘텐츠 전략가입니다.
+
+## TrendPulse 컨셉
+"더 나은 나를 위한 트렌드와 도구들"
+- 생산성: 더 똑똑하게 일하고
+- 리뷰/테크: 최신 도구를 활용하며
+- 웰니스: 최상의 컨디션을 유지하는 법
+
+## 카테고리 우선순위 (수익 효율 순)
+1. 생산성 - 노션 템플릿, SaaS 제휴
+2. 리뷰 - 쿠팡 파트너스, 제휴 마케팅
+3. 테크 - 높은 애드센스 단가, 헬스테크 포함
+4. 비즈니스 - 브랜딩, 권위
+5. 건강 - 바이오해킹/웰니스/슬립테크 트렌드 (생산성 향상 관점 OK, 의료 조언만 제외)
+
+## 분석할 토픽들
+{topic_list}
+
+## 요청사항
+위 토픽들 중에서 TrendPulse에 적합한 토픽 5개를 추천해주세요.
+
+각 토픽에 대해 다음 형식으로 답변:
+[순위]. [토픽제목]
+- 카테고리: [생산성/리뷰/테크/비즈니스/건강]
+- 한국어 제목 제안: [SEO 최적화된 한국어 제목]
+- 추천 이유: [1줄 설명]
+
+## 한국어 제목 작성 규칙 (구글 SEO 최적화)
+
+3가지 유형 중 가장 적합한 것을 선택:
+
+[유형 1: 효용 강조형] - 뉴스레터/피드용
+- 구체적 숫자(%, 금액, 년수)와 독자가 얻을 이익(Benefit) 강조
+- 예: "10년간 앱 없이 1억 모은 개발자의 가계부 비법"
+
+[유형 2: 트렌드 분석형] - 전문 칼럼용
+- 현재 연도(2026)와 최신 트렌드 키워드 반영
+- 예: "2026년 디지털 미니멀리즘, 왜 개발자들은 앱을 버리나"
+
+[유형 3: SEO/직관형] - 구글 검색 노출용
+- 검색 사용자가 입력할 핵심 키워드 포함, 주제 명확히 요약
+- 예: "텍스트 가계부 사용법 완벽 가이드 (개발자 10년 노하우)"
+
+※ 규칙: 30-50자, 이모지 없이 텍스트만
+
+주의:
+- 주식/투자 관련 토픽 제외
+- 한국 독자에게 관련 없는 토픽 제외
+- 의료 조언/약물 추천/질병 치료법 토픽만 제외 (YMYL 위험)
+- 바이오해킹, 웰니스, 슬립테크, 생산성 향상 관점의 건강 토픽은 ✅ 허용
+- 수익화 가능성이 높은 토픽 우선"""
+
+        try:
+            # Call Claude Agent SDK
+            logger.info("Topic analysis using: Claude Agent SDK (OAuth)")
+            result = self._call_claude_sdk(prompt)
+            if not result:
+                return []
+
+            # Parse LLM response and match with original topics
+            recommended = self._parse_llm_recommendations(result, topics)
+            logger.info(f"LLM recommended {len(recommended)} topics")
+            return recommended
+
+        except Exception as e:
+            logger.error(f"LLM topic analysis error: {e}")
+            return []
+
+    def _call_claude_sdk(self, prompt: str) -> str:
+        """Call Claude Agent SDK with prompt.
+
+        Args:
+            prompt: The prompt to send
+
+        Returns:
+            LLM response text
+        """
+        if not CLAUDE_SDK_AVAILABLE or claude_agent_query is None:
+            raise RuntimeError("Claude Agent SDK not available")
+
+        async def _async_query():
+            messages = []
+            async for msg in claude_agent_query(prompt=prompt):
+                messages.append(msg)
+
+            # Extract text from ResultMessage
+            for msg in messages:
+                if type(msg).__name__ == 'ResultMessage':
+                    if hasattr(msg, 'result') and msg.result:
+                        return msg.result
+
+            # Fallback: try AssistantMessage.content
+            for msg in messages:
+                if type(msg).__name__ == 'AssistantMessage':
+                    if hasattr(msg, 'content') and msg.content:
+                        text_parts = []
+                        for block in msg.content:
+                            if hasattr(block, 'text'):
+                                text_parts.append(block.text)
+                        if text_parts:
+                            return '\n'.join(text_parts)
+            return ""
+
+        return asyncio.run(_async_query())
+
+    def _parse_llm_recommendations(self, llm_response: str, original_topics: list[Topic]) -> list[Topic]:
+        """Parse LLM recommendations and match with original topics.
+
+        Args:
+            llm_response: The LLM response text
+            original_topics: Original topic list to match against
+
+        Returns:
+            List of recommended topics with updated info
+        """
+        logger.debug(f"LLM Response:\n{llm_response[:500]}...")
+
+        recommended = []
+        lines = llm_response.split('\n')
+
+        current_topic = None
+        current_category = None
+        current_korean_title = None
+
+        def save_topic():
+            """Helper to save current topic if valid."""
+            nonlocal current_topic, current_category, current_korean_title
+
+            # Skip invalid titles (N/A, empty, etc.)
+            if not current_korean_title or current_korean_title.upper() == "N/A":
+                return
+
+            # Skip only explicitly excluded topics (YMYL medical advice)
+            # Allow: 건강, 바이오해킹, 웰니스 (without "제외")
+            # Skip: "건강 (제외 권장)", "YMYL 제외" etc.
+            if current_category and "제외" in current_category:
+                logger.debug(f"Skipping YMYL excluded topic: {current_korean_title}")
+                return
+
+            if current_korean_title:
+                # Find matching original topic or use first available
+                matched_orig = None
+                if current_topic:
+                    # Try to match by keywords
+                    topic_words = [w.lower() for w in current_topic.split() if len(w) > 2]
+                    for orig in original_topics:
+                        orig_lower = orig.topic.lower()
+                        if any(word in orig_lower for word in topic_words):
+                            matched_orig = orig
+                            break
+
+                # Fallback: use first unused original topic
+                if not matched_orig and original_topics:
+                    used_titles = {r.topic for r in recommended}
+                    for orig in original_topics:
+                        if orig.topic not in used_titles:
+                            matched_orig = orig
+                            break
+
+                if matched_orig:
+                    # Clean category (remove annotations like "(제외 권장)")
+                    clean_category = None
+                    if current_category:
+                        clean_category = re.sub(r'\s*\([^)]*\)', '', current_category).strip()
+
+                    new_topic = Topic(
+                        topic=current_korean_title,
+                        keywords=matched_orig.keywords,
+                        source=matched_orig.source,
+                        score=matched_orig.score + 10,
+                        suggested_title=current_korean_title,
+                        category=clean_category,  # LLM이 분석한 카테고리 저장
+                    )
+                    recommended.append(new_topic)
+                    logger.debug(f"Added topic: {current_korean_title} (category: {clean_category})")
+
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+
+            # Check for topic line (e.g., "1. Topic Name", "1) Topic", "**[1위]. Topic**")
+            # Patterns: "**[1위]. Topic", "1. Topic", "**1. Topic**", "1) Topic"
+            topic_match = re.match(r'^[\*\#]*\s*\[?(\d+)[위]?\]?[\.\)\:]\s*(.+)', line)
+            if topic_match:
+                # Save previous topic first
+                save_topic()
+
+                # Reset for new topic
+                current_topic = topic_match.group(2).strip().strip('*[]')
+                current_category = None
+                current_korean_title = None
+                logger.debug(f"Found topic line: {current_topic}")
+                continue
+
+            # Check for category line (various formats)
+            if '카테고리' in line:
+                cat_match = re.search(r'카테고리[^:：]*[:：]\s*(.+)', line)
+                if cat_match:
+                    current_category = cat_match.group(1).strip().strip('*')
+                    logger.debug(f"Found category: {current_category}")
+
+            # Check for Korean title line (various formats)
+            if '제목' in line and ('한국어' in line or '제안' in line or ':' in line or '：' in line):
+                title_match = re.search(r'(?:한국어\s*)?제목[^:：]*[:：]\s*(.+)', line)
+                if title_match:
+                    title_text = title_match.group(1).strip().strip('"\'*「」')
+                    # Remove type annotations like "(유형 1)", "(SEO)", etc.
+                    title_text = re.sub(r'\s*\(유형\s*\d+\)', '', title_text)
+                    title_text = re.sub(r'\s*\(SEO[^)]*\)', '', title_text)
+                    title_text = re.sub(r'\s*\(효용[^)]*\)', '', title_text)
+                    title_text = re.sub(r'\s*\(트렌드[^)]*\)', '', title_text)
+                    current_korean_title = title_text.strip()
+                    logger.debug(f"Found Korean title: {current_korean_title}")
+
+        # Don't forget the last topic
+        save_topic()
+
+        logger.info(f"Parsed {len(recommended)} topics from LLM response")
+        return recommended[:5]
 
     def _fetch_all_sources(self) -> list[Topic]:
         """Fetch topics from all configured sources.
@@ -274,10 +755,17 @@ class TrendDetector:
     def _fetch_google_trends(self) -> list[Topic]:
         """Fetch trending topics from Google Trends.
 
+        Note: As of April 2025, pytrends is deprecated and Google Trends
+        API endpoints have changed. This feature may not work reliably.
+
         Returns:
             List of Topics from Google Trends.
         """
         topics: list[Topic] = []
+
+        if not self.config.enable_google_trends:
+            logger.debug("Google Trends disabled in config (pytrends deprecated)")
+            return topics
 
         if TrendReq is None:
             logger.warning("pytrends not installed, skipping Google Trends")

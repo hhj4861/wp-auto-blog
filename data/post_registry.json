@@ -1,0 +1,56 @@
+{
+  "general": [
+    {
+      "topic": "2026 스탠딩데스크 추천 TOP 5",
+      "title": "2026 스탠딩데스크 추천 TOP 5",
+      "keywords": [
+        "스탠딩데스크",
+        "추천"
+      ],
+      "category": "리뷰",
+      "created_at": "2026-01-03T23:10:36.241860"
+    },
+    {
+      "topic": "블로그 트래픽 3배 늘리는 POSSE 전략 완벽 가이드",
+      "title": "블로그 트래픽 3배 늘리는 POSSE 전략 완벽 가이드",
+      "keywords": [
+        "블로그",
+        "트래픽",
+        "3배",
+        "늘리는",
+        "posse",
+        "전략",
+        "완벽",
+        "가이드"
+      ],
+      "category": "비즈니스",
+      "created_at": "2026-01-03T23:10:36.241880"
+    },
+    {
+      "topic": "Claude Code Skills, Agent 활용",
+      "title": "Claude Code Skills, Agent 활용",
+      "keywords": [
+        "claude",
+        "code",
+        "skills",
+        "agent",
+        "활용"
+      ],
+      "category": "테크",
+      "created_at": "2026-01-03T23:10:36.241889"
+    },
+    {
+      "topic": "10년간 텍스트 파일로 가계부",
+      "title": "10년간 텍스트 파일로 가계부",
+      "keywords": [
+        "10년간",
+        "텍스트",
+        "파일로",
+        "가계부"
+      ],
+      "category": "생산성",
+      "created_at": "2026-01-03T23:10:36.241896"
+    }
+  ],
+  "tech": []
+}

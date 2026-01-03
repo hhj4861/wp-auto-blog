@@ -50,8 +50,11 @@ class WPConfig:
         self.url = self.url.rstrip("/")
 
     @classmethod
-    def from_env(cls) -> "WPConfig":
+    def from_env(cls, mode: str = "tech") -> "WPConfig":
         """Create config from environment variables.
+
+        Args:
+            mode: Blog mode - "tech" or "general"
 
         Returns:
             WPConfig instance
@@ -59,12 +62,17 @@ class WPConfig:
         Raises:
             ValueError: If required env vars are missing
         """
-        url = os.getenv("WP_URL")
-        username = os.getenv("WP_USERNAME")
-        app_password = os.getenv("WP_APP_PASSWORD")
+        mode_upper = mode.upper()
+
+        # Try mode-specific env vars first, fall back to generic
+        url = os.getenv(f"WP_{mode_upper}_URL") or os.getenv("WP_URL")
+        username = os.getenv(f"WP_{mode_upper}_USERNAME") or os.getenv("WP_USERNAME")
+        app_password = os.getenv(f"WP_{mode_upper}_APP_PASSWORD") or os.getenv("WP_APP_PASSWORD")
 
         if not all([url, username, app_password]):
-            raise ValueError("Missing WordPress configuration in environment")
+            raise ValueError(f"Missing WordPress configuration for mode '{mode}' in environment")
+
+        logger.info(f"WordPress config loaded for mode: {mode} -> {url}")
 
         return cls(
             url=url,  # type: ignore
@@ -108,6 +116,51 @@ class WordPressClient:
         ...     post = client.create_post(content, images)
         ...     print(f"Created: {post.url}")
     """
+
+    # Category-to-tags mapping for automatic tagging (SEO 최적화)
+    CATEGORY_TAGS = {
+        # === trendpulse.blog 사일로 구조 (5개 카테고리 - 한국어) ===
+
+        # 테크: AI, 모바일, 소프트웨어 트렌드 (트래픽 유입)
+        "테크": [
+            "AI", "인공지능", "ChatGPT", "신기술", "테크트렌드", "미래기술",
+            "GPT", "Claude", "자동화", "개발자", "프로그래밍", "앱", "소프트웨어",
+        ],
+
+        # 비즈니스: 기업 분석, 마케팅, 경제 이슈 해설 (브랜딩)
+        "비즈니스": [
+            "비즈니스", "기업분석", "산업트렌드", "커리어", "마케팅", "전략",
+            "스타트업", "창업", "사이드프로젝트", "부업", "수익화", "브랜딩",
+        ],
+
+        # 생산성: 업무 툴, 자기계발, 생산성 팁 (체류시간 증대)
+        "생산성": [
+            "생산성", "업무효율", "자동화", "노션", "자기계발", "협업툴",
+            "시간관리", "습관", "루틴", "미니멀리즘", "디지털미니멀리즘",
+            "가계부", "재테크", "돈관리", "Obsidian", "메모앱",
+        ],
+
+        # 리뷰: IT 기기, 책, 서비스 리뷰 (직접적인 수익 - 제휴 마케팅)
+        "리뷰": [
+            "리뷰", "추천", "비교분석", "가성비", "데스크테리어", "재택근무",
+            "언박싱", "사용후기", "장단점", "구매가이드", "베스트", "TOP",
+        ],
+
+        # 건강: 운동, 다이어트, 웰니스 (제휴 마케팅 - 건강식품/운동기구)
+        "건강": [
+            "건강", "다이어트", "운동", "피트니스", "웰니스", "영양제",
+            "바이오해킹", "슬립테크", "수면", "명상", "스트레스관리", "멘탈",
+        ],
+
+        # === bytepulse.io 니치 카테고리 ===
+        "AI Tools": ["AI", "Machine Learning", "LLM", "Automation", "GPT", "Claude", "Gemini", "OpenAI"],
+        "Dev Productivity": ["Developer Tools", "IDE", "Workflow", "Coding", "Efficiency", "VS Code", "Vim"],
+        "SaaS Reviews": ["SaaS", "Software Review", "Cloud", "Business Tools", "Startup", "Notion", "Obsidian"],
+        "Web3 Security": ["Web3", "Blockchain", "Security", "Crypto", "Smart Contracts", "DeFi"],
+        "Frontend Dev": ["Frontend", "React", "JavaScript", "CSS", "UI/UX", "TypeScript", "Next.js"],
+        "Backend Dev": ["Backend", "API", "Database", "DevOps", "Server", "Python", "Node.js"],
+        "Startup Tools": ["Startup", "MVP", "Growth", "Founder", "Business", "SaaS", "Indie Hacker"],
+    }
 
     def __init__(self, config: Optional[WPConfig] = None) -> None:
         """Initialize WordPressClient.
@@ -176,17 +229,45 @@ class WordPressClient:
             if cat_id:
                 category_ids.append(cat_id)
 
-        # Get/create tags from keywords
-        tag_ids = self._get_or_create_tags(content.keywords)
+        # Build tag list: content keywords + category-based tags
+        all_tags = list(content.keywords) if content.keywords else []
+        if category and category in self.CATEGORY_TAGS:
+            category_tags = self.CATEGORY_TAGS[category]
+            all_tags.extend(category_tags)
+            logger.info(f"Added category tags: {category_tags}")
 
-        # Create post
+        # Get/create tags
+        tag_ids = self._get_or_create_tags(all_tags)
+
+        # Create post with SEO optimization
+        # Focus keyword: 첫 번째 키워드 사용
+        focus_keyword = content.keywords[0] if content.keywords else ""
+
+        # Excerpt: meta_description 사용 (카드에 표시될 간결한 요약)
+        excerpt = content.meta_description
+        if len(excerpt) < 50:
+            # meta_description이 너무 짧으면 본문에서 추출
+            excerpt = self._prepare_excerpt(content.html)
+
+        # 카테고리별 색상 클래스 추가
+        category_class = ""
+        if category:
+            category_slug = category.lower().replace(" ", "-")
+            category_class = f"category-{category_slug}"
+
+        # 콘텐츠를 카테고리 wrapper로 감싸기
+        wrapped_html = f'<div class="post-content {category_class}" data-category="{category or ""}">\n{prepared_html}\n</div>'
+
         post_data = {
             "title": content.title,
-            "content": prepared_html,
-            "excerpt": self._prepare_excerpt(content.html),
+            "content": wrapped_html,
+            "excerpt": excerpt,
             "status": status.value,
             "meta": {
+                # Yoast SEO 메타 설정
                 "_yoast_wpseo_metadesc": content.meta_description,
+                "_yoast_wpseo_focuskw": focus_keyword,
+                "_yoast_wpseo_title": f"{content.title} | TrendPulse",
             },
         }
 
@@ -345,7 +426,7 @@ class WordPressClient:
         """
         tag_ids: list[int] = []
 
-        for keyword in keywords[:5]:  # Limit to 5 tags
+        for keyword in keywords[:12]:  # Limit to 12 tags for better SEO
             try:
                 # Search for existing tag
                 response = requests.get(
@@ -386,39 +467,56 @@ class WordPressClient:
         html: str,
         images: list[FetchedImage],
     ) -> str:
-        """Prepare content with embedded images.
+        """Prepare content with embedded images - image-centric layout.
 
         Args:
             html: Original HTML content
             images: Images to insert
 
         Returns:
-            HTML with images inserted
+            HTML with images inserted prominently
         """
         if not images:
             return html
 
-        # Find H2 tags and insert images after some of them
-        h2_pattern = re.compile(r"(</h2>)", re.IGNORECASE)
-        h2_matches = list(h2_pattern.finditer(html))
-
-        if not h2_matches:
-            return html
-
-        # Insert images after every 2nd H2
         result = html
-        offset = 0
         image_idx = 0
 
-        for i, match in enumerate(h2_matches):
-            if i % 2 == 1 and image_idx < len(images):
-                img = images[image_idx]
-                img_html = f'\n<figure class="wp-block-image size-large"><img src="{img.url}" alt="{img.alt}"/><figcaption>Photo by {img.photographer}</figcaption></figure>\n'
+        # 1. Add hero image at the very beginning (before 3-line summary)
+        # H1 is removed, so insert at the start of content
+        if image_idx < len(images):
+            img = images[image_idx]
+            hero_html = f'''
+<figure class="wp-block-image aligncenter size-large hero-image" style="max-width:800px;margin:0 auto 30px auto;">
+    <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:800px;height:auto;border-radius:12px;"/>
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:10px;">Photo by {img.photographer}</figcaption>
+</figure>
+'''
+            # 콘텐츠 맨 앞에 이미지 삽입
+            result = hero_html + result
+            image_idx += 1
 
-                insert_pos = match.end() + offset
-                result = result[:insert_pos] + img_html + result[insert_pos:]
-                offset += len(img_html)
-                image_idx += 1
+        # 2. Find all H2 sections and insert images after each one
+        h2_pattern = re.compile(r"(</h2>)", re.IGNORECASE)
+
+        # Need to re-find matches since we modified the string
+        offset = 0
+        for match in h2_pattern.finditer(result):
+            if image_idx >= len(images):
+                break
+
+            img = images[image_idx]
+            img_html = f'''
+<figure class="wp-block-image aligncenter size-large" style="max-width:800px;margin:25px auto;">
+    <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:800px;height:auto;border-radius:8px;"/>
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:10px;">Photo by {img.photographer}</figcaption>
+</figure>
+'''
+            # Re-calculate position with offset
+            actual_pos = match.end() + offset
+            result = result[:actual_pos] + img_html + result[actual_pos:]
+            offset += len(img_html)
+            image_idx += 1
 
         return result
 
@@ -431,8 +529,12 @@ class WordPressClient:
         Returns:
             Plain text excerpt (max 300 chars)
         """
+        # Remove <style> tags and their content first
+        text = re.sub(r"<style[^>]*>.*?</style>", "", html, flags=re.IGNORECASE | re.DOTALL)
+        # Remove <script> tags and their content
+        text = re.sub(r"<script[^>]*>.*?</script>", "", text, flags=re.IGNORECASE | re.DOTALL)
         # Remove HTML tags
-        text = re.sub(r"<[^>]+>", " ", html)
+        text = re.sub(r"<[^>]+>", " ", text)
         # Clean whitespace
         text = re.sub(r"\s+", " ", text).strip()
 
@@ -441,3 +543,135 @@ class WordPressClient:
             text = text[:297] + "..."
 
         return text
+
+    def get_recent_posts(self, count: int = 100) -> list[dict]:
+        """Fetch recent posts from WordPress.
+
+        Args:
+            count: Number of posts to fetch (default: 100)
+
+        Returns:
+            List of post dictionaries with id, title, slug
+        """
+        posts = []
+        per_page = min(count, 100)  # WordPress max is 100 per page
+        page = 1
+
+        try:
+            while len(posts) < count:
+                response = requests.get(
+                    f"{self._api_base}/posts",
+                    headers=self._get_auth_headers(),
+                    params={
+                        "per_page": per_page,
+                        "page": page,
+                        "status": "any",  # Include drafts and published
+                        "_fields": "id,title,slug",  # Only fetch needed fields
+                    },
+                    timeout=15,
+                )
+
+                if response.status_code == 400:
+                    # No more pages
+                    break
+
+                response.raise_for_status()
+                page_posts = response.json()
+
+                if not page_posts:
+                    break
+
+                for post in page_posts:
+                    posts.append({
+                        "id": post["id"],
+                        "title": post["title"]["rendered"],
+                        "slug": post["slug"],
+                    })
+
+                if len(page_posts) < per_page:
+                    break
+
+                page += 1
+
+            logger.info(f"Fetched {len(posts)} existing posts from WordPress")
+            return posts
+
+        except Exception as e:
+            logger.error(f"Failed to fetch posts: {e}")
+            return []
+
+    def is_duplicate_topic(self, topic: str, threshold: float = 0.6) -> tuple[bool, Optional[str]]:
+        """Check if a topic is similar to existing posts.
+
+        Uses keyword overlap to detect duplicates.
+
+        Args:
+            topic: Topic to check
+            threshold: Similarity threshold (0-1), default 0.6
+
+        Returns:
+            Tuple of (is_duplicate, matching_title or None)
+        """
+        existing_posts = self.get_recent_posts(count=100)
+
+        if not existing_posts:
+            return False, None
+
+        # Extract keywords from topic (simple tokenization)
+        topic_words = set(self._extract_keywords(topic))
+
+        for post in existing_posts:
+            title = post["title"]
+            title_words = set(self._extract_keywords(title))
+
+            if not topic_words or not title_words:
+                continue
+
+            # Calculate Jaccard similarity
+            intersection = topic_words & title_words
+            union = topic_words | title_words
+
+            if union:
+                similarity = len(intersection) / len(union)
+                if similarity >= threshold:
+                    logger.warning(f"Duplicate detected: '{topic}' similar to '{title}' (similarity: {similarity:.2f})")
+                    return True, title
+
+        return False, None
+
+    def _extract_keywords(self, text: str) -> list[str]:
+        """Extract keywords from text for similarity comparison.
+
+        Args:
+            text: Text to extract keywords from
+
+        Returns:
+            List of lowercase keywords
+        """
+        # Common stopwords to ignore
+        stopwords = {
+            # Korean
+            "의", "를", "을", "이", "가", "에", "와", "과", "으로", "로", "에서",
+            "하는", "한", "할", "된", "되는", "있는", "없는", "위한", "통한",
+            "대한", "관한", "따른", "같은", "다른", "모든", "어떤",
+            # English
+            "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
+            "of", "with", "by", "from", "is", "are", "was", "were", "be", "been",
+            "being", "have", "has", "had", "do", "does", "did", "will", "would",
+            "could", "should", "may", "might", "must", "can", "this", "that",
+            "these", "those", "what", "which", "who", "how", "why", "when", "where",
+            # Common words
+            "top", "best", "review", "guide", "tips", "ways", "things",
+            "2024", "2025", "2026",
+        }
+
+        # Remove special characters and split
+        words = re.sub(r"[^\w\s가-힣]", " ", text.lower()).split()
+
+        # Filter short words and stopwords
+        keywords = [
+            w for w in words
+            if len(w) >= 2 and w not in stopwords
+        ]
+
+        return keywords

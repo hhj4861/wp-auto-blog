@@ -197,21 +197,25 @@ class WordPressClient:
         images: list[FetchedImage],
         status: PostStatus = PostStatus.DRAFT,
         category: Optional[str] = None,
+        section_images: Optional[dict[str, FetchedImage]] = None,
+        skip_hero_image: bool = False,
     ) -> CreatedPost:
         """Create a new WordPress post.
 
         Args:
             content: Generated content to post
-            images: Images to include
+            images: Images to include (first one as hero/featured)
             status: Post status (default: draft)
             category: Category name (optional)
+            section_images: Dict mapping H2 text to relevant FetchedImage
+            skip_hero_image: If True, don't add hero image in content (for tech mode)
 
         Returns:
             CreatedPost object with post details
         """
         logger.info(f"Creating post: {content.title}")
 
-        # Upload featured image first
+        # Upload featured image first (WordPress thumbnail)
         featured_media_id = None
         if images:
             featured_media_id = self._upload_media(
@@ -219,8 +223,13 @@ class WordPressClient:
                 alt_text=images[0].alt,
             )
 
-        # Prepare content with images
-        prepared_html = self._prepare_content(content.html, images[1:] if len(images) > 1 else [])
+        # Prepare content with images (hero + section images)
+        prepared_html = self._prepare_content(
+            content.html,
+            images[1:] if len(images) > 1 else [],
+            section_images=section_images,
+            skip_hero_image=skip_hero_image,
+        )
 
         # Get/create category
         category_ids = []
@@ -249,11 +258,9 @@ class WordPressClient:
         else:
             focus_keyword = ""
 
-        # Excerpt: meta_description 사용 (카드에 표시될 간결한 요약)
-        excerpt = content.meta_description
-        if len(excerpt) < 50:
-            # meta_description이 너무 짧으면 본문에서 추출
-            excerpt = self._prepare_excerpt(content.html)
+        # Excerpt: 카드에 표시될 요약 (meta_description보다 길게)
+        # meta_description은 SEO용 150-160자, excerpt는 카드 표시용 300자
+        excerpt = self._prepare_excerpt(content.html)
 
         # 카테고리별 색상 클래스 추가
         category_class = ""
@@ -485,57 +492,56 @@ class WordPressClient:
         self,
         html: str,
         images: list[FetchedImage],
+        section_images: Optional[dict[str, FetchedImage]] = None,
+        skip_hero_image: bool = False,
     ) -> str:
-        """Prepare content with embedded images - image-centric layout.
+        """Prepare content with hero image and section-relevant images.
+
+        Inserts a hero image at the top and relevant images after H2 sections
+        when section_images are provided.
 
         Args:
             html: Original HTML content
-            images: Images to insert
+            images: Images to insert (first one used as hero)
+            section_images: Dict mapping H2 text to relevant FetchedImage
+            skip_hero_image: If True, skip adding hero image (for tech mode)
 
         Returns:
-            HTML with images inserted prominently
+            HTML with images inserted
         """
-        if not images:
+        if not images and not section_images:
             return html
 
         result = html
-        image_idx = 0
 
-        # 1. Add hero image at the very beginning (before 3-line summary)
-        # H1 is removed, so insert at the start of content
-        if image_idx < len(images):
-            img = images[image_idx]
+        # Insert section images after H2s (if provided)
+        if section_images:
+            for h2_text, img in section_images.items():
+                # Find the H2 tag containing this text
+                h2_pattern = rf'(<h2[^>]*>.*?{re.escape(h2_text[:30])}.*?</h2>)'
+                match = re.search(h2_pattern, result, re.IGNORECASE | re.DOTALL)
+
+                if match:
+                    h2_tag = match.group(1)
+                    img_html = f'''
+<figure class="wp-block-image aligncenter size-large section-image" style="max-width:700px;margin:20px auto 30px auto;">
+    <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:700px;height:auto;border-radius:10px;"/>
+    <figcaption style="text-align:center;font-size:0.8em;color:#888;margin-top:8px;">Photo by {img.photographer}</figcaption>
+</figure>
+'''
+                    result = result.replace(h2_tag, h2_tag + img_html, 1)
+                    logger.debug(f"Inserted section image for: {h2_text[:40]}...")
+
+        # Add hero image at the very beginning (skip for tech mode)
+        if images and not skip_hero_image:
+            img = images[0]
             hero_html = f'''
 <figure class="wp-block-image aligncenter size-large hero-image" style="max-width:800px;margin:0 auto 30px auto;">
     <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:800px;height:auto;border-radius:12px;"/>
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:10px;">Photo by {img.photographer}</figcaption>
 </figure>
 '''
-            # 콘텐츠 맨 앞에 이미지 삽입
             result = hero_html + result
-            image_idx += 1
-
-        # 2. Find all H2 sections and insert images after each one
-        h2_pattern = re.compile(r"(</h2>)", re.IGNORECASE)
-
-        # Need to re-find matches since we modified the string
-        offset = 0
-        for match in h2_pattern.finditer(result):
-            if image_idx >= len(images):
-                break
-
-            img = images[image_idx]
-            img_html = f'''
-<figure class="wp-block-image aligncenter size-large" style="max-width:800px;margin:25px auto;">
-    <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:800px;height:auto;border-radius:8px;"/>
-    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:10px;">Photo by {img.photographer}</figcaption>
-</figure>
-'''
-            # Re-calculate position with offset
-            actual_pos = match.end() + offset
-            result = result[:actual_pos] + img_html + result[actual_pos:]
-            offset += len(img_html)
-            image_idx += 1
 
         return result
 

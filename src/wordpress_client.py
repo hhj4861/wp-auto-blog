@@ -569,16 +569,33 @@ class WordPressClient:
         Returns:
             Focus keyphrase string
         """
-        # VS 비교글: 제목에서 "A vs B vs C" 패턴 추출
-        vs_match = re.search(r'^([A-Za-z0-9]+(?:\s+vs\s+[A-Za-z0-9]+)+)', title, re.IGNORECASE)
-        if vs_match:
-            return vs_match.group(1).strip()
+        site_name = self._get_site_name()
 
-        # 일반글: 키워드 조합
-        if keywords and len(keywords) >= 2:
-            return f"{keywords[0]} {keywords[1]}"
-        elif keywords:
-            return keywords[0]
+        if site_name == "BytePulse":
+            # Tech mode (English): VS 패턴 추출 또는 키워드 조합
+            vs_match = re.search(r'^([A-Za-z0-9]+(?:\s+vs\s+[A-Za-z0-9]+)+)', title, re.IGNORECASE)
+            if vs_match:
+                return vs_match.group(1).strip()
+            # English keywords
+            if keywords and len(keywords) >= 2:
+                return f"{keywords[0]} {keywords[1]}"
+            elif keywords:
+                return keywords[0]
+        else:
+            # General mode (Korean): 제목에서 핵심 키워드 추출
+            # 한국어 제목에서 주요 명사구 추출 (첫 2-3 단어)
+            # 예: "개발자 생산성 2배 올린 리눅스 데스크톱" -> "리눅스 데스크톱"
+            import re as regex
+            # 한글 단어 추출
+            korean_words = regex.findall(r'[가-힣]+', title)
+            if korean_words:
+                # 핵심 키워드 2-3개 조합 (짧은 조사 제외)
+                key_words = [w for w in korean_words if len(w) >= 2]
+                if len(key_words) >= 2:
+                    return f"{key_words[0]} {key_words[1]}"
+                elif key_words:
+                    return key_words[0]
+
         return ""
 
     def _prepare_excerpt(self, html: str) -> str:

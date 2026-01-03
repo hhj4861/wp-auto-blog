@@ -370,13 +370,18 @@ Help developers and startup founders make BUYING DECISIONS.
 NOT just information - guide them to ACTION (signup, purchase, migrate).
 Transform this from "informative" to "SELLING" content.
 
-=== TITLE OPTIMIZATION (SEO + Click-Bait) ===
-DON'T use boring titles like "Linear vs Jira vs Asana"
-DO use click-worthy formats:
-- Speed/Performance hook: "Linear vs Jira vs Asana: The 2026 Performance Benchmark (Who Wins?)"
-- Controversy hook: "Why Engineering Teams Are Dumping Jira for Linear in 2026"
-- Numbers hook: "I Tested All 3 for 30 Days - Here's the $2,000 Mistake to Avoid"
-Include: year (2026), power words (Benchmark, Dumping, Mistake, Secret, Finally)
+=== TITLE OPTIMIZATION (SEO - MAX 60 CHARS!) ===
+CRITICAL: Title MUST be under 60 characters for SEO!
+Format: "[Tool A] vs [Tool B]: [Short Hook]"
+
+GOOD (under 60 chars):
+- "Vercel vs Netlify: 2026 Free Tier Showdown" (42 chars)
+- "Linear vs Jira: Which Ships Faster?" (36 chars)
+
+BAD (too long):
+- "Linear vs Jira vs Asana: The 2026 Performance Benchmark (Who Wins?)" (68 chars)
+
+Include: year (2026), power words (Showdown, Battle, Wins, Truth)
 
 === CONTENT TYPE PRIORITY (50%+ should be VS/Comparison) ===
 1. **VS Comparisons** (HIGHEST PRIORITY): "Cursor vs GitHub Copilot", "Linear vs Jira"
@@ -396,19 +401,13 @@ Include: year (2026), power words (Benchmark, Dumping, Mistake, Secret, Finally)
 - Every key insight should be in a callout box (see templates below)
 - Whitespace is your friend - break up text walls
 
-=== CTA BUTTONS (Not Text Links!) ===
-Replace boring "[Try Free]" text links with gradient BUTTONS:
+=== CTA BUTTON (Only ONE at article END!) ===
+IMPORTANT: Only ONE CTA button in the ENTIRE article - place at the very END (Final Verdict section).
+DO NOT put CTA buttons in Pricing, Features, or middle sections.
 
-<div style="text-align: center; margin: 30px 0;">
-  <a href="[AFFILIATE:toolname]" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
-    🚀 Start [Tool] Free - Unlimited Users
-  </a>
-</div>
+<div style="text-align: center; margin: 30px 0;"><a href="https://vercel.com" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">🚀 Start Free Today</a></div>
 
-Place CTA buttons:
-- After Pricing section
-- After Verdict section
-- At the end of article
+CRITICAL: NO line breaks inside <a> tags! Button HTML must be on single line.
 
 === MONETIZATION HOOKS (Required) ===
 - Button CTAs with urgency: "Start Free (No Credit Card)"
@@ -472,10 +471,18 @@ REQUIRED VISUAL ELEMENTS (use these generously):
 
 IMPORTANT: Do NOT use CSS grid layouts (display: grid). They break on WordPress. Use stacked divs instead.
 
+=== YOAST SEO OPTIMIZATION (CRITICAL!) ===
+1. **Section Length**: MAX 300 WORDS per H2 section! If longer, add H3 subheadings.
+2. **Keyphrase in H2/H3**: Include main keyphrase (e.g., "Vercel vs Netlify") or synonyms in at least 30% of subheadings.
+3. **Internal Links**: Add 2-3 internal links like: <a href="/category/saas-reviews/">See more SaaS reviews</a>
+4. **Meta Description**: MUST include keyphrase AND be 150-160 characters.
+5. **SEO Title**: Keep under 60 characters (shorter is better for mobile).
+
 GENERAL RULES:
 - START with TL;DR summary box FIRST (before any other content)
 - Use VISUAL elements over text: comparison charts, score badges, diagrams
 - SHORT paragraphs (2-3 sentences MAX, then visual element)
+- MAX 300 words per H2 section (add H3 if longer!)
 - Word count: 2000-3000 words (comprehensive)
 
 === COLOR PALETTE (MUST USE ONLY THESE - Consistent Blue/Cyan Theme) ===

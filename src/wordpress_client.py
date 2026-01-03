@@ -274,7 +274,7 @@ class WordPressClient:
                 # Yoast SEO 메타 설정
                 "_yoast_wpseo_metadesc": content.meta_description,
                 "_yoast_wpseo_focuskw": focus_keyword,
-                "_yoast_wpseo_title": f"{content.title} | TrendPulse",
+                "_yoast_wpseo_title": f"{content.title} | {self._get_site_name()}",
             },
         }
 
@@ -382,6 +382,26 @@ class WordPressClient:
         except Exception as e:
             logger.error(f"Failed to upload media: {e}")
             return None
+
+    def _get_site_name(self) -> str:
+        """Get site name from URL.
+
+        Returns:
+            Site name (e.g., 'BytePulse', 'TrendPulse')
+        """
+        url = self.config.url.lower()
+        if "bytepulse" in url:
+            return "BytePulse"
+        elif "trendpulse" in url:
+            return "TrendPulse"
+        else:
+            # Extract domain name as fallback
+            import re
+            match = re.search(r'//([^/]+)', url)
+            if match:
+                domain = match.group(1).split('.')[0]
+                return domain.title()
+            return "Blog"
 
     def _get_auth_headers(self) -> dict:
         """Get authentication headers.

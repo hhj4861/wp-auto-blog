@@ -56,8 +56,12 @@ jobs:
       - name: Create .env file
         run: |
           cat << EOF > .env
-          # AI API (Claude Agent SDK uses ANTHROPIC_API_KEY)
-          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          # Claude Agent SDK (OAuth token)
+          CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          # LLM Fallbacks
+          GOOGLE_AI_API_KEY=${{ secrets.GOOGLE_AI_API_KEY }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
 
           # Image APIs
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
@@ -67,17 +71,12 @@ jobs:
           WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
-
-          # WordPress - Tech Blog (bytepulse.io)
-          WP_TECH_URL=${{ secrets.WP_TECH_URL }}
-          WP_TECH_USERNAME=${{ secrets.WP_TECH_USERNAME }}
-          WP_TECH_APP_PASSWORD=${{ secrets.WP_TECH_APP_PASSWORD }}
           EOF
 
       - name: Run pipeline (General Blog - trendpulse.blog)
         timeout-minutes: 10
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
           # Build command with optional flags
           # Uses Claude Agent SDK (claude_agent_query) which reads ANTHROPIC_API_KEY
@@ -140,17 +139,16 @@ jobs:
       - name: Create .env file
         run: |
           cat << EOF > .env
-          # AI API (Claude Agent SDK uses ANTHROPIC_API_KEY)
-          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          # Claude Agent SDK (OAuth token)
+          CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          # LLM Fallbacks
+          GOOGLE_AI_API_KEY=${{ secrets.GOOGLE_AI_API_KEY }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
 
           # Image APIs
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
-
-          # WordPress - General Blog (trendpulse.blog)
-          WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}
-          WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
-          WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
 
           # WordPress - Tech Blog (bytepulse.io)
           WP_TECH_URL=${{ secrets.WP_TECH_URL }}
@@ -161,7 +159,7 @@ jobs:
       - name: Run pipeline (Tech Blog - bytepulse.io)
         timeout-minutes: 10
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
           # Build command with optional flags
           # Uses Claude Agent SDK (claude_agent_query) which reads ANTHROPIC_API_KEY

@@ -12,6 +12,7 @@ from src.trend_detector import (
     Topic,
     TrendSource,
     TrendConfig,
+    TrendMode,
 )
 
 
@@ -55,24 +56,56 @@ class TestTrendConfig:
     """Test TrendConfig dataclass."""
 
     def test_default_config(self):
-        """TrendConfig has sensible defaults."""
+        """TrendConfig has sensible defaults for GENERAL mode."""
         config = TrendConfig()
 
-        assert config.min_score == 50
-        assert config.max_topics == 5
+        assert config.min_score == 20  # Lower threshold for general hot topics
+        assert config.max_topics == 10
+        assert config.mode == TrendMode.GENERAL  # Default: general hot topics
+        assert config.enable_google_trends is False  # Disabled by default (deprecated)
         assert config.niche_keywords is not None
         assert len(config.niche_keywords) > 0
+        # General mode excludes tech, has lifestyle/business/entertainment
+        assert "popular" in config.reddit_subreddits
+        assert "news" in config.reddit_subreddits
+        assert "health" in config.niche_keywords
+        # General mode should NOT have tech subreddits
+        assert "programming" not in config.reddit_subreddits
+
+    def test_tech_mode_config(self):
+        """TrendConfig can be set to TECH mode."""
+        config = TrendConfig(mode=TrendMode.TECH)
+
+        assert config.mode == TrendMode.TECH
+        # Tech mode has tech-focused keywords
+        assert "ai" in config.niche_keywords
+        assert "programming" in config.niche_keywords
+        # Tech mode has tech subreddits
+        assert "technology" in config.reddit_subreddits
+        assert "MachineLearning" in config.reddit_subreddits
+        # Tech mode should NOT have general lifestyle subreddits
+        assert "Fitness" not in config.reddit_subreddits
+
+    def test_all_mode_config(self):
+        """TrendConfig can be set to ALL mode."""
+        config = TrendConfig(mode=TrendMode.ALL)
+
+        assert config.mode == TrendMode.ALL
+        # ALL mode has both tech and general
+        assert "ai" in config.niche_keywords
+        assert "technology" in config.reddit_subreddits
+        assert "popular" in config.reddit_subreddits
 
     def test_custom_config(self):
         """TrendConfig accepts custom values."""
         config = TrendConfig(
             min_score=70,
-            max_topics=10,
+            max_topics=15,
             niche_keywords=["ai", "ml", "automation"],
         )
 
         assert config.min_score == 70
-        assert config.max_topics == 10
+        assert config.max_topics == 15
         assert "ai" in config.niche_keywords
 
 
@@ -112,13 +145,13 @@ class TestTrendDetector:
         """collect() filters out topics below min_score."""
         mock_topics = [
             Topic("High Score", ["test"], TrendSource.HACKER_NEWS, 90, "High"),
-            Topic("Low Score", ["test"], TrendSource.HACKER_NEWS, 30, "Low"),
+            Topic("Low Score", ["test"], TrendSource.HACKER_NEWS, 10, "Low"),  # Below min_score=20
         ]
 
         with patch.object(detector, "_fetch_all_sources", return_value=mock_topics):
             topics = detector.collect()
 
-        # Only high score topic should remain (min_score default is 50)
+        # Only high score topic should remain (min_score default is 20)
         assert len(topics) == 1
         assert topics[0].topic == "High Score"
 

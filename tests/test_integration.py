@@ -267,6 +267,9 @@ class TestDryRun:
     @pytest.mark.integration
     def test_dry_run_does_not_publish(self, pipeline, mock_env_vars):
         """Dry run mode does not actually publish."""
+        # In dry-run mode, wp_client should be None
+        assert pipeline.wp_client is None
+
         mock_topics = [
             Topic("Topic", ["kw"], TrendSource.HACKER_NEWS, 80, "Title"),
         ]
@@ -287,12 +290,11 @@ class TestDryRun:
         with patch.object(pipeline.trend_detector, "collect", return_value=mock_topics):
             with patch.object(pipeline.content_generator, "generate", return_value=mock_content):
                 with patch.object(pipeline.image_fetcher, "fetch", return_value=mock_images):
-                    with patch.object(pipeline.wp_client, "create_post") as mock_create:
-                        results = pipeline.run()
+                    results = pipeline.run()
 
-        # create_post should NOT be called in dry run
-        mock_create.assert_not_called()
-
-        # But should still return results
+        # Should return results even in dry run
         assert len(results) == 1
         assert results[0].success is True
+        # Dry run creates a placeholder post with id=0
+        assert results[0].post.id == 0
+        assert results[0].post.url == "[DRY RUN]"

@@ -67,7 +67,7 @@ class ImageConfig:
         orientation: Preferred orientation (landscape, portrait, squarish)
     """
 
-    images_per_post: int = 8  # More images for image-centric posts
+    images_per_post: int = 3  # Only need hero image + backup
     min_width: int = 1200
     min_height: int = 800
     primary_source: ImageSource = ImageSource.UNSPLASH
@@ -358,3 +358,36 @@ class ImageFetcher:
             filtered.append(img)
 
         return filtered
+
+    def fetch_single(self, query: str, exclude_urls: Optional[set[str]] = None) -> Optional[FetchedImage]:
+        """Fetch a single image for a specific search query.
+
+        Used for fetching section-relevant images based on H2 text.
+
+        Args:
+            query: Search query string
+            exclude_urls: URLs to exclude (already used images)
+
+        Returns:
+            Single FetchedImage or None if not found
+        """
+        exclude_urls = exclude_urls or set()
+        logger.debug(f"Fetching single image for query: {query}")
+
+        images: list[FetchedImage] = []
+
+        # Try Unsplash first
+        if self._unsplash_key:
+            images.extend(self._fetch_unsplash(query))
+
+        # Fallback to Pexels if no results
+        if not images and self._pexels_key:
+            images.extend(self._fetch_pexels(query))
+
+        # Filter and exclude already used URLs
+        for img in images:
+            if img.url not in exclude_urls:
+                if img.width >= self.config.min_width and img.height >= self.config.min_height:
+                    return img
+
+        return None

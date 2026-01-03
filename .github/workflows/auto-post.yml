@@ -40,7 +40,7 @@ jobs:
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
       github.event_name == 'schedule'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
@@ -78,7 +78,7 @@ jobs:
           EOF
 
       - name: Run pipeline (General Blog - trendpulse.blog)
-        timeout-minutes: 10
+        timeout-minutes: 12
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -104,10 +104,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          if [ -f "data/post_registry.json" ]; then
+          if [ -f "data/post_registry_general.json" ]; then
             git pull --rebase origin main || true
-            git add data/post_registry.json
-            git diff --staged --quiet || git commit -m "chore: update post registry [skip ci]"
+            git add data/post_registry_general.json
+            git diff --staged --quiet || git commit -m "chore: update general post registry [skip ci]"
             git push || echo "Warning: Failed to push registry, but post was created successfully"
           fi
 
@@ -120,11 +120,13 @@ jobs:
           retention-days: 7
 
   post-tech:
+    # Tech mode: scheduled + manual trigger
+    # bytepulse.io도 자동화 (mode: both)
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'tech' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule' && github.event.schedule == '0 14 * * *'
+      github.event_name == 'schedule'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
@@ -162,7 +164,7 @@ jobs:
           EOF
 
       - name: Run pipeline (Tech Blog - bytepulse.io)
-        timeout-minutes: 10
+        timeout-minutes: 12
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -189,10 +191,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          if [ -f "data/post_registry.json" ]; then
+          if [ -f "data/post_registry_tech.json" ]; then
             git pull --rebase origin main || true
-            git add data/post_registry.json
-            git diff --staged --quiet || git commit -m "chore: update post registry [skip ci]"
+            git add data/post_registry_tech.json
+            git diff --staged --quiet || git commit -m "chore: update tech post registry [skip ci]"
             git push || echo "Warning: Failed to push registry, but post was created successfully"
           fi
 

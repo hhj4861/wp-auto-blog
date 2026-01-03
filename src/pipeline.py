@@ -60,8 +60,20 @@ from src.image_fetcher import ImageFetcher, ImageConfig
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
 
-# Post registry file path
-POST_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "post_registry.json"
+# Post registry base directory
+POST_REGISTRY_DIR = Path(__file__).parent.parent / "data"
+
+
+def get_registry_path(mode: str) -> Path:
+    """Get the registry file path for a specific mode.
+
+    Args:
+        mode: 'general' or 'tech'
+
+    Returns:
+        Path to the mode-specific registry file
+    """
+    return POST_REGISTRY_DIR / f"post_registry_{mode}.json"
 
 
 @dataclass
@@ -178,9 +190,10 @@ class BlogPipeline:
 
         logger.info(f"Found {len(topics)} topics to process")
 
-        # 스케줄된 카테고리 사용 (CLI에서 명시적으로 지정하지 않은 경우)
+        # 스케줄된 카테고리 사용 (general 모드에서만, CLI에서 명시적으로 지정하지 않은 경우)
+        # tech 모드(bytepulse.io)는 한국어 카테고리 스케줄 사용 안함
         target_category = self.config.category
-        if not target_category and self.config.use_scheduled_category:
+        if not target_category and self.config.use_scheduled_category and self.config.mode == "general":
             target_category = get_scheduled_category()
             if target_category:
                 logger.info(f"Using scheduled category: {target_category}")
@@ -256,12 +269,24 @@ class BlogPipeline:
 
             logger.debug(f"Generated content: {content.word_count} words")
 
-            # Fetch images - pass topic as fallback for Korean topics
+            # Fetch hero image - pass topic as fallback for Korean topics
             images = self.image_fetcher.fetch(
                 keywords=topic.keywords,
                 topic=topic.topic,
             )
-            logger.debug(f"Fetched {len(images)} images")
+            logger.debug(f"Fetched {len(images)} hero images")
+
+            # Fetch section-relevant images for H2s (general mode only)
+            # Tech mode uses tables/charts/diagrams instead of stock photos
+            section_images = {}
+            if self.config.mode != "tech":
+                section_images = self._fetch_section_images(
+                    html=content.html,
+                    exclude_urls={img.url for img in images},
+                )
+                logger.debug(f"Fetched {len(section_images)} section images")
+            else:
+                logger.debug("Tech mode: skipping section images (using visual elements instead)")
 
             # Create post (or simulate in dry run)
             if self.config.dry_run:
@@ -274,11 +299,15 @@ class BlogPipeline:
                 )
             else:
                 status = PostStatus.PUBLISH if self.config.auto_publish else PostStatus.DRAFT
+                # Tech mode: skip hero image (TL;DR summary comes first)
+                skip_hero = self.config.mode == "tech"
                 post = self.wp_client.create_post(
                     content=content,
                     images=images,
                     status=status,
                     category=category,
+                    section_images=section_images,
+                    skip_hero_image=skip_hero,
                 )
 
             duration = (datetime.now() - start_time).total_seconds()
@@ -342,7 +371,7 @@ class BlogPipeline:
     def _filter_duplicates(self, topics: list[Topic]) -> list[Topic]:
         """Filter out topics that are similar to previously published posts.
 
-        Uses local JSON registry instead of WordPress API for efficiency.
+        Uses mode-specific JSON registry for efficiency.
 
         Args:
             topics: List of topics to filter
@@ -350,9 +379,8 @@ class BlogPipeline:
         Returns:
             Filtered list of topics
         """
-        # Load existing posts from local registry
-        registry = self._load_post_registry()
-        mode_posts = registry.get(self.config.mode, [])
+        # Load existing posts from mode-specific registry
+        mode_posts = self._load_post_registry()
 
         if not mode_posts:
             logger.info(f"No existing posts in registry for mode '{self.config.mode}', skipping duplicate check")
@@ -402,24 +430,25 @@ class BlogPipeline:
 
         return filtered_topics
 
-    def _load_post_registry(self) -> dict:
-        """Load the post registry from JSON file.
+    def _load_post_registry(self) -> list:
+        """Load the post registry from mode-specific JSON file.
 
         Returns:
-            Dictionary with mode as key and list of posts as value
+            List of posts for the current mode
         """
-        if not POST_REGISTRY_PATH.exists():
-            return {}
+        registry_path = get_registry_path(self.config.mode)
+        if not registry_path.exists():
+            return []
 
         try:
-            with open(POST_REGISTRY_PATH, "r", encoding="utf-8") as f:
+            with open(registry_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
             logger.warning(f"Failed to load post registry: {e}")
-            return {}
+            return []
 
     def _save_to_registry(self, topic: str, title: str, keywords: list[str], category: str) -> None:
-        """Save a published post to the local registry.
+        """Save a published post to the mode-specific registry.
 
         Args:
             topic: Original topic
@@ -427,18 +456,16 @@ class BlogPipeline:
             keywords: Keywords used
             category: Post category
         """
+        registry_path = get_registry_path(self.config.mode)
+
         # Ensure directory exists
-        POST_REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
+        registry_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Load existing registry
-        registry = self._load_post_registry()
-
-        # Initialize mode list if not exists
-        if self.config.mode not in registry:
-            registry[self.config.mode] = []
+        # Load existing registry (list format)
+        posts = self._load_post_registry()
 
         # Add new post entry
-        registry[self.config.mode].append({
+        posts.append({
             "topic": topic,
             "title": title,
             "keywords": keywords,
@@ -448,11 +475,174 @@ class BlogPipeline:
 
         # Save registry
         try:
-            with open(POST_REGISTRY_PATH, "w", encoding="utf-8") as f:
-                json.dump(registry, f, ensure_ascii=False, indent=2)
-            logger.info(f"Saved post to registry: {title}")
+            with open(registry_path, "w", encoding="utf-8") as f:
+                json.dump(posts, f, ensure_ascii=False, indent=2)
+            logger.info(f"Saved post to registry ({self.config.mode}): {title}")
         except Exception as e:
             logger.error(f"Failed to save post registry: {e}")
+
+    def _fetch_section_images(
+        self,
+        html: str,
+        exclude_urls: set[str],
+        max_sections: int = 4,
+    ) -> dict[str, "FetchedImage"]:
+        """Fetch relevant images for H2 sections.
+
+        Extracts H2 texts, creates search queries, and fetches matching images.
+
+        Args:
+            html: Generated HTML content
+            exclude_urls: URLs to exclude (already used)
+            max_sections: Max number of section images to fetch
+
+        Returns:
+            Dict mapping H2 text to FetchedImage
+        """
+        from src.image_fetcher import FetchedImage
+
+        section_images: dict[str, FetchedImage] = {}
+
+        # Extract H2 texts from HTML
+        h2_pattern = r'<h2[^>]*>(.*?)</h2>'
+        h2_matches = re.findall(h2_pattern, html, re.IGNORECASE | re.DOTALL)
+
+        if not h2_matches:
+            return section_images
+
+        # Clean HTML tags from H2 text
+        h2_texts = []
+        for match in h2_matches[:max_sections]:
+            clean_text = re.sub(r'<[^>]+>', '', match).strip()
+            if clean_text and len(clean_text) > 3:
+                h2_texts.append(clean_text)
+
+        logger.info(f"Found {len(h2_texts)} H2 sections for image matching")
+
+        # Fetch image for each H2
+        for h2_text in h2_texts:
+            # Create search query from H2 text
+            query = self._h2_to_search_query(h2_text)
+            if not query:
+                continue
+
+            logger.debug(f"Searching image for H2: '{h2_text[:40]}...' -> query: '{query}'")
+
+            img = self.image_fetcher.fetch_single(query, exclude_urls)
+            if img:
+                section_images[h2_text] = img
+                exclude_urls.add(img.url)
+                logger.debug(f"Found image for section: {h2_text[:30]}...")
+
+        return section_images
+
+    def _h2_to_search_query(self, h2_text: str) -> str:
+        """Convert H2 text to image search query.
+
+        Extracts meaningful English keywords for image search.
+        Prioritizes product/tool names for relevant stock photos.
+
+        Args:
+            h2_text: H2 section title
+
+        Returns:
+            Search query string
+        """
+        h2_lower = h2_text.lower()
+
+        # Product/tool name mappings (prioritize these for relevant images)
+        product_image_queries = {
+            'linux': 'linux penguin operating system terminal',
+            'windows': 'windows computer desktop microsoft',
+            'macos': 'macbook apple computer',
+            'docker': 'container ship cargo technology',
+            'kubernetes': 'container orchestration cloud',
+            'node': 'nodejs javascript programming',
+            'python': 'python programming code',
+            'react': 'react javascript web development',
+            'cursor': 'code editor programming IDE',
+            'copilot': 'AI coding assistant programming',
+            'github': 'code repository developer',
+            'notion': 'productivity workspace organization',
+            'obsidian': 'note taking knowledge graph',
+            'linear': 'project management agile board',
+            'jira': 'project management scrum board',
+            'asana': 'task management teamwork',
+            'figma': 'design interface UI UX',
+            'vscode': 'code editor programming IDE',
+            'vim': 'terminal code editor programming',
+        }
+
+        # Check for product names first
+        found_products = []
+        for product, query in product_image_queries.items():
+            if product in h2_lower:
+                found_products.append(query)
+
+        # Section type mappings (visual context)
+        section_mappings = {
+            'pricing': 'money finance pricing business chart',
+            'price': 'money dollar cost finance',
+            'cost': 'budget money calculator finance',
+            'speed': 'speedometer fast performance race',
+            'performance': 'chart graph analytics dashboard',
+            'features': 'checklist features software interface',
+            'comparison': 'versus compare side by side chart',
+            'compare': 'versus compare balance scale',
+            'quick comparison': 'comparison chart infographic data',
+            'winner': 'trophy gold medal success champion',
+            'verdict': 'gavel decision judge choice',
+            'conclusion': 'finish line goal checkered flag',
+            'developer': 'programmer coding laptop developer',
+            'experience': 'user interface UX design screen',
+            'workflow': 'flowchart process workflow diagram',
+            'migration': 'moving transfer data arrow migration',
+            'guide': 'roadmap guide compass direction',
+            'setup': 'installation setup configuration gear',
+            'install': 'download installation setup arrow',
+            'terminal': 'terminal command line code black',
+            'shell': 'terminal bash command line',
+            'package': 'package box delivery software',
+            'git': 'version control branch merge code',
+            'cloud': 'cloud computing server network',
+            'devops': 'automation deployment pipeline CI CD',
+            'mistake': 'warning error alert caution',
+            'action': 'action step checklist todo',
+            'key features': 'key unlock features important',
+        }
+
+        # Check section type
+        section_query = ''
+        for section_key, query in section_mappings.items():
+            if section_key in h2_lower:
+                section_query = query
+                break
+
+        # Build final query
+        if found_products and section_query:
+            # Combine product context with section type
+            # e.g., "linux terminal" + "comparison chart"
+            return f"{found_products[0].split()[0]} {section_query}"
+        elif found_products:
+            # Use product-specific query
+            return found_products[0]
+        elif section_query:
+            return section_query
+
+        # Fallback: extract English words
+        english_words = re.findall(r'[A-Za-z][A-Za-z0-9+#.]*', h2_text)
+        skip_words = {
+            'vs', 'and', 'or', 'the', 'for', 'with', 'how', 'what', 'why',
+            'which', 'best', 'top', 'in', 'on', 'to', 'is', 'are', 'our',
+            'your', 'their', 'it', 'do', 'does', 'can', 'will', 'should',
+            'TL', 'DR', 'FAQ', 'TLDR', 'Section', 'Quick', 'Final',
+        }
+        keywords = [w for w in english_words if w.lower() not in skip_words and len(w) > 2]
+
+        if keywords:
+            return ' '.join(keywords[:3]) + ' technology'
+
+        return ''
 
     @staticmethod
     def _extract_keywords(text: str) -> list[str]:

@@ -21,8 +21,13 @@ from typing import Optional
 import requests
 from loguru import logger
 
-# Post registry path for duplicate detection
-POST_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "post_registry.json"
+# Post registry base directory
+POST_REGISTRY_DIR = Path(__file__).parent.parent / "data"
+
+
+def get_registry_path(mode: str) -> Path:
+    """Get the registry file path for a specific mode."""
+    return POST_REGISTRY_DIR / f"post_registry_{mode}.json"
 
 try:
     from pytrends.request import TrendReq
@@ -439,27 +444,30 @@ class TrendDetector:
             return raw_topics
 
     def _load_existing_posts(self) -> list[str]:
-        """Load existing post titles from registry for duplicate detection.
+        """Load existing post titles from mode-specific registry for duplicate detection.
 
         Returns:
-            List of existing post titles
+            List of existing post titles for the current mode
         """
-        if not POST_REGISTRY_PATH.exists():
+        # Get mode-specific registry path
+        mode_str = self.config.mode.value  # "general" or "tech"
+        registry_path = get_registry_path(mode_str)
+
+        if not registry_path.exists():
             return []
 
         try:
-            with open(POST_REGISTRY_PATH, "r", encoding="utf-8") as f:
-                registry = json.load(f)
+            with open(registry_path, "r", encoding="utf-8") as f:
+                posts = json.load(f)
 
             existing_titles = []
-            for mode_posts in registry.values():
-                for post in mode_posts:
-                    title = post.get("title", "")
-                    topic = post.get("topic", "")
-                    if title:
-                        existing_titles.append(title)
-                    if topic and topic != title:
-                        existing_titles.append(topic)
+            for post in posts:
+                title = post.get("title", "")
+                topic = post.get("topic", "")
+                if title:
+                    existing_titles.append(title)
+                if topic and topic != title:
+                    existing_titles.append(topic)
 
             return existing_titles
         except Exception as e:
@@ -484,6 +492,42 @@ class TrendDetector:
         # Load existing posts for duplicate detection
         existing_posts = self._load_existing_posts()
         existing_posts_section = ""
+
+        # Use different prompt based on mode
+        if self.config.mode == TrendMode.TECH:
+            prompt = self._build_tech_mode_prompt(topic_list, existing_posts)
+        else:
+            prompt = self._build_general_mode_prompt(topic_list, existing_posts)
+
+        try:
+            # Call Claude Agent SDK
+            logger.info("Topic analysis using: Claude Agent SDK (OAuth)")
+            result = self._call_claude_sdk(prompt)
+            if not result:
+                return []
+
+            # Parse LLM response and match with original topics
+            # Tech mode uses English titles, general mode uses Korean
+            is_tech_mode = self.config.mode == TrendMode.TECH
+            recommended = self._parse_llm_recommendations(result, topics, english_mode=is_tech_mode)
+            logger.info(f"LLM recommended {len(recommended)} topics")
+            return recommended
+
+        except Exception as e:
+            logger.error(f"LLM topic analysis error: {e}")
+            return []
+
+    def _build_general_mode_prompt(self, topic_list: str, existing_posts: list[str]) -> str:
+        """Build LLM prompt for general mode (TrendPulse.blog - Korean).
+
+        Args:
+            topic_list: Formatted list of topics
+            existing_posts: List of existing post titles for duplicate detection
+
+        Returns:
+            Prompt string for LLM
+        """
+        existing_posts_section = ""
         if existing_posts:
             existing_list = "\n".join([f"- {title}" for title in existing_posts[:20]])
             existing_posts_section = f"""
@@ -498,7 +542,7 @@ class TrendDetector:
 
 """
 
-        prompt = f"""당신은 TrendPulse 블로그의 콘텐츠 전략가입니다.
+        return f"""당신은 TrendPulse 블로그의 콘텐츠 전략가입니다.
 {existing_posts_section}
 
 ## TrendPulse 컨셉
@@ -551,21 +595,93 @@ class TrendDetector:
 - 바이오해킹, 웰니스, 슬립테크, 생산성 향상 관점의 건강 토픽은 ✅ 허용
 - 수익화 가능성이 높은 토픽 우선"""
 
-        try:
-            # Call Claude Agent SDK
-            logger.info("Topic analysis using: Claude Agent SDK (OAuth)")
-            result = self._call_claude_sdk(prompt)
-            if not result:
-                return []
+    def _build_tech_mode_prompt(self, topic_list: str, existing_posts: list[str]) -> str:
+        """Build LLM prompt for tech mode (BytePulse.io - English).
 
-            # Parse LLM response and match with original topics
-            recommended = self._parse_llm_recommendations(result, topics)
-            logger.info(f"LLM recommended {len(recommended)} topics")
-            return recommended
+        Focuses on VS comparisons, Migration guides, and high-intent purchase keywords
+        for developer/startup audience with recurring commission potential.
 
-        except Exception as e:
-            logger.error(f"LLM topic analysis error: {e}")
-            return []
+        Args:
+            topic_list: Formatted list of topics
+            existing_posts: List of existing post titles for duplicate detection
+
+        Returns:
+            Prompt string for LLM
+        """
+        existing_posts_section = ""
+        if existing_posts:
+            existing_list = "\n".join([f"- {title}" for title in existing_posts[:20]])
+            existing_posts_section = f"""
+## ⚠️ Already Published Posts (MUST EXCLUDE duplicates!)
+Do NOT recommend topics semantically similar to these:
+{existing_list}
+
+Examples of duplicates:
+- "Cursor vs Copilot" ≈ "Copilot alternatives" ≈ "Best AI code editor" → DUPLICATE!
+- "Migrate to Linear" ≈ "Linear tutorial" ≈ "Jira alternative" → DUPLICATE!
+
+"""
+
+        return f"""You are the content strategist for BytePulse.io, a tech blog targeting developers and startup founders.
+{existing_posts_section}
+
+## BytePulse.io Mission
+Help developers and startup founders make BUYING DECISIONS.
+NOT just information - guide them to ACTION (signup, purchase, migrate).
+
+## Content Type Priority (50%+ MUST be VS/Comparison)
+1. **VS Comparisons** (HIGHEST PRIORITY - 50%+): Tool A vs Tool B
+   - Examples: "Cursor vs GitHub Copilot 2026", "Linear vs Jira for Startups"
+   - WHY: High purchase intent, easy affiliate conversion
+
+2. **Migration Guides** (HIGH PRIORITY - 30%):
+   - Examples: "How to Migrate from Jira to Linear", "Switching from VS Code to Cursor"
+   - WHY: Users ready to switch = ready to buy
+
+3. **Tool Deep Dives** (20%):
+   - Examples: "Webflow for Developers: Complete Guide 2026"
+   - WHY: Recurring commission potential
+
+## High-Value VS Keywords to Prioritize
+- AI Code Editors: Cursor, Copilot, Codeium, Tabnine, Windsurf
+- Project Management: Linear, Jira, Notion, Height, Shortcut
+- Design/NoCode: Webflow, Framer, Figma, Canva
+- Dev Tools: Vercel, Netlify, Railway, Render
+- AI Tools: Claude, ChatGPT, Gemini, Perplexity
+
+## Tools with Recurring Commission (PRIORITIZE)
+- Webflow, Semrush, Notion, Ahrefs, Surfer SEO
+- Vercel Pro, Railway, Render
+- Cursor Pro, GitHub Copilot
+
+## Topics to Analyze
+{topic_list}
+
+## Request
+From the topics above, recommend 5 topics suitable for BytePulse.io.
+
+Format your response EXACTLY like this:
+[Rank]. [Original Topic]
+- Category: [AI Tools/Dev Productivity/SaaS Reviews]
+- Suggested Title: [SEO-optimized ENGLISH title]
+- Content Type: [VS Comparison/Migration Guide/Tool Review]
+- Monetization: [Affiliate opportunity or AdSense potential]
+- Reason: [1-line explanation]
+
+## English Title Rules (Google SEO Optimized)
+- Include year (2026) for freshness
+- Use VS format when comparing: "X vs Y: Which is Better in 2026?"
+- Use "How to" for migration: "How to Migrate from X to Y (Step-by-Step)"
+- Keep under 60 characters
+- Include primary keyword at the beginning
+
+## IMPORTANT Rules
+- At least 3 out of 5 topics MUST be VS comparisons
+- Prioritize tools with recurring affiliate commission
+- English titles only (global market)
+- Focus on purchase-intent keywords
+- Avoid pure news/announcements (low conversion)
+- Avoid topics requiring code examples that need verification"""
 
     def _call_claude_sdk(self, prompt: str) -> str:
         """Call Claude Agent SDK with prompt.
@@ -604,12 +720,18 @@ class TrendDetector:
 
         return asyncio.run(_async_query())
 
-    def _parse_llm_recommendations(self, llm_response: str, original_topics: list[Topic]) -> list[Topic]:
+    def _parse_llm_recommendations(
+        self,
+        llm_response: str,
+        original_topics: list[Topic],
+        english_mode: bool = False,
+    ) -> list[Topic]:
         """Parse LLM recommendations and match with original topics.
 
         Args:
             llm_response: The LLM response text
             original_topics: Original topic list to match against
+            english_mode: If True, parse English titles (tech mode)
 
         Returns:
             List of recommended topics with updated info
@@ -621,24 +743,24 @@ class TrendDetector:
 
         current_topic = None
         current_category = None
-        current_korean_title = None
+        current_title = None  # Renamed from current_korean_title
 
         def save_topic():
             """Helper to save current topic if valid."""
-            nonlocal current_topic, current_category, current_korean_title
+            nonlocal current_topic, current_category, current_title
 
             # Skip invalid titles (N/A, empty, etc.)
-            if not current_korean_title or current_korean_title.upper() == "N/A":
+            if not current_title or current_title.upper() == "N/A":
                 return
 
             # Skip only explicitly excluded topics (YMYL medical advice)
             # Allow: 건강, 바이오해킹, 웰니스 (without "제외")
             # Skip: "건강 (제외 권장)", "YMYL 제외" etc.
             if current_category and "제외" in current_category:
-                logger.debug(f"Skipping YMYL excluded topic: {current_korean_title}")
+                logger.debug(f"Skipping YMYL excluded topic: {current_title}")
                 return
 
-            if current_korean_title:
+            if current_title:
                 # Find matching original topic or use first available
                 matched_orig = None
                 if current_topic:
@@ -664,19 +786,19 @@ class TrendDetector:
                     if current_category:
                         clean_category = re.sub(r'\s*\([^)]*\)', '', current_category).strip()
 
-                    # 한국어 제목에서 키워드 재추출 (영어 원본 키워드 대신)
-                    korean_keywords = self._extract_keywords(current_korean_title)
+                    # Extract keywords from the title
+                    title_keywords = self._extract_keywords(current_title)
 
                     new_topic = Topic(
-                        topic=current_korean_title,
-                        keywords=korean_keywords if korean_keywords else matched_orig.keywords,
+                        topic=current_title,
+                        keywords=title_keywords if title_keywords else matched_orig.keywords,
                         source=matched_orig.source,
                         score=matched_orig.score + 10,
-                        suggested_title=current_korean_title,
+                        suggested_title=current_title,
                         category=clean_category,  # LLM이 분석한 카테고리 저장
                     )
                     recommended.append(new_topic)
-                    logger.debug(f"Added topic: {current_korean_title} (category: {clean_category})")
+                    logger.debug(f"Added topic: {current_title} (category: {clean_category})")
 
         for line in lines:
             line = line.strip()
@@ -693,29 +815,42 @@ class TrendDetector:
                 # Reset for new topic
                 current_topic = topic_match.group(2).strip().strip('*[]')
                 current_category = None
-                current_korean_title = None
+                current_title = None
                 logger.debug(f"Found topic line: {current_topic}")
                 continue
 
             # Check for category line (various formats)
-            if '카테고리' in line:
-                cat_match = re.search(r'카테고리[^:：]*[:：]\s*(.+)', line)
+            if '카테고리' in line or 'Category' in line:
+                cat_match = re.search(r'(?:카테고리|Category)[^:：]*[:：]\s*(.+)', line, re.IGNORECASE)
                 if cat_match:
                     current_category = cat_match.group(1).strip().strip('*')
                     logger.debug(f"Found category: {current_category}")
 
-            # Check for Korean title line (various formats)
-            if '제목' in line and ('한국어' in line or '제안' in line or ':' in line or '：' in line):
-                title_match = re.search(r'(?:한국어\s*)?제목[^:：]*[:：]\s*(.+)', line)
-                if title_match:
-                    title_text = title_match.group(1).strip().strip('"\'*「」')
-                    # Remove type annotations like "(유형 1)", "(SEO)", etc.
-                    title_text = re.sub(r'\s*\(유형\s*\d+\)', '', title_text)
-                    title_text = re.sub(r'\s*\(SEO[^)]*\)', '', title_text)
-                    title_text = re.sub(r'\s*\(효용[^)]*\)', '', title_text)
-                    title_text = re.sub(r'\s*\(트렌드[^)]*\)', '', title_text)
-                    current_korean_title = title_text.strip()
-                    logger.debug(f"Found Korean title: {current_korean_title}")
+            # Parse title based on mode
+            if english_mode:
+                # English mode: look for "Suggested Title:"
+                if 'Suggested Title' in line or 'Title:' in line:
+                    title_match = re.search(r'(?:Suggested\s+)?Title[^:：]*[:：]\s*(.+)', line, re.IGNORECASE)
+                    if title_match:
+                        title_text = title_match.group(1).strip()
+                        # Remove surrounding quotes (various styles)
+                        title_text = re.sub(r'^["\'"]+|["\'"]+$', '', title_text)
+                        title_text = title_text.strip('*')
+                        current_title = title_text.strip()
+                        logger.debug(f"Found English title: {current_title}")
+            else:
+                # Korean mode: look for "한국어 제목 제안:"
+                if '제목' in line and ('한국어' in line or '제안' in line or ':' in line or '：' in line):
+                    title_match = re.search(r'(?:한국어\s*)?제목[^:：]*[:：]\s*(.+)', line)
+                    if title_match:
+                        title_text = title_match.group(1).strip().strip('"\'*「」')
+                        # Remove type annotations like "(유형 1)", "(SEO)", etc.
+                        title_text = re.sub(r'\s*\(유형\s*\d+\)', '', title_text)
+                        title_text = re.sub(r'\s*\(SEO[^)]*\)', '', title_text)
+                        title_text = re.sub(r'\s*\(효용[^)]*\)', '', title_text)
+                        title_text = re.sub(r'\s*\(트렌드[^)]*\)', '', title_text)
+                        current_title = title_text.strip()
+                        logger.debug(f"Found Korean title: {current_title}")
 
         # Don't forget the last topic
         save_topic()

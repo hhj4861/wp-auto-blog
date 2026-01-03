@@ -361,52 +361,225 @@ class ContentGenerator:
 출력: HTML만, 마크다운 없이, 코멘트 없이.
 """,
             "en": """
-Write an expert-level, in-depth blog post about: {topic}
+Write an expert-level, PURCHASE-DECISION-FOCUSED blog post about: {topic}
 
 Target keywords: {keywords}
 
-NICHE FOCUS (bytepulse.io - Tech Blog):
-- Target specific niches: AI Tools, Frontend Dev Productivity, SaaS for Startups, Web3 Security
-- Avoid generic "tech news" - provide UNIQUE VALUE
-- Write for developers, startup founders, and tech professionals
+=== BYTEPULSE.IO MISSION ===
+Help developers and startup founders make BUYING DECISIONS.
+NOT just information - guide them to ACTION (signup, purchase, migrate).
+Transform this from "informative" to "SELLING" content.
 
-CONTENT QUALITY RULES:
-- Deep dive tutorials with actionable steps
-- Honest comparisons (A vs B) with real pros/cons
-- Include personal experience, real-world examples
-- Cite sources, link to official docs when relevant
-- Provide code snippets or configuration examples when applicable
+=== TITLE OPTIMIZATION (SEO + Click-Bait) ===
+DON'T use boring titles like "Linear vs Jira vs Asana"
+DO use click-worthy formats:
+- Speed/Performance hook: "Linear vs Jira vs Asana: The 2026 Performance Benchmark (Who Wins?)"
+- Controversy hook: "Why Engineering Teams Are Dumping Jira for Linear in 2026"
+- Numbers hook: "I Tested All 3 for 30 Days - Here's the $2,000 Mistake to Avoid"
+Include: year (2026), power words (Benchmark, Dumping, Mistake, Secret, Finally)
 
-IMPORTANT RULES:
-- Write ONLY in English for US/UK audience
-- Use CURRENT YEAR (2026) - NEVER use 2025 or older
-- For future outlook, stay within 2026 - NEVER mention 2027 or later (too early in 2026 for such predictions)
-- Be technically accurate - your readers are experts
+=== CONTENT TYPE PRIORITY (50%+ should be VS/Comparison) ===
+1. **VS Comparisons** (HIGHEST PRIORITY): "Cursor vs GitHub Copilot", "Linear vs Jira"
+   - Developers searching "X vs Y" are READY TO BUY
+   - Include pricing tables, feature matrices, verdict
 
-STYLE RULES:
-- Clear, professional tone (not overly casual)
-- SHORT paragraphs (2-3 sentences max)
-- Use code blocks for technical content: <pre><code>...</code></pre>
-- Every H2 section MUST have: <!-- IMAGE: description -->
-- Total word count: 1500-2500 words (longer for tutorials)
+2. **Migration Guides**: "How to migrate from Jira to Linear"
+   - Low competition, high intent audience
+   - Include LEAD GEN hook: "Download my migration checklist (free PDF)"
 
-STRUCTURE:
-1. H1: Specific, SEO-friendly title (include niche keyword)
-2. Hook: Why this matters for your specific audience
-3. TL;DR box (class="tldr"): Key takeaways
-4. 6-10 H2 sections with:
-   - Deep explanations, not surface-level overview
-   - Code examples or step-by-step instructions
-   - Real-world use cases
-5. Comparison table if applicable
-6. FAQ section (H2): 3-4 technical questions
-7. Conclusion: Summary + next steps for reader
+3. **Tool Reviews**: Deep dive with affiliate links
+   - Focus on "Best for X" recommendations
 
-IMAGE PLACEHOLDER (tech-focused):
-<!-- IMAGE: developer working on code with multiple monitors -->
-<!-- IMAGE: modern software dashboard on laptop screen -->
+=== MOBILE-FIRST FORMATTING (Critical!) ===
+- MAX 2-3 sentences per paragraph (mobile screens are narrow!)
+- Use BOLD liberally: **Linear wins on speed**, **This is the $2,000 mistake**
+- Every key insight should be in a callout box (see templates below)
+- Whitespace is your friend - break up text walls
 
-Output: Clean HTML only, no markdown, no commentary.
+=== CTA BUTTONS (Not Text Links!) ===
+Replace boring "[Try Free]" text links with gradient BUTTONS:
+
+<div style="text-align: center; margin: 30px 0;">
+  <a href="[AFFILIATE:toolname]" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+    🚀 Start [Tool] Free - Unlimited Users
+  </a>
+</div>
+
+Place CTA buttons:
+- After Pricing section
+- After Verdict section
+- At the end of article
+
+=== MONETIZATION HOOKS (Required) ===
+- Button CTAs with urgency: "Start Free (No Credit Card)"
+- Mention FREE TIER limitations: "Free plan limits you to 10 users"
+- Recommend tools with RECURRING COMMISSION (Webflow, Semrush, Notion, Linear)
+
+=== CONTENT QUALITY (Developers detect AI spam!) ===
+- Real pros/cons - be HONEST about limitations
+- Personal experience tone: "After using Linear for 6 months, I found..."
+- Avoid generic fluff - every sentence must add value
+
+=== STRICT RULES ===
+- Write ONLY in English for US/UK/Global audience
+- Use CURRENT YEAR (2026) - NEVER 2025 or older
+- Be technically accurate - readers are EXPERTS
+- No AI-generated smell - write like a senior developer
+
+=== VISUAL-FIRST STYLE (CRITICAL! - Diagrams over Text) ===
+PRIORITY: EVERY H2 SECTION MUST START WITH A VISUAL ELEMENT!
+
+NO stock images - use TABLES, CHARTS, SCORE BARS instead.
+Each H2 section structure:
+1. H2 title
+2. IMMEDIATELY show visual element (table/chart/score bar)
+3. Then 1-2 short paragraphs explaining the visual
+4. Pro tip or callout box
+
+For each section, ask: "Can I show this instead of writing it?"
+- Pricing → Comparison table FIRST (not paragraphs)
+- Features → Feature matrix with ✓/✗ symbols FIRST
+- Scores → Visual score bars FIRST (see template below)
+- Pros/Cons → Side-by-side boxes FIRST
+- Workflow → Step diagrams with arrows FIRST
+- Comparison → Table or chart FIRST
+
+REQUIRED VISUAL ELEMENTS (use these generously):
+1. Score/Rating visualization (instead of "Tool A scores 9/10"):
+<div style="display: flex; align-items: center; gap: 12px; margin: 8px 0;">
+  <span style="width: 100px; color: #e8e8e8;">Speed:</span>
+  <div style="flex: 1; height: 8px; background: #1a1a2e; border-radius: 4px; overflow: hidden;">
+    <div style="width: 90%; height: 100%; background: linear-gradient(90deg, #3b82f6, #00d9ff);"></div>
+  </div>
+  <span style="color: #00d9ff; font-weight: 600;">9/10</span>
+</div>
+
+2. Pros/Cons boxes (stacked vertically - NO grid, grid breaks on mobile):
+<div style="background: #1e3a5f; padding: 16px; border-radius: 8px; border-left: 4px solid #3b82f6; margin: 16px 0;">
+  <strong style="color: #00d9ff;">✓ Pros</strong>
+  <ul style="margin: 8px 0 0 0; padding-left: 16px; color: #e8e8e8;">
+    <li>Pro point 1</li>
+    <li>Pro point 2</li>
+  </ul>
+</div>
+<div style="background: #1a1a2e; padding: 16px; border-radius: 8px; border-left: 4px solid #64748b; margin: 16px 0;">
+  <strong style="color: #94a3b8;">✗ Cons</strong>
+  <ul style="margin: 8px 0 0 0; padding-left: 16px; color: #94a3b8;">
+    <li>Con point 1</li>
+    <li>Con point 2</li>
+  </ul>
+</div>
+
+IMPORTANT: Do NOT use CSS grid layouts (display: grid). They break on WordPress. Use stacked divs instead.
+
+GENERAL RULES:
+- START with TL;DR summary box FIRST (before any other content)
+- Use VISUAL elements over text: comparison charts, score badges, diagrams
+- SHORT paragraphs (2-3 sentences MAX, then visual element)
+- Word count: 2000-3000 words (comprehensive)
+
+=== COLOR PALETTE (MUST USE ONLY THESE - Consistent Blue/Cyan Theme) ===
+- Primary: #3b82f6 (blue)
+- Accent: #00d9ff (cyan)
+- Text: #e8e8e8 (light gray)
+- Muted: #94a3b8 (gray)
+- Background: #1a1a2e, #16213e (dark blue)
+- DO NOT use green (#4ade80), pink (#f472b6), orange (#f59e0b) for text
+- Winner indicators: use ✓ text or blue badges only
+
+=== REQUIRED HTML COMPONENTS ===
+
+1. TL;DR SUMMARY BOX (MUST be FIRST after H1):
+<div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-left: 4px solid #3b82f6; border-radius: 12px; padding: 24px; margin: 24px 0; color: #e8e8e8;">
+  <h3 style="color: #00d9ff; margin-top: 0; font-size: 1.3em;">⚡ TL;DR - Quick Verdict</h3>
+  <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+    <li><strong style="color: #00d9ff;">Tool A</strong>: Best for [use case]. [One-line verdict]</li>
+    <li><strong style="color: #00d9ff;">Tool B</strong>: Best for [use case]. [One-line verdict]</li>
+  </ul>
+  <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #334155; color: #94a3b8;">
+    <strong>My Pick:</strong> [Winner] for most teams. <a href="#verdict" style="color: #00d9ff;">Skip to verdict →</a>
+  </p>
+</div>
+
+2. COMPARISON TABLE (clean, readable):
+<table style="width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95em;">
+  <thead>
+    <tr style="background: #1e3a5f;">
+      <th style="padding: 16px; color: #00d9ff; text-align: left;">Feature</th>
+      <th style="padding: 16px; color: #00d9ff; text-align: center;">Tool A</th>
+      <th style="padding: 16px; color: #00d9ff; text-align: center;">Tool B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background: #1a1a2e;">
+      <td style="padding: 14px; border-bottom: 1px solid #333; color: #e8e8e8;">Price</td>
+      <td style="padding: 14px; border-bottom: 1px solid #333; text-align: center; color: #e8e8e8;">$X/mo</td>
+      <td style="padding: 14px; border-bottom: 1px solid #333; text-align: center; color: #e8e8e8;">$Y/mo ✓</td>
+    </tr>
+  </tbody>
+</table>
+
+3. WINNER INDICATOR (simple, not colorful badges):
+Use ✓ symbol next to winner, or: <span style="color: #00d9ff; font-weight: 600;">✓ Winner</span>
+
+4. CALLOUT BOXES (tips/warnings - blue theme only):
+<div style="background: #1e3a5f; border-radius: 8px; padding: 16px; margin: 16px 0; border-left: 4px solid #3b82f6;">
+  <strong style="color: #00d9ff;">💡 Pro Tip:</strong>
+  <span style="color: #e8e8e8;">[tip content]</span>
+</div>
+
+5. CTA BUTTONS (use REAL product URLs, blue theme):
+IMPORTANT: Only ONE CTA button in the ENTIRE article - at the very END (Final Verdict/Conclusion section).
+DO NOT put CTA buttons in Pricing, Features, or other middle sections.
+CRITICAL: NO line breaks inside <a> tags! Button text must be on single line.
+
+<div style="text-align: center; margin: 32px 0;"><a href="https://linear.app" target="_blank" rel="noopener" style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em;">Try Linear Free →</a></div>
+
+For linking to other tools, use inline text links (NOT buttons):
+<p style="color: #94a3b8;">Also check out <a href="https://www.atlassian.com/software/jira" style="color: #00d9ff;">Jira</a> or <a href="https://asana.com" style="color: #00d9ff;">Asana</a>.</p>
+
+=== COMMON PRODUCT URLS (Use these exact URLs) ===
+- Linear: https://linear.app
+- Jira: https://www.atlassian.com/software/jira
+- Asana: https://asana.com
+- Notion: https://www.notion.so
+- Obsidian: https://obsidian.md
+- Cursor: https://cursor.sh
+- GitHub Copilot: https://github.com/features/copilot
+- VS Code: https://code.visualstudio.com
+- Vim/Neovim: https://neovim.io
+- Figma: https://www.figma.com
+- Slack: https://slack.com
+- Discord: https://discord.com
+- Vercel: https://vercel.com
+- Netlify: https://www.netlify.com
+- Supabase: https://supabase.com
+- Firebase: https://firebase.google.com
+- AWS: https://aws.amazon.com
+- Docker: https://www.docker.com
+- Linux: https://www.linux.org
+- Windows: https://www.microsoft.com/windows
+
+=== STRUCTURE (Order matters!) ===
+1. H1: Click-worthy title with year and hook
+2. TL;DR SUMMARY BOX (MUST come FIRST)
+3. Quick Comparison Table
+4. Deep Dive Sections (5-7 H2):
+   - Pricing Breakdown (with table)
+   - Performance & Speed
+   - Key Features
+   - Developer Experience
+   - Migration Guide (if applicable)
+5. Verdict Section (id="verdict")
+6. CTA button (blue, links to real product URL)
+
+=== IMPORTANT ===
+- Use REAL product URLs for all buttons/CTAs (see list above)
+- Add target="_blank" rel="noopener" to all external links
+- Stick to blue/cyan color palette only
+- No rainbow colors - professional, consistent look
+
+Output: Clean HTML only, no markdown, no meta-commentary. Start directly with <h1>.
 """
         },
         ContentType.COMPARISON: """
@@ -1240,18 +1413,29 @@ Output only the HTML content, no markdown.
             return title.strip()
         return None
 
-    def _shorten_title(self, title: str, max_length: int = 30) -> str:
+    def _shorten_title(self, title: str, max_length: int = 50) -> str:
         """Shorten title to fit in one line.
 
         Args:
             title: Original title
-            max_length: Maximum character length (default 30)
+            max_length: Maximum character length (default 50 for English, 30 for Korean)
 
         Returns:
             Shortened title
         """
         if len(title) <= max_length:
             return title
+
+        # VS comparison pattern: keep "A vs B vs C" part intact
+        # e.g., "Linear vs Jira vs Asana APIs in 2026: The Developer..." -> "Linear vs Jira vs Asana"
+        vs_pattern = re.search(r'^([A-Za-z0-9\s]+(?:\s+vs\s+[A-Za-z0-9\s]+)+)', title, re.IGNORECASE)
+        if vs_pattern:
+            vs_part = vs_pattern.group(1).strip()
+            # Clean up trailing words like "APIs", "in", "2026"
+            vs_part = re.sub(r'\s+(APIs?|in|for|with|\d{4}).*$', '', vs_part, flags=re.IGNORECASE)
+            if 10 <= len(vs_part) <= max_length:
+                logger.info(f"Title shortened (VS pattern): '{title}' -> '{vs_part}'")
+                return vs_part
 
         # "A와 B" 또는 "A: B" 패턴이면 첫 부분만 사용
         for separator in ["와 ", "과 ", ": ", " - ", " – "]:
@@ -1283,11 +1467,19 @@ Output only the HTML content, no markdown.
                 if len(shortened) > max_length:
                     shortened = " ".join(parts[:3])
 
-        # 어색하게 잘리는 접속사/기호/짧은 단어 제거
-        bad_endings = ["와", "과", "및", ":", "의", "-", "–", ",", "를", "을", "에", "Sub", "and", "or"]
-        for ending in bad_endings:
-            if shortened.endswith(ending) or shortened.endswith(ending + " "):
-                shortened = shortened.rsplit(ending, 1)[0].strip()
+        # 어색하게 잘리는 접속사/기호/짧은 단어 제거 (단어 단위로 체크)
+        # 기호는 endswith, 단어는 정확한 마지막 단어로 체크
+        bad_symbol_endings = [":", "-", "–", ",", "(", "["]
+        bad_word_endings = ["와", "과", "및", "의", "를", "을", "에", "and", "or", "the", "a", "for", "to", "in", "on", "vs"]
+
+        for ending in bad_symbol_endings:
+            if shortened.endswith(ending):
+                shortened = shortened[:-len(ending)].strip()
+
+        # 단어 단위로 마지막 단어 체크
+        words = shortened.split()
+        if words and words[-1].lower() in bad_word_endings:
+            shortened = " ".join(words[:-1])
 
         # 마지막으로 max_length로 자르되, 단어 중간에서 자르지 않기
         if len(shortened) > max_length:
@@ -1297,10 +1489,13 @@ Output only the HTML content, no markdown.
             else:
                 shortened = shortened[:max_length-1] + "…"
 
-            # 다시 어색한 끝 체크
-            for ending in bad_endings:
+            # 다시 어색한 끝 체크 (단어 단위)
+            for ending in bad_symbol_endings:
                 if shortened.endswith(ending):
-                    shortened = shortened.rsplit(ending, 1)[0].strip()
+                    shortened = shortened[:-len(ending)].strip()
+            words = shortened.split()
+            if words and words[-1].lower() in bad_word_endings:
+                shortened = " ".join(words[:-1])
 
         logger.info(f"Title shortened: '{title}' -> '{shortened}'")
         return shortened

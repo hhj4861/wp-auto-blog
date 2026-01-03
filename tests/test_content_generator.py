@@ -60,10 +60,11 @@ class TestContentConfig:
         """ContentConfig has sensible defaults."""
         config = ContentConfig()
 
-        assert config.min_words == 1500
-        assert config.max_words == 2500
-        assert config.provider == LLMProvider.GEMINI
+        assert config.min_words == 800  # Substantial but scannable content
+        assert config.max_words == 1500
+        assert config.provider == LLMProvider.ANTHROPIC  # Claude CLI is default
         assert config.temperature >= 0 and config.temperature <= 1
+        assert config.use_cli is True  # CLI mode by default
 
     def test_custom_config(self):
         """ContentConfig accepts custom values."""
@@ -248,20 +249,21 @@ class TestLLMIntegration:
 
     @pytest.mark.unit
     def test_call_gemini(self, generator):
-        """_call_llm works with Gemini provider."""
+        """_call_llm works with Gemini provider (new google.genai API)."""
         generator.config.provider = LLMProvider.GEMINI
 
-        mock_model = MagicMock()
+        # Mock the new google.genai client
         mock_response = MagicMock()
         mock_response.text = "<h1>Generated Content</h1>"
-        mock_model.generate_content.return_value = mock_response
 
-        with patch("src.content_generator.genai") as mock_genai:
-            mock_genai.GenerativeModel.return_value = mock_model
+        mock_client = MagicMock()
+        mock_client.models.generate_content.return_value = mock_response
+        generator._gemini_client = mock_client
 
-            result = generator._call_llm("Generate content about AI")
+        result = generator._call_llm("Generate content about AI")
 
         assert "<h1>" in result
+        mock_client.models.generate_content.assert_called_once()
 
     @pytest.mark.unit
     def test_call_openai(self, generator):
@@ -283,27 +285,21 @@ class TestLLMIntegration:
         """_call_llm falls back to secondary provider on error."""
         generator.config.provider = LLMProvider.GEMINI
 
-        # First call (Gemini) fails
-        # Second call (OpenAI) succeeds
-        call_count = 0
+        # Mock Gemini client to fail
+        mock_gemini_client = MagicMock()
+        mock_gemini_client.models.generate_content.side_effect = Exception("Gemini Error")
+        generator._gemini_client = mock_gemini_client
 
-        def mock_genai_call(*args, **kwargs):
-            nonlocal call_count
-            call_count += 1
-            if call_count == 1:
-                raise Exception("API Error")
-            return MagicMock(text="<h1>Fallback Content</h1>")
+        # Mock Anthropic CLI to also fail (so it falls back to OpenAI)
+        mock_cli_fail = MagicMock(side_effect=Exception("CLI not available"))
 
+        # Mock OpenAI to succeed
         mock_openai_client = MagicMock()
         mock_openai_client.chat.completions.create.return_value = MagicMock(
             choices=[MagicMock(message=MagicMock(content="<h1>OpenAI Content</h1>"))]
         )
 
-        with patch("src.content_generator.genai") as mock_genai:
-            mock_model = MagicMock()
-            mock_model.generate_content.side_effect = Exception("Gemini Error")
-            mock_genai.GenerativeModel.return_value = mock_model
-
+        with patch.object(generator, "_call_anthropic_cli", mock_cli_fail):
             with patch("src.content_generator.OpenAI", return_value=mock_openai_client):
                 result = generator._call_llm("Generate content")
 

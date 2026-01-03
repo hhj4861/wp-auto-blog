@@ -1,5 +1,8 @@
 name: Auto Blog Post
 
+permissions:
+  contents: write
+
 on:
   # Manual trigger
   workflow_dispatch:

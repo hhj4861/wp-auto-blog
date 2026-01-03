@@ -152,6 +152,13 @@ class WordPressClient:
             "바이오해킹", "슬립테크", "수면", "명상", "스트레스관리", "멘탈",
         ],
 
+        # 취업: 외항사/항공사 취업 정보 (면접, 기출, 채용)
+        "취업": [
+            "취업", "면접", "채용", "합격", "외항사", "항공사", "승무원",
+            "자소서", "자기소개서", "기출문제", "족보", "면접후기",
+            "에미레이트", "싱가포르항공", "카타르항공", "대한항공", "아시아나",
+        ],
+
         # === bytepulse.io 니치 카테고리 ===
         "AI Tools": ["AI", "Machine Learning", "LLM", "Automation", "GPT", "Claude", "Gemini", "OpenAI"],
         "Dev Productivity": ["Developer Tools", "IDE", "Workflow", "Coding", "Efficiency", "VS Code", "Vim"],

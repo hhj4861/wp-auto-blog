@@ -26,18 +26,18 @@ on:
         required: false
         type: string
 
-  # Scheduled runs (UTC time)
+  # Scheduled runs (UTC time) - 하루 2회, 수익 우선순위 카테고리 자동 선택
   schedule:
-    # TEST: Run at 15:15 UTC for general blog
-    - cron: '15 15 * * *'
-    # Run at 14:00 UTC (23:00 KST) for tech blog (disabled until configured)
-    # - cron: '0 14 * * *'
+    # 오전: 00:00 UTC (09:00 KST)
+    - cron: '0 0 * * *'
+    # 오후: 12:00 UTC (21:00 KST)
+    - cron: '0 12 * * *'
 
 jobs:
   post-general:
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule' && github.event.schedule == '15 15 * * *'
+      github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 15
 

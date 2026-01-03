@@ -14,6 +14,46 @@ from typing import Optional
 
 from loguru import logger
 
+
+# 요일/시간별 카테고리 스케줄 (수익 우선순위 기반)
+# 리뷰(7회) > 건강(3회) > 생산성(2회) > 테크(2회) > 비즈니스(1회)
+# 오전: 00:00 UTC (09:00 KST), 오후: 12:00 UTC (21:00 KST)
+CATEGORY_SCHEDULE = {
+    # (요일, 시간대): 카테고리
+    # 요일: 0=월, 1=화, 2=수, 3=목, 4=금, 5=토, 6=일
+    # 시간대: "morning" (00:00-11:59 UTC), "evening" (12:00-23:59 UTC)
+    (0, "morning"): "리뷰",      # 월 오전
+    (0, "evening"): "건강",      # 월 오후
+    (1, "morning"): "리뷰",      # 화 오전
+    (1, "evening"): "생산성",    # 화 오후
+    (2, "morning"): "리뷰",      # 수 오전
+    (2, "evening"): "테크",      # 수 오후
+    (3, "morning"): "건강",      # 목 오전
+    (3, "evening"): "리뷰",      # 목 오후
+    (4, "morning"): "생산성",    # 금 오전
+    (4, "evening"): "리뷰",      # 금 오후
+    (5, "morning"): "테크",      # 토 오전
+    (5, "evening"): "리뷰",      # 토 오후
+    (6, "morning"): "비즈니스",  # 일 오전
+    (6, "evening"): "건강",      # 일 오후
+}
+
+
+def get_scheduled_category() -> Optional[str]:
+    """현재 시간 기준 스케줄된 카테고리 반환.
+
+    Returns:
+        스케줄된 카테고리명 또는 None
+    """
+    now = datetime.utcnow()
+    weekday = now.weekday()  # 0=월요일
+    time_slot = "morning" if now.hour < 12 else "evening"
+
+    category = CATEGORY_SCHEDULE.get((weekday, time_slot))
+    if category:
+        logger.info(f"Scheduled category: {category} (weekday={weekday}, slot={time_slot})")
+    return category
+
 from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig
@@ -44,6 +84,7 @@ class PipelineConfig:
     category: Optional[str] = None
     mode: str = "general"  # 'tech' for bytepulse.io, 'general' for trendpulse.blog
     use_llm_topics: bool = True  # Use LLM to analyze and prioritize topics
+    use_scheduled_category: bool = True  # 요일/시간별 카테고리 스케줄 사용
 
     # Sub-configs (optional)
     trend_config: Optional[TrendConfig] = None
@@ -137,17 +178,24 @@ class BlogPipeline:
 
         logger.info(f"Found {len(topics)} topics to process")
 
+        # 스케줄된 카테고리 사용 (CLI에서 명시적으로 지정하지 않은 경우)
+        target_category = self.config.category
+        if not target_category and self.config.use_scheduled_category:
+            target_category = get_scheduled_category()
+            if target_category:
+                logger.info(f"Using scheduled category: {target_category}")
+
         # Filter by category if specified
-        if self.config.category:
+        if target_category:
             filtered_topics = [
                 t for t in topics
-                if t.category == self.config.category
+                if t.category == target_category
             ]
             if filtered_topics:
-                logger.info(f"Filtered to {len(filtered_topics)} topics matching category: {self.config.category}")
+                logger.info(f"Filtered to {len(filtered_topics)} topics matching category: {target_category}")
                 topics = filtered_topics
             else:
-                logger.warning(f"No topics match category '{self.config.category}', using all topics")
+                logger.warning(f"No topics match category '{target_category}', using all topics")
 
         # Filter out duplicate topics using local registry
         topics = self._filter_duplicates(topics)

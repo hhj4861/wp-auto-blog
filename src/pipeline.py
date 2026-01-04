@@ -154,9 +154,26 @@ class BlogPipeline:
         """
         self.config = config or PipelineConfig()
 
+        # Auto-set language based on mode if content_config not provided
+        content_config = self.config.content_config
+        if content_config is None:
+            from src.content_generator import ContentConfig
+            # tech = English, general = Korean
+            language = "en" if self.config.mode == "tech" else "ko"
+            content_config = ContentConfig(language=language)
+            logger.info(f"Auto-set content language: {language} (mode: {self.config.mode})")
+
+        # Auto-set trend mode if trend_config not provided
+        trend_config = self.config.trend_config
+        if trend_config is None:
+            from src.trend_detector import TrendConfig, TrendMode
+            trend_mode = TrendMode.TECH if self.config.mode == "tech" else TrendMode.GENERAL
+            trend_config = TrendConfig(mode=trend_mode)
+            logger.info(f"Auto-set trend mode: {trend_mode.value}")
+
         # Initialize components
-        self.trend_detector = TrendDetector(config=self.config.trend_config)
-        self.content_generator = ContentGenerator(config=self.config.content_config)
+        self.trend_detector = TrendDetector(config=trend_config)
+        self.content_generator = ContentGenerator(config=content_config)
         self.image_fetcher = ImageFetcher(config=self.config.image_config)
 
         # Only initialize WordPress client if not in dry-run mode

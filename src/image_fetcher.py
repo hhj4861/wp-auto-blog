@@ -115,45 +115,67 @@ class ImageFetcher:
 
         all_images: list[FetchedImage] = []
 
-        # Build search query - use keywords or fallback to topic
-        if keywords:
-            query = " ".join(keywords[:3])  # Use first 3 keywords
-        elif topic:
-            # Extract English words from topic for image search
-            import re
-            english_words = re.findall(r"[a-zA-Z]+", topic)
-            if english_words:
-                query = " ".join(english_words[:3])
-            else:
-                # Translate common Korean terms to English for image search
-                korean_to_english = {
-                    "다이어트": "diet food healthy",
-                    "식단": "meal plan food",
-                    "홈오피스": "home office workspace",
-                    "인테리어": "interior design",
-                    "생산성": "productivity work",
-                    "앱": "mobile app technology",
-                    "트렌드": "trend modern",
-                    "건강": "health wellness",
-                    "운동": "exercise fitness",
-                    "요리": "cooking food",
-                    "여행": "travel vacation",
-                    "패션": "fashion style",
-                    "뷰티": "beauty cosmetics",
-                    "테크": "technology gadget",
-                    "금융": "finance money",
-                    "부동산": "real estate home",
-                    "자기계발": "self improvement",
-                    "독서": "reading books",
-                    "음악": "music listening",
-                    "영화": "movie cinema",
-                }
-                query_parts = []
-                for kr, en in korean_to_english.items():
-                    if kr in topic:
-                        query_parts.append(en)
-                query = " ".join(query_parts[:2]) if query_parts else "lifestyle modern"
+        # Korean to English translation map for image search
+        korean_to_english = {
+            "다이어트": "diet food healthy",
+            "식단": "meal plan food",
+            "홈오피스": "home office workspace",
+            "인테리어": "interior design",
+            "생산성": "productivity work",
+            "앱": "mobile app technology",
+            "트렌드": "trend modern",
+            "건강": "health wellness",
+            "운동": "exercise fitness",
+            "요리": "cooking food",
+            "여행": "travel vacation",
+            "패션": "fashion style",
+            "뷰티": "beauty cosmetics",
+            "테크": "technology gadget",
+            "금융": "finance money",
+            "부동산": "real estate home",
+            "자기계발": "self improvement",
+            "독서": "reading books",
+            "음악": "music listening",
+            "영화": "movie cinema",
+            "리뷰": "product review",
+            "추천": "recommendation best",
+            "비교": "comparison versus",
+            # 취업/항공 관련
+            "외항사": "flight attendant airline",
+            "승무원": "cabin crew stewardess",
+            "항공사": "airline aviation",
+            "채용": "job interview career",
+            "면접": "interview professional",
+            "취업": "career job office",
+            "에미레이트": "emirates airline dubai",
+            "카타르": "qatar airways doha",
+            "싱가포르": "singapore airlines",
+            "에티하드": "etihad airways",
+            "캐세이": "cathay pacific",
+        }
+
+        # Build search query
+        query = None
+        search_text = " ".join(keywords[:5]) if keywords else (topic or "")
+
+        # First, try to find English words
+        import re
+        english_words = re.findall(r"[a-zA-Z]{3,}", search_text)
+        if english_words:
+            query = " ".join(english_words[:3])
         else:
+            # Translate Korean keywords to English
+            query_parts = []
+            for kr, en in korean_to_english.items():
+                if kr in search_text:
+                    query_parts.append(en.split()[0])  # Take first English word
+                    if len(query_parts) >= 3:
+                        break
+            if query_parts:
+                query = " ".join(query_parts)
+
+        # Fallback
+        if not query:
             query = "lifestyle modern"
 
         logger.info(f"Image search query: {query}")

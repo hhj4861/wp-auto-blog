@@ -475,7 +475,7 @@ class BlogPipeline:
     def _filter_duplicates(self, topics: list[Topic]) -> list[Topic]:
         """Filter out topics that are similar to previously published posts.
 
-        Uses mode-specific JSON registry for efficiency.
+        Uses identifier-based duplicate detection for accuracy.
 
         Args:
             topics: List of topics to filter
@@ -483,61 +483,12 @@ class BlogPipeline:
         Returns:
             Filtered list of topics
         """
-        # Load existing posts from mode-specific registry
-        mode_posts = self._load_post_registry()
-
-        if not mode_posts:
-            logger.info(f"No existing posts in registry for mode '{self.config.mode}', skipping duplicate check")
-            return topics
-
-        logger.info(f"Checking against {len(mode_posts)} existing posts in registry")
-
-        # Extract keywords from existing posts
-        existing_keywords_list = []
-        for post in mode_posts:
-            keywords = self._extract_keywords(post.get("title", "") + " " + post.get("topic", ""))
-            existing_keywords_list.append({
-                "title": post.get("title", ""),
-                "topic": post.get("topic", ""),
-                "keywords": set(keywords),
-            })
-
         filtered_topics = []
+
         for topic in topics:
-            topic_words = set(self._extract_keywords(topic.topic))
-
-            is_duplicate = False
-            for existing in existing_keywords_list:
-                if not topic_words or not existing["keywords"]:
-                    continue
-
-                # Calculate Jaccard similarity
-                intersection = topic_words & existing["keywords"]
-                union = topic_words | existing["keywords"]
-
-                if union:
-                    similarity = len(intersection) / len(union)
-
-                    # 방법 1: Jaccard 유사도 25% 이상
-                    if similarity >= 0.25:
-                        logger.warning(
-                            f"Skipping duplicate topic: '{topic.topic}' "
-                            f"(similar to '{existing['title']}', similarity: {similarity:.2f})"
-                        )
-                        is_duplicate = True
-                        break
-
-                    # 방법 2: 핵심 키워드 2개 이상 겹치면 중복 (더 엄격한 체크)
-                    if len(intersection) >= 2 and len(topic_words) <= 6:
-                        logger.warning(
-                            f"Skipping duplicate topic: '{topic.topic}' "
-                            f"(keyword overlap: {intersection} with '{existing['title']}')"
-                        )
-                        is_duplicate = True
-                        break
-
-            if not is_duplicate:
-                filtered_topics.append(topic)
+            if self._is_duplicate(topic.topic):
+                continue
+            filtered_topics.append(topic)
 
         skipped_count = len(topics) - len(filtered_topics)
         if skipped_count > 0:

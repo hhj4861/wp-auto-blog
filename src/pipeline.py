@@ -442,25 +442,31 @@ class BlogPipeline:
         import re
         import regex
 
-        # 항공사 이름 패턴
-        airline_patterns = [
-            r"에미레이트", r"카타르", r"싱가포르", r"에티하드", r"캐세이",
-            r"대한항공", r"아시아나", r"일본항공", r"전일본", r"하이난",
-            r"Emirates", r"Qatar", r"Singapore", r"Etihad", r"Cathay",
-        ]
+        # 일반적인 단어 (식별자에서 제외)
+        common_words = {
+            # 취업 관련
+            "승무원", "채용", "면접", "합격", "스펙", "시험", "일정", "총정리",
+            "취업", "입사", "공채", "경력", "신입", "기출", "문제", "후기",
+            "자소서", "자기소개서", "연봉", "복지", "정규직", "인턴",
+            # 일반
+            "항공", "회사", "기업", "그룹", "전자", "물산", "생명", "화재",
+            "가이드", "방법", "전략", "비법", "노하우", "팁",
+            # 년도
+            "2024", "2025", "2026", "2027",
+        }
 
-        for pattern in airline_patterns:
-            if re.search(pattern, text, re.IGNORECASE):
-                return pattern.lower()
+        # 영문 브랜드/회사명 추출
+        english_words = re.findall(r'[A-Za-z]{2,}', text)
+        for word in english_words:
+            word_lower = word.lower()
+            if word_lower not in {"the", "and", "for", "top", "best", "vs", "how", "what", "why"}:
+                return word_lower
 
-        # 한글 고유명사 추출 (첫 번째 2글자 이상 단어)
+        # 한글 고유명사 추출 (일반 단어 제외)
         korean_words = regex.findall(r'[가-힣]{2,}', text)
-        if korean_words and len(korean_words) > 0:
-            # 일반적인 단어 제외
-            common_words = {"승무원", "채용", "면접", "합격", "스펙", "시험", "일정", "총정리", "항공"}
-            for word in korean_words:
-                if word not in common_words:
-                    return word.lower()
+        for word in korean_words:
+            if word not in common_words:
+                return word.lower()
 
         return None
 

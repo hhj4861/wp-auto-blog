@@ -403,7 +403,9 @@ class BlogPipeline:
         for post in mode_posts:
             existing_text = post.get("title", "") + " " + post.get("topic", "")
             existing_keywords = set(self._extract_keywords(existing_text))
-            existing_identifier = self._extract_identifier(existing_text)
+
+            # 저장된 identifier 사용, 없으면 추출
+            existing_identifier = post.get("identifier") or self._extract_identifier(existing_text)
 
             if not existing_keywords:
                 continue
@@ -577,12 +579,16 @@ class BlogPipeline:
         # Load existing registry (list format)
         posts = self._load_post_registry()
 
+        # Extract identifier for duplicate detection
+        identifier = self._extract_identifier(topic) or self._extract_identifier(title)
+
         # Add new post entry
         posts.append({
             "topic": topic,
             "title": title,
             "keywords": keywords,
             "category": category,
+            "identifier": identifier,
             "created_at": datetime.now().isoformat(),
         })
 

@@ -435,6 +435,9 @@ class BlogPipeline:
     def _extract_identifier(self, text: str) -> Optional[str]:
         """Extract core identifier (brand/company name) from text.
 
+        For tech mode: extracts full VS comparison pattern (e.g., "cursor vs github copilot")
+        For general mode: extracts first unique Korean word (e.g., "카타르")
+
         Args:
             text: Text to extract identifier from
 
@@ -443,6 +446,20 @@ class BlogPipeline:
         """
         import re
         import regex
+
+        # Tech 모드: VS 비교 패턴 전체 추출
+        # "Cursor vs GitHub Copilot 2026: Which AI Wins" → "cursor vs github copilot"
+        # "Vercel vs Netlify Free Tier Limits 2026" → "vercel vs netlify free tier limits"
+        vs_match = re.search(
+            r'^([A-Za-z0-9_!]+(?:\s+vs\s+[A-Za-z0-9_!]+)+(?:\s+[A-Za-z]+)*?)(?:\s+\d{4}|\s*:|\s*-|$)',
+            text,
+            re.IGNORECASE
+        )
+        if vs_match:
+            vs_pattern = vs_match.group(1).strip().lower()
+            # 불필요한 접미사 제거 (for, which, the 등)
+            vs_pattern = re.sub(r'\s+(for|which|the|in|on|at|to|a|an)\s*$', '', vs_pattern, flags=re.IGNORECASE)
+            return vs_pattern
 
         # 일반적인 단어 (식별자에서 제외)
         common_words = {
@@ -457,18 +474,18 @@ class BlogPipeline:
             "2024", "2025", "2026", "2027",
         }
 
-        # 영문 브랜드/회사명 추출
-        english_words = re.findall(r'[A-Za-z]{2,}', text)
-        for word in english_words:
-            word_lower = word.lower()
-            if word_lower not in {"the", "and", "for", "top", "best", "vs", "how", "what", "why"}:
-                return word_lower
-
         # 한글 고유명사 추출 (일반 단어 제외)
         korean_words = regex.findall(r'[가-힣]{2,}', text)
         for word in korean_words:
             if word not in common_words:
                 return word.lower()
+
+        # 영문 브랜드/회사명 추출 (VS 패턴이 없는 경우)
+        english_words = re.findall(r'[A-Za-z]{2,}', text)
+        for word in english_words:
+            word_lower = word.lower()
+            if word_lower not in {"the", "and", "for", "top", "best", "vs", "how", "what", "why"}:
+                return word_lower
 
         return None
 

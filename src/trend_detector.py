@@ -456,11 +456,11 @@ class TrendDetector:
             logger.error(f"LLM analysis failed: {e}, using raw topics")
             return raw_topics
 
-    def _load_existing_posts(self) -> list[str]:
-        """Load existing post titles from mode-specific registry for duplicate detection.
+    def _load_existing_posts(self) -> list[dict]:
+        """Load existing posts with identifiers from mode-specific registry.
 
         Returns:
-            List of existing post titles for the current mode
+            List of dicts with title and identifier for the current mode
         """
         # Get mode-specific registry path
         mode_str = self.config.mode.value  # "general" or "tech"
@@ -473,16 +473,17 @@ class TrendDetector:
             with open(registry_path, "r", encoding="utf-8") as f:
                 posts = json.load(f)
 
-            existing_titles = []
+            existing_posts = []
             for post in posts:
-                title = post.get("title", "")
-                topic = post.get("topic", "")
+                title = post.get("title", "") or post.get("topic", "")
+                identifier = post.get("identifier", "")
                 if title:
-                    existing_titles.append(title)
-                if topic and topic != title:
-                    existing_titles.append(topic)
+                    existing_posts.append({
+                        "title": title,
+                        "identifier": identifier
+                    })
 
-            return existing_titles
+            return existing_posts
         except Exception as e:
             logger.warning(f"Failed to load existing posts: {e}")
             return []
@@ -530,28 +531,38 @@ class TrendDetector:
             logger.error(f"LLM topic analysis error: {e}")
             return []
 
-    def _build_general_mode_prompt(self, topic_list: str, existing_posts: list[str]) -> str:
+    def _build_general_mode_prompt(self, topic_list: str, existing_posts: list[dict]) -> str:
         """Build LLM prompt for general mode (TrendPulse.blog - Korean).
 
         Args:
             topic_list: Formatted list of topics
-            existing_posts: List of existing post titles for duplicate detection
+            existing_posts: List of dicts with title and identifier
 
         Returns:
             Prompt string for LLM
         """
         existing_posts_section = ""
         if existing_posts:
-            existing_list = "\n".join([f"- {title}" for title in existing_posts[:20]])
+            existing_list = "\n".join([
+                f"- {p['title']} [핵심키워드: {p['identifier']}]" if p.get('identifier') else f"- {p['title']}"
+                for p in existing_posts[:20]
+            ])
+            # 기존 identifier 목록 추출
+            existing_identifiers = [p['identifier'] for p in existing_posts if p.get('identifier')]
+            identifiers_str = ", ".join(existing_identifiers) if existing_identifiers else "없음"
+
             existing_posts_section = f"""
 ## ⚠️ 이미 발행된 포스트 (중복 제외 필수!)
 다음 주제와 **의미적으로 유사한 토픽은 절대 추천하지 마세요**:
 {existing_list}
 
+🚫 중복 핵심키워드: {identifiers_str}
+→ 위 핵심키워드와 동일하거나 유사한 토픽은 반드시 제외!
+
 예시:
-- "POSSE 전략" ≈ "내 사이트 우선 발행" ≈ "콘텐츠 신디케이션" → 중복!
-- "텍스트 가계부" ≈ "메모장 가계부" ≈ "플레인텍스트 재무관리" → 중복!
-- "스탠딩데스크 추천" ≈ "스탠딩데스크 비교" ≈ "서서 일하기" → 중복!
+- "카타르 항공 승무원" ≈ "카타르항공 면접" → 핵심키워드 "카타르" 중복!
+- "에미레이트 채용" ≈ "에미레이트 합격" → 핵심키워드 "에미레이트" 중복!
+- "스탠딩데스크 추천" ≈ "스탠딩데스크 비교" → 핵심키워드 "스탠딩데스크" 중복!
 
 """
 
@@ -611,7 +622,7 @@ class TrendDetector:
 - 바이오해킹, 웰니스, 슬립테크, 생산성 향상 관점의 건강 토픽은 ✅ 허용
 - 수익화 가능성이 높은 토픽 우선"""
 
-    def _build_tech_mode_prompt(self, topic_list: str, existing_posts: list[str]) -> str:
+    def _build_tech_mode_prompt(self, topic_list: str, existing_posts: list[dict]) -> str:
         """Build LLM prompt for tech mode (BytePulse.io - English).
 
         Focuses on VS comparisons, Migration guides, and high-intent purchase keywords
@@ -619,22 +630,33 @@ class TrendDetector:
 
         Args:
             topic_list: Formatted list of topics
-            existing_posts: List of existing post titles for duplicate detection
+            existing_posts: List of dicts with title and identifier
 
         Returns:
             Prompt string for LLM
         """
         existing_posts_section = ""
         if existing_posts:
-            existing_list = "\n".join([f"- {title}" for title in existing_posts[:20]])
+            existing_list = "\n".join([
+                f"- {p['title']} [identifier: {p['identifier']}]" if p.get('identifier') else f"- {p['title']}"
+                for p in existing_posts[:20]
+            ])
+            # 기존 identifier 목록 추출
+            existing_identifiers = [p['identifier'] for p in existing_posts if p.get('identifier')]
+            identifiers_str = ", ".join(existing_identifiers) if existing_identifiers else "none"
+
             existing_posts_section = f"""
 ## ⚠️ Already Published Posts (MUST EXCLUDE duplicates!)
 Do NOT recommend topics semantically similar to these:
 {existing_list}
 
-Examples of duplicates:
-- "Cursor vs Copilot" ≈ "Copilot alternatives" ≈ "Best AI code editor" → DUPLICATE!
-- "Migrate to Linear" ≈ "Linear tutorial" ≈ "Jira alternative" → DUPLICATE!
+🚫 Duplicate identifiers: {identifiers_str}
+→ Topics with same or similar identifiers MUST be excluded!
+
+Examples:
+- "Cursor vs GitHub Copilot" identifier = "cursor vs github copilot" → any Cursor vs Copilot topic is DUPLICATE!
+- "Vercel vs Netlify Free Tier" identifier = "vercel vs netlify free tier" → any Vercel vs Netlify topic is DUPLICATE!
+- "Linear vs Jira" and "Jira vs Linear" → SAME comparison = DUPLICATE!
 
 """
 

@@ -9,7 +9,7 @@
       "better"
     ],
     "category": "Dev Productivity",
-    "identifier": "linux",
+    "identifier": "Linux vs Windows",
     "created_at": "2026-01-04T02:24:15.563994"
   },
   {
@@ -22,7 +22,7 @@
       "apis"
     ],
     "category": "AI Tools",
-    "identifier": "linear",
+    "identifier": "Linear vs Jira vs Asana APIs",
     "created_at": "2026-01-04T02:41:02.732146"
   },
   {
@@ -35,7 +35,7 @@
       "developers"
     ],
     "category": "Dev Productivity / Content Tools",
-    "identifier": "webflow",
+    "identifier": "Webflow vs WordPress vs Ghost",
     "created_at": "2026-01-04T03:08:49.109522"
   },
   {
@@ -48,7 +48,7 @@
       "developers"
     ],
     "category": "Dev Productivity",
-    "identifier": "pop",
+    "identifier": "Pop!_OS vs Ubuntu vs Fedora",
     "created_at": "2026-01-04T03:20:26.394657"
   },
   {
@@ -62,7 +62,7 @@
       "limits"
     ],
     "category": "SaaS Reviews",
-    "identifier": "vercel",
+    "identifier": "Vercel vs Netlify Free Tier Limits",
     "created_at": "2026-01-04T03:25:33.285913"
   },
   {
@@ -75,7 +75,7 @@
       "wins"
     ],
     "category": "AI Tools",
-    "identifier": "cursor",
+    "identifier": "Cursor vs GitHub Copilot",
     "created_at": "2026-01-04T03:42:36.148036"
   }
 ]

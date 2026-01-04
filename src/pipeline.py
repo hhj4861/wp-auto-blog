@@ -355,6 +355,15 @@ class BlogPipeline:
         """
         from src.trend_detector import TrendSource
 
+        # Check for duplicates first
+        if self._is_duplicate(topic):
+            logger.warning(f"Skipping duplicate topic: {topic}")
+            return PipelineResult(
+                topic=topic,
+                success=False,
+                error="Duplicate topic - already exists in registry",
+            )
+
         # Create a Topic object
         if keywords is None:
             keywords = self.trend_detector._extract_keywords(topic)
@@ -368,6 +377,56 @@ class BlogPipeline:
         )
 
         return self._process_topic(topic_obj)
+
+    def _is_duplicate(self, topic: str) -> bool:
+        """Check if a topic is duplicate of existing posts.
+
+        Args:
+            topic: Topic string to check
+
+        Returns:
+            True if duplicate, False otherwise
+        """
+        mode_posts = self._load_post_registry()
+
+        if not mode_posts:
+            return False
+
+        topic_words = set(self._extract_keywords(topic))
+        if not topic_words:
+            return False
+
+        for post in mode_posts:
+            existing_keywords = set(self._extract_keywords(
+                post.get("title", "") + " " + post.get("topic", "")
+            ))
+
+            if not existing_keywords:
+                continue
+
+            # Calculate Jaccard similarity
+            intersection = topic_words & existing_keywords
+            union = topic_words | existing_keywords
+
+            if union:
+                similarity = len(intersection) / len(union)
+
+                # Jaccard 유사도 25% 이상
+                if similarity >= 0.25:
+                    logger.warning(
+                        f"Duplicate detected: '{topic}' similar to '{post.get('title')}' "
+                        f"(similarity: {similarity:.2f})"
+                    )
+                    return True
+
+                # 핵심 키워드 2개 이상 겹치면 중복
+                if len(intersection) >= 2 and len(topic_words) <= 6:
+                    logger.warning(
+                        f"Duplicate detected: '{topic}' keyword overlap: {intersection}"
+                    )
+                    return True
+
+        return False
 
     def _filter_duplicates(self, topics: list[Topic]) -> list[Topic]:
         """Filter out topics that are similar to previously published posts.

@@ -33,8 +33,8 @@ on:
     - cron: '30 23 * * *'
     # 오후: 10:30 UTC (19:30 KST) → 실제 ~20:00 KST
     - cron: '30 10 * * *'
-    # 외항사 포스팅: 14:00 UTC (23:00 KST) - 월/수/금
-    - cron: '0 14 * * 1,3,5'
+    # 외항사 포스팅: 02:00 UTC (11:00 KST) - 월/수/금
+    - cron: '0 2 * * 1,3,5'
 
 jobs:
   post-general:
@@ -210,8 +210,8 @@ jobs:
 
   # 외항사 포스팅 (토픽 큐에서 처리)
   post-queue:
-    # 월/수/금 23:00 KST (14:00 UTC)에만 실행
-    if: github.event.schedule == '0 14 * * 1,3,5'
+    # 월/수/금 11:00 KST (02:00 UTC)에만 실행
+    if: github.event.schedule == '0 2 * * 1,3,5'
     runs-on: ubuntu-latest
     timeout-minutes: 20
 

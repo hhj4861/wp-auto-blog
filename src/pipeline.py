@@ -396,13 +396,22 @@ class BlogPipeline:
         if not topic_words:
             return False
 
+        # 핵심 식별자 추출 (토픽에서 고유명사/브랜드명)
+        # 예: "2026 카타르 항공 승무원" → "카타르"
+        topic_identifier = self._extract_identifier(topic)
+
         for post in mode_posts:
-            existing_keywords = set(self._extract_keywords(
-                post.get("title", "") + " " + post.get("topic", "")
-            ))
+            existing_text = post.get("title", "") + " " + post.get("topic", "")
+            existing_keywords = set(self._extract_keywords(existing_text))
+            existing_identifier = self._extract_identifier(existing_text)
 
             if not existing_keywords:
                 continue
+
+            # 핵심 식별자가 다르면 중복 아님 (예: 카타르 vs 싱가포르)
+            if topic_identifier and existing_identifier:
+                if topic_identifier != existing_identifier:
+                    continue  # 다른 시리즈이므로 스킵
 
             # Calculate Jaccard similarity
             intersection = topic_words & existing_keywords
@@ -411,22 +420,49 @@ class BlogPipeline:
             if union:
                 similarity = len(intersection) / len(union)
 
-                # Jaccard 유사도 25% 이상
-                if similarity >= 0.25:
+                # Jaccard 유사도 50% 이상 (더 엄격하게)
+                if similarity >= 0.50:
                     logger.warning(
                         f"Duplicate detected: '{topic}' similar to '{post.get('title')}' "
                         f"(similarity: {similarity:.2f})"
                     )
                     return True
 
-                # 핵심 키워드 2개 이상 겹치면 중복
-                if len(intersection) >= 2 and len(topic_words) <= 6:
-                    logger.warning(
-                        f"Duplicate detected: '{topic}' keyword overlap: {intersection}"
-                    )
-                    return True
-
         return False
+
+    def _extract_identifier(self, text: str) -> Optional[str]:
+        """Extract core identifier (brand/company name) from text.
+
+        Args:
+            text: Text to extract identifier from
+
+        Returns:
+            Identifier string or None
+        """
+        import re
+        import regex
+
+        # 항공사 이름 패턴
+        airline_patterns = [
+            r"에미레이트", r"카타르", r"싱가포르", r"에티하드", r"캐세이",
+            r"대한항공", r"아시아나", r"일본항공", r"전일본", r"하이난",
+            r"Emirates", r"Qatar", r"Singapore", r"Etihad", r"Cathay",
+        ]
+
+        for pattern in airline_patterns:
+            if re.search(pattern, text, re.IGNORECASE):
+                return pattern.lower()
+
+        # 한글 고유명사 추출 (첫 번째 2글자 이상 단어)
+        korean_words = regex.findall(r'[가-힣]{2,}', text)
+        if korean_words and len(korean_words) > 0:
+            # 일반적인 단어 제외
+            common_words = {"승무원", "채용", "면접", "합격", "스펙", "시험", "일정", "총정리", "항공"}
+            for word in korean_words:
+                if word not in common_words:
+                    return word.lower()
+
+        return None
 
     def _filter_duplicates(self, topics: list[Topic]) -> list[Topic]:
         """Filter out topics that are similar to previously published posts.

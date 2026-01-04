@@ -139,6 +139,12 @@ def parse_args() -> argparse.Namespace:
         help="Disable LLM-based topic analysis (use raw trending topics)",
     )
 
+    parser.add_argument(
+        "--from-queue",
+        action="store_true",
+        help="Process next pending topic from topic queue file",
+    )
+
     return parser.parse_args()
 
 
@@ -223,7 +229,49 @@ def main() -> int:
 
     # Run pipeline
     try:
-        if args.topic:
+        if args.from_queue:
+            # Queue mode - process next pending topic from queue file
+            import json
+            queue_file = Path(__file__).parent.parent / "data" / f"topic_queue_{args.mode}.json"
+
+            if not queue_file.exists():
+                logger.warning(f"Queue file not found: {queue_file}")
+                return 0
+
+            with open(queue_file, "r", encoding="utf-8") as f:
+                queue = json.load(f)
+
+            # Find next pending topic
+            pending_topic = None
+            pending_index = -1
+            for i, item in enumerate(queue):
+                if item.get("status") == "pending":
+                    pending_topic = item
+                    pending_index = i
+                    break
+
+            if not pending_topic:
+                logger.info("No pending topics in queue")
+                return 0
+
+            logger.info(f"Processing from queue: {pending_topic['topic']}")
+
+            # Process the topic
+            result = pipeline.run_single(
+                topic=pending_topic["topic"],
+                keywords=pending_topic.get("keywords"),
+            )
+            results = [result]
+
+            # Update queue status
+            if result.success:
+                queue[pending_index]["status"] = "completed"
+                queue[pending_index]["completed_at"] = __import__("datetime").datetime.now().isoformat()
+                with open(queue_file, "w", encoding="utf-8") as f:
+                    json.dump(queue, f, ensure_ascii=False, indent=2)
+                logger.info(f"Queue updated: marked as completed")
+
+        elif args.topic:
             # Single topic mode
             logger.info(f"Processing single topic: {args.topic}")
             result = pipeline.run_single(

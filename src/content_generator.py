@@ -170,12 +170,13 @@ class ContentGenerator:
 2026-01-03 +3000000 월급
 </pre>
 
-[표(Table) 스타일] - 모던 다크테마 + 라운드 코너:
-<table style="margin:0 auto 30px auto;border-collapse:separate;border-spacing:0;width:100%;max-width:800px;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+[표(Table) 스타일] - 모바일 반응형 필수! (가로 스크롤):
+<div style="overflow-x: auto; margin: 0 auto 30px auto; max-width: 800px;">
+<table style="width:100%;min-width:400px;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.2);">
 <thead>
 <tr style="background:#5046e5;">
-<th style="padding:16px 20px;text-align:center;color:#fff;font-weight:600;font-size:0.95em;">항목</th>
-<th style="padding:16px 20px;text-align:center;color:#fff;font-weight:600;font-size:0.95em;">설명</th>
+<th style="padding:16px 20px;text-align:center;color:#fff;font-weight:600;font-size:0.95em;white-space:nowrap;">항목</th>
+<th style="padding:16px 20px;text-align:center;color:#fff;font-weight:600;font-size:0.95em;white-space:nowrap;">설명</th>
 </tr>
 </thead>
 <tbody>
@@ -189,7 +190,8 @@ class ContentGenerator:
 </tr>
 </tbody>
 </table>
-※ 표 다음에는 반드시 30px 이상 여백 확보
+</div>
+중요: 모든 테이블은 반드시 <div style="overflow-x: auto;">로 감싸서 모바일에서 가로 스크롤 가능하게!
 ※ 헤더는 브랜드 컬러(#5046e5) + 흰 글씨
 ※ 바디는 다크 배경(#2d2d3a, #252532 교차) + 밝은 글씨(#f0f0f0)
 

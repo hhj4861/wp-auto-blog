@@ -414,10 +414,21 @@ class BlogPipeline:
 
                 if union:
                     similarity = len(intersection) / len(union)
-                    if similarity >= 0.3:  # 30% similarity threshold
+
+                    # 방법 1: Jaccard 유사도 25% 이상
+                    if similarity >= 0.25:
                         logger.warning(
                             f"Skipping duplicate topic: '{topic.topic}' "
                             f"(similar to '{existing['title']}', similarity: {similarity:.2f})"
+                        )
+                        is_duplicate = True
+                        break
+
+                    # 방법 2: 핵심 키워드 2개 이상 겹치면 중복 (더 엄격한 체크)
+                    if len(intersection) >= 2 and len(topic_words) <= 6:
+                        logger.warning(
+                            f"Skipping duplicate topic: '{topic.topic}' "
+                            f"(keyword overlap: {intersection} with '{existing['title']}')"
                         )
                         is_duplicate = True
                         break

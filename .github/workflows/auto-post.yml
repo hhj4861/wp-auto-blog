@@ -31,8 +31,8 @@ on:
   schedule:
     # 오전: 23:30 UTC (08:30 KST) → 실제 ~09:00 KST
     - cron: '30 23 * * *'
-    # 오후: 11:30 UTC (20:30 KST) → 실제 ~21:00 KST
-    - cron: '30 11 * * *'
+    # 오후: 10:30 UTC (19:30 KST) → 실제 ~20:00 KST
+    - cron: '30 10 * * *'
 
 jobs:
   post-general:

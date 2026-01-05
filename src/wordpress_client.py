@@ -206,6 +206,7 @@ class WordPressClient:
         category: Optional[str] = None,
         section_images: Optional[dict[str, FetchedImage]] = None,
         skip_hero_image: bool = False,
+        content_type: str = "review",
     ) -> CreatedPost:
         """Create a new WordPress post.
 
@@ -216,6 +217,7 @@ class WordPressClient:
             category: Category name (optional)
             section_images: Dict mapping H2 text to relevant FetchedImage
             skip_hero_image: If True, don't add hero image in content (for tech mode)
+            content_type: Type of content for slug generation (review, comparison, guide, list, news)
 
         Returns:
             CreatedPost object with post details
@@ -272,8 +274,12 @@ class WordPressClient:
         # 콘텐츠를 카테고리 wrapper로 감싸기
         wrapped_html = f'<div class="post-content {category_class}" data-category="{category or ""}">\n{prepared_html}\n</div>'
 
+        # Generate SEO-friendly slug
+        slug = self._generate_slug(content.title, content_type)
+
         post_data = {
             "title": content.title,
+            "slug": slug,  # SEO-optimized URL
             "content": wrapped_html,
             "excerpt": excerpt,
             "status": status.value,
@@ -565,6 +571,91 @@ class WordPressClient:
             result = hero_html + result
 
         return result
+
+    def _generate_slug(self, title: str, content_type: str = "review") -> str:
+        """Generate SEO-friendly slug from title.
+
+        Rules by content type:
+        - comparison (vs): {product1}-vs-{product2}-{year}
+        - review: {product}-review-{year}
+        - guide: {topic}-guide-{year}
+        - news: {topic}-{year}
+        - list: best-{topic}-{year}
+
+        Args:
+            title: Post title
+            content_type: Type of content (review, comparison, guide, list, news)
+
+        Returns:
+            SEO-optimized slug (max 60 chars)
+        """
+        import datetime
+        year = datetime.datetime.now().year
+
+        # Check for VS comparison pattern FIRST (before cleaning)
+        vs_match = re.search(
+            r'([A-Za-z0-9]+(?:\s+[A-Za-z0-9]+)?)\s+vs\.?\s+([A-Za-z0-9]+(?:\s+[A-Za-z0-9]+)?)',
+            title,
+            re.IGNORECASE
+        )
+        if vs_match:
+            product1 = vs_match.group(1).strip().lower().replace(' ', '-')
+            product2 = vs_match.group(2).strip().lower().replace(' ', '-')
+            return f"{product1}-vs-{product2}-{year}"
+
+        # Clean title: lowercase, remove special chars
+        clean = title.lower()
+        clean = re.sub(r'[^\w\s-]', '', clean)  # Keep alphanumeric, spaces, hyphens
+        clean = re.sub(r'\s+', '-', clean)  # Replace spaces with hyphens
+
+        # Remove common filler words
+        filler_words = {
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+            'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+            'this', 'that', 'which', 'what', 'how', 'why', 'when', 'where',
+            'complete', 'ultimate', 'comprehensive', 'definitive', 'essential',
+            'top', 'best', 'worst', 'most', 'all', 'every', 'any',
+            'you', 'your', 'our', 'their', 'his', 'her', 'its',
+            'make', 'makes', 'made', 'developers', 'developer',
+            'mistake', 'mistakes', 'year', 'years',
+            'review', 'guide', 'tutorial', 'tips', 'tricks',
+        }
+
+        # Remove filler words
+        words = clean.split('-')
+        words = [w for w in words if w and w not in filler_words and not w.isdigit()]
+
+        # Build slug based on content type
+        if content_type == "comparison":
+            slug = '-'.join(words[:4]) + f"-comparison-{year}"
+        elif content_type == "review":
+            slug = '-'.join(words[:3]) + f"-review-{year}"
+        elif content_type == "guide":
+            slug = '-'.join(words[:3]) + f"-guide-{year}"
+        elif content_type == "list":
+            slug = "best-" + '-'.join(words[:3]) + f"-{year}"
+        elif content_type == "news":
+            slug = '-'.join(words[:4]) + f"-{year}"
+        else:
+            slug = '-'.join(words[:5]) + f"-{year}"
+
+        # Clean up
+        slug = re.sub(r'-+', '-', slug)  # Remove double hyphens
+        slug = slug.strip('-')
+
+        # Max 60 chars for SEO
+        if len(slug) > 60:
+            parts = slug.rsplit('-', 1)
+            if parts[-1].isdigit():
+                year_part = f"-{parts[-1]}"
+                main_part = parts[0][:60 - len(year_part)]
+                main_part = main_part.rsplit('-', 1)[0]
+                slug = main_part + year_part
+            else:
+                slug = slug[:60].rsplit('-', 1)[0]
+
+        logger.debug(f"Generated slug: {slug} (from: {title[:50]}...)")
+        return slug
 
     def _generate_focus_keyphrase(self, title: str, keywords: list[str]) -> str:
         """Generate focus keyphrase for Yoast SEO.

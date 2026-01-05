@@ -326,6 +326,7 @@ class BlogPipeline:
                     category=category,
                     section_images=section_images,
                     skip_hero_image=skip_hero,
+                    content_type=self.config.content_type.value,
                 )
 
             duration = (datetime.now() - start_time).total_seconds()

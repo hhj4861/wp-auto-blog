@@ -7,6 +7,9 @@ loguru>=0.7.0
 pytrends>=4.9.0
 praw>=7.7.0
 
+# Text Processing
+regex>=2023.10.0
+
 # AI/LLM
 anthropic>=0.40.0  # Claude API (fallback)
 claude-agent-sdk>=0.1.0  # Claude Agent SDK (primary - uses OAuth or API key)

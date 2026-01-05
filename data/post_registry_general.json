@@ -142,5 +142,17 @@
     "category": "취업",
     "identifier": "카타르",
     "created_at": "2026-01-04T12:19:25.819415"
+  },
+  {
+    "topic": "구글 14년 현직자가 말하는 빅테크 커리어 생존 전략",
+    "title": "구글 14년 현직자가 말하는 빅테크 커리어 생존 전략",
+    "keywords": [
+      "lessons",
+      "years",
+      "google"
+    ],
+    "category": "비즈니스",
+    "identifier": "구글",
+    "created_at": "2026-01-05T10:46:21.519449"
   }
 ]

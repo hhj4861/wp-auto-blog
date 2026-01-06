@@ -16,6 +16,10 @@ on:
           - general
           - tech
           - both
+      topic:
+        description: 'Specific topic (optional, skips trend detection)'
+        required: false
+        type: string
       publish:
         description: 'Publish immediately'
         required: false
@@ -86,6 +90,11 @@ jobs:
         run: |
           # Build command with optional flags
           CMD="python -m src.main --mode general --max-posts 1"
+
+          # Add specific topic if provided (skips trend detection)
+          if [ -n "${{ github.event.inputs.topic }}" ]; then
+            CMD="$CMD --topic '${{ github.event.inputs.topic }}'"
+          fi
 
           # Add publish flag: always publish for scheduled runs, or if manually requested
           if [ "${{ github.event_name }}" == "schedule" ] || [ "${{ github.event.inputs.publish }}" == "true" ]; then
@@ -173,6 +182,11 @@ jobs:
           # Build command with optional flags
           # Uses Claude Agent SDK (claude_agent_query) which reads ANTHROPIC_API_KEY
           CMD="python -m src.main --mode tech --max-posts 1"
+
+          # Add specific topic if provided (skips trend detection)
+          if [ -n "${{ github.event.inputs.topic }}" ]; then
+            CMD="$CMD --topic '${{ github.event.inputs.topic }}'"
+          fi
 
           # Add publish flag: always publish for scheduled runs, or if manually requested
           if [ "${{ github.event_name }}" == "schedule" ] || [ "${{ github.event.inputs.publish }}" == "true" ]; then

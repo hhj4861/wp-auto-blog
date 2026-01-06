@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Claude Code - 팀 플랜 (회사 계정) 전용
+# 독립된 설정 디렉토리 사용
+
+export CLAUDE_CONFIG_DIR="$HOME/.claude-team"
+
+# 설정 디렉토리 없으면 생성 및 안내
+if [ ! -d "$CLAUDE_CONFIG_DIR" ]; then
+    mkdir -p "$CLAUDE_CONFIG_DIR"
+    echo ""
+    echo "═══════════════════════════════════════"
+    echo "   팀 플랜 (회사 계정) 첫 설정"
+    echo "═══════════════════════════════════════"
+    echo ""
+    echo "회사 계정으로 로그인하세요."
+    echo ""
+fi
+
+# Claude 실행 (모든 인자 전달)
+exec claude "$@"

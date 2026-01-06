@@ -73,6 +73,7 @@ class GeneratedContent:
         keywords: Target keywords
         word_count: Total word count
         content_type: Type of content generated
+        focus_keyphrase: SEO focus keyphrase for Yoast (2-4 words)
     """
 
     title: str
@@ -81,6 +82,7 @@ class GeneratedContent:
     keywords: list[str]
     word_count: int
     content_type: ContentType
+    focus_keyphrase: str = ""
 
     def to_dict(self) -> dict:
         """Convert to dictionary."""
@@ -91,6 +93,7 @@ class GeneratedContent:
             "keywords": self.keywords,
             "word_count": self.word_count,
             "content_type": self.content_type.value,
+            "focus_keyphrase": self.focus_keyphrase,
         }
 
 
@@ -615,7 +618,21 @@ For linking to other tools, use inline text links (NOT buttons):
 - Stick to blue/cyan color palette only
 - No rainbow colors - professional, consistent look
 
-Output: Clean HTML only, no markdown, no meta-commentary. Start directly with <h1>.
+=== OUTPUT FORMAT (MUST FOLLOW EXACTLY!) ===
+Output in this EXACT format with markers:
+
+---SEO-META---
+FOCUS_KEYPHRASE: [2-4 word keyphrase that MUST appear in title, e.g., "Linear vs Jira" or "Cursor AI Guide"]
+META_DESCRIPTION: [150-160 chars, include focus keyphrase, compelling hook]
+---CONTENT---
+<h1>Your Headline Analyzer Optimized Title</h1>
+[Rest of HTML content...]
+
+CRITICAL RULES:
+- FOCUS_KEYPHRASE must be 2-4 words that appear in the H1 title
+- FOCUS_KEYPHRASE must also appear in at least 2 H2 headings
+- META_DESCRIPTION must contain the FOCUS_KEYPHRASE
+- Start ---CONTENT--- section with <h1> tag
 """
         },
         ContentType.COMPARISON: """
@@ -864,7 +881,17 @@ Output only the HTML content, no markdown.
                 prompt = category_context + "\n\n" + prompt
 
         # Generate content with LLM
-        raw_html = self._call_llm(prompt)
+        raw_response = self._call_llm(prompt)
+
+        # Parse SEO metadata and content (tech mode uses structured format)
+        focus_keyphrase = ""
+        meta_description = ""
+        raw_html = raw_response
+
+        if mode == "tech" and "---SEO-META---" in raw_response:
+            # Parse structured format: ---SEO-META--- ... ---CONTENT---
+            focus_keyphrase, meta_description, raw_html = self._parse_seo_format(raw_response)
+            logger.debug(f"Parsed SEO format - keyphrase: {focus_keyphrase}")
 
         # Clean and process HTML
         html = self._clean_html(raw_html)
@@ -880,8 +907,9 @@ Output only the HTML content, no markdown.
         # Apply category-based color theme (H2, strong, boxes, etc.)
         html = self._apply_category_theme(html, category)
 
-        # Generate meta description
-        meta_description = self._generate_meta(topic, keywords, html)
+        # Generate meta description if not parsed from structured format
+        if not meta_description:
+            meta_description = self._generate_meta(topic, keywords, html)
 
         # Count words
         word_count = self._count_words(html)
@@ -898,6 +926,7 @@ Output only the HTML content, no markdown.
             keywords=keywords,
             word_count=word_count,
             content_type=content_type,
+            focus_keyphrase=focus_keyphrase,
         )
 
     def _get_category_context(self, category: str, topic: str) -> str:
@@ -1434,6 +1463,57 @@ Output only the HTML content, no markdown.
         cleaned = cleaned.strip()
 
         return cleaned
+
+    def _parse_seo_format(self, response: str) -> tuple[str, str, str]:
+        """Parse structured SEO format from LLM response.
+
+        Expected format:
+        ---SEO-META---
+        FOCUS_KEYPHRASE: [keyphrase]
+        META_DESCRIPTION: [description]
+        ---CONTENT---
+        <h1>...</h1>
+        ...
+
+        Args:
+            response: Raw LLM response
+
+        Returns:
+            Tuple of (focus_keyphrase, meta_description, html_content)
+        """
+        focus_keyphrase = ""
+        meta_description = ""
+        html_content = response
+
+        # Split by markers
+        if "---SEO-META---" in response and "---CONTENT---" in response:
+            parts = response.split("---CONTENT---", 1)
+            if len(parts) == 2:
+                meta_section = parts[0]
+                html_content = parts[1].strip()
+
+                # Extract FOCUS_KEYPHRASE
+                keyphrase_match = re.search(
+                    r'FOCUS_KEYPHRASE:\s*(.+?)(?:\n|$)',
+                    meta_section,
+                    re.IGNORECASE
+                )
+                if keyphrase_match:
+                    focus_keyphrase = keyphrase_match.group(1).strip()
+                    # Remove quotes if present
+                    focus_keyphrase = focus_keyphrase.strip('"\'')
+
+                # Extract META_DESCRIPTION
+                meta_match = re.search(
+                    r'META_DESCRIPTION:\s*(.+?)(?:\n|$)',
+                    meta_section,
+                    re.IGNORECASE
+                )
+                if meta_match:
+                    meta_description = meta_match.group(1).strip()
+                    meta_description = meta_description.strip('"\'')
+
+        return focus_keyphrase, meta_description, html_content
 
     def _extract_title(self, html: str) -> Optional[str]:
         """Extract title from H1 tag.

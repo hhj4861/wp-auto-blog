@@ -1,0 +1,116 @@
+#!/bin/bash
+
+# Claude Code 계정 관리 스크립트
+# 사용법: claude-switch [team|pro|status|reset]
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+NC='\033[0m'
+
+TEAM_DIR="$HOME/.claude-team"
+PRO_DIR="$HOME/.claude-pro"
+
+show_status() {
+    echo ""
+    echo -e "${BLUE}═══════════════════════════════════════${NC}"
+    echo -e "${BLUE}   Claude Code 계정 상태${NC}"
+    echo -e "${BLUE}═══════════════════════════════════════${NC}"
+    echo ""
+
+    # 팀 계정 상태
+    if [ -d "$TEAM_DIR" ]; then
+        echo -e "${GREEN}✓${NC} 팀 플랜: 설정됨 ($TEAM_DIR)"
+    else
+        echo -e "${YELLOW}○${NC} 팀 플랜: 미설정"
+    fi
+
+    # 프로 계정 상태
+    if [ -d "$PRO_DIR" ]; then
+        echo -e "${GREEN}✓${NC} 프로 플랜: 설정됨 ($PRO_DIR)"
+    else
+        echo -e "${YELLOW}○${NC} 프로 플랜: 미설정"
+    fi
+
+    echo ""
+    echo -e "${CYAN}사용법:${NC}"
+    echo "  claude-team    팀 계정으로 Claude 실행"
+    echo "  claude-pro     프로 계정으로 Claude 실행"
+    echo ""
+}
+
+reset_account() {
+    local account=$1
+    local dir=""
+    local name=""
+
+    if [ "$account" == "team" ]; then
+        dir="$TEAM_DIR"
+        name="팀 플랜"
+    elif [ "$account" == "pro" ]; then
+        dir="$PRO_DIR"
+        name="프로 플랜"
+    else
+        echo -e "${RED}잘못된 계정: $account${NC}"
+        return 1
+    fi
+
+    if [ -d "$dir" ]; then
+        rm -rf "$dir"
+        echo -e "${GREEN}$name 설정이 초기화되었습니다.${NC}"
+        echo "다음 실행 시 다시 로그인하세요."
+    else
+        echo -e "${YELLOW}$name 설정이 없습니다.${NC}"
+    fi
+}
+
+# 메인 로직
+case "$1" in
+    team)
+        echo -e "${YELLOW}팀 계정 설정을 시작합니다...${NC}"
+        export CLAUDE_CONFIG_DIR="$TEAM_DIR"
+        mkdir -p "$TEAM_DIR"
+        claude logout 2>/dev/null
+        claude login
+        ;;
+    pro)
+        echo -e "${YELLOW}프로 계정 설정을 시작합니다...${NC}"
+        export CLAUDE_CONFIG_DIR="$PRO_DIR"
+        mkdir -p "$PRO_DIR"
+        claude logout 2>/dev/null
+        claude login
+        ;;
+    status)
+        show_status
+        ;;
+    reset)
+        if [ -z "$2" ]; then
+            echo "사용법: claude-switch reset [team|pro]"
+            exit 1
+        fi
+        reset_account "$2"
+        ;;
+    *)
+        echo ""
+        echo -e "${BLUE}═══════════════════════════════════════${NC}"
+        echo -e "${BLUE}   Claude Code 계정 관리${NC}"
+        echo -e "${BLUE}═══════════════════════════════════════${NC}"
+        echo ""
+        echo -e "${YELLOW}명령어:${NC}"
+        echo ""
+        echo "  claude-team          팀 계정으로 Claude 실행"
+        echo "  claude-pro           프로 계정으로 Claude 실행"
+        echo ""
+        echo "  claude-switch team   팀 계정 로그인/재설정"
+        echo "  claude-switch pro    프로 계정 로그인/재설정"
+        echo "  claude-switch status 계정 상태 확인"
+        echo "  claude-switch reset [team|pro]  계정 초기화"
+        echo ""
+        echo -e "${CYAN}두 계정을 동시에 사용하려면:${NC}"
+        echo "  터미널 A: claude-team"
+        echo "  터미널 B: claude-pro"
+        echo ""
+        ;;
+esac

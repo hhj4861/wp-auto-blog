@@ -258,8 +258,13 @@ class WordPressClient:
         tag_ids = self._get_or_create_tags(all_tags)
 
         # Create post with SEO optimization
-        # Focus keyphrase: VS 비교글은 제목에서 추출, 일반글은 키워드 조합
-        focus_keyword = self._generate_focus_keyphrase(content.title, content.keywords)
+        # Focus keyphrase: LLM이 생성한 것 우선 사용, 없으면 제목에서 추출
+        focus_keyword = ""
+        if hasattr(content, 'focus_keyphrase') and content.focus_keyphrase:
+            focus_keyword = content.focus_keyphrase
+            logger.debug(f"Using LLM-generated focus keyphrase: {focus_keyword}")
+        else:
+            focus_keyword = self._generate_focus_keyphrase(content.title, content.keywords)
 
         # Excerpt: 카드에 표시될 요약 (meta_description보다 길게)
         # meta_description은 SEO용 150-160자, excerpt는 카드 표시용 300자

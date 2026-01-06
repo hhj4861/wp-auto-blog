@@ -372,18 +372,36 @@ Help developers and startup founders make BUYING DECISIONS.
 NOT just information - guide them to ACTION (signup, purchase, migrate).
 Transform this from "informative" to "SELLING" content.
 
-=== TITLE OPTIMIZATION (SEO - MAX 60 CHARS!) ===
-CRITICAL: Title MUST be under 60 characters for SEO!
-Format: "[Tool A] vs [Tool B]: [Short Hook]"
+=== TITLE OPTIMIZATION (Headline Analyzer Score 70+) ===
+CRITICAL: Optimize for HIGH Headline Analyzer scores (CoSchedule/AMI)!
 
-GOOD (under 60 chars):
-- "Vercel vs Netlify: 2026 Free Tier Showdown" (42 chars)
-- "Linear vs Jira: Which Ships Faster?" (36 chars)
+**REQUIRED ELEMENTS for high scores:**
+1. **POWER WORDS** (use 1-2): Ultimate, Proven, Secret, Essential, Definitive, Complete, Exclusive, Insider, Brutal, Honest
+2. **EMOTIONAL TRIGGER**: Curiosity, Fear of Missing Out, Surprise, Urgency
+3. **NUMBER** when possible: "7 Best...", "5 Reasons Why...", "The #1..."
+4. **SPECIFICITY**: Concrete benefit or outcome
 
-BAD (too long):
-- "Linear vs Jira vs Asana: The 2026 Performance Benchmark (Who Wins?)" (68 chars)
+**HIGH-SCORING TITLE FORMULAS (pick one):**
+- "[Number] [Power Word] [Topic] Tips That [Specific Result]"
+  → "7 Proven Linear Tricks That 10x Your Team's Speed"
+- "[Topic]: The [Power Word] [Year] Guide [Developers/Teams] Need"
+  → "Cursor AI: The Ultimate 2026 Guide Developers Need"
+- "Why [Topic] is [Emotional Word] (And What to Do About It)"
+  → "Why Your CI/CD is Painfully Slow (And How to Fix It)"
+- "[Topic A] vs [Topic B]: [Surprising/Honest] [Year] [Result]"
+  → "Vercel vs Netlify: Brutal 2026 Speed Test Results"
+- "The [Adjective] Truth About [Topic] No One Tells You"
+  → "The Shocking Truth About GitHub Copilot No One Tells You"
+- "How [Audience] [Achieve Result] With [Topic] in [Year]"
+  → "How Senior Devs Ship 3x Faster With Linear in 2026"
 
-Include: year (2026), power words (Showdown, Battle, Wins, Truth)
+**AVOID (low scores):**
+- Generic: "A Review of Linear" ❌
+- No emotion: "Linear vs Jira Comparison" ❌
+- Too long: Over 60 chars ❌
+- No power words ❌
+
+**LENGTH**: 8-12 words, 50-60 characters MAX
 
 === CONTENT TYPE PRIORITY (50%+ should be VS/Comparison) ===
 1. **VS Comparisons** (HIGHEST PRIORITY): "Cursor vs GitHub Copilot", "Linear vs Jira"

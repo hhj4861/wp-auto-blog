@@ -77,5 +77,16 @@
     "category": "AI Tools",
     "identifier": "Cursor vs GitHub Copilot",
     "created_at": "2026-01-04T03:42:36.148036"
+  },
+  {
+    "topic": "IQuest-Coder",
+    "title": "IQuest-Coder",
+    "keywords": [
+      "iquest",
+      "coder"
+    ],
+    "category": "AI Tools",
+    "identifier": "iquest",
+    "created_at": "2026-01-06T06:56:10.289783"
   }
 ]

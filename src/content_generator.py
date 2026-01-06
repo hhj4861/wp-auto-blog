@@ -880,21 +880,70 @@ Output only the HTML content, no markdown.
             if category_context:
                 prompt = category_context + "\n\n" + prompt
 
-        # Generate content with LLM
-        raw_response = self._call_llm(prompt)
+        # Research with Gemini Grounding for latest information
+        research_data = self.research_with_grounding(
+            topic=topic,
+            keywords=keywords,
+            language=self.config.language,
+        )
+        if research_data:
+            # Add research data AFTER the main prompt (as reference material)
+            # This ensures structural requirements (H2, FAQ) are not pushed down
+            research_section = f"""
 
-        # Parse SEO metadata and content (tech mode uses structured format)
-        focus_keyphrase = ""
-        meta_description = ""
-        raw_html = raw_response
+=== REFERENCE: Latest Research Data (Use for accuracy) ===
+{research_data}
+=== END REFERENCE ===
 
-        if mode == "tech" and "---SEO-META---" in raw_response:
-            # Parse structured format: ---SEO-META--- ... ---CONTENT---
-            focus_keyphrase, meta_description, raw_html = self._parse_seo_format(raw_response)
-            logger.debug(f"Parsed SEO format - keyphrase: {focus_keyphrase}")
+IMPORTANT: Use the above research data for accurate, up-to-date information (pricing, versions, dates).
+But you MUST follow ALL structural requirements in the prompt above (H2 headings, FAQ section, etc.)."""
+            prompt = prompt + research_section
+            logger.info("Research data added to prompt (as reference)")
 
-        # Clean and process HTML
-        html = self._clean_html(raw_html)
+        # Generate content with LLM (with retry on structural failures)
+        max_retries = 2
+        for attempt in range(max_retries):
+            if attempt > 0:
+                # Add explicit structural requirements reminder for retry
+                retry_prompt = prompt + """
+
+=== CRITICAL RETRY NOTICE ===
+Your previous response was REJECTED because it was missing required structural elements.
+You MUST include:
+1. At least 4-5 H2 headings (<h2>...</h2>) to structure the content
+2. A FAQ section with at least 3 questions using proper HTML structure
+3. Follow the EXACT HTML format specified in the prompt
+
+DO NOT use Markdown. Use only HTML tags."""
+                raw_response = self._call_llm(retry_prompt)
+                logger.info(f"Retry attempt {attempt + 1} for content generation")
+            else:
+                raw_response = self._call_llm(prompt)
+
+            # Parse SEO metadata and content (tech mode uses structured format)
+            focus_keyphrase = ""
+            meta_description = ""
+            raw_html = raw_response
+
+            if mode == "tech" and "---SEO-META---" in raw_response:
+                # Parse structured format: ---SEO-META--- ... ---CONTENT---
+                focus_keyphrase, meta_description, raw_html = self._parse_seo_format(raw_response)
+                logger.debug(f"Parsed SEO format - keyphrase: {focus_keyphrase}")
+
+            # Clean and process HTML
+            html = self._clean_html(raw_html)
+
+            # Validate content early to check for structural issues
+            is_valid, errors = self._validate(html)
+
+            # Check for critical structural failures that warrant retry
+            critical_failures = [e for e in errors if "H2" in e or "FAQ" in e]
+            if critical_failures and attempt < max_retries - 1:
+                logger.warning(f"Critical structural issues found: {critical_failures}. Retrying...")
+                continue  # Retry
+
+            # Passed validation or final attempt - proceed
+            break
 
         # Extract title and remove H1 from content (WordPress adds H1 automatically)
         title = self._extract_title(html) or topic
@@ -914,8 +963,7 @@ Output only the HTML content, no markdown.
         # Count words
         word_count = self._count_words(html)
 
-        # Validate content
-        is_valid, errors = self._validate(html)
+        # Final validation logging
         if not is_valid:
             logger.warning(f"Content validation warnings: {errors}")
 
@@ -1335,6 +1383,78 @@ Output only the HTML content, no markdown.
             ),
         )
         return response.text
+
+    def research_with_grounding(self, topic: str, keywords: list[str], language: str = "en") -> str:
+        """Research topic using Gemini Grounding with Google Search.
+
+        Args:
+            topic: The topic to research
+            keywords: Related keywords for context
+            language: 'en' for English, 'ko' for Korean
+
+        Returns:
+            Research summary with latest information
+        """
+        if self._gemini_client is None:
+            logger.warning("Gemini client not available, skipping grounding research")
+            return ""
+
+        try:
+            # Setup grounding tool
+            grounding_tool = genai_types.Tool(google_search=genai_types.GoogleSearch())
+            config = genai_types.GenerateContentConfig(
+                tools=[grounding_tool],
+                temperature=0.5,
+            )
+
+            # Language-specific prompt
+            if language == "ko":
+                prompt = f""""{topic}"에 대해 조사해주세요.
+
+관련 키워드: {', '.join(keywords)}
+
+다음 정보를 포함해서 정리해주세요:
+1. 최신 뉴스/업데이트 (날짜 포함)
+2. 주요 기능 및 특징
+3. 가격 정보 (있다면)
+4. 장단점
+5. 경쟁 제품/서비스 - 중요: 경쟁 제품의 최신 버전 정보 포함 (2026년 1월 기준)
+
+검색 결과를 기반으로 사실적이고 구체적으로 작성해주세요. 항상 최신 버전 번호를 사용하세요."""
+            else:
+                prompt = f"""Research and summarize information about: {topic}
+
+Related keywords: {', '.join(keywords)}
+
+Include:
+1. Latest news/updates (with dates if available)
+2. Key features and capabilities
+3. Pricing information (if available)
+4. Pros and Cons
+5. Competitors or alternatives - IMPORTANT: Include the LATEST versions of competing products (e.g., GPT-5.2, Claude 4, etc. as of January 2026)
+
+Be specific and factual based on search results. Always use the most recent version numbers."""
+
+            response = self._gemini_client.models.generate_content(
+                model="gemini-2.0-flash-exp",
+                contents=prompt,
+                config=config,
+            )
+
+            # Log grounding metadata
+            if hasattr(response, 'candidates') and response.candidates:
+                candidate = response.candidates[0]
+                if hasattr(candidate, 'grounding_metadata') and candidate.grounding_metadata:
+                    metadata = candidate.grounding_metadata
+                    if hasattr(metadata, 'grounding_chunks'):
+                        logger.info(f"Grounding research: {len(metadata.grounding_chunks)} sources found")
+
+            logger.info(f"Research completed for: {topic}")
+            return response.text
+
+        except Exception as e:
+            logger.error(f"Grounding research failed: {e}")
+            return ""
 
     def _call_openai(self, prompt: str) -> str:
         """Call OpenAI API.

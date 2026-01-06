@@ -293,6 +293,9 @@ class WordPressClient:
                 "_yoast_wpseo_metadesc": content.meta_description,
                 "_yoast_wpseo_focuskw": focus_keyword,
                 "_yoast_wpseo_title": f"{content.title} | {self._get_site_name()}",
+                # Robots 설정: 0 = index (검색엔진에 노출), 1 = noindex
+                "_yoast_wpseo_meta-robots-noindex": "0",
+                "_yoast_wpseo_meta-robots-nofollow": "0",
             },
         }
 

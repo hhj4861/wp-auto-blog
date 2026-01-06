@@ -376,33 +376,36 @@ NOT just information - guide them to ACTION (signup, purchase, migrate).
 Transform this from "informative" to "SELLING" content.
 
 === TITLE OPTIMIZATION (Headline Analyzer Score 70+) ===
-CRITICAL: Optimize for HIGH Headline Analyzer scores (CoSchedule/AMI)!
+CRITICAL: Your title MUST score 70+ on Headline Analyzer!
 
-**REQUIRED ELEMENTS for high scores:**
-1. **POWER WORDS** (use 1-2): Ultimate, Proven, Secret, Essential, Definitive, Complete, Exclusive, Insider, Brutal, Honest
-2. **EMOTIONAL TRIGGER**: Curiosity, Fear of Missing Out, Surprise, Urgency
-3. **NUMBER** when possible: "7 Best...", "5 Reasons Why...", "The #1..."
-4. **SPECIFICITY**: Concrete benefit or outcome
+**REQUIRED - USE AT LEAST ONE FROM EACH:**
+1. **POWER WORDS** (MUST use 1-2 - these are VERIFIED high-scoring):
+   - Ultimate, Incredible, Shocking, Amazing, Critical, Proven, Secret, Essential
+   - Exclusive, Surprising, Powerful, Remarkable, Extraordinary
 
-**HIGH-SCORING TITLE FORMULAS (pick one):**
-- "[Number] [Power Word] [Topic] Tips That [Specific Result]"
-  → "7 Proven Linear Tricks That 10x Your Team's Speed"
-- "[Topic]: The [Power Word] [Year] Guide [Developers/Teams] Need"
-  → "Cursor AI: The Ultimate 2026 Guide Developers Need"
-- "Why [Topic] is [Emotional Word] (And What to Do About It)"
-  → "Why Your CI/CD is Painfully Slow (And How to Fix It)"
-- "[Topic A] vs [Topic B]: [Surprising/Honest] [Year] [Result]"
-  → "Vercel vs Netlify: Brutal 2026 Speed Test Results"
-- "The [Adjective] Truth About [Topic] No One Tells You"
-  → "The Shocking Truth About GitHub Copilot No One Tells You"
-- "How [Audience] [Achieve Result] With [Topic] in [Year]"
-  → "How Senior Devs Ship 3x Faster With Linear in 2026"
+2. **EMOTIONAL WORDS** (MUST use 1 - triggers clicks):
+   - Mistakes, Warning, Danger, Risk, Fear, Worried, Struggling
+   - Love, Hate, Surprising, Shocking, Amazing, Incredible
 
-**AVOID (low scores):**
-- Generic: "A Review of Linear" ❌
-- No emotion: "Linear vs Jira Comparison" ❌
+3. **NUMBER** (strongly recommended): "7 Best...", "5 Critical...", "The #1..."
+
+**HIGH-SCORING TITLE FORMULAS (70+ verified):**
+- "The [Number] [Emotional] Mistakes [Audience] Make With [Topic]"
+  → "The 5 Critical Mistakes Developers Make With AI Coding Tools"
+- "[Topic]: [Number] [Power Word] [Benefit] You're Missing"
+  → "IQuest-Coder: 7 Incredible Features You're Missing in 2026"
+- "Why [Topic] is [Shocking/Surprising] (The Truth About [Result])"
+  → "Why IQuest-Coder is Shocking GPT-5 Users (The Truth About Speed)"
+- "[Topic A] vs [Topic B]: [Shocking/Surprising] [Year] Results"
+  → "IQuest-Coder vs GPT-5.2: Shocking 2026 Benchmark Results"
+- "The [Shocking/Surprising] Truth About [Topic] [Audience] Need to Know"
+  → "The Shocking Truth About IQuest-Coder Developers Need to Know"
+
+**AVOID (scores under 60):**
+- No emotional/power words: "IQuest-Coder Review" ❌
+- Generic: "A Guide to IQuest-Coder" ❌
+- "Definitive" (not recognized as power word) ❌
 - Too long: Over 60 chars ❌
-- No power words ❌
 
 **LENGTH**: 8-12 words, 50-60 characters MAX
 

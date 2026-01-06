@@ -168,5 +168,16 @@
     "category": "건강",
     "identifier": "마이크로키메리즘",
     "created_at": "2026-01-05T23:40:09.131651"
+  },
+  {
+    "topic": "enclose.horse",
+    "title": "enclose.horse",
+    "keywords": [
+      "enclose",
+      "horse"
+    ],
+    "category": "테크",
+    "identifier": "enclose",
+    "created_at": "2026-01-06T23:38:07.488102"
   }
 ]

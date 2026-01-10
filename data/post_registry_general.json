@@ -267,5 +267,18 @@
     "category": "생산성",
     "identifier": "줄로",
     "created_at": "2026-01-09T23:42:41.575025"
+  },
+  {
+    "topic": "2026년 루팅폰 금융앱 차단, 한국도 올까? 보안 정책 분석",
+    "title": "2026년 루팅폰 금융앱 차단",
+    "keywords": [
+      "cloudflare",
+      "ceo",
+      "italy",
+      "fines"
+    ],
+    "category": "테크",
+    "identifier": "루팅폰",
+    "created_at": "2026-01-10T10:43:53.177553"
   }
 ]

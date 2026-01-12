@@ -38,6 +38,7 @@
       "시험일정"
     ],
     "category": "취업",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-01-12T02:56:14.268495"
   }
 ]

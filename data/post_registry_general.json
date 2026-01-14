@@ -292,5 +292,19 @@
     "category": "테크",
     "identifier": "claude",
     "created_at": "2026-01-15T00:33:31.188453"
+  },
+  {
+    "topic": "There's a ridiculous amount of tech in a disposable vape",
+    "title": "There's a ridiculous amount",
+    "keywords": [
+      "ridiculous",
+      "amount",
+      "tech",
+      "disposable",
+      "vape"
+    ],
+    "category": "테크",
+    "identifier": "there",
+    "created_at": "2026-01-14T23:44:58.132734"
   }
 ]

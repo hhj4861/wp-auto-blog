@@ -42,9 +42,10 @@ on:
 
 jobs:
   post-general:
+    # 외항사 포스팅 스케줄(0 2 * * 1,3,5)에서는 post-queue만 실행
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule'
+      (github.event_name == 'schedule' && github.event.schedule != '0 2 * * 1,3,5')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -133,9 +134,10 @@ jobs:
   post-tech:
     # Tech mode: scheduled + manual trigger
     # bytepulse.io도 자동화 (mode: both)
+    # 외항사 포스팅 스케줄(0 2 * * 1,3,5)에서는 post-queue만 실행
     if: |
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'tech' || github.event.inputs.mode == 'both') ||
-      github.event_name == 'schedule'
+      (github.event_name == 'schedule' && github.event.schedule != '0 2 * * 1,3,5')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 

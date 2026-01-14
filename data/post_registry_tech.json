@@ -115,29 +115,41 @@
     "created_at": "2026-01-07T10:43:35.898352"
   },
   {
-    "topic": "Claude vs ChatGPT for Math: Which AI Wins in 2026?",
-    "title": "Claude vs ChatGPT for Math: Shocking 2026 Results Developers Need",
+    "topic": "OpenCode with Sisyphus vs Claude Code: Which AI Coding Agent Wins in 2026",
+    "title": "OpenCode Sisyphus vs Claude Code: The Shocking 2026 Showdown",
     "keywords": [
+      "opencode",
+      "sisyphus",
       "claude",
-      "chatgpt",
-      "math",
-      "wins"
+      "code",
+      "coding"
     ],
     "category": "AI Tools",
-    "identifier": "claude vs chatgpt for math",
-    "created_at": "2026-01-10T23:41:44.156991"
+    "identifier": "claude",
+    "created_at": "2026-01-09T21:54:07.251333"
   },
   {
-    "topic": "Windows 11 vs Linux for Developers 2026: The Switch",
-    "title": "Windows 11 vs Linux for Developers 2026: The Shocking Switch 67% Get Wrong",
+    "topic": "CES 2026",
+    "title": "CES 2026: The Shocking Truth About AI Hardware (What to Buy Now)",
     "keywords": [
-      "windows",
-      "linux",
-      "developers",
-      "switch"
+      "ces"
     ],
-    "category": "Dev Productivity",
-    "identifier": "windows",
-    "created_at": "2026-01-11T23:43:06.647291"
+    "category": "AI Tools",
+    "identifier": "ces",
+    "created_at": "2026-01-11T12:36:16.786180"
+  },
+  {
+    "topic": "Claude Code Cowork: How to Use Multi-Agent Collaboration Feature",
+    "title": "5 Shocking Claude Code Cowork Mistakes Killing Your Productivity",
+    "keywords": [
+      "claude",
+      "code",
+      "cowork",
+      "use",
+      "multi"
+    ],
+    "category": "AI Tools",
+    "identifier": "claude",
+    "created_at": "2026-01-15T00:34:22.210248"
   }
 ]

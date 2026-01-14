@@ -646,17 +646,43 @@ class TrendDetector:
             identifiers_str = ", ".join(existing_identifiers) if existing_identifiers else "none"
 
             existing_posts_section = f"""
-## ⚠️ Already Published Posts (MUST EXCLUDE duplicates!)
-Do NOT recommend topics semantically similar to these:
+## ⚠️ CRITICAL: Duplicate Detection Rules (MUST FOLLOW!)
+Do NOT recommend topics semantically similar to these existing posts:
 {existing_list}
 
-🚫 Duplicate identifiers: {identifiers_str}
-→ Topics with same or similar identifiers MUST be excluded!
+### Duplicate Detection Strategy
 
-Examples:
-- "Cursor vs GitHub Copilot" identifier = "cursor vs github copilot" → any Cursor vs Copilot topic is DUPLICATE!
-- "Vercel vs Netlify Free Tier" identifier = "vercel vs netlify free tier" → any Vercel vs Netlify topic is DUPLICATE!
-- "Linear vs Jira" and "Jira vs Linear" → SAME comparison = DUPLICATE!
+**Rule 1: VS Comparison Tool Overlap**
+If 2+ tools in your topic already appear together in an existing VS comparison → DUPLICATE!
+- Existing: "Cursor vs GitHub Copilot" → Tools: {{cursor, copilot}}
+- New: "Claude vs Cursor vs Copilot" → Tools: {{claude, cursor, copilot}}
+- Overlap: {{cursor, copilot}} (2 tools) → ❌ DUPLICATE! (same tool comparison)
+
+**Rule 2: Order Doesn't Matter**
+- "Linear vs Jira" = "Jira vs Linear" → SAME comparison = DUPLICATE!
+- "A vs B vs C" overlaps with "B vs C" → DUPLICATE!
+
+**Rule 3: Modifiers Don't Create New Topics**
+These are ALL the same topic:
+- "Cursor vs Copilot" = "Cursor vs GitHub Copilot" = "Cursor AI vs GitHub Copilot"
+- "Claude vs Cursor" = "Claude Code vs Cursor" = "Anthropic Claude vs Cursor"
+Adding "Code", "AI", "GitHub", "Free", "Pro" doesn't make it a new topic!
+
+**Examples of DUPLICATES to REJECT:**
+| Existing Post | Rejected Topic | Why |
+|--------------|----------------|-----|
+| Cursor vs Copilot | Claude vs Cursor vs Copilot | cursor+copilot overlap |
+| Vercel vs Netlify | Vercel vs Netlify vs Cloudflare | vercel+netlify overlap |
+| Linear vs Jira | Jira vs Linear for Startups | same tools |
+
+**Examples of VALID NEW Topics:**
+| Existing Post | Accepted Topic | Why |
+|--------------|----------------|-----|
+| Cursor vs Copilot | Windsurf vs Codeium | completely different tools |
+| Linear vs Jira | Notion vs Obsidian | different category |
+| VSCode vs Zed | Cursor vs Windsurf | only 0-1 tool overlap |
+
+🚫 Existing identifiers: {identifiers_str}
 
 """
 

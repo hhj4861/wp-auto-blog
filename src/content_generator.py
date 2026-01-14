@@ -158,6 +158,41 @@ class ContentGenerator:
 - 팩트만 나열하지 말고 "왜 중요한지", "어떻게 활용할지" 인사이트 제공
 - 주식/투자 분석 절대 금지
 
+=== Yoast SEO 최적화 규칙 (필수!) ===
+CRITICAL: 아래 규칙을 반드시 준수해야 Yoast SEO 점수가 올라갑니다!
+
+1. **서두 키프레이즈 (첫 단락)**:
+   - 첫 번째 문단에 반드시 토픽의 핵심 키워드를 자연스럽게 포함!
+   - 예: 토픽이 "2026년 직종 연봉 비교"면 → "2026년 직종 연봉 비교, 어떤 직업이 가장 유망할까요?"로 시작
+
+2. **키워드 밀도 (최소 5회 - 중요!)**:
+   - 본문 전체에 핵심 키프레이즈를 최소 5회 이상 자연스럽게 반복
+   - 서두(1회), 본문 섹션들(3회), 결론(1회)에 분산 배치
+   - 예: "이번 연봉 비교에서...", "직종별 연봉 비교 결과...", "연봉 비교 시 고려할 점...", "연봉 비교를 정리하면...", "최종 연봉 비교 결론은..."
+
+3. **H2 소제목에 키프레이즈 포함**:
+   - 최소 1-2개의 H2 제목에 핵심 키워드 또는 동의어 포함
+   - 예: "IT 직종 분석" → "2026 IT 직종 연봉 비교"
+   - 예: "금융권 분석" → "금융권 직종별 연봉 총정리"
+
+4. **내부 링크 (필수 1개 이상)**:
+   - trendpulse.blog 내 관련 포스트로 연결
+   - 취업 카테고리: <a href="https://trendpulse.blog/category/취업/">다른 취업 정보</a>
+   - 또는 관련 주제 링크: "외항사 취업에 관심 있다면 <a href="https://trendpulse.blog/category/취업/">취업 가이드</a>도 참고하세요."
+
+5. **외부 링크 (필수 1개 이상)**:
+   - 신뢰할 수 있는 외부 사이트 링크 포함
+   - 예: <a href="https://www.jobkorea.co.kr" target="_blank" rel="noopener">잡코리아</a>
+   - 예: <a href="https://www.saramin.co.kr" target="_blank" rel="noopener">사람인</a>
+   - 예: <a href="https://www.wanted.co.kr" target="_blank" rel="noopener">원티드</a>
+   - 예: <a href="https://kosis.kr" target="_blank" rel="noopener">통계청</a>
+   - 카테고리별 외부 링크:
+     - 취업: 잡코리아, 사람인, 원티드, 인크루트
+     - 테크: GitHub, Stack Overflow, 공식 문서
+     - 건강: 대한의학회, 질병관리청
+     - 리뷰: 제품 공식 사이트
+     - 생산성: Notion, Obsidian 등 공식 사이트
+
 === 스타일 규칙 ===
 - 짧은 문단 (2-3문장) - 가독성이 생명
 - 표(table)를 적극 활용하여 비교/정리
@@ -210,6 +245,79 @@ class ContentGenerator:
 - 가능하면 텍스트 대신 도식화/다이어그램 사용
 - 모든 콘텐츠 블록 max-width:800px로 통일
 - 문단 사이 margin: 20px 이상
+
+[숫자 데이터 시각화 - 필수!] - 숫자가 있으면 반드시 시각화:
+CRITICAL: 퍼센트(%), 점수, 비율, 순위 등 숫자 데이터는 텍스트 대신 시각적 바/차트로 표현!
+
+1. 점수/평점 바 (예: "성능 9/10점"):
+<div style="max-width:800px;margin:15px auto;">
+<div style="display:flex;align-items:center;gap:12px;margin:8px 0;">
+<span style="width:100px;color:#cbd5e1;">성능:</span>
+<div style="flex:1;height:10px;background:#1a1a2e;border-radius:5px;overflow:hidden;">
+<div style="width:90%;height:100%;background:linear-gradient(90deg,#5046e5,#a78bfa);"></div>
+</div>
+<span style="color:#a78bfa;font-weight:600;">9/10</span>
+</div>
+</div>
+
+2. 퍼센트 비교 바 (예: "만족도 85%"):
+<div style="max-width:800px;margin:15px auto;">
+<div style="margin:12px 0;">
+<div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+<span style="color:#cbd5e1;">A 제품</span>
+<span style="color:#a78bfa;font-weight:600;">85%</span>
+</div>
+<div style="height:12px;background:#1a1a2e;border-radius:6px;overflow:hidden;">
+<div style="width:85%;height:100%;background:linear-gradient(90deg,#5046e5,#a78bfa);border-radius:6px;"></div>
+</div>
+</div>
+<div style="margin:12px 0;">
+<div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+<span style="color:#cbd5e1;">B 제품</span>
+<span style="color:#60a5fa;font-weight:600;">72%</span>
+</div>
+<div style="height:12px;background:#1a1a2e;border-radius:6px;overflow:hidden;">
+<div style="width:72%;height:100%;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:6px;"></div>
+</div>
+</div>
+</div>
+
+3. 순위/TOP 리스트 시각화:
+<div style="max-width:800px;margin:20px auto;">
+<div style="display:flex;align-items:center;gap:15px;padding:16px;background:#2d2d3a;border-radius:10px;margin:10px 0;">
+<div style="width:50px;height:50px;background:linear-gradient(135deg,#ffd700,#ffb800);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5em;font-weight:bold;color:#1a1a2e;">1</div>
+<div style="flex:1;">
+<strong style="color:#fff;font-size:1.1em;">1위 항목명</strong>
+<p style="margin:5px 0 0 0;color:#a0a0a0;font-size:0.9em;">간단한 설명</p>
+</div>
+<span style="color:#ffd700;font-weight:bold;">⭐ 98점</span>
+</div>
+</div>
+
+4. 비교 차트 (장단점 등):
+<div style="max-width:800px;margin:20px auto;display:flex;gap:15px;flex-wrap:wrap;">
+<div style="flex:1;min-width:250px;background:#1e3a5f;padding:16px;border-radius:8px;border-left:4px solid #3b82f6;">
+<strong style="color:#60a5fa;">✓ 장점</strong>
+<ul style="margin:8px 0 0 0;padding-left:16px;color:#e8e8e8;">
+<li>장점 1</li>
+<li>장점 2</li>
+</ul>
+</div>
+<div style="flex:1;min-width:250px;background:#3a1e1e;padding:16px;border-radius:8px;border-left:4px solid #ef4444;">
+<strong style="color:#f87171;">✗ 단점</strong>
+<ul style="margin:8px 0 0 0;padding-left:16px;color:#e8e8e8;">
+<li>단점 1</li>
+<li>단점 2</li>
+</ul>
+</div>
+</div>
+
+※ 규칙:
+- "성능이 좋다" → 점수 바로 시각화 (9/10)
+- "85% 만족도" → 퍼센트 바로 시각화
+- "A가 B보다 30% 빠르다" → 비교 바 2개로 시각화
+- TOP 5 리스트 → 순위 카드로 시각화
+- 장단점 → 장단점 박스로 시각화
 
 [리스트 스타일] - 다크테마 + 트렌디 색상:
 <ul style="max-width:800px;margin:20px auto;padding-left:25px;text-align:left;">
@@ -264,36 +372,49 @@ class ContentGenerator:
 ※ 중요: 콘텐츠에 H1 태그 절대 사용 금지! (WordPress가 제목을 H1으로 자동 렌더링함)
 ※ 본문은 H2부터 시작
 
-1. 제목 생성 (2단계 프로세스):
+=== 제목 최적화 (클릭율 극대화!) ===
+CRITICAL: 제목은 클릭율을 결정합니다! 아래 요소를 반드시 포함하세요.
 
-당신은 월간 조회수 100만 회 IT/경제 블로그의 '수석 편집장'이자 'SEO 마케팅 전문가'입니다.
+**필수 요소 (모두 포함!):**
 
-[1단계] 아래 3가지 전략적 프레임으로 제목 후보 3개를 먼저 구상하세요:
+1. **파워 워드** (최소 1개 필수):
+   검증된 파워 워드: 충격, 비밀, 완벽, 필수, 놀라운, 강력한, 극적인, 확실한, 즉시, 핵심
+   → "충격! IT 연봉의 비밀" ✓ "완벽 가이드" ✓ "필수 전략" ✓
 
-**[효용 강조형]** 구체적 숫자(%, 금액, 년수)와 즉각적 이익 강조 (% 강조)
-- 예: "지출 인식률 23% 상승! 복잡한 금융 앱 대신 '텍스트 파일' 하나로 끝내는 법"
-- 예: "10년간 앱 없이 1억 모은 개발자의 가계부 비법"
+2. **감정 유발 워드** (최소 1개 필수):
+   검증된 감정 워드: 실수, 주의, 위험, 후회, 걱정, 고민, 충격, 반전, 진실, 함정
+   → "90%가 모르는 실수" ✓ "후회하기 전에" ✓ "숨겨진 진실" ✓
 
-**[트렌드 분석형]** 현재 시점(2026)과 최신 유행 키워드 반영
-- 예: "2026년 재무 관리 트렌드: 왜 우리는 다시 '텍스트 가계부'로 돌아가는가?"
-- 예: "2026년 디지털 미니멀리즘, 왜 개발자들은 앱을 버리나"
+3. **숫자** (강력 권장):
+   → "5가지 비밀", "3단계 전략", "TOP 7", "90%가 모르는"
 
-**[SEO/직관형]** 검색 사용자가 입력할 핵심 키워드 + 명확한 주제
-- 예: "텍스트 파일 가계부 사용법 완벽 가이드"
-- 예: "앱보다 강력한 메모장 가계부: 10년 가는 '텍스트 기반 재테크' 가이드"
+4. **구체적 키워드** (전문 용어, 브랜드명):
+   → 도구명, 직종명, 연도(2026) 등 구체적 단어
 
-[2단계] 3개 후보 중 가장 클릭율이 높을 것을 선택하고, 25-30자 이내로 압축하세요!
-- 핵심 키워드만 남기고 수식어 제거
-- 호기심 유발 요소 유지
-- "와", "과", ":", "의" 등으로 끝나지 않게!
+**고득점 제목 공식:**
+- "[숫자] [파워워드] [주제] [감정워드]"
+  → "5가지 충격적인 연봉 비밀 90%가 모른다"
+- "[주제]: [숫자]가지 [파워워드] [이익]"
+  → "IT 취업: 3가지 필수 전략으로 연봉 30% UP"
+- "[연도] [주제] [파워워드] [결과]"
+  → "2026 직종별 연봉 완벽 비교 총정리"
+- "[주제] vs [주제]: [감정워드] [진실]"
+  → "공무원 vs IT: 충격적인 연봉 진실"
 
-[최종 제목 예시] (20-30자)
-✓ "Claude Code Skills 활용법" (22자)
-✓ "개발자가 텍스트 파일로 1억 모은 비결" (20자)
-✓ "2026 AI 코딩 어시스턴트 완전 정복" (20자)
+**체크리스트:**
+□ 파워 워드 1개 이상? (충격, 비밀, 완벽, 필수 등)
+□ 감정 워드 1개 이상? (실수, 주의, 진실 등)
+□ 숫자 포함? (5가지, TOP 7, 90% 등)
+□ 구체적 키워드? (직종명, 도구명 등)
+□ 40자 이내? (SEO 제목 표시 한계)
 
-※ 최종 출력: H1 태그 없이 압축된 제목 텍스트만!
-※ 30자 초과 금지! 어색하게 잘리지 않는 자연스러운 제목!
+**피해야 할 제목:**
+- 파워워드 없음: "직종별 연봉 정리" ❌
+- 감정 없음: "2026 취업 가이드" ❌
+- 너무 일반적: "좋은 직업 추천" ❌
+- 너무 김: 40자 초과 ❌
+
+**길이**: 25-40자 권장
 
 2. 3줄 요약 박스 (본문 최상단, H1 없이 바로 시작) - What/How/Benefit 공식:
 <div style="background-color:#e8f4fd;padding:20px;border-left:4px solid #0066cc;margin:20px auto;border-radius:4px;max-width:800px;">
@@ -378,33 +499,43 @@ Transform this from "informative" to "SELLING" content.
 === TITLE OPTIMIZATION (Headline Analyzer Score 70+) ===
 CRITICAL: Your title MUST score 70+ on Headline Analyzer!
 
-**REQUIRED - USE AT LEAST ONE FROM EACH:**
-1. **POWER WORDS** (MUST use 1-2 - these are VERIFIED high-scoring):
-   - Ultimate, Incredible, Shocking, Amazing, Critical, Proven, Secret, Essential
-   - Exclusive, Surprising, Powerful, Remarkable, Extraordinary
+**WORD BALANCE REQUIREMENTS (MUST meet all!):**
 
-2. **EMOTIONAL WORDS** (MUST use 1 - triggers clicks):
-   - Mistakes, Warning, Danger, Risk, Fear, Worried, Struggling
-   - Love, Hate, Surprising, Shocking, Amazing, Incredible
+1. **POWER WORDS** (MUST use 1-2 - Goal: at least 1):
+   VERIFIED HIGH-SCORING: Ultimate, Incredible, Shocking, Proven, Secret, Essential, Exclusive, Powerful, Extraordinary, Guaranteed, Instant, Revolutionary
+   → "5 Incredible Mistakes..." ✓ "The Ultimate Guide..." ✓
 
-3. **NUMBER** (strongly recommended): "7 Best...", "5 Critical...", "The #1..."
+2. **EMOTIONAL WORDS** (MUST use 1-2 - Goal: 10-15%):
+   VERIFIED: Mistakes, Warning, Danger, Risk, Fear, Struggling, Hate, Painful, Surprising, Embarrassing, Heartbreaking
+   → "5 Painful Mistakes..." ✓ "The Embarrassing Truth..." ✓
+
+3. **UNCOMMON WORDS** (Goal: 10-20% - use specific/technical terms):
+   Use industry jargon, specific tool names, technical terms
+   → "Benchmark", "Migration", "Deployment", "Latency", tool names count!
+
+4. **NUMBER** (strongly recommended): "7 Best...", "5 Critical...", "The #1..."
 
 **HIGH-SCORING TITLE FORMULAS (70+ verified):**
-- "The [Number] [Emotional] Mistakes [Audience] Make With [Topic]"
-  → "The 5 Critical Mistakes Developers Make With AI Coding Tools"
-- "[Topic]: [Number] [Power Word] [Benefit] You're Missing"
-  → "IQuest-Coder: 7 Incredible Features You're Missing in 2026"
-- "Why [Topic] is [Shocking/Surprising] (The Truth About [Result])"
-  → "Why IQuest-Coder is Shocking GPT-5 Users (The Truth About Speed)"
-- "[Topic A] vs [Topic B]: [Shocking/Surprising] [Year] Results"
-  → "IQuest-Coder vs GPT-5.2: Shocking 2026 Benchmark Results"
-- "The [Shocking/Surprising] Truth About [Topic] [Audience] Need to Know"
-  → "The Shocking Truth About IQuest-Coder Developers Need to Know"
+- "[Number] [Power+Emotional] [Topic] Mistakes That [Pain Point]"
+  → "5 Incredible Mistakes Killing Your API Performance"
+- "[Tool A] vs [Tool B]: The [Shocking/Painful] [Year] [Uncommon Word]"
+  → "Cursor vs Copilot: The Shocking 2026 Benchmark Results"
+- "Why [Topic] is [Emotional Word] (The [Power Word] Truth)"
+  → "Why OpenCode is Embarrassing Claude Code (The Proven Truth)"
+- "The [Power Word] [Uncommon Word] [Audience] Need in [Year]"
+  → "The Ultimate Migration Guide Developers Need in 2026"
+
+**CHECKLIST BEFORE FINALIZING:**
+□ Has at least 1 Power Word? (Ultimate, Incredible, Shocking, Proven, etc.)
+□ Has at least 1 Emotional Word? (Mistakes, Warning, Painful, etc.)
+□ Has specific/uncommon words? (tool names, technical terms)
+□ Has a number? (5, 7, 10, etc.)
+□ Under 60 characters?
 
 **AVOID (scores under 60):**
-- No emotional/power words: "IQuest-Coder Review" ❌
-- Generic: "A Guide to IQuest-Coder" ❌
-- "Definitive" (not recognized as power word) ❌
+- No power words: "OpenCode Review" ❌
+- No emotional hook: "A Guide to AI Coding" ❌
+- Too generic: "Best AI Tools 2026" ❌
 - Too long: Over 60 chars ❌
 
 **LENGTH**: 8-12 words, 50-60 characters MAX
@@ -449,6 +580,37 @@ CRITICAL: NO line breaks inside <a> tags! Button HTML must be on single line.
 - Write ONLY in English for US/UK/Global audience
 - Use CURRENT YEAR (2026) - NEVER 2025 or older
 - Be technically accurate - readers are EXPERTS
+
+=== YOAST SEO OPTIMIZATION (CRITICAL!) ===
+You MUST follow these rules to achieve high Yoast SEO scores:
+
+1. **Keyphrase in Introduction (First Paragraph)**:
+   - Include the main topic/keyphrase naturally in the FIRST paragraph!
+   - Example: If topic is "Cursor vs Copilot", start with: "Cursor vs Copilot - which AI coding assistant wins in 2026?"
+
+2. **Keyphrase Density (Minimum 5 times - CRITICAL!)**:
+   - Repeat the core keyphrase at least 5 times throughout the content
+   - Distribute across: introduction (1), body sections (3), conclusion (1)
+   - Example: "In this comparison...", "Our testing shows...", "When comparing...", "The comparison reveals...", "Final verdict on this comparison..."
+
+3. **Keyphrase in H2 Subheadings**:
+   - Include keyphrase or synonyms in at least 1-2 H2 headings
+   - Example: "Pricing Analysis" → "Cursor vs Copilot Pricing Comparison"
+   - Example: "Features" → "Key Features: Cursor vs Copilot 2026"
+
+4. **Internal Links (Required - at least 1)**:
+   - Link to other bytepulse.io posts
+   - Example: <a href="https://bytepulse.io/category/tools/">More developer tool reviews</a>
+   - Or category link: <a href="https://bytepulse.io/category/comparison/">See more comparisons</a>
+
+5. **External Links (Required - at least 1)**:
+   - Link to authoritative external sources
+   - Examples:
+     - <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+     - <a href="https://stackoverflow.com" target="_blank" rel="noopener">Stack Overflow</a>
+     - <a href="https://docs.cursor.sh" target="_blank" rel="noopener">Official Cursor Docs</a>
+     - <a href="https://copilot.github.com" target="_blank" rel="noopener">GitHub Copilot</a>
+   - Always include official product documentation links when reviewing tools
 - No AI-generated smell - write like a senior developer
 
 === VISUAL-FIRST STYLE (CRITICAL! - Diagrams over Text) ===
@@ -950,10 +1112,10 @@ DO NOT use Markdown. Use only HTML tags."""
 
         # Extract title and remove H1 from content (WordPress adds H1 automatically)
         title = self._extract_title(html) or topic
-        # 제목 길이 체크: tech 모드는 전체 제목 유지, general 모드만 30자로 축약
-        if mode != "tech" and len(title) > 30:
+        # 제목 길이 체크: tech 모드는 전체 제목 유지, general 모드는 50자로 축약 (SEO 권장)
+        if mode != "tech" and len(title) > 50:
             logger.warning(f"Title too long ({len(title)} chars): {title}")
-            title = self._shorten_title(title, max_length=30)
+            title = self._shorten_title(title, max_length=50)
         html = self._remove_h1(html)
 
         # Apply category-based color theme (H2, strong, boxes, etc.)

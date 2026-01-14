@@ -399,6 +399,9 @@ class BlogPipeline:
     def _is_duplicate(self, topic: str) -> bool:
         """Check if a topic is duplicate of existing posts.
 
+        Uses LLM-based dynamic duplicate detection for accuracy.
+        Falls back to keyword similarity if LLM is unavailable.
+
         Args:
             topic: Topic string to check
 
@@ -410,40 +413,145 @@ class BlogPipeline:
         if not mode_posts:
             return False
 
+        # LLM 동적 중복 체크 시도
+        llm_result = self._check_duplicate_with_llm(topic, mode_posts)
+        if llm_result is not None:
+            return llm_result
+
+        # LLM 실패 시 키워드 기반 fallback
+        logger.info("LLM duplicate check unavailable, using keyword fallback")
+        return self._check_duplicate_keywords(topic, mode_posts)
+
+    def _check_duplicate_with_llm(self, topic: str, existing_posts: list) -> Optional[bool]:
+        """Use LLM to check if topic is duplicate of existing posts.
+
+        Args:
+            topic: New topic to check
+            existing_posts: List of existing post dicts
+
+        Returns:
+            True if duplicate, False if not, None if LLM unavailable
+        """
+        try:
+            from claude_agent_sdk import query as claude_agent_query
+            import asyncio
+        except ImportError:
+            logger.debug("Claude Agent SDK not available for duplicate check")
+            return None
+
+        # 기존 포스트 목록 생성 (최근 20개)
+        existing_list = "\n".join([
+            f"- {p.get('title', p.get('topic', ''))}"
+            for p in existing_posts[-20:]
+        ])
+
+        prompt = f"""You are a strict duplicate content detector. Check if the NEW TOPIC would create redundant content.
+
+## EXISTING POSTS:
+{existing_list}
+
+## NEW TOPIC:
+"{topic}"
+
+## DUPLICATE Detection Rules (BE STRICT!)
+
+### Rule 1: Same Core Subject = DUPLICATE
+If the main subject/product is the same and the content would overlap significantly:
+- "Claude Code 사용법" ≈ "Claude Code 활용 가이드" ≈ "Claude Code 시작하기" → DUPLICATE
+- "CES 2026 하이라이트" ≈ "CES 2026 핵심 정리" ≈ "CES 2026 총정리" → DUPLICATE
+- "젊음 유지하는 방법" ≈ "젊게 사는 비결" ≈ "노화 방지 습관" → DUPLICATE
+
+### Rule 2: VS Comparison = Check Core Tools
+- "Windows vs Linux" = "Windows 11 vs Linux" = "Linux vs Windows" → DUPLICATE
+- Title style ("Shocking Truth" vs "Guide") doesn't matter
+
+### Rule 3: Title Variations = Still DUPLICATE
+These title patterns are just rewordings of the same content:
+- "X 사용법" ≈ "X 활용법" ≈ "X 가이드" ≈ "X 완벽 가이드" → DUPLICATE
+- "X 추천" ≈ "X TOP 5" ≈ "X 베스트" → DUPLICATE
+- "X 팁" ≈ "X 노하우" ≈ "X 비법" → DUPLICATE
+
+### When to mark NOT_DUPLICATE:
+- Genuinely different aspects of same product (e.g., "설치" vs "고급 기능" vs "트러블슈팅")
+- Different products entirely
+- Different time periods with significant changes (e.g., "2025 버전" vs "2026 버전" if major update)
+
+## Response:
+Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
+"""
+
+        try:
+            async def _async_query():
+                messages = []
+                async for msg in claude_agent_query(prompt=prompt):
+                    messages.append(msg)
+
+                for msg in messages:
+                    if type(msg).__name__ == 'ResultMessage':
+                        if hasattr(msg, 'result') and msg.result:
+                            return msg.result
+                return ""
+
+            result = asyncio.run(_async_query())
+
+            if "DUPLICATE" in result.upper() and "NOT_DUPLICATE" not in result.upper():
+                logger.warning(f"LLM detected duplicate: '{topic}' - {result}")
+                return True
+            elif "NOT_DUPLICATE" in result.upper():
+                logger.info(f"LLM approved: '{topic}' - {result}")
+                return False
+            else:
+                logger.warning(f"LLM response unclear: {result}")
+                return None
+
+        except Exception as e:
+            logger.error(f"LLM duplicate check failed: {e}")
+            return None
+
+    def _check_duplicate_keywords(self, topic: str, existing_posts: list) -> bool:
+        """Fallback keyword-based duplicate check.
+
+        Args:
+            topic: Topic string to check
+            existing_posts: List of existing post dicts
+
+        Returns:
+            True if duplicate, False otherwise
+        """
         topic_words = set(self._extract_keywords(topic))
         if not topic_words:
             return False
 
-        # 핵심 식별자 추출 (토픽에서 고유명사/브랜드명)
-        # 예: "2026 카타르 항공 승무원" → "카타르"
         topic_identifier = self._extract_identifier(topic)
 
-        for post in mode_posts:
+        for post in existing_posts:
             existing_text = post.get("title", "") + " " + post.get("topic", "")
             existing_keywords = set(self._extract_keywords(existing_text))
-
-            # 저장된 identifier 사용, 없으면 추출
             existing_identifier = post.get("identifier") or self._extract_identifier(existing_text)
+
+            # identifier 일치 체크
+            if topic_identifier and existing_identifier:
+                if topic_identifier == existing_identifier:
+                    logger.warning(
+                        f"Duplicate detected (same identifier): '{topic}' matches '{post.get('title')}' "
+                        f"(identifier: {topic_identifier})"
+                    )
+                    return True
+                else:
+                    continue
 
             if not existing_keywords:
                 continue
 
-            # 핵심 식별자가 다르면 중복 아님 (예: 카타르 vs 싱가포르)
-            if topic_identifier and existing_identifier:
-                if topic_identifier != existing_identifier:
-                    continue  # 다른 시리즈이므로 스킵
-
-            # Calculate Jaccard similarity
+            # Jaccard similarity
             intersection = topic_words & existing_keywords
             union = topic_words | existing_keywords
 
             if union:
                 similarity = len(intersection) / len(union)
-
-                # Jaccard 유사도 50% 이상 (더 엄격하게)
                 if similarity >= 0.50:
                     logger.warning(
-                        f"Duplicate detected: '{topic}' similar to '{post.get('title')}' "
+                        f"Duplicate detected (keyword similarity): '{topic}' similar to '{post.get('title')}' "
                         f"(similarity: {similarity:.2f})"
                     )
                     return True
@@ -487,10 +595,23 @@ class BlogPipeline:
             "자소서", "자기소개서", "연봉", "복지", "정규직", "인턴",
             # 일반
             "항공", "회사", "기업", "그룹", "전자", "물산", "생명", "화재",
-            "가이드", "방법", "전략", "비법", "노하우", "팁",
+            "가이드", "방법", "전략", "비법", "노하우", "팁", "활용", "사용법",
+            "신기능", "기능", "완벽", "실전", "유지", "협업", "사례",
+            # 기술 관련 일반 단어
+            "멀티", "에이전트", "코드", "개발", "프로그래밍",
             # 년도
             "2024", "2025", "2026", "2027",
         }
+
+        # 영문 브랜드/제품명 우선 추출 (Claude, CES, Notion 등)
+        # 대문자로 시작하는 영문 단어 찾기
+        brand_match = re.search(r'\b([A-Z][a-zA-Z0-9]+(?:\s+[A-Z][a-zA-Z0-9]+)?)\b', text)
+        if brand_match:
+            brand = brand_match.group(1).lower()
+            # 일반적인 영어 단어 제외
+            skip_brands = {"the", "how", "what", "why", "which", "top", "best", "new", "review", "guide", "shocking", "mistakes"}
+            if brand not in skip_brands:
+                return brand
 
         # 한글 고유명사 추출 (일반 단어 제외)
         korean_words = regex.findall(r'[가-힣]{2,}', text)
@@ -498,11 +619,14 @@ class BlogPipeline:
             if word not in common_words:
                 return word.lower()
 
-        # 영문 브랜드/회사명 추출 (VS 패턴이 없는 경우)
-        english_words = re.findall(r'[A-Za-z]{2,}', text)
+        # 영문 브랜드/회사명 추출 (소문자도 포함)
+        english_words = re.findall(r'[A-Za-z]{3,}', text)
+        skip_words = {"the", "and", "for", "top", "best", "vs", "how", "what", "why", "which",
+                      "review", "guide", "complete", "shocking", "mistakes", "killing", "productivity",
+                      "use", "using", "multi", "agent", "collaboration", "feature", "truth"}
         for word in english_words:
             word_lower = word.lower()
-            if word_lower not in {"the", "and", "for", "top", "best", "vs", "how", "what", "why"}:
+            if word_lower not in skip_words:
                 return word_lower
 
         return None

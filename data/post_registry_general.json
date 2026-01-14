@@ -144,16 +144,29 @@
     "created_at": "2026-01-04T12:19:25.819415"
   },
   {
-    "topic": "구글 14년 현직자가 말하는 빅테크 커리어 생존 전략",
-    "title": "구글 14년 현직자가 말하는 빅테크 커리어 생존 전략",
+    "topic": "2025년 해커뉴스가 선정한 인기 블로그 TOP 10 분석",
+    "title": "2025년 해커뉴스가 선정한 인기",
     "keywords": [
-      "lessons",
-      "years",
-      "google"
+      "top"
     ],
-    "category": "비즈니스",
-    "identifier": "구글",
-    "created_at": "2026-01-05T10:46:21.519449"
+    "category": "리뷰",
+    "identifier": "해커뉴스가",
+    "created_at": "2026-01-04T14:21:45.195436"
+  },
+  {
+    "topic": "2026 싱가포르 항공 승무원 채용 시험일정 및 합격스펙 총정리",
+    "title": "2026 싱가포르 항공 승무원",
+    "keywords": [
+      "싱가포르항공",
+      "승무원",
+      "채용",
+      "면접",
+      "합격스펙",
+      "시험일정"
+    ],
+    "category": "취업",
+    "identifier": "싱가포르",
+    "created_at": "2026-01-04T15:01:51.200680"
   },
   {
     "topic": "마이크로키메리즘, 당신 몸속 타인의 세포가 만드는 건강 혁명",
@@ -179,21 +192,6 @@
     "category": "테크",
     "identifier": "enclose",
     "created_at": "2026-01-06T23:38:07.488102"
-  },
-  {
-    "topic": "2026 싱가포르 항공 승무원 채용 시험일정 및 합격스펙 총정리",
-    "title": "2026 싱가포르 항공 승무원",
-    "keywords": [
-      "싱가포르항공",
-      "승무원",
-      "채용",
-      "면접",
-      "합격스펙",
-      "시험일정"
-    ],
-    "category": "취업",
-    "identifier": "싱가포르",
-    "created_at": "2026-01-07T02:46:50.928258"
   },
   {
     "topic": "전 세계 화물선 실시간 추적 Shipmap, 글로벌 물류 시각화 도구 완벽 가이드",
@@ -258,127 +256,41 @@
     "created_at": "2026-01-09T10:48:22.984806"
   },
   {
-    "topic": "200줄로 만드는 Claude Code, AI 에이전트 개발 핵심 원리 분석",
-    "title": "200줄로 만드는 Claude Code",
-    "keywords": [
-      "claude",
-      "code"
-    ],
-    "category": "생산성",
-    "identifier": "줄로",
-    "created_at": "2026-01-09T23:42:41.575025"
-  },
-  {
-    "topic": "2026년 루팅폰 금융앱 차단, 한국도 올까? 보안 정책 분석",
-    "title": "2026년 루팅폰 금융앱 차단",
-    "keywords": [
-      "cloudflare",
-      "ceo",
-      "italy",
-      "fines"
-    ],
-    "category": "테크",
-    "identifier": "루팅폰",
-    "created_at": "2026-01-10T10:43:53.177553"
-  },
-  {
-    "topic": "2026년 AI 도입이 드러낸 기업 비즈니스 모델의 민낯",
-    "title": "2026년 AI 도입이 드러낸",
-    "keywords": [
-      "business",
-      "model",
-      "stress",
-      "test"
-    ],
-    "category": "비즈니스",
-    "identifier": "도입이",
-    "created_at": "2026-01-11T10:45:47.563701"
-  },
-  {
-    "topic": "2026 캐세이퍼시픽 항공 승무원 채용 시험일정 및 합격스펙 총정리",
-    "title": "2026 캐세이퍼시픽 항공 승무원",
-    "keywords": [
-      "캐세이퍼시픽",
-      "승무원",
-      "채용",
-      "면접",
-      "합격스펙",
-      "시험일정"
-    ],
+    "topic": "2026년 한국 직종 비교 - IT, 의료, 금융, 공무원 연봉과 전망 총정리",
+    "title": "2026년 한국 직종 비교 - IT, 의료, 금융, 공무원 연봉과 전망 총정리",
+    "keywords": [],
     "category": "취업",
-    "identifier": "캐세이퍼시픽",
-    "created_at": "2026-01-12T02:56:14.267997"
+    "identifier": "한국",
+    "created_at": "2026-01-09T21:33:19.458483"
   },
   {
-    "topic": "2026 맥OS 창 크기 조절 생산성 3배 높이는 필수 설정법",
-    "title": "2026 맥OS 창 크기",
-    "keywords": [
-      "struggle",
-      "resizing",
-      "windows",
-      "macos",
-      "tahoe"
-    ],
-    "category": "생산성",
-    "identifier": "크기",
-    "created_at": "2026-01-12T10:48:47.970521"
+    "topic": "젊음을 유지하는 방법",
+    "title": "젊음을 유지하는 방법",
+    "keywords": [],
+    "category": "테크",
+    "identifier": "젊음",
+    "created_at": "2026-01-11T11:56:27.470617"
   },
   {
-    "topic": "2026년 홈서버 셀프호스팅, CLI 에이전트로 10분 만에 구축하는 법",
-    "title": "2026년 홈서버 셀프호스팅, CLI",
+    "topic": "2026 CES",
+    "title": "2026 CES",
     "keywords": [
-      "cli"
-    ],
-    "category": "생산성",
-    "identifier": "홈서버",
-    "created_at": "2026-01-12T23:38:30.968629"
-  },
-  {
-    "topic": "2026 AI 도구 거부하는 개발자가 놓치는 3가지 기회",
-    "title": "2026 AI 도구 거부하는",
-    "keywords": [
-      "struggle",
-      "resizing",
-      "windows",
-      "macos",
-      "tahoe"
-    ],
-    "category": "비즈니스",
-    "identifier": "도구",
-    "created_at": "2026-01-13T10:49:12.559819"
-  },
-  {
-    "topic": "2026 Claude Cowork로 비개발 업무 생산성 3배 올리는 법",
-    "title": "2026 Claude Cowork로 비개발",
-    "keywords": [
-      "claude"
-    ],
-    "category": "생산성",
-    "identifier": "비개발",
-    "created_at": "2026-01-13T23:42:13.678339"
-  },
-  {
-    "topic": "AI Generated Music Barred from Bandcamp",
-    "title": "AI Generated Music Barred",
-    "keywords": [
-      "generated",
-      "music",
-      "barred",
-      "bandcamp"
+      "ces"
     ],
     "category": "테크",
-    "identifier": "ai",
-    "created_at": "2026-01-14T02:56:29.745565"
+    "identifier": "ces",
+    "created_at": "2026-01-11T12:38:00.358788"
   },
   {
-    "topic": "2026 Claude Code 활용법, 비개발자도 자동화하는 실전 가이드",
-    "title": "2026 Claude Code, 비개발자도 자동화하는",
+    "topic": "Claude Code Cowork 신기능: 멀티 에이전트 협업 사용법과 활용사례",
+    "title": "Claude Code Cowork 신기능: 멀티 에이전트 협업 사용법과 활용사례",
     "keywords": [
       "claude",
-      "code"
+      "code",
+      "cowork"
     ],
-    "category": "생산성",
-    "identifier": "활용법",
-    "created_at": "2026-01-14T10:46:46.158677"
+    "category": "테크",
+    "identifier": "claude",
+    "created_at": "2026-01-15T00:33:31.188453"
   }
 ]

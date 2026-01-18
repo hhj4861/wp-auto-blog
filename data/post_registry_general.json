@@ -363,5 +363,15 @@
     "category": "비즈니스",
     "identifier": "ai",
     "created_at": "2026-01-18T10:41:09.581825"
+  },
+  {
+    "topic": "2026년 개발자가 알아야 할 ASCII 렌더링 기술의 모든 것",
+    "title": "2026년 개발자가 알아야 할 ASCII 렌더링 기술의 모든 것",
+    "keywords": [
+      "ascii"
+    ],
+    "category": "테크",
+    "identifier": "ascii",
+    "created_at": "2026-01-18T23:43:45.831775"
   }
 ]

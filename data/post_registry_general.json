@@ -398,5 +398,15 @@
     "category": "건강",
     "identifier": "번아웃",
     "created_at": "2026-01-21T10:48:42.491261"
+  },
+  {
+    "topic": "2026 데이터 시각화 혁명, WebGPU 기반 차트 라이브러리",
+    "title": "2026 데이터 시각화 혁명, WebGPU 기반 차트 라이브러리",
+    "keywords": [
+      "webgpu"
+    ],
+    "category": "테크",
+    "identifier": "webgpu",
+    "created_at": "2026-01-21T23:46:08.271632"
   }
 ]

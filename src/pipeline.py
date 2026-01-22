@@ -38,9 +38,31 @@ CATEGORY_SCHEDULE = {
     (6, "evening"): "건강",      # 일 오후
 }
 
+# K-Culture 카테고리 스케줄 (k-pulse.blog)
+# K-Pop(4회, 트래픽) > K-Beauty(3회, 수익) > K-Food(3회) > K-Fashion(2회)
+KCULTURE_CATEGORY_SCHEDULE = {
+    (0, "morning"): "K-Beauty",   # 월 오전
+    (0, "evening"): "K-Pop",      # 월 오후
+    (1, "morning"): "K-Food",     # 화 오전
+    (1, "evening"): "K-Fashion",  # 화 오후
+    (2, "morning"): "K-Beauty",   # 수 오전
+    (2, "evening"): "K-Pop",      # 수 오후
+    (3, "morning"): "K-Food",     # 목 오전
+    (3, "evening"): "K-Fashion",  # 목 오후
+    (4, "morning"): "K-Beauty",   # 금 오전
+    (4, "evening"): "K-Pop",      # 금 오후
+    (5, "morning"): "K-Food",     # 토 오전
+    (5, "evening"): "K-Pop",      # 토 오후 (주말 트래픽)
+    (6, "morning"): "K-Pop",      # 일 오전 (주말 트래픽)
+    (6, "evening"): "K-Beauty",   # 일 오후
+}
 
-def get_scheduled_category() -> Optional[str]:
+
+def get_scheduled_category(mode: str = "general") -> Optional[str]:
     """현재 시간 기준 스케줄된 카테고리 반환.
+
+    Args:
+        mode: 'general', 'tech', or 'kculture'
 
     Returns:
         스케줄된 카테고리명 또는 None
@@ -49,15 +71,39 @@ def get_scheduled_category() -> Optional[str]:
     weekday = now.weekday()  # 0=월요일
     time_slot = "morning" if now.hour < 12 else "evening"
 
-    category = CATEGORY_SCHEDULE.get((weekday, time_slot))
+    # mode에 따라 스케줄 선택
+    if mode == "kculture":
+        schedule = KCULTURE_CATEGORY_SCHEDULE
+    else:
+        schedule = CATEGORY_SCHEDULE
+
+    category = schedule.get((weekday, time_slot))
     if category:
-        logger.info(f"Scheduled category: {category} (weekday={weekday}, slot={time_slot})")
+        logger.info(f"Scheduled category: {category} (mode={mode}, weekday={weekday}, slot={time_slot})")
     return category
 
 from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
-from src.image_fetcher import ImageFetcher, ImageConfig
+from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
+
+# ImageCrawler for K-Culture product images (Olive Young API, Amazon)
+try:
+    from src.image_crawler import ImageCrawler, CrawledImage
+    IMAGE_CRAWLER_AVAILABLE = True
+except ImportError:
+    IMAGE_CRAWLER_AVAILABLE = False
+    ImageCrawler = None
+    CrawledImage = None
+
+# YouTubeFetcher for K-Pop and K-Fashion thumbnails
+try:
+    from src.youtube_fetcher import YouTubeFetcher, YouTubeVideo
+    YOUTUBE_FETCHER_AVAILABLE = True
+except ImportError:
+    YOUTUBE_FETCHER_AVAILABLE = False
+    YouTubeFetcher = None
+    YouTubeVideo = None
 
 
 # Post registry base directory
@@ -158,8 +204,8 @@ class BlogPipeline:
         content_config = self.config.content_config
         if content_config is None:
             from src.content_generator import ContentConfig
-            # tech = English, general = Korean
-            language = "en" if self.config.mode == "tech" else "ko"
+            # tech/kculture = English, general = Korean
+            language = "ko" if self.config.mode == "general" else "en"
             content_config = ContentConfig(language=language)
             logger.info(f"Auto-set content language: {language} (mode: {self.config.mode})")
 
@@ -167,7 +213,13 @@ class BlogPipeline:
         trend_config = self.config.trend_config
         if trend_config is None:
             from src.trend_detector import TrendConfig, TrendMode
-            trend_mode = TrendMode.TECH if self.config.mode == "tech" else TrendMode.GENERAL
+            # Map mode string to TrendMode enum
+            mode_to_trend = {
+                "tech": TrendMode.TECH,
+                "general": TrendMode.GENERAL,
+                "kculture": TrendMode.KCULTURE,
+            }
+            trend_mode = mode_to_trend.get(self.config.mode, TrendMode.GENERAL)
             trend_config = TrendConfig(mode=trend_mode)
             logger.info(f"Auto-set trend mode: {trend_mode.value}")
 
@@ -207,11 +259,11 @@ class BlogPipeline:
 
         logger.info(f"Found {len(topics)} topics to process")
 
-        # 스케줄된 카테고리 사용 (general 모드에서만, CLI에서 명시적으로 지정하지 않은 경우)
-        # tech 모드(bytepulse.io)는 한국어 카테고리 스케줄 사용 안함
+        # 스케줄된 카테고리 사용 (general/kculture 모드에서, CLI에서 명시적으로 지정하지 않은 경우)
+        # tech 모드(bytepulse.io)는 카테고리 스케줄 사용 안함
         target_category = self.config.category
-        if not target_category and self.config.use_scheduled_category and self.config.mode == "general":
-            target_category = get_scheduled_category()
+        if not target_category and self.config.use_scheduled_category and self.config.mode in ("general", "kculture"):
+            target_category = get_scheduled_category(mode=self.config.mode)
             if target_category:
                 logger.info(f"Using scheduled category: {target_category}")
 
@@ -287,11 +339,37 @@ class BlogPipeline:
 
             logger.debug(f"Generated content: {content.word_count} words")
 
-            # Fetch hero image - pass topic as fallback for Korean topics
-            images = self.image_fetcher.fetch(
-                keywords=topic.keywords,
-                topic=topic.topic,
-            )
+            # Fetch hero image
+            # For K-Culture categories, use appropriate image sources
+            images = []
+            if self.config.mode == "kculture":
+                if category == "K-Beauty" and IMAGE_CRAWLER_AVAILABLE:
+                    # Olive Young for K-Beauty products
+                    images = self._fetch_kbeauty_product_image(topic.topic, topic.keywords)
+                    if images:
+                        logger.info(f"Fetched K-Beauty image from Olive Young: {images[0].alt[:50]}")
+                elif category == "K-Food" and IMAGE_CRAWLER_AVAILABLE:
+                    # Amazon for K-Food products (ramen, snacks, etc.)
+                    images = self._fetch_kfood_product_image(topic.topic, topic.keywords)
+                    if images:
+                        logger.info(f"Fetched K-Food image from Amazon: {images[0].alt[:50]}")
+                elif category == "K-Pop" and YOUTUBE_FETCHER_AVAILABLE:
+                    # YouTube thumbnails for K-Pop (copyright safe)
+                    images = self._fetch_youtube_hero_image(topic.topic, category)
+                    if images:
+                        logger.info(f"Fetched K-Pop image from YouTube: {images[0].alt[:50]}")
+                elif category == "K-Fashion" and YOUTUBE_FETCHER_AVAILABLE:
+                    # YouTube thumbnails for K-Fashion
+                    images = self._fetch_youtube_hero_image(topic.topic, category)
+                    if images:
+                        logger.info(f"Fetched K-Fashion image from YouTube: {images[0].alt[:50]}")
+
+            # Fall back to Unsplash/Pexels if no image found
+            if not images:
+                images = self.image_fetcher.fetch(
+                    keywords=topic.keywords,
+                    topic=topic.topic,
+                )
             logger.debug(f"Fetched {len(images)} hero images")
 
             # Fetch section-relevant images for H2s (general mode only)
@@ -301,6 +379,8 @@ class BlogPipeline:
                 section_images = self._fetch_section_images(
                     html=content.html,
                     exclude_urls={img.url for img in images},
+                    category=category,
+                    topic=topic.topic,
                 )
                 logger.debug(f"Fetched {len(section_images)} section images")
             else:
@@ -710,25 +790,176 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
         except Exception as e:
             logger.error(f"Failed to save post registry: {e}")
 
+    def _fetch_kbeauty_product_image(
+        self,
+        topic: str,
+        keywords: list[str],
+    ) -> list[FetchedImage]:
+        """Fetch actual product image from Olive Young API for K-Beauty products.
+
+        Args:
+            topic: Topic/product name
+            keywords: Keywords from topic
+
+        Returns:
+            List with single FetchedImage if found, empty list otherwise
+        """
+        if not IMAGE_CRAWLER_AVAILABLE or ImageCrawler is None:
+            return []
+
+        try:
+            crawler = ImageCrawler(use_playwright=False)
+
+            # Try topic first, then keywords
+            crawled = crawler.search_oliveyoung(topic)
+
+            if not crawled and keywords:
+                # Try with keywords
+                search_query = " ".join(keywords[:3])
+                crawled = crawler.search_oliveyoung(search_query)
+
+            if crawled and crawled.url:
+                # Convert CrawledImage to FetchedImage format
+                from src.image_fetcher import ImageSource
+
+                fetched = FetchedImage(
+                    url=crawled.url,
+                    alt=f"{crawled.product_name} - {crawled.brand}",
+                    photographer=f"Olive Young ({crawled.brand})",
+                    source=ImageSource.UNSPLASH,  # Use UNSPLASH as placeholder
+                    width=800,
+                    height=800,
+                )
+                logger.info(f"Found Olive Young product: {crawled.product_name[:40]}")
+                return [fetched]
+
+        except Exception as e:
+            logger.warning(f"Failed to fetch K-Beauty product image: {e}")
+
+        return []
+
+    def _fetch_kfood_product_image(
+        self,
+        topic: str,
+        keywords: list[str],
+    ) -> list[FetchedImage]:
+        """Fetch actual product image from Amazon for K-Food products.
+
+        Args:
+            topic: Topic/product name
+            keywords: Keywords from topic
+
+        Returns:
+            List with single FetchedImage if found, empty list otherwise
+        """
+        if not IMAGE_CRAWLER_AVAILABLE or ImageCrawler is None:
+            return []
+
+        try:
+            crawler = ImageCrawler(use_playwright=False)
+
+            # Try topic first
+            crawled = crawler.search_amazon_kfood(topic)
+
+            if not crawled and keywords:
+                # Try with keywords
+                search_query = " ".join(keywords[:3])
+                crawled = crawler.search_amazon_kfood(search_query)
+
+            if crawled and crawled.url:
+                # Convert CrawledImage to FetchedImage format
+                from src.image_fetcher import ImageSource
+
+                fetched = FetchedImage(
+                    url=crawled.url,
+                    alt=f"{crawled.product_name[:60]}",
+                    photographer=f"Amazon ({crawled.brand})",
+                    source=ImageSource.PEXELS,  # Use PEXELS as placeholder
+                    width=1500,
+                    height=1500,
+                )
+                logger.info(f"Found Amazon K-Food product: {crawled.product_name[:40]}")
+                return [fetched]
+
+        except Exception as e:
+            logger.warning(f"Failed to fetch K-Food product image: {e}")
+
+        return []
+
+    def _fetch_youtube_hero_image(
+        self,
+        topic: str,
+        category: str,
+    ) -> list[FetchedImage]:
+        """Fetch hero image from YouTube thumbnail for K-Pop/K-Fashion.
+
+        Args:
+            topic: Topic/subject for search
+            category: Content category (K-Pop or K-Fashion)
+
+        Returns:
+            List with single FetchedImage if found, empty list otherwise
+        """
+        if not YOUTUBE_FETCHER_AVAILABLE or YouTubeFetcher is None:
+            return []
+
+        try:
+            from src.image_fetcher import ImageSource
+
+            fetcher = YouTubeFetcher()
+
+            video = None
+            if category == "K-Pop":
+                # Extract artist/song info from topic
+                video = fetcher.search_kpop(artist=topic, content_type="MV")
+            elif category == "K-Fashion":
+                video = fetcher.search_kfashion(topic=topic, content_type="style")
+
+            if not video:
+                # Fallback to general search
+                video = fetcher.search(topic)
+
+            if video and video.thumbnail_url:
+                fetched = FetchedImage(
+                    url=video.thumbnail_url,
+                    alt=video.title or f"{category} - {topic}",
+                    photographer=f"YouTube ({video.channel})" if video.channel else "YouTube",
+                    source=ImageSource.UNSPLASH,  # Placeholder enum
+                    width=1280,
+                    height=720,
+                )
+                logger.info(f"Found YouTube thumbnail: {video.title[:50]}...")
+                return [fetched]
+
+        except Exception as e:
+            logger.warning(f"Failed to fetch YouTube hero image: {e}")
+
+        return []
+
     def _fetch_section_images(
         self,
         html: str,
         exclude_urls: set[str],
         max_sections: int = 4,
+        category: str = "",
+        topic: str = "",
     ) -> dict[str, "FetchedImage"]:
         """Fetch relevant images for H2 sections.
 
         Extracts H2 texts, creates search queries, and fetches matching images.
+        For K-Beauty, uses Olive Young product images instead of stock photos.
 
         Args:
             html: Generated HTML content
             exclude_urls: URLs to exclude (already used)
             max_sections: Max number of section images to fetch
+            category: Content category (K-Beauty, K-Food, etc.)
+            topic: Original topic for search context
 
         Returns:
             Dict mapping H2 text to FetchedImage
         """
-        from src.image_fetcher import FetchedImage
+        from src.image_fetcher import FetchedImage, ImageSource
 
         section_images: dict[str, FetchedImage] = {}
 
@@ -748,10 +979,39 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
 
         logger.info(f"Found {len(h2_texts)} H2 sections for image matching")
 
-        # Fetch image for each H2
+        # For K-Culture categories, use appropriate product image sources
+        if self.config.mode == "kculture":
+            if category == "K-Beauty" and IMAGE_CRAWLER_AVAILABLE:
+                # Olive Young for K-Beauty products
+                oy_images = self._fetch_oliveyoung_section_images(
+                    h2_texts, exclude_urls, topic
+                )
+                if oy_images:
+                    return oy_images
+                logger.info("No Olive Young images found, falling back to Unsplash")
+
+            elif category == "K-Food" and IMAGE_CRAWLER_AVAILABLE:
+                # Amazon for K-Food products (ramen, snacks, etc.)
+                amazon_images = self._fetch_amazon_kfood_section_images(
+                    h2_texts, exclude_urls, topic
+                )
+                if amazon_images:
+                    return amazon_images
+                logger.info("No Amazon K-Food images found, falling back to Unsplash")
+
+            elif category in ("K-Pop", "K-Fashion") and YOUTUBE_FETCHER_AVAILABLE:
+                # YouTube thumbnails for K-Pop/K-Fashion (copyright safe)
+                yt_images = self._fetch_youtube_section_images(
+                    h2_texts, exclude_urls, topic, category
+                )
+                if yt_images:
+                    return yt_images
+                logger.info(f"No YouTube images found for {category}, falling back to Unsplash")
+
+        # Fetch image for each H2 using Unsplash/Pexels
         for h2_text in h2_texts:
             # Create search query from H2 text
-            query = self._h2_to_search_query(h2_text)
+            query = self._h2_to_search_query(h2_text, category=category)
             if not query:
                 continue
 
@@ -765,22 +1025,372 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
 
         return section_images
 
-    def _h2_to_search_query(self, h2_text: str) -> str:
+    def _fetch_oliveyoung_section_images(
+        self,
+        h2_texts: list[str],
+        exclude_urls: set[str],
+        topic: str,
+    ) -> dict[str, "FetchedImage"]:
+        """Fetch Olive Young product images for H2 sections.
+
+        Uses product detail page to get multiple images of the SAME product.
+        This ensures consistency - all section images show the same product
+        from different angles/views.
+
+        Args:
+            h2_texts: List of H2 section titles
+            exclude_urls: URLs to exclude
+            topic: Original topic for search
+
+        Returns:
+            Dict mapping H2 text to FetchedImage
+        """
+        from src.image_fetcher import FetchedImage, ImageSource
+
+        section_images: dict[str, FetchedImage] = {}
+
+        try:
+            crawler = ImageCrawler(use_playwright=False)
+
+            # Get multiple images from the matched product's detail page
+            # This gives us different views/angles of the same product
+            detail_images = crawler.search_oliveyoung_with_detail(
+                topic, max_images=len(h2_texts) + 2
+            )
+
+            if not detail_images:
+                logger.warning(f"No Olive Young detail images for sections: {topic}")
+                # Fallback to multiple products
+                return self._fetch_oliveyoung_section_images_fallback(
+                    h2_texts, exclude_urls, topic
+                )
+
+            # Filter out already-used URLs (hero image)
+            available_images = [
+                img for img in detail_images
+                if img.url not in exclude_urls
+            ]
+
+            if not available_images:
+                logger.warning("All detail images already used, trying multiple products")
+                return self._fetch_oliveyoung_section_images_fallback(
+                    h2_texts, exclude_urls, topic
+                )
+
+            # Assign images to sections (one image per section)
+            product_name = available_images[0].product_name if available_images else topic
+            for i, h2_text in enumerate(h2_texts):
+                if i >= len(available_images):
+                    break
+
+                img = available_images[i]
+                fetched = FetchedImage(
+                    url=img.url,
+                    alt=f"{img.product_name} - {img.brand}",
+                    photographer=f"Olive Young ({img.brand})",
+                    source=ImageSource.UNSPLASH,  # Placeholder
+                    width=800,
+                    height=800,
+                )
+                section_images[h2_text] = fetched
+                exclude_urls.add(img.url)
+                logger.info(f"Section '{h2_text[:25]}...' -> {img.product_name[:35]}... (detail)")
+
+            logger.info(f"Fetched {len(section_images)} section images from product detail")
+
+        except Exception as e:
+            logger.warning(f"Failed to fetch Olive Young section images: {e}")
+
+        return section_images
+
+    def _fetch_oliveyoung_section_images_fallback(
+        self,
+        h2_texts: list[str],
+        exclude_urls: set[str],
+        topic: str,
+    ) -> dict[str, "FetchedImage"]:
+        """Fallback: Fetch section images from multiple different products.
+
+        Used when product detail images are not available.
+
+        Args:
+            h2_texts: List of H2 section titles
+            exclude_urls: URLs to exclude
+            topic: Original topic for search
+
+        Returns:
+            Dict mapping H2 text to FetchedImage
+        """
+        from src.image_fetcher import FetchedImage, ImageSource
+
+        section_images: dict[str, FetchedImage] = {}
+
+        try:
+            crawler = ImageCrawler(use_playwright=False)
+            products = crawler.search_oliveyoung_multiple(topic, max_results=len(h2_texts) + 2)
+
+            if not products:
+                return section_images
+
+            # Assign different products to each section
+            used_urls = set(exclude_urls)
+            for h2_text in h2_texts:
+                for product in products:
+                    if product.url not in used_urls:
+                        used_urls.add(product.url)
+                        fetched = FetchedImage(
+                            url=product.url,
+                            alt=f"{product.product_name} - {product.brand}",
+                            photographer=f"Olive Young ({product.brand})",
+                            source=ImageSource.UNSPLASH,
+                            width=800,
+                            height=800,
+                        )
+                        section_images[h2_text] = fetched
+                        exclude_urls.add(product.url)
+                        logger.info(f"Section '{h2_text[:25]}...' -> {product.product_name[:35]}... (fallback)")
+                        break
+
+            logger.info(f"Fetched {len(section_images)} section images (fallback)")
+
+        except Exception as e:
+            logger.warning(f"Fallback section images failed: {e}")
+
+        return section_images
+
+    def _fetch_amazon_kfood_section_images(
+        self,
+        h2_texts: list[str],
+        exclude_urls: set[str],
+        topic: str,
+    ) -> dict[str, "FetchedImage"]:
+        """Fetch K-Food product images from Amazon for H2 sections.
+
+        Uses Amazon to find Korean food products like ramen, snacks, etc.
+
+        Args:
+            h2_texts: List of H2 section titles
+            exclude_urls: URLs to exclude
+            topic: Original topic for search
+
+        Returns:
+            Dict mapping H2 text to FetchedImage
+        """
+        from src.image_fetcher import FetchedImage, ImageSource
+
+        section_images: dict[str, FetchedImage] = {}
+
+        try:
+            crawler = ImageCrawler(use_playwright=False)
+
+            # Get multiple K-Food products from Amazon
+            products = crawler.search_amazon_kfood_multiple(
+                topic, max_results=len(h2_texts) + 2
+            )
+
+            if not products:
+                logger.warning(f"No Amazon K-Food products for sections: {topic}")
+                return section_images
+
+            # Filter out already-used URLs (hero image)
+            available_products = [
+                p for p in products
+                if p.url not in exclude_urls
+            ]
+
+            if not available_products:
+                logger.warning("All Amazon K-Food images already used")
+                return section_images
+
+            # Assign images to sections
+            used_urls = set(exclude_urls)
+            for h2_text in h2_texts:
+                for product in available_products:
+                    if product.url not in used_urls:
+                        used_urls.add(product.url)
+                        fetched = FetchedImage(
+                            url=product.url,
+                            alt=f"{product.product_name[:60]}",
+                            photographer=f"Amazon ({product.brand})",
+                            source=ImageSource.PEXELS,  # Placeholder enum
+                            width=1500,
+                            height=1500,
+                        )
+                        section_images[h2_text] = fetched
+                        exclude_urls.add(product.url)
+                        logger.info(f"Section '{h2_text[:25]}...' -> Amazon: {product.product_name[:35]}...")
+                        break
+
+            logger.info(f"Fetched {len(section_images)} Amazon K-Food section images")
+
+        except Exception as e:
+            logger.warning(f"Amazon K-Food section images failed: {e}")
+
+        return section_images
+
+    def _fetch_youtube_section_images(
+        self,
+        h2_texts: list[str],
+        exclude_urls: set[str],
+        topic: str,
+        category: str,
+    ) -> dict[str, "FetchedImage"]:
+        """Fetch YouTube thumbnails for H2 sections (K-Pop/K-Fashion).
+
+        Uses YouTube search to find relevant videos for each section.
+
+        Args:
+            h2_texts: List of H2 section titles
+            exclude_urls: URLs to exclude (already used)
+            topic: Original topic for context
+            category: Content category (K-Pop or K-Fashion)
+
+        Returns:
+            Dict mapping H2 text to FetchedImage
+        """
+        from src.image_fetcher import FetchedImage, ImageSource
+
+        section_images: dict[str, FetchedImage] = {}
+
+        if not YOUTUBE_FETCHER_AVAILABLE or YouTubeFetcher is None:
+            return section_images
+
+        try:
+            fetcher = YouTubeFetcher()
+            used_video_ids: set[str] = set()
+
+            # Extract video IDs from exclude_urls that are YouTube thumbnails
+            for url in exclude_urls:
+                if "img.youtube.com" in url:
+                    # Extract video ID from thumbnail URL
+                    import re
+                    match = re.search(r'/vi/([^/]+)/', url)
+                    if match:
+                        used_video_ids.add(match.group(1))
+
+            for h2_text in h2_texts:
+                # Search YouTube for section-relevant video
+                video = fetcher.search_for_section(
+                    section_title=h2_text,
+                    category=category,
+                    exclude_ids=used_video_ids,
+                    topic=topic,  # Pass topic for artist context
+                )
+
+                if video and video.thumbnail_url and video.video_id not in used_video_ids:
+                    used_video_ids.add(video.video_id)
+                    fetched = FetchedImage(
+                        url=video.thumbnail_url,
+                        alt=video.title or f"{category} - {h2_text[:50]}",
+                        photographer=f"YouTube ({video.channel})" if video.channel else "YouTube",
+                        source=ImageSource.UNSPLASH,  # Placeholder enum
+                        width=1280,
+                        height=720,
+                    )
+                    section_images[h2_text] = fetched
+                    exclude_urls.add(video.thumbnail_url)
+                    logger.info(f"Section '{h2_text[:25]}...' -> YouTube: {video.title[:35]}...")
+
+            logger.info(f"Fetched {len(section_images)} YouTube section images for {category}")
+
+        except Exception as e:
+            logger.warning(f"YouTube section images failed: {e}")
+
+        return section_images
+
+    def _h2_to_search_query(self, h2_text: str, category: str = "") -> str:
         """Convert H2 text to image search query.
 
         Extracts meaningful English keywords for image search.
-        Prioritizes product/tool names for relevant stock photos.
+        Category-aware mappings for K-Pop, K-Fashion, and tech content.
 
         Args:
             h2_text: H2 section title
+            category: Content category (K-Pop, K-Fashion, etc.)
 
         Returns:
             Search query string
         """
         h2_lower = h2_text.lower()
+        category_lower = category.lower() if category else ""
 
-        # Product/tool name mappings (prioritize these for relevant images)
-        product_image_queries = {
+        # K-Pop specific mappings
+        kpop_mappings = {
+            'concert': 'kpop concert stage lights audience',
+            'album': 'kpop album music cd vinyl record',
+            'music video': 'music video film production camera',
+            'mv': 'music video kpop dance choreography',
+            'dance': 'kpop dance choreography performance stage',
+            'choreography': 'dance practice studio mirror',
+            'fandom': 'kpop fans lightstick concert crowd',
+            'fan': 'kpop fandom lightstick cheering',
+            'lightstick': 'kpop concert lightstick ocean',
+            'merch': 'kpop merchandise photocard collection',
+            'photocard': 'kpop photocard collection trading',
+            'idol': 'kpop idol stage performance spotlight',
+            'debut': 'kpop debut stage spotlight new artist',
+            'comeback': 'kpop comeback stage performance',
+            'music show': 'korean music show stage performance',
+            'award': 'music award trophy stage ceremony',
+            'streaming': 'music streaming headphones playlist',
+            'chart': 'music chart billboard ranking',
+            'collaboration': 'music collaboration artists duet',
+            'vocal': 'singer microphone vocal performance',
+            'rap': 'rapper hip hop performance stage',
+            'visual': 'kpop visual aesthetic portrait',
+        }
+
+        # K-Fashion specific mappings
+        kfashion_mappings = {
+            'streetwear': 'korean streetwear urban fashion style',
+            'street style': 'korean street fashion seoul style',
+            'outfit': 'korean fashion outfit aesthetic style',
+            'style': 'korean fashion style aesthetic trendy',
+            'casual': 'casual korean fashion relaxed style',
+            'formal': 'korean formal fashion elegant suit',
+            'layering': 'fashion layering style clothing outfit',
+            'accessories': 'fashion accessories korean style jewelry',
+            'shoes': 'korean fashion shoes sneakers footwear',
+            'bag': 'korean fashion bag handbag accessories',
+            'minimal': 'minimalist korean fashion clean style',
+            'trendy': 'trendy korean fashion style aesthetic',
+            'vintage': 'vintage korean fashion retro style',
+            'oversized': 'oversized fashion korean style relaxed',
+            'seasonal': 'seasonal fashion korean style clothing',
+            'spring': 'spring fashion korean style pastel',
+            'summer': 'summer fashion korean style light',
+            'fall': 'autumn fashion korean style layered',
+            'winter': 'winter fashion korean style warm coat',
+            'kdrama': 'kdrama fashion korean style celebrity',
+            'celebrity': 'korean celebrity fashion style outfit',
+            'brand': 'korean fashion brand designer clothing',
+        }
+
+        # K-Food specific mappings
+        kfood_mappings = {
+            'ramyeon': 'korean instant ramen noodles spicy bowl',
+            'ramen': 'asian ramen noodles soup bowl hot',
+            'noodles': 'korean noodles soup bowl chopsticks',
+            'spicy': 'korean spicy food red chili',
+            'taste': 'food tasting korean cuisine bowl',
+            'flavor': 'korean food flavors delicious',
+            'ingredients': 'korean cooking ingredients kitchen fresh',
+            'recipe': 'korean recipe cooking kitchen homemade',
+            'cooking': 'korean cooking kitchen stove pot',
+            'kimchi': 'korean kimchi fermented cabbage side dish',
+            'bbq': 'korean bbq grilled meat restaurant sizzling',
+            'tteokbokki': 'korean spicy rice cakes street food',
+            'bibimbap': 'korean bibimbap rice bowl colorful vegetables',
+            'snacks': 'korean snacks colorful packaging variety',
+            'drinks': 'korean drinks soju makgeolli beverage',
+            'street food': 'korean street food market stall',
+            'comparison': 'food comparison taste test variety',
+            'best': 'best korean food delicious plate',
+            'top': 'top korean dishes variety spread',
+        }
+
+        # Tech product mappings (existing)
+        tech_mappings = {
             'linux': 'linux penguin operating system terminal',
             'windows': 'windows computer desktop microsoft',
             'macos': 'macbook apple computer',
@@ -802,13 +1412,27 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
             'vim': 'terminal code editor programming',
         }
 
-        # Check for product names first
-        found_products = []
-        for product, query in product_image_queries.items():
-            if product in h2_lower:
-                found_products.append(query)
+        # Select appropriate mappings based on category
+        if "k-pop" in category_lower or "kpop" in category_lower:
+            product_mappings = kpop_mappings
+            fallback_suffix = 'kpop korean music'
+        elif "k-fashion" in category_lower or "kfashion" in category_lower:
+            product_mappings = kfashion_mappings
+            fallback_suffix = 'korean fashion style'
+        elif "k-food" in category_lower or "kfood" in category_lower:
+            product_mappings = kfood_mappings
+            fallback_suffix = 'korean food cuisine'
+        else:
+            product_mappings = tech_mappings
+            fallback_suffix = 'technology'
 
-        # Section type mappings (visual context)
+        # Check for category-specific keywords first
+        found_keywords = []
+        for keyword, query in product_mappings.items():
+            if keyword in h2_lower:
+                found_keywords.append(query)
+
+        # General section type mappings (visual context)
         section_mappings = {
             'pricing': 'money finance pricing business chart',
             'price': 'money dollar cost finance',
@@ -825,16 +1449,12 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
             'developer': 'programmer coding laptop developer',
             'experience': 'user interface UX design screen',
             'workflow': 'flowchart process workflow diagram',
-            'migration': 'moving transfer data arrow migration',
             'guide': 'roadmap guide compass direction',
             'setup': 'installation setup configuration gear',
-            'install': 'download installation setup arrow',
-            'terminal': 'terminal command line code black',
-            'shell': 'terminal bash command line',
-            'package': 'package box delivery software',
-            'git': 'version control branch merge code',
-            'cloud': 'cloud computing server network',
-            'devops': 'automation deployment pipeline CI CD',
+            'tips': 'lightbulb tips advice helpful',
+            'how to': 'step by step tutorial guide',
+            'best': 'trophy best award top choice',
+            'top': 'ranking top list chart',
             'mistake': 'warning error alert caution',
             'action': 'action step checklist todo',
             'key features': 'key unlock features important',
@@ -848,17 +1468,14 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
                 break
 
         # Build final query
-        if found_products and section_query:
-            # Combine product context with section type
-            # e.g., "linux terminal" + "comparison chart"
-            return f"{found_products[0].split()[0]} {section_query}"
-        elif found_products:
-            # Use product-specific query
-            return found_products[0]
+        if found_keywords and section_query:
+            return f"{found_keywords[0].split()[0]} {section_query}"
+        elif found_keywords:
+            return found_keywords[0]
         elif section_query:
             return section_query
 
-        # Fallback: extract English words
+        # Fallback: extract English words and add category-appropriate suffix
         english_words = re.findall(r'[A-Za-z][A-Za-z0-9+#.]*', h2_text)
         skip_words = {
             'vs', 'and', 'or', 'the', 'for', 'with', 'how', 'what', 'why',
@@ -869,7 +1486,7 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
         keywords = [w for w in english_words if w.lower() not in skip_words and len(w) > 2]
 
         if keywords:
-            return ' '.join(keywords[:3]) + ' technology'
+            return ' '.join(keywords[:3]) + ' ' + fallback_suffix
 
         return ''
 

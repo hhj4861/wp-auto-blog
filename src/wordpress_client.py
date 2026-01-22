@@ -54,7 +54,7 @@ class WPConfig:
         """Create config from environment variables.
 
         Args:
-            mode: Blog mode - "tech" or "general"
+            mode: Blog mode - "tech", "general", or "kculture"
 
         Returns:
             WPConfig instance
@@ -167,6 +167,50 @@ class WordPressClient:
         "Frontend Dev": ["Frontend", "React", "JavaScript", "CSS", "UI/UX", "TypeScript", "Next.js"],
         "Backend Dev": ["Backend", "API", "Database", "DevOps", "Server", "Python", "Node.js"],
         "Startup Tools": ["Startup", "MVP", "Growth", "Founder", "Business", "SaaS", "Indie Hacker"],
+
+        # === k-pulse.blog K-Culture 카테고리 (US 시장 타겟) ===
+        "K-Beauty": [
+            "K-Beauty", "Korean Skincare", "Korean Beauty", "Skincare Routine",
+            "K-Skincare", "Glass Skin", "Dewy Skin", "Korean Cosmetics",
+            "COSRX", "Innisfree", "Laneige", "Beauty of Joseon", "Anua",
+            "Serum", "Essence", "Toner", "Sunscreen", "Sheet Mask",
+        ],
+        "K-Pop": [
+            "K-Pop", "Korean Pop", "Kpop", "BTS", "BLACKPINK", "NewJeans",
+            "Stray Kids", "TWICE", "aespa", "IVE", "LE SSERAFIM", "SEVENTEEN",
+            "Idol", "Korean Music", "Album", "Concert", "Comeback",
+            "Photocard", "Lightstick", "Fandom", "Music Video",
+        ],
+        "K-Food": [
+            "K-Food", "Korean Food", "Korean Cuisine", "Korean Recipe",
+            "Kimchi", "Korean BBQ", "Tteokbokki", "Bibimbap", "Ramyeon",
+            "Buldak", "Korean Snacks", "Soju", "Korean Drinks", "Banchan",
+            "Gochujang", "Korean Cooking", "Asian Food", "Spicy Food",
+        ],
+        "K-Fashion": [
+            "K-Fashion", "Korean Fashion", "Korean Style", "Streetwear",
+            "Korean Streetwear", "Minimalist Fashion", "Airport Fashion",
+            "Kdrama Fashion", "Korean Outfit", "Seoul Fashion", "Musinsa",
+            "Korean Brands", "Asian Fashion", "Trendy", "OOTD",
+        ],
+    }
+
+    # Category hierarchy: child -> parent mapping
+    # bytepulse.io unified structure
+    CATEGORY_HIERARCHY = {
+        # Tech sub-categories
+        "AI Tools": "Tech",
+        "Dev Productivity": "Tech",
+        "SaaS Reviews": "Tech",
+        "Web3 Security": "Tech",
+        "Frontend Dev": "Tech",
+        "Backend Dev": "Tech",
+        "Startup Tools": "Tech",
+        # K-Culture sub-categories
+        "K-Pop": "K-Culture",
+        "K-Beauty": "K-Culture",
+        "K-Food": "K-Culture",
+        "K-Fashion": "K-Culture",
     }
 
     def __init__(self, config: Optional[WPConfig] = None) -> None:
@@ -226,18 +270,39 @@ class WordPressClient:
 
         # Upload featured image first (WordPress thumbnail)
         featured_media_id = None
+        featured_media_url = None
         if images:
-            featured_media_id = self._upload_media(
+            featured_media_id, featured_media_url = self._upload_media(
                 image_url=images[0].url,
                 alt_text=images[0].alt,
             )
+            # Preserve original URL for YouTube link detection
+            original_hero_url = images[0].url
+            # Update first image URL to use WordPress media URL (avoid CDN blocking)
+            if featured_media_url:
+                images[0].url = featured_media_url
+                logger.info(f"Using WordPress media URL for hero: {featured_media_url[:60]}...")
+
+        # Preserve original URLs for YouTube link detection
+        original_urls = {img.url: img.url for img in images}  # Map new URL -> original
+        if 'original_hero_url' in dir():
+            original_urls[images[0].url] = original_hero_url
+
+        # Also preserve section image original URLs
+        section_original_urls = {}
+        if section_images:
+            for h2_text, img in section_images.items():
+                section_original_urls[h2_text] = img.url  # Store original URL
 
         # Prepare content with images (hero + section images)
+        # Pass all images for hero image (first image) and remaining for sections
         prepared_html = self._prepare_content(
             content.html,
-            images[1:] if len(images) > 1 else [],
+            images,  # Pass all images - first for hero, rest for sections
             section_images=section_images,
             skip_hero_image=skip_hero_image,
+            original_urls=original_urls,
+            section_original_urls=section_original_urls,
         )
 
         # Get/create category
@@ -345,11 +410,200 @@ class WordPressClient:
             logger.error(f"Failed to create post: {e}")
             raise
 
+    def get_post_by_slug(self, slug: str) -> Optional[dict]:
+        """Find a post by its slug.
+
+        Args:
+            slug: The post slug (URL-friendly name)
+
+        Returns:
+            Post data dict if found, None otherwise
+        """
+        try:
+            response = requests.get(
+                f"{self._api_base}/posts",
+                headers=self._get_auth_headers(),
+                params={"slug": slug, "status": "any"},
+                timeout=30,
+            )
+            response.raise_for_status()
+            posts = response.json()
+
+            if posts:
+                logger.info(f"Found post by slug '{slug}': ID {posts[0]['id']}")
+                return posts[0]
+            return None
+
+        except Exception as e:
+            logger.error(f"Failed to find post by slug: {e}")
+            return None
+
+    def get_posts(self, per_page: int = 100, status: str = "any") -> list[dict]:
+        """Get all posts from WordPress.
+
+        Args:
+            per_page: Number of posts per page (max 100)
+            status: Post status filter (any, publish, draft, etc.)
+
+        Returns:
+            List of post data dicts
+        """
+        all_posts = []
+        page = 1
+
+        try:
+            while True:
+                response = requests.get(
+                    f"{self._api_base}/posts",
+                    headers=self._get_auth_headers(),
+                    params={"per_page": per_page, "page": page, "status": status},
+                    timeout=30,
+                )
+                response.raise_for_status()
+                posts = response.json()
+
+                if not posts:
+                    break
+
+                all_posts.extend(posts)
+                page += 1
+
+                # Check if there are more pages
+                total_pages = int(response.headers.get("X-WP-TotalPages", 1))
+                if page > total_pages:
+                    break
+
+            logger.info(f"Retrieved {len(all_posts)} posts from WordPress")
+            return all_posts
+
+        except Exception as e:
+            logger.error(f"Failed to get posts: {e}")
+            return all_posts
+
+    def update_post(
+        self,
+        post_id: int,
+        content: GeneratedContent,
+        images: Optional[list[FetchedImage]] = None,
+        category: Optional[str] = None,
+        section_images: Optional[dict[str, FetchedImage]] = None,
+        skip_hero_image: bool = False,
+        content_type: str = "review",
+    ) -> CreatedPost:
+        """Update an existing WordPress post.
+
+        Args:
+            post_id: WordPress post ID to update
+            content: New generated content
+            images: New images (optional, keeps existing if None)
+            category: Category name (optional)
+            section_images: Dict mapping H2 text to relevant FetchedImage
+            skip_hero_image: If True, don't add hero image in content
+            content_type: Type of content for slug generation
+
+        Returns:
+            Updated CreatedPost object
+        """
+        logger.info(f"Updating post ID {post_id}: {content.title}")
+
+        # Upload new featured image if provided
+        featured_media_id = None
+        if images:
+            featured_media_id, featured_media_url = self._upload_media(
+                image_url=images[0].url,
+                alt_text=images[0].alt,
+            )
+            if featured_media_url:
+                images[0].url = featured_media_url
+
+        # Prepare content
+        prepared_html = self._prepare_content(
+            content.html,
+            images or [],
+            section_images=section_images,
+            skip_hero_image=skip_hero_image,
+        )
+
+        # Get/create category
+        category_ids = []
+        if category:
+            cat_id = self._get_or_create_category(category)
+            if cat_id:
+                category_ids.append(cat_id)
+
+        # Build tags
+        all_tags = list(content.keywords) if content.keywords else []
+        if category and category in self.CATEGORY_TAGS:
+            all_tags.extend(self.CATEGORY_TAGS[category])
+
+        tag_ids = self._get_or_create_tags(all_tags)
+
+        # Focus keyphrase
+        focus_keyword = ""
+        if hasattr(content, 'focus_keyphrase') and content.focus_keyphrase:
+            focus_keyword = content.focus_keyphrase
+        else:
+            focus_keyword = self._generate_focus_keyphrase(content.title, content.keywords)
+
+        # Excerpt
+        excerpt = self._prepare_excerpt(content.html)
+
+        # Category wrapper
+        category_class = f"category-{category.lower().replace(' ', '-')}" if category else ""
+        wrapped_html = f'<div class="post-content {category_class}" data-category="{category or ""}">\n{prepared_html}\n</div>'
+
+        # Build update data
+        post_data = {
+            "title": content.title,
+            "content": wrapped_html,
+            "excerpt": excerpt,
+            "meta": {
+                "_yoast_wpseo_metadesc": content.meta_description,
+                "_yoast_wpseo_focuskw": focus_keyword,
+                "_yoast_wpseo_title": f"{content.title} | {self._get_site_name()}",
+                "_yoast_wpseo_meta-robots-noindex": "0",
+                "_yoast_wpseo_meta-robots-nofollow": "0",
+            },
+        }
+
+        if featured_media_id:
+            post_data["featured_media"] = featured_media_id
+
+        if category_ids:
+            post_data["categories"] = category_ids
+
+        if tag_ids:
+            post_data["tags"] = tag_ids
+
+        try:
+            response = requests.put(
+                f"{self._api_base}/posts/{post_id}",
+                headers=self._get_auth_headers(),
+                json=post_data,
+                timeout=30,
+            )
+            response.raise_for_status()
+            data = response.json()
+
+            updated_post = CreatedPost(
+                id=data["id"],
+                url=data["link"],
+                title=data["title"]["rendered"],
+                status=PostStatus(data["status"]),
+            )
+
+            logger.info(f"Post updated: {updated_post.url}")
+            return updated_post
+
+        except Exception as e:
+            logger.error(f"Failed to update post {post_id}: {e}")
+            raise
+
     def _upload_media(
         self,
         image_url: str,
         alt_text: str,
-    ) -> Optional[int]:
+    ) -> tuple[Optional[int], Optional[str]]:
         """Upload media to WordPress.
 
         Args:
@@ -357,11 +611,17 @@ class WordPressClient:
             alt_text: Alt text for the image
 
         Returns:
-            WordPress media ID or None on failure
+            Tuple of (WordPress media ID, WordPress media URL) or (None, None) on failure
         """
         try:
-            # Download image
-            img_response = requests.get(image_url, timeout=30)
+            # Download image with proper headers (for CDNs like Olive Young)
+            download_headers = {
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Referer": "https://global.oliveyoung.com/",
+            }
+            img_response = requests.get(image_url, headers=download_headers, timeout=30)
             img_response.raise_for_status()
 
             # Get filename from URL
@@ -397,12 +657,15 @@ class WordPressClient:
             except Exception:
                 pass  # Alt text update is not critical
 
-            logger.debug(f"Uploaded media: {media_id}")
-            return media_id
+            # Get the source URL from WordPress response
+            media_url = data.get("source_url") or data.get("guid", {}).get("rendered", "")
+
+            logger.debug(f"Uploaded media: {media_id} -> {media_url}")
+            return media_id, media_url
 
         except Exception as e:
             logger.error(f"Failed to upload media: {e}")
-            return None
+            return None, None
 
     def _get_site_name(self) -> str:
         """Get site name from URL.
@@ -438,21 +701,32 @@ class WordPressClient:
             "Content-Type": "application/json",
         }
 
-    def _get_or_create_category(self, name: str) -> Optional[int]:
-        """Get or create a category.
+    def _get_or_create_category(self, name: str, parent_id: Optional[int] = None) -> Optional[int]:
+        """Get or create a category with optional parent.
+
+        Automatically handles parent category creation based on CATEGORY_HIERARCHY.
 
         Args:
             name: Category name
+            parent_id: Parent category ID (optional, auto-detected from hierarchy)
 
         Returns:
             Category ID or None
         """
         try:
+            # Check if this category has a defined parent in hierarchy
+            parent_name = self.CATEGORY_HIERARCHY.get(name)
+            if parent_name and parent_id is None:
+                # Recursively ensure parent exists first
+                parent_id = self._get_or_create_category(parent_name)
+                if parent_id:
+                    logger.debug(f"Using parent category '{parent_name}' (ID: {parent_id}) for '{name}'")
+
             # Search for existing category
             response = requests.get(
                 f"{self._api_base}/categories",
                 headers=self._get_auth_headers(),
-                params={"search": name},
+                params={"search": name, "per_page": 100},
                 timeout=10,
             )
             response.raise_for_status()
@@ -460,20 +734,37 @@ class WordPressClient:
 
             for cat in categories:
                 if cat["name"].lower() == name.lower():
+                    # If parent_id specified, verify it matches
+                    if parent_id and cat.get("parent") != parent_id:
+                        # Update category to have correct parent
+                        logger.info(f"Updating category '{name}' to have parent ID {parent_id}")
+                        update_response = requests.post(
+                            f"{self._api_base}/categories/{cat['id']}",
+                            headers=self._get_auth_headers(),
+                            json={"parent": parent_id},
+                            timeout=10,
+                        )
+                        update_response.raise_for_status()
                     return cat["id"]
 
-            # Create new category
+            # Create new category with parent if specified
+            category_data = {"name": name}
+            if parent_id:
+                category_data["parent"] = parent_id
+
             response = requests.post(
                 f"{self._api_base}/categories",
                 headers=self._get_auth_headers(),
-                json={"name": name},
+                json=category_data,
                 timeout=10,
             )
             response.raise_for_status()
-            return response.json()["id"]
+            new_cat = response.json()
+            logger.info(f"Created category '{name}' (ID: {new_cat['id']}, parent: {parent_id or 'none'})")
+            return new_cat["id"]
 
         except Exception as e:
-            logger.warning(f"Failed to get/create category: {e}")
+            logger.warning(f"Failed to get/create category '{name}': {e}")
             return None
 
     def _get_or_create_tags(self, keywords: list[str]) -> list[int]:
@@ -529,6 +820,8 @@ class WordPressClient:
         images: list[FetchedImage],
         section_images: Optional[dict[str, FetchedImage]] = None,
         skip_hero_image: bool = False,
+        original_urls: Optional[dict[str, str]] = None,
+        section_original_urls: Optional[dict[str, str]] = None,
     ) -> str:
         """Prepare content with hero image and section-relevant images.
 
@@ -548,6 +841,8 @@ class WordPressClient:
             return html
 
         result = html
+        original_urls = original_urls or {}
+        section_original_urls = section_original_urls or {}
 
         # Insert section images after H2s (if provided)
         if section_images:
@@ -558,7 +853,21 @@ class WordPressClient:
 
                 if match:
                     h2_tag = match.group(1)
-                    img_html = f'''
+
+                    # Check if YouTube thumbnail - use original URL for link extraction
+                    original_url = section_original_urls.get(h2_text, img.url)
+                    youtube_link = self._extract_youtube_link(original_url)
+                    if youtube_link:
+                        img_html = f'''
+<figure class="wp-block-image aligncenter size-large section-image" style="max-width:700px;margin:20px auto 30px auto;">
+    <a href="{youtube_link}" target="_blank" rel="noopener noreferrer" title="Watch on YouTube">
+    <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:700px;height:auto;border-radius:10px;cursor:pointer;"/>
+    </a>
+    <figcaption style="text-align:center;font-size:0.8em;color:#888;margin-top:8px;">📺 {img.photographer} - <a href="{youtube_link}" target="_blank" rel="noopener noreferrer" style="color:#ff0000;">Watch Video</a></figcaption>
+</figure>
+'''
+                    else:
+                        img_html = f'''
 <figure class="wp-block-image aligncenter size-large section-image" style="max-width:700px;margin:20px auto 30px auto;">
     <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:700px;height:auto;border-radius:10px;"/>
     <figcaption style="text-align:center;font-size:0.8em;color:#888;margin-top:8px;">Photo by {img.photographer}</figcaption>
@@ -570,7 +879,21 @@ class WordPressClient:
         # Add hero image at the very beginning (skip for tech mode)
         if images and not skip_hero_image:
             img = images[0]
-            hero_html = f'''
+
+            # Check if YouTube thumbnail - use original URL for link extraction
+            original_url = original_urls.get(img.url, img.url)
+            youtube_link = self._extract_youtube_link(original_url)
+            if youtube_link:
+                hero_html = f'''
+<figure class="wp-block-image aligncenter size-large hero-image" style="max-width:800px;margin:0 auto 30px auto;">
+    <a href="{youtube_link}" target="_blank" rel="noopener noreferrer" title="Watch on YouTube">
+    <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:800px;height:auto;border-radius:12px;cursor:pointer;"/>
+    </a>
+    <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:10px;">📺 {img.photographer} - <a href="{youtube_link}" target="_blank" rel="noopener noreferrer" style="color:#ff0000;">Watch Video</a></figcaption>
+</figure>
+'''
+            else:
+                hero_html = f'''
 <figure class="wp-block-image aligncenter size-large hero-image" style="max-width:800px;margin:0 auto 30px auto;">
     <img src="{img.url}" alt="{img.alt}" style="width:100%;max-width:800px;height:auto;border-radius:12px;"/>
     <figcaption style="text-align:center;font-size:0.85em;color:#888;margin-top:10px;">Photo by {img.photographer}</figcaption>
@@ -579,6 +902,32 @@ class WordPressClient:
             result = hero_html + result
 
         return result
+
+    def _extract_youtube_link(self, url: str) -> Optional[str]:
+        """Extract YouTube video link from thumbnail URL.
+
+        Args:
+            url: Image URL (may be YouTube thumbnail or WordPress uploaded)
+
+        Returns:
+            YouTube video URL if detected, None otherwise
+        """
+        # Check for YouTube thumbnail URL pattern
+        # Format: https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg
+        # Or WordPress uploaded: .../maxresdefault.jpg (originally from YouTube)
+        match = re.search(r'/vi/([a-zA-Z0-9_-]{11})/', url)
+        if match:
+            video_id = match.group(1)
+            return f"https://www.youtube.com/watch?v={video_id}"
+
+        # Check for WordPress uploaded YouTube thumbnails (filename pattern)
+        # Format: maxresdefault.jpg, hqdefault.jpg, etc.
+        if "maxresdefault" in url or "hqdefault" in url or "sddefault" in url:
+            # These are likely YouTube thumbnails uploaded to WordPress
+            # Try to find video ID in alt text or return None
+            return None
+
+        return None
 
     def _generate_slug(self, title: str, content_type: str = "review") -> str:
         """Generate SEO-friendly slug from title.

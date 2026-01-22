@@ -43,6 +43,13 @@ except ImportError:
 import subprocess
 import shutil
 
+# Discount finder for K-Culture products
+try:
+    from .discount_finder import DiscountFinder, generate_discount_html
+except ImportError:
+    DiscountFinder = None
+    generate_discount_html = None
+
 
 class ContentType(Enum):
     """Types of blog content."""
@@ -157,6 +164,85 @@ class ContentGenerator:
 - 미래 전망은 "2026년" 내에서만 - 2027년 이상 연도 언급 금지 (2026년 초이므로 2027 예측은 시기상조)
 - 팩트만 나열하지 말고 "왜 중요한지", "어떻게 활용할지" 인사이트 제공
 - 주식/투자 분석 절대 금지
+- 모든 통계/수치에 출처 링크 필수!
+
+=== 데이터 & 통계 규칙 (E-E-A-T 필수!) ===
+다양하고 풍부한 데이터를 출처와 함께 제공하세요. 더 많은 데이터 = 더 높은 가치!
+
+**필수 데이터 유형 (글당 최소 4가지 포함):**
+
+1. **공식 통계 데이터**:
+   - 통계청(kosis.kr), 고용노동부, 한국은행 데이터
+   - 형식: "평균 연봉 4,500만원 <a href="https://kosis.kr/..." target="_blank" rel="noopener">(통계청 2024)</a>"
+
+2. **시장/업계 데이터**:
+   - 잡코리아, 사람인, 원티드 채용 동향
+   - 업계 리포트, 설문조사 결과
+   - 형식: "IT 개발자 채용 수요 전년 대비 23% 증가 <a href="[출처]" target="_blank" rel="noopener">(잡코리아 2024)</a>"
+
+3. **비교 데이터**:
+   - 가격/연봉/비용 비교표
+   - 기능/성능 비교 매트릭스
+   - 모든 비교표에 출처 각주 포함
+
+4. **트렌드 데이터**:
+   - 검색 트렌드 (네이버 데이터랩, 구글 트렌드)
+   - 연도별 변화 추이
+   - 형식: "검색량 전년 대비 45% 상승 <a href="[출처]" target="_blank" rel="noopener">(네이버 데이터랩)</a>"
+
+5. **사용자/커뮤니티 데이터**:
+   - 앱 다운로드 수, 사용자 리뷰 평점
+   - 커뮤니티 회원 수, 활성 사용자
+   - 형식: "네이버 카페 회원 15만명 <a href="[출처]" target="_blank" rel="noopener">(출처)</a>"
+
+**데이터 시각화 (통계 카드):**
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin:20px auto;max-width:800px;">
+<div style="flex:1;min-width:140px;background:#2d2d3a;padding:16px;border-radius:8px;text-align:center;">
+<div style="font-size:1.8em;font-weight:bold;color:#a78bfa;">4,500만</div>
+<div style="color:#94a3b8;font-size:0.85em;">평균 연봉</div>
+<a href="https://kosis.kr" target="_blank" rel="noopener" style="color:#64b5f6;font-size:0.75em;">통계청 2024</a>
+</div>
+</div>
+
+**출처 표기 원칙:**
+- 모든 수치에 클릭 가능한 출처 링크 필수
+- 허용 출처: 통계청, 정부기관, 공식 사이트, 언론사, 리서치 기관
+- 출처 없는 경우: "업계 추정", "커뮤니티 의견" 등으로 명시 (최소화)
+- "90%가 모르는", "대부분의 사람들이" 같은 검증 불가 표현 금지!
+
+**데이터 체크리스트:**
+□ 최소 1개 공식 통계 (통계청, 정부기관)
+□ 최소 2개 업계/시장 데이터
+□ 모든 비교표에 출처 명시
+□ 트렌드/변화 데이터 포함
+
+=== E-E-A-T 요소 (Google 품질 신호 - 필수!) ===
+경험(Experience), 전문성(Expertise), 권위(Authoritativeness), 신뢰(Trust) 요소 포함:
+
+**1. 작성 정보 (본문 상단에 추가):**
+<p style="color:#94a3b8;font-size:0.85em;margin:8px auto;max-width:800px;">마지막 업데이트: 2026년 1월 | 읽는 시간: X분</p>
+
+**2. 출처 섹션 (결론 전에 추가):**
+<div style="margin:30px auto;padding:20px;background:#2d2d3a;border-radius:8px;max-width:800px;">
+<h3 style="color:#a78bfa;margin-top:0;">📚 참고 자료</h3>
+<ul style="color:#94a3b8;padding-left:20px;line-height:1.8;">
+<li><a href="[URL]" target="_blank" rel="noopener" style="color:#64b5f6;">[출처명]</a> - [사용한 데이터 설명]</li>
+</ul>
+</div>
+
+**3. 방법론 노트 (비교/분석 글에 추가):**
+<div style="background:#1e3a5f;padding:16px;border-radius:8px;margin:20px auto;border-left:3px solid #3b82f6;max-width:800px;">
+<strong style="color:#60a5fa;">📋 분석 방법</strong>
+<p style="color:#94a3b8;margin:8px 0 0 0;font-size:0.9em;">
+[분석 방법 간단 설명 - 예: "본 비교는 2024년 채용공고 3,000건 분석 및 공식 통계 자료를 기반으로 작성되었습니다."]
+</p>
+</div>
+
+**E-E-A-T 체크리스트:**
+□ 마지막 업데이트 날짜 포함
+□ 모든 통계에 출처 링크
+□ 참고 자료 섹션 포함
+□ 분석 방법 명시 (비교글의 경우)
 
 === Yoast SEO 최적화 규칙 (필수!) ===
 CRITICAL: 아래 규칙을 반드시 준수해야 Yoast SEO 점수가 올라갑니다!
@@ -368,53 +454,107 @@ CRITICAL: 퍼센트(%), 점수, 비율, 순위 등 숫자 데이터는 텍스트
 <p style="color:#888;font-size:0.9em;margin-top:10px;">↑ 1억 모은 사람들의 첫 기록도 이거였어요</p>
 </div>
 
-=== 필수 구조 ===
+=== 구조 패턴 (AI 탐지 방지를 위해 다양화!) ===
+중요: 모든 글에 동일한 구조를 사용하지 마세요!
+토픽 유형에 따라 아래 패턴 중 하나를 선택하세요.
+
+**패턴 A - 비교 분석형** (X vs Y, 순위, 목록 토픽):
+1. 업데이트 날짜 + 읽는 시간
+2. 핵심 요약 박스 ("한눈에 보기" 또는 "핵심 비교")
+3. 주요 데이터 카드 (통계 수치 3-4개)
+4. 상세 비교표 (출처 포함)
+5. 항목별 심층 분석 (5-6개 H2)
+6. 참고 자료 섹션
+7. 결론 + 추천
+
+**패턴 B - 가이드/방법형** (하는 법, 시작하기, 준비 토픽):
+1. 업데이트 날짜
+2. 이 글에서 배울 내용 (불릿 포인트)
+3. 왜 중요한지 (배경/문제)
+4. 단계별 가이드 (5-7개 H2):
+   - 준비 사항
+   - 단계 1, 2, 3...
+   - 주의할 점
+   - 자주 하는 실수
+5. 실제 사례/경험
+6. FAQ
+7. 다음 단계 제안
+
+**패턴 C - 심층 분석형** (트렌드, 전망, 현황 토픽):
+1. 업데이트 날짜 + 분석 방법론
+2. 핵심 발견 요약 (불릿, 박스 아님)
+3. 데이터 기반 분석 (6-7개 H2):
+   - 현황 개요 (통계 카드)
+   - 주요 트렌드 분석
+   - 세부 항목별 분석
+   - 비교 데이터
+   - 전문가 의견/인용
+4. 참고 자료 섹션
+5. 결론 및 시사점
+
+**패턴 D - 리뷰/후기형** (제품, 서비스 리뷰):
+1. 업데이트 날짜
+2. 한줄 평가 박스
+3. 평가 항목별 점수 바
+4. 상세 리뷰 (5-6개 H2):
+   - 첫인상/시작 경험
+   - 주요 기능 분석
+   - 장점 (구체적 사례)
+   - 단점 (솔직하게)
+   - 가격 대비 가치
+   - 추천 대상 / 비추천 대상
+5. 대안 비교표
+6. 최종 평가
+
+**다양화 규칙:**
+- "3줄 요약"을 매번 쓰지 말고: "핵심 포인트", "한눈에 보기", "빠른 요약" 등 변형
+- 요약 박스 위치도 변형 (상단 또는 비교표 후)
+- 콜아웃 박스 스타일 다양화 (팁, 주의, 정보 등)
+- H2 제목 스타일 변형: 질문형, 서술형, 행동형
+
 ※ 중요: 콘텐츠에 H1 태그 절대 사용 금지! (WordPress가 제목을 H1으로 자동 렌더링함)
 ※ 본문은 H2부터 시작
 
-=== 제목 최적화 (클릭율 극대화!) ===
-CRITICAL: 제목은 클릭율을 결정합니다! 아래 요소를 반드시 포함하세요.
+=== 제목 최적화 (정보성 + 신뢰성 중심) ===
+CRITICAL: 클릭베이트 대신 정보성과 신뢰성을 강조하세요!
 
-**필수 요소 (모두 포함!):**
+**권장 요소:**
 
-1. **파워 워드** (최소 1개 필수):
-   검증된 파워 워드: 충격, 비밀, 완벽, 필수, 놀라운, 강력한, 극적인, 확실한, 즉시, 핵심
-   → "충격! IT 연봉의 비밀" ✓ "완벽 가이드" ✓ "필수 전략" ✓
+1. **정보성 워드** (1-2개 권장):
+   권장: 총정리, 비교분석, 실제후기, 상세가이드, 핵심정리, 데이터분석, 현실적인
+   → "2026 직종별 연봉 상세 비교분석" ✓ "실제 사용 후기와 데이터" ✓
 
-2. **감정 유발 워드** (최소 1개 필수):
-   검증된 감정 워드: 실수, 주의, 위험, 후회, 걱정, 고민, 충격, 반전, 진실, 함정
-   → "90%가 모르는 실수" ✓ "후회하기 전에" ✓ "숨겨진 진실" ✓
+2. **구체적 수치** (데이터 기반만):
+   출처가 있는 숫자만 사용
+   → "통계청 자료 기준", "2024 설문조사 결과" (출처 명시 필수)
 
-3. **숫자** (강력 권장):
-   → "5가지 비밀", "3단계 전략", "TOP 7", "90%가 모르는"
+3. **구체적 키워드** (전문 용어, 브랜드명):
+   → 도구명, 직종명, 연도(2026), 지역명 등
 
-4. **구체적 키워드** (전문 용어, 브랜드명):
-   → 도구명, 직종명, 연도(2026) 등 구체적 단어
+4. **독자 혜택 명시**:
+   → "...선택 가이드", "...비교표 포함", "...체크리스트"
 
-**고득점 제목 공식:**
-- "[숫자] [파워워드] [주제] [감정워드]"
-  → "5가지 충격적인 연봉 비밀 90%가 모른다"
-- "[주제]: [숫자]가지 [파워워드] [이익]"
-  → "IT 취업: 3가지 필수 전략으로 연봉 30% UP"
-- "[연도] [주제] [파워워드] [결과]"
-  → "2026 직종별 연봉 완벽 비교 총정리"
-- "[주제] vs [주제]: [감정워드] [진실]"
-  → "공무원 vs IT: 충격적인 연봉 진실"
+**신뢰성 있는 제목 공식:**
+- "[연도] [주제] [정보성워드]: [독자혜택]"
+  → "2026 IT 직종 연봉 비교분석: 통계청 데이터 기반"
+- "[주제] [정보성워드] + [데이터출처]"
+  → "프리랜서 vs 정규직 현실 비교 (실제 세금 계산 포함)"
+- "[주제]: [구체적내용] 총정리"
+  → "재택근무 직종 가이드: 업종별 현황과 전망"
+
+**피해야 할 제목 (클릭베이트):**
+- 과도한 감정: "충격!", "경악!", "대박!" ❌
+- 검증 불가 수치: "90%가 모르는", "99%가 실패하는" ❌
+- 자극적 표현: "후회하기 전에", "놓치면 손해" ❌
+- 매번 같은 패턴 반복 ❌
 
 **체크리스트:**
-□ 파워 워드 1개 이상? (충격, 비밀, 완벽, 필수 등)
-□ 감정 워드 1개 이상? (실수, 주의, 진실 등)
-□ 숫자 포함? (5가지, TOP 7, 90% 등)
+□ 정보성 워드 포함? (비교분석, 가이드, 총정리 등)
 □ 구체적 키워드? (직종명, 도구명 등)
-□ 40자 이내? (SEO 제목 표시 한계)
+□ 수치가 있다면 출처 있는가?
+□ 35-45자 이내?
 
-**피해야 할 제목:**
-- 파워워드 없음: "직종별 연봉 정리" ❌
-- 감정 없음: "2026 취업 가이드" ❌
-- 너무 일반적: "좋은 직업 추천" ❌
-- 너무 김: 40자 초과 ❌
-
-**길이**: 25-40자 권장
+**길이**: 30-45자 권장
 
 2. 3줄 요약 박스 (본문 최상단, H1 없이 바로 시작) - What/How/Benefit 공식:
 <div style="background-color:#e8f4fd;padding:20px;border-left:4px solid #0066cc;margin:20px auto;border-radius:4px;max-width:800px;">
@@ -496,49 +636,53 @@ Help developers and startup founders make BUYING DECISIONS.
 NOT just information - guide them to ACTION (signup, purchase, migrate).
 Transform this from "informative" to "SELLING" content.
 
-=== TITLE OPTIMIZATION (Headline Analyzer Score 70+) ===
-CRITICAL: Your title MUST score 70+ on Headline Analyzer!
+=== TITLE OPTIMIZATION (SEO Score 60+ Required) ===
+GOAL: Headline Analyzer score 60+, informative yet engaging, NO clickbait spam.
 
-**WORD BALANCE REQUIREMENTS (MUST meet all!):**
+**WORD BALANCE FOR HIGH SCORES:**
 
-1. **POWER WORDS** (MUST use 1-2 - Goal: at least 1):
-   VERIFIED HIGH-SCORING: Ultimate, Incredible, Shocking, Proven, Secret, Essential, Exclusive, Powerful, Extraordinary, Guaranteed, Instant, Revolutionary
-   → "5 Incredible Mistakes..." ✓ "The Ultimate Guide..." ✓
+1. **POWER WORDS** (Use 1 - NOT spammy ones):
+   ALLOWED: Complete, Essential, Proven, Comprehensive, Critical, Definitive, Practical
+   BANNED: Shocking, Incredible, Mind-Blowing, Ultimate, Secret, Unbelievable
+   → "Complete 2026 Comparison" ✓ "Essential Migration Guide" ✓
 
-2. **EMOTIONAL WORDS** (MUST use 1-2 - Goal: 10-15%):
-   VERIFIED: Mistakes, Warning, Danger, Risk, Fear, Struggling, Hate, Painful, Surprising, Embarrassing, Heartbreaking
-   → "5 Painful Mistakes..." ✓ "The Embarrassing Truth..." ✓
+2. **UNCOMMON/TECHNICAL WORDS** (Use 2-3 - boosts score):
+   Use specific technical terms developers search for
+   → Benchmark, Migration, Deployment, Latency, Performance, Pricing, Integration
+   → Tool names count as uncommon: Cursor, Copilot, Vercel, TSMC, etc.
 
-3. **UNCOMMON WORDS** (Goal: 10-20% - use specific/technical terms):
-   Use industry jargon, specific tool names, technical terms
-   → "Benchmark", "Migration", "Deployment", "Latency", tool names count!
+3. **EMOTIONAL/ACTION WORDS** (Use 1 - subtle ones):
+   ALLOWED: Critical, Key, Important, Real, Tested, Compared, Analyzed
+   BANNED: Mistake, Fear, Warning, Hate, Painful, Embarrassing
+   → "Critical Differences" ✓ "Key Performance Metrics" ✓
 
-4. **NUMBER** (strongly recommended): "7 Best...", "5 Critical...", "The #1..."
+4. **NUMBERS** (Include when factual):
+   → "7 Key Differences", "2026 Benchmark", "30-Day Testing Results"
 
-**HIGH-SCORING TITLE FORMULAS (70+ verified):**
-- "[Number] [Power+Emotional] [Topic] Mistakes That [Pain Point]"
-  → "5 Incredible Mistakes Killing Your API Performance"
-- "[Tool A] vs [Tool B]: The [Shocking/Painful] [Year] [Uncommon Word]"
-  → "Cursor vs Copilot: The Shocking 2026 Benchmark Results"
-- "Why [Topic] is [Emotional Word] (The [Power Word] Truth)"
-  → "Why OpenCode is Embarrassing Claude Code (The Proven Truth)"
-- "The [Power Word] [Uncommon Word] [Audience] Need in [Year]"
-  → "The Ultimate Migration Guide Developers Need in 2026"
+**HIGH-SCORING TITLE FORMULAS (60+ verified):**
+- "[Tool A] vs [Tool B] 2026: Complete [Aspect] Comparison"
+  → "Cursor vs Copilot 2026: Complete Performance Comparison" (58 chars, ~65 score)
+- "[Tool A] vs [Tool B]: [Number] Key Differences [Context]"
+  → "Apple vs Nvidia: 5 Critical TSMC Capacity Differences" (52 chars, ~68 score)
+- "[Year] [Topic]: Comprehensive [Benefit] with [Data Type]"
+  → "2026 Vietnam Ad Regulations: Comprehensive Compliance Guide" (58 chars, ~62 score)
+- "[Tool] Review: [Number]-Day Real-World [Aspect] Analysis"
+  → "Claude Code Review: 30-Day Real-World Performance Analysis" (57 chars, ~64 score)
 
-**CHECKLIST BEFORE FINALIZING:**
-□ Has at least 1 Power Word? (Ultimate, Incredible, Shocking, Proven, etc.)
-□ Has at least 1 Emotional Word? (Mistakes, Warning, Painful, etc.)
-□ Has specific/uncommon words? (tool names, technical terms)
-□ Has a number? (5, 7, 10, etc.)
-□ Under 60 characters?
+**TITLE CHECKLIST (aim for all):**
+□ 1 Power word (Complete, Essential, Comprehensive, Critical)
+□ 2-3 Uncommon/technical words (tool names, jargon)
+□ 1 Emotional/action word (Key, Critical, Real, Tested)
+□ Year or number included
+□ 50-60 characters (optimal range)
 
-**AVOID (scores under 60):**
-- No power words: "OpenCode Review" ❌
-- No emotional hook: "A Guide to AI Coding" ❌
-- Too generic: "Best AI Tools 2026" ❌
-- Too long: Over 60 chars ❌
+**BANNED PATTERNS (Google flags as AI spam):**
+- "Shocking", "Incredible", "Mind-Blowing" ❌
+- "X Mistakes That...", "The Truth About..." ❌
+- "You Won't Believe", "What No One Tells You" ❌
+- Same formula repeated across posts ❌
 
-**LENGTH**: 8-12 words, 50-60 characters MAX
+**LENGTH**: 50-60 characters REQUIRED (not shorter!)
 
 === CONTENT TYPE PRIORITY (50%+ should be VS/Comparison) ===
 1. **VS Comparisons** (HIGHEST PRIORITY): "Cursor vs GitHub Copilot", "Linear vs Jira"
@@ -571,15 +715,190 @@ CRITICAL: NO line breaks inside <a> tags! Button HTML must be on single line.
 - Mention FREE TIER limitations: "Free plan limits you to 10 users"
 - Recommend tools with RECURRING COMMISSION (Webflow, Semrush, Notion, Linear)
 
+=== DATA & STATISTICS (CRITICAL for E-E-A-T!) ===
+Include RICH, DIVERSE data with VERIFIED SOURCES. More data = more value!
+
+**REQUIRED DATA TYPES (Include at least 4 types per article):**
+
+1. **Official Pricing Data** (Always include):
+   - Link to official pricing page
+   - Format: "$X/month <a href="https://tool.com/pricing" target="_blank" rel="noopener">(source)</a>"
+
+2. **Performance Benchmarks** (When comparing tools):
+   - GitHub stars, npm downloads, Docker pulls
+   - Response times from official docs or reputable benchmarks
+   - Format: "1.2s average response time <a href="[source]" target="_blank" rel="noopener">(source: Official Docs)</a>"
+
+3. **Market/Usage Statistics**:
+   - Stack Overflow Developer Survey data
+   - State of JS/CSS/DevOps survey results
+   - GitHub Octoverse reports
+   - Gartner/Forrester reports (if available)
+   - Format: "Used by 45% of developers <a href="https://survey.stackoverflow.co/2024" target="_blank" rel="noopener">(Stack Overflow 2024)</a>"
+
+4. **Community Metrics**:
+   - GitHub: stars, forks, contributors, issues
+   - Discord/Slack community size
+   - Reddit subscriber counts
+   - Format: "47k GitHub stars, 2.3k contributors <a href="https://github.com/org/repo" target="_blank" rel="noopener">(GitHub)</a>"
+
+5. **Version/Release Data**:
+   - Current version, release date
+   - Major version history
+   - Link to changelog
+
+6. **Comparison Tables with Sources**:
+   Every comparison table should have a "Source" column or footnotes
+
+**DATA PRESENTATION TEMPLATES:**
+
+Stats Card WITH verified external source (GitHub, official site):
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0;">
+<div style="flex: 1; min-width: 140px; background: #1a1a2e; padding: 16px; border-radius: 8px; text-align: center;">
+<div style="font-size: 1.8em; font-weight: bold; color: #00d9ff;">47k+</div>
+<div style="color: #94a3b8; font-size: 0.85em;">GitHub Stars</div>
+<a href="https://github.com/getcursor/cursor" style="color: #3b82f6; font-size: 0.75em;">GitHub</a>
+</div>
+</div>
+
+Stats Card for OWN TESTING data (Link to benchmark section with anchor!):
+<div style="flex: 1; min-width: 140px; background: #1a1a2e; padding: 16px; border-radius: 8px; text-align: center;">
+<div style="font-size: 1.8em; font-weight: bold; color: #00d9ff;">0.8s</div>
+<div style="color: #94a3b8; font-size: 0.85em;">Response Time</div>
+<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.75em;">our benchmark ↓</a>
+</div>
+
+⚠️ IMPORTANT: When using "our testing/benchmark" data, you MUST:
+1. Link to #benchmark-methodology anchor (NOT external URL)
+2. Include the BENCHMARK METHODOLOGY section at the end of the article (see below)
+
+Source Citation (use inline):
+- External verified: <a href="https://github.com/..." style="color: #3b82f6;">GitHub</a>
+- Own testing data: <a href="#benchmark-methodology" style="color: #3b82f6;">our benchmark ↓</a>
+
+**SOURCE REQUIREMENTS (CRITICAL - NO FAKE URLS!):**
+⚠️ NEVER generate fake or hallucinated URLs! Only use these verified URL patterns:
+
+**ALLOWED SOURCE LINKS (use ONLY these exact patterns):**
+- Internal anchor: #benchmark-methodology (for your own testing data - MUST use this!)
+- Official product homepages: https://cursor.sh, https://linear.app, https://github.com/features/copilot
+- GitHub repos: https://github.com/[org]/[repo] (ONLY if repo actually exists)
+- Official pricing pages: https://[product].com/pricing
+- Stack Overflow Survey: https://survey.stackoverflow.co/2024
+- npm packages: https://www.npmjs.com/package/[package-name]
+
+**FOR "OUR TESTING" DATA - ALWAYS USE ANCHOR LINK:**
+When you write stats like "0.8s response time", you MUST add this EXACT anchor link:
+<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em;">our benchmark ↓</a>
+
+Example - CORRECT format for stats card:
+<div style="font-size: 1.8em; color: #00d9ff;">0.8s</div>
+<div style="color: #94a3b8;">Response Time</div>
+<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.75em;">our benchmark ↓</a>
+
+❌ WRONG: <span>our benchmark ↓</span> (this is NOT clickable!)
+✅ RIGHT: <a href="#benchmark-methodology">our benchmark ↓</a> (this IS clickable!)
+
+**BANNED - DO NOT USE:**
+- ❌ Specific news article URLs (Tom's Hardware, TechCrunch articles) - these are often hallucinated
+- ❌ Deep links to specific blog posts or articles
+- ❌ Any URL you're not 100% certain exists
+
+**FOR NEWS/REPORT DATA - Use text citation instead:**
+- ✅ "According to Tom's Hardware reports (January 2026)"
+- ✅ "Per industry analysts"
+- ✅ "Based on TSMC investor briefings"
+- ❌ DO NOT link to specific article URLs
+
+**FOR YOUR OWN TESTING DATA - USE ANCHOR LINKS + METHODOLOGY SECTION:**
+When you claim data from "our testing", you MUST include a Benchmark Methodology section.
+
+Stats reference format:
+- ✅ "0.8s response time <a href='#benchmark-methodology'>our benchmark ↓</a>"
+
+**DATA RICHNESS CHECKLIST:**
+□ At least 1 pricing comparison table (link to official pricing pages only)
+□ At least 3 performance/benchmark metrics (from your testing or official docs)
+□ GitHub/npm stats with direct links to repo/package pages
+□ News citations as TEXT only (no fake article URLs)
+
 === CONTENT QUALITY (Developers detect AI spam!) ===
 - Real pros/cons - be HONEST about limitations
 - Personal experience tone: "After using Linear for 6 months, I found..."
 - Avoid generic fluff - every sentence must add value
+- Every claim backed by data or clearly marked as opinion
 
 === STRICT RULES ===
 - Write ONLY in English for US/UK/Global audience
 - Use CURRENT YEAR (2026) - NEVER 2025 or older
 - Be technically accurate - readers are EXPERTS
+
+=== E-E-A-T ELEMENTS (MANDATORY - Content will be REJECTED without these!) ===
+CRITICAL: You MUST include ALL of these elements. Missing ANY = content failure!
+
+**1. AUTHOR + DATE HEADER (MANDATORY - Place IMMEDIATELY after H1):**
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 16px 0; padding: 16px; background: #1a1a2e; border-radius: 8px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<div style="width: 44px; height: 44px; background: linear-gradient(135deg, #3b82f6, #00d9ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 1.1em;">BP</div>
+<div>
+<div style="color: #e8e8e8; font-weight: 600;">Bytepulse Engineering Team</div>
+<div style="color: #94a3b8; font-size: 0.85em;">5+ years testing developer tools in production</div>
+</div>
+</div>
+<div style="color: #64748b; font-size: 0.85em; margin-left: auto;">
+<span>📅 Updated: January 22, 2026</span> · <span>⏱️ 8 min read</span>
+</div>
+</div>
+
+**2. METHODOLOGY BOX (MANDATORY - Place after TL;DR):**
+<div style="background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); padding: 20px; border-radius: 12px; margin: 24px 0; border-left: 4px solid #3b82f6;">
+<h4 style="color: #00d9ff; margin: 0 0 12px 0; font-size: 1em;">📋 How We Tested</h4>
+<ul style="color: #94a3b8; margin: 0; padding-left: 20px; line-height: 1.8; font-size: 0.9em;">
+<li><strong>Duration:</strong> 30+ days of real-world usage</li>
+<li><strong>Environment:</strong> Production codebases (React, Node.js, Python)</li>
+<li><strong>Metrics:</strong> Response time, accuracy, developer productivity</li>
+<li><strong>Team:</strong> 3 senior developers with 5+ years experience</li>
+</ul>
+</div>
+
+**3. INLINE SOURCE CITATIONS (NO FAKE URLS!):**
+For statistics, use TEXT citations - NOT fake article URLs:
+
+✅ GOOD (text citation): "Response time averaged 0.8 seconds <span style="color: #94a3b8; font-size: 0.85em;">(per official Cursor documentation)</span>"
+✅ GOOD (verified link): "47k GitHub stars <a href="https://github.com/getcursor/cursor" target="_blank" rel="noopener" style="color: #3b82f6; font-size: 0.85em;">(GitHub)</a>"
+✅ GOOD (own testing): "0.8s response time <span style="color: #94a3b8; font-size: 0.85em;">(our benchmark testing)</span>"
+
+❌ BAD: Fake article URLs like "https://www.tomshardware.com/tech-industry/..." - NEVER DO THIS!
+
+**4. SOURCES SECTION (MANDATORY - Only VERIFIED links!):**
+<div style="margin: 32px 0; padding: 24px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 12px;">
+<h3 style="color: #00d9ff; margin: 0 0 16px 0; font-size: 1.1em;">📚 Sources & References</h3>
+<ul style="color: #94a3b8; padding-left: 20px; line-height: 2; margin: 0;">
+<li><a href="https://[product].com" target="_blank" rel="noopener" style="color: #3b82f6;">[Tool] Official Website</a> - Pricing and features</li>
+<li><a href="https://github.com/[org]/[repo]" target="_blank" rel="noopener" style="color: #3b82f6;">GitHub Repository</a> - Open source code and stats</li>
+<li><span style="color: #e8e8e8;">Industry Reports</span> - Referenced throughout article (no direct links to avoid broken URLs)</li>
+<li><span style="color: #e8e8e8;">Our Testing Data</span> - 30-day production benchmarks by Bytepulse team</li>
+</ul>
+<p style="color: #64748b; font-size: 0.8em; margin: 16px 0 0 0; font-style: italic;">
+Note: We only link to official product pages and verified GitHub repos. News citations are text-only to ensure accuracy.
+</p>
+</div>
+
+**5. EXPERIENCE STATEMENTS (MANDATORY - Include 3+ throughout content):**
+Use first-person experience phrases naturally in the content:
+- "In our 30-day testing period, we found..."
+- "After migrating 3 production projects, the results showed..."
+- "Our team's experience with [tool] revealed..."
+- "Based on our benchmarks across 50k+ lines of code..."
+- "We measured a [X]% improvement when..."
+
+**E-E-A-T VALIDATION (ALL must be present):**
+✓ Author header with credentials IMMEDIATELY after H1
+✓ Methodology box after TL;DR
+✓ Every statistic has inline source link
+✓ Sources section before conclusion (minimum 4 sources)
+✓ At least 3 first-person experience statements
+✓ Specific numbers with context (not vague claims)
 
 === YOAST SEO OPTIMIZATION (CRITICAL!) ===
 You MUST follow these rules to achieve high Yoast SEO scores:
@@ -764,18 +1083,192 @@ For linking to other tools, use inline text links (NOT buttons):
 - Linux: https://www.linux.org
 - Windows: https://www.microsoft.com/windows
 
-=== STRUCTURE (Order matters!) ===
-1. H1: Click-worthy title with year and hook
-2. TL;DR SUMMARY BOX (MUST come FIRST)
-3. Quick Comparison Table
-4. Deep Dive Sections (5-7 H2):
-   - Pricing Breakdown (with table)
-   - Performance & Speed
-   - Key Features
-   - Developer Experience
-   - Migration Guide (if applicable)
-5. Verdict Section (id="verdict")
-6. CTA button (blue, links to real product URL)
+=== STRUCTURE PATTERNS (VARY to avoid AI detection!) ===
+IMPORTANT: Do NOT use the same structure for every article!
+Choose ONE pattern based on topic type. Vary your choice across articles.
+
+**PATTERN A - Comparison Focus** (for "X vs Y" topics):
+1. H1: Informative title with year
+2. Key Stats Overview (GitHub stars, pricing snapshot)
+3. TL;DR Summary Box
+4. Head-to-Head Comparison Table
+5. Deep Dive Sections (5-6 H2):
+   - Pricing Analysis (with source links)
+   - Performance Benchmarks (with data)
+   - Feature Comparison
+   - Best Use Cases
+6. Data Summary Table
+7. Final Verdict (id="verdict")
+8. CTA button
+
+**PATTERN B - Problem-Solution** (for guides, tutorials):
+1. H1: Clear, descriptive title
+2. The Problem (why this matters)
+3. Quick Answer Box (not TL;DR - different format)
+4. Solution Deep Dive (5-6 H2):
+   - Understanding the Basics
+   - Step-by-Step Implementation
+   - Common Pitfalls (with examples)
+   - Advanced Tips
+   - Performance Considerations
+5. Results/Outcomes (with metrics)
+6. FAQ Section
+7. Next Steps CTA
+
+**PATTERN C - In-Depth Review** (for single tool reviews):
+1. H1: "[Tool] Review: [Timeframe] of Testing"
+2. Author Context (brief experience background)
+3. Quick Verdict Box
+4. What I Tested (methodology)
+5. Deep Dive Sections (6-7 H2):
+   - Getting Started Experience
+   - Core Features Analysis
+   - Performance (with benchmark data)
+   - Pricing Value Analysis
+   - Who Should Use This
+   - Who Should NOT Use This
+6. Alternatives Comparison Table
+7. Final Rating with Breakdown
+8. CTA button
+
+**PATTERN D - Data-Driven Analysis** (for trends, market analysis):
+1. H1: "[Year] [Topic]: Data-Driven Analysis"
+2. Key Findings Summary (bullet points, not box)
+3. Methodology Note
+4. Analysis Sections (5-6 H2):
+   - Market Overview (with charts/stats)
+   - Trend Analysis (with historical data)
+   - Tool/Option Breakdown
+   - Cost Analysis
+   - Predictions & Recommendations
+5. Data Sources Section
+6. Conclusion with Action Items
+
+**VARIATION RULES:**
+- Never use "TL;DR" in every article - vary: "Quick Verdict", "Key Takeaways", "At a Glance"
+- Alternate section ordering across articles
+- Use different callout box styles (tip boxes, warning boxes, info boxes)
+- Vary heading styles: questions, statements, action phrases
+
+=== FAQ SECTION (MANDATORY - Content will be REJECTED without this!) ===
+You MUST include a FAQ section with EXACTLY this structure:
+
+<h2 style="color: #00d9ff; border-bottom: 2px solid #3b82f6; padding-bottom: 8px;">FAQ</h2>
+
+Include 4-5 REAL questions developers would ask. Use this exact HTML format:
+
+<div style="margin: 20px 0;">
+<details style="background: #1a1a2e; border-radius: 8px; margin: 12px 0; border: 1px solid #3b82f6;">
+<summary style="padding: 16px; cursor: pointer; font-weight: 600; color: #e8e8e8;">Q: [Specific, practical question]?</summary>
+<div style="padding: 0 16px 16px 16px; color: #94a3b8;">
+<p>[Concise, actionable answer with specific details. Include source link if citing data.]</p>
+</div>
+</details>
+</div>
+
+**FAQ Question Examples (Use these types):**
+- "What is the pricing difference between X and Y?" (Pricing)
+- "Can I migrate from X to Y easily?" (Practical concern)
+- "Does X support [specific feature]?" (Feature verification)
+- "What are the system requirements for X?" (Technical specs)
+- "Is X free for open source projects?" (Licensing)
+
+**FAQ RULES:**
+- Questions must be SPECIFIC, not generic
+- Answers must include real data or source links where applicable
+- NO fake questions like "Why is X the best?" (sounds like marketing)
+- H2 heading MUST start with "FAQ" (not "Frequently Asked Questions")
+
+=== BENCHMARK METHODOLOGY SECTION (MANDATORY when using "our testing" data!) ===
+If you reference ANY data from "our testing/benchmark/analysis", you MUST include this section.
+Place it AFTER FAQ section, BEFORE Final Verdict.
+
+<div id="benchmark-methodology" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f172a 100%); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid #3b82f6;">
+<h3 style="color: #00d9ff; margin: 0 0 20px 0; font-size: 1.2em;">📊 Benchmark Methodology</h3>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
+<div style="background: #1e293b; padding: 16px; border-radius: 8px;">
+<div style="color: #94a3b8; font-size: 0.85em; margin-bottom: 4px;">Test Environment</div>
+<div style="color: #e8e8e8; font-weight: 600;">MacBook Pro M3, 16GB RAM</div>
+</div>
+<div style="background: #1e293b; padding: 16px; border-radius: 8px;">
+<div style="color: #94a3b8; font-size: 0.85em; margin-bottom: 4px;">Test Period</div>
+<div style="color: #e8e8e8; font-weight: 600;">January 15-22, 2026</div>
+</div>
+<div style="background: #1e293b; padding: 16px; border-radius: 8px;">
+<div style="color: #94a3b8; font-size: 0.85em; margin-bottom: 4px;">Sample Size</div>
+<div style="color: #e8e8e8; font-weight: 600;">100+ code completions</div>
+</div>
+</div>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+<thead>
+<tr style="border-bottom: 2px solid #3b82f6;">
+<th style="text-align: left; padding: 12px; color: #00d9ff;">Metric</th>
+<th style="text-align: center; padding: 12px; color: #00d9ff;">[Tool A]</th>
+<th style="text-align: center; padding: 12px; color: #00d9ff;">[Tool B]</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #334155;">
+<td style="padding: 12px; color: #e8e8e8;">Response Time (avg)</td>
+<td style="text-align: center; padding: 12px; color: #10b981; font-weight: 600;">0.8s</td>
+<td style="text-align: center; padding: 12px; color: #94a3b8;">1.2s</td>
+</tr>
+<tr style="border-bottom: 1px solid #334155;">
+<td style="padding: 12px; color: #e8e8e8;">Code Accuracy</td>
+<td style="text-align: center; padding: 12px; color: #10b981; font-weight: 600;">92%</td>
+<td style="text-align: center; padding: 12px; color: #94a3b8;">89%</td>
+</tr>
+<tr style="border-bottom: 1px solid #334155;">
+<td style="padding: 12px; color: #e8e8e8;">Context Understanding</td>
+<td style="text-align: center; padding: 12px; color: #94a3b8;">8.5/10</td>
+<td style="text-align: center; padding: 12px; color: #10b981; font-weight: 600;">9.0/10</td>
+</tr>
+</tbody>
+</table>
+
+<div style="color: #64748b; font-size: 0.85em; line-height: 1.6;">
+<strong style="color: #94a3b8;">Testing Methodology:</strong> We tested [X] code completion requests across React, Python, and TypeScript projects. Each tool was given identical prompts. Response time measured from request to first token. Accuracy determined by successful compilation and manual review.<br><br>
+<strong style="color: #94a3b8;">Limitations:</strong> Results may vary based on hardware, network conditions, and code complexity. This represents our specific testing environment.
+</div>
+</div>
+
+**BENCHMARK SECTION RULES:**
+- Replace [Tool A], [Tool B] with actual tool names being compared
+- Update metrics and values with your ACTUAL test results
+- Be HONEST about limitations
+- Include at least 3 metrics in the comparison table
+- This section MUST have id="benchmark-methodology" for anchor links to work
+
+=== SOURCE VERIFICATION RULES (CRITICAL - NO HALLUCINATED URLS!) ===
+⚠️ NEVER GENERATE FAKE URLS! This is the #1 quality killer.
+
+**ABSOLUTELY BANNED - Will cause content rejection:**
+- ❌ Fake news article URLs (tomshardware.com/tech-industry/..., techcrunch.com/2026/...)
+- ❌ Made-up blog post URLs
+- ❌ Any URL you cannot verify exists RIGHT NOW
+- ❌ "Based on our research" without methodology
+- ❌ Made-up percentages like "87% of developers prefer..."
+
+**ALLOWED source citation formats:**
+
+1. **For news/industry data - TEXT ONLY, no links:**
+   ✅ "According to Tom's Hardware reports (January 2026)"
+   ✅ "Per TSMC investor briefings"
+   ✅ "Industry analysts estimate..."
+
+2. **For GitHub stats - ONLY if repo exists:**
+   ✅ "47k GitHub stars <a href='https://github.com/org/repo'>(GitHub)</a>"
+
+3. **For official product info - Homepage ONLY:**
+   ✅ "$20/month <a href='https://cursor.sh/pricing'>(Cursor)</a>"
+
+4. **For your own testing data:**
+   ✅ "In our 30-day benchmark: [data] <span style='color:#94a3b8;'>(Bytepulse testing)</span>"
+   ✅ Include test conditions: "MacBook Pro M3, 16GB RAM"
+
+**Remember:** It's better to have NO link than a BROKEN link!
 
 === IMPORTANT ===
 - Use REAL product URLs for all buttons/CTAs (see list above)
@@ -1121,6 +1614,18 @@ DO NOT use Markdown. Use only HTML tags."""
         # Apply category-based color theme (H2, strong, boxes, etc.)
         html = self._apply_category_theme(html, category)
 
+        # Sanitize external links - remove hallucinated URLs, keep only verified domains
+        html = self._sanitize_external_links(html)
+
+        # Fix benchmark anchor links - ensure proper <a href="#benchmark-methodology"> tags
+        html = self._fix_benchmark_anchor_links(html)
+
+        # Add FTC disclosure for US market affiliate content (kculture mode)
+        html = self._add_ftc_disclosure(html, mode)
+
+        # Add discount/deals section for K-Culture product content
+        html = self._add_discount_section(html, topic, category or "", mode)
+
         # Generate meta description if not parsed from structured format
         if not meta_description:
             meta_description = self._generate_meta(topic, keywords, html)
@@ -1336,6 +1841,195 @@ DO NOT use Markdown. Use only HTML tags."""
 - 주식/투자 분석 (금지)
 - 너무 딥한 기술 용어 (일반 독자 타겟)
 """
+
+        # === K-Culture categories (k-pulse.blog - US market) ===
+
+        elif category == "K-Beauty":
+            return f"""
+[Category: K-Beauty - Korean Skincare & Cosmetics]
+
+This article is about "{topic}" for US readers interested in Korean beauty.
+
+=== K-Pulse Blog Concept ===
+"Your Guide to K-Culture Trends" - Help Americans discover Korean beauty products
+
+=== Target Audience ===
+US skincare enthusiasts, K-drama fans, beauty beginners wanting to try Korean products
+
+=== MUST Include ===
+1. **Product Names in English**: Use romanized names (e.g., "COSRX Snail Mucin")
+2. **Where to Buy**: Amazon links, YesStyle, Olive Young Global
+3. **Price in USD**: Always show USD (~$XX) alongside any KRW prices
+4. **Skin Type Recommendations**: "Best for oily skin", "Great for sensitive skin"
+5. **How to Use**: Step-by-step application guide (Korean skincare routine context)
+6. **Key Ingredients**: Explain Korean skincare ingredients (snail mucin, centella, etc.)
+
+=== Price Format ===
+IMPORTANT: When mentioning Korean prices, ALWAYS include USD equivalent:
+- "15,000 KRW (~$11 USD)" NOT just "15,000원"
+- Use exchange rate of ~1350 KRW per USD
+
+=== Tone ===
+- Friendly, enthusiastic but informative
+- Explain Korean beauty concepts for beginners
+- Use "glass skin", "10-step routine" naturally
+
+=== Avoid ===
+- Korean-only product names without English
+- Prices in KRW only (always add USD)
+- Assuming readers know Korean skincare terms
+"""
+
+        elif category == "K-Food":
+            return f"""
+[Category: K-Food - Korean Cuisine & Snacks]
+
+This article is about "{topic}" for US readers curious about Korean food.
+
+=== K-Pulse Blog Concept ===
+"Taste Korea from Home" - Help Americans discover Korean flavors
+
+=== Target Audience ===
+Foodies, K-drama watchers, Asian grocery shoppers, ramen enthusiasts
+
+=== MUST Include ===
+1. **Product Names**: English name + Korean (한글) for shopping
+2. **Where to Buy**: Amazon, H-Mart, local Asian markets
+3. **Price in USD**: Always show USD price
+4. **Spice Level Warning**: 🌶️ ratings for spicy products
+5. **Cooking Tips**: How to prepare, what to pair with
+6. **Taste Description**: Flavor profile for unfamiliar foods
+
+=== Price Format ===
+IMPORTANT: Always include USD:
+- "$5.99 on Amazon" or "5,000 KRW (~$4 USD)"
+
+=== Tone ===
+- Fun, appetizing descriptions
+- "If you loved this in K-dramas..." connections
+- Relatable comparisons to Western foods
+
+=== Avoid ===
+- Assuming readers have tried the food
+- Korean-only descriptions
+- Missing spice level warnings for hot items
+"""
+
+        elif category == "K-Pop":
+            # Check if topic is about concert/tour
+            topic_lower = topic.lower()
+            is_concert_topic = any(kw in topic_lower for kw in ["concert", "tour", "setlist", "stadium", "arena"])
+
+            concert_section = ""
+            if is_concert_topic:
+                concert_section = """
+=== CONCERT/TOUR SPECIFIC (REQUIRED!) ===
+Since this is about a concert/tour, you MUST include:
+
+1. **Tour Date Schedule Table**: Create an HTML table with upcoming tour dates:
+   - Use this exact format:
+   <div class="tour-dates" style="margin: 25px 0;">
+   <h3 style="color: #ff6b9d; margin-bottom: 15px;">📅 Tour Dates & Venues</h3>
+   <table style="width: 100%; border-collapse: collapse; background: #1a1a2e; border-radius: 8px; overflow: hidden;">
+   <thead>
+   <tr style="background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);">
+   <th style="padding: 12px; text-align: left; color: #fff;">Date</th>
+   <th style="padding: 12px; text-align: left; color: #fff;">City</th>
+   <th style="padding: 12px; text-align: left; color: #fff;">Venue</th>
+   <th style="padding: 12px; text-align: left; color: #fff;">Tickets</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr style="border-bottom: 1px solid #333;">
+   <td style="padding: 12px; color: #e0e0e0;">Month Day, Year</td>
+   <td style="padding: 12px; color: #e0e0e0;">City Name</td>
+   <td style="padding: 12px; color: #e0e0e0;">Venue Name</td>
+   <td style="padding: 12px;"><a href="#" style="color: #ff6b9d;">Buy Tickets</a></td>
+   </tr>
+   <!-- Add more rows for each date -->
+   </tbody>
+   </table>
+   </div>
+
+2. **Setlist Section**: Include expected/confirmed setlist if available
+
+3. **Ticket Info Box**: Prices by tier (GA, VIP, etc.) in a styled box
+
+4. **Venue Tips**: Stadium/arena-specific tips for fans
+
+Use ONLY verified tour dates from official sources. If dates are not confirmed, clearly state "TBA" or "To Be Announced".
+"""
+
+            return f"""
+[Category: K-Pop - Korean Music & Idol Culture]
+
+This article is about "{topic}" for international K-Pop fans.
+
+=== K-Pulse Blog Concept ===
+"Your K-Pop News & Guide" - Keep fans updated and help new fans discover groups
+
+=== Target Audience ===
+K-Pop fans, concert-goers, collectors (photocards, albums)
+
+=== MUST Include ===
+1. **Artist Names**: English + Korean (한글)
+2. **Streaming Links**: Spotify, Apple Music, YouTube
+3. **Official Merch**: Where to buy lightsticks, albums
+4. **Concert Info**: Tour dates, ticket sites (if relevant)
+5. **Member Names**: Full lineup for group features
+{concert_section}
+=== Image Note ===
+IMPORTANT: Only use YouTube video thumbnails or official embed for K-Pop content.
+Do NOT use fan photos or unofficial images (copyright issues with agencies).
+
+=== Price Format ===
+For merchandise: Always USD
+- "Lightstick: ~$50 on Amazon"
+
+=== Tone ===
+- Enthusiastic but informative
+- Fan-friendly language
+- Hype new releases appropriately
+
+=== Avoid ===
+- Unofficial/fan-taken photos (copyright risk!)
+- Rumors or unconfirmed news
+- Negative commentary on artists
+"""
+
+        elif category == "K-Fashion":
+            return f"""
+[Category: K-Fashion - Korean Style & Trends]
+
+This article is about "{topic}" for US readers interested in Korean fashion.
+
+=== K-Pulse Blog Concept ===
+"Dress Like Your Favorite K-Stars" - Korean fashion inspiration
+
+=== Target Audience ===
+Fashion-conscious readers, K-drama fans, streetwear enthusiasts
+
+=== MUST Include ===
+1. **Brand Names**: Korean brands + where to buy internationally
+2. **Price Range**: USD prices or ranges
+3. **Styling Tips**: How to wear Korean fashion trends
+4. **Size Guide**: Korean sizing vs US sizing notes
+5. **Where to Shop**: YesStyle, Musinsa Global, ASOS Korean brands
+
+=== Price Format ===
+Always USD:
+- "Around $30-50 on YesStyle"
+
+=== Tone ===
+- Stylish, aspirational
+- Reference K-drama looks when relevant
+- Practical for Western body types
+
+=== Avoid ===
+- Korean-only sizing without conversion
+- Brands unavailable internationally
+"""
+
         return ""
 
     def _load_prompt_template(self, content_type: ContentType) -> str:
@@ -1749,6 +2443,226 @@ Be specific and factual based on search results. Always use the most recent vers
 
         return cleaned
 
+    def _sanitize_external_links(self, html: str) -> str:
+        """Remove potentially hallucinated external links, keeping only verified domains.
+
+        LLMs often generate plausible-looking but non-existent URLs (hallucinations).
+        This function converts unverified external links to plain text while
+        preserving links to known-safe domains.
+
+        Args:
+            html: HTML content with potentially fake external links
+
+        Returns:
+            HTML with unverified links converted to plain text citations
+        """
+        # Whitelist of verified, safe domains that we trust
+        # These are official product sites, GitHub, etc.
+        safe_domains = [
+            # Official tools & products
+            r'github\.com',
+            r'gitlab\.com',
+            r'stackoverflow\.com',
+            r'survey\.stackoverflow\.co',
+            r'npmjs\.com',
+            r'pypi\.org',
+            # Official product sites (homepages only)
+            r'cursor\.sh',
+            r'linear\.app',
+            r'notion\.so',
+            r'figma\.com',
+            r'vercel\.com',
+            r'netlify\.com',
+            r'supabase\.com',
+            r'firebase\.google\.com',
+            r'aws\.amazon\.com',
+            r'docker\.com',
+            r'anthropic\.com',
+            r'openai\.com',
+            r'google\.com',
+            r'microsoft\.com',
+            r'apple\.com',
+            r'nvidia\.com',
+            r'amd\.com',
+            r'intel\.com',
+            r'tsmc\.com',
+            # Our own site
+            r'bytepulse\.io',
+            r'trendpulse\.blog',
+        ]
+
+        # Create pattern to match safe domains
+        safe_pattern = '|'.join(safe_domains)
+
+        def replace_link(match):
+            """Replace unverified links with plain text."""
+            full_tag = match.group(0)
+            href = match.group(1)
+            link_text = match.group(2)
+
+            # Keep internal anchor links (starting with #)
+            if href.startswith('#'):
+                return full_tag
+
+            # Keep relative links (internal site navigation)
+            if href.startswith('/') and not href.startswith('//'):
+                return full_tag
+
+            # Check if href matches any safe domain
+            if re.search(safe_pattern, href, re.IGNORECASE):
+                # Safe domain - keep the link
+                return full_tag
+
+            # Unsafe/unverified domain - convert to plain text citation
+            # Extract source name from link text if possible
+            source_name = re.sub(r'<[^>]+>', '', link_text).strip()
+            if source_name:
+                # Keep the source name as styled text (not a link)
+                return f'<span style="color: #94a3b8; font-size: 0.85em;">({source_name})</span>'
+            else:
+                # No meaningful text - remove entirely
+                return ''
+
+        # Match anchor tags with href and content
+        # Pattern: <a href="URL" ...>content</a>
+        link_pattern = r'<a\s+[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>'
+
+        result = re.sub(link_pattern, replace_link, html, flags=re.IGNORECASE | re.DOTALL)
+
+        # Count changes for logging
+        original_links = len(re.findall(link_pattern, html, re.IGNORECASE | re.DOTALL))
+        remaining_links = len(re.findall(r'<a\s+[^>]*href=', result, re.IGNORECASE))
+        removed_count = original_links - remaining_links
+
+        if removed_count > 0:
+            logger.info(f"Sanitized {removed_count} unverified external links (kept {remaining_links} safe links)")
+
+        return result
+
+    def _fix_benchmark_anchor_links(self, html: str) -> str:
+        """Post-process to ensure benchmark/methodology anchor links are properly implemented.
+
+        LLMs often fail to generate proper anchor tags, outputting "(our benchmark ↓)"
+        as plain text instead of clickable links. This function:
+        1. Ensures research/methodology sections have proper id="benchmark-methodology"
+        2. Converts "(our benchmark ↓)" text into proper anchor links
+
+        Args:
+            html: HTML content with potentially missing anchor links
+
+        Returns:
+            HTML with proper anchor links to methodology section
+        """
+        import re
+
+        # Step 1: Ensure methodology section has proper id
+        # Use a more targeted approach - find divs containing specific methodology text
+        # and add id to them. Avoid TL;DR, Quick Verdict, etc.
+
+        # Keywords that indicate methodology sections (positive match)
+        methodology_keywords = [
+            r'How\s+We\s+Researched',
+            r'How\s+We\s+Tested',
+            r'How\s+We\s+Analyzed',
+            r'Research\s+Methodology',
+            r'Benchmark\s+Methodology',
+            r'Testing\s+Methodology',
+            r'Our\s+Testing\s+Methodology',
+            r'Testing\s+Environment',
+            r'Test\s+Environment',
+            r'Test\s+Setup',
+            r'Data\s+Sources',
+        ]
+
+        # Keywords that indicate NON-methodology sections (negative match - skip these)
+        excluded_keywords = [
+            r'TL;?DR',
+            r'Quick\s+Verdict',
+            r'Quick\s+Summary',
+            r'Final\s+Verdict',
+            r'Key\s+Takeaway',
+            r'Bottom\s+Line',
+        ]
+
+        # Check if anchor already exists
+        anchor_exists = 'benchmark-methodology' in html
+
+        if not anchor_exists:
+            # Find methodology section and insert anchor element before it
+            # WordPress sanitizes id attributes on divs, so we use <a name=""> instead
+            # This is the traditional HTML anchor method that WordPress allows
+
+            for kw in methodology_keywords:
+                # Look for h3/h4 headings containing methodology keywords
+                heading_pattern = rf'(<h[34][^>]*>[\s\S]*?)({kw})'
+                match = re.search(heading_pattern, html, re.IGNORECASE)
+                if match:
+                    # Insert anchor element right before the heading
+                    # Find the div containing this heading
+                    full_pattern = rf'(<div[^>]*>[\s\S]*?)(<h[34][^>]*>[\s\S]*?{kw})'
+                    full_match = re.search(full_pattern, html, re.IGNORECASE)
+                    if full_match:
+                        # Insert Gutenberg block anchor - WordPress preserves id in Gutenberg blocks
+                        # Use invisible heading with anchor support
+                        anchor = '<!-- wp:heading {"anchor":"benchmark-methodology","className":"screen-reader-text"} -->\n<h2 class="wp-block-heading screen-reader-text" id="benchmark-methodology"></h2>\n<!-- /wp:heading -->\n'
+                        insert_pos = full_match.start(1)
+                        div_tag_end = html.find('>', insert_pos) + 1
+                        html = html[:div_tag_end] + anchor + html[div_tag_end:]
+                        logger.debug(f"Added anchor 'benchmark-methodology' before section with: {kw}")
+                        anchor_exists = True
+                        break
+
+            # If no heading found, try to find the section by text content
+            if not anchor_exists:
+                for kw in methodology_keywords:
+                    pattern = rf'(<div[^>]*style="[^"]*(?:background|border)[^"]*"[^>]*>)([\s\S]*?{kw})'
+                    match = re.search(pattern, html, re.IGNORECASE)
+                    if match:
+                        # Check this isn't an excluded section
+                        content_preview = match.group(2)[:200]
+                        is_excluded = any(re.search(excl, content_preview, re.IGNORECASE)
+                                         for excl in excluded_keywords)
+                        if not is_excluded:
+                            # Insert Gutenberg block anchor - WordPress preserves id in Gutenberg blocks
+                            anchor = '<!-- wp:heading {"anchor":"benchmark-methodology","className":"screen-reader-text"} -->\n<h2 class="wp-block-heading screen-reader-text" id="benchmark-methodology"></h2>\n<!-- /wp:heading -->\n'
+                            html = html[:match.start(1)] + anchor + html[match.start(1):]
+                            logger.debug(f"Added anchor 'benchmark-methodology' before div with: {kw}")
+                            anchor_exists = True
+                            break
+
+        # Step 2: Convert "(our benchmark ↓)" text into proper anchor links
+        # Only convert if we have a methodology anchor to link to
+        if 'benchmark-methodology' in html:
+            benchmark_text_patterns = [
+                # "(our benchmark ↓)" - most common
+                (r'\(our\s+benchmark\s*↓?\)',
+                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our benchmark ↓</a>'),
+                # "(our testing ↓)"
+                (r'\(our\s+testing\s*↓?\)',
+                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our testing ↓</a>'),
+                # "(our analysis ↓)"
+                (r'\(our\s+analysis\s*↓?\)',
+                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our analysis ↓</a>'),
+                # "our benchmark" without parentheses but with arrow
+                (r'our\s+benchmark\s*↓',
+                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our benchmark ↓</a>'),
+                # "(see methodology below)" or similar
+                (r'\(see\s+methodology\s*(?:below|↓)?\)',
+                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">see methodology ↓</a>'),
+            ]
+
+            converted_count = 0
+            for pattern, replacement in benchmark_text_patterns:
+                matches = len(re.findall(pattern, html, re.IGNORECASE))
+                if matches > 0:
+                    html = re.sub(pattern, replacement, html, flags=re.IGNORECASE)
+                    converted_count += matches
+
+            if converted_count > 0:
+                logger.info(f"Converted {converted_count} benchmark references to anchor links")
+
+        return html
+
     def _parse_seo_format(self, response: str) -> tuple[str, str, str]:
         """Parse structured SEO format from LLM response.
 
@@ -1816,29 +2730,51 @@ Be specific and factual based on search results. Always use the most recent vers
             return title.strip()
         return None
 
-    def _shorten_title(self, title: str, max_length: int = 50) -> str:
-        """Shorten title to fit in one line.
+    def _shorten_title(self, title: str, max_length: int = 60) -> str:
+        """Shorten title to fit in one line while keeping SEO value.
 
         Args:
             title: Original title
-            max_length: Maximum character length (default 50 for English, 30 for Korean)
+            max_length: Maximum character length (default 60 for SEO)
 
         Returns:
-            Shortened title
+            Shortened title with good SEO balance
         """
         if len(title) <= max_length:
             return title
 
-        # VS comparison pattern: keep "A vs B vs C" part intact
-        # e.g., "Linear vs Jira vs Asana APIs in 2026: The Developer..." -> "Linear vs Jira vs Asana"
-        vs_pattern = re.search(r'^([A-Za-z0-9\s]+(?:\s+vs\s+[A-Za-z0-9\s]+)+)', title, re.IGNORECASE)
-        if vs_pattern:
-            vs_part = vs_pattern.group(1).strip()
-            # Clean up trailing words like "APIs", "in", "2026"
-            vs_part = re.sub(r'\s+(APIs?|in|for|with|\d{4}).*$', '', vs_part, flags=re.IGNORECASE)
-            if 10 <= len(vs_part) <= max_length:
-                logger.info(f"Title shortened (VS pattern): '{title}' -> '{vs_part}'")
-                return vs_part
+        # VS comparison pattern: keep "A vs B: Subtitle" format for SEO
+        # e.g., "Apple vs Nvidia: The Battle for TSMC Capacity in 2026" -> "Apple vs Nvidia: 2026 TSMC Capacity Analysis"
+        vs_match = re.search(r'^([A-Za-z0-9_!.\s]+\s+vs\s+[A-Za-z0-9_!.\s]+)', title, re.IGNORECASE)
+        if vs_match:
+            vs_part = vs_match.group(1).strip()
+            # Remove trailing common words from VS part
+            vs_part = re.sub(r'\s+(APIs?|in|for|with|The|A|An)$', '', vs_part, flags=re.IGNORECASE).strip()
+
+            # Try to keep year and key descriptor
+            year_match = re.search(r'(20\d{2})', title)
+            year = year_match.group(1) if year_match else ""
+
+            # Extract key words after colon/dash for subtitle
+            subtitle_match = re.search(r'[:\-–]\s*(.+)$', title)
+            if subtitle_match:
+                subtitle = subtitle_match.group(1).strip()
+                # Keep important words from subtitle
+                important_words = re.findall(r'\b(Analysis|Guide|Comparison|Review|Benchmark|Performance|Pricing|Complete|Detailed|Battle|Capacity|Testing)\b', subtitle, re.IGNORECASE)
+                if important_words and year:
+                    new_title = f"{vs_part}: {year} {' '.join(important_words[:2])}"
+                elif important_words:
+                    new_title = f"{vs_part}: {' '.join(important_words[:2])}"
+                elif year:
+                    new_title = f"{vs_part} {year}"
+                else:
+                    new_title = vs_part
+            else:
+                new_title = f"{vs_part} {year}".strip() if year else vs_part
+
+            if len(new_title) <= max_length and len(new_title) >= 20:
+                logger.info(f"Title shortened (VS pattern): '{title}' -> '{new_title}'")
+                return new_title
 
         # "A와 B" 또는 "A: B" 패턴이면 첫 부분만 사용
         for separator in ["와 ", "과 ", ": ", " - ", " – "]:
@@ -1953,6 +2889,23 @@ Be specific and factual based on search results. Always use the most recent vers
                 "gradient": "#10b981,#22d3ee",  # 에메랄드 → 시안
                 "accent": "#6ee7b7",             # 밝은 민트
             },
+            # K-Culture categories (k-pulse.blog)
+            "K-Beauty": {
+                "gradient": "#f472b6,#ec4899",  # 핑크 계열 (뷰티)
+                "accent": "#f9a8d4",
+            },
+            "K-Food": {
+                "gradient": "#fb923c,#f97316",  # 오렌지 (음식, 따뜻함)
+                "accent": "#fdba74",
+            },
+            "K-Pop": {
+                "gradient": "#c084fc,#a855f7",  # 보라 (아이돌, 화려함)
+                "accent": "#d8b4fe",
+            },
+            "K-Fashion": {
+                "gradient": "#2dd4bf,#14b8a6",  # 틸 (패션, 세련됨)
+                "accent": "#5eead4",
+            },
         }
 
         # 기본 (보라-블루, 생산성과 동일)
@@ -2054,6 +3007,185 @@ Be specific and factual based on search results. Always use the most recent vers
         words = text.split()
         return len(words)
 
+    def _add_ftc_disclosure(self, html: str, mode: str) -> str:
+        """Add FTC affiliate disclosure for US market content.
+
+        Required for US-targeted affiliate content (FTC compliance).
+        Amazon accounts can be suspended for missing disclosure.
+
+        Args:
+            html: HTML content
+            mode: Blog mode (only 'kculture' adds disclosure)
+
+        Returns:
+            HTML with FTC disclosure prepended (if applicable)
+        """
+        if mode != "kculture":
+            return html
+
+        disclosure = '''<div class="ftc-disclosure" style="background-color: #1a1a2e; border-left: 4px solid #f472b6; padding: 15px 20px; margin-bottom: 25px; border-radius: 4px; font-size: 14px; color: #cbd5e1;">
+<strong style="color: #f9a8d4;">Transparency Note:</strong> This post contains affiliate links. If you purchase through these links, we may earn a small commission at no extra cost to you. This helps support our content. Thank you for your support!
+</div>
+
+'''
+        return disclosure + html
+
+    def _add_discount_section(
+        self,
+        html: str,
+        topic: str,
+        category: str,
+        mode: str,
+    ) -> str:
+        """Add discount/deals section for K-Culture product content.
+
+        Finds real-time deals and adds discount tips to help readers save money.
+
+        Args:
+            html: HTML content
+            topic: Topic/product name
+            category: K-Culture category
+            mode: Blog mode
+
+        Returns:
+            HTML with discount section inserted before FAQ/conclusion
+        """
+        if mode != "kculture":
+            return html
+
+        if DiscountFinder is None or generate_discount_html is None:
+            logger.warning("DiscountFinder not available")
+            return html
+
+        try:
+            finder = DiscountFinder()
+            discount_info = finder.find_discount(topic, category=category)
+
+            if not discount_info.tips and not discount_info.sale_price:
+                return html  # No discount info to add
+
+            discount_html = generate_discount_html(discount_info, topic)
+
+            if not discount_html:
+                return html
+
+            # Add section header
+            section_html = f'''
+<h2>💰 Where to Buy & How to Save</h2>
+{discount_html}
+'''
+            # Insert before FAQ section or at the end before closing
+            # Look for FAQ section
+            faq_patterns = [
+                r'<h2[^>]*>.*?(?:FAQ|Frequently Asked|Common Questions).*?</h2>',
+                r'<h2[^>]*>.*?(?:Final Verdict|Conclusion|The Bottom Line).*?</h2>',
+            ]
+
+            for pattern in faq_patterns:
+                match = re.search(pattern, html, re.IGNORECASE)
+                if match:
+                    insert_pos = match.start()
+                    html = html[:insert_pos] + section_html + html[insert_pos:]
+                    logger.info("Added discount section before FAQ/Conclusion")
+                    return html
+
+            # If no FAQ, insert before last closing tag
+            # Find the last </div> or end of content
+            last_h2 = html.rfind('</h2>')
+            if last_h2 != -1:
+                # Find the end of that section
+                next_h2 = html.find('<h2', last_h2 + 5)
+                if next_h2 != -1:
+                    html = html[:next_h2] + section_html + html[next_h2:]
+                else:
+                    # Append at end
+                    html = html + section_html
+                logger.info("Added discount section at end")
+
+            return html
+
+        except Exception as e:
+            logger.error(f"Failed to add discount section: {e}")
+            return html
+
+    @staticmethod
+    def convert_krw_to_usd(price_krw: int, exchange_rate: float = 1350.0) -> str:
+        """Convert KRW price to USD with both values displayed.
+
+        For US market readers who may not know KRW value.
+
+        Args:
+            price_krw: Price in Korean Won
+            exchange_rate: KRW to USD rate (default: 1350)
+
+        Returns:
+            Formatted price string like "15,000 KRW (~$11 USD)"
+        """
+        usd = price_krw / exchange_rate
+        krw_formatted = f"{price_krw:,}"
+
+        if usd < 1:
+            return f"{krw_formatted} KRW (~${usd:.2f} USD)"
+        elif usd < 10:
+            return f"{krw_formatted} KRW (~${usd:.1f} USD)"
+        else:
+            return f"{krw_formatted} KRW (~${int(round(usd))} USD)"
+
+    @staticmethod
+    def format_price_with_usd(text: str, exchange_rate: float = 1350.0) -> str:
+        """Find KRW prices in text and add USD equivalent.
+
+        Handles patterns like:
+        - "15,000원" -> "15,000 KRW (~$11 USD)"
+        - "15000 KRW" -> "15,000 KRW (~$11 USD)"
+        - "₩15,000" -> "15,000 KRW (~$11 USD)"
+
+        Args:
+            text: Text containing KRW prices
+            exchange_rate: KRW to USD rate (default: 1350)
+
+        Returns:
+            Text with USD equivalents added
+        """
+        def replace_price(match):
+            # Extract the numeric part
+            price_str = match.group(0)
+            # Remove non-numeric characters except comma
+            numeric_str = re.sub(r'[^\d,]', '', price_str)
+            numeric_str = numeric_str.replace(',', '')
+
+            if not numeric_str:
+                return match.group(0)
+
+            try:
+                price_krw = int(numeric_str)
+                if price_krw < 100:  # Too small, probably not a price
+                    return match.group(0)
+
+                usd = price_krw / exchange_rate
+                krw_formatted = f"{price_krw:,}"
+
+                if usd < 1:
+                    return f"{krw_formatted} KRW (~${usd:.2f} USD)"
+                elif usd < 10:
+                    return f"{krw_formatted} KRW (~${usd:.1f} USD)"
+                else:
+                    return f"{krw_formatted} KRW (~${int(round(usd))} USD)"
+            except ValueError:
+                return match.group(0)
+
+        # Pattern to match Korean Won prices
+        # ₩15,000 / 15,000원 / 15000 KRW / 15,000 won
+        pattern = r'(?:₩|원\s*)?[\d,]+(?:\s*(?:원|KRW|won|Won))?(?:\s*KRW)?'
+
+        # Only replace if followed by currency indicator or at word boundary
+        result = re.sub(
+            r'(?:₩[\d,]+|[\d,]+\s*원|[\d,]+\s*KRW|[\d,]+\s*[Ww]on)',
+            replace_price,
+            text
+        )
+        return result
+
     def _validate(self, html: str) -> tuple[bool, list[str]]:
         """Validate generated content.
 
@@ -2078,9 +3210,45 @@ Be specific and factual based on search results. Always use the most recent vers
         if h2_count < 4:
             errors.append(f"Only {h2_count} H2 headings, need at least 4")
 
-        # Check for FAQ section
-        if not re.search(r"<h2[^>]*>\s*FAQ", html, re.IGNORECASE):
+        # Check for FAQ section (flexible pattern to catch variations)
+        faq_patterns = [
+            r"<h2[^>]*>.*?FAQ.*?</h2>",
+            r"<h2[^>]*>.*?Frequently Asked.*?</h2>",
+            r"<h2[^>]*>.*?Common Questions.*?</h2>",
+            r"<h2[^>]*>.*?Q\s*&\s*A.*?</h2>",
+            r"<h2[^>]*>.*?자주\s*묻는.*?</h2>",  # Korean FAQ
+        ]
+        has_faq = any(re.search(p, html, re.IGNORECASE | re.DOTALL) for p in faq_patterns)
+        if not has_faq:
             errors.append("Missing FAQ section")
+
+        # Check for source links (E-E-A-T requirement)
+        # Count statistics that should have sources (percentages, numbers with context)
+        stat_patterns = [
+            r'\d+%',  # Percentages
+            r'\$[\d,]+(?:\.\d{2})?(?:/month|/year)?',  # Prices
+            r'[\d,]+\s*(?:stars|users|downloads|contributors)',  # Community metrics
+            r'(?:response time|latency).*?[\d.]+\s*(?:ms|seconds?|s)\b',  # Performance
+        ]
+
+        total_stats = 0
+        for pattern in stat_patterns:
+            total_stats += len(re.findall(pattern, html, re.IGNORECASE))
+
+        # Count source links (anchor tags with source-like text)
+        source_links = len(re.findall(
+            r'<a[^>]*href=["\'][^"\']+["\'][^>]*>.*?(?:source|Source|official|docs|GitHub|stackoverflow).*?</a>',
+            html, re.IGNORECASE | re.DOTALL
+        ))
+
+        # Also count general external links as partial sources
+        external_links = len(re.findall(r'<a[^>]*href=["\']https?://[^"\']+["\']', html, re.IGNORECASE))
+
+        # Warn if too few source links for the number of statistics
+        # Require at least 1 source link per 5 statistics, minimum 3 source links
+        min_sources = max(3, total_stats // 5)
+        if external_links < min_sources:
+            errors.append(f"Insufficient source links: {external_links} links for {total_stats} statistics (need {min_sources}+)")
 
         is_valid = len(errors) == 0
         return is_valid, errors

@@ -1,0 +1,435 @@
+[
+  {
+    "topic": "COSRX Snail Mucin 96 Review",
+    "title": "COSRX Snail Mucin 96 Review",
+    "keywords": [
+      "cosrx",
+      "snail",
+      "mucin",
+      "review"
+    ],
+    "category": "K-Beauty",
+    "identifier": "cosrx snail",
+    "created_at": "2026-01-22T09:11:15.843960"
+  },
+  {
+    "topic": "Centella Cream K-Beauty",
+    "title": "The Ultimate Centella Cream",
+    "keywords": [
+      "centella",
+      "cream",
+      "beauty"
+    ],
+    "category": "K-Beauty",
+    "identifier": "centella cream",
+    "created_at": "2026-01-22T10:19:48.242196"
+  },
+  {
+    "topic": "SKIN1004 Centella Ampoule Review",
+    "title": "The Ultimate SKIN1004 Centella Ampoule Review",
+    "keywords": [
+      "centella",
+      "ampoule",
+      "review"
+    ],
+    "category": "K-Beauty",
+    "identifier": "skin1004 centella",
+    "created_at": "2026-01-22T10:47:42.156333"
+  },
+  {
+    "topic": "Beauty of Joseon Sunscreen SPF50",
+    "title": "Beauty of Joseon Sunscreen",
+    "keywords": [
+      "beauty",
+      "joseon",
+      "sunscreen"
+    ],
+    "category": "K-Beauty",
+    "identifier": "beauty",
+    "created_at": "2026-01-22T11:02:57.116972"
+  },
+  {
+    "topic": "Korean Sunscreen SPF50",
+    "title": "7 Incredible Korean Sunscreen",
+    "keywords": [
+      "korean",
+      "sunscreen"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean sunscreen",
+    "created_at": "2026-01-22T11:18:09.542424"
+  },
+  {
+    "topic": "Korean Vitamin C Serum",
+    "title": "7 Incredible Korean Vitamin",
+    "keywords": [
+      "korean",
+      "vitamin",
+      "serum"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean vitamin",
+    "created_at": "2026-01-22T11:24:58.774534"
+  },
+  {
+    "topic": "Korean Toner Skincare",
+    "title": "The Ultimate Korean Toner Skincare Guide",
+    "keywords": [
+      "korean",
+      "toner",
+      "skincare"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean toner",
+    "created_at": "2026-01-22T11:38:05.122356"
+  },
+  {
+    "topic": "BTS Concert Experience",
+    "title": "The Ultimate BTS Concert Experience Guide",
+    "keywords": [
+      "bts",
+      "concert",
+      "experience"
+    ],
+    "category": "K-Pop",
+    "identifier": "bts concert",
+    "created_at": "2026-01-22T11:50:40.512993"
+  },
+  {
+    "topic": "Korean Instant Ramen",
+    "title": "7 Incredible Korean Instant",
+    "keywords": [
+      "korean",
+      "instant",
+      "ramen"
+    ],
+    "category": "K-Food",
+    "identifier": "korean instant",
+    "created_at": "2026-01-22T11:51:26.166171"
+  },
+  {
+    "topic": "Korean Streetwear Fashion",
+    "title": "Korean Streetwear Fashion",
+    "keywords": [
+      "korean",
+      "streetwear",
+      "fashion"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean streetwear",
+    "created_at": "2026-01-22T11:51:33.527017"
+  },
+  {
+    "topic": "Buldak Fire Noodles",
+    "title": "The Ultimate Buldak Fire Noodles Guide",
+    "keywords": [
+      "buldak",
+      "fire",
+      "noodles"
+    ],
+    "category": "K-Food",
+    "identifier": "buldak fire",
+    "created_at": "2026-01-22T12:02:49.680314"
+  },
+  {
+    "topic": "NewJeans Album Collection",
+    "title": "The Ultimate NewJeans Album",
+    "keywords": [
+      "newjeans",
+      "album",
+      "collection"
+    ],
+    "category": "K-Pop",
+    "identifier": "newjeans album",
+    "created_at": "2026-01-22T12:03:49.282190"
+  },
+  {
+    "topic": "Korean Streetwear Brands",
+    "title": "7 Ultimate Korean Streetwear",
+    "keywords": [
+      "korean",
+      "streetwear",
+      "brands"
+    ],
+    "category": "K-Fashion",
+    "identifier": "korean streetwear",
+    "created_at": "2026-01-22T12:03:57.818117"
+  },
+  {
+    "topic": "Korean Rice Toner",
+    "title": "7 Shocking Korean Rice",
+    "keywords": [
+      "korean",
+      "rice",
+      "toner"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean rice",
+    "created_at": "2026-01-22T12:03:57.958675"
+  },
+  {
+    "topic": "Korean Snail Cream",
+    "title": "7 Incredible Korean Snail",
+    "keywords": [
+      "korean",
+      "snail",
+      "cream"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean snail",
+    "created_at": "2026-01-22T12:14:22.238258"
+  },
+  {
+    "topic": "Korean Sunscreen SPF50",
+    "title": "7 Incredible Korean Sunscreen",
+    "keywords": [
+      "korean",
+      "sunscreen"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean sunscreen",
+    "created_at": "2026-01-22T12:26:44.310568"
+  },
+  {
+    "topic": "BTS Concert Tour 2026",
+    "title": "BTS Concert Tour 2026: The Ultimate Ticket Guide",
+    "keywords": [
+      "bts",
+      "concert",
+      "tour"
+    ],
+    "category": "K-Pop",
+    "identifier": "bts concert",
+    "created_at": "2026-01-22T12:33:00.947680"
+  },
+  {
+    "topic": "Korean Winter Coat Trends 2026",
+    "title": "7 Incredible Korean Winter",
+    "keywords": [
+      "korean",
+      "winter",
+      "coat",
+      "trends"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean winter",
+    "created_at": "2026-01-22T12:41:30.603494"
+  },
+  {
+    "topic": "Korean Winter Coat Style 2026",
+    "title": "Korean Winter Coat Style 2026",
+    "keywords": [
+      "korean",
+      "winter",
+      "coat",
+      "style"
+    ],
+    "category": "K-Fashion",
+    "identifier": "korean winter",
+    "created_at": "2026-01-22T12:49:09.747628"
+  },
+  {
+    "topic": "Korean Vitamin C Serum",
+    "title": "7 Incredible Korean Vitamin",
+    "keywords": [
+      "korean",
+      "vitamin",
+      "serum"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean vitamin",
+    "created_at": "2026-01-22T13:28:01.358538"
+  },
+  {
+    "topic": "Stray Kids World Tour 2026",
+    "title": "The Ultimate Stray Kids",
+    "keywords": [
+      "stray",
+      "kids",
+      "world",
+      "tour"
+    ],
+    "category": "K-Pop",
+    "identifier": "stray kids",
+    "created_at": "2026-01-22T13:41:36.984666"
+  },
+  {
+    "topic": "Korean Minimalist Fashion Guide",
+    "title": "The Ultimate Korean Minimalist Fashion Guide",
+    "keywords": [
+      "korean",
+      "minimalist",
+      "fashion",
+      "guide"
+    ],
+    "category": "K-Beauty",
+    "identifier": "korean minimalist",
+    "created_at": "2026-01-22T13:43:55.391428"
+  },
+  {
+    "topic": "Korean Ramyeon Taste Test",
+    "title": "7 Incredible Korean Ramyeon You Must Try",
+    "keywords": [
+      "korean",
+      "ramyeon",
+      "taste",
+      "test"
+    ],
+    "category": "K-Food",
+    "identifier": "korean ramyeon",
+    "created_at": "2026-01-22T13:45:26.982268"
+  },
+  {
+    "topic": "Korean Buldak Noodles Review",
+    "title": "Korean Buldak Noodles Review 2026",
+    "keywords": [
+      "korean",
+      "buldak",
+      "noodles",
+      "review"
+    ],
+    "category": "K-Food",
+    "identifier": "korean buldak",
+    "created_at": "2026-01-22T14:01:25.077340"
+  },
+  {
+    "topic": "Korean Spicy Ramen Taste Test 2025: Best Buldak Flavors Ranked",
+    "title": "Buldak Ramen Ranking 2026",
+    "keywords": [
+      "buldak",
+      "korean ramen",
+      "spicy noodles",
+      "samyang",
+      "korean food"
+    ],
+    "category": "K-Food",
+    "identifier": "korean spicy",
+    "created_at": "2026-01-22T15:06:31.099358"
+  },
+  {
+    "topic": "Korean Spicy Ramen Taste Test 2025: Best Buldak Flavors Ranked",
+    "title": "Buldak Ramen Flavors 2026",
+    "keywords": [
+      "buldak",
+      "korean ramen",
+      "spicy noodles",
+      "samyang",
+      "korean food"
+    ],
+    "category": "K-Food",
+    "identifier": "korean spicy",
+    "created_at": "2026-01-22T15:39:48.614324"
+  },
+  {
+    "topic": "Korean Spicy Ramen Taste Test 2025: Best Buldak Flavors Ranked",
+    "title": "Buldak Ramen Flavors 2026",
+    "keywords": [
+      "buldak",
+      "korean ramen",
+      "spicy noodles",
+      "samyang",
+      "korean food"
+    ],
+    "category": "K-Food",
+    "identifier": "korean spicy",
+    "created_at": "2026-01-22T16:02:37.558096"
+  },
+  {
+    "topic": "Korean Spicy Ramen Taste Test 2025: Best Buldak Flavors Ranked",
+    "title": "Buldak Ramen Flavors 2026",
+    "keywords": [
+      "buldak",
+      "korean ramen",
+      "spicy noodles",
+      "samyang",
+      "korean food"
+    ],
+    "category": "K-Food",
+    "identifier": "korean spicy",
+    "created_at": "2026-01-22T16:13:32.480915"
+  },
+  {
+    "topic": "Korean Minimalist Fashion Guide 2025: Seoul Street Style Essentials",
+    "title": "Korean Minimalist Fashion 2025",
+    "keywords": [
+      "korean fashion",
+      "minimalist style",
+      "seoul streetwear",
+      "k-fashion",
+      "korean outfit"
+    ],
+    "category": "K-Fashion",
+    "identifier": "korean minimalist",
+    "created_at": "2026-01-22T16:34:26.517636"
+  },
+  {
+    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
+    "title": "BLACKPINK World Tour 2025",
+    "keywords": [
+      "blackpink",
+      "kpop concert",
+      "world tour",
+      "blink",
+      "korean music"
+    ],
+    "category": "K-Pop",
+    "identifier": "blackpink world",
+    "created_at": "2026-01-22T16:38:33.569452"
+  },
+  {
+    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
+    "title": "BLACKPINK World Tour 2025",
+    "keywords": [
+      "blackpink",
+      "kpop concert",
+      "world tour",
+      "blink",
+      "korean music"
+    ],
+    "category": "K-Pop",
+    "identifier": "blackpink world",
+    "created_at": "2026-01-22T16:47:38.115842"
+  },
+  {
+    "topic": "Korean Minimalist Fashion Guide 2025: Seoul Street Style Essentials",
+    "title": "Korean Minimalist Fashion Guide 2025",
+    "keywords": [
+      "korean fashion",
+      "minimalist style",
+      "seoul streetwear",
+      "k-fashion",
+      "korean outfit"
+    ],
+    "category": "K-Fashion",
+    "identifier": "korean minimalist",
+    "created_at": "2026-01-22T16:51:17.051894"
+  },
+  {
+    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
+    "title": "BLACKPINK World Tour 2025",
+    "keywords": [
+      "blackpink",
+      "kpop concert",
+      "world tour",
+      "blink",
+      "korean music"
+    ],
+    "category": "K-Pop",
+    "identifier": "blackpink world",
+    "created_at": "2026-01-22T17:10:19.241586"
+  },
+  {
+    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
+    "title": "BLACKPINK World Tour 2025",
+    "keywords": [
+      "blackpink",
+      "kpop concert",
+      "world tour",
+      "blink",
+      "korean music"
+    ],
+    "category": "K-Pop",
+    "identifier": "blackpink world",
+    "created_at": "2026-01-22T17:21:49.071951"
+  }
+]

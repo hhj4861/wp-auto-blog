@@ -866,6 +866,13 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
                 search_query = " ".join(keywords[:3])
                 crawled = crawler.search_amazon_kfood(search_query)
 
+            # Fallback to Google Images if Amazon fails
+            if not crawled:
+                logger.warning(f"Amazon failed for hero, trying Google: {topic}")
+                google_results = crawler.search_google_images(topic, max_results=1)
+                if google_results:
+                    crawled = google_results[0]
+
             if crawled and crawled.url:
                 # Convert CrawledImage to FetchedImage format
                 from src.image_fetcher import ImageSource
@@ -1188,8 +1195,15 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
                 topic, max_results=len(h2_texts) + 2
             )
 
+            # Fallback to Google Custom Search if Amazon fails
             if not products:
-                logger.warning(f"No Amazon K-Food products for sections: {topic}")
+                logger.warning(f"No Amazon K-Food products, trying Google Images: {topic}")
+                products = crawler.search_google_images(
+                    topic, max_results=len(h2_texts) + 2
+                )
+
+            if not products:
+                logger.warning(f"No product images found for sections: {topic}")
                 return section_images
 
             # Filter out already-used URLs (hero image)

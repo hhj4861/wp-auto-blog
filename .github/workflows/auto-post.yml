@@ -427,6 +427,8 @@ jobs:
           cat << EOF > .env
           CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GOOGLE_AI_API_KEY=${{ secrets.GOOGLE_AI_API_KEY }}
+          GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_CSE_ID=${{ secrets.GOOGLE_CSE_ID }}
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}

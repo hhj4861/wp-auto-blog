@@ -820,6 +820,80 @@ class ImageCrawler:
             logger.error(f"Failed to parse Amazon HTML: {e}")
             return []
 
+    def search_google_images(
+        self, query: str, max_results: int = 5
+    ) -> list[CrawledImage]:
+        """Search for product images using Google Custom Search API.
+
+        Requires GOOGLE_CSE_ID and GOOGLE_API_KEY environment variables.
+        Free tier: 100 queries/day.
+
+        Args:
+            query: Search query for images
+            max_results: Maximum number of results
+
+        Returns:
+            List of CrawledImage objects
+        """
+        api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GOOGLE_AI_API_KEY")
+        cse_id = os.getenv("GOOGLE_CSE_ID")
+
+        if not api_key or not cse_id:
+            logger.debug("Google Custom Search API not configured (missing GOOGLE_API_KEY or GOOGLE_CSE_ID)")
+            return []
+
+        # Sanitize query
+        query = re.sub(r'\*+', '', query)
+        query = re.sub(r'[#_~`]', '', query)
+        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
+        query = query.strip()
+
+        if not query:
+            return []
+
+        # Add "korean food product" for better results
+        search_query = f"{query} korean food product"
+
+        try:
+            url = "https://www.googleapis.com/customsearch/v1"
+            params = {
+                "key": api_key,
+                "cx": cse_id,
+                "q": search_query,
+                "searchType": "image",
+                "num": min(max_results, 10),  # API max is 10
+                "imgSize": "large",
+                "safe": "active",
+            }
+
+            response = requests.get(url, params=params, timeout=15)
+            response.raise_for_status()
+            data = response.json()
+
+            results = []
+            items = data.get("items", [])
+
+            for item in items[:max_results]:
+                img_url = item.get("link", "")
+                title = item.get("title", query)
+
+                if not img_url:
+                    continue
+
+                results.append(CrawledImage(
+                    url=img_url,
+                    product_name=title[:100],
+                    brand="Google Images",
+                    source="google",
+                    price=None,
+                ))
+
+            logger.info(f"Found {len(results)} Google images for: {query}")
+            return results
+
+        except Exception as e:
+            logger.error(f"Google Custom Search failed: {e}")
+            return []
 
     def search_daiso(self, query: str) -> Optional[CrawledImage]:
         """Search for product image on Daiso Korea Mall.

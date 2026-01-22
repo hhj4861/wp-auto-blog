@@ -442,5 +442,19 @@
     "category": "K-Food",
     "identifier": "webgpu",
     "created_at": "2026-01-22T09:08:59.510436"
+  },
+  {
+    "topic": "**Korean Lunar New Year Foods and Traditions**",
+    "title": "Korean Lunar New Year Foods 2026",
+    "keywords": [
+      "Lunar New Year",
+      "Korean food",
+      "tteokguk",
+      "holiday recipes",
+      "Korean traditions"
+    ],
+    "category": "K-Food",
+    "identifier": "korean lunar",
+    "created_at": "2026-01-22T09:27:54.704158"
   }
 ]

@@ -541,6 +541,18 @@ class ImageCrawler:
         Returns:
             CrawledImage if found, None otherwise
         """
+        # Sanitize query - remove markdown and special characters
+        query = re.sub(r'\*+', '', query)  # Remove asterisks (markdown bold/italic)
+        query = re.sub(r'[#_~`]', '', query)  # Remove other markdown chars
+        query = re.sub(r'\s+', ' ', query).strip()  # Normalize whitespace
+
+        # Remove year and generic words that don't help search
+        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
+        query = query.strip()
+
+        if not query:
+            return None
+
         # Enhance query for K-Food
         kfood_keywords = ["korean", "k-food", "samyang", "buldak", "ramyeon", "ramen"]
         query_lower = query.lower()
@@ -646,6 +658,18 @@ class ImageCrawler:
         Returns:
             List of CrawledImage objects
         """
+        # Sanitize query - remove markdown and special characters
+        query = re.sub(r'\*+', '', query)  # Remove asterisks
+        query = re.sub(r'[#_~`]', '', query)  # Remove other markdown
+        query = re.sub(r'\s+', ' ', query).strip()
+
+        # Remove year and generic words
+        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
+        query = query.strip()
+
+        if not query:
+            return []
+
         # Enhance query for K-Food
         kfood_keywords = ["korean", "k-food", "samyang", "buldak", "ramyeon", "ramen", "kimchi"]
         query_lower = query.lower()
@@ -725,6 +749,7 @@ class ImageCrawler:
         except Exception as e:
             logger.error(f"Failed to fetch multiple from Amazon: {e}")
             return []
+
 
     def search_daiso(self, query: str) -> Optional[CrawledImage]:
         """Search for product image on Daiso Korea Mall.
@@ -920,7 +945,8 @@ class ImageCrawler:
             return result
 
         elif category_lower in ("k-food", "kfood"):
-            # Amazon has better K-Food products (ramen, snacks, etc.)
+            # Try Amazon for K-Food (ramen, snacks, etc.)
+            # If Amazon fails (e.g., in CI), fallback to stock photos via ImageFetcher
             return self.search_amazon_kfood(query)
 
         elif category_lower in ("k-fashion", "kfashion"):

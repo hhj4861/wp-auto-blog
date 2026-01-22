@@ -1626,6 +1626,10 @@ DO NOT use Markdown. Use only HTML tags."""
         # Add discount/deals section for K-Culture product content
         html = self._add_discount_section(html, topic, category or "", mode)
 
+        # Enhance K-Food content with dynamic product images from Amazon
+        if category == "K-Food":
+            html = self._enhance_kfood_products(html, topic, mode)
+
         # Generate meta description if not parsed from structured format
         if not meta_description:
             meta_description = self._generate_meta(topic, keywords, html)
@@ -1903,11 +1907,21 @@ Foodies, K-drama watchers, Asian grocery shoppers, ramen enthusiasts
 
 === MUST Include ===
 1. **Product Names**: English name + Korean (한글) for shopping
-2. **Where to Buy**: Amazon, H-Mart, local Asian markets
+2. **Where to Buy with SEARCH LINKS**:
+   - ALWAYS include Amazon search link: <a href="https://www.amazon.com/s?k=[PRODUCT+NAME]+korean">Shop on Amazon</a>
+   - Replace [PRODUCT+NAME] with URL-encoded product name (e.g., "korean+cheese", "samyang+ramen")
+   - Example: <a href="https://www.amazon.com/s?k=samyang+buldak+ramen&i=grocery" target="_blank" rel="nofollow">Shop Samyang Buldak on Amazon</a>
 3. **Price in USD**: Always show USD price
 4. **Spice Level Warning**: 🌶️ ratings for spicy products
 5. **Cooking Tips**: How to prepare, what to pair with
 6. **Taste Description**: Flavor profile for unfamiliar foods
+
+=== PRODUCT LINK FORMAT (REQUIRED!) ===
+For EACH product mentioned, include a styled shopping link box:
+<div class="product-link" style="background:#fff3e0;border-left:4px solid #ff9800;padding:15px;margin:20px 0;border-radius:4px;">
+  <strong>🛒 Buy [Product Name]:</strong><br>
+  <a href="https://www.amazon.com/s?k=[product+name]+korean&i=grocery" target="_blank" rel="nofollow" style="color:#ff6d00;">Shop on Amazon →</a>
+</div>
 
 === Price Format ===
 IMPORTANT: Always include USD:
@@ -3157,6 +3171,125 @@ Be specific and factual based on search results. Always use the most recent vers
         except Exception as e:
             logger.error(f"Failed to add discount section: {e}")
             return html
+
+    def _enhance_kfood_products(
+        self,
+        html: str,
+        topic: str,
+        mode: str,
+    ) -> str:
+        """Enhance K-Food content with dynamic product images from Amazon.
+
+        Finds product-link divs and adds actual product images above them.
+
+        Args:
+            html: HTML content
+            topic: Topic/product name
+            mode: Blog mode
+
+        Returns:
+            HTML with product images added
+        """
+        if mode != "kculture":
+            return html
+
+        try:
+            # Import ImageCrawler
+            from src.image_crawler import ImageCrawler
+
+            crawler = ImageCrawler(use_playwright=False)
+
+            # Extract main product keywords from topic
+            # Remove year and common words
+            clean_topic = re.sub(r'\b(2025|2026|trends?|guide|review|best|top)\b', '', topic, flags=re.IGNORECASE)
+            clean_topic = re.sub(r'[*_#]', '', clean_topic).strip()
+
+            # Find product-link divs and extract product names
+            product_link_pattern = r'<div class="product-link"[^>]*>.*?<strong>🛒 Buy ([^:]+):.*?</div>'
+            matches = list(re.finditer(product_link_pattern, html, re.DOTALL))
+
+            if not matches:
+                # Try fetching images based on topic
+                logger.debug(f"No product-link divs found, using topic: {clean_topic}")
+                products = crawler.search_amazon_kfood_multiple(clean_topic, max_results=3)
+
+                if products:
+                    # Add a product showcase section before first H2
+                    product_html = self._generate_product_showcase(products, clean_topic)
+                    first_h2 = re.search(r'<h2[^>]*>', html)
+                    if first_h2:
+                        insert_pos = first_h2.start()
+                        html = html[:insert_pos] + product_html + html[insert_pos:]
+                        logger.info(f"Added product showcase with {len(products)} Amazon products")
+                return html
+
+            # Process each product-link div
+            used_urls = set()
+            for match in matches[:5]:  # Limit to 5 products
+                product_name = match.group(1).strip()
+
+                # Fetch product image
+                product = crawler.search_amazon_kfood(product_name)
+
+                if product and product.url and product.url not in used_urls:
+                    used_urls.add(product.url)
+
+                    # Create image HTML
+                    img_html = f'''
+<div class="product-image" style="text-align:center;margin:15px 0;">
+  <img src="{product.url}" alt="{product.product_name[:60]}" style="max-width:300px;height:auto;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);" />
+  <p style="font-size:12px;color:#666;margin-top:8px;">Image: Amazon</p>
+</div>
+'''
+                    # Insert image before the product-link div
+                    html = html[:match.start()] + img_html + html[match.start():]
+                    logger.debug(f"Added product image for: {product_name[:30]}")
+
+            return html
+
+        except Exception as e:
+            logger.warning(f"Failed to enhance K-Food products: {e}")
+            return html
+
+    def _generate_product_showcase(self, products: list, topic: str) -> str:
+        """Generate a product showcase section from Amazon products.
+
+        Args:
+            products: List of CrawledImage objects
+            topic: Topic for section title
+
+        Returns:
+            HTML for product showcase
+        """
+        if not products:
+            return ""
+
+        # Sanitize topic for URL - remove markdown, years, generic words
+        clean_topic = re.sub(r'\*+', '', topic)  # Remove markdown asterisks
+        clean_topic = re.sub(r'[#_~`]', '', clean_topic)  # Remove other markdown
+        clean_topic = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', clean_topic, flags=re.IGNORECASE)
+        clean_topic = re.sub(r'\s+', ' ', clean_topic).strip()
+        search_term = clean_topic.replace(' ', '+')
+
+        product_items = ""
+        for p in products[:4]:
+            product_items += f'''
+<div style="flex:1;min-width:200px;text-align:center;padding:15px;">
+  <img src="{p.url}" alt="{p.product_name[:50]}" style="max-width:180px;height:auto;border-radius:8px;" />
+  <p style="font-size:14px;margin:10px 0;font-weight:500;">{p.product_name[:40]}...</p>
+  <a href="https://www.amazon.com/s?k={search_term}&i=grocery" target="_blank" rel="nofollow" style="color:#ff6d00;text-decoration:none;">View on Amazon →</a>
+</div>
+'''
+
+        return f'''
+<div class="product-showcase" style="background:#fffaf0;border-radius:12px;padding:20px;margin:25px 0;">
+  <h3 style="text-align:center;color:#e65100;margin-bottom:20px;">🛒 Featured Products</h3>
+  <div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;">
+    {product_items}
+  </div>
+  <p style="text-align:center;font-size:12px;color:#888;margin-top:15px;">Products from Amazon</p>
+</div>
+'''
 
     @staticmethod
     def convert_krw_to_usd(price_krw: int, exchange_rate: float = 1350.0) -> str:

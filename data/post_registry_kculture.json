@@ -461,5 +461,19 @@
     "category": "K-Food",
     "identifier": "korean tteokbokki",
     "created_at": "2026-01-22T16:11:27.138275"
+  },
+  {
+    "topic": "**Korean Tteok (Rice Cakes) Beyond Tteokbokki**",
+    "title": "Korean Tteok Rice Cakes Beyond Tteokbokki",
+    "keywords": [
+      "Korean tteok",
+      "rice cake desserts",
+      "songpyeon",
+      "yakgwa alternatives",
+      "Korean sweets"
+    ],
+    "category": "K-Food",
+    "identifier": "korean tteok",
+    "created_at": "2026-01-22T23:50:07.556637"
   }
 ]

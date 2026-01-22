@@ -460,6 +460,7 @@
   {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "topic": "**SEVENTEEN Tour 2026 North America**",
     "title": "SEVENTEEN Tour 2026 North America",
     "keywords": [
@@ -499,6 +500,20 @@
     "category": "K-Food",
     "identifier": "lunar new",
     "created_at": "2026-01-22T09:56:28.450010"
+>>>>>>> Stashed changes
+=======
+    "topic": "**Queen of Tears Fashion Breakdown**",
+    "title": "Queen of Tears Fashion Breakdown",
+    "keywords": [
+      "Queen of Tears fashion",
+      "K-drama outfits",
+      "Korean office fashion",
+      "Kim Ji Won style",
+      "luxury K-fashion"
+    ],
+    "category": "K-Fashion",
+    "identifier": "queen",
+    "created_at": "2026-01-22T09:56:29.551617"
 >>>>>>> Stashed changes
   }
 ]

@@ -96,6 +96,7 @@ class TrendMode(Enum):
     GENERAL = "general"  # Hot topics EXCLUDING tech (lifestyle, business, entertainment)
     TECH = "tech"  # Tech/programming focused only
     ALL = "all"  # Everything including tech and general
+    KCULTURE = "kculture"  # K-Beauty, K-Food, K-Pop, K-Fashion for US market
 
 
 @dataclass
@@ -140,6 +141,29 @@ class TrendConfig:
                 "cloud", "devops", "frontend", "backend", "app",
                 "github", "open source", "framework", "database",
             ]
+        elif self.mode == TrendMode.KCULTURE:
+            # K-Culture keywords for US market
+            return [
+                # K-Beauty
+                "korean skincare", "k-beauty", "olive young", "cosrx",
+                "beauty of joseon", "some by mi", "innisfree", "laneige",
+                "korean sunscreen", "glass skin", "snail mucin", "toner",
+                "essence", "serum", "sheet mask", "cushion foundation",
+                # K-Food
+                "korean food", "korean snacks", "buldak", "korean ramen",
+                "korean convenience store", "soju", "korean bbq", "kimchi",
+                "tteokbokki", "gochujang", "samyang", "nongshim",
+                # K-Pop
+                "kpop", "idol", "bts", "blackpink", "aespa", "newjeans",
+                "stray kids", "seventeen", "twice", "itzy", "ive",
+                "lightstick", "photocard", "concert", "fan meeting",
+                "comeback", "music video", "fancam", "airport fashion",
+                # K-Fashion
+                "korean fashion", "korean street style", "kdrama fashion",
+                "korean outfit", "musinsa", "korean brands",
+                # K-Drama
+                "kdrama", "korean drama", "netflix korean",
+            ]
         elif self.mode == TrendMode.GENERAL:
             # Non-tech hot topics (EXCLUDE tech)
             return [
@@ -174,6 +198,18 @@ class TrendConfig:
                 "technology", "programming", "artificial",
                 "MachineLearning", "webdev", "startups",
                 "Python", "javascript", "devops", "opensource",
+            ]
+        elif self.mode == TrendMode.KCULTURE:
+            # K-Culture subreddits
+            return [
+                # K-Beauty
+                "AsianBeauty", "KoreanBeauty", "SkincareAddiction",
+                # K-Food
+                "KoreanFood", "snackexchange", "ramen", "asianeats",
+                # K-Pop
+                "kpop", "kpopthoughts", "kpophelp",
+                # K-Fashion & Drama
+                "kdrama", "KoreanFashion", "AsianFashion",
             ]
         elif self.mode == TrendMode.GENERAL:
             # Non-tech subreddits (EXCLUDE tech)
@@ -311,6 +347,50 @@ class TrendDetector:
             "SaaS", "software review", "platform", "service",
             "pricing", "alternative",
         ],
+
+        # === k-pulse.blog (K-Culture for US market) ===
+        "K-Beauty": [
+            "korean skincare", "k-beauty", "kbeauty", "skincare routine",
+            "olive young", "cosrx", "beauty of joseon", "some by mi",
+            "innisfree", "laneige", "etude", "missha", "pyunkang yul",
+            "snail mucin", "glass skin", "korean sunscreen", "spf",
+            "toner", "essence", "serum", "ampoule", "sheet mask",
+            "cushion", "lip tint", "rom&nd", "peripera",
+            "double cleanse", "skincare", "moisturizer", "cleanser",
+        ],
+        "K-Food": [
+            "korean food", "korean snacks", "korean ramen", "ramyeon",
+            "buldak", "samyang", "nongshim", "shin ramyun",
+            "korean convenience store", "korean grocery",
+            "kimchi", "gochujang", "tteokbokki", "korean bbq",
+            "soju", "makgeolli", "korean recipe", "banchan",
+            "korean instant", "korean noodles", "korean sauce",
+        ],
+        "K-Pop": [
+            "kpop", "k-pop", "idol", "comeback", "music video",
+            "bts", "blackpink", "aespa", "newjeans", "stray kids",
+            "seventeen", "twice", "itzy", "ive", "le sserafim",
+            "nct", "enhypen", "txt", "ateez", "treasure",
+            "lightstick", "photocard", "album", "concert", "tour",
+            "fan meeting", "fancam", "music show", "inkigayo",
+            "billboard", "spotify", "chart", "debut",
+        ],
+        "K-Fashion": [
+            "korean fashion", "k-fashion", "korean style", "korean outfit",
+            "kdrama fashion", "korean street style", "streetwear", "musinsa",
+            "korean brands", "korean aesthetic", "minimalist korean",
+            "airport fashion", "idol fashion", "korean menswear",
+            "korean accessories", "korean jewelry", "korean bags",
+            "korean clothing", "korean wear", "hanbok", "korean designer",
+            # Seasonal and clothing types
+            "winter coat", "korean coat", "korean jacket", "spring fashion",
+            "summer fashion", "fall fashion", "winter fashion", "seasonal style",
+            "oversized", "layering", "trendy korean", "korean trends",
+            "korean shoes", "korean sneakers", "korean casual",
+            # Fashion guide keywords
+            "minimalist fashion", "fashion guide", "style guide", "outfit guide",
+            "korean minimalist", "fashion tips", "ootd", "lookbook",
+        ],
     }
 
     @classmethod
@@ -321,10 +401,10 @@ class TrendDetector:
 
         Args:
             topic: Topic title to analyze
-            mode: 'general' for trendpulse.blog (Korean), 'tech' for bytepulse.io
+            mode: 'general' for trendpulse.blog, 'tech' for bytepulse.io, 'kculture' for k-pulse.blog
 
         Returns:
-            Category name (e.g., "테크", "비즈니스", "생산성", "리뷰", "건강")
+            Category name (e.g., "테크", "K-Beauty", "AI Tools")
         """
         topic_lower = topic.lower()
 
@@ -332,9 +412,16 @@ class TrendDetector:
             # Korean blog - TrendPulse 컨셉: "더 나은 나를 위한 트렌드와 도구들"
             # 생산성(수익효율) > 리뷰(현금) > 테크(트래픽) > 비즈니스(권위) > 건강(웰니스) > 취업(외항사)
             priority_order = ["생산성", "리뷰", "테크", "비즈니스", "건강", "취업"]
+            default_category = "테크"
+        elif mode == "kculture":
+            # K-Culture blog - k-pulse.blog
+            # K-Pop(트래픽) > K-Beauty(수익) > K-Food > K-Fashion
+            priority_order = ["K-Pop", "K-Beauty", "K-Food", "K-Fashion"]
+            default_category = "K-Beauty"
         else:
-            # English tech blog
+            # English tech blog - bytepulse.io
             priority_order = ["AI Tools", "Dev Productivity", "SaaS Reviews"]
+            default_category = "AI Tools"
 
         for category in priority_order:
             if category not in cls.CATEGORY_KEYWORDS:
@@ -345,7 +432,7 @@ class TrendDetector:
                     return category
 
         # Default fallback
-        return "테크" if mode == "general" else "AI Tools"
+        return default_category
     STOP_WORDS = {
         "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
         "have", "has", "had", "do", "does", "did", "will", "would", "could",

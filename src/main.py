@@ -70,9 +70,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--mode",
         type=str,
-        choices=["tech", "general"],
+        choices=["tech", "general", "kculture"],
         required=True,
-        help="Blog mode: 'tech' for bytepulse.io, 'general' for trendpulse.blog",
+        help="Blog mode: 'tech' for bytepulse.io, 'general' for trendpulse.blog, 'kculture' for k-pulse.blog",
     )
 
     parser.add_argument(
@@ -167,6 +167,7 @@ def main() -> int:
     site_info = {
         "tech": "bytepulse.io (Tech)",
         "general": "trendpulse.blog (General)",
+        "kculture": "k-pulse.blog (K-Culture)",
     }
 
     logger.info("=" * 50)
@@ -187,15 +188,17 @@ def main() -> int:
     trend_mode_map = {
         "tech": TrendMode.TECH,
         "general": TrendMode.GENERAL,
+        "kculture": TrendMode.KCULTURE,
     }
 
     # Create trend config based on mode
     trend_config = TrendConfig(mode=trend_mode_map[args.mode])
 
-    # Map mode to language: general (trendpulse.blog) = Korean, tech (bytepulse.io) = English
+    # Map mode to language: general (trendpulse.blog) = Korean, tech/kculture = English
     language_map = {
-        "general": "ko",  # trendpulse.blog - 한국어
-        "tech": "en",     # bytepulse.io - English
+        "general": "ko",   # trendpulse.blog - 한국어
+        "tech": "en",      # bytepulse.io - English
+        "kculture": "en",  # k-pulse.blog - English (US market)
     }
 
     # Create content config (CLI vs API mode + language)

@@ -154,17 +154,76 @@ class ImageFetcher:
             "캐세이": "cathay pacific",
         }
 
+        # K-Culture brand/product to search query mapping
+        kculture_mapping = {
+            # K-Beauty brands
+            "cosrx": "korean skincare serum",
+            "snail mucin": "skincare essence serum",
+            "beauty of joseon": "korean skincare glow",
+            "laneige": "korean beauty hydration",
+            "innisfree": "korean natural skincare",
+            "etude": "korean makeup cosmetics",
+            "missha": "korean skincare beauty",
+            "sulwhasoo": "luxury korean skincare",
+            "anua": "korean toner skincare",
+            "torriden": "korean hydrating serum",
+            "numbuzin": "korean skincare glass skin",
+            "tirtir": "korean cushion foundation",
+            "rom&nd": "korean lip tint makeup",
+            # K-Food (specific food photography keywords)
+            "gochujang": "korean red pepper paste cooking",
+            "kimchi": "korean kimchi fermented cabbage dish",
+            "tteokbokki": "korean spicy rice cakes street food",
+            "bibimbap": "korean bibimbap rice bowl colorful",
+            "samgyeopsal": "korean bbq grilled pork belly",
+            "soju": "korean soju bottle glass drink",
+            "ramyeon": "korean instant ramen noodles spicy bowl",
+            "ramen": "asian ramen noodles soup bowl",
+            "korean food": "korean cuisine dishes table spread",
+            "korean recipe": "korean cooking ingredients kitchen",
+            "korean snacks": "korean snack food colorful packaging",
+            "buldak": "korean spicy fire noodles bowl",
+            "korean noodles": "korean noodles soup bowl chopsticks",
+            "banchan": "korean side dishes small plates",
+            "korean bbq": "korean barbecue grilled meat restaurant",
+            # K-Pop
+            "bts": "kpop concert performance",
+            "blackpink": "kpop girl group performance",
+            "twice": "kpop dance performance",
+            "newjeans": "kpop modern performance",
+            "stray kids": "kpop boy group concert",
+            "aespa": "kpop futuristic performance",
+            "seventeen": "kpop choreography performance",
+            # K-Fashion
+            "korean fashion": "korean streetwear style",
+            "k-fashion": "korean style clothing",
+            "hanbok": "korean traditional dress",
+            # K-Drama
+            "k-drama": "korean drama scene",
+            "kdrama": "korean tv series",
+        }
+
         # Build search query
         query = None
         search_text = " ".join(keywords[:5]) if keywords else (topic or "")
+        search_lower = search_text.lower()
 
-        # First, try to find English words
-        import re
-        english_words = re.findall(r"[a-zA-Z]{3,}", search_text)
-        if english_words:
-            query = " ".join(english_words[:3])
-        else:
-            # Translate Korean keywords to English
+        # First, check K-Culture mappings (brand/product specific)
+        for kculture_key, kculture_query in kculture_mapping.items():
+            if kculture_key.lower() in search_lower:
+                query = kculture_query
+                logger.debug(f"K-Culture mapping: '{kculture_key}' -> '{query}'")
+                break
+
+        # If no K-Culture match, try to find English words
+        if not query:
+            import re
+            english_words = re.findall(r"[a-zA-Z]{3,}", search_text)
+            if english_words:
+                query = " ".join(english_words[:3])
+
+        # If still no query, translate Korean keywords
+        if not query:
             query_parts = []
             for kr, en in korean_to_english.items():
                 if kr in search_text:

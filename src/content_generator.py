@@ -1856,6 +1856,14 @@ This article is about "{topic}" for US readers interested in Korean beauty.
 === Target Audience ===
 US skincare enthusiasts, K-drama fans, beauty beginners wanting to try Korean products
 
+=== READABILITY & SEO (CRITICAL!) ===
+1. **Section Length**: MAX 300 words per H2 section!
+   - If a section needs more content, ADD H3 subheadings to break it up
+   - Example: H2 "Best Korean Sunscreens" → H3 "For Oily Skin", H3 "For Dry Skin", H3 "For Sensitive Skin"
+2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+3. **H3 Subheadings**: Use H3s to organize product lists, comparisons, or detailed explanations
+4. **Bullet Points**: Use lists for ingredients, benefits, how-to steps
+
 === MUST Include ===
 1. **Product Names in English**: Use romanized names (e.g., "COSRX Snail Mucin")
 2. **Where to Buy**: Amazon links, YesStyle, Olive Young Global
@@ -1878,6 +1886,7 @@ IMPORTANT: When mentioning Korean prices, ALWAYS include USD equivalent:
 - Korean-only product names without English
 - Prices in KRW only (always add USD)
 - Assuming readers know Korean skincare terms
+- Sections longer than 300 words without H3 subheadings
 """
 
         elif category == "K-Food":
@@ -1908,6 +1917,14 @@ IMPORTANT: Always include USD:
 - Fun, appetizing descriptions
 - "If you loved this in K-dramas..." connections
 - Relatable comparisons to Western foods
+
+=== READABILITY & SEO (CRITICAL!) ===
+1. **Section Length**: MAX 300 words per H2 section!
+   - If a section needs more content, ADD H3 subheadings to break it up
+   - Example: H2 "Best Korean Ramen" → H3 "For Spicy Lovers", H3 "For Mild Flavor Fans", H3 "Budget-Friendly Options"
+2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+3. **H3 Subheadings**: Use H3s to organize food lists, flavor comparisons, or cooking instructions
+4. **Bullet Points**: Use lists for ingredients, taste notes, spice levels, cooking tips
 
 === Avoid ===
 - Assuming readers have tried the food
@@ -1991,6 +2008,14 @@ For merchandise: Always USD
 - Fan-friendly language
 - Hype new releases appropriately
 
+=== READABILITY & SEO (CRITICAL!) ===
+1. **Section Length**: MAX 300 words per H2 section!
+   - If a section needs more content, ADD H3 subheadings to break it up
+   - Example: H2 "Album Discography" → H3 "Mini Albums", H3 "Full Albums", H3 "Special Editions"
+2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+3. **H3 Subheadings**: Use H3s to organize member profiles, albums, concert sections
+4. **Bullet Points**: Use lists for member info, tracklists, tour dates, merchandise
+
 === Avoid ===
 - Unofficial/fan-taken photos (copyright risk!)
 - Rumors or unconfirmed news
@@ -2024,6 +2049,14 @@ Always USD:
 - Stylish, aspirational
 - Reference K-drama looks when relevant
 - Practical for Western body types
+
+=== READABILITY & SEO (CRITICAL!) ===
+1. **Section Length**: MAX 300 words per H2 section!
+   - If a section needs more content, ADD H3 subheadings to break it up
+   - Example: H2 "Korean Streetwear Brands" → H3 "High-End Brands", H3 "Budget-Friendly Options", H3 "K-Drama Inspired"
+2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+3. **H3 Subheadings**: Use H3s to organize brand lists, style categories, or shopping guides
+4. **Bullet Points**: Use lists for brand names, price ranges, sizing info, shopping links
 
 === Avoid ===
 - Korean-only sizing without conversion

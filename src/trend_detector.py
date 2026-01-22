@@ -597,6 +597,8 @@ class TrendDetector:
         # Use different prompt based on mode
         if self.config.mode == TrendMode.TECH:
             prompt = self._build_tech_mode_prompt(topic_list, existing_posts)
+        elif self.config.mode == TrendMode.KCULTURE:
+            prompt = self._build_kculture_mode_prompt(topic_list, existing_posts)
         else:
             prompt = self._build_general_mode_prompt(topic_list, existing_posts)
 
@@ -608,9 +610,9 @@ class TrendDetector:
                 return []
 
             # Parse LLM response and match with original topics
-            # Tech mode uses English titles, general mode uses Korean
-            is_tech_mode = self.config.mode == TrendMode.TECH
-            recommended = self._parse_llm_recommendations(result, topics, english_mode=is_tech_mode)
+            # Tech and K-Culture modes use English titles, general mode uses Korean
+            is_english_mode = self.config.mode in (TrendMode.TECH, TrendMode.KCULTURE)
+            recommended = self._parse_llm_recommendations(result, topics, english_mode=is_english_mode)
             logger.info(f"LLM recommended {len(recommended)} topics")
             return recommended
 
@@ -836,6 +838,108 @@ IMPORTANT: Category must be EXACTLY ONE of: "AI Tools", "Dev Productivity", or "
 - Avoid pure news/announcements (low conversion)
 - Avoid topics requiring code examples that need verification"""
 
+    def _build_kculture_mode_prompt(self, topic_list: str, existing_posts: list[dict]) -> str:
+        """Build LLM prompt for K-Culture mode (bytepulse.io K-Culture section - English).
+
+        Focuses on K-Beauty, K-Food, K-Pop, K-Fashion for US market.
+
+        Args:
+            topic_list: Formatted list of topics
+            existing_posts: List of dicts with title and identifier
+
+        Returns:
+            Prompt string for LLM
+        """
+        existing_posts_section = ""
+        if existing_posts:
+            existing_list = "\n".join([
+                f"- {p['title']} [identifier: {p['identifier']}]" if p.get('identifier') else f"- {p['title']}"
+                for p in existing_posts[:20]
+            ])
+            existing_identifiers = [p['identifier'] for p in existing_posts if p.get('identifier')]
+            identifiers_str = ", ".join(existing_identifiers) if existing_identifiers else "none"
+
+            existing_posts_section = f"""
+## ⚠️ CRITICAL: Duplicate Detection (MUST FOLLOW!)
+Do NOT recommend topics similar to these existing posts:
+{existing_list}
+
+🚫 Existing identifiers: {identifiers_str}
+→ Topics with these identifiers are DUPLICATES and must be excluded!
+
+"""
+
+        return f"""You are the content strategist for a K-Culture blog targeting US audiences interested in Korean culture.
+{existing_posts_section}
+
+## Blog Categories (Pick ONE for each topic)
+1. **K-Pop**: Korean pop music, idol groups, concerts, albums, fan culture
+2. **K-Beauty**: Korean skincare, makeup, beauty products, routines
+3. **K-Food**: Korean cuisine, recipes, snacks, restaurants, ingredients
+4. **K-Fashion**: Korean fashion trends, streetwear, K-drama fashion
+
+## Content Focus for US Market
+- Product reviews with Amazon/affiliate links (high conversion)
+- "Best of" lists: "Top 10 Korean Sunscreens for Oily Skin"
+- How-to guides: "Complete Korean Skincare Routine for Beginners"
+- Concert/tour guides for K-Pop fans
+- Food reviews: "Buldak Challenge: Ranking Every Flavor"
+
+## High-Value Topics to Prioritize
+### K-Beauty (High Revenue Potential)
+- COSRX, Beauty of Joseon, Laneige, Innisfree reviews
+- Korean sunscreen comparisons
+- Snail mucin, vitamin C serums, toners
+
+### K-Pop (High Traffic)
+- Concert tours, setlists, ticket guides
+- Album reviews, comeback announcements
+- BTS, BLACKPINK, NewJeans, Stray Kids, aespa, SEVENTEEN
+
+### K-Food (Medium Revenue)
+- Buldak/Samyang noodle reviews
+- Korean snack reviews
+- Recipe guides, ingredient guides
+
+### K-Fashion (Niche)
+- K-drama fashion lookbooks
+- Korean streetwear brands
+- Seasonal style guides
+
+## Topics to Analyze
+{topic_list}
+
+## IMPORTANT: Topic Generation
+If no K-Culture topics are found in the list above, you MUST generate NEW K-Culture topics based on current trends:
+- Check if any K-Pop groups have recent comebacks or tours
+- Consider seasonal K-Beauty products (winter skincare, summer sunscreen)
+- Popular K-Food trends (viral snacks, new flavors)
+
+## Request
+Recommend 5 K-Culture topics for the blog. Generate new topics if needed.
+
+Format your response EXACTLY like this:
+[Rank]. [Topic]
+- Category: [Pick ONE: K-Pop | K-Beauty | K-Food | K-Fashion]
+- Suggested Title: [SEO-optimized ENGLISH title under 60 chars]
+- Content Type: [Review/Guide/List/News]
+- Monetization: [Amazon affiliate/AdSense potential]
+- Reason: [1-line explanation]
+
+## English Title Rules (Google SEO Optimized)
+- Include year (2025 or 2026) for freshness
+- Use numbers for lists: "Top 7 Korean Sunscreens..."
+- Include brand names when relevant
+- Keep under 60 characters
+- Use action words: "Ultimate Guide", "Complete Review", "Best"
+
+## IMPORTANT Rules
+- Only recommend K-Culture related topics (K-Pop, K-Beauty, K-Food, K-Fashion)
+- Do NOT include tech/programming topics
+- English titles only (US market)
+- Focus on product reviews and guides (high affiliate potential)
+- Avoid pure news without actionable content"""
+
     def _call_claude_sdk(self, prompt: str) -> str:
         """Call Claude Agent SDK with prompt.
 
@@ -1019,8 +1123,11 @@ IMPORTANT: Category must be EXACTLY ONE of: "AI Tools", "Dev Productivity", or "
         """
         topics: list[Topic] = []
 
-        # Fetch from each source, handling errors gracefully
-        topics.extend(self._fetch_hacker_news())
+        # Fetch from each source based on mode
+        # K-Culture mode: skip Hacker News (tech-focused), use Reddit & Google Trends
+        if self.config.mode != TrendMode.KCULTURE:
+            topics.extend(self._fetch_hacker_news())
+
         topics.extend(self._fetch_google_trends())
         topics.extend(self._fetch_reddit())
 

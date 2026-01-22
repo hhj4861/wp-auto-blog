@@ -431,5 +431,16 @@
     "category": "K-Pop",
     "identifier": "blackpink world",
     "created_at": "2026-01-22T17:21:49.071951"
+  },
+  {
+    "topic": "WebGPU 차트 라이브러리 ChartGPU, 초당 60fps로 100만 데이터 시각화",
+    "title": "ChartGPU WebGPU Review 2026",
+    "keywords": [
+      "webgpu",
+      "chartgpu"
+    ],
+    "category": "K-Food",
+    "identifier": "webgpu",
+    "created_at": "2026-01-22T09:08:59.510436"
   }
 ]

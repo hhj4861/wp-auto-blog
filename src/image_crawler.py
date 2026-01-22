@@ -31,6 +31,14 @@ except ImportError:
     PLAYWRIGHT_AVAILABLE = False
     logger.warning("Playwright not installed. Run: pip install playwright && playwright install chromium")
 
+# Playwright stealth for bot detection bypass
+try:
+    from playwright_stealth import stealth_sync
+    STEALTH_AVAILABLE = True
+except ImportError:
+    STEALTH_AVAILABLE = False
+    logger.debug("playwright-stealth not installed. Amazon crawling may be blocked.")
+
 
 @dataclass
 class CrawledImage:
@@ -564,8 +572,11 @@ class ImageCrawler:
         encoded_query = urllib.parse.quote(query)
         search_url = f"https://www.amazon.com/s?k={encoded_query}&i=grocery"
 
+        # Try requests first, fallback to Playwright with stealth
+        html = None
+
+        # Method 1: Simple requests (works on residential IPs)
         try:
-            # Use custom headers to avoid bot detection
             amazon_headers = {
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
@@ -585,14 +596,44 @@ class ImageCrawler:
 
             response = requests.get(search_url, headers=amazon_headers, timeout=15)
             response.raise_for_status()
+            html = response.text
+            logger.debug("Amazon single: requests succeeded")
+        except Exception as e:
+            logger.warning(f"Amazon requests failed: {e}, trying Playwright stealth...")
 
-            soup = BeautifulSoup(response.text, "html.parser")
+        # Method 2: Playwright with stealth (for datacenter IPs)
+        if not html and PLAYWRIGHT_AVAILABLE:
+            try:
+                with sync_playwright() as p:
+                    browser = p.chromium.launch(headless=True)
+                    context = browser.new_context(
+                        viewport={"width": 1920, "height": 1080},
+                        user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    )
+                    page = context.new_page()
+
+                    if STEALTH_AVAILABLE:
+                        stealth_sync(page)
+
+                    page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
+                    page.wait_for_timeout(2000)
+                    html = page.content()
+                    browser.close()
+                    logger.info("Amazon single: Playwright stealth succeeded")
+            except Exception as e:
+                logger.error(f"Amazon Playwright failed: {e}")
+
+        if not html:
+            logger.error("Failed to fetch Amazon with both methods")
+            return None
+
+        try:
+            soup = BeautifulSoup(html, "html.parser")
 
             # Find product cards
             products = soup.select('[data-component-type="s-search-result"]')
 
             if not products:
-                # Try alternative selectors
                 products = soup.select('.s-result-item[data-asin]')
 
             if not products:
@@ -600,12 +641,10 @@ class ImageCrawler:
                 return None
 
             # Get first valid product
-            for product in products[:5]:  # Check first 5 products
-                # Skip sponsored/ads
+            for product in products[:5]:
                 if product.select_one('.s-sponsored-label-info-icon'):
                     continue
 
-                # Extract image
                 img_tag = product.select_one('img.s-image')
                 if not img_tag:
                     continue
@@ -614,19 +653,14 @@ class ImageCrawler:
                 if not img_url or 'placeholder' in img_url.lower():
                     continue
 
-                # Get higher resolution image by modifying URL
-                # Amazon uses _AC_UL320_ for thumbnails, replace with larger
                 img_url = re.sub(r'_AC_U[LS]\d+_', '_AC_SL1500_', img_url)
 
-                # Extract product name
                 name_tag = product.select_one('h2 a span') or product.select_one('.a-text-normal')
                 product_name = name_tag.text.strip() if name_tag else query
 
-                # Extract brand
                 brand_tag = product.select_one('.a-row.a-size-base a') or product.select_one('[data-cy="brand"]')
                 brand = brand_tag.text.strip() if brand_tag else "Amazon"
 
-                # Extract price
                 price_tag = product.select_one('.a-price .a-offscreen')
                 price = price_tag.text.strip() if price_tag else None
 
@@ -643,7 +677,7 @@ class ImageCrawler:
             return None
 
         except Exception as e:
-            logger.error(f"Failed to crawl Amazon: {e}")
+            logger.error(f"Failed to parse Amazon HTML: {e}")
             return None
 
     def search_amazon_kfood_multiple(
@@ -680,6 +714,10 @@ class ImageCrawler:
         encoded_query = urllib.parse.quote(query)
         search_url = f"https://www.amazon.com/s?k={encoded_query}&i=grocery"
 
+        # Try requests first, fallback to Playwright with stealth
+        html = None
+
+        # Method 1: Simple requests (works on residential IPs)
         try:
             amazon_headers = {
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -696,8 +734,40 @@ class ImageCrawler:
 
             response = requests.get(search_url, headers=amazon_headers, timeout=15)
             response.raise_for_status()
+            html = response.text
+            logger.debug("Amazon: requests succeeded")
+        except Exception as e:
+            logger.warning(f"Amazon requests failed: {e}, trying Playwright stealth...")
 
-            soup = BeautifulSoup(response.text, "html.parser")
+        # Method 2: Playwright with stealth (for datacenter IPs)
+        if not html and PLAYWRIGHT_AVAILABLE:
+            try:
+                with sync_playwright() as p:
+                    browser = p.chromium.launch(headless=True)
+                    context = browser.new_context(
+                        viewport={"width": 1920, "height": 1080},
+                        user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                    )
+                    page = context.new_page()
+
+                    # Apply stealth if available
+                    if STEALTH_AVAILABLE:
+                        stealth_sync(page)
+
+                    page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
+                    page.wait_for_timeout(2000)  # Wait for dynamic content
+                    html = page.content()
+                    browser.close()
+                    logger.info("Amazon: Playwright stealth succeeded")
+            except Exception as e:
+                logger.error(f"Amazon Playwright failed: {e}")
+
+        if not html:
+            logger.error("Failed to fetch Amazon with both methods")
+            return []
+
+        try:
+            soup = BeautifulSoup(html, "html.parser")
             products = soup.select('[data-component-type="s-search-result"]')
 
             if not products:
@@ -747,7 +817,7 @@ class ImageCrawler:
             return results
 
         except Exception as e:
-            logger.error(f"Failed to fetch multiple from Amazon: {e}")
+            logger.error(f"Failed to parse Amazon HTML: {e}")
             return []
 
 

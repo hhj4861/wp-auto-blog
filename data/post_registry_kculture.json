@@ -459,6 +459,7 @@
   },
   {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "topic": "**SEVENTEEN Tour 2026 North America**",
     "title": "SEVENTEEN Tour 2026 North America",
     "keywords": [
@@ -484,6 +485,20 @@
     "category": "K-Beauty",
     "identifier": "korean barrier",
     "created_at": "2026-01-22T09:56:24.586055"
+>>>>>>> Stashed changes
+=======
+    "topic": "**Lunar New Year Korean Rice Cake Recipes**",
+    "title": "Lunar New Year Korean Rice Cake Recipes",
+    "keywords": [
+      "Korean tteok",
+      "Lunar New Year food",
+      "Korean rice cake recipes",
+      "Seollal traditions",
+      "Korean holiday cooking"
+    ],
+    "category": "K-Food",
+    "identifier": "lunar new",
+    "created_at": "2026-01-22T09:56:28.450010"
 >>>>>>> Stashed changes
   }
 ]

@@ -302,10 +302,16 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
-          git add data/post_registry_kculture.json
-          git diff --staged --quiet || git commit -m "chore: update kculture post registry (K-Pop) [skip ci]"
-          git push || true
+          # Handle race condition with parallel workflows
+          for i in 1 2 3; do
+            git stash --include-untracked || true
+            git pull --rebase origin main || true
+            git stash pop || true
+            git add data/post_registry_kculture.json
+            git diff --staged --quiet && echo "No changes" && break
+            git commit -m "chore: update kculture post registry (K-Pop) [skip ci]"
+            git push && break || sleep $((i * 2))
+          done
 
       - name: Upload logs
         if: always()
@@ -370,10 +376,15 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
-          git add data/post_registry_kculture.json
-          git diff --staged --quiet || git commit -m "chore: update kculture post registry (K-Beauty) [skip ci]"
-          git push || true
+          for i in 1 2 3; do
+            git stash --include-untracked || true
+            git pull --rebase origin main || true
+            git stash pop || true
+            git add data/post_registry_kculture.json
+            git diff --staged --quiet && echo "No changes" && break
+            git commit -m "chore: update kculture post registry (K-Beauty) [skip ci]"
+            git push && break || sleep $((i * 2))
+          done
 
       - name: Upload logs
         if: always()
@@ -438,10 +449,15 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
-          git add data/post_registry_kculture.json
-          git diff --staged --quiet || git commit -m "chore: update kculture post registry (K-Food) [skip ci]"
-          git push || true
+          for i in 1 2 3; do
+            git stash --include-untracked || true
+            git pull --rebase origin main || true
+            git stash pop || true
+            git add data/post_registry_kculture.json
+            git diff --staged --quiet && echo "No changes" && break
+            git commit -m "chore: update kculture post registry (K-Food) [skip ci]"
+            git push && break || sleep $((i * 2))
+          done
 
       - name: Upload logs
         if: always()
@@ -506,10 +522,15 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
-          git add data/post_registry_kculture.json
-          git diff --staged --quiet || git commit -m "chore: update kculture post registry (K-Fashion) [skip ci]"
-          git push || true
+          for i in 1 2 3; do
+            git stash --include-untracked || true
+            git pull --rebase origin main || true
+            git stash pop || true
+            git add data/post_registry_kculture.json
+            git diff --staged --quiet && echo "No changes" && break
+            git commit -m "chore: update kculture post registry (K-Fashion) [skip ci]"
+            git push && break || sleep $((i * 2))
+          done
 
       - name: Upload logs
         if: always()

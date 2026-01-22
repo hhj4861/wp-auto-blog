@@ -53,6 +53,7 @@ class APIKeys:
     pexels: Optional[str] = None
     reddit_client_id: Optional[str] = None
     reddit_client_secret: Optional[str] = None
+    tavily: Optional[str] = None  # Tavily API for web search
 
     @classmethod
     def from_env(cls) -> "APIKeys":
@@ -64,6 +65,7 @@ class APIKeys:
             pexels=os.getenv("PEXELS_API_KEY"),
             reddit_client_id=os.getenv("REDDIT_CLIENT_ID"),
             reddit_client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
+            tavily=os.getenv("TAVILY_API_KEY"),
         )
 
     def validate(self) -> tuple[bool, list[str]]:

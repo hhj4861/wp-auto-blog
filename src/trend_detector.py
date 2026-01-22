@@ -56,6 +56,7 @@ class TrendSource(Enum):
     GOOGLE_TRENDS = "google_trends"
     HACKER_NEWS = "hacker_news"
     REDDIT = "reddit"
+    WEB_SEARCH = "web_search"  # Tavily web search for K-Culture
 
 
 @dataclass
@@ -548,40 +549,178 @@ class TrendDetector:
             return raw_topics
 
     def _generate_kculture_topics(self) -> list[Topic]:
-        """Generate K-Culture topics using LLM when no raw trends are found.
+        """Generate K-Culture topics using web search + LLM fallback.
+
+        Flow:
+        1. Try Tavily web search for real-time K-Culture trends
+        2. If web search fails, fall back to LLM generation
+        3. ALL existing posts are excluded to prevent duplicates
 
         Returns:
             List of generated Topic objects for K-Culture categories
         """
+        # First try web search for real-time trends
+        web_topics = self._fetch_kculture_web_trends()
+        if web_topics:
+            logger.info(f"Found {len(web_topics)} topics from web search")
+            return web_topics
+
+        # Fallback to LLM generation
+        logger.info("Web search returned no results, falling back to LLM generation...")
+        return self._generate_kculture_topics_with_llm()
+
+    def _fetch_kculture_web_trends(self) -> list[Topic]:
+        """Fetch K-Culture trends using Tavily web search API.
+
+        Returns:
+            List of Topic objects from web search results
+        """
+        tavily_key = os.getenv("TAVILY_API_KEY")
+        if not tavily_key:
+            logger.info("TAVILY_API_KEY not set, skipping web search")
+            return []
+
+        try:
+            import datetime
+            current_month = datetime.datetime.now().strftime("%B %Y")
+
+            # Search queries for each K-Culture category
+            search_queries = [
+                f"K-Pop news {current_month} comeback tour concert",
+                f"Korean skincare trends {current_month} best products",
+                f"Korean food viral snacks {current_month}",
+                f"Korean fashion K-drama style {current_month}",
+            ]
+
+            all_results = []
+            for query in search_queries:
+                response = requests.post(
+                    "https://api.tavily.com/search",
+                    json={
+                        "api_key": tavily_key,
+                        "query": query,
+                        "search_depth": "basic",
+                        "max_results": 5,
+                        "include_domains": [],
+                        "exclude_domains": [],
+                    },
+                    timeout=30,
+                )
+
+                if response.status_code == 200:
+                    data = response.json()
+                    results = data.get("results", [])
+                    all_results.extend(results)
+                    logger.debug(f"Tavily search '{query}': {len(results)} results")
+
+            if not all_results:
+                return []
+
+            # Convert web results to topics using LLM
+            return self._convert_web_results_to_topics(all_results)
+
+        except Exception as e:
+            logger.warning(f"Tavily web search failed: {e}")
+            return []
+
+    def _convert_web_results_to_topics(self, web_results: list[dict]) -> list[Topic]:
+        """Convert Tavily web search results to K-Culture topics using LLM.
+
+        Args:
+            web_results: List of Tavily search results
+
+        Returns:
+            List of Topic objects
+        """
+        existing_posts = self._load_existing_posts()
+        existing_titles = [p['title'] for p in existing_posts]
+        existing_identifiers = [p.get('identifier', '') for p in existing_posts if p.get('identifier')]
+
+        # Format web results for LLM
+        web_content = "\n".join([
+            f"- {r.get('title', 'No title')}: {r.get('content', '')[:200]}"
+            for r in web_results[:15]
+        ])
+
+        existing_list = "\n".join([
+            f"- {p['title']} [id: {p.get('identifier', 'N/A')}]"
+            for p in existing_posts
+        ])
+
+        prompt = f"""Based on these recent K-Culture news/articles, generate 5 unique blog topics:
+
+## Recent News:
+{web_content}
+
+## ⚠️ CRITICAL: AVOID these existing topics (DO NOT generate similar topics):
+{existing_list}
+
+## Rules:
+1. Topics must be DIFFERENT from existing posts
+2. Check both title AND identifier - if similar, skip it
+3. Distribute across: K-Pop, K-Beauty, K-Food, K-Fashion
+4. Focus on trending/newsworthy content from the articles above
+
+## Response Format:
+1. [Topic Name]
+- Category: [K-Pop | K-Beauty | K-Food | K-Fashion]
+- Suggested Title: [SEO title under 60 chars with year]
+- Keywords: [5 relevant keywords]
+- Source: [Which news article inspired this]
+
+Generate 5 UNIQUE topics that are NOT in the existing list."""
+
+        try:
+            result = self._call_claude_sdk(prompt)
+            if result:
+                return self._parse_generated_kculture_topics(result, source=TrendSource.WEB_SEARCH)
+        except Exception as e:
+            logger.error(f"Failed to convert web results: {e}")
+
+        return []
+
+    def _generate_kculture_topics_with_llm(self) -> list[Topic]:
+        """Generate K-Culture topics using LLM when web search fails.
+
+        Returns:
+            List of generated Topic objects
+        """
         existing_posts = self._load_existing_posts()
         existing_posts_section = ""
 
+        # Include ALL existing posts (not just 20)
         if existing_posts:
             existing_list = "\n".join([
                 f"- {p['title']} [identifier: {p['identifier']}]" if p.get('identifier') else f"- {p['title']}"
-                for p in existing_posts[:20]
+                for p in existing_posts  # ALL posts, not [:20]
             ])
             existing_posts_section = f"""
-## ⚠️ AVOID these existing topics:
+## ⚠️ CRITICAL - DO NOT generate topics similar to these existing posts:
 {existing_list}
+
+**Rules for avoiding duplicates:**
+- If an identifier matches or is similar, DO NOT use that topic
+- If the title subject is the same (even with different wording), DO NOT use it
+- Example: "Korean Lunar New Year Foods" and "Lunar New Year Korean Food" are DUPLICATES
 
 """
 
         prompt = f"""You are a K-Culture content strategist for US audiences.
 {existing_posts_section}
-Generate 5 trending K-Culture blog topics. Focus on:
+Generate 5 FRESH K-Culture blog topics that are NOT in the existing list above.
 
 ## Categories (distribute topics across categories)
-- **K-Pop**: Current concerts, album releases, group activities
-- **K-Beauty**: Seasonal skincare, trending products, brand reviews
-- **K-Food**: Viral snacks, recipes, restaurant trends
-- **K-Fashion**: Current K-drama fashion, streetwear trends
+- **K-Pop**: Current concerts, album releases, group activities, award shows
+- **K-Beauty**: Seasonal skincare, trending products, brand reviews, ingredients
+- **K-Food**: Viral snacks, recipes, restaurant trends, cooking tips
+- **K-Fashion**: K-drama fashion, streetwear trends, brand guides, styling tips
 
 ## Current Trends to Consider (January 2026)
-- Winter skincare products (Korean moisturizers, essences)
-- Award show season (MAMA, Golden Disc Awards)
-- New K-Pop comebacks and tours
-- Lunar New Year food traditions
+- Winter skincare products (Korean moisturizers, barrier creams)
+- Award show season (MAMA, Golden Disc Awards, Seoul Music Awards)
+- New K-Pop comebacks and world tours
+- Korean cooking at home trends
+- K-drama inspired fashion
 
 ## Response Format (EXACTLY like this):
 1. [Topic Name]
@@ -593,7 +732,7 @@ Generate 5 trending K-Culture blog topics. Focus on:
 2. [Next Topic]
 ...
 
-Generate 5 unique topics across different categories."""
+Generate 5 UNIQUE topics that are COMPLETELY DIFFERENT from the existing posts."""
 
         try:
             logger.info("Generating K-Culture topics with LLM...")
@@ -612,11 +751,14 @@ Generate 5 unique topics across different categories."""
             logger.error(f"Failed to generate K-Culture topics: {e}")
             return []
 
-    def _parse_generated_kculture_topics(self, llm_response: str) -> list[Topic]:
+    def _parse_generated_kculture_topics(
+        self, llm_response: str, source: TrendSource = TrendSource.GOOGLE_TRENDS
+    ) -> list[Topic]:
         """Parse LLM-generated K-Culture topics.
 
         Args:
             llm_response: Raw LLM response
+            source: TrendSource to mark topics with (default: GOOGLE_TRENDS for LLM, WEB_SEARCH for Tavily)
 
         Returns:
             List of Topic objects
@@ -641,7 +783,7 @@ Generate 5 unique topics across different categories."""
                 if current_topic and current_title:
                     topics.append(Topic(
                         topic=current_topic,
-                        source=TrendSource.GOOGLE_TRENDS,  # Mark as generated
+                        source=source,
                         keywords=current_keywords if current_keywords else self._extract_keywords(current_topic),
                         score=85,
                         suggested_title=current_title,
@@ -676,7 +818,7 @@ Generate 5 unique topics across different categories."""
         if current_topic and current_title:
             topics.append(Topic(
                 topic=current_topic,
-                source=TrendSource.GOOGLE_TRENDS,
+                source=source,
                 keywords=current_keywords if current_keywords else self._extract_keywords(current_topic),
                 score=85,
                 suggested_title=current_title,

@@ -1983,30 +1983,46 @@ Use ONLY verified tour dates from official sources. If dates are not confirmed, 
 This article is about "{topic}" for international K-Pop fans.
 
 === K-Pulse Blog Concept ===
-"Your K-Pop News & Guide" - Keep fans updated and help new fans discover groups
+"Your Ultimate K-Pop Magazine" - Exciting fan content that celebrates K-Pop culture!
+
+=== WRITING STYLE: MAGAZINE/PROMOTIONAL ===
+Write like a K-Pop fan magazine (like Weverse Magazine, Soompi, AllKPop style):
+- **Exciting & Celebratory**: Use exclamation marks! Express genuine excitement!
+- **Fan Language**: "Your faves", "stan", "bias", "comeback", "era" - speak their language
+- **Hype Mode**: Build anticipation, create FOMO, make readers excited to engage
+- **Visual Emphasis**: Use emojis strategically (✨💜🔥💖) to add energy
+- **Quote Highlights**: Include memorable quotes from interviews, lyrics, or fan reactions
 
 === Target Audience ===
-K-Pop fans, concert-goers, collectors (photocards, albums)
+Dedicated K-Pop fans, new stans curious about groups, concert-goers, collectors
 
 === MUST Include ===
-1. **Artist Names**: English + Korean (한글)
-2. **Streaming Links**: Spotify, Apple Music, YouTube
-3. **Official Merch**: Where to buy lightsticks, albums
-4. **Concert Info**: Tour dates, ticket sites (if relevant)
-5. **Member Names**: Full lineup for group features
+1. **Artist Names**: English + Korean (한글) - fans love seeing Hangul!
+2. **Streaming Links**: Spotify, Apple Music, YouTube Music
+3. **Official Merch**: Lightsticks, albums, photocards - where to buy in US
+4. **Social Media**: Official accounts to follow
+5. **Fandom Name**: Always mention the official fandom name!
 {concert_section}
+=== Content Sections to Include ===
+1. **Hype Introduction**: Why this group/comeback/tour is a BIG DEAL right now
+2. **Quick Facts Box**: Debut date, members, fandom name, label
+3. **Why You Should Stan**: Compelling reasons for new fans
+4. **Best Songs to Start With**: Gateway tracks for newcomers
+5. **Merch Guide**: Must-have items for collectors
+
 === Image Note ===
-IMPORTANT: Only use YouTube video thumbnails or official embed for K-Pop content.
+IMPORTANT: Only use YouTube video thumbnails or official MV screenshots.
 Do NOT use fan photos or unofficial images (copyright issues with agencies).
 
 === Price Format ===
 For merchandise: Always USD
-- "Lightstick: ~$50 on Amazon"
+- "Official Lightstick: ~$50 on Amazon" / "Album (Standard): ~$25"
 
-=== Tone ===
-- Enthusiastic but informative
-- Fan-friendly language
-- Hype new releases appropriately
+=== Tone & Voice ===
+- **Excited & Passionate**: You're a fan writing for fans!
+- **Inclusive**: Welcome new fans, don't gatekeep
+- **Celebratory**: Focus on achievements, milestones, and positive moments
+- **Magazine-style**: Think Cosmopolitan meets K-Pop - glossy, fun, engaging
 
 === READABILITY & SEO (CRITICAL!) ===
 1. **Section Length**: MAX 300 words per H2 section!
@@ -2017,9 +2033,10 @@ For merchandise: Always USD
 4. **Bullet Points**: Use lists for member info, tracklists, tour dates, merchandise
 
 === Avoid ===
+- Dry, analytical tone (NOT a Wikipedia article!)
 - Unofficial/fan-taken photos (copyright risk!)
-- Rumors or unconfirmed news
-- Negative commentary on artists
+- Rumors, dating news, or controversies
+- Negative commentary on artists or fandoms
 """
 
         elif category == "K-Fashion":

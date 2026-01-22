@@ -527,6 +527,10 @@ class TrendDetector:
             return raw_topics
 
         if not raw_topics:
+            # For K-Culture mode, generate topics even without raw trends
+            if self.config.mode == TrendMode.KCULTURE:
+                logger.info("No raw topics found, generating K-Culture topics with LLM...")
+                return self._generate_kculture_topics()
             logger.warning("No topics to analyze")
             return raw_topics
 
@@ -542,6 +546,144 @@ class TrendDetector:
         except Exception as e:
             logger.error(f"LLM analysis failed: {e}, using raw topics")
             return raw_topics
+
+    def _generate_kculture_topics(self) -> list[Topic]:
+        """Generate K-Culture topics using LLM when no raw trends are found.
+
+        Returns:
+            List of generated Topic objects for K-Culture categories
+        """
+        existing_posts = self._load_existing_posts()
+        existing_posts_section = ""
+
+        if existing_posts:
+            existing_list = "\n".join([
+                f"- {p['title']} [identifier: {p['identifier']}]" if p.get('identifier') else f"- {p['title']}"
+                for p in existing_posts[:20]
+            ])
+            existing_posts_section = f"""
+## ⚠️ AVOID these existing topics:
+{existing_list}
+
+"""
+
+        prompt = f"""You are a K-Culture content strategist for US audiences.
+{existing_posts_section}
+Generate 5 trending K-Culture blog topics. Focus on:
+
+## Categories (distribute topics across categories)
+- **K-Pop**: Current concerts, album releases, group activities
+- **K-Beauty**: Seasonal skincare, trending products, brand reviews
+- **K-Food**: Viral snacks, recipes, restaurant trends
+- **K-Fashion**: Current K-drama fashion, streetwear trends
+
+## Current Trends to Consider (January 2026)
+- Winter skincare products (Korean moisturizers, essences)
+- Award show season (MAMA, Golden Disc Awards)
+- New K-Pop comebacks and tours
+- Lunar New Year food traditions
+
+## Response Format (EXACTLY like this):
+1. [Topic Name]
+- Category: [K-Pop | K-Beauty | K-Food | K-Fashion]
+- Suggested Title: [SEO title under 60 chars with year]
+- Keywords: [5 relevant keywords]
+- Reason: [Why this topic is valuable]
+
+2. [Next Topic]
+...
+
+Generate 5 unique topics across different categories."""
+
+        try:
+            logger.info("Generating K-Culture topics with LLM...")
+            result = self._call_claude_sdk(prompt)
+
+            if not result:
+                logger.warning("LLM returned no K-Culture topics")
+                return []
+
+            # Parse generated topics
+            topics = self._parse_generated_kculture_topics(result)
+            logger.info(f"Generated {len(topics)} K-Culture topics")
+            return topics
+
+        except Exception as e:
+            logger.error(f"Failed to generate K-Culture topics: {e}")
+            return []
+
+    def _parse_generated_kculture_topics(self, llm_response: str) -> list[Topic]:
+        """Parse LLM-generated K-Culture topics.
+
+        Args:
+            llm_response: Raw LLM response
+
+        Returns:
+            List of Topic objects
+        """
+        import re
+
+        topics = []
+        lines = llm_response.split('\n')
+
+        current_topic = None
+        current_category = None
+        current_title = None
+        current_keywords = []
+
+        for line in lines:
+            line = line.strip()
+
+            # Match topic number and name
+            topic_match = re.match(r'^\d+\.\s*(.+)$', line)
+            if topic_match and not line.startswith('- '):
+                # Save previous topic if exists
+                if current_topic and current_title:
+                    topics.append(Topic(
+                        topic=current_topic,
+                        source=TrendSource.GOOGLE_TRENDS,  # Mark as generated
+                        keywords=current_keywords if current_keywords else self._extract_keywords(current_topic),
+                        score=85,
+                        suggested_title=current_title,
+                        category=current_category or "K-Beauty",
+                    ))
+
+                current_topic = topic_match.group(1).strip()
+                current_category = None
+                current_title = None
+                current_keywords = []
+                continue
+
+            # Match category
+            if line.lower().startswith('- category:'):
+                cat = line.split(':', 1)[1].strip()
+                if cat in ["K-Pop", "K-Beauty", "K-Food", "K-Fashion"]:
+                    current_category = cat
+                continue
+
+            # Match suggested title
+            if line.lower().startswith('- suggested title:'):
+                current_title = line.split(':', 1)[1].strip()
+                continue
+
+            # Match keywords
+            if line.lower().startswith('- keywords:'):
+                kw_str = line.split(':', 1)[1].strip()
+                current_keywords = [k.strip() for k in kw_str.split(',')]
+                continue
+
+        # Add last topic
+        if current_topic and current_title:
+            topics.append(Topic(
+                topic=current_topic,
+                source=TrendSource.GOOGLE_TRENDS,
+                keywords=current_keywords if current_keywords else self._extract_keywords(current_topic),
+                score=85,
+                suggested_title=current_title,
+                category=current_category or "K-Beauty",
+            ))
+
+        return topics
 
     def _load_existing_posts(self) -> list[dict]:
         """Load existing posts with identifiers from mode-specific registry.

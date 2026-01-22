@@ -180,17 +180,6 @@
     "created_at": "2026-01-22T12:14:22.238258"
   },
   {
-    "topic": "Korean Sunscreen SPF50",
-    "title": "7 Incredible Korean Sunscreen",
-    "keywords": [
-      "korean",
-      "sunscreen"
-    ],
-    "category": "K-Beauty",
-    "identifier": "korean sunscreen",
-    "created_at": "2026-01-22T12:26:44.310568"
-  },
-  {
     "topic": "BTS Concert Tour 2026",
     "title": "BTS Concert Tour 2026: The Ultimate Ticket Guide",
     "keywords": [
@@ -227,18 +216,6 @@
     "category": "K-Fashion",
     "identifier": "korean winter",
     "created_at": "2026-01-22T12:49:09.747628"
-  },
-  {
-    "topic": "Korean Vitamin C Serum",
-    "title": "7 Incredible Korean Vitamin",
-    "keywords": [
-      "korean",
-      "vitamin",
-      "serum"
-    ],
-    "category": "K-Beauty",
-    "identifier": "korean vitamin",
-    "created_at": "2026-01-22T13:28:01.358538"
   },
   {
     "topic": "Stray Kids World Tour 2026",
@@ -321,34 +298,6 @@
     "created_at": "2026-01-22T15:39:48.614324"
   },
   {
-    "topic": "Korean Spicy Ramen Taste Test 2025: Best Buldak Flavors Ranked",
-    "title": "Buldak Ramen Flavors 2026",
-    "keywords": [
-      "buldak",
-      "korean ramen",
-      "spicy noodles",
-      "samyang",
-      "korean food"
-    ],
-    "category": "K-Food",
-    "identifier": "korean spicy",
-    "created_at": "2026-01-22T16:02:37.558096"
-  },
-  {
-    "topic": "Korean Spicy Ramen Taste Test 2025: Best Buldak Flavors Ranked",
-    "title": "Buldak Ramen Flavors 2026",
-    "keywords": [
-      "buldak",
-      "korean ramen",
-      "spicy noodles",
-      "samyang",
-      "korean food"
-    ],
-    "category": "K-Food",
-    "identifier": "korean spicy",
-    "created_at": "2026-01-22T16:13:32.480915"
-  },
-  {
     "topic": "Korean Minimalist Fashion Guide 2025: Seoul Street Style Essentials",
     "title": "Korean Minimalist Fashion 2025",
     "keywords": [
@@ -377,20 +326,6 @@
     "created_at": "2026-01-22T16:38:33.569452"
   },
   {
-    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
-    "title": "BLACKPINK World Tour 2025",
-    "keywords": [
-      "blackpink",
-      "kpop concert",
-      "world tour",
-      "blink",
-      "korean music"
-    ],
-    "category": "K-Pop",
-    "identifier": "blackpink world",
-    "created_at": "2026-01-22T16:47:38.115842"
-  },
-  {
     "topic": "Korean Minimalist Fashion Guide 2025: Seoul Street Style Essentials",
     "title": "Korean Minimalist Fashion Guide 2025",
     "keywords": [
@@ -403,34 +338,6 @@
     "category": "K-Fashion",
     "identifier": "korean minimalist",
     "created_at": "2026-01-22T16:51:17.051894"
-  },
-  {
-    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
-    "title": "BLACKPINK World Tour 2025",
-    "keywords": [
-      "blackpink",
-      "kpop concert",
-      "world tour",
-      "blink",
-      "korean music"
-    ],
-    "category": "K-Pop",
-    "identifier": "blackpink world",
-    "created_at": "2026-01-22T17:10:19.241586"
-  },
-  {
-    "topic": "BLACKPINK World Tour 2025: Complete Concert Guide & Setlist",
-    "title": "BLACKPINK World Tour 2025",
-    "keywords": [
-      "blackpink",
-      "kpop concert",
-      "world tour",
-      "blink",
-      "korean music"
-    ],
-    "category": "K-Pop",
-    "identifier": "blackpink world",
-    "created_at": "2026-01-22T17:21:49.071951"
   },
   {
     "topic": "WebGPU 차트 라이브러리 ChartGPU, 초당 60fps로 100만 데이터 시각화",
@@ -456,64 +363,5 @@
     "category": "K-Food",
     "identifier": "korean lunar",
     "created_at": "2026-01-22T09:27:54.704158"
-  },
-  {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    "topic": "**SEVENTEEN Tour 2026 North America**",
-    "title": "SEVENTEEN Tour 2026 North America",
-    "keywords": [
-      "SEVENTEEN tour 2026",
-      "SEVENTEEN concert tickets",
-      "K-pop concert USA",
-      "SEVENTEEN North America",
-      "SEVENTEEN right here tour"
-    ],
-    "category": "K-Pop",
-    "identifier": "seventeen tour",
-    "created_at": "2026-01-22T09:56:20.094027"
-=======
-    "topic": "**Korean Barrier Repair Creams**",
-    "title": "Korean Barrier Cream Guide",
-    "keywords": [
-      "korean barrier cream",
-      "ceramide moisturizer",
-      "winter skincare",
-      "damaged skin barrier",
-      "korean moisturizer"
-    ],
-    "category": "K-Beauty",
-    "identifier": "korean barrier",
-    "created_at": "2026-01-22T09:56:24.586055"
->>>>>>> Stashed changes
-=======
-    "topic": "**Lunar New Year Korean Rice Cake Recipes**",
-    "title": "Lunar New Year Korean Rice Cake Recipes",
-    "keywords": [
-      "Korean tteok",
-      "Lunar New Year food",
-      "Korean rice cake recipes",
-      "Seollal traditions",
-      "Korean holiday cooking"
-    ],
-    "category": "K-Food",
-    "identifier": "lunar new",
-    "created_at": "2026-01-22T09:56:28.450010"
->>>>>>> Stashed changes
-=======
-    "topic": "**Queen of Tears Fashion Breakdown**",
-    "title": "Queen of Tears Fashion Breakdown",
-    "keywords": [
-      "Queen of Tears fashion",
-      "K-drama outfits",
-      "Korean office fashion",
-      "Kim Ji Won style",
-      "luxury K-fashion"
-    ],
-    "category": "K-Fashion",
-    "identifier": "queen",
-    "created_at": "2026-01-22T09:56:29.551617"
->>>>>>> Stashed changes
   }
 ]

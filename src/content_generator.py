@@ -1893,6 +1893,22 @@ IMPORTANT: When mentioning Korean prices, ALWAYS include USD equivalent:
 - "15,000 KRW (~$11 USD)" NOT just "15,000원"
 - Use exchange rate of ~1350 KRW per USD
 
+=== SHOPPING LINK FORMAT (REQUIRED!) ===
+For EACH product mentioned, include a styled shopping link box:
+
+<div class="product-link" style="background:#ffe4ec;border-left:4px solid #ff6b9d;padding:15px;margin:20px 0;border-radius:4px;">
+  <strong>🛍️ Buy [Product Name]:</strong><br>
+  <a href="https://www.amazon.com/s?k=[product+name]+korean+skincare" target="_blank" rel="nofollow" style="color:#ff6b9d;">Shop on Amazon →</a> |
+  <a href="https://www.yesstyle.com/en/search?q=[product+name]" target="_blank" rel="nofollow" style="color:#ff6b9d;">YesStyle →</a>
+</div>
+
+Example links:
+- Amazon: https://www.amazon.com/s?k=cosrx+snail+mucin
+- YesStyle: https://www.yesstyle.com/en/search?q=cosrx+snail
+- Olive Young Global: https://global.oliveyoung.com/search?q=[product]
+
+IMPORTANT: Replace [product+name] with URL-encoded product name!
+
 === Tone ===
 - Friendly, enthusiastic but informative
 - Explain Korean beauty concepts for beginners
@@ -2174,6 +2190,21 @@ Fashion-conscious readers, K-drama fans, streetwear enthusiasts
 === Price Format ===
 Always USD:
 - "Around $30-50 on YesStyle"
+
+=== SHOPPING LINK FORMAT (REQUIRED!) ===
+For brands/products mentioned, include styled shopping link boxes:
+
+<div class="shop-link" style="background:#f8f4ff;border-left:4px solid #9b59b6;padding:15px;margin:20px 0;border-radius:4px;">
+  <strong>🛍️ Shop [Brand/Style Name]:</strong><br>
+  <a href="https://www.yesstyle.com/en/search?q=[brand+name]" target="_blank" rel="nofollow" style="color:#9b59b6;">Shop on YesStyle →</a>
+</div>
+
+Example links to use:
+- YesStyle: https://www.yesstyle.com/en/search?q=[search+term]
+- Musinsa Global: https://www.musinsa.com/search/musinsa/goods?q=[search+term]
+- Amazon: https://www.amazon.com/s?k=korean+fashion+[item]
+
+IMPORTANT: Replace [search+term] with URL-encoded product/brand name!
 
 === Tone ===
 - Stylish, aspirational

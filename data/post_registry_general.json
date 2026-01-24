@@ -456,5 +456,17 @@
     "category": "테크",
     "identifier": "이메일",
     "created_at": "2026-01-24T10:43:52.529250"
+  },
+  {
+    "topic": "2026 Claude Code Swarms 기능으로 개발 생산성 3배 높이는 법",
+    "title": "2026 Claude Code Swarms 기능으로 개발 생산성 3배 높이는 법",
+    "keywords": [
+      "claude",
+      "code",
+      "swarms"
+    ],
+    "category": "생산성",
+    "identifier": "claude code",
+    "created_at": "2026-01-24T23:40:35.191928"
   }
 ]

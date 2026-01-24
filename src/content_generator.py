@@ -1886,6 +1886,26 @@ IMPORTANT: When mentioning Korean prices, ALWAYS include USD equivalent:
 - Explain Korean beauty concepts for beginners
 - Use "glass skin", "10-step routine" naturally
 
+=== HEADLINE OPTIMIZATION (CRITICAL for SEO!) ===
+Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
+
+1. **Word Count**: 6-12 words (NOT 3-4 words!)
+   - BAD: "Korean Skincare Guide" (3 words)
+   - GOOD: "10 Best Korean Skincare Products for Glass Skin in 2026" (10 words)
+
+2. **Power Words** (use at least 1):
+   Ultimate, Best, Essential, Secret, Proven, Top, Amazing, Revolutionary
+
+3. **Emotional Words** (use at least 1):
+   Glowing, Radiant, Flawless, Stunning, Beautiful, Gorgeous, Transformative
+
+4. **Headline Types** (use one):
+   - List: "7 Korean Sunscreens That Won't Leave a White Cast"
+   - Guide: "The Ultimate Guide to Korean Glass Skin Routine"
+   - How-to: "How to Build Your Perfect 10-Step Korean Skincare Routine"
+
+5. **Include Numbers**: Lists with numbers get 36% more engagement
+
 === Avoid ===
 - Korean-only product names without English
 - Prices in KRW only (always add USD)
@@ -1931,6 +1951,27 @@ IMPORTANT: Always include USD:
 - Fun, appetizing descriptions
 - "If you loved this in K-dramas..." connections
 - Relatable comparisons to Western foods
+
+=== HEADLINE OPTIMIZATION (CRITICAL for SEO!) ===
+Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
+
+1. **Word Count**: 6-12 words (NOT 3-4 words!)
+   - BAD: "Korean Fermented Tea Guide" (4 words, score 31)
+   - GOOD: "Ultimate Guide to Korean Fermented Tea: 7 Must-Try Varieties" (10 words)
+
+2. **Power Words** (use at least 1):
+   Ultimate, Essential, Complete, Best, Top, Amazing, Delicious, Authentic, Secret, Proven
+
+3. **Emotional Words** (use at least 1):
+   Mouthwatering, Irresistible, Addictive, Heavenly, Incredible, Mind-Blowing, Crave-Worthy
+
+4. **Headline Types** (use one):
+   - List: "7 Best Korean Snacks You Need to Try Right Now"
+   - How-to: "How to Make Authentic Korean Fried Chicken at Home"
+   - Guide: "The Ultimate Guide to Korean BBQ: Everything You Need to Know"
+
+5. **Include Numbers**: Lists with numbers get 36% more engagement
+   - "5 Must-Try", "7 Best", "10 Essential"
 
 === READABILITY & SEO (CRITICAL!) ===
 1. **Section Length**: MAX 300 words per H2 section!
@@ -2038,6 +2079,26 @@ For merchandise: Always USD
 - **Celebratory**: Focus on achievements, milestones, and positive moments
 - **Magazine-style**: Think Cosmopolitan meets K-Pop - glossy, fun, engaging
 
+=== HEADLINE OPTIMIZATION (CRITICAL for SEO!) ===
+Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
+
+1. **Word Count**: 6-12 words (NOT 3-4 words!)
+   - BAD: "BLACKPINK World Tour Guide" (4 words)
+   - GOOD: "BLACKPINK World Tour 2026: Complete Guide to Tickets, Dates & Setlist" (10 words)
+
+2. **Power Words** (use at least 1):
+   Ultimate, Complete, Essential, Exclusive, Epic, Iconic, Legendary, Must-Know
+
+3. **Emotional Words** (use at least 1):
+   Stunning, Unforgettable, Heartwarming, Amazing, Incredible, Breathtaking, Exciting
+
+4. **Headline Types** (use one):
+   - List: "7 Reasons Why ATEEZ is Dominating K-Pop in 2026"
+   - Guide: "The Complete Guide to Stanning BTS: Everything New Fans Need"
+   - How-to: "How to Get Concert Tickets for TWICE World Tour"
+
+5. **Include Numbers**: Lists with numbers get 36% more engagement
+
 === READABILITY & SEO (CRITICAL!) ===
 1. **Section Length**: MAX 300 words per H2 section!
    - If a section needs more content, ADD H3 subheadings to break it up
@@ -2080,6 +2141,26 @@ Always USD:
 - Stylish, aspirational
 - Reference K-drama looks when relevant
 - Practical for Western body types
+
+=== HEADLINE OPTIMIZATION (CRITICAL for SEO!) ===
+Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
+
+1. **Word Count**: 6-12 words (NOT 3-4 words!)
+   - BAD: "Korean Fashion Guide" (3 words)
+   - GOOD: "10 Stunning Korean Fashion Trends You Need to Try in 2026" (11 words)
+
+2. **Power Words** (use at least 1):
+   Ultimate, Essential, Stunning, Chic, Effortless, Must-Have, Trendy, Iconic
+
+3. **Emotional Words** (use at least 1):
+   Beautiful, Gorgeous, Stylish, Elegant, Dreamy, Luxurious, Aesthetic
+
+4. **Headline Types** (use one):
+   - List: "7 Korean Streetwear Brands That Are Taking Over Fashion"
+   - Guide: "The Ultimate Guide to Korean Minimalist Fashion Style"
+   - How-to: "How to Dress Like a K-Drama Star on a Budget"
+
+5. **Include Numbers**: Lists with numbers get 36% more engagement
 
 === READABILITY & SEO (CRITICAL!) ===
 1. **Section Length**: MAX 300 words per H2 section!
@@ -3433,5 +3514,53 @@ Be specific and factual based on search results. Always use the most recent vers
         if external_links < min_sources:
             errors.append(f"Insufficient source links: {external_links} links for {total_stats} statistics (need {min_sources}+)")
 
+        # Check for sections longer than 300 words (Yoast readability requirement)
+        long_sections = self._check_section_length(html, max_words=300)
+        if long_sections:
+            errors.append(f"Section too long (>300 words): {long_sections[0][:50]}...")
+
         is_valid = len(errors) == 0
         return is_valid, errors
+
+    def _check_section_length(self, html: str, max_words: int = 300) -> list[str]:
+        """Check for H2 sections that exceed max word count.
+
+        Args:
+            html: HTML content
+            max_words: Maximum words allowed per H2 section
+
+        Returns:
+            List of section titles that exceed the limit
+        """
+        long_sections = []
+
+        # Split content by H2 headings
+        h2_pattern = r'<h2[^>]*>(.*?)</h2>'
+        h2_matches = list(re.finditer(h2_pattern, html, re.IGNORECASE | re.DOTALL))
+
+        for i, match in enumerate(h2_matches):
+            section_title = re.sub(r'<[^>]+>', '', match.group(1)).strip()
+
+            # Get content between this H2 and next H2 (or end)
+            start_pos = match.end()
+            if i + 1 < len(h2_matches):
+                end_pos = h2_matches[i + 1].start()
+            else:
+                end_pos = len(html)
+
+            section_content = html[start_pos:end_pos]
+
+            # Check if section has H3 subheadings
+            has_h3 = bool(re.search(r'<h3[^>]*>', section_content, re.IGNORECASE))
+
+            # If no H3, count words in the entire section
+            if not has_h3:
+                # Remove HTML tags and count words
+                text = re.sub(r'<[^>]+>', ' ', section_content)
+                text = re.sub(r'\s+', ' ', text).strip()
+                word_count = len(text.split())
+
+                if word_count > max_words:
+                    long_sections.append(f"{section_title} ({word_count} words)")
+
+        return long_sections

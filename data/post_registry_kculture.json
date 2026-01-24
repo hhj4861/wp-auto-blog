@@ -461,5 +461,17 @@
     "category": "K-Food",
     "identifier": "korean fermented",
     "created_at": "2026-01-23T20:52:21.385693"
+  },
+  {
+    "topic": "K-Drama Office Fashion 2026",
+    "title": "K-Drama Office Fashion 2026",
+    "keywords": [
+      "drama",
+      "office",
+      "fashion"
+    ],
+    "category": "K-Fashion",
+    "identifier": "drama office",
+    "created_at": "2026-01-24T15:29:20.286527"
   }
 ]

@@ -1595,7 +1595,8 @@ DO NOT use Markdown. Use only HTML tags."""
             is_valid, errors = self._validate(html)
 
             # Check for critical structural failures that warrant retry
-            critical_failures = [e for e in errors if "H2" in e or "FAQ" in e]
+            # Include section/paragraph length issues for Yoast readability
+            critical_failures = [e for e in errors if "H2" in e or "FAQ" in e or "Section too long" in e or "Paragraph too long" in e]
             if critical_failures and attempt < max_retries - 1:
                 logger.warning(f"Critical structural issues found: {critical_failures}. Retrying...")
                 continue  # Retry
@@ -1860,13 +1861,24 @@ This article is about "{topic}" for US readers interested in Korean beauty.
 === Target Audience ===
 US skincare enthusiasts, K-drama fans, beauty beginners wanting to try Korean products
 
-=== READABILITY & SEO (CRITICAL!) ===
+=== READABILITY & SEO (CRITICAL - WILL FAIL VALIDATION IF NOT FOLLOWED!) ===
+
+⚠️ STRICT LIMITS - Content will be REJECTED if these are exceeded:
+
 1. **Section Length**: MAX 300 words per H2 section!
-   - If a section needs more content, ADD H3 subheadings to break it up
+   - Count your words! If approaching 300, STOP and add H3 subheading
    - Example: H2 "Best Korean Sunscreens" → H3 "For Oily Skin", H3 "For Dry Skin", H3 "For Sensitive Skin"
-2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+
+2. **Paragraph Length**: MAX 150 words per paragraph!
+   - Keep paragraphs SHORT: 2-3 sentences only
+   - After 3 sentences, START A NEW PARAGRAPH with </p><p>
+   - Long paragraphs = automatic rejection
+
 3. **H3 Subheadings**: Use H3s to organize product lists, comparisons, or detailed explanations
+   - Every 200-250 words should have a subheading
+
 4. **Bullet Points**: Use lists for ingredients, benefits, how-to steps
+   - Lists break up text and improve readability score
 
 === MUST Include ===
 1. **Product Names in English**: Use romanized names (e.g., "COSRX Snail Mucin")
@@ -1973,18 +1985,31 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 5. **Include Numbers**: Lists with numbers get 36% more engagement
    - "5 Must-Try", "7 Best", "10 Essential"
 
-=== READABILITY & SEO (CRITICAL!) ===
+=== READABILITY & SEO (CRITICAL - WILL FAIL VALIDATION IF NOT FOLLOWED!) ===
+
+⚠️ STRICT LIMITS - Content will be REJECTED if these are exceeded:
+
 1. **Section Length**: MAX 300 words per H2 section!
-   - If a section needs more content, ADD H3 subheadings to break it up
+   - Count your words! If approaching 300, STOP and add H3 subheading
    - Example: H2 "Best Korean Ramen" → H3 "For Spicy Lovers", H3 "For Mild Flavor Fans", H3 "Budget-Friendly Options"
-2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+
+2. **Paragraph Length**: MAX 150 words per paragraph!
+   - Keep paragraphs SHORT: 2-3 sentences only
+   - After 3 sentences, START A NEW PARAGRAPH with </p><p>
+   - Long paragraphs = automatic rejection
+
 3. **H3 Subheadings**: Use H3s to organize food lists, flavor comparisons, or cooking instructions
+   - Every 200-250 words should have a subheading
+
 4. **Bullet Points**: Use lists for ingredients, taste notes, spice levels, cooking tips
+   - Lists break up text and improve readability score
 
 === Avoid ===
 - Assuming readers have tried the food
 - Korean-only descriptions
 - Missing spice level warnings for hot items
+- Paragraphs longer than 150 words
+- Sections longer than 300 words without H3 subheadings
 """
 
         elif category == "K-Pop":
@@ -2099,19 +2124,32 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 
 5. **Include Numbers**: Lists with numbers get 36% more engagement
 
-=== READABILITY & SEO (CRITICAL!) ===
+=== READABILITY & SEO (CRITICAL - WILL FAIL VALIDATION IF NOT FOLLOWED!) ===
+
+⚠️ STRICT LIMITS - Content will be REJECTED if these are exceeded:
+
 1. **Section Length**: MAX 300 words per H2 section!
-   - If a section needs more content, ADD H3 subheadings to break it up
+   - Count your words! If approaching 300, STOP and add H3 subheading
    - Example: H2 "Album Discography" → H3 "Mini Albums", H3 "Full Albums", H3 "Special Editions"
-2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+
+2. **Paragraph Length**: MAX 150 words per paragraph!
+   - Keep paragraphs SHORT: 2-3 sentences only
+   - After 3 sentences, START A NEW PARAGRAPH with </p><p>
+   - Long paragraphs = automatic rejection
+
 3. **H3 Subheadings**: Use H3s to organize member profiles, albums, concert sections
+   - Every 200-250 words should have a subheading
+
 4. **Bullet Points**: Use lists for member info, tracklists, tour dates, merchandise
+   - Lists break up text and improve readability score
 
 === Avoid ===
 - Dry, analytical tone (NOT a Wikipedia article!)
 - Unofficial/fan-taken photos (copyright risk!)
 - Rumors, dating news, or controversies
 - Negative commentary on artists or fandoms
+- Paragraphs longer than 150 words
+- Sections longer than 300 words without H3 subheadings
 """
 
         elif category == "K-Fashion":
@@ -2162,17 +2200,31 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 
 5. **Include Numbers**: Lists with numbers get 36% more engagement
 
-=== READABILITY & SEO (CRITICAL!) ===
+=== READABILITY & SEO (CRITICAL - WILL FAIL VALIDATION IF NOT FOLLOWED!) ===
+
+⚠️ STRICT LIMITS - Content will be REJECTED if these are exceeded:
+
 1. **Section Length**: MAX 300 words per H2 section!
+   - Count your words! If approaching 300, STOP and add H3 subheading
    - If a section needs more content, ADD H3 subheadings to break it up
    - Example: H2 "Korean Streetwear Brands" → H3 "High-End Brands", H3 "Budget-Friendly Options", H3 "K-Drama Inspired"
-2. **Short Paragraphs**: 2-3 sentences MAX per paragraph, then line break
+
+2. **Paragraph Length**: MAX 150 words per paragraph!
+   - Keep paragraphs SHORT: 2-3 sentences only
+   - After 3 sentences, START A NEW PARAGRAPH with </p><p>
+   - Long paragraphs = automatic rejection
+
 3. **H3 Subheadings**: Use H3s to organize brand lists, style categories, or shopping guides
+   - Every 200-250 words should have a subheading
+
 4. **Bullet Points**: Use lists for brand names, price ranges, sizing info, shopping links
+   - Lists break up text and improve readability score
 
 === Avoid ===
 - Korean-only sizing without conversion
 - Brands unavailable internationally
+- Paragraphs longer than 150 words
+- Sections longer than 300 words without H3 subheadings
 """
 
         return ""
@@ -3519,6 +3571,11 @@ Be specific and factual based on search results. Always use the most recent vers
         if long_sections:
             errors.append(f"Section too long (>300 words): {long_sections[0][:50]}...")
 
+        # Check for paragraphs longer than 150 words (Yoast readability requirement)
+        long_paragraphs = self._check_paragraph_length(html, max_words=150)
+        if long_paragraphs:
+            errors.append(f"Paragraph too long (>150 words): found {len(long_paragraphs)} paragraphs")
+
         is_valid = len(errors) == 0
         return is_valid, errors
 
@@ -3564,3 +3621,31 @@ Be specific and factual based on search results. Always use the most recent vers
                     long_sections.append(f"{section_title} ({word_count} words)")
 
         return long_sections
+
+    def _check_paragraph_length(self, html: str, max_words: int = 150) -> list[str]:
+        """Check for paragraphs that exceed max word count.
+
+        Args:
+            html: HTML content
+            max_words: Maximum words allowed per paragraph (Yoast recommends 150)
+
+        Returns:
+            List of paragraph excerpts that exceed the limit
+        """
+        long_paragraphs = []
+
+        # Find all paragraph tags
+        p_pattern = r'<p[^>]*>(.*?)</p>'
+        paragraphs = re.findall(p_pattern, html, re.IGNORECASE | re.DOTALL)
+
+        for p_content in paragraphs:
+            # Remove HTML tags and count words
+            text = re.sub(r'<[^>]+>', ' ', p_content)
+            text = re.sub(r'\s+', ' ', text).strip()
+            word_count = len(text.split())
+
+            if word_count > max_words:
+                excerpt = text[:50] + "..." if len(text) > 50 else text
+                long_paragraphs.append(f"{excerpt} ({word_count} words)")
+
+        return long_paragraphs

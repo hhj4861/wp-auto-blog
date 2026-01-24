@@ -1991,12 +1991,44 @@ Foodies, K-drama watchers, Asian grocery shoppers, ramen enthusiasts
 5. **Cooking Tips**: How to prepare, what to pair with
 6. **Taste Description**: Flavor profile for unfamiliar foods
 
-=== PRODUCT LINK FORMAT (REQUIRED!) ===
-For EACH product mentioned, include a styled shopping link box:
-<div class="product-link" style="background:#fff3e0;border-left:4px solid #ff9800;padding:15px;margin:20px 0;border-radius:4px;">
-  <strong>🛒 Buy [Product Name]:</strong><br>
-  <a href="https://www.amazon.com/s?k=[product+name]+korean&i=grocery" target="_blank" rel="nofollow" style="color:#ff6d00;">Shop on Amazon →</a>
+=== VISUAL TEMPLATES (USE THESE - NO PLAIN TEXT!) ===
+
+**1. PRODUCT CARD (Required for each product):**
+<div style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:20px;margin:20px 0;">
+  <h4 style="color:#ff9800;margin:0 0 10px 0;">[Product Name] ([한글명])</h4>
+  <p style="color:#888;margin:0 0 5px 0;">💰 Price: <strong style="color:#fff;">$X.XX</strong></p>
+  <p style="color:#888;margin:0 0 5px 0;">🌶️ Spice Level: <span style="color:#ff6b6b;">[🌶️🌶️🌶️ or Mild/Medium/Hot]</span></p>
+  <p style="color:#e0e0e0;margin:10px 0;font-size:0.95em;">[Brief taste description - 1-2 sentences]</p>
+  <a href="https://www.amazon.com/s?k=[URL-ENCODED-PRODUCT-NAME]+korean+food&i=grocery" target="_blank" rel="nofollow" style="display:inline-block;background:#ff9800;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">🛒 Shop on Amazon →</a>
 </div>
+
+**2. SPICE LEVEL INDICATOR:**
+<div style="display:flex;align-items:center;gap:10px;margin:10px 0;">
+  <span style="color:#888;">Spice Level:</span>
+  <div style="background:#333;border-radius:10px;height:12px;width:150px;overflow:hidden;">
+    <div style="background:linear-gradient(90deg,#ffeb3b,#ff9800,#f44336);width:[LEVEL]%;height:100%;"></div>
+  </div>
+  <span style="color:#ff6b6b;font-weight:bold;">[X/5]</span>
+</div>
+
+**3. TASTE PROFILE TABLE:**
+<table style="width:100%;border-collapse:collapse;background:#1a1a2e;border-radius:8px;overflow:hidden;margin:20px 0;">
+<tr style="background:#ff9800;"><th style="padding:12px;text-align:left;color:#fff;">Flavor</th><th style="padding:12px;text-align:left;color:#fff;">Rating</th><th style="padding:12px;text-align:left;color:#fff;">Notes</th></tr>
+<tr><td style="padding:12px;color:#e0e0e0;">Sweet</td><td style="padding:12px;color:#ff9800;">⭐⭐⭐⭐</td><td style="padding:12px;color:#888;">[notes]</td></tr>
+</table>
+
+**4. COMPARISON TABLE (for multiple products):**
+<table style="width:100%;border-collapse:collapse;background:#1a1a2e;border-radius:8px;overflow:hidden;margin:20px 0;">
+<tr style="background:linear-gradient(135deg,#ff9800,#ff6d00);"><th style="padding:12px;color:#fff;">Product</th><th style="padding:12px;color:#fff;">Price</th><th style="padding:12px;color:#fff;">Spice</th><th style="padding:12px;color:#fff;">Best For</th><th style="padding:12px;color:#fff;">Buy</th></tr>
+<tr><td style="padding:12px;color:#e0e0e0;">[Name]</td><td style="padding:12px;color:#fff;">$X.XX</td><td style="padding:12px;">🌶️🌶️</td><td style="padding:12px;color:#888;">[Use case]</td><td style="padding:12px;"><a href="https://www.amazon.com/s?k=[product]+korean&i=grocery" style="color:#ff9800;">Amazon →</a></td></tr>
+</table>
+
+=== LINK RULES (CRITICAL - NO BROKEN LINKS!) ===
+⚠️ NEVER use placeholder links like "(Shop on Amazon →)" without actual URL!
+⚠️ ALWAYS use Amazon SEARCH URLs (never direct product URLs that may 404):
+   - Format: https://www.amazon.com/s?k=[URL-ENCODED-SEARCH-TERM]+korean+food&i=grocery
+   - Example: https://www.amazon.com/s?k=samyang+buldak+ramen&i=grocery
+   - URL encode spaces as + (not %20)
 
 === Price Format ===
 IMPORTANT: Always include USD:
@@ -2186,6 +2218,57 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 4. **Bullet Points**: Use lists for member info, tracklists, tour dates, merchandise
    - Lists break up text and improve readability score
 
+=== VISUAL TEMPLATES (USE THESE - NO PLAIN TEXT!) ===
+
+**1. MEMBER PROFILE CARD (Required for group introductions):**
+<div style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:20px;margin:20px 0;">
+  <h4 style="color:#ff6b9d;margin:0 0 10px 0;">[Member Name] ([한글명])</h4>
+  <p style="color:#888;margin:0 0 5px 0;">🎤 Position: <strong style="color:#fff;">[Position]</strong></p>
+  <p style="color:#888;margin:0 0 5px 0;">🎂 Birthday: <strong style="color:#fff;">[Date]</strong></p>
+  <p style="color:#888;margin:0 0 5px 0;">✨ Fun Fact: <span style="color:#e0e0e0;">[Interesting tidbit]</span></p>
+</div>
+
+**2. ALBUM/MERCH CARD (Required for product recommendations):**
+<div style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:20px;margin:20px 0;">
+  <h4 style="color:#ff6b9d;margin:0 0 10px 0;">[Album/Merch Name]</h4>
+  <p style="color:#888;margin:0 0 5px 0;">💰 Price: <strong style="color:#fff;">$XX.XX</strong></p>
+  <p style="color:#888;margin:0 0 5px 0;">📦 Includes: <span style="color:#e0e0e0;">[Photobook, CD, Photocards, etc.]</span></p>
+  <p style="color:#e0e0e0;margin:10px 0;font-size:0.95em;">[Brief description]</p>
+  <a href="https://www.amazon.com/s?k=[URL-ENCODED-ARTIST]+[ALBUM-NAME]+album&i=music" target="_blank" rel="nofollow" style="display:inline-block;background:#ff6b9d;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">🛒 Shop on Amazon →</a>
+</div>
+
+**3. DISCOGRAPHY TABLE (for album lists):**
+<table style="width:100%;border-collapse:collapse;background:#1a1a2e;border-radius:8px;overflow:hidden;margin:20px 0;">
+<tr style="background:linear-gradient(135deg,#ff6b9d,#c44569);"><th style="padding:12px;color:#fff;">Album</th><th style="padding:12px;color:#fff;">Year</th><th style="padding:12px;color:#fff;">Type</th><th style="padding:12px;color:#fff;">Title Track</th><th style="padding:12px;color:#fff;">Buy</th></tr>
+<tr><td style="padding:12px;color:#e0e0e0;">[Name]</td><td style="padding:12px;color:#fff;">[Year]</td><td style="padding:12px;color:#888;">[Mini/Full/Single]</td><td style="padding:12px;color:#ff6b9d;">[Song]</td><td style="padding:12px;"><a href="https://www.amazon.com/s?k=[artist]+[album]&i=music" style="color:#ff6b9d;">Amazon →</a></td></tr>
+</table>
+
+**4. STREAMING LINKS BOX:**
+<div style="background:#1a1a2e;border-radius:12px;padding:20px;margin:20px 0;text-align:center;">
+  <h4 style="color:#ff6b9d;margin:0 0 15px 0;">🎧 Stream Now</h4>
+  <a href="https://open.spotify.com/search/[artist]" target="_blank" rel="nofollow" style="display:inline-block;background:#1DB954;color:#fff;padding:10px 15px;border-radius:20px;margin:5px;text-decoration:none;">Spotify</a>
+  <a href="https://music.apple.com/search?term=[artist]" target="_blank" rel="nofollow" style="display:inline-block;background:#FA243C;color:#fff;padding:10px 15px;border-radius:20px;margin:5px;text-decoration:none;">Apple Music</a>
+  <a href="https://www.youtube.com/results?search_query=[artist]+official" target="_blank" rel="nofollow" style="display:inline-block;background:#FF0000;color:#fff;padding:10px 15px;border-radius:20px;margin:5px;text-decoration:none;">YouTube</a>
+</div>
+
+**5. GROUP INFO CARD:**
+<div style="background:linear-gradient(135deg,#ff6b9d,#c44569);border-radius:12px;padding:20px;margin:20px 0;color:#fff;">
+  <h3 style="margin:0 0 15px 0;color:#fff;">✨ [Group Name] Quick Facts</h3>
+  <ul style="list-style:none;padding:0;margin:0;">
+    <li style="margin:8px 0;">🎤 <strong>Debut:</strong> [Date]</li>
+    <li style="margin:8px 0;">👥 <strong>Members:</strong> [Number] ([Names])</li>
+    <li style="margin:8px 0;">💜 <strong>Fandom:</strong> [Fandom Name]</li>
+    <li style="margin:8px 0;">🏢 <strong>Label:</strong> [Agency]</li>
+  </ul>
+</div>
+
+=== LINK RULES (CRITICAL - NO BROKEN LINKS!) ===
+⚠️ NEVER use placeholder links like "(Shop on Amazon →)" without actual URL!
+⚠️ ALWAYS use SEARCH URLs (never direct product URLs that may 404):
+   - Amazon Albums: https://www.amazon.com/s?k=[artist]+[album]+album&i=music
+   - Amazon Merch: https://www.amazon.com/s?k=[artist]+kpop+merchandise
+   - Example: https://www.amazon.com/s?k=BTS+proof+album&i=music
+
 === Avoid ===
 - Dry, analytical tone (NOT a Wikipedia article!)
 - Unofficial/fan-taken photos (copyright risk!)
@@ -2277,6 +2360,54 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 
 4. **Bullet Points**: Use lists for brand names, price ranges, sizing info, shopping links
    - Lists break up text and improve readability score
+
+=== VISUAL TEMPLATES (USE THESE - NO PLAIN TEXT!) ===
+
+**1. PRODUCT CARD (Required for each featured item):**
+<div style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:20px;margin:20px 0;">
+  <h4 style="color:#9b59b6;margin:0 0 10px 0;">[Product/Brand Name]</h4>
+  <p style="color:#888;margin:0 0 5px 0;">💰 Price: <strong style="color:#fff;">$XX - $XX</strong></p>
+  <p style="color:#888;margin:0 0 5px 0;">📏 Sizes: <span style="color:#e0e0e0;">[S-XL or Korean Size Range]</span></p>
+  <p style="color:#e0e0e0;margin:10px 0;font-size:0.95em;">[Brief style description - 1-2 sentences]</p>
+  <a href="https://www.amazon.com/s?k=korean+fashion+[URL-ENCODED-ITEM]" target="_blank" rel="nofollow" style="display:inline-block;background:#9b59b6;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">🛒 Shop on Amazon →</a>
+</div>
+
+**2. SIZE CONVERSION TABLE (Required for sizing guides):**
+<table style="width:100%;border-collapse:collapse;background:#1a1a2e;border-radius:8px;overflow:hidden;margin:20px 0;">
+<tr style="background:linear-gradient(135deg,#9b59b6,#8e44ad);"><th style="padding:12px;color:#fff;">Korean Size</th><th style="padding:12px;color:#fff;">US Size</th><th style="padding:12px;color:#fff;">EU Size</th><th style="padding:12px;color:#fff;">Bust (cm)</th><th style="padding:12px;color:#fff;">Waist (cm)</th></tr>
+<tr><td style="padding:12px;color:#e0e0e0;text-align:center;">44 (S)</td><td style="padding:12px;color:#fff;text-align:center;">XS-S</td><td style="padding:12px;color:#888;text-align:center;">34</td><td style="padding:12px;color:#888;text-align:center;">80-84</td><td style="padding:12px;color:#888;text-align:center;">60-64</td></tr>
+<tr><td style="padding:12px;color:#e0e0e0;text-align:center;">55 (M)</td><td style="padding:12px;color:#fff;text-align:center;">S-M</td><td style="padding:12px;color:#888;text-align:center;">36</td><td style="padding:12px;color:#888;text-align:center;">84-88</td><td style="padding:12px;color:#888;text-align:center;">64-68</td></tr>
+<tr><td style="padding:12px;color:#e0e0e0;text-align:center;">66 (L)</td><td style="padding:12px;color:#fff;text-align:center;">M-L</td><td style="padding:12px;color:#888;text-align:center;">38</td><td style="padding:12px;color:#888;text-align:center;">88-92</td><td style="padding:12px;color:#888;text-align:center;">68-72</td></tr>
+</table>
+
+**3. STYLE COMPARISON TABLE (for multiple items):**
+<table style="width:100%;border-collapse:collapse;background:#1a1a2e;border-radius:8px;overflow:hidden;margin:20px 0;">
+<tr style="background:linear-gradient(135deg,#9b59b6,#8e44ad);"><th style="padding:12px;color:#fff;">Brand</th><th style="padding:12px;color:#fff;">Price Range</th><th style="padding:12px;color:#fff;">Style</th><th style="padding:12px;color:#fff;">Best For</th><th style="padding:12px;color:#fff;">Shop</th></tr>
+<tr><td style="padding:12px;color:#e0e0e0;">[Brand]</td><td style="padding:12px;color:#fff;">$XX-$XX</td><td style="padding:12px;color:#888;">[Minimalist/Streetwear/etc]</td><td style="padding:12px;color:#888;">[Body type/occasion]</td><td style="padding:12px;"><a href="https://www.yesstyle.com/en/search?q=[brand]" style="color:#9b59b6;">YesStyle →</a></td></tr>
+</table>
+
+**4. STYLE TIP BOX:**
+<div style="background:#f8f4ff;border-left:4px solid #9b59b6;padding:15px;margin:20px 0;border-radius:4px;">
+  <strong>💡 K-Fashion Styling Tip:</strong><br>
+  <span style="color:#333;">[Practical styling advice - 1-2 sentences]</span>
+</div>
+
+**5. CELEBRITY LOOK BOX:**
+<div style="background:linear-gradient(135deg,#9b59b6,#8e44ad);border-radius:12px;padding:20px;margin:20px 0;color:#fff;">
+  <h4 style="margin:0 0 10px 0;color:#fff;">✨ Get the [Celebrity Name] Look</h4>
+  <p style="margin:0 0 10px 0;">As seen in [K-Drama/Event]:</p>
+  <ul style="margin:0;padding-left:20px;">
+    <li>[Item 1] - <a href="https://www.amazon.com/s?k=korean+fashion+[item]" style="color:#fff;text-decoration:underline;">Shop Similar →</a></li>
+    <li>[Item 2] - <a href="https://www.amazon.com/s?k=korean+fashion+[item]" style="color:#fff;text-decoration:underline;">Shop Similar →</a></li>
+  </ul>
+</div>
+
+=== LINK RULES (CRITICAL - NO BROKEN LINKS!) ===
+⚠️ NEVER use placeholder links like "(Shop YesStyle →)" without actual URL!
+⚠️ ALWAYS use SEARCH URLs (never direct product URLs that may 404):
+   - Amazon: https://www.amazon.com/s?k=korean+fashion+[item]
+   - YesStyle: https://www.yesstyle.com/en/search?q=[brand+or+item]
+   - Example: https://www.amazon.com/s?k=korean+fashion+oversized+blazer
 
 === Avoid ===
 - Korean-only sizing without conversion

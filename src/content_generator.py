@@ -1909,6 +1909,33 @@ Example links:
 
 IMPORTANT: Replace [product+name] with URL-encoded product name!
 
+=== RATING/SCORE FORMAT (REQUIRED!) ===
+When showing product ratings or ingredient scores, use this EXACT format:
+
+<div class="rating-card" style="background:#1a1a2e;border-radius:12px;padding:20px;margin:20px 0;">
+  <h4 style="color:#ff6b9d;margin:0 0 10px 0;">[Ingredient Name]</h4>
+  <p style="color:#888;margin:0 0 8px 0;">[Category]: <strong style="color:#fff;">[Score]/10</strong></p>
+  <div style="background:#333;border-radius:10px;height:12px;overflow:hidden;">
+    <div style="background:linear-gradient(90deg,#ff6b9d,#c44569);width:[Score*10]%;height:100%;border-radius:10px;"></div>
+  </div>
+  <p style="color:#e0e0e0;margin:10px 0 0 0;font-size:0.95em;">[Description]</p>
+</div>
+
+Example:
+<div class="rating-card" style="background:#1a1a2e;border-radius:12px;padding:20px;margin:20px 0;">
+  <h4 style="color:#ff6b9d;margin:0 0 10px 0;">Vitamin C</h4>
+  <p style="color:#888;margin:0 0 8px 0;">Brightening: <strong style="color:#fff;">9.5/10</strong></p>
+  <div style="background:#333;border-radius:10px;height:12px;overflow:hidden;">
+    <div style="background:linear-gradient(90deg,#ff6b9d,#c44569);width:95%;height:100%;border-radius:10px;"></div>
+  </div>
+  <p style="color:#e0e0e0;margin:10px 0 0 0;font-size:0.95em;">Boosts natural radiance and evens skin tone.</p>
+</div>
+
+IMPORTANT:
+- Ingredient name (h4) goes ABOVE the score, NOT beside it
+- Progress bar width = score × 10 (e.g., 9.5/10 = 95%)
+- Each ingredient gets its own card with proper vertical layout
+
 === Tone ===
 - Friendly, enthusiastic but informative
 - Explain Korean beauty concepts for beginners

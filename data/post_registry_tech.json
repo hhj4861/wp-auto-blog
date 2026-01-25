@@ -220,5 +220,19 @@
     "category": "AI Tools",
     "identifier": "claude code",
     "created_at": "2026-01-20T23:44:47.657346"
+  },
+  {
+    "topic": "BirdyChat becomes first European chat app that is interoperable with WhatsApp",
+    "title": "BirdyChat: First European Chat with WhatsApp Interoperability",
+    "keywords": [
+      "birdychat",
+      "becomes",
+      "first",
+      "european",
+      "chat"
+    ],
+    "category": "AI Tools",
+    "identifier": "birdychat",
+    "created_at": "2026-01-25T10:40:59.958278"
   }
 ]

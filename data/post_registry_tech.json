@@ -234,5 +234,19 @@
     "category": "AI Tools",
     "identifier": "birdychat",
     "created_at": "2026-01-25T10:40:59.958278"
+  },
+  {
+    "topic": "ICE using Palantir tool that feeds on Medicaid data",
+    "title": "ICE Using Palantir Tool That Feeds on Medicaid Data: Critical 2026 Analysis",
+    "keywords": [
+      "ice",
+      "using",
+      "palantir",
+      "tool",
+      "feeds"
+    ],
+    "category": "AI Tools",
+    "identifier": "ice",
+    "created_at": "2026-01-26T10:50:24.127206"
   }
 ]

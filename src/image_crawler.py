@@ -173,6 +173,16 @@ class ImageCrawler:
         Returns:
             CrawledImage if found, None otherwise
         """
+        # Sanitize query - remove markdown and special characters
+        query = re.sub(r'\*+', '', query)  # Remove asterisks (markdown bold/italic)
+        query = re.sub(r'[#_~`]', '', query)  # Remove other markdown chars
+        query = re.sub(r'\s+', ' ', query).strip()  # Normalize whitespace
+        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
+        query = query.strip()
+
+        if not query:
+            return None
+
         # Olive Young Global API endpoint
         api_url = "https://global.oliveyoung.com/display/product/best-seller/order-best"
         params = {
@@ -255,6 +265,16 @@ class ImageCrawler:
         Returns:
             List of CrawledImage objects
         """
+        # Sanitize query - remove markdown and special characters
+        query = re.sub(r'\*+', '', query)
+        query = re.sub(r'[#_~`]', '', query)
+        query = re.sub(r'\s+', ' ', query).strip()
+        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
+        query = query.strip()
+
+        if not query:
+            return []
+
         api_url = "https://global.oliveyoung.com/display/product/best-seller/order-best"
         params = {
             "curLangCode": "en",
@@ -462,6 +482,16 @@ class ImageCrawler:
         Returns:
             List of CrawledImage objects from the matched product
         """
+        # Sanitize query - remove markdown and special characters
+        query = re.sub(r'\*+', '', query)
+        query = re.sub(r'[#_~`]', '', query)
+        query = re.sub(r'\s+', ' ', query).strip()
+        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
+        query = query.strip()
+
+        if not query:
+            return []
+
         # First, find matching product from bestseller API
         api_url = "https://global.oliveyoung.com/display/product/best-seller/order-best"
         params = {

@@ -1618,6 +1618,10 @@ DO NOT use Markdown. Use only HTML tags."""
         # Sanitize external links - remove hallucinated URLs, keep only verified domains
         html = self._sanitize_external_links(html)
 
+        # Fix shopping links - ensure placeholder links have actual URLs
+        if mode == "kculture":
+            html = self._fix_shopping_links(html, topic, category or "")
+
         # Fix benchmark anchor links - ensure proper <a href="#benchmark-methodology"> tags
         html = self._fix_benchmark_anchor_links(html)
 
@@ -2924,6 +2928,133 @@ Be specific and factual based on search results. Always use the most recent vers
             logger.info(f"Sanitized {removed_count} unverified external links (kept {remaining_links} safe links)")
 
         return result
+
+    def _fix_shopping_links(self, html: str, topic: str, category: str) -> str:
+        """Fix placeholder shopping links with actual URLs.
+
+        LLMs often fail to generate proper shopping links, outputting:
+        - "(Shop on Amazon →)" without actual href
+        - Links with [product+name] placeholder not replaced
+        - Empty href attributes
+
+        This function fixes these issues by:
+        1. Finding shopping link patterns without proper URLs
+        2. Generating actual search URLs based on product context
+
+        Args:
+            html: HTML content with potentially broken shopping links
+            topic: Topic/product name for generating search URLs
+            category: K-Culture category for choosing appropriate stores
+
+        Returns:
+            HTML with fixed shopping links
+        """
+        import re
+        import urllib.parse
+
+        # Clean topic for URL encoding
+        clean_topic = re.sub(r'\*+', '', topic)
+        clean_topic = re.sub(r'[#_~`]', '', clean_topic)
+        clean_topic = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', clean_topic, flags=re.IGNORECASE)
+        clean_topic = clean_topic.strip()
+
+        # Extract key product terms (first 3-4 meaningful words)
+        words = [w for w in clean_topic.split() if len(w) >= 3][:4]
+        search_term = " ".join(words) if words else clean_topic[:50]
+        encoded_term = urllib.parse.quote(search_term)
+
+        # Category-specific search terms
+        category_suffix = {
+            "K-Beauty": "+korean+skincare",
+            "K-Food": "+korean+food",
+            "K-Pop": "+kpop+album",
+            "K-Fashion": "+korean+fashion",
+        }.get(category, "")
+
+        amazon_url = f"https://www.amazon.com/s?k={encoded_term}{category_suffix}"
+        yesstyle_url = f"https://www.yesstyle.com/en/search?q={encoded_term}"
+
+        fixed_count = 0
+
+        # Pattern 1: Fix "(Shop on Amazon →)" or "Shop on Amazon →" without links
+        # Match: text like "Shop on Amazon" that's NOT inside an <a> tag
+        def fix_amazon_text(match):
+            nonlocal fixed_count
+            text = match.group(0)
+            # Check if already inside an anchor tag (look for href before)
+            if 'href=' in html[max(0, match.start()-100):match.start()]:
+                return text
+            fixed_count += 1
+            return f'<a href="{amazon_url}" target="_blank" rel="nofollow" style="color:#ff6b9d;">Shop on Amazon →</a>'
+
+        # Only fix if not already a proper link
+        html = re.sub(
+            r'\(?\s*Shop\s+on\s+Amazon\s*→?\s*\)?(?!</a>)',
+            fix_amazon_text,
+            html,
+            flags=re.IGNORECASE
+        )
+
+        # Pattern 2: Fix YesStyle placeholder links
+        def fix_yesstyle_text(match):
+            nonlocal fixed_count
+            text = match.group(0)
+            if 'href=' in html[max(0, match.start()-100):match.start()]:
+                return text
+            fixed_count += 1
+            return f'<a href="{yesstyle_url}" target="_blank" rel="nofollow" style="color:#9b59b6;">YesStyle →</a>'
+
+        html = re.sub(
+            r'\(?\s*YesStyle\s*→?\s*\)?(?!</a>)',
+            fix_yesstyle_text,
+            html,
+            flags=re.IGNORECASE
+        )
+
+        # Pattern 3: Fix empty href="" or href="#" in shopping links
+        def fix_empty_href(match):
+            nonlocal fixed_count
+            full_match = match.group(0)
+            link_text = match.group(1).lower() if match.group(1) else ""
+
+            if 'amazon' in link_text:
+                fixed_count += 1
+                return f'href="{amazon_url}"'
+            elif 'yesstyle' in link_text:
+                fixed_count += 1
+                return f'href="{yesstyle_url}"'
+            return full_match
+
+        # Match href="" or href="#" followed by link text containing amazon/yesstyle
+        html = re.sub(
+            r'href=["\'](#|)["\']\s*[^>]*>([^<]*(?:amazon|yesstyle)[^<]*)</a>',
+            lambda m: f'href="{amazon_url if "amazon" in m.group(2).lower() else yesstyle_url}">{m.group(2)}</a>',
+            html,
+            flags=re.IGNORECASE
+        )
+
+        # Pattern 4: Fix [product+name] or [URL-ENCODED...] placeholders in URLs
+        def fix_placeholder_url(match):
+            nonlocal fixed_count
+            url = match.group(1)
+            if '[' in url or 'URL-ENCODED' in url or 'product+name' in url.lower():
+                fixed_count += 1
+                if 'amazon' in url.lower():
+                    return f'href="{amazon_url}"'
+                elif 'yesstyle' in url.lower():
+                    return f'href="{yesstyle_url}"'
+            return match.group(0)
+
+        html = re.sub(
+            r'href=["\']([^"\']*\[[^\]]+\][^"\']*)["\']',
+            fix_placeholder_url,
+            html
+        )
+
+        if fixed_count > 0:
+            logger.info(f"Fixed {fixed_count} shopping links for: {search_term[:30]}...")
+
+        return html
 
     def _fix_benchmark_anchor_links(self, html: str) -> str:
         """Post-process to ensure benchmark/methodology anchor links are properly implemented.

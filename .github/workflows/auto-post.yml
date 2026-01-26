@@ -47,8 +47,8 @@ on:
     - cron: '0 17 * * 0,2,4,5'  # kpop
     # K-Beauty: 화/목/금/토 새벽 (KST) = 월/수/목/금 18:00 UTC
     - cron: '0 18 * * 1,3,4,5'  # kbeauty
-    # K-Fashion: 금/토 새벽 (KST) = 목/금 19:00 UTC
-    - cron: '0 19 * * 4,5'  # kfashion
+    # K-Fashion: 목/금/토 새벽 (KST) = 수/목/금 19:00 UTC
+    - cron: '0 19 * * 3,4,5'  # kfashion
     # K-Food: 로컬에서 실행 (Amazon 크롤링용 주거용 IP 필요)
 
 jobs:
@@ -467,11 +467,11 @@ jobs:
           path: data/logs/
           retention-days: 7
 
-  # K-Fashion: 금/토 04:00 KST (19:00 UTC 전날)
+  # K-Fashion: 목/금/토 04:00 KST (19:00 UTC 전날)
   post-kfashion:
     if: |
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Fashion' ||
-      (github.event_name == 'schedule' && github.event.schedule == '0 19 * * 4,5')
+      (github.event_name == 'schedule' && github.event.schedule == '0 19 * * 3,4,5')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 

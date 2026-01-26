@@ -569,6 +569,199 @@ class TrendDetector:
         logger.info("Web search returned no results, falling back to LLM generation...")
         return self._generate_kculture_topics_with_llm()
 
+    def generate_career_topics(self) -> list[Topic]:
+        """Generate career/employment topics using LLM.
+
+        Generates topics about:
+        1. Foreign airlines (Emirates, Qatar, Singapore Airlines, etc.)
+        2. Domestic airlines (Korean Air, Asiana, LCCs)
+        3. Other employment (tech companies, public sector, etc.)
+
+        Returns:
+            List of generated Topic objects for career category
+        """
+        logger.info("Generating career topics with LLM...")
+        return self._generate_career_topics_with_llm()
+
+    def _generate_career_topics_with_llm(self) -> list[Topic]:
+        """Generate career topics using LLM.
+
+        Returns:
+            List of generated Topic objects
+        """
+        existing_posts = self._load_existing_posts()
+        existing_posts_section = ""
+
+        # Include ALL existing posts for duplicate detection
+        if existing_posts:
+            existing_list = "\n".join([
+                f"- {p['title']} [핵심키워드: {p['identifier']}]" if p.get('identifier') else f"- {p['title']}"
+                for p in existing_posts
+            ])
+            existing_identifiers = [p['identifier'] for p in existing_posts if p.get('identifier')]
+            identifiers_str = ", ".join(existing_identifiers) if existing_identifiers else "없음"
+
+            existing_posts_section = f"""
+## ⚠️ 중요: 이미 발행된 포스트 (절대 중복 금지!)
+다음 주제와 **의미적으로 유사한 토픽은 절대 생성하지 마세요**:
+{existing_list}
+
+🚫 기존 핵심키워드: {identifiers_str}
+→ 위 핵심키워드와 동일하거나 유사한 토픽은 반드시 제외!
+
+"""
+
+        prompt = f"""당신은 취업정보 블로그 콘텐츠 전략가입니다.
+{existing_posts_section}
+
+## 토픽 생성 우선순위
+
+### 1순위: 외항사 (아직 포스팅 안 된 항공사)
+중동:
+- 에미레이트 ✅ (발행됨)
+- 카타르 ✅ (발행됨)
+- 에티하드 ✅ (발행됨)
+
+아시아:
+- 싱가포르항공 ✅ (발행됨)
+- 캐세이퍼시픽 ✅ (발행됨)
+- ANA (전일본공수)
+- JAL (일본항공)
+- 타이항공
+- 스쿠트
+
+미주/유럽:
+- 루프트한자
+- 에어프랑스
+- 영국항공 (British Airways)
+- 델타항공
+- 유나이티드항공
+
+### 2순위: 국내 항공사
+- 대한항공
+- 아시아나항공
+- 진에어
+- 제주항공
+- 티웨이항공
+- 에어부산
+- 에어서울
+
+### 3순위: 기타 취업정보 (시즌별)
+- IT 대기업: 삼성전자, 네이버, 카카오, 쿠팡 등 공채
+- 공기업: 한국전력, 코레일, 인천공항공사 등
+- 외국계 기업: 구글코리아, 마이크로소프트 등
+
+## 제목 작성 규칙
+- 형식: "2026 [항공사/회사명] [직종] 채용 [내용] 총정리"
+- 예시:
+  - "2026 ANA 전일본공수 승무원 채용 시험일정 및 합격스펙 총정리"
+  - "2026 루프트한자 항공 승무원 채용 면접 준비 완벽 가이드"
+  - "2026 대한항공 신입 승무원 채용 합격 전략 총정리"
+
+## 응답 형식 (정확히 이 형식으로):
+1. [토픽 이름]
+- 카테고리: 취업
+- 제안 제목: [SEO 최적화된 한국어 제목, 50자 이내]
+- 키워드: [5개의 관련 키워드, 쉼표로 구분]
+- 이유: [왜 이 토픽이 가치있는지 1줄 설명]
+
+기존 포스트와 중복되지 않는 새로운 취업정보 토픽 3개를 생성해주세요."""
+
+        try:
+            result = self._call_claude_sdk(prompt)
+
+            if not result:
+                logger.warning("LLM returned no career topics")
+                return []
+
+            logger.debug(f"LLM career response:\n{result[:1000]}...")
+
+            # Parse generated topics
+            topics = self._parse_generated_career_topics(result)
+            logger.info(f"Generated {len(topics)} career topics")
+            return topics
+
+        except Exception as e:
+            logger.error(f"Failed to generate career topics: {e}")
+            import traceback
+            logger.debug(traceback.format_exc())
+            return []
+
+    def _parse_generated_career_topics(self, llm_response: str) -> list[Topic]:
+        """Parse LLM-generated career topics.
+
+        Args:
+            llm_response: Raw LLM response
+
+        Returns:
+            List of Topic objects
+        """
+        topics = []
+        lines = llm_response.split('\n')
+
+        current_topic = None
+        current_title = None
+        current_keywords = []
+
+        for line in lines:
+            line = line.strip()
+
+            # Match topic number and name (various formats)
+            # Formats: "1. Topic", "## 1. Topic", "**1. Topic**"
+            topic_match = re.match(r'^[#\*]*\s*(\d+)\.\s*(.+)$', line)
+            if topic_match and not line.startswith('- '):
+                # Save previous topic if exists
+                if current_topic and current_title:
+                    topics.append(Topic(
+                        topic=current_title,
+                        source=TrendSource.GOOGLE_TRENDS,  # Placeholder source
+                        keywords=current_keywords if current_keywords else self._extract_keywords(current_title),
+                        score=85,
+                        suggested_title=current_title,
+                        category="취업",
+                    ))
+
+                current_topic = topic_match.group(2).strip().strip('*')
+                # If no separate title line, use topic as title
+                current_title = current_topic
+                current_keywords = []
+                logger.debug(f"Found career topic: {current_topic}")
+                continue
+
+            # Match suggested title (제안 제목) - handle **bold** markers
+            if '제안' in line and '제목' in line:
+                # Remove markdown bold markers
+                clean_line = re.sub(r'\*\*', '', line)
+                title_match = re.search(r'제안\s*제목[^:：]*[:：]\s*(.+)', clean_line)
+                if title_match:
+                    current_title = title_match.group(1).strip().strip('"\'')
+                    logger.debug(f"Found career title: {current_title}")
+                continue
+
+            # Match keywords (키워드) - handle **bold** markers
+            if '키워드' in line:
+                # Remove markdown bold markers
+                clean_line = re.sub(r'\*\*', '', line)
+                kw_match = re.search(r'키워드[^:：]*[:：]\s*(.+)', clean_line)
+                if kw_match:
+                    kw_str = kw_match.group(1).strip()
+                    current_keywords = [k.strip() for k in kw_str.split(',')]
+                    logger.debug(f"Found keywords: {current_keywords}")
+                continue
+
+        # Add last topic
+        if current_topic and current_title:
+            topics.append(Topic(
+                topic=current_title,
+                source=TrendSource.GOOGLE_TRENDS,
+                keywords=current_keywords if current_keywords else self._extract_keywords(current_title),
+                score=85,
+                suggested_title=current_title,
+                category="취업",
+            ))
+
+        return topics
+
     def _fetch_kculture_web_trends(self) -> list[Topic]:
         """Fetch K-Culture trends using Tavily web search API.
 

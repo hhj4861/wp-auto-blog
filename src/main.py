@@ -27,7 +27,7 @@ from loguru import logger
 
 from src.pipeline import BlogPipeline, PipelineConfig
 from src.content_generator import ContentType, ContentConfig
-from src.trend_detector import TrendConfig, TrendMode
+from src.trend_detector import TrendConfig, TrendMode, TrendDetector
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -254,8 +254,42 @@ def main() -> int:
                     break
 
             if not pending_topic:
-                logger.info("No pending topics in queue")
-                return 0
+                # For general mode, dynamically generate career topics
+                if args.mode == "general":
+                    logger.info("No pending topics in queue, generating career topics...")
+
+                    # Create TrendDetector with general mode config
+                    detector = TrendDetector(config=trend_config)
+                    generated_topics = detector.generate_career_topics()
+
+                    if not generated_topics:
+                        logger.warning("Failed to generate career topics")
+                        return 0
+
+                    # Use the first generated topic
+                    generated = generated_topics[0]
+                    logger.info(f"Generated topic: {generated.suggested_title}")
+
+                    # Create pending_topic dict from generated Topic
+                    pending_topic = {
+                        "topic": generated.suggested_title,
+                        "keywords": generated.keywords,
+                        "category": generated.category,
+                        "status": "generated",  # Mark as dynamically generated
+                    }
+                    pending_index = -1  # No queue index for generated topics
+
+                    # Optionally add to queue file for tracking
+                    queue.append({
+                        **pending_topic,
+                        "generated_at": __import__("datetime").datetime.now().isoformat(),
+                    })
+                    with open(queue_file, "w", encoding="utf-8") as f:
+                        json.dump(queue, f, ensure_ascii=False, indent=2)
+                    logger.info("Added generated topic to queue for tracking")
+                else:
+                    logger.info("No pending topics in queue")
+                    return 0
 
             logger.info(f"Processing from queue: {pending_topic['topic']}")
 
@@ -268,8 +302,15 @@ def main() -> int:
 
             # Update queue status
             if result.success:
-                queue[pending_index]["status"] = "completed"
-                queue[pending_index]["completed_at"] = __import__("datetime").datetime.now().isoformat()
+                if pending_index >= 0:
+                    # Update existing queue item
+                    queue[pending_index]["status"] = "completed"
+                    queue[pending_index]["completed_at"] = __import__("datetime").datetime.now().isoformat()
+                else:
+                    # For generated topics, update the last item (which was just added)
+                    queue[-1]["status"] = "completed"
+                    queue[-1]["completed_at"] = __import__("datetime").datetime.now().isoformat()
+
                 with open(queue_file, "w", encoding="utf-8") as f:
                     json.dump(queue, f, ensure_ascii=False, indent=2)
                 logger.info(f"Queue updated: marked as completed")

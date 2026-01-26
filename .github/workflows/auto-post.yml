@@ -42,14 +42,13 @@ on:
     # 외항사 포스팅: 02:00 UTC (11:00 KST) - 월/수/금
     - cron: '0 2 * * 1,3,5'
 
-    # === K-Culture (bytepulse.io) - KST 08:30 아침 스케줄로 통합 ===
-    # 23:30 UTC = 08:30 KST (다음날)
-    # K-Pop: 월/수/금/토 아침 (KST) = 일/화/목/금 23:30 UTC
-    - cron: '30 23 * * 0,2,4,5'  # kpop: 월/수/금/토
-    # K-Beauty: 화/목/금/토 아침 (KST) = 월/수/목/금 23:30 UTC
-    - cron: '30 23 * * 1,3,4,5'  # kbeauty: 화/목/금/토
-    # K-Fashion: 금/토 아침 (KST) = 목/금 23:30 UTC
-    - cron: '30 23 * * 4,5'  # kfashion: 금/토
+    # === K-Culture (bytepulse.io) - 테스트용 임시 스케줄 ===
+    # K-Pop: 테스트
+    - cron: '36 22 * * 1'  # kpop: 테스트 (월요일 22:36 UTC)
+    # K-Beauty: 테스트
+    - cron: '37 22 * * 1'  # kbeauty: 테스트 (월요일 22:37 UTC)
+    # K-Fashion: 테스트
+    - cron: '38 22 * * 1'  # kfashion: 테스트 (월요일 22:38 UTC)
     # K-Food: 로컬에서 실행 (Amazon 크롤링용 주거용 IP 필요)
 
 jobs:
@@ -240,11 +239,11 @@ jobs:
   # K-Culture Categories (bytepulse.io)
   # ============================================
 
-  # K-Pop: 월/수/금/토 아침 (KST 08:30)
+  # K-Pop: 테스트
   post-kpop:
     if: |
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Pop' ||
-      (github.event_name == 'schedule' && github.event.schedule == '30 23 * * 0,2,4,5')
+      (github.event_name == 'schedule' && github.event.schedule == '36 22 * * 1')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -315,11 +314,11 @@ jobs:
           path: data/logs/
           retention-days: 7
 
-  # K-Beauty: 화/목/금/토 아침 (KST 08:30)
+  # K-Beauty: 테스트
   post-kbeauty:
     if: |
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Beauty' ||
-      (github.event_name == 'schedule' && github.event.schedule == '30 23 * * 1,3,4,5')
+      (github.event_name == 'schedule' && github.event.schedule == '37 22 * * 1')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -468,11 +467,11 @@ jobs:
           path: data/logs/
           retention-days: 7
 
-  # K-Fashion: 금/토 아침 (KST 08:30)
+  # K-Fashion: 테스트
   post-kfashion:
     if: |
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Fashion' ||
-      (github.event_name == 'schedule' && github.event.schedule == '30 23 * * 4,5')
+      (github.event_name == 'schedule' && github.event.schedule == '38 22 * * 1')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 

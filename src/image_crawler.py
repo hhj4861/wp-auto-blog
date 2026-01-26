@@ -81,6 +81,21 @@ class ImageCrawler:
         ...     print(f"Found: {image.product_name} - {image.url}")
     """
 
+    # K-Beauty keyword mappings for Olive Young search optimization
+    # Maps common topic keywords to actual product ingredient names
+    KBEAUTY_KEYWORD_MAPPINGS = {
+        'ceramic skincare': 'ceramide',
+        'ceramic tools': 'ceramide',
+        'ceramic': 'ceramide',
+        'snail': 'snail mucin',
+        'centella': 'cica',
+        'vitamin c': 'vita c',
+        'hyaluronic': 'hyalu',
+        'retinol': 'retinal',
+        'niacinamide': 'niacin',
+        'propolis': 'honey',
+    }
+
     def __init__(self, use_playwright: bool = True):
         """Initialize crawler.
 
@@ -112,6 +127,49 @@ class ImageCrawler:
         if self._browser:
             self._browser.close()
             self._browser = None
+
+    def _normalize_kbeauty_query(self, query: str) -> str:
+        """Normalize and map K-Beauty keywords for better search results.
+
+        Applies keyword mappings to convert topic keywords to actual
+        product ingredient names that Olive Young recognizes.
+
+        Args:
+            query: Raw search query
+
+        Returns:
+            Normalized query with mapped keywords
+        """
+        # Sanitize - remove markdown and special characters
+        query = re.sub(r'\*+', '', query)
+        query = re.sub(r'[#_~`]', '', query)
+        query = re.sub(r'\s+', ' ', query).strip()
+        query = re.sub(
+            r'\b(2025|2026|trends?|guide|review|best|top|ultimate|korean?|k-beauty)\b',
+            '', query, flags=re.IGNORECASE
+        )
+        query = query.strip()
+
+        # Apply keyword mappings
+        query_lower = query.lower()
+        for pattern, replacement in self.KBEAUTY_KEYWORD_MAPPINGS.items():
+            if pattern in query_lower:
+                query = re.sub(pattern, replacement, query, flags=re.IGNORECASE)
+                query_lower = query.lower()  # Update for next iteration
+                logger.debug(f"K-Beauty keyword mapping: '{pattern}' -> '{replacement}'")
+
+        # Remove duplicate words (case-insensitive)
+        words = query.split()
+        seen = set()
+        unique_words = []
+        for word in words:
+            word_lower = word.lower()
+            if word_lower not in seen:
+                seen.add(word_lower)
+                unique_words.append(word)
+        query = ' '.join(unique_words)
+
+        return query.strip()
         if self._playwright:
             self._playwright.stop()
             self._playwright = None
@@ -173,13 +231,7 @@ class ImageCrawler:
         Returns:
             CrawledImage if found, None otherwise
         """
-        # Sanitize query - remove markdown and special characters
-        query = re.sub(r'\*+', '', query)  # Remove asterisks (markdown bold/italic)
-        query = re.sub(r'[#_~`]', '', query)  # Remove other markdown chars
-        query = re.sub(r'\s+', ' ', query).strip()  # Normalize whitespace
-        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
-        query = query.strip()
-
+        query = self._normalize_kbeauty_query(query)
         if not query:
             return None
 
@@ -265,13 +317,7 @@ class ImageCrawler:
         Returns:
             List of CrawledImage objects
         """
-        # Sanitize query - remove markdown and special characters
-        query = re.sub(r'\*+', '', query)
-        query = re.sub(r'[#_~`]', '', query)
-        query = re.sub(r'\s+', ' ', query).strip()
-        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
-        query = query.strip()
-
+        query = self._normalize_kbeauty_query(query)
         if not query:
             return []
 
@@ -482,13 +528,7 @@ class ImageCrawler:
         Returns:
             List of CrawledImage objects from the matched product
         """
-        # Sanitize query - remove markdown and special characters
-        query = re.sub(r'\*+', '', query)
-        query = re.sub(r'[#_~`]', '', query)
-        query = re.sub(r'\s+', ' ', query).strip()
-        query = re.sub(r'\b(2025|2026|trends?|guide|review|best|top|ultimate)\b', '', query, flags=re.IGNORECASE)
-        query = query.strip()
-
+        query = self._normalize_kbeauty_query(query)
         if not query:
             return []
 

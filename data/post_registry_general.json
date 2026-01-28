@@ -566,5 +566,18 @@
     "category": "테크",
     "identifier": "히드로",
     "created_at": "2026-01-28T10:48:28.194488"
+  },
+  {
+    "topic": "Microsoft forced me to switch to Linux",
+    "title": "Microsoft forced me to switch to Linux",
+    "keywords": [
+      "microsoft",
+      "forced",
+      "switch",
+      "linux"
+    ],
+    "category": "취업",
+    "identifier": "microsoft",
+    "created_at": "2026-01-28T23:44:19.052686"
   }
 ]

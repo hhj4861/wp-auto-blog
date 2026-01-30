@@ -621,5 +621,15 @@
     "category": "비즈니스",
     "identifier": "애플",
     "created_at": "2026-01-30T10:50:54.068388"
+  },
+  {
+    "topic": "Moltbook",
+    "title": "Moltbook",
+    "keywords": [
+      "moltbook"
+    ],
+    "category": "테크",
+    "identifier": "moltbook",
+    "created_at": "2026-01-30T23:42:50.007643"
   }
 ]

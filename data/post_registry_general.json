@@ -641,5 +641,19 @@
     "category": "테크",
     "identifier": "antirender",
     "created_at": "2026-01-31T10:46:37.783943"
+  },
+  {
+    "topic": "Euro firms must ditch Uncle Sam's clouds and go EU-native",
+    "title": "Euro firms must ditch",
+    "keywords": [
+      "euro",
+      "firms",
+      "ditch",
+      "uncle",
+      "sam"
+    ],
+    "category": "테크",
+    "identifier": "euro",
+    "created_at": "2026-01-31T23:42:35.986388"
   }
 ]

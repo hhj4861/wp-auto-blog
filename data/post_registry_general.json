@@ -655,5 +655,19 @@
     "category": "테크",
     "identifier": "euro",
     "created_at": "2026-01-31T23:42:35.986388"
+  },
+  {
+    "topic": "Mobile carriers can get your GPS location",
+    "title": "Mobile carriers can get your GPS location",
+    "keywords": [
+      "mobile",
+      "carriers",
+      "get",
+      "gps",
+      "location"
+    ],
+    "category": "테크",
+    "identifier": "mobile",
+    "created_at": "2026-02-01T10:47:42.382071"
   }
 ]

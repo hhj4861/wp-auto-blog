@@ -693,5 +693,15 @@
     "category": "테크",
     "identifier": "netbird",
     "created_at": "2026-02-02T10:51:08.936227"
+  },
+  {
+    "topic": "2026 개발자들이 주목하는 Codex 앱, 코드 관리 생산성 3배 높이는 법",
+    "title": "2026 개발자들이 주목하는 Codex 앱, 코드 관리 생산성 3배 높이는 법",
+    "keywords": [
+      "codex"
+    ],
+    "category": "생산성",
+    "identifier": "codex",
+    "created_at": "2026-02-03T10:51:06.563900"
   }
 ]

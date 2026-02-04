@@ -286,5 +286,19 @@
     "category": "Dev Productivity",
     "identifier": "xcode ai",
     "created_at": "2026-02-04T10:51:24.654592"
+  },
+  {
+    "topic": "The Codex vs Cursor vs Windsurf: 2026 AI IDE Battle",
+    "title": "Cursor vs Windsurf vs Codex: 2026 AI IDE Performance Battle",
+    "keywords": [
+      "codex",
+      "cursor",
+      "windsurf",
+      "ide",
+      "battle"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "the codex",
+    "created_at": "2026-02-04T23:46:58.861978"
   }
 ]

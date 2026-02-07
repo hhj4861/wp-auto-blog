@@ -780,5 +780,19 @@
     "category": "테크",
     "identifier": "waymo ai",
     "created_at": "2026-02-07T10:46:57.472093"
+  },
+  {
+    "topic": "자전거 정비 바이블, 셸던 브라운 기술 가이드 완벽 정리",
+    "title": "자전거 정비 바이블, 셸던 브라운 기술 가이드 완벽 정리",
+    "keywords": [
+      "sheldon",
+      "brown",
+      "bicycle",
+      "technical",
+      "info"
+    ],
+    "category": "리뷰",
+    "identifier": "자전거",
+    "created_at": "2026-02-07T23:48:24.335223"
   }
 ]

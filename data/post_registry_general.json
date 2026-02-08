@@ -794,5 +794,16 @@
     "category": "리뷰",
     "identifier": "자전거",
     "created_at": "2026-02-07T23:48:24.335223"
+  },
+  {
+    "topic": "We mourn our craft",
+    "title": "We mourn our craft",
+    "keywords": [
+      "mourn",
+      "craft"
+    ],
+    "category": "테크",
+    "identifier": "we",
+    "created_at": "2026-02-08T23:47:46.160666"
   }
 ]

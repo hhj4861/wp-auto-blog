@@ -327,5 +327,18 @@
     "category": "AI Tools",
     "identifier": "gpt",
     "created_at": "2026-02-06T23:45:16.030072"
+  },
+  {
+    "topic": "Claude Opus 4.6 vs GPT-4o: Which AI Wins in 2026?",
+    "title": "Claude Opus 4.6 vs GPT-4o: Complete 2026 Performance Benchmark",
+    "keywords": [
+      "claude",
+      "opus",
+      "gpt",
+      "wins"
+    ],
+    "category": "AI Tools",
+    "identifier": "claude opus",
+    "created_at": "2026-02-08T10:50:20.593340"
   }
 ]

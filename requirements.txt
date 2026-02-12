@@ -12,7 +12,7 @@ regex>=2023.10.0
 
 # AI/LLM
 anthropic>=0.40.0  # Claude API (fallback)
-claude-agent-sdk>=0.1.0  # Claude Agent SDK (primary - uses OAuth or API key)
+ㅛ
 openai>=1.12.0
 google-genai>=1.0.0  # New SDK (google-generativeai is deprecated)
 

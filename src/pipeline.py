@@ -564,7 +564,10 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
             async def _async_query():
                 messages = []
                 async for msg in claude_agent_query(prompt=prompt):
-                    messages.append(msg)
+                    msg_type = type(msg).__name__
+                    if msg_type in ('ResultMessage', 'AssistantMessage'):
+                        messages.append(msg)
+                    # Skip unknown types (rate_limit_event, etc.)
 
                 for msg in messages:
                     if type(msg).__name__ == 'ResultMessage':

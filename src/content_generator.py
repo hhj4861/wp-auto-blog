@@ -123,7 +123,7 @@ class ContentConfig:
     provider: LLMProvider = LLMProvider.ANTHROPIC
     temperature: float = 0.7
     model_anthropic: str = "claude-sonnet-4-20250514"
-    model_gemini: str = "gemini-2.0-flash-exp"
+    model_gemini: str = "gemini-2.0-flash"
     model_openai: str = "gpt-4o-mini"
     use_cli: bool = True  # True: Claude CLI (OAuth), False: Anthropic API (key)
     language: str = "ko"  # 'ko' for Korean (general), 'en' for English (tech)
@@ -2529,7 +2529,10 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         async def _async_query():
             messages = []
             async for msg in claude_agent_query(prompt=prompt):
-                messages.append(msg)
+                msg_type = type(msg).__name__
+                if msg_type in ('ResultMessage', 'AssistantMessage'):
+                    messages.append(msg)
+                # Skip unknown types (rate_limit_event, etc.)
 
             # Extract text from ResultMessage
             for msg in messages:
@@ -2694,7 +2697,7 @@ Include:
 Be specific and factual based on search results. Always use the most recent version numbers."""
 
             response = self._gemini_client.models.generate_content(
-                model="gemini-2.0-flash-exp",
+                model=self.config.model_gemini,
                 contents=prompt,
                 config=config,
             )

@@ -862,5 +862,19 @@
     "category": "테크",
     "identifier": "keep android",
     "created_at": "2026-02-23T10:49:45.520158"
+  },
+  {
+    "topic": "The Age Verification Trap: Verifying age undermines everyone's data protection",
+    "title": "The Age Verification Trap",
+    "keywords": [
+      "age",
+      "verification",
+      "trap",
+      "verifying",
+      "undermines"
+    ],
+    "category": "테크",
+    "identifier": "the age",
+    "created_at": "2026-02-23T23:51:40.293000"
   }
 ]

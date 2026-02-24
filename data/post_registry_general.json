@@ -876,5 +876,15 @@
     "category": "테크",
     "identifier": "the age",
     "created_at": "2026-02-23T23:51:40.293000"
+  },
+  {
+    "topic": "`Ladybird 브라우저가 Rust를 선택한 이유, 2026년 웹브라우저 판도 변화`",
+    "title": "`Ladybird 브라우저가 Rust를 선택한 이유, 2026년 웹브라우저 판도 변화`",
+    "keywords": [
+      "ladybird"
+    ],
+    "category": "테크",
+    "identifier": "ladybird",
+    "created_at": "2026-02-24T10:55:28.118001"
   }
 ]

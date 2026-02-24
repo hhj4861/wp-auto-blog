@@ -392,5 +392,19 @@
     "category": "AI Tools",
     "identifier": "timeframe",
     "created_at": "2026-02-23T11:04:59.522654"
+  },
+  {
+    "topic": "The Age Verification Trap: Verifying age undermines everyone's data protection",
+    "title": "The Age Verification Trap: Verifying Age Undermines Data Protection",
+    "keywords": [
+      "age",
+      "verification",
+      "trap",
+      "verifying",
+      "undermines"
+    ],
+    "category": "AI Tools",
+    "identifier": "the age",
+    "created_at": "2026-02-24T00:05:11.030646"
   }
 ]

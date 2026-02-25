@@ -406,5 +406,17 @@
     "category": "AI Tools",
     "identifier": "the age",
     "created_at": "2026-02-24T00:05:11.030646"
+  },
+  {
+    "topic": "Hetzner vs DigitalOcean 2026: After the 40% Hike",
+    "title": "Hetzner vs DigitalOcean 2026: Pricing After the 40% Hike",
+    "keywords": [
+      "hetzner",
+      "digitalocean",
+      "hike"
+    ],
+    "category": "SaaS Reviews",
+    "identifier": "hetzner vs digitalocean",
+    "created_at": "2026-02-25T11:18:07.897670"
   }
 ]

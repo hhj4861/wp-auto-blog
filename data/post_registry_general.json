@@ -909,5 +909,19 @@
     "category": "비즈니스",
     "identifier": "도메인",
     "created_at": "2026-02-26T10:54:38.132552"
+  },
+  {
+    "topic": "`2026년 구글 나노바나나2 이미지 생성 모델 성능 완전 분석`",
+    "title": "`2026년 구글 나노바나나2 이미지 생성 모델 성능 완전 분석`",
+    "keywords": [
+      "nano",
+      "banana",
+      "google",
+      "latest",
+      "image"
+    ],
+    "category": "리뷰",
+    "identifier": "구글",
+    "created_at": "2026-02-26T23:58:48.366296"
   }
 ]

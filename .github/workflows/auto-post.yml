@@ -66,7 +66,7 @@ jobs:
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
       (github.event_name == 'schedule' && (github.event.schedule == '30 23 * * *' || github.event.schedule == '30 10 * * *'))
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -104,7 +104,7 @@ jobs:
           EOF
 
       - name: Run pipeline (General Blog - trendpulse.blog)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -157,7 +157,7 @@ jobs:
       github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'tech' || github.event.inputs.mode == 'both') ||
       (github.event_name == 'schedule' && (github.event.schedule == '45 23 * * *' || github.event.schedule == '45 10 * * *'))
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -195,7 +195,7 @@ jobs:
           EOF
 
       - name: Run pipeline (Tech Blog - bytepulse.io)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -252,7 +252,7 @@ jobs:
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Pop' ||
       (github.event_name == 'schedule' && github.event.schedule == '0 17 * * 0,2,4,5')
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -284,7 +284,7 @@ jobs:
           EOF
 
       - name: Run pipeline (K-Pop)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -327,7 +327,7 @@ jobs:
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Beauty' ||
       (github.event_name == 'schedule' && github.event.schedule == '0 18 * * 1,3,4,5')
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -359,7 +359,7 @@ jobs:
           EOF
 
       - name: Run pipeline (K-Beauty)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -401,7 +401,7 @@ jobs:
   post-kfood:
     if: github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Food'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -437,7 +437,7 @@ jobs:
           EOF
 
       - name: Run pipeline (K-Food)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -480,7 +480,7 @@ jobs:
       github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'kculture' && github.event.inputs.category == 'K-Fashion' ||
       (github.event_name == 'schedule' && github.event.schedule == '0 19 * * 3,4,5')
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -512,7 +512,7 @@ jobs:
           EOF
 
       - name: Run pipeline (K-Fashion)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
@@ -554,7 +554,7 @@ jobs:
     # 월/수/금 11:00 KST (02:00 UTC)에만 실행
     if: github.event.schedule == '0 2 * * 1,3,5'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -592,7 +592,7 @@ jobs:
           EOF
 
       - name: Run pipeline (Queue Mode - 외항사 포스팅)
-        timeout-minutes: 15
+        timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |

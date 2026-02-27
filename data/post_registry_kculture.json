@@ -893,5 +893,19 @@
     "category": "K-Fashion",
     "identifier": "korean sneaker",
     "created_at": "2026-02-26T19:23:31.441554"
+  },
+  {
+    "topic": "**K-Pop Music Show Fan Experience**",
+    "title": "K-Pop Music Show Voting 2026",
+    "keywords": [
+      "Inkigayo",
+      "Music Bank",
+      "Show Champion",
+      "K-pop voting",
+      "music show wins"
+    ],
+    "category": "K-Pop",
+    "identifier": "pop music",
+    "created_at": "2026-02-27T17:19:31.809839"
   }
 ]

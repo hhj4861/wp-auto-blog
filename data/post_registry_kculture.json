@@ -921,5 +921,19 @@
     "category": "K-Beauty",
     "identifier": "korean eye",
     "created_at": "2026-02-27T18:20:09.945965"
+  },
+  {
+    "topic": "**Sageuk (Historical K-Drama) Fashion**",
+    "title": "Sageuk Fashion",
+    "keywords": [
+      "sageuk fashion",
+      "hanbok modern",
+      "K-drama historical",
+      "Korean period drama style",
+      "jeogori"
+    ],
+    "category": "K-Fashion",
+    "identifier": "sageuk",
+    "created_at": "2026-02-27T19:24:49.636359"
   }
 ]

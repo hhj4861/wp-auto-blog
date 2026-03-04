@@ -1036,5 +1036,19 @@
     "category": "리뷰",
     "identifier": "m5 pro",
     "created_at": "2026-03-03T23:51:46.372698"
+  },
+  {
+    "topic": "`메타 스마트 안경 프라이버시 논란, 내 얼굴이 수집되는 방식과 차단법` (유형 3, SEO형)",
+    "title": "`메타 스마트 안경 프라이버시 논란, 내 얼굴이 수집되는 방식",
+    "keywords": [
+      "meta",
+      "smart",
+      "glasses",
+      "data",
+      "privacy"
+    ],
+    "category": "테크",
+    "identifier": "메타",
+    "created_at": "2026-03-04T11:04:05.549792"
   }
 ]

@@ -536,5 +536,19 @@
     "category": "Dev Productivity",
     "identifier": "snyk",
     "created_at": "2026-03-06T00:07:41.943337"
+  },
+  {
+    "topic": "Socket vs Semgrep: Supply Chain Security 2026",
+    "title": "Socket vs Semgrep: Supply Chain Security 2026",
+    "keywords": [
+      "socket",
+      "semgrep",
+      "supply",
+      "chain",
+      "security"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "socket vs semgrep",
+    "created_at": "2026-03-06T11:12:07.305238"
   }
 ]

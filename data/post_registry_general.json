@@ -1140,5 +1140,19 @@
     "category": "테크",
     "identifier": "ai",
     "created_at": "2026-03-07T10:45:29.961788"
+  },
+  {
+    "topic": "`2026년 IT 취업난, 2008 금융위기보다 심각한 이유와 개발자 생존 전략`",
+    "title": "`2026년 IT 취업난, 2008 금융위기보다 심각한 이유와 개발자 생존 전략`",
+    "keywords": [
+      "tech",
+      "employment",
+      "now",
+      "significantly",
+      "worse"
+    ],
+    "category": "취업",
+    "identifier": "it",
+    "created_at": "2026-03-07T23:42:48.878715"
   }
 ]

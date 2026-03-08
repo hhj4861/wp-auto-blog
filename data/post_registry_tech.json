@@ -575,5 +575,18 @@
     "category": "AI Tools",
     "identifier": "gpt",
     "created_at": "2026-03-07T11:00:48.762587"
+  },
+  {
+    "topic": "`CodeRabbit vs Qodo 2026: AI Code Review`",
+    "title": "CodeRabbit vs Qodo 2026: Complete AI Code Review Comparison",
+    "keywords": [
+      "coderabbit",
+      "qodo",
+      "code",
+      "review"
+    ],
+    "category": "AI Tools",
+    "identifier": "coderabbit",
+    "created_at": "2026-03-08T00:01:20.261244"
   }
 ]

@@ -1248,5 +1248,19 @@
     "category": "테크",
     "identifier": "webassembly",
     "created_at": "2026-03-12T10:51:33.707623"
+  },
+  {
+    "topic": "자동화가 일자리를 없앤다는 통념의 반전, ATM과 스마트폰이 증명한 진실",
+    "title": "자동화가 일자리를 없앤다는 통념의 반전, ATM과 스마트폰이 증명한 진실",
+    "keywords": [
+      "atms",
+      "didn",
+      "kill",
+      "bank",
+      "teller"
+    ],
+    "category": "비즈니스",
+    "identifier": "자동화가",
+    "created_at": "2026-03-12T23:47:28.247013"
   }
 ]

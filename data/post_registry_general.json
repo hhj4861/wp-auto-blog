@@ -1238,5 +1238,15 @@
     "category": "테크",
     "identifier": "javascript",
     "created_at": "2026-03-11T23:45:26.371898"
+  },
+  {
+    "topic": "`2026년 WebAssembly, 드디어 웹의 퍼스트클래스 언어가 되다`",
+    "title": "`2026년 WebAssembly, 드디어 웹의 퍼스트클래스 언어가 되다`",
+    "keywords": [
+      "webassembly"
+    ],
+    "category": "테크",
+    "identifier": "webassembly",
+    "created_at": "2026-03-12T10:51:33.707623"
   }
 ]

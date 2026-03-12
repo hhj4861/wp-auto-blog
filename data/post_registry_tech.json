@@ -680,5 +680,19 @@
     "category": "Dev Productivity",
     "identifier": "temporal",
     "created_at": "2026-03-12T00:03:29.166691"
+  },
+  {
+    "topic": "`BitNet vs Ollama vs llama.cpp 2026: Best Local LLM?`",
+    "title": "`BitNet vs Ollama vs llama.cpp 2026: Best Local LLM?`",
+    "keywords": [
+      "bitnet",
+      "ollama",
+      "llama",
+      "cpp",
+      "best"
+    ],
+    "category": "AI Tools",
+    "identifier": "bitnet",
+    "created_at": "2026-03-12T11:18:30.103216"
   }
 ]

@@ -721,5 +721,19 @@
     "category": "Dev Productivity",
     "identifier": "malus vs browserstack",
     "created_at": "2026-03-13T11:04:17.133268"
+  },
+  {
+    "topic": "DeepSeek vs Llama 2026: Best Open Source AI?",
+    "title": "DeepSeek vs Llama 2026: Complete Open Source AI Benchmark",
+    "keywords": [
+      "deepseek",
+      "llama",
+      "best",
+      "open",
+      "source"
+    ],
+    "category": "AI Tools",
+    "identifier": "deepseek vs llama",
+    "created_at": "2026-03-14T00:03:08.106335"
   }
 ]

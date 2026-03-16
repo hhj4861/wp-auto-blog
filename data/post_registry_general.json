@@ -1333,5 +1333,19 @@
     "category": "생산성",
     "identifier": "mcp",
     "created_at": "2026-03-16T10:53:42.747791"
+  },
+  {
+    "topic": "정부 백도어 감시의 위험성: 2026년 디지털 프라이버시 완전 정복",
+    "title": "정부 백도어 감시의 위험성: 2026년 디지털 프라이버시 완전 정복",
+    "keywords": [
+      "bill",
+      "lawful",
+      "access",
+      "act",
+      "dangerous"
+    ],
+    "category": "테크",
+    "identifier": "정부",
+    "created_at": "2026-03-16T23:48:40.668415"
   }
 ]

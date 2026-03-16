@@ -803,5 +803,19 @@
     "category": "Dev Productivity",
     "identifier": "vite vs turbopack",
     "created_at": "2026-03-16T11:11:36.056856"
+  },
+  {
+    "topic": "Apideck CLI vs MCP 2026: Better for AI Agents?",
+    "title": "Apideck CLI vs MCP 2026: Complete AI Agent Integration Comparison",
+    "keywords": [
+      "apideck",
+      "cli",
+      "mcp",
+      "better",
+      "agents"
+    ],
+    "category": "AI Tools",
+    "identifier": "apideck cli",
+    "created_at": "2026-03-16T23:59:47.337001"
   }
 ]

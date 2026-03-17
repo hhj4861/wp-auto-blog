@@ -1361,5 +1361,19 @@
     "category": "생산성",
     "identifier": "링크드인",
     "created_at": "2026-03-17T10:53:15.859173"
+  },
+  {
+    "topic": "검토 단계 하나 추가할 때마다 팀 속도가 10배 느려지는 이유",
+    "title": "검토 단계 하나 추가할 때마다 팀 속도가 10배 느려지는 이유",
+    "keywords": [
+      "give",
+      "django",
+      "time",
+      "money",
+      "tokens"
+    ],
+    "category": "생산성",
+    "identifier": "검토",
+    "created_at": "2026-03-17T23:49:07.422373"
   }
 ]

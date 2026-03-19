@@ -1411,5 +1411,18 @@
     "category": "테크",
     "identifier": "mistral forge",
     "created_at": "2026-03-18T23:46:30.965879"
+  },
+  {
+    "topic": "`1989년 구글 개발자가 쓴 프로그래밍 원칙이 지금도 유효한 이유` (37자)",
+    "title": "`1989년 구글 개발자가 쓴 프로그래밍 원칙이 지금도 유효한 이유` (37자)",
+    "keywords": [
+      "rob",
+      "pike",
+      "rules",
+      "programming"
+    ],
+    "category": "생산성",
+    "identifier": "구글",
+    "created_at": "2026-03-19T10:52:35.607295"
   }
 ]

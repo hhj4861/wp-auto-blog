@@ -1424,5 +1424,16 @@
     "category": "생산성",
     "identifier": "구글",
     "created_at": "2026-03-19T10:52:35.607295"
+  },
+  {
+    "topic": "`2026 Astral OpenAI 합류, 파이썬 개발 도구 생태계 어떻게 바뀌나`",
+    "title": "`2026 Astral OpenAI 합류, 파이썬 개발 도구 생태계 어떻게 바뀌나`",
+    "keywords": [
+      "astral",
+      "openai"
+    ],
+    "category": "`테크`",
+    "identifier": "astral openai",
+    "created_at": "2026-03-19T23:47:07.178919"
   }
 ]

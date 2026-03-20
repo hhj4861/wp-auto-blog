@@ -871,5 +871,17 @@
     "category": "Dev Productivity",
     "identifier": "fastapi vs django vs flask",
     "created_at": "2026-03-19T11:11:12.008548"
+  },
+  {
+    "topic": "Canary vs Playwright vs Cypress: AI QA 2026",
+    "title": "Canary vs Playwright vs Cypress: Complete AI QA 2026",
+    "keywords": [
+      "canary",
+      "playwright",
+      "cypress"
+    ],
+    "category": "AI Tools",
+    "identifier": "canary vs playwright vs cypress",
+    "created_at": "2026-03-20T00:06:07.024057"
   }
 ]

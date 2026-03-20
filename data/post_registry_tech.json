@@ -883,5 +883,18 @@
     "category": "AI Tools",
     "identifier": "canary vs playwright vs cypress",
     "created_at": "2026-03-20T00:06:07.024057"
+  },
+  {
+    "topic": "uv vs Poetry vs pip 2026: Best Python PM?",
+    "title": "uv vs Poetry vs pip: Best Python Package Manager 2026",
+    "keywords": [
+      "poetry",
+      "pip",
+      "best",
+      "python"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "uv vs poetry vs pip",
+    "created_at": "2026-03-20T11:05:52.459712"
   }
 ]

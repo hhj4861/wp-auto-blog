@@ -1460,5 +1460,15 @@
     "category": "테크",
     "identifier": "안드로이드",
     "created_at": "2026-03-20T23:47:26.180749"
+  },
+  {
+    "topic": "`운동 앱 GPS 기록이 군사 기밀을 유출하는 디지털 보안의 치명적 허점` (유형 1 · 37자)",
+    "title": "`운동 앱 GPS 기록이",
+    "keywords": [
+      "gps"
+    ],
+    "category": "테크",
+    "identifier": "gps",
+    "created_at": "2026-03-21T10:50:00.089220"
   }
 ]

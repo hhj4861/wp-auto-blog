@@ -1494,5 +1494,16 @@
     "category": "테크",
     "identifier": "ai",
     "created_at": "2026-03-22T10:49:29.417663"
+  },
+  {
+    "topic": "`2026년 노트북 한 대로 397B 초거대 모델 돌리는 Flash-MoE 기술 해설`",
+    "title": "`2026년 노트북 한 대로 397B 초거대 모델 돌리는 Flash-MoE 기술 해설`",
+    "keywords": [
+      "flash",
+      "moe"
+    ],
+    "category": "테크",
+    "identifier": "flash",
+    "created_at": "2026-03-22T23:47:16.570695"
   }
 ]

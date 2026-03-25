@@ -1560,5 +1560,15 @@
     "category": "비즈니스",
     "identifier": "saas",
     "created_at": "2026-03-25T10:54:24.543073"
+  },
+  {
+    "topic": "2026년 Sora 실망기, 전문가들이 갈아탄 영상 제작 도구 비교",
+    "title": "2026년 Sora 실망기, 전문가들이 갈아탄 영상 제작 도구 비교",
+    "keywords": [
+      "sora"
+    ],
+    "category": "테크",
+    "identifier": "sora",
+    "created_at": "2026-03-25T23:52:03.177412"
   }
 ]

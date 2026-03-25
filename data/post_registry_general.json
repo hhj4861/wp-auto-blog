@@ -1550,5 +1550,15 @@
     "category": "테크",
     "identifier": "litellm pypi",
     "created_at": "2026-03-24T23:47:41.124691"
+  },
+  {
+    "topic": "`버티컬 SaaS 창업 전략, 직접 현장에 뛰어들어 시장을 검증하는 법` [유형 1]",
+    "title": "`버티컬 SaaS 창업 전략, 직접 현장에 뛰어들어 시장을 검증하는 법` [유형 1]",
+    "keywords": [
+      "saas"
+    ],
+    "category": "비즈니스",
+    "identifier": "saas",
+    "created_at": "2026-03-25T10:54:24.543073"
   }
 ]

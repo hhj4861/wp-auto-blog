@@ -1017,5 +1017,19 @@
     "category": "AI Tools",
     "identifier": "litellm vs openrouter",
     "created_at": "2026-03-26T00:02:23.228185"
+  },
+  {
+    "topic": "Cody vs GitHub Copilot: Privacy & Data 2026",
+    "title": "Cody vs GitHub Copilot: Privacy & Data 2026",
+    "keywords": [
+      "cody",
+      "github",
+      "copilot",
+      "privacy",
+      "data"
+    ],
+    "category": "AI Tools",
+    "identifier": "cody vs github copilot",
+    "created_at": "2026-03-26T11:19:11.600315"
   }
 ]

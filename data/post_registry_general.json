@@ -1570,5 +1570,19 @@
     "category": "테크",
     "identifier": "sora",
     "created_at": "2026-03-25T23:52:03.177412"
+  },
+  {
+    "topic": "`터미널 작업 속도 2배 높이는 쉘 트릭 완벽 정리 (개발자 필수)`",
+    "title": "`터미널 작업 속도 2배 높이는 쉘 트릭 완벽 정리 (개발자 필수)`",
+    "keywords": [
+      "many",
+      "control",
+      "rooms",
+      "seafoam",
+      "green"
+    ],
+    "category": "생산성",
+    "identifier": "터미널",
+    "created_at": "2026-03-26T23:50:26.770003"
   }
 ]

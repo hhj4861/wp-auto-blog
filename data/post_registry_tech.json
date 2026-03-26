@@ -1003,5 +1003,19 @@
     "category": "AI Tools",
     "identifier": "sora vs runway vs pika",
     "created_at": "2026-03-25T11:09:53.290139"
+  },
+  {
+    "topic": "LiteLLM vs OpenRouter 2026: Safer LLM API?",
+    "title": "LiteLLM vs OpenRouter 2026: Critical API Security Analysis",
+    "keywords": [
+      "litellm",
+      "openrouter",
+      "safer",
+      "llm",
+      "api"
+    ],
+    "category": "AI Tools",
+    "identifier": "litellm vs openrouter",
+    "created_at": "2026-03-26T00:02:23.228185"
   }
 ]

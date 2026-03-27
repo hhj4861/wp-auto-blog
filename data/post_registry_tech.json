@@ -1031,5 +1031,17 @@
     "category": "AI Tools",
     "identifier": "cody vs github copilot",
     "created_at": "2026-03-26T11:19:11.600315"
+  },
+  {
+    "topic": "How to Migrate GitHub to Codeberg 2026",
+    "title": "GitHub to Codeberg Migration: Complete 2026 Walkthrough",
+    "keywords": [
+      "migrate",
+      "github",
+      "codeberg"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "migrate",
+    "created_at": "2026-03-27T00:03:51.045376"
   }
 ]

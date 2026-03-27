@@ -1043,5 +1043,19 @@
     "category": "Dev Productivity",
     "identifier": "migrate",
     "created_at": "2026-03-27T00:03:51.045376"
+  },
+  {
+    "topic": "CrewAI vs AutoGen 2026: Best AI Agent Framework?",
+    "title": "CrewAI vs AutoGen 2026: Complete Agent Framework Comparison",
+    "keywords": [
+      "crewai",
+      "autogen",
+      "best",
+      "agent",
+      "framework"
+    ],
+    "category": "AI Tools",
+    "identifier": "crewai vs autogen",
+    "created_at": "2026-03-27T11:10:09.486112"
   }
 ]

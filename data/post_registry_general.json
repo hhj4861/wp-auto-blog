@@ -1595,5 +1595,15 @@
     "category": "테크",
     "identifier": "npm",
     "created_at": "2026-04-01T10:54:21.862220"
+  },
+  {
+    "topic": "`2026년 DRAM 가격 폭등이 라즈베리파이 취미 시장을 무너뜨리는 이유`",
+    "title": "`2026년 DRAM 가격 폭등이 라즈베리파이 취미 시장을 무너뜨리는 이유`",
+    "keywords": [
+      "dram"
+    ],
+    "category": "테크",
+    "identifier": "dram",
+    "created_at": "2026-04-01T23:51:40.778509"
   }
 ]

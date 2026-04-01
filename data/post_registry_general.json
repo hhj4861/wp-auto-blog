@@ -1584,5 +1584,16 @@
     "category": "생산성",
     "identifier": "터미널",
     "created_at": "2026-03-26T23:50:26.770003"
+  },
+  {
+    "topic": "2026 NPM 보안 경고: Axios 악성 패키지 배포와 개발자 필수 대응법",
+    "title": "2026 NPM 보안 경고: Axios 악성 패키지 배포와 개발자 필수 대응법",
+    "keywords": [
+      "npm",
+      "axios"
+    ],
+    "category": "테크",
+    "identifier": "npm",
+    "created_at": "2026-04-01T10:54:21.862220"
   }
 ]

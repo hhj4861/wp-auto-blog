@@ -1605,5 +1605,15 @@
     "category": "테크",
     "identifier": "dram",
     "created_at": "2026-04-01T23:51:40.778509"
+  },
+  {
+    "topic": "`워드프레스 플러그인 보안 문제, 2026년 대안 CMS EmDash가 해결하나`",
+    "title": "`워드프레스 플러그인 보안 문제, 2026년 대안 CMS EmDash가 해결하나`",
+    "keywords": [
+      "cms"
+    ],
+    "category": "생산성",
+    "identifier": "cms",
+    "created_at": "2026-04-02T10:53:53.586646"
   }
 ]

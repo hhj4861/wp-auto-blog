@@ -1665,5 +1665,15 @@
     "category": "테크",
     "identifier": "gemma",
     "created_at": "2026-04-03T23:52:41.963754"
+  },
+  {
+    "topic": "전 Azure 엔지니어가 폭로한 클라우드 신뢰를 무너뜨린 결정들",
+    "title": "전 Azure 엔지니어가 폭로한 클라우드 신뢰를 무너뜨린 결정들",
+    "keywords": [
+      "azure"
+    ],
+    "category": "테크",
+    "identifier": "azure",
+    "created_at": "2026-04-04T10:52:04.605071"
   }
 ]

@@ -1725,5 +1725,19 @@
     "category": "생산성",
     "identifier": "llm",
     "created_at": "2026-04-06T10:56:28.786065"
+  },
+  {
+    "topic": "`앱 설치 없이 웹으로 충분한 시대, 네이티브 앱이 사라지는 이유`",
+    "title": "`앱 설치 없이 웹으로 충분한 시대, 네이티브 앱이 사라지는 이유`",
+    "keywords": [
+      "issue",
+      "claude",
+      "code",
+      "unusable",
+      "complex"
+    ],
+    "category": "테크",
+    "identifier": "설치",
+    "created_at": "2026-04-06T23:55:23.603233"
   }
 ]

@@ -1739,5 +1739,19 @@
     "category": "테크",
     "identifier": "설치",
     "created_at": "2026-04-06T23:55:23.603233"
+  },
+  {
+    "topic": "`2026년 빅테크 권력 집중, 샘 알트먼을 신뢰할 수 있는가`",
+    "title": "`2026년 빅테크 권력 집중, 샘 알트먼을 신뢰할 수 있는가`",
+    "keywords": [
+      "sam",
+      "altman",
+      "control",
+      "future",
+      "trusted"
+    ],
+    "category": "비즈니스",
+    "identifier": "빅테크",
+    "created_at": "2026-04-07T10:56:36.505037"
   }
 ]

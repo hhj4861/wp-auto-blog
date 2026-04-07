@@ -1178,5 +1178,18 @@
     "category": "AI Tools",
     "identifier": "lovable vs v0",
     "created_at": "2026-04-06T11:13:27.104118"
+  },
+  {
+    "topic": "PWA vs Native App 2026: Which Should You Build?",
+    "title": "PWA vs Native App 2026: Complete Build Decision Guide",
+    "keywords": [
+      "pwa",
+      "native",
+      "app",
+      "build"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "pwa vs native app",
+    "created_at": "2026-04-07T00:07:27.291043"
   }
 ]

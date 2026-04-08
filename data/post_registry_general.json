@@ -1766,5 +1766,15 @@
     "category": "리뷰",
     "identifier": "콘크리트",
     "created_at": "2026-04-07T23:52:54.348958"
+  },
+  {
+    "topic": "`VeraCrypt 완벽 가이드 2026: 개발자가 믿고 쓰는 암호화 도구 최신 업데이트`",
+    "title": "`VeraCrypt 완벽 가이드 2026: 개발자가 믿고 쓰는 암호화 도구 최신 업데이트`",
+    "keywords": [
+      "veracrypt"
+    ],
+    "category": "생산성",
+    "identifier": "veracrypt",
+    "created_at": "2026-04-08T10:56:00.954487"
   }
 ]

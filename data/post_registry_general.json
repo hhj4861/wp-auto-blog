@@ -1786,5 +1786,15 @@
     "category": "테크",
     "identifier": "glasswing",
     "created_at": "2026-04-08T23:52:06.707438"
+  },
+  {
+    "topic": "코드 읽기 전 개발자가 반드시 실행하는 Git 명령어 완전 정복",
+    "title": "코드 읽기 전 개발자가 반드시 실행하는 Git 명령어 완전 정복",
+    "keywords": [
+      "git"
+    ],
+    "category": "생산성",
+    "identifier": "git",
+    "created_at": "2026-04-09T10:59:28.556343"
   }
 ]

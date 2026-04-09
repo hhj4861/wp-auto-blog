@@ -1233,5 +1233,19 @@
     "category": "AI Tools",
     "identifier": "glm",
     "created_at": "2026-04-08T11:14:35.151218"
+  },
+  {
+    "topic": "Next.js vs SvelteKit 2026: Build Speed Tested",
+    "title": "Next.js vs SvelteKit: Comprehensive Build Speed Test 2026",
+    "keywords": [
+      "next",
+      "sveltekit",
+      "build",
+      "speed",
+      "tested"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "next",
+    "created_at": "2026-04-09T00:05:17.269381"
   }
 ]

@@ -1796,5 +1796,19 @@
     "category": "생산성",
     "identifier": "git",
     "created_at": "2026-04-09T10:59:28.556343"
+  },
+  {
+    "topic": "`맥OS 가상 데스크톱 즉시 전환, 생산성 2배 높이는 숨겨진 설정법`",
+    "title": "`맥OS 가상 데스크톱 즉시 전환, 생산성 2배 높이는 숨겨진 설정법`",
+    "keywords": [
+      "native",
+      "instant",
+      "space",
+      "switching",
+      "macos"
+    ],
+    "category": "생산성",
+    "identifier": "가상",
+    "created_at": "2026-04-10T10:56:47.200933"
   }
 ]

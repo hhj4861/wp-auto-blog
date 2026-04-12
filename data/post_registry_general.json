@@ -1835,5 +1835,19 @@
     "category": "테크",
     "identifier": "wireguard",
     "created_at": "2026-04-11T10:52:48.963451"
+  },
+  {
+    "topic": "맥북 모서리를 직접 갈아봤다, 그립감과 손목 통증이 달라진 이유",
+    "title": "맥북 모서리를 직접 갈아봤다, 그립감과 손목 통증이 달라진 이유",
+    "keywords": [
+      "small",
+      "models",
+      "also",
+      "found",
+      "vulnerabilities"
+    ],
+    "category": "리뷰",
+    "identifier": "맥북",
+    "created_at": "2026-04-12T10:55:35.778399"
   }
 ]

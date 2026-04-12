@@ -1691,5 +1691,19 @@
     "category": "K-Fashion",
     "identifier": "korean wide",
     "created_at": "2026-04-10T19:28:21.819040"
+  },
+  {
+    "topic": "**Weverse Platform Guide for US K-Pop Fans**",
+    "title": "**Weverse Platform Guide for US K-Pop Fans**",
+    "keywords": [
+      "Weverse app",
+      "Weverse Shop",
+      "fan community",
+      "Weverse live",
+      "K-pop platform guide"
+    ],
+    "category": "K-Pop",
+    "identifier": "weverse platform",
+    "created_at": "2026-04-12T17:29:14.420218"
   }
 ]

@@ -1259,5 +1259,18 @@
     "category": "SaaS Reviews",
     "identifier": "instant vs supabase vs firebase",
     "created_at": "2026-04-10T00:12:36.070936"
+  },
+  {
+    "topic": "Cloudflare Workers vs Vercel Edge 2026",
+    "title": "Cloudflare Workers vs Vercel Edge 2026",
+    "keywords": [
+      "cloudflare",
+      "workers",
+      "vercel",
+      "edge"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "cloudflare workers",
+    "created_at": "2026-04-14T00:13:44.446174"
   }
 ]

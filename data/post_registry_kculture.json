@@ -1761,5 +1761,19 @@
     "category": "K-Fashion",
     "identifier": "korean sustainable",
     "created_at": "2026-04-15T19:36:16.125120"
+  },
+  {
+    "topic": "**Big 4 K-Pop Labels: HYBE vs SM vs JYP vs YG**",
+    "title": "**Big 4 K-Pop Labels: HYBE vs SM vs JYP vs YG**",
+    "keywords": [
+      "HYBE",
+      "SM Entertainment",
+      "JYP Entertainment",
+      "YG Entertainment",
+      "K-Pop companies"
+    ],
+    "category": "K-Pop",
+    "identifier": "big",
+    "created_at": "2026-04-16T17:53:09.231500"
   }
 ]

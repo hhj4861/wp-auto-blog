@@ -1979,5 +1979,16 @@
     "category": "테크",
     "identifier": "claude design",
     "created_at": "2026-04-18T10:54:17.689313"
+  },
+  {
+    "topic": "`월 30만원 절약한 개발자의 서버 이전기: DigitalOcean → Hetzner 완전 가이드`",
+    "title": "`월 30만원 절약한 개발자의 서버 이전기",
+    "keywords": [
+      "digitalocean",
+      "hetzner"
+    ],
+    "category": "테크",
+    "identifier": "digitalocean",
+    "created_at": "2026-04-18T23:50:54.379267"
   }
 ]

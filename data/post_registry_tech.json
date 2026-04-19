@@ -1351,5 +1351,17 @@
     "category": "AI Tools",
     "identifier": "claude ai",
     "created_at": "2026-04-19T00:07:33.223082"
+  },
+  {
+    "topic": "How to Migrate DigitalOcean to Hetzner 2026",
+    "title": "How to Migrate DigitalOcean to Hetzner 2026",
+    "keywords": [
+      "migrate",
+      "digitalocean",
+      "hetzner"
+    ],
+    "category": "SaaS Reviews",
+    "identifier": "migrate",
+    "created_at": "2026-04-19T11:14:13.759775"
   }
 ]

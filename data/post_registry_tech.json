@@ -1363,5 +1363,18 @@
     "category": "SaaS Reviews",
     "identifier": "migrate",
     "created_at": "2026-04-19T11:14:13.759775"
+  },
+  {
+    "topic": "Vercel vs Railway 2026: Is Vercel Still Safe?",
+    "title": "Vercel vs Railway 2026: Is Vercel Still Safe?",
+    "keywords": [
+      "vercel",
+      "railway",
+      "still",
+      "safe"
+    ],
+    "category": "SaaS Reviews",
+    "identifier": "vercel vs railway",
+    "created_at": "2026-04-20T00:09:45.140513"
   }
 ]

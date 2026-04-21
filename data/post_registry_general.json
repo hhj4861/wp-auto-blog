@@ -2016,5 +2016,18 @@
     "category": "생산성",
     "identifier": "교수들이",
     "created_at": "2026-04-19T23:51:59.934357"
+  },
+  {
+    "topic": "`2027년 EU 교체형 배터리 의무화, 글로벌 폰 시장이 바뀐다`",
+    "title": "`2027년 EU 교체형 배터리 의무화, 글로벌 폰 시장이 바뀐다`",
+    "keywords": [
+      "phones",
+      "sold",
+      "replaceable",
+      "batteries"
+    ],
+    "category": "테크",
+    "identifier": "eu",
+    "created_at": "2026-04-21T11:02:51.010217"
   }
 ]

@@ -1403,5 +1403,18 @@
     "category": "Dev Productivity",
     "identifier": "github vs gitlab",
     "created_at": "2026-04-21T11:21:26.343495"
+  },
+  {
+    "topic": "`ChatGPT Images vs Midjourney 2026: Who Wins?`",
+    "title": "`ChatGPT Images vs Midjourney 2026: Who Wins?`",
+    "keywords": [
+      "chatgpt",
+      "images",
+      "midjourney",
+      "wins"
+    ],
+    "category": "AI Tools",
+    "identifier": "chatgpt images",
+    "created_at": "2026-04-23T00:16:16.761059"
   }
 ]

@@ -2101,5 +2101,18 @@
     "category": "생산성",
     "identifier": "vs",
     "created_at": "2026-05-01T11:02:15.074072"
+  },
+  {
+    "topic": "Opus 4.7 knows the real Kelsey",
+    "title": "Opus 4.7 knows the real Kelsey",
+    "keywords": [
+      "opus",
+      "knows",
+      "real",
+      "kelsey"
+    ],
+    "category": "테크",
+    "identifier": "opus",
+    "created_at": "2026-05-01T23:55:34.300117"
   }
 ]

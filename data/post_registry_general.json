@@ -2114,5 +2114,19 @@
     "category": "테크",
     "identifier": "opus",
     "created_at": "2026-05-01T23:55:34.300117"
+  },
+  {
+    "topic": "`스마트홈 CCTV의 이면, 감시 카메라가 몰래 수집하는 데이터의 진실`",
+    "title": "`스마트홈 CCTV의 이면, 감시 카메라가 몰래 수집하는 데이터의 진실`",
+    "keywords": [
+      "city",
+      "learns",
+      "flock",
+      "accessed",
+      "cameras"
+    ],
+    "category": "테크",
+    "identifier": "스마트홈",
+    "created_at": "2026-05-02T10:59:58.098937"
   }
 ]

@@ -1468,5 +1468,19 @@
     "category": "SaaS Reviews",
     "identifier": "fly",
     "created_at": "2026-05-02T00:27:57.272600"
+  },
+  {
+    "topic": "Agent-Desktop vs Browser-Use: AI Agents 2026",
+    "title": "Agent-Desktop vs Browser-Use: AI Agents 2026",
+    "keywords": [
+      "agent",
+      "desktop",
+      "browser",
+      "use",
+      "agents"
+    ],
+    "category": "AI Tools",
+    "identifier": "agent",
+    "created_at": "2026-05-02T11:15:31.644743"
   }
 ]

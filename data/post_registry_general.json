@@ -2142,5 +2142,17 @@
     "category": "리뷰",
     "identifier": "pc",
     "created_at": "2026-05-03T00:01:21.303072"
+  },
+  {
+    "topic": "`2026 딥시크 V4 심층 분석, 프런티어 모델에 도전하는 성능의 진실`",
+    "title": "`2026 딥시크 V4 심층 분석, 프런티어 모델에 도전하는 성능의 진실`",
+    "keywords": [
+      "deepseek",
+      "almost",
+      "frontier"
+    ],
+    "category": "테크",
+    "identifier": "v4",
+    "created_at": "2026-05-03T10:54:34.166417"
   }
 ]

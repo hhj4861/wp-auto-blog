@@ -2219,5 +2219,19 @@
     "category": "테크",
     "identifier": "헬스케어",
     "created_at": "2026-05-05T11:18:25.329028"
+  },
+  {
+    "topic": "`데이터베이스를 날린 건 AI가 아니다: 개발자가 반드시 알아야 할 실수`",
+    "title": "`데이터베이스를 날린 건 AI가 아니다: 개발자가 반드시 알아야 할 실수`",
+    "keywords": [
+      "google",
+      "chrome",
+      "silently",
+      "installs",
+      "model"
+    ],
+    "category": "생산성",
+    "identifier": "데이터베이스를",
+    "created_at": "2026-05-05T23:53:26.808792"
   }
 ]

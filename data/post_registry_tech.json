@@ -1495,5 +1495,17 @@
     "category": "AI Tools",
     "identifier": "github copilot",
     "created_at": "2026-05-03T11:12:45.148886"
+  },
+  {
+    "topic": "Deepgram vs ElevenLabs vs AssemblyAI 2026",
+    "title": "Deepgram vs ElevenLabs vs AssemblyAI 2026",
+    "keywords": [
+      "deepgram",
+      "elevenlabs",
+      "assemblyai"
+    ],
+    "category": "AI Tools",
+    "identifier": "deepgram vs elevenlabs vs assemblyai",
+    "created_at": "2026-05-05T00:18:54.889786"
   }
 ]

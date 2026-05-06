@@ -1521,5 +1521,19 @@
     "category": "AI Tools",
     "identifier": "computer use",
     "created_at": "2026-05-06T00:22:58.731181"
+  },
+  {
+    "topic": "Docker Compose vs Kubernetes 2026: Prod Ready?",
+    "title": "Docker Compose vs Kubernetes 2026: Prod Ready?",
+    "keywords": [
+      "docker",
+      "compose",
+      "kubernetes",
+      "prod",
+      "ready"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "docker compose",
+    "created_at": "2026-05-06T11:38:55.931738"
   }
 ]

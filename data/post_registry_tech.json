@@ -1535,5 +1535,19 @@
     "category": "Dev Productivity",
     "identifier": "docker compose",
     "created_at": "2026-05-06T11:38:55.931738"
+  },
+  {
+    "topic": "Chrome AI vs Brave vs Arc: Best Browser 2026",
+    "title": "Chrome AI vs Brave vs Arc: Best Browser 2026",
+    "keywords": [
+      "chrome",
+      "brave",
+      "arc",
+      "best",
+      "browser"
+    ],
+    "category": "AI Tools",
+    "identifier": "chrome ai",
+    "created_at": "2026-05-07T00:14:31.841159"
   }
 ]

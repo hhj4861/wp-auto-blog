@@ -1562,5 +1562,18 @@
     "category": "Dev Productivity",
     "identifier": "cloudflare vs render",
     "created_at": "2026-05-07T11:36:51.852923"
+  },
+  {
+    "topic": "Cloudflare WAF vs AWS WAF vs Fastly 2026",
+    "title": "Cloudflare vs AWS WAF vs Fastly: 2026 Complete Comparison",
+    "keywords": [
+      "cloudflare",
+      "waf",
+      "aws",
+      "fastly"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "cloudflare waf",
+    "created_at": "2026-05-08T00:27:40.966811"
   }
 ]

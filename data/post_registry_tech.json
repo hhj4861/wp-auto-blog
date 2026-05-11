@@ -1640,5 +1640,18 @@
     "category": "Dev Productivity",
     "identifier": "bun",
     "created_at": "2026-05-11T00:18:28.916588"
+  },
+  {
+    "topic": "ChatGPT vs Gemini 2026: Developer Verdict",
+    "title": "ChatGPT vs Gemini 2026: Comprehensive Developer Verdict",
+    "keywords": [
+      "chatgpt",
+      "gemini",
+      "developer",
+      "verdict"
+    ],
+    "category": "AI Tools",
+    "identifier": "chatgpt vs gemini",
+    "created_at": "2026-05-11T12:01:10.421148"
   }
 ]

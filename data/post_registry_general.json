@@ -2360,5 +2360,19 @@
     "category": "비즈니스",
     "identifier": "제주항공",
     "created_at": "2026-05-11T03:23:50.576419"
+  },
+  {
+    "topic": "`코딩 어시스턴트 없이 직접 짜니 달라진 것들, 개발자 실전 후기`",
+    "title": "`코딩 어시스턴트 없이 직접 짜니 달라진 것들, 개발자 실전 후기`",
+    "keywords": [
+      "going",
+      "back",
+      "writing",
+      "code",
+      "hand"
+    ],
+    "category": "생산성",
+    "identifier": "코딩",
+    "created_at": "2026-05-11T11:44:41.395700"
   }
 ]

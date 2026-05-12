@@ -1665,5 +1665,19 @@
     "category": "AI Tools",
     "identifier": "local ai",
     "created_at": "2026-05-12T00:09:08.064344"
+  },
+  {
+    "topic": "Postmortem: TanStack NPM supply-chain compromise",
+    "title": "Postmortem: Essential Guide to the TanStack NPM Supply-Chain Compromise",
+    "keywords": [
+      "postmortem",
+      "tanstack",
+      "npm",
+      "supply",
+      "chain"
+    ],
+    "category": "AI Tools",
+    "identifier": "postmortem",
+    "created_at": "2026-05-12T11:29:31.909242"
   }
 ]

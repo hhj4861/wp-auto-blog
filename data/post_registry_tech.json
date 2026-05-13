@@ -1679,5 +1679,19 @@
     "category": "AI Tools",
     "identifier": "postmortem",
     "created_at": "2026-05-12T11:29:31.909242"
+  },
+  {
+    "topic": "Bambu Lab is abusing the open source social contract",
+    "title": "Bambu Lab: Abusing the Open Source Social Contract?",
+    "keywords": [
+      "bambu",
+      "lab",
+      "abusing",
+      "open",
+      "source"
+    ],
+    "category": "AI Tools",
+    "identifier": "bambu lab",
+    "created_at": "2026-05-13T00:10:42.460393"
   }
 ]

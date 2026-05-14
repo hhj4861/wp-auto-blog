@@ -1703,5 +1703,19 @@
     "category": "AI Tools",
     "identifier": "googlebook",
     "created_at": "2026-05-14T00:10:24.291470"
+  },
+  {
+    "topic": "Linux gaming is faster because Windows APIs are becoming Linux kernel features",
+    "title": "Linux Gaming: Essential Guide to Faster Performance in 2026",
+    "keywords": [
+      "linux",
+      "gaming",
+      "faster",
+      "windows",
+      "apis"
+    ],
+    "category": "AI Tools",
+    "identifier": "linux",
+    "created_at": "2026-05-14T11:25:33.331338"
   }
 ]

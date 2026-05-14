@@ -2451,5 +2451,19 @@
     "category": "테크",
     "identifier": "linux",
     "created_at": "2026-05-14T11:18:43.349824"
+  },
+  {
+    "topic": "A message from President Kornbluth about funding and the talent pipeline",
+    "title": "A message from President",
+    "keywords": [
+      "message",
+      "president",
+      "kornbluth",
+      "about",
+      "funding"
+    ],
+    "category": "테크",
+    "identifier": "president kornbluth",
+    "created_at": "2026-05-14T23:50:20.465074"
   }
 ]

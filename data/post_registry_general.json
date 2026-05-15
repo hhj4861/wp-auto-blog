@@ -2465,5 +2465,15 @@
     "category": "테크",
     "identifier": "president kornbluth",
     "created_at": "2026-05-14T23:50:20.465074"
+  },
+  {
+    "topic": "`2026년 신간으로 보는 스티브 잡스의 NeXT: 추방 이후 10년의 리더십 비밀`",
+    "title": "`2026년 신간으로 보는 스티브 잡스의 NeXT: 추방 이후 10년의 리더십 비밀`",
+    "keywords": [
+      "next"
+    ],
+    "category": "비즈니스",
+    "identifier": "next",
+    "created_at": "2026-05-15T23:59:02.638370"
   }
 ]

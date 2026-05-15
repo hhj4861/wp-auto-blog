@@ -10,6 +10,7 @@ from __future__ import annotations
 import base64
 import os
 import re
+import time
 from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
@@ -20,6 +21,14 @@ from loguru import logger
 
 from src.content_generator import GeneratedContent
 from src.image_fetcher import FetchedImage
+
+# Some WAFs (Cloudflare, Wordfence, Sucuri) block the default
+# `python-requests/X.Y.Z` User-Agent as a suspected bot; pose as a desktop
+# browser to clear those rules from GitHub Actions runners.
+_BROWSER_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+)
 
 
 class PostStatus(Enum):
@@ -374,7 +383,8 @@ class WordPressClient:
             post_data["tags"] = tag_ids
 
         try:
-            response = requests.post(
+            response = self._request_with_retry(
+                "POST",
                 f"{self._api_base}/posts",
                 headers=self._get_auth_headers(),
                 json=post_data,
@@ -635,7 +645,8 @@ class WordPressClient:
             headers["Content-Disposition"] = f'attachment; filename="{filename}"'
             headers["Content-Type"] = "image/jpeg"
 
-            response = requests.post(
+            response = self._request_with_retry(
+                "POST",
                 f"{self._api_base}/media",
                 headers=headers,
                 data=img_response.content,
@@ -691,7 +702,7 @@ class WordPressClient:
         """Get authentication headers.
 
         Returns:
-            Headers dict with Basic auth
+            Headers dict with Basic auth + browser User-Agent (WAF bypass)
         """
         credentials = f"{self.config.username}:{self.config.app_password}"
         encoded = base64.b64encode(credentials.encode()).decode()
@@ -699,7 +710,58 @@ class WordPressClient:
         return {
             "Authorization": f"Basic {encoded}",
             "Content-Type": "application/json",
+            "User-Agent": _BROWSER_UA,
         }
+
+    def _request_with_retry(
+        self,
+        method: str,
+        url: str,
+        *,
+        retry_statuses: tuple = (403, 429, 500, 502, 503, 504),
+        max_retries: int = 3,
+        **kwargs,
+    ) -> requests.Response:
+        """HTTP request with exponential backoff retry on transient errors.
+
+        Backoff (2s, 4s, 8s) lets host WAF/rate-limit windows clear before the
+        final failure — useful when GitHub Actions runner IPs are intermittently
+        flagged.
+        """
+        fn = getattr(requests, method.lower())
+        delays = [2 * (2 ** i) for i in range(max_retries)]
+        response: Optional[requests.Response] = None
+
+        for attempt in range(max_retries + 1):
+            try:
+                response = fn(url, **kwargs)
+            except requests.RequestException as exc:
+                if attempt == max_retries:
+                    raise
+                logger.warning(
+                    f"{method.upper()} {url} raised {type(exc).__name__}; "
+                    f"retrying in {delays[attempt]}s "
+                    f"(attempt {attempt + 1}/{max_retries})"
+                )
+                time.sleep(delays[attempt])
+                continue
+
+            status = getattr(response, "status_code", None)
+            if (
+                isinstance(status, int)
+                and status in retry_statuses
+                and attempt < max_retries
+            ):
+                logger.warning(
+                    f"{method.upper()} {url} -> {status}; "
+                    f"retrying in {delays[attempt]}s "
+                    f"(attempt {attempt + 1}/{max_retries})"
+                )
+                time.sleep(delays[attempt])
+                continue
+            return response
+
+        return response  # type: ignore[return-value]
 
     def _get_or_create_category(self, name: str, parent_id: Optional[int] = None) -> Optional[int]:
         """Get or create a category with optional parent.

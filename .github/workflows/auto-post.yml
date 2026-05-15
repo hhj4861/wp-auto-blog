@@ -135,12 +135,23 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          if [ -f "data/post_registry_general.json" ]; then
-            git pull --rebase origin main || true
-            git add data/post_registry_general.json
-            git diff --staged --quiet || git commit -m "chore: update general post registry [skip ci]"
-            git push || echo "Warning: Failed to push registry, but post was created successfully"
+          [ -f "data/post_registry_general.json" ] || { echo "Registry not found; skipping"; exit 0; }
+          git add data/post_registry_general.json
+          if git diff --staged --quiet; then
+            echo "No registry changes to commit"
+            exit 0
           fi
+          git commit -m "chore: update general post registry [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push registry after 5 attempts, but post was created successfully"
 
       - name: Upload logs
         if: always()
@@ -227,12 +238,23 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          if [ -f "data/post_registry_tech.json" ]; then
-            git pull --rebase origin main || true
-            git add data/post_registry_tech.json
-            git diff --staged --quiet || git commit -m "chore: update tech post registry [skip ci]"
-            git push || echo "Warning: Failed to push registry, but post was created successfully"
+          [ -f "data/post_registry_tech.json" ] || { echo "Registry not found; skipping"; exit 0; }
+          git add data/post_registry_tech.json
+          if git diff --staged --quiet; then
+            echo "No registry changes to commit"
+            exit 0
           fi
+          git commit -m "chore: update tech post registry [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push registry after 5 attempts, but post was created successfully"
 
       - name: Upload logs
         if: always()
@@ -301,17 +323,23 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          [ -f "data/post_registry_kculture.json" ] || { echo "Registry not found; skipping"; exit 0; }
           git add data/post_registry_kculture.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: update kculture post registry (K-Pop) [skip ci]"
-            for i in 1 2 3 4 5; do
-              git push origin main && break
-              git pull --rebase origin main || git reset --hard origin/main
-              sleep $((i * 2))
-            done
+            exit 0
           fi
+          git commit -m "chore: update kculture post registry (K-Pop) [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push registry after 5 attempts"
 
       - name: Upload logs
         if: always()
@@ -376,17 +404,23 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          [ -f "data/post_registry_kculture.json" ] || { echo "Registry not found; skipping"; exit 0; }
           git add data/post_registry_kculture.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: update kculture post registry (K-Beauty) [skip ci]"
-            for i in 1 2 3 4 5; do
-              git push origin main && break
-              git pull --rebase origin main || git reset --hard origin/main
-              sleep $((i * 2))
-            done
+            exit 0
           fi
+          git commit -m "chore: update kculture post registry (K-Beauty) [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push registry after 5 attempts"
 
       - name: Upload logs
         if: always()
@@ -454,17 +488,23 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          [ -f "data/post_registry_kculture.json" ] || { echo "Registry not found; skipping"; exit 0; }
           git add data/post_registry_kculture.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: update kculture post registry (K-Food) [skip ci]"
-            for i in 1 2 3 4 5; do
-              git push origin main && break
-              git pull --rebase origin main || git reset --hard origin/main
-              sleep $((i * 2))
-            done
+            exit 0
           fi
+          git commit -m "chore: update kculture post registry (K-Food) [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push registry after 5 attempts"
 
       - name: Upload logs
         if: always()
@@ -529,17 +569,23 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          [ -f "data/post_registry_kculture.json" ] || { echo "Registry not found; skipping"; exit 0; }
           git add data/post_registry_kculture.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: update kculture post registry (K-Fashion) [skip ci]"
-            for i in 1 2 3 4 5; do
-              git push origin main && break
-              git pull --rebase origin main || git reset --hard origin/main
-              sleep $((i * 2))
-            done
+            exit 0
           fi
+          git commit -m "chore: update kculture post registry (K-Fashion) [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push registry after 5 attempts"
 
       - name: Upload logs
         if: always()
@@ -604,10 +650,24 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git pull --rebase origin main || true
-          git add data/topic_queue_general.json data/post_registry_general.json
-          git diff --staged --quiet || git commit -m "chore: update topic queue and registry [skip ci]"
-          git push || echo "Warning: Failed to push, but post was created successfully"
+          for f in data/topic_queue_general.json data/post_registry_general.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --staged --quiet; then
+            echo "No queue/registry changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update topic queue and registry [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push origin main; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
+            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
+            sleep $((i * 2))
+          done
+          echo "Warning: Failed to push after 5 attempts, but post was created successfully"
 
       - name: Upload logs
         if: always()

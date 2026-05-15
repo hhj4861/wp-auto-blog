@@ -1717,5 +1717,18 @@
     "category": "AI Tools",
     "identifier": "linux",
     "created_at": "2026-05-14T11:25:33.331338"
+  },
+  {
+    "topic": "RTX 5090 and M4 MacBook Air: Can It Game?",
+    "title": "RTX 5090 vs M4 MacBook Air: Key Gaming Performance Analysis",
+    "keywords": [
+      "rtx",
+      "macbook",
+      "air",
+      "game"
+    ],
+    "category": "AI Tools",
+    "identifier": "rtx",
+    "created_at": "2026-05-15T00:08:19.444718"
   }
 ]

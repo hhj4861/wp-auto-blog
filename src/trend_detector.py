@@ -1434,9 +1434,17 @@ Format your response EXACTLY like this:
             async for msg in claude_agent_query(prompt=prompt):
                 messages.append(msg)
 
-            # Extract text from ResultMessage
+            # Extract text from ResultMessage; log is_error/subtype for diagnostics
             for msg in messages:
                 if type(msg).__name__ == 'ResultMessage':
+                    is_err = getattr(msg, 'is_error', False)
+                    subtype = getattr(msg, 'subtype', None)
+                    if is_err:
+                        logger.warning(
+                            f"Claude CLI returned ResultMessage with "
+                            f"is_error=True, subtype={subtype!r}, "
+                            f"session_id={getattr(msg, 'session_id', None)!r}"
+                        )
                     if hasattr(msg, 'result') and msg.result:
                         return msg.result
 

@@ -2489,5 +2489,19 @@
     "category": "취업",
     "identifier": "터키항공",
     "created_at": "2026-05-16T02:49:51.910495"
+  },
+  {
+    "topic": "`미 법무부의 앱 사용자 10만 명 추적 요청, 디지털 프라이버시 완전 가이드` (유형 1 · 효용 강조형)",
+    "title": "`미 법무부의 앱 사용자",
+    "keywords": [
+      "doj",
+      "demands",
+      "apple",
+      "google",
+      "unmask"
+    ],
+    "category": "테크",
+    "identifier": "법무부의",
+    "created_at": "2026-05-16T10:59:32.248137"
   }
 ]

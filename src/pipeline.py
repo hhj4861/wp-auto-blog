@@ -551,9 +551,23 @@ These title patterns are just rewordings of the same content:
 - "X 추천" ≈ "X TOP 5" ≈ "X 베스트" → DUPLICATE
 - "X 팁" ≈ "X 노하우" ≈ "X 비법" → DUPLICATE
 
+### Rule 4: Different Entity = NOT DUPLICATE (CRITICAL EXCEPTION)
+**Same template + different company/airline/brand/person = NOT_DUPLICATE.**
+Each entity has its own facts (salary, hiring criteria, interview questions, culture).
+A reader searching "ANA 승무원 채용"은 절대 "JAL 승무원 채용" 글로 만족하지 않는다.
+
+- "2026 진에어 승무원 채용 합격 스펙" vs "2026 티웨이항공 승무원 채용 합격 스펙"
+  → **NOT_DUPLICATE** (다른 항공사 = 다른 채용 정보)
+- "삼성전자 신입 공채" vs "네이버 신입 공채" → **NOT_DUPLICATE** (다른 기업)
+- "에미레이트 승무원 면접" vs "카타르항공 승무원 면접" → **NOT_DUPLICATE** (다른 항공사)
+- "iPhone 17 리뷰" vs "Galaxy S26 리뷰" → **NOT_DUPLICATE** (다른 제품)
+
+⚠️ 단, "에미레이트 승무원 합격 스펙" vs "에미레이트 승무원 합격 노하우"는 같은 항공사 + 같은 주제 → DUPLICATE.
+구조가 같아도 **고유 명사(회사·항공사·인물·제품 모델)가 다르면 본문 사실이 달라지므로 새 글**이다.
+
 ### When to mark NOT_DUPLICATE:
 - Genuinely different aspects of same product (e.g., "설치" vs "고급 기능" vs "트러블슈팅")
-- Different products entirely
+- Different products / companies / airlines / brands entirely (see Rule 4)
 - Different time periods with significant changes (e.g., "2025 버전" vs "2026 버전" if major update)
 
 ## Response:

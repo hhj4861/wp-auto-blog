@@ -238,10 +238,11 @@ class WordPressClient:
             True if connection successful, False otherwise
         """
         try:
-            response = requests.get(
+            response = self._request_with_retry(
+                "GET",
                 f"{self._api_base}/users/me",
                 headers=self._get_auth_headers(),
-                timeout=10,
+                timeout=30,
             )
             response.raise_for_status()
             user_data = response.json()
@@ -430,7 +431,8 @@ class WordPressClient:
             Post data dict if found, None otherwise
         """
         try:
-            response = requests.get(
+            response = self._request_with_retry(
+                "GET",
                 f"{self._api_base}/posts",
                 headers=self._get_auth_headers(),
                 params={"slug": slug, "status": "any"},
@@ -463,7 +465,8 @@ class WordPressClient:
 
         try:
             while True:
-                response = requests.get(
+                response = self._request_with_retry(
+                    "GET",
                     f"{self._api_base}/posts",
                     headers=self._get_auth_headers(),
                     params={"per_page": per_page, "page": page, "status": status},
@@ -702,15 +705,35 @@ class WordPressClient:
         """Get authentication headers.
 
         Returns:
-            Headers dict with Basic auth + browser User-Agent (WAF bypass)
+            Headers dict with Basic auth + browser-like headers (WAF bypass).
+
+        Includes Sec-Fetch-* headers that real browsers send but bots usually
+        skip; many WAFs (Cloudflare, Wordfence) use their absence as a bot
+        signal.
         """
         credentials = f"{self.config.username}:{self.config.app_password}"
         encoded = base64.b64encode(credentials.encode()).decode()
+
+        origin = self.config.url.rstrip("/")
 
         return {
             "Authorization": f"Basic {encoded}",
             "Content-Type": "application/json",
             "User-Agent": _BROWSER_UA,
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Accept-Language": "en-US,en;q=0.9,ko;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "Origin": origin,
+            "Referer": f"{origin}/wp-admin/",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Ch-Ua": '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"macOS"',
+            "X-Requested-With": "XMLHttpRequest",
         }
 
     def _request_with_retry(
@@ -719,17 +742,24 @@ class WordPressClient:
         url: str,
         *,
         retry_statuses: tuple = (403, 429, 500, 502, 503, 504),
-        max_retries: int = 3,
+        max_retries: int = 5,
         **kwargs,
     ) -> requests.Response:
         """HTTP request with exponential backoff retry on transient errors.
 
-        Backoff (2s, 4s, 8s) lets host WAF/rate-limit windows clear before the
-        final failure — useful when GitHub Actions runner IPs are intermittently
-        flagged.
+        Backoff (5s, 15s, 30s, 60s, 120s = ~3.5min total) lets host WAF /
+        rate-limit windows clear before the final failure. Cloudflare and
+        Wordfence typically block bot-flagged IPs for 30-120s, so a short
+        retry window is not enough.
+
+        A small random jitter is added to break synchronized retry patterns
+        when multiple jobs hit the WAF at once.
         """
+        import random
+
         fn = getattr(requests, method.lower())
-        delays = [2 * (2 ** i) for i in range(max_retries)]
+        base_delays = [5, 15, 30, 60, 120, 120]
+        delays = [base_delays[i] + random.uniform(0, 5) for i in range(max_retries)]
         response: Optional[requests.Response] = None
 
         for attempt in range(max_retries + 1):
@@ -740,7 +770,7 @@ class WordPressClient:
                     raise
                 logger.warning(
                     f"{method.upper()} {url} raised {type(exc).__name__}; "
-                    f"retrying in {delays[attempt]}s "
+                    f"retrying in {delays[attempt]:.1f}s "
                     f"(attempt {attempt + 1}/{max_retries})"
                 )
                 time.sleep(delays[attempt])
@@ -754,7 +784,7 @@ class WordPressClient:
             ):
                 logger.warning(
                     f"{method.upper()} {url} -> {status}; "
-                    f"retrying in {delays[attempt]}s "
+                    f"retrying in {delays[attempt]:.1f}s "
                     f"(attempt {attempt + 1}/{max_retries})"
                 )
                 time.sleep(delays[attempt])
@@ -784,12 +814,13 @@ class WordPressClient:
                 if parent_id:
                     logger.debug(f"Using parent category '{parent_name}' (ID: {parent_id}) for '{name}'")
 
-            # Search for existing category
-            response = requests.get(
+            # Search for existing category (with WAF-aware retry)
+            response = self._request_with_retry(
+                "GET",
                 f"{self._api_base}/categories",
                 headers=self._get_auth_headers(),
                 params={"search": name, "per_page": 100},
-                timeout=10,
+                timeout=30,
             )
             response.raise_for_status()
             categories = response.json()
@@ -800,11 +831,12 @@ class WordPressClient:
                     if parent_id and cat.get("parent") != parent_id:
                         # Update category to have correct parent
                         logger.info(f"Updating category '{name}' to have parent ID {parent_id}")
-                        update_response = requests.post(
+                        update_response = self._request_with_retry(
+                            "POST",
                             f"{self._api_base}/categories/{cat['id']}",
                             headers=self._get_auth_headers(),
                             json={"parent": parent_id},
-                            timeout=10,
+                            timeout=30,
                         )
                         update_response.raise_for_status()
                     return cat["id"]
@@ -814,11 +846,12 @@ class WordPressClient:
             if parent_id:
                 category_data["parent"] = parent_id
 
-            response = requests.post(
+            response = self._request_with_retry(
+                "POST",
                 f"{self._api_base}/categories",
                 headers=self._get_auth_headers(),
                 json=category_data,
-                timeout=10,
+                timeout=30,
             )
             response.raise_for_status()
             new_cat = response.json()
@@ -842,12 +875,13 @@ class WordPressClient:
 
         for keyword in keywords[:12]:  # Limit to 12 tags for better SEO
             try:
-                # Search for existing tag
-                response = requests.get(
+                # Search for existing tag (with WAF-aware retry)
+                response = self._request_with_retry(
+                    "GET",
                     f"{self._api_base}/tags",
                     headers=self._get_auth_headers(),
                     params={"search": keyword},
-                    timeout=10,
+                    timeout=30,
                 )
                 response.raise_for_status()
                 tags = response.json()
@@ -861,11 +895,12 @@ class WordPressClient:
 
                 if not found:
                     # Create new tag
-                    response = requests.post(
+                    response = self._request_with_retry(
+                        "POST",
                         f"{self._api_base}/tags",
                         headers=self._get_auth_headers(),
                         json={"name": keyword},
-                        timeout=10,
+                        timeout=30,
                     )
                     response.raise_for_status()
                     tag_ids.append(response.json()["id"])
@@ -1154,7 +1189,8 @@ class WordPressClient:
 
         try:
             while len(posts) < count:
-                response = requests.get(
+                response = self._request_with_retry(
+                    "GET",
                     f"{self._api_base}/posts",
                     headers=self._get_auth_headers(),
                     params={
@@ -1163,7 +1199,8 @@ class WordPressClient:
                         "status": "any",  # Include drafts and published
                         "_fields": "id,title,slug",  # Only fetch needed fields
                     },
-                    timeout=15,
+                    retry_statuses=(403, 429, 500, 502, 503, 504),
+                    timeout=30,
                 )
 
                 if response.status_code == 400:

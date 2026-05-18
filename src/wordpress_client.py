@@ -722,7 +722,7 @@ class WordPressClient:
             "User-Agent": _BROWSER_UA,
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Accept-Language": "en-US,en;q=0.9,ko;q=0.8",
-            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Encoding": "gzip, deflate",
             "Cache-Control": "no-cache",
             "Pragma": "no-cache",
             "Origin": origin,
@@ -789,6 +789,29 @@ class WordPressClient:
                 )
                 time.sleep(delays[attempt])
                 continue
+
+            # WAF/CDN often returns 200 with an HTML challenge page instead of
+            # the expected JSON. Detect that case so we retry too — checking
+            # Content-Type catches both HTML challenges and gzip/brotli
+            # decoding mishaps.
+            ctype = (response.headers.get("Content-Type") or "").lower()
+            expects_json = "/wp-json/" in url
+            looks_like_json = "json" in ctype
+            if (
+                expects_json
+                and not looks_like_json
+                and attempt < max_retries
+            ):
+                body_preview = (response.text or "")[:200].replace("\n", " ")
+                logger.warning(
+                    f"{method.upper()} {url} -> {status} but Content-Type={ctype!r} "
+                    f"(expected JSON); body[:200]={body_preview!r}; "
+                    f"retrying in {delays[attempt]:.1f}s "
+                    f"(attempt {attempt + 1}/{max_retries})"
+                )
+                time.sleep(delays[attempt])
+                continue
+
             return response
 
         return response  # type: ignore[return-value]

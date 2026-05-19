@@ -1838,5 +1838,17 @@
     "category": "Dev Productivity",
     "identifier": "react native",
     "created_at": "2026-05-18T12:09:35.914610"
+  },
+  {
+    "topic": "`Bitwarden vs 1Password 2026: Worth the Switch?`",
+    "title": "`Bitwarden vs 1Password 2026: Worth the Switch?`",
+    "keywords": [
+      "bitwarden",
+      "worth",
+      "switch"
+    ],
+    "category": "SaaS Reviews",
+    "identifier": "bitwarden",
+    "created_at": "2026-05-19T00:20:08.303988"
   }
 ]

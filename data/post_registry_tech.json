@@ -1863,5 +1863,19 @@
     "category": "Dev Productivity",
     "identifier": "files",
     "created_at": "2026-05-19T11:54:09.805974"
+  },
+  {
+    "topic": "`Doppler vs Infisical vs Vault 2026: Secrets Manager`",
+    "title": "Doppler vs Infisical vs Vault: Complete Secrets Manager 2026",
+    "keywords": [
+      "doppler",
+      "infisical",
+      "vault",
+      "secrets",
+      "manager"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "doppler",
+    "created_at": "2026-05-20T00:20:29.219748"
   }
 ]

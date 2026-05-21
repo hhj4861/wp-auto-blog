@@ -1890,5 +1890,19 @@
     "category": "SaaS Reviews",
     "identifier": "railway vs render",
     "created_at": "2026-05-20T11:53:11.935340"
+  },
+  {
+    "topic": "Gemini Flash vs Claude Haiku 2026: Speed & Cost",
+    "title": "Gemini Flash vs Claude Haiku 2026: Speed & Cost",
+    "keywords": [
+      "gemini",
+      "flash",
+      "claude",
+      "haiku",
+      "speed"
+    ],
+    "category": "AI Tools",
+    "identifier": "gemini flash",
+    "created_at": "2026-05-21T00:22:38.651870"
   }
 ]

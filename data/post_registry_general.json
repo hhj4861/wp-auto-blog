@@ -2627,5 +2627,16 @@
     "category": "생산성",
     "identifier": "forge",
     "created_at": "2026-05-20T11:41:44.073424"
+  },
+  {
+    "topic": "`VSCode 악성 확장으로 GitHub 저장소 3800개 해킹: 개발자 보안 점검법` (유형 3 · 46자)",
+    "title": "`VSCode 악성 확장으로 GitHub 저장소 3800개 해킹",
+    "keywords": [
+      "vscode",
+      "github"
+    ],
+    "category": "테크",
+    "identifier": "vscode",
+    "created_at": "2026-05-21T00:03:50.012364"
   }
 ]

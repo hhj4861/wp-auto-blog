@@ -2695,5 +2695,18 @@
     "category": "테크",
     "identifier": "openscad",
     "created_at": "2026-05-23T11:09:29.972490"
+  },
+  {
+    "topic": "스페이스X 스타십 V3 발사 성공, 화성 이주 시대는 얼마나 가까워졌나",
+    "title": "스페이스X 스타십 V3 발사 성공, 화성 이주 시대는 얼마나 가까워졌나",
+    "keywords": [
+      "spacex",
+      "launches",
+      "starship",
+      "rocket"
+    ],
+    "category": "테크",
+    "identifier": "v3",
+    "created_at": "2026-05-23T23:57:57.210798"
   }
 ]

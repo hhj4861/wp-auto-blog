@@ -1944,5 +1944,18 @@
     "category": "SaaS Reviews",
     "identifier": "deel vs remote vs rippling",
     "created_at": "2026-05-24T11:19:13.797962"
+  },
+  {
+    "topic": "Cloudflare Turnstile vs Friendly CAPTCHA 2026",
+    "title": "Cloudflare Turnstile vs Friendly CAPTCHA 2026",
+    "keywords": [
+      "cloudflare",
+      "turnstile",
+      "friendly",
+      "captcha"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "cloudflare turnstile",
+    "created_at": "2026-06-01T00:29:50.831616"
   }
 ]

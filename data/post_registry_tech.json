@@ -1984,5 +1984,18 @@
     "category": "AI Tools",
     "identifier": "openai api",
     "created_at": "2026-06-02T00:29:24.226895"
+  },
+  {
+    "topic": "Dependabot vs Renovate 2026: Secure Your npm",
+    "title": "Dependabot vs Renovate 2026: Complete npm Security Audit",
+    "keywords": [
+      "dependabot",
+      "renovate",
+      "secure",
+      "npm"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "dependabot vs renovate",
+    "created_at": "2026-06-02T12:18:25.143060"
   }
 ]

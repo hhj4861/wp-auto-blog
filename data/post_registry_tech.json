@@ -1997,5 +1997,19 @@
     "category": "Dev Productivity",
     "identifier": "dependabot vs renovate",
     "created_at": "2026-06-02T12:18:25.143060"
+  },
+  {
+    "topic": "MAI-Code-1-Flash vs Gemini Flash: AI Coder 2026",
+    "title": "MAI-Code-1-Flash vs Gemini Flash: AI Coder 2026",
+    "keywords": [
+      "mai",
+      "code",
+      "flash",
+      "gemini",
+      "coder"
+    ],
+    "category": "AI Tools",
+    "identifier": "mai",
+    "created_at": "2026-06-03T00:33:01.272976"
   }
 ]

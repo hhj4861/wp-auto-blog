@@ -2025,5 +2025,18 @@
     "category": "AI Tools",
     "identifier": "amazon",
     "created_at": "2026-06-04T00:41:48.181174"
+  },
+  {
+    "topic": "Elixir vs Go 2026: Best Backend for Startups?",
+    "title": "Elixir vs Go 2026: Critical Backend Performance Comparison",
+    "keywords": [
+      "elixir",
+      "best",
+      "backend",
+      "startups"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "elixir vs go",
+    "created_at": "2026-06-04T11:51:09.519898"
   }
 ]

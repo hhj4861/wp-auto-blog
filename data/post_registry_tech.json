@@ -2038,5 +2038,18 @@
     "category": "Dev Productivity",
     "identifier": "elixir vs go",
     "created_at": "2026-06-04T11:51:09.519898"
+  },
+  {
+    "topic": "AI Vuln Scanner 2026: Anthropic vs Snyk",
+    "title": "Snyk vs Anthropic AI: Complete Vuln Scanner Analysis 2026",
+    "keywords": [
+      "vuln",
+      "scanner",
+      "anthropic",
+      "snyk"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "ai vuln",
+    "created_at": "2026-06-05T11:57:24.114885"
   }
 ]

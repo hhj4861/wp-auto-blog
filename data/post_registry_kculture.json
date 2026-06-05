@@ -2279,5 +2279,19 @@
     "category": "K-Beauty",
     "identifier": "korean bakuchiol",
     "created_at": "2026-06-04T18:53:15.005115"
+  },
+  {
+    "topic": "**K-Pop Documentary Films**",
+    "title": "**K-Pop Documentary Films**",
+    "keywords": [
+      "K-pop documentary",
+      "Netflix K-pop",
+      "behind the scenes",
+      "K-pop film",
+      "idol documentary"
+    ],
+    "category": "K-Pop",
+    "identifier": "pop documentary",
+    "created_at": "2026-06-05T17:49:16.423644"
   }
 ]

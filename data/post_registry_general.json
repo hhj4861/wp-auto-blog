@@ -2821,5 +2821,19 @@
     "category": "테크",
     "identifier": "스피커만으로",
     "created_at": "2026-06-04T11:50:28.819954"
+  },
+  {
+    "topic": "AI 도구가 대학 수학 실력을 무너뜨리고 있다, 버클리 성적 급락 보고서의 경고",
+    "title": "AI 도구가 대학 수학 실력을 무너뜨리고 있다, 버클리 성적 급락 보고서의 경고",
+    "keywords": [
+      "failing",
+      "grades",
+      "soar",
+      "usage",
+      "dwindling"
+    ],
+    "category": "테크",
+    "identifier": "ai",
+    "created_at": "2026-06-05T00:14:20.814414"
   }
 ]

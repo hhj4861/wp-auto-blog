@@ -2849,5 +2849,19 @@
     "category": "생산성",
     "identifier": "마우스",
     "created_at": "2026-06-06T00:05:38.515690"
+  },
+  {
+    "topic": "`항법 위성 신호 교란 실태, 항공·물류 인프라를 위협하는 전파 재밍의 모든 것`",
+    "title": "`항법 위성 신호 교란 실태, 항공·물류 인프라를 위협하는 전파 재밍의 모든 것`",
+    "keywords": [
+      "astronauts",
+      "told",
+      "return",
+      "iss",
+      "sheltering"
+    ],
+    "category": "테크",
+    "identifier": "항법",
+    "created_at": "2026-06-06T11:14:12.389122"
   }
 ]

@@ -2835,5 +2835,19 @@
     "category": "테크",
     "identifier": "ai",
     "created_at": "2026-06-05T00:14:20.814414"
+  },
+  {
+    "topic": "`마우스 없이 맥·윈도우 완전 제어하는 키보드 생산성 툴 실전 가이드` (38자)",
+    "title": "`마우스 없이 맥·윈도우 완전 제어하는 키보드 생산성 툴 실전 가이드` (38자)",
+    "keywords": [
+      "mouseless",
+      "keyboard",
+      "driven",
+      "control",
+      "macos"
+    ],
+    "category": "생산성",
+    "identifier": "마우스",
+    "created_at": "2026-06-06T00:05:38.515690"
   }
 ]

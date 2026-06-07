@@ -2873,5 +2873,19 @@
     "category": "비즈니스",
     "identifier": "데이터센터",
     "created_at": "2026-06-07T11:23:28.899900"
+  },
+  {
+    "topic": "`2026년 개발자 커리어 위기, 살아남는 사람들의 5가지 공통점`",
+    "title": "`2026년 개발자 커리어 위기, 살아남는 사람들의 5가지 공통점`",
+    "keywords": [
+      "llms",
+      "eroding",
+      "software",
+      "engineering",
+      "career"
+    ],
+    "category": "비즈니스",
+    "identifier": "개발자",
+    "created_at": "2026-06-07T23:58:49.282119"
   }
 ]

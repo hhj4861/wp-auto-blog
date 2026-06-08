@@ -231,6 +231,18 @@ class WordPressClient:
         self.config = config or WPConfig.from_env()
         self._api_base = f"{self.config.url}/wp-json/wp/v2"
 
+        # Optional egress proxy. The host WAF (e.g. Hostinger hCDN) blocks
+        # GitHub Actions datacenter IPs with 403; routing through a fixed
+        # clean-IP proxy permanently bypasses that. Set WP_PROXY (preferred,
+        # scopes the proxy to WordPress traffic only) or rely on the standard
+        # HTTPS_PROXY/HTTP_PROXY env vars that `requests` honours natively.
+        proxy = os.getenv("WP_PROXY", "").strip()
+        self._proxies: Optional[dict] = (
+            {"http": proxy, "https": proxy} if proxy else None
+        )
+        if self._proxies:
+            logger.info("WordPress requests routed through WP_PROXY")
+
     def verify_connection(self) -> bool:
         """Verify connection to WordPress site.
 
@@ -741,23 +753,30 @@ class WordPressClient:
         method: str,
         url: str,
         *,
-        retry_statuses: tuple = (403, 429, 500, 502, 503, 504),
+        retry_statuses: tuple = (429, 500, 502, 503, 504),
+        waf_statuses: tuple = (403,),
         max_retries: int = 5,
+        waf_quick_retries: int = 1,
         **kwargs,
     ) -> requests.Response:
-        """HTTP request with exponential backoff retry on transient errors.
+        """HTTP request with retry. Transient errors back off; WAF blocks fail fast.
 
-        Backoff (5s, 15s, 30s, 60s, 120s = ~3.5min total) lets host WAF /
-        rate-limit windows clear before the final failure. Cloudflare and
-        Wordfence typically block bot-flagged IPs for 30-120s, so a short
-        retry window is not enough.
+        - 429/5xx are genuinely transient: exponential backoff
+          (5s, 15s, 30s, 60s, 120s) lets rate-limit windows clear.
+        - 403 is a host edge-WAF block (e.g. Hostinger hCDN flagging the
+          GitHub Actions IP). It persists for the whole run on a given IP, so
+          long same-IP retries only burn the 30-min job budget. We do one quick
+          retry then fail fast — the workflow re-runs failed jobs on a fresh
+          runner (new IP), which is what actually clears the block.
 
-        A small random jitter is added to break synchronized retry patterns
-        when multiple jobs hit the WAF at once.
+        A small random jitter breaks synchronized retry patterns when multiple
+        jobs hit the WAF at once.
         """
         import random
 
         fn = getattr(requests, method.lower())
+        if self._proxies is not None:
+            kwargs.setdefault("proxies", self._proxies)
         base_delays = [5, 15, 30, 60, 120, 120]
         delays = [base_delays[i] + random.uniform(0, 5) for i in range(max_retries)]
         response: Optional[requests.Response] = None
@@ -777,6 +796,22 @@ class WordPressClient:
                 continue
 
             status = getattr(response, "status_code", None)
+
+            # WAF block: one quick retry, then fail fast (do not burn the budget).
+            if isinstance(status, int) and status in waf_statuses:
+                if attempt < waf_quick_retries:
+                    logger.warning(
+                        f"{method.upper()} {url} -> {status} (WAF?); "
+                        f"quick retry in 5s (attempt {attempt + 1}/{waf_quick_retries})"
+                    )
+                    time.sleep(5)
+                    continue
+                logger.error(
+                    f"{method.upper()} {url} -> {status} (edge WAF block); failing "
+                    "fast so the workflow can retry on a fresh runner IP"
+                )
+                return response
+
             if (
                 isinstance(status, int)
                 and status in retry_statuses

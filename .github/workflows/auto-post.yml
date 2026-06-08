@@ -2,6 +2,7 @@ name: Auto Blog Post
 
 permissions:
   contents: write
+  actions: write   # allow auto-rerun of WAF-blocked jobs on a fresh runner IP
 
 on:
   # Manual trigger
@@ -679,3 +680,29 @@ jobs:
           name: pipeline-logs-queue-${{ github.run_id }}
           path: data/logs/
           retention-days: 7
+
+  # If any posting job failed (typically a Hostinger edge-WAF 403 that blocks
+  # this run's datacenter IP), re-run only the failed jobs. A re-run is assigned
+  # a fresh runner with a new egress IP, which clears the intermittent block.
+  # Capped at 3 attempts via github.run_attempt to avoid loops.
+  retry-on-waf-block:
+    needs:
+      - post-general
+      - post-tech
+      - post-kpop
+      - post-kbeauty
+      - post-kfood
+      - post-kfashion
+      - post-queue
+    if: failure() && github.run_attempt < 3
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Re-run failed jobs on a fresh runner
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Attempt ${{ github.run_attempt }} had failures; re-running failed jobs on a new runner (new IP)."
+          sleep 30
+          gh run rerun ${{ github.run_id }} --failed --repo ${{ github.repository }}

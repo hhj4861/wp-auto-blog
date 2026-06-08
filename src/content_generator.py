@@ -123,7 +123,7 @@ class ContentConfig:
     provider: LLMProvider = LLMProvider.ANTHROPIC
     temperature: float = 0.7
     model_anthropic: str = "claude-sonnet-4-20250514"
-    model_gemini: str = "gemini-2.0-flash"
+    model_gemini: str = "gemini-2.5-flash"  # 2.0-flash retired (404); 2.5 supports grounding
     model_openai: str = "gpt-4o-mini"
     use_cli: bool = True  # True: Claude CLI (OAuth), False: Anthropic API (key)
     language: str = "ko"  # 'ko' for Korean (general), 'en' for English (tech)

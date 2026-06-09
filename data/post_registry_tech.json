@@ -2091,5 +2091,18 @@
     "category": "Dev Productivity",
     "identifier": "linear",
     "created_at": "2026-06-08T12:32:12.830369"
+  },
+  {
+    "topic": "Siri AI vs ChatGPT 2026: Which Wins for Devs?",
+    "title": "Siri vs ChatGPT 2026: Complete Developer API Comparison",
+    "keywords": [
+      "siri",
+      "chatgpt",
+      "wins",
+      "devs"
+    ],
+    "category": "AI Tools",
+    "identifier": "siri ai",
+    "created_at": "2026-06-09T00:19:13.375022"
   }
 ]

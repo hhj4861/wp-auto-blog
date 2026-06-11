@@ -2158,5 +2158,19 @@
     "category": "Dev Productivity",
     "identifier": "apple containers",
     "created_at": "2026-06-11T00:30:05.878095"
+  },
+  {
+    "topic": "HTMX vs React 2026: Is HTML-First Worth It?",
+    "title": "HTMX vs React 2026: Critical HTML-First Performance Analysis",
+    "keywords": [
+      "htmx",
+      "react",
+      "html",
+      "first",
+      "worth"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "htmx vs react",
+    "created_at": "2026-06-11T12:29:21.524905"
   }
 ]

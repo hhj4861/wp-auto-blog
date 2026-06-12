@@ -2172,5 +2172,19 @@
     "category": "Dev Productivity",
     "identifier": "htmx vs react",
     "created_at": "2026-06-11T12:29:21.524905"
+  },
+  {
+    "topic": "MiMo Code vs GitHub Copilot 2026: Free vs Paid?",
+    "title": "MiMo Code vs GitHub Copilot 2026: Free vs Paid Compared",
+    "keywords": [
+      "mimo",
+      "code",
+      "github",
+      "copilot",
+      "free"
+    ],
+    "category": "AI Tools",
+    "identifier": "mimo code",
+    "created_at": "2026-06-12T00:29:10.742188"
   }
 ]

@@ -2227,5 +2227,19 @@
     "category": "AI Tools",
     "identifier": "langsmith vs arize",
     "created_at": "2026-06-13T11:36:48.353575"
+  },
+  {
+    "topic": "Ollama vs OpenAI API 2026: True Cost Breakdown",
+    "title": "Ollama vs OpenAI API 2026: True Cost Breakdown",
+    "keywords": [
+      "ollama",
+      "openai",
+      "api",
+      "true",
+      "cost"
+    ],
+    "category": "AI Tools",
+    "identifier": "ollama vs openai api",
+    "created_at": "2026-06-14T00:33:16.491455"
   }
 ]

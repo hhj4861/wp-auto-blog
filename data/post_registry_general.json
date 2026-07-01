@@ -3143,5 +3143,19 @@
     "category": "리뷰",
     "identifier": "무료",
     "created_at": "2026-06-30T11:38:23.810625"
+  },
+  {
+    "topic": "Claude Code is steganographically marking requests",
+    "title": "Claude Code is steganographically marking requests",
+    "keywords": [
+      "claude",
+      "code",
+      "steganographically",
+      "marking",
+      "requests"
+    ],
+    "category": "테크",
+    "identifier": "claude code",
+    "created_at": "2026-07-01T11:43:13.428840"
   }
 ]

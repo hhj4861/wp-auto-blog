@@ -2352,5 +2352,19 @@
     "category": "AI Tools",
     "identifier": "qwen",
     "created_at": "2026-06-30T11:54:48.973764"
+  },
+  {
+    "topic": "Claude Sonnet 5 vs GPT-4o 2026: Best for Devs?",
+    "title": "Claude Sonnet 5 vs GPT-4o 2026: Best for Devs?",
+    "keywords": [
+      "claude",
+      "sonnet",
+      "gpt",
+      "best",
+      "devs"
+    ],
+    "category": "AI Tools",
+    "identifier": "claude sonnet",
+    "created_at": "2026-07-01T11:57:20.891564"
   }
 ]

@@ -2559,5 +2559,19 @@
     "category": "K-Fashion",
     "identifier": "korean midi",
     "created_at": "2026-07-01T19:40:29.173586"
+  },
+  {
+    "topic": "**K-Pop Music Production & Songwriting Culture**",
+    "title": "**K-Pop Music Production & Songwriting Culture**",
+    "keywords": [
+      "K-Pop production",
+      "songwriting camp",
+      "Korean music producer",
+      "K-Pop composer",
+      "idol recording process"
+    ],
+    "category": "K-Pop",
+    "identifier": "pop music",
+    "created_at": "2026-07-02T17:59:32.866571"
   }
 ]

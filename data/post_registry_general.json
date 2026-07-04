@@ -3210,5 +3210,16 @@
     "category": "리뷰",
     "identifier": "immich",
     "created_at": "2026-07-03T12:34:48.458624"
+  },
+  {
+    "topic": "`반쯤 완성된 제품이 오히려 잘 팔리는 이유 (Half-Baked 전략)`",
+    "title": "`반쯤 완성된 제품이 오히려 잘 팔리는 이유 (Half-Baked 전략)`",
+    "keywords": [
+      "half",
+      "baked"
+    ],
+    "category": "비즈니스",
+    "identifier": "half",
+    "created_at": "2026-07-04T01:23:19.775475"
   }
 ]

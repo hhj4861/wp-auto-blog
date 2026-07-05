@@ -3235,5 +3235,17 @@
     "category": "건강",
     "identifier": "꼭대기까지",
     "created_at": "2026-07-04T12:08:23.793471"
+  },
+  {
+    "topic": "집중력 30% 낮추는 실내 이산화탄소, CO2 모니터로 해결하는 법",
+    "title": "집중력 30% 낮추는 실내 이산화탄소, CO2 모니터로 해결하는 법",
+    "keywords": [
+      "bottleneck",
+      "air",
+      "room"
+    ],
+    "category": "건강",
+    "identifier": "co2",
+    "created_at": "2026-07-05T01:27:18.351073"
   }
 ]

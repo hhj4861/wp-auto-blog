@@ -3247,5 +3247,19 @@
     "category": "건강",
     "identifier": "co2",
     "created_at": "2026-07-05T01:27:18.351073"
+  },
+  {
+    "topic": "책 전체 스캔 데이터 찾아내면 2억 원, 디지털 아카이빙 바운티의 진짜 의미",
+    "title": "책 전체 스캔 데이터 찾아내면 2억 원, 디지털 아카이빙 바운티의 진짜 의미",
+    "keywords": [
+      "google",
+      "books",
+      "similar",
+      "book",
+      "scans"
+    ],
+    "category": "비즈니스",
+    "identifier": "전체",
+    "created_at": "2026-07-05T12:08:15.705297"
   }
 ]

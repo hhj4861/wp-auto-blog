@@ -2485,5 +2485,19 @@
     "category": "Dev Productivity",
     "identifier": "openwiki",
     "created_at": "2026-07-06T01:31:13.508705"
+  },
+  {
+    "topic": "OpenAI Codex vs GitHub Copilot 2026: Who Wins?",
+    "title": "OpenAI Codex vs GitHub Copilot 2026: Complete Comparison",
+    "keywords": [
+      "openai",
+      "codex",
+      "github",
+      "copilot",
+      "wins"
+    ],
+    "category": "AI Tools",
+    "identifier": "openai codex",
+    "created_at": "2026-07-06T14:27:25.045164"
   }
 ]

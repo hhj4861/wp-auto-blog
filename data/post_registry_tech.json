@@ -2499,5 +2499,19 @@
     "category": "AI Tools",
     "identifier": "openai codex",
     "created_at": "2026-07-06T14:27:25.045164"
+  },
+  {
+    "topic": "Grafana 2026: Best Tool for Real-Time Dev Dashboards",
+    "title": "Grafana 2026: Best Real-Time Dashboard Tool for Devs",
+    "keywords": [
+      "grafana",
+      "best",
+      "tool",
+      "real",
+      "time"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "grafana",
+    "created_at": "2026-07-07T01:28:10.361948"
   }
 ]

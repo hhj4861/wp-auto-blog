@@ -2513,5 +2513,17 @@
     "category": "Dev Productivity",
     "identifier": "grafana",
     "created_at": "2026-07-07T01:28:10.361948"
+  },
+  {
+    "topic": "Chat Control 1.0 and 2.0 Explained",
+    "title": "Chat Control 1.0 vs 2.0: Critical Dev Tool Implications 2026",
+    "keywords": [
+      "chat",
+      "control",
+      "explained"
+    ],
+    "category": "AI Tools",
+    "identifier": "chat control",
+    "created_at": "2026-07-08T12:10:24.401777"
   }
 ]

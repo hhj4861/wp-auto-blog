@@ -2525,5 +2525,19 @@
     "category": "AI Tools",
     "identifier": "chat control",
     "created_at": "2026-07-08T12:10:24.401777"
+  },
+  {
+    "topic": "Decoding the obfuscated bash script on a Uniqlo t-shirt",
+    "title": "2026 Uniqlo Bash Script: Essential Decoding & Tech Insight",
+    "keywords": [
+      "decoding",
+      "obfuscated",
+      "bash",
+      "script",
+      "uniqlo"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "decoding",
+    "created_at": "2026-07-09T01:17:20.502308"
   }
 ]

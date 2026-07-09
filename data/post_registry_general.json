@@ -3321,5 +3321,19 @@
     "category": "취업",
     "identifier": "every",
     "created_at": "2026-07-08T12:05:37.334452"
+  },
+  {
+    "topic": "Decoding the obfuscated bash script on a Uniqlo t-shirt",
+    "title": "Decoding the obfuscated bash",
+    "keywords": [
+      "decoding",
+      "obfuscated",
+      "bash",
+      "script",
+      "uniqlo"
+    ],
+    "category": "테크",
+    "identifier": "decoding",
+    "created_at": "2026-07-09T01:11:32.091393"
   }
 ]

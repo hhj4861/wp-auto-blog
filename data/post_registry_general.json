@@ -3383,5 +3383,15 @@
     "category": "리뷰",
     "identifier": "기차",
     "created_at": "2026-07-10T12:46:58.040736"
+  },
+  {
+    "topic": "드론도 잡고 벽 너머 와이파이도 보는 RF 레이더 QuadRF",
+    "title": "드론도 잡고 벽 너머 와이파이도 보는 RF 레이더 QuadRF",
+    "keywords": [
+      "quadrf"
+    ],
+    "category": "테크",
+    "identifier": "rf",
+    "created_at": "2026-07-11T01:03:18.627933"
   }
 ]

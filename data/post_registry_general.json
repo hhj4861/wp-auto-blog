@@ -3393,5 +3393,15 @@
     "category": "테크",
     "identifier": "rf",
     "created_at": "2026-07-11T01:03:18.627933"
+  },
+  {
+    "topic": "2026년 GPT-5.6 공개, AI 모델 경쟁 어디까지 왔나",
+    "title": "2026년 GPT-5.6 공개, AI 모델 경쟁 어디까지 왔나",
+    "keywords": [
+      "gpt"
+    ],
+    "category": "테크",
+    "identifier": "gpt",
+    "created_at": "2026-07-11T11:38:02.550112"
   }
 ]

@@ -2591,5 +2591,19 @@
     "category": "AI Tools",
     "identifier": "openai api",
     "created_at": "2026-07-11T11:40:04.913765"
+  },
+  {
+    "topic": "Show HN: Getting GLM 5.2 running on my slow computer",
+    "title": "Getting GLM 5.2 Running on a Slow Computer: Complete Guide",
+    "keywords": [
+      "getting",
+      "glm",
+      "running",
+      "slow",
+      "computer"
+    ],
+    "category": "AI Tools",
+    "identifier": "show hn",
+    "created_at": "2026-07-12T01:18:02.612202"
   }
 ]

@@ -2741,5 +2741,19 @@
     "category": "K-Fashion",
     "identifier": "korean beanie",
     "created_at": "2026-07-10T20:14:51.538155"
+  },
+  {
+    "topic": "K-Pop Fanchant Etiquette & Concert Culture",
+    "title": "K-Pop Fanchant Etiquette 101",
+    "keywords": [
+      "kpop fanchant",
+      "concert etiquette",
+      "fan culture",
+      "live concert guide",
+      "kpop US fans"
+    ],
+    "category": "K-Pop",
+    "identifier": "pop fanchant",
+    "created_at": "2026-07-12T17:59:06.231229"
   }
 ]

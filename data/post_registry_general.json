@@ -3417,5 +3417,19 @@
     "category": "테크",
     "identifier": "아인슈타인",
     "created_at": "2026-07-12T01:08:50.090633"
+  },
+  {
+    "topic": "Show HN: Getting GLM 5.2 running on my slow computer",
+    "title": "Show HN: Getting GLM",
+    "keywords": [
+      "getting",
+      "glm",
+      "running",
+      "slow",
+      "computer"
+    ],
+    "category": "테크",
+    "identifier": "show hn",
+    "created_at": "2026-07-12T11:43:40.533506"
   }
 ]

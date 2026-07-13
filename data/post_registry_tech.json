@@ -2619,5 +2619,18 @@
     "category": "AI Tools",
     "identifier": "female us",
     "created_at": "2026-07-12T11:46:03.246554"
+  },
+  {
+    "topic": "Ask HN: Add flag for AI-generated articles",
+    "title": "2026 AI Content Flagging: Critical Tools for Generated Articles",
+    "keywords": [
+      "add",
+      "flag",
+      "generated",
+      "articles"
+    ],
+    "category": "AI Tools",
+    "identifier": "ask hn",
+    "created_at": "2026-07-13T13:05:18.450087"
   }
 ]

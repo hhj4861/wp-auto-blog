@@ -3469,5 +3469,19 @@
     "category": "테크",
     "identifier": "apple",
     "created_at": "2026-07-14T00:56:25.002169"
+  },
+  {
+    "topic": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+    "title": "Japan develops a method",
+    "keywords": [
+      "japan",
+      "develops",
+      "method",
+      "recover",
+      "lithium"
+    ],
+    "category": "취업",
+    "identifier": "japan",
+    "created_at": "2026-07-14T11:55:50.518064"
   }
 ]

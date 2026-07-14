@@ -2632,5 +2632,19 @@
     "category": "AI Tools",
     "identifier": "ask hn",
     "created_at": "2026-07-13T13:05:18.450087"
+  },
+  {
+    "topic": "Building and shipping Mac and iOS apps without opening Xcode",
+    "title": "Practical 2026 Headless CI/CD for Mac & iOS App Deployment",
+    "keywords": [
+      "building",
+      "shipping",
+      "mac",
+      "ios",
+      "apps"
+    ],
+    "category": "AI Tools",
+    "identifier": "building",
+    "created_at": "2026-07-14T01:07:45.038945"
   }
 ]

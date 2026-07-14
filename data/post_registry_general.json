@@ -3455,5 +3455,19 @@
     "category": "리뷰",
     "identifier": "걸프에어",
     "created_at": "2026-07-13T05:43:39.695660"
+  },
+  {
+    "topic": "Apple's new SpeechAnalyzer API, benchmarked against Whisper and its predecessor",
+    "title": "Apple's new SpeechAnalyzer API",
+    "keywords": [
+      "apple",
+      "speechanalyzer",
+      "api",
+      "benchmarked",
+      "against"
+    ],
+    "category": "테크",
+    "identifier": "apple",
+    "created_at": "2026-07-14T00:56:25.002169"
   }
 ]

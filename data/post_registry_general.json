@@ -3483,5 +3483,17 @@
     "category": "취업",
     "identifier": "japan",
     "created_at": "2026-07-14T11:55:50.518064"
+  },
+  {
+    "topic": "Your 'app' could have been a webpage (so I fixed it for you)",
+    "title": "Your 'app' could have",
+    "keywords": [
+      "app",
+      "webpage",
+      "fixed"
+    ],
+    "category": "테크",
+    "identifier": "your",
+    "created_at": "2026-07-15T00:16:04.562620"
   }
 ]

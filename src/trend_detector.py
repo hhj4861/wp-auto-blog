@@ -41,13 +41,17 @@ except ImportError:
 
 # Claude Agent SDK for LLM-based topic analysis
 try:
-    from claude_agent_sdk import query as claude_agent_query
+    from claude_agent_sdk import query as claude_agent_query, ClaudeAgentOptions
     import asyncio
     CLAUDE_SDK_AVAILABLE = True
 except ImportError:
     claude_agent_query = None
+    ClaudeAgentOptions = None
     asyncio = None
     CLAUDE_SDK_AVAILABLE = False
+
+# Model used for all Claude Agent SDK calls in this module
+CLAUDE_MODEL = "claude-opus-4-8"
 
 
 class TrendSource(Enum):
@@ -1452,9 +1456,11 @@ Format your response EXACTLY like this:
         if not CLAUDE_SDK_AVAILABLE or claude_agent_query is None:
             raise RuntimeError("Claude Agent SDK not available")
 
+        sdk_options = ClaudeAgentOptions(model=CLAUDE_MODEL)
+
         async def _async_query():
             messages = []
-            async for msg in claude_agent_query(prompt=prompt):
+            async for msg in claude_agent_query(prompt=prompt, options=sdk_options):
                 messages.append(msg)
 
             # Extract text from ResultMessage; log is_error/subtype for diagnostics

@@ -513,11 +513,13 @@ class BlogPipeline:
             True if duplicate, False if not, None if LLM unavailable
         """
         try:
-            from claude_agent_sdk import query as claude_agent_query
+            from claude_agent_sdk import query as claude_agent_query, ClaudeAgentOptions
             import asyncio
         except ImportError:
             logger.debug("Claude Agent SDK not available for duplicate check")
             return None
+
+        sdk_options = ClaudeAgentOptions(model="claude-opus-4-8")
 
         # 기존 포스트 목록 생성 (최근 20개)
         existing_list = "\n".join([
@@ -577,7 +579,7 @@ Answer ONLY "DUPLICATE" or "NOT_DUPLICATE" with brief reason.
         try:
             async def _async_query():
                 messages = []
-                async for msg in claude_agent_query(prompt=prompt):
+                async for msg in claude_agent_query(prompt=prompt, options=sdk_options):
                     msg_type = type(msg).__name__
                     if msg_type in ('ResultMessage', 'AssistantMessage'):
                         messages.append(msg)

@@ -34,10 +34,11 @@ except ImportError:
     anthropic = None  # type: ignore
 
 try:
-    from claude_agent_sdk import query as claude_agent_query
+    from claude_agent_sdk import query as claude_agent_query, ClaudeAgentOptions
     import asyncio
 except ImportError:
     claude_agent_query = None  # type: ignore
+    ClaudeAgentOptions = None  # type: ignore
     asyncio = None
 
 import subprocess
@@ -122,7 +123,7 @@ class ContentConfig:
     max_words: int = 1500
     provider: LLMProvider = LLMProvider.ANTHROPIC
     temperature: float = 0.7
-    model_anthropic: str = "claude-sonnet-4-20250514"
+    model_anthropic: str = "claude-opus-4-8"
     model_gemini: str = "gemini-2.5-flash"  # 2.0-flash retired (404); 2.5 supports grounding
     model_openai: str = "gpt-4o-mini"
     use_cli: bool = True  # True: Claude CLI (OAuth), False: Anthropic API (key)
@@ -2526,9 +2527,11 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         if claude_agent_query is None:
             raise ImportError("claude-agent-sdk not installed. Run: pip install claude-agent-sdk")
 
+        sdk_options = ClaudeAgentOptions(model=self.config.model_anthropic)
+
         async def _async_query():
             messages = []
-            async for msg in claude_agent_query(prompt=prompt):
+            async for msg in claude_agent_query(prompt=prompt, options=sdk_options):
                 msg_type = type(msg).__name__
                 if msg_type in ('ResultMessage', 'AssistantMessage'):
                     messages.append(msg)
@@ -2582,7 +2585,7 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 
         # Run claude CLI with --print flag for non-interactive output
         result = subprocess.run(
-            [claude_path, "--print", prompt],
+            [claude_path, "--print", "--model", self.config.model_anthropic, prompt],
             capture_output=True,
             text=True,
             timeout=300,  # 5 minutes for longer content

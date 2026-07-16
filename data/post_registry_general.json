@@ -3523,5 +3523,18 @@
     "category": "취업",
     "identifier": "sleep",
     "created_at": "2026-07-16T00:57:55.531074"
+  },
+  {
+    "topic": "Inkling: Our Open-Weights Model",
+    "title": "Inkling: Our Open-Weights Model",
+    "keywords": [
+      "inkling",
+      "open",
+      "weights",
+      "model"
+    ],
+    "category": "테크",
+    "identifier": "inkling",
+    "created_at": "2026-07-16T05:53:47.492081"
   }
 ]

@@ -1206,6 +1206,20 @@ class WordPressClient:
                 elif key_words:
                     return key_words[0]
 
+            # 영문 제목 폴백: 한글이 없으면 키워드 조합 사용
+            # (해외 트렌드 토픽은 제목이 영문일 수 있음 — 빈 키프레이즈면 Yoast SEO 오류)
+            if keywords and len(keywords) >= 2:
+                return f"{keywords[0]} {keywords[1]}"
+            elif keywords:
+                return keywords[0]
+
+            # 최후 폴백: 제목에서 영문 단어 추출
+            english_words = [w for w in regex.findall(r'[A-Za-z0-9]+', title) if len(w) >= 2]
+            if len(english_words) >= 2:
+                return f"{english_words[0]} {english_words[1]}"
+            elif english_words:
+                return english_words[0]
+
         return ""
 
     def _prepare_excerpt(self, html: str) -> str:

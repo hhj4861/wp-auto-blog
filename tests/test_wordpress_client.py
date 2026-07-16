@@ -433,3 +433,38 @@ class TestContentFormatting:
 
         assert len(excerpt) <= 300
         assert "first paragraph" in excerpt.lower()
+
+
+class TestFocusKeyphrase:
+    """Test _generate_focus_keyphrase fallback logic (Yoast SEO)."""
+
+    @staticmethod
+    def _client(url: str) -> WordPressClient:
+        return WordPressClient(
+            config=WPConfig(url=url, username="user", app_password="pass")
+        )
+
+    def test_korean_title_on_general_site(self):
+        """한글 제목에서 핵심 키워드를 추출한다."""
+        client = self._client("https://trendpulse.blog")
+        keyphrase = client._generate_focus_keyphrase(
+            "개발자 생산성 2배 올린 리눅스 데스크톱", []
+        )
+        assert keyphrase != ""
+
+    def test_english_title_on_general_site_falls_back_to_keywords(self):
+        """영문 제목이어도 키프레이즈가 비면 안 된다 (Yoast SEO 오류 방지)."""
+        client = self._client("https://trendpulse.blog")
+        keyphrase = client._generate_focus_keyphrase(
+            "Inkling: Our Open-Weights Model",
+            ["inkling", "open", "weights", "model"],
+        )
+        assert keyphrase != ""
+
+    def test_english_title_without_keywords_on_general_site(self):
+        """영문 제목 + 키워드 없음이어도 제목에서 키프레이즈를 뽑아낸다."""
+        client = self._client("https://trendpulse.blog")
+        keyphrase = client._generate_focus_keyphrase(
+            "Inkling: Our Open-Weights Model", []
+        )
+        assert keyphrase != ""

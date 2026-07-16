@@ -2686,5 +2686,17 @@
     "category": "AI Tools",
     "identifier": "jurassic park",
     "created_at": "2026-07-16T01:10:29.340194"
+  },
+  {
+    "topic": "Claude Opus 4.8 Review: Anthropic's Most Capable Model Tested",
+    "title": "Claude Opus 4.8 Review: 30-Day Real-World Coding Analysis",
+    "keywords": [
+      "Claude Opus 4.8",
+      "Anthropic",
+      "AI coding"
+    ],
+    "category": "AI Tools",
+    "identifier": "claude opus",
+    "created_at": "2026-07-16T13:43:42.524805"
   }
 ]

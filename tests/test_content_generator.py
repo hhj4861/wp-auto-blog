@@ -388,3 +388,45 @@ class TestContentValidation:
 
         assert is_valid is True
         assert len(errors) == 0
+
+
+class TestGeneralModeSEOBlock:
+    """general(ko) 모드 SEO-META 블록 생성/파싱 테스트."""
+
+    @pytest.fixture
+    def generator(self, mock_env_vars):
+        return ContentGenerator(config=ContentConfig(language="ko"))
+
+    def test_ko_review_prompt_includes_seo_meta_block(self, generator):
+        """ko REVIEW 프롬프트에 SEO-META 출력 형식이 포함된다."""
+        prompt = generator._load_prompt_template(ContentType.REVIEW)
+        assert "---SEO-META---" in prompt
+        assert "FOCUS_KEYPHRASE" in prompt
+        assert "META_DESCRIPTION" in prompt
+
+    def test_generate_parses_seo_block_in_general_mode(self, generator):
+        """general 모드에서 SEO-META 블록을 파싱해 focus_keyphrase를 채운다."""
+        mock_response = (
+            "---SEO-META---\n"
+            "FOCUS_KEYPHRASE: 리눅스 데스크톱\n"
+            "META_DESCRIPTION: 리눅스 데스크톱으로 개발 생산성을 높이는 실전 방법을 "
+            "정리했습니다. 설치부터 활용 팁까지 한 번에 확인하세요.\n"
+            "---CONTENT---\n"
+            "<h1>리눅스 데스크톱 완벽 가이드</h1>\n"
+            "<h2>리눅스 데스크톱 소개</h2><p>내용</p>\n"
+            "<h2>설치 방법</h2><p>내용</p>\n"
+            "<h2>리눅스 데스크톱 활용 팁</h2><p>내용</p>\n"
+            "<h2>FAQ</h2><p>질문과 답변</p>\n"
+        )
+        with patch.object(generator, "research_with_grounding", return_value=""), \
+             patch.object(generator, "_call_llm", return_value=mock_response):
+            content = generator.generate(
+                topic="리눅스 데스크톱",
+                keywords=["리눅스", "데스크톱"],
+                content_type=ContentType.REVIEW,
+                mode="general",
+            )
+
+        assert content.focus_keyphrase == "리눅스 데스크톱"
+        assert "---SEO-META---" not in content.html
+        assert "FOCUS_KEYPHRASE" not in content.html

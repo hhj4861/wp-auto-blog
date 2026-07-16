@@ -631,7 +631,22 @@ CRITICAL: 클릭베이트 대신 정보성과 신뢰성을 강조하세요!
 <!-- IMAGE: modern workspace with laptop -->
 <!-- IMAGE: person working productively -->
 
-출력: HTML만, 마크다운 없이, 코멘트 없이.
+=== 출력 형식 (반드시 정확히 따를 것!) ===
+아래 마커 형식 그대로 출력:
+
+---SEO-META---
+FOCUS_KEYPHRASE: [H1 제목에 그대로 포함되는 2-4단어 핵심 키프레이즈, 예: "리눅스 데스크톱", "수면 규칙성"]
+META_DESCRIPTION: [150-160자, 핵심 키프레이즈 포함, 클릭을 유도하는 요약]
+---CONTENT---
+<h1>제목</h1>
+[나머지 HTML 콘텐츠...]
+
+중요 규칙:
+- FOCUS_KEYPHRASE는 H1 제목에 그대로 포함될 것
+- FOCUS_KEYPHRASE는 H2 소제목 2개 이상에도 포함될 것
+- META_DESCRIPTION에 FOCUS_KEYPHRASE를 포함할 것
+- ---CONTENT--- 섹션은 <h1> 태그로 시작
+- ---CONTENT--- 섹션은 HTML만, 마크다운 없이 작성
 """,
             "en": """
 Write an expert-level, PURCHASE-DECISION-FOCUSED blog post about: {topic}
@@ -1585,12 +1600,12 @@ DO NOT use Markdown. Use only HTML tags."""
             else:
                 raw_response = self._call_llm(prompt)
 
-            # Parse SEO metadata and content (tech mode uses structured format)
+            # Parse SEO metadata and content (structured format, all modes)
             focus_keyphrase = ""
             meta_description = ""
             raw_html = raw_response
 
-            if mode == "tech" and "---SEO-META---" in raw_response:
+            if "---SEO-META---" in raw_response:
                 # Parse structured format: ---SEO-META--- ... ---CONTENT---
                 focus_keyphrase, meta_description, raw_html = self._parse_seo_format(raw_response)
                 logger.debug(f"Parsed SEO format - keyphrase: {focus_keyphrase}")

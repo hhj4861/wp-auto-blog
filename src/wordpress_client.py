@@ -349,7 +349,7 @@ class WordPressClient:
         focus_keyword = ""
         if hasattr(content, 'focus_keyphrase') and content.focus_keyphrase:
             focus_keyword = content.focus_keyphrase
-            logger.debug(f"Using LLM-generated focus keyphrase: {focus_keyword}")
+            logger.info(f"Using LLM-generated focus keyphrase: {focus_keyword}")
         else:
             focus_keyword = self._generate_focus_keyphrase(content.title, content.keywords)
 

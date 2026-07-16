@@ -1608,7 +1608,7 @@ DO NOT use Markdown. Use only HTML tags."""
             if "---SEO-META---" in raw_response:
                 # Parse structured format: ---SEO-META--- ... ---CONTENT---
                 focus_keyphrase, meta_description, raw_html = self._parse_seo_format(raw_response)
-                logger.debug(f"Parsed SEO format - keyphrase: {focus_keyphrase}")
+                logger.info(f"Parsed SEO format - keyphrase: {focus_keyphrase}")
 
             # Clean and process HTML
             html = self._clean_html(raw_html)

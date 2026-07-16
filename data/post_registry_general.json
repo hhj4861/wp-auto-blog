@@ -3544,5 +3544,19 @@
     "category": "생산성",
     "identifier": "재택근무",
     "created_at": "2026-07-16T08:47:14.459289"
+  },
+  {
+    "topic": "쥬라기 공원에 나온 컴퓨터의 정체, 90년대 레트로 테크 완벽 해부",
+    "title": "쥬라기 공원 컴퓨터의 정체: 90년대 레트로 테크 완벽 해부 (SGI 워크스테이션 총정리)",
+    "keywords": [
+      "jurassic",
+      "park",
+      "computers",
+      "excruciating",
+      "detail"
+    ],
+    "category": "테크",
+    "identifier": "쥬라기",
+    "created_at": "2026-07-16T12:05:26.418521"
   }
 ]

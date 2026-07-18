@@ -2739,5 +2739,19 @@
     "category": "AI Tools",
     "identifier": "kimi k3",
     "created_at": "2026-07-17T12:01:11.943031"
+  },
+  {
+    "topic": "Snyk vs Semgrep 2026: Best AI Code Security Tool?",
+    "title": "Snyk vs Semgrep 2026: Best AI Code Security Tool?",
+    "keywords": [
+      "snyk",
+      "semgrep",
+      "best",
+      "code",
+      "security"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "snyk vs semgrep",
+    "created_at": "2026-07-18T01:10:29.867637"
   }
 ]

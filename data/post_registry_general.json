@@ -3607,5 +3607,15 @@
     "category": "테크",
     "identifier": "ai",
     "created_at": "2026-07-18T00:59:13.454681"
+  },
+  {
+    "topic": "이미지 용량 확 줄이는 JPEG 재압축 기술 완벽 가이드 (2026년판)",
+    "title": "이미지 용량 확 줄이는 JPEG 재압축 기술 완벽 가이드 (2026년판)",
+    "keywords": [
+      "jpeg"
+    ],
+    "category": "테크",
+    "identifier": "jpeg",
+    "created_at": "2026-07-18T11:33:22.227022"
   }
 ]

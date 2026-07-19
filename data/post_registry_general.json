@@ -3617,5 +3617,19 @@
     "category": "테크",
     "identifier": "jpeg",
     "created_at": "2026-07-18T11:33:22.227022"
+  },
+  {
+    "topic": "`LG 모니터 몰래 깔리는 소프트웨어, 확인·삭제하는 법 (윈도우 업데이트 주의)`",
+    "title": "LG 모니터 소프트웨어 몰래 설치 문제 총정리: 확인·삭제 방법",
+    "keywords": [
+      "monitors",
+      "silently",
+      "install",
+      "software",
+      "windows"
+    ],
+    "category": "테크",
+    "identifier": "lg",
+    "created_at": "2026-07-19T01:04:29.813985"
   }
 ]

@@ -2781,5 +2781,19 @@
     "category": "SaaS Reviews",
     "identifier": "aws vs hetzner",
     "created_at": "2026-07-19T01:15:29.768235"
+  },
+  {
+    "topic": "Transcribe.cpp vs Whisper.cpp 2026: Best Local STT?",
+    "title": "Transcribe.cpp vs Whisper.cpp 2026: Best Local STT?",
+    "keywords": [
+      "transcribe",
+      "cpp",
+      "whisper",
+      "best",
+      "local"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "transcribe",
+    "created_at": "2026-07-19T11:46:32.902132"
   }
 ]

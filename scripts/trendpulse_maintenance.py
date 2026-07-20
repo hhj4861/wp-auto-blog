@@ -20,7 +20,9 @@ GitHub Actions에서 WP_GENERAL_* 시크릿으로 실행하는 것을 전제로 
 
 import os
 import re
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
@@ -304,7 +306,36 @@ def _is_spam_comment(c):
     return None
 
 
-def task_comments():
+_tls = threading.local()
+
+
+def _tls_session():
+    if not hasattr(_tls, "s"):
+        s = requests.Session()
+        s.auth = (USERNAME, APP_PASSWORD)
+        s.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-maintenance)"})
+        _tls.s = s
+    return _tls.s
+
+
+def _delete_resource(path):
+    for _ in range(2):
+        try:
+            r = _tls_session().delete(f"{API}{path}",
+                                      params={"force": "true"}, timeout=40)
+        except requests.RequestException:
+            time.sleep(3)
+            continue
+        if r.status_code in (200, 404, 410):
+            return True
+        if r.status_code in (403, 429, 502, 503, 504):
+            time.sleep(3)
+            continue
+        return False
+    return False
+
+
+def task_comments(deadline=None):
     spam_ids, ham = [], []
     total = 0
     for status in ("approve", "hold"):
@@ -324,26 +355,26 @@ def task_comments():
         report["comments"] = {"total": total, "spam": len(spam_ids), "ham": len(ham)}
         return
 
-    deleted = 0
-    for i in range(0, len(spam_ids), 25):
-        chunk = spam_ids[i:i + 25]
-        r = req("POST", f"{BASE_URL}/wp-json/batch/v1", json_body={
-            "requests": [{"method": "DELETE", "path": f"/wp/v2/comments/{cid}?force=true"}
-                         for cid in chunk],
-        })
-        if r.status_code == 200:
-            deleted += sum(1 for resp in r.json().get("responses", [])
-                           if resp and resp.get("status") in (200, 410))
-        else:
-            log(f"  ⚠️ batch 삭제 실패({r.status_code}) — 개별 삭제로 폴백")
-            for cid in chunk:
-                req("DELETE", f"/comments/{cid}", params={"force": "true"})
-                deleted += 1
-        if deleted and deleted % 2500 < 25:
-            log(f"  ... {deleted}/{len(spam_ids)} 삭제")
-        time.sleep(0.15)
-    log(f"[댓글] 삭제 완료: {deleted}건")
-    report["comments"] = {"total": total, "spam_deleted": deleted, "ham": len(ham)}
+    # batch/v1은 호스팅 WAF가 403으로 차단 → 개별 DELETE를 스레드로 병렬화
+    deleted, failed = 0, 0
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        for i in range(0, len(spam_ids), 500):
+            if deadline and time.monotonic() > deadline:
+                log(f"  ⏱ 시간 예산 소진 — {deleted}건 삭제 후 중단, "
+                    f"잔여 {len(spam_ids) - deleted - failed}건은 재실행으로 처리")
+                break
+            chunk = spam_ids[i:i + 500]
+            results = list(pool.map(_delete_resource,
+                                    [f"/comments/{cid}" for cid in chunk]))
+            deleted += sum(1 for ok in results if ok)
+            failed += sum(1 for ok in results if not ok)
+            log(f"  ... {deleted}/{len(spam_ids)} 삭제 (실패 {failed})")
+            if failed > 500:
+                log("  ⚠️ 실패 누적 — 삭제 루프 중단 (WAF 차단 가능성)")
+                break
+    log(f"[댓글] 삭제 완료: {deleted}건, 실패 {failed}건")
+    report["comments"] = {"total": total, "spam_deleted": deleted,
+                          "failed": failed, "ham": len(ham)}
 
 
 def task_posts():
@@ -425,13 +456,10 @@ def task_tags():
     if len(junk) > 60:
         log(f"  ... 외 {len(junk) - 60}건")
     if not DRY_RUN:
-        for i in range(0, len(junk), 25):
-            chunk = junk[i:i + 25]
-            req("POST", f"{BASE_URL}/wp-json/batch/v1", json_body={
-                "requests": [{"method": "DELETE", "path": f"/wp/v2/tags/{tid}?force=true"}
-                             for tid, _, _ in chunk],
-            })
-            time.sleep(0.15)
+        with ThreadPoolExecutor(max_workers=5) as pool:
+            results = list(pool.map(_delete_resource,
+                                    [f"/tags/{tid}" for tid, _, _ in junk]))
+        log(f"[태그] 삭제 완료: {sum(1 for ok in results if ok)}건")
     report["tags_deleted"] = len(junk)
 
 
@@ -499,15 +527,18 @@ def main():
         raise SystemExit(f"안전장치: 대상이 trendpulse가 아님 ({BASE_URL}) — 중단")
 
     log(f"{'=' * 60}\n대상: {BASE_URL} | DRY_RUN={DRY_RUN}\n{'=' * 60}")
+    start = time.monotonic()
     me = task_auth_check()
     task_settings()
     task_author(me)
     page_ids = task_pages()
-    task_comments()
+    # 댓글 대량 삭제는 오래 걸리므로 마지막에 시간 예산 내에서 수행
+    # (posts 단계가 먼저 돌아 댓글창을 닫아 스팸 유입부터 차단)
     task_posts()
     task_trashed_slugs()
     task_tags()
     task_nav_links(page_ids)
+    task_comments(deadline=start + 78 * 60)
 
     log(f"\n{'=' * 60}\n요약: {report}")
     if DRY_RUN:

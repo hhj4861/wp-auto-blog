@@ -297,6 +297,10 @@ def _is_spam_comment(c):
         return "본문 내 URL"
     if re.search(r"\[url=", content, re.I):
         return "BBCode 링크"
+    if re.search(r"[А-Яа-яЁё]", content):
+        return "키릴 문자 스팸"
+    if re.search(r"xevil|captcha", content, re.I):
+        return "캡차 봇 스팸"
     return None
 
 
@@ -459,6 +463,12 @@ def task_nav_links(page_ids):
 
     mr = req("GET", "/menus")
     menus = mr.json() if mr.status_code == 200 else []
+    # 실제 테마 위치에 연결된 메뉴를 우선 사용
+    lr = req("GET", "/menu-locations")
+    if lr.status_code == 200:
+        assigned = [loc.get("menu") for loc in lr.json().values() if loc.get("menu")]
+        if assigned:
+            menus = sorted(menus, key=lambda m: m["id"] not in assigned)
     if not menus:
         log("[링크] 푸터 위젯/메뉴 모두 없음 → 관리자 화면에서 수동 추가 필요 "
             "(외모 > 메뉴 또는 위젯에 소개/개인정보처리방침/문의 링크)")

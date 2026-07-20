@@ -254,42 +254,12 @@ def main() -> int:
                     break
 
             if not pending_topic:
-                # For general mode, dynamically generate career topics
-                if args.mode == "general":
-                    logger.info("No pending topics in queue, generating career topics...")
-
-                    # Create TrendDetector with general mode config
-                    detector = TrendDetector(config=trend_config)
-                    generated_topics = detector.generate_career_topics()
-
-                    if not generated_topics:
-                        logger.warning("Failed to generate career topics")
-                        return 0
-
-                    # Use the first generated topic
-                    generated = generated_topics[0]
-                    logger.info(f"Generated topic: {generated.suggested_title}")
-
-                    # Create pending_topic dict from generated Topic
-                    pending_topic = {
-                        "topic": generated.suggested_title,
-                        "keywords": generated.keywords,
-                        "category": generated.category,
-                        "status": "generated",  # Mark as dynamically generated
-                    }
-                    pending_index = -1  # No queue index for generated topics
-
-                    # Optionally add to queue file for tracking
-                    queue.append({
-                        **pending_topic,
-                        "generated_at": __import__("datetime").datetime.now().isoformat(),
-                    })
-                    with open(queue_file, "w", encoding="utf-8") as f:
-                        json.dump(queue, f, ensure_ascii=False, indent=2)
-                    logger.info("Added generated topic to queue for tracking")
-                else:
-                    logger.info("No pending topics in queue")
-                    return 0
+                # 큐 소진 시 무관 토픽 자동 생성 금지 (머니 키워드 전략 유지)
+                logger.warning(
+                    "No pending topics in queue — "
+                    "data/topic_queue_general.json에 머니 키워드 큐를 보충하세요"
+                )
+                return 0
 
             logger.info(f"Processing from queue: {pending_topic['topic']}")
 
@@ -297,6 +267,7 @@ def main() -> int:
             result = pipeline.run_single(
                 topic=pending_topic["topic"],
                 keywords=pending_topic.get("keywords"),
+                category=pending_topic.get("category"),
             )
             results = [result]
 

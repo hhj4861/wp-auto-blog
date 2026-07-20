@@ -490,12 +490,14 @@ class BlogPipeline:
         self,
         topic: str,
         keywords: Optional[list[str]] = None,
+        category: Optional[str] = None,
     ) -> PipelineResult:
         """Run pipeline for a single manually-specified topic.
 
         Args:
             topic: Topic to write about
             keywords: Optional keywords (auto-extracted if not provided)
+            category: Optional category (큐 항목의 category 전달용)
 
         Returns:
             PipelineResult
@@ -521,6 +523,7 @@ class BlogPipeline:
             source=TrendSource.HACKER_NEWS,  # Placeholder
             score=100,  # Manual topics get max score
             suggested_title=self.trend_detector._generate_title(topic, keywords),
+            category=category,
         )
 
         return self._process_topic(topic_obj)

@@ -1,0 +1,37 @@
+name: POC Apply Money Template
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: '적용할 draft 포스트 ID'
+        required: false
+        default: '1411'
+        type: string
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Apply money template to draft
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          POC_POST_ID: ${{ github.event.inputs.post_id }}
+        run: python scripts/apply_money_template_poc.py

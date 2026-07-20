@@ -85,6 +85,7 @@ def get_scheduled_category(mode: str = "general") -> Optional[str]:
 from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
+from src.monetization import insert_monetization, check_quality
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
 # ImageCrawler for K-Culture product images (Olive Young API, Amazon)
@@ -386,6 +387,15 @@ class BlogPipeline:
             else:
                 logger.debug("Tech mode: skipping section images (using visual elements instead)")
 
+            # 수익화 레이어 (general/trendpulse 전용):
+            # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스
+            if self.config.mode == "general":
+                content.html = insert_monetization(
+                    content.html,
+                    official_link=getattr(content, "official_link", ""),
+                    related_posts=self._get_related_posts(exclude_title=content.title),
+                )
+
             # Create post (or simulate in dry run)
             if self.config.dry_run:
                 logger.info("[DRY RUN] Would create post - skipping actual publish")
@@ -397,6 +407,23 @@ class BlogPipeline:
                 )
             else:
                 status = PostStatus.PUBLISH if self.config.auto_publish else PostStatus.DRAFT
+
+                # 발행 전 품질 게이트: 결함 검출 시 자동 발행을 취소하고 draft로 강등
+                gate_issues = check_quality(
+                    title=content.title,
+                    html=content.html,
+                    focus_keyphrase=content.focus_keyphrase,
+                    meta_description=content.meta_description,
+                    require_korean=(self.config.mode == "general"),
+                )
+                if gate_issues:
+                    logger.warning(f"품질 게이트 실패 {len(gate_issues)}건: {gate_issues}")
+                    if status == PostStatus.PUBLISH:
+                        logger.warning("자동 발행 취소 → draft로 저장 (수동 검토 필요)")
+                        status = PostStatus.DRAFT
+                else:
+                    logger.info("품질 게이트 통과")
+
                 # Tech mode: skip hero image (TL;DR summary comes first)
                 skip_hero = self.config.mode == "tech"
                 post = self.wp_client.create_post(
@@ -436,6 +463,28 @@ class BlogPipeline:
                 error=str(e),
                 duration_seconds=duration,
             )
+
+    def _get_related_posts(self, exclude_title: str = "", count: int = 3) -> list[dict]:
+        """내부 링크 박스용 관련 글 목록 (발행된 한국어 글만).
+
+        Returns:
+            [{"title": ..., "url": ...}] 최대 count개. 실패 시 빈 리스트.
+        """
+        try:
+            recent = self.wp_client.get_recent_posts(count=30, status="publish")
+        except Exception as e:
+            logger.warning(f"관련 글 조회 실패: {e}")
+            return []
+        base = self.wp_client.config.url.rstrip("/")
+        related = []
+        for p in recent:
+            title = re.sub(r"<[^>]+>", "", p.get("title") or "").strip()
+            if not re.search(r"[가-힣]", title) or title == exclude_title:
+                continue
+            related.append({"title": title, "url": f"{base}/{p['slug']}/"})
+            if len(related) >= count:
+                break
+        return related
 
     def run_single(
         self,

@@ -161,6 +161,12 @@ class WordPressClient:
             "바이오해킹", "슬립테크", "수면", "명상", "스트레스관리", "멘탈",
         ],
 
+        # 생활정보: 세금·지원금·금융·행정 실생활 정보 (고CPC 수익 카테고리)
+        "생활정보": [
+            "생활정보", "세금", "지원금", "정부지원금", "복지", "신청방법",
+            "환급", "연말정산", "재산세", "재테크", "절약", "금융", "혜택",
+        ],
+
         # 취업: 외항사/항공사 취업 정보 (면접, 기출, 채용)
         "취업": [
             "취업", "면접", "채용", "합격", "외항사", "항공사", "승무원",
@@ -366,8 +372,12 @@ class WordPressClient:
         # 콘텐츠를 카테고리 wrapper로 감싸기
         wrapped_html = f'<div class="post-content {category_class}" data-category="{category or ""}">\n{prepared_html}\n</div>'
 
-        # Generate SEO-friendly slug
-        slug = self._generate_slug(content.title, content_type)
+        # Generate SEO-friendly slug (LLM이 준 영문 슬러그 힌트가 유효하면 우선 사용)
+        slug_hint = (getattr(content, "slug_hint", "") or "").strip()
+        if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+){1,7}", slug_hint) and len(slug_hint) <= 60:
+            slug = slug_hint
+        else:
+            slug = self._generate_slug(content.title, content_type)
 
         post_data = {
             "title": content.title,
@@ -1246,11 +1256,13 @@ class WordPressClient:
 
         return text
 
-    def get_recent_posts(self, count: int = 100) -> list[dict]:
+    def get_recent_posts(self, count: int = 100, status: str = "any") -> list[dict]:
         """Fetch recent posts from WordPress.
 
         Args:
             count: Number of posts to fetch (default: 100)
+            status: Post status filter (default: "any" — drafts 포함.
+                내부 링크용으로는 "publish"를 사용할 것)
 
         Returns:
             List of post dictionaries with id, title, slug
@@ -1268,7 +1280,7 @@ class WordPressClient:
                     params={
                         "per_page": per_page,
                         "page": page,
-                        "status": "any",  # Include drafts and published
+                        "status": status,
                         "_fields": "id,title,slug",  # Only fetch needed fields
                     },
                     retry_statuses=(403, 429, 500, 502, 503, 504),

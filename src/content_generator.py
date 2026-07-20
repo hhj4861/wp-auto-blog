@@ -91,6 +91,8 @@ class GeneratedContent:
     word_count: int
     content_type: ContentType
     focus_keyphrase: str = ""
+    slug_hint: str = ""
+    official_link: str = ""
 
     def to_dict(self) -> dict:
         """Convert to dictionary."""
@@ -102,6 +104,8 @@ class GeneratedContent:
             "word_count": self.word_count,
             "content_type": self.content_type.value,
             "focus_keyphrase": self.focus_keyphrase,
+            "slug_hint": self.slug_hint,
+            "official_link": self.official_link,
         }
 
 
@@ -637,6 +641,8 @@ CRITICAL: 클릭베이트 대신 정보성과 신뢰성을 강조하세요!
 ---SEO-META---
 FOCUS_KEYPHRASE: [H1 제목에 그대로 포함되는 2-4단어 핵심 키프레이즈, 예: "리눅스 데스크톱", "수면 규칙성"]
 META_DESCRIPTION: [150-160자, 핵심 키프레이즈 포함, 클릭을 유도하는 요약]
+SLUG: [영문 소문자와 하이픈만 사용한 SEO 슬러그 3-6단어, 연도 포함, 예: property-tax-july-2026-wetax]
+OFFICIAL_LINK: [주제와 가장 관련 깊은 공식 사이트를 "이름|URL" 형식으로. 정부·공공기관(.go.kr, .or.kr)만 허용, 예: 위택스|https://www.wetax.go.kr — 해당 없으면 "없음"]
 ---CONTENT---
 <h1>제목</h1>
 [나머지 HTML 콘텐츠...]
@@ -645,6 +651,8 @@ META_DESCRIPTION: [150-160자, 핵심 키프레이즈 포함, 클릭을 유도�
 - FOCUS_KEYPHRASE는 H1 제목에 그대로 포함될 것
 - FOCUS_KEYPHRASE는 H2 소제목 2개 이상에도 포함될 것
 - META_DESCRIPTION에 FOCUS_KEYPHRASE를 포함할 것
+- SLUG는 반드시 영문 소문자·숫자·하이픈만 사용 (한글 금지)
+- OFFICIAL_LINK는 실제 존재하는 공식 URL만 (확실하지 않으면 "없음")
 - ---CONTENT--- 섹션은 <h1> 태그로 시작
 - ---CONTENT--- 섹션은 HTML만, 마크다운 없이 작성
 """,
@@ -1603,12 +1611,17 @@ DO NOT use Markdown. Use only HTML tags."""
             # Parse SEO metadata and content (structured format, all modes)
             focus_keyphrase = ""
             meta_description = ""
+            slug_hint = ""
+            official_link = ""
             raw_html = raw_response
 
             if "---SEO-META---" in raw_response:
                 # Parse structured format: ---SEO-META--- ... ---CONTENT---
-                focus_keyphrase, meta_description, raw_html = self._parse_seo_format(raw_response)
-                logger.info(f"Parsed SEO format - keyphrase: {focus_keyphrase}")
+                (focus_keyphrase, meta_description, slug_hint,
+                 official_link, raw_html) = self._parse_seo_format(raw_response)
+                logger.info(
+                    f"Parsed SEO format - keyphrase: {focus_keyphrase}, "
+                    f"slug: {slug_hint}, official_link: {official_link}")
 
             # Clean and process HTML
             html = self._clean_html(raw_html)
@@ -1679,6 +1692,8 @@ DO NOT use Markdown. Use only HTML tags."""
             word_count=word_count,
             content_type=content_type,
             focus_keyphrase=focus_keyphrase,
+            slug_hint=slug_hint,
+            official_link=official_link,
         )
 
     def _get_category_context(self, category: str, topic: str) -> str:
@@ -3257,13 +3272,15 @@ Be specific and factual based on search results. Always use the most recent vers
 
         return html
 
-    def _parse_seo_format(self, response: str) -> tuple[str, str, str]:
+    def _parse_seo_format(self, response: str) -> tuple[str, str, str, str, str]:
         """Parse structured SEO format from LLM response.
 
         Expected format:
         ---SEO-META---
         FOCUS_KEYPHRASE: [keyphrase]
         META_DESCRIPTION: [description]
+        SLUG: [english-slug]
+        OFFICIAL_LINK: [name|url or 없음]
         ---CONTENT---
         <h1>...</h1>
         ...
@@ -3272,11 +3289,18 @@ Be specific and factual based on search results. Always use the most recent vers
             response: Raw LLM response
 
         Returns:
-            Tuple of (focus_keyphrase, meta_description, html_content)
+            Tuple of (focus_keyphrase, meta_description, slug_hint,
+            official_link, html_content)
         """
         focus_keyphrase = ""
         meta_description = ""
+        slug_hint = ""
+        official_link = ""
         html_content = response
+
+        def _extract(field: str, section: str) -> str:
+            m = re.search(rf'{field}:\s*(.+?)(?:\n|$)', section, re.IGNORECASE)
+            return m.group(1).strip().strip('"\'') if m else ""
 
         # Split by markers
         if "---SEO-META---" in response and "---CONTENT---" in response:
@@ -3284,29 +3308,12 @@ Be specific and factual based on search results. Always use the most recent vers
             if len(parts) == 2:
                 meta_section = parts[0]
                 html_content = parts[1].strip()
+                focus_keyphrase = _extract("FOCUS_KEYPHRASE", meta_section)
+                meta_description = _extract("META_DESCRIPTION", meta_section)
+                slug_hint = _extract("SLUG", meta_section).lower()
+                official_link = _extract("OFFICIAL_LINK", meta_section)
 
-                # Extract FOCUS_KEYPHRASE
-                keyphrase_match = re.search(
-                    r'FOCUS_KEYPHRASE:\s*(.+?)(?:\n|$)',
-                    meta_section,
-                    re.IGNORECASE
-                )
-                if keyphrase_match:
-                    focus_keyphrase = keyphrase_match.group(1).strip()
-                    # Remove quotes if present
-                    focus_keyphrase = focus_keyphrase.strip('"\'')
-
-                # Extract META_DESCRIPTION
-                meta_match = re.search(
-                    r'META_DESCRIPTION:\s*(.+?)(?:\n|$)',
-                    meta_section,
-                    re.IGNORECASE
-                )
-                if meta_match:
-                    meta_description = meta_match.group(1).strip()
-                    meta_description = meta_description.strip('"\'')
-
-        return focus_keyphrase, meta_description, html_content
+        return focus_keyphrase, meta_description, slug_hint, official_link, html_content
 
     def _extract_title(self, html: str) -> Optional[str]:
         """Extract title from H1 tag.

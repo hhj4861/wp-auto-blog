@@ -66,9 +66,10 @@ def main():
     print(f"Yoast 타이틀: {meta.get('_yoast_wpseo_title')!r}")
     print(f"본문 길이: {len(content)} bytes / 텍스트 {len(text)}자")
     print(f"H2 ({len(h2s)}개): {[re.sub('<[^>]+>', '', h)[:40] for h in h2s]}")
-    print(f"이미지 태그: {content.count('<img')}개 | 외부 링크: "
-          f"{len(re.findall(r'href=\"https?://(?!trendpulse)', content))}개 | 내부 링크: "
-          f"{len(re.findall(r'href=\"https?://trendpulse', content))}개")
+    ext_links = len(re.findall(r'href="https?://(?!trendpulse)', content))
+    int_links = len(re.findall(r'href="https?://trendpulse', content))
+    print(f"이미지 태그: {content.count('<img')}개 | 외부 링크: {ext_links}개 | "
+          f"내부 링크: {int_links}개")
 
     print("-" * 60)
     print("품질 게이트 예비 점검:")

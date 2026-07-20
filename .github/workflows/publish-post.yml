@@ -1,0 +1,36 @@
+name: Publish Draft Post
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: '발행할 draft 포스트 ID'
+        required: true
+        type: string
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Publish post
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          POC_POST_ID: ${{ github.event.inputs.post_id }}
+        run: python scripts/publish_post.py

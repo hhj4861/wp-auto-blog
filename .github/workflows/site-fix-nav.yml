@@ -1,0 +1,30 @@
+name: Fix Navigation Menus
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-nav:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fix navigation
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+        run: python scripts/fix_nav_menus.py

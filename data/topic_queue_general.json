@@ -441,7 +441,8 @@
       "지방세"
     ],
     "category": "생활정보",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-07-20T14:27:54.024179"
   },
   {
     "topic": "한전 에너지캐시백 신청 방법과 환급 기준 총정리 (2026)",

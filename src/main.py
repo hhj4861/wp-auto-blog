@@ -244,47 +244,55 @@ def main() -> int:
             with open(queue_file, "r", encoding="utf-8") as f:
                 queue = json.load(f)
 
-            # Find next pending topic
-            pending_topic = None
-            pending_index = -1
-            for i, item in enumerate(queue):
-                if item.get("status") == "pending":
-                    pending_topic = item
-                    pending_index = i
-                    break
+            import datetime as _dt
 
-            if not pending_topic:
-                # 큐 소진 시 무관 토픽 자동 생성 금지 (머니 키워드 전략 유지)
-                logger.warning(
-                    "No pending topics in queue — "
-                    "data/topic_queue_general.json에 머니 키워드 큐를 보충하세요"
-                )
-                return 0
-
-            logger.info(f"Processing from queue: {pending_topic['topic']}")
-
-            # Process the topic
-            result = pipeline.run_single(
-                topic=pending_topic["topic"],
-                keywords=pending_topic.get("keywords"),
-                category=pending_topic.get("category"),
-            )
-            results = [result]
-
-            # Update queue status
-            if result.success:
-                if pending_index >= 0:
-                    # Update existing queue item
-                    queue[pending_index]["status"] = "completed"
-                    queue[pending_index]["completed_at"] = __import__("datetime").datetime.now().isoformat()
-                else:
-                    # For generated topics, update the last item (which was just added)
-                    queue[-1]["status"] = "completed"
-                    queue[-1]["completed_at"] = __import__("datetime").datetime.now().isoformat()
-
+            def _save_queue():
                 with open(queue_file, "w", encoding="utf-8") as f:
                     json.dump(queue, f, ensure_ascii=False, indent=2)
-                logger.info(f"Queue updated: marked as completed")
+
+            # pending 항목을 순서대로 시도 — 중복 판정 항목은 스킵 처리 후
+            # 다음 항목으로 전진해 큐 교착을 방지한다 (최대 5회 스킵)
+            results = []
+            skips = 0
+            while skips < 5:
+                pending_topic = next(
+                    (item for item in queue if item.get("status") == "pending"), None
+                )
+                if pending_topic is None:
+                    # 큐 소진 시 무관 토픽 자동 생성 금지 (머니 키워드 전략 유지)
+                    logger.warning(
+                        "No pending topics in queue — "
+                        "data/topic_queue_general.json에 머니 키워드 큐를 보충하세요"
+                    )
+                    if not results:
+                        return 0
+                    break
+
+                logger.info(f"Processing from queue: {pending_topic['topic']}")
+                result = pipeline.run_single(
+                    topic=pending_topic["topic"],
+                    keywords=pending_topic.get("keywords"),
+                    category=pending_topic.get("category"),
+                )
+
+                if not result.success and result.error and "Duplicate" in result.error:
+                    pending_topic["status"] = "skipped_duplicate"
+                    pending_topic["skipped_at"] = _dt.datetime.now().isoformat()
+                    _save_queue()
+                    skips += 1
+                    logger.warning(
+                        f"중복 판정 → 큐에서 스킵하고 다음 항목 진행 ({skips}/5): "
+                        f"{pending_topic['topic']}"
+                    )
+                    continue
+
+                results = [result]
+                if result.success:
+                    pending_topic["status"] = "completed"
+                    pending_topic["completed_at"] = _dt.datetime.now().isoformat()
+                    _save_queue()
+                    logger.info("Queue updated: marked as completed")
+                break
 
         elif args.topic:
             # Single topic mode

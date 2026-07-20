@@ -2809,5 +2809,17 @@
     "category": "AI Tools",
     "identifier": "qwen",
     "created_at": "2026-07-20T01:19:03.036735"
+  },
+  {
+    "topic": "ESP32 vs Raspberry Pi vs Arduino: Best in 2026?",
+    "title": "ESP32 vs Raspberry Pi vs Arduino: Best Board 2026",
+    "keywords": [
+      "raspberry",
+      "arduino",
+      "best"
+    ],
+    "category": "Dev Productivity",
+    "identifier": "esp32 vs raspberry pi vs arduino",
+    "created_at": "2026-07-20T12:43:28.025864"
   }
 ]

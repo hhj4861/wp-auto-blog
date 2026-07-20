@@ -33,5 +33,6 @@ jobs:
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          WP_PROXY: ${{ secrets.WP_PROXY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: python scripts/trendpulse_maintenance.py

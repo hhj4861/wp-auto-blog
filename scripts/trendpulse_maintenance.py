@@ -50,9 +50,19 @@ TAG_WHITELIST = {
     "python", "react", "wordpress", "adsense", "notion", "figma", "slack",
 }
 
-session = requests.Session()
-session.auth = (USERNAME, APP_PASSWORD)
-session.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-maintenance)"})
+WP_PROXY = os.environ.get("WP_PROXY", "").strip()
+
+
+def _new_session():
+    s = requests.Session()
+    s.auth = (USERNAME, APP_PASSWORD)
+    s.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-maintenance)"})
+    if WP_PROXY:
+        s.proxies = {"http": WP_PROXY, "https": WP_PROXY}
+    return s
+
+
+session = _new_session()
 
 report = {}
 
@@ -95,6 +105,7 @@ def paginate(path, params=None):
         if page >= total_pages:
             return
         page += 1
+        time.sleep(0.25)
 
 
 def write(method, path, json_body, ok_codes=(200, 201)):
@@ -208,12 +219,16 @@ def clean_content(content):
 # ---------------------------------------------------------------- 작업 단계
 
 def task_auth_check():
-    r = req("GET", "/users/me", params={"context": "edit"})
-    if r.status_code != 200:
-        raise SystemExit(f"인증 실패: {r.status_code} {r.text[:200]}")
-    me = r.json()
-    log(f"✅ 인증 OK: user id={me['id']}, slug={me.get('slug')!r}")
-    return me
+    # WAF가 러너 IP 대역을 일시 차단한 경우를 흡수: 2.5분 간격 최대 6회 대기
+    for attempt in range(6):
+        r = req("GET", "/users/me", params={"context": "edit"})
+        if r.status_code == 200:
+            me = r.json()
+            log(f"✅ 인증 OK: user id={me['id']}, slug={me.get('slug')!r}")
+            return me
+        log(f"  WAF/인증 대기 중 ({attempt + 1}/6): {r.status_code} — 150초 후 재시도")
+        time.sleep(150)
+    raise SystemExit(f"인증 실패(워밍업 소진): {r.status_code} {r.text[:200]}")
 
 
 def task_settings():
@@ -311,10 +326,7 @@ _tls = threading.local()
 
 def _tls_session():
     if not hasattr(_tls, "s"):
-        s = requests.Session()
-        s.auth = (USERNAME, APP_PASSWORD)
-        s.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-maintenance)"})
-        _tls.s = s
+        _tls.s = _new_session()
     return _tls.s
 
 
@@ -357,7 +369,7 @@ def task_comments(deadline=None):
 
     # batch/v1은 호스팅 WAF가 403으로 차단 → 개별 DELETE를 스레드로 병렬화
     deleted, failed = 0, 0
-    with ThreadPoolExecutor(max_workers=5) as pool:
+    with ThreadPoolExecutor(max_workers=3) as pool:
         for i in range(0, len(spam_ids), 500):
             if deadline and time.monotonic() > deadline:
                 log(f"  ⏱ 시간 예산 소진 — {deleted}건 삭제 후 중단, "
@@ -456,7 +468,7 @@ def task_tags():
     if len(junk) > 60:
         log(f"  ... 외 {len(junk) - 60}건")
     if not DRY_RUN:
-        with ThreadPoolExecutor(max_workers=5) as pool:
+        with ThreadPoolExecutor(max_workers=3) as pool:
             results = list(pool.map(_delete_resource,
                                     [f"/tags/{tid}" for tid, _, _ in junk]))
         log(f"[태그] 삭제 완료: {sum(1 for ok in results if ok)}건")

@@ -4,13 +4,15 @@
 수행 작업:
   1. 사이트 타이틀/태그라인 설정, 신규 글 댓글 기본값 닫기
   2. 작성자 표시명/슬러그에서 Gmail 노출 제거
-  3. 필수 페이지 생성: 개인정보처리방침 / 소개 / 문의
-  4. 스팸 댓글(외부 링크 포함) 휴지통 이동
-  5. 불량 포스트 draft 전환: 영문 제목 잔존분 + 플레이스홀더/프롬프트 잔존분,
-     나머지 전체 포스트 댓글 닫기
+  3. 필수 페이지 생성/발행: 개인정보처리방침 / 소개 / 문의 (+메뉴 링크 시도)
+  4. 스팸 댓글(외부 링크 포함) 일괄 영구 삭제 — WP batch API 사용
+  5. 포스트 정비:
+     - 영문 제목(HN 잔존) → draft 전환
+     - 제목의 LLM 메타 잔존물(백틱, "(37자)", "(유형 N)" 등) 자동 정정
+     - 본문의 ((...)) 인용 플레이스홀더 제거
+     - 전체 포스트 댓글 닫기
   6. __trashed 잔존 슬러그 완전 삭제
-  7. 저품질 영문 토큰 태그 삭제
-  8. 푸터 위젯에 필수 페이지 링크 추가 시도 (테마가 지원할 때만)
+  7. 정크 태그 삭제 (0카운트 전체 + 저사용 영문 토큰)
 
 DRY_RUN=true 면 변경 없이 대상만 보고한다.
 GitHub Actions에서 WP_GENERAL_* 시크릿으로 실행하는 것을 전제로 한다.
@@ -18,7 +20,6 @@ GitHub Actions에서 WP_GENERAL_* 시크릿으로 실행하는 것을 전제로 
 
 import os
 import re
-import sys
 import time
 
 import requests
@@ -35,19 +36,12 @@ SITE_TAGLINE = "IT·생산성·생활 정보를 한눈에 정리하는 트렌드
 AUTHOR_DISPLAY_NAME = "TrendPulse 에디터"
 AUTHOR_SLUG = "trendpulse-editor"
 
-# draft 전환 안전 상한 (감사 기준 영문 제목 ~40건 예상)
+# draft 전환 안전 상한 (영문 제목 잔존분 ~40-60건 예상)
 MAX_DRAFTS = 80
-
-PLACEHOLDER_PATTERNS = [
-    (re.compile(r"\(\([^()\n]{2,60}\)\)"), "((...)) 인용 플레이스홀더"),
-    (re.compile(r"<!--\s*IMAGE", re.I), "<!-- IMAGE 주석 잔존"),
-    (re.compile(r"---SEO-META---"), "SEO-META 블록 잔존"),
-    (re.compile(r"FOCUS_KEYPHRASE\s*[:=]"), "FOCUS_KEYPHRASE 잔존"),
-    (re.compile(r"META_DESCRIPTION\s*[:=]"), "META_DESCRIPTION 잔존"),
-]
 
 HANGUL_RE = re.compile(r"[가-힣]")
 TRASHED_SLUG_RE = re.compile(r"^_*trashed(-\d+)?$")
+PAREN_PLACEHOLDER_RE = re.compile(r"\s*\(\([^()\n]{2,60}\)\)")
 
 TAG_WHITELIST = {
     "ai", "api", "seo", "saas", "llm", "gpt", "chatgpt", "claude", "gemini",
@@ -68,7 +62,7 @@ def log(msg):
 def req(method, path, *, params=None, json_body=None, attempt=0):
     url = path if path.startswith("http") else f"{API}{path}"
     try:
-        r = session.request(method, url, params=params, json=json_body, timeout=40)
+        r = session.request(method, url, params=params, json=json_body, timeout=60)
     except requests.RequestException as e:
         if attempt < 3:
             time.sleep(8 * (attempt + 1))
@@ -83,7 +77,7 @@ def req(method, path, *, params=None, json_body=None, attempt=0):
 
 def paginate(path, params=None):
     params = dict(params or {})
-    params.setdefault("per_page", 50)
+    params.setdefault("per_page", 100)
     page = 1
     while True:
         params["page"] = page
@@ -102,14 +96,14 @@ def paginate(path, params=None):
 
 
 def write(method, path, json_body, ok_codes=(200, 201)):
-    """DRY_RUN이면 실행하지 않고 True 반환."""
+    """DRY_RUN이면 실행하지 않는다."""
     if DRY_RUN:
         return None
     r = req(method, path, json_body=json_body)
     if r.status_code not in ok_codes:
         log(f"  ⚠️ {method} {path} → {r.status_code}: {r.text[:200]}")
         return None
-    time.sleep(0.25)
+    time.sleep(0.2)
     return r.json()
 
 
@@ -186,6 +180,29 @@ PAGES = [
 ]
 
 
+# ---------------------------------------------------------------- 제목/본문 정정
+
+def clean_title(title):
+    """LLM 메타 출력 잔존물 제거: 백틱, "(37자)", "(유형 N ...)", 끝의 따옴표/별표."""
+    s = title.strip()
+    s = re.sub(r"[\s\"*]*\((?:유형\s*\d|[0-9]+\s*자)[^)]*\)", "", s)   # (유형 3), (37자), (유형 1 · 31자)
+    s = re.sub(r"[\s\"*]*\[유형[^\]]*\]?", "", s)
+    s = re.sub(r"[\s\"*]*\((?:유형\s*\d|[0-9]+\s*자)[^)]*$", "", s)    # 닫는 괄호 없이 잘린 경우
+    s = s.strip().strip("`").strip()
+    s = re.sub(r'["*\s]+$', "", s)
+    s = re.sub(r'^["\s]+', "", s)
+    s = re.sub(r"\s{2,}", " ", s).strip()
+    return s
+
+
+def clean_content(content):
+    """((Sleep 2024)) 류의 인용 플레이스홀더 제거."""
+    cleaned = PAREN_PLACEHOLDER_RE.sub("", content)
+    if cleaned != content:
+        cleaned = re.sub(r"(?<=[가-힣\w.,]) {2,}(?=[가-힣\w])", " ", cleaned)
+    return cleaned
+
+
 # ---------------------------------------------------------------- 작업 단계
 
 def task_auth_check():
@@ -193,7 +210,7 @@ def task_auth_check():
     if r.status_code != 200:
         raise SystemExit(f"인증 실패: {r.status_code} {r.text[:200]}")
     me = r.json()
-    log(f"✅ 인증 OK: user id={me['id']}, name={me.get('name')!r}, slug={me.get('slug')!r}")
+    log(f"✅ 인증 OK: user id={me['id']}, slug={me.get('slug')!r}")
     return me
 
 
@@ -232,86 +249,142 @@ def task_author(me):
 
 
 def task_pages():
-    created = []
+    created, published, page_ids = [], [], {}
     for page in PAGES:
         r = req("GET", "/pages", params={"slug": page["slug"], "status": "any", "context": "edit"})
-        exists = r.status_code == 200 and len(r.json()) > 0
-        if exists:
-            log(f"[페이지] {page['slug']} 이미 존재 → 건너뜀")
-            continue
-        log(f"[페이지] 생성 예정: /{page['slug']}/ ({page['title']})")
-        created.append(page["slug"])
-        write("POST", "/pages", {
-            "slug": page["slug"],
-            "title": page["title"],
-            "content": page["content"].strip(),
-            "status": "publish",
-            "comment_status": "closed",
-            "ping_status": "closed",
-        })
-    report["pages_created"] = created
+        existing = r.json() if r.status_code == 200 else []
+        if existing:
+            ex = existing[0]
+            page_ids[page["slug"]] = ex["id"]
+            if ex.get("status") == "publish":
+                log(f"[페이지] /{page['slug']}/ 이미 발행됨 → 건너뜀")
+                continue
+            # WP 기본 생성 draft(예: 개인정보처리방침 샘플) → 본문 교체 후 발행
+            log(f"[페이지] /{page['slug']}/ {ex.get('status')} 상태로 존재 → 본문 교체 + 발행")
+            published.append(page["slug"])
+            write("POST", f"/pages/{ex['id']}", {
+                "title": page["title"],
+                "content": page["content"].strip(),
+                "status": "publish",
+                "comment_status": "closed",
+                "ping_status": "closed",
+            })
+        else:
+            log(f"[페이지] 생성 예정: /{page['slug']}/ ({page['title']})")
+            created.append(page["slug"])
+            res = write("POST", "/pages", {
+                "slug": page["slug"],
+                "title": page["title"],
+                "content": page["content"].strip(),
+                "status": "publish",
+                "comment_status": "closed",
+                "ping_status": "closed",
+            })
+            if res:
+                page_ids[page["slug"]] = res["id"]
+    report["pages"] = {"created": created, "published": published}
+    return page_ids
 
 
 def _is_spam_comment(c):
     author_url = (c.get("author_url") or "").strip()
     content = c.get("content", {}).get("rendered", "")
     if author_url and "trendpulse.blog" not in author_url:
-        return f"외부 author_url: {author_url[:60]}"
+        return "외부 author_url"
     if re.search(r'<a\s[^>]*href="https?://(?!trendpulse\.blog)', content):
         return "본문 내 외부 링크"
-    if re.search(r"https?://[^\s\"<]+\.(bond|top|xyz|icu|cyou|click)\b", content, re.I):
-        return "정크 TLD 링크"
+    if re.search(r"https?://[^\s\"<]+", content):
+        return "본문 내 URL"
+    if re.search(r"\[url=", content, re.I):
+        return "BBCode 링크"
     return None
 
 
 def task_comments():
-    spam = []
+    spam_ids, ham = [], []
     total = 0
-    for c in paginate("/comments", params={"status": "approve"}):
-        total += 1
-        reason = _is_spam_comment(c)
-        if reason:
-            spam.append((c["id"], reason, re.sub(r"<[^>]+>", "", c["content"]["rendered"])[:60]))
-    log(f"[댓글] 승인 댓글 {total}건 중 스팸 판정 {len(spam)}건")
-    for cid, reason, preview in spam:
-        log(f"  - #{cid} [{reason}] {preview!r}")
-        write("DELETE", f"/comments/{cid}", None, ok_codes=(200,))
-    report["comments"] = {"approved_total": total, "trashed": len(spam)}
+    for status in ("approve", "hold"):
+        for c in paginate("/comments", params={"status": status,
+                                               "_fields": "id,author_url,content,author_name"}):
+            total += 1
+            if _is_spam_comment(c):
+                spam_ids.append(c["id"])
+            else:
+                preview = re.sub(r"<[^>]+>", "", c["content"]["rendered"])[:60]
+                ham.append((c["id"], c.get("author_name", ""), preview))
+
+    log(f"[댓글] 전체 {total}건 중 스팸 {len(spam_ids)}건 영구 삭제 예정, 유지 {len(ham)}건")
+    for cid, name, preview in ham[:100]:
+        log(f"  - 유지: #{cid} {name!r} {preview!r}")
+    if DRY_RUN:
+        report["comments"] = {"total": total, "spam": len(spam_ids), "ham": len(ham)}
+        return
+
+    deleted = 0
+    for i in range(0, len(spam_ids), 25):
+        chunk = spam_ids[i:i + 25]
+        r = req("POST", f"{BASE_URL}/wp-json/batch/v1", json_body={
+            "requests": [{"method": "DELETE", "path": f"/wp/v2/comments/{cid}?force=true"}
+                         for cid in chunk],
+        })
+        if r.status_code == 200:
+            deleted += sum(1 for resp in r.json().get("responses", [])
+                           if resp and resp.get("status") in (200, 410))
+        else:
+            log(f"  ⚠️ batch 삭제 실패({r.status_code}) — 개별 삭제로 폴백")
+            for cid in chunk:
+                req("DELETE", f"/comments/{cid}", params={"force": "true"})
+                deleted += 1
+        if deleted and deleted % 2500 < 25:
+            log(f"  ... {deleted}/{len(spam_ids)} 삭제")
+        time.sleep(0.15)
+    log(f"[댓글] 삭제 완료: {deleted}건")
+    report["comments"] = {"total": total, "spam_deleted": deleted, "ham": len(ham)}
 
 
 def task_posts():
-    drafts, closed, kept = [], 0, 0
+    drafts, title_fixes, content_fixes, comment_closes = [], [], [], 0
     for p in paginate("/posts", params={"context": "edit", "status": "publish",
                                         "_fields": "id,slug,title,content,comment_status"}):
         title_raw = p["title"].get("raw") or re.sub(r"<[^>]+>", "", p["title"].get("rendered", ""))
         content_raw = p["content"].get("raw") or p["content"].get("rendered", "")
-        reason = None
-        if not HANGUL_RE.search(title_raw):
-            reason = "영문 제목(HN 잔존)"
-        else:
-            for pat, label in PLACEHOLDER_PATTERNS:
-                if pat.search(content_raw):
-                    reason = label
-                    break
-        if reason:
-            drafts.append((p["id"], title_raw[:70], reason))
-        elif p.get("comment_status") == "open":
-            closed += 1
-            write("POST", f"/posts/{p['id']}", {"comment_status": "closed"})
-        else:
-            kept += 1
 
-    log(f"[포스트] draft 전환 대상 {len(drafts)}건 / 댓글만 닫음 {closed}건 / 유지 {kept}건")
+        if not HANGUL_RE.search(title_raw):
+            drafts.append((p["id"], title_raw[:70]))
+            continue
+
+        fixes = {}
+        cleaned = clean_title(title_raw)
+        if cleaned and cleaned != title_raw:
+            fixes["title"] = cleaned
+            fixes["meta"] = {"_yoast_wpseo_title": f"{cleaned} | {SITE_TITLE}"}
+            title_fixes.append((p["id"], title_raw[:60], cleaned[:60]))
+        new_content = clean_content(content_raw)
+        if new_content != content_raw:
+            fixes["content"] = new_content
+            content_fixes.append(p["id"])
+        if p.get("comment_status") == "open":
+            fixes["comment_status"] = "closed"
+            comment_closes += 1
+        if fixes:
+            if not DRY_RUN:
+                write("POST", f"/posts/{p['id']}", fixes)
+
+    log(f"[포스트] draft {len(drafts)}건 / 제목 정정 {len(title_fixes)}건 / "
+        f"플레이스홀더 제거 {len(content_fixes)}건 / 댓글 닫기 {comment_closes}건")
+    for pid, title in drafts:
+        log(f"  - draft: #{pid} {title}")
+    for pid, before, after in title_fixes[:60]:
+        log(f"  - 제목: #{pid} {before!r} → {after!r}")
+
     if len(drafts) > MAX_DRAFTS:
-        log(f"  ⚠️ draft 대상이 상한({MAX_DRAFTS})을 초과 — 분류 규칙 오류 가능성. 전환 중단.")
+        log(f"  ⚠️ draft 대상이 상한({MAX_DRAFTS}) 초과 — 규칙 오류 가능성. draft 전환 중단.")
         report["posts"] = {"drafts_planned": len(drafts), "aborted": True}
-        for pid, title, reason in drafts[:100]:
-            log(f"  - (미실행) #{pid} [{reason}] {title}")
         return
-    for pid, title, reason in drafts:
-        log(f"  - draft: #{pid} [{reason}] {title}")
+    for pid, _ in drafts:
         write("POST", f"/posts/{pid}", {"status": "draft", "comment_status": "closed"})
-    report["posts"] = {"drafted": len(drafts), "comments_closed": closed, "kept": kept}
+    report["posts"] = {"drafted": len(drafts), "title_fixed": len(title_fixes),
+                       "content_fixed": len(content_fixes), "comments_closed": comment_closes}
 
 
 def task_trashed_slugs():
@@ -326,8 +399,6 @@ def task_trashed_slugs():
                 victims.append((kind, item["id"], item["slug"]))
     log(f"[__trashed] 완전 삭제 대상 {len(victims)}건: {[v[2] for v in victims]}")
     for kind, pid, slug in victims:
-        write("DELETE", f"/{kind}/{pid}", None, ok_codes=(200,))
-        # 휴지통 상태면 force 삭제 필요
         if not DRY_RUN:
             req("DELETE", f"/{kind}/{pid}", params={"force": "true"})
     report["trashed_slugs"] = [v[2] for v in victims]
@@ -335,49 +406,80 @@ def task_trashed_slugs():
 
 def task_tags():
     junk = []
-    for t in paginate("/tags", params={"orderby": "count", "order": "asc", "per_page": 100}):
+    for t in paginate("/tags", params={"orderby": "count", "order": "asc"}):
         name = t.get("name", "")
-        if (re.fullmatch(r"[A-Za-z]{3,15}", name)
+        count = t.get("count", 99)
+        if count == 0:
+            junk.append((t["id"], name, count))
+        elif (re.fullmatch(r"[a-z]{3,15}", name)
                 and name.lower() not in TAG_WHITELIST
-                and t.get("count", 99) <= 3):
-            junk.append((t["id"], name, t.get("count", 0)))
-    log(f"[태그] 정크 영문 토큰 태그 삭제 대상 {len(junk)}건")
-    for tid, name, count in junk[:200]:
+                and count <= 3):
+            junk.append((t["id"], name, count))
+    log(f"[태그] 정크 태그 삭제 대상 {len(junk)}건 (0카운트 + 저사용 영문 토큰)")
+    for tid, name, count in junk[:60]:
         log(f"  - tag #{tid} {name!r} (글 {count}개)")
-        write("DELETE", f"/tags/{tid}", None, ok_codes=(200,))
-        if not DRY_RUN:
-            req("DELETE", f"/tags/{tid}", params={"force": "true"})
+    if len(junk) > 60:
+        log(f"  ... 외 {len(junk) - 60}건")
+    if not DRY_RUN:
+        for i in range(0, len(junk), 25):
+            chunk = junk[i:i + 25]
+            req("POST", f"{BASE_URL}/wp-json/batch/v1", json_body={
+                "requests": [{"method": "DELETE", "path": f"/wp/v2/tags/{tid}?force=true"}
+                             for tid, _, _ in chunk],
+            })
+            time.sleep(0.15)
     report["tags_deleted"] = len(junk)
 
 
-def task_footer_links():
+def task_nav_links(page_ids):
+    """필수 페이지 링크 노출: 푸터 위젯 → 메뉴 순으로 시도."""
     r = req("GET", "/sidebars")
-    if r.status_code != 200:
-        log("[푸터] sidebars API 사용 불가 → 수동 안내로 대체")
-        report["footer"] = "manual"
+    footer = None
+    if r.status_code == 200:
+        footer = next((s for s in r.json() if "footer" in s.get("id", "").lower()
+                       or "footer" in (s.get("name") or "").lower()), None)
+    if footer:
+        wr = req("GET", "/widgets", params={"sidebar": footer["id"]})
+        if wr.status_code == 200 and any("privacy-policy" in (w.get("rendered") or "")
+                                         for w in wr.json()):
+            log("[링크] 푸터 링크 위젯 이미 존재")
+            report["nav_links"] = "exists"
+            return
+        html = ('<p style="text-align:center"><a href="/about/">소개</a> · '
+                '<a href="/privacy-policy/">개인정보처리방침</a> · '
+                '<a href="/contact/">문의</a></p>')
+        log(f"[링크] 푸터({footer['id']})에 필수 페이지 링크 위젯 추가 예정")
+        write("POST", "/widgets", {
+            "id_base": "custom_html",
+            "sidebar": footer["id"],
+            "instance": {"raw": {"title": "", "content": html}},
+        })
+        report["nav_links"] = f"footer:{footer['id']}"
         return
-    footer = next((s for s in r.json() if "footer" in s.get("id", "").lower()
-                   or "footer" in (s.get("name") or "").lower()), None)
-    if not footer:
-        log("[푸터] 푸터 위젯 영역 없음 → 관리자 화면에서 수동 추가 필요")
-        report["footer"] = "manual"
+
+    mr = req("GET", "/menus")
+    menus = mr.json() if mr.status_code == 200 else []
+    if not menus:
+        log("[링크] 푸터 위젯/메뉴 모두 없음 → 관리자 화면에서 수동 추가 필요 "
+            "(외모 > 메뉴 또는 위젯에 소개/개인정보처리방침/문의 링크)")
+        report["nav_links"] = "manual"
         return
-    wr = req("GET", "/widgets", params={"sidebar": footer["id"]})
-    if wr.status_code == 200 and any("privacy-policy" in (w.get("rendered") or "") for w in wr.json()):
-        log("[푸터] 링크 위젯 이미 존재 → 건너뜀")
-        report["footer"] = "exists"
-        return
-    html = ('<p style="text-align:center">'
-            '<a href="/about/">소개</a> · '
-            '<a href="/privacy-policy/">개인정보처리방침</a> · '
-            '<a href="/contact/">문의</a></p>')
-    log(f"[푸터] {footer['id']} 영역에 필수 페이지 링크 위젯 추가 예정")
-    write("POST", "/widgets", {
-        "id_base": "custom_html",
-        "sidebar": footer["id"],
-        "instance": {"raw": {"title": "", "content": html}},
-    })
-    report["footer"] = f"added:{footer['id']}"
+    menu_id = menus[0]["id"]
+    existing = req("GET", "/menu-items", params={"menus": menu_id, "per_page": 100})
+    existing_objects = {i.get("object_id") for i in existing.json()} if existing.status_code == 200 else set()
+    added = []
+    for slug in ("about", "privacy-policy", "contact"):
+        pid = page_ids.get(slug)
+        if not pid or pid in existing_objects:
+            continue
+        title = next(p["title"] for p in PAGES if p["slug"] == slug)
+        log(f"[링크] 메뉴({menus[0].get('name')})에 {title} 추가 예정")
+        added.append(slug)
+        write("POST", "/menu-items", {
+            "title": title, "menus": menu_id, "type": "post_type",
+            "object": "page", "object_id": pid, "status": "publish",
+        })
+    report["nav_links"] = {"menu": menu_id, "added": added}
 
 
 def main():
@@ -390,12 +492,12 @@ def main():
     me = task_auth_check()
     task_settings()
     task_author(me)
-    task_pages()
+    page_ids = task_pages()
     task_comments()
     task_posts()
     task_trashed_slugs()
     task_tags()
-    task_footer_links()
+    task_nav_links(page_ids)
 
     log(f"\n{'=' * 60}\n요약: {report}")
     if DRY_RUN:

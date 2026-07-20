@@ -2795,5 +2795,19 @@
     "category": "Dev Productivity",
     "identifier": "transcribe",
     "created_at": "2026-07-19T11:46:32.902132"
+  },
+  {
+    "topic": "Qwen 3.8 vs DeepSeek V3: Best Open LLM in 2026?",
+    "title": "Qwen 3.8 vs DeepSeek V3: Complete 2026 LLM Comparison",
+    "keywords": [
+      "qwen",
+      "deepseek",
+      "best",
+      "open",
+      "llm"
+    ],
+    "category": "AI Tools",
+    "identifier": "qwen",
+    "created_at": "2026-07-20T01:19:03.036735"
   }
 ]

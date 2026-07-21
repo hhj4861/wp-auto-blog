@@ -5,6 +5,9 @@ permissions:
 
 on:
   workflow_dispatch:
+  schedule:
+    # 매주 일요일 12:00 KST — 전체 사이트맵 재제출 (레이트리밋 자가 회복 겸 신선도 유지)
+    - cron: '0 3 * * 0'
 
 jobs:
   setup:

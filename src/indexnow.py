@@ -11,10 +11,12 @@ import os
 import requests
 from loguru import logger
 
+# 주의: IndexNow는 키 파일 경로가 인증 범위(prefix)를 결정하므로 키 파일은
+# 반드시 사이트 루트에 있어야 전체 URL을 제출할 수 있다 (Hostinger 파일 관리자로 업로드).
 INDEXNOW_KEY = os.getenv("INDEXNOW_KEY", "413338ab31bcc9bb0ed71149930283af")
 INDEXNOW_KEY_LOCATION = os.getenv(
     "INDEXNOW_KEY_LOCATION",
-    "https://trendpulse.blog/wp-content/uploads/2026/07/413338ab31bcc9bb0ed71149930283af.txt",
+    "https://trendpulse.blog/413338ab31bcc9bb0ed71149930283af.txt",
 )
 INDEXNOW_API = "https://api.indexnow.org/indexnow"
 

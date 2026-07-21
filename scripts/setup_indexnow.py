@@ -19,27 +19,40 @@ session.auth = (os.environ.get("WP_GENERAL_USERNAME", ""),
 session.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-indexnow-setup)"})
 
 
-def ensure_key_file():
-    # 이미 접근 가능하면 스킵
+def ensure_bing_plugin():
+    """Microsoft 공식 IndexNow 플러그인 설치/활성화 — 루트 키 서빙과
+    발행 시 자동 제출을 플러그인이 처리한다."""
+    r = session.get(f"{API}/plugins", params={"search": "indexnow"}, timeout=40)
+    if r.status_code == 200:
+        for p in r.json():
+            if "indexnow" in p.get("plugin", "").lower():
+                print(f"IndexNow 플러그인 이미 설치됨: {p['plugin']} (status={p['status']})")
+                if p["status"] != "active":
+                    ar = session.post(f"{API}/plugins/{p['plugin']}",
+                                      json={"status": "active"}, timeout=60)
+                    print(f"활성화: {ar.status_code}")
+                return True
+    ir = session.post(f"{API}/plugins",
+                      json={"slug": "indexnow", "status": "active"}, timeout=120)
+    if ir.status_code == 201:
+        print(f"IndexNow 플러그인 설치+활성화 완료: {ir.json().get('plugin')}")
+        return True
+    print(f"⚠️ 플러그인 설치 실패({ir.status_code}): {ir.text[:200]}")
+    return False
+
+
+def check_root_key():
+    """루트 키 파일 존재 확인 (수동 업로드 필요 항목)."""
     r = requests.get(INDEXNOW_KEY_LOCATION, timeout=20,
                      headers={"User-Agent": "Mozilla/5.0"})
-    if r.status_code == 200 and r.text.strip() == INDEXNOW_KEY:
-        print(f"키 파일 이미 존재: {INDEXNOW_KEY_LOCATION}")
-        return True
-    ur = session.post(f"{API}/media", files={
-        "file": (f"{INDEXNOW_KEY}.txt", INDEXNOW_KEY.encode(), "text/plain"),
-    }, timeout=60)
-    if ur.status_code != 201:
-        print(f"⚠️ 키 파일 업로드 실패({ur.status_code}): {ur.text[:200]}")
-        return False
-    url = ur.json().get("source_url", "")
-    print(f"키 파일 업로드 완료: {url}")
-    if url != INDEXNOW_KEY_LOCATION:
-        print(f"⚠️ 업로드 URL이 코드 상수와 다름! src/indexnow.py의 "
-              f"INDEXNOW_KEY_LOCATION을 다음으로 수정 필요: {url}")
-    vr = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-    print(f"키 파일 검증: HTTP {vr.status_code}, 내용 일치={vr.text.strip() == INDEXNOW_KEY}")
-    return vr.status_code == 200
+    ok = r.status_code == 200 and r.text.strip() == INDEXNOW_KEY
+    if ok:
+        print(f"루트 키 파일 확인: {INDEXNOW_KEY_LOCATION}")
+    else:
+        print(f"루트 키 파일 없음(HTTP {r.status_code}) — Hostinger 파일 관리자에서 "
+              f"public_html/{INDEXNOW_KEY}.txt (내용: 키 문자열)를 업로드하면 "
+              f"일괄 제출이 가능해집니다")
+    return ok
 
 
 def bulk_ping():
@@ -53,5 +66,6 @@ def bulk_ping():
 
 
 if __name__ == "__main__":
-    if ensure_key_file():
+    ensure_bing_plugin()
+    if check_root_key():
         bulk_ping()

@@ -430,3 +430,32 @@ class TestGeneralModeSEOBlock:
         assert content.focus_keyphrase == "리눅스 데스크톱"
         assert "---SEO-META---" not in content.html
         assert "FOCUS_KEYPHRASE" not in content.html
+
+
+class TestShortenTitle:
+    """_shorten_title: 영어 제목의 최후 fallback이 단어 경계로 최대한 채워야 한다."""
+
+    @pytest.fixture
+    def generator(self, mock_env_vars):
+        return ContentGenerator()
+
+    @pytest.mark.unit
+    def test_english_title_fills_to_max_length(self, generator):
+        """앞 3~4단어 절단('7 Best Korean Eye')이 아니라 상한까지 채운다."""
+        title = "7 Best Korean Eye Patches for Depuffing & Glowing Skin in 2026"
+        result = generator._shorten_title(title, max_length=50)
+        assert len(result) <= 50
+        assert result.startswith("7 Best Korean Eye Patches"), result
+        assert len(result) >= 30, f"너무 짧게 잘림: {result!r}"
+
+    @pytest.mark.unit
+    def test_no_trailing_connector_word(self, generator):
+        """축약 결과가 for/&/in 같은 연결어로 끝나지 않는다."""
+        title = "10 Amazing Korean Street Food Spots for Late Night Eating in Seoul 2026"
+        result = generator._shorten_title(title, max_length=45)
+        assert len(result) <= 45
+        assert result.split()[-1].lower() not in {"for", "&", "and", "in", "with", "to", "of", "the"}, result
+
+    @pytest.mark.unit
+    def test_short_title_unchanged(self, generator):
+        assert generator._shorten_title("Short Title 2026", max_length=50) == "Short Title 2026"

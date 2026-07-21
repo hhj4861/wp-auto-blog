@@ -3450,13 +3450,19 @@ Be specific and factual based on search results. Always use the most recent vers
             if len(shortened) > max_length:
                 shortened = shortened.replace(word, "")
 
-        # 여전히 길면 핵심만 남기기
+        # 여전히 길면 단어 경계로 상한까지 최대한 채운다
+        # (앞 3~4단어 절단은 "7 Best Korean Eye" 같은 어색한 제목을 만든다)
         if len(shortened) > max_length:
             parts = shortened.split()
-            if len(parts) > 4:
+            kept: list[str] = []
+            for word in parts:
+                if len(" ".join(kept + [word])) > max_length:
+                    break
+                kept.append(word)
+            if len(kept) >= 3:
+                shortened = " ".join(kept)
+            elif len(parts) > 4:
                 shortened = " ".join(parts[:4])
-                if len(shortened) > max_length:
-                    shortened = " ".join(parts[:3])
 
         # 어색하게 잘리는 접속사/기호/짧은 단어 제거 (단어 단위로 체크)
         # 기호는 endswith, 단어는 정확한 마지막 단어로 체크

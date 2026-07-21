@@ -145,12 +145,16 @@ def _normalize_title(title: str) -> str:
 
 
 def rank_related_posts(
-    posts: list[dict], keywords: list[str], count: int = 3
+    posts: list[dict], keywords: list[str], count: int = 3,
+    category_id: Optional[int] = None,
 ) -> list[dict]:
-    """제목/슬러그의 키워드 겹침 수로 관련도 순 정렬해 상위 count개 반환.
+    """제목/슬러그의 키워드 겹침 + 같은 카테고리 보너스로 상위 count개 반환.
 
     키워드는 단어 경계로 매칭한다('ai'가 'chairs'에 오탐되지 않도록).
-    동점(겹침 없음 포함)은 입력 순서(최신순)를 유지한다.
+    키워드 일치(가중 2)가 카테고리 보너스(가중 1)보다 우선하고,
+    동점은 입력 순서(최신순)를 유지한다. 카테고리 보너스가 없으면
+    키워드가 안 겹치는 글은 순전히 최신순이 되어 모든 새 글에 동일한
+    링크 3개가 붙는 보일러플레이트가 생긴다.
     """
     patterns = [
         re.compile(rf"(?<![a-z0-9]){re.escape(k.strip().lower())}(?![a-z0-9])")
@@ -160,7 +164,9 @@ def rank_related_posts(
 
     def score(post: dict) -> int:
         text = f"{post.get('title', '')} {post.get('slug', '')}".lower()
-        return sum(1 for p in patterns if p.search(text))
+        kw_hits = sum(1 for p in patterns if p.search(text))
+        same_cat = 1 if category_id and category_id in (post.get("categories") or []) else 0
+        return kw_hits * 2 + same_cat
 
     ranked = sorted(posts, key=score, reverse=True)  # 안정 정렬 → 동점은 최신순
     return ranked[:count]
@@ -440,7 +446,9 @@ class BlogPipeline:
                     content.html,
                     official_link=getattr(content, "official_link", ""),
                     related_posts=self._get_related_posts(
-                        exclude_title=content.title, keywords=topic.keywords
+                        exclude_title=content.title,
+                        keywords=topic.keywords,
+                        category=category,
                     ),
                 )
             # Create post (or simulate in dry run)
@@ -476,7 +484,9 @@ class BlogPipeline:
                 # 게이트가 생성 본문 자체를 평가하도록 게이트 이후에 삽입한다
                 if self.config.mode != "general":
                     related = self._get_related_posts(
-                        exclude_title=content.title, keywords=topic.keywords
+                        exclude_title=content.title,
+                        keywords=topic.keywords,
+                        category=category,
                     )
                     if related:
                         content.html = insert_related_box(content.html, related)
@@ -531,11 +541,13 @@ class BlogPipeline:
         exclude_title: str = "",
         count: int = 3,
         keywords: Optional[list[str]] = None,
+        category: Optional[str] = None,
     ) -> list[dict]:
-        """내부 링크 박스용 관련 글 목록 (모드별 언어 필터 + 키워드 관련도 랭킹).
+        """내부 링크 박스용 관련 글 목록 (모드별 언어 필터 + 관련도 랭킹).
 
         general(trendpulse)은 한국어 글만, tech/kculture(bytepulse)는 영어 글을
-        포함해 후보를 모은 뒤 topic 키워드 겹침이 큰 순으로 고른다.
+        포함해 후보를 모은 뒤 topic 키워드 겹침(+같은 카테고리 보너스)이 큰
+        순으로 고른다.
 
         Returns:
             [{"title": ..., "url": ...}] 최대 count개. 실패 시 빈 리스트.
@@ -545,6 +557,24 @@ class BlogPipeline:
         except Exception as e:
             logger.warning(f"관련 글 조회 실패: {e}")
             return []
+        category_id = None
+        if category:
+            try:
+                category_id = self.wp_client._find_category_id(category)
+            except Exception:
+                category_id = None
+        # 최근 목록에 같은 카테고리 글이 없으면(저빈도 카테고리) 직접 조회해 합친다
+        if category_id and not any(
+            category_id in (p.get("categories") or []) for p in recent
+        ):
+            try:
+                cat_recent = self.wp_client.get_recent_posts(
+                    count=10, status="publish", categories=category_id
+                )
+                seen = {p["slug"] for p in recent}
+                recent = recent + [p for p in cat_recent if p["slug"] not in seen]
+            except Exception as e:
+                logger.warning(f"카테고리 관련 글 조회 실패: {e}")
         base = self.wp_client.config.url.rstrip("/")
         exclude_normalized = _normalize_title(exclude_title)
         candidates = []
@@ -554,10 +584,15 @@ class BlogPipeline:
                 continue
             if self.config.mode == "general" and not re.search(r"[가-힣]", title):
                 continue
-            candidates.append(
-                {"title": title, "slug": p.get("slug", ""), "url": f"{base}/{p['slug']}/"}
-            )
-        ranked = rank_related_posts(candidates, keywords or [], count=count)
+            candidates.append({
+                "title": title,
+                "slug": p.get("slug", ""),
+                "categories": p.get("categories") or [],
+                "url": f"{base}/{p['slug']}/",
+            })
+        ranked = rank_related_posts(
+            candidates, keywords or [], count=count, category_id=category_id
+        )
         return [{"title": c["title"], "url": c["url"]} for c in ranked]
 
     def run_single(

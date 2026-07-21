@@ -183,6 +183,7 @@ class TestPipelineRelatedBoxWiring:
         with patch.object(pipeline.content_generator, "generate", return_value=content), \
              patch.object(pipeline.image_fetcher, "fetch", return_value=[]), \
              patch.object(pipeline.wp_client, "get_recent_posts", return_value=recent), \
+             patch.object(pipeline.wp_client, "_find_category_id", return_value=10), \
              patch.object(
                  pipeline.wp_client, "create_post",
                  return_value=CreatedPost(1, "u", "t", PostStatus.DRAFT),
@@ -195,3 +196,50 @@ class TestPipelineRelatedBoxWiring:
         assert "cursor-benchmark" in published_html  # 관련 글 박스 삽입됨
         # 품질 게이트는 박스 삽입 전의 본문을 평가해야 한다
         assert "cursor-benchmark" not in mock_gate.call_args.kwargs["html"]
+
+
+class TestCategoryAwareRanking:
+    """관련도 랭킹: 같은 카테고리 보너스로 크로스 니치 링크를 억제한다."""
+
+    POSTS = [
+        {"title": "Qwen vs DeepSeek LLM", "slug": "qwen-deepseek", "categories": [10]},
+        {"title": "Best Korean Toner Guide", "slug": "best-korean-toner", "categories": [20]},
+        {"title": "Seoul Fashion Week Recap", "slug": "seoul-fashion-week", "categories": [30]},
+    ]
+
+    @pytest.mark.unit
+    def test_same_category_beats_recency_on_zero_keyword_hits(self):
+        """키워드가 안 겹칠 때 최신 tech 글 대신 같은 카테고리 글을 고른다."""
+        ranked = rank_related_posts(self.POSTS, ["eye patches"], count=2, category_id=20)
+        assert ranked[0]["slug"] == "best-korean-toner"
+
+    @pytest.mark.unit
+    def test_keyword_hit_beats_category_bonus(self):
+        """키워드 일치(가중 2)가 카테고리 보너스(가중 1)보다 우선한다."""
+        ranked = rank_related_posts(self.POSTS, ["fashion"], count=1, category_id=20)
+        assert ranked[0]["slug"] == "seoul-fashion-week"
+
+    @pytest.mark.unit
+    def test_get_related_posts_uses_category(self, mock_env_vars):
+        pipeline = BlogPipeline(config=PipelineConfig(dry_run=True, mode="kculture"))
+        wp = Mock()
+        wp.get_recent_posts.return_value = list(self.POSTS)
+        wp.config.url = "https://bytepulse.io"
+        wp._find_category_id.return_value = 20
+        pipeline.wp_client = wp
+        related = pipeline._get_related_posts(keywords=["eye patches"], category="K-Beauty")
+        assert related[0]["url"].endswith("/best-korean-toner/")
+
+    @pytest.mark.unit
+    def test_fetches_category_recents_when_absent_from_recent(self, mock_env_vars):
+        """최근 목록에 같은 카테고리 글이 없으면 카테고리로 직접 조회해 합친다."""
+        pipeline = BlogPipeline(config=PipelineConfig(dry_run=True, mode="kculture"))
+        wp = Mock()
+        tech_recent = [{"id": 1, "title": "Tech A", "slug": "tech-a", "categories": [10]}]
+        kfood_posts = [{"id": 2, "title": "Kimchi Guide", "slug": "kimchi-guide", "categories": [40]}]
+        wp.get_recent_posts.side_effect = [tech_recent, kfood_posts]
+        wp.config.url = "https://bytepulse.io"
+        wp._find_category_id.return_value = 40
+        pipeline.wp_client = wp
+        related = pipeline._get_related_posts(keywords=[], category="K-Food")
+        assert related[0]["url"].endswith("/kimchi-guide/")

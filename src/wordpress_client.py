@@ -858,6 +858,30 @@ class WordPressClient:
 
         return response  # type: ignore[return-value]
 
+    def _find_category_id(self, name: str) -> Optional[int]:
+        """이름이 정확히(대소문자 무시) 일치하는 기존 카테고리 ID를 찾는다.
+
+        조회 전용 — _get_or_create_category와 달리 없으면 만들지 않는다
+        (관련 글 랭킹 같은 읽기 경로에서 카테고리를 실수로 생성하지 않도록).
+        """
+        try:
+            response = self._request_with_retry(
+                "GET",
+                f"{self._api_base}/categories",
+                headers=self._get_auth_headers(),
+                params={"search": name, "per_page": 100},
+                timeout=30,
+            )
+            response.raise_for_status()
+            match = next(
+                (c for c in response.json() if c["name"].lower() == name.lower()),
+                None,
+            )
+            return match["id"] if match else None
+        except Exception as e:
+            logger.warning(f"Failed to look up category '{name}': {e}")
+            return None
+
     def _get_or_create_category(self, name: str, parent_id: Optional[int] = None) -> Optional[int]:
         """Get or create a category with optional parent.
 
@@ -1317,16 +1341,20 @@ class WordPressClient:
 
         return text
 
-    def get_recent_posts(self, count: int = 100, status: str = "any") -> list[dict]:
+    def get_recent_posts(
+        self, count: int = 100, status: str = "any",
+        categories: Optional[int] = None,
+    ) -> list[dict]:
         """Fetch recent posts from WordPress.
 
         Args:
             count: Number of posts to fetch (default: 100)
             status: Post status filter (default: "any" — drafts 포함.
                 내부 링크용으로는 "publish"를 사용할 것)
+            categories: 특정 카테고리 ID로 필터 (관련 글 후보 보강용)
 
         Returns:
-            List of post dictionaries with id, title, slug
+            List of post dictionaries with id, title, slug, categories
         """
         posts = []
         per_page = min(count, 100)  # WordPress max is 100 per page
@@ -1334,16 +1362,19 @@ class WordPressClient:
 
         try:
             while len(posts) < count:
+                params = {
+                    "per_page": per_page,
+                    "page": page,
+                    "status": status,
+                    "_fields": "id,title,slug,categories",  # Only fetch needed fields
+                }
+                if categories is not None:
+                    params["categories"] = categories
                 response = self._request_with_retry(
                     "GET",
                     f"{self._api_base}/posts",
                     headers=self._get_auth_headers(),
-                    params={
-                        "per_page": per_page,
-                        "page": page,
-                        "status": status,
-                        "_fields": "id,title,slug",  # Only fetch needed fields
-                    },
+                    params=params,
                     retry_statuses=(403, 429, 500, 502, 503, 504),
                     timeout=30,
                 )
@@ -1363,6 +1394,7 @@ class WordPressClient:
                         "id": post["id"],
                         "title": post["title"]["rendered"],
                         "slug": post["slug"],
+                        "categories": post.get("categories") or [],
                     })
 
                 if len(page_posts) < per_page:

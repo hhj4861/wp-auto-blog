@@ -25,14 +25,23 @@ def ping_urls(urls: list[str], host: str = "trendpulse.blog") -> bool:
     Returns:
         True if accepted (200/202), False otherwise. 실패해도 발행 흐름을 막지 않는다.
     """
-    urls = [u for u in urls if u and host in u]
-    if not urls:
+    # 한글 경로 등 비ASCII URL은 퍼센트 인코딩해야 IndexNow 스키마를 통과한다
+    encoded = []
+    seen = set()
+    for u in urls:
+        if not u or host not in u:
+            continue
+        eu = requests.utils.requote_uri(u)
+        if eu not in seen:
+            seen.add(eu)
+            encoded.append(eu)
+    if not encoded:
         return False
     payload = {
         "host": host,
         "key": INDEXNOW_KEY,
         "keyLocation": INDEXNOW_KEY_LOCATION,
-        "urlList": urls[:10000],
+        "urlList": encoded[:10000],
     }
     try:
         r = requests.post(INDEXNOW_API, json=payload, timeout=30)

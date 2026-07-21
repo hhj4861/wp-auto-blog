@@ -88,6 +88,7 @@ from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
 from src.monetization import (
+    add_policy_disclaimers,
     check_quality,
     insert_monetization,
     insert_related_box,
@@ -433,6 +434,8 @@ class BlogPipeline:
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스
             if self.config.mode == "general":
                 content.html = strip_placeholders(content.html)
+                content.html = add_policy_disclaimers(
+                    content.html, category=category or "", topic=topic.topic)
                 content.html = insert_monetization(
                     content.html,
                     official_link=getattr(content, "official_link", ""),

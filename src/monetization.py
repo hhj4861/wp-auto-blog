@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import os
 import re
+from datetime import datetime
 from urllib.parse import urlparse
 
 from loguru import logger
@@ -166,6 +167,46 @@ def insert_monetization(
 _PLACEHOLDER_RE = re.compile(r"\(\([^()\n]{2,60}\)\)")
 
 
+# 정책·제도형 카테고리 — 고지 문구를 프롬프트에 맡기지 않고 코드로 강제 삽입한다
+POLICY_CATEGORIES = ("생활정보", "취업", "건강")
+_INVEST_TOPIC_RE = re.compile(
+    r"주식|투자|공모주|펀드|배당|양도소득세|양도세|ISA|연금|증권|금투세|대주주|거래세")
+_MEDICAL_TOPIC_RE = re.compile(r"검진|접종|의료|치매|암|보험|바우처|건강|치료")
+
+
+def add_policy_disclaimers(html: str, category: str = "", topic: str = "") -> str:
+    """정책형 글에 기준일 안내(상단)와 투자/의료 고지(하단)를 결정적으로 삽입한다.
+
+    LLM 프롬프트 규칙은 방어선이 아니다 — 고지는 항상 코드가 붙인다.
+    """
+    if category not in POLICY_CATEGORIES:
+        return html
+    if 'id="policy-notice"' in html:
+        return html
+
+    today = datetime.now().strftime("%Y년 %m월")
+    notice = (
+        f'<p id="policy-notice" style="max-width:800px;margin:10px auto;color:#94a3b8;'
+        f'font-size:0.85em;">※ 이 글은 {today} 공식 발표 자료를 기준으로 작성되었습니다. '
+        f'제도와 수치는 변경될 수 있으니 신청·결정 전 공식 사이트에서 최종 확인하세요.</p>')
+    html = notice + "\n" + html
+
+    tails = []
+    if _INVEST_TOPIC_RE.search(topic):
+        tails.append("본 글은 제도·세금 정보 안내이며 특정 상품이나 종목에 대한 투자 권유가 "
+                     "아닙니다. 투자 판단과 그에 따른 책임은 본인에게 있습니다.")
+    if category == "건강" or _MEDICAL_TOPIC_RE.search(topic):
+        tails.append("본 글은 지원 제도 안내이며 의학적 진단·치료에 대한 조언이 아닙니다. "
+                     "구체적인 사항은 관할 기관 또는 의료기관에서 확인하세요.")
+    if tails:
+        joined = "<br/>".join(tails)
+        html += (f'\n<p id="policy-disclaimer" style="max-width:800px;margin:25px auto;'
+                 f'color:#94a3b8;font-size:0.85em;border-top:1px solid #3d3d4a;'
+                 f'padding-top:12px;">{joined}</p>')
+    logger.info(f"정책 고지 삽입: 기준일 안내 + 하단 고지 {len(tails)}건")
+    return html
+
+
 def strip_placeholders(html: str) -> str:
     """((Sleep 2024)) 류의 인용 플레이스홀더를 기계적으로 제거한다 (게이트 전 자가치유)."""
     cleaned = _PLACEHOLDER_RE.sub("", html)
@@ -174,6 +215,12 @@ def strip_placeholders(html: str) -> str:
         logger.info("본문 ((...)) 플레이스홀더 자동 제거됨")
     return cleaned
 _TITLE_ARTIFACT_RE = re.compile(r"[`\"]|\(\s*(?:유형|\d+\s*자)")
+# 종목 추천성 문구 — 유사투자자문·YMYL 리스크, 코드로 차단
+_STOCK_ADVICE_RE = re.compile(
+    r"매수\s*추천|매도\s*추천|추천\s*종목|목표\s*주가|급등\s*예[상정]|"
+    r"지금\s*(사야|매수하)|무조건\s*(사세요|매수)")
+# 광고 클릭 유도 문구 — 애드센스 무효클릭 정책 위반 (영구 정지 사유)
+_INVALID_CLICK_RE = re.compile(r"광고[를을]?\s*(클릭|눌러)|배너[를을]?\s*(클릭|눌러)")
 
 
 def check_quality(
@@ -203,6 +250,10 @@ def check_quality(
     text = re.sub(r"<[^>]+>", " ", html)
     if len(text.strip()) < 1000:
         issues.append(f"본문이 너무 짧음({len(text.strip())}자)")
+    if _STOCK_ADVICE_RE.search(text):
+        issues.append("종목 추천성 문구 검출 — 투자 권유 금지 (수동 검토 필요)")
+    if _INVALID_CLICK_RE.search(text):
+        issues.append("광고 클릭 유도 문구 검출 — 애드센스 무효클릭 정책 위반")
 
     if not focus_keyphrase.strip():
         issues.append("포커스 키프레이즈 비어 있음")

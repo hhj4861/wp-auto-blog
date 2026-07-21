@@ -14,7 +14,7 @@ from __future__ import annotations
 import os
 import re
 from datetime import datetime
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 from loguru import logger
 
@@ -162,6 +162,50 @@ def insert_monetization(
     return html
 
 
+# 쇼핑 링크 가드레일: 프롬프트가 실제 URL 앵커를 요구해도 LLM이 종종
+# '(Shop on Musinsa Global →)' 텍스트 플레이스홀더나 '(Shop on<a ...>' 같은
+# 깨진 마크업을 남긴다. 규칙은 프롬프트가 아니라 후처리 코드로 강제한다.
+SHOP_SEARCH_URLS = {
+    "yesstyle": "https://www.yesstyle.com/en/search?q={q}",
+    "musinsa global": "https://global.musinsa.com/us/search?keyword={q}",
+    "musinsa": "https://global.musinsa.com/us/search?keyword={q}",
+    "amazon": "https://www.amazon.com/s?k={q}",
+    "olive young global": "https://global.oliveyoung.com/search?query={q}",
+    "olive young": "https://global.oliveyoung.com/search?query={q}",
+}
+
+
+def fix_shop_links(html: str, search_term: str) -> str:
+    """쇼핑 링크 플레이스홀더를 실제 검색 링크로 치환/수리한다.
+
+    - '(Shop on<a ...>' 처럼 앵커 앞에 붙은 잔여 접두 텍스트 제거
+    - 'on<a' 처럼 앵커에 눌어붙은 단어에 공백 삽입
+    - href 없는 '(Shop on X →)' 플레이스홀더는 알려진 몰이면 검색 앵커로,
+      모르는 몰이면 제거
+    """
+    q = quote(search_term.strip()) if search_term and search_term.strip() else ""
+
+    html = re.sub(r"\(?Shop on\s*(?=<a\s)", "", html)
+    html = re.sub(r"\bon(<a\s)", r"on \1", html)
+
+    def _replace(match: re.Match) -> str:
+        name = match.group(1).strip()
+        url_template = SHOP_SEARCH_URLS.get(name.lower())
+        if not url_template or not q:
+            logger.warning(f"쇼핑 플레이스홀더 제거 (미확인 몰): {name}")
+            return ""
+        url = url_template.format(q=q)
+        return (
+            f'<a href="{url}" target="_blank" rel="nofollow" '
+            f'style="color:#9b59b6;">Shop on {name} →</a>'
+        )
+
+    fixed = re.sub(r"\(Shop on ([A-Za-z][A-Za-z ]{1,30}?)\s*→?\s*\)", _replace, html)
+    if fixed != html:
+        logger.info("쇼핑 링크 플레이스홀더 수리됨")
+    return fixed
+
+
 # ---------------------------------------------------------------- 품질 게이트
 
 _PLACEHOLDER_RE = re.compile(r"\(\([^()\n]{2,60}\)\)")
@@ -214,7 +258,7 @@ def strip_placeholders(html: str) -> str:
         cleaned = re.sub(r"(?<=[가-힣\w.,]) {2,}(?=[가-힣\w])", " ", cleaned)
         logger.info("본문 ((...)) 플레이스홀더 자동 제거됨")
     return cleaned
-_TITLE_ARTIFACT_RE = re.compile(r"[`\"]|\(\s*(?:유형|\d+\s*자)")
+_TITLE_ARTIFACT_RE = re.compile(r"[`\"]|\*\*|\(\s*(?:유형|\d+\s*자)")
 # 종목 추천성 문구 — 유사투자자문·YMYL 리스크, 코드로 차단
 _STOCK_ADVICE_RE = re.compile(
     r"매수\s*추천|매도\s*추천|추천\s*종목|목표\s*주가|급등\s*예[상정]|"

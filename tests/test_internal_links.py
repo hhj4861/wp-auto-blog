@@ -8,7 +8,7 @@ import pytest
 from unittest.mock import Mock, patch
 
 from src.content_generator import ContentType, GeneratedContent
-from src.monetization import _related_box, insert_related_box
+from src.monetization import _related_box, fix_shop_links, insert_related_box
 from src.pipeline import BlogPipeline, PipelineConfig, rank_related_posts
 from src.trend_detector import Topic, TrendSource
 from src.wordpress_client import CreatedPost, PostStatus
@@ -243,3 +243,52 @@ class TestCategoryAwareRanking:
         pipeline.wp_client = wp
         related = pipeline._get_related_posts(keywords=[], category="K-Food")
         assert related[0]["url"].endswith("/kimchi-guide/")
+
+
+class TestFixShopLinks:
+    """fix_shop_links: LLM이 남긴 쇼핑 링크 플레이스홀더를 코드로 강제 수리."""
+
+    @pytest.mark.unit
+    def test_plain_placeholder_gets_linked(self):
+        """href 없는 '(Shop on Musinsa Global →)' 텍스트를 실제 검색 링크로 치환."""
+        html = '<span>(Shop on Musinsa Global →)</span>'
+        out = fix_shop_links(html, "Korean Varsity Jacket")
+        assert 'global.musinsa.com/us/search?keyword=Korean%20Varsity%20Jacket' in out
+        assert '(Shop on Musinsa Global →)' not in out
+        assert 'rel="nofollow"' in out
+
+    @pytest.mark.unit
+    def test_broken_prefix_before_anchor_removed(self):
+        """'(Shop on<a ...>' 같은 깨진 접두 텍스트를 제거한다."""
+        html = '(Shop on<a href="https://www.yesstyle.com/en/search?q=x">YesStyle →</a>'
+        out = fix_shop_links(html, "x")
+        assert out.startswith('<a href=')
+
+    @pytest.mark.unit
+    def test_existing_anchor_untouched(self):
+        html = '<a href="https://www.yesstyle.com/en/search?q=x" rel="nofollow">Shop on YesStyle →</a>'
+        assert fix_shop_links(html, "x") == html
+
+    @pytest.mark.unit
+    def test_unknown_shop_placeholder_removed(self):
+        out = fix_shop_links('before (Shop on RandomMall →) after', "q")
+        assert 'RandomMall' not in out
+
+    @pytest.mark.unit
+    def test_word_glued_anchor_gets_space(self):
+        html = 'Jackets on<a href="u">YesStyle →</a>'
+        out = fix_shop_links(html, "x")
+        assert 'on <a' in out
+
+    @pytest.mark.unit
+    def test_title_with_markdown_bold_fails_gate(self):
+        """'**제목**' 같은 마크다운 잔존 제목은 품질 게이트에서 걸린다."""
+        from src.monetization import check_quality
+        issues = check_quality(
+            title="**Korean Dress Styling Guide**",
+            html="<p>" + "x" * 1200 + "</p>",
+            focus_keyphrase="korean dress",
+            meta_description="d" * 60,
+            require_korean=False,
+        )
+        assert any("제목" in i for i in issues)

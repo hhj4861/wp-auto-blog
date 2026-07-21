@@ -90,6 +90,7 @@ from src.indexnow import ping_urls
 from src.monetization import (
     add_policy_disclaimers,
     check_quality,
+    fix_shop_links,
     insert_monetization,
     insert_related_box,
     strip_placeholders,
@@ -435,6 +436,11 @@ class BlogPipeline:
                 logger.debug(f"Fetched {len(section_images)} section images")
             else:
                 logger.debug("Tech mode: skipping section images (using visual elements instead)")
+
+            # 쇼핑 링크 가드레일: LLM이 남긴 플레이스홀더/깨진 앵커를 코드로 수리
+            content.html = fix_shop_links(
+                content.html, search_term=(content.focus_keyphrase or topic.topic)
+            )
 
             # 수익화 레이어 (general/trendpulse 전용):
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스

@@ -454,7 +454,8 @@
       "신청방법"
     ],
     "category": "생활정보",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-07-21T06:14:22.360590"
   },
   {
     "topic": "2026 에너지바우처 신청 자격과 지원 금액, 사용처 총정리",

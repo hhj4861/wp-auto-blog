@@ -515,7 +515,8 @@
       "보건소"
     ],
     "category": "건강",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-07-21T06:23:29.723787"
   },
   {
     "topic": "2026년 종합소득세 중간예납 대상과 납부 방법 총정리",

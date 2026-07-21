@@ -22,7 +22,12 @@ DEFAULT_AD_SLOTS = ("3599000043", "7637749188")
 
 # CTA 버튼을 허용하는 도메인 (LLM이 제안한 공식 링크의 환각/오남용 방지)
 TRUSTED_CTA_SUFFIXES = (".go.kr", ".or.kr")
-TRUSTED_CTA_HOSTS = {"korea.kr", "www.korea.kr", "gov.kr", "www.gov.kr"}
+TRUSTED_CTA_HOSTS = {
+    "korea.kr", "www.korea.kr", "gov.kr", "www.gov.kr",
+    # 공기업/공공서비스 (.co.kr이지만 공식)
+    "en-ter.co.kr", "www.kepco.co.kr", "home.kepco.co.kr",  # 한전 에너지캐시백
+    "www.letskorail.com", "etk.srail.kr",  # 코레일/SR 승차권
+}
 
 _H2_RE = re.compile(r"<h2[\s>]")
 _HANGUL_RE = re.compile(r"[가-힣]")

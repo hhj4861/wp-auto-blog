@@ -802,7 +802,8 @@
       "훈련장려금"
     ],
     "category": "취업",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-07-21T05:30:17.549596"
   },
   {
     "topic": "2026 국민취업지원제도 신청 자격과 구직촉진수당 총정리",

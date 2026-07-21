@@ -123,6 +123,15 @@ except ImportError:
 # Post registry base directory
 POST_REGISTRY_DIR = Path(__file__).parent.parent / "data"
 
+# kculture 스톡사진 폴백용 카테고리 일반 키워드
+# (토픽 키워드 직검색은 오매칭: 'G-Dragon'→용 조각, 'online'→서버랙)
+KCULTURE_STOCK_KEYWORDS = {
+    "K-Pop": ["kpop concert stage", "concert crowd lightstick"],
+    "K-Beauty": ["korean skincare products", "cosmetics flatlay"],
+    "K-Food": ["korean food dish", "korean cuisine"],
+    "K-Fashion": ["seoul street fashion", "korean fashion outfit"],
+}
+
 
 def get_registry_path(mode: str) -> Path:
     """Get the registry file path for a specific mode.
@@ -420,9 +429,16 @@ class BlogPipeline:
                         logger.info(f"Fetched K-Fashion image from YouTube: {images[0].alt[:50]}")
 
             # Fall back to Unsplash/Pexels if no image found
+            # kculture는 토픽 키워드 그대로 쓰면 오매칭이 심하다
+            # (예: G-Dragon → 용 조각상). 카테고리 일반 키워드로 대체.
             if not images:
+                fallback_keywords = topic.keywords
+                if self.config.mode == "kculture":
+                    fallback_keywords = KCULTURE_STOCK_KEYWORDS.get(
+                        category or "", topic.keywords
+                    )
                 images = self.image_fetcher.fetch(
-                    keywords=topic.keywords,
+                    keywords=fallback_keywords,
                     topic=topic.topic,
                 )
             logger.debug(f"Fetched {len(images)} hero images")

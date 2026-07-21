@@ -210,8 +210,8 @@ class YouTubeFetcher:
             YouTubeVideo if found, None otherwise
         """
         if not self.api_key:
-            logger.warning("YOUTUBE_API_KEY not set. Cannot search YouTube.")
-            return None
+            logger.info("YOUTUBE_API_KEY 미설정 — 검색 페이지 스크레이프 폴백 사용")
+            return self._search_scrape(query)
 
         search_url = "https://www.googleapis.com/youtube/v3/search"
         params = {
@@ -246,11 +246,68 @@ class YouTubeFetcher:
             )
 
         except requests.RequestException as e:
-            logger.error(f"YouTube API request failed: {e}")
-            return None
+            logger.error(f"YouTube API request failed: {e} — 스크레이프 폴백 시도")
+            return self._search_scrape(query)
         except (KeyError, IndexError) as e:
             logger.error(f"Error parsing YouTube response: {e}")
             return None
+
+    def _search_scrape(self, query: str) -> Optional["YouTubeVideo"]:
+        """API 키/쿼터 없이 유튜브 검색 결과 페이지에서 첫 영상을 추출한다.
+
+        키 미설정(로컬)·쿼터 소진(CI) 시에도 주제에 맞는 썸네일을 얻기 위한
+        폴백. ytInitialData JSON에서 첫 videoRenderer를 정규식으로 파싱한다.
+        """
+        import re as _re
+        from urllib.parse import quote as _quote
+
+        url = f"https://www.youtube.com/results?search_query={_quote(query)}"
+        try:
+            response = self.session.get(
+                url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                  "Chrome/120.0.0.0 Safari/537.36",
+                    "Accept-Language": "en-US,en;q=0.9",
+                },
+                timeout=15,
+            )
+            response.raise_for_status()
+        except requests.RequestException as e:
+            logger.warning(f"YouTube 검색 스크레이프 실패: {e}")
+            return None
+
+        match = _re.search(
+            r'"videoRenderer":\{"videoId":"([A-Za-z0-9_-]{11})".*?'
+            r'"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)+)"',
+            response.text,
+            _re.S,
+        )
+        if not match:
+            logger.warning(f"YouTube 스크레이프 결과 없음: {query}")
+            return None
+        import json as _json
+
+        video_id = match.group(1)
+        try:
+            title = _json.loads(f'"{match.group(2)}"')
+        except ValueError:
+            title = match.group(2)
+        channel_match = _re.search(
+            r'"ownerText":\{"runs":\[\{"text":"((?:[^"\\]|\\.)+)"',
+            response.text[match.start():],
+        )
+        channel = channel_match.group(1) if channel_match else ""
+
+        logger.info(f"YouTube 스크레이프 매칭: {title[:60]}")
+        return YouTubeVideo(
+            video_id=video_id,
+            title=title,
+            channel=channel,
+            thumbnail_url=self.get_best_thumbnail(video_id),
+            embed_url=self.get_embed_url(video_id),
+        )
 
     def search_kpop(
         self,

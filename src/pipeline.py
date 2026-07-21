@@ -88,12 +88,16 @@ from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
 from src.monetization import (
+    DEFAULT_SHOP_RETAILER,
     add_policy_disclaimers,
     check_quality,
+    fix_category_links,
+    fix_markdown_bold,
     fix_shop_links,
     insert_monetization,
     insert_related_box,
     strip_placeholders,
+    unwrap_dead_anchors,
 )
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
@@ -437,10 +441,24 @@ class BlogPipeline:
             else:
                 logger.debug("Tech mode: skipping section images (using visual elements instead)")
 
-            # 쇼핑 링크 가드레일: LLM이 남긴 플레이스홀더/깨진 앵커를 코드로 수리
+            # 본문 링크/마크업 가드레일: LLM 잔존물을 코드로 강제 수리
+            content.html = fix_markdown_bold(content.html)
+            content.html = unwrap_dead_anchors(content.html)
             content.html = fix_shop_links(
-                content.html, search_term=(content.focus_keyphrase or topic.topic)
+                content.html,
+                search_term=(content.focus_keyphrase or topic.topic),
+                default_retailer=DEFAULT_SHOP_RETAILER.get(category or "", "amazon"),
             )
+            if self.config.mode != "general" and category:
+                # 잘못된 카테고리 내부 링크 교정 (자기 실로만 허용)
+                try:
+                    allowed_urls, own_url = self.wp_client.get_category_urls(category)
+                    if own_url:
+                        content.html = fix_category_links(
+                            content.html, allowed_urls, own_url
+                        )
+                except Exception as e:
+                    logger.warning(f"카테고리 링크 교정 실패: {e}")
 
             # 수익화 레이어 (general/trendpulse 전용):
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스

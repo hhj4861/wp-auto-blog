@@ -882,6 +882,41 @@ class WordPressClient:
             logger.warning(f"Failed to look up category '{name}': {e}")
             return None
 
+    def get_category_urls(self, name: str) -> tuple[list[str], Optional[str]]:
+        """카테고리와 조상들의 아카이브 URL 목록을 반환한다. (allowed_urls, own_url)
+
+        본문 내 /category/ 링크 교정용 — 자기 카테고리·부모 실로 링크만 허용.
+        """
+        cat_id = self._find_category_id(name)
+        if not cat_id:
+            return [], None
+        urls: list[str] = []
+        own: Optional[str] = None
+        current = cat_id
+        for _ in range(5):  # 계층 깊이 안전 상한
+            try:
+                response = self._request_with_retry(
+                    "GET",
+                    f"{self._api_base}/categories/{current}",
+                    headers=self._get_auth_headers(),
+                    params={"_fields": "link,parent"},
+                    timeout=30,
+                )
+                response.raise_for_status()
+                data = response.json()
+            except Exception as e:
+                logger.warning(f"Failed to fetch category {current}: {e}")
+                break
+            link = data.get("link")
+            if link:
+                urls.append(link)
+                if own is None:
+                    own = link
+            current = data.get("parent") or 0
+            if not current:
+                break
+        return urls, own
+
     def _get_or_create_category(self, name: str, parent_id: Optional[int] = None) -> Optional[int]:
         """Get or create a category with optional parent.
 

@@ -175,13 +175,26 @@ SHOP_SEARCH_URLS = {
 }
 
 
-def fix_shop_links(html: str, search_term: str) -> str:
+# 카테고리별 기본 쇼핑몰 (플레이스홀더에 몰 이름이 없을 때)
+DEFAULT_SHOP_RETAILER = {"K-Fashion": "yesstyle", "K-Beauty": "yesstyle"}
+
+
+def _detect_retailer(text: str) -> str | None:
+    lowered = text.lower()
+    for key in ("olive young", "yesstyle", "musinsa", "amazon"):
+        if key in lowered:
+            return key
+    return None
+
+
+def fix_shop_links(html: str, search_term: str, default_retailer: str = "amazon") -> str:
     """쇼핑 링크 플레이스홀더를 실제 검색 링크로 치환/수리한다.
 
     - '(Shop on<a ...>' 처럼 앵커 앞에 붙은 잔여 접두 텍스트 제거
     - 'on<a' 처럼 앵커에 눌어붙은 단어에 공백 삽입
-    - href 없는 '(Shop on X →)' 플레이스홀더는 알려진 몰이면 검색 앵커로,
-      모르는 몰이면 제거
+    - href 없는 '(Shop ... →)' 플레이스홀더는: 문구에 알려진 몰이 있으면 그 몰로,
+      '(Shop Similar →)' 처럼 몰 언급이 없으면 default_retailer로 링크.
+      특정 몰을 지목했는데 미확인 몰이면 제거.
     """
     q = quote(search_term.strip()) if search_term and search_term.strip() else ""
 
@@ -189,20 +202,63 @@ def fix_shop_links(html: str, search_term: str) -> str:
     html = re.sub(r"\bon(<a\s)", r"on \1", html)
 
     def _replace(match: re.Match) -> str:
-        name = match.group(1).strip()
-        url_template = SHOP_SEARCH_URLS.get(name.lower())
+        inner = match.group(1).strip()
+        retailer = _detect_retailer(inner)
+        if retailer is None:
+            named_mall = re.match(
+                r"(?:Shop|Buy|Order|Get|Find)\s+on\s+\S", inner, re.IGNORECASE
+            )
+            if named_mall:
+                logger.warning(f"쇼핑 플레이스홀더 제거 (미확인 몰): {inner}")
+                return ""
+            retailer = default_retailer
+        url_template = SHOP_SEARCH_URLS.get(retailer)
         if not url_template or not q:
-            logger.warning(f"쇼핑 플레이스홀더 제거 (미확인 몰): {name}")
             return ""
         url = url_template.format(q=q)
         return (
             f'<a href="{url}" target="_blank" rel="nofollow" '
-            f'style="color:#9b59b6;">Shop on {name} →</a>'
+            f'style="color:#9b59b6;">{inner} →</a>'
         )
 
-    fixed = re.sub(r"\(Shop on ([A-Za-z][A-Za-z ]{1,30}?)\s*→?\s*\)", _replace, html)
+    fixed = re.sub(
+        r"\(((?:Shop|Buy|Find|Order|Get)[^()<>]{0,60}?)\s*→\s*\)", _replace, html
+    )
     if fixed != html:
         logger.info("쇼핑 링크 플레이스홀더 수리됨")
+    return fixed
+
+
+def fix_markdown_bold(html: str) -> str:
+    """본문에 잔존한 마크다운 **볼드**를 <strong>으로 변환한다."""
+    fixed = re.sub(r"\*\*([^*\n]{1,80}?)\*\*", r"<strong>\1</strong>", html)
+    if fixed != html:
+        logger.info("본문 ** 마크다운 볼드 변환됨")
+    return fixed
+
+
+def unwrap_dead_anchors(html: str) -> str:
+    """href=\"#\" 죽은 앵커를 텍스트만 남기고 벗긴다 (#섹션 앵커는 유지)."""
+    return re.sub(r'<a\s[^>]*href="#"[^>]*>(.*?)</a>', r"\1", html, flags=re.S)
+
+
+def fix_category_links(html: str, allowed_urls: list[str], target_url: str) -> str:
+    """본문의 /category/ 링크 중 글 자신의 카테고리 계보가 아닌 것을 교정한다.
+
+    LLM이 프롬프트 예시(테크 카테고리 경로)를 그대로 베껴 K-Food 글이
+    /category/saas-reviews/ 로 링크되는 오류를 코드로 강제 수리한다.
+    """
+    allowed_paths = {urlparse(u).path.rstrip("/") for u in allowed_urls}
+
+    def _sub(match: re.Match) -> str:
+        href = match.group(2)
+        if urlparse(href).path.rstrip("/") in allowed_paths:
+            return match.group(0)
+        return f"{match.group(1)}{target_url}{match.group(3)}"
+
+    fixed = re.sub(r'(href=")([^"]*/category/[^"]*)(")', _sub, html)
+    if fixed != html:
+        logger.info("잘못된 카테고리 내부 링크 교정됨")
     return fixed
 
 

@@ -184,6 +184,7 @@ class TestPipelineRelatedBoxWiring:
              patch.object(pipeline.image_fetcher, "fetch", return_value=[]), \
              patch.object(pipeline.wp_client, "get_recent_posts", return_value=recent), \
              patch.object(pipeline.wp_client, "_find_category_id", return_value=10), \
+             patch.object(pipeline.wp_client, "get_category_urls", return_value=([], None)), \
              patch.object(
                  pipeline.wp_client, "create_post",
                  return_value=CreatedPost(1, "u", "t", PostStatus.DRAFT),
@@ -292,3 +293,61 @@ class TestFixShopLinks:
             require_korean=False,
         )
         assert any("제목" in i for i in issues)
+
+
+class TestContentLinkGuardrails:
+    """본문 링크/마크업 가드레일: 잘못된 카테고리 링크·마크다운 잔존·일반 플레이스홀더."""
+
+    @pytest.mark.unit
+    def test_wrong_category_link_rewritten(self):
+        """글 자신의 카테고리가 아닌 /category/ 링크는 자기 카테고리로 교정."""
+        from src.monetization import fix_category_links
+        html = '<a href="/category/saas-reviews/">K-Food guides</a>'
+        out = fix_category_links(
+            html,
+            allowed_urls=["https://bytepulse.io/category/k-culture/k-food/",
+                          "https://bytepulse.io/category/k-culture/"],
+            target_url="https://bytepulse.io/category/k-culture/k-food/",
+        )
+        assert 'href="https://bytepulse.io/category/k-culture/k-food/"' in out
+        assert "saas-reviews" not in out
+        assert ">K-Food guides<" in out  # 앵커 텍스트 유지
+
+    @pytest.mark.unit
+    def test_own_and_parent_category_links_kept(self):
+        from src.monetization import fix_category_links
+        html = '<a href="https://bytepulse.io/category/k-culture/">K-Culture</a>'
+        out = fix_category_links(
+            html,
+            allowed_urls=["https://bytepulse.io/category/k-culture/k-food/",
+                          "https://bytepulse.io/category/k-culture/"],
+            target_url="https://bytepulse.io/category/k-culture/k-food/",
+        )
+        assert out == html
+
+    @pytest.mark.unit
+    def test_markdown_bold_converted_to_strong(self):
+        from src.monetization import fix_markdown_bold
+        out = fix_markdown_bold("<p>Use **Amazon Subscribe & Save** for deals</p>")
+        assert out == "<p>Use <strong>Amazon Subscribe & Save</strong> for deals</p>"
+
+    @pytest.mark.unit
+    def test_shop_similar_placeholder_uses_default_retailer(self):
+        out = fix_shop_links("(Shop Similar →)", "korean beanie", default_retailer="yesstyle")
+        assert 'yesstyle.com/en/search?q=korean%20beanie' in out
+        assert ">Shop Similar →</a>" in out
+
+    @pytest.mark.unit
+    def test_placeholder_with_retailer_in_text_detected(self):
+        out = fix_shop_links("(Shop Korean Cleansers at Olive Young Global →)", "korean cleanser")
+        assert "global.oliveyoung.com" in out
+        assert "→</a>" in out
+
+    @pytest.mark.unit
+    def test_hash_href_unwrapped(self):
+        from src.monetization import unwrap_dead_anchors
+        out = unwrap_dead_anchors('see <a href="#">ILLIT tour dates</a> now')
+        assert out == "see ILLIT tour dates now"
+        # TOC 앵커는 유지
+        keep = '<a href="#verdict">Skip →</a>'
+        assert unwrap_dead_anchors(keep) == keep

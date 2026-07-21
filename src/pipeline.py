@@ -86,7 +86,7 @@ from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
-from src.monetization import insert_monetization, check_quality
+from src.monetization import insert_monetization, check_quality, strip_placeholders
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
 # ImageCrawler for K-Culture product images (Olive Young API, Amazon)
@@ -391,6 +391,7 @@ class BlogPipeline:
             # 수익화 레이어 (general/trendpulse 전용):
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스
             if self.config.mode == "general":
+                content.html = strip_placeholders(content.html)
                 content.html = insert_monetization(
                     content.html,
                     official_link=getattr(content, "official_link", ""),

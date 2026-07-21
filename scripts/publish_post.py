@@ -25,7 +25,16 @@ def main():
     if p["status"] == "publish":
         print(f"이미 발행됨: {p['link']}")
         return
-    ur = session.post(f"{API}/posts/{POST_ID}", json={"status": "publish"}, timeout=60)
+    payload = {"status": "publish"}
+    # 발행 전 기계적 결함 정리: ((...)) 인용 플레이스홀더 제거
+    import re
+    content = p["content"].get("raw") or ""
+    cleaned = re.sub(r"\(\([^()\n]{2,60}\)\)", "", content)
+    if cleaned != content:
+        cleaned = re.sub(r"(?<=[가-힣\w.,]) {2,}(?=[가-힣\w])", " ", cleaned)
+        payload["content"] = cleaned
+        print("((...)) 플레이스홀더 제거 후 발행")
+    ur = session.post(f"{API}/posts/{POST_ID}", json=payload, timeout=60)
     ur.raise_for_status()
     v = ur.json()
     print(f"발행 완료: {v['link']} (status={v['status']}, date={v['date']})")

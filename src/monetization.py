@@ -136,6 +136,15 @@ def insert_monetization(
 # ---------------------------------------------------------------- 품질 게이트
 
 _PLACEHOLDER_RE = re.compile(r"\(\([^()\n]{2,60}\)\)")
+
+
+def strip_placeholders(html: str) -> str:
+    """((Sleep 2024)) 류의 인용 플레이스홀더를 기계적으로 제거한다 (게이트 전 자가치유)."""
+    cleaned = _PLACEHOLDER_RE.sub("", html)
+    if cleaned != html:
+        cleaned = re.sub(r"(?<=[가-힣\w.,]) {2,}(?=[가-힣\w])", " ", cleaned)
+        logger.info("본문 ((...)) 플레이스홀더 자동 제거됨")
+    return cleaned
 _TITLE_ARTIFACT_RE = re.compile(r"[`\"]|\(\s*(?:유형|\d+\s*자)")
 
 

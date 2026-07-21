@@ -10,6 +10,10 @@ on:
         description: '발행할 draft 포스트 ID'
         required: true
         type: string
+      new_slug:
+        description: '슬러그 교정 (선택, 영문 소문자-하이픈)'
+        required: false
+        type: string
 
 jobs:
   publish:
@@ -33,4 +37,5 @@ jobs:
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           POC_POST_ID: ${{ github.event.inputs.post_id }}
+          POC_NEW_SLUG: ${{ github.event.inputs.new_slug }}
         run: python scripts/publish_post.py

@@ -373,7 +373,10 @@ class WordPressClient:
         wrapped_html = f'<div class="post-content {category_class}" data-category="{category or ""}">\n{prepared_html}\n</div>'
 
         # Generate SEO-friendly slug (LLM이 준 영문 슬러그 힌트가 유효하면 우선 사용)
-        slug_hint = (getattr(content, "slug_hint", "") or "").strip()
+        # 힌트에 비ASCII가 섞여도 통째로 버리지 말고 걷어낸 뒤 검증한다
+        slug_hint = (getattr(content, "slug_hint", "") or "").strip().lower()
+        slug_hint = re.sub(r"[^a-z0-9-]", "", slug_hint)
+        slug_hint = re.sub(r"-{2,}", "-", slug_hint).strip("-")
         if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+){1,7}", slug_hint) and len(slug_hint) <= 60:
             slug = slug_hint
         else:

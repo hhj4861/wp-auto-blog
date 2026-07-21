@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 import re
+from datetime import datetime
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
@@ -1573,6 +1574,7 @@ Output only the HTML content, no markdown.
             topic=topic,
             keywords=keywords,
             language=self.config.language,
+            category=category,
         )
         if research_data:
             # Add research data AFTER the main prompt (as reference material)
@@ -1708,6 +1710,29 @@ DO NOT use Markdown. Use only HTML tags."""
         Returns:
             Category-specific instruction string
         """
+        # 정책·제도형 주제: 정확성 최우선 (생활정보/취업 전체, 건강은 제도성 토픽만)
+        policy_health = category == "건강" and re.search(
+            r"지원|검진|접종|보험|신청|무료|국가|바우처|의료비", topic)
+        if category in ("생활정보", "취업") or policy_health:
+            return f"""
+[카테고리: {category} - 정책·제도 정보 (정확성 최우선)]
+
+이 글은 "{topic}"에 대한 **실생활 제도/정책 정보** 콘텐츠입니다.
+독자는 정확한 조건과 신청 방법을 찾으러 온 사람이다.
+
+=== 정확성 규칙 (위반 시 독자에게 실질 피해) ===
+1. 수치(금액·세율·한도·기간·날짜)는 REFERENCE 리서치 데이터에서 확인된 것만 사용.
+   확인 안 된 수치는 구체적으로 쓰지 말고 "공식 사이트에서 확인"으로 안내 — 추정 금지
+2. 본문 서두에 기준 시점을 명시할 것 (예: "2026년 7월 발표 기준")
+3. 시행이 확정되지 않은 정책(개정안 발의·검토·유예 논의)은 반드시 "예정/검토 중"으로
+   표기 — 확정된 것처럼 서술 금지
+4. 신청 방법은 공식 채널(정부24·홈택스·위택스·복지로·고용24 등) 기준으로 단계별 안내
+5. 투자·주식 관련 주제: 특정 종목 추천, 매수/매도 조언 절대 금지 — 제도·세금 설명만.
+   말미에 "투자 판단의 책임은 본인에게 있습니다" 한 줄 고지
+6. 의료 관련 주제: 진단·치료 조언 금지 — 지원 제도(대상·신청 방법)만 다루고,
+   말미에 "구체적인 사항은 관할 기관 또는 의료기관에서 확인하세요" 안내
+"""
+
         # 건강: 바이오해킹/웰니스 트렌드 (YMYL 피하고 트렌드 관점)
         if category == "건강":
             return f"""
@@ -2678,13 +2703,18 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         )
         return response.text
 
-    def research_with_grounding(self, topic: str, keywords: list[str], language: str = "en") -> str:
+    # 정책·제도형 카테고리: 공식 출처 우선 리서치가 필요한 영역
+    POLICY_CATEGORIES = ("생활정보", "취업", "건강")
+
+    def research_with_grounding(self, topic: str, keywords: list[str],
+                                language: str = "en", category: str = "") -> str:
         """Research topic using Gemini Grounding with Google Search.
 
         Args:
             topic: The topic to research
             keywords: Related keywords for context
             language: 'en' for English, 'ko' for Korean
+            category: 카테고리 — 정책형(생활정보/취업/건강)이면 공식 출처 중심 리서치
 
         Returns:
             Research summary with latest information
@@ -2701,9 +2731,30 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
                 temperature=0.5,
             )
 
+            today = datetime.now().strftime("%Y년 %m월")
+
             # Language-specific prompt
-            if language == "ko":
-                prompt = f""""{topic}"에 대해 조사해주세요.
+            if language == "ko" and category in self.POLICY_CATEGORIES:
+                # 정책·세금·지원금·채용·의료 제도: 최신성/정확성이 생명
+                prompt = f""""{topic}"에 대한 최신 공식 정보를 조사해주세요. (오늘: {today})
+
+관련 키워드: {', '.join(keywords)}
+
+반드시 공식 출처를 우선 확인하세요: 정부 부처 보도자료(기획재정부·금융위원회·국세청·
+보건복지부·고용노동부·질병관리청), korea.kr 정책브리핑, 공식 기관 사이트
+(정부24·홈택스·위택스·복지로·건강보험공단·워크넷·고용24).
+
+다음을 정리해주세요:
+1. 제도의 현재 상태: 시행 중 / 개정·유예·폐지 논의 중 여부 — 가장 최근 공식 발표와 그 날짜
+2. 정확한 수치: 금액·세율·한도·지원 대상·신청 기간 (각 수치의 발표 기준일 포함)
+3. 신청/이용 방법과 공식 사이트 URL
+4. 최근 6개월 내 변경된 내용 (있다면 변경 전후 비교)
+5. 자주 혼동되는 점·주의사항
+
+⚠️ 검색 결과로 확인되지 않는 수치는 반드시 "확인 불가"라고 명시하세요. 추측 금지.
+⚠️ 블로그·커뮤니티 글보다 공식 발표를 우선하고, 출처가 어디인지 함께 적어주세요."""
+            elif language == "ko":
+                prompt = f""""{topic}"에 대해 조사해주세요. (오늘: {today})
 
 관련 키워드: {', '.join(keywords)}
 
@@ -2712,7 +2763,7 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 2. 주요 기능 및 특징
 3. 가격 정보 (있다면)
 4. 장단점
-5. 경쟁 제품/서비스 - 중요: 경쟁 제품의 최신 버전 정보 포함 (2026년 1월 기준)
+5. 경쟁 제품/서비스 - 중요: 경쟁 제품의 최신 버전 정보 포함 ({today} 기준)
 
 검색 결과를 기반으로 사실적이고 구체적으로 작성해주세요. 항상 최신 버전 번호를 사용하세요."""
             else:
@@ -2725,7 +2776,7 @@ Include:
 2. Key features and capabilities
 3. Pricing information (if available)
 4. Pros and Cons
-5. Competitors or alternatives - IMPORTANT: Include the LATEST versions of competing products (e.g., GPT-5.2, Claude 4, etc. as of January 2026)
+5. Competitors or alternatives - IMPORTANT: Include the LATEST versions of competing products as of {today}
 
 Be specific and factual based on search results. Always use the most recent version numbers."""
 

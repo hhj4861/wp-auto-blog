@@ -27,6 +27,7 @@ TRUSTED_CTA_HOSTS = {
     # 공기업/공공서비스 (.co.kr이지만 공식)
     "en-ter.co.kr", "www.kepco.co.kr", "home.kepco.co.kr",  # 한전 에너지캐시백
     "www.letskorail.com", "etk.srail.kr",  # 코레일/SR 승차권
+    "www.krx.co.kr", "krx.co.kr",  # 한국거래소 (투자 제도 정보)
 }
 
 _H2_RE = re.compile(r"<h2[\s>]")

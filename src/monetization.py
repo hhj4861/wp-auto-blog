@@ -64,17 +64,39 @@ def _cta_button(label: str, url: str, sub: str) -> str:
 '''
 
 
-def _related_box(posts: list[dict]) -> str:
+def _related_box(posts: list[dict], heading: str = "📌 함께 보면 좋은 글") -> str:
     items = "".join(
         f'<li style="margin-bottom:10px;"><a href="{p["url"]}" '
         f'style="color:#67e8f9;text-decoration:none;">{p["title"]}</a></li>'
         for p in posts)
     return f'''
 <div style="max-width:800px;margin:35px auto;padding:20px;background:#2d2d3a;border-radius:12px;border-left:4px solid #5046e5;">
-<p style="margin:0 0 12px 0;font-size:1.05em;font-weight:bold;color:#ffffff;">📌 함께 보면 좋은 글</p>
+<p style="margin:0 0 12px 0;font-size:1.05em;font-weight:bold;color:#ffffff;">{heading}</p>
 <ul style="margin:0;padding-left:18px;color:#e0e0e0;line-height:1.6;">{items}</ul>
 </div>
 '''
+
+
+def insert_related_box(
+    html: str,
+    related_posts: list[dict] | None,
+    heading: str = "📌 Related Posts",
+) -> str:
+    """관련 글 박스만 단독 삽입 (tech/kculture 등 광고 레이어 없는 모드용).
+
+    H2가 2개 이상이면 마지막 H2(결론) 앞에, 아니면 본문 말미에 붙인다.
+    """
+    if not related_posts:
+        return html
+    box = _related_box(related_posts, heading)
+    h2s = [m.start() for m in _H2_RE.finditer(html)]
+    if len(h2s) >= 2:
+        pos = h2s[-1]
+        html = html[:pos] + box + html[pos:]
+    else:
+        html = html + box
+    logger.info(f"관련 글 내부 링크 박스 삽입: {len(related_posts)}개")
+    return html
 
 
 def parse_official_link(value: str) -> tuple[str, str] | None:

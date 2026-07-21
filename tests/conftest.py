@@ -4,6 +4,17 @@ import pytest
 from unittest.mock import MagicMock
 
 
+@pytest.fixture(autouse=True)
+def isolated_post_registry(tmp_path, monkeypatch):
+    """테스트가 실제 data/post_registry_*.json을 오염시키지 않도록 격리한다."""
+    import src.pipeline as pipeline_module
+    import src.trend_detector as trend_module
+
+    monkeypatch.setattr(pipeline_module, "POST_REGISTRY_DIR", tmp_path)
+    monkeypatch.setattr(trend_module, "POST_REGISTRY_DIR", tmp_path)
+    return tmp_path
+
+
 @pytest.fixture
 def mock_env_vars(monkeypatch):
     """Set up mock environment variables for testing."""

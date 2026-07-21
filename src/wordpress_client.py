@@ -126,6 +126,11 @@ class WordPressClient:
         ...     print(f"Created: {post.url}")
     """
 
+    # 태그 스프롤 방지 정책 (2026-07: 글 462개에 태그 1,630개 → 크롤 예산 낭비)
+    MAX_TAGS_PER_POST = 5  # 글당 태그 총량 상한
+    MAX_NEW_TAGS_PER_POST = 2  # 글당 신규 태그 생성 상한 (기존 태그 재사용 우선)
+    MAX_TAG_LOOKUPS = 12  # 태그 검색 API 호출 상한
+
     # Category-to-tags mapping for automatic tagging (SEO 최적화)
     CATEGORY_TAGS = {
         # === trendpulse.blog 사일로 구조 (5개 카테고리 - 한국어) ===
@@ -175,38 +180,32 @@ class WordPressClient:
         ],
 
         # === bytepulse.io 니치 카테고리 ===
-        "AI Tools": ["AI", "Machine Learning", "LLM", "Automation", "GPT", "Claude", "Gemini", "OpenAI"],
-        "Dev Productivity": ["Developer Tools", "IDE", "Workflow", "Coding", "Efficiency", "VS Code", "Vim"],
-        "SaaS Reviews": ["SaaS", "Software Review", "Cloud", "Business Tools", "Startup", "Notion", "Obsidian"],
+        # 필러 태그는 카테고리 전체에 참인 일반 태그만 유지한다.
+        # (특정 제품/아티스트/브랜드명은 글과 무관하게 붙으면 오태깅 —
+        #  해당 글의 content.keywords로만 붙는다)
+        "AI Tools": ["AI", "Machine Learning", "LLM", "Automation"],
+        "Dev Productivity": ["Developer Tools", "IDE", "Workflow", "Coding", "Efficiency"],
+        "SaaS Reviews": ["SaaS", "Software Review", "Cloud", "Business Tools", "Startup"],
         "Web3 Security": ["Web3", "Blockchain", "Security", "Crypto", "Smart Contracts", "DeFi"],
-        "Frontend Dev": ["Frontend", "React", "JavaScript", "CSS", "UI/UX", "TypeScript", "Next.js"],
-        "Backend Dev": ["Backend", "API", "Database", "DevOps", "Server", "Python", "Node.js"],
-        "Startup Tools": ["Startup", "MVP", "Growth", "Founder", "Business", "SaaS", "Indie Hacker"],
+        "Frontend Dev": ["Frontend", "Web Development", "JavaScript", "UI/UX"],
+        "Backend Dev": ["Backend", "API", "Database", "DevOps", "Server"],
+        "Startup Tools": ["Startup", "MVP", "Growth", "Founder", "Business", "Indie Hacker"],
 
         # === k-pulse.blog K-Culture 카테고리 (US 시장 타겟) ===
         "K-Beauty": [
             "K-Beauty", "Korean Skincare", "Korean Beauty", "Skincare Routine",
-            "K-Skincare", "Glass Skin", "Dewy Skin", "Korean Cosmetics",
-            "COSRX", "Innisfree", "Laneige", "Beauty of Joseon", "Anua",
-            "Serum", "Essence", "Toner", "Sunscreen", "Sheet Mask",
+            "Korean Cosmetics",
         ],
         "K-Pop": [
-            "K-Pop", "Korean Pop", "Kpop", "BTS", "BLACKPINK", "NewJeans",
-            "Stray Kids", "TWICE", "aespa", "IVE", "LE SSERAFIM", "SEVENTEEN",
-            "Idol", "Korean Music", "Album", "Concert", "Comeback",
-            "Photocard", "Lightstick", "Fandom", "Music Video",
+            "K-Pop", "Korean Pop", "Kpop", "Idol", "Korean Music", "Fandom",
         ],
         "K-Food": [
             "K-Food", "Korean Food", "Korean Cuisine", "Korean Recipe",
-            "Kimchi", "Korean BBQ", "Tteokbokki", "Bibimbap", "Ramyeon",
-            "Buldak", "Korean Snacks", "Soju", "Korean Drinks", "Banchan",
-            "Gochujang", "Korean Cooking", "Asian Food", "Spicy Food",
+            "Korean Cooking",
         ],
         "K-Fashion": [
-            "K-Fashion", "Korean Fashion", "Korean Style", "Streetwear",
-            "Korean Streetwear", "Minimalist Fashion", "Airport Fashion",
-            "Kdrama Fashion", "Korean Outfit", "Seoul Fashion", "Musinsa",
-            "Korean Brands", "Asian Fashion", "Trendy", "OOTD",
+            "K-Fashion", "Korean Fashion", "Korean Style", "Seoul Fashion",
+            "Korean Outfit",
         ],
     }
 
@@ -340,15 +339,11 @@ class WordPressClient:
             if cat_id:
                 category_ids.append(cat_id)
 
-        # Build tag list: content keywords + category-based tags
-        all_tags = list(content.keywords) if content.keywords else []
-        if category and category in self.CATEGORY_TAGS:
-            category_tags = self.CATEGORY_TAGS[category]
-            all_tags.extend(category_tags)
-            logger.info(f"Added category tags: {category_tags}")
-
-        # Get/create tags
-        tag_ids = self._get_or_create_tags(all_tags)
+        # Get/create tags: 토픽 키워드 우선, 카테고리 태그는 기존 것만 필러로
+        tag_ids = self._get_or_create_tags(
+            list(content.keywords) if content.keywords else [],
+            filler_tags=self.CATEGORY_TAGS.get(category) if category else None,
+        )
 
         # Create post with SEO optimization
         # Focus keyphrase: LLM이 생성한 것 우선 사용, 없으면 제목에서 추출
@@ -569,12 +564,11 @@ class WordPressClient:
             if cat_id:
                 category_ids.append(cat_id)
 
-        # Build tags
-        all_tags = list(content.keywords) if content.keywords else []
-        if category and category in self.CATEGORY_TAGS:
-            all_tags.extend(self.CATEGORY_TAGS[category])
-
-        tag_ids = self._get_or_create_tags(all_tags)
+        # Build tags: 토픽 키워드 우선, 카테고리 태그는 기존 것만 필러로
+        tag_ids = self._get_or_create_tags(
+            list(content.keywords) if content.keywords else [],
+            filler_tags=self.CATEGORY_TAGS.get(category) if category else None,
+        )
 
         # Focus keyphrase
         focus_keyword = ""
@@ -933,53 +927,117 @@ class WordPressClient:
             logger.warning(f"Failed to get/create category '{name}': {e}")
             return None
 
-    def _get_or_create_tags(self, keywords: list[str]) -> list[int]:
-        """Get or create tags from keywords.
+    def _find_tag_id(self, name: str) -> Optional[int]:
+        """이름이 정확히(대소문자 무시) 일치하는 기존 태그 ID를 찾는다."""
+        try:
+            response = self._request_with_retry(
+                "GET",
+                f"{self._api_base}/tags",
+                headers=self._get_auth_headers(),
+                params={"search": name, "per_page": 100},
+                timeout=30,
+            )
+            response.raise_for_status()
+            match = next(
+                (t for t in response.json() if t["name"].lower() == name.lower()),
+                None,
+            )
+            return match["id"] if match else None
+        except Exception as e:
+            logger.warning(f"Failed to look up tag '{name}': {e}")
+            return None
 
-        Args:
-            keywords: List of keywords to use as tags
+    def _create_tag(self, name: str) -> Optional[int]:
+        """태그를 생성한다. 이미 존재하면(term_exists) 기존 ID를 재사용한다."""
+        try:
+            response = self._request_with_retry(
+                "POST",
+                f"{self._api_base}/tags",
+                headers=self._get_auth_headers(),
+                json={"name": name},
+                timeout=30,
+            )
+            if response.status_code == 400:
+                body = response.json()
+                if body.get("code") == "term_exists":
+                    return body.get("data", {}).get("term_id")
+            response.raise_for_status()
+            return response.json()["id"]
+        except Exception as e:
+            logger.warning(f"Failed to create tag '{name}': {e}")
+            return None
+
+    def _get_or_create_tags(
+        self, keywords: list[str], filler_tags: Optional[list[str]] = None
+    ) -> list[int]:
+        """Resolve post tags (태그 스프롤 방지 정책).
+
+        - keywords(토픽 키워드): 기존 태그 재사용 + 미존재는 글당
+          MAX_NEW_TAGS_PER_POST개까지 신규 생성 (토픽 특이성 유지)
+        - filler_tags(카테고리 공통 태그): 기존 것만 재사용해 남는 자리를
+          채우고, 절대 새로 만들지 않는다 (보일러플레이트 태그 증식 방지)
+        - 총량은 MAX_TAGS_PER_POST개
 
         Returns:
             List of tag IDs
         """
+        seen: set[str] = set()
+
+        def normalize(raw_list: Optional[list[str]]) -> list[str]:
+            out: list[str] = []
+            for raw in raw_list or []:
+                name = re.sub(r"\s+", " ", str(raw)).strip()
+                if not name or name.lower() in seen:
+                    continue
+                seen.add(name.lower())
+                out.append(name)
+            return out
+
+        topical = normalize(keywords)
+        fillers = normalize(filler_tags)
+
         tag_ids: list[int] = []
+        misses: list[str] = []
+        lookups = 0
 
-        for keyword in keywords[:12]:  # Limit to 12 tags for better SEO
-            try:
-                # Search for existing tag (with WAF-aware retry)
-                response = self._request_with_retry(
-                    "GET",
-                    f"{self._api_base}/tags",
-                    headers=self._get_auth_headers(),
-                    params={"search": keyword},
-                    timeout=30,
-                )
-                response.raise_for_status()
-                tags = response.json()
+        # 1) 토픽 키워드: 기존 태그 재사용
+        for name in topical:
+            if len(tag_ids) >= self.MAX_TAGS_PER_POST or lookups >= self.MAX_TAG_LOOKUPS:
+                break
+            lookups += 1
+            tag_id = self._find_tag_id(name)
+            if tag_id is not None:
+                tag_ids.append(tag_id)
+            else:
+                misses.append(name)
+        reused_topical = len(tag_ids)
 
-                found = False
-                for tag in tags:
-                    if tag["name"].lower() == keyword.lower():
-                        tag_ids.append(tag["id"])
-                        found = True
-                        break
+        # 2) 미존재 키워드: 상한 내 신규 생성
+        created = 0
+        for name in misses:
+            if (
+                len(tag_ids) >= self.MAX_TAGS_PER_POST
+                or created >= self.MAX_NEW_TAGS_PER_POST
+            ):
+                break
+            tag_id = self._create_tag(name)
+            if tag_id is not None and tag_id not in tag_ids:
+                tag_ids.append(tag_id)
+                created += 1
 
-                if not found:
-                    # Create new tag
-                    response = self._request_with_retry(
-                        "POST",
-                        f"{self._api_base}/tags",
-                        headers=self._get_auth_headers(),
-                        json={"name": keyword},
-                        timeout=30,
-                    )
-                    response.raise_for_status()
-                    tag_ids.append(response.json()["id"])
+        # 3) 카테고리 필러: 기존 태그만으로 잔여 슬롯 충전
+        for name in fillers:
+            if len(tag_ids) >= self.MAX_TAGS_PER_POST or lookups >= self.MAX_TAG_LOOKUPS:
+                break
+            lookups += 1
+            tag_id = self._find_tag_id(name)
+            if tag_id is not None and tag_id not in tag_ids:
+                tag_ids.append(tag_id)
 
-            except Exception as e:
-                logger.warning(f"Failed to get/create tag '{keyword}': {e}")
-                continue
-
+        logger.info(
+            f"Tags resolved: {reused_topical} keyword reuse, {created} created, "
+            f"{len(tag_ids) - reused_topical - created} category filler"
+        )
         return tag_ids
 
     def _prepare_content(

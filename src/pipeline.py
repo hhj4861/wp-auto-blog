@@ -5,6 +5,7 @@ Coordinates trend detection, content generation, image fetching, and publishing.
 
 from __future__ import annotations
 
+import html as html_lib
 import json
 import re
 from dataclasses import dataclass, field
@@ -86,7 +87,12 @@ from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
-from src.monetization import insert_monetization, check_quality, strip_placeholders
+from src.monetization import (
+    check_quality,
+    insert_monetization,
+    insert_related_box,
+    strip_placeholders,
+)
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
 # ImageCrawler for K-Culture product images (Olive Young API, Amazon)
@@ -122,6 +128,41 @@ def get_registry_path(mode: str) -> Path:
         Path to the mode-specific registry file
     """
     return POST_REGISTRY_DIR / f"post_registry_{mode}.json"
+
+
+def _normalize_title(title: str) -> str:
+    """비교/표시용 제목 정규화: 태그 제거, HTML 엔티티 복원, 인용부호 통일.
+
+    WP의 title.rendered는 텍스처라이즈되어(' → &#8217; 등) 원본 제목과
+    문자열이 달라지므로, 양쪽을 같은 형태로 맞춰야 비교가 가능하다.
+    """
+    text = html_lib.unescape(re.sub(r"<[^>]+>", "", title or ""))
+    for src, dst in (("‘", "'"), ("’", "'"), ("“", '"'),
+                     ("”", '"'), (" ", " ")):
+        text = text.replace(src, dst)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def rank_related_posts(
+    posts: list[dict], keywords: list[str], count: int = 3
+) -> list[dict]:
+    """제목/슬러그의 키워드 겹침 수로 관련도 순 정렬해 상위 count개 반환.
+
+    키워드는 단어 경계로 매칭한다('ai'가 'chairs'에 오탐되지 않도록).
+    동점(겹침 없음 포함)은 입력 순서(최신순)를 유지한다.
+    """
+    patterns = [
+        re.compile(rf"(?<![a-z0-9]){re.escape(k.strip().lower())}(?![a-z0-9])")
+        for k in (keywords or [])
+        if k and k.strip()
+    ]
+
+    def score(post: dict) -> int:
+        text = f"{post.get('title', '')} {post.get('slug', '')}".lower()
+        return sum(1 for p in patterns if p.search(text))
+
+    ranked = sorted(posts, key=score, reverse=True)  # 안정 정렬 → 동점은 최신순
+    return ranked[:count]
 
 
 @dataclass
@@ -395,9 +436,10 @@ class BlogPipeline:
                 content.html = insert_monetization(
                     content.html,
                     official_link=getattr(content, "official_link", ""),
-                    related_posts=self._get_related_posts(exclude_title=content.title),
+                    related_posts=self._get_related_posts(
+                        exclude_title=content.title, keywords=topic.keywords
+                    ),
                 )
-
             # Create post (or simulate in dry run)
             if self.config.dry_run:
                 logger.info("[DRY RUN] Would create post - skipping actual publish")
@@ -425,6 +467,16 @@ class BlogPipeline:
                         status = PostStatus.DRAFT
                 else:
                     logger.info("품질 게이트 통과")
+
+                # tech/kculture(bytepulse): 관련 글 내부 링크 박스 삽입
+                # (색인 선택률·체류시간 개선 — GSC '크롤링됨-미색인' 대응)
+                # 게이트가 생성 본문 자체를 평가하도록 게이트 이후에 삽입한다
+                if self.config.mode != "general":
+                    related = self._get_related_posts(
+                        exclude_title=content.title, keywords=topic.keywords
+                    )
+                    if related:
+                        content.html = insert_related_box(content.html, related)
 
                 # Tech mode: skip hero image (TL;DR summary comes first)
                 skip_hero = self.config.mode == "tech"
@@ -471,8 +523,16 @@ class BlogPipeline:
                 duration_seconds=duration,
             )
 
-    def _get_related_posts(self, exclude_title: str = "", count: int = 3) -> list[dict]:
-        """내부 링크 박스용 관련 글 목록 (발행된 한국어 글만).
+    def _get_related_posts(
+        self,
+        exclude_title: str = "",
+        count: int = 3,
+        keywords: Optional[list[str]] = None,
+    ) -> list[dict]:
+        """내부 링크 박스용 관련 글 목록 (모드별 언어 필터 + 키워드 관련도 랭킹).
+
+        general(trendpulse)은 한국어 글만, tech/kculture(bytepulse)는 영어 글을
+        포함해 후보를 모은 뒤 topic 키워드 겹침이 큰 순으로 고른다.
 
         Returns:
             [{"title": ..., "url": ...}] 최대 count개. 실패 시 빈 리스트.
@@ -483,15 +543,19 @@ class BlogPipeline:
             logger.warning(f"관련 글 조회 실패: {e}")
             return []
         base = self.wp_client.config.url.rstrip("/")
-        related = []
+        exclude_normalized = _normalize_title(exclude_title)
+        candidates = []
         for p in recent:
-            title = re.sub(r"<[^>]+>", "", p.get("title") or "").strip()
-            if not re.search(r"[가-힣]", title) or title == exclude_title:
+            title = _normalize_title(p.get("title") or "")
+            if not title or title == exclude_normalized:
                 continue
-            related.append({"title": title, "url": f"{base}/{p['slug']}/"})
-            if len(related) >= count:
-                break
-        return related
+            if self.config.mode == "general" and not re.search(r"[가-힣]", title):
+                continue
+            candidates.append(
+                {"title": title, "slug": p.get("slug", ""), "url": f"{base}/{p['slug']}/"}
+            )
+        ranked = rank_related_posts(candidates, keywords or [], count=count)
+        return [{"title": c["title"], "url": c["url"]} for c in ranked]
 
     def run_single(
         self,

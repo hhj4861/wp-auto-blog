@@ -14,6 +14,10 @@ on:
         description: '슬러그 교정 (선택, 영문 소문자-하이픈)'
         required: false
         type: string
+      category:
+        description: '정책 고지 삽입용 카테고리 (선택: 생활정보/취업/건강)'
+        required: false
+        type: string
 
 jobs:
   publish:
@@ -29,7 +33,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests loguru
 
       - name: Publish post
         env:
@@ -38,4 +42,5 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           POC_POST_ID: ${{ github.event.inputs.post_id }}
           POC_NEW_SLUG: ${{ github.event.inputs.new_slug }}
+          POC_CATEGORY: ${{ github.event.inputs.category }}
         run: python scripts/publish_post.py

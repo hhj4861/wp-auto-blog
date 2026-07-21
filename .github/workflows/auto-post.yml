@@ -42,9 +42,10 @@ on:
     #    재개하려면 아래 두 크론 주석 해제 — 단 머니 키워드 전략과 충돌하므로 비권장.
     # - cron: '30 23 * * *'  # 오전 08:30 KST
     # - cron: '30 10 * * *'  # 오후 19:30 KST
-    # ▶ 머니 키워드 큐 발행 (생활정보: 세금·지원금·금융) - 주 3회로 감량 운영
-    #   토픽은 data/topic_queue_general.json의 pending 항목 순서대로 소진
-    - cron: '0 2 * * 1,3,5'  # 11:00 KST 월/수/금
+    # ▶ 큐 발행 (trendpulse.blog) - 주 5회, 카테고리 분리 운영
+    #   토픽은 data/topic_queue_general.json의 pending 항목을 카테고리별로 소진
+    - cron: '0 2 * * 1,3,5'  # 11:00 KST 월/수/금 → 생활정보 (세금·지원금·금융 머니 큐)
+    - cron: '0 2 * * 2,4'    # 11:00 KST 화/목 → 취업 (외항사 — GSC 노출/클릭 최상위 니치)
 
     # === Tech Blog (bytepulse.io) - General과 15분 시간차 ===
     # 오전: 23:45 UTC (08:45 KST)
@@ -600,9 +601,10 @@ jobs:
 
   # 외항사 포스팅 (토픽 큐에서 처리)
   post-queue:
-    # 월/수/금 11:00 KST (02:00 UTC) cron + workflow_dispatch(mode=queue)
+    # 월/수/금(생활정보)·화/목(취업) 11:00 KST cron + workflow_dispatch(mode=queue)
     if: |
       github.event.schedule == '0 2 * * 1,3,5' ||
+      github.event.schedule == '0 2 * * 2,4' ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue')
     runs-on: ubuntu-latest
     timeout-minutes: 40
@@ -642,12 +644,22 @@ jobs:
           WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
           EOF
 
-      - name: Run pipeline (Queue Mode - 머니 키워드 큐)
+      - name: Run pipeline (Queue Mode - 카테고리별 큐)
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          python -m src.main --mode general --from-queue --auto-publish
+          # 스케줄별 카테고리 선택: 화/목=취업, 월/수/금=생활정보
+          # 수동 실행(mode=queue)은 category 입력을 따르고, 없으면 생활정보
+          if [ -n "${{ github.event.inputs.category }}" ]; then
+            CAT="${{ github.event.inputs.category }}"
+          elif [ "${{ github.event.schedule }}" = "0 2 * * 2,4" ]; then
+            CAT="취업"
+          else
+            CAT="생활정보"
+          fi
+          echo "Queue category: $CAT"
+          python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
 
       - name: Commit queue and registry updates
         if: success()

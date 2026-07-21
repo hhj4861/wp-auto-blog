@@ -85,6 +85,7 @@ def get_scheduled_category(mode: str = "general") -> Optional[str]:
 from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
+from src.indexnow import ping_urls
 from src.monetization import insert_monetization, check_quality
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
@@ -435,6 +436,11 @@ class BlogPipeline:
                     skip_hero_image=skip_hero,
                     content_type=self.config.content_type.value,
                 )
+
+                # 발행 즉시 IndexNow 핑 (Bing·Naver 등 참여 엔진 색인 가속)
+                if (self.config.mode == "general" and status == PostStatus.PUBLISH
+                        and post.url):
+                    ping_urls([post.url])
 
             duration = (datetime.now() - start_time).total_seconds()
 

@@ -106,6 +106,11 @@ jobs:
           WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
+
+          # 네이버 검색광고 API (키워드 수요 게이트)
+          NAVER_AD_CUSTOMER_ID=${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY=${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY=${{ secrets.NAVER_AD_SECRET_KEY }}
           EOF
 
       - name: Run pipeline (General Blog - trendpulse.blog)
@@ -644,6 +649,11 @@ jobs:
           WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
+
+          # 네이버 검색광고 API (키워드 수요 게이트)
+          NAVER_AD_CUSTOMER_ID=${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY=${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY=${{ secrets.NAVER_AD_SECRET_KEY }}
           EOF
 
       - name: Run pipeline (Queue Mode - 카테고리별 큐)

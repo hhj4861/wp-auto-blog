@@ -510,18 +510,6 @@
     "completed_at": "2026-07-22T05:14:59.001552"
   },
   {
-    "topic": "2026 ISA 계좌 개편 총정리: 납입 한도·비과세 혜택·가입 방법",
-    "keywords": [
-      "ISA계좌",
-      "비과세",
-      "납입한도",
-      "개편",
-      "만능통장"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
     "topic": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법",
     "keywords": [
       "근로장려금",
@@ -531,19 +519,12 @@
       "홈택스"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "금융투자소득세(금투세) 2026 현황 총정리: 시행 여부와 투자자 영향",
-    "keywords": [
-      "금융투자소득세",
-      "금투세",
-      "시행여부",
-      "주식세금",
-      "양도소득세"
-    ],
-    "category": "생활정보",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 374600,
+    "competition": "낮음",
+    "serp_gov_ratio": 0.62,
+    "verdict": "longtail",
+    "head_keyword": "근로장려금"
   },
   {
     "topic": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택",
@@ -555,91 +536,12 @@
       "카드납부"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "해외주식 양도소득세 계산과 5월 신고 방법 총정리 (250만원 공제)",
-    "keywords": [
-      "해외주식",
-      "양도소득세",
-      "250만원공제",
-      "신고방법",
-      "홈택스"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 추석 기차표 예매 일정과 KTX·SRT 예매 방법 총정리",
-    "keywords": [
-      "추석",
-      "기차표예매",
-      "KTX",
-      "SRT",
-      "예매일정"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "공모주 청약 방법 총정리: 균등배정·비례배정과 증거금 계산",
-    "keywords": [
-      "공모주",
-      "청약방법",
-      "균등배정",
-      "증거금",
-      "상장"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "2026년 종합소득세 중간예납 대상과 납부 방법 총정리",
-    "keywords": [
-      "종합소득세",
-      "중간예납",
-      "납부방법",
-      "홈택스",
-      "11월"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "배당소득세 총정리: 배당주 세금 계산과 분리과세 개편 현황",
-    "keywords": [
-      "배당소득세",
-      "배당주",
-      "세금계산",
-      "분리과세",
-      "종합과세"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "2026년 연말정산 미리보기 서비스 사용법과 절세 전략",
-    "keywords": [
-      "연말정산",
-      "미리보기",
-      "절세",
-      "홈택스",
-      "소득공제"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "연금저축·IRP 세액공제 한도 총정리: 연말정산 최대 환급 전략 (2026)",
-    "keywords": [
-      "연금저축",
-      "IRP",
-      "세액공제",
-      "한도",
-      "연말정산"
-    ],
-    "category": "생활정보",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 143100,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "재산세"
   },
   {
     "topic": "2027년 자동차세 연납 신청 방법과 할인 혜택 총정리",
@@ -651,79 +553,12 @@
       "신청방법"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "주식 대주주 양도세 기준 총정리: 보유금액 기준과 회피 매도 시점",
-    "keywords": [
-      "대주주",
-      "양도세",
-      "기준",
-      "보유금액",
-      "연말매도"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "숨은 보험금 찾기, 내보험찾아줌 조회 방법 총정리",
-    "keywords": [
-      "숨은보험금",
-      "내보험찾아줌",
-      "조회방법",
-      "보험금청구",
-      "환급"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "퇴직연금 디폴트옵션(사전지정운용) 총정리: 선택 방법과 수익률 비교",
-    "keywords": [
-      "퇴직연금",
-      "디폴트옵션",
-      "사전지정운용",
-      "DC형",
-      "IRP"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "국민건강보험 환급금 조회와 신청 방법 (본인부담상한제)",
-    "keywords": [
-      "건강보험환급금",
-      "본인부담상한제",
-      "조회",
-      "신청방법",
-      "국민건강보험"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "증권거래세율 2026 총정리: 인하 일정과 매도 시 실제 부담액 계산",
-    "keywords": [
-      "증권거래세",
-      "세율",
-      "인하일정",
-      "매도세금",
-      "농특세"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "통신비 미환급금 조회하고 돌려받는 방법 총정리",
-    "keywords": [
-      "통신비",
-      "미환급금",
-      "조회",
-      "환급",
-      "스마트초이스"
-    ],
-    "category": "생활정보",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 95800,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "자동차세"
   },
   {
     "topic": "청년형 장기펀드 소득공제 총정리: 가입 조건과 공제 한도 (2026)",
@@ -735,43 +570,12 @@
       "펀드"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "휴면예금·휴면계좌 조회와 찾는 방법 (어카운트인포)",
-    "keywords": [
-      "휴면예금",
-      "휴면계좌",
-      "어카운트인포",
-      "조회",
-      "환급"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "국세청 미수령 환급금 조회와 수령 방법 총정리",
-    "keywords": [
-      "국세환급금",
-      "미수령환급금",
-      "홈택스",
-      "조회",
-      "수령방법"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "보조금24로 내가 받을 수 있는 정부지원금 한번에 조회하는 방법",
-    "keywords": [
-      "보조금24",
-      "정부지원금",
-      "조회",
-      "정부24",
-      "맞춤혜택"
-    ],
-    "category": "생활정보",
-    "status": "pending"
+    "status": "skipped_low_demand",
+    "monthly_search": 0,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "skip",
+    "head_keyword": "청년형장기펀드소득공제"
   },
   {
     "topic": "국민연금 예상수령액 조회 방법과 수령 나이 총정리",
@@ -783,31 +587,12 @@
       "노령연금"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 기초연금 수급 자격과 신청 방법, 지급액 총정리",
-    "keywords": [
-      "기초연금",
-      "수급자격",
-      "신청방법",
-      "지급액",
-      "만65세"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 실업급여 신청 방법과 조건, 지급액 계산 총정리",
-    "keywords": [
-      "실업급여",
-      "신청방법",
-      "조건",
-      "지급액",
-      "고용보험"
-    ],
-    "category": "생활정보",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 285500,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "국민연금"
   },
   {
     "topic": "2026 육아휴직 급여 신청 방법과 지급액 총정리",
@@ -819,7 +604,12 @@
       "고용보험"
     ],
     "category": "생활정보",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 95700,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "육아휴직급여"
   },
   {
     "topic": "2026 청년도약계좌 신청 조건과 정부기여금 혜택 총정리",
@@ -831,79 +621,12 @@
       "적금"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "주휴수당 계산법과 지급 조건, 못 받았을 때 대처법",
-    "keywords": [
-      "주휴수당",
-      "계산법",
-      "지급조건",
-      "아르바이트",
-      "임금체불"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "퇴직금 계산 방법과 지급 기한, 미지급 대처법 총정리",
-    "keywords": [
-      "퇴직금",
-      "계산방법",
-      "지급기한",
-      "미지급",
-      "고용노동부"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "전입신고 인터넷으로 하는 방법 총정리 (정부24)",
-    "keywords": [
-      "전입신고",
-      "인터넷",
-      "정부24",
-      "방법",
-      "확정일자"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "확정일자 인터넷 발급 방법과 전세보증금 지키는 법",
-    "keywords": [
-      "확정일자",
-      "인터넷발급",
-      "전세보증금",
-      "대항력",
-      "인터넷등기소"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "운전면허 갱신·적성검사 기간 조회와 인터넷 갱신 방법",
-    "keywords": [
-      "운전면허갱신",
-      "적성검사",
-      "기간조회",
-      "인터넷갱신",
-      "과태료"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "여권 재발급 온라인 신청 방법과 수수료 총정리",
-    "keywords": [
-      "여권재발급",
-      "온라인신청",
-      "수수료",
-      "정부24",
-      "여권사진"
-    ],
-    "category": "생활정보",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 260400,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "청년도약계좌"
   },
   {
     "topic": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준",
@@ -915,103 +638,12 @@
       "한국교통안전공단"
     ],
     "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "주택청약종합저축 활용법: 납입 인정액과 소득공제 총정리",
-    "keywords": [
-      "주택청약",
-      "청약통장",
-      "납입인정액",
-      "소득공제",
-      "청약홈"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "모바일 전자고지 신청하고 세금 감면 받는 방법 총정리",
-    "keywords": [
-      "전자고지",
-      "세액공제",
-      "위택스",
-      "카카오톡",
-      "네이버전자문서"
-    ],
-    "category": "생활정보",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 청년내일채움공제 신청 조건과 만기 수령액 총정리",
-    "keywords": [
-      "청년내일채움공제",
-      "신청조건",
-      "만기수령액",
-      "중소기업",
-      "청년"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 하반기 대기업 공채 일정 총정리 (삼성·SK·LG·현대차)",
-    "keywords": [
-      "대기업공채",
-      "하반기채용",
-      "삼성",
-      "채용일정",
-      "신입"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "삼성 GSAT 시험 일정과 과목별 준비 방법 총정리 (2026 하반기)",
-    "keywords": [
-      "GSAT",
-      "삼성채용",
-      "시험일정",
-      "준비방법",
-      "인적성"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "NCS 기반 공기업 채용 일정과 준비 방법 총정리 (2026 하반기)",
-    "keywords": [
-      "NCS",
-      "공기업채용",
-      "채용일정",
-      "필기시험",
-      "공공기관"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "정보처리기사 2026 시험 일정과 독학 합격 공부법",
-    "keywords": [
-      "정보처리기사",
-      "시험일정",
-      "독학",
-      "합격",
-      "큐넷"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "컴퓨터활용능력 1급 독학 합격법과 시험 일정 (2026)",
-    "keywords": [
-      "컴퓨터활용능력",
-      "컴활1급",
-      "독학",
-      "시험일정",
-      "상시시험"
-    ],
-    "category": "취업",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 53500,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "자동차검사"
   },
   {
     "topic": "토익 시험 일정과 접수 방법, 단기 점수 올리는 법 (2026 하반기)",
@@ -1023,7 +655,12 @@
       "취업어학"
     ],
     "category": "취업",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 75900,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "토익시험일정"
   },
   {
     "topic": "신입 이력서·자기소개서 무료 양식과 작성법 총정리",
@@ -1035,19 +672,12 @@
       "신입"
     ],
     "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "면접 단골 질문 TOP 20과 모범 답변 전략 (2026)",
-    "keywords": [
-      "면접질문",
-      "모범답변",
-      "면접준비",
-      "인성면접",
-      "압박면접"
-    ],
-    "category": "취업",
-    "status": "pending"
+    "status": "deferred_head",
+    "monthly_search": 75600,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "longtail",
+    "head_keyword": "이력서양식"
   },
   {
     "topic": "중장년 재취업 지원 제도 총정리: 국비 교육과 채용 지원 (2026)",
@@ -1059,139 +689,12 @@
       "4050"
     ],
     "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "근로계약서 표준 양식과 서명 전 꼭 확인할 조항 총정리",
-    "keywords": [
-      "근로계약서",
-      "표준양식",
-      "확인사항",
-      "임금",
-      "수습기간"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "첫 월급 실수령액 계산법: 4대보험 공제 총정리 (2026)",
-    "keywords": [
-      "실수령액",
-      "4대보험",
-      "연봉계산",
-      "공제",
-      "첫월급"
-    ],
-    "category": "취업",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 국가건강검진 대상자 조회 방법과 검진 항목 총정리",
-    "keywords": [
-      "국가건강검진",
-      "대상자조회",
-      "검진항목",
-      "건강보험공단",
-      "무료검진"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "임플란트 건강보험 적용 대상과 본인부담금 총정리 (2026)",
-    "keywords": [
-      "임플란트",
-      "건강보험적용",
-      "본인부담금",
-      "만65세",
-      "치과"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "노인 보청기 국가 지원금 신청 방법과 지원 금액 (2026)",
-    "keywords": [
-      "보청기지원금",
-      "노인보청기",
-      "신청방법",
-      "청각장애",
-      "건강보험"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "대상포진 예방접종 지원 대상과 접종 비용 총정리 (2026)",
-    "keywords": [
-      "대상포진",
-      "예방접종",
-      "지원대상",
-      "접종비용",
-      "지자체지원"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "폐렴구균 예방접종 무료 대상과 접종 방법 (만 65세 이상)",
-    "keywords": [
-      "폐렴구균",
-      "예방접종",
-      "무료접종",
-      "만65세",
-      "보건소"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "2026 국가암검진 대상과 검사 항목, 비용 총정리",
-    "keywords": [
-      "국가암검진",
-      "암검진대상",
-      "검사항목",
-      "위내시경",
-      "무료검진"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "치매 조기검진 무료 검사와 치매치료관리비 지원 신청 (2026)",
-    "keywords": [
-      "치매조기검진",
-      "치매검사",
-      "치료관리비",
-      "치매안심센터",
-      "지원신청"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "재난적 의료비 지원 신청 자격과 지원 한도 총정리",
-    "keywords": [
-      "재난적의료비",
-      "의료비지원",
-      "신청자격",
-      "지원한도",
-      "건강보험공단"
-    ],
-    "category": "건강",
-    "status": "pending"
-  },
-  {
-    "topic": "산정특례 제도 총정리: 중증질환 의료비 본인부담 경감 신청법",
-    "keywords": [
-      "산정특례",
-      "중증질환",
-      "의료비경감",
-      "본인부담",
-      "신청방법"
-    ],
-    "category": "건강",
-    "status": "pending"
+    "status": "skipped_low_demand",
+    "monthly_search": 210,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "skip",
+    "head_keyword": "중장년재취업"
   },
   {
     "topic": "금연치료 지원사업 총정리: 병의원 지원과 보조제 비용 (2026)",
@@ -1203,19 +706,342 @@
       "보건소"
     ],
     "category": "건강",
-    "status": "pending"
+    "status": "skipped_low_demand",
+    "monthly_search": 450,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "skip",
+    "head_keyword": "금연치료"
   },
   {
-    "topic": "전국민 마음투자 지원사업: 심리상담 바우처 신청 방법 (2026)",
+    "topic": "2026 ISA 계좌 개편 총정리: 납입 한도·비과세 혜택·가입 방법",
     "keywords": [
-      "마음투자지원사업",
-      "심리상담",
-      "바우처",
+      "ISA계좌",
+      "비과세",
+      "납입한도",
+      "개편",
+      "만능통장"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 137200,
+    "competition": "높음",
+    "serp_gov_ratio": 0.3,
+    "verdict": "go",
+    "head_keyword": "ISA계좌"
+  },
+  {
+    "topic": "NCS 기반 공기업 채용 일정과 준비 방법 총정리 (2026 하반기)",
+    "keywords": [
+      "NCS",
+      "공기업채용",
+      "채용일정",
+      "필기시험",
+      "공공기관"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 48700,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "NCS"
+  },
+  {
+    "topic": "자동차검사예약 총정리 (2026)",
+    "keywords": [
+      "자동차검사예약",
+      "자동차검사",
+      "정기검사",
+      "예약방법"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 47700,
+    "competition": "높음",
+    "verdict": "go",
+    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준"
+  },
+  {
+    "topic": "전입신고 인터넷으로 하는 방법 총정리 (정부24)",
+    "keywords": [
+      "전입신고",
+      "인터넷",
+      "정부24",
+      "방법",
+      "확정일자"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 43500,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "전입신고인터넷"
+  },
+  {
+    "topic": "2026 실업급여 신청 방법과 조건, 지급액 계산 총정리",
+    "keywords": [
+      "실업급여",
       "신청방법",
-      "정신건강"
+      "조건",
+      "지급액",
+      "고용보험"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 40200,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "실업급여신청방법"
+  },
+  {
+    "topic": "2026 국가건강검진 대상자 조회 방법과 검진 항목 총정리",
+    "keywords": [
+      "국가건강검진",
+      "대상자조회",
+      "검진항목",
+      "건강보험공단",
+      "무료검진"
     ],
     "category": "건강",
-    "status": "pending"
+    "status": "pending",
+    "monthly_search": 36140,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "국가건강검진"
+  },
+  {
+    "topic": "주택청약종합저축 활용법: 납입 인정액과 소득공제 총정리",
+    "keywords": [
+      "주택청약",
+      "청약통장",
+      "납입인정액",
+      "소득공제",
+      "청약홈"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 33900,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "주택청약"
+  },
+  {
+    "topic": "재산세계산기 사용법과 실제 예시 (2026)",
+    "keywords": [
+      "재산세계산기",
+      "재산세",
+      "2기분",
+      "9월"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 32280,
+    "competition": "중간",
+    "verdict": "go",
+    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택"
+  },
+  {
+    "topic": "컴퓨터활용능력 1급 독학 합격법과 시험 일정 (2026)",
+    "keywords": [
+      "컴퓨터활용능력",
+      "컴활1급",
+      "독학",
+      "시험일정",
+      "상시시험"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 29700,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "컴퓨터활용능력"
+  },
+  {
+    "topic": "산정특례 제도 총정리: 중증질환 의료비 본인부담 경감 신청법",
+    "keywords": [
+      "산정특례",
+      "중증질환",
+      "의료비경감",
+      "본인부담",
+      "신청방법"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 28000,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "산정특례"
+  },
+  {
+    "topic": "대상포진 예방접종 지원 대상과 접종 비용 총정리 (2026)",
+    "keywords": [
+      "대상포진",
+      "예방접종",
+      "지원대상",
+      "접종비용",
+      "지자체지원"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 19850,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "대상포진예방접종"
+  },
+  {
+    "topic": "정보처리기사 2026 시험 일정과 독학 합격 공부법",
+    "keywords": [
+      "정보처리기사",
+      "시험일정",
+      "독학",
+      "합격",
+      "큐넷"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 17830,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "정보처리기사시험일정"
+  },
+  {
+    "topic": "근로계약서 표준 양식과 서명 전 꼭 확인할 조항 총정리",
+    "keywords": [
+      "근로계약서",
+      "표준양식",
+      "확인사항",
+      "임금",
+      "수습기간"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 17390,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "근로계약서"
+  },
+  {
+    "topic": "알바이력서양식 총정리 (2026)",
+    "keywords": [
+      "알바이력서양식",
+      "이력서양식",
+      "자기소개서",
+      "작성법"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 15920,
+    "competition": "높음",
+    "verdict": "go",
+    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리"
+  },
+  {
+    "topic": "자동차검사비용 총정리 (2026)",
+    "keywords": [
+      "자동차검사비용",
+      "자동차검사",
+      "정기검사",
+      "예약방법"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 12900,
+    "competition": "높음",
+    "verdict": "go",
+    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준"
+  },
+  {
+    "topic": "2026 청년내일채움공제 신청 조건과 만기 수령액 총정리",
+    "keywords": [
+      "청년내일채움공제",
+      "신청조건",
+      "만기수령액",
+      "중소기업",
+      "청년"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 11980,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "청년내일채움공제"
+  },
+  {
+    "topic": "확정일자 인터넷 발급 방법과 전세보증금 지키는 법",
+    "keywords": [
+      "확정일자",
+      "인터넷발급",
+      "전세보증금",
+      "대항력",
+      "인터넷등기소"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 11200,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "확정일자"
+  },
+  {
+    "topic": "주휴수당 계산법과 지급 조건, 못 받았을 때 대처법",
+    "keywords": [
+      "주휴수당",
+      "계산법",
+      "지급조건",
+      "아르바이트",
+      "임금체불"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 10950,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "주휴수당계산법"
+  },
+  {
+    "topic": "해외주식 양도소득세 계산과 5월 신고 방법 총정리 (250만원 공제)",
+    "keywords": [
+      "해외주식",
+      "양도소득세",
+      "250만원공제",
+      "신고방법",
+      "홈택스"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 10930,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "해외주식양도소득세"
+  },
+  {
+    "topic": "자동차검사과태료 총정리 (2026)",
+    "keywords": [
+      "자동차검사과태료",
+      "자동차검사",
+      "정기검사",
+      "예약방법"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 10540,
+    "competition": "중간",
+    "verdict": "go",
+    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준"
   },
   {
     "topic": "영유아 건강검진 시기와 문진표 작성 방법 총정리",
@@ -1227,6 +1053,660 @@
       "소아과"
     ],
     "category": "건강",
-    "status": "pending"
+    "status": "pending",
+    "monthly_search": 7790,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "영유아건강검진"
+  },
+  {
+    "topic": "퇴직금 계산 방법과 지급 기한, 미지급 대처법 총정리",
+    "keywords": [
+      "퇴직금",
+      "계산방법",
+      "지급기한",
+      "미지급",
+      "고용노동부"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 7670,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "퇴직금계산방법"
+  },
+  {
+    "topic": "아르바이트이력서양식 총정리 (2026)",
+    "keywords": [
+      "아르바이트이력서양식",
+      "이력서양식",
+      "자기소개서",
+      "작성법"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 7330,
+    "competition": "높음",
+    "verdict": "go",
+    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리"
+  },
+  {
+    "topic": "첫 월급 실수령액 계산법: 4대보험 공제 총정리 (2026)",
+    "keywords": [
+      "실수령액",
+      "4대보험",
+      "연봉계산",
+      "공제",
+      "첫월급"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 6620,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "실수령액"
+  },
+  {
+    "topic": "근로장려금금액조회 방법 총정리 (2026)",
+    "keywords": [
+      "근로장려금금액조회",
+      "근로장려금",
+      "정기분",
+      "지급일"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 6340,
+    "competition": "높음",
+    "verdict": "go",
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+  },
+  {
+    "topic": "이력서양식다운로드 총정리 (2026)",
+    "keywords": [
+      "이력서양식다운로드",
+      "이력서양식",
+      "자기소개서",
+      "작성법"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 6340,
+    "competition": "높음",
+    "verdict": "go",
+    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리"
+  },
+  {
+    "topic": "폐렴구균 예방접종 무료 대상과 접종 방법 (만 65세 이상)",
+    "keywords": [
+      "폐렴구균",
+      "예방접종",
+      "무료접종",
+      "만65세",
+      "보건소"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 6240,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "폐렴구균예방접종"
+  },
+  {
+    "topic": "재산세계산 사용법과 실제 예시 (2026)",
+    "keywords": [
+      "재산세계산",
+      "재산세",
+      "2기분",
+      "9월"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 5790,
+    "competition": "낮음",
+    "verdict": "go",
+    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택"
+  },
+  {
+    "topic": "국민건강보험 환급금 조회와 신청 방법 (본인부담상한제)",
+    "keywords": [
+      "건강보험환급금",
+      "본인부담상한제",
+      "조회",
+      "신청방법",
+      "국민건강보험"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 5510,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "건강보험환급금"
+  },
+  {
+    "topic": "재산세확인 방법 총정리 (2026)",
+    "keywords": [
+      "재산세확인",
+      "재산세",
+      "2기분",
+      "9월"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 4750,
+    "competition": "중간",
+    "verdict": "go",
+    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택"
+  },
+  {
+    "topic": "국세청 미수령 환급금 조회와 수령 방법 총정리",
+    "keywords": [
+      "국세환급금",
+      "미수령환급금",
+      "홈택스",
+      "조회",
+      "수령방법"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 4740,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "국세환급금"
+  },
+  {
+    "topic": "근로장려금조건 총정리: 나도 해당될까? (2026)",
+    "keywords": [
+      "근로장려금조건",
+      "근로장려금",
+      "정기분",
+      "지급일"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 4290,
+    "competition": "낮음",
+    "verdict": "go",
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+  },
+  {
+    "topic": "근로장려금신청방법 총정리: 단계별 안내 (2026)",
+    "keywords": [
+      "근로장려금신청방법",
+      "근로장려금",
+      "정기분",
+      "지급일"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 3610,
+    "competition": "중간",
+    "verdict": "go",
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+  },
+  {
+    "topic": "배당소득세 총정리: 배당주 세금 계산과 분리과세 개편 현황",
+    "keywords": [
+      "배당소득세",
+      "배당주",
+      "세금계산",
+      "분리과세",
+      "종합과세"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 3240,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "배당소득세"
+  },
+  {
+    "topic": "삼성 GSAT 시험 일정과 과목별 준비 방법 총정리 (2026 하반기)",
+    "keywords": [
+      "GSAT",
+      "삼성채용",
+      "시험일정",
+      "준비방법",
+      "인적성"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 3200,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "GSAT"
+  },
+  {
+    "topic": "통신비 미환급금 조회하고 돌려받는 방법 총정리",
+    "keywords": [
+      "통신비",
+      "미환급금",
+      "조회",
+      "환급",
+      "스마트초이스"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 2560,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "KT통신비할인카드"
+  },
+  {
+    "topic": "퇴직연금 디폴트옵션(사전지정운용) 총정리: 선택 방법과 수익률 비교",
+    "keywords": [
+      "퇴직연금",
+      "디폴트옵션",
+      "사전지정운용",
+      "DC형",
+      "IRP"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 2460,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "퇴직연금디폴트옵션"
+  },
+  {
+    "topic": "노인 보청기 국가 지원금 신청 방법과 지원 금액 (2026)",
+    "keywords": [
+      "보청기지원금",
+      "노인보청기",
+      "신청방법",
+      "청각장애",
+      "건강보험"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 2450,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "보청기지원금"
+  },
+  {
+    "topic": "2026 추석 기차표 예매 일정과 KTX·SRT 예매 방법 총정리",
+    "keywords": [
+      "추석",
+      "기차표예매",
+      "KTX",
+      "SRT",
+      "예매일정"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 2340,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "추석기차표예매"
+  },
+  {
+    "topic": "연금저축·IRP 세액공제 한도 총정리: 연말정산 최대 환급 전략 (2026)",
+    "keywords": [
+      "연금저축",
+      "IRP",
+      "세액공제",
+      "한도",
+      "연말정산"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 1670,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "연금저축IRP"
+  },
+  {
+    "topic": "여권 재발급 온라인 신청 방법과 수수료 총정리",
+    "keywords": [
+      "여권재발급",
+      "온라인신청",
+      "수수료",
+      "정부24",
+      "여권사진"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 1600,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "여권재발급온라인신청"
+  },
+  {
+    "topic": "공모주 청약 방법 총정리: 균등배정·비례배정과 증거금 계산",
+    "keywords": [
+      "공모주",
+      "청약방법",
+      "균등배정",
+      "증거금",
+      "상장"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 1490,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "공모주청약방법"
+  },
+  {
+    "topic": "금융투자소득세(금투세) 2026 현황 총정리: 시행 여부와 투자자 영향",
+    "keywords": [
+      "금융투자소득세",
+      "금투세",
+      "시행여부",
+      "주식세금",
+      "양도소득세"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 1370,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "금융투자소득세"
+  },
+  {
+    "topic": "면접 단골 질문 TOP 20과 모범 답변 전략 (2026)",
+    "keywords": [
+      "면접질문",
+      "모범답변",
+      "면접준비",
+      "인성면접",
+      "압박면접"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 1190,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "면접질문"
+  },
+  {
+    "topic": "2026 국가암검진 대상과 검사 항목, 비용 총정리",
+    "keywords": [
+      "국가암검진",
+      "암검진대상",
+      "검사항목",
+      "위내시경",
+      "무료검진"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 1150,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "국가암검진"
+  },
+  {
+    "topic": "주식 대주주 양도세 기준 총정리: 보유금액 기준과 회피 매도 시점",
+    "keywords": [
+      "대주주",
+      "양도세",
+      "기준",
+      "보유금액",
+      "연말매도"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 990,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "대주주양도세"
+  },
+  {
+    "topic": "운전면허 갱신·적성검사 기간 조회와 인터넷 갱신 방법",
+    "keywords": [
+      "운전면허갱신",
+      "적성검사",
+      "기간조회",
+      "인터넷갱신",
+      "과태료"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 860,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "운전면허갱신적성검사"
+  },
+  {
+    "topic": "전국민 마음투자 지원사업: 심리상담 바우처 신청 방법 (2026)",
+    "keywords": [
+      "마음투자지원사업",
+      "심리상담",
+      "바우처",
+      "신청방법",
+      "정신건강"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 830,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "전국민마음투자지원사업"
+  },
+  {
+    "topic": "숨은 보험금 찾기, 내보험찾아줌 조회 방법 총정리",
+    "keywords": [
+      "숨은보험금",
+      "내보험찾아줌",
+      "조회방법",
+      "보험금청구",
+      "환급"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 820,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "숨은보험금"
+  },
+  {
+    "topic": "임플란트 건강보험 적용 대상과 본인부담금 총정리 (2026)",
+    "keywords": [
+      "임플란트",
+      "건강보험적용",
+      "본인부담금",
+      "만65세",
+      "치과"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 720,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "임플란트건강보험적용"
+  },
+  {
+    "topic": "증권거래세율 2026 총정리: 인하 일정과 매도 시 실제 부담액 계산",
+    "keywords": [
+      "증권거래세",
+      "세율",
+      "인하일정",
+      "매도세금",
+      "농특세"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 710,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "증권거래세세율"
+  },
+  {
+    "topic": "2026년 연말정산 미리보기 서비스 사용법과 절세 전략",
+    "keywords": [
+      "연말정산",
+      "미리보기",
+      "절세",
+      "홈택스",
+      "소득공제"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 640,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "연말정산미리보기"
+  },
+  {
+    "topic": "휴면예금·휴면계좌 조회와 찾는 방법 (어카운트인포)",
+    "keywords": [
+      "휴면예금",
+      "휴면계좌",
+      "어카운트인포",
+      "조회",
+      "환급"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 570,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "휴면예금"
+  },
+  {
+    "topic": "2026년 종합소득세 중간예납 대상과 납부 방법 총정리",
+    "keywords": [
+      "종합소득세",
+      "중간예납",
+      "납부방법",
+      "홈택스",
+      "11월"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 550,
+    "competition": "중간",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "종합소득세중간예납"
+  },
+  {
+    "topic": "모바일 전자고지 신청하고 세금 감면 받는 방법 총정리",
+    "keywords": [
+      "전자고지",
+      "세액공제",
+      "위택스",
+      "카카오톡",
+      "네이버전자문서"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 540,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "전자고지"
+  },
+  {
+    "topic": "2026 하반기 대기업 공채 일정 총정리 (삼성·SK·LG·현대차)",
+    "keywords": [
+      "대기업공채",
+      "하반기채용",
+      "삼성",
+      "채용일정",
+      "신입"
+    ],
+    "category": "취업",
+    "status": "pending",
+    "monthly_search": 510,
+    "competition": "높음",
+    "serp_gov_ratio": null,
+    "verdict": "go",
+    "head_keyword": "대기업공채"
+  },
+  {
+    "topic": "보조금24로 내가 받을 수 있는 정부지원금 한번에 조회하는 방법",
+    "keywords": [
+      "보조금24",
+      "정부지원금",
+      "조회",
+      "정부24",
+      "맞춤혜택"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 0,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "unknown",
+    "head_keyword": "보조금24정부지원금"
+  },
+  {
+    "topic": "2026 기초연금 수급 자격과 신청 방법, 지급액 총정리",
+    "keywords": [
+      "기초연금",
+      "수급자격",
+      "신청방법",
+      "지급액",
+      "만65세"
+    ],
+    "category": "생활정보",
+    "status": "pending",
+    "monthly_search": 0,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "unknown",
+    "head_keyword": "기초연금수급자격"
+  },
+  {
+    "topic": "치매 조기검진 무료 검사와 치매치료관리비 지원 신청 (2026)",
+    "keywords": [
+      "치매조기검진",
+      "치매검사",
+      "치료관리비",
+      "치매안심센터",
+      "지원신청"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 0,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "unknown",
+    "head_keyword": "치매조기검진치매검사"
+  },
+  {
+    "topic": "재난적 의료비 지원 신청 자격과 지원 한도 총정리",
+    "keywords": [
+      "재난적의료비",
+      "의료비지원",
+      "신청자격",
+      "지원한도",
+      "건강보험공단"
+    ],
+    "category": "건강",
+    "status": "pending",
+    "monthly_search": 0,
+    "competition": "낮음",
+    "serp_gov_ratio": null,
+    "verdict": "unknown",
+    "head_keyword": "재난적의료비의료비지원"
   }
 ]

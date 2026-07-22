@@ -87,6 +87,7 @@ from src.trend_detector import TrendDetector, Topic, TrendConfig
 from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
+from src.keyword_gate import evaluate as evaluate_keyword
 from src.monetization import (
     DEFAULT_SHOP_RETAILER,
     add_policy_disclaimers,
@@ -377,6 +378,18 @@ class BlogPipeline:
         """
         start_time = datetime.now()
         logger.info(f"Processing topic: {topic.topic}")
+
+        # 키워드 게이트: 검색 수요가 없는 토픽은 생성 비용을 쓰기 전에 차단한다
+        # (자격증명이 없거나 조회 실패면 unknown → 통과시켜 발행을 막지 않는다)
+        if self.config.mode == "general":
+            verdict = evaluate_keyword(topic.topic, topic.keywords)
+            logger.info(f"키워드 게이트: {verdict['verdict']} — {verdict['reason']}")
+            if verdict["verdict"] == "skip":
+                return PipelineResult(
+                    topic=topic.topic,
+                    success=False,
+                    error=f"검색 수요 부족 — {verdict['reason']}",
+                )
 
         try:
             # Category priority: CLI flag > LLM analysis > auto-detect

@@ -123,11 +123,17 @@ def main():
     print(f"\n합계: 대비 교정 {total_contrast}곳, 의료고지 제거 {total_medical}건")
 
     # __trashed 슬러그 완전 삭제
-    tr = session.get(f"{API}/posts", params={
-        "search": "trashed", "status": "any", "context": "edit", "per_page": 30,
-        "_fields": "id,slug"}, timeout=60)
-    victims = [i for i in (tr.json() if tr.status_code == 200 else [])
-               if re.match(r"^_*trashed(-\d+)?$", i.get("slug", ""))]
+    # slug 직접 조회 — search= 는 제목/본문만 훑어 __trashed-N 슬러그를 놓친다
+    victims, seen = [], set()
+    for n in range(1, 16):
+        for slug in (f"__trashed-{n}", f"_trashed-{n}", f"trashed-{n}"):
+            sr = session.get(f"{API}/posts", params={
+                "slug": slug, "status": "any", "context": "edit",
+                "_fields": "id,slug"}, timeout=40)
+            for item in (sr.json() if sr.status_code == 200 else []):
+                if item["id"] not in seen:
+                    seen.add(item["id"])
+                    victims.append(item)
     print(f"__trashed 삭제 대상: {[v['slug'] for v in victims] or '없음'}")
     if not DRY_RUN:
         for v in victims:

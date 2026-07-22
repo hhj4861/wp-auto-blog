@@ -506,7 +506,8 @@
       "복지"
     ],
     "category": "생활정보",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-07-22T05:14:59.001552"
   },
   {
     "topic": "2026 ISA 계좌 개편 총정리: 납입 한도·비과세 혜택·가입 방법",

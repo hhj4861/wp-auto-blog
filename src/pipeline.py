@@ -96,6 +96,7 @@ from src.monetization import (
     fix_shop_links,
     insert_monetization,
     insert_related_box,
+    strip_dead_ctas,
     strip_placeholders,
     unwrap_dead_anchors,
 )
@@ -465,6 +466,7 @@ class BlogPipeline:
                 search_term=(content.focus_keyphrase or topic.topic),
                 default_retailer=DEFAULT_SHOP_RETAILER.get(category or "", "amazon"),
             )
+            content.html = strip_dead_ctas(content.html)
             if self.config.mode != "general" and category:
                 # 잘못된 카테고리 내부 링크 교정 (자기 실로만 허용)
                 try:

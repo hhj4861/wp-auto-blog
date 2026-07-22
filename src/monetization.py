@@ -203,10 +203,17 @@ def fix_shop_links(html: str, search_term: str, default_retailer: str = "amazon"
 
     def _replace(match: re.Match) -> str:
         inner = match.group(1).strip()
+        # 이모지/기호 접두(🛒, 🛍️ 등)를 걷어낸 뒤 동사 여부 판단
+        stripped = re.sub(r"^[^A-Za-z]+", "", inner)
         retailer = _detect_retailer(inner)
+        is_shop_verb = bool(
+            re.match(r"(?:Shop|Buy|Order|Get|Find|Browse)(?=[A-Z\s]|$)", stripped, re.IGNORECASE)
+        )
+        if retailer is None and not is_shop_verb:
+            return match.group(0)  # 쇼핑 문구가 아니면 건드리지 않는다
         if retailer is None:
             named_mall = re.match(
-                r"(?:Shop|Buy|Order|Get|Find)\s+on\s+\S", inner, re.IGNORECASE
+                r"(?:Shop|Buy|Order|Get|Find|Browse)\s+on\s+\S", stripped, re.IGNORECASE
             )
             if named_mall:
                 logger.warning(f"쇼핑 플레이스홀더 제거 (미확인 몰): {inner}")
@@ -221,12 +228,29 @@ def fix_shop_links(html: str, search_term: str, default_retailer: str = "amazon"
             f'style="color:#9b59b6;">{inner} →</a>'
         )
 
-    fixed = re.sub(
-        r"\(((?:Shop|Buy|Find|Order|Get)[^()<>]{0,60}?)\s*→\s*\)", _replace, html
-    )
+    fixed = re.sub(r"\(([^()<>]{1,80}?)\s*→\s*\)", _replace, html)
     if fixed != html:
         logger.info("쇼핑 링크 플레이스홀더 수리됨")
     return fixed
+
+
+def strip_dead_ctas(html: str) -> str:
+    """앵커 밖에 남은 '(... →)' 죽은 CTA를 제거한다 (fix_shop_links 이후 잔여분).
+
+    링크 없는 CTA 텍스트는 독자에게 깨진 UI로 보인다 — 살리지 못하면 지운다.
+    앵커 안에 있는 것과 화살표 없는 일반 괄호는 건드리지 않는다.
+    """
+    # 앵커 내부는 보호: <a...>...</a> 구간을 치외법권으로 분리 후 나머지만 치환
+    parts = re.split(r"(<a\s[^>]*>.*?</a>)", html, flags=re.S)
+    removed = 0
+    for i in range(0, len(parts), 2):  # 짝수 인덱스 = 앵커 밖 텍스트
+        cleaned = re.sub(r"\([^()<>]{1,80}?\s*→\s*\)", "", parts[i])
+        if cleaned != parts[i]:
+            removed += 1
+            parts[i] = cleaned
+    if removed:
+        logger.warning(f"링크 없는 CTA 제거됨 ({removed}개 구간)")
+    return "".join(parts)
 
 
 def fix_markdown_bold(html: str) -> str:

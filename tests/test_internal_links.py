@@ -351,3 +351,56 @@ class TestContentLinkGuardrails:
         # TOC 앵커는 유지
         keep = '<a href="#verdict">Skip →</a>'
         assert unwrap_dead_anchors(keep) == keep
+
+
+class TestFixShopLinksVariants:
+    """실서비스에서 발견된 플레이스홀더 변형: 이모지 접두·몰 단독형."""
+
+    @pytest.mark.unit
+    def test_emoji_prefixed_placeholder_linked(self):
+        out = fix_shop_links("(🛒 Shop Tteokbokki Ingredients on Amazon →)", "tteokbokki")
+        assert 'amazon.com/s?k=tteokbokki' in out
+        assert "🛒 Shop Tteokbokki Ingredients on Amazon →</a>" in out
+        assert "(" not in out.split("<a")[0]
+
+    @pytest.mark.unit
+    def test_bare_retailer_placeholder_linked(self):
+        out = fix_shop_links("(Amazon →)", "gochujang sauce")
+        assert 'amazon.com/s?k=gochujang%20sauce' in out
+        assert ">Amazon →</a>" in out
+
+    @pytest.mark.unit
+    def test_non_shop_paren_arrow_untouched(self):
+        html = "(자세한 내용 보기 →)"
+        assert fix_shop_links(html, "kw") == html
+
+
+class TestStripDeadCtas:
+    """fix_shop_links가 못 살린 괄호+화살표 CTA는 발행 전에 제거한다."""
+
+    @pytest.mark.unit
+    def test_dead_cta_removed(self):
+        from src.monetization import strip_dead_ctas
+        html = '<p>text</p><span>(Start Your Free Audit Today →)</span>'
+        out = strip_dead_ctas(html)
+        assert "→" not in out
+        assert "Free Audit" not in out
+
+    @pytest.mark.unit
+    def test_linked_cta_kept(self):
+        from src.monetization import strip_dead_ctas
+        html = '<a href="https://stripe.com">(Start With Stripe Free →)</a>'
+        assert strip_dead_ctas(html) == html
+
+    @pytest.mark.unit
+    def test_plain_parens_kept(self):
+        from src.monetization import strip_dead_ctas
+        html = "<p>Gochujang (고추장) is $8 (500g)</p>"
+        assert strip_dead_ctas(html) == html
+
+    @pytest.mark.unit
+    def test_glued_browse_verb_linked(self):
+        out = fix_shop_links("(BrowseKorean Fashion →)", "korean fashion",
+                             default_retailer="yesstyle")
+        assert "yesstyle.com" in out
+        assert "BrowseKorean Fashion →</a>" in out

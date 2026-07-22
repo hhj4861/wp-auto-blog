@@ -3594,10 +3594,18 @@ Be specific and factual based on search results. Always use the most recent vers
 
         result = re.sub(r'<h2([^>]*)>', replace_h2, result, flags=re.IGNORECASE)
 
-        # 2. strong 강조 색상 (기존 style 속성 유무와 관계없이 교체)
+        # 2. strong 강조 색상
+        # 템플릿이 이미 색을 지정한 strong(밝은 배경 박스·CTA 카드 안)은 건드리지 않는다.
+        # 다크 accent를 밝은 배경 위에 덮어쓰면 대비비가 1.2:1까지 떨어져 판독 불가가 된다.
+        def _colorize_strong(match: "re.Match") -> str:
+            attrs, inner = match.group(1), match.group(2)
+            if re.search(r'color\s*:', attrs, re.IGNORECASE):
+                return match.group(0)
+            return f'<strong style="color:{colors["accent"]}">{inner}</strong>'
+
         result = re.sub(
-            r'<strong[^>]*>([^<]+)</strong>',
-            f'<strong style="color:{colors["accent"]}">\\1</strong>',
+            r'<strong([^>]*)>([^<]+)</strong>',
+            _colorize_strong,
             result
         )
 

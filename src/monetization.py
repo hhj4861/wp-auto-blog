@@ -295,7 +295,9 @@ _PLACEHOLDER_RE = re.compile(r"\(\([^()\n]{2,60}\)\)")
 POLICY_CATEGORIES = ("생활정보", "취업", "건강")
 _INVEST_TOPIC_RE = re.compile(
     r"주식|투자|공모주|펀드|배당|양도소득세|양도세|ISA|연금|증권|금투세|대주주|거래세")
-_MEDICAL_TOPIC_RE = re.compile(r"검진|접종|의료|치매|암|보험|바우처|건강|치료")
+# '바우처·보험·암'은 에너지바우처·화재보험 등 비의료 주제에 오탐하므로 제외한다
+_MEDICAL_TOPIC_RE = re.compile(
+    r"검진|예방접종|백신|의료비|치매|질환|진료|병원|처방|임플란트|보청기|건강보험")
 
 
 def add_policy_disclaimers(html: str, category: str = "", topic: str = "") -> str:

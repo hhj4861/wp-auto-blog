@@ -179,7 +179,8 @@ SHOP_SEARCH_URLS = {
 
 
 # 카테고리별 기본 쇼핑몰 (플레이스홀더에 몰 이름이 없을 때)
-DEFAULT_SHOP_RETAILER = {"K-Fashion": "yesstyle", "K-Beauty": "yesstyle"}
+# K-Beauty는 제휴 활성(리워드 코드)인 올리브영 우선 — 일반 CTA도 커미션 경로로.
+DEFAULT_SHOP_RETAILER = {"K-Fashion": "yesstyle", "K-Beauty": "olive young"}
 
 # 제휴 링크 플러밍: 소매몰별 제휴 파라미터를 env로 받아 URL에 부착한다.
 # 프로그램마다 파라미터 형식이 달라(예: Amazon 'tag=id-20', 각 네트워크 'ref=…'),

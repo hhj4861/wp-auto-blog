@@ -526,3 +526,16 @@ class TestOliveYoungIntegration:
             "display/search?query=korean%20toner"
             "&rwardCode=HHJZ4861&utm_source=influencers" in out
         )
+
+    @pytest.mark.unit
+    def test_kbeauty_default_retailer_is_olive_young(self, monkeypatch):
+        """K-Beauty 기본몰은 제휴 활성인 올리브영 (일반 CTA도 커미션 발생 경로로)."""
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_OLIVE_YOUNG", "rwardCode=HHJZ4861&utm_source=influencers")
+        from src.monetization import DEFAULT_SHOP_RETAILER
+        out = fix_shop_links(
+            "(Shop Similar →)", "korean serum",
+            default_retailer=DEFAULT_SHOP_RETAILER.get("K-Beauty", "amazon"),
+        )
+        assert "global.oliveyoung.com/display/search?query=korean%20serum" in out
+        assert "rwardCode=HHJZ4861" in out

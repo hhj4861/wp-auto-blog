@@ -740,12 +740,13 @@
       "공공기관"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 48700,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "NCS"
+    "head_keyword": "NCS",
+    "completed_at": "2026-07-23T05:28:16.088995"
   },
   {
     "topic": "자동차검사예약 총정리 (2026)",

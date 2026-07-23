@@ -2,6 +2,12 @@
 
 > 상태: **설계만 — 구현 보류.** 착수 조건은 §7 참조.
 > 작성: 2026-07-23 · 관련: `src/trend_detector.py`, `src/keyword_gate.py`, `data/topic_queue_general.json`
+>
+> **⚠️ 포팅 노트 (2026-07-23):** 이 설계는 `commerce-automation-kit/packages/keyword-intel/docs/QUESTION-MINING.md` 로
+> 포팅됐다. 포팅판은 §3-1의 지식인 HTML 파싱을 **공식 지식iN 검색 API**(`GET openapi.naver.com/v1/search/kin.json`,
+> title/link/description 반환, 검색 API 25,000회/일 통합 쿼터)로 대체했다 — **이 저장소에서도 착수 시
+> HTML 파싱 대신 공식 API 사용을 권장** (스크래핑 방어 리스크·약관 리스크 제거). 착수 트리거 충족 시
+> keyword-intel 의 export 브릿지(포팅판 §8)로 질문 데이터를 받아 §4 큐 통합만 구현하는 경로도 있다.
 
 ## 0. 한 줄 요약
 

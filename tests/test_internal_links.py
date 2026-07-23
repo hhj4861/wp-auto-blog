@@ -497,3 +497,32 @@ class TestFtcDisclosureConditional:
         gen = ContentGenerator()
         out = gen._add_ftc_disclosure("<p>body</p>", "kculture")
         assert "affiliate links" in out
+
+
+class TestOliveYoungIntegration:
+    """올리브영: 검색 경로 수정(/search 404 → /display/search 302) + 리워드 코드."""
+
+    def _clear(self, monkeypatch):
+        for k in ("AFFILIATE_AMAZON", "AFFILIATE_YESSTYLE",
+                  "AFFILIATE_MUSINSA", "AFFILIATE_OLIVE_YOUNG"):
+            monkeypatch.delenv(k, raising=False)
+
+    @pytest.mark.unit
+    def test_search_url_uses_display_gateway(self, monkeypatch):
+        """/search?query=는 404 — 국가 자동 라우팅되는 /display/search를 쓴다."""
+        self._clear(monkeypatch)
+        out = fix_shop_links("(Shop on Olive Young →)", "korean toner")
+        assert "global.oliveyoung.com/display/search?query=korean%20toner" in out
+
+    @pytest.mark.unit
+    def test_reward_code_appended(self, monkeypatch):
+        """AFFILIATE_OLIVE_YOUNG의 rwardCode 조각이 그대로 붙는다 (서버가 30일 쿠키 설정)."""
+        self._clear(monkeypatch)
+        monkeypatch.setenv(
+            "AFFILIATE_OLIVE_YOUNG", "rwardCode=HHJZ4861&utm_source=influencers"
+        )
+        out = fix_shop_links("(Shop on Olive Young →)", "korean toner")
+        assert (
+            "display/search?query=korean%20toner"
+            "&rwardCode=HHJZ4861&utm_source=influencers" in out
+        )

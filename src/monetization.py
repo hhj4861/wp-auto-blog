@@ -170,8 +170,11 @@ SHOP_SEARCH_URLS = {
     "musinsa global": "https://global.musinsa.com/us/search?keyword={q}",
     "musinsa": "https://global.musinsa.com/us/search?keyword={q}",
     "amazon": "https://www.amazon.com/s?k={q}",
-    "olive young global": "https://global.oliveyoung.com/search?query={q}",
-    "olive young": "https://global.oliveyoung.com/search?query={q}",
+    # /search?query=는 404. /display/search가 국가별 결과 페이지로 302하는
+    # 공식 진입점이며, rwardCode 파라미터의 30일 쿠키도 이 첫 홉에서 심어진다
+    # (2026-07-23 실측).
+    "olive young global": "https://global.oliveyoung.com/display/search?query={q}",
+    "olive young": "https://global.oliveyoung.com/display/search?query={q}",
 }
 
 

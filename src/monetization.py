@@ -370,10 +370,14 @@ def strip_placeholders(html: str) -> str:
     return cleaned
 
 
-# FAQ Q/A 블록: <p><strong>Q1. 질문?</strong>답변</p> 구조
-_FAQ_QA_RE = re.compile(
-    r"<p[^>]*>\s*<strong[^>]*>\s*(?:Q\d+[.:]?\s*)?([^<]{5,180}\?)\s*</strong>(.*?)</p>",
-    re.DOTALL)
+# FAQ 마크업은 세 변형이 있다:
+#  (A) <p><strong>Q1. 질문?</strong>답변</p>
+#  (B) <p><strong>Q1. 질문?</strong></p> ... <p>답변</p>
+#  (C) <p style="...bold...">Q1. 질문?</p> ... <p>답변</p>  (strong 없이 인라인 볼드)
+# 질문 위치를 기준으로 그 뒤 텍스트를 답변으로 잡아 세 변형을 함께 처리한다.
+_FAQ_QUESTION_RE = re.compile(
+    r"<strong[^>]*>\s*(?:Q\d+[.:]?\s*)?([^<]{5,180}\?)\s*</strong>"
+    r"|<p[^>]*font-weight:\s*bold[^>]*>\s*(?:Q\d+[.:]?\s*)?([^<]{5,180}\?)\s*</p>")
 _FAQ_SECTION_RE = re.compile(r"(자주\s*묻는|FAQ|자주하는\s*질문)", re.IGNORECASE)
 
 
@@ -399,11 +403,34 @@ def build_faq_schema(html: str) -> str:
     section = html[m.start():]
 
     qa_pairs = []
-    for qm in _FAQ_QA_RE.finditer(section):
-        question = _clean_text(qm.group(1))
-        answer = _clean_text(qm.group(2))
-        if len(question) >= 6 and len(answer) >= 10:
-            qa_pairs.append((question, answer))
+    seen = set()
+    # 질문 <strong> 위치를 기준으로, 그 뒤 텍스트를 답변으로 잡는다.
+    # (A)와 (B) 변형을 함께 처리 — 질문 태그 다음 등장하는 첫 유의미한 텍스트가 답변.
+    matches = list(_FAQ_QUESTION_RE.finditer(section))
+    for idx, qm in enumerate(matches):
+        # group(1)=strong 변형, group(2)=인라인 볼드 p 변형
+        question = _clean_text(qm.group(1) or qm.group(2) or "")
+        if len(question) < 6 or question in seen:
+            continue
+        # 답변 범위: 이 질문 끝 ~ 다음 질문 시작. 마지막 질문은 다음 구조 경계
+        # (다음 섹션 H2·박스·CTA)에서 끊어 다른 섹션이 답변에 흘러들지 않게 한다.
+        start = qm.end()
+        if idx + 1 < len(matches):
+            end = matches[idx + 1].start()
+        else:
+            # 마지막 질문: 다음 구조 경계에서 끊는다. 관련글 박스·결론·CTA·참고자료가
+            # 답변에 섞이지 않도록 폭넓게 매칭.
+            rest = section[start:]
+            boundary = re.search(
+                r"<h2|📚|📌|📋|🚀|📝|✅\s*Step|함께\s*보면|참고\s*자료|더\s*많은|"
+                r"인사이트\s*카테고리|<div[^>]*background:#5046e5", rest)
+            end = start + (boundary.start() if boundary else min(len(rest), 600))
+        answer = _clean_text(section[start:end])
+        # 답변 앞에 붙은 태그 잔여(</p> 등) 제거하고 실제 문장만
+        answer = answer.lstrip("> ").strip()
+        if len(answer) >= 10:
+            qa_pairs.append((question, answer[:500]))
+            seen.add(question)
     if len(qa_pairs) < 2:
         return ""
 

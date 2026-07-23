@@ -178,6 +178,34 @@ SHOP_SEARCH_URLS = {
 # 카테고리별 기본 쇼핑몰 (플레이스홀더에 몰 이름이 없을 때)
 DEFAULT_SHOP_RETAILER = {"K-Fashion": "yesstyle", "K-Beauty": "yesstyle"}
 
+# 제휴 링크 플러밍: 소매몰별 제휴 파라미터를 env로 받아 URL에 부착한다.
+# 프로그램마다 파라미터 형식이 달라(예: Amazon 'tag=id-20', 각 네트워크 'ref=…'),
+# 형식을 하드코딩하지 않고 프로그램이 발급한 쿼리 조각을 env에 그대로 넣게 한다.
+#   AFFILIATE_AMAZON=tag=bytepulse-20
+#   AFFILIATE_YESSTYLE=ref=xxxxx   (승인 후 발급값)
+# env가 비어 있으면 순수 검색 링크로 무해하게 동작한다.
+_AFFILIATE_RETAILERS = ("amazon", "yesstyle", "musinsa", "olive young")
+
+
+def _affiliate_env_key(retailer: str) -> str:
+    return "AFFILIATE_" + retailer.strip().upper().replace(" ", "_")
+
+
+def affiliate_active() -> bool:
+    """제휴 파라미터가 하나라도 설정돼 있으면 True (FTC 고지·태그 주입 게이트)."""
+    return any(
+        os.getenv(_affiliate_env_key(r), "").strip() for r in _AFFILIATE_RETAILERS
+    )
+
+
+def apply_affiliate(url: str, retailer: str) -> str:
+    """소매몰별 제휴 파라미터(env)를 URL에 덧붙인다. env 없으면 원본 그대로."""
+    frag = os.getenv(_affiliate_env_key(retailer), "").strip().lstrip("?&")
+    if not frag:
+        return url
+    sep = "&" if "?" in url else "?"
+    return f"{url}{sep}{frag}"
+
 
 def _detect_retailer(text: str) -> str | None:
     lowered = text.lower()
@@ -222,9 +250,9 @@ def fix_shop_links(html: str, search_term: str, default_retailer: str = "amazon"
         url_template = SHOP_SEARCH_URLS.get(retailer)
         if not url_template or not q:
             return ""
-        url = url_template.format(q=q)
+        url = apply_affiliate(url_template.format(q=q), retailer)
         return (
-            f'<a href="{url}" target="_blank" rel="nofollow" '
+            f'<a href="{url}" target="_blank" rel="nofollow sponsored" '
             f'style="color:#9b59b6;">{inner} →</a>'
         )
 
@@ -340,6 +368,64 @@ def strip_placeholders(html: str) -> str:
         cleaned = re.sub(r"(?<=[가-힣\w.,]) {2,}(?=[가-힣\w])", " ", cleaned)
         logger.info("본문 ((...)) 플레이스홀더 자동 제거됨")
     return cleaned
+
+
+# FAQ Q/A 블록: <p><strong>Q1. 질문?</strong>답변</p> 구조
+_FAQ_QA_RE = re.compile(
+    r"<p[^>]*>\s*<strong[^>]*>\s*(?:Q\d+[.:]?\s*)?([^<]{5,180}\?)\s*</strong>(.*?)</p>",
+    re.DOTALL)
+_FAQ_SECTION_RE = re.compile(r"(자주\s*묻는|FAQ|자주하는\s*질문)", re.IGNORECASE)
+
+
+def _clean_text(html_fragment: str) -> str:
+    """HTML 조각에서 태그 제거 + HTML 엔티티 정규화."""
+    import html as _html
+    text = re.sub(r"<[^>]+>", " ", html_fragment)
+    text = _html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def build_faq_schema(html: str) -> str:
+    """본문의 FAQ 섹션에서 FAQPage JSON-LD를 생성해 반환한다.
+
+    질문이 2개 미만이거나 FAQ 섹션이 없으면 빈 문자열(스팸 신호 방지).
+    프롬프트에 맡기지 않고 코드가 결정적으로 생성한다.
+    """
+    if 'application/ld+json' in html and 'FAQPage' in html:
+        return ""  # 이미 있음
+    m = _FAQ_SECTION_RE.search(html)
+    if not m:
+        return ""
+    section = html[m.start():]
+
+    qa_pairs = []
+    for qm in _FAQ_QA_RE.finditer(section):
+        question = _clean_text(qm.group(1))
+        answer = _clean_text(qm.group(2))
+        if len(question) >= 6 and len(answer) >= 10:
+            qa_pairs.append((question, answer))
+    if len(qa_pairs) < 2:
+        return ""
+
+    import json
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": q,
+             "acceptedAnswer": {"@type": "Answer", "text": a}}
+            for q, a in qa_pairs
+        ],
+    }
+    logger.info(f"FAQPage 스키마 생성: 질문 {len(qa_pairs)}개")
+    return ('<script type="application/ld+json">'
+            + json.dumps(schema, ensure_ascii=False) + '</script>')
+
+
+def insert_faq_schema(html: str) -> str:
+    """FAQPage 스키마를 본문 말미에 삽입한다 (없으면 원본 그대로)."""
+    schema = build_faq_schema(html)
+    return f"{html}\n{schema}" if schema else html
 _TITLE_ARTIFACT_RE = re.compile(r"[`\"]|\*\*|\(\s*(?:유형|\d+\s*자)")
 # 종목 추천성 문구 — 유사투자자문·YMYL 리스크, 코드로 차단
 _STOCK_ADVICE_RE = re.compile(

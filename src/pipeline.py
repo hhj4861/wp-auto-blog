@@ -91,6 +91,7 @@ from src.keyword_gate import evaluate as evaluate_keyword
 from src.monetization import (
     DEFAULT_SHOP_RETAILER,
     add_policy_disclaimers,
+    insert_faq_schema,
     check_quality,
     fix_category_links,
     fix_markdown_bold,
@@ -506,6 +507,8 @@ class BlogPipeline:
                         category=category,
                     ),
                 )
+                # FAQ 섹션 → FAQPage 스키마 (색인 시 리치 리절트 확보)
+                content.html = insert_faq_schema(content.html)
             # Create post (or simulate in dry run)
             if self.config.dry_run:
                 logger.info("[DRY RUN] Would create post - skipping actual publish")

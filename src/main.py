@@ -253,17 +253,57 @@ def main() -> int:
             # pending 항목을 순서대로 시도 — 중복 판정 항목은 스킵 처리 후
             # 다음 항목으로 전진해 큐 교착을 방지한다 (최대 5회 스킵)
             # --category 지정 시 해당 카테고리의 pending만 소비한다
-            # (스케줄: 월/수/금=생활정보, 화/목=취업)
+            # (스케줄: 월/수/금=생활정보, 화/목=취업, 토=건강)
+            today = _dt.date.today()
+
+            def _pick_next():
+                """발행할 다음 토픽을 고른다.
+
+                시즌 우선순위(코드로 강제, 프롬프트 아님):
+                  - publish_by가 미래인 시즌 토픽은 아직 선택하지 않는다(색인 리드타임 확보)
+                  - publish_by가 도래한 시즌 토픽은 검색량과 무관하게 최우선(마감 임박 순)
+                  - 그 외에는 검색량 큰 순 (큐 파일 순서)
+                """
+                cands = [
+                    item for item in queue
+                    if item.get("status") == "pending"
+                    and (not args.category or item.get("category") == args.category)
+                ]
+                if not cands:
+                    return None
+
+                def key(item):
+                    pb = item.get("publish_by")
+                    if pb:
+                        try:
+                            pb_date = _dt.date.fromisoformat(pb)
+                        except ValueError:
+                            pb_date = None
+                        if pb_date and pb_date > today:
+                            # 아직 발행 시기 아님 — 맨 뒤로
+                            return (2, 0)
+                        # 발행 시기 도래 — 최우선(마감 임박=publish_by 이른 순)
+                        return (0, pb or "")
+                    return (1, -(item.get("monthly_search") or 0))
+
+                cands.sort(key=key)
+                top = cands[0]
+                # 전부 '아직 시기 아님'이면(=시즌 토픽만 남음) None 취급하지 않고
+                # 그래도 하나는 발행 (빈 슬롯 방지) — 단 로그로 알린다
+                if top.get("publish_by"):
+                    try:
+                        if _dt.date.fromisoformat(top["publish_by"]) > today:
+                            logger.info(
+                                f"시즌 토픽만 남음 — 리드타임 전이지만 발행: {top['topic']}")
+                    except ValueError:
+                        pass
+                return top
+
             results = []
             skips = 0
             career_generated = False
             while skips < 5:
-                pending_topic = next(
-                    (item for item in queue
-                     if item.get("status") == "pending"
-                     and (not args.category or item.get("category") == args.category)),
-                    None,
-                )
+                pending_topic = _pick_next()
                 if pending_topic is None and args.category == "취업" and not career_generated:
                     # 취업 카테고리는 검증된 니치(GSC 노출/클릭 최상위) —
                     # 큐 소진 시 외항사 토픽을 1회 자동 생성해 이어간다

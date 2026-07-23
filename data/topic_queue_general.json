@@ -1026,7 +1026,9 @@
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "해외주식양도소득세"
+    "head_keyword": "해외주식양도소득세",
+    "demand_peak": "2027-05",
+    "publish_by": "2027-04-01"
   },
   {
     "topic": "자동차검사과태료 총정리 (2026)",
@@ -1350,7 +1352,9 @@
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "추석기차표예매"
+    "head_keyword": "추석기차표예매",
+    "demand_peak": "2026-09",
+    "publish_by": "2026-08-10"
   },
   {
     "topic": "연금저축·IRP 세액공제 한도 총정리: 연말정산 최대 환급 전략 (2026)",
@@ -1367,7 +1371,9 @@
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "연금저축IRP"
+    "head_keyword": "연금저축IRP",
+    "demand_peak": "2026-11",
+    "publish_by": "2026-10-05"
   },
   {
     "topic": "여권 재발급 온라인 신청 방법과 수수료 총정리",
@@ -1571,7 +1577,9 @@
     "competition": "낮음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "연말정산미리보기"
+    "head_keyword": "연말정산미리보기",
+    "demand_peak": "2026-11",
+    "publish_by": "2026-10-05"
   },
   {
     "topic": "휴면예금·휴면계좌 조회와 찾는 방법 (어카운트인포)",
@@ -1605,7 +1613,9 @@
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "종합소득세중간예납"
+    "head_keyword": "종합소득세중간예납",
+    "demand_peak": "2026-11",
+    "publish_by": "2026-10-01"
   },
   {
     "topic": "모바일 전자고지 신청하고 세금 감면 받는 방법 총정리",

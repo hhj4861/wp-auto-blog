@@ -539,3 +539,30 @@ class TestOliveYoungIntegration:
         )
         assert "global.oliveyoung.com/display/search?query=korean%20serum" in out
         assert "rwardCode=HHJZ4861" in out
+
+
+class TestCoupangDisclosure:
+    """쿠팡 파트너스 의무 고지문: 쿠팡 링크 있는 글에 자동 삽입 (없으면 제재/승인거절 사유)."""
+
+    SENTENCE = "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다."
+
+    @pytest.mark.unit
+    def test_disclosure_added_when_coupang_link_present(self):
+        from src.monetization import add_coupang_disclosure
+        html = '<p>추천 영양제 <a href="https://link.coupang.com/a/xyz123">최저가 보기</a></p>'
+        out = add_coupang_disclosure(html)
+        assert self.SENTENCE in out
+        assert out.index(self.SENTENCE) < out.index("추천 영양제")  # 본문 상단 고지
+
+    @pytest.mark.unit
+    def test_no_disclosure_without_coupang_link(self):
+        from src.monetization import add_coupang_disclosure
+        html = "<p>쿠팡 언급만 있는 글</p>"
+        assert add_coupang_disclosure(html) == html
+
+    @pytest.mark.unit
+    def test_not_duplicated(self):
+        from src.monetization import add_coupang_disclosure
+        html = '<a href="https://link.coupang.com/a/x">링크</a>'
+        once = add_coupang_disclosure(html)
+        assert add_coupang_disclosure(once) == once

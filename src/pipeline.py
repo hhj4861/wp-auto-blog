@@ -90,6 +90,7 @@ from src.indexnow import ping_urls
 from src.keyword_gate import evaluate as evaluate_keyword
 from src.monetization import (
     DEFAULT_SHOP_RETAILER,
+    add_coupang_disclosure,
     add_policy_disclaimers,
     insert_faq_schema,
     check_quality,
@@ -496,6 +497,7 @@ class BlogPipeline:
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스
             if self.config.mode == "general":
                 content.html = strip_placeholders(content.html)
+                content.html = add_coupang_disclosure(content.html)
                 content.html = add_policy_disclaimers(
                     content.html, category=category or "", topic=topic.topic)
                 content.html = insert_monetization(

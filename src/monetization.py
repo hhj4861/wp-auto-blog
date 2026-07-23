@@ -266,6 +266,29 @@ def fix_shop_links(html: str, search_term: str, default_retailer: str = "amazon"
     return fixed
 
 
+COUPANG_DISCLOSURE = (
+    "이 포스팅은 쿠팡 파트너스 활동의 일환으로, "
+    "이에 따른 일정액의 수수료를 제공받습니다."
+)
+
+
+def add_coupang_disclosure(html: str) -> str:
+    """쿠팡 링크가 있는 글 상단에 파트너스 의무 고지문을 삽입한다.
+
+    쿠팡 정책상 필수 — 누락 시 채널 심사 거절·제재 사유. 규칙은 코드로 강제.
+    """
+    if "link.coupang.com" not in html:
+        return html
+    if COUPANG_DISCLOSURE in html:
+        return html
+    notice = (
+        f'<p id="coupang-disclosure" style="max-width:800px;margin:10px auto;'
+        f'color:#94a3b8;font-size:0.85em;">{COUPANG_DISCLOSURE}</p>\n'
+    )
+    logger.info("쿠팡 파트너스 고지문 삽입")
+    return notice + html
+
+
 def strip_dead_ctas(html: str) -> str:
     """앵커 밖에 남은 '(... →)' 죽은 CTA를 제거한다 (fix_shop_links 이후 잔여분).
 

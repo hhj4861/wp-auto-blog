@@ -101,6 +101,11 @@ jobs:
           # Image APIs
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
 
           # WordPress - General Blog (trendpulse.blog)
           WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}
@@ -208,6 +213,11 @@ jobs:
           # Image APIs
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
 
           # WordPress - Tech Blog (bytepulse.io)
           WP_TECH_URL=${{ secrets.WP_TECH_URL }}
@@ -309,6 +319,11 @@ jobs:
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
           YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
           WP_KCULTURE_URL=${{ secrets.WP_TECH_URL }}
           WP_KCULTURE_USERNAME=${{ secrets.WP_TECH_USERNAME }}
@@ -390,6 +405,11 @@ jobs:
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
           YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
           WP_KCULTURE_URL=${{ secrets.WP_TECH_URL }}
           WP_KCULTURE_USERNAME=${{ secrets.WP_TECH_USERNAME }}
@@ -474,6 +494,11 @@ jobs:
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
           YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
           WP_KCULTURE_URL=${{ secrets.WP_TECH_URL }}
           WP_KCULTURE_USERNAME=${{ secrets.WP_TECH_USERNAME }}
@@ -555,6 +580,11 @@ jobs:
           OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
           YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
           WP_KCULTURE_URL=${{ secrets.WP_TECH_URL }}
           WP_KCULTURE_USERNAME=${{ secrets.WP_TECH_USERNAME }}
@@ -644,6 +674,11 @@ jobs:
           # Image APIs
           UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          # 제휴(Affiliate) — 승인 후 GitHub Secrets에 값 넣으면 자동 부착
+          AFFILIATE_AMAZON=${{ secrets.AFFILIATE_AMAZON }}
+          AFFILIATE_YESSTYLE=${{ secrets.AFFILIATE_YESSTYLE }}
+          AFFILIATE_MUSINSA=${{ secrets.AFFILIATE_MUSINSA }}
+          AFFILIATE_OLIVE_YOUNG=${{ secrets.AFFILIATE_OLIVE_YOUNG }}
 
           # WordPress - General Blog (trendpulse.blog)
           WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}

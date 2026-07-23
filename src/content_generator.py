@@ -3689,6 +3689,12 @@ Be specific and factual based on search results. Always use the most recent vers
         if mode != "kculture":
             return html
 
+        # 제휴 링크가 실제로 활성일 때만 고지한다.
+        # (제휴 ID가 없으면 링크에 태그가 안 붙어 '제휴 링크 포함' 고지는 거짓)
+        from src.monetization import affiliate_active
+        if not affiliate_active():
+            return html
+
         disclosure = '''<div class="ftc-disclosure" style="background-color: #1a1a2e; border-left: 4px solid #f472b6; padding: 15px 20px; margin-bottom: 25px; border-radius: 4px; font-size: 14px; color: #cbd5e1;">
 <strong style="color: #f9a8d4;">Transparency Note:</strong> This post contains affiliate links. If you purchase through these links, we may earn a small commission at no extra cost to you. This helps support our content. Thank you for your support!
 </div>

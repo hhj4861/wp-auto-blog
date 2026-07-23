@@ -256,7 +256,7 @@ class TestFixShopLinks:
         out = fix_shop_links(html, "Korean Varsity Jacket")
         assert 'global.musinsa.com/us/search?keyword=Korean%20Varsity%20Jacket' in out
         assert '(Shop on Musinsa Global →)' not in out
-        assert 'rel="nofollow"' in out
+        assert 'rel="nofollow sponsored"' in out  # 제휴 링크 표준 rel
 
     @pytest.mark.unit
     def test_broken_prefix_before_anchor_removed(self):
@@ -404,3 +404,96 @@ class TestStripDeadCtas:
                              default_retailer="yesstyle")
         assert "yesstyle.com" in out
         assert "BrowseKorean Fashion →</a>" in out
+
+
+class TestAffiliateInjection:
+    """제휴 ID 주입 플러밍: env로 받은 제휴 파라미터를 쇼핑 URL에 자동 부착."""
+
+    AFFILIATE_KEYS = ("AFFILIATE_AMAZON", "AFFILIATE_YESSTYLE",
+                      "AFFILIATE_MUSINSA", "AFFILIATE_OLIVE_YOUNG")
+
+    def _clear(self, monkeypatch):
+        for k in self.AFFILIATE_KEYS:
+            monkeypatch.delenv(k, raising=False)
+
+    @pytest.mark.unit
+    def test_no_env_leaves_url_unchanged(self, monkeypatch):
+        from src.monetization import apply_affiliate
+        self._clear(monkeypatch)
+        url = "https://www.amazon.com/s?k=tteokbokki"
+        assert apply_affiliate(url, "amazon") == url
+
+    @pytest.mark.unit
+    def test_amazon_tag_appended_with_ampersand(self, monkeypatch):
+        from src.monetization import apply_affiliate
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_AMAZON", "tag=bytepulse-20")
+        out = apply_affiliate("https://www.amazon.com/s?k=tteokbokki", "amazon")
+        assert out == "https://www.amazon.com/s?k=tteokbokki&tag=bytepulse-20"
+
+    @pytest.mark.unit
+    def test_no_query_uses_question_mark(self, monkeypatch):
+        from src.monetization import apply_affiliate
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_AMAZON", "tag=x-20")
+        out = apply_affiliate("https://www.amazon.com/dp/B01", "amazon")
+        assert out == "https://www.amazon.com/dp/B01?tag=x-20"
+
+    @pytest.mark.unit
+    def test_leading_separator_stripped(self, monkeypatch):
+        from src.monetization import apply_affiliate
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_YESSTYLE", "&ref=abc")
+        out = apply_affiliate("https://www.yesstyle.com/en/search?q=x", "yesstyle")
+        assert out == "https://www.yesstyle.com/en/search?q=x&ref=abc"
+
+    @pytest.mark.unit
+    def test_olive_young_env_key_underscored(self, monkeypatch):
+        from src.monetization import apply_affiliate
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_OLIVE_YOUNG", "a_id=99")
+        out = apply_affiliate("https://global.oliveyoung.com/search?query=x", "olive young")
+        assert out.endswith("&a_id=99")
+
+    @pytest.mark.unit
+    def test_fix_shop_links_injects_tag(self, monkeypatch):
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_AMAZON", "tag=bytepulse-20")
+        out = fix_shop_links("(🛒 Shop on Amazon →)", "gochujang sauce")
+        assert "tag=bytepulse-20" in out
+        assert "amazon.com/s?k=gochujang%20sauce&tag=bytepulse-20" in out
+
+    @pytest.mark.unit
+    def test_affiliate_active_toggle(self, monkeypatch):
+        from src.monetization import affiliate_active
+        self._clear(monkeypatch)
+        assert affiliate_active() is False
+        monkeypatch.setenv("AFFILIATE_AMAZON", "tag=x-20")
+        assert affiliate_active() is True
+
+
+class TestFtcDisclosureConditional:
+    """FTC 고지는 제휴가 실제 활성일 때만 (제휴 없는데 '제휴 링크 포함' 거짓 고지 방지)."""
+
+    def _clear(self, monkeypatch):
+        for k in ("AFFILIATE_AMAZON", "AFFILIATE_YESSTYLE",
+                  "AFFILIATE_MUSINSA", "AFFILIATE_OLIVE_YOUNG"):
+            monkeypatch.delenv(k, raising=False)
+
+    @pytest.mark.unit
+    def test_no_disclosure_without_affiliate(self, mock_env_vars, monkeypatch):
+        from src.content_generator import ContentGenerator
+        self._clear(monkeypatch)
+        gen = ContentGenerator()
+        out = gen._add_ftc_disclosure("<p>body</p>", "kculture")
+        assert "affiliate links" not in out
+        assert out == "<p>body</p>"
+
+    @pytest.mark.unit
+    def test_disclosure_shown_with_affiliate(self, mock_env_vars, monkeypatch):
+        from src.content_generator import ContentGenerator
+        self._clear(monkeypatch)
+        monkeypatch.setenv("AFFILIATE_AMAZON", "tag=bytepulse-20")
+        gen = ContentGenerator()
+        out = gen._add_ftc_disclosure("<p>body</p>", "kculture")
+        assert "affiliate links" in out

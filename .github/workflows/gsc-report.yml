@@ -1,0 +1,33 @@
+name: GSC Performance Report
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '조회 기간(일)'
+        required: false
+        default: '90'
+        type: string
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests google-auth
+      - name: GSC report
+        env:
+          GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          GSC_DAYS: ${{ github.event.inputs.days }}
+        run: python scripts/gsc_report.py

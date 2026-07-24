@@ -28,13 +28,23 @@ session.auth = (os.environ.get("WP_GENERAL_USERNAME", ""),
 session.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-concentrate)"})
 
 ASCII_SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+# 구 파이프라인의 템플릿 접미사 — 영문 슬러그여도 이게 붙으면 레거시(개편 전 글).
+# -guide-YYYY는 신규 머니 글(energy-cashback-apply-guide-2026 등)과 충돌하므로 제외.
+# 누출된 레거시 IT 글은 전부 -review-YYYY 패턴.
+LEGACY_SUFFIX_RE = re.compile(r"-review-\d{4}$")
 
 
 def is_legacy(slug: str) -> bool:
-    """ASCII 소문자-하이픈 슬러그가 아니면 레거시(한글 %-인코딩 슬러그)로 판정."""
+    """레거시 판정: 한글 %-인코딩 슬러그이거나, 구 템플릿 접미사(-review-YYYY 등)를
+    가진 영문 슬러그. 신규 머니 글은 -status/-wetax/…-guide 등 서술형 슬러그라 걸리지 않는다.
+
+    단, 신규 머니 글이 우연히 -guide-YYYY 형태면 KEEP_SLUGS로 예외 지정한다.
+    """
     if slug in KEEP_SLUGS:
         return False
-    return not ASCII_SLUG_RE.match(slug)
+    if not ASCII_SLUG_RE.match(slug):
+        return True  # 한글 슬러그 = 레거시
+    return bool(LEGACY_SUFFIX_RE.search(slug))
 
 
 def main():

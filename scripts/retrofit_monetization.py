@@ -127,12 +127,14 @@ def main():
         marks = []
 
         # 1) 광고 없으면 광고+관련글+FAQ 삽입
-        if '<ins class="adsbygoogle"' not in new_html:
+        ad_tag = '<ins class="adsbygoogle"'
+        if ad_tag not in new_html:
             new_html = strip_placeholders(new_html)
             related = related_airline_posts(post["id"], cats)
             new_html = insert_monetization(new_html, official_link="", related_posts=related)
             new_html = insert_faq_schema(new_html)
-            marks.append(f"광고{new_html.count('<ins class=\"adsbygoogle\"')}+FAQ")
+            ad_count = new_html.count(ad_tag)
+            marks.append(f"광고{ad_count}+FAQ")
 
         # 2) 취업 글이면 쿠팡 추천템 박스 (링크 설정 시에만 렌더, 미설정이면 no-op)
         if career_cat in cats and "coupang-disclosure" not in new_html:

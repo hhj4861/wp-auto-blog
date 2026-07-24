@@ -92,6 +92,7 @@ from src.monetization import (
     DEFAULT_SHOP_RETAILER,
     add_coupang_disclosure,
     add_policy_disclaimers,
+    insert_coupang_prep_box,
     insert_faq_schema,
     check_quality,
     fix_category_links,
@@ -511,6 +512,9 @@ class BlogPipeline:
                 )
                 # FAQ 섹션 → FAQPage 스키마 (색인 시 리치 리절트 확보)
                 content.html = insert_faq_schema(content.html)
+                # 취업(외항사) 글에 쿠팡 추천템 박스 (링크 설정 시에만, 고지 자동)
+                if category == "취업":
+                    content.html = insert_coupang_prep_box(content.html)
             # Create post (or simulate in dry run)
             if self.config.dry_run:
                 logger.info("[DRY RUN] Would create post - skipping actual publish")

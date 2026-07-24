@@ -23,6 +23,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from src.gsc_client import query  # noqa: E402
 from src.monetization import (  # noqa: E402
     insert_monetization, insert_faq_schema, strip_placeholders,
+    insert_coupang_prep_box,
 )
 
 BASE_URL = (os.environ.get("WP_GENERAL_URL") or "").rstrip("/")
@@ -60,6 +61,22 @@ def get_post_by_slug(slug: str) -> dict | None:
     return None
 
 
+def career_category_id() -> int:
+    """'취업' 카테고리 term id 조회 (없으면 -1)."""
+    r = session.get(f"{API}/categories", params={"slug": "jobs", "_fields": "id,slug,name"},
+                    timeout=30)
+    if r.status_code == 200 and r.json():
+        return r.json()[0]["id"]
+    # slug가 다를 수 있어 이름으로도 시도
+    r = session.get(f"{API}/categories", params={"search": "취업", "_fields": "id,name"},
+                    timeout=30)
+    if r.status_code == 200:
+        for c in r.json():
+            if c.get("name") == "취업":
+                return c["id"]
+    return -1
+
+
 def related_airline_posts(exclude_id: int, category_ids: list[int], n: int = 3) -> list[dict]:
     """같은 카테고리(취업 등)의 다른 발행글을 관련 글로."""
     if not category_ids:
@@ -87,12 +104,14 @@ def main():
     start = end - dt.timedelta(days=DAYS)
     print(f"대상: {BASE_URL} | DRY_RUN={DRY_RUN} | GSC {DAYS}일 노출 {MIN_IMPR}+ 글\n{'=' * 62}")
 
+    career_cat = career_category_id()
+
     pages = [p for p in query(start.isoformat(), end.isoformat(), ["page"])
              if p["impressions"] >= MIN_IMPR]
     pages.sort(key=lambda p: -p["impressions"])
-    print(f"GSC 노출 {MIN_IMPR}+ 페이지 {len(pages)}개\n")
+    print(f"GSC 노출 {MIN_IMPR}+ 페이지 {len(pages)}개 (취업 카테고리 id={career_cat})\n")
 
-    done, skipped = 0, 0
+    done, unchanged = 0, 0
     for pg in pages:
         slug = slug_from_url(pg["page"])
         if not slug or slug == "trendpulse.blog":
@@ -103,18 +122,30 @@ def main():
             continue
         html = post["content"].get("raw") or ""
         title = post["title"].get("raw", "")[:40]
-        if '<ins class="adsbygoogle"' in html:
-            skipped += 1
-            continue  # 이미 광고 있음
-        # 수익화 레이어 삽입
-        new_html = strip_placeholders(html)
-        related = related_airline_posts(post["id"], post.get("categories") or [])
-        new_html = insert_monetization(new_html, official_link="", related_posts=related)
-        new_html = insert_faq_schema(new_html)
-        added_ads = new_html.count('<ins class="adsbygoogle"')
+        cats = post.get("categories") or []
+        new_html = html
+        marks = []
+
+        # 1) 광고 없으면 광고+관련글+FAQ 삽입
+        if '<ins class="adsbygoogle"' not in new_html:
+            new_html = strip_placeholders(new_html)
+            related = related_airline_posts(post["id"], cats)
+            new_html = insert_monetization(new_html, official_link="", related_posts=related)
+            new_html = insert_faq_schema(new_html)
+            marks.append(f"광고{new_html.count('<ins class=\"adsbygoogle\"')}+FAQ")
+
+        # 2) 취업 글이면 쿠팡 추천템 박스 (링크 설정 시에만 렌더, 미설정이면 no-op)
+        if career_cat in cats and "coupang-disclosure" not in new_html:
+            before = new_html
+            new_html = insert_coupang_prep_box(new_html)
+            if new_html != before:
+                marks.append("쿠팡박스")
+
+        if new_html == html:
+            unchanged += 1
+            continue
         print(f"  ✚ 노출{pg['impressions']:>4} 클릭{pg['clicks']:>3} 순위{pg['position']:>5.1f} "
-              f"| 광고 {added_ads} 관련글 {len(related)} FAQ {'O' if 'FAQPage' in new_html else 'X'} "
-              f"| {title}")
+              f"| {', '.join(marks)} | {title}")
         if not DRY_RUN:
             ur = session.post(f"{API}/posts/{post['id']}", json={"content": new_html}, timeout=60)
             if ur.status_code == 200:
@@ -122,7 +153,7 @@ def main():
             else:
                 print(f"     ⚠️ 실패 {ur.status_code}: {ur.text[:120]}")
 
-    print(f"\n적용 {done}건 · 이미 광고 있어 건너뜀 {skipped}건")
+    print(f"\n적용 {done}건 · 변경 없음 {unchanged}건")
     if DRY_RUN:
         print("DRY_RUN — 변경 없음. 적용하려면 DRY_RUN=false")
 

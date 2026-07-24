@@ -723,12 +723,13 @@
       "만능통장"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 137200,
     "competition": "높음",
     "serp_gov_ratio": 0.3,
     "verdict": "go",
-    "head_keyword": "ISA계좌"
+    "head_keyword": "ISA계좌",
+    "completed_at": "2026-07-24T05:17:54.290192"
   },
   {
     "topic": "NCS 기반 공기업 채용 일정과 준비 방법 총정리 (2026 하반기)",

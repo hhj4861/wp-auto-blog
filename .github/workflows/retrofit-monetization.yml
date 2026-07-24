@@ -1,0 +1,42 @@
+name: Retrofit Monetization
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (대상만 보고)'
+        required: true
+        default: true
+        type: boolean
+      min_impr:
+        description: 'GSC 최소 노출 기준'
+        required: false
+        default: '3'
+        type: string
+
+jobs:
+  retrofit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests google-auth loguru
+      - name: Retrofit monetization
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          MIN_IMPR: ${{ github.event.inputs.min_impr }}
+        run: python scripts/retrofit_monetization.py

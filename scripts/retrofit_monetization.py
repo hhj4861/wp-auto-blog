@@ -31,10 +31,18 @@ DRY_RUN = (os.environ.get("DRY_RUN", "true").lower() != "false")
 MIN_IMPR = int(os.environ.get("MIN_IMPR", "3"))
 DAYS = int(os.environ.get("GSC_DAYS", "90"))
 
+from requests.adapters import HTTPAdapter  # noqa: E402
+from urllib3.util.retry import Retry  # noqa: E402
+
 session = requests.Session()
 session.auth = (os.environ.get("WP_GENERAL_USERNAME", ""),
                 os.environ.get("WP_GENERAL_APP_PASSWORD", ""))
 session.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-retrofit)"})
+# 러너 IP 일시 차단(Network unreachable)·WAF 대응: 연결 실패 재시도
+_retry = Retry(total=5, connect=5, backoff_factor=2,
+               status_forcelist=(403, 429, 500, 502, 503, 504),
+               allowed_methods=frozenset(["GET", "POST"]))
+session.mount("https://", HTTPAdapter(max_retries=_retry))
 
 
 def slug_from_url(url: str) -> str:

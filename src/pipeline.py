@@ -370,7 +370,7 @@ class BlogPipeline:
 
         return results
 
-    def _process_topic(self, topic: Topic) -> PipelineResult:
+    def _process_topic(self, topic: Topic, refresh_post_id: int | None = None) -> PipelineResult:
         """Process a single topic through the pipeline.
 
         Args:
@@ -537,6 +537,12 @@ class BlogPipeline:
                 )
                 if gate_issues:
                     logger.warning(f"품질 게이트 실패 {len(gate_issues)}건: {gate_issues}")
+                    if refresh_post_id:
+                        # 리프레시: 재생성 본문이 불량이면 기존 좋은 글을 건드리지 않는다
+                        logger.warning(f"리프레시 중단 — 기존 글 #{refresh_post_id} 보존")
+                        return PipelineResult(
+                            topic=topic.topic, success=False,
+                            error=f"리프레시 품질 게이트 실패: {gate_issues}")
                     if status == PostStatus.PUBLISH:
                         logger.warning("자동 발행 취소 → draft로 저장 (수동 검토 필요)")
                         status = PostStatus.DRAFT
@@ -557,19 +563,32 @@ class BlogPipeline:
 
                 # Tech mode: skip hero image (TL;DR summary comes first)
                 skip_hero = self.config.mode == "tech"
-                post = self.wp_client.create_post(
-                    content=content,
-                    images=images,
-                    status=status,
-                    category=category,
-                    section_images=section_images,
-                    skip_hero_image=skip_hero,
-                    content_type=self.config.content_type.value,
-                )
+                if refresh_post_id:
+                    # 리프레시: 기존 글의 본문·메타만 갱신 (슬러그·URL 보존)
+                    post = self.wp_client.update_post(
+                        post_id=refresh_post_id,
+                        content=content,
+                        images=images,
+                        category=category,
+                        section_images=section_images,
+                        skip_hero_image=skip_hero,
+                        content_type=self.config.content_type.value,
+                    )
+                    logger.info(f"리프레시 완료 (URL 유지): {post.url}")
+                else:
+                    post = self.wp_client.create_post(
+                        content=content,
+                        images=images,
+                        status=status,
+                        category=category,
+                        section_images=section_images,
+                        skip_hero_image=skip_hero,
+                        content_type=self.config.content_type.value,
+                    )
 
-                # 발행 즉시 IndexNow 핑 (Bing·Naver 등 참여 엔진 색인 가속)
-                if (self.config.mode == "general" and status == PostStatus.PUBLISH
-                        and post.url):
+                # 발행/갱신 즉시 IndexNow 핑 (재크롤 유도 — 신선도 반영)
+                if (self.config.mode == "general" and post.url
+                        and (status == PostStatus.PUBLISH or refresh_post_id)):
                     ping_urls([post.url])
 
             duration = (datetime.now() - start_time).total_seconds()
@@ -658,6 +677,31 @@ class BlogPipeline:
             candidates, keywords or [], count=count, category_id=category_id
         )
         return [{"title": c["title"], "url": c["url"]} for c in ranked]
+
+    def refresh_post(
+        self,
+        post_id: int,
+        topic: str,
+        keywords: Optional[list[str]] = None,
+        category: Optional[str] = None,
+    ) -> PipelineResult:
+        """기존 글의 본문을 최신 내용으로 재생성해 in-place 갱신한다 (URL 유지).
+
+        중복 체크를 건너뛴다(의도적으로 같은 주제). 재생성 본문이 품질 게이트를
+        통과하지 못하면 기존 글을 건드리지 않는다(_process_topic 내부에서 처리).
+        """
+        from src.trend_detector import TrendSource
+        if keywords is None:
+            keywords = self.trend_detector._extract_keywords(topic)
+        topic_obj = Topic(
+            topic=topic,
+            keywords=keywords,
+            source=TrendSource.HACKER_NEWS,
+            score=100,
+            suggested_title=self.trend_detector._generate_title(topic, keywords),
+            category=category,
+        )
+        return self._process_topic(topic_obj, refresh_post_id=post_id)
 
     def run_single(
         self,

@@ -144,6 +144,18 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Process next pending topic from topic queue file",
     )
+    parser.add_argument(
+        "--refresh-slugs",
+        type=str,
+        default="",
+        help="콤마 구분 슬러그의 기존 글을 최신 내용으로 재생성해 in-place 갱신 (URL 유지)",
+    )
+    parser.add_argument(
+        "--refresh-limit",
+        type=int,
+        default=0,
+        help="리프레시 최대 건수 (0=전체)",
+    )
 
     return parser.parse_args()
 
@@ -232,7 +244,31 @@ def main() -> int:
 
     # Run pipeline
     try:
-        if args.from_queue:
+        if args.refresh_slugs:
+            # 리프레시 모드: 기존 글 본문을 최신화해 in-place 갱신 (URL 유지)
+            slugs = [s.strip() for s in args.refresh_slugs.split(",") if s.strip()]
+            if args.refresh_limit:
+                slugs = slugs[:args.refresh_limit]
+            logger.info(f"리프레시 대상 {len(slugs)}건")
+            results = []
+            for slug in slugs:
+                post = pipeline.wp_client.get_post_by_slug(slug)
+                if not post:
+                    logger.warning(f"글 못 찾음: {slug}")
+                    continue
+                pid = post.get("id")
+                title = (post.get("title") or {}).get("rendered") or slug
+                import re as _re
+                title = _re.sub(r"<[^>]+>", "", title).strip()
+                logger.info(f"리프레시: #{pid} {title}")
+                result = pipeline.refresh_post(
+                    post_id=pid, topic=title, category=args.category or "취업")
+                results.append(result)
+                if result.success:
+                    logger.info(f"  ✅ 갱신 완료: {slug}")
+                else:
+                    logger.warning(f"  ⏭ 건너뜀({result.error}): {slug}")
+        elif args.from_queue:
             # Queue mode - process next pending topic from queue file
             import json
             queue_file = Path(__file__).parent.parent / "data" / f"topic_queue_{args.mode}.json"

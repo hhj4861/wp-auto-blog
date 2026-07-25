@@ -1,0 +1,59 @@
+name: Refresh Airline Posts
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: '갱신할 슬러그(콤마 구분). 비우면 에미레이트+JAL'
+        required: false
+        default: '2026-에미레이트-항공-승무원,jal-일본항공-승무원-review-2026'
+        type: string
+      limit:
+        description: '최대 건수 (0=전체)'
+        required: false
+        default: '0'
+        type: string
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Create .env file
+        run: |
+          cat << 'EOF' > .env
+          CLAUDE_CODE_OAUTH_TOKEN=${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GOOGLE_AI_API_KEY=${{ secrets.GOOGLE_AI_API_KEY }}
+          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+          UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY=${{ secrets.PEXELS_API_KEY }}
+          WP_GENERAL_URL=${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          NAVER_AD_CUSTOMER_ID=${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY=${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY=${{ secrets.NAVER_AD_SECRET_KEY }}
+          EOF
+      - name: Refresh posts
+        timeout-minutes: 80
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          python -m src.main --mode general \
+            --refresh-slugs "${{ github.event.inputs.slugs }}" \
+            --refresh-limit "${{ github.event.inputs.limit }}" \
+            --category 취업 --auto-publish

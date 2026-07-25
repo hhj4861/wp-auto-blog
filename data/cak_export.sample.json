@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "profile": "blog-kr",
+  "generatedAt": "2026-07-25T00:00:00Z",
+  "compliance": {
+    "resaleRestricted": true,
+    "cacheTtlHours": 24
+  },
+  "items": [
+    {
+      "topic": "국민내일배움카드 신청 자격과 방법 총정리",
+      "keywords": [
+        "국민내일배움카드",
+        "신청자격",
+        "발급방법"
+      ],
+      "category": "생활정보",
+      "monthly_search": 12000,
+      "opportunity": 78
+    },
+    {
+      "topic": "2026 근로장려금 신청 기간과 지급일 안내",
+      "keywords": [
+        "근로장려금",
+        "신청기간",
+        "지급일"
+      ],
+      "category": "생활정보",
+      "monthly_search": 33000,
+      "opportunity": 71
+    }
+  ],
+  "_note": "source_questions는 kit export에 있어도 소비자가 저장하지 않음(보수모드 상시). 소비자는 topic(재표현) + 파생지표만 큐에 적재."
+}

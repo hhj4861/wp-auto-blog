@@ -808,12 +808,13 @@
       "무료검진"
     ],
     "category": "건강",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 36140,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "국가건강검진"
+    "head_keyword": "국가건강검진",
+    "completed_at": "2026-07-25T05:23:50.599279"
   },
   {
     "topic": "주택청약종합저축 활용법: 납입 인정액과 소득공제 총정리",

@@ -566,3 +566,82 @@ class TestCoupangDisclosure:
         html = '<a href="https://link.coupang.com/a/x">링크</a>'
         once = add_coupang_disclosure(html)
         assert add_coupang_disclosure(once) == once
+
+
+class TestStripFabricatedEEAT:
+    """가짜 E-E-A-T 제거: 허위 저자박스/방법론박스/'Our Testing Data' — topic 등 본문 보존."""
+
+    AUTHOR_BOX = (
+        '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; '
+        'margin: 16px 0; padding: 16px; background: #1a1a2e; border-radius: 8px;">'
+        '<div style="display: flex; align-items: center; gap: 10px;">'
+        '<div style="width: 44px;">BP</div><div>'
+        '<div style="color: #e8e8e8; font-weight: 600;">Bytepulse Engineering Team</div>'
+        '<div style="color: #94a3b8; font-size: 0.85em;">5+ years testing developer tools in production</div>'
+        '</div></div>'
+        '<div style="color: #64748b;"><span>📅 Updated: July 24, 2026</span> · <span>⏱️ 9 min read</span></div>'
+        '</div>'
+    )
+    METHOD_BOX = (
+        '<div style="background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); padding: 20px; '
+        'border-radius: 12px; margin: 24px 0; border-left: 4px solid #3b82f6;">'
+        '<h4 style="color: #00d9ff;">📋 How We Tested</h4>'
+        '<ul><li><strong>Duration:</strong> 30+ days</li>'
+        '<li><strong>Team:</strong> 3 senior developers with 5+ years experience</li></ul>'
+        '</div>'
+    )
+    SOURCES_LI = (
+        '<li><span style="color: #e8e8e8;">Our Testing Data</span> - 30-day production '
+        'benchmarks by Bytepulse team</li>'
+    )
+
+    def _wrap(self, inner):
+        return (f'<div class="post-content category-ai-tools" data-category="AI Tools">'
+                f'<h1>DeepSeek vs Qwen</h1>{inner}<p>실제 본문 유지</p></div>')
+
+    @pytest.mark.unit
+    def test_removes_author_box_keeps_body(self):
+        from src.monetization import strip_fabricated_eeat
+        html = self._wrap(self.AUTHOR_BOX + "<h2>Intro</h2><p>내용</p>")
+        out = strip_fabricated_eeat(html)
+        assert "Bytepulse Engineering Team" not in out
+        assert "5+ years testing" not in out
+        assert "<h2>Intro</h2><p>내용</p>" in out          # 본문 보존
+        assert 'class="post-content' in out                 # 래퍼 보존
+        assert "실제 본문 유지" in out
+
+    @pytest.mark.unit
+    def test_removes_methodology_box(self):
+        from src.monetization import strip_fabricated_eeat
+        html = self._wrap("<p>a</p>" + self.METHOD_BOX + "<p>b</p>")
+        out = strip_fabricated_eeat(html)
+        assert "How We Tested" not in out
+        assert "3 senior developers" not in out
+        assert "<p>a</p>" in out and "<p>b</p>" in out
+
+    @pytest.mark.unit
+    def test_removes_our_testing_data_source_line(self):
+        from src.monetization import strip_fabricated_eeat
+        html = self._wrap("<ul><li>Real source</li>" + self.SOURCES_LI + "</ul>")
+        out = strip_fabricated_eeat(html)
+        assert "Our Testing Data" not in out
+        assert "benchmarks by Bytepulse team" not in out
+        assert "<li>Real source</li>" in out               # 진짜 출처는 유지
+
+    @pytest.mark.unit
+    def test_all_three_together(self):
+        from src.monetization import strip_fabricated_eeat
+        html = self._wrap(self.AUTHOR_BOX + "<h2>S</h2><p>x</p>" + self.METHOD_BOX
+                          + "<ul>" + self.SOURCES_LI + "</ul>")
+        out = strip_fabricated_eeat(html)
+        for bad in ("Bytepulse Engineering Team", "How We Tested", "Our Testing Data",
+                    "senior developers", "5+ years testing"):
+            assert bad not in out, bad
+        assert "<h2>S</h2><p>x</p>" in out
+        assert 'class="post-content' in out
+
+    @pytest.mark.unit
+    def test_clean_content_unchanged(self):
+        from src.monetization import strip_fabricated_eeat
+        html = self._wrap("<h2>Section</h2><p>깨끗한 글</p>")
+        assert strip_fabricated_eeat(html) == html

@@ -864,42 +864,29 @@ Stats reference format:
 - Use CURRENT YEAR (2026) - NEVER 2025 or older
 - Be technically accurate - readers are EXPERTS
 
-=== E-E-A-T ELEMENTS (MANDATORY - Content will be REJECTED without these!) ===
-CRITICAL: You MUST include ALL of these elements. Missing ANY = content failure!
+=== E-E-A-T ELEMENTS (Google 품질 신호) ===
+⚠️ 정직성 원칙(절대 위반 금지): 이 글은 실재하지 않는 저자·팀·직접 테스트를
+지어내지 않는다. "우리가 30일 테스트했다 / 3명의 시니어 개발자 / 프로덕션에서
+검증했다" 같은 **허위 경험·권위 주장은 AdSense·구글 신뢰 정책 위반**이며 금지한다.
+전문성은 '검증 가능한 공개 출처 인용 + 정확성'으로만 확보한다.
 
-**1. AUTHOR + DATE HEADER (MANDATORY - Place IMMEDIATELY after H1):**
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 16px 0; padding: 16px; background: #1a1a2e; border-radius: 8px;">
-<div style="display: flex; align-items: center; gap: 10px;">
-<div style="width: 44px; height: 44px; background: linear-gradient(135deg, #3b82f6, #00d9ff); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; font-size: 1.1em;">BP</div>
-<div>
-<div style="color: #e8e8e8; font-weight: 600;">Bytepulse Engineering Team</div>
-<div style="color: #94a3b8; font-size: 0.85em;">5+ years testing developer tools in production</div>
-</div>
-</div>
-<div style="color: #64748b; font-size: 0.85em; margin-left: auto;">
-<span>📅 Updated: January 22, 2026</span> · <span>⏱️ 8 min read</span>
-</div>
-</div>
+**1. DATE + READ TIME (Place IMMEDIATELY after H1) — 사실만:**
+<p style="color: #64748b; font-size: 0.85em; margin: 12px auto; max-width: 800px;">📅 Updated: [CURRENT DATE] · ⏱️ [N] min read</p>
+(가짜 저자 아바타/직함/경력 줄은 넣지 않는다.)
 
-**2. METHODOLOGY BOX (MANDATORY - Place after TL;DR):**
-<div style="background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); padding: 20px; border-radius: 12px; margin: 24px 0; border-left: 4px solid #3b82f6;">
-<h4 style="color: #00d9ff; margin: 0 0 12px 0; font-size: 1em;">📋 How We Tested</h4>
-<ul style="color: #94a3b8; margin: 0; padding-left: 20px; line-height: 1.8; font-size: 0.9em;">
-<li><strong>Duration:</strong> 30+ days of real-world usage</li>
-<li><strong>Environment:</strong> Production codebases (React, Node.js, Python)</li>
-<li><strong>Metrics:</strong> Response time, accuracy, developer productivity</li>
-<li><strong>Team:</strong> 3 senior developers with 5+ years experience</li>
-</ul>
-</div>
+**2. (선택) 근거 요약 — 실제 공개 자료 기반일 때만:**
+직접 테스트를 하지 않았으면 "How We Tested / our benchmarks / 우리가 측정" 류를
+쓰지 말 것. 대신 공개 벤치마크·공식 문서를 인용한다:
+예) "Per the official [Tool] docs and public MTEB benchmark, ..." (지어낸 수치·기간 금지)
 
 **3. INLINE SOURCE CITATIONS (NO FAKE URLS!):**
 For statistics, use TEXT citations - NOT fake article URLs:
 
 ✅ GOOD (text citation): "Response time averaged 0.8 seconds <span style="color: #94a3b8; font-size: 0.85em;">(per official Cursor documentation)</span>"
 ✅ GOOD (verified link): "47k GitHub stars <a href="https://github.com/getcursor/cursor" target="_blank" rel="noopener" style="color: #3b82f6; font-size: 0.85em;">(GitHub)</a>"
-✅ GOOD (own testing): "0.8s response time <span style="color: #94a3b8; font-size: 0.85em;">(our benchmark testing)</span>"
 
 ❌ BAD: Fake article URLs like "https://www.tomshardware.com/tech-industry/..." - NEVER DO THIS!
+❌ BAD: 지어낸 자체 테스트 "(our benchmark testing)" - 실제로 안 했으면 절대 금지!
 
 **4. SOURCES SECTION (MANDATORY - Only VERIFIED links!):**
 <div style="margin: 32px 0; padding: 24px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 12px;">
@@ -908,28 +895,25 @@ For statistics, use TEXT citations - NOT fake article URLs:
 <li><a href="https://[product].com" target="_blank" rel="noopener" style="color: #3b82f6;">[Tool] Official Website</a> - Pricing and features</li>
 <li><a href="https://github.com/[org]/[repo]" target="_blank" rel="noopener" style="color: #3b82f6;">GitHub Repository</a> - Open source code and stats</li>
 <li><span style="color: #e8e8e8;">Industry Reports</span> - Referenced throughout article (no direct links to avoid broken URLs)</li>
-<li><span style="color: #e8e8e8;">Our Testing Data</span> - 30-day production benchmarks by Bytepulse team</li>
 </ul>
 <p style="color: #64748b; font-size: 0.8em; margin: 16px 0 0 0; font-style: italic;">
 Note: We only link to official product pages and verified GitHub repos. News citations are text-only to ensure accuracy.
 </p>
 </div>
 
-**5. EXPERIENCE STATEMENTS (MANDATORY - Include 3+ throughout content):**
-Use first-person experience phrases naturally in the content:
-- "In our 30-day testing period, we found..."
-- "After migrating 3 production projects, the results showed..."
-- "Our team's experience with [tool] revealed..."
-- "Based on our benchmarks across 50k+ lines of code..."
-- "We measured a [X]% improvement when..."
+**5. ⚠️ 허위 1인칭 경험 금지:**
+직접 하지 않은 테스트·이관·측정을 지어내지 않는다. 다음은 전부 금지:
+- "In our 30-day testing period, we found..." ❌
+- "After migrating 3 production projects..." ❌
+- "Our team's experience / our benchmarks / we measured..." ❌
+대신 공개 근거로 서술: "According to [official source], ..." / "Public benchmarks show ..."
 
-**E-E-A-T VALIDATION (ALL must be present):**
-✓ Author header with credentials IMMEDIATELY after H1
-✓ Methodology box after TL;DR
-✓ Every statistic has inline source link
-✓ Sources section before conclusion (minimum 4 sources)
-✓ At least 3 first-person experience statements
-✓ Specific numbers with context (not vague claims)
+**E-E-A-T VALIDATION:**
+✓ Updated 날짜 + 읽는 시간(사실만, 가짜 저자 없음)
+✓ Every statistic has inline source link (검증 가능한 공개 출처)
+✓ Sources section before conclusion (실재하는 공식/GitHub 링크만)
+✓ 허위 자체 테스트·팀·경력 주장 0건
+✓ Specific numbers with context (출처 있는 수치만)
 
 === YOAST SEO OPTIMIZATION (CRITICAL!) ===
 You MUST follow these rules to achieve high Yoast SEO scores:

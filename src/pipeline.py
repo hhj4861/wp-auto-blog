@@ -101,6 +101,7 @@ from src.monetization import (
     insert_monetization,
     insert_related_box,
     strip_dead_ctas,
+    strip_fabricated_eeat,
     strip_placeholders,
     unwrap_dead_anchors,
 )
@@ -475,6 +476,7 @@ class BlogPipeline:
                 logger.debug("Tech mode: skipping section images (using visual elements instead)")
 
             # 본문 링크/마크업 가드레일: LLM 잔존물을 코드로 강제 수리
+            content.html = strip_fabricated_eeat(content.html)  # 허위 저자·테스트 주장 제거
             content.html = fix_markdown_bold(content.html)
             content.html = unwrap_dead_anchors(content.html)
             content.html = fix_shop_links(

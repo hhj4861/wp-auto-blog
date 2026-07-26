@@ -359,6 +359,71 @@ def add_coupang_disclosure(html: str) -> str:
     return notice + html
 
 
+def _cut_balanced_div(html: str, start: int) -> str:
+    """start(<div 위치)에서 시작하는 div의 balanced 닫힘까지 잘라낸다."""
+    depth = 0
+    for m in re.finditer(r"<div\b|</div>", html[start:]):
+        if m.group().startswith("<div"):
+            depth += 1
+        else:
+            depth -= 1
+            if depth == 0:
+                end = start + m.end()
+                return html[:start] + html[end:]
+    return html  # 짝이 안 맞으면 건드리지 않음(안전)
+
+
+def _remove_div_containing(html: str, marker: str) -> str:
+    """marker를 감싸는 '블록 div'를 제거한다 (post-content 래퍼는 보존).
+
+    marker를 balanced 로 감싸는 div 중 래퍼(class="post-content")를 뺀 **최외곽**을
+    잘라낸다. 중첩(저자박스처럼 2~3단계)이어도 블록 전체가 제거된다.
+    marker가 없으면 원본 그대로.
+    """
+    idx = html.find(marker)
+    if idx == -1:
+        return html
+    opens = [m.start() for m in re.finditer(r"<div\b", html)]
+    # 각 여는 div 의 balanced 닫힘 위치 계산
+    stack, match = [], {}
+    for tok in re.finditer(r"<div\b|</div>", html):
+        if tok.group().startswith("<div"):
+            stack.append(tok.start())
+        elif stack:
+            match[stack.pop()] = tok.end()
+    enclosing = [
+        o for o in opens
+        if o < idx and match.get(o, -1) > idx
+        and 'class="post-content' not in html[o:html.find(">", o) + 1]
+    ]
+    if not enclosing:
+        return html
+    return _cut_balanced_div(html, min(enclosing))
+
+
+def strip_fabricated_eeat(html: str) -> str:
+    """허위 E-E-A-T(가짜 저자·팀·경력·테스트 주장)를 본문에서 제거한다.
+
+    AdSense '저가치/기만적 콘텐츠' 위반 요소 — 완전 자동 AI 글에 실재하지 않는
+    'Bytepulse Engineering Team / 5+ years testing / 3 senior developers / 30-day
+    production benchmarks'를 표기하던 3개 구조 블록을 제거한다.
+    본문(topic·섹션·진짜 출처)과 post-content 래퍼는 보존한다.
+    """
+    before = html
+    # ① 가짜 저자 박스 (아바타 'BP' + 'Bytepulse Engineering Team')
+    html = _remove_div_containing(html, "Bytepulse Engineering Team")
+    # ② 가짜 방법론 박스 ('How We Tested')
+    html = _remove_div_containing(html, "How We Tested")
+    # ③ 출처 섹션의 'Our Testing Data' 항목 (li 단위)
+    html = re.sub(
+        r"<li[^>]*>(?:(?!</li>).){0,400}?Our Testing Data(?:(?!</li>).){0,400}?</li>",
+        "", html, flags=re.S,
+    )
+    if html != before:
+        logger.info("허위 E-E-A-T 블록 제거됨")
+    return html
+
+
 def strip_dead_ctas(html: str) -> str:
     """앵커 밖에 남은 '(... →)' 죽은 CTA를 제거한다 (fix_shop_links 이후 잔여분).
 

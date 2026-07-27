@@ -402,17 +402,57 @@ def _remove_div_containing(html: str, marker: str) -> str:
     return _cut_balanced_div(html, min(enclosing))
 
 
+def _strip_author_boxes(html: str) -> str:
+    """가짜 저자/팀 박스를 팀명·카테고리 무관하게 **구조**로 제거한다.
+
+    시그니처: 아바타 원형(border-radius:50%)을 담고 'X Team' 이름을 가진 flex 박스.
+    'Bytepulse Engineering Team'뿐 아니라 'K-Pulse Beauty/Style/Editorial Team' 등
+    18+ 변종을 모두 잡는다. 이름 하드코딩 금지 — 새 변종도 자동 포함.
+    """
+    guard = 0
+    while guard < 40:
+        guard += 1
+        avatars = [m.start() for m in re.finditer(r"border-radius:\s*50%", html)]
+        if not avatars:
+            break
+        stack, match = [], {}
+        for tok in re.finditer(r"<div\b|</div>", html):
+            if tok.group().startswith("<div"):
+                stack.append(tok.start())
+            elif stack:
+                match[stack.pop()] = tok.end()
+        target = None
+        for av in avatars:
+            encl = sorted(
+                o for o in match
+                if o < av and match[o] > av
+                and 'class="post-content' not in html[o:html.find(">", o) + 1]
+            )
+            for o in encl:  # 바깥→안: Team 이름 담은 flex 박스가 저자박스 래퍼
+                opentag = html[o:html.find(">", o) + 1]
+                seg = html[o:match[o]]
+                if ("flex" in opentag and "display" in opentag
+                        and re.search(r">[^<>]{0,60}?\bTeam\b\s*</div>", seg)):
+                    target = o
+                    break
+            if target is not None:
+                break
+        if target is None:
+            break
+        html = _cut_balanced_div(html, target)
+    return html
+
+
 def strip_fabricated_eeat(html: str) -> str:
     """허위 E-E-A-T(가짜 저자·팀·경력·테스트 주장)를 본문에서 제거한다.
 
     AdSense '저가치/기만적 콘텐츠' 위반 요소 — 완전 자동 AI 글에 실재하지 않는
-    'Bytepulse Engineering Team / 5+ years testing / 3 senior developers / 30-day
-    production benchmarks'를 표기하던 3개 구조 블록을 제거한다.
-    본문(topic·섹션·진짜 출처)과 post-content 래퍼는 보존한다.
+    '팀/5+ years testing/senior developers/30-day benchmarks'를 표기하던 구조 블록 제거.
+    저자박스는 팀명 무관하게 구조로 잡는다(_strip_author_boxes). 본문·post-content 래퍼는 보존.
     """
     before = html
-    # ① 가짜 저자 박스 (아바타 'BP' + 'Bytepulse Engineering Team')
-    html = _remove_div_containing(html, "Bytepulse Engineering Team")
+    # ① 가짜 저자/팀 박스 (아바타 + 'X Team') — 팀명 하드코딩 없이 구조로
+    html = _strip_author_boxes(html)
     # ② 가짜 방법론 박스 ('How We Tested')
     html = _remove_div_containing(html, "How We Tested")
     # ③ 출처 섹션의 'Our Testing Data' 항목 (li 단위)

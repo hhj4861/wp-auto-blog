@@ -1,0 +1,32 @@
+name: GSC Sitemap Status
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: '대상 속성 URL (비우면 GSC_SITE_URL 시크릿)'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests google-auth
+      - name: GSC sitemap status
+        env:
+          GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
+          GSC_SITE_URL: ${{ github.event.inputs.site != '' && github.event.inputs.site || secrets.GSC_SITE_URL }}
+        run: python scripts/gsc_sitemap_status.py

@@ -99,6 +99,20 @@ def list_sites() -> list[str]:
     return [s.get("siteUrl") for s in r.json().get("siteEntry", [])]
 
 
+def list_sitemaps(site_url: str | None = None) -> list[dict]:
+    """제출된 사이트맵 목록·처리 상태 조회 (sitemaps.list).
+
+    각 항목: {path, lastSubmitted, lastDownloaded, isPending, isSitemapsIndex,
+             warnings, errors, contents:[{type, submitted, indexed}]}
+    비어 있으면 '제출된 사이트맵 없음' = 미발견의 유력 원인.
+    """
+    site = requests.utils.quote(site_url or SITE_URL, safe="")
+    r = requests.get(f"{API}/sites/{site}/sitemaps", headers=_headers(), timeout=30)
+    if r.status_code != 200:
+        raise SystemExit(f"GSC sitemaps 오류 {r.status_code}: {r.text[:300]}")
+    return r.json().get("sitemap", [])
+
+
 def inspect_url(page_url: str, site_url: str | None = None) -> dict:
     """URL Inspection API — 페이지의 실제 색인 상태 조회.
 

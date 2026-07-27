@@ -167,7 +167,8 @@ def insert_monetization(
 # '(Shop on Musinsa Global →)' 텍스트 플레이스홀더나 '(Shop on<a ...>' 같은
 # 깨진 마크업을 남긴다. 규칙은 프롬프트가 아니라 후처리 코드로 강제한다.
 SHOP_SEARCH_URLS = {
-    "yesstyle": "https://www.yesstyle.com/en/search?q={q}",
+    # /en/search?q=는 404 — /en/list.html?q=가 검색 결과 페이지 (2026-07-27 실측).
+    "yesstyle": "https://www.yesstyle.com/en/list.html?q={q}",
     "musinsa global": "https://global.musinsa.com/us/search?keyword={q}",
     "musinsa": "https://global.musinsa.com/us/search?keyword={q}",
     "amazon": "https://www.amazon.com/s?k={q}",

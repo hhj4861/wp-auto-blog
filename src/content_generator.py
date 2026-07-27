@@ -1952,13 +1952,13 @@ For EACH product mentioned, include a styled shopping link box:
 <div class="product-link" style="background:#ffe4ec;border-left:4px solid #ff6b9d;padding:15px;margin:20px 0;border-radius:4px;">
   <strong>🛍️ Buy [Product Name]:</strong><br>
   <a href="https://www.amazon.com/s?k=[product+name]+korean+skincare" target="_blank" rel="nofollow" style="color:#ff6b9d;">Shop on Amazon →</a> |
-  <a href="https://www.yesstyle.com/en/search?q=[product+name]" target="_blank" rel="nofollow" style="color:#ff6b9d;">YesStyle →</a>
+  <a href="https://www.yesstyle.com/en/list.html?q=[product+name]" target="_blank" rel="nofollow" style="color:#ff6b9d;">YesStyle →</a>
 </div>
 
 Example links:
 - Amazon: https://www.amazon.com/s?k=cosrx+snail+mucin
-- YesStyle: https://www.yesstyle.com/en/search?q=cosrx+snail
-- Olive Young Global: https://global.oliveyoung.com/search?q=[product]
+- YesStyle: https://www.yesstyle.com/en/list.html?q=cosrx+snail
+- Olive Young Global: https://global.oliveyoung.com/display/search?query=[product]
 
 IMPORTANT: Replace [product+name] with URL-encoded product name!
 
@@ -2359,11 +2359,11 @@ For brands/products mentioned, include styled shopping link boxes:
 
 <div class="shop-link" style="background:#f8f4ff;border-left:4px solid #9b59b6;padding:15px;margin:20px 0;border-radius:4px;">
   <strong>🛍️ Shop [Brand/Style Name]:</strong><br>
-  <a href="https://www.yesstyle.com/en/search?q=[brand+name]" target="_blank" rel="nofollow" style="color:#9b59b6;">Shop on YesStyle →</a>
+  <a href="https://www.yesstyle.com/en/list.html?q=[brand+name]" target="_blank" rel="nofollow" style="color:#9b59b6;">Shop on YesStyle →</a>
 </div>
 
 Example links to use:
-- YesStyle: https://www.yesstyle.com/en/search?q=[search+term]
+- YesStyle: https://www.yesstyle.com/en/list.html?q=[search+term]
 - Musinsa Global: https://www.musinsa.com/search/musinsa/goods?q=[search+term]
 - Amazon: https://www.amazon.com/s?k=korean+fashion+[item]
 
@@ -2436,7 +2436,7 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 **3. STYLE COMPARISON TABLE (for multiple items):**
 <table style="width:100%;border-collapse:collapse;background:#1a1a2e;border-radius:8px;overflow:hidden;margin:20px 0;">
 <tr style="background:linear-gradient(135deg,#9b59b6,#8e44ad);"><th style="padding:12px;color:#fff;">Brand</th><th style="padding:12px;color:#fff;">Price Range</th><th style="padding:12px;color:#fff;">Style</th><th style="padding:12px;color:#fff;">Best For</th><th style="padding:12px;color:#fff;">Shop</th></tr>
-<tr><td style="padding:12px;color:#e0e0e0;">[Brand]</td><td style="padding:12px;color:#fff;">$XX-$XX</td><td style="padding:12px;color:#888;">[Minimalist/Streetwear/etc]</td><td style="padding:12px;color:#888;">[Body type/occasion]</td><td style="padding:12px;"><a href="https://www.yesstyle.com/en/search?q=[brand]" style="color:#9b59b6;">YesStyle →</a></td></tr>
+<tr><td style="padding:12px;color:#e0e0e0;">[Brand]</td><td style="padding:12px;color:#fff;">$XX-$XX</td><td style="padding:12px;color:#888;">[Minimalist/Streetwear/etc]</td><td style="padding:12px;color:#888;">[Body type/occasion]</td><td style="padding:12px;"><a href="https://www.yesstyle.com/en/list.html?q=[brand]" style="color:#9b59b6;">YesStyle →</a></td></tr>
 </table>
 
 **4. STYLE TIP BOX:**
@@ -2459,7 +2459,7 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
 ⚠️ NEVER use placeholder links like "(Shop YesStyle →)" without actual URL!
 ⚠️ ALWAYS use SEARCH URLs (never direct product URLs that may 404):
    - Amazon: https://www.amazon.com/s?k=korean+fashion+[item]
-   - YesStyle: https://www.yesstyle.com/en/search?q=[brand+or+item]
+   - YesStyle: https://www.yesstyle.com/en/list.html?q=[brand+or+item]
    - Example: https://www.amazon.com/s?k=korean+fashion+oversized+blazer
 
 === Avoid ===
@@ -3098,8 +3098,10 @@ Be specific and factual based on search results. Always use the most recent vers
             "K-Fashion": "+korean+fashion",
         }.get(category, "")
 
-        amazon_url = f"https://www.amazon.com/s?k={encoded_term}{category_suffix}"
-        yesstyle_url = f"https://www.yesstyle.com/en/search?q={encoded_term}"
+        # URL 형식은 SHOP_SEARCH_URLS(단일 소스)에서 — 몰이 경로를 바꾸면 거기만 고친다
+        from src.monetization import SHOP_SEARCH_URLS
+        amazon_url = SHOP_SEARCH_URLS["amazon"].format(q=f"{encoded_term}{category_suffix}")
+        yesstyle_url = SHOP_SEARCH_URLS["yesstyle"].format(q=encoded_term)
 
         fixed_count = 0
 

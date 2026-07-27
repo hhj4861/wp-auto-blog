@@ -383,6 +383,9 @@ class WordPressClient:
             "content": wrapped_html,
             "excerpt": excerpt,
             "status": status.value,
+            # 내부링크마다 셀프 핑백이 승인 대기로 쌓여 노이즈 — 사이트 기본값과
+            # 무관하게 항상 닫는다 (2026-07-27)
+            "ping_status": "closed",
             "meta": {
                 # Yoast SEO 메타 설정
                 "_yoast_wpseo_metadesc": content.meta_description,

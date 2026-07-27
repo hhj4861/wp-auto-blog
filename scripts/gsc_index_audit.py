@@ -14,13 +14,15 @@
 
 import os
 import sys
-import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from src.gsc_client import inspect_url, fetch_sitemap_urls, SITE_URL  # noqa: E402
+from src.gsc_client import (  # noqa: E402
+    inspect_url, fetch_sitemap_urls, SITE_URL, _access_token,
+)
 
 MAX = int(os.getenv("GSC_MAX", "500"))
-SLEEP = float(os.getenv("GSC_SLEEP", "0.4"))  # 쿼터·레이트 완충
+WORKERS = int(os.getenv("GSC_WORKERS", "8"))  # 동시 요청(쿼터 600/분·속성 내)
 
 
 def bucket(cov: str) -> str:
@@ -55,27 +57,34 @@ def main() -> int:
         return 1
     total_sitemap = len(urls)
     urls = urls[:MAX]
-    print(f"사이트맵 URL {total_sitemap}개 (이번 검사 {len(urls)}개)\n")
+    print(f"사이트맵 URL {total_sitemap}개 (이번 검사 {len(urls)}개, 동시 {WORKERS})\n",
+          flush=True)
 
     counts: dict[str, int] = {}
     not_indexed: dict[str, list[str]] = {}
     errors = 0
+    done = 0
 
-    for i, u in enumerate(urls, 1):
-        res = inspect_url(u, SITE_URL)
-        if res.get("verdict") == "ERROR":
-            errors += 1
-            if errors <= 3:
-                print(f"  [검사오류] {u} — {res.get('error')}")
-            time.sleep(SLEEP)
-            continue
-        cat = bucket(res.get("coverageState", ""))
-        counts[cat] = counts.get(cat, 0) + 1
-        if cat != "INDEXED":
-            not_indexed.setdefault(cat, []).append(u)
-        if i % 25 == 0:
-            print(f"  ...{i}/{len(urls)} 검사")
-        time.sleep(SLEEP)
+    def _work(u: str):
+        return u, inspect_url(u, SITE_URL)
+
+    _access_token()  # 토큰 사전 발급 — 스레드 동시 갱신 경합 방지
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+        futures = [ex.submit(_work, u) for u in urls]
+        for fut in as_completed(futures):
+            u, res = fut.result()
+            done += 1
+            if res.get("verdict") == "ERROR":
+                errors += 1
+                if errors <= 3:
+                    print(f"  [검사오류] {u} — {res.get('error')}", flush=True)
+                continue
+            cat = bucket(res.get("coverageState", ""))
+            counts[cat] = counts.get(cat, 0) + 1
+            if cat != "INDEXED":
+                not_indexed.setdefault(cat, []).append(u)
+            if done % 50 == 0:
+                print(f"  ...{done}/{len(urls)} 검사", flush=True)
 
     checked = sum(counts.values())
     indexed = counts.get("INDEXED", 0)

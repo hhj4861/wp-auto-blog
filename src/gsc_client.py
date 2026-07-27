@@ -41,11 +41,18 @@ def _load_sa_info() -> dict:
         "GSC 자격증명 없음 — GSC_SA_KEY_B64 / GSC_SA_JSON / GSC_SA_JSON_PATH 중 하나 필요")
 
 
+_CREDS = None
+
+
 def _access_token() -> str:
-    creds = service_account.Credentials.from_service_account_info(
-        _load_sa_info(), scopes=SCOPES)
-    creds.refresh(GoogleAuthRequest())
-    return creds.token
+    """서비스 계정 토큰. creds 객체를 캐시해 만료 시에만 갱신(호출마다 재발급 방지)."""
+    global _CREDS
+    if _CREDS is None:
+        _CREDS = service_account.Credentials.from_service_account_info(
+            _load_sa_info(), scopes=SCOPES)
+    if not _CREDS.valid:
+        _CREDS.refresh(GoogleAuthRequest())
+    return _CREDS.token
 
 
 def _headers() -> dict:

@@ -113,6 +113,19 @@ def list_sitemaps(site_url: str | None = None) -> list[dict]:
     return r.json().get("sitemap", [])
 
 
+def submit_sitemap(feedpath: str, site_url: str | None = None) -> dict:
+    """사이트맵 재제출(PUT sitemaps.submit) — 강제 재수집 유도.
+
+    성공 204. 소유자 권한 필요 → 제한적/읽기 SA면 403. {status, ok, detail} 반환.
+    feedpath는 전체 URL(예: https://bytepulse.io/sitemap_index.xml).
+    """
+    site = requests.utils.quote(site_url or SITE_URL, safe="")
+    feed = requests.utils.quote(feedpath, safe="")
+    r = requests.put(f"{API}/sites/{site}/sitemaps/{feed}", headers=_headers(), timeout=30)
+    return {"status": r.status_code, "ok": r.status_code in (200, 204),
+            "detail": (r.text or "")[:300]}
+
+
 def inspect_url(page_url: str, site_url: str | None = None) -> dict:
     """URL Inspection API — 페이지의 실제 색인 상태 조회.
 

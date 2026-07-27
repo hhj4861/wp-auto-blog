@@ -135,10 +135,29 @@ def fetch_sitemap_urls(site_url: str | None = None, limit: int = 5000) -> list[s
     <sitemap><loc>(하위 인덱스)와 <url><loc>(실제 URL)를 구분해 최종 URL만 반환.
     """
     import re as _re
+    import time as _time
 
     base = (site_url or SITE_URL).rstrip("/")
     seen: set[str] = set()
     out: list[str] = []
+    # 기본 python-requests UA는 Hostinger WAF 봇룰에 걸릴 수 있어 브라우저 UA 사용
+    ua = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}
+
+    def _get(u: str):
+        """WAF/IP 변동 대응 — 3회 재시도."""
+        last = None
+        for _ in range(3):
+            try:
+                r = requests.get(u, headers=ua, timeout=30)
+                if r.status_code == 200:
+                    return r
+                last = f"HTTP {r.status_code}"
+            except Exception as e:  # noqa: BLE001
+                last = str(e)[:120]
+            _time.sleep(1.5)
+        print(f"[사이트맵 요청 실패] {u} — {last}")
+        return None
 
     def _locs(xml: str) -> list[str]:
         return _re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml)
@@ -147,25 +166,20 @@ def fetch_sitemap_urls(site_url: str | None = None, limit: int = 5000) -> list[s
     roots = [f"{base}/sitemap_index.xml", f"{base}/wp-sitemap.xml"]
     queue: list[str] = []
     for root in roots:
-        try:
-            r = requests.get(root, timeout=30)
-            if r.status_code == 200 and "<loc>" in r.text:
-                # 인덱스면 하위 사이트맵, 아니면 URL 목록
-                if "<sitemapindex" in r.text:
-                    queue.extend(_locs(r.text))
-                else:
-                    queue.append(root)  # 단일 사이트맵
-                break
-        except Exception:
-            continue
+        r = _get(root)
+        if r is not None and "<loc>" in r.text:
+            # 인덱스면 하위 사이트맵, 아니면 URL 목록
+            if "<sitemapindex" in r.text:
+                queue.extend(_locs(r.text))
+            else:
+                queue.append(root)  # 단일 사이트맵
+            break
 
     for sm in queue:
         if len(out) >= limit:
             break
-        try:
-            r = requests.get(sm, timeout=30)
-            if r.status_code != 200:
-                continue
+        r = _get(sm)
+        if r is not None:
             for loc in _locs(r.text):
                 if loc.endswith(".xml"):  # 중첩 인덱스
                     continue
@@ -174,6 +188,4 @@ def fetch_sitemap_urls(site_url: str | None = None, limit: int = 5000) -> list[s
                     out.append(loc)
                     if len(out) >= limit:
                         break
-        except Exception:
-            continue
     return out

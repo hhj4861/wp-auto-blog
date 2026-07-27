@@ -1,0 +1,26 @@
+# 쇼핑몰 검색 URL 형식 헬스체크 (주간)
+#
+# 몰이 검색 경로를 예고 없이 바꾸면(YesStyle 2026-07, 올리브영 2026-07) 글의
+# 쇼핑 링크가 전부 404가 된다. 이 잡이 SHOP_SEARCH_URLS의 각 형식을 실제 요청해
+# 404/410이면 잡을 실패시킨다 → GitHub이 소유자에게 실패 메일 발송(시크릿 불필요).
+#
+# 실패 시 복구: src/monetization.py SHOP_SEARCH_URLS 새 형식 교체 →
+# scripts/fix_shop_link_formats.py REWRITES에 (구, 신) 추가 → 로컬/CI에서 실행.
+name: Link Health Check
+
+on:
+  schedule:
+    - cron: '0 1 * * 1'  # 매주 월 10:00 KST
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests loguru  # loguru는 src.monetization import에 필요
+      - name: Check shop search URL formats
+        run: python scripts/check_shop_links.py

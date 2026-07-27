@@ -1,0 +1,38 @@
+name: GSC Index Audit
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: '대상 속성 URL (비우면 GSC_SITE_URL 시크릿)'
+        required: false
+        default: ''
+        type: string
+      max:
+        description: '검사 URL 상한 (쿼터 ~2000/일)'
+        required: false
+        default: '500'
+        type: string
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests google-auth
+      - name: GSC index audit
+        env:
+          GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
+          GSC_SITE_URL: ${{ github.event.inputs.site != '' && github.event.inputs.site || secrets.GSC_SITE_URL }}
+          GSC_MAX: ${{ github.event.inputs.max }}
+        run: python scripts/gsc_index_audit.py

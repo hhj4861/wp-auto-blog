@@ -21,6 +21,8 @@ from google.oauth2 import service_account
 from google.auth.transport.requests import Request as GoogleAuthRequest
 
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
+# 쓰기(사이트맵 제출 등)는 full 스코프 필요 — 읽기 경로엔 영향 없음
+WRITE_SCOPES = ["https://www.googleapis.com/auth/webmasters"]
 # URL 접두어 속성이면 끝에 슬래시 포함
 SITE_URL = os.getenv("GSC_SITE_URL", "https://trendpulse.blog/")
 API = "https://searchconsole.googleapis.com/webmasters/v3"
@@ -121,7 +123,12 @@ def submit_sitemap(feedpath: str, site_url: str | None = None) -> dict:
     """
     site = requests.utils.quote(site_url or SITE_URL, safe="")
     feed = requests.utils.quote(feedpath, safe="")
-    r = requests.put(f"{API}/sites/{site}/sitemaps/{feed}", headers=_headers(), timeout=30)
+    creds = service_account.Credentials.from_service_account_info(
+        _load_sa_info(), scopes=WRITE_SCOPES)
+    creds.refresh(GoogleAuthRequest())
+    headers = {"Authorization": f"Bearer {creds.token}",
+               "Content-Type": "application/json"}
+    r = requests.put(f"{API}/sites/{site}/sitemaps/{feed}", headers=headers, timeout=30)
     return {"status": r.status_code, "ok": r.status_code in (200, 204),
             "detail": (r.text or "")[:300]}
 

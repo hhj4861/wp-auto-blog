@@ -196,16 +196,20 @@ def fetch_related(api: str, auth: tuple) -> list:
 
 
 def resolve_category(api: str, auth: tuple) -> list:
-    """뷰티/미용 우선, 없으면 건강, 그것도 없으면 미분류."""
-    for name in ("뷰티", "미용", "건강"):
-        cats = requests.get(
-            f"{api}/categories", auth=auth,
-            params={"search": name, "_fields": "id,name"}, timeout=30,
-        ).json()
-        ids = [c["id"] for c in cats if c["name"] == name][:1]
-        if ids:
-            print(f"카테고리: {name} (#{ids[0]})")
-            return ids
+    """뷰티/미용 우선, 없으면 건강, 그것도 없으면 미분류. 조회 실패는 치명적 아님."""
+    try:
+        for name in ("뷰티", "미용", "건강"):
+            cats = requests.get(
+                f"{api}/categories", auth=auth,
+                params={"search": name, "_fields": "id,name"}, timeout=30,
+            ).json()
+            ids = [c["id"] for c in cats if c["name"] == name][:1]
+            if ids:
+                print(f"카테고리: {name} (#{ids[0]})")
+                return ids
+    except Exception as e:
+        print(f"카테고리 조회 실패(미분류로 진행): {e}")
+        return []
     print("카테고리 매칭 없음 — 미분류")
     return []
 

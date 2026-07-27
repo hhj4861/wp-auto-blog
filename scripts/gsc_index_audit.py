@@ -26,23 +26,31 @@ WORKERS = int(os.getenv("GSC_WORKERS", "8"))  # 동시 요청(쿼터 600/분·�
 
 
 def bucket(cov: str) -> str:
-    """coverageState를 거친 카테고리로 묶는다."""
+    """coverageState를 거친 카테고리로 묶는다. GSC가 languageCode=ko라 한/영 병행 매칭."""
     c = cov.lower()
-    if "and indexed" in c or c == "indexed":
+    neg_ko = ("않" in cov)  # '…색인이 생성되지 않음' 등 부정형
+    # 색인됨 (영: submitted and indexed / 한: 제출되고 색인이 생성되었습니다)
+    if ("and indexed" in c or c == "indexed"
+            or ("색인이 생성되었" in cov and not neg_ko)):
         return "INDEXED"
-    if "noindex" in c:
+    # Google이 아직 모르는 URL (미발견)
+    if "unknown" in c or "알려지지 않은" in cov or "알 수 없" in cov:
+        return "UNKNOWN_TO_GOOGLE(미발견)"
+    if "noindex" in c or "색인 생성 허용 안 함" in cov:
         return "NOINDEX"
-    if "duplicate" in c or "canonical" in c or "alternate" in c:
+    if ("duplicate" in c or "canonical" in c or "alternate" in c
+            or "중복" in cov or "대체 페이지" in cov or "표준" in cov):
         return "DUPLICATE/CANONICAL"
-    if "crawled" in c and "not indexed" in c:
+    if ("crawled" in c and "not indexed" in c) or ("크롤링됨" in cov and neg_ko):
         return "CRAWLED_NOT_INDEXED"
-    if "discovered" in c and "not indexed" in c:
+    if ("discovered" in c and "not indexed" in c) or (
+            ("발견됨" in cov or "검색된" in cov) and neg_ko):
         return "DISCOVERED_NOT_INDEXED"
-    if "redirect" in c:
+    if "redirect" in c or "리디렉션" in cov:
         return "REDIRECT"
-    if "not found" in c or "404" in c:
+    if "not found" in c or "404" in c or "찾을 수 없음" in cov:
         return "NOT_FOUND"
-    if "blocked" in c or "robots" in c:
+    if "blocked" in c or "robots" in c or "차단" in cov:
         return "BLOCKED"
     return f"OTHER: {cov or '(빈값)'}"
 

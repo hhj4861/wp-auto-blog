@@ -758,11 +758,12 @@
       "예약방법"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 47700,
     "competition": "높음",
     "verdict": "go",
-    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준"
+    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준",
+    "completed_at": "2026-07-27T05:45:31.360042"
   },
   {
     "topic": "전입신고 인터넷으로 하는 방법 총정리 (정부24)",

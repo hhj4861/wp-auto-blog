@@ -11,6 +11,11 @@ on:
         required: false
         default: '90'
         type: string
+      site:
+        description: '대상 속성 URL (비우면 GSC_SITE_URL 시크릿)'
+        required: false
+        default: ''
+        type: string
 
 jobs:
   report:
@@ -28,6 +33,6 @@ jobs:
       - name: GSC report
         env:
           GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
-          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          GSC_SITE_URL: ${{ github.event.inputs.site != '' && github.event.inputs.site || secrets.GSC_SITE_URL }}
           GSC_DAYS: ${{ github.event.inputs.days }}
         run: python scripts/gsc_report.py

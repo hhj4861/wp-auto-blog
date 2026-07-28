@@ -443,6 +443,35 @@ def _strip_author_boxes(html: str) -> str:
     return html
 
 
+def _remove_callout_box(html: str, marker: str, max_len: int = 5000) -> str:
+    """marker를 담은 **가장 안쪽** 박스 div를 제거한다(콜아웃 박스 정밀 타깃).
+
+    _remove_div_containing은 최외곽을 잘라 큰 섹션까지 지울 위험이 있어, 방법론/벤치마크
+    박스는 innermost + 크기 상한으로 안전하게 제거한다. max_len 초과 시 과다제거로 보고 건너뜀.
+    """
+    idx = html.find(marker)
+    if idx == -1:
+        return html
+    stack, match = [], {}
+    for tok in re.finditer(r"<div\b|</div>", html):
+        if tok.group().startswith("<div"):
+            stack.append(tok.start())
+        elif stack:
+            match[stack.pop()] = tok.end()
+    encl = [
+        o for o in match
+        if o < idx < match[o]
+        and 'class="post-content' not in html[o:html.find(">", o) + 1]
+    ]
+    if not encl:
+        return html
+    o = max(encl)  # 가장 안쪽 = 박스 자신
+    if match[o] - o > max_len:  # 과다제거 방지 — 콜아웃 박스는 작다
+        logger.warning(f"E-E-A-T 박스 과다제거 방지 스킵 ('{marker}', {match[o]-o}자)")
+        return html
+    return _cut_balanced_div(html, o)
+
+
 def strip_fabricated_eeat(html: str) -> str:
     """허위 E-E-A-T(가짜 저자·팀·경력·테스트 주장)를 본문에서 제거한다.
 
@@ -453,9 +482,28 @@ def strip_fabricated_eeat(html: str) -> str:
     before = html
     # ① 가짜 저자/팀 박스 (아바타 + 'X Team') — 팀명 하드코딩 없이 구조로
     html = _strip_author_boxes(html)
-    # ② 가짜 방법론 박스 ('How We Tested')
-    html = _remove_div_containing(html, "How We Tested")
-    # ③ 출처 섹션의 'Our Testing Data' 항목 (li 단위)
+    # ② 가짜 방법론 박스 ('How We Tested/Reviewed/Analyzed/…' + Benchmark/Testing Methodology)
+    #    지어낸 1인칭 자체 테스트 주장 블록. 헤더 문구 무관하게 박스 통째 제거.
+    method_markers = (
+        "How We Tested", "How We Reviewed", "How We Analyzed", "How We Picked",
+        "How We Chose", "How We Evaluated", "How We Selected", "How We Ranked",
+        "How We Compared", "How We Researched", "Benchmark Methodology",
+        "Testing Methodology", 'id="benchmark-methodology"',
+    )
+    for _ in range(8):  # 한 글에 다수 방어
+        prev = html
+        for marker in method_markers:
+            html = _remove_callout_box(html, marker, max_len=6000)
+        if html == prev:
+            break
+    # ③ 타깃(박스)이 사라진 인라인 'our benchmark/testing/analysis ↓' 앵커·스팬·잔여텍스트
+    html = re.sub(r"<a\b[^>]*#benchmark-methodology[^>]*>.*?</a>", "", html, flags=re.S)
+    html = re.sub(
+        r"<span[^>]*>\s*\(?\s*our\s+(?:benchmark|testing|analysis)\s*↓?\s*\)?\s*</span>",
+        "", html, flags=re.S | re.I,
+    )
+    html = re.sub(r"\(\s*our\s+(?:benchmark|testing|analysis)\s*↓\s*\)", "", html, flags=re.I)
+    # ④ 출처 섹션의 'Our Testing Data' 항목 (li 단위)
     html = re.sub(
         r"<li[^>]*>(?:(?!</li>).){0,400}?Our Testing Data(?:(?!</li>).){0,400}?</li>",
         "", html, flags=re.S,

@@ -27,6 +27,7 @@ FOCUS_KW = "arbutin cream"
 CAT_ID = 213  # K-Beauty
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("arbutin") + "&rwardCode=HHJZ4861&utm_source=influencers")
+AMAZON = "https://amzn.to/3TpjfYe"  # SiteStripe 검색링크(alpha arbutin cream), tag=bytepulse08-20
 
 H2 = ('<h2 style="font-size:1.5em;margin:40px auto 20px auto;max-width:800px;'
       'background:linear-gradient(135deg,#f472b6,#ec4899);-webkit-background-clip:text;'
@@ -47,6 +48,11 @@ FTC = (
 def olive_link(text: str) -> str:
     return (f'<a href="{OLIVE}" target="_blank" rel="nofollow sponsored" '
             f'style="color:#9b59b6;font-weight:600;">{text}</a>')
+
+
+def amazon_link(text: str) -> str:
+    return (f'<a href="{AMAZON}" target="_blank" rel="nofollow sponsored" '
+            f'style="color:#ff6b9d;font-weight:600;">{text}</a>')
 
 
 def faq_section_en(pairs: list) -> str:
@@ -155,7 +161,7 @@ sunscreen is pouring water into a leaky bucket.</p>
 {P}Keep it simple: ① a stated <strong>alpha arbutin</strong> content, ② minimal fragrance/alcohol
 irritants, ③ a texture and price you'll use daily. Korean brands offer well-formulated arbutin
 creams, serums, and ampoules — compare them on {olive_link("Olive Young Global")} (ships
-internationally).</p>
+internationally), or browse alpha arbutin creams and serums on {amazon_link("Amazon")}.</p>
 
 {H2}Cautions — SPF Is Half the Job</h2>
 {P}Three things. First, <strong>without sunscreen the effect cancels out</strong> — UV just makes

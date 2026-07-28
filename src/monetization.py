@@ -496,6 +496,13 @@ def strip_fabricated_eeat(html: str) -> str:
             html = _remove_callout_box(html, marker, max_len=6000)
         if html == prev:
             break
+    # ②-b 박스 없이 노출된 방법론 변종: <hN>How We X</hN> + 바로 뒤 <ul> (자기완결 블록)
+    html = re.sub(
+        r"<h[1-6][^>]*>[^<]*How We "
+        r"(?:Tested|Reviewed|Analyzed|Picked|Chose|Evaluated|Selected|Ranked|Compared|Researched)"
+        r"[^<]*</h[1-6]>\s*<ul\b[^>]*>.*?</ul>",
+        "", html, flags=re.S | re.I,
+    )
     # ③ 타깃(박스)이 사라진 인라인 'our benchmark/testing/analysis ↓' 앵커·스팬·잔여텍스트
     html = re.sub(r"<a\b[^>]*#benchmark-methodology[^>]*>.*?</a>", "", html, flags=re.S)
     html = re.sub(

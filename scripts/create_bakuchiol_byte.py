@@ -28,7 +28,7 @@ META_DESC = (
 FOCUS_KW = "bakuchiol serum"
 CAT_ID = 213  # K-Beauty
 
-AMAZON = "https://www.amazon.com/s?k=" + quote("bakuchiol serum") + "&tag=bytepulse08-20"
+AMAZON = "https://amzn.to/4fZzSCs"  # SiteStripe 검색링크(bakuchiol serum), tag=bytepulse08-20
 OLIVE = (
     "https://global.oliveyoung.com/display/search?query="
     + quote("bakuchiol") + "&rwardCode=HHJZ4861&utm_source=influencers"

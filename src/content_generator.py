@@ -792,43 +792,28 @@ Stats Card WITH verified external source (GitHub, official site):
 </div>
 </div>
 
-Stats Card for OWN TESTING data (Link to benchmark section with anchor!):
-<div style="flex: 1; min-width: 140px; background: #1a1a2e; padding: 16px; border-radius: 8px; text-align: center;">
-<div style="font-size: 1.8em; font-weight: bold; color: #00d9ff;">0.8s</div>
-<div style="color: #94a3b8; font-size: 0.85em;">Response Time</div>
-<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.75em;">our benchmark ↓</a>
-</div>
-
-⚠️ IMPORTANT: When using "our testing/benchmark" data, you MUST:
-1. Link to #benchmark-methodology anchor (NOT external URL)
-2. Include the BENCHMARK METHODOLOGY section at the end of the article (see below)
+⚠️ NO FIRST-PARTY TESTING: This site did NOT run its own tests or benchmarks. NEVER present
+"our testing / our benchmark" data, never write "our benchmark ↓", and never link to a
+#benchmark-methodology anchor. Attribute EVERY stat to a verified external source instead.
 
 Source Citation (use inline):
 - External verified: <a href="https://github.com/..." style="color: #3b82f6;">GitHub</a>
-- Own testing data: <a href="#benchmark-methodology" style="color: #3b82f6;">our benchmark ↓</a>
+- Public benchmark / official docs: <span style="color:#94a3b8;font-size:0.85em;">(per official [Tool] docs)</span>
 
 **SOURCE REQUIREMENTS (CRITICAL - NO FAKE URLS!):**
 ⚠️ NEVER generate fake or hallucinated URLs! Only use these verified URL patterns:
 
 **ALLOWED SOURCE LINKS (use ONLY these exact patterns):**
-- Internal anchor: #benchmark-methodology (for your own testing data - MUST use this!)
 - Official product homepages: https://cursor.sh, https://linear.app, https://github.com/features/copilot
 - GitHub repos: https://github.com/[org]/[repo] (ONLY if repo actually exists)
 - Official pricing pages: https://[product].com/pricing
 - Stack Overflow Survey: https://survey.stackoverflow.co/2024
 - npm packages: https://www.npmjs.com/package/[package-name]
 
-**FOR "OUR TESTING" DATA - ALWAYS USE ANCHOR LINK:**
-When you write stats like "0.8s response time", you MUST add this EXACT anchor link:
-<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em;">our benchmark ↓</a>
-
-Example - CORRECT format for stats card:
-<div style="font-size: 1.8em; color: #00d9ff;">0.8s</div>
-<div style="color: #94a3b8;">Response Time</div>
-<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.75em;">our benchmark ↓</a>
-
-❌ WRONG: <span>our benchmark ↓</span> (this is NOT clickable!)
-✅ RIGHT: <a href="#benchmark-methodology">our benchmark ↓</a> (this IS clickable!)
+**FOR ANY STAT - CITE A VERIFIED EXTERNAL SOURCE (never "our testing"):**
+When you write a stat like "0.8s response time", attribute it to a public source:
+"0.8s response time <span style="color:#94a3b8;font-size:0.85em;">(per official [Tool] docs)</span>"
+Never use a #benchmark-methodology anchor and never claim first-party benchmarks.
 
 **BANNED - DO NOT USE:**
 - ❌ Specific news article URLs (Tom's Hardware, TechCrunch articles) - these are often hallucinated
@@ -841,15 +826,16 @@ Example - CORRECT format for stats card:
 - ✅ "Based on TSMC investor briefings"
 - ❌ DO NOT link to specific article URLs
 
-**FOR YOUR OWN TESTING DATA - USE ANCHOR LINKS + METHODOLOGY SECTION:**
-When you claim data from "our testing", you MUST include a Benchmark Methodology section.
+**STATS ATTRIBUTION - EXTERNAL SOURCES ONLY:**
+Every metric must trace to a public source (official docs, published benchmark, GitHub).
+NEVER claim "our testing" and NEVER add a Benchmark Methodology section.
 
 Stats reference format:
-- ✅ "0.8s response time <a href='#benchmark-methodology'>our benchmark ↓</a>"
+- ✅ "0.8s response time <span style='color:#94a3b8;font-size:0.85em;'>(per official docs)</span>"
 
 **DATA RICHNESS CHECKLIST:**
 □ At least 1 pricing comparison table (link to official pricing pages only)
-□ At least 3 performance/benchmark metrics (from your testing or official docs)
+□ At least 3 performance/benchmark metrics (from official docs or public benchmarks)
 □ GitHub/npm stats with direct links to repo/package pages
 □ News citations as TEXT only (no fake article URLs)
 
@@ -925,7 +911,7 @@ You MUST follow these rules to achieve high Yoast SEO scores:
 2. **Keyphrase Density (Minimum 5 times - CRITICAL!)**:
    - Repeat the core keyphrase at least 5 times throughout the content
    - Distribute across: introduction (1), body sections (3), conclusion (1)
-   - Example: "In this comparison...", "Our testing shows...", "When comparing...", "The comparison reveals...", "Final verdict on this comparison..."
+   - Example: "In this comparison...", "Public benchmarks show...", "When comparing...", "The comparison reveals...", "Final verdict on this comparison..."
 
 3. **Keyphrase in H2 Subheadings**:
    - Include keyphrase or synonyms in at least 1-2 H2 headings
@@ -1194,67 +1180,13 @@ Include 4-5 REAL questions developers would ask. Use this exact HTML format:
 - NO fake questions like "Why is X the best?" (sounds like marketing)
 - H2 heading MUST start with "FAQ" (not "Frequently Asked Questions")
 
-=== BENCHMARK METHODOLOGY SECTION (MANDATORY when using "our testing" data!) ===
-If you reference ANY data from "our testing/benchmark/analysis", you MUST include this section.
-Place it AFTER FAQ section, BEFORE Final Verdict.
-
-<div id="benchmark-methodology" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f172a 100%); padding: 24px; border-radius: 12px; margin: 32px 0; border: 1px solid #3b82f6;">
-<h3 style="color: #00d9ff; margin: 0 0 20px 0; font-size: 1.2em;">📊 Benchmark Methodology</h3>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
-<div style="background: #1e293b; padding: 16px; border-radius: 8px;">
-<div style="color: #94a3b8; font-size: 0.85em; margin-bottom: 4px;">Test Environment</div>
-<div style="color: #e8e8e8; font-weight: 600;">MacBook Pro M3, 16GB RAM</div>
-</div>
-<div style="background: #1e293b; padding: 16px; border-radius: 8px;">
-<div style="color: #94a3b8; font-size: 0.85em; margin-bottom: 4px;">Test Period</div>
-<div style="color: #e8e8e8; font-weight: 600;">January 15-22, 2026</div>
-</div>
-<div style="background: #1e293b; padding: 16px; border-radius: 8px;">
-<div style="color: #94a3b8; font-size: 0.85em; margin-bottom: 4px;">Sample Size</div>
-<div style="color: #e8e8e8; font-weight: 600;">100+ code completions</div>
-</div>
-</div>
-
-<table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
-<thead>
-<tr style="border-bottom: 2px solid #3b82f6;">
-<th style="text-align: left; padding: 12px; color: #00d9ff;">Metric</th>
-<th style="text-align: center; padding: 12px; color: #00d9ff;">[Tool A]</th>
-<th style="text-align: center; padding: 12px; color: #00d9ff;">[Tool B]</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom: 1px solid #334155;">
-<td style="padding: 12px; color: #e8e8e8;">Response Time (avg)</td>
-<td style="text-align: center; padding: 12px; color: #10b981; font-weight: 600;">0.8s</td>
-<td style="text-align: center; padding: 12px; color: #94a3b8;">1.2s</td>
-</tr>
-<tr style="border-bottom: 1px solid #334155;">
-<td style="padding: 12px; color: #e8e8e8;">Code Accuracy</td>
-<td style="text-align: center; padding: 12px; color: #10b981; font-weight: 600;">92%</td>
-<td style="text-align: center; padding: 12px; color: #94a3b8;">89%</td>
-</tr>
-<tr style="border-bottom: 1px solid #334155;">
-<td style="padding: 12px; color: #e8e8e8;">Context Understanding</td>
-<td style="text-align: center; padding: 12px; color: #94a3b8;">8.5/10</td>
-<td style="text-align: center; padding: 12px; color: #10b981; font-weight: 600;">9.0/10</td>
-</tr>
-</tbody>
-</table>
-
-<div style="color: #64748b; font-size: 0.85em; line-height: 1.6;">
-<strong style="color: #94a3b8;">Testing Methodology:</strong> We tested [X] code completion requests across React, Python, and TypeScript projects. Each tool was given identical prompts. Response time measured from request to first token. Accuracy determined by successful compilation and manual review.<br><br>
-<strong style="color: #94a3b8;">Limitations:</strong> Results may vary based on hardware, network conditions, and code complexity. This represents our specific testing environment.
-</div>
-</div>
-
-**BENCHMARK SECTION RULES:**
-- Replace [Tool A], [Tool B] with actual tool names being compared
-- Update metrics and values with your ACTUAL test results
-- Be HONEST about limitations
-- Include at least 3 metrics in the comparison table
-- This section MUST have id="benchmark-methodology" for anchor links to work
+=== NO BENCHMARK METHODOLOGY SECTION (BANNED) ===
+Do NOT create a "Benchmark Methodology" section, a #benchmark-methodology anchor, or any
+"We tested / our test environment / test period / our testing methodology" block. This site
+runs NO first-party tests or benchmarks — such a section is fabricated E-E-A-T and violates
+AdSense/Google trust policy. Attribute every metric INLINE to a verified external source
+(official docs, published benchmark, GitHub) instead. The comparison table itself is fine as
+long as its numbers are sourced externally, not from a claimed "our" benchmark.
 
 === SOURCE VERIFICATION RULES (CRITICAL - NO HALLUCINATED URLS!) ===
 ⚠️ NEVER GENERATE FAKE URLS! This is the #1 quality killer.
@@ -1646,7 +1578,7 @@ DO NOT use Markdown. Use only HTML tags."""
         if mode == "kculture":
             html = self._fix_shopping_links(html, topic, category or "")
 
-        # Fix benchmark anchor links - ensure proper <a href="#benchmark-methodology"> tags
+        # (구) 벤치마크 앵커 주입 — 조작 E-E-A-T라 no-op으로 비활성(호출은 무해하게 유지)
         html = self._fix_benchmark_anchor_links(html)
 
         # Add FTC disclosure for US market affiliate content (kculture mode)
@@ -3186,127 +3118,10 @@ Be specific and factual based on search results. Always use the most recent vers
         return html
 
     def _fix_benchmark_anchor_links(self, html: str) -> str:
-        """Post-process to ensure benchmark/methodology anchor links are properly implemented.
-
-        LLMs often fail to generate proper anchor tags, outputting "(our benchmark ↓)"
-        as plain text instead of clickable links. This function:
-        1. Ensures research/methodology sections have proper id="benchmark-methodology"
-        2. Converts "(our benchmark ↓)" text into proper anchor links
-
-        Args:
-            html: HTML content with potentially missing anchor links
-
-        Returns:
-            HTML with proper anchor links to methodology section
+        """비활성화(no-op) — 이전엔 benchmark-methodology 앵커를 주입하고 '(our benchmark ↓)'
+        텍스트를 링크로 바꿔 **조작 1인칭 자체테스트 E-E-A-T를 적극 생성**했다. 이는 AdSense/
+        구글 신뢰 정책 위반이라 생성을 중단한다. 잔여 흔적은 출력단 strip_fabricated_eeat가 정리.
         """
-        import re
-
-        # Step 1: Ensure methodology section has proper id
-        # Use a more targeted approach - find divs containing specific methodology text
-        # and add id to them. Avoid TL;DR, Quick Verdict, etc.
-
-        # Keywords that indicate methodology sections (positive match)
-        methodology_keywords = [
-            r'How\s+We\s+Researched',
-            r'How\s+We\s+Tested',
-            r'How\s+We\s+Analyzed',
-            r'Research\s+Methodology',
-            r'Benchmark\s+Methodology',
-            r'Testing\s+Methodology',
-            r'Our\s+Testing\s+Methodology',
-            r'Testing\s+Environment',
-            r'Test\s+Environment',
-            r'Test\s+Setup',
-            r'Data\s+Sources',
-        ]
-
-        # Keywords that indicate NON-methodology sections (negative match - skip these)
-        excluded_keywords = [
-            r'TL;?DR',
-            r'Quick\s+Verdict',
-            r'Quick\s+Summary',
-            r'Final\s+Verdict',
-            r'Key\s+Takeaway',
-            r'Bottom\s+Line',
-        ]
-
-        # Check if anchor already exists
-        anchor_exists = 'benchmark-methodology' in html
-
-        if not anchor_exists:
-            # Find methodology section and insert anchor element before it
-            # WordPress sanitizes id attributes on divs, so we use <a name=""> instead
-            # This is the traditional HTML anchor method that WordPress allows
-
-            for kw in methodology_keywords:
-                # Look for h3/h4 headings containing methodology keywords
-                heading_pattern = rf'(<h[34][^>]*>[\s\S]*?)({kw})'
-                match = re.search(heading_pattern, html, re.IGNORECASE)
-                if match:
-                    # Insert anchor element right before the heading
-                    # Find the div containing this heading
-                    full_pattern = rf'(<div[^>]*>[\s\S]*?)(<h[34][^>]*>[\s\S]*?{kw})'
-                    full_match = re.search(full_pattern, html, re.IGNORECASE)
-                    if full_match:
-                        # Insert Gutenberg block anchor - WordPress preserves id in Gutenberg blocks
-                        # Use invisible heading with anchor support
-                        anchor = '<!-- wp:heading {"anchor":"benchmark-methodology","className":"screen-reader-text"} -->\n<h2 class="wp-block-heading screen-reader-text" id="benchmark-methodology"></h2>\n<!-- /wp:heading -->\n'
-                        insert_pos = full_match.start(1)
-                        div_tag_end = html.find('>', insert_pos) + 1
-                        html = html[:div_tag_end] + anchor + html[div_tag_end:]
-                        logger.debug(f"Added anchor 'benchmark-methodology' before section with: {kw}")
-                        anchor_exists = True
-                        break
-
-            # If no heading found, try to find the section by text content
-            if not anchor_exists:
-                for kw in methodology_keywords:
-                    pattern = rf'(<div[^>]*style="[^"]*(?:background|border)[^"]*"[^>]*>)([\s\S]*?{kw})'
-                    match = re.search(pattern, html, re.IGNORECASE)
-                    if match:
-                        # Check this isn't an excluded section
-                        content_preview = match.group(2)[:200]
-                        is_excluded = any(re.search(excl, content_preview, re.IGNORECASE)
-                                         for excl in excluded_keywords)
-                        if not is_excluded:
-                            # Insert Gutenberg block anchor - WordPress preserves id in Gutenberg blocks
-                            anchor = '<!-- wp:heading {"anchor":"benchmark-methodology","className":"screen-reader-text"} -->\n<h2 class="wp-block-heading screen-reader-text" id="benchmark-methodology"></h2>\n<!-- /wp:heading -->\n'
-                            html = html[:match.start(1)] + anchor + html[match.start(1):]
-                            logger.debug(f"Added anchor 'benchmark-methodology' before div with: {kw}")
-                            anchor_exists = True
-                            break
-
-        # Step 2: Convert "(our benchmark ↓)" text into proper anchor links
-        # Only convert if we have a methodology anchor to link to
-        if 'benchmark-methodology' in html:
-            benchmark_text_patterns = [
-                # "(our benchmark ↓)" - most common
-                (r'\(our\s+benchmark\s*↓?\)',
-                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our benchmark ↓</a>'),
-                # "(our testing ↓)"
-                (r'\(our\s+testing\s*↓?\)',
-                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our testing ↓</a>'),
-                # "(our analysis ↓)"
-                (r'\(our\s+analysis\s*↓?\)',
-                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our analysis ↓</a>'),
-                # "our benchmark" without parentheses but with arrow
-                (r'our\s+benchmark\s*↓',
-                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">our benchmark ↓</a>'),
-                # "(see methodology below)" or similar
-                (r'\(see\s+methodology\s*(?:below|↓)?\)',
-                 '<a href="#benchmark-methodology" style="color: #3b82f6; font-size: 0.85em; text-decoration: none;">see methodology ↓</a>'),
-            ]
-
-            converted_count = 0
-            for pattern, replacement in benchmark_text_patterns:
-                matches = len(re.findall(pattern, html, re.IGNORECASE))
-                if matches > 0:
-                    html = re.sub(pattern, replacement, html, flags=re.IGNORECASE)
-                    converted_count += matches
-
-            if converted_count > 0:
-                logger.info(f"Converted {converted_count} benchmark references to anchor links")
-
         return html
 
     def _parse_seo_format(self, response: str) -> tuple[str, str, str, str, str]:

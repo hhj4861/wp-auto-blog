@@ -16,7 +16,9 @@ from urllib.parse import quote
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.monetization import check_quality, insert_monetization  # noqa: E402
+from src.monetization import (  # noqa: E402
+    COUPANG_DISCLOSURE, add_coupang_disclosure, check_quality, insert_monetization,
+)
 from src.post_format import H2_GRADIENT as H2, P, UL, LI, faq_section, sources_section  # noqa: E402
 
 SLUG = "exfoliation-peeling-care-guide-2026"
@@ -28,6 +30,7 @@ META_DESC = (
 FOCUS_KW = "각질 필링"
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("필링젤") + "&rwardCode=HHJZ4861&utm_source=influencers")
+COUPANG = "https://link.coupang.com/a/fKBw2PBPQ4"  # lptag=AF4383841
 
 DISCLOSURE = (
     '<div style="background:#2d2d3a;border-left:4px solid #10b981;padding:14px 18px;'
@@ -35,6 +38,15 @@ DISCLOSURE = (
     '<strong style="color:#6ee7b7;">제휴 안내:</strong> 이 글의 일부 링크는 제휴 링크로, '
     '구매 시 소정의 수수료를 받을 수 있습니다(구매자 추가 부담 없음).</div>'
 )
+
+
+def product_button(label: str, url: str) -> str:
+    return (
+        f'<p style="max-width:800px;margin:24px auto;"><a href="{url}" target="_blank" '
+        f'rel="nofollow sponsored" style="display:inline-block;background:#e84c3d;'
+        f'color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;'
+        f'font-weight:bold;">🛒 {label} 쿠팡 최저가 보기 →</a></p>'
+    )
 
 
 def olive_link(label: str) -> str:
@@ -99,7 +111,8 @@ ARTICLE = f"""
 {P}순서는 간단합니다. ① <strong>주 1~2회</strong>, 저녁에 세안 후 ② 필링 제품 사용(제품별 지시 시간 준수) ③ <strong>보습</strong> 충분히 ④ 낮엔 <strong>자외선 차단제</strong> 필수. 처음엔 <em>주 1회·저농도</em>로 시작해 피부 반응을 보며 늘리세요. '더 자주 = 더 매끈'이 아니라, <strong>과하면 장벽이 무너집니다.</strong></p>
 
 {H2}어떻게 고르나 — 올리브영에서 비교</h2>
-{P}고르는 기준은 ① 내 피부 타입에 맞는 <strong>성분(AHA/BHA/PHA)</strong> ② 향·알코올 등 불필요한 자극 성분이 적은지 ③ 매일이 아니라 <em>주 1~2회</em> 쓸 용량·가격. 올리브영에서 필링젤·필링패드·산 토너를 한눈에 비교할 수 있습니다.</p>
+{P}고르는 기준은 ① 내 피부 타입에 맞는 <strong>성분(AHA/BHA/PHA)</strong> ② 향·알코올 등 불필요한 자극 성분이 적은지 ③ 매일이 아니라 <em>주 1~2회</em> 쓸 용량·가격. 쿠팡·올리브영에서 필링젤·필링패드·산 토너를 한눈에 비교할 수 있습니다(가격·재고는 실시간 확인).</p>
+{product_button("각질 필링 제품", COUPANG)}
 {olive_link("각질 필링 제품")}
 
 {H2}주의사항 — '과각질 제거'가 진짜 위험</h2>
@@ -204,6 +217,8 @@ def main() -> int:
     related = fetch_related(api, auth)
 
     html = insert_monetization(ARTICLE.strip(), related_posts=related)
+    html = add_coupang_disclosure(html)
+    assert COUPANG_DISCLOSURE in html, "쿠팡 고지문 누락"
     html = (f'<div class="post-content category-뷰티" data-category="뷰티">\n'
             f'{hero}{DISCLOSURE}\n{html}\n</div>')
 

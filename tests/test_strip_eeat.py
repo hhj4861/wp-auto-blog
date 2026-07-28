@@ -98,3 +98,19 @@ def test_size_cap_prevents_section_over_removal():
     section = f'<div style="margin:20px;"><h3>Benchmark Methodology</h3>{big}</div>'
     out = strip_fabricated_eeat(_wrap(section))
     assert "Real article paragraph." in out  # 본문 보존(과다제거 스킵)
+
+
+def test_neutralizes_first_person_testing_prose():
+    html = _wrap(
+        "<p>In our testing, it absorbed instantly.</p>"
+        "<p>Based on our benchmarks across prototypes, the Pi 5 wins.</p>"
+        "<p>No greasy film in our tests. Consistent throughput (our benchmark testing) here.</p>"
+    )
+    out = strip_fabricated_eeat(html)
+    assert "our testing" not in out.lower()
+    assert "our benchmark" not in out.lower()
+    assert "our tests" not in out.lower()
+    # 문장 본문(주장)은 보존
+    assert "it absorbed instantly" in out
+    assert "the Pi 5 wins" in out
+    assert "In testing, it absorbed" in out  # 소유격만 탈락, 문장 유지

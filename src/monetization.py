@@ -515,6 +515,10 @@ def strip_fabricated_eeat(html: str) -> str:
         r"<li[^>]*>(?:(?!</li>).){0,400}?Our Testing Data(?:(?!</li>).){0,400}?</li>",
         "", html, flags=re.S,
     )
+    # ⑤ 본문 프로즈에 녹은 1인칭 자체테스트 '소유' 주장 중립화 (문장은 보존, 거짓 소유격만 제거)
+    #    "(our benchmark testing)" 괄호 삽입구는 통째 제거, 나머지는 'our' 소유격만 탈락.
+    html = re.sub(r"\(\s*our\s+benchmark\s+testing\s*\)", "", html, flags=re.I)
+    html = re.sub(r"\bour\s+(benchmark|testing|tests|lab)(s?)\b", r"\1\2", html, flags=re.I)
     if html != before:
         logger.info("허위 E-E-A-T 블록 제거됨")
     return html

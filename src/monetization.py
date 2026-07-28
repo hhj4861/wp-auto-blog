@@ -515,6 +515,13 @@ def strip_fabricated_eeat(html: str) -> str:
         r"<li[^>]*>(?:(?!</li>).){0,400}?Our Testing Data(?:(?!</li>).){0,400}?</li>",
         "", html, flags=re.S,
     )
+    # ④-b 잔여 빈 screen-reader benchmark-methodology 앵커(후처리가 남긴 무내용 h2) 제거
+    html = re.sub(
+        r"(?:<!--\s*wp:heading[^>]*-->\s*)?"
+        r'<h2[^>]*id="benchmark-methodology"[^>]*>\s*</h2>'
+        r"(?:\s*<!--\s*/wp:heading\s*-->)?",
+        "", html, flags=re.I,
+    )
     # ⑤ 본문 프로즈에 녹은 1인칭 자체테스트 '소유' 주장 중립화 (문장은 보존, 거짓 소유격만 제거)
     #    "(our benchmark testing)" 괄호 삽입구는 통째 제거, 나머지는 'our' 소유격만 탈락.
     html = re.sub(r"\(\s*our\s+benchmark\s+testing\s*\)", "", html, flags=re.I)

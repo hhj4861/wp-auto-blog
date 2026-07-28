@@ -27,6 +27,7 @@ FOCUS_KW = "korean exfoliation"
 CAT_ID = 213  # K-Beauty
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("peeling gel") + "&rwardCode=HHJZ4861&utm_source=influencers")
+AMAZON = "https://amzn.to/4fy1vBm"  # SiteStripe 검색링크(korean peeling gel), tag=bytepulse08-20
 
 H2 = ('<h2 style="font-size:1.5em;margin:40px auto 20px auto;max-width:800px;'
       'background:linear-gradient(135deg,#f472b6,#ec4899);-webkit-background-clip:text;'
@@ -47,6 +48,11 @@ FTC = (
 def olive_link(text: str) -> str:
     return (f'<a href="{OLIVE}" target="_blank" rel="nofollow sponsored" '
             f'style="color:#9b59b6;font-weight:600;">{text}</a>')
+
+
+def amazon_link(text: str) -> str:
+    return (f'<a href="{AMAZON}" target="_blank" rel="nofollow sponsored" '
+            f'style="color:#ff6b9d;font-weight:600;">{text}</a>')
 
 
 def faq_section_en(pairs: list) -> str:
@@ -143,7 +149,8 @@ NOT mean smoother — <strong>overdoing it breaks the barrier.</strong></p>
 {P}Keep it simple: ① an acid/format that matches your skin type (AHA/BHA/PHA), ② minimal
 fragrance/alcohol irritants, ③ a size and price for <em>1–2× weekly</em> use. Korean brands offer
 some of the best-formulated peeling gels, acid toners, and pads — compare them on
-{olive_link("Olive Young Global")} (ships internationally).</p>
+{olive_link("Olive Young Global")} (ships internationally), or browse a wider selection of
+peeling gels and AHA/BHA toners on {amazon_link("Amazon")}.</p>
 
 {H2}Cautions — Over-Exfoliating Is the Real Risk</h2>
 {P}Three rules. First, <strong>never exfoliate daily</strong> — stinging or redness means you've

@@ -859,12 +859,13 @@
       "상시시험"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 29700,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "컴퓨터활용능력"
+    "head_keyword": "컴퓨터활용능력",
+    "completed_at": "2026-07-28T05:17:50.661419"
   },
   {
     "topic": "산정특례 제도 총정리: 중증질환 의료비 본인부담 경감 신청법",

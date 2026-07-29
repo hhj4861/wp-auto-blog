@@ -26,7 +26,7 @@ META_DESC = (
 )
 FOCUS_KW = "korean greek yogurt"
 CAT_ID = 172  # K-Food
-AMAZON = "https://www.amazon.com/s?k=" + quote("greek yogurt") + "&tag=bytepulse08-20"
+AMAZON = "https://amzn.to/4fEE2OL"  # SiteStripe, tag=bytepulse08-20
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("probiotics") + "&rwardCode=HHJZ4861&utm_source=influencers")
 

@@ -1,7 +1,7 @@
 name: Coupang Affiliate Ops (trendpulse)
 
 permissions:
-  contents: read
+  contents: write  # 발행 시 생성되는 네이버 블로그용 파일(naver_export/)을 커밋해 로컬 동기화
 
 on:
   workflow_dispatch:
@@ -35,3 +35,16 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: python ${{ github.event.inputs.script }}
+
+      - name: Commit Naver export (발행 시 생성된 네이버 블로그용 파일 → 로컬 동기화)
+        run: |
+          if [ -n "$(git status --porcelain naver_export/ 2>/dev/null)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git pull --rebase --autostash origin main || true
+            git add naver_export/
+            git commit -m "chore(naver): 네이버 블로그용 export 갱신 [skip ci]" || true
+            git push origin HEAD:main || true
+          else
+            echo "naver_export 변경 없음 — 커밋 생략"
+          fi

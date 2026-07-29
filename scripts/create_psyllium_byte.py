@@ -25,7 +25,7 @@ META_DESC = (
 )
 FOCUS_KW = "psyllium husk"
 CAT_ID = 172  # K-Food
-AMAZON = "https://www.amazon.com/s?k=" + quote("psyllium husk") + "&tag=bytepulse08-20"
+AMAZON = "https://amzn.to/4h3ABUu"  # SiteStripe, tag=bytepulse08-20
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("fiber") + "&rwardCode=HHJZ4861&utm_source=influencers")
 

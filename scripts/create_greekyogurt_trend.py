@@ -16,8 +16,11 @@ from urllib.parse import quote
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.monetization import check_quality, insert_monetization  # noqa: E402
+from src.monetization import (  # noqa: E402
+    COUPANG_DISCLOSURE, add_coupang_disclosure, check_quality, insert_monetization,
+)
 from src.post_format import H2_GRADIENT as H2, P, UL, LI, faq_section, sources_section  # noqa: E402
+from src.naver_format import save_naver_export  # noqa: E402
 
 SLUG = "greek-yogurt-guide-2026"
 TITLE = "그릭요거트, 일반 요거트랑 뭐가 다를까 — 단백질·다이어트 완전정리 (2026)"
@@ -29,6 +32,7 @@ FOCUS_KW = "그릭요거트"
 # 그릭요거트 자체는 식품이라, 올리브영은 인접한 장건강 이너뷰티(유산균/프로바이오틱스)로 연결.
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("프로바이오틱스") + "&rwardCode=HHJZ4861&utm_source=influencers")
+COUPANG = "https://link.coupang.com/a/fMy5FilCqO"  # lptag=AF4383841
 
 DISCLOSURE = (
     '<div style="background:#2d2d3a;border-left:4px solid #10b981;padding:14px 18px;'
@@ -36,6 +40,15 @@ DISCLOSURE = (
     '<strong style="color:#6ee7b7;">제휴 안내:</strong> 이 글의 일부 링크는 제휴 링크로, '
     '구매 시 소정의 수수료를 받을 수 있습니다(구매자 추가 부담 없음).</div>'
 )
+
+
+def product_button(label: str, url: str) -> str:
+    return (
+        f'<p style="max-width:800px;margin:24px auto;"><a href="{url}" target="_blank" '
+        f'rel="nofollow sponsored" style="display:inline-block;background:#e84c3d;'
+        f'color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;'
+        f'font-weight:bold;">🛒 {label} 쿠팡 최저가 보기 →</a></p>'
+    )
 
 
 def olive_link(label: str) -> str:
@@ -100,7 +113,8 @@ ARTICLE = f"""
 </table>
 
 {H2}장 건강까지 챙기려면</h2>
-{P}그릭요거트도 유산균이 있지만 제품·공정에 따라 균이 줄 수 있습니다. <strong>장 건강이 주목적</strong>이라면 그릭요거트에 더해 <strong>유산균(프로바이오틱스) 보충</strong>을 병행하는 게 확실합니다. 올리브영에서 이너뷰티(유산균) 라인을 비교할 수 있습니다.</p>
+{P}그릭요거트도 유산균이 있지만 제품·공정에 따라 균이 줄 수 있습니다. <strong>장 건강이 주목적</strong>이라면 그릭요거트에 더해 <strong>유산균(프로바이오틱스) 보충</strong>을 병행하는 게 확실합니다. 쿠팡·올리브영에서 그릭요거트·유산균 제품을 비교할 수 있습니다(가격·재고 실시간 확인).</p>
+{product_button("그릭요거트·유산균", COUPANG)}
 {olive_link("유산균·프로바이오틱스")}
 
 {H2}주의사항</h2>
@@ -205,6 +219,8 @@ def main() -> int:
     related = fetch_related(api, auth)
 
     html = insert_monetization(ARTICLE.strip(), related_posts=related)
+    html = add_coupang_disclosure(html)
+    assert COUPANG_DISCLOSURE in html, "쿠팡 고지문 누락"
     html = (f'<div class="post-content category-건강" data-category="건강">\n'
             f'{hero}{DISCLOSURE}\n{html}\n</div>')
 
@@ -240,6 +256,8 @@ def main() -> int:
         r = requests.post(f"{api}/posts", auth=auth, json=body, timeout=60)
         r.raise_for_status()
         print(f"발행 완료: {r.json()['link']}")
+    # 발행 시점 네이버 블로그용 로컬 저장(반자동 — 네이버는 공식 발행 API 없음)
+    save_naver_export(SLUG, TITLE, ARTICLE, coupang_url=COUPANG)
     return 0
 
 

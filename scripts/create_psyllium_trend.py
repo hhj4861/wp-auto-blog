@@ -16,8 +16,11 @@ from urllib.parse import quote
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.monetization import check_quality, insert_monetization  # noqa: E402
+from src.monetization import (  # noqa: E402
+    COUPANG_DISCLOSURE, add_coupang_disclosure, check_quality, insert_monetization,
+)
 from src.post_format import H2_GRADIENT as H2, P, UL, LI, faq_section, sources_section  # noqa: E402
+from src.naver_format import save_naver_export  # noqa: E402
 
 SLUG = "psyllium-husk-fiber-guide-2026"
 TITLE = "차전자피, 변비·다이어트에 진짜 효과 있을까 — 식이섬유 완전정리 (2026)"
@@ -28,6 +31,7 @@ META_DESC = (
 FOCUS_KW = "차전자피"
 OLIVE = ("https://global.oliveyoung.com/display/search?query="
          + quote("식이섬유") + "&rwardCode=HHJZ4861&utm_source=influencers")
+COUPANG = "https://link.coupang.com/a/fMy8G5OEa4"  # lptag=AF4383841
 
 DISCLOSURE = (
     '<div style="background:#2d2d3a;border-left:4px solid #10b981;padding:14px 18px;'
@@ -35,6 +39,15 @@ DISCLOSURE = (
     '<strong style="color:#6ee7b7;">제휴 안내:</strong> 이 글의 일부 링크는 제휴 링크로, '
     '구매 시 소정의 수수료를 받을 수 있습니다(구매자 추가 부담 없음).</div>'
 )
+
+
+def product_button(label: str, url: str) -> str:
+    return (
+        f'<p style="max-width:800px;margin:24px auto;"><a href="{url}" target="_blank" '
+        f'rel="nofollow sponsored" style="display:inline-block;background:#e84c3d;'
+        f'color:#fff;padding:12px 26px;border-radius:8px;text-decoration:none;'
+        f'font-weight:bold;">🛒 {label} 쿠팡 최저가 보기 →</a></p>'
+    )
 
 
 def olive_link(label: str) -> str:
@@ -86,7 +99,8 @@ ARTICLE = f"""
 
 {H2}올바른 복용법</h2>
 {P}순서와 양이 중요합니다. ① 1회 <strong>티스푼 1~2</strong> 정도를 <strong>충분한 물(한 컵 이상)</strong>에 타서 바로 ② 하루 1~2회, 식전이 흔함 ③ 처음엔 <strong>소량부터</strong> 시작해 가스·팽만에 적응 ④ 하루 총 <strong>수분 섭취를 늘리기</strong>. 물이 부족하면 효과는커녕 막힐 수 있습니다.</p>
-{P}식이섬유 제품(가루·캡슐)은 올리브영 이너뷰티 라인에서도 비교할 수 있습니다.</p>
+{P}차전자피·식이섬유 제품(가루·캡슐)은 쿠팡·올리브영에서 비교할 수 있습니다(가격·재고 실시간 확인).</p>
+{product_button("차전자피·식이섬유", COUPANG)}
 {olive_link("식이섬유 제품")}
 
 {H2}⚠️ 주의사항 — 물과 약물 간격이 핵심</h2>
@@ -191,6 +205,8 @@ def main() -> int:
     related = fetch_related(api, auth)
 
     html = insert_monetization(ARTICLE.strip(), related_posts=related)
+    html = add_coupang_disclosure(html)
+    assert COUPANG_DISCLOSURE in html, "쿠팡 고지문 누락"
     html = (f'<div class="post-content category-건강" data-category="건강">\n'
             f'{hero}{DISCLOSURE}\n{html}\n</div>')
 
@@ -226,6 +242,8 @@ def main() -> int:
         r = requests.post(f"{api}/posts", auth=auth, json=body, timeout=60)
         r.raise_for_status()
         print(f"발행 완료: {r.json()['link']}")
+    # 발행 시점 네이버 블로그용 로컬 저장(반자동 — 네이버는 공식 발행 API 없음)
+    save_naver_export(SLUG, TITLE, ARTICLE, coupang_url=COUPANG)
     return 0
 
 

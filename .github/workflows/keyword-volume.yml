@@ -1,0 +1,27 @@
+name: Keyword Volume
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+
+jobs:
+  volume:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests loguru
+      - name: Keyword volume
+        env:
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+        run: python scripts/keyword_volume.py

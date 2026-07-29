@@ -42,6 +42,23 @@ def main():
     print(f"[요약] 클릭 {total_clicks} · 노출 {total_impr} · "
           f"색인·노출된 페이지 {len(pages)}개 · 가중평균순위 {avg_pos:.1f}\n")
 
+    # 일자별 추이 — 최근 증가/감소를 눈으로 확인 (최근 21일 또는 기간 내)
+    daily = query(s, e, ["date"])
+    daily.sort(key=lambda d: d["date"])
+    tail = daily[-21:]
+    print(f"[일자별 추이 — 최근 {len(tail)}일 (노출/클릭)]")
+    if tail:
+        peak = max(d["impressions"] for d in tail) or 1
+        for d in tail:
+            bar = "█" * round(d["impressions"] / peak * 28)
+            print(f"  {d['date']}  노출{d['impressions']:>4} 클릭{d['clicks']:>3}  {bar}")
+        half = len(daily) // 2
+        early = sum(d["impressions"] for d in daily[:half])
+        late = sum(d["impressions"] for d in daily[half:])
+        print(f"  → 전반부 노출 {early} vs 후반부 노출 {late} "
+              f"({'▲증가' if late > early else '▼감소' if late < early else '─유지'})")
+    print()
+
     pages.sort(key=lambda p: -p["impressions"])
     print(f"[상위 페이지 — 노출순 / 유지 대상] (총 {len(pages)}개 중 상위 20)")
     for p in pages[:20]:

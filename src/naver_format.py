@@ -37,14 +37,22 @@ def to_naver_blog(title: str, article_html: str, coupang_url: str | None = None)
     # ③ 연속 공백/빈 속성 정리
     html = re.sub(r"<(\w+)\s+>", r"<\1>", html)
 
-    parts = [
+    body = [
         f"<h2>{title}</h2>",
         "<!-- 네이버 SmartEditor에 붙여넣기 · 대표 이미지는 직접 업로드하세요 -->",
         html,
     ]
     if coupang_url and COUPANG_NAVER_DISCLOSURE not in html and "쿠팡 파트너스" not in html:
-        parts.append(COUPANG_NAVER_DISCLOSURE)
-    return "\n".join(parts)
+        body.append(COUPANG_NAVER_DISCLOSURE)
+    # 완전한 HTML 문서로 감싼다 — charset 선언이 없으면 브라우저/미리보기가 latin-1 로 열어
+    # 한글이 깨진다(파일 바이트는 UTF-8 정상). 붙여넣기용 본문은 <body> 안이다.
+    return (
+        "<!doctype html>\n"
+        '<html lang="ko"><head><meta charset="utf-8">'
+        f"<title>{title}</title></head>\n<body>\n"
+        + "\n".join(body)
+        + "\n</body></html>\n"
+    )
 
 
 def save_naver_export(

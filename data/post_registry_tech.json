@@ -2890,5 +2890,16 @@
     "category": "SaaS Reviews",
     "identifier": "cookiebot vs osano vs termly",
     "created_at": "2026-07-27T01:22:24.765147"
+  },
+  {
+    "topic": "7.1 Earthquake in Japan",
+    "title": "7.1 Japan Earthquake 2026: Critical Infrastructure Resilience Analysis",
+    "keywords": [
+      "earthquake",
+      "japan"
+    ],
+    "category": "AI Tools",
+    "identifier": "earthquake",
+    "created_at": "2026-07-29T01:10:24.767109"
   }
 ]

@@ -1840,7 +1840,7 @@ DO NOT use Markdown. Use only HTML tags."""
 - 너무 딥한 기술 용어 (일반 독자 타겟)
 """
 
-        # === K-Culture categories (k-pulse.blog - US market) ===
+        # === K-Culture categories (bytepulse.io - US market) ===
 
         elif category == "K-Beauty":
             return f"""
@@ -3359,7 +3359,7 @@ Be specific and factual based on search results. Always use the most recent vers
                 "gradient": "#10b981,#22d3ee",  # 에메랄드 → 시안
                 "accent": "#6ee7b7",             # 밝은 민트
             },
-            # K-Culture categories (k-pulse.blog)
+            # K-Culture categories (bytepulse.io)
             "K-Beauty": {
                 "gradient": "#f472b6,#ec4899",  # 핑크 계열 (뷰티)
                 "accent": "#f9a8d4",

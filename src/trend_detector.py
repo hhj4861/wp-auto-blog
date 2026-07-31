@@ -353,7 +353,7 @@ class TrendDetector:
             "pricing", "alternative",
         ],
 
-        # === k-pulse.blog (K-Culture for US market) ===
+        # === bytepulse.io (K-Culture for US market) ===
         "K-Beauty": [
             "korean skincare", "k-beauty", "kbeauty", "skincare routine",
             "olive young", "cosrx", "beauty of joseon", "some by mi",
@@ -406,7 +406,7 @@ class TrendDetector:
 
         Args:
             topic: Topic title to analyze
-            mode: 'general' for trendpulse.blog, 'tech' for bytepulse.io, 'kculture' for k-pulse.blog
+            mode: 'general' for trendpulse.blog, 'tech' for bytepulse.io, 'kculture' for bytepulse.io
 
         Returns:
             Category name (e.g., "테크", "K-Beauty", "AI Tools")
@@ -419,7 +419,7 @@ class TrendDetector:
             priority_order = ["생산성", "리뷰", "테크", "비즈니스", "건강", "취업"]
             default_category = "테크"
         elif mode == "kculture":
-            # K-Culture blog - k-pulse.blog
+            # K-Culture blog - bytepulse.io
             # K-Pop(트래픽) > K-Beauty(수익) > K-Food > K-Fashion
             priority_order = ["K-Pop", "K-Beauty", "K-Food", "K-Fashion"]
             default_category = "K-Beauty"

@@ -39,7 +39,7 @@ CATEGORY_SCHEDULE = {
     (6, "evening"): "건강",      # 일 오후
 }
 
-# K-Culture 카테고리 스케줄 (k-pulse.blog)
+# K-Culture 카테고리 스케줄 (bytepulse.io)
 # K-Pop(4회, 트래픽) > K-Beauty(3회, 수익) > K-Food(3회) > K-Fashion(2회)
 KCULTURE_CATEGORY_SCHEDULE = {
     (0, "morning"): "K-Beauty",   # 월 오전

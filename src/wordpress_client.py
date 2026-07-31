@@ -191,7 +191,7 @@ class WordPressClient:
         "Backend Dev": ["Backend", "API", "Database", "DevOps", "Server"],
         "Startup Tools": ["Startup", "MVP", "Growth", "Founder", "Business", "Indie Hacker"],
 
-        # === k-pulse.blog K-Culture 카테고리 (US 시장 타겟) ===
+        # === bytepulse.io K-Culture 카테고리 (US 시장 타겟) ===
         "K-Beauty": [
             "K-Beauty", "Korean Skincare", "Korean Beauty", "Skincare Routine",
             "Korean Cosmetics",

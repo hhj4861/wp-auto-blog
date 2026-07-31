@@ -72,7 +72,7 @@ def parse_args() -> argparse.Namespace:
         type=str,
         choices=["tech", "general", "kculture"],
         required=True,
-        help="Blog mode: 'tech' for bytepulse.io, 'general' for trendpulse.blog, 'kculture' for k-pulse.blog",
+        help="Blog mode: 'tech' for bytepulse.io, 'general' for trendpulse.blog, 'kculture' for bytepulse.io",
     )
 
     parser.add_argument(
@@ -179,7 +179,7 @@ def main() -> int:
     site_info = {
         "tech": "bytepulse.io (Tech)",
         "general": "trendpulse.blog (General)",
-        "kculture": "k-pulse.blog (K-Culture)",
+        "kculture": "bytepulse.io (K-Culture)",
     }
 
     logger.info("=" * 50)
@@ -210,7 +210,7 @@ def main() -> int:
     language_map = {
         "general": "ko",   # trendpulse.blog - 한국어
         "tech": "en",      # bytepulse.io - English
-        "kculture": "en",  # k-pulse.blog - English (US market)
+        "kculture": "en",  # bytepulse.io - English (US market)
     }
 
     # Create content config (CLI vs API mode + language)

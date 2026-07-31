@@ -775,12 +775,13 @@
       "확정일자"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 43500,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "전입신고인터넷"
+    "head_keyword": "전입신고인터넷",
+    "completed_at": "2026-07-31T05:31:44.855341"
   },
   {
     "topic": "2026 실업급여 신청 방법과 조건, 지급액 계산 총정리",

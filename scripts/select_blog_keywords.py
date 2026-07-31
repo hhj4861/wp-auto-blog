@@ -32,7 +32,10 @@ NICHE_SEEDS = [
 BLOCK = {
     "더마팩토리", "올리브영", "쿠팡", "아이허브", "닥터지", "메디힐",
     "냄새", "세균", "콜레스테롤", "탈모", "갱년기",  # 너무 광범위/단독 헤드텀
+    "줄기세포", "어린선", "염화칼슘", "떡뻥",         # 의료/공업/영유아 노이즈
 }
+# 어필리에이트 부적합 패턴(부분일치) — 계산기/도구·처방약·질병명은 상품 판매 연결 안 됨.
+BLOCK_SUBSTR = ("계산기", "위고비", "삭센다", "오젬픽", "부작용", "가격", "후기")
 MIN_VOLUME = 3000       # 이 미만은 블로그 트래픽 기여 작음
 BLOCK_COMP = {"높음"}    # 경쟁 높음 = 저권위라 상위노출 어려움 → 제외
 
@@ -60,6 +63,8 @@ def is_blog_worthy(kw: str, meta: dict) -> bool:
     if meta["comp"] in BLOCK_COMP:
         return False
     if norm(kw) in {norm(b) for b in BLOCK}:
+        return False
+    if any(sub in kw for sub in BLOCK_SUBSTR):  # 계산기·처방약·후기 등 비상품
         return False
     if len(kw) < 2 or not re.search(r"[가-힣A-Za-z]", kw):
         return False

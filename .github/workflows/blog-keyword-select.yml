@@ -1,0 +1,50 @@
+name: Blog Keyword Select
+
+permissions:
+  contents: write  # 선정 결과(data/blog_targets.json) 커밋 → 로컬/후속단계 연결
+
+on:
+  workflow_dispatch:
+    inputs:
+      top_n:
+        description: '선정할 키워드 수'
+        required: false
+        default: '2'
+        type: string
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests loguru
+      - name: Select blog keywords
+        env:
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          WP_TECH_URL: ${{ secrets.WP_TECH_URL }}
+          WP_TECH_USERNAME: ${{ secrets.WP_TECH_USERNAME }}
+          WP_TECH_APP_PASSWORD: ${{ secrets.WP_TECH_APP_PASSWORD }}
+          SELECT_TOP_N: ${{ github.event.inputs.top_n }}
+        run: python scripts/select_blog_keywords.py
+      - name: Commit selection
+        run: |
+          if [ -n "$(git status --porcelain data/blog_targets.json 2>/dev/null)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git pull --rebase --autostash origin main || true
+            git add data/blog_targets.json
+            git commit -m "chore(keywords): 블로그 키워드 동적 선정 [skip ci]" || true
+            git push origin HEAD:main || true
+          fi

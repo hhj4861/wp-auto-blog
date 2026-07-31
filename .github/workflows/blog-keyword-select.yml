@@ -11,6 +11,8 @@ on:
         required: false
         default: '2'
         type: string
+  schedule:
+    - cron: '30 0 * * *'  # 매일 09:30 KST — 키워드 선정 + 스캘폴드 생성
 
 jobs:
   select:
@@ -38,13 +40,17 @@ jobs:
           WP_TECH_APP_PASSWORD: ${{ secrets.WP_TECH_APP_PASSWORD }}
           SELECT_TOP_N: ${{ github.event.inputs.top_n }}
         run: python scripts/select_blog_keywords.py
-      - name: Commit selection
+
+      - name: Generate post scaffolds (선정 키워드 → 채우기용 캐논 스크립트)
+        run: python scripts/scaffold_post.py
+
+      - name: Commit selection + scaffolds
         run: |
-          if [ -n "$(git status --porcelain data/blog_targets.json 2>/dev/null)" ]; then
+          if [ -n "$(git status --porcelain data/blog_targets.json scripts/draft_*_trend.py 2>/dev/null)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git pull --rebase --autostash origin main || true
-            git add data/blog_targets.json
-            git commit -m "chore(keywords): 블로그 키워드 동적 선정 [skip ci]" || true
+            git add data/blog_targets.json scripts/draft_*_trend.py
+            git commit -m "chore(keywords): 동적 선정 + 스캘폴드 생성 [skip ci]" || true
             git push origin HEAD:main || true
           fi

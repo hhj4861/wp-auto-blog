@@ -122,6 +122,8 @@ class ContentConfig:
         model_gemini: Gemini model name
         model_openai: OpenAI model name
         language: Content language - 'ko' for Korean, 'en' for English
+        thinking_tokens: Max thinking tokens for Claude Agent SDK (0 = disabled,
+            backward-compatible). Defaults from CONTENT_THINKING_TOKENS env var.
     """
 
     min_words: int = 800
@@ -133,6 +135,9 @@ class ContentConfig:
     model_openai: str = "gpt-4o-mini"
     use_cli: bool = True  # True: Claude CLI (OAuth), False: Anthropic API (key)
     language: str = "ko"  # 'ko' for Korean (general), 'en' for English (tech)
+    thinking_tokens: int = field(
+        default_factory=lambda: int(os.getenv("CONTENT_THINKING_TOKENS", "0") or "0")
+    )
 
 
 class ContentGenerator:
@@ -688,7 +693,7 @@ GOAL: Headline Analyzer score 60+, informative yet engaging, NO clickbait spam.
    → "Critical Differences" ✓ "Key Performance Metrics" ✓
 
 4. **NUMBERS** (Include when factual):
-   → "7 Key Differences", "2026 Benchmark", "30-Day Testing Results"
+   → "7 Key Differences", "2026 Benchmark", "Key Performance Metrics"
 
 **HIGH-SCORING TITLE FORMULAS (60+ verified):**
 - "[Tool A] vs [Tool B] 2026: Complete [Aspect] Comparison"
@@ -1211,9 +1216,12 @@ long as its numbers are sourced externally, not from a claimed "our" benchmark.
 3. **For official product info - Homepage ONLY:**
    ✅ "$20/month <a href='https://cursor.sh/pricing'>(Cursor)</a>"
 
-4. **For your own testing data:**
-   ✅ "In our 30-day benchmark: [data] <span style='color:#94a3b8;'>(Bytepulse testing)</span>"
-   ✅ Include test conditions: "MacBook Pro M3, 16GB RAM"
+4. **NO first-party testing data (BANNED):**
+   ❌ NEVER claim "our benchmark / our testing / (Bytepulse testing) / In our 30-day benchmark /
+      test conditions like MacBook Pro M3" — this site runs NO first-party tests. Fabricated
+      first-party testing violates AdSense/Google trust policy.
+   ✅ Attribute EVERY metric to a verified external source (official docs, published benchmark,
+      GitHub) exactly as in formats 1–3 above.
 
 **Remember:** It's better to have NO link than a BROKEN link!
 
@@ -2498,7 +2506,10 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         if claude_agent_query is None:
             raise ImportError("claude-agent-sdk not installed. Run: pip install claude-agent-sdk")
 
-        sdk_options = ClaudeAgentOptions(model=self.config.model_anthropic)
+        opts_kwargs = {"model": self.config.model_anthropic}
+        if getattr(self.config, "thinking_tokens", 0) and self.config.thinking_tokens > 0:
+            opts_kwargs["max_thinking_tokens"] = self.config.thinking_tokens
+        sdk_options = ClaudeAgentOptions(**opts_kwargs)
 
         async def _async_query():
             messages = []

@@ -122,6 +122,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           # Build command with optional flags
           CMD="python -m src.main --mode general --max-posts 1"
@@ -229,6 +230,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           # Build command with optional flags
           # Uses Claude Agent SDK (claude_agent_query) which reads ANTHROPIC_API_KEY
@@ -334,6 +336,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           CMD="python -m src.main --mode kculture --category K-Pop --max-posts 1 --auto-publish"
           if [ -n "${{ github.event.inputs.topic }}" ]; then
@@ -420,6 +423,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           CMD="python -m src.main --mode kculture --category K-Beauty --max-posts 1 --auto-publish"
           if [ -n "${{ github.event.inputs.topic }}" ]; then
@@ -509,6 +513,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           CMD="python -m src.main --mode kculture --category K-Food --max-posts 1 --auto-publish"
           if [ -n "${{ github.event.inputs.topic }}" ]; then
@@ -595,6 +600,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           CMD="python -m src.main --mode kculture --category K-Fashion --max-posts 1 --auto-publish"
           if [ -n "${{ github.event.inputs.topic }}" ]; then
@@ -695,6 +701,7 @@ jobs:
         timeout-minutes: 30
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
           # 스케줄별 카테고리 선택: 화/목=취업, 토=건강, 월/수/금=생활정보
           # 수동 실행(mode=queue)은 category 입력을 따르고, 없으면 생활정보

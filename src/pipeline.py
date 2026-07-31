@@ -88,6 +88,7 @@ from src.content_generator import ContentGenerator, ContentType, ContentConfig
 from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
 from src.keyword_gate import evaluate as evaluate_keyword
+from src.identity_gate import validate_identity
 from src.monetization import (
     DEFAULT_SHOP_RETAILER,
     add_coupang_disclosure,
@@ -536,6 +537,13 @@ class BlogPipeline:
                     focus_keyphrase=content.focus_keyphrase,
                     meta_description=content.meta_description,
                     require_korean=(self.config.mode == "general"),
+                )
+                # 정체성 게이트: 블로그별 언어/카테고리 정합성 (같은 처리 흐름에 합침)
+                gate_issues += validate_identity(
+                    mode=self.config.mode,
+                    category=category,
+                    title=content.title,
+                    html=content.html,
                 )
                 if gate_issues:
                     logger.warning(f"품질 게이트 실패 {len(gate_issues)}건: {gate_issues}")

@@ -7,6 +7,8 @@
 
 from __future__ import annotations
 
+import re
+
 # 그린-틸 그라디언트 H2 (캐논)
 H2_GRADIENT = (
     '<h2 style="font-size:1.5em;margin:40px auto 20px auto;max-width:800px;'
@@ -14,6 +16,41 @@ H2_GRADIENT = (
     '-webkit-background-clip:text;-webkit-text-fill-color:transparent;'
     'background-clip:text;">'
 )
+
+# 블로그별 H2 액센트 (통합 캐논 — 정체성 유지)
+#   green: trendpulse(그린-틸, 캐논 기준) / blue: bytepulse(블루-시안, 기존 본문 팔레트)
+H2_ACCENTS = {
+    "green": ("#10b981", "#22d3ee"),
+    "blue": ("#0ea5e9", "#22d3ee"),
+}
+
+_H2_OPEN_RE = re.compile(r"<h2\b([^>]*)>", re.IGNORECASE)
+_ID_ATTR_RE = re.compile(r'\bid\s*=\s*"([^"]*)"', re.IGNORECASE)
+
+
+def _canon_h2_open(accent: str, id_attr: str = "") -> str:
+    c1, c2 = H2_ACCENTS.get(accent, H2_ACCENTS["green"])
+    id_part = f' id="{id_attr}"' if id_attr else ""
+    return (
+        f'<h2{id_part} style="font-size:1.5em;margin:40px auto 20px auto;max-width:800px;'
+        f"background:linear-gradient(135deg,{c1},{c2});"
+        "-webkit-background-clip:text;-webkit-text-fill-color:transparent;"
+        'background-clip:text;">'
+    )
+
+
+def to_canon_headings(html: str, accent: str = "green") -> str:
+    """자동생성 본문의 <h2> 열림 태그를 캐논 그라디언트로 정규화한다.
+
+    통합 템플릿의 '룩'을 강제하되 **텍스트/구조는 불변**이고 id(앵커·FAQ 스키마용)는
+    보존한다. 후처리 초반(수익화·스키마 삽입 전)에 돌려 일관된 스타일을 확보한다.
+    """
+    def _repl(m: re.Match) -> str:
+        attrs = m.group(1) or ""
+        idm = _ID_ATTR_RE.search(attrs)
+        return _canon_h2_open(accent, idm.group(1) if idm else "")
+
+    return _H2_OPEN_RE.sub(_repl, html)
 P = '<p style="max-width:800px;margin:20px auto;text-align:left;line-height:1.8;color:#cbd5e1;">'
 UL = '<ul style="max-width:800px;margin:20px auto;line-height:1.8;color:#cbd5e1;padding-left:24px;">'
 LI = '<li style="margin-bottom:8px;">'

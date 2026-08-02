@@ -47,12 +47,12 @@ def _ad_slots() -> list[str]:
     return list(DEFAULT_AD_SLOTS)
 
 
-def _ad_unit(client: str, slot: str) -> str:
+def _ad_unit(client: str, slot: str, label: str = "광고") -> str:
     return f'''
 <div style="max-width:800px;margin:35px auto;">
-<p style="text-align:center;color:#94a3b8;font-size:0.75em;letter-spacing:2px;margin:0 0 4px 0;">광고</p>
+<p style="text-align:center;color:#94a3b8;font-size:0.75em;letter-spacing:2px;margin:0 0 4px 0;">{label}</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client}" crossorigin="anonymous"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="{client}" data-ad-slot="{slot}"></ins>
+<ins class="adsbygoogle" style="display:block; text-align:center; min-height:280px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="{client}" data-ad-slot="{slot}"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
 </div>
 '''
@@ -121,12 +121,17 @@ def insert_monetization(
     html: str,
     official_link: str = "",
     related_posts: list[dict] | None = None,
+    ad_label: str = "광고",
+    related_heading: str = "📌 함께 보면 좋은 글",
 ) -> str:
     """광고 유닛/CTA/관련 글 박스를 H2 앵커 기준으로 삽입한다.
 
     배치 (H2 4개 이상일 때):
       도입부 직후 광고#1 → [섹션2 끝 CTA] → 섹션3 앞 광고#2 → 결론 앞 관련글 → 말미 CTA
     H2가 적으면 광고#1 + 말미 요소만 배치한다.
+
+    ad_label/related_heading은 블로그 언어에 맞춘다(bytepulse 영문은 'Ad'/'Related Posts').
+    Auto Ads보다 고가시성(인-아티클) 위치라 RPM이 높다 — 전 모드 공통 적용.
     """
     client, slots = _ad_client(), _ad_slots()
     cta = parse_official_link(official_link)
@@ -134,18 +139,18 @@ def insert_monetization(
 
     inserts: list[tuple[int, str]] = []
     if len(h2s) >= 4:
-        inserts.append((h2s[0], _ad_unit(client, slots[0])))
+        inserts.append((h2s[0], _ad_unit(client, slots[0], ad_label)))
         if cta:
             inserts.append((h2s[2], _cta_button(
                 f"🏛️ {cta[0]} 바로가기", cta[1], "공식 사이트로 이동합니다")))
         if len(slots) > 1:
-            inserts.append((h2s[3], _ad_unit(client, slots[1])))
+            inserts.append((h2s[3], _ad_unit(client, slots[1], ad_label)))
         if related_posts:
-            inserts.append((h2s[-1], _related_box(related_posts)))
+            inserts.append((h2s[-1], _related_box(related_posts, related_heading)))
     elif h2s:
-        inserts.append((h2s[0], _ad_unit(client, slots[0])))
+        inserts.append((h2s[0], _ad_unit(client, slots[0], ad_label)))
         if related_posts:
-            inserts.append((h2s[-1], _related_box(related_posts)))
+            inserts.append((h2s[-1], _related_box(related_posts, related_heading)))
     else:
         logger.warning("H2 없음 — 광고 삽입 생략")
 

@@ -95,3 +95,27 @@ def test_category_normalization_slug_and_name():
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
+
+
+# --- 회귀: trendpulse 실제 카테고리 오탐 방지 (2026-08-04 실버그) ---------------
+# ALLOWED_CATEGORIES["general"]에 4개(건강·뷰티·미용·다이어트)만 있어 취업·생활정보·
+# 리뷰·테크·비즈니스·생산성 정상 발행글이 draft로 오탐 차단됐던 버그. CATEGORY_TAGS
+# 사일로 7종 + 뷰티/미용/다이어트 전부 통과해야 한다.
+@pytest.mark.parametrize(
+    "category",
+    ["취업", "생활정보", "리뷰", "테크", "비즈니스", "생산성", "건강", "뷰티", "미용", "다이어트"],
+)
+def test_general_real_trendpulse_categories_pass(category):
+    issues = validate_identity(
+        mode="general", category=category,
+        title="근로계약서 표준 양식과 서명 전 확인 조항 총정리", html=_KO_HTML,
+    )
+    assert issues == [], f"{category}는 trendpulse 정상 카테고리인데 차단됨: {issues}"
+
+
+def test_general_off_identity_category_still_blocked():
+    # K-Pop(bytepulse 전용)을 trendpulse에 넣으면 여전히 차단돼야 한다
+    issues = validate_identity(
+        mode="general", category="K-Pop", title="테스트 제목입니다", html=_KO_HTML,
+    )
+    assert any("카테고리" in i for i in issues)

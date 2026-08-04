@@ -59,8 +59,19 @@ ALLOWED_CATEGORIES: dict[str, set[str]] = {
         "uncategorized",
     },
     # trendpulse 한글 블로그
+    # ⚠️ 소스 오브 트루스 = wordpress_client.CATEGORY_TAGS 의 trendpulse 사일로 키
+    #    (테크·비즈니스·생산성·리뷰·건강·생활정보·취업) + create 스크립트가 쓰는 뷰티/미용/다이어트.
+    #    카테고리 추가 시 여기도 갱신할 것 — 누락되면 정상 발행이 draft로 오탐 차단됨.
     "general": {
+        # CATEGORY_TAGS 사일로 7종
+        "테크",
+        "비즈니스",
+        "생산성",
+        "리뷰",
         "건강",
+        "생활정보",
+        "취업",
+        # 미용/다이어트 계열 (수기 create 스크립트 실사용)
         "뷰티",
         "미용",
         "다이어트",

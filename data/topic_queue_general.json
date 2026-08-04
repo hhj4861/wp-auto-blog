@@ -932,12 +932,13 @@
       "수습기간"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 17390,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "근로계약서"
+    "head_keyword": "근로계약서",
+    "completed_at": "2026-08-04T05:17:54.293508"
   },
   {
     "topic": "알바이력서양식 총정리 (2026)",

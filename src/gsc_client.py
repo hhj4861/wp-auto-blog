@@ -15,6 +15,7 @@ from __future__ import annotations
 import base64
 import json
 import os
+import time
 
 import requests
 from google.oauth2 import service_account
@@ -147,7 +148,18 @@ def inspect_url(page_url: str, site_url: str | None = None) -> dict:
     body = {"inspectionUrl": page_url,
             "siteUrl": site_url or SITE_URL,
             "languageCode": "ko"}
-    r = requests.post(INSPECT_API, headers=_headers(), json=body, timeout=60)
+    # Inspection API는 간헐 ReadTimeout이 잦다 — 단건 실패가 전수 감사를
+    # 죽이지 않게 짧은 백오프로 재시도한다 (2026-08-04 타임아웃 2연속 실측).
+    last_exc = None
+    for attempt in range(3):
+        try:
+            r = requests.post(INSPECT_API, headers=_headers(), json=body, timeout=60)
+            break
+        except (requests.Timeout, requests.ConnectionError) as e:
+            last_exc = e
+            time.sleep(2 * (attempt + 1))
+    else:
+        return {"error": f"timeout after retries: {last_exc}", "verdict": "ERROR"}
     if r.status_code != 200:
         return {"error": f"{r.status_code}: {r.text[:200]}", "verdict": "ERROR"}
     idx = r.json().get("inspectionResult", {}).get("indexStatusResult", {})

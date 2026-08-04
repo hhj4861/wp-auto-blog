@@ -24,8 +24,8 @@ META_DESC = (
 FOCUS_KW = "BTS Grammy boycott"
 CAT_ID = 195  # K-Pop
 
-# 스트리밍/앨범 라이트 CTA (env AFFILIATE_AMAZON 설정 시 태그 부착, 없으면 무해한 검색링크)
-AMAZON_ALBUM = "https://www.amazon.com/s?k=BTS+Arirang+album"
+# 스트리밍/앨범 라이트 CTA — 사용자 제공 Amazon 제휴 단축링크(태그 포함)
+AMAZON_ALBUM = "https://amzn.to/4bs7OVZ"
 
 # K-Pop 핑크-퍼플 그라디언트 H2 (캐논 룩, bytepulse 정체성 내 K-Pop 톤)
 H2 = ('<h2 style="font-size:1.5em;margin:40px auto 20px auto;max-width:800px;'

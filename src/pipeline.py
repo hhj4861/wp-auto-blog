@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import html as html_lib
 import json
+import os
 import re
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -566,8 +567,10 @@ class BlogPipeline:
                 else:
                     logger.info("품질 게이트 통과")
 
-                # tech/kculture(bytepulse): 인-콘텐츠 광고 유닛 + 관련 글 내부 링크 박스
-                # Auto Ads 대신 고가시성(인-아티클) 수동 유닛으로 RPM↑ (영문 라벨).
+                # tech/kculture(bytepulse): 관련 글 내부 링크 박스 (+ 승인 시 인-콘텐츠 광고)
+                # ⚠️ bytepulse는 AdSense 재검토 대기 → 광고 슬롯이 안 채워져 '빈 박스'로 남는다
+                #    (min-height 예약 공간). 승인 전에는 광고를 넣지 않고 관련글만 삽입한다.
+                #    승인되면 BYTEPULSE_ADS_ENABLED=1 로 고가시성 인-아티클 유닛(영문 'Ad') 활성.
                 # 관련글 박스는 색인 선택률·체류시간 개선(GSC '크롤링됨-미색인' 대응).
                 # 게이트가 생성 본문 자체를 평가하도록 게이트 이후에 삽입한다.
                 if self.config.mode != "general":
@@ -576,13 +579,17 @@ class BlogPipeline:
                         keywords=topic.keywords,
                         category=category,
                     )
-                    content.html = insert_monetization(
-                        content.html,
-                        official_link="",  # bytepulse는 공식 CTA(정부·공공) 없음
-                        related_posts=related,
-                        ad_label="Ad",
-                        related_heading="📌 Related Posts",
-                    )
+                    if os.getenv("BYTEPULSE_ADS_ENABLED"):
+                        content.html = insert_monetization(
+                            content.html,
+                            official_link="",  # bytepulse는 공식 CTA(정부·공공) 없음
+                            related_posts=related,
+                            ad_label="Ad",
+                            related_heading="📌 Related Posts",
+                        )
+                    elif related:
+                        content.html = insert_related_box(
+                            content.html, related, heading="📌 Related Posts")
                     # FAQ 섹션 → FAQPage 스키마 (색인 시 리치 리절트 — GSC 최적화)
                     content.html = insert_faq_schema(content.html)
 

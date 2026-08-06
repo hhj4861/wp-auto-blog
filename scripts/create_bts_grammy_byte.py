@@ -208,11 +208,16 @@ def main() -> int:
     auth = (os.environ["WP_USERNAME"], os.environ["WP_APP_PASSWORD"])
     api = f"{base}/wp-json/wp/v2"
 
-    # 인-아티클 애드센스(영문 'Ad') — 캐논 H2 앵커 기준 배치
-    article = insert_monetization(
-        ARTICLE.strip(), official_link="", related_posts=None,
-        ad_label="Ad", related_heading="📌 Related Posts",
-    )
+    # 인-아티클 애드센스(영문 'Ad') — 캐논 H2 앵커 기준 배치.
+    # ⚠️ bytepulse는 AdSense 재검토 대기 → 미승인 상태에선 슬롯이 '빈 박스'로 남으므로
+    #    BYTEPULSE_ADS_ENABLED=1 일 때만 삽입. 승인 후 활성화.
+    if os.getenv("BYTEPULSE_ADS_ENABLED"):
+        article = insert_monetization(
+            ARTICLE.strip(), official_link="", related_posts=None,
+            ad_label="Ad", related_heading="📌 Related Posts",
+        )
+    else:
+        article = ARTICLE.strip()
 
     media_id, hero = fetch_hero(api, auth)
     body_html = (

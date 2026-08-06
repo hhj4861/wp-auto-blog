@@ -270,7 +270,40 @@ def fix_shop_links(html: str, search_term: str, default_retailer: str = "amazon"
     fixed = re.sub(r"\(([^()<>]{1,80}?)\s*→\s*\)", _replace, html)
     if fixed != html:
         logger.info("쇼핑 링크 플레이스홀더 수리됨")
-    return fixed
+    return tag_direct_shop_links(fixed)
+
+
+# LLM이 본문에 직접 써넣은 소매몰 링크는 플레이스홀더 경로를 안 타서 제휴 태그가
+# 빠진 채 발행됐다(2026-08-06 #4131 실측: Amazon 4링크 무태그 + FTC 고지만 존재).
+_DIRECT_SHOP_DOMAINS = {
+    "amazon.com": "amazon",
+    "yesstyle.com": "yesstyle",
+    "global.musinsa.com": "musinsa",
+    "global.oliveyoung.com": "olive young",
+}
+
+
+def tag_direct_shop_links(html: str) -> str:
+    """본문의 모든 소매몰 href에 제휴 파라미터를 보장한다(멱등).
+
+    - env 미설정 몰은 그대로 (apply_affiliate가 원본 반환)
+    - 이미 해당 파라미터가 있으면 그대로
+    - 검색어에 새어든 마크다운 볼드(**, %2A%2A)도 함께 제거
+    """
+    def _fix(match: re.Match) -> str:
+        href = match.group(1)
+        href = href.replace("%2A", "").replace("**", "")
+        for domain, retailer in _DIRECT_SHOP_DOMAINS.items():
+            if domain in href:
+                frag_key = os.getenv(
+                    _affiliate_env_key(retailer), "").strip().lstrip("?&").split("=")[0]
+                if not frag_key or f"{frag_key}=" in href:
+                    break
+                href = apply_affiliate(href, retailer)
+                break
+        return f'href="{href}"'
+
+    return re.sub(r'href="(https?://[^"]+)"', _fix, html)
 
 
 COUPANG_DISCLOSURE = (

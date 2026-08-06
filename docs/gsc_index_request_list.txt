@@ -1,0 +1,74 @@
+# bytepulse 색인 요청 우선순위 리스트 (GSC URL검사 → 색인 요청, 일 ~10건)
+# 위에서부터 순서대로. 이미 색인된 것 나오면 스킵.
+
+
+### 우선순위 1 — 수기 머니글(제휴+최고품질) 먼저 (8)
+https://bytepulse.io/bakuchiol-serum-retinol-alternative-2026/
+https://bytepulse.io/proven-korean-bakuchiol-review-2026/
+https://bytepulse.io/arbutin-cream-brightening-guide-2026/
+https://bytepulse.io/korean-exfoliation-peeling-guide-2026/
+https://bytepulse.io/korean-greek-yogurt-diet-trend-2026/
+https://bytepulse.io/korean-psyllium-husk-fiber-2026/
+https://bytepulse.io/learn-korean-free-5-minute-lesson-2026/
+https://bytepulse.io/bts-grammy-boycott-army-aliens-2026/
+
+### 우선순위 2 — K-Beauty 최신(올리브영 제휴) (10)
+https://bytepulse.io/korean-toner-pads-review-2026/
+https://bytepulse.io/arbutin-cream-brightening-guide-2026/
+https://bytepulse.io/korean-exfoliation-peeling-guide-2026/
+https://bytepulse.io/bakuchiol-serum-retinol-alternative-2026/
+https://bytepulse.io/olive-young-global-review-2026/
+https://bytepulse.io/korean-eye-review-2026/
+https://bytepulse.io/korean-pdrn-review-2026/
+https://bytepulse.io/korean-dermocosmetic-review-2026/
+https://bytepulse.io/korean-squalane-review-2026/
+https://bytepulse.io/korean-glass-skin-review-2026-2/
+
+### 우선순위 2 — K-Food 최신(올리브영/쿠팡) (6)
+https://bytepulse.io/authentic-review-2026/
+https://bytepulse.io/korean-psyllium-husk-fiber-2026/
+https://bytepulse.io/korean-greek-yogurt-diet-trend-2026/
+https://bytepulse.io/easy-homemade-tteokbokki-review-2026/
+https://bytepulse.io/korean-jjigae-stew-review-2026/
+https://bytepulse.io/authentic-korean-pajeon-review-2026/
+
+### 우선순위 3 — K-Pop 최신 (8)
+https://bytepulse.io/bts-grammy-boycott-army-aliens-2026/
+https://bytepulse.io/p1harmony-world-tour-review-2026/
+https://bytepulse.io/k-pop-coachella-review-2026/
+https://bytepulse.io/melon-music-awards-review-2026/
+https://bytepulse.io/izna-review-2026/
+https://bytepulse.io/k-pop-fanchant-review-2026/
+https://bytepulse.io/hearts2hearts-debut-era-review-2026/
+https://bytepulse.io/stayc-world-tour-review-2026/
+
+### 우선순위 3 — K-Fashion 최신(YesStyle) (8)
+https://bytepulse.io/korean-fleece-jacket-review-2026/
+https://bytepulse.io/korean-balletcore-review-2026/
+https://bytepulse.io/korean-puffer-jacket-review-2026/
+https://bytepulse.io/korean-varsity-jacket-review-2026/
+https://bytepulse.io/chic-korean-beanie-review-2026/
+https://bytepulse.io/stylish-korean-techwear-review-2026/
+https://bytepulse.io/korean-dress-styling-review-2026/
+https://bytepulse.io/korean-midi-review-2026/
+
+### 우선순위 4 — AI Tools 최신(테크) (8)
+https://bytepulse.io/microcodex-vs-cursor-2026-2026/
+https://bytepulse.io/deepseek-vs-qwen-2026-2026/
+https://bytepulse.io/8-vs-deepseek-v3-2026/
+https://bytepulse.io/kimi-k3-vs-deepseek-v4-2026/
+https://bytepulse.io/traceforce-vs-helicone-2026-2026/
+https://bytepulse.io/claude-opus-day-review-2026/
+https://bytepulse.io/jurassic-park-computers-review-2026/
+https://bytepulse.io/pwa-vs-native-app-2026-2/
+
+### 우선순위 5 — 필수·카테고리 페이지
+https://bytepulse.io/contact/
+https://bytepulse.io/about/
+https://bytepulse.io/privacy-policy/
+https://bytepulse.io/k-beauty/
+https://bytepulse.io/k-food/
+https://bytepulse.io/k-pop/
+https://bytepulse.io/k-fashion/
+https://bytepulse.io/ai-tools/
+https://bytepulse.io/dev-productivity/

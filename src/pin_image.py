@@ -10,10 +10,10 @@ CLI 미리보기:
 
 from __future__ import annotations
 
+import html
 import io
 import os
 import sys
-import textwrap
 from pathlib import Path
 
 import requests
@@ -127,6 +127,8 @@ def _fit_title(draw: ImageDraw.ImageDraw, title: str, max_w: int,
 def make_pin_image(source: str, title: str, category: str, out_path: str,
                    brand: str = "bytepulse.io") -> str:
     """세로 2:3 핀 이미지를 만들어 out_path(JPEG)에 저장하고 경로를 반환."""
+    # WP REST 제목은 &#8217; &amp; 등 HTML 엔티티로 오므로 디코드
+    title = html.unescape(title)
     accent = ACCENTS.get(category, DEFAULT_ACCENT)
 
     base = _cover(_load_source(source), W, H)

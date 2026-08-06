@@ -949,11 +949,12 @@
       "작성법"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 15920,
     "competition": "높음",
     "verdict": "go",
-    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리"
+    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리",
+    "completed_at": "2026-08-06T05:20:00.526371"
   },
   {
     "topic": "자동차검사비용 총정리 (2026)",

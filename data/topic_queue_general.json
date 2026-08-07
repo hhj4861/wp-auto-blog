@@ -829,12 +829,13 @@
       "청약홈"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 33900,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "주택청약"
+    "head_keyword": "주택청약",
+    "completed_at": "2026-08-07T04:25:15.007193"
   },
   {
     "topic": "재산세계산기 사용법과 실제 예시 (2026)",

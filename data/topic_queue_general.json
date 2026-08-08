@@ -898,12 +898,13 @@
       "지자체지원"
     ],
     "category": "건강",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 19850,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "대상포진예방접종"
+    "head_keyword": "대상포진예방접종",
+    "completed_at": "2026-08-08T03:42:04.284536"
   },
   {
     "topic": "정보처리기사 2026 시험 일정과 독학 합격 공부법",

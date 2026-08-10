@@ -31,6 +31,16 @@ MONEY_SLUGS = ("bakuchiol", "arbutin", "exfoliat", "greek", "yogurt", "psyllium"
                "korean-tutor", "learn-korean", "bts-grammy", "toner-pads", "olive-young")
 AFF_MARKERS = ("amzn.to", "link.coupang.com", "rwardcode", "preply.com/", "yesstyle", "musinsa")
 
+# 톱티어 K-Pop 아티스트/그룹 — 제목 매치 시 keep 가점(수요 기반 선별). 짧은 약칭은 단어경계.
+POP_RE = re.compile("|".join([
+    r"\bbts\b", r"blackpink", r"\btwice\b", r"stray\s*kids", r"seventeen", r"newjeans",
+    r"le\s*sserafim", r"\bive\b", r"aespa", r"\(g\)i-dle|gi-dle|\bidle\b", r"\bitzy\b",
+    r"ateez", r"enhypen", r"\btxt\b|tomorrow x together", r"\bnct\b", r"red\s*velvet",
+    r"g-dragon|bigbang", r"\biu\b", r"\briize\b", r"illit", r"babymonster",
+    r"zerobaseone|\bzb1\b", r"treasure", r"nmixx", r"kiss of life", r"\bday6\b",
+    r"\btws\b", r"izna", r"boynextdoor", r"kep1er", r"\bexo\b", r"\bgot7\b", r"\bidle\b",
+]), re.I)
+
 # 카테고리별 유지 목표(권장 시나리오, 합계 ~128) — 각 K 니치가 Pinterest 배포 가능한
 # 최소량은 남기도록 균형. 없는 카테고리(Uncategorized 등)는 0=전량 제거.
 CATEGORY_TARGETS = {
@@ -117,6 +127,7 @@ def main() -> int:
             "words": real_prose_words(content),
             "money": any(s in p["slug"] for s in MONEY_SLUGS),
             "aff": any(m in content.lower() for m in AFF_MARKERS),
+            "pop": bool(POP_RE.search(title)),
             "stem": title_stem(title),
         })
 
@@ -130,6 +141,7 @@ def main() -> int:
             + (0 if r["stem"] in dup_stems else 300)
             + min(r["words"], 1500) / 10.0
             + (200 if r["aff"] else 0)
+            + (300 if r["pop"] else 0)   # 톱티어 아티스트 수요 가점(K-Pop 선별 핵심)
             + int(r["date"].replace("-", "")) / 1e7  # 최신 미세 가점(동점 tiebreak)
         )
 

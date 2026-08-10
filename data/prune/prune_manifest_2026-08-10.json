@@ -48,22 +48,29 @@
     449,
     454,
     459,
-    502,
+    473,
     516,
+    531,
     540,
+    549,
     552,
     555,
+    564,
     567,
     576,
     582,
     585,
     588,
     597,
+    613,
     625,
+    634,
     643,
     649,
     655,
     661,
+    667,
+    682,
     691,
     694,
     699,
@@ -71,66 +78,59 @@
     714,
     726,
     729,
-    738,
     744,
+    759,
+    777,
     789,
     792,
     804,
     807,
     822,
-    840,
     843,
     849,
+    858,
     861,
     873,
     876,
     900,
-    909,
     920,
     932,
     935,
     938,
-    947,
     950,
     989,
     992,
-    1001,
     1007,
     1019,
     1025,
     1028,
-    1034,
     1037,
-    1046,
     1049,
     1058,
     1085,
     1094,
+    1103,
     1106,
     1109,
-    1142,
     1151,
     1154,
     1163,
     1184,
     1190,
     1208,
-    1251,
     1257,
     1278,
     1287,
     1299,
     1302,
+    1326,
     1365,
     1368,
-    1380,
     1385,
-    1400,
     1412,
     1426,
     1432,
     1438,
-    1456,
     1462,
     1465,
     1474,
@@ -145,12 +145,12 @@
     1576,
     1582,
     1588,
-    1597,
     1607,
     1619,
     1625,
     1649,
     1658,
+    1761,
     2730,
     3336,
     4087,
@@ -734,16 +734,6 @@
       "slug": "ai-platform-vs-github-2026-2026"
     },
     {
-      "id": 1761,
-      "title": "izna 2026: The Complete",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 804,
-      "slug": "izna-review-2026"
-    },
-    {
       "id": 1743,
       "title": "Kimi K3 vs DeepSeek V4 2026: Complete Open Model Comparison",
       "cats": [
@@ -1165,16 +1155,6 @@
       "slug": "coderabbit-vs-qodo-2026-2026"
     },
     {
-      "id": 1326,
-      "title": "NMIXX 2026 Comeback Era: US Fan Guide",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 914,
-      "slug": "nmixx-comeback-era-review-2026"
-    },
-    {
       "id": 1347,
       "title": "Linux Gaming: Essential Guide to Faster Performance in 2026",
       "cats": [
@@ -1215,16 +1195,6 @@
       "slug": "jurassic-park-computers-review-2026"
     },
     {
-      "id": 759,
-      "title": "BABYMONSTER Debut Era Deep Dive",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 927,
-      "slug": "babymonster-debut-era-review-2026"
-    },
-    {
       "id": 879,
       "title": "DeepSeek vs Llama 2026: Complete Open Source AI Benchmark",
       "cats": [
@@ -1233,16 +1203,6 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 928,
       "slug": "deepseek-vs-llama-2026-2026"
-    },
-    {
-      "id": 1103,
-      "title": "IVE World Tour 2026: US Fan Experience",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 929,
-      "slug": "ive-world-tour-review-2026"
     },
     {
       "id": 813,
@@ -1433,16 +1393,6 @@
       "reason": "카테고리 목표 초과(하위)",
       "words": 974,
       "slug": "easy-homemade-tteokbokki-review-2026"
-    },
-    {
-      "id": 682,
-      "title": "ZEROBASEONE Concert Experience 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 974,
-      "slug": "zerobaseone-concert-experience-review-2026"
     },
     {
       "id": 147,
@@ -1785,16 +1735,6 @@
       "slug": "codex-vs-github-copilot-2026"
     },
     {
-      "id": 777,
-      "title": "TWICE World Tour 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1037,
-      "slug": "twice-world-tour-review-2026"
-    },
-    {
       "id": 1332,
       "title": "ChatGPT vs Gemini 2026: Comprehensive Developer Verdict",
       "cats": [
@@ -1895,16 +1835,6 @@
       "slug": "mimo-code-vs-github-copilot-2026"
     },
     {
-      "id": 634,
-      "title": "TREASURE Concert Guide 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1054,
-      "slug": "treasure-concert-review-2026"
-    },
-    {
       "id": 561,
       "title": "OpenWeather vs Weatherbit 2026: Complete API Performance Comparison",
       "cats": [
@@ -1993,16 +1923,6 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 1066,
       "slug": "recaptcha-vs-hcaptcha-vs-2026"
-    },
-    {
-      "id": 531,
-      "title": "RIIZE World Tour 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1068,
-      "slug": "riize-world-tour-review-2026"
     },
     {
       "id": 1064,
@@ -2205,16 +2125,6 @@
       "slug": "iquest-coder-need-review-2026"
     },
     {
-      "id": 613,
-      "title": "ITZY Comeback 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1095,
-      "slug": "itzy-comeback-review-2026"
-    },
-    {
       "id": 1631,
       "title": "Second Generation K-Pop Legacy Acts",
       "cats": [
@@ -2263,16 +2173,6 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 1100,
       "slug": "dependabot-vs-renovate-2026-2026"
-    },
-    {
-      "id": 473,
-      "title": "LE SSERAFIM Comeback 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1100,
-      "slug": "le-sserafim-comeback-review-2026"
     },
     {
       "id": 171,
@@ -2403,16 +2303,6 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 1127,
       "slug": "lore-vs-git-2026-2026"
-    },
-    {
-      "id": 549,
-      "title": "IU Concert Experience 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1128,
-      "slug": "iu-concert-experience-review-2026"
     },
     {
       "id": 1112,
@@ -2625,16 +2515,6 @@
       "slug": "apple-intelligence-vs-gemini-api-2026"
     },
     {
-      "id": 858,
-      "title": "(G)I-DLE Syncopation 2026 World Tour",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1179,
-      "slug": "gi-dle-syncopation-review-2026"
-    },
-    {
       "id": 628,
       "title": "Cursor vs Windsurf vs Codex: 2026 AI IDE Performance Battle",
       "cats": [
@@ -2785,16 +2665,6 @@
       "slug": "gmail-vs-outlook-2026-2026"
     },
     {
-      "id": 667,
-      "title": "TWS (Twenty Four Seven)",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1228,
-      "slug": "tws-twenty-four-review-2026"
-    },
-    {
       "id": 1712,
       "title": "Practical 2026 Headless CI/CD for Mac & iOS App Deployment",
       "cats": [
@@ -2833,16 +2703,6 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 1235,
       "slug": "agentops-vs-langsmith-2026"
-    },
-    {
-      "id": 564,
-      "title": "ATEEZ Comeback 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 목표 초과(하위)",
-      "words": 1235,
-      "slug": "ateez-comeback-review-2026"
     },
     {
       "id": 196,
@@ -2903,6 +2763,16 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 1270,
       "slug": "ai-agents-vs-traditional-saas-2026"
+    },
+    {
+      "id": 1400,
+      "title": "K-Pop x Western Artist Collaborations",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1272,
+      "slug": "k-pop-x-review-2026"
     },
     {
       "id": 214,
@@ -2975,6 +2845,16 @@
       "slug": "agent-safehouse-macos-review-2026"
     },
     {
+      "id": 840,
+      "title": "Complete K-Pop Lightstick Collector’s Guide",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1323,
+      "slug": "k-pop-lightstick-review-2026"
+    },
+    {
       "id": 117,
       "title": "Vietnam Bans Unskippable Ads 2026",
       "cats": [
@@ -2983,6 +2863,126 @@
       "reason": "테크(초경쟁·트래픽0)",
       "words": 1326,
       "slug": "shocking-vietnam-bans-review-2026-2"
+    },
+    {
+      "id": 1456,
+      "title": "Best K-Dramas for Beginners",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1329,
+      "slug": "k-dramas-beginners-review-2026"
+    },
+    {
+      "id": 1380,
+      "title": "How Hanteo Charts Work",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1353,
+      "slug": "hanteo-charts-work-review-2026"
+    },
+    {
+      "id": 1142,
+      "title": "Gayo Daejeon 2025",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1361,
+      "slug": "gayo-daejeon-review-2026"
+    },
+    {
+      "id": 738,
+      "title": "K-Pop Music Show Voting 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1373,
+      "slug": "k-pop-music-review-2026"
+    },
+    {
+      "id": 1597,
+      "title": "K-Pop Fan Communities Online for US Fans",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1411,
+      "slug": "k-pop-fan-review-2026-3"
+    },
+    {
+      "id": 502,
+      "title": "MAMA Awards 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1432,
+      "slug": "mama-awards-review-2026"
+    },
+    {
+      "id": 1001,
+      "title": "Essential K-Pop Unboxing Guide 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1452,
+      "slug": "k-pop-unboxing-review-2026"
+    },
+    {
+      "id": 1251,
+      "title": "K-Pop Sub-Units",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1473,
+      "slug": "k-pop-sub-review-2026"
+    },
+    {
+      "id": 1046,
+      "title": "7 Essential Ways",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1528,
+      "slug": "ways-review-2026"
+    },
+    {
+      "id": 1034,
+      "title": "K-Drama OST Deep Dive",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1566,
+      "slug": "k-drama-ost-review-2026"
+    },
+    {
+      "id": 947,
+      "title": "7 Essential K-Pop Survival",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1930,
+      "slug": "k-pop-survival-review-2026"
+    },
+    {
+      "id": 909,
+      "title": "K-Pop Fancam Culture 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1588,
+      "slug": "k-pop-fancam-review-2026"
     },
     {
       "id": 1537,
@@ -3477,6 +3477,14 @@
   ],
   "keep_list": [
     {
+      "id": 4125,
+      "title": "BTS’s Grammy Boycott, Explained: How ARMY Sent ‘Aliens’ to No. 1 in 78 Countries (2026)",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "머니글"
+    },
+    {
       "id": 1474,
       "title": "7 Proven Korean Bakuchiol",
       "cats": [
@@ -3505,14 +3513,6 @@
       "title": "Korean Toner Pads 2026",
       "cats": [
         "K-Beauty"
-      ],
-      "reason": "머니글"
-    },
-    {
-      "id": 4125,
-      "title": "BTS’s Grammy Boycott, Explained: How ARMY Sent ‘Aliens’ to No. 1 in 78 Countries (2026)",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "머니글"
     },
@@ -3563,6 +3563,222 @@
         "K-Beauty"
       ],
       "reason": "머니글"
+    },
+    {
+      "id": 540,
+      "title": "LE SSERAFIM Airport Fashion Analysis",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 385,
+      "title": "ENHYPEN Airport Fashion 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 555,
+      "title": "TXT Concert Fashion Analysis",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 804,
+      "title": "BTS Military Discharge 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 459,
+      "title": "(G)I-DLE World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1438,
+      "title": "Red Velvet 2026 Comeback",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1501,
+      "title": "DAY6 2026: Complete MyDay",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 789,
+      "title": "KISS OF LIFE 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 932,
+      "title": "BOYNEXTDOOR Members",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 822,
+      "title": "ILLIT PRESS START 2026 Tour",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 643,
+      "title": "NCT Dream Stadium Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 428,
+      "title": "SEVENTEEN World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1649,
+      "title": "G-Dragon & BIGBANG’s 2026 Comeback Era",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 564,
+      "title": "ATEEZ Comeback 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 667,
+      "title": "TWS (Twenty Four Seven)",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 858,
+      "title": "(G)I-DLE Syncopation 2026 World Tour",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 549,
+      "title": "IU Concert Experience 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 473,
+      "title": "LE SSERAFIM Comeback 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 613,
+      "title": "ITZY Comeback 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 531,
+      "title": "RIIZE World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 634,
+      "title": "TREASURE Concert Guide 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 777,
+      "title": "TWICE World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 682,
+      "title": "ZEROBASEONE Concert Experience 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1103,
+      "title": "IVE World Tour 2026: US Fan Experience",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 759,
+      "title": "BABYMONSTER Debut Era Deep Dive",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1326,
+      "title": "NMIXX 2026 Comeback Era: US Fan Guide",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1761,
+      "title": "izna 2026: The Complete",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
     },
     {
       "id": 1658,
@@ -3677,14 +3893,6 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 540,
-      "title": "LE SSERAFIM Airport Fashion Analysis",
-      "cats": [
-        "K-Fashion"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 516,
       "title": "Korean Ceramic Skincare Tools",
       "cats": [
@@ -3773,14 +3981,6 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 385,
-      "title": "ENHYPEN Airport Fashion 2026",
-      "cats": [
-        "K-Fashion"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 1037,
       "title": "The Essential Guide",
       "cats": [
@@ -3847,14 +4047,6 @@
     {
       "id": 694,
       "title": "Korean Trench Coat Styling Guide",
-      "cats": [
-        "K-Fashion"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 555,
-      "title": "TXT Concert Fashion Analysis",
       "cats": [
         "K-Fashion"
       ],
@@ -4109,50 +4301,10 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 1046,
-      "title": "7 Essential Ways",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1034,
-      "title": "K-Drama OST Deep Dive",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 947,
-      "title": "7 Essential K-Pop Survival",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 909,
-      "title": "K-Pop Fancam Culture 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 843,
       "title": "RunAnywhere vs Modal vs Replicate: Critical 2026 Deployment Comparison",
       "cats": [
         "AI Tools"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 804,
-      "title": "BTS Military Discharge 2026",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "카테고리 상위"
     },
@@ -4237,42 +4389,10 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 459,
-      "title": "(G)I-DLE World Tour 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1251,
-      "title": "K-Pop Sub-Units",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1001,
-      "title": "Essential K-Pop Unboxing Guide 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 661,
       "title": "CryptPad vs Notion vs Google Workspace 2026: Complete Privacy-First Collaboration Comparison",
       "cats": [
         "SaaS Reviews"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 502,
-      "title": "MAMA Awards 2026",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "카테고리 상위"
     },
@@ -4285,26 +4405,10 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 1597,
-      "title": "K-Pop Fan Communities Online for US Fans",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 588,
       "title": "Netbird vs Tailscale vs ZeroTier 2026",
       "cats": [
         "Dev Productivity"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1438,
-      "title": "Red Velvet 2026 Comeback",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "카테고리 상위"
     },
@@ -4317,26 +4421,10 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 738,
-      "title": "K-Pop Music Show Voting 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 1385,
       "title": "NordVPN vs Mullvad vs ProtonVPN 2026: Complete Dev Benchmark",
       "cats": [
         "SaaS Reviews"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1142,
-      "title": "Gayo Daejeon 2025",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "카테고리 상위"
     },
@@ -4365,22 +4453,6 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 1380,
-      "title": "How Hanteo Charts Work",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1501,
-      "title": "DAY6 2026: Complete MyDay",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 440,
       "title": "GPTZero vs Copyleaks 2026: Complete Detection Accuracy Benchmark",
       "cats": [
@@ -4393,30 +4465,6 @@
       "title": "Korean Beef Bulgogi Home Cooking Guide 2026",
       "cats": [
         "K-Food"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 789,
-      "title": "KISS OF LIFE 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1456,
-      "title": "Best K-Dramas for Beginners",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 840,
-      "title": "Complete K-Pop Lightstick Collector’s Guide",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "카테고리 상위"
     },
@@ -4437,30 +4485,6 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 932,
-      "title": "BOYNEXTDOOR Members",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 822,
-      "title": "ILLIT PRESS START 2026 Tour",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 643,
-      "title": "NCT Dream Stadium Tour 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 1625,
       "title": "Google Play vs App Store 2026: Complete Dev Comparison",
       "cats": [
@@ -4469,34 +4493,10 @@
       "reason": "카테고리 상위"
     },
     {
-      "id": 1400,
-      "title": "K-Pop x Western Artist Collaborations",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
       "id": 1278,
       "title": "Bun vs Node.js vs Deno 2026: Runtime Showdown",
       "cats": [
         "Dev Productivity"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 428,
-      "title": "SEVENTEEN World Tour 2026",
-      "cats": [
-        "K-Pop"
-      ],
-      "reason": "카테고리 상위"
-    },
-    {
-      "id": 1649,
-      "title": "G-Dragon & BIGBANG’s 2026 Comeback Era",
-      "cats": [
-        "K-Pop"
       ],
       "reason": "카테고리 상위"
     }

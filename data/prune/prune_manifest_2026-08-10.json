@@ -1,0 +1,4504 @@
+{
+  "generated": "2026-08-10",
+  "targets": {
+    "K-Beauty": 36,
+    "K-Fashion": 30,
+    "K-Pop": 30,
+    "K-Food": 12,
+    "K-Culture": 1,
+    "AI Tools": 12,
+    "Dev Productivity": 4,
+    "SaaS Reviews": 3,
+    "Content Tools": 0
+  },
+  "total": 459,
+  "keep": 128,
+  "prune": 331,
+  "dup_clusters": 0,
+  "by_bucket": {
+    "tech": {
+      "total": 265,
+      "keep": 19,
+      "prune": 246
+    },
+    "k": {
+      "total": 194,
+      "keep": 109,
+      "prune": 85
+    },
+    "other": {
+      "total": 0,
+      "keep": 0,
+      "prune": 0
+    }
+  },
+  "keep_ids": [
+    120,
+    138,
+    187,
+    193,
+    202,
+    229,
+    350,
+    385,
+    393,
+    428,
+    434,
+    440,
+    449,
+    454,
+    459,
+    502,
+    516,
+    540,
+    552,
+    555,
+    567,
+    576,
+    582,
+    585,
+    588,
+    597,
+    625,
+    643,
+    649,
+    655,
+    661,
+    691,
+    694,
+    699,
+    711,
+    714,
+    726,
+    729,
+    738,
+    744,
+    789,
+    792,
+    804,
+    807,
+    822,
+    840,
+    843,
+    849,
+    861,
+    873,
+    876,
+    900,
+    909,
+    920,
+    932,
+    935,
+    938,
+    947,
+    950,
+    989,
+    992,
+    1001,
+    1007,
+    1019,
+    1025,
+    1028,
+    1034,
+    1037,
+    1046,
+    1049,
+    1058,
+    1085,
+    1094,
+    1106,
+    1109,
+    1142,
+    1151,
+    1154,
+    1163,
+    1184,
+    1190,
+    1208,
+    1251,
+    1257,
+    1278,
+    1287,
+    1299,
+    1302,
+    1365,
+    1368,
+    1380,
+    1385,
+    1400,
+    1412,
+    1426,
+    1432,
+    1438,
+    1456,
+    1462,
+    1465,
+    1474,
+    1492,
+    1501,
+    1510,
+    1522,
+    1525,
+    1534,
+    1543,
+    1564,
+    1576,
+    1582,
+    1588,
+    1597,
+    1607,
+    1619,
+    1625,
+    1649,
+    1658,
+    2730,
+    3336,
+    4087,
+    4093,
+    4100,
+    4102,
+    4108,
+    4125,
+    4128,
+    4131
+  ],
+  "prune_list": [
+    {
+      "id": 1685,
+      "title": "GPT-5.6 vs Grok 5 2026: Complete AI Model Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 507,
+      "slug": "6-vs-grok-5-2026"
+    },
+    {
+      "id": 1567,
+      "title": "Cursor vs Windsurf 2026: Best AI Code Editor?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 520,
+      "slug": "cursor-vs-windsurf-2026-2026"
+    },
+    {
+      "id": 888,
+      "title": "`Bolt vs Lovable vs v0 2026: Top AI Builder?`",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 521,
+      "slug": "bolt-vs-lovable-vs-2026"
+    },
+    {
+      "id": 1293,
+      "title": "Chrome AI vs Brave vs Arc: Best Browser 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 545,
+      "slug": "chrome-ai-vs-brave-vs-2026"
+    },
+    {
+      "id": 891,
+      "title": "Rookie K-Pop Groups to Watch in 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 545,
+      "slug": "rookie-k-pop-review-2026"
+    },
+    {
+      "id": 1350,
+      "title": "RTX 5090 vs M4 MacBook Air: Key Gaming Performance Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 549,
+      "slug": "rtx-5090-vs-m4-macbook-2026"
+    },
+    {
+      "id": 60,
+      "title": "Linux Desktop for Developers: 2026 Setup Guide",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 561,
+      "slug": "linux-desktop-for-developers-2026-setup-guide"
+    },
+    {
+      "id": 855,
+      "title": "`BitNet vs Ollama vs llama.cpp 2026: Best Local LLM?`",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 590,
+      "slug": "bitnet-vs-ollama-vs-2026"
+    },
+    {
+      "id": 1740,
+      "title": "Traceforce vs Helicone 2026: Complete Monitoring Guide",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 598,
+      "slug": "traceforce-vs-helicone-2026-2026"
+    },
+    {
+      "id": 1130,
+      "title": "Devin vs SWE-Agent 2026: Which AI Agent Wins?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 600,
+      "slug": "devin-vs-swe-2026"
+    },
+    {
+      "id": 1157,
+      "title": "Proton vs Fastmail for Dev Teams 2026",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 603,
+      "slug": "proton-vs-fastmail-for-2026"
+    },
+    {
+      "id": 4179,
+      "title": "K-Pop Seasons Greetings 2027",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 611,
+      "slug": "k-pop-seasons-review-2026"
+    },
+    {
+      "id": 56,
+      "title": "Linux vs Windows for Developers: 2026 Truth",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 615,
+      "slug": "linux-vs-windows-for-developers-2026-truth"
+    },
+    {
+      "id": 1752,
+      "title": "Vantage vs CloudZero 2026: Best AWS Cost Tool Compared",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 618,
+      "slug": "vantage-vs-cloudzero-2026-2026"
+    },
+    {
+      "id": 1160,
+      "title": "Ollama vs LM Studio 2026: Best Local LLM?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 635,
+      "slug": "ollama-vs-lm-studio-2026"
+    },
+    {
+      "id": 1758,
+      "title": "Transcribe.cpp vs Whisper.cpp 2026: Best Local STT?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 639,
+      "slug": "cpp-vs-whisper-2026"
+    },
+    {
+      "id": 723,
+      "title": "K-Pop Photocard Collecting for US Fans",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 639,
+      "slug": "k-pop-photocard-review-2026"
+    },
+    {
+      "id": 732,
+      "title": "`Gemini API vs AWS Bedrock 2026: Best AI API?`",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 640,
+      "slug": "gemini-api-vs-aws-bedrock-2026"
+    },
+    {
+      "id": 1335,
+      "title": "Why Local AI Needs To Be The Norm in 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 645,
+      "slug": "local-ai-needs-review-2026"
+    },
+    {
+      "id": 1724,
+      "title": "Claude Opus 4.8 Review: 30-Day Real-World Coding Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 647,
+      "slug": "claude-opus-day-review-2026"
+    },
+    {
+      "id": 1670,
+      "title": "GitHub vs Codeberg 2026: Essential Migration Guide",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 647,
+      "slug": "github-vs-codeberg-2026-2026"
+    },
+    {
+      "id": 1755,
+      "title": "AWS vs Hetzner 2026: Complete Cloud Cost Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 652,
+      "slug": "aws-vs-hetzner-2026-2026"
+    },
+    {
+      "id": 1513,
+      "title": "Apple Containers vs Docker Desktop 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 652,
+      "slug": "apple-containers-vs-docker-desktop-2026"
+    },
+    {
+      "id": 1519,
+      "title": "The Boyz 2026 World Tour",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 654,
+      "slug": "boyz-world-tour-review-2026"
+    },
+    {
+      "id": 1555,
+      "title": "Stripe vs Paddle vs LemonSqueezy 2026: SaaS Billing",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 663,
+      "slug": "stripe-vs-paddle-vs-2026"
+    },
+    {
+      "id": 1136,
+      "title": "Cloudflare Workers vs Vercel Edge 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 686,
+      "slug": "cloudflare-workers-vs-vercel-edge-2026"
+    },
+    {
+      "id": 1661,
+      "title": "Grafana 2026: Best Real-Time Dashboard Tool for Devs",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 695,
+      "slug": "grafana-real-time-review-2026"
+    },
+    {
+      "id": 705,
+      "title": "The Age Verification Trap: Verifying Age Undermines Data Protection",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 695,
+      "slug": "age-verification-trap-review-2026"
+    },
+    {
+      "id": 1673,
+      "title": "STAYC 2026 World Tour Era",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 696,
+      "slug": "stayc-world-tour-review-2026"
+    },
+    {
+      "id": 1175,
+      "title": "Cloudflare Email vs SendGrid vs Mailgun 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 696,
+      "slug": "cloudflare-email-vs-sendgrid-vs-2026"
+    },
+    {
+      "id": 1483,
+      "title": "Harness vs CircleCI vs Jenkins 2026: Best CI/CD?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 697,
+      "slug": "harness-vs-circleci-vs-2026"
+    },
+    {
+      "id": 1022,
+      "title": "Amazon Q vs GitHub Copilot 2026: Who Wins?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 697,
+      "slug": "amazon-q-vs-github-copilot-2026"
+    },
+    {
+      "id": 1371,
+      "title": "npm vs pnpm vs Yarn 2026: Which is Safer?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 705,
+      "slug": "npm-vs-pnpm-vs-2026"
+    },
+    {
+      "id": 702,
+      "title": "Built Timeframe: Our 2026 Family E-Paper Dashboard",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 720,
+      "slug": "built-timeframe-family-review-2026"
+    },
+    {
+      "id": 208,
+      "title": "Iconify vs Font Awesome 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 720,
+      "slug": "iconify-vs-font-awesome-2026"
+    },
+    {
+      "id": 783,
+      "title": "Qwen vs Gemini 2026: Best AI for Developers?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 731,
+      "slug": "qwen-vs-gemini-2026-2026"
+    },
+    {
+      "id": 1549,
+      "title": "Aider vs Cline 2026: AI Coding on a Budget",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 735,
+      "slug": "aider-vs-cline-2026-2026"
+    },
+    {
+      "id": 1734,
+      "title": "Stripe vs PayPal 2026: Critical Payment Platform Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 736,
+      "slug": "stripe-vs-paypal-2026-2026"
+    },
+    {
+      "id": 4182,
+      "title": "Best Windows 11 Debloat Tools 2026: Reclaim Your RAM",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 747,
+      "slug": "windows-debloat-tools-review-2026"
+    },
+    {
+      "id": 1172,
+      "title": "Qwen3 vs DeepSeek v3: Best Open-Source LLM 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 747,
+      "slug": "qwen3-vs-deepseek-v3-2026"
+    },
+    {
+      "id": 1775,
+      "title": "GPTZero vs Copyleaks 2026: Best AI Detector Compared",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 755,
+      "slug": "gptzero-vs-copyleaks-2026-2026-2"
+    },
+    {
+      "id": 1764,
+      "title": "Qwen 3.8 vs DeepSeek V3: Complete 2026 LLM Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 756,
+      "slug": "8-vs-deepseek-v3-2026"
+    },
+    {
+      "id": 1637,
+      "title": "Sentry vs Datadog vs New Relic: Complete 2026 Analysis",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 759,
+      "slug": "sentry-vs-datadog-vs-2026"
+    },
+    {
+      "id": 1193,
+      "title": "How to Migrate DigitalOcean to Hetzner 2026",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 763,
+      "slug": "migrate-digitalocean-hetzner-review-2026"
+    },
+    {
+      "id": 1613,
+      "title": "Kimi K2 vs Mistral: Best Code AI 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 766,
+      "slug": "kimi-k2-vs-mistral-2026"
+    },
+    {
+      "id": 735,
+      "title": "Ubicloud vs AWS vs Railway 2026: Best Cloud?",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 768,
+      "slug": "ubicloud-vs-aws-vs-2026"
+    },
+    {
+      "id": 1767,
+      "title": "ESP32 vs Raspberry Pi vs Arduino: Best Board 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 771,
+      "slug": "esp32-vs-raspberry-pi-2026"
+    },
+    {
+      "id": 1263,
+      "title": "Agent-Desktop vs Browser-Use: AI Agents 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 773,
+      "slug": "desktop-vs-browser-2026"
+    },
+    {
+      "id": 1145,
+      "title": "Wordfence vs Sucuri 2026: WordPress Security",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 775,
+      "slug": "wordfence-vs-sucuri-2026-2026"
+    },
+    {
+      "id": 926,
+      "title": "Framer vs Webflow 2026: Complete Developer Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 781,
+      "slug": "framer-vs-webflow-2026-2026"
+    },
+    {
+      "id": 1296,
+      "title": "Cloudflare vs Render: Best for AI Agents 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 782,
+      "slug": "cloudflare-vs-render-2026"
+    },
+    {
+      "id": 573,
+      "title": "Moltbook Review 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 783,
+      "slug": "moltbook-performance-analysis-review-2026"
+    },
+    {
+      "id": 1248,
+      "title": "Zed vs Cursor 2026: Which Editor Wins?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 784,
+      "slug": "zed-vs-cursor-2026-2026"
+    },
+    {
+      "id": 914,
+      "title": "Kagi vs Google Translate vs DeepL 2026: Complete Translation Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 784,
+      "slug": "kagi-vs-google-translate-2026"
+    },
+    {
+      "id": 1148,
+      "title": "Semrush vs Ahrefs 2026: Best SEO Tool?",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 795,
+      "slug": "semrush-vs-ahrefs-2026-2026"
+    },
+    {
+      "id": 2736,
+      "title": "DeepSeek vs Qwen 2026: Complete Open-Source Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 797,
+      "slug": "deepseek-vs-qwen-2026-2026"
+    },
+    {
+      "id": 688,
+      "title": "Ex-GitHub CEO’s AI Platform vs GitHub 2026: Complete Benchmark Analysis",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 803,
+      "slug": "ai-platform-vs-github-2026-2026"
+    },
+    {
+      "id": 1761,
+      "title": "izna 2026: The Complete",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 804,
+      "slug": "izna-review-2026"
+    },
+    {
+      "id": 1743,
+      "title": "Kimi K3 vs DeepSeek V4 2026: Complete Open Model Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 804,
+      "slug": "kimi-k3-vs-deepseek-v4-2026"
+    },
+    {
+      "id": 1308,
+      "title": "Originality vs GPTZero vs Winston AI 2026: Key Differences",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 805,
+      "slug": "originality-vs-gptzero-vs-2026"
+    },
+    {
+      "id": 965,
+      "title": "K-Pop Fan Meet & Sign Event Guide for US Fans",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 810,
+      "slug": "k-pop-fan-review-2026"
+    },
+    {
+      "id": 1646,
+      "title": "Mux vs api.video: Best Video API 2026",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 812,
+      "slug": "mux-vs-api-2026"
+    },
+    {
+      "id": 753,
+      "title": "`Zapier vs Make vs n8n: AI Automation Winner 2026`",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 812,
+      "slug": "zapier-vs-make-vs-2026"
+    },
+    {
+      "id": 1703,
+      "title": "Historic Solo Row 2026: Complete Record-Breaking Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 813,
+      "slug": "historic-solo-row-review-2026"
+    },
+    {
+      "id": 1226,
+      "title": "Qwen3 vs Llama 4: Best Coding AI 2026?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 813,
+      "slug": "qwen3-vs-llama-4-2026"
+    },
+    {
+      "id": 4119,
+      "title": "MicroCodex vs Cursor 2026: Complete CLI vs IDE Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 814,
+      "slug": "microcodex-vs-cursor-2026-2026"
+    },
+    {
+      "id": 1749,
+      "title": "Snyk vs Semgrep 2026: Best AI Code Security Tool?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 818,
+      "slug": "snyk-vs-semgrep-2026-2026"
+    },
+    {
+      "id": 1682,
+      "title": "Unity vs Godot vs Unreal: Complete 2026 Engine Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 820,
+      "slug": "unity-vs-godot-vs-2026"
+    },
+    {
+      "id": 79,
+      "title": "VSCode vs Zed 2026: Which Editor Wins?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 820,
+      "slug": "vscode-vs-zed-2026-2026"
+    },
+    {
+      "id": 962,
+      "title": "Tinybox vs RunPod vs Lambda 2026: Complete GPU Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 823,
+      "slug": "tinybox-vs-runpod-vs-2026"
+    },
+    {
+      "id": 43,
+      "title": "Pop!_OS vs Ubuntu vs Fedora for Developers 2026: The Performance Benchmark (Who Actually Wins?)",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 829,
+      "slug": "pop_os-vs-ubuntu-vs-fedora-for-developers-2026-the-performance-benchmark-who-actually-wins"
+    },
+    {
+      "id": 37,
+      "title": "Webflow vs WordPress vs Ghost",
+      "cats": [
+        "Content Tools",
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 829,
+      "slug": "webflow-vs-wordpress-vs-ghost"
+    },
+    {
+      "id": 1420,
+      "title": "VSCode vs Cursor 2026: Which Editor Is Safer?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 830,
+      "slug": "vscode-vs-cursor-2026-2026"
+    },
+    {
+      "id": 1305,
+      "title": "Cloudflare vs AWS WAF vs Fastly: 2026 Complete Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 834,
+      "slug": "cloudflare-vs-aws-waf-2026"
+    },
+    {
+      "id": 747,
+      "title": "`Claude Max vs Copilot: Free for OSS 2026`",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 840,
+      "slug": "claude-max-vs-copilot-2026"
+    },
+    {
+      "id": 1700,
+      "title": "Getting GLM 5.2 Running on a Slow Computer: Complete Guide",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 843,
+      "slug": "getting-glm-running-review-2026"
+    },
+    {
+      "id": 1429,
+      "title": "JetBrains vs VSCode: Which IDE Is Safer 2026?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 844,
+      "slug": "jetbrains-vs-vscode-2026"
+    },
+    {
+      "id": 1178,
+      "title": "K-Pop Idol Training 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 844,
+      "slug": "k-pop-idol-review-2026-2"
+    },
+    {
+      "id": 1211,
+      "title": "GitHub vs GitLab 2026: OSS Transparency Pick",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 853,
+      "slug": "github-vs-gitlab-2026-2026"
+    },
+    {
+      "id": 69,
+      "title": "Supabase vs Firebase vs PocketBase: 2026 Backend Battle",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 856,
+      "slug": "supabase-vs-firebase-vs-pocketbase-2026-backend-battle"
+    },
+    {
+      "id": 1397,
+      "title": "Files.md vs Obsidian 2026: Complete Dev Workflow Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 857,
+      "slug": "md-vs-obsidian-2026-2026"
+    },
+    {
+      "id": 2739,
+      "title": "K-Pop at Coachella 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 870,
+      "slug": "k-pop-coachella-review-2026"
+    },
+    {
+      "id": 986,
+      "title": "Sora vs Runway vs Pika 2026: Complete AI Video Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 870,
+      "slug": "sora-vs-runway-vs-2026"
+    },
+    {
+      "id": 664,
+      "title": "Claude Opus 4.6 vs GPT-4o: Complete 2026 Performance Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 875,
+      "slug": "6-vs-gpt-2026"
+    },
+    {
+      "id": 1600,
+      "title": "Claude Sonnet 5 vs GPT-4o 2026: Best for Devs?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 876,
+      "slug": "sonnet-5-vs-gpt-2026"
+    },
+    {
+      "id": 1778,
+      "title": "Melon Music Awards 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 880,
+      "slug": "melon-music-awards-review-2026"
+    },
+    {
+      "id": 679,
+      "title": "Discord vs Slack vs Telegram 2026: Complete Privacy Showdown",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 884,
+      "slug": "discord-vs-slack-vs-2026-2"
+    },
+    {
+      "id": 720,
+      "title": "Microsoft 365 vs Google Workspace 2026",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 889,
+      "slug": "microsoft-365-vs-google-workspace-2026-2"
+    },
+    {
+      "id": 1640,
+      "title": "Retool vs Appsmith vs ToolJet 2026: Complete MVP Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 892,
+      "slug": "retool-vs-appsmith-vs-2026"
+    },
+    {
+      "id": 1441,
+      "title": "Cloudflare Turnstile vs Friendly CAPTCHA 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 892,
+      "slug": "cloudflare-turnstile-vs-friendly-captcha-2026"
+    },
+    {
+      "id": 1088,
+      "title": "Bunny.net vs Cloudflare CDN: Complete 2026 Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 893,
+      "slug": "net-vs-cloudflare-cdn-2026"
+    },
+    {
+      "id": 1091,
+      "title": "GLM-5.1 vs DeepSeek 2026: Complete Open LLM Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 899,
+      "slug": "1-vs-deepseek-2026-2026"
+    },
+    {
+      "id": 1202,
+      "title": "Notion vs Coda 2026: Privacy & Features",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 905,
+      "slug": "notion-vs-coda-2026-2026"
+    },
+    {
+      "id": 1139,
+      "title": "GAIA vs LangChain vs CrewAI 2026: Complete Agent Framework Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 905,
+      "slug": "gaia-vs-langchain-vs-2026"
+    },
+    {
+      "id": 600,
+      "title": "Codex vs Cursor vs Windsurf 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 905,
+      "slug": "codex-vs-cursor-vs-2026"
+    },
+    {
+      "id": 1459,
+      "title": "MAI-Code-1-Flash vs Gemini Flash: AI Coder 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 906,
+      "slug": "flash-vs-gemini-flash-2026"
+    },
+    {
+      "id": 1329,
+      "title": "Bun vs Deno vs Node.js 2026: Complete Speed Benchmark",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 906,
+      "slug": "bun-vs-deno-vs-2026"
+    },
+    {
+      "id": 1260,
+      "title": "Fly.io vs Render 2026: Best Cloud for Reliability?",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 907,
+      "slug": "io-vs-render-2026-2026"
+    },
+    {
+      "id": 983,
+      "title": "FlutterFlow vs Bubble vs Adalo: Complete 2026 Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 907,
+      "slug": "flutterflow-vs-bubble-vs-2026"
+    },
+    {
+      "id": 816,
+      "title": "CodeRabbit vs Qodo 2026: Complete AI Code Review Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 911,
+      "slug": "coderabbit-vs-qodo-2026-2026"
+    },
+    {
+      "id": 1326,
+      "title": "NMIXX 2026 Comeback Era: US Fan Guide",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 914,
+      "slug": "nmixx-comeback-era-review-2026"
+    },
+    {
+      "id": 1347,
+      "title": "Linux Gaming: Essential Guide to Faster Performance in 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 916,
+      "slug": "linux-gaming-faster-review-2026"
+    },
+    {
+      "id": 929,
+      "title": "FastAPI vs Django vs Flask: Complete 2026 Benchmark",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 919,
+      "slug": "fastapi-vs-django-vs-2026"
+    },
+    {
+      "id": 864,
+      "title": "Axe vs LangChain vs LlamaIndex 2026: Complete Framework Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 919,
+      "slug": "axe-vs-langchain-vs-2026"
+    },
+    {
+      "id": 1721,
+      "title": "Jurassic Park Computers 2026: Critical Lessons for System Architects",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 925,
+      "slug": "jurassic-park-computers-review-2026"
+    },
+    {
+      "id": 759,
+      "title": "BABYMONSTER Debut Era Deep Dive",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 927,
+      "slug": "babymonster-debut-era-review-2026"
+    },
+    {
+      "id": 879,
+      "title": "DeepSeek vs Llama 2026: Complete Open Source AI Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 928,
+      "slug": "deepseek-vs-llama-2026-2026"
+    },
+    {
+      "id": 1103,
+      "title": "IVE World Tour 2026: US Fan Experience",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 929,
+      "slug": "ive-world-tour-review-2026"
+    },
+    {
+      "id": 813,
+      "title": "GPT-5.4 vs Gemini 2026: Complete Performance Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 929,
+      "slug": "4-vs-gemini-2026-2026"
+    },
+    {
+      "id": 1706,
+      "title": "K-Pop Fanchant Etiquette 101",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 932,
+      "slug": "k-pop-fanchant-review-2026"
+    },
+    {
+      "id": 1688,
+      "title": "Hearts2Hearts Debut Era",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 932,
+      "slug": "hearts2hearts-debut-era-review-2026"
+    },
+    {
+      "id": 1697,
+      "title": "OpenAI API vs Azure OpenAI: Complete Safety Comparison 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 935,
+      "slug": "openai-api-vs-azure-openai-2026"
+    },
+    {
+      "id": 717,
+      "title": "Microsoft 365 vs Google Workspace 2026",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 935,
+      "slug": "microsoft-365-vs-google-workspace-2026"
+    },
+    {
+      "id": 1415,
+      "title": "Gemini Flash vs Claude Haiku 2026: Speed & Cost",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 939,
+      "slug": "gemini-flash-vs-claude-haiku-2026"
+    },
+    {
+      "id": 1353,
+      "title": "Emacs vs Neovim vs VSCode: Best Code Editor 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 940,
+      "slug": "emacs-vs-neovim-vs-2026"
+    },
+    {
+      "id": 1477,
+      "title": "Snyk vs Anthropic AI: Complete Vuln Scanner Analysis 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 955,
+      "slug": "snyk-vs-anthropic-ai-2026"
+    },
+    {
+      "id": 495,
+      "title": "ICE Using Palantir Tool That Feeds on Medicaid Data: 2026 Critical Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 955,
+      "slug": "ice-using-palantir-review-2026"
+    },
+    {
+      "id": 1196,
+      "title": "K-Pop Idol Luxury Brand Ambassador Culture",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 956,
+      "slug": "k-pop-idol-review-2026-3"
+    },
+    {
+      "id": 1061,
+      "title": "5 Proven OpenClaw Alternatives for Claude Code in 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 959,
+      "slug": "proven-openclaw-alternatives-review-2026"
+    },
+    {
+      "id": 1359,
+      "title": "K-Pop Group Member Roles Explained",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 960,
+      "slug": "k-pop-group-review-2026"
+    },
+    {
+      "id": 1223,
+      "title": "`ChatGPT Images vs Midjourney 2026: Who Wins?`",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 961,
+      "slug": "chatgpt-images-vs-midjourney-2026-2026"
+    },
+    {
+      "id": 1610,
+      "title": "`x402 vs Stripe: API Monetization 2026`",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 963,
+      "slug": "x402-vs-stripe-2026"
+    },
+    {
+      "id": 446,
+      "title": "European vs US SaaS Tools 2026: Privacy-First Wins Complete Analysis",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 964,
+      "slug": "european-vs-us-saas-2026"
+    },
+    {
+      "id": 111,
+      "title": "Enclose Horse Game 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 966,
+      "slug": "enclose-horse-shocking-review-2026"
+    },
+    {
+      "id": 1383,
+      "title": "NordVPN vs ProtonVPN vs Mullvad 2026",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 973,
+      "slug": "nordvpn-vs-protonvpn-vs-2026"
+    },
+    {
+      "id": 211,
+      "title": "Windsurf vs Codeium 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 973,
+      "slug": "windsurf-vs-codeium-2026-2026"
+    },
+    {
+      "id": 1784,
+      "title": "Easy Homemade Tteokbokki Recipe",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 974,
+      "slug": "easy-homemade-tteokbokki-review-2026"
+    },
+    {
+      "id": 682,
+      "title": "ZEROBASEONE Concert Experience 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 974,
+      "slug": "zerobaseone-concert-experience-review-2026"
+    },
+    {
+      "id": 147,
+      "title": "Claude vs ChatGPT Math 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 974,
+      "slug": "claude-vs-chatgpt-for-2026"
+    },
+    {
+      "id": 944,
+      "title": "uv vs Poetry vs pip: Best Python Package Manager 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 978,
+      "slug": "uv-vs-poetry-vs-2026"
+    },
+    {
+      "id": 810,
+      "title": "Toptal vs Arc vs Contra 2026: Complete Platform Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 979,
+      "slug": "toptal-vs-arc-vs-2026"
+    },
+    {
+      "id": 1317,
+      "title": "Wiz vs Orca vs Prisma Cloud 2026: Complete CNAPP Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 981,
+      "slug": "wiz-vs-orca-vs-2026"
+    },
+    {
+      "id": 1591,
+      "title": "HackerRank vs Greenhouse 2026: Best Dev ATS?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 982,
+      "slug": "hackerrank-vs-greenhouse-2026-2026"
+    },
+    {
+      "id": 478,
+      "title": "Claude Code Swarms 2026: Complete Multi-Agent Architecture Guide",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 982,
+      "slug": "claude-code-swarms-review-2026"
+    },
+    {
+      "id": 1489,
+      "title": "`Linear vs Height vs Shortcut 2026: Best PM` (43 chars)",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 984,
+      "slug": "linear-vs-height-vs-2026"
+    },
+    {
+      "id": 220,
+      "title": "Apple App Store Design 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 990,
+      "slug": "apples-shocking-app-review-2026"
+    },
+    {
+      "id": 1507,
+      "title": "OrbStack vs Docker Desktop 2026: Mac Dev Guide",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 991,
+      "slug": "orbstack-vs-docker-desktop-2026"
+    },
+    {
+      "id": 1356,
+      "title": "M4 MacBook Air vs Surface Pro 2026: Complete Dev Benchmark",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 992,
+      "slug": "macbook-air-vs-surface-pro-2026"
+    },
+    {
+      "id": 1394,
+      "title": "`Bitwarden vs 1Password 2026: Worth the Switch?`",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 998,
+      "slug": "bitwarden-vs-1password-2026-2026"
+    },
+    {
+      "id": 1495,
+      "title": "Siri vs ChatGPT 2026: Complete Developer API Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 999,
+      "slug": "siri-vs-chatgpt-2026-2026"
+    },
+    {
+      "id": 1281,
+      "title": "Computer Use vs Structured APIs: Cost Guide 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1001,
+      "slug": "computer-use-vs-structured-apis-2026"
+    },
+    {
+      "id": 894,
+      "title": "Cursor vs Aider 2026: Complete Performance Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1001,
+      "slug": "cursor-vs-aider-2026-2026"
+    },
+    {
+      "id": 1323,
+      "title": "LiveKit vs Daily vs Agora: Best WebRTC API 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1003,
+      "slug": "livekit-vs-daily-vs-2026"
+    },
+    {
+      "id": 1284,
+      "title": "Docker Compose vs Kubernetes 2026: Prod Ready?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1005,
+      "slug": "docker-compose-vs-kubernetes-2026-2026"
+    },
+    {
+      "id": 51,
+      "title": "Cursor vs GitHub Copilot: Which AI Wins?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1005,
+      "slug": "cursor-vs-github-copilot-which-ai-wins"
+    },
+    {
+      "id": 1664,
+      "title": "Chat Control 1.0 vs 2.0: Critical Dev Tool Implications 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1011,
+      "slug": "0-vs-2-2026"
+    },
+    {
+      "id": 1070,
+      "title": "Clerk vs Auth0 2026: Complete Auth API Comparison for Devs",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1011,
+      "slug": "clerk-vs-auth0-2026-2026"
+    },
+    {
+      "id": 1594,
+      "title": "Qwen 3.6 vs Llama 4: Best Local LLM Benchmark 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1013,
+      "slug": "6-vs-llama-4-2026"
+    },
+    {
+      "id": 837,
+      "title": "Tabnine vs GitHub Copilot 2026: Real Cost Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1017,
+      "slug": "tabnine-vs-github-copilot-2026"
+    },
+    {
+      "id": 123,
+      "title": "Tailwind vs Bootstrap 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1018,
+      "slug": "tailwind-vs-bootstrap-2026-2026"
+    },
+    {
+      "id": 546,
+      "title": "Patreon vs Stripe vs Gumroad 2026: Complete Creator Payment Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1019,
+      "slug": "patreon-vs-stripe-vs-2026"
+    },
+    {
+      "id": 443,
+      "title": "Korean Fermented Tea Guide",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1021,
+      "slug": "korean-fermented-tea-review-2026"
+    },
+    {
+      "id": 1199,
+      "title": "Vercel vs Railway 2026: Is Vercel Still Safe?",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1022,
+      "slug": "vercel-vs-railway-2026-2026"
+    },
+    {
+      "id": 1388,
+      "title": "React Native vs Flutter 2026: Which to Choose?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1024,
+      "slug": "react-native-vs-flutter-2026-2026"
+    },
+    {
+      "id": 685,
+      "title": "GitHub vs AI Agent Platforms 2026: Complete Deployment Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1024,
+      "slug": "github-vs-ai-agent-2026"
+    },
+    {
+      "id": 971,
+      "title": "GitLab vs Gitea: Complete 2026 Deployment Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1025,
+      "slug": "gitlab-vs-gitea-2026"
+    },
+    {
+      "id": 525,
+      "title": "Korean Gochugaru Guide 2026",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1025,
+      "slug": "korean-gochugaru-review-2026"
+    },
+    {
+      "id": 897,
+      "title": "Vite vs Turbopack 2026: Complete Build Speed Benchmark",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1028,
+      "slug": "vite-vs-turbopack-2026-2026"
+    },
+    {
+      "id": 1546,
+      "title": "Ollama vs OpenAI API 2026: True Cost Breakdown",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1030,
+      "slug": "ollama-vs-openai-api-2026"
+    },
+    {
+      "id": 619,
+      "title": "Xcode AI vs Cursor vs Copilot 2026: Complete Benchmark Analysis",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1031,
+      "slug": "xcode-ai-vs-cursor-vs-2026-2"
+    },
+    {
+      "id": 1040,
+      "title": "Gemma 4 vs Llama 4 2026: Complete Open Model Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1036,
+      "slug": "gemma-4-vs-llama-4-2026"
+    },
+    {
+      "id": 640,
+      "title": "GPT-5.3-Codex vs GitHub Copilot 2026: Complete Performance Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1036,
+      "slug": "codex-vs-github-copilot-2026"
+    },
+    {
+      "id": 777,
+      "title": "TWICE World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1037,
+      "slug": "twice-world-tour-review-2026"
+    },
+    {
+      "id": 1332,
+      "title": "ChatGPT vs Gemini 2026: Comprehensive Developer Verdict",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1040,
+      "slug": "chatgpt-vs-gemini-2026-2026"
+    },
+    {
+      "id": 1010,
+      "title": "GitHub to Codeberg Migration: Complete 2026 Walkthrough",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1040,
+      "slug": "github-codeberg-migration-review-2026"
+    },
+    {
+      "id": 658,
+      "title": "GitHub Copilot vs GPT-5.3-Codex 2026: Complete Benchmark Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1043,
+      "slug": "github-copilot-vs-gpt-2026"
+    },
+    {
+      "id": 1076,
+      "title": "PWA vs Native App 2026: Complete Build Decision Guide",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1046,
+      "slug": "pwa-vs-native-app-2026"
+    },
+    {
+      "id": 1573,
+      "title": "Essential AI Startup Stack 2026: Best Build Tools Compared",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1047,
+      "slug": "ai-startup-stack-review-2026"
+    },
+    {
+      "id": 1073,
+      "title": "Lovable vs v0 2026: Complete App Builder Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1048,
+      "slug": "lovable-vs-v0-2026-2026"
+    },
+    {
+      "id": 1187,
+      "title": "Helicone vs LangSmith 2026: Complete LLM Cost Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1050,
+      "slug": "helicone-vs-langsmith-2026-2026"
+    },
+    {
+      "id": 534,
+      "title": "TikTok Anti-ICE Upload Failures: 2026 Technical Crisis Analysis",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1052,
+      "slug": "tiktok-anti-ice-review-2026"
+    },
+    {
+      "id": 190,
+      "title": "CES 2026: Complete Tech",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1052,
+      "slug": "claude-cowork-vs-github-codespaces-2026"
+    },
+    {
+      "id": 1528,
+      "title": "MiMo Code vs GitHub Copilot 2026: Free vs Paid Compared",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1054,
+      "slug": "mimo-code-vs-github-copilot-2026"
+    },
+    {
+      "id": 634,
+      "title": "TREASURE Concert Guide 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1054,
+      "slug": "treasure-concert-review-2026"
+    },
+    {
+      "id": 561,
+      "title": "OpenWeather vs Weatherbit 2026: Complete API Performance Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1056,
+      "slug": "openweather-vs-weatherbit-2026-2026"
+    },
+    {
+      "id": 917,
+      "title": "Kagi vs Perplexity 2026: Complete AI Search Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1059,
+      "slug": "kagi-vs-perplexity-2026-2026"
+    },
+    {
+      "id": 1486,
+      "title": "GitHub Copilot vs Devin: Complete 2026 Benchmark Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1060,
+      "slug": "github-copilot-vs-devin-2026"
+    },
+    {
+      "id": 1667,
+      "title": "2026 Uniqlo Bash Script: Essential Decoding & Tech Insight",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1061,
+      "slug": "uniqlo-bash-script-review-2026"
+    },
+    {
+      "id": 750,
+      "title": "Gemini API vs Mistral API 2026: Complete Value Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1063,
+      "slug": "gemini-api-vs-mistral-api-2026"
+    },
+    {
+      "id": 184,
+      "title": "Windsurf vs Codeium vs Tabnine 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1064,
+      "slug": "windsurf-vs-codeium-vs-2026"
+    },
+    {
+      "id": 1272,
+      "title": "DeepClaude vs Aider: Best AI Coding Agent 2026?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1065,
+      "slug": "deepclaude-vs-aider-2026"
+    },
+    {
+      "id": 1406,
+      "title": "Railway vs Render 2026: Which Survives Outages?",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1066,
+      "slug": "railway-vs-render-2026-2026"
+    },
+    {
+      "id": 1320,
+      "title": "reCAPTCHA vs hCaptcha vs Turnstile 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1066,
+      "slug": "recaptcha-vs-hcaptcha-vs-2026"
+    },
+    {
+      "id": 531,
+      "title": "RIIZE World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1068,
+      "slug": "riize-world-tour-review-2026"
+    },
+    {
+      "id": 1064,
+      "title": "Continue.dev vs Aider 2026: Best OpenClaw Alternative Compared",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1070,
+      "slug": "dev-vs-aider-2026-2026"
+    },
+    {
+      "id": 906,
+      "title": "Voygr vs Google Maps API vs Mapbox 2026: Critical Maps API Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1070,
+      "slug": "voygr-vs-google-maps-2026"
+    },
+    {
+      "id": 1031,
+      "title": "Ably vs Pusher 2026: Complete Real-Time API Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1073,
+      "slug": "ably-vs-pusher-2026-2026"
+    },
+    {
+      "id": 825,
+      "title": "Groq vs Together AI vs Fireworks: Complete 2026 Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1074,
+      "slug": "groq-vs-together-ai-2026"
+    },
+    {
+      "id": 1480,
+      "title": "K-Pop Documentary Films",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1075,
+      "slug": "k-pop-documentary-review-2026"
+    },
+    {
+      "id": 26,
+      "title": "Linear vs Jira vs Asana APIs in 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1077,
+      "slug": "linear-vs-jira-vs-asana-apis-in-2026"
+    },
+    {
+      "id": 1652,
+      "title": "OpenWiki vs Mintlify 2026: Complete AI Docs Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1082,
+      "slug": "openwiki-vs-mintlify-2026-2026"
+    },
+    {
+      "id": 1013,
+      "title": "CrewAI vs AutoGen 2026: Complete Agent Framework Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1082,
+      "slug": "crewai-vs-autogen-2026-2026"
+    },
+    {
+      "id": 903,
+      "title": "Apideck CLI vs MCP 2026: Complete AI Agent Integration Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1082,
+      "slug": "apideck-cli-vs-mcp-2026-2026"
+    },
+    {
+      "id": 223,
+      "title": "Claude Code Cowork 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1084,
+      "slug": "claude-code-vs-cursor-2026-2026-2"
+    },
+    {
+      "id": 1471,
+      "title": "Elixir vs Go 2026: Critical Backend Performance Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1086,
+      "slug": "elixir-vs-go-2026-2026"
+    },
+    {
+      "id": 1245,
+      "title": "GitHub Copilot vs JetBrains AI: Complete 2026 Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1087,
+      "slug": "github-copilot-vs-jetbrains-ai-2026"
+    },
+    {
+      "id": 1214,
+      "title": "Single’s Inferno 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1087,
+      "slug": "singles-inferno-review-2026"
+    },
+    {
+      "id": 798,
+      "title": "Snyk vs Semgrep vs SonarQube 2026: Key Security Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1088,
+      "slug": "snyk-vs-semgrep-vs-2026"
+    },
+    {
+      "id": 1377,
+      "title": "DeepSeek Flash vs Gemini Flash: Complete 2026 Speed Test",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1089,
+      "slug": "deepseek-flash-vs-gemini-flash-2026"
+    },
+    {
+      "id": 852,
+      "title": "Temporal vs Moment.js vs date-fns 2026: Complete Migration Guide",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1089,
+      "slug": "temporal-vs-moment-2026"
+    },
+    {
+      "id": 756,
+      "title": "Obsidian vs Notion vs Logseq 2026: Best PKM? (44 chars)",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1089,
+      "slug": "obsidian-vs-notion-vs-2026"
+    },
+    {
+      "id": 1079,
+      "title": "Mistral vs Llama 2026: Definitive Open-Source Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1091,
+      "slug": "mistral-vs-llama-2026-2026"
+    },
+    {
+      "id": 4116,
+      "title": "P1Harmony 2026 World Tour",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1093,
+      "slug": "p1harmony-world-tour-review-2026"
+    },
+    {
+      "id": 100,
+      "title": "IQuest Coder Review 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1093,
+      "slug": "iquest-coder-need-review-2026"
+    },
+    {
+      "id": 613,
+      "title": "ITZY Comeback 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1095,
+      "slug": "itzy-comeback-review-2026"
+    },
+    {
+      "id": 1631,
+      "title": "Second Generation K-Pop Legacy Acts",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1097,
+      "slug": "second-generation-k-review-2026"
+    },
+    {
+      "id": 867,
+      "title": "Malus vs BrowserStack 2026: Complete Dev Testing Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1098,
+      "slug": "malus-vs-browserstack-2026-2026"
+    },
+    {
+      "id": 995,
+      "title": "LiteLLM vs OpenRouter 2026: Critical API Security Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1099,
+      "slug": "litellm-vs-openrouter-2026-2026"
+    },
+    {
+      "id": 885,
+      "title": "Gemini vs Mistral: Complete Long Context API Benchmark 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1099,
+      "slug": "gemini-vs-mistral-2026"
+    },
+    {
+      "id": 1453,
+      "title": "Dependabot vs Renovate 2026: Complete npm Security Audit",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1100,
+      "slug": "dependabot-vs-renovate-2026-2026"
+    },
+    {
+      "id": 473,
+      "title": "LE SSERAFIM Comeback 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1100,
+      "slug": "le-sserafim-comeback-review-2026"
+    },
+    {
+      "id": 171,
+      "title": "Cowork vs Cursor 2026: 2026 Complete Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1105,
+      "slug": "cowork-vs-cursor-2026-2026"
+    },
+    {
+      "id": 1055,
+      "title": "Azure vs AWS 2026: Complete Startup Deployment Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1107,
+      "slug": "azure-vs-aws-2026-2026"
+    },
+    {
+      "id": 819,
+      "title": "AWS vs GCP vs Azure: Proven VM Benchmark Results 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1113,
+      "slug": "aws-vs-gcp-vs-2026"
+    },
+    {
+      "id": 1516,
+      "title": "HTMX vs React 2026: Critical HTML-First Performance Analysis",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1114,
+      "slug": "htmx-vs-react-2026-2026"
+    },
+    {
+      "id": 1121,
+      "title": "Git vs Jujutsu 2026: Complete VCS Migration Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1114,
+      "slug": "git-vs-jujutsu-2026-2026"
+    },
+    {
+      "id": 959,
+      "title": "Tinybox vs NVIDIA Jetson 2026: Complete Local AI Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1114,
+      "slug": "tinybox-vs-nvidia-jetson-2026"
+    },
+    {
+      "id": 1100,
+      "title": "Next.js vs SvelteKit: Comprehensive Build Speed Test 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1117,
+      "slug": "js-vs-sveltekit-2026"
+    },
+    {
+      "id": 1435,
+      "title": "Deel vs Remote vs Rippling 2026: Critical Startup Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1119,
+      "slug": "deel-vs-remote-vs-2026"
+    },
+    {
+      "id": 205,
+      "title": "AI Code Generators vs Human Devs 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1123,
+      "slug": "code-generators-vs-human-devs-2026"
+    },
+    {
+      "id": 941,
+      "title": "Canary vs Playwright vs Cypress: Complete AI QA 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1124,
+      "slug": "canary-vs-playwright-vs-2026"
+    },
+    {
+      "id": 1715,
+      "title": "Japan’s 90% EV Lithium Recovery: Critical Supply Chain Impact",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1126,
+      "slug": "japans-ev-lithium-review-2026"
+    },
+    {
+      "id": 1124,
+      "title": "Weverse Platform Guide for US K-Pop Fans",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1126,
+      "slug": "weverse-platform-us-review-2026"
+    },
+    {
+      "id": 1585,
+      "title": "Lore vs Git 2026: Complete Version Control Scale Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1127,
+      "slug": "lore-vs-git-2026-2026"
+    },
+    {
+      "id": 549,
+      "title": "IU Concert Experience 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1128,
+      "slug": "iu-concert-experience-review-2026"
+    },
+    {
+      "id": 1112,
+      "title": "Instant vs Supabase vs Firebase: Complete 2026 Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1129,
+      "slug": "instant-vs-supabase-vs-2026"
+    },
+    {
+      "id": 528,
+      "title": "Cursor vs Tabnine vs Codeium 2026: Complete AI Code Editor Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1129,
+      "slug": "cursor-vs-tabnine-vs-2026"
+    },
+    {
+      "id": 72,
+      "title": "Claude Code vs Cursor vs Copilot: Mobile AI 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1130,
+      "slug": "claude-code-vs-cursor-vs-copilot-mobile-ai-2026"
+    },
+    {
+      "id": 1655,
+      "title": "OpenAI Codex vs GitHub Copilot 2026: Complete Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1131,
+      "slug": "openai-codex-vs-github-copilot-2026"
+    },
+    {
+      "id": 670,
+      "title": "GitHub Copilot Workspace vs Cursor Agent 2026: Complete Performance Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1131,
+      "slug": "copilot-workspace-vs-cursor-agent-2026"
+    },
+    {
+      "id": 1374,
+      "title": "Tailwind vs CSS Modules: Complete 2026 Styling Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1132,
+      "slug": "tailwind-vs-css-modules-2026"
+    },
+    {
+      "id": 1444,
+      "title": "Helicone vs Langfuse: Complete Cost Tracker Comparison 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1136,
+      "slug": "helicone-vs-langfuse-2026"
+    },
+    {
+      "id": 1127,
+      "title": "Render vs Fly.io 2026: Complete Budget Hosting Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1136,
+      "slug": "render-vs-fly-2026"
+    },
+    {
+      "id": 980,
+      "title": "GitHub Actions vs CircleCI: Complete Reliability Test 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1146,
+      "slug": "github-actions-vs-circleci-2026"
+    },
+    {
+      "id": 1504,
+      "title": "1Password vs Keeper 2026: Best Dev Security Compared",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1149,
+      "slug": "1password-vs-keeper-2026-2026"
+    },
+    {
+      "id": 956,
+      "title": "Ruff vs Black vs isort: Complete 2026 Formatter Benchmark",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1152,
+      "slug": "ruff-vs-black-vs-2026"
+    },
+    {
+      "id": 543,
+      "title": "Rust vs Go 2026: Complete Performance Benchmark Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1154,
+      "slug": "rust-vs-go-2026-2026"
+    },
+    {
+      "id": 1468,
+      "title": "Amazon Q vs JetBrains AI 2026: Best Enterprise Dev?",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1155,
+      "slug": "amazon-q-vs-jetbrains-ai-2026"
+    },
+    {
+      "id": 882,
+      "title": "Mouser vs Logi Options+: Best Dev Mouse Software 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1157,
+      "slug": "mouser-vs-logi-options-2026"
+    },
+    {
+      "id": 708,
+      "title": "Hetzner vs DigitalOcean 2026: Pricing After the 40% Hike",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1158,
+      "slug": "hetzner-vs-digitalocean-2026-2026"
+    },
+    {
+      "id": 180,
+      "title": "Claude Code Cowork 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1158,
+      "slug": "shocking-claude-code-review-2026"
+    },
+    {
+      "id": 174,
+      "title": "Apple Creator Studio vs YouTube Studio 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1160,
+      "slug": "creator-studio-vs-youtube-studio-2026"
+    },
+    {
+      "id": 697,
+      "title": "1Password vs Bitwarden vs Dashlane 2026: Complete Privacy Test",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1166,
+      "slug": "1password-vs-bitwarden-vs-2026"
+    },
+    {
+      "id": 786,
+      "title": "MacBook Neo vs Pro 2026: Complete Developer Benchmark",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1169,
+      "slug": "macbook-neo-vs-pro-2026-2026"
+    },
+    {
+      "id": 1275,
+      "title": "Deepgram vs ElevenLabs vs AssemblyAI 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1174,
+      "slug": "deepgram-vs-elevenlabs-vs-2026"
+    },
+    {
+      "id": 1498,
+      "title": "Apple Intelligence vs Gemini API 2026: For Devs",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1179,
+      "slug": "apple-intelligence-vs-gemini-api-2026"
+    },
+    {
+      "id": 858,
+      "title": "(G)I-DLE Syncopation 2026 World Tour",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1179,
+      "slug": "gi-dle-syncopation-review-2026"
+    },
+    {
+      "id": 628,
+      "title": "Cursor vs Windsurf vs Codex: 2026 AI IDE Performance Battle",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1180,
+      "slug": "cursor-vs-windsurf-vs-2026"
+    },
+    {
+      "id": 558,
+      "title": "Patreon Alternatives 2026: Escape Apple’s 30% Fee Crisis",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1181,
+      "slug": "patreon-alternatives-escape-review-2026"
+    },
+    {
+      "id": 1628,
+      "title": "PeerTube vs Vimeo 2026: Complete Dev Content Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1185,
+      "slug": "peertube-vs-vimeo-2026-2026"
+    },
+    {
+      "id": 1718,
+      "title": "PWA vs Native App 2026: Essential App vs Webpage Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1192,
+      "slug": "pwa-vs-native-app-2026-2"
+    },
+    {
+      "id": 1266,
+      "title": "Windsurf vs GitHub Copilot 2026: Safer Pick?",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1192,
+      "slug": "windsurf-vs-github-copilot-2026"
+    },
+    {
+      "id": 1043,
+      "title": "Cursor 3 Review 2026: Comprehensive Pro Performance Analysis",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1196,
+      "slug": "cursor-pro-performance-review-2026"
+    },
+    {
+      "id": 765,
+      "title": "MicroGPT vs Ollama 2026: Complete Local LLM Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1198,
+      "slug": "microgpt-vs-ollama-2026-2026"
+    },
+    {
+      "id": 762,
+      "title": "Ghostty vs Warp vs iTerm2: Complete 2026 Best Pick Guide",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1198,
+      "slug": "ghostty-vs-warp-vs-2026"
+    },
+    {
+      "id": 676,
+      "title": "Discord vs Slack vs Revolt 2026: Complete Privacy Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1198,
+      "slug": "discord-vs-slack-vs-2026"
+    },
+    {
+      "id": 126,
+      "title": "Claude vs Cursor vs Copilot 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1201,
+      "slug": "claude-vs-cursor-vs-2026"
+    },
+    {
+      "id": 108,
+      "title": "VSCode vs Zed 2026: 2026 Complete Performance",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1202,
+      "slug": "vscode-vs-zed-2026-2026-2"
+    },
+    {
+      "id": 1269,
+      "title": "GitHub Copilot vs Amazon Q Developer: Complete 2026 Guide",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1215,
+      "slug": "github-copilot-vs-amazon-q-2026"
+    },
+    {
+      "id": 1552,
+      "title": "K-Pop Merch Authentication Guide",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1222,
+      "slug": "k-pop-merch-review-2026"
+    },
+    {
+      "id": 1403,
+      "title": "Doppler vs Infisical vs Vault: Complete Secrets Manager 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1225,
+      "slug": "doppler-vs-infisical-vs-2026"
+    },
+    {
+      "id": 834,
+      "title": "Gmail vs Outlook 2026: Complete Developer Email Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1228,
+      "slug": "gmail-vs-outlook-2026-2026"
+    },
+    {
+      "id": 667,
+      "title": "TWS (Twenty Four Seven)",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1228,
+      "slug": "tws-twenty-four-review-2026"
+    },
+    {
+      "id": 1712,
+      "title": "Practical 2026 Headless CI/CD for Mac & iOS App Deployment",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1229,
+      "slug": "practical-headless-cicd-review-2026"
+    },
+    {
+      "id": 513,
+      "title": "Claude vs ChatGPT for Coding 2026: Complete Benchmark Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1231,
+      "slug": "claude-vs-chatgpt-for-2026-2"
+    },
+    {
+      "id": 579,
+      "title": "Blender vs Maya 2026: 2026 Complete Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1234,
+      "slug": "blender-vs-maya-2026-2026"
+    },
+    {
+      "id": 1531,
+      "title": "AgentOps vs LangSmith: Best Cost Tracker Comparison 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1235,
+      "slug": "agentops-vs-langsmith-2026"
+    },
+    {
+      "id": 564,
+      "title": "ATEEZ Comeback 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1235,
+      "slug": "ateez-comeback-review-2026"
+    },
+    {
+      "id": 196,
+      "title": "UTM vs Parallels Desktop 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1238,
+      "slug": "utm-vs-parallels-developers-2026"
+    },
+    {
+      "id": 1540,
+      "title": "Portkey vs Braintrust 2026: Complete Agent Cost Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1243,
+      "slug": "portkey-vs-braintrust-2026-2026"
+    },
+    {
+      "id": 1643,
+      "title": "Loom vs Tella 2026: Best Async Video Tool for Teams",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1250,
+      "slug": "loom-vs-tella-2026-2026"
+    },
+    {
+      "id": 616,
+      "title": "Xcode AI vs Cursor vs Copilot 2026: Apple’s Native Assistant Benchmarked",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1263,
+      "slug": "xcode-ai-vs-cursor-vs-2026"
+    },
+    {
+      "id": 594,
+      "title": "Codex App Review 2026: Complete Developer Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1266,
+      "slug": "codex-app-analysis-review-2026"
+    },
+    {
+      "id": 631,
+      "title": "AI Agents vs Traditional SaaS 2026: Complete Purchase Decision Guide",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1270,
+      "slug": "ai-agents-vs-traditional-saas-2026"
+    },
+    {
+      "id": 214,
+      "title": "Bluetooth Messaging Apps 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1272,
+      "slug": "decentralized-peer-messaging-review-2026"
+    },
+    {
+      "id": 177,
+      "title": "Claude Code vs Cursor 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1275,
+      "slug": "claude-code-vs-cursor-2026-2026"
+    },
+    {
+      "id": 1709,
+      "title": "2026 AI Content Flagging: Critical Tools for Generated Articles",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1286,
+      "slug": "ai-content-flagging-review-2026"
+    },
+    {
+      "id": 129,
+      "title": "Cursor vs Copilot vs Codeium 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1290,
+      "slug": "cursor-vs-copilot-vs-2026"
+    },
+    {
+      "id": 150,
+      "title": "CES 2026 AI Hardware",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1308,
+      "slug": "ces-shocking-truth-review-2026"
+    },
+    {
+      "id": 226,
+      "title": "Danish Pension Funds US Treasuries 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1316,
+      "slug": "shocking-reasons-danish-review-2026"
+    },
+    {
+      "id": 828,
+      "title": "Agent Safehouse 2026: Complete macOS AI Sandbox Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1319,
+      "slug": "agent-safehouse-macos-review-2026"
+    },
+    {
+      "id": 117,
+      "title": "Vietnam Bans Unskippable Ads 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "테크(초경쟁·트래픽0)",
+      "words": 1326,
+      "slug": "shocking-vietnam-bans-review-2026-2"
+    },
+    {
+      "id": 1537,
+      "title": "Korean Leather & Moto Jacket Styling Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 505,
+      "slug": "korean-leather-moto-review-2026"
+    },
+    {
+      "id": 1220,
+      "title": "Korean Knitwear & Sweater Styling Trends",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 529,
+      "slug": "korean-knitwear-sweater-review-2026"
+    },
+    {
+      "id": 1166,
+      "title": "Korean Tinted Sunscreen Buying Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 617,
+      "slug": "korean-tinted-sunscreen-review-2026"
+    },
+    {
+      "id": 1737,
+      "title": "Korean Varsity Jacket Styling",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 643,
+      "slug": "korean-varsity-jacket-review-2026"
+    },
+    {
+      "id": 741,
+      "title": "Korean Eye Cream Buying Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 647,
+      "slug": "korean-eye-cream-review-2026"
+    },
+    {
+      "id": 1746,
+      "title": "7 Best Korean PDRN",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 656,
+      "slug": "korean-pdrn-review-2026"
+    },
+    {
+      "id": 1634,
+      "title": "Korean Dress Styling Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 676,
+      "slug": "korean-dress-styling-review-2026"
+    },
+    {
+      "id": 1787,
+      "title": "Korean Puffer Jacket Styling",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 710,
+      "slug": "korean-puffer-jacket-review-2026"
+    },
+    {
+      "id": 1290,
+      "title": "Korean Monochrome Outfit Styling",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 719,
+      "slug": "korean-monochrome-outfit-review-2026"
+    },
+    {
+      "id": 4110,
+      "title": "Korean Fleece Jacket Styling",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 736,
+      "slug": "korean-fleece-jacket-review-2026"
+    },
+    {
+      "id": 1169,
+      "title": "Korean Cargo & Utility Fashion Trend Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 737,
+      "slug": "korean-cargo-utility-review-2026"
+    },
+    {
+      "id": 831,
+      "title": "Essential 2026 Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 737,
+      "slug": "review-2026"
+    },
+    {
+      "id": 456,
+      "title": "K-Drama Office Fashion 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 737,
+      "slug": "k-drama-office-review-2026"
+    },
+    {
+      "id": 1217,
+      "title": "K-Beauty Products You Can",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 745,
+      "slug": "k-beauty-products-review-2026"
+    },
+    {
+      "id": 1570,
+      "title": "Korean Coquette Aesthetic Fashion",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 756,
+      "slug": "korean-coquette-aesthetic-review-2026"
+    },
+    {
+      "id": 1781,
+      "title": "7 Best Korean Eye Patches for Depuffing & Glowing",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 764,
+      "slug": "korean-eye-review-2026"
+    },
+    {
+      "id": 4176,
+      "title": "Korean Bag Charm Trend 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 768,
+      "slug": "korean-bag-charm-review-2026"
+    },
+    {
+      "id": 2733,
+      "title": "Korean Balletcore 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 789,
+      "slug": "korean-balletcore-review-2026"
+    },
+    {
+      "id": 1694,
+      "title": "7 Chic Korean Beanie",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 823,
+      "slug": "chic-korean-beanie-review-2026"
+    },
+    {
+      "id": 1133,
+      "title": "Korean Tranexamic Acid Brightening",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 839,
+      "slug": "korean-tranexamic-acid-review-2026"
+    },
+    {
+      "id": 846,
+      "title": "Korean Collagen & Peptide Skincare Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 850,
+      "slug": "korean-collagen-peptide-review-2026"
+    },
+    {
+      "id": 1679,
+      "title": "10 Stylish Korean Techwear",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 851,
+      "slug": "stylish-korean-techwear-review-2026"
+    },
+    {
+      "id": 469,
+      "title": "Korean Oversized Blazer Styling",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 856,
+      "slug": "korean-oversized-blazer-review-2026"
+    },
+    {
+      "id": 570,
+      "title": "Korean Boyfriend Coat Trend 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 985,
+      "slug": "korean-boyfriend-coat-review-2026"
+    },
+    {
+      "id": 1097,
+      "title": "7 Essential Korean Winter",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 991,
+      "slug": "korean-winter-review-2026"
+    },
+    {
+      "id": 1118,
+      "title": "Korean Wide-Leg Pants Styling Guide 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 997,
+      "slug": "korean-wide-leg-review-2026"
+    },
+    {
+      "id": 1676,
+      "title": "5 Best Korean Squalane",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1030,
+      "slug": "korean-squalane-review-2026"
+    },
+    {
+      "id": 1691,
+      "title": "7 Best Korean Dermocosmetic",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1035,
+      "slug": "korean-dermocosmetic-review-2026"
+    },
+    {
+      "id": 1205,
+      "title": "Korean Green Tea Skincare Products",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1047,
+      "slug": "korean-green-tea-review-2026"
+    },
+    {
+      "id": 953,
+      "title": "9 Stunning Korean Bag",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1076,
+      "slug": "stunning-korean-bag-review-2026"
+    },
+    {
+      "id": 622,
+      "title": "Korean Essence vs Serum 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1095,
+      "slug": "korean-essence-vs-serum-2026-2026"
+    },
+    {
+      "id": 768,
+      "title": "Korean Scalp & Hair Care Routine for US Fans",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1098,
+      "slug": "korean-scalp-hair-review-2026"
+    },
+    {
+      "id": 1409,
+      "title": "7 Best Korean Face Oils for a Winter Glow 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1106,
+      "slug": "korean-face-oils-review-2026"
+    },
+    {
+      "id": 1391,
+      "title": "Korean Italy Towel",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1115,
+      "slug": "korean-italy-towel-review-2026"
+    },
+    {
+      "id": 1314,
+      "title": "7 Best Korean Waterproof",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1152,
+      "slug": "korean-waterproof-review-2026"
+    },
+    {
+      "id": 1254,
+      "title": "7 Essential Korean Perfume Brands",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1165,
+      "slug": "korean-perfume-brands-review-2026"
+    },
+    {
+      "id": 1362,
+      "title": "Korean Azelaic Acid Skincare",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1176,
+      "slug": "korean-azelaic-acid-review-2026"
+    },
+    {
+      "id": 1604,
+      "title": "Complete Seoul K-Drama Filming",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1180,
+      "slug": "seoul-k-drama-review-2026"
+    },
+    {
+      "id": 646,
+      "title": "Best Korean Moisturizer Winter Guide 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1192,
+      "slug": "korean-moisturizer-winter-review-2026"
+    },
+    {
+      "id": 673,
+      "title": "Korean Sheet Mask Winter Recovery Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1206,
+      "slug": "korean-sheet-mask-review-2026"
+    },
+    {
+      "id": 1579,
+      "title": "Korean Anti-Aging Skincare Routine",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1218,
+      "slug": "korean-anti-aging-review-2026"
+    },
+    {
+      "id": 475,
+      "title": "Best Korean Lip Tints for Winter 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1249,
+      "slug": "korean-lip-tints-review-2026"
+    },
+    {
+      "id": 1558,
+      "title": "Korean Eye Makeup Trends 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1252,
+      "slug": "korean-eye-makeup-review-2026"
+    },
+    {
+      "id": 1447,
+      "title": "7 Essential Korean At-Home",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1262,
+      "slug": "korean-home-review-2026"
+    },
+    {
+      "id": 537,
+      "title": "Korean Serum Layering Guide 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1271,
+      "slug": "korean-serum-layering-review-2026"
+    },
+    {
+      "id": 974,
+      "title": "7 Best Korean Gua",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1286,
+      "slug": "korean-gua-review-2026"
+    },
+    {
+      "id": 780,
+      "title": "7 Best Korean BHA",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1298,
+      "slug": "korean-bha-review-2026"
+    },
+    {
+      "id": 1115,
+      "title": "7 Best Korean BB",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1300,
+      "slug": "korean-bb-review-2026"
+    },
+    {
+      "id": 591,
+      "title": "Best Korean Clay Masks 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 목표 초과(하위)",
+      "words": 1303,
+      "slug": "korean-clay-review-2026"
+    }
+  ],
+  "keep_list": [
+    {
+      "id": 1474,
+      "title": "7 Proven Korean Bakuchiol",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 1522,
+      "title": "Complete 2026 Olive Young",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 2730,
+      "title": "Olive Young Global Best Sellers 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4128,
+      "title": "Korean Toner Pads 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4125,
+      "title": "BTS’s Grammy Boycott, Explained: How ARMY Sent ‘Aliens’ to No. 1 in 78 Countries (2026)",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4108,
+      "title": "Learn Korean, One Phrase at a Time — Try a Free 5-Minute Lesson (2026)",
+      "cats": [
+        "K-Culture"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4093,
+      "title": "Arbutin Cream: Does This Gentle Brightener Actually Fade Dark Spots? (2026)",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4100,
+      "title": "Why Greek Yogurt Became Korea’s Favorite Diet Food (2026 K-Diet Guide)",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4087,
+      "title": "Korean Exfoliation Guide: Peeling Gels, AHA, BHA & PHA Explained (2026)",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 4102,
+      "title": "Psyllium Husk: The Fiber Behind Korea’s Gut-Health & Diet Craze (2026)",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 3336,
+      "title": "Bakuchiol Serum: The Gentle Retinol Alternative Everyone’s Searching (2026)",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "머니글"
+    },
+    {
+      "id": 1658,
+      "title": "Korean Glass Skin Contouring & Highlight",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1619,
+      "title": "5 Korean Cleanser Types",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1534,
+      "title": "7 Best Korean Hand",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1462,
+      "title": "7 Best Korean Hyaluronic",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1365,
+      "title": "9 Essential Korean Loafer",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1287,
+      "title": "7 Best Korean Peeling",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1154,
+      "title": "9 Stunning Korean Sustainable",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1151,
+      "title": "7 Essential Korean Brow",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1094,
+      "title": "Essential Korean Men’s Skincare Routine",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1049,
+      "title": "7 Essential Korean Ceramide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1025,
+      "title": "10 Essential Korean Nail",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 950,
+      "title": "7 Best Korean Body",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 876,
+      "title": "7 Stunning Korean Hair",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 714,
+      "title": "Korean Y2K Fashion Revival",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 540,
+      "title": "LE SSERAFIM Airport Fashion Analysis",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 516,
+      "title": "Korean Ceramic Skincare Tools",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 454,
+      "title": "Korean Glass Skin Serum Routine 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 350,
+      "title": "Korean Barrier Cream 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1607,
+      "title": "7 Essential Korean Midi",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 900,
+      "title": "7 Best Korean Niacinamide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1299,
+      "title": "7 Best Korean Tone-Up",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 649,
+      "title": "7 Stunning Modern Hanbok",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 726,
+      "title": "Korean Lip Tint Buying Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 861,
+      "title": "7 Essential Korean Denim",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 691,
+      "title": "Korean Cushion Foundation 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 989,
+      "title": "Korean Probiotic Skincare",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 385,
+      "title": "ENHYPEN Airport Fashion 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1037,
+      "title": "The Essential Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 744,
+      "title": "Sageuk Fashion",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 873,
+      "title": "Essential Korean Mugwort Skincare",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1302,
+      "title": "9 Stunning Korean Cottagecore",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1007,
+      "title": "Korean Color Blocking 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 567,
+      "title": "Korean Sleeping Masks Winter Guide",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1019,
+      "title": "7 Best Korean Gradient",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 920,
+      "title": "7 Essential Korean AHA",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 694,
+      "title": "Korean Trench Coat Styling Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 555,
+      "title": "TXT Concert Fashion Analysis",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1510,
+      "title": "Seoul Fashion Week Trends",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1106,
+      "title": "Best Korean Blush Trends 2026",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 792,
+      "title": "7 Best Korean Acne",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 807,
+      "title": "7 Best Korean Retinol",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 552,
+      "title": "7 Best Korean Glass",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1492,
+      "title": "Korean Ginseng Skincare Products",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1184,
+      "title": "Korean Eyewear 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 585,
+      "title": "Golden Disc Awards 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 935,
+      "title": "Korean Preppy Style 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 711,
+      "title": "The Essential Korean Double",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1588,
+      "title": "7 Korean Beauty Tech Devices",
+      "cats": [
+        "K-Beauty"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1412,
+      "title": "7 Essential Korean Golf",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 729,
+      "title": "10 Essential Korean Sneaker Brands",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1426,
+      "title": "Korean Maximalist Fashion",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 849,
+      "title": "9 Stunning Korean Jewelry",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1028,
+      "title": "7 Stunning Korean Couple",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1525,
+      "title": "Essential Korean Boots Styling Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 992,
+      "title": "7 Stylish Korean Vintage Finds",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1257,
+      "title": "Korean Loungewear 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1582,
+      "title": "Korean Scarf & Muffler Styling Guide",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 625,
+      "title": "Seoul Music Awards Fashion 2026",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1465,
+      "title": "Korean Hair Accessories & Clip Trends",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1109,
+      "title": "Essential Korean Gorpcore Fashion",
+      "cats": [
+        "K-Fashion"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 4131,
+      "title": "How to Make Authentic",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1576,
+      "title": "K-Pop Idol Graduation & Group Disbandment",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1564,
+      "title": "K-Pop Music Video Storytelling",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1432,
+      "title": "K-Pop Idols Crossing Over Into K-Dramas",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1208,
+      "title": "Korean Jjigae Stew Recipes for Cold Weather",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1163,
+      "title": "Big 4 K-Pop Labels: HYBE vs SM vs JYP vs YG",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1085,
+      "title": "How to Make Authentic Korean Pajeon Savory Pancake",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1058,
+      "title": "7 Must-Try Gimbap Recipe Variations",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1046,
+      "title": "7 Essential Ways",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1034,
+      "title": "K-Drama OST Deep Dive",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 947,
+      "title": "7 Essential K-Pop Survival",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 909,
+      "title": "K-Pop Fancam Culture 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 843,
+      "title": "RunAnywhere vs Modal vs Replicate: Critical 2026 Deployment Comparison",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 804,
+      "title": "BTS Military Discharge 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 655,
+      "title": "Korean Banchan Side Dishes",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 582,
+      "title": "Cursor vs Tabnine vs Codeium 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 576,
+      "title": "Complete Guide to Making",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 449,
+      "title": "BitLocker vs VeraCrypt 2026: Complete Encryption Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 434,
+      "title": "ChatGPT Cognitive Debt 2026: Complete Brain Impact Analysis",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 393,
+      "title": "Korean Cheese Trends 2026",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 229,
+      "title": "Cloud Carbon Tracking Tools 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 193,
+      "title": "Apple vs Nvidia: 2026 Capacity Battle",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 187,
+      "title": "Handy vs Whisper vs Otter.ai 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 120,
+      "title": "Tailwind CSS Alternatives 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 459,
+      "title": "(G)I-DLE World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1251,
+      "title": "K-Pop Sub-Units",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1001,
+      "title": "Essential K-Pop Unboxing Guide 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 661,
+      "title": "CryptPad vs Notion vs Google Workspace 2026: Complete Privacy-First Collaboration Comparison",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 502,
+      "title": "MAMA Awards 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 138,
+      "title": "OpenCode Sisyphus vs Claude Code 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1597,
+      "title": "K-Pop Fan Communities Online for US Fans",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 588,
+      "title": "Netbird vs Tailscale vs ZeroTier 2026",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1438,
+      "title": "Red Velvet 2026 Comeback",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1190,
+      "title": "Claude AI 2026: Comprehensive Developer Experience Review",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 738,
+      "title": "K-Pop Music Show Voting 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1385,
+      "title": "NordVPN vs Mullvad vs ProtonVPN 2026: Complete Dev Benchmark",
+      "cats": [
+        "SaaS Reviews"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1142,
+      "title": "Gayo Daejeon 2025",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1543,
+      "title": "LangSmith vs Arize 2026: Complete Agent Monitoring Guide",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1368,
+      "title": "Radicle vs GitHub 2026: Complete Sovereign Git Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 202,
+      "title": "Astro vs Next.js vs Remix 2026",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1380,
+      "title": "How Hanteo Charts Work",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1501,
+      "title": "DAY6 2026: Complete MyDay",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 440,
+      "title": "GPTZero vs Copyleaks 2026: Complete Detection Accuracy Benchmark",
+      "cats": [
+        "AI Tools"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 597,
+      "title": "Korean Beef Bulgogi Home Cooking Guide 2026",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 789,
+      "title": "KISS OF LIFE 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1456,
+      "title": "Best K-Dramas for Beginners",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 840,
+      "title": "Complete K-Pop Lightstick Collector’s Guide",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 699,
+      "title": "Complete Homemade Kimchi Guide",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 938,
+      "title": "Korean Hotteok Sweet Pancake Recipe",
+      "cats": [
+        "K-Food"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 932,
+      "title": "BOYNEXTDOOR Members",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 822,
+      "title": "ILLIT PRESS START 2026 Tour",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 643,
+      "title": "NCT Dream Stadium Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1625,
+      "title": "Google Play vs App Store 2026: Complete Dev Comparison",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1400,
+      "title": "K-Pop x Western Artist Collaborations",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1278,
+      "title": "Bun vs Node.js vs Deno 2026: Runtime Showdown",
+      "cats": [
+        "Dev Productivity"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 428,
+      "title": "SEVENTEEN World Tour 2026",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    },
+    {
+      "id": 1649,
+      "title": "G-Dragon & BIGBANG’s 2026 Comeback Era",
+      "cats": [
+        "K-Pop"
+      ],
+      "reason": "카테고리 상위"
+    }
+  ]
+}

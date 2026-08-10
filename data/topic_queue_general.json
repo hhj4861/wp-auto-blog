@@ -1360,14 +1360,15 @@
       "예매일정"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2340,
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
     "head_keyword": "추석기차표예매",
     "demand_peak": "2026-09",
-    "publish_by": "2026-08-10"
+    "publish_by": "2026-08-10",
+    "completed_at": "2026-08-10T03:48:56.981241"
   },
   {
     "topic": "연금저축·IRP 세액공제 한도 총정리: 연말정산 최대 환급 전략 (2026)",

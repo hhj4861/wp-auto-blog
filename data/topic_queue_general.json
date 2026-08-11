@@ -983,12 +983,13 @@
       "청년"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 11980,
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "청년내일채움공제"
+    "head_keyword": "청년내일채움공제",
+    "completed_at": "2026-08-11T03:46:42.251665"
   },
   {
     "topic": "확정일자 인터넷 발급 방법과 전세보증금 지키는 법",

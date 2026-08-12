@@ -846,11 +846,12 @@
       "9월"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 32280,
     "competition": "중간",
     "verdict": "go",
-    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택"
+    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택",
+    "completed_at": "2026-08-12T04:01:40.940947"
   },
   {
     "topic": "컴퓨터활용능력 1급 독학 합격법과 시험 일정 (2026)",

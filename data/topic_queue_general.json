@@ -1103,11 +1103,12 @@
       "작성법"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 7330,
     "competition": "높음",
     "verdict": "go",
-    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리"
+    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리",
+    "skipped_at": "2026-08-13T04:11:58.531319"
   },
   {
     "topic": "첫 월급 실수령액 계산법: 4대보험 공제 총정리 (2026)",
@@ -1119,12 +1120,13 @@
       "첫월급"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 6620,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "실수령액"
+    "head_keyword": "실수령액",
+    "completed_at": "2026-08-13T04:15:37.533655"
   },
   {
     "topic": "근로장려금금액조회 방법 총정리 (2026)",

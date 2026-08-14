@@ -968,11 +968,12 @@
       "예약방법"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 12900,
     "competition": "높음",
     "verdict": "go",
-    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준"
+    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준",
+    "skipped_at": "2026-08-14T03:59:33.313009"
   },
   {
     "topic": "2026 청년내일채움공제 신청 조건과 만기 수령액 총정리",
@@ -1002,12 +1003,13 @@
       "인터넷등기소"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 11200,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "확정일자"
+    "head_keyword": "확정일자",
+    "skipped_at": "2026-08-14T03:59:37.754554"
   },
   {
     "topic": "주휴수당 계산법과 지급 조건, 못 받았을 때 대처법",
@@ -1019,12 +1021,13 @@
       "임금체불"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 10950,
     "competition": "낮음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "주휴수당계산법"
+    "head_keyword": "주휴수당계산법",
+    "completed_at": "2026-08-14T04:02:47.563349"
   },
   {
     "topic": "해외주식 양도소득세 계산과 5월 신고 방법 총정리 (250만원 공제)",

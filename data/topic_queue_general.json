@@ -1073,12 +1073,13 @@
       "소아과"
     ],
     "category": "건강",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 7790,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "영유아건강검진"
+    "head_keyword": "영유아건강검진",
+    "completed_at": "2026-08-15T03:00:22.888674"
   },
   {
     "topic": "퇴직금 계산 방법과 지급 기한, 미지급 대처법 총정리",

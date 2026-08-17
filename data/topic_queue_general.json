@@ -1057,11 +1057,12 @@
       "예약방법"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 10540,
     "competition": "중간",
     "verdict": "go",
-    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준"
+    "derived_from": "자동차 정기검사 예약 방법과 기간 초과 과태료 기준",
+    "skipped_at": "2026-08-17T02:53:22.007946"
   },
   {
     "topic": "영유아 건강검진 시기와 문진표 작성 방법 총정리",
@@ -1091,12 +1092,13 @@
       "고용노동부"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 7670,
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "퇴직금계산방법"
+    "head_keyword": "퇴직금계산방법",
+    "completed_at": "2026-08-17T02:57:00.276618"
   },
   {
     "topic": "아르바이트이력서양식 총정리 (2026)",

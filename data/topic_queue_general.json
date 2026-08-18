@@ -1158,11 +1158,12 @@
       "작성법"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 6340,
     "competition": "높음",
     "verdict": "go",
-    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리"
+    "derived_from": "신입 이력서·자기소개서 무료 양식과 작성법 총정리",
+    "skipped_at": "2026-08-18T02:54:56.744540"
   },
   {
     "topic": "폐렴구균 예방접종 무료 대상과 접종 방법 (만 65세 이상)",
@@ -1302,12 +1303,13 @@
       "인적성"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 3200,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "GSAT"
+    "head_keyword": "GSAT",
+    "completed_at": "2026-08-18T02:58:03.526081"
   },
   {
     "topic": "통신비 미환급금 조회하고 돌려받는 방법 총정리",

@@ -1143,11 +1143,12 @@
       "지급일"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 6340,
     "competition": "높음",
     "verdict": "go",
-    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법",
+    "completed_at": "2026-08-19T02:54:09.320526"
   },
   {
     "topic": "이력서양식다운로드 총정리 (2026)",

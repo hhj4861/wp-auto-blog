@@ -1463,12 +1463,13 @@
       "압박면접"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 1190,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "면접질문"
+    "head_keyword": "면접질문",
+    "completed_at": "2026-08-20T02:58:47.423097"
   },
   {
     "topic": "2026 국가암검진 대상과 검사 항목, 비용 총정리",

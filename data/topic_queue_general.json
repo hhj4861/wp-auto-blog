@@ -1192,11 +1192,12 @@
       "9월"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 5790,
     "competition": "낮음",
     "verdict": "go",
-    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택"
+    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택",
+    "skipped_at": "2026-08-21T02:56:06.104547"
   },
   {
     "topic": "국민건강보험 환급금 조회와 신청 방법 (본인부담상한제)",
@@ -1208,12 +1209,13 @@
       "국민건강보험"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 5510,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "건강보험환급금"
+    "head_keyword": "건강보험환급금",
+    "completed_at": "2026-08-21T02:59:16.255074"
   },
   {
     "topic": "재산세확인 방법 총정리 (2026)",

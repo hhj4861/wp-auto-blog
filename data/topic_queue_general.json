@@ -1176,12 +1176,13 @@
       "보건소"
     ],
     "category": "건강",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 6240,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "폐렴구균예방접종"
+    "head_keyword": "폐렴구균예방접종",
+    "completed_at": "2026-08-22T03:02:30.506040"
   },
   {
     "topic": "재산세계산 사용법과 실제 예시 (2026)",

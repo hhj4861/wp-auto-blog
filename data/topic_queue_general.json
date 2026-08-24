@@ -1227,11 +1227,12 @@
       "9월"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 4750,
     "competition": "중간",
     "verdict": "go",
-    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택"
+    "derived_from": "2026년 9월 재산세 2기분 납부 기간과 카드 납부 혜택",
+    "skipped_at": "2026-08-24T02:56:45.207848"
   },
   {
     "topic": "국세청 미수령 환급금 조회와 수령 방법 총정리",
@@ -1243,12 +1244,13 @@
       "수령방법"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 4740,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "국세환급금"
+    "head_keyword": "국세환급금",
+    "completed_at": "2026-08-24T02:59:50.323048"
   },
   {
     "topic": "근로장려금조건 총정리: 나도 해당될까? (2026)",

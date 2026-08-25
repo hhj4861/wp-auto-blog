@@ -56,3 +56,11 @@ data/coverage/
 # OS
 .DS_Store
 Thumbs.db
+
+# 자격증명 — 이 저장소는 무료 CI를 위해 public이다. 절대 추적하지 말 것.
+# GCP 서비스 계정 개인키(GSC API용). git add -A 사고 방지용 가드레일.
+.claude/scripts/*.json
+
+# 상업신호 정리(decommercialize.py) 백업 — 제휴 파라미터가 박힌 본문 HTML이라
+# public 저장소에 올리면 제휴 ID가 노출된다. 로컬 보관 전용.
+data/backup/

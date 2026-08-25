@@ -1,0 +1,95 @@
+{
+  "date": "2026-08-25",
+  "site": "https://bytepulse.io/",
+  "rows": [
+    {
+      "arm": "A",
+      "url": "https://bytepulse.io/tailwind-css-alternatives-review-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "A",
+      "url": "https://bytepulse.io/cursor-vs-copilot-vs-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "A",
+      "url": "https://bytepulse.io/linux-desktop-for-developers-2026-setup-guide/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "A",
+      "url": "https://bytepulse.io/linear-vs-jira-vs-asana-apis-in-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "B",
+      "url": "https://bytepulse.io/chatgpt-cognitive-debt-review-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "B",
+      "url": "https://bytepulse.io/openai-codex-vs-deepseek-harness-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "B",
+      "url": "https://bytepulse.io/netbird-vs-tailscale-vs-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "B",
+      "url": "https://bytepulse.io/astro-vs-next-2026/",
+      "coverage": "Google에는 아직 알려지지 않은 URL입니다.",
+      "lastCrawl": "",
+      "verdict": "NEUTRAL"
+    },
+    {
+      "arm": "표면",
+      "url": "https://bytepulse.io/",
+      "coverage": "제출되고 색인이 생성되었습니다.",
+      "lastCrawl": "2026-07-02",
+      "verdict": "PASS"
+    },
+    {
+      "arm": "표면",
+      "url": "https://bytepulse.io/category/tech/ai-tools/",
+      "coverage": "제출되고 색인이 생성되었습니다.",
+      "lastCrawl": "2026-08-18",
+      "verdict": "PASS"
+    },
+    {
+      "arm": "표면",
+      "url": "https://bytepulse.io/category/k-culture/k-pop/",
+      "coverage": "제출되고 색인이 생성되었습니다.",
+      "lastCrawl": "2026-08-18",
+      "verdict": "PASS"
+    },
+    {
+      "arm": "표면",
+      "url": "https://bytepulse.io/category/tech/",
+      "coverage": "크롤링됨 - 현재 색인이 생성되지 않음",
+      "lastCrawl": "2026-01-23",
+      "verdict": "NEUTRAL"
+    }
+  ],
+  "new_crawls": {
+    "A": 0,
+    "B": 0
+  },
+  "indexed": 3
+}

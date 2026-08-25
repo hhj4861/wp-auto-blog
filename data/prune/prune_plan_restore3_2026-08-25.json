@@ -1,0 +1,29 @@
+{
+  "generated": "2026-08-25",
+  "action": "draft->publish (부분 원복 3건)",
+  "prev_status": "publish",
+  "note": "노출 실적이 있던 테크 3건만 선별 원복. 원본 plan(331건)을 restore에 넘기지 말 것.",
+  "restore_hint": "python scripts/prune_execute.py --restore data/prune/prune_plan_restore3_2026-08-25.json",
+  "ids": [
+    60,
+    26,
+    129
+  ],
+  "items": [
+    {
+      "id": 60,
+      "slug": "linux-desktop-for-developers-2026-setup-guide",
+      "title": "Linux Desktop for Developers: 2026 Setup Guide"
+    },
+    {
+      "id": 26,
+      "slug": "linear-vs-jira-vs-asana-apis-in-2026",
+      "title": "Linear vs Jira vs Asana APIs in 2026"
+    },
+    {
+      "id": 129,
+      "slug": "cursor-vs-copilot-vs-2026",
+      "title": "Cursor vs Copilot vs Codeium 2026"
+    }
+  ]
+}

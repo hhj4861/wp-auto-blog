@@ -1,0 +1,26 @@
+{
+  "site": "https://bytepulse.io/",
+  "baseline_date": "2026-08-25",
+  "note": "프로브 발행 후 arm_a 의 PROBE 항목을 실제 URL로 교체할 것. arm_b 는 절대 건드리지 않는다.",
+  "arm_a": [
+    "https://bytepulse.io/tailwind-css-alternatives-review-2026/",
+    "https://bytepulse.io/cursor-vs-copilot-vs-2026/",
+    "https://bytepulse.io/linux-desktop-for-developers-2026-setup-guide/",
+    "https://bytepulse.io/linear-vs-jira-vs-asana-apis-in-2026/",
+    "PROBE_1_URL_미발행",
+    "PROBE_2_URL_미발행"
+  ],
+  "arm_b": [
+    "https://bytepulse.io/chatgpt-cognitive-debt-review-2026/",
+    "https://bytepulse.io/openai-codex-vs-deepseek-harness-2026/",
+    "https://bytepulse.io/netbird-vs-tailscale-vs-2026/",
+    "https://bytepulse.io/astro-vs-next-2026/"
+  ],
+  "surface": [
+    "https://bytepulse.io/",
+    "https://bytepulse.io/category/tech/ai-tools/",
+    "https://bytepulse.io/category/k-culture/k-pop/",
+    "https://bytepulse.io/category/tech/"
+  ],
+  "index_requested": []
+}

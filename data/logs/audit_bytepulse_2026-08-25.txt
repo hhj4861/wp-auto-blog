@@ -1,0 +1,69 @@
+속성: https://bytepulse.io/ | URL Inspection 정밀 감사 (상한 160)
+================================================================
+사이트맵 URL 147개 (이번 검사 147개, 동시 4)
+
+  ...50/147 검사
+  ...100/147 검사
+
+[집계] 검사 147개 · 색인 7개 · 미색인 140개 · 검사오류 0개
+[색인율] 4.8%
+
+[상태별 분포]
+   135  UNKNOWN_TO_GOOGLE(미발견)
+     7  INDEXED
+     3  DISCOVERED_NOT_INDEXED
+     2  CRAWLED_NOT_INDEXED
+
+[미색인 URL — 사유별] (사유당 최대 40개)
+
+  ▼ UNKNOWN_TO_GOOGLE(미발견) (135개)
+    /g-dragon-bigbangs-review-2026/
+    /gi-dle-world-review-2026/
+    /k-pop-music-review-2026-2/
+    /korean-maximalist-fashion-review-2026/
+    /nmixx-comeback-era-review-2026/
+    /k-pop-idols-review-2026/
+    /ive-world-tour-review-2026/
+    /babymonster-debut-era-review-2026/
+    /twice-world-tour-review-2026/
+    /tteokbokki-recipe-review-2026/
+    /korean-cushion-foundation-review-2026/
+    /k-pop-idol-review-2026-4/
+    /korean-midi-review-2026/
+    /korean-boots-styling-review-2026/
+    /izna-review-2026/
+    /day6-myday-review-2026/
+    /red-velvet-comeback-review-2026/
+    /korean-blush-trends-review-2026/
+    /review-2026-2/
+    /stunning-korean-couple-review-2026/
+    /korean-color-blocking-review-2026/
+    /boynextdoor-members-review-2026/
+    /korean-denim-review-2026/
+    /gi-dle-syncopation-review-2026/
+    /stunning-korean-jewelry-review-2026/
+    /bts-military-discharge-review-2026/
+    /illit-press-start-review-2026/
+    /kiss-life-review-2026/
+    /korean-sneaker-brands-review-2026/
+    /zerobaseone-concert-experience-review-2026/
+    /nct-dream-stadium-review-2026/
+    /treasure-concert-review-2026/
+    /itzy-comeback-review-2026/
+    /golden-disc-awards-review-2026/
+    /riize-world-tour-review-2026/
+    /seventeen-world-tour-review-2026-2/
+    /enhypen-airport-fashion-review-2026/
+    /le-sserafim-comeback-review-2026/
+    /google-play-vs-app-store-2026/
+    /korean-scarf-muffler-review-2026/
+    ... 외 95개
+
+  ▼ DISCOVERED_NOT_INDEXED (3개)
+    /privacy-policy/
+    /about/
+    /category/tech/saas-reviews/
+
+  ▼ CRAWLED_NOT_INDEXED (2개)
+    /category/k-culture/
+    /category/tech/

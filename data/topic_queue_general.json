@@ -1677,12 +1677,13 @@
       "신입"
     ],
     "category": "취업",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 510,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "대기업공채"
+    "head_keyword": "대기업공채",
+    "completed_at": "2026-08-25T03:00:56.014145"
   },
   {
     "topic": "보조금24로 내가 받을 수 있는 정부지원금 한번에 조회하는 방법",

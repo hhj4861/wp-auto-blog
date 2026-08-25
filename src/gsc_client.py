@@ -15,6 +15,7 @@ from __future__ import annotations
 import base64
 import json
 import os
+import re
 import time
 
 import requests
@@ -134,6 +135,20 @@ def submit_sitemap(feedpath: str, site_url: str | None = None) -> dict:
             "detail": (r.text or "")[:300]}
 
 
+def normalize_url(url: str) -> str:
+    """URL Inspection 조회용 정규화 — 퍼센트인코딩 16진수를 대문자로 올린다.
+
+    GSC는 %xx를 RFC 3986 정규형(대문자 hex)으로 보관하는데 Yoast 사이트맵은
+    소문자로 뱉는다. 이 차이만으로 Inspection API가 '알려지지 않은 URL'을
+    반환한다 — 2026-08-24 실측: 같은 한글 슬러그 URL이
+      %ec…(소문자) → '알려지지 않은 URL'
+      %EC…(대문자) → '제출되고 색인이 생성되었습니다'(lastCrawl 2026-08-19)
+    trendpulse 사이트맵 330개 중 279개가 소문자라 과거 감사 수치는 전부 오판이었다.
+    대소문자만 바꾸므로 URL 의미는 불변(디코딩과 달리 부작용 없음).
+    """
+    return re.sub(r"%[0-9a-fA-F]{2}", lambda m: m.group(0).upper(), url)
+
+
 def inspect_url(page_url: str, site_url: str | None = None) -> dict:
     """URL Inspection API — 페이지의 실제 색인 상태 조회.
 
@@ -145,7 +160,7 @@ def inspect_url(page_url: str, site_url: str | None = None) -> dict:
     }
     실패 시 {error: ...}. 쿼터: 속성당 ~2000/일.
     """
-    body = {"inspectionUrl": page_url,
+    body = {"inspectionUrl": normalize_url(page_url),
             "siteUrl": site_url or SITE_URL,
             "languageCode": "ko"}
     # Inspection API는 간헐 ReadTimeout이 잦다 — 단건 실패가 전수 감사를

@@ -1261,11 +1261,12 @@
       "지급일"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 4290,
     "competition": "낮음",
     "verdict": "go",
-    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법",
+    "skipped_at": "2026-08-26T02:57:50.014538"
   },
   {
     "topic": "근로장려금신청방법 총정리: 단계별 안내 (2026)",
@@ -1276,11 +1277,12 @@
       "지급일"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 3610,
     "competition": "중간",
     "verdict": "go",
-    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법",
+    "skipped_at": "2026-08-26T02:57:56.243573"
   },
   {
     "topic": "배당소득세 총정리: 배당주 세금 계산과 분리과세 개편 현황",
@@ -1292,12 +1294,13 @@
       "종합과세"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 3240,
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "배당소득세"
+    "head_keyword": "배당소득세",
+    "completed_at": "2026-08-26T03:01:13.276901"
   },
   {
     "topic": "삼성 GSAT 시험 일정과 과목별 준비 방법 총정리 (2026 하반기)",

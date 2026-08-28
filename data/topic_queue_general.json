@@ -1330,12 +1330,13 @@
       "스마트초이스"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2560,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "KT통신비할인카드"
+    "head_keyword": "KT통신비할인카드",
+    "completed_at": "2026-08-28T13:39:47.428568"
   },
   {
     "topic": "퇴직연금 디폴트옵션(사전지정운용) 총정리: 선택 방법과 수익률 비교",

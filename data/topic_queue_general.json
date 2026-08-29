@@ -1365,12 +1365,13 @@
       "건강보험"
     ],
     "category": "건강",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2450,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "보청기지원금"
+    "head_keyword": "보청기지원금",
+    "completed_at": "2026-08-29T08:54:57.213284"
   },
   {
     "topic": "2026 추석 기차표 예매 일정과 KTX·SRT 예매 방법 총정리",

@@ -1348,12 +1348,13 @@
       "IRP"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2460,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "퇴직연금디폴트옵션"
+    "head_keyword": "퇴직연금디폴트옵션",
+    "completed_at": "2026-08-31T07:59:46.650524"
   },
   {
     "topic": "노인 보청기 국가 지원금 신청 방법과 지원 금액 (2026)",

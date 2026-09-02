@@ -1261,11 +1261,12 @@
       "지급일"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 4290,
     "competition": "낮음",
     "verdict": "go",
-    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법",
+    "skipped_at": "2026-08-26T02:57:50.014538"
   },
   {
     "topic": "근로장려금신청방법 총정리: 단계별 안내 (2026)",
@@ -1276,11 +1277,12 @@
       "지급일"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "skipped_duplicate",
     "monthly_search": 3610,
     "competition": "중간",
     "verdict": "go",
-    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법"
+    "derived_from": "2026년 근로장려금 정기분 지급일과 지급액 조회 방법",
+    "skipped_at": "2026-08-26T02:57:56.243573"
   },
   {
     "topic": "배당소득세 총정리: 배당주 세금 계산과 분리과세 개편 현황",
@@ -1292,12 +1294,13 @@
       "종합과세"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 3240,
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "배당소득세"
+    "head_keyword": "배당소득세",
+    "completed_at": "2026-08-26T03:01:13.276901"
   },
   {
     "topic": "삼성 GSAT 시험 일정과 과목별 준비 방법 총정리 (2026 하반기)",
@@ -1327,12 +1330,13 @@
       "스마트초이스"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2560,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "KT통신비할인카드"
+    "head_keyword": "KT통신비할인카드",
+    "completed_at": "2026-08-28T13:39:47.428568"
   },
   {
     "topic": "퇴직연금 디폴트옵션(사전지정운용) 총정리: 선택 방법과 수익률 비교",
@@ -1344,12 +1348,13 @@
       "IRP"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2460,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "퇴직연금디폴트옵션"
+    "head_keyword": "퇴직연금디폴트옵션",
+    "completed_at": "2026-08-31T07:59:46.650524"
   },
   {
     "topic": "노인 보청기 국가 지원금 신청 방법과 지원 금액 (2026)",
@@ -1361,12 +1366,13 @@
       "건강보험"
     ],
     "category": "건강",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 2450,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "보청기지원금"
+    "head_keyword": "보청기지원금",
+    "completed_at": "2026-08-29T08:54:57.213284"
   },
   {
     "topic": "2026 추석 기차표 예매 일정과 KTX·SRT 예매 방법 총정리",
@@ -1752,5 +1758,19 @@
     "serp_gov_ratio": null,
     "verdict": "unknown",
     "head_keyword": "재난적의료비의료비지원"
+  },
+  {
+    "topic": "2026 청년일자리도약장려금 지원 자격과 신청 전 체크리스트 7가지",
+    "keywords": [
+      "청년일자리도약장려금",
+      "지원금 신청조건",
+      "중소기업 채용지원",
+      "장려금 지급시기",
+      "청년취업지원"
+    ],
+    "category": "취업",
+    "status": "completed",
+    "generated_at": "2026-09-01T07:20:04.948730",
+    "completed_at": "2026-09-01T07:23:25.227405"
   }
 ]

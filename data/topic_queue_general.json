@@ -1423,12 +1423,13 @@
       "여권사진"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 1600,
     "competition": "중간",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "여권재발급온라인신청"
+    "head_keyword": "여권재발급온라인신청",
+    "completed_at": "2026-09-04T06:49:05.805355"
   },
   {
     "topic": "공모주 청약 방법 총정리: 균등배정·비례배정과 증거금 계산",

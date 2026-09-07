@@ -1441,12 +1441,13 @@
       "상장"
     ],
     "category": "생활정보",
-    "status": "pending",
+    "status": "completed",
     "monthly_search": 1490,
     "competition": "높음",
     "serp_gov_ratio": null,
     "verdict": "go",
-    "head_keyword": "공모주청약방법"
+    "head_keyword": "공모주청약방법",
+    "completed_at": "2026-09-07T06:56:07.416834"
   },
   {
     "topic": "금융투자소득세(금투세) 2026 현황 총정리: 시행 여부와 투자자 영향",

@@ -526,6 +526,7 @@ class BlogPipeline:
                     official_link=getattr(content, "official_link", ""),
                     related_posts=self._get_related_posts(
                         exclude_title=content.title,
+                        exclude_post_id=refresh_post_id,
                         keywords=topic.keywords,
                         category=category,
                     ),
@@ -589,6 +590,7 @@ class BlogPipeline:
                 if self.config.mode != "general":
                     related = self._get_related_posts(
                         exclude_title=content.title,
+                        exclude_post_id=refresh_post_id,
                         keywords=topic.keywords,
                         category=category,
                     )
@@ -672,6 +674,7 @@ class BlogPipeline:
         count: int = 3,
         keywords: Optional[list[str]] = None,
         category: Optional[str] = None,
+        exclude_post_id: int | None = None,
     ) -> list[dict]:
         """내부 링크 박스용 관련 글 목록 (모드별 언어 필터 + 관련도 랭킹).
 
@@ -710,6 +713,8 @@ class BlogPipeline:
         exclude_normalized = _normalize_title(exclude_title)
         candidates = []
         for p in recent:
+            if exclude_post_id is not None and p.get("id") == exclude_post_id:
+                continue
             title = _normalize_title(p.get("title") or "")
             if not title or title == exclude_normalized:
                 continue

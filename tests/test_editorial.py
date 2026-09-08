@@ -151,3 +151,14 @@ def test_cleaner_preserves_answer_before_title(mock_env_vars):
     from src.content_generator import ContentGenerator
     html = '<section id="quick-answer">10월 시험</section><h1>GSAT</h1><h2>일정</h2>'
     assert ContentGenerator()._clean_html("Here is the article: " + html).startswith('<section id="quick-answer">')
+
+
+def test_refresh_related_links_exclude_same_id_after_title_change(mock_env_vars):
+    pipeline = BlogPipeline(PipelineConfig(mode="general", dry_run=True))
+    pipeline.wp_client = Mock()
+    pipeline.wp_client.config.url = "https://trendpulse.blog"
+    pipeline.wp_client.get_recent_posts.return_value = [
+        {"id": 1, "title": "이전 GSAT 일정", "slug": "gsat-old"},
+        {"id": 2, "title": "GSAT 준비 방법", "slug": "gsat-study"}]
+    related = pipeline._get_related_posts(exclude_title="새 GSAT 일정", keywords=["GSAT"], exclude_post_id=1)
+    assert [r["url"] for r in related] == ["https://trendpulse.blog/gsat-study/"]

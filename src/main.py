@@ -26,7 +26,7 @@ from dotenv import load_dotenv
 from loguru import logger
 
 from src.pipeline import BlogPipeline, PipelineConfig
-from src.content_generator import ContentType, ContentConfig
+from src.content_generator import ContentType, ContentConfig, LLMProvider
 from src.trend_detector import TrendConfig, TrendMode, TrendDetector
 
 
@@ -157,6 +157,11 @@ def parse_args() -> argparse.Namespace:
         help="리프레시 최대 건수 (0=전체)",
     )
 
+    parser.add_argument(
+        "--writer-provider", choices=[provider.value for provider in LLMProvider],
+        help="Writing/review provider (default: BLOG_WRITER_PROVIDER or anthropic)",
+    )
+    parser.add_argument("--codex-model", help="Optional model available to your Codex subscription")
     return parser.parse_args()
 
 
@@ -218,6 +223,10 @@ def main() -> int:
         use_cli=not args.use_api,  # Default: CLI mode, --use-api switches to API
         language=language_map.get(args.mode, "ko"),
     )
+    if args.writer_provider:
+        content_config.provider = LLMProvider(args.writer_provider)
+    if args.codex_model:
+        content_config.model_codex = args.codex_model
 
     # Create pipeline config
     config = PipelineConfig(

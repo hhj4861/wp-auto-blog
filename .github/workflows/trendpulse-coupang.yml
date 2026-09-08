@@ -26,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests loguru
+        run: pip install requests loguru beautifulsoup4
 
       - name: Run script
         env:
@@ -35,6 +35,15 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: python ${{ github.event.inputs.script }}
+
+      - name: Preserve editorial backup
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editorial-backup-${{ github.run_id }}
+          path: data/editorial/**/hyundai-format-before.json
+          if-no-files-found: ignore
+          retention-days: 30
 
       - name: Commit Naver export (발행 시 생성된 네이버 블로그용 파일 → 로컬 동기화)
         run: |

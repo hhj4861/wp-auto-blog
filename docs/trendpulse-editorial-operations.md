@@ -8,6 +8,30 @@
 - 생활정보·취업·건강 글의 주요 사실을 원문 발췌와 별도 LLM 호출로 대조한다. 원문 부재는 비용이 드는 본문 생성 전에 중단한다. 생성 후 검증 실패는 신규 글을 초안으로 낮추고 기존 글 갱신을 중단한다. 검색 API의 일시적 오류는 최대 2회 재시도한다. LLM 검토는 오류 가능성이 있으며 사실의 완전한 보증은 아니다.
 - 관련 글은 의미 있는 키워드가 겹칠 때만 삽입한다. 광고는 첫 정보 섹션 뒤에 넣는다. AdSense 자동 광고의 위치는 별도 계정 설정이므로 이 코드가 통제하지 않는다.
 
+## 자동 포스팅 기본 템플릿: compact-reader-v1
+
+2026-09-08 사용자가 승인한 현대자동차 지원자격 글의 본문 구성을 기본으로 사용한다.
+적용 범위는 TrendPulse의 general 모드 신규 자동 포스팅과 리프레시이며,
+Claude와 Codex 모두 같은 작성 규칙과 발행 서식을 거친다.
+
+1. 핵심 답변: 2~3개 짧은 문장, 확인된 조건·일정과 공식 행동 링크.
+2. 접이식 목차: 코드가 실제 H2 앵커로 생성하고 기본 닫힘 상태로 표시.
+3. 주요 정보: 일정·조건은 표, 독립적인 점검 항목은 짧은 항목명과 설명으로 표시.
+4. 절차 안내: 내용상 필요한 경우에만 3~5개의 세로 번호 행 사용. 체크리스트와 합쳐 도식은 최대 2개.
+5. 상세 설명·예시·최종 점검: 짧은 단락 사용, 앞의 요약을 반복하지 않음.
+6. FAQ: H3 질문과 답변 문단 3쌍을 카드로 표시.
+7. 관련 글과 확인한 출처·확인일: 코드에서 제공. 광고 배치는 기존 공통 발행 경로에서 처리.
+
+작성 규칙의 기준은 `src/editorial.py`의 `GENERAL_WRITING_RULES`,
+모바일 글자 크기·행 간격·번호·FAQ 카드·접이식 목차의 기준은
+`src/article_format.py`의 `format_general_article`이다.
+`src/content_generator.py`가 모델 호출 전에 작성 규칙을 덧붙이고,
+`src/pipeline.py`가 발행 전에 공통 서식을 적용한다.
+내용에 없는 절차나 조건은 템플릿을 채우기 위해 만들지 않는다.
+AdSense 자동 광고의 위치는 별도 계정 설정이다.
+
+검증: `venv/bin/python -m pytest tests/test_article_format.py tests/test_editorial.py tests/test_post_format.py tests/test_canon_template.py -q -o addopts=''`
+
 ## 기존 글 갱신
 
 `Apply Reviewed Editorial Updates`는 기본 미리보기다. 적용 전 raw JSON과 적용 예정 payload를 GitHub artifact에 저장하고, 준비 중 수정 여부를 확인한다. 기존 URL·발행일·공개 상태를 보존한다. 7일을 넘긴 수정 manifest는 재검토 전 적용하지 않는다.

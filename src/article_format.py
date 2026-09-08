@@ -14,6 +14,21 @@ from .monetization import (
 def normalize_article_styles(html: str) -> str:
     """Supply the canonical dark-theme styles when the writer omitted them."""
     soup = BeautifulSoup(html, "html.parser")
+    # Explicit semantic lists: readable without images, JS, or horizontal scrolling.
+    for visual in soup.select('ol[data-visual="steps"], ul[data-visual="checklist"]'):
+        items = visual.find_all("li", recursive=False)
+        if not 2 <= len(items) <= 6:
+            continue
+        visual["style"] = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:12px;max-width:800px;margin:24px auto;padding:0;list-style:none;"
+        for index, item in enumerate(items, 1):
+            item["style"] = "min-width:0;padding:18px;border:1px solid #475569;border-top:3px solid #2dd4bf;border-radius:10px;background:#1e293b;color:#e2e8f0;line-height:1.7;overflow-wrap:anywhere;"
+            if visual.name == "ol" and not item.select_one('[data-step-number]'):
+                badge = soup.new_tag("span", attrs={"data-step-number": "1", "aria-hidden": "true"})
+                badge["style"] = "display:block;color:#5eead4;font-size:1.35em;font-weight:bold;margin-bottom:8px;"
+                badge.string = f"{index:02d}"
+                item.insert(0, badge)
+            for label in item.find_all("strong"):
+                label["style"] = "display:block;color:#f8fafc;margin-bottom:8px;"
     defaults = {
         "p": "max-width:800px;margin:20px auto;text-align:left;line-height:1.8;color:#cbd5e1;",
         "ul": "max-width:800px;margin:20px auto;padding-left:24px;line-height:1.8;color:#cbd5e1;",

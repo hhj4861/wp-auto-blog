@@ -5,8 +5,8 @@
   "elapsed_seconds": 97.0,
   "text_characters": 2946,
   "reviewed_on": "2026-09-08",
-  "publish_sha256": "2df5724a566197c4e19bafde258cdc34148172735676944534664763d34830cb",
+  "publish_sha256": "8a3d3b5aefd88ab8620a1cb2a63847b1f241cd6b4e0363478c1d5009ffbc2317",
   "human_editorial_review": "Confirmed factual claims against two official pages; fictional example labeled; only layout, source attribution and internal link added after Codex review.",
-  "previous_publish_sha256": "bdf335fc5cd39114b3c3fd3324cae998723182152189992d5793ddd2f89ceb83",
-  "format_revision": "Shared general article formatter: paragraph/table/FAQ styles, policy notice, related box, FAQPage schema. Original Codex article text unchanged."
+  "previous_publish_sha256": "2df5724a566197c4e19bafde258cdc34148172735676944534664763d34830cb",
+  "format_revision": "Four-step editorial preparation flow and five independent job-check cards; facts unchanged, recommended reading order explicitly distinguished from employer hiring stages."
 }

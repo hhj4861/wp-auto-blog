@@ -54,3 +54,20 @@ def test_real_codex_article_has_complete_shared_format():
     original = BeautifulSoup(raw, 'html.parser')
     for paragraph in original.find_all('p'):
         assert paragraph.get_text(' ', strip=True) in soup.get_text(' ', strip=True)
+
+
+def test_visual_steps_are_numbered_once_and_preserve_links():
+    raw = '<ol data-visual="steps" aria-label="준비 순서"><li><strong>자격 확인</strong><a href="https://example.org/">공고 확인</a></li><li><strong>제출 확인</strong>접수 상태 확인</li></ol>'
+    once = normalize_article_styles(raw)
+    soup = BeautifulSoup(once, 'html.parser')
+    assert [x.get_text() for x in soup.select('[data-step-number]')] == ['01', '02']
+    assert soup.ol['aria-label'] == '준비 순서'
+    assert soup.a['href'] == 'https://example.org/'
+    assert 'min(100%,170px)' in soup.ol['style']
+    assert normalize_article_styles(once) == once
+
+
+def test_plain_lists_are_not_turned_into_diagrams():
+    soup = BeautifulSoup(normalize_article_styles('<ol><li>첫 항목</li><li>둘째 항목</li></ol>'), 'html.parser')
+    assert not soup.select('[data-step-number]')
+    assert 'display:grid' not in soup.ol['style']

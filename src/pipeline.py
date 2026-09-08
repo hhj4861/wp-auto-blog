@@ -90,6 +90,7 @@ from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
 from src.keyword_gate import evaluate as evaluate_keyword
 from src.identity_gate import validate_identity
+from src.editorial import reader_layout, is_airline_topic, editorial_checks
 from src.monetization import (
     DEFAULT_SHOP_RETAILER,
     add_coupang_disclosure,
@@ -169,7 +170,7 @@ def _normalize_title(title: str) -> str:
 
 def rank_related_posts(
     posts: list[dict], keywords: list[str], count: int = 3,
-    category_id: Optional[int] = None,
+    category_id: Optional[int] = None, require_keyword: bool = False,
 ) -> list[dict]:
     """제목/슬러그의 키워드 겹침 + 같은 카테고리 보너스로 상위 count개 반환.
 
@@ -179,10 +180,11 @@ def rank_related_posts(
     키워드가 안 겹치는 글은 순전히 최신순이 되어 모든 새 글에 동일한
     링크 3개가 붙는 보일러플레이트가 생긴다.
     """
+    generic = {"방법", "가이드", "총정리", "신청", "지원", "취업", "추천", "정부24", "2026", "2027"}
     patterns = [
         re.compile(rf"(?<![a-z0-9]){re.escape(k.strip().lower())}(?![a-z0-9])")
         for k in (keywords or [])
-        if k and k.strip()
+        if k and k.strip() and (not require_keyword or k.strip() not in generic)
     ]
 
     def score(post: dict) -> int:
@@ -191,6 +193,11 @@ def rank_related_posts(
         same_cat = 1 if category_id and category_id in (post.get("categories") or []) else 0
         return kw_hits * 2 + same_cat
 
+    if require_keyword:
+        posts = [p for p in posts if any(
+            pattern.search(f"{p.get('title', '')} {p.get('slug', '')}".lower())
+            for pattern in patterns
+        )]
     ranked = sorted(posts, key=score, reverse=True)  # 안정 정렬 → 동점은 최신순
     return ranked[:count]
 
@@ -374,7 +381,8 @@ class BlogPipeline:
 
         return results
 
-    def _process_topic(self, topic: Topic, refresh_post_id: int | None = None) -> PipelineResult:
+    def _process_topic(self, topic: Topic, refresh_post_id: int | None = None,
+                       expected_modified_gmt: str | None = None) -> PipelineResult:
         """Process a single topic through the pipeline.
 
         Args:
@@ -452,7 +460,7 @@ class BlogPipeline:
             # Fall back to Unsplash/Pexels if no image found
             # kculture는 토픽 키워드 그대로 쓰면 오매칭이 심하다
             # (예: G-Dragon → 용 조각상). 카테고리 일반 키워드로 대체.
-            if not images:
+            if not images and self.config.mode != "general":
                 fallback_keywords = topic.keywords
                 if self.config.mode == "kculture":
                     fallback_keywords = KCULTURE_STOCK_KEYWORDS.get(
@@ -467,7 +475,7 @@ class BlogPipeline:
             # Fetch section-relevant images for H2s (general mode only)
             # Tech mode uses tables/charts/diagrams instead of stock photos
             section_images = {}
-            if self.config.mode != "tech":
+            if self.config.mode not in ("tech", "general"):
                 section_images = self._fetch_section_images(
                     html=content.html,
                     exclude_urls={img.url for img in images},
@@ -509,6 +517,7 @@ class BlogPipeline:
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스
             if self.config.mode == "general":
                 content.html = strip_placeholders(content.html)
+                content.html = reader_layout(content.html, getattr(content, "sources", []))
                 content.html = add_coupang_disclosure(content.html)
                 content.html = add_policy_disclaimers(
                     content.html, category=category or "", topic=topic.topic)
@@ -524,7 +533,7 @@ class BlogPipeline:
                 # FAQ 섹션 → FAQPage 스키마 (색인 시 리치 리절트 확보)
                 content.html = insert_faq_schema(content.html)
                 # 취업(외항사) 글에 쿠팡 추천템 박스 (링크 설정 시에만, 고지 자동)
-                if category == "취업":
+                if category == "취업" and is_airline_topic(topic.topic):
                     content.html = insert_coupang_prep_box(content.html)
             # Create post (or simulate in dry run)
             if self.config.dry_run:
@@ -546,6 +555,10 @@ class BlogPipeline:
                     meta_description=content.meta_description,
                     require_korean=(self.config.mode == "general"),
                 )
+                if self.config.mode == "general":
+                    gate_issues += getattr(content, "editorial_issues", [])
+                    gate_issues += editorial_checks(
+                        content.html, category or "", getattr(content, "sources", []))
                 # 정체성 게이트: 블로그별 언어/카테고리 정합성 (같은 처리 흐름에 합침)
                 gate_issues += validate_identity(
                     mode=self.config.mode,
@@ -594,7 +607,7 @@ class BlogPipeline:
                     content.html = insert_faq_schema(content.html)
 
                 # Tech mode: skip hero image (TL;DR summary comes first)
-                skip_hero = self.config.mode == "tech"
+                skip_hero = self.config.mode in ("tech", "general")
                 if refresh_post_id:
                     # 리프레시: 기존 글의 본문·메타만 갱신 (슬러그·URL 보존)
                     post = self.wp_client.update_post(
@@ -605,6 +618,8 @@ class BlogPipeline:
                         section_images=section_images,
                         skip_hero_image=skip_hero,
                         content_type=self.config.content_type.value,
+                        expected_modified_gmt=expected_modified_gmt,
+                        clear_featured_image=self.config.mode == "general",
                     )
                     logger.info(f"리프레시 완료 (URL 유지): {post.url}")
                 else:
@@ -668,7 +683,8 @@ class BlogPipeline:
             [{"title": ..., "url": ...}] 최대 count개. 실패 시 빈 리스트.
         """
         try:
-            recent = self.wp_client.get_recent_posts(count=30, status="publish")
+            recent = self.wp_client.get_recent_posts(
+                count=500 if self.config.mode == "general" else 30, status="publish")
         except Exception as e:
             logger.warning(f"관련 글 조회 실패: {e}")
             return []
@@ -706,7 +722,8 @@ class BlogPipeline:
                 "url": f"{base}/{p['slug']}/",
             })
         ranked = rank_related_posts(
-            candidates, keywords or [], count=count, category_id=category_id
+            candidates, keywords or [], count=count, category_id=category_id,
+            require_keyword=self.config.mode == "general",
         )
         return [{"title": c["title"], "url": c["url"]} for c in ranked]
 
@@ -716,6 +733,7 @@ class BlogPipeline:
         topic: str,
         keywords: Optional[list[str]] = None,
         category: Optional[str] = None,
+        expected_modified_gmt: str | None = None,
     ) -> PipelineResult:
         """기존 글의 본문을 최신 내용으로 재생성해 in-place 갱신한다 (URL 유지).
 
@@ -733,7 +751,8 @@ class BlogPipeline:
             suggested_title=self.trend_detector._generate_title(topic, keywords),
             category=category,
         )
-        return self._process_topic(topic_obj, refresh_post_id=post_id)
+        return self._process_topic(topic_obj, refresh_post_id=post_id,
+                                   expected_modified_gmt=expected_modified_gmt)
 
     def run_single(
         self,

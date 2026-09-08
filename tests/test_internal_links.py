@@ -124,7 +124,7 @@ class TestGetRelatedPostsByMode:
     @pytest.mark.unit
     def test_general_mode_keeps_korean_only_filter(self, mock_env_vars):
         pipeline = self._pipeline("general", mock_env_vars)
-        related = pipeline._get_related_posts()
+        related = pipeline._get_related_posts(keywords=["커서"])
         assert [r["title"] for r in related] == ["커서 리뷰"]
 
     @pytest.mark.unit

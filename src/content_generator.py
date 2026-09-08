@@ -18,7 +18,7 @@ from typing import Optional
 from loguru import logger
 from .editorial import (
     GENERAL_WRITING_RULES, POLICY_CATEGORIES, collect_sources, editorial_checks,
-    host_matches, https_host, is_official_url, review_evidence,
+    host_matches, https_host, is_official_url, review_evidence, retry_research,
 )
 
 try:
@@ -1524,6 +1524,8 @@ But you MUST follow ALL structural requirements in the prompt above (H2 headings
             logger.info("Research data added to prompt (as reference)")
 
         sources = self._research_sources if mode == "general" else []
+        if mode == "general" and category in POLICY_CATEGORIES and not sources:
+            raise RuntimeError("공식 원문 확보 실패 — 근거 없는 생성과 발행을 보류합니다")
         if mode == "general":
             prompt += "\n" + GENERAL_WRITING_RULES
             if sources:
@@ -1544,6 +1546,7 @@ You MUST include:
 1. At least 4-5 H2 headings (<h2>...</h2>) to structure the content
 2. A FAQ section with at least 3 questions using proper HTML structure
 3. Follow the EXACT HTML format specified in the prompt
+4. Include the SEO metadata block; TrendPulse/general needs section id="quick-answer" first
 
 DO NOT use Markdown. Use only HTML tags."""
                 raw_response = self._call_llm(retry_prompt)
@@ -1575,6 +1578,11 @@ DO NOT use Markdown. Use only HTML tags."""
             # Check for critical structural failures that warrant retry
             # Include section/paragraph length issues for Yoast readability
             critical_failures = [e for e in errors if "H2" in e or "FAQ" in e or "Section too long" in e or "Paragraph too long" in e]
+            if mode == "general":
+                if not re.search(r'id=["\']quick-answer["\']', html):
+                    critical_failures.append("Missing quick-answer block")
+                if not focus_keyphrase:
+                    critical_failures.append("Missing SEO metadata")
             if critical_failures and attempt < max_retries - 1:
                 logger.warning(f"Critical structural issues found: {critical_failures}. Retrying...")
                 continue  # Retry
@@ -2741,11 +2749,11 @@ Include:
 
 Be specific and factual based on search results. Always use the most recent version numbers."""
 
-            response = self._gemini_client.models.generate_content(
+            response = retry_research(lambda: self._gemini_client.models.generate_content(
                 model=self.config.model_gemini,
                 contents=prompt,
                 config=config,
-            )
+            ))
 
             # Log grounding metadata
             if hasattr(response, 'candidates') and response.candidates:
@@ -2756,6 +2764,7 @@ Be specific and factual based on search results. Always use the most recent vers
                         logger.info(f"Grounding research: {len(metadata.grounding_chunks)} sources found")
                         if language == "ko":
                             self._research_sources = collect_sources(metadata.grounding_chunks)
+                            logger.info(f"Readable official sources: {len(self._research_sources)}")
 
             logger.info(f"Research completed for: {topic}")
             return response.text
@@ -2823,13 +2832,13 @@ Be specific and factual based on search results. Always use the most recent vers
             r'<h1[^>]*>',
             r'<div[^>]*class=["\']tldr',
             r'<article',
+            r'<section[^>]*id=["\']quick-answer["\']',
         ]
 
-        for pattern in html_start_patterns:
-            match = re.search(pattern, cleaned, re.IGNORECASE)
-            if match:
-                cleaned = cleaned[match.start():]
-                break
+        starts = [match.start() for pattern in html_start_patterns
+                  if (match := re.search(pattern, cleaned, re.IGNORECASE))]
+        if starts:
+            cleaned = cleaned[min(starts):]
 
         # Remove common AI response prefixes (English meta-commentary)
         prefixes_to_remove = [

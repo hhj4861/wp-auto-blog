@@ -15,6 +15,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -44,7 +46,7 @@ def validate_entry(entry, root):
 
 
 def apply_entry(session, api, entry, content, output, apply=False):
-    res = session.get(f"{api}/posts", params={"slug": entry["slug"], "context": "edit"}, timeout=45)
+    res = session.get(f"{api}/posts", params={"slug": entry["slug"], "context": "edit"}, timeout=(10, 45))
     res.raise_for_status()
     posts = res.json()
     if len(posts) != 1 or posts[0]["status"] != "publish":
@@ -64,13 +66,13 @@ def apply_entry(session, api, entry, content, output, apply=False):
     print(f"{'APPLY' if apply else 'DRY RUN'} #{pid}: {entry['slug']}", flush=True)
     if not apply:
         return
-    current = session.get(f"{api}/posts/{pid}", params={"context": "edit"}, timeout=45)
+    current = session.get(f"{api}/posts/{pid}", params={"context": "edit"}, timeout=(10, 45))
     current.raise_for_status()
     if fingerprint(current.json()) != fingerprint(post):
         raise RuntimeError("Post changed during preparation; refusing overwrite")
     result = session.post(f"{api}/posts/{pid}", json=payload, timeout=60)
     result.raise_for_status()
-    verify = session.get(f"{api}/posts/{pid}", params={"context": "edit"}, timeout=45)
+    verify = session.get(f"{api}/posts/{pid}", params={"context": "edit"}, timeout=(10, 45))
     verify.raise_for_status()
     saved = verify.json()
     for key in ("slug", "status", "date_gmt"):
@@ -99,6 +101,9 @@ def main():
     output = Path("data/editorial-backups") / os.environ.get("GITHUB_RUN_ID", "local")
     output.mkdir(parents=True, exist_ok=True)
     session = requests.Session()
+    session.mount("https://", HTTPAdapter(max_retries=Retry(
+        total=2, connect=2, read=2, status=2, allowed_methods={"GET"},
+        status_forcelist=(429, 502, 503, 504), backoff_factor=1)))
     session.auth = (os.environ["WP_GENERAL_USERNAME"], os.environ["WP_GENERAL_APP_PASSWORD"])
     session.headers["User-Agent"] = "Mozilla/5.0 (TrendPulse editorial update)"
     for entry, body in zip(entries, content):

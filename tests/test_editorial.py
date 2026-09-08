@@ -121,3 +121,33 @@ def test_wp_update_guard_prevents_stale_write(mock_env_vars):
         with pytest.raises(RuntimeError, match="덮어쓰기"):
             client.update_post(1, content, expected_modified_gmt="old", clear_featured_image=True)
     put.assert_not_called()
+
+
+def test_research_retry_is_bounded_and_transient_only():
+    from src.editorial import retry_research
+    busy = RuntimeError("busy")
+    busy.code = 503
+    call = Mock(side_effect=[busy, busy, "success"])
+    with patch("src.editorial.time.sleep"):
+        assert retry_research(call) == "success"
+        assert call.call_count == 3
+        bad = Mock(side_effect=ValueError("bad credentials"))
+        with pytest.raises(ValueError):
+            retry_research(bad)
+        assert bad.call_count == 1
+
+
+def test_source_failure_stops_generation_before_paid_writer(mock_env_vars):
+    from src.content_generator import ContentGenerator
+    generator = ContentGenerator()
+    with patch.object(generator, "research_with_grounding", return_value=""), \
+         patch.object(generator, "_call_llm") as writer:
+        with pytest.raises(RuntimeError, match="원문 확보 실패"):
+            generator.generate("삼성 GSAT", ["GSAT"], ContentType.GUIDE, category="취업", mode="general")
+    writer.assert_not_called()
+
+
+def test_cleaner_preserves_answer_before_title(mock_env_vars):
+    from src.content_generator import ContentGenerator
+    html = '<section id="quick-answer">10월 시험</section><h1>GSAT</h1><h2>일정</h2>'
+    assert ContentGenerator()._clean_html("Here is the article: " + html).startswith('<section id="quick-answer">')

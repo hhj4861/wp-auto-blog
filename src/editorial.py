@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import time
 from datetime import datetime
 from html import escape, unescape
 from urllib.parse import urljoin, urlsplit
@@ -116,6 +117,18 @@ def collect_sources(chunks, limit: int = 4) -> list[dict]:
         if len(sources) >= limit:
             break
     return sources
+
+
+def retry_research(call):
+    """Retry only transient research API errors, at most twice after first call."""
+    for attempt in range(3):
+        try:
+            return call()
+        except Exception as error:
+            transient = getattr(error, "code", None) in (429, 500, 502, 503, 504)
+            if not transient or attempt == 2:
+                raise
+            time.sleep(2 ** attempt)
 
 
 def review_evidence(html: str, sources: list[dict], call_llm) -> list[str]:

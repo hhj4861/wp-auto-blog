@@ -5,8 +5,8 @@
   "elapsed_seconds": 97.0,
   "text_characters": 2946,
   "reviewed_on": "2026-09-08",
-  "publish_sha256": "c38f46316c426f60861225ada32c2871d081273c6262bafe2bc8fd2a5d67ce4d",
+  "publish_sha256": "a225e82142b0828fe8b12d8af4ee96141e4714af7b78931f0638134c4996b6dd",
   "human_editorial_review": "Confirmed factual claims against two official pages; fictional example labeled; only layout, source attribution and internal link added after Codex review.",
-  "previous_publish_sha256": "8a3d3b5aefd88ab8620a1cb2a63847b1f241cd6b4e0363478c1d5009ffbc2317",
-  "format_revision": "Screenshot-reviewed desktop/mobile layout: compact empty cover, semantic vertical steps, no duplicate markers, collapsible TOC, compact checklist rows, summary first; source notice retained near sources."
+  "previous_publish_sha256": "c38f46316c426f60861225ada32c2871d081273c6262bafe2bc8fd2a5d67ce4d",
+  "format_revision": "Final visual audit fix: reset empty cover aspect ratio and parent flex sizing; preserve auto ad elements in normal flow."
 }

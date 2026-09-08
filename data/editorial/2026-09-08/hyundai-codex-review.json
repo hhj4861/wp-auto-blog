@@ -1,0 +1,10 @@
+{
+  "provider": "codex",
+  "authentication": "ChatGPT subscription",
+  "issues": [],
+  "elapsed_seconds": 97.0,
+  "text_characters": 2946,
+  "reviewed_on": "2026-09-08",
+  "publish_sha256": "bdf335fc5cd39114b3c3fd3324cae998723182152189992d5793ddd2f89ceb83",
+  "human_editorial_review": "Confirmed factual claims against two official pages; fictional example labeled; only layout, source attribution and internal link added after Codex review."
+}

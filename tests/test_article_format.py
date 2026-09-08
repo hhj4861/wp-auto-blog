@@ -45,11 +45,15 @@ def test_real_codex_article_has_complete_shared_format():
     assert soup.select_one('#policy-notice')
     assert soup.select_one('#quick-answer')
     assert soup.select_one('#article-toc')
+    assert soup.select_one('details#article-toc summary')
+    assert not soup.select_one('#article-toc').has_attr('open')
     assert soup.select_one('#verified-sources')
     assert len(soup.select('[data-faq-card]')) == 3
     assert len(soup.select('ins.adsbygoogle')) == 2
     assert all(t.get('style') for t in soup.find_all('table'))
     assert len(json.loads(soup.select_one('script[type="application/ld+json"]').string)['mainEntity']) == 3
+    assert soup.select_one('.wpab-article')
+    assert soup.select_one('#wpab-reading-styles')
     # Every original paragraph survives, including its Korean text and source links.
     original = BeautifulSoup(raw, 'html.parser')
     for paragraph in original.find_all('p'):
@@ -60,10 +64,10 @@ def test_visual_steps_are_numbered_once_and_preserve_links():
     raw = '<ol data-visual="steps" aria-label="준비 순서"><li><strong>자격 확인</strong><a href="https://example.org/">공고 확인</a></li><li><strong>제출 확인</strong>접수 상태 확인</li></ol>'
     once = normalize_article_styles(raw)
     soup = BeautifulSoup(once, 'html.parser')
-    assert [x.get_text() for x in soup.select('[data-step-number]')] == ['01', '02']
+    assert [x.get_text() for x in soup.select('[data-step-number]')] == ['1', '2']
     assert soup.ol['aria-label'] == '준비 순서'
     assert soup.a['href'] == 'https://example.org/'
-    assert 'min(100%,170px)' in soup.ol['style']
+    assert all('list-style:none' in x['style'] for x in soup.ol.find_all('li', recursive=False))
     assert normalize_article_styles(once) == once
 
 

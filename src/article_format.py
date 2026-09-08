@@ -10,6 +10,52 @@ from .monetization import (
     insert_monetization, strip_placeholders,
 )
 
+READING_CSS = """
+.wpab-article{max-width:800px;margin:auto;font-size:17px;line-height:1.8;word-break:keep-all;overflow-wrap:break-word}
+.single-post .entry .wpab-article{max-width:800px!important;width:100%}
+.single-post:has(.wpab-article) .entry{max-width:800px;margin:auto}
+.wpab-article p,.wpab-article li,.wpab-article td{font-weight:400}
+.wpab-article #quick-answer{padding:8px 20px;border-left:3px solid #2dd4bf;background:#292f33}
+.wpab-article #article-toc summary{cursor:pointer;color:#e2e8f0;font-weight:600}
+.wpab-article [data-visual]>li::marker{content:""}
+.wpab-article [data-visual="steps"]>li{display:grid;grid-template-columns:32px 1fr;gap:14px;padding:14px 0;margin:0;border-bottom:1px solid #4b5563}
+.wpab-article [data-step-number]{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#204744;color:#b5f5e8;font-size:15px;font-weight:600}
+.wpab-article [data-visual-copy] strong{display:block;color:#f8fafc;font-weight:600;margin-bottom:3px}
+.wpab-article [data-visual-copy]{min-width:0;color:#cbd5e1}
+.wpab-article [data-visual="checklist"]>li{display:block;padding:12px 0;margin:0;border-bottom:1px solid #4b5563}
+.wpab-article [data-visual="checklist"] [data-visual-copy]{display:grid;grid-template-columns:90px 1fr;gap:12px}
+.single-post:has(.wpab-article) .blog-card-single-head .blog-card-right:has(>.blog-card-right-inner[style*="url('')"]):not(:has(ins,iframe)){height:80px;min-height:0}
+.single-post:has(.wpab-article) .blog-card-single-head:has(.blog-card-right-inner[style*="url('')"]):not(:has(ins,iframe)){height:auto;min-height:0}
+.single-post:has(.wpab-article) .blog-card-single-head:has(.blog-card-right-inner[style*="url('')"]):not(:has(ins,iframe)) .blog-card-inner{height:auto;min-height:0}
+.single-post:has(.wpab-article) .blog-card-single-head:has(.blog-card-right-inner[style*="url('')"]):not(:has(ins,iframe)) .blog-card-right{width:100%;float:none}
+.single-post:has(.wpab-article) .blog-card-single-head:has(.blog-card-right-inner[style*="url('')"]):not(:has(ins,iframe)) .blog-card-bottom{width:100%;float:none}
+.single-post:has(.wpab-article) .entry-header{max-width:800px;margin:0 auto 24px}
+.single-post:has(.wpab-article) .entry-header h1{font-size:clamp(24px,3vw,38px);line-height:1.4;word-break:keep-all}
+@media(max-width:600px){
+.wpab-article{font-size:16px;line-height:1.75}
+.wpab-article p,.wpab-article li{font-size:16px!important}
+.wpab-article #quick-answer{padding:4px 14px}
+.wpab-article [data-visual="steps"]>li{gap:10px;padding:12px 0}
+.single-post:has(.wpab-article) .blog-card-single-head .blog-card-right:has(>.blog-card-right-inner[style*="url('')"]):not(:has(ins,iframe)){height:68px;min-height:0}
+}
+"""
+
+
+def finish_reading_layout(html: str) -> str:
+    """Keep answers before navigation and scope theme repairs to these articles."""
+    soup = BeautifulSoup(html, "html.parser")
+    toc = soup.select_one('#article-toc')
+    if toc:
+        toc.name = 'details'
+        label = toc.find('p', recursive=False)
+        if label:
+            label.name = 'summary'
+            label.string = '목차 · 필요한 내용 바로 찾기'
+    notice, sources = soup.select_one('#policy-notice'), soup.select_one('#verified-sources')
+    if notice and sources:
+        sources.insert_before(notice.extract())
+    return '<style id="wpab-reading-styles">' + READING_CSS + '</style><div class="wpab-article">' + str(soup) + '</div>'
+
 
 def normalize_article_styles(html: str) -> str:
     """Supply the canonical dark-theme styles when the writer omitted them."""
@@ -19,16 +65,18 @@ def normalize_article_styles(html: str) -> str:
         items = visual.find_all("li", recursive=False)
         if not 2 <= len(items) <= 6:
             continue
-        visual["style"] = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:12px;max-width:800px;margin:24px auto;padding:0;list-style:none;"
+        visual["style"] = "max-width:800px;margin:24px auto;padding:0;list-style:none;"
         for index, item in enumerate(items, 1):
-            item["style"] = "min-width:0;padding:18px;border:1px solid #475569;border-top:3px solid #2dd4bf;border-radius:10px;background:#1e293b;color:#e2e8f0;line-height:1.7;overflow-wrap:anywhere;"
+            item["style"] = "list-style:none;min-width:0;"
+            if not item.select_one('[data-visual-copy]'):
+                copy = soup.new_tag("div", attrs={"data-visual-copy": "1"})
+                for child in list(item.contents):
+                    copy.append(child.extract())
+                item.append(copy)
             if visual.name == "ol" and not item.select_one('[data-step-number]'):
                 badge = soup.new_tag("span", attrs={"data-step-number": "1", "aria-hidden": "true"})
-                badge["style"] = "display:block;color:#5eead4;font-size:1.35em;font-weight:bold;margin-bottom:8px;"
-                badge.string = f"{index:02d}"
+                badge.string = str(index)
                 item.insert(0, badge)
-            for label in item.find_all("strong"):
-                label["style"] = "display:block;color:#f8fafc;margin-bottom:8px;"
     defaults = {
         "p": "max-width:800px;margin:20px auto;text-align:left;line-height:1.8;color:#cbd5e1;",
         "ul": "max-width:800px;margin:20px auto;padding-left:24px;line-height:1.8;color:#cbd5e1;",
@@ -77,4 +125,4 @@ def format_general_article(html: str, *, sources=None, category="", topic="",
     html = add_coupang_disclosure(html)
     html = add_policy_disclaimers(html, category=category, topic=topic)
     html = insert_monetization(html, official_link=official_link, related_posts=related_posts)
-    return insert_faq_schema(html)
+    return finish_reading_layout(insert_faq_schema(html))

@@ -14,10 +14,10 @@ from __future__ import annotations
 import json
 import os
 import re
-from datetime import datetime
 from urllib.parse import quote, urlparse
 
 from loguru import logger
+from .editorial import is_official_url
 
 DEFAULT_AD_CLIENT = "ca-pub-7509086152335830"
 DEFAULT_AD_SLOTS = ("3599000043", "7637749188")
@@ -111,7 +111,7 @@ def parse_official_link(value: str) -> tuple[str, str] | None:
     if not name or not url.startswith("https://"):
         return None
     host = (urlparse(url).hostname or "").lower()
-    if host in TRUSTED_CTA_HOSTS or host.endswith(TRUSTED_CTA_SUFFIXES):
+    if is_official_url(url) or host in TRUSTED_CTA_HOSTS:
         return name, url
     logger.warning(f"OFFICIAL_LINK 비신뢰 도메인 무시: {url}")
     return None
@@ -127,11 +127,11 @@ def insert_monetization(
     """광고 유닛/CTA/관련 글 박스를 H2 앵커 기준으로 삽입한다.
 
     배치 (H2 4개 이상일 때):
-      도입부 직후 광고#1 → [섹션2 끝 CTA] → 섹션3 앞 광고#2 → 결론 앞 관련글 → 말미 CTA
+      첫 정보 섹션 뒤 광고#1 → [섹션2 끝 CTA] → 섹션4 앞 광고#2 → 결론 앞 관련글
     H2가 적으면 광고#1 + 말미 요소만 배치한다.
 
     ad_label/related_heading은 블로그 언어에 맞춘다(bytepulse 영문은 'Ad'/'Related Posts').
-    Auto Ads보다 고가시성(인-아티클) 위치라 RPM이 높다 — 전 모드 공통 적용.
+    첫 정보 섹션 뒤에 광고를 배치한다. 실제 수익 효과는 AdSense에서 측정한다.
     """
     client, slots = _ad_client(), _ad_slots()
     cta = parse_official_link(official_link)
@@ -139,7 +139,7 @@ def insert_monetization(
 
     inserts: list[tuple[int, str]] = []
     if len(h2s) >= 4:
-        inserts.append((h2s[0], _ad_unit(client, slots[0], ad_label)))
+        inserts.append((h2s[1], _ad_unit(client, slots[0], ad_label)))
         if cta:
             inserts.append((h2s[2], _cta_button(
                 f"🏛️ {cta[0]} 바로가기", cta[1], "공식 사이트로 이동합니다")))
@@ -148,7 +148,8 @@ def insert_monetization(
         if related_posts:
             inserts.append((h2s[-1], _related_box(related_posts, related_heading)))
     elif h2s:
-        inserts.append((h2s[0], _ad_unit(client, slots[0], ad_label)))
+        # A single-section answer must be readable before the first manual ad.
+        inserts.append((h2s[1] if len(h2s) > 1 else len(html), _ad_unit(client, slots[0], ad_label)))
         if related_posts:
             inserts.append((h2s[-1], _related_box(related_posts, related_heading)))
     else:
@@ -645,11 +646,10 @@ def add_policy_disclaimers(html: str, category: str = "", topic: str = "") -> st
     if 'id="policy-notice"' in html:
         return html
 
-    today = datetime.now().strftime("%Y년 %m월")
     notice = (
         f'<p id="policy-notice" style="max-width:800px;margin:10px auto;color:#94a3b8;'
-        f'font-size:0.85em;">※ 이 글은 {today} 공식 발표 자료를 기준으로 작성되었습니다. '
-        f'제도와 수치는 변경될 수 있으니 신청·결정 전 공식 사이트에서 최종 확인하세요.</p>')
+        f'font-size:0.85em;">제도와 수치는 변경될 수 있습니다. '
+        f'자료별 확인일은 출처 목록에 표시하며, 신청·결정 전 공식 공고를 확인하세요.</p>')
     html = notice + "\n" + html
 
     tails = []

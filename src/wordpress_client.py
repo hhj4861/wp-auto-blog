@@ -525,6 +525,8 @@ class WordPressClient:
         section_images: Optional[dict[str, FetchedImage]] = None,
         skip_hero_image: bool = False,
         content_type: str = "review",
+        expected_modified_gmt: str | None = None,
+        clear_featured_image: bool = False,
     ) -> CreatedPost:
         """Update an existing WordPress post.
 
@@ -601,7 +603,9 @@ class WordPressClient:
             },
         }
 
-        if featured_media_id:
+        if clear_featured_image:
+            post_data["featured_media"] = 0
+        elif featured_media_id:
             post_data["featured_media"] = featured_media_id
 
         if category_ids:
@@ -611,6 +615,14 @@ class WordPressClient:
             post_data["tags"] = tag_ids
 
         try:
+            if expected_modified_gmt is not None:
+                current = requests.get(
+                    f"{self._api_base}/posts/{post_id}", headers=self._get_auth_headers(),
+                    params={"context": "edit"}, timeout=30)
+                current.raise_for_status()
+                state = current.json()
+                if state.get("modified_gmt") != expected_modified_gmt or state.get("status") != "publish":
+                    raise RuntimeError("리프레시 준비 중 기존 글이 변경됨 — 덮어쓰기 취소")
             response = requests.put(
                 f"{self._api_base}/posts/{post_id}",
                 headers=self._get_auth_headers(),

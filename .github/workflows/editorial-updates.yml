@@ -1,0 +1,41 @@
+name: Apply Reviewed Editorial Updates
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Apply the reviewed TrendPulse manifest (false = preview only)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: trendpulse-editorial
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4 loguru
+      - name: Apply or preview
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          APPLY: ${{ inputs.apply }}
+        run: |
+          if [ "$APPLY" = "true" ]; then
+            python scripts/apply_editorial_updates.py --apply
+          else
+            python scripts/apply_editorial_updates.py
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: editorial-backups-${{ github.run_id }}
+          path: data/editorial-backups/
+          retention-days: 90

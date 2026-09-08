@@ -1,0 +1,48 @@
+name: Refresh Search Winners
+on:
+  schedule:
+    - cron: '0 21 * * 1,4' # Tue/Fri 06:00 KST, before new posts
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Refresh selected posts (false = candidates only)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: trendpulse-editorial
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt google-auth
+      - name: Refresh with source and publication gates
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
+          APPLY: ${{ github.event_name == 'schedule' || inputs.apply }}
+        run: |
+          if [ "$APPLY" = "true" ]; then
+            python scripts/refresh_search_winners.py --apply --limit 2
+          else
+            python scripts/refresh_search_winners.py --limit 2
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: search-refresh-${{ github.run_id }}
+          path: data/editorial-backups/
+          retention-days: 90

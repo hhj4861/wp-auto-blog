@@ -109,6 +109,7 @@ from src.monetization import (
     unwrap_dead_anchors,
 )
 from src.post_format import to_canon_headings
+from src.article_format import format_general_article
 from src.wordpress_client import WordPressClient, WPConfig, PostStatus, CreatedPost
 
 # ImageCrawler for K-Culture product images (Olive Young API, Amazon)
@@ -516,13 +517,10 @@ class BlogPipeline:
             # 수익화 레이어 (general/trendpulse 전용):
             # 인아티클 광고 + 공식 사이트 CTA + 관련 글 내부 링크 박스
             if self.config.mode == "general":
-                content.html = strip_placeholders(content.html)
-                content.html = reader_layout(content.html, getattr(content, "sources", []))
-                content.html = add_coupang_disclosure(content.html)
-                content.html = add_policy_disclaimers(
-                    content.html, category=category or "", topic=topic.topic)
-                content.html = insert_monetization(
+                content.html = format_general_article(
                     content.html,
+                    sources=getattr(content, "sources", []),
+                    category=category or "", topic=topic.topic,
                     official_link=getattr(content, "official_link", ""),
                     related_posts=self._get_related_posts(
                         exclude_title=content.title,
@@ -531,8 +529,6 @@ class BlogPipeline:
                         category=category,
                     ),
                 )
-                # FAQ 섹션 → FAQPage 스키마 (색인 시 리치 리절트 확보)
-                content.html = insert_faq_schema(content.html)
                 # 취업(외항사) 글에 쿠팡 추천템 박스 (링크 설정 시에만, 고지 자동)
                 if category == "취업" and is_airline_topic(topic.topic):
                     content.html = insert_coupang_prep_box(content.html)

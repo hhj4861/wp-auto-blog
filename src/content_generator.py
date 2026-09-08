@@ -73,6 +73,7 @@ class LLMProvider(Enum):
     ANTHROPIC = "anthropic"
     GEMINI = "gemini"
     OPENAI = "openai"
+    CODEX = "codex"
 
 
 @dataclass
@@ -136,7 +137,12 @@ class ContentConfig:
 
     min_words: int = 800
     max_words: int = 1500
-    provider: LLMProvider = LLMProvider.ANTHROPIC
+    provider: LLMProvider = field(
+        default_factory=lambda: LLMProvider(os.getenv("BLOG_WRITER_PROVIDER", "anthropic"))
+    )
+    codex_home: str = field(default_factory=lambda: os.getenv("BLOG_CODEX_HOME", ""))
+    model_codex: str = field(default_factory=lambda: os.getenv("BLOG_CODEX_MODEL", ""))
+    codex_timeout: int = field(default_factory=lambda: int(os.getenv("BLOG_CODEX_TIMEOUT", "600")))
     temperature: float = 0.7
     model_anthropic: str = "claude-opus-4-8"
     model_gemini: str = "gemini-2.5-flash"  # 2.0-flash retired (404); 2.5 supports grounding
@@ -1451,6 +1457,13 @@ Output only the HTML content, no markdown.
             config: Optional configuration. Uses defaults if not provided.
         """
         self.config = config or ContentConfig()
+        self._codex_client = None
+        if self.config.provider == LLMProvider.CODEX:
+            from .codex_client import CodexSubscriptionClient
+            self._codex_client = CodexSubscriptionClient(
+                home=self.config.codex_home, model=self.config.model_codex,
+                timeout=self.config.codex_timeout,
+            )
         self._setup_apis()
 
     def _setup_apis(self) -> None:
@@ -2492,6 +2505,12 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         Returns:
             Generated text response
         """
+        # Subscription selection is explicit: never silently switch billing/providers.
+        if self.config.provider == LLMProvider.CODEX:
+            result = self._codex_client.generate(prompt)
+            logger.info("Content generated using: Codex CLI (ChatGPT subscription)")
+            return result
+
         # Build provider list with fallbacks
         providers = [self.config.provider]
         fallback_order = [LLMProvider.ANTHROPIC, LLMProvider.GEMINI, LLMProvider.OPENAI]

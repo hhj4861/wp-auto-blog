@@ -704,6 +704,29 @@ def build_faq_schema(html: str) -> str:
     """
     if 'application/ld+json' in html and 'FAQPage' in html:
         return ""  # 이미 있음
+    # Semantic H3 questions (Codex and other writers), bounded by the FAQ H2.
+    # Match actual headings, never the table-of-contents text.
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+    semantic_pairs = []
+    for heading in soup.find_all("h2"):
+        if not re.search(r"FAQ|자주\s*묻는|자주하는\s*질문", heading.get_text(), re.I):
+            continue
+        for question in heading.find_all_next(["h2", "h3"]):
+            if question.name == "h2":
+                break
+            answer = question.find_next_sibling()
+            if answer and answer.name == "p":
+                q, a = question.get_text(" ", strip=True), answer.get_text(" ", strip=True)
+                if len(q) >= 6 and len(a) >= 10:
+                    semantic_pairs.append((q, a))
+    if len(semantic_pairs) >= 2:
+        import json
+        schema = {"@context": "https://schema.org", "@type": "FAQPage",
+                  "mainEntity": [{"@type": "Question", "name": q,
+                      "acceptedAnswer": {"@type": "Answer", "text": a}}
+                      for q, a in dict(semantic_pairs).items()]}
+        return '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace("<", "\\u003c") + '</script>'
     m = _FAQ_SECTION_RE.search(html)
     if not m:
         return ""

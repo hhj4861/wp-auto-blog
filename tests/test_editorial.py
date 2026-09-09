@@ -147,6 +147,29 @@ def test_source_failure_stops_generation_before_paid_writer(mock_env_vars):
     writer.assert_not_called()
 
 
+def test_inline_official_urls_are_fetched_not_trusted():
+    from types import SimpleNamespace
+    from src.editorial import collect_research_sources
+    response = SimpleNamespace(candidates=[], text='[자료](https://www.work24.go.kr/guide) https://evil.test/fake')
+    with patch('src.editorial.fetch_source', return_value=SOURCE) as fetch:
+        assert collect_research_sources(response) == [SOURCE]
+        fetch.assert_called_once_with('https://www.work24.go.kr/guide')
+    with patch('src.editorial.fetch_source', return_value=None):
+        assert collect_research_sources(response) == []
+
+
+def test_missing_grounding_triggers_one_focused_retry(mock_env_vars):
+    from types import SimpleNamespace
+    from src.content_generator import ContentGenerator
+    generator = ContentGenerator()
+    response = SimpleNamespace(candidates=[], text='No readable sources')
+    generator._gemini_client = Mock()
+    generator._gemini_client.models.generate_content.return_value = response
+    assert generator.research_with_grounding('면접 준비', [], 'ko', '취업') == response.text
+    assert generator._gemini_client.models.generate_content.call_count == 2
+    assert generator._research_sources == []
+
+
 def test_cleaner_preserves_answer_before_title(mock_env_vars):
     from src.content_generator import ContentGenerator
     html = '<section id="quick-answer">10월 시험</section><h1>GSAT</h1><h2>일정</h2>'

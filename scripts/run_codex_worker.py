@@ -16,7 +16,7 @@ def command(env):
     if env.get("WP_GENERAL_URL", "").rstrip("/") != "https://trendpulse.blog":
         raise ValueError("Worker only publishes to TrendPulse")
     args = [sys.executable, "-m", "src.main", "--mode", "general",
-            "--writer-provider", "codex", "--no-llm-topics", "--max-posts", "1"]
+            "--writer-provider", "codex", "--content-type", "guide", "--no-llm-topics", "--max-posts", "1"]
     if mode == "queue":
         args.append("--from-queue")
     elif env.get("BLOG_TOPIC"):

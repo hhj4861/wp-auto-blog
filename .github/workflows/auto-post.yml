@@ -29,6 +29,9 @@ on:
       codex_model:
         description: 'Optional Codex subscription model'
         type: string
+      source_urls:
+        description: 'Optional official source URLs, one per line (fetched and verified)'
+        type: string
       topic:
         description: 'Specific topic (optional, skips trend detection)'
         required: false
@@ -118,6 +121,7 @@ jobs:
         env:
           BLOG_CODEX_HOME: ${{ runner.temp }}/trendpulse-codex
           BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
+          BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
           BLOG_WRITER_PROVIDER: codex
           BLOG_MODE: ${{ github.event_name == 'schedule' && 'queue' || (inputs.mode == 'queue' && 'queue' || 'general') }}
           BLOG_SCHEDULE: ${{ github.event.schedule }}

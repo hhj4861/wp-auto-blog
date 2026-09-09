@@ -50,11 +50,12 @@ def test_inventory_failure_does_not_mean_unique(monkeypatch):
 def test_selection_requires_measured_keyword_source_and_serp(monkeypatch):
     proposal = {'keyword': '시험준비물', 'topic': '시험준비물 확인 방법', 'category': '취업',
                 'intent': '무엇을 준비하나', 'gap': '준비물 표', 'source_url': 'https://example.go.kr/info'}
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda *a: None)
     responses = iter([{'seeds':['공채']}, {'candidates':[proposal]}, {'supported':True}])
     monkeypatch.setattr(market, 'ask', lambda *a, **k: next(responses))
     monkeypatch.setattr(market, 'demand_candidates', lambda seeds: {'시험준비물':{'keyword':'시험준비물','monthly':1200,'comp':'높음'}})
     monkeypatch.setattr(market, 'fetch_source', lambda *a: {'url':proposal['source_url'], 'excerpt':'공식 준비물'})
-    monkeypatch.setattr(market, 'fetch_serp_domains', lambda *a: ['independent.example', 'example.go.kr'])
+    monkeypatch.setattr(market, 'organic_results', lambda *a: ('google_custom_search', ['independent.example', 'example.go.kr']))
     result = market.select_category('취업', titles=[])
     assert result['selected'][0]['monthly_search'] == 1200
     assert result['selected'][0]['advertising_competition'] == '높음' # not SEO rejection
@@ -81,3 +82,21 @@ def test_workflow_selects_before_existing_category_pipeline():
     selector = Path('.github/workflows/blog-keyword-select.yml').read_text()
     assert "inputs.top_n || '2'" in selector
     assert 'scaffold_post.py' not in selector
+
+
+def test_trend_requires_complete_nonzero_baseline():
+    assert market.trend_change([10]*7+[20]*7) == 1.0
+    assert market.trend_change([0]*7+[20]*7) is None
+    assert market.trend_change([10]*5) is None
+    assert not market.fresh_market_item(candidate(valid_until='2000-01-01'), '취업')
+
+
+def test_year_spacing_and_deleted_posts_remain_duplicates(tmp_path, monkeypatch):
+    ledger = tmp_path / 'ledger.json'
+    monkeypatch.setattr(market, 'LEDGER', ledger)
+    item = candidate(keyword='2026 GSAT 일정', topic='2026 GSAT 일정 확인')
+    market.record_published_keyword(item, 12, 'https://trendpulse.blog/old')
+    market.record_published_keyword(item, 12, 'https://trendpulse.blog/old')
+    import json
+    assert len(json.loads(ledger.read_text())) == 1
+    assert market.duplicate('2027 gsat일정', '새 제목', market.historical_terms())

@@ -24,7 +24,8 @@ BLOG_WRITER_PROVIDER 환경변수로 작성 모델만 선택한다. 카테고리
 - Codex CLI 작성·별도 사실 검토 → 공통 본문 템플릿 → WordPress 발행 →
   인증된 REST 재조회에서 공개 상태와 URL 확인 순서로 처리한다.
 - 동시 인증 사용을 막기 위해 Codex 작업은 직렬화한다. 종료 시 갱신본을 Secret에 저장하고
-  runner의 인증 파일을 제거한다. 인증은 로그나 artifact에 업로드하지 않는다.
+  runner의 인증 파일을 제거한다. 복원본과 동일하면 Secret 쓰기를 생략하여
+  저장 시각을 토큰 갱신 성공으로 오인하지 않게 한다. 인증은 로그나 artifact에 업로드하지 않는다.
 - PR, 임의 브랜치, 다른 공개 저장소에서는 실행하지 않는다. API 과금이나 Claude로 자동 전환하지 않는다.
 - 빈 큐·초안 저장은 공개 발행 성공으로 보고하지 않는다. 자동 재발행은 하지 않는다.
   작업 실패 시 WordPress와 실행 로그를 먼저 확인한다. 발행 이후 인증 저장/큐 저장이 실패했을 수도 있다.
@@ -85,10 +86,26 @@ venv/bin/python -m src.main --mode general --from-queue --no-llm-topics --auto-p
 요청은 임시 작업 디렉터리, 읽기 전용 sandbox, 승인 요청 없음, 사용자 config 무시, 세션 기록 없음으로 실행한다. WordPress 비밀번호와 API 키 등은 자식 프로세스 환경에 전달하지 않는다. 기본 제한 시간은 600초이며 초과 시 프로세스 그룹을 종료한다. 실패 메시지는 원본 CLI 출력이나 토큰을 기록하지 않는다. 오류가 나면 서버에서 CLI 버전, `login status`, 구독 사용 한도를 확인하고 필요 시 재로그인한다.
 
 실패 시 표준 오류는 메모리에서만 분석하고 고정된 `reason` 코드만 출력한다:
-`authentication_required`(로그인/토큰), `usage_limit`(한도), `model_unavailable`,
+인증은 `refresh_token_reused`, `refresh_token_expired`, `refresh_token_revoked`,
+`invalid_grant`, `token_invalidated`, `access_token_expired`, `account_deactivated`,
+`refresh_failed`, `unauthorized`, `authentication_required`로 구분한다.
+그 외는 `usage_limit`(한도), `model_unavailable`,
 `prompt_too_large`, `cli_incompatible`, `network_or_service`, `unclassified`.
 원본 오류·프롬프트·토큰은 로그나 artifact에 남기지 않는다. 재로그인 필요 여부를
 일반적인 exit 1만으로 단정하지 않는다.
+
+GitHub Secret의 실제 인증을 짧게 점검하려면 다음을 실행한다. 기존과 동일한
+복원·Codex 호출·변경본 저장 경로를 사용하고 주제 생성이나 발행은 하지 않는다.
+출력은 고정 오류 코드, 토큰 존재 여부, 파싱된 마지막 갱신 시각, access token의
+만료 여부, 인증 파일 변경 여부로 제한한다. `login status`와 달리 실제 요청이다.
+
+```bash
+gh workflow run blog-keyword-select.yml --ref main -f auth_check_only=true
+```
+
+Secret이 존재한다는 사실과 서버에서 인증이 유효하다는 사실은 별개다.
+[공식 CI 인증 가이드](https://learn.chatgpt.com/docs/auth/ci-cd-auth)에 따라
+CLI의 자동 갱신과 재시도를 사용하며 OAuth 갱신 엔드포인트를 직접 호출하지 않는다.
 
 공식 자료: [인증](https://learn.chatgpt.com/docs/auth), [비대화형 실행 및 CI 인증](https://learn.chatgpt.com/docs/non-interactive-mode).
 

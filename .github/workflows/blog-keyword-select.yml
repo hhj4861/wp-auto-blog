@@ -6,6 +6,10 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      auth_check_only:
+        description: '기존 Secret으로 Codex 인증만 점검 (주제 생성·포스팅 없음)'
+        type: boolean
+        default: false
       top_n:
         description: '카테고리별 검증할 상위 주제 수 (1~5)'
         required: false
@@ -48,7 +52,11 @@ jobs:
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           python scripts/codex_worker_auth.py restore
+      - name: Check restored Codex authentication
+        if: inputs.auth_check_only == true
+        run: python scripts/check_codex_auth.py
       - name: Discover and verify category topics
+        if: inputs.auth_check_only != true
         env:
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
@@ -62,14 +70,14 @@ jobs:
           SELECT_CATEGORY: ${{ inputs.category || 'all' }}
         run: python scripts/select_blog_keywords.py --category "$SELECT_CATEGORY"
       - name: Save category research report
-        if: always()
+        if: always() && inputs.auth_check_only != true
         uses: actions/upload-artifact@v4
         with:
           name: category-market-topics
           path: data/category_market_topics.json
           if-no-files-found: warn
       - name: Commit verified report
-        if: always() && github.ref == 'refs/heads/main'
+        if: always() && inputs.auth_check_only != true && github.ref == 'refs/heads/main'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'

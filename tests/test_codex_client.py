@@ -138,7 +138,16 @@ def test_rejects_checkout_and_default_auth_home(monkeypatch):
 
 
 @pytest.mark.parametrize('diagnostic,reason', [
-    ('refresh_token_reused; secret=do-not-print', 'authentication_required'),
+    ('refresh_token_reused; secret=do-not-print', 'refresh_token_reused'),
+    ('401 Unauthorized: Your refresh token was already used. Please log in.', 'refresh_token_reused'),
+    ('refresh_token_expired: please login', 'refresh_token_expired'),
+    ('refresh token has been revoked', 'refresh_token_revoked'),
+    ('Token refresh failed: invalid_grant', 'invalid_grant'),
+    ('Your authentication token has been invalidated', 'token_invalidated'),
+    ('Your authentication token has expired', 'access_token_expired'),
+    ('Token refresh failed: 401 Unauthorized', 'refresh_failed'),
+    ('401 Unauthorized', 'unauthorized'),
+    ('not logged in', 'authentication_required'),
     ('You have hit your usage limit', 'usage_limit'),
     ('429 Too Many Requests', 'usage_limit'),
     ('model_not_found', 'model_unavailable'),

@@ -715,7 +715,7 @@ jobs:
       github.event.schedule == '0 2 * * 6' ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue'))
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     concurrency:
       group: trendpulse-general-posting
       cancel-in-progress: false
@@ -745,18 +745,15 @@ jobs:
           pip install -r requirements.txt
 
       - uses: actions/setup-node@v4
-        if: env.BLOG_WRITER_PROVIDER == 'codex'
         with:
           node-version: '22'
       - name: Install Codex subscription writer
-        if: env.BLOG_WRITER_PROVIDER == 'codex'
         run: npm install -g @openai/codex@0.153.4
       - name: Set writer runtime paths
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
       - name: Restore Codex authentication
-        if: env.BLOG_WRITER_PROVIDER == 'codex'
         env:
           CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
           WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
@@ -793,8 +790,10 @@ jobs:
           EOF
 
       - name: Run pipeline (Queue Mode - 카테고리별 큐)
-        timeout-minutes: 30
+        timeout-minutes: 50
         env:
+          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
@@ -810,6 +809,8 @@ jobs:
             CAT="생활정보"
           fi
           echo "Queue category: $CAT"
+          python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
+          export BLOG_REQUIRE_MARKET_TOPIC=1
           python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
 
       - name: Verify Codex publication result
@@ -817,12 +818,11 @@ jobs:
         run: python scripts/verify_codex_run.py
 
       - name: Commit queue and registry updates
-        if: success()
-        continue-on-error: true
+        if: always()
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          for f in data/topic_queue_general.json data/post_registry_general.json; do
+          for f in data/topic_queue_general.json data/post_registry_general.json data/category_market_topics.json data/posted_market_keywords.json; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --staged --quiet; then
@@ -839,10 +839,11 @@ jobs:
             git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
             sleep $((i * 2))
           done
-          echo "Warning: Failed to push after 5 attempts, but post was created successfully"
+          echo "Failed to persist queue and keyword history; inspect WordPress before rerunning"
+          exit 1
 
       - name: Persist refreshed Codex authentication and clean up
-        if: always() && env.BLOG_WRITER_PROVIDER == 'codex'
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
         run: python scripts/codex_worker_auth.py persist

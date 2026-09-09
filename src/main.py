@@ -301,6 +301,8 @@ def main() -> int:
             # --category 지정 시 해당 카테고리의 pending만 소비한다
             # (스케줄: 월/수/금=생활정보, 화/목=취업, 토=건강)
             today = _dt.date.today()
+            require_market = os.getenv("BLOG_REQUIRE_MARKET_TOPIC") == "1"
+            from src.market_topics import fresh_market_item
 
             def _pick_next():
                 """발행할 다음 토픽을 고른다.
@@ -315,6 +317,9 @@ def main() -> int:
                     if item.get("status") == "pending"
                     and (not args.category or item.get("category") == args.category)
                 ]
+                if require_market:
+                    cands = [item for item in cands if fresh_market_item(item, args.category)]
+                    return max(cands, key=lambda item: item.get("score", 0), default=None)
                 if not cands:
                     return None
 
@@ -350,7 +355,7 @@ def main() -> int:
             career_generated = False
             while skips < 5:
                 pending_topic = _pick_next()
-                if pending_topic is None and args.category == "취업" and not career_generated:
+                if pending_topic is None and not require_market and args.category == "취업" and not career_generated:
                     # 취업 카테고리는 검증된 니치(GSC 노출/클릭 최상위) —
                     # 큐 소진 시 외항사 토픽을 1회 자동 생성해 이어간다
                     career_generated = True
@@ -369,6 +374,8 @@ def main() -> int:
                         _save_queue()
                         continue
                 if pending_topic is None:
+                    if require_market:
+                        raise RuntimeError("No fresh verified market topic for scheduled category")
                     # 생활정보 등은 큐 소진 시 무관 토픽 자동 생성 금지 (머니 키워드 전략 유지)
                     logger.warning(
                         "No pending topics in queue"
@@ -380,6 +387,13 @@ def main() -> int:
                     break
 
                 logger.info(f"Processing from queue: {pending_topic['topic']}")
+                if require_market:
+                    from src.market_topics import existing_titles, duplicate
+                    if duplicate(pending_topic['keyword'], pending_topic['topic'], existing_titles()):
+                        pending_topic['status'] = 'skipped_duplicate'
+                        _save_queue()
+                        skips += 1
+                        continue
                 result = pipeline.run_single(
                     topic=pending_topic["topic"],
                     keywords=pending_topic.get("keywords"),
@@ -399,7 +413,11 @@ def main() -> int:
 
                 results = [result]
                 if result.success:
-                    pending_topic["status"] = "completed"
+                    published = result.post and result.post.status.value == 'publish'
+                    if require_market and published:
+                        from src.market_topics import record_published_keyword
+                        record_published_keyword(pending_topic, result.post.id, result.post.url)
+                    pending_topic["status"] = "completed" if not require_market or published else "held_draft"
                     pending_topic["completed_at"] = _dt.datetime.now().isoformat()
                     _save_queue()
                     logger.info("Queue updated: marked as completed")

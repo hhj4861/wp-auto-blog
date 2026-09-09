@@ -19,6 +19,8 @@ Usage:
 """
 
 import argparse
+import json
+import os
 import sys
 from pathlib import Path
 
@@ -279,7 +281,6 @@ def main() -> int:
                     logger.warning(f"  ⏭ 건너뜀({result.error}): {slug}")
         elif args.from_queue:
             # Queue mode - process next pending topic from queue file
-            import json
             queue_file = Path(__file__).parent.parent / "data" / f"topic_queue_{args.mode}.json"
 
             if not queue_file.exists():
@@ -448,6 +449,14 @@ def main() -> int:
         logger.info("Failed Topics:")
         for result in failed:
             logger.error(f"  - {result.topic}: {result.error}")
+
+    # Machine-readable outcome for private CI; contains no body or credentials.
+    if os.getenv("BLOG_RESULT_PATH"):
+        Path(os.environ["BLOG_RESULT_PATH"]).write_text(json.dumps([
+            {"success": r.success, "post_id": r.post.id if r.post else None,
+             "url": r.post.url if r.post else None,
+             "status": r.post.status.value if r.post else None}
+            for r in results], ensure_ascii=False), encoding="utf-8")
 
     # Return success if all processed successfully
     return 0 if not failed else 1

@@ -1,0 +1,93 @@
+name: Private Codex Blog Worker
+run-name: ${{ inputs.request_id }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        type: string
+        required: true
+      mode:
+        type: choice
+        options: [general, queue]
+        default: general
+      topic:
+        type: string
+      category:
+        type: string
+      publish:
+        type: boolean
+        default: false
+      codex_model:
+        type: string
+
+# Deploy this workflow to the separate private worker repository.
+# Never expose subscription auth in the public source repository.
+concurrency:
+  group: codex-subscription-writer
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  write-and-publish:
+    if: github.event.repository.private && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: hhj4861/wp-auto-blog
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install writer dependencies
+        run: |
+          pip install -r requirements.txt
+          npm install -g @openai/codex@0.153.4
+      - name: Restore private subscription authentication
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.WORKER_ADMIN_TOKEN }}
+          BLOG_SOURCE_TOKEN: ${{ secrets.BLOG_SOURCE_TOKEN }}
+        run: python scripts/codex_worker_auth.py restore
+      - name: Generate, review and publish
+        env:
+          BLOG_CODEX_HOME: ${{ runner.temp }}/trendpulse-codex
+          BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
+          BLOG_WRITER_PROVIDER: codex
+          BLOG_MODE: ${{ inputs.mode }}
+          BLOG_TOPIC: ${{ inputs.topic }}
+          BLOG_CATEGORY: ${{ inputs.category }}
+          BLOG_PUBLISH: ${{ inputs.publish && 'true' || 'false' }}
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+        run: python scripts/run_codex_worker.py
+      - name: Persist refreshed authentication and remove runner copy
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.WORKER_ADMIN_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist
+      - name: Preserve queue and registry
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_SOURCE_TOKEN }}
+        run: |
+          git config user.name 'trendpulse-codex-worker'
+          git config user.email 'trendpulse-codex-worker@users.noreply.github.com'
+          gh auth setup-git
+          git add data/topic_queue_general.json data/post_registry_general.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: record Codex posting result [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

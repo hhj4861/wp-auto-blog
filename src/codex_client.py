@@ -1,6 +1,7 @@
 """Subscription-authenticated Codex CLI transport for a private writing worker."""
 
 import os
+import json
 from pathlib import Path
 import shutil
 import signal
@@ -8,12 +9,28 @@ import subprocess
 import tempfile
 
 
+def require_private_actions():
+    """Managed subscription auth is restricted to private, default-branch CI."""
+    if os.getenv("GITHUB_ACTIONS", "").lower() != "true":
+        return
+    try:
+        event = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())
+        repo = event["repository"]
+        trusted = (repo.get("private") is True
+                   and repo.get("full_name") == os.environ.get("GITHUB_REPOSITORY")
+                   and os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+                   and os.environ.get("GITHUB_REF") == "refs/heads/" + repo["default_branch"])
+    except (KeyError, OSError, ValueError, TypeError):
+        trusted = False
+    if not trusted:
+        raise RuntimeError("Codex subscription writer requires a private worker on its default branch")
+
+
 class CodexSubscriptionClient:
     """Use a dedicated ChatGPT login; never fall back to API-key billing."""
 
     def __init__(self, *, home: str, model: str = "", timeout: int = 600):
-        if os.getenv("GITHUB_ACTIONS", "").lower() == "true":
-            raise RuntimeError("Codex subscription writer requires a private worker outside GitHub Actions")
+        require_private_actions()
         if not home or not Path(home).expanduser().is_absolute():
             raise ValueError("BLOG_CODEX_HOME must be an absolute path to a dedicated Codex login directory")
         self.home = Path(home).expanduser().resolve()

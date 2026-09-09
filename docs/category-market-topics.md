@@ -37,7 +37,7 @@
 
 GitHub Actions → Blog Keyword Select → category=all 또는 특정 카테고리.
 이 작업은 글을 발행하지 않는다. 작업 브랜치 실행은 artifact만 남기고 main에는 커밋하지 않는다.
-main 실행은 검증된 보고서를 커밋한다. 자동 발행은 기존 Auto Blog Post의 post-queue 작업이다.
+main 실행은 생성된 보고서를 커밋한다. 일부 카테고리가 실패해도 다른 카테고리의 검증된 결과는 보존한다. 자동 발행은 기존 Auto Blog Post의 post-queue 작업이다.
 
 SELECT_TOP_N의 빈 문자열은 2로 처리하며 1~5만 허용한다. 이전 건강/뷰티 전용 스캘폴드 생성은
 이 선정 작업에서 제거했다. BytePulse 발행 파이프라인은 변경하지 않았다.

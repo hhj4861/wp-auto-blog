@@ -821,8 +821,7 @@ jobs:
         run: python scripts/verify_codex_run.py
 
       - name: Commit queue and registry updates
-        if: success()
-        continue-on-error: true
+        if: always()
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -843,7 +842,8 @@ jobs:
             git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
             sleep $((i * 2))
           done
-          echo "Warning: Failed to push after 5 attempts, but post was created successfully"
+          echo "Failed to persist queue and keyword history; inspect WordPress before rerunning"
+          exit 1
 
       - name: Persist refreshed Codex authentication and clean up
         if: always() && env.BLOG_WRITER_PROVIDER == 'codex'

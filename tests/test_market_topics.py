@@ -51,7 +51,7 @@ def test_selection_requires_measured_keyword_source_and_serp(monkeypatch):
     proposal = {'keyword': '시험준비물', 'topic': '시험준비물 확인 방법', 'category': '취업',
                 'intent': '무엇을 준비하나', 'gap': '준비물 표', 'source_url': 'https://example.go.kr/info'}
     monkeypatch.setattr(market, 'fetch_trend_change', lambda *a: None)
-    responses = iter([{'seeds':['공채']}, {'candidates':[proposal]}, {'supported':True}])
+    responses = iter([{'candidates':[proposal]}, {'supported':True}])
     monkeypatch.setattr(market, 'ask', lambda *a, **k: next(responses))
     monkeypatch.setattr(market, 'demand_candidates', lambda seeds: {'시험준비물':{'keyword':'시험준비물','monthly':1200,'comp':'높음'}})
     monkeypatch.setattr(market, 'fetch_source', lambda *a: {'url':proposal['source_url'], 'excerpt':'공식 준비물'})

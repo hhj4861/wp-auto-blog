@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 import requests
 
 from src.keyword_gate import fetch_keyword_stats, fetch_serp_domains, gov_ratio, MIN_MONTHLY_SEARCH
-from src.editorial import fetch_source, retry_research, collect_research_sources
+from src.editorial import fetch_source, retry_research
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -65,25 +65,14 @@ def ask(prompt, search=False):
     from google.genai import types
     key = os.environ.get('GOOGLE_AI_API_KEY')
     if not key:
-        raise RuntimeError('Market research requires GOOGLE_AI_API_KEY')
+        raise RuntimeError('Market analysis requires GOOGLE_AI_API_KEY')
     with genai.Client(api_key=key, http_options=types.HttpOptions(timeout=90000)) as client:
-        for attempt in range(2):
-            response = retry_research(lambda: client.models.generate_content(
-                model='gemini-2.5-flash', contents=prompt,
-                config=types.GenerateContentConfig(temperature=0.1,
-                    tools=[types.Tool(google_search=types.GoogleSearch())] if search else None)))
-            metadata = response.candidates[0].grounding_metadata if response.candidates else None
-            grounded = not search or bool(metadata and metadata.grounding_chunks)
-            if not grounded:
-                grounded = bool(collect_research_sources(response))
-            if grounded:
-                try:
-                    return parse_json(response.text)
-                except (ValueError, TypeError):
-                    if attempt:
-                        raise
-            prompt += '\n실제 웹 검색을 수행하고 응답은 유효한 JSON만 반환하세요. source_urls 필드에 실제 확인한 공식 자료의 직접 URL 2개를 추가하세요.'
-    raise RuntimeError('Market search returned no verifiable evidence')
+        response = retry_research(lambda: client.models.generate_content(
+            model='gemini-2.5-flash', contents=prompt,
+            config=types.GenerateContentConfig(temperature=0.1,
+                response_mime_type='application/json', max_output_tokens=6000,
+                thinking_config=types.ThinkingConfig(thinking_budget=1024))))
+    return parse_json(response.text)
 
 
 def existing_titles():
@@ -184,15 +173,9 @@ def select_category(category, top_n=2, titles=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
     now = datetime.now(timezone.utc).isoformat()
-    discovery = ask(f'''오늘은 {now[:10]}입니다. 한국 독자의 {category} 분야에서 새 글 수요를 탐색하세요.
-기존 블로그 성과와 무관하게 현재 검색되는 신규 공고, 계절 이슈, 지속적인 질문을 웹 검색하세요.
-의학적 치료 효과, 합격 보장, 확인되지 않은 시행일은 제외하세요.
-네이버 연관 키워드 검색의 출발점으로 쓸 짧은 한국어 검색어 4개를 JSON으로 반환:
-{{"seeds":["..."],"rationale":"실제 검색에서 발견한 주제 설명","source_urls":["공식 자료 직접 URL"]}}. 검색량 숫자는 추정하지 마세요.''', search=True)
-    seeds = [x for x in discovery.get('seeds', []) if isinstance(x, str) and 2 <= len(x) <= 30][:4]
-    if not seeds:
-        raise RuntimeError('No market discovery seeds')
-    seeds = list(dict.fromkeys(seeds + CATEGORIES[category]))
+    # Seeds are category boundaries, not selected topics. All actual candidates and
+    # demand come from live Naver related-keyword responses, never AI volume claims.
+    seeds = list(CATEGORIES[category])
     stats = demand_candidates(seeds)
     titles = existing_titles() if titles is None else titles
     ranked = sorted(stats.values(), key=lambda r: -r['monthly'])
@@ -204,11 +187,11 @@ def select_category(category, top_n=2, titles=None):
 광고 경쟁도(comp)는 SEO 경쟁도가 아닙니다. 후보에서 정확한 keyword를 선택하세요.
 카테고리에 맞고 구체적 질문에 답하는 주제만 최대 6개. 단순 홈페이지 탐색/상품명/질병 진단·치료 권유는 제외.
 제목에는 keyword를 유지하고 검색 목적을 구체화하세요. 기존 글과 같은 검색 목적은 제외하세요.
-웹 검색으로 실제 내용을 확인할 수 있는 공식 자료 URL을 각 항목에 포함하세요.
+실제 내용을 확인할 수 있는 공식 자료의 직접 URL을 각 항목에 포함하세요. URL은 이후 실제 접속 검증하므로 지어내지 마세요.
 JSON만 반환: {{"candidates":[{{"keyword":"...","topic":"...","category":"{category}",
 "intent":"독자의 질문", "source_url":"https://...", "gap":"기존 검색 결과 대비 추가할 구체적 정보"}}]}}
 후보: {json.dumps(pool, ensure_ascii=False)}
-기존 제목: {json.dumps(titles, ensure_ascii=False)}''', search=True)
+기존 제목: {json.dumps(titles, ensure_ascii=False)}''')
     selected, rejected, seen = [], [], set()
     for item in proposals.get('candidates', [])[:6]:
         keyword = item.get('keyword', '')
@@ -260,7 +243,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","topic":"...","category":"{cat
             'selected_at': now, 'source': SOURCE, 'keywords': [keyword], 'status': 'pending'})
     selected.sort(key=lambda item: -item['score'])
     return {'category': category, 'selected_at': now, 'seeds': seeds,
-            'measured_candidates': len(stats), 'selected': selected[:top_n], 'rejected': rejected,
+            'discovery_provider': 'naver_related_keywords', 'measured_candidates': len(stats), 'selected': selected[:top_n], 'rejected': rejected,
             'notes': 'Null trend means unavailable; demand is Naver; organic provider is recorded per candidate.'}
 
 

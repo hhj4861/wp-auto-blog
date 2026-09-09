@@ -319,7 +319,7 @@ def _valid_coupang_url(url: str) -> bool:
     if not u or u.upper().startswith("PASTE") or not u.startswith("https://"):
         return False
     host = (urlparse(u).hostname or "").lower()
-    return host.endswith("coupang.com")  # link.coupang.com / www.coupang.com
+    return host == "link.coupang.com" and urlparse(u).path.startswith("/a/")
 
 
 def load_prep_products(path: str | None = None) -> tuple[str, list[dict]]:
@@ -343,8 +343,8 @@ def load_prep_products(path: str | None = None) -> tuple[str, list[dict]]:
 
 
 def coupang_prep_box(heading: str, products: list[dict]) -> str:
-    """쿠팡 추천템 박스 HTML. 유효 상품이 2개 미만이면 빈 문자열."""
-    if len(products) < 2:
+    """쿠팡 추천템 박스 HTML. 관련 상품이 없으면 생략한다."""
+    if not products:
         return ""
     rows = "".join(
         f'<li style="margin-bottom:12px;">'
@@ -353,21 +353,29 @@ def coupang_prep_box(heading: str, products: list[dict]) -> str:
         f'<span style="color:#94a3b8;font-size:0.9em;"> — {p.get("note", "")}</span></li>'
         for p in products)
     return f'''
-<div style="max-width:800px;margin:40px auto;padding:22px;background:#2d2d3a;border-radius:12px;border-left:4px solid #ff6b35;">
+<div id="coupang-prep-box" style="max-width:800px;margin:40px auto;padding:22px;background:#2d2d3a;border-radius:12px;border-left:4px solid #ff6b35;">
 <p style="margin:0 0 14px 0;font-size:1.1em;font-weight:bold;color:#ffffff;">✈️ {heading}</p>
 <ul style="margin:0;padding-left:18px;color:#e0e0e0;line-height:1.7;list-style:none;">{rows}</ul>
 </div>
 '''
 
 
-def insert_coupang_prep_box(html: str) -> str:
+def insert_coupang_prep_box(html: str, *, topic: str | None = None) -> str:
     """유효한 쿠팡 링크가 설정돼 있으면 추천템 박스를 결론 앞에 삽입한다.
 
     링크가 없으면(플레이스홀더 상태) 아무것도 하지 않는다 — 가입/링크 생성 전엔
     빈 박스나 무수익 링크가 절대 나오지 않는다. 삽입 시 add_coupang_disclosure가
     쿠팡 링크를 감지해 의무 고지문을 자동으로 붙인다(광고와 별도 위치).
     """
+    if 'id="coupang-prep-box"' in html:
+        return add_coupang_disclosure(html)
     heading, products = load_prep_products()
+    if topic is not None:
+        from .editorial import is_airline_topic
+        if not is_airline_topic(topic):
+            products = [p for p in products if any(
+                keyword in topic for keyword in p.get('topic_keywords', []) if keyword)]
+            heading = "필요할 때 참고할 준비용품 (제휴 링크)"
     box = coupang_prep_box(heading, products)
     if not box:
         return html

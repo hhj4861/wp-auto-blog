@@ -48,6 +48,8 @@ def verify_published(results, session, base):
 
 
 def main():
+    from dotenv import load_dotenv
+    load_dotenv()
     env = dict(os.environ)
     if env.get("BLOG_RESUME_DRAFT_ID"):
         if env.get("BLOG_PUBLISH") != "true":

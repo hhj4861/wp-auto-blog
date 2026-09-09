@@ -278,6 +278,7 @@ class WordPressClient:
         section_images: Optional[dict[str, FetchedImage]] = None,
         skip_hero_image: bool = False,
         content_type: str = "review",
+        require_featured_image: bool = False,
     ) -> CreatedPost:
         """Create a new WordPress post.
 
@@ -309,6 +310,10 @@ class WordPressClient:
             if featured_media_url:
                 images[0].url = featured_media_url
                 logger.info(f"Using WordPress media URL for hero: {featured_media_url[:60]}...")
+
+        if require_featured_image and not featured_media_id and status == PostStatus.PUBLISH:
+            logger.warning("Featured image missing or upload failed; saving as draft")
+            status = PostStatus.DRAFT
 
         # Preserve original URLs for YouTube link detection
         original_urls = {img.url: img.url for img in images}  # Map new URL -> original

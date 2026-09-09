@@ -90,7 +90,7 @@ from src.image_fetcher import ImageFetcher, ImageConfig, FetchedImage
 from src.indexnow import ping_urls
 from src.keyword_gate import evaluate as evaluate_keyword
 from src.identity_gate import validate_identity
-from src.editorial import reader_layout, is_airline_topic, editorial_checks
+from src.editorial import reader_layout, editorial_checks
 from src.monetization import (
     DEFAULT_SHOP_RETAILER,
     add_coupang_disclosure,
@@ -461,7 +461,7 @@ class BlogPipeline:
             # Fall back to Unsplash/Pexels if no image found
             # kculture는 토픽 키워드 그대로 쓰면 오매칭이 심하다
             # (예: G-Dragon → 용 조각상). 카테고리 일반 키워드로 대체.
-            if not images and self.config.mode != "general":
+            if not images:
                 fallback_keywords = topic.keywords
                 if self.config.mode == "kculture":
                     fallback_keywords = KCULTURE_STOCK_KEYWORDS.get(
@@ -529,9 +529,9 @@ class BlogPipeline:
                         category=category,
                     ),
                 )
-                # 취업(외항사) 글에 쿠팡 추천템 박스 (링크 설정 시에만, 고지 자동)
-                if category == "취업" and is_airline_topic(topic.topic):
-                    content.html = insert_coupang_prep_box(content.html)
+                # 승인된 상품 링크만 주제에 맞춰 연결한다 (무관한 상품은 생략).
+                if category == "취업":
+                    content.html = insert_coupang_prep_box(content.html, topic=topic.topic)
             # Create post (or simulate in dry run)
             if self.config.dry_run:
                 logger.info("[DRY RUN] Would create post - skipping actual publish")
@@ -617,7 +617,7 @@ class BlogPipeline:
                         skip_hero_image=skip_hero,
                         content_type=self.config.content_type.value,
                         expected_modified_gmt=expected_modified_gmt,
-                        clear_featured_image=self.config.mode == "general",
+                        clear_featured_image=False,
                     )
                     logger.info(f"리프레시 완료 (URL 유지): {post.url}")
                 else:
@@ -625,6 +625,7 @@ class BlogPipeline:
                         content=content,
                         images=images,
                         status=status,
+                        require_featured_image=self.config.mode == "general",
                         category=category,
                         section_images=section_images,
                         skip_hero_image=skip_hero,
@@ -633,7 +634,7 @@ class BlogPipeline:
 
                 # 발행/갱신 즉시 IndexNow 핑 (재크롤 유도 — 신선도 반영)
                 if (self.config.mode == "general" and post.url
-                        and (status == PostStatus.PUBLISH or refresh_post_id)):
+                        and (post.status == PostStatus.PUBLISH or refresh_post_id)):
                     ping_urls([post.url])
 
             duration = (datetime.now() - start_time).total_seconds()

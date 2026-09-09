@@ -9,6 +9,28 @@ import subprocess
 import tempfile
 
 
+def failure_reason(stderr):
+    """Return only fixed categories; CLI output may contain credentials or prompts."""
+    text = stderr.lower() if isinstance(stderr, str) else ''
+    categories = (
+        ('authentication_required', ('refresh_token_reused', 'refresh_token_expired',
+            'refresh token', 'invalid_grant', 'unauthorized', '401 unauthorized',
+            'please log in', 'please login', 'not logged in', 'authentication token')),
+        ('usage_limit', ('usage limit', 'usage_limit', 'rate_limit_exceeded',
+            'rate limit', 'quota exceeded', '429 too many requests')),
+        ('model_unavailable', ('model_not_found', 'model is not supported',
+            'model does not exist', 'unsupported model')),
+        ('prompt_too_large', ('context_length_exceeded', 'context window', 'too many tokens')),
+        ('cli_incompatible', ('unexpected argument', 'unrecognized option', 'unknown flag')),
+        ('network_or_service', ('connection refused', 'connection reset', 'failed to lookup',
+            'name resolution', 'dns error', 'error sending request', '503 service', '502 bad gateway')),
+    )
+    for reason, markers in categories:
+        if any(marker in text for marker in markers):
+            return reason
+    return 'unclassified'
+
+
 def require_private_actions():
     """Allow private CI or the explicitly authorized repository's automation."""
     if os.getenv("GITHUB_ACTIONS", "").lower() != "true":
@@ -74,11 +96,11 @@ class CodexSubscriptionClient:
             command.append("-")
             process = subprocess.Popen(
                 command, cwd=workdir, env=env, stdin=subprocess.PIPE,
-                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
                 text=True, encoding="utf-8", start_new_session=True,
             )
             try:
-                process.communicate(prompt, timeout=self.timeout)
+                captured = process.communicate(prompt, timeout=self.timeout)
             except subprocess.TimeoutExpired:
                 if os.name == "posix":
                     try:
@@ -90,8 +112,9 @@ class CodexSubscriptionClient:
                 process.communicate()
                 raise RuntimeError("Codex subscription request timed out; no provider fallback was attempted") from None
             if process.returncode:
+                stderr = captured[1] if isinstance(captured, tuple) and len(captured) == 2 else ''
                 raise RuntimeError(
-                    f"Codex subscription request failed (exit {process.returncode}); "
+                    f"Codex subscription request failed (exit {process.returncode}, reason={failure_reason(stderr)}); "
                     "check CLI version, ChatGPT login and usage limits on the private worker"
                 )
             result = output.read_text(encoding="utf-8").strip() if output.is_file() else ""

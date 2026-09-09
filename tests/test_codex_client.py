@@ -5,7 +5,7 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from src.codex_client import CodexSubscriptionClient
+from src.codex_client import CodexSubscriptionClient, failure_reason
 from src.content_generator import ContentConfig, ContentGenerator, LLMProvider
 
 
@@ -135,3 +135,29 @@ def test_rejects_checkout_and_default_auth_home(monkeypatch):
     for home in (Path(module.__file__).resolve().parent.parent, Path.home() / ".codex"):
         with pytest.raises(ValueError, match="outside|dedicated"):
             CodexSubscriptionClient(home=str(home))
+
+
+@pytest.mark.parametrize('diagnostic,reason', [
+    ('refresh_token_reused; secret=do-not-print', 'authentication_required'),
+    ('You have hit your usage limit', 'usage_limit'),
+    ('429 Too Many Requests', 'usage_limit'),
+    ('model_not_found', 'model_unavailable'),
+    ('context_length_exceeded', 'prompt_too_large'),
+    ('unexpected argument --unknown', 'cli_incompatible'),
+    ('error sending request', 'network_or_service'),
+    ('secret=do-not-print, unrecognized error', 'unclassified'),
+])
+def test_failure_reason_never_echoes_raw_diagnostics(client, monkeypatch, diagnostic, reason):
+    process = MagicMock(returncode=1)
+    process.communicate.return_value = (None, diagnostic)
+    monkeypatch.setattr('src.codex_client.subprocess.Popen', lambda *a, **kw: process)
+    with pytest.raises(RuntimeError) as caught:
+        client.generate('private prompt')
+    assert f'reason={reason}' in str(caught.value)
+    assert diagnostic not in str(caught.value)
+    assert 'do-not-print' not in str(caught.value)
+    assert 'private prompt' not in str(caught.value)
+
+
+def test_unknown_diagnostics_are_not_exposed():
+    assert failure_reason(None) == 'unclassified'

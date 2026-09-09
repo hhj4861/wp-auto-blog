@@ -84,6 +84,12 @@ venv/bin/python -m src.main --mode general --from-queue --no-llm-topics --auto-p
 
 요청은 임시 작업 디렉터리, 읽기 전용 sandbox, 승인 요청 없음, 사용자 config 무시, 세션 기록 없음으로 실행한다. WordPress 비밀번호와 API 키 등은 자식 프로세스 환경에 전달하지 않는다. 기본 제한 시간은 600초이며 초과 시 프로세스 그룹을 종료한다. 실패 메시지는 원본 CLI 출력이나 토큰을 기록하지 않는다. 오류가 나면 서버에서 CLI 버전, `login status`, 구독 사용 한도를 확인하고 필요 시 재로그인한다.
 
+실패 시 표준 오류는 메모리에서만 분석하고 고정된 `reason` 코드만 출력한다:
+`authentication_required`(로그인/토큰), `usage_limit`(한도), `model_unavailable`,
+`prompt_too_large`, `cli_incompatible`, `network_or_service`, `unclassified`.
+원본 오류·프롬프트·토큰은 로그나 artifact에 남기지 않는다. 재로그인 필요 여부를
+일반적인 exit 1만으로 단정하지 않는다.
+
 공식 자료: [인증](https://learn.chatgpt.com/docs/auth), [비대화형 실행 및 CI 인증](https://learn.chatgpt.com/docs/non-interactive-mode).
 
 ## 실제 확인 (2026-09-09)

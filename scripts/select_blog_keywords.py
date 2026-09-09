@@ -45,6 +45,9 @@ def main():
             print(json.dumps(report, ensure_ascii=False), flush=True)
             if not report['selected']:
                 raise RuntimeError('No candidate passed all checks')
+            # Reserve selected keywords across this run's category reports too.
+            for item in report['selected']:
+                titles.extend([item['keyword'], item['topic']])
             if args.enqueue:
                 path = ROOT / 'data/topic_queue_general.json'
                 queue = json.loads(path.read_text())

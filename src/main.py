@@ -398,6 +398,7 @@ def main() -> int:
                     topic=pending_topic["topic"],
                     keywords=pending_topic.get("keywords"),
                     category=pending_topic.get("category"),
+                    **({'market_brief': pending_topic} if require_market else {}),
                 )
 
                 if not result.success and result.error and "Duplicate" in result.error:

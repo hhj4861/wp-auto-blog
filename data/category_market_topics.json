@@ -1,0 +1,160 @@
+{
+  "취업": {
+    "category": "취업",
+    "selected_at": "2026-09-09T08:37:47.249362+00:00",
+    "seeds": [
+      "채용",
+      "공기업",
+      "자격증",
+      "면접"
+    ],
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 700,
+    "selected": [],
+    "rejected": [
+      {
+        "keyword": "ITQ자격증",
+        "reason": "source does not support topic"
+      },
+      {
+        "keyword": "컴퓨터활용능력2급",
+        "reason": "official source unavailable"
+      },
+      {
+        "keyword": "전기산업기사",
+        "reason": "official source unavailable"
+      }
+    ],
+    "notes": "Null trend means unavailable; demand is Naver; organic provider is recorded per candidate."
+  },
+  "생활정보": {
+    "category": "생활정보",
+    "selected_at": "2026-09-09T08:38:38.488775+00:00",
+    "seeds": [
+      "신청방법",
+      "환급금",
+      "생활요금",
+      "정부지원"
+    ],
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 215,
+    "selected": [],
+    "rejected": [
+      {
+        "keyword": "퇴직금중간정산",
+        "reason": "official source unavailable"
+      },
+      {
+        "keyword": "경정청구",
+        "reason": "official source unavailable"
+      },
+      {
+        "keyword": "세금계산서발행",
+        "reason": "official source unavailable"
+      },
+      {
+        "keyword": "간이과세자",
+        "reason": "official source unavailable"
+      },
+      {
+        "keyword": "종합소득세율",
+        "reason": "official source unavailable"
+      },
+      {
+        "keyword": "세액공제",
+        "reason": "official source unavailable"
+      }
+    ],
+    "notes": "Null trend means unavailable; demand is Naver; organic provider is recorded per candidate."
+  },
+  "건강": {
+    "category": "건강",
+    "selected_at": "2026-09-09T08:39:30.723800+00:00",
+    "seeds": [
+      "건강검진",
+      "예방접종",
+      "건강보험",
+      "운동"
+    ],
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 962,
+    "selected": [
+      {
+        "keyword": "당화혈색소정상수치",
+        "topic": "당화혈색소정상수치, 공복혈당과 다른 이유와 결과 해석의 한계",
+        "category": "건강",
+        "intent": "당화혈색소는 어느 기간의 혈당을 반영하며 공복혈당과 결과가 다른 이유는 무엇일까?",
+        "source_url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test",
+        "gap": "수치 구간과 반영 기간을 함께 설명하고, 빈혈 등 결과에 영향을 주는 조건을 정리한다.",
+        "monthly_search": 24700,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "advertising_competition": "높음",
+        "organic_provider": "duckduckgo_proxy",
+        "organic_domains": [
+          "health.happyfinder.kr",
+          "www.healthpedia.co.kr",
+          "kyung0720.tistory.com",
+          "from-space.tistory.com",
+          "bodyandwell.com",
+          "youl-story.tistory.com",
+          "blog.naver.com",
+          "karl21.tistory.com",
+          "m.blog.naver.com",
+          "valueinfo.co.kr"
+        ],
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "valid_until": null,
+        "score": 72.93,
+        "selected_at": "2026-09-09T08:39:30.723800+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "당화혈색소정상수치"
+        ],
+        "status": "pending"
+      },
+      {
+        "keyword": "대장내시경전음식",
+        "topic": "대장내시경전음식, 맑은 액체란 무엇이고 어떤 음료를 피해야 할까?",
+        "category": "건강",
+        "intent": "대장내시경 준비 안내의 맑은 액체는 무엇이며 음식 제한은 어떻게 확인할까?",
+        "source_url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/colonoscopy",
+        "gap": "맑은 액체의 예시와 피할 색상의 음료를 구분하고, 검사기관별 준비 지침 확인표를 제공한다.",
+        "monthly_search": 43230,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "advertising_competition": "높음",
+        "organic_provider": "duckduckgo_proxy",
+        "organic_domains": [
+          "health-research-life.com",
+          "mediguide.tistory.com",
+          "m.blog.naver.com",
+          "1gorae.tistory.com",
+          "blog.naver.com",
+          "bojwebsite.com",
+          "dailybul.tistory.com",
+          "zzangtips.tistory.com"
+        ],
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "valid_until": null,
+        "score": 72.5,
+        "selected_at": "2026-09-09T08:39:30.723800+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "대장내시경전음식"
+        ],
+        "status": "pending"
+      }
+    ],
+    "rejected": [
+      {
+        "keyword": "스포츠",
+        "reason": "official source unavailable"
+      }
+    ],
+    "notes": "Null trend means unavailable; demand is Naver; organic provider is recorded per candidate."
+  }
+}

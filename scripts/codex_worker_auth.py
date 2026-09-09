@@ -1,4 +1,4 @@
-"""Private CI credential lifecycle; never print or upload authentication as artifacts."""
+"""CI credential lifecycle; never print or upload authentication as artifacts."""
 import json
 import os
 from pathlib import Path
@@ -24,8 +24,6 @@ def main():
     if sys.argv[1] == "restore":
         if not os.environ.get("WORKER_ADMIN_TOKEN"):
             raise RuntimeError("WORKER_ADMIN_TOKEN required to persist refreshed auth")
-        if not os.environ.get("BLOG_SOURCE_TOKEN"):
-            raise RuntimeError("BLOG_SOURCE_TOKEN required to preserve posting registry")
         raw = validate_auth(os.environ.get("CODEX_AUTH_JSON", "{}"))
         home.mkdir(mode=0o700, exist_ok=False)
         auth.touch(mode=0o600)

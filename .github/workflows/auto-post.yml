@@ -20,7 +20,7 @@ on:
           - queue
           - both
       writer_provider:
-        description: 'TrendPulse writer (Codex uses private subscription worker)'
+        description: 'TrendPulse writer (Codex uses ChatGPT subscription)'
         type: choice
         default: codex
         options:
@@ -81,39 +81,82 @@ on:
 jobs:
   post-codex:
     if: |
-      (github.event.inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') == 'codex' &&
-      ((github.event_name == 'workflow_dispatch' && contains(fromJSON('["general","queue","both"]'), github.event.inputs.mode)) ||
-       (github.event_name == 'schedule' && contains(fromJSON('["0 2 * * 1,3,5","0 2 * * 2,4","0 2 * * 6","30 23 * * *","30 10 * * *"]'), github.event.schedule)))
+      github.repository == 'hhj4861/wp-auto-blog' && github.ref == 'refs/heads/main' &&
+      (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') == 'codex' &&
+      ((github.event_name == 'workflow_dispatch' && contains(fromJSON('["general","queue","both"]'), inputs.mode)) ||
+       (github.event_name == 'schedule' && contains(fromJSON('["0 2 * * 1,3,5","0 2 * * 2,4","0 2 * * 6"]'), github.event.schedule)))
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 40
     concurrency:
-      group: trendpulse-codex-dispatch
+      group: codex-subscription-writer
       cancel-in-progress: false
     permissions:
-      contents: read
+      contents: write
+    env:
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install requests
-      - name: Write, verify and publish with private Codex worker
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install writer dependencies
+        run: |
+          pip install -r requirements.txt
+          npm install -g @openai/codex@0.153.4
+      - name: Restore subscription authentication
         env:
-          CODEX_WORKER_REPOSITORY: ${{ vars.CODEX_WORKER_REPOSITORY }}
-          CODEX_WORKER_TOKEN: ${{ secrets.CODEX_WORKER_TOKEN }}
-          BLOG_MODE: ${{ inputs.mode || 'queue' }}
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py restore
+      - name: Generate, review and publish
+        id: write
+        env:
+          BLOG_CODEX_HOME: ${{ runner.temp }}/trendpulse-codex
+          BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
+          BLOG_WRITER_PROVIDER: codex
+          BLOG_MODE: ${{ github.event_name == 'schedule' && 'queue' || (inputs.mode == 'queue' && 'queue' || 'general') }}
+          BLOG_SCHEDULE: ${{ github.event.schedule }}
           BLOG_TOPIC: ${{ inputs.topic }}
           BLOG_CATEGORY: ${{ inputs.category }}
-          BLOG_PUBLISH: ${{ inputs.publish && 'true' || 'false' }}
-          BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
-          BLOG_SCHEDULE: ${{ github.event.schedule }}
-        run: python scripts/dispatch_codex_worker.py
+          BLOG_PUBLISH: ${{ (github.event_name == 'schedule' || inputs.publish) && 'true' || 'false' }}
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+        run: python scripts/run_codex_worker.py
+      - name: Persist refreshed authentication and remove runner copy
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist
+      - name: Preserve queue and registry
+        if: always() && steps.write.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'trendpulse-codex-worker'
+          git config user.email 'trendpulse-codex-worker@users.noreply.github.com'
+          gh auth setup-git
+          git add data/topic_queue_general.json data/post_registry_general.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: record Codex posting result [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
 
   post-general:
     # General 스케줄: 23:30 UTC, 10:30 UTC (Tech와 15분 시간차)
     # 외항사/K-Culture/Tech 스케줄에서는 실행하지 않음
     if: |
-      (github.event.inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex' &&
+      (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex' &&
       (github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
       (github.event_name == 'schedule' && (github.event.schedule == '30 23 * * *' || github.event.schedule == '30 10 * * *')))
     runs-on: ubuntu-latest
@@ -691,7 +734,7 @@ jobs:
   post-queue:
     # 월/수/금(생활정보)·화/목(취업) 11:00 KST cron + workflow_dispatch(mode=queue)
     if: |
-      (github.event.inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex' &&
+      (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex' &&
       (github.event.schedule == '0 2 * * 1,3,5' ||
       github.event.schedule == '0 2 * * 2,4' ||
       github.event.schedule == '0 2 * * 6' ||

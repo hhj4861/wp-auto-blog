@@ -4,7 +4,6 @@ from unittest.mock import Mock
 import pytest
 import yaml
 
-from scripts.dispatch_codex_worker import dispatch_and_wait, worker_inputs
 from scripts.run_codex_worker import command, verify_published
 from scripts.codex_worker_auth import validate_auth
 from src.codex_client import require_private_actions
@@ -32,45 +31,6 @@ def test_private_ci_boundary(tmp_path, monkeypatch, private, event, ref, allowed
 
 def response(data):
     return Mock(json=lambda: data, raise_for_status=lambda: None)
-
-
-@pytest.mark.parametrize("conclusion", ["success", "failure", "cancelled"])
-def test_dispatch_tracks_matching_run_and_propagates_failure(conclusion):
-    session = Mock()
-    session.get.side_effect = [response({"private": True, "default_branch": "main"}),
-        response({"workflow_runs": [{"display_title": "unrelated"}, {
-            "display_title": "request", "status": "completed", "conclusion": conclusion, "html_url": "https://github.com/owner/worker/actions/runs/1"}]})]
-    result = lambda: dispatch_and_wait(session, "owner/worker", {"request_id": "request"})
-    if conclusion == "success":
-        assert result().endswith("/1")
-    else:
-        with pytest.raises(RuntimeError, match="no provider fallback"):
-            result()
-    assert session.post.call_count == 1
-
-
-def test_public_worker_never_dispatched():
-    session = Mock()
-    session.get.return_value = response({"private": False})
-    with pytest.raises(RuntimeError, match="must be private"):
-        dispatch_and_wait(session, "owner/public", {})
-    session.post.assert_not_called()
-
-
-def test_dispatch_timeout_does_not_start_another_post():
-    session = Mock()
-    session.get.side_effect = [response({"private": True, "default_branch": "main"}), response({"workflow_runs": []})]
-    clock = Mock(side_effect=[0, 0, 2])
-    with pytest.raises(TimeoutError):
-        dispatch_and_wait(session, "owner/worker", {}, timeout=1, sleep=Mock(), clock=clock)
-    assert session.post.call_count == 1
-
-
-def test_schedule_selects_jobs_category_and_forces_publication():
-    inputs = worker_inputs({"BLOG_SCHEDULE": "0 2 * * 2,4"})
-    assert inputs["category"] == "취업"
-    assert inputs["mode"] == "queue"
-    assert inputs["publish"] == "true"
 
 
 def test_input_is_literal_argv_and_subscription_explicit():
@@ -125,13 +85,35 @@ def test_main_emits_actual_result_for_worker(tmp_path, monkeypatch):
         "url": result.post.url, "status": "publish"}]
 
 
-def test_workflow_auth_stays_private_and_dispatch_is_not_auto_retried():
+def test_workflow_manual_gate_and_auth_cleanup():
     from pathlib import Path
-    public = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
-    worker = yaml.safe_load(Path('.github/workflows/codex-worker.yml').read_text())
-    assert "CODEX_AUTH_JSON" not in Path('.github/workflows/auto-post.yml').read_text()
-    assert "post-codex" not in public['jobs']['retry-on-waf-block']['needs']
-    for name in ('post-general', 'post-queue'):
-        assert "!= 'codex'" in public['jobs'][name]['if']
-    assert "repository.private" in worker['jobs']['write-and-publish']['if']
-    assert worker['concurrency']['cancel-in-progress'] is False
+    workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
+    job = workflow['jobs']['post-codex']
+    assert "workflow_dispatch" in job['if']
+    assert "refs/heads/main" in job['if']
+    assert "post-codex" not in workflow['jobs']['retry-on-waf-block']['needs']
+    assert job['concurrency']['cancel-in-progress'] is False
+    assert any(step.get('if') == 'always()' and 'persist' in step.get('run', '') for step in job['steps'])
+    assert not any('upload-artifact' in step.get('uses', '') for step in job['steps'])
+
+
+@pytest.mark.parametrize('repo,event,ref,opt_in,allowed', [
+    ('hhj4861/wp-auto-blog', 'workflow_dispatch', 'refs/heads/main', '1', True),
+    ('hhj4861/wp-auto-blog', 'schedule', 'refs/heads/main', '1', True),
+    ('hhj4861/wp-auto-blog', 'pull_request', 'refs/heads/main', '1', False),
+    ('hhj4861/wp-auto-blog', 'workflow_dispatch', 'refs/heads/feature', '1', False),
+    ('hhj4861/wp-auto-blog', 'workflow_dispatch', 'refs/heads/main', '', False),
+    ('other/repo', 'workflow_dispatch', 'refs/heads/main', '1', False),
+])
+def test_authorized_public_manual_boundary(tmp_path, monkeypatch, repo, event, ref, opt_in, allowed):
+    path = tmp_path / 'event.json'
+    path.write_text(json.dumps({'repository': {'private': False, 'default_branch': 'main', 'full_name': repo}}))
+    for key, value in {'GITHUB_ACTIONS': 'true', 'GITHUB_EVENT_PATH': str(path),
+                       'GITHUB_REPOSITORY': repo, 'GITHUB_EVENT_NAME': event,
+                       'GITHUB_REF': ref, 'BLOG_CODEX_PUBLIC_AUTOMATION': opt_in}.items():
+        monkeypatch.setenv(key, value)
+    if allowed:
+        require_private_actions()
+    else:
+        with pytest.raises(RuntimeError):
+            require_private_actions()

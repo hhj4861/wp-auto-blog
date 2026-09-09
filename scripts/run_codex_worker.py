@@ -23,8 +23,11 @@ def command(env):
         args.extend(["--topic", env["BLOG_TOPIC"]])
     else:
         raise ValueError("General Codex runs require a specific topic")
-    if env.get("BLOG_CATEGORY"):
-        args.extend(["--category", env["BLOG_CATEGORY"]])
+    category = env.get("BLOG_CATEGORY", "")
+    if not category and env.get("BLOG_SCHEDULE"):
+        category = {"0 2 * * 2,4": "취업", "0 2 * * 6": "건강"}.get(env["BLOG_SCHEDULE"], "생활정보")
+    if category:
+        args.extend(["--category", category])
     if env.get("BLOG_PUBLISH") == "true":
         args.append("--auto-publish")
     else:

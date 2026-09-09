@@ -10,20 +10,23 @@ import tempfile
 
 
 def require_private_actions():
-    """Managed subscription auth is restricted to private, default-branch CI."""
+    """Allow private CI or the explicitly authorized repository's automation."""
     if os.getenv("GITHUB_ACTIONS", "").lower() != "true":
         return
     try:
         event = json.loads(Path(os.environ["GITHUB_EVENT_PATH"]).read_text())
         repo = event["repository"]
-        trusted = (repo.get("private") is True
+        allowed_repo = (repo.get("private") is True or (
+            os.environ.get("BLOG_CODEX_PUBLIC_AUTOMATION") == "1"
+            and repo.get("full_name") == "hhj4861/wp-auto-blog"))
+        trusted = (allowed_repo
                    and repo.get("full_name") == os.environ.get("GITHUB_REPOSITORY")
-                   and os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+                   and os.environ.get("GITHUB_EVENT_NAME") in {"workflow_dispatch", "schedule"}
                    and os.environ.get("GITHUB_REF") == "refs/heads/" + repo["default_branch"])
     except (KeyError, OSError, ValueError, TypeError):
         trusted = False
     if not trusted:
-        raise RuntimeError("Codex subscription writer requires a private worker on its default branch")
+        raise RuntimeError("Codex requires a private worker or authorized automation on the default branch")
 
 
 class CodexSubscriptionClient:

@@ -673,8 +673,17 @@ class WordPressClient:
                 "Accept-Language": "en-US,en;q=0.9",
                 "Referer": "https://global.oliveyoung.com/",
             }
-            img_response = requests.get(image_url, headers=download_headers, timeout=30)
-            img_response.raise_for_status()
+            if urlparse(image_url).scheme in ("https", "http"):
+                img_response = requests.get(image_url, headers=download_headers, timeout=30)
+                img_response.raise_for_status()
+                image_bytes = img_response.content
+            else:
+                from pathlib import Path
+                from src.editorial_thumbnail import OUTPUT
+                local = Path(image_url).resolve()
+                if not local.is_relative_to(OUTPUT.resolve()) or local.suffix != ".jpg":
+                    raise ValueError("Only generated editorial thumbnails may be uploaded from disk")
+                image_bytes = local.read_bytes()
 
             # Get filename from URL
             parsed = urlparse(image_url)
@@ -691,7 +700,7 @@ class WordPressClient:
                 "POST",
                 f"{self._api_base}/media",
                 headers=headers,
-                data=img_response.content,
+                data=image_bytes,
                 timeout=60,
             )
             response.raise_for_status()

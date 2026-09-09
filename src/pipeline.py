@@ -461,7 +461,10 @@ class BlogPipeline:
             # Fall back to Unsplash/Pexels if no image found
             # kculture는 토픽 키워드 그대로 쓰면 오매칭이 심하다
             # (예: G-Dragon → 용 조각상). 카테고리 일반 키워드로 대체.
-            if not images:
+            if self.config.mode == "general":
+                from src.editorial_thumbnail import create_editorial_thumbnail
+                images = [create_editorial_thumbnail(content.title, content.html, category or '')]
+            elif not images:
                 fallback_keywords = topic.keywords
                 if self.config.mode == "kculture":
                     fallback_keywords = KCULTURE_STOCK_KEYWORDS.get(

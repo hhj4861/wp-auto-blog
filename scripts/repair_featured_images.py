@@ -8,7 +8,7 @@ import requests
 from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.image_fetcher import ImageFetcher, ImageConfig
+from src.editorial_thumbnail import create_editorial_thumbnail
 from src.wordpress_client import WPConfig, WordPressClient
 
 
@@ -16,6 +16,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('post_ids', nargs='+', type=int)
     parser.add_argument('--apply', action='store_true')
+    parser.add_argument('--replace', action='store_true', help='Replace existing thumbnails for the explicit IDs')
     args = parser.parse_args()
     load_dotenv()
     config = WPConfig.from_env('general')
@@ -25,7 +26,6 @@ def main():
     session = requests.Session()
     session.auth = (config.username, config.app_password)
     session.headers['User-Agent'] = 'Mozilla/5.0 (TrendPulse thumbnail repair)'
-    fetcher = ImageFetcher(ImageConfig(images_per_post=1))
     for post_id in args.post_ids:
         endpoint = config.url + f'/wp-json/wp/v2/posts/{post_id}'
         def read():
@@ -33,14 +33,11 @@ def main():
             response.raise_for_status()
             return response.json()
         original = read()
-        if original['featured_media']:
+        if original['featured_media'] and not args.replace:
             print(post_id, 'already has thumbnail; skipped')
             continue
         title = original['title']['raw']
-        images = fetcher.fetch(keywords=[title], topic=title)
-        if not images:
-            raise RuntimeError(f'{post_id}: no suitable stock image found')
-        candidate = images[0]
+        candidate = create_editorial_thumbnail(title, original['content']['raw'])
         print(post_id, title, candidate.url, flush=True)
         if not args.apply:
             continue
@@ -52,7 +49,7 @@ def main():
         if not media_id:
             raise RuntimeError('Media upload failed; post unchanged')
         current = read()
-        if current['modified_gmt'] != original['modified_gmt'] or current['featured_media']:
+        if current['modified_gmt'] != original['modified_gmt'] or current['featured_media'] != original['featured_media']:
             raise RuntimeError('Post changed during image upload; refusing overwrite')
         response = session.post(endpoint, json={'featured_media': media_id}, timeout=45)
         response.raise_for_status()

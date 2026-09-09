@@ -21,6 +21,7 @@ class ImageSource(Enum):
 
     UNSPLASH = "unsplash"
     PEXELS = "pexels"
+    EDITORIAL = "editorial"
 
 
 @dataclass

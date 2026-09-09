@@ -64,3 +64,4 @@ Thumbs.db
 # 상업신호 정리(decommercialize.py) 백업 — 제휴 파라미터가 박힌 본문 HTML이라
 # public 저장소에 올리면 제휴 ID가 노출된다. 로컬 보관 전용.
 data/backup/
+data/generated-thumbnails/

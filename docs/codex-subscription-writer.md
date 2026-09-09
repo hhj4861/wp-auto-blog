@@ -97,9 +97,10 @@ venv/bin/python -m src.main --mode general --from-queue --no-llm-topics --auto-p
 
 ## 대표 이미지와 제휴 링크
 
-TrendPulse의 본문 히어로 생략과 WordPress 대표 이미지는 별개다. 이미지 API로 목록용
-대표 이미지를 수집하고, 글 갱신 시 기존 대표 이미지를 지우지 않는다. 신규 글에서
-이미지를 찾지 못하거나 업로드가 실패하면 공개 발행 대신 초안으로 보관한다.
+TrendPulse의 본문 히어로 생략과 WordPress 대표 이미지는 별개다. 목록용
+대표 이미지를 제목·본문 소제목으로 직접 생성하고, 글 갱신 시 기존 대표 이미지를 지우지 않는다.
+TrendPulse에서는 스톡 사진 검색과 일반 lifestyle 폴백을 사용하지 않는다. 업로드 실패는
+초안으로 보관하고, 제목 배치·번들 한글 글꼴 검증 실패는 포스팅을 중단한다.
 누락된 기존 글은 `scripts/repair_featured_images.py POST_ID ...`로 후보를 확인하고
 `--apply`로 대표 이미지만 복구한다. 본문·제목·슬러그·공개 상태 보존을 재조회한다.
 
@@ -107,3 +108,16 @@ TrendPulse의 본문 히어로 생략과 WordPress 대표 이미지는 별개다
 주제와 일치할 때만 삽입한다. 외항사 글의 기존 준비용품 연결은 유지한다. 링크가
 삽입되면 수수료 고지와 sponsored 속성을 함께 적용한다. 광고 코드는 광고 송출·수익
 발생 증명이 아니며, 제휴 추적 링크도 실제 전환·정산은 파트너스 대시보드에서 확인해야 한다.
+
+### 본문과 일치하는 대표 이미지
+
+`src/editorial_thumbnail.py`가 발행 제목과 본문의 정보성 H2 두 개를 추출해 1200×900
+이미지로 만든다. 새로운 사실·로고·실제 현장 사진을 생성하거나 추정하지 않는다.
+WordPress의 중앙 정사각형 크롭 영역 안에 문구를 배치하고 제목 전체가 들어오도록
+줄바꿈·글자 크기를 조정한다. 한글 글꼴은 `assets/fonts`에 OFL 라이선스와 함께
+번들하여 GitHub Actions에서도 동일하게 렌더링한다. 생성 근거(제목·소제목·본문 해시)는
+`data/generated-thumbnails/*.json`에 남긴다. 이 변경은 general/TrendPulse에만 적용한다.
+
+기존 대표 이미지를 교체할 때는 `scripts/repair_featured_images.py ID ... --replace`
+로 후보를 생성하고, 확인 후 `--apply`를 추가한다. 원본 글 백업과 변경 충돌 검사를
+거쳐 featured_media만 갱신하며 본문·제목·슬러그·공개 상태 보존을 재조회한다.

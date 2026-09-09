@@ -6,45 +6,37 @@
 
 ChatGPT 로그인은 구독의 Codex 사용 한도를 이용한다. `openai` 제공자는 별도 API 키 과금 경로이다. Codex 오류·한도 초과 시 다른 제공자로 자동 전환하지 않는다. 조사용 Gemini, 이미지 등 다른 단계의 기존 API 사용까지 구독으로 바뀌는 것은 아니다.
 
-이 저장소는 공개 저장소다. OpenAI 문서는 ChatGPT 인증을 저장하는 CI 흐름을 공개/오픈소스 저장소에 사용하지 않도록 안내한다. Codex 작성은 전용 비공개 서버 또는 비공개 저장소의 기본 브랜치 `workflow_dispatch`에서만 허용한다. 공개 Actions는 비공개 작업 실행을 요청하고 실제 완료 결과를 기다린다. 인증 파일은 공개 저장소·로그·artifact로 전달하지 않는다.
+## GitHub Actions: 직접 작성과 발행
 
-## GitHub Actions 작성 옵션
+2026-09-09 사용자가 기존 `hhj4861/wp-auto-blog`의 `CODEX_AUTH_JSON`을 사용한
+수동 실행과 이후 예약 실행의 Codex 전환을 명시적으로 요청했다.
+기존 비공개 worker 중계 대신 해당 저장소 기본 브랜치에서만 실행되는 직접 경로를 사용한다.
+공식 OpenAI 문서는 구독 인증 CI를 비공개 실행 환경에 권장하므로, 이 공개 저장소 경로는
+사용자의 명시적 운영 선택이며 일반적인 권장 배포 방식으로 확대하지 않는다.
 
-`Auto Blog Post`의 `writer_provider=codex`는 TrendPulse general/queue에 적용한다.
-기존 Claude는 `anthropic`으로 선택할 수 있다. 수동 실행 기본 선택은 codex이며,
-예약 실행은 저장소 변수 `BLOG_WRITER_PROVIDER`를 따른다(미설정 시 기존 anthropic 유지).
-BytePulse 작성 모델은 변경하지 않는다. 인증 오류, 한도 초과, 출처 검증 실패 시
-다른 모델로 전환하거나 같은 발행을 자동 재요청하지 않는다.
+- `Auto Blog Post` 수동 입력 `writer_provider=codex`와 `mode=general/queue`를 사용한다.
+- 예약 실행은 변수 `BLOG_WRITER_PROVIDER=codex`로 전환한다. 기존 시간·카테고리는 유지한다.
+- `CODEX_AUTH_JSON`은 runner 임시 디렉터리에 0600 권한으로 복원한다.
+- `CODEX_SECRET_WRITE_TOKEN`은 인증 복원 전 갱신 저장 준비 확인과 종료 후
+  `CODEX_AUTH_JSON` 갱신 저장에만 사용한다. 작성 프로세스에는 전달하지 않는다.
+  이 토큰에는 해당 저장소 Secrets 읽기/쓰기 권한이 필요하다.
+- Codex CLI 작성·별도 사실 검토 → 공통 본문 템플릿 → WordPress 발행 →
+  인증된 REST 재조회에서 공개 상태와 URL 확인 순서로 처리한다.
+- 동시 인증 사용을 막기 위해 Codex 작업은 직렬화한다. 종료 시 갱신본을 Secret에 저장하고
+  runner의 인증 파일을 제거한다. 인증은 로그나 artifact에 업로드하지 않는다.
+- PR, 임의 브랜치, 다른 공개 저장소에서는 실행하지 않는다. API 과금이나 Claude로 자동 전환하지 않는다.
+- 빈 큐·초안 저장은 공개 발행 성공으로 보고하지 않는다. 자동 재발행은 하지 않는다.
+  작업 실패 시 WordPress와 실행 로그를 먼저 확인한다. 발행 이후 인증 저장/큐 저장이 실패했을 수도 있다.
 
-연결 순서:
+수동 예시:
 
-1. `hhj4861/trendpulse-codex-worker` 비공개 저장소를 만들고 이 프로젝트의
-   `.github/workflows/codex-worker.yml`을 해당 저장소 기본 브랜치에 배치한다.
-   작업은 공개 원본의 main 코드를 가져와 실행한다. PR이나 임의 브랜치 실행은 허용하지 않는다.
-2. 전용 Codex 로그인으로 만든 `auth.json`을 비공개 저장소의 `CODEX_AUTH_JSON` Secret에 저장한다.
-   개발 중인 현재 세션과 같은 인증 파일을 여러 머신에서 공유하지 않는다.
-3. 비공개 저장소에 기존 `GOOGLE_AI_API_KEY`, `WP_GENERAL_URL`, `WP_GENERAL_USERNAME`,
-   `WP_GENERAL_APP_PASSWORD`, `NAVER_AD_API_KEY`, `NAVER_AD_SECRET_KEY`,
-   `NAVER_AD_CUSTOMER_ID`를 설정한다.
-4. 비공개 저장소에 `WORKER_ADMIN_TOKEN`(해당 비공개 저장소 Secrets 읽기/쓰기),
-   `BLOG_SOURCE_TOKEN`(공개 원본 Contents 읽기/쓰기)을 설정한다.
-   `WORKER_ADMIN_TOKEN`으로 CLI가 갱신한 인증 파일을 Secret에 다시 저장한다.
-   인증을 사용하는 작업은 concurrency로 직렬화하고 종료 시 runner의 인증 파일을 삭제한다.
-5. 공개 원본에 변수 `CODEX_WORKER_REPOSITORY=hhj4861/trendpulse-codex-worker`,
-   Secret `CODEX_WORKER_TOKEN`(비공개 작업 저장소 Actions 읽기/쓰기)을 설정한다.
-6. `Auto Blog Post`를 `mode=general`, `writer_provider=codex`, `topic=검증할 주제`,
-   `category=취업`, `publish=true`로 실행한다. 비공개 작업 로그의
-   `Content generated using: Codex CLI (ChatGPT subscription)` 및
-   `VERIFIED CODEX PUBLISHED` URL을 확인한다. WordPress 재조회에서 공개 상태까지 확인해야 성공이다.
-7. 실제 발행 확인 후 공개 저장소 변수 `BLOG_WRITER_PROVIDER=codex`로 예약 실행도 전환한다.
+```bash
+gh workflow run auto-post.yml --ref main -f mode=general -f writer_provider=codex \
+  -f category=취업 -f publish=true -f topic='면접 1분 자기소개 예시와 작성 체크리스트'
+```
 
-공개 요청 작업은 비공개 실행의 성공·실패를 그대로 전달한다. 초안 저장·빈 큐는 공개 발행 성공으로
-간주하지 않는다. 요청 응답이 불명확하거나 대기 시간이 초과되면 비공개 Actions와 WordPress를
-확인한 뒤 재실행한다. 포스팅은 성공했지만 인증 갱신 저장이나 큐 저장이 실패한 경우도 포함한다.
-
-2026-09-09 구현 검증 시 현재 GitHub 연결 계정은 `socar-hyunz`, 원본 권한은 WRITE였으며,
-`hhj4861` 아래 비공개 저장소 생성은 GitHub가 거부했다. 따라서 코드 준비와 로컬 테스트는
-실제 비공개 실행 환경 연결·구독 작성·발행 성공 증거를 대신하지 않는다.
+로그의 `Content generated using: Codex CLI (ChatGPT subscription)`과
+`VERIFIED CODEX PUBLISHED` URL을 확인한다. 수동 실발행 검증 후 예약 실행 변수도 전환한다.
 
 서버의 실행 계정으로 Codex CLI를 설치하고 로그인한다. 아래 작업은 운영자가 서버에서 한 번 수행한다. 계정 설정에서 device-code 로그인을 허용해야 할 수 있다.
 

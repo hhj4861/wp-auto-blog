@@ -13,7 +13,7 @@ from urllib.parse import urlsplit
 
 import requests
 
-from src.keyword_gate import fetch_keyword_stats, fetch_serp_domains, gov_ratio
+from src.keyword_gate import fetch_keyword_stats, fetch_serp_domains, gov_ratio, MIN_MONTHLY_SEARCH
 from src.editorial import fetch_source, retry_research, collect_research_sources
 
 CATEGORIES = {
@@ -28,7 +28,7 @@ LEDGER = ROOT / 'data/posted_market_keywords.json'
 
 
 def norm(value):
-    value = re.sub(r'(?<!\d)20\d{2}\s*년?', '', str(value).lower())
+    value = re.sub(r'(?<!\d)20\d{2}(?!\d)\s*년?', '', str(value).lower())
     return re.sub(r'[^가-힣a-z0-9]', '', value)
 
 
@@ -110,7 +110,7 @@ def duplicate(keyword, title, titles):
     return any(target == norm(old) or (key and key in norm(old)) for old in titles)
 
 
-def demand_candidates(seeds, min_volume=300):
+def demand_candidates(seeds, min_volume=MIN_MONTHLY_SEARCH):
     if not all(os.getenv(k) for k in ('NAVER_AD_CUSTOMER_ID', 'NAVER_AD_API_KEY', 'NAVER_AD_SECRET_KEY')):
         raise RuntimeError('Measured market demand requires Naver credentials')
     candidates = {}
@@ -213,7 +213,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","topic":"...","category":"{cat
     for item in proposals.get('candidates', [])[:6]:
         keyword = item.get('keyword', '')
         reason = None
-        if keyword not in stats or keyword in seen or item.get('category') != category:
+        if keyword not in stats or norm(keyword) in seen or item.get('category') != category:
             reason = 'invalid category or measured keyword'
         elif not item.get('intent') or not item.get('gap') or norm(keyword) not in norm(item.get('topic', '')):
             reason = 'missing specific search intent'
@@ -222,7 +222,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","topic":"...","category":"{cat
         if reason:
             rejected.append({'keyword': keyword, 'reason': reason})
             continue
-        seen.add(keyword)
+        seen.add(norm(keyword))
         source = fetch_source(item.get('source_url', ''))
         if not source:
             rejected.append({'keyword': keyword, 'reason': 'official source unavailable'})
@@ -274,7 +274,7 @@ def fresh_market_item(item, category, now=None):
         return False
     return (item.get('source') == SOURCE and item.get('category') == category
             and item.get('status') == 'pending' and timedelta(0) <= age <= timedelta(hours=36)
-            and item.get('monthly_search', 0) >= 300 and bool(item.get('source_url'))
+            and item.get('monthly_search', 0) >= MIN_MONTHLY_SEARCH and bool(item.get('source_url'))
             and bool(item.get('organic_domains')))
 
 

@@ -383,7 +383,8 @@ class BlogPipeline:
         return results
 
     def _process_topic(self, topic: Topic, refresh_post_id: int | None = None,
-                       expected_modified_gmt: str | None = None) -> PipelineResult:
+                       expected_modified_gmt: str | None = None,
+                       market_brief: dict | None = None) -> PipelineResult:
         """Process a single topic through the pipeline.
 
         Args:
@@ -429,7 +430,14 @@ class BlogPipeline:
                 content_type=self.config.content_type,
                 category=category,
                 mode=self.config.mode,
+                **({'market_brief': market_brief} if market_brief else {}),
             )
+
+            if market_brief:
+                from src.market_topics import norm
+                key = norm(market_brief['keyword'])
+                if key not in norm(content.title) or norm(content.focus_keyphrase) != key:
+                    raise RuntimeError('Generated article changed the verified market keyword')
 
             logger.debug(f"Generated content: {content.word_count} words")
 
@@ -624,6 +632,12 @@ class BlogPipeline:
                     )
                     logger.info(f"리프레시 완료 (URL 유지): {post.url}")
                 else:
+                    if market_brief:
+                        from src.market_topics import duplicate, existing_titles, fresh_market_item
+                        if not fresh_market_item(market_brief, category):
+                            raise RuntimeError('Market topic expired during article generation')
+                        if duplicate(market_brief['keyword'], content.title, existing_titles()):
+                            raise RuntimeError('Duplicate market keyword detected before publication')
                     post = self.wp_client.create_post(
                         content=content,
                         images=images,
@@ -634,6 +648,10 @@ class BlogPipeline:
                         skip_hero_image=skip_hero,
                         content_type=self.config.content_type.value,
                     )
+                    # Persist before ancillary pings/registry work can fail after publication.
+                    if market_brief and post.status == PostStatus.PUBLISH:
+                        from src.market_topics import record_published_keyword
+                        record_published_keyword(market_brief, post.id, post.url)
 
                 # 발행/갱신 즉시 IndexNow 핑 (재크롤 유도 — 신선도 반영)
                 if (self.config.mode == "general" and post.url
@@ -643,12 +661,13 @@ class BlogPipeline:
             duration = (datetime.now() - start_time).total_seconds()
 
             # Save to local registry for duplicate detection
-            self._save_to_registry(
-                topic=topic.topic,
-                title=content.title,
-                keywords=topic.keywords,
-                category=category or "",
-            )
+            if not (market_brief and self.config.dry_run):
+                self._save_to_registry(
+                    topic=topic.topic,
+                    title=content.title,
+                    keywords=topic.keywords,
+                    category=category or "",
+                )
 
             return PipelineResult(
                 topic=topic.topic,
@@ -764,6 +783,7 @@ class BlogPipeline:
         topic: str,
         keywords: Optional[list[str]] = None,
         category: Optional[str] = None,
+        market_brief: dict | None = None,
     ) -> PipelineResult:
         """Run pipeline for a single manually-specified topic.
 
@@ -776,6 +796,15 @@ class BlogPipeline:
             PipelineResult
         """
         from src.trend_detector import TrendSource
+
+        if market_brief is not None:
+            from src.market_topics import duplicate, existing_titles, fresh_market_item
+            if (self.config.mode != 'general' or not fresh_market_item(market_brief, category)
+                    or market_brief['topic'] != topic or keywords != [market_brief['keyword']]
+                    or (self.config.category and self.config.category != category)):
+                return PipelineResult(topic=topic, success=False, error='Invalid verified market brief')
+            if duplicate(market_brief['keyword'], topic, existing_titles()):
+                return PipelineResult(topic=topic, success=False, error='Duplicate market keyword')
 
         # Check for duplicates first
         if self._is_duplicate(topic):
@@ -799,7 +828,7 @@ class BlogPipeline:
             category=category,
         )
 
-        return self._process_topic(topic_obj)
+        return self._process_topic(topic_obj, **({'market_brief': market_brief} if market_brief else {}))
 
     def _is_duplicate(self, topic: str) -> bool:
         """Check if a topic is duplicate of existing posts.

@@ -100,3 +100,31 @@ def test_year_spacing_and_deleted_posts_remain_duplicates(tmp_path, monkeypatch)
     import json
     assert len(json.loads(ledger.read_text())) == 1
     assert market.duplicate('2027 gsat일정', '새 제목', market.historical_terms())
+
+
+def test_cli_empty_top_n_and_category_enqueue(tmp_path, monkeypatch):
+    import json
+    import scripts.select_blog_keywords as cli
+    data = tmp_path / 'data'
+    data.mkdir()
+    queue_path = data / 'topic_queue_general.json'
+    legacy = {'topic': 'old health topic', 'category': '건강', 'status': 'pending'}
+    queue_path.write_text(json.dumps([legacy]))
+    monkeypatch.setattr(cli, 'ROOT', tmp_path)
+    monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [])
+    monkeypatch.setenv('SELECT_TOP_N', '')
+    monkeypatch.setattr('sys.argv', ['select', '--category', '취업', '--enqueue'])
+    calls = []
+    def select(category, top_n, titles):
+        calls.append((category, top_n))
+        return {'category':category, 'selected':[candidate()]}
+    monkeypatch.setattr(cli, 'select_category', select)
+    assert cli.main() == 0
+    assert calls == [('취업', 2)]
+    queued = json.loads(queue_path.read_text())
+    assert queued[0] == legacy
+    assert market.fresh_market_item(queued[1], '취업')
+    monkeypatch.setattr(cli, 'select_category', lambda *a: {'category':'취업','selected':[]})
+    assert cli.main() == 1
+    assert json.loads(queue_path.read_text()) == queued

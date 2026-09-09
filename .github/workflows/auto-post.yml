@@ -715,7 +715,7 @@ jobs:
       github.event.schedule == '0 2 * * 6' ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue'))
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     concurrency:
       group: trendpulse-general-posting
       cancel-in-progress: false
@@ -745,18 +745,15 @@ jobs:
           pip install -r requirements.txt
 
       - uses: actions/setup-node@v4
-        if: env.BLOG_WRITER_PROVIDER == 'codex'
         with:
           node-version: '22'
       - name: Install Codex subscription writer
-        if: env.BLOG_WRITER_PROVIDER == 'codex'
         run: npm install -g @openai/codex@0.153.4
       - name: Set writer runtime paths
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
       - name: Restore Codex authentication
-        if: env.BLOG_WRITER_PROVIDER == 'codex'
         env:
           CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
           WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
@@ -793,7 +790,7 @@ jobs:
           EOF
 
       - name: Run pipeline (Queue Mode - 카테고리별 큐)
-        timeout-minutes: 30
+        timeout-minutes: 50
         env:
           GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
@@ -846,7 +843,7 @@ jobs:
           exit 1
 
       - name: Persist refreshed Codex authentication and clean up
-        if: always() && env.BLOG_WRITER_PROVIDER == 'codex'
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
         run: python scripts/codex_worker_auth.py persist

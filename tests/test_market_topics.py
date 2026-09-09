@@ -71,6 +71,19 @@ def test_no_credentials_or_competition_cannot_pass(monkeypatch):
     assert market.duplicate('건강 검진', '새로운 제목', ['2026 건강검진 대상'])
 
 
+def test_analysis_uses_subscription_and_retries_invalid_json(monkeypatch):
+    from src import codex_client
+    client = Mock()
+    client.generate.side_effect = ['{"incomplete":', '{"candidates": []}']
+    factory = Mock(return_value=client)
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', factory)
+    monkeypatch.setenv('BLOG_CODEX_HOME', '/tmp/dedicated-test-home')
+    monkeypatch.delenv('GOOGLE_AI_API_KEY', raising=False)
+    assert market.ask('후보 분석') == {'candidates': []}
+    assert factory.call_args.kwargs['home'] == '/tmp/dedicated-test-home'
+    assert client.generate.call_count == 2
+
+
 def test_workflow_selects_before_existing_category_pipeline():
     from pathlib import Path
     workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())

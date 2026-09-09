@@ -26,20 +26,33 @@ concurrency:
 jobs:
   select:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
+    env:
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Install research dependencies
-        run: pip install requests loguru python-dotenv google-genai beautifulsoup4 pytrends
+        run: pip install requests loguru python-dotenv beautifulsoup4 pytrends
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Codex analyst
+        run: npm install -g @openai/codex@0.153.4
+      - name: Restore Codex analyst authentication
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          python scripts/codex_worker_auth.py restore
       - name: Discover and verify category topics
         env:
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
-          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
           GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
@@ -66,3 +79,8 @@ jobs:
           git commit -m 'chore: refresh category market research [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
+      - name: Persist refreshed Codex auth and clean up
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist

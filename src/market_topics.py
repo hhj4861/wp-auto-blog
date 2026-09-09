@@ -14,7 +14,7 @@ from urllib.parse import urlsplit
 import requests
 
 from src.keyword_gate import fetch_keyword_stats, fetch_serp_domains, gov_ratio, MIN_MONTHLY_SEARCH
-from src.editorial import fetch_source, retry_research
+from src.editorial import fetch_source
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -61,18 +61,18 @@ def parse_json(text):
 
 
 def ask(prompt, search=False):
-    from google import genai
-    from google.genai import types
-    key = os.environ.get('GOOGLE_AI_API_KEY')
-    if not key:
-        raise RuntimeError('Market analysis requires GOOGLE_AI_API_KEY')
-    with genai.Client(api_key=key, http_options=types.HttpOptions(timeout=90000)) as client:
-        response = retry_research(lambda: client.models.generate_content(
-            model='gemini-2.5-flash', contents=prompt,
-            config=types.GenerateContentConfig(temperature=0.1,
-                response_mime_type='application/json', max_output_tokens=6000,
-                thinking_config=types.ThinkingConfig(thinking_budget=1024))))
-    return parse_json(response.text)
+    from src.codex_client import CodexSubscriptionClient
+    client = CodexSubscriptionClient(home=os.environ.get('BLOG_CODEX_HOME', ''),
+        model=os.environ.get('BLOG_CODEX_MODEL', ''), timeout=180)
+    for attempt in range(2):
+        response = client.generate(prompt + '\n외부 도구나 파일을 사용하지 말고 제공된 데이터만 분석하세요. '
+                                   '마크다운 코드펜스 없이 완결된 JSON만 반환하세요. 설명은 각 100자 이내로 간결하게 작성하세요.')
+        try:
+            return parse_json(response)
+        except (ValueError, TypeError):
+            if attempt:
+                raise
+    raise RuntimeError('No valid structured market analysis')
 
 
 def existing_titles():
@@ -243,7 +243,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","topic":"...","category":"{cat
             'selected_at': now, 'source': SOURCE, 'keywords': [keyword], 'status': 'pending'})
     selected.sort(key=lambda item: -item['score'])
     return {'category': category, 'selected_at': now, 'seeds': seeds,
-            'discovery_provider': 'naver_related_keywords', 'measured_candidates': len(stats), 'selected': selected[:top_n], 'rejected': rejected,
+            'analyst': 'codex_subscription', 'discovery_provider': 'naver_related_keywords', 'measured_candidates': len(stats), 'selected': selected[:top_n], 'rejected': rejected,
             'notes': 'Null trend means unavailable; demand is Naver; organic provider is recorded per candidate.'}
 
 

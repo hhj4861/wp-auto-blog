@@ -19,6 +19,7 @@ from loguru import logger
 from .editorial import (
     GENERAL_WRITING_RULES, POLICY_CATEGORIES, collect_sources, editorial_checks,
     host_matches, https_host, is_official_url, review_evidence, retry_research,
+    collect_research_sources, fetch_source,
 )
 
 try:
@@ -1537,6 +1538,13 @@ But you MUST follow ALL structural requirements in the prompt above (H2 headings
             logger.info("Research data added to prompt (as reference)")
 
         sources = self._research_sources if mode == "general" else []
+        if mode == "general":
+            # Optional operator-supplied URLs are fetched now, never trusted as excerpts.
+            for url in os.getenv("BLOG_OFFICIAL_SOURCE_URLS", "").splitlines()[:4]:
+                if url.strip():
+                    source = fetch_source(url.strip())
+                    if source and source["url"] not in {s["url"] for s in sources}:
+                        sources.append(source)
         if mode == "general" and category in POLICY_CATEGORIES and not sources:
             raise RuntimeError("공식 원문 확보 실패 — 근거 없는 생성과 발행을 보류합니다")
         if mode == "general":
@@ -2774,16 +2782,20 @@ Be specific and factual based on search results. Always use the most recent vers
                 config=config,
             ))
 
-            # Log grounding metadata
-            if hasattr(response, 'candidates') and response.candidates:
-                candidate = response.candidates[0]
-                if hasattr(candidate, 'grounding_metadata') and candidate.grounding_metadata:
-                    metadata = candidate.grounding_metadata
-                    if getattr(metadata, 'grounding_chunks', None):
-                        logger.info(f"Grounding research: {len(metadata.grounding_chunks)} sources found")
-                        if language == "ko":
-                            self._research_sources = collect_sources(metadata.grounding_chunks)
-                            logger.info(f"Readable official sources: {len(self._research_sources)}")
+            if language == "ko":
+                self._research_sources = collect_research_sources(response)
+                if not self._research_sources and category in self.POLICY_CATEGORIES:
+                    logger.warning("No readable official sources; retrying a focused source search once")
+                    response = retry_research(lambda: self._gemini_client.models.generate_content(
+                        model=self.config.model_gemini,
+                        contents=f'Google 검색 도구로 "{topic}"의 근거가 되는 공식 원문을 찾으세요. '
+                                 '정부·공공기관·대학·해당 기업의 실제 개별 페이지 URL 3개와 관련 내용만 반환하세요. '
+                                 '홈페이지 메뉴나 검색결과 제목만으로 내용을 추측하지 마세요. '
+                                 '면접·자기소개 같은 준비법은 대학 취업지원 자료도 검색하세요. '
+                                 '관련 없는 제도·금액·날짜를 추가하지 마세요.',
+                        config=config))
+                    self._research_sources = collect_research_sources(response)
+                logger.info(f"Readable official sources: {len(self._research_sources)}")
 
             logger.info(f"Research completed for: {topic}")
             return response.text

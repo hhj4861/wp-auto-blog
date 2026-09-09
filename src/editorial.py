@@ -131,6 +131,28 @@ def retry_research(call):
             time.sleep(2 ** attempt)
 
 
+def collect_research_sources(response):
+    """Read real pages even when search returns URLs without grounding metadata."""
+    candidates = getattr(response, "candidates", None) or []
+    metadata = getattr(candidates[0], "grounding_metadata", None) if candidates else None
+    sources = collect_sources(getattr(metadata, "grounding_chunks", None) or [])
+    if sources:
+        return sources
+    text = getattr(response, "text", "") or ""
+    seen = set()
+    for url in re.findall(r'https://[^\s<>"\[\]]+', text):
+        url = url.rstrip(".,;:)")
+        if url in seen or not is_official_url(url):
+            continue
+        seen.add(url)
+        source = fetch_source(url)
+        if source:
+            sources.append(source)
+        if len(sources) >= 4 or len(seen) >= 8:
+            break
+    return sources
+
+
 def review_evidence(html: str, sources: list[dict], call_llm) -> list[str]:
     if not sources:
         return ["읽을 수 있는 공식 출처를 확보하지 못함"]

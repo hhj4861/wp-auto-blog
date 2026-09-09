@@ -1,5 +1,6 @@
 """CI credential lifecycle; never print or upload authentication as artifacts."""
 import json
+import hashlib
 import os
 from pathlib import Path
 import shutil
@@ -21,6 +22,7 @@ def main():
     require_private_actions()
     home = Path(os.environ["RUNNER_TEMP"]) / "trendpulse-codex"
     auth = home / "auth.json"
+    baseline = home / ".restored-auth.sha256"
     if sys.argv[1] == "restore":
         if not os.environ.get("WORKER_ADMIN_TOKEN"):
             raise RuntimeError("WORKER_ADMIN_TOKEN required to persist refreshed auth")
@@ -28,13 +30,21 @@ def main():
         home.mkdir(mode=0o700, exist_ok=False)
         auth.touch(mode=0o600)
         auth.write_text(raw, encoding="utf-8")
+        baseline.touch(mode=0o600)
+        baseline.write_text(hashlib.sha256(raw.encode("utf-8")).hexdigest())
     elif sys.argv[1] == "persist":
         try:
             if auth.exists():
                 raw = validate_auth(auth.read_text())
+                if not baseline.is_file():
+                    raise RuntimeError("Missing restored auth baseline; refusing to overwrite Secret")
+                if hashlib.sha256(raw.encode("utf-8")).hexdigest() == baseline.read_text():
+                    print("Codex auth unchanged; Secret update skipped")
+                    return
                 subprocess.run(["gh", "secret", "set", "CODEX_AUTH_JSON", "--repo", os.environ["GITHUB_REPOSITORY"]],
                                input=raw, text=True, check=True, stdout=subprocess.DEVNULL,
                                stderr=subprocess.DEVNULL, timeout=60)
+                print("Changed Codex auth persisted to Secret")
         finally:
             if home.exists():
                 shutil.rmtree(home)

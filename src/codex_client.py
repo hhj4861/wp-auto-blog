@@ -13,8 +13,20 @@ def failure_reason(stderr):
     """Return only fixed categories; CLI output may contain credentials or prompts."""
     text = stderr.lower() if isinstance(stderr, str) else ''
     categories = (
-        ('authentication_required', ('refresh_token_reused', 'refresh_token_expired',
-            'refresh token', 'invalid_grant', 'unauthorized', '401 unauthorized',
+        ('refresh_token_reused', ('refresh_token_reused', 'refresh token was already used',
+            'refresh token has already been used', 'refresh token has been used')),
+        ('refresh_token_expired', ('refresh_token_expired', 'refresh token has expired',
+            'refresh token is expired')),
+        ('refresh_token_revoked', ('refresh_token_revoked', 'refresh token was revoked',
+            'refresh token has been revoked')),
+        ('invalid_grant', ('invalid_grant',)),
+        ('token_invalidated', ('token_invalidated', 'authentication token has been invalidated')),
+        ('access_token_expired', ('token_expired', 'authentication token has expired',
+            'access token has expired')),
+        ('account_deactivated', ('account_deactivated', 'account has been deactivated')),
+        ('refresh_failed', ('token refresh failed', 'failed to refresh', 'could not be refreshed')),
+        ('unauthorized', ('401 unauthorized', 'status: 401', 'status code 401', 'unauthorized')),
+        ('authentication_required', ('refresh token',
             'please log in', 'please login', 'not logged in', 'authentication token')),
         ('usage_limit', ('usage limit', 'usage_limit', 'rate_limit_exceeded',
             'rate limit', 'quota exceeded', '429 too many requests')),
@@ -29,6 +41,17 @@ def failure_reason(stderr):
         if any(marker in text for marker in markers):
             return reason
     return 'unclassified'
+
+
+class CodexRequestError(RuntimeError):
+    """Only the classified reason, never the underlying CLI diagnostic."""
+
+    def __init__(self, returncode, stderr):
+        self.reason = failure_reason(stderr)
+        super().__init__(
+            f"Codex subscription request failed (exit {returncode}, reason={self.reason}); "
+            "check the classified failure before changing authentication"
+        )
 
 
 def require_private_actions():
@@ -113,10 +136,7 @@ class CodexSubscriptionClient:
                 raise RuntimeError("Codex subscription request timed out; no provider fallback was attempted") from None
             if process.returncode:
                 stderr = captured[1] if isinstance(captured, tuple) and len(captured) == 2 else ''
-                raise RuntimeError(
-                    f"Codex subscription request failed (exit {process.returncode}, reason={failure_reason(stderr)}); "
-                    "check CLI version, ChatGPT login and usage limits on the private worker"
-                )
+                raise CodexRequestError(process.returncode, stderr)
             result = output.read_text(encoding="utf-8").strip() if output.is_file() else ""
             if not result:
                 raise RuntimeError("Codex returned no final message")

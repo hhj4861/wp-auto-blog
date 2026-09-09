@@ -81,6 +81,86 @@ def test_auth_persists_updated_file_without_printing_then_cleans_up(tmp_path, mo
     assert not path.parent.exists()
 
 
+@pytest.mark.parametrize('changed', [False, True])
+def test_unchanged_auth_skips_secret_write_and_failed_write_still_cleans_up(tmp_path, monkeypatch, changed):
+    import subprocess
+    import scripts.codex_worker_auth as auth
+    monkeypatch.delenv('GITHUB_ACTIONS', raising=False)
+    monkeypatch.setenv('RUNNER_TEMP', str(tmp_path))
+    monkeypatch.setenv('GITHUB_REPOSITORY', 'hhj4861/wp-auto-blog')
+    monkeypatch.setenv('WORKER_ADMIN_TOKEN', 'test-only')
+    seed = json.dumps({'auth_mode': 'chatgpt', 'tokens': {'refresh_token': 'test-seed'}})
+    monkeypatch.setenv('CODEX_AUTH_JSON', seed)
+    monkeypatch.setattr('sys.argv', ['auth', 'restore'])
+    auth.main()
+    path = tmp_path / 'trendpulse-codex/auth.json'
+    if changed:
+        path.write_text(seed.replace('test-seed', 'test-refreshed'))
+    run = Mock(side_effect=subprocess.CalledProcessError(1, ['gh', 'secret', 'set']))
+    monkeypatch.setattr(auth.subprocess, 'run', run)
+    monkeypatch.setattr('sys.argv', ['auth', 'persist'])
+    if changed:
+        with pytest.raises(subprocess.CalledProcessError):
+            auth.main()
+        run.assert_called_once()
+    else:
+        auth.main()
+        run.assert_not_called()
+    assert not path.parent.exists()
+
+
+@pytest.mark.parametrize('failure', [False, True])
+def test_auth_probe_reports_only_allowlisted_metadata(tmp_path, monkeypatch, capsys, failure):
+    import base64
+    import scripts.check_codex_auth as probe
+    from src.codex_client import CodexRequestError
+    payload = base64.urlsafe_b64encode(json.dumps({'exp': 1, 'email': 'private@example.com'}).encode()).decode()
+    seed = json.dumps({'auth_mode': 'chatgpt', 'last_refresh': '2026-09-09T00:00:00Z',
+                      'tokens': {'refresh_token': 'secret-refresh', 'access_token': f'private.{payload}.private',
+                                 'id_token': 'secret-id', 'account_id': 'private-account'}})
+    auth = tmp_path / 'auth.json'
+    auth.write_text(seed)
+    monkeypatch.delenv('GITHUB_ACTIONS', raising=False)
+    monkeypatch.setenv('BLOG_CODEX_HOME', str(tmp_path))
+    client = Mock()
+    def generate(prompt):
+        assert 'secret' not in prompt
+        if failure:
+            raise CodexRequestError(1, 'refresh_token_reused; secret-refresh')
+        auth.write_text(seed.replace('secret-refresh', 'rotated-secret'))
+        return 'private model output must also stay out of the log'
+    client.generate.side_effect = generate
+    monkeypatch.setattr(probe, 'CodexSubscriptionClient', lambda **kw: client)
+    assert probe.main() == int(failure)
+    output = capsys.readouterr().out
+    report = json.loads(output)
+    assert report['reason'] == ('refresh_token_reused' if failure else 'ok')
+    assert report['auth_file_changed'] is not failure
+    assert report['before']['access_token_expired'] is True
+    assert report['before']['last_refresh_utc'] == '2026-09-09T00:00:00+00:00'
+    assert report['before']['has_refresh_token'] is True
+    for sensitive in ('secret-refresh', 'secret-id', 'private', 'rotated-secret', payload):
+        assert sensitive not in output
+
+
+def test_auth_metadata_never_echoes_unparsed_values():
+    from scripts.check_codex_auth import auth_metadata
+    report = auth_metadata(json.dumps({'last_refresh': 'secret-value', 'tokens': {'access_token': 'secret-value'}}))
+    assert report['access_token_expired'] is None
+    assert report['last_refresh_utc'] is None
+    assert 'secret-value' not in json.dumps(report)
+
+
+def test_auth_check_only_skips_keyword_and_report_side_effects():
+    from pathlib import Path
+    workflow = yaml.safe_load(Path('.github/workflows/blog-keyword-select.yml').read_text())
+    assert workflow['concurrency']['group'] == 'trendpulse-general-posting'
+    steps = workflow['jobs']['select']['steps']
+    for name in ('Discover and verify category topics', 'Save category research report', 'Commit verified report'):
+        assert 'inputs.auth_check_only != true' in next(s for s in steps if s.get('name') == name)['if']
+    assert next(s for s in steps if s.get('name') == 'Check restored Codex authentication')['if'] == 'inputs.auth_check_only == true'
+
+
 @pytest.mark.parametrize("results", [[], [{"success": True, "status": "draft"}], [{"success": False}]])
 def test_draft_or_no_post_is_not_publication_success(results):
     session = Mock()

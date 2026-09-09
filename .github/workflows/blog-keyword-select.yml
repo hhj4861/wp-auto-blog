@@ -1,56 +1,65 @@
 name: Blog Keyword Select
 
 permissions:
-  contents: write  # 선정 결과(data/blog_targets.json) 커밋 → 로컬/후속단계 연결
+  contents: write
 
 on:
   workflow_dispatch:
     inputs:
       top_n:
-        description: '선정할 키워드 수'
+        description: '카테고리별 검증할 상위 주제 수 (1~5)'
         required: false
         default: '2'
         type: string
+      category:
+        description: '시장 탐색 카테고리'
+        type: choice
+        default: all
+        options: [all, 취업, 생활정보, 건강]
   schedule:
-    - cron: '30 0 * * *'  # 매일 09:30 KST — 키워드 선정 + 스캘폴드 생성
+    - cron: '30 0 * * *' # 09:30 KST: category reports before existing 11:00 posting
+
+concurrency:
+  group: trendpulse-general-posting
+  cancel-in-progress: false
 
 jobs:
   select:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install dependencies
-        run: pip install requests loguru
-      - name: Select blog keywords
+      - name: Install research dependencies
+        run: pip install requests loguru python-dotenv google-genai beautifulsoup4
+      - name: Discover and verify category topics
         env:
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
-          WP_TECH_URL: ${{ secrets.WP_TECH_URL }}
-          WP_TECH_USERNAME: ${{ secrets.WP_TECH_USERNAME }}
-          WP_TECH_APP_PASSWORD: ${{ secrets.WP_TECH_APP_PASSWORD }}
-          SELECT_TOP_N: ${{ github.event.inputs.top_n }}
-        run: python scripts/select_blog_keywords.py
-
-      - name: Generate post scaffolds (선정 키워드 → 채우기용 캐논 스크립트)
-        run: python scripts/scaffold_post.py
-
-      - name: Commit selection + scaffolds
+          SELECT_TOP_N: ${{ inputs.top_n || '2' }}
+          SELECT_CATEGORY: ${{ inputs.category || 'all' }}
+        run: python scripts/select_blog_keywords.py --category "$SELECT_CATEGORY"
+      - name: Save category research report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: category-market-topics
+          path: data/category_market_topics.json
+          if-no-files-found: warn
+      - name: Commit verified report
+        if: success() && github.ref == 'refs/heads/main'
         run: |
-          if [ -n "$(git status --porcelain data/blog_targets.json scripts/draft_*_trend.py 2>/dev/null)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git pull --rebase --autostash origin main || true
-            git add data/blog_targets.json scripts/draft_*_trend.py
-            git commit -m "chore(keywords): 동적 선정 + 스캘폴드 생성 [skip ci]" || true
-            git push origin HEAD:main || true
-          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/category_market_topics.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: refresh category market research [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -301,6 +301,8 @@ def main() -> int:
             # --category 지정 시 해당 카테고리의 pending만 소비한다
             # (스케줄: 월/수/금=생활정보, 화/목=취업, 토=건강)
             today = _dt.date.today()
+            require_market = os.getenv("BLOG_REQUIRE_MARKET_TOPIC") == "1"
+            from src.market_topics import fresh_market_item
 
             def _pick_next():
                 """발행할 다음 토픽을 고른다.
@@ -315,6 +317,9 @@ def main() -> int:
                     if item.get("status") == "pending"
                     and (not args.category or item.get("category") == args.category)
                 ]
+                if require_market:
+                    cands = [item for item in cands if fresh_market_item(item, args.category)]
+                    return max(cands, key=lambda item: item.get("score", 0), default=None)
                 if not cands:
                     return None
 
@@ -350,7 +355,7 @@ def main() -> int:
             career_generated = False
             while skips < 5:
                 pending_topic = _pick_next()
-                if pending_topic is None and args.category == "취업" and not career_generated:
+                if pending_topic is None and not require_market and args.category == "취업" and not career_generated:
                     # 취업 카테고리는 검증된 니치(GSC 노출/클릭 최상위) —
                     # 큐 소진 시 외항사 토픽을 1회 자동 생성해 이어간다
                     career_generated = True
@@ -369,6 +374,8 @@ def main() -> int:
                         _save_queue()
                         continue
                 if pending_topic is None:
+                    if require_market:
+                        raise RuntimeError("No fresh verified market topic for scheduled category")
                     # 생활정보 등은 큐 소진 시 무관 토픽 자동 생성 금지 (머니 키워드 전략 유지)
                     logger.warning(
                         "No pending topics in queue"

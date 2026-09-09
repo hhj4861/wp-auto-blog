@@ -810,6 +810,8 @@ jobs:
             CAT="생활정보"
           fi
           echo "Queue category: $CAT"
+          python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
+          export BLOG_REQUIRE_MARKET_TOPIC=1
           python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
 
       - name: Verify Codex publication result
@@ -822,7 +824,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          for f in data/topic_queue_general.json data/post_registry_general.json; do
+          for f in data/topic_queue_general.json data/post_registry_general.json data/category_market_topics.json; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --staged --quiet; then

@@ -1,7 +1,7 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-09-09T22:08:53.837802+00:00",
+    "selected_at": "2026-09-09T22:20:00.208198+00:00",
     "seeds": [
       "채용",
       "공기업",
@@ -25,6 +25,10 @@
         "reason": "organic result lookup unavailable"
       },
       {
+        "keyword": "산업기사시험일정",
+        "reason": "organic result lookup unavailable"
+      },
+      {
         "keyword": "컴활2급필기",
         "reason": "organic result lookup unavailable"
       },
@@ -37,15 +41,15 @@
         "reason": "organic result lookup unavailable"
       },
       {
+        "keyword": "50대자격증추천",
+        "reason": "organic result lookup unavailable"
+      },
+      {
+        "keyword": "청소년상담사자격증",
+        "reason": "organic result lookup unavailable"
+      },
+      {
         "keyword": "컴퓨터자격증종류",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "산업기사시험일정",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "ITQ자격증조회",
         "reason": "organic result lookup unavailable"
       },
       {
@@ -53,11 +57,7 @@
         "reason": "organic result lookup unavailable"
       },
       {
-        "keyword": "50대자격증추천",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "청소년상담사자격증",
+        "keyword": "ITQ자격증조회",
         "reason": "organic result lookup unavailable"
       },
       {

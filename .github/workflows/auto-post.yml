@@ -85,90 +85,26 @@ on:
     # K-Food: 로컬에서 실행 (Amazon 크롤링용 주거용 IP 필요)
 
 jobs:
-  post-codex:
-    if: |
-      github.repository == 'hhj4861/wp-auto-blog' && github.ref == 'refs/heads/main' &&
-      (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') == 'codex' &&
-      ((github.event_name == 'workflow_dispatch' && contains(fromJSON('["general","queue","both"]'), inputs.mode)) ||
-       (github.event_name == 'schedule' && contains(fromJSON('["0 2 * * 1,3,5","0 2 * * 2,4","0 2 * * 6"]'), github.event.schedule)))
-    runs-on: ubuntu-latest
-    timeout-minutes: 40
-    concurrency:
-      group: codex-subscription-writer
-      cancel-in-progress: false
-    permissions:
-      contents: write
-    env:
-      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install writer dependencies
-        run: |
-          pip install -r requirements.txt
-          npm install -g @openai/codex@0.153.4
-      - name: Restore subscription authentication
-        env:
-          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
-          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
-        run: python scripts/codex_worker_auth.py restore
-      - name: Generate, review and publish
-        id: write
-        env:
-          BLOG_CODEX_HOME: ${{ runner.temp }}/trendpulse-codex
-          BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
-          BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
-          BLOG_RESUME_DRAFT_ID: ${{ inputs.resume_draft_id }}
-          BLOG_WRITER_PROVIDER: codex
-          BLOG_MODE: ${{ github.event_name == 'schedule' && 'queue' || (inputs.mode == 'queue' && 'queue' || 'general') }}
-          BLOG_SCHEDULE: ${{ github.event.schedule }}
-          BLOG_TOPIC: ${{ inputs.topic }}
-          BLOG_CATEGORY: ${{ inputs.category }}
-          BLOG_PUBLISH: ${{ (github.event_name == 'schedule' || inputs.publish) && 'true' || 'false' }}
-          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
-          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
-          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
-          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
-          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
-          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
-          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
-        run: python scripts/run_codex_worker.py
-      - name: Persist refreshed authentication and remove runner copy
-        if: always()
-        env:
-          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
-        run: python scripts/codex_worker_auth.py persist
-      - name: Preserve queue and registry
-        if: always() && steps.write.outcome == 'success'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git config user.name 'trendpulse-codex-worker'
-          git config user.email 'trendpulse-codex-worker@users.noreply.github.com'
-          gh auth setup-git
-          git add data/topic_queue_general.json data/post_registry_general.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'chore: record Codex posting result [skip ci]'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-
   post-general:
     # General 스케줄: 23:30 UTC, 10:30 UTC (Tech와 15분 시간차)
     # 외항사/K-Culture/Tech 스케줄에서는 실행하지 않음
     if: |
-      (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex' &&
       (github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'general' || github.event.inputs.mode == 'both') ||
       (github.event_name == 'schedule' && (github.event.schedule == '30 23 * * *' || github.event.schedule == '30 10 * * *')))
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    concurrency:
+      group: trendpulse-general-posting
+      cancel-in-progress: false
+    env:
+      BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
+      BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
+      BLOG_RESUME_DRAFT_ID: ${{ inputs.resume_draft_id }}
+      BLOG_PUBLISH: ${{ (github.event_name == 'schedule' || inputs.publish) && 'true' || 'false' }}
+      BLOG_TOPIC: ${{ inputs.topic }}
+      BLOG_CATEGORY: ${{ inputs.category }}
 
     steps:
       - name: Checkout repository
@@ -184,6 +120,24 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        if: env.BLOG_WRITER_PROVIDER == 'codex'
+        with:
+          node-version: '22'
+      - name: Install Codex subscription writer
+        if: env.BLOG_WRITER_PROVIDER == 'codex'
+        run: npm install -g @openai/codex@0.153.4
+      - name: Set writer runtime paths
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
+      - name: Restore Codex authentication
+        if: env.BLOG_WRITER_PROVIDER == 'codex'
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py restore
 
       - name: Create .env file
         run: |
@@ -221,6 +175,10 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
+          if [ -n "$BLOG_RESUME_DRAFT_ID" ]; then
+            python scripts/run_codex_worker.py
+            exit 0
+          fi
           # Build command with optional flags
           CMD="python -m src.main --mode general --max-posts 1"
 
@@ -241,6 +199,10 @@ jobs:
 
           echo "Running: $CMD"
           eval $CMD
+
+      - name: Verify Codex publication result
+        if: success() && env.BLOG_WRITER_PROVIDER == 'codex'
+        run: python scripts/verify_codex_run.py
 
       - name: Commit post registry
         if: success()
@@ -265,6 +227,12 @@ jobs:
             sleep $((i * 2))
           done
           echo "Warning: Failed to push registry after 5 attempts, but post was created successfully"
+
+      - name: Persist refreshed Codex authentication and clean up
+        if: always() && env.BLOG_WRITER_PROVIDER == 'codex'
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist
 
       - name: Upload logs
         if: always()
@@ -742,13 +710,24 @@ jobs:
   post-queue:
     # 월/수/금(생활정보)·화/목(취업) 11:00 KST cron + workflow_dispatch(mode=queue)
     if: |
-      (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex' &&
       (github.event.schedule == '0 2 * * 1,3,5' ||
       github.event.schedule == '0 2 * * 2,4' ||
       github.event.schedule == '0 2 * * 6' ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue'))
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    concurrency:
+      group: trendpulse-general-posting
+      cancel-in-progress: false
+    env:
+      BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
+      BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
+      BLOG_RESUME_DRAFT_ID: ${{ inputs.resume_draft_id }}
+      BLOG_PUBLISH: ${{ (github.event_name == 'schedule' || inputs.publish) && 'true' || 'false' }}
+      BLOG_TOPIC: ${{ inputs.topic }}
+      BLOG_CATEGORY: ${{ inputs.category }}
 
     steps:
       - name: Checkout repository
@@ -764,6 +743,24 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - uses: actions/setup-node@v4
+        if: env.BLOG_WRITER_PROVIDER == 'codex'
+        with:
+          node-version: '22'
+      - name: Install Codex subscription writer
+        if: env.BLOG_WRITER_PROVIDER == 'codex'
+        run: npm install -g @openai/codex@0.153.4
+      - name: Set writer runtime paths
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
+      - name: Restore Codex authentication
+        if: env.BLOG_WRITER_PROVIDER == 'codex'
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py restore
 
       - name: Create .env file
         run: |
@@ -815,6 +812,10 @@ jobs:
           echo "Queue category: $CAT"
           python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
 
+      - name: Verify Codex publication result
+        if: success() && env.BLOG_WRITER_PROVIDER == 'codex'
+        run: python scripts/verify_codex_run.py
+
       - name: Commit queue and registry updates
         if: success()
         continue-on-error: true
@@ -840,6 +841,12 @@ jobs:
           done
           echo "Warning: Failed to push after 5 attempts, but post was created successfully"
 
+      - name: Persist refreshed Codex authentication and clean up
+        if: always() && env.BLOG_WRITER_PROVIDER == 'codex'
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist
+
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
@@ -861,7 +868,7 @@ jobs:
       - post-kfood
       - post-kfashion
       - post-queue
-    if: failure() && github.run_attempt < 3
+    if: failure() && github.run_attempt < 3 && (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex'
     runs-on: ubuntu-latest
     permissions:
       actions: write

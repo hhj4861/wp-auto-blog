@@ -10,12 +10,13 @@ ChatGPT 로그인은 구독의 Codex 사용 한도를 이용한다. `openai` 제
 
 2026-09-09 사용자가 기존 `hhj4861/wp-auto-blog`의 `CODEX_AUTH_JSON`을 사용한
 수동 실행과 이후 예약 실행의 Codex 전환을 명시적으로 요청했다.
-기존 비공개 worker 중계 대신 해당 저장소 기본 브랜치에서만 실행되는 직접 경로를 사용한다.
+별도 Codex job이나 비공개 worker 중계를 사용하지 않는다. 기존 post-general/post-queue 작업에서
+BLOG_WRITER_PROVIDER 환경변수로 작성 모델만 선택한다. 카테고리 분기·토픽 큐·발행 명령·cron은 유지한다.
 공식 OpenAI 문서는 구독 인증 CI를 비공개 실행 환경에 권장하므로, 이 공개 저장소 경로는
 사용자의 명시적 운영 선택이며 일반적인 권장 배포 방식으로 확대하지 않는다.
 
 - `Auto Blog Post` 수동 입력 `writer_provider=codex`와 `mode=general/queue`를 사용한다.
-- 예약 실행은 변수 `BLOG_WRITER_PROVIDER=codex`로 전환한다. 기존 시간·카테고리는 유지한다.
+- 카테고리별 기존 큐 명령은 그대로이며, 예약 실행은 변수 `BLOG_WRITER_PROVIDER=codex`로 전환한다. 기존 시간·카테고리는 유지한다.
 - `CODEX_AUTH_JSON`은 runner 임시 디렉터리에 0600 권한으로 복원한다.
 - `CODEX_SECRET_WRITE_TOKEN`은 인증 복원 전 갱신 저장 준비 확인과 종료 후
   `CODEX_AUTH_JSON` 갱신 저장에만 사용한다. 작성 프로세스에는 전달하지 않는다.
@@ -84,3 +85,25 @@ venv/bin/python -m src.main --mode general --from-queue --no-llm-topics --auto-p
 요청은 임시 작업 디렉터리, 읽기 전용 sandbox, 승인 요청 없음, 사용자 config 무시, 세션 기록 없음으로 실행한다. WordPress 비밀번호와 API 키 등은 자식 프로세스 환경에 전달하지 않는다. 기본 제한 시간은 600초이며 초과 시 프로세스 그룹을 종료한다. 실패 메시지는 원본 CLI 출력이나 토큰을 기록하지 않는다. 오류가 나면 서버에서 CLI 버전, `login status`, 구독 사용 한도를 확인하고 필요 시 재로그인한다.
 
 공식 자료: [인증](https://learn.chatgpt.com/docs/auth), [비대화형 실행 및 CI 인증](https://learn.chatgpt.com/docs/non-interactive-mode).
+
+## 실제 확인 (2026-09-09)
+
+- Actions run 34304511811: Codex 구독으로 본문 작성 및 검수 확인. SEO 메타 누락으로 초안 1713 저장.
+- 공통 작성 규칙에 모든 글 유형의 SEO 출력 형식을 명시하고, 출처 누락 시 재검색을 추가했다.
+- Actions run 34305404671, attempt 2: 기존 초안의 메타데이터를 Codex로 보완·검증해 발행.
+  WordPress 재조회에서 공개 상태와 본문 보존 확인.
+- 결과: https://trendpulse.blog/?p=1713
+- 최종 운영 연결은 기존 post-general/post-queue 내부 모델 선택이며, 별도 post-codex job은 제거한다.
+
+## 대표 이미지와 제휴 링크
+
+TrendPulse의 본문 히어로 생략과 WordPress 대표 이미지는 별개다. 이미지 API로 목록용
+대표 이미지를 수집하고, 글 갱신 시 기존 대표 이미지를 지우지 않는다. 신규 글에서
+이미지를 찾지 못하거나 업로드가 실패하면 공개 발행 대신 초안으로 보관한다.
+누락된 기존 글은 `scripts/repair_featured_images.py POST_ID ...`로 후보를 확인하고
+`--apply`로 대표 이미지만 복구한다. 본문·제목·슬러그·공개 상태 보존을 재조회한다.
+
+일반 취업 글의 쿠팡 링크는 `data/coupang_prep_links.json`의 상품별 `topic_keywords`로
+주제와 일치할 때만 삽입한다. 외항사 글의 기존 준비용품 연결은 유지한다. 링크가
+삽입되면 수수료 고지와 sponsored 속성을 함께 적용한다. 광고 코드는 광고 송출·수익
+발생 증명이 아니며, 제휴 추적 링크도 실제 전환·정산은 파트너스 대시보드에서 확인해야 한다.

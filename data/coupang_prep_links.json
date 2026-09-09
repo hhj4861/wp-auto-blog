@@ -2,9 +2,43 @@
   "_설명": "외항사/취업 글에 삽입할 쿠팡파트너스 추천 상품. url에 실제 추적링크(https://link.coupang.com/a/...)를 넣으면 렌더링되고, 비어있거나 PASTE_로 시작하면 무시됩니다. 유효 링크가 하나도 없으면 박스 자체가 안 나옵니다(무수익 빈 링크 방지).",
   "_사용법": "쿠팡파트너스 → 링크생성 → 상품검색 → 상품별로 각각 추적링크 생성 → 아래 url에 순서대로 붙여넣기",
   "승무원 준비 추천템": [
-    {"name": "토익스피킹 실전 교재", "note": "외항사 영어 인터뷰 필수", "url": "https://link.coupang.com/a/fEV28YfI1R"},
-    {"name": "승무원 면접 상의(블라우스)", "note": "면접 이미지메이킹", "url": "https://link.coupang.com/a/fEV5pUPIaa"},
-    {"name": "면접용 구두", "note": "단정한 면접 복장", "url": "https://link.coupang.com/a/fEV8dqGf48"},
-    {"name": "승무원 올림머리 세트", "note": "면접 헤어 필수템", "url": "https://link.coupang.com/a/fEVqs5WZhY"}
-  ]
+    {
+      "name": "토익스피킹 실전 교재",
+      "note": "외항사 영어 인터뷰 필수",
+      "url": "https://link.coupang.com/a/fEV28YfI1R",
+      "topic_keywords": [
+        "토익스피킹",
+        "영어 면접",
+        "영어 인터뷰"
+      ]
+    },
+    {
+      "name": "승무원 면접 상의(블라우스)",
+      "note": "면접 이미지메이킹",
+      "url": "https://link.coupang.com/a/fEV5pUPIaa",
+      "topic_keywords": [
+        "면접 복장",
+        "면접 블라우스"
+      ]
+    },
+    {
+      "name": "면접용 구두",
+      "note": "단정한 면접 복장",
+      "url": "https://link.coupang.com/a/fEV8dqGf48",
+      "topic_keywords": [
+        "면접 복장",
+        "면접 구두"
+      ]
+    },
+    {
+      "name": "승무원 올림머리 세트",
+      "note": "면접 헤어 필수템",
+      "url": "https://link.coupang.com/a/fEVqs5WZhY",
+      "topic_keywords": [
+        "면접 헤어",
+        "올림머리"
+      ]
+    }
+  ],
+  "_일반취업": "외항사 외 글은 제목/주제가 상품별 topic_keywords와 일치할 때만 연결합니다. 일반 자기소개·지원자격 글에는 무관한 상품을 삽입하지 않습니다."
 }

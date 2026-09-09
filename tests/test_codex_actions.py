@@ -118,16 +118,22 @@ def test_main_emits_actual_result_for_worker(tmp_path, monkeypatch):
         "url": result.post.url, "status": "publish"}]
 
 
-def test_workflow_manual_gate_and_auth_cleanup():
+def test_existing_category_jobs_keep_schedule_and_share_writer():
     from pathlib import Path
     workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
-    job = workflow['jobs']['post-codex']
-    assert "workflow_dispatch" in job['if']
-    assert "refs/heads/main" in job['if']
-    assert "post-codex" not in workflow['jobs']['retry-on-waf-block']['needs']
-    assert job['concurrency']['cancel-in-progress'] is False
-    assert any(step.get('if') == 'always()' and 'persist' in step.get('run', '') for step in job['steps'])
-    assert not any('upload-artifact' in step.get('uses', '') for step in job['steps'])
+    assert 'post-codex' not in workflow['jobs']
+    schedules = workflow.get('on', workflow.get(True))['schedule']
+    assert [entry['cron'] for entry in schedules] == ['0 2 * * 1,3,5', '0 2 * * 2,4', '0 2 * * 6']
+    for name in ('post-general', 'post-queue'):
+        job = workflow['jobs'][name]
+        assert 'vars.BLOG_WRITER_PROVIDER' in job['env']['BLOG_WRITER_PROVIDER']
+        assert 'writer_provider' not in job['if']
+        assert job['concurrency']['cancel-in-progress'] is False
+        assert any('always()' in step.get('if', '') and 'persist' in step.get('run', '') for step in job['steps'])
+    queue = next(s['run'] for s in workflow['jobs']['post-queue']['steps'] if s.get('name', '').startswith('Run pipeline'))
+    assert 'python -m src.main --mode general --from-queue --auto-publish --category "$CAT"' in queue
+    for category in ('취업', '건강', '생활정보'):
+        assert f'CAT="{category}"' in queue
 
 
 @pytest.mark.parametrize('repo,event,ref,opt_in,allowed', [

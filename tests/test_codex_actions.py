@@ -48,6 +48,39 @@ def test_api_auth_not_accepted_as_subscription():
         validate_auth('{"auth_mode":"apikey"}')
 
 
+@pytest.mark.parametrize('schedule,category', [
+    ('0 2 * * 1,3,5', '생활정보'), ('0 2 * * 2,4', '취업'), ('0 2 * * 6', '건강')])
+def test_scheduled_codex_preserves_category_and_publishes(schedule, category):
+    args = command({'WP_GENERAL_URL': 'https://trendpulse.blog', 'BLOG_MODE': 'queue',
+                    'BLOG_PUBLISH': 'true', 'BLOG_SCHEDULE': schedule})
+    assert args[args.index('--category') + 1] == category
+    assert '--from-queue' in args and '--auto-publish' in args
+    assert args[args.index('--writer-provider') + 1] == 'codex'
+
+
+def test_auth_persists_updated_file_without_printing_then_cleans_up(tmp_path, monkeypatch):
+    import scripts.codex_worker_auth as auth
+    monkeypatch.delenv('GITHUB_ACTIONS', raising=False)
+    monkeypatch.setenv('RUNNER_TEMP', str(tmp_path))
+    monkeypatch.setenv('GITHUB_REPOSITORY', 'hhj4861/wp-auto-blog')
+    monkeypatch.setenv('WORKER_ADMIN_TOKEN', 'test-only')
+    seed = json.dumps({'auth_mode': 'chatgpt', 'tokens': {'refresh_token': 'test-seed'}})
+    monkeypatch.setenv('CODEX_AUTH_JSON', seed)
+    monkeypatch.setattr('sys.argv', ['auth', 'restore'])
+    auth.main()
+    path = tmp_path / 'trendpulse-codex/auth.json'
+    assert path.stat().st_mode & 0o777 == 0o600
+    refreshed = seed.replace('test-seed', 'test-refreshed')
+    path.write_text(refreshed)
+    run = Mock()
+    monkeypatch.setattr(auth.subprocess, 'run', run)
+    monkeypatch.setattr('sys.argv', ['auth', 'persist'])
+    auth.main()
+    assert run.call_args.kwargs['input'] == refreshed
+    assert 'test-refreshed' not in str(run.call_args.args)
+    assert not path.parent.exists()
+
+
 @pytest.mark.parametrize("results", [[], [{"success": True, "status": "draft"}], [{"success": False}]])
 def test_draft_or_no_post_is_not_publication_success(results):
     session = Mock()

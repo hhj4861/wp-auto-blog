@@ -49,6 +49,16 @@ def verify_published(results, session, base):
 
 def main():
     env = dict(os.environ)
+    if env.get("BLOG_RESUME_DRAFT_ID"):
+        if env.get("BLOG_PUBLISH") != "true":
+            raise ValueError("Draft recovery requires explicit publish=true")
+        from publish_codex_draft import publish_draft
+        url = publish_draft(int(env["BLOG_RESUME_DRAFT_ID"]), env)
+        print("VERIFIED CODEX PUBLISHED", url, flush=True)
+        if env.get("GITHUB_STEP_SUMMARY"):
+            with Path(env["GITHUB_STEP_SUMMARY"]).open("a") as output:
+                output.write(f"Codex subscription: [verified published post]({url})\n")
+        return 0
     with tempfile.TemporaryDirectory(prefix="blog-result-") as directory:
         path = Path(directory) / "result.json"
         env["BLOG_RESULT_PATH"] = str(path)

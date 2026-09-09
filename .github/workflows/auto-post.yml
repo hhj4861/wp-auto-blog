@@ -32,6 +32,9 @@ on:
       source_urls:
         description: 'Optional official source URLs, one per line (fetched and verified)'
         type: string
+      resume_draft_id:
+        description: 'Optional existing Codex draft ID to repair metadata, verify and publish'
+        type: string
       topic:
         description: 'Specific topic (optional, skips trend detection)'
         required: false
@@ -122,6 +125,7 @@ jobs:
           BLOG_CODEX_HOME: ${{ runner.temp }}/trendpulse-codex
           BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
           BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
+          BLOG_RESUME_DRAFT_ID: ${{ inputs.resume_draft_id }}
           BLOG_WRITER_PROVIDER: codex
           BLOG_MODE: ${{ github.event_name == 'schedule' && 'queue' || (inputs.mode == 'queue' && 'queue' || 'general') }}
           BLOG_SCHEDULE: ${{ github.event.schedule }}

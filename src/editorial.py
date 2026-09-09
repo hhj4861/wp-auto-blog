@@ -183,6 +183,15 @@ def review_evidence(html: str, sources: list[dict], call_llm) -> list[str]:
 
 GENERAL_WRITING_RULES = """
 === TrendPulse 최종 편집 규칙 (앞의 일반 템플릿보다 우선) ===
+- 출력은 아래 메타 블록으로 시작한 뒤 본문 HTML을 작성한다. 모든 글 유형에 필수다.
+---SEO-META---
+FOCUS_KEYPHRASE: 제목과 본문에 그대로 포함되는 한국어 핵심 검색어
+META_DESCRIPTION: 핵심 검색어를 포함한 자연스러운 한국어 검색 설명
+SLUG: 짧은 영문 소문자와 하이픈 주소
+OFFICIAL_LINK: 제공된 공식 자료의 실제 URL (없으면 빈 값)
+---CONTENT---
+  메타 블록은 HTML이 아니며 파서가 분리한다. 본문은 HTML만 쓴다.
+  H1 제목은 한국어로 작성한다. Guide 같은 영문 형식명을 제목에 붙이지 않는다.
 - 기본 본문 템플릿은 승인된 compact-reader-v1이다. Claude/Codex 등 작성 모델,
   글 유형과 관계없이 general 모드의 신규 작성과 리프레시에 동일하게 적용한다.
   기본 순서: 핵심 답변 → 주요 조건 요약표/체크리스트 → 필요한 절차 안내 →

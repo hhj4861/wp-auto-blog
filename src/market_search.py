@@ -1,10 +1,44 @@
 """Read organic result URLs and snippets without inventing search evidence."""
 
 import os
+import logging
 from urllib.parse import parse_qs, urljoin, urlsplit
 
 from bs4 import BeautifulSoup
 import requests
+
+
+logger = logging.getLogger(__name__)
+
+
+def search_failure(provider, response=None, reason='network_error'):
+    """Log only fixed reasons/statuses; request URLs can contain API credentials."""
+    status = getattr(response, 'status_code', None)
+    status = status if type(status) is int else None
+    if provider == 'google_custom_search' and response is not None:
+        try:
+            # Inspect in memory only. Never emit error messages or arbitrary fields.
+            detail = str(response.json()).lower()
+            for marker, code in (
+                ('accessnotconfigured', 'api_not_enabled'),
+                ('service_disabled', 'api_not_enabled'),
+                ('api_key_service_blocked', 'api_key_service_blocked'),
+                ('iprefererblocked', 'api_key_restricted'),
+                ('api_key_http_referrer_blocked', 'api_key_restricted'),
+                ('keyinvalid', 'api_key_invalid'),
+                ('api_key_invalid', 'api_key_invalid'),
+                ('dailylimitexceeded', 'daily_quota_exceeded'),
+                ('ratelimitexceeded', 'rate_limit_exceeded'),
+                ('quota_exceeded', 'quota_exceeded'),
+                ('does not have the access to custom search', 'api_access_unavailable'),
+                ('not have access to custom search', 'api_access_unavailable'),
+            ):
+                if marker in detail:
+                    reason = code
+                    break
+        except (ValueError, TypeError, AttributeError):
+            pass
+    logger.warning('Search unavailable: provider=%s reason=%s http_status=%s', provider, reason, status)
 
 
 def result_row(url, title='', snippet=''):
@@ -28,6 +62,7 @@ def search_results(query):
     """
     key, engine = os.getenv('GOOGLE_SEARCH_API_KEY'), os.getenv('GOOGLE_SEARCH_ENGINE_ID')
     if key and engine:
+        response = None
         try:
             response = requests.get('https://www.googleapis.com/customsearch/v1',
                 params={'key': key, 'cx': engine, 'q': query, 'gl': 'kr', 'hl': 'ko', 'num': 10},
@@ -38,8 +73,13 @@ def search_results(query):
             rows = [row for row in rows if row]
             if rows:
                 return 'google_custom_search', rows[:10]
+            search_failure('google_custom_search', response, 'no_results')
         except (requests.RequestException, ValueError, TypeError, AttributeError):
-            pass  # Never log a request URL containing the API key.
+            search_failure('google_custom_search', response,
+                           'http_or_response_error' if response is not None else 'network_error')
+    else:
+        search_failure('google_custom_search', reason='configuration_missing')
+    response = None
     try:
         response = requests.get('https://html.duckduckgo.com/html/',
             params={'q': query, 'kl': 'kr-kr'},
@@ -56,6 +96,12 @@ def search_results(query):
             if row and row['url'] not in seen:
                 rows.append(row)
                 seen.add(row['url'])
+        if not rows:
+            challenged = response.status_code == 202 or any(
+                marker in response.text for marker in ('anomaly.js', 'id="challenge-form"'))
+            search_failure('duckduckgo_proxy', response, 'challenge' if challenged else 'no_results')
         return 'duckduckgo_proxy', rows[:10]
     except (requests.RequestException, ValueError, TypeError):
+        search_failure('duckduckgo_proxy', response,
+                       'http_or_response_error' if response is not None else 'network_error')
         return 'duckduckgo_proxy', []

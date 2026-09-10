@@ -18,6 +18,7 @@ import base64
 import hashlib
 import hmac
 import json
+import math
 import os
 import re
 import time
@@ -66,12 +67,30 @@ def _signed_headers(method: str, uri: str, cid: str, api_key: str, secret: str) 
     return {"X-Timestamp": ts, "X-API-KEY": api_key, "X-Customer": cid, "X-Signature": sig}
 
 
-def _to_int(value) -> int:
-    """'< 10' 같은 문자열 응답을 정수로 정규화."""
-    if isinstance(value, int):
-        return value
-    s = str(value).strip()
-    return 0 if s.startswith("<") else int(re.sub(r"[^0-9]", "", s) or 0)
+def _monthly_measurement(value) -> tuple[int | None, str]:
+    """Preserve device measurement status instead of turning unknown counts into zero."""
+    if value is None or isinstance(value, str) and not value.strip():
+        return None, "missing"
+    if isinstance(value, str):
+        value = value.strip()
+        if re.fullmatch(r"<\s*10", value):
+            return None, "masked"
+        if not re.fullmatch(r"(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+)", value):
+            return None, "invalid"
+        # Keep the same safe integer boundary as the TypeScript producer.
+        digits = value.replace(",", "").lstrip("0") or "0"
+        if len(digits) > 16:
+            return None, "invalid"
+        value = int(digits)
+    if (type(value) in (int, float) and 0 <= value <= 9_007_199_254_740_991
+            and (type(value) is int or math.isfinite(value) and value.is_integer())):
+        return int(value), "measured"
+    return None, "invalid"
+
+
+def _to_int(value) -> int | None:
+    """Return an actual count only; masked, missing, and invalid values stay unknown."""
+    return _monthly_measurement(value)[0]
 
 
 def fetch_keyword_stats(hint: str, attempt: int = 0) -> list[dict]:
@@ -90,23 +109,46 @@ def fetch_keyword_stats(hint: str, attempt: int = 0) -> list[dict]:
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             payload = json.loads(resp.read().decode())
-    except Exception as e:  # noqa: BLE001 — 조회 실패가 발행을 막아선 안 된다
+    except Exception:  # noqa: BLE001 — 조회 실패가 발행을 막아선 안 된다
         if attempt < 2:
             time.sleep(2 * (attempt + 1))
             return fetch_keyword_stats(hint, attempt + 1)
-        logger.warning(f"키워드 조회 실패({hint}): {type(e).__name__} {e}")
+        logger.warning("검색광고 조회 실패: unavailable")
+        return []
+
+    if not isinstance(payload, dict) or not isinstance(payload.get("keywordList"), list):
+        logger.warning("검색광고 응답 형식 오류: invalid_payload")
         return []
 
     out = []
-    for k in payload.get("keywordList", []):
-        pc = _to_int(k.get("monthlyPcQcCnt", 0))
-        mo = _to_int(k.get("monthlyMobileQcCnt", 0))
+    incomplete_count = 0
+    invalid_count = 0
+    for k in payload["keywordList"]:
+        if (not isinstance(k, dict) or not isinstance(k.get("relKeyword"), str)
+                or not k["relKeyword"].strip()):
+            invalid_count += 1
+            continue
+        pc, pc_status = _monthly_measurement(k.get("monthlyPcQcCnt"))
+        mo, mo_status = _monthly_measurement(k.get("monthlyMobileQcCnt"))
+        complete = pc_status == mo_status == "measured"
+        incomplete_count += not complete
         out.append({
-            "keyword": k.get("relKeyword", ""),
-            "monthly": pc + mo,
+            "keyword": k["relKeyword"].strip(),
+            # Existing callers require an int. Zero blocks selection when the
+            # total is unavailable; monthly_status distinguishes it from measured zero.
+            "monthly": pc + mo if complete else 0,
+            "monthly_status": "measured" if complete else "unavailable",
+            "monthly_pc": pc,
+            "monthly_mobile": mo,
+            "monthly_pc_status": pc_status,
+            "monthly_mobile_status": mo_status,
             "comp": k.get("compIdx", ""),
             "ad_depth": k.get("plAvgDepth", 0),
         })
+    if incomplete_count:
+        logger.warning(f"검색광고 월검색량 불완전: {incomplete_count}건")
+    if invalid_count:
+        logger.warning(f"검색광고 응답 행 제외: {invalid_count}건")
     out.sort(key=lambda x: x["monthly"], reverse=True)
     return out
 

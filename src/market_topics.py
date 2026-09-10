@@ -19,6 +19,8 @@ from src.keyword_gate import (fetch_keyword_stats, gov_ratio, MIN_MONTHLY_SEARCH
                               HEAD_SEARCH_VOLUME, MAX_GOV_RATIO)
 from src.editorial import fetch_source, is_official_url
 from src.market_search import search_results
+from src.cak_candidates import (load_candidate_export, measurement_key, qualified_rising,
+                                valid_cak_provenance)
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -196,9 +198,13 @@ def candidate_pool(stats, titles, category=None):
                     key=lambda row: -row['monthly'])
     specific = [row for row in ranked if specificity_score(row['keyword']) == 15
                 and row['monthly'] < HEAD_SEARCH_VOLUME]
+    direct = sorted((row for row in ranked if row.get('cak_provenance', {}).get('relationship') == 'exact'),
+                    key=lambda row: (not qualified_rising(row['cak_provenance']['item']),
+                                     -(row['cak_provenance']['item']['trend']['hotScore'] or 0), -row['monthly']))
+    related = [row for row in ranked if row.get('cak_provenance', {}).get('relationship') == 'related_seed']
     pool, seen = [], set()
     for index in range(len(ranked)):
-        for group in (specific, ranked):
+        for group in (direct, related, specific, ranked):
             if index >= len(group):
                 continue
             row = group[index]
@@ -210,6 +216,95 @@ def candidate_pool(stats, titles, category=None):
             if len(pool) == 120:
                 return pool
     return pool
+
+
+def merge_cak_candidates(stats, titles, category, now):
+    """Health-only enrichment; a seed's rise never becomes a related term's trend."""
+    if category != '건강':
+        return stats, {'status': 'not_applicable', 'reason': 'health_only', 'direct_count': 0,
+                       'expanded_seed_count': 0, 'related_count': 0, 'seed_lookup_failed_count': 0}
+    imported, diagnostics = load_candidate_export(os.getenv('CAK_KEYWORD_CANDIDATES_FILE'), now)
+    diagnostics.update(direct_count=0, expanded_seed_count=0, related_count=0,
+                       seed_lookup_failed_count=0, filtered_count=0)
+    merged = dict(stats)
+    names = {measurement_key(row['keyword']): name for name, row in merged.items()}
+    direct_keys, eligible = set(), []
+
+    def provenance(item, relationship):
+        result = {'relationship': relationship, 'item': item, 'export': diagnostics['export_metadata']}
+        if 'transport' in diagnostics:
+            result['transport'] = diagnostics['transport']
+        return result
+
+    for item in imported:
+        keyword, ad = item['keyword'].strip(), item['searchad']
+        if (ad['monthlyTotalStatus'] != 'measured' or ad['monthlyTotal'] < MIN_MONTHLY_SEARCH
+                or not category_matches(keyword, category) or duplicate(keyword, keyword, titles)):
+            diagnostics['filtered_count'] += 1
+            continue
+        key = measurement_key(keyword)
+        old_name = names.get(key)
+        if old_name is not None:
+            merged.pop(old_name)
+        merged[keyword] = {'keyword': keyword, 'monthly': ad['monthlyTotal'],
+                           'comp': ad['advertisingCompetition'],
+                           'demand_provider': 'cak_naver_searchad_whitespace_exact',
+                           'cak_provenance': provenance(item, 'exact')}
+        names[key] = keyword
+        direct_keys.add(key)
+        diagnostics['direct_count'] += 1
+        if qualified_rising(item):
+            eligible.append(item)
+    eligible.sort(key=lambda item: (-item['trend']['hotScore'], -item['searchad']['monthlyTotal']))
+    related_keys = set()
+    for seed in eligible[:5]:
+        diagnostics['expanded_seed_count'] += 1
+        try:
+            rows = fetch_keyword_stats(seed['keyword'])
+        except (OSError, ValueError, RuntimeError):
+            rows = []
+        if not rows:
+            diagnostics['seed_lookup_failed_count'] += 1
+            continue
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            keyword, monthly = row.get('keyword'), row.get('monthly')
+            if (not isinstance(keyword, str) or len(keyword.strip()) < 3
+                    or type(monthly) is not int or monthly < MIN_MONTHLY_SEARCH):
+                continue
+            keyword = keyword.strip()
+            key = measurement_key(keyword)
+            if (key in direct_keys or key in related_keys or not category_matches(keyword, category)
+                    or duplicate(keyword, keyword, titles)):
+                continue
+            old_name = names.get(key)
+            if old_name is not None:
+                merged.pop(old_name)
+            evidence = provenance(seed, 'related_seed')
+            evidence.update(relatedKeyword=keyword, relatedMonthly=monthly, relatedMeasuredAt=now.isoformat())
+            merged[keyword] = {'keyword': keyword, 'monthly': monthly, 'comp': row.get('comp'),
+                               'demand_provider': 'naver_searchad_pc_mobile', 'cak_provenance': evidence}
+            names[key] = keyword
+            related_keys.add(key)
+    diagnostics['related_count'] = len(related_keys)
+    return merged, diagnostics
+
+
+def candidate_prompt_row(row):
+    """Keep seed-level measurements out of a related keyword's analysis input."""
+    result = {key: row[key] for key in ('keyword', 'monthly', 'comp') if key in row}
+    provenance = row.get('cak_provenance')
+    if provenance is not None:
+        signal = provenance['item']
+        if provenance['relationship'] == 'exact':
+            result['cak_trend'] = {'measuredKeyword': signal['keyword'], 'timeUnit': 'date',
+                                   **{key: signal['trend'][key] for key in
+                                      ('latestPeriod', 'dayPct', 'baselinePct', 'hotScore')}}
+        else:
+            result['discovery'] = {'seedKeyword': signal['keyword'], 'relationship': 'related_seed',
+                                   'candidateGrowthMeasured': False}
+    return result
 
 
 def trend_change(values):
@@ -392,6 +487,7 @@ def select_category(category, top_n=2, titles=None):
     seeds = list(CATEGORIES[category])
     stats = demand_candidates(seeds)
     titles = existing_titles() if titles is None else titles
+    stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
     pool = candidate_pool(stats, titles, category)
     if not pool:
         raise RuntimeError('No uncovered measured candidates in this category')
@@ -407,13 +503,15 @@ def select_category(category, top_n=2, titles=None):
 카테고리 구분: {json.dumps(CATEGORY_SCOPES, ensure_ascii=False)}
 요청 카테고리의 주된 목적에 맞는 후보만 고르세요. 시드의 연관 검색어라도 다른 분야면 제외하세요.
 수요는 네이버 월간 PC+모바일이며 구글 검색량/상승률이 아닙니다. comp는 광고 경쟁도이며 SEO 난이도가 아닙니다.
+CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 item은 발견 계기가 된 시드 자료이며,
+해당 후보의 상승률이 아닙니다. related 후보의 monthly만 그 후보를 별도로 측정한 수요입니다.
 검색량만 큰 포괄어보다 카테고리에 맞는 구체적인 질문/절차/조건/준비물 검색어를 우선하세요.
 홈페이지 이동/상품명만의 검색과 개인별 진단·치료 권유는 제외하세요. 기존 글과 같은 검색 목적은 제외하세요.
 실측된 중소 검색량 롱테일 후보도 포함하세요. 제목/URL/차별점은 아직 만들지 마세요.
 월 5만 미만이며 질문/조건/방법/일정 등 구체적인 정보 수요가 있는 후보를 우선 포함하세요.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
 JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
-후보: {json.dumps(remaining, ensure_ascii=False)}
+후보: {json.dumps([candidate_prompt_row(row) for row in remaining], ensure_ascii=False)}
 기존 제목: {json.dumps(titles, ensure_ascii=False)}
 이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}""")
         candidates = proposals.get('candidates', []) if isinstance(proposals, dict) else []
@@ -461,29 +559,39 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
             if reason:
                 rejected.append({'keyword': keyword, 'reason': reason})
                 continue
-            growth = fetch_trend_change(keyword)
+            cak_provenance = row.get('cak_provenance')
+            direct_rising = (cak_provenance is not None and cak_provenance['relationship'] == 'exact'
+                             and qualified_rising(cak_provenance['item']))
+            growth = None if direct_rising else fetch_trend_change(keyword)
             components = score_components(row['monthly'], domains, keyword, growth, evidence_mode=mode)
+            if cak_provenance is not None:
+                components['cak_trend'] = round(cak_provenance['item']['trend']['hotScore'] / 10, 2) if direct_rising else 0
             selected.append({**item, 'monthly_search': row['monthly'],
-                'demand_provider': 'naver_searchad_pc_mobile', 'advertising_competition': row.get('comp'),
+                'demand_provider': row.get('demand_provider', 'naver_searchad_pc_mobile'),
+                'advertising_competition': row.get('comp'),
+                **({'cak_provenance': cak_provenance} if cak_provenance is not None else {}),
                 'evidence_mode': mode, 'research_evidence': research,
                 'organic_provider': provider, 'organic_domains': domains, 'organic_results': results,
                 'dominant_result_ratio': dominance, 'score_components': components,
-                'trend_growth': growth, 'trend_provider': 'google_trends_relative_7d_vs_previous_7d',
+                'trend_growth': growth, 'trend_provider': None if direct_rising else 'google_trends_relative_7d_vs_previous_7d',
                 'score': round(sum(components.values()), 2), 'selection_version': PROCESS_VERSION,
                 'selected_at': now, 'source': SOURCE, 'keywords': [keyword], 'status': 'pending'})
         if len(selected) >= top_n or len(seen) == attempted_before:
             break
     selected.sort(key=lambda item: -item['score'])
     return {'category': category, 'selected_at': now, 'seeds': seeds,
-            'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
-            'analyst': 'codex_subscription', 'discovery_provider': 'naver_related_keywords',
+            'selection_version': PROCESS_VERSION, 'research_rounds': rounds, 'cak_import': cak_import,
+            'analyst': 'codex_subscription',
+            'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']
+                                   else 'naver_related_keywords'),
             'measured_candidates': len(stats), 'evaluated_candidates': len(seen),
             'selected': selected[:top_n], 'rejected': rejected,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '
                      'organic provider is recorded per candidate. Independently fetched official pages are '
                      'source evidence; model-reported locators prove neither indexing nor native page visits. '
                      'Missing competition earns zero points. '
-                     'Null trend means unavailable.'}
+                     'CAK exact rising candidates use their own daily trend score; related discoveries use '
+                     'only their own Google trend. Null Google trend means unavailable or not requested.'}
 
 
 def fresh_market_item(item, category, now=None):
@@ -501,6 +609,23 @@ def fresh_market_item(item, category, now=None):
                              and bool(source.get('excerpt')) for source in evidence)
         valid_score = math.isfinite(item.get('score', float('nan')))
         valid_volume = item.get('monthly_search', 0) >= MIN_MONTHLY_SEARCH
+        if ('cak_provenance' not in item
+                and (item.get('demand_provider') == 'cak_naver_searchad_whitespace_exact'
+                     or 'cak_trend' in (item.get('score_components') or {}))):
+            return False
+        if 'cak_provenance' in item:
+            if (category != '건강' or not valid_cak_provenance(item['cak_provenance'], item.get('keyword', ''),
+                                                            item.get('monthly_search'), now)):
+                return False
+            provenance = item['cak_provenance']
+            direct_rising = provenance['relationship'] == 'exact' and qualified_rising(provenance['item'])
+            components = item.get('score_components') or {}
+            expected_cak = round(provenance['item']['trend']['hotScore'] / 10, 2) if direct_rising else 0
+            if not isinstance(components, dict) or components.get('cak_trend') != expected_cak:
+                return False
+            if direct_rising and (components.get('trend') != 0 or item.get('trend_growth') is not None
+                                  or item.get('trend_provider') is not None):
+                return False
         if item.get('evidence_mode', 'serp') == 'official_pages':
             research = item.get('research_evidence') or {}
             if not isinstance(research, dict) or not isinstance(item.get('score_components'), dict):

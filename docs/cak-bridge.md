@@ -1,74 +1,86 @@
-# commerce-automation-kit 키워드 브릿지 (소비자 측)
+# CAK 검색 지표 → 블로그 주제 선정
 
-commerce-automation-kit(`~/workSpace/commerce-automation-kit`, TypeScript)의
-`keyword-intel` 원자가 생산하는 키워드/질문 시그널을, 이 저장소(Python)의
-발행 큐로 받아오는 **단방향 데이터 브릿지**의 소비자 구현이다.
+## 자동 연결
 
-설계 원본:
-- 소비자(여기): `architecture/modules/03-question-mining-search.md` §4/§8
-- 생산자(kit): `packages/keyword-intel/docs/QUESTION-MINING.md` §8
+CAK의 `keyword-intel-sync.yml`이 일별 DataLab 수집과 검색광고 조회 후
+`blog-keyword-candidates.json`을 `blog-keyword-candidates` Actions artifact로 내보낸다.
+WP의 09:30 선정 작업과 11시 카테고리 큐 작업이 이를 받아 기존 시장 후보 풀에 합친다.
+CAK의 코드를 WP에 복사하거나 텔레그램 메시지를 파싱하지 않는다.
 
-## 왜 코드 통합이 아니라 브릿지인가 (ADR 요약)
+- 저장소: `hhj4861/commerce-automation-kit`, 워크플로: `keyword-intel-sync.yml`.
+- 성공한 `main`의 예약/수동 실행만 허용한다. 최근 24시간의 최신 자료를 찾으며,
+  새 실행이 진행 중이면 유효한 직전 성공 자료를 사용할 수 있다.
+- JSON 계약: `schemaVersion=1`, `kind=cak_keyword_candidates`, `profile=blog-kr`.
+  기존 `BlogExport` 및 opportunity 점수 의미는 유지한다.
+- 원본 후보는 최대 80개다. 182개 `g2-seeds`의 건강·뷰티·이너뷰티 범위이므로
+  **건강 카테고리에만** 입력한다. 취업·생활정보는 기존 시드에서 수집한다.
+- GitHub artifact 보관은 1일, 지표 유효기간은 수집 시각 기준 최대 24시간이다.
+  원본 신호 만료, 월검색량 측정 시각, 관측일의 KST 기준 0~3일 지연을 별도로 검사한다.
+  보고서가 36시간 이내여도 CAK 근거가 만료되면 재사용하지 않는다.
 
-kit의 `QUESTION-MINING.md §2` ADR이 "wp-auto-blog까지 코드 통합"을 **기각**했다:
-언어 경계(TS↔Python), 컴플라이언스 체제 상충(kit=silent-drop 금지 / 블로그=fail-open),
-kit엔 콘텐츠 생성 원자 없음(범위 밖). 따라서 **kit에 블로그 모듈을 만들지 않고**,
-블로그가 kit의 export를 소비만 한다. 두 저장소는 서로 다른 법체계로 분리 유지한다.
+다운로더는 `CODEX_SECRET_WRITE_TOKEN`을 해당 단계에서 GitHub 읽기에만 사용한다.
+이 Secret에는 CAK 저장소 Actions 읽기 권한이 있어야 한다. 토큰을 분석기 환경에 전달하지 않고,
+외부 서명 다운로드 URL에도 인증 헤더를 보내지 않는다. 정확한 파일명 하나만 읽고,
+압축 전·후 2MB 한도를 적용한다. 다운로드 시작 전 이전 임시 입력을 지우며 성공 시 원자적으로 교체한다.
 
-## 데이터 흐름 (단방향, 엄격→느슨)
+`CAK_KEYWORD_CANDIDATES_FILE`은 runner 임시 JSON 경로,
+`CAK_KEYWORD_CANDIDATES_FETCH_STATUS_FILE`은 안전한 전송 진단 JSON 경로다.
+보고서의 `cak_import`와 선정 항목의 `cak_provenance`에 수집 실행 번호·commit SHA·artifact ID,
+관측일·원본 시드·직접/연관 관계를 남긴다. 인증 실패·파일 없음·만료·형식 오류·정상 빈 목록은 구분한다.
+입력이 없거나 유효하지 않으면 사유를 기록하고 기존 네이버 후보 탐색을 계속한다.
+CAK 자료 없이 통과한 결과를 CAK 기반 결과로 표시하지 않는다.
 
-```
-keyword-intel (kit, 생산)
-  └─ analyze --profile blog-kr --json  (schemaVersion + compliance 포함 export)
-        │  (파일 전달 — HTTP/DB 직접연결 아님. 코드·저장·게이트 통합 금지)
-        ▼
-scripts/ingest_keyword_intel.py (이 저장소, 소비)
-  └─ data/topic_queue_general.json 에 source="cak_keyword_intel" pending append
-        ▼
-python -m src.main --mode general --from-queue
-  └─ dedup(_is_duplicate) + keyword_gate.evaluate() 재통과 → 발행
-```
+## 지표와 우선순위
 
-## 소비자가 강제하는 거버넌스 의무 (코드로)
+1. DataLab 응답의 `timeUnit=date`가 보존된 신호만 사용한다. 과거 DB에 단위가 없으면
+   현재 환경변수로 추정하지 않는다. 중복 날짜, 잘못된 지수, 실제 전일 누락을 제외한다.
+2. 직전 7일 중 최소 5일을 관측해야 한다. 평균은 **관측된 날만** 계산하며 실제 0은 포함한다.
+   누락을 0으로 만들지 않는다. 전일 또는 평균이 0이면 해당 상승률과 hot은 null이다.
+3. hot은 기존 55/30/15 배점과 상승률 0~300% 제한을 유지한다. `dayPct`·`baselinePct`는
+   퍼센트 단위이며 Google Trends의 배율과 혼용하지 않는다.
+4. 검색광고 키워드는 공백 제거 후 정확히 일치해야 한다. 연도나 관련 단어를 제거하지 않는다.
+   PC와 모바일이 모두 측정된 경우만 합산한다. `< 10`, 누락, 음수, 소수, 잘못된 문자열은
+   상태로 남기며 0이나 임의 숫자로 바꾸지 않는다. 광고 경쟁도는 SEO 난이도로 쓰지 않는다.
+5. 월검색량 500 이상인 직접 후보는 기존 상시 수요 후보 풀에 합칠 수 있다.
+   **급상승 후보는 월 1,000 이상 + hot 20 이상 + 전일·7일 평균 대비 모두 상승**해야 한다.
+   미발행 급상승 시드 최대 5개는 기존 네이버 연관 검색어 API로 세부 질문을 추가 수집한다.
+6. 연관 검색어는 자신의 월검색량을 사용한다. 시드의 상승률을 연관 검색어의 상승률로
+   복사하지 않는다. 직접 급상승 후보만 자신의 hot/10을 최대 10점으로 반영하고,
+   같은 후보의 Google Trends 보너스는 중복 가산하지 않는다.
+7. 급상승 직접·연관 후보와 구체적인 질문형·수요 상위 후보를 섞어 첫 조사 대상에 도달하게 한다.
+   최종 선정은 기존 공식 본문·카테고리·검색 의도·기한 검증을 모두 통과해야 한다.
 
-| 의무 | 구현 |
-|---|---|
-| schemaVersion·compliance 필수·타입검증 | `validate_export()` — 누락/타입위반 시 `IngestError`로 거부(cacheTtlHours는 양의 정수) |
-| **재표현 보수모드 상시** (질문 원문 비저장) | `build_queue_item()` — `source_questions`를 **절대 큐에 싣지 않음**. 파이프라인이 소비하지도 않으므로 저장=부채. 이걸 저장 배제로 강제 |
-| **항목 삭제 없음** (topic 등 가공물 보존) | `purge_stale_questions()` — TTL 경과 시 legacy `source_questions` **필드만** 제거, 항목은 유지(§8 "가공물은 유지") |
-| dedup 유지 (재작성 안 함) | 큐 중복(completed·pending 모두)을 정규화 비교로 차단, 하드 게이트는 발행 시 파이프라인 |
-| 게이트 재통과 | `--from-queue` 발행 경로가 `keyword_gate.evaluate()` 자동 재실행 |
-| 네이티브 항목 보호 | purge/삭제는 `source=="cak_keyword_intel"`만 대상, 블로그 자체 항목 불가침 |
-| 배치 견고성 | null/숫자/빈 topic은 항목만 스킵(배치 전체를 죽이지 않음), 큐가 list 아니면 거부 |
+발행된 키워드는 영구 이력과 WordPress 제목·초안·예약 글에서 제외한다.
+지표 연결은 공백만 제거하지만 **발행 중복 차단은 연도·문장부호 차이도 정규화**한다.
+CAK 후보도 선정 → 캐시 → 큐 → 작성 직전 → WordPress 저장 직전의 동일한 검사를 받는다.
 
-### 왜 verbatim(질문 원문) 저장을 안 하나
+## 발행 없는 점검
 
-발행 파이프라인(`run_single`)은 `topic/keywords/category`만 소비한다 —
-`source_questions`는 어디서도 읽히지 않는다. 따라서 큐에 원문을 저장하면
-기능 이득은 0이고 "제3자 질문 원문이 수신측 저장소에 남는" 컴플라이언스
-부채만 생긴다(§8이 TTL purge를 요구하는 바로 그 대상). 그래서 **저장 자체를
-배제**해 §8 재표현 게이트를 가장 강한 형태(never-persist)로 만족시킨다.
-verbatim이 실제로 필요한 건 FAQ 주입 소비자가 생길 때이며, 그건 전용
-하드-TTL 저장소 + 발행시점 purge 훅과 함께 별도 설계해야 한다(현재 범위 밖).
+CAK Actions의 `keyword-intel sync`를 `export_only=true`, `send_telegram=false`로 실행하면
+수집·검색량 조회·artifact 생성만 수행한다. Telegram과 D1 게시를 건너뛴다.
+수집은 API 호출을 사용하므로 이미 유효한 artifact가 있으면 재사용한다.
+WP의 `Blog Keyword Select`는 선정 보고서만 생성하며 글을 발행하지 않는다.
+`auth_check_only`·`research_check_only`에서는 CAK 다운로드도 건너뛴다.
 
-## 사용법
+로컬 파일만 확인할 때는 `src.cak_candidates.load_candidate_export(path)`를 사용한다.
+전송을 강제 확인할 때는 아래 명령을 쓰며, `--require` 없이 실행하면 수집 불가 시 정상 네이버 경로로 대체한다.
 
 ```bash
-# 질문 원문 미저장, 재표현된 topic + 파생지표만 큐로 (상시 보수모드)
-python scripts/ingest_keyword_intel.py <export.json>
-
-# 환경변수로 경로 지정
-CAK_KEYWORD_INTEL_EXPORT=/path/export.json python scripts/ingest_keyword_intel.py
+python scripts/fetch_cak_candidates.py --output /tmp/cak-keyword-candidates.json \
+  --status-file /tmp/cak-fetch-status.json --require
 ```
 
-export 계약 예시: `data/cak_export.sample.json`.
+테스트는 외부 API·게시 없이 잘못된 시간 단위, 누락일, 마스킹, 만료, 지표 연결,
+연관어의 별도 월량, 중복 차단, 자격 증명 분리와 ZIP 한도를 검증한다.
 
-## 착수 상태 / 주의
+## 기존 수동 importer
 
-- **소비자만 구현됨. 생산자(kit `analyze --profile blog-kr --json`)는 미구현**
-  — kit CLI의 `analyze`는 현재 사람용 표(console.table)만 출력하며 `--json` 없음.
-  이 브릿지가 실제 흐르려면 kit 측 export 구현이 필요하다(별도 저장소 작업).
-- 이 스크립트는 export 파일이 있고 **수동 실행할 때만** 동작한다.
-  자동 발행(`auto-post.yml`)엔 배선하지 않았다 — 지금은 아무 발행 동작 변화 없음.
-- 착수 트리거(§7): GSC 색인 20건+ / 큐 3주 미만 / GSC 노출 증거 중 하나.
-  현재 병목은 소재가 아니라 색인이므로, 실사용은 색인 회복 후 권장.
+`scripts/ingest_keyword_intel.py`와 `data/cak_export.sample.json`은 이전
+`BlogExport`를 `source=cak_keyword_intel` 수동 큐에 넣는 별도 경로로 유지한다.
+CAK `analyze --profile blog-kr --json`은 이 계약을 지원한다.
+자동 시장 선정에는 이 importer를 연결하지 않는다. 질문 원문도 큐에 저장하지 않는다.
+자동 발행은 위의 측정 지표 계약과 `category_market_v1` 검증 경로를 사용한다.
+
+`candidate_check_only=true`는 CAK artifact의 실제 다운로드 권한과 지표 계약만 검사한다.
+Codex 인증을 복원하지 않고 카테고리 보고서·큐·발행 이력을 변경하지 않는다.
+인증/웹검색 점검도 선택하면 기존 점검을 우선한다.

@@ -1,14 +1,14 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-09-09T22:20:00.208198+00:00",
+    "selected_at": "2026-09-10T01:19:17.560148+00:00",
     "seeds": [
       "채용",
       "공기업",
       "자격증",
       "면접"
     ],
-    "selection_version": 2,
+    "selection_version": 3,
     "research_rounds": 2,
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
@@ -18,54 +18,54 @@
     "rejected": [
       {
         "keyword": "이직확인서작성방법",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "전기기사시험일정",
-        "reason": "organic result lookup unavailable"
+        "reason": "no accessible official source supports topic"
       },
       {
         "keyword": "산업기사시험일정",
-        "reason": "organic result lookup unavailable"
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "전기기사시험일정",
+        "reason": "no accessible official source supports topic"
       },
       {
         "keyword": "컴활2급필기",
-        "reason": "organic result lookup unavailable"
+        "reason": "organic lookup unavailable; requires a specific measured long-tail"
       },
       {
         "keyword": "장례지도사자격증",
-        "reason": "organic result lookup unavailable"
+        "reason": "no accessible official source supports topic"
       },
       {
         "keyword": "안전관리자자격증",
-        "reason": "organic result lookup unavailable"
+        "reason": "no accessible official source supports topic"
       },
       {
         "keyword": "50대자격증추천",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "청소년상담사자격증",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "컴퓨터자격증종류",
-        "reason": "organic result lookup unavailable"
-      },
-      {
-        "keyword": "민간자격증조회",
-        "reason": "organic result lookup unavailable"
+        "reason": "no accessible official source supports topic"
       },
       {
         "keyword": "ITQ자격증조회",
-        "reason": "organic result lookup unavailable"
+        "reason": "no accessible official source supports topic"
       },
       {
-        "keyword": "데이터분석자격증",
-        "reason": "organic result lookup unavailable"
+        "keyword": "민간자격증조회",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "컴퓨터자격증종류",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "국가기술자격증종류",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "청소년상담사자격증",
+        "reason": "no accessible official source supports topic"
       }
     ],
-    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Null trend means unavailable."
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Codex-opened official pages are source evidence, not SERP rankings; missing competition earns zero points. Null trend means unavailable."
   },
   "생활정보": {
     "category": "생활정보",

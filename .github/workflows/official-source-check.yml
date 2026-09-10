@@ -1,0 +1,32 @@
+name: Official Source Connectivity Diagnostic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install public source reader dependencies
+        run: pip install requests beautifulsoup4
+      - name: Check fixed public official sources
+        run: python scripts/check_official_sources.py --output "$RUNNER_TEMP/official-source-check.json"
+      - name: Upload public source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-check-${{ github.run_id }}
+          path: ${{ runner.temp }}/official-source-check.json
+          retention-days: 3

@@ -142,6 +142,28 @@ def _source_response(html, content_type="text/html; charset=utf-8"):
     return response
 
 
+@pytest.mark.parametrize('url', [
+    'https://www.korea.kr/news/policyNewsView.do?newsId=148960444',
+    'https://m.korea.kr/news/policyNewsView.do?newsId=148960444',
+])
+def test_korea_policy_source_uses_existing_official_body_checks(url):
+    with patch('src.editorial.requests.get', return_value=_source_response(
+            '<main>' + 'Official policy source. ' * 20 + '</main>')):
+        assert fetch_source(url)['url'] == url
+    with patch('src.editorial.requests.get', return_value=_source_response('<main>Menu</main>')):
+        assert fetch_source(url) is None
+
+
+@pytest.mark.parametrize('url', [
+    'https://korea.kr.evil.test/news', 'https://evilkorea.kr/news',
+    'https://korea.kr@evil.test/news', 'http://www.korea.kr/news',
+])
+def test_korea_policy_source_spoof_or_insecure_url_never_requested(url):
+    with patch('src.editorial.requests.get') as get:
+        assert fetch_source(url) is None
+        get.assert_not_called()
+
+
 @pytest.mark.parametrize("url", KCCI_GUIDE_URLS)
 def test_kcci_official_guide_is_read_as_evidence_with_existing_html_rules(url):
     # Reduced fixture with the mobile guide's main/table structure. Retrieval

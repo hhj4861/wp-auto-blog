@@ -27,7 +27,7 @@ OFFICIAL_DOMAINS = {
     "emiratesgroupcareers.com", "emirates.com", "finnair.com", "airbusan.com",
     "koreanair.com", "flyasiana.com", "qatarairways.com", "singaporeair.com",
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
-    "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net",
+    "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net", "korea.kr",
 }
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35

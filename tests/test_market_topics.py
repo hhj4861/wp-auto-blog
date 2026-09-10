@@ -367,7 +367,7 @@ def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(tmp_
 
     # Even a deleted WordPress post and a renamed title cannot re-admit its keyword.
     report = market.select_category
-    with pytest.raises(RuntimeError, match='already covered'):
+    with pytest.raises(RuntimeError, match='No uncovered measured candidates in this category'):
         report('취업', 1)
     again = market_pipeline.run_single(queued['topic'], queued['keywords'], '취업', market_brief=queued)
     assert not again.success and 'Duplicate' in again.error
@@ -689,3 +689,183 @@ def test_native_source_check_can_cross_korean_midnight():
     assert market.fresh_market_item(row, '취업', now)
     row['verified_sources'][0]['checked_on'] = '2026-09-11'
     assert not market.fresh_market_item(row, '취업', now)
+
+
+@pytest.mark.parametrize('keyword,category', [
+    ('국가기술자격증종류', '취업'),
+    ('2026 국가 기술 자격증 종류', '취업'),
+    ('자격증종류', '취업'),
+    ('공기업채용일정', '취업'),
+    ('건강보험공단채용일정', '취업'),
+    ('예방접종관련자격증', '취업'),
+    ('건강보험료환급금', '건강'),
+    ('건강보험자격증명서', '건강'),
+    ('국가건강검진대상', '건강'),
+    ('예방접종일정', '건강'),
+    ('종합소득세신고방법', '생활정보'),
+    ('전기요금계산', '생활정보'),
+    ('전세보증금반환', '생활정보'),
+])
+def test_clear_keyword_domain_does_not_follow_requested_category(keyword, category):
+    assert market.inferred_keyword_category(keyword) == category
+    assert market.category_matches(keyword, category)
+    assert all(not market.category_matches(keyword, other)
+               for other in market.CATEGORIES if other != category)
+
+
+@pytest.mark.parametrize('category', ['취업', '건강', '생활정보'])
+def test_unclear_keyword_domain_is_left_for_evidence_review(category):
+    assert market.inferred_keyword_category('안내확인방법') is None
+    assert market.category_matches('안내확인방법', category)
+
+
+@pytest.mark.parametrize('keyword', ['자격', '지원금', '신청자격'])
+def test_generic_eligibility_terms_do_not_imply_employment(keyword):
+    assert market.inferred_keyword_category(keyword) != '취업'
+
+
+@pytest.mark.parametrize('keyword', [
+    '수급자격증명서', '수급자격증빙서류', '의료비세액공제', '건강보험료연말정산',
+])
+def test_eligibility_documents_and_mixed_health_tax_terms_remain_undecided(keyword):
+    assert market.inferred_keyword_category(keyword) is None
+    assert all(market.category_matches(keyword, category) for category in market.CATEGORIES)
+
+
+@pytest.mark.parametrize('keyword', ['의료비세액공제', '건강보험료연말정산'])
+def test_mixed_health_tax_topic_can_follow_living_information_evidence_review(monkeypatch, keyword):
+    review = Mock(return_value=analysis(keyword, '생활정보'))
+    monkeypatch.setattr(market, 'ask', review)
+    item, reason = market.topic_from_evidence(keyword, '생활정보', '2026-09-10',
+                                              [organic()], [evidence()])
+    review.assert_called_once()
+    assert reason is None and item['category'] == '생활정보'
+    assert '의료비세액공제' in review.call_args.args[0].replace(' ', '')
+
+
+@pytest.mark.parametrize('category,expected', [
+    ('취업', {'국가기술자격증종류', '안내확인방법'}),
+    ('건강', {'건강보험료환급금', '안내확인방법'}),
+    ('생활정보', {'전기요금계산', '안내확인방법'}),
+])
+def test_category_pool_excludes_cross_category_related_keywords(category, expected):
+    stats = {keyword: {'keyword': keyword, 'monthly': 1200} for keyword in
+             ('국가기술자격증종류', '건강보험료환급금', '전기요금계산', '안내확인방법')}
+    assert {row['keyword'] for row in market.candidate_pool(stats, [], category)} == expected
+    assert {row['keyword'] for row in market.candidate_pool(stats, [])} == set(stats)
+
+
+def test_selection_passes_requested_category_to_pool(monkeypatch):
+    category = '생활정보'
+    keyword = '전기요금계산'
+    stats = {key: {'keyword': key, 'monthly': 1200}
+             for key in ('국가기술자격증종류', keyword)}
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: stats)
+    original_pool = market.candidate_pool
+    seen_categories = []
+
+    def pool(stats, titles, category=None):
+        seen_categories.append(category)
+        return original_pool(stats, titles, category)
+
+    monkeypatch.setattr(market, 'candidate_pool', pool)
+    monkeypatch.setattr(market, 'ask', Mock(side_effect=[
+        {'candidates': [{'keyword': keyword}]}, analysis(keyword, category)]))
+    monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', [organic()]))
+    monkeypatch.setattr(market, 'candidate_sources', lambda *args: [evidence()])
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    report = market.select_category(category, 1, titles=[])
+    assert seen_categories == [category]
+    assert [item['keyword'] for item in report['selected']] == [keyword]
+
+
+def test_cross_category_proposal_is_rejected_even_if_it_reaches_pool(monkeypatch):
+    keyword = '국가기술자격증종류'
+    measured = {'keyword': keyword, 'monthly': 1200}
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {keyword: measured})
+    monkeypatch.setattr(market, 'candidate_pool', lambda *args, **kwargs: [measured])
+    monkeypatch.setattr(market, 'ask', lambda _: {'candidates': [{'keyword': keyword}]})
+    search = Mock(side_effect=AssertionError('Mismatched category must not trigger research'))
+    monkeypatch.setattr(market, 'search_results', search)
+    report = market.select_category('생활정보', 1, titles=[])
+    assert report['selected'] == []
+    assert report['rejected'] == [{'keyword': keyword, 'reason': 'category mismatch'}]
+    search.assert_not_called()
+
+
+@pytest.mark.parametrize('evidence_mode', ['serp', 'official_pages'])
+@pytest.mark.parametrize('keyword,category,accepted', [
+    ('국가기술자격증종류', '생활정보', False),
+    ('국가기술자격증종류', '취업', True),
+    ('건강보험료환급금', '생활정보', False),
+    ('건강보험료환급금', '건강', True),
+])
+def test_requested_category_in_model_json_cannot_override_keyword_domain(
+        monkeypatch, evidence_mode, keyword, category, accepted):
+    result = analysis(keyword, category, source_indices=[0])
+    if keyword == '국가기술자격증종류':
+        result['topic'] = '국가기술자격증종류: 기능사·산업기사·기사·기능장·기술사 등급 비교'
+    monkeypatch.setattr(market, 'ask', lambda _: result)
+    sources = [web_evidence()]
+    organic_results = [organic()] if evidence_mode == 'serp' else []
+    item, reason = market.topic_from_evidence(keyword, category, '2026-09-10', organic_results,
+                                              sources, evidence_mode=evidence_mode)
+    if accepted:
+        assert reason is None and item['category'] == category
+    else:
+        assert item is None and reason == 'category mismatch'
+
+
+@pytest.mark.parametrize('evidence_mode', ['serp', 'official_pages'])
+def test_generated_title_cannot_move_unknown_keyword_into_other_category(monkeypatch, evidence_mode):
+    keyword = '안내확인방법'
+    result = analysis(keyword, '생활정보', source_indices=[0],
+                      topic='안내확인방법: 국가기술자격증종류와 기능사 등급 비교')
+    monkeypatch.setattr(market, 'ask', lambda _: result)
+    item, reason = market.topic_from_evidence(keyword, '생활정보', '2026-09-10',
+                                              [organic()] if evidence_mode == 'serp' else [],
+                                              [web_evidence()], evidence_mode=evidence_mode)
+    assert item is None and reason == 'category mismatch'
+
+
+@pytest.mark.parametrize('supported,model_category,accepted', [
+    (True, '생활정보', True), (False, '생활정보', False), (True, '건강', False),
+])
+def test_unknown_keyword_still_requires_independent_model_category_review(
+        monkeypatch, supported, model_category, accepted):
+    review = Mock(return_value=analysis('안내확인방법', model_category, supported=supported))
+    monkeypatch.setattr(market, 'ask', review)
+    item, reason = market.topic_from_evidence('안내확인방법', '생활정보', '2026-09-10',
+                                              [organic()], [evidence()])
+    review.assert_called_once()
+    assert '"category":"생활정보"' not in review.call_args.args[0].replace(' ', '')
+    assert (item is not None) is accepted
+    assert bool(reason) is not accepted
+
+
+@pytest.mark.parametrize('evidence_mode', ['serp', 'official_pages'])
+@pytest.mark.parametrize('keyword,topic', [
+    ('국가기술자격증종류', '국가기술자격증종류: 기능사·산업기사·기사·기능장·기술사 등급 비교'),
+    ('건강보험료환급금', '건강보험료환급금 확인 방법'),
+    ('안내확인방법', '안내확인방법: 국가기술자격증종류와 기능사 등급 비교'),
+])
+def test_cached_wrong_category_report_cannot_be_enqueued(evidence_mode, keyword, topic):
+    row = web_candidate() if evidence_mode == 'official_pages' else candidate()
+    row.update(category='생활정보', keyword=keyword, topic=topic, keywords=[keyword])
+    queue = [{'source': 'manual', 'status': 'pending', 'topic': '기존 보존 항목'}]
+    before = [dict(item) for item in queue]
+    assert not market.fresh_market_item(row, '생활정보')
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report(queue, {'category': '생활정보', 'selected': [row]})
+    assert queue == before
+
+
+@pytest.mark.parametrize('evidence_mode', ['serp', 'official_pages'])
+@pytest.mark.parametrize('keyword,category', [
+    ('국가기술자격증종류', '취업'), ('건강보험료환급금', '건강'),
+])
+def test_correct_category_cached_report_remains_usable(evidence_mode, keyword, category):
+    row = web_candidate() if evidence_mode == 'official_pages' else candidate()
+    row.update(category=category, keyword=keyword, topic=keyword + ' 확인 방법', keywords=[keyword])
+    assert market.fresh_market_item(row, category)
+    assert market.enqueue_report([], {'category': category, 'selected': [row]}) == [row]

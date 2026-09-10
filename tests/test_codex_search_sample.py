@@ -124,6 +124,7 @@ def test_success_uses_bound_native_dto_and_never_prints_text(setup, monkeypatch,
     args, kwargs = popen.call_args
     command = args[0]
     for option in ('features.standalone_web_search=true', 'web_search="live"',
+                   'features.code_mode.direct_only_tool_namespaces=["web"]',
                    'forced_login_method="chatgpt"', 'cli_auth_credentials_store="file"',
                    'features.shell_tool=false', 'features.hooks=false',
                    'features.plugins=false', 'features.apps=false'):
@@ -438,6 +439,8 @@ def test_native_dynamic_query_is_json_data_and_returns_only_native_fields(setup,
     instructions, commands = prompt.split("\n", 1)
     assert query not in instructions
     assert json.loads(commands) == {"search_query": [{"q": query}], "response_length": "short"}
+    assert "web.run tool directly" in instructions
+    assert "Never use a functions.exec wrapper" in instructions
     assert capsys.readouterr() == ("", "")
 
 
@@ -619,18 +622,24 @@ def test_invalid_ambiguous_or_oversized_raw_json_is_rejected_without_logging(set
     assert output.err == "" and "SECRET" not in output.out
 
 
-@pytest.mark.parametrize("field,value", [("name", "exec"), ("namespace", "functions"),
-    ("namespace", None), ("name", "web.run"), ("type", "custom_tool_call"),
-    ("type", "web_search_call"), ("type", "local_shell_call"),
-    ("type", "tool_search_call"), ("type", "new_unknown_call")])
-def test_other_raw_tools_are_rejected_even_with_a_valid_native_search(setup, field, value):
+@pytest.mark.parametrize("field,value,reason", [
+    ("name", "exec", "unexpected_raw_function_identity"),
+    ("namespace", "functions", "unexpected_raw_function_identity"),
+    ("namespace", None, "unexpected_raw_function_identity"),
+    ("name", "web.run", "unexpected_raw_function_identity"),
+    ("type", "custom_tool_call", "unexpected_raw_item_type"),
+    ("type", "web_search_call", "unexpected_raw_item_type"),
+    ("type", "local_shell_call", "unexpected_raw_item_type"),
+    ("type", "tool_search_call", "unexpected_raw_item_type"),
+    ("type", "new_unknown_call", "unexpected_raw_item_type")])
+def test_other_raw_tools_are_rejected_even_with_a_valid_native_search(setup, field, value, reason):
     _, install = setup
     raw = raw_call()
     raw["params"]["item"][field] = value
     install(handshake() + [item_event(), raw, completion()])
     with pytest.raises(transport.NativeSearchError) as caught:
         transport.native_search(probe.QUERY)
-    assert caught.value.reason == "unexpected_tool_activity"
+    assert caught.value.reason == reason
 
 
 def test_duplicate_raw_id_requires_same_exact_command_and_never_inflates_counts(setup):
@@ -663,4 +672,113 @@ def test_raw_function_output_is_bound_but_never_parsed_for_rows(setup, call_id, 
     report = transport.inspect_native_search(probe.QUERY)
     assert report["reason"] == reason
     assert report["result_count"] == 1
+    assert capsys.readouterr() == ("", "")
+
+
+@pytest.mark.parametrize("namespace,name,counter", [
+    (None, "web.run", "raw_flattened_web_events"),
+    ("", "web.run", "raw_flattened_web_events"),
+    ("functions", "web.run", "raw_flattened_web_events"),
+    (None, "exec", "raw_code_mode_events"),
+    ("functions", "exec", "raw_code_mode_events"),
+    ("web", "web.run", "raw_other_function_identity_events"),
+    ("SECRET-SENTINEL", "SECRET-SENTINEL", "raw_other_function_identity_events"),
+    ({"SECRET-SENTINEL": "private"}, ["SECRET-SENTINEL"], "raw_other_function_identity_events"),
+])
+def test_unregistered_raw_function_identity_is_counted_without_aliasing_or_logging(
+        setup, namespace, name, counter, capsys):
+    _, install = setup
+    raw = raw_call()
+    raw["params"]["item"].update(namespace=namespace, name=name)
+    process, _ = install(handshake(include_raw=False) + [raw, item_event(), completion()])
+    assert probe.main() == 1
+    output = capsys.readouterr()
+    report = json.loads(output.out)
+    assert report["reason"] == "unexpected_raw_function_identity"
+    assert report["raw_function_call_events"] == report[counter] == 1
+    assert report["validated_web_calls"] == report["bound_search_items"] == 0
+    assert report["raw_namespaced_web_events"] == report["completed_web_items"] == 0
+    assert all(type(value) is int for key, value in report.items() if key != "reason")
+    assert output.err == "" and "SECRET" not in output.out
+    assert process.stdin.closed and process.stdout.closed
+
+
+@pytest.mark.parametrize("namespace,name,counter", [
+    (None, "exec", "raw_code_mode_events"),
+    ("functions", "exec", "raw_code_mode_events"),
+    (None, "web.run", "raw_flattened_web_events"),
+    ("web", "run", "raw_namespaced_web_events"),
+    ("SECRET-SENTINEL", "SECRET-SENTINEL", "raw_other_function_identity_events"),
+])
+def test_raw_freeform_exec_is_identified_but_never_authorizes_nested_results(
+        setup, namespace, name, counter, capsys):
+    _, install = setup
+    raw = raw_call()
+    raw["params"]["item"].update(type="custom_tool_call", namespace=namespace, name=name,
+        input="SECRET-SENTINEL; web.run(" + raw["params"]["item"]["arguments"] + ")")
+    install(handshake(include_raw=False) + [raw, item_event(), completion()])
+    assert probe.main() == 1
+    output = capsys.readouterr()
+    report = json.loads(output.out)
+    assert report["reason"] == "unexpected_raw_item_type"
+    assert report["raw_custom_tool_call_events"] == report[counter] == 1
+    assert report["raw_function_call_events"] == report["validated_web_calls"] == 0
+    assert report["bound_search_items"] == report["completed_web_items"] == 0
+    assert output.err == "" and "SECRET" not in output.out
+
+
+@pytest.mark.parametrize("recipient,counter", [
+    ("web.run", "raw_agent_to_web_run_events"),
+    ("functions.exec", "raw_agent_to_code_mode_events"),
+    ("SECRET-SENTINEL", "raw_agent_to_other_events"),
+    (None, "raw_agent_to_other_events"),
+])
+def test_raw_agent_recipient_rejection_has_only_fixed_metadata(setup, recipient, counter, capsys):
+    _, install = setup
+    raw = item_event({"type": "agent_message", "recipient": recipient,
+                      "content": "SECRET-SENTINEL"}, method="rawResponseItem/completed")
+    install(handshake(include_raw=False) + [raw, item_event(), completion()])
+    assert probe.main() == 1
+    output = capsys.readouterr()
+    report = json.loads(output.out)
+    assert report["reason"] == "unexpected_raw_agent_recipient"
+    assert report["raw_agent_message_events"] == report[counter] == 1
+    assert report["validated_web_calls"] == 0
+    assert output.err == "" and "SECRET" not in output.out
+
+
+@pytest.mark.parametrize("item,reason,counter", [
+    (["SECRET-SENTINEL"], "invalid_raw_item", None),
+    ({"type": ["SECRET-SENTINEL"]}, "unexpected_raw_item_type", "raw_other_item_events"),
+    ({"type": "SECRET-SENTINEL"}, "unexpected_raw_item_type", "raw_other_item_events"),
+    ({"type": "function_call", "namespace": "web", "name": "run", "call_id": None},
+     "invalid_raw_call_id", "raw_namespaced_web_events"),
+    ({"type": "function_call_output", "call_id": None},
+     "invalid_raw_output_id", "raw_function_output_events"),
+    ({"type": "function_call_output", "call_id": "search-1", "name": "SECRET-SENTINEL"},
+     "unexpected_raw_output_identity", "raw_function_output_events"),
+])
+def test_raw_shape_failures_have_distinct_fixed_reasons(setup, item, reason, counter, capsys):
+    _, install = setup
+    raw = item_event(item, method="rawResponseItem/completed")
+    install(handshake(include_raw=False) + [raw, item_event(), completion()])
+    assert probe.main() == 1
+    output = capsys.readouterr()
+    report = json.loads(output.out)
+    assert report["reason"] == reason
+    if counter:
+        assert report[counter] == 1
+    assert output.err == "" and "SECRET" not in output.out
+
+
+def test_passive_raw_messages_are_counted_but_cannot_supply_results(setup, capsys):
+    _, install = setup
+    messages = [item_event({"type": kind, "recipient": "all", "content": "SECRET-SENTINEL"},
+        method="rawResponseItem/completed") for kind in ("message", "reasoning", "agent_message")]
+    install(handshake() + messages + [item_event(), completion()])
+    report = transport.inspect_native_search(probe.QUERY)
+    assert report["reason"] == "ok" and report["result_count"] == 1
+    for field in ("raw_message_events", "raw_reasoning_events", "raw_agent_message_events",
+                  "raw_agent_to_all_events", "raw_function_call_events", "raw_namespaced_web_events"):
+        assert report[field] == 1
     assert capsys.readouterr() == ("", "")

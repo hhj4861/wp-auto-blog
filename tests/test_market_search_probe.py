@@ -281,8 +281,7 @@ def test_search_probe_workflow_is_exclusive_and_has_no_publication_or_codex_cred
         assert 'inputs.search_check_only != true' in jobs[name]['if']
     check = next(step for step in probe_job['steps'] if step.get('name') == 'Check actual search result availability')
     assert check['run'] == 'python scripts/check_market_search.py'
-    assert set(check['env']) == {'GOOGLE_SEARCH_API_KEY', 'GOOGLE_SEARCH_ALTERNATE_API_KEY',
-                                'GOOGLE_SEARCH_ENGINE_ID'}
+    assert set(check['env']) == {'GOOGLE_SEARCH_API_KEY', 'GOOGLE_SEARCH_ENGINE_ID'}
     job_text = json.dumps(probe_job)
     assert all(word not in job_text for word in ('CODEX_AUTH', 'WP_GENERAL', 'select_blog_keywords',
                                                'git push', 'src.main', 'fetch_cak_candidates'))

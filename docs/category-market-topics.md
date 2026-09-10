@@ -54,6 +54,11 @@ GitHub Actions → Blog Keyword Select → category=all 또는 특정 카테고�
 이 작업은 글을 발행하지 않는다. 구독 인증을 쓰는 실제 선정 실행은 main에서 수행한다.
 main 실행은 생성된 보고서를 커밋한다. 일부 카테고리가 실패해도 다른 카테고리의 검증된 결과는 보존한다. 자동 발행은 기존 Auto Blog Post의 post-queue 작업이다.
 
+`research_check_only=true`는 웹검색 한 번과 공식 본문 접근만 점검한다. 카테고리 보고서를
+생성·커밋하지 않으며 기존 보고서도 건드리지 않는다. 실제 검색 활동 없음, 공개 페이지 열람 없음,
+공식 페이지 없음, 공식 HTML 접근 실패를 고정된 사유와 도구 이벤트 건수로 구분한다.
+`auth_check_only=true`도 지정하면 인증 점검만 우선한다. 두 점검 모두 인증 갱신 저장·정리는 유지한다.
+
 SELECT_TOP_N의 빈 문자열은 2로 처리하며 1~5만 허용한다. 이전 건강/뷰티 전용 스캘폴드 생성은
 이 선정 작업에서 제거했다. BytePulse 발행 파이프라인은 변경하지 않았다.
 
@@ -84,8 +89,9 @@ SELECT_TOP_N의 빈 문자열은 2로 처리하며 1~5만 허용한다. 이전 �
 공개 저장소의 구독 인증은 기존 guard에 따라 main의 수동/예약 실행에서만 허용한다.
 검증 브랜치에서는 단위 시험을 수행하고, 실제 인증 검증은 검토·머지 후 main에서 수행한다.
 
-Codex 웹검색은 별도 검색 API 키를 요구하지 않는다. CLI `--search`, `exec --json`을 사용하고
+Codex 웹검색은 별도 검색 API 키를 요구하지 않는다. CLI `-c web_search="live"`, `exec --json`을 사용하고
 연구 요청에서 셸 도구를 비활성화한다. 읽기 전용 샌드박스와 자격 증명 환경 격리를 유지한다.
+설치 버전 0.153.4의 TUI `--search`만으로는 exec 설정이 전달되지 않아 명시적인 `-c`가 필요하다.
 검색 이벤트 원문은 로그에 출력하지 않으며, 검증에 필요한 공개 URL과 고정된 상태만 남긴다.
 관련 계약: [Codex 웹검색](https://learn.chatgpt.com/docs/web-search),
 [비대화형 JSONL 출력](https://learn.chatgpt.com/docs/non-interactive-mode).

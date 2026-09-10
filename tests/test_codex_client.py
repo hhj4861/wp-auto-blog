@@ -42,6 +42,7 @@ def test_transport_uses_stdin_final_file_and_isolated_environment(client, monkey
     assert "read-only" in seen["command"]
     assert "test-model" in seen["command"]
     assert "--search" not in seen["command"]
+    assert 'web_search="live"' not in seen["command"]
     assert "--json" not in seen["command"]
     assert seen["stdout"] == subprocess.DEVNULL
     assert seen["command"][-1] == "-"
@@ -233,8 +234,17 @@ def test_research_uses_only_completed_web_tool_activity(client, monkeypatch):
         "text": '{"urls":["https://invented.example/"]}',
         "searched": True,
         "opened_urls": ["https://www.gov.kr/policy", "https://www.gov.kr/another"],
+        "diagnostics": {
+            "completed_web_items": 7, "search_actions": 1, "open_page_actions": 3,
+            "rejected_url_count": 0, "reference_url_count": 0, "invalid_action_count": 2,
+        },
     }
     assert seen["command"].index("--search") < seen["command"].index("exec")
+    # 0.153.4 ignores the root TUI --search field for exec; -c must enable it.
+    live_override = seen["command"].index('web_search="live"')
+    assert seen["command"][live_override - 1] == "-c"
+    assert live_override < seen["command"].index("exec")
+    assert "--ignore-user-config" in seen["command"]
     assert "--json" in seen["command"]
     assert "features.shell_tool=false" in seen["command"]
     assert "read-only" in seen["command"]
@@ -246,7 +256,7 @@ def test_research_uses_only_completed_web_tool_activity(client, monkeypatch):
 
 
 @pytest.mark.parametrize("events", [
-    "", "not JSON", json.dumps({"type": "item.completed", "item": {
+    None, "", "not JSON", json.dumps({"type": "item.completed", "item": {
         "type": "agent_message", "text": "I searched the web: https://www.gov.kr/",
     }}),
     json.dumps(research_event({"type": "search"}, event_type="item.started")),
@@ -255,7 +265,45 @@ def test_research_uses_only_completed_web_tool_activity(client, monkeypatch):
 ])
 def test_research_does_not_infer_a_search_from_model_text_or_started_events(client, monkeypatch, events):
     mock_research_process(monkeypatch, events)
-    assert client.research("prompt") == {"text": "research summary", "searched": False, "opened_urls": []}
+    assert client.research("prompt") == {
+        "text": "research summary", "searched": False, "opened_urls": [],
+        "diagnostics": {
+            "completed_web_items": 0, "search_actions": 0, "open_page_actions": 0,
+            "rejected_url_count": 0, "reference_url_count": 0, "invalid_action_count": 0,
+        },
+    }
+
+
+def test_research_diagnostics_count_actions_and_references_without_exposing_events(client, monkeypatch, capsys):
+    events = [
+        research_event({"type": "search", "query": "private query"}),
+        research_event({"type": "search", "queries": ["private query 2"]}),
+        research_event({"type": "open_page", "url": "turn0search0"}),
+        research_event({"type": "open_page", "url": "turn12view9"}),
+        research_event({"type": "open_page", "url": "/relative"}),
+        research_event({"type": "open_page", "url": "https://user:private@example.com/"}),
+        research_event({"type": "open_page"}),
+        research_event({"type": "open_page", "url": "https://www.gov.kr/#one"}),
+        research_event({"type": "open_page", "url": "https://www.gov.kr/#two"}),
+        research_event(None),
+        research_event({}),
+        research_event({"type": []}),
+        research_event({"type": "openPage", "url": "https://ignored.example/"}),
+        {"type": "item.completed", "item": {"type": "web_search"}},
+        research_event({"type": "other"}),
+        research_event({"type": "find_in_page", "url": "turn0search0", "pattern": "private"}),
+    ]
+    mock_research_process(monkeypatch, "\n".join(map(json.dumps, events)), stderr="private stderr")
+    result = client.research("private prompt")
+    assert result["searched"] is True
+    assert result["opened_urls"] == ["https://www.gov.kr/"]
+    assert result["diagnostics"] == {
+        "completed_web_items": 16, "search_actions": 2, "open_page_actions": 7,
+        "rejected_url_count": 5, "reference_url_count": 2, "invalid_action_count": 5,
+    }
+    assert all(type(value) is int for value in result["diagnostics"].values())
+    assert "private" not in json.dumps(result)
+    assert capsys.readouterr() == ("", "")
 
 
 @pytest.mark.parametrize("url", [
@@ -272,7 +320,10 @@ def test_research_does_not_infer_a_search_from_model_text_or_started_events(clie
 ])
 def test_research_rejects_unsafe_or_non_web_open_urls(client, monkeypatch, url):
     mock_research_process(monkeypatch, json.dumps(research_event({"type": "open_page", "url": url})))
-    assert client.research("prompt")["opened_urls"] == []
+    result = client.research("prompt")
+    assert result["opened_urls"] == []
+    assert result["diagnostics"]["open_page_actions"] == 1
+    assert result["diagnostics"]["rejected_url_count"] == 1
 
 
 def test_research_failure_does_not_expose_jsonl_or_stderr(client, monkeypatch, capsys):
@@ -308,5 +359,9 @@ def test_research_real_subprocess_keeps_refreshed_auth_and_captures_jsonl(tmp_pa
     client = CodexSubscriptionClient(home=str(auth_home))
     assert client.research("한글 source summary") == {
         "text": "한글 source summary", "searched": True, "opened_urls": ["https://www.gov.kr/"],
+        "diagnostics": {
+            "completed_web_items": 2, "search_actions": 1, "open_page_actions": 1,
+            "rejected_url_count": 0, "reference_url_count": 0, "invalid_action_count": 0,
+        },
     }
     assert auth.read_text(encoding="utf-8") == "test-only-refreshed"

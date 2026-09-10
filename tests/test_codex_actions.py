@@ -216,6 +216,32 @@ def test_existing_category_jobs_keep_schedule_and_share_writer():
         assert f'CAT="{category}"' in queue
 
 
+@pytest.mark.parametrize('worker_exit', [0, 1])
+def test_queue_draft_recovery_skips_selection_and_new_post_creation(tmp_path, worker_exit):
+    import os
+    import subprocess
+    from pathlib import Path
+    workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
+    job = workflow['jobs']['post-queue']
+    assert job['env']['BLOG_MODE'] == 'queue'
+    script = next(s['run'] for s in job['steps']
+                  if s.get('name', '').startswith('Run pipeline'))
+    fake_python = tmp_path / 'python'
+    calls = tmp_path / 'calls'
+    fake_python.write_text('#!/bin/sh\nprintf "%s\\n" "$*" >> "$RECOVERY_CALLS"\n'
+                           + f'exit {worker_exit}\n')
+    fake_python.chmod(0o700)
+    result = subprocess.run(['bash', '-e', '-c', script], capture_output=True, text=True,
+        env={**os.environ, 'PATH': str(tmp_path) + os.pathsep + os.environ['PATH'],
+             'BLOG_RESUME_DRAFT_ID': '1724', 'RECOVERY_CALLS': str(calls)})
+    assert result.returncode == worker_exit, result.stderr
+    assert calls.read_text().splitlines() == ['scripts/run_codex_worker.py']
+    persistence = next(s for s in job['steps'] if s.get('name') == 'Commit queue and registry updates')
+    assert persistence['if'] == 'always()'
+    for path in ('data/topic_queue_general.json', 'data/posted_market_keywords.json'):
+        assert path in persistence['run']
+
+
 @pytest.mark.parametrize('repo,event,ref,opt_in,allowed', [
     ('hhj4861/wp-auto-blog', 'workflow_dispatch', 'refs/heads/main', '1', True),
     ('hhj4861/wp-auto-blog', 'schedule', 'refs/heads/main', '1', True),

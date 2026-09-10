@@ -6,7 +6,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 from bs4 import BeautifulSoup
-from src.editorial import fetch_source, reader_layout, review_evidence, is_official_url, editorial_checks
+from src.editorial import fetch_source, reader_layout, review_evidence, repair_evidence, EvidenceRepairError, is_official_url, editorial_checks
 from src.pipeline import rank_related_posts, BlogPipeline, PipelineConfig
 from src.content_generator import GeneratedContent, ContentType
 from src.trend_detector import Topic, TrendSource
@@ -15,6 +15,106 @@ from scripts.refresh_search_winners import select_candidates
 
 SOURCE = dict(url="https://news.samsung.com/kr/test", original_url="https://news.samsung.com/kr/test",
               title="Official announcement", checked_on="2026-09-08", sha256="abc", excerpt="GSAT is in October.")
+
+REPAIR_HTML = ('<div class="wpab-article"><section id="quick-answer"><p>GSAT 일정은 10월입니다.</p></section>'
+               '<h2 id="dates">일정</h2><p>검증되지 않은 설명입니다.</p>'
+               '<h2 id="faq">FAQ</h2><h3 id="when">언제인가요?</h3><p>10월입니다.</p></div>')
+
+
+def test_evidence_repair_uses_one_call_and_only_supplied_context():
+    corrected = REPAIR_HTML.replace('검증되지 않은 설명입니다.',
+                                    f'<a href="{SOURCE["url"]}">공식 안내</a>에서 10월 일정을 확인하세요.')
+    writer = Mock(return_value=corrected)
+    with patch('src.editorial.requests.get', side_effect=AssertionError('No repair research')):
+        result = repair_evidence(REPAIR_HTML, [SOURCE], writer, ['근거 없는 설명을 삭제하세요.'], keyword='GSAT')
+    assert '검증되지 않은 설명' not in result
+    assert SOURCE['url'] in result
+    writer.assert_called_once()
+    prompt = writer.call_args.args[0]
+    assert 'Do not browse' in prompt and 'remove or narrow' in prompt
+    data = json.loads(prompt.split('\n', 1)[1])
+    assert data['sources'] == [{key: SOURCE[key] for key in ('url', 'checked_on', 'excerpt')}]
+    assert data['issues'] == ['근거 없는 설명을 삭제하세요.']
+    assert data['keyword'] == 'GSAT'
+
+
+@pytest.mark.parametrize('response', [
+    None, '', '보완했습니다.', '```html\n' + REPAIR_HTML + '\n```',
+    REPAIR_HTML.replace('</p>', '', 1),
+    REPAIR_HTML.replace('id="quick-answer"', 'id="answer"'),
+    REPAIR_HTML.replace('class="wpab-article"', 'class="other"'),
+    REPAIR_HTML.replace('GSAT', '다른 검색어'),
+    REPAIR_HTML.replace('id="dates"', 'id="new-dates"'),
+    REPAIR_HTML.replace('</div>', '<script>alert(1)</script></div>'),
+    REPAIR_HTML.replace('<p>10월입니다.</p>', '<p onclick="alert(1)">10월입니다.</p>'),
+    REPAIR_HTML.replace('10월입니다.</p></div>', '<a href="https://www.niddk.nih.gov/new">새 근거</a></p></div>'),
+])
+def test_evidence_repair_rejects_invalid_html_without_retry(response):
+    writer = Mock(return_value=response)
+    with pytest.raises(RuntimeError, match='근거 보완 실패'):
+        repair_evidence(REPAIR_HTML, [SOURCE], writer, ['근거 보완'], keyword='GSAT')
+    writer.assert_called_once()
+
+
+def test_evidence_repair_preserves_protected_markup_without_sending_it_to_writer():
+    style = '<style id="wpab-reading-styles">.wpab-article{color:white}</style>'
+    script = '<script type="application/ld+json">{"name":"original"}</script>'
+
+    def revise(prompt):
+        article = json.loads(prompt.split('\n', 1)[1])['article']
+        assert '.wpab-article{color:white}' not in article
+        assert '"name":"original"' not in article
+        assert article.count('wpab-protected-') == 2
+        return article.replace('검증되지 않은 설명입니다.', '공식 자료에 나온 일정입니다.')
+
+    result = repair_evidence(style + REPAIR_HTML + script, [SOURCE], Mock(side_effect=revise), ['근거 보완'], keyword='GSAT')
+    soup = BeautifulSoup(result, 'html.parser')
+    assert str(soup.style) == style
+    assert str(soup.script) == script
+    assert 'wpab-protected-' not in result
+    assert soup.select_one('.wpab-article #quick-answer')
+
+
+@pytest.mark.parametrize('duplicate', [False, True])
+def test_evidence_repair_rejects_missing_or_duplicate_protected_placeholder(duplicate):
+    def revise(prompt):
+        article = json.loads(prompt.split('\n', 1)[1])['article']
+        soup = BeautifulSoup(article, 'html.parser')
+        comment = next(node for node in soup.descendants if isinstance(node, str) and 'wpab-protected-' in node)
+        return article + '<!--' + str(comment) + '-->' if duplicate else article.replace('<!--' + str(comment) + '-->', '')
+    writer = Mock(side_effect=revise)
+    with pytest.raises(RuntimeError, match='근거 보완 실패'):
+        repair_evidence('<style>p{color:white}</style>' + REPAIR_HTML, [SOURCE], writer, ['근거 보완'], keyword='GSAT')
+    writer.assert_called_once()
+
+
+def test_evidence_repair_failure_hides_raw_model_error():
+    writer = Mock(side_effect=RuntimeError('private response or credential'))
+    with pytest.raises(RuntimeError, match='근거 보완 실패') as error:
+        repair_evidence(REPAIR_HTML, [SOURCE], writer, ['근거 보완'], keyword='GSAT')
+    assert 'private' not in str(error.value)
+    writer.assert_called_once()
+
+
+@pytest.mark.parametrize(('response', 'reason'), [
+    ('', 'empty_response'),
+    (REPAIR_HTML.replace('</div>', ''), 'unbalanced_html'),
+    (REPAIR_HTML.replace('GSAT', '다른말'), 'keyword_missing'),
+    (REPAIR_HTML.replace('id="quick-answer"', 'id="lost"'), 'template_changed'),
+    (REPAIR_HTML.replace('</div>', '<a href="https://www.niddk.nih.gov/new">새자료</a></div>'), 'new_url'),
+])
+def test_evidence_repair_exposes_only_fixed_failure_code(response, reason):
+    with pytest.raises(EvidenceRepairError) as error:
+        repair_evidence(REPAIR_HTML, [SOURCE], Mock(return_value=response), ['근거 보완'], keyword='GSAT')
+    assert error.value.reason == reason
+    assert str(error.value) == f'근거 보완 실패 — 자동 발행 보류 ({reason})'
+
+
+def test_evidence_repair_requires_actual_source_excerpt_before_call():
+    writer = Mock()
+    with pytest.raises(RuntimeError, match='근거 보완 실패'):
+        repair_evidence(REPAIR_HTML, [{**SOURCE, 'excerpt': ''}], writer, ['근거 보완'], keyword='GSAT')
+    writer.assert_not_called()
 
 @pytest.mark.parametrize("url", ["https://samsung.com.evil.test/a", "https://samsung.com@evil.test/", "http://samsung.com/", "https://samsung.com:123/a"])
 def test_source_host_spoof_rejected(url):

@@ -12,6 +12,7 @@ import re
 from datetime import datetime
 from dataclasses import dataclass, field
 from enum import Enum
+from html import escape
 from pathlib import Path
 from typing import Optional
 
@@ -19,7 +20,7 @@ from loguru import logger
 from .editorial import (
     GENERAL_WRITING_RULES, POLICY_CATEGORIES, collect_sources, editorial_checks,
     host_matches, https_host, is_official_url, review_evidence, retry_research,
-    collect_research_sources, fetch_source,
+    collect_research_sources, fetch_source, repair_evidence, EvidenceRepairError,
 )
 
 try:
@@ -1694,13 +1695,33 @@ DO NOT use Markdown. Use only HTML tags."""
 
         editorial_issues = []
         if mode == "general":
+            def review_context(body):
+                return (f'<section data-review-metadata="true"><p>제목: {escape(title)}</p>'
+                        f'<p>메타 설명: {escape(meta_description)}</p></section>' + body)
+
             # A plausible host does not establish a specific application URL.
             official_url = official_link.partition("|")[2].strip()
             if official_url not in {s["url"] for s in sources}:
                 official_link = ""
             editorial_issues = editorial_checks(html, category or "", sources)
             if category in POLICY_CATEGORIES:
-                editorial_issues += review_evidence(html, sources, self._call_llm)
+                editorial_issues += review_evidence(review_context(html), sources, self._call_llm)
+            if market_brief is not None and editorial_issues:
+                logger.info("Applying one evidence correction from verified sources and review feedback")
+                try:
+                    corrected = repair_evidence(html, sources, self._call_llm, editorial_issues,
+                                                keyword=market_brief['keyword'])
+                    remaining = editorial_checks(corrected, category or "", sources)
+                    if category in POLICY_CATEGORIES:
+                        remaining += review_evidence(review_context(corrected), sources, self._call_llm)
+                    html, editorial_issues = corrected, remaining
+                    word_count = self._count_words(html)
+                except Exception as error:
+                    # Retain the original issues and article so the existing draft gate applies.
+                    reason = error.reason if isinstance(error, EvidenceRepairError) else 'invalid_html'
+                    message = str(EvidenceRepairError(reason))
+                    logger.warning(message)
+                    editorial_issues.append(message)
 
         return GeneratedContent(
             title=title,

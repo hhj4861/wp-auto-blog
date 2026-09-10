@@ -726,6 +726,36 @@ def test_held_draft_is_reserved_without_claiming_publication(market_pipeline, mo
     assert market.duplicate(item['keyword'], item['topic'], market.historical_terms())
 
 
+@pytest.mark.parametrize('published', [False, True])
+def test_queue_preserves_exact_wordpress_result_for_recovery(
+        market_pipeline, tmp_path, monkeypatch, published):
+    from src import main as entry
+    from src.wordpress_client import PostStatus
+    queue_path = tmp_path / 'data/topic_queue_general.json'
+    queue_path.parent.mkdir(exist_ok=True)
+    queue_path.write_text(json.dumps([candidate()]))
+    post = market_pipeline.wp_client.create_post.return_value
+    post.status = PostStatus.PUBLISH if published else PostStatus.DRAFT
+    if not published:
+        monkeypatch.setattr('src.pipeline.check_quality', lambda **kw: ['unsupported claim'])
+    monkeypatch.setattr(entry, '__file__', str(tmp_path / 'src/main.py'))
+    monkeypatch.setattr(entry, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(entry, 'setup_logging', lambda **kw: None)
+    monkeypatch.setattr(entry, 'BlogPipeline', lambda *a, **kw: market_pipeline)
+    monkeypatch.setenv('BLOG_REQUIRE_MARKET_TOPIC', '1')
+    monkeypatch.setattr('sys.argv', ['main', '--mode', 'general', '--from-queue',
+                                   '--auto-publish', '--category', '취업'])
+    assert entry.main() == 0
+    saved = json.loads(queue_path.read_text())[0]
+    assert saved['post_id'] == post.id
+    assert saved['url'] == post.url
+    assert saved['post_status'] == post.status.value
+    assert saved['status'] == ('completed' if published else 'held_draft')
+    assert ('completed_at' if published else 'held_at') in saved
+    assert market.LEDGER.exists() is published
+    market_pipeline.wp_client.create_post.assert_called_once()
+
+
 @pytest.mark.parametrize('available', [True, False])
 def test_writer_rereads_selected_source_and_uses_the_brief(mock_env_vars, monkeypatch, available):
     from src import content_generator as module

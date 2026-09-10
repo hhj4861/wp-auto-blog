@@ -419,9 +419,14 @@ def main() -> int:
                         from src.market_topics import record_published_keyword
                         record_published_keyword(pending_topic, result.post.id, result.post.url)
                     pending_topic["status"] = "completed" if not require_market or published else "held_draft"
-                    pending_topic["completed_at"] = _dt.datetime.now().isoformat()
+                    if result.post:
+                        pending_topic["post_id"] = result.post.id
+                        pending_topic["url"] = result.post.url
+                        pending_topic["post_status"] = result.post.status.value
+                    timestamp_key = "held_at" if pending_topic["status"] == "held_draft" else "completed_at"
+                    pending_topic[timestamp_key] = _dt.datetime.now().isoformat()
                     _save_queue()
-                    logger.info("Queue updated: marked as completed")
+                    logger.info(f"Queue updated: marked as {pending_topic['status']}")
                 break
 
         elif args.topic:

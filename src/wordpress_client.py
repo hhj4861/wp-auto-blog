@@ -412,13 +412,22 @@ class WordPressClient:
             post_data["tags"] = tag_ids
 
         try:
+            # POST /posts is not idempotent: a lost response can follow a successful
+            # creation. Never replay it, including the short WAF retry path.
             response = self._request_with_retry(
                 "POST",
                 f"{self._api_base}/posts",
                 headers=self._get_auth_headers(),
                 json=post_data,
                 timeout=30,
+                max_retries=0,
+                waf_quick_retries=0,
+                allow_redirects=False,
             )
+            # requests follows 307/308 with another POST unless explicitly disabled.
+            # A redirect is not proof that no post was created at the original URL.
+            if 300 <= response.status_code < 400:
+                raise RuntimeError("WordPress post creation redirected")
             response.raise_for_status()
             data = response.json()
 
@@ -445,9 +454,12 @@ class WordPressClient:
 
             return created_post
 
-        except Exception as e:
-            logger.error(f"Failed to create post: {e}")
-            raise
+        except Exception:
+            message = ("WordPress post creation result is uncertain; "
+                       "check existing WordPress posts before rerunning")
+            logger.error(message)
+            # Keep raw responses and request details out of callers' error logs.
+            raise RuntimeError(message) from None
 
     def get_post_by_slug(self, slug: str) -> Optional[dict]:
         """Find a post by its slug.

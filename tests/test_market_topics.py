@@ -1,5 +1,6 @@
 from datetime import datetime, timezone, timedelta
 import json
+from types import SimpleNamespace
 from unittest.mock import Mock
 
 import pytest
@@ -439,6 +440,121 @@ def test_writer_rereads_selected_source_and_uses_the_brief(mock_env_vars, monkey
         writer.assert_not_called()
     fetch.assert_called_once_with(item['source_url'])
     grounding.assert_not_called()
+
+
+@pytest.fixture
+def two_source_health_writer(mock_env_vars, monkeypatch):
+    from src import content_generator as module
+
+    # The health brief from run 34427507023 relied on these distinct detail/FAQ
+    # pages. Keep its intent and source shape, with marked excerpts for this test.
+    primary = 'https://www.diabetes.or.kr/general/info/treat/treat_01.php'
+    faq = 'https://www.diabetes.or.kr/bbs/?category=C&code=faq'
+    saved = [
+        web_evidence(primary, 'model_reported_locator', excerpt='저장 당시 진단기준 본문: 재사용 금지'),
+        web_evidence(faq, 'model_reported_locator', excerpt='저장 당시 정상범위 FAQ: 재사용 금지'),
+    ]
+    item = web_candidate(origin='model_reported_locator')
+    item.update(category='건강', keyword='당화혈색소정상수치', keywords=['당화혈색소정상수치'],
+                topic='당화혈색소정상수치: 정상·전단계·당뇨병 진단기준 구분',
+                intent='당화혈색소 정상수치는 얼마이며, 정상수치와 조절목표는 어떻게 다른가요?',
+                gap='진단 기준표와 정상범위 FAQ의 설명을 함께 사용해 두 기준을 구분합니다.',
+                source_url=primary, verified_sources=saved, intent_results=[primary, faq],
+                research_evidence=web_research_evidence(*saved))
+    fresh = [
+        {**saved[0], 'sha256': 'refetched-primary',
+         'excerpt': '최신 진단기준 본문: 당뇨병 진단에 사용하는 검사 기준과 조절목표는 구분한다.'},
+        {**saved[1], 'sha256': 'refetched-faq',
+         'excerpt': '최신 정상범위 FAQ: 정상과 전단계의 경계는 진단 기준표와 함께 확인한다.'},
+    ]
+    assert market.fresh_market_item(item, '건강')
+    generator = module.ContentGenerator(module.ContentConfig(language='ko'))
+    grounding = Mock(side_effect=AssertionError('A selected market brief must use its verified sources'))
+    monkeypatch.setattr(generator, 'research_with_grounding', grounding)
+    response = ('---SEO-META---\nFOCUS_KEYPHRASE: 당화혈색소정상수치\n'
+                'META_DESCRIPTION: 공식 진단기준과 정상범위 안내\n---CONTENT---\n'
+                '<section id="quick-answer">진단기준과 정상범위를 구분합니다.</section>'
+                '<h1>당화혈색소정상수치 기준 안내</h1><h2>진단기준과 FAQ</h2><p>본문</p>')
+    writer = Mock(return_value=response)
+    monkeypatch.setattr(generator, '_call_llm', writer)
+    review = Mock(return_value=[])
+    monkeypatch.setattr(module, 'review_evidence', review)
+    monkeypatch.delenv('BLOG_OFFICIAL_SOURCE_URLS', raising=False)
+    return SimpleNamespace(module=module, generator=generator, brief=item,
+                           primary=primary, faq=faq, saved=saved, fresh=fresh,
+                           writer=writer, review=review, grounding=grounding, response=response)
+
+
+def test_writer_refetches_primary_and_faq_before_using_all_current_evidence(two_source_health_writer, monkeypatch):
+    case = two_source_health_writer
+    # Saved order and repeats must not change primary-first fetch order.
+    case.brief['verified_sources'] = [case.saved[1], case.saved[0], case.saved[1]]
+    events = []
+    by_url = {source['url']: source for source in case.fresh}
+
+    def fetch(url):
+        events.append(('fetch', url))
+        return by_url[url]
+
+    def write(*args, **kwargs):
+        events.append(('write', None))
+        assert events[:2] == [('fetch', case.primary), ('fetch', case.faq)]
+        return case.response
+
+    fetcher = Mock(side_effect=fetch)
+    monkeypatch.setattr(case.module, 'fetch_source', fetcher)
+    case.writer.side_effect = write
+    content = case.generator.generate(case.brief['topic'], case.brief['keywords'], case.module.ContentType.GUIDE,
+                                      category='건강', market_brief=case.brief)
+    assert [call.args[0] for call in fetcher.call_args_list] == [case.primary, case.faq]
+    prompt = case.writer.call_args_list[0].args[0]
+    assert case.brief['intent'] in prompt and case.brief['gap'] in prompt
+    assert all(source['excerpt'] in prompt for source in case.fresh)
+    assert all(source['excerpt'] not in prompt for source in case.saved)
+    assert content.sources == case.fresh
+    case.review.assert_called_once()
+    assert case.review.call_args.args[1] == case.fresh
+    assert case.review.call_args.args[2] is case.writer
+    case.grounding.assert_not_called()
+
+
+@pytest.mark.parametrize('unavailable,empty_body', [('primary', False), ('faq', False), ('faq', True)])
+def test_writer_requires_each_selected_body_before_llm_or_optional_research(
+        two_source_health_writer, monkeypatch, unavailable, empty_body):
+    case = two_source_health_writer
+    missing_url = case.primary if unavailable == 'primary' else case.faq
+    by_url = {source['url']: source for source in case.fresh}
+    by_url[missing_url] = {**by_url[missing_url], 'excerpt': '   '} if empty_body else None
+    fetcher = Mock(side_effect=lambda url: by_url[url])
+    monkeypatch.setattr(case.module, 'fetch_source', fetcher)
+    # An optional source cannot cover up the loss of a selected FAQ.
+    monkeypatch.setenv('BLOG_OFFICIAL_SOURCE_URLS', 'https://example.go.kr/optional')
+    case.generator._research_sources = [evidence('https://previous.go.kr/article')]
+    with pytest.raises(RuntimeError, match='no longer accessible'):
+        case.generator.generate(case.brief['topic'], case.brief['keywords'], case.module.ContentType.GUIDE,
+                                category='건강', market_brief=case.brief)
+    expected = [case.primary] if unavailable == 'primary' else [case.primary, case.faq]
+    assert [call.args[0] for call in fetcher.call_args_list] == expected
+    assert case.generator._research_sources == []
+    case.writer.assert_not_called()
+    case.review.assert_not_called()
+    case.grounding.assert_not_called()
+
+
+def test_writer_fetches_each_selected_url_but_deduplicates_same_final_page(two_source_health_writer, monkeypatch):
+    case = two_source_health_writer
+    final_url = 'https://www.diabetes.or.kr/general/info/treat/current.php'
+    current = {**case.fresh[0], 'url': final_url, 'original_url': case.primary,
+               'excerpt': '통합된 최신 공식 본문: 진단기준과 정상범위 FAQ 안내를 함께 제공합니다.'}
+    fetcher = Mock(side_effect=[current, {**current, 'original_url': case.faq}])
+    monkeypatch.setattr(case.module, 'fetch_source', fetcher)
+    content = case.generator.generate(case.brief['topic'], case.brief['keywords'], case.module.ContentType.GUIDE,
+                                      category='건강', market_brief=case.brief)
+    assert [call.args[0] for call in fetcher.call_args_list] == [case.primary, case.faq]
+    assert content.sources == [current]
+    assert case.review.call_args.args[1] == [current]
+    assert current['excerpt'] in case.writer.call_args_list[0].args[0]
+    case.grounding.assert_not_called()
 
 
 def web_evidence(url='https://example.go.kr/info', origin='native_open', **extra):

@@ -125,5 +125,17 @@ Codex 구독 경로로 작성·검수한 [글 1728](https://trendpulse.blog/itq-
 
 별도로 추가했던 15:37 KST 임시 전체 카테고리 일정은 실행이 생성되지 않아 제거했다.
 기존 생활정보(월·수·금), 취업(화·목), 건강(토) 11:00 KST 일정은 유지한다.
-남은 카테고리의 즉시 발행 검증은 같은 Auto Blog Post의 `workflow_dispatch`로 순차 수행하며,
-이 수동 실행은 실제 예약 실행 증거와 구분한다.
+나머지 두 카테고리는 같은 Auto Blog Post의 `workflow_dispatch`로 순차 실행해 공개 발행했다.
+앞 실행의 키워드 이력과 인증 저장이 끝난 뒤 다음 실행을 생성했다.
+
+| 카테고리 | 실측 월검색량 | 공개 글 | Actions 실행 방식·결과 |
+| --- | ---: | --- | --- |
+| 취업 | 6,640 | [ITQ자격증조회 · 1728](https://trendpulse.blog/itq-certificate-login-2026/) | [실제 정기 예약 · 성공](https://github.com/hhj4861/wp-auto-blog/actions/runs/34447962401) |
+| 생활정보 | 1,330 | [종합소득세기한후신고환급 · 1731](https://trendpulse.blog/income-tax-late-filing-refund/) | [수동 실행 · 성공](https://github.com/hhj4861/wp-auto-blog/actions/runs/34448861253) |
+| 건강 | 42,920 | [대장내시경전음식 · 1734](https://trendpulse.blog/colonoscopy-food-preparation/) | [수동 실행 · 성공](https://github.com/hhj4861/wp-auto-blog/actions/runs/34449204574) |
+
+세 실행 모두 Codex CLI 구독 작성 로그, 공개 상태 재조회, 큐 완료와 영구 키워드 이력 저장을 확인했다.
+공개 페이지·대표 이미지는 HTTP 200이며, 본문·FAQ를 공식 출처와 별도로 대조했다.
+각 키워드는 연도를 바꾼 입력도 기존 이력에 의해 중복으로 차단됐다.
+임시 일정 제거 후 워크플로가 `active`이고 원격 main의 일정 파일이 로컬과 일치함을 확인했다.
+복원 변경의 Actions·시장 주제·CAK 테스트 215개와 Actionlint 1.7.12 검사를 통과했다.

@@ -1,4 +1,5 @@
 from datetime import datetime, timezone, timedelta
+import json
 from unittest.mock import Mock
 
 import pytest
@@ -29,6 +30,10 @@ def analysis(keyword='시험준비물', category='취업', **extra):
 def isolated_market_history(tmp_path, monkeypatch):
     monkeypatch.setattr(market, 'ROOT', tmp_path)
     monkeypatch.setattr(market, 'LEDGER', tmp_path / 'data/ledger.json')
+    monkeypatch.setattr('requests.sessions.Session.request',
+                        Mock(side_effect=AssertionError('Live HTTP is disabled in market topic tests')))
+    monkeypatch.setattr('urllib.request.urlopen',
+                        Mock(side_effect=AssertionError('Live HTTP is disabled in market topic tests')))
 
 
 def candidate(category='취업', **extra):
@@ -436,12 +441,21 @@ def test_writer_rereads_selected_source_and_uses_the_brief(mock_env_vars, monkey
     grounding.assert_not_called()
 
 
-def web_candidate(**extra):
-    source = evidence()
+def web_evidence(url='https://example.go.kr/info', origin='native_open', **extra):
+    return {**evidence(url), 'locator_origin': origin, **extra}
+
+
+def web_research_evidence(*sources):
+    return {'provider': 'codex_web', 'searched': True,
+            'locators': [{'url': source['original_url'], 'origin': source['locator_origin']}
+                         for source in sources]}
+
+
+def web_candidate(origin='native_open', **extra):
+    source = web_evidence(origin=origin)
     return candidate(evidence_mode='official_pages', organic_provider=None,
                      organic_domains=[], organic_results=[], dominant_result_ratio=None,
-                     research_evidence={'provider': 'codex_web', 'searched': True,
-                                        'opened_urls': [source['original_url']]},
+                     verified_sources=[source], research_evidence=web_research_evidence(source),
                      score_components={'demand': 24.63, 'organic_opportunity': 0,
                                        'specificity': 15, 'trend': 0},
                      intent_results=[source['url']], **extra)
@@ -457,8 +471,11 @@ def test_native_research_requires_observed_search_and_refetched_official_pages(m
     fetch = Mock(side_effect=lambda url: source if url == source['url'] else None)
     monkeypatch.setattr(market, 'fetch_source', fetch)
     sources, trace = market.research_official_sources('시험준비물', '취업', '2026-09-10')
-    assert sources == [source]
+    assert sources == [{**source, 'locator_origin': 'native_open'}]
     assert trace['searched'] is True and trace['provider'] == 'codex_web'
+    assert trace['locators'] == [
+        {'url': 'https://missing.go.kr/page', 'origin': 'native_open'},
+        {'url': source['url'], 'origin': 'native_open'}]
     assert [call.args[0] for call in fetch.call_args_list] == ['https://missing.go.kr/page', source['url']]
     client.research.return_value['searched'] = False
     fetch.reset_mock()
@@ -466,7 +483,76 @@ def test_native_research_requires_observed_search_and_refetched_official_pages(m
     fetch.assert_not_called()
 
 
-def test_search_outage_uses_verified_longtail_without_invented_competition(monkeypatch):
+def test_source_locators_filter_unverified_proposals_and_preserve_native_origin():
+    native = 'https://example.go.kr/info'
+    reported = 'https://second.go.kr/info'
+    trace = {'searched': True, 'opened_urls': [native], 'text': json.dumps({
+        'candidate_urls': [native, reported, 'http://example.go.kr/info',
+                           'https://user:secret@example.go.kr/info', 'https://blog.example/post',
+                           'turn0search0', None, {'url': reported}]})}
+    assert market.research_source_locators(trace) == [
+        {'url': native, 'origin': 'native_open'},
+        {'url': reported, 'origin': 'model_reported_locator'}]
+
+
+@pytest.mark.parametrize('message', [
+    'Official source: https://example.go.kr/info',
+    '{"candidate_urls":"https://example.go.kr/info"}',
+    '["https://example.go.kr/info"]',
+    '{"candidate_urls":',
+])
+def test_unstructured_final_message_does_not_become_source_evidence(message):
+    assert market.research_source_locators({'searched': True, 'opened_urls': [], 'text': message}) == []
+
+
+def test_model_reported_locator_requires_observed_search_before_fetch(monkeypatch):
+    from src import codex_client
+    client = Mock()
+    client.research.return_value = {
+        'searched': False, 'opened_urls': [],
+        'text': json.dumps({'candidate_urls': ['https://example.go.kr/info'], 'searched': True})}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock()
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    assert market.research_source_locators(client.research.return_value) == []
+    assert market.research_official_sources('시험준비물', '취업', '2026-09-10') == ([], None)
+    fetch.assert_not_called()
+
+
+@pytest.mark.parametrize('fetchable,reason', [
+    (False, 'no accessible official source supports topic'),
+    (True, 'search intent or official evidence does not support an article'),
+])
+def test_model_reported_locator_cannot_replace_accessible_relevant_body(monkeypatch, fetchable, reason):
+    from src import codex_client
+    source = evidence()
+    source['excerpt'] = '이 자료는 시험 준비와 무관한 기관 연혁 안내입니다.'
+    client = Mock()
+    client.research.return_value = {
+        'searched': True, 'opened_urls': [],
+        'text': json.dumps({'candidate_urls': [source['url']],
+                            'supported': True, 'excerpt': 'invented source support'})}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
+    monkeypatch.setattr(market, 'search_results', lambda _: ('duckduckgo_proxy', []))
+    fetch = Mock(return_value=source if fetchable else None)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    analyze = Mock(side_effect=[{'candidates': [{'keyword': '시험준비물'}]}, {'supported': False}])
+    monkeypatch.setattr(market, 'ask', analyze)
+    report = market.select_category('취업', 1, titles=[])
+    fetch.assert_called_once_with(source['url'])
+    assert report['selected'] == []
+    assert report['rejected'] == [{'keyword': '시험준비물', 'reason': reason}]
+    assert analyze.call_count == (2 if fetchable else 1)
+    if fetchable:
+        prompt = analyze.call_args.args[0]
+        assert source['excerpt'] in prompt and 'invented source support' not in prompt
+
+
+@pytest.mark.parametrize('origin', ['native_open', 'model_reported_locator'])
+def test_search_outage_uses_verified_longtail_without_invented_competition(monkeypatch, origin):
+    from src import codex_client
     source = evidence()
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {
         key: {'keyword': key, 'monthly': volume} for key, volume in
@@ -479,42 +565,78 @@ def test_search_outage_uses_verified_longtail_without_invented_competition(monke
         return next(responses)
     monkeypatch.setattr(market, 'ask', ask)
     monkeypatch.setattr(market, 'search_results', lambda _: ('duckduckgo_proxy', []))
-    research = Mock(return_value=([source], {'provider': 'codex_web', 'searched': True,
-                                           'opened_urls': [source['url']]}))
-    monkeypatch.setattr(market, 'research_official_sources', research)
+    client = Mock()
+    client.research.return_value = {
+        'searched': True, 'opened_urls': [source['url']] if origin == 'native_open' else [],
+        'text': json.dumps({'candidate_urls': [source['url']], 'excerpt': 'invented model evidence'})}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock(return_value=source)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     report = market.select_category('취업', 1, titles=[])
     row = report['selected'][0]
-    assert research.call_count == 1
+    assert client.research.call_count == 1
+    fetch.assert_called_once_with(source['url'])
     assert row['keyword'] == '시험준비물' and row['monthly_search'] == 1200
     assert row['evidence_mode'] == 'official_pages'
     assert row['organic_provider'] is None and row['dominant_result_ratio'] is None
     assert row['organic_results'] == row['organic_domains'] == []
     assert row['score_components']['organic_opportunity'] == 0
+    assert row['verified_sources'] == [{**source, 'locator_origin': origin}]
+    assert row['research_evidence'] == web_research_evidence(web_evidence(origin=origin))
     assert row['intent_results'] == [source['url']]
+    assert row['selection_version'] == 4
     assert market.fresh_market_item(row, '취업')
     assert '검색 순위나 경쟁 결과는 확보하지 못했습니다' in prompts[-1]
+    assert 'invented model evidence' not in prompts[-1]
     queued = market.enqueue_report([], report)
     assert queued == [row]
     market.record_published_keyword(row, 123, 'https://trendpulse.blog/test')
-    assert market.candidate_pool({'시험준비물': {'keyword': '시험준비물', 'monthly': 1200}},
+    assert market.candidate_pool({'2027 시험 준비물': {'keyword': '2027 시험 준비물', 'monthly': 1200}},
                                  market.historical_terms()) == []
 
 
 @pytest.mark.parametrize('changes', [
     {'research_evidence': None},
-    {'research_evidence': {'provider': 'codex_web', 'searched': False, 'opened_urls': ['https://example.go.kr/info']}},
-    {'research_evidence': {'provider': 'codex_web', 'searched': True, 'opened_urls': ['https://other.go.kr/info']}},
+    {'research_evidence': {'provider': 'codex_web', 'searched': False,
+                           'locators': [{'url': 'https://example.go.kr/info', 'origin': 'native_open'}]}},
+    {'research_evidence': {'provider': 'codex_web', 'searched': True,
+                           'locators': [{'url': 'https://other.go.kr/info', 'origin': 'native_open'}]}},
+    {'research_evidence': {'provider': 'codex_web', 'searched': True,
+                           'locators': [{'url': 'https://example.go.kr/info', 'origin': 'invented'}]}},
+    {'research_evidence': {'provider': 'codex_web', 'searched': True,
+                           'opened_urls': ['https://example.go.kr/info']}},
     {'organic_provider': 'google_custom_search'}, {'dominant_result_ratio': 0},
     {'organic_results': [organic()]}, {'organic_domains': ['blog.example']},
     {'score_components': {'organic_opportunity': 40}}, {'monthly_search': 50000},
     {'keyword': '시험브랜드'}, {'intent_results': ['https://unread.go.kr/']},
-    {'verified_sources': []}, {'selection_version': 2}, {'evidence_mode': 'invented'},
+    {'verified_sources': []}, {'selection_version': 3}, {'evidence_mode': 'invented'},
 ])
 def test_native_research_cache_cannot_pass_without_provenance(changes):
     row = web_candidate()
     assert market.fresh_market_item(row, '취업')
     row.update(changes)
+    assert not market.fresh_market_item(row, '취업')
+
+
+def test_model_locator_redirect_uses_original_url_and_matching_origin(monkeypatch):
+    from src import codex_client
+    original = 'https://example.go.kr/old-guide'
+    source = evidence('https://example.go.kr/current-guide')
+    source['original_url'] = original
+    client = Mock()
+    client.research.return_value = {
+        'searched': True, 'opened_urls': [], 'text': json.dumps({'candidate_urls': [original]})}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock(return_value=source)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    sources, research = market.research_official_sources('시험준비물', '취업', '2026-09-10')
+    fetch.assert_called_once_with(original)
+    row = web_candidate(origin='model_reported_locator')
+    row.update(source_url=source['url'], verified_sources=sources,
+               intent_results=[source['url']], research_evidence=research)
+    assert market.fresh_market_item(row, '취업')
+    row['verified_sources'][0]['locator_origin'] = 'native_open'
     assert not market.fresh_market_item(row, '취업')
 
 
@@ -531,18 +653,19 @@ def test_native_plan_keeps_each_cited_official_source_and_rejects_invalid_index(
 
 
 @pytest.mark.parametrize('change', [{'excerpt': ''}, {'original_url': 'https://unopened.go.kr/'},
-                                    {'checked_on': '2000-01-01'}, {'sha256': ''}])
+                                    {'checked_on': '2000-01-01'}, {'sha256': ''},
+                                    {'locator_origin': None}, {'locator_origin': 'model_reported_locator'}])
 def test_every_native_intent_source_requires_fresh_read_evidence(change):
     row = web_candidate()
-    source = evidence('https://second.go.kr/info')
+    source = web_evidence('https://second.go.kr/info')
     row['verified_sources'].append({**source, **change})
     row['intent_results'].append(source['url'])
-    row['research_evidence']['opened_urls'].append(source['url'])
+    row['research_evidence']['locators'].append({'url': source['url'], 'origin': source['locator_origin']})
     assert not market.fresh_market_item(row, '취업')
 
 
 def test_later_native_research_timeout_preserves_selected_candidate(monkeypatch):
-    source = evidence()
+    source = web_evidence()
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {
         key: {'keyword': key, 'monthly': 1200} for key in ['시험준비물', '시험신청방법']})
     responses = iter([{'candidates': [{'keyword': '시험준비물'}, {'keyword': '시험신청방법'}]},
@@ -550,7 +673,7 @@ def test_later_native_research_timeout_preserves_selected_candidate(monkeypatch)
     monkeypatch.setattr(market, 'ask', lambda _: next(responses))
     monkeypatch.setattr(market, 'search_results', lambda _: ('duckduckgo_proxy', []))
     monkeypatch.setattr(market, 'research_official_sources', Mock(side_effect=[
-        ([source], {'provider': 'codex_web', 'searched': True, 'opened_urls': [source['url']]}),
+        ([source], web_research_evidence(source)),
         RuntimeError('raw diagnostic must not be included')]))
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     report = market.select_category('취업', 1, titles=[])

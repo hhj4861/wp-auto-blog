@@ -10,8 +10,8 @@ from scripts import check_codex_research as probe
 
 @pytest.mark.parametrize('searched,opened,fetched,expected', [
     (False, [], False, 'no_observed_search'),
-    (True, [], False, 'no_observed_public_page_open'),
-    (True, ['https://blog.example/'], False, 'no_official_page_opened'),
+    (True, [], False, 'no_official_source_locators'),
+    (True, ['https://blog.example/'], False, 'no_official_source_locators'),
     (True, ['https://example.go.kr/info'], False, 'official_html_unavailable'),
     (True, ['https://example.go.kr/info'], True, 'ok'),
 ])
@@ -34,6 +34,25 @@ def test_probe_does_not_expose_unknown_exception(monkeypatch, capsys):
     monkeypatch.setattr(probe, 'CodexSubscriptionClient', Mock(side_effect=RuntimeError('private diagnostic')))
     assert probe.main() == 1
     assert json.loads(capsys.readouterr().out) == {'reason': 'research_probe_failed'}
+
+
+@pytest.mark.parametrize('searched,fetched', [(False, True), (True, False), (True, True)])
+def test_reported_locator_needs_observed_search_and_independent_fetch(monkeypatch, capsys, searched, fetched):
+    monkeypatch.delenv('GITHUB_ACTIONS', raising=False)
+    client = Mock()
+    client.research.return_value = {'text': '{"candidate_urls":["https://example.go.kr/guide"]}',
+                                  'searched': searched, 'opened_urls': []}
+    monkeypatch.setattr(probe, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock(return_value={'excerpt': 'actual HTTP text'} if fetched else None)
+    monkeypatch.setattr(probe, 'fetch_source', fetch)
+    assert probe.main() == (0 if searched and fetched else 1)
+    report = json.loads(capsys.readouterr().out)
+    assert report['opened_url_count'] == 0
+    if searched:
+        assert report['model_reported_locator_count'] == 1
+        fetch.assert_called_once_with('https://example.go.kr/guide')
+    else:
+        fetch.assert_not_called()
 
 
 def test_research_only_workflow_preserves_auth_cleanup_and_skips_publication():

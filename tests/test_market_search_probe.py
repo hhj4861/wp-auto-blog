@@ -11,6 +11,7 @@ from scripts import check_market_search as probe
 
 @pytest.fixture(autouse=True)
 def search_configuration(monkeypatch):
+    monkeypatch.delenv('MARKET_SEARCH_PROVIDER', raising=False)
     monkeypatch.setenv('GOOGLE_SEARCH_API_KEY', 'private-probe-key')
     monkeypatch.setenv('GOOGLE_SEARCH_ENGINE_ID', 'private-probe-engine')
     monkeypatch.delenv('GOOGLE_SEARCH_ALTERNATE_API_KEY', raising=False)
@@ -221,6 +222,37 @@ def test_successful_current_configuration_never_tries_alternate(monkeypatch, cap
     assert calls == ['private-probe-key'] * 3
 
 
+def test_explicit_native_failure_never_retries_with_an_alternate_google_key(monkeypatch, capsys):
+    monkeypatch.setenv('MARKET_SEARCH_PROVIDER', 'codex_native_search')
+    monkeypatch.setenv('GOOGLE_SEARCH_ALTERNATE_API_KEY', 'private-alternate-key')
+    search = Mock(return_value=('codex_native_search', []))
+    monkeypatch.setattr(probe.market_search, 'search_results', search)
+    assert probe.main() == 1
+    assert search.call_count == 3
+    reports = read_reports(capsys)
+    assert len(reports) == 3
+    assert all(report['provider'] == 'codex_native_search' for report in reports)
+    assert all(report['reason'] == 'empty_results' for report in reports)
+
+
+def test_native_samples_preserve_provider_and_the_same_sample_thresholds(monkeypatch, capsys):
+    monkeypatch.setenv('MARKET_SEARCH_PROVIDER', 'codex_native_search')
+
+    def search(query):
+        rows = [{'url': f'https://site{i % 3}.example/{i}',
+                 'domain': f'site{i % 3}.example', 'title': query,
+                 'snippet': 'private-result-text'} for i in range(5)]
+        return 'codex_native_search', rows
+
+    monkeypatch.setattr(probe.market_search, 'search_results', search)
+    assert probe.main() == 0
+    for report in read_reports(capsys):
+        assert report['provider'] == 'codex_native_search'
+        assert report['sample_row_count'] == 5
+        assert report['distinct_domains'] == 3
+        assert report['approximate_related_rows'] == 5
+
+
 def test_alternate_exception_restores_original_key_and_stays_private(monkeypatch, capsys):
     monkeypatch.setenv('GOOGLE_SEARCH_ALTERNATE_API_KEY', 'private-alternate-key')
     search = Mock(side_effect=RuntimeError('private-exception'))
@@ -281,8 +313,8 @@ def test_search_probe_workflow_is_exclusive_and_has_no_publication_or_codex_cred
         assert 'inputs.search_check_only != true' in jobs[name]['if']
     check = next(step for step in probe_job['steps'] if step.get('name') == 'Check actual search result availability')
     assert check['run'] == 'python scripts/check_market_search.py'
-    assert set(check['env']) == {'GOOGLE_SEARCH_API_KEY', 'GOOGLE_SEARCH_ALTERNATE_API_KEY',
-                                'GOOGLE_SEARCH_ENGINE_ID'}
+    assert set(check['env']) == {'GOOGLE_SEARCH_API_KEY', 'GOOGLE_SEARCH_ENGINE_ID'}
+    assert check['env']['GOOGLE_SEARCH_API_KEY'] == '${{ secrets.GOOGLE_CUSTOM_SEARCH_API_KEY }}'
     job_text = json.dumps(probe_job)
     assert all(word not in job_text for word in ('CODEX_AUTH', 'WP_GENERAL', 'select_blog_keywords',
                                                'git push', 'src.main', 'fetch_cak_candidates'))

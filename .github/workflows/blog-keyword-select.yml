@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       search_check_only:
-        description: '검색 결과 API 접근·표본만 점검 (Codex·주제 선정·포스팅 없음)'
+        description: 'Google·DuckDuckGo 접근만 점검 (운영 Codex 검색은 별도 진단)'
         type: boolean
         default: false
       candidate_check_only:
@@ -54,8 +54,7 @@ jobs:
       - run: pip install requests beautifulsoup4
       - name: Check actual search result availability
         env:
-          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_SEARCH_ALTERNATE_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_CUSTOM_SEARCH_API_KEY }}
           GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
         run: python scripts/check_market_search.py
   candidate-check:
@@ -137,8 +136,7 @@ jobs:
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
           NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
-          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+          MARKET_SEARCH_PROVIDER: codex_native_search
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}

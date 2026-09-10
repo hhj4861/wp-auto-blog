@@ -4,6 +4,7 @@ import os
 import json
 import ipaddress
 from pathlib import Path
+import re
 import shutil
 import signal
 import subprocess
@@ -96,8 +97,16 @@ def _research_activity(stdout):
     searched = False
     opened_urls = []
     seen_urls = set()
+    diagnostics = {
+        "completed_web_items": 0,
+        "search_actions": 0,
+        "open_page_actions": 0,
+        "rejected_url_count": 0,
+        "reference_url_count": 0,
+        "invalid_action_count": 0,
+    }
     if not isinstance(stdout, str):
-        return searched, opened_urls
+        return searched, opened_urls, diagnostics
     for line in stdout.splitlines():
         try:
             event = json.loads(line)
@@ -108,17 +117,31 @@ def _research_activity(stdout):
         item = event.get("item")
         if not isinstance(item, dict) or item.get("type") != "web_search":
             continue
+        diagnostics["completed_web_items"] += 1
         action = item.get("action")
         if not isinstance(action, dict):
+            diagnostics["invalid_action_count"] += 1
             continue
-        if action.get("type") == "search":
+        action_type = action.get("type")
+        if action_type == "search":
+            diagnostics["search_actions"] += 1
             searched = True
-        elif action.get("type") == "open_page":
-            url = _research_url(action.get("url"))
+        elif action_type == "open_page":
+            diagnostics["open_page_actions"] += 1
+            raw_url = action.get("url")
+            url = _research_url(raw_url)
+            if url is None:
+                diagnostics["rejected_url_count"] += 1
+                # Tool reference IDs are not fetchable URLs. Count them without
+                # retaining or exposing the original action, query, or event.
+                if isinstance(raw_url, str) and re.fullmatch(r"turn\d+[a-z]+\d+", raw_url):
+                    diagnostics["reference_url_count"] += 1
             if url and url not in seen_urls:
                 seen_urls.add(url)
                 opened_urls.append(url)
-    return searched, opened_urls
+        elif not isinstance(action_type, str) or action_type not in {"find_in_page", "other"}:
+            diagnostics["invalid_action_count"] += 1
+    return searched, opened_urls, diagnostics
 
 
 def require_private_actions():
@@ -186,7 +209,12 @@ class CodexSubscriptionClient:
                 "-a", "never",
             ]
             if research:
-                command.extend(["--search", "-c", "features.shell_tool=false"])
+                # Codex 0.153.4 does not forward the TUI --search field to exec.
+                # Explicit config overrides do reach exec with user config ignored.
+                command.extend([
+                    "--search", "-c", 'web_search="live"',
+                    "-c", "features.shell_tool=false",
+                ])
             command.extend([
                 "exec",
                 "--sandbox", "read-only", "--skip-git-repo-check",
@@ -223,5 +251,8 @@ class CodexSubscriptionClient:
             if not result:
                 raise RuntimeError("Codex returned no final message")
             stdout = captured[0] if isinstance(captured, tuple) and len(captured) == 2 else ""
-            searched, opened_urls = _research_activity(stdout) if research else (False, [])
-            return {"text": result, "searched": searched, "opened_urls": opened_urls}
+            if research:
+                searched, opened_urls, diagnostics = _research_activity(stdout)
+                return {"text": result, "searched": searched, "opened_urls": opened_urls,
+                        "diagnostics": diagnostics}
+            return {"text": result, "searched": False, "opened_urls": []}

@@ -1,7 +1,7 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-09-10T10:51:52.433666+00:00",
+    "selected_at": "2026-09-10T11:28:21.087006+00:00",
     "seeds": [
       "채용",
       "공기업",
@@ -24,55 +24,410 @@
     "evaluated_candidates": 12,
     "research_pool_size": 120,
     "selected": [],
-    "held": [],
+    "held": [
+      {
+        "keyword": "SQL자격증",
+        "category": "취업",
+        "topic": "SQL자격증 종류: 개발자와 전문가의 직무·합격률 비교",
+        "intent": "SQL자격증 개발자와 전문가는 검증하는 직무와 합격률이 어떻게 다른가?",
+        "gap": "공식 직무 비교표와 2023~2025년 응시·취득자수 및 합격률 표를 제공하고 통계 입력상 한계를 명시한다.",
+        "source_url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=3675",
+        "verified_sources": [
+          {
+            "url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=3675",
+            "original_url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=3675",
+            "title": "민간자격기본정보(SQL)-민간자격검색-자격정보-민간자격정보서비스",
+            "checked_on": "2026-09-10",
+            "sha256": "433b11b869c11c5d4fd79d9c3363b5987e0900def6b4bf18659a09ccbd4dd43e",
+            "excerpt": "민간자격검색 home 자격정보 민간자격검색 기본정보 ※ 동일 명칭의 자격 및 기관이 다수 존재 할 수 있으니, 반드시 자격의 등록번호 및 기관 정보를 확인 하시기 바랍니다. 민간자격검색 기본정보에 대한 표로 자격명, 자격발급기관, 등록번호, 공동발급기관, 주무부처, 검정시행일정 순으로 나타냄 자격명 SQL (Structured Query Language) 자격발급기관 재단법인 한국데이터산업진흥원 (TEL :\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t02-3708-5415\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t) 기관정보 등록번호 2011-0771 공동발급기관 주무부처 과학기술정보통신부 검정시행일정 자격발급기관 정보 민간자격관리기관 정보에 대한 표로 기관명,홈페이지,보유자격,대표전화,기관유형,주소로 나타냄 기관명 재단법인 한국데이터산업진흥원 보유자격 공인자격 3개 보기 홈페이지 www.kdata.or.kr 등록자격 대표번호 02-3708-5415 기관유형 비영리법인(민법법인) 주소 (04513) 서울특별시 중구 세종대로9길 42 (서소문동) 8층 닫기 자격정보 데이터베이스 개발 및 사용의 필수 언어인 SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함 *SQL 전문가 데이터베이스와 데이터모델링에 대한 지식을 바탕으로 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성할 수 있고, 이를 토대로 SQL을 내포하는 데이터베이스 프로그램이나 응용 소프트웨어의 성능을 최적화하거나, 이러한 성능 최적화를 지원할 수 있는 데이터베이스 개체(뷰, 인덱스 등)의 설계와 구현 등의 직무 수행 능력 검증 *SQL 개발자 데이터베이스와 데이터모델링에 대한 지식을 바탕으로 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL 작성 등의 직무 수행 능력 검증 자격정보 전문가 표로 직무내용에 대한 정보를 제공합니다. 전문가 \n\t\t\t\t\t                        \t\t\t\t(공인) 직무내용 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성할 수 있고, 이를 토대로 SQL을 내포하는 데이터베이스 프로그램이나 응용 소프트웨어의 성능을 최적화 하거나, 이러한 성능 최적화를 지원할 수 있는 데이터베이스 개체(뷰, 인덱스 등)의 설계와 구현 등의 직무를 수행 자격정보 개발자 표로 직무내용에 대한 정보를 제공합니다. 개발자 \n\t\t\t\t\t                        \t\t\t\t(공인) 직무내용 데이터베이스와 데이터 모델링에 대한 지식을 바탕으로 응용 소프트웨어를 개발하면서 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성하는 직무를 수행 자격취득현황 [\n\t\t\t\t\t\t\t\t\t\t\t1\n\t\t\t\t\t\t\t\t\t\t\t/\n\t\t\t\t\t\t\t\t\t\t\t3\n\t\t\t\t\t\t\t\t\t\t\tpages ] 총\n\t\t\t\t\t\t\t\t\t\t\t30\n\t\t\t\t\t\t\t\t\t\t\t건이 검색되었습니다. ※ 최근 5년간의 자격취득현황 입니다. ※ 자격취득현황은 자격발급기관에서 직접 입력하고 있으며, 입력 시점에 따라 실제 수치와 차이가 있을 수 있습니다. 또한, 미입력된 데이터가 존재할 수 있습니다. (해당 자격발급기관에 문의 요망) 자격취득 현황 표로 검정연도,자격등급,검정횟수,접수자수,응시자수,취득자수,합격률로 구성되어 있습니다. 검정연도 자격등급 검정횟수 접수자수 응시자수 취득자수 합격률 2025 전문가(공인) 2 1,656 1,086 39 3.59 2025 개발자(공인) 4 88,440 62,664 26,121 41.68 2024 전문가(공인) 2 1,316 1,051 96 9.13 2024 개발자(공인) 4 75,042 59,202 33,916 57.29 2023 전문가(공인) 2 828 654 59 9.02 2023 개발자(공인) 4 62,122 48,794 23,329 47.81 2022 전문가(공인) 4 830 629 64 10.17 2022 개발자(공인) 4 42,193 32,474 15,845 48.79 2021 전문가(공인) 4 823 654 42 6.42 2021 개발자(공인) 4 29,144 23,391 13,225 56.54 2020 전문가(공인) 4 574 433 42 9.7 2020 개발자(공인) 4 13,822 10,933 6,399 58.53 2019 전문가(공인) 4 654 545 24 4.4 2019 개발자(공인) 4 11,768 9,663 4,707 48.71 2018 전문가(공인) 4 479 411 37 9 2018 개발자(공인) 4 6,611 5,472 2,077 37.96 2017 전문가(공인) 4 416 359 29 8.08 2017 개발자(공인) 4 5,451 4,550 1,442 31.69 2016 전문가(공인) 4 369 322 29 9.01 2016 개발자(공인) 4 4,256 3,682 1,393 37.83 2015 전문가(공인) 4 419 350 51 14.57 2015 개발자(공인) 4 5,435 4,194 1,499 35.74 2014 전문가(공인) 4 475 412 34 8.25 2014 개발자(공인) 4 3,725 3,042 829 27.25 2013 전문가(공인) 4 551 466 42 9.01 2013 개발자(공인) 4 2,725 2,241 644 28.74 2012 전문가 3 457 335 42 12.54 2012 개발자 4 1,097 844 267 31.64 2011 전문가 3 268 205 24 11.71 2011 개발자 4 717 543 172 31.68 목록"
+          }
+        ],
+        "intent_results": [
+          "https://academy.prompie.com/qualifications/detail/cne4m0j/",
+          "https://flameleaf.tistory.com/entry/SQL-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%8B%9C%ED%97%98-%EC%A2%85%EB%A5%98-%EC%9D%BC%EC%A0%95-%ED%95%A9%EA%B2%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A4%80%EB%B9%84%EB%B2%95"
+        ],
+        "valid_until": null,
+        "monthly_search": 4950,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": null,
+        "organic_provider": "codex_native_search",
+        "organic_domains": [
+          "academy.prompie.com",
+          "www.sqldpass.com",
+          "www.sqldpass.com",
+          "www.sqldpass.com",
+          "www.sqldpass.com",
+          "www.work24.go.kr",
+          "flameleaf.tistory.com",
+          "supercoding.net",
+          "glasswallet.com",
+          "edu.ezenac.co.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://academy.prompie.com/qualifications/detail/cne4m0j/",
+            "domain": "academy.prompie.com",
+            "title": "SQL 자격증 - 오늘학교 아카데미",
+            "snippet": "##### 자격증 소개데이터베이스 개발 및 사용의 필수 언어인 SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함*SQL 전문가데이터베이스와 데이터모델링에 대한 지식을 바탕으로 데이터를 조작하고 추출하는데"
+          },
+          {
+            "url": "https://www.sqldpass.com/q/24501",
+            "domain": "www.sqldpass.com",
+            "title": "[SQL 개발자 자격증] SQL 기본 기출 #24501 | 문어CBT",
+            "snippet": "# SQL 개발자 자격증 SQL 기본 기출문제 #24501 ... * ①: 'X'가 나오려면 MAX(COL1)이 NULL인 행이 한 건이라도 만들어져야 하는데, GROUP BY 때문에 행 자체가"
+          },
+          {
+            "url": "https://www.sqldpass.com/q/24158",
+            "domain": "www.sqldpass.com",
+            "title": "[SQL 개발자 자격증] SQL 기본 기출 #24158 | 문어CBT",
+            "snippet": "# SQL 개발자 자격증 SQL 기본 기출문제 #24158 ... WHERE는 그룹이 만들어지기 전 개별 행을 대상으로 평가되므로 집계 함수를 쓸 수 없고, GROUP BY 없이"
+          },
+          {
+            "url": "https://www.sqldpass.com/q/24480",
+            "domain": "www.sqldpass.com",
+            "title": "[SQL 개발자 자격증] SQL 기본 기출 #24480 | 문어CBT",
+            "snippet": "# SQL 개발자 자격증 SQL 기본 기출문제 #24480 ... * ②: NATURAL JOIN은 이름이 같은 컬럼을 자동으로 찾아 등가 조건을 거는 조인으로 NATURAL 키워드를 명시해야"
+          },
+          {
+            "url": "https://www.sqldpass.com/q/24528",
+            "domain": "www.sqldpass.com",
+            "title": "[SQL 개발자 자격증] SQL 활용 기출 #24528 | 문어CBT",
+            "snippet": "# SQL 개발자 자격증 SQL 활용 기출문제 #24528 ... * ④: 100, 250, 370, 570은 누적 합계이며, 이 SQL은 SUM이 아니라 직전 행과의 차이를 계산한다."
+          },
+          {
+            "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&cstmConsTme=&focusId=&tracseId=AIG20250000533995&tracseReqstsCd=&tracseTme=1&trainstCstmrId=500036090856",
+            "domain": "www.work24.go.kr",
+            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
+            "snippet": "### 귀하는 \"SQL 개발자(SQLD) 자격증 취득\" 훈련과정에 최종 \"선발\" 되셨습니다. ... 훈련목표 | 관계형 데이터베이스 이해를 바탕으로 표준 SQL을 활용한 데이터 조회, 삽입, 수정, 삭제가"
+          },
+          {
+            "url": "https://flameleaf.tistory.com/entry/SQL-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%8B%9C%ED%97%98-%EC%A2%85%EB%A5%98-%EC%9D%BC%EC%A0%95-%ED%95%A9%EA%B2%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A4%80%EB%B9%84%EB%B2%95",
+            "domain": "flameleaf.tistory.com",
+            "title": "SQL 자격증 시험 종류, 일정, 합격을 위한 준비법",
+            "snippet": "SQL 자격증은 데이터베이스 설계와 쿼리 작성 능력을 평가하는 대표적인 자격으로, 한국데이터산업진흥원(데이터Q)이 관리하는 SQLD(개발자 수준)와 SQLP(전문가 수준)가 주요 시험입니다.이 글에서는 2026년 최신 시험 일정(공식 발표 기준),"
+          },
+          {
+            "url": "https://supercoding.net/Course/CourseIntroBeginner/SQL",
+            "domain": "supercoding.net",
+            "title": "입문 끝판왕, 왕초보를 위한 SQL",
+            "snippet": "## 하루 30분으로 SQL 기초부터 취업에 도움되는 SQLD자격증, 데이터 실무까지 단 한 번에! ... 곧 SQLD 시험이 있어서, 단기간에 SQL을 끝내야 해요. ... * 취업,이직에"
+          },
+          {
+            "url": "https://glasswallet.com/blog/sqld-certification-cost-guide/",
+            "domain": "glasswallet.com",
+            "title": "SQLD 자격증 비용 5만원, 독학 8만원이면 충분할까? | 유리지갑 (Glasswallet)",
+            "snippet": "이 글은 SQLD 자격증 비용을 응시료 5만원짜리 시험 이 아니라, 합격까지 들어가는 총비용과 기회비용 관점에서 계산합니다. ... 한국데이터산업진흥원(KDATA) 데이터자격시험이 운영하는 공인 민간자격이며, DataQ 공식 안내에는"
+          },
+          {
+            "url": "https://edu.ezenac.co.kr/search/SQL",
+            "domain": "edu.ezenac.co.kr",
+            "title": "[SQL] 검색결과 :: 이젠온라인에듀",
+            "snippet": "* ## [이젠] SQL 쉽게 배우기 이젠 나도 데이터전문가 ... * ## SQL 개발자 (SQLD) 자격증 따기 (2024 개정) Part.2-1 데이터 모델링의 이해"
+          }
+        ],
+        "dominant_result_ratio": 0.1,
+        "score_components": {
+          "demand": 29.56,
+          "organic_opportunity": 36.0,
+          "trend": 0,
+          "intent_fit": 0
+        },
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "unavailable",
+        "selection_version": 5,
+        "selected_at": "2026-09-10T11:28:21.087006+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "SQL자격증"
+        ],
+        "status": "research_only",
+        "opportunity_evidence": {
+          "version": 1,
+          "query": "SQL자격증",
+          "topic": "SQL자격증 종류: 개발자와 전문가의 직무·합격률 비교",
+          "intent": "SQL자격증 개발자와 전문가는 검증하는 직무와 합격률이 어떻게 다른가?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-10T11:28:21.087006+00:00",
+          "result_count": 10,
+          "domain_count": 7,
+          "dominant_ratio": 0.1,
+          "scope": "narrower_query",
+          "target_keyword": "SQL자격증 종류 비교",
+          "matches": [
+            {
+              "result_index": 0,
+              "quote": "SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함"
+            },
+            {
+              "result_index": 6,
+              "quote": "SQLD(개발자 수준)와 SQLP(전문가 수준)가 주요 시험입니다."
+            }
+          ]
+        },
+        "score": 65.56,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_or_unverified_search_intent"
+        ]
+      }
+    ],
     "rejected": [
       {
         "keyword": "전기기사시험일정",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.gb.go.kr/Main/page.do?BD_CODE=freebbs11&B_LEVEL=0&B_NUM=511962301&B_STEP=511962300&Start=0&V_NUM=14196&bdName=&cmd=2&dept_code=&dept_name=&key=4&mnu_uid=6755&p1=0&p2=0&tbbscode1=freebbs11&word=",
+              "title": "자유게시판>도민의소리>소통참여>경상북도",
+              "excerpt_chars": 2125
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       },
       {
         "keyword": "산업기사시험일정",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.ksa.or.kr/ksa_kr/16861/subview.do",
+              "title": "창업·벤처기업 지원사업",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://ksa.or.kr/ksa_kr/16861/subview.do",
+              "title": "창업·벤처기업 지원사업",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://sbiz.or.kr/cop/main/copMain.do",
+              "title": "협업활성화",
+              "excerpt_chars": 1430
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       },
       {
         "keyword": "민간자격증조회",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://minhwacenter.or.kr/",
+              "title": "한국민화센터",
+              "excerpt_chars": 1215
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "insufficient_search_intent"
+          }
+        }
       },
       {
         "keyword": "50대자격증추천",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=6&searchGbn=0&searchOrderSort=0",
+              "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       },
       {
         "keyword": "컴활2급필기",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20250714112106131085",
+              "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 시나공 컴퓨터활용능력2급 실기 기본서",
+              "excerpt_chars": 528
+            },
+            {
+              "url": "https://bukbu.seoulcareerup.or.kr/bukbu/edu/selectEduProgram.do?sch_class_code=C100156012",
+              "title": "북부여성발전센터",
+              "excerpt_chars": 5832
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "expired_information"
+          }
+        }
       },
       {
         "keyword": "장례지도사자격증",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.redcross.or.kr/main/sm/sprt/selectOdtmSprtPrgrmCntntsInfo.do?mi=1276&prgrmSn=1005",
+              "title": "대한적십자사\r\n\t\t\t> 지원신청\r\n\t\t\t> 자립시 꽃길로 진로지원 장학금 지원",
+              "excerpt_chars": 3425
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       },
       {
         "keyword": "이직확인서작성방법",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lspttninfSeq=113533",
+              "title": "국가법령정보센터 | 연계정보",
+              "excerpt_chars": 575
+            },
+            {
+              "url": "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1015413725",
+              "title": "국가법령정보센터 | 조문정보",
+              "excerpt_chars": 443
+            },
+            {
+              "url": "https://medlineplus.gov/about/using/searchtips/",
+              "title": "MedlinePlus: Search Tips",
+              "excerpt_chars": 6259
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "category_mismatch"
+          }
+        }
       },
       {
         "keyword": "컴퓨터자격증종류",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://c.q-net.or.kr/cbq/introduce/qualObligList.do",
+              "title": "종목 정보 - 과정평가형자격 안내 | 과정평가형자격",
+              "excerpt_chars": 669
+            },
+            {
+              "url": "https://www.bok.or.kr/portal/bbs/P0002243/view.do?depth=200472&menuNo=200472&nttId=11062962&oldMenuNo=201150&programType=newsData&relate=Y",
+              "title": "CP분류표(2026.06.30기준) | 자금순환통계(상세) | 통계조사표 | 경제통계 | 업무별 정보 | 뉴스/자료 |  한국은행 홈페이지",
+              "excerpt_chars": 486
+            },
+            {
+              "url": "https://c.q-net.or.kr/cont/bbs/cbqOrganStdBbsList.do",
+              "title": "편성기준 자료실 - 편성기준 안내 | 과정평가형자격",
+              "excerpt_chars": 353
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       },
       {
         "keyword": "안전관리자자격증",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+              "title": "www.meca.or.kr",
+              "excerpt_chars": 261
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       },
       {
         "keyword": "청소년상담사자격증",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=66896&viewCls=lsRvsDocInfoR",
+              "title": "법령 > 제정·개정문 > 청소년기본법 시행규칙 | 국가법령정보센터",
+              "excerpt_chars": 1579
+            },
+            {
+              "url": "https://www.cj1388.or.kr/main/sub.html?Mode=view&bCate=%EA%BF%88%EB%93%9C%EB%A6%BC&boardID=www16&num=3396&page=1",
+              "title": "청주시청소년상담복지센터 / 열린세상 / 프로그램 신청",
+              "excerpt_chars": 971
+            },
+            {
+              "url": "https://www.cj1388.or.kr/main/sub.html?Mode=view&boardID=www16&num=3396&page=0",
+              "title": "청주시청소년상담복지센터 / 열린세상 / 프로그램 신청",
+              "excerpt_chars": 907
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_navigation"
+          }
+        }
       },
       {
         "keyword": "BIM자격증",
-        "reason": "search intent or official evidence does not support an article"
-      },
-      {
-        "keyword": "데이터분석자격증",
-        "reason": "search intent or official evidence does not support an article"
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.buildingsmart.or.kr/Home/Testinfo",
+              "title": "buildingSMART Korea",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.buildingsmart.or.kr/Home/TestInfo",
+              "title": "buildingSMART Korea",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://buildingsmart.or.kr/Home/Testinfo",
+              "title": "buildingSMART Korea",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."

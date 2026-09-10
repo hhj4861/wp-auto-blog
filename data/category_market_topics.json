@@ -113,7 +113,7 @@
   },
   "생활정보": {
     "category": "생활정보",
-    "selected_at": "2026-09-10T02:03:56.053602+00:00",
+    "selected_at": "2026-09-10T02:20:41.346322+00:00",
     "seeds": [
       "신청방법",
       "환급금",
@@ -121,90 +121,60 @@
       "정부지원"
     ],
     "selection_version": 4,
-    "research_rounds": 1,
+    "research_rounds": 2,
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 211,
-    "evaluated_candidates": 6,
-    "selected": [
-      {
-        "keyword": "국가기술자격증종류",
-        "category": "생활정보",
-        "topic": "국가기술자격증종류: 기능사·산업기사·기사·기능장·기술사 등급 비교",
-        "intent": "기능사·산업기사·기사·기능장·기술사는 평가하는 능력과 시험 방식이 어떻게 다른가요?",
-        "gap": "공식 검정기준에 근거한 5개 등급별 수행능력·필기·실기 및 면접 방식·합격기준 비교표를 제공합니다.",
-        "source_url": "https://hrdkorea.or.kr/1/2/2/1",
-        "verified_sources": [
-          {
-            "url": "https://hrdkorea.or.kr/1/2/2/1",
-            "original_url": "https://hrdkorea.or.kr/1/2/2/1",
-            "title": "시험 소개 < 국가기술자격시험 < 능력평가 < 사업소개 < 한국산업인력공단",
-            "checked_on": "2026-09-10",
-            "sha256": "3197f4694bfcd6f536c7ff219b24e2cf0639f4cbda627e0fbd0c6338addd5260",
-            "excerpt": "본문 바로가기 전체메뉴 닫기 사업소개 능력개발 사업소개 직업능력개발훈련 지원 능력개발전담주치의 사업주 직업능력개발훈련 체계적 현장 훈련(S-OJT) 일학습병행 국가인적자원개발컨소시엄 HRD 확산·인프라 지원 직업능력개발 디지털콘텐츠 인적자원개발 우수기관 인증 직업능력의 달 행사 능력개발포털 HRD4U 훈련품질향상 모니터링 산업별 인적자원 개발위원회(ISC) 운영 지원 대한민국산업현장교수 자료실 능력평가 사업소개 국가기술자격시험 시험 소개 취득자 관리 국가전문자격시험 과정평가형자격 일학습병행 외부평가 자료실 외국인고용지원 사업소개 사업주 지원 지원 가입 보험 외국인근로자지원 입국/귀국절차 EPS-TOPIK 보험가입 외국인력상담센터 자료실 해외취업지원 사업소개 지원/프로그램 해외취업 연수 해외취업 알선 해외취업 정착지원금 해외일경험지원사업(WELL) 자료실 국제교류협력 사업소개 교류협력 국가 국제기구 국가 간 자격상호인정 지원 개발협력 국제 HRD 위탁사업 외국인 초청연수 자료실 숙련기술 사업소개 숙련기술진흥 선정 기능한국인 발굴/홍보 숙련기술전수 개요 멘토링 운영 기능경기대회 국내기능경기대회 국제기능올림픽대회 자료실 국가직무능력표준(NCS) 사업소개 자료실 청년미래플러스 사업소개 자료실 사업 연구보고서 자료실 국민참여 고객감동경영 고객헌장 고객서비스헌장 서비스이행표준 고객칭찬사례 국민의 소리 국민의 소리 반영함 내가 쓴 민원 민원 신청하기 자주하는 질문 일반민원 신청하기 자격증 불법대여 신고 직업훈련 부정 신고 고객 제안하기 직원 칭찬하기 시민e이사회 소개 의견 제시 진행 안건 종료 안건 부패·공익신고 부패·공익신고(청렴포털) 클린신고센터(익명신고) 안심제보변호사 신고 내부규정 규정 제·개정 예고 기업성장응답센터 기업성장응답센터 공공기관 협력 ICT 직무 가이드 기업 직원 대상 설문조사 결과 직무 가이드 개요 직무 면접과 시험 문제 질의와 답변 직무 분야 취업을 위한 현업 담당자의 조언 협력 ICT 기업 AI 활용 현안 설문 개요 설문 결과 창업/경제활성화 지원센터 HRDK 수출·수주 지원단 HRDK 특허 활용 지원센터 HRDK 소식·홍보 소식 공지사항 인재채용 채용제도 채용공고 인재상 인사교육제도 자주 묻는 질문 홍보 HRDK 발자취 HRDK 홍보 CI소개 캐릭터 소개 온라인 홍보 센터 HRDK ESG ESG 경영 ESG 경영 ESG 뉴스 E(Environment) 환경 E(Environment) 환경 S(Social)사회 HRDK 사회공헌 사회 공헌 소개 사회 공헌 활동 나누미 봉사단 사랑나누미 기금 적극행정 적극행정 소개 소극행정 신고 G(Governance)지배구조 윤리인권 경영소개 윤리인권 경영 경영실천 신고물품처리결과 공개 게시판 반부패 청렴제도 패널마당 이사회 커뮤니티 ESG 경영공시 ESG 경영공시 공단소개 HRDK 소개 소개 인사말 미션과 비전 중장기 경영전략 체계 연혁 조직안내 전체 조직도 직원 연락처 주요 수상내역 2025년 2024년 2023년 찾아오시는 길 지역 본부·지사 지역본부·지사 지역본부·지사 정보공개 정보공개 안내 정보공개 제도 정보공개 소개 정보공개 목록 처리절차 및 신청 처리절차 신청하기 사전정보공표 사전정보공표 사전정보공표상세목록 공공데이터 소개 개방 목록 FAQ 사업실명제 자료실 경영공시 일반현황 및 기관운영 주요사업 및 경영성과 대내외평가 정보공개 기타정보 종합 청렴도 평가결과 내부경영평가결과 주요 수상내역 우수사례 MOU 체결현황 주요사업별 보고서 주요사업 업무처리절차 주요사업별 통계 법인카드인센티브 업무추진비 내역 위원회 회의 결과 친인척 채용인원 공개 제안서 평가결과 해외연수출장 국민인식도 조사결과 사업소개 능력개발 사업소개 직업능력개발훈련 지원 HRD 확산·인프라 지원 자료실 외국인고용지원 사업소개 사업주 지원 외국인근로자지원 자료실 국제교류협력 사업소개 교류협력 개발협력 자료실 국가직무능력표준(NCS) 사업소개 자료실 능력평가 사업소개 국가기술자격시험 국가전문자격시험 과정평가형자격 일학습병행 외부평가 자료실 해외취업지원 사업소개 지원/프로그램 자료실 숙련기술 사업소개 숙련기술진흥 숙련기술전수 기능경기대회 자료실 청년미래플러스 사업소개 자료실 사업 연구보고서 자료실 국민참여 고객감동경영 고객헌장 고객칭찬사례 국민의 소리 국민의 소리 반영함 내가 쓴 민원 민원 신청하기 시민e이사회 부패·공익신고 내부규정 기업성장응답센터 기업성장응답센터 공공기관 협력 ICT 직무 가이드 협력 ICT 기업 AI 활용 현안 창업/경제활성화 지원센터 HRDK 수출·수주 지원단 HRDK 특허 활용 지원센터 HRDK 소식·홍보 소식 공지사항 인재채용 홍보 HRDK 발자취 HRDK 홍보 HRDK ESG ESG 경영 ESG 경영 ESG 뉴스 E(Environment) 환경 E(Environment) 환경 S(Social)사회 HRDK 사회공헌 적극행정 G(Governance)지배구조 윤리인권 패널마당 ESG 경영공시 ESG 경영공시 공단소개 HRDK 소개 소개 조직안내 주요 수상내역 찾아오시는 길 지역본부·지사 지역본부·지사 지역본부·지사 정보공개 정보공개 안내 정보공개 제도 처리절차 및 신청 사전정보공표 사전정보공표 사전정보공표상세정보 공공데이터 소개 개방 목록 FAQ 사업실명제 자료실 경영공시 일반현황 및 기관운영 주요사업 및 경영성과 대내외평가 정보공개 기타정보 검색 입력폼 열기 전체메뉴 검색어 입력 검색 전체메뉴 사업소개 능력개발 사업소개 직업능력개발훈련 지원 HRD 확산·인프라 지원 자료실 외국인고용지원 사업소개 사업주 지원 외국인근로자지원 자료실 국제교류협력 사업소개 교류협력 개발협력 자료실 국가직무능력표준(NCS) 사업소개 자료실 능력평가 사업소개 국가기술자격시험 국가전문자격시험 과정평가형자격 일학습병행 외부평가 자료실 해외취업지원 사업소개 지원/프로그램 자료실 숙련기술 사업소개 숙련기술진흥 숙련기술전수 기능경기대회 자료실 청년미래플러스 사업소개 자료실 사업 연구보고서 자료실 국민참여 고객감동경영 고객헌장 고객칭찬사례 국민의 소리 국민의 소리 반영함 내가 쓴 민원 민원 신청하기 시민e이사회 부패·공익신고 내부규정 기업성장응답센터 기업성장응답센터 공공기관 협력 ICT 직무 가이드 협력 ICT 기업 AI 활용 현안 창업/경제활성화 지원센터 HRDK 수출·수주 지원단 HRDK 특허 활용 지원센터 HRDK 소식·홍보 소식 공지사항 인재채용 홍보 HRDK 발자취 HRDK 홍보 공단소개 HRDK 소개 소개 조직안내 주요 수상내역 찾아오시는 길 지역본부·지사 지역본부·지사 지역본부·지사 HRDK ESG ESG 경영 ESG 경영 ESG 뉴스 E(Environment) 환경 E(Environment) 환경 S(Social)사회 HRDK 사회공헌 적극행정 G(Governance)지배구조 윤리인권 패널마당 ESG 경영공시 ESG 경영공시 정보공개 정보공개 안내 정보공개 제도 처리절차 및 신청 사전정보공표 사전정보공표 사전정보공표상세정보 공공데이터 소개 개방 목록 FAQ 사업실명제 자료실 경영공시 일반현황 및 기관운영 주요사업 및 경영성과 대내외평가 정보공개 기타정보 전체메뉴 닫기 이전 페이지로 홈 사업소개 능력평가 국가기술자격시험 시험 소개 시험 소개 현대 사회는 자격증시대 이제는 누가 얼마만큼 배웠느냐가 중요한 것이 아니라 능력을 얼마만큼 인정 받느냐가 중요시 되는 시대입니다. 한국산업인력공단은 국가기술자격검정을 통해 각 개인의 재능과 능력, 그리고 전문성을 우선으로 하는 자격증 시대를 열어가고 있습니다. 능력평가 업무소개 기술자격 취득자의 사후관리, 기술자격검정 시험문제의 출제ㆍ관리, 기술자격시험 집행 검정시행계획 수립 고용노동부 승인 시행공고 원서접수 시험문제 출제 문제은행 시험문제 인쇄 필기 시험장 확보 원서접수 시험위원위촉 시험시행 채점 합격자발표 실기 시험장 확보 원서접수 시험위원위촉 시험시행 채점 합격자 발표 자격증 발급 응시절차안내 응시절차안내 순서 응시절차 절차안내 1 원서접수 인터넷접수 (www.Q-net.or.kr) 2 필기원서 접수 필기 접수 기간내 수험원서 인터넷 제출 사진(6개월 이내에 촬영한 반명함판 사진파일(.jpg)), 수수료: 정액 시험장소 본인 선택 (선착순) 3 필기시험 수험표, 신분증 지참 (기술사의 경우 필기구 등 별도 지참) 4 합격자 발표 인터넷 (www.Q-net.or.kr) 응시자격(기술사, 기능장, 기사, 산업기사, 서비스분야 일부종목) 제한종목은 합격예정자 발표일로부터 8일 이내에(토,공휴일 제외) 반드시 응시자격서류를 제출하여야되며 단, 실기접수는 4일 임 5 실기원서접수 실기접수기간내 수험원서 인터넷 제출 사진(6개월 이내에 촬영한 반명함판 사진파일(.jpg)), 수수료: 정액 시험일시, 장소 본인 선택 (선착순) 단, 기술사 면접시험은 시행 10일전 공고 6 실기시험 수험표, 신분증, 필기구, 수험지참준비물 준비 7 최종합격자발표 인터넷 (www.Q-net.or.kr) 8 자격증발급 인터넷 (www.Q-net.or.kr) 국가기술자격 제도운영 고용노동부 국가기술자격법령 및 제도운영 총괄 주무부처(자격종목관리) 관련 사업법령에 의거 자격취득자활용 및 사후관리 한국산업인력공단(검정시행) 국가기술자격검정의 집행 시험문제출제, 관리 자격취득자 자격증 발급 및 사후관리 ※ 기타 검정시행기관, 대한상공회의소, 한국원자력안전기술원, 영화진흥위원회 검정기준 및 방법 검정기준 검정기준 자격등급 검정기준 기술사 응시하고자 하는 종목에 관한 고도의 전문지식과 실무경험에 입각한 계획, 연구, 설계, 분석, 조사, 시험, 시공, 감리, 평가, 진단, 사업관리, 기술관리 등의 기술업무를 수행할 수\r\n            있는 능력의 유무 기능장 응시하고자 하는 종목에 관한 최상급 숙련기능을 가지고 산업현장에서 작업관리, 소속기능인력의 지도 및 감독, 현장훈련, 경영계층과 생산계층을 유기적으로 연계시켜 주는 현장관리 등의\r\n            업무를 수행할 수 있는 능력의 유무 기사 응시하고자 하는 종목에 관한 공학적 기술이론 지식을 가지고 설계, 시공, 분석 등의 기술업무를 수행할 수 있는 능력의 유무 산업기사 응시하고자 하는 종목에 관한 기술기초이론지식 또는 숙련기능을 바탕으로 복합적인 기능업무를 수행할 수 있는 능력의 유무 기능사 응시하고자 하는 종목에 관한 숙련기능을 가지고 제작, 제조, 조작, 운전, 보수, 정비, 채취, 검사, 또는 직업관리 및 이에 관련되는 업무를 수행할 수 있는 능력의 유무 검정방법 >검정방법 자격등급 필기시험 면접시험 또는 실기시험 기술사 단답형 또는 주관식논문형 (100점 만점에 60점 이상) 구술형 면접시험 (100점 만점에 60점 이상) 기능장 객관식 4지택일형 (60문항) (100점 만점에 60점 이상) 주관식 필기시험 또는 작업형 (100점 만점에 60점 이상) 기사 객관식 4지택일형 - 과목당 20문항 -과목당 40점 이상(전과목 평균 60점 이상) 주관식 필기시험 또는 작업형 (100점 만점에 60점 이상) 산업기사 객관식 4지택일형 - 과목당 20문항 - 과목당 40점 이상(전과목 평균 60점 이상) 주관식 필기시험 또는 작업형 (100점 만점에 60점 이상) 기능사 객관식 4지택일형(60문항) (100점 만점에 60점 이상) 주관식 필기시험 또는 작업형 (100점 만점에 60점 이상) 국가기술자격 출제 능력중심사회 구현을 위해 현장(일터)에 필요한 국가직무능력표준(NCS)을 반영한 출제기준 개편 등 국가자격의 현장성 강화를 추진하고 있습니다. NCS 기반 평가방식 다양화, 맞춤형 실기 평가문제 개발 문제은행 최신화, 시험문제 일몰제, 출제위원 인력풀 정비 및 합숙형 출제 확대 국가기술자격 출제 주요업무 프로세스 출제계획 수립 시험문제 출제 시행문제 선정 및 교부 시험 시행 합격자 발표 시험 시행 후 관리 출제계획 수립 연간 출제 및 검토 계획 수립 시험문제 출제 출제 위원 선정 출제 의뢰 출제 문제 접수 검토 위원 선정 검토 의뢰 검토 문제 접수 문제 은행 입고 시험문제 선정 및 교부 문제 세트 자동 구성 구성 세트 검토(오탈자 편집) 시험문제 교부 시험 시행 출제본부 운영 시험시행 후 관리 등록별 응시자 문항 분석 CONTACT US 필기시험운영부 052-714-8749 페이지에서 제공하는 정보에 대해 만족하십니까? - 선택 - 매우 만족 만족 보통 불만 매우 불만 매우 만족 만족 보통 불만 매우 불만 만족도 평가를 직접 입력해주세요. 인쇄하기",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://hrdkorea.or.kr/1/2/2/1"
-        ],
-        "valid_until": null,
-        "monthly_search": 2000,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "advertising_competition": "높음",
-        "evidence_mode": "official_pages",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://hrdkorea.or.kr/1/2/2/1",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://c.q-net.or.kr/cbq/introduce/faq.do",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19180",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": null,
-        "organic_domains": [],
-        "organic_results": [],
-        "dominant_result_ratio": null,
-        "score_components": {
-          "demand": 26.41,
-          "organic_opportunity": 0,
-          "specificity": 15,
-          "trend": 0
-        },
-        "trend_growth": null,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "score": 41.41,
-        "selection_version": 4,
-        "selected_at": "2026-09-10T02:03:56.053602+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "국가기술자격증종류"
-        ],
-        "status": "pending"
-      }
-    ],
+    "evaluated_candidates": 12,
+    "selected": [],
     "rejected": [
       {
-        "keyword": "퇴직금중간정산",
+        "keyword": "세금계산서발행",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "경정청구환급기간",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "종합소득세기한후신고환급",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "개인사업자부가세환급",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "연말정산환급금조회",
+        "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "자금조달계획서",
         "reason": "organic lookup unavailable; requires a specific measured long-tail"
+      },
+      {
+        "keyword": "소상공인정책자금신청",
+        "reason": "no accessible official source supports topic"
       },
       {
         "keyword": "소상공인폐업지원금",
         "reason": "organic lookup unavailable; requires a specific measured long-tail"
       },
       {
-        "keyword": "종합소득세기한후신고환급",
+        "keyword": "종합소득세환급일",
+        "reason": "search intent or official evidence does not support an article"
+      },
+      {
+        "keyword": "연말정산환급일",
         "reason": "no accessible official source supports topic"
+      },
+      {
+        "keyword": "종합소득세율",
+        "reason": "organic lookup unavailable; requires a specific measured long-tail"
+      },
+      {
+        "keyword": "청년창업지원금",
+        "reason": "organic lookup unavailable; requires a specific measured long-tail"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition earns zero points. Null trend means unavailable."

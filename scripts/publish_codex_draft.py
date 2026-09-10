@@ -326,6 +326,9 @@ def publish_draft(post_id, env):
                 issues.append('Market draft keyword, category or template changed')
         review_html = ('<section><h1>' + escape(meta['title']) + '</h1><p>'
                        + escape(meta['meta_description']) + '</p></section>' + html)
+        if brief:
+            from src.market_opportunity import review_article
+            issues += review_article(meta['title'], html, meta['meta_description'], brief, client.generate)
         return issues + review_evidence(review_html, sources, client.generate)
 
     issues = gates(body)

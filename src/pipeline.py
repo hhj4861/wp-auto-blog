@@ -574,6 +574,11 @@ class BlogPipeline:
                     title=content.title,
                     html=content.html,
                 )
+                if market_brief:
+                    from src.market_opportunity import review_article
+                    gate_issues += review_article(
+                        content.title, content.html, content.meta_description, market_brief,
+                        self.content_generator._call_llm)
                 if gate_issues:
                     logger.warning(f"품질 게이트 실패 {len(gate_issues)}건: {gate_issues}")
                     if refresh_post_id:

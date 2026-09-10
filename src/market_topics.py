@@ -21,6 +21,7 @@ from src.editorial import fetch_source, is_official_url
 from src.market_search import search_results
 from src.cak_candidates import (load_candidate_export, measurement_key, qualified_rising,
                                 valid_cak_provenance)
+from src import market_opportunity as opportunity
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -46,7 +47,7 @@ CATEGORY_TERMS = {
              '기초연금', '청년월세', '전입신고', '전세보증금'),
 }
 SOURCE = 'category_market_v1'
-PROCESS_VERSION = 4
+PROCESS_VERSION = 5
 MAX_RESEARCH_ROUNDS = 2
 PROPOSALS_PER_ROUND = 6
 ROOT = Path(__file__).resolve().parents[1]
@@ -442,11 +443,21 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
 카테고리가 맞지 않거나 홈페이지 이동/상품 구매만 원하는 검색, 개인별 진단·치료 권유도 false.
 제목 topic에는 검색어를 유지하세요. intent에는 구체적인 독자 질문, gap에는 이 글에 추가할
 출처로 검증 가능한 표·체크리스트·절차 등의 독자 가치를 적으세요. 근거 없는 차별점은 금지합니다.
+월검색량은 원래 검색어 전체의 수요입니다. 'ITQ자격증조회'를 '장기 미접속 로그인 오류'만의
+글로 좁힌 뒤 원래 수요를 붙이지 마세요. 주된 검색 목적 전체에 답하고 세부 오류는 보조 절로 다루세요.
+intent_evidence.scope는 full_keyword/narrower_query/navigation/unknown 중 하나입니다.
+full_keyword는 제목과 본문 기획이 실제 검색결과에서 확인한 검색어 전체의 정보 목적에 답할 때만 가능합니다.
+target_keyword에는 실제로 답할 검색어를 적으세요. 더 좁은 주제면 그 세부 검색어를 적고 narrower_query로 표시하세요.
+matches에는 제목·요약에서 이 글의 주된 질문을 직접 뒷받침하는 서로 다른 도메인의 결과 최소 2개를
+result_index와 quote로 기록하세요. quote는 제공된 검색결과 제목/요약에서 8자 이상 그대로 복사하세요.
+관련 없는 문구를 의도 근거로 쓰거나 공식 본문을 검색결과로 대신하지 마세요. 결과가 없으면 unknown과 빈 matches입니다.
 source_index는 선택한 공식 자료의 0부터 시작하는 인덱스입니다. 자료가 부족해 판단할 수 없으면 false입니다.
 마감일이 있으면 valid_until에 ISO 날짜, 상시 정보는 JSON null을 넣으세요.
 category는 실제 목적에 따라 취업/생활정보/건강/기타 중 선택하고, 요청 카테고리와 다르면 supported=false입니다.
 JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","intent":"...",
-"gap":"...","source_index":0,"{indices_key}":[0],"valid_until":null}}
+"gap":"...","source_index":0,"{indices_key}":[0],"valid_until":null,
+"intent_evidence":{{"scope":"full_keyword","target_keyword":"{keyword}",
+"matches":[{{"result_index":0,"quote":"검색결과에 있는 원문"}}]}}}}
 데이터: {json.dumps({'search_results': results, 'official_sources': sources}, ensure_ascii=False)}""")
     if not isinstance(analysis, dict) or analysis.get('supported') is not True:
         return None, 'search intent or official evidence does not support an article'
@@ -473,6 +484,7 @@ JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","int
     verified = [sources[i] for i in dict.fromkeys([index, *indices])] if source_only else [source]
     return {'keyword': keyword, 'category': category,
             **{key: analysis[key].strip() for key in ('topic', 'intent', 'gap')},
+            'intent_evidence': analysis.get('intent_evidence'),
             'source_url': source['url'], 'verified_sources': verified,
             'intent_results': [intent_rows[i]['url'] for i in dict.fromkeys(indices)],
             'valid_until': deadline}, None
@@ -491,7 +503,7 @@ def select_category(category, top_n=2, titles=None):
     pool = candidate_pool(stats, titles, category)
     if not pool:
         raise RuntimeError('No uncovered measured candidates in this category')
-    selected, rejected, seen = [], [], set()
+    selected, held, rejected, seen = [], [], [], set()
     rounds = 0
     for _ in range(MAX_RESEARCH_ROUNDS):
         remaining = [row for row in pool if norm(row['keyword']) not in seen][:60]
@@ -530,6 +542,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                 continue
             row = stats[keyword]
             provider, results = search_results(keyword)
+            results = [result for _, result in opportunity.sample_rows(results)]
             mode, research = 'serp', None
             if not results:
                 # Missing SERP cannot imply easy competition. Research only specific,
@@ -538,7 +551,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                     rejected.append({'keyword': keyword, 'reason': 'organic lookup unavailable; requires a specific measured long-tail'})
                     continue
                 mode, provider = 'official_pages', None
-            domains = [result['domain'] for result in results]
+            domains = [result['domain'] for _, result in opportunity.sample_rows(results)]
             dominance = gov_ratio(domains) if domains else None
             if dominance is not None and row['monthly'] >= HEAD_SEARCH_VOLUME and dominance > MAX_GOV_RATIO:
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
@@ -566,35 +579,53 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
             components = score_components(row['monthly'], domains, keyword, growth, evidence_mode=mode)
             if cak_provenance is not None:
                 components['cak_trend'] = round(cak_provenance['item']['trend']['hotScore'] / 10, 2) if direct_rising else 0
-            selected.append({**item, 'monthly_search': row['monthly'],
+            review = item.pop('intent_evidence', None)
+            candidate = {**item, 'monthly_search': row['monthly'],
                 'demand_provider': row.get('demand_provider', 'naver_searchad_pc_mobile'),
+                'demand_scope': 'keyword_total',
                 'advertising_competition': row.get('comp'),
                 **({'cak_provenance': cak_provenance} if cak_provenance is not None else {}),
                 'evidence_mode': mode, 'research_evidence': research,
                 'organic_provider': provider, 'organic_domains': domains, 'organic_results': results,
                 'dominant_result_ratio': dominance, 'score_components': components,
                 'trend_growth': growth, 'trend_provider': None if direct_rising else 'google_trends_relative_7d_vs_previous_7d',
-                'score': round(sum(components.values()), 2), 'selection_version': PROCESS_VERSION,
-                'selected_at': now, 'source': SOURCE, 'keywords': [keyword], 'status': 'pending'})
+                'trend_status': 'cak_measured' if direct_rising else ('measured' if growth is not None else 'unavailable'),
+                'selection_version': PROCESS_VERSION,
+                'selected_at': now, 'source': SOURCE, 'keywords': [keyword], 'status': 'pending'}
+            candidate['opportunity_evidence'] = opportunity.assess(
+                keyword, item['topic'], item['intent'], provider, results, review, now)
+            reasons = opportunity.issues(candidate, datetime.fromisoformat(now))
+            # Lexical specificity is only for discovery. Final points require search-backed intent.
+            components.pop('specificity')
+            components['intent_fit'] = 15 if not reasons else 0
+            candidate.update(score=round(sum(components.values()), 2),
+                             publish_eligible=not reasons, hold_reasons=reasons)
+            if reasons:
+                candidate['status'] = 'research_only'
+                held.append(candidate)
+            else:
+                selected.append(candidate)
         if len(selected) >= top_n or len(seen) == attempted_before:
             break
     selected.sort(key=lambda item: -item['score'])
+    held.sort(key=lambda item: -item['score'])
     return {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds, 'cak_import': cak_import,
             'analyst': 'codex_subscription',
             'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']
                                    else 'naver_related_keywords'),
             'measured_candidates': len(stats), 'evaluated_candidates': len(seen),
-            'selected': selected[:top_n], 'rejected': rejected,
+            'research_pool_size': len(pool), 'selected': selected[:top_n], 'held': held, 'rejected': rejected,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '
                      'organic provider is recorded per candidate. Independently fetched official pages are '
                      'source evidence; model-reported locators prove neither indexing nor native page visits. '
-                     'Missing competition earns zero points. '
+                     'Missing competition or unverified topic intent prevents automatic publication. '
+                     'Monthly demand belongs to the exact keyword, never an unmeasured narrower question. '
                      'CAK exact rising candidates use their own daily trend score; related discoveries use '
                      'only their own Google trend. Null Google trend means unavailable or not requested.'}
 
 
-def fresh_market_item(item, category, now=None):
+def fresh_research_item(item, category, now=None):
     if not isinstance(item, dict):
         return False
     now = now or datetime.now(timezone.utc)
@@ -668,7 +699,7 @@ def fresh_market_item(item, category, now=None):
             and category_matches(item.get('keyword'), category)
             and category_matches(item.get('topic'), category)
             and item.get('selection_version') == PROCESS_VERSION
-            and item.get('status') == 'pending' and timedelta(0) <= age <= timedelta(hours=36)
+            and item.get('status') in ('pending', 'research_only') and timedelta(0) <= age <= timedelta(hours=36)
             and valid_volume and valid_score and valid_evidence
             and isinstance(item.get('source_url'), str)
             and is_official_url(item.get('source_url', ''))
@@ -676,6 +707,37 @@ def fresh_market_item(item, category, now=None):
                     for key in ('keyword', 'topic', 'intent', 'gap'))
             and bool(norm(item['keyword'])) and norm(item['keyword']) in norm(item['topic'])
             and valid_search)
+
+
+def fresh_market_item(item, category, now=None):
+    """Only current, search-verified candidates may reach queue, writer or WordPress."""
+    return (fresh_research_item(item, category, now)
+            and item.get('status') == 'pending' and item.get('publish_eligible') is True
+            and not item.get('hold_reasons') and item.get('demand_scope') == 'keyword_total'
+            and not opportunity.issues(item, now) and current_priority(item))
+
+
+def current_priority(item):
+    """Do not trust cached priority or a zero standing in for unavailable trend data."""
+    try:
+        growth = item.get('trend_growth')
+        if growth is not None and (type(growth) not in (int, float) or not math.isfinite(growth)):
+            return False
+        provenance = item.get('cak_provenance')
+        rising = (provenance is not None and provenance['relationship'] == 'exact'
+                  and qualified_rising(provenance['item']))
+        status = 'cak_measured' if rising else ('measured' if growth is not None else 'unavailable')
+        domains = [row['domain'] for _, row in opportunity.sample_rows(item['organic_results'])]
+        components = score_components(item['monthly_search'], domains, item['keyword'], growth)
+        components.pop('specificity')
+        components['intent_fit'] = 15
+        if provenance is not None:
+            components['cak_trend'] = round(provenance['item']['trend']['hotScore'] / 10, 2) if rising else 0
+        return (item.get('trend_status') == status and item.get('score_components') == components
+                and item.get('score') == round(sum(components.values()), 2)
+                and item.get('organic_domains') == domains)
+    except (KeyError, TypeError, ValueError):
+        return False
 
 
 def enqueue_report(queue, report):

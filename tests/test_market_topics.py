@@ -363,6 +363,94 @@ def test_inventory_failure_does_not_mean_unique(monkeypatch):
         market.existing_titles()
 
 
+@pytest.fixture
+def inventory_read(monkeypatch):
+    for key, value in {'WP_GENERAL_URL': 'https://trendpulse.blog', 'WP_GENERAL_USERNAME': 'reader',
+                       'WP_GENERAL_APP_PASSWORD': 'synthetic-password'}.items():
+        monkeypatch.setenv(key, value)
+    monkeypatch.setattr(market, 'historical_terms', lambda: ['삭제된 2026 자격증일정'])
+    responses = []
+    for title, keyphrase in [('이름이 바뀐 첫 글', '건강검진, 검진예약'), ('두 번째 글', '대장내시경비용')]:
+        response = Mock(headers={'X-WP-TotalPages': '2'})
+        response.json.return_value = [{'title': {'rendered': title},
+                                       'meta': {'_yoast_wpseo_focuskw': keyphrase}}]
+        responses.append(response)
+    get = Mock()
+    monkeypatch.setattr(market.requests, 'get', get)
+    pause = Mock()
+    monkeypatch.setattr(market, 'sleep', pause)
+    return SimpleNamespace(get=get, pause=pause, first=responses[0], second=responses[1])
+
+
+@pytest.mark.parametrize('error_type', [market.requests.exceptions.Timeout,
+    market.requests.exceptions.ReadTimeout, market.requests.exceptions.ConnectTimeout,
+    market.requests.exceptions.ConnectionError])
+@pytest.mark.parametrize('failed_page', [1, 2])
+def test_inventory_recovers_one_transient_get_on_same_page(inventory_read, error_type, failed_page):
+    case = inventory_read
+    error = error_type('synthetic connection error')
+    case.get.side_effect = ([error, case.first, case.second] if failed_page == 1
+                            else [case.first, error, case.second])
+    titles = market.existing_titles()
+    assert titles == ['삭제된 2026 자격증일정', '이름이 바뀐 첫 글', '건강검진', '검진예약',
+                      '두 번째 글', '대장내시경비용']
+    assert market.duplicate('2027 자격증 일정', '새 글', titles)
+    assert market.duplicate('2027 대장내시경 비용', '새 글', titles)
+    calls = case.get.call_args_list
+    assert [call.kwargs['params']['page'] for call in calls] == (
+        [1, 1, 2] if failed_page == 1 else [1, 2, 2])
+    assert calls[failed_page - 1] == calls[failed_page]
+    for call in calls:
+        assert call.args == ('https://trendpulse.blog/wp-json/wp/v2/posts',)
+        assert call.kwargs['timeout'] == 45
+        assert call.kwargs['auth'] == ('reader', 'synthetic-password')
+        assert call.kwargs['params']['status'] == 'publish,draft,pending,future'
+        assert call.kwargs['params']['per_page'] == 100
+    case.pause.assert_called_once_with(1)
+
+
+@pytest.mark.parametrize('failure_pattern,pages', [
+    ('same_first_page', [1, 1]), ('later_page', [1, 2, 2]), ('both_pages', [1, 1, 2]),
+])
+def test_inventory_retry_is_one_global_budget_and_never_returns_partial(inventory_read, failure_pattern, pages):
+    case = inventory_read
+    timeout = market.requests.exceptions.ReadTimeout('synthetic request details')
+    disconnect = market.requests.exceptions.ConnectionError('synthetic request details')
+    case.get.side_effect = {
+        'same_first_page': [timeout, disconnect, case.first],
+        'later_page': [case.first, timeout, disconnect, case.second],
+        'both_pages': [timeout, case.first, disconnect, case.second],
+    }[failure_pattern]
+    with pytest.raises(RuntimeError, match='^WordPress inventory unavailable$'):
+        market.existing_titles()
+    assert [call.kwargs['params']['page'] for call in case.get.call_args_list] == pages
+    case.pause.assert_called_once_with(1)
+
+
+@pytest.mark.parametrize('failure', ['tls', 401, 403, 404, 429, 500, 'json', 'object', 'row', 'title', 'pages'])
+@pytest.mark.parametrize('after_first_page', [False, True])
+def test_inventory_does_not_retry_permission_tls_http_or_invalid_payload(
+        inventory_read, failure, after_first_page):
+    import traceback
+    case = inventory_read
+    secret = 'synthetic-private-request-detail'
+    if failure == 'tls':
+        bad = market.requests.exceptions.SSLError(secret)
+    else:
+        bad = market.requests.Response()
+        bad.status_code = failure if isinstance(failure, int) else 200
+        bad.url = 'https://trendpulse.blog/?token=' + secret
+        bad.headers['X-WP-TotalPages'] = 'invalid' if failure == 'pages' else '2'
+        payload = {'object': {}, 'row': [None], 'title': [{'title': {'rendered': None}}]}.get(failure, [])
+        bad._content = secret.encode() if failure == 'json' else json.dumps(payload).encode()
+    case.get.side_effect = ([case.first, bad, case.second] if after_first_page else [bad, case.first])
+    with pytest.raises(RuntimeError, match='^WordPress inventory unavailable$') as caught:
+        market.existing_titles()
+    assert case.get.call_count == (2 if after_first_page else 1)
+    case.pause.assert_not_called()
+    assert secret not in ''.join(traceback.format_exception(caught.value))
+
+
 def test_selection_requires_measured_keyword_source_and_serp(monkeypatch):
     proposal = {'keyword': '시험준비물', 'topic': '시험준비물 확인 방법', 'category': '취업',
                 'intent': '무엇을 준비하나', 'gap': '준비물 표', 'source_url': 'https://example.go.kr/info'}

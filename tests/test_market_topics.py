@@ -9,7 +9,8 @@ from src import market_topics as market
 
 def evidence(url='https://example.go.kr/info'):
     return {'url': url, 'original_url': url, 'excerpt': '공식 시험 준비물 안내',
-            'title': '시험 준비물', 'checked_on': '2026-09-09', 'sha256': 'test'}
+            'title': '시험 준비물', 'checked_on': datetime.now(timezone(timedelta(hours=9))).date().isoformat(),
+            'sha256': 'test'}
 
 
 def organic(url='https://independent.example/info'):
@@ -213,6 +214,7 @@ def test_failed_sources_and_competitive_heads_trigger_next_measured_candidate(mo
     monkeypatch.setattr(market, 'demand_candidates', lambda _: stats)
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     monkeypatch.setattr(market, 'candidate_sources', lambda key, _: [] if key == '서류준비' else [evidence()])
+    monkeypatch.setattr(market, 'research_official_sources', lambda *args: ([], None))
     def search(key):
         return 'google_custom_search', [organic('https://example.go.kr/info') if key == '거대키워드' else organic()]
     monkeypatch.setattr(market, 'search_results', search)
@@ -432,3 +434,135 @@ def test_writer_rereads_selected_source_and_uses_the_brief(mock_env_vars, monkey
         writer.assert_not_called()
     fetch.assert_called_once_with(item['source_url'])
     grounding.assert_not_called()
+
+
+def web_candidate(**extra):
+    source = evidence()
+    return candidate(evidence_mode='official_pages', organic_provider=None,
+                     organic_domains=[], organic_results=[], dominant_result_ratio=None,
+                     research_evidence={'provider': 'codex_web', 'searched': True,
+                                        'opened_urls': [source['original_url']]},
+                     score_components={'demand': 24.63, 'organic_opportunity': 0,
+                                       'specificity': 15, 'trend': 0},
+                     intent_results=[source['url']], **extra)
+
+
+def test_native_research_requires_observed_search_and_refetched_official_pages(monkeypatch):
+    from src import codex_client
+    source = evidence()
+    client = Mock()
+    client.research.return_value = {'text': 'https://invented.go.kr/info', 'searched': True,
+        'opened_urls': ['https://blog.example/post', 'https://missing.go.kr/page', source['url'], source['url']]}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock(side_effect=lambda url: source if url == source['url'] else None)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    sources, trace = market.research_official_sources('시험준비물', '취업', '2026-09-10')
+    assert sources == [source]
+    assert trace['searched'] is True and trace['provider'] == 'codex_web'
+    assert [call.args[0] for call in fetch.call_args_list] == ['https://missing.go.kr/page', source['url']]
+    client.research.return_value['searched'] = False
+    fetch.reset_mock()
+    assert market.research_official_sources('시험준비물', '취업', '2026-09-10') == ([], None)
+    fetch.assert_not_called()
+
+
+def test_search_outage_uses_verified_longtail_without_invented_competition(monkeypatch):
+    source = evidence()
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        key: {'keyword': key, 'monthly': volume} for key, volume in
+        [('거대신청방법', 60000), ('시험브랜드', 1200), ('시험준비물', 1200)]})
+    responses = iter([{'candidates': [{'keyword': key} for key in ['거대신청방법', '시험브랜드', '시험준비물']]},
+                      analysis(source_indices=[0])])
+    prompts = []
+    def ask(prompt):
+        prompts.append(prompt)
+        return next(responses)
+    monkeypatch.setattr(market, 'ask', ask)
+    monkeypatch.setattr(market, 'search_results', lambda _: ('duckduckgo_proxy', []))
+    research = Mock(return_value=([source], {'provider': 'codex_web', 'searched': True,
+                                           'opened_urls': [source['url']]}))
+    monkeypatch.setattr(market, 'research_official_sources', research)
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    report = market.select_category('취업', 1, titles=[])
+    row = report['selected'][0]
+    assert research.call_count == 1
+    assert row['keyword'] == '시험준비물' and row['monthly_search'] == 1200
+    assert row['evidence_mode'] == 'official_pages'
+    assert row['organic_provider'] is None and row['dominant_result_ratio'] is None
+    assert row['organic_results'] == row['organic_domains'] == []
+    assert row['score_components']['organic_opportunity'] == 0
+    assert row['intent_results'] == [source['url']]
+    assert market.fresh_market_item(row, '취업')
+    assert '검색 순위나 경쟁 결과는 확보하지 못했습니다' in prompts[-1]
+    queued = market.enqueue_report([], report)
+    assert queued == [row]
+    market.record_published_keyword(row, 123, 'https://trendpulse.blog/test')
+    assert market.candidate_pool({'시험준비물': {'keyword': '시험준비물', 'monthly': 1200}},
+                                 market.historical_terms()) == []
+
+
+@pytest.mark.parametrize('changes', [
+    {'research_evidence': None},
+    {'research_evidence': {'provider': 'codex_web', 'searched': False, 'opened_urls': ['https://example.go.kr/info']}},
+    {'research_evidence': {'provider': 'codex_web', 'searched': True, 'opened_urls': ['https://other.go.kr/info']}},
+    {'organic_provider': 'google_custom_search'}, {'dominant_result_ratio': 0},
+    {'organic_results': [organic()]}, {'organic_domains': ['blog.example']},
+    {'score_components': {'organic_opportunity': 40}}, {'monthly_search': 50000},
+    {'keyword': '시험브랜드'}, {'intent_results': ['https://unread.go.kr/']},
+    {'verified_sources': []}, {'selection_version': 2}, {'evidence_mode': 'invented'},
+])
+def test_native_research_cache_cannot_pass_without_provenance(changes):
+    row = web_candidate()
+    assert market.fresh_market_item(row, '취업')
+    row.update(changes)
+    assert not market.fresh_market_item(row, '취업')
+
+
+def test_native_plan_keeps_each_cited_official_source_and_rejects_invalid_index(monkeypatch):
+    sources = [evidence(), evidence('https://second.go.kr/info')]
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_indices=[1]))
+    row, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10', [], sources,
+                                            evidence_mode='official_pages')
+    assert reason is None and row['verified_sources'] == sources
+    assert row['intent_results'] == [sources[1]['url']]
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_indices=[2]))
+    assert market.topic_from_evidence('시험준비물', '취업', '2026-09-10', [], sources,
+                                     evidence_mode='official_pages')[0] is None
+
+
+@pytest.mark.parametrize('change', [{'excerpt': ''}, {'original_url': 'https://unopened.go.kr/'},
+                                    {'checked_on': '2000-01-01'}, {'sha256': ''}])
+def test_every_native_intent_source_requires_fresh_read_evidence(change):
+    row = web_candidate()
+    source = evidence('https://second.go.kr/info')
+    row['verified_sources'].append({**source, **change})
+    row['intent_results'].append(source['url'])
+    row['research_evidence']['opened_urls'].append(source['url'])
+    assert not market.fresh_market_item(row, '취업')
+
+
+def test_later_native_research_timeout_preserves_selected_candidate(monkeypatch):
+    source = evidence()
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        key: {'keyword': key, 'monthly': 1200} for key in ['시험준비물', '시험신청방법']})
+    responses = iter([{'candidates': [{'keyword': '시험준비물'}, {'keyword': '시험신청방법'}]},
+                      analysis(source_indices=[0])])
+    monkeypatch.setattr(market, 'ask', lambda _: next(responses))
+    monkeypatch.setattr(market, 'search_results', lambda _: ('duckduckgo_proxy', []))
+    monkeypatch.setattr(market, 'research_official_sources', Mock(side_effect=[
+        ([source], {'provider': 'codex_web', 'searched': True, 'opened_urls': [source['url']]}),
+        RuntimeError('raw diagnostic must not be included')]))
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'][0]['keyword'] == '시험준비물'
+    assert report['rejected'] == [{'keyword': '시험신청방법',
+                                  'reason': 'codex web research unavailable: request_failed'}]
+
+
+def test_native_source_check_can_cross_korean_midnight():
+    row = web_candidate(selected_at='2026-09-09T14:59:00+00:00')
+    row['verified_sources'][0]['checked_on'] = '2026-09-10'
+    now = datetime.fromisoformat('2026-09-09T15:10:00+00:00')
+    assert market.fresh_market_item(row, '취업', now)
+    row['verified_sources'][0]['checked_on'] = '2026-09-11'
+    assert not market.fresh_market_item(row, '취업', now)

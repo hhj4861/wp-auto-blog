@@ -2,11 +2,13 @@
 
 import os
 import json
+import ipaddress
 from pathlib import Path
 import shutil
 import signal
 import subprocess
 import tempfile
+from urllib.parse import urlsplit, urlunsplit
 
 
 def failure_reason(stderr):
@@ -54,6 +56,71 @@ class CodexRequestError(RuntimeError):
         )
 
 
+def _research_url(value):
+    """Accept public-looking web URLs; the fetcher must still check DNS/redirects."""
+    if not isinstance(value, str) or not value or len(value) > 8192:
+        return None
+    if "\\" in value or any(char.isspace() or ord(char) < 32 or ord(char) == 127 for char in value):
+        return None
+    try:
+        parsed = urlsplit(value)
+        host = parsed.hostname
+        if (parsed.scheme not in {"http", "https"} or not host
+                or parsed.username is not None or parsed.password is not None
+                or "%" in parsed.netloc):
+            return None
+        # Accessing port also rejects malformed/out-of-range ports.
+        if parsed.port is not None and not 0 < parsed.port < 65536:
+            return None
+        host = host.rstrip(".").lower()
+        try:
+            address = ipaddress.ip_address(host)
+            if not address.is_global or address.is_multicast:
+                return None
+        except ValueError:
+            if ("." not in host or host.endswith((".localhost", ".local", ".internal"))
+                    or host.rsplit(".", 1)[-1].isdigit()):
+                return None
+            for label in host.encode("idna").decode("ascii").split("."):
+                if (not label or len(label) > 63 or label.startswith("-")
+                        or label.endswith("-")
+                        or not all(char.isalnum() or char == "-" for char in label)):
+                    return None
+    except (ValueError, UnicodeError):
+        return None
+    return urlunsplit((parsed.scheme, parsed.netloc, parsed.path, parsed.query, ""))
+
+
+def _research_activity(stdout):
+    """Parse Codex exec JSONL tool events, never model-proposed source lists."""
+    searched = False
+    opened_urls = []
+    seen_urls = set()
+    if not isinstance(stdout, str):
+        return searched, opened_urls
+    for line in stdout.splitlines():
+        try:
+            event = json.loads(line)
+        except (ValueError, RecursionError):
+            continue
+        if not isinstance(event, dict) or event.get("type") != "item.completed":
+            continue
+        item = event.get("item")
+        if not isinstance(item, dict) or item.get("type") != "web_search":
+            continue
+        action = item.get("action")
+        if not isinstance(action, dict):
+            continue
+        if action.get("type") == "search":
+            searched = True
+        elif action.get("type") == "open_page":
+            url = _research_url(action.get("url"))
+            if url and url not in seen_urls:
+                seen_urls.add(url)
+                opened_urls.append(url)
+    return searched, opened_urls
+
+
 def require_private_actions():
     """Allow private CI or the explicitly authorized repository's automation."""
     if os.getenv("GITHUB_ACTIONS", "").lower() != "true":
@@ -97,6 +164,13 @@ class CodexSubscriptionClient:
         self.timeout = timeout
 
     def generate(self, prompt: str) -> str:
+        return self._run(prompt)["text"]
+
+    def research(self, prompt: str) -> dict:
+        """Run live web discovery and return independently recorded tool activity."""
+        return self._run(prompt, research=True)
+
+    def _run(self, prompt: str, *, research: bool = False) -> dict:
         if not prompt.strip():
             raise ValueError("Codex prompt must not be empty")
         # Do not forward WordPress secrets, API keys, or another agent's OAuth token.
@@ -109,17 +183,25 @@ class CodexSubscriptionClient:
                 "-c", 'forced_login_method="chatgpt"',
                 "-c", 'cli_auth_credentials_store="file"',
                 "-c", 'model_provider="openai"',
-                "-a", "never", "exec",
+                "-a", "never",
+            ]
+            if research:
+                command.extend(["--search", "-c", "features.shell_tool=false"])
+            command.extend([
+                "exec",
                 "--sandbox", "read-only", "--skip-git-repo-check",
                 "--ephemeral", "--ignore-user-config",
                 "--output-last-message", str(output),
-            ]
+            ])
+            if research:
+                command.append("--json")
             if self.model:
                 command.extend(["--model", self.model])
             command.append("-")
             process = subprocess.Popen(
                 command, cwd=workdir, env=env, stdin=subprocess.PIPE,
-                stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+                stdout=subprocess.PIPE if research else subprocess.DEVNULL,
+                stderr=subprocess.PIPE,
                 text=True, encoding="utf-8", start_new_session=True,
             )
             try:
@@ -140,4 +222,6 @@ class CodexSubscriptionClient:
             result = output.read_text(encoding="utf-8").strip() if output.is_file() else ""
             if not result:
                 raise RuntimeError("Codex returned no final message")
-            return result
+            stdout = captured[0] if isinstance(captured, tuple) and len(captured) == 2 else ""
+            searched, opened_urls = _research_activity(stdout) if research else (False, [])
+            return {"text": result, "searched": searched, "opened_urls": opened_urls}

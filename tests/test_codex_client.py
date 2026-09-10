@@ -1,4 +1,5 @@
 """Codex transport contracts; no subscription requests or credentials required."""
+import json
 from pathlib import Path
 import subprocess
 from unittest.mock import MagicMock
@@ -40,25 +41,30 @@ def test_transport_uses_stdin_final_file_and_isolated_environment(client, monkey
     assert "--ignore-user-config" in seen["command"]
     assert "read-only" in seen["command"]
     assert "test-model" in seen["command"]
+    assert "--search" not in seen["command"]
+    assert "--json" not in seen["command"]
+    assert seen["stdout"] == subprocess.DEVNULL
     assert seen["command"][-1] == "-"
     assert not Path(seen["cwd"]).exists()
 
 
+@pytest.mark.parametrize("method", ["generate", "research"])
 @pytest.mark.parametrize("returncode", [0, 1, 127])
-def test_missing_output_or_failed_process_is_not_success(client, monkeypatch, returncode):
+def test_missing_output_or_failed_process_is_not_success(client, monkeypatch, returncode, method):
     monkeypatch.setattr("src.codex_client.subprocess.Popen", lambda *a, **k: MagicMock(returncode=returncode))
     with pytest.raises(RuntimeError, match="no final message|request failed"):
-        client.generate("prompt")
+        getattr(client, method)("prompt")
 
 
-def test_timeout_kills_process_group_and_reaps(client, monkeypatch):
+@pytest.mark.parametrize("method", ["generate", "research"])
+def test_timeout_kills_process_group_and_reaps(client, monkeypatch, method):
     process = MagicMock(pid=123)
     process.communicate.side_effect = [subprocess.TimeoutExpired("codex", 2), (None, None)]
     monkeypatch.setattr("src.codex_client.subprocess.Popen", lambda *a, **k: process)
     kill = MagicMock()
     monkeypatch.setattr("src.codex_client.os.killpg", kill)
     with pytest.raises(RuntimeError, match="timed out"):
-        client.generate("prompt")
+        getattr(client, method)("prompt")
     kill.assert_called_once()
     assert process.communicate.call_count == 2
 
@@ -170,3 +176,137 @@ def test_failure_reason_never_echoes_raw_diagnostics(client, monkeypatch, diagno
 
 def test_unknown_diagnostics_are_not_exposed():
     assert failure_reason(None) == 'unclassified'
+
+
+def research_event(action, *, event_type="item.completed", item_type="web_search"):
+    # Codex 0.153.4 exec_events.rs uses snake_case, unlike app-server's camelCase.
+    return {"type": event_type, "item": {
+        "id": "search-item", "type": item_type, "query": "청년 지원금", "action": action,
+    }}
+
+
+def mock_research_process(monkeypatch, events, *, final="research summary", stderr="", returncode=0):
+    seen = {}
+
+    def launch(command, **kwargs):
+        seen.update(command=command, **kwargs)
+        output = Path(command[command.index("--output-last-message") + 1])
+        process = MagicMock(returncode=returncode)
+
+        def communicate(prompt, timeout):
+            output.write_text(final, encoding="utf-8")
+            return events, stderr
+
+        process.communicate.side_effect = communicate
+        return process
+
+    monkeypatch.setattr("src.codex_client.subprocess.Popen", launch)
+    return seen
+
+
+def test_research_uses_only_completed_web_tool_activity(client, monkeypatch):
+    events = [
+        research_event({"type": "search", "query": "청년 지원금"}),
+        research_event({"type": "open_page", "url": "https://www.gov.kr/policy#section"}),
+        research_event({"type": "open_page", "url": "https://www.gov.kr/policy#other"}),
+        research_event({"type": "open_page", "url": "https://www.gov.kr/another"}),
+        research_event({"type": "open_page", "url": "https://uncompleted.example/"},
+                       event_type="item.started"),
+        research_event({"type": "open_page", "url": "https://updated.example/"},
+                       event_type="item.updated"),
+        research_event({"type": "find_in_page", "url": "https://found.example/", "pattern": "x"}),
+        research_event({"type": "openPage", "url": "https://wrong-protocol.example/"}),
+        research_event({"type": "open_page", "url": "https://reasoning.example/"},
+                       item_type="reasoning"),
+        {"type": "item.completed", "item": {
+            "type": "agent_message", "text": "https://invented.example/",
+        }},
+        {"type": "item.completed", "item": None},
+        {"type": "item.completed", "item": {"type": "web_search", "action": None}},
+        [], None,
+    ]
+    seen = mock_research_process(monkeypatch, "not JSON\n" + "\n".join(map(json.dumps, events)),
+                                final='{"urls":["https://invented.example/"]}')
+    for key in ("OPENAI_API_KEY", "CODEX_API_KEY", "CODEX_ACCESS_TOKEN", "WP_APP_PASSWORD"):
+        monkeypatch.setenv(key, "do-not-forward-this-secret")
+    assert client.research("search public sources") == {
+        "text": '{"urls":["https://invented.example/"]}',
+        "searched": True,
+        "opened_urls": ["https://www.gov.kr/policy", "https://www.gov.kr/another"],
+    }
+    assert seen["command"].index("--search") < seen["command"].index("exec")
+    assert "--json" in seen["command"]
+    assert "features.shell_tool=false" in seen["command"]
+    assert "read-only" in seen["command"]
+    assert seen["command"][seen["command"].index("-a") + 1] == "never"
+    assert seen["stdout"] == subprocess.PIPE
+    assert seen["stderr"] == subprocess.PIPE
+    assert seen["env"]["CODEX_HOME"] == str(client.home)
+    assert "do-not-forward-this-secret" not in seen["env"].values()
+
+
+@pytest.mark.parametrize("events", [
+    "", "not JSON", json.dumps({"type": "item.completed", "item": {
+        "type": "agent_message", "text": "I searched the web: https://www.gov.kr/",
+    }}),
+    json.dumps(research_event({"type": "search"}, event_type="item.started")),
+    json.dumps(research_event({"type": "search"}, event_type="item.updated")),
+    json.dumps(research_event({"type": "search"}, item_type="reasoning")),
+])
+def test_research_does_not_infer_a_search_from_model_text_or_started_events(client, monkeypatch, events):
+    mock_research_process(monkeypatch, events)
+    assert client.research("prompt") == {"text": "research summary", "searched": False, "opened_urls": []}
+
+
+@pytest.mark.parametrize("url", [
+    None, 1, "", "turn0search0", "/relative", "ftp://example.com/a", "file:///etc/passwd",
+    "https://user:secret@example.com/a", "https://user@example.com/", "https://@example.com/",
+    "https:///missing-host", "https://example.com:bad/", "https://example.com:99999/",
+    "https://example.com/\nsecret", "https://example.com/has space", "https://example.com\\@localhost/",
+    "https://example.com/\x7f",
+    "http://localhost/", "http://localhost./", "http://service.local/", "http://service.internal/",
+    "http://127.0.0.1/", "http://10.0.0.1/", "http://169.254.169.254/", "http://[::1]/",
+    "http://224.0.0.1/", "http://[ff02::1]/",
+    "http://127.1/", "http://2130706433/", "http://0177.0.0.1/", "https://%65xample.com/",
+    "https://example..com/", "https://-example.com/",
+])
+def test_research_rejects_unsafe_or_non_web_open_urls(client, monkeypatch, url):
+    mock_research_process(monkeypatch, json.dumps(research_event({"type": "open_page", "url": url})))
+    assert client.research("prompt")["opened_urls"] == []
+
+
+def test_research_failure_does_not_expose_jsonl_or_stderr(client, monkeypatch, capsys):
+    mock_research_process(monkeypatch, "private event with a secret", stderr="refresh_token_revoked private token",
+                          returncode=1)
+    with pytest.raises(RuntimeError, match="reason=refresh_token_revoked") as caught:
+        client.research("private prompt")
+    assert "private" not in str(caught.value)
+    assert capsys.readouterr() == ("", "")
+
+
+def test_research_real_subprocess_keeps_refreshed_auth_and_captures_jsonl(tmp_path, monkeypatch):
+    import sys
+    auth_home = tmp_path / "dedicated-auth"
+    auth_home.mkdir()
+    auth = auth_home / "auth.json"
+    auth.write_text("test-only-original", encoding="utf-8")
+    executable = tmp_path / "codex-stand-in"
+    events = [research_event({"type": "search", "queries": ["청년 지원금"]}),
+              research_event({"type": "open_page", "url": "https://www.gov.kr/"})]
+    executable.write_text(
+        f"#!{sys.executable}\n"
+        "import os, sys\nfrom pathlib import Path\n"
+        "prompt = sys.stdin.read()\n"
+        "Path(sys.argv[sys.argv.index('--output-last-message')+1]).write_text(prompt, encoding='utf-8')\n"
+        "(Path(os.environ['CODEX_HOME']) / 'auth.json').write_text('test-only-refreshed', encoding='utf-8')\n"
+        f"print({chr(10).join(map(json.dumps, events))!r})\n",
+        encoding="utf-8",
+    )
+    executable.chmod(0o700)
+    monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
+    monkeypatch.setattr("src.codex_client.shutil.which", lambda name: str(executable))
+    client = CodexSubscriptionClient(home=str(auth_home))
+    assert client.research("한글 source summary") == {
+        "text": "한글 source summary", "searched": True, "opened_urls": ["https://www.gov.kr/"],
+    }
+    assert auth.read_text(encoding="utf-8") == "test-only-refreshed"

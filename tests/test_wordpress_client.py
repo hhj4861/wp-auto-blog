@@ -4,6 +4,7 @@ TDD: RED -> GREEN -> REFACTOR
 """
 
 import pytest
+import requests
 from unittest.mock import Mock, patch, MagicMock
 import base64
 
@@ -376,6 +377,121 @@ class TestAuthentication:
             result = client.verify_connection()
 
         assert result is False
+
+class TestPostCreationSafety:
+    """Creation must not retry ambiguous writes; safe reads retain retries."""
+
+    @pytest.fixture
+    def client(self, mock_env_vars):
+        return WordPressClient()
+
+    @pytest.fixture
+    def sample_generated_content(self):
+        return GeneratedContent(
+            title='Test Blog Post', html='<p>Verified content.</p>',
+            meta_description='Test description', keywords=['test'],
+            word_count=1500, content_type=ContentType.REVIEW,
+        )
+
+    @pytest.mark.parametrize('failure', ['timeout', 'http_500', 'html_200', 'http_403', 'http_429'])
+    def test_create_post_never_replays_an_uncertain_request(
+        self, client, sample_generated_content, failure
+    ):
+        """The server may have saved the first POST even when its response failed."""
+        private_response = 'PRIVATE_RESPONSE_OR_REQUEST_DETAILS'
+        response = _json_response({})
+        if failure == 'timeout':
+            error = requests.ReadTimeout(private_response)
+        else:
+            error = None
+            response.status_code = int(failure.rsplit('_', 1)[1])
+            if failure == 'html_200':
+                response.headers = {'Content-Type': 'text/html'}
+                response.text = private_response
+                response.json.side_effect = ValueError(private_response)
+            else:
+                response.raise_for_status.side_effect = requests.HTTPError(private_response)
+
+        with patch.object(client, '_get_or_create_tags', return_value=[]), \
+             patch('requests.post', return_value=response, side_effect=error) as post, \
+             patch('src.wordpress_client.logger') as log:
+            with pytest.raises(RuntimeError, match='check existing WordPress posts before rerunning') as exc:
+                client.create_post(sample_generated_content, [], status=PostStatus.PUBLISH)
+
+        assert post.call_count == 1
+        assert post.call_args.args[0] == 'https://test-blog.com/wp-json/wp/v2/posts'
+        assert post.call_args.kwargs['json']['status'] == 'publish'
+        assert private_response not in str(exc.value)
+        logged_messages = [str(call) for call in log.mock_calls]
+        assert all(private_response not in message for message in logged_messages)
+        assert any('check existing WordPress posts before rerunning' in message
+                   for message in logged_messages)
+
+    def test_successful_post_creation_uses_one_post_request(self, client, sample_generated_content):
+        response = _json_response({
+            'id': 123, 'link': 'https://test-blog.com/test-post',
+            'title': {'rendered': sample_generated_content.title}, 'status': 'publish',
+        })
+        with patch.object(client, '_get_or_create_tags', return_value=[]), \
+             patch('requests.post', return_value=response) as post:
+            result = client.create_post(sample_generated_content, [], status=PostStatus.PUBLISH)
+
+        assert post.call_count == 1
+        assert result.id == 123
+        assert result.status == PostStatus.PUBLISH
+
+    @pytest.mark.parametrize('redirect_status', [307, 308])
+    def test_requests_cannot_follow_post_redirects(
+        self, client, sample_generated_content, redirect_status
+    ):
+        """Exercise requests' real redirect engine while mocking only wire transport."""
+        sent = []
+
+        def transport(adapter, request, **kwargs):
+            sent.append((request.method, request.url))
+            response = requests.Response()
+            response.request = request
+            response.url = request.url
+            response.status_code = redirect_status
+            response.headers = {
+                'Content-Type': 'application/json',
+                'Location': 'https://test-blog.com/wp-json/wp/v2/posts?redirected=1',
+            }
+            # A parseable body must not make a 3xx look like creation confirmation.
+            response._content = (
+                b'{"id":999,"link":"https://test-blog.com/duplicate",'
+                b'"title":{"rendered":"Duplicate"},"status":"publish"}'
+            )
+            # Following the redirect would create another post and appear successful.
+            if len(sent) > 1:
+                response.status_code = 201
+                response.headers = {'Content-Type': 'application/json'}
+            return response
+
+        with patch.object(client, '_get_or_create_tags', return_value=[]), \
+             patch('requests.adapters.HTTPAdapter.send', autospec=True, side_effect=transport):
+            with pytest.raises(RuntimeError, match='check existing WordPress posts before rerunning'):
+                client.create_post(sample_generated_content, [], status=PostStatus.PUBLISH)
+
+        assert sent == [('POST', 'https://test-blog.com/wp-json/wp/v2/posts')]
+
+    @pytest.mark.parametrize('failure', ['timeout', 'http_500', 'html_200', 'http_403', 'http_429'])
+    def test_post_lookup_keeps_read_retries(self, client, failure):
+        """Disabling creation retries must not remove retries from safe GET lookups."""
+        transient = _json_response({})
+        if failure == 'timeout':
+            transient = requests.ReadTimeout('temporary lookup failure')
+        else:
+            transient.status_code = int(failure.rsplit('_', 1)[1])
+            if failure == 'html_200':
+                transient.headers = {'Content-Type': 'text/html'}
+                transient.text = '<html>temporary challenge</html>'
+        saved = {'id': 123, 'slug': 'test-post', 'status': 'publish'}
+        with patch('requests.get', side_effect=[transient, _json_response([saved])]) as get:
+            result = client.get_post_by_slug('test-post')
+
+        assert get.call_count == 2
+        assert result == saved
 
 
 class TestCategoryAndTags:

@@ -73,6 +73,11 @@ SELECT_TOP_N의 빈 문자열은 2로 처리하며 1~5만 허용한다. 이전 �
 아닌 기존 글 갱신 작업으로 별도 수행해야 한다. 동시 발행/선정은 같은 concurrency 그룹으로
 직렬화한다. 초안은 중복 방지 대상으로 예약하되 공개 발행 완료로 기록하지 않는다.
 
+WordPress 신규 글 생성 요청은 한 번만 전송한다. 타임아웃·서버 오류·비정상 응답이 나도
+서버에는 이미 글이 저장됐을 수 있으므로 자동 재전송하지 않는다. 생성 결과가 불확실하면
+WordPress의 공개 글·초안·예약 글을 먼저 확인하고, 이미 생성됐다면 같은 글 ID로 복구한다.
+조회 요청의 일시 오류 재시도는 유지한다.
+
 ## 회귀 검증
 
 `venv/bin/python -m pytest tests/test_market_topics.py tests/test_market_search.py -o addopts='' -q`

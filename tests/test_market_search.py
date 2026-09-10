@@ -1,4 +1,5 @@
 from unittest.mock import Mock
+import logging
 
 import requests
 import pytest
@@ -73,3 +74,70 @@ def test_empty_results_are_not_mislabeled_as_a_challenge(monkeypatch, caplog):
     assert 'configuration_missing' in caplog.text
     assert 'reason=no_results http_status=200' in caplog.text
     assert 'reason=challenge' not in caplog.text
+
+
+def error_info(consumer='projects/123456789012', service='customsearch.googleapis.com'):
+    return {'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED',
+            'metadata': {'consumer': consumer, 'service': service,
+                         'activationUrl': 'https://private-project/?key=private-key'}}
+
+
+def test_google_project_diagnostic_is_separate_and_preserves_failure_event(caplog):
+    response = Mock(status_code=403)
+    response.json.return_value = {'error': {'message': 'private-error-message',
+                                          'details': [error_info(), error_info()]}}
+    with caplog.at_level(logging.DEBUG, logger=search.logger.name):
+        search.search_failure('google_custom_search', response)
+    records = [record for record in caplog.records if record.name == search.logger.name]
+    assert [(record.msg, record.args) for record in records] == [
+        (search.GOOGLE_PROJECT_TEMPLATE, ('123456789012',)),
+        ('Search unavailable: provider=%s reason=%s http_status=%s',
+         ('google_custom_search', 'api_not_enabled', 403)),
+    ]
+    assert 'private-' not in caplog.text
+    assert 'https://' not in caplog.text
+    assert 'metadata' not in caplog.text
+
+
+@pytest.mark.parametrize('consumer', [
+    'projects/123\nprivate-key', 'projects/123\n', 'projects/123?key=private-key',
+    'projects/123/other', ' projects/123', 'projects/１２３', 'projects/123456789012345678901',
+    'projects/private-project', 123, None, {'consumer': 'projects/123'},
+])
+def test_google_project_rejects_non_numeric_or_injected_consumers(caplog, consumer):
+    response = Mock(status_code=403)
+    response.json.return_value = {'error': {'details': [error_info(consumer)]}}
+    with caplog.at_level(logging.DEBUG, logger=search.logger.name):
+        search.search_failure('google_custom_search', response)
+    assert not any(record.msg == search.GOOGLE_PROJECT_TEMPLATE for record in caplog.records)
+    assert 'private-' not in caplog.text
+    assert 'https://' not in caplog.text
+
+
+@pytest.mark.parametrize('payload', [
+    {'error': {'message': 'consumer projects/123 service customsearch.googleapis.com'}},
+    {'error': {'details': [error_info(service='generativelanguage.googleapis.com')]}},
+    {'error': {'details': [error_info(service='customsearch.googleapis.com.private-example')]}},
+    {'error': {'details': [{**error_info(), '@type': 'private-error-type'}]}},
+    {'error': {'details': [{**error_info(), 'metadata': 'private-metadata'}]}},
+    {'error': {'details': {'private-details': error_info()}}},
+    {'items': [error_info()]},
+    ['private-unexpected-payload'],
+])
+def test_google_project_requires_typed_error_metadata(payload, caplog):
+    response = Mock(status_code=403)
+    response.json.return_value = payload
+    with caplog.at_level(logging.DEBUG, logger=search.logger.name):
+        search.search_failure('google_custom_search', response)
+    assert not any(record.msg == search.GOOGLE_PROJECT_TEMPLATE for record in caplog.records)
+    assert 'private-' not in caplog.text
+
+
+def test_regular_warning_logs_do_not_include_project_metadata(caplog):
+    response = Mock(status_code=403)
+    response.json.return_value = {'error': {'details': [error_info()]}}
+    with caplog.at_level(logging.WARNING, logger=search.logger.name):
+        search.search_failure('google_custom_search', response)
+    assert 'api_not_enabled' in caplog.text
+    assert '123456789012' not in caplog.text
+    assert 'private-' not in caplog.text

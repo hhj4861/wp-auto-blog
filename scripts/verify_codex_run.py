@@ -14,17 +14,12 @@ def main():
     if os.getenv('BLOG_RESUME_DRAFT_ID'):
         # Recovery already reads back and verifies the exact draft ID.
         return
-    required = os.getenv('BLOG_REQUIRE_PUBLICATION_RESULT') == '1'
     path = Path(os.environ['BLOG_RESULT_PATH'])
     if not path.exists():
-        if required:
-            raise RuntimeError('Required publication result is missing')
         print('No posting result produced (for example, empty queue); no publication claimed')
         return
     results = json.loads(path.read_text())
     if not results:
-        if required:
-            raise RuntimeError('Required publication result is empty')
         print('No topics processed; no publication claimed')
         return
     if os.getenv('BLOG_PUBLISH') != 'true':

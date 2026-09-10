@@ -63,6 +63,8 @@ on:
     - cron: '0 2 * * 1,3,5'  # 11:00 KST 월/수/금 → 생활정보 (세금·지원금·금융 머니 큐)
     - cron: '0 2 * * 2,4'    # 11:00 KST 화/목 → 취업 (GSC 노출/클릭 최상위 니치)
     - cron: '0 2 * * 6'      # 11:00 KST 토 → 건강 (4050 실생활 의료·지원 키워드)
+    # Temporary real-schedule verification: one post per category, then remove.
+    - cron: '37 6 10 9 *'    # 2026-09-10 15:37 KST; guarded against later years/reruns
 
     # ⚠️ 2026-08-25 회생 실험(D0) — bytepulse 크론 4개 정지.
     #    발행량 감축(주25→6, decb1cd 7/21)은 이미 5주간 null이었다. 0으로 내리는 이유는
@@ -714,15 +716,17 @@ jobs:
       (github.event.schedule == '0 2 * * 1,3,5' ||
       github.event.schedule == '0 2 * * 2,4' ||
       github.event.schedule == '0 2 * * 6' ||
+      github.event.schedule == '37 6 10 9 *' ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue'))
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: ${{ github.event.schedule == '37 6 10 9 *' && 180 || 60 }}
     concurrency:
       group: trendpulse-general-posting
       cancel-in-progress: false
     env:
       BLOG_MODE: queue
-      BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
+      BLOG_SCHEDULE_BATCH: ${{ github.event.schedule == '37 6 10 9 *' && '1' || '' }}
+      BLOG_WRITER_PROVIDER: ${{ github.event.schedule == '37 6 10 9 *' && 'codex' || inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
       BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
@@ -734,6 +738,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Scheduled execution starts with the latest publication history.
+          ref: ${{ github.event_name == 'schedule' && 'main' || github.ref }}
+
+      - name: Guard one-time category schedule
+        if: github.event.schedule == '37 6 10 9 *'
+        run: |
+          test "$(date -u +%F)" = '2026-09-10'
+          test "$GITHUB_RUN_ATTEMPT" = '1'
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -802,7 +815,7 @@ jobs:
             --status-file "$RUNNER_TEMP/cak-fetch-status.json"
 
       - name: Run pipeline (Queue Mode - 카테고리별 큐)
-        timeout-minutes: 50
+        timeout-minutes: ${{ github.event.schedule == '37 6 10 9 *' && 165 || 50 }}
         env:
           GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
@@ -812,6 +825,33 @@ jobs:
           if [ -n "$BLOG_RESUME_DRAFT_ID" ]; then
             python scripts/run_codex_worker.py
             exit 0
+          fi
+          run_category() {
+            local CAT="$1"
+            echo "Queue category: $CAT"
+            python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse || return "$?"
+            export BLOG_REQUIRE_MARKET_TOPIC=1
+            python -m src.main --mode general --from-queue --auto-publish --category "$CAT" || return "$?"
+            if [ "$BLOG_SCHEDULE_BATCH" = '1' ]; then
+              python scripts/verify_codex_run.py || return "$?"
+            fi
+          }
+          if [ "$BLOG_SCHEDULE_BATCH" = '1' ]; then
+            export BLOG_REQUIRE_PUBLICATION_RESULT=1
+            FAILED=0
+            INDEX=0
+            for CAT in 생활정보 취업 건강; do
+              INDEX=$((INDEX + 1))
+              export BLOG_CATEGORY="$CAT"
+              export BLOG_RESULT_PATH="$RUNNER_TEMP/blog-result-category-$INDEX.json"
+              if run_category "$CAT"; then
+                echo "Category publication verified: $CAT"
+              else
+                echo "Category publication failed or held: $CAT"
+                FAILED=1
+              fi
+            done
+            exit "$FAILED"
           fi
           # 스케줄별 카테고리 선택: 화/목=취업, 토=건강, 월/수/금=생활정보
           # 수동 실행(mode=queue)은 category 입력을 따르고, 없으면 생활정보
@@ -824,13 +864,10 @@ jobs:
           else
             CAT="생활정보"
           fi
-          echo "Queue category: $CAT"
-          python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
-          export BLOG_REQUIRE_MARKET_TOPIC=1
-          python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
+          run_category "$CAT"
 
       - name: Verify Codex publication result
-        if: success() && env.BLOG_WRITER_PROVIDER == 'codex'
+        if: success() && env.BLOG_WRITER_PROVIDER == 'codex' && env.BLOG_SCHEDULE_BATCH != '1'
         run: python scripts/verify_codex_run.py
 
       - name: Commit queue and registry updates
@@ -885,7 +922,7 @@ jobs:
       - post-kfood
       - post-kfashion
       - post-queue
-    if: failure() && github.run_attempt < 3 && (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex'
+    if: failure() && github.event.schedule != '37 6 10 9 *' && github.run_attempt < 3 && (inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic') != 'codex'
     runs-on: ubuntu-latest
     permissions:
       actions: write

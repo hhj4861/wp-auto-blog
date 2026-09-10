@@ -734,6 +734,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Resolve this branch/tag after concurrency wait; a branch may have newer code and queue state.
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5

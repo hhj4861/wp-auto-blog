@@ -22,6 +22,7 @@ FAILURE_REASONS = frozenset({
     'api_not_enabled', 'api_key_service_blocked', 'api_key_restricted', 'api_key_invalid',
     'daily_quota_exceeded', 'rate_limit_exceeded', 'quota_exceeded', 'api_access_unavailable',
     'configuration_missing', 'network_error', 'http_or_response_error', 'no_results', 'challenge',
+    'native_search_unavailable', 'unsupported_provider',
 })
 FAILURE_TEMPLATE = 'Search unavailable: provider=%s reason=%s http_status=%s'
 
@@ -121,7 +122,7 @@ def main():
                for index, (query, groups) in enumerate(CASES, 1)]
     current_ok = all(report['reason'] == 'ok' for report in reports)
     alternate = os.environ.get('GOOGLE_SEARCH_ALTERNATE_API_KEY')
-    if not current_ok and alternate:
+    if not current_ok and alternate and not os.environ.get('MARKET_SEARCH_PROVIDER'):
         original = os.environ.get('GOOGLE_SEARCH_API_KEY')
         try:
             os.environ['GOOGLE_SEARCH_API_KEY'] = alternate

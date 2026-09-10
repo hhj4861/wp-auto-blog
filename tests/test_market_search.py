@@ -1,10 +1,125 @@
 from unittest.mock import Mock
 import logging
+import sys
+from types import SimpleNamespace
 
 import requests
 import pytest
 
 from src import market_search as search
+
+
+@pytest.fixture(autouse=True)
+def isolated_search_provider(monkeypatch):
+    monkeypatch.delenv('MARKET_SEARCH_PROVIDER', raising=False)
+
+
+@pytest.fixture
+def native_adapter(monkeypatch):
+    adapter = Mock()
+    monkeypatch.setitem(sys.modules, 'src.codex_search', SimpleNamespace(native_search=adapter))
+    monkeypatch.setenv('MARKET_SEARCH_PROVIDER', 'codex_native_search')
+    # Even configured API keys must not cause a fallback or additional request.
+    monkeypatch.setenv('GOOGLE_SEARCH_API_KEY', 'private-google-key')
+    monkeypatch.setenv('GOOGLE_SEARCH_ENGINE_ID', 'private-google-engine')
+    http = Mock(side_effect=AssertionError('HTTP fallback must not be called'))
+    monkeypatch.setattr(search.requests, 'get', http)
+    yield adapter
+    http.assert_not_called()
+
+
+def native_row(**changes):
+    return {'url': 'https://Example.ORG./guide', 'title': '시험 일정 및 준비물 안내',
+            'snippet': '시험 일정과 준비물을 어디서 확인하는지 설명합니다.', **changes}
+
+
+def test_explicit_native_search_passes_whole_query_and_normalizes_tool_rows(native_adapter):
+    native_adapter.return_value = [native_row(domain='forged.example', arbitrary='private-extra')]
+    query = 'ITQ 자격증 조회 (전체 취득 내역)'
+    assert search.search_results(query) == ('codex_native_search', [{
+        'url': 'https://Example.ORG./guide', 'domain': 'example.org',
+        'title': '시험 일정 및 준비물 안내',
+        'snippet': '시험 일정과 준비물을 어디서 확인하는지 설명합니다.',
+    }])
+    native_adapter.assert_called_once_with(query)
+
+
+@pytest.mark.parametrize('payload', [
+    None, True, {}, {'results': [native_row()]},
+    '모델의 검색 결과 설명',
+    '[{"url":"https://example.org","title":"모델 제목","snippet":"모델 설명"}]',
+    ['모델 설명', None, True, []], [],
+])
+def test_native_answer_text_and_non_result_payloads_are_not_evidence(native_adapter, caplog, payload):
+    native_adapter.return_value = payload
+    assert search.search_results('시험일정') == ('codex_native_search', [])
+    native_adapter.assert_called_once_with('시험일정')
+    assert 'provider=codex_native_search reason=native_search_unavailable' in caplog.text
+    assert '모델' not in caplog.text
+    assert 'private-' not in caplog.text
+
+
+@pytest.mark.parametrize('row', [
+    native_row(url='javascript:alert(1)'), native_row(url='https://user:password@example.org/'),
+    native_row(url='https://[invalid/'), native_row(url=None), native_row(url={}),
+    native_row(title=None), native_row(title={}), native_row(title=' '),
+    native_row(snippet=None), native_row(snippet=[]), native_row(snippet=''),
+    {'url': 'https://example.org', 'title': '검색 결과', 'content': '본문을 요약으로 대신할 수 없음'},
+])
+def test_native_malformed_row_does_not_become_stringified_evidence(native_adapter, row):
+    native_adapter.return_value = [row, native_row()]
+    provider, rows = search.search_results('시험일정')
+    assert provider == 'codex_native_search'
+    assert rows == [search.result_row(**native_row())]
+
+
+def test_native_does_not_fill_invalid_first_ten_slots_from_later_results(native_adapter):
+    native_adapter.return_value = [None] * 9 + [native_row(), native_row(url='https://later.example/')]
+    assert search.search_results('시험일정') == ('codex_native_search', [search.result_row(**native_row())])
+
+
+def test_native_keeps_repeated_hosts_and_urls_for_downstream_sample_validation(native_adapter):
+    native_adapter.return_value = [native_row(), native_row(), native_row(url='https://Example.ORG./second')]
+    _, rows = search.search_results('시험일정')
+    assert len(rows) == 3
+    assert [row['domain'] for row in rows] == ['example.org'] * 3
+
+
+def test_native_failure_hides_adapter_reason_and_exception_without_retry(native_adapter, caplog):
+    error = RuntimeError('private-token https://private.example/?key=private-key')
+    error.reason = 'private-untrusted-reason'
+    native_adapter.side_effect = error
+    assert search.search_results('시험일정') == ('codex_native_search', [])
+    native_adapter.assert_called_once_with('시험일정')
+    assert 'reason=native_search_unavailable' in caplog.text
+    assert 'private-' not in caplog.text
+    assert 'https://' not in caplog.text
+
+
+@pytest.mark.parametrize('provider', ['unknown', 'google_custom_search', 'duckduckgo_proxy',
+                                      'codex_native_search ', 'CODEX_NATIVE_SEARCH',
+                                      'private-value\nhttps://private.example/?key=private-key'])
+def test_unknown_explicit_provider_fails_closed_without_echoing_setting(native_adapter, monkeypatch, caplog, provider):
+    monkeypatch.setenv('MARKET_SEARCH_PROVIDER', provider)
+    assert search.search_results('시험일정') == (None, [])
+    native_adapter.assert_not_called()
+    assert 'provider=unavailable reason=unsupported_provider' in caplog.text
+    assert 'private-' not in caplog.text
+    assert 'https://' not in caplog.text
+
+
+def test_empty_provider_setting_keeps_existing_google_default(monkeypatch):
+    monkeypatch.setenv('MARKET_SEARCH_PROVIDER', '')
+    monkeypatch.setenv('GOOGLE_SEARCH_API_KEY', 'test-key')
+    monkeypatch.setenv('GOOGLE_SEARCH_ENGINE_ID', 'test-engine')
+    response = Mock()
+    response.json.return_value = {'items': [
+        {'link': 'https://example.org/', 'title': '시험 안내', 'snippet': '실제 검색 결과'},
+    ]}
+    http = Mock(return_value=response)
+    monkeypatch.setattr(search.requests, 'get', http)
+    assert search.search_results('시험일정')[0] == 'google_custom_search'
+    http.assert_called_once()
 
 
 def test_google_results_preserve_competitor_positions(monkeypatch):

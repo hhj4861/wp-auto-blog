@@ -67,7 +67,7 @@ def rejection(item, reason=None):
         assert reason in problems
 
 
-@pytest.mark.parametrize('provider', ['google_custom_search', 'duckduckgo_proxy'])
+@pytest.mark.parametrize('provider', ['google_custom_search', 'duckduckgo_proxy', 'codex_native_search'])
 def test_verified_sample_and_two_independent_quotes_allow_unknown_trend(provider):
     item = candidate(provider=provider)
     evidence = item['opportunity_evidence']
@@ -76,6 +76,92 @@ def test_verified_sample_and_two_independent_quotes_allow_unknown_trend(provider
     assert evidence['dominant_ratio'] == 0
     assert item['trend_growth'] is None
     assert opportunity.issues(item, NOW) == []
+
+
+@pytest.mark.parametrize('results', [
+    [], search_rows()[:4], [search_rows()[0]] * 5,
+    [{**row, 'url': f'https://single.example/{index}', 'domain': 'single.example'}
+     for index, row in enumerate(search_rows())],
+])
+def test_native_search_does_not_relax_distinct_result_and_hostname_minimums(results):
+    rejection(candidate(provider='codex_native_search', results=results), 'insufficient_search_sample')
+
+
+@pytest.mark.parametrize('dominant_count,allowed', [(3, True), (4, False)])
+def test_native_search_keeps_the_existing_dominance_boundary(dominant_count, allowed):
+    rows = search_rows()
+    for index in range(dominant_count):
+        rows[index].update(url=f'https://source{index}.go.kr/page', domain=f'source{index}.go.kr')
+    item = candidate(provider='codex_native_search', results=rows)
+    if allowed:
+        assert opportunity.issues(item, NOW) == []
+    else:
+        rejection(item, 'dominant_search_results')
+
+
+@pytest.mark.parametrize('location,field,value,reason', [
+    ('item', 'evidence_mode', 'official_pages', 'organic_results_unavailable'),
+    ('item', 'organic_provider', 'model_answer', 'organic_results_unavailable'),
+    ('item', 'keyword', 'ITQ로그인오류', 'search_evidence_binding_mismatch'),
+    ('item', 'topic', 'ITQ 장기 미접속 오류만 해결', 'search_evidence_binding_mismatch'),
+    ('item', 'intent', '오류만 해결하나요?', 'search_evidence_binding_mismatch'),
+    ('evidence', 'version', 0, 'missing_opportunity_evidence'),
+    ('evidence', 'provider', 'google_custom_search', 'organic_results_unavailable'),
+    ('evidence', 'scope', 'narrower_intent', 'narrower_or_unverified_search_intent'),
+    ('evidence', 'target_keyword', 'ITQ로그인오류', 'narrower_or_unverified_search_intent'),
+    ('evidence', 'result_count', 100, 'search_sample_changed'),
+    ('evidence', 'domain_count', 100, 'search_sample_changed'),
+    ('evidence', 'dominant_ratio', -1, 'search_sample_changed'),
+    ('evidence', 'matches', [], 'unverified_intent_quotes'),
+    ('evidence', 'matches', [
+        {'result_index': 0, 'quote': 'ITQ 자격증 조회와 취득 내역 확인'},
+        {'result_index': 2, 'quote': 'ITQ 자격증 조회와 취득 내역 확인'},
+    ], 'unverified_intent_quotes'),
+    ('evidence', 'matches', [
+        {'result_index': 0, 'quote': '이것은 도구 결과에는 없는 모델의 설명입니다'},
+        {'result_index': 1, 'quote': '취득한 ITQ 자격증과 성적 정보를 조회하는 경로'},
+    ], 'unverified_intent_quotes'),
+])
+def test_native_provider_label_and_publication_flag_do_not_bypass_evidence(location, field, value, reason):
+    item = candidate(provider='codex_native_search')
+    item.update(publish_eligible=True, hold_reasons=[], priority_score=100)
+    target = item if location == 'item' else item['opportunity_evidence']
+    target[field] = deepcopy(value)
+    rejection(item, reason)
+
+
+@pytest.mark.parametrize('offset,allowed', [
+    (timedelta(hours=36), True),
+    (timedelta(hours=36, microseconds=1), False),
+    (timedelta(seconds=-1), False),
+])
+def test_native_search_has_the_same_36_hour_cache_lifetime(offset, allowed):
+    item = candidate(provider='codex_native_search', checked_at=(NOW - offset).isoformat())
+    if allowed:
+        assert opportunity.issues(item, NOW) == []
+    else:
+        rejection(item, 'stale_search_sample')
+
+
+@pytest.mark.parametrize('field,value', [
+    ('score', 100),
+    ('score_components', {'demand': 24.63, 'organic_opportunity': 40, 'intent_fit': 25, 'trend': 0}),
+    ('monthly_search', 12000),
+    ('organic_domains', ['invented.example'] * 5),
+    ('trend_status', 'measured'),
+    ('trend_growth', 0),
+])
+def test_native_sample_cannot_override_existing_market_score_recomputation(field, value):
+    from src.market_topics import current_priority
+
+    item = candidate(provider='codex_native_search')
+    item.update(monthly_search=1200, organic_domains=[row['domain'] for row in search_rows()],
+                trend_status='unavailable', score=79.63,
+                score_components={'demand': 24.63, 'organic_opportunity': 40, 'intent_fit': 15, 'trend': 0})
+    assert opportunity.issues(item, NOW) == []
+    assert current_priority(item)
+    item[field] = value
+    assert not current_priority(item)
 
 
 def test_measured_zero_trend_does_not_change_opportunity_eligibility():

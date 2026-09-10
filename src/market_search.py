@@ -74,18 +74,53 @@ def result_row(url, title='', snippet=''):
             return None
         if parts.hostname == 'duckduckgo.com' or parts.hostname.endswith('.duckduckgo.com'):
             return None
-        return {'url': url, 'domain': parts.hostname.lower(),
+        return {'url': url, 'domain': parts.hostname.lower().rstrip('.'),
                 'title': str(title)[:300], 'snippet': str(snippet)[:1000]}
     except (ValueError, TypeError):
         return None
 
 
+def _native_results(query):
+    """Accept structured tool results only; never parse a model's answer as evidence."""
+    provider = 'codex_native_search'
+    try:
+        from src.codex_search import native_search
+
+        observed = native_search(query)
+        if not isinstance(observed, list):
+            raise ValueError()
+        rows = []
+        for item in observed[:10]:
+            if (not isinstance(item, dict)
+                    or not all(isinstance(item.get(field), str) for field in ('url', 'title', 'snippet'))
+                    or not item['title'].strip() or not item['snippet'].strip()):
+                continue
+            row = result_row(item['url'], item['title'], item['snippet'])
+            if row:
+                rows.append(row)
+        if rows:
+            return provider, rows
+    except Exception:
+        # Adapter errors can contain command output or credentials. Keep the
+        # provider boundary fixed and never fall back to another paid/API path.
+        pass
+    search_failure(provider, reason='native_search_unavailable')
+    return provider, []
+
+
 def search_results(query):
-    """Prefer Google CSE; label DuckDuckGo explicitly when it is the fallback.
+    """Use the explicit provider, or the existing Google CSE/DuckDuckGo default.
 
     Keep separate result positions from the same domain: deduplicating hosts
     would undercount a site occupying several places on the first page.
     """
+    configured = os.getenv('MARKET_SEARCH_PROVIDER', '')
+    if configured == 'codex_native_search':
+        return _native_results(query)
+    if configured:
+        # Do not echo arbitrary configuration or silently choose a provider.
+        search_failure('unavailable', reason='unsupported_provider')
+        return None, []
     key, engine = os.getenv('GOOGLE_SEARCH_API_KEY'), os.getenv('GOOGLE_SEARCH_ENGINE_ID')
     if key and engine:
         response = None

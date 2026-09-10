@@ -10,6 +10,7 @@ import math
 import os
 from pathlib import Path
 import re
+from time import sleep
 import unicodedata
 from zoneinfo import ZoneInfo
 
@@ -142,20 +143,39 @@ def existing_titles():
         raise ValueError('Market selection is TrendPulse-only')
     auth = (os.environ['WP_GENERAL_USERNAME'], os.environ['WP_GENERAL_APP_PASSWORD'])
     titles = historical_terms()
+    retry_available = True  # One extra GET across the whole inventory, not per page.
     for page in range(1, 101):
-        response = requests.get(base + '/wp-json/wp/v2/posts', auth=auth,
-            headers={'User-Agent': 'Mozilla/5.0 (TrendPulse topic selection)'},
-            params={'status': 'publish,draft,pending,future', 'per_page': 100,
-                    'page': page, '_fields': 'title,meta'}, timeout=45)
-        response.raise_for_status()
-        for post in response.json():
-            titles.append(post['title']['rendered'])
-            meta = post.get('meta') or {}
-            for field in ('_yoast_wpseo_focuskw', 'rank_math_focus_keyword'):
-                if isinstance(meta.get(field), str):
-                    titles.extend(x.strip() for x in meta[field].split(',') if x.strip())
-        if page >= int(response.headers.get('X-WP-TotalPages', '1')):
-            return titles
+        try:
+            while True:
+                try:
+                    response = requests.get(base + '/wp-json/wp/v2/posts', auth=auth,
+                        headers={'User-Agent': 'Mozilla/5.0 (TrendPulse topic selection)'},
+                        params={'status': 'publish,draft,pending,future', 'per_page': 100,
+                                'page': page, '_fields': 'title,meta'}, timeout=45)
+                except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as error:
+                    if isinstance(error, requests.exceptions.SSLError) or not retry_available:
+                        raise
+                    retry_available = False
+                    sleep(1)
+                    continue
+                break
+            response.raise_for_status()
+            posts = response.json()
+            if not isinstance(posts, list):
+                raise ValueError('Invalid inventory')
+            for post in posts:
+                title = post['title']['rendered']
+                if not isinstance(title, str):
+                    raise ValueError('Invalid inventory')
+                titles.append(title)
+                meta = post.get('meta') or {}
+                for field in ('_yoast_wpseo_focuskw', 'rank_math_focus_keyword'):
+                    if isinstance(meta.get(field), str):
+                        titles.extend(x.strip() for x in meta[field].split(',') if x.strip())
+            if page >= int(response.headers.get('X-WP-TotalPages', '1')):
+                return titles
+        except (requests.exceptions.RequestException, ValueError, TypeError, KeyError, AttributeError):
+            raise RuntimeError('WordPress inventory unavailable') from None
     raise RuntimeError('Duplicate inventory pagination incomplete')
 
 

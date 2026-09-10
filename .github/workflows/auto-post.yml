@@ -33,7 +33,7 @@ on:
         description: 'Optional official source URLs, one per line (fetched and verified)'
         type: string
       resume_draft_id:
-        description: 'Optional existing Codex draft ID to repair metadata, verify and publish'
+        description: 'Existing Codex draft ID to verify and publish; market drafts may receive one evidence repair'
         type: string
       topic:
         description: 'Specific topic (optional, skips trend detection)'
@@ -97,6 +97,7 @@ jobs:
       group: trendpulse-general-posting
       cancel-in-progress: false
     env:
+      BLOG_MODE: general
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
@@ -720,6 +721,7 @@ jobs:
       group: trendpulse-general-posting
       cancel-in-progress: false
     env:
+      BLOG_MODE: queue
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
@@ -807,6 +809,10 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
+          if [ -n "$BLOG_RESUME_DRAFT_ID" ]; then
+            python scripts/run_codex_worker.py
+            exit 0
+          fi
           # 스케줄별 카테고리 선택: 화/목=취업, 토=건강, 월/수/금=생활정보
           # 수동 실행(mode=queue)은 category 입력을 따르고, 없으면 생활정보
           if [ -n "${{ github.event.inputs.category }}" ]; then

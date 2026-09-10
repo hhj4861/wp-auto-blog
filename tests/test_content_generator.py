@@ -4,6 +4,7 @@ TDD: RED -> GREEN -> REFACTOR
 """
 
 import pytest
+import json
 from unittest.mock import Mock, patch, MagicMock
 from dataclasses import dataclass
 
@@ -206,6 +207,129 @@ class TestContentGenerator:
 
         # Word count should be reasonable
         assert content.word_count > 0
+
+
+class TestMarketEvidenceRepair:
+    """Market articles get one source-only correction and the same evidence gate again."""
+
+    @pytest.fixture
+    def setup_writer(self, mock_env_vars, monkeypatch):
+        monkeypatch.setenv('BLOG_WRITER_PROVIDER', 'anthropic')
+        monkeypatch.delenv('BLOG_OFFICIAL_SOURCE_URLS', raising=False)
+        with patch.object(ContentGenerator, '_setup_apis'):
+            generator = ContentGenerator(config=ContentConfig(language='ko'))
+        source = {
+            'url': 'https://www.gccity.go.kr/ghc/guide', 'original_url': 'https://www.gccity.go.kr/ghc/guide',
+            'title': '공식 안내', 'checked_on': '2026-09-10', 'sha256': 'verified',
+            'excerpt': '당화혈색소 정상수치는 5.7% 미만입니다.',
+        }
+        brief = {'keyword': '당화혈색소정상수치', 'topic': '당화혈색소정상수치: 기준 확인',
+                 'intent': '정상 기준은 무엇인가요?', 'gap': '정상 기준 설명',
+                 'source_url': source['url'], 'verified_sources': [source]}
+        article = (
+            '---SEO-META---\nFOCUS_KEYPHRASE: 당화혈색소정상수치\n'
+            'META_DESCRIPTION: 당화혈색소정상수치를 제공된 공식 자료의 정상 기준으로 확인합니다.\n'
+            'SLUG: hba1c-normal-range\n---CONTENT---\n'
+            '<h1>당화혈색소정상수치: 기준 확인</h1>'
+            '<section id="quick-answer"><p>당화혈색소정상수치를 확인하세요.</p></section>'
+            '<h2 id="normal">정상 기준</h2><p>제공되지 않은 NIDDK 주장입니다.</p>'
+            '<h2 id="faq">FAQ</h2><h3 id="what">무엇인가요?</h3><p>확인한 기준을 정리합니다.</p>'
+        )
+        monkeypatch.setattr('src.market_topics.fresh_market_item', lambda *args: True)
+        monkeypatch.setattr('src.content_generator.fetch_source', lambda *args: dict(source))
+        monkeypatch.setattr(generator, '_validate', lambda html: (True, []))
+        monkeypatch.setattr(generator, 'research_with_grounding', Mock(side_effect=AssertionError('No extra research')))
+        return generator, source, brief, article
+
+    @pytest.mark.parametrize('remaining_issues', [[], ['아직 제공되지 않은 주장']])
+    def test_market_evidence_repair_rechecks_once_and_keeps_remaining_issues(self, setup_writer, remaining_issues):
+        generator, source, brief, article = setup_writer
+        reviews = iter([['제공되지 않은 NIDDK 주장 삭제'], remaining_issues])
+        prompts = []
+
+        def writer(prompt):
+            prompts.append(prompt)
+            if prompt.startswith('You are a conservative Korean editorial fact checker.'):
+                return json.dumps({'issues': next(reviews)}, ensure_ascii=False)
+            if prompt.startswith('You are correcting an existing Korean article'):
+                data = json.loads(prompt.split('\n', 1)[1])
+                assert data['issues'] == ['제공되지 않은 NIDDK 주장 삭제']
+                assert data['sources'][0]['excerpt'] == source['excerpt']
+                return data['article'].replace('제공되지 않은 NIDDK 주장입니다.', source['excerpt'])
+            return article
+
+        with patch.object(generator, '_call_llm', side_effect=writer):
+            content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE,
+                                         category='건강', market_brief=brief)
+
+        assert len(prompts) == 4  # initial writer, review, one correction, final review
+        assert 'NIDDK' not in content.html
+        assert source['excerpt'] in content.html
+        assert content.editorial_issues == remaining_issues
+        assert content.word_count == generator._count_words(content.html)
+        assert content.focus_keyphrase == brief['keyword']
+
+    def test_market_evidence_repair_failure_preserves_original_draft_issues(self, setup_writer):
+        generator, _, brief, article = setup_writer
+        with patch.object(generator, '_call_llm', side_effect=[
+            article, '{"issues":["제공되지 않은 주장"]}', 'not HTML',
+        ]) as writer:
+            content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE,
+                                         category='건강', market_brief=brief)
+        assert writer.call_count == 3
+        assert 'NIDDK' in content.html
+        assert content.editorial_issues == ['제공되지 않은 주장', '근거 보완 실패 — 자동 발행 보류 (invalid_html)']
+
+    def test_market_evidence_repair_reviews_metadata_both_times_without_changing_it(self, setup_writer):
+        generator, source, brief, article = setup_writer
+        article = article.replace('당화혈색소정상수치를 제공된 공식 자료의 정상 기준으로 확인합니다.',
+                                  '제공되지 않은 <특별효과> & 주장입니다.')
+        reviewed = []
+
+        def writer(prompt):
+            if prompt.startswith('You are a conservative Korean editorial fact checker.'):
+                reviewed.append(json.loads(prompt.split('\n', 1)[1])['article'])
+                return '{"issues":["메타 설명의 효과는 제공된 근거에 없음"]}'
+            if prompt.startswith('You are correcting an existing Korean article'):
+                data = json.loads(prompt.split('\n', 1)[1])
+                assert 'data-review-metadata' not in data['article']
+                return data['article'].replace('제공되지 않은 NIDDK 주장입니다.', source['excerpt'])
+            return article
+
+        with patch.object(generator, '_call_llm', side_effect=writer) as call:
+            content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE,
+                                         category='건강', market_brief=brief)
+        assert call.call_count == 4
+        assert len(reviewed) == 2
+        assert all('제목: 당화혈색소정상수치: 기준 확인' in value for value in reviewed)
+        assert all('메타 설명: 제공되지 않은 &lt;특별효과&gt; &amp; 주장입니다.' in value for value in reviewed)
+        assert content.editorial_issues == ['메타 설명의 효과는 제공된 근거에 없음']
+        assert 'data-review-metadata' not in content.html
+
+    def test_market_evidence_repair_skipped_when_initial_review_passes(self, setup_writer):
+        generator, _, brief, article = setup_writer
+        with patch.object(generator, '_call_llm', side_effect=[article, '{"issues":[]}']) as writer, \
+             patch('src.content_generator.repair_evidence') as repair:
+            content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE,
+                                         category='건강', market_brief=brief)
+        assert writer.call_count == 2
+        repair.assert_not_called()
+        assert content.editorial_issues == []
+
+    def test_market_evidence_repair_does_not_change_nonmarket_writer(self, setup_writer):
+        generator, source, brief, article = setup_writer
+
+        def research(**kwargs):
+            generator._research_sources = [source]
+            return ''
+
+        with patch.object(generator, 'research_with_grounding', side_effect=research), \
+             patch.object(generator, '_call_llm', side_effect=[article, '{"issues":["검수 이슈"]}']) as writer, \
+             patch('src.content_generator.repair_evidence') as repair:
+            content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE, category='건강')
+        assert writer.call_count == 2
+        repair.assert_not_called()
+        assert content.editorial_issues == ['검수 이슈']
 
 
 class TestPromptLoading:

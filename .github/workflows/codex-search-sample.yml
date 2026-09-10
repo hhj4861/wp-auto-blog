@@ -1,0 +1,43 @@
+name: Codex Search Sample Diagnostic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendpulse-general-posting
+  cancel-in-progress: false
+
+jobs:
+  sample:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned Codex analyst
+        run: npm install -g @openai/codex@0.153.4
+      - name: Restore dedicated Codex authentication
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          python scripts/codex_worker_auth.py restore
+      - name: Inspect native search result field counts
+        run: python scripts/check_codex_search_sample.py
+      - name: Persist refreshed Codex auth and clean up
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist

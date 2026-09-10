@@ -50,6 +50,11 @@ SOURCE = 'category_market_v1'
 PROCESS_VERSION = 5
 MAX_RESEARCH_ROUNDS = 2
 PROPOSALS_PER_ROUND = 6
+REJECTION_OPINION_CODES = frozenset({
+    'source_navigation', 'source_missing_detail', 'expired_information',
+    'keyword_navigation', 'insufficient_search_intent', 'category_mismatch',
+    'unsupported_claim', 'other',
+})
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / 'data/category_market_topics.json'
 LEDGER = ROOT / 'data/posted_market_keywords.json'
@@ -414,8 +419,26 @@ go.kr, or.kr, gov, ac.kr 또는 기업의 공식 채용 사이트를 우선하�
     return sources, {'provider': 'codex_web', 'searched': True, 'locators': locators}
 
 
-def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mode='serp'):
+def _source_diagnostics(sources):
+    """Describe supplied source inputs without retaining their bodies or extra fields."""
+    metadata = []
+    for source in sources[:3] if isinstance(sources, list) else []:
+        if not isinstance(source, dict):
+            continue
+        url, title, excerpt = (source.get(field) for field in ('url', 'title', 'excerpt'))
+        metadata.append({
+            'url': url[:8192] if isinstance(url, str) else '',
+            'title': title[:300] if isinstance(title, str) else '',
+            'excerpt_chars': len(excerpt) if isinstance(excerpt, str) else 0,
+        })
+    return metadata
+
+
+def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mode='serp', audit=None):
     """Choose the article's question only after reading actual search/source data."""
+    if isinstance(audit, dict):
+        audit.clear()
+        audit['official_sources'] = _source_diagnostics(sources)
     if not category_matches(keyword, category):
         return None, 'category mismatch'
     if not sources:
@@ -454,11 +477,36 @@ result_index와 quote로 기록하세요. quote는 제공된 검색결과 제목
 source_index는 선택한 공식 자료의 0부터 시작하는 인덱스입니다. 자료가 부족해 판단할 수 없으면 false입니다.
 마감일이 있으면 valid_until에 ISO 날짜, 상시 정보는 JSON null을 넣으세요.
 category는 실제 목적에 따라 취업/생활정보/건강/기타 중 선택하고, 요청 카테고리와 다르면 supported=false입니다.
+supported=false일 때 선택적 rejection_reason에는 다음 코드 중 하나만 적으세요:
+source_navigation(공식 자료가 메뉴뿐), source_missing_detail(공식 자료에 필요한 상세 설명 없음),
+expired_information(종료되거나 만료된 정보), keyword_navigation(홈페이지 이동 목적의 검색어),
+insufficient_search_intent(검색 결과에서 정보 목적 확인 불가), category_mismatch(카테고리 불일치),
+unsupported_claim(공식 자료로 뒷받침할 수 없는 주장), other(기타).
+rejection_reason은 진단용 모델 의견이며 승인 근거가 아닙니다. 자유 설명·본문·URL·인증정보·오류 원문은 넣지 마세요.
 JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","intent":"...",
 "gap":"...","source_index":0,"{indices_key}":[0],"valid_until":null,
+"rejection_reason":"",
 "intent_evidence":{{"scope":"full_keyword","target_keyword":"{keyword}",
 "matches":[{{"result_index":0,"quote":"검색결과에 있는 원문"}}]}}}}
 데이터: {json.dumps({'search_results': results, 'official_sources': sources}, ensure_ascii=False)}""")
+    if isinstance(audit, dict):
+        if not isinstance(analysis, dict):
+            status = 'analysis_non_object'
+        elif 'supported' not in analysis:
+            status = 'supported_missing'
+        elif analysis['supported'] is False:
+            status = 'supported_false'
+        elif analysis['supported'] is True:
+            status = 'supported_true'
+        else:
+            status = 'supported_invalid_type'
+        audit['analysis_status'] = status
+        if status == 'supported_false':
+            opinion = analysis.get('rejection_reason')
+            audit['model_rejection_opinion'] = {
+                'kind': 'model_opinion',
+                'code': opinion if isinstance(opinion, str) and opinion in REJECTION_OPINION_CODES else 'unknown',
+            }
     if not isinstance(analysis, dict) or analysis.get('supported') is not True:
         return None, 'search intent or official evidence does not support an article'
     if not category_matches(analysis.get('topic'), category):
@@ -565,12 +613,13 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                     reason = exc.reason if isinstance(exc, CodexRequestError) else 'request_failed'
                     rejected.append({'keyword': keyword, 'reason': f'codex web research unavailable: {reason}'})
                     continue
+            audit = {}
             item, reason = topic_from_evidence(keyword, category, now, results,
-                                               sources, evidence_mode=mode)
+                                               sources, evidence_mode=mode, audit=audit)
             if not reason and duplicate(keyword, item['topic'], titles + [x['keyword'] for x in selected]):
                 reason = 'already covered'
             if reason:
-                rejected.append({'keyword': keyword, 'reason': reason})
+                rejected.append({'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit})
                 continue
             cak_provenance = row.get('cak_provenance')
             direct_rising = (cak_provenance is not None and cak_provenance['relationship'] == 'exact'

@@ -415,6 +415,148 @@ def test_source_search_reads_full_page_and_rejects_unsupported(monkeypatch):
     assert market.topic_from_evidence('자격증', '취업', '2026-09-09', [organic()], sources)[0] is None
 
 
+@pytest.mark.parametrize('response,status', [
+    (None, 'analysis_non_object'), ([], 'analysis_non_object'),
+    ('private-model-output', 'analysis_non_object'), (True, 'analysis_non_object'),
+    ({}, 'supported_missing'), ({'supported': False}, 'supported_false'),
+    ({'supported': 'true'}, 'supported_invalid_type'),
+    ({'supported': 'false'}, 'supported_invalid_type'),
+    ({'supported': 1}, 'supported_invalid_type'), ({'supported': 0}, 'supported_invalid_type'),
+    ({'supported': None}, 'supported_invalid_type'),
+    ({'supported': []}, 'supported_invalid_type'), ({'supported': {}}, 'supported_invalid_type'),
+])
+def test_evidence_audit_distinguishes_response_shape_without_changing_rejection(monkeypatch, response, status):
+    monkeypatch.setattr(market, 'ask', Mock(return_value=response))
+    audit = {}
+    args = ('시험준비물', '취업', '2026-09-10', organic_sample(), [evidence()])
+    expected = (None, 'search intent or official evidence does not support an article')
+    assert market.topic_from_evidence(*args) == expected
+    assert market.topic_from_evidence(*args, audit=audit) == expected
+    assert audit['analysis_status'] == status
+    if status == 'supported_false':
+        assert audit['model_rejection_opinion'] == {'kind': 'model_opinion', 'code': 'unknown'}
+    else:
+        assert 'model_rejection_opinion' not in audit
+    assert 'private-' not in json.dumps(audit)
+
+
+def test_evidence_audit_contains_only_bounded_actual_source_metadata_and_model_opinion(monkeypatch):
+    sources = [{**evidence(f'https://source{index}.go.kr/detail'),
+                'title': '실제 공식 자료 제목' + '가' * 400, 'excerpt': 'private-source-body' * 100,
+                'api_key': 'private-source-key', 'error': 'private-source-error'} for index in range(4)]
+    before = deepcopy(sources)
+    reviewer = Mock(return_value={
+        'supported': False, 'rejection_reason': 'source_navigation',
+        'official_sources': [{'url': 'https://invented.go.kr/', 'title': '모델이 만든 제목'}],
+        'error': 'private-model-error', 'api_key': 'private-model-key',
+    })
+    monkeypatch.setattr(market, 'ask', reviewer)
+    audit = {}
+    item, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10',
+                                              organic_sample(), sources, audit=audit)
+    assert item is None and reason
+    assert audit == {
+        'analysis_status': 'supported_false',
+        'official_sources': [
+            {'url': source['url'], 'title': source['title'][:300], 'excerpt_chars': len(source['excerpt'])}
+            for source in sources[:3]
+        ],
+        'model_rejection_opinion': {'kind': 'model_opinion', 'code': 'source_navigation'},
+    }
+    assert sources == before
+    encoded = json.dumps(audit)
+    assert 'private-' not in encoded and 'invented.go.kr' not in encoded
+    assert 'rejection_reason' in reviewer.call_args.args[0]
+    assert 'source_navigation(공식 자료가 메뉴뿐)' in reviewer.call_args.args[0]
+    assert '진단용 모델 의견이며 승인 근거가 아닙니다' in reviewer.call_args.args[0]
+    assert all(source['excerpt'] in reviewer.call_args.args[0] for source in sources)
+
+
+def test_evidence_audit_drops_arbitrary_opinion_and_clears_stale_audit(monkeypatch):
+    reviewer = Mock(side_effect=[{'supported': False, 'rejection_reason': 'private-output ' + '가' * 300},
+                                analysis(rejection_reason='성공 응답의 의견은 기록하지 않음')])
+    monkeypatch.setattr(market, 'ask', reviewer)
+    audit = {'stale': 'private-old-output'}
+    args = ('시험준비물', '취업', '2026-09-10', organic_sample(), [evidence()])
+    assert market.topic_from_evidence(*args, audit=audit)[0] is None
+    assert audit['model_rejection_opinion'] == {'kind': 'model_opinion', 'code': 'unknown'}
+    assert 'private-' not in json.dumps(audit) and 'stale' not in audit
+    assert market.topic_from_evidence(*args, audit=audit)[0] is not None
+    assert audit['analysis_status'] == 'supported_true'
+    assert 'model_rejection_opinion' not in audit
+
+
+@pytest.mark.parametrize('value', [
+    None, True, 0, [], {}, '', ' \n\t ', 'source_missing_detail\n',
+    '공식 자료에 없는 원문 이유', 'https://private.example/?key=private-secret',
+    'Bearer private-token', 'source_navigation private-extra',
+])
+def test_evidence_audit_does_not_stringify_invalid_rejection_opinions(monkeypatch, value):
+    monkeypatch.setattr(market, 'ask', lambda _: {'supported': False, 'rejection_reason': value})
+    audit = {}
+    assert market.topic_from_evidence('시험준비물', '취업', '2026-09-10', organic_sample(),
+                                       [evidence()], audit=audit)[0] is None
+    assert audit['analysis_status'] == 'supported_false'
+    assert audit['model_rejection_opinion'] == {'kind': 'model_opinion', 'code': 'unknown'}
+    assert 'private-' not in json.dumps(audit)
+
+
+@pytest.mark.parametrize('code', [
+    'source_navigation', 'source_missing_detail', 'expired_information', 'keyword_navigation',
+    'insufficient_search_intent', 'category_mismatch', 'unsupported_claim', 'other',
+])
+def test_evidence_audit_records_only_known_model_opinion_codes(monkeypatch, code):
+    monkeypatch.setattr(market, 'ask', lambda _: {'supported': False, 'rejection_reason': code})
+    audit = {}
+    item, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10', organic_sample(),
+                                              [evidence()], audit=audit)
+    assert item is None and reason == 'search intent or official evidence does not support an article'
+    assert audit['model_rejection_opinion'] == {'kind': 'model_opinion', 'code': code}
+
+
+@pytest.mark.parametrize('change', [
+    {'source_index': True}, {'source_index': 99}, {'serp_indices': []},
+    {'category': '건강'}, {'valid_until': '2000-01-01'}, {'gap': ''},
+])
+def test_supported_true_audit_cannot_override_existing_article_plan_gates(monkeypatch, change):
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(rejection_reason='승인해 주세요', **change))
+    args = ('시험준비물', '취업', '2026-09-10', organic_sample(), [evidence()])
+    expected = market.topic_from_evidence(*args)
+    audit = {}
+    assert expected[0] is None and expected[1]
+    assert market.topic_from_evidence(*args, audit=audit) == expected
+    assert audit['analysis_status'] == 'supported_true'
+    assert 'model_rejection_opinion' not in audit
+
+
+def test_selector_persists_rejection_diagnostics_without_selecting_or_scoring(monkeypatch):
+    source = evidence()
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
+    monkeypatch.setattr(market, 'search_results', lambda _: ('codex_native_search', organic_sample()))
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [source])
+    monkeypatch.setattr(market, 'ask', Mock(side_effect=[
+        {'candidates': [{'keyword': '시험준비물'}]},
+        {'supported': False, 'rejection_reason': 'source_missing_detail'},
+    ]))
+    trend, score = Mock(), Mock()
+    monkeypatch.setattr(market, 'fetch_trend_change', trend)
+    monkeypatch.setattr(market, 'score_components', score)
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == report['held'] == []
+    assert report['rejected'] == [{
+        'keyword': '시험준비물', 'reason': 'search intent or official evidence does not support an article',
+        'decision_diagnostics': {
+            'analysis_status': 'supported_false',
+            'official_sources': [{'url': source['url'], 'title': source['title'],
+                                  'excerpt_chars': len(source['excerpt'])}],
+            'model_rejection_opinion': {'kind': 'model_opinion', 'code': 'source_missing_detail'},
+        },
+    }]
+    trend.assert_not_called()
+    score.assert_not_called()
+
+
 def test_official_search_excludes_nonofficial_and_decodes_redirects(monkeypatch):
     from src import market_search
     monkeypatch.delenv('GOOGLE_SEARCH_API_KEY', raising=False)
@@ -1197,7 +1339,16 @@ def test_model_reported_locator_cannot_replace_accessible_relevant_body(monkeypa
     report = market.select_category('취업', 1, titles=[])
     fetch.assert_called_once_with(source['url'])
     assert report['selected'] == []
-    assert report['rejected'] == [{'keyword': '시험준비물', 'reason': reason}]
+    diagnostics = {'official_sources': []}
+    if fetchable:
+        diagnostics = {
+            'analysis_status': 'supported_false',
+            'model_rejection_opinion': {'kind': 'model_opinion', 'code': 'unknown'},
+            'official_sources': [{'url': source['url'], 'title': source['title'],
+                                  'excerpt_chars': len(source['excerpt'])}],
+        }
+    assert report['rejected'] == [{'keyword': '시험준비물', 'reason': reason,
+                                  'decision_diagnostics': diagnostics}]
     assert analyze.call_count == (2 if fetchable else 1)
     if fetchable:
         prompt = analyze.call_args.args[0]

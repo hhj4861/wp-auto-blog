@@ -124,6 +124,82 @@ def test_source_host_spoof_rejected(url):
         get.assert_not_called()
 
 
+KCCI_GUIDE_URLS = [
+    "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
+    "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+]
+
+
+def _source_response(html, content_type="text/html; charset=utf-8"):
+    response = Mock(status_code=200, headers={"Content-Type": content_type})
+    response.__enter__ = Mock(return_value=response)
+    response.__exit__ = Mock(return_value=False)
+    response.iter_content.return_value = [html.encode()]
+    return response
+
+
+@pytest.mark.parametrize("url", KCCI_GUIDE_URLS)
+def test_kcci_official_guide_is_read_as_evidence_with_existing_html_rules(url):
+    # Reduced fixture with the mobile guide's main/table structure. Retrieval
+    # makes the source available to review; it does not certify article claims.
+    html = '''<html><head><title>Korcham Pass(대한상공회의소)</title></head><body>
+    <header>HEADER-SENTINEL</header><nav>NAV-SENTINEL</nav>
+    <main><h3>컴퓨터활용능력 (국가기술자격)</h3>
+    <p>공식 시험안내에서 등급별 시험과목과 시험방법, 응시자격, 합격결정기준을 확인할 수 있습니다.
+    필기시험 안내와 실기시험 안내는 서로 구분해서 확인해야 하며, 아래의 표는 안내 본문에
+    포함된 등급별 항목의 예시입니다. 접수와 시험장 선택은 해당 기관의 별도 안내를 확인합니다.</p>
+    <table><tr><th>등급</th><th>시험방법</th><th>시험시간</th></tr>
+    <tr><td>2급</td><td>필기시험 객관식40문항</td><td>40분</td></tr></table>
+    <h4>합격결정기준</h4><p>필기 과목별 기준과 평균 기준을 함께 확인하세요.</p></main>
+    <footer>FOOTER-SENTINEL</footer><script>SCRIPT-SENTINEL</script></body></html>'''
+    with patch("src.editorial.requests.get", return_value=_source_response(html)) as get:
+        source = fetch_source(url)
+    assert is_official_url(url)
+    get.assert_called_once_with(url, timeout=15, allow_redirects=False, stream=True)
+    assert source is not None
+    assert source["url"] == source["original_url"] == url
+    assert source["title"] == "Korcham Pass(대한상공회의소)"
+    assert len(source["excerpt"]) >= 200 and len(source["sha256"]) == 64
+    assert all(marker in source["excerpt"] for marker in ("컴퓨터활용능력", "2급", "객관식40문항", "40분"))
+    assert "SENTINEL" not in source["excerpt"]
+
+
+@pytest.mark.parametrize("url", [
+    "https://license.korcham.net.evil.test/guide",
+    "https://evilkorcham.net/guide",
+    "https://korcham.net@evil.test/guide",
+    "https://user:password@license.korcham.net/guide",
+    "http://license.korcham.net/guide",
+    "ftp://ml.korcham.net/guide",
+    "https://license.korcham.net:444/guide",
+    "https://evil.test/?next=https://license.korcham.net/guide",
+])
+def test_kcci_lookalikes_credentials_and_other_schemes_never_request(url):
+    assert not is_official_url(url)
+    with patch("src.editorial.requests.get") as get:
+        assert fetch_source(url) is None
+        get.assert_not_called()
+
+
+@pytest.mark.parametrize("html,content_type", [
+    ("<main>컴퓨터활용능력 시험안내</main>", "text/html"),
+    ("<main>" + "본문" * 150 + "</main>", "application/pdf"),
+    ("x" * 1_000_001, "text/html"),
+])
+def test_kcci_allowlist_does_not_bypass_body_or_media_limits(html, content_type):
+    with patch("src.editorial.requests.get", return_value=_source_response(html, content_type)):
+        assert fetch_source(KCCI_GUIDE_URLS[1]) is None
+
+
+def test_kcci_redirect_cannot_escape_official_https_hosts():
+    response = Mock(status_code=302, headers={"Location": "https://korcham.net.evil.test/guide"})
+    response.__enter__ = Mock(return_value=response)
+    response.__exit__ = Mock(return_value=False)
+    with patch("src.editorial.requests.get", return_value=response) as get:
+        assert fetch_source(KCCI_GUIDE_URLS[1]) is None
+        get.assert_called_once()
+
+
 def test_grounding_redirect_must_end_at_official_host():
     res = Mock(status_code=302, headers={"Location": "https://untrusted.test/"})
     res.__enter__ = Mock(return_value=res)

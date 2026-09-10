@@ -58,9 +58,12 @@
 보고서의 전체 실측 후보 수·조사 풀 크기·실제 상세 조사 수를 구분해, 일부 조사 결과를 전체 시장
 최고점으로 표현하지 않는다. 네이버 광고 경쟁도는 SEO 경쟁 점수로 사용하지 않는다.
 
-`Blog Keyword Select`의 `search_check_only=true`는 현재 검색 결과 접근과 표본만 확인한다.
-Codex 인증·CAK 수집·주제 보고서·큐·WordPress는 사용하지 않는다. 기존 Google 설정이 실패하면
-이미 등록된 대체 Google 키의 접근 가능성만 한 번 추가 확인하고, 설정은 바꾸지 않는다.
+`Blog Keyword Select`의 `search_check_only=true`는 검색 전용 Secret
+`GOOGLE_CUSTOM_SEARCH_API_KEY`와 기존 `GOOGLE_CSE_ID`로 세 고정 검색어
+(`ITQ자격증조회`, `종합소득세기한후신고환급`, `대장내시경전음식`)의 접근과 표본만 확인한다.
+같은 검색 전용 Secret을 카테고리 선정과 Queue Mode 파이프라인에도 연결한다.
+`search_check_only` 작업에는 대체 키를 주입하지 않으며 이 작업은 Codex 인증·CAK 수집·주제
+보고서·큐·WordPress를 사용하지 않는다. Gemini·이미지용 기존 키는 각각의 기존 용도로 유지한다.
 표본 개수와 고정 오류 분류를 출력하며 API 키·요청 URL·검색결과 원문은 출력하지 않는다.
 Google이 정확한 Custom Search 오류 메타데이터로 제공한 경우 숫자형 프로젝트 번호도 진단에
 포함한다. 이는 키의 소속 프로젝트를 확인하기 위한 것으로 키 값·프로젝트 이름·다른 메타데이터는
@@ -201,7 +204,8 @@ Codex 구독 경로로 작성·검수한 [글 1728](https://trendpulse.blog/itq-
 | 대체 `GOOGLE_AI_API_KEY` | Google HTTP 403 / `api_not_enabled` | 해당 키에서 Custom Search API 사용 불가 |
 | DuckDuckGo fallback | HTTP 202 / `challenge` | 검색 결과 대신 차단 응답 |
 
-현재 키로 세 고정 질의를 확인했고, 대체 키로 ITQ 질의를 한 번 더 확인했다. 모두 검색 표본 0건이었다.
+당시 설정으로 세 고정 질의를 확인했고, 대체 키로 ITQ 질의를 한 번 더 확인했다. 모두 검색 표본 0건이었다.
+이 기록은 이전 진단 방식의 결과다. 현재 검색 진단은 위의 검색 전용 Secret으로 세 질의만 실행한다.
 키 값, 요청 URL, 임의 오류 본문은 출력하지 않았다. 이 작업은 Codex 인증·주제 선정·보고서 저장·
 WordPress 발행을 실행하지 않으며, 추가 공개 글도 생성하지 않았다.
 

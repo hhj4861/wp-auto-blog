@@ -50,6 +50,7 @@ SOURCE = 'category_market_v1'
 PROCESS_VERSION = 5
 MAX_RESEARCH_ROUNDS = 2
 PROPOSALS_PER_ROUND = 6
+MAX_SOURCE_RECOVERIES = 2
 REJECTION_OPINION_CODES = frozenset({
     'source_navigation', 'source_missing_detail', 'expired_information',
     'keyword_navigation', 'insufficient_search_intent', 'category_mismatch',
@@ -538,6 +539,91 @@ JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","int
             'valid_until': deadline}, None
 
 
+def _source_recovery_sample(provider, results):
+    rows = opportunity.sample_rows(results)
+    return (isinstance(provider, str) and provider in opportunity.PROVIDERS
+            and len(rows) >= opportunity.MIN_RESULTS
+            and len({row['domain'] for _, row in rows}) >= opportunity.MIN_DOMAINS)
+
+
+def _changed_source_set(previous, recovered):
+    """Prioritize fresh detail, never re-review identical body under a new URL."""
+    hashes = {source.get('sha256') for source in previous}
+    previous_urls = {source.get('url') for source in previous}
+    excerpts = {' '.join(source.get('excerpt', '').split()) for source in previous}
+    changed, urls = [], set()
+    for source in recovered[:3] if isinstance(recovered, list) else []:
+        if not isinstance(source, dict):
+            continue
+        url, digest, excerpt = (source.get(key) for key in ('url', 'sha256', 'excerpt'))
+        if (not isinstance(url, str) or not is_official_url(url) or url in urls or url in previous_urls
+                or not isinstance(digest, str) or not digest or digest in hashes
+                or not isinstance(excerpt, str) or not excerpt.strip()
+                or ' '.join(excerpt.split()) in excerpts):
+            continue
+        changed.append(source)
+        urls.add(url)
+    if not changed:
+        return []
+    # Recovered evidence gets the scarce source slots before the rejected input.
+    for source in previous:
+        if source['url'] not in urls:
+            changed.append(source)
+            urls.add(source['url'])
+        if len(changed) >= 3:
+            break
+    return changed[:3]
+
+
+def _review_with_source_recovery(keyword, category, now, results, sources, *,
+                                 provider, evidence_mode, research, allow_recovery, budget):
+    """A source-only retry cannot replace SERP evidence or relax any approval gate."""
+    initial = {}
+    item, reason = topic_from_evidence(keyword, category, now, results, sources,
+                                      evidence_mode=evidence_mode, audit=initial)
+    opinion = initial.get('model_rejection_opinion', {})
+    if (not allow_recovery or evidence_mode != 'serp' or not sources or not reason
+            or initial.get('analysis_status') != 'supported_false'
+            or opinion.get('kind') != 'model_opinion'
+            or opinion.get('code') not in {'source_navigation', 'source_missing_detail'}
+            or budget['attempts'] >= MAX_SOURCE_RECOVERIES
+            or not _source_recovery_sample(provider, results)):
+        return item, reason, research, initial
+    # Charge before either external boundary so lookup/review errors also count.
+    budget['attempts'] += 1
+    recovery = {'attempted': True, 'initial_review': initial, 'outcome': 'research_failed'}
+    audit = {**initial, 'source_recovery': recovery}
+    try:
+        recovered, retrace = research_official_sources(keyword, category, now)
+    except Exception:
+        return None, reason, research, audit  # No arbitrary exception in a report.
+    if (not isinstance(retrace, dict) or retrace.get('provider') != 'codex_web'
+            or retrace.get('searched') is not True):
+        recovery['outcome'] = 'unverified_research'
+        return None, reason, research, audit
+    updated = _changed_source_set(sources, recovered)
+    if not updated:
+        recovery['outcome'] = 'no_changed_source'
+        return None, reason, research, audit
+    retry = {}
+    recovery['retry_review'] = retry
+    recovery['outcome'] = 'review_failed'
+    try:
+        item, retry_reason = topic_from_evidence(keyword, category, now, results, updated,
+                                                evidence_mode=evidence_mode, audit=retry)
+    except Exception:
+        return None, reason, research, audit
+    changed_keys = {(source['url'], source['sha256']) for source in updated
+                    if source['url'] not in {old['url'] for old in sources}}
+    if not retry_reason and not any((source['url'], source['sha256']) in changed_keys
+                                   for source in item['verified_sources']):
+        recovery['outcome'] = 'detail_source_not_used'
+        return None, 'recovered detail source was not used by article plan', research, {
+            **retry, 'source_recovery': recovery}
+    recovery['outcome'] = 'review_rejected' if retry_reason else 'review_passed'
+    return item, retry_reason, retrace, {**retry, 'source_recovery': recovery}
+
+
 def select_category(category, top_n=2, titles=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
@@ -552,6 +638,7 @@ def select_category(category, top_n=2, titles=None):
     if not pool:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
+    recovery_budget = {'attempts': 0}
     rounds = 0
     for _ in range(MAX_RESEARCH_ROUNDS):
         remaining = [row for row in pool if norm(row['keyword']) not in seen][:60]
@@ -605,6 +692,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
                 continue
             sources = candidate_sources(keyword, results) if results else []
+            allow_recovery = bool(sources)
             if not sources:
                 try:
                     sources, research = research_official_sources(keyword, category, now)
@@ -613,9 +701,10 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                     reason = exc.reason if isinstance(exc, CodexRequestError) else 'request_failed'
                     rejected.append({'keyword': keyword, 'reason': f'codex web research unavailable: {reason}'})
                     continue
-            audit = {}
-            item, reason = topic_from_evidence(keyword, category, now, results,
-                                               sources, evidence_mode=mode, audit=audit)
+            item, reason, research, audit = _review_with_source_recovery(
+                keyword, category, now, results, sources, provider=provider,
+                evidence_mode=mode, research=research, allow_recovery=allow_recovery,
+                budget=recovery_budget)
             if not reason and duplicate(keyword, item['topic'], titles + [x['keyword'] for x in selected]):
                 reason = 'already covered'
             if reason:
@@ -641,6 +730,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                 'trend_status': 'cak_measured' if direct_rising else ('measured' if growth is not None else 'unavailable'),
                 'selection_version': PROCESS_VERSION,
                 'selected_at': now, 'source': SOURCE, 'keywords': [keyword], 'status': 'pending'}
+            if 'source_recovery' in audit:
+                candidate['decision_diagnostics'] = audit
             candidate['opportunity_evidence'] = opportunity.assess(
                 keyword, item['topic'], item['intent'], provider, results, review, now)
             reasons = opportunity.issues(candidate, datetime.fromisoformat(now))
@@ -659,7 +750,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
     selected.sort(key=lambda item: -item['score'])
     held.sort(key=lambda item: -item['score'])
     return {'category': category, 'selected_at': now, 'seeds': seeds,
-            'selection_version': PROCESS_VERSION, 'research_rounds': rounds, 'cak_import': cak_import,
+            'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
+            'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
             'analyst': 'codex_subscription',
             'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']
                                    else 'naver_related_keywords'),

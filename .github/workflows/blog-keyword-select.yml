@@ -97,6 +97,9 @@ jobs:
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Resolve this branch/tag after concurrency wait; a branch may have newer code and reports.
+          ref: ${{ github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'

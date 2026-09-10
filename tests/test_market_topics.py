@@ -2,7 +2,7 @@ from datetime import datetime, timezone, timedelta
 import json
 from copy import deepcopy
 from types import SimpleNamespace
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 import pytest
 import yaml
@@ -537,7 +537,7 @@ def test_selector_persists_rejection_diagnostics_without_selecting_or_scoring(mo
     monkeypatch.setattr(market, 'candidate_sources', lambda *_: [source])
     monkeypatch.setattr(market, 'ask', Mock(side_effect=[
         {'candidates': [{'keyword': '시험준비물'}]},
-        {'supported': False, 'rejection_reason': 'source_missing_detail'},
+        {'supported': False, 'rejection_reason': 'unsupported_claim'},
     ]))
     trend, score = Mock(), Mock()
     monkeypatch.setattr(market, 'fetch_trend_change', trend)
@@ -550,7 +550,7 @@ def test_selector_persists_rejection_diagnostics_without_selecting_or_scoring(mo
             'analysis_status': 'supported_false',
             'official_sources': [{'url': source['url'], 'title': source['title'],
                                   'excerpt_chars': len(source['excerpt'])}],
-            'model_rejection_opinion': {'kind': 'model_opinion', 'code': 'source_missing_detail'},
+            'model_rejection_opinion': {'kind': 'model_opinion', 'code': 'unsupported_claim'},
         },
     }]
     trend.assert_not_called()
@@ -1701,3 +1701,223 @@ def test_correct_category_cached_report_remains_usable(evidence_mode, keyword, c
         assert not market.fresh_market_item(row, category)
         with pytest.raises(RuntimeError, match='no verified market topic'):
             market.enqueue_report([], {'category': category, 'selected': [row]})
+
+
+def _recovery_source(url, paragraph):
+    """Use the actual extractor for source excerpts and their whole-body hashes."""
+    from src.editorial import fetch_source
+    response = Mock(status_code=200, headers={'Content-Type': 'text/html; charset=utf-8'})
+    response.__enter__ = Mock(return_value=response)
+    response.__exit__ = Mock(return_value=False)
+    response.iter_content.return_value = [
+        ('<html><title>공식 안내</title><main>' + paragraph * 12 + '</main></html>').encode()]
+    with patch('src.editorial.requests.get', return_value=response):
+        return fetch_source(url)
+
+
+@pytest.fixture
+def detail_recovery(monkeypatch):
+    keyword = '시험준비물'
+    original = _recovery_source('https://example.go.kr/menu', '공식기관 서비스 목록과 각종 자료 안내 메뉴입니다. ')
+    detail = {**_recovery_source('https://example.go.kr/details',
+        '시험준비물 상세 안내: 신분 확인 서류와 허용된 준비물의 기준을 확인하세요. '),
+        'locator_origin': 'native_open'}
+    rows = organic_sample(keyword)
+    search = Mock(return_value=('codex_native_search', rows))
+    sources = Mock(return_value=[original])
+    research = Mock(return_value=([detail], web_research_evidence(detail)))
+    reviewer = Mock(side_effect=[{'candidates': [{'keyword': keyword}]},
+        {'supported': False, 'rejection_reason': 'source_missing_detail'}, analysis(keyword)])
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {keyword: {'keyword': keyword, 'monthly': 1200}})
+    monkeypatch.setattr(market, 'search_results', search)
+    monkeypatch.setattr(market, 'candidate_sources', sources)
+    monkeypatch.setattr(market, 'research_official_sources', research)
+    monkeypatch.setattr(market, 'ask', reviewer)
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    return SimpleNamespace(keyword=keyword, original=original, detail=detail, rows=rows,
+                           search=search, sources=sources, research=research, reviewer=reviewer)
+
+
+def test_source_detail_recovery_preserves_actual_sample_and_all_selection_bindings(detail_recovery):
+    case = detail_recovery
+    original_rows = deepcopy(case.rows)
+    report = market.select_category('취업', 1, titles=[])
+    assert report['rejected'] == report['held'] == []
+    assert report['source_recovery_attempts'] == 1
+    item = report['selected'][0]
+    assert item['organic_results'] == case.rows == original_rows
+    assert item['organic_provider'] == 'codex_native_search' and item['evidence_mode'] == 'serp'
+    assert item['monthly_search'] == 1200 and item['keyword'] == case.keyword
+    assert item['selected_at'] == report['selected_at'] == item['opportunity_evidence']['checked_at']
+    assert item['verified_sources'] == [case.detail] and item['source_url'] == case.detail['url']
+    assert item['research_evidence'] == web_research_evidence(case.detail)
+    assert market.fresh_market_item(item, '취업')
+    assert market.enqueue_report([], report) == [item]
+    case.search.assert_called_once_with(case.keyword)
+    case.research.assert_called_once_with(case.keyword, '취업', report['selected_at'])
+    assert case.reviewer.call_count == 3
+    inputs = [json.loads(call.args[0].split('데이터: ', 1)[1])
+              for call in case.reviewer.call_args_list[1:]]
+    assert inputs[0]['search_results'] == inputs[1]['search_results'] == original_rows
+    assert inputs[0]['official_sources'] == [case.original]
+    assert inputs[1]['official_sources'] == [case.detail, case.original]
+    audit = item['decision_diagnostics']['source_recovery']
+    assert audit['outcome'] == 'review_passed'
+    assert audit['initial_review']['analysis_status'] == 'supported_false'
+    assert audit['retry_review']['analysis_status'] == 'supported_true'
+    assert audit['initial_review']['official_sources'][0]['url'] == case.original['url']
+    assert audit['retry_review']['official_sources'][0]['url'] == case.detail['url']
+    assert 'excerpt' not in json.dumps(audit).replace('excerpt_chars', '')
+
+
+@pytest.mark.parametrize('first', [
+    {'supported': False, 'rejection_reason': 'unsupported_claim'},
+    {'supported': False, 'rejection_reason': 'keyword_navigation'},
+    {'supported': False, 'rejection_reason': 'insufficient_search_intent'},
+    {'supported': False, 'rejection_reason': 'source_navigation SECRET'},
+    {'supported': False, 'rejection_reason': ['source_missing_detail']},
+    {'supported': False}, {'rejection_reason': 'source_navigation'},
+    {'supported': 0, 'rejection_reason': 'source_navigation'},
+    {'supported': 'false', 'rejection_reason': 'source_navigation'},
+    {'supported': True, 'rejection_reason': 'source_navigation'},
+])
+def test_source_recovery_needs_exact_negative_opinion_not_arbitrary_metadata(detail_recovery, first):
+    case = detail_recovery
+    case.reviewer.side_effect = [{'candidates': [{'keyword': case.keyword}]}, first]
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == report['held'] == []
+    assert report['source_recovery_attempts'] == 0
+    case.research.assert_not_called()
+    assert case.reviewer.call_count == 2
+
+
+@pytest.mark.parametrize('invalid_sample', ['four_urls', 'two_domains', 'duplicate_urls', 'unknown_provider'])
+def test_source_recovery_does_not_repair_missing_search_sample(detail_recovery, invalid_sample):
+    case = detail_recovery
+    provider, rows = 'codex_native_search', deepcopy(case.rows)
+    if invalid_sample == 'four_urls':
+        rows = rows[:4]
+    elif invalid_sample == 'two_domains':
+        rows = [organic(f'https://host{i % 2}.example/{i}') for i in range(5)]
+    elif invalid_sample == 'duplicate_urls':
+        rows = [rows[0]] * 5
+    else:
+        provider = 'unknown'
+    case.search.return_value = provider, rows
+    report = market.select_category('취업', 1, titles=[])
+    assert report['source_recovery_attempts'] == 0 and not report['selected']
+    case.research.assert_not_called()
+
+
+@pytest.mark.parametrize('source_only', [False, True])
+def test_initial_official_research_is_never_repeated_after_unsupported_review(detail_recovery, source_only):
+    case = detail_recovery
+    case.sources.return_value = []
+    if source_only:
+        case.search.return_value = 'codex_native_search', []
+    report = market.select_category('취업', 1, titles=[])
+    assert report['source_recovery_attempts'] == 0
+    assert report['selected'] == report['held'] == []
+    assert case.research.call_count == 1 and case.reviewer.call_count == 2
+
+
+@pytest.mark.parametrize('outcome', ['same_url', 'same_hash', 'same_excerpt', 'empty', 'unverified'])
+def test_detail_recovery_cannot_retry_identical_or_unverified_evidence(detail_recovery, outcome):
+    case = detail_recovery
+    source = deepcopy(case.detail)
+    if outcome == 'same_url':
+        source['url'] = source['original_url'] = case.original['url']
+    elif outcome == 'same_hash':
+        source['sha256'] = case.original['sha256']
+    elif outcome == 'same_excerpt':
+        source['excerpt'] = '\n  '.join(case.original['excerpt'].split())
+    sources = [] if outcome == 'empty' else [source]
+    case.research.return_value = sources, None if outcome == 'unverified' else web_research_evidence(source)
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == report['held'] == []
+    assert report['source_recovery_attempts'] == case.research.call_count == 1
+    assert case.reviewer.call_count == 2
+    expected = 'unverified_research' if outcome == 'unverified' else 'no_changed_source'
+    assert report['rejected'][0]['decision_diagnostics']['source_recovery']['outcome'] == expected
+
+
+def test_recovered_detail_must_be_used_by_the_approved_plan(detail_recovery):
+    case = detail_recovery
+    case.reviewer.side_effect = [{'candidates': [{'keyword': case.keyword}]},
+        {'supported': False, 'rejection_reason': 'source_navigation'}, analysis(source_index=1)]
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == report['held'] == []
+    audit = report['rejected'][0]['decision_diagnostics']['source_recovery']
+    assert audit['outcome'] == 'detail_source_not_used'
+    assert audit['retry_review']['analysis_status'] == 'supported_true'
+
+
+@pytest.mark.parametrize('change,expected', [
+    ({'supported': False, 'rejection_reason': 'source_navigation'}, 'review_rejected'),
+    ({'category': '건강'}, 'review_rejected'),
+    ({'valid_until': '2000-01-01'}, 'review_rejected'),
+    ({'intent_evidence': {'scope': 'narrower_query', 'target_keyword': '다른 검색어', 'matches': []}}, 'held'),
+    ({'intent_evidence': {'scope': 'full_keyword', 'target_keyword': '시험준비물',
+                         'matches': [{'result_index': 0, 'quote': '검색 표본에는 없는 문장입니다'}]}}, 'held'),
+])
+def test_detail_recovery_cannot_override_semantic_or_opportunity_gates(detail_recovery, change, expected):
+    case = detail_recovery
+    case.reviewer.side_effect = [{'candidates': [{'keyword': case.keyword}]},
+        {'supported': False, 'rejection_reason': 'source_missing_detail'}, analysis(**change)]
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == [] and report['source_recovery_attempts'] == 1
+    assert case.research.call_count == 1 and case.reviewer.call_count == 3
+    if expected == 'held':
+        assert len(report['held']) == 1 and not market.fresh_market_item(report['held'][0], '취업')
+    else:
+        assert report['held'] == []
+        assert report['rejected'][0]['decision_diagnostics']['source_recovery']['outcome'] == expected
+
+
+def test_detail_recovery_keeps_final_duplicate_gate(detail_recovery, monkeypatch):
+    case = detail_recovery
+    duplicate = Mock(side_effect=lambda keyword, topic, titles: topic != keyword)
+    monkeypatch.setattr(market, 'duplicate', duplicate)
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == report['held'] == []
+    assert report['rejected'][0]['reason'] == 'already covered'
+    assert case.research.call_count == 1
+
+
+@pytest.mark.parametrize('failure', ['lookup', 'review'])
+def test_category_recovery_budget_counts_failures_before_external_calls(detail_recovery, monkeypatch, failure):
+    case = detail_recovery
+    keywords = ['시험준비물', '자격증준비물', '면접준비물']
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        key: {'keyword': key, 'monthly': 1200} for key in keywords})
+    case.search.side_effect = lambda key: ('codex_native_search', organic_sample(key))
+    counts = dict.fromkeys(keywords, 0)
+    def review(prompt):
+        if '조사 후보를 고르세요.' in prompt:
+            return {'candidates': [{'keyword': key} for key in keywords]}
+        key = next(key for key in keywords if f'검색어는 {key}입니다.' in prompt)
+        counts[key] += 1
+        if counts[key] == 2:
+            raise RuntimeError('SECRET-SENTINEL raw review error')
+        return {'supported': False, 'rejection_reason': 'source_missing_detail'}
+    case.reviewer.side_effect = review
+    if failure == 'lookup':
+        case.research.side_effect = RuntimeError('SECRET-SENTINEL raw lookup error')
+    report = market.select_category('취업', 1, titles=[])
+    assert report['source_recovery_attempts'] == case.research.call_count == 2
+    assert report['selected'] == report['held'] == [] and len(report['rejected']) == 3
+    expected = 'research_failed' if failure == 'lookup' else 'review_failed'
+    for rejected in report['rejected'][:2]:
+        assert rejected['decision_diagnostics']['source_recovery']['outcome'] == expected
+    assert 'source_recovery' not in report['rejected'][2]['decision_diagnostics']
+    assert counts[keywords[2]] == 1
+    assert 'SECRET' not in json.dumps(report)
+
+
+def test_changed_sources_are_new_first_deduplicated_and_limited_to_three(detail_recovery):
+    case = detail_recovery
+    previous = [case.original, evidence('https://old.go.kr/2'), evidence('https://old.go.kr/3')]
+    other = {**case.detail, 'url': 'https://new.go.kr/detail', 'original_url': 'https://new.go.kr/detail',
+             'sha256': 'another hash', 'excerpt': '별도 상세 본문'}
+    result = market._changed_source_set(previous, [case.detail, case.detail, other])
+    assert result == [case.detail, other, case.original]

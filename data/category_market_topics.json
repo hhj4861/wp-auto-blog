@@ -1,7 +1,7 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-09-10T11:28:21.087006+00:00",
+    "selected_at": "2026-09-10T11:51:24.258519+00:00",
     "seeds": [
       "채용",
       "공기업",
@@ -10,6 +10,7 @@
     ],
     "selection_version": 5,
     "research_rounds": 2,
+    "source_recovery_attempts": 2,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -26,28 +27,262 @@
     "selected": [],
     "held": [
       {
-        "keyword": "SQL자격증",
+        "keyword": "산업기사시험일정",
         "category": "취업",
-        "topic": "SQL자격증 종류: 개발자와 전문가의 직무·합격률 비교",
-        "intent": "SQL자격증 개발자와 전문가는 검증하는 직무와 합격률이 어떻게 다른가?",
-        "gap": "공식 직무 비교표와 2023~2025년 응시·취득자수 및 합격률 표를 제공하고 통계 입력상 한계를 명시한다.",
-        "source_url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=3675",
+        "topic": "산업기사시험일정: 2026년 사무자동화산업기사 필기·실기·합격발표",
+        "intent": "2026년 사무자동화산업기사의 회차별 접수·시험·합격발표일과 현재 남은 일정은 언제인가?",
+        "gap": "공식 회차별 일정표와 9월 10일 기준 남은 일정 체크리스트를 제공하고, 3회 실기 접수일을 구분한다.",
+        "source_url": "https://www.kric.go.kr/jsp/board/portal/sub04/lic/certifiDetail.jsp?board_seq=38",
         "verified_sources": [
           {
-            "url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=3675",
-            "original_url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=3675",
-            "title": "민간자격기본정보(SQL)-민간자격검색-자격정보-민간자격정보서비스",
+            "url": "https://www.kric.go.kr/jsp/board/portal/sub04/lic/certifiDetail.jsp?board_seq=38",
+            "original_url": "https://www.kric.go.kr/jsp/board/portal/sub04/lic/certifiDetail.jsp?board_seq=38",
+            "title": "자격증정보 - 철도산업정보센터",
             "checked_on": "2026-09-10",
-            "sha256": "433b11b869c11c5d4fd79d9c3363b5987e0900def6b4bf18659a09ccbd4dd43e",
-            "excerpt": "민간자격검색 home 자격정보 민간자격검색 기본정보 ※ 동일 명칭의 자격 및 기관이 다수 존재 할 수 있으니, 반드시 자격의 등록번호 및 기관 정보를 확인 하시기 바랍니다. 민간자격검색 기본정보에 대한 표로 자격명, 자격발급기관, 등록번호, 공동발급기관, 주무부처, 검정시행일정 순으로 나타냄 자격명 SQL (Structured Query Language) 자격발급기관 재단법인 한국데이터산업진흥원 (TEL :\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t02-3708-5415\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t) 기관정보 등록번호 2011-0771 공동발급기관 주무부처 과학기술정보통신부 검정시행일정 자격발급기관 정보 민간자격관리기관 정보에 대한 표로 기관명,홈페이지,보유자격,대표전화,기관유형,주소로 나타냄 기관명 재단법인 한국데이터산업진흥원 보유자격 공인자격 3개 보기 홈페이지 www.kdata.or.kr 등록자격 대표번호 02-3708-5415 기관유형 비영리법인(민법법인) 주소 (04513) 서울특별시 중구 세종대로9길 42 (서소문동) 8층 닫기 자격정보 데이터베이스 개발 및 사용의 필수 언어인 SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함 *SQL 전문가 데이터베이스와 데이터모델링에 대한 지식을 바탕으로 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성할 수 있고, 이를 토대로 SQL을 내포하는 데이터베이스 프로그램이나 응용 소프트웨어의 성능을 최적화하거나, 이러한 성능 최적화를 지원할 수 있는 데이터베이스 개체(뷰, 인덱스 등)의 설계와 구현 등의 직무 수행 능력 검증 *SQL 개발자 데이터베이스와 데이터모델링에 대한 지식을 바탕으로 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL 작성 등의 직무 수행 능력 검증 자격정보 전문가 표로 직무내용에 대한 정보를 제공합니다. 전문가 \n\t\t\t\t\t                        \t\t\t\t(공인) 직무내용 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성할 수 있고, 이를 토대로 SQL을 내포하는 데이터베이스 프로그램이나 응용 소프트웨어의 성능을 최적화 하거나, 이러한 성능 최적화를 지원할 수 있는 데이터베이스 개체(뷰, 인덱스 등)의 설계와 구현 등의 직무를 수행 자격정보 개발자 표로 직무내용에 대한 정보를 제공합니다. 개발자 \n\t\t\t\t\t                        \t\t\t\t(공인) 직무내용 데이터베이스와 데이터 모델링에 대한 지식을 바탕으로 응용 소프트웨어를 개발하면서 데이터를 조작하고 추출하는데 있어서 정확하고 최적의 성능을 발휘하는 SQL을 작성하는 직무를 수행 자격취득현황 [\n\t\t\t\t\t\t\t\t\t\t\t1\n\t\t\t\t\t\t\t\t\t\t\t/\n\t\t\t\t\t\t\t\t\t\t\t3\n\t\t\t\t\t\t\t\t\t\t\tpages ] 총\n\t\t\t\t\t\t\t\t\t\t\t30\n\t\t\t\t\t\t\t\t\t\t\t건이 검색되었습니다. ※ 최근 5년간의 자격취득현황 입니다. ※ 자격취득현황은 자격발급기관에서 직접 입력하고 있으며, 입력 시점에 따라 실제 수치와 차이가 있을 수 있습니다. 또한, 미입력된 데이터가 존재할 수 있습니다. (해당 자격발급기관에 문의 요망) 자격취득 현황 표로 검정연도,자격등급,검정횟수,접수자수,응시자수,취득자수,합격률로 구성되어 있습니다. 검정연도 자격등급 검정횟수 접수자수 응시자수 취득자수 합격률 2025 전문가(공인) 2 1,656 1,086 39 3.59 2025 개발자(공인) 4 88,440 62,664 26,121 41.68 2024 전문가(공인) 2 1,316 1,051 96 9.13 2024 개발자(공인) 4 75,042 59,202 33,916 57.29 2023 전문가(공인) 2 828 654 59 9.02 2023 개발자(공인) 4 62,122 48,794 23,329 47.81 2022 전문가(공인) 4 830 629 64 10.17 2022 개발자(공인) 4 42,193 32,474 15,845 48.79 2021 전문가(공인) 4 823 654 42 6.42 2021 개발자(공인) 4 29,144 23,391 13,225 56.54 2020 전문가(공인) 4 574 433 42 9.7 2020 개발자(공인) 4 13,822 10,933 6,399 58.53 2019 전문가(공인) 4 654 545 24 4.4 2019 개발자(공인) 4 11,768 9,663 4,707 48.71 2018 전문가(공인) 4 479 411 37 9 2018 개발자(공인) 4 6,611 5,472 2,077 37.96 2017 전문가(공인) 4 416 359 29 8.08 2017 개발자(공인) 4 5,451 4,550 1,442 31.69 2016 전문가(공인) 4 369 322 29 9.01 2016 개발자(공인) 4 4,256 3,682 1,393 37.83 2015 전문가(공인) 4 419 350 51 14.57 2015 개발자(공인) 4 5,435 4,194 1,499 35.74 2014 전문가(공인) 4 475 412 34 8.25 2014 개발자(공인) 4 3,725 3,042 829 27.25 2013 전문가(공인) 4 551 466 42 9.01 2013 개발자(공인) 4 2,725 2,241 644 28.74 2012 전문가 3 457 335 42 12.54 2012 개발자 4 1,097 844 267 31.64 2011 전문가 3 268 205 24 11.71 2011 개발자 4 717 543 172 31.68 목록"
+            "sha256": "891c571bbf72b52a75c891563439212bf2ba45ca19dab96b29eba55165a13f40",
+            "excerpt": "콘텐츠 바로가기 로그인 / 회원가입 / 고객센터 / 사이트맵 철도산업정보센터 로그인 / 회원가입 / 고객센터 / 사이트맵 철도산업정보센터 철도미디어 철도미디어 철도소식 국내철도뉴스 철도칼럼 행사일정 정보센터소식 철도산업동향 전문자료 기술자료 논문 연구보고서 안전/사고정보 건설기준 규정 관보 용어사전 차량도감 국내철도현황 취업정보 채용공고 직업정보 합격수기 철도관련기관 인재개발 교육과정안내 자격증정보 전자문제집CBT 철도관련대학 레일광장 국내철도여행 철도사진 지식QnA 철도상식 철도역 정보 철도인 찾기 철도생활서비스 자료공유실 철도지식툰 철도역사관 철도통합연표 철도유물유적 역사속철도인 철도사이야기 역사자료 철도역사블로그 철도영상 인재개발 TALENT DEVELOPMENT 교육과정안내 자격증정보 전자문제집CBT 철도관련대학 인재개발 자격증정보 자격증정보 3 사무자동화산업기사 사무자동화산업기사    (Industrial Engineer Office Automation) 1. 개요 일반 사무환경에서 사무작업을 하고 있는 실무자로 하여금 업무상 발생하는 데이터의 안전성을 확보하고, 작업효율을 증진시킴으로써 궁극적으로 인간중심의 정보문화 정착에 기여하며 보다 효율적으로 업무에 필요한 정보를 이용하게 하기 위하여 자격제도 제정. 2. 변천과정 1993년 사무정보기기응용기사2급 (대통령령 제13925호, 1993.7.8) → 1998년 사무자동화산업기사 (대통령령 제15794호, 1998.05.09) → 현재 사무자동화산업기사 3. 수행직무 컴퓨터와 각종 사무자동화기기를 이용하여 사무환경에서 필요로 하는 정보관리 및 사무처리 등에 대해 계획하고 운용하는 직무이다. 4. 진로 및 전망 - 관공서, 공공단체, 일반기업 등 사무 관련 작업을 하는 모든 환경에서 관련 업무를 수행할 수 있다. - 정보화사회로 말미암아 일의 효율성을 높이기 위해 사무자동화도입이 각 기업을 중심으로 늘어나고 있고 지역중심의 정보화인프라구축, 뉴미디어 개발 및 보급 등 사무정보기기의 이용이 점차 증가할 것으로 보임에 따라 공인된 자격을 갖춘 인력의 수요도 증가할 것으로 기대된다. 5. 취득방법 ① 시 행 처 : 한국산업인력공단 ② 관련학과 : 모든 학과 응시 가능 ③ 시험과목 - 필기 : 사무자동화시스템, 프로그래밍일반, 네트워크 일반 - 실기 : 사무자동화 실무 ④ 검정방법 - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) - 실기 : 작업형(2시간 정도) ⑤ 합격기준 - 필기 : 100점을 만점으로 하여 과목당 40점이상, 전과목 평균60점이상 - 실기 : 100점을 만점으로 하여 60점 이상 6. 시험일정표 정기검정 시행일정표 : 회별, 필기시험(원서접수, 시험시행, 합격자 발표), 응시자격서류제출, 응시자격 기준일, 실기(면접)시험(원서접수, 시험시행, 합격자 발표)등을 보여주는 정기검정 시행일정표입니다. 회별 필기시험 응시자격 서류제출 ( 필기합격자결정 ) 응시자격 기준일 실기시험 원서접수 ( 휴일제외 ) 시험시행 합격(예정)자 발표 원서접수 ( 휴일제외 ) 시험시행 합격자 발표 제1회 2026.01.12 ∼2026.01.15 2026.01.30 ~2026.03.03 2026.03.11 2026.01.30 ∼2026.03.20 2026.03.03 2026.03.23 ∼2026.03.26 2026.04.18 ∼2026.05.06 2026.06.05(1차) 2026.06.12(2차) 제2회 2026.04.20 ∼2026.04.23 2026.05.09 ~2026.05.29 2026.06.10 2026.05.11 ∼2026.06.19 2026.05.29 2026.06.22 ∼2026.06.25 2026.07.18 ∼2026.08.05 2026.09.04(1차) 2026.09.11(2차) 제3회 2026.07.20 ∼2026.07.23 2026.08.07 ~2026.09.01 2026.09.09 2026.08.07 ∼2026.09.18 2026.09.01 2026.09.21 ∼2026.09.23, 09.28 2026.10.24 ∼2026.11.13 2026.12.01(1차) 2026.12.18(2차) 목록 정보포털 철도Biz 해외철도 철도통계 철도영상 레일포털 정보포털 철도Biz 해외철도 철도통계 철도영상 레일포털",
+            "locator_origin": "model_reported_locator"
           }
         ],
         "intent_results": [
-          "https://academy.prompie.com/qualifications/detail/cne4m0j/",
-          "https://flameleaf.tistory.com/entry/SQL-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%8B%9C%ED%97%98-%EC%A2%85%EB%A5%98-%EC%9D%BC%EC%A0%95-%ED%95%A9%EA%B2%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A4%80%EB%B9%84%EB%B2%95"
+          "https://licenseroad.co.kr/certifications/office-automation-industrial-engineer",
+          "https://certviz.com/exam/office-automation-industrial-engineer"
+        ],
+        "valid_until": "2026-12-18",
+        "monthly_search": 9770,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://www.kric.go.kr/jsp/board/portal/sub04/lic/certifiDetail.jsp?board_seq=38",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://q-net.or.kr/crf021.do?gId=99&gSite=Q&id=crf02103&scheType=01",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=2751&jmInfoDivCcd=B0",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.q-net.or.kr/rcv013.do?gSite=S&id=rcv01303",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_domains": [
+          "dabgi.com",
+          "licenseroad.co.kr",
+          "certviz.com",
+          "www.jobkorea.co.kr",
+          "www.ksa.or.kr",
+          "social-f.tistory.com",
+          "comp.wisereport.co.kr",
+          "www.saramin.co.kr",
+          "www.sosc.kr",
+          "ksa.or.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://dabgi.com/h14/18787",
+            "domain": "dabgi.com",
+            "title": "답지 자격증기출문제 - 2026년 기사·산업기사·기능사 시험일정 총정리 (큐넷 원서접수 및 합격발표 날짜)",
+            "snippet": "# 2026년 기사·산업기사·기능사 시험일정 총정리 (큐넷 원서접수 및 합격발표 날짜) ... 2026년도 한국산업인력공단(Q-Net) 정기 기사, 산업기사, 기능사 국가기술자격 시험 일정 통합 안내입니다."
+          },
+          {
+            "url": "https://licenseroad.co.kr/certifications/office-automation-industrial-engineer",
+            "domain": "licenseroad.co.kr",
+            "title": "사무자동화산업기사 응시자격·합격률·시험일정 | 라이선스로드",
+            "snippet": "정확한 접수 기간은 큐넷 공지 기준.', 시험일정 '국가기술자격 정기검정은 연 3회이며, 필기는 통상 2·5·8월, 실기는 통상 4·7·10월 전후에 시행됩니다.'라는 주장 ↗국가자격 종목별 상세정보 - 사무자동화산업기사"
+          },
+          {
+            "url": "https://certviz.com/exam/office-automation-industrial-engineer",
+            "domain": "certviz.com",
+            "title": "사무자동화산업기사 시험일정·합격률 (2026) | certviz",
+            "snippet": "합격률·응시자는 2025 년 통계 · 일정은 2026.08 한국산업인력공단 데이터 기준 · 큐넷에서 최신 일정 확인 ... 사무자동화산업기사 2026년 제2회 실기 원서접수는 2026년 6월 22일부터 6월"
+          },
+          {
+            "url": "https://www.jobkorea.co.kr/company/45800460/info",
+            "domain": "www.jobkorea.co.kr",
+            "title": "산하정보기술 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+            "snippet": "주요사업 | 호스피탈리티 IT 솔루션 | 4대보험 | 국민연금, 건강보험, 고용보험, 산재보험 ... (주)산하정보기술은 1994년 설립 이래 30여 년간 오직 Hospitality 산업에 특화된 IT 솔루션을"
+          },
+          {
+            "url": "https://www.ksa.or.kr/ksa_kr/16861/subview.do",
+            "domain": "www.ksa.or.kr",
+            "title": "창업·벤처기업 지원사업",
+            "snippet": "</h2> <ul> <li> <dl> <dt>창업기업 <span>(창업7년이내)</span></dt> <dd>「중소기업기본법」제2조에 따른 중소기업이면서,<br>중소기업창업지원법」제2조에따른기업</dd> </dl> </li> <li> <dl> <dt>벤처기업</dt> <dd>「중소기업기본법」제2조에따른 중소기업이면서,<br>「벤처기업육성에관한특별조치법」 제"
+          },
+          {
+            "url": "https://social-f.tistory.com/1112?category=1284659",
+            "domain": "social-f.tistory.com",
+            "title": "2026년 산업기사 시험 일정 총정리｜필기부터 실기까지 한눈에 정리",
+            "snippet": "2026년 산업기사 정기시험은 제1회부터 제4회까지 일정이 잡혀 있으며, 현재는 제3회 필기시험이 진행 중인 시점입니다. ... 산업기사 종목에 따라 시험 방법과 세부 일정이 달라질 수 있다는"
+          },
+          {
+            "url": "https://comp.wisereport.co.kr/samsung/company/c1020001.aspx?cmp_cd=062040&cn=",
+            "domain": "comp.wisereport.co.kr",
+            "title": "산일전기 - 기업개요 - 기업모니터",
+            "snippet": "* 전일종가 210,500 ... KOSPI : 코스피 전기·전자 | WI26 : 기계 | 12월 결산 | K200 | NXT ... * PER, PBR값이 (-)일 경우,"
+          },
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/ZURRTzQ0VzBZM1ZTTkc5QmVWOC9Qdz09/company_nm/%28%EC%A3%BC%29%EC%83%81%EC%8B%9C",
+            "domain": "www.saramin.co.kr",
+            "title": "(주)상시 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "나노제품,그외 기타 플라스틱 제품 제조업,디스플레이,나노제품,디스플레이,무역업 ... 칫솔 및 미용기기를 제조하여 수출 및 판매하는 꾸준히 성장하고있는 회사입니다 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
+          },
+          {
+            "url": "https://www.sosc.kr/",
+            "domain": "www.sosc.kr",
+            "title": "(주)서울산업안전컨설팅",
+            "snippet": "* [도급사업의 안전보건조치]제조업 끼임사...20-09-17 ... * [기타]2021년 산업안전보건법 법령의 요지...21-01-13 ... 이메일 : 교육 edu1@sosc.kr / 컨설팅 admin3@sosc.kr 홈페이지 : http://www.sosc.kr ... Copyrightⓒ 1996 (주)서울산업안전컨설팅"
+          },
+          {
+            "url": "https://ksa.or.kr/ksa_kr/16861/subview.do",
+            "domain": "ksa.or.kr",
+            "title": "창업·벤처기업 지원사업",
+            "snippet": "상생형 창업·벤처기업 지원사업이란? ... * 출연/사업기획 ... 「중소기업기본법」제2조에 따른 중소기업이면서, ... ## 한국표준협회 창업 및 벤처기업 지원 프로그램 구성"
+          }
+        ],
+        "dominant_result_ratio": 0.2,
+        "score_components": {
+          "demand": 31.92,
+          "organic_opportunity": 32.0,
+          "trend": -0.86,
+          "intent_fit": 0
+        },
+        "trend_growth": -0.086,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 5,
+        "selected_at": "2026-09-10T11:51:24.258519+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "산업기사시험일정"
+        ],
+        "status": "research_only",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.kric.go.kr/jsp/board/portal/sub04/lic/certifiDetail.jsp?board_seq=38",
+              "title": "자격증정보 - 철도산업정보센터",
+              "excerpt_chars": 2098
+            },
+            {
+              "url": "https://q-net.or.kr/crf021.do?gId=99&gSite=Q&id=crf02103&scheType=01",
+              "title": "일정안내 | Q-net",
+              "excerpt_chars": 1542
+            },
+            {
+              "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=2751&jmInfoDivCcd=B0",
+              "title": "www.q-net.or.kr",
+              "excerpt_chars": 7101
+            }
+          ],
+          "analysis_status": "supported_true",
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.ksa.or.kr/ksa_kr/16861/subview.do",
+                  "title": "창업·벤처기업 지원사업",
+                  "excerpt_chars": 8000
+                },
+                {
+                  "url": "https://ksa.or.kr/ksa_kr/16861/subview.do",
+                  "title": "창업·벤처기업 지원사업",
+                  "excerpt_chars": 8000
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_passed",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.kric.go.kr/jsp/board/portal/sub04/lic/certifiDetail.jsp?board_seq=38",
+                  "title": "자격증정보 - 철도산업정보센터",
+                  "excerpt_chars": 2098
+                },
+                {
+                  "url": "https://q-net.or.kr/crf021.do?gId=99&gSite=Q&id=crf02103&scheType=01",
+                  "title": "일정안내 | Q-net",
+                  "excerpt_chars": 1542
+                },
+                {
+                  "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=2751&jmInfoDivCcd=B0",
+                  "title": "www.q-net.or.kr",
+                  "excerpt_chars": 7101
+                }
+              ],
+              "analysis_status": "supported_true"
+            }
+          }
+        },
+        "opportunity_evidence": {
+          "version": 1,
+          "query": "산업기사시험일정",
+          "topic": "산업기사시험일정: 2026년 사무자동화산업기사 필기·실기·합격발표",
+          "intent": "2026년 사무자동화산업기사의 회차별 접수·시험·합격발표일과 현재 남은 일정은 언제인가?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-10T11:51:24.258519+00:00",
+          "result_count": 10,
+          "domain_count": 10,
+          "dominant_ratio": 0.2,
+          "scope": "narrower_query",
+          "target_keyword": "사무자동화산업기사 시험일정",
+          "matches": [
+            {
+              "result_index": 1,
+              "quote": "사무자동화산업기사 응시자격·합격률·시험일정"
+            },
+            {
+              "result_index": 2,
+              "quote": "사무자동화산업기사 시험일정·합격률 (2026)"
+            }
+          ]
+        },
+        "score": 63.06,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_or_unverified_search_intent"
+        ]
+      },
+      {
+        "keyword": "BIM자격증",
+        "category": "취업",
+        "topic": "BIM자격증 종류와 응시자격·시험비용·준비 방법 비교",
+        "intent": "BIM자격증에는 어떤 종류가 있고, 응시자격과 비용을 확인해 어떻게 시험을 준비하나요?",
+        "gap": "빌딩스마트협회와 한국BIM평가원 자격별 비용·시험방식 비교표와 공식 응시요건·출제기준 확인 체크리스트를 제공합니다.",
+        "source_url": "https://www.buildingsmart.or.kr/Home/TestInfo",
+        "verified_sources": [
+          {
+            "url": "https://www.buildingsmart.or.kr/Home/TestInfo",
+            "original_url": "https://www.buildingsmart.or.kr/Home/TestInfo",
+            "title": "buildingSMART Korea",
+            "checked_on": "2026-09-10",
+            "sha256": "9498f8a422272f4e101d3ab0ece4f8c03b7dc6733a07acb27e4c9f57345966f4",
+            "excerpt": "BIM 자격증 발급신청(신규/재발급) BIM 자격시험 일정 및 접수 *시험일정은 상황에 따라 변경될 수 있습니다. BIM 코디네이터[BIM Coordinator] 응시시험 접수기간 시험일 합격발표 선택 2026년 정기1회 [필기] ‘25.12.22 오전 09:00 ∼'26.01.02 오후 06:00 ‘26.01.10 오전 09:00 / 오후 02:00 ‘26.01.19 오전 10:00 종료 2026년 정기1회 [실기] ‘25.12.22 오전 09:00 ∼'26.01.02 오후 06:00 ‘26.01.10 오전 10:30 / 오후 03:30 ‘26.01.19 오전 10:00 종료 2026년 정기2회 [필기] ‘26.02.23 오전 09:00 ∼'26.03.06 오후 06:00 ‘26.03.14 오전 09:00 / 오후 02:00 ‘26.03.23 오전 10:00 종료 2026년 정기2회 [실기] ‘26.02.23 오전 09:00 ∼'26.03.06 오후 06:00 ‘26.03.14 오전 10:30 / 오후 03:30 ‘26.03.23 오전 10:00 종료 2026년 수시6회 [필기] ‘26.03.23 오전 09:00 ∼'26.04.03 오후 06:00 ‘26.04.11 오전 09:00 / 오후 02:00 ‘26.04.20 오전 10:00 종료 2026년 수시6회 [실기] ‘26.03.23 오전 09:00 ∼'26.04.03 오후 06:00 ‘26.04.11 오전 10:30 / 오후 03:30 ‘26.04.20 오전 10:00 종료 2026년 정기3회 [필기] ‘26.04.20 오전 09:00 ∼'26.05.01 오후 06:00 ‘26.05.09 오전 09:00 / 오후 02:00 ‘26.05.18 오전 10:00 종료 2026년 정기3회 [실기] ‘26.04.20 오전 09:00 ∼'26.05.01 오후 06:00 ‘26.05.09 오전 10:30 / 오후 03:30 ‘26.05.18 오전 10:00 종료 2026년 수시7회 [필기] ‘26.04.30 오전 09:00 ∼'26.05.08 오후 06:00 ‘26.05.10 오전 09:00 ‘26.05.18 오전 10:00 종료 2026년 수시7회 [실기] ‘26.04.30 오전 09:00 ∼'26.05.08 오후 06:00 ‘26.05.10 오전 10:30 ‘26.05.18 오전 10:00 종료 2026년 수시9회 [필기] ‘26.05.26 오전 09:00 ∼'26.06.05 오후 06:00 ‘26.06.13 오전 09:00 / 오후 02:00 ‘26.06.22 오전 10:00 종료 2026년 수시9회 [실기] ‘26.05.26 오전 09:00 ∼'26.06.05 오후 06:00 ‘26.06.13 오전 10:30 / 오후 03:30 ‘26.06.22 오전 10:00 종료 2026년 정기4회 [필기] ‘26.06.22 오전 09:00 ∼'26.07.03 오후 06:00 ‘26.07.11 오전 09:00 / 오후 02:00 ‘26.07.20 오전 10:00 종료 2026년 정기4회 [실기] ‘26.06.22 오전 09:00 ∼'26.07.03 오후 06:00 ‘26.07.11 오전 10:30 / 오후 03:30 ‘26.07.20 오전 10:00 종료 2026년 정기5회 [필기] ‘26.08.24 오전 09:00 ∼'26.09.04 오후 06:00 ‘26.09.12 오전 09:00 / 오후 02:00 ‘26.09.21 오전 10:00 접수하기 2026년 정기5회 [실기] ‘26.08.24 오전 09:00 ∼'26.09.04 오후 06:00 ‘26.09.12 오전 10:30 / 오후 03:30 ‘26.09.21 오전 10:00 접수하기 2026년 수시16회 [필기] ‘26.09.02 오전 09:00 ∼'26.09.16 오후 06:00 ‘26.09.20 오전 10:00 ‘26.10.02 오전 10:00 접수하기 2026년 수시16회 [실기] ‘26.09.02 오전 09:00 ∼'26.09.16 오후 06:00 ‘26.09.20 오전 11:30 ‘26.10.02 오전 10:00 접수하기 2026년 수시17회 [필기] ‘26.09.21 오전 09:00 ∼'26.10.02 오후 06:00 ‘26.10.11 오전 10:00 ‘26.10.23 오전 10:00 접수하기 2026년 수시17회 [실기] ‘26.09.21 오전 09:00 ∼'26.10.02 오후 06:00 ‘26.10.11 오전 11:30 ‘26.10.23 오전 10:00 접수하기 2026년 수시18회 [필기] ‘26.10.06 오전 09:00 ∼'26.10.16 오후 06:00 ‘26.10.25 오전 09:00 / 오후 02:00 ‘26.11.06 오전 10:00 접수하기 2026년 수시18회 [실기] ‘26.10.06 오전 09:00 ∼'26.10.16 오후 06:00 ‘26.10.25 오전 10:30 / 오후 03:30 ‘26.11.06 오전 10:00 접수하기 2026년 정기6회 [필기] ‘26.10.26 오전 09:00 ∼'26.11.06 오후 06:00 ‘26.11.14 오전 09:00 / 오후 02:00 ‘26.11.23 오전 10:00 접수대기 2026년 정기6회 [실기] ‘26.10.26 오전 09:00 ∼'26.11.06 오후 06:00 ‘26.11.14 오전 10:30 / 오후 03:30 ‘26.11.23 오전 10:00 접수대기 BIM 테크니션[BIM Technician] 응시시험 접수기간 시험일 합격발표 선택 2026년 정기1회 [필기] ‘25.12.22 오전 09:00 ∼'26.01.02 오후 06:00 ‘26.01.10 오전 09:00 / 오후 02:00 ‘26.01.19 오전 10:00 종료 2026년 정기1회 [실기] ‘25.12.22 오전 09:00 ∼'26.01.02 오후 06:00 ‘26.01.10 오전 10:30 / 오후 03:30 ‘26.01.19 오전 10:00 종료 2026년 정기2회 [필기] ‘26.02.23 오전 09:00 ∼'26.03.06 오후 06:00 ‘26.03.14 오전 09:00 / 오후 02:00 ‘26.03.23 오전 10:00 종료 2026년 정기2회 [실기] ‘26.02.23 오전 09:00 ∼'26.03.06 오후 06:00 ‘26.03.14 오전 10:30 / 오후 03:30 ‘26.03.23 오전 10:00 종료 2026년 수시6회 [필기] ‘26.03.23 오전 09:00 ∼'26.04.03 오후 06:00 ‘26.04.11 오전 09:00 / 오후 02:00 ‘26.04.20 오전 10:00 종료 2026년 수시6회 [실기] ‘26.03.23 오전 09:00 ∼'26.04.03 오후 06:00 ‘26.04.11 오전 10:30 / 오후 03:30 ‘26.04.20 오전 10:00 종료 2026년 정기3회 [필기] ‘26.04.20 오전 09:00 ∼'26.05.01 오후 06:00 ‘26.05.09 오전 09:00 / 오후 02:00 ‘26.05.18 오전 10:00 종료 2026년 정기3회 [실기] ‘26.04.20 오전 09:00 ∼'26.05.01 오후 06:00 ‘26.05.09 오전 10:30 / 오후 03:30 ‘26.05.18 오전 10:00 종료 2026년 수시7회 [필기] ‘26.04.30 오전 09:00 ∼'26.05.08 오후 06:00 ‘26.05.10 오전 09:00 ‘26.05.18 오전 10:00 종료 2026년 수시7회 [실기] ‘26.04.30 오전 09:00 ∼'26.05.08 오후 06:00 ‘26.05.10 오전 10:30 ‘26.05.18 오전 10:00 종료 2026년 수시9회 [필기] ‘26.05.26 오전 09:00 ∼'26.06.05 오후 06:00 ‘26.06.13 오전 09:00 / 오후 02:00 ‘26.06.22 오전 10:00 종료 2026년 수시9회 [실기] ‘26.05.26 오전 09:00 ∼'26.06.05 오후 06:00 ‘26.06.13 오전 10:30 / 오후 03:30 ‘26.06.22 오전 10:00 종료 2026년 정기4회 [필기] ‘26.06.22 오전 09:00 ∼'26.07.03 오후 06:00 ‘26.07.11 오전 09:00 / 오후 02:00 ‘26.07.20 오전 10:00 종료 2026년 정기4회 [실기] ‘26.06.22 오전 09:00 ∼'26.07.03 오후 06:00 ‘26.07.11 오전 10:30 / 오후 03:30 ‘26.07.20 오전 10:00 종료 2026년 정기5회 [필기] ‘26.08.24 오전 09:00 ∼'26.09.04 오후 06:00 ‘26.09.12 오전 09:00 / 오후 02:00 ‘26.09.21 오전 10:00 접수하기 2026년 정기5회 [실기] ‘26.08.24 오전 09:00 ∼'26.09.04 오후 06:00 ‘26.09.12 오전 10:30 / 오후 03:30 ‘26.09.21 오전 10:00 접수하기 2026년 수시16회 [필기] ‘26.09.02 오전 09:00 ∼'26.09.16 오후 06:00 ‘26.09.20 오전 10:00 ‘26.10.02 오전 10:00 접수하기 2026년 수시16회 [실기] ‘26.09.02 오전 09:00 ∼'26.09.16 오후 06:00 ‘26.09.20 오전 11:30 ‘26.10.02 오전 10:00 접수하기 2026년 수시17회 [필기] ‘26.09.21 오전 09:00 ∼'26.10.02 오후 06:00 ‘26.10.11 오전 10:00 ‘26.10.23 오전 10:00 접수하기 2026년 수시17회 [실기] ‘26.09.21 오전 09:00 ∼'26.10.02 오후 06:00 ‘26.10.11 오전 11:30 ‘26.10.23 오전 10:00 접수하기 2026년 수시18회 [필기] ‘26.10.06 오전 09:00 ∼'26.10.16 오후 06:00 ‘26.10.25 오전 09:00 / 오후 02:00 ‘26.11.06 오전 10:00 접수하기 2026년 수시18회 [실기] ‘26.10.06 오전 09:00 ∼'26.10.16 오후 06:00 ‘26.10.25 오전 10:30 / 오후 03:30 ‘26.11.06 오전 10:00 접수하기 2026년 정기6회 [필기] ‘26.10.26 오전 09:00 ∼'26.11.06 오후 06:00 ‘26.11.14 오전 09:00 / 오후 02:00 ‘26.11.23 오전 10:00 접수대기 2026년 정기6회 [실기] ‘26.10.26 오전 09:00 ∼'26.11.06 오후 06:00 ‘26.11.14 오전 10:30 / 오후 03:30 ‘26.11.23 오전 10:00 접수대기 BIM CM 코디네이터[BIM CM Coordinator] 응시시험 접수기간 시험일 합격발표 선택 정시 추후 공지. *최소 접수인원(5명) 미만인 경우, 시험이 취소될 수 있습니다. *실기시험은 GRAPHISOFT의 아키캐드 와 AUTODESK Revit 중 선택하여 응시할 수 있습니다.(2023년도 정시 1회 부터 적용) BIM 자격시험 수시시험 안내 별도 기업 또는 기관에서 단체로 응시를 희망하는 경우, 수시시험을 개설할 수 있습니다. 시험장소는 협회 교육국에서 진행할 수 있으며 응시를 희망하는 기업/기관에 시험을 응시할 수 있는 장비와 소프트웨어(라이센스)가 갖추어진 경우, 해당 장소에서 출장시험도 가능합니다. (최소 인원 10명, 시험장, 시험장비(컴퓨터, 노트북 등 BIM프로그램 사용이 가능할 것), 소프트웨어 라이센스(응시를 희망하는 소프트웨어)) *경우에 따라 출장비가 발생할 수 있습니다. - 수시시험, 출장시험 관련문의 : 070-4066-3421 hjchoi@buildingsmart.or.kr 최홍준 팀장(빌딩스마트협회 기획국) BIM 자격증 발급 신청 아래 버튼을 클릭하여 자격증 발급을 신청하여 주시기 바랍니다.(신규 및 재발급) BIM 자격증 발급신청(신규/재발급) BIM 자격시험 출제기준 및 공개문제 BIM 자격시험 출제기준 BIM테크니션 (필기) BIM테크니션 (실기) BIM코디네이터 (필기) BIM코디네이터 (실기) BIMCM코디네이터 (실기) *필기시험은 국가직무능력표준 NCS의 \"BIM설계\", \"스마트건설관리\" 학습 모듈에서 출제합니다. NCS.go.kr 에서 \"1403010106_14v2 BIM설계\" \"14.건설 01.건설공사관리 04.스마트건설관리\"검색, 학습모듈 PDF 다운 *위 공개문제는 참고용으로 실제 시험문제와는 다를 수 있습니다. BIM 자격증과정 특별교육 BIM Certification Course Special Education BIM Technician 과정 교육일정 회차 교육일자 접수일정 교육장소 교육시간 교육비용 1 2026.03.10 (화) - 03.13 (금) 2026.02.28 까지 한국디지털평생교육원 4일x8시간 60만원 2 2026.09.08 (화) - 09.11 (금) 2026.08.29 까지 한국디지털평생교육원 4일x8시간 60만원 BIM Coordinator 과정 교육일정 회차 교육일자 접수일정 교육장소 교육시간 교육비용 1 2026.03.23 (월) - 03.27 (금) 2026.03.22 까지 BIM 아카데미 5일x8시간 52.5만원 2 2026.04.06 (월) - 04.10 (금) 2026.03.28 까지 한국디지털평생교육원 5일x8시간 75만원 3 2026.10.19 (월) - 10.23 (금) 2026.10.10 까지 한국디지털평생교육원 5일x8시간 75만원 BIM CM Coordinator 과정 교육일정 회차 교육일자 접수일정 교육장소 교육시간 교육비용 1 2026.03.18 (수) - 03.20 (금) 2026.03.15 까지 BIM 아카데미 3일x8시간 42만원 2 2026.05.13 (수) - 05.15 (금) 2026.05.02 까지 한국디지털평생교육원 3일x8시간 45만원 3 2026.06.10 (수) - 06.12 (금) 2026.05.30 까지 한국디지털평생교육원 3일x8시간 45만원 4 2026.09.30 (수) - 10.02 (금) 2026.09.19 까지 한국디지털평생교육원 3일x8시간 45만원 *BIM관련 교육 및 일정은 변경 될 수 있으니 자세한 문의는 빌딩스마트협회 교육국 으로 문의 주시기 바랍니다. (사)빌딩스마트협회 교육국 - 교육관련문의 : 02-6949-4997 (한국디지털교육원) - 자격관련문의 : 070-4066-3421 hjchoi@buildingsmart.or.kr (빌딩스마트협회 기획국) 자격정보 자격명 BIM 모델러 BIM 테크니션 BIM 코디네이터 BIM CM 코디네이터 BIM 매니저 영문명 BIM Modeler BIM Technician BIM Coordinator BIM CM Coordinator BIM Manager 자격의 종류 등록민간자격 자격의 종류 국토교통부 자격발급기관 (사)빌딩스마트협회 등록번호 2016-001156 2016-001155 2016-001154 2018-000227 2016-001153 검정료 [준비중] 필기-25,000원 실기-50,000원 필기-30,000원 실기-60,000원 필기-30,000원 실기-40,000원 [준비중] 환불규정 가. 접수기간 내 100% 환불 나. 접수 종료 후 환불 불가 자격증발급 \"파일형 자격증\"발급(이메일 발송)을 기본으로 하며 희망자의 경우 \"인쇄형 자격증\"을 신청하여 발급받을 수 있으며 수수료는 10,000원 발생 민간자격조회 바로가기 민간자격정보서비스( http://www.pqi.or.kr ) 자격관리기관 정보 기관명 (사)빌딩스마트협회 대표자 김태만 연락처 Tel :070-4066-3421 / Email : bsk@buildingsmart.or.kr 소재지 서울특별시 서초구 서초중앙로 188, 엘동 422호 (서초동, 아크로비스타 사무동) 홈페이지 www.buildingsmart.or.kr 시험안내 Test Guide 전형료 환불 1. 시험 전형료가 과오납된 경우에는 그 금액을 전액 환불합니다. 2. 다음 각 호에 해당하는 경우에는 이미 납부한 시험전형료 전액을 환불합니다. 가. 천재지변으로 인하여 시험에 응시하지 못하는 경우 나. 시험 접수 마감 전 부득이한 사유로 접수를 취소하고자 하는 경우 3. 온라인 접수기간 내에 접수를 취소하고자 하는 경우 전형료는 전액 환불함을 원칙으로 하며, 온라인 접수마감"
+          }
+        ],
+        "intent_results": [
+          "https://buildingsmart.or.kr/Home/Testinfo",
+          "https://bimkorea.or.kr/qualification/archi.jsp?area=archi02"
         ],
         "valid_until": null,
-        "monthly_search": 4950,
+        "monthly_search": 1820,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "높음",
@@ -55,83 +290,83 @@
         "research_evidence": null,
         "organic_provider": "codex_native_search",
         "organic_domains": [
-          "academy.prompie.com",
-          "www.sqldpass.com",
-          "www.sqldpass.com",
-          "www.sqldpass.com",
-          "www.sqldpass.com",
-          "www.work24.go.kr",
-          "flameleaf.tistory.com",
-          "supercoding.net",
-          "glasswallet.com",
-          "edu.ezenac.co.kr"
+          "www.buildingsmart.or.kr",
+          "buildingsmart.or.kr",
+          "bimkorea.or.kr",
+          "bimkorea.or.kr",
+          "www.bsigroup.com",
+          "bimkorea.or.kr",
+          "bimkorea.or.kr",
+          "www.buildingsmart.or.kr",
+          "buildingsmart.or.kr",
+          "bimkorea.or.kr"
         ],
         "organic_results": [
           {
-            "url": "https://academy.prompie.com/qualifications/detail/cne4m0j/",
-            "domain": "academy.prompie.com",
-            "title": "SQL 자격증 - 오늘학교 아카데미",
-            "snippet": "##### 자격증 소개데이터베이스 개발 및 사용의 필수 언어인 SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함*SQL 전문가데이터베이스와 데이터모델링에 대한 지식을 바탕으로 데이터를 조작하고 추출하는데"
+            "url": "https://www.buildingsmart.or.kr/Home/TestInfo",
+            "domain": "www.buildingsmart.or.kr",
+            "title": "buildingSMART Korea",
+            "snippet": "BIM 자격증 발급신청(신규/재발급) ... (최소 인원 10명, 시험장, 시험장비(컴퓨터, 노트북 등 BIM프로그램 사용이 가능할 것), 소프트웨어 라이센스(응시를 희망하는 소프트웨어))"
           },
           {
-            "url": "https://www.sqldpass.com/q/24501",
-            "domain": "www.sqldpass.com",
-            "title": "[SQL 개발자 자격증] SQL 기본 기출 #24501 | 문어CBT",
-            "snippet": "# SQL 개발자 자격증 SQL 기본 기출문제 #24501 ... * ①: 'X'가 나오려면 MAX(COL1)이 NULL인 행이 한 건이라도 만들어져야 하는데, GROUP BY 때문에 행 자체가"
+            "url": "https://buildingsmart.or.kr/Home/Testinfo",
+            "domain": "buildingsmart.or.kr",
+            "title": "buildingSMART Korea",
+            "snippet": "BIM 자격증 발급신청(신규/재발급) ... 자격명 | BIM 모델러 | BIM 테크니션 | BIM 코디네이터 | BIM CM 코디네이터 | BIM 매니저"
           },
           {
-            "url": "https://www.sqldpass.com/q/24158",
-            "domain": "www.sqldpass.com",
-            "title": "[SQL 개발자 자격증] SQL 기본 기출 #24158 | 문어CBT",
-            "snippet": "# SQL 개발자 자격증 SQL 기본 기출문제 #24158 ... WHERE는 그룹이 만들어지기 전 개별 행을 대상으로 평가되므로 집계 함수를 쓸 수 없고, GROUP BY 없이"
+            "url": "https://bimkorea.or.kr/qualification/archi.jsp?area=archi02",
+            "domain": "bimkorea.or.kr",
+            "title": "한국BIM평가원",
+            "snippet": "BIM전문가 (건축)1급 자격증응시료 표 ... BIM전문가 (건축)2급 자격증응시료 표"
           },
           {
-            "url": "https://www.sqldpass.com/q/24480",
-            "domain": "www.sqldpass.com",
-            "title": "[SQL 개발자 자격증] SQL 기본 기출 #24480 | 문어CBT",
-            "snippet": "# SQL 개발자 자격증 SQL 기본 기출문제 #24480 ... * ②: NATURAL JOIN은 이름이 같은 컬럼을 자동으로 찾아 등가 조건을 거는 조인으로 NATURAL 키워드를 명시해야"
+            "url": "https://bimkorea.or.kr/board/read.jsp?code=bimnotice&id=11083",
+            "domain": "bimkorea.or.kr",
+            "title": "한국BIM평가원",
+            "snippet": "2026년 정시 2회 BIM전문가 2급 실기시험의 최종 합격자 발표 안내드립니다. ... ◦ 최종 합격 시 별도로 신청하지 않더라도 실물 자격카드 및 영문증서 2종을 최초 1회에"
           },
           {
-            "url": "https://www.sqldpass.com/q/24528",
-            "domain": "www.sqldpass.com",
-            "title": "[SQL 개발자 자격증] SQL 활용 기출 #24528 | 문어CBT",
-            "snippet": "# SQL 개발자 자격증 SQL 활용 기출문제 #24528 ... * ④: 100, 250, 370, 570은 누적 합계이며, 이 SQL은 SUM이 아니라 직전 행과의 차이를 계산한다."
+            "url": "https://www.bsigroup.com/siteassets/pdf/ko-kr/products-and-services/bsi-korea-training-brochure-jan-2026.pdf",
+            "domain": "www.bsigroup.com",
+            "title": "PowerPoint Presentation",
+            "snippet": "상단에 “Practical Application”이 있고, 본문에는 “BIM정보관리 전문가 등록”과 함께 “-BIM professional 자격 보유자 신청 가능”, “-3년간 자격 유효, -매년 CDP 작성 신청”이 적혀 있으며, 하단에"
           },
           {
-            "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&cstmConsTme=&focusId=&tracseId=AIG20250000533995&tracseReqstsCd=&tracseTme=1&trainstCstmrId=500036090856",
-            "domain": "www.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"SQL 개발자(SQLD) 자격증 취득\" 훈련과정에 최종 \"선발\" 되셨습니다. ... 훈련목표 | 관계형 데이터베이스 이해를 바탕으로 표준 SQL을 활용한 데이터 조회, 삽입, 수정, 삭제가"
+            "url": "https://bimkorea.or.kr/board/read.jsp?code=bimnotice&id=10259",
+            "domain": "bimkorea.or.kr",
+            "title": "한국BIM평가원",
+            "snippet": "2026년 정시 1회 BIM전문가 2급 실기시험의 최종 합격자 발표 안내드립니다. ... ◦ 최종 합격 시 별도로 신청하지 않더라도 실물 자격카드 및 영문증서 2종을 최초 1회에"
           },
           {
-            "url": "https://flameleaf.tistory.com/entry/SQL-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%8B%9C%ED%97%98-%EC%A2%85%EB%A5%98-%EC%9D%BC%EC%A0%95-%ED%95%A9%EA%B2%A9%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A4%80%EB%B9%84%EB%B2%95",
-            "domain": "flameleaf.tistory.com",
-            "title": "SQL 자격증 시험 종류, 일정, 합격을 위한 준비법",
-            "snippet": "SQL 자격증은 데이터베이스 설계와 쿼리 작성 능력을 평가하는 대표적인 자격으로, 한국데이터산업진흥원(데이터Q)이 관리하는 SQLD(개발자 수준)와 SQLP(전문가 수준)가 주요 시험입니다.이 글에서는 2026년 최신 시험 일정(공식 발표 기준),"
+            "url": "https://bimkorea.or.kr/board/read.jsp?code=bimnotice&id=8241",
+            "domain": "bimkorea.or.kr",
+            "title": "한국BIM평가원",
+            "snippet": "2025년 정시 1회 BIM전문가 2급 실기시험의 최종 합격자 발표 안내드립니다. ... ◦ 최종 합격 시 별도로 신청하지 않더라도 실물 자격카드 및 영문증서 2종을 최초 1회에"
           },
           {
-            "url": "https://supercoding.net/Course/CourseIntroBeginner/SQL",
-            "domain": "supercoding.net",
-            "title": "입문 끝판왕, 왕초보를 위한 SQL",
-            "snippet": "## 하루 30분으로 SQL 기초부터 취업에 도움되는 SQLD자격증, 데이터 실무까지 단 한 번에! ... 곧 SQLD 시험이 있어서, 단기간에 SQL을 끝내야 해요. ... * 취업,이직에"
+            "url": "https://www.buildingsmart.or.kr/NewsFile/BIM%20%EC%82%AC%EC%97%85%EC%88%98%ED%96%89%20%EA%B2%BD%EB%A0%A5%EA%B4%80%EB%A6%AC%20%EB%93%B1%EB%A1%9D%20%EC%95%88%EB%82%B4_20220106.pdf",
+            "domain": "www.buildingsmart.or.kr",
+            "title": "BIM 사업수행 경력관리",
+            "snippet": "자격증”을 기준으로 하였음. ... (BIM\u0001 Coordinator) | －‘BIM\u0001 코디네이터(Coordinator)’는 BIM적용 건설사업의 부분 업무로서 ‘BIM\u0001 ... 도구 활용 계획,\u0001 BIM\u0001 적용 분야 계획,\u0001 전기 기계 등"
           },
           {
-            "url": "https://glasswallet.com/blog/sqld-certification-cost-guide/",
-            "domain": "glasswallet.com",
-            "title": "SQLD 자격증 비용 5만원, 독학 8만원이면 충분할까? | 유리지갑 (Glasswallet)",
-            "snippet": "이 글은 SQLD 자격증 비용을 응시료 5만원짜리 시험 이 아니라, 합격까지 들어가는 총비용과 기회비용 관점에서 계산합니다. ... 한국데이터산업진흥원(KDATA) 데이터자격시험이 운영하는 공인 민간자격이며, DataQ 공식 안내에는"
+            "url": "https://buildingsmart.or.kr/NewsFile/BIM%20%EC%82%AC%EC%97%85%EC%88%98%ED%96%89%20%EA%B2%BD%EB%A0%A5%EA%B4%80%EB%A6%AC%20%EB%93%B1%EB%A1%9D%20%EC%95%88%EB%82%B4_20220106.pdf",
+            "domain": "buildingsmart.or.kr",
+            "title": "4. ‘BIM 직무’란?",
+            "snippet": "자격증”을 기준으로 하였음. ... - ‘BIM 코디네이터(Coordinator)’는 BIM적용 건설사업의 부분 업무로서 ‘BIM 적용업무’의 BIM 실무분야 총괄 책임자로서 BIM 수행계획서 작성, BIM 저작 도구 활용 계획,"
           },
           {
-            "url": "https://edu.ezenac.co.kr/search/SQL",
-            "domain": "edu.ezenac.co.kr",
-            "title": "[SQL] 검색결과 :: 이젠온라인에듀",
-            "snippet": "* ## [이젠] SQL 쉽게 배우기 이젠 나도 데이터전문가 ... * ## SQL 개발자 (SQLD) 자격증 따기 (2024 개정) Part.2-1 데이터 모델링의 이해"
+            "url": "https://bimkorea.or.kr/board/read.jsp?code=bimnotice&id=9508&page=4",
+            "domain": "bimkorea.or.kr",
+            "title": "한국BIM평가원",
+            "snippet": "정기 47회 BIM전문가 1급 면접시험의 최종 합격자 발표 안내드립니다. ... ◦ 최종 합격 시 별도로 신청하지 않더라도 실물 자격카드 및 영문증서 2종을 최초 1회에 한하여"
           }
         ],
-        "dominant_result_ratio": 0.1,
+        "dominant_result_ratio": 0.9,
         "score_components": {
-          "demand": 29.56,
-          "organic_opportunity": 36.0,
+          "demand": 26.08,
+          "organic_opportunity": 4.0,
           "trend": 0,
           "intent_fit": 0
         },
@@ -139,39 +374,39 @@
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "unavailable",
         "selection_version": 5,
-        "selected_at": "2026-09-10T11:28:21.087006+00:00",
+        "selected_at": "2026-09-10T11:51:24.258519+00:00",
         "source": "category_market_v1",
         "keywords": [
-          "SQL자격증"
+          "BIM자격증"
         ],
         "status": "research_only",
         "opportunity_evidence": {
           "version": 1,
-          "query": "SQL자격증",
-          "topic": "SQL자격증 종류: 개발자와 전문가의 직무·합격률 비교",
-          "intent": "SQL자격증 개발자와 전문가는 검증하는 직무와 합격률이 어떻게 다른가?",
+          "query": "BIM자격증",
+          "topic": "BIM자격증 종류와 응시자격·시험비용·준비 방법 비교",
+          "intent": "BIM자격증에는 어떤 종류가 있고, 응시자격과 비용을 확인해 어떻게 시험을 준비하나요?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-10T11:28:21.087006+00:00",
+          "checked_at": "2026-09-10T11:51:24.258519+00:00",
           "result_count": 10,
-          "domain_count": 7,
-          "dominant_ratio": 0.1,
-          "scope": "narrower_query",
-          "target_keyword": "SQL자격증 종류 비교",
+          "domain_count": 4,
+          "dominant_ratio": 0.9,
+          "scope": "full_keyword",
+          "target_keyword": "BIM자격증",
           "matches": [
             {
-              "result_index": 0,
-              "quote": "SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함"
+              "result_index": 1,
+              "quote": "자격명 | BIM 모델러 | BIM 테크니션 | BIM 코디네이터 | BIM CM 코디네이터 | BIM 매니저"
             },
             {
-              "result_index": 6,
-              "quote": "SQLD(개발자 수준)와 SQLP(전문가 수준)가 주요 시험입니다."
+              "result_index": 2,
+              "quote": "BIM전문가 (건축)1급 자격증응시료 표 ... BIM전문가 (건축)2급 자격증응시료 표"
             }
           ]
         },
-        "score": 65.56,
+        "score": 30.08,
         "publish_eligible": false,
         "hold_reasons": [
-          "narrower_or_unverified_search_intent"
+          "dominant_search_results"
         ]
       }
     ],
@@ -182,6 +417,11 @@
         "decision_diagnostics": {
           "official_sources": [
             {
+              "url": "https://q-net.or.kr/rcv001.do?gId=&gSite=Q&id=rcv00103",
+              "title": "원서접수안내 | Q-net",
+              "excerpt_chars": 2686
+            },
+            {
               "url": "https://www.gb.go.kr/Main/page.do?BD_CODE=freebbs11&B_LEVEL=0&B_NUM=511962301&B_STEP=511962300&Start=0&V_NUM=14196&bdName=&cmd=2&dept_code=&dept_name=&key=4&mnu_uid=6755&p1=0&p2=0&tbbscode1=freebbs11&word=",
               "title": "자유게시판>도민의소리>소통참여>경상북도",
               "excerpt_chars": 2125
@@ -191,28 +431,65 @@
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.gb.go.kr/Main/page.do?BD_CODE=freebbs11&B_LEVEL=0&B_NUM=511962301&B_STEP=511962300&Start=0&V_NUM=14196&bdName=&cmd=2&dept_code=&dept_name=&key=4&mnu_uid=6755&p1=0&p2=0&tbbscode1=freebbs11&word=",
+                  "title": "자유게시판>도민의소리>소통참여>경상북도",
+                  "excerpt_chars": 2125
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://q-net.or.kr/rcv001.do?gId=&gSite=Q&id=rcv00103",
+                  "title": "원서접수안내 | Q-net",
+                  "excerpt_chars": 2686
+                },
+                {
+                  "url": "https://www.gb.go.kr/Main/page.do?BD_CODE=freebbs11&B_LEVEL=0&B_NUM=511962301&B_STEP=511962300&Start=0&V_NUM=14196&bdName=&cmd=2&dept_code=&dept_name=&key=4&mnu_uid=6755&p1=0&p2=0&tbbscode1=freebbs11&word=",
+                  "title": "자유게시판>도민의소리>소통참여>경상북도",
+                  "excerpt_chars": 2125
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
           }
         }
       },
       {
-        "keyword": "산업기사시험일정",
+        "keyword": "컴활2급필기",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.ksa.or.kr/ksa_kr/16861/subview.do",
-              "title": "창업·벤처기업 지원사업",
-              "excerpt_chars": 8000
+              "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView/seq_20250926163213527113",
+              "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급)",
+              "excerpt_chars": 546
             },
             {
-              "url": "https://ksa.or.kr/ksa_kr/16861/subview.do",
-              "title": "창업·벤처기업 지원사업",
-              "excerpt_chars": 8000
+              "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20250602145625479984",
+              "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 시나공 컴퓨터활용능력2급 필기 기본서",
+              "excerpt_chars": 528
             },
             {
-              "url": "https://sbiz.or.kr/cop/main/copMain.do",
-              "title": "협업활성화",
-              "excerpt_chars": 1430
+              "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20250714112106131085",
+              "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 시나공 컴퓨터활용능력2급 실기 기본서",
+              "excerpt_chars": 528
             }
           ],
           "analysis_status": "supported_false",
@@ -246,38 +523,25 @@
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=6&searchGbn=0&searchOrderSort=0",
-              "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
+              "url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18407",
+              "title": "고용노동부",
+              "excerpt_chars": 2367
+            },
+            {
+              "url": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000351",
+              "title": "고용정책 상세_제도안내 | 고용정책 목록 | 정책/제도 | 고객센터",
+              "excerpt_chars": 6566
+            },
+            {
+              "url": "https://www.q-net.or.kr/crf005.do?gId=07&gSite=Q&id=crf00503s02&jmCd=6320&jmInfoDivCcd=B0",
+              "title": "www.q-net.or.kr",
               "excerpt_chars": 8000
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "컴활2급필기",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20250714112106131085",
-              "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 시나공 컴퓨터활용능력2급 실기 기본서",
-              "excerpt_chars": 528
-            },
-            {
-              "url": "https://bukbu.seoulcareerup.or.kr/bukbu/edu/selectEduProgram.do?sch_class_code=C100156012",
-              "title": "북부여성발전센터",
-              "excerpt_chars": 5832
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "expired_information"
+            "code": "insufficient_search_intent"
           }
         }
       },
@@ -328,6 +592,24 @@
         }
       },
       {
+        "keyword": "안전관리자자격증",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+              "title": "www.meca.or.kr",
+              "excerpt_chars": 261
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
+      },
+      {
         "keyword": "컴퓨터자격증종류",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
@@ -351,25 +633,7 @@
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "안전관리자자격증",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
-              "title": "www.meca.or.kr",
-              "excerpt_chars": 261
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
+            "code": "source_navigation"
           }
         }
       },
@@ -391,7 +655,7 @@
             {
               "url": "https://www.cj1388.or.kr/main/sub.html?Mode=view&boardID=www16&num=3396&page=0",
               "title": "청주시청소년상담복지센터 / 열린세상 / 프로그램 신청",
-              "excerpt_chars": 907
+              "excerpt_chars": 903
             }
           ],
           "analysis_status": "supported_false",
@@ -402,30 +666,25 @@
         }
       },
       {
-        "keyword": "BIM자격증",
+        "keyword": "국가자격증조회",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.buildingsmart.or.kr/Home/Testinfo",
-              "title": "buildingSMART Korea",
-              "excerpt_chars": 8000
+              "url": "https://www.kucar.or.kr/",
+              "title": "한국자동차매매사업조합연합회",
+              "excerpt_chars": 2610
             },
             {
-              "url": "https://www.buildingsmart.or.kr/Home/TestInfo",
-              "title": "buildingSMART Korea",
-              "excerpt_chars": 8000
-            },
-            {
-              "url": "https://buildingsmart.or.kr/Home/Testinfo",
-              "title": "buildingSMART Korea",
-              "excerpt_chars": 8000
+              "url": "https://www.kovema.or.kr/",
+              "title": "한국자동차제작자협회",
+              "excerpt_chars": 3059
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
-            "code": "source_missing_detail"
+            "code": "insufficient_search_intent"
           }
         }
       }

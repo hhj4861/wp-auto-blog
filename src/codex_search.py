@@ -29,6 +29,9 @@ _REASONS = frozenset({
     "unsafe_thread_configuration", "unexpected_home_configuration",
     "unexpected_tool_activity", "unexpected_web_activity", "unexpected_search_query",
     "invalid_search_arguments", "missing_search_arguments", "unbound_search_arguments",
+    "invalid_raw_item", "unexpected_raw_item_type", "unexpected_raw_agent_recipient",
+    "unexpected_raw_function_identity", "unexpected_raw_output_identity",
+    "invalid_raw_call_id", "invalid_raw_output_id",
     "no_observed_search", "invalid_results_shape", "structured_results_unavailable",
     "empty_structured_results", "structured_fields_incomplete", "native_fields_incomplete",
     "refresh_token_reused", "refresh_token_expired", "refresh_token_revoked", "invalid_grant",
@@ -75,6 +78,11 @@ def empty_report():
         "url_count", "title_count", "snippet_count", "content_count", "text_count",
         "url_title_body_count",
         "raw_function_call_items", "validated_web_calls", "bound_search_items",
+        "raw_message_events", "raw_reasoning_events", "raw_agent_message_events",
+        "raw_function_call_events", "raw_function_output_events", "raw_other_item_events",
+        "raw_namespaced_web_events", "raw_flattened_web_events", "raw_code_mode_events",
+        "raw_other_function_identity_events", "raw_agent_to_all_events",
+        "raw_agent_to_web_run_events", "raw_agent_to_code_mode_events", "raw_agent_to_other_events",
     ), 0)}
 
 
@@ -121,25 +129,58 @@ class SearchCounts:
         calls and therefore cannot establish search-query provenance.
         """
         if not isinstance(item, dict):
-            raise NativeSearchError("invalid_protocol")
+            raise NativeSearchError("invalid_raw_item")
         kind = item.get("type")
-        if kind in {"message", "reasoning"}:
+        if kind == "message":
+            self.report["raw_message_events"] += 1
             return
-        if kind == "agent_message" and item.get("recipient") == "all":
+        if kind == "reasoning":
+            self.report["raw_reasoning_events"] += 1
             return
+        if kind == "agent_message":
+            self.report["raw_agent_message_events"] += 1
+            recipient = item.get("recipient")
+            if recipient == "all":
+                self.report["raw_agent_to_all_events"] += 1
+                return
+            if recipient == "web.run":
+                self.report["raw_agent_to_web_run_events"] += 1
+            elif recipient == "functions.exec":
+                self.report["raw_agent_to_code_mode_events"] += 1
+            else:
+                self.report["raw_agent_to_other_events"] += 1
+            raise NativeSearchError("unexpected_raw_agent_recipient")
         if kind == "function_call_output":
+            self.report["raw_function_output_events"] += 1
             call_id = item.get("call_id")
-            if (not _identifier(call_id) or item.get("name") not in (None, "run")
+            if not _identifier(call_id):
+                raise NativeSearchError("invalid_raw_output_id")
+            if (item.get("name") not in (None, "run")
                     or item.get("namespace") not in (None, "web")):
-                raise NativeSearchError("unexpected_tool_activity")
+                raise NativeSearchError("unexpected_raw_output_identity")
             self.raw_outputs.add(call_id)
             return  # Output text is never parsed as search results.
-        if (kind != "function_call" or item.get("namespace") != "web"
-                or item.get("name") != "run"):
-            raise NativeSearchError("unexpected_tool_activity")
+        if kind != "function_call":
+            self.report["raw_other_item_events"] += 1
+            raise NativeSearchError("unexpected_raw_item_type")
+        self.report["raw_function_call_events"] += 1
+        namespace, name = item.get("namespace"), item.get("name")
+        if namespace == "web" and name == "run":
+            self.report["raw_namespaced_web_events"] += 1
+        else:
+            # ToolName::new preserves both fields; with_default_namespace only
+            # substitutes `functions`. A flattened spelling is diagnostic only,
+            # not an alias of the registered (web, run) tool.
+            if namespace in (None, "", "functions") and name == "web.run":
+                self.report["raw_flattened_web_events"] += 1
+            elif namespace in (None, "", "functions") and name == "exec":
+                self.report["raw_code_mode_events"] += 1
+            else:
+                self.report["raw_other_function_identity_events"] += 1
+            raise NativeSearchError("unexpected_raw_function_identity")
         call_id = item.get("call_id")
         if not _identifier(call_id):
-            raise NativeSearchError("invalid_protocol")
+            raise NativeSearchError("invalid_raw_call_id")
         if self.raw_calls and call_id not in self.raw_calls:
             raise NativeSearchError("unexpected_web_activity")
         arguments = item.get("arguments")

@@ -47,7 +47,7 @@ def test_real_search_helpers_probe_three_cases_without_exposing_results(monkeypa
     assert all(url == 'https://www.googleapis.com/customsearch/v1' for url, _ in calls)
     assert reports == [dict(case=index, credential_source='current', provider='google_custom_search', row_count=6,
                            sample_row_count=6, distinct_domains=3, approximate_related_rows=6,
-                           reason='ok', failures=[]) for index in (1, 2, 3)]
+                           reason='ok', failures=[], google_project_numbers=[]) for index in (1, 2, 3)]
 
 
 def test_failure_then_ddg_success_reports_actual_fallback_and_fixed_reason(monkeypatch, capsys):
@@ -229,6 +229,43 @@ def test_alternate_exception_restores_original_key_and_stays_private(monkeypatch
     assert search.call_count == 4
     assert {report['reason'] for report in read_reports(capsys)} == {'search_error'}
     assert os.environ['GOOGLE_SEARCH_API_KEY'] == 'private-probe-key'
+
+
+def test_errorinfo_project_number_is_bound_to_alternate_probe_only(monkeypatch, capsys, caplog):
+    monkeypatch.setenv('GOOGLE_SEARCH_ALTERNATE_API_KEY', 'private-alternate-key')
+
+    def get(url, **kwargs):
+        if 'googleapis.com' not in url:
+            return Mock(status_code=202, url=url, text='<form id="challenge-form">private-body</form>')
+        alternate = kwargs['params']['key'] == 'private-alternate-key'
+        response = Mock(status_code=403 if alternate else 400)
+        response.raise_for_status.side_effect = requests.HTTPError('https://private-url/?key=private-key')
+        detail = {'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'SERVICE_DISABLED',
+                  'metadata': {'service': 'customsearch.googleapis.com', 'consumer': 'projects/123456789012',
+                               'activationUrl': 'https://private-console-url/', 'key': 'private-alternate-key'}}
+        response.json.return_value = {'error': {'message': 'private-message' if alternate else 'API_KEY_INVALID',
+                                              'details': [detail] if alternate else []}}
+        return response
+
+    monkeypatch.setattr(probe.market_search.requests, 'get', get)
+    assert probe.main() == 1
+    reports = read_reports(capsys)
+    assert [report['google_project_numbers'] for report in reports] == [[], [], [], ['123456789012']]
+    assert reports[-1]['credential_source'] == 'alternate'
+    assert reports[-1]['failures'][0] == {'provider': 'google_custom_search', 'reason': 'api_not_enabled',
+                                        'http_status': 403}
+    assert reports[-1]['reason'] == 'empty_results'
+    assert caplog.text == ''
+
+
+@pytest.mark.parametrize('number', ['123\nprivate-key', '123\n', '123?key=private-key', '１２３', 123, None])
+def test_probe_project_event_validates_numbers_again(number):
+    handler = probe._Failures()
+    record = logging.LogRecord('probe', logging.DEBUG, '', 0, probe.market_search.GOOGLE_PROJECT_TEMPLATE,
+                               (number,), None)
+    handler.emit(record)
+    assert handler.google_project_numbers == []
+    assert handler.items == []
 
 
 def test_search_probe_workflow_is_exclusive_and_has_no_publication_or_codex_credentials():

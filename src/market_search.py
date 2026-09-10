@@ -2,6 +2,7 @@
 
 import os
 import logging
+import re
 from urllib.parse import parse_qs, urljoin, urlsplit
 
 from bs4 import BeautifulSoup
@@ -9,6 +10,27 @@ import requests
 
 
 logger = logging.getLogger(__name__)
+GOOGLE_PROJECT_TEMPLATE = 'Google Custom Search diagnostic: project_number=%s'
+
+
+def _google_error_project_numbers(payload):
+    """Read only Custom Search's typed, numeric consumer identifier."""
+    error = payload.get('error') if isinstance(payload, dict) else None
+    details = error.get('details') if isinstance(error, dict) else None
+    if not isinstance(details, list):
+        return []
+    numbers = []
+    for detail in details[:10]:
+        if not isinstance(detail, dict) or detail.get('@type') != 'type.googleapis.com/google.rpc.ErrorInfo':
+            continue
+        metadata = detail.get('metadata')
+        if not isinstance(metadata, dict) or metadata.get('service') != 'customsearch.googleapis.com':
+            continue
+        consumer = metadata.get('consumer')
+        match = re.fullmatch(r'projects/([0-9]{1,20})', consumer) if isinstance(consumer, str) else None
+        if match and match[1] not in numbers:
+            numbers.append(match[1])
+    return numbers
 
 
 def search_failure(provider, response=None, reason='network_error'):
@@ -18,7 +40,11 @@ def search_failure(provider, response=None, reason='network_error'):
     if provider == 'google_custom_search' and response is not None:
         try:
             # Inspect in memory only. Never emit error messages or arbitrary fields.
-            detail = str(response.json()).lower()
+            payload = response.json()
+            detail = str(payload).lower()
+            for number in _google_error_project_numbers(payload):
+                # The probe captures this separate event; never emit arbitrary metadata.
+                logger.debug(GOOGLE_PROJECT_TEMPLATE, number)
             for marker, code in (
                 ('accessnotconfigured', 'api_not_enabled'),
                 ('service_disabled', 'api_not_enabled'),

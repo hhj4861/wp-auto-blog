@@ -4,6 +4,7 @@ import json
 import logging
 import os
 from pathlib import Path
+import re
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -31,8 +32,16 @@ class _Failures(logging.Handler):
     def __init__(self):
         super().__init__()
         self.items = []
+        self.google_project_numbers = []
 
     def emit(self, record):
+        if record.msg == market_search.GOOGLE_PROJECT_TEMPLATE:
+            if isinstance(record.args, tuple) and len(record.args) == 1:
+                number = record.args[0]
+                if (isinstance(number, str) and re.fullmatch(r'[0-9]{1,20}', number)
+                        and number not in self.google_project_numbers):
+                    self.google_project_numbers.append(number)
+            return
         if record.msg != FAILURE_TEMPLATE or not isinstance(record.args, tuple) or len(record.args) != 3:
             return
         provider, reason, status = record.args
@@ -55,11 +64,11 @@ def _safe_search_logs():
     try:
         logger.handlers = [handler]
         logger.propagate = False
-        logger.setLevel(logging.WARNING)
+        logger.setLevel(logging.DEBUG)
         logger.disabled = False
         for item in noisy:
             item.setLevel(logging.CRITICAL + 1)
-        yield handler.items
+        yield handler
     finally:
         logger.handlers, logger.propagate, level, logger.disabled = original
         logger.setLevel(level)
@@ -72,8 +81,8 @@ def probe_case(case_number, query, groups, credential_source='current'):
     report = {'case': case_number, 'credential_source': credential_source,
               'provider': 'unknown', 'row_count': 0,
               'sample_row_count': 0, 'distinct_domains': 0, 'approximate_related_rows': 0,
-              'reason': 'search_error', 'failures': []}
-    with _safe_search_logs() as failures:
+              'reason': 'search_error', 'failures': [], 'google_project_numbers': []}
+    with _safe_search_logs() as diagnostics:
         try:
             provider, results = market_search.search_results(query)
             if not isinstance(provider, str) or provider not in PROVIDERS:
@@ -102,7 +111,8 @@ def probe_case(case_number, query, groups, credential_source='current'):
             # Request exceptions may embed credential-bearing URLs and response bodies.
             report['reason'] = 'search_error'
         finally:
-            report['failures'] = failures[:10]
+            report['failures'] = diagnostics.items[:10]
+            report['google_project_numbers'] = diagnostics.google_project_numbers[:10]
     return report
 
 

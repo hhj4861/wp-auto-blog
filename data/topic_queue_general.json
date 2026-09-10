@@ -2104,5 +2104,82 @@
       "전기기사시험일정"
     ],
     "status": "pending"
+  },
+  {
+    "keyword": "종합소득세기한후신고환급",
+    "category": "생활정보",
+    "topic": "종합소득세기한후신고환급: 미신고와 과다 납부에 따른 신고 유형 구분",
+    "intent": "정기신고를 놓쳤거나 세금을 과다 납부했다면 기한후신고와 경정청구를 어떻게 구분하나요?",
+    "gap": "공식 본문의 네 가지 신고 유형 비교표와 기한후신고 가능 시점, 과다 납부 시 경정청구 구분 체크리스트를 제공합니다.",
+    "source_url": "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1166",
+    "verified_sources": [
+      {
+        "url": "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1166",
+        "original_url": "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1166",
+        "title": "서울노동포털",
+        "checked_on": "2026-09-10",
+        "sha256": "e8f87d79172da0ef138daa9820f0acb84294eab73386a7a3431b45ad1e6e90fd",
+        "excerpt": "바로가기 메뉴 본문 바로가기 주메뉴 바로가기 정기신고, 기한후신고, 수정신고, 경정청구의 구분 작성자, \r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t등록일\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t, 조회수\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t, 첨부파일\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t내용이 수록된 표 작성자 서울노동권익센터 등록일 2022.08.05 조회수 6683 첨부파일 등록된 첨부파일이 없습니다. (질문) - 종합소득세 신고시 정기신고, 기한후신고, 수정신고, 경정청구의 구분 (답변) - 정기신고 : 전년도 귀속 소득에 대하여 매년 5.1~5.31일까지 종합소득세 신고 - 기한후신고 : 정기신고 기간에 신고를 하지 않은 경우 세무서에서 납부세액 결정고지 전까지 기한후신고 - 수정신고 : 정기신고 기간에 과소신고, 납부한 경우에 수정신고후 추가 납부(가산세 포함) - 경정청구 : 정기신고 기간에 과다하게 납부한 세액에 대하여 환급 신청이 필요할 경우 경정청구 목록",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1166"
+    ],
+    "valid_until": null,
+    "monthly_search": 1330,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "advertising_competition": "높음",
+    "evidence_mode": "official_pages",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1349690",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239072&mi=41095",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1166",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://j.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7668&mi=2329",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://ems.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238910&mi=40296",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": null,
+    "organic_domains": [],
+    "organic_results": [],
+    "dominant_result_ratio": null,
+    "score_components": {
+      "demand": 24.99,
+      "organic_opportunity": 0,
+      "specificity": 15,
+      "trend": 0
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "score": 39.99,
+    "selection_version": 4,
+    "selected_at": "2026-09-10T05:13:56.779134+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "종합소득세기한후신고환급"
+    ],
+    "status": "completed",
+    "post_id": 1731,
+    "url": "https://trendpulse.blog/income-tax-late-filing-refund/",
+    "post_status": "publish",
+    "completed_at": "2026-09-10T07:16:27.032133"
   }
 ]

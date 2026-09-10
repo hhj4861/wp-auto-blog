@@ -2348,7 +2348,7 @@
     "keywords": [
       "건강보험료조회"
     ],
-    "status": "pending"
+    "status": "superseded"
   },
   {
     "keyword": "연말정산환급일",
@@ -2842,5 +2842,232 @@
     "url": "https://trendpulse.blog/year-end-tax-refund-2026/",
     "post_status": "publish",
     "completed_at": "2026-09-10T12:10:54.664388"
+  },
+  {
+    "keyword": "대장내시경비용",
+    "category": "건강",
+    "topic": "대장내시경비용, 일반·수면 검사비와 예약 전 확인할 항목",
+    "intent": "대장내시경 일반·수면 검사비는 얼마이며 예약 전에 어떤 비용 항목을 확인해야 할까?",
+    "gap": "아주대병원 선택검사 기준 일반 135,000원·수면 220,000원·알약 정결제 35,000원 비교표와 오후 할인 조건을 정리한다. 전국 평균으로 해석하지 않는다.",
+    "source_url": "https://hosp.ajoumc.or.kr/health/conts/102001007000000.do",
+    "verified_sources": [
+      {
+        "url": "https://hosp.ajoumc.or.kr/health/conts/102001007000000.do",
+        "original_url": "https://hosp.ajoumc.or.kr/health/conts/102001007000000.do",
+        "title": "아주대학교병원 건강증진센터 홈페이지",
+        "checked_on": "2026-09-10",
+        "sha256": "7bbb4c51c88dc7416ce13000f50b632f6c6337f6b264522f0472da7b013fa15d",
+        "excerpt": "AJOU 기본 AJOU 2030 AJOU 정밀 AJOU 프리미엄 당일형 AJOU 프리미엄 숙박형 특화검진 선택검사 기본 종합검진외 개인가족력, 병력에 의한 추가검사 참고자료 건강검진 및 추가선택검사를 오후에 실시할 경우 추가선택검사 2개까지 30% 할인을 적용하여 드립니다(**표시 검사는 오후 할인 제외). (2026.03.01. 기준) 기본 종합검진외 개인가족력, 병력에 의한 추가검사 참고자료 리스트 : 검사명, 금액, 시행요일, 권유대상 확인 검사명 금액 시행요일 권유대상 내시경검사 수면유도비(위) 85,000 월~금(오전,오후) 토(오전) 진정제를 주사하고 내시경검사를 실시, 보호자 동반 필요 수면유도비(위+대장) 170,000 일반대장내시경 135,000 대장내시경: 내시경관을 삽입하여 직장, 결장, 회장 말단까지 용종, 궤양, 암 등 진단 수면내시경 시 진정제를 주사 후 내시경 시행, 보호자동반 필요 수면대장내시경 220,000 대장정결제 경구용알약** 35,000 쉽고 간편한 방법으로 대장정결을 원하시는 분(28정 복용) 우편발송 후 대장검사 취소 시 약 값 35,000원 수납 필요 캔서파인드** 750,000 월~금(오전,오후) 토(오전) 1. 암 가족력이 있거나 암 발생여부를 조기에 확인하고 싶은 분 2. 내시경 검사가 어려운 고령이거나 영상검사를 통한 방사선 노출이 부담스러우신 분 3. 조영제 과민반응이나 기타 동반질환 등으로 기존 암검진 시행이 어려운 분 PET CT 전신 1,063,000 월~금(오전,오후) 1. 가족 중 암환자가 있어 염려되는 분 2. 전신암의 조기진단 및 미세 암 진단을 원하는 분 전신+뇌포함 1,262,000 저선량 흉부 CT 225,000 월~금(오전,오후) 흡연하는 분, 폐암관련 가족력이 있는 분 복부CT 285,000 월~금(오전,오후) 간, 담낭, 췌장, 신장, 비장 질환의 조기발견을 원하는 분 심장검사 심장초음파 210,000 월~금(오전) 1. 돌연사한 가족, 심장질환 관련 가족력이 있는 분 2. 당뇨, 고지혈증, 비만, 고혈압이 있는 분 3. 흡연하는 분 심혈관CT 265,000 월~금(오전,오후) 머리검사 뇌 및 뇌혈관 MR 780,000 월~금(오전,오후) 1. 뇌종양, 중풍관련 가족력이 있는 분 2. 50세이상이면서 당뇨와 비만, 고혈압이 있는 분 3. 두통이 있는 분, 뇌질환의 정확한 검사를 원하는 분 뇌혈관CT 235,000 월~금(오전,오후) 뇌 및 뇌혈관 MR (치매포함) 990,000 월~금(오전,오후) 뇌혈관 질환 + 치매관련질환을 보기 위해 검사를 원하시는 분 여성검사 자궁초음파 137,000 월~금(오전,오후) 토(오전) 자궁암 관련 가족력이 있는 분, 여성호르몬 치료를 받는 분 유방초음파 149,000 유방암 관련 가족력이 있는 분, 자가 검진시 만져지는 멍울 또는 통증이 있는 분 인유두종바이러스 58,000 자궁경부암을 일으킬 수 있는 바이러스의 유무를 알고 싶으신 분 남성검사 전립선초음파 137,000 월~금(오전) 1. 전립선질환 가족력이 있는 분, 50세 이상 남성분 2. 배뇨 관련 증상(소변이 자주 마려움, 소변 보기 어려움)이 있는 분 갑상선초음파 137,000 월~금(오전,오후) 토(오전) 갑상선 질환 가족력이 있는 분, 갑상선 기능 이상이 있으신 분 경동맥초음파 171,000 월~금(오전,오후) 토(오전) 당뇨, 고혈압, 고지혈증인 분(뇌졸중 환자의 약 75%에서 경동맥질환 발견) 골밀도검사 47,000 월~금(오전,오후) 토(오전) 골다공증 가족력이 있는 분, 조기폐경인 분, 운동이 부족한 분,\n\t\t\t\t\t\t\t\t\t\t\t칼슘섭취가 부족한 분 세포내무기질검사** 180,000 월~금(오전,오후) 토(오전) 1. 세포 내 신진대사와 미네랄 불균형, 중금속 함량 측정을 원하는 분 2. 만성 스트레스, 피로, 불규칙한 식사, 환경오염 동맥경화도 70,000 월~금(오전,오후) 토(오전) 당뇨, 고혈압, 고지혈증, 흡연, 40대 이상인 분 혈관 노화도 및 혈관 상태를 평가하고싶은 분 자율신경검사 43,000 월~금(오전,오후) 토(오전) 1. 스트레스가 많고 무기력하고 집중력이 저하된 분 2. 자율신경계의 영향을 받는 심장박동의 주기적 변화 측정을 원하는 분 NK세포 활성도 검사** 100,000 월~금(오전,오후) 토(오전) 지속적인 피로감을 느끼고 면역력 저하가 우려되시는 분\n소량의 혈액을 채취하여 면역력을 확인하는 검사 알츠하이머혈액검사** 150,000 월~금(오전,오후) 토(오전) 혈액검사로 알츠하이머 치매의 주요 원인인 베타 아밀로이드 단백질을 측정해 알츠하이머 조기 진단하는 검사  \n기억력 저하증상, 알츠하이머 치매 가족력이 있는경우. 인지장애 초기 증상이 느껴지는 분 허리X-선촬영 13,000 월~금(오전,오후) 토(오전) 허리 통증이 있는 분, 오래 서있는 직업을 가진 분 유전자** 암7종(남), 암8종(여) 96,000 월~금(오전,오후) 토(오전) 위암,폐암,대장암,간암,갑상선암,췌장암 남자:전립선암/여자:유방암,난소암 암10종(남),암11종(여) 120,000 월~금(오전,오후) 토(오전) 남성암7종, 여성암8종+방광암, 만성 림프구성 백혈병, 림프종 암16종(남),암18종(여) 145,000 월~금(오전,오후) 토(오전) 남성암10종,여성암11종+뇌수막종,식도암,흑색종,신경아세포종,구강인후암,\t피부암,(여성)자궁경부암 암16종(남),암18종(여) +유전질환(치매질환/파킨스질환/심근경색 등) 170,000 월~금(오전,오후) 토(오전) 남성암16종,여성암18종+알츠하이머,골다공증,류마티스관절염,혈전증,\n\t\t\t\t\t\t\t\t\t\t\t제2형당뇨병,다발성경화증,우울증,심방세동,뇌졸중,심근경색,파킨슨병 암16종(남),암18종(여) +유전질환(치매질환/파킨스질환/심근경색 등) + 안과질환 195,000 월~금(오전,오후) 토(오전) 남성암16종,여성암18종+알츠하이머,골다공증,류마티스관절염,혈전증, 제2형당뇨병,다발성경화증,우울증,심방세동,뇌졸중,심근경색,파킨슨병+황반변성,녹내장,원추각막,\n\t\t\t\t\t\t\t\t\t\t\t중증 안구건조증, 망막색소변성증 특화검진 알아보기",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://nsok.kr/1742",
+      "https://mintcare.kr/1212"
+    ],
+    "valid_until": null,
+    "monthly_search": 11560,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.nhimc.or.kr/health/conts/104002002000000.do",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://hosp.ajoumc.or.kr/health/conts/102001007000000.do",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://yangsan.go.kr/health/contents.do?mid=0303040000",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cbnuh.or.kr/cbrcc/sub02_02.do",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_domains": [
+      "price.hospitalk.net",
+      "www.price.hospitalk.net",
+      "www.price.hospitalk.net",
+      "nsok.kr",
+      "www.price.hospitalk.net",
+      "mintcare.kr",
+      "www.price.hospitalk.net",
+      "www.desu.co.kr",
+      "price.hospitalk.net",
+      "www.price.hospitalk.net"
+    ],
+    "organic_results": [
+      {
+        "url": "https://price.hospitalk.net/items/EA0010000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%A7%84%EC%A0%95%EB%82%B4%EC%8B%9C%EA%B2%BD%ED%99%98%EC%9E%90%EA%B4%80%EB%A6%AC%EB%A3%8C-%E2%85%A0/area/%EB%8C%80%EC%A0%84/",
+        "domain": "price.hospitalk.net",
+        "title": "대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅰ 비용 비교 | 하스피톡",
+        "snippet": "# 대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅰ 비용 비교"
+      },
+      {
+        "url": "https://www.price.hospitalk.net/items/EA0010000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%A7%84%EC%A0%95%EB%82%B4%EC%8B%9C%EA%B2%BD%ED%99%98%EC%9E%90%EA%B4%80%EB%A6%AC%EB%A3%8C-%E2%85%A0/area/%EB%8C%80%EC%A0%84/",
+        "domain": "www.price.hospitalk.net",
+        "title": "대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅰ 비용 비교 | 하스피톡",
+        "snippet": "# 대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅰ 비용 비교"
+      },
+      {
+        "url": "https://www.price.hospitalk.net/items/EA0030000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%A7%84%EC%A0%95%EB%82%B4%EC%8B%9C%EA%B2%BD%ED%99%98%EC%9E%90%EA%B4%80%EB%A6%AC%EB%A3%8C-%E2%85%A2/area/%EB%8C%80%EC%A0%84/",
+        "domain": "www.price.hospitalk.net",
+        "title": "대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅲ 비용 비교 | 하스피톡",
+        "snippet": "# 대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅲ 비용 비교"
+      },
+      {
+        "url": "https://nsok.kr/1742",
+        "domain": "nsok.kr",
+        "title": "대장내시경비용 줄이는 방법, 예약 전에 이렇게 확인하세요 | 엔속 | 생활정보 매거진",
+        "snippet": "얼마 전 가족 건강검진 예약을 도와주다가 대장내시경비용이 병원마다 꽤 다르다는 걸 다시 느꼈습니다."
+      },
+      {
+        "url": "https://www.price.hospitalk.net/items/EA0020000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%A7%84%EC%A0%95%EB%82%B4%EC%8B%9C%EA%B2%BD%ED%99%98%EC%9E%90%EA%B4%80%EB%A6%AC%EB%A3%8C-%E2%85%A1/area/%EB%8C%80%EC%A0%84/",
+        "domain": "www.price.hospitalk.net",
+        "title": "대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅱ 비용 비교 | 하스피톡",
+        "snippet": "# 대전 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅱ 비용 비교"
+      },
+      {
+        "url": "https://mintcare.kr/1212",
+        "domain": "mintcare.kr",
+        "title": "대장내시경비용 아끼려면 이렇게 확인하세요 | 민트케어 - 프리미엄 청소 전문업체",
+        "snippet": "얼마 전 지인이 건강검진 예약을 하다가 대장내시경비용이 병원마다 너무 다르다며 연락을 해왔습니다."
+      },
+      {
+        "url": "https://www.price.hospitalk.net/items/EA0010000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%A7%84%EC%A0%95%EB%82%B4%EC%8B%9C%EA%B2%BD%ED%99%98%EC%9E%90%EA%B4%80%EB%A6%AC%EB%A3%8C-%E2%85%A0/area/%EB%8C%80%EA%B5%AC/",
+        "domain": "www.price.hospitalk.net",
+        "title": "대구 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅰ 비용 비교 | 하스피톡",
+        "snippet": "# 대구 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅰ 비용 비교"
+      },
+      {
+        "url": "https://www.desu.co.kr/k/%EB%8C%80%EC%9E%A5%EB%82%B4%EC%8B%9C%EA%B2%BD%EB%B9%84%EC%9A%A9",
+        "domain": "www.desu.co.kr",
+        "title": "대장내시경비용 — 네이버 수요·공급 분석 (관찰) | desu",
+        "snippet": "# 대장내시경비용 — 네이버 수요·공급 분석"
+      },
+      {
+        "url": "https://price.hospitalk.net/items/CZ9770000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%9E%85%EC%B2%B4%EC%A0%81-%EC%9C%A0%EB%B0%A9%EC%A0%88%EC%A0%9C%EC%83%9D%EA%B2%80%EC%88%A0/area/%EB%8C%80%EC%A0%84/",
+        "domain": "price.hospitalk.net",
+        "title": "대전 내시경, 천자 및 생검료 /입체적 유방절제생검술 비용 비교 | 하스피톡",
+        "snippet": "# 대전 내시경, 천자 및 생검료 /입체적 유방절제생검술 비용 비교"
+      },
+      {
+        "url": "https://www.price.hospitalk.net/items/EA0020000-%EB%82%B4%EC%8B%9C%EA%B2%BD-%EC%B2%9C%EC%9E%90-%EB%B0%8F-%EC%83%9D%EA%B2%80%EB%A3%8C-%EC%A7%84%EC%A0%95%EB%82%B4%EC%8B%9C%EA%B2%BD%ED%99%98%EC%9E%90%EA%B4%80%EB%A6%AC%EB%A3%8C-%E2%85%A1/area/%EB%8C%80%EA%B5%AC/",
+        "domain": "www.price.hospitalk.net",
+        "title": "대구 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅱ 비용 비교 | 하스피톡",
+        "snippet": "# 대구 내시경, 천자 및 생검료 /진정내시경환자관리료 /Ⅱ 비용 비교"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 32.5,
+      "organic_opportunity": 40.0,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 5,
+    "selected_at": "2026-09-10T12:11:31.584215+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "대장내시경비용"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.nhimc.or.kr/health/conts/104002002000000.do",
+          "title": "Block Page",
+          "excerpt_chars": 331
+        },
+        {
+          "url": "https://hosp.ajoumc.or.kr/health/conts/102001007000000.do",
+          "title": "아주대학교병원 건강증진센터 홈페이지",
+          "excerpt_chars": 2982
+        },
+        {
+          "url": "https://yangsan.go.kr/health/contents.do?mid=0303040000",
+          "title": "의료급여수급권자 암검진 비급여 비용 지원 사업 | 의료비지원사업 | 보건사업 | 홈페이지",
+          "excerpt_chars": 1881
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://www.djbea.or.kr/mps/bizTskPbnc/view?menuId=MENU002040101000000&menuKey=TOfnnvp207&pageNum=1&schEndDate=&schGubun=&schStartDate=&schTab=&schText=%EC%9C%A0%EA%B8%89&tsk_pbnc_id=2026-0026",
+              "title": "사업공고-사업공고-지원사업 안내-대전일자리경제진흥원 대표홈페이지",
+              "excerpt_chars": 248
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.nhimc.or.kr/health/conts/104002002000000.do",
+              "title": "Block Page",
+              "excerpt_chars": 331
+            },
+            {
+              "url": "https://hosp.ajoumc.or.kr/health/conts/102001007000000.do",
+              "title": "아주대학교병원 건강증진센터 홈페이지",
+              "excerpt_chars": 2982
+            },
+            {
+              "url": "https://yangsan.go.kr/health/contents.do?mid=0303040000",
+              "title": "의료급여수급권자 암검진 비급여 비용 지원 사업 | 의료비지원사업 | 보건사업 | 홈페이지",
+              "excerpt_chars": 1881
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 1,
+      "query": "대장내시경비용",
+      "topic": "대장내시경비용, 일반·수면 검사비와 예약 전 확인할 항목",
+      "intent": "대장내시경 일반·수면 검사비는 얼마이며 예약 전에 어떤 비용 항목을 확인해야 할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-09-10T12:11:31.584215+00:00",
+      "result_count": 10,
+      "domain_count": 5,
+      "dominant_ratio": 0.0,
+      "scope": "full_keyword",
+      "target_keyword": "대장내시경비용",
+      "matches": [
+        {
+          "result_index": 3,
+          "quote": "대장내시경비용 줄이는 방법, 예약 전에 이렇게 확인하세요"
+        },
+        {
+          "result_index": 5,
+          "quote": "얼마 전 지인이 건강검진 예약을 하다가 대장내시경비용이 병원마다 너무 다르다며 연락을 해왔습니다."
+        }
+      ]
+    },
+    "score": 87.5,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

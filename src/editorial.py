@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import re
 import time
 import uuid
@@ -29,6 +30,9 @@ OFFICIAL_DOMAINS = {
     "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net",
 }
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
+SOURCE_FETCH_BUDGET_SECONDS = 35
+SOURCE_FETCH_BACKOFF_SECONDS = 1
+logger = logging.getLogger(__name__)
 
 
 def checked_today() -> str:
@@ -60,49 +64,93 @@ def is_official_url(url: str) -> bool:
     )
 
 
+def _source_fetch_failure(reason: str) -> None:
+    # Callers supply fixed codes only; request errors/URLs/headers may contain secrets.
+    logger.warning("Official source fetch failed: %s", reason)
+
+
 def fetch_source(url: str, title: str = "") -> dict | None:
     """Read an official source, resolving only allowlisted HTTPS redirects.
 
     No cookies/auth from WordPress or the user's browser are shared. A Google
     grounding redirect is only a locator and never counts as official evidence.
+    One retry is shared across all redirects. The elapsed-time budget is checked
+    between blocking operations; Requests' timeout limits read inactivity, not a
+    strict wall-clock deadline for an in-progress request or stream read.
     """
     from bs4 import BeautifulSoup
 
     original = url
-    for _ in range(5):
+    deadline = time.monotonic() + SOURCE_FETCH_BUDGET_SECONDS
+    hops, retried = 0, False
+    while hops < 5:
         if not is_official_url(url) and https_host(url) not in GROUNDING_HOSTS:
-            return None
+            return _source_fetch_failure("unsafe_url")
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            return _source_fetch_failure("time_budget")
+        failure = None
         try:
-            with requests.get(url, timeout=15, allow_redirects=False, stream=True) as res:
+            with requests.get(url, timeout=min(15, remaining), allow_redirects=False, stream=True) as res:
+                if time.monotonic() >= deadline:
+                    return _source_fetch_failure("time_budget")
                 if res.status_code in (301, 302, 303, 307, 308):
                     url = urljoin(url, res.headers.get("Location", ""))
+                    hops += 1
                     continue
-                if res.status_code != 200 or not is_official_url(url):
-                    return None
-                if "html" not in res.headers.get("Content-Type", "").lower():
-                    return None
-                data = bytearray()
-                for chunk in res.iter_content(16384):
-                    data.extend(chunk)
-                    if len(data) > 1_000_000:
-                        return None
-                soup = BeautifulSoup(bytes(data), "html.parser")
+                if res.status_code in (502, 503, 504):
+                    failure = "http_transient"
+                else:
+                    if res.status_code != 200:
+                        return _source_fetch_failure("http_status")
+                    if not is_official_url(url):
+                        return _source_fetch_failure("unsafe_url")
+                    if "html" not in res.headers.get("Content-Type", "").lower():
+                        return _source_fetch_failure("non_html")
+                    # Partial bytes from a failed attempt never reach the retry.
+                    data = bytearray()
+                    for chunk in res.iter_content(16384):
+                        if time.monotonic() >= deadline:
+                            return _source_fetch_failure("time_budget")
+                        data.extend(chunk)
+                        if len(data) > 1_000_000:
+                            return _source_fetch_failure("body_too_large")
+        except requests.exceptions.SSLError:
+            return _source_fetch_failure("tls_failure")
+        except requests.Timeout:
+            failure = "timeout"
+        except requests.ConnectionError:
+            failure = "connection_failure"
         except requests.RequestException:
-            return None
+            return _source_fetch_failure("request_failure")
+        if failure:
+            _source_fetch_failure(failure)
+            if time.monotonic() + SOURCE_FETCH_BACKOFF_SECONDS >= deadline:
+                return _source_fetch_failure("time_budget")
+            if retried:
+                return None
+            retried = True
+            time.sleep(SOURCE_FETCH_BACKOFF_SECONDS)
+            continue
+        if time.monotonic() >= deadline:
+            return _source_fetch_failure("time_budget")
+        soup = BeautifulSoup(bytes(data), "html.parser")
         page_title = soup.title.get_text(" ", strip=True) if soup.title else title
         for el in soup(["script", "style", "nav", "header", "footer", "noscript"]):
             el.decompose()
         main = soup.find("article") or soup.find("main") or soup.body or soup
         text = main.get_text(" ", strip=True)
+        if time.monotonic() >= deadline:
+            return _source_fetch_failure("time_budget")
         if len(text) < 200:
-            return None
+            return _source_fetch_failure("short_body")
         return {
             "url": url, "original_url": original, "title": page_title or title or https_host(url),
             "checked_on": checked_today(),
             "sha256": hashlib.sha256(text.encode()).hexdigest(),
             "excerpt": text[:8000],
         }
-    return None
+    return _source_fetch_failure("redirect_limit")
 
 
 def collect_sources(chunks, limit: int = 4) -> list[dict]:

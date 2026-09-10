@@ -1,11 +1,15 @@
 """Regression coverage for TrendPulse's evidence and safe update boundaries."""
 import copy
+import hashlib
 import json
 from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 import pytest
+import requests
 from bs4 import BeautifulSoup
+import src.editorial as editorial
 from src.editorial import fetch_source, reader_layout, review_evidence, repair_evidence, EvidenceRepairError, is_official_url, editorial_checks
 from src.pipeline import rank_related_posts, BlogPipeline, PipelineConfig
 from src.content_generator import GeneratedContent, ContentType
@@ -207,6 +211,226 @@ def test_grounding_redirect_must_end_at_official_host():
     with patch("src.editorial.requests.get", return_value=res) as get:
         assert fetch_source("https://vertexaisearch.cloud.google.com/grounding-api-redirect/test") is None
         assert get.call_count == 1
+
+
+@pytest.fixture
+def source_http(monkeypatch):
+    clock = SimpleNamespace(now=0.0)
+
+    def advance(seconds):
+        clock.now += seconds
+
+    sleep = Mock(side_effect=advance)
+    get = Mock(side_effect=AssertionError("Unexpected source request"))
+    monkeypatch.setattr(editorial.time, "monotonic", lambda: clock.now)
+    monkeypatch.setattr(editorial.time, "sleep", sleep)
+    monkeypatch.setattr(editorial.requests, "get", get)
+    return SimpleNamespace(clock=clock, sleep=sleep, get=get)
+
+
+FRESH_SOURCE_HTML = '<html><title>Current official guide</title><main>' + 'Fresh official body. ' * 20 + '</main></html>'
+SOURCE_HTTP_URL = 'https://www.nts.go.kr/nts/guide?reference=public'
+
+
+@pytest.mark.parametrize('error', [
+    requests.Timeout, requests.ConnectTimeout, requests.ReadTimeout, requests.ConnectionError,
+])
+def test_source_transient_connection_failure_retries_once_with_fresh_body(source_http, error):
+    response = _source_response(FRESH_SOURCE_HTML)
+    source_http.get.side_effect = [error('private request details'), response]
+    source = fetch_source(SOURCE_HTTP_URL)
+    assert source['url'] == source['original_url'] == SOURCE_HTTP_URL
+    assert source['title'] == 'Current official guide'
+    assert source['excerpt'] == ('Fresh official body. ' * 20).strip()
+    assert source_http.get.call_count == 2
+    source_http.sleep.assert_called_once_with(editorial.SOURCE_FETCH_BACKOFF_SECONDS)
+    response.__exit__.assert_called_once()
+
+
+@pytest.mark.parametrize('status', [502, 503, 504])
+def test_source_transient_http_status_retries_once(source_http, status):
+    failed = _source_response('private upstream error')
+    failed.status_code = status
+    source_http.get.side_effect = [failed, _source_response(FRESH_SOURCE_HTML)]
+    assert fetch_source(SOURCE_HTTP_URL)['excerpt'].startswith('Fresh official body.')
+    assert source_http.get.call_count == 2
+    source_http.sleep.assert_called_once()
+    failed.iter_content.assert_not_called()
+    failed.__exit__.assert_called_once()
+
+
+@pytest.mark.parametrize('error', [requests.ReadTimeout, requests.ConnectionError])
+def test_source_retry_discards_partial_stream_and_closes_both_responses(source_http, error):
+    partial = _source_response('unused')
+
+    def chunks(size):
+        yield b'<html><title>STALE-PARTIAL</title><main>' + b'STALE-PARTIAL ' * 30
+        raise error('private stream details')
+
+    partial.iter_content.side_effect = chunks
+    fresh = _source_response(FRESH_SOURCE_HTML)
+    source_http.get.side_effect = [partial, fresh]
+    source = fetch_source(SOURCE_HTTP_URL)
+    assert 'STALE-PARTIAL' not in json.dumps(source)
+    assert source['title'] == 'Current official guide'
+    assert source['sha256'] == hashlib.sha256(source['excerpt'].encode()).hexdigest()
+    partial.__exit__.assert_called_once()
+    fresh.__exit__.assert_called_once()
+    assert source_http.get.call_count == 2
+
+
+def test_source_retry_is_shared_across_redirects(source_http):
+    redirect = _source_response('')
+    redirect.status_code = 302
+    redirect.headers = {'Location': 'https://www.nts.go.kr/next'}
+    second_failure = _source_response('')
+    second_failure.status_code = 503
+    source_http.get.side_effect = [requests.Timeout('private'), redirect, second_failure,
+                                   _source_response(FRESH_SOURCE_HTML)]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    assert source_http.get.call_count == 3  # No fresh retry allowance on /next.
+    assert source_http.get.call_args.args == ('https://www.nts.go.kr/next',)
+    source_http.sleep.assert_called_once()
+
+
+def test_source_repeated_timeout_exhausts_one_retry(source_http, caplog):
+    source_http.get.side_effect = requests.Timeout('secret request and credentials')
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    assert source_http.get.call_count == 2
+    source_http.sleep.assert_called_once()
+    assert [record.getMessage() for record in caplog.records] == [
+        'Official source fetch failed: timeout', 'Official source fetch failed: timeout']
+
+
+@pytest.mark.parametrize('status', [403, 404, 429, 500])
+def test_source_other_http_statuses_never_retry(source_http, status):
+    response = _source_response('private body')
+    response.status_code = status
+    source_http.get.side_effect = [response]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+    source_http.sleep.assert_not_called()
+    response.iter_content.assert_not_called()
+
+
+@pytest.mark.parametrize(('error', 'reason'), [
+    (requests.exceptions.SSLError, 'tls_failure'),
+    (requests.RequestException, 'request_failure'),
+    (requests.exceptions.ChunkedEncodingError, 'request_failure'),
+])
+def test_source_non_transient_request_errors_never_retry_or_log_raw_error(source_http, caplog, error, reason):
+    source_http.get.side_effect = error('secret auth header and private request URL')
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+    source_http.sleep.assert_not_called()
+    assert [record.getMessage() for record in caplog.records] == [f'Official source fetch failed: {reason}']
+
+
+@pytest.mark.parametrize(('html', 'content_type', 'reason'), [
+    (FRESH_SOURCE_HTML, 'application/pdf', 'non_html'),
+    ('<main>Short guide</main>', 'text/html', 'short_body'),
+    ('x' * 1_000_001, 'text/html', 'body_too_large'),
+])
+def test_source_invalid_body_does_not_retry(source_http, caplog, html, content_type, reason):
+    response = _source_response(html, content_type)
+    source_http.get.side_effect = [response]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+    source_http.sleep.assert_not_called()
+    response.__exit__.assert_called_once()
+    assert [record.getMessage() for record in caplog.records] == [f'Official source fetch failed: {reason}']
+
+
+def test_source_retry_does_not_follow_unsafe_redirect_or_log_location(source_http, caplog):
+    redirect = _source_response('')
+    redirect.status_code = 302
+    redirect.headers = {'Location': 'https://user:secret@www.nts.go.kr/next?private=value'}
+    source_http.get.side_effect = [requests.Timeout('private'), redirect]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    assert source_http.get.call_count == 2
+    assert [record.getMessage() for record in caplog.records] == [
+        'Official source fetch failed: timeout', 'Official source fetch failed: unsafe_url']
+
+
+def test_source_redirect_limit_is_not_reset_by_retry(source_http, caplog):
+    redirects = []
+    for index in range(5):
+        response = _source_response('')
+        response.status_code = 302
+        response.headers = {'Location': f'https://www.nts.go.kr/page-{index}'}
+        redirects.append(response)
+    source_http.get.side_effect = [requests.Timeout('private'), *redirects]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    assert source_http.get.call_count == 6  # Existing five URL hops, one shared extra GET.
+    source_http.sleep.assert_called_once()
+    assert caplog.records[-1].getMessage() == 'Official source fetch failed: redirect_limit'
+
+
+def test_source_exhausted_time_budget_prevents_first_get(source_http, monkeypatch):
+    monkeypatch.setattr(editorial, 'SOURCE_FETCH_BUDGET_SECONDS', 0)
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_not_called()
+    source_http.sleep.assert_not_called()
+
+
+def test_source_timeout_after_budget_never_retries(source_http, caplog):
+    def timeout(*args, **kwargs):
+        source_http.clock.now = editorial.SOURCE_FETCH_BUDGET_SECONDS
+        raise requests.Timeout('private')
+    source_http.get.side_effect = timeout
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+    source_http.sleep.assert_not_called()
+    assert caplog.records[-1].getMessage() == 'Official source fetch failed: time_budget'
+
+
+def test_source_budget_expiring_during_backoff_prevents_retry_get(source_http):
+    source_http.get.side_effect = requests.Timeout('private')
+    source_http.sleep.side_effect = lambda _: setattr(source_http.clock, 'now', editorial.SOURCE_FETCH_BUDGET_SECONDS)
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+    source_http.sleep.assert_called_once()
+
+
+@pytest.mark.parametrize('phase', ['headers', 'chunk', 'stream_end', 'parse'])
+def test_source_budget_is_checked_after_blocking_work(source_http, monkeypatch, caplog, phase):
+    response = _source_response(FRESH_SOURCE_HTML)
+    expire = lambda: setattr(source_http.clock, 'now', editorial.SOURCE_FETCH_BUDGET_SECONDS)
+    if phase == 'headers':
+        response.__enter__.side_effect = lambda: (expire(), response)[1]
+    elif phase in ('chunk', 'stream_end'):
+        def chunks(size):
+            if phase == 'chunk':
+                expire()
+            yield FRESH_SOURCE_HTML.encode()
+            expire()
+        response.iter_content.side_effect = chunks
+    else:
+        def parse(*args, **kwargs):
+            soup = BeautifulSoup(*args, **kwargs)
+            expire()
+            return soup
+        monkeypatch.setattr('bs4.BeautifulSoup', parse)
+    source_http.get.side_effect = [response]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+    source_http.sleep.assert_not_called()
+    response.__exit__.assert_called_once()
+    assert caplog.records[-1].getMessage() == 'Official source fetch failed: time_budget'
+
+
+def test_source_retry_timeout_is_clamped_to_remaining_budget(source_http):
+    def timeout(*args, **kwargs):
+        source_http.clock.now = editorial.SOURCE_FETCH_BUDGET_SECONDS - 5
+        raise requests.Timeout('private')
+    calls = 0
+    def request(*args, **kwargs):
+        nonlocal calls
+        calls += 1
+        return timeout(*args, **kwargs) if calls == 1 else _source_response(FRESH_SOURCE_HTML)
+    source_http.get.side_effect = request
+    assert fetch_source(SOURCE_HTTP_URL)
+    assert source_http.get.call_args.kwargs['timeout'] == 4
 
 
 @pytest.mark.parametrize("response", ['{"issues": []}', '```json\n{"issues": []}\n```'])

@@ -789,6 +789,16 @@ jobs:
           NAVER_AD_SECRET_KEY=${{ secrets.NAVER_AD_SECRET_KEY }}
           EOF
 
+      - name: Import measured CAK keyword candidates
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: |
+          echo "CAK_KEYWORD_CANDIDATES_FILE=$RUNNER_TEMP/cak-keyword-candidates.json" >> "$GITHUB_ENV"
+          echo "CAK_KEYWORD_CANDIDATES_FETCH_STATUS_FILE=$RUNNER_TEMP/cak-fetch-status.json" >> "$GITHUB_ENV"
+          python scripts/fetch_cak_candidates.py \
+            --output "$RUNNER_TEMP/cak-keyword-candidates.json" \
+            --status-file "$RUNNER_TEMP/cak-fetch-status.json"
+
       - name: Run pipeline (Queue Mode - 카테고리별 큐)
         timeout-minutes: 50
         env:

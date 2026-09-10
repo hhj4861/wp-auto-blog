@@ -1,5 +1,6 @@
 from datetime import datetime, timezone, timedelta
 import json
+from copy import deepcopy
 from types import SimpleNamespace
 from unittest.mock import Mock
 
@@ -7,6 +8,7 @@ import pytest
 import yaml
 
 from src import market_topics as market
+from tests.test_cak_candidates import make_export, make_item, write_export
 
 
 def evidence(url='https://example.go.kr/info'):
@@ -29,6 +31,8 @@ def analysis(keyword='시험준비물', category='취업', **extra):
 
 @pytest.fixture(autouse=True)
 def isolated_market_history(tmp_path, monkeypatch):
+    monkeypatch.delenv('CAK_KEYWORD_CANDIDATES_FILE', raising=False)
+    monkeypatch.delenv('CAK_KEYWORD_CANDIDATES_FETCH_STATUS_FILE', raising=False)
     monkeypatch.setattr(market, 'ROOT', tmp_path)
     monkeypatch.setattr(market, 'LEDGER', tmp_path / 'data/ledger.json')
     monkeypatch.setattr('requests.sessions.Session.request',
@@ -46,6 +50,245 @@ def candidate(category='취업', **extra):
             'intent': '무엇을 준비하나', 'gap': '공식 준비물 체크리스트',
             'verified_sources': [evidence()], 'organic_results': [organic()],
             'intent_results': [organic()['url']], **extra}
+
+
+def install_cak_feed(tmp_path, monkeypatch, items=None, *, now=None, ttl=24):
+    now = now or datetime.now(timezone.utc)
+    payload = make_export(items, now=now, ttl=ttl)
+    monkeypatch.setenv('CAK_KEYWORD_CANDIDATES_FILE', str(write_export(tmp_path, payload)))
+    return payload
+
+
+def mock_health_selection(monkeypatch, keywords, related=()):
+    """Mock external boundaries while exercising proposal, source review and scoring."""
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        '건강검진준비물': {'keyword': '건강검진준비물', 'monthly': 800, 'comp': 'low'}})
+    lookup = Mock(return_value=list(related))
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lookup)
+    trend = Mock(return_value=0.5)
+    monkeypatch.setattr(market, 'fetch_trend_change', trend)
+    monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', [organic()]))
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence('https://health.go.kr/info')])
+    monkeypatch.setattr(market, 'research_official_sources', Mock(return_value=([], None)))
+    prompts = []
+
+    def review(prompt):
+        prompts.append(prompt)
+        if '조사 후보를 고르세요.' in prompt:
+            return {'candidates': [{'keyword': keyword} for keyword in keywords]}
+        keyword = next(keyword for keyword in keywords if f'검색어는 {keyword}입니다.' in prompt)
+        return analysis(keyword, '건강', source_indices=[0])
+
+    monkeypatch.setattr(market, 'ask', review)
+    return lookup, trend, prompts
+
+
+def test_cak_exact_and_related_selection_keep_distinct_measurements(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    payload = install_cak_feed(tmp_path, monkeypatch, now=now)
+    transport = tmp_path / 'transport.json'
+    transport.write_text(json.dumps({'status': 'ok', 'reason': 'downloaded', 'sourceRunId': 321,
+                                     'artifactId': 654, 'headSha': 'a' * 40,
+                                     'sourceRunCreatedAt': (now - timedelta(hours=1)).isoformat()}))
+    monkeypatch.setenv('CAK_KEYWORD_CANDIDATES_FETCH_STATUS_FILE', str(transport))
+    direct, child = '혈당관리방법', '혈당관리방법비교'
+    lookup, trend, prompts = mock_health_selection(monkeypatch, [direct, child],
+        [{'keyword': child, 'monthly': 700, 'comp': 'low'}])
+    report = market.select_category('건강', top_n=2, titles=[])
+    rows = {row['keyword']: row for row in report['selected']}
+    assert set(rows) == {direct, child}
+    assert report['cak_import']['direct_count'] == report['cak_import']['expanded_seed_count'] == 1
+    assert report['cak_import']['related_count'] == 1
+    lookup.assert_called_once_with(direct)
+    trend.assert_called_once_with(child)
+    assert rows[direct]['monthly_search'] == 1200
+    assert rows[direct]['score_components']['cak_trend'] == 6.6
+    assert rows[direct]['score_components']['trend'] == 0
+    assert rows[direct]['trend_growth'] is rows[direct]['trend_provider'] is None
+    assert rows[direct]['demand_provider'] == 'cak_naver_searchad_whitespace_exact'
+    assert rows[child]['monthly_search'] == 700
+    assert rows[child]['score_components']['cak_trend'] == 0
+    assert rows[child]['score_components']['trend'] == 5
+    assert rows[child]['trend_growth'] == 0.5
+    assert rows[child]['demand_provider'] == 'naver_searchad_pc_mobile'
+    for row in rows.values():
+        assert row['cak_provenance']['item'] == payload['items'][0]
+        assert row['cak_provenance']['export']['generatedAt'] == payload['generatedAt']
+        assert row['cak_provenance']['transport']['sourceRunId'] == 321
+        assert market.fresh_market_item(row, '건강')
+        assert not market.fresh_market_item(row, '건강', now + timedelta(hours=23))
+        missing = deepcopy(row)
+        del missing['cak_provenance']
+        assert not market.fresh_market_item(missing, '건강')
+    pool_json = prompts[0].split('후보: ', 1)[1].split('\n기존 제목:', 1)[0]
+    model_rows = {row['keyword']: row for row in json.loads(pool_json)}
+    assert model_rows[direct]['cak_trend']['dayPct'] == 200
+    assert model_rows[child]['discovery'] == {'seedKeyword': direct, 'relationship': 'related_seed',
+                                            'candidateGrowthMeasured': False}
+    assert 'cak_trend' not in model_rows[child]
+    assert 'dayPct' not in json.dumps(model_rows[child])
+    tampered = deepcopy(rows[child])
+    tampered['monthly_search'] = 1200
+    assert not market.fresh_market_item(tampered, '건강')
+    tampered = deepcopy(rows[child])
+    tampered['score_components']['cak_trend'] = 6.6
+    assert not market.fresh_market_item(tampered, '건강')
+    tampered = deepcopy(rows[direct])
+    tampered['score_components']['trend'] = 5
+    assert not market.fresh_market_item(tampered, '건강')
+
+
+def test_cak_unqualified_direct_keeps_own_google_trend_and_does_not_expand(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    keyword = '혈당관리방법'
+    install_cak_feed(tmp_path, monkeypatch, [make_item(keyword, now=now, monthly=900)], now=now)
+    lookup, trend, _ = mock_health_selection(monkeypatch, [keyword])
+    row = market.select_category('건강', top_n=1, titles=[])['selected'][0]
+    lookup.assert_not_called()
+    trend.assert_called_once_with(keyword)
+    assert row['monthly_search'] == 900 and row['score_components']['cak_trend'] == 0
+    assert row['trend_growth'] == 0.5 and market.fresh_market_item(row, '건강')
+
+
+def test_cak_monthly_join_never_assigns_another_keywords_or_old_larger_measurement(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    install_cak_feed(tmp_path, monkeypatch, [make_item('혈당 관리 방법', now=now)], now=now)
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lambda _: [])
+    stats = {'혈당관리방법': {'keyword': '혈당관리방법', 'monthly': 9000, 'comp': 'low'}}
+    merged, report = market.merge_cak_candidates(stats, [], '건강', now)
+    assert list(merged) == ['혈당 관리 방법']
+    assert merged['혈당 관리 방법']['monthly'] == 1200
+    assert report['direct_count'] == 1
+
+
+def test_cak_expands_at_most_five_qualified_unpublished_seeds(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    names = ['혈당관리', '혈압관리', '건강검진', '예방접종', '비타민섭취', '수면관리', '체중관리', '눈건강']
+    items = [make_item(name, now=now, monthly=1200 + index * 100) for index, name in enumerate(names)]
+    items.append(make_item('빈혈검사', now=now, monthly=900))
+    install_cak_feed(tmp_path, monkeypatch, items, now=now)
+    lookup = Mock(return_value=[])
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lookup)
+    _, report = market.merge_cak_candidates({}, ['2025 눈 건강 확인 방법'], '건강', now)
+    assert lookup.call_count == report['expanded_seed_count'] == 5
+    assert [call.args[0] for call in lookup.call_args_list] == list(reversed(names[2:7]))
+    assert report['seed_lookup_failed_count'] == 5
+    assert report['filtered_count'] == 1
+
+
+def test_cak_related_requires_own_complete_monthly_and_permanent_uniqueness(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    install_cak_feed(tmp_path, monkeypatch, [make_item('혈당관리', now=now)], now=now)
+    children = [
+        {'keyword': '혈당관리방법', 'monthly': 700, 'comp': 'low'},
+        {'keyword': '혈당 관리 방법', 'monthly': 900, 'comp': 'low'},
+        {'keyword': '혈당관리기준', 'monthly': 499},
+        {'keyword': '혈당관리수치', 'monthly': True},
+        {'keyword': '혈당관리음식', 'monthly': None},
+        {'keyword': '혈당관리검사', 'monthly': 0, 'monthly_status': 'unavailable'},
+        {'keyword': '건강보험공단채용일정', 'monthly': 1200},
+        {'keyword': '2026 건강검진 대상', 'monthly': 2000},
+    ]
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lambda _: children)
+    merged, report = market.merge_cak_candidates({}, ['2025 건강 검진 대상 조회'], '건강', now)
+    assert set(merged) == {'혈당관리', '혈당관리방법'}
+    assert report['related_count'] == 1
+    assert merged['혈당관리방법']['monthly'] == 700
+    assert merged['혈당관리방법']['cak_provenance']['relatedMonthly'] == 700
+
+
+def test_cak_direct_and_related_are_visible_in_first_sixty_model_candidates(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    install_cak_feed(tmp_path, monkeypatch, [make_item('혈당관리', now=now)], now=now)
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lambda _: [
+        {'keyword': '혈당관리방법', 'monthly': 700, 'comp': 'low'}])
+    stats = {f'비타민{index}종류': {'keyword': f'비타민{index}종류', 'monthly': 100000, 'comp': 'high'}
+             for index in range(180)}
+    merged, _ = market.merge_cak_candidates(stats, [], '건강', now)
+    pool = market.candidate_pool(merged, [], '건강')
+    assert len(pool) == 120
+    assert [row['keyword'] for row in pool[:2]] == ['혈당관리', '혈당관리방법']
+
+
+@pytest.mark.parametrize(('mode', 'expected'), [('none', 'not_configured'), ('invalid', 'invalid'),
+                                              ('stale', 'stale'), ('empty', 'empty')])
+def test_cak_optional_feed_failure_preserves_legacy_health_selection(tmp_path, monkeypatch, mode, expected):
+    now = datetime.now(timezone.utc)
+    if mode == 'stale':
+        install_cak_feed(tmp_path, monkeypatch, now=now - timedelta(days=2))
+    elif mode == 'empty':
+        install_cak_feed(tmp_path, monkeypatch, [], now=now)
+    elif mode == 'invalid':
+        path = tmp_path / 'invalid.json'
+        path.write_text('secret raw invalid input')
+        monkeypatch.setenv('CAK_KEYWORD_CANDIDATES_FILE', str(path))
+    lookup, trend, _ = mock_health_selection(monkeypatch, ['건강검진준비물'])
+    report = market.select_category('건강', top_n=1, titles=[])
+    row = report['selected'][0]
+    assert report['cak_import']['status'] == expected
+    assert report['discovery_provider'] == 'naver_related_keywords'
+    assert row['keyword'] == '건강검진준비물' and row['monthly_search'] == 800
+    assert 'cak_provenance' not in row and 'cak_trend' not in row['score_components']
+    assert market.fresh_market_item(row, '건강')
+    lookup.assert_not_called()
+    trend.assert_called_once_with('건강검진준비물')
+    assert 'secret' not in json.dumps(report)
+
+
+@pytest.mark.parametrize('category', ['취업', '생활정보'])
+def test_cak_g2_feed_is_never_used_in_other_categories(tmp_path, monkeypatch, category):
+    now = datetime.now(timezone.utc)
+    install_cak_feed(tmp_path, monkeypatch, now=now)
+    lookup = Mock(side_effect=AssertionError('Health seeds must not expand in other categories'))
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lookup)
+    stats = {'기존후보': {'keyword': '기존후보', 'monthly': 700}}
+    merged, report = market.merge_cak_candidates(stats, [], category, now)
+    assert merged == stats and report['status'] == 'not_applicable'
+    lookup.assert_not_called()
+
+
+@pytest.mark.parametrize('available_but_unsupported', [False, True])
+def test_cak_rising_never_bypasses_official_source_review(tmp_path, monkeypatch, available_but_unsupported):
+    install_cak_feed(tmp_path, monkeypatch)
+    _, _, prompts = mock_health_selection(monkeypatch, ['혈당관리방법'])
+    if available_but_unsupported:
+        original_review = market.ask
+        monkeypatch.setattr(market, 'ask', lambda prompt: original_review(prompt)
+                            if '조사 후보를 고르세요.' in prompt else {'supported': False})
+    else:
+        monkeypatch.setattr(market, 'candidate_sources', lambda *_: [])
+    report = market.select_category('건강', top_n=1, titles=[])
+    assert not report['selected'] and report['cak_import']['qualified_rising_count'] == 1
+    assert any('official' in row['reason'] for row in report['rejected'])
+
+
+def test_cak_serp_outage_does_not_invent_organic_opportunity(tmp_path, monkeypatch):
+    install_cak_feed(tmp_path, monkeypatch)
+    _, trend, _ = mock_health_selection(monkeypatch, ['혈당관리방법'])
+    monkeypatch.setattr(market, 'search_results', lambda _: (None, []))
+    source = web_evidence('https://health.go.kr/info', origin='model_reported_locator')
+    monkeypatch.setattr(market, 'research_official_sources', lambda *_: ([source], web_research_evidence(source)))
+    row = market.select_category('건강', top_n=1, titles=[])['selected'][0]
+    assert row['evidence_mode'] == 'official_pages'
+    assert row['organic_results'] == row['organic_domains'] == []
+    assert row['dominant_result_ratio'] is row['organic_provider'] is None
+    assert row['score_components']['organic_opportunity'] == 0
+    assert row['score_components']['cak_trend'] == 6.6
+    assert market.fresh_market_item(row, '건강')
+    trend.assert_not_called()
+
+
+def test_cak_cache_rechecks_original_shorter_compliance_ttl_before_enqueue(tmp_path, monkeypatch):
+    now = datetime.now(timezone.utc)
+    install_cak_feed(tmp_path, monkeypatch, now=now, ttl=6)
+    mock_health_selection(monkeypatch, ['혈당관리방법'])
+    row = market.select_category('건강', top_n=1, titles=[])['selected'][0]
+    assert market.fresh_market_item(row, '건강', now + timedelta(hours=3))
+    assert not market.fresh_market_item(row, '건강', now + timedelta(hours=4))
+    stale = deepcopy(row)
+    stale['cak_provenance']['item']['expiresAt'] = (now - timedelta(minutes=1)).isoformat()
+    with pytest.raises(RuntimeError):
+        market.enqueue_report([], {'category': '건강', 'selected': [stale]})
 
 
 def test_category_freshness_and_unknown_evidence():
@@ -373,6 +616,80 @@ def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(tmp_
     again = market_pipeline.run_single(queued['topic'], queued['keywords'], '취업', market_brief=queued)
     assert not again.success and 'Duplicate' in again.error
     market_pipeline.wp_client.create_post.assert_called_once()
+
+
+def test_cak_selection_to_publication_keeps_provenance_and_deleted_keyword_reserved(
+        tmp_path, monkeypatch, market_pipeline):
+    """CAK input passes the real queue/pipeline/ledger path with external IO mocked."""
+    from scripts import select_blog_keywords as cli
+    from src import main as main_module
+
+    now = datetime.now(timezone.utc)
+    keyword = '2026 혈당 관리 방법'
+    payload = install_cak_feed(tmp_path, monkeypatch, [make_item(keyword, now=now)], now=now)
+    lookup, trend, _ = mock_health_selection(monkeypatch, [keyword])
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        keyword: {'keyword': keyword, 'monthly': 700, 'comp': 'low'}})
+    data = tmp_path / 'data'
+    data.mkdir(exist_ok=True)
+    queue_path = data / 'topic_queue_general.json'
+    queue_path.write_text('[]')
+    monkeypatch.setattr(cli, 'ROOT', tmp_path)
+    monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: market.historical_terms())
+    monkeypatch.setenv('SELECT_TOP_N', '1')
+    monkeypatch.setattr('sys.argv', ['select', '--category', '건강', '--enqueue'])
+    assert cli.main() == 0
+    queued = json.loads(queue_path.read_text())[0]
+    assert queued['monthly_search'] == 1200
+    assert queued['cak_provenance']['relationship'] == 'exact'
+    assert queued['cak_provenance']['item'] == payload['items'][0]
+    assert queued['score_components']['cak_trend'] == 6.6
+    lookup.assert_called_once_with(keyword)
+    trend.assert_not_called()
+
+    market_pipeline.config.category = '건강'
+    written = market_pipeline.content_generator.generate.return_value
+    written.title = queued['topic']
+    written.html = '<h2>혈당 관리 방법</h2><p>공식 건강 안내</p>'
+    written.keywords = [keyword]
+    written.focus_keyphrase = keyword
+    written.sources = queued['verified_sources']
+    market_pipeline.wp_client.create_post.return_value.title = queued['topic']
+    monkeypatch.setattr(main_module, '__file__', str(tmp_path / 'src/main.py'))
+    monkeypatch.setattr(main_module, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(main_module, 'setup_logging', lambda **kw: None)
+    monkeypatch.setattr(main_module, 'BlogPipeline', lambda *a, **kw: market_pipeline)
+    monkeypatch.setenv('BLOG_REQUIRE_MARKET_TOPIC', '1')
+    monkeypatch.setattr('sys.argv', ['main', '--mode', 'general', '--from-queue', '--auto-publish', '--category', '건강'])
+    assert main_module.main() == 0
+    market_pipeline.wp_client.create_post.assert_called_once()
+    passed = market_pipeline.content_generator.generate.call_args.kwargs['market_brief']
+    assert passed['cak_provenance'] == queued['cak_provenance']
+    assert passed['verified_sources'] == queued['verified_sources']
+    assert json.loads(queue_path.read_text())[0]['status'] == 'completed'
+    ledger = json.loads(market.LEDGER.read_text())
+    assert len(ledger) == 1
+    assert ledger[0]['keyword'] == keyword and ledger[0]['post_id'] == 123
+    assert ledger[0]['category'] == '건강'
+
+    # Delete all other local publication inventory, simulating a deleted remote
+    # post. Only the append-only ledger can reserve this keyword now.
+    queue_path.write_text('[]')
+    (data / 'post_registry_general.json').unlink(missing_ok=True)
+    cli.REPORT.unlink()
+    renamed = '2027 혈당관리방법'
+    install_cak_feed(tmp_path, monkeypatch, [make_item(renamed, now=now, monthly=1500)], now=now)
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        renamed: {'keyword': renamed, 'monthly': 900, 'comp': 'low'}})
+    with pytest.raises(RuntimeError, match='No uncovered measured candidates in this category'):
+        market.select_category('건강', 1)
+    lookup.assert_called_once_with(keyword)  # A posted rising seed cannot expand again.
+    again = market_pipeline.run_single(queued['topic'], queued['keywords'], '건강', market_brief=queued)
+    assert not again.success and 'Duplicate' in again.error
+    market_pipeline.wp_client.create_post.assert_called_once()
+    assert json.loads(market.LEDGER.read_text()) == ledger
 
 
 @pytest.mark.parametrize('failure', ['keyword_changed', 'concurrent_post', 'source_expired'])

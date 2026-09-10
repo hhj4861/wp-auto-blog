@@ -61,17 +61,35 @@ def market_case(tmp_path, monkeypatch):
     topic = keyword + ': 정상과 진단 기준'
     urls = ['https://www.diabetes.or.kr/source', 'https://www.diabetes.or.kr/faq']
     body = ('<div class="wpab-article"><section id="quick-answer"><p>' + keyword
-            + ' 안내</p></section><h2 id="levels">확인 기준</h2><p>근거 없는 주장</p>'
+            + '는 정상범위와 진단 기준, 관리 목표를 구분해 확인합니다.</p></section>'
+            + '<h2 id="levels">확인 기준</h2><p>근거 없는 주장</p>'
             + '<section id="verified-sources">'
             + ''.join(f'<a href="{url}">자료</a>' for url in urls) + '</section></div>')
-    brief = {'source': module.market.SOURCE, 'selection_version': 4, 'category': '건강',
+    search_rows = [{'url': f'https://{domain}/{index}', 'domain': domain,
+                    'title': keyword + ' 정상범위와 진단 기준',
+                    'snippet': keyword + '의 진단 기준과 관리 목표를 구분해 안내합니다.'}
+                   for index, domain in enumerate(('guide.example', 'clinic.example',
+                                                   'health.example', 'guide.example', 'clinic.example'))]
+    brief = {'source': module.market.SOURCE, 'selection_version': 5, 'category': '건강',
              'keyword': keyword, 'keywords': [keyword], 'topic': topic, 'intent': '기준 확인',
              'gap': '진단과 관리 목표의 차이', 'status': 'held_draft',
              'selected_at': datetime.now(timezone.utc).isoformat(), 'monthly_search': 24610,
-             'score': 50, 'source_url': urls[0], 'evidence_mode': 'serp',
+             'score': 90, 'source_url': urls[0], 'evidence_mode': 'serp',
+             'score_components': {'demand': 35, 'organic_opportunity': 40, 'intent_fit': 15, 'trend': 0},
+             'trend_growth': None, 'trend_status': 'unavailable',
+             'publish_eligible': True, 'hold_reasons': [], 'demand_scope': 'keyword_total',
+             'organic_provider': 'google_custom_search',
              'verified_sources': [{'url': url, 'excerpt': '저장된 이전 근거'} for url in urls],
-             'organic_results': [{'url': urls[0]}], 'organic_domains': ['diabetes.or.kr'],
-             'intent_results': [urls[0]]}
+             'organic_results': search_rows, 'organic_domains': [row['domain'] for row in search_rows],
+             'intent_results': [row['url'] for row in search_rows[:2]]}
+    brief['opportunity_evidence'] = {
+        'version': 1, 'query': keyword, 'topic': topic, 'intent': brief['intent'],
+        'provider': 'google_custom_search', 'checked_at': brief['selected_at'],
+        'result_count': 5, 'domain_count': 3, 'dominant_ratio': 0,
+        'scope': 'full_keyword', 'target_keyword': keyword,
+        'matches': [{'result_index': index, 'quote': row['snippet']}
+                    for index, row in enumerate(search_rows[:2])]}
+    assert module.market.fresh_market_item(dict(brief, status='pending'), '건강')
     original = {'id': 1724, 'status': 'draft', 'slug': 'a1c-levels', 'title': {'raw': topic},
                 'content': {'raw': body}, 'excerpt': {'raw': '설명'}, 'meta': {},
                 'modified_gmt': 'original', 'categories': [46], 'featured_media': 1723}
@@ -130,6 +148,13 @@ def market_case(tmp_path, monkeypatch):
             return payload['article'].replace('근거 없는 주장', '공식 자료로 확인된 기준')
         if 'conservative Korean editorial fact checker' in prompt:
             return json.dumps({'issues': ['공식 근거 없는 주장 삭제'] if '근거 없는 주장' in prompt else []})
+        if prompt.startswith('최종 검색 의도 검수입니다.'):
+            from bs4 import BeautifulSoup
+
+            payload = json.loads(prompt.split('\n', 1)[1])
+            quote = BeautifulSoup(body, 'html.parser').find('p').get_text(' ', strip=True)
+            assert quote in payload['article']
+            return json.dumps({'covers_primary_intent': True, 'answer_quote': quote})
         raise AssertionError('Unexpected mocked prompt')
 
     client = Mock(generate=Mock(side_effect=generate))
@@ -168,6 +193,66 @@ def test_market_recovery_uses_actual_repair_and_duplicate_helpers_once(market_ca
     ledger = json.loads((c['data'] / 'posted_market_keywords.json').read_text())
     assert ledger[0]['post_id'] == 1724 and ledger[0]['keyword'] == c['keyword']
     c['registry_write'].assert_called_once()
+    scope_prompts = [call.args[0] for call in c['client'].generate.call_args_list
+                     if call.args[0].startswith('최종 검색 의도 검수입니다.')]
+    assert len(scope_prompts) == 1
+    scope_input = json.loads(scope_prompts[0].split('\n', 1)[1])
+    assert scope_input['approved_intent'] == c['brief']['intent']
+    assert scope_input['search_evidence'] == c['brief']['opportunity_evidence']['matches']
+    assert '근거 없는 주장' not in scope_input['article']
+
+
+def test_market_recovery_refuses_final_article_that_only_answers_a_narrower_question(market_case):
+    c = market_case
+    original_generate = c['client'].generate.side_effect
+
+    def generate(prompt):
+        if prompt.startswith('최종 검색 의도 검수입니다.'):
+            return json.dumps({'covers_primary_intent': False,
+                               'answer_quote': '공식 자료로 확인된 기준'})
+        return original_generate(prompt)
+
+    c['client'].generate.side_effect = generate
+    path = c['data'] / 'topic_queue_general.json'
+    before = path.read_text()
+    with pytest.raises(RuntimeError, match='주된 질문'):
+        module.publish_draft(1724, c['env'])
+    c['session'].post.assert_not_called()
+    assert path.read_text() == before
+    assert not module.market.LEDGER.exists()
+    assert len([call for call in c['client'].generate.call_args_list
+                if call.args[0].startswith('최종 검색 의도 검수입니다.')]) == 1
+
+
+@pytest.mark.parametrize('kind', ['legacy_version', 'research_only', 'missing_sample',
+                                 'narrower_query', 'forged_quotes', 'forged_priority'])
+def test_market_recovery_requires_current_publishable_search_opportunity_before_llm(market_case, kind):
+    c = market_case
+    path = c['data'] / 'topic_queue_general.json'
+    queue = json.loads(path.read_text())
+    brief = queue[1]
+    if kind == 'legacy_version':
+        brief['selection_version'] = 4
+    elif kind == 'research_only':
+        brief.update(publish_eligible=False, hold_reasons=['organic_results_unavailable'])
+    elif kind == 'missing_sample':
+        brief['organic_results'] = []
+    elif kind == 'narrower_query':
+        brief['opportunity_evidence'].update(scope='narrower_query', target_keyword='당화혈색소 조절목표')
+    elif kind == 'forged_quotes':
+        brief['opportunity_evidence']['matches'] = [
+            {'result_index': index, 'quote': '검색 표본에 없는 조작된 의도 근거입니다.'} for index in (0, 1)]
+    else:
+        brief['score'] = 999
+    path.write_text(json.dumps(queue))
+    before = path.read_text()
+    with pytest.raises(RuntimeError):
+        module.publish_draft(1724, c['env'])
+    c['fetch'].assert_not_called()
+    c['client'].generate.assert_not_called()
+    c['session'].post.assert_not_called()
+    assert path.read_text() == before
+    assert not module.market.LEDGER.exists()
 
 
 @pytest.mark.parametrize('kind', ['live', 'queue', 'registry', 'ledger'])

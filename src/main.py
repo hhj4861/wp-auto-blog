@@ -301,8 +301,11 @@ def main() -> int:
             # --category 지정 시 해당 카테고리의 pending만 소비한다
             # (스케줄: 월/수/금=생활정보, 화/목=취업, 토=건강)
             today = _dt.date.today()
-            require_market = os.getenv("BLOG_REQUIRE_MARKET_TOPIC") == "1"
-            from src.market_topics import fresh_market_item
+            from src.market_topics import SOURCE as MARKET_SOURCE, fresh_market_item
+            require_market = os.getenv("BLOG_REQUIRE_MARKET_TOPIC") == "1" or any(
+                item.get('source') == MARKET_SOURCE
+                and (not args.category or item.get('category') == args.category)
+                for item in queue)
 
             def _pick_next():
                 """발행할 다음 토픽을 고른다.
@@ -318,7 +321,8 @@ def main() -> int:
                     and (not args.category or item.get("category") == args.category)
                 ]
                 if require_market:
-                    cands = [item for item in cands if fresh_market_item(item, args.category)]
+                    cands = [item for item in cands
+                             if fresh_market_item(item, args.category or item.get('category'))]
                     return max(cands, key=lambda item: item.get("score", 0), default=None)
                 if not cands:
                     return None

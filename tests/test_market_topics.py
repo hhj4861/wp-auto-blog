@@ -17,16 +17,39 @@ def evidence(url='https://example.go.kr/info'):
             'sha256': 'test'}
 
 
-def organic(url='https://independent.example/info'):
+def organic(url='https://independent.example/info', keyword='시험준비물'):
     from urllib.parse import urlsplit
     return {'url': url, 'domain': urlsplit(url).hostname,
-            'title': '시험 준비물', 'snippet': '시험 응시 준비 안내'}
+            'title': keyword + ' 확인 방법',
+            'snippet': keyword + '의 확인 기준과 필요한 준비 절차를 안내합니다.'}
+
+
+def organic_sample(keyword='시험준비물'):
+    """Synthetic search responses: five distinct URLs across three publishers."""
+    return [organic(url, keyword) for url in (
+        'https://independent.example/info', 'https://guide.example/checklist',
+        'https://community.example/questions', 'https://independent.example/steps',
+        'https://guide.example/details')]
+
+
+def intent_review(keyword='시험준비물'):
+    return {'scope': 'full_keyword', 'target_keyword': keyword,
+            'matches': [{'result_index': index, 'quote': row['snippet']}
+                        for index, row in enumerate(organic_sample(keyword)[:2])]}
+
+
+def opportunity_evidence(item):
+    return {'version': 1, 'query': item['keyword'], 'topic': item['topic'],
+            'intent': item['intent'], 'provider': item['organic_provider'],
+            'checked_at': item['selected_at'], 'result_count': 5, 'domain_count': 3,
+            'dominant_ratio': 0, **intent_review(item['keyword'])}
 
 
 def analysis(keyword='시험준비물', category='취업', **extra):
     return {'supported': True, 'category': category, 'topic': keyword + ' 확인 방법',
             'intent': '무엇을 준비하나', 'gap': '공식 준비물 체크리스트',
-            'source_index': 0, 'serp_indices': [0], 'valid_until': None, **extra}
+            'source_index': 0, 'serp_indices': [0], 'valid_until': None,
+            'intent_evidence': intent_review(keyword), **extra}
 
 
 @pytest.fixture(autouse=True)
@@ -42,14 +65,24 @@ def isolated_market_history(tmp_path, monkeypatch):
 
 
 def candidate(category='취업', **extra):
-    return {'source': market.SOURCE, 'category': category, 'status': 'pending',
+    keyword = extra.get('keyword', '시험준비물')
+    results = organic_sample(keyword)
+    row = {'source': market.SOURCE, 'category': category, 'status': 'pending',
             'selected_at': datetime.now(timezone.utc).isoformat(), 'monthly_search': 1200,
-            'source_url': 'https://example.go.kr/info', 'organic_domains': ['blog.example'],
+            'source_url': 'https://example.go.kr/info',
+            'organic_domains': [result['domain'] for result in results],
+            'organic_provider': 'google_custom_search', 'evidence_mode': 'serp',
+            'publish_eligible': True, 'hold_reasons': [], 'demand_scope': 'keyword_total',
             'topic': '시험 준비물 확인 방법', 'keyword': '시험준비물', 'keywords': ['시험준비물'],
-            'score': 50, 'selection_version': market.PROCESS_VERSION,
+            'score': 79.63, 'selection_version': market.PROCESS_VERSION,
+            'score_components': {'demand': 24.63, 'organic_opportunity': 40,
+                                 'intent_fit': 15, 'trend': 0},
+            'trend_growth': None, 'trend_status': 'unavailable',
             'intent': '무엇을 준비하나', 'gap': '공식 준비물 체크리스트',
-            'verified_sources': [evidence()], 'organic_results': [organic()],
-            'intent_results': [organic()['url']], **extra}
+            'verified_sources': [evidence()], 'organic_results': results,
+            'intent_results': [results[0]['url']], **extra}
+    row.setdefault('opportunity_evidence', opportunity_evidence(row))
+    return row
 
 
 def install_cak_feed(tmp_path, monkeypatch, items=None, *, now=None, ttl=24):
@@ -67,7 +100,7 @@ def mock_health_selection(monkeypatch, keywords, related=()):
     monkeypatch.setattr(market, 'fetch_keyword_stats', lookup)
     trend = Mock(return_value=0.5)
     monkeypatch.setattr(market, 'fetch_trend_change', trend)
-    monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', [organic()]))
+    monkeypatch.setattr(market, 'search_results', lambda keyword: ('google_custom_search', organic_sample(keyword)))
     monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence('https://health.go.kr/info')])
     monkeypatch.setattr(market, 'research_official_sources', Mock(return_value=([], None)))
     prompts = []
@@ -268,13 +301,19 @@ def test_cak_serp_outage_does_not_invent_organic_opportunity(tmp_path, monkeypat
     monkeypatch.setattr(market, 'search_results', lambda _: (None, []))
     source = web_evidence('https://health.go.kr/info', origin='model_reported_locator')
     monkeypatch.setattr(market, 'research_official_sources', lambda *_: ([source], web_research_evidence(source)))
-    row = market.select_category('건강', top_n=1, titles=[])['selected'][0]
+    report = market.select_category('건강', top_n=1, titles=[])
+    assert report['selected'] == []
+    row = report['held'][0]
     assert row['evidence_mode'] == 'official_pages'
     assert row['organic_results'] == row['organic_domains'] == []
     assert row['dominant_result_ratio'] is row['organic_provider'] is None
     assert row['score_components']['organic_opportunity'] == 0
     assert row['score_components']['cak_trend'] == 6.6
-    assert market.fresh_market_item(row, '건강')
+    assert row['status'] == 'research_only' and row['publish_eligible'] is False
+    assert market.fresh_research_item(row, '건강')
+    assert not market.fresh_market_item(row, '건강')
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report([], report)
     trend.assert_not_called()
 
 
@@ -333,7 +372,7 @@ def test_selection_requires_measured_keyword_source_and_serp(monkeypatch):
     monkeypatch.setattr(market, 'demand_candidates', lambda seeds: {'시험준비물':{'keyword':'시험준비물','monthly':1200,'comp':'높음'}})
     monkeypatch.setattr(market, 'fetch_source', lambda *a: evidence())
     monkeypatch.setattr(market, 'official_search_urls', lambda _: [proposal['source_url']])
-    monkeypatch.setattr(market, 'search_results', lambda *a: ('google_custom_search', [organic(), organic(proposal['source_url'])]))
+    monkeypatch.setattr(market, 'search_results', lambda *a: ('google_custom_search', organic_sample()))
     result = market.select_category('취업', titles=[])
     assert result['selected'][0]['monthly_search'] == 1200
     assert result['selected'][0]['advertising_competition'] == '높음' # not SEO rejection
@@ -465,7 +504,8 @@ def test_failed_sources_and_competitive_heads_trigger_next_measured_candidate(mo
     monkeypatch.setattr(market, 'candidate_sources', lambda key, _: [] if key == '서류준비' else [evidence()])
     monkeypatch.setattr(market, 'research_official_sources', lambda *args: ([], None))
     def search(key):
-        return 'google_custom_search', [organic('https://example.go.kr/info') if key == '거대키워드' else organic()]
+        return 'google_custom_search', ([organic('https://example.go.kr/info', key)]
+                                       if key == '거대키워드' else organic_sample(key))
     monkeypatch.setattr(market, 'search_results', search)
     prompts = []
     responses = iter([{'candidates': [{'keyword': '거대키워드'}, {'keyword': '서류준비'}]},
@@ -500,6 +540,78 @@ def test_old_reports_and_incomplete_new_reports_cannot_publish():
     assert not market.fresh_market_item(candidate(verified_sources=[]), '취업')
     assert not market.fresh_market_item(candidate(intent_results=[]), '취업')
     assert not market.fresh_market_item(candidate(score=float('nan')), '취업')
+
+
+@pytest.mark.parametrize('change', [
+    {'selection_version': 4}, {'publish_eligible': False}, {'demand_scope': 'narrowed_topic'},
+    {'opportunity_evidence': None}, {'score': 999}, {'organic_domains': ['invented.example']},
+    {'trend_growth': 0}, {'trend_status': 'measured'},
+    {'score_components': {'demand': 24.63, 'organic_opportunity': 40, 'specificity': 15, 'trend': 0}},
+])
+def test_cached_search_opportunity_and_priority_are_rechecked_before_enqueue(change):
+    row = candidate()
+    assert market.fresh_market_item(row, '취업')
+    row.update(change)
+    assert not market.fresh_market_item(row, '취업')
+    queue = [{'source': 'manual', 'status': 'pending', 'topic': '기존 수동 항목'}]
+    before = deepcopy(queue)
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report(queue, {'category': '취업', 'selected': [row]})
+    assert queue == before
+
+
+@pytest.mark.parametrize('change,reason', [
+    ({'scope': 'narrower_query', 'target_keyword': '시험준비물 신분증 분실'},
+     'narrower_or_unverified_search_intent'),
+    ({'scope': 'navigation'}, 'narrower_or_unverified_search_intent'),
+    ({'target_keyword': '다른키워드'}, 'narrower_or_unverified_search_intent'),
+    ({'matches': [{'result_index': 0, 'quote': '원문에 없는 의도 근거입니다.'},
+                  {'result_index': 1, 'quote': '원문에 없는 의도 근거입니다.'}]},
+     'unverified_intent_quotes'),
+    ({'matches': [{'result_index': 0, 'quote': organic_sample()[0]['snippet']},
+                  {'result_index': 3, 'quote': organic_sample()[3]['snippet']}]},
+     'unverified_intent_quotes'),
+])
+def test_cached_intent_requires_exact_keyword_and_quotes_from_distinct_domains(change, reason):
+    row = candidate()
+    assert market.fresh_market_item(row, '취업')
+    row['opportunity_evidence'].update(change)
+    assert market.fresh_research_item(row, '취업')
+    assert reason in market.opportunity.issues(row)
+    assert not market.fresh_market_item(row, '취업')
+
+
+@pytest.mark.parametrize('kind,reason', [
+    ('few_results', 'insufficient_search_sample'),
+    ('narrower_query', 'narrower_or_unverified_search_intent'),
+    ('missing_quotes', 'unverified_intent_quotes'),
+])
+def test_selection_holds_source_backed_plans_without_search_opportunity(monkeypatch, kind, reason):
+    rows, review = organic_sample(), intent_review()
+    if kind == 'few_results':
+        rows = rows[:4]
+    elif kind == 'narrower_query':
+        review.update(scope='narrower_query', target_keyword='시험준비물 신분증 분실')
+    else:
+        review['matches'] = []
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
+    monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', rows))
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    monkeypatch.setattr(market, 'ask', Mock(side_effect=[
+        {'candidates': [{'keyword': '시험준비물'}]}, analysis(intent_evidence=review)]))
+    report = market.select_category('취업', 1, titles=[])
+    assert report['selected'] == [] and report['rejected'] == []
+    held = report['held'][0]
+    assert held['monthly_search'] == 1200 and held['demand_scope'] == 'keyword_total'
+    assert held['status'] == 'research_only' and held['publish_eligible'] is False
+    assert reason in held['hold_reasons']
+    assert held['score_components']['intent_fit'] == 0
+    assert market.fresh_research_item(held, '취업')
+    assert not market.fresh_market_item(held, '취업')
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report([], report)
 
 
 def test_completed_queue_and_renamed_post_keyword_remain_reserved(tmp_path, monkeypatch):
@@ -547,9 +659,21 @@ def market_pipeline(mock_env_vars, monkeypatch, tmp_path):
                                            use_llm_topics=False))
     pipeline.content_generator = Mock()
     pipeline.content_generator.generate.return_value = GeneratedContent(
-        title='시험준비물 확인 방법', html='<h2>시험준비물</h2><p>공식 안내</p>',
+        title='시험준비물 확인 방법',
+        html='<h2>시험준비물</h2><p>시험준비물은 신분증과 수험표 등 공식 준비물 목록을 확인하세요.</p>',
         meta_description='공식 준비물 안내', keywords=['시험준비물'], word_count=1000,
         content_type=ContentType.GUIDE, focus_keyphrase='시험 준비물', sources=[evidence()])
+    def review_scope(prompt):
+        from bs4 import BeautifulSoup
+
+        assert prompt.startswith('최종 검색 의도 검수입니다.')
+        payload = json.loads(prompt.split('\n', 1)[1])
+        article = pipeline.content_generator.generate.return_value.html
+        quote = BeautifulSoup(article, 'html.parser').find('p').get_text(' ', strip=True)
+        assert quote in payload['article']
+        return json.dumps({'covers_primary_intent': True, 'answer_quote': quote})
+
+    pipeline.content_generator._call_llm.side_effect = review_scope
     pipeline.trend_detector = Mock()
     pipeline.wp_client = Mock()
     pipeline.wp_client.create_post.return_value = CreatedPost(
@@ -566,7 +690,9 @@ def market_pipeline(mock_env_vars, monkeypatch, tmp_path):
     return pipeline
 
 
-def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(tmp_path, monkeypatch, market_pipeline):
+@pytest.mark.parametrize('require_env', [True, False])
+def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(
+        tmp_path, monkeypatch, market_pipeline, require_env):
     """Exercise the real selector, report, queue, CLI, pipeline and durable ledger.
 
     Paid/search providers, writing, quality review and WordPress are test doubles.
@@ -584,7 +710,7 @@ def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(tmp_
     monkeypatch.setattr(cli, 'existing_titles', lambda: market.historical_terms())
     monkeypatch.setenv('SELECT_TOP_N', '1')
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {'시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
-    monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', [organic()]))
+    monkeypatch.setattr(market, 'search_results', lambda keyword: ('google_custom_search', organic_sample(keyword)))
     monkeypatch.setattr(market, 'official_search_urls', lambda _: [evidence()['url']])
     monkeypatch.setattr(market, 'fetch_source', lambda _: evidence())
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
@@ -599,7 +725,10 @@ def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(tmp_
     monkeypatch.setattr(main_module, 'load_dotenv', lambda: None)
     monkeypatch.setattr(main_module, 'setup_logging', lambda **kw: None)
     monkeypatch.setattr(main_module, 'BlogPipeline', lambda *a, **kw: market_pipeline)
-    monkeypatch.setenv('BLOG_REQUIRE_MARKET_TOPIC', '1')
+    if require_env:
+        monkeypatch.setenv('BLOG_REQUIRE_MARKET_TOPIC', '1')
+    else:
+        monkeypatch.delenv('BLOG_REQUIRE_MARKET_TOPIC', raising=False)
     monkeypatch.setattr('sys.argv', ['main', '--mode', 'general', '--from-queue', '--auto-publish', '--category', '취업'])
     assert main_module.main() == 0
     market_pipeline.wp_client.create_post.assert_called_once()
@@ -608,6 +737,11 @@ def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(tmp_
     assert passed['market_brief']['verified_sources'] == [evidence()]
     assert json.loads(queue_path.read_text())[0]['status'] == 'completed'
     assert json.loads(market.LEDGER.read_text())[0]['post_id'] == 123
+    scope_call = market_pipeline.content_generator._call_llm
+    scope_call.assert_called_once()
+    scope_input = json.loads(scope_call.call_args.args[0].split('\n', 1)[1])
+    assert scope_input['approved_intent'] == queued['intent']
+    assert scope_input['search_evidence'] == queued['opportunity_evidence']['matches']
 
     # Even a deleted WordPress post and a renamed title cannot re-admit its keyword.
     report = market.select_category
@@ -652,7 +786,8 @@ def test_cak_selection_to_publication_keeps_provenance_and_deleted_keyword_reser
     market_pipeline.config.category = '건강'
     written = market_pipeline.content_generator.generate.return_value
     written.title = queued['topic']
-    written.html = '<h2>혈당 관리 방법</h2><p>공식 건강 안내</p>'
+    written.html = ('<h2>혈당 관리 방법</h2>'
+                    '<p>혈당 관리 방법은 공식 자료의 관리 기준과 일상에서 확인할 항목을 나누어 살펴보세요.</p>')
     written.keywords = [keyword]
     written.focus_keyphrase = keyword
     written.sources = queued['verified_sources']
@@ -705,6 +840,60 @@ def test_market_publication_rechecks_keyword_and_history(market_pipeline, monkey
     assert not result.success
     market_pipeline.wp_client.create_post.assert_not_called()
     assert not market.LEDGER.exists()
+
+
+def test_final_article_with_narrower_scope_is_saved_as_draft(market_pipeline):
+    from src.wordpress_client import PostStatus
+
+    item = candidate()
+    written = market_pipeline.content_generator.generate.return_value
+    written.html = '<h2>시험준비물</h2><p>신분증을 분실한 상황만 안내합니다.</p>'
+    reviewer = market_pipeline.content_generator._call_llm
+    reviewer.side_effect = None
+    reviewer.return_value = json.dumps({'covers_primary_intent': False,
+                                       'answer_quote': '신분증을 분실한 상황만 안내합니다.'})
+    market_pipeline.wp_client.create_post.return_value.status = PostStatus.DRAFT
+    result = market_pipeline.run_single(item['topic'], item['keywords'], '취업', market_brief=item)
+    assert result.success and result.post.status == PostStatus.DRAFT
+    market_pipeline.wp_client.create_post.assert_called_once()
+    assert market_pipeline.wp_client.create_post.call_args.kwargs['status'] == PostStatus.DRAFT
+    reviewer.assert_called_once()
+    assert not market.LEDGER.exists()
+
+
+@pytest.mark.parametrize('legacy_present', [True, False])
+def test_market_queue_infers_gate_without_env_and_never_uses_legacy_or_career_fallback(
+        market_pipeline, tmp_path, monkeypatch, legacy_present):
+    from src import main as entry
+
+    held = web_candidate()
+    assert market.fresh_research_item(held, '취업')
+    assert not market.fresh_market_item(held, '취업')
+    queue = [held]
+    if legacy_present:
+        queue.insert(0, {'category': '취업', 'status': 'pending', 'topic': '기존 수동 취업 안내',
+                         'keywords': ['기존키워드'], 'monthly_search': 100000})
+    path = tmp_path / 'data/topic_queue_general.json'
+    path.parent.mkdir(exist_ok=True)
+    path.write_text(json.dumps(queue))
+    before = path.read_text()
+    monkeypatch.setattr(entry, '__file__', str(tmp_path / 'src/main.py'))
+    monkeypatch.setattr(entry, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(entry, 'setup_logging', lambda **kw: None)
+    monkeypatch.setattr(entry, 'BlogPipeline', lambda *a, **kw: market_pipeline)
+    run = Mock(side_effect=AssertionError('No unverified queue item may reach the pipeline'))
+    monkeypatch.setattr(market_pipeline, 'run_single', run)
+    detector = Mock(side_effect=AssertionError('No automatic career fallback for a market queue'))
+    monkeypatch.setattr(entry, 'TrendDetector', detector)
+    monkeypatch.delenv('BLOG_REQUIRE_MARKET_TOPIC', raising=False)
+    monkeypatch.setattr('sys.argv', ['main', '--mode', 'general', '--from-queue',
+                                   '--auto-publish', '--category', '취업'])
+    assert entry.main() == 1
+    run.assert_not_called()
+    detector.assert_not_called()
+    market_pipeline.wp_client.create_post.assert_not_called()
+    assert not market.LEDGER.exists()
+    assert path.read_text() == before
 
 
 def test_published_history_survives_failure_after_wordpress_write(market_pipeline, monkeypatch):
@@ -801,8 +990,7 @@ def two_source_health_writer(mock_env_vars, monkeypatch):
         web_evidence(primary, 'model_reported_locator', excerpt='저장 당시 진단기준 본문: 재사용 금지'),
         web_evidence(faq, 'model_reported_locator', excerpt='저장 당시 정상범위 FAQ: 재사용 금지'),
     ]
-    item = web_candidate(origin='model_reported_locator')
-    item.update(category='건강', keyword='당화혈색소정상수치', keywords=['당화혈색소정상수치'],
+    item = candidate(category='건강', keyword='당화혈색소정상수치', keywords=['당화혈색소정상수치'],
                 topic='당화혈색소정상수치: 정상·전단계·당뇨병 진단기준 구분',
                 intent='당화혈색소 정상수치는 얼마이며, 정상수치와 조절목표는 어떻게 다른가요?',
                 gap='진단 기준표와 정상범위 FAQ의 설명을 함께 사용해 두 기준을 구분합니다.',
@@ -917,10 +1105,13 @@ def web_research_evidence(*sources):
 def web_candidate(origin='native_open', **extra):
     source = web_evidence(origin=origin)
     return candidate(evidence_mode='official_pages', organic_provider=None,
+                     status='research_only', publish_eligible=False,
+                     hold_reasons=['organic_results_unavailable'],
                      organic_domains=[], organic_results=[], dominant_result_ratio=None,
                      verified_sources=[source], research_evidence=web_research_evidence(source),
+                     score=24.63,
                      score_components={'demand': 24.63, 'organic_opportunity': 0,
-                                       'specificity': 15, 'trend': 0},
+                                       'intent_fit': 0, 'trend': 0},
                      intent_results=[source['url']], **extra)
 
 
@@ -1014,7 +1205,7 @@ def test_model_reported_locator_cannot_replace_accessible_relevant_body(monkeypa
 
 
 @pytest.mark.parametrize('origin', ['native_open', 'model_reported_locator'])
-def test_search_outage_uses_verified_longtail_without_invented_competition(monkeypatch, origin):
+def test_search_outage_holds_verified_longtail_without_invented_competition(monkeypatch, origin):
     from src import codex_client
     source = evidence()
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {
@@ -1037,7 +1228,8 @@ def test_search_outage_uses_verified_longtail_without_invented_competition(monke
     monkeypatch.setattr(market, 'fetch_source', fetch)
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     report = market.select_category('취업', 1, titles=[])
-    row = report['selected'][0]
+    assert report['selected'] == []
+    row = report['held'][0]
     assert client.research.call_count == 1
     fetch.assert_called_once_with(source['url'])
     assert row['keyword'] == '시험준비물' and row['monthly_search'] == 1200
@@ -1048,13 +1240,24 @@ def test_search_outage_uses_verified_longtail_without_invented_competition(monke
     assert row['verified_sources'] == [{**source, 'locator_origin': origin}]
     assert row['research_evidence'] == web_research_evidence(web_evidence(origin=origin))
     assert row['intent_results'] == [source['url']]
-    assert row['selection_version'] == 4
-    assert market.fresh_market_item(row, '취업')
+    assert row['selection_version'] == 5
+    assert row['status'] == 'research_only' and row['publish_eligible'] is False
+    assert 'organic_results_unavailable' in row['hold_reasons']
+    assert row['score_components']['intent_fit'] == 0
+    assert market.fresh_research_item(row, '취업')
+    assert not market.fresh_market_item(row, '취업')
     assert '검색 순위나 경쟁 결과는 확보하지 못했습니다' in prompts[-1]
     assert 'invented model evidence' not in prompts[-1]
-    queued = market.enqueue_report([], report)
-    assert queued == [row]
-    market.record_published_keyword(row, 123, 'https://trendpulse.blog/test')
+    queue = [{'status': 'pending', 'source': 'manual', 'topic': '기존 수동 항목'}]
+    before = deepcopy(queue)
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report(queue, report)
+    # Placing a research-only row in selected, or forging its stored flag, cannot bypass the gate.
+    forged = dict(row, status='pending', publish_eligible=True, hold_reasons=[])
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report(queue, {'category': '취업', 'selected': [forged]})
+    assert queue == before
+    market.record_published_keyword(candidate(), 123, 'https://trendpulse.blog/test')
     assert market.candidate_pool({'2027 시험 준비물': {'keyword': '2027 시험 준비물', 'monthly': 1200}},
                                  market.historical_terms()) == []
 
@@ -1077,9 +1280,10 @@ def test_search_outage_uses_verified_longtail_without_invented_competition(monke
 ])
 def test_native_research_cache_cannot_pass_without_provenance(changes):
     row = web_candidate()
-    assert market.fresh_market_item(row, '취업')
-    row.update(changes)
+    assert market.fresh_research_item(row, '취업')
     assert not market.fresh_market_item(row, '취업')
+    row.update(changes)
+    assert not market.fresh_research_item(row, '취업')
 
 
 def test_model_locator_redirect_uses_original_url_and_matching_origin(monkeypatch):
@@ -1098,9 +1302,10 @@ def test_model_locator_redirect_uses_original_url_and_matching_origin(monkeypatc
     row = web_candidate(origin='model_reported_locator')
     row.update(source_url=source['url'], verified_sources=sources,
                intent_results=[source['url']], research_evidence=research)
-    assert market.fresh_market_item(row, '취업')
-    row['verified_sources'][0]['locator_origin'] = 'native_open'
+    assert market.fresh_research_item(row, '취업')
     assert not market.fresh_market_item(row, '취업')
+    row['verified_sources'][0]['locator_origin'] = 'native_open'
+    assert not market.fresh_research_item(row, '취업')
 
 
 def test_native_plan_keeps_each_cited_official_source_and_rejects_invalid_index(monkeypatch):
@@ -1121,13 +1326,15 @@ def test_native_plan_keeps_each_cited_official_source_and_rejects_invalid_index(
 def test_every_native_intent_source_requires_fresh_read_evidence(change):
     row = web_candidate()
     source = web_evidence('https://second.go.kr/info')
-    row['verified_sources'].append({**source, **change})
+    row['verified_sources'].append(source)
     row['intent_results'].append(source['url'])
     row['research_evidence']['locators'].append({'url': source['url'], 'origin': source['locator_origin']})
-    assert not market.fresh_market_item(row, '취업')
+    assert market.fresh_research_item(row, '취업')
+    row['verified_sources'][1].update(change)
+    assert not market.fresh_research_item(row, '취업')
 
 
-def test_later_native_research_timeout_preserves_selected_candidate(monkeypatch):
+def test_later_native_research_timeout_preserves_held_research_candidate(monkeypatch):
     source = web_evidence()
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {
         key: {'keyword': key, 'monthly': 1200} for key in ['시험준비물', '시험신청방법']})
@@ -1140,7 +1347,10 @@ def test_later_native_research_timeout_preserves_selected_candidate(monkeypatch)
         RuntimeError('raw diagnostic must not be included')]))
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     report = market.select_category('취업', 1, titles=[])
-    assert report['selected'][0]['keyword'] == '시험준비물'
+    assert report['selected'] == []
+    assert report['held'][0]['keyword'] == '시험준비물'
+    assert market.fresh_research_item(report['held'][0], '취업')
+    assert not market.fresh_market_item(report['held'][0], '취업')
     assert report['rejected'] == [{'keyword': '시험신청방법',
                                   'reason': 'codex web research unavailable: request_failed'}]
 
@@ -1149,9 +1359,10 @@ def test_native_source_check_can_cross_korean_midnight():
     row = web_candidate(selected_at='2026-09-09T14:59:00+00:00')
     row['verified_sources'][0]['checked_on'] = '2026-09-10'
     now = datetime.fromisoformat('2026-09-09T15:10:00+00:00')
-    assert market.fresh_market_item(row, '취업', now)
-    row['verified_sources'][0]['checked_on'] = '2026-09-11'
+    assert market.fresh_research_item(row, '취업', now)
     assert not market.fresh_market_item(row, '취업', now)
+    row['verified_sources'][0]['checked_on'] = '2026-09-11'
+    assert not market.fresh_research_item(row, '취업', now)
 
 
 @pytest.mark.parametrize('keyword,category', [
@@ -1234,7 +1445,7 @@ def test_selection_passes_requested_category_to_pool(monkeypatch):
     monkeypatch.setattr(market, 'candidate_pool', pool)
     monkeypatch.setattr(market, 'ask', Mock(side_effect=[
         {'candidates': [{'keyword': keyword}]}, analysis(keyword, category)]))
-    monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', [organic()]))
+    monkeypatch.setattr(market, 'search_results', lambda keyword: ('google_custom_search', organic_sample(keyword)))
     monkeypatch.setattr(market, 'candidate_sources', lambda *args: [evidence()])
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     report = market.select_category(category, 1, titles=[])
@@ -1313,10 +1524,11 @@ def test_unknown_keyword_still_requires_independent_model_category_review(
     ('안내확인방법', '안내확인방법: 국가기술자격증종류와 기능사 등급 비교'),
 ])
 def test_cached_wrong_category_report_cannot_be_enqueued(evidence_mode, keyword, topic):
-    row = web_candidate() if evidence_mode == 'official_pages' else candidate()
-    row.update(category='생활정보', keyword=keyword, topic=topic, keywords=[keyword])
+    kwargs = dict(category='생활정보', keyword=keyword, topic=topic, keywords=[keyword])
+    row = web_candidate(**kwargs) if evidence_mode == 'official_pages' else candidate(**kwargs)
     queue = [{'source': 'manual', 'status': 'pending', 'topic': '기존 보존 항목'}]
     before = [dict(item) for item in queue]
+    assert not market.fresh_research_item(row, '생활정보')
     assert not market.fresh_market_item(row, '생활정보')
     with pytest.raises(RuntimeError, match='no verified market topic'):
         market.enqueue_report(queue, {'category': '생활정보', 'selected': [row]})
@@ -1328,7 +1540,13 @@ def test_cached_wrong_category_report_cannot_be_enqueued(evidence_mode, keyword,
     ('국가기술자격증종류', '취업'), ('건강보험료환급금', '건강'),
 ])
 def test_correct_category_cached_report_remains_usable(evidence_mode, keyword, category):
-    row = web_candidate() if evidence_mode == 'official_pages' else candidate()
-    row.update(category=category, keyword=keyword, topic=keyword + ' 확인 방법', keywords=[keyword])
-    assert market.fresh_market_item(row, category)
-    assert market.enqueue_report([], {'category': category, 'selected': [row]}) == [row]
+    kwargs = dict(category=category, keyword=keyword, topic=keyword + ' 확인 방법', keywords=[keyword])
+    row = web_candidate(**kwargs) if evidence_mode == 'official_pages' else candidate(**kwargs)
+    assert market.fresh_research_item(row, category)
+    if evidence_mode == 'serp':
+        assert market.fresh_market_item(row, category)
+        assert market.enqueue_report([], {'category': category, 'selected': [row]}) == [row]
+    else:
+        assert not market.fresh_market_item(row, category)
+        with pytest.raises(RuntimeError, match='no verified market topic'):
+            market.enqueue_report([], {'category': category, 'selected': [row]})

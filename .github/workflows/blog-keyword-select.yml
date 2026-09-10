@@ -6,6 +6,10 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      search_check_only:
+        description: '검색 결과 API 접근·표본만 점검 (Codex·주제 선정·포스팅 없음)'
+        type: boolean
+        default: false
       candidate_check_only:
         description: 'CAK artifact 다운로드·지표 검증만 점검 (Codex·보고서·포스팅 없음)'
         type: boolean
@@ -36,8 +40,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  search-check:
+    if: inputs.search_check_only == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4
+      - name: Check actual search result availability
+        env:
+          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_SEARCH_ALTERNATE_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
+          GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+        run: python scripts/check_market_search.py
   candidate-check:
-    if: inputs.candidate_check_only == true && inputs.auth_check_only != true && inputs.research_check_only != true
+    if: inputs.search_check_only != true && inputs.candidate_check_only == true && inputs.auth_check_only != true && inputs.research_check_only != true
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -69,7 +91,7 @@ jobs:
               raise SystemExit(1)
           PY
   select:
-    if: inputs.candidate_check_only != true || inputs.auth_check_only == true || inputs.research_check_only == true
+    if: inputs.search_check_only != true && (inputs.candidate_check_only != true || inputs.auth_check_only == true || inputs.research_check_only == true)
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:

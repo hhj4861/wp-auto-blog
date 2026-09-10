@@ -124,6 +124,7 @@ def test_success_uses_bound_native_dto_and_never_prints_text(setup, monkeypatch,
     args, kwargs = popen.call_args
     command = args[0]
     for option in ('features.standalone_web_search=true', 'web_search="live"',
+                   'features.code_mode.direct_only_tool_namespaces=["web"]',
                    'forced_login_method="chatgpt"', 'cli_auth_credentials_store="file"',
                    'features.shell_tool=false', 'features.hooks=false',
                    'features.plugins=false', 'features.apps=false'):
@@ -438,6 +439,8 @@ def test_native_dynamic_query_is_json_data_and_returns_only_native_fields(setup,
     instructions, commands = prompt.split("\n", 1)
     assert query not in instructions
     assert json.loads(commands) == {"search_query": [{"q": query}], "response_length": "short"}
+    assert "web.run tool directly" in instructions
+    assert "Never use a functions.exec wrapper" in instructions
     assert capsys.readouterr() == ("", "")
 
 
@@ -698,6 +701,30 @@ def test_unregistered_raw_function_identity_is_counted_without_aliasing_or_loggi
     assert all(type(value) is int for key, value in report.items() if key != "reason")
     assert output.err == "" and "SECRET" not in output.out
     assert process.stdin.closed and process.stdout.closed
+
+
+@pytest.mark.parametrize("namespace,name,counter", [
+    (None, "exec", "raw_code_mode_events"),
+    ("functions", "exec", "raw_code_mode_events"),
+    (None, "web.run", "raw_flattened_web_events"),
+    ("web", "run", "raw_namespaced_web_events"),
+    ("SECRET-SENTINEL", "SECRET-SENTINEL", "raw_other_function_identity_events"),
+])
+def test_raw_freeform_exec_is_identified_but_never_authorizes_nested_results(
+        setup, namespace, name, counter, capsys):
+    _, install = setup
+    raw = raw_call()
+    raw["params"]["item"].update(type="custom_tool_call", namespace=namespace, name=name,
+        input="SECRET-SENTINEL; web.run(" + raw["params"]["item"]["arguments"] + ")")
+    install(handshake(include_raw=False) + [raw, item_event(), completion()])
+    assert probe.main() == 1
+    output = capsys.readouterr()
+    report = json.loads(output.out)
+    assert report["reason"] == "unexpected_raw_item_type"
+    assert report["raw_custom_tool_call_events"] == report[counter] == 1
+    assert report["raw_function_call_events"] == report["validated_web_calls"] == 0
+    assert report["bound_search_items"] == report["completed_web_items"] == 0
+    assert output.err == "" and "SECRET" not in output.out
 
 
 @pytest.mark.parametrize("recipient,counter", [

@@ -181,7 +181,7 @@
   },
   "건강": {
     "category": "건강",
-    "selected_at": "2026-09-10T02:09:23.822718+00:00",
+    "selected_at": "2026-09-10T03:17:23.532196+00:00",
     "seeds": [
       "건강검진",
       "예방접종",
@@ -190,41 +190,91 @@
     ],
     "selection_version": 4,
     "research_rounds": 1,
+    "cak_import": {
+      "status": "ok",
+      "reason": null,
+      "received_count": 80,
+      "validated_count": 80,
+      "rejected_count": 0,
+      "qualified_rising_count": 22,
+      "monthly_unavailable_count": 0,
+      "rejection_counts": {},
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 34432379227,
+        "artifactId": 10135002927,
+        "headSha": "eb75265049e17e80e2d5225f06df2ce1eae9a036",
+        "sourceRunCreatedAt": "2026-09-10T03:11:35Z"
+      },
+      "export_metadata": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-09-10T03:14:31.680Z",
+        "expiresAt": "2026-09-11T03:12:21.099Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 173,
+          "exportedCount": 80,
+          "truncatedCount": 93
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 5,
+          "missingPreviousDay": 3,
+          "insufficientBaseline": 1
+        }
+      },
+      "direct_count": 68,
+      "expanded_seed_count": 5,
+      "related_count": 449,
+      "seed_lookup_failed_count": 0,
+      "filtered_count": 12
+    },
     "analyst": "codex_subscription",
-    "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 964,
+    "discovery_provider": "naver_related_keywords_and_cak_export",
+    "measured_candidates": 1481,
     "evaluated_candidates": 6,
     "selected": [
       {
         "keyword": "당화혈색소정상수치",
         "category": "건강",
-        "topic": "당화혈색소정상수치: 정상·전단계·당뇨병 진단기준 구분",
+        "topic": "당화혈색소정상수치: 정상·전단계·당뇨병 진단 기준",
         "intent": "당화혈색소 정상수치는 얼마이며, 5.7%와 6.5%는 각각 어떤 기준인가요?",
-        "gap": "정상 5.7% 미만, 전단계 5.7~6.4%, 당뇨병 진단기준 6.5% 이상을 표로 정리하고 정상수치와 조절목표를 구분합니다.",
-        "source_url": "https://www.diabetes.or.kr/general/info/treat/treat_01.php",
+        "gap": "정상 5.7% 미만·전단계 5.7~6.4%·진단 기준 6.5% 이상 비교표와 반복검사 원칙을 정리합니다.",
+        "source_url": "https://www.gccity.go.kr/ghc/contents.do?mId=0511010000",
         "verified_sources": [
           {
-            "url": "https://www.diabetes.or.kr/general/info/treat/treat_01.php",
-            "original_url": "https://www.diabetes.or.kr/general/info/treat/treat_01.php",
-            "title": "대한당뇨병학회 일반인",
+            "url": "https://www.gccity.go.kr/ghc/contents.do?mId=0511010000",
+            "original_url": "https://www.gccity.go.kr/ghc/contents.do?mId=0511010000",
+            "title": "심뇌혈관질환 예방관리 | 만성질환 | 건강증진사업 | 홈페이지",
             "checked_on": "2026-09-10",
-            "sha256": "02525eada85ce78ffba81e564e1f60284fae17a0dcde757a234b408ab90482c9",
-            "excerpt": "Skip Navigation Skip to contents 나의 즐겨찾기 메뉴 일반인 홈페이지 전문가 홈페이지 마이페이지 로그인 회원가입 메뉴보기 소개말 소개말 당뇨병 이해/치료/관리 당뇨병이란 치료 및 관리 합병증 제1형 당뇨병 임신성 당뇨병 당뇨병과 나의 마음 당뇨병과 가족의 역할 당뇨병과 스트레스 당뇨인의 복지 정보 당뇨병과 식생활 당뇨식은 건강식 입니다. 얼마나 먹을까요? 즐거운 식사계획 당뇨식 상차림 외식 및 간식정보 식사요법 실천을 위한 정보 계절별 1일 당뇨식단 계절별 요리법 식생활 포스터 당뇨병과 운동 당뇨병과 운동 운동시 주의할점 안전하게 운동하는 방법 운동의 빈도는? 얼마만큼 할 것인가? 운동의 최적시간 어떤 운동을 할 것인가? 어떻게 시작할 것인가? 당뇨병자료실 당뇨교육 애니메이션 당뇨병 건강정보 당뇨병 FAQ 당뇨병 교육 인증병원 당뇨병 교육 인증의원 당뇨병 뉴스 INTRO HOME My Page 나의 당뇨수첩 로그인 전문인 홈페이지 (재)당뇨병학 연구재단 ENGLISH 닫기 치료 및 관리 즐겨찾기 홈으로 이동 당뇨병 이해/치료/관리 소개말 당뇨병 이해/치료/관리 당뇨병과 식생활 당뇨병과 운동 당뇨병자료실 치료 및 관리 당뇨병이란 치료 및 관리 합병증 제1형 당뇨병 임신성 당뇨병 당뇨병과 나의 마음 당뇨병과 가족의 역할 당뇨병과 스트레스 당뇨인의 복지 정보 당뇨병 관리 목표 당뇨병 관리 목표 약물 요법 혈당 관리 생활습관 관리 발 관리 기타 나의 즐겨찾기 즐겨찾기한 메뉴명 클릭 시, 해당 페이지로 이동합니다. 확인 혈당 조절 목표 당뇨병 관리의 가장 기본은 혈당을 조절하는 것입니다. 심장마비, 뇌졸중, 신부전, 망막증, 신경합병증 등과 같은 만성 합병증의 위험이 바람직한 혈당 조절을 통해서 감소될 수 있기 때문입니다. 바람직한 혈당 조절 목표는 식전, 식후 2시간, 당화혈색소를 기준으로 하며, 일반적으로 식전 혈당 80~130 mg/dL, 식후 2시간 혈당 180 mg/dL미만, 당화혈색소 6.5% 미만으로 합니다. 구분 정상수치 조절목표 공복혈당 70~100 mg/dl 80~130 mg/dL 식후 2시간 혈당 90~140 mg/dL <180 mg/dL 당화혈색소 5.7% 미만 6.5% 미만 혈압 조절 목표 당뇨병의 만성 합병증의 하나인 신장과 혈관합병증을 예방하기 위해서는 철저한 혈압 관리가 중요합니다.  혈압이 120/80 mm Hg를 초과하는 당뇨병환자는 혈압을 낮추기 위하여 생활습관교정을 시행해야 하며, 진단 시 수축기 혈압 140 mm Hg 이상 또는 이완기 혈압 85mm Hg 이상인 경우 또는 생활습관교정을 하였지만 혈압이 목표혈압에 도달하지 못하는 경우 즉각적인 약물치료를 고려해야 합니다. 콜레스테롤 조절 목표 동맥경화를 예방하기 위해서 고지혈증 관리가 중요합니다. LDL(저밀도지단백)콜레스테롤은 100 mg/dL 미만으로 유지되어야 합니다. HDL(고밀도지단백)콜레스테롤은 40 mg/dL 이상으로 유지되어야 합니다. Triglyceride(중성지방)은 150 mg/dL 미만으로 유지되어야 합니다. 정상수치 조절목표 총콜레스테롤 180 mg/dL 미만 중성지방 150 mg/dL 미만 나쁜(LDL) 콜레스테롤 100 mg/dL 미만 좋은 (HDL) 콜레스테롤 남 : 40 mg/dL 이상 여 : 50 mg/dL 이상 TOP 개인정보 취급방침 이메일 무단수집 거부 04146 서울시 마포구 마포대로 109 롯데캐슬프레지던트 101동 2104호 Tel. 02.714.9064 Fax. 02.714.9084 Email. diabetes@kams.or.kr 사업자 등록번호 : 106-82-31108 대표자 : 김성래 copyright© By Korean Diabetes Association. All rights reserved. 이메일 무단 수집 거부 대한당뇨병학회는 정보통신망법 제 50조의 2, 제50조의 7 등에 의거하여, 대한당뇨병학회가 운영,관리하는 웹페이지상에서, 이메일 주소 수집 프로그램이나 그 밖의 기술적 장치 등을 이용하여 이메일 주소를 무단으로 수집하는 행위를 거부합니다. - 게시일 2009년 7월 17일 확인 뉴스레터 신청 뉴스레터 신청 시, 대한당뇨병학회의 소식 및 뉴스레터를 받아볼 수 있습니다. 아래 신청 항목에서 뉴스레터 신청을 선택한 후 확인 버튼을 클릭해 주세요. 신청 뉴스레터 신청 뉴스레터 신청 취소 * 이미 신청한 회원의 경우, 신청 취소 선택 후 확인 버튼을  누르면 더 이상 뉴스레터 발송이 되지 않습니다. Q&A Q&A 이름 이메일 질문 취소 본 동영상 링크는 \"대한당뇨병학회 홈페이지( http://www.diabetes.or.kr ) 전용\" 으로 제작 되었으며, 무단 전제/배포를 금합니다. * 동영상 사용 문의 : http://www.healthbreeze.com 닫기",
+            "sha256": "d68ea3a9ee951917e1d823557fd786c5779dfc693c11206281d88d3abd388752",
+            "excerpt": "본문 바로가기 주메뉴 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 포털사이트 대표포털 분야별포털 주민참여 통합예약 평생학습 도서관 청소년수련관 보건소 행정복지센터 과천시의회 과천통계포털 과천청년포털 포털사이트 글자 크게보기 글자 작게보기 통합인증 이용안내 자주찾는 메뉴 LANGUAGE English 中国语 日本語 LANGUAGE 과천시 대표포털 보건소 메뉴로 돌아가기 나만의 메뉴 검색창 열기 닫기 검색어 입력 사이트맵 메뉴 열기 나만의 메뉴 자주찾는 메뉴를 설정해서 편리하게 이용하세요. 분야별 포털 주민참여 포털 통합 예약 평생 학습 종합지도 서비스 나만의 메뉴 설정하기 메뉴 검색 메뉴목록 방문기록으로 설정하기 방문기록 자주찾는 메뉴 자주찾는 메뉴 닫기 나만의 메뉴 닫기 건강증진사업 고혈압 고혈압의 분류를 혈압분류, 수축기혈압(mmHg), 이완기혈압(mmHg) 표입니다. 혈압분류 수축기혈압(mmHg) 이완기혈압(mmHg) 정상혈압 <120 그리고 <80 주의혈압 120-129 또는 <80 고혈압 전단계 130-139 또는 80-89 고혈압 1기 140-159 또는 90-99 2기 ≧160 또는 ≧100 수축기단독고혈압 ≧140 그리고 <90 당뇨병 당뇨병이란 혈액중의 포도당(혈당)이 높아져서 소변으로 포도당이 배출되는데에서 지어진 이름 입니다. 인슐린은 식사 후 올라간 혈당을 낮추는 기능을 합니다. 만약 여러 가지 이유로 인하여 인슐린이 모자라거나 성능이 떨어지게 되면, 체내에 흡수된 포도당은 이용되지 못하고 혈액 속에 쌓여 소변으로 배출 되는데, 이런 상태를 당뇨병 이라고 부르고 있습니다. 당뇨병의 판정 기준 당화혈색소 6.5% 이상 공복혈당 126mg/dl 이상 경구포도당부하검사 2시간 후 혈당 200g/dl 이상 물을 많이 마심(다음), 소변을 자주 보고 양도 많아짐(다뇨), 체중 감소 등의 증상이 있으면서 식사 여부와 상관없이 측정한 혈당이 200mg/dl 이상인 경우 혈당수치 분류 표입니다. 구분 정상수치 조절목표 공복혈당 100mg/dL미만 130mg/dL미만 식후 2시간 혈당 90~140mg/dL미만 90~180mg/dL미만 당화혈색소 5.7% 미만 6.5% 미만 사업내용 대사증후군 예방 및 관리프로그램 : 사전예약필수 대 상 : 관내 주민등록 거주자 및 관내 직장인 서비스 내용 - 건강 상태 및 생활 습관(식습관, 운동습관 등)에 관한 설문조사 - 혈압측정, 허리둘레, 체성분 검사, 공복혈당 및 콜레스테롤 혈액검사(※ 12시간 금식 필요) - 간호사/영양사/운동사 연계 상담 (소요시간 30분~1시간) - ※ 대사증후군으로 판정 시 6개월 후 재평가 운영시간(※예약 필수) : 평일 09:00~18:00 (점심시간 12:00~13:00) 비 용 : 무료 구비서류 : 신분증, (과천시 직장인의 경우) 재직증명서 혹은 사내신분증 장소 : 과천시 보건소 (3층 통합건강관리실) 예약 및 문의 : 02-2150-3884 01 사전예약 02 접수 설문지 작성 및 대상자 등록 03 기초 건강측정 혈압, 허리둘레, 체성분, 혈핵검사 등 04 상담 맞춤형 상담 제공 05 관리 6개월 후 추적 관리 및 기타 프로그램 연계 국가건강검진 사후관리 서비스 : 사전예약 필수 대 상 : 과천시민 국가건강검진 대상자 중 고혈압·당뇨병·이상지질혈증 위험요인 보유자(결과활용동의 대상자)외 예방 필요군 서비스 내용 - 건강 상태 및 생활 습관(식습관, 운동습관 등)에 관한 설문조사 - 혈압측정, 허리둘레, 체성분 검사 - 공복혈당 및 콜레스테롤 혈액검사(※12시간 금식 필요, 최근 건강검진을 받은 지 얼마 되지 않은 경우, 검진 결과를 기반으로 필요 시 검사를 진행합니다.) - 간호사·영양사·운동사 연계상담(소요시간 30분~1시간) 운영시간(※예약 필수) : 평일 09:00~18:00 (점심시간 12:00~13:00) 비 용 : 무료 구비서류 : 신분증 장 소 : 과천시 보건소 (3층 통합건강관리실) 예약 및 문의 : 02-2150-3884 01 사전예약 02 접수 설문지 작성 및 대상자 등록 03 기초 건강측정 혈압, 허리둘레, 체성분, 혈핵검사 등 04 상담 맞춤형 상담 제공 05 관리 6개월 후 추적 관리 및 기타 프로그램 연계 고혈압 당뇨병 교실 대상 : 고혈압·당뇨병 질환자 및 지역주민 일정 : 연 4회 당뇨병 교실 : 2회 (6, 7월) 고혈압 교실 : 2회 (9, 10월) 내용 고혈압 당뇨병 교실 운영에 대해 주, 교육, 세부내용으로 구분한 표입니다. 회차 운영내용 강사 1주 기초 건강 측정(혈압, 혈당) 고혈압/당뇨병 질환 이론 교육 및 실습 간호사 2주 고형압/당뇨병 질환 심화 교육 및 실습 간호사 3주 고혈압/당뇨병 영양 교육 및 실습 영양사 4주 고혈압/당뇨병 운동 교육 및 실습 운동사 장소 : 보건소 2층 보건교육실 예약신청 및 문의 : 02-2150-3884 ※ 교육 내용은 사정에 따라 변동 가능 찾아가는 건강상담실 기간 : 연중 대상 : 관내 사업장, 경로당 등 내용 : 혈압, 혈당, 허리둘레 측정, 검진결과에 따른 건강 상담 예약 및 문의 : 02-2150-3884 건강강좌 기간 : 연2회 대상 : 고혈압, 당뇨병 질환자 및 고 위험군, 지역주민, 관내 직장인 장소 : 관내 사업장, 시청 대강당, 시민회관 등 강사 : 지역 내 의료·건강 관련 전문가 협조 내용 : 시민 건강 관련 다양한 주제(만성질환 예방, 약물, 정신·신체 건강 관리 등)에 대한 교육 페이지 만족도 현재 페이지에서 제공하는 정보와 편의성에 대하여 만족하시나요? 매우만족 만족 보통 불만 매우불만 페이지 만족도 평가 입력 담당부서 건강증진과 주** 전화번호 02-2150-3884 위로 이동",
             "locator_origin": "model_reported_locator"
           },
           {
-            "url": "https://www.diabetes.or.kr/bbs/?category=C&code=faq",
-            "original_url": "https://www.diabetes.or.kr/bbs/?category=C&code=faq",
-            "title": "대한당뇨병학회 일반인",
+            "url": "https://www.khna.or.kr/homecare/07_endoc/diabetes01_04.php",
+            "original_url": "https://www.khna.or.kr/homecare/07_endoc/diabetes01_04.php",
+            "title": "간호사가 알려주는 홈케어",
             "checked_on": "2026-09-10",
-            "sha256": "b68c724e115e5c0529f83d79f93139a7a388e2776e13dd81412779a85b1878f6",
-            "excerpt": "Skip Navigation Skip to contents 나의 즐겨찾기 메뉴 일반인 홈페이지 전문가 홈페이지 마이페이지 로그인 회원가입 메뉴보기 소개말 소개말 당뇨병 이해/치료/관리 당뇨병이란 치료 및 관리 합병증 제1형 당뇨병 임신성 당뇨병 당뇨병과 나의 마음 당뇨병과 가족의 역할 당뇨병과 스트레스 당뇨인의 복지 정보 당뇨병과 식생활 당뇨식은 건강식 입니다. 얼마나 먹을까요? 즐거운 식사계획 당뇨식 상차림 외식 및 간식정보 식사요법 실천을 위한 정보 계절별 1일 당뇨식단 계절별 요리법 식생활 포스터 당뇨병과 운동 당뇨병과 운동 운동시 주의할점 안전하게 운동하는 방법 운동의 빈도는? 얼마만큼 할 것인가? 운동의 최적시간 어떤 운동을 할 것인가? 어떻게 시작할 것인가? 당뇨병자료실 당뇨교육 애니메이션 당뇨병 건강정보 당뇨병 FAQ 당뇨병 교육 인증병원 당뇨병 교육 인증의원 당뇨병 뉴스 INTRO HOME My Page 나의 당뇨수첩 로그인 전문인 홈페이지 (재)당뇨병학 연구재단 ENGLISH 닫기 당뇨병 FAQ 즐겨찾기 홈으로 이동 당뇨병자료실 소개말 당뇨병 이해/치료/관리 당뇨병과 식생활 당뇨병과 운동 당뇨병자료실 당뇨병 FAQ 당뇨교육 애니메이션 당뇨병 건강정보 당뇨병 FAQ 당뇨병 교육 인증병원 당뇨병 교육 인증의원 당뇨병 뉴스 나의 즐겨찾기 즐겨찾기한 메뉴명 클릭 시, 해당 페이지로 이동합니다. 확인 내당능장애 당뇨병의 원인 당뇨병의 분류와 진단 내당능장애 당뇨병의 증상 자가혈당 측정 및 인슐린 주사법 당뇨병의 치료원칙과 목표 당뇨병과 식생활 당뇨병과 건강기능식품 당뇨병 치료 특별한 상황에서 당뇨병의 치료 저혈당 관리 체중관리와 당뇨병의 예방 당뇨병과 운동 고혈압과 이상지질혈증의 치료 당뇨병의 합병증 임신성 당뇨병 당뇨병과 사회생활 당뇨병과 스트레스 관리 당뇨병과 혈관 질환 및 기타합병증 제1형 당뇨병 내당능장애의 진단기준이 궁금합니다. 정상혈당 범위는 최소 8시간 이상 음식을 섭취하지 않은 상태에서 공복 혈장 혈당 100 mg/dL 미만이고, 75 g 경구당부하검사 2시간째 혈장 혈당 140 mg/dL 미만으로 정하고 있습니다. 내당능장애는 75 g 경구당부하검사 2시간째 혈당이 140~199 mg/dL 범위인 경우입니다. 내당능장애 이외에도 공복혈당장애를 당뇨병의 전단계로 분류할 수 있 는데, 공복혈당장애는 공복혈당이 100~125 mg/dL에 해당합니다. 한 편, 2010년부터 당뇨병 진단기준에 당화혈색소(최근 2~3개월간의 평균 혈당농도) 6.5% 이상이 새롭게 포함되었으며, 당뇨병 전단계로 당화혈 색소 5.7~6.4% 기준이 추가되었습니다. 당뇨병전단계는 당뇨병으로 진행할 위험이 얼마나 되나요? 내당능장애는 적절히 관리하지 않으면 많은 환자들이 당뇨병으로 이환된다(7.5년 후 당뇨병 발생 34%, 10년 후 심혈관질환 발생 11%) 는 점에서 주의 깊게 봐야 될 상태입니다. 한 연구에 따르면 6.4년 동안 지켜본 결과, 정상혈당을 보였던 사람 에서는 5%에서만이 당뇨병이 발생한 반면, 내당능장애와 공복혈당장 애를 모두 가지고 있었던 사람에서는 64.5%에서 당뇨병으로 진행한 결과를 보였습니다. 특히 허리둘레가 굵은 복부 비만한 사람에서 당뇨 병으로 더 많이 진행하여, 복부 비만이 당뇨병을 유발하는 중요한 위 험요소임을 알 수 있습니다. 최근 44,203명을 평균 5.6년(2.8~12년) 동안의 연구 결과를 통해, 당 화혈색소 5.5~6.0%군에서 9~25%의 당뇨 발생을, 당화혈색소 6.0~6.5%군에 서 25~50%의 당뇨 발생을 보여, 당화혈색소 5.0%군과 비교하여 20배 위험률이 증가함을 보여 주었습니다. 따라서, 당화혈색소 6.0% 이상에 서는 특히 더 주의해야 하겠습니다. 한국인에게 적절한 제2형 당뇨병의 위험인자는 아래와 같아 함께 주 의를 요합니다. ▸과체중(체질량지수 23 kg/m2 이상), ▸직계 가족(부모, 형제자매)에 당뇨병이 있는 경우, ▸공복혈당장애나 내당능장애의 과거 력, ▸임신성 당뇨병이나 4 kg 이상의 거대아 출산력, ▸고혈압(140/90 mm Hg 이상, 또는 약제 복용), ▸HDL 콜레스테롤 35 mg/dL 미만 혹은 중성지방 250 mg/dL 이상, ▸인슐린저항성(다낭난소증후군, 흑색 가지세포증 등), ▸심혈관질환(뇌졸중, 관상동맥질환 등). 내당능장애는 치료하면 정상으로 될 수 있습니까? 중국(Da Qing) 연구 결과 내당능장애 성인(평균 연령 40대)을 대 상으로 야채 섭취 독려, 알코올과 당 섭취 제한하는 식이 요법 및 신체 활동 증진을 독려하는 방법으로 6년 후에 46% (100명당 연간 14.1명의 발생을 7.9명으로 줄임)의 당뇨병 발생을 예방하였습니다. 또한, 적극 적인 생활습관 교정 이후 14년째에도 당뇨병 발생을 예방하고 있었습 니다. 핀란드에서는 내당능장애 성인(평균 연령 50대)을 대상으로 5%이상 의 체중감소, 지방섭취 제한, 섬유소 섭취 증가(적어도 15 g/1000 kcal), 적어도 하루 30분 이상의 중등도 운동을 하여 3.2년 후에 58% (남성 63%, 여성 54%)의 당뇨병 발생을 예방하였습니다. 마찬가지로 7년 후 에도 43%의 당뇨병 발생을 예방하고 있었습니다. 비만한 공복혈당 장애 및 내당능장애 성인(평균 50.6세, 당뇨병 가족 력+69.4%)을 대상으로 지방섭취제한(~25%), 하루 1200~1800 칼로리 제한 및 일주일에 150분 이상의 운동을 통해 7%의 체중 감소를 목표 로 2.8년 동안 유지하여, 58%의 당뇨병 발생을 예방하였습니다. 너무 걱정하시지 말고 일단 식이와 운동, 생활습관 교정을 시작하면, 충분히 좋은 효과를 볼 수 있습니다. 내당능장애일 때 약물치료로 당뇨병을 예방하는 약은 없는지요? 당뇨병의 약물에는 여러 종류가 있는데, 당뇨병을 예방하는 약물로 는 메트포르민, 아카보스, 글리타존 계열의 약물 등이 있습니다. 비용 효과면에서 유일하게 당뇨병 예방목적의 약물치료로 메트포르 민이 추천되고 있습니다. 당뇨병전단계 [내당능장애(A), 공복혈당장애(E), 당화혈색소 5-7~6.4%(E)] 중에서도 비만하거나, 60세 미만(특히 25~44 세), 임신성 당뇨병이 있었던 여성에게 고려되고 있습니다. 내당능장애에서 합병증이 발생하나요? 내당능장애를 가진 사람에서 당뇨병이 생기기 전에 당뇨병성 망막 증, 당뇨병성 신증과 같은 전형적인 당뇨병의 합병증이 잘 생기지는 않습니다. 그러나 내당능장애를 가지고 있는 사람은 정상 혈당을 가지 고 있는 사람들에 비하여 동맥경화증에 의한 대혈관질환이 생길 위험 이 더 높은 것으로 알려져 있고, 당뇨병이 발생할 위험이 매우 높아집 니다. 그러므로 내당능장애를 개선시키기 위한 식사조절 및 운동을 통 한 체중조절이 매우 중요합니다. TOP 개인정보 취급방침 이메일 무단수집 거부 04146 서울시 마포구 마포대로 109 롯데캐슬프레지던트 101동 2104호 Tel. 02.714.9064 Fax. 02.714.9084 Email. diabetes@kams.or.kr 사업자 등록번호 : 106-82-31108 대표자 : 김성래 copyright© By Korean Diabetes Association. All rights reserved. 이메일 무단 수집 거부 대한당뇨병학회는 정보통신망법 제 50조의 2, 제50조의 7 등에 의거하여, 대한당뇨병학회가 운영,관리하는 웹페이지상에서, 이메일 주소 수집 프로그램이나 그 밖의 기술적 장치 등을 이용하여 이메일 주소를 무단으로 수집하는 행위를 거부합니다. - 게시일 2009년 7월 17일 확인 뉴스레터 신청 뉴스레터 신청 시, 대한당뇨병학회의 소식 및 뉴스레터를 받아볼 수 있습니다. 아래 신청 항목에서 뉴스레터 신청을 선택한 후 확인 버튼을 클릭해 주세요. 신청 뉴스레터 신청 뉴스레터 신청 취소 * 이미 신청한 회원의 경우, 신청 취소 선택 후 확인 버튼을  누르면 더 이상 뉴스레터 발송이 되지 않습니다. Q&A Q&A 이름 이메일 질문 취소 본 동영상 링크는 \"대한당뇨병학회 홈페이지( http://www.diabetes.or.kr ) 전용\" 으로 제작 되었으며, 무단 전제/배포를 금합니다. * 동영상 사용 문의 : http://www.healthbreeze.com 닫기",
+            "sha256": "7ca531d63ea4102bb8edf988fe40ee9b6c8fae099e75672a92d2f3971122b154",
+            "excerpt": "당뇨병 진단 당뇨병은 공복혈장포도당, 당화혈색소 또는 경구포도당내성검사를 통해 진단합니다. 정상혈당 기준 정상혈당은 8시간 이상 금식 후 혈장포도당 100 mg/dL 미만, 75g 경구포도당부하 2시간 후 혈장포도당 140 mg/dL 미만이다. 당뇨병 진단기준 1) 당화혈색소 6.5% 이상 또는 2) 8시간 이상 금식 후 혈장포도당 126 mg/dL 이상 또는 3) 75g 경구포도당부하 2시간 후 혈장포도당 200 mg/dL 이상 또는 4) 당뇨병의 전형적인 증상(다뇨, 다음, 설명되지 않는 체중감소)이 있으면서 무작위 혈장포도당 200 mg/dL 이상 * 1) ~3) 중 하나에 해당하는 경우 서로 다른 날 검사를 반복해야 하지만, 동시에 시행한 검사들에서 두 가지 이상을 만족한다면 바로 확진할 수 있다. 당뇨병 전단계 진단기준 1) 공복혈당장애 : 공복혈장포도당 100-125 mg/dL 2) 내당능장애 : 75g 경구포도당부하 2시간 후 혈장포도당 140-199 mg/dL 3) 당화혈색소 : 5.7-6.4% <경구포도당내성검사 방법> 1. 검사 전 날 밤부터 10시간 내지 14시간 금식 후 공복혈장포도당 측정을 위한 채혈을 한다. 2. 포도당 75 g을 250-300 mL의 물에 희석하거나 상품화된 150 mL 포도당용액을 5분 이내에 마신다. 3. 포도당부하(포도당용액을 마시기 시작한 시간부터) 2시간 후에 혈장포도당 측정을 위한 채혈을 한다. [출처 - 대한당뇨병학회 2023 당뇨병 진료지침서] 당화혈색소란? 당화혈색소는 혈액 내에 있는 혈색소(헤모글로빈)와 혈당이 결합된 정도를 보여주는 수치입니다. 혈액검사를 통해 당화혈색소 수치를 확인하면 검사일로부터 3개월 이내의 평균혈당을 알 수 있습니다. 개인에 따라 검사주기를 조정할 수 있으나, 적어도 연 2회는 검사해야 합니다. [출처 - 당뇨병교육간호사회, 동행-건강한 삶을 위한 당뇨병 생활지침]",
             "locator_origin": "model_reported_locator"
           }
         ],
         "intent_results": [
-          "https://www.diabetes.or.kr/general/info/treat/treat_01.php",
-          "https://www.diabetes.or.kr/bbs/?category=C&code=faq"
+          "https://www.gccity.go.kr/ghc/contents.do?mId=0511010000",
+          "https://www.khna.or.kr/homecare/07_endoc/diabetes01_04.php"
         ],
         "valid_until": null,
         "monthly_search": 24610,
@@ -240,19 +290,19 @@
               "origin": "model_reported_locator"
             },
             {
-              "url": "https://www.diabetes.or.kr/general/info/treat/treat_01.php",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.diabetes.or.kr/bbs/?category=C&code=faq",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.diabetes.or.kr/bbs/?category=F&code=faq",
-              "origin": "model_reported_locator"
-            },
-            {
               "url": "https://www.khna.or.kr/homecare/07_endoc/diabetes01_04.php",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.gccity.go.kr/ghc/contents.do?mId=0511010000",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.nhis.or.kr/static/alim/paper/oldpaper/202303/sub/section1_3.html",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://health.kdca.go.kr/healthinfo/biz/health/ntcnInfo/healthSourc/thtimtCntnts/thtimtCntntsView.do?thtimt_cntnts_sn=124",
               "origin": "model_reported_locator"
             }
           ]
@@ -265,13 +315,13 @@
           "demand": 35,
           "organic_opportunity": 0,
           "specificity": 15,
-          "trend": 1.77
+          "trend": 8.44
         },
-        "trend_growth": 0.177,
+        "trend_growth": 0.844,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "score": 51.77,
+        "score": 58.44,
         "selection_version": 4,
-        "selected_at": "2026-09-10T02:09:23.822718+00:00",
+        "selected_at": "2026-09-10T03:17:23.532196+00:00",
         "source": "category_market_v1",
         "keywords": [
           "당화혈색소정상수치"
@@ -281,18 +331,14 @@
     ],
     "rejected": [
       {
-        "keyword": "대장내시경전음식",
+        "keyword": "CT비용",
         "reason": "search intent or official evidence does not support an article"
       },
       {
-        "keyword": "백일해예방접종",
-        "reason": "organic lookup unavailable; requires a specific measured long-tail"
-      },
-      {
-        "keyword": "심장초음파비용",
-        "reason": "no accessible official source supports topic"
+        "keyword": "경동맥초음파비용",
+        "reason": "search intent or official evidence does not support an article"
       }
     ],
-    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition earns zero points. Null trend means unavailable."
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition earns zero points. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."
   }
 }

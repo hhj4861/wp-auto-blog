@@ -56,6 +56,11 @@ REJECTION_OPINION_CODES = frozenset({
     'keyword_navigation', 'insufficient_search_intent', 'category_mismatch',
     'unsupported_claim', 'other',
 })
+OFFICIAL_SEARCH_DOMAIN_HINTS = (
+    ('korcham.net', ('컴활', '컴퓨터활용능력', '워드프로세서', '전산회계운용사', '유통관리사', '무역영어')),
+    ('korea.kr', ('정부', '정책', '지원', '환급', '보험', '검진', '고용', '세금', '연말정산',
+                  '종합소득세', '예방접종', '장려금', '수당', '급여', '월세', '전입신고')),
+)
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / 'data/category_market_topics.json'
 LEDGER = ROOT / 'data/posted_market_keywords.json'
@@ -341,10 +346,35 @@ def fetch_trend_change(keyword):
         return None  # No zero/positive trend fabricated for unavailable samples.
 
 
+def _official_search_extra_domains(keyword):
+    """A small, topic-specific hint list; never broaden the measured SERP query."""
+    key = norm(keyword)
+    return [domain for domain, terms in OFFICIAL_SEARCH_DOMAIN_HINTS
+            if any(term in key for term in terms)]
+
+
 def official_search_urls(keyword):
     """Discover official URLs from indexed results, not model-suggested URLs."""
-    _, rows = search_results(keyword + ' (site:go.kr OR site:or.kr OR site:gov OR site:ac.kr)')
+    domains = ['go.kr', 'or.kr', 'gov', 'ac.kr', *_official_search_extra_domains(keyword)]
+    _, rows = search_results(keyword + ' (' + ' OR '.join('site:' + domain for domain in domains) + ')')
     return list(dict.fromkeys(row['url'] for row in rows if is_official_url(row['url'])))[:4]
+
+
+def _append_distinct_source(sources, source):
+    """Spend source slots on distinct fetched bodies, including mirrored URLs."""
+    if not isinstance(source, dict) or len(sources) >= 3:
+        return False
+    url, digest, excerpt = (source.get(key) for key in ('url', 'sha256', 'excerpt'))
+    if (not isinstance(url, str) or not is_official_url(url)
+            or not isinstance(digest, str) or not digest.strip()
+            or not isinstance(excerpt, str) or not excerpt.strip()):
+        return False
+    body = ' '.join(excerpt.split())
+    if any(url == old['url'] or digest == old['sha256']
+           or body == ' '.join(old['excerpt'].split()) for old in sources):
+        return False
+    sources.append(source)
+    return True
 
 
 def candidate_sources(keyword, results):
@@ -356,8 +386,7 @@ def candidate_sources(keyword, results):
                 continue
             seen.add(url)
             source = fetch_source(url)
-            if source and source['url'] not in {row['url'] for row in sources}:
-                sources.append(source)
+            _append_distinct_source(sources, source)
             if len(sources) >= 3:
                 break
 
@@ -397,9 +426,12 @@ def research_official_sources(keyword, category, now):
     from src.codex_client import CodexSubscriptionClient
     client = CodexSubscriptionClient(home=os.environ.get('BLOG_CODEX_HOME', ''),
         model=os.environ.get('BLOG_CODEX_MODEL', ''), timeout=240)
+    extra_domains = ', '.join(_official_search_extra_domains(keyword))
+    domain_hint = f'이 검색어와 관련된 공식 도메인 {extra_domains}의 상세 안내도 우선 조사하세요.' if extra_domains else ''
     trace = client.research(f"""오늘 {now[:10]}, 한국 블로그 {category}의 검색어 {keyword}를 조사하세요.
 내장 웹검색 도구로 이 검색어의 구체적인 질문을 확인하고 이를 설명하는 공식 상세 안내를 찾으세요.
 go.kr, or.kr, gov, ac.kr 또는 기업의 공식 채용 사이트를 우선하세요.
+{domain_hint}
 공식 상세 페이지를 최대 6개 열어 본문을 확인하세요. open에는 검색 결과 참조 ID 대신
 실제 전체 https URL을 명시하세요. 메뉴/로그인/신청 앱 시작 화면이나 PDF만 있는 자료 대신
 본문이 있는 HTML 설명 페이지를 찾으세요. 최신 정책과 상시 안내를 구분하세요.
@@ -413,8 +445,8 @@ go.kr, or.kr, gov, ac.kr 또는 기업의 공식 채용 사이트를 우선하�
     locators = research_source_locators(trace)
     for locator in locators:
         source = fetch_source(locator['url'])
-        if source and source['url'] not in {row['url'] for row in sources}:
-            sources.append({**source, 'locator_origin': locator['origin']})
+        if source:
+            _append_distinct_source(sources, {**source, 'locator_origin': locator['origin']})
         if len(sources) >= 3:
             break
     return sources, {'provider': 'codex_web', 'searched': True, 'locators': locators}
@@ -447,6 +479,7 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
     source_only = evidence_mode == 'official_pages'
     indices_key = 'source_indices' if source_only else 'serp_indices'
     intent_rows = sources if source_only else results
+    source_selection_schema = '' if source_only else '"source_indices":[0],'
     evidence_instruction = (
         '검색 순위나 경쟁 결과는 확보하지 못했습니다. 웹검색 실행 후 별도 HTTP 요청으로 읽은 공식 본문만 있습니다. '
         '주소 후보를 모델이 보고했을 수 있으며, 검색결과 색인이나 Codex의 열람 자체는 입증하지 않습니다. '
@@ -475,7 +508,11 @@ target_keyword에는 실제로 답할 검색어를 적으세요. 더 좁은 주�
 matches에는 제목·요약에서 이 글의 주된 질문을 직접 뒷받침하는 서로 다른 도메인의 결과 최소 2개를
 result_index와 quote로 기록하세요. quote는 제공된 검색결과 제목/요약에서 8자 이상 그대로 복사하세요.
 관련 없는 문구를 의도 근거로 쓰거나 공식 본문을 검색결과로 대신하지 마세요. 결과가 없으면 unknown과 빈 matches입니다.
-source_index는 선택한 공식 자료의 0부터 시작하는 인덱스입니다. 자료가 부족해 판단할 수 없으면 false입니다.
+source_index는 대표 공식 자료의 0부터 시작하는 인덱스입니다.
+source_indices에는 이 기획에서 실제로 사용하는 공식 자료의 인덱스를 대표 source_index까지 포함해
+중복 없이 1~3개 적으세요. 두 기관을 비교하면 양쪽 공식 자료를 선택해야 합니다.
+검색결과 인덱스인 serp_indices와 공식 자료 인덱스인 source_indices를 혼동하지 마세요.
+자료가 부족해 판단할 수 없으면 false입니다.
 마감일이 있으면 valid_until에 ISO 날짜, 상시 정보는 JSON null을 넣으세요.
 category는 실제 목적에 따라 취업/생활정보/건강/기타 중 선택하고, 요청 카테고리와 다르면 supported=false입니다.
 supported=false일 때 선택적 rejection_reason에는 다음 코드 중 하나만 적으세요:
@@ -485,7 +522,7 @@ insufficient_search_intent(검색 결과에서 정보 목적 확인 불가), cat
 unsupported_claim(공식 자료로 뒷받침할 수 없는 주장), other(기타).
 rejection_reason은 진단용 모델 의견이며 승인 근거가 아닙니다. 자유 설명·본문·URL·인증정보·오류 원문은 넣지 마세요.
 JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","intent":"...",
-"gap":"...","source_index":0,"{indices_key}":[0],"valid_until":null,
+"gap":"...","source_index":0,"{indices_key}":[0],{source_selection_schema}"valid_until":null,
 "rejection_reason":"",
 "intent_evidence":{{"scope":"full_keyword","target_keyword":"{keyword}",
 "matches":[{{"result_index":0,"quote":"검색결과에 있는 원문"}}]}}}}
@@ -522,6 +559,24 @@ JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","int
             or not isinstance(indices, list) or not indices
             or any(type(i) is not int or not 0 <= i < len(intent_rows) for i in indices)):
         return None, 'invalid evidence-backed article plan'
+    chosen = analysis.get('source_indices', [index])
+    if (not isinstance(chosen, list) or not 1 <= len(chosen) <= 3
+            or any(type(i) is not int or not 0 <= i < len(sources) for i in chosen)
+            or len(set(chosen)) != len(chosen)
+            or (not source_only and index not in chosen)):
+        return None, 'invalid evidence-backed article plan'
+    # Older official-only plans listed auxiliary sources separately from the
+    # representative index. SERP plans without source_indices retain one source.
+    chosen = list(dict.fromkeys([index, *chosen]))
+    if len(chosen) > 3:
+        return None, 'invalid evidence-backed article plan'
+    verified = [sources[i] for i in chosen]
+    if any(not isinstance(source, dict)
+           or not isinstance(source.get('url'), str) or not is_official_url(source['url'])
+           or not isinstance(source.get('sha256'), str) or not source['sha256'].strip()
+           or not isinstance(source.get('excerpt'), str) or not source['excerpt'].strip()
+           for source in verified):
+        return None, 'invalid evidence-backed article plan'
     deadline = analysis.get('valid_until')
     if deadline is not None:
         try:
@@ -530,7 +585,6 @@ JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","int
         except (ValueError, TypeError):
             return None, 'expired or invalid deadline'
     source = sources[index]
-    verified = [sources[i] for i in dict.fromkeys([index, *indices])] if source_only else [source]
     return {'keyword': keyword, 'category': category,
             **{key: analysis[key].strip() for key in ('topic', 'intent', 'gap')},
             'intent_evidence': analysis.get('intent_evidence'),

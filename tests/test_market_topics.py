@@ -1921,3 +1921,175 @@ def test_changed_sources_are_new_first_deduplicated_and_limited_to_three(detail_
              'sha256': 'another hash', 'excerpt': '별도 상세 본문'}
     result = market._changed_source_set(previous, [case.detail, case.detail, other])
     assert result == [case.detail, other, case.original]
+
+
+@pytest.mark.parametrize('keyword,extras', [
+    ('컴활2급필기', ['korcham.net']),
+    ('컴퓨터 활용 능력 2급', ['korcham.net']),
+    ('워드프로세서시험일정', ['korcham.net']),
+    ('연말정산환급일', ['korea.kr']),
+    ('건강보험료조회', ['korea.kr']),
+    ('무역영어지원', ['korcham.net', 'korea.kr']),
+    ('BIM자격증', []),
+])
+def test_official_lookup_adds_only_relevant_bounded_domains_in_one_search(monkeypatch, keyword, extras):
+    rows = [organic(f'https://source{i}.go.kr/detail', keyword) for i in range(6)]
+    lookup = Mock(return_value=('codex_native_search', rows))
+    monkeypatch.setattr(market, 'search_results', lookup)
+    assert market.official_search_urls(keyword) == [row['url'] for row in rows[:4]]
+    lookup.assert_called_once_with(keyword + ' (' + ' OR '.join(
+        'site:' + domain for domain in ['go.kr', 'or.kr', 'gov', 'ac.kr', *extras]) + ')')
+    assert market._official_search_extra_domains(keyword) == extras
+    assert len(extras) <= 2
+
+
+@pytest.mark.parametrize('keyword,expected,absent', [
+    ('컴활2급필기', 'korcham.net', 'korea.kr'),
+    ('건강보험료조회', 'korea.kr', 'korcham.net'),
+])
+def test_supplemental_research_gets_the_same_relevant_domain_hint(monkeypatch, keyword, expected, absent):
+    from src import codex_client
+    client = Mock()
+    client.research.return_value = {'searched': False}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    assert market.research_official_sources(keyword, '취업', '2026-09-10') == ([], None)
+    client.research.assert_called_once()
+    prompt = client.research.call_args.args[0]
+    assert keyword in prompt and expected in prompt and absent not in prompt
+    assert '공식 상세 페이지를 최대 6개' in prompt
+
+
+@pytest.mark.parametrize('same_body_signal', ['hash', 'normalized_excerpt'])
+def test_mirrored_body_does_not_consume_a_source_slot_or_hide_later_detail(monkeypatch, same_body_signal):
+    original = _recovery_source('https://www.ksa.or.kr/menu', '창업 지원 사업 메뉴의 합성 본문입니다. ')
+    mirror = _recovery_source('https://ksa.or.kr/menu', '다른 응답 구조의 합성 본문입니다. ')
+    if same_body_signal == 'hash':
+        mirror['sha256'] = original['sha256']
+    else:
+        mirror['excerpt'] = '\n  '.join(original['excerpt'].split())
+        assert mirror['sha256'] != original['sha256']
+    detail_a = _recovery_source('https://a.go.kr/detail', '시험 접수 절차를 설명하는 합성 상세 본문입니다. ')
+    detail_b = _recovery_source('https://b.go.kr/detail', '준비물 확인 절차를 설명하는 또 다른 합성 상세 본문입니다. ')
+    fetched = {source['url']: source for source in (original, mirror, detail_a, detail_b)}
+    fetch = Mock(side_effect=fetched.__getitem__)
+    lookup = Mock(return_value=[detail_a['url'], detail_b['url']])
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    monkeypatch.setattr(market, 'official_search_urls', lookup)
+    rows = [{'url': original['url']}, {'url': mirror['url']}]
+    selected = market.candidate_sources('산업기사시험일정', rows)
+    assert selected == [original, detail_a, detail_b]
+    assert fetch.call_count == 4
+    lookup.assert_called_once_with('산업기사시험일정')
+
+
+def test_distinct_source_bodies_survive_and_existing_url_candidate_caps_remain(monkeypatch):
+    urls = [f'https://source{i}.go.kr/detail' for i in range(7)]
+    sources = [_recovery_source(url, f'{i}번 기관의 서로 다른 실제 합성 상세 안내입니다. ') for i, url in enumerate(urls)]
+    fetched = {source['url']: source for source in sources}
+    fetch = Mock(side_effect=fetched.__getitem__)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    monkeypatch.setattr(market, 'official_search_urls', Mock(return_value=urls[3:7]))
+    assert market.candidate_sources('시험준비물', [{'url': url} for url in urls[:3]]) == sources[:2] + sources[3:4]
+    assert [call.args[0] for call in fetch.call_args_list] == urls[:2] + urls[3:4]
+
+
+def test_supplemental_source_collection_also_skips_mirrored_bodies(monkeypatch):
+    from src import codex_client
+    original = _recovery_source('https://www.ksa.or.kr/menu', '공식기관의 여러 메뉴를 안내하는 충분한 길이의 합성 본문입니다. ')
+    mirror = {**original, 'url': 'https://ksa.or.kr/menu', 'original_url': 'https://ksa.or.kr/menu'}
+    a = _recovery_source('https://a.go.kr/detail', '첫 번째 독립적인 합성 상세 안내 본문입니다. ')
+    b = _recovery_source('https://b.go.kr/detail', '두 번째 독립적인 합성 상세 안내 본문입니다. ')
+    source_map = {source['url']: source for source in (original, mirror, a, b)}
+    client = Mock()
+    client.research.return_value = {'searched': True, 'opened_urls': list(source_map), 'text': '{}'}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock(side_effect=source_map.__getitem__)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    selected, research = market.research_official_sources('시험준비물', '취업', '2026-09-10')
+    assert selected == [{**source, 'locator_origin': 'native_open'} for source in (original, a, b)]
+    assert fetch.call_count == 4 and len(research['locators']) == 4
+
+
+@pytest.fixture
+def multiple_official_sources():
+    return [_recovery_source(f'https://source{i}.go.kr/detail',
+                             f'{i}번 기관의 자격 요건과 비용을 설명하는 합성 상세 본문입니다. ')
+            for i in range(4)]
+
+
+@pytest.mark.parametrize('chosen', [[0], [0, 1], [1, 0], [0, 2, 1]])
+def test_serp_plan_preserves_only_selected_actual_sources_and_primary_url(monkeypatch, multiple_official_sources, chosen):
+    sources = multiple_official_sources
+    reviewer = Mock(return_value=analysis(source_indices=chosen,
+        verified_sources=[{'url': 'https://invented.go.kr/', 'excerpt': 'model-invented body'}]))
+    monkeypatch.setattr(market, 'ask', reviewer)
+    item, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10', organic_sample(), sources)
+    assert reason is None and item['source_url'] == sources[0]['url']
+    expected = [sources[i] for i in dict.fromkeys([0, *chosen])]
+    assert item['verified_sources'] == expected
+    assert item['intent_results'] == [organic_sample()[0]['url']]
+    assert 'invented' not in json.dumps(item)
+    assert '"source_indices":[0]' in reviewer.call_args.args[0]
+
+
+@pytest.mark.parametrize('chosen', [
+    None, True, {}, '0', [], [True], [False], [0.0], [0, '1'], [0, 0],
+    [1], [0, 4], [0, -1], [0, 1, 2, 3], [[0]],
+])
+def test_serp_source_indices_reject_invalid_or_unbounded_selections(monkeypatch, multiple_official_sources, chosen):
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_indices=chosen))
+    item, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10',
+                                              organic_sample(), multiple_official_sources)
+    assert item is None and reason == 'invalid evidence-backed article plan'
+
+
+def test_serp_legacy_response_without_source_indices_keeps_one_source(monkeypatch, multiple_official_sources):
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_index=1))
+    item, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10',
+                                              organic_sample(), multiple_official_sources)
+    assert reason is None
+    assert item['verified_sources'] == [multiple_official_sources[1]]
+    assert item['source_url'] == multiple_official_sources[1]['url']
+
+
+@pytest.mark.parametrize('change', [
+    {'url': 'https://untrusted.example/'}, {'excerpt': ''}, {'excerpt': []},
+    {'sha256': ''}, {'sha256': None},
+])
+def test_selected_secondary_source_requires_actual_fetched_body_metadata(monkeypatch, multiple_official_sources, change):
+    sources = deepcopy(multiple_official_sources)
+    sources[1].update(change)
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_indices=[0, 1]))
+    assert market.topic_from_evidence('시험준비물', '취업', '2026-09-10', organic_sample(), sources)[0] is None
+    # An unused source does not become a required source or discard a valid plan.
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_indices=[0]))
+    assert market.topic_from_evidence('시험준비물', '취업', '2026-09-10', organic_sample(), sources)[0] is not None
+
+
+@pytest.mark.parametrize('chosen', [[1, 1], [1, 2, 3]])
+def test_official_only_source_union_still_has_unique_indices_and_three_source_limit(monkeypatch, multiple_official_sources, chosen):
+    monkeypatch.setattr(market, 'ask', lambda _: analysis(source_indices=chosen))
+    item, reason = market.topic_from_evidence('시험준비물', '취업', '2026-09-10', [],
+                                              multiple_official_sources, evidence_mode='official_pages')
+    assert item is None and reason == 'invalid evidence-backed article plan'
+
+
+def test_selected_secondary_sources_reach_queue_without_changing_market_evidence(monkeypatch, multiple_official_sources):
+    sources = multiple_official_sources[:2]
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
+    search = Mock(return_value=('codex_native_search', organic_sample()))
+    monkeypatch.setattr(market, 'search_results', search)
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: sources)
+    monkeypatch.setattr(market, 'ask', Mock(side_effect=[
+        {'candidates': [{'keyword': '시험준비물'}]}, analysis(source_indices=[0, 1]),
+    ]))
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    report = market.select_category('취업', 1, titles=[])
+    item = report['selected'][0]
+    assert item['verified_sources'] == sources and item['source_url'] == sources[0]['url']
+    assert item['score'] == 79.63 and item['monthly_search'] == 1200
+    assert item['organic_results'] == organic_sample() and item['organic_provider'] == 'codex_native_search'
+    assert market.fresh_market_item(item, '취업')
+    assert market.enqueue_report([], report)[0]['verified_sources'] == sources
+    search.assert_called_once_with('시험준비물')

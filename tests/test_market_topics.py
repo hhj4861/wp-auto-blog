@@ -382,6 +382,47 @@ def test_category_freshness_and_unknown_evidence():
     assert not market.fresh_market_item(candidate(selected_at=(datetime.now(timezone.utc)-timedelta(days=2)).isoformat()), '취업')
 
 
+def test_article_candidate_pool_requires_independently_measured_information_query():
+    keywords = ['부가가치세계산기', '부가가치세 계산기', '부가가치세계산방법', '부가가치세계산기 사용법']
+    stats = {word: {'keyword': word, 'monthly': 1200, 'comp': 'low'} for word in keywords}
+    assert {row['keyword'] for row in market.candidate_pool(stats, [], '생활정보')} == set(keywords[2:])
+    assert all(row['monthly'] == 1200 for row in stats.values())
+
+
+@pytest.mark.parametrize('keyword', ['부가가치세계산기', '부가가치세 계산기'])
+def test_direct_topic_review_rejects_tool_demand_before_model_call(monkeypatch, keyword):
+    model = Mock(return_value=analysis(keyword, '생활정보'))
+    monkeypatch.setattr(market, 'ask', model)
+    result, reason = market.topic_from_evidence(keyword, '생활정보', datetime.now(timezone.utc).isoformat(),
+                                               organic_sample(keyword), [evidence()])
+    assert result is None and reason == 'interactive_tool_required'
+    model.assert_not_called()
+
+
+@pytest.mark.parametrize('keyword', ['부가가치세계산기', '부가가치세 계산기'])
+def test_approved_calculator_cache_cannot_be_relabelled_or_enqueued(keyword):
+    row = candidate(category='생활정보', keyword=keyword, keywords=[keyword],
+                    topic='부가가치세 계산방법과 예시표', intent='공급가액과 세액의 계산방법은 무엇인가?')
+    assert not market.opportunity.issues(row)
+    assert row['suitability_evidence']['review']['scope'] == 'full_keyword'
+    assert row['publish_eligible'] is True
+    assert market.suitability.issues(row) == ['interactive_tool_required']
+    assert not market.fresh_market_item(row, '생활정보')
+    queue = []
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report(queue, {'category': '생활정보', 'selected': [row]})
+    assert queue == []
+
+
+def test_information_keyword_remains_subject_to_normal_gates():
+    keyword = '부가가치세계산방법'
+    row = candidate(category='생활정보', keyword=keyword, keywords=[keyword],
+                    topic=keyword + ' 안내', intent='공급가액과 세액을 어떻게 계산하나요?')
+    assert market.fresh_market_item(row, '생활정보')
+    row['monthly_search'] = 0
+    assert not market.fresh_market_item(row, '생활정보')
+
+
 def test_enqueue_keeps_other_categories_and_does_not_fallback():
     health = candidate('건강')
     legacy = {'category': '취업', 'status': 'pending', 'topic': 'old'}
@@ -1121,6 +1162,17 @@ def test_market_publication_rechecks_keyword_and_history(market_pipeline, monkey
         monkeypatch.setattr(market, 'fresh_market_item', Mock(side_effect=[True, False]))
     result = market_pipeline.run_single(item['topic'], item['keywords'], '취업', market_brief=item)
     assert not result.success
+    market_pipeline.wp_client.create_post.assert_not_called()
+    assert not market.LEDGER.exists()
+
+
+def test_approved_calculator_market_item_never_reaches_writer_or_wordpress(market_pipeline):
+    keyword = '부가가치세계산기'
+    item = candidate(category='생활정보', keyword=keyword, keywords=[keyword],
+                     topic='부가가치세 계산방법과 예시표', intent='공급가액과 세액을 어떻게 계산하나요?')
+    result = market_pipeline.run_single(item['topic'], item['keywords'], '생활정보', market_brief=item)
+    assert not result.success
+    market_pipeline.content_generator.generate.assert_not_called()
     market_pipeline.wp_client.create_post.assert_not_called()
     assert not market.LEDGER.exists()
 

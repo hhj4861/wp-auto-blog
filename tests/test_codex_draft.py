@@ -465,3 +465,276 @@ def test_registry_exception_never_folds_another_year_into_this_draft(market_case
     with pytest.raises(RuntimeError, match='Duplicate market keyword'):
         module.publish_draft(1724, c['env'])
     c['session'].post.assert_not_called()
+
+
+@pytest.fixture
+def affiliate_case(market_case):
+    from src.coupang_telegram import draft_fingerprint
+
+    c = market_case
+    request_id = 'a' * 32
+    path = c['data'] / 'topic_queue_general.json'
+    queue = json.loads(path.read_text())
+    queue[1].update(post_id=1724, affiliate_state='waiting', affiliate_request_id=request_id)
+    path.write_text(json.dumps(queue))
+    c['brief'] = queue[1]
+    c['request'] = {key: c['brief'][key] for key in ('category', 'keyword', 'topic', 'selected_at')}
+    c['request'].update(request_id=request_id, status='ready', post_id=1724,
+                        draft_fingerprint=draft_fingerprint(c['original']),
+                        products=[{'name': '기록용 노트', 'url': 'https://link.coupang.com/a/abcd1234'}])
+    existing_generate = c['client'].generate.side_effect
+
+    def generate(prompt):
+        if prompt.startswith('수동 제휴 상품의 관련성과 표현을 검수하세요.'):
+            return json.dumps({'products': [{'index': 0, 'relevant': True, 'claims_supported': True}]})
+        return existing_generate(prompt)
+
+    c['client'].generate.side_effect = generate
+    return c
+
+
+@pytest.mark.parametrize('status', ['ready', 'publishing'])
+def test_affiliate_reply_inserts_before_repair_and_all_final_gates_on_same_id(affiliate_case, status):
+    from src.coupang_products import products_preserved
+
+    c = affiliate_case
+    c['request']['status'] = status
+    original_request = copy.deepcopy(c['request'])
+    assert module.publish_draft(1724, c['env'], affiliate_request=c['request']) == 'https://trendpulse.blog/a1c-levels/'
+    assert c['request'] == original_request
+    c['session'].post.assert_called_once()
+    mutation = c['session'].post.call_args
+    assert mutation.args[0].endswith('/posts/1724')
+    assert mutation.kwargs['allow_redirects'] is False
+    payload = mutation.kwargs['json']
+    assert products_preserved(payload['content'], c['request']['products'], request_id=c['request']['request_id'])
+    assert '근거 없는 주장' not in payload['content']
+    prompts = [call.args[0] for call in c['client'].generate.call_args_list]
+    evidence = [prompt for prompt in prompts if 'conservative Korean editorial fact checker' in prompt]
+    assert len(evidence) == 2
+    assert all('기록용 노트' in prompt and 'link.coupang.com/a/abcd1234' in prompt for prompt in evidence)
+    assert sum('correcting an existing Korean article' in prompt for prompt in prompts) == 1
+    assert sum(prompt.startswith('수동 제휴 상품의 관련성과 표현을 검수하세요.') for prompt in prompts) == 1
+    assert sum(prompt.startswith('최종 검색 의도 검수입니다.') for prompt in prompts) == 1
+    assert c['quality'].call_count == c['editorial'].call_count == c['identity'].call_count == 1
+    assert [call.args[0] for call in c['fetch'].call_args_list] == c['urls']
+    queue = json.loads((c['data'] / 'topic_queue_general.json').read_text())
+    assert queue[1]['status'] == 'completed' and queue[1]['affiliate_state'] == 'published'
+    assert queue[1]['post_id'] == 1724 and queue[1]['selected_at'] == original_request['selected_at']
+    assert json.loads(module.market.LEDGER.read_text())[0]['post_id'] == 1724
+
+
+@pytest.mark.parametrize(('field', 'value'), [
+    ('request_id', 'a' * 16), ('request_id', 'z' * 32), ('status', 'waiting'),
+    ('post_id', True), ('post_id', 1725), ('category', '취업'), ('keyword', '다른 검색어'),
+    ('topic', '다른 글'), ('selected_at', '2026-01-01T00:00:00+00:00'),
+    ('draft_fingerprint', '0' * 64), ('products', []),
+])
+def test_affiliate_request_binding_rejects_mismatch_before_writing(affiliate_case, field, value):
+    c = affiliate_case
+    c['request'][field] = value
+    before = (c['data'] / 'topic_queue_general.json').read_text()
+    with pytest.raises(module.AffiliateDraftError):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+    c['fetch'].assert_not_called()
+    c['client'].generate.assert_not_called()
+    assert not module.market.LEDGER.exists()
+    assert (c['data'] / 'topic_queue_general.json').read_text() == before
+
+
+@pytest.mark.parametrize('change', ['request_id', 'missing_post_id', 'state'])
+def test_affiliate_request_cannot_use_another_queue_request_or_legacy_match(affiliate_case, change):
+    c = affiliate_case
+    path = c['data'] / 'topic_queue_general.json'
+    queue = json.loads(path.read_text())
+    if change == 'request_id':
+        queue[1]['affiliate_request_id'] = 'b' * 32
+    elif change == 'missing_post_id':
+        del queue[1]['post_id']
+    else:
+        queue[1]['affiliate_state'] = 'published'
+    path.write_text(json.dumps(queue))
+    with pytest.raises(module.AffiliateDraftError):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+    c['client'].generate.assert_not_called()
+
+
+def test_waiting_affiliate_draft_cannot_bypass_reply_with_legacy_resume(affiliate_case):
+    c = affiliate_case
+    with pytest.raises(module.AffiliateDraftError, match='affiliate_request_required'):
+        module.publish_draft(1724, c['env'])
+    c['session'].post.assert_not_called()
+    c['client'].generate.assert_not_called()
+
+
+def test_enabled_affiliate_policy_cannot_resume_an_older_draft_without_a_request(market_case):
+    c = market_case
+    c['env']['BLOG_COUPANG_TELEGRAM'] = '1'
+    assert 'affiliate_state' not in c['brief']
+    with pytest.raises(module.AffiliateDraftError, match='affiliate_request_required'):
+        module.publish_draft(1724, c['env'])
+    c['session'].get.assert_not_called()
+    c['session'].post.assert_not_called()
+    c['client'].generate.assert_not_called()
+
+
+@pytest.mark.parametrize('change', ['missing_auxiliary', 'expired_37h', 'duplicate', 'concurrent_edit'])
+def test_affiliate_reply_keeps_source_expiry_duplicate_and_edit_guards(affiliate_case, change):
+    c = affiliate_case
+    if change == 'missing_auxiliary':
+        c['fetch'].side_effect = [c['sources'][0], None]
+    elif change == 'expired_37h':
+        path = c['data'] / 'topic_queue_general.json'
+        queue = json.loads(path.read_text())
+        expired = (datetime.now(timezone.utc) - timedelta(hours=37)).isoformat()
+        queue[1]['selected_at'] = c['request']['selected_at'] = expired
+        path.write_text(json.dumps(queue))
+    elif change == 'duplicate':
+        c['state']['live'].append({'id': 9999, 'title': {'raw': c['topic']}, 'meta': {}})
+    else:
+        c['state']['current']['modified_gmt'] = 'changed-after-request'
+    before = (c['data'] / 'topic_queue_general.json').read_text()
+    with pytest.raises(module.AffiliateDraftError):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+    assert not module.market.LEDGER.exists()
+    assert (c['data'] / 'topic_queue_general.json').read_text() == before
+
+
+@pytest.mark.parametrize('change', ['name', 'url', 'request_id', 'remove'])
+def test_affiliate_repair_cannot_remove_or_change_approved_products(affiliate_case, monkeypatch, change):
+    from bs4 import BeautifulSoup
+
+    c = affiliate_case
+    def repair(html, *args, **kwargs):
+        soup = BeautifulSoup(html, 'html.parser')
+        block = soup.find(id='coupang-products-block')
+        if change == 'name':
+            block.a.string = '다른 상품'
+        elif change == 'url':
+            block.a['href'] = 'https://link.coupang.com/a/another'
+        elif change == 'request_id':
+            block['data-request-id'] = 'b' * 32
+        else:
+            block.decompose()
+        return str(soup)
+    monkeypatch.setattr(module, 'repair_evidence', repair)
+    with pytest.raises(module.AffiliateDraftError, match='products_changed'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+
+
+def test_affiliate_health_claim_is_checked_after_insertion_even_if_product_relevance_passes(affiliate_case, monkeypatch):
+    c = affiliate_case
+    c['request']['products'][0]['name'] = '당뇨 치료 보장 식품'
+    seen = []
+    def review(html, sources, call):
+        seen.append(html)
+        return ['상품의 치료 보장 주장은 공식 근거가 없음'] if '당뇨 치료 보장 식품' in html else []
+    monkeypatch.setattr(module, 'review_evidence', review)
+    monkeypatch.setattr(module, 'repair_evidence', lambda html, *a, **kw: html)
+    with pytest.raises(module.AffiliateDraftError):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    assert len(seen) == 2 and all('당뇨 치료 보장 식품' in html for html in seen)
+    c['session'].post.assert_not_called()
+    assert not module.market.LEDGER.exists()
+
+
+@pytest.mark.parametrize('response', [
+    {'products': [{'index': 0, 'relevant': False, 'claims_supported': True}]},
+    {'products': [{'index': 0, 'relevant': True, 'claims_supported': False}]},
+    {'products': [{'index': 0, 'relevant': 'true', 'claims_supported': True}]},
+])
+def test_affiliate_product_review_failure_is_closed(affiliate_case, response):
+    c = affiliate_case
+    original_generate = c['client'].generate.side_effect
+    def generate(prompt):
+        if prompt.startswith('수동 제휴 상품의 관련성과 표현을 검수하세요.'):
+            return json.dumps(response)
+        return original_generate(prompt)
+    c['client'].generate.side_effect = generate
+    with pytest.raises(module.AffiliateDraftError, match='product_review_failed'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+
+
+@pytest.mark.parametrize('failure', ['timeout', 'http_500', 'html_200', 'redirect'])
+def test_affiliate_uncertain_post_reconciles_only_exact_reviewed_payload_once(affiliate_case, failure):
+    c = affiliate_case
+    post = c['session'].post.side_effect
+    def uncertain(*args, **kwargs):
+        response = post(*args, **kwargs)
+        if failure == 'timeout':
+            raise module.requests.Timeout('PRIVATE-AUTH-RESPONSE')
+        if failure == 'http_500':
+            response.raise_for_status.side_effect = module.requests.HTTPError('PRIVATE-AUTH-RESPONSE')
+        elif failure == 'html_200':
+            response.json.side_effect = ValueError('PRIVATE-HTML-RESPONSE')
+        else:
+            response.status_code = 307
+        return response
+    c['session'].post.side_effect = uncertain
+    assert module.publish_draft(1724, c['env'], affiliate_request=c['request']) == 'https://trendpulse.blog/a1c-levels/'
+    c['session'].post.assert_called_once()
+    assert c['session'].post.call_args.kwargs['allow_redirects'] is False
+    assert json.loads(module.market.LEDGER.read_text())[0]['post_id'] == 1724
+    assert json.loads((c['data'] / 'topic_queue_general.json').read_text())[1]['affiliate_state'] == 'published'
+
+
+@pytest.mark.parametrize('change', ['uncommitted', 'read_timeout', 'content', 'categories', 'slug', 'featured_media', 'keyword', 'request_id'])
+def test_affiliate_uncertain_post_never_retries_or_accepts_partial_match(affiliate_case, capsys, change):
+    c = affiliate_case
+    post, get = c['session'].post.side_effect, c['session'].get.side_effect
+    def uncertain(*args, **kwargs):
+        if change != 'uncommitted':
+            post(*args, **kwargs)
+            saved = c['state']['current']
+            if change == 'content': saved['content'] = {'raw': '다른 본문'}
+            if change == 'categories': saved['categories'] = [1]
+            if change == 'slug': saved['slug'] = 'other'
+            if change == 'featured_media': saved['featured_media'] = 1
+            if change == 'keyword': saved['meta']['_yoast_wpseo_focuskw'] = '다른 검색어'
+            if change == 'request_id':
+                saved['content']['raw'] = saved['content']['raw'].replace('a' * 32, 'b' * 32)
+        raise module.requests.Timeout('PRIVATE-POST-AUTH')
+    def read(*args, **kwargs):
+        if c['state']['posted'] and change == 'read_timeout':
+            raise module.requests.Timeout('PRIVATE-READ-AUTH')
+        return get(*args, **kwargs)
+    c['session'].post.side_effect = uncertain
+    c['session'].get.side_effect = read
+    with pytest.raises(module.AffiliateDraftError, match='publication_unconfirmed') as exc:
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    assert 'PRIVATE' not in str(exc.value)
+    output = capsys.readouterr()
+    assert 'PRIVATE' not in output.out + output.err
+    c['session'].post.assert_called_once()
+    assert json.loads((c['data'] / 'topic_queue_general.json').read_text())[1]['status'] == 'held_draft'
+    if change in {'uncommitted', 'read_timeout'}:
+        assert not module.market.LEDGER.exists()
+    else:
+        assert json.loads(module.market.LEDGER.read_text())[0]['post_id'] == 1724
+
+
+def test_affiliate_duplicate_reply_after_publication_is_read_only_held(affiliate_case):
+    c = affiliate_case
+    module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    ledger = module.market.LEDGER.read_text()
+    calls = c['client'].generate.call_count
+    with pytest.raises(module.AffiliateDraftError, match='already_published'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_called_once()
+    assert c['client'].generate.call_count == calls
+    assert module.market.LEDGER.read_text() == ledger
+
+
+@pytest.mark.parametrize('status', ['pending', 'future', 'trash'])
+def test_affiliate_non_draft_state_is_not_misreported_as_published(affiliate_case, status):
+    c = affiliate_case
+    c['original']['status'] = status
+    with pytest.raises(module.AffiliateDraftError, match='unexpected_post_status'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+    c['client'].generate.assert_not_called()

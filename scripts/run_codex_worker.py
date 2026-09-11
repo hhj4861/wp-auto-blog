@@ -72,6 +72,11 @@ def main():
             session = requests.Session()
             session.auth = (env["WP_GENERAL_USERNAME"], env["WP_GENERAL_APP_PASSWORD"])
             session.headers["User-Agent"] = "Mozilla/5.0 (TrendPulse publication verification)"
+            if any(result.get('awaiting_affiliate') for result in results):
+                from verify_codex_run import verify_waiting
+                post_id = verify_waiting(results, session, env['WP_GENERAL_URL'].rstrip('/'))
+                print('VERIFIED DRAFT WAITING_FOR_COUPANG', post_id, flush=True)
+                return 0
             url = verify_published(results, session, env["WP_GENERAL_URL"].rstrip("/"))
             print("VERIFIED CODEX PUBLISHED", url, flush=True)
             if env.get("GITHUB_STEP_SUMMARY"):

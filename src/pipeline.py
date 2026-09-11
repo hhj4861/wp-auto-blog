@@ -298,6 +298,7 @@ class PipelineResult:
     post: Optional[CreatedPost] = None
     error: Optional[str] = None
     duration_seconds: float = 0.0
+    awaiting_affiliate: bool = False
 
     def to_dict(self) -> dict:
         """Convert to dictionary."""
@@ -307,6 +308,7 @@ class PipelineResult:
             "post": self.post.to_dict() if self.post else None,
             "error": self.error,
             "duration_seconds": self.duration_seconds,
+            "awaiting_affiliate": self.awaiting_affiliate,
         }
 
 
@@ -444,6 +446,13 @@ class BlogPipeline:
             PipelineResult
         """
         start_time = datetime.now()
+        awaiting_affiliate = False
+        affiliate_required = (self.config.mode == "general"
+                              and os.getenv("BLOG_COUPANG_TELEGRAM") == "1"
+                              and self.config.auto_publish and not refresh_post_id)
+        if affiliate_required and not market_brief:
+            return PipelineResult(topic=topic.topic, success=False,
+                                  error="쿠팡 답장 발행에는 검증된 시장 키워드 큐가 필요합니다")
         logger.info(f"Processing topic: {topic.topic}")
 
         # 키워드 게이트: 검색 수요가 없는 토픽은 생성 비용을 쓰기 전에 차단한다
@@ -591,7 +600,7 @@ class BlogPipeline:
                     ),
                 )
                 # 승인된 상품 링크만 주제에 맞춰 연결한다 (무관한 상품은 생략).
-                if category == "취업":
+                if category == "취업" and not affiliate_required:
                     content.html = insert_coupang_prep_box(content.html, topic=topic.topic)
             # Create post (or simulate in dry run)
             if self.config.dry_run:
@@ -642,6 +651,10 @@ class BlogPipeline:
                         status = PostStatus.DRAFT
                 else:
                     logger.info("품질 게이트 통과")
+                    if affiliate_required:
+                        status = PostStatus.DRAFT
+                        awaiting_affiliate = True
+                        logger.info("쿠팡 상품 링크 답장을 기다리는 초안으로 저장합니다")
 
                 # tech/kculture(bytepulse): 관련 글 내부 링크 박스 (+ 승인 시 인-콘텐츠 광고)
                 # ⚠️ bytepulse는 AdSense 재검토 대기 → 광고 슬롯이 안 채워져 '빈 박스'로 남는다
@@ -729,6 +742,7 @@ class BlogPipeline:
                 success=True,
                 post=post,
                 duration_seconds=duration,
+                awaiting_affiliate=awaiting_affiliate,
             )
 
         except Exception as e:

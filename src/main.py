@@ -417,12 +417,15 @@ def main() -> int:
                     continue
 
                 results = [result]
-                if result.success:
+                if result.success and not args.dry_run:
                     published = result.post and result.post.status.value == 'publish'
                     if require_market and published:
                         from src.market_topics import record_published_keyword
                         record_published_keyword(pending_topic, result.post.id, result.post.url)
                     pending_topic["status"] = "completed" if not require_market or published else "held_draft"
+                    if getattr(result, 'awaiting_affiliate', False):
+                        pending_topic["status"] = "held_draft"
+                        pending_topic["affiliate_state"] = "waiting"
                     if result.post:
                         pending_topic["post_id"] = result.post.id
                         pending_topic["url"] = result.post.url
@@ -483,7 +486,8 @@ def main() -> int:
         Path(os.environ["BLOG_RESULT_PATH"]).write_text(json.dumps([
             {"success": r.success, "post_id": r.post.id if r.post else None,
              "url": r.post.url if r.post else None,
-             "status": r.post.status.value if r.post else None}
+             "status": r.post.status.value if r.post else None,
+             "awaiting_affiliate": getattr(r, 'awaiting_affiliate', False)}
             for r in results], ensure_ascii=False), encoding="utf-8")
 
     # Return success if all processed successfully

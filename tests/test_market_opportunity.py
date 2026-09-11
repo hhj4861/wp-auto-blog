@@ -8,6 +8,7 @@ from unittest.mock import Mock
 import pytest
 
 from src import market_opportunity as opportunity
+from src import search_quality
 
 
 NOW = datetime(2026, 9, 10, 8, 0, tzinfo=timezone.utc)
@@ -55,6 +56,12 @@ def candidate(*, results=None, proposed_review=None, provider='google_custom_sea
     item['opportunity_evidence'] = opportunity.assess(
         KEYWORD, TOPIC, INTENT, provider, results,
         review() if proposed_review is None else proposed_review, checked_at,
+        search_review={
+            'version': search_quality.VERSION, 'query': KEYWORD, 'provider': provider,
+            'checked_at': checked_at, 'raw_sha256': search_quality.raw_sha256(results),
+            'decisions': [{'result_index': index, 'relevant': True, 'quote': row['snippet']}
+                          for index, row in search_quality.raw_rows(results)],
+        },
     )
     return item
 
@@ -156,8 +163,8 @@ def test_native_sample_cannot_override_existing_market_score_recomputation(field
 
     item = candidate(provider='codex_native_search')
     item.update(monthly_search=1200, organic_domains=[row['domain'] for row in search_rows()],
-                trend_status='unavailable', score=79.63,
-                score_components={'demand': 24.63, 'organic_opportunity': 40, 'intent_fit': 15, 'trend': 0})
+                trend_status='unavailable', score=63.63, dominant_result_ratio=0.0,
+                score_components={'demand': 24.63, 'organic_opportunity': 24, 'intent_fit': 15, 'trend': 0})
     assert opportunity.issues(item, NOW) == []
     assert current_priority(item)
     item[field] = value
@@ -302,7 +309,7 @@ def test_selection_timestamp_cannot_be_renewed_without_search_evidence():
     rejection(item, 'stale_search_sample')
 
 
-@pytest.mark.parametrize('version', [None, 0, -1, 2, '1', True, [], {}])
+@pytest.mark.parametrize('version', [None, 0, -1, 1, '1', True, [], {}])
 def test_old_missing_or_malformed_evidence_version_is_not_reusable(version):
     item = candidate()
     item['opportunity_evidence']['version'] = version
@@ -385,6 +392,61 @@ def test_invalid_match_shapes_are_skipped_and_two_valid_quotes_survive():
     proposal['matches'] = [None, [], True, {'result_index': [], 'quote': {}},
                            *deepcopy(proposal['matches'])]
     assert opportunity.issues(candidate(proposed_review=proposal), NOW) == []
+
+
+def test_old_v1_cache_cannot_authorize_new_search_quality_contract():
+    item = candidate()
+    item['opportunity_evidence']['version'] = 1
+    rejection(item, 'missing_opportunity_evidence')
+
+
+def test_missing_per_result_review_is_not_rescued_by_two_actual_quotes():
+    item = candidate()
+    del item['opportunity_evidence']['search_review']
+    rejection(item, 'missing_search_review')
+
+
+def quality_problems(item):
+    return opportunity.quality_issues(item['keyword'], item['organic_provider'], item['organic_results'],
+                                     item['selected_at'], item['opportunity_evidence']['search_review'])
+
+
+def test_intent_quotes_cannot_use_irrelevant_results_even_when_five_others_pass():
+    rows = search_rows()
+    for index, domain in ((5, 'delta.example'), (6, 'epsilon.example')):
+        rows.append({**rows[0], 'url': f'https://{domain}/guide/{index}', 'domain': domain})
+    item = candidate(results=rows)
+    bound = item['opportunity_evidence']['search_review']
+    for decision in bound['decisions'][:2]:
+        decision['relevant'] = False
+    item['opportunity_evidence'] = opportunity.assess(
+        KEYWORD, TOPIC, INTENT, item['organic_provider'], rows, review(), item['selected_at'], bound)
+    assert quality_problems(item) == []
+    rejection(item, 'unverified_intent_quotes')
+
+
+def test_different_subdomains_of_one_publisher_cannot_supply_two_intent_quotes():
+    rows = search_rows()
+    for index, host in ((0, 'news.publisher.com'), (1, 'blog.publisher.com')):
+        rows[index].update(url=f'https://{host}/article/{index}', domain=host)
+    item = candidate(results=rows)
+    assert quality_problems(item) == []
+    rejection(item, 'unverified_intent_quotes')
+
+
+@pytest.mark.parametrize('changed', ['title', 'snippet', 'url', 'domain'])
+def test_every_search_result_is_bound_even_without_an_intent_quote(changed):
+    item = candidate()
+    item['organic_results'][4][changed] = 'a changed value'
+    rejection(item, 'search_review_binding_mismatch')
+
+
+@pytest.mark.parametrize('field,value', [('organic_opportunity', 40), ('relevant_result_count', 100),
+                                      ('known_dominant_ratio', False), ('relevant_indices', [0, 1])])
+def test_saved_quality_metrics_cannot_be_changed_or_supply_approval(field, value):
+    item = candidate()
+    item['opportunity_evidence']['search_metrics'][field] = value
+    rejection(item, 'search_sample_changed')
 
 
 ANSWER = '취득한 자격과 성적 정보는 자격취득현황에서 조회할 수 있습니다.'
@@ -530,3 +592,21 @@ def test_malformed_article_fields_prevent_model_call(approved_article_brief, fie
     model = Mock(side_effect=AssertionError('Malformed article must not reach the model'))
     assert opportunity.review_article(**values, brief=approved_article_brief, call_llm=model) == ['검색 의도 검수 입력이 유효하지 않음']
     model.assert_not_called()
+
+
+def test_final_article_receives_required_facets_sources_and_current_relevance(approved_article_brief):
+    requirements = {
+        'required_facets': [{'facet': '조회 경로', 'supported': True, 'answer': '취득 현황 조회',
+                             'source_index': 0, 'quote': '공식 자료의 조회 경로 안내'}],
+        'sources': [{'source_index': 0, 'entity': '자격검정기관', 'context': '전체 취득내역',
+                     'quote': '공식 기관의 취득내역 설명'}],
+        'current_relevance': {'kind': 'evergreen', 'source_index': 0, 'quote': '현재 조회할 수 있습니다'},
+    }
+    approved_article_brief['suitability_evidence'] = {'review': requirements}
+    model = Mock(return_value=article_response())
+    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == []
+    prompt = model.call_args.args[0]
+    assert 'supported=true인 모든 필수 항목' in prompt
+    assert '한 기관 사례로 축소하지' in prompt
+    payload = json.loads(prompt.split('\n', 1)[1])
+    assert {key: payload[key] for key in requirements} == requirements

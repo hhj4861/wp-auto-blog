@@ -3,6 +3,7 @@ import json
 from copy import deepcopy
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
+import hashlib
 
 import pytest
 import yaml
@@ -12,9 +13,15 @@ from tests.test_cak_candidates import make_export, make_item, write_export
 
 
 def evidence(url='https://example.go.kr/info'):
-    return {'url': url, 'original_url': url, 'excerpt': '공식 시험 준비물 안내',
+    today = datetime.now(timezone(timedelta(hours=9))).date()
+    excerpt = ('공식 시험 준비물 안내. 공식 기관의 국민건강보험 급여와 본인부담 산정 기준을 설명합니다. '
+               '독자는 신분증과 접수 내역을 준비하고 공식 기관에서 필요한 서류와 확인 절차를 살펴봅니다. '
+               '공식 기관은 대상별 준비물과 확인 방법을 설명하며, 공개된 절차에 따라 조회할 수 있습니다. '
+               '기관 안내에는 필요한 준비물의 종류와 확인 순서가 있으며, 독자는 누락된 서류를 준비할 수 있습니다. '
+               f'{today.isoformat()}부터 {(today + timedelta(days=7)).isoformat()}까지 접수를 받습니다.')
+    return {'url': url, 'original_url': url, 'excerpt': excerpt,
             'title': '시험 준비물', 'checked_on': datetime.now(timezone(timedelta(hours=9))).date().isoformat(),
-            'sha256': 'test'}
+            'sha256': hashlib.sha256(excerpt.encode()).hexdigest()}
 
 
 def organic(url='https://independent.example/info', keyword='시험준비물'):
@@ -39,10 +46,39 @@ def intent_review(keyword='시험준비물'):
 
 
 def opportunity_evidence(item):
-    return {'version': 1, 'query': item['keyword'], 'topic': item['topic'],
-            'intent': item['intent'], 'provider': item['organic_provider'],
-            'checked_at': item['selected_at'], 'result_count': 5, 'domain_count': 3,
-            'dominant_ratio': 0, **intent_review(item['keyword'])}
+    return market.opportunity.assess(item['keyword'], item['topic'], item['intent'],
+        item['organic_provider'], item['organic_results'], intent_review(item['keyword']), item['selected_at'],
+        search_review=synthetic_search_review(item['keyword'], item['organic_provider'],
+            item['organic_results'], item['selected_at'], None))
+
+
+def synthetic_search_review(keyword, provider, results, checked_at, call_llm):
+    """Mock only the new LLM boundary; still execute binding and evidence validation."""
+    from src.search_quality import raw_rows
+    if not results or provider is None:
+        return None
+    response = {'decisions': [{'result_index': index, 'relevant': True,
+                              'quote': row['title'] + ' ' + row['snippet']}
+                             for index, row in raw_rows(results)]}
+    return market.opportunity.review_search(keyword, provider, results, checked_at, lambda _: response)
+
+
+def synthetic_plan_review(item, now, call_llm):
+    if not item.get('verified_sources'):
+        return market.suitability.review_plan(item, now, lambda _: {})
+    temporal = market.suitability.TEMPORAL.search(item['keyword'])
+    quote = item['verified_sources'][0]['excerpt']
+    today = datetime.now(timezone(timedelta(hours=9))).date()
+    raw = {'scope': 'full_keyword', 'target_keyword': item['keyword'],
+        'sources': [{'source_index': i, 'quote': source['excerpt'], 'entity': '공식', 'context': 'system_rules'}
+                    for i, source in enumerate(item['verified_sources'])],
+        'required_facets': [{'facet': item['intent'], 'answer': '필요한 준비물과 확인 절차', 'supported': True,
+                            'source_index': 0, 'quote': quote}],
+        'current_relevance': {'kind': 'upcoming' if temporal else 'evergreen', 'source_index': 0,
+            'quote': quote, 'event_start': today.isoformat() if temporal else None,
+            'event_end': (today + timedelta(days=7)).isoformat() if temporal else None,
+            'date_quote': quote if temporal else None}}
+    return market.suitability.review_plan(item, now, lambda _: raw)
 
 
 def analysis(keyword='시험준비물', category='취업', **extra):
@@ -54,6 +90,8 @@ def analysis(keyword='시험준비물', category='취업', **extra):
 
 @pytest.fixture(autouse=True)
 def isolated_market_history(tmp_path, monkeypatch):
+    monkeypatch.setattr(market, 'review_search', synthetic_search_review)
+    monkeypatch.setattr(market, 'review_plan', synthetic_plan_review)
     monkeypatch.delenv('CAK_KEYWORD_CANDIDATES_FILE', raising=False)
     monkeypatch.delenv('CAK_KEYWORD_CANDIDATES_FETCH_STATUS_FILE', raising=False)
     monkeypatch.setattr(market, 'ROOT', tmp_path)
@@ -72,16 +110,18 @@ def candidate(category='취업', **extra):
             'source_url': 'https://example.go.kr/info',
             'organic_domains': [result['domain'] for result in results],
             'organic_provider': 'google_custom_search', 'evidence_mode': 'serp',
+            'dominant_result_ratio': 0.0,
             'publish_eligible': True, 'hold_reasons': [], 'demand_scope': 'keyword_total',
             'topic': '시험 준비물 확인 방법', 'keyword': '시험준비물', 'keywords': ['시험준비물'],
-            'score': 79.63, 'selection_version': market.PROCESS_VERSION,
-            'score_components': {'demand': 24.63, 'organic_opportunity': 40,
+            'score': 63.63, 'selection_version': market.PROCESS_VERSION,
+            'score_components': {'demand': 24.63, 'organic_opportunity': 24,
                                  'intent_fit': 15, 'trend': 0},
             'trend_growth': None, 'trend_status': 'unavailable',
             'intent': '무엇을 준비하나', 'gap': '공식 준비물 체크리스트',
             'verified_sources': [evidence()], 'organic_results': results,
             'intent_results': [results[0]['url']], **extra}
     row.setdefault('opportunity_evidence', opportunity_evidence(row))
+    row.setdefault('suitability_evidence', synthetic_plan_review(row, datetime.now(timezone.utc), None))
     return row
 
 
@@ -812,7 +852,7 @@ def test_cached_intent_requires_exact_keyword_and_quotes_from_distinct_domains(c
 
 
 @pytest.mark.parametrize('kind,reason', [
-    ('few_results', 'insufficient_search_sample'),
+    ('few_results', 'insufficient_relevant_results'),
     ('narrower_query', 'narrower_or_unverified_search_intent'),
     ('missing_quotes', 'unverified_intent_quotes'),
 ])
@@ -827,11 +867,22 @@ def test_selection_holds_source_backed_plans_without_search_opportunity(monkeypa
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {
         '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
     monkeypatch.setattr(market, 'search_results', lambda _: ('google_custom_search', rows))
-    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    sources = Mock(return_value=[evidence()])
+    monkeypatch.setattr(market, 'candidate_sources', sources)
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     monkeypatch.setattr(market, 'ask', Mock(side_effect=[
         {'candidates': [{'keyword': '시험준비물'}]}, analysis(intent_evidence=review)]))
     report = market.select_category('취업', 1, titles=[])
+    if kind == 'few_results':
+        assert report['selected'] == report['held'] == []
+        assert len(report['rejected']) == 1
+        rejected = report['rejected'][0]
+        assert rejected['keyword'] == '시험준비물' and rejected['monthly_search'] == 1200
+        assert reason in rejected['hold_reasons']
+        sources.assert_not_called()
+        with pytest.raises(RuntimeError, match='no verified market topic'):
+            market.enqueue_report([], report)
+        return
     assert report['selected'] == [] and report['rejected'] == []
     held = report['held'][0]
     assert held['monthly_search'] == 1200 and held['demand_scope'] == 'keyword_total'
@@ -1217,8 +1268,10 @@ def two_source_health_writer(mock_env_vars, monkeypatch):
     primary = 'https://www.diabetes.or.kr/general/info/treat/treat_01.php'
     faq = 'https://www.diabetes.or.kr/bbs/?category=C&code=faq'
     saved = [
-        web_evidence(primary, 'model_reported_locator', excerpt='저장 당시 진단기준 본문: 재사용 금지'),
-        web_evidence(faq, 'model_reported_locator', excerpt='저장 당시 정상범위 FAQ: 재사용 금지'),
+        web_evidence(primary, 'model_reported_locator',
+                     excerpt='공식 학회 저장 당시 진단기준 본문: 당뇨병 진단기준과 조절목표는 서로 구분합니다. 재사용 금지. ' * 6),
+        web_evidence(faq, 'model_reported_locator',
+                     excerpt='공식 학회 저장 당시 정상범위 FAQ: 정상과 전단계의 구분은 진단기준 표와 함께 확인합니다. 재사용 금지. ' * 6),
     ]
     item = candidate(category='건강', keyword='당화혈색소정상수치', keywords=['당화혈색소정상수치'],
                 topic='당화혈색소정상수치: 정상·전단계·당뇨병 진단기준 구분',
@@ -1227,10 +1280,10 @@ def two_source_health_writer(mock_env_vars, monkeypatch):
                 source_url=primary, verified_sources=saved, intent_results=[primary, faq],
                 research_evidence=web_research_evidence(*saved))
     fresh = [
-        {**saved[0], 'sha256': 'refetched-primary',
-         'excerpt': '최신 진단기준 본문: 당뇨병 진단에 사용하는 검사 기준과 조절목표는 구분한다.'},
-        {**saved[1], 'sha256': 'refetched-faq',
-         'excerpt': '최신 정상범위 FAQ: 정상과 전단계의 경계는 진단 기준표와 함께 확인한다.'},
+        web_evidence(primary, 'model_reported_locator',
+                     excerpt='공식 학회 최신 진단기준 본문: 당뇨병 진단에 사용하는 검사 기준과 조절목표는 구분한다. ' * 6),
+        web_evidence(faq, 'model_reported_locator',
+                     excerpt='공식 학회 최신 정상범위 FAQ: 정상과 전단계의 경계는 진단 기준표와 함께 확인한다. ' * 6),
     ]
     assert market.fresh_market_item(item, '건강')
     generator = module.ContentGenerator(module.ContentConfig(language='ko'))
@@ -1254,6 +1307,8 @@ def test_writer_refetches_primary_and_faq_before_using_all_current_evidence(two_
     case = two_source_health_writer
     # Saved order and repeats must not change primary-first fetch order.
     case.brief['verified_sources'] = [case.saved[1], case.saved[0], case.saved[1]]
+    case.brief['suitability_evidence'] = synthetic_plan_review(case.brief, datetime.now(timezone.utc), None)
+    assert market.fresh_market_item(case.brief, '건강')
     events = []
     by_url = {source['url']: source for source in case.fresh}
 
@@ -1323,6 +1378,8 @@ def test_writer_fetches_each_selected_url_but_deduplicates_same_final_page(two_s
 
 
 def web_evidence(url='https://example.go.kr/info', origin='native_open', **extra):
+    if isinstance(extra.get('excerpt'), str) and 'sha256' not in extra:
+        extra['sha256'] = hashlib.sha256(extra['excerpt'].encode()).hexdigest()
     return {**evidence(url), 'locator_origin': origin, **extra}
 
 
@@ -1479,7 +1536,7 @@ def test_search_outage_holds_verified_longtail_without_invented_competition(monk
     assert row['verified_sources'] == [{**source, 'locator_origin': origin}]
     assert row['research_evidence'] == web_research_evidence(web_evidence(origin=origin))
     assert row['intent_results'] == [source['url']]
-    assert row['selection_version'] == 5
+    assert row['selection_version'] == 6
     assert row['status'] == 'research_only' and row['publish_eligible'] is False
     assert 'organic_results_unavailable' in row['hold_reasons']
     assert row['score_components']['intent_fit'] == 0
@@ -1808,7 +1865,7 @@ def detail_recovery(monkeypatch):
     keyword = '시험준비물'
     original = _recovery_source('https://example.go.kr/menu', '공식기관 서비스 목록과 각종 자료 안내 메뉴입니다. ')
     detail = {**_recovery_source('https://example.go.kr/details',
-        '시험준비물 상세 안내: 신분 확인 서류와 허용된 준비물의 기준을 확인하세요. '),
+        '공식 기관 시험준비물 상세 안내: 신분 확인 서류와 허용된 준비물의 기준을 확인하세요. '),
         'locator_origin': 'native_open'}
     rows = organic_sample(keyword)
     search = Mock(return_value=('codex_native_search', rows))
@@ -2101,7 +2158,7 @@ def test_supplemental_source_collection_also_skips_mirrored_bodies(monkeypatch):
 @pytest.fixture
 def multiple_official_sources():
     return [_recovery_source(f'https://source{i}.go.kr/detail',
-                             f'{i}번 기관의 자격 요건과 비용을 설명하는 합성 상세 본문입니다. ')
+                             f'{i}번 공식 기관의 자격 요건과 비용을 설명하는 합성 상세 본문입니다. ')
             for i in range(4)]
 
 
@@ -2176,8 +2233,87 @@ def test_selected_secondary_sources_reach_queue_without_changing_market_evidence
     report = market.select_category('취업', 1, titles=[])
     item = report['selected'][0]
     assert item['verified_sources'] == sources and item['source_url'] == sources[0]['url']
-    assert item['score'] == 79.63 and item['monthly_search'] == 1200
+    assert item['score'] == 63.63 and item['monthly_search'] == 1200
     assert item['organic_results'] == organic_sample() and item['organic_provider'] == 'codex_native_search'
     assert market.fresh_market_item(item, '취업')
     assert market.enqueue_report([], report)[0]['verified_sources'] == sources
     search.assert_called_once_with('시험준비물')
+
+
+def test_v5_report_cannot_reenter_publication_even_with_current_dates_and_pass_flags():
+    item = candidate(selection_version=5)
+    assert item['publish_eligible'] and not item['hold_reasons']
+    assert market.opportunity.issues(item) == market.suitability.issues(item) == []
+    assert not market.fresh_research_item(item, '취업')
+    assert not market.fresh_market_item(item, '취업')
+    queue = [{'source': 'manual', 'status': 'pending', 'topic': '수동 보존 항목'}]
+    before = deepcopy(queue)
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report(queue, {'category': '취업', 'selected': [item]})
+    assert queue == before
+
+
+def test_v6_preserves_all_eligible_ranked_plans_when_top_n_limits_selection(monkeypatch):
+    volumes = {'시험준비물': 1200, '면접준비물': 3000}
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        keyword: {'keyword': keyword, 'monthly': monthly} for keyword, monthly in volumes.items()})
+    monkeypatch.setattr(market, 'search_results', lambda keyword: ('codex_native_search', organic_sample(keyword)))
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+
+    def analyze(prompt):
+        if '조사 후보를 고르세요.' in prompt:
+            return {'candidates': [{'keyword': keyword} for keyword in volumes]}
+        keyword = next(keyword for keyword in volumes if f'검색어는 {keyword}입니다.' in prompt)
+        return analysis(keyword, source_indices=[0])
+
+    monkeypatch.setattr(market, 'ask', analyze)
+    report = market.select_category('취업', top_n=1, titles=[])
+    # Saving/reloading the report must preserve the plan below the selection cut.
+    saved = json.loads(json.dumps(report, ensure_ascii=False))
+    assert saved['selection_version'] == 6
+    assert len(saved['selected']) == 1 and len(saved['ranked_candidates']) == 2
+    assert saved['selected'][0]['keyword'] == '면접준비물'
+    assert [row['keyword'] for row in saved['ranked_candidates']] == ['면접준비물', '시험준비물']
+    assert saved['ranked_candidates'][0]['score'] > saved['ranked_candidates'][1]['score']
+    for row in saved['ranked_candidates']:
+        assert row['monthly_search'] == volumes[row['keyword']]
+        assert row['verified_sources'] == [evidence()]
+        assert market.fresh_market_item(row, '취업')
+    decisions = {row['keyword']: row for row in saved['candidate_decisions']}
+    assert decisions['면접준비물']['status'] == 'selected'
+    assert decisions['시험준비물']['status'] == 'eligible_not_selected'
+    assert decisions['시험준비물']['reason'] == 'selection_limit'
+    assert decisions['시험준비물']['rank'] == 2
+    swapped = deepcopy(saved['ranked_candidates'][1])
+    swapped['suitability_evidence'] = deepcopy(saved['ranked_candidates'][0]['suitability_evidence'])
+    assert market.suitability.issues(swapped) == ['topic_suitability_binding_mismatch']
+    assert not market.fresh_market_item(swapped, '취업')
+
+
+@pytest.mark.parametrize('field', ['topic', 'intent', 'gap', 'source_text', 'source_url', 'selected_at'])
+def test_v6_cached_suitability_cannot_be_reused_after_question_source_or_time_changes(field):
+    original = candidate()
+    assert market.fresh_market_item(original, '취업')
+    changed = deepcopy(original)
+    if field in ('topic', 'intent', 'gap'):
+        changed[field] += ' 별도의 서류 발급 절차 확인'
+    elif field == 'source_text':
+        source = changed['verified_sources'][0]
+        source['excerpt'] += ' 기관은 추가 발급 서류의 확인 절차도 별도로 안내합니다.'
+        source['sha256'] = hashlib.sha256(source['excerpt'].encode()).hexdigest()
+    elif field == 'source_url':
+        source = changed['verified_sources'][0]
+        source['url'] = source['original_url'] = 'https://another.go.kr/revised'
+        changed['source_url'] = source['url']
+    else:
+        changed['selected_at'] = (datetime.now(timezone.utc) - timedelta(minutes=5)).isoformat()
+    # Even a separately valid search review cannot replace the missing review of
+    # this new question/body/time. Keep the old suitability evidence untouched.
+    changed['opportunity_evidence'] = opportunity_evidence(changed)
+    assert market.opportunity.issues(changed) == []
+    assert market.suitability.issues(changed) == ['topic_suitability_binding_mismatch']
+    assert not market.fresh_market_item(changed, '취업')
+    with pytest.raises(RuntimeError, match='no verified market topic'):
+        market.enqueue_report([], {'category': '취업', 'selected': [changed]})
+    assert market.fresh_market_item(original, '취업')

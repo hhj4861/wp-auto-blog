@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import base64
 import json
+import math
 import os
 import re
 import time
@@ -65,18 +66,21 @@ def _headers() -> dict:
 
 
 def query(start_date: str, end_date: str, dimensions: list[str],
-          row_limit: int = 25000, filters: list[dict] | None = None) -> list[dict]:
+          row_limit: int = 25000, filters: list[dict] | None = None,
+          data_state: str = 'all') -> list[dict]:
     """Search Analytics 조회. rows(dict 리스트) 반환.
 
     각 row: {keys: [...], clicks, impressions, ctr, position}
     dimensions 예: ["page"], ["query"], ["page","query"], ["date"]
     """
+    if data_state not in {'all', 'final'}:
+        raise ValueError('Unsupported Search Console data state')
     body = {
         "startDate": start_date,
         "endDate": end_date,
         "dimensions": dimensions,
         "rowLimit": row_limit,
-        "dataState": "all",
+        "dataState": data_state,
     }
     if filters:
         body["dimensionFilterGroups"] = [{"filters": filters}]
@@ -87,6 +91,12 @@ def query(start_date: str, end_date: str, dimensions: list[str],
     rows = r.json().get("rows", [])
     out = []
     for row in rows:
+        if data_state == 'final':
+            # The keyword cohort report must distinguish absent values from measured zero.
+            if (not isinstance(row, dict) or any(
+                    type(row.get(key)) not in (int, float) or not math.isfinite(row[key]) or row[key] < 0
+                    for key in ('clicks', 'impressions', 'ctr', 'position')) or row['ctr'] > 1):
+                raise ValueError('Invalid Search Console metrics')
         item = {"clicks": row.get("clicks", 0), "impressions": row.get("impressions", 0),
                 "ctr": row.get("ctr", 0), "position": row.get("position", 0)}
         for dim, key in zip(dimensions, row.get("keys", [])):

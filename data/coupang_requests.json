@@ -1,5 +1,20 @@
 {
   "next_update_id": null,
-  "requests": [],
+  "requests": [
+    {
+      "category": "건강",
+      "created_at": "2026-09-11T16:09:52.201037+00:00",
+      "draft_fingerprint": "3e9b4794deae82b6c7b72290faf9253db94b515de3d20df2864ddbb2e51f0a31",
+      "keyword": "대상포진초기증상",
+      "last_error": "notification_delivery_unknown",
+      "message_key": null,
+      "post_id": 1754,
+      "products": [],
+      "request_id": "12ff037da83f46fb8369dd22dd5b110c",
+      "selected_at": "2026-09-11T15:55:51.295428+00:00",
+      "status": "notification_unknown",
+      "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징"
+    }
+  ],
   "schema_version": 1
 }

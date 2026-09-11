@@ -5341,5 +5341,363 @@
     "score": 83.62,
     "publish_eligible": true,
     "hold_reasons": []
+  },
+  {
+    "keyword": "대상포진초기증상",
+    "category": "건강",
+    "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징",
+    "intent": "대상포진은 초기에 어떤 통증과 감각이상으로 시작하며, 발진과 물집은 어떻게 나타나나요?",
+    "gap": "학회 본문에 근거한 증상 진행표와 편측·띠 모양 분포, 드문 무발진 사례를 정리해 자가판단의 한계를 안내합니다.",
+    "source_url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
+    "verified_sources": [
+      {
+        "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
+        "original_url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
+        "title": "대한피부과학회",
+        "checked_on": "2026-09-12",
+        "sha256": "251f9610304cb98ae67b6a8b53b9b5c9795dfcb30aa75c0ea9e0bf2f8d8fbf79",
+        "excerpt": "피부질환 발전된 의료 서비스를 위해 진료정보를 공유합니다. No. 585 포진후 신경통 2012.11.01 작성자 : 관리자 조회 : 11667 포진후 신경통 원인 대상포진은 과거에 수두에 걸렸거나 수두 예방접종을 한 사람의 지각신경절에 잠복해 있던 수두 바이러스가 세포면역체계의 변화로 인하여 재활성화되어 신경을 따라 내려가 피부에 감염을 일으키는 질환이며, 포진후 신경통은 대상포진의 가장 심한 후유증이다. 바이러스의 재활성 유발인자로는 고령(가장 강한 유발인자), 외상, 척수종양, 호즈킨병, 악성림프종, 만성 백혈병 등이 있으며, 세포면역의 장애가 있는 경우 잘 발생한다. 역학 대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다. 수두 또는 대상포진에 이환된 환자로부터 감염되어 발생한다는 확실한 근거는 없지만, 수두와 동일한 바이러스가 원인이기 때문에 수두에 걸리지 않았던 사람에서 대상포진 환자와의 접촉이나 공기감염의 경로를 통하여 수두가 발생할 수 있다. 증상 발진이 나타나기 평균 4~5일(1~14일) 전부터 피부절을 따라 동통, 압통, 감각이상이 발생하며, 가벼운 자극에도 과민반응이 나타나며, 두통, 권태감, 발열이 극히 일부에서 동반될 수 있다. 국소 림프절이 흔히 커지고 압통을 동반할 수 있다. 피부발진은 침범한 신경을 따라 띠 모양으로 분포되어 홍반성 구진과 반점으로 나타나고, 12~24시간 내에 수포를 형성한다(그림 14-46). 이러한 수포는 각기 타원형 또는 원형이고, 제형성의 중앙부 함몰을 볼 수 있다. 피부발진 3일째 농포로 진행되며 7~10일이 지나서 각각의 병변들은 결국 가피가 형성되어 탈락되는데, 가피가 대체로 2~3주 지속되므로 평균 발진기간은 약 3주일 정도이며 새로운 피부병변은 발진 1~4일(때로는 7일)까지 발생할 수 있다. 피부병변과 환자가 느끼는 통증의 정도는 비례하며, 또한 고령의 환자에서 더 심각한 통증을 호소한다. 드물게 환자가 통증을 호소하지만 피부병변이 발생하지 않을 수도 있다. 발생부위는 흉부(55%), 뇌신경(20%, 삼차신경에 가장 흔함), 요추신경(15%), 천골신경(5%)의 빈도로 자주 발생하며, 대부분이 편측으로 발생하고, 중앙선을 넘지 않으며, 양측성으로 발생하는 경우는 매우 드물고, 극히 일부의 환자들에게서 대상포진 감염이 재발하는 것으로 알려져 있다. 포진후 신경통은 피부병변이 호전된 후, 혹은 병변이 발생한지 1~3개월 후에도 통증이 지속되는 경우인데, 가장 흔하며 고통스러운 합병증으로 40세 이하에서는 비교적 드물며 60세 이상에서 약 50%에서 발생한다. 약 50%의 환자들이 3개월 내에 호전을 보이고, 약 70% 정도의 환자들이 1년 내에 호전을 보이는 것으로 알려져 있다. 포진후 동통은 안구 대상포진에서 가장 높은 발생빈도를 보인다. 진단 특징적인 임상양상으로 충분한 진단이 가능하다. 수포 기저부 또는 수포액의 도말검사에서 거대 또는 다핵 표피세포가 관찰되며, 바이러스 배양과 혈청검사를 통한 바이러스를 입증할 수 있다. 좌측 흉부를 침범할 경우에는 초기에 심전도 검사를 하여 허혈성 심질환을 감별할 필요가 있다. 치료 대상포진의 치료 목표는 동통의 억제, 바이러스의 확산과 이차적 세균감염 억제, 포진후 동통 등의 합병증 예방 및 최소화이다. 항바이러스제를 전신적으로 투여하며, 항바이러스 약물을 수포형성하고 난 뒤 72시간 이내에 투여하면 피부병변의 치유를 촉진시키며, 급성 동통의 기간을 줄이고 포진후 동통의 발생빈도를 줄일 수 있다. 초기 수포형성 시기에는 병변에 대한 습포가 동통을 완화할 수 있으며, 통증이 심한 경우, 수면 장애, 피로 우울증이 동반될 수 있어 마약성 진통제로 통증을 초기에 경감시킬 필요가 있다. 그외 국소 열찜질, 염증완화제의 병변내 주사, 신경차단술 등을 이용하여 통증을 경감시켜줄 수 있다. 대상포진 환자에서 포진후 동통 예방을 위한 스테로이드 전신투여에 대해 논란이 많은데, 최근의 연구에 의하면 부신피질호르몬제는 포진 후 동통의 빈도를 줄이지 못하는 것으로 알려져 있지만, 급성 동통의 감소와 일상생활로의 복귀를 단축할 수 있으므로 부신피질호르몬제의 투여에 금기가 되지 않는 환자의 경우 단기간의 경구투여가 권장된다. 이전글 편평태선 2012.11.01 다음글 표피낭종 2012.11.01 목록 이메일 무단수집 거부 닫기 대한피부과학회는 정보통신망법 제 50조의 2, 제50조의 7 등에 의거하여, 대한피부과학회가 운영, 관리하는 웹페이지상에서, 이메일주소 수집 프로그램이나 그 밖의 기술적 장치 등을 이용하여 이메일 주소를 무단으로 수집하는 행위를 거부합니다. [게시일 2020년 5월 15일] 확인 위로가기",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://ddakdap.kr/article/shingles-early-symptoms",
+      "https://jilhwanpedia.live/posts/post-32675/"
+    ],
+    "valid_until": null,
+    "monthly_search": 13600,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6679",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "대상포진 초기 증상",
+    "organic_domains": [
+      "www.snuh.org",
+      "www.primehospital.co.kr",
+      "ddakdap.kr",
+      "jilhwanpedia.live",
+      "m.coinlab.edaily.co.kr",
+      "www.xrpin.kr",
+      "write.daplus.co.kr",
+      "www.hyunmyoung.co.kr",
+      "www.goe.go.kr",
+      "dongpoongi.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AC000187",
+        "domain": "www.snuh.org",
+        "title": "서울대학교병원",
+        "snippet": "전통적으로는 대상포진에 의한 피부 발진이 생긴 이후 6개월 이상 병변 부위의 만성적인 통증이 지속될 때 대상포진후 신경통이라 정의하는 것이 일반적이나, 최근에는 피부 발진이 생긴 지"
+      },
+      {
+        "url": "https://www.primehospital.co.kr/141",
+        "domain": "www.primehospital.co.kr",
+        "title": "연세프라임병원",
+        "snippet": "바이러스에 손상된 신경을 치료하지 않으면 평생 후유증이 남을 수 있는 아주 어려운 질환입니다. ... #### 대상포진의 증상 ... * 면역력이 약한 초기 대상포진 환자의 경우"
+      },
+      {
+        "url": "https://ddakdap.kr/article/shingles-early-symptoms",
+        "domain": "ddakdap.kr",
+        "title": "대상포진 초기 증상｜진료 시기·전염 가능성·주의 신호 | 딱답",
+        "snippet": "# 대상포진 초기 증상｜ ... 대상포진은 보통 몸 한쪽에 통증·저림·따가움이 먼저 나타나고, 2~3일 뒤 같은 부위에 붉은 발진과 모여 있는 물집이 생깁니다. ... 항바이러스 치료는"
+      },
+      {
+        "url": "https://jilhwanpedia.live/posts/post-32675/",
+        "domain": "jilhwanpedia.live",
+        "title": "대상포진 증상 초기에는 어떻게 나타나나요 · 질환의학사전",
+        "snippet": "> 대상포진 증상은 대개 몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고, 이어 붉은 발진과 작은 물집이 나타나는 것이 특징이에요. ... 바이러스가 신경을 따라 피부"
+      },
+      {
+        "url": "https://m.coinlab.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02092646645549944",
+        "domain": "m.coinlab.edaily.co.kr",
+        "title": "대상포진, 수포보다 통증 먼저 시작 ... 증상 발생 후 72시간이 치료 골든타임",
+        "snippet": "모르고 지나치기 쉬운 ‘대상포진’ 초기 증상일 수 있어서다.증상이 나타난 뒤 72시간 안에 치료하지 않으면, 피부 병변이 회복된 뒤에도 극심한 통증이 이어지는 ‘대상포진 후 신경통’으로 이어질"
+      },
+      {
+        "url": "https://www.xrpin.kr/2026/05/blog-post_194.html",
+        "domain": "www.xrpin.kr",
+        "title": "대상포진 초기 증상부터 치료까지 총정리 | 전염성·치료·백신 예방까지 한번에 - 마일스톤",
+        "snippet": "# 대상포진 초기 증상부터 치료까지 총정리 | 전염성·치료·백신 예방까지 한번에 ... 대상포진의 초기 증상과 발생 부위별 특징, 전염성 여부, 올바른 진료과 선택, 72시간 골든타임 치료,"
+      },
+      {
+        "url": "https://write.daplus.co.kr/content/health/%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84-%EC%B4%88%EA%B8%B0%EC%A6%9D%EC%83%81%EA%B3%BC-%EA%B3%A8%EB%93%A0%ED%83%80%EC%9E%84-%EB%86%93%EC%B9%98%EC%A7%80-%EB%A7%90%EC%95%84%EC%95%BC-%ED%95%A0-%EC%B9%98%EB%A3%8C-%ED%95%B5%EC%8B%AC-%EA%B0%80%EC%9D%B4%EB%93%9C-963",
+        "domain": "write.daplus.co.kr",
+        "title": "대상포진 초기증상과 골든타임, 놓치지 말아야 할 치료 핵심 가이드 | 다플",
+        "snippet": "갑작스러운 몸의 통증이나 피부 이상감각이 나타나면 단순 피로 때문인지, 아니면 대상포진의 초기 신호인지 구별하기 어려울 때가 많습니다. ... 이번 글에서는 대상포진 초기증상의 주요 특징과 부위별"
+      },
+      {
+        "url": "https://www.hyunmyoung.co.kr/nerve-block/intercostal-neuralgia-early-symptoms/",
+        "domain": "www.hyunmyoung.co.kr",
+        "title": "늑간신경통 초기 증상, 이것부터 확인하세요 | 현명신경외과의원 시청역·중구·서소문·종로·서대문 신경외과",
+        "snippet": "# 늑간신경통 초기 증상, 이것부터 확인하세요 ... 본 글은 신경외과 전문의가 작성·검토한 의학 정보이며, 개인별 진단·치료를 대신하지 않습니다. ... 자세·근육 긴장·대상포진·외상 등이 원인이며, 띠 모양으로"
+      },
+      {
+        "url": "https://www.goe.go.kr/resource/goe/na/bbs_2675/2025/09/33fc09db-47c7-4b13-a254-f0ebf8c4c1d7.pdf",
+        "domain": "www.goe.go.kr",
+        "title": "6. 수두(Chicken pox)",
+        "snippet": "<tr><th>감염경로</th><td>• 수두 환자의 수포액과 직접 접촉(피부 병변이 주요 감염 전파원)<br>• 수두 환자의 호흡기 분비물을 에어로졸로 흡입<br>• 급성 수두 또는 대상포진 환자의 피부병변 수포액을 에어로졸로 흡입</td></tr>"
+      },
+      {
+        "url": "https://dongpoongi.com/%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84/",
+        "domain": "dongpoongi.com",
+        "title": "🩹 '대상포진' 초기 증상, 골든타임 놓치면 신경통까지?",
+        "snippet": "# 🩹 ‘대상포진’ 초기 증상, 골든타임 놓치면 신경통까지? ... 통증이 발진보다 먼저 나타날 수 있어 초기에 알아채기 어렵고, 치료 시기를 놓치면 대상포진 후 신경통 같은"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 33.07,
+      "organic_opportunity": 33.33,
+      "trend": -4.34,
+      "intent_fit": 15
+    },
+    "trend_growth": -0.434,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 6,
+    "selected_at": "2026-09-11T15:55:51.295428+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "대상포진초기증상"
+    ],
+    "status": "held_draft",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
+          "title": "대한피부과학회",
+          "excerpt_chars": 2293
+        },
+        {
+          "url": "https://www.kdata.or.kr/",
+          "title": "한국데이터산업진흥원 - 메인",
+          "excerpt_chars": 8000
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://www.kdata.or.kr/",
+              "title": "한국데이터산업진흥원 - 메인",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
+              "title": "대한피부과학회",
+              "excerpt_chars": 2293
+            },
+            {
+              "url": "https://www.kdata.or.kr/",
+              "title": "한국데이터산업진흥원 - 메인",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "대상포진초기증상",
+      "executed_query": "대상포진 초기 증상",
+      "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징",
+      "intent": "대상포진은 초기에 어떤 통증과 감각이상으로 시작하며, 발진과 물집은 어떻게 나타나나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-09-11T15:55:51.295428+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "대상포진초기증상",
+        "executed_query": "대상포진 초기 증상",
+        "provider": "codex_native_search",
+        "checked_at": "2026-09-11T15:55:51.295428+00:00",
+        "raw_sha256": "e9ceb78ed3a309d402a1e9ee2232e4a20a687821891959588d7e9f23ccf076fb",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": false,
+            "quote": "6개월 이상 병변 부위의 만성적인 통증이 지속될 때 대상포진후 신경통"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "바이러스에 손상된 신경을 치료하지 않으면 평생 후유증이 남을 수 있는"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "몸 한쪽에 통증·저림·따가움이 먼저 나타나고"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "대상포진, 수포보다 통증 먼저 시작"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "대상포진의 초기 증상과 발생 부위별 특징"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "대상포진 초기증상의 주요 특징과 부위별"
+          },
+          {
+            "result_index": 7,
+            "relevant": false,
+            "quote": "늑간신경통 초기 증상, 이것부터 확인하세요"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "수두 환자의 수포액과 직접 접촉"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "통증이 발진보다 먼저 나타날 수 있어"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 6,
+        "relevant_site_count": 6,
+        "relevant_indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ],
+        "relevance_ratio": 0.6,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.16666666666666666,
+        "organic_opportunity": 33.33
+      },
+      "scope": "full_keyword",
+      "target_keyword": "대상포진초기증상",
+      "matches": [
+        {
+          "result_index": 2,
+          "quote": "대상포진은 보통 몸 한쪽에 통증·저림·따가움이 먼저 나타나고"
+        },
+        {
+          "result_index": 3,
+          "quote": "대상포진 증상은 대개 몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-09-11T15:55:51.295428+00:00",
+      "input_sha256": "8bb2851db4e593629e56a70bbd8e715b57cdd1ac34244b76cebf0098b80ead38",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "대상포진초기증상",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다.",
+            "entity": "대상포진",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "발진 전 어떤 통증과 감각이상이 언제 시작되는가?",
+            "answer": "발진 평균 4~5일 전부터 동통·압통·감각이상과 가벼운 자극에 대한 과민반응이 나타날 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "발진이 나타나기 평균 4~5일(1~14일) 전부터 피부절을 따라 동통, 압통, 감각이상이 발생하며, 가벼운 자극에도 과민반응이 나타나며"
+          },
+          {
+            "facet": "초기 발진과 물집은 어떻게 진행되는가?",
+            "answer": "붉은 구진·반점으로 시작해 12~24시간 내 물집을 형성한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "피부발진은 침범한 신경을 따라 띠 모양으로 분포되어 홍반성 구진과 반점으로 나타나고, 12~24시간 내에 수포를 형성한다"
+          },
+          {
+            "facet": "증상은 어느 부위에 어떤 분포로 나타나는가?",
+            "answer": "신경을 따라 띠 모양으로 나타나며, 대부분 몸 한쪽에 발생하고 중앙선을 넘지 않는다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "대부분이 편측으로 발생하고, 중앙선을 넘지 않으며, 양측성으로 발생하는 경우는 매우 드물고"
+          },
+          {
+            "facet": "물집이나 발진이 없으면 대상포진을 배제할 수 있는가?",
+            "answer": "드물게 통증만 있고 피부병변이 없을 수 있어, 발진 유무만으로 배제할 수 없다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "드물게 환자가 통증을 호소하지만 피부병변이 발생하지 않을 수도 있다."
+          },
+          {
+            "facet": "초기 증상을 알아챘을 때 왜 신속한 진료가 필요한가?",
+            "answer": "조기 치료가 중요하다. 본문이 제시한 72시간의 기준은 최초 통증이 아닌 수포 형성 이후다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "항바이러스 약물을 수포형성하고 난 뒤 72시간 이내에 투여하면 피부병변의 치유를 촉진시키며, 급성 동통의 기간을 줄이고"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 77.06,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "affiliate_state": "waiting",
+    "post_id": 1754,
+    "url": "https://trendpulse.blog/?p=1754",
+    "post_status": "draft",
+    "held_at": "2026-09-11T16:09:49.798605",
+    "affiliate_request_id": "12ff037da83f46fb8369dd22dd5b110c"
   }
 ]

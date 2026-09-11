@@ -1482,7 +1482,7 @@
   },
   "생활정보": {
     "category": "생활정보",
-    "selected_at": "2026-09-11T02:56:10.959075+00:00",
+    "selected_at": "2026-09-11T03:32:14.977874+00:00",
     "seeds": [
       "신청방법",
       "환급금",
@@ -1503,828 +1503,282 @@
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 210,
-    "evaluated_candidates": 10,
+    "evaluated_candidates": 9,
     "research_pool_size": 120,
-    "selected": [
-      {
-        "keyword": "세금계산서발행",
-        "category": "생활정보",
-        "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
-        "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
-        "gap": "발행수단별 준비물 비교표, 홈택스 발급·조회 절차, 원칙과 월합계 예외를 구분한 기한 체크리스트를 제공한다.",
-        "source_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-        "verified_sources": [
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-            "original_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-            "title": "심사 및 지급",
-            "checked_on": "2026-09-11",
-            "sha256": "edbadbef8d90036a5d5e268d47378319170f5b230773394df2365b43a2e108b8",
-            "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 심사 및 지급 홈 국세정책/제도 근로∙자녀장려금 심사 및 지급 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급방법 국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급) 국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급 1. 매출자에서 국세청 홈택스 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. 국세청 홈택스에서 매입자 : E-Mail로 발송 2. 국세청 홈택스에서 (세금)계산서 관리 시스템(국세청) : 전자 서명된 거래정보 3. 매입자에서 국세청 홈택스 : 수취내역 확인(필요시) 전자(세금)계산서 발급대행사업자의 시스템을 이용한 발급(공동인증서로 발급) 국세청에 등록된 전자(세금)계산서 발급업무 대행 사업자(ASP)가 일정수수료를 받고 운영하는 사이트 또는 자체 구축한 전자(세금)계산서 발급시스템(ERP)을 이용하여 발급 1. 매출자에서 ERP 시스템, ASP 시스템 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. ERP 시스템, ASP 시스템에서 매입자 : E-Mail로 발송 3. 매입자에서 ERP 시스템, ASP 시스템 : 수취내역 확인(필요시) 4. ERP 시스템, ASP 시스템에서 (세금)계산서 관리 시스템(국세청) : 발급일 다음날까지 전송 기타 발급 방법(인터넷 사용이 어려운 경우) (전화 ARS 이용) 세무서에서 보안카드 수령 후 전화ARS(Tel. :126-1-2-1)를 이용하여 발급 (세무서 대리발급) 전자(세금)계산서 대리발급 신청서(주요 서식 참고)와 거래관련 증명서류 * 를 가지고 가까운 세무서(사업장 관할과 관계없이 신청 가능)를 방문하여 발급신청 * ｢거래계약서, 거래명세표, 거래내역서, 입금증｣ 등 실제 재화 또는 용역 거래를 확인할 수 있는 증명서류 발급절차 발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보 ① 공동인증서 등 준비 전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요 ※ 공동인증서 발급이 어려운 경우 세무서에서 보안카드를 발급받아 홈택스에서 전자(세금)계산서 발급 가능하며, '21.2월부터 모바일 홈택스(손택스)에서 지문 인증 등을 통하여 발급 가능 ② 회원가입 국세청에서 운영하는 홈택스 ( www.hometax.go.kr ) 또는 시스템사업자가 운영하는 전자(세금)계산서 발급사이트 중 하나를 선택하여 회원가입 ③ 발급 부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송 월합계 (세금)계산서 등의 경우 예외적으로 공급시기가 속하는 달의 다음달 10일까지 발급 가능 ④ 전송 전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음 ⑤ 조회 월별‧분기별 전자(세금)계산서 목록 및 합계표 조회 가능 홈택스가 아닌 다른 전자(세금)계산서 사이트에서 발급한 경우라도 국세청에 전송된 전자(세금)계산서는 홈택스에서 조회 가능 ⑥ 부가가치세 등 신고 매출·매입처별 (세금)계산서합계표 작성 시 전자(세금)계산서 합계금액만 기재하고 거래처별 명세 작성 불필요 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-            "original_url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-            "title": "발급시기 및 발급∙전송기한",
-            "checked_on": "2026-09-11",
-            "sha256": "163997f75124a0cced56c9b872219ab7c1e7937095c8a012cd296d797e4c713b",
-            "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 발급시기 및 발급∙전송기한 홈 국세정책/제도 전자(세금)계산서/현금영수증/신용카드 전자(세금)계산서 발급시기 및 발급∙전송기한 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급시기 재화나 용역을 공급받는 자가 지정하는 수신함에 입력되거나 국세청 전자(세금)계산서 발급 시스템에 입력된 때에 공급 받는자가 그 전자(세금)계산서를 수신한 것으로 봄 파일 전송 없이 단순히 발급된 사실만을 알리는 SMS 통지나 링크를 통하여 확인할 수 있도록 하는 것은 아직 발급이 완료된 상태가 아님 거래상대방 수신함(이메일) 또는 홈택스에 입력된 때 발급완료 전자서명하지 않은 (세금)계산서 파일을 거래상대방 이메일로 발송한 경우에는 아직 발급이 완료된 상태가 아님 전자서명을 하고 전자(세금)계산서 표준에 의해 생성된 파일이 거래상대방 수신함(이메일)에 도달한 때 발급 완료 거래상대방이 이메일 주소가 없는 경우 또는 적용될 수 없는 경우 매입자가 이메일 주소가 없거나 지정하지 아니한 경우 또는 수신함이 적용될 수 없는 시스템을 사용하는 경우에는 국세청 발급 시스템을 수신함으로 지정한 것으로 봄 발급기한 및 전송기한 발급기한 (원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급 * 발급기한(10일)이 토요일 또는 공휴일인 경우에는 바로 다음 영업일까지 발급 전송기한 발급일의 다음날까지 국세청에 전송 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
-          "https://adpot.kr/m/sub/center/faq_view.html?code=4956"
-        ],
-        "valid_until": null,
-        "monthly_search": 15780,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7791&mi=6583",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7786&mi=2304",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "세금계산서 발행",
-        "organic_domains": [
-          "www.sinokor.co.kr",
-          "sms.eyagi070.co.kr",
-          "ems.nts.go.kr",
-          "images.softcity.co.kr",
-          "newzensolution.co.kr",
-          "campaign-cdn.pstatic.net",
-          "qxguide.oopy.io",
-          "adpot.kr",
-          "m.saramin.co.kr",
-          "www.kodica.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://www.sinokor.co.kr/PortalManual/EN/SHMTAXTAXMGT.html",
-            "domain": "www.sinokor.co.kr",
-            "title": "세금계산서 발행",
-            "snippet": "영업매출 세금계산서 발행 ... | 수정세금계산서 발행 사유 | 1."
-          },
-          {
-            "url": "https://sms.eyagi070.co.kr/2026_manuals",
-            "domain": "sms.eyagi070.co.kr",
-            "title": "Dias nummer 1",
-            "snippet": "1 세금계산서 발행정보 및 담당자 정보 입력"
-          },
-          {
-            "url": "https://ems.nts.go.kr/news/file/nts_news_120330.pdf",
-            "domain": "ems.nts.go.kr",
-            "title": "매입자 발행 세금계산서 제도",
-            "snippet": "- 신청인이 매입자발행세금계산서를 발행하고 부가가치세 신고 또는 경정청구를 할 때 매입자발행세금계산서합계표를 제출하는 경우, 매입세액으로 공제받을 수 있습니다. ... - 차명·가짜세금계산서를 발행한 경우에는 공급가액의 2%에 상당하는"
-          },
-          {
-            "url": "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
-            "domain": "images.softcity.co.kr",
-            "title": "8. 세금계산서 발행 방법 3가지",
-            "snippet": "세금계산서 발행 방법 3가지 ... 상단 예시 화면: 거래명세표입력 프로그램 창에서 하단의 [세금서(F6)] 버튼이 주황색으로 강조되어 있고, 이를 누르면 뜨는 “출력방법” 팝업에서 오른쪽의 [인쇄(P)]와 [전자세금계산서(E)]"
-          },
-          {
-            "url": "https://newzensolution.co.kr/manual/distribution/6013_%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C%EC%B2%98%EB%A6%AC%28%ED%8C%90%EB%A7%A4%29.pdf",
-            "domain": "newzensolution.co.kr",
-            "title": "입력방법\n\n[미처리 탭]\n\n1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당",
-            "snippet": "1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다. 입력된 기간내의 자료는 판매입력에서 일괄 입력한 데이터를 불러오며, 기간의 마지막 날짜가 세금계산서 발행일자가"
-          },
-          {
-            "url": "https://campaign-cdn.pstatic.net/nfs/commonParam/naverpayguide_files/20231110114543_56da57792a3490f0bf40fda8f2e67faa.pdf",
-            "domain": "campaign-cdn.pstatic.net",
-            "title": "4-1. 세금계산서 발행 정책",
-            "snippet": "• 이미 세금계산서가 발행된 구매확정 주문건이 익월 이후 구매확정 후 취소처리 될 경우, 취소처리 해당 월의 세금계산서에서 마이너스 처리되어 계산됩니다."
-          },
-          {
-            "url": "https://qxguide.oopy.io/71fdb312-4a2b-4693-acb6-a987e1d71e40",
-            "domain": "qxguide.oopy.io",
-            "title": "청구서, 세금계산서 발행",
-            "snippet": "가입 시 등록한 정보와 인보이스(세금계산서) 발행 관련 정보가 다른 경우(담당자 등), “인보이스 정보”에서 수정 가능 (세금계산서 첫 발행 전에만 가능) ... N/ 승인 대기 :"
-          },
-          {
-            "url": "https://adpot.kr/m/sub/center/faq_view.html?code=4956",
-            "domain": "adpot.kr",
-            "title": "세금계산서 발행 방법",
-            "snippet": "* 세금계산서 발행 방법 2026-01-23 ... - 거래 은행의 인터넷 뱅킹 > 인증센터 > 공동인증서 또는 금융인증서 > 세금계산서 발행 신청/조회(기업용) > 발급 진행"
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/view?rec_idx=54616283&searchword=news&t_category=search&t_content=connect_recruit",
-            "domain": "m.saramin.co.kr",
-            "title": "[(주)뉴스이십일] 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) (D-2) - 사람인",
-            "snippet": "# 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) ... 신문 발행업 ... 경기 고양시 일산서구 주엽동 83번지 레이크타운 519호 (인근전철: 서울 3호선 주엽에서 500m 이내)"
-          },
-          {
-            "url": "https://www.kodica.kr/support/faq/%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89-%EC%9A%94%EC%B2%AD%ED%95%98%EA%B8%B0",
-            "domain": "www.kodica.kr",
-            "title": "자주하는 질문 - 세금계산서 발행 요청하기 | 한국디지털인증",
-            "snippet": "#### 세금계산서 발행 요청하기 ... 세금계산서 발행 요청"
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 33.58,
-          "organic_opportunity": 35.0,
-          "trend": 0.04,
-          "intent_fit": 15
-        },
-        "trend_growth": 0.004,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-11T02:56:10.959075+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "세금계산서발행"
-        ],
-        "status": "pending",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
-              "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
-              "excerpt_chars": 2815
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-              "title": "심사 및 지급",
-              "excerpt_chars": 1933
-            },
-            {
-              "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-              "title": "발급시기 및 발급∙전송기한",
-              "excerpt_chars": 1012
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://m.kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=57170&gotopage=29&keyTaxpart=0&keyfield=coun_subj&keyword=",
-                  "title": "한국세무사회",
-                  "excerpt_chars": 588
-                },
-                {
-                  "url": "https://kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=4076&gotopage=2897&keyTaxpart=0&keyfield=coun_subj&keyword=",
-                  "title": "한국세무사회",
-                  "excerpt_chars": 508
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
-                  "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
-                  "excerpt_chars": 2815
-                },
-                {
-                  "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-                  "title": "심사 및 지급",
-                  "excerpt_chars": 1933
-                },
-                {
-                  "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-                  "title": "발급시기 및 발급∙전송기한",
-                  "excerpt_chars": 1012
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "세금계산서발행",
-          "executed_query": "세금계산서 발행",
-          "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
-          "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "result_count": 10,
-          "domain_count": 10,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "세금계산서발행",
-            "executed_query": "세금계산서 발행",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-11T02:56:10.959075+00:00",
-            "raw_sha256": "db7d9de9a847d93cdabd3eb288fa047c528cc2bc3984b864394c3213dd23744b",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "영업매출 세금계산서 발행"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "세금계산서 발행정보 및 담당자 정보 입력"
-              },
-              {
-                "result_index": 2,
-                "relevant": false,
-                "quote": "매입자 발행 세금계산서 제도"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "세금계산서 발행 방법 3가지"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다."
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "4-1. 세금계산서 발행 정책"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "청구서, 세금계산서 발행"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "세금계산서 발행 방법"
-              },
-              {
-                "result_index": 8,
-                "relevant": false,
-                "quote": "뉴스21 사무 정규직 채용합니다"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "세금계산서 발행 요청하기"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 8,
-            "relevant_site_count": 8,
-            "relevant_indices": [
-              0,
-              1,
-              3,
-              4,
-              5,
-              6,
-              7,
-              9
-            ],
-            "relevance_ratio": 0.8,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.125,
-            "organic_opportunity": 35.0
-          },
-          "scope": "full_keyword",
-          "target_keyword": "세금계산서발행",
-          "matches": [
-            {
-              "result_index": 3,
-              "quote": "세금계산서 발행 방법 3가지"
-            },
-            {
-              "result_index": 7,
-              "quote": "세금계산서 발행 방법"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "input_sha256": "eb5a076234d1e3f4daf6532ade3d743e72370f60bcd5c1a8b4e38eaa22d00501",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "세금계산서발행",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급)",
-                "entity": "국세청",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
-                "quote": "전송기한 발급일의 다음날까지 국세청에 전송",
-                "entity": "국세청",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "세금계산서는 어떤 수단으로 발행하는가?",
-                "answer": "홈택스·모바일, ASP·ERP, 전화 ARS, 세무서 대리발급을 이용할 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급"
-              },
-              {
-                "facet": "발행수단별 인증수단과 준비물은 무엇인가?",
-                "answer": "전자발급은 용도에 맞는 공동인증서, 홈택스는 보안카드·생체인증도 가능하다. 대리발급은 신청서와 거래증빙이 필요하다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요"
-              },
-              {
-                "facet": "홈택스에서 발급하고 조회하는 절차는 무엇인가?",
-                "answer": "인증수단 준비·회원가입 후 거래정보 입력과 전자서명으로 발급한다. 전송은 자동이며 목록·합계표를 조회할 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보"
-              },
-              {
-                "facet": "발급기한의 원칙과 월합계 예외는 무엇인가?",
-                "answer": "원칙은 법정 공급시기이며 월합계 등은 다음 달 10일까지다. 10일이 토요일·공휴일이면 다음 영업일까지다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "(원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급"
-              },
-              {
-                "facet": "발급 후 국세청 전송기한과 별도 전송 필요 여부는?",
-                "answer": "발급일 다음 날까지 전송한다. 홈택스 발급은 즉시 자동 전송되어 별도 절차가 없다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음"
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 83.62,
-        "publish_eligible": true,
-        "hold_reasons": []
-      }
-    ],
-    "held": [
+    "selected": [],
+    "held": [],
+    "rejected": [
       {
         "keyword": "자금조달계획서",
-        "category": "생활정보",
-        "topic": "자금조달계획서 제출 대상·신고 절차와 2026년 작성 시 확인사항",
-        "intent": "주택 매수 시 자금조달계획서는 누가 제출하며, 증빙서류와 작성 항목·신고 절차는 어떻게 확인하나요?",
-        "gap": "제출 대상·증빙 의무 구분표, 2026년 개정 작성 항목 체크리스트, 계약일별 양식 선택과 신고 절차를 제공합니다.",
-        "source_url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_010104/1000",
-        "verified_sources": [
-          {
-            "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_010104/1000",
-            "original_url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_010104/1000",
-            "title": "부동산거래(신고,변경,해제)계약신고서(별지 및 위임장 포함) | 강남구청",
-            "checked_on": "2026-09-11",
-            "sha256": "5fc27c673ce248e49ce6681f2e2bb7e2b6af38f58e90eaf474329c3241689315",
-            "excerpt": "본문바로가기 주메뉴 바로가기 푸터 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 민원서식(사무편람) 부동산거래(신고,변경,해제)계약신고서(별지 및 위임장 포함) 담당부서 : \r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t부동산정보과 2026-02-06 조회수 99946 추가 입력 수수료 0 처리기간 즉시 구비서류 부동산거래계약신고서, 신청인 신분증 위임신청의 경우 개인 위임 : 위임장, 위임인 신분증 사본에 위임인 자필서명 법인 위임 : 위임장, 법인인감증명 처리절차 부동산거래계약신고서 제출하시면 신고내용 확인 후 필증 발급 관련법규 부동산거래신고에 관한 법률 처리요령 및 유의사항 부동산거래(매매) 하신 경우, 계약일로부터 30일이내 거래신고 하여야 합니다. 공인중개사 중개 물건의 경우 부동산거래계약신고는 공인중개사의 의무사항입니다. 인터넷 신고 시, 모든 신고의무자가 전자서명을 완료하여야 신고 접수가 이루어집니다. 따라서 신고의무자의 전자서명 미접수 상태임에 따른 과태료 등 처벌을 받지 않도록 유의하여 주시기 바랍니다. 신청방법 방문 제출 또는 인터넷(공인인증서를 이용) 신청장소 구청 동산거래신고 관련 법률 개정요약 (2026.2.10. 시행 ) □ 공인중개사의 실거래 신고 의무 강화 ❍ 허위 신고 ( 자전거래 , 실거래가 띄우기 ) 를 방지하기 위해 중개인의 제출서류 추가 - 매매계약서 및 입금 증빙 제출 : 공인중개사가 부동산 거래를 신고할 때 , 필요시 매매계약서 사본과 계약금 지급 증빙자료 ( 이체 확인증 등 ) 를 첨부하도록 규정하여 실제 계약 여부에 대한 검증강화 □ 자금조달계획서 및 증빙서류 강화 ❍ 불법 자금 유입과 탈세를 막기 위해 자금 출처 조사 항목 추가 - 상세 내역 기재 : 자금조달계획서 작성 시 대출 종류뿐만 아니라 금융기관명 기재 - 토지거래허가구역 증빙 강화 : 투기과열지구뿐만 아니라 토지거래허가구역 내 주택 거래시에도 자금조달계획서와 함께 이를 입증할 증빙서류 제출 필요 □ 외국인 주택 거래 신고 항목 신설 ❍ 외국인이 국내 부동산을 매수할 때 투명성을 높이기 위해 신고 항목이 대폭 강화됩니다 . - 체류자격 및 거소 여부 신고 : 외국인이 주택을 매수할 경우 , 국내 체류자격 ( 비자 종류 ) 와 실제 국내 거주 여부 (183 일 이상 거주 여부 등 ) 신고 □ 시행일 및 적용 대상 ❍ 시행일 :2026 년 2 월 10 일 ❍ 적용 대상 : 시행일 이후 체결되는 계약분부터 적용 ※ 제출양식변경 - 부동산거래계약 신고서 ( 별지 1 호서식 ) - 주택취득자금 조달 및 입주계획서 ( 별지 제 1 호의 3 서식 ) - 토지취득자금 조달 및 토지이용계획서 ( 별지 제 1 호의 4 서식 ) 자금조달계획서 증빙서류 제출 관련 안내문.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[1.24 MB] 미리보기 부동산거래신고 서식(2.법인 주택 거래계약 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[19 KB] 미리보기 부동산거래신고 서식(3.부동산거래계약 변경 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[53 KB] 미리보기 부동산거래신고 서식(4.부동산거래계약 해제등 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[20 KB] 미리보기 부동산거래신고 서식(법인 주택 거래계약 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[19 KB] 미리보기 부동산거래신고 서식(별지_공동중개,관계지번).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[14.5 KB] 미리보기 부동산거래신고 서식(별지_매도인추가).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[15.5 KB] 미리보기 부동산거래신고 서식(별지_매수인추가).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[15.5 KB] 미리보기 부동산거래신고 서식(부동산거래계약 해제등 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[20 KB] 미리보기 부동산거래신고 서식(위임장).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[12.5 KB] 미리보기 부동산거래신고 서식(증빙서류 미제출 사유서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[14 KB] 미리보기 부동산거래신고 서식(1-3.주택취득자금 조달 및 입주계획서)-2026.2.10.이후.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[68 KB] 미리보기 부동산거래신고 서식(1-4. 토지취득자금 조달 및 토지이용계획서)-2026.2.10. 이후.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[127.5 KB] 미리보기 부동산거래신고 서식(1.부동산거래계약 신고서)-2026.2.10.이후.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[71.5 KB] 미리보기 2026.2.9일이전계약 신고양식.zip\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[125.78 KB] 다음글 대부(중개)업 등록신청 위임장 이전글 의료기관 시설 장비 인력개요서 및 자가점검표 목록 강남구청 카카오톡 실시간 정보와 다양한 혜택·안내를 친구 추가로 간편히 받아보세요! 관련사이트 바로가기 본 저작물은 \"공공누리\" 제4유형:출처표시+상업적 이용금지+변경금지 조건에 따라 이용 할 수 있습니다. 이 페이지에서 제공하는 정보에 대하여 만족하십니까? 매우만족 만족 보통 불만족 매우불만족 입력 × 닫기 × 제목 YYYY-MM-DD 닫기 저장 원본이미지 닫기 × 닫기",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.korea.kr/news/policyFocusView.do?newsId=148957947&pkgId=49500831",
-            "original_url": "https://www.korea.kr/news/policyFocusView.do?newsId=148957947&pkgId=49500831",
-            "title": "달라지는 부동산 제도- 거래 관리 강화 편 - 2026 이렇게 달라집니다 | 정책포커스 | 뉴스 | 대한민국 정책브리핑",
-            "checked_on": "2026-09-11",
-            "sha256": "60d83cacafd0e46618b16bf09579231b6ec804d87a4b5b440d4e64ad57d29bb2",
-            "excerpt": "사이트 이동경로 홈 뉴스 정책포커스 2026 이렇게 달라집니다 2027 예산안 국민과 함께하는 두 번째 업무보고 2026 하반기 이렇게 달라집니다 청년정책 자살예방정책 2026 추경예산 중동전쟁 대응 에너지 위기 극복 2026 이렇게 달라집니다 저출생 극복 콘텐츠 영역 공유 열기 공유 페이스북 X 밴드 카카오톡 즐겨찾기 URL 복사 공유 닫기 공감수 2 댓글수(클릭시 댓글로 이동) 2026 이렇게 달라집니다 달라지는 부동산 제도- 거래 관리 강화 편 2026.01.14 국토교통부 부처별 뉴스 이동 본문듣기 시작 글자크기 설정 열기 글자크기 설정 작게 보통 크게 아주크게 최대크게 글자크기 설정 닫기 인쇄하기 목록 Previous Next / 달라지는 부동산 제도- 거래 관리 강화 편 달라지는 부동산 제도- 거래 관리 강화 편 달라지는 부동산 제도- 거래 관리 강화 편 달라지는 부동산 제도- 거래 관리 강화 편 달라지는 부동산 제도- 거래 관리 강화 편 Previous line Next line 2026년 부동산 거래 이제 더 꼼꼼하게 확인합니다. ■ 부동산 거래신고, 실거래 검증이 강화됩니다. 앞으로 공인중개사가 부동산 거래를 신고할 때 - 매매계약서 사본 - 계약금 지급 증빙자료 제출이 의무화되어 실제 거래 여부에 대한 검증이 강화됩니다. ■ 자금조달계획서, 이렇게 바뀝니다. · 양식 개정 ① 대출유형 세분화 ② 금융기관명 직접기재 ③ 자기자금 세분화 · 제출의무(자금조달계획서+증빙서류) 확대 → 토지거래허가구역 내 주택매수 시 ■ 외국인 부동산 거래 관리가 강화됩니다. · 외국인이 부동산 거래 시 → 체류자격(VISA)·국내 거주 여부 신고 강화 · 토지거래허가구역 내 주택 매수 시 → 자금 출처 검증 강화 -  '26년 2월 10일 이후 체결되는 계약부터 적용 ■ 공인중개사 설명의무를 강화합니다. · 설명 근거자료 - 토지대장등본 - 부동산종합증명서 - 등기사항증명서 - (NEW) 신탁원부 - (NEW) 건축물대장 등본 달라지는 부동산 제도- 거래 관리 강화 편 처음 으로 2026년 부동산 거래 이제 더 꼼꼼하게 확인합니다. ■ 부동산 거래신고, 실거래 검증이 강화됩니다. 앞으로 공인중개사가 부동산 거래를 신고할 때 - 매매계약서 사본 - 계약금 지급 증빙자료 제출이 의무화되어 실제 거래 여부에 대한 검증이 강화됩니다. ■ 자금조달계획서, 이렇게 바뀝니다. · 양식 개정 ① 대출유형 세분화 ② 금융기관명 직접기재 ③ 자기자금 세분화 · 제출의무(자금조달계획서+증빙서류) 확대 → 토지거래허가구역 내 주택매수 시 ■ 외국인 부동산 거래 관리가 강화됩니다. · 외국인이 부동산 거래 시 → 체류자격(VISA)·국내 거주 여부 신고 강화 · 토지거래허가구역 내 주택 매수 시 → 자금 출처 검증 강화 -  '26년 2월 10일 이후 체결되는 계약부터 적용 ■ 공인중개사 설명의무를 강화합니다. · 설명 근거자료 - 토지대장등본 - 부동산종합증명서 - 등기사항증명서 - (NEW) 신탁원부 - (NEW) 건축물대장 등본 이 자료는 텍스트에 한하여 공공누리 제4유형(출처표시+상업적 이용금지+변경금지)의 조건 에 따라 이용할 수 있습니다. 단, 텍스트를 제외한 사진·이미지·일러스트·동영상 등 자료의 대부분은 정책브리핑이 저작권을 보유하고 있지 않으므로, 이용 전 해당 저작권자의 허락을 반드시 받으셔야 합니다. 저작권정책 담당자안내 기사 이용 시에는 출처를 반드시 표기해야 하며, 위반 시 저작권법 제37조 제37조(출처의 명시) ① 이 관에 따라 저작물을 이용하는 자는 그 출처를 명시하여야 한다. 다만, 제26조 , 제29조부터 제32조까지 , 제34조 및 제35조의2 의 경우에는 그러하지 아니하다. <개정 2011. 12. 2.> ② 출처의 명시는 저작물의 이용 상황에 따라 합리적이라고 인정되는 방법으로 하여야 하며, 저작자의 실명 또는 이명이 표시된 저작물인 경우에는 그 실명 또는 이명을 명시하여야 한다. 닫기 및 제138조 제138조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 500만원 이하의 벌금에 처한다. <개정 2011. 12. 2.> 1. 제35조 제4항 을 위반한 자 2. 제37조 (제87조 및 제94조에 따라 준용되는 경우를 포함한다)를 위반하여 출처를 명시하지 아니한 자 3. 제58조 제3항 (제63조의2, 제88조 및 제96조에 따라 준용되는 경우를 포함한다)을 위반하여 저작재산권자의 표지를 하지 아니한 자 4. 제58조의2 제2항 (제63조의2, 제88조 및 제96조에 따라 준용되는 경우를 포함한다)을 위반하여 저작자에게 알리지 아니한 자 5. 제105조 제1항 에 따른 신고를 하지 아니하고 저작권대리중개업을 하거나, 제109조 제2항 에 따른 영업의 폐쇄명령을 받고 계속 그 영업을 한 자 [제목개정 2011. 12. 2.] 닫기 에 따라 처벌될 수 있습니다. <자료출처=정책브리핑 www.korea.kr> 이전다음기사 영역 이전기사 2026년 부모급여, 이렇게 지원합니다! 다음기사 2026년 보육사업, 이렇게 달라집니다! 공유하기 열기 공유 페이스북 X 밴드 카카오톡 즐겨찾기 URL 복사 공유 닫기 좋아요 2 댓글 보기 운영원칙 열기 정책브리핑 게시물 운영원칙에 따라 다음과 같은 게시물은 삭제 또는 계정이 차단 될 수 있습니다. 1. 타인의 메일주소, 전화번호, 주민등록번호 등의 개인정보 또는 해당 정보를 게재하는 경우 2. 확인되지 않은 내용으로 타인의 명예를 훼손시키는 경우 3. 공공질서 및 미풍양속에 위반되는 내용을 유포하거나 링크시키는 경우 4. 욕설 및 비속어의 사용 및 특정 인종, 성별, 지역 또는 특정한 정치적 견해를 비하하는 용어를\r\n\t\t\t\t\t\t\t\t\t게시하는 경우 5. 불법복제, 바이러스, 해킹 등을 조장하는 내용인 경우 6. 영리를 목적으로 하는 광고 또는 특정 개인(단체)의 홍보성 글인 경우 7. 타인의 저작물(기사, 사진 등 링크)을 무단으로 게시하여 저작권 침해에 해당하는 글 8. 범죄와 관련있거나 범죄를 유도하는 행위 및 관련 내용을 게시한 경우 9. 공인이나 특정이슈와 관련된 당사자 및 당사자의 주변인, 지인 등을 가장 또는 사칭하여 글을 게시하는 경우 10. 해당 기사나 게시글의 내용과 관련없는 특정 의견, 주장, 정보 등을 게시하는 경우 11. 동일한 제목, 내용의 글 또는 일부분만 변경해서 글을 반복 게재하는 경우 12. 기타 관계법령에 위배된다고 판단되는 경우 13. 수사기관 등의 공식적인 요청이 있는 경우 운영원칙 닫기 관련기사 관련기사 더보기 정책 NOW 실시간 인기뉴스 09.11. 11:57 기준 내년부터 당원병 환자 혈당관리 물품 본인부담금 지원 순위동일 왕이 숨겨둔 원시의 섬을 걷다 '금오도 비렁길' 순위동일 개인정보 반복·대규모 유출시 '매출액 10%' 내 징벌적 과징금 단계상승 2 수도권 공공기관 350여 곳 지방 이전 추진…내년부터 '선도 이전' NEW 2박 3일 프랑스 파리 재명로그 NEW 한·프, 국방·안보 협력 '실질 도약'…2030년 교역 200억 달러 목표 NEW 인기뉴스 (설명자료)대미투자 관련, 제1호 프로젝트는 확정된 바가 없습니다 농사를 못 지으면 농지를 팔아야 한다? 사실은 이렇습니다 복지부 내년 예산 149조 원…생계급여 올리고 지역·필수의료 강화 이 대통령, 6~9일 프랑스 국빈방문…AI·우주·원자력 등 첨단산업 협력 확대 내년부터 당원병 환자 혈당관리 물품 본인부담금 지원 최신뉴스 (보도설명) 남북협력기금은 남북관계 개선시를 대비한 예비금적 성격 등을 감안하여 편성하고 있습니다. 박정훈 식량정책실장, 천안시 우수 농특산물 직거래장터 방문 2026년 한미 공공외교 포럼 개최 직원이 직접 만든 AI로 '조달업무 혁신' 속도낸다 조달청 시설공사 주간('26.9.14.~'26.9.18.)입찰 동향 오늘의 멀티미디어 ☎109…이 정도로 전화해도 될까? 편의점 소화제, 약국 소화제랑 왜 다를까? 추석 연휴에는 어떤 혜택이 있나요? 제17차 비상경제점검회의 정책포커스 하단 배너 영역 이전보기 / 정지 다음보기",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.gccity.go.kr/gcapp/bbs/view.do?bIdx=188483&mId=0101000000&ptIdx=111",
-            "original_url": "https://www.gccity.go.kr/gcapp/bbs/view.do?bIdx=188483&mId=0101000000&ptIdx=111",
-            "title": "과천소식 | 게시판 | 홈페이지",
-            "checked_on": "2026-09-11",
-            "sha256": "80c8dc4a9b530af0271d11394d878d60af0b35d9708716be960e660d561d49a2",
-            "excerpt": "과천소식 게시판 내용 보기 자금조달 계획서 작성방법 작성자 :\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t열린민원과 등록일 : 2025-12-11 조회 : 13244 * 자금조달 계획서 대상 - 투기과열지구, 조정대상지역의 모든 주택 / 비규제지역의경우  6억원 이상의 주택 - 법인 매수 주택거래 *증빙서류 투기과열지구 : 필수첨부 *토지거래 지분거래 : 금액과 무관하게 무조건 자금도달계획서 제출 필수 일반거래 : 1억원이상시 제출필수 * 자금 조달 계획서 작성 방법 - 첨부파일에 자세한 설명 기재 (첨부파일 다운해주세요) 첨부 파일 자금조달계획서 증빙서류 제출 관련 안내문.pdf [1.1 MByte] 바로 보기 자금조달계획서 증빙서류 제출 관련 안내문.hwp [1.3 MByte] 바로 보기 자유이용을 불가합니다. 목록 과천소식 목록 번호,\r\n\t\t분류,\r\n\t\t제목, 파일,\r\n\t\t\r\n\t\t\r\n\t\t작성자, 작성일,\r\n\t\t\r\n\t\t조회 항목별 순서대로 안내하는 표입니다. 번호 분류 제목 파일 작성자 작성일 조회 행정.공지 2026 과천공연예술축제 관련 교통통제 및 버스우회 운행 안내(2026. 9. 19.(토) 15:30 ~ 21:00) 문화체육과 2026-09-09 339 문화.행사 시 승격 40주년 기념 「미디어월 시민참여 콘텐츠 이벤트」 참여 안내 정보통신과 2026-08-31 553 문화.행사 「과천 사는 이야기 마당」 사전 설문 참여 안내 (설문 참여자 선착순 송이·율이 키링 증정) 자치행정과 2026-08-31 1278 문화.행사 「2026 과천 사는 이야기 마당」 개최 안내 자치행정과 2026-08-31 906 행정.공지 2026년 하반기 민간체육시설 자율안전점검 문화체육과 2026-08-26 893 문화.행사 정보과학도서관 9월 독서의 달 행사 안내 정보과학도서관 2026-08-25 608 청년.청소년 2026 하반기 어린이 교통안전교실 참가 신청 안내 교통과 2026-08-18 1132 행정.공지 제3기 진화위 출범에 따른 진실규명 신청접수 안내(~'28. 2. 25.) 자치행정과 2026-06-23 13070 행정.공지 토지거래허가신청 구비서류 추가 안내(5.12. 발표 관련 세입자 있는 주택 매수) 열린민원과 2026-05-29 2955 생활.교육.경제 [과천시 문자 알림 서비스]🔔 신청&해지 안내 기획홍보담당관 2026-04-01 3358 생활.교육.경제 과천시 현금없는 버스 전면 시행 안내 교통과 2026-03-03 1901 행정.공지 자금조달 계획서 작성방법 열린민원과 2025-12-11 13244 행정.공지 토지거래허가신청 구비서류 안내 열린민원과 2025-10-20 8410 생활.교육.경제 경기도 공직자 사칭 사례 공유 및 유의사항 안내 지역경제과 2025-07-04 1807 4000 생활.교육.경제 생활.교육.경제 2026년 추석 연휴 생활쓰레기 수거 일정 안내 자원위생과 2026-09-10 66 3999 생활.교육.경제 생활.교육.경제 2026 과천 만원의행복 행사 안내 지역경제과 2026-09-09 648 3998 문화.행사 문화.행사 2026년 제5회 과천청년축제 '과:충전‘ 개최 안내 교육청소년과 2026-09-08 820 3997 행정.공지 행정.공지 10월 현수막 게시대 추첨 결과 발표 및 수수료 납부 안내 도시정책과 2026-09-07 120 3996 문화.행사 문화.행사 2026 과천시 추사박물관 특별기획전 <추사묵향秋史墨香 - 돌에 새긴 추사의 마음-> 개최 문화체육과 2026-09-06 507 3995 행정.공지 행정.공지 2026년 과천시 시민대상 부문별 선정 알림 자치행정과 2026-09-04 290 3994 행정.공지 행정.공지 2026년 하반기 광견병 예방접종 지원 안내 지역경제과 2026-09-04 79 3993 생활.교육.경제 생활.교육.경제 폐전지 종량제봉투 혼합배출 금지 안내 자원위생과 2026-09-03 144 3992 행정.공지 행정.공지 주민자치위원회 연계, 과천시 탄소중립 방문홍보 실시 기후환경과 2026-09-02 152 3991 행정.공지 행정.공지 [공지]2026년 9월 추사박물관 휴관일 안내 문화체육과 2026-08-31 676 3990 문화.행사 문화.행사 제20회 과천시장배 대상경주 기념 과천시민 무료입장 안내 관리자 2026-08-31 259 3989 행정.공지 행정.공지 [현수막 게시대] 10월 현수막 지정 게시대 신청 안내 도시정책과 2026-08-31 1918 3988 행정.공지 행정.공지 9월 현수막 게시대 최신 현황(8.31기준) 도시정책과 2026-08-31 128 3987 문화.행사 문화.행사 「2026 과천시 어린이 안전축제」 개최 안내 [9. 11.(금)~9.12.(토)] 안전재난과 2026-08-29 3123 3986 문화.행사 문화.행사 2026년도 9월 오페라박물관 과천 어린이 음악 워크숍 모집 안내 문화체육과 2026-08-28 1321 3985 청년.청소년 청년.청소년 2026 과천 청년주간 프로그램  참여자 모집 안내 교육청소년과 2026-08-28 1414 3984 보건.복지 보건.복지 성남 「더샵 분당하이스트」 장애인 특별공급 추가 접수 안내 사회복지과 2026-08-26 12 3983 문화.행사 문화.행사 2026년 거리로 나온 도서관 행사 안내 정보과학도서관 2026-08-25 858 3982 문화.행사 문화.행사 2026 해맞이 생활체육 기체조 광장교실 안내 문화체육과 2026-08-25 2799 3981 문화.행사 문화.행사 371강 과천아카데미 강연 안내(지웅배교수) 교육청소년과 2026-08-24 3822 처음 페이지 이전 10페이지 1 2 3 4 5 6 7 8 9 10 다음 10페이지 끝 페이지 홈 분야별 주민참여 통합예약 평생학습",
-            "locator_origin": "model_reported_locator"
-          }
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
         ],
-        "intent_results": [
-          "https://kbthink.com/content/dam/tam-dcp-cms/kbcontent/realestate/home-funding-plan/home-funding-plan-document.pdf",
-          "https://www.yesform.com/forms/vcorp_5597.php"
-        ],
-        "valid_until": null,
         "monthly_search": 9130,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_010104/1000",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.korea.kr/news/policyFocusView.do?newsId=148957947&pkgId=49500831",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.gccity.go.kr/gcapp/bbs/view.do?bIdx=188483&mId=0101000000&ptIdx=111",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
         "organic_provider": "codex_native_search",
-        "organic_query": "자금조달계획서",
-        "organic_domains": [
-          "www.law.go.kr",
-          "cdn.korea.legal",
-          "kbthink.com",
-          "www.codil.or.kr",
-          "pundoni.com",
-          "www.yesform.com",
-          "www.yesform.com",
-          "files-scs.pstatic.net",
-          "www.toheomap.com",
-          "www.yesform.com"
-        ],
+        "organic_query": "자금 조달 계획서",
         "organic_results": [
           {
-            "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200203&flNm=%5B%EB%B3%84%EC%A7%80+2%5D+%EC%82%AC%EC%97%85%EB%B9%84+%EB%B0%8F+%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%EA%B3%84%ED%9A%8D%EC%84%9C&flSeq=153911491",
-            "domain": "www.law.go.kr",
-            "title": "[별지 제2호 서식] 사업비 및 자금조달계획서",
-            "snippet": "자 금 조 달 계 획 작성기관 | ○○○ 회계법인 | | | | | | 작성자 | | | 성명 (인) | --- |"
+            "url": "https://hf-sclass.com/data/funding03.pdf",
+            "domain": "hf-sclass.com",
+            "title": "주택취득 자금조달 및 입주 계획서",
+            "snippet": "주택취득 자금조달 및 입주 계획서 ... ⑭ 조달자금 지급방식 | ⑬ 합계 ⑮ 계좌이체 금액 | [ ⑦+ ⑫ ]의 총 금액 : 820,000,000 원"
           },
           {
-            "url": "https://cdn.korea.legal/wp-content/uploads/2021/07/%EB%B6%80%EB%8F%99%EC%82%B0%EA%B1%B0%EB%9E%98%EC%8B%A0%EA%B3%A0-%EC%97%85%EB%AC%B4%EB%A7%A4%EB%89%B4%EC%96%BC-%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%EA%B3%84%ED%9A%8D%EC%84%9C_-%EC%A6%9D%EB%B9%99%EC%84%9C%EB%A5%98_-%EB%B2%95%EC%9D%B8%EC%8B%A0%EA%B3%A0%EC%84%9C_%EB%AF%BC%EC%9B%90%EC%9D%B8%EC%9A%A9-1.pdf",
-            "domain": "cdn.korea.legal",
-            "title": "부동산거래신고 업무매뉴얼",
-            "snippet": "□직거래 계약의 경우, 매수인이 실거래 신고서와 함께 자금조달계획서 ... 매수인(법인)은 25일 이내에 개업공인중개사에게 자금조달계획서"
+            "url": "https://money.devkuma.com/posts/funding-plan-for-home-purchase/",
+            "domain": "money.devkuma.com",
+            "title": "자금조달계획서 제출 대상과 증빙서류 총정리: 작성 방법까지 쉽게 설명 - Money::devkuma",
+            "snippet": "자금조달계획서란 무엇인가 누가 언제 제출해야 할까 작성은 5단계로 나누면 쉽다 1단계: 제출 대상과 기한 확인 2단계: 매매대금과 지급 일정 정리 3단계: 자금 출처를 세 갈래로"
           },
           {
-            "url": "https://kbthink.com/content/dam/tam-dcp-cms/kbcontent/realestate/home-funding-plan/home-funding-plan-document.pdf",
-            "domain": "kbthink.com",
-            "title": "자금조달계획서 제출 대상과 증빙서류, 작성 방법까지 총정리",
-            "snippet": "# 주택취득자금 조달 및 입주계획서 ... <td>기존 주택 보유 여부 (주택담보대출이 있는 경우만 기재) [ ] 미보유 [ ] 보유 ( 건)</td> ... <td>[ ]"
+            "url": "https://wdown.ebsi.co.kr/W61001/01exam/20090604/J_supjb_mun.pdf",
+            "domain": "wdown.ebsi.co.kr",
+            "title": "09직탐-상업경제",
+            "snippet": "“사업자의 시장 지배적 지위의 남용과 과도한 경제력의 집중을 방지하고 부당한 공동행위 및 불공정거래행위를 규제하여 공정하고 자유로운 경쟁을 촉진함으로써 창의적인 기업 활동을 조장하고 소비자를 보호함과 아울러"
           },
           {
-            "url": "https://www.codil.or.kr/filebank/moct2014/201309/MOCT1296_1.PDF?nserialno=1296",
-            "domain": "www.codil.or.kr",
-            "title": "14. 자금조달계획서",
-            "snippet": "자금조달계획서 ... 공익성 : 주택건설등 사업자가 토지취득 및 사업계획승인 등의 애로요인을 해소하기 위한 것으로서 관련 법규상 주택건설이 가능하고, 다음 각 목의 어느 하나에 해당할 것"
+            "url": "https://koreaq.com/land-funding-plan-writing/",
+            "domain": "koreaq.com",
+            "title": "토지거래 허가 시 자금 조달 계획서, 합리적으로 작성하는 노하우 » 코리아큐 행정사 사무소 : KoreaQ.com, Korea3.com",
+            "snippet": "실무상 주의점: 자금 조달계획서의 금액 합계가 매매대금과 맞지 않거나, 자기자금·차입금·증여금의 출처 설명이 불명확하면 보완 요청을 받을 수 있습니다. ... 이 글은 토지거래허가구역 내 토지를 매수하려는"
           },
           {
-            "url": "https://pundoni.com/wp-content/uploads/2024/02/2023%EB%85%84_%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C.pdf",
-            "domain": "pundoni.com",
-            "title": "www.molit.go.kr",
-            "snippet": "◦투기과열주택거래신고를하는경우주택취득자금조달및입주계획서제출을 ... 거래가액외에자금조달계획서, 증빙서류, ... ◦(자료활용) 자금출처확인등을통해증여세등탈루여부, 대출유용등각종부동산불법행의조사및부동산거래정보대국민서비스활용*"
-          },
-          {
-            "url": "https://www.yesform.com/wdata/doc-1574968.php",
+            "url": "https://www.yesform.com/forms/vcorp_6649.php",
             "domain": "www.yesform.com",
-            "title": "자금조달계획서",
-            "snippet": "* * 부동산거래신고 업무매뉴얼 (자금조달계획서, 증빙서류, 법인신고 등) 정회원 0 ... * * [서식 12의2] 토지취득자금조달계획서(시행일자 2015-01-01) 정회원 0"
+            "title": "토지취득자금 조달 및 토지 이용계획서",
+            "snippet": "토지취득자금 조달 및 토지이용계획서 ※ 색상이 어두운 난은 신청인이 적지 않으며, [ ]에는 해당되는 곳에 √표시를 합니다.(앞쪽) 접수번호 접수일시 처리기간 제출인 (매수인) 성명(법인명) 주민등록번호(법인 외국인등록번호)"
           },
           {
-            "url": "https://www.yesform.com/forms/vcorp_5597.php",
-            "domain": "www.yesform.com",
-            "title": "자금조달계획서 등 개정사항 Q&A",
-            "snippet": "부터 체결하는 주택거래 계약이 ①투기과열지구 소재, ②조정대상지역 소재, ③비규제지역 6억원 이상, ④매수자가 법인인 경우에는 자금조달계획서 제출 대상에 해당 ㅇ 투기과열지구 소재 주택거래는 자금조달 증빙서류 제출"
+            "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95083652&lcmspage=96",
+            "domain": "www.molit.go.kr",
+            "title": "보도자료 - 전체",
+            "snippet": "* 첨부파일 200310(석간) 자금 조달 계획서 제출 대상지역 확대 등 투기대응 강화(토지정책과).hwp (67Kbyte) 바로보기 200310(석간) 자금 조달 계획서 제출 대상지역 확대 등 투기대응 강화(토지정책과).pdf (480Kbyte)"
           },
           {
-            "url": "https://files-scs.pstatic.net/2022/11/15/UXp5WXXTww/%5B%EA%B2%BD%EC%A0%9C%EC%A0%84%ED%8C%8C%EC%82%AC%5D%20PART%20V%20%EC%9E%90%EA%B8%88%20%EC%A1%B0%EB%8B%AC%EA%B3%BC%20%EC%84%B8%EA%B8%88%20-%202022%EB%85%84%20%EC%B2%AD%EC%95%BD%20%EB%B6%80%EB%A6%B0%EC%9D%B4%EB%A5%BC%20%EC%9C%84%ED%95%9C%20125%EB%AC%B8%20125%EB%8B%B5.pdf",
-            "domain": "files-scs.pstatic.net",
-            "title": "• Q105. 자금조달계획서 합계액은 얼마를 기재해야 하나요?",
-            "snippet": "자금조달계획서상 기재할 총액은 분양대금과 내가 선택한 옵션의 총액이에요. ... 예를 들어 아파트 분양가 7억 원, 확장 1500만 원, 시스템 에어컨, 붙박이장 등 옵션 비용으로 800만"
+            "url": "https://jangbanjang.tistory.com/220",
+            "domain": "jangbanjang.tistory.com",
+            "title": "자금 조달 계획서 및 입주 계획서 양식 :: 4차 백신 사전예약 신청 대상",
+            "snippet": "[별지 제1호의2서식] 주택취득자금 조달 및 입주계획서.pdf 0.08MB [별지 제1호의2서식] 주택취득자금 조달 및 입주계획서.hwp 0.02MB ... 자금조달계획서 제출 기간은 실거래 신고와 함께 30일 이내에 중개한 부동산에게"
           },
           {
-            "url": "https://www.toheomap.com/blog/131",
-            "domain": "www.toheomap.com",
-            "title": "토허제 자금조달계획서, 심사관이 보는 5가지 — 반려 막는 작성법 | 토허맵 블로그",
-            "snippet": "토허제자금조달계획서 토지거래허가자금조달 자금조달계획서작성법 DSR한도 잔액증명서 증여세신고 자금출처소명 자금조달계획서반려사유 토허제신청자금증빙 자금조달계획서심사기준 ... 2026년 2월 10일부터는 시행규칙이 개정되면서 양식 자체가 바뀌었어요. ... 증여 자금이 있다면 증여세 신고확인서를"
+            "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95083652&lcmspage=67",
+            "domain": "www.molit.go.kr",
+            "title": "보도자료 - 전체",
+            "snippet": "* 첨부파일 200310(석간) 자금 조달 계획서 제출 대상지역 확대 등 투기대응 강화(토지정책과).hwp (67Kbyte) 바로보기 200310(석간) 자금 조달 계획서 제출 대상지역 확대 등 투기대응 강화(토지정책과).pdf (480Kbyte)"
           },
           {
-            "url": "https://www.yesform.com/wdata/doc-1593861.php",
-            "domain": "www.yesform.com",
-            "title": "토지 자금조달계획서 매뉴얼",
-            "snippet": "* * [서식 12의2] 토지취득자금조달계획서(시행일자 2015-01-01) 정회원 0 * * 부동산거래신고 업무매뉴얼 (자금조달계획서, 증빙서류, 법인신고 등) 정회원 0"
+            "url": "https://file.mk.co.kr/suneung/2019/04_05.pdf",
+            "domain": "file.mk.co.kr",
+            "title": "4 (상업 경제) 직업탐구 영역",
+            "snippet": "<보기> 상자 안의 문장: ... 다음은 ○○(주)의 자금 조달 계획서이다. ... 제목: 자금 조달 계획서 ... “한국은행은 2018년 11월 30일 이후 연 1.75%로 유지해 오던"
+          },
+          {
+            "url": "https://drserendipity.com/wp-content/uploads/MOCK_KCSAT/Vocational%20Education/Commercial%20Economics/201006_MOCK_KCSAT_Commercial%20Economics_prob.pdf",
+            "domain": "drserendipity.com",
+            "title": "09직탐-상업경제",
+            "snippet": "사업자의 시장 지배적 지위의 남용과 과도한 경제력의 집중을 방지하고 부당한 공동행위 및 불공정거래행위를 규제하여 공정하고 자유로운 경쟁을 촉진함으로써 창의적인 기업 활동을 조장하고 소비자를 보호함과 아울러"
           }
         ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 31.68,
-          "organic_opportunity": 26.67,
-          "trend": 0.34,
-          "intent_fit": 0
-        },
-        "trend_growth": 0.034,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-11T02:56:10.959075+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "자금조달계획서"
-        ],
-        "status": "research_only",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_010104/1000",
-              "title": "부동산거래(신고,변경,해제)계약신고서(별지 및 위임장 포함) | 강남구청",
-              "excerpt_chars": 2700
-            },
-            {
-              "url": "https://www.korea.kr/news/policyFocusView.do?newsId=148957947&pkgId=49500831",
-              "title": "달라지는 부동산 제도- 거래 관리 강화 편 - 2026 이렇게 달라집니다 | 정책포커스 | 뉴스 | 대한민국 정책브리핑",
-              "excerpt_chars": 3915
-            },
-            {
-              "url": "https://www.gccity.go.kr/gcapp/bbs/view.do?bIdx=188483&mId=0101000000&ptIdx=111",
-              "title": "과천소식 | 게시판 | 홈페이지",
-              "excerpt_chars": 2809
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=01&ccrCnntSysDsCd=01&mi=1062&panId=BN-0006504&uppAisTpCd=01",
-                  "title": "공고문 < \r\n\t\t\r\n\t\t\r\n\t\t\t토지 < \r\n\t\t\r\n\t\t\r\n\t\t청약 < \r\n\t\tLH청약플러스",
-                  "excerpt_chars": 7639
-                },
-                {
-                  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=01&ccrCnntSysDsCd=01&mi=1062&panId=BN-0006018&uppAisTpCd=01",
-                  "title": "공고문 < \r\n\t\t\r\n\t\t\r\n\t\t\t토지 < \r\n\t\t\r\n\t\t\r\n\t\t청약 < \r\n\t\tLH청약플러스",
-                  "excerpt_chars": 5480
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_010104/1000",
-                  "title": "부동산거래(신고,변경,해제)계약신고서(별지 및 위임장 포함) | 강남구청",
-                  "excerpt_chars": 2700
-                },
-                {
-                  "url": "https://www.korea.kr/news/policyFocusView.do?newsId=148957947&pkgId=49500831",
-                  "title": "달라지는 부동산 제도- 거래 관리 강화 편 - 2026 이렇게 달라집니다 | 정책포커스 | 뉴스 | 대한민국 정책브리핑",
-                  "excerpt_chars": 3915
-                },
-                {
-                  "url": "https://www.gccity.go.kr/gcapp/bbs/view.do?bIdx=188483&mId=0101000000&ptIdx=111",
-                  "title": "과천소식 | 게시판 | 홈페이지",
-                  "excerpt_chars": 2809
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
+        "search_review": {
+          "version": 1,
           "query": "자금조달계획서",
-          "executed_query": "자금조달계획서",
-          "topic": "자금조달계획서 제출 대상·신고 절차와 2026년 작성 시 확인사항",
-          "intent": "주택 매수 시 자금조달계획서는 누가 제출하며, 증빙서류와 작성 항목·신고 절차는 어떻게 확인하나요?",
+          "executed_query": "자금 조달 계획서",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "result_count": 10,
-          "domain_count": 8,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "자금조달계획서",
-            "executed_query": "자금조달계획서",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-11T02:56:10.959075+00:00",
-            "raw_sha256": "c9ae26440be714ad95f808363430c8fe05e5f0fbfc787192969af8feb72192b7",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": false,
-                "quote": "[별지 제2호 서식] 사업비 및 자금조달계획서"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "매수인이 실거래 신고서와 함께 자금조달계획서"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "자금조달계획서 제출 대상과 증빙서류, 작성 방법까지 총정리"
-              },
-              {
-                "result_index": 3,
-                "relevant": false,
-                "quote": "주택건설등 사업자가 토지취득 및 사업계획승인 등의 애로요인을 해소하기 위한"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "거래가액외에자금조달계획서, 증빙서류"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "부동산거래신고 업무매뉴얼 (자금조달계획서, 증빙서류, 법인신고 등)"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "자금조달계획서 등 개정사항 Q&A"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "자금조달계획서상 기재할 총액은 분양대금과 내가 선택한 옵션의 총액이에요."
-              },
-              {
-                "result_index": 8,
-                "relevant": false,
-                "quote": "토허제 자금조달계획서, 심사관이 보는 5가지"
-              },
-              {
-                "result_index": 9,
-                "relevant": false,
-                "quote": "토지 자금조달계획서 매뉴얼"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 6,
-            "relevant_site_count": 5,
-            "relevant_indices": [
-              1,
-              2,
-              4,
-              5,
-              6,
-              7
-            ],
-            "relevance_ratio": 0.6,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.3333333333333333,
-            "organic_opportunity": 26.67
-          },
-          "scope": "full_keyword",
-          "target_keyword": "자금조달계획서",
-          "matches": [
+          "checked_at": "2026-09-11T03:32:14.977874+00:00",
+          "raw_sha256": "d8e9cd7cda14352247c89d1784bd02e852f3f04a4c5d7ebd0bf0aef6be98b0a8",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "주택취득 자금조달 및 입주 계획서"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "자금조달계획서 제출 대상과 증빙서류 총정리"
+            },
             {
               "result_index": 2,
-              "quote": "자금조달계획서 제출 대상과 증빙서류, 작성 방법까지 총정리"
+              "relevant": false,
+              "quote": "사업자의 시장 지배적 지위의 남용과 과도한 경제력의 집중을 방지하고"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "이 글은 토지거래허가구역 내 토지를 매수하려는"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "토지취득자금 조달 및 토지 이용계획서"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "자금 조달 계획서 제출 대상지역 확대"
             },
             {
               "result_index": 6,
-              "quote": "자금조달계획서 제출 대상에 해당 ㅇ 투기과열지구 소재 주택거래는 자금조달 증빙서류 제출"
+              "relevant": true,
+              "quote": "자금 조달 계획서 및 입주 계획서 양식"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "자금 조달 계획서 제출 대상지역 확대"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "다음은 ○○(주)의 자금 조달 계획서이다."
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "사업자의 시장 지배적 지위의 남용과 과도한 경제력의 집중을 방지하고"
             }
           ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "input_sha256": "11347cd10d4d8f57eccc7b23923bd502076df6391ee8dc96c4ca78d8c5220da3",
-          "review": {
-            "scope": "unknown",
-            "target_keyword": "자금조달계획서",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "토지거래허가구역 증빙 강화 : 투기과열지구뿐만 아니라 토지거래허가구역 내 주택 거래시에도 자금조달계획서와 함께 이를 입증할 증빙서류 제출 필요",
-                "entity": "토지거래허가구역 내 주택 거래",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
-                "quote": "· 제출의무(자금조달계획서+증빙서류) 확대 → 토지거래허가구역 내 주택매수 시",
-                "entity": "토지거래허가구역 내 주택매수",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 2,
-                "quote": "* 자금조달 계획서 대상 - 투기과열지구, 조정대상지역의 모든 주택 / 비규제지역의경우  6억원 이상의 주택 - 법인 매수 주택거래",
-                "entity": "법인 매수 주택거래",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "주택 매수 시 누가 자금조달계획서를 제출해야 하나요?",
-                "answer": "규제지역 모든 주택·비규제지역 6억원 이상·법인 매수가 대상이며, 자료 0·1은 토지거래허가구역 확대를 지원합니다.",
-                "supported": true,
-                "source_index": 2,
-                "quote": "* 자금조달 계획서 대상 - 투기과열지구, 조정대상지역의 모든 주택 / 비규제지역의경우  6억원 이상의 주택 - 법인 매수 주택거래"
-              },
-              {
-                "facet": "증빙서류는 누가 제출하며 자금 종류별로 무엇을 준비하나요?",
-                "answer": "투기과열지구·토지거래허가구역의 증빙 의무는 확인되나, 자금별 필요 서류와 미제출 처리 근거는 없습니다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "투기과열지구뿐만 아니라 토지거래허가구역 내 주택 거래시에도 자금조달계획서와 함께 이를 입증할 증빙서류 제출 필요"
-              },
-              {
-                "facet": "자금조달계획서의 작성 항목과 기재 방법은 무엇인가요?",
-                "answer": "작성 설명은 첨부파일로 안내할 뿐 본문에 없어, 항목별 작성 방법과 금액 기재 기준을 검증할 수 없습니다.",
-                "supported": false,
-                "source_index": 2,
-                "quote": "* 자금 조달 계획서 작성 방법 - 첨부파일에 자세한 설명 기재 (첨부파일 다운해주세요)"
-              },
-              {
-                "facet": "2026년 개정으로 확인해야 할 작성 항목은 무엇인가요?",
-                "answer": "대출유형 세분화, 금융기관명 직접기재, 자기자금 세분화라는 변경 항목은 확인됩니다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "· 양식 개정 ① 대출유형 세분화 ② 금융기관명 직접기재 ③ 자기자금 세분화"
-              },
-              {
-                "facet": "계약일에 따라 어떤 양식을 선택해야 하나요?",
-                "answer": "2026년 2월 10일 이후 계약에 개정 양식이 적용되며, 자료 0에 이전 계약용 양식도 구분되어 있습니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "❍ 시행일 :2026 년 2 월 10 일 ❍ 적용 대상 : 시행일 이후 체결되는 계약분부터 적용"
-              },
-              {
-                "facet": "자금조달계획서를 언제, 어디에, 어떤 절차로 제출하나요?",
-                "answer": "거래신고의 30일 기한·방문 및 인터넷 경로는 확인되지만, 계획서의 제출 주체와 중개거래 제출 절차는 부족합니다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "부동산거래(매매) 하신 경우, 계약일로부터 30일이내 거래신고 하여야 합니다. 공인중개사 중개 물건의 경우 부동산거래계약신고는 공인중개사의 의무사항입니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "토지거래허가구역 내 주택 거래시에도 자금조달계획서와 함께 이를 입증할 증빙서류 제출 필요",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 58.69,
-        "publish_eligible": false,
+        }
+      },
+      {
+        "keyword": "소상공인폐업지원금",
+        "reason": "search quality insufficient",
         "hold_reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
-        ]
-      }
-    ],
-    "rejected": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 7440,
+        "organic_provider": "codex_native_search",
+        "organic_query": "소상공인 폐업 지원금",
+        "organic_results": [
+          {
+            "url": "https://myboss.co.kr/",
+            "domain": "myboss.co.kr",
+            "title": "폐업지원금 계산기 | 소상공인 폐업지원금 계산·점포철거비·희망리턴패키지 무료 산출",
+            "snippet": "소상공인 폐업지원금은 소상공인진흥공단에서 운영하는 희망리턴패키지 사업의 일환으로, 폐업을 결정한 소상공인에게 재기와 재취업을 지원하기 위해 마련된 국비 지원 제도입니다. ... 위 지원금은 중소벤처기업부와 소상공인시장진흥공단이 공동으로 운영하는"
+          },
+          {
+            "url": "https://egbiz.or.kr/webcontent/resrce/pdf/2026/gbsa/14.pdf",
+            "domain": "egbiz.or.kr",
+            "title": "12-8 소상공인 사업정리 지원",
+            "snippet": "↺ 도내 폐업 및 예정 소상공인 대상으로 폐업 충격완화 및 재기 기회 제공을 위한 컨설팅 및 사업정리 지원 ... * 재기장려금 지원대상 : 중위소득 100%"
+          },
+          {
+            "url": "https://egbiz.or.kr/webcontent/resrce/pdf/2026/gbsa/17.pdf",
+            "domain": "egbiz.or.kr",
+            "title": "12-8 소상공인 사업정리 지원",
+            "snippet": "↺ 도내 폐업 및 예정 소상공인 대상으로 폐업 충격완화 및 재기 기회 제공을 위한 컨설팅 및 사업정리 지원 ... * 재기장려금 지원대상 : 중위소득 100%"
+          },
+          {
+            "url": "https://www.ii.re.kr/storage/issue/2026/02/26/ISSUE_ATTACH_1772061543241.pdf",
+            "domain": "www.ii.re.kr",
+            "title": "04  2026.02.26.",
+            "snippet": "- 인천 소상공인 폐업 및 사업전환 지원사업은 2025년 동안 33개의 업체를 지원하였고, 2026년에는 지원금 상한을 중앙정부 수준으로 확대한다는 계획 ... ○ 광역지자체의 자체적인 소상공인 폐업지원"
+          },
+          {
+            "url": "https://www.gm.go.kr/resources/mayor/down/2023/9.%EB%AF%BC%EC%84%A08%EA%B8%B0%20%EA%B3%B5%EC%95%BD%EC%8B%A4%EC%B2%9C%EA%B3%84%ED%9A%8D%EC%84%9C%28%EC%B5%9C%EC%A2%85%29.pdf",
+            "domain": "www.gm.go.kr",
+            "title": "4-3 코로나19로 인한 폐업 자영업자, 실직자 지원",
+            "snippet": "❖ 코로나19로 인한 사업 운영의 어려움으로 폐업 후 재개장하는 소상공인에게 「폐업 소상공인 희망드림 재개장 지원금」을 지원하여 위기 극복과 재기 지원 ... ○ 추진근거 : 「소상공인"
+          },
+          {
+            "url": "https://www.sdmcouncil.go.kr/CLRecords/Files/FileAppendix/a9/A010437.pdf",
+            "domain": "www.sdmcouncil.go.kr",
+            "title": "일자리경제과\n- 21 -",
+            "snippet": "사업명 폐업 소상공인 지원 (영업제한업종) | 접수기간 2.11. ... ~ 계속 | 지원단가 (22년 기준) 100만원~1억원 | 지원실적 7,272개소 | 지원금액 27,416,000천원(국비) ※ 21년도 실적"
+          },
+          {
+            "url": "https://www.icsp.or.kr/",
+            "domain": "www.icsp.or.kr",
+            "title": "성장대로｜인천소상공인종합지원포털",
+            "snippet": "성장지원 「모두의 창업 프로젝트」 통합 모집공고 (2차) 성장지원 2026년 찾아가는 1:1 디지털 교육 소상공인 모집 성장지원 2026년 혁신 소상공인 AI 활용 지원사업 상권활성화 강소 소공인"
+          },
+          {
+            "url": "https://www.sgri.kr/policy/government",
+            "domain": "www.sgri.kr",
+            "title": "정부 지원금 공고 + 실시간 정책자금 검색 | 한국창업분석연구소",
+            "snippet": "점포철거비 지원 | 최대 600만원 | 폐업(예정) 소상공인 | 폐업 후 6개월 이내 | 희망리턴패키지 → ... 금융상시[서울] 2026년 중소기업육성자금 융자지원 계획 변경공고 서울특별시 ·"
+          },
+          {
+            "url": "https://www.gm.go.kr/resources/mayor/down/2023/%EB%AF%BC%EC%84%A08%EA%B8%B0%20%EA%B3%B5%EC%95%BD%EC%8B%A4%EC%B2%9C%EA%B3%84%ED%9A%8D%EC%84%9C%282023_%208.%20%EA%B8%B0%EC%A4%80%29.pdf",
+            "domain": "www.gm.go.kr",
+            "title": "민선\u0001 8기\n 광명시 공약실천계획서",
+            "snippet": "4-3 주관부서 | 코로나19로 인 기업지원과 | 인한 폐업 협조부서 | 업 자영업자, 실직자 지원 - | | | --- | --- | --- |"
+          },
+          {
+            "url": "https://www.icsp.or.kr/main/bsns/guide/find.do?search=SjZybW5rRmRIWk0yWE1TVjBoWGdxZz09",
+            "domain": "www.icsp.or.kr",
+            "title": "성장대로｜인천소상공인종합지원포털 - 맞춤 사업 찾기",
+            "snippet": "* 상권활성화 2026년 소공인 로컬브랜드 육성 지원사업 관내 소공인에 대한 홍보와 유통채널 부족으로 시장 진입이 어려운 소공인에게 박람회 공동관 참가 지원을 통한 판로 확대 지원대상"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "소상공인폐업지원금",
+          "executed_query": "소상공인 폐업 지원금",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-11T03:32:14.977874+00:00",
+          "raw_sha256": "a17fa03329ca8f4ccce6d397c87179ce8af15087adb0e8ab973c12c1e07cb2fa",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "소상공인 폐업지원금은 소상공인진흥공단에서 운영하는 희망리턴패키지 사업의 일환으로"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "재기장려금 지원대상 : 중위소득 100%"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "재기장려금 지원대상 : 중위소득 100%"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "2026년에는 지원금 상한을 중앙정부 수준으로 확대한다는 계획"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "폐업 후 재개장하는 소상공인에게"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "사업명 폐업 소상공인 지원 (영업제한업종)"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "성장지원 2026년 혁신 소상공인 AI 활용 지원사업"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "점포철거비 지원 | 최대 600만원 | 폐업(예정) 소상공인 | 폐업 후 6개월 이내 | 희망리턴패키지"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "광명시 공약실천계획서"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "박람회 공동관 참가 지원을 통한 판로 확대"
+            }
+          ]
+        }
+      },
       {
         "keyword": "개인사업자부가세환급",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
           "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
+          "low_search_relevance"
         ],
         "monthly_search": 930,
         "organic_provider": "codex_native_search",
@@ -2385,10 +1839,10 @@
             "snippet": "부가가치세 개인사업자(인터넷쇼핑몰) 카니발9인승 구매 시, 부가세 환급 대상인가요? ... 9인승 카니발의 경우 개별소비세 부과대상이 아니므로, 업무용으로 운용하였다면 부가가치세 환급 대상 차량에 해당합니다.사업자등록번호로 세금계산서를 수취 후"
           },
           {
-            "url": "https://moalog01.tistory.com/entry/%EA%B0%9C%EC%9D%B8%EC%82%AC%EC%97%85%EC%9E%90-%EB%B6%80%EA%B0%80%EC%84%B8-%ED%99%98%EA%B8%89-%ED%9B%84%EA%B8%B0-%ED%99%88%ED%83%9D%EC%8A%A4-%EC%85%80%ED%94%84%EC%8B%A0%EA%B3%A0-%ED%9B%84-26%EB%A7%8C%EC%9B%90-%EC%8B%A4%EC%A0%9C-%EC%9E%85%EA%B8%88",
-            "domain": "moalog01.tistory.com",
-            "title": "개인사업자 부가세 환급 후기 | 홈택스 셀프신고 후 26만원 실제 입금",
-            "snippet": "# 개인사업자 부가세 환급 후기 | 홈택스 셀프신고 후 26만원 실제 입금 ... 그제야 부가세 신고가 정말 마무리된 느낌이 들었어요. ... 모든 개인사업자가 부가세를 환급받는"
+            "url": "https://leasemoa.kr/post/sole-proprietor-car-lease-rent-expense-deduction-guide",
+            "domain": "leasemoa.kr",
+            "title": "개인사업자 차량 리스·장기렌트 경비처리 — 공제 한도·업무 사용비율·절세 포인트 | 리스모아",
+            "snippet": "* 배기량 1,000cc 초과 승용차: 사업용이더라도 개인사업자는 부가세 환급 불가 (법인 전용 혜택) ... 일부 소규모 렌터카 업체는 세금계산서 발행이 안 되는 경우가 있어, 부가세"
           }
         ],
         "search_review": {
@@ -2396,8 +1850,8 @@
           "query": "개인사업자부가세환급",
           "executed_query": "개인사업자 부가세 환급",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "raw_sha256": "75b5e18afa48e3d7950e5f4045d577223b02444a5a3d651186c4e688b2fac375",
+          "checked_at": "2026-09-11T03:32:14.977874+00:00",
+          "raw_sha256": "578b06f414971b88e3ef68b61f51c6469ec0df717b486533f54121de3e6926fe",
           "decisions": [
             {
               "result_index": 0,
@@ -2422,7 +1876,7 @@
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "개인사업자 부가세 신고 전, 확인해주세요"
+              "quote": "부가세 신고를 위한 준비 내용입니다."
             },
             {
               "result_index": 5,
@@ -2446,8 +1900,8 @@
             },
             {
               "result_index": 9,
-              "relevant": true,
-              "quote": "개인사업자 부가세 환급 후기 | 홈택스 셀프신고 후 26만원 실제 입금"
+              "relevant": false,
+              "quote": "개인사업자 차량 리스·장기렌트 경비처리"
             }
           ]
         }
@@ -2457,7 +1911,6 @@
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
-          "insufficient_relevant_sites",
           "low_search_relevance"
         ],
         "monthly_search": 1620,
@@ -2465,10 +1918,10 @@
         "organic_query": "경정청구 환급 기간",
         "organic_results": [
           {
-            "url": "https://art.mju.ac.kr/bbs/ince/730/133087/download.do",
-            "domain": "art.mju.ac.kr",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "기업이 직전 5년간 납세한 법인세에 대한 조세감면 해당분을 찾고 환급까지 신고 지원받을 수 있습니다. ... - 경정청구 신고 대행에 따른 환급 완료Step6) 환급금액의 20% 성공보수"
+            "url": "https://blog.save-tax.co.kr/2023/11/16/%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC-%ED%99%98%EA%B8%89-%EA%B8%B0%EA%B0%84-%EC%96%B8%EC%A0%9C-%EB%8F%88%EC%9D%B4-%EB%93%A4%EC%96%B4%EC%98%AC%EA%B9%8C/",
+            "domain": "blog.save-tax.co.kr",
+            "title": "경정청구 환급 기간, 언제 돈이 들어올까? – 세무법인 세이브택스",
+            "snippet": "환급이 결정되었다면, 경정청구 환급 처리 또한 2개월의 절차 기간 내에 함께 진행됩니다. ... 경정청구 환급이 결정되었는데 입금이 지연된다면 홈택서나 관할 세무서를 통해 현황을 확인할 수"
           },
           {
             "url": "https://licensemit.com/2026-%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC-%EA%B8%B0%EA%B0%84-%EB%B0%A9%EB%B2%95/",
@@ -2477,16 +1930,16 @@
             "snippet": "2026년 기준으로 경정청구 기한, 신청 방법, 홈택스 절차, 환급까지 걸리는 기간을 정리했습니다. ... 국세기본법 제45조에 따라 납세자는 일정 기간 안에 이를 청구할 수 있으며, 이를"
           },
           {
+            "url": "https://antyfood.tistory.com/2419",
+            "domain": "antyfood.tistory.com",
+            "title": "경정청구 환급기간, 얼마나 기다려야 할까? 조회 방법부터 실제 후기까지 총정리",
+            "snippet": "오늘은 경정청구 환급기간의 법적 기준과 실무적인 차이, 그리고 내 환급금이 어디쯤 와있는지 확인하는 조회 방법까지 전문가의 시선으로 상세히 짚어드리겠습니다.## 경정청구 환급기간: 법령 vs 실제 현장"
+          },
+          {
             "url": "https://anseongcl.go.kr/kr/bbs/download.do?bbs_id=notice&uid=639A714AF89D52E06DA6628FC087E752",
             "domain": "anseongcl.go.kr",
             "title": "4. 수익사업 관련 부가가치세 환급",
             "snippet": "환급액은 약 20억원 이상으로 예상되며, 경정청구 등을 통하여 환급 절차를 진행하는 것이 바람직합니다.○ 경정청구 기한은 부가가치세 신고 기한으로부터 5년이므로 2020년분 상반기 공사비에 대한 경정청구 기한은"
-          },
-          {
-            "url": "https://www.save-tax.co.kr/blog/%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC-%ED%99%98%EA%B8%89-%EA%B8%B0%EA%B0%84-%EC%96%B8%EC%A0%9C-%EB%8F%88%EC%9D%B4-%EB%93%A4%EC%96%B4%EC%98%AC%EA%B9%8C",
-            "domain": "www.save-tax.co.kr",
-            "title": "경정청구 환급 기간, 언제 돈이 들어올까?",
-            "snippet": "환급이 결정되었다면, 경정청구 환급 처리 또한 2개월의 절차 기간 내에 함께 진행됩니다. ... 경정청구 환급이 결정되었는데 입금이 지연된다면 홈택서나 관할 세무서를 통해 현황을 확인할 수"
           },
           {
             "url": "https://www.newzensolution.co.kr/common/download.jsp?dirNm=%2FfileData%2Fannounce&fNm=%28%EB%B6%80%EA%B0%80%EA%B0%80%EC%B9%98%EC%84%B8+%EC%8B%A0%EA%B3%A0%EC%8B%9C%29%EC%97%85%EB%AC%B4+%EB%B6%80%EC%A3%BC%EC%9D%98+%EC%82%AC%EA%B3%A0+%EC%82%AC%EB%A1%80%EC%99%80+%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD+%EC%95%88%EB%82%B4.pdf",
@@ -2510,7 +1963,7 @@
             "url": "https://www.billi.co.kr/blog/%EC%A2%85%EC%86%8C%EC%84%B8-%EB%AF%B8%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C-%EC%B2%AD%EA%B5%AC",
             "domain": "www.billi.co.kr",
             "title": "종소세 미환급금 조회·청구 — 5년 이내 받을 수 있는 환급 | 빌리페이",
-            "snippet": "신고는 했는데 공제·경비를 누락해서 더 받을 수 있는 환급이 있는 경우, 경정청구 로 추가 환급을 청구할 수 있습니다.### 경정청구 가능 기간 — 5년"
+            "snippet": "### 경정청구 가능 기간 — 5년 ... 사장님이 경정청구로 추가 환급받을 수 있는 대표적 누락 사례입니다."
           },
           {
             "url": "https://www.kacpta.or.kr/data/Board/BoardTeachMetInfo/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD2.%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%E7%BA%B8%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%28%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%CD%BA%EF%BF%BD%C8%A3%20%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%2C%202023.%209.%29.pdf",
@@ -2530,13 +1983,13 @@
           "query": "경정청구환급기간",
           "executed_query": "경정청구 환급 기간",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "raw_sha256": "f7b2b4534979395b0e7d83f42889fa19dfe48cce5407ca185c725b16389c015e",
+          "checked_at": "2026-09-11T03:32:14.977874+00:00",
+          "raw_sha256": "db48c0e9074047831272215b7f7ca77d870c5732c27b654dc4a3ea2766ff92a2",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": false,
-              "quote": "기업이 직전 5년간 납세한 법인세에 대한 조세감면 해당분을 찾고"
+              "relevant": true,
+              "quote": "경정청구 환급 처리 또한 2개월의 절차 기간 내에 함께 진행됩니다."
             },
             {
               "result_index": 1,
@@ -2545,13 +1998,13 @@
             },
             {
               "result_index": 2,
-              "relevant": false,
-              "quote": "경정청구 기한은 부가가치세 신고 기한으로부터 5년이므로"
+              "relevant": true,
+              "quote": "경정청구 환급기간의 법적 기준과 실무적인 차이"
             },
             {
               "result_index": 3,
-              "relevant": true,
-              "quote": "경정청구 환급 처리 또한 2개월의 절차 기간 내에 함께 진행됩니다."
+              "relevant": false,
+              "quote": "경정청구 기한은 부가가치세 신고 기한으로부터 5년"
             },
             {
               "result_index": 4,
@@ -2587,25 +2040,48 @@
         }
       },
       {
-        "keyword": "소상공인폐업지원금",
+        "keyword": "종합소득세환급일",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://astr.or.kr/DOIx.php?id=10.4174%2Fastr.2021.101.2.93",
-              "title": ":: astr.or.kr :: Annals of Surgical Treatment and Research",
-              "excerpt_chars": 8000
+              "url": "https://www.medlineplus.gov/about/using/searchtips/",
+              "title": "MedlinePlus: Search Tips",
+              "excerpt_chars": 6259
             },
             {
-              "url": "https://seer.cancer.gov/cancerpathchart/search/info/",
-              "title": "CPC*Search Tool Information",
-              "excerpt_chars": 8000
+              "url": "https://www.mecar.or.kr/lpm/info/oldCarEarlyScrapping.do",
+              "title": "노후차 조기폐차|자동차배출가스 종합전산시스템",
+              "excerpt_chars": 4460
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.medlineplus.gov/about/using/searchtips/",
+                  "title": "MedlinePlus: Search Tips",
+                  "excerpt_chars": 6259
+                },
+                {
+                  "url": "https://www.mecar.or.kr/lpm/info/oldCarEarlyScrapping.do",
+                  "title": "노후차 조기폐차|자동차배출가스 종합전산시스템",
+                  "excerpt_chars": 4460
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "no_changed_source"
           }
         }
       },
@@ -2634,6 +2110,12 @@
             "snippet": "## 소상공인 정책자금 ... 제증명서 신청 ... Image: 아이콘 소상공인 정책자금 공식홈페이지를 통해 확인 가능"
           },
           {
+            "url": "https://www.kosmes.or.kr/intro/download/kosmes_guide_manual.pdf",
+            "domain": "www.kosmes.or.kr",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "정책자금 온라인 신청 ... 소상공인에 해당하는 기업은 중진공 정책자금 지원 제외 대상이므로 예외조건을 확인하시기 바랍니다."
+          },
+          {
             "url": "https://yjss.or.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMjEyMjdlMTY2NDYzNDI4NjE1IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwMTA2NmIxMmY5ZDI1NTNmYyI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDEwNmJlY2ViOTRmODgzNGUiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ODQwN2IzYzBmMGUiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
             "domain": "yjss.or.kr",
             "title": "소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상",
@@ -2656,12 +2138,6 @@
             "domain": "www.yd.go.kr",
             "title": "7 소상공인 정책자금·긴급경영 안정자금 융자",
             "snippet": "7 소상공인 정책자금·긴급경영 안정자금 융자 ... - 「소상공인 보호 및 지원에 관한 법률」제9조, 제12조2 ... - (대출한도) 업체당 1억원 이내 및 피해금액 또는 재해복구 소요자금"
-          },
-          {
-            "url": "https://jinjucci.korcham.net/file/dext5uploaddata/2026/2026%EB%85%84%EB%8F%84%20%EC%A4%91%EC%86%8C%EB%B2%A4%EC%B2%98%EA%B8%B0%EC%97%85%20%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85%28%EC%9C%A0%EA%B4%80%EA%B8%B0%EA%B4%80%29_.pdf",
-            "domain": "jinjucci.korcham.net",
-            "title": "신청제외 대상  \n- 로컬지원사업 기 수혜자  \n- 소상공인 정책자금 지원 제외 업종을 영",
-            "snippet": "- 소상공인 정책자금 지원 제외 업종을 영위하거나 예정인 경우 ... - 중소벤처기업부 등 정부 사업의 참여 제한 등 제재조치를 받는 경우- 신청일 현재 ‘기업의 부도,"
           },
           {
             "url": "https://m.inje.go.kr/egf/bp/board/article/download?fileSeq=75421",
@@ -2687,13 +2163,13 @@
           "query": "소상공인정책자금신청",
           "executed_query": "소상공인 정책자금 신청",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "raw_sha256": "53e85d4b7ccef02ae0624742ccfca86db53a4f5bd21c669a57548467ff79d730",
+          "checked_at": "2026-09-11T03:32:14.977874+00:00",
+          "raw_sha256": "fc9e3c96ffecb3fe295a1ab247bfb5cc71db8e3a54ce230be18a60c7e6dfb661",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "○ 대리대출 업무를 처리함에 있어"
+              "quote": "○ 대리대출 업무를 처리함에 있어, 관계 법령 및 고시"
             },
             {
               "result_index": 1,
@@ -2703,27 +2179,27 @@
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "소상공인 정책자금 대리대출"
+              "quote": "소상공인에 해당하는 기업은 중진공 정책자금 지원 제외 대상"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "많이 찾는 검색어 민생회복 소비쿠폰"
+              "quote": "소상공인 정책자금 대리대출"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "○ 대리대출 업무를 처리함에 있어"
+              "quote": "많이 찾는 검색어 민생회복 소비쿠폰"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "피해금액 또는 재해복구 소요자금"
+              "quote": "○ 대리대출 업무를 처리함에 있어, 관계 법령 및 고시"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "신청제외 대상  \n- 로컬지원사업 기 수혜자"
+              "quote": "피해금액 또는 재해복구 소요자금"
             },
             {
               "result_index": 7,
@@ -2733,7 +2209,7 @@
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "온라인 브랜드 소상공인 육성사업(TOPS 프로그램)"
+              "quote": "온라인 플랫폼사의 추천을 받은 성장"
             },
             {
               "result_index": 9,
@@ -2744,162 +2220,10 @@
         }
       },
       {
-        "keyword": "종합소득세환급일",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.medlineplus.gov/about/using/searchtips/",
-              "title": "MedlinePlus: Search Tips",
-              "excerpt_chars": 6259
-            },
-            {
-              "url": "https://www.mecar.or.kr/lpm/info/oldCarEarlyScrapping.do",
-              "title": "노후차 조기폐차|자동차배출가스 종합전산시스템",
-              "excerpt_chars": 4460
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
         "keyword": "부가세환급",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results",
-          "dominant_search_results"
-        ],
-        "monthly_search": 6460,
-        "organic_provider": "codex_native_search",
-        "organic_query": "부가세 환급",
-        "organic_results": [
-          {
-            "url": "https://encykorea.aks.ac.kr/Article/E0024084",
-            "domain": "encykorea.aks.ac.kr",
-            "title": "부가세 - 한국민족문화대백과사전",
-            "snippet": "본 항목의 내용은 해당 분야 전문가의 추천으로 선정된 집필자의 학술적 견해로, 한국학중앙연구원의 공식 입장과 다를 수 있습니다. ... 우리나라의 지방세는 1949년 12월 22일 법률 84호로"
-          },
-          {
-            "url": "https://dic.hankyung.com/apps/economy.view?seq=1031",
-            "domain": "dic.hankyung.com",
-            "title": "부가세 환급 | 한국경제",
-            "snippet": "이 경우 국세청은 이미 납부받은 부가가치세를 다시 되돌려주어야 하는데 이를 부가가치세 환급이라 부른다. ... 부가가치세 환급에는 조기환급과 일반환급의 두 가지가 있다."
-          },
-          {
-            "url": "https://ebpp.skens.com/busan/rate/guide.do",
-            "domain": "ebpp.skens.com",
-            "title": "요금안내 < 공급신청/요금 < 안내 | ㈜부산도시가스",
-            "snippet": "도시가스사업법 제 20조 2항에 의하여 부산시장의 승인을 받아야 하며 요금변경 시에도 승인을 받아야 변경이 가능합니다. ... 주 택 용: [(사용량 X 보정계수) X 평균열량 X"
-          },
-          {
-            "url": "https://calculatorhost.com/calculator/vat/",
-            "domain": "calculatorhost.com",
-            "title": "부가가치세 계산기 2026 | 일반·간이·환산 | calculatorhost",
-            "snippet": "일반과세자(매출세액 − 매입세액) / 간이과세자(업종별 부가가치율) / VAT 포함↔공급가액 환산 모두 지원합니다. ... 부가가치세(VAT)는 사업자가 재화·용역 공급 시 거래 단계마다 부가된 가치에 부과되는 간접세로, 한국은"
-          },
-          {
-            "url": "https://info.fandit.net/tool/vat-calculator/",
-            "domain": "info.fandit.net",
-            "title": "부가가치세 계산기, 일반·간이 얼마 낼까",
-            "snippet": "부가가치세(VAT)는 물건을 팔거나 서비스를 제공할 때 공급가액의 10%를 소비자에게 받아 대신 내는 세금이에요. ... 일반과세라면 개인·법인을 고른 뒤 매출·매입 공급가액(부가세 뺀 금액)과 카드·현금영수증 매출을 넣으면"
-          },
-          {
-            "url": "https://wonmoa.com/vat/",
-            "domain": "wonmoa.com",
-            "title": "부가가치세(VAT) 계산기 — 공급가액·합계 환산 | 원모아",
-            "snippet": "부가세는 사업자가 부담하는 세금이 아니라, 소비자가 낸 세금을 사업자가 잠시 맡았다가 대신 납부하는 통과 세금입니다. ... 간이과세자는 업종별 부가가치율을 곱해 실제 납부세액이 더 낮고, 연"
-          },
-          {
-            "url": "https://www.kbiz.or.kr/download.do?fleDwnDs=bbsAttachFile&orgalFle=eca095ecb185eab1b4ec9d98ebb0b1ec849c5feca780ec97ad28ecb59ceca285292e706466&saveFle=177275550172514726.pdf&seq=90245",
-            "domain": "www.kbiz.or.kr",
-            "title": "중소기업 정책건의백서",
-            "snippet": "- \u0004현행 부가가치세법상 재화 공급 시점에 세금이 확정되며, 판매되지 못한 재고에 ... 처리하거나 할인 판매로 손실 감수하여 해당 제품에 납부된 부가세는 환급 불가, 이중"
-          },
-          {
-            "url": "https://www.calc-note.com/vat-calculator",
-            "domain": "www.calc-note.com",
-            "title": "부가가치세 계산기 — 10% 환산·일반/간이과세 납부세액 (2026) | 계산노트",
-            "snippet": "일반과세자의 납부세액은 '받은 부가세 − 낸 부가세'이므로, 사업용 매입은 반드시 세금계산서·사업자 지출증빙으로 받아야 매입세액공제를 받습니다. ... 간이과세는 세 부담이 가볍지만 매입세액 환급이 없고 세금계산서 발급에"
-          },
-          {
-            "url": "https://openitem.co.kr/",
-            "domain": "openitem.co.kr",
-            "title": "오픈아이템 | 부가세·종소세·4대보험·급여 계산기와 사업자 지원금",
-            "snippet": "갱신 2026.06.25 적용 법령: 부가가치세법 제30조 · 부가가치세법 시행령 제111조 세율: 일반과세 10%, 간이과세 15%~40% (업종별)국세청 부가가치세 안내 ↗기준 일람에서 간이과세 업종별 부가가치율 보기 ..."
-          },
-          {
-            "url": "https://jeolsegak.com/calc/vat",
-            "domain": "jeolsegak.com",
-            "title": "부가세 계산기 — 공급가액·부가세·합계 바로 환산 (10%)",
-            "snippet": "공급가액(부가세 별도) 또는 합계금액(부가세 포함) 중 하나만 넣으면 부가세 10%와 나머지 금액을 바로 환산합니다. ... 같은 기간 사업용 물품·임차료 등으로 세금계산서를 받아 부담한 매입세액이 30만"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "부가세환급",
-          "executed_query": "부가세 환급",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "raw_sha256": "8b7dd82cd1aa5d17fb8b50cbc5b37a762cf974b2ccf1cd4c4290dd6048f4ee15",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "부가세 - 한국민족문화대백과사전"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "부가가치세 환급에는 조기환급과 일반환급의 두 가지가 있다."
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "요금안내 < 공급신청/요금 < 안내"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "부가가치세 계산기 2026 | 일반·간이·환산"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "부가가치세 계산기, 일반·간이 얼마 낼까"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "부가가치세(VAT) 계산기 — 공급가액·합계 환산"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "해당 제품에 납부된 부가세는 환급 불가"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "부가가치세 계산기 — 10% 환산·일반/간이과세 납부세액"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "오픈아이템 | 부가세·종소세·4대보험·급여 계산기와 사업자 지원금"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "부가세 계산기 — 공급가액·부가세·합계 바로 환산 (10%)"
-            }
-          ]
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
         }
       },
       {
@@ -2932,10 +2256,10 @@
             "snippet": "수정신고와 경정청구 ... (2) 경정청구 : 과다 납부하였을 경우 (경정청구 기간 : 3년) ... <td>원천징수이행 상황신고</td>"
           },
           {
-            "url": "https://www.rodemtax.com/wp-content/files/2024%E1%84%82%E1%85%A7%E1%86%AB%20%E1%84%89%E1%85%A6%E1%84%87%E1%85%A5%E1%86%B8%E1%84%80%E1%85%A2%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%A1%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A6%E1%84%87%E1%85%A9%E1%86%AB.pdf",
-            "domain": "www.rodemtax.com",
-            "title": "(2) 예외적 경정청구기간 합리화(국기법 §45의2)",
-            "snippet": "(2) 예외적 경정청구기간 합리화(국기법 §45의2) ... - (후발적 사유에 의한 경정청구) 사유가 있음을 안 날로부터 3개월 이내"
+            "url": "https://money001.infodrim.com/2026/05/tax-return-how-to-summary-2026-5.html",
+            "domain": "money001.infodrim.com",
+            "title": "money001: 연말정산 경정청구 방법·기간·서류 총정리 2026 — 놓친 공제 5년 안에 환급받는 법",
+            "snippet": "이 글 하나로 경정청구의 개념부터 신청 기간, 서류, 홈택스 신청 방법까지 완전 정복해봐요. ... ✅ 경정청구 핵심 체크리스트 - ✅ 신청 기간: 법정신고기한(3월 10일)으로부터 5년"
           },
           {
             "url": "https://licensemit.com/2026-%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC-%EA%B8%B0%EA%B0%84-%EB%B0%A9%EB%B2%95/",
@@ -2956,6 +2280,12 @@
             "snippet": "현행 국세기본법 제45조의 2 1항에서는 이미 신고·결정된 세액 등에 대해 납세의무자가 과세관청에 정정을 요청할 수 있도록 하는 경정청구제도를 규정하고 있으며, 법정신고기한이 지난 후 5년 이내에"
           },
           {
+            "url": "https://albup.co.kr/page/judgement_detail.php?com_idx=25414",
+            "domain": "albup.co.kr",
+            "title": "수정신고 후 경정청구 기한 연장 되나요? - 경정청구 기간 제한 판례 - 판례 검색",
+            "snippet": "경정청구 기간 후에 한 경정청구에 대한 세무서의 거부처분을 취소소송할 수 있나요? ... 부산지방법원-2016-구합-23517 판결에서 수정신고에 따라 경정청구 기간이 연장되지 않으므로 실무상 기한 준수에 유의해야 한다고"
+          },
+          {
             "url": "https://albup.co.kr/page/interpretation_detail.php?com_idx=18943",
             "domain": "albup.co.kr",
             "title": "경정청구 결과통지 미수령 시 불복청구 가능 기간 - 유권해석 검색",
@@ -2966,12 +2296,6 @@
             "domain": "www.aladin.co.kr",
             "title": "[중고] 조세법상 경정청구 | 알라딘",
             "snippet": "통상 72시간 이내 * [중고] 조세법상 경정청구 * 49,000 원 (정가대비 16% 할인) [중고-중] ... 기간 | 평점 | 평가수 | 만족 Image | 보통"
-          },
-          {
-            "url": "https://albup.co.kr/page/interpretation_detail.php?com_idx=22022",
-            "domain": "albup.co.kr",
-            "title": "후발적 경정청구 요건과 경정청구 기간 안내 - 유권해석 검색",
-            "snippet": "K社의 행정소송 결과는 평택세관장의 경정처분에 한하여 기속력을 가지므로, 해당 처분과 관련된 수입신고물품의 경정청구 時 후발적 사유(法 §38의3 ③)로만 인정된다고 할 것이며, 최초 신고 이후 처분"
           }
         ],
         "search_review": {
@@ -2979,8 +2303,8 @@
           "query": "경정청구기간",
           "executed_query": "경정청구 기간",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "raw_sha256": "5c0c818e9b6f8d93cb6e4666b4069ddc3874228877de04f07b276c788dfe9103",
+          "checked_at": "2026-09-11T03:32:14.977874+00:00",
+          "raw_sha256": "4cfec5f681505b4146f58ec3ea14bfca3b850464be9df8ca07e11404bbcb425a",
           "decisions": [
             {
               "result_index": 0,
@@ -3000,7 +2324,7 @@
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "예외적 경정청구기간 합리화"
+              "quote": "연말정산 경정청구 방법·기간·서류 총정리"
             },
             {
               "result_index": 4,
@@ -3020,17 +2344,17 @@
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "경정청구 결과통지 미수령 시 불복청구 가능 기간"
+              "quote": "수정신고에 따라 경정청구 기간이 연장되지 않으므로"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "[중고] 조세법상 경정청구"
+              "quote": "경정청구 결과통지 미수령 시 불복청구 가능 기간"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "해당 처분과 관련된 수입신고물품의 경정청구"
+              "quote": "[중고] 조세법상 경정청구"
             }
           ]
         }
@@ -3049,20 +2373,41 @@
               "url": "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1261",
               "title": "서울노동포털",
               "excerpt_chars": 885
-            },
-            {
-              "url": "https://hope.welfareinfo.or.kr/bsns/bsnsIntrcnAcc.do",
-              "title": "사업소개 - 자산형성포털(자산e룸터)",
-              "excerpt_chars": 8000
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.medlineplus.gov/about/using/searchtips/",
+                  "title": "MedlinePlus: Search Tips",
+                  "excerpt_chars": 6259
+                },
+                {
+                  "url": "https://www.seoullabor.or.kr/portal/bbs/selectBbs.do?bbs_code=A1019&bbs_seq=1261",
+                  "title": "서울노동포털",
+                  "excerpt_chars": 885
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "no_changed_source"
           }
         }
       }
+    ],
+    "excluded_keywords": [
+      "세금계산서발행"
     ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
@@ -3071,20 +2416,19 @@
         "offered_keywords": [
           "상한제사후환급금",
           "소상공인정책자금",
-          "세금계산서발행",
-          "소상공인지원금",
           "종합소득세환급",
+          "소상공인지원금",
           "부가세환급",
-          "청년지원금",
           "종합소득세환급일",
-          "소상공인",
+          "청년지원금",
           "병원비환급",
-          "국비지원교육",
+          "소상공인",
           "세금환급금조회",
-          "사업자대출",
+          "국비지원교육",
           "세금환급",
-          "재무제표",
+          "사업자대출",
           "연말정산환급금조회",
+          "재무제표",
           "통상임금계산법",
           "퇴직금중간정산",
           "종합소득세환급금조회",
@@ -3128,38 +2472,34 @@
           "고용촉진장려금",
           "고용보험환급",
           "고용지원금",
-          "청년사업자대출"
+          "청년사업자대출",
+          "국비지원카드"
         ],
         "proposals": [
           {
-            "keyword": "세금계산서발행",
-            "reason": "네이버 월 15,780회. 발행 절차·필수 기재사항·발행 시점을 확인하려는 구체적인 세무 수요가 있어 조사할 가치가 있다.",
-            "search_query": "세금계산서 발행"
+            "keyword": "자금조달계획서",
+            "reason": "월 9,130회. 주택 거래 시 제출 대상·작성 방법·증빙서류를 확인하려는 행정 절차 수요로 조사 가치가 있다.",
+            "search_query": "자금 조달 계획서"
+          },
+          {
+            "keyword": "소상공인폐업지원금",
+            "reason": "월 7,440회. 폐업 비용 지원 대상과 신청 순서·준비서류를 묻는 구체적인 지원 절차 수요가 있다.",
+            "search_query": "소상공인 폐업 지원금"
           },
           {
             "keyword": "개인사업자부가세환급",
-            "reason": "네이버 월 930회인 롱테일이다. 개인사업자의 환급 조건과 신고 시 필요한 증빙을 묻는 수요를 조사하기 좋다.",
+            "reason": "월 930회인 세금 롱테일이다. 개인사업자의 환급 발생 조건과 신고 시 필요한 자료를 조사하기 좋다.",
             "search_query": "개인사업자 부가세 환급"
           },
           {
             "keyword": "경정청구환급기간",
-            "reason": "네이버 월 1,620회. 기존 신고 유형 구분 글과 달리, 청구 후 처리·입금까지 걸리는 기간을 확인하려는 질문이 구체적이다.",
+            "reason": "월 1,620회. 기존 신고 유형 구분 글과 달리 청구 후 처리·입금까지의 기간을 묻는 후속 질문이 구체적이다.",
             "search_query": "경정청구 환급 기간"
           },
           {
-            "keyword": "자금조달계획서",
-            "reason": "네이버 월 9,130회. 주택 거래 시 제출 대상인지, 어떻게 작성하고 어떤 증빙을 준비하는지 조사할 가치가 있다.",
-            "search_query": "자금조달계획서"
-          },
-          {
-            "keyword": "소상공인폐업지원금",
-            "reason": "네이버 월 7,440회. 폐업 비용 지원 대상·신청 순서·증빙을 확인하려는 수요가 있어 현재 공고 기준으로 조사할 후보이다.",
-            "search_query": "소상공인 폐업 지원금"
-          },
-          {
-            "keyword": "소상공인정책자금신청",
-            "reason": "네이버 월 870회인 절차형 롱테일이다. 현재 신청 가능한 자금의 접수 일정·신청 요건·준비서류를 조사하기 좋다.",
-            "search_query": "소상공인 정책자금 신청"
+            "keyword": "종합소득세환급일",
+            "reason": "월 6,040회. 환급 입금 시점과 지연 시 확인 절차가 핵심 질문으로, 기존 기한후신고 유형 안내와 구별된다.",
+            "search_query": "종합소득세 환급일"
           }
         ]
       },
@@ -3168,19 +2508,18 @@
         "offered_keywords": [
           "상한제사후환급금",
           "소상공인정책자금",
-          "소상공인지원금",
           "종합소득세환급",
+          "소상공인지원금",
           "부가세환급",
           "청년지원금",
-          "종합소득세환급일",
-          "소상공인",
           "병원비환급",
-          "국비지원교육",
+          "소상공인",
           "세금환급금조회",
-          "사업자대출",
+          "국비지원교육",
           "세금환급",
-          "재무제표",
+          "사업자대출",
           "연말정산환급금조회",
+          "재무제표",
           "통상임금계산법",
           "퇴직금중간정산",
           "종합소득세환급금조회",
@@ -3204,6 +2543,7 @@
           "소진공",
           "국세청환급",
           "3톤미만지게차",
+          "소상공인정책자금신청",
           "중고지게차",
           "고용지원금대상",
           "중진공정책자금",
@@ -3229,452 +2569,43 @@
         ],
         "proposals": [
           {
-            "keyword": "종합소득세환급일",
-            "reason": "네이버 월 6,040회. 신고 후 언제 입금되는지와 지급이 늦을 때 확인할 사항을 조사할 가치가 있다.",
-            "search_query": "종합소득세 환급일"
+            "keyword": "소상공인정책자금신청",
+            "reason": "네이버 월 870회. 신청 자격·접수 일정·준비서류를 확인하려는 구체적 수요가 있어 현재 공고를 조사할 가치가 있다.",
+            "search_query": "소상공인 정책자금 신청"
           },
           {
             "keyword": "부가세환급",
-            "reason": "네이버 월 6,460회. 환급 발생 조건과 일반·조기환급 절차를 궁금해하는 독자를 위해 조사할 후보다.",
+            "reason": "네이버 월 6,460회. 환급이 발생하는 조건과 신고 절차를 묻는 세금 수요로, 기존 미수령 환급금 조회와 목적이 다르다.",
             "search_query": "부가세 환급"
           },
           {
             "keyword": "경정청구기간",
-            "reason": "네이버 월 550회인 롱테일. 청구 가능한 기한과 기산점 질문에 집중해 기존 신고 유형 구분 글과 중복을 줄일 수 있다.",
+            "reason": "네이버 월 550회. 청구 가능한 기한과 기산점을 묻는 롱테일로, 기존 신고 유형 구분과 별도로 기간 기준을 조사할 만하다.",
             "search_query": "경정청구 기간"
           },
           {
             "keyword": "종합소득세율",
-            "reason": "네이버 월 7,370회. 과세표준별 적용 세율과 누진공제의 의미를 확인하려는 세금 정보 수요를 조사할 후보다.",
+            "reason": "네이버 월 7,370회. 과세표준별 적용 세율과 누진공제의 의미를 확인하려는 수요로, 계산 도구 없이 정보로 답할 수 있다.",
             "search_query": "종합소득세율"
           }
         ]
       }
     ],
-    "ranked_candidates": [
-      {
-        "keyword": "세금계산서발행",
-        "category": "생활정보",
-        "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
-        "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
-        "gap": "발행수단별 준비물 비교표, 홈택스 발급·조회 절차, 원칙과 월합계 예외를 구분한 기한 체크리스트를 제공한다.",
-        "source_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-        "verified_sources": [
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-            "original_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-            "title": "심사 및 지급",
-            "checked_on": "2026-09-11",
-            "sha256": "edbadbef8d90036a5d5e268d47378319170f5b230773394df2365b43a2e108b8",
-            "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 심사 및 지급 홈 국세정책/제도 근로∙자녀장려금 심사 및 지급 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급방법 국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급) 국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급 1. 매출자에서 국세청 홈택스 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. 국세청 홈택스에서 매입자 : E-Mail로 발송 2. 국세청 홈택스에서 (세금)계산서 관리 시스템(국세청) : 전자 서명된 거래정보 3. 매입자에서 국세청 홈택스 : 수취내역 확인(필요시) 전자(세금)계산서 발급대행사업자의 시스템을 이용한 발급(공동인증서로 발급) 국세청에 등록된 전자(세금)계산서 발급업무 대행 사업자(ASP)가 일정수수료를 받고 운영하는 사이트 또는 자체 구축한 전자(세금)계산서 발급시스템(ERP)을 이용하여 발급 1. 매출자에서 ERP 시스템, ASP 시스템 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. ERP 시스템, ASP 시스템에서 매입자 : E-Mail로 발송 3. 매입자에서 ERP 시스템, ASP 시스템 : 수취내역 확인(필요시) 4. ERP 시스템, ASP 시스템에서 (세금)계산서 관리 시스템(국세청) : 발급일 다음날까지 전송 기타 발급 방법(인터넷 사용이 어려운 경우) (전화 ARS 이용) 세무서에서 보안카드 수령 후 전화ARS(Tel. :126-1-2-1)를 이용하여 발급 (세무서 대리발급) 전자(세금)계산서 대리발급 신청서(주요 서식 참고)와 거래관련 증명서류 * 를 가지고 가까운 세무서(사업장 관할과 관계없이 신청 가능)를 방문하여 발급신청 * ｢거래계약서, 거래명세표, 거래내역서, 입금증｣ 등 실제 재화 또는 용역 거래를 확인할 수 있는 증명서류 발급절차 발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보 ① 공동인증서 등 준비 전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요 ※ 공동인증서 발급이 어려운 경우 세무서에서 보안카드를 발급받아 홈택스에서 전자(세금)계산서 발급 가능하며, '21.2월부터 모바일 홈택스(손택스)에서 지문 인증 등을 통하여 발급 가능 ② 회원가입 국세청에서 운영하는 홈택스 ( www.hometax.go.kr ) 또는 시스템사업자가 운영하는 전자(세금)계산서 발급사이트 중 하나를 선택하여 회원가입 ③ 발급 부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송 월합계 (세금)계산서 등의 경우 예외적으로 공급시기가 속하는 달의 다음달 10일까지 발급 가능 ④ 전송 전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음 ⑤ 조회 월별‧분기별 전자(세금)계산서 목록 및 합계표 조회 가능 홈택스가 아닌 다른 전자(세금)계산서 사이트에서 발급한 경우라도 국세청에 전송된 전자(세금)계산서는 홈택스에서 조회 가능 ⑥ 부가가치세 등 신고 매출·매입처별 (세금)계산서합계표 작성 시 전자(세금)계산서 합계금액만 기재하고 거래처별 명세 작성 불필요 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-            "original_url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-            "title": "발급시기 및 발급∙전송기한",
-            "checked_on": "2026-09-11",
-            "sha256": "163997f75124a0cced56c9b872219ab7c1e7937095c8a012cd296d797e4c713b",
-            "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 발급시기 및 발급∙전송기한 홈 국세정책/제도 전자(세금)계산서/현금영수증/신용카드 전자(세금)계산서 발급시기 및 발급∙전송기한 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급시기 재화나 용역을 공급받는 자가 지정하는 수신함에 입력되거나 국세청 전자(세금)계산서 발급 시스템에 입력된 때에 공급 받는자가 그 전자(세금)계산서를 수신한 것으로 봄 파일 전송 없이 단순히 발급된 사실만을 알리는 SMS 통지나 링크를 통하여 확인할 수 있도록 하는 것은 아직 발급이 완료된 상태가 아님 거래상대방 수신함(이메일) 또는 홈택스에 입력된 때 발급완료 전자서명하지 않은 (세금)계산서 파일을 거래상대방 이메일로 발송한 경우에는 아직 발급이 완료된 상태가 아님 전자서명을 하고 전자(세금)계산서 표준에 의해 생성된 파일이 거래상대방 수신함(이메일)에 도달한 때 발급 완료 거래상대방이 이메일 주소가 없는 경우 또는 적용될 수 없는 경우 매입자가 이메일 주소가 없거나 지정하지 아니한 경우 또는 수신함이 적용될 수 없는 시스템을 사용하는 경우에는 국세청 발급 시스템을 수신함으로 지정한 것으로 봄 발급기한 및 전송기한 발급기한 (원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급 * 발급기한(10일)이 토요일 또는 공휴일인 경우에는 바로 다음 영업일까지 발급 전송기한 발급일의 다음날까지 국세청에 전송 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
-          "https://adpot.kr/m/sub/center/faq_view.html?code=4956"
-        ],
-        "valid_until": null,
-        "monthly_search": 15780,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7791&mi=6583",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7786&mi=2304",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "세금계산서 발행",
-        "organic_domains": [
-          "www.sinokor.co.kr",
-          "sms.eyagi070.co.kr",
-          "ems.nts.go.kr",
-          "images.softcity.co.kr",
-          "newzensolution.co.kr",
-          "campaign-cdn.pstatic.net",
-          "qxguide.oopy.io",
-          "adpot.kr",
-          "m.saramin.co.kr",
-          "www.kodica.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://www.sinokor.co.kr/PortalManual/EN/SHMTAXTAXMGT.html",
-            "domain": "www.sinokor.co.kr",
-            "title": "세금계산서 발행",
-            "snippet": "영업매출 세금계산서 발행 ... | 수정세금계산서 발행 사유 | 1."
-          },
-          {
-            "url": "https://sms.eyagi070.co.kr/2026_manuals",
-            "domain": "sms.eyagi070.co.kr",
-            "title": "Dias nummer 1",
-            "snippet": "1 세금계산서 발행정보 및 담당자 정보 입력"
-          },
-          {
-            "url": "https://ems.nts.go.kr/news/file/nts_news_120330.pdf",
-            "domain": "ems.nts.go.kr",
-            "title": "매입자 발행 세금계산서 제도",
-            "snippet": "- 신청인이 매입자발행세금계산서를 발행하고 부가가치세 신고 또는 경정청구를 할 때 매입자발행세금계산서합계표를 제출하는 경우, 매입세액으로 공제받을 수 있습니다. ... - 차명·가짜세금계산서를 발행한 경우에는 공급가액의 2%에 상당하는"
-          },
-          {
-            "url": "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
-            "domain": "images.softcity.co.kr",
-            "title": "8. 세금계산서 발행 방법 3가지",
-            "snippet": "세금계산서 발행 방법 3가지 ... 상단 예시 화면: 거래명세표입력 프로그램 창에서 하단의 [세금서(F6)] 버튼이 주황색으로 강조되어 있고, 이를 누르면 뜨는 “출력방법” 팝업에서 오른쪽의 [인쇄(P)]와 [전자세금계산서(E)]"
-          },
-          {
-            "url": "https://newzensolution.co.kr/manual/distribution/6013_%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C%EC%B2%98%EB%A6%AC%28%ED%8C%90%EB%A7%A4%29.pdf",
-            "domain": "newzensolution.co.kr",
-            "title": "입력방법\n\n[미처리 탭]\n\n1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당",
-            "snippet": "1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다. 입력된 기간내의 자료는 판매입력에서 일괄 입력한 데이터를 불러오며, 기간의 마지막 날짜가 세금계산서 발행일자가"
-          },
-          {
-            "url": "https://campaign-cdn.pstatic.net/nfs/commonParam/naverpayguide_files/20231110114543_56da57792a3490f0bf40fda8f2e67faa.pdf",
-            "domain": "campaign-cdn.pstatic.net",
-            "title": "4-1. 세금계산서 발행 정책",
-            "snippet": "• 이미 세금계산서가 발행된 구매확정 주문건이 익월 이후 구매확정 후 취소처리 될 경우, 취소처리 해당 월의 세금계산서에서 마이너스 처리되어 계산됩니다."
-          },
-          {
-            "url": "https://qxguide.oopy.io/71fdb312-4a2b-4693-acb6-a987e1d71e40",
-            "domain": "qxguide.oopy.io",
-            "title": "청구서, 세금계산서 발행",
-            "snippet": "가입 시 등록한 정보와 인보이스(세금계산서) 발행 관련 정보가 다른 경우(담당자 등), “인보이스 정보”에서 수정 가능 (세금계산서 첫 발행 전에만 가능) ... N/ 승인 대기 :"
-          },
-          {
-            "url": "https://adpot.kr/m/sub/center/faq_view.html?code=4956",
-            "domain": "adpot.kr",
-            "title": "세금계산서 발행 방법",
-            "snippet": "* 세금계산서 발행 방법 2026-01-23 ... - 거래 은행의 인터넷 뱅킹 > 인증센터 > 공동인증서 또는 금융인증서 > 세금계산서 발행 신청/조회(기업용) > 발급 진행"
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/view?rec_idx=54616283&searchword=news&t_category=search&t_content=connect_recruit",
-            "domain": "m.saramin.co.kr",
-            "title": "[(주)뉴스이십일] 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) (D-2) - 사람인",
-            "snippet": "# 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) ... 신문 발행업 ... 경기 고양시 일산서구 주엽동 83번지 레이크타운 519호 (인근전철: 서울 3호선 주엽에서 500m 이내)"
-          },
-          {
-            "url": "https://www.kodica.kr/support/faq/%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89-%EC%9A%94%EC%B2%AD%ED%95%98%EA%B8%B0",
-            "domain": "www.kodica.kr",
-            "title": "자주하는 질문 - 세금계산서 발행 요청하기 | 한국디지털인증",
-            "snippet": "#### 세금계산서 발행 요청하기 ... 세금계산서 발행 요청"
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 33.58,
-          "organic_opportunity": 35.0,
-          "trend": 0.04,
-          "intent_fit": 15
-        },
-        "trend_growth": 0.004,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-11T02:56:10.959075+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "세금계산서발행"
-        ],
-        "status": "pending",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
-              "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
-              "excerpt_chars": 2815
-            },
-            {
-              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-              "title": "심사 및 지급",
-              "excerpt_chars": 1933
-            },
-            {
-              "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-              "title": "발급시기 및 발급∙전송기한",
-              "excerpt_chars": 1012
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://m.kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=57170&gotopage=29&keyTaxpart=0&keyfield=coun_subj&keyword=",
-                  "title": "한국세무사회",
-                  "excerpt_chars": 588
-                },
-                {
-                  "url": "https://kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=4076&gotopage=2897&keyTaxpart=0&keyfield=coun_subj&keyword=",
-                  "title": "한국세무사회",
-                  "excerpt_chars": 508
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
-                  "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
-                  "excerpt_chars": 2815
-                },
-                {
-                  "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
-                  "title": "심사 및 지급",
-                  "excerpt_chars": 1933
-                },
-                {
-                  "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
-                  "title": "발급시기 및 발급∙전송기한",
-                  "excerpt_chars": 1012
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "세금계산서발행",
-          "executed_query": "세금계산서 발행",
-          "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
-          "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "result_count": 10,
-          "domain_count": 10,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "세금계산서발행",
-            "executed_query": "세금계산서 발행",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-11T02:56:10.959075+00:00",
-            "raw_sha256": "db7d9de9a847d93cdabd3eb288fa047c528cc2bc3984b864394c3213dd23744b",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "영업매출 세금계산서 발행"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "세금계산서 발행정보 및 담당자 정보 입력"
-              },
-              {
-                "result_index": 2,
-                "relevant": false,
-                "quote": "매입자 발행 세금계산서 제도"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "세금계산서 발행 방법 3가지"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다."
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "4-1. 세금계산서 발행 정책"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "청구서, 세금계산서 발행"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "세금계산서 발행 방법"
-              },
-              {
-                "result_index": 8,
-                "relevant": false,
-                "quote": "뉴스21 사무 정규직 채용합니다"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "세금계산서 발행 요청하기"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 8,
-            "relevant_site_count": 8,
-            "relevant_indices": [
-              0,
-              1,
-              3,
-              4,
-              5,
-              6,
-              7,
-              9
-            ],
-            "relevance_ratio": 0.8,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.125,
-            "organic_opportunity": 35.0
-          },
-          "scope": "full_keyword",
-          "target_keyword": "세금계산서발행",
-          "matches": [
-            {
-              "result_index": 3,
-              "quote": "세금계산서 발행 방법 3가지"
-            },
-            {
-              "result_index": 7,
-              "quote": "세금계산서 발행 방법"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-11T02:56:10.959075+00:00",
-          "input_sha256": "eb5a076234d1e3f4daf6532ade3d743e72370f60bcd5c1a8b4e38eaa22d00501",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "세금계산서발행",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급)",
-                "entity": "국세청",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
-                "quote": "전송기한 발급일의 다음날까지 국세청에 전송",
-                "entity": "국세청",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "세금계산서는 어떤 수단으로 발행하는가?",
-                "answer": "홈택스·모바일, ASP·ERP, 전화 ARS, 세무서 대리발급을 이용할 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급"
-              },
-              {
-                "facet": "발행수단별 인증수단과 준비물은 무엇인가?",
-                "answer": "전자발급은 용도에 맞는 공동인증서, 홈택스는 보안카드·생체인증도 가능하다. 대리발급은 신청서와 거래증빙이 필요하다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요"
-              },
-              {
-                "facet": "홈택스에서 발급하고 조회하는 절차는 무엇인가?",
-                "answer": "인증수단 준비·회원가입 후 거래정보 입력과 전자서명으로 발급한다. 전송은 자동이며 목록·합계표를 조회할 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보"
-              },
-              {
-                "facet": "발급기한의 원칙과 월합계 예외는 무엇인가?",
-                "answer": "원칙은 법정 공급시기이며 월합계 등은 다음 달 10일까지다. 10일이 토요일·공휴일이면 다음 영업일까지다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "(원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급"
-              },
-              {
-                "facet": "발급 후 국세청 전송기한과 별도 전송 필요 여부는?",
-                "answer": "발급일 다음 날까지 전송한다. 홈택스 발급은 즉시 자동 전송되어 별도 절차가 없다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음"
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 83.62,
-        "publish_eligible": true,
-        "hold_reasons": []
-      }
-    ],
+    "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "세금계산서발행",
-        "monthly_search": 15780,
-        "rank": 1,
-        "score": 83.62,
-        "score_components": {
-          "demand": 33.58,
-          "organic_opportunity": 35.0,
-          "trend": 0.04,
-          "intent_fit": 15
-        },
-        "status": "selected",
-        "reason": "highest_score_among_evaluated",
-        "organic_query": "세금계산서 발행"
+        "keyword": "자금조달계획서",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 9130,
+        "organic_query": "자금 조달 계획서"
       },
       {
-        "keyword": "자금조달계획서",
-        "monthly_search": 9130,
-        "score": 58.69,
-        "status": "held",
-        "reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
-        ],
-        "organic_query": "자금조달계획서"
+        "keyword": "소상공인폐업지원금",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 7440,
+        "organic_query": "소상공인 폐업 지원금"
       },
       {
         "keyword": "개인사업자부가세환급",
@@ -3691,11 +2622,11 @@
         "organic_query": "경정청구 환급 기간"
       },
       {
-        "keyword": "소상공인폐업지원금",
+        "keyword": "종합소득세환급일",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 7440,
-        "organic_query": "소상공인 폐업 지원금"
+        "monthly_search": 6040,
+        "organic_query": "종합소득세 환급일"
       },
       {
         "keyword": "소상공인정책자금신청",
@@ -3705,16 +2636,9 @@
         "organic_query": "소상공인 정책자금 신청"
       },
       {
-        "keyword": "종합소득세환급일",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 6040,
-        "organic_query": "종합소득세 환급일"
-      },
-      {
         "keyword": "부가세환급",
         "status": "rejected",
-        "reason": "search quality insufficient",
+        "reason": "no accessible official source supports topic",
         "monthly_search": 6460,
         "organic_query": "부가세 환급"
       },
@@ -3733,7 +2657,415 @@
         "organic_query": "종합소득세율"
       }
     ],
-    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
+    "reuse_source_diagnostics": {
+      "checked_at": "2026-09-11T03:31:43.544923+00:00",
+      "failed_candidates": [
+        {
+          "keyword": "세금계산서발행",
+          "reason": "required_source_unavailable",
+          "checked_at": "2026-09-11T03:32:14.970407+00:00",
+          "candidate": {
+            "keyword": "세금계산서발행",
+            "category": "생활정보",
+            "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
+            "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
+            "gap": "발행수단별 준비물 비교표, 홈택스 발급·조회 절차, 원칙과 월합계 예외를 구분한 기한 체크리스트를 제공한다.",
+            "source_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+            "verified_sources": [
+              {
+                "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+                "original_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+                "title": "심사 및 지급",
+                "checked_on": "2026-09-11",
+                "sha256": "edbadbef8d90036a5d5e268d47378319170f5b230773394df2365b43a2e108b8",
+                "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 심사 및 지급 홈 국세정책/제도 근로∙자녀장려금 심사 및 지급 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급방법 국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급) 국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급 1. 매출자에서 국세청 홈택스 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. 국세청 홈택스에서 매입자 : E-Mail로 발송 2. 국세청 홈택스에서 (세금)계산서 관리 시스템(국세청) : 전자 서명된 거래정보 3. 매입자에서 국세청 홈택스 : 수취내역 확인(필요시) 전자(세금)계산서 발급대행사업자의 시스템을 이용한 발급(공동인증서로 발급) 국세청에 등록된 전자(세금)계산서 발급업무 대행 사업자(ASP)가 일정수수료를 받고 운영하는 사이트 또는 자체 구축한 전자(세금)계산서 발급시스템(ERP)을 이용하여 발급 1. 매출자에서 ERP 시스템, ASP 시스템 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. ERP 시스템, ASP 시스템에서 매입자 : E-Mail로 발송 3. 매입자에서 ERP 시스템, ASP 시스템 : 수취내역 확인(필요시) 4. ERP 시스템, ASP 시스템에서 (세금)계산서 관리 시스템(국세청) : 발급일 다음날까지 전송 기타 발급 방법(인터넷 사용이 어려운 경우) (전화 ARS 이용) 세무서에서 보안카드 수령 후 전화ARS(Tel. :126-1-2-1)를 이용하여 발급 (세무서 대리발급) 전자(세금)계산서 대리발급 신청서(주요 서식 참고)와 거래관련 증명서류 * 를 가지고 가까운 세무서(사업장 관할과 관계없이 신청 가능)를 방문하여 발급신청 * ｢거래계약서, 거래명세표, 거래내역서, 입금증｣ 등 실제 재화 또는 용역 거래를 확인할 수 있는 증명서류 발급절차 발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보 ① 공동인증서 등 준비 전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요 ※ 공동인증서 발급이 어려운 경우 세무서에서 보안카드를 발급받아 홈택스에서 전자(세금)계산서 발급 가능하며, '21.2월부터 모바일 홈택스(손택스)에서 지문 인증 등을 통하여 발급 가능 ② 회원가입 국세청에서 운영하는 홈택스 ( www.hometax.go.kr ) 또는 시스템사업자가 운영하는 전자(세금)계산서 발급사이트 중 하나를 선택하여 회원가입 ③ 발급 부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송 월합계 (세금)계산서 등의 경우 예외적으로 공급시기가 속하는 달의 다음달 10일까지 발급 가능 ④ 전송 전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음 ⑤ 조회 월별‧분기별 전자(세금)계산서 목록 및 합계표 조회 가능 홈택스가 아닌 다른 전자(세금)계산서 사이트에서 발급한 경우라도 국세청에 전송된 전자(세금)계산서는 홈택스에서 조회 가능 ⑥ 부가가치세 등 신고 매출·매입처별 (세금)계산서합계표 작성 시 전자(세금)계산서 합계금액만 기재하고 거래처별 명세 작성 불필요 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
+                "locator_origin": "model_reported_locator"
+              },
+              {
+                "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+                "original_url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+                "title": "발급시기 및 발급∙전송기한",
+                "checked_on": "2026-09-11",
+                "sha256": "163997f75124a0cced56c9b872219ab7c1e7937095c8a012cd296d797e4c713b",
+                "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 발급시기 및 발급∙전송기한 홈 국세정책/제도 전자(세금)계산서/현금영수증/신용카드 전자(세금)계산서 발급시기 및 발급∙전송기한 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급시기 재화나 용역을 공급받는 자가 지정하는 수신함에 입력되거나 국세청 전자(세금)계산서 발급 시스템에 입력된 때에 공급 받는자가 그 전자(세금)계산서를 수신한 것으로 봄 파일 전송 없이 단순히 발급된 사실만을 알리는 SMS 통지나 링크를 통하여 확인할 수 있도록 하는 것은 아직 발급이 완료된 상태가 아님 거래상대방 수신함(이메일) 또는 홈택스에 입력된 때 발급완료 전자서명하지 않은 (세금)계산서 파일을 거래상대방 이메일로 발송한 경우에는 아직 발급이 완료된 상태가 아님 전자서명을 하고 전자(세금)계산서 표준에 의해 생성된 파일이 거래상대방 수신함(이메일)에 도달한 때 발급 완료 거래상대방이 이메일 주소가 없는 경우 또는 적용될 수 없는 경우 매입자가 이메일 주소가 없거나 지정하지 아니한 경우 또는 수신함이 적용될 수 없는 시스템을 사용하는 경우에는 국세청 발급 시스템을 수신함으로 지정한 것으로 봄 발급기한 및 전송기한 발급기한 (원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급 * 발급기한(10일)이 토요일 또는 공휴일인 경우에는 바로 다음 영업일까지 발급 전송기한 발급일의 다음날까지 국세청에 전송 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
+                "locator_origin": "model_reported_locator"
+              }
+            ],
+            "intent_results": [
+              "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
+              "https://adpot.kr/m/sub/center/faq_view.html?code=4956"
+            ],
+            "valid_until": null,
+            "monthly_search": 15780,
+            "demand_provider": "naver_searchad_pc_mobile",
+            "demand_scope": "keyword_total",
+            "advertising_competition": "높음",
+            "evidence_mode": "serp",
+            "research_evidence": {
+              "provider": "codex_web",
+              "searched": true,
+              "locators": [
+                {
+                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
+                  "origin": "model_reported_locator"
+                },
+                {
+                  "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+                  "origin": "model_reported_locator"
+                },
+                {
+                  "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+                  "origin": "model_reported_locator"
+                },
+                {
+                  "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7791&mi=6583",
+                  "origin": "model_reported_locator"
+                },
+                {
+                  "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7786&mi=2304",
+                  "origin": "model_reported_locator"
+                }
+              ]
+            },
+            "organic_provider": "codex_native_search",
+            "organic_query": "세금계산서 발행",
+            "organic_domains": [
+              "www.sinokor.co.kr",
+              "sms.eyagi070.co.kr",
+              "ems.nts.go.kr",
+              "images.softcity.co.kr",
+              "newzensolution.co.kr",
+              "campaign-cdn.pstatic.net",
+              "qxguide.oopy.io",
+              "adpot.kr",
+              "m.saramin.co.kr",
+              "www.kodica.kr"
+            ],
+            "organic_results": [
+              {
+                "url": "https://www.sinokor.co.kr/PortalManual/EN/SHMTAXTAXMGT.html",
+                "domain": "www.sinokor.co.kr",
+                "title": "세금계산서 발행",
+                "snippet": "영업매출 세금계산서 발행 ... | 수정세금계산서 발행 사유 | 1."
+              },
+              {
+                "url": "https://sms.eyagi070.co.kr/2026_manuals",
+                "domain": "sms.eyagi070.co.kr",
+                "title": "Dias nummer 1",
+                "snippet": "1 세금계산서 발행정보 및 담당자 정보 입력"
+              },
+              {
+                "url": "https://ems.nts.go.kr/news/file/nts_news_120330.pdf",
+                "domain": "ems.nts.go.kr",
+                "title": "매입자 발행 세금계산서 제도",
+                "snippet": "- 신청인이 매입자발행세금계산서를 발행하고 부가가치세 신고 또는 경정청구를 할 때 매입자발행세금계산서합계표를 제출하는 경우, 매입세액으로 공제받을 수 있습니다. ... - 차명·가짜세금계산서를 발행한 경우에는 공급가액의 2%에 상당하는"
+              },
+              {
+                "url": "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
+                "domain": "images.softcity.co.kr",
+                "title": "8. 세금계산서 발행 방법 3가지",
+                "snippet": "세금계산서 발행 방법 3가지 ... 상단 예시 화면: 거래명세표입력 프로그램 창에서 하단의 [세금서(F6)] 버튼이 주황색으로 강조되어 있고, 이를 누르면 뜨는 “출력방법” 팝업에서 오른쪽의 [인쇄(P)]와 [전자세금계산서(E)]"
+              },
+              {
+                "url": "https://newzensolution.co.kr/manual/distribution/6013_%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C%EC%B2%98%EB%A6%AC%28%ED%8C%90%EB%A7%A4%29.pdf",
+                "domain": "newzensolution.co.kr",
+                "title": "입력방법\n\n[미처리 탭]\n\n1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당",
+                "snippet": "1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다. 입력된 기간내의 자료는 판매입력에서 일괄 입력한 데이터를 불러오며, 기간의 마지막 날짜가 세금계산서 발행일자가"
+              },
+              {
+                "url": "https://campaign-cdn.pstatic.net/nfs/commonParam/naverpayguide_files/20231110114543_56da57792a3490f0bf40fda8f2e67faa.pdf",
+                "domain": "campaign-cdn.pstatic.net",
+                "title": "4-1. 세금계산서 발행 정책",
+                "snippet": "• 이미 세금계산서가 발행된 구매확정 주문건이 익월 이후 구매확정 후 취소처리 될 경우, 취소처리 해당 월의 세금계산서에서 마이너스 처리되어 계산됩니다."
+              },
+              {
+                "url": "https://qxguide.oopy.io/71fdb312-4a2b-4693-acb6-a987e1d71e40",
+                "domain": "qxguide.oopy.io",
+                "title": "청구서, 세금계산서 발행",
+                "snippet": "가입 시 등록한 정보와 인보이스(세금계산서) 발행 관련 정보가 다른 경우(담당자 등), “인보이스 정보”에서 수정 가능 (세금계산서 첫 발행 전에만 가능) ... N/ 승인 대기 :"
+              },
+              {
+                "url": "https://adpot.kr/m/sub/center/faq_view.html?code=4956",
+                "domain": "adpot.kr",
+                "title": "세금계산서 발행 방법",
+                "snippet": "* 세금계산서 발행 방법 2026-01-23 ... - 거래 은행의 인터넷 뱅킹 > 인증센터 > 공동인증서 또는 금융인증서 > 세금계산서 발행 신청/조회(기업용) > 발급 진행"
+              },
+              {
+                "url": "https://m.saramin.co.kr/job-search/view?rec_idx=54616283&searchword=news&t_category=search&t_content=connect_recruit",
+                "domain": "m.saramin.co.kr",
+                "title": "[(주)뉴스이십일] 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) (D-2) - 사람인",
+                "snippet": "# 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) ... 신문 발행업 ... 경기 고양시 일산서구 주엽동 83번지 레이크타운 519호 (인근전철: 서울 3호선 주엽에서 500m 이내)"
+              },
+              {
+                "url": "https://www.kodica.kr/support/faq/%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89-%EC%9A%94%EC%B2%AD%ED%95%98%EA%B8%B0",
+                "domain": "www.kodica.kr",
+                "title": "자주하는 질문 - 세금계산서 발행 요청하기 | 한국디지털인증",
+                "snippet": "#### 세금계산서 발행 요청하기 ... 세금계산서 발행 요청"
+              }
+            ],
+            "dominant_result_ratio": 0.0,
+            "score_components": {
+              "demand": 33.58,
+              "organic_opportunity": 35.0,
+              "trend": 0.04,
+              "intent_fit": 15
+            },
+            "trend_growth": 0.004,
+            "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+            "trend_status": "measured",
+            "selection_version": 6,
+            "selected_at": "2026-09-11T02:56:10.959075+00:00",
+            "source": "category_market_v1",
+            "keywords": [
+              "세금계산서발행"
+            ],
+            "status": "pending",
+            "decision_diagnostics": {
+              "official_sources": [
+                {
+                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
+                  "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+                  "excerpt_chars": 2815
+                },
+                {
+                  "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+                  "title": "심사 및 지급",
+                  "excerpt_chars": 1933
+                },
+                {
+                  "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+                  "title": "발급시기 및 발급∙전송기한",
+                  "excerpt_chars": 1012
+                }
+              ],
+              "analysis_status": "supported_true",
+              "source_recovery": {
+                "attempted": true,
+                "initial_review": {
+                  "official_sources": [
+                    {
+                      "url": "https://m.kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=57170&gotopage=29&keyTaxpart=0&keyfield=coun_subj&keyword=",
+                      "title": "한국세무사회",
+                      "excerpt_chars": 588
+                    },
+                    {
+                      "url": "https://kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=4076&gotopage=2897&keyTaxpart=0&keyfield=coun_subj&keyword=",
+                      "title": "한국세무사회",
+                      "excerpt_chars": 508
+                    }
+                  ],
+                  "analysis_status": "supported_false",
+                  "model_rejection_opinion": {
+                    "kind": "model_opinion",
+                    "code": "source_missing_detail"
+                  }
+                },
+                "outcome": "review_passed",
+                "retry_review": {
+                  "official_sources": [
+                    {
+                      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
+                      "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+                      "excerpt_chars": 2815
+                    },
+                    {
+                      "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+                      "title": "심사 및 지급",
+                      "excerpt_chars": 1933
+                    },
+                    {
+                      "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+                      "title": "발급시기 및 발급∙전송기한",
+                      "excerpt_chars": 1012
+                    }
+                  ],
+                  "analysis_status": "supported_true"
+                }
+              }
+            },
+            "opportunity_evidence": {
+              "version": 2,
+              "query": "세금계산서발행",
+              "executed_query": "세금계산서 발행",
+              "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
+              "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
+              "provider": "codex_native_search",
+              "checked_at": "2026-09-11T02:56:10.959075+00:00",
+              "result_count": 10,
+              "domain_count": 10,
+              "dominant_ratio": 0.0,
+              "search_review": {
+                "version": 1,
+                "query": "세금계산서발행",
+                "executed_query": "세금계산서 발행",
+                "provider": "codex_native_search",
+                "checked_at": "2026-09-11T02:56:10.959075+00:00",
+                "raw_sha256": "db7d9de9a847d93cdabd3eb288fa047c528cc2bc3984b864394c3213dd23744b",
+                "decisions": [
+                  {
+                    "result_index": 0,
+                    "relevant": true,
+                    "quote": "영업매출 세금계산서 발행"
+                  },
+                  {
+                    "result_index": 1,
+                    "relevant": true,
+                    "quote": "세금계산서 발행정보 및 담당자 정보 입력"
+                  },
+                  {
+                    "result_index": 2,
+                    "relevant": false,
+                    "quote": "매입자 발행 세금계산서 제도"
+                  },
+                  {
+                    "result_index": 3,
+                    "relevant": true,
+                    "quote": "세금계산서 발행 방법 3가지"
+                  },
+                  {
+                    "result_index": 4,
+                    "relevant": true,
+                    "quote": "세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다."
+                  },
+                  {
+                    "result_index": 5,
+                    "relevant": true,
+                    "quote": "4-1. 세금계산서 발행 정책"
+                  },
+                  {
+                    "result_index": 6,
+                    "relevant": true,
+                    "quote": "청구서, 세금계산서 발행"
+                  },
+                  {
+                    "result_index": 7,
+                    "relevant": true,
+                    "quote": "세금계산서 발행 방법"
+                  },
+                  {
+                    "result_index": 8,
+                    "relevant": false,
+                    "quote": "뉴스21 사무 정규직 채용합니다"
+                  },
+                  {
+                    "result_index": 9,
+                    "relevant": true,
+                    "quote": "세금계산서 발행 요청하기"
+                  }
+                ]
+              },
+              "search_metrics": {
+                "raw_result_count": 10,
+                "canonical_result_count": 10,
+                "relevant_result_count": 8,
+                "relevant_site_count": 8,
+                "relevant_indices": [
+                  0,
+                  1,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  9
+                ],
+                "relevance_ratio": 0.8,
+                "duplicate_ratio": 0.0,
+                "known_dominant_ratio": 0.0,
+                "site_concentration": 0.125,
+                "organic_opportunity": 35.0
+              },
+              "scope": "full_keyword",
+              "target_keyword": "세금계산서발행",
+              "matches": [
+                {
+                  "result_index": 3,
+                  "quote": "세금계산서 발행 방법 3가지"
+                },
+                {
+                  "result_index": 7,
+                  "quote": "세금계산서 발행 방법"
+                }
+              ]
+            },
+            "suitability_evidence": {
+              "version": 1,
+              "checked_at": "2026-09-11T02:56:10.959075+00:00",
+              "input_sha256": "eb5a076234d1e3f4daf6532ade3d743e72370f60bcd5c1a8b4e38eaa22d00501",
+              "review": {
+                "scope": "full_keyword",
+                "target_keyword": "세금계산서발행",
+                "sources": [
+                  {
+                    "source_index": 0,
+                    "quote": "국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급)",
+                    "entity": "국세청",
+                    "context": "system_rules"
+                  },
+                  {
+                    "source_index": 1,
+                    "quote": "전송기한 발급일의 다음날까지 국세청에 전송",
+                    "entity": "국세청",
+                    "context": "system_rules"
+                  }
+                ],
+                "required_facets": [
+                  {
+                    "facet": "세금계산서는 어떤 수단으로 발행하는가?",
+                    "answer": "홈택스·모바일, ASP·ERP, 전화 ARS, 세무서 대리발급을 이용할 수 있다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급"
+                  },
+                  {
+                    "facet": "발행수단별 인증수단과 준비물은 무엇인가?",
+                    "answer": "전자발급은 용도에 맞는 공동인증서, 홈택스는 보안카드·생체인증도 가능하다. 대리발급은 신청서와 거래증빙이 필요하다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요"
+                  },
+                  {
+                    "facet": "홈택스에서 발급하고 조회하는 절차는 무엇인가?",
+                    "answer": "인증수단 준비·회원가입 후 거래정보 입력과 전자서명으로 발급한다. 전송은 자동이며 목록·합계표를 조회할 수 있다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보"
+                  },
+                  {
+                    "facet": "발급기한의 원칙과 월합계 예외는 무엇인가?",
+                    "answer": "원칙은 법정 공급시기이며 월합계 등은 다음 달 10일까지다. 10일이 토요일·공휴일이면 다음 영업일까지다.",
+                    "supported": true,
+                    "source_index": 1,
+                    "quote": "(원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급"
+                  },
+                  {
+                    "facet": "발급 후 국세청 전송기한과 별도 전송 필요 여부는?",
+                    "answer": "발급일 다음 날까지 전송한다. 홈택스 발급은 즉시 자동 전송되어 별도 절차가 없다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음"
+                  }
+                ],
+                "current_relevance": {
+                  "kind": "evergreen",
+                  "source_index": 0,
+                  "quote": "부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송",
+                  "event_start": null,
+                  "event_end": null,
+                  "date_quote": null
+                }
+              }
+            },
+            "score": 83.62,
+            "publish_eligible": true,
+            "hold_reasons": []
+          }
+        }
+      ],
+      "reused_keywords": [],
+      "outcome": "no_candidate_passed"
+    }
   },
   "건강": {
     "category": "건강",

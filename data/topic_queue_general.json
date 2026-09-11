@@ -4020,7 +4020,7 @@
     "keywords": [
       "기관지에좋은음식"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "기관지에좋은음식",
@@ -4202,5 +4202,352 @@
     "score": 68.94,
     "publish_eligible": true,
     "hold_reasons": []
+  },
+  {
+    "keyword": "기관지에좋은음식",
+    "category": "건강",
+    "topic": "기관지에좋은음식: 배·도라지·꿀의 활용법과 섭취 주의사항",
+    "intent": "기관지에 좋은 음식에는 무엇이 있으며, 어떻게 먹고 어떤 점을 주의해야 할까?",
+    "gap": "배·도라지의 전통적 활용과 꿀의 기침 완화 안내를 구분한 표, 조리·보관법, 꿀 섭취 연령과 진료 필요 신호 체크리스트를 제공한다.",
+    "source_url": "https://www.rda.go.kr/board/board.do?dataNo=100000718546&mode=view&prgId=day_farmprmninfoEntry",
+    "verified_sources": [
+      {
+        "url": "https://www.rda.go.kr/board/board.do?dataNo=100000718546&mode=view&prgId=day_farmprmninfoEntry",
+        "original_url": "https://www.rda.go.kr/board/board.do?dataNo=100000718546&mode=view&prgId=day_farmprmninfoEntry",
+        "title": "도라지로 미세먼지 이겨내자 <    보도자료 < 새소식 < 정책홍보 < 농촌진흥청",
+        "checked_on": "2026-09-11",
+        "sha256": "f3d6b4a608b4a0ea3104cbe696ce2df8373207ca6b59b41556beffff14c79b72",
+        "excerpt": "본문바로가기 주메뉴 바로가기 태극기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 통합검색 내용 삭제 검색 보도자료 도라지로 미세먼지 이겨내자 작성자 관리자 작성일 2016-02-23 출처 - 도라지, 이물질 배출에 좋아... 배도라지청·도라지강정 추천 - 올해도 어김없이 찾아올 것으로 예상되는 봄철 불청객인 황사와 미세먼지를 도라지로 대비해보는 건 어떨까. 농촌진흥청(청장 이양호)은 황사와 미세먼지에 도움이 되는 약초 도라지를 간편하게 먹을 수 있는 도라지 활용법을 제시했다. 도라지의 한약명은 ‘귀하고 길한 풀뿌리가 곧다’라는 뜻의 ‘길경’으로 가래를 배출하는 효능이 탁월하다. 도라지를 먹으면 기관지 점막을 튼튼히 하는데 도움이 되며, 미세먼지 흡입으로 손상되기 쉬운 폐를 보호하는 데도 효과적이다. ‘동의보감’에도 심한 기침이나 숨이 가쁜 천식에 도움이 되며 목이 아프고 가슴이 답답하고 가래가 끓는데 효과가 있다고 나와 있다. 영양학적으로는 섬유질, 칼슘, 철이 풍부하게 들어 있고 기관지 점막을 튼튼히 하고 면역력 증진에 도움을 주는 사포닌 성분이 많이 들어 있어 건강기능식품 소재로서 가치가 높다. 도라지는 특유의 쓰고 텁텁한 맛이 있어 거부 반응을 일으키기 쉬우나 도라지무침이나 도라지볶음으로 만들어 먹으면 좋다. 특히, 배도라지청이나 도라지강정으로 먹으면 어른뿐만 아니라 아이들도 쉽게 먹을 수 있다. 향긋한 차나 감칠맛 나는 소스 등 다양하게 활용할 수 있는 배도라지청을 만드는 방법은 간단하다. 먼저, 깐도라지와 꿀을 같은 양으로 준비한다. 도라지청에 배를 넣으면 맛과 효능이 배가 된다. 배는 한방에서 생이(生梨), 이자(梨子), 쾌과(快果)라고 불리며 기침, 가래 등에 효과가 있다. 배, 깐도라지를 적당한 크기로 잘라 차례로 믹서에 간 뒤 끓여주면서 꿀을 넣고 약한 불로 최소 1시간 이상 끓인다. 마지막에 밀폐용기에 담아 냉장 보관하면 된다. 도라지 강정은 식초 물에 하룻밤 정도 담근 뒤 소금물로 헹구어 특유의 쓴맛을 없애고 튀김옷 재료를 넣어 섞어 바삭하게 튀긴다. 물엿, 고추장, 고춧가루, 다진 마늘, 케첩을 끓여 소스를 만들고 튀긴 도라지를 소스에 버무린다. 국내산 통도라지는 중국산에 비해 길이가 짧으며 잔뿌리가 많고 흙이 많이 묻어 있다. 또, 국내산 깐도라지(찢은 도라지)는 동그랗게 말리는 성질이 약하고 고유의 향이 더 강한 편이다. 농촌진흥청 국립원예특작과학원 약용작물과 정진태 농업연구사는 “올봄 미세먼지와 황사가 함께 불어올 경우를 대비해 수시로 도라지차를 마시거나 도라지 요리로 건강을 챙겨보자.”라고 말했다. [문의] 농촌진흥청 약용작물과장 차선우, 약용작물과 정진태 043-871-5576 첨부파일 23-2_도라지로미세먼지이겨내자(원예원).hwp [2.18 MB] 다운로드 바로보기 본 저작물은 \"공공누리\" 제1유형:출처표시 조건에 따라 이용 할 수 있습니다. 목록으로 돌아가기 소속기관 사이트 국립농업과학원 국립식량과학원 농촌인적자원개발센터 국립원예특작과학원 국립축산과학원 한국농업기술진흥원 레이어 닫기 지방농촌진흥기관 사이트 농업기술원 경기도 강원특별자치도 충청북도 충청남도 전북특별자치도 전남광주통합특별시 경상북도 경상남도 제주특별자치도 특·광역시 및 관할시군 농업기술센터 서울특별시 부산광역시 (부산) 기장군 대구광역시 (대구) 달성군 (대구) 군위군 인천광역시 (인천) 강화군 (인천) 옹진군 대전광역시 울산광역시 세종특별자치시 경기도 농업기술센터 수원시 고양시 용인시 성남시 화성시 안산시 남양주시 평택시 시흥시 파주시 김포시 광주시 양주시 이천시 안성시 포천시 양평군 여주시 가평군 연천군 강원특별자치도 농업기술센터 춘천시 원주시 강릉시 동해시 태백시 속초시 삼척시 홍천군 횡성군 영월군 평창군 정선군 철원군 화천군 양구군 인제군 고성군 양양군 충청북도 농업기술센터 청주시 충주시 제천시 보은군 옥천군 영동군 증평군 진천군 괴산군 음성군 단양군 충청남도 농업기술센터 천안시 공주시 보령시 아산시 서산시 논산시 계룡시 당진시 금산군 부여군 서천군 청양군 홍성군 예산군 태안군 전북특별자치도 농업기술센터 전주시 군산시 익산시 정읍시 남원시 김제시 완주군 진안군 무주군 장수군 임실군 순창군 고창군 부안군 전남광주통합특별시 농업기술센터 여수시 순천시 나주시 광양시 담양군 곡성군 구례군 고흥군 보성군 화순군 장흥군 강진군 해남군 영암군 무안군 함평군 영광군 장성군 완도군 진도군 신안군 경상북도 농업기술센터 포항시 경주시 김천시 안동시 구미시 영주시 영천시 상주시 문경시 경산시 의성군 청송군 영양군 영덕군 청도군 고령군 성주군 칠곡군 예천군 봉화군 울진군 울릉군 경상남도 농업기술센터 창원시 진주시 통영시 사천시 김해시 밀양시 거제시 양산시 의령군 함안군 창녕군 고성군 남해군 하동군 산청군 함양군 거창군 합천군 제주도 농업기술센터 제주 서귀포 동부 서부 레이어 닫기 국제협력기관 사이트 국제협력기관 사이트 AFACI (아시아 농식품 기술협력 협의체) KAFACI (한·아프리카 농식품 기술협력 협의체) KoLFACI (한·중남미 농식품 기술협력 협의체) 국제 농업 연구 기관 미국농업연구소 중국농업과학원 칭다오농업대학 농업식품산업기술종합연구기구 필리핀 농업 협회 필리핀 농림수산자연자원연구개발위원회 와게닝헨대학연구센터 스웨덴 농업과학대학교 튀르키예 국제농업연구소 조지아 농과원 케냐 농축산연구청 국제 농업 기구 국제식량정책연구소 세계채소센터 국제미작연구소 유엔식량농업기구 국제열대농업연구교육센터 국제옥수수밀연구소 국제유기농연맹 국제감자연구소 경제협력개발기구 국제농업연구자문기구 레이어 닫기 유관기관 사이트 정부 조직도(정부24) 농림축산식품부 산림청 국립한국농수산대학교 국립농산물품질관리원 국립종자원 한국농수산식품유통공사 농림수산식품교육문화정보원 레이어 닫기 배너 모음 농업분야 행정분야 홍보 및 기타 레이어 닫기 공유하기 페이스북 트위터 카카오톡 밴드 링크 복사하기 링크 복사하기 닫기 안내 확인 닫기 확인 취소 확인 닫기 주소 검색 주소 검색어 주소 삭제 주소 검색 주소 검색 결과 리스트 번호,도로명주소,우편번호로 상세구분 번호 도로명주소 우편번호 주소를 검색해주세요 닫기 닫기",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://www.rda.go.kr/webzine/2024/12/sub2-8.html",
+        "original_url": "https://www.rda.go.kr/webzine/2024/12/sub2-8.html",
+        "title": "그린매거진",
+        "checked_on": "2026-09-11",
+        "sha256": "1a1d8be926899ad25045f723c88b4d2a7d0723f5d3e813cbae3915394978b2d0",
+        "excerpt": "도라지는 예로부터 우리 민족에게 친근한 식재료였다. 한방에서는 도라지를 ‘길경’이라 하여 약재로도 널리 사용했다. 도라지를 섭취하는 방법은 생채, 나물, 전, 산적, 정과 등 다양하다. 추운 겨울 우리를 지켜줄 보약 같은 식재료, 씁쓸한 맛이 매력적인 도라지에 대해 알아본다. 영양이 한가득 쌉싸래한 도라지의 매력 “오래 묵은 도라지는 산삼보다 낫다”는 옛말도 있듯이 도라지는 뛰어난 영양학적 가치를 지닌 식재료이다. 이는 예로부터 제사에 쓰였던 삼색나물 중 하나로 식용뿐만 아니라,  한약 및 민간요법으로 널리 이용되었다. 추운 겨울, 쌀쌀해진 날씨에 기침이 나고 목이 칼칼하다면 도라지가 도움이 될 수 있다. 도라지를 구입할 때는 잔뿌리가 비교적 많고 원뿌리로 갈라진 것을 고르는 것이  좋다. 도라지는 중국에서 매년 15,000톤 정도 수입한다. 국내산 도라지의 소비 비중도 점차 늘어나고 있는데 국내산 도라지와 중국산 도라지를 맨눈으로 구별하는 것은 쉽지 않다. 대체로 찢은 도라지의 경우, 국내산은 길이가 짧고 동그랗게 말리는 성질이 약하며 단단한 섬유질이 적어 깨물어 보면 부드러운 느낌이다. 또한 쓴맛이 거의 없으며 흰색을 띤다.  반면 중국산은 약간 노란색을 띤다. 구매한 도라지는 껍질을 벗기지 않은 채 신문지에  싸서 서늘하고 바람이 잘 통하는 곳에 보관한다. 도라지의 주요 기능 성분은 사포닌계 성분이다. 현재 약 69종이 보고되어 있는데, 이 중 플라티코딘 D(platycodin D)와 디아피-플라티코딘 D(deapi-platycodin D), 플라티코사이드 E(platycoside E), 폴리갈라신 D2(polygalacin D2), 폴리갈라신 D(polygalacin D) 등이 주요 사포닌이다. 특히 플라티코딘 D는 콜레스테롤 대사 개선, 항암, 항염증, 항비만 등에 효과가 있는 것으로 밝혀졌다. 한방에서는 도라지를 길경이라 하며 진해, 거담, 기침, 감기, 편도선염, 배농, 종기 등에 좋다고 알려져 있다. 또한 간 건강과 인지능력 개선 효과가 있는 건강기능식품 개별인정형 기능성 원료로도 인정받았다. 농촌진흥청은 국산 도라지의 활용성을 높이고, 특용작물을 이용한 국민 건강 증진 방안을 찾고자 인지능 개선 관련 세포실험과 동물실험을 진행했다. 세포실험 결과, 도라지 추출물은 염증을 유도한 동물 신경세포의 산화질소를 약 30~60%까지 감소시켰다. 또한 신경세포 스스로 죽는 현상(apoptosis)을 억제함으로써 신경세포를 보호하는 역할을 했다. 연구진은 세포에 이어 단기적으로 인지능력이 떨어진 동물에게도 도라지 추출물을 투여했는데, 학습 능력이 정상적인 수준까지 유의적으로 회복되었다. 특히 알츠하이머병 동물에서는 알츠하이머성 치매 원인 물질인 베타-아밀로이드 축적이 약 50% ➊ 까지 감소했다. 도라지는 지방 재래종이 많이 재배되고 있다. 재래종은 균일성이 떨어지고 변이  계통이 많아 재배하는 데 걸림돌이 되어왔다. 이에 신품종을 개발하고 있고 그중 대표적인 것이 장백도라지와 으뜸도라지다. 장백도라지는 현재는 재배하지 않지만 국립원예특작과학원이 2003년도에 육성한 품종이다. 으뜸도라지는 4배체 품종으로 염색체 수가  36개다. 재래종의 염색체 수 18개보다 2배가 많다. 으뜸도라지는 재래종에 비해 생육  속도가 빠르고, 뿌리 수량이 30% 이상 많은 것이 특징이다. 또한 사포닌 함량이 2배 많아 ‘슈퍼도라지’로 불린다. ➊ 베타-아밀로이드와 반응하여 색을 나타내는 4G8 항체의 면적으로서 50% 감소 신품종 新品種 장백도라지 장백은 1993~1997년 밀양 지방종을 수집, 분리 및 특성검정을 거쳐 우수한 계통을 선발하였고 1997~2001년까지 5개년간 생산력검정시험과 1999~2002년 4년동안 4개 지역에서 지역적응성검정을 거쳐 육성된 품종이다. 현재는 거의 재배하지 않아 구할 수 없다. 으뜸도라지 2005년 1월 18일 으뜸도라지로 명명 품종보호출원을 하여 2007년 4월 18일 품종등록을 마쳤다. 재래종에 비해 생육속도가 빠르고, 뿌리 수량이 30% 이상 많다. 또한 사포닌 함량이 2배 많다. 재래종에 비해 곁뿌리 발생 정도가 적고 종자의 크기가 크다.",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://www.cdc.gov/acute-bronchitis/about/index.html",
+        "original_url": "https://www.cdc.gov/acute-bronchitis/about/index.html",
+        "title": "Chest Cold (Acute Bronchitis) Basics | Acute Bronchitis | CDC",
+        "checked_on": "2026-09-11",
+        "sha256": "6cce8a2be21a5703d076df14730f8730b06acdda94135c19689c4014d3d67040",
+        "excerpt": "Chest Cold (Acute Bronchitis) Basics July 2, 2025 Español Key points Cough keeping you up at night? Congestion? Sore throat? You may have a chest cold (or acute bronchitis). If you're a healthy person without underlying heart or lung problems or a weakened immune system, this information is for you. Viruses usually cause chest colds. Antibiotics will not help you feel better if you have a chest cold. Overview Acute bronchitis (often called a “chest cold”) occurs when the airways of the lungs swell and produce mucus (a thick, sticky fluid). Swelling of airways in the lungs produce mucus in the lungs and makes you cough. Symptoms Symptoms of acute bronchitis last less than 3 weeks and can include: Coughing with or without mucus Feeling tired Congestion Sore throat Mild body aches Causes A virus usually causes a chest cold. Bacteria can sometimes cause a chest cold, but even in these cases, antibiotics are NOT recommended and will not help you feel better. Prevention CDC recommends that all people use core prevention strategies. These are important steps you can take to protect yourself and others from respiratory viruses, including those that cause acute bronchitis: Stay up to date with recommended vaccines and boosters, such as the flu vaccine . Practice good hygiene (practices that improve cleanliness). Cover your coughs and sneezes Wash or sanitize your hands often Clean frequently touched surfaces Take steps for cleaner air. Bring in fresh outside air Purify indoor air Gather outdoors For more information on core prevention strategies, visit: Respiratory Virus Guidance | Respiratory Illnesses | CDC . When to seek medical care See a healthcare professional if you have any of the following: Fever that lasts longer than 5 days or fever of 104°F or higher Cough with bloody mucus Shortness of breath or trouble breathing Symptoms that last more than 3 weeks Repeated episodes of bronchitis This list is not all-inclusive. Please see a healthcare professional for any symptom that is severe or concerning. Talk to a healthcare provider right away If your child is under 3 months old with a fever of 100.4 °F (38 °C) or higher. Treatment Acute bronchitis usually gets better on its own—without antibiotics. Antibiotics won't help you get better if you have a chest cold. Reminder Anytime antibiotics are used, they can cause side effects from mild rashes to serious health problems like severe allergic reactions, antimicrobial-resistant infections and C. diff . If you have whooping cough (pertussis) or pneumonia, which can have similar symptoms to acute bronchitis, a healthcare professional will most likely prescribe antibiotics. How to feel better Get plenty of rest. Drink plenty of fluids. Use a clean humidifier or cool mist vaporizer. Use saline nasal spray or drops. For young children, use a rubber suction bulb to clear mucus. Breathe in steam from a bowl of hot water or shower. For young children, sit with the child in a bathroom filled with steam from a running shower. Use throat lozenges or cough drops. Do not give lozenges to children younger than 4 years of age. Use pasteurized honey to relieve cough for adults and children at least 1 year of age or older. Over-the-counter medicine Ask a healthcare professional about over-the-counter medicines that can help you feel better. Over-the-counter medicines may provide temporary relief of symptoms, but they will not cure your illness. Always read over-the-counter medicine product labels and use as directed. Tell a healthcare professional about all prescription and other over-the-counter medicines you are taking. Some over-the-counter medicines are not recommended for children of certain ages. Ask a healthcare professional about the right dosage of over-the-counter medicines for your child's age and size and follow all directions. Pain relievers and fever reducers Children younger than 3 months: do not give pain relievers or fever reducers unless a healthcare professional tells you to do so. Children between 3 months and 6 months: only give acetaminophen. Children 6 months or older: it is OK to give acetaminophen or ibuprofen. Cough and cold medicines Children younger than 6 years: over-the-counter cough/cold medicines are not recommended and can result in serious and sometimes life-threatening side effects. Children 6 years or older: discuss the use of over-the-counter cough/cold medicines with a healthcare professional. Resources Virus vs. Bacteria What's Got You Sick? For more on treatment of common illnesses, visit CDC resources: Ear Infection Sinus Infection Sore Throat Urinary Tract Infection Preventing and Managing the Common Cold Skin Infection Fact Sheet Print version: Preventing and Treating Bronchitis [PDF – 2 pages] On This Page Overview Symptoms Causes Prevention When to seek medical care Treatment How to feel better Over-the-counter medicine Resources July 2, 2025 Sources Print Share Facebook LinkedIn Twitter Syndicate Content Source: National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://classytip.tistory.com/327",
+      "https://www.a-ha.io/questions/4378a044d55e46eca4da28585383a421"
+    ],
+    "valid_until": null,
+    "monthly_search": 4800,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.rda.go.kr/webzine/2024/12/sub2-8.html",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.rda.go.kr/board/board.do?dataNo=100000718546&mode=view&prgId=day_farmprmninfoEntry",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/acute-bronchitis/about/index.html",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/common-cold/treatment/index.html",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "기관지에 좋은 음식",
+    "organic_domains": [
+      "www.10000recipe.com",
+      "search.danawa.com",
+      "classytip.tistory.com",
+      "www.a-ha.io",
+      "www.hcnews.or.kr",
+      "theyear.co.kr",
+      "www.a-ha.io",
+      "search.danawa.com",
+      "v.daum.net",
+      "search.danawa.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.10000recipe.com/recipe/list.html?q=%EA%B8%B0%EA%B4%80%EC%A7%80%EC%97%90%EC%A2%8B%EC%9D%80%EB%B0%98%EC%B0%AC",
+        "domain": "www.10000recipe.com",
+        "title": "요리를 즐겁게~ 만개의레시피",
+        "snippet": "* 은행구이 먹는법 다이어트 기력회복 기관지에 좋은 음식 ... * [제철음식]기관지를 건강하게 해주는 도라지오이생채 ... * (에어프라이어 요리) 미세먼지로 인한 기관지에 좋은 도라지 맛탕"
+      },
+      {
+        "url": "https://search.danawa.com/dsearch.php?query=%EA%B8%B0%EA%B4%80%EC%A7%80%EC%97%90%EC%A2%8B%EC%9D%80",
+        "domain": "search.danawa.com",
+        "title": "기관지에좋은 : 다나와 통합검색",
+        "snippet": "송원식품 기관지에좋은 (무배) 송원 허니 궁중대보한차 40스틱 ... 자체제작 꿀 도라지배스틱 대용량 기관지에 목에 좋은 짜먹는 건강 명절선물 어린이 아기 진액 농축액 환절기 국산 해썹"
+      },
+      {
+        "url": "https://classytip.tistory.com/327",
+        "domain": "classytip.tistory.com",
+        "title": "기관지에 좋은 음식 / 최고의 음식 BEST 7 / 관리를 위한 실전 수칙",
+        "snippet": "# 기관지에 좋은 음식 / 최고의 음식 BEST 7 / 관리를 위한 실전 수칙 ... 한 번 나빠진 기관지는 쉽게 회복되지 않고 만성적인 기침이나 천식으로"
+      },
+      {
+        "url": "https://www.a-ha.io/questions/4378a044d55e46eca4da28585383a421",
+        "domain": "www.a-ha.io",
+        "title": "기관지에 좋은 음식들은 무엇이 있나요? | 궁금할 땐, 아하!",
+        "snippet": "# 기관지에 좋은 음식들은 무엇이 있나요? ... 기관지에 좋은 음식으로는 배, 도라지, 생강, 꿀, 무 등이 있으며, 염증을 완화하고 점액 배출을 도와줍니다. ... 충분한 수분"
+      },
+      {
+        "url": "https://www.hcnews.or.kr/news/10948",
+        "domain": "www.hcnews.or.kr",
+        "title": "기관지에 좋은 음식!",
+        "snippet": "#### 기관지에 좋은 음식! ... 다 같이 기관지에 좋은음식을 먹으며 면역력을 길러봅시다.오늘 소개하는 음식은 기관지를 보호하고 면역력을 강화시켜 코로나19의 위협으로부터 벗어나게 해주는 음식입니다. ... 오메가-3"
+      },
+      {
+        "url": "https://theyear.co.kr/%EA%B8%B0%EA%B4%80%EC%A7%80%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-10%EA%B0%80%EC%A7%80/",
+        "domain": "theyear.co.kr",
+        "title": "기관지에 좋은 음식 10가지 - 라이프 인포",
+        "snippet": "오늘은 기관지에 좋은 음식에 대해 알아보려고 합니다. ... 기관지가 건강할 때는 호흡이 원활하게 이루어지고 폐 기능도 향상됩니다. ... 먼저, 흡연이나 공해, 미세먼지와 같은 유해한 환경"
+      },
+      {
+        "url": "https://www.a-ha.io/questions/424b9d7abe5f2256851d5d155bf17f84",
+        "domain": "www.a-ha.io",
+        "title": "기관지에 좋은 음식을 알고 싶습니다. | 궁금할 땐, 아하!",
+        "snippet": "# 기관지에 좋은 음식을 알고 싶습니다. ... (4) 미역, 다시마: 이런 해조류는 요오드가 풍부해서 식사에 쌈 싸드셔도 좋습니다. ... >> 기관지 건강은 촉촉하게 습도를 유지하고"
+      },
+      {
+        "url": "https://search.danawa.com/dsearch.php?query=%EA%B8%B0%EA%B4%80%EC%A7%80%EC%97%90",
+        "domain": "search.danawa.com",
+        "title": "기관지에 : 다나와 통합검색",
+        "snippet": "CM 추천 옵션은 하이라이트 로 강조했어요. ... 파이토블락 코엔 삼백초 콧물 코막힘 재채기 코가려움 꽃가루 기관지에 좋은 영양제 건강기능식품 ... 금산경화네 도라지배즙 1박스 기관지에 좋은"
+      },
+      {
+        "url": "https://v.daum.net/v/ctND54sana",
+        "domain": "v.daum.net",
+        "title": "미세먼지가 걱정된다면? 기관지에 좋은 음식 10 | 데일리",
+        "snippet": "기관지에 좋은 음식 10 ... 기관지로 고생한 경험이 있거나 평소 기관지가 약하다면 기관지에 좋은 음식을 자주 섭취하자. ... 예로부터 도라지는 인삼이나 산삼과 많이 비교될 정도로"
+      },
+      {
+        "url": "https://search.danawa.com/mobile/dsearch.php?keyword=%EA%B8%B0%EC%B9%A8%EC%97%90%EC%A2%8B%EC%9D%80%EC%B0%A8",
+        "domain": "search.danawa.com",
+        "title": "기침에좋은차 : 다나와 통합검색",
+        "snippet": "* 국내산 도라지 생강차 티백 잔기침 몸살 감기에좋은 면역에좋은 음식 식품 국산 목에좋은차 기관지에좋은음식 23,800 원"
+      }
+    ],
+    "dominant_result_ratio": 0.14285714285714285,
+    "score_components": {
+      "demand": 29.45,
+      "organic_opportunity": 24.49,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 6,
+    "selected_at": "2026-09-11T01:54:02.246507+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "기관지에좋은음식"
+    ],
+    "status": "completed",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "기관지에좋은음식",
+      "executed_query": "기관지에 좋은 음식",
+      "topic": "기관지에좋은음식: 배·도라지·꿀의 활용법과 섭취 주의사항",
+      "intent": "기관지에 좋은 음식에는 무엇이 있으며, 어떻게 먹고 어떤 점을 주의해야 할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-09-11T01:54:02.246507+00:00",
+      "result_count": 10,
+      "domain_count": 7,
+      "dominant_ratio": 0.14285714285714285,
+      "search_review": {
+        "version": 1,
+        "query": "기관지에좋은음식",
+        "executed_query": "기관지에 좋은 음식",
+        "provider": "codex_native_search",
+        "checked_at": "2026-09-11T01:54:02.246507+00:00",
+        "raw_sha256": "c6469cfdfbceb14f5a1fd2683985ed0fa2ddf40fe54f263d12fab83ffcfc40c4",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "[제철음식]기관지를 건강하게 해주는 도라지오이생채"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "송원식품 기관지에좋은 (무배) 송원 허니 궁중대보한차 40스틱"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "기관지에 좋은 음식 / 최고의 음식 BEST 7"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "기관지에 좋은 음식으로는 배, 도라지, 생강, 꿀, 무 등이 있으며"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "오늘 소개하는 음식은 기관지를 보호하고 면역력을 강화시켜"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "오늘은 기관지에 좋은 음식에 대해 알아보려고 합니다."
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "기관지에 좋은 음식을 알고 싶습니다."
+          },
+          {
+            "result_index": 7,
+            "relevant": false,
+            "quote": "파이토블락 코엔 삼백초 콧물 코막힘 재채기 코가려움 꽃가루 기관지에 좋은 영양제 건강기능식품"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "기관지가 약하다면 기관지에 좋은 음식을 자주 섭취하자."
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "국내산 도라지 생강차 티백 잔기침 몸살 감기에좋은 면역에좋은 음식 식품"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 7,
+        "relevant_site_count": 6,
+        "relevant_indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "relevance_ratio": 0.7,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.14285714285714285,
+        "site_concentration": 0.2857142857142857,
+        "organic_opportunity": 24.49
+      },
+      "scope": "full_keyword",
+      "target_keyword": "기관지에좋은음식",
+      "matches": [
+        {
+          "result_index": 2,
+          "quote": "기관지에 좋은 음식 / 최고의 음식 BEST 7 / 관리를 위한 실전 수칙"
+        },
+        {
+          "result_index": 3,
+          "quote": "기관지에 좋은 음식들은 무엇이 있나요?"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-09-11T01:54:02.246507+00:00",
+      "input_sha256": "8f08c34e849dd22b553c29a1b2d340273f9684fff137605f5cf2af8fa043e2ed",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "기관지에좋은음식",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "농촌진흥청(청장 이양호)은 황사와 미세먼지에 도움이 되는 약초 도라지를 간편하게 먹을 수 있는 도라지 활용법을 제시했다.",
+            "entity": "농촌진흥청",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "한방에서는 도라지를 길경이라 하며 진해, 거담, 기침, 감기, 편도선염, 배농, 종기 등에 좋다고 알려져 있다.",
+            "entity": "도라지",
+            "context": "general"
+          },
+          {
+            "source_index": 2,
+            "quote": "If you're a healthy person without underlying heart or lung problems or a weakened immune system, this information is for you.",
+            "entity": "healthy person without underlying heart or lung problems or a weakened immune system",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "기관지에 좋은 음식으로 무엇을 활용할 수 있는가?",
+            "answer": "배·도라지의 전통적 활용과 꿀의 기침 완화를 소개할 수 있다. 대표 음식 안내에 모든 식품의 열거는 필요하지 않다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "특히, 배도라지청이나 도라지강정으로 먹으면 어른뿐만 아니라 아이들도 쉽게 먹을 수 있다."
+          },
+          {
+            "facet": "배·도라지의 효능 근거는 어떤 범위인가?",
+            "answer": "전통적 활용과 농촌진흥청의 식재료 안내 범위다. 기관지 질환 치료 효과를 입증한 임상 근거로 확대할 수 없다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "배는 한방에서 생이(生梨), 이자(梨子), 쾌과(快果)라고 불리며 기침, 가래 등에 효과가 있다."
+          },
+          {
+            "facet": "어떻게 조리하고 보관하는가?",
+            "answer": "배와 도라지를 갈아 꿀을 넣고 약불에 끓여 냉장 보관하는 배도라지청 활용법을 안내할 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "배, 깐도라지를 적당한 크기로 잘라 차례로 믹서에 간 뒤 끓여주면서 꿀을 넣고 약한 불로 최소 1시간 이상 끓인다. 마지막에 밀폐용기에 담아 냉장 보관하면 된다."
+          },
+          {
+            "facet": "꿀은 누구에게 어떤 목적으로 권할 수 있는가?",
+            "answer": "CDC의 급성 기관지염 안내에서는 성인과 만 1세 이상에게 살균 꿀을 기침 완화용으로 제시한다.",
+            "supported": true,
+            "source_index": 2,
+            "quote": "Use pasteurized honey to relieve cough for adults and children at least 1 year of age or older."
+          },
+          {
+            "facet": "음식 활용보다 진료가 필요한 신호는 무엇인가?",
+            "answer": "혈담, 호흡곤란, 3주 넘는 증상, 반복되는 기관지염은 진료가 필요한 신호로 안내할 수 있다.",
+            "supported": true,
+            "source_index": 2,
+            "quote": "Cough with bloody mucus Shortness of breath or trouble breathing Symptoms that last more than 3 weeks Repeated episodes of bronchitis"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 2,
+          "quote": "Cough keeping you up at night? Congestion? Sore throat? You may have a chest cold (or acute bronchitis).",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 68.94,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1751,
+    "url": "https://trendpulse.blog/pear-balloonflower-honey/",
+    "post_status": "publish",
+    "completed_at": "2026-09-11T02:55:13.669513"
   }
 ]

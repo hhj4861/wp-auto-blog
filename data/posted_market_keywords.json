@@ -81,5 +81,25 @@
     "trend_status": "measured",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-11T02:45:44.993665+00:00"
+  },
+  {
+    "key": "기관지에좋은음식",
+    "keyword": "기관지에좋은음식",
+    "topic": "기관지에좋은음식: 배·도라지·꿀의 활용법과 섭취 주의사항",
+    "category": "건강",
+    "post_id": 1751,
+    "url": "https://trendpulse.blog/pear-balloonflower-honey/",
+    "selection_version": 6,
+    "monthly_search": 4800,
+    "score": 68.94,
+    "score_components": {
+      "demand": 29.45,
+      "organic_opportunity": 24.49,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-11T02:55:13.303010+00:00"
   }
 ]

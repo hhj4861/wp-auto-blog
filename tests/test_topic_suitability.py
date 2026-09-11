@@ -79,6 +79,42 @@ def test_sufficient_evergreen_question_does_not_require_an_invented_trend():
     assert '큰 월 검색량으로 범위를 넓힐 수 없습니다' in prompt
 
 
+def test_review_prompt_limits_facets_to_core_promises_and_distinguishes_tax_years():
+    item = candidate()
+    llm = attach(item)
+    prompt = llm.call_args.args[0]
+    for requirement in (
+        '검색어의 핵심 정보 요구', '실제 검색결과에서 확인된 질문과 기획이 약속한 답변',
+        '모든 가능한 부수 주제를 백과사전식 필수 항목으로 늘리지',
+        '기획이 검색어의 핵심 요구보다 좁으면 여전히 narrower_query',
+        '적용 시점만 안내하겠다고 약속한 경우, 구체적인 변경 내용까지 자동으로 필수화하지',
+        '신고연도와 소득의 귀속연도를 구분', '2026년에 신고하는 2025년 귀속 자료',
+        '현재 날짜만으로 다음 귀속연도에도 적용된다고 추정하거나',
+        '명시되지 않은 귀속연도로 세율 적용을 확장해서는 안 되며',
+        '추천할 적합성 근거가 필요하며 취득요건 소개만으로 대체할 수 없습니다',
+    ):
+        assert requirement in prompt
+    payload = json.loads(prompt.split('\n데이터: ', 1)[1])
+    assert payload['candidate']['organic_results'] == item['organic_results']
+    assert payload['candidate']['gap'] == item['gap']
+    llm.assert_called_once()
+
+
+@pytest.mark.parametrize('keyword,text,entity,facet', [
+    ('50대자격증추천', '요양보호사 양성 교육과정을 마친 사람이 요양보호사 자격시험에 합격하면 요양보호사 자격을 취득할 수 있습니다.',
+     '요양보호사', '50대 재취업 대상에게 이 자격을 추천할 적합성 근거는 무엇인가?'),
+    ('종합소득세율', '국세청 안내: 장부를 비치·기장한 사업자의 소득금액은 총수입금액에서 필요경비를 차감한 금액입니다.',
+     '국세청', '과세표준과 총수입·소득금액의 차이는 무엇인가?'),
+])
+def test_limiting_optional_facets_does_not_waive_real_core_evidence_gaps(keyword, text, entity, facet):
+    item = candidate(keyword, [source(text, 'https://www.nts.go.kr/synthetic-guide')])
+    raw = review(item, quote=text, entity=entity, context='system_rules')
+    raw['required_facets'][0].update(facet=facet, supported=False,
+                                    answer='제공 자료는 이 핵심 질문의 답변을 뒷받침하지 않습니다.')
+    attach(item, raw)
+    assert 'unverified_source_coverage' in suitability.issues(item, NOW)
+
+
 @pytest.mark.parametrize('context', ['additional_service', 'single_institution', 'general',
                                      'public_distribution', 'system_rules', 'official_fee'])
 def test_ajou_additional_checkup_prices_cannot_cover_broad_cost_demand(context):

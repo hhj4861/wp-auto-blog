@@ -49,10 +49,11 @@ def opportunity_evidence(item):
     return market.opportunity.assess(item['keyword'], item['topic'], item['intent'],
         item['organic_provider'], item['organic_results'], intent_review(item['keyword']), item['selected_at'],
         search_review=synthetic_search_review(item['keyword'], item['organic_provider'],
-            item['organic_results'], item['selected_at'], None))
+            item['organic_results'], item['selected_at'], None, executed_query=item.get('organic_query')),
+        executed_query=item.get('organic_query'))
 
 
-def synthetic_search_review(keyword, provider, results, checked_at, call_llm):
+def synthetic_search_review(keyword, provider, results, checked_at, call_llm, *, executed_query=None):
     """Mock only the new LLM boundary; still execute binding and evidence validation."""
     from src.search_quality import raw_rows
     if not results or provider is None:
@@ -60,7 +61,8 @@ def synthetic_search_review(keyword, provider, results, checked_at, call_llm):
     response = {'decisions': [{'result_index': index, 'relevant': True,
                               'quote': row['title'] + ' ' + row['snippet']}
                              for index, row in raw_rows(results)]}
-    return market.opportunity.review_search(keyword, provider, results, checked_at, lambda _: response)
+    return market.opportunity.review_search(keyword, provider, results, checked_at, lambda _: response,
+                                            executed_query=executed_query)
 
 
 def synthetic_plan_review(item, now, call_llm):
@@ -2238,6 +2240,59 @@ def test_selected_secondary_sources_reach_queue_without_changing_market_evidence
     assert market.fresh_market_item(item, '취업')
     assert market.enqueue_report([], report)[0]['verified_sources'] == sources
     search.assert_called_once_with('시험준비물')
+
+
+def test_spaced_search_query_preserves_measured_keyword_and_binds_cached_evidence(monkeypatch):
+    keyword, query = '시험준비물', '시험 준비물'
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        keyword: {'keyword': keyword, 'monthly': 1200}})
+    search = Mock(return_value=('codex_native_search', organic_sample(keyword)))
+    monkeypatch.setattr(market, 'search_results', search)
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    monkeypatch.setattr(market, 'ask', Mock(side_effect=[
+        {'candidates': [{'keyword': keyword, 'search_query': query}]}, analysis(keyword),
+    ]))
+    report = market.select_category('취업', 1, titles=[])
+    item = report['selected'][0]
+    search.assert_called_once_with(query)
+    assert item['keyword'] == keyword and item['keywords'] == [keyword]
+    assert item['monthly_search'] == 1200 and item['demand_scope'] == 'keyword_total'
+    assert item['organic_query'] == query
+    assert item['opportunity_evidence']['query'] == keyword
+    assert item['opportunity_evidence']['executed_query'] == query
+    assert item['opportunity_evidence']['search_review']['executed_query'] == query
+    assert report['proposal_rounds'][0]['proposals'][0]['search_query'] == query
+    assert report['candidate_decisions'][0]['organic_query'] == query
+    assert market.fresh_market_item(item, '취업')
+    for replacement in (keyword, '시험준 비물', '시험 준비물 2026'):
+        changed = deepcopy(item)
+        changed['organic_query'] = replacement
+        assert not market.current_priority(changed)
+        assert not market.fresh_market_item(changed, '취업')
+    missing = deepcopy(item)
+    del missing['organic_query']
+    assert not market.fresh_market_item(missing, '취업')
+    assert market.enqueue_report([], report)[0]['organic_query'] == query
+
+
+@pytest.mark.parametrize('query', ['시험 준비물 2026', '면접 준비물', '시험 준비물 site:go.kr'])
+def test_query_rewrite_is_rejected_before_search_or_source_calls(monkeypatch, query):
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {
+        '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
+    search = Mock(side_effect=AssertionError('Invalid query reached search'))
+    source = Mock(side_effect=AssertionError('Invalid query reached source fetch'))
+    monkeypatch.setattr(market, 'search_results', search)
+    monkeypatch.setattr(market, 'candidate_sources', source)
+    monkeypatch.setattr(market, 'ask', Mock(return_value={
+        'candidates': [{'keyword': '시험준비물', 'search_query': query}]}))
+    report = market.select_category('취업', 1, titles=[])
+    assert not report['selected']
+    assert report['rejected'][0]['reason'] == 'invalid search query transformation'
+    assert report['proposal_rounds'][0]['proposals'][0]['query_status'] == 'invalid_search_query'
+    assert report['candidate_decisions'][0]['organic_query'] is None
+    search.assert_not_called()
+    source.assert_not_called()
 
 
 def test_v5_report_cannot_reenter_publication_even_with_current_dates_and_pass_flags():

@@ -292,3 +292,102 @@ def test_non_list_input_cannot_supply_a_review(results):
     with pytest.raises(RuntimeError, match='invalid_search_input'):
         quality.review_search(KEYWORD, PROVIDER, results, STAMP, model)
     model.assert_not_called()
+
+
+def test_executed_query_is_bound_separately_without_changing_demand_keyword_or_metrics():
+    results = rows()
+    actual = '대장내시경 비용'
+    model = Mock(return_value={'decisions': decisions(results)})
+    bound = quality.review_search(KEYWORD, PROVIDER, results, STAMP, model,
+                                  executed_query=actual)
+    prompt_data = json.loads(model.call_args.args[0].rsplit('\n', 1)[1])
+    assert prompt_data['keyword'] == bound['query'] == KEYWORD
+    assert prompt_data['executed_query'] == bound['executed_query'] == actual
+    assert bound['version'] == 1
+    assert quality.quality_issues(KEYWORD, PROVIDER, results, STAMP, bound,
+                                 executed_query=actual) == []
+    original, _ = review(results)
+    assert quality.search_metrics(KEYWORD, PROVIDER, results, STAMP, bound,
+                                  executed_query=actual) == metrics(results, original)
+    model.assert_called_once()
+
+
+def test_query_builder_normalizes_before_review_but_cached_query_must_be_exact():
+    results = rows()
+    model = Mock(return_value={'decisions': decisions(results)})
+    bound = quality.review_search(KEYWORD, PROVIDER, results, STAMP, model,
+                                  executed_query='  대장내시경  비용  ')
+    assert bound['executed_query'] == '대장내시경 비용'
+    assert quality.quality_issues(KEYWORD, PROVIDER, results, STAMP, bound,
+                                 executed_query='대장내시경 비용') == []
+    assert quality.quality_issues(KEYWORD, PROVIDER, results, STAMP, bound,
+                                 executed_query='대장내시경  비용') == ['invalid_search_input']
+
+
+@pytest.mark.parametrize('actual', [None, KEYWORD, '대장 내시경 비용'])
+def test_spaced_query_evidence_cannot_be_reused_under_another_executed_query(actual):
+    results = rows()
+    bound = quality.review_search(KEYWORD, PROVIDER, results, STAMP,
+                                  Mock(return_value={'decisions': decisions(results)}),
+                                  executed_query='대장내시경 비용')
+    assert quality.quality_issues(KEYWORD, PROVIDER, results, STAMP, bound,
+                                 executed_query=actual) == ['search_review_binding_mismatch']
+    with pytest.raises(RuntimeError, match='search_review_binding_mismatch'):
+        quality.search_metrics(KEYWORD, PROVIDER, results, STAMP, bound, executed_query=actual)
+
+
+def test_legacy_original_query_review_is_allowed_only_for_the_original_query():
+    results = rows()
+    bound, _ = review(results)
+    assert bound.pop('executed_query') == KEYWORD
+    assert problems(results, bound) == []
+    assert quality.quality_issues(KEYWORD, PROVIDER, results, STAMP, bound,
+                                 executed_query='대장내시경 비용') == ['search_review_binding_mismatch']
+
+
+def test_unchanged_keyword_with_repeated_spaces_can_validate_its_own_new_and_legacy_review():
+    keyword = 'ITQ  자격증조회'
+    results = rows()
+    model = Mock(return_value={'decisions': decisions(results)})
+    bound = quality.review_search(keyword, PROVIDER, results, STAMP, model)
+    assert bound['query'] == bound['executed_query'] == keyword
+    assert quality.quality_issues(keyword, PROVIDER, results, STAMP, bound) == []
+    assert quality.quality_issues(keyword, PROVIDER, results, STAMP, bound,
+                                 executed_query=keyword) == []
+    assert quality.quality_issues(keyword, PROVIDER, results, STAMP, bound,
+                                 executed_query='ITQ 자격증조회') == ['search_review_binding_mismatch']
+    del bound['executed_query']
+    assert quality.quality_issues(keyword, PROVIDER, results, STAMP, bound) == []
+    model.assert_called_once()
+
+
+@pytest.mark.parametrize('stored', [None, [], {}, True, '', '대장내시경 비용',
+                                    '대장내시경  비용', '위내시경비용', '대장내시경\u200b비용'])
+def test_stored_actual_query_tampering_is_held_even_with_unchanged_result_hash(stored):
+    results = rows()
+    bound, _ = review(results)
+    bound['executed_query'] = stored
+    assert problems(results, bound) == ['search_review_binding_mismatch']
+
+
+@pytest.mark.parametrize('actual', ['', [], {}, True, '위내시경비용', '대장내시경비용2026',
+                                    '대장내시경\t비용', '대장내시경\n비용', '대장내시경\u200b비용',
+                                    '대장내시경\u00a0비용'])
+def test_non_spacing_query_changes_fail_before_any_model_call(actual):
+    model = Mock()
+    with pytest.raises(RuntimeError, match='invalid_search_input'):
+        quality.review_search(KEYWORD, PROVIDER, rows(), STAMP, model, executed_query=actual)
+    model.assert_not_called()
+
+
+@pytest.mark.parametrize('positive_count', [2, 5])
+def test_spacing_does_not_relax_raw_denominator_or_relevant_result_threshold(positive_count):
+    results = rows(10)
+    model = Mock(return_value={'decisions': decisions(results, set(range(positive_count)))})
+    bound = quality.review_search(KEYWORD, PROVIDER, results, STAMP, model,
+                                  executed_query='대장내시경 비용')
+    issues, measured = quality.validation(KEYWORD, PROVIDER, results, STAMP, bound,
+                                         executed_query='대장내시경 비용')
+    assert 'low_search_relevance' in issues
+    assert measured['relevance_ratio'] == positive_count / 10
+    assert measured['raw_result_count'] == 10

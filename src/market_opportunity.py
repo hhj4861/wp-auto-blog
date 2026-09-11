@@ -6,6 +6,7 @@ import re
 import unicodedata
 from src import search_quality
 from src.search_quality import review_search, search_metrics, quality_issues, sample_rows, site_identity
+from src.search_query import validated_search_query
 
 VERSION = 2
 MIN_RESULTS = 5
@@ -25,16 +26,21 @@ def _same_metrics(saved, measured):
         return False
 
 
-def assess(keyword, topic, intent, provider, results, review, checked_at, search_review=None):
+def assess(keyword, topic, intent, provider, results, review, checked_at, search_review=None, *, executed_query=None):
     review = review if isinstance(review, dict) else {}
     rows = sample_rows(results)
-    _, metrics = search_quality.validation(keyword, provider, results, checked_at, search_review)
+    _, metrics = search_quality.validation(keyword, provider, results, checked_at, search_review,
+                                           executed_query=executed_query)
+    try:
+        actual_query = validated_search_query(keyword, executed_query)
+    except ValueError:
+        actual_query = None
     try:
         sites = {site_identity(r['domain']) for _, r in rows}
     except RuntimeError:
         sites = set()
     return {
-        'version': VERSION, 'query': keyword, 'topic': topic, 'intent': intent,
+        'version': VERSION, 'query': keyword, 'executed_query': actual_query, 'topic': topic, 'intent': intent,
         'provider': provider, 'checked_at': checked_at,
         'result_count': len(rows), 'domain_count': len(sites),
         'dominant_ratio': metrics['known_dominant_ratio'] if metrics else None,
@@ -64,6 +70,14 @@ def issues(item, now=None):
     if (data.get('query') != item.get('keyword') or data.get('topic') != item.get('topic')
             or data.get('intent') != item.get('intent')):
         problems.append('search_evidence_binding_mismatch')
+    try:
+        actual_query = validated_search_query(item.get('keyword'), item.get('organic_query'))
+        stored_query = data.get('executed_query', data.get('query'))
+        if (stored_query != actual_query
+                or validated_search_query(item.get('keyword'), stored_query) != stored_query):
+            problems.append('search_evidence_binding_mismatch')
+    except ValueError:
+        problems.append('search_evidence_binding_mismatch')
     provider = item.get('organic_provider')
     if (item.get('evidence_mode') != 'serp' or not isinstance(provider, str) or provider not in PROVIDERS
             or data.get('provider') != provider):
@@ -71,7 +85,7 @@ def issues(item, now=None):
     rows = sample_rows(item.get('organic_results'))
     quality_problems, metrics = search_quality.validation(
         item.get('keyword'), provider, item.get('organic_results'), item.get('selected_at'),
-        data.get('search_review'))
+        data.get('search_review'), executed_query=item.get('organic_query'))
     problems.extend(quality_problems)
     try:
         domains = {site_identity(r['domain']) for _, r in rows}

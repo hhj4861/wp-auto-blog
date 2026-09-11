@@ -4705,6 +4705,402 @@
     "keywords": [
       "세금계산서발행"
     ],
+    "status": "superseded",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
+          "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+          "excerpt_chars": 2815
+        },
+        {
+          "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+          "title": "심사 및 지급",
+          "excerpt_chars": 1933
+        },
+        {
+          "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+          "title": "발급시기 및 발급∙전송기한",
+          "excerpt_chars": 1012
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://m.kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=57170&gotopage=29&keyTaxpart=0&keyfield=coun_subj&keyword=",
+              "title": "한국세무사회",
+              "excerpt_chars": 588
+            },
+            {
+              "url": "https://kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=4076&gotopage=2897&keyTaxpart=0&keyfield=coun_subj&keyword=",
+              "title": "한국세무사회",
+              "excerpt_chars": 508
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
+              "title": "[2025년부터 달라지는 세법] 전자세금계산서 등 세액공제 적용기한 연장 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+              "excerpt_chars": 2815
+            },
+            {
+              "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+              "title": "심사 및 지급",
+              "excerpt_chars": 1933
+            },
+            {
+              "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+              "title": "발급시기 및 발급∙전송기한",
+              "excerpt_chars": 1012
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "세금계산서발행",
+      "executed_query": "세금계산서 발행",
+      "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
+      "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-09-11T02:56:10.959075+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "세금계산서발행",
+        "executed_query": "세금계산서 발행",
+        "provider": "codex_native_search",
+        "checked_at": "2026-09-11T02:56:10.959075+00:00",
+        "raw_sha256": "db7d9de9a847d93cdabd3eb288fa047c528cc2bc3984b864394c3213dd23744b",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "영업매출 세금계산서 발행"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "세금계산서 발행정보 및 담당자 정보 입력"
+          },
+          {
+            "result_index": 2,
+            "relevant": false,
+            "quote": "매입자 발행 세금계산서 제도"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "세금계산서 발행 방법 3가지"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다."
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "4-1. 세금계산서 발행 정책"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "청구서, 세금계산서 발행"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "세금계산서 발행 방법"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "뉴스21 사무 정규직 채용합니다"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "세금계산서 발행 요청하기"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 8,
+        "relevant_indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.125,
+        "organic_opportunity": 35.0
+      },
+      "scope": "full_keyword",
+      "target_keyword": "세금계산서발행",
+      "matches": [
+        {
+          "result_index": 3,
+          "quote": "세금계산서 발행 방법 3가지"
+        },
+        {
+          "result_index": 7,
+          "quote": "세금계산서 발행 방법"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-09-11T02:56:10.959075+00:00",
+      "input_sha256": "eb5a076234d1e3f4daf6532ade3d743e72370f60bcd5c1a8b4e38eaa22d00501",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "세금계산서발행",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급)",
+            "entity": "국세청",
+            "context": "system_rules"
+          },
+          {
+            "source_index": 1,
+            "quote": "전송기한 발급일의 다음날까지 국세청에 전송",
+            "entity": "국세청",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "세금계산서는 어떤 수단으로 발행하는가?",
+            "answer": "홈택스·모바일, ASP·ERP, 전화 ARS, 세무서 대리발급을 이용할 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급"
+          },
+          {
+            "facet": "발행수단별 인증수단과 준비물은 무엇인가?",
+            "answer": "전자발급은 용도에 맞는 공동인증서, 홈택스는 보안카드·생체인증도 가능하다. 대리발급은 신청서와 거래증빙이 필요하다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요"
+          },
+          {
+            "facet": "홈택스에서 발급하고 조회하는 절차는 무엇인가?",
+            "answer": "인증수단 준비·회원가입 후 거래정보 입력과 전자서명으로 발급한다. 전송은 자동이며 목록·합계표를 조회할 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보"
+          },
+          {
+            "facet": "발급기한의 원칙과 월합계 예외는 무엇인가?",
+            "answer": "원칙은 법정 공급시기이며 월합계 등은 다음 달 10일까지다. 10일이 토요일·공휴일이면 다음 영업일까지다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "(원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급"
+          },
+          {
+            "facet": "발급 후 국세청 전송기한과 별도 전송 필요 여부는?",
+            "answer": "발급일 다음 날까지 전송한다. 홈택스 발급은 즉시 자동 전송되어 별도 절차가 없다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 83.62,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "세금계산서발행",
+    "category": "생활정보",
+    "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
+    "intent": "세금계산서는 어떤 방법으로 발행하며, 필요한 인증수단과 발급·전송기한은 무엇인가?",
+    "gap": "발행수단별 준비물 비교표, 홈택스 발급·조회 절차, 원칙과 월합계 예외를 구분한 기한 체크리스트를 제공한다.",
+    "source_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+    "verified_sources": [
+      {
+        "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+        "original_url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+        "title": "심사 및 지급",
+        "checked_on": "2026-09-11",
+        "sha256": "edbadbef8d90036a5d5e268d47378319170f5b230773394df2365b43a2e108b8",
+        "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 심사 및 지급 홈 국세정책/제도 근로∙자녀장려금 심사 및 지급 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급방법 국세청 홈택스를 이용한 발급(공동인증서 또는 보안카드·지문 등 생체인증으로 발급) 국세청에서 무료로 운영하는 홈택스( www.hometax.go.kr ) 및 스마트폰을 이용하여 모바일 홈택스에서 발급 1. 매출자에서 국세청 홈택스 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. 국세청 홈택스에서 매입자 : E-Mail로 발송 2. 국세청 홈택스에서 (세금)계산서 관리 시스템(국세청) : 전자 서명된 거래정보 3. 매입자에서 국세청 홈택스 : 수취내역 확인(필요시) 전자(세금)계산서 발급대행사업자의 시스템을 이용한 발급(공동인증서로 발급) 국세청에 등록된 전자(세금)계산서 발급업무 대행 사업자(ASP)가 일정수수료를 받고 운영하는 사이트 또는 자체 구축한 전자(세금)계산서 발급시스템(ERP)을 이용하여 발급 1. 매출자에서 ERP 시스템, ASP 시스템 : 거래정보 입력 + 전자서명(세금계산서 발급) 2. ERP 시스템, ASP 시스템에서 매입자 : E-Mail로 발송 3. 매입자에서 ERP 시스템, ASP 시스템 : 수취내역 확인(필요시) 4. ERP 시스템, ASP 시스템에서 (세금)계산서 관리 시스템(국세청) : 발급일 다음날까지 전송 기타 발급 방법(인터넷 사용이 어려운 경우) (전화 ARS 이용) 세무서에서 보안카드 수령 후 전화ARS(Tel. :126-1-2-1)를 이용하여 발급 (세무서 대리발급) 전자(세금)계산서 대리발급 신청서(주요 서식 참고)와 거래관련 증명서류 * 를 가지고 가까운 세무서(사업장 관할과 관계없이 신청 가능)를 방문하여 발급신청 * ｢거래계약서, 거래명세표, 거래내역서, 입금증｣ 등 실제 재화 또는 용역 거래를 확인할 수 있는 증명서류 발급절차 발급절차 - 공동인증서 등 준비, 회원가입, 발급, 전송, 조회, 부가가치세 등 신고 정보 ① 공동인증서 등 준비 전자(세금)계산서 발급(전자서명)을 위해서는 사업자범용·전자세금계산서용·ASP용 공동인증서 중 하나 필요 ※ 공동인증서 발급이 어려운 경우 세무서에서 보안카드를 발급받아 홈택스에서 전자(세금)계산서 발급 가능하며, '21.2월부터 모바일 홈택스(손택스)에서 지문 인증 등을 통하여 발급 가능 ② 회원가입 국세청에서 운영하는 홈택스 ( www.hometax.go.kr ) 또는 시스템사업자가 운영하는 전자(세금)계산서 발급사이트 중 하나를 선택하여 회원가입 ③ 발급 부가가치세법에서 정한 시기에 표준에 따라 생성(전자서명 필수)된 전자(세금)계산서를 발급하고, 매입자의 이메일로 전자세금계산서 발송 월합계 (세금)계산서 등의 경우 예외적으로 공급시기가 속하는 달의 다음달 10일까지 발급 가능 ④ 전송 전자(세금)계산서를 발급한 경우 발급일의 다음날까지 국세청에 전송 홈택스에서 발급할 경우에는 발급 즉시 자동으로 매입자에게 이메일 발송 및 국세청에 전송되므로 별도의 전송절차가 없음 ⑤ 조회 월별‧분기별 전자(세금)계산서 목록 및 합계표 조회 가능 홈택스가 아닌 다른 전자(세금)계산서 사이트에서 발급한 경우라도 국세청에 전송된 전자(세금)계산서는 홈택스에서 조회 가능 ⑥ 부가가치세 등 신고 매출·매입처별 (세금)계산서합계표 작성 시 전자(세금)계산서 합계금액만 기재하고 거래처별 명세 작성 불필요 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+        "original_url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+        "title": "발급시기 및 발급∙전송기한",
+        "checked_on": "2026-09-11",
+        "sha256": "163997f75124a0cced56c9b872219ab7c1e7937095c8a012cd296d797e4c713b",
+        "excerpt": "주메뉴 바로가기 본문으로 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 발급시기 및 발급∙전송기한 홈 국세정책/제도 전자(세금)계산서/현금영수증/신용카드 전자(세금)계산서 발급시기 및 발급∙전송기한 공유하기 페이스북 트위터 카카오스토리 인쇄 글자크기 가 가 가 가 발급시기 재화나 용역을 공급받는 자가 지정하는 수신함에 입력되거나 국세청 전자(세금)계산서 발급 시스템에 입력된 때에 공급 받는자가 그 전자(세금)계산서를 수신한 것으로 봄 파일 전송 없이 단순히 발급된 사실만을 알리는 SMS 통지나 링크를 통하여 확인할 수 있도록 하는 것은 아직 발급이 완료된 상태가 아님 거래상대방 수신함(이메일) 또는 홈택스에 입력된 때 발급완료 전자서명하지 않은 (세금)계산서 파일을 거래상대방 이메일로 발송한 경우에는 아직 발급이 완료된 상태가 아님 전자서명을 하고 전자(세금)계산서 표준에 의해 생성된 파일이 거래상대방 수신함(이메일)에 도달한 때 발급 완료 거래상대방이 이메일 주소가 없는 경우 또는 적용될 수 없는 경우 매입자가 이메일 주소가 없거나 지정하지 아니한 경우 또는 수신함이 적용될 수 없는 시스템을 사용하는 경우에는 국세청 발급 시스템을 수신함으로 지정한 것으로 봄 발급기한 및 전송기한 발급기한 (원칙) 부가가치세법 제15조 ∼ 17조(공급시기)의 시기에 발급 (예외) 월합계 (세금)계산서 등의 경우 공급시기가 속하는 달의 다음달 10일까지 발급 * 발급기한(10일)이 토요일 또는 공휴일인 경우에는 바로 다음 영업일까지 발급 전송기한 발급일의 다음날까지 국세청에 전송 콘텐츠 만족도 조사 페이지에서 제공하는 정보에 대하여 만족하셨습니까? 만족도 조사 매우만족 만족 보통 불만족 매우불만족 바로가기 홈택스 국세청 유튜브 국세상담센터 국세법령정보시스템 국립조세박물관 국세통계포털 국세환급금 찾기 납세자권익24 세무서식 어린이 국세청 취업후 학자금상환 탈세제보 부동산 탈세 신고센터 국세공무원교육원 주류면허지원센터 K-SUUL 포털 글로벌최저한세 포털 지방청·세무서 납세자세법교실 맨위로",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
+      "https://adpot.kr/m/sub/center/faq_view.html?code=4956"
+    ],
+    "valid_until": null,
+    "monthly_search": 15780,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938435",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7791&mi=6583",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7786&mi=2304",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "세금계산서 발행",
+    "organic_domains": [
+      "www.sinokor.co.kr",
+      "sms.eyagi070.co.kr",
+      "ems.nts.go.kr",
+      "images.softcity.co.kr",
+      "newzensolution.co.kr",
+      "campaign-cdn.pstatic.net",
+      "qxguide.oopy.io",
+      "adpot.kr",
+      "m.saramin.co.kr",
+      "www.kodica.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.sinokor.co.kr/PortalManual/EN/SHMTAXTAXMGT.html",
+        "domain": "www.sinokor.co.kr",
+        "title": "세금계산서 발행",
+        "snippet": "영업매출 세금계산서 발행 ... | 수정세금계산서 발행 사유 | 1."
+      },
+      {
+        "url": "https://sms.eyagi070.co.kr/2026_manuals",
+        "domain": "sms.eyagi070.co.kr",
+        "title": "Dias nummer 1",
+        "snippet": "1 세금계산서 발행정보 및 담당자 정보 입력"
+      },
+      {
+        "url": "https://ems.nts.go.kr/news/file/nts_news_120330.pdf",
+        "domain": "ems.nts.go.kr",
+        "title": "매입자 발행 세금계산서 제도",
+        "snippet": "- 신청인이 매입자발행세금계산서를 발행하고 부가가치세 신고 또는 경정청구를 할 때 매입자발행세금계산서합계표를 제출하는 경우, 매입세액으로 공제받을 수 있습니다. ... - 차명·가짜세금계산서를 발행한 경우에는 공급가액의 2%에 상당하는"
+      },
+      {
+        "url": "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
+        "domain": "images.softcity.co.kr",
+        "title": "8. 세금계산서 발행 방법 3가지",
+        "snippet": "세금계산서 발행 방법 3가지 ... 상단 예시 화면: 거래명세표입력 프로그램 창에서 하단의 [세금서(F6)] 버튼이 주황색으로 강조되어 있고, 이를 누르면 뜨는 “출력방법” 팝업에서 오른쪽의 [인쇄(P)]와 [전자세금계산서(E)]"
+      },
+      {
+        "url": "https://newzensolution.co.kr/manual/distribution/6013_%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C%EC%B2%98%EB%A6%AC%28%ED%8C%90%EB%A7%A4%29.pdf",
+        "domain": "newzensolution.co.kr",
+        "title": "입력방법\n\n[미처리 탭]\n\n1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당",
+        "snippet": "1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다. 입력된 기간내의 자료는 판매입력에서 일괄 입력한 데이터를 불러오며, 기간의 마지막 날짜가 세금계산서 발행일자가"
+      },
+      {
+        "url": "https://campaign-cdn.pstatic.net/nfs/commonParam/naverpayguide_files/20231110114543_56da57792a3490f0bf40fda8f2e67faa.pdf",
+        "domain": "campaign-cdn.pstatic.net",
+        "title": "4-1. 세금계산서 발행 정책",
+        "snippet": "• 이미 세금계산서가 발행된 구매확정 주문건이 익월 이후 구매확정 후 취소처리 될 경우, 취소처리 해당 월의 세금계산서에서 마이너스 처리되어 계산됩니다."
+      },
+      {
+        "url": "https://qxguide.oopy.io/71fdb312-4a2b-4693-acb6-a987e1d71e40",
+        "domain": "qxguide.oopy.io",
+        "title": "청구서, 세금계산서 발행",
+        "snippet": "가입 시 등록한 정보와 인보이스(세금계산서) 발행 관련 정보가 다른 경우(담당자 등), “인보이스 정보”에서 수정 가능 (세금계산서 첫 발행 전에만 가능) ... N/ 승인 대기 :"
+      },
+      {
+        "url": "https://adpot.kr/m/sub/center/faq_view.html?code=4956",
+        "domain": "adpot.kr",
+        "title": "세금계산서 발행 방법",
+        "snippet": "* 세금계산서 발행 방법 2026-01-23 ... - 거래 은행의 인터넷 뱅킹 > 인증센터 > 공동인증서 또는 금융인증서 > 세금계산서 발행 신청/조회(기업용) > 발급 진행"
+      },
+      {
+        "url": "https://m.saramin.co.kr/job-search/view?rec_idx=54616283&searchword=news&t_category=search&t_content=connect_recruit",
+        "domain": "m.saramin.co.kr",
+        "title": "[(주)뉴스이십일] 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) (D-2) - 사람인",
+        "snippet": "# 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) ... 신문 발행업 ... 경기 고양시 일산서구 주엽동 83번지 레이크타운 519호 (인근전철: 서울 3호선 주엽에서 500m 이내)"
+      },
+      {
+        "url": "https://www.kodica.kr/support/faq/%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%EB%B0%9C%ED%96%89-%EC%9A%94%EC%B2%AD%ED%95%98%EA%B8%B0",
+        "domain": "www.kodica.kr",
+        "title": "자주하는 질문 - 세금계산서 발행 요청하기 | 한국디지털인증",
+        "snippet": "#### 세금계산서 발행 요청하기 ... 세금계산서 발행 요청"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 33.58,
+      "organic_opportunity": 35.0,
+      "trend": 0.04,
+      "intent_fit": 15
+    },
+    "trend_growth": 0.004,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 6,
+    "selected_at": "2026-09-11T02:56:10.959075+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "세금계산서발행"
+    ],
     "status": "pending",
     "decision_diagnostics": {
       "official_sources": [

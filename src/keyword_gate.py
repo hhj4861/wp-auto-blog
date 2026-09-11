@@ -41,13 +41,18 @@ HEAD_SEARCH_VOLUME = 50_000   # 이 이상은 헤드텀 — 경쟁 검사 필수
 MAX_GOV_RATIO = 0.4           # SERP 1페이지 정부·대형매체 비중 상한
 
 # SERP에서 '우리가 못 이기는' 도메인 (정부·공공·대형 언론/금융)
+# Match the entire DNS host, allowing subdomains and one terminal DNS dot.
+# A brand or "gov" embedded in somebody else's host is not institutional evidence.
+# Generic public suffixes require an institutional label; named roots stand alone.
+_DNS_LABEL_DOT = r"(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)"
 DOMINANT_DOMAIN_RE = re.compile(
-    r"\.go\.kr|\.or\.kr|\.gov|korea\.kr|nts\.go\.kr|hometax|wetax|"
+    rf"\A(?=[a-z0-9.-]{{1,253}}\.?\Z)(?:{_DNS_LABEL_DOT}+(?:go\.kr|or\.kr|gov)|{_DNS_LABEL_DOT}*"
+    r"(?:gov\.kr|gov\.uk|gov\.au|korea\.kr|"
     r"naver\.com|namu\.wiki|wikipedia\.org|"
-    r"toss\.im|kbstar|shinhan|wooribank|hanabank|nonghyup|"
+    r"toss\.im|kbstar\.com|shinhan\.com|wooribank\.com|hanabank\.com|nonghyup\.com|"
     r"chosun\.com|joongang\.co\.kr|donga\.com|hankyung\.com|mk\.co\.kr|"
-    r"yna\.co\.kr|sbs\.co\.kr|kbs\.co\.kr|mbc\.co\.kr|brunch\.co\.kr",
-    re.IGNORECASE)
+    r"yna\.co\.kr|sbs\.co\.kr|kbs\.co\.kr|mbc\.co\.kr|brunch\.co\.kr))\.?\Z",
+    re.IGNORECASE | re.ASCII)
 
 
 def _credentials() -> tuple[str, str, str] | None:

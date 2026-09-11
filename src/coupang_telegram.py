@@ -13,6 +13,8 @@ import uuid
 
 import requests
 
+from src.coupang_search_guidance import product_search_guidance
+
 
 ERRORS = {
     'telegram_not_configured', 'telegram_invalid_configuration', 'telegram_webhook_active',
@@ -294,9 +296,13 @@ class TelegramClient:
         _validate_record(record)
         if record['status'] != 'pending_notification':
             raise TelegramError('invalid_request')
+        def display(value, maximum):
+            return value if len(value) <= maximum else value[:maximum] + '…'
+        guidance = product_search_guidance(record['category'], record['keyword'], record['topic'])
         text = ('[쿠팡 링크 요청]\n'
-                f"요청: {record['request_id']}\n카테고리: {record['category']}\n"
-                f"키워드: {record['keyword']}\n주제: {record['topic']}\n초안 ID: {record['post_id']}\n\n"
+                f"요청: {record['request_id']}\n카테고리: {display(record['category'], 30)}\n"
+                f"키워드: {display(record['keyword'], 120)}\n주제: {display(record['topic'], 240)}\n"
+                f"초안 ID: {record['post_id']}\n\n{guidance}\n\n"
                 '이 메시지에 답장: 상품명 | https://link.coupang.com/a/...\n'
                 '상품별 한 줄, 최대 3줄로 보내주세요.\n'
                 '상품 링크를 검수한 뒤 같은 초안을 발행합니다. 출처·선정 근거가 만료되면 보류합니다.')
@@ -307,6 +313,18 @@ class TelegramClient:
                 or type(result['chat'].get('id')) is not int or result['chat']['id'] != self._chat_id):
             raise TelegramError('telegram_invalid_response')
         return self.message_key(result.get('message_id'))
+
+    def send_search_guidance(self, record):
+        """Supplement an already-sent request without replacing its reply binding."""
+        _validate_record(record)
+        if record['status'] != 'waiting':
+            raise TelegramError('invalid_request')
+        guidance = product_search_guidance(record['category'], record['keyword'], record['topic'])
+        return self.send_feedback(record,
+            f"[상품 검색 안내] 초안 ID: {record['post_id']}\n\n{guidance}\n\n"
+            f"상품을 고르면 원래의 [쿠팡 링크 요청] (초안 {record['post_id']})에 답장해 주세요.\n"
+            '이 보충 안내에 답장하면 자동 처리되지 않습니다.\n'
+            '답장 형식: 상품명 | https://link.coupang.com/a/...\n상품별 한 줄, 최대 3줄입니다.')
 
     def get_updates(self, offset):
         if offset is not None and not _integer(offset):

@@ -195,7 +195,7 @@ def test_main_emits_actual_result_for_worker(tmp_path, monkeypatch):
     monkeypatch.setenv("BLOG_RESULT_PATH", str(path))
     assert entry.main() == 0
     assert json.loads(path.read_text()) == [{"success": True, "post_id": 17,
-        "url": result.post.url, "status": "publish"}]
+        "url": result.post.url, "status": "publish", "awaiting_affiliate": False}]
 
 
 def test_existing_category_jobs_keep_schedule_and_share_writer():

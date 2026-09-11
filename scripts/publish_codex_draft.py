@@ -1,5 +1,6 @@
 """Recover an explicit draft ID, with one evidence repair for a held market draft."""
 from datetime import datetime, timezone
+from copy import deepcopy
 from html import escape, unescape
 import json
 from pathlib import Path
@@ -19,6 +20,40 @@ from src.monetization import check_quality, insert_faq_schema
 from src import market_topics as market
 
 DATA = Path('data')
+
+
+class AffiliateDraftError(RuntimeError):
+    """Expose only fixed failure codes, never reply text or provider errors."""
+    def __init__(self, reason):
+        if reason not in {'invalid_request', 'request_binding_mismatch', 'affiliate_request_required',
+                          'already_published', 'unexpected_post_status', 'products_changed', 'product_review_failed',
+                          'publication_unconfirmed', 'verification_unavailable'}:
+            reason = 'verification_unavailable'
+        self.reason = reason
+        super().__init__('Affiliate draft publication held: ' + reason)
+
+
+def _affiliate_binding(request, original, brief):
+    from src.coupang_telegram import draft_fingerprint
+
+    if (not isinstance(request, dict) or not isinstance(brief, dict)
+            or not isinstance(request.get('request_id'), str)
+            or re.fullmatch(r'[a-f0-9]{32}', request['request_id']) is None
+            or request.get('status') not in ('ready', 'publishing')
+            or type(request.get('post_id')) is not int
+            or not isinstance(request.get('draft_fingerprint'), str)
+            or re.fullmatch(r'[a-f0-9]{64}', request['draft_fingerprint']) is None
+            or not isinstance(request.get('products'), list) or not request['products']):
+        raise AffiliateDraftError('invalid_request')
+    if (request['post_id'] != original['id'] or type(brief.get('post_id')) is not int
+            or brief['post_id'] != original['id']
+            or any(request.get(key) != brief.get(key)
+                   for key in ('category', 'keyword', 'topic', 'selected_at'))
+            or brief.get('affiliate_state') not in ('waiting', 'ready', 'publishing')
+            or (brief.get('affiliate_request_id') is not None
+                and brief['affiliate_request_id'] != request['request_id'])
+            or request['draft_fingerprint'] != draft_fingerprint(original)):
+        raise AffiliateDraftError('request_binding_mismatch')
 
 
 def _rows(path):
@@ -188,6 +223,8 @@ def _save_completed(brief, post):
     queue[matches[0]] = {**brief, 'status': 'completed', 'post_status': 'publish',
                           'post_id': post['id'], 'url': post['link'], 'published_at': stamp,
                           'completed_at': stamp}
+    if 'affiliate_state' in brief:
+        queue[matches[0]]['affiliate_state'] = 'published'
     temp = path.with_suffix('.tmp')
     temp.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     temp.replace(path)
@@ -259,7 +296,20 @@ def prepare_metadata(post, call, keyword=None):
     return meta
 
 
-def publish_draft(post_id, env):
+def publish_draft(post_id, env, *, affiliate_request=None):
+    if affiliate_request is None:
+        if env.get('BLOG_COUPANG_TELEGRAM') == '1':
+            raise AffiliateDraftError('affiliate_request_required')
+        return _publish_draft(post_id, env)
+    try:
+        return _publish_draft(post_id, env, affiliate_request=deepcopy(affiliate_request))
+    except AffiliateDraftError:
+        raise
+    except Exception:
+        raise AffiliateDraftError('verification_unavailable') from None
+
+
+def _publish_draft(post_id, env, *, affiliate_request=None):
     base = env.get('WP_GENERAL_URL', '').rstrip('/')
     if base != 'https://trendpulse.blog' or type(post_id) is not int or post_id <= 0:
         raise ValueError('Only an explicit TrendPulse draft can be resumed')
@@ -276,8 +326,17 @@ def publish_draft(post_id, env):
 
     original = read()
     if original['status'] != 'draft':
+        if affiliate_request is not None:
+            # A restarted request has no trusted final payload in this process.
+            # Never infer success or send another POST from an already-public ID.
+            raise AffiliateDraftError('already_published' if original['status'] == 'publish'
+                                      else 'unexpected_post_status')
         raise RuntimeError('Expected draft; refusing to alter an already published post')
     brief = _market_draft(original, session, base, env)
+    if affiliate_request is not None:
+        _affiliate_binding(affiliate_request, original, brief)
+    elif brief and brief.get('affiliate_state') in ('waiting', 'ready', 'publishing'):
+        raise AffiliateDraftError('affiliate_request_required')
     body = original['content']['raw']
     soup = BeautifulSoup(body, 'html.parser')
     if not soup.select_one('.wpab-article') or not soup.select_one('#quick-answer'):
@@ -296,6 +355,14 @@ def publish_draft(post_id, env):
     backup.parent.mkdir(parents=True, exist_ok=True)
     backup.write_text(json.dumps(original, ensure_ascii=False), encoding='utf-8')
     client = CodexSubscriptionClient(home=env['BLOG_CODEX_HOME'], model=env.get('BLOG_CODEX_MODEL', ''))
+    if affiliate_request is not None:
+        from src.coupang_products import insert_products, products_preserved, review_products
+        products, request_id = affiliate_request['products'], affiliate_request['request_id']
+        # Product text is untrusted. Insert before evidence review and any repair,
+        # so the final health/tax facts checker also sees the commercial content.
+        body = insert_products(body, products, request_id=request_id)
+        if not products_preserved(body, products, request_id=request_id):
+            raise AffiliateDraftError('products_changed')
     if brief:
         evidence_issues = review_evidence(body, sources, client.generate)
         print('Market draft initial evidence issue count:', len(evidence_issues), flush=True)
@@ -307,6 +374,8 @@ def publish_draft(post_id, env):
             if had_faq:
                 body = insert_faq_schema(body)
             print('Market draft evidence repair applied: 1', flush=True)
+        if affiliate_request is not None and not products_preserved(body, products, request_id=request_id):
+            raise AffiliateDraftError('products_changed')
         meta = prepare_metadata({**original, 'content': {'raw': body}}, client.generate, keyword=brief['keyword'])
     else:
         meta = prepare_metadata(original, client.generate)
@@ -324,6 +393,12 @@ def publish_draft(post_id, env):
                     or market.norm(brief['keyword']) not in market.norm(parsed.get_text(' ', strip=True))
                     or not parsed.select_one('.wpab-article') or not parsed.select_one('#quick-answer')):
                 issues.append('Market draft keyword, category or template changed')
+        if affiliate_request is not None:
+            if not products_preserved(html, products, request_id=request_id):
+                raise AffiliateDraftError('products_changed')
+            if review_products(products, title=meta['title'], category=category,
+                               body=html, call_llm=client.generate):
+                raise AffiliateDraftError('product_review_failed')
         review_html = ('<section><h1>' + escape(meta['title']) + '</h1><p>'
                        + escape(meta['meta_description']) + '</p></section>' + html)
         if brief:
@@ -352,19 +427,45 @@ def publish_draft(post_id, env):
             '_yoast_wpseo_metadesc': meta['meta_description']}}
     if brief:
         payload['content'] = body
-    response = session.post(endpoint, json=payload, timeout=60, allow_redirects=False)
-    posted = _json(response)
-    _record_confirmed_publication(brief, post_id, posted)
-    saved = read()
-    _record_confirmed_publication(brief, post_id, saved)
-    if (not _confirmed_publication(post_id, saved) or saved['content']['raw'] != body
-            or saved.get('slug') != original.get('slug')
-            or saved.get('featured_media') != original.get('featured_media')
-            or (brief and (saved.get('categories') != original.get('categories')
-                           or _text(saved, 'title') != meta['title']
-                           or _text(saved, 'excerpt') != meta['meta_description']
-                           or saved.get('meta', {}).get('_yoast_wpseo_focuskw') != brief['keyword']
-                           or saved.get('meta', {}).get('_yoast_wpseo_metadesc') != meta['meta_description']))):
+    def matches_payload(saved):
+        return (isinstance(saved, dict) and _confirmed_publication(post_id, saved)
+            and _text(saved, 'content') == body
+            and saved.get('slug') == original.get('slug')
+            and saved.get('featured_media') == original.get('featured_media')
+            and (not brief or (saved.get('categories') == original.get('categories')
+                 and _text(saved, 'title') == meta['title']
+                 and _text(saved, 'excerpt') == meta['meta_description']
+                 and saved.get('meta', {}).get('_yoast_wpseo_focuskw') == brief['keyword']
+                 and saved.get('meta', {}).get('_yoast_wpseo_metadesc') == meta['meta_description']))
+            and (affiliate_request is None or products_preserved(saved['content']['raw'], products,
+                                                                 request_id=request_id)))
+
+    try:
+        response = session.post(endpoint, json=payload, timeout=60, allow_redirects=False)
+        posted = _json(response)
+    except Exception:
+        if affiliate_request is None:
+            raise
+        # One read can reconcile an ambiguous write only against this process's
+        # fully reviewed payload. No automatic re-POST, including redirects/5xx.
+        try:
+            saved = read()
+            # An observed public ID reserves the keyword even if its payload was
+            # changed. Completion still requires the exact reviewed content.
+            _record_confirmed_publication(brief, post_id, saved)
+            confirmed = matches_payload(saved)
+        except Exception:
+            raise AffiliateDraftError('publication_unconfirmed') from None
+        if not confirmed:
+            raise AffiliateDraftError('publication_unconfirmed') from None
+    else:
+        # A confirmed response still reserves the keyword if readback later fails.
+        _record_confirmed_publication(brief, post_id, posted)
+        saved = read()
+        _record_confirmed_publication(brief, post_id, saved)
+    if not matches_payload(saved):
+        if affiliate_request is not None:
+            raise AffiliateDraftError('publication_unconfirmed')
         raise RuntimeError('Publication or body preservation check failed')
     if brief:
         _save_completed(brief, saved)

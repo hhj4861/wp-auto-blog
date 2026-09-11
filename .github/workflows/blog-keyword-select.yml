@@ -38,6 +38,7 @@ on:
 concurrency:
   group: trendpulse-general-posting
   cancel-in-progress: false
+  queue: max
 
 jobs:
   search-check:

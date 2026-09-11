@@ -11,6 +11,7 @@ import pytest
 
 from src.content_generator import ContentConfig, LLMProvider
 from src.pipeline import BlogPipeline
+from tests.test_market_topics import market_pipeline, candidate
 
 
 @pytest.fixture
@@ -291,3 +292,113 @@ def test_failed_codex_review_keeps_real_queue_pending_and_never_writes(
     pipeline._process_topic.assert_not_called()
     pipeline.content_generator.generate.assert_not_called()
     pipeline.wp_client.create_post.assert_not_called()
+
+
+@pytest.mark.parametrize(('category', 'keyword'), [
+    ('취업', '시험준비물'), ('생활정보', '여권발급준비물'), ('건강', '건강검진준비물'),
+])
+@pytest.mark.parametrize('quality_passes', [True, False])
+def test_all_general_categories_create_one_draft_before_waiting_for_affiliate_reply(
+        market_pipeline, tmp_path, monkeypatch, category, keyword, quality_passes):
+    """Real main/queue/pipeline; model, image and WordPress transport are doubles."""
+    import src.main as entry
+    import src.market_topics as market
+    import src.pipeline as pipeline_module
+    from src.wordpress_client import CreatedPost, PostStatus
+
+    pipeline = market_pipeline
+    pipeline.config.category = category
+    pipeline._is_duplicate = Mock(return_value=False)
+    brief = candidate(category, keyword=keyword, keywords=[keyword], topic=keyword + ' 확인 방법')
+    assert market.fresh_market_item(brief, category)
+    content = pipeline.content_generator.generate.return_value
+    content.title = brief['topic']
+    content.html = '<h2>' + keyword + '</h2><p>' + keyword + '는 공식 준비물과 신청 절차를 확인하세요.</p>'
+    content.keywords = [keyword]
+    content.focus_keyphrase = keyword
+    content.meta_description = keyword + '의 공식 준비물과 절차를 안내합니다.'
+    path = tmp_path / 'data' / 'topic_queue_general.json'
+    path.parent.mkdir(exist_ok=True)
+    path.write_text(json.dumps([brief]))
+    result_path = tmp_path / 'result.json'
+    monkeypatch.setattr(market, 'LEDGER', path.parent / 'posted_market_keywords.json')
+    ledger = Mock(side_effect=AssertionError('a draft must not enter publication history'))
+    monkeypatch.setattr(market, 'record_published_keyword', ledger)
+    ping = Mock(side_effect=AssertionError('a draft must not send an indexing ping'))
+    monkeypatch.setattr(pipeline_module, 'ping_urls', ping)
+    old_products = Mock(side_effect=AssertionError('old automatic products must not be inserted'))
+    monkeypatch.setattr(pipeline_module, 'insert_coupang_prep_box', old_products)
+    if not quality_passes:
+        monkeypatch.setattr(pipeline_module, 'check_quality', lambda **kw: ['본문 검수 실패'])
+    pipeline.wp_client.create_post.side_effect = lambda **kw: CreatedPost(
+        1749, 'https://trendpulse.blog/approval-draft/', content.title, kw['status'])
+    monkeypatch.setattr(entry, '__file__', str(tmp_path / 'src' / 'main.py'))
+    monkeypatch.setattr(entry, 'BlogPipeline', lambda *a, **kw: pipeline)
+    monkeypatch.setattr(entry, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(entry, 'setup_logging', lambda **kw: None)
+    monkeypatch.setenv('BLOG_COUPANG_TELEGRAM', '1')
+    monkeypatch.setenv('BLOG_RESULT_PATH', str(result_path))
+    monkeypatch.setattr(sys, 'argv', ['blog', '--mode', 'general', '--from-queue',
+                                    '--category', category, '--auto-publish'])
+    assert entry.main() == 0
+    pipeline.wp_client.create_post.assert_called_once()
+    assert pipeline.wp_client.create_post.call_args.kwargs['status'] == PostStatus.DRAFT
+    assert pipeline.wp_client.create_post.call_args.kwargs['require_featured_image'] is True
+    assert pipeline.content_generator.generate.call_args.kwargs['market_brief']['keyword'] == keyword
+    saved = json.loads(path.read_text())[0]
+    assert saved['status'] == 'held_draft' and saved['post_status'] == 'draft' and saved['post_id'] == 1749
+    assert saved['selected_at'] == brief['selected_at']
+    assert saved.get('affiliate_state') == ('waiting' if quality_passes else None)
+    result = json.loads(result_path.read_text())
+    assert len(result) == 1 and result[0]['status'] == 'draft'
+    assert result[0]['awaiting_affiliate'] is quality_passes
+    ledger.assert_not_called()
+    ping.assert_not_called()
+    old_products.assert_not_called()
+    assert not market.LEDGER.exists()
+
+
+def test_affiliate_policy_rejects_unverified_manual_generation_before_writer(market_pipeline, monkeypatch):
+    from src.trend_detector import Topic
+
+    monkeypatch.setenv('BLOG_COUPANG_TELEGRAM', '1')
+    topic = Topic(topic='일반 요청', keywords=['일반요청'], source='manual', score=1,
+                  suggested_title='일반 요청')
+    result = market_pipeline._process_topic(topic)
+    assert not result.success and not result.awaiting_affiliate
+    market_pipeline.content_generator.generate.assert_not_called()
+    market_pipeline.wp_client.create_post.assert_not_called()
+
+
+def test_affiliate_dry_run_preserves_pending_queue_and_never_registers_draft_zero(
+        market_pipeline, tmp_path, monkeypatch):
+    import src.main as entry
+    import src.market_topics as market
+
+    pipeline = market_pipeline
+    pipeline.config.dry_run = True
+    pipeline._is_duplicate = Mock(return_value=False)
+    brief = candidate()
+    path = tmp_path / 'data' / 'topic_queue_general.json'
+    path.parent.mkdir(exist_ok=True)
+    original = json.dumps([brief], ensure_ascii=False)
+    path.write_text(original)
+    result_path = tmp_path / 'result.json'
+    monkeypatch.setattr(market, 'LEDGER', path.parent / 'posted_market_keywords.json')
+    recorder = Mock(side_effect=AssertionError('dry run must not record a publication'))
+    monkeypatch.setattr(market, 'record_published_keyword', recorder)
+    monkeypatch.setattr(entry, '__file__', str(tmp_path / 'src' / 'main.py'))
+    monkeypatch.setattr(entry, 'BlogPipeline', lambda *a, **kw: pipeline)
+    monkeypatch.setattr(entry, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(entry, 'setup_logging', lambda **kw: None)
+    monkeypatch.setenv('BLOG_COUPANG_TELEGRAM', '1')
+    monkeypatch.setenv('BLOG_RESULT_PATH', str(result_path))
+    monkeypatch.setattr(sys, 'argv', ['blog', '--mode', 'general', '--from-queue',
+                                    '--category', '취업', '--auto-publish', '--dry-run'])
+    assert entry.main() == 0
+    assert path.read_text() == original
+    pipeline.wp_client.create_post.assert_not_called()
+    recorder.assert_not_called()
+    result = json.loads(result_path.read_text())[0]
+    assert result['post_id'] == 0 and result['awaiting_affiliate'] is False
+    assert not market.LEDGER.exists()

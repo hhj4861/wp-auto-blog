@@ -40,7 +40,7 @@ on:
         required: false
         type: string
       publish:
-        description: 'Publish immediately'
+        description: 'Request publication (TrendPulse waits for Telegram product links)'
         required: false
         default: true
         type: boolean
@@ -96,8 +96,14 @@ jobs:
     concurrency:
       group: trendpulse-general-posting
       cancel-in-progress: false
+      queue: max
     env:
       BLOG_MODE: general
+      MARKET_SEARCH_PROVIDER: codex_native_search
+      BLOG_COUPANG_TELEGRAM: '1'
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_ALLOWED_USER_ID: ${{ secrets.TELEGRAM_ALLOWED_USER_ID }}
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
@@ -110,6 +116,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -133,6 +141,9 @@ jobs:
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
+      - name: Check Telegram reply configuration
+        run: python scripts/coupang_telegram_worker.py check
+
       - name: Restore Codex authentication
         if: env.BLOG_WRITER_PROVIDER == 'codex'
         env:
@@ -170,6 +181,16 @@ jobs:
           NAVER_AD_SECRET_KEY=${{ secrets.NAVER_AD_SECRET_KEY }}
           EOF
 
+      - name: Import measured CAK keyword candidates
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: |
+          echo "CAK_KEYWORD_CANDIDATES_FILE=$RUNNER_TEMP/cak-keyword-candidates.json" >> "$GITHUB_ENV"
+          echo "CAK_KEYWORD_CANDIDATES_FETCH_STATUS_FILE=$RUNNER_TEMP/cak-fetch-status.json" >> "$GITHUB_ENV"
+          python scripts/fetch_cak_candidates.py \
+            --output "$RUNNER_TEMP/cak-keyword-candidates.json" \
+            --status-file "$RUNNER_TEMP/cak-fetch-status.json"
+
       - name: Run pipeline (General Blog - trendpulse.blog)
         timeout-minutes: 30
         env:
@@ -178,6 +199,17 @@ jobs:
         run: |
           if [ -n "$BLOG_RESUME_DRAFT_ID" ]; then
             python scripts/run_codex_worker.py
+            exit 0
+          fi
+          if [ "$BLOG_COUPANG_TELEGRAM" = "1" ] && [ "$BLOG_PUBLISH" = "true" ]; then
+            if [ -n "$BLOG_TOPIC" ]; then
+              echo "Affiliate publication requires a verified keyword queue; leave topic empty and choose category."
+              exit 1
+            fi
+            CAT="${BLOG_CATEGORY:-생활정보}"
+            python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
+            export BLOG_REQUIRE_MARKET_TOPIC=1
+            python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
             exit 0
           fi
           # Build command with optional flags
@@ -205,29 +237,21 @@ jobs:
         if: success() && env.BLOG_WRITER_PROVIDER == 'codex'
         run: python scripts/verify_codex_run.py
 
-      - name: Commit post registry
-        if: success()
-        continue-on-error: true
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          [ -f "data/post_registry_general.json" ] || { echo "Registry not found; skipping"; exit 0; }
-          git add data/post_registry_general.json
-          if git diff --staged --quiet; then
-            echo "No registry changes to commit"
-            exit 0
-          fi
-          git commit -m "chore: update general post registry [skip ci]"
-          for i in 1 2 3 4 5; do
-            if git push origin main; then
-              echo "Push succeeded on attempt $i"
-              exit 0
-            fi
-            echo "Push failed; rebasing onto latest origin/main (attempt $i)..."
-            git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; }
-            sleep $((i * 2))
-          done
-          echo "Warning: Failed to push registry after 5 attempts, but post was created successfully"
+      - name: Record Coupang link request intents
+        id: coupang_requests
+        run: python scripts/coupang_telegram_worker.py register
+
+      - name: Persist draft and notification intents
+        run: bash scripts/commit_coupang_state.sh
+
+      - name: Request Coupang links through Telegram
+        env:
+          NOTIFICATION_IDS: ${{ steps.coupang_requests.outputs.notification_ids }}
+        run: python scripts/coupang_telegram_worker.py notify
+
+      - name: Commit draft and approval state
+        if: always()
+        run: bash scripts/commit_coupang_state.sh
 
       - name: Persist refreshed Codex authentication and clean up
         if: always() && env.BLOG_WRITER_PROVIDER == 'codex'
@@ -720,8 +744,13 @@ jobs:
     concurrency:
       group: trendpulse-general-posting
       cancel-in-progress: false
+      queue: max
     env:
       BLOG_MODE: queue
+      BLOG_COUPANG_TELEGRAM: '1'
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_ALLOWED_USER_ID: ${{ secrets.TELEGRAM_ALLOWED_USER_ID }}
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
@@ -758,6 +787,9 @@ jobs:
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
+      - name: Check Telegram reply configuration
+        run: python scripts/coupang_telegram_worker.py check
+
       - name: Restore Codex authentication
         env:
           CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
@@ -829,18 +861,34 @@ jobs:
           echo "Queue category: $CAT"
           python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
           export BLOG_REQUIRE_MARKET_TOPIC=1
-          python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
+          if [ "$BLOG_PUBLISH" = "true" ]; then
+            python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
+          else
+            python -m src.main --mode general --from-queue --dry-run --category "$CAT"
+          fi
 
       - name: Verify Codex publication result
         if: success() && env.BLOG_WRITER_PROVIDER == 'codex'
         run: python scripts/verify_codex_run.py
+
+      - name: Record Coupang link request intents
+        id: coupang_requests
+        run: python scripts/coupang_telegram_worker.py register
+
+      - name: Persist draft and notification intents
+        run: bash scripts/commit_coupang_state.sh
+
+      - name: Request Coupang links through Telegram
+        env:
+          NOTIFICATION_IDS: ${{ steps.coupang_requests.outputs.notification_ids }}
+        run: python scripts/coupang_telegram_worker.py notify
 
       - name: Commit queue and registry updates
         if: always()
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          for f in data/topic_queue_general.json data/post_registry_general.json data/category_market_topics.json data/posted_market_keywords.json; do
+          for f in data/topic_queue_general.json data/post_registry_general.json data/category_market_topics.json data/posted_market_keywords.json data/coupang_requests.json; do
             [ -f "$f" ] && git add "$f"
           done
           if git diff --staged --quiet; then

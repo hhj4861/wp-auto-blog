@@ -9,6 +9,7 @@ permissions:
 concurrency:
   group: trendpulse-general-posting
   cancel-in-progress: false
+  queue: max
 
 jobs:
   sample:

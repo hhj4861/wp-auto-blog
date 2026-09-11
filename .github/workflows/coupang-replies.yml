@@ -1,0 +1,89 @@
+name: Coupang Telegram Replies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,17,27,37,47,57 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendpulse-general-posting
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  replies:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_ALLOWED_USER_ID: ${{ secrets.TELEGRAM_ALLOWED_USER_ID }}
+      WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+      WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+      WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+      BLOG_COUPANG_TELEGRAM: '1'
+      BLOG_WRITER_PROVIDER: codex
+      BLOG_MODE: queue
+      BLOG_PUBLISH: 'true'
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Record notification intents
+        id: notifications
+        run: python scripts/coupang_telegram_worker.py register
+      - name: Persist notification intents before sending
+        run: bash scripts/commit_coupang_state.sh
+      - name: Ask for product links
+        env:
+          NOTIFICATION_IDS: ${{ steps.notifications.outputs.notification_ids }}
+        run: python scripts/coupang_telegram_worker.py notify
+      - name: Receive replies once
+        run: python scripts/coupang_telegram_worker.py receive
+      - name: Record publication intent
+        id: approval
+        run: python scripts/coupang_telegram_worker.py prepare
+      - name: Persist accepted replies and publication intent
+        run: bash scripts/commit_coupang_state.sh
+      - uses: actions/setup-node@v4
+        if: steps.approval.outputs.request_id != ''
+        with:
+          node-version: '22'
+      - name: Install Codex
+        if: steps.approval.outputs.request_id != ''
+        run: npm install -g @openai/codex@0.153.4
+      - name: Set writer runtime
+        if: steps.approval.outputs.request_id != ''
+        run: echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+      - name: Restore Codex authentication
+        id: auth
+        if: steps.approval.outputs.request_id != ''
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py restore
+      - name: Verify products and publish the same draft
+        if: steps.approval.outputs.request_id != ''
+        timeout-minutes: 40
+        env:
+          APPROVED_REQUEST_ID: ${{ steps.approval.outputs.request_id }}
+        run: python scripts/coupang_telegram_worker.py publish --request-id "$APPROVED_REQUEST_ID"
+      - name: Persist final state
+        if: always()
+        run: bash scripts/commit_coupang_state.sh
+      - name: Persist refreshed Codex authentication and clean up
+        if: always() && steps.auth.outcome != 'skipped'
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist

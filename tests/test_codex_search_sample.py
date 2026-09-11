@@ -391,7 +391,7 @@ def test_actions_diagnostic_is_manual_main_only_and_reuses_serial_auth_lifecycle
     assert triggers == {"workflow_dispatch": None}
     assert workflow["permissions"] == {"contents": "read"}
     assert workflow["concurrency"] == {
-        "group": "trendpulse-general-posting", "cancel-in-progress": False}
+        "group": "trendpulse-general-posting", "cancel-in-progress": False, "queue": "max"}
     assert set(workflow["jobs"]) == {"sample"}
     job = workflow["jobs"]["sample"]
     assert job["if"] == "github.ref == 'refs/heads/main'"

@@ -237,12 +237,55 @@ def test_send_request_and_feedback_target_only_configured_chat(monkeypatch, tmp_
     assert all(str(record[field]) in sent['text'] for field in ('post_id', 'keyword', 'category', 'topic'))
     assert '최대 3줄' in sent['text'] and '답장: 상품명 | https://link.coupang.com/a/...' in sent['text']
     assert '만료되면 보류' in sent['text']
+    assert '쿠팡에서 검색할 상품' in sent['text'] and '배즙' in sent['text']
+    assert '선택 기준' in sent['text']
+    assert sent['reply_markup'] == {'force_reply': True, 'selective': True}
     assert 'parse_mode' not in sent and sent['link_preview_options']['is_disabled']
     assert client.send_feedback(record, '발행 검수를 완료했습니다.') == key
     assert session.post.call_args.kwargs['json']['chat_id'] == 8123456789
     assert 'parse_mode' not in session.post.call_args.kwargs['json']
     with pytest.raises(telegram.TelegramError, match='^invalid_request$'):
         client.send_feedback(record, 'unsafe\x00text')
+
+
+def test_search_supplement_keeps_original_request_reply_binding(monkeypatch, tmp_path):
+    store, record = store_record(tmp_path, status='waiting')
+    before = store.path.read_bytes()
+    session, _ = transport(monkeypatch, result={'chat': {'id': 8123456789}, 'message_id': 700})
+    client = telegram.TelegramClient(ENV)
+    original_key = record['message_key']
+    client.send_search_guidance(record)
+    sent = session.post.call_args.kwargs['json']
+    assert sent['chat_id'] == 8123456789
+    assert '배즙' in sent['text'] and '원래의 [쿠팡 링크 요청]' in sent['text']
+    assert str(record['post_id']) in sent['text'] and record['request_id'] in sent['text']
+    assert '이 보충 안내에 답장하면 자동 처리되지 않습니다' in sent['text']
+    assert 'reply_markup' not in sent
+    assert record['message_key'] == original_key and store.path.read_bytes() == before
+    receiver = polling_client([incoming(reply_id=700)])
+    assert telegram.process_updates(store, receiver) == []
+    assert record['status'] == 'waiting'
+    receiver.get_updates.return_value = [incoming(update_id=101, reply_id=501)]
+    assert telegram.process_updates(store, receiver) == [record['request_id']]
+
+
+def test_search_supplement_requires_a_waiting_request(tmp_path):
+    _, record = store_record(tmp_path)
+    with pytest.raises(telegram.TelegramError, match='^invalid_request$'):
+        telegram.TelegramClient(ENV).send_search_guidance(record)
+
+
+def test_long_request_fields_fit_telegram_limit_and_retain_identity(monkeypatch, tmp_path):
+    store = telegram.RequestStore(tmp_path / 'requests.json')
+    record = store.create(1754, '건강', '대상포진초기증상' + '😀' * 490,
+                          '대상포진 초기증상' + '😀' * 990, 'a' * 64, SELECTED)
+    session, _ = transport(monkeypatch, result={'chat': {'id': 8123456789}, 'message_id': 501})
+    telegram.TelegramClient(ENV).send_request(record)
+    sent = session.post.call_args.kwargs['json']
+    assert len(sent['text'].encode('utf-16-le')) // 2 <= 4096
+    assert record['request_id'] in sent['text'] and '1754' in sent['text']
+    assert '루즈핏 순면 티셔츠' in sent['text'] and '이 메시지에 답장' in sent['text']
+    assert record['topic'].endswith('😀' * 990)
 
 
 def test_notification_is_claimed_before_send_and_saved_waiting_after_success(tmp_path):

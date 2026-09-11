@@ -797,6 +797,215 @@ def test_cli_empty_top_n_and_category_enqueue(tmp_path, monkeypatch):
     assert json.loads(queue_path.read_text()) == queued
 
 
+@pytest.fixture
+def reuse_cli(tmp_path, monkeypatch):
+    from scripts import select_blog_keywords as cli
+
+    data = tmp_path / 'data'
+    data.mkdir()
+    queue = data / 'topic_queue_general.json'
+    queue.write_text('[{"topic":"manual entry","status":"pending"}]')
+    market.LEDGER.parent.mkdir(exist_ok=True)
+    market.LEDGER.write_text('[]')
+    monkeypatch.setattr(cli, 'ROOT', tmp_path)
+    monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    titles = ['별도로 이미 발행한 글']
+    monkeypatch.setattr(cli, 'existing_titles', lambda: list(titles))
+    monkeypatch.setenv('SELECT_TOP_N', '1')
+    monkeypatch.setattr('sys.argv', ['select', '--category', '취업', '--enqueue', '--reuse'])
+    select = Mock(side_effect=AssertionError('Unexpected fresh selection'))
+    fetch = Mock(side_effect=AssertionError('Unexpected source request'))
+    monkeypatch.setattr(cli, 'select_category', select)
+    monkeypatch.setattr(cli, 'fetch_source', fetch)
+
+    def save(items):
+        report = {'category': '취업', 'selected': items, 'ranked_candidates': deepcopy(items),
+                  'selected_at': items[0]['selected_at'] if items else None}
+        cli.REPORT.write_text(json.dumps({'취업': report}))
+        return deepcopy(report)
+
+    return SimpleNamespace(cli=cli, data=data, queue=queue, titles=titles,
+                           select=select, fetch=fetch, save=save)
+
+
+def test_reuse_prefetches_every_required_source_primary_first_and_stops_at_top_n(reuse_cli):
+    c = reuse_cli
+    primary, faq = evidence('https://example.go.kr/main'), evidence('https://example.go.kr/faq')
+    first = candidate(source_url=primary['url'], verified_sources=[faq, primary, faq])
+    second = candidate(keyword='면접준비물', keywords=['면접준비물'], topic='면접준비물 확인 방법',
+                       source_url='https://example.go.kr/unused',
+                       verified_sources=[evidence('https://example.go.kr/unused')])
+    assert market.fresh_market_item(first, '취업') and market.fresh_market_item(second, '취업')
+    previous = c.save([first, second])
+    c.fetch.side_effect = lambda url: {'url': url, 'excerpt': '새로 조회한 내용이며 저장된 근거를 대체하지 않습니다.'}
+    assert c.cli.main() == 0
+    assert [call.args[0] for call in c.fetch.call_args_list] == [primary['url'], faq['url']]
+    c.select.assert_not_called()
+    current = json.loads(c.cli.REPORT.read_text())['취업']
+    assert current['selected'] == [first]
+    assert current['ranked_candidates'] == previous['ranked_candidates']
+    assert current['reuse_source_diagnostics']['outcome'] == 'reused'
+    assert current['reuse_source_diagnostics']['failed_candidates'] == []
+    assert json.loads(c.queue.read_text())[-1] == first
+    assert market.LEDGER.read_text() == '[]'
+
+
+def test_reuse_skips_failed_candidates_memoizes_failed_urls_and_keeps_original_rank(reuse_cli):
+    c = reuse_cli
+    broken = evidence('https://example.go.kr/broken')
+    good = evidence('https://example.go.kr/good')
+    failed = candidate(source_url=broken['url'], verified_sources=[broken])
+    also_failed = candidate(keyword='취업서류', keywords=['취업서류'], topic='취업서류 확인 방법',
+                            source_url=broken['url'], verified_sources=[broken])
+    accessible = candidate(keyword='면접준비물', keywords=['면접준비물'], topic='면접준비물 확인 방법',
+                           source_url=good['url'], verified_sources=[good])
+    previous = c.save([failed, also_failed, accessible])
+    c.fetch.side_effect = lambda url: None if url == broken['url'] else good
+    assert c.cli.main() == 0
+    assert [call.args[0] for call in c.fetch.call_args_list] == [broken['url'], good['url']]
+    c.select.assert_not_called()
+    report = json.loads(c.cli.REPORT.read_text())['취업']
+    assert report['selected'] == [accessible]
+    assert report['ranked_candidates'] == previous['ranked_candidates']
+    failures = report['reuse_source_diagnostics']['failed_candidates']
+    assert [row['candidate'] for row in failures] == [failed, also_failed]
+    assert all(row['reason'] == 'required_source_unavailable' for row in failures)
+    assert all(datetime.fromisoformat(row['checked_at']).utcoffset() is not None for row in failures)
+    assert json.loads(c.queue.read_text())[-1] == accessible
+
+
+@pytest.mark.parametrize('failure', [None, {}, {'url': 'https://example.go.kr/faq', 'excerpt': ' '},
+                                   RuntimeError('PRIVATE-NETWORK-URL-TOKEN')])
+def test_failed_auxiliary_source_reselects_once_with_real_keyword_exclusion(reuse_cli, capsys, failure):
+    c = reuse_cli
+    primary, faq = evidence('https://example.go.kr/main'), evidence('https://example.go.kr/faq')
+    failed = candidate(source_url=primary['url'], verified_sources=[primary, faq])
+    replacement = candidate(keyword='면접준비물', keywords=['면접준비물'], topic='면접준비물 확인 방법')
+    c.save([failed])
+    c.fetch.side_effect = [primary, failure]
+    selection_inputs = []
+
+    def select(category, top_n, titles, **kwargs):
+        # main reserves the real new selection afterwards; inspect the actual
+        # pre-selection inventory before that legitimate in-memory append.
+        selection_inputs.append((category, top_n, deepcopy(titles), deepcopy(kwargs)))
+        return {'category': category, 'selected': [replacement]}
+
+    c.select.side_effect = select
+    assert c.cli.main() == 0
+    c.select.assert_called_once()
+    assert selection_inputs == [('취업', 1, c.titles, {'excluded_keywords': [failed['keyword']]})]
+    assert [call.args[0] for call in c.fetch.call_args_list] == [primary['url'], faq['url']]
+    report = json.loads(c.cli.REPORT.read_text())['취업']
+    assert report['selected'] == [replacement]
+    assert report['reuse_source_diagnostics']['outcome'] == 'reselected'
+    assert report['reuse_source_diagnostics']['failed_candidates'][0]['candidate'] == failed
+    assert json.loads(c.queue.read_text())[-1] == replacement
+    assert market.LEDGER.read_text() == '[]'
+    output = capsys.readouterr()
+    assert 'PRIVATE' not in output.out + output.err + c.cli.REPORT.read_text()
+
+
+@pytest.mark.parametrize('raises', [False, True])
+def test_failed_reselection_persists_original_diagnostics_but_cannot_enqueue(reuse_cli, capsys, raises):
+    c = reuse_cli
+    failed = candidate()
+    c.save([failed])
+    before_queue, before_ledger = c.queue.read_text(), market.LEDGER.read_text()
+    c.fetch.side_effect = RuntimeError('PRIVATE-SOURCE-ERROR')
+    c.select.side_effect = RuntimeError('PRIVATE-RESELECTION-ERROR') if raises else None
+    c.select.return_value = {'category': '취업', 'selected': []}
+    assert c.cli.main() == 1
+    c.select.assert_called_once_with('취업', 1, c.titles, excluded_keywords=[failed['keyword']])
+    report = json.loads(c.cli.REPORT.read_text())['취업']
+    assert report['selected'] == []
+    diagnostic = report['reuse_source_diagnostics']
+    assert diagnostic['failed_candidates'][0]['candidate'] == failed
+    assert diagnostic['outcome'] == ('selection_failed' if raises else 'no_candidate_passed')
+    assert c.queue.read_text() == before_queue and market.LEDGER.read_text() == before_ledger
+    output = capsys.readouterr()
+    assert 'PRIVATE' not in output.out + output.err + c.cli.REPORT.read_text()
+
+
+def test_reuse_does_not_probe_stale_or_posted_candidates_or_add_them_to_exclusions(reuse_cli):
+    c = reuse_cli
+    stale = candidate(selected_at=(datetime.now(timezone.utc) - timedelta(days=2)).isoformat())
+    posted = candidate(keyword='면접준비물', keywords=['면접준비물'], topic='면접준비물 확인 방법')
+    c.titles.append(posted['keyword'])
+    c.save([stale, posted])
+    c.select.side_effect = None
+    c.select.return_value = {'category': '취업', 'selected': []}
+    assert c.cli.main() == 1
+    c.fetch.assert_not_called()
+    c.select.assert_called_once_with('취업', 1, c.titles)
+
+
+def test_nonreuse_selection_does_not_add_source_preflight(reuse_cli, monkeypatch):
+    c = reuse_cli
+    c.save([candidate()])
+    c.select.side_effect = None
+    c.select.return_value = {'category': '취업', 'selected': []}
+    monkeypatch.setattr('sys.argv', ['select', '--category', '취업'])
+    assert c.cli.main() == 1
+    c.fetch.assert_not_called()
+    c.select.assert_called_once_with('취업', 1, c.titles)
+
+
+def test_reuse_success_memo_is_shared_across_categories_in_one_run(reuse_cli, monkeypatch):
+    c = reuse_cli
+    reports = {}
+    for category in market.CATEGORIES:
+        keyword = category + '서류'
+        item = candidate(category, keyword=keyword, keywords=[keyword], topic=keyword + ' 확인 방법')
+        assert market.fresh_market_item(item, category)
+        reports[category] = {'category': category, 'selected': [item]}
+    c.cli.REPORT.write_text(json.dumps(reports))
+    monkeypatch.setattr('sys.argv', ['select', '--category', 'all', '--reuse'])
+    c.fetch.side_effect = lambda url: evidence(url)
+    assert c.cli.main() == 0
+    c.fetch.assert_called_once_with(evidence()['url'])
+    c.select.assert_not_called()
+
+
+def test_reselection_excludes_normalized_keywords_without_fabricating_posted_titles(monkeypatch):
+    stats = {keyword: {'keyword': keyword, 'monthly': 1200}
+             for keyword in ('2027시험준비물', '면접준비물')}
+    before = deepcopy(stats)
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: stats)
+    search = Mock(side_effect=lambda keyword: ('google_custom_search', organic_sample(keyword)))
+    monkeypatch.setattr(market, 'search_results', search)
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    prompts = []
+
+    def ask(prompt):
+        prompts.append(prompt)
+        if '조사 후보를 고르세요.' in prompt:
+            assert '2027시험준비물' not in prompt
+            assert '2026 시험 준비물' not in prompt
+            return {'candidates': [{'keyword': '2027시험준비물'}, {'keyword': '면접준비물'}]}
+        return analysis('면접준비물')
+
+    monkeypatch.setattr(market, 'ask', ask)
+    titles = ['원래 발행 제목']
+    report = market.select_category('취업', 1, titles, excluded_keywords=['2026 시험 준비물'])
+    assert [row['keyword'] for row in report['selected']] == ['면접준비물']
+    assert report['excluded_keywords'] == ['시험준비물']
+    search.assert_called_once_with('면접준비물')
+    assert titles == ['원래 발행 제목'] and stats == before
+    assert '기존 제목: ["원래 발행 제목"]' in prompts[0]
+
+
+@pytest.mark.parametrize('excluded', ['시험준비물', [None], [''], [123]])
+def test_invalid_temporary_keyword_exclusions_fail_before_provider_calls(monkeypatch, excluded):
+    demand = Mock(side_effect=AssertionError('must not request measurements'))
+    monkeypatch.setattr(market, 'demand_candidates', demand)
+    with pytest.raises(ValueError, match='^Invalid excluded market keywords$'):
+        market.select_category('취업', 1, [], excluded_keywords=excluded)
+    demand.assert_not_called()
+
+
 def test_pool_keeps_measured_longtails_and_excludes_keyword_variants():
     stats = {f'브랜드이름{i}': {'keyword': f'브랜드이름{i}', 'monthly': 100000 - i}
              for i in range(80)}

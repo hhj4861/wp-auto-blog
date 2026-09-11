@@ -711,17 +711,23 @@ def _review_with_source_recovery(keyword, category, now, results, sources, *,
     return item, retry_reason, retrace, {**retry, 'source_recovery': recovery}
 
 
-def select_category(category, top_n=2, titles=None):
+def select_category(category, top_n=2, titles=None, *, excluded_keywords=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
     if type(top_n) is not int or not 1 <= top_n <= 5:
         raise ValueError('top_n must be between 1 and 5')
+    if excluded_keywords is not None and (
+            not isinstance(excluded_keywords, (list, tuple, set))
+            or any(not isinstance(keyword, str) or not norm(keyword) for keyword in excluded_keywords)):
+        raise ValueError('Invalid excluded market keywords')
+    excluded_keys = {norm(keyword) for keyword in excluded_keywords or []}
     now = datetime.now(timezone.utc).isoformat()
     seeds = list(CATEGORIES[category])
     stats = demand_candidates(seeds)
     titles = existing_titles() if titles is None else titles
     stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
-    pool = candidate_pool(stats, titles, category)
+    pool = candidate_pool({key: row for key, row in stats.items()
+                           if norm(row['keyword']) not in excluded_keys}, titles, category)
     if not pool:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
@@ -919,6 +925,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                                    else 'naver_related_keywords'),
             'measured_candidates': len(stats), 'evaluated_candidates': len(seen),
             'research_pool_size': len(pool), 'selected': selected[:top_n], 'held': held, 'rejected': rejected,
+            'excluded_keywords': sorted(excluded_keys),
             'selection_scope': 'highest_score_among_evaluated', 'proposal_rounds': proposal_rounds,
             'ranked_candidates': selected, 'candidate_decisions': decisions,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '

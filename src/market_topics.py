@@ -232,6 +232,7 @@ def candidate_pool(stats, titles, category=None):
     """Mix measured long-tail questions with demand leaders before AI shortlisting."""
     ranked = sorted((row for row in stats.values()
                      if not duplicate(row['keyword'], row['keyword'], titles)
+                     and not suitability.content_capability_issues(row['keyword'])
                      and (category is None or category_matches(row['keyword'], category))),
                     key=lambda row: -row['monthly'])
     specific = [row for row in ranked if specificity_score(row['keyword']) == 15
@@ -500,6 +501,9 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
         audit['official_sources'] = _source_diagnostics(sources)
     if not category_matches(keyword, category):
         return None, 'category mismatch'
+    capability_issues = suitability.content_capability_issues(keyword)
+    if capability_issues:
+        return None, capability_issues[0]
     if not sources:
         return None, 'no accessible official source supports topic'
     source_only = evidence_mode == 'official_pages'
@@ -524,6 +528,9 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
 공식 본문으로 뒷받침할 수 있는 주제를 고르세요.
 공식 자료가 메뉴뿐이거나 무관하거나, 종료된 신청/마감된 채용이면 supported=false.
 카테고리가 맞지 않거나 홈페이지 이동/상품 구매만 원하는 검색, 개인별 진단·치료 권유도 false.
+현재 출력은 정보 안내 글이며 입력값을 받아 동작하는 계산기 등 도구를 제공하거나 검증하지 않습니다.
+도구 자체가 주된 요구이면 supported=false입니다. 수식·예시표·외부 링크로 도구 제공을 대신하지 마세요.
+계산 방법·계산기 사용법은 그 정보형 검색어 자체가 별도로 실측됐을 때만 검토하세요.
 제목 topic에는 검색어를 유지하세요. intent에는 구체적인 독자 질문, gap에는 이 글에 추가할
 출처로 검증 가능한 표·체크리스트·절차 등의 독자 가치를 적으세요. 근거 없는 차별점은 금지합니다.
 월검색량은 원래 검색어 전체의 수요입니다. 'ITQ자격증조회'를 '장기 미접속 로그인 오류'만의
@@ -736,6 +743,8 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 해당 후보의 상승률이 아닙니다. related 후보의 monthly만 그 후보를 별도로 측정한 수요입니다.
 검색량만 큰 포괄어보다 카테고리에 맞는 구체적인 질문/절차/조건/준비물 검색어를 우선하세요.
 홈페이지 이동/상품명만의 검색과 개인별 진단·치료 권유는 제외하세요. 기존 글과 같은 검색 목적은 제외하세요.
+현재 글 작성기는 실제 계산기 등 동작 도구를 제공하지 않습니다. 도구 자체를 원하는 후보는 제외하세요.
+계산 방법·계산기 사용법을 고르려면 아래 목록에 그 정보형 검색어 자체의 실측 수요가 있어야 합니다.
 실측된 중소 검색량 롱테일 후보도 포함하세요. 제목/URL/차별점은 아직 만들지 마세요.
 월 5만 미만이며 질문/조건/방법/일정 등 구체적인 정보 수요가 있는 후보를 우선 포함하세요.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.

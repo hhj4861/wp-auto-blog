@@ -129,7 +129,11 @@ def issues(item, now=None):
 def review_article(title, html, description, brief, call_llm):
     """Check the final article against approved intent; a narrower answer stays a draft."""
     from bs4 import BeautifulSoup
+    from src.topic_suitability import content_capability_issues
 
+    capability_issues = content_capability_issues(brief.get('keyword') if isinstance(brief, dict) else None)
+    if capability_issues:
+        return capability_issues
     if issues(brief) or not all(isinstance(value, str) for value in (title, html, description)):
         return ['검색 의도 검수 입력이 유효하지 않음']
     soup = BeautifulSoup(html, 'html.parser')

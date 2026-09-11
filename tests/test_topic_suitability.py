@@ -79,6 +79,66 @@ def test_sufficient_evergreen_question_does_not_require_an_invented_trend():
     assert '큰 월 검색량으로 범위를 넓힐 수 없습니다' in prompt
 
 
+@pytest.mark.parametrize('keyword', ['부가가치세계산기', '부가가치세 계산기',
+                                    '  부가가치세 계 산 기  ', '부가가치세\u3000계산기', '계산기'])
+def test_terminal_calculator_demand_requires_an_unavailable_interactive_tool(keyword):
+    assert suitability.content_capability_issues(keyword) == ['interactive_tool_required']
+
+
+@pytest.mark.parametrize('keyword', ['부가가치세계산방법', '부가가치세 계산 방법',
+                                    '부가가치세계산기사용법', '계산기 사용법'])
+def test_separately_measured_informational_queries_keep_the_existing_validation(keyword):
+    text = '국세청 안내: 공급가액과 세액을 구분하고 계산 방법의 적용 대상을 확인합니다.'
+    item = candidate(keyword, [source(text, 'https://www.nts.go.kr/synthetic-vat-guide')])
+    item['monthly_search'] = 1230  # Synthetic demand for this exact informational query.
+    raw = review(item, quote=text, entity='국세청', context='system_rules')
+    llm = attach(item, raw)
+    assert suitability.content_capability_issues(keyword) == []
+    assert suitability.issues(item, NOW) == []
+    assert item['keyword'] == keyword and item['monthly_search'] == 1230
+    assert '독립적으로 실측된 정보형 검색어' in llm.call_args.args[0]
+    # Eligibility does not excuse an unsupported core answer or an expired cache.
+    raw['required_facets'][0]['supported'] = False
+    attach(item, raw)
+    assert 'unverified_source_coverage' in suitability.issues(item, NOW)
+    assert 'stale_topic_suitability' in suitability.issues(item, NOW + timedelta(hours=37))
+
+
+@pytest.mark.parametrize('disguised', [False, True])
+def test_cached_positive_calculator_review_cannot_be_saved_by_formula_only_topic(disguised):
+    text = '국세청 안내: 공급가액과 세액을 구분하고 계산 방법의 적용 대상을 확인합니다.'
+    item = candidate('부가가치세계산기', [source(text, 'https://www.nts.go.kr/synthetic-vat-guide')])
+    item.update(monthly_search=9870, publish_eligible=True, hold_reasons=[])
+    if disguised:
+        item.update(topic='부가가치세계산기: 공급가액 계산방법과 예시 표',
+                    intent='직접 입력하는 도구 없이 계산 공식과 표로 계산하는 방법은 무엇인가요?',
+                    gap='공식 자료의 계산 방법과 예시 표를 안내합니다.')
+    raw = review(item, quote=text, entity='국세청', context='system_rules')
+    attach(item, raw)
+    cached = json.loads(json.dumps(item))
+    assert cached['suitability_evidence']['review']['scope'] == 'full_keyword'
+    assert all(row['supported'] is True for row in cached['suitability_evidence']['review']['required_facets'])
+    assert suitability.issues(cached, NOW) == ['interactive_tool_required']
+    assert cached == item  # Guard never rewrites the query, measurement, or saved evidence.
+
+
+@pytest.mark.parametrize('keyword', [None, 123, True, [], {}, '', '   ', '\u3000'])
+def test_invalid_capability_inputs_and_incomplete_plans_never_approve(keyword):
+    assert suitability.content_capability_issues(keyword) == ['unverified_topic_suitability']
+    item = candidate()
+    item['keyword'] = keyword
+    assert suitability.issues(item, NOW) == ['unverified_topic_suitability']
+
+
+def test_review_prompt_does_not_treat_formulas_tables_or_links_as_working_calculators():
+    item = candidate()
+    llm = attach(item)
+    prompt = llm.call_args.args[0]
+    assert '입력값에 따라 결과를 계산하는 동작 도구를 제공하지 않습니다' in prompt
+    assert '계산 공식·예시 표·외부 링크 안내로 대체해 full_keyword로 승인하지' in prompt
+    assert '제목에서 계산방법으로 바꿔도 같은 수요로 인정하지' in prompt
+
+
 def test_review_prompt_limits_facets_to_core_promises_and_distinguishes_tax_years():
     item = candidate()
     llm = attach(item)

@@ -50,6 +50,20 @@ def _compact(value):
     return re.sub(r'\s+', '', unicodedata.normalize('NFKC', value)).casefold()
 
 
+def content_capability_issues(keyword):
+    """Reject terminal calculator demand that the current article cannot serve.
+
+    This conservative rule uses the measured keyword, never a rewritten title or
+    plan. It does not claim to detect every tool intent. Informational calculator
+    usage/method queries still require their own demand and all ordinary gates.
+    """
+    if not _text(keyword, maximum=2000):
+        return ['unverified_topic_suitability']
+    if _compact(keyword).endswith('계산기'):
+        return ['interactive_tool_required']
+    return []
+
+
 def _clock(now):
     value = datetime.fromisoformat(now) if isinstance(now, str) else now
     if not isinstance(value, datetime) or value.tzinfo is None or value.utcoffset() is None:
@@ -168,6 +182,11 @@ def review_plan(item, now, call_llm):
         '실제 검색결과에서 확인된 질문과 기획이 약속한 답변에서 도출하세요. '
         '모든 가능한 부수 주제를 백과사전식 필수 항목으로 늘리지 마세요. '
         '기획이 검색어의 핵심 요구보다 좁으면 여전히 narrower_query입니다. '
+        '현재 발행 기능은 안내 글이며, 입력값에 따라 결과를 계산하는 동작 도구를 제공하지 않습니다. '
+        '실제로 작동하는 계산기 요구를 계산 공식·예시 표·외부 링크 안내로 대체해 full_keyword로 '
+        '승인하지 마세요. 원래 계산기 검색어를 제목에서 계산방법으로 바꿔도 같은 수요로 인정하지 않습니다. '
+        '계산방법·계산기 사용법처럼 독립적으로 실측된 정보형 검색어는 해당 질문 전체의 공식 근거와 '
+        '기존 범위·현재성 검증을 충족하면 안내 글로 검토할 수 있습니다. '
         '제공된 실제 공식 본문이 그 답변 범위를 충분히 지원하는지 판단하세요. '
         '출제기준 등의 적용 시점만 안내하겠다고 약속한 경우, 구체적인 변경 내용까지 자동으로 '
         '필수화하지 마세요. 다만 현재 학습 범위나 접수 절차처럼 핵심 질문 또는 기획의 약속을 '
@@ -336,6 +355,9 @@ def issues(item, now=None):
     """Recheck bindings, actual quotes, scope and the current date; never trust a pass flag."""
     try:
         snapshot, clock = _snapshot(item), _clock(now or datetime.now(timezone.utc))
+        capability_problems = content_capability_issues(item['keyword'])
+        if capability_problems:
+            return capability_problems
         data = item.get('suitability_evidence')
         if (not isinstance(data, dict) or type(data.get('version')) is not int
                 or data['version'] != VERSION or data.get('failure_code') is not None):

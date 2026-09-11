@@ -557,6 +557,19 @@ def test_final_article_review_uses_approved_scope_and_accepts_a_real_body_quote(
     assert 'FAQ 한 줄' in prompt
 
 
+def test_calculator_body_cannot_use_text_model_approval_as_functional_validation():
+    from tests.test_market_topics import candidate as market_candidate
+
+    keyword = '부가가치세계산기'
+    item = market_candidate(category='생활정보', keyword=keyword, keywords=[keyword],
+                            topic=keyword + ' 계산방법', intent='공급가액 계산방법은 무엇인가?')
+    assert not opportunity.issues(item)
+    model = Mock(return_value=article_response())
+    assert opportunity.review_article(item['topic'], '<p>공급가액 계산식과 예시표를 안내합니다.</p>', '',
+                                      item, model) == ['interactive_tool_required']
+    model.assert_not_called()
+
+
 def test_narrow_login_only_article_stays_held_when_scope_reviewer_rejects_it(approved_article_brief):
     # Whether this answer is too narrow belongs to the model. False must be enforced
     # even though the keyword is in the title and its answer_quote exists in the body.

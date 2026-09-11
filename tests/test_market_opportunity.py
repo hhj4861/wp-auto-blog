@@ -66,6 +66,76 @@ def candidate(*, results=None, proposed_review=None, provider='google_custom_sea
     return item
 
 
+def spaced_candidate():
+    item = candidate(provider='codex_native_search')
+    item['organic_query'] = 'ITQ 자격증 조회'
+    bound = search_quality.review_search(
+        KEYWORD, item['organic_provider'], item['organic_results'], item['selected_at'],
+        Mock(return_value={'decisions': [
+            {'result_index': i, 'relevant': True, 'quote': row['snippet']}
+            for i, row in enumerate(item['organic_results'])]}),
+        executed_query=item['organic_query'])
+    item['opportunity_evidence'] = opportunity.assess(
+        KEYWORD, TOPIC, INTENT, item['organic_provider'], item['organic_results'], review(),
+        item['selected_at'], bound, executed_query=item['organic_query'])
+    return item
+
+
+def test_spaced_executed_query_keeps_original_keyword_intent_and_metrics():
+    item = spaced_candidate()
+    data = item['opportunity_evidence']
+    assert opportunity.issues(item, NOW) == []
+    assert data['query'] == data['target_keyword'] == KEYWORD
+    assert data['executed_query'] == item['organic_query'] == 'ITQ 자격증 조회'
+    assert data['search_review']['executed_query'] == item['organic_query']
+    assert data['topic'] == TOPIC and data['intent'] == INTENT
+    assert data['version'] == 2
+    assert data['search_metrics'] == candidate()['opportunity_evidence']['search_metrics']
+
+
+@pytest.mark.parametrize('actual', [None, KEYWORD, 'ITQ자격증 조회', 'ITQ 자격증  조회',
+                                    'ITQ 성적 조회', 'itq 자격증 조회', True, [], {}])
+def test_item_actual_query_cannot_change_after_review(actual):
+    item = spaced_candidate()
+    item['organic_query'] = actual
+    assert opportunity.issues(item, NOW)
+
+
+@pytest.mark.parametrize('location', ['item', 'evidence', 'search_review'])
+def test_spaced_query_cannot_hide_its_actual_query_as_legacy(location):
+    item = spaced_candidate()
+    if location == 'item':
+        del item['organic_query']
+    elif location == 'evidence':
+        del item['opportunity_evidence']['executed_query']
+    else:
+        del item['opportunity_evidence']['search_review']['executed_query']
+    assert opportunity.issues(item, NOW)
+
+
+@pytest.mark.parametrize('stored', [None, KEYWORD, 'ITQ자격증 조회', 'ITQ 자격증  조회',
+                                    'ITQ 성적 조회', 'itq 자격증 조회', True, [], {}])
+def test_opportunity_actual_query_is_validated_independently_of_nested_review(stored):
+    item = spaced_candidate()
+    item['opportunity_evidence']['executed_query'] = stored
+    rejection(item, 'search_evidence_binding_mismatch')
+
+
+def test_legacy_opportunity_and_search_review_with_original_keyword_remain_valid():
+    item = candidate()
+    item['opportunity_evidence'].pop('executed_query')
+    assert 'executed_query' not in item['opportunity_evidence']['search_review']
+    assert opportunity.issues(item, NOW) == []
+
+
+def test_assess_without_actual_query_does_not_authorize_a_spaced_search_review():
+    item = spaced_candidate()
+    item['opportunity_evidence'] = opportunity.assess(
+        KEYWORD, TOPIC, INTENT, item['organic_provider'], item['organic_results'], review(),
+        item['selected_at'], item['opportunity_evidence']['search_review'])
+    rejection(item, 'search_evidence_binding_mismatch')
+
+
 def rejection(item, reason=None):
     problems = opportunity.issues(item, NOW)
     assert isinstance(problems, list)

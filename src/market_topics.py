@@ -26,6 +26,7 @@ from src import market_opportunity as opportunity
 from src import topic_suitability as suitability
 from src.market_opportunity import review_search
 from src.topic_suitability import review_plan
+from src.search_query import validated_search_query
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -717,6 +718,7 @@ def select_category(category, top_n=2, titles=None):
     if not pool:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
+    executed_queries = {}
     proposal_rounds = []
     recovery_budget = {'attempts': 0}
     rounds = 0
@@ -738,17 +740,34 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 월 5만 미만이며 질문/조건/방법/일정 등 구체적인 정보 수요가 있는 후보를 우선 포함하세요.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
 각 후보의 reason에는 지금 조사할 이유를 적으세요. 확인하지 않은 상승률·경쟁 우위는 주장하지 마세요.
-JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현재 독자 질문에 근거한 조사 이유"}}]}}
+search_query에는 같은 검색어를 자연스러운 한국어 띄어쓰기로 적으세요.
+예: 대상포진초기증상 → 대상포진 초기 증상, 전기기사시험일정 → 전기기사 시험 일정.
+ASCII 공백만 추가·제거할 수 있습니다. 문자·숫자·기호·대소문자를 바꾸거나 연도·설명·검색 연산자를 추가하면 안 됩니다.
+keyword는 반드시 아래 실측 목록의 원문을 그대로 유지하세요. 검색량은 그 원래 keyword의 측정값입니다.
+JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색어의 띄어쓰기만 보정","reason":"실측 수요와 현재 독자 질문에 근거한 조사 이유"}}]}}
 후보: {json.dumps([candidate_prompt_row(row) for row in remaining], ensure_ascii=False)}
 기존 제목: {json.dumps(titles, ensure_ascii=False)}
-이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}""")
+이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}
+출처 범위·현재성 부족 등으로 보류한 후보: {json.dumps([{'keyword': x['keyword'], 'reasons': x['hold_reasons']} for x in held], ensure_ascii=False)}
+앞서 보류한 포괄어를 반복하기보다, 목록 안에서 전체 질문을 공식 근거로 답할 수 있는 다른 실측 후보를 조사하세요.""")
         candidates = proposals.get('candidates', []) if isinstance(proposals, dict) else []
         if not isinstance(candidates, list):
             candidates = []
+        proposed = []
+        for proposal in candidates[:PROPOSALS_PER_ROUND]:
+            if not isinstance(proposal, dict):
+                continue
+            record = {'keyword': proposal.get('keyword'),
+                      'reason': proposal.get('reason', '')[:500] if isinstance(proposal.get('reason', ''), str) else ''}
+            try:
+                proposed_query = proposal.get('search_query')
+                record['search_query'] = validated_search_query(proposal.get('keyword'),
+                    proposal.get('keyword') if proposed_query is None else proposed_query)
+            except ValueError:
+                record['query_status'] = 'invalid_search_query'
+            proposed.append(record)
         proposal_rounds.append({'round': rounds, 'offered_keywords': [x['keyword'] for x in remaining],
-            'proposals': [{'keyword': p.get('keyword'),
-                           'reason': p.get('reason', '')[:500] if isinstance(p.get('reason', ''), str) else ''}
-                          for p in candidates[:PROPOSALS_PER_ROUND] if isinstance(p, dict)]})
+                               'proposals': proposed})
         allowed = {row['keyword'] for row in remaining}
         attempted_before = len(seen)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
@@ -760,27 +779,36 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현
             if not category_matches(keyword, category):
                 rejected.append({'keyword': keyword, 'reason': 'category mismatch'})
                 continue
+            try:
+                proposed_query = proposal.get('search_query')
+                query = validated_search_query(keyword, keyword if proposed_query is None else proposed_query)
+            except ValueError:
+                rejected.append({'keyword': keyword, 'reason': 'invalid search query transformation'})
+                continue
             row = stats[keyword]
-            provider, results = search_results(keyword)
+            executed_queries[keyword] = query
+            provider, results = search_results(query)
             # Preserve original positions and rejected rows in the audit denominator.
             results = results[:10] if isinstance(results, list) else []
             search_review, metrics = None, None
             relevant_results = []
             if results:
                 try:
-                    search_review = review_search(keyword, provider, results, now, ask)
-                    search_problems = opportunity.quality_issues(keyword, provider, results, now, search_review)
+                    search_review = review_search(keyword, provider, results, now, ask, executed_query=query)
+                    search_problems = opportunity.quality_issues(keyword, provider, results, now, search_review,
+                                                                executed_query=query)
                     if search_problems:
                         rejected.append({'keyword': keyword, 'reason': 'search quality insufficient',
                             'hold_reasons': search_problems, 'monthly_search': row['monthly'],
-                            'organic_provider': provider, 'organic_results': results,
+                            'organic_provider': provider, 'organic_query': query, 'organic_results': results,
                             'search_review': search_review})
                         continue
-                    metrics = opportunity.search_metrics(keyword, provider, results, now, search_review)
+                    metrics = opportunity.search_metrics(keyword, provider, results, now, search_review,
+                                                         executed_query=query)
                     relevant_results = [results[index] for index in metrics['relevant_indices']]
                 except (RuntimeError, ValueError, TypeError, KeyError):
                     rejected.append({'keyword': keyword, 'reason': 'search relevance review unavailable',
-                        'monthly_search': row['monthly'], 'organic_provider': provider,
+                        'monthly_search': row['monthly'], 'organic_provider': provider, 'organic_query': query,
                         'organic_results': results})
                     continue
             mode, research = 'serp', None
@@ -831,7 +859,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현
                 'advertising_competition': row.get('comp'),
                 **({'cak_provenance': cak_provenance} if cak_provenance is not None else {}),
                 'evidence_mode': mode, 'research_evidence': research,
-                'organic_provider': provider, 'organic_domains': domains, 'organic_results': results,
+                'organic_provider': provider, 'organic_query': query,
+                'organic_domains': domains, 'organic_results': results,
                 'dominant_result_ratio': dominance, 'score_components': components,
                 'trend_growth': growth, 'trend_provider': None if direct_rising else 'google_trends_relative_7d_vs_previous_7d',
                 'trend_status': 'cak_measured' if direct_rising else ('measured' if growth is not None else 'unavailable'),
@@ -841,7 +870,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현
                 candidate['decision_diagnostics'] = audit
             candidate['opportunity_evidence'] = opportunity.assess(
                 keyword, item['topic'], item['intent'], provider, results, review, now,
-                search_review=search_review)
+                search_review=search_review, executed_query=query)
             reasons = opportunity.issues(candidate, datetime.fromisoformat(now))
             if not reasons:
                 candidate['suitability_evidence'] = review_plan(candidate, datetime.fromisoformat(now), ask)
@@ -871,6 +900,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현
                       'score': item['score'], 'status': 'held', 'reasons': item['hold_reasons']} for item in held)
     decisions.extend({'keyword': item['keyword'], 'status': 'rejected', 'reason': item['reason'],
                       'monthly_search': stats.get(item['keyword'], {}).get('monthly')} for item in rejected)
+    for decision in decisions:
+        decision['organic_query'] = executed_queries.get(decision['keyword'])
     return {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
@@ -886,6 +917,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현
                      'source evidence; model-reported locators prove neither indexing nor native page visits. '
                      'Missing competition or unverified topic intent prevents automatic publication. '
                      'Monthly demand belongs to the exact keyword, never an unmeasured narrower question. '
+                     'The executed organic query may change ASCII spacing only; its binding is retained. '
                      'CAK exact rising candidates use their own daily trend score; related discoveries use '
                      'only their own Google trend. Null Google trend means unavailable or not requested.'}
 
@@ -996,7 +1028,8 @@ def current_priority(item):
         domains = [row['domain'] for _, row in opportunity.sample_rows(item['organic_results'])]
         components = score_components(item['monthly_search'], domains, item['keyword'], growth)
         metrics = opportunity.search_metrics(item['keyword'], item['organic_provider'], item['organic_results'],
-            item['selected_at'], item['opportunity_evidence'].get('search_review'))
+            item['selected_at'], item['opportunity_evidence'].get('search_review'),
+            executed_query=item.get('organic_query'))
         components['organic_opportunity'] = metrics['organic_opportunity']
         components.pop('specificity')
         components['intent_fit'] = 15

@@ -1,4 +1,4 @@
-"""Read three fixed public sources; accessibility alone is not approval to publish."""
+"""Read fixed public sources; accessibility alone is not approval to publish."""
 import argparse
 import json
 import logging
@@ -14,6 +14,10 @@ CASES = (
     ('nts_original', 'https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=5850&nttSn=1349564'),
     ('nts_mirror', 'https://webtv.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1349564'),
     ('korea_policy', 'https://www.korea.kr/news/policyNewsView.do?newsId=148960444'),
+    ('nts_invoice_primary_selected', 'https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2453'),
+    ('nts_invoice_primary_menu', 'https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7788&mi=2462'),
+    ('nts_invoice_secondary_selected', 'https://t.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463'),
+    ('nts_invoice_secondary_canonical', 'https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7789&mi=2463'),
 )
 SOURCE_FIELDS = ('url', 'original_url', 'title', 'checked_on', 'sha256', 'excerpt')
 logger = logging.getLogger(__name__)

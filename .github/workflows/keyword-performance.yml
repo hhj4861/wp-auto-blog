@@ -1,0 +1,33 @@
+name: Keyword Performance Review
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * *' # 12:30 KST, read-only per-keyword 7/28-day cohorts
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests google-auth
+      - name: Read published keyword performance
+        env:
+          GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
+          GSC_SITE_URL: https://trendpulse.blog/
+        run: python scripts/report_keyword_performance.py --output "$RUNNER_TEMP/keyword-performance.json"
+      - name: Save evidence including pending or unavailable windows
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyword-performance
+          path: ${{ runner.temp }}/keyword-performance.json
+          if-no-files-found: warn
+          retention-days: 90

@@ -6,6 +6,7 @@ from unittest.mock import Mock
 import pytest
 
 from scripts import publish_codex_draft as module
+from tests.test_market_topics import candidate, organic_sample, web_evidence
 
 
 def test_metadata_is_generated_from_existing_body():
@@ -65,30 +66,21 @@ def market_case(tmp_path, monkeypatch):
             + '<h2 id="levels">확인 기준</h2><p>근거 없는 주장</p>'
             + '<section id="verified-sources">'
             + ''.join(f'<a href="{url}">자료</a>' for url in urls) + '</section></div>')
-    search_rows = [{'url': f'https://{domain}/{index}', 'domain': domain,
-                    'title': keyword + ' 정상범위와 진단 기준',
-                    'snippet': keyword + '의 진단 기준과 관리 목표를 구분해 안내합니다.'}
-                   for index, domain in enumerate(('guide.example', 'clinic.example',
-                                                   'health.example', 'guide.example', 'clinic.example'))]
-    brief = {'source': module.market.SOURCE, 'selection_version': 5, 'category': '건강',
-             'keyword': keyword, 'keywords': [keyword], 'topic': topic, 'intent': '기준 확인',
-             'gap': '진단과 관리 목표의 차이', 'status': 'held_draft',
-             'selected_at': datetime.now(timezone.utc).isoformat(), 'monthly_search': 24610,
-             'score': 90, 'source_url': urls[0], 'evidence_mode': 'serp',
-             'score_components': {'demand': 35, 'organic_opportunity': 40, 'intent_fit': 15, 'trend': 0},
-             'trend_growth': None, 'trend_status': 'unavailable',
-             'publish_eligible': True, 'hold_reasons': [], 'demand_scope': 'keyword_total',
-             'organic_provider': 'google_custom_search',
-             'verified_sources': [{'url': url, 'excerpt': '저장된 이전 근거'} for url in urls],
-             'organic_results': search_rows, 'organic_domains': [row['domain'] for row in search_rows],
-             'intent_results': [row['url'] for row in search_rows[:2]]}
-    brief['opportunity_evidence'] = {
-        'version': 1, 'query': keyword, 'topic': topic, 'intent': brief['intent'],
-        'provider': 'google_custom_search', 'checked_at': brief['selected_at'],
-        'result_count': 5, 'domain_count': 3, 'dominant_ratio': 0,
-        'scope': 'full_keyword', 'target_keyword': keyword,
-        'matches': [{'result_index': index, 'quote': row['snippet']}
-                    for index, row in enumerate(search_rows[:2])]}
+    search_rows = organic_sample(keyword)
+    saved_sources = [web_evidence(url, excerpt=(
+        '공식 학회가 저장 당시 안내한 정상범위와 진단 기준입니다. '
+        + ('진단 기준과 조절 목표를 구분해 설명합니다. ' if index == 0
+           else '정상범위와 전단계는 진단 기준 표와 함께 확인합니다. ')
+        + '저장된 이전 근거이므로 복구 작성에는 새로 읽은 원문을 사용합니다. ') * 3)
+        for index, url in enumerate(urls)]
+    brief = candidate(category='건강', keyword=keyword, keywords=[keyword], topic=topic,
+                      intent='기준 확인', gap='진단과 관리 목표의 차이', status='held_draft',
+                      monthly_search=24610, score=74, source_url=urls[0],
+                      score_components={'demand': 35, 'organic_opportunity': 24,
+                                        'intent_fit': 15, 'trend': 0},
+                      verified_sources=saved_sources, organic_results=search_rows,
+                      organic_domains=[row['domain'] for row in search_rows],
+                      intent_results=[row['url'] for row in search_rows[:2]])
     assert module.market.fresh_market_item(dict(brief, status='pending'), '건강')
     original = {'id': 1724, 'status': 'draft', 'slug': 'a1c-levels', 'title': {'raw': topic},
                 'content': {'raw': body}, 'excerpt': {'raw': '설명'}, 'meta': {},
@@ -97,7 +89,12 @@ def market_case(tmp_path, monkeypatch):
     registry = [{'topic': topic, 'title': topic, 'keywords': [keyword], 'category': '건강'}]
     (data / 'topic_queue_general.json').write_text(json.dumps(queue), encoding='utf-8')
     (data / 'post_registry_general.json').write_text(json.dumps(registry), encoding='utf-8')
-    sources = [{'url': url, 'excerpt': '최신 공식 자료로 확인된 기준', 'checked_on': '2026-09-10'} for url in urls]
+    sources = [web_evidence(url, excerpt=(
+        '최신 공식 자료로 확인된 기준을 사용합니다. '
+        + ('진단 기준은 관리 목표와 구분해 읽어야 합니다. ' if index == 0
+           else '정상과 전단계의 구분은 진단 기준과 함께 확인해야 합니다. ')
+        + '검사 결과의 해석에는 실제 진단 기준과 검사 목적을 확인합니다. ') * 3)
+        for index, url in enumerate(urls)]
     fetch = Mock(side_effect=lambda url: copy.deepcopy(next(source for source in sources if source['url'] == url)))
     monkeypatch.setattr(module, 'fetch_source', fetch)
     state = {'current': copy.deepcopy(original), 'posted': False, 'post_status': 200,
@@ -144,7 +141,8 @@ def market_case(tmp_path, monkeypatch):
             return json.dumps(metadata)
         if 'correcting an existing Korean article' in prompt:
             payload = json.loads(prompt.split('\n', 1)[1])
-            assert all(source['excerpt'] == '최신 공식 자료로 확인된 기준' for source in payload['sources'])
+            assert [source['excerpt'] for source in payload['sources']] == [source['excerpt'] for source in sources]
+            assert all(source['excerpt'] not in prompt for source in saved_sources)
             return payload['article'].replace('근거 없는 주장', '공식 자료로 확인된 기준')
         if 'conservative Korean editorial fact checker' in prompt:
             return json.dumps({'issues': ['공식 근거 없는 주장 삭제'] if '근거 없는 주장' in prompt else []})

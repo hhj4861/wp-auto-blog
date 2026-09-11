@@ -23,6 +23,9 @@ from src.market_search import search_results
 from src.cak_candidates import (load_candidate_export, measurement_key, qualified_rising,
                                 valid_cak_provenance)
 from src import market_opportunity as opportunity
+from src import topic_suitability as suitability
+from src.market_opportunity import review_search
+from src.topic_suitability import review_plan
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -48,7 +51,7 @@ CATEGORY_TERMS = {
              '기초연금', '청년월세', '전입신고', '전세보증금'),
 }
 SOURCE = 'category_market_v1'
-PROCESS_VERSION = 5
+PROCESS_VERSION = 6
 MAX_RESEARCH_ROUNDS = 2
 PROPOSALS_PER_ROUND = 6
 MAX_SOURCE_RECOVERIES = 2
@@ -96,7 +99,7 @@ def historical_terms():
         for row in json.loads(path.read_text()):
             if path == queue_path and row.get('status') not in ('completed', 'held_draft'):
                 continue
-            terms.extend(str(row.get(k, '')) for k in ('keyword', 'topic', 'title') if row.get(k))
+            terms.extend(str(row.get(k, '')) for k in ('keyword', 'topic', 'title', 'intent') if row.get(k))
             terms.extend(row.get('keywords') or [])
     return terms
 
@@ -110,6 +113,8 @@ def record_published_keyword(item, post_id, url):
     if not any(row['key'] == key for row in rows):
         rows.append({'key': key, 'keyword': item['keyword'], 'topic': item['topic'],
                      'category': item['category'], 'post_id': post_id, 'url': url,
+                     **{field: item.get(field) for field in ('selection_version', 'monthly_search', 'score',
+                         'score_components', 'trend_status', 'demand_provider')},
                      'published_at': datetime.now(timezone.utc).isoformat()})
         LEDGER.parent.mkdir(parents=True, exist_ok=True)
         temp = LEDGER.with_suffix('.tmp')
@@ -712,6 +717,7 @@ def select_category(category, top_n=2, titles=None):
     if not pool:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
+    proposal_rounds = []
     recovery_budget = {'attempts': 0}
     rounds = 0
     for _ in range(MAX_RESEARCH_ROUNDS):
@@ -731,13 +737,18 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 실측된 중소 검색량 롱테일 후보도 포함하세요. 제목/URL/차별점은 아직 만들지 마세요.
 월 5만 미만이며 질문/조건/방법/일정 등 구체적인 정보 수요가 있는 후보를 우선 포함하세요.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
-JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
+각 후보의 reason에는 지금 조사할 이유를 적으세요. 확인하지 않은 상승률·경쟁 우위는 주장하지 마세요.
+JSON만 반환: {{"candidates":[{{"keyword":"...","reason":"실측 수요와 현재 독자 질문에 근거한 조사 이유"}}]}}
 후보: {json.dumps([candidate_prompt_row(row) for row in remaining], ensure_ascii=False)}
 기존 제목: {json.dumps(titles, ensure_ascii=False)}
 이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}""")
         candidates = proposals.get('candidates', []) if isinstance(proposals, dict) else []
         if not isinstance(candidates, list):
             candidates = []
+        proposal_rounds.append({'round': rounds, 'offered_keywords': [x['keyword'] for x in remaining],
+            'proposals': [{'keyword': p.get('keyword'),
+                           'reason': p.get('reason', '')[:500] if isinstance(p.get('reason', ''), str) else ''}
+                          for p in candidates[:PROPOSALS_PER_ROUND] if isinstance(p, dict)]})
         allowed = {row['keyword'] for row in remaining}
         attempted_before = len(seen)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
@@ -751,7 +762,27 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                 continue
             row = stats[keyword]
             provider, results = search_results(keyword)
-            results = [result for _, result in opportunity.sample_rows(results)]
+            # Preserve original positions and rejected rows in the audit denominator.
+            results = results[:10] if isinstance(results, list) else []
+            search_review, metrics = None, None
+            relevant_results = []
+            if results:
+                try:
+                    search_review = review_search(keyword, provider, results, now, ask)
+                    search_problems = opportunity.quality_issues(keyword, provider, results, now, search_review)
+                    if search_problems:
+                        rejected.append({'keyword': keyword, 'reason': 'search quality insufficient',
+                            'hold_reasons': search_problems, 'monthly_search': row['monthly'],
+                            'organic_provider': provider, 'organic_results': results,
+                            'search_review': search_review})
+                        continue
+                    metrics = opportunity.search_metrics(keyword, provider, results, now, search_review)
+                    relevant_results = [results[index] for index in metrics['relevant_indices']]
+                except (RuntimeError, ValueError, TypeError, KeyError):
+                    rejected.append({'keyword': keyword, 'reason': 'search relevance review unavailable',
+                        'monthly_search': row['monthly'], 'organic_provider': provider,
+                        'organic_results': results})
+                    continue
             mode, research = 'serp', None
             if not results:
                 # Missing SERP cannot imply easy competition. Research only specific,
@@ -761,11 +792,11 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                     continue
                 mode, provider = 'official_pages', None
             domains = [result['domain'] for _, result in opportunity.sample_rows(results)]
-            dominance = gov_ratio(domains) if domains else None
+            dominance = metrics['known_dominant_ratio'] if metrics else None
             if dominance is not None and row['monthly'] >= HEAD_SEARCH_VOLUME and dominance > MAX_GOV_RATIO:
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
                 continue
-            sources = candidate_sources(keyword, results) if results else []
+            sources = candidate_sources(keyword, relevant_results) if results else []
             allow_recovery = bool(sources)
             if not sources:
                 try:
@@ -789,6 +820,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                              and qualified_rising(cak_provenance['item']))
             growth = None if direct_rising else fetch_trend_change(keyword)
             components = score_components(row['monthly'], domains, keyword, growth, evidence_mode=mode)
+            if metrics:
+                components['organic_opportunity'] = metrics['organic_opportunity']
             if cak_provenance is not None:
                 components['cak_trend'] = round(cak_provenance['item']['trend']['hotScore'] / 10, 2) if direct_rising else 0
             review = item.pop('intent_evidence', None)
@@ -807,8 +840,12 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
             if 'source_recovery' in audit:
                 candidate['decision_diagnostics'] = audit
             candidate['opportunity_evidence'] = opportunity.assess(
-                keyword, item['topic'], item['intent'], provider, results, review, now)
+                keyword, item['topic'], item['intent'], provider, results, review, now,
+                search_review=search_review)
             reasons = opportunity.issues(candidate, datetime.fromisoformat(now))
+            if not reasons:
+                candidate['suitability_evidence'] = review_plan(candidate, datetime.fromisoformat(now), ask)
+                reasons.extend(suitability.issues(candidate, datetime.fromisoformat(now)))
             # Lexical specificity is only for discovery. Final points require search-backed intent.
             components.pop('specificity')
             components['intent_fit'] = 15 if not reasons else 0
@@ -823,6 +860,17 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
             break
     selected.sort(key=lambda item: -item['score'])
     held.sort(key=lambda item: -item['score'])
+    chosen_keywords = {item['keyword'] for item in selected[:top_n]}
+    decisions = [
+        {'keyword': item['keyword'], 'monthly_search': item['monthly_search'], 'rank': rank,
+         'score': item['score'], 'score_components': item['score_components'],
+         'status': 'selected' if item['keyword'] in chosen_keywords else 'eligible_not_selected',
+         'reason': 'highest_score_among_evaluated' if item['keyword'] in chosen_keywords else 'selection_limit'}
+        for rank, item in enumerate(selected, 1)]
+    decisions.extend({'keyword': item['keyword'], 'monthly_search': item['monthly_search'],
+                      'score': item['score'], 'status': 'held', 'reasons': item['hold_reasons']} for item in held)
+    decisions.extend({'keyword': item['keyword'], 'status': 'rejected', 'reason': item['reason'],
+                      'monthly_search': stats.get(item['keyword'], {}).get('monthly')} for item in rejected)
     return {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
@@ -831,6 +879,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"..."}}]}}
                                    else 'naver_related_keywords'),
             'measured_candidates': len(stats), 'evaluated_candidates': len(seen),
             'research_pool_size': len(pool), 'selected': selected[:top_n], 'held': held, 'rejected': rejected,
+            'selection_scope': 'highest_score_among_evaluated', 'proposal_rounds': proposal_rounds,
+            'ranked_candidates': selected, 'candidate_decisions': decisions,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '
                      'organic provider is recorded per candidate. Independently fetched official pages are '
                      'source evidence; model-reported locators prove neither indexing nor native page visits. '
@@ -929,7 +979,8 @@ def fresh_market_item(item, category, now=None):
     return (fresh_research_item(item, category, now)
             and item.get('status') == 'pending' and item.get('publish_eligible') is True
             and not item.get('hold_reasons') and item.get('demand_scope') == 'keyword_total'
-            and not opportunity.issues(item, now) and current_priority(item))
+            and not opportunity.issues(item, now) and not suitability.issues(item, now)
+            and current_priority(item))
 
 
 def current_priority(item):
@@ -944,14 +995,18 @@ def current_priority(item):
         status = 'cak_measured' if rising else ('measured' if growth is not None else 'unavailable')
         domains = [row['domain'] for _, row in opportunity.sample_rows(item['organic_results'])]
         components = score_components(item['monthly_search'], domains, item['keyword'], growth)
+        metrics = opportunity.search_metrics(item['keyword'], item['organic_provider'], item['organic_results'],
+            item['selected_at'], item['opportunity_evidence'].get('search_review'))
+        components['organic_opportunity'] = metrics['organic_opportunity']
         components.pop('specificity')
         components['intent_fit'] = 15
         if provenance is not None:
             components['cak_trend'] = round(provenance['item']['trend']['hotScore'] / 10, 2) if rising else 0
         return (item.get('trend_status') == status and item.get('score_components') == components
                 and item.get('score') == round(sum(components.values()), 2)
+                and item.get('dominant_result_ratio') == metrics['known_dominant_ratio']
                 and item.get('organic_domains') == domains)
-    except (KeyError, TypeError, ValueError):
+    except (KeyError, TypeError, ValueError, RuntimeError):
         return False
 
 

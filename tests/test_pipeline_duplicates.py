@@ -25,6 +25,7 @@ def codex_pipeline(monkeypatch):
     pipeline._load_post_registry = Mock(return_value=[{'title': '기존 건강 주제'}])
     pipeline._check_duplicate_keywords = Mock(side_effect=AssertionError('unexpected fallback'))
     pipeline._process_topic = Mock()
+    pipeline.trend_detector = Mock()
     pipeline.wp_client = Mock()
     client = Mock()
     client.generate.return_value = 'NOT_DUPLICATE'
@@ -109,6 +110,112 @@ def test_empty_registry_needs_no_model(codex_pipeline):
     client.generate.assert_not_called()
 
 
+def review_inventory(client):
+    prompt = client.generate.call_args.args[0]
+    return json.loads(prompt.split('## EXISTING POSTS:\n', 1)[1].split('\n\n## NEW TOPIC:', 1)[0])
+
+
+def test_codex_receives_old_post_and_every_stored_question_before_newer_twenty(codex_pipeline):
+    pipeline, client, _, _ = codex_pipeline
+    # Existing production article, deliberately older than the former window.
+    old = {'title': '2026 정보처리기사 시험 일정과 독학 합격 공부법 총정리: 큐넷 공식 가이드',
+           'topic': '정보처리기사 2026 시험 일정과 독학 합격 공부법',
+           'keywords': ['정보처리기사', '시험일정', '독학', '합격', '큐넷'],
+           'intent': '정보처리기사 원서접수와 공부 순서를 어떻게 준비하나요?'}
+    recent = [{'title': f'서로 다른 최근 생활 주제 {i}'} for i in range(25)]
+    pipeline._load_post_registry.return_value = [old, *recent]
+    client.generate.return_value = 'DUPLICATE'
+    assert pipeline._is_duplicate('정처기 접수 달력과 혼자 공부하는 방법') is True
+    supplied = review_inventory(client)['stored_posts']
+    assert supplied[0] == old
+    assert [row['title'] for row in supplied[1:]] == [row['title'] for row in recent]
+    client.generate.assert_called_once()
+
+
+def test_codex_deduplicates_format_variants_without_losing_distinct_intents(codex_pipeline):
+    pipeline, client, _, _ = codex_pipeline
+    pipeline._load_post_registry.return_value = [
+        {'title': '대장내시경 비용', 'topic': '대장내시경비용', 'keywords': ['대장내시경 비용'],
+         'intent': '예약할 때 얼마를 내나요?', 'private_field': 'never-send-this'},
+        {'title': '2027 대장내시경비용', 'intent': '예약할 때 얼마를 내나요?'},
+        {'title': '대장내시경 전 음식', 'intent': '검사 전 무엇을 피해야 하나요?'},
+    ]
+    assert pipeline._is_duplicate('새로운 건강 질문', additional_titles=[
+        '２０２７ 대장내시경 비용', '대장내시경 전 음식', '환급액 조회 방법', '환급액조회방법']) is False
+    payload = review_inventory(client)
+    assert len(payload['stored_posts']) == 2
+    assert {row['intent'] for row in payload['stored_posts']} == {
+        '예약할 때 얼마를 내나요?', '검사 전 무엇을 피해야 하나요?'}
+    assert payload['additional_titles_keywords_and_intents'] == ['환급액 조회 방법']
+    assert 'never-send-this' not in client.generate.call_args.args[0]
+
+
+@pytest.mark.parametrize('origin', ['wordpress_only', 'ledger_only'])
+def test_market_review_reuses_one_inventory_get_and_blocks_alias_before_writing(
+        codex_pipeline, tmp_path, monkeypatch, origin):
+    import src.market_topics as market
+    pipeline, client, _, _ = codex_pipeline
+    pipeline._load_post_registry.return_value = []
+    published = {'keyword': '대장내시경비용',
+                 'topic': '대장내시경비용, 일반·수면 검사비와 예약 전 확인할 항목'}
+    if origin == 'ledger_only':
+        ledger = tmp_path / 'ledger.json'
+        ledger.write_text(json.dumps([published], ensure_ascii=False))
+        monkeypatch.setattr(market, 'ROOT', tmp_path)
+        monkeypatch.setattr(market, 'LEDGER', ledger)
+        titles = market.historical_terms()
+    else:
+        titles = ['대장내시경비용, 일반·수면 검사비 비교와 예약 전 확인 항목']
+    inventory = Mock(return_value=titles)
+    monkeypatch.setattr(market, 'existing_titles', inventory)
+    monkeypatch.setattr(market, 'fresh_market_item', lambda *args: True)
+    item = {'category': '건강', 'keyword': '대장내시경검사비',
+            'topic': '대장내시경검사비와 진정 검사 가격 안내'}
+    assert not market.duplicate(item['keyword'], item['topic'], titles)
+    client.generate.return_value = 'DUPLICATE'
+    result = pipeline.run_single(item['topic'], [item['keyword']], '건강', market_brief=item)
+    assert not result.success and result.error == 'Duplicate topic - already exists in registry'
+    inventory.assert_called_once_with()
+    assert review_inventory(client)['additional_titles_keywords_and_intents'] == titles
+    client.generate.assert_called_once()
+    pipeline._process_topic.assert_not_called()
+    pipeline.content_generator.generate.assert_not_called()
+    pipeline.wp_client.create_post.assert_not_called()
+
+
+def test_food_preparation_and_cost_remain_distinct_questions_in_review(codex_pipeline):
+    pipeline, client, _, _ = codex_pipeline
+    food = {'title': '대장내시경전음식: 피할 음식과 병원별 전날 식사 안내',
+            'keywords': ['대장내시경전음식'], 'intent': '검사 전에 어떤 음식을 피하나요?'}
+    pipeline._load_post_registry.return_value = [food]
+    client.generate.return_value = 'NOT_DUPLICATE'
+    assert pipeline._is_duplicate('대장내시경비용, 일반·수면 검사비와 예약 전 확인할 항목') is False
+    assert review_inventory(client)['stored_posts'] == [food]
+    assert 'preparation foods versus examination cost are different' in client.generate.call_args.args[0]
+
+
+@pytest.mark.parametrize('bad', [[None], [{'title': ['bad']}], [{'keywords': 'bad'}], [{}]])
+def test_malformed_codex_inventory_cannot_silently_lose_posts(codex_pipeline, bad):
+    pipeline, client, factory, _ = codex_pipeline
+    pipeline._load_post_registry.return_value = bad
+    with pytest.raises(RuntimeError, match='^Codex topic review inventory invalid$'):
+        pipeline._is_duplicate('새 질문')
+    client.generate.assert_not_called()
+    factory.assert_not_called()
+
+
+def test_codex_prompt_limit_counts_utf8_bytes_and_never_truncates(codex_pipeline):
+    import src.pipeline as module
+    pipeline, client, factory, _ = codex_pipeline
+    title = '가' * (module.MAX_CODEX_DUPLICATE_PROMPT_BYTES // 2)
+    assert len(title) < module.MAX_CODEX_DUPLICATE_PROMPT_BYTES < len(title.encode('utf-8'))
+    pipeline._load_post_registry.return_value = [{'title': title}]
+    with pytest.raises(RuntimeError, match='^Codex topic review inventory too large$'):
+        pipeline._is_duplicate('새 질문')
+    client.generate.assert_not_called()
+    factory.assert_not_called()
+
+
 @pytest.mark.parametrize('answer,expected', [('DUPLICATE: same subject', True),
                                            ('NOT_DUPLICATE: different entity', False),
                                            ('unclear', None)])
@@ -141,12 +248,27 @@ def test_non_codex_unavailable_retains_keyword_fallback(monkeypatch):
     pipeline._check_duplicate_keywords.assert_called_once_with('새 주제', posts)
 
 
+def test_non_market_run_single_preserves_one_argument_duplicate_hook(codex_pipeline):
+    pipeline, _, _, _ = codex_pipeline
+    pipeline._is_duplicate = Mock(return_value=True)
+    result = pipeline.run_single('이미 다룬 일반 주제')
+    assert not result.success
+    pipeline._is_duplicate.assert_called_once_with('이미 다룬 일반 주제')
+    pipeline._process_topic.assert_not_called()
+
+
+@pytest.mark.parametrize('failure', ['request', 'inventory_overflow', 'invalid_inventory'])
 def test_failed_codex_review_keeps_real_queue_pending_and_never_writes(
-        codex_pipeline, tmp_path, monkeypatch):
+        codex_pipeline, tmp_path, monkeypatch, failure):
     import src.main as entry
     import src.market_topics as market
     pipeline, client, _, _ = codex_pipeline
     client.generate.side_effect = RuntimeError('private-error-value')
+    if failure == 'inventory_overflow':
+        from src.pipeline import MAX_CODEX_DUPLICATE_PROMPT_BYTES
+        pipeline._load_post_registry.return_value = [{'title': '가' * MAX_CODEX_DUPLICATE_PROMPT_BYTES}]
+    elif failure == 'invalid_inventory':
+        pipeline._load_post_registry.return_value = [{'title': {'private': 'invalid'}}]
     queue_path = tmp_path / 'data' / 'topic_queue_general.json'
     queue_path.parent.mkdir()
     item = {'source': market.SOURCE, 'status': 'pending', 'category': '건강',
@@ -164,7 +286,7 @@ def test_failed_codex_review_keeps_real_queue_pending_and_never_writes(
                                     '--category', '건강', '--writer-provider', 'codex', '--auto-publish'])
     assert entry.main() == 1
     assert queue_path.read_text() == initial
-    client.generate.assert_called_once()
+    assert client.generate.call_count == (1 if failure == 'request' else 0)
     pipeline._check_duplicate_keywords.assert_not_called()
     pipeline._process_topic.assert_not_called()
     pipeline.content_generator.generate.assert_not_called()

@@ -104,7 +104,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install research dependencies
-        run: pip install requests loguru python-dotenv beautifulsoup4 pytrends
+        run: pip install requests loguru python-dotenv beautifulsoup4 pytrends 'tldextract>=5.1,<6'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

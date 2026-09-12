@@ -3554,7 +3554,7 @@
   },
   "건강": {
     "category": "건강",
-    "selected_at": "2026-09-11T15:55:51.295428+00:00",
+    "selected_at": "2026-09-12T06:48:35.134282+00:00",
     "seeds": [
       "건강검진",
       "예방접종",
@@ -3563,30 +3563,30 @@
     ],
     "selection_version": 6,
     "research_rounds": 2,
-    "source_recovery_attempts": 2,
+    "source_recovery_attempts": 1,
     "cak_import": {
       "status": "ok",
       "reason": null,
       "received_count": 80,
       "validated_count": 80,
       "rejected_count": 0,
-      "qualified_rising_count": 5,
+      "qualified_rising_count": 8,
       "monthly_unavailable_count": 0,
       "rejection_counts": {},
       "transport": {
         "status": "ok",
         "reason": "downloaded",
-        "sourceRunId": 34591256944,
-        "artifactId": 10195764919,
+        "sourceRunId": 34671298201,
+        "artifactId": 10290623042,
         "headSha": "eb75265049e17e80e2d5225f06df2ce1eae9a036",
-        "sourceRunCreatedAt": "2026-09-11T10:51:44Z"
+        "sourceRunCreatedAt": "2026-09-12T03:47:06Z"
       },
       "export_metadata": {
         "schemaVersion": 1,
         "kind": "cak_keyword_candidates",
         "profile": "blog-kr",
-        "generatedAt": "2026-09-11T10:53:41.155Z",
-        "expiresAt": "2026-09-12T10:52:32.832Z",
+        "generatedAt": "2026-09-12T03:49:54.890Z",
+        "expiresAt": "2026-09-13T03:47:59.788Z",
         "compliance": {
           "resaleRestricted": true,
           "cacheTtlHours": 24
@@ -3604,831 +3604,32 @@
           "unknownTimeUnit": 0,
           "nonDaily": 0,
           "invalidSeries": 5,
-          "missingPreviousDay": 1,
-          "insufficientBaseline": 2
+          "missingPreviousDay": 2,
+          "insufficientBaseline": 1
         }
       },
-      "direct_count": 67,
+      "direct_count": 75,
       "expanded_seed_count": 5,
-      "related_count": 566,
+      "related_count": 253,
       "seed_lookup_failed_count": 0,
-      "filtered_count": 13
+      "filtered_count": 5
     },
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords_and_cak_export",
-    "measured_candidates": 1592,
-    "evaluated_candidates": 12,
+    "measured_candidates": 1285,
+    "evaluated_candidates": 10,
     "research_pool_size": 120,
-    "selected": [
-      {
-        "keyword": "대상포진초기증상",
-        "category": "건강",
-        "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징",
-        "intent": "대상포진은 초기에 어떤 통증과 감각이상으로 시작하며, 발진과 물집은 어떻게 나타나나요?",
-        "gap": "학회 본문에 근거한 증상 진행표와 편측·띠 모양 분포, 드문 무발진 사례를 정리해 자가판단의 한계를 안내합니다.",
-        "source_url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-        "verified_sources": [
-          {
-            "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-            "original_url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-            "title": "대한피부과학회",
-            "checked_on": "2026-09-12",
-            "sha256": "251f9610304cb98ae67b6a8b53b9b5c9795dfcb30aa75c0ea9e0bf2f8d8fbf79",
-            "excerpt": "피부질환 발전된 의료 서비스를 위해 진료정보를 공유합니다. No. 585 포진후 신경통 2012.11.01 작성자 : 관리자 조회 : 11667 포진후 신경통 원인 대상포진은 과거에 수두에 걸렸거나 수두 예방접종을 한 사람의 지각신경절에 잠복해 있던 수두 바이러스가 세포면역체계의 변화로 인하여 재활성화되어 신경을 따라 내려가 피부에 감염을 일으키는 질환이며, 포진후 신경통은 대상포진의 가장 심한 후유증이다. 바이러스의 재활성 유발인자로는 고령(가장 강한 유발인자), 외상, 척수종양, 호즈킨병, 악성림프종, 만성 백혈병 등이 있으며, 세포면역의 장애가 있는 경우 잘 발생한다. 역학 대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다. 수두 또는 대상포진에 이환된 환자로부터 감염되어 발생한다는 확실한 근거는 없지만, 수두와 동일한 바이러스가 원인이기 때문에 수두에 걸리지 않았던 사람에서 대상포진 환자와의 접촉이나 공기감염의 경로를 통하여 수두가 발생할 수 있다. 증상 발진이 나타나기 평균 4~5일(1~14일) 전부터 피부절을 따라 동통, 압통, 감각이상이 발생하며, 가벼운 자극에도 과민반응이 나타나며, 두통, 권태감, 발열이 극히 일부에서 동반될 수 있다. 국소 림프절이 흔히 커지고 압통을 동반할 수 있다. 피부발진은 침범한 신경을 따라 띠 모양으로 분포되어 홍반성 구진과 반점으로 나타나고, 12~24시간 내에 수포를 형성한다(그림 14-46). 이러한 수포는 각기 타원형 또는 원형이고, 제형성의 중앙부 함몰을 볼 수 있다. 피부발진 3일째 농포로 진행되며 7~10일이 지나서 각각의 병변들은 결국 가피가 형성되어 탈락되는데, 가피가 대체로 2~3주 지속되므로 평균 발진기간은 약 3주일 정도이며 새로운 피부병변은 발진 1~4일(때로는 7일)까지 발생할 수 있다. 피부병변과 환자가 느끼는 통증의 정도는 비례하며, 또한 고령의 환자에서 더 심각한 통증을 호소한다. 드물게 환자가 통증을 호소하지만 피부병변이 발생하지 않을 수도 있다. 발생부위는 흉부(55%), 뇌신경(20%, 삼차신경에 가장 흔함), 요추신경(15%), 천골신경(5%)의 빈도로 자주 발생하며, 대부분이 편측으로 발생하고, 중앙선을 넘지 않으며, 양측성으로 발생하는 경우는 매우 드물고, 극히 일부의 환자들에게서 대상포진 감염이 재발하는 것으로 알려져 있다. 포진후 신경통은 피부병변이 호전된 후, 혹은 병변이 발생한지 1~3개월 후에도 통증이 지속되는 경우인데, 가장 흔하며 고통스러운 합병증으로 40세 이하에서는 비교적 드물며 60세 이상에서 약 50%에서 발생한다. 약 50%의 환자들이 3개월 내에 호전을 보이고, 약 70% 정도의 환자들이 1년 내에 호전을 보이는 것으로 알려져 있다. 포진후 동통은 안구 대상포진에서 가장 높은 발생빈도를 보인다. 진단 특징적인 임상양상으로 충분한 진단이 가능하다. 수포 기저부 또는 수포액의 도말검사에서 거대 또는 다핵 표피세포가 관찰되며, 바이러스 배양과 혈청검사를 통한 바이러스를 입증할 수 있다. 좌측 흉부를 침범할 경우에는 초기에 심전도 검사를 하여 허혈성 심질환을 감별할 필요가 있다. 치료 대상포진의 치료 목표는 동통의 억제, 바이러스의 확산과 이차적 세균감염 억제, 포진후 동통 등의 합병증 예방 및 최소화이다. 항바이러스제를 전신적으로 투여하며, 항바이러스 약물을 수포형성하고 난 뒤 72시간 이내에 투여하면 피부병변의 치유를 촉진시키며, 급성 동통의 기간을 줄이고 포진후 동통의 발생빈도를 줄일 수 있다. 초기 수포형성 시기에는 병변에 대한 습포가 동통을 완화할 수 있으며, 통증이 심한 경우, 수면 장애, 피로 우울증이 동반될 수 있어 마약성 진통제로 통증을 초기에 경감시킬 필요가 있다. 그외 국소 열찜질, 염증완화제의 병변내 주사, 신경차단술 등을 이용하여 통증을 경감시켜줄 수 있다. 대상포진 환자에서 포진후 동통 예방을 위한 스테로이드 전신투여에 대해 논란이 많은데, 최근의 연구에 의하면 부신피질호르몬제는 포진 후 동통의 빈도를 줄이지 못하는 것으로 알려져 있지만, 급성 동통의 감소와 일상생활로의 복귀를 단축할 수 있으므로 부신피질호르몬제의 투여에 금기가 되지 않는 환자의 경우 단기간의 경구투여가 권장된다. 이전글 편평태선 2012.11.01 다음글 표피낭종 2012.11.01 목록 이메일 무단수집 거부 닫기 대한피부과학회는 정보통신망법 제 50조의 2, 제50조의 7 등에 의거하여, 대한피부과학회가 운영, 관리하는 웹페이지상에서, 이메일주소 수집 프로그램이나 그 밖의 기술적 장치 등을 이용하여 이메일 주소를 무단으로 수집하는 행위를 거부합니다. [게시일 2020년 5월 15일] 확인 위로가기",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://ddakdap.kr/article/shingles-early-symptoms",
-          "https://jilhwanpedia.live/posts/post-32675/"
-        ],
-        "valid_until": null,
-        "monthly_search": 13600,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6679",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "대상포진 초기 증상",
-        "organic_domains": [
-          "www.snuh.org",
-          "www.primehospital.co.kr",
-          "ddakdap.kr",
-          "jilhwanpedia.live",
-          "m.coinlab.edaily.co.kr",
-          "www.xrpin.kr",
-          "write.daplus.co.kr",
-          "www.hyunmyoung.co.kr",
-          "www.goe.go.kr",
-          "dongpoongi.com"
-        ],
-        "organic_results": [
-          {
-            "url": "https://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AC000187",
-            "domain": "www.snuh.org",
-            "title": "서울대학교병원",
-            "snippet": "전통적으로는 대상포진에 의한 피부 발진이 생긴 이후 6개월 이상 병변 부위의 만성적인 통증이 지속될 때 대상포진후 신경통이라 정의하는 것이 일반적이나, 최근에는 피부 발진이 생긴 지"
-          },
-          {
-            "url": "https://www.primehospital.co.kr/141",
-            "domain": "www.primehospital.co.kr",
-            "title": "연세프라임병원",
-            "snippet": "바이러스에 손상된 신경을 치료하지 않으면 평생 후유증이 남을 수 있는 아주 어려운 질환입니다. ... #### 대상포진의 증상 ... * 면역력이 약한 초기 대상포진 환자의 경우"
-          },
-          {
-            "url": "https://ddakdap.kr/article/shingles-early-symptoms",
-            "domain": "ddakdap.kr",
-            "title": "대상포진 초기 증상｜진료 시기·전염 가능성·주의 신호 | 딱답",
-            "snippet": "# 대상포진 초기 증상｜ ... 대상포진은 보통 몸 한쪽에 통증·저림·따가움이 먼저 나타나고, 2~3일 뒤 같은 부위에 붉은 발진과 모여 있는 물집이 생깁니다. ... 항바이러스 치료는"
-          },
-          {
-            "url": "https://jilhwanpedia.live/posts/post-32675/",
-            "domain": "jilhwanpedia.live",
-            "title": "대상포진 증상 초기에는 어떻게 나타나나요 · 질환의학사전",
-            "snippet": "> 대상포진 증상은 대개 몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고, 이어 붉은 발진과 작은 물집이 나타나는 것이 특징이에요. ... 바이러스가 신경을 따라 피부"
-          },
-          {
-            "url": "https://m.coinlab.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02092646645549944",
-            "domain": "m.coinlab.edaily.co.kr",
-            "title": "대상포진, 수포보다 통증 먼저 시작 ... 증상 발생 후 72시간이 치료 골든타임",
-            "snippet": "모르고 지나치기 쉬운 ‘대상포진’ 초기 증상일 수 있어서다.증상이 나타난 뒤 72시간 안에 치료하지 않으면, 피부 병변이 회복된 뒤에도 극심한 통증이 이어지는 ‘대상포진 후 신경통’으로 이어질"
-          },
-          {
-            "url": "https://www.xrpin.kr/2026/05/blog-post_194.html",
-            "domain": "www.xrpin.kr",
-            "title": "대상포진 초기 증상부터 치료까지 총정리 | 전염성·치료·백신 예방까지 한번에 - 마일스톤",
-            "snippet": "# 대상포진 초기 증상부터 치료까지 총정리 | 전염성·치료·백신 예방까지 한번에 ... 대상포진의 초기 증상과 발생 부위별 특징, 전염성 여부, 올바른 진료과 선택, 72시간 골든타임 치료,"
-          },
-          {
-            "url": "https://write.daplus.co.kr/content/health/%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84-%EC%B4%88%EA%B8%B0%EC%A6%9D%EC%83%81%EA%B3%BC-%EA%B3%A8%EB%93%A0%ED%83%80%EC%9E%84-%EB%86%93%EC%B9%98%EC%A7%80-%EB%A7%90%EC%95%84%EC%95%BC-%ED%95%A0-%EC%B9%98%EB%A3%8C-%ED%95%B5%EC%8B%AC-%EA%B0%80%EC%9D%B4%EB%93%9C-963",
-            "domain": "write.daplus.co.kr",
-            "title": "대상포진 초기증상과 골든타임, 놓치지 말아야 할 치료 핵심 가이드 | 다플",
-            "snippet": "갑작스러운 몸의 통증이나 피부 이상감각이 나타나면 단순 피로 때문인지, 아니면 대상포진의 초기 신호인지 구별하기 어려울 때가 많습니다. ... 이번 글에서는 대상포진 초기증상의 주요 특징과 부위별"
-          },
-          {
-            "url": "https://www.hyunmyoung.co.kr/nerve-block/intercostal-neuralgia-early-symptoms/",
-            "domain": "www.hyunmyoung.co.kr",
-            "title": "늑간신경통 초기 증상, 이것부터 확인하세요 | 현명신경외과의원 시청역·중구·서소문·종로·서대문 신경외과",
-            "snippet": "# 늑간신경통 초기 증상, 이것부터 확인하세요 ... 본 글은 신경외과 전문의가 작성·검토한 의학 정보이며, 개인별 진단·치료를 대신하지 않습니다. ... 자세·근육 긴장·대상포진·외상 등이 원인이며, 띠 모양으로"
-          },
-          {
-            "url": "https://www.goe.go.kr/resource/goe/na/bbs_2675/2025/09/33fc09db-47c7-4b13-a254-f0ebf8c4c1d7.pdf",
-            "domain": "www.goe.go.kr",
-            "title": "6. 수두(Chicken pox)",
-            "snippet": "<tr><th>감염경로</th><td>• 수두 환자의 수포액과 직접 접촉(피부 병변이 주요 감염 전파원)<br>• 수두 환자의 호흡기 분비물을 에어로졸로 흡입<br>• 급성 수두 또는 대상포진 환자의 피부병변 수포액을 에어로졸로 흡입</td></tr>"
-          },
-          {
-            "url": "https://dongpoongi.com/%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84/",
-            "domain": "dongpoongi.com",
-            "title": "🩹 '대상포진' 초기 증상, 골든타임 놓치면 신경통까지?",
-            "snippet": "# 🩹 ‘대상포진’ 초기 증상, 골든타임 놓치면 신경통까지? ... 통증이 발진보다 먼저 나타날 수 있어 초기에 알아채기 어렵고, 치료 시기를 놓치면 대상포진 후 신경통 같은"
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 33.07,
-          "organic_opportunity": 33.33,
-          "trend": -4.34,
-          "intent_fit": 15
-        },
-        "trend_growth": -0.434,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-11T15:55:51.295428+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "대상포진초기증상"
-        ],
-        "status": "pending",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-              "title": "대한피부과학회",
-              "excerpt_chars": 2293
-            },
-            {
-              "url": "https://www.kdata.or.kr/",
-              "title": "한국데이터산업진흥원 - 메인",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.kdata.or.kr/",
-                  "title": "한국데이터산업진흥원 - 메인",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-                  "title": "대한피부과학회",
-                  "excerpt_chars": 2293
-                },
-                {
-                  "url": "https://www.kdata.or.kr/",
-                  "title": "한국데이터산업진흥원 - 메인",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "대상포진초기증상",
-          "executed_query": "대상포진 초기 증상",
-          "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징",
-          "intent": "대상포진은 초기에 어떤 통증과 감각이상으로 시작하며, 발진과 물집은 어떻게 나타나나요?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "result_count": 10,
-          "domain_count": 10,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "대상포진초기증상",
-            "executed_query": "대상포진 초기 증상",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-11T15:55:51.295428+00:00",
-            "raw_sha256": "e9ceb78ed3a309d402a1e9ee2232e4a20a687821891959588d7e9f23ccf076fb",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": false,
-                "quote": "6개월 이상 병변 부위의 만성적인 통증이 지속될 때 대상포진후 신경통"
-              },
-              {
-                "result_index": 1,
-                "relevant": false,
-                "quote": "바이러스에 손상된 신경을 치료하지 않으면 평생 후유증이 남을 수 있는"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "몸 한쪽에 통증·저림·따가움이 먼저 나타나고"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "대상포진, 수포보다 통증 먼저 시작"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "대상포진의 초기 증상과 발생 부위별 특징"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "대상포진 초기증상의 주요 특징과 부위별"
-              },
-              {
-                "result_index": 7,
-                "relevant": false,
-                "quote": "늑간신경통 초기 증상, 이것부터 확인하세요"
-              },
-              {
-                "result_index": 8,
-                "relevant": false,
-                "quote": "수두 환자의 수포액과 직접 접촉"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "통증이 발진보다 먼저 나타날 수 있어"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 6,
-            "relevant_site_count": 6,
-            "relevant_indices": [
-              2,
-              3,
-              4,
-              5,
-              6,
-              9
-            ],
-            "relevance_ratio": 0.6,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.16666666666666666,
-            "organic_opportunity": 33.33
-          },
-          "scope": "full_keyword",
-          "target_keyword": "대상포진초기증상",
-          "matches": [
-            {
-              "result_index": 2,
-              "quote": "대상포진은 보통 몸 한쪽에 통증·저림·따가움이 먼저 나타나고"
-            },
-            {
-              "result_index": 3,
-              "quote": "대상포진 증상은 대개 몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "input_sha256": "8bb2851db4e593629e56a70bbd8e715b57cdd1ac34244b76cebf0098b80ead38",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "대상포진초기증상",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다.",
-                "entity": "대상포진",
-                "context": "general"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "발진 전 어떤 통증과 감각이상이 언제 시작되는가?",
-                "answer": "발진 평균 4~5일 전부터 동통·압통·감각이상과 가벼운 자극에 대한 과민반응이 나타날 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "발진이 나타나기 평균 4~5일(1~14일) 전부터 피부절을 따라 동통, 압통, 감각이상이 발생하며, 가벼운 자극에도 과민반응이 나타나며"
-              },
-              {
-                "facet": "초기 발진과 물집은 어떻게 진행되는가?",
-                "answer": "붉은 구진·반점으로 시작해 12~24시간 내 물집을 형성한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "피부발진은 침범한 신경을 따라 띠 모양으로 분포되어 홍반성 구진과 반점으로 나타나고, 12~24시간 내에 수포를 형성한다"
-              },
-              {
-                "facet": "증상은 어느 부위에 어떤 분포로 나타나는가?",
-                "answer": "신경을 따라 띠 모양으로 나타나며, 대부분 몸 한쪽에 발생하고 중앙선을 넘지 않는다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "대부분이 편측으로 발생하고, 중앙선을 넘지 않으며, 양측성으로 발생하는 경우는 매우 드물고"
-              },
-              {
-                "facet": "물집이나 발진이 없으면 대상포진을 배제할 수 있는가?",
-                "answer": "드물게 통증만 있고 피부병변이 없을 수 있어, 발진 유무만으로 배제할 수 없다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "드물게 환자가 통증을 호소하지만 피부병변이 발생하지 않을 수도 있다."
-              },
-              {
-                "facet": "초기 증상을 알아챘을 때 왜 신속한 진료가 필요한가?",
-                "answer": "조기 치료가 중요하다. 본문이 제시한 72시간의 기준은 최초 통증이 아닌 수포 형성 이후다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "항바이러스 약물을 수포형성하고 난 뒤 72시간 이내에 투여하면 피부병변의 치유를 촉진시키며, 급성 동통의 기간을 줄이고"
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 77.06,
-        "publish_eligible": true,
-        "hold_reasons": []
-      }
-    ],
-    "held": [
-      {
-        "keyword": "중성지방수치",
-        "category": "건강",
-        "topic": "중성지방수치 높아지는 원인과 수치별 관리 원칙",
-        "intent": "중성지방수치가 높아지는 이유는 무엇이며, 높은 수치의 위험과 식사·운동 관리 원칙은 무엇인가?",
-        "gap": "학회 본문에 근거한 수치별 관리 원칙 표와 음주·당질·체중·운동 점검표를 제공한다.",
-        "source_url": "https://www.lipid.or.kr/dtp/therapy.php",
-        "verified_sources": [
-          {
-            "url": "https://www.lipid.or.kr/dtp/therapy.php",
-            "original_url": "https://www.lipid.or.kr/dtp/therapy.php",
-            "title": "한국지질·동맥경화학회 | 치료",
-            "checked_on": "2026-09-12",
-            "sha256": "752aacb925c4ebd4541d126b6d3d9ad53499791c72f72334156aac4e66d0e6a7",
-            "excerpt": "본문 바로가기 한국지질·동맥경화학회 일반인 전문인 ENG 로그인 회원가입 학회소개 인사말 연혁 임원진 회칙 및 규정 시상제도 학회 출판물 회원가입 안내 학회 위치 20주년 학술행사 최근 학술행사 학술행사 연혁 국내외 학술일정 달력 국내외 학술일정 리스트 이상지질혈증과 동맥경화증이란? 지질이란? 이상지질혈증이란? 동맥경화증이란? 한국인의 이상지질혈증 현황 이상지질혈증/동맥경화와의 심혈관계의 관계 진단/치료/예방 진단 치료 예방 캠페인 콜레스테롤의 날 자료실 혈관건강백서 교육 콘텐츠 애니메이션 소책자(e-book) 데이터북 유튜브채널 자주 묻는 질문 핫이슈 동맥경화증 및 심장질환 이상지질혈증 비만, 체중조절, 다이어트 검색박스 열기 검색 학회소개 학회소개 인사말 연혁 임원진 회칙 및 규정 시상제도 학회 출판물 회원가입 안내 학회 위치 학회 소식 20주년 학술행사 학술행사 최근 학술행사 학술행사 연혁 국내외 학술일정 달력 국내외 학술일정 리스트 이상지질혈증과 동맥경화증이란? 이상지질혈증과 동맥경화증이란? 지질이란? 이상지질혈증이란? 동맥경화증이란? 한국인의 이상지질혈증 현황 이상지질혈증/동맥경화와의 심혈관계의 관계 진단/치료/예방 진단/치료/예방 진단 치료 예방 캠페인 캠페인 콜레스테롤의 날 자료실 혈관건강백서 교육 콘텐츠 교육 콘텐츠 애니메이션 소책자(e-book) 데이터북 유튜브채널 자주 묻는 질문 자주 묻는 질문 핫이슈 동맥경화증 및 심장질환 이상지질혈증 비만, 체중조절, 다이어트 ENG 로그인 회원가입 진단/치료/예방 진단/치료/예방 치료 치료 진단 치료 예방 이상지질혈증 치료 이상지질혈증 치료 동맥경화증 치료 이상지질혈증 치료기준 초고위험군 기존에 심혈관질환이 있는 환자(관상동맥질환, 허혈성 뇌졸중, 일과성 뇌허혈 발작, 말초혈관질환)를 초고위험군 환자로 따로 분류하여, 이 경우 이차 예방을 위해 LDL 콜레스테롤 70 mg/dL 미만 혹은 처음 수치보다 50% 이상 감소를 목표로 합니다. 관상동맥질환 허혈성 뇌졸중 일과성 뇌허혈발작 말초혈관질환 초고위험군 환자 LDL 콜레스테롤 농도에 따른 치료의 기준 생활습관 개선 및 투약시작 70mg/dL 생활습관 개선 및 투약시작 100mg/dL 생활습관 개선 및 투약시작 130mg/dL 생활습관 개선 및 투약시작 160mg/dL 생활습관 개선 및 투약시작 190mg/dL 급성심근경색 발생 시 기저치의 LDL 콜레스테롤 농도와 상관 없이 바로 스타틴을 투약한다. 급성심근경색 이외의 초고위험군의 경우 LDL 콜레스테롤 70 mg/dL 미만에서도 스타틴 투약을 고려할 수 있다. LDL 콜레스테롤 목표 = 70mg/dL 이하 non-HDL 콜레스테롤 목표 = 100mg/dL이상 고위험군 관상동맥질환에 상당하는 위험인자인 경동맥질환(50%가 넘는 경동맥협착)이나 복부동맥류, 당뇨병이 있는 환자는 일차 예방을 위해 LDL 콜레스테롤 농도가 100 mg/dL 이상인 경우 치료를 합니다. 경동맥질환(50%가 넘는 경동맥 협착이 확인된 경우) 복부동맥류 당뇨병 고위험군 환자 LDL 콜레스테롤 농도에 따른 치료의 기준 생활습관 개선 및 투약시작 70mg/dL 생활습관 개선 및 투약시작 100mg/dL 생활습관 개선 및 투약시작 130mg/dL 생활습관 개선 및 투약시작 160mg/dL 생활습관 개선 및 투약시작 190mg/dL 급성심근경색 발생 시 기저치의 LDL 콜레스테롤 농도와 상관 없이 바로 스타틴을 투약한다. 급성심근경색 이외의 초고위험군의 경우 LDL 콜레스테롤 70 mg/dL 미만에서도 스타틴 투약을 고려할 수 있다. LDL 콜레스테롤 목표 = 100mg/dL 이하 non-HDL 콜레스테롤 목표 = 130mg/dL이상 중등도 위험군 중등도 위험군의 기준은 LDL 콜레스테롤을 제외한 주요 위험인자(표 2)가 2개 이상인 경우 중등도 위험군으로 분류되며, 수주 혹은 수개월간 생활습관 개선을 시행한 뒤에도 LDL 콜레스테롤 농도 130mg/dL 이상인 경우 스타틴을 복용합니다. 주요 위험인자 2개 이상 고HDL 콜레스테롤(60 mg/dL 이상)은 보호인자로 간주하여 총 위험인자 수에서 하나를 감하게 된다. 흡연 고혈압 · 수축기혈압 140 mmHg 이상 · 이완기혈압 90 mmHg 이상 · 항고혈압제 복용 저HDL 콜레스테롤 40 mg/dL이상 연령 남자 45세 이상 여자 55세 이상 관상동맥질환 조기 발병의 가족력 부모, 형제자매 중 남자 55세 미만,여자 65세 미만에서 관상동맥질환이 발병한 경우 중등도 위험군 환자 LDL 콜레스테롤 농도에 따른 치료의 기준 생활습관 개선 및 투약시작 70mg/dL 생활습관 개선 및 투약시작 100mg/dL 생활습관 개선 및 투약시작 130mg/dL 생활습관 개선 및 투약시작 160mg/dL 생활습관 개선 및 투약시작 190mg/dL 급성심근경색 발생 시 기저치의 LDL 콜레스테롤 농도와 상관 없이 바로 스타틴을 투약한다. 급성심근경색 이외의 초고위험군의 경우 LDL 콜레스테롤 70 mg/dL 미만에서도 스타틴 투약을 고려할 수 있다. LDL 콜레스테롤 목표 = 100mg/dL 이하 non-HDL 콜레스테롤 목표 = 130mg/dL이상 고중성지방혈증에 대한 치료지침 혈중 중성지방 농도가 500 mg/dL 이상으로 상승되는 경우 이차적인 원인(체중 증가, 음주, 탄수화물 섭취, 만성신부전, 당뇨병, 갑상선기능저하, 임신, 에스트로겐, tamoxifen, glucocorticoid 등의 투약력) 및 유전적인 문제가 있는지 확인하는 것이 필요합니다. 또한 혈중 중성지방 농도가 500 mg/dL 이상으로 상승된 경우 급성췌장염의 위험이 증가한다고 알려져 있어 위와 같은 원인을 교정한 뒤에도 지속적으로 500 mg/dL 이상의 중성지방 농도가 확인되는 경우 fibrate, nicotinic acid, omega-3 fatty acid 등의 약물치료를 시작합니다. 중성지방 농도가 200∼500 mg/dL인 경우, 먼저 일차적인 치료는 LDL 콜레스테롤을 목표치 미만으로 낮추기 위해 스타틴을 복용합니다. 이차 목표로 non-HDL 콜레스테롤을 목표치 미만으로 조절하는 것으로 치료목표는 non-HDL 콜레스테롤 농도(=총콜레스테롤-HDL 콜레스테롤)를 계산하여 표 3의 기준에 따라 조정합니다. 목표 non-HDL 콜레스테롤의 농도는 기존의 LDL 콜레스테롤의 목표치에 30을 더한 값입니다. 이상지질혈증 치료방법 생활요법 약물요법 건강한 식생활 습관, 운동과 활동을 통해 건강한 신체를 유지하여 건강하게 오래 사는 것이 장수의 비결입니다. 혈액 내에 콜레스테롤(LDL-콜레스테롤)이나 중성지방과 같은 지질수치가 높아지면 심뇌혈관계 질환의 위험이 높아집니다. 혈액 내 지질수치를 정상화시키기 위해서는 식습관을 개선하는 동시에 규칙적인 운동을 하고 신체활동을 늘려 생활습관을 개선하여야 합니다. 01 건강체중 유지를 위한 식사량 조절 과체중 또는 비만, 특히 내장지방이 많은 경우에는 혈청 중성지방 및 콜레스테롤 수치 증가 위험이 높아집니다. 따라서 체중과다인 경우에는 체중 감량을, 정상체중인 경우 체중을 적정 수준으로 유지하기 위한 식사관리가 필요합니다. 비만인 경우 현재보다 체중을 5~10% 정도 감량하는 것을 1차적 목표로 정하고, 체중조절을 시행해 나가야 합니다. 체중감량을 위해서는 과식, 특히 기름지고 단 음식을 많이 먹는 습관을 경계하는 것이 첫 걸음입니다. 식사를 거르기보다는 제때 적당량의 식사를 하고, 매끼 식사에 채소가 충분량 포함되고 균형 있는 식사를 해야 합니다. 02 당질 섭취가 지나치게 많아지지 않도록 주의 당질음식을 많이 먹게 되면 열량섭취가 과다해져 체중증가의 원인이 될 수 있고, 혈액 내 중성지방을 높일 수 있습니다. 당질은 설탕, 시럽 등이 많이 함유된 든 음식, 과자류, 밥, 빵, 국수, 감자, 고구마등에 많이 들어 있습니다.당질음식을 과다하게 섭취하는 것은 문제가 되지만, 식사에서 중요한 역할을 하는 영양소이므로 지나친 저당질식사를 하는 것도 바람직하지는 않습니다. 단 음식, 과자류 등의 섭취를 줄이고, 가능한 전곡류(현미, 통밀), 잡곡 등 섬유소가 많이 함유된 당질 식품을 식사를 통해 적당량 먹는 것이 필요합니다. 03 콜레스테롤이 많은 음식 주의 계란 노른자, 육류의 내장, 생선내장, 오징어, 장어 등은 콜레스테롤이 높은 식품입니다. 특히 예를 들어 육류의 내장 등과 같이 콜레스테롤과 포화지방이 함께 많이 포함된 음식은 피하는 것이 바람직합니다. 또한 콜레스테롤이 많은 음식을 먹게 될 경우에는 포화지방 섭취가 많아지지 않도록 주의하는 것이 도움이 될 수 있습니다. 04 싱겁게 섭취 소금 자체가 혈액 내 지질수치를 직접적으로 높이지는 않으나,짜게 먹는 습관은 혈압 조절에 좋지 않은 영향을 미치고 결과적으로는 혈관손상을 심화시킬 수 있으므로, 싱겁게 먹는 습관을 갖는 것이 권장됩니다. 05 알코올 제한 알코올은 혈액 내 중성지방 수치를 높이는 원인이 될 뿐 아니라, 일반적으로 안주로 먹는 음식들이 심뇌혈관계 질환의 예방 및 치료에 좋지 않은 영향을 미칠 수 있습니다. 또한 음식물 섭취가 많아져서 열량섭취과다로 인한 체중증가의 원인이 될 수 있으므로 절제하는 것이 바람직합니다. 06 충분한 채소류 섭취 채소에는 비타민, 무기질 및 각종 생리활성물질이 풍부한데, 이러한 성분들이 항산화효과를 발휘하여 심뇌혈관계 질환을 예방하는데 도움이 될 수 있습니다.또한 채소에 풍부한 섬유소는 혈액 내 콜레스테롤 낮추는데 도움이 되며, 특히 체중감량이 필요한 경우 부피에 비해 열량이 적어 식사감량에 따르는 공복감을 해결하는데 효과적입니다. 07 지방섭취량 조절 지방 중에서 포화지방이나 트랜스지방은 혈액 내 콜레스테롤 수치를 높이는 것으로 알려져 있습니다. 포화지방은 고기의 기름, 버터 등의 동물성 식품에 많이 들어 있지만, 야자유, 코코넛유 등의 일부 식물성 기름에도 많이 들어 있습니다. 우리나라에서는 야자유나 코코넛유를 조리용 기름으로 많이 사용하지 않으나, 가공식품 등에 많이 이용되고 있으므로 가공식품 섭취가 많아지면 포화지방 섭취가 많아질 수 있어 주의가 필요합니다. 트랜스지방은 쇼트닝, 마가린, 초콜릿 가공품 등에 많이 들어 있습니다. 튀김 기름을 여러 번 반복해서 사용하는 것도 트랜스지방 생성을 증가시키는 한 요인이 됩니다. 올리브유, 콩기름, 참기름 등의 식물성 기름에 많이 들어있는 불포화지방은 포화지방을 대신하여 섭취할 경우 혈액 내 콜레스테롤을 떨어뜨리는데 도움이 되지만 총 섭취량이 많아질 경우 오히려 이상지질혈증을 악화시킬 수 있으므로 주의가 필요합니다. 신체활동의 부족이 심혈관계질환에 독립적인 위험요인이라는 것이 이미 잘 알려져 있습니다. 이러한 신체활동의 부족은 결국 비만을 일으키고 이는 이상지질혈증을 일으키게 됩니다. 국내 국민 영양조사 결과 1995년부터 2005년까지 남자는 11.75%에서 35.1%로,여자는 18.8%에서 28%로 증가한 것으로 보고하였습니다. 특히 남자에게서 현저하게 증가된 모습을 보이고 있습니다. 국내의 경우 체질량지수 25.0kg/m2의 비만 인구에서 약 50%가 대사증후군을 갖고 있는 것으로 나타났습니다. 연령별로 보면 남/여모두 30대부터 대사증후군 위험이 증가하는 것으로 나타나고 있습니다. 과체중이나 비만이 심혈관계질환의 위험을 증가시키는 기전은 아직 완전히 설명되고 있지 않습니다. 하지만 비만이 총콜레스테롤, HDL-콜레스테롤, 혈압에 미치는 영향을 미치며, 중성지방, 인슐린저항성, 염증유발, 혈전 유발과 같은 새로운 위험요인에도 부정적인 영향을 미치는 것으로 볼 때 비만이 심혈관계질환의 위험을 높이는 것은 점차 분명해지고 있는 것으로 생각됩니다. 규칙적인 운동의 가장 중요한 효과중의 하나가 지방대사에 영향을 미치는 것입니다. 운동에 대한 신체의 여러 가지 변화는 장기적인 운동뿐만 아니라 한차례의 운동에서도 나타날 수 있습니다. 단 한차례의 유산소 운동 직후에도 혈장 중성지방의 감소를 볼 수 있으며, 이러한 효과는 수 시간까지 감소된 상태가 유지되기도 합니다. 한차례의 운동만으로 지질단백의 변화가 생긴다 할지라도 바람직한 효과를 얻기 위해서는 몇달간의 지속적인 트레이닝이 필요합니다. 이상지질혈증 개선을 위한 운동처방 이상지질혈증 환자의 운동처방은 식이요법 및 지질 강하제 치료와 함께 실시되어야 바람직합니다. 지질 및 지 단백 변화에 효과적인 최적의 신체활동에 의한 칼로리 소비량에 대해서는 약간의 논란이 있습니다. 예를 들어, 고 중성지방을 가진 환자에서 2주간 유산소 운동(45분/일)을 시킨 결과 중성지방은 낮아졌으나 총 콜레스테롤수치는 변화가 없었습니다. 그러나 HDL-콜레스테롤치는 주당 최소 1,000~1,200칼로리의 에너지 소비를 하는 운동량으로 최소한 12주 이상 계속할 때 증가됩니다. 그러나 운동을 하지 않은 사람들의 HDL-콜레스테롤의 증가를 위한 역치 수준은 운동을 한 사람들에 비해 대체로 낮으며 2~3개월의 운동 후에는 어느 경우에도 혈중 지질은 감소합니다. 지질의 효과적인 감소에 필요한 운동 기간 및 운동 강도에 대해서는 아직까지 명확하게 알려져 있지 않기 때문에 전체적인 운동량을 칼로리 소비량으로 환산하여 운동의 효과를 결정합니다. 운동을 통해 지질변화를 기대할 수 있는 최소한의 칼로리 소비량은 주당 1,000~1,200칼로리이며 적정 칼로리 소비량은 2,000칼로리 이상입니다. 이상지질혈증 환자에서 운동처방은 근력운동보다는 유산소 운동으로 칼로리 소비량을 늘리도록 권하지만 장기적으로 유산소 운동과 근력운동을 병행했을 때 이상지질혈증 개선에 더 좋은 변화를 기대할 수 있습니다. Pitsavos 등은 남자 480명, 여자 502명을 대상으로 유산소 운동만 한 그룹과 유산소운동과 근력운동을 병행한 그룹 간에 혈중 지질 변화를 관찰한 결과, 유산소 운동과 근력운동을 병행한 그룹에서 중성지질과 LDL-콜레스테롤이 각각 23%와 10%로 더 낮아졌다고 보고하였습니다. 이는 노인을 대상으로 한 연구에서도같은 결과가 나타났습니다. 근력운동은 체내 근육량을 증가시켜 기초대사량을 향상시키기 때문에 이상지질혈증 개선에 장기적인 효과를 가져올 수 있으며, 관절이 건강해져 동일한 시간 운동을 하더라도 더 안전하게 강도 높은 운동을 할 수 있어 동 시간 칼로리 소비를 높일 수 있는 장점이 있습니다. 이와 같은 근력운동은 상체와 몸통, 하체를 골고루 진행하도록 하며 일주일에 3회가 적당합니다. 유산소 운동은 자신의 최대능력의 40~70% 정도의 중등도의 강도로 일주일에 5일 이상 운동을 실시하도록 해야 합니다. 운동은 하루 중 1~2차례 정도 나누어서 실시하여도 좋습니다. 그리고 운동이 어느 정도 익숙해진 뒤 운동량을 증가시킬 때는 운동강도를 증가시키는 것보다 먼저 운동시간을 늘리도록 해야 합니다. 언제 약물치료를 해야 하나요? 식사와 운동 조절 등의 생활 습관개선 요법을 시행했음에도 불구하고 여전히 콜레스테롤이 높을 경우 약물치료를 해야 합니다. 보통 생활습관변화를 수개월 동안 시행해본 후 약물치료를 하지만, 심혈관질환이나 당뇨병이 있는 경우 약물치료와 생활습관개선을 동시에시행해서 치료하는 것이 좋습니다. 어느 수치까지 조절해야 하나요? 총 콜레스테롤에는 LDL 콜레스테롤(저밀도지단백 콜레스테롤, 가장 “나쁜” 콜레스테롤), 중성지방(두 번째로 “나쁜” 콜레스테롤), HDL-콜레스테롤(고밀도지단백 콜레스테롤, “좋은” 콜레스테롤) 등이 합쳐져서 나오는 값으로 이중의 어떤 콜레스테롤에 이상이 있느냐에 따라서 선택할 수 있는 약이 틀리지만 일반적으로 가장 중요한 교정 대상이 되는 것은 LDL 콜레스테롤입니다. LDL 콜레스테롤 치료 목표는 개개인이 지닌 심혈관질환 발생 위험도에 따라 다릅니다. 심혈관질환 위험인자를 몇 개 가지고 있는지, 아니면 이미 심혈관질환이 발생하였는가에 따라 치료 기준이 다릅니다. · 흡연 · 고혈압(≥140/90 mmHg 혹은 항고혈압 약물 복용) · 낮은 고밀도지단백 콜레스테롤( <40 mg/dL)* · 조기 관상동맥질환의 가족력(55세 미만 남자 형제나 부모 혹은 65세 미만의 여자 형제나 부모에서 관상동맥질환이 발생한 경우 · 연령(남자 ≥ 45세 : 여자 ≥ 55세 고밀도지단백 콜레스테롤 ≥60 mg/dL은 “음성(negative)” 위험인자이다; 이 경우에는 위험인자 전체 숫자에서 1을 빼도록 한다. 즉, 고위험군일수록 더 일찍 더 적극적으로 LDL 콜레스테롤 수치가 낮게 조절해야 합니다. 위험군 목표",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://kormedi.com/2844766/",
-          "https://health.chosun.com/site/data/html_dir/2026/06/26/2026062601681.html",
-          "https://luckydog1.tistory.com/entry/%EC%A4%91%EC%84%B1%EC%A7%80%EB%B0%A9-%EB%AC%B8%EC%A0%9C-%EC%B4%9D%EC%A0%95%EB%A6%AC-%E2%80%93-%EC%A0%95%EC%83%81-%EC%88%98%EC%B9%98-%EB%86%92%EC%95%84%EC%A7%80%EB%8A%94-%EC%9D%B4%EC%9C%A0-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B0%A9%EB%B2%95%EA%B9%8C%EC%A7%80-%EC%9D%98%ED%95%99-%EC%A0%95%EB%B3%B4-%EC%99%84%EC%A0%84-%ED%95%B4%EC%84%A4"
-        ],
-        "valid_until": null,
-        "monthly_search": 15720,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "cak_provenance": {
-          "relationship": "related_seed",
-          "item": {
-            "keyword": "폴리코사놀",
-            "capturedAt": "2026-09-11T10:52:36.218Z",
-            "expiresAt": "2026-09-12T10:52:36.218Z",
-            "trend": {
-              "source": "naver_datalab_search",
-              "timeUnit": "date",
-              "timeUnitOrigin": "provider_response",
-              "startDate": "2026-08-28",
-              "endDate": "2026-09-11",
-              "latestPeriod": "2026-09-10",
-              "previousPeriod": "2026-09-09",
-              "baselineStart": "2026-09-03",
-              "baselineEnd": "2026-09-09",
-              "latestRatio": 71.12947,
-              "previousRatio": 32.45179,
-              "baselineMean": 49.586774285714284,
-              "expectedBaselineDays": 7,
-              "observedBaselineDays": 7,
-              "dayPct": 119.18504341362986,
-              "baselinePct": 43.4444386121161,
-              "dayPctStatus": "measured",
-              "baselinePctStatus": "measured",
-              "hotScore": 31,
-              "calculationVersion": "daily_observed_v2"
-            },
-            "searchad": {
-              "attemptedAt": "2026-09-11T10:53:15.075Z",
-              "measuredAt": "2026-09-11T10:53:15.546Z",
-              "lookupStatus": "exact",
-              "matchMode": "whitespace_exact",
-              "matchedKeyword": "폴리코사놀",
-              "monthlyPc": 2600,
-              "monthlyMobile": 21700,
-              "monthlyTotal": 24300,
-              "monthlyPcStatus": "measured",
-              "monthlyMobileStatus": "measured",
-              "monthlyTotalStatus": "measured",
-              "advertisingCompetition": "mid",
-              "failureCode": null
-            }
-          },
-          "export": {
-            "schemaVersion": 1,
-            "kind": "cak_keyword_candidates",
-            "profile": "blog-kr",
-            "generatedAt": "2026-09-11T10:53:41.155Z",
-            "expiresAt": "2026-09-12T10:52:32.832Z",
-            "compliance": {
-              "resaleRestricted": true,
-              "cacheTtlHours": 24
-            },
-            "scope": {
-              "seedSet": "g2-seeds",
-              "requestedKeywordCount": 182,
-              "storedKeywordCount": 182,
-              "eligibleDailyCount": 174,
-              "exportedCount": 80,
-              "truncatedCount": 94
-            },
-            "exclusionCounts": {
-              "expired": 0,
-              "unknownTimeUnit": 0,
-              "nonDaily": 0,
-              "invalidSeries": 5,
-              "missingPreviousDay": 1,
-              "insufficientBaseline": 2
-            }
-          },
-          "transport": {
-            "status": "ok",
-            "reason": "downloaded",
-            "sourceRunId": 34591256944,
-            "artifactId": 10195764919,
-            "headSha": "eb75265049e17e80e2d5225f06df2ce1eae9a036",
-            "sourceRunCreatedAt": "2026-09-11T10:51:44Z"
-          },
-          "relatedKeyword": "중성지방수치",
-          "relatedMonthly": 15720,
-          "relatedMeasuredAt": "2026-09-11T15:55:51.295428+00:00"
-        },
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6715",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.lipid.or.kr/dtp/therapy.php",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "중성지방 수치",
-        "organic_domains": [
-          "kormedi.com",
-          "health.chosun.com",
-          "healthinsightnote.com",
-          "www.guideline.or.kr",
-          "health.chosun.com",
-          "luckydog1.tistory.com",
-          "v.daum.net",
-          "v.daum.net",
-          "common.health.kr",
-          "doctornow.co.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://kormedi.com/2844766/",
-            "domain": "kormedi.com",
-            "title": "중성지방 수치 높다면…약 복용 전 ‘이것’부터 고쳐야 - 코메디닷컴",
-            "snippet": "구글 검색 선호 출처로 추가 Image 중성 지방 수치가 높을 때는 탄수화물과 당분 섭취를 줄이는 대신 오메가-3 지방산이 풍부한 생선 등의 식품을 적당량 먹는 게"
-          },
-          {
-            "url": "https://health.chosun.com/site/data/html_dir/2026/06/26/2026062601681.html",
-            "domain": "health.chosun.com",
-            "title": "“중성지방 수치 낮추는 효과” 매일 따르면 좋은 세 가지 습관 - 헬스조선",
-            "snippet": "포화지방 섭취량도 혈중 중성지방과 LDL 콜레스테롤 수치에 악영향을 준다. ... 운동을 하면 중성지방 수치가 최대 11%까지 줄어들고, 식후 고지혈증 증상도 완화돼 죽상경화성 심혈관 질환 위험이"
-          },
-          {
-            "url": "https://healthinsightnote.com/%EC%A4%91%EC%84%B1%EC%A7%80%EB%B0%A9-%EC%88%98%EC%B9%98-%EA%B8%B0%EC%A4%80/",
-            "domain": "healthinsightnote.com",
-            "title": "중성지방 수치 기준·위험 신호｜검사표 읽는 법 | 헬스인사이트노트",
-            "snippet": "중성지방 수치 기준 은 보통 mg/dL 구간으로 안내되지만, 공복/비공복 조건과 함께 봐야 해석이 단순해집니다. ... Image: 중성지방 수치 기준·위험 신호｜검사표 읽는 법 2 검사표는 ‘한"
-          },
-          {
-            "url": "https://www.guideline.or.kr/newsletter/vol1812/file/vol1812_file03_Dyslipidemia_Quick_Rerence_Guide.pdf",
-            "domain": "www.guideline.or.kr",
-            "title": "| www.digitalcpg.kr",
-            "snippet": "약제의 선택기준 | 중성지방 | 중성지방 농도가 ... yy 혈중 간효소 수치 측정을 고려 |"
-          },
-          {
-            "url": "https://health.chosun.com/site/data/html_dir/2026/08/28/2026082801243.html",
-            "domain": "health.chosun.com",
-            "title": "“중성지방 수치 훅 오른다”… 주말에 흔히 저지르는 실수 3가지, 뭘까? - 헬스조선",
-            "snippet": "미국 심장내과 전문의 브렛 실로브 박사는 “간이 술을 처리하는 동안 정상적인 지방 연소가 느려지고, 간에서 중성지방 형태의 지방을 더 많이 만들어 저장·운반할 수 있다”며 “특히"
-          },
-          {
-            "url": "https://luckydog1.tistory.com/entry/%EC%A4%91%EC%84%B1%EC%A7%80%EB%B0%A9-%EB%AC%B8%EC%A0%9C-%EC%B4%9D%EC%A0%95%EB%A6%AC-%E2%80%93-%EC%A0%95%EC%83%81-%EC%88%98%EC%B9%98-%EB%86%92%EC%95%84%EC%A7%80%EB%8A%94-%EC%9D%B4%EC%9C%A0-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B0%A9%EB%B2%95%EA%B9%8C%EC%A7%80-%EC%9D%98%ED%95%99-%EC%A0%95%EB%B3%B4-%EC%99%84%EC%A0%84-%ED%95%B4%EC%84%A4",
-            "domain": "luckydog1.tistory.com",
-            "title": "중성지방 문제 총정리 – 정상 수치, 높아지는 이유, 낮추는 방법까지 의학 정보 완전 해설",
-            "snippet": "# 중성지방 문제 총정리 – 정상 수치, 높아지는 이유, 낮추는 방법까지 의학 정보 완전 해설 ... 건강검진 결과지를 받아봤을 때 '중성지방 수치 높음'이라는 문구가 찍혀"
-          },
-          {
-            "url": "https://v.daum.net/v/20260811100736239",
-            "domain": "v.daum.net",
-            "title": "중성지방 수치 높다면…약 복용 전 ‘이것’부터 고쳐야",
-            "snippet": "Image: 중성 지방 수치가 높을 때는 탄수화물과 당분 섭취를 줄이는 대신 오메가-3 지방산이 풍부한 생선 등의 식품을 적당량 먹는 게 좋다. ... 특히 혈액 내의"
-          },
-          {
-            "url": "https://v.daum.net/v/20250201120004664",
-            "domain": "v.daum.net",
-            "title": "중성지방 수치 높으면 몸에는 '이런' 일이…올바른 관리 방법 3",
-            "snippet": "심한 경우 췌장 및 주변 조직의 괴사나 급사까지 이어질 수 있는 만큼, 중성지방 수치가 높은 사람이라면 반드시 경계해야 한다. ... 높은 중성지방 수치로 인해 복부비만이"
-          },
-          {
-            "url": "https://common.health.kr/shared/healthkr/pharmreview/%EA%B3%A0%EC%A7%80%ED%98%88%EC%A6%9D%EC%95%BD%EB%AC%BC%EC%9A%94%EB%B2%95%282%29_%EC%A0%80%EC%9E%90%EA%B2%80%ED%86%A0%EC%99%84%EB%A3%8C%280%29.pdf",
-            "domain": "common.health.kr",
-            "title": "<B0EDC1F6C7F7C1F5BEE0B9B0BFE4B9FD2832295FC0FAC0DAB0CBC5E4BFCFB7E12E687770>",
-            "snippet": "NEJM 1999;341: 498~511, AMA1984:251:351-364) 하지만 중성지방 수치는 오히려 상승시킬 수 있으므로 중성지방 수치가 250mg/dL 이상인 경우에는 단독 치료제로 사용하지 않고 niacin이나 statin제제와 함께 사용하여야 한다."
-          },
-          {
-            "url": "https://doctornow.co.kr/content/qna/2f1e91d967ef4eeabd1aa9b5d6a6c243",
-            "domain": "doctornow.co.kr",
-            "title": "중성지방 수치 높을 때 대처법은? - 닥터나우",
-            "snippet": "# 중성지방 수치 높을 때 대처법은? ... 중성지방 수치가 593으로 매우 높아, 많이 걱정되셨겠네요."
-          }
-        ],
-        "dominant_result_ratio": 0.25,
-        "score_components": {
-          "demand": 33.57,
-          "organic_opportunity": 22.5,
-          "trend": -2.42,
-          "cak_trend": 0,
-          "intent_fit": 0
-        },
-        "trend_growth": -0.242,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-11T15:55:51.295428+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "중성지방수치"
-        ],
-        "status": "research_only",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.lipid.or.kr/dtp/therapy.php",
-              "title": "한국지질·동맥경화학회 | 치료",
-              "excerpt_chars": 8000
-            },
-            {
-              "url": "https://www.kcpass.or.kr/mps",
-              "title": "중앙사회서비스원",
-              "excerpt_chars": 2533
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.kcpass.or.kr/mps",
-                  "title": "중앙사회서비스원",
-                  "excerpt_chars": 2533
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.lipid.or.kr/dtp/therapy.php",
-                  "title": "한국지질·동맥경화학회 | 치료",
-                  "excerpt_chars": 8000
-                },
-                {
-                  "url": "https://www.kcpass.or.kr/mps",
-                  "title": "중앙사회서비스원",
-                  "excerpt_chars": 2533
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "중성지방수치",
-          "executed_query": "중성지방 수치",
-          "topic": "중성지방수치 높아지는 원인과 수치별 관리 원칙",
-          "intent": "중성지방수치가 높아지는 이유는 무엇이며, 높은 수치의 위험과 식사·운동 관리 원칙은 무엇인가?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "result_count": 10,
-          "domain_count": 8,
-          "dominant_ratio": 0.25,
-          "search_review": {
-            "version": 1,
-            "query": "중성지방수치",
-            "executed_query": "중성지방 수치",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-11T15:55:51.295428+00:00",
-            "raw_sha256": "5268a94d3edf92c99bd29d2a270228e09430b5638487d4cf60696ba5e3497534",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "중성지방 수치 높다면…약 복용 전 ‘이것’부터 고쳐야"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "“중성지방 수치 낮추는 효과” 매일 따르면 좋은 세 가지 습관"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "중성지방 수치 기준·위험 신호｜검사표 읽는 법"
-              },
-              {
-                "result_index": 3,
-                "relevant": false,
-                "quote": "약제의 선택기준 | 중성지방 | 중성지방 농도가"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "“중성지방 수치 훅 오른다”… 주말에 흔히 저지르는 실수 3가지, 뭘까?"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "중성지방 문제 총정리 – 정상 수치, 높아지는 이유, 낮추는 방법까지"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "중성지방 수치 높다면…약 복용 전 ‘이것’부터 고쳐야"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "중성지방 수치 높으면 몸에는 '이런' 일이…올바른 관리 방법 3"
-              },
-              {
-                "result_index": 8,
-                "relevant": false,
-                "quote": "단독 치료제로 사용하지 않고 niacin이나 statin제제와 함께 사용하여야 한다."
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "중성지방 수치 높을 때 대처법은?"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 8,
-            "relevant_site_count": 6,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              4,
-              5,
-              6,
-              7,
-              9
-            ],
-            "relevance_ratio": 0.8,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.25,
-            "site_concentration": 0.25,
-            "organic_opportunity": 22.5
-          },
-          "scope": "full_keyword",
-          "target_keyword": "중성지방수치",
-          "matches": [
-            {
-              "result_index": 0,
-              "quote": "중성지방 수치 높다면…약 복용 전 ‘이것’부터 고쳐야"
-            },
-            {
-              "result_index": 1,
-              "quote": "“중성지방 수치 낮추는 효과” 매일 따르면 좋은 세 가지 습관"
-            },
-            {
-              "result_index": 5,
-              "quote": "중성지방 문제 총정리 – 정상 수치, 높아지는 이유, 낮추는 방법까지 의학 정보 완전 해설"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "input_sha256": "88d19a80e2762b09aa0cb7facbddaacd4dff0ea7c4f0af825cb08b6e94e5e570",
-          "review": {
-            "scope": "narrower_query",
-            "target_keyword": "중성지방수치",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "이상지질혈증 치료방법 생활요법 약물요법 건강한 식생활 습관, 운동과 활동을 통해 건강한 신체를 유지하여 건강하게 오래 사는 것이 장수의 비결입니다.",
-                "entity": "이상지질혈증",
-                "context": "general"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "중성지방의 정상·경계·높음 기준과 검사 조건에 따른 수치 해석은?",
-                "answer": "검색결과에 확인된 핵심 질문이다. 기획과 본문은 높은 수치의 관리에 한정되며 정상·경계 기준과 공복 조건 근거가 없다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "중성지방 농도가 200∼500 mg/dL인 경우, 먼저 일차적인 치료는 LDL 콜레스테롤을 목표치 미만으로 낮추기 위해 스타틴을 복용합니다."
-              },
-              {
-                "facet": "중성지방 수치가 높아지는 주요 원인은?",
-                "answer": "체중 증가, 음주, 당질 과다와 질환·약물·유전적 원인을 설명할 근거가 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "이차적인 원인(체중 증가, 음주, 탄수화물 섭취, 만성신부전, 당뇨병, 갑상선기능저하, 임신, 에스트로겐, tamoxifen, glucocorticoid 등의 투약력)"
-              },
-              {
-                "facet": "높은 중성지방 수치의 위험은?",
-                "answer": "심뇌혈관계 질환 위험과 500 mg/dL 이상에서 급성췌장염 위험 증가를 본문이 설명한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "혈중 중성지방 농도가 500 mg/dL 이상으로 상승된 경우 급성췌장염의 위험이 증가한다고 알려져 있어"
-              },
-              {
-                "facet": "높은 수치 구간별 관리 원칙은?",
-                "answer": "200∼500 구간의 LDL 우선 조절과 원인 교정 후에도 500 이상이 지속될 때의 약물치료를 지원한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "지속적으로 500 mg/dL 이상의 중성지방 농도가 확인되는 경우 fibrate, nicotinic acid, omega-3 fatty acid 등의 약물치료를 시작합니다."
-              },
-              {
-                "facet": "식사·음주·체중·운동을 어떻게 관리해야 하나?",
-                "answer": "당질 과다와 음주 제한, 과체중 감량, 규칙적인 유산소·근력운동을 안내할 본문 근거가 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "혈액 내 지질수치를 정상화시키기 위해서는 식습관을 개선하는 동시에 규칙적인 운동을 하고 신체활동을 늘려 생활습관을 개선하여야 합니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "혈액 내에 콜레스테롤(LDL-콜레스테롤)이나 중성지방과 같은 지질수치가 높아지면 심뇌혈관계 질환의 위험이 높아집니다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 53.65,
-        "publish_eligible": false,
-        "hold_reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
-        ]
-      }
-    ],
+    "selected": [],
+    "held": [],
     "rejected": [
       {
         "keyword": "CT비용",
         "reason": "search quality insufficient",
         "hold_reasons": [
+          "insufficient_relevant_results",
           "low_search_relevance"
         ],
-        "monthly_search": 11720,
+        "monthly_search": 11620,
         "organic_provider": "codex_native_search",
         "organic_query": "CT 비용",
         "organic_results": [
@@ -4439,28 +3640,16 @@
             "snippet": "몸에 포도당 기반 방사성 추적자를 주입한 뒤, 대사 활동이 활발한 부위를 영상으로 분석하기 때문에 일반 CT보다 검사 과정이 복잡하고, 그만큼 비용도 높게 발생하는 편입니다."
           },
           {
-            "url": "https://hcube.kr/guide/non-benefit.php?boardid=non_benefit&category=&idx=4&mode=view&offset=&sk=&sw=",
-            "domain": "hcube.kr",
-            "title": "에이치큐브병원",
-            "snippet": "비급여 [ CT · 내시경 관리 ] 비용"
-          },
-          {
             "url": "https://zayeon.co.kr/ct-%EA%B2%80%EC%82%AC-%EB%B9%84%EC%9A%A9-2026%EF%BD%9C%EB%87%8C%C2%B7%ED%9D%89%EB%B6%80%C2%B7%EB%B3%B5%EB%B6%80%C2%B7%EC%A1%B0%EC%98%81%EC%A0%9C-%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%EC%A0%81/",
             "domain": "zayeon.co.kr",
             "title": "CT 검사 비용 2026｜뇌·흉부·복부·조영제, 건강보험 적용하면 얼마? » 헬스픽",
-            "snippet": "한 문장으로 보면, 2026년 CT 검사 비용은 ‘한 번에 몇 만원’이라는 전국 공통가격보다 건강보험 적용 → 조영제 → 촬영 부위와 방법 → 병원급 순서로 확인하는"
+            "snippet": "조영제를 사용하는 검사는 비조영 CT와 촬영 과정 및 산정 항목이 달라질 수 있어 최종 비용에도 차이가 생길 수 있습니다."
           },
           {
-            "url": "https://www.hira.or.kr/dummy.do?cmsurl=%2Fcms%2Fmedi_info%2F02%2F01%2F1343491_27565.html&pgmid=HIRAA050200000000&subject=CT+28%EC%A0%84%EC%82%B0%ED%99%94%EB%8B%A4%EC%8B%9C+%EC%98%81%EC%83%81%EC%A7%84%EB%8B%A8",
-            "domain": "www.hira.or.kr",
-            "title": "세부조건별 의료기관 찾기 < 의료정보 < 건강보험심사평가원",
-            "snippet": "* 전산화단층영상진단(Computed Tomography, CT)은 촬영 부위에 따라 두부, 안면 및 두개기저(안와, 부비동, 측두골,기타), 경부, 흉부, 복부[골반 포함], 척추, 상지, 하지로 수가가 나뉘고 세부 부위별로 비용이"
-          },
-          {
-            "url": "https://zayeon.co.kr/%ED%9D%89%EB%B6%80-ct-%EB%B9%84%EC%9A%A9-%EC%96%BC%EB%A7%88%EC%9D%BC%EA%B9%8C-%EC%A0%80%EC%84%A0%EB%9F%89-%ED%8F%90-ct%EC%99%80-%EC%9D%BC%EB%B0%98-ct-%EC%B0%A8%EC%9D%B4%C2%B7%EA%B1%B4%EA%B0%95/",
-            "domain": "zayeon.co.kr",
-            "title": "흉부 CT 비용 얼마일까? 저선량 폐 CT와 일반 CT 차이·건강보험 적용 기준 » 헬스픽",
-            "snippet": "흉부 CT 비용을 찾아보면 병원마다 금액이 다르고, 어떤 곳은 ‘저선량 폐 CT’, 다른 곳은 ‘흉부 CT’ 또는 ‘조영 CT’라고 적혀 있어 비교하기가 쉽지 않습니다."
+            "url": "https://hcube.kr/guide/non-benefit.php?boardid=non_benefit&idx=4&mNum=7&mode=view&sNum=3",
+            "domain": "hcube.kr",
+            "title": "에이치큐브병원",
+            "snippet": "비급여 [ CT · 내시경 관리 ] 비용"
           },
           {
             "url": "https://seoul.eumc.ac.kr/wellness/private/private0107.do",
@@ -4475,10 +3664,10 @@
             "snippet": "행위료는 단일 개별 항목의 비용으로 시행 횟수 및 범위에 따라 달라질 수 있으며, 치료 재료 및 약제가 필요한 경우 별도 산정 됩니다. ... * 복부CT"
           },
           {
-            "url": "https://dentalcost.co.kr/dict/%EC%B9%98%EA%B3%BC-ct/",
-            "domain": "dentalcost.co.kr",
-            "title": "치과 CT - 치과비용견적",
-            "snippet": "### 치과 CT 비용은 얼마나 드나요"
+            "url": "https://zayeon.co.kr/%ED%9D%89%EB%B6%80-ct-%EB%B9%84%EC%9A%A9-%EC%96%BC%EB%A7%88%EC%9D%BC%EA%B9%8C-%EC%A0%80%EC%84%A0%EB%9F%89-%ED%8F%90-ct%EC%99%80-%EC%9D%BC%EB%B0%98-ct-%EC%B0%A8%EC%9D%B4%C2%B7%EA%B1%B4%EA%B0%95/",
+            "domain": "zayeon.co.kr",
+            "title": "흉부 CT 비용 얼마일까? 저선량 폐 CT와 일반 CT 차이·건강보험 적용 기준 » 헬스픽",
+            "snippet": "흉부 CT 비용을 찾아보면 병원마다 금액이 다르고, 어떤 곳은 ‘저선량 폐 CT’, 다른 곳은 ‘흉부 CT’ 또는 ‘조영 CT’라고 적혀 있어 비교하기가 쉽지 않습니다."
           },
           {
             "url": "https://yeonsuleaders.com/notice/?bmode=view&idx=15933185",
@@ -4487,10 +3676,22 @@
             "snippet": "명칭 | 비용(단위:원) ... 뇌혈관CT (조영제 포함) | 300,000"
           },
           {
+            "url": "https://dentalcost.co.kr/dict/%EC%B9%98%EA%B3%BC-ct/",
+            "domain": "dentalcost.co.kr",
+            "title": "치과 CT - 치과비용견적",
+            "snippet": "### 치과 CT 비용은 얼마나 드나요"
+          },
+          {
             "url": "https://medihere.co.kr/mri-ct-%EC%B4%AC%EC%98%81-%EB%B9%84%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C/",
             "domain": "medihere.co.kr",
             "title": "MRI/CT 촬영 비용: 병원별 차이가 왜 이렇게 클까? | 병원콕 건강정보",
             "snippet": "### CT 부위별 비용 비교"
+          },
+          {
+            "url": "https://www.gcimed.com/gangnam/cscenter/sub5_7_1?srchGubunCode=10807",
+            "domain": "www.gcimed.com",
+            "title": "GC녹십자아이메드 강남의원",
+            "snippet": "행위료는 단일 개별 항목의 비용으로 시행 횟수 및 범위에 따라 달라질 수 있으며, 치료 재료 및 약제가 필요한 경우 별도 산정 됩니다. ... * 복부CT"
           }
         ],
         "search_review": {
@@ -4498,8 +3699,8 @@
           "query": "CT비용",
           "executed_query": "CT 비용",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "raw_sha256": "27d14775654d87562004cc8dea2c22a5244e784841edf57cf5e5859ffd445722",
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "bfaaa853c5aa6e80daab7176cc6737d1d5fddcae3b9265fec7f1dbb394cf614f",
           "decisions": [
             {
               "result_index": 0,
@@ -4509,32 +3710,32 @@
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "비급여 [ CT · 내시경 관리 ] 비용"
+              "quote": "CT 검사 비용 2026｜뇌·흉부·복부·조영제, 건강보험 적용하면 얼마?"
             },
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "CT 검사 비용 2026｜뇌·흉부·복부·조영제, 건강보험 적용하면 얼마?"
+              "quote": "비급여 [ CT · 내시경 관리 ] 비용"
             },
             {
               "result_index": 3,
-              "relevant": true,
-              "quote": "수가가 나뉘고 세부 부위별로 비용이"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "흉부 CT 비용 얼마일까?"
-            },
-            {
-              "result_index": 5,
               "relevant": false,
               "quote": "PET-CT | 뇌&전신 PET | 방사성 의약품 사용 | 1,300,000"
             },
             {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "별도 산정 됩니다. ... * 복부CT"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "흉부 CT 비용 얼마일까? 저선량 폐 CT와 일반 CT 차이·건강보험 적용 기준"
+            },
+            {
               "result_index": 6,
               "relevant": false,
-              "quote": "치료 재료 및 약제가 필요한 경우 별도 산정 됩니다. ... * 복부CT"
+              "quote": "뇌혈관CT (조영제 포함) | 300,000"
             },
             {
               "result_index": 7,
@@ -4543,415 +3744,145 @@
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "뇌혈관CT (조영제 포함) | 300,000"
+              "relevant": true,
+              "quote": "CT 부위별 비용 비교"
             },
             {
               "result_index": 9,
-              "relevant": true,
-              "quote": "MRI/CT 촬영 비용: 병원별 차이가 왜 이렇게 클까?"
+              "relevant": false,
+              "quote": "별도 산정 됩니다. ... * 복부CT"
             }
           ]
         }
       },
       {
-        "keyword": "고혈압수치",
+        "keyword": "경동맥초음파비용",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "insufficient_relevant_results",
-          "low_search_relevance"
-        ],
-        "monthly_search": 13450,
-        "organic_provider": "codex_native_search",
-        "organic_query": "고혈압 수치",
-        "organic_results": [
-          {
-            "url": "https://www.hyunmyoung.co.kr/general-medicine/hypertension-test-interpretation/",
-            "domain": "www.hyunmyoung.co.kr",
-            "title": "고혈압, 검사 수치는 어떻게 해석하나요? | 현명내과 & 류마티스내과",
-            "snippet": "소속: 현명내과 & 류마티스내과 · 서울 중구 서소문로 120 ENA빌딩 3층 (시청역 인근) ... 대한내과학회지에 따르면 고혈압 환자의 위험도는 혈압 수치뿐 아니라 나이·흡연·비만·이상지질혈증·혈당·당뇨·조기 심질환 가족력"
-          },
-          {
-            "url": "https://www.heart.org/-/media/Healthy-Living-Files/LE8-Fact-Sheets/LE8_Blood_Pressure_Korean.pdf?sc_lang=en",
-            "domain": "www.heart.org",
-            "title": "혈압 관리 방법",
-            "snippet": "높은 혈압(고혈압)은 심장과 뇌 건강에 해를 끼칠 수 있으며 보통 무증상입니다.이는 혈관을 손상시키고 심각한 건강 문제를 야기할 수 있습니다.심장마비, 뇌졸중, 치매, 심부전, 신장 질환/신부전, 시력"
-          },
-          {
-            "url": "https://sondoctor.co.kr/1195/",
-            "domain": "sondoctor.co.kr",
-            "title": "고혈압의 기준 수치, 고혈압 치료 목표 혈압 (feat. 2022 고혈압 진료지침) – 손닥터",
-            "snippet": "# 고혈압의 기준 수치, 고혈압 치료 목표 혈압 (feat. ... 동맥경화 및 노화로 인해 혈관의 탄력이 떨어지면 수축기 혈압이 상대적으로 크게 증가하는 현상이 보이는데 수축기"
-          },
-          {
-            "url": "https://doh.wa.gov/sites/default/files/legacy/Documents/8380//345-273-BloodPressHm-ko-L.pdf",
-            "domain": "doh.wa.gov",
-            "title": "혈압 \n수치\n측정 방법",
-            "snippet": "혈압 수치의 의미 ... (상위 수치) | | 확장기 혈압 mm Hg ... 고혈압(HYPERTENSION) 1기 ... * | 180 초과 | 및/또는 | 120 초과American"
-          },
-          {
-            "url": "https://feeltracker.com/ko/blood-pressure/white-coat-hypertension/",
-            "domain": "feeltracker.com",
-            "title": "백의 고혈압: 병원에서 더 높게 나오는 수치 | Feeltracker",
-            "snippet": "반대 현상인 가면 고혈압은 더 중요하고 놓치기 쉬워요: 병원에서는 정상이지만 집에서는 높은 경우예요(흔히 업무 스트레스, 저녁 음주, 병원 방문에서는 보이지 않는 수면 무호흡증 때문이에요). ..."
-          },
-          {
-            "url": "https://aidiagme.com/ko/pathologies-and-diseases/high-blood-pressure/",
-            "domain": "aidiagme.com",
-            "title": "고혈압: 증상, 수치, 원인 및 낮추는 방법 - AI DiagMe",
-            "snippet": "Image: 고혈압의 증상, 수치, 원인, 그리고 낮추는 방법 ... 또한 알기 쉬운 혈압 수치 표, 즉각적인 진료가 필요한 위험 신호 목록, 그리고 자주 묻는 질문에"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8204057650",
-            "domain": "www.coupang.com",
-            "title": "고혈압 콜레스테롤 수치 개선 폴리코사놀 하루1정 1통90캡슐 3개월분 캐나다직배송 - 폴리코사놀 | 쿠팡",
-            "snippet": "# 고혈압 콜레스테롤 수치 개선 폴리코사놀 하루1정 1통90캡슐 3개월분 캐나다직배송 ... * 건강식품 타입: 알약/캡슐 ... * \"해당 상품 자체\"와 관계없는 글, 양도, 광고성, 욕설,"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8289184802",
-            "domain": "www.coupang.com",
-            "title": "고혈압 콜레스테롤 수치 개선 폴리코사놀 하루1정 1통90캡슐 3개월분 캐나다직배송 - 폴리코사놀 | 쿠팡",
-            "snippet": "# 고혈압 콜레스테롤 수치 개선 폴리코사놀 하루1정 1통90캡슐 3개월분 캐나다직배송 ... * \"해당 상품 자체\"와 관계없는 글, 양도, 광고성, 욕설, 비방, 도배 등의 글은 예고"
-          },
-          {
-            "url": "https://www.dietitian.or.kr/xaido/lsy/2018/hyperhigh180514.pdf",
-            "domain": "www.dietitian.or.kr",
-            "title": "고혈압 응급 상황\n\n- 혈압 수치: 180/110 이상 일 때\n- 특히 200~210 이상",
-            "snippet": "- 특히 200~210 이상의 수축기혈압 수치 혹은 110~120 의 확장기 혈압이 지속 될 때 ... 질병관리본부 : 고혈압고급환자실습 18"
-          },
-          {
-            "url": "https://blog.meditial.co.kr/%EA%B1%B4%EA%B0%95-%EC%83%81%EC%8B%9D/%EA%B3%A0%ED%98%88%EC%95%95-%EC%A0%84%EB%8B%A8%EA%B3%84-%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98/",
-            "domain": "blog.meditial.co.kr",
-            "title": "고혈압 전단계 혈압 수치 및 놓치면 후회하는 생활 관리 방법 5가지 - 메디셜 공식 블로그",
-            "snippet": "혈압은 우리 몸의 혈관 건강 상태를 나타내는 가장 정직한 지표입니다.대한고혈압학회(KSH)의 최신 가이드라인에 따르면 가장 이상적인 정상 혈압은 수축기 120mmHg 미만, 이완기 80mmHg 미만입니다. ... 칼륨이"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "고혈압수치",
-          "executed_query": "고혈압 수치",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "raw_sha256": "1d626a5c891fdb44aef968b4bdf931ef90c707e80ff534509b533b3552fec512",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "고혈압, 검사 수치는 어떻게 해석하나요?"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "높은 혈압(고혈압)은 심장과 뇌 건강에 해를 끼칠 수 있으며 보통 무증상입니다."
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "고혈압의 기준 수치, 고혈압 치료 목표 혈압"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "고혈압(HYPERTENSION) 1기"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "백의 고혈압: 병원에서 더 높게 나오는 수치"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "또한 알기 쉬운 혈압 수치 표"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "폴리코사놀 하루1정 1통90캡슐 3개월분 캐나다직배송"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "폴리코사놀 하루1정 1통90캡슐 3개월분 캐나다직배송"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "고혈압 응급 상황\n\n- 혈압 수치: 180/110 이상 일 때"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "고혈압 전단계 혈압 수치 및 놓치면 후회하는 생활 관리 방법 5가지"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "칼륨많은음식",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance",
           "concentrated_search_results"
         ],
-        "monthly_search": 15510,
+        "monthly_search": 6450,
         "organic_provider": "codex_native_search",
-        "organic_query": "칼륨 많은 음식",
+        "organic_query": "경동맥 초음파 비용",
         "organic_results": [
           {
-            "url": "https://research.cirius.or.kr/nutrition/anti-cramp-snacks-mineral-foods-active-people",
-            "domain": "research.cirius.or.kr",
-            "title": "쥐 안 나는 음식: 운동 전후 마그네슘·칼륨 간식 가이드 | 시리어스 건강연구소",
-            "snippet": "마그네슘·칼륨이 든 휴대용 간식 6가지와 챙기는 순서를 실전 코칭 방식으로 안내합니다.시리어스 건강연구소·2026년 8월 30일·13분 읽기 ... 이미 하루 세 끼 식단으로 마그네슘·칼륨 섭취를 관리하는 방법을"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound",
+            "domain": "hospitalprice.kr",
+            "title": "경동맥 초음파 가격 — 전국 병원 1,110곳 비교, 중앙값 107,500원 | 병원가격",
+            "snippet": "전국 1,110곳의 병원이 경동맥 초음파 가격을 공개했으며, 전국 중앙값은 107,500원입니다. ... * 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 증상이 있어서"
           },
           {
-            "url": "https://www.kurly.com/recommendation/%EB%A0%88%EB%AA%AC",
-            "domain": "www.kurly.com",
-            "title": "레몬 추천, 레몬 가격비교 - 마켓컬리 상품 정보",
-            "snippet": "다양한 요리에 활용할 수 있는 레몬을 항상 신선하게 보관하세요. ... 각종 소스나 샐러드에 상큼함을 더해주는 것은 물론, 쿠키와 빵 같은 베이킹에도 존재감을 드러낸답니다. ... 얇게"
+            "url": "https://medinics.kr/prices/%EA%B2%BD%EB%8F%99%EB%A7%A5-%EC%B4%88%EC%9D%8C%ED%8C%8C",
+            "domain": "medinics.kr",
+            "title": "경동맥 초음파 가격 비교 — 병원별·지역별 | 메디닉스",
+            "snippet": "검사 초음파검사료(진단초음파)# 경동맥 초음파"
           },
           {
-            "url": "https://health.chosun.com/healthcareColumn/column_view.jsp?idx=10192",
-            "domain": "health.chosun.com",
-            "title": "나트륨 짝꿍 ‘칼륨’은 얼마나 중요한가요? - 헬스케어& 칼럼",
-            "snippet": "‘칼륨이온(K⁺)’은 세포 내부(나트륨은 외부에 많다)에 많은 양이온으로, 혈장 농도는 나트륨 농도보다 현저히 낮다. ... 특히, 심근 탈분극과 수축에 큰 역할을 한다. ... 칼륨은 음식 섭취"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul",
+            "domain": "hospitalprice.kr",
+            "title": "서울 경동맥 초음파 가격 — 병원 199곳 비교, 중앙값 150,000원 | 병원가격",
+            "snippet": "* 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 증상이 있어서 받으면 급여, 검진으로 받으면 비급여. ... 서울에서 경동맥 초음파 가격이 가장"
           },
           {
-            "url": "https://ksn.or.kr/upload/general/ebook/%5B%EC%A7%88%EB%B3%91%EA%B4%80%EB%A6%AC%EB%B3%B8%EB%B6%80%5D%20%EC%9D%BC%EB%B0%98%EC%9D%B8%EC%9D%84%20%EC%9C%84%ED%95%9C%20%EB%A7%8C%EC%84%B1%EC%BD%A9%ED%8C%A5%EB%B3%91%20%EB%B0%94%EB%A1%9C%EC%95%8C%EA%B8%B0_%EB%8B%B9%EB%87%A8%EB%B3%91%2C%20%EA%B3%A0%ED%98%88%EC%95%95%2C%20%EC%BD%A9%ED%8C%A5%EB%B3%91%20%ED%99%98%EC%9E%90%ED%8E%B8.pdf",
-            "domain": "ksn.or.kr",
-            "title": "만성콩팥병 환자는 단백질 섭취를 어떻게 해야 하나요?",
-            "snippet": "식이 요법을 했음에도 불구하고 혈중 칼륨의 수치가 높은 때에는 음식물 속의 칼륨이 흡수되지 않도록 하는 약을 음식과 같이 복용해야 합니다.칼륨은 소변뿐만 아니라 대변을 통해서도 배설이"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/eunpyeong-gu",
+            "domain": "hospitalprice.kr",
+            "title": "서울 은평구 경동맥 초음파 가격 — 병원 8곳·의원 67곳 비교, 최저 70,000원 | 병원가격",
+            "snippet": "은평구에서 경동맥 초음파 가격을 공개한 병원은 8곳, 의원급은 67곳이며 병원 중앙값은 145,000원입니다. ... 서울 은평구에서 경동맥 초음파 가격이 가장 낮은 병원은 어디인가요?"
           },
           {
-            "url": "https://v.daum.net/v/20260630073118258",
-            "domain": "v.daum.net",
-            "title": "\"오이보다 많다\"… 의외로 칼륨 많은 음식 5가지",
-            "snippet": "### \"오이보다 많다\"… 의외로 칼륨 많은 음식 5가지 ... 영양사 애나 테일러(Anna Taylor, RDN, LD)는 건강·의료 매체 '클리블랜드 클리닉 헬스 에센셜(Cleveland Clinic Health Essentials)'에서 \"칼륨은"
+            "url": "https://emc.ac.kr/footer/footer_pg05.jsp?board_code=&dept=&dept_gubun=&doct=&find=10000&screenKey=&search=&str_board_category=&str_page=44",
+            "domain": "emc.ac.kr",
+            "title": "비급여수가 | 을지대학교병원",
+            "snippet": "분류 | 명칭 | 코드 | 구분 | 비용 | 최저비용 | 최대비용 | 특이사항 | 최종변경일 ... 진단초음파 | 경동맥 초음파 도플러1 | EB482"
           },
           {
-            "url": "https://v.daum.net/v/YBq3BPdzjm",
-            "domain": "v.daum.net",
-            "title": "칼륨 많은 음식 리스트, \"혈관\"부터 \"노폐물\"까지 청소해줍니다 | 건강한 하루",
-            "snippet": "더욱이 짜게 먹는 식습관이 많은 한국 사회에서는 나트륨 과잉 섭취가 문제인데, 이를 해결하려면 단순히 소금 섭취를 줄이는 것만으로는 부족합니다. ... 콩류는 대표적인 식물성 단백질 식품으로"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeonggi/gwangju-si",
+            "domain": "hospitalprice.kr",
+            "title": "경기 광주시 경동맥 초음파 가격 — 병원 5곳·의원 31곳 비교, 최저 70,000원 | 병원가격",
+            "snippet": "함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는 돈 ... 경기 광주시에서 경동맥 초음파"
           },
           {
-            "url": "https://health.chosun.com/healthyLife/column_view.jsp?idx=10192",
-            "domain": "health.chosun.com",
-            "title": "나트륨 짝꿍 ‘칼륨’은 얼마나 중요한가요?",
-            "snippet": "‘칼륨이온(K⁺)’은 세포 내부(나트륨은 외부에 많다)에 많은 양이온으로, 혈장 농도는 나트륨 농도보다 현저히 낮다. ... 특히, 심근 탈분극과 수축에 큰 역할을 한다. ... 칼륨은 음식 섭취"
+            "url": "https://zayeon.co.kr/%EA%B2%BD%EB%8F%99%EB%A7%A5%EC%B4%88%EC%9D%8C%ED%8C%8C-%EB%B9%84%EC%9A%A9%EF%BD%9C%EB%B9%84%EA%B8%89%EC%97%AC-%EA%B0%80%EA%B2%A9%C2%B7%EB%B3%B4%ED%97%98-%EC%A0%81%EC%9A%A9%EA%B3%BC-%EB%8F%99%EB%A7%A5/",
+            "domain": "zayeon.co.kr",
+            "title": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준 » 헬스픽",
+            "snippet": "“경동맥초음파 평균 비용은 얼마다”라고 단정하기보다는 내가 방문하려는 의료기관의 현재 EB482 가격을 직접 확인하는 방식이 더 정확합니다."
           },
           {
-            "url": "https://www.cancer.go.kr/download.do?uuid=0750ed54-b799-4b9c-9559-ffefcf206df2.pdf",
-            "domain": "www.cancer.go.kr",
-            "title": "<313231305FC5F0BFF820C8C420BECFC8AFC0DA20C4C9BEEEB8A620C0A7C7D120C0CFC2F7C0C7B7E120C1F8B7E120B8C5B4BABEF35FC3D6C1BEB1B3C1A4BFCFB7E12E687770>",
-            "snippet": "설사로 인해 손실된 전해질 보충: 이온 음료나 염분, 칼륨 등이 함유된 식품을 섭취설사가 있는 경우 아래 음식들은 피할 것 ... 급성 설사 시: 수액 주사"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeongbuk/gumi-si",
+            "domain": "hospitalprice.kr",
+            "title": "경북 구미시 경동맥 초음파 가격 — 병원 4곳·의원 36곳 비교, 최저 120,000원 | 병원가격",
+            "snippet": "함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는 돈 ... 경북 구미시에서 경동맥 초음파"
           },
           {
-            "url": "https://geongangdog.com/%EA%B0%95%EC%95%84%EC%A7%80-%EC%B9%BC%EB%A5%A8-%EB%82%AE%EC%B6%94%EB%8A%94-%EC%9D%8C%EC%8B%9D-%EC%B9%BC%EB%A5%A8-%EC%88%98%EC%B9%98-%EB%86%92%EC%9D%84-%EB%95%8C-%EB%A8%B9%EC%96%B4%EB%8F%84-%EB%90%98/",
-            "domain": "geongangdog.com",
-            "title": "강아지 칼륨 낮추는 음식, 칼륨 수치 높을 때 먹어도 되는 음식과 식단 관리법 - 건강하개 연구소",
-            "snippet": "특히 바나나, 고구마처럼 칼륨이 많은 음식은 피해야 하는지, 반대로 강아지에게 칼륨 낮추는 음식은 무엇인지 궁금할 수 있습니다. ... 신장 기능 저하, 소변 배출 장애, 부신"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeonggi/goyang-deogyang-gu",
+            "domain": "hospitalprice.kr",
+            "title": "경기 고양시 덕양구 경동맥 초음파 가격 — 병원 6곳·의원 54곳 비교, 최저 70,000원 | 병원가격",
+            "snippet": "함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는 돈 ... 경기 고양시 덕양구에서 경동맥"
           },
           {
-            "url": "https://www.readonly.wiki/w/%EA%B9%94%EB%9D%BC%EB%A7%8C%EC%8B%9C",
-            "domain": "www.readonly.wiki",
-            "title": "깔라만시 - 읽기전용위키",
-            "snippet": "귤속 식물로, 푸르딩딩하고 시큼한 맛이 나는 과일 이다.귤속 과일들 중에서도 작은 편에 속하며, 대충 금귤 보다 약간 큰 정도다. ... 특히 살짝 느끼한 음식이 많은"
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gwangju/dong-gu",
+            "domain": "hospitalprice.kr",
+            "title": "광주 동구 경동맥 초음파 가격 — 병원 5곳·의원 11곳 비교, 최저 60,000원 | 병원가격",
+            "snippet": "함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는 돈 ... 광주 동구에서 경동맥 초음파"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "칼륨많은음식",
-          "executed_query": "칼륨 많은 음식",
+          "query": "경동맥초음파비용",
+          "executed_query": "경동맥 초음파 비용",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "raw_sha256": "05a20f3cbbd5d9def805f38ad7d95ecf10ea5feb5fb8165fd520562c10a0e2e5",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "마그네슘·칼륨이 든 휴대용 간식 6가지"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "레몬 추천, 레몬 가격비교"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "나트륨 짝꿍 ‘칼륨’은 얼마나 중요한가요?"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "만성콩팥병 환자는 단백질 섭취를 어떻게 해야 하나요?"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "의외로 칼륨 많은 음식 5가지"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "칼륨 많은 음식 리스트"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "나트륨 짝꿍 ‘칼륨’은 얼마나 중요한가요?"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "설사로 인해 손실된 전해질 보충"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "강아지 칼륨 낮추는 음식"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "귤속 식물로, 푸르딩딩하고 시큼한 맛이 나는 과일 이다."
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "콜레스테롤낮추는음식",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance"
-        ],
-        "monthly_search": 16010,
-        "organic_provider": "codex_native_search",
-        "organic_query": "콜레스테롤 낮추는 음식",
-        "organic_results": [
-          {
-            "url": "https://www.stcarollo.or.kr/0401/6415",
-            "domain": "www.stcarollo.or.kr",
-            "title": "\"식단만 바꿔도 달라진다\"… LDL 콜레스테롤 낮추는 음식 10 > 건강정보 | 성가롤로병원",
-            "snippet": "#### \"식단만 바꿔도 달라진다\"… LDL 콜레스테롤 낮추는 음식 10 ... 하지만 뚜렷한 증상이 없음에도 불구하고 혈중 콜레스테롤, 특히 나쁜 콜레스테롤이라고 불리는 ‘LDL’과 지방의 일종인 ‘중성지방’"
-          },
-          {
-            "url": "https://www.guideline.or.kr/newsletter/vol1704/file/201705_03.pdf",
-            "domain": "www.guideline.or.kr",
-            "title": "노년 이상지질혈증 환자에게 필요한 정보",
-            "snippet": "• 반대로 이상지질혈증을 치료하면 심뇌혈관질환의 발생률과 재발률이 감소하고, 사망률도 낮아집니다. 이상지질혈증의 관리는 단순히 콜레스테롤 수치를 낮추는 것을 넘어 심뇌혈관질환의 예방과 치료에 매우 ... 고위험 또는"
-          },
-          {
-            "url": "https://doctornow.co.kr/content/magazine/105822e25dd041fd97e65968fec7d24d",
-            "domain": "doctornow.co.kr",
-            "title": "콜레스테롤 높은데 식단 고민이라면? 콜레스테롤 낮추는 음식 Top 7 - 닥터나우",
-            "snippet": "HDL 콜레스테롤은 흔히 '착한 콜레스테롤'로 불리며 혈관에 쌓여 있는 불필요한 콜레스테롤을 제거해 동맥경화를 예방해 주는 역할을 해요.반대로 LDL 콜레스테롤은 혈관 속에 쌓이는 지질단백질로 동맥경화, 고지혈증"
-          },
-          {
-            "url": "https://www.khnmc.or.kr/resources/webzine/2012/foryou_201201.pdf",
-            "domain": "www.khnmc.or.kr",
-            "title": "만성질환과 음식  \n글 이정숙(강동경희대학교병원 영양팀 임상영양사)\n\n지난 11~12월호에",
-            "snippet": "고지혈증은 혈액 속의 지방(콜레스테롤, 중성지방)이 정상 범위를 초과하여 높아진 상태를 말하며 오래 지속될 경우 동맥경화, 심혈관계 질환 등이 유발될 수 있다. ... <td><b>포화지방이 많은 식품</b>"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8562344995?clickEventId=4bd0dfd0-3d3f-11f1-8741-df606d12a4d0&itemId=24645632987&korePlacement=15&koreSubPlacement=1&sourceType=srp_product_ads&vendorItemId=90133051891",
-            "domain": "www.coupang.com",
-            "title": "나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 - 코엔자임Q10 | 쿠팡",
-            "snippet": "# 나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 ... * 소비기한(또는 유통기한): 2028-04-07 이거나 그 이후인 상품 ... 제품명 | 콜레스타"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8562344995?clickEventId=06484fa0-3b2f-11f1-b80b-aaa6d981f018&itemId=24645632987&korePlacement=15&koreSubPlacement=1&sourceType=srp_product_ads&vendorItemId=90133051891",
-            "domain": "www.coupang.com",
-            "title": "나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 - 코엔자임Q10 | 쿠팡",
-            "snippet": "# 나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 ... * 소비기한(또는 유통기한): 2028-04-07 이거나 그 이후인 상품 ... 제품명 | 콜레스타"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8562344995",
-            "domain": "www.coupang.com",
-            "title": "나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 - 코엔자임Q10 | 쿠팡",
-            "snippet": "# 나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 ... * 소비기한(또는 유통기한): 2028-04-07 이거나 그 이후인 상품 * 건강식품 사용대상: 성인남녀공용"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8562344995?clickEventId=33d6d530-59c6-11f1-b74e-f5ff36e1902a&itemId=24797679630&korePlacement=15&sourceType=srp_product_ads&vendorItemId=90133051873",
-            "domain": "www.coupang.com",
-            "title": "나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 1박스 - 코엔자임Q10 | 쿠팡",
-            "snippet": "# 나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 1박스 ... 제품명 | 콜레스타 | 제조업소의 명칭과 소재지 | 우리바이오(주) / 경기도 안산시"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8562344995?clickEventId=9ffcb3d0-4e98-11f1-9556-d804849c70f5&itemId=24645632987&korePlacement=15&koreSubPlacement=9&sourceType=srp_product_ads&vendorItemId=90133051891",
-            "domain": "www.coupang.com",
-            "title": "나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 - 코엔자임Q10 | 쿠팡",
-            "snippet": "# 나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 3박스 ... 제품명 | 콜레스타 | 제조업소의 명칭과 소재지 | 우리바이오(주) / 경기도 안산시"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8562344995?clickEventId=7f0132f0-2d73-11f1-8d4f-5db52cce7e34&itemId=24797679630&korePlacement=15&koreSubPlacement=5&sourceType=srp_product_ads&vendorItemId=90133051873",
-            "domain": "www.coupang.com",
-            "title": "나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 1박스 - 코엔자임Q10 | 쿠팡",
-            "snippet": "# 나우케어 콜레스타 콜레스테롤 낮추는 혈압 혈행 영양제 홍국 밀크씨슬, 30정, 1박스 ... * 소비기한(또는 유통기한): 2028-04-07 이거나 그 이후인 상품 ... 제품명 | 콜레스타"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "콜레스테롤낮추는음식",
-          "executed_query": "콜레스테롤 낮추는 음식",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "raw_sha256": "95e647be087b7961f3ed497db2b882571de8f11e74c826319f2464ede2cca458",
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "086251b111fa0334312678daa2f8c1da4c2fdf080c9ca16b61c83cc1600b6ec7",
           "decisions": [
             {
               "result_index": 0,
               "relevant": true,
-              "quote": "LDL 콜레스테롤 낮추는 음식 10"
+              "quote": "경동맥 초음파 가격 — 전국 병원 1,110곳 비교, 중앙값 107,500원"
             },
             {
               "result_index": 1,
-              "relevant": false,
-              "quote": "노년 이상지질혈증 환자에게 필요한 정보"
+              "relevant": true,
+              "quote": "경동맥 초음파 가격 비교 — 병원별·지역별"
             },
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "콜레스테롤 낮추는 음식 Top 7"
+              "quote": "서울 경동맥 초음파 가격 — 병원 199곳 비교, 중앙값 150,000원"
             },
             {
               "result_index": 3,
-              "relevant": false,
-              "quote": "고지혈증은 혈액 속의 지방(콜레스테롤, 중성지방)이 정상 범위를 초과하여 높아진 상태"
+              "relevant": true,
+              "quote": "서울 은평구 경동맥 초음파 가격 — 병원 8곳·의원 67곳 비교, 최저 70,000원"
             },
             {
               "result_index": 4,
-              "relevant": false,
-              "quote": "혈압 혈행 영양제 홍국 밀크씨슬"
+              "relevant": true,
+              "quote": "진단초음파 | 경동맥 초음파 도플러1 | EB482"
             },
             {
               "result_index": 5,
-              "relevant": false,
-              "quote": "혈압 혈행 영양제 홍국 밀크씨슬"
+              "relevant": true,
+              "quote": "경기 광주시 경동맥 초음파 가격 — 병원 5곳·의원 31곳 비교, 최저 70,000원"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "혈압 혈행 영양제 홍국 밀크씨슬"
+              "relevant": true,
+              "quote": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준"
             },
             {
               "result_index": 7,
-              "relevant": false,
-              "quote": "혈압 혈행 영양제 홍국 밀크씨슬"
+              "relevant": true,
+              "quote": "경북 구미시 경동맥 초음파 가격 — 병원 4곳·의원 36곳 비교, 최저 120,000원"
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "혈압 혈행 영양제 홍국 밀크씨슬"
+              "relevant": true,
+              "quote": "경기 고양시 덕양구 경동맥 초음파 가격 — 병원 6곳·의원 54곳 비교, 최저 70,000원"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "혈압 혈행 영양제 홍국 밀크씨슬"
+              "relevant": true,
+              "quote": "광주 동구 경동맥 초음파 가격 — 병원 5곳·의원 11곳 비교, 최저 60,000원"
             }
           ]
         }
@@ -4962,22 +3893,15 @@
         "hold_reasons": [
           "insufficient_relevant_results",
           "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
+          "low_search_relevance"
         ],
-        "monthly_search": 9890,
+        "monthly_search": 9940,
         "organic_provider": "codex_native_search",
         "organic_query": "건강보험료 조회",
         "organic_results": [
           {
-            "url": "https://www.nhis.or.kr/nhis/index.do",
-            "domain": "www.nhis.or.kr",
-            "title": "국민건강보험",
-            "snippet": "* 건강생활실천지원금제 ... * 건강검진 결과조회 ... * 자녀 진료 및 투약정보 ... * 우리아이 AI 건강지킴이 ... * 건강검진 대상조회 ... * 소득 부과"
-          },
-          {
-            "url": "https://www.nhis.or.kr/nhis/index.do?from=AppAgg.com",
-            "domain": "www.nhis.or.kr",
+            "url": "https://www.nhic.kr/nhis/index.do",
+            "domain": "www.nhic.kr",
             "title": "국민건강보험",
             "snippet": "* 건강검진 대상조회 ... 온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원, 본인부담완화 상세보기 * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가"
           },
@@ -4988,16 +3912,22 @@
             "snippet": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다. ... 건강보험25시(구 The건강보험) 앱에서도 보험료 조회·납부, 환급금 조회·신청과 진료내역 확인을 처리할 수"
           },
           {
-            "url": "https://nhissmc.net/nhis/index.do",
-            "domain": "nhissmc.net",
+            "url": "https://www.nhis.or.kr/nhis/index.do%3B",
+            "domain": "www.nhis.or.kr",
             "title": "국민건강보험",
-            "snippet": "* 건강검진 결과조회 ... * 병(의)원/검진기관 평가정보 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
+            "snippet": "* 건강검진 대상조회 ... * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가 요구되는 중증질환으로 진료 시 건강보험 본인부담률을 경감시켜주는 제도입니다. ... 온라인이용 가능 신청대상"
           },
           {
-            "url": "https://nhic.kr/nhis/index.do",
-            "domain": "nhic.kr",
+            "url": "https://www.nhis.or.kr/nhis/index.do?from=AppAgg.com",
+            "domain": "www.nhis.or.kr",
             "title": "국민건강보험",
-            "snippet": "* 못 받으신 환급금이 있나요? ... * 건강검진 대상조회 * 환급금 조회/신청 ... * 소득 부과 건강보험료 조정 정산 제도 ... * 2026년 「정신건강 심리상담"
+            "snippet": "* 못 받으신 환급금이 있나요? ... * 건강검진 대상조회 * 환급금 조회/신청 ... * 소득 부과 건강보험료 조정 정산 제도 ... * 국민건강보험공단, 「정신건강 심리상담"
+          },
+          {
+            "url": "https://minwon.nhic.kr/nhis/index.do",
+            "domain": "minwon.nhic.kr",
+            "title": "국민건강보험",
+            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
           },
           {
             "url": "https://www.nps.or.kr/html/download/insure_cal_download2013.pdf",
@@ -5035,33 +3965,33 @@
           "query": "건강보험료조회",
           "executed_query": "건강보험료 조회",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "raw_sha256": "4e39f98426aabd0f3b068029142538d8fc70bf76fa28d107168d7c896eb7f97d",
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "0aea064f3779dccf3b22e3ae0f6f0198c28666ed59f6b085c2988a4c600b6e75",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "건강검진 결과조회"
+              "quote": "건강검진 대상조회"
             },
             {
               "result_index": 1,
-              "relevant": false,
-              "quote": "본인일부부담금 산정특례 제도"
-            },
-            {
-              "result_index": 2,
               "relevant": true,
               "quote": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다."
             },
             {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "건강검진 대상조회"
+            },
+            {
               "result_index": 3,
               "relevant": false,
-              "quote": "병(의)원/검진기관 평가정보"
+              "quote": "소득 부과 건강보험료 조정 정산 제도"
             },
             {
               "result_index": 4,
-              "relevant": false,
-              "quote": "소득 부과 건강보험료 조정 정산 제도"
+              "relevant": true,
+              "quote": "보험료 고지내역 조회"
             },
             {
               "result_index": 5,
@@ -5071,12 +4001,12 @@
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "아래 “자주 찾는 서비스” 영역에서 탭"
+              "quote": "국민건강보험은 소통과 배려로 국민과 함께 하겠습니다."
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "입력 항목은 “발급용도"
+              "quote": "국민건강보험은 소통과 배려로 국민과 함께 하겠습니다."
             },
             {
               "result_index": 8,
@@ -5092,194 +4022,134 @@
         }
       },
       {
-        "keyword": "고혈압낮추는방법",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.medlineplus.gov/about/using/searchtips/",
-              "title": "MedlinePlus: Search Tips",
-              "excerpt_chars": 6259
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "혈당낮추는음식",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
-              "title": "www.meca.or.kr",
-              "excerpt_chars": 261
-            },
-            {
-              "url": "https://www.jkosmee.or.kr/_common/do.php?a=full&aidx=33995&b=&bidx=3044",
-              "title": "Journal of the Korean Society for Marine Environment and Energy",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "저혈압수치",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
-              "title": "www.meca.or.kr",
-              "excerpt_chars": 261
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "콜레스테롤수치",
+        "keyword": "칼륨많은음식",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
-          "insufficient_relevant_sites",
           "low_search_relevance"
         ],
-        "monthly_search": 43760,
+        "monthly_search": 15380,
         "organic_provider": "codex_native_search",
-        "organic_query": "콜레스테롤 수치",
+        "organic_query": "칼륨 많은 음식",
         "organic_results": [
           {
-            "url": "https://www.msdmanuals.com/ko/home/multimedia/lab-tests/%EC%BD%9C%EB%A0%88%EC%8A%A4%ED%85%8C%EB%A1%A4-%EC%88%98%EC%B9%98",
-            "domain": "www.msdmanuals.com",
-            "title": "Lab-Test: 콜레스테롤 수치-MSD 매뉴얼 - 일반인용",
-            "snippet": "# 콜레스테롤 수치콜레스테롤 수치"
+            "url": "https://health.chosun.com/healthcareColumn/column_view.jsp?idx=10192",
+            "domain": "health.chosun.com",
+            "title": "나트륨 짝꿍 ‘칼륨’은 얼마나 중요한가요? - 헬스케어& 칼럼",
+            "snippet": "‘칼륨이온(K⁺)’은 세포 내부(나트륨은 외부에 많다)에 많은 양이온으로, 혈장 농도는 나트륨 농도보다 현저히 낮다. ... 특히, 심근 탈분극과 수축에 큰 역할을 한다. ... 칼륨은 음식 섭취"
           },
           {
-            "url": "https://www.ksn.or.kr/upload/general/ebook/1%EA%B6%8C%20%ED%88%AC%EC%84%9D%20%EC%A0%84%20%EB%8B%A8%EA%B3%84%EC%9D%98%20%EB%A7%8C%EC%84%B1%EC%BD%A9%ED%8C%A5%EB%B3%91%20%ED%99%98%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EC%98%81%EC%96%91-%EC%8B%9D%EC%83%9D%ED%99%9C%20%EA%B4%80%EB%A6%AC.pdf",
-            "domain": "www.ksn.or.kr",
-            "title": "6. 소변검사상 단백뇨 수치",
-            "snippet": "혈액 지질수치당뇨가 있는 만성 콩팥병환자(1–4단계)나 당뇨가 없는 3–4단계 만성 콩팥병 환자는 저밀도 콜레스테롤 <100 mg/dL로 조절합니다.총 콜레스테롤, 고밀도 콜레스테롤, 저밀도 콜레스테롤, 중성지방 수치를 확인하고 적절한"
+            "url": "https://ksn.or.kr/upload/general/ebook/%5B%EC%A7%88%EB%B3%91%EA%B4%80%EB%A6%AC%EB%B3%B8%EB%B6%80%5D%20%EC%9D%BC%EB%B0%98%EC%9D%B8%EC%9D%84%20%EC%9C%84%ED%95%9C%20%EB%A7%8C%EC%84%B1%EC%BD%A9%ED%8C%A5%EB%B3%91%20%EB%B0%94%EB%A1%9C%EC%95%8C%EA%B8%B0_%EB%8B%B9%EB%87%A8%EB%B3%91%2C%20%EA%B3%A0%ED%98%88%EC%95%95%2C%20%EC%BD%A9%ED%8C%A5%EB%B3%91%20%ED%99%98%EC%9E%90%ED%8E%B8.pdf",
+            "domain": "ksn.or.kr",
+            "title": "만성콩팥병 환자는 단백질 섭취를 어떻게 해야 하나요?",
+            "snippet": "식이 요법을 했음에도 불구하고 혈중 칼륨의 수치가 높은 때에는 음식물 속의 칼륨이 흡수되지 않도록 하는 약을 음식과 같이 복용해야 합니다.칼륨은 소변뿐만 아니라 대변을 통해서도 배설이"
           },
           {
-            "url": "https://repository.nhimc.or.kr/bitstream/2023.oak/36/2/2018-20-014.pdf",
-            "domain": "repository.nhimc.or.kr",
-            "title": "4) 혈청 콜레스테롤 수치",
-            "snippet": "4) 혈청 콜레스테롤 수치혈청 콜레스테롤의 분석을 위해 임상적 기준에 따라 각각 7단계로 나누어 분석하였으며 각각의 중간값이 포함된 4번째 그룹을 기준범주로 정하였다."
+            "url": "https://kindney.kr/blog/potassium-cooking.html",
+            "domain": "kindney.kr",
+            "title": "칼륨 줄이는 조리법 — 썰고, 담그고, 삶기 | 킨드니",
+            "snippet": "그런데 칼륨은 채소·과일·콩·감자처럼 몸에 좋다고 알려진 음식에 많아서 헷갈리죠. ... 혈압약 중에는 칼륨을 올리는 종류가 있어요. ... 칼륨 조절이 필요한 분이라면 양을 정해 드시고, 그날"
           },
           {
-            "url": "https://withmijin.tistory.com/328",
-            "domain": "withmijin.tistory.com",
-            "title": "콜레스테롤 수치 기준표 (2026 최신) + 위험 수치 대처법",
-            "snippet": "* 건강검진에서 가장 많이 나오는 이상 수치 중 하나가 ‘콜레스테롤’입니다. ... * 이 글에서는 2026년 최신 콜레스테롤 수치 기준과, ... * 총 콜레스테롤 240 이상이면"
+            "url": "https://health.chosun.com/healthyLife/column_view.jsp?idx=10192",
+            "domain": "health.chosun.com",
+            "title": "나트륨 짝꿍 ‘칼륨’은 얼마나 중요한가요?",
+            "snippet": "‘칼륨이온(K⁺)’은 세포 내부(나트륨은 외부에 많다)에 많은 양이온으로, 혈장 농도는 나트륨 농도보다 현저히 낮다. ... 특히, 심근 탈분극과 수축에 큰 역할을 한다. ... 칼륨은 음식 섭취"
           },
           {
-            "url": "https://m.soltice.kr/review/read.html?board_no=4&no=39844",
-            "domain": "m.soltice.kr",
-            "title": "만족 포토리뷰 - 솔티스",
-            "snippet": "### 솔티스 콜레스테롤 H/L ... 항상 만족하고 콜레스트롤 수치 관리를 위해 잘 먹고 있어요"
+            "url": "https://www.cancer.go.kr/download.do?uuid=0750ed54-b799-4b9c-9559-ffefcf206df2.pdf",
+            "domain": "www.cancer.go.kr",
+            "title": "<313231305FC5F0BFF820C8C420BECFC8AFC0DA20C4C9BEEEB8A620C0A7C7D120C0CFC2F7C0C7B7E120C1F8B7E120B8C5B4BABEF35FC3D6C1BEB1B3C1A4BFCFB7E12E687770>",
+            "snippet": "설사로 인해 손실된 전해질 보충: 이온 음료나 염분, 칼륨 등이 함유된 식품을 섭취설사가 있는 경우 아래 음식들은 피할 것 ... 급성 설사 시: 수액 주사"
           },
           {
-            "url": "https://www.coupang.com/vp/products/1064146261",
-            "domain": "www.coupang.com",
-            "title": "옛산골농장 건표고버섯 줄기 200g 콜레스테롤 수치 낮춰주는 표고버섯 - 표고버섯 | 쿠팡",
-            "snippet": "# 옛산골농장 건표고버섯 줄기 200g 콜레스테롤 수치 낮춰주는 표고버섯 ... * \"해당 상품 자체\"와 관계없는 글, 양도, 광고성, 욕설, 비방, 도배 등의 글은 예고 없이"
+            "url": "https://geongangdog.com/%EA%B0%95%EC%95%84%EC%A7%80-%EC%B9%BC%EB%A5%A8-%EB%82%AE%EC%B6%94%EB%8A%94-%EC%9D%8C%EC%8B%9D-%EC%B9%BC%EB%A5%A8-%EC%88%98%EC%B9%98-%EB%86%92%EC%9D%84-%EB%95%8C-%EB%A8%B9%EC%96%B4%EB%8F%84-%EB%90%98/",
+            "domain": "geongangdog.com",
+            "title": "강아지 칼륨 낮추는 음식, 칼륨 수치 높을 때 먹어도 되는 음식과 식단 관리법 - 건강하개 연구소",
+            "snippet": "특히 바나나, 고구마처럼 칼륨이 많은 음식은 피해야 하는지, 반대로 강아지에게 칼륨 낮추는 음식은 무엇인지 궁금할 수 있습니다. ... 신장 기능 저하, 소변 배출 장애, 부신"
           },
           {
-            "url": "https://common.health.kr/shared/docs/healthkr/approval_result/20191219_%5B%EC%B5%9C%EC%A2%85%5D%20%EC%9D%98%EC%95%BD%ED%92%88%20%ED%97%88%EA%B0%80%EC%8B%AC%EC%82%AC%20%EA%B2%B0%EA%B3%BC%20%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C_%EC%97%91%EC%8A%A4%EC%9B%90%EC%95%8C%EC%A0%955.160.10%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8%20%EC%99%B8%203%ED%92%88%EB%AA%A9_%EC%94%A8%EC%A0%9C%EC%9D%B4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4%28%EC%A3%BC%29%28%EC%9E%90%EB%A3%8C%EC%A0%9C%EC%B6%9C%EC%9D%98%EC%95%BD%ED%92%88%29.pdf",
-            "domain": "common.health.kr",
-            "title": "조절하여 투여할 수 있다. 유지용량은 1일 1회 10밀리그램으로 대부분의 환자는 이 용량에서 조절된다. 유지용량은 4주 또는 그 이상의 간격을 두고 LDL-콜레스테롤 수치, 치료목표 및 환자의 반응에 따라 적절히 조절하여야 하며, 1일 최대 20밀리그램까지 증량할 수 있다.",
-            "snippet": "유지용량은 4주 또는 그 이상의 간격을 두고 LDL-콜레스테롤 수치, 치료목표 및 환자의 반응에 따라 적절히 조절하여야 하며, 1일 최대 20밀리그램까지 증량할 수 있다. ... 인종:"
+            "url": "https://www.readonly.wiki/w/%EA%B9%94%EB%9D%BC%EB%A7%8C%EC%8B%9C",
+            "domain": "www.readonly.wiki",
+            "title": "깔라만시 - 읽기전용위키",
+            "snippet": "귤속 과일들 중에서도 작은 편에 속하며, 대충 금귤 보다 약간 큰 정도다. ... 그러나 2013년에 한 업체 가 여러 블로그 및 언론사에 바이럴 마케팅 을"
           },
           {
-            "url": "https://www.coupang.com/vp/products/6880184265",
-            "domain": "www.coupang.com",
-            "title": "뉴질랜드산 콜레스테롤 수치 개선 MILK THISTLE 70000 (2개월분) 간기능 강화 - 밀크시슬 | 쿠팡",
-            "snippet": "# 뉴질랜드산 콜레스테롤 수치 개선 MILK THISTLE 70000 (2개월분) 간기능 강화 ... 판매자:크리스탈 에이앤티 ... * 건강식품 사용대상: 성인남녀공용 ... * \"해당 상품 자체\"와 관계없는"
+            "url": "https://issuefeed.dcinside.com/content/1915091",
+            "domain": "issuefeed.dcinside.com",
+            "title": "칼륨 많은 음식 리스트, \"혈관\"부터 \"노폐물\"까지 청소해줍니다 | 건강의 모든것",
+            "snippet": "더욱이 짜게 먹는 식습관이 많은 한국 사회에서는 나트륨 과잉 섭취가 문제인데, 이를 해결하려면 단순히 소금 섭취를 줄이는 것만으로는 부족합니다. ... 콩류는 대표적인 식물성 단백질 식품으로"
           },
           {
-            "url": "https://www.hanaw.com/download/research/FileServer/WEB/industry/industry/2025/10/19/BioIndepth_OralObesity_251020.pdf",
-            "domain": "www.hanaw.com",
-            "title": "표지페이지",
-            "snippet": "체지방 감소 수치 -6.65kg(위약 -2.4kg, p<0.01)를 보였다.회사가 의약품으로 개발하지 않고 건기식으로 개발한 이유는, 실제 치료제 시장의 규모보다 ... 이 경우 75일 내 거절 의견을 수령하지"
+            "url": "https://o.gohae.co.kr/entry/%EC%B9%BC%EB%A5%A8%EC%9D%B4-%EB%A7%8E%EC%9D%80-%EC%9D%8C%EC%8B%9D-11%EA%B0%80%EC%A7%80",
+            "domain": "o.gohae.co.kr",
+            "title": "칼륨이 많은 음식 11가지 1분 정리!",
+            "snippet": "나트륨 배출은 칼륨을 통해서 할 수 있는데, 오늘은 칼륨이 많은 음식과 효능에 대해 함께 알아보도록 하겠습니다. ... 고혈압, 고지혈증, 심혈관 질환 등 각종 혈관질환이 있는"
           },
           {
-            "url": "https://patentimages.storage.googleapis.com/41/cc/ec/f9663c8eabf7b7/KR101402855B1.pdf",
-            "domain": "patentimages.storage.googleapis.com",
-            "title": "등록특허 10-1402855",
-            "snippet": "10일째 래트의 매개변수 | 혈액 혈청 콜레스테롤 및 트리글리세라이드 수치(mg/100ml) 그룹 | | | | | --- | --- | --- | --- | ---"
+            "url": "https://coinguide.kr/133",
+            "domain": "coinguide.kr",
+            "title": "감귤 효능 | 요리 | 음식 | 종류 | 생산지 | 특징 | 총정리 | 코인가이드",
+            "snippet": "# 감귤 효능 | 요리 | 음식 | 종류 | 생산지 | 특징 | 총정리 ... 산뜻한 사과와 귤의 맛이 섞인 신맛과 달콤한 맛이 조화를"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "콜레스테롤수치",
-          "executed_query": "콜레스테롤 수치",
+          "query": "칼륨많은음식",
+          "executed_query": "칼륨 많은 음식",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "raw_sha256": "d2f1c181e6d93711eff0b975a062c7a9381b46b563e191c0fd89090462811fa5",
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "eaff23f3f053a96adfdf5e2ea90e7ee7354566b63f1f6c101d0322cb682b9b43",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": true,
-              "quote": "Lab-Test: 콜레스테롤 수치-MSD 매뉴얼 - 일반인용"
+              "relevant": false,
+              "quote": "심근 탈분극과 수축에 큰 역할을 한다."
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "당뇨가 있는 만성 콩팥병환자(1–4단계)나 당뇨가 없는 3–4단계 만성 콩팥병 환자"
+              "quote": "만성콩팥병 환자는 단백질 섭취를 어떻게 해야 하나요?"
             },
             {
               "result_index": 2,
-              "relevant": false,
-              "quote": "각각의 중간값이 포함된 4번째 그룹을 기준범주로 정하였다."
+              "relevant": true,
+              "quote": "칼륨은 채소·과일·콩·감자처럼 몸에 좋다고 알려진 음식에 많아서"
             },
             {
               "result_index": 3,
-              "relevant": true,
-              "quote": "콜레스테롤 수치 기준표 (2026 최신) + 위험 수치 대처법"
+              "relevant": false,
+              "quote": "심근 탈분극과 수축에 큰 역할을 한다."
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "항상 만족하고 콜레스트롤 수치 관리를 위해 잘 먹고 있어요"
+              "quote": "설사로 인해 손실된 전해질 보충"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "옛산골농장 건표고버섯 줄기 200g"
+              "quote": "강아지 칼륨 낮추는 음식"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "유지용량은 4주 또는 그 이상의 간격을 두고 LDL-콜레스테롤 수치, 치료목표 및 환자의 반응에 따라 적절히 조절하여야 하며"
+              "quote": "귤속 과일들 중에서도 작은 편에 속하며"
             },
             {
               "result_index": 7,
-              "relevant": false,
-              "quote": "뉴질랜드산 콜레스테롤 수치 개선 MILK THISTLE 70000 (2개월분) 간기능 강화"
+              "relevant": true,
+              "quote": "칼륨 많은 음식 리스트"
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "회사가 의약품으로 개발하지 않고 건기식으로 개발한 이유는"
+              "relevant": true,
+              "quote": "칼륨이 많은 음식 11가지 1분 정리!"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "10일째 래트의 매개변수"
+              "quote": "감귤 효능 | 요리 | 음식 | 종류 | 생산지 | 특징 | 총정리"
             }
           ]
         }
@@ -5290,385 +4160,39 @@
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://gocamping.or.kr/bsite/search/list.do",
-              "title": "한국관광공사 고캠핑 - 우수캠핑장",
-              "excerpt_chars": 1286
+              "url": "https://www.ttb.gov/regulated-commodities/beverage-alcohol/kombucha/general-requirements",
+              "title": "General TTB Requirements | TTB: Alcohol and Tobacco Tax and Trade Bureau",
+              "excerpt_chars": 1770
             },
             {
-              "url": "https://www.gocamping.or.kr/bsite/camp/info/list.do?c_do=1&listTy=LIST",
-              "title": "한국관광공사 고캠핑",
-              "excerpt_chars": 1701
+              "url": "https://main.kotsa.or.kr/portal/contents.do?menuCode=03050500",
+              "title": "TS 공공웹사이트 |\r\n\t\t\t기타정보 |\r\n\t\t\t정보공개 |\r\n\t\t\t\r\n\t\t\tTS한국교통안전공단",
+              "excerpt_chars": 1429
             },
             {
               "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
               "title": "www.meca.or.kr",
-              "excerpt_chars": 261
+              "excerpt_chars": 260
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
-          }
-        }
-      }
-    ],
-    "excluded_keywords": [],
-    "selection_scope": "highest_score_among_evaluated",
-    "proposal_rounds": [
-      {
-        "round": 1,
-        "offered_keywords": [
-          "키즈 비타민",
-          "혈압정상수치",
-          "당뇨에좋은음식",
-          "정형외과",
-          "폴리코사놀",
-          "애사비",
-          "콜레스테롤수치",
-          "이비인후과",
-          "혈행 개선 영양제",
-          "저혈압수치",
-          "스포츠",
-          "애플사이다비니거",
-          "혈당정상수치",
-          "산부인과",
-          "핸드크림",
-          "도수치료",
-          "대상포진증상",
-          "임산부 영양제",
-          "LDL콜레스테롤",
-          "대상포진예방접종가격",
-          "위고비",
-          "크랜베리",
-          "대상포진병원",
-          "종합비타민",
-          "발목보호대",
-          "콜레스테롤낮추는음식",
-          "수영장",
-          "시카 크림",
-          "혈압낮추는법",
-          "중성지방수치",
-          "아르기닌",
-          "레몬밤",
-          "히알루론산",
-          "칼륨많은음식",
-          "하이록스",
-          "풋크림",
-          "고지혈증증상",
-          "고혈압낮추는방법",
-          "크로스핏",
-          "홍삼",
-          "혈당스파이크",
-          "대상포진초기증상",
-          "스크린골프",
-          "비오틴",
-          "왼쪽가슴통증",
-          "고혈압수치",
-          "바디워시",
-          "바디로션",
-          "콤부차효능",
-          "CT비용",
-          "커큐민",
-          "아이크림",
-          "고혈압증상",
-          "암보험비교사이트",
-          "바나바잎",
-          "저혈압증상",
-          "혈당낮추는음식",
-          "고지혈증",
-          "혈당 영양제",
-          "HDL콜레스테롤"
-        ],
-        "proposals": [
-          {
-            "keyword": "CT비용",
-            "reason": "네이버 월 11,720회. 검사 전 예상 비용과 건강보험 적용 조건을 확인하려는 구체적 의료 이용 질문으로 조사할 가치가 있다.",
-            "search_query": "CT 비용"
           },
-          {
-            "keyword": "고혈압수치",
-            "reason": "네이버 월 13,450회. 혈압 측정값의 기준과 측정 조건을 묻는 정보 수요가 있어 공식 기준 중심으로 조사하기 좋다.",
-            "search_query": "고혈압 수치"
-          },
-          {
-            "keyword": "중성지방수치",
-            "reason": "네이버 월 15,720회. 검진 결과의 수치 의미와 검사 조건을 확인하려는 수요가 있어 결과표 이해를 위한 조사가 필요하다.",
-            "search_query": "중성지방 수치"
-          },
-          {
-            "keyword": "칼륨많은음식",
-            "reason": "네이버 월 15,510회. 음식별 칼륨 함량을 묻는 구체적 수요가 있어 공식 식품성분 자료와 섭취 주의사항을 조사하기 좋다.",
-            "search_query": "칼륨 많은 음식"
-          },
-          {
-            "keyword": "콜레스테롤낮추는음식",
-            "reason": "네이버 월 16,010회. 식생활 관리에 관한 구체적 수요가 있어 음식의 효과와 한계를 공식 건강정보로 확인할 가치가 있다.",
-            "search_query": "콜레스테롤 낮추는 음식"
-          },
-          {
-            "keyword": "대상포진초기증상",
-            "reason": "네이버 월 13,600회. 초기 증상에 대한 일반 정보 수요가 있으며 기존 예방접종 비용 글과 검색 목적이 달라 조사할 가치가 있다.",
-            "search_query": "대상포진 초기 증상"
-          }
-        ]
-      },
-      {
-        "round": 2,
-        "offered_keywords": [
-          "키즈 비타민",
-          "혈압정상수치",
-          "당뇨에좋은음식",
-          "정형외과",
-          "폴리코사놀",
-          "애사비",
-          "콜레스테롤수치",
-          "이비인후과",
-          "혈행 개선 영양제",
-          "저혈압수치",
-          "스포츠",
-          "애플사이다비니거",
-          "혈당정상수치",
-          "산부인과",
-          "핸드크림",
-          "도수치료",
-          "대상포진증상",
-          "임산부 영양제",
-          "LDL콜레스테롤",
-          "대상포진예방접종가격",
-          "위고비",
-          "크랜베리",
-          "대상포진병원",
-          "종합비타민",
-          "발목보호대",
-          "수영장",
-          "시카 크림",
-          "혈압낮추는법",
-          "아르기닌",
-          "레몬밤",
-          "히알루론산",
-          "하이록스",
-          "풋크림",
-          "고지혈증증상",
-          "고혈압낮추는방법",
-          "크로스핏",
-          "홍삼",
-          "혈당스파이크",
-          "스크린골프",
-          "비오틴",
-          "왼쪽가슴통증",
-          "바디워시",
-          "바디로션",
-          "콤부차효능",
-          "커큐민",
-          "아이크림",
-          "고혈압증상",
-          "암보험비교사이트",
-          "바나바잎",
-          "저혈압증상",
-          "혈당낮추는음식",
-          "고지혈증",
-          "혈당 영양제",
-          "HDL콜레스테롤",
-          "건강보험료조회",
-          "당뇨초기증상",
-          "여성 영양제",
-          "중성지방",
-          "혈관에좋은음식",
-          "요가매트"
-        ],
-        "proposals": [
-          {
-            "keyword": "건강보험료조회",
-            "reason": "네이버 월 9,890회. 보험료 고지·납부 내역을 어디서 어떻게 확인하는지 절차를 조사할 가치가 있다.",
-            "search_query": "건강보험료 조회"
-          },
-          {
-            "keyword": "고혈압낮추는방법",
-            "reason": "네이버 월 14,690회. 혈압 관리를 위한 일반적인 생활습관과 실천 방법의 공식 근거를 조사하기 좋다.",
-            "search_query": "고혈압 낮추는 방법"
-          },
-          {
-            "keyword": "혈당낮추는음식",
-            "reason": "네이버 월 10,060회. 음식 선택과 섭취 방법에 관한 구체적 수요가 있어 효과의 근거와 한계를 조사할 만하다.",
-            "search_query": "혈당 낮추는 음식"
-          },
-          {
-            "keyword": "저혈압수치",
-            "reason": "네이버 월 40,790회. 낮은 혈압의 기준과 측정 조건에 따른 해석을 묻는 정보 수요를 조사할 가치가 있다.",
-            "search_query": "저혈압 수치"
-          },
-          {
-            "keyword": "콜레스테롤수치",
-            "reason": "네이버 월 43,760회. 검사 결과의 항목별 수치와 기준을 이해하려는 수요가 있어 공식 설명을 조사할 만하다.",
-            "search_query": "콜레스테롤 수치"
-          },
-          {
-            "keyword": "콤부차효능",
-            "reason": "네이버 월 25,240회. 제품명 검색보다 효능을 묻는 의도가 구체적이므로 건강 효과의 근거와 섭취 주의점을 조사하기 좋다.",
-            "search_query": "콤부차 효능"
-          }
-        ]
-      }
-    ],
-    "ranked_candidates": [
-      {
-        "keyword": "대상포진초기증상",
-        "category": "건강",
-        "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징",
-        "intent": "대상포진은 초기에 어떤 통증과 감각이상으로 시작하며, 발진과 물집은 어떻게 나타나나요?",
-        "gap": "학회 본문에 근거한 증상 진행표와 편측·띠 모양 분포, 드문 무발진 사례를 정리해 자가판단의 한계를 안내합니다.",
-        "source_url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-        "verified_sources": [
-          {
-            "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-            "original_url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-            "title": "대한피부과학회",
-            "checked_on": "2026-09-12",
-            "sha256": "251f9610304cb98ae67b6a8b53b9b5c9795dfcb30aa75c0ea9e0bf2f8d8fbf79",
-            "excerpt": "피부질환 발전된 의료 서비스를 위해 진료정보를 공유합니다. No. 585 포진후 신경통 2012.11.01 작성자 : 관리자 조회 : 11667 포진후 신경통 원인 대상포진은 과거에 수두에 걸렸거나 수두 예방접종을 한 사람의 지각신경절에 잠복해 있던 수두 바이러스가 세포면역체계의 변화로 인하여 재활성화되어 신경을 따라 내려가 피부에 감염을 일으키는 질환이며, 포진후 신경통은 대상포진의 가장 심한 후유증이다. 바이러스의 재활성 유발인자로는 고령(가장 강한 유발인자), 외상, 척수종양, 호즈킨병, 악성림프종, 만성 백혈병 등이 있으며, 세포면역의 장애가 있는 경우 잘 발생한다. 역학 대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다. 수두 또는 대상포진에 이환된 환자로부터 감염되어 발생한다는 확실한 근거는 없지만, 수두와 동일한 바이러스가 원인이기 때문에 수두에 걸리지 않았던 사람에서 대상포진 환자와의 접촉이나 공기감염의 경로를 통하여 수두가 발생할 수 있다. 증상 발진이 나타나기 평균 4~5일(1~14일) 전부터 피부절을 따라 동통, 압통, 감각이상이 발생하며, 가벼운 자극에도 과민반응이 나타나며, 두통, 권태감, 발열이 극히 일부에서 동반될 수 있다. 국소 림프절이 흔히 커지고 압통을 동반할 수 있다. 피부발진은 침범한 신경을 따라 띠 모양으로 분포되어 홍반성 구진과 반점으로 나타나고, 12~24시간 내에 수포를 형성한다(그림 14-46). 이러한 수포는 각기 타원형 또는 원형이고, 제형성의 중앙부 함몰을 볼 수 있다. 피부발진 3일째 농포로 진행되며 7~10일이 지나서 각각의 병변들은 결국 가피가 형성되어 탈락되는데, 가피가 대체로 2~3주 지속되므로 평균 발진기간은 약 3주일 정도이며 새로운 피부병변은 발진 1~4일(때로는 7일)까지 발생할 수 있다. 피부병변과 환자가 느끼는 통증의 정도는 비례하며, 또한 고령의 환자에서 더 심각한 통증을 호소한다. 드물게 환자가 통증을 호소하지만 피부병변이 발생하지 않을 수도 있다. 발생부위는 흉부(55%), 뇌신경(20%, 삼차신경에 가장 흔함), 요추신경(15%), 천골신경(5%)의 빈도로 자주 발생하며, 대부분이 편측으로 발생하고, 중앙선을 넘지 않으며, 양측성으로 발생하는 경우는 매우 드물고, 극히 일부의 환자들에게서 대상포진 감염이 재발하는 것으로 알려져 있다. 포진후 신경통은 피부병변이 호전된 후, 혹은 병변이 발생한지 1~3개월 후에도 통증이 지속되는 경우인데, 가장 흔하며 고통스러운 합병증으로 40세 이하에서는 비교적 드물며 60세 이상에서 약 50%에서 발생한다. 약 50%의 환자들이 3개월 내에 호전을 보이고, 약 70% 정도의 환자들이 1년 내에 호전을 보이는 것으로 알려져 있다. 포진후 동통은 안구 대상포진에서 가장 높은 발생빈도를 보인다. 진단 특징적인 임상양상으로 충분한 진단이 가능하다. 수포 기저부 또는 수포액의 도말검사에서 거대 또는 다핵 표피세포가 관찰되며, 바이러스 배양과 혈청검사를 통한 바이러스를 입증할 수 있다. 좌측 흉부를 침범할 경우에는 초기에 심전도 검사를 하여 허혈성 심질환을 감별할 필요가 있다. 치료 대상포진의 치료 목표는 동통의 억제, 바이러스의 확산과 이차적 세균감염 억제, 포진후 동통 등의 합병증 예방 및 최소화이다. 항바이러스제를 전신적으로 투여하며, 항바이러스 약물을 수포형성하고 난 뒤 72시간 이내에 투여하면 피부병변의 치유를 촉진시키며, 급성 동통의 기간을 줄이고 포진후 동통의 발생빈도를 줄일 수 있다. 초기 수포형성 시기에는 병변에 대한 습포가 동통을 완화할 수 있으며, 통증이 심한 경우, 수면 장애, 피로 우울증이 동반될 수 있어 마약성 진통제로 통증을 초기에 경감시킬 필요가 있다. 그외 국소 열찜질, 염증완화제의 병변내 주사, 신경차단술 등을 이용하여 통증을 경감시켜줄 수 있다. 대상포진 환자에서 포진후 동통 예방을 위한 스테로이드 전신투여에 대해 논란이 많은데, 최근의 연구에 의하면 부신피질호르몬제는 포진 후 동통의 빈도를 줄이지 못하는 것으로 알려져 있지만, 급성 동통의 감소와 일상생활로의 복귀를 단축할 수 있으므로 부신피질호르몬제의 투여에 금기가 되지 않는 환자의 경우 단기간의 경구투여가 권장된다. 이전글 편평태선 2012.11.01 다음글 표피낭종 2012.11.01 목록 이메일 무단수집 거부 닫기 대한피부과학회는 정보통신망법 제 50조의 2, 제50조의 7 등에 의거하여, 대한피부과학회가 운영, 관리하는 웹페이지상에서, 이메일주소 수집 프로그램이나 그 밖의 기술적 장치 등을 이용하여 이메일 주소를 무단으로 수집하는 행위를 거부합니다. [게시일 2020년 5월 15일] 확인 위로가기",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://ddakdap.kr/article/shingles-early-symptoms",
-          "https://jilhwanpedia.live/posts/post-32675/"
-        ],
-        "valid_until": null,
-        "monthly_search": 13600,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6679",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "대상포진 초기 증상",
-        "organic_domains": [
-          "www.snuh.org",
-          "www.primehospital.co.kr",
-          "ddakdap.kr",
-          "jilhwanpedia.live",
-          "m.coinlab.edaily.co.kr",
-          "www.xrpin.kr",
-          "write.daplus.co.kr",
-          "www.hyunmyoung.co.kr",
-          "www.goe.go.kr",
-          "dongpoongi.com"
-        ],
-        "organic_results": [
-          {
-            "url": "https://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AC000187",
-            "domain": "www.snuh.org",
-            "title": "서울대학교병원",
-            "snippet": "전통적으로는 대상포진에 의한 피부 발진이 생긴 이후 6개월 이상 병변 부위의 만성적인 통증이 지속될 때 대상포진후 신경통이라 정의하는 것이 일반적이나, 최근에는 피부 발진이 생긴 지"
-          },
-          {
-            "url": "https://www.primehospital.co.kr/141",
-            "domain": "www.primehospital.co.kr",
-            "title": "연세프라임병원",
-            "snippet": "바이러스에 손상된 신경을 치료하지 않으면 평생 후유증이 남을 수 있는 아주 어려운 질환입니다. ... #### 대상포진의 증상 ... * 면역력이 약한 초기 대상포진 환자의 경우"
-          },
-          {
-            "url": "https://ddakdap.kr/article/shingles-early-symptoms",
-            "domain": "ddakdap.kr",
-            "title": "대상포진 초기 증상｜진료 시기·전염 가능성·주의 신호 | 딱답",
-            "snippet": "# 대상포진 초기 증상｜ ... 대상포진은 보통 몸 한쪽에 통증·저림·따가움이 먼저 나타나고, 2~3일 뒤 같은 부위에 붉은 발진과 모여 있는 물집이 생깁니다. ... 항바이러스 치료는"
-          },
-          {
-            "url": "https://jilhwanpedia.live/posts/post-32675/",
-            "domain": "jilhwanpedia.live",
-            "title": "대상포진 증상 초기에는 어떻게 나타나나요 · 질환의학사전",
-            "snippet": "> 대상포진 증상은 대개 몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고, 이어 붉은 발진과 작은 물집이 나타나는 것이 특징이에요. ... 바이러스가 신경을 따라 피부"
-          },
-          {
-            "url": "https://m.coinlab.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=02092646645549944",
-            "domain": "m.coinlab.edaily.co.kr",
-            "title": "대상포진, 수포보다 통증 먼저 시작 ... 증상 발생 후 72시간이 치료 골든타임",
-            "snippet": "모르고 지나치기 쉬운 ‘대상포진’ 초기 증상일 수 있어서다.증상이 나타난 뒤 72시간 안에 치료하지 않으면, 피부 병변이 회복된 뒤에도 극심한 통증이 이어지는 ‘대상포진 후 신경통’으로 이어질"
-          },
-          {
-            "url": "https://www.xrpin.kr/2026/05/blog-post_194.html",
-            "domain": "www.xrpin.kr",
-            "title": "대상포진 초기 증상부터 치료까지 총정리 | 전염성·치료·백신 예방까지 한번에 - 마일스톤",
-            "snippet": "# 대상포진 초기 증상부터 치료까지 총정리 | 전염성·치료·백신 예방까지 한번에 ... 대상포진의 초기 증상과 발생 부위별 특징, 전염성 여부, 올바른 진료과 선택, 72시간 골든타임 치료,"
-          },
-          {
-            "url": "https://write.daplus.co.kr/content/health/%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84-%EC%B4%88%EA%B8%B0%EC%A6%9D%EC%83%81%EA%B3%BC-%EA%B3%A8%EB%93%A0%ED%83%80%EC%9E%84-%EB%86%93%EC%B9%98%EC%A7%80-%EB%A7%90%EC%95%84%EC%95%BC-%ED%95%A0-%EC%B9%98%EB%A3%8C-%ED%95%B5%EC%8B%AC-%EA%B0%80%EC%9D%B4%EB%93%9C-963",
-            "domain": "write.daplus.co.kr",
-            "title": "대상포진 초기증상과 골든타임, 놓치지 말아야 할 치료 핵심 가이드 | 다플",
-            "snippet": "갑작스러운 몸의 통증이나 피부 이상감각이 나타나면 단순 피로 때문인지, 아니면 대상포진의 초기 신호인지 구별하기 어려울 때가 많습니다. ... 이번 글에서는 대상포진 초기증상의 주요 특징과 부위별"
-          },
-          {
-            "url": "https://www.hyunmyoung.co.kr/nerve-block/intercostal-neuralgia-early-symptoms/",
-            "domain": "www.hyunmyoung.co.kr",
-            "title": "늑간신경통 초기 증상, 이것부터 확인하세요 | 현명신경외과의원 시청역·중구·서소문·종로·서대문 신경외과",
-            "snippet": "# 늑간신경통 초기 증상, 이것부터 확인하세요 ... 본 글은 신경외과 전문의가 작성·검토한 의학 정보이며, 개인별 진단·치료를 대신하지 않습니다. ... 자세·근육 긴장·대상포진·외상 등이 원인이며, 띠 모양으로"
-          },
-          {
-            "url": "https://www.goe.go.kr/resource/goe/na/bbs_2675/2025/09/33fc09db-47c7-4b13-a254-f0ebf8c4c1d7.pdf",
-            "domain": "www.goe.go.kr",
-            "title": "6. 수두(Chicken pox)",
-            "snippet": "<tr><th>감염경로</th><td>• 수두 환자의 수포액과 직접 접촉(피부 병변이 주요 감염 전파원)<br>• 수두 환자의 호흡기 분비물을 에어로졸로 흡입<br>• 급성 수두 또는 대상포진 환자의 피부병변 수포액을 에어로졸로 흡입</td></tr>"
-          },
-          {
-            "url": "https://dongpoongi.com/%EB%8C%80%EC%83%81%ED%8F%AC%EC%A7%84/",
-            "domain": "dongpoongi.com",
-            "title": "🩹 '대상포진' 초기 증상, 골든타임 놓치면 신경통까지?",
-            "snippet": "# 🩹 ‘대상포진’ 초기 증상, 골든타임 놓치면 신경통까지? ... 통증이 발진보다 먼저 나타날 수 있어 초기에 알아채기 어렵고, 치료 시기를 놓치면 대상포진 후 신경통 같은"
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 33.07,
-          "organic_opportunity": 33.33,
-          "trend": -4.34,
-          "intent_fit": 15
-        },
-        "trend_growth": -0.434,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-11T15:55:51.295428+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "대상포진초기증상"
-        ],
-        "status": "pending",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-              "title": "대한피부과학회",
-              "excerpt_chars": 2293
-            },
-            {
-              "url": "https://www.kdata.or.kr/",
-              "title": "한국데이터산업진흥원 - 메인",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_true",
           "source_recovery": {
             "attempted": true,
             "initial_review": {
               "official_sources": [
                 {
-                  "url": "https://www.kdata.or.kr/",
-                  "title": "한국데이터산업진흥원 - 메인",
-                  "excerpt_chars": 8000
+                  "url": "https://main.kotsa.or.kr/portal/contents.do?menuCode=03050500",
+                  "title": "TS 공공웹사이트 |\r\n\t\t\t기타정보 |\r\n\t\t\t정보공개 |\r\n\t\t\t\r\n\t\t\tTS한국교통안전공단",
+                  "excerpt_chars": 1429
+                },
+                {
+                  "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+                  "title": "www.meca.or.kr",
+                  "excerpt_chars": 260
                 }
               ],
               "analysis_status": "supported_false",
@@ -5677,290 +4201,770 @@
                 "code": "source_missing_detail"
               }
             },
-            "outcome": "review_passed",
+            "outcome": "review_rejected",
             "retry_review": {
               "official_sources": [
                 {
-                  "url": "https://www.derma.or.kr/new/general/disease.php?mod=document&uid=585",
-                  "title": "대한피부과학회",
-                  "excerpt_chars": 2293
+                  "url": "https://www.ttb.gov/regulated-commodities/beverage-alcohol/kombucha/general-requirements",
+                  "title": "General TTB Requirements | TTB: Alcohol and Tobacco Tax and Trade Bureau",
+                  "excerpt_chars": 1770
                 },
                 {
-                  "url": "https://www.kdata.or.kr/",
-                  "title": "한국데이터산업진흥원 - 메인",
-                  "excerpt_chars": 8000
+                  "url": "https://main.kotsa.or.kr/portal/contents.do?menuCode=03050500",
+                  "title": "TS 공공웹사이트 |\r\n\t\t\t기타정보 |\r\n\t\t\t정보공개 |\r\n\t\t\t\r\n\t\t\tTS한국교통안전공단",
+                  "excerpt_chars": 1429
+                },
+                {
+                  "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+                  "title": "www.meca.or.kr",
+                  "excerpt_chars": 260
                 }
               ],
-              "analysis_status": "supported_true"
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
             }
           }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "대상포진초기증상",
-          "executed_query": "대상포진 초기 증상",
-          "topic": "대상포진초기증상: 발진 전 통증과 물집의 진행 특징",
-          "intent": "대상포진은 초기에 어떤 통증과 감각이상으로 시작하며, 발진과 물집은 어떻게 나타나나요?",
+        }
+      },
+      {
+        "keyword": "프로폴리스효능",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 14020,
+        "organic_provider": "codex_native_search",
+        "organic_query": "프로폴리스 효능",
+        "organic_results": [
+          {
+            "url": "https://nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS63126",
+            "domain": "nongsaro.go.kr",
+            "title": "포털서비스 | 농사로",
+            "snippet": "* 국외) 고대 이집트 시대에 미이라 제작시 이용하였으며, 전쟁 등에서 상처치료에 항생제 대용으로 이용하였음###### 프로폴리스의 효능 ... * 건강기능식품으로 활용 : 수용성 프로폴리스 10g을 100ml의"
+          },
+          {
+            "url": "https://patentimages.storage.googleapis.com/0a/39/b1/4d54a76f21e9d3/KR20160021081A.pdf",
+            "domain": "patentimages.storage.googleapis.com",
+            "title": "공개특허 10-2016-0021081",
+            "snippet": "따라서, 이 데이터는 본 발명의 프로폴리스/감마-시클로덱스트린 조성물의 이러한 예가 천연 프로폴리스에 비해 세 배 더 강한 성능을 보인다는 것을 암시하며, 이는 복합체 중의 프로폴리스 고형물의"
+          },
+          {
+            "url": "https://www.healthpang.com/supplement/%EC%9B%90-%ED%94%84%EB%A1%9C%ED%8F%B4%EB%A6%AC%EC%8A%A4-%ED%9A%A8%EB%8A%A5-%EC%84%B1%EB%B6%84-%EC%84%AD%EC%B7%A8%EB%B2%95-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD-%EC%B4%9D%EC%A0%95%EB%A6%AC/",
+            "domain": "www.healthpang.com",
+            "title": "원 프로폴리스 효능, 성분, 섭취법, 주의사항 총정리 - 건강팡",
+            "snippet": "# 원 프로폴리스 효능, 성분, 섭취법, 주의사항 총정리 ... 원 프로폴리스은(는) 고유의 향미가 있으며, 이미, 이취가 없는 갈색의 액상 형태로 구성되어 있으며, 프로폴리스추출물을(를) 주원료로 사용한"
+          },
+          {
+            "url": "https://v.daum.net/v/VB63nte7ul",
+            "domain": "v.daum.net",
+            "title": "프로폴리스 효능 총정리! 면역력·항산화에 이렇게 좋습니다 | 생활톡톡",
+            "snippet": "## 프로폴리스 효능 총정리! ... 덕분에 벌집은 거의 무균 상태로 유지되는데, 이것만 봐도 프로폴리스의 항균력이 얼마나 뛰어난지 알 수 있어요.고대 문명에서는 이미 상처 치료나 감염"
+          },
+          {
+            "url": "https://uniquebiotech.co.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMTA1MTgyNTdkNmI5NTY5ZWUxIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwOTE1YWI3ZjVmNDY1MjVkZSI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDkxNThkYmM0ODY1YTI2NjYiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5YzQxYmVmMDg4ZTkiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
+            "domain": "uniquebiotech.co.kr",
+            "title": "천연 항생제\nPROPOLIS\n세계일류상품\nwww.uniquebiotech.co.kr",
+            "snippet": "제품명 HS Code | 맛있는 프로폴리스 2106.90.9099 | 식품의 유형 제품 타입 | 건강기능식품 (프로폴리스 추출물) 분말형 --- | --- | --- | --- 제품명"
+          },
+          {
+            "url": "https://www.namu.moe/w/%ED%94%84%EB%A1%9C%ED%8F%B4%EB%A6%AC%EC%8A%A4",
+            "domain": "www.namu.moe",
+            "title": "프로폴리스",
+            "snippet": "생산품 | 식용 | 꿀 · 로열 젤리 · 프로폴리스 · 꽃가루 ... 지역에 따라 꿀벌이 프로폴리스를 채취하는 식물도 달라지며 지역별로 프로폴리스의 효능에 차이가 있다."
+          },
+          {
+            "url": "https://patentimages.storage.googleapis.com/69/69/d4/3c69108c773889/KR100846016B1.pdf",
+            "domain": "patentimages.storage.googleapis.com",
+            "title": "등록특허 10-0846016",
+            "snippet": "그리고, 프로폴리스는 박테리아에 의한 단백질 합성을 억제하는 항균 효능이 있다. ... 프로폴리스의 항산화, 항균 효능은 과메기의 비린내를 감소시킬 수 있다. ... 이후에 과메기 껍질을 벗기는"
+          },
+          {
+            "url": "https://repository.kisti.re.kr/bitstream/10580/12292/1/TLD_278_120210.pdf",
+            "domain": "repository.kisti.re.kr",
+            "title": "http://astinet.kr",
+            "snippet": "- \u0007제품설명 : 한국원자력연구원과 공동으로 개발한 ‘수용성 프로폴리스 제조방법’(특 ... 하는 백탁 현상이 나타나지 않으며, 기존 제품에 비해 맛이 부드러워 섭취가 간편 ... 위염 억제"
+          },
+          {
+            "url": "https://www.arb.re.kr/home/file/3%EC%B0%A8%EB%85%84%EB%8F%84_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EB%B6%81.pdf",
+            "domain": "www.arb.re.kr",
+            "title": "1~8 목차",
+            "snippet": "수용성 프로폴리스의 세포주 기반 항염증 효능 평가 ... - 수용성 프로폴리스와 수용성 프로폴리스 분말 B는 고농도 30 μg/mL부터 Nitric oxide의 생성을 억제하는 것으로 나타남- TNF-α"
+          },
+          {
+            "url": "https://search.danawa.com/mobile/dsearch.php?keyword=%ED%94%84%EB%A1%9C%ED%8F%B4%EB%A6%AC%EC%8A%A4",
+            "domain": "search.danawa.com",
+            "title": "프로폴리스 : 다나와 통합검색",
+            "snippet": "프로폴리스/망고맛/섭취대상: 유아,청소년/형태: 스프레이형/섭취방법: 1일 3회, 0.3ml/총복용기간: 27일분/인증정보: 이력추적, 건강기능식품/[성분] 플라보노이드: 0.6mg/[효능] 항산화 ... 프로폴리스/섭취대상: 남성, 성인남녀/형태: 스프레이형/섭취방법: 1일 2회, 0.5ml/총복용기간: 2개월분/인증정보: 건강기능식품/[성분] 플라보노이"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "프로폴리스효능",
+          "executed_query": "프로폴리스 효능",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "result_count": 10,
-          "domain_count": 10,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "대상포진초기증상",
-            "executed_query": "대상포진 초기 증상",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-11T15:55:51.295428+00:00",
-            "raw_sha256": "e9ceb78ed3a309d402a1e9ee2232e4a20a687821891959588d7e9f23ccf076fb",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": false,
-                "quote": "6개월 이상 병변 부위의 만성적인 통증이 지속될 때 대상포진후 신경통"
-              },
-              {
-                "result_index": 1,
-                "relevant": false,
-                "quote": "바이러스에 손상된 신경을 치료하지 않으면 평생 후유증이 남을 수 있는"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "몸 한쪽에 통증·저림·따가움이 먼저 나타나고"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "대상포진, 수포보다 통증 먼저 시작"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "대상포진의 초기 증상과 발생 부위별 특징"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "대상포진 초기증상의 주요 특징과 부위별"
-              },
-              {
-                "result_index": 7,
-                "relevant": false,
-                "quote": "늑간신경통 초기 증상, 이것부터 확인하세요"
-              },
-              {
-                "result_index": 8,
-                "relevant": false,
-                "quote": "수두 환자의 수포액과 직접 접촉"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "통증이 발진보다 먼저 나타날 수 있어"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 6,
-            "relevant_site_count": 6,
-            "relevant_indices": [
-              2,
-              3,
-              4,
-              5,
-              6,
-              9
-            ],
-            "relevance_ratio": 0.6,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.16666666666666666,
-            "organic_opportunity": 33.33
-          },
-          "scope": "full_keyword",
-          "target_keyword": "대상포진초기증상",
-          "matches": [
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "c48ce514d40c75b1d53dd901d724d67587a6bd4185e1023d17e6012983ae2555",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "상처치료에 항생제 대용으로 이용하였음"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "본 발명의 프로폴리스/감마-시클로덱스트린 조성물"
+            },
             {
               "result_index": 2,
-              "quote": "대상포진은 보통 몸 한쪽에 통증·저림·따가움이 먼저 나타나고"
+              "relevant": false,
+              "quote": "원 프로폴리스은(는) 고유의 향미가 있으며"
             },
             {
               "result_index": 3,
-              "quote": "대상포진 증상은 대개 몸 한쪽의 신경을 따라 따끔거리거나 화끈거리는 통증이 생기고"
+              "relevant": true,
+              "quote": "프로폴리스 효능 총정리! 면역력·항산화에 이렇게 좋습니다"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "식품의 유형 제품 타입"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "지역별로 프로폴리스의 효능에 차이가 있다."
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "프로폴리스는 박테리아에 의한 단백질 합성을 억제하는 항균 효능이 있다."
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "수용성 프로폴리스 제조방법"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "수용성 프로폴리스의 세포주 기반 항염증 효능 평가"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "프로폴리스 : 다나와 통합검색"
             }
           ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-11T15:55:51.295428+00:00",
-          "input_sha256": "8bb2851db4e593629e56a70bbd8e715b57cdd1ac34244b76cebf0098b80ead38",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "대상포진초기증상",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다.",
-                "entity": "대상포진",
-                "context": "general"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "발진 전 어떤 통증과 감각이상이 언제 시작되는가?",
-                "answer": "발진 평균 4~5일 전부터 동통·압통·감각이상과 가벼운 자극에 대한 과민반응이 나타날 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "발진이 나타나기 평균 4~5일(1~14일) 전부터 피부절을 따라 동통, 압통, 감각이상이 발생하며, 가벼운 자극에도 과민반응이 나타나며"
-              },
-              {
-                "facet": "초기 발진과 물집은 어떻게 진행되는가?",
-                "answer": "붉은 구진·반점으로 시작해 12~24시간 내 물집을 형성한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "피부발진은 침범한 신경을 따라 띠 모양으로 분포되어 홍반성 구진과 반점으로 나타나고, 12~24시간 내에 수포를 형성한다"
-              },
-              {
-                "facet": "증상은 어느 부위에 어떤 분포로 나타나는가?",
-                "answer": "신경을 따라 띠 모양으로 나타나며, 대부분 몸 한쪽에 발생하고 중앙선을 넘지 않는다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "대부분이 편측으로 발생하고, 중앙선을 넘지 않으며, 양측성으로 발생하는 경우는 매우 드물고"
-              },
-              {
-                "facet": "물집이나 발진이 없으면 대상포진을 배제할 수 있는가?",
-                "answer": "드물게 통증만 있고 피부병변이 없을 수 있어, 발진 유무만으로 배제할 수 없다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "드물게 환자가 통증을 호소하지만 피부병변이 발생하지 않을 수도 있다."
-              },
-              {
-                "facet": "초기 증상을 알아챘을 때 왜 신속한 진료가 필요한가?",
-                "answer": "조기 치료가 중요하다. 본문이 제시한 72시간의 기준은 최초 통증이 아닌 수포 형성 이후다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "항바이러스 약물을 수포형성하고 난 뒤 72시간 이내에 투여하면 피부병변의 치유를 촉진시키며, 급성 동통의 기간을 줄이고"
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "대상포진은 수두의 유행과는 관련이 없으며, 계절에 상관없이 1년 내내 산발적으로 발생한다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
+        }
+      },
+      {
+        "keyword": "심장초음파비용",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 4940,
+        "organic_provider": "codex_native_search",
+        "organic_query": "심장 초음파 비용",
+        "organic_results": [
+          {
+            "url": "https://seoul.eumc.ac.kr/wellness/private/private0102.do",
+            "domain": "seoul.eumc.ac.kr",
+            "title": "웰니스건강증진센터 | 이대서울병원",
+            "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할수 있는 건강진단 프로그램입니다. ... 검사항목 | 비용 ... 심장+부정맥(A) | 기본 +심장 초음파, 경동맥"
+          },
+          {
+            "url": "https://www.snubh.org/medical/out/clinic05_1.do?NMC_MCLS_CD=B1&cPage=2",
+            "domain": "www.snubh.org",
+            "title": "비급여항목안내 - 분당서울대학교병원",
+            "snippet": "명칭 | 코드 | 구분 | 비용 | 최저비용 | 최대비용 | 치료재료대 ... 초음파 검사료 | 심장-경흉부심초음파-선천성심질환 | EB430 | 추가 | 110,000 |"
+          },
+          {
+            "url": "https://www.knuh.or.kr/hospitalinfo/hospitalinfo_04_07221.asp?page_no=12&stext=",
+            "domain": "www.knuh.or.kr",
+            "title": "강원대학교병원 > 비급여 진료비용안내()",
+            "snippet": "* 처치 및 수술의 경우 입원료, 마취료, 약제료, 치료재료 등은 별도산정 됩니다. ... 소분류 | 코드 | 명칭 | 구분 | 비용 | 최저비용 |"
+          },
+          {
+            "url": "https://price.hospitalk.net/items/EB4320000-%EC%B4%88%EC%9D%8C%ED%8C%8C%EA%B2%80%EC%82%AC%EB%A3%8C%EC%A7%84%EB%8B%A8%EC%B4%88%EC%9D%8C%ED%8C%8C%EC%8B%AC%EC%9E%A5-%EA%B2%BD%ED%9D%89%EB%B6%80-%EC%8B%AC%EC%B4%88%EC%9D%8C%ED%8C%8C%EC%9D%BC%EB%B0%98/area/%EC%84%9C%EC%9A%B8/%EC%86%A1%ED%8C%8C%EA%B5%AC/",
+            "domain": "price.hospitalk.net",
+            "title": "서울 송파구 진단 초음파 · 심장-경흉부 심초음파 · 일반 비용 비교 | 하스피톡",
+            "snippet": "# 서울 송파구 진단 초음파 · 심장-경흉부 심초음파 · 일반 비용 비교서울 송파구에서 진단 초음파 · 심장-경흉부 심초음파 · 일반 공개가격을 등록한 8개 병원을 비교합니다."
+          },
+          {
+            "url": "https://seosanmc.or.kr/uploads/content/%EB%B9%84%EA%B8%89%EC%97%AC%EC%A7%84%EB%A3%8C%EB%B9%84%EC%9A%A9_20250331.pdf",
+            "domain": "seosanmc.or.kr",
+            "title": "Ⅰ. 행위\n분류  | 진료비항목  |  | 가격정보(단위: 원)  |  |  |  |  |",
+            "snippet": "비용 | 치료재료대 ... 초음파 검사료 | 두경부-경부 초음파-갑상선·부갑상선 제외한 경부 | EB415 | | 8 0,000 | | | O | O | 21.01.01"
+          },
+          {
+            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=35&site=001&user_code=009015000",
+            "domain": "www.brmh.org",
+            "title": "| 서울대학교병원운영 서울특별시보라매병원",
+            "snippet": "비급여 진료비 행위료 관련 표이며, 중분류, 분류, 항목(명칭,코드), 진료비용등(단위:원)(구분,비용,최저비용, 최대비용, 치료재료대조합여부, 약제비포함여부), 특이사항, 최종변경일로 구성되어 있습니다. ... 초음파 검사료 | 초음파 검사료 | 심장-부하 심초음파-약물부하"
+          },
+          {
+            "url": "https://www.modoodoc.com/hospital/81738/%EA%B5%AC%ED%8F%AC%EC%84%B1%EC%8B%AC%EB%B3%91%EC%9B%90-%EB%B6%80%EC%82%B0-%EA%B5%AC%ED%8F%AC%EB%8F%99/",
+            "domain": "www.modoodoc.com",
+            "title": "구포성심병원 후기/가격/비용 (2026) | 모두닥",
+            "snippet": "도수치료((비)도수치료SE2(서기+보행운동,1일당)) | 30,000 ~ 200,000 ... * 심장-경흉부 심초음파 ... 간·담낭·담도·비장·췌장-정밀(복부-복 초음파-간·담낭·담도·비장·췌장-정밀) | 180,000 ... 손가락(근골격_연부-관절 초음파-손가락(편측)) | 100,000 ... 상지-정맥(혈관-사지혈관 도플러 초음파-상지-정맥) |"
+          },
+          {
+            "url": "https://seoul.eumc.ac.kr/asset/dwfile/260313%20%EC%9B%B0%EB%8B%88%EC%8A%A4%20%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%84%BC%ED%84%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EC%84%B8%EB%A1%9C%ED%98%95.pdf",
+            "domain": "seoul.eumc.ac.kr",
+            "title": "260313 웰니스 건강증진센터 프로그램 세로형",
+            "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할 수 있는 건강진단 프로그램입니다. ... <th>비용</th> ... <td>기본 + 흉부 저선량 CT, 갑상선 초음파,"
+          },
+          {
+            "url": "https://www.modoodoc.com/hospital/4483/%EC%B0%A8%EC%9B%80%EC%9D%98%EC%9B%90-%EC%84%9C%EC%9A%B8-%EC%B2%AD%EB%8B%B4%EB%8F%99",
+            "domain": "www.modoodoc.com",
+            "title": "차움의원 후기/가격/비용 (2026) | 모두닥",
+            "snippet": "조영제 주입 전·후 촬영 판독(자기공명영상진단료(MRI-기본검사)-근골격계-발목관절-조영제 주입 전·후 촬영 판독) | 625,000 ... 갑상선·부갑상선 제외한 경부(Neck Routine sono) | 175,000 ... * 심장-경흉부 심초음파 ... 간·담낭·담도·비장·췌장-일반(복부"
+          },
+          {
+            "url": "https://www.rapigenhc.com/nonpayment/payment.php",
+            "domain": "www.rapigenhc.com",
+            "title": "래피젠 헬스케어",
+            "snippet": "중분류 | 소분류 | 상세분류 | 진료비용항목 | 항목별 가격정보 (단위 : 원) | 특이사항 | 최종변경일 ... 코드 | 검사명(명칭) | 비용 | 최저비용"
           }
-        },
-        "score": 77.06,
-        "publish_eligible": true,
-        "hold_reasons": []
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "심장초음파비용",
+          "executed_query": "심장 초음파 비용",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "001e524d26d58bf8e9542696e0b9311c0e590eb2cb507376cb85cb1784318517",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "기본 +심장 초음파, 경동맥"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "심장-경흉부심초음파-선천성심질환"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "처치 및 수술의 경우 입원료, 마취료, 약제료, 치료재료 등은 별도산정 됩니다."
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "심장-경흉부 심초음파 · 일반 비용 비교"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "두경부-경부 초음파-갑상선·부갑상선 제외한 경부"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "심장-부하 심초음파-약물부하"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "도수치료((비)도수치료SE2(서기+보행운동,1일당)) | 30,000 ~ 200,000"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "기본 + 흉부 저선량 CT, 갑상선 초음파,"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "갑상선·부갑상선 제외한 경부(Neck Routine sono) | 175,000"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "코드 | 검사명(명칭) | 비용 | 최저비용"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "종합건강검진비용",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 5110,
+        "organic_provider": "codex_native_search",
+        "organic_query": "종합 건강검진 비용",
+        "organic_results": [
+          {
+            "url": "https://www.staging.modoodoc.com/treatment-detail/5032/434/%EA%B5%AD%EB%AF%BC%EC%B2%B4%EB%A0%A5%EC%84%BC%ED%84%B0%EC%9D%98%EC%9B%90-%EC%A2%85%ED%95%A9%20%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84",
+            "domain": "www.staging.modoodoc.com",
+            "title": "[국민체력센터의원] 종합 건강검진 가격/비용/이벤트 (2026) | 모두닥",
+            "snippet": "기본검사 : 위내시경(수면), 골밀도, CBC, Diff.c 혈액, 소변검사, 체성분검사 선택검사 : 초음파(5종), 건강생활기능, 동맥경화협착 중 선택 2가지 총 58종 검사 ... 신청자 수와 남은 수량은"
+          },
+          {
+            "url": "https://www.mnd.go.kr/user/mnd/upload/pblictn/PBLICTNEBOOK_202503141022459290.pdf",
+            "domain": "www.mnd.go.kr",
+            "title": "제3편 제대군인에게 주어지는 혜택 알아가기!",
+            "snippet": "<td>검진비용</td> ... 라) 검진항목 : 상세 내역은 군인공제회 홈페이지 「종합 건강검진」 참조"
+          },
+          {
+            "url": "https://www.kosinmed.or.kr/info/info_81.php",
+            "domain": "www.kosinmed.or.kr",
+            "title": "고신대학교복음병원",
+            "snippet": "의료법 제45조 및 의료법 시행규칙 제42조의 2에 의하여 비급여 진료비용을 고지합니다. ... 분류 | 항목 | 가격정보(단위:원) | 특이사항 | 최종변경일 ... 방사선특수촬영 | QFR"
+          },
+          {
+            "url": "https://incheon.kahp.or.kr/ho/hlthChk/emplchk/emplchkList.do",
+            "domain": "incheon.kahp.or.kr",
+            "title": "채용신체검진 : home > 지부(인천) > 건강검진 > 검진 프로그램 > 채용신체검진",
+            "snippet": "* * ※ 지부에 따라 검진프로그램 구성 및 비용, 가능여부가 상이할 수 있습니다. ... [Input] [Input] [Input] [Button: 메디체크종합검진]"
+          },
+          {
+            "url": "https://mas.smc.seoul.kr/attach/record/SEOUL/appendix/a11/A0071312.pdf?time=20260621104059",
+            "domain": "mas.smc.seoul.kr",
+            "title": "제3 3 4 회 임시회",
+            "snippet": "- 배달·가사·돌봄 등 취약노동자 종합건강검진 패키지 비용 지원(200명) ... 취약노동자 건강검진 협력병원(이대서울병원)과 업무 협의"
+          },
+          {
+            "url": "https://diet-calories.com/%EC%A1%B0%EC%9D%80%EA%B8%88%EA%B0%95%EB%B3%91%EC%9B%90-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EC%A2%85%ED%95%A9%EA%B2%80%EC%A7%84-%EA%B5%AD%EA%B0%80%EA%B2%80%EC%A7%84/",
+            "domain": "diet-calories.com",
+            "title": "조은금강병원 건강검진 비용 (종합검진 국가검진 예약) - 건강 도우미",
+            "snippet": "# 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) ... 네, 조은금강병원은 국민건강보험공단에서 각종 성인질병 및 암질환을 조기에 발견하고 예방히가 위해 지원하는 국가검진 지정 기관입니다."
+          },
+          {
+            "url": "https://www.jungdonghospital.com/intro/page05.html?jb_code=20&jb_depth=41990&jb_group=4199&jb_idx=5320&jb_step=0&month=&page=363&search_key=&search_keyword=&type=",
+            "domain": "www.jungdonghospital.com",
+            "title": "관절,척추전문 정동병원",
+            "snippet": "#### 나도 올해 건강검진 대상자일까? ... 다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다! ... ​대장 내시경 중 용종 절제 시 하루 정도 입원하실 수 있으며,"
+          },
+          {
+            "url": "https://www.jangbaro.co.kr/pages/phycheck_fit.php",
+            "domain": "www.jangbaro.co.kr",
+            "title": "맞춤 종합 건강검진 | 장바로내과",
+            "snippet": "* 비용 : 45만원 ... * 각종 암의 조기 진단과 예방을 위한 기본종합검진(20대 이상 가장 취약한 위암, 간암, 자궁경부암, 유방암, 갑상선암 등) ... 골밀도 검사"
+          },
+          {
+            "url": "https://www.modoodoc.com/qna/1840/%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EB%AC%B8%EC%9D%98%EB%93%9C%EB%A0%A4%EC%9A%94",
+            "domain": "www.modoodoc.com",
+            "title": "[명지성모병원/종합 건강검진] 건강검진 비용 문의드려요",
+            "snippet": "건강검진 비용 문의드려요 필수검진항목 혈액,소변,위대장내시경, 초음파(갑상선 복부 경동맥), 복부CT(조영제), 저선량폐CT ,뇌MRA , 관상동맥 CT 유방초음파, 갑상선초음파, 부인과초음파, 골밀도, 유방촬영,자궁경부암,인두유종바이러스 포함 견적 궁금합니다.2026.03.16 작성 명지성모병원종합 건강검진0"
+          },
+          {
+            "url": "https://redwinters.com/2026-%EC%A2%85%ED%95%A9-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EB%B9%84%EA%B5%90-%EB%B0%8F-%ED%95%AD%EB%AA%A9-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%8B%A4%EB%B9%84/",
+            "domain": "redwinters.com",
+            "title": "2026 종합 건강검진 비용 비교 및 항목 추천 가이드 (실비 환급, 주의사항, 과태료 총정리) - 레윈의 블로그",
+            "snippet": "2026 종합 건강검진 평균 비용 및 병원별 차이검진 비용은 기관의 규모와 서비스 수준에 따라 상당한 차이를 보입니다."
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "종합건강검진비용",
+          "executed_query": "종합 건강검진 비용",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-12T06:48:35.134282+00:00",
+          "raw_sha256": "786dddbab58130435c667ce292f081789ee0657127ba8cc4b308fbbd7eb0fd4d",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "종합 건강검진 가격/비용/이벤트"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "제3편 제대군인에게 주어지는 혜택 알아가기!"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "비급여 진료비용을 고지합니다."
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "검진 프로그램 > 채용신체검진"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "취약노동자 종합건강검진 패키지 비용 지원(200명)"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "조은금강병원 건강검진 비용 (종합검진 국가검진 예약)"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다!"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "* 비용 : 45만원"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "포함 견적 궁금합니다."
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "2026 종합 건강검진 평균 비용 및 병원별 차이"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "애사비효능",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        }
+      },
+      {
+        "keyword": "염증에좋은음식",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 17320,
+        "organic_provider": "codex_native_search",
+        "organic_query": "염증에 좋은 음식",
+        "organic_results": [
+          {
+            "url": "https://www.youtube.com/watch?v=lF-_ULuYNd4",
+            "domain": "www.youtube.com",
+            "title": "염증에 좋은 음식 - YouTube",
+            "snippet": "# 염증에 좋은 음식"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/magazine/e85429e74e8842849f00a2860b9c2e18",
+            "domain": "doctornow.co.kr",
+            "title": "몸속 염증 줄이는 법 | 염증에 좋은 음식 7가지 총정리 - 닥터나우",
+            "snippet": "# 몸속 염증 줄이는 법 | 염증에 좋은 음식 7가지 총정리 ... 염증에 좋은 음식 7가지 ... 또한 암과 심장 질환 위험 감소와 관련이 있는"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/magazine/e85429e74e8842849f00a2860b9c2e18/",
+            "domain": "doctornow.co.kr",
+            "title": "몸속 염증 줄이는 법 | 염증에 좋은 음식 7가지 총정리 - 닥터나우",
+            "snippet": "Image: 몸속 염증 줄이는 법 | 염증에 좋은 음식 7가지 총정리# 몸속 염증 줄이는 법 | 염증에 좋은 음식 7가지 총정리 ... 또한 암과 심장"
+          },
+          {
+            "url": "https://www.hcnews.or.kr/news/50241",
+            "domain": "www.hcnews.or.kr",
+            "title": "몸속 염증은 더 위험하다... 염증에 좋은 음식",
+            "snippet": "염증을 일으키는 음식으로는 설탕, 쿠킹오일, 트랜스지방, 우유, 붉은 육류, 술, 백미나 밀가루 등의 정제된 식품으로부터 온다. ... 염증을 막아주는 염증에 좋은 식품으로 고등어, 연어, 다시마,"
+          },
+          {
+            "url": "https://www.yes24.com/Product/Search?query=%25EC%2597%25BC%25EC%25A6%259D%25EC%2597%2590%2520%25EC%25A2%258B%25EC%259D%2580%2520%25EC%259D%258C%25EC%258B%259D",
+            "domain": "www.yes24.com",
+            "title": "염증에 좋은 음식 - 예스24",
+            "snippet": "* [중고도서] 나들이에 좋은 음식 - 요리 초보자들도 쉽게 따라 할 수 있는 쉬운 레시피 나들이에 좋은 음식 - 요리 초보자들도 쉽게 따라 할 수"
+          },
+          {
+            "url": "https://newbinsight.com/%EC%97%BC%EC%A6%9D%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-%EC%B0%BE%EB%8A%94-%EB%B2%95-%EC%97%BC%EC%A6%9D-%EC%97%86%EB%8A%94-%EC%8B%9D%EC%82%AC-%EB%B0%A9%EB%B2%95/",
+            "domain": "newbinsight.com",
+            "title": "염증에 좋은 음식 찾는 법, 염증 없는 식사 방법 – 뉴빈사이트",
+            "snippet": "일반적으로 알려진 만성염증의 원인에는 스트레스와 음주와 흡연은 말할 것도 없고 운동 부족과 잘못된 자세, 고칼로리·고지방·고탄수화물 등 고열량 음식 위주의 식습관과 비만, 미세 먼지 등 환경적"
+          },
+          {
+            "url": "https://info-idea114.co.kr/entry/%EC%97%BC%EC%A6%9D%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-%EC%95%BD%EB%B3%B4%EB%8B%A4-%EC%9D%8C%EC%8B%9D%EB%B6%80%ED%84%B0-%EB%B0%94%EA%BE%B8%EC%84%B8%EC%9A%94",
+            "domain": "info-idea114.co.kr",
+            "title": "염증에 좋은 음식 , 약보다 음식부터 바꾸세요",
+            "snippet": "# 염증에 좋은 음식 , 약보다 음식부터 바꾸세요 ... 급성 염증은 상처를 치유하는 과정이지만, 만성 염증은 혈관을 타고 돌며 암, 치매, 심혈관 질환의 씨앗이 됩니다.오늘은"
+          },
+          {
+            "url": "https://classytip.tistory.com/389",
+            "domain": "classytip.tistory.com",
+            "title": "염증에 좋은 음식 / 항염증 식단 가이드 / 염증을 낮추는 음식과 식습관",
+            "snippet": "# 염증에 좋은 음식 / 항염증 식단 가이드 / 염증을 낮추는 음식과 식습관 ... 오늘은 과학 연구를 통해 효능이 입증된 염증에 좋은 음식 7가지와 반드시"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/qna/439e5ce77d9c47848b35409e676e3ccd",
+            "domain": "doctornow.co.kr",
+            "title": "염증에 좋은 음식과 영양제, 운동 주의사항은? - 닥터나우",
+            "snippet": "# 염증에 좋은 음식과 영양제, 운동 주의사항은? ... * 뼈를 튼튼하게 만드는 칼슘, 비타민D, 관절의 염증과 통증을 줄여주는 오메가-3지방산, 부종을 가라앉히고 혈액 순환을 도와주며 신경을"
+          },
+          {
+            "url": "https://health.infotoday.co.kr/entry/%EC%97%BC%EC%A6%9D%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%98%81%EC%96%91%EC%A0%9C-%ED%9A%A8%EA%B3%BC-%EB%B9%A0%EB%A5%B8-TOP5",
+            "domain": "health.infotoday.co.kr",
+            "title": "염증에 좋은 영양제, 효과 빠른 TOP5",
+            "snippet": "염증에 좋은 영양제는 만성 염증 완화와 신체 회복에 도움을 줍니다. ... 강황에 포함된 커큐민은 강력한 항산화 및 항염증 특성을 지니며, COX-2 효소를 억제하여 염증에 좋은"
+          }
+        ]
       }
     ],
-    "candidate_decisions": [
+    "excluded_keywords": [],
+    "selection_scope": "highest_score_among_evaluated",
+    "proposal_rounds": [
       {
-        "keyword": "대상포진초기증상",
-        "monthly_search": 13600,
-        "rank": 1,
-        "score": 77.06,
-        "score_components": {
-          "demand": 33.07,
-          "organic_opportunity": 33.33,
-          "trend": -4.34,
-          "intent_fit": 15
-        },
-        "status": "selected",
-        "reason": "highest_score_among_evaluated",
-        "organic_query": "대상포진 초기 증상"
-      },
-      {
-        "keyword": "중성지방수치",
-        "monthly_search": 15720,
-        "score": 53.65,
-        "status": "held",
-        "reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
+        "round": 1,
+        "offered_keywords": [
+          "시서스",
+          "콤부차효능",
+          "도수치료",
+          "정형외과",
+          "애플사이다비니거",
+          "클룹애사비소다",
+          "대상포진예방접종가격",
+          "이비인후과",
+          "초록입홍합",
+          "애사비효능",
+          "염증에좋은음식",
+          "스포츠",
+          "프로폴리스 스프레이",
+          "편도결석빼는법",
+          "대상포진병원",
+          "산부인과",
+          "스피루리나",
+          "구내염빨리낫는법",
+          "칼륨많은음식",
+          "마그네슘",
+          "혈행 개선 영양제",
+          "피부가려움증",
+          "CT비용",
+          "대상포진증상",
+          "풋크림",
+          "감기에좋은음식",
+          "위고비",
+          "남자 영양제",
+          "암보험비교사이트",
+          "수영장",
+          "혈당 영양제",
+          "프로폴리스효능",
+          "건강보험료조회",
+          "아르기닌",
+          "대상포진주사가격",
+          "하이록스",
+          "아이크림",
+          "심으뜸",
+          "위내시경비용",
+          "스크린골프",
+          "수면팩",
+          "면역력높이는음식",
+          "크로스핏",
+          "로즈힙 오일",
+          "구강스프레이",
+          "경동맥초음파비용",
+          "커큐민",
+          "핸드크림",
+          "프로폴리스효과",
+          "발톱무좀치료방법",
+          "종합비타민",
+          "트러블 패치",
+          "왼쪽어깨통증",
+          "건강보험료계산",
+          "고지혈증",
+          "엽산",
+          "염증영양제",
+          "보험비교",
+          "당뇨초기증상",
+          "아스타잔틴"
         ],
-        "organic_query": "중성지방 수치"
+        "proposals": [
+          {
+            "keyword": "CT비용",
+            "reason": "네이버 월 11,620회. 검사 예약 전 비용 구성과 건강보험 적용 조건을 확인하려는 구체적 수요가 있어 조사할 만하다.",
+            "search_query": "CT 비용"
+          },
+          {
+            "keyword": "경동맥초음파비용",
+            "reason": "네이버 월 6,450회의 중소 수요. 검사비와 급여·비급여 조건을 묻는 명확한 의료 이용 질문이 있어 조사할 만하다.",
+            "search_query": "경동맥 초음파 비용"
+          },
+          {
+            "keyword": "건강보험료조회",
+            "reason": "네이버 월 9,940회. 보험료 확인 절차와 조회 내역 해석 수요를 조사할 만하며 기존 환급금 조회와 목적이 다르다.",
+            "search_query": "건강보험료 조회"
+          },
+          {
+            "keyword": "칼륨많은음식",
+            "reason": "네이버 월 15,380회. 식품별 칼륨 함량과 섭취 주의사항을 찾는 구체적인 식생활 정보 수요가 있어 조사할 만하다.",
+            "search_query": "칼륨 많은 음식"
+          },
+          {
+            "keyword": "콤부차효능",
+            "reason": "네이버 월 24,980회. 알려진 효능의 근거와 한계를 확인하려는 정보 수요가 있어 조사할 만하다.",
+            "search_query": "콤부차 효능"
+          },
+          {
+            "keyword": "프로폴리스효능",
+            "reason": "네이버 월 14,020회. 인정된 기능성과 일반적인 효능 주장의 범위, 섭취 주의사항을 확인할 필요가 있어 조사할 만하다.",
+            "search_query": "프로폴리스 효능"
+          }
+        ]
       },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "시서스",
+          "도수치료",
+          "정형외과",
+          "애플사이다비니거",
+          "클룹애사비소다",
+          "대상포진예방접종가격",
+          "이비인후과",
+          "초록입홍합",
+          "애사비효능",
+          "염증에좋은음식",
+          "스포츠",
+          "프로폴리스 스프레이",
+          "편도결석빼는법",
+          "대상포진병원",
+          "산부인과",
+          "스피루리나",
+          "구내염빨리낫는법",
+          "마그네슘",
+          "혈행 개선 영양제",
+          "피부가려움증",
+          "대상포진증상",
+          "풋크림",
+          "감기에좋은음식",
+          "위고비",
+          "남자 영양제",
+          "암보험비교사이트",
+          "수영장",
+          "혈당 영양제",
+          "아르기닌",
+          "대상포진주사가격",
+          "하이록스",
+          "아이크림",
+          "심으뜸",
+          "위내시경비용",
+          "스크린골프",
+          "수면팩",
+          "면역력높이는음식",
+          "크로스핏",
+          "로즈힙 오일",
+          "구강스프레이",
+          "커큐민",
+          "핸드크림",
+          "프로폴리스효과",
+          "발톱무좀치료방법",
+          "종합비타민",
+          "트러블 패치",
+          "왼쪽어깨통증",
+          "건강보험료계산",
+          "고지혈증",
+          "엽산",
+          "염증영양제",
+          "보험비교",
+          "당뇨초기증상",
+          "아스타잔틴",
+          "손끝저림",
+          "종합건강검진비용",
+          "요가매트",
+          "콜라겐 젤리",
+          "클로렐라",
+          "심장초음파비용"
+        ],
+        "proposals": [
+          {
+            "keyword": "심장초음파비용",
+            "reason": "네이버 월 4,940회. 검사 비용과 건강보험 적용 조건을 알고 싶은 구체적 수요로, 공식 기준과 비용 안내를 조사할 가치가 있다.",
+            "search_query": "심장 초음파 비용"
+          },
+          {
+            "keyword": "종합건강검진비용",
+            "reason": "네이버 월 5,110회. 유료 검진의 포함 항목과 추가 비용을 묻는 수요로, 기존 국가검진 대상 조회와 검색 목적이 다르다.",
+            "search_query": "종합 건강검진 비용"
+          },
+          {
+            "keyword": "애사비효능",
+            "reason": "네이버 월 20,080회. 효능에 대한 정보 수요가 있어, 인체 연구에서 확인된 효과와 근거의 한계를 조사할 필요가 있다.",
+            "search_query": "애사비 효능"
+          },
+          {
+            "keyword": "염증에좋은음식",
+            "reason": "네이버 월 17,320회. 식품과 염증의 관계를 묻는 수요로, 공식 영양 자료에서 설명 가능한 식생활 원칙과 근거 범위를 조사할 만하다.",
+            "search_query": "염증에 좋은 음식"
+          }
+        ]
+      }
+    ],
+    "ranked_candidates": [],
+    "candidate_decisions": [
       {
         "keyword": "CT비용",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 11720,
+        "monthly_search": 11620,
         "organic_query": "CT 비용"
       },
       {
-        "keyword": "고혈압수치",
+        "keyword": "경동맥초음파비용",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 13450,
-        "organic_query": "고혈압 수치"
-      },
-      {
-        "keyword": "칼륨많은음식",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 15510,
-        "organic_query": "칼륨 많은 음식"
-      },
-      {
-        "keyword": "콜레스테롤낮추는음식",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 16010,
-        "organic_query": "콜레스테롤 낮추는 음식"
+        "monthly_search": 6450,
+        "organic_query": "경동맥 초음파 비용"
       },
       {
         "keyword": "건강보험료조회",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 9890,
+        "monthly_search": 9940,
         "organic_query": "건강보험료 조회"
       },
       {
-        "keyword": "고혈압낮추는방법",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 14690,
-        "organic_query": "고혈압 낮추는 방법"
-      },
-      {
-        "keyword": "혈당낮추는음식",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 10060,
-        "organic_query": "혈당 낮추는 음식"
-      },
-      {
-        "keyword": "저혈압수치",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 40790,
-        "organic_query": "저혈압 수치"
-      },
-      {
-        "keyword": "콜레스테롤수치",
+        "keyword": "칼륨많은음식",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 43760,
-        "organic_query": "콜레스테롤 수치"
+        "monthly_search": 15380,
+        "organic_query": "칼륨 많은 음식"
       },
       {
         "keyword": "콤부차효능",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 25240,
+        "monthly_search": 24980,
         "organic_query": "콤부차 효능"
+      },
+      {
+        "keyword": "프로폴리스효능",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 14020,
+        "organic_query": "프로폴리스 효능"
+      },
+      {
+        "keyword": "심장초음파비용",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 4940,
+        "organic_query": "심장 초음파 비용"
+      },
+      {
+        "keyword": "종합건강검진비용",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 5110,
+        "organic_query": "종합 건강검진 비용"
+      },
+      {
+        "keyword": "애사비효능",
+        "status": "rejected",
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 20080,
+        "organic_query": "애사비 효능"
+      },
+      {
+        "keyword": "염증에좋은음식",
+        "status": "rejected",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 17320,
+        "organic_query": "염증에 좋은 음식"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."

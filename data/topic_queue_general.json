@@ -5693,11 +5693,12 @@
     "score": 77.06,
     "publish_eligible": true,
     "hold_reasons": [],
-    "affiliate_state": "waiting",
+    "affiliate_state": "held",
     "post_id": 1754,
     "url": "https://trendpulse.blog/?p=1754",
     "post_status": "draft",
     "held_at": "2026-09-11T16:09:49.798605",
-    "affiliate_request_id": "12ff037da83f46fb8369dd22dd5b110c"
+    "affiliate_request_id": "12ff037da83f46fb8369dd22dd5b110c",
+    "affiliate_error": "request_expired"
   }
 ]

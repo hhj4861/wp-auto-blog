@@ -5,7 +5,8 @@
       "run_id": "34808814152",
       "category": "생활정보",
       "claimed_at": "2026-09-14T14:13:17.499884+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-09-14T05:31:06.929978+00:00"
     }
   }
 }

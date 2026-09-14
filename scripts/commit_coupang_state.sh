@@ -4,7 +4,7 @@ set -euo pipefail
 test "${GITHUB_REF:-}" = refs/heads/main
 git config --local user.email 'github-actions[bot]@users.noreply.github.com'
 git config --local user.name 'github-actions[bot]'
-for file in data/coupang_requests.json data/topic_queue_general.json data/post_registry_general.json data/posted_market_keywords.json data/category_market_topics.json; do
+for file in data/coupang_requests.json data/topic_queue_general.json data/post_registry_general.json data/posted_market_keywords.json data/category_market_topics.json data/scheduled_post_runs.json; do
   if [ -f "$file" ]; then git add "$file"; fi
 done
 if ! git diff --staged --quiet; then

@@ -203,7 +203,7 @@ def test_existing_category_jobs_keep_schedule_and_share_writer():
     workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
     assert 'post-codex' not in workflow['jobs']
     schedules = workflow.get('on', workflow.get(True))['schedule']
-    assert [entry['cron'] for entry in schedules] == ['0 2 * * 1,3,5', '0 2 * * 2,4', '0 2 * * 6']
+    assert [entry['cron'] for entry in schedules] == ['0 2 * * 1,3,5', '0 2 * * 2,4', '0 2 * * 6', '17,47 2-13 * * 1-6']
     for name in ('post-general', 'post-queue'):
         job = workflow['jobs'][name]
         assert 'vars.BLOG_WRITER_PROVIDER' in job['env']['BLOG_WRITER_PROVIDER']

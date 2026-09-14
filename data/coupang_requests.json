@@ -24,9 +24,14 @@
       "notified_at": "2026-09-14T05:31:06.840555+00:00",
       "post_id": 1757,
       "products": [],
+      "publication_mode": "without_products",
+      "publish_attempt_run": "34809932944",
+      "publishing_at": "2026-09-14T06:01:07.731631+00:00",
+      "reply_checked_at": "2026-09-14T06:01:07.289661+00:00",
+      "reply_checked_run": "34809932944",
       "request_id": "3db0c66fb6554fe787a07ba1774ebb29",
       "selected_at": "2026-09-14T05:13:56.902387+00:00",
-      "status": "waiting",
+      "status": "publishing",
       "topic": "퇴직금중간정산 조건·사유·신청서류와 정산 후 퇴직금"
     }
   ],

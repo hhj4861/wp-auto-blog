@@ -6,8 +6,9 @@ import json
 from pathlib import Path
 import re
 import sys
+import unicodedata
 from types import SimpleNamespace
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 import requests
 from bs4 import BeautifulSoup
@@ -27,7 +28,7 @@ class AffiliateDraftError(RuntimeError):
     def __init__(self, reason):
         if reason not in {'invalid_request', 'request_binding_mismatch', 'affiliate_request_required',
                           'already_published', 'unexpected_post_status', 'products_changed', 'product_review_failed',
-                          'publication_unconfirmed', 'verification_unavailable'}:
+                          'publication_unconfirmed', 'verification_unavailable', 'unexpected_affiliate_content'}:
             reason = 'verification_unavailable'
         self.reason = reason
         super().__init__('Affiliate draft publication held: ' + reason)
@@ -43,7 +44,19 @@ def _affiliate_binding(request, original, brief):
             or type(request.get('post_id')) is not int
             or not isinstance(request.get('draft_fingerprint'), str)
             or re.fullmatch(r'[a-f0-9]{64}', request['draft_fingerprint']) is None
-            or not isinstance(request.get('products'), list) or not request['products']):
+            or not isinstance(request.get('products'), list)):
+        raise AffiliateDraftError('invalid_request')
+    mode = request.get('publication_mode', 'with_products')
+    if mode not in ('with_products', 'without_products'):
+        raise AffiliateDraftError('invalid_request')
+    without_products = mode == 'without_products'
+    if without_products:
+        from src.coupang_telegram import timeout_publication_allowed
+        # Empty products alone are not consent: the durable request must prove
+        # a notified, elapsed deadline and a successful poll in this publish run.
+        if timeout_publication_allowed(request) is not True:
+            raise AffiliateDraftError('invalid_request')
+    elif not request['products']:
         raise AffiliateDraftError('invalid_request')
     if (request['post_id'] != original['id'] or type(brief.get('post_id')) is not int
             or brief['post_id'] != original['id']
@@ -54,6 +67,64 @@ def _affiliate_binding(request, original, brief):
                 and brief['affiliate_request_id'] != request['request_id'])
             or request['draft_fingerprint'] != draft_fingerprint(original)):
         raise AffiliateDraftError('request_binding_mismatch')
+    return without_products
+
+
+def _no_coupang_content(html):
+    """Reject residual links/placeholders; do not silently erase unknown markup."""
+    from src.monetization import COUPANG_DISCLOSURE
+
+    if not isinstance(html, str) or not html.strip():
+        return False
+    value = html
+    # Inspect encoded attributes and JSON-LD URLs too, not just visible anchors.
+    for _ in range(3):
+        value = unquote(unescape(value))
+    # Browsers normalize full-width host characters and remove URL tabs/newlines.
+    value = re.sub(r'[\x00-\x20\x7f]', '', unicodedata.normalize('NFKC', value).casefold())
+    value = value.replace('\\/', '/')
+    # This mode promises no Coupang links, including ordinary commerce links;
+    # a plain brand mention in an informational article is not a product link.
+    for raw_url in re.findall(r'(?:https?:)?//[^<>"\']+', value):
+        try:
+            host = (urlsplit(raw_url).hostname or '').rstrip('.')
+        except ValueError:
+            return False
+        if host == 'coupang.com' or host.endswith('.coupang.com') or host == 'coupa.ng':
+            return False
+    visible = BeautifulSoup(html, 'html.parser').get_text(' ', strip=True)
+    return (not re.search(r'coupang[-_](?:products[-_]block|prep[-_]box|disclosure)', value)
+            and not re.search(r'쿠팡\s*(?:파트너스\s*)?링크.{0,30}(?:입력|삽입|여기에|대기)', visible)
+            and COUPANG_DISCLOSURE not in visible)
+
+
+def _remove_owned_coupang_content(html):
+    """Drop only reserved product blocks and the exact owned disclosure text."""
+    from src.coupang_products import BLOCK_ID, DISCLOSURE_ID, LEGACY_ID
+    from src.monetization import COUPANG_DISCLOSURE
+
+    soup = BeautifulSoup(html, 'html.parser')
+    blocks = soup.find_all(id=[BLOCK_ID, LEGACY_ID])
+    notices = soup.find_all(id=DISCLOSURE_ID)
+    for block in blocks:
+        if (block.name not in {'div', 'section'} or block.find_parent(id=[BLOCK_ID, LEGACY_ID])
+                or 'wpab-article' in (block.get('class') or [])
+                or block.find(['article', 'main', 'h1'])
+                or block.select('.wpab-article, #verified-sources, #quick-answer, #faq')):
+            raise AffiliateDraftError('unexpected_affiliate_content')
+    for notice in notices:
+        if notice.name != 'p' or notice.get_text(' ', strip=True) != COUPANG_DISCLOSURE:
+            raise AffiliateDraftError('unexpected_affiliate_content')
+    # The legacy disclosure used this same literal text, sometimes without an id.
+    notices = [node for node in soup.find_all('p')
+               if node.get_text(' ', strip=True) == COUPANG_DISCLOSURE]
+    for node in [*notices, *blocks]:
+        if node.parent is not None:
+            node.decompose()
+    result = str(soup) if blocks or notices else html
+    if not _no_coupang_content(result):
+        raise AffiliateDraftError('unexpected_affiliate_content')
+    return result
 
 
 def _rows(path):
@@ -333,8 +404,9 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
                                       else 'unexpected_post_status')
         raise RuntimeError('Expected draft; refusing to alter an already published post')
     brief = _market_draft(original, session, base, env)
+    without_products = False
     if affiliate_request is not None:
-        _affiliate_binding(affiliate_request, original, brief)
+        without_products = _affiliate_binding(affiliate_request, original, brief)
     elif brief and brief.get('affiliate_state') in ('waiting', 'ready', 'publishing'):
         raise AffiliateDraftError('affiliate_request_required')
     body = original['content']['raw']
@@ -355,7 +427,9 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
     backup.parent.mkdir(parents=True, exist_ok=True)
     backup.write_text(json.dumps(original, ensure_ascii=False), encoding='utf-8')
     client = CodexSubscriptionClient(home=env['BLOG_CODEX_HOME'], model=env.get('BLOG_CODEX_MODEL', ''))
-    if affiliate_request is not None:
+    if without_products:
+        body = _remove_owned_coupang_content(body)
+    elif affiliate_request is not None:
         from src.coupang_products import insert_products, products_preserved, review_products
         products, request_id = affiliate_request['products'], affiliate_request['request_id']
         # Product text is untrusted. Insert before evidence review and any repair,
@@ -374,7 +448,9 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
             if had_faq:
                 body = insert_faq_schema(body)
             print('Market draft evidence repair applied: 1', flush=True)
-        if affiliate_request is not None and not products_preserved(body, products, request_id=request_id):
+        if without_products and not _no_coupang_content(body):
+            raise AffiliateDraftError('unexpected_affiliate_content')
+        if affiliate_request is not None and not without_products and not products_preserved(body, products, request_id=request_id):
             raise AffiliateDraftError('products_changed')
         meta = prepare_metadata({**original, 'content': {'raw': body}}, client.generate, keyword=brief['keyword'])
     else:
@@ -393,7 +469,10 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
                     or market.norm(brief['keyword']) not in market.norm(parsed.get_text(' ', strip=True))
                     or not parsed.select_one('.wpab-article') or not parsed.select_one('#quick-answer')):
                 issues.append('Market draft keyword, category or template changed')
-        if affiliate_request is not None:
+        if without_products:
+            if not all(_no_coupang_content(value) for value in (html, meta['title'], meta['meta_description'])):
+                raise AffiliateDraftError('unexpected_affiliate_content')
+        elif affiliate_request is not None:
             if not products_preserved(html, products, request_id=request_id):
                 raise AffiliateDraftError('products_changed')
             if review_products(products, title=meta['title'], category=category,
@@ -437,8 +516,10 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
                  and _text(saved, 'excerpt') == meta['meta_description']
                  and saved.get('meta', {}).get('_yoast_wpseo_focuskw') == brief['keyword']
                  and saved.get('meta', {}).get('_yoast_wpseo_metadesc') == meta['meta_description']))
-            and (affiliate_request is None or products_preserved(saved['content']['raw'], products,
-                                                                 request_id=request_id)))
+            and (affiliate_request is None
+                 or (without_products and _no_coupang_content(saved['content']['raw']))
+                 or (not without_products and products_preserved(saved['content']['raw'], products,
+                                                                 request_id=request_id))))
 
     try:
         response = session.post(endpoint, json=payload, timeout=60, allow_redirects=False)

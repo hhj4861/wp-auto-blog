@@ -40,7 +40,7 @@ on:
         required: false
         type: string
       publish:
-        description: 'Request publication (TrendPulse waits for Telegram product links)'
+        description: 'Request publication (TrendPulse waits 30 minutes for Telegram product links)'
         required: false
         default: true
         type: boolean

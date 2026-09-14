@@ -5,12 +5,15 @@ import json
 import os
 from pathlib import Path
 import sys
+import time
 
 import requests
 from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.coupang_telegram import RequestStore, TelegramClient, TelegramError, draft_fingerprint, process_updates
+from src.coupang_telegram import (RequestStore, TelegramClient, TelegramError, draft_fingerprint,
+                                process_updates, reply_deadline, timeout_ready,
+                                timeout_publication_allowed, REPLY_WAIT, UPDATE_RETENTION)
 
 DATA = Path('data')
 CATEGORIES = {'취업', '건강', '생활정보'}
@@ -118,7 +121,7 @@ def notify(store, client, identifiers):
         except TelegramError:
             failures = True
             continue
-        record.update(status='waiting', message_key=key)
+        record.update(status='waiting', message_key=key, notified_at=now().isoformat())
         record.pop('last_error', None)
         store.save()
     if failures:
@@ -132,13 +135,36 @@ def feedback(client, record, text):
         print('Telegram feedback unavailable; durable post state retained', flush=True)
 
 
+def wait_for_reply_window(store):
+    """A workflow_run continuation already on a runner need not wait for another cron."""
+    deadlines = [deadline for record in store.data['requests']
+                 if record['status'] == 'waiting' and not record.get('last_error')
+                 and not record['products'] and not expired(record)
+                 and (deadline := reply_deadline(record)) is not None
+                 and now() < deadline - REPLY_WAIT + UPDATE_RETENTION]
+    if not deadlines or any(record['status'] == 'ready' for record in store.data['requests']):
+        return
+    deadline = min(deadlines)
+    # Bounded even if the wall clock changes while this runner is waiting.
+    budget = REPLY_WAIT.total_seconds()
+    while budget > 0:
+        remaining = (deadline - now()).total_seconds()
+        if remaining <= 0:
+            break
+        pause = min(60, remaining, budget)
+        print(f'Waiting for reply window: {int(remaining)} seconds remaining', flush=True)
+        time.sleep(pause)
+        budget -= pause
+
+
 def prepare(store, client, run_id):
     """Arm at most one publication. A previous run's intent requires reconciliation."""
     if not run_id.isdigit():
         raise TelegramError('invalid_request')
     selected = ''
     rows = queue_rows()
-    for record in store.data['requests']:
+    # Honor usable product replies before selecting an unanswered timeout.
+    for record in sorted(store.data['requests'], key=lambda row: row['status'] != 'ready'):
         error = None
         if record['status'] == 'publishing':
             error = 'publication_outcome_unknown'
@@ -148,8 +174,10 @@ def prepare(store, client, run_id):
             record.update(status='held', last_error=error)
             store.save()
             feedback(client, record, '발행 보류: 요청이 만료되었거나 이전 발행 결과 확인이 필요합니다. 초안을 확인해 주세요.')
-        elif record['status'] == 'ready' and not selected:
-            record.update(status='publishing', publish_attempt_run=run_id, publishing_at=now().isoformat())
+        elif not selected and (record['status'] == 'ready' or timeout_ready(record, run_id, now())):
+            mode = 'with_products' if record['status'] == 'ready' else 'without_products'
+            record.update(status='publishing', publication_mode=mode,
+                          publish_attempt_run=run_id, publishing_at=now().isoformat())
             selected = record['request_id']
         for row in rows:
             if row.get('post_id') == record['post_id']:
@@ -172,6 +200,8 @@ def publish(store, client, identifier, env, publisher=None):
     try:
         if expired(record):
             raise TelegramError('request_expired')
+        if record.get('publication_mode') == 'without_products' and not timeout_publication_allowed(record, now()):
+            raise TelegramError('invalid_request')
         url = publisher(record['post_id'], configured, affiliate_request=dict(record))
     except Exception as error:
         reason = 'request_expired' if isinstance(error, TelegramError) and error.reason == 'request_expired' else 'publication_failed'
@@ -187,8 +217,12 @@ def publish(store, client, identifier, env, publisher=None):
     record.update(status='published', published_url=url, published_at=now().isoformat())
     record.pop('last_error', None)
     store.save()
-    feedback(client, record, f'쿠팡 상품 링크를 포함해 발행했습니다.\n{url}')
-    print('VERIFIED COUPANG PUBLISHED', url, flush=True)
+    if record.get('publication_mode') == 'without_products':
+        feedback(client, record, f'30분 동안 답장이 없어 쿠팡 상품 링크 없이 발행했습니다.\n{url}')
+        print('VERIFIED WITHOUT COUPANG PUBLISHED', url, flush=True)
+    else:
+        feedback(client, record, f'쿠팡 상품 링크를 포함해 발행했습니다.\n{url}')
+        print('VERIFIED COUPANG PUBLISHED', url, flush=True)
     return url
 
 
@@ -200,7 +234,7 @@ def output(name, value):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('stage', choices=['check', 'register', 'notify', 'receive', 'prepare', 'publish'])
+    parser.add_argument('stage', choices=['check', 'register', 'notify', 'wait', 'receive', 'prepare', 'publish'])
     parser.add_argument('--request-id', default='')
     args = parser.parse_args()
     load_dotenv()
@@ -215,8 +249,10 @@ def main():
             output('notification_ids', ','.join(register(store, client, os.environ)))
         elif args.stage == 'notify':
             notify(store, client, [value for value in os.getenv('NOTIFICATION_IDS', '').split(',') if value])
+        elif args.stage == 'wait':
+            wait_for_reply_window(store)
         elif args.stage == 'receive':
-            ready = process_updates(store, client)
+            ready = process_updates(store, client, run_id=os.getenv('GITHUB_RUN_ID', ''))
             print(f'Accepted replies: {len(ready)}')
         elif args.stage == 'prepare':
             output('request_id', prepare(store, client, os.environ.get('GITHUB_RUN_ID', '')))

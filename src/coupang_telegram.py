@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 import re
 import tempfile
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import unicodedata
 import uuid
 
@@ -39,7 +39,10 @@ RECORD_FIELDS = {
     'selected_at', 'created_at', 'status', 'message_key', 'products',
 }
 OPTIONAL_FIELDS = {'last_error', 'reply_update_id', 'published_at', 'published_url',
-                   'publish_attempt_run', 'publishing_at'}
+                   'publish_attempt_run', 'publishing_at', 'notified_at',
+                   'reply_checked_at', 'reply_checked_run', 'publication_mode'}
+REPLY_WAIT = timedelta(minutes=30)
+UPDATE_RETENTION = timedelta(hours=24)
 FINGERPRINT_FIELDS = ('id', 'status', 'modified_gmt', 'content', 'title', 'excerpt',
                       'meta', 'categories', 'featured_media', 'slug')
 
@@ -72,6 +75,58 @@ def _timestamp(value):
         return False
 
 
+def utc_now():
+    return datetime.now(timezone.utc)
+
+
+def reply_deadline(record):
+    """Old requests have no proven send time, so never acquire a retroactive timer."""
+    try:
+        sent = datetime.fromisoformat(record['notified_at'])
+        created = datetime.fromisoformat(record['created_at'])
+        selected = datetime.fromisoformat(record['selected_at'])
+        if (not sent.tzinfo or not created.tzinfo or not selected.tzinfo
+                or not selected <= created <= sent):
+            return None
+        return sent + REPLY_WAIT
+    except (KeyError, TypeError, ValueError, OverflowError):
+        return None
+
+
+def timeout_ready(record, run_id, at=None):
+    """Only an unanswered request and this run's complete poll can authorize fallback."""
+    at = at or utc_now()
+    deadline = reply_deadline(record)
+    try:
+        checked = datetime.fromisoformat(record['reply_checked_at'])
+        return bool(record['status'] == 'waiting' and not record['products']
+                    and 'reply_update_id' not in record and not record.get('last_error')
+                    and record.get('reply_checked_run') == run_id
+                    and re.fullmatch(r'[0-9]{1,40}', run_id)
+                    and deadline and deadline <= checked <= at
+                    and checked < deadline - REPLY_WAIT + UPDATE_RETENTION)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def timeout_publication_allowed(record, at=None):
+    """Recheck the durable timeout authorization at the publication boundary."""
+    try:
+        _validate_record(record)
+        at = at or utc_now()
+        deadline = reply_deadline(record)
+        checked = datetime.fromisoformat(record['reply_checked_at'])
+        armed = datetime.fromisoformat(record['publishing_at'])
+        return bool(record.get('publication_mode') == 'without_products'
+                    and record['status'] == 'publishing' and not record['products']
+                    and 'reply_update_id' not in record and not record.get('last_error')
+                    and record['reply_checked_run'] == record['publish_attempt_run']
+                    and deadline and deadline <= checked <= armed <= at
+                    and checked < deadline - REPLY_WAIT + UPDATE_RETENTION)
+    except (TelegramError, KeyError, TypeError, ValueError):
+        return False
+
+
 def draft_fingerprint(post) -> str:
     """Fingerprint the exact REST edit snapshot; values are never included in errors."""
     try:
@@ -101,7 +156,16 @@ def _validate_record(record):
             or (status in {'pending_notification', 'notification_unknown'} and key is not None)
             or (status in {'pending_notification', 'notification_unknown', 'waiting'} and record['products'])):
         raise TelegramError('invalid_request_store')
-    if record['products'] or status in {'ready', 'publishing', 'published'}:
+    mode = record.get('publication_mode', 'with_products')
+    if mode not in ('with_products', 'without_products'):
+        raise TelegramError('invalid_request_store')
+    if mode == 'without_products':
+        if (status not in {'publishing', 'published', 'held'} or record['products']
+                or 'reply_update_id' in record
+                or not {'notified_at', 'reply_checked_at', 'reply_checked_run',
+                        'publish_attempt_run', 'publishing_at'} <= set(record)):
+            raise TelegramError('invalid_request_store')
+    elif record['products'] or status in {'ready', 'publishing', 'published'}:
         from src.coupang_products import validate_products
         try:
             if validate_products(record['products']) != record['products']:
@@ -113,6 +177,11 @@ def _validate_record(record):
             or 'reply_update_id' in record and not _integer(record['reply_update_id'])
             or 'published_at' in record and not _timestamp(record['published_at'])
             or 'publishing_at' in record and not _timestamp(record['publishing_at'])
+            or 'notified_at' in record and not _timestamp(record['notified_at'])
+            or 'reply_checked_at' in record and not _timestamp(record['reply_checked_at'])
+            or 'reply_checked_run' in record and (
+                not isinstance(record['reply_checked_run'], str)
+                or re.fullmatch(r'[0-9]{1,40}', record['reply_checked_run']) is None)
             or 'publish_attempt_run' in record and (
                 not isinstance(record['publish_attempt_run'], str)
                 or re.fullmatch(r'[0-9]{1,40}', record['publish_attempt_run']) is None)):
@@ -209,7 +278,7 @@ class RequestStore:
     def create(self, post_id, category, keyword, topic, draft_fingerprint, selected_at):
         record = {'request_id': uuid.uuid4().hex, 'post_id': post_id, 'category': category,
                   'keyword': keyword, 'topic': topic, 'draft_fingerprint': draft_fingerprint,
-                  'selected_at': selected_at, 'created_at': datetime.now(timezone.utc).isoformat(),
+                  'selected_at': selected_at, 'created_at': utc_now().isoformat(),
                   'status': 'pending_notification', 'message_key': None, 'products': []}
         _validate_record(record)
         for existing in self.data['requests']:
@@ -305,7 +374,9 @@ class TelegramClient:
                 f"초안 ID: {record['post_id']}\n\n{guidance}\n\n"
                 '이 메시지에 답장: 상품명 | https://link.coupang.com/a/...\n'
                 '상품별 한 줄, 최대 3줄로 보내주세요.\n'
-                '상품 링크를 검수한 뒤 같은 초안을 발행합니다. 출처·선정 근거가 만료되면 보류합니다.')
+                '발송 후 30분 동안 답장이 없으면 상품 링크 없이 검수 후 발행합니다.\n'
+                '발행 처리 전에 확인한 정상 링크는 포함하며, 형식 오류 답장은 수정 대기합니다.\n'
+                '출처·선정 근거가 만료되면 보류합니다.')
         result = self._call('sendMessage', {'chat_id': self._chat_id, 'text': text,
                                            'link_preview_options': {'is_disabled': True},
                                            'reply_markup': {'force_reply': True, 'selective': True}})
@@ -386,22 +457,31 @@ def notify_pending(store, client):
             record['last_error'] = 'notification_delivery_unknown'
             store.save()
             raise TelegramError('notification_delivery_unknown') from None
-        record.update(message_key=key, status='waiting')
+        record.update(message_key=key, status='waiting', notified_at=utc_now().isoformat())
         record.pop('last_error', None)
         store.save()  # A failed local save after remote success must propagate.
         notified.append(record['request_id'])
     return notified
 
 
-def process_updates(store, client):
+def process_updates(store, client, *, run_id=None):
     """One poll only: persisting this store externally must precede the next call."""
     _validate_store(store.data)
     client.check_webhook()
     offset = store.data['next_update_id']
+    # A poll started before the deadline cannot establish absence after it,
+    # even if network or feedback processing crosses the deadline.
+    polled_at = utc_now().isoformat()
     updates = client.get_updates(offset)
     if (not isinstance(updates, list) or len(updates) > 100
             or any(not isinstance(row, dict) or not _integer(row.get('update_id')) for row in updates)):
         raise TelegramError('telegram_invalid_response')
+    # A full page may hide a timely reply in the remaining backlog. It cannot
+    # prove absence, even if an earlier run left a completed-poll marker.
+    for record in store.data['requests']:
+        if record['status'] == 'waiting':
+            record.pop('reply_checked_at', None)
+            record.pop('reply_checked_run', None)
     ready, seen = [], set()
     next_offset = offset
     for update in sorted(updates, key=lambda row: row['update_id']):
@@ -443,6 +523,10 @@ def process_updates(store, client):
         record.update(status='ready', products=products, reply_update_id=update_id)
         record.pop('last_error', None)
         ready.append(record['request_id'])
+    if len(updates) < 100 and isinstance(run_id, str) and re.fullmatch(r'[0-9]{1,40}', run_id):
+        for record in store.data['requests']:
+            if record['status'] == 'waiting' and reply_deadline(record) is not None:
+                record.update(reply_checked_at=polled_at, reply_checked_run=run_id)
     store.data['next_update_id'] = next_offset
     store.save()
     return ready

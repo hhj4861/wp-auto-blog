@@ -55,13 +55,20 @@ def test_reply_workflow_persists_intents_before_remote_effects():
     trigger = wf.get('on', wf.get(True))
     assert trigger['schedule'] == [{'cron': '7,17,27,37,47,57 * * * *'}]
     job = wf['jobs']['replies']
-    assert job['if'] == "github.ref == 'refs/heads/main'"
+    assert "github.ref == 'refs/heads/main'" in job['if']
+    assert trigger['workflow_run'] == {'workflows': ['Auto Blog Post'], 'types': ['completed']}
+    assert "github.event.workflow_run.conclusion == 'success'" in job['if']
+    assert "github.event.workflow_run.head_branch == 'main'" in job['if']
+    assert 'github.event.workflow_run.head_repository.full_name == github.repository' in job['if']
     steps = job['steps']
     def index(command):
         return next(i for i, step in enumerate(steps) if command in step.get('run', ''))
     commit_indices = [i for i, step in enumerate(steps) if 'commit_coupang_state.sh' in step.get('run', '')]
     assert index('worker.py register') < commit_indices[0] < index('worker.py notify')
-    assert index('worker.py receive') < index('worker.py prepare') < commit_indices[1] < index('worker.py publish')
+    assert index('worker.py notify') < commit_indices[1] < index('worker.py wait') < index('worker.py receive')
+    assert index('worker.py receive') < index('worker.py prepare') < commit_indices[2] < index('worker.py publish')
+    assert steps[index('worker.py wait')]['if'] == "github.event_name == 'workflow_run'"
+    assert job['timeout-minutes'] >= steps[index('worker.py wait')]['timeout-minutes'] + steps[index('worker.py publish')]['timeout-minutes'] + 5
     assert commit_indices[-1] > index('worker.py publish')
     assert steps[commit_indices[-1]]['if'] == 'always()'
     assert sum('worker.py receive' in step.get('run', '') for step in steps) == 1

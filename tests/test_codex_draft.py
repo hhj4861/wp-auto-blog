@@ -738,3 +738,258 @@ def test_affiliate_non_draft_state_is_not_misreported_as_published(affiliate_cas
         module.publish_draft(1724, c['env'], affiliate_request=c['request'])
     c['session'].post.assert_not_called()
     c['client'].generate.assert_not_called()
+
+
+@pytest.fixture
+def timeout_case(affiliate_case):
+    """A real bound market brief and a fully armed, no-reply timeout request."""
+    from src.coupang_telegram import timeout_publication_allowed
+
+    c = affiliate_case
+    selected = datetime.now(timezone.utc) - timedelta(minutes=40)
+    values = {key: value for key, value in c['brief'].items()
+              if key not in ('opportunity_evidence', 'suitability_evidence')}
+    values.update(selected_at=selected.isoformat(), affiliate_state='publishing')
+    c['brief'] = candidate(**values)
+    path = c['data'] / 'topic_queue_general.json'
+    rows = json.loads(path.read_text())
+    rows[1] = c['brief']
+    path.write_text(json.dumps(rows))
+    c['request'].update(
+        selected_at=selected.isoformat(), created_at=(selected + timedelta(minutes=1)).isoformat(),
+        notified_at=(selected + timedelta(minutes=2)).isoformat(),
+        reply_checked_at=(selected + timedelta(minutes=33)).isoformat(),
+        publishing_at=(selected + timedelta(minutes=34)).isoformat(),
+        reply_checked_run='12345', publish_attempt_run='12345',
+        status='publishing', publication_mode='without_products', products=[], message_key='b' * 64)
+    c['env'].update(GITHUB_RUN_ID='12345', BLOG_COUPANG_TELEGRAM='1')
+    assert timeout_publication_allowed(c['request'])
+    assert module.market.fresh_market_item({**c['brief'], 'status': 'pending'}, '건강')
+    return c
+
+
+@pytest.mark.parametrize('owned_markup', [False, True])
+def test_timeout_publishes_same_draft_without_products_after_all_gates(timeout_case, monkeypatch, owned_markup):
+    from src import coupang_products
+    from src.coupang_telegram import draft_fingerprint
+    from src.monetization import COUPANG_DISCLOSURE
+
+    c = timeout_case
+    if owned_markup:
+        additions = ('<section id="coupang-products-block"><h2>관련 상품 살펴보기</h2>'
+                     '<a href="https://link.coupang.com/a/old">이전 상품</a></section>'
+                     '<div id="coupang-prep-box">상품 링크를 입력하세요</div>'
+                     f'<p id="coupang-disclosure">{COUPANG_DISCLOSURE}</p>')
+        c['original']['content']['raw'] += additions
+        c['state']['current'] = copy.deepcopy(c['original'])
+        c['request']['draft_fingerprint'] = draft_fingerprint(c['original'])
+    product_calls = {}
+    for name in ('insert_products', 'products_preserved', 'review_products'):
+        product_calls[name] = Mock(side_effect=AssertionError('timeout must not use products'))
+        monkeypatch.setattr(coupang_products, name, product_calls[name])
+    before = copy.deepcopy(c['request'])
+    assert module.publish_draft(1724, c['env'], affiliate_request=c['request']) == 'https://trendpulse.blog/a1c-levels/'
+    assert c['request'] == before
+    c['session'].post.assert_called_once()
+    mutation = c['session'].post.call_args
+    assert mutation.args[0].endswith('/posts/1724') and mutation.kwargs['allow_redirects'] is False
+    payload = mutation.kwargs['json']
+    assert module._no_coupang_content(payload['content'])
+    assert '상품 링크를 입력' not in payload['content']
+    assert '공식 자료로 확인된 기준' in payload['content']
+    assert payload['meta']['_yoast_wpseo_focuskw'] == c['brief']['keyword']
+    assert [call.args[0] for call in c['fetch'].call_args_list] == c['urls']
+    prompts = [call.args[0] for call in c['client'].generate.call_args_list]
+    assert sum('conservative Korean editorial fact checker' in prompt for prompt in prompts) == 2
+    assert sum('correcting an existing Korean article' in prompt for prompt in prompts) == 1
+    assert sum(prompt.startswith('최종 검색 의도 검수입니다.') for prompt in prompts) == 1
+    assert c['quality'].call_count == c['editorial'].call_count == c['identity'].call_count == 1
+    for call in product_calls.values():
+        call.assert_not_called()
+    row = json.loads((c['data'] / 'topic_queue_general.json').read_text())[1]
+    assert row['status'] == 'completed' and row['affiliate_state'] == 'published'
+    assert row['selected_at'] == before['selected_at'] and row['post_id'] == 1724
+    assert json.loads(module.market.LEDGER.read_text())[0]['post_id'] == 1724
+
+
+@pytest.mark.parametrize('change', [
+    'missing_mode', 'unknown_mode', 'with_products', 'ready', 'held', 'missing_notified',
+    'missing_poll', 'wrong_poll_run', 'has_reply', 'has_products', 'has_reply_error',
+    'before_deadline', 'poll_before_deadline', 'poll_after_publishing', 'future_publishing',
+    'selected_after_created', 'created_after_notified',
+])
+def test_timeout_rejects_empty_products_without_complete_deadline_proof(timeout_case, change):
+    c = timeout_case
+    request = c['request']
+    sent = datetime.fromisoformat(request['notified_at'])
+    if change == 'missing_mode': request.pop('publication_mode')
+    elif change == 'unknown_mode': request['publication_mode'] = 'automatically_publish'
+    elif change == 'with_products': request['publication_mode'] = 'with_products'
+    elif change in ('ready', 'held'): request['status'] = change
+    elif change == 'missing_notified': request.pop('notified_at')
+    elif change == 'missing_poll': request.pop('reply_checked_at')
+    elif change == 'wrong_poll_run': request['reply_checked_run'] = '99999'
+    elif change == 'has_reply': request['reply_update_id'] = 1
+    elif change == 'has_products': request['products'] = [{'name': '기록 노트', 'url': 'https://link.coupang.com/a/example'}]
+    elif change == 'has_reply_error': request['last_error'] = 'invalid_products'
+    elif change == 'before_deadline': request['publishing_at'] = (sent + timedelta(minutes=29)).isoformat()
+    elif change == 'poll_before_deadline': request['reply_checked_at'] = (sent + timedelta(minutes=29)).isoformat()
+    elif change == 'poll_after_publishing': request['reply_checked_at'] = (datetime.fromisoformat(request['publishing_at']) + timedelta(seconds=1)).isoformat()
+    elif change == 'future_publishing': request['publishing_at'] = (datetime.now(timezone.utc) + timedelta(minutes=1)).isoformat()
+    elif change == 'selected_after_created': request['created_at'] = (datetime.fromisoformat(request['selected_at']) - timedelta(seconds=1)).isoformat()
+    elif change == 'created_after_notified': request['created_at'] = (sent + timedelta(seconds=1)).isoformat()
+    before = (c['data'] / 'topic_queue_general.json').read_bytes()
+    with pytest.raises(module.AffiliateDraftError, match='invalid_request'):
+        module.publish_draft(1724, c['env'], affiliate_request=request)
+    c['session'].post.assert_not_called()
+    c['fetch'].assert_not_called()
+    c['client'].generate.assert_not_called()
+    assert not module.market.LEDGER.exists()
+    assert (c['data'] / 'topic_queue_general.json').read_bytes() == before
+
+
+@pytest.mark.parametrize('change', ['fingerprint', 'selected_at', 'missing_source', 'expired', 'duplicate', 'concurrent_edit'])
+def test_timeout_keeps_original_identity_source_expiry_and_duplicate_guards(timeout_case, change):
+    c = timeout_case
+    if change == 'fingerprint': c['request']['draft_fingerprint'] = '0' * 64
+    elif change == 'selected_at': c['request']['selected_at'] = (datetime.fromisoformat(c['request']['selected_at']) - timedelta(seconds=1)).isoformat()
+    elif change == 'missing_source': c['fetch'].side_effect = [c['sources'][0], None]
+    elif change == 'expired':
+        path = c['data'] / 'topic_queue_general.json'
+        rows = json.loads(path.read_text())
+        rows[1]['selected_at'] = c['request']['selected_at'] = (datetime.now(timezone.utc) - timedelta(hours=37)).isoformat()
+        path.write_text(json.dumps(rows))
+    elif change == 'duplicate': c['state']['live'].append({'id': 9999, 'title': {'raw': c['topic']}, 'meta': {}})
+    else: c['state']['current']['modified_gmt'] = 'concurrent-change'
+    before = (c['data'] / 'topic_queue_general.json').read_bytes()
+    with pytest.raises(module.AffiliateDraftError):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+    assert not module.market.LEDGER.exists()
+    assert (c['data'] / 'topic_queue_general.json').read_bytes() == before
+
+
+@pytest.mark.parametrize('gate', ['quality', 'editorial', 'identity', 'evidence', 'article_scope'])
+def test_timeout_does_not_skip_the_final_body_and_metadata_gates(timeout_case, monkeypatch, gate):
+    c = timeout_case
+    if gate in ('quality', 'editorial', 'identity'):
+        c[gate].return_value = ['PRIVATE-UNSUPPORTED-CONTENT']
+    elif gate == 'evidence':
+        original = c['client'].generate.side_effect
+        def generate(prompt):
+            if 'conservative Korean editorial fact checker' in prompt:
+                return json.dumps({'issues': ['PRIVATE-UNSUPPORTED-CONTENT']})
+            return original(prompt)
+        c['client'].generate.side_effect = generate
+    else:
+        monkeypatch.setattr('src.market_opportunity.review_article', Mock(return_value=['PRIVATE-SCOPE-FAILURE']))
+    with pytest.raises(module.AffiliateDraftError, match='verification_unavailable') as error:
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    assert 'PRIVATE' not in str(error.value)
+    c['session'].post.assert_not_called()
+    assert not module.market.LEDGER.exists()
+
+
+@pytest.mark.parametrize('extra', [
+    '<a href="https://link.coupang.com/a/unapproved">임의 링크</a>',
+    '<a href="//WWW.COUPANG.COM/item">임의 링크</a>',
+    '<a href="https://link%2ecoupang.com/a/unapproved">인코딩 링크</a>',
+    '<a href="https://link.cou&#10;pang.com/a/unapproved">줄바꿈 링크</a>',
+    '<a href="https://link.ｃｏｕｐａｎｇ.com/a/unapproved">전각 링크</a>',
+    '<script type="application/ld+json">{"url":"https://coupa.ng/example"}</script>',
+    '<div id="coupang-disclosure">알 수 없는 고지와 본문</div>',
+    '<section id="coupang-products-block"><section id="quick-answer">실제 답변</section></section>',
+    '<div id="coupang-prep-box"><h1>실제 제목</h1></div>',
+    '<p>쿠팡 링크를 여기에 입력하세요</p>',
+])
+def test_timeout_does_not_erase_unexpected_affiliate_content(timeout_case, extra):
+    from src.coupang_telegram import draft_fingerprint
+
+    c = timeout_case
+    c['original']['content']['raw'] += extra
+    c['state']['current'] = copy.deepcopy(c['original'])
+    c['request']['draft_fingerprint'] = draft_fingerprint(c['original'])
+    with pytest.raises(module.AffiliateDraftError, match='unexpected_affiliate_content'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+    c['client'].generate.assert_not_called()
+
+
+def test_timeout_removes_only_owned_blocks_and_preserves_unrelated_markup():
+    from src.monetization import COUPANG_DISCLOSURE
+
+    original = ('<article class="wpab-article"><style>.notice {color:blue}</style>'
+                '<section id="quick-answer">실제 답변</section><div id="other-products">무관한 본문</div>'
+                '<script type="application/ld+json">{"@type":"Article","name":"실제 제목"}</script></article>')
+    assert module._remove_owned_coupang_content(original) == original
+    extra = f'<p>{COUPANG_DISCLOSURE}</p><div id="coupang-prep-box">링크 대기</div>'
+    cleaned = module._remove_owned_coupang_content(original + extra)
+    for text in ('.notice {color:blue}', '실제 답변', '무관한 본문', '{"@type":"Article","name":"실제 제목"}'):
+        assert text in cleaned
+    assert module._no_coupang_content(cleaned)
+
+
+def test_timeout_allows_plain_brand_mentions_but_not_coupang_urls():
+    body = '<p>쿠팡 상품 반품 방법과 Coupang 이용 절차를 설명합니다.</p>'
+    assert module._no_coupang_content(body)
+    assert module._remove_owned_coupang_content(body) == body
+    assert module._no_coupang_content('<a href="https://example.org/coupang-guide">쿠팡 상품 안내</a>')
+    assert not module._no_coupang_content('<a href="https://www.coupang.com/">쿠팡 홈페이지</a>')
+
+
+@pytest.mark.parametrize('where', ['repair', 'metadata'])
+def test_timeout_rejects_affiliate_content_reintroduced_by_llm(timeout_case, monkeypatch, where):
+    c = timeout_case
+    if where == 'repair':
+        monkeypatch.setattr(module, 'repair_evidence', lambda body, *a, **kw:
+                            body + '<section id="coupang-products-block">상품 링크 대기</section>')
+    else:
+        c['metadata']['meta_description'] += ' https://link.coupang.com/a/unsafe'
+    with pytest.raises(module.AffiliateDraftError, match='unexpected_affiliate_content'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_not_called()
+
+
+@pytest.mark.parametrize('outcome', ['lost_response', 'html_response', 'redirect', 'uncommitted', 'unexpected_link'])
+def test_timeout_post_is_once_and_reconciles_only_exact_clean_payload(timeout_case, capsys, outcome):
+    c = timeout_case
+    post = c['session'].post.side_effect
+    def uncertain(*args, **kwargs):
+        if outcome == 'uncommitted':
+            raise module.requests.Timeout('PRIVATE-POST-AUTH')
+        response = post(*args, **kwargs)
+        if outcome == 'unexpected_link':
+            c['state']['current']['content']['raw'] += '<a href="https://link.coupang.com/a/unapproved">추가</a>'
+        if outcome == 'html_response':
+            response.json.side_effect = ValueError('PRIVATE-HTML-RESPONSE')
+            return response
+        if outcome == 'redirect':
+            response.status_code = 307
+            return response
+        raise module.requests.Timeout('PRIVATE-POST-AUTH')
+    c['session'].post.side_effect = uncertain
+    if outcome in ('uncommitted', 'unexpected_link'):
+        with pytest.raises(module.AffiliateDraftError, match='publication_unconfirmed'):
+            module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+        assert json.loads((c['data'] / 'topic_queue_general.json').read_text())[1]['status'] == 'held_draft'
+        if outcome == 'uncommitted': assert not module.market.LEDGER.exists()
+        else: assert json.loads(module.market.LEDGER.read_text())[0]['post_id'] == 1724
+    else:
+        assert module.publish_draft(1724, c['env'], affiliate_request=c['request']) == 'https://trendpulse.blog/a1c-levels/'
+        assert json.loads((c['data'] / 'topic_queue_general.json').read_text())[1]['status'] == 'completed'
+    c['session'].post.assert_called_once()
+    assert c['session'].post.call_args.kwargs['allow_redirects'] is False
+    captured = capsys.readouterr()
+    assert 'PRIVATE' not in captured.out + captured.err
+
+
+def test_timeout_restarted_publication_never_sends_a_second_post(timeout_case):
+    c = timeout_case
+    module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    before = module.market.LEDGER.read_bytes()
+    calls = c['client'].generate.call_count
+    with pytest.raises(module.AffiliateDraftError, match='already_published'):
+        module.publish_draft(1724, c['env'], affiliate_request=c['request'])
+    c['session'].post.assert_called_once()
+    assert c['client'].generate.call_count == calls
+    assert module.market.LEDGER.read_bytes() == before

@@ -20,6 +20,7 @@
       "created_at": "2026-09-14T05:31:05.049148+00:00",
       "draft_fingerprint": "e3ab82ce1da06b94db75fa9cc5ebc0910ff7f02926637c5464d5491091b7ccdc",
       "keyword": "퇴직금중간정산",
+      "last_error": "publication_outcome_unknown",
       "message_key": "1604f80a96953902ace86de0c56383d794507de2da3e12dbd52e261ed7caffa5",
       "notified_at": "2026-09-14T05:31:06.840555+00:00",
       "post_id": 1757,
@@ -31,7 +32,7 @@
       "reply_checked_run": "34809932944",
       "request_id": "3db0c66fb6554fe787a07ba1774ebb29",
       "selected_at": "2026-09-14T05:13:56.902387+00:00",
-      "status": "publishing",
+      "status": "held",
       "topic": "퇴직금중간정산 조건·사유·신청서류와 정산 후 퇴직금"
     }
   ],

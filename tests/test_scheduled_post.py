@@ -115,6 +115,8 @@ def test_workflow_claim_is_serialized_durable_and_blocks_generation():
     assert steps[0]['with']['ref']=='${{ github.ref }}'
     claim=next(i for i,s in enumerate(steps) if s.get('id')=='daily')
     assert 'scheduled_post.py claim' in steps[claim]['run']
+    assert 'SCHEDULE_STAGE_PATH=$RUNNER_TEMP/' in steps[claim]['run']
+    assert not any('runner.' in str(value) for value in job['env'].values())
     assert 'commit_coupang_state.sh' in steps[claim+1]['run']
     for step in steps[claim+2:]:
         if step.get('if')=='always()' or 'scheduled_post.py' in step.get('run',''):

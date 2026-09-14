@@ -768,7 +768,6 @@ jobs:
       BLOG_CATEGORY: ${{ inputs.category }}
       SCHEDULE_RECOVERY: ${{ inputs.scheduled_recovery && 'true' || 'false' }}
       SCHEDULE_CRON: ${{ github.event.schedule }}
-      SCHEDULE_STAGE_PATH: ${{ runner.temp }}/scheduled-post-stage
 
     steps:
       - name: Checkout repository
@@ -782,6 +781,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          echo "SCHEDULE_STAGE_PATH=$RUNNER_TEMP/scheduled-post-stage" >> "$GITHUB_ENV"
           export SCHEDULE_RUN_CREATED_AT="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --jq .created_at)"
           python3 scripts/scheduled_post.py claim
 

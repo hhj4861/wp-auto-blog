@@ -23,7 +23,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from src.gsc_client import query  # noqa: E402
 from src.monetization import (  # noqa: E402
     insert_monetization, insert_faq_schema, strip_placeholders,
-    insert_coupang_prep_box,
 )
 
 BASE_URL = (os.environ.get("WP_GENERAL_URL") or "").rstrip("/")
@@ -136,12 +135,7 @@ def main():
             ad_count = new_html.count(ad_tag)
             marks.append(f"광고{ad_count}+FAQ")
 
-        # 2) 취업 글이면 쿠팡 추천템 박스 (링크 설정 시에만 렌더, 미설정이면 no-op)
-        if career_cat in cats and "coupang-disclosure" not in new_html:
-            before = new_html
-            new_html = insert_coupang_prep_box(new_html)
-            if new_html != before:
-                marks.append("쿠팡박스")
+        # 쿠팡 상품은 상품 홍보글의 승인 절차에서만 추가한다.
 
         if new_html == html:
             unchanged += 1

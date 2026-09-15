@@ -868,7 +868,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             if cak_provenance is not None:
                 components['cak_trend'] = round(cak_provenance['item']['trend']['hotScore'] / 10, 2) if direct_rising else 0
             review = item.pop('intent_evidence', None)
-            candidate = {**item, 'monthly_search': row['monthly'],
+            candidate = {**item, 'article_type': 'information', 'monthly_search': row['monthly'],
                 'demand_provider': row.get('demand_provider', 'naver_searchad_pc_mobile'),
                 'demand_scope': 'keyword_total',
                 'advertising_competition': row.get('comp'),

@@ -15,6 +15,8 @@ from src.coupang_telegram import (RequestStore, TelegramClient, TelegramError, d
                                 process_updates, reply_deadline, timeout_ready,
                                 timeout_publication_allowed, REPLY_WAIT, UPDATE_RETENTION)
 
+from src.coupang_policy import is_product_promotion
+
 DATA = Path('data')
 CATEGORIES = {'취업', '건강', '생활정보'}
 
@@ -75,7 +77,7 @@ def read_draft(post_id, env):
 
 def register(store, client, env):
     """Record notification intent BEFORE sending; uncertain deliveries are never retried."""
-    client.check_webhook()
+    checked_webhook = False
     rows = queue_rows()
     identifiers = []
     for row in rows:
@@ -84,10 +86,20 @@ def register(store, client, env):
         post_id = row.get('post_id')
         if type(post_id) is not int or post_id <= 0 or row.get('category') not in CATEGORIES:
             raise TelegramError('invalid_queue')
+        if not is_product_promotion(row):
+            row.update(affiliate_state='held', affiliate_error='product_promotion_required')
+            existing = next((record for record in store.data['requests'] if record['post_id'] == post_id), None)
+            if existing and existing['status'] in {'waiting', 'ready', 'pending_notification', 'notification_unknown'}:
+                existing.update(status='held', last_error='product_promotion_required')
+            continue
         if expired(row):
             row['affiliate_state'] = 'held'
             row['affiliate_error'] = 'request_expired'
             continue
+        if not checked_webhook:
+            client = client or TelegramClient(env)
+            client.check_webhook()
+            checked_webhook = True
         existing = next((record for record in store.data['requests'] if record['post_id'] == post_id), None)
         if existing is None:
             try:
@@ -98,7 +110,7 @@ def register(store, client, env):
                 row.update(affiliate_state='held', affiliate_error=error.reason)
                 continue
             existing = store.create(post_id, row['category'], row['keyword'], row['topic'],
-                                    draft_fingerprint(post), row['selected_at'])
+                                    draft_fingerprint(post), row['selected_at'], article_type=row['article_type'])
         row['affiliate_request_id'] = existing['request_id']
         if existing['status'] == 'pending_notification':
             existing['status'] = 'notification_unknown'
@@ -116,6 +128,9 @@ def notify(store, client, identifiers):
         record = store.find(identifier)
         if not record or record['status'] != 'notification_unknown':
             raise TelegramError('invalid_request')
+        if not any(row.get('post_id') == record['post_id'] and is_product_promotion(row)
+                   for row in queue_rows()):
+            raise TelegramError('product_promotion_required')
         try:
             key = client.send_request({**record, 'status': 'pending_notification'})
         except TelegramError:
@@ -138,7 +153,7 @@ def feedback(client, record, text):
 def wait_for_reply_window(store):
     """A workflow_run continuation already on a runner need not wait for another cron."""
     deadlines = [deadline for record in store.data['requests']
-                 if record['status'] == 'waiting' and not record.get('last_error')
+                 if record['status'] == 'waiting' and is_product_promotion(record) and not record.get('last_error')
                  and not record['products'] and not expired(record)
                  and (deadline := reply_deadline(record)) is not None
                  and now() < deadline - REPLY_WAIT + UPDATE_RETENTION]
@@ -168,12 +183,17 @@ def prepare(store, client, run_id):
         error = None
         if record['status'] == 'publishing':
             error = 'publication_outcome_unknown'
+        elif record['status'] in {'waiting', 'ready', 'pending_notification', 'notification_unknown'} and not any(
+                row.get('post_id') == record['post_id'] and is_product_promotion(row) for row in rows):
+            error = 'product_promotion_required'
         elif record['status'] in {'waiting', 'ready', 'pending_notification'} and expired(record):
             error = 'request_expired'
         if error:
             record.update(status='held', last_error=error)
             store.save()
-            feedback(client, record, '발행 보류: 요청이 만료되었거나 이전 발행 결과 확인이 필요합니다. 초안을 확인해 주세요.')
+            feedback(client, record, ('쿠팡 요청 취소: 상품 홍보글에만 링크를 사용합니다. 기존 초안은 확인 후 처리합니다.'
+                if error == 'product_promotion_required' else
+                '발행 보류: 요청이 만료되었거나 이전 발행 결과 확인이 필요합니다. 초안을 확인해 주세요.'))
         elif not selected and (record['status'] == 'ready' or timeout_ready(record, run_id, now())):
             mode = 'with_products' if record['status'] == 'ready' else 'without_products'
             record.update(status='publishing', publication_mode=mode,
@@ -200,6 +220,9 @@ def publish(store, client, identifier, env, publisher=None):
     try:
         if expired(record):
             raise TelegramError('request_expired')
+        if record.get('publication_mode', 'with_products') == 'with_products' and not any(
+                row.get('post_id') == record['post_id'] and is_product_promotion(row) for row in queue_rows()):
+            raise TelegramError('product_promotion_required')
         if record.get('publication_mode') == 'without_products' and not timeout_publication_allowed(record, now()):
             raise TelegramError('invalid_request')
         url = publisher(record['post_id'], configured, affiliate_request=dict(record))
@@ -241,12 +264,20 @@ def main():
     try:
         if os.getenv('GITHUB_ACTIONS') == 'true' and os.getenv('GITHUB_REF') != 'refs/heads/main':
             raise TelegramError('invalid_request')
-        client = TelegramClient(os.environ)
         store = RequestStore(DATA / 'coupang_requests.json')
+        if args.stage == 'check' and not any(
+                is_product_promotion(row) and row.get('status') in {'pending', 'held_draft'}
+                for row in queue_rows()):
+            print('Information posts: Coupang preflight not required')
+            return 0
+        if args.stage == 'register':
+            output('notification_ids', ','.join(register(store, None, os.environ)))
+            return 0
+        if args.stage == 'notify' and not os.getenv('NOTIFICATION_IDS', '').strip(','):
+            return 0
+        client = TelegramClient(os.environ)
         if args.stage == 'check':
             client.check_webhook()
-        elif args.stage == 'register':
-            output('notification_ids', ','.join(register(store, client, os.environ)))
         elif args.stage == 'notify':
             notify(store, client, [value for value in os.getenv('NOTIFICATION_IDS', '').split(',') if value])
         elif args.stage == 'wait':

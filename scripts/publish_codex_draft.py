@@ -6,9 +6,8 @@ import json
 from pathlib import Path
 import re
 import sys
-import unicodedata
 from types import SimpleNamespace
-from urllib.parse import unquote, urlsplit
+from urllib.parse import urlsplit
 
 import requests
 from bs4 import BeautifulSoup
@@ -19,6 +18,7 @@ from src.editorial import fetch_source, editorial_checks, review_evidence, repai
 from src.identity_gate import validate_identity
 from src.monetization import check_quality, insert_faq_schema
 from src import market_topics as market
+from src.coupang_policy import is_product_promotion, no_coupang_content as _no_coupang_content
 
 DATA = Path('data')
 
@@ -26,7 +26,7 @@ DATA = Path('data')
 class AffiliateDraftError(RuntimeError):
     """Expose only fixed failure codes, never reply text or provider errors."""
     def __init__(self, reason):
-        if reason not in {'invalid_request', 'request_binding_mismatch', 'affiliate_request_required',
+        if reason not in {'invalid_request', 'request_binding_mismatch', 'affiliate_request_required', 'product_promotion_required',
                           'already_published', 'unexpected_post_status', 'products_changed', 'product_review_failed',
                           'publication_unconfirmed', 'verification_unavailable', 'unexpected_affiliate_content'}:
             reason = 'verification_unavailable'
@@ -56,6 +56,8 @@ def _affiliate_binding(request, original, brief):
         # a notified, elapsed deadline and a successful poll in this publish run.
         if timeout_publication_allowed(request) is not True:
             raise AffiliateDraftError('invalid_request')
+    elif not is_product_promotion(brief):
+        raise AffiliateDraftError('product_promotion_required')
     elif not request['products']:
         raise AffiliateDraftError('invalid_request')
     if (request['post_id'] != original['id'] or type(brief.get('post_id')) is not int
@@ -68,34 +70,6 @@ def _affiliate_binding(request, original, brief):
             or request['draft_fingerprint'] != draft_fingerprint(original)):
         raise AffiliateDraftError('request_binding_mismatch')
     return without_products
-
-
-def _no_coupang_content(html):
-    """Reject residual links/placeholders; do not silently erase unknown markup."""
-    from src.monetization import COUPANG_DISCLOSURE
-
-    if not isinstance(html, str) or not html.strip():
-        return False
-    value = html
-    # Inspect encoded attributes and JSON-LD URLs too, not just visible anchors.
-    for _ in range(3):
-        value = unquote(unescape(value))
-    # Browsers normalize full-width host characters and remove URL tabs/newlines.
-    value = re.sub(r'[\x00-\x20\x7f]', '', unicodedata.normalize('NFKC', value).casefold())
-    value = value.replace('\\/', '/')
-    # This mode promises no Coupang links, including ordinary commerce links;
-    # a plain brand mention in an informational article is not a product link.
-    for raw_url in re.findall(r'(?:https?:)?//[^<>"\']+', value):
-        try:
-            host = (urlsplit(raw_url).hostname or '').rstrip('.')
-        except ValueError:
-            return False
-        if host == 'coupang.com' or host.endswith('.coupang.com') or host == 'coupa.ng':
-            return False
-    visible = BeautifulSoup(html, 'html.parser').get_text(' ', strip=True)
-    return (not re.search(r'coupang[-_](?:products[-_]block|prep[-_]box|disclosure)', value)
-            and not re.search(r'쿠팡\s*(?:파트너스\s*)?링크.{0,30}(?:입력|삽입|여기에|대기)', visible)
-            and COUPANG_DISCLOSURE not in visible)
 
 
 def _remove_owned_coupang_content(html):
@@ -369,8 +343,6 @@ def prepare_metadata(post, call, keyword=None):
 
 def publish_draft(post_id, env, *, affiliate_request=None):
     if affiliate_request is None:
-        if env.get('BLOG_COUPANG_TELEGRAM') == '1':
-            raise AffiliateDraftError('affiliate_request_required')
         return _publish_draft(post_id, env)
     try:
         return _publish_draft(post_id, env, affiliate_request=deepcopy(affiliate_request))
@@ -404,10 +376,11 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
                                       else 'unexpected_post_status')
         raise RuntimeError('Expected draft; refusing to alter an already published post')
     brief = _market_draft(original, session, base, env)
-    without_products = False
+    without_products = not is_product_promotion(brief)
     if affiliate_request is not None:
         without_products = _affiliate_binding(affiliate_request, original, brief)
-    elif brief and brief.get('affiliate_state') in ('waiting', 'ready', 'publishing'):
+    elif (brief and brief.get('affiliate_state') in ('waiting', 'ready', 'publishing')) or (
+            env.get('BLOG_COUPANG_TELEGRAM') == '1' and is_product_promotion(brief)):
         raise AffiliateDraftError('affiliate_request_required')
     body = original['content']['raw']
     soup = BeautifulSoup(body, 'html.parser')
@@ -504,7 +477,7 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
         'excerpt': meta['meta_description'], 'meta': {
             '_yoast_wpseo_focuskw': meta['focus_keyphrase'],
             '_yoast_wpseo_metadesc': meta['meta_description']}}
-    if brief:
+    if brief or body != original['content']['raw']:
         payload['content'] = body
     def matches_payload(saved):
         return (isinstance(saved, dict) and _confirmed_publication(post_id, saved)

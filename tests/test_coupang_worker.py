@@ -56,7 +56,7 @@ def worker_case(tmp_path, monkeypatch):
             'content': {'raw': '<div class="wpab-article">본문</div>'},
             'title': {'raw': '검사 준비물 안내'}, 'excerpt': {'raw': '요약'}, 'meta': {},
             'categories': [46], 'featured_media': 1723, 'slug': 'sample-draft'}
-    row = {'status': 'held_draft', 'affiliate_state': 'waiting', 'post_id': 1724,
+    row = {'article_type': 'product_promotion', 'status': 'held_draft', 'affiliate_state': 'waiting', 'post_id': 1724,
            'category': '건강', 'keyword': '검사준비물', 'topic': '검사 준비물 안내',
            'selected_at': stamp.isoformat()}
     path = data / 'topic_queue_general.json'

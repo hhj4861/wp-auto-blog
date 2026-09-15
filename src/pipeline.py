@@ -446,10 +446,13 @@ class BlogPipeline:
             PipelineResult
         """
         start_time = datetime.now()
+        from src.coupang_policy import is_product_promotion, no_coupang_content
+        promotion = is_product_promotion(market_brief)
         awaiting_affiliate = False
         affiliate_required = (self.config.mode == "general"
                               and os.getenv("BLOG_COUPANG_TELEGRAM") == "1"
-                              and self.config.auto_publish and not refresh_post_id)
+                              and self.config.auto_publish and not refresh_post_id
+                              and promotion)
         if affiliate_required and not market_brief:
             return PipelineResult(topic=topic.topic, success=False,
                                   error="쿠팡 답장 발행에는 검증된 시장 키워드 큐가 필요합니다")
@@ -600,7 +603,7 @@ class BlogPipeline:
                     ),
                 )
                 # 승인된 상품 링크만 주제에 맞춰 연결한다 (무관한 상품은 생략).
-                if category == "취업" and not affiliate_required:
+                if category == "취업" and promotion and not affiliate_required:
                     content.html = insert_coupang_prep_box(content.html, topic=topic.topic)
             # Create post (or simulate in dry run)
             if self.config.dry_run:
@@ -633,6 +636,9 @@ class BlogPipeline:
                     title=content.title,
                     html=content.html,
                 )
+                if self.config.mode == "general" and not promotion and not all(
+                        no_coupang_content(value) for value in (content.html, content.title, content.meta_description)):
+                    gate_issues.append("일반 정보글에는 쿠팡 상품 링크를 사용할 수 없습니다")
                 if market_brief:
                     from src.market_opportunity import review_article
                     gate_issues += review_article(

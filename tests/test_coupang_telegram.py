@@ -22,7 +22,7 @@ def no_real_transport(monkeypatch):
 
 def store_record(tmp_path, *, status='pending_notification', post_id=1751):
     store = telegram.RequestStore(tmp_path / 'requests.json')
-    record = store.create(post_id, '건강', '기관지에좋은음식', '기관지에 좋은 음식의 활용과 주의사항', 'a' * 64, SELECTED)
+    record = store.create(post_id, '건강', '기관지에좋은음식', '기관지에 좋은 음식의 활용과 주의사항', 'a' * 64, SELECTED, article_type='product_promotion')
     if status != 'pending_notification':
         record['status'] = status
         record['message_key'] = telegram.TelegramClient(ENV).message_key(501)
@@ -280,7 +280,7 @@ def test_long_request_fields_fit_telegram_limit_and_retain_identity(monkeypatch,
     record = store.create(1754, '건강', '대상포진초기증상' + '😀' * 490,
                           '대상포진 초기증상' + '😀' * 990, 'a' * 64, SELECTED)
     session, _ = transport(monkeypatch, result={'chat': {'id': 8123456789}, 'message_id': 501})
-    telegram.TelegramClient(ENV).send_request(record)
+    telegram.TelegramClient(ENV).send_request({**record, 'article_type': 'product_promotion'})
     sent = session.post.call_args.kwargs['json']
     assert len(sent['text'].encode('utf-16-le')) // 2 <= 4096
     assert record['request_id'] in sent['text'] and '1754' in sent['text']

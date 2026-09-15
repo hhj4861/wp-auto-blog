@@ -14,6 +14,7 @@ import uuid
 import requests
 
 from src.coupang_search_guidance import product_search_guidance
+from src.coupang_policy import is_product_promotion
 
 
 ERRORS = {
@@ -26,7 +27,7 @@ ERRORS = {
     'invalid_product_format', 'invalid_product_name', 'invalid_product_url',
     'duplicate_product_url', 'publication_failed', 'draft_changed', 'source_expired',
     'request_expired', 'review_failed', 'duplicate_keyword',
-    'publication_outcome_unknown', 'wordpress_unavailable', 'invalid_queue',
+    'product_promotion_required', 'publication_outcome_unknown', 'wordpress_unavailable', 'invalid_queue',
 }
 PRODUCT_ERRORS = {
     'invalid_products', 'product_name_required', 'invalid_product_format',
@@ -40,7 +41,7 @@ RECORD_FIELDS = {
 }
 OPTIONAL_FIELDS = {'last_error', 'reply_update_id', 'published_at', 'published_url',
                    'publish_attempt_run', 'publishing_at', 'notified_at',
-                   'reply_checked_at', 'reply_checked_run', 'publication_mode'}
+                   'reply_checked_at', 'reply_checked_run', 'publication_mode', 'article_type'}
 REPLY_WAIT = timedelta(minutes=30)
 UPDATE_RETENTION = timedelta(hours=24)
 FINGERPRINT_FIELDS = ('id', 'status', 'modified_gmt', 'content', 'title', 'excerpt',
@@ -147,7 +148,8 @@ def _validate_record(record):
             or not _text(record['topic'], 1000) or not _hex(record['draft_fingerprint'], 64)
             or not _timestamp(record['selected_at']) or not _timestamp(record['created_at'])
             or not isinstance(record['status'], str) or record['status'] not in STATUSES
-            or not isinstance(record['products'], list)):
+            or not isinstance(record['products'], list)
+            or record.get('article_type', 'information') not in ('information', 'product_promotion')):
         raise TelegramError('invalid_request_store')
     status, key = record['status'], record['message_key']
     if key is not None and not _hex(key, 64):
@@ -275,11 +277,11 @@ class RequestStore:
     def find(self, request_id):
         return next((row for row in self.data['requests'] if row['request_id'] == request_id), None)
 
-    def create(self, post_id, category, keyword, topic, draft_fingerprint, selected_at):
+    def create(self, post_id, category, keyword, topic, draft_fingerprint, selected_at, *, article_type='information'):
         record = {'request_id': uuid.uuid4().hex, 'post_id': post_id, 'category': category,
                   'keyword': keyword, 'topic': topic, 'draft_fingerprint': draft_fingerprint,
                   'selected_at': selected_at, 'created_at': utc_now().isoformat(),
-                  'status': 'pending_notification', 'message_key': None, 'products': []}
+                  'status': 'pending_notification', 'message_key': None, 'products': [], 'article_type': article_type}
         _validate_record(record)
         for existing in self.data['requests']:
             if existing['post_id'] == post_id:
@@ -363,6 +365,8 @@ class TelegramClient:
 
     def send_request(self, record):
         _validate_record(record)
+        if not is_product_promotion(record):
+            raise TelegramError('product_promotion_required')
         if record['status'] != 'pending_notification':
             raise TelegramError('invalid_request')
         def display(value, maximum):
@@ -388,6 +392,8 @@ class TelegramClient:
     def send_search_guidance(self, record):
         """Supplement an already-sent request without replacing its reply binding."""
         _validate_record(record)
+        if not is_product_promotion(record):
+            raise TelegramError('product_promotion_required')
         if record['status'] != 'waiting':
             raise TelegramError('invalid_request')
         guidance = product_search_guidance(record['category'], record['keyword'], record['topic'])

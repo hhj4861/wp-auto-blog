@@ -475,7 +475,7 @@ def affiliate_case(market_case):
     request_id = 'a' * 32
     path = c['data'] / 'topic_queue_general.json'
     queue = json.loads(path.read_text())
-    queue[1].update(post_id=1724, affiliate_state='waiting', affiliate_request_id=request_id)
+    queue[1].update(post_id=1724, affiliate_state='waiting', affiliate_request_id=request_id, article_type='product_promotion')
     path.write_text(json.dumps(queue))
     c['brief'] = queue[1]
     c['request'] = {key: c['brief'][key] for key in ('category', 'keyword', 'topic', 'selected_at')}
@@ -569,15 +569,13 @@ def test_waiting_affiliate_draft_cannot_bypass_reply_with_legacy_resume(affiliat
     c['client'].generate.assert_not_called()
 
 
-def test_enabled_affiliate_policy_cannot_resume_an_older_draft_without_a_request(market_case):
+def test_information_draft_publishes_without_request_even_when_telegram_enabled(market_case):
     c = market_case
     c['env']['BLOG_COUPANG_TELEGRAM'] = '1'
     assert 'affiliate_state' not in c['brief']
-    with pytest.raises(module.AffiliateDraftError, match='affiliate_request_required'):
-        module.publish_draft(1724, c['env'])
-    c['session'].get.assert_not_called()
-    c['session'].post.assert_not_called()
-    c['client'].generate.assert_not_called()
+    assert module.publish_draft(1724, c['env']) == 'https://trendpulse.blog/a1c-levels/'
+    c['session'].post.assert_called_once()
+    assert module._no_coupang_content(c['session'].post.call_args.kwargs['json']['content'])
 
 
 @pytest.mark.parametrize('change', ['missing_auxiliary', 'expired_37h', 'duplicate', 'concurrent_edit'])

@@ -1,7 +1,7 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-09-17T05:11:45.382541+00:00",
+    "selected_at": "2026-09-17T06:56:08.009730+00:00",
     "seeds": [
       "채용",
       "공기업",
@@ -22,16 +22,418 @@
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 730,
-    "evaluated_candidates": 11,
+    "evaluated_candidates": 12,
     "research_pool_size": 120,
     "selected": [],
     "held": [
+      {
+        "keyword": "컴활2급필기",
+        "category": "취업",
+        "topic": "컴활2급필기 시험과목·합격기준·수험료와 준비 전 확인사항",
+        "intent": "컴활2급필기는 어떤 과목을 몇 분 동안 보며, 합격기준과 수험료, 준비할 프로그램 버전은 무엇인가?",
+        "gap": "과목·문항·시간·수험료 요약표와 과락·평균 기준 체크리스트, 공식 프로그램 버전 및 실기 응시 가능 기간을 정리한다.",
+        "source_url": "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+        "verified_sources": [
+          {
+            "url": "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+            "original_url": "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+            "title": "Korcham Pass(대한상공회의소)",
+            "checked_on": "2026-09-17",
+            "sha256": "05c329c28ec80efdbf85ad1186a637e129a4be20dd55e79ea271a5da2912fdbc",
+            "excerpt": "종목소개 사무정보 유통/화장품 회계/사무 외국어/한자 전문기술 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 전산회계운용사 무역영어 상공회의소 한자 한글속기 컴퓨터활용능력 (국가기술자격) 시험안내 FAQ 종목소개 산업계의 정보화가 진전되면서 영업, 재무, 생산 등의 분야에 대한 경영분석은 물론 데이터 관리가 필수적입니다. \n\t\t\t<컴퓨터활용능력> 검정은 사무자동화의 필수 프로그램인 스프레드시트(SpreadSheet), 데이터베이스(Database) 활용능력을 평가하는 국가기술자격 시험입니다. 응시자격 제한없음 (단, 실기 시험은 필기 합격 후 2년 이내 있는 실기 시험 응시 가능) 시험과목 시험과목 상세 정보 1급 필기시험 실기시험 시험과목 컴퓨터 일반 스프레드시트 일반 데이터베이스 일반 스프레드시트 실무 데이터베이스 실무 출제형태 객관식 60문항 컴퓨터 작업형 시험시간 60분 90분(과목별 45분) 시험과목 상세 정보 2급 필기시험 실기시험 시험과목 컴퓨터 일반 스프레드시트 일반 스프레드시트 실무 출제형태 객관식40문항 컴퓨터 작업형 시험시간 40분 40분 윈도우 계산기 및 메모장 기능 사용 불가 실기프로그램 - MS오피스 LTSC Professional Plus 2021, 컴퓨터활용능력 2급은 MS오피스 LTSC Standard 2021 도 사용가능 합격결정기준 필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상 실기 : 100점 만점에 70점 이상(1급은 두과목 모두 70점 이상) 수험료 필기 : 20,500원 실기 : 25,000원 자격특전 공무원 채용 가산점 소방공무원(사무관리직) : 컴퓨터활용능력1급(3%), 컴퓨터활용능력2급(1%) 해양경찰공무원 : 컴퓨터활용능력1, 2급(1점) 학점은행제 학점인정 : 1급 14학점, 2급 6학점 100여개 공공기관·공기업 등 채용·승진 우대",
+            "locator_origin": "model_reported_locator"
+          },
+          {
+            "url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=202&no=273172&pg=1",
+            "original_url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=202&no=273172&pg=1",
+            "title": "종목소개 관련자료",
+            "checked_on": "2026-09-17",
+            "sha256": "0866a4f6050ad4d89712159d680edaedc2e046ed1952ae0ee85920bd6e2692ed",
+            "excerpt": "닫기 사이트맵 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/화장품 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 개별접수 접수안내 원서접수안내 접수유의사항 시험장정보조회 결제내역조회 시험접수 장애인상시시험접수 접수내역변경 환불신청 수험료 환불 기타 100% 예외환불 단체접수 접수안내 접수안내 접수유의사항 시험장정보조회 정기시험접수 수험자용 관리자용 접수확인 및 수험표출력 개별인증 필기면제대상자 명단등록 서류출력 및 조회 상시시험접수 수험자용 관리자용 접수확인 및 수험표출력 수험료 환불 합격확인 합격자현황 및 출력 자격증신청 단체자격증신청 자격증 신청확인 자격진위 신청 및 결과 마이페이지 접수 및 환불내역 접수내역 환불내역 취득내역 취득내역 디지털 배지 시험결과 자격증신청 자격증 발급안내 자격증신청 신청확인 및 환불 개인정보관리 개인정보수정 회원탈퇴 비서실기면제신청 진위여부 신청 및 결과 필기면제 신청 및 내역 고객센터 공지사항 전국상의별 공지안내 공지사항 자주하는 질문 문의하기 자료실 수험자가이드 원격지원 활용현황 자격특전 자격활용사례 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/마케팅 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 시험안내 시험문제 시험일정 관련자료 FAQ 자격활용사례 관련자료 관련자료 2024년 컴퓨터활용능력 필/실기시험 수험용 프로그램 업그레이드 안내(재공지) 종목명 : 컴퓨터활용능력 등록일 : 2023-07-11 조회수 : 33971 2024년부터 컴퓨터활용능력 필/실기 시험 프로그램이 Microsoft Office LTSC Professional Plus 2021 으로 변경되오니 시험준비에 참고하시기 바랍니다. 1. 필기시험 < 1과목 컴퓨터 일반 > - 운영체제 : Windows 10 버전 - 웹브라우저 : 버전과 상관없이 웹브라우저의 공통 기능 < 2과목 스프레드시트 일반 및 3과목 데이터베이스 일반> - Microsoft Office LTSC Professional Plus 2021 2. 실기시험 구  분 현행 (2021~2023년) 조정 (2024~2026년) 실기시험 Microsoft Office 2016 Microsoft Office LTSC Professional Plus 2021 * 참고로 제시된 2024~2026년 컴퓨터활용능력 실기 연습예제는 기능에 따른 변경 배점을 안내하기 위한 것입니다. 시험 문제에 포함되는 기능은 출제기준을 참고하시길 바랍니다. ※ 적용시기 : 2024년 1월 1일부터 첨부파일 2024~2026년 컴퓨터활용능력 필실기시험 수험용 프로그램 업그레이드 안내 (재공지).pdf 이전글 2021년 컴퓨터활용능력 필/실기시험 수험용 프로그램 업그레이드 안내 다음글 2024~2026년 컴퓨터활용능력 출제기준 목록",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://cert-it.lifelearn.kr/wiki/computer-proficiency-level2-written/",
+          "https://certpass.kr/cert/comhwal2/"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 29980,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=202&no=273172&pg=1",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "컴활 2급 필기",
+        "organic_domains": [
+          "www.yes24.com",
+          "www.yes24.com",
+          "www.yes24.com",
+          "cert-it.lifelearn.kr",
+          "passbank.kr",
+          "www.sinagong.co.kr",
+          "certpass.kr",
+          "youknowthat.co.kr",
+          "www.coupang.com",
+          "www.sinagong.co.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://www.yes24.com/product/goods/155514750",
+            "domain": "www.yes24.com",
+            "title": "2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급) | 길벗알앤디 | 길벗 - 예스24",
+            "snippet": "Image: 2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급) Image Image ... 〈2026 시나공 컴활 2급 필기+실기〉<br/>2026 시나공 컴활 2급 필기+실기는 필기와 실기가"
+          },
+          {
+            "url": "https://www.yes24.com/product/goods/155514750?ReviewYn=Y",
+            "domain": "www.yes24.com",
+            "title": "2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급) | 길벗알앤디 | 길벗 - 예스24",
+            "snippet": "Image: 2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급) Image Image ... 클래스는 첫번째 회차 주문확정 시점부터 마지막 회차 주문확정 후 30일 이내"
+          },
+          {
+            "url": "https://www.yes24.com/product/goods/173938864",
+            "domain": "www.yes24.com",
+            "title": "2026 선넘는 컴퓨터활용능력 2급 필기+실기 | 김쌤(김경화) | 쏠티북스 - 예스24",
+            "snippet": "『2026 선넘는 컴퓨터활용능력 2급 필기+실기』는 이론과 실기를 한 권에 통합하여, 효율적으로 합격할 수 있도록 설계된 교재입니다.<br/><br/>본서는 필기와 실기를 한 권에 담아 필기-실기 연계 학습이 가능하도록"
+          },
+          {
+            "url": "https://cert-it.lifelearn.kr/wiki/computer-proficiency-level2-written/",
+            "domain": "cert-it.lifelearn.kr",
+            "title": "컴활 2급 필기 (40문항 40분·과락 기준·출제범위 세부항목) | IT자격증 위키",
+            "snippet": "# 컴활 2급 필기 (40문항 40분·과락 기준·출제범위 세부항목) ... 컴활 2급 필기는 컴퓨터 일반·스프레드시트 일반 2과목을 객관식 40문항, 40분으로 치릅니다. ... 2급 실기는 스프레드시트 실무"
+          },
+          {
+            "url": "https://passbank.kr/compu2/archive",
+            "domain": "passbank.kr",
+            "title": "컴퓨터활용능력 2급 기출문제 해설집 | 패스뱅크",
+            "snippet": "컴활 2급 필기 기출문제를 회차별로 모았습니다. ... 자체 실전모의고사 01 40문항 · 정답·해설 포함 2026년 상시01 40문항 · 정답·해설 포함 2025년 상시04 40문항 · 정답·해설"
+          },
+          {
+            "url": "https://www.sinagong.co.kr/community/003002003/exam-reviews/1870",
+            "domain": "www.sinagong.co.kr",
+            "title": "컴퓨터활용능력 2급 필기+실기 - 시험후기 | 시나공",
+            "snippet": "시나공으로 공부한 컴활2급 필기합격후기 ... 2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급) ... 저는 필기+실기 한권으로 끝내는 컴활이라는 제목부터 딱 마음에 들더라구요"
+          },
+          {
+            "url": "https://certpass.kr/cert/comhwal2/",
+            "domain": "certpass.kr",
+            "title": "컴퓨터활용능력 2급 자격증 안내 — 시험과목·합격기준·상시검정 | CertPass",
+            "snippet": "필기·실기 구성, 합격 기준, 상시검정 일정, 공부법을 한눈에 정리했어요. ... Windows 운영체제 사용법(파일·폴더 관리, 제어판, 바로 가기 키), 컴퓨터 시스템의 구성(CPU·기억장치·입출력장치), 자료의 표현과 처리(진법·코드), 멀티미디어(이미지·오디오·동영상"
+          },
+          {
+            "url": "https://youknowthat.co.kr/%EC%BB%B4%ED%99%9C-2%EA%B8%89-%ED%95%84%EA%B8%B0-2/",
+            "domain": "youknowthat.co.kr",
+            "title": "컴활 2급 필기 공부법 | 독학으로 단기 합격하는 방법",
+            "snippet": "# 컴활 2급 필기 공부법 | 독학으로 단기 합격하는 방법 ... 2급 필기는 기출 3년치 2~3회 반복이면 충분해요. ... 2급 필기를 1주일 안에 합격할 수"
+          },
+          {
+            "url": "https://www.coupang.com/vp/products/9103413277?itemId=26762477597&itemsCount=40&q=%EC%BB%B4%ED%99%9C1%EA%B8%89&rank=16&searchId=5910ddac5651837&searchRank=16&sourceType=search&vendorItemId=93734973425",
+            "domain": "www.coupang.com",
+            "title": "2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기 - 컴퓨터활용능력 | 쿠팡",
+            "snippet": "<2026 시나공 컴활 2급 필기+실기> 2026 시나공 컴활 2급 필기+실기는 필기와 실기가 통합된 형태로, 한 권으로도 쉽고 빠르게 합격할 수 있도록 구성했습니다. ... 핵심요약과 최신기출문제로"
+          },
+          {
+            "url": "https://www.sinagong.co.kr/community/003002001/exam-reviews/1429",
+            "domain": "www.sinagong.co.kr",
+            "title": "컴퓨터활용능력 2급 필기 - 시험후기 | 시나공",
+            "snippet": "컴활 2급 필기 합격 후기 ... 시나공으로 공부해서 다행히 2급 필기 합격했습니다! ... 밑줄 치면서 공부하다가 막히는 부분은 옆에 qr코드 찍어서 토막강의 들으니까 이해가 되더라구요!"
+          }
+        ],
+        "dominant_result_ratio": 0.0,
+        "score_components": {
+          "demand": 35,
+          "organic_opportunity": 28.0,
+          "trend": -0.16,
+          "intent_fit": 0
+        },
+        "trend_growth": -0.016,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 6,
+        "selected_at": "2026-09-17T06:56:08.009730+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "컴활2급필기"
+        ],
+        "status": "research_only",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+              "title": "Korcham Pass(대한상공회의소)",
+              "excerpt_chars": 952
+            },
+            {
+              "url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=202&no=273172&pg=1",
+              "title": "종목소개 관련자료",
+              "excerpt_chars": 1507
+            },
+            {
+              "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20251119103712401493",
+              "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 이기적 컴퓨터활용능력 2급 필기 절대족보",
+              "excerpt_chars": 1199
+            }
+          ],
+          "analysis_status": "supported_true",
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20251119103712401493",
+                  "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 이기적 컴퓨터활용능력 2급 필기 절대족보",
+                  "excerpt_chars": 1199
+                },
+                {
+                  "url": "https://bukbu.seoulcareerup.or.kr/bukbu/edu/selectEduProgram.do?sch_class_code=C100156012",
+                  "title": "북부여성발전센터",
+                  "excerpt_chars": 5832
+                },
+                {
+                  "url": "https://jumpup.onkpc.or.kr/e-kpc/front/course/view.jsp?pCodeMain=009&pCodeMiddle=003&pCodeSmall=003&pCrsCode=31408&pSqNo=13&pYear=2026",
+                  "title": "(KPC)한국생산성본부 이러닝",
+                  "excerpt_chars": 1734
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_passed",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://ml.korcham.net/co/examguide.do?cd=01&jmcd=0103",
+                  "title": "Korcham Pass(대한상공회의소)",
+                  "excerpt_chars": 952
+                },
+                {
+                  "url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=202&no=273172&pg=1",
+                  "title": "종목소개 관련자료",
+                  "excerpt_chars": 1507
+                },
+                {
+                  "url": "https://bnk.kpipa.or.kr/home/v3/addition/adiPromoMetaDataView01/seq_20251119103712401493",
+                  "title": "출판유통통합전산망 - 도서 상세페이지 - 2026 이기적 컴퓨터활용능력 2급 필기 절대족보",
+                  "excerpt_chars": 1199
+                }
+              ],
+              "analysis_status": "supported_true"
+            }
+          }
+        },
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "컴활2급필기",
+          "executed_query": "컴활 2급 필기",
+          "topic": "컴활2급필기 시험과목·합격기준·수험료와 준비 전 확인사항",
+          "intent": "컴활2급필기는 어떤 과목을 몇 분 동안 보며, 합격기준과 수험료, 준비할 프로그램 버전은 무엇인가?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "result_count": 10,
+          "domain_count": 7,
+          "dominant_ratio": 0.0,
+          "search_review": {
+            "version": 1,
+            "query": "컴활2급필기",
+            "executed_query": "컴활 2급 필기",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-17T06:56:08.009730+00:00",
+            "raw_sha256": "2331bb22cca0971c63b8b0ac25f5eb7ea539b86d562f6cba86daf319e5682b0a",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기"
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "2026 한 권으로 끝내는 시나공 컴활 2급 필기+실기"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "이론과 실기를 한 권에 통합하여, 효율적으로 합격할 수 있도록 설계된 교재입니다."
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "컴활 2급 필기는 컴퓨터 일반·스프레드시트 일반 2과목을 객관식 40문항, 40분으로 치릅니다."
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "컴활 2급 필기 기출문제를 회차별로 모았습니다."
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "시나공으로 공부한 컴활2급 필기합격후기"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "필기·실기 구성, 합격 기준, 상시검정 일정, 공부법을 한눈에 정리했어요."
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "컴활 2급 필기 공부법 | 독학으로 단기 합격하는 방법"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "2026 시나공 컴활 2급 필기+실기는 필기와 실기가 통합된 형태로"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "시나공으로 공부해서 다행히 2급 필기 합격했습니다!"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 10,
+            "relevant_site_count": 7,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 1.0,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.0,
+            "site_concentration": 0.3,
+            "organic_opportunity": 28.0
+          },
+          "scope": "full_keyword",
+          "target_keyword": "컴활2급필기",
+          "matches": [
+            {
+              "result_index": 3,
+              "quote": "컴활 2급 필기는 컴퓨터 일반·스프레드시트 일반 2과목을 객관식 40문항, 40분으로 치릅니다."
+            },
+            {
+              "result_index": 6,
+              "quote": "필기·실기 구성, 합격 기준, 상시검정 일정, 공부법을 한눈에 정리했어요."
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "input_sha256": "ca2b9ce09b1f42a3e59ab567d9876f2bf576a69a71ded5a6ad4eaea85bc6988f",
+          "review": {
+            "scope": "narrower_query",
+            "target_keyword": "컴활2급필기",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "<컴퓨터활용능력> 검정은 사무자동화의 필수 프로그램인 스프레드시트(SpreadSheet), 데이터베이스(Database) 활용능력을 평가하는 국가기술자격 시험입니다.",
+                "entity": "컴퓨터활용능력",
+                "context": "system_rules"
+              },
+              {
+                "source_index": 1,
+                "quote": "2024년부터 컴퓨터활용능력 필/실기 시험 프로그램이 Microsoft Office LTSC Professional Plus 2021 으로 변경되오니 시험준비에 참고하시기 바랍니다.",
+                "entity": "컴퓨터활용능력",
+                "context": "system_rules"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "필기 과목·문항 수·시험시간은 무엇인가?",
+                "answer": "컴퓨터 일반·스프레드시트 일반, 객관식 40문항을 40분 동안 치른다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "시험과목 컴퓨터 일반 스프레드시트 일반 스프레드시트 실무 출제형태 객관식40문항 컴퓨터 작업형 시험시간 40분 40분"
+              },
+              {
+                "facet": "필기 합격기준과 과락 기준은 무엇인가?",
+                "answer": "각 과목 40점 이상이면서 평균 60점 이상이어야 한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상"
+              },
+              {
+                "facet": "필기 수험료는 얼마인가?",
+                "answer": "공식 안내의 필기 수험료는 20,500원이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "수험료 필기 : 20,500원 실기 : 25,000원"
+              },
+              {
+                "facet": "필기 준비에 적용되는 운영체제·프로그램 버전은 무엇인가?",
+                "answer": "Windows 10, 웹브라우저 공통 기능, Office LTSC Professional Plus 2021을 기준으로 준비한다.",
+                "supported": true,
+                "source_index": 1,
+                "quote": "운영체제 : Windows 10 버전 - 웹브라우저 : 버전과 상관없이 웹브라우저의 공통 기능 < 2과목 스프레드시트 일반 및 3과목 데이터베이스 일반> - Microsoft Office LTSC Professional Plus 2021"
+              },
+              {
+                "facet": "현재 필기에서 무엇을 학습하고 문제풀이를 준비해야 하는가?",
+                "answer": "검색결과에는 출제범위·기출·공부법 수요가 있다. 기획은 제도 요약에 좁혀져 있고 공식 본문에는 세부 학습 범위가 없다.",
+                "supported": false,
+                "source_index": 1,
+                "quote": "시험 문제에 포함되는 기능은 출제기준을 참고하시길 바랍니다."
+              },
+              {
+                "facet": "필기 합격 후 실기는 언제까지 응시할 수 있는가?",
+                "answer": "필기 합격 후 2년 이내에 있는 실기시험에 응시할 수 있다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "응시자격 제한없음 (단, 실기 시험은 필기 합격 후 2년 이내 있는 실기 시험 응시 가능)"
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 62.84,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ]
+      },
       {
         "keyword": "50대자격증추천",
         "category": "취업",
         "topic": "50대자격증추천: 요양보호사·지게차운전기능사 준비 조건 비교",
         "intent": "50대 재취업과 노후 준비를 위해 어떤 자격증을 선택하고 무엇을 준비해야 할까?",
-        "gap": "두 자격의 직무·취득 절차 비교표와 요양보호사 교육시간, 지게차 시험과목·수수료·안전 준비 체크리스트를 제공한다.",
+        "gap": "요양보호사 교육시간·수행직무와 지게차 시험과목·수수료·합격기준을 비교표와 준비 체크리스트로 제공한다.",
         "source_url": "https://www.kuksiwon.or.kr/subcnt/c_2027/2/view.do?seq=7%29",
         "verified_sources": [
           {
@@ -73,11 +475,11 @@
               "origin": "model_reported_locator"
             },
             {
-              "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=7875&jmInfoDivCcd=B0",
+              "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=9744&jmInfoDivCcd=B0",
               "origin": "model_reported_locator"
             },
             {
-              "url": "https://www.work24.go.kr/hr/h/a/1100/selectIssuGudn.do",
+              "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=7875&jmInfoDivCcd=B0",
               "origin": "model_reported_locator"
             }
           ]
@@ -94,7 +496,7 @@
           "blogdo.tistory.com",
           "blog.kinoco-world.com",
           "imtopia.tistory.com",
-          "sunshine2100.tistory.com"
+          "myview04262.tistory.com"
         ],
         "organic_results": [
           {
@@ -137,7 +539,7 @@
             "url": "https://blogdo.tistory.com/m/entry/50%EB%8C%80-%EC%9D%B8%EA%B8%B0-%EC%9E%90%EA%B2%A9%EC%A6%9D-TOP-10%EC%9E%AC%EC%B7%A8%EC%97%85%C2%B7%EC%B0%BD%EC%97%85%C2%B7%EB%85%B8%ED%9B%84-%EC%A4%80%EB%B9%84-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C",
             "domain": "blogdo.tistory.com",
             "title": "50대 인기 자격증 TOP 10재취업·창업·노후 준비 완벽 가이드",
-            "snippet": "이 글에서는 실제로 50대 취업·창업에 도움이 되는 자격증 TOP 10 을 엄선하고, 솔직한 장단점까지 함께 정리했습니다. ... 매년 응시자 수 기준 50대가 가장 많이 도전하는"
+            "snippet": "이 글에서는 실제로 50대 취업·창업에 도움이 되는 자격증 TOP 10 을 엄선하고, 솔직한 장단점까지 함께 정리했습니다. ... 사회복지기관, 노인복지관, 장애인복지시설 등에서 일하는 전문 자격증입니다. ..."
           },
           {
             "url": "https://blog.kinoco-world.com/36",
@@ -152,10 +554,10 @@
             "snippet": "# 50대 자격증 추천 제2의 직업 준비 가이드 2026 총정리 (취업률 높은 자격증 7선·국비지원·취득 기간까지) ... 고용노동부가 2026년 발표한 '중장년 유망 자격' 데이터에 따르면, 자격증을"
           },
           {
-            "url": "https://sunshine2100.tistory.com/entry/50%EB%8C%80-%EC%B6%94%EC%B2%9C-%EC%9E%90%EA%B2%A9%EC%A6%9D-TOP5-%EC%9E%AC%EC%B7%A8%EC%97%85%EC%97%90-%ED%98%84%EC%8B%A4%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%8F%84%EC%9B%80-%EB%90%98%EB%8A%94-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%A0%95%EB%A6%AC",
-            "domain": "sunshine2100.tistory.com",
-            "title": "50대 추천 자격증 TOP5: 재취업에 현실적으로 도움 되는 자격증 정리",
-            "snippet": "# 50대 추천 자격증 TOP5: 재취업에 현실적으로 도움 되는 자격증 정리 ... 다만 필기와 실기 준비가 필요해 일정 수준의 학습 기간(보통 3~6개월)이 필요합니다. ... 50대"
+            "url": "https://myview04262.tistory.com/entry/50%EB%8C%80%EA%B0%80-%EB%94%B0%EB%86%93%EC%9C%BC%EB%A9%B4-%EC%A2%8B%EC%9D%80-%EA%B2%BD%EC%9F%81%EB%A0%A5%EC%9E%88%EB%8A%94-%EC%9E%90%EA%B2%A9%EC%A6%9D",
+            "domain": "myview04262.tistory.com",
+            "title": "50대가 따놓으면 좋은 경쟁력있는 자격증",
+            "snippet": "# 50대가 따놓으면 좋은 경쟁력있는 자격증 ... 아래는 2026년 기준, 50대가 도전해도 현실성이 높고 ‘따놓으면 실제 수익으로 연결되기 쉬운’ 경쟁력 있는 자격증을 중심으로 정리한 목록입니다.단순"
           }
         ],
         "dominant_result_ratio": 0.0,
@@ -169,7 +571,7 @@
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "unavailable",
         "selection_version": 6,
-        "selected_at": "2026-09-17T05:11:45.382541+00:00",
+        "selected_at": "2026-09-17T06:56:08.009730+00:00",
         "source": "category_market_v1",
         "keywords": [
           "50대자격증추천"
@@ -183,13 +585,13 @@
               "excerpt_chars": 1894
             },
             {
-              "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=7875&jmInfoDivCcd=B0",
+              "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=9744&jmInfoDivCcd=B0",
               "title": "www.q-net.or.kr",
               "excerpt_chars": 8000
             },
             {
-              "url": "https://www.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=6&searchGbn=0&searchOrderSort=0",
-              "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
+              "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=7875&jmInfoDivCcd=B0",
+              "title": "www.q-net.or.kr",
               "excerpt_chars": 8000
             }
           ],
@@ -224,13 +626,13 @@
                   "excerpt_chars": 1894
                 },
                 {
-                  "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=7875&jmInfoDivCcd=B0",
+                  "url": "https://www.q-net.or.kr/crf005.do?gId=&gSite=Q&id=crf00503s02&jmCd=9744&jmInfoDivCcd=B0",
                   "title": "www.q-net.or.kr",
                   "excerpt_chars": 8000
                 },
                 {
-                  "url": "https://www.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=6&searchGbn=0&searchOrderSort=0",
-                  "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
+                  "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=7875&jmInfoDivCcd=B0",
+                  "title": "www.q-net.or.kr",
                   "excerpt_chars": 8000
                 }
               ],
@@ -245,7 +647,7 @@
           "topic": "50대자격증추천: 요양보호사·지게차운전기능사 준비 조건 비교",
           "intent": "50대 재취업과 노후 준비를 위해 어떤 자격증을 선택하고 무엇을 준비해야 할까?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
           "result_count": 10,
           "domain_count": 9,
           "dominant_ratio": 0.0,
@@ -254,8 +656,8 @@
             "query": "50대자격증추천",
             "executed_query": "50대 자격증 추천",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-17T05:11:45.382541+00:00",
-            "raw_sha256": "75329946d4da0fd3f4f74d2bdf8869e33717b5f8bfc28f4d3a28f6d7245de26b",
+            "checked_at": "2026-09-17T06:56:08.009730+00:00",
+            "raw_sha256": "96956e41e2d8e7424808619db5bdc35df477a6995c4df648eb734a9df1cb67ae",
             "decisions": [
               {
                 "result_index": 0,
@@ -305,7 +707,7 @@
               {
                 "result_index": 9,
                 "relevant": true,
-                "quote": "50대 추천 자격증 TOP5: 재취업에 현실적으로 도움 되는 자격증 정리"
+                "quote": "50대가 따놓으면 좋은 경쟁력있는 자격증"
               }
             ]
           },
@@ -347,8 +749,8 @@
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
-          "input_sha256": "0a33a8bc97b59ae63d90391968afffe0452a0a865869f628e2660d791600cf5a",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "input_sha256": "d25a37f90fd5faeb7d3cd3ab1b70d325d62a3e046ee41e815c8f4315ef6074fc",
           "review": {
             "scope": "narrower_query",
             "target_keyword": "50대자격증추천",
@@ -368,59 +770,45 @@
             ],
             "required_facets": [
               {
-                "facet": "50대 재취업·노후 준비에 어떤 자격증이 적합하며, 무엇을 기준으로 선택하는가?",
-                "answer": "두 자격의 준비 조건에 한정된다. 50대의 경력·체력·취업 여건에 따른 추천 적합성은 입증되지 않는다.",
+                "facet": "50대의 재취업·노후 준비에 어떤 자격증이 적합하며, 선택 근거는 무엇인가?",
+                "answer": "두 자격의 준비 조건만 비교한다. 50대 대상 취업 활용성과 추천 적합성 근거가 없어 전체 추천 수요보다 좁다.",
                 "supported": false,
                 "source_index": 0,
                 "quote": "요양보호사는 노인 등의 신체활동 또는 가사활동 지원 등의 업무를 전문적으로 수행한다."
               },
               {
-                "facet": "요양보호사는 어떤 일을 하는가?",
-                "answer": "신체·가사활동 지원과 청결유지, 식사·복약보조, 배설 등 돌봄 업무를 수행한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "대상자의 청결유지, 식사와 복약보조, 배설, 운동, 정서적 지원, 환경 관리 및 일상생활 지원 업무를 수행한다."
-              },
-              {
-                "facet": "지게차운전기능사는 어떤 직무를 준비하는가?",
-                "answer": "건설·물류 현장의 적재·하역·운반 직무를 준비한다. 이 설명만으로 50대 취업 적합성은 판단할 수 없다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "지게차에 대한 기술 지식과 숙련된 운전기능을 갖추어 각종 건설 및 물류 작업에서 적재, 하역, 운반 등의 직무 수행 능력을 평가(공개문제 참조)"
-              },
-              {
-                "facet": "요양보호사 취득에 필요한 교육과 시험 절차는 무엇인가?",
-                "answer": "표준교육 320시간 이수 후 국가시험에 합격해야 한다. 해당 면허·자격 소지자는 40~50시간이며 결격사유도 확인해야 한다.",
+                "facet": "요양보호사는 어떤 일을 하며 필요한 교육은 무엇인가?",
+                "answer": "신체·가사활동을 지원한다. 표준교육은 320시간이며, 명시된 국가자격·면허 소지자는 40~50시간이다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "표준교육과정 320시간, 국가자격(면허)소지자(간호사, 간호조무사, 물리치료사, 사회복지사, 작업치료사)는 40~50시간"
               },
               {
-                "facet": "지게차운전기능사의 시험과목과 합격 절차는 무엇인가?",
-                "answer": "필기는 주행·적재·운반·하역·안전관리, 실기는 운전 작업·도로주행이다. 필기·실기 각각 60점 이상이 합격 기준이다.",
+                "facet": "지게차운전기능사는 어떤 시험과목을 준비해야 하는가?",
+                "answer": "필기는 주행·화물 적재·운반·하역·안전관리이며, 실기는 지게차운전 작업 및 도로주행이다.",
                 "supported": true,
                 "source_index": 1,
                 "quote": "- 필기  1. 지게차 주행 2. 화물 적재 3. 운반 4. 하역 5. 안전관리"
               },
               {
-                "facet": "지게차운전기능사 시험 수수료는 얼마인가?",
-                "answer": "필기 14,500원, 실기 25,200원이다. 교육비 등을 포함한 총취득비용은 아니다.",
+                "facet": "지게차운전기능사의 시험 수수료는 얼마인가?",
+                "answer": "필기 14,500원, 실기 25,200원이다. 교육비를 포함한 취득 총비용은 아니다.",
                 "supported": true,
                 "source_index": 1,
                 "quote": "필기 실기 14,500원 25,200원"
               },
               {
-                "facet": "지게차 실기시험에서 어떤 안전 준비가 필요한가?",
-                "answer": "작업복·작업화를 준비하고 정리정돈·안전사항 및 수험자 지참공구 목록을 확인해야 한다.",
+                "facet": "지게차운전기능사의 합격기준은 무엇인가?",
+                "answer": "필기와 실기 모두 100점 만점에 60점 이상이다.",
                 "supported": true,
                 "source_index": 1,
-                "quote": "보호구(작업복 등) 착용, 정리정돈 상태, 안전사항 등이 채점 대상이 될 수 있습니다."
+                "quote": "- 필기 : 100점을 만점으로 하여 60점 이상</p>\r\n<p> </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상"
               }
             ],
             "current_relevance": {
               "kind": "evergreen",
               "source_index": 0,
-              "quote": "교육과정을 이수하시면 요양보호사 자격시험에 응시하실 수 있습니다.",
+              "quote": "경력자(경력인 정기관에 따라 이수시간 다름)의 교육과정을 이수하시면 요양보호사 자격시험에 응시하실 수 있습니다.",
               "event_start": null,
               "event_end": null,
               "date_quote": null
@@ -437,9 +825,9 @@
       {
         "keyword": "데이터분석자격증",
         "category": "취업",
-        "topic": "데이터분석자격증 ADsP의 의미와 시험과목·수행 직무",
-        "intent": "데이터분석준전문가 ADsP는 어떤 자격증이며 무엇을 공부하고 어떤 직무를 수행하나요?",
-        "gap": "공식 본문의 3개 시험과목과 수행 직무를 표로 정리해 학습 범위를 확인하도록 합니다.",
+        "topic": "데이터분석자격증 ADsP의 시험과목과 관련 직무",
+        "intent": "데이터분석 준전문가 ADsP는 어떤 과목을 공부하며 어떤 직무 능력을 검정하나요?",
+        "gap": "공식 본문의 3개 시험과목과 직무 설명을 표로 정리해 학습 범위와 자격의 성격을 확인하도록 합니다.",
         "source_url": "https://mis.donga.ac.kr/mis/CMS/Contents/Contents.do?mCode=MN036",
         "verified_sources": [
           {
@@ -453,7 +841,7 @@
         ],
         "intent_results": [
           "https://mis.donga.ac.kr/mis/CMS/Contents/Contents.do?mCode=MN036",
-          "https://www0.invione.com/course/certification-training/000000005571"
+          "https://holix.com/course/certificate/GH66"
         ],
         "valid_until": null,
         "article_type": "information",
@@ -466,29 +854,29 @@
         "organic_provider": "codex_native_search",
         "organic_query": "데이터 분석 자격증",
         "organic_domains": [
+          "learn.microsoft.com",
           "mis.donga.ac.kr",
-          "www.tradeit.co.kr",
           "www.learningfit.co.kr",
           "mis.donga.ac.kr",
           "www.fis.kr",
-          "www0.invione.com",
           "www.jobkorea.co.kr",
-          "www.ajou.ac.kr",
           "yis.yonsei.ac.kr",
-          "ai.tu.ac.kr"
+          "ai.tu.ac.kr",
+          "holix.com",
+          "www.cku.ac.kr"
         ],
         "organic_results": [
+          {
+            "url": "https://learn.microsoft.com/ko-kr/credentials/certifications/data-analyst-associate/",
+            "domain": "learn.microsoft.com",
+            "title": "Microsoft 자격증: Power BI 데이터 분석 전문가 어소시에이트 - Certifications | Microsoft Learn",
+            "snippet": "# Microsoft 자격증: Power BI 데이터 분석 전문가 어소시에이트Microsoft Power BI 사용하여 데이터를 모델링, 시각화 및 분석하기 위한 비즈니스 및 기술 요구 사항에 부합하는 방법"
+          },
           {
             "url": "https://mis.donga.ac.kr/mis/CMS/Contents/Contents.do?mCode=MN035",
             "domain": "mis.donga.ac.kr",
             "title": "동아대학교 경영정보학과 > 데이터분석전문가(ADP > 자격증 정보 > 진로 및 취업",
             "snippet": "* 자격증 정보 ... 데이터 분석 전문가 자격검정 시험의 과목은 총 5과목으로 구성되어 있으며 데이터 이해 과목을 바탕으로 데이터 분석 기획, 데이터 분석, 데이터 시각화를"
-          },
-          {
-            "url": "https://www.tradeit.co.kr/",
-            "domain": "www.tradeit.co.kr",
-            "title": "Tradeit",
-            "snippet": "트레이드잇의 데이터 영업 방식 ... ## 검색이 아닌, 실거래 데이터. ... 개인 요금제 신용카드 결제 엔터프라이즈 요금제 CMS, 계좌이체 ... 거래 맥락까지 연결해 분석할 수"
           },
           {
             "url": "https://www.learningfit.co.kr/course/course_view.jsp?id=2587",
@@ -509,22 +897,10 @@
             "snippet": "필수자격요건 우대사항 | ○ (4급) 다음 중 한 가지에 해당하는 자 - 국가 또는 지방공무직 7급직 이상으로 근무경력이 있는 자 - 국가 또는 지방공무원 8급직으로"
           },
           {
-            "url": "https://www0.invione.com/course/certification-training/000000005571",
-            "domain": "www0.invione.com",
-            "title": "자격증 - ADsP 데이터분석 준전문가",
-            "snippet": "국가공인 데이터 분석 준전문가 자격증을 취득할 수 있다. ... ADsP의 용어, 수행방법 등에 대한 기본기를 탄탄히 다지고 응용하고싶은 직장인 3. ... 한국데이터베이스진흥원에서 실시하고 있는『데이터 분석"
-          },
-          {
             "url": "https://www.jobkorea.co.kr/User/Qstn/AnswerWrite?qstnNo=57115",
             "domain": "www.jobkorea.co.kr",
             "title": "데이터 분석 자격증 | 취업 Q&A",
             "snippet": "코딩 같은 것도 관심이 있지만, 희망 직무가 재무라서 데이터분석 자격증을 취득해보려고 합니다.사실 회계업무를 지원할 때 데이터분석 자격증이 큰 도움은 안된다고 들었지만, 그래도 관심이 있어서 코딩이랑"
-          },
-          {
-            "url": "https://www.ajou.ac.kr/ebiz/intro/certificate.do",
-            "domain": "www.ajou.ac.kr",
-            "title": "관련 자격증 | 아주대학교 경영인텔리전스학과",
-            "snippet": "SQLD는 데이터를 분석하고 처리할 수 있는 역량인 SQL의 개발자 자격을 증명하는 국가공인자격증이다. ... 다양한 데이터들을 대상으로 어떤 요소를 시각화 해야 하는지 정보 구조를 분석하며 어떤"
           },
           {
             "url": "https://yis.yonsei.ac.kr/area/board/free.do?articleNo=117599&attachNo=98607&mode=download",
@@ -537,20 +913,32 @@
             "domain": "ai.tu.ac.kr",
             "title": "학사관련 자격증 게시판목록 | 소프트웨어융합학과",
             "snippet": "# 학사관련 자격증 ... 빅데이터 분석 전문가는 빅데이터 이해 및 처리기술에 대한 기본 지식을 바탕으로 빅데이터 분석 기획, 빅데이터 분석, 빅데이터 시각화 업무를 수행하고 이를"
+          },
+          {
+            "url": "https://holix.com/course/certificate/GH66",
+            "domain": "holix.com",
+            "title": "ADsP 2주 합격 올인원 패스 : 2주 안에 데이터 분석 자격증 마스터하기 | 홀릭스(HOLIX)",
+            "snippet": "## 입문자를 위해 준비한 ADsP 국가공인 데이터분석 준전문가 자격증 강의입니다. ... ADsP 자격 검정 시험은 데이터에 대한 기본지식을 바탕으로 데이터분석 기획 및 데이터분석 등의 직무를"
+          },
+          {
+            "url": "https://www.cku.ac.kr/bbs/cook/1106/70456/download.do",
+            "domain": "www.cku.ac.kr",
+            "title": "□ ADsP 자격증 대비반",
+            "snippet": "○ (주요내용) 한국데이터베이스진흥원에서 실시하고 있는 데이터 분석 준전문가 (ADsP) 자격증 취득을 위한 과정입니다.데이터의 이해, 데이터 분석 기획, 데이터 분석의 내용을 이론과 실습 그리고 연습문제를 통해"
           }
         ],
         "dominant_result_ratio": 0.0,
         "score_components": {
           "demand": 27.03,
-          "organic_opportunity": 26.67,
-          "trend": -1.29,
+          "organic_opportunity": 30.0,
+          "trend": 0,
           "intent_fit": 0
         },
-        "trend_growth": -0.129,
+        "trend_growth": null,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
+        "trend_status": "unavailable",
         "selection_version": 6,
-        "selected_at": "2026-09-17T05:11:45.382541+00:00",
+        "selected_at": "2026-09-17T06:56:08.009730+00:00",
         "source": "category_market_v1",
         "keywords": [
           "데이터분석자격증"
@@ -560,10 +948,10 @@
           "version": 2,
           "query": "데이터분석자격증",
           "executed_query": "데이터 분석 자격증",
-          "topic": "데이터분석자격증 ADsP의 의미와 시험과목·수행 직무",
-          "intent": "데이터분석준전문가 ADsP는 어떤 자격증이며 무엇을 공부하고 어떤 직무를 수행하나요?",
+          "topic": "데이터분석자격증 ADsP의 시험과목과 관련 직무",
+          "intent": "데이터분석 준전문가 ADsP는 어떤 과목을 공부하며 어떤 직무 능력을 검정하나요?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
           "result_count": 10,
           "domain_count": 9,
           "dominant_ratio": 0.0,
@@ -572,23 +960,23 @@
             "query": "데이터분석자격증",
             "executed_query": "데이터 분석 자격증",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-17T05:11:45.382541+00:00",
-            "raw_sha256": "72e7e04a122c49bb9a1ed3bc8cd7adea14dbe5e0d2b216963ab4b09587d52883",
+            "checked_at": "2026-09-17T06:56:08.009730+00:00",
+            "raw_sha256": "fc3350837bd21bdab075a6bc98345bd24403c426d6ac1a8e4b444845a5a67049",
             "decisions": [
               {
                 "result_index": 0,
                 "relevant": true,
-                "quote": "데이터 분석 전문가 자격검정 시험의 과목은 총 5과목으로 구성되어 있으며"
+                "quote": "Microsoft 자격증: Power BI 데이터 분석 전문가 어소시에이트"
               },
               {
                 "result_index": 1,
-                "relevant": false,
-                "quote": "트레이드잇의 데이터 영업 방식"
+                "relevant": true,
+                "quote": "데이터 분석 전문가 자격검정 시험의 과목은 총 5과목으로 구성되어 있으며"
               },
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "국가공인 데이터 분석 준전문가(ADsP) 자격증"
+                "quote": "국가공인 데이터 분석 준전문가(ADsP) 자격증 학습"
               },
               {
                 "result_index": 3,
@@ -603,63 +991,65 @@
               {
                 "result_index": 5,
                 "relevant": true,
-                "quote": "국가공인 데이터 분석 준전문가 자격증을 취득할 수 있다."
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
                 "quote": "희망 직무가 재무라서 데이터분석 자격증을 취득해보려고 합니다."
               },
               {
-                "result_index": 7,
-                "relevant": false,
-                "quote": "SQL의 개발자 자격을 증명하는 국가공인자격증이다."
-              },
-              {
-                "result_index": 8,
+                "result_index": 6,
                 "relevant": false,
                 "quote": "붙임 1 선발단위별 응시자격요건 및 선발예정인원"
               },
               {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "학사관련 자격증 게시판목록"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "입문자를 위해 준비한 ADsP 국가공인 데이터분석 준전문가 자격증 강의입니다."
+              },
+              {
                 "result_index": 9,
                 "relevant": true,
-                "quote": "빅데이터 분석 전문가는 빅데이터 이해 및 처리기술에 대한 기본 지식을 바탕으로"
+                "quote": "데이터 분석 준전문가 (ADsP) 자격증 취득을 위한 과정입니다."
               }
             ]
           },
           "search_metrics": {
             "raw_result_count": 10,
             "canonical_result_count": 10,
-            "relevant_result_count": 6,
-            "relevant_site_count": 5,
+            "relevant_result_count": 8,
+            "relevant_site_count": 7,
             "relevant_indices": [
               0,
+              1,
               2,
               3,
               5,
-              6,
+              7,
+              8,
               9
             ],
-            "relevance_ratio": 0.6,
+            "relevance_ratio": 0.8,
             "duplicate_ratio": 0.0,
             "known_dominant_ratio": 0.0,
-            "site_concentration": 0.3333333333333333,
-            "organic_opportunity": 26.67
+            "site_concentration": 0.25,
+            "organic_opportunity": 30.0
           },
           "scope": "narrower_query",
-          "target_keyword": "ADsP 데이터분석준전문가 자격증",
+          "target_keyword": "데이터분석자격증 ADsP 시험과목과 직무",
           "matches": [
             {
               "result_index": 3,
               "quote": "데이터 분석 준전문가 자격검정 시험의 과목은 총 3과목으로 구성되어 있으며"
             },
             {
-              "result_index": 5,
-              "quote": "국가공인 데이터 분석 준전문가 자격증을 취득할 수 있다."
+              "result_index": 8,
+              "quote": "ADsP 자격 검정 시험은 데이터에 대한 기본지식을 바탕으로 데이터분석 기획 및 데이터분석 등의 직무를"
             }
           ]
         },
-        "score": 52.41,
+        "score": 57.03,
         "publish_eligible": false,
         "hold_reasons": [
           "narrower_or_unverified_search_intent"
@@ -668,158 +1058,25 @@
     ],
     "rejected": [
       {
-        "keyword": "이직확인서작성방법",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "low_search_relevance"
-        ],
-        "monthly_search": 2580,
-        "organic_provider": "codex_native_search",
-        "organic_query": "이직확인서 작성 방법",
-        "organic_results": [
-          {
-            "url": "https://law.go.kr/flDownload.do?flSeq=63160969&gubun=",
-            "domain": "law.go.kr",
-            "title": "(제2쪽)\n\n**작성 요령**\n\n1. 이직확인서(일용근로자용)는 「고용보험법」 제2조제6호",
-            "snippet": "**작성 요령** ... 근로자가 이직확인서의 발급을 청구한 경우 이를 내주지 아니하면 300만원 이하의 과태료가 부과되며(「고용보험법」 제118조제1항제3호), 실업급여를 부정하게 받으면 사업주도 연대하여 책임질 수 있습니다."
-          },
-          {
-            "url": "https://www.law.go.kr/LSW/lbook/lbFileDownload.do?flExt=pdf&lbookConflSeq=32121&lbookSeq=34963",
-            "domain": "www.law.go.kr",
-            "title": "작성 요령 (뒤쪽)\n\n1. 이직확인서(일용근로자용)는 법 제2조제6호에 따른 일용근로자를",
-            "snippet": "작성 요령 (뒤쪽) ... 근로자가 이직확인서의 발급을 청구한 경우 이를 내주지 아니하면 300만원 이하의 과태료가 부과될 수 있으며(「고용보험법」 제117조), 실업급여를 부정하게 받으면 사업주도 연대하여 책임질"
-          },
-          {
-            "url": "https://www.law.go.kr/flDownload.do?bylClsCd=110202&flSeq=160133899&gubun=",
-            "domain": "www.law.go.kr",
-            "title": "고용보험법 시행규칙[별지 제75호의3서식] <신설 2020. 8. 28.>",
-            "snippet": "구직급여를 신청하려는 자는 본 이직확인서 발급요청서의 절취선 윗부분을 작성하여 이직 전 사업장에 제출하며, 제출은 사업주에게 직접 또는 전자우편을 통하여 하시기 바랍니다. ... 본 이직확인서 발급요청서를"
-          },
-          {
-            "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200201&flNm=%5B%EB%B3%84%ED%91%9C+2%5D+%EC%A7%80%EB%B0%A9%EA%B3%A0%EC%9A%A9%EB%85%B8%EB%8F%99%EA%B4%80%EC%84%9C%EC%9D%98+%EC%9C%84%EC%9E%84%EC%A0%84%EA%B2%B0%EC%82%AC%ED%95%AD%28%EC%A0%9C14%EC%A1%B0+%EA%B4%80%EB%A0%A8%29&flSeq=152344349",
-            "domain": "www.law.go.kr",
-            "title": "<table id=\"e1\">",
-            "snippet": "이직확인서의 처리</b><br> ... - 수급자 재취업활동계획서 작성 지원<br>"
-          },
-          {
-            "url": "https://edi.nps.or.kr/cm/main/guide/edi_guide.pdf",
-            "domain": "edi.nps.or.kr",
-            "title": "2022년 국민연금 EDI서비스 가이드북",
-            "snippet": "◆ 이직으로 인한 상실(퇴사)자인 경우 이직확인서 작성 업무 ... ☞ 사업장(직장)가입자 자격취득신고서 “신고서 처리결과 확인 방법(P.33)” 참조"
-          },
-          {
-            "url": "https://v.daum.net/v/po5naGrR1J",
-            "domain": "v.daum.net",
-            "title": "이직확인서 작성방법, 처리기간 / 이직확인서 확인방법 | 자동차월드",
-            "snippet": "• 이직확인서 작성 방법: 사업주를 위한 상세 가이드 ... > 이직확인서 작성 방법: 사업주를 위한 상세 가이드"
-          },
-          {
-            "url": "https://2bbw.tistory.com/entry/%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95",
-            "domain": "2bbw.tistory.com",
-            "title": "이직확인서 작성 방법",
-            "snippet": "# 이직확인서 작성 방법 ... ## 이직확인서 작성 방법"
-          },
-          {
-            "url": "https://www.newnowinfo.com/unemployment/separation-report/",
-            "domain": "www.newnowinfo.com",
-            "title": "실업급여 이직확인서 — 요청·제출 방법·처리기간 | 지원금모아",
-            "snippet": "# 실업급여 이직확인서 — 요청·제출 방법·처리기간 ... 근로자가 직접 작성·제출하는 서식이 아닙니다."
-          },
-          {
-            "url": "https://im.ruavely.com/%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C-%EC%A1%B0%ED%9A%8C-%EB%B0%9C%EA%B8%89%EC%9A%94%EC%B2%AD%EC%84%9C-%EB%B0%8F-%EC%96%91%EC%8B%9D-%EC%9E%91%EC%84%B1-%EB%B0%A9%EB%B2%95/",
-            "domain": "im.ruavely.com",
-            "title": "이직확인서 조회, 발급요청서 및 양식 작성 방법 - 늬우스",
-            "snippet": "# 이직확인서 조회, 발급요청서 및 양식 작성 방법 ... 작성 요령이 필요하다면 고용노동부의 이직확인서 작성요령 자료 를 참고하면 항목별 체크가 빠릅니다."
-          },
-          {
-            "url": "https://metagirl.net/%EA%B3%A0%EC%9A%A9%EB%B3%B4%ED%97%98-%EC%9D%B4%EC%A7%81%ED%99%95%EC%9D%B8%EC%84%9C-%EC%9E%91%EC%84%B1-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%97%B7%EA%B0%88%EB%A6%AC%EC%A7%80-%EC%95%8A/",
-            "domain": "metagirl.net",
-            "title": "고용보험 이직확인서 작성 완벽 가이드: 헷갈리지 않고 쉽게 작성하는 방법 – 메타걸",
-            "snippet": "# 고용보험 이직확인서 작성 완벽 가이드: 헷갈리지 않고 쉽게 작성하는 방법 ... 이 글에서 설명드린 내용들을 꼼꼼히 확인하시고 실수 없이 이직확인서를 작성하셔서 쉽게 실업급여를 신청하시길"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "이직확인서작성방법",
-          "executed_query": "이직확인서 작성 방법",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
-          "raw_sha256": "7a818ea6214b488664e1c1a77589292563edfc61aa456a23fe6831a5ec9b2378",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "이직확인서(일용근로자용)"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "이직확인서(일용근로자용)"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "본 이직확인서 발급요청서의 절취선 윗부분을 작성"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "수급자 재취업활동계획서 작성 지원"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "2022년 국민연금 EDI서비스 가이드북"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "이직확인서 작성 방법: 사업주를 위한 상세 가이드"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "이직확인서 작성 방법"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "실업급여 이직확인서 — 요청·제출 방법·처리기간"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "이직확인서 조회, 발급요청서 및 양식 작성 방법"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "고용보험 이직확인서 작성 완벽 가이드: 헷갈리지 않고 쉽게 작성하는 방법"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "컴활2급필기",
+        "keyword": "안전관리자자격증",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://jumpup.onkpc.or.kr/e-kpc/front/course/view.jsp?pCodeMain=009&pCodeMiddle=003&pCodeSmall=003&pCrsCode=31408&pSqNo=13&pYear=2026",
-              "title": "(KPC)한국생산성본부 이러닝",
-              "excerpt_chars": 1734
+              "url": "https://www.jnsports.or.kr/board.es?act=view&bid=0002&list_no=7389&mid=a10502000000&tag=",
+              "title": "안전관리자 자격증 종류와 응시자격, 비전공자 준비 방법까지 한눈에 정리 | 자유게시판 | 열린마당",
+              "excerpt_chars": 5038
             },
             {
-              "url": "https://bukbu.seoulcareerup.or.kr/bukbu/edu/selectEduProgram.do?sch_class_code=C100151252",
-              "title": "북부여성발전센터",
-              "excerpt_chars": 5582
+              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+              "title": "www.meca.or.kr",
+              "excerpt_chars": 260
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
-            "code": "expired_information"
+            "code": "unsupported_claim"
           }
         }
       },
@@ -870,28 +1127,28 @@
             "snippet": "장례지도사 자격증 발급대장"
           },
           {
+            "url": "https://academy.prompie.com/qualifications/detail/rv12si9/",
+            "domain": "academy.prompie.com",
+            "title": "장례지도사 자격증 - 오늘학교 아카데미",
+            "snippet": "###### 장례지도사 은 대한민국재향군인회평생교육원 에서 시행되는 민간자격 입니다. ... ##### 자격증 소개"
+          },
+          {
             "url": "https://www.djsiseol.or.kr/portal/common/bbs_common/ypostUpload/3.pdf",
             "domain": "www.djsiseol.or.kr",
             "title": "장사 등에 관한 법률 시행규칙",
             "snippet": "③ 제2항에 따라 자격증을 발급받은 사람이 그 자격증을 분실 또는 훼손하거나 그 자격증의 기재사항 변경 등의 사유로 이를 재발급받으려는 경우에는 별지 제23호의6서식의 장례지도사 자격증 재발급신청서(전자문서로"
           },
           {
-            "url": "https://go.seoul.co.kr/news/newsView.php?id=20260911500165",
-            "domain": "go.seoul.co.kr",
-            "title": "강서구, 반려동물 장례지도사 양성한다 | 서울Pn",
-            "snippet": "과정을 수료하고 자격검정을 통과한 수강생에게는 한국동물장례협회가 발급하는 ‘반려동물장례지도사’ 민간자격증이 수여된다."
+            "url": "https://funeralcost.kr/blog/funeral-director-cost",
+            "domain": "funeralcost.kr",
+            "title": "장례지도사 비용 하는 일과 견적서 인건비 구조 정리 | 장례비용연구소",
+            "snippet": "민간 협회가 발급하는 유사 명칭의 수료증과 국가자격 장례지도사 자격증은 다릅니다. ... Image: 국가자격 장례지도사 자격증과 흰 장갑을 나란히 둔 정물 국가자격 여부는 발급 주체로 구분된다."
           },
           {
-            "url": "https://class.petforest.kr/course/course_view.jsp?id=206854",
-            "domain": "class.petforest.kr",
-            "title": "펫포레스트 교육센터",
-            "snippet": "· 본 과정은 유한대학교 학생 전용 반려동물 장례지도사 자격증 과정입니다."
-          },
-          {
-            "url": "https://www.hyunjinsn.com/business/business03.asp",
-            "domain": "www.hyunjinsn.com",
-            "title": "현진시닝",
-            "snippet": "## 현진시닝 궁중대렴 교육 이수자 및 장례지도사 자격증 소지자"
+            "url": "https://www.v-q.co.kr/home/curriculum/info.php?item=843",
+            "domain": "www.v-q.co.kr",
+            "title": "비전큐",
+            "snippet": "본 자격증은 자격기본법 제17조에 의거하여 한국직업능력연구원에 ... 장례지도사 어디서 발급하나요? ... 2020.07.01 | 장례지도사 | | 이노벤츠"
           }
         ],
         "search_review": {
@@ -899,8 +1156,8 @@
           "query": "장례지도사자격증",
           "executed_query": "장례지도사 자격증",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
-          "raw_sha256": "e8331fbdc0acea9044a4a19c6c5fe8a6b27de78e235788a712a6af02479b671e",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "raw_sha256": "06ae657fda4ab4ec6b6802c114dc1a2378c49efbc10ef75d32f1e22dd0fe3171",
           "decisions": [
             {
               "result_index": 0,
@@ -920,7 +1177,7 @@
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "장례지도사 자격증을 발급받으려는 사람"
+              "quote": "장례지도사 자격증을 발급받으려는 사람은"
             },
             {
               "result_index": 4,
@@ -934,23 +1191,23 @@
             },
             {
               "result_index": 6,
+              "relevant": false,
+              "quote": "대한민국재향군인회평생교육원 에서 시행되는 민간자격 입니다."
+            },
+            {
+              "result_index": 7,
               "relevant": true,
               "quote": "장례지도사 자격증 재발급신청서"
             },
             {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "‘반려동물장례지도사’ 민간자격증"
-            },
-            {
               "result_index": 8,
-              "relevant": false,
-              "quote": "유한대학교 학생 전용 반려동물 장례지도사 자격증 과정"
+              "relevant": true,
+              "quote": "민간 협회가 발급하는 유사 명칭의 수료증과 국가자격 장례지도사 자격증은 다릅니다."
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "현진시닝 궁중대렴 교육 이수자 및 장례지도사 자격증 소지자"
+              "quote": "본 자격증은 자격기본법 제17조에 의거하여 한국직업능력연구원에"
             }
           ]
         }
@@ -960,19 +1217,17 @@
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
+          "low_search_relevance"
         ],
         "monthly_search": 1940,
         "organic_provider": "codex_native_search",
         "organic_query": "청소년상담사 자격증",
         "organic_results": [
           {
-            "url": "https://www.lei.or.kr/m/license/license_29.asp",
-            "domain": "www.lei.or.kr",
-            "title": "청소년상담사 자격증 전액무료수강｜정식등록 자격증 1급, 2급",
-            "snippet": "이에 청소년을 대상으로 한 상담인력 고용은 계속적인 확대가 전망되고 있으며 특히 청소년과 관련된 직무에 취업이나 이직 희망자, 자원봉사를 희망하는 경우나 청소년 자녀가 있는 부모님들 역시"
+            "url": "https://www.global.ac.kr/user/nd85194.do",
+            "domain": "www.global.ac.kr",
+            "title": "글로벌사이버대학교 자격증 홈페이지 - 청소년상담사3급",
+            "snippet": "HOME> 국가공인자격증> 청소년상담사3급 ... 상담전문가를 위한 자격증으로 상담관련학과를 전공하여 학위를 취득하거나 상담실무경력이 있어야 하며 서류전형과 필기시험, 면접시험에 합격하고, 연수 100시간을 이수한 자에게 여성가족부 장관이 부여하는"
           },
           {
             "url": "https://www.bu.ac.kr/web/3682/subview.do",
@@ -981,16 +1236,28 @@
             "snippet": "청소년상담사 3급 자격증 시험과목 학점 전공구분 안내표 ... 이수과목이 아니라 시험과목임(필수 5과목, 선택 1과목) - 과목이수를 하지 않아도 청소년학전공자들은 시험에 응시할 자격이 주어짐 ... 청소년기본법시행령에"
           },
           {
+            "url": "https://grad.bdu.ac.kr/grad/sub05_02_01_01.do",
+            "domain": "grad.bdu.ac.kr",
+            "title": "청소년상담사 2급 | 국가자격증 | 자격증 | 학생서비스 | 대학원 | 부산디지털대학교",
+            "snippet": "청소년기본법(제22조 1항) 에 의거하여 실시되는 ‘청소년상담’과 관련된 국내 유일의 국가자격증으로, 청소년상담사 자격시험에 합격하고 청소년상담사 연수기관에서 실시하는 100시간 이상의 연수과정을 마친 사람에게 여성가족부장관이 부여하는 국가자격증 ..."
+          },
+          {
             "url": "https://counsel.sdu.ac.kr/counsel/cms/FR_CON/index.do?MENU_ID=250",
             "domain": "counsel.sdu.ac.kr",
             "title": "서울디지털대학교 상담심리학과 자격증 | 국가자격증 | 청소년상담사",
             "snippet": "청소년상담사란 청소년기본법(제22조 1항) 에 의거하여 실시되는 ‘청소년상담’과 관련된 국내 유일의 국가자격증으로, 청소년상담사 자격시험에 합격하고 청소년상담사 연수기관에서 실시하는 100시간 이상의 연수과정을 마친 사람에게 여성가족부장관이 부여하는 국가자격증입니다."
           },
           {
-            "url": "https://gse.mju.ac.kr/gse/2020/subview.do",
-            "domain": "gse.mju.ac.kr",
-            "title": "자격증",
-            "snippet": "상담기관에 따라서는 구인광고 응시자격에 상담심리사 자격증 소지자를 명시하기도 한다. ... 상담기법), 면접원리, 발달이론, 집단상담, 심리측정 및 평가, 이상심리, 성격심리, 사회복지실천(기술)론, 상담교육, 진로상담, 가족상담, 학업상담, 비행상담,"
+            "url": "https://www.global.ac.kr/user/nd11745.do",
+            "domain": "www.global.ac.kr",
+            "title": "글로벌사이버대학교 - 자격증 - 국가공인자격증 - 청소년상담사 3급",
+            "snippet": "청소년상담사 3급 테이블 자격증의 정의 수행직무, 자격취득절차, 응시자격기준, 합격기준, 시험과목, 소관부서, 실시기관, 관련전공, 관련문의로 구성 ... | 청소년 상담관련 분야의 상담 실무경력 및 기타 자격을"
+          },
+          {
+            "url": "https://prime.knou.ac.kr/bbs/yedu/2128/805194/artclView.do",
+            "domain": "prime.knou.ac.kr",
+            "title": "K2Web Wizard",
+            "snippet": "한국산업인력공단의 \"2026년도 제25회 청소년상담사 자격시험 시행계획 공고\"를 붙임과 같이 안내합니다. ... 청소년교육복지상담학과는 상담 관련 학과이기 때문에, 학과를 졸업하는 것만으로 시험 응시 자격이 충족됩니다. ... ※"
           },
           {
             "url": "https://www.bu.ac.kr/sites/web/files/2026_yoram/2026_yoram_02_09.pdf",
@@ -1015,18 +1282,6 @@
             "domain": "www.wee.go.kr",
             "title": "2025년도 청소년상담사 5기 보수교육 계획",
             "snippet": "담당하는 청소년상담사 자격증 취득자■ 보수교육 의무대상 기관(청소년기본법 시행규칙 제10조의3) ... - 한국청소년상담복지개발원, 청소년상담복지센터, 이주배경청소년지원센터, 청소년복지시설 ... 구분 이러닝 교육 | 교육비 25,000원 --- | ---"
-          },
-          {
-            "url": "https://www.koreanpsychology.or.kr/news/outside_employ_view.html?no=2988",
-            "domain": "www.koreanpsychology.or.kr",
-            "title": "(사)한국심리학회",
-            "snippet": "② 전문상담사 1 급 이상 자격 소지자 (한국상담학회 발행 자격증)③ 청소년상담사 1 급 이상 자격 소지자 (국가자격증)"
-          },
-          {
-            "url": "https://www.law.go.kr/LSW/flDownload.do?flNm=%5B%EB%B3%84%EC%A7%80+%EC%A0%9C8%ED%98%B8%EC%84%9C%EC%8B%9D%5D+%EC%B2%AD%EC%86%8C%EB%85%84%EC%83%81%EB%8B%B4%EC%82%AC%EC%9E%90%EA%B2%A9%EC%A6%9D%EC%9E%AC%EA%B5%90%EB%B6%80%EC%8B%A0%EC%B2%AD%EC%84%9C%0A&flSeq=87614373",
-            "domain": "www.law.go.kr",
-            "title": "[별지 제8호서식]\n청소년상담사 자격증 재교부신청서\n처리기간\n2일\n신\n성명\n주민등록번호\n―",
-            "snippet": "청소년상담사 자격증 재교부신청서 ... 「청소년기본법 시행규칙」 제9조제3항의 규정에 의하여 청소년상담사"
           }
         ],
         "search_review": {
@@ -1034,13 +1289,13 @@
           "query": "청소년상담사자격증",
           "executed_query": "청소년상담사 자격증",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
-          "raw_sha256": "9320839f38d02d16a098e23805e532f3c2b8e984f1b4cdd1dfb558b72dc879ef",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "raw_sha256": "dce20c569f1b8fd15f036f38762c99f40d99b65e7db25e953d1c48679bd10f60",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "청소년상담사 자격증 전액무료수강｜정식등록 자격증 1급, 2급"
+              "quote": "HOME> 국가공인자격증> 청소년상담사3급"
             },
             {
               "result_index": 1,
@@ -1050,388 +1305,174 @@
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "청소년상담사 자격시험에 합격하고 청소년상담사 연수기관에서 실시하는 100시간 이상의 연수과정을 마친 사람에게 여성가족부장관이 부여하는 국가자격증입니다."
+              "quote": "청소년상담사 자격시험에 합격하고 청소년상담사 연수기관에서 실시하는 100시간 이상의 연수과정을 마친 사람"
             },
             {
               "result_index": 3,
-              "relevant": false,
-              "quote": "상담기관에 따라서는 구인광고 응시자격에 상담심리사 자격증 소지자를 명시하기도 한다."
+              "relevant": true,
+              "quote": "청소년상담사 자격시험에 합격하고 청소년상담사 연수기관에서 실시하는 100시간 이상의 연수과정을 마친 사람"
             },
             {
               "result_index": 4,
+              "relevant": false,
+              "quote": "청소년상담사 3급 테이블 자격증의 정의"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "2026년도 제25회 청소년상담사 자격시험 시행계획 공고"
+            },
+            {
+              "result_index": 6,
               "relevant": false,
               "quote": "청소년상담사 3급 자격증"
             },
             {
-              "result_index": 5,
+              "result_index": 7,
               "relevant": false,
               "quote": "응답자 취득 상담 자격증"
             },
             {
-              "result_index": 6,
+              "result_index": 8,
               "relevant": false,
-              "quote": "청소년상담사들을 대상으로 청소년상담사 자격증을 제외한 소지하고 있는 상담관련 자격"
+              "quote": "청소년상담사 자격증을 제외한 소지하고 있는 상담관련 자격"
             },
             {
-              "result_index": 7,
+              "result_index": 9,
               "relevant": false,
               "quote": "2025년도 청소년상담사 5기 보수교육 계획"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "③ 청소년상담사 1 급 이상 자격 소지자 (국가자격증)"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "청소년상담사 자격증 재교부신청서"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "안전관리자자격증",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "low_search_relevance"
-        ],
-        "monthly_search": 11310,
-        "organic_provider": "codex_native_search",
-        "organic_query": "안전관리자 자격증",
-        "organic_results": [
-          {
-            "url": "https://www.korealms.co.kr/column/778",
-            "domain": "www.korealms.co.kr",
-            "title": "산업안전기사 자격증 총 정리(응시자격, 합격률, 시험일정, 자가진단) | 국민원격교육관리센터",
-            "snippet": "산업안전기사는 한국산업인력공단이 시행하는 국가기술자격으로, 제조·건설·서비스 등 산업현장에서 안전관리자 선임 요건 으로 인정되는 대표 자격증입니다."
-          },
-          {
-            "url": "https://oshri.kosha.or.kr/oshri/publication/researchReportSearch.do?articleNo=438640&attachNo=247520&mode=download",
-            "domain": "oshri.kosha.or.kr",
-            "title": "II. 안전관리자 자격기준 관련 법령 고찰",
-            "snippet": "5인 이상 300인 미만 사업장의 안전관리자의 자격 중 제3호·제4호 또는 제5호의 자격을 가진 자<br><br> ... <td>자격증<br>학력<br>자격증<br>학력+교육</td> ... 「교육법」에 의한 4년제 이공계대학 또는 이와 동등이상의 학교를"
-          },
-          {
-            "url": "https://glasswallet.com/blog/safety-manager-certification-cost-guide/",
-            "domain": "glasswallet.com",
-            "title": "안전관리자 자격증 비용, 응시료 5만4천원인데 학원비까지 얼마일까? | 유리지갑 (Glasswallet)",
-            "snippet": "산업안전보건법상 안전관리자로 선임될 수 있는 자격 요건 이 있고, 그 대표 경로가 산업안전산업기사 이상 또는 건설안전산업기사 이상입니다. ... 그래서 안전관리자 자격증 비용은 “응시료 5만4천원”이 아니라"
-          },
-          {
-            "url": "https://www.korealms.co.kr/column/616",
-            "domain": "www.korealms.co.kr",
-            "title": "산업안전기사와 건설안전기사, 뭐부터 딸까? 비교부터 응시자격까지 | 국민원격교육관리센터",
-            "snippet": "중대재해처벌법 이후 안전관리자 수요가 급증하면서 두 자격증 모두 채용시장의 핵심 카드가 됐습니다. ... 두 자격증 응시자격이 정말 같은가요?"
-          },
-          {
-            "url": "https://www.jnsports.or.kr/board.es?act=view&bid=0002&list_no=7389&mid=a10502000000&tag=",
-            "domain": "www.jnsports.or.kr",
-            "title": "안전관리자 자격증 종류와 응시자격, 비전공자 준비 방법까지 한눈에 정리 | 자유게시판 | 열린마당",
-            "snippet": "#### 안전관리자 자격증 종류와 응시자격, 비전공자 준비 방법까지 한눈에 정리 ... 같은 안전관리 분야라도 담당 업무와 필요한 전문지식이 다르기 때문에 진로에 맞는 자격증을 선택해야 효율적인"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49903729?logpath=21&rPageCode=SL&sc=611&sn=6",
-            "domain": "www.jobkorea.co.kr",
-            "title": "㈜가감디자인그룹 채용 - 안전관리자 모집(건설안전 자격증 필요) | 잡코리아",
-            "snippet": "# 안전관리자 모집(건설안전 자격증 필요) ... 안전관리자"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49859267",
-            "domain": "www.jobkorea.co.kr",
-            "title": "에스케이탑㈜ 채용 - [부산 강서구] 안전관리자(자격증 필수) 급구 | 잡코리아",
-            "snippet": "# [부산 강서구] 안전관리자(자격증 필수) 급구"
-          },
-          {
-            "url": "https://dept.sjcu.ac.kr/ko/dept/mechanicalnEgineering_certification.do?major_tab=1&sub_tab=00",
-            "domain": "dept.sjcu.ac.kr",
-            "title": "자격증아카데미 | 대학교",
-            "snippet": "·과정평가형 자격은 국가직무능력표준(NCS)을 기반으로 설계되어 지정된 교육·훈련과정을 충실히 이수한 후, 내·외부평가를 거쳐 일정 합격기준을 충족하는 교육훈련생에게 국가기술자격을 부여하는 제도입니다. ... 산업안전기사 - 영상자료을 이용하여 시행되며,"
-          },
-          {
-            "url": "https://cert.gisanara.com/2026/07/Safety-Manager.html",
-            "domain": "cert.gisanara.com",
-            "title": "안전관리자 자격증, 2026년 지금 취득해야 하는 이유 (산업안전기사·산업안전산업기사·산업안전지도사 완전정리) | 국가기술자격증 연구소",
-            "snippet": "법정 필수인력으로서의 안정적 고용: 안전관리자 선임은 법적 의무이므로, 자격증 소지자는 경기 변동에 비교적 덜 민감한 안정적 일자리를 확보할 수 있습니다. ... 안전관리자 자격증만 있으면 취업이"
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=52924568",
-            "domain": "www.saramin.co.kr",
-            "title": "[(주)조형기술개발] 골조전문건설업체 안전관리자 채용공고(안전관리 자격증 소지자) - 사람인",
-            "snippet": "# 골조전문건설업체 안전관리자 채용공고(안전관리 자격증 소지자) ... 골조전문건설업체 안전관리자 채용공고(안전관리 자격증 소지자)"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "안전관리자자격증",
-          "executed_query": "안전관리자 자격증",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
-          "raw_sha256": "ed6df027958e450b750555a10f2630ad311ea7a21d867c8077028f4749f46949",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "산업안전기사 자격증 총 정리(응시자격, 합격률, 시험일정, 자가진단)"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "II. 안전관리자 자격기준 관련 법령 고찰"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "그 대표 경로가 산업안전산업기사 이상 또는 건설안전산업기사 이상입니다."
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "산업안전기사와 건설안전기사, 뭐부터 딸까? 비교부터 응시자격까지"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "안전관리자 자격증 종류와 응시자격, 비전공자 준비 방법까지 한눈에 정리"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "안전관리자 모집(건설안전 자격증 필요)"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "[부산 강서구] 안전관리자(자격증 필수) 급구"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "산업안전기사 - 영상자료을 이용하여 시행되며,"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "안전관리자 자격증, 2026년 지금 취득해야 하는 이유 (산업안전기사·산업안전산업기사·산업안전지도사 완전정리)"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "골조전문건설업체 안전관리자 채용공고(안전관리 자격증 소지자)"
             }
           ]
         }
       },
       {
         "keyword": "컴퓨터자격증종류",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://license.kpc.or.kr/nasec/qlfint/qlfint/selectItqinfotchnlgyqc.do?pageKind=announcement",
-              "title": "license.kpc.or.kr",
-              "excerpt_chars": 273
-            },
-            {
-              "url": "https://license.korcham.net/co/examguide.do?cd=0102&mm=22",
-              "title": "종목소개 시험안내",
-              "excerpt_chars": 1364
-            },
-            {
-              "url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=325",
-              "title": "민간자격기본정보(정보기술자격(ITQ))-민간자격검색-자격정보-민간자격정보서비스",
-              "excerpt_chars": 2882
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://c.q-net.or.kr/cbq/introduce/organStdList.do",
-                  "title": "편성기준 정보 - 편성기준 안내 | 과정평가형자격",
-                  "excerpt_chars": 856
-                },
-                {
-                  "url": "https://www.bok.or.kr/portal/bbs/P0002243/view.do?depth=200472&menuNo=200472&nttId=11062962&oldMenuNo=201150&programType=newsData&relate=Y",
-                  "title": "CP분류표(2026.06.30기준) | 자금순환통계(상세) | 통계조사표 | 경제통계 | 업무별 정보 | 뉴스/자료 |  한국은행 홈페이지",
-                  "excerpt_chars": 486
-                },
-                {
-                  "url": "https://c.q-net.or.kr/cmn/info/comContentsPage.do?contentsId=A10B10C10",
-                  "title": "제도 소개 - 과정평가형자격 안내 | 과정평가형자격",
-                  "excerpt_chars": 964
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_rejected",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://license.kpc.or.kr/nasec/qlfint/qlfint/selectItqinfotchnlgyqc.do?pageKind=announcement",
-                  "title": "license.kpc.or.kr",
-                  "excerpt_chars": 273
-                },
-                {
-                  "url": "https://license.korcham.net/co/examguide.do?cd=0102&mm=22",
-                  "title": "종목소개 시험안내",
-                  "excerpt_chars": 1364
-                },
-                {
-                  "url": "https://www.pqi.or.kr/inf/qul/infQulBasDetail.do?qulId=325",
-                  "title": "민간자격기본정보(정보기술자격(ITQ))-민간자격검색-자격정보-민간자격정보서비스",
-                  "excerpt_chars": 2882
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            }
-          }
-        }
-      },
-      {
-        "keyword": "국가기술자격증종류",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
           "low_search_relevance"
         ],
-        "monthly_search": 2080,
+        "monthly_search": 2640,
         "organic_provider": "codex_native_search",
-        "organic_query": "국가기술자격증 종류",
+        "organic_query": "컴퓨터 자격증 종류",
         "organic_results": [
           {
-            "url": "https://www.mods.go.kr/cpi/",
-            "domain": "www.mods.go.kr",
-            "title": "소비자물가지수",
-            "snippet": "이 누리집은 대한민국 공식 전자정부 누리집입니다. ... * 의류 및 신발 ... * 국가데이터처, 추석 일일물가조사로 민생안정대책 신속 지원 2026-09-10 ... * 지수의 분류 및"
+            "url": "https://www.ptu.ac.kr/bbs/www/323/20636/download.do",
+            "domain": "www.ptu.ac.kr",
+            "title": "정보통신학과(전공) 편람",
+            "snippet": "5) 컴퓨터 시스템 운영전문가 ... 취득 가능 자격증 종류 ... LPIC (국제리눅스 자격증) 등 ... 졸업 후 진로에 따른 권장 이수 교과목"
           },
           {
-            "url": "https://www.goe.go.kr/resource/old/BBSMSTR_000000030136/BBS_202502120554578480.pdf",
-            "domain": "www.goe.go.kr",
-            "title": "<C3D6C1BE2D32303235C7D0B3E2B5B520C7D0B1B3BBFDC8B0B1E2B7CFBACE20B1E2C0E7BFE4B7C928B0EDB5EEC7D0B1B32920303231322E687770>",
-            "snippet": "※ 동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함.※ 교육정보시스템의 [학생생활-자격증및NCS이수상황-자격증코드관리]의 [등록]에서 자격증을 [조회]하면 국가공인 민간자격증이 모두 검색되므로 반드시 기술 관련 자격증([참고자료"
+            "url": "https://www.ptu.ac.kr/bbs/www/323/4901/download.do",
+            "domain": "www.ptu.ac.kr",
+            "title": "학과(전공) 교육 체계",
+            "snippet": "취득 가능 자격증 종류 ... 구분 None | 관련 교과목 1학년 | | 2학년 | | 3학년 | | 4학년 | --- | --- |"
           },
           {
-            "url": "https://www.kostat.go.kr/index.es?sid=b7",
-            "domain": "www.kostat.go.kr",
-            "title": "소비자물가지수",
-            "snippet": "* 의류 및 신발 ... * 유일한 인플레이션(물가상승률) 측정 수단이다? ... 소비자물가지수 보는법 ... * 등락률 * 지수의 분류 및 종류"
+            "url": "https://www.csu.ac.kr/api/file/getPdf?destFilename=undefined&path=board%2F202011%2F%2F9d533c25-3643-4b60-9545-c2237b4ee562.pdf",
+            "domain": "www.csu.ac.kr",
+            "title": "② 컴퓨터 자격증 인정과목 현황 :",
+            "snippet": "관련규정(학사내규 제56조 2항 6호) : 컴퓨터 관련과목을 4학점이상 이수하거나 전산관련 국가 자격증을 취득한 자로서 해당 컴퓨터 관련과목 및 전산 관련 국가자격증은 별표와 같다. ... ㄴ)"
           },
           {
-            "url": "https://clik.nanet.go.kr/clikr-collection/policyinfo/202/1010/2015/CLIKC6983770427670776_attach_5.pdf",
-            "domain": "clik.nanet.go.kr",
-            "title": "<3135303331375FC7D0B1B3BBFDC8B0B1E2B7CFBACE28C1DFB0EDB5EEC7D0B1B3295F766572322E687770>",
-            "snippet": "※ 동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함.※ 고등학교 교육정보시스템의 [학생생활]-[자격증및인증취득상황]-[자격증코드관리]에서 {추가}로 등록 시 자격증을 [조회]하면 국가공인 민간자격증이 모두 검색되므로 반드시"
+            "url": "https://lib1.mods.go.kr/dl_image2/IMG/02/000000005371/SERVICE/000000005371_01.PDF",
+            "domain": "lib1.mods.go.kr",
+            "title": "《보기》\n\n<table id=\"e1\">\n<tr>\n<th>자격증 유형</th>\n<th>자격증",
+            "snippet": "<th>자격증의 종류</th> ... <td>▶ 용접, 유체기계, 산업기계, 건설기계, 공조냉동기계, 발송배전, 건축전기설비, 자동차정비, 자동차검사, 보일러, 금속, 정보통신, 토질및기초, 토목구조, 도로및공항, 수자원개발, 상하수도, 토목시공, 측량및지형공간정보, 건축구조, 건축기계설비,"
           },
           {
-            "url": "https://community.linkareer.com/employment_data/4779715",
-            "domain": "community.linkareer.com",
-            "title": "취업이 잘되는 국가기술자격증 2025 (자격증 난이도, 순위, 종류, 추천) - 링커리어 커뮤니티",
-            "snippet": "# 취업이 잘되는 국가기술자격증 2025 (자격증 난이도, 순위, 종류, 추천) ... 국가기술자격증은 한국산업인력공단(HRD)에서 관리하는 공인 자격시험으로, 취업, 승진, 채용 가산점 등 다양한 혜택을 제공합니다."
+            "url": "https://journal.kci.go.kr/kkits/archive/articlePdf?artiId=ART001569302",
+            "domain": "journal.kci.go.kr",
+            "title": "<5B303730355D32303131B3E25FC1A636B1C75FC1A633C8A35FB3EDB9AEC1F628BCF6C1A4292E687770>",
+            "snippet": "또한 전산회계 자격증의 경우 회계분야 지식과 함께 컴퓨터를 사용한 관련 소프트웨어 활용능력에 대한 평가이므로 실질적으로 주요 사무능력 관련 자격증의 거의 모두가 실질적으로 컴퓨터 및 정보화와"
           },
           {
-            "url": "https://omc.kr/40",
-            "domain": "omc.kr",
-            "title": "국가기술자격증 종류, 처음 고를 때 이렇게 줄이면 됩니다 | 자격시험노트",
-            "snippet": "# 국가기술자격증 종류, 처음 고를 때 이렇게 줄이면 됩니다 ... 얼마 전 상담에서 한 수강생이 국가기술자격증 종류를 전부 뽑아 와서 “이 중에 뭐가 제일 좋냐”고"
+            "url": "https://www.keyzard.cc/kato2x/nb/224003847272",
+            "domain": "www.keyzard.cc",
+            "title": "컴퓨터 자격증 종류 분야별로 총 정리",
+            "snippet": "# 컴퓨터 자격증 종류 분야별로 총 정리 ... 취업이나 이직을 준비하는 분들뿐 아니라 대학생, 공무원 준비생까지 다양한 사람들이 관련 자격증에 도전하고 있습니다."
           },
           {
-            "url": "https://www.nanura.org/board_sch/bbs_download.php?bbs_lang=&code=data&dn=1&fn=3&no=36136&sd=..%2FbbsDown%2Fdata",
-            "domain": "www.nanura.org",
-            "title": "<C0DBBEF72D32303234C7D0B3E2B5B520C7D0B1B3BBFDC8B0B1E2B7CFBACE20B1E2C0E7BFE4B7C928B0EDB5EEC7D0B1B32920303230382E687770>",
-            "snippet": "국가공인 민간자격증이 모두 검색되므로 반드시 기술 관련 자격증([참고자료 2] 참조)인지 확인 후 ... 구분 자격증 | 명칭 또는 종류 정보기술자격(ITQ)A등급-한글엑셀 | 번호 또는 내용 A001-2024103-002317"
+            "url": "https://notes4351.tistory.com/39",
+            "domain": "notes4351.tistory.com",
+            "title": "컴퓨터 자격증 종류 및 취득 시 유리한 취업 분야 총정리",
+            "snippet": "이 글에서는 컴퓨터 자격증 종류와 각 자격증이 유리한 취업 분야, 그리고 강남에서 후기가 좋은 컴퓨터 학원까지 정리해드릴게요. ... * 특징: 포토샵, 일러스트 등 디자인 소프트웨어"
           },
           {
-            "url": "https://www.onlyt.co.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyNTAxMDkzYmQwYTZhZWRjMGM5IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwNjI0ZTlkMTc1MGI4ODRjNyI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDYyNDYyYjdkZjQ1ZGIxYWUiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjZhMTg0MGYxZjIwZDIiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
-            "domain": "www.onlyt.co.kr",
-            "title": "<C3D6C1BE2D32303235C7D0B3E2B5B520C7D0B1B3BBFDC8B0B1E2B7CFBACE20B1E2C0E7BFE4B7C928B0EDB5EEC7D0B1B32920303231322E687770>",
-            "snippet": "<자격증 구 분 | 취득상황> ➊ 명칭 또는 종류 | ➋ 번호 또는 내용 | ➌ 취득연월일 | ➍ 발급기관 --- | --- | ---"
+            "url": "https://myinfoshare4.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%A2%85%EB%A5%98%C2%B7%EB%82%9C%EC%9D%B4%EB%8F%84-%EC%B4%9D%EC%A0%95%EB%A6%AC%EF%BD%9C40%C2%B750%EB%8C%80%EC%97%90%EA%B2%8C-%EC%B6%94%EC%B2%9C%ED%95%A0-%EB%A7%8C%ED%95%9C-%EC%9E%90%EA%B2%A9%EC%A6%9D%EC%9D%80",
+            "domain": "myinfoshare4.tistory.com",
+            "title": "컴퓨터 자격증 종류·난이도 총정리｜40·50대에게 추천할 만한 자격증은?",
+            "snippet": "# 컴퓨터 자격증 종류·난이도 총정리｜40·50대에게 추천할 만한 자격증은? ... 컴퓨터 자격증 종류·난이도 총정리｜40·50대에게 추천할 만한 자격증은? ... 그래서 오늘은 40·50대에게 적합한 자격증과 난이도를 중심으로, 국가공인·직무"
           },
           {
-            "url": "https://yschungmu.hs.jne.kr/data/attach_data/yeosu/yschungmu_hs/k2board/na/bbs_157440/ntt_1800627881/doc_c4fbv626f%3D28vd5%3D45vc2%3D81vd3%3Dffe7vdaacv63a6_v8724.pdf",
-            "domain": "yschungmu.hs.jne.kr",
-            "title": "<C3D6C1BE2D32303235C7D0B3E2B5B520C7D0B1B3BBFDC8B0B1E2B7CFBACE20B1E2C0E7BFE4B7C928B0EDB5EEC7D0B1B32920303231322E687770>",
-            "snippet": "※ 동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함.※ 교육정보시스템의 [학생생활-자격증및NCS이수상황-자격증코드관리]의 [등록]에서 자격증을 [조회]하면 국가공인 민간자격증이 모두 검색되므로 반드시 기술 관련 자격증([참고자료"
+            "url": "https://magazine-k.tistory.com/4652?category=738744",
+            "domain": "magazine-k.tistory.com",
+            "title": "컴퓨터 자격증 종류: 취업 활용도, 종류별 난이도 및 국제공인 자격증",
+            "snippet": "* * * * ## 컴퓨터 자격증 종류: 취업 활용도, 종류별 난이도 및 국제공인 자격증 ... ### 컴퓨터 자격증 종류: 취업 활용도, 종류별 난이도 및"
           },
           {
-            "url": "https://gong.knconects.com/board/file/9/%28%EB%B6%99%EC%9E%841%29%202025%EB%85%84%EB%8F%84%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%207%EA%B8%89%20%EA%B3%B5%EC%B1%84%20%EC%A0%9C2%EC%B0%A8%EC%8B%9C%ED%97%98%20%EC%9D%BC%EC%8B%9C%20%EC%9E%A5%EC%86%8C%20%EB%B0%8F%20%EC%9D%91%EC%8B%9C%EC%9E%90%20%EC%A4%80%EC%88%98%EC%82%AC%ED%95%AD.pdf",
-            "domain": "gong.knconects.com",
-            "title": "[참고] 국가기술자격증 실시간 조회 실패 시 증빙서류 제출방법[예시]",
-            "snippet": "※ 가산점 수정(자격증 종류)이 필요한 경우 등록된 가산점을 삭제한 후 다시 등록하시기 바랍니다. ... 정부24 ‘국가기술자격증발급’ → 큐넷 자격증발급 신청 사이트: 상장형 자격증 발급"
+            "url": "https://shiningsense.com/3350",
+            "domain": "shiningsense.com",
+            "title": "컴퓨터 자격증 종류 완벽 정리｜국가공인 vs 국제공인, 코딩 자격증까지 총정리",
+            "snippet": "# 컴퓨터 자격증 종류 완벽 정리｜국가공인 vs 국제공인, 코딩 자격증까지 총정리 ... 취업 경쟁력 상승, 이직 시 스펙 강화, 실무 능력 향상 등 다양한 목적에"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "국가기술자격증종류",
-          "executed_query": "국가기술자격증 종류",
+          "query": "컴퓨터자격증종류",
+          "executed_query": "컴퓨터 자격증 종류",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
-          "raw_sha256": "1d7a11e72b137906cb992e86b6cb5d1ca7cbfbdd13c6fdc26c80c3bd65a15397",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "raw_sha256": "94d7de09a99207c4166e718d9d0fd2e1fb9d547ae555881d6c72e033409ccaec",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "국가데이터처, 추석 일일물가조사로 민생안정대책 신속 지원"
+              "quote": "정보통신학과(전공) 편람"
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함."
+              "quote": "학과(전공) 교육 체계"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "소비자물가지수 보는법"
+              "quote": "컴퓨터 자격증 인정과목 현황"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함."
+              "quote": "용접, 유체기계, 산업기계, 건설기계"
             },
             {
               "result_index": 4,
-              "relevant": true,
-              "quote": "취업이 잘되는 국가기술자격증 2025 (자격증 난이도, 순위, 종류, 추천)"
+              "relevant": false,
+              "quote": "전산회계 자격증의 경우 회계분야 지식과 함께"
             },
             {
               "result_index": 5,
               "relevant": true,
-              "quote": "국가기술자격증 종류, 처음 고를 때 이렇게 줄이면 됩니다"
+              "quote": "컴퓨터 자격증 종류 분야별로 총 정리"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "명칭 또는 종류 정보기술자격(ITQ)A등급-한글엑셀"
+              "relevant": true,
+              "quote": "컴퓨터 자격증 종류 및 취득 시 유리한 취업 분야 총정리"
             },
             {
               "result_index": 7,
-              "relevant": false,
-              "quote": "➊ 명칭 또는 종류 | ➋ 번호 또는 내용 | ➌ 취득연월일 | ➍ 발급기관"
+              "relevant": true,
+              "quote": "컴퓨터 자격증 종류·난이도 총정리"
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함."
+              "relevant": true,
+              "quote": "컴퓨터 자격증 종류: 취업 활용도, 종류별 난이도 및 국제공인 자격증"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "국가기술자격증 실시간 조회 실패 시 증빙서류 제출방법"
+              "relevant": true,
+              "quote": "컴퓨터 자격증 종류 완벽 정리｜국가공인 vs 국제공인, 코딩 자격증까지 총정리"
             }
           ]
         }
@@ -1440,6 +1481,10 @@
         "keyword": "SQL자격증",
         "reason": "search quality insufficient",
         "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results",
           "dominant_search_results"
         ],
         "monthly_search": 4990,
@@ -1512,13 +1557,13 @@
           "query": "SQL자격증",
           "executed_query": "SQL 자격증",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
           "raw_sha256": "63cc9d6f1f262a9426b15e723af5ce477fe7c5cb2e81439e3c6e96dbf0b16971",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "SQL 실행 순서 SQL 기본 기출 #21893"
+              "quote": "SQL 기본 SQL 실행 순서 난이도 2 MCQ"
             },
             {
               "result_index": 1,
@@ -1528,7 +1573,7 @@
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "SQL(Structured Query Language)의 기본지식 및 활용능력을 검증하고 자격을 부여함"
+              "quote": "기본지식 및 활용능력을 검증하고 자격을 부여함"
             },
             {
               "result_index": 3,
@@ -1557,13 +1602,146 @@
             },
             {
               "result_index": 8,
-              "relevant": true,
-              "quote": "SQL 개발자 (SQLD) 자격증 따기 (2024년 개정)"
+              "relevant": false,
+              "quote": "Part.3-1 SQL 기본 2"
             },
             {
               "result_index": 9,
+              "relevant": false,
+              "quote": "Part.2-1 데이터 모델링의 이해"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "국가기술자격증종류",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 2080,
+        "organic_provider": "codex_native_search",
+        "organic_query": "국가기술자격증 종류",
+        "organic_results": [
+          {
+            "url": "https://www.mods.go.kr/cpi/",
+            "domain": "www.mods.go.kr",
+            "title": "소비자물가지수",
+            "snippet": "이 누리집은 대한민국 공식 전자정부 누리집입니다. ... * 의류 및 신발 ... * 국가데이터처, 추석 일일물가조사로 민생안정대책 신속 지원 2026-09-10 ... * 지수의 분류 및"
+          },
+          {
+            "url": "https://www.goe.go.kr/resource/old/BBSMSTR_000000030136/BBS_202502120554578480.pdf",
+            "domain": "www.goe.go.kr",
+            "title": "<C3D6C1BE2D32303235C7D0B3E2B5B520C7D0B1B3BBFDC8B0B1E2B7CFBACE20B1E2C0E7BFE4B7C928B0EDB5EEC7D0B1B32920303231322E687770>",
+            "snippet": "※ 동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함.※ 교육정보시스템의 [학생생활-자격증및NCS이수상황-자격증코드관리]의 [등록]에서 자격증을 [조회]하면 국가공인 민간자격증이 모두 검색되므로 반드시 기술 관련 자격증([참고자료"
+          },
+          {
+            "url": "https://www.pia.ac.kr/data/sub03/20240829105856.pdf",
+            "domain": "www.pia.ac.kr",
+            "title": "2025학년도 모집요강",
+            "snippet": "[표1] 고등학교 동일계 학과 및 국가기술자격증 종목학 과 | 고등학교 동일계 학과 | 국가기술 자격증의 종류 및 종목"
+          },
+          {
+            "url": "https://glasswallet.com/blog/national-technical-certificate-guide/",
+            "domain": "glasswallet.com",
+            "title": "국가기술자격증 500종목, 기능사부터 기술사까지 내가 딸 수 있는 등급은? | 유리지갑 (Glasswallet)",
+            "snippet": "## 국가기술자격증 종류: 인기 분야 TOP 10 ... 대부분의 국가기술자격증은 유효기간이 없는 영구 자격입니다."
+          },
+          {
+            "url": "https://clik.nanet.go.kr/clikr-collection/policyinfo/202/1010/2015/CLIKC6983770427670776_attach_5.pdf",
+            "domain": "clik.nanet.go.kr",
+            "title": "<3135303331375FC7D0B1B3BBFDC8B0B1E2B7CFBACE28C1DFB0EDB5EEC7D0B1B3295F766572322E687770>",
+            "snippet": "※ 동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함.※ 고등학교 교육정보시스템의 [학생생활]-[자격증및인증취득상황]-[자격증코드관리]에서 {추가}로 등록 시 자격증을 [조회]하면 국가공인 민간자격증이 모두 검색되므로 반드시"
+          },
+          {
+            "url": "https://q-net.or.kr/qlf006.do?gId=&gSite=Q&id=qlf00601",
+            "domain": "q-net.or.kr",
+            "title": "자격증 진위확인 | Q-net",
+            "snippet": "자격증 종류,성명,생년월일,자격증번호,발급(등록)연월일,자격증내지번호 항목 순으로 구분된 자격증진위확인 입력 안내표 ... 국가기술자격증 취득사항의 확인이 중요한 사항일 경우에는 반드시 한국산업인력공단에 문서로 조회하시기 바랍니다."
+          },
+          {
+            "url": "https://community.linkareer.com/employment_data/4779715",
+            "domain": "community.linkareer.com",
+            "title": "취업이 잘되는 국가기술자격증 2025 (자격증 난이도, 순위, 종류, 추천) - 링커리어 커뮤니티",
+            "snippet": "# 취업이 잘되는 국가기술자격증 2025 (자격증 난이도, 순위, 종류, 추천) ... 국가기술자격증은 한국산업인력공단(HRD)에서 관리하는 공인 자격시험으로, 취업, 승진, 채용 가산점 등 다양한 혜택을 제공합니다."
+          },
+          {
+            "url": "https://omc.kr/40",
+            "domain": "omc.kr",
+            "title": "국가기술자격증 종류, 처음 고를 때 이렇게 줄이면 됩니다 | 자격시험노트",
+            "snippet": "# 국가기술자격증 종류, 처음 고를 때 이렇게 줄이면 됩니다 ... 얼마 전 상담에서 한 수강생이 국가기술자격증 종류를 전부 뽑아 와서 “이 중에 뭐가 제일 좋냐”고"
+          },
+          {
+            "url": "https://academics.cu.ac.kr/home/board/biomedi/safety/notice/24536/download/file/16970",
+            "domain": "academics.cu.ac.kr",
+            "title": "2025년도 안전보건공단 신입직 채용 공고",
+            "snippet": "구분 기술사 | 가산점 비율 5% | 자격증 종류 정보관리, 컴퓨터시스템응용 --- | --- | --- 구분 기능장 | 가산점 비율 3% | 자격증 종류"
+          },
+          {
+            "url": "https://www.nanura.org/board_sch/bbs_download.php?bbs_lang=&code=data&dn=1&fn=3&no=36136&sd=..%2FbbsDown%2Fdata",
+            "domain": "www.nanura.org",
+            "title": "<C0DBBEF72D32303234C7D0B3E2B5B520C7D0B1B3BBFDC8B0B1E2B7CFBACE20B1E2C0E7BFE4B7C928B0EDB5EEC7D0B1B32920303230382E687770>",
+            "snippet": "국가공인 민간자격증이 모두 검색되므로 반드시 기술 관련 자격증([참고자료 2] 참조)인지 확인 후 ... 구분 자격증 | 명칭 또는 종류 정보기술자격(ITQ)A등급-한글엑셀 | 번호 또는 내용 A001-2024103-002317"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "국가기술자격증종류",
+          "executed_query": "국가기술자격증 종류",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "raw_sha256": "a083e9773db7626e58595621507311ebeca50327b4454c5edb28a792ca548daa",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "국가데이터처, 추석 일일물가조사로 민생안정대책 신속 지원"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함."
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "고등학교 동일계 학과 및 국가기술자격증 종목"
+            },
+            {
+              "result_index": 3,
               "relevant": true,
-              "quote": "SQL 개발자 (SQLD) 자격증 따기 (2024년 개정)"
+              "quote": "국가기술자격증 500종목, 기능사부터 기술사까지 내가 딸 수 있는 등급은?"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "동일 명칭 또는 종류의 자격증이더라도 등급이 다른 경우 취득한 순서대로 입력함."
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "자격증진위확인 입력 안내표"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "취업이 잘되는 국가기술자격증 2025 (자격증 난이도, 순위, 종류, 추천)"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "국가기술자격증 종류, 처음 고를 때 이렇게 줄이면 됩니다"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "2025년도 안전보건공단 신입직 채용 공고"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "국가공인 민간자격증이 모두 검색되므로 반드시 기술 관련 자격증"
             }
           ]
         }
@@ -1572,9 +1750,8 @@
         "keyword": "BIM자격증",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "insufficient_relevant_results",
           "insufficient_relevant_sites",
-          "low_search_relevance",
+          "concentrated_search_results",
           "dominant_search_results"
         ],
         "monthly_search": 1910,
@@ -1647,17 +1824,17 @@
           "query": "BIM자격증",
           "executed_query": "BIM 자격증",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-17T05:11:45.382541+00:00",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
           "raw_sha256": "77580eb5c8539eed69a7f61435b4ac8a54b0776b864a7b30d4fc3a655bab1961",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": false,
+              "relevant": true,
               "quote": "BIM전문가 (건축)1급 자격증응시료 표"
             },
             {
               "result_index": 1,
-              "relevant": false,
+              "relevant": true,
               "quote": "BIM전문가 (토목)1급 자격증응시료 표"
             },
             {
@@ -1667,7 +1844,7 @@
             },
             {
               "result_index": 3,
-              "relevant": false,
+              "relevant": true,
               "quote": "자격(종목)명 : BIM운용전문가(건축)"
             },
             {
@@ -1692,16 +1869,219 @@
             },
             {
               "result_index": 8,
-              "relevant": false,
+              "relevant": true,
               "quote": "2026년 정시 2회 BIM전문가 2급 실기시험의 최종 합격자 발표 안내드립니다."
             },
             {
               "result_index": 9,
-              "relevant": false,
+              "relevant": true,
               "quote": "2026년 정시 1회 BIM전문가 2급 실기시험의 최종 합격자 발표 안내드립니다."
             }
           ]
         }
+      },
+      {
+        "keyword": "엑셀자격증",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance"
+        ],
+        "monthly_search": 7550,
+        "organic_provider": "codex_native_search",
+        "organic_query": "엑셀 자격증",
+        "organic_results": [
+          {
+            "url": "https://www.corrections.go.kr/bbs/immigration/226/493584/download.do",
+            "domain": "www.corrections.go.kr",
+            "title": "□ 길찾기 : ITQ(엑셀) 자격증 과정, 글로벌이중언어강사 양성과정, 운전면허 필기시험 대비반, 부모교육(다문화가족진학설명회), 취업기초소양교육, 온라인 검정고시",
+            "snippet": "□ 길찾기 : ITQ(엑셀) 자격증 과정, 글로벌이중언어강사 양성과정, 운전면허 필기시험 대비반, 부모교육(다문화가족진학설명회), 취업기초소양교육, 온라인 검정고시"
+          },
+          {
+            "url": "https://www.oppadu.com/functions/%EC%97%91%EC%85%80-exact-%ED%95%A8%EC%88%98/",
+            "domain": "www.oppadu.com",
+            "title": "엑셀 EXACT 함수 사용법 - 오빠두엑셀",
+            "snippet": "엑셀 EXACT 함수는 두 텍스트의 대/소문자까지 구분해 정확한 일치 여부를 확인 하는 함수입니다. ... EXACT 함수는 인수로 셀을 입력한 경우 셀 서식은 무시하고 실제 값만"
+          },
+          {
+            "url": "https://excel.yesform.com/xls/100128545.html",
+            "domain": "excel.yesform.com",
+            "title": "입사지원서 무료 양식 다운로드 - 자격증 포함 예시 엑셀양식 - 입력만 하면 자동 계산되는 엑셀 템플릿을 찾고 계신가요? 예스폼에서는 최신 자동화 수식을 적용한 다양한 엑셀 양식을 제공합니다.",
+            "snippet": "입사지원서 사진 (3x4cm) 성명 한글 영문 이 메 일 연 락 처 주소 학력사항 기간 학 교 명 전 공 학 점 졸업구분 경력사항 기간"
+          },
+          {
+            "url": "https://excel.yesform.com/xls/100381369.html",
+            "domain": "excel.yesform.com",
+            "title": "직원 자격증 관리대장 엑셀양식 - 입력만 하면 자동 계산되는 엑셀 템플릿을 찾고 계신가요? 예스폼에서는 최신 자동화 수식을 적용한 다양한 엑셀 양식을 제공합니다.",
+            "snippet": "엑셀로 직원 자격증 관리대장을 만들 때는 각 자격증의 유효기간을 정확히 입력하고, 정기적으로 갱신 사항을 체크하여 법적 요구사항을 준수하는 것이 중요합니다. ... 이 문서는 기업의 총무"
+          },
+          {
+            "url": "https://excel.yesform.com/xls/100150413.html",
+            "domain": "excel.yesform.com",
+            "title": "영문 이력서(희망조건/자격증/수상/역량) 엑셀양식 - 입력만 하면 자동 계산되는 엑셀 템플릿을 찾고 계신가요? 예스폼에서는 최신 자동화 수식을 적용한 다양한 엑셀 양식을 제공합니다.",
+            "snippet": "자기소개서 이력서 구직 취업 경력 학력 자격증 수상 작성법 양식 인사 지원서 직무 능력 특기 ... 이력서에는 개인 정보, 학력 사항, 경력 사항, 자격증, 수상"
+          },
+          {
+            "url": "https://excel.yesform.com/xls/100375125.html",
+            "domain": "excel.yesform.com",
+            "title": "이력서(자격증 및 특기사항) 엑셀양식 - 입력만 하면 자동 계산되는 엑셀 템플릿을 찾고 계신가요? 예스폼에서는 최신 자동화 수식을 적용한 다양한 엑셀 양식을 제공합니다.",
+            "snippet": "채용 과정에서 지원자의 정보를 체계적으로 정리하여 인사 담당자가 쉽게 검토할 수 있도록 돕는 이력서 양식으로, 지원자의 기초자료와 학력, 자격증을 명확하게 정리하여 인사 관리의 효율성을 높이고,"
+          },
+          {
+            "url": "https://sports.or.kr/sports/cmmn/file/fileDown.do?atchFileId=574caa325123430ea3f7721cbb968ff9&fileSn=1&menuNo=200027",
+            "domain": "sports.or.kr",
+            "title": "자격 | 자격증 | ✓ | 5점 | • 컴퓨터 활용능력(엑셀, 한글 등) 관련 자격증 소지자",
+            "snippet": "자격 | 자격증 | ✓ | 5점 | • 컴퓨터 활용능력(엑셀, 한글 등) 관련 자격증 소지자 ... ○ 입사지원서에 기재한 자격/경력 증빙서류 일체 ... 1)"
+          },
+          {
+            "url": "https://gall.dcinside.com/board/view/?id=coq&no=1750617&page=1",
+            "domain": "gall.dcinside.com",
+            "title": "엑셀 정리 딸칵 - 자격증 갤러리",
+            "snippet": "### 엑셀 정리 딸칵 앱에서 작성"
+          },
+          {
+            "url": "https://excel.yesform.com/xls/100382517.html",
+            "domain": "excel.yesform.com",
+            "title": "자격증 관리대장(발급기관) 엑셀양식 - 입력만 하면 자동 계산되는 엑셀 템플릿을 찾고 계신가요? 예스폼에서는 최신 자동화 수식을 적용한 다양한 엑셀 양식을 제공합니다.",
+            "snippet": "자격증 관리대장에는 보유자의 성명, 부서, 직급, 자격증 명칭, 발급기관, 유효기간 등의 필수 항목이 포함되어야 합니다. ... 언제 이 엑셀을 쓰면 좋을까요? ... 간결한 엑셀 템플릿을"
+          },
+          {
+            "url": "https://excel.yesform.com/xls/100380459.html",
+            "domain": "excel.yesform.com",
+            "title": "자격증 관리대장(발급일자) 엑셀양식 - 입력만 하면 자동 계산되는 엑셀 템플릿을 찾고 계신가요? 예스폼에서는 최신 자동화 수식을 적용한 다양한 엑셀 양식을 제공합니다.",
+            "snippet": "자격증 관리대장은 직원의 소속, 성명, 자격증명, 발급일자 등을 입력하여 관리할 수 있는 엑셀 템플릿입니다. ... 이 서식에서는 자격증의 발급일자와 유효기간을 관리할 수 있는 기능이 포함되어"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "엑셀자격증",
+          "executed_query": "엑셀 자격증",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-17T06:56:08.009730+00:00",
+          "raw_sha256": "6c1977ae54f1b102e2e5720000bd8b06459372a538b53dfde467ebf56bdc29aa",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "ITQ(엑셀) 자격증 과정, 글로벌이중언어강사 양성과정"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "엑셀 EXACT 함수 사용법"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "입사지원서 무료 양식 다운로드"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "직원 자격증 관리대장 엑셀양식"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "영문 이력서(희망조건/자격증/수상/역량) 엑셀양식"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "이력서(자격증 및 특기사항) 엑셀양식"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "컴퓨터 활용능력(엑셀, 한글 등) 관련 자격증 소지자"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "엑셀 정리 딸칵 - 자격증 갤러리"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "자격증 관리대장(발급기관) 엑셀양식"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "자격증 관리대장(발급일자) 엑셀양식"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "금융자격증",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 1520,
+        "organic_provider": "codex_native_search",
+        "organic_query": "금융 자격증",
+        "organic_results": [
+          {
+            "url": "https://www.goldcalc.co.kr/",
+            "domain": "www.goldcalc.co.kr",
+            "title": "금반지 가격 계산기 | 웨딩밴드 금시세 추가비용 계산",
+            "snippet": "본 서비스의 금 시세는 한국금거래소 또는 신한은행 매매기준율(네이버 금융)을 기반으로 하며, 실시간 시세와 차이가 있을 수 있습니다."
+          },
+          {
+            "url": "https://kiri.or.kr/pdf/%EC%A0%84%EB%AC%B8%EC%9E%90%EB%A3%8C/smn_20200625_full.pdf",
+            "domain": "kiri.or.kr",
+            "title": "(참고) 금융 자격증 분류 (209 금융인력 기초통계 분석 및 수급 전망 조사)",
+            "snippet": "(참고) 금융 자격증 분류 (209 금융인력 기초통계 분석 및 수급 전망 조사) ... - 단, 한 개인이 복수의 자격증 보유 시 모두 입력."
+          },
+          {
+            "url": "https://finlab-blog.com/exams/",
+            "domain": "finlab-blog.com",
+            "title": "금융·회계 자격증 목록 — 응시자 규모·기출 공개 여부 한눈에",
+            "snippet": "# 금융·회계 자격증 목록"
+          },
+          {
+            "url": "https://web.joongna.com/search/%EA%B8%88%EC%9C%B5%20%EC%9E%90%EA%B2%A9%EC%A6%9D",
+            "domain": "web.joongna.com",
+            "title": "금융 자격증 중고거래 | 중고나라 - 안심되는 중고거래",
+            "snippet": "# 금융 자격증 중고거래 | 중고나라 - 안심되는 중고거래"
+          },
+          {
+            "url": "https://note.com/kazoku_money/n/naa894635e176?hl=ko",
+            "domain": "note.com",
+            "title": "FP3급·연금·상속, 어떤 문제집을 선택할까? 금융 자격증 3개 교재의 차이점과 활용법｜家族のお金と期限ノート",
+            "snippet": "금융 자격증 3개 교재의 차이점과 활용법 ... 「금융 자격증 공부를 시작하고 싶은데 무엇부터 해야 할지 모르겠다」「자격증 종류는 정했지만 문제집 내용을 비교해 보고 선택하고 싶다」는 분들을"
+          },
+          {
+            "url": "https://academy.prompie.com/qualifications/detail/xcrhf5b/",
+            "domain": "academy.prompie.com",
+            "title": "경제·금융이해력인증시험틴매경TEST 자격증 - 오늘학교 아카데미",
+            "snippet": "###### 경제·금융이해력인증시험틴매경TEST 은 매일경제신문사 에서 시행되는 민간자격 입니다. ... 국가공인 매경TEST를 시행하는 매일경제가 청소년 경제 · 금융 교육이 강화되는 시대 흐름에 맞춰 청소년의 경제 ·"
+          },
+          {
+            "url": "https://jiungshin.tistory.com/3",
+            "domain": "jiungshin.tistory.com",
+            "title": "금융 자격증 정리(2025 version)",
+            "snippet": "7 | 금융·회계 전문 자격증 | **고급 전문 자격증군(CPA, CFA, FRM 등)**으로, 전문성과 난이도가 매우 높은 고급 자격군"
+          },
+          {
+            "url": "https://jaebak.kr/%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%97%B0%EC%88%98%EC%9B%90-%EC%9E%90%EA%B2%A9%EC%8B%9C%ED%97%98%EC%84%BC%ED%84%B0-%EA%B8%88%EC%9C%B5-%EC%A0%84%EB%AC%B8%EA%B0%80-%EC%9E%90%EA%B2%A9%EC%A6%9D/",
+            "domain": "jaebak.kr",
+            "title": "한국금융연수원 자격시험센터: 금융 전문가 자격증 취득의 필수 관문",
+            "snippet": "외환전문역 I, II종은 기획재정부 제2020-1호로 공인받은 자격증으로, 개인 및 기업의 외환과 국제금융 업무를 담당하는 전문인력 자격입니다. ... 신용분석사는 시중은행에서 선정한 ‘은행권 올해의 자격증’으로, 기업 신용"
+          },
+          {
+            "url": "https://web.joongna.com/product/229252103",
+            "domain": "web.joongna.com",
+            "title": "금융AI 리터러시 자격증 1,2권 | 중고나라 - 안심되는 중고거래",
+            "snippet": "Image: 금융AI 리터러시 자격증 1,2권 이미지"
+          },
+          {
+            "url": "https://jaebak.kr/%ED%95%9C%EA%B5%AD%EA%B8%88%EC%9C%B5%EC%97%B0%EC%88%98%EC%9B%90-%EC%9E%90%EA%B2%A9%EC%A6%9D-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80/",
+            "domain": "jaebak.kr",
+            "title": "한국금융연수원 자격증 홈페이지",
+            "snippet": "금융교육 신청 및 수강 자격증 시험 접수 및 응시 금융 관련 정보 및 자료 제공 교육 일정 및 신청 안내 취업 정보 제공. ... 한국금융연수원의"
+          }
+        ]
       }
     ],
     "excluded_keywords": [],
@@ -1773,34 +2153,34 @@
         ],
         "proposals": [
           {
-            "keyword": "이직확인서작성방법",
-            "reason": "월 2,580회. 작성 주체와 항목별 기재 방법을 묻는 구체적 수요로, 기존 실업급여 신청 글과 별도로 조사할 가치가 있다.",
-            "search_query": "이직확인서 작성 방법"
-          },
-          {
             "keyword": "컴활2급필기",
-            "reason": "월 29,980회. 시험과목·합격 기준·접수 방법을 확인하려는 수요로, 기존 1급 준비 글과 응시 대상이 다르다.",
+            "reason": "네이버 월 29,980회. 2급 필기 과목·합격 기준·접수 방법을 조사할 가치가 있으며 기존 1급 준비 글과 구분된다.",
             "search_query": "컴활 2급 필기"
           },
           {
+            "keyword": "안전관리자자격증",
+            "reason": "네이버 월 11,310회. 안전관리자를 준비할 때 필요한 자격 종류와 자격별 취득 조건을 확인하려는 질문을 조사하기 좋다.",
+            "search_query": "안전관리자 자격증"
+          },
+          {
             "keyword": "장례지도사자격증",
-            "reason": "월 3,750회. 직종 진입에 필요한 교육 이수 조건과 자격 취득 절차를 공식 자료로 확인할 조사 후보다.",
+            "reason": "네이버 월 3,750회. 직업 진입을 위한 교육 이수 조건과 자격증 신청 절차·준비서류를 조사할 만한 구체적 수요다.",
             "search_query": "장례지도사 자격증"
           },
           {
             "keyword": "청소년상담사자격증",
-            "reason": "월 1,940회. 급수별 응시 조건과 취득 절차를 확인하려는 독자를 위해 학력·경력 요건을 조사할 가치가 있다.",
+            "reason": "네이버 월 1,940회. 급수별 응시 조건과 시험·연수 등 취득 절차를 확인하려는 중소 검색량 수요가 있어 조사할 만하다.",
             "search_query": "청소년상담사 자격증"
           },
           {
-            "keyword": "안전관리자자격증",
-            "reason": "월 11,310회. 안전관리자 취업을 준비하는 독자의 관련 자격 종류와 선임 요건에 관한 질문을 조사할 필요가 있다.",
-            "search_query": "안전관리자 자격증"
+            "keyword": "컴퓨터자격증종류",
+            "reason": "네이버 월 2,640회. 사무직 준비자가 자격별 평가 영역과 취득 절차를 비교하려는 수요로, 기존 개별 자격 시험 글과 구분된다.",
+            "search_query": "컴퓨터 자격증 종류"
           },
           {
-            "keyword": "컴퓨터자격증종류",
-            "reason": "월 2,640회. 취업 준비에 필요한 자격을 고르려는 수요로, 자격별 평가 분야와 취득 절차를 비교 조사하기 좋다.",
-            "search_query": "컴퓨터 자격증 종류"
+            "keyword": "SQL자격증",
+            "reason": "네이버 월 4,990회. 데이터 직무 준비자가 자격 종류별 응시 조건·시험 범위·준비 순서를 확인할 수 있도록 조사할 가치가 있다.",
+            "search_query": "SQL 자격증"
           }
         ]
       },
@@ -1820,7 +2200,6 @@
           "코레일채용",
           "기사자격증",
           "금융투자협회채용",
-          "SQL자격증",
           "한국전력공사채용",
           "자격증종류",
           "하이닉스채용",
@@ -1845,6 +2224,7 @@
           "컴퓨터활용능력2급",
           "민간자격증조회",
           "생활한복",
+          "이직확인서작성방법",
           "현대로템채용",
           "대학면접준비",
           "한전채용",
@@ -1871,34 +2251,50 @@
         "proposals": [
           {
             "keyword": "50대자격증추천",
-            "reason": "네이버 월 1,840회. 재취업 준비자의 응시조건·취득 과정·직무 연관성을 비교할 기준을 조사할 가치가 있다.",
+            "reason": "월 1,840회. 재취업 준비자가 응시조건·취득기간·직무 연관성을 기준으로 자격증을 선택하려는 수요를 조사할 만하다.",
             "search_query": "50대 자격증 추천"
           },
           {
             "keyword": "국가기술자격증종류",
-            "reason": "네이버 월 2,080회. 취업 목표에 맞는 종목과 등급별 응시조건을 구분하려는 질문을 공식 자료로 조사하기 좋다.",
+            "reason": "월 2,080회. 직무별 자격 종목과 등급별 응시조건을 비교해 준비 가능한 시험을 찾는 질문을 조사할 만하다.",
             "search_query": "국가기술자격증 종류"
           },
           {
-            "keyword": "SQL자격증",
-            "reason": "네이버 월 4,990회. SQL 관련 자격의 구분과 응시조건·시험 범위를 확인하려는 직무 준비 수요를 조사할 만하다.",
-            "search_query": "SQL 자격증"
+            "keyword": "데이터분석자격증",
+            "reason": "월 2,390회. 데이터 직무 준비자가 자격별 응시조건·시험범위·취득 순서를 비교하려는 수요를 조사할 만하다.",
+            "search_query": "데이터 분석 자격증"
           },
           {
             "keyword": "BIM자격증",
-            "reason": "네이버 월 1,910회. 건축·설계 직무 준비자가 확인할 발급기관·자격 성격·응시요건을 조사할 가치가 있다.",
+            "reason": "월 1,910회. 건축 직무 준비에 필요한 자격의 발급기관·응시조건·평가방식을 확인하는 질문을 조사할 만하다.",
             "search_query": "BIM 자격증"
           },
           {
-            "keyword": "데이터분석자격증",
-            "reason": "네이버 월 2,390회. 데이터 분석 직무 입문자의 자격별 응시조건과 평가 범위, 준비 순서에 관한 질문을 조사할 만하다.",
-            "search_query": "데이터 분석 자격증"
+            "keyword": "엑셀자격증",
+            "reason": "월 7,550회. 기존 컴활 1급 공부법과 구분해 엑셀 관련 자격별 평가범위와 선택 기준을 조사할 만하다.",
+            "search_query": "엑셀 자격증"
+          },
+          {
+            "keyword": "금융자격증",
+            "reason": "월 1,520회. 금융권 취업 준비자가 목표 직무에 맞는 자격과 응시조건·준비 순서를 찾는 수요를 조사할 만하다.",
+            "search_query": "금융 자격증"
           }
         ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
+      {
+        "keyword": "컴활2급필기",
+        "monthly_search": 29980,
+        "score": 62.84,
+        "status": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ],
+        "organic_query": "컴활 2급 필기"
+      },
       {
         "keyword": "50대자격증추천",
         "monthly_search": 1840,
@@ -1913,7 +2309,7 @@
       {
         "keyword": "데이터분석자격증",
         "monthly_search": 2390,
-        "score": 52.41,
+        "score": 57.03,
         "status": "held",
         "reasons": [
           "narrower_or_unverified_search_intent"
@@ -1921,18 +2317,11 @@
         "organic_query": "데이터 분석 자격증"
       },
       {
-        "keyword": "이직확인서작성방법",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 2580,
-        "organic_query": "이직확인서 작성 방법"
-      },
-      {
-        "keyword": "컴활2급필기",
+        "keyword": "안전관리자자격증",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 29980,
-        "organic_query": "컴활 2급 필기"
+        "monthly_search": 11310,
+        "organic_query": "안전관리자 자격증"
       },
       {
         "keyword": "장례지도사자격증",
@@ -1949,25 +2338,11 @@
         "organic_query": "청소년상담사 자격증"
       },
       {
-        "keyword": "안전관리자자격증",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 11310,
-        "organic_query": "안전관리자 자격증"
-      },
-      {
         "keyword": "컴퓨터자격증종류",
         "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
+        "reason": "search quality insufficient",
         "monthly_search": 2640,
         "organic_query": "컴퓨터 자격증 종류"
-      },
-      {
-        "keyword": "국가기술자격증종류",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 2080,
-        "organic_query": "국가기술자격증 종류"
       },
       {
         "keyword": "SQL자격증",
@@ -1977,11 +2352,32 @@
         "organic_query": "SQL 자격증"
       },
       {
+        "keyword": "국가기술자격증종류",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 2080,
+        "organic_query": "국가기술자격증 종류"
+      },
+      {
         "keyword": "BIM자격증",
         "status": "rejected",
         "reason": "search quality insufficient",
         "monthly_search": 1910,
         "organic_query": "BIM 자격증"
+      },
+      {
+        "keyword": "엑셀자격증",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 7550,
+        "organic_query": "엑셀 자격증"
+      },
+      {
+        "keyword": "금융자격증",
+        "status": "rejected",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 1520,
+        "organic_query": "금융 자격증"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."

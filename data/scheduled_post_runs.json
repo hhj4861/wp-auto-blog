@@ -26,7 +26,8 @@
       "run_id": "35192028155",
       "category": "취업",
       "claimed_at": "2026-09-17T15:55:32.877347+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-09-17T07:06:27.351334+00:00"
     }
   }
 }

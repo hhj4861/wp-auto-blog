@@ -493,6 +493,35 @@ def affiliate_case(market_case):
     return c
 
 
+def test_unnotified_promotion_draft_recovery_publishes_before_link_request(market_case):
+    c = market_case
+    path = c['data'] / 'topic_queue_general.json'
+    rows = json.loads(path.read_text())
+    rows[1]['article_type'] = 'product_promotion'
+    path.write_text(json.dumps(rows))
+    c['env']['BLOG_COUPANG_TELEGRAM'] = '1'
+    assert module.publish_draft(1724, c['env']) == 'https://trendpulse.blog/a1c-levels/'
+    saved = json.loads(path.read_text())[1]
+    assert saved['status'] == 'completed' and saved['post_status'] == 'publish'
+    assert saved['affiliate_flow'] == 'post_update' and saved['affiliate_state'] == 'waiting'
+    payload = c['session'].post.call_args.kwargs['json']
+    assert payload['status'] == 'publish'
+    assert module._no_coupang_content(payload['content'])
+
+
+@pytest.mark.parametrize('state', ['held', 'notification_unknown', 'waiting'])
+def test_linked_legacy_draft_cannot_be_recovered_as_a_new_followup(affiliate_case, state):
+    c = affiliate_case
+    path = c['data'] / 'topic_queue_general.json'
+    rows = json.loads(path.read_text())
+    rows[1]['affiliate_state'] = state
+    path.write_text(json.dumps(rows))
+    c['env']['BLOG_COUPANG_TELEGRAM'] = '1'
+    with pytest.raises(module.AffiliateDraftError, match='affiliate_request_required'):
+        module.publish_draft(1724, c['env'])
+    c['session'].post.assert_not_called()
+
+
 @pytest.mark.parametrize('status', ['ready', 'publishing'])
 def test_affiliate_reply_inserts_before_repair_and_all_final_gates_on_same_id(affiliate_case, status):
     from src.coupang_products import products_preserved

@@ -426,6 +426,9 @@ def main() -> int:
                     if getattr(result, 'awaiting_affiliate', False):
                         pending_topic["status"] = "held_draft"
                         pending_topic["affiliate_state"] = "waiting"
+                    if published and getattr(result, 'affiliate_followup', False):
+                        pending_topic["affiliate_state"] = "waiting"
+                        pending_topic["affiliate_flow"] = "post_update"
                     if result.post:
                         pending_topic["post_id"] = result.post.id
                         pending_topic["url"] = result.post.url
@@ -487,7 +490,8 @@ def main() -> int:
             {"success": r.success, "post_id": r.post.id if r.post else None,
              "url": r.post.url if r.post else None,
              "status": r.post.status.value if r.post else None,
-             "awaiting_affiliate": getattr(r, 'awaiting_affiliate', False)}
+             "awaiting_affiliate": getattr(r, 'awaiting_affiliate', False),
+             "affiliate_followup": getattr(r, 'affiliate_followup', False)}
             for r in results], ensure_ascii=False), encoding="utf-8")
 
     # Return success if all processed successfully

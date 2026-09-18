@@ -1,4 +1,4 @@
-"""Telegram replies bind to one durable draft request, never to the latest post."""
+"""Telegram replies bind to one durable post request, never to the latest post."""
 from __future__ import annotations
 
 import hashlib
@@ -41,7 +41,8 @@ RECORD_FIELDS = {
 }
 OPTIONAL_FIELDS = {'last_error', 'reply_update_id', 'published_at', 'published_url',
                    'publish_attempt_run', 'publishing_at', 'notified_at',
-                   'reply_checked_at', 'reply_checked_run', 'publication_mode', 'article_type'}
+                   'reply_checked_at', 'reply_checked_run', 'publication_mode', 'article_type',
+                   'affiliate_flow', 'post_url'}
 REPLY_WAIT = timedelta(minutes=30)
 UPDATE_RETENTION = timedelta(hours=24)
 FINGERPRINT_FIELDS = ('id', 'status', 'modified_gmt', 'content', 'title', 'excerpt',
@@ -82,6 +83,8 @@ def utc_now():
 
 def reply_deadline(record):
     """Old requests have no proven send time, so never acquire a retroactive timer."""
+    if record.get('affiliate_flow') == 'post_update':
+        return None
     try:
         sent = datetime.fromisoformat(record['notified_at'])
         created = datetime.fromisoformat(record['created_at'])
@@ -140,6 +143,13 @@ def draft_fingerprint(post) -> str:
         raise ValueError('invalid_draft_fingerprint') from None
 
 
+def published_post_fingerprint(post) -> str:
+    """Published updates also preserve the original publication time and URL."""
+    raw = json.dumps([draft_fingerprint(post), post.get('date'), post.get('date_gmt'), post.get('link')],
+                     ensure_ascii=False, allow_nan=False)
+    return hashlib.sha256(raw.encode('utf-8')).hexdigest()
+
+
 def _validate_record(record):
     if (not isinstance(record, dict) or not RECORD_FIELDS <= set(record)
             or set(record) - RECORD_FIELDS - OPTIONAL_FIELDS
@@ -150,6 +160,21 @@ def _validate_record(record):
             or not isinstance(record['status'], str) or record['status'] not in STATUSES
             or not isinstance(record['products'], list)
             or record.get('article_type', 'information') not in ('information', 'product_promotion')):
+        raise TelegramError('invalid_request_store')
+    if 'affiliate_flow' in record:
+        from urllib.parse import urlsplit
+        value = record.get('post_url')
+        try:
+            url = urlsplit(value) if isinstance(value, str) else None
+            if (record['affiliate_flow'] != 'post_update' or not is_product_promotion(record)
+                    or not _text(value, 2048) or any(char.isspace() for char in value)
+                    or not url or url.scheme != 'https' or url.netloc != 'trendpulse.blog'
+                    or not url.path.startswith('/')
+                    or record.get('publication_mode', 'with_products') != 'with_products'):
+                raise ValueError
+        except (ValueError, TypeError):
+            raise TelegramError('invalid_request_store') from None
+    elif 'post_url' in record:
         raise TelegramError('invalid_request_store')
     status, key = record['status'], record['message_key']
     if key is not None and not _hex(key, 64):
@@ -277,16 +302,20 @@ class RequestStore:
     def find(self, request_id):
         return next((row for row in self.data['requests'] if row['request_id'] == request_id), None)
 
-    def create(self, post_id, category, keyword, topic, draft_fingerprint, selected_at, *, article_type='information'):
+    def create(self, post_id, category, keyword, topic, draft_fingerprint, selected_at, *, article_type='information',
+               affiliate_flow=None, post_url=None):
         record = {'request_id': uuid.uuid4().hex, 'post_id': post_id, 'category': category,
                   'keyword': keyword, 'topic': topic, 'draft_fingerprint': draft_fingerprint,
                   'selected_at': selected_at, 'created_at': utc_now().isoformat(),
                   'status': 'pending_notification', 'message_key': None, 'products': [], 'article_type': article_type}
+        if affiliate_flow is not None:
+            record.update(affiliate_flow=affiliate_flow, post_url=post_url)
         _validate_record(record)
         for existing in self.data['requests']:
             if existing['post_id'] == post_id:
                 if any(existing[key] != record[key] for key in
-                       ('category', 'keyword', 'topic', 'draft_fingerprint', 'selected_at')):
+                       ('category', 'keyword', 'topic', 'draft_fingerprint', 'selected_at')) or any(
+                        existing.get(key) != record.get(key) for key in ('affiliate_flow', 'post_url')):
                     raise TelegramError('request_conflict')
                 return existing
         self.data['requests'].append(record)
@@ -381,6 +410,17 @@ class TelegramClient:
                 '발송 후 30분 동안 답장이 없으면 상품 링크 없이 검수 후 발행합니다.\n'
                 '발행 처리 전에 확인한 정상 링크는 포함하며, 형식 오류 답장은 수정 대기합니다.\n'
                 '출처·선정 근거가 만료되면 보류합니다.')
+        if record.get('affiliate_flow') == 'post_update':
+            text = ('[포스팅 완료 · 쿠팡 링크 요청]\n'
+                    f"글 보기: {record['post_url']}\n"
+                    f"카테고리: {display(record['category'], 30)}\n"
+                    f"주제: {display(record['topic'], 240)}\n\n{guidance}\n\n"
+                    '위 검색어로 쿠팡 파트너스에서 상품을 선택하고 단축링크를 생성해 주세요.\n'
+                    '이 메시지에 답장: 실제 상품명 | https://link.coupang.com/a/...\n'
+                    '상품별 한 줄, 최대 3개입니다. 답장 시간 제한은 없습니다.\n'
+                    '글은 이미 공개되었습니다. 답장을 받으면 관련성을 검수한 뒤 같은 글에 상품 링크와 광고 고지를 추가합니다.\n'
+                    '답장이 없으면 현재 글을 그대로 유지합니다.\n'
+                    f"글 ID: {record['post_id']} · 요청: {record['request_id']}")
         result = self._call('sendMessage', {'chat_id': self._chat_id, 'text': text,
                                            'link_preview_options': {'is_disabled': True},
                                            'reply_markup': {'force_reply': True, 'selective': True}})

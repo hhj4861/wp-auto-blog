@@ -59,10 +59,6 @@ jobs:
         run: python scripts/coupang_telegram_worker.py notify
       - name: Persist confirmed notification times
         run: bash scripts/commit_coupang_state.sh
-      - name: Wait for the reply window after a new draft
-        if: github.event_name == 'workflow_run'
-        timeout-minutes: 32
-        run: python scripts/coupang_telegram_worker.py wait
       - name: Receive replies once
         run: python scripts/coupang_telegram_worker.py receive
       - name: Record publication intent
@@ -87,7 +83,7 @@ jobs:
           CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
           WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
         run: python scripts/codex_worker_auth.py restore
-      - name: Verify and publish the same draft with products or after timeout
+      - name: Review product replies and update the matching published post
         if: steps.approval.outputs.request_id != ''
         timeout-minutes: 40
         env:

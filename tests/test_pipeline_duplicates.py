@@ -299,7 +299,7 @@ def test_failed_codex_review_keeps_real_queue_pending_and_never_writes(
 ])
 @pytest.mark.parametrize('quality_passes', [True, False])
 @pytest.mark.parametrize('promotion', [True, False])
-def test_only_explicit_product_promotions_wait_for_affiliate_reply(
+def test_product_promotions_publish_first_and_queue_followup(
         market_pipeline, tmp_path, monkeypatch, category, keyword, quality_passes, promotion):
     """Real main/queue/pipeline; model, image and WordPress transport are doubles."""
     import src.main as entry
@@ -345,7 +345,7 @@ def test_only_explicit_product_promotions_wait_for_affiliate_reply(
                                     '--category', category, '--auto-publish'])
     assert entry.main() == 0
     pipeline.wp_client.create_post.assert_called_once()
-    published = quality_passes and not promotion
+    published = quality_passes
     assert pipeline.wp_client.create_post.call_args.kwargs['status'] == (PostStatus.PUBLISH if published else PostStatus.DRAFT)
     assert pipeline.wp_client.create_post.call_args.kwargs['require_featured_image'] is True
     assert pipeline.content_generator.generate.call_args.kwargs['market_brief']['keyword'] == keyword
@@ -356,7 +356,9 @@ def test_only_explicit_product_promotions_wait_for_affiliate_reply(
     assert saved.get('affiliate_state') == ('waiting' if quality_passes and promotion else None)
     result = json.loads(result_path.read_text())
     assert len(result) == 1 and result[0]['status'] == ('publish' if published else 'draft')
-    assert result[0]['awaiting_affiliate'] is (quality_passes and promotion)
+    assert result[0]['awaiting_affiliate'] is False
+    assert result[0]['affiliate_followup'] is (quality_passes and promotion)
+    assert saved.get('affiliate_flow') == ('post_update' if quality_passes and promotion else None)
     assert (ledger.call_count > 0) is published
     if not published:
         ping.assert_not_called()

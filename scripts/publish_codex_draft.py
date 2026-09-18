@@ -256,7 +256,7 @@ def _required_sources(brief):
     return sources
 
 
-def _save_completed(brief, post):
+def _save_completed(brief, post, *, affiliate_followup=False):
     # Durable all-time history is written before queue/registry ancillary updates.
     market.record_published_keyword(brief, post['id'], post['link'])
     path = DATA / 'topic_queue_general.json'
@@ -270,6 +270,8 @@ def _save_completed(brief, post):
                           'completed_at': stamp}
     if 'affiliate_state' in brief:
         queue[matches[0]]['affiliate_state'] = 'published'
+    if affiliate_followup:
+        queue[matches[0]].update(affiliate_state='waiting', affiliate_flow='post_update')
     temp = path.with_suffix('.tmp')
     temp.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     temp.replace(path)
@@ -376,11 +378,13 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
                                       else 'unexpected_post_status')
         raise RuntimeError('Expected draft; refusing to alter an already published post')
     brief = _market_draft(original, session, base, env)
-    without_products = not is_product_promotion(brief)
+    affiliate_followup = (affiliate_request is None and is_product_promotion(brief)
+                          and env.get('BLOG_COUPANG_TELEGRAM') == '1')
+    without_products = not is_product_promotion(brief) or affiliate_followup
     if affiliate_request is not None:
         without_products = _affiliate_binding(affiliate_request, original, brief)
-    elif (brief and brief.get('affiliate_state') in ('waiting', 'ready', 'publishing')) or (
-            env.get('BLOG_COUPANG_TELEGRAM') == '1' and is_product_promotion(brief)):
+    elif brief and (brief.get('affiliate_request_id') or brief.get('affiliate_state') in (
+            'waiting', 'ready', 'publishing', 'held', 'notification_unknown')):
         raise AffiliateDraftError('affiliate_request_required')
     body = original['content']['raw']
     soup = BeautifulSoup(body, 'html.parser')
@@ -522,7 +526,7 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
             raise AffiliateDraftError('publication_unconfirmed')
         raise RuntimeError('Publication or body preservation check failed')
     if brief:
-        _save_completed(brief, saved)
+        _save_completed(brief, saved, affiliate_followup=affiliate_followup)
         print('Market draft ledger and queue persisted:', post_id, flush=True)
     print('Draft published after all gates passed:', post_id, saved['link'], flush=True)
     from src.pipeline import BlogPipeline

@@ -65,10 +65,9 @@ def test_reply_workflow_persists_intents_before_remote_effects():
         return next(i for i, step in enumerate(steps) if command in step.get('run', ''))
     commit_indices = [i for i, step in enumerate(steps) if 'commit_coupang_state.sh' in step.get('run', '')]
     assert index('worker.py register') < commit_indices[0] < index('worker.py notify')
-    assert index('worker.py notify') < commit_indices[1] < index('worker.py wait') < index('worker.py receive')
+    assert index('worker.py notify') < commit_indices[1] < index('worker.py receive')
+    assert not any('worker.py wait' in step.get('run', '') for step in steps)
     assert index('worker.py receive') < index('worker.py prepare') < commit_indices[2] < index('worker.py publish')
-    assert steps[index('worker.py wait')]['if'] == "github.event_name == 'workflow_run'"
-    assert job['timeout-minutes'] >= steps[index('worker.py wait')]['timeout-minutes'] + steps[index('worker.py publish')]['timeout-minutes'] + 5
     assert commit_indices[-1] > index('worker.py publish')
     assert steps[commit_indices[-1]]['if'] == 'always()'
     assert sum('worker.py receive' in step.get('run', '') for step in steps) == 1
@@ -88,17 +87,17 @@ def test_shared_state_and_auth_jobs_queue_instead_of_canceling_pending_posts():
                 assert concurrency.get('cancel-in-progress') is False
 
 
-def test_all_trendpulse_jobs_require_links_and_commit_even_on_notification_failure():
+def test_all_trendpulse_jobs_publish_before_telegram_and_commit_on_notification_failure():
     wf = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
     for name in ['post-general', 'post-queue']:
         job = wf['jobs'][name]
         assert job['env']['BLOG_COUPANG_TELEGRAM'] == '1'
         steps = job['steps']
-        check = next(i for i, s in enumerate(steps) if 'worker.py check' in s.get('run', ''))
+        assert not any('worker.py check' in s.get('run', '') for s in steps)
         generate = next(i for i, s in enumerate(steps) if s.get('name', '').startswith('Run pipeline'))
         register = next(i for i, s in enumerate(steps) if 'worker.py register' in s.get('run', ''))
         notify = next(i for i, s in enumerate(steps) if 'worker.py notify' in s.get('run', ''))
-        assert check < generate < register < notify
+        assert generate < register < notify
         assert any('commit_coupang_state.sh' in step.get('run', '') for step in steps[register+1:notify])
         assert any(step.get('if') == 'always()' and ('commit_coupang_state.sh' in step.get('run', '')
                    or 'data/coupang_requests.json' in step.get('run', '')) for step in steps[notify+1:])

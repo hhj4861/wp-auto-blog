@@ -1,4 +1,4 @@
-"""Durable Telegram approval stages. CI commits each intent before remote effects."""
+"""Durable product replies for published posts and legacy drafts."""
 from datetime import datetime, timedelta, timezone
 import argparse
 import json
@@ -11,7 +11,8 @@ import requests
 from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.coupang_telegram import (RequestStore, TelegramClient, TelegramError, draft_fingerprint,
+from src.coupang_telegram import (RequestStore, TelegramClient, TelegramError,
+                                draft_fingerprint, published_post_fingerprint,
                                 process_updates, reply_deadline, timeout_ready,
                                 timeout_publication_allowed, REPLY_WAIT, UPDATE_RETENTION)
 
@@ -26,6 +27,9 @@ def now():
 
 
 def expired(record):
+    # Published articles no longer depend on a new-publication selection window.
+    if record.get('affiliate_flow') == 'post_update':
+        return False
     try:
         stamp = datetime.fromisoformat(record['selected_at'])
         return stamp.tzinfo is None or not timedelta(0) <= now() - stamp <= timedelta(hours=36)
@@ -50,7 +54,7 @@ def save_queue(rows):
     temporary.replace(path)
 
 
-def read_draft(post_id, env):
+def read_draft(post_id, env, *, expected_status='draft'):
     if env.get('WP_GENERAL_URL', '').rstrip('/') != 'https://trendpulse.blog':
         raise TelegramError('wordpress_unavailable')
     if not env.get('WP_GENERAL_USERNAME') or not env.get('WP_GENERAL_APP_PASSWORD'):
@@ -65,7 +69,7 @@ def read_draft(post_id, env):
             if response.status_code != 200:
                 raise ValueError
             post = response.json()
-        if type(post.get('id')) is not int or post['id'] != post_id or post.get('status') != 'draft':
+        if type(post.get('id')) is not int or post['id'] != post_id or post.get('status') != expected_status:
             raise TelegramError('draft_changed')
         draft_fingerprint(post)
         return post
@@ -81,7 +85,8 @@ def register(store, client, env):
     rows = queue_rows()
     identifiers = []
     for row in rows:
-        if row.get('status') != 'held_draft' or row.get('affiliate_state') != 'waiting':
+        followup = row.get('affiliate_flow') == 'post_update'
+        if row.get('status') != ('completed' if followup else 'held_draft') or row.get('affiliate_state') != 'waiting':
             continue
         post_id = row.get('post_id')
         if type(post_id) is not int or post_id <= 0 or row.get('category') not in CATEGORIES:
@@ -103,14 +108,21 @@ def register(store, client, env):
         existing = next((record for record in store.data['requests'] if record['post_id'] == post_id), None)
         if existing is None:
             try:
-                post = read_draft(post_id, env)
+                post = (read_draft(post_id, env, expected_status='publish') if followup
+                        else read_draft(post_id, env))
+                if followup:
+                    from src.coupang_policy import no_coupang_content
+                    if post.get('link') != row.get('url') or not no_coupang_content(post['content']['raw']):
+                        raise TelegramError('draft_changed')
             except TelegramError as error:
                 # One unavailable or manually changed draft must not block replies
                 # belonging to other, already-notified drafts.
                 row.update(affiliate_state='held', affiliate_error=error.reason)
                 continue
             existing = store.create(post_id, row['category'], row['keyword'], row['topic'],
-                                    draft_fingerprint(post), row['selected_at'], article_type=row['article_type'])
+                                    (published_post_fingerprint(post) if followup else draft_fingerprint(post)),
+                                    row['selected_at'], article_type=row['article_type'],
+                                    **({'affiliate_flow': 'post_update', 'post_url': post['link']} if followup else {}))
         row['affiliate_request_id'] = existing['request_id']
         if existing['status'] == 'pending_notification':
             existing['status'] = 'notification_unknown'
@@ -191,7 +203,9 @@ def prepare(store, client, run_id):
         if error:
             record.update(status='held', last_error=error)
             store.save()
-            feedback(client, record, ('쿠팡 요청 취소: 상품 홍보글에만 링크를 사용합니다. 기존 초안은 확인 후 처리합니다.'
+            feedback(client, record, ('상품 링크 업데이트 보류: 글 유형이 바뀌었거나 이전 업데이트 결과 확인이 필요합니다.'
+                if record.get('affiliate_flow') == 'post_update' else
+                '쿠팡 요청 취소: 상품 홍보글에만 링크를 사용합니다. 기존 초안은 확인 후 처리합니다.'
                 if error == 'product_promotion_required' else
                 '발행 보류: 요청이 만료되었거나 이전 발행 결과 확인이 필요합니다. 초안을 확인해 주세요.'))
         elif not selected and (record['status'] == 'ready' or timeout_ready(record, run_id, now())):
@@ -213,8 +227,12 @@ def publish(store, client, identifier, env, publisher=None):
             or record.get('publish_attempt_run') != env.get('GITHUB_RUN_ID')):
         raise TelegramError('invalid_request')
     if publisher is None:
-        from publish_codex_draft import publish_draft
-        publisher = publish_draft
+        if record.get('affiliate_flow') == 'post_update':
+            from scripts.update_coupang_post import update_post
+            publisher = update_post
+        else:
+            from publish_codex_draft import publish_draft
+            publisher = publish_draft
     configured = {**env, 'BLOG_MODE': 'queue', 'BLOG_CATEGORY': record['category'],
                   'BLOG_PUBLISH': 'true', 'BLOG_WRITER_PROVIDER': 'codex'}
     try:
@@ -235,12 +253,22 @@ def publish(store, client, identifier, env, publisher=None):
             if row.get('post_id') == record['post_id']:
                 row.update(affiliate_state='held', affiliate_error=reason)
         save_queue(rows)
-        feedback(client, record, '발행 보류: 상품·출처·본문 검증 또는 발행 확인을 통과하지 못했습니다. 자동 재발행하지 않습니다.')
+        feedback(client, record, ('상품 링크 업데이트 보류: 상품·본문 검수 또는 변경 결과 확인을 통과하지 못했습니다. 자동 재시도하지 않습니다.'
+                 if record.get('affiliate_flow') == 'post_update' else
+                 '발행 보류: 상품·출처·본문 검증 또는 발행 확인을 통과하지 못했습니다. 자동 재발행하지 않습니다.'))
         raise TelegramError(reason) from None
     record.update(status='published', published_url=url, published_at=now().isoformat())
     record.pop('last_error', None)
     store.save()
-    if record.get('publication_mode') == 'without_products':
+    if record.get('affiliate_flow') == 'post_update':
+        rows = queue_rows()
+        for row in rows:
+            if row.get('post_id') == record['post_id']:
+                row.update(affiliate_state='published', affiliate_updated_at=now().isoformat())
+        save_queue(rows)
+        feedback(client, record, f'발행된 글에 상품 링크와 광고 고지를 추가했습니다.\n{url}')
+        print('VERIFIED COUPANG UPDATED', url, flush=True)
+    elif record.get('publication_mode') == 'without_products':
         feedback(client, record, f'30분 동안 답장이 없어 쿠팡 상품 링크 없이 발행했습니다.\n{url}')
         print('VERIFIED WITHOUT COUPANG PUBLISHED', url, flush=True)
     else:

@@ -147,9 +147,6 @@ jobs:
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
-      - name: Check Telegram reply configuration
-        run: python scripts/coupang_telegram_worker.py check
-
       - name: Restore Codex authentication
         if: env.BLOG_WRITER_PROVIDER == 'codex'
         env:
@@ -247,7 +244,7 @@ jobs:
         id: coupang_requests
         run: python scripts/coupang_telegram_worker.py register
 
-      - name: Persist draft and notification intents
+      - name: Persist post and notification intents
         run: bash scripts/commit_coupang_state.sh
 
       - name: Request Coupang links through Telegram
@@ -814,10 +811,6 @@ jobs:
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
-      - name: Check Telegram reply configuration
-        if: steps.daily.outputs.run == 'true'
-        run: python scripts/coupang_telegram_worker.py check
-
       - name: Restore Codex authentication
         if: steps.daily.outputs.run == 'true'
         env:
@@ -915,7 +908,7 @@ jobs:
           echo notification > "$SCHEDULE_STAGE_PATH"
           python scripts/coupang_telegram_worker.py register
 
-      - name: Persist draft and notification intents
+      - name: Persist post and notification intents
         if: steps.daily.outputs.run == 'true'
         run: bash scripts/commit_coupang_state.sh
 

@@ -299,6 +299,7 @@ class PipelineResult:
     error: Optional[str] = None
     duration_seconds: float = 0.0
     awaiting_affiliate: bool = False
+    affiliate_followup: bool = False
 
     def to_dict(self) -> dict:
         """Convert to dictionary."""
@@ -309,6 +310,7 @@ class PipelineResult:
             "error": self.error,
             "duration_seconds": self.duration_seconds,
             "awaiting_affiliate": self.awaiting_affiliate,
+            "affiliate_followup": self.affiliate_followup,
         }
 
 
@@ -636,9 +638,9 @@ class BlogPipeline:
                     title=content.title,
                     html=content.html,
                 )
-                if self.config.mode == "general" and not promotion and not all(
+                if self.config.mode == "general" and (not promotion or affiliate_required) and not all(
                         no_coupang_content(value) for value in (content.html, content.title, content.meta_description)):
-                    gate_issues.append("일반 정보글에는 쿠팡 상품 링크를 사용할 수 없습니다")
+                    gate_issues.append("상품 답장 전 최초 발행에는 쿠팡 상품 링크를 사용할 수 없습니다")
                 if market_brief:
                     from src.market_opportunity import review_article
                     gate_issues += review_article(
@@ -658,9 +660,7 @@ class BlogPipeline:
                 else:
                     logger.info("품질 게이트 통과")
                     if affiliate_required:
-                        status = PostStatus.DRAFT
-                        awaiting_affiliate = True
-                        logger.info("쿠팡 상품 링크 답장을 기다리는 초안으로 저장합니다")
+                        logger.info("상품 링크 없이 먼저 발행하고 텔레그램 답장으로 보완합니다")
 
                 # tech/kculture(bytepulse): 관련 글 내부 링크 박스 (+ 승인 시 인-콘텐츠 광고)
                 # ⚠️ bytepulse는 AdSense 재검토 대기 → 광고 슬롯이 안 채워져 '빈 박스'로 남는다
@@ -749,6 +749,8 @@ class BlogPipeline:
                 post=post,
                 duration_seconds=duration,
                 awaiting_affiliate=awaiting_affiliate,
+                affiliate_followup=bool(affiliate_required and not self.config.dry_run
+                                        and post.status == PostStatus.PUBLISH),
             )
 
         except Exception as e:

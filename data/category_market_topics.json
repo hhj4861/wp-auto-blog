@@ -1999,7 +1999,7 @@
   },
   "생활정보": {
     "category": "생활정보",
-    "selected_at": "2026-09-18T05:13:11.802349+00:00",
+    "selected_at": "2026-09-18T06:45:48.088475+00:00",
     "seeds": [
       "신청방법",
       "환급금",
@@ -2023,70 +2023,165 @@
     "evaluated_candidates": 10,
     "research_pool_size": 120,
     "selected": [],
-    "held": [],
-    "rejected": [
-      {
-        "keyword": "세금계산서발행",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://m.kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=57170&gotopage=29&keyTaxpart=0&keyfield=coun_subj&keyword=",
-              "title": "한국세무사회",
-              "excerpt_chars": 588
-            },
-            {
-              "url": "https://kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=4076&gotopage=2897&keyTaxpart=0&keyfield=coun_subj&keyword=",
-              "title": "한국세무사회",
-              "excerpt_chars": 508
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://m.kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=57170&gotopage=29&keyTaxpart=0&keyfield=coun_subj&keyword=",
-                  "title": "한국세무사회",
-                  "excerpt_chars": 588
-                },
-                {
-                  "url": "https://kacpta.or.kr/education_view/tax_counseling/internetCounseling_read_n.asp?coun_idx=4076&gotopage=2897&keyTaxpart=0&keyfield=coun_subj&keyword=",
-                  "title": "한국세무사회",
-                  "excerpt_chars": 508
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "no_changed_source"
-          }
-        }
-      },
+    "held": [
       {
         "keyword": "소상공인폐업지원금",
-        "reason": "search intent or official evidence does not support an article",
+        "category": "생활정보",
+        "topic": "소상공인폐업지원금 지원대상과 원스톱폐업지원 신청방법",
+        "intent": "폐업했거나 폐업 예정인 소상공인은 어떤 지원을 받고 어디에서 신청할 수 있나요?",
+        "gap": "폐업일·사업기간·임대차 요건 체크리스트와 지원항목별 신청처·접수기간 표를 제공합니다. 예산 소진 조건도 명시합니다.",
+        "source_url": "https://www.110.go.kr/data/counselView.do?curPage=11&num=A01_702874&scCate1=&scCate2=&scIntt=&scText=&scType=",
+        "verified_sources": [
+          {
+            "url": "https://www.110.go.kr/data/counselView.do?curPage=11&num=A01_702874&scCate1=&scCate2=&scIntt=&scText=&scType=",
+            "original_url": "https://www.110.go.kr/data/counselView.do?curPage=11&num=A01_702874&scCate1=&scCate2=&scIntt=&scText=&scType=",
+            "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
+            "checked_on": "2026-09-18",
+            "sha256": "b0ae34e2cb752b4be4cd18fb0cc196899a369c503447599f4f0fe78a41310338",
+            "excerpt": "음소거 속도 80 80 FAQ 자료마당 국민의 행복을 함께 만들어 갑니다. 자주묻는 질문 법령정보 자주묻는 질문 법령정보 출력 『희망리턴패키지 원스톱폐업지원』 사업 작성일 : 2026-01-30 조회수 : 13884 질문내용 『희망리턴패키지 원스톱폐업지원』 사업 답변 ■ 사업목적 - 소상공인이 부득이 폐업에 이른 경우, 실패부담을 최소화하기 위해 폐업에 필요한 정보·비용·각종애로를 신속하게 지원 ■ 지원대상 - 『소상공인기본법』 제2조에 따른 소상공인 중 공고일 기준 폐업을 하였거나 폐업 예정인 자 *(기 폐업) 폐업일이 `23년 1월 1일 이후인 경우 지원 가능 - 사업자등록증 (또는 폐업사실증명원)상 사업개시일이 60일이 경과된 소상공인 - 유상 임대차계약으로 사업장을 운영하여 임대차계약서 제출이 가능한 소상공인 - 지원 제외 업종에 해당하지 않아야 함 ■ 신청·접수기간 - 사업정리컨설팅 : 26년 1월 19일 ~ 예산 소진시 - 점포철거비 지원 : 26년 1월 28일 ~ 예산 소진시 - 법률자문,채무조정 : 26년 3월(예정) ~ 예산 소진시 ■ 신청방법 - 사업정리컨설팅, 법률자문, 채무조정 : 희망리턴패키지 홈페이지 ( https://hope.sbiz.or.kr ) - 점포철거비 지원 : 소상공인24 홈페이지 ( https://www.sbiz24.kr/#/pbanc/567 ) ■ 문의 - 희망리턴패키지 1533-0100 (4번) ※ 본 내용은 정책 변경에 따라 수정되거나 종료될 수 있습니다. 키워드 | 희망리턴패키지, 점포철거비용 본 공공저작물은 공공누리 “출처표시+상업적이용금지+변경금지”  조건에  따라  이용할  수  있습니다. 다음글 안전일터 신고센터란? 이전글 건설근로자공제회, 초등학교 자녀 교육비 지원 목 록",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://returnkorea.co.kr/",
+          "https://www.sgri.kr/policy/government"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 7700,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148957296",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148946818",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.110.go.kr/data/counselView.do?curPage=11&num=A01_702874&scCate1=&scCate2=&scIntt=&scText=&scType=",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.taean.go.kr/cop/bbs/BBSMSTR_000000000043/selectBoardArticle.do?nttId=1514302591",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "소상공인 폐업 지원금",
+        "organic_domains": [
+          "returnkorea.co.kr",
+          "myboss.co.kr",
+          "egbiz.or.kr",
+          "awoo.or.kr",
+          "egbiz.or.kr",
+          "www.ii.re.kr",
+          "www.gm.go.kr",
+          "www.sdmcouncil.go.kr",
+          "www.sgri.kr",
+          "www.icsp.or.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://returnkorea.co.kr/",
+            "domain": "returnkorea.co.kr",
+            "title": "서포팅솔루션 - 소상공인 폐업지원 안내센터",
+            "snippet": "서포팅솔루션 - 소상공인 폐업지원 안내센터 ... 소상공인 폐업철거, 정부지원금으로 해결 ... 지원금 신청 늦으면 예산이 소진 될 수 있습니다 ... 폐업 할 곳의 주소 ..."
+          },
+          {
+            "url": "https://myboss.co.kr/",
+            "domain": "myboss.co.kr",
+            "title": "폐업지원금 계산기 | 소상공인 폐업지원금 계산·점포철거비·희망리턴패키지 무료 산출",
+            "snippet": "소상공인 폐업지원금은 소상공인진흥공단에서 운영하는 희망리턴패키지 사업의 일환으로, 폐업을 결정한 소상공인에게 재기와 재취업을 지원하기 위해 마련된 국비 지원 제도입니다. ... 임차 사업장을 폐업할 때 건물주에게 원상복구"
+          },
+          {
+            "url": "https://egbiz.or.kr/webcontent/resrce/pdf/2026/gbsa/14.pdf",
+            "domain": "egbiz.or.kr",
+            "title": "12-8 소상공인 사업정리 지원",
+            "snippet": "↺ 도내 폐업 및 예정 소상공인 대상으로 폐업 충격완화 및 재기 기회 제공을 위한 컨설팅 및 사업정리 지원 ... * 재기장려금 지원대상 : 중위소득 100%"
+          },
+          {
+            "url": "https://awoo.or.kr/subsidies/small-biz-loan/",
+            "domain": "awoo.or.kr",
+            "title": "소상공인 정책자금 — 소상공인시장진흥공단 | 지원금가이드",
+            "snippet": "소상공인 정책자금은 소상공인시장진흥공단이 제공하는 창업 분야 지원금입니다. ... 소상공인 정책자금 대출과 보조금의 차이는? ... 재창업 지원금(중기부 재도전 패키지 등)이 별도로 있으며, 폐업 후 일정 기간(보통"
+          },
+          {
+            "url": "https://egbiz.or.kr/webcontent/resrce/pdf/2026/gbsa/17.pdf",
+            "domain": "egbiz.or.kr",
+            "title": "12-8 소상공인 사업정리 지원",
+            "snippet": "↺ 도내 폐업 및 예정 소상공인 대상으로 폐업 충격완화 및 재기 기회 제공을 위한 컨설팅 및 사업정리 지원 ... * 재기장려금 지원대상 : 중위소득 100%"
+          },
+          {
+            "url": "https://www.ii.re.kr/storage/issue/2026/02/26/ISSUE_ATTACH_1772061543241.pdf",
+            "domain": "www.ii.re.kr",
+            "title": "04  2026.02.26.",
+            "snippet": "- 인천 소상공인 폐업 및 사업전환 지원사업은 2025년 동안 33개의 업체를 지원하였고, 2026년에는 지원금 상한을 중앙정부 수준으로 확대한다는 계획 ... ○ 광역지자체의 자체적인 소상공인 폐업지원"
+          },
+          {
+            "url": "https://www.gm.go.kr/resources/mayor/down/2024/%EB%AF%BC%EC%84%A08%EA%B8%B0%20%EA%B3%B5%EC%95%BD%EC%8B%A4%EC%B2%9C%EA%B3%84%ED%9A%8D%EC%84%9C%282024_%2012.%2031.%EA%B8%B0%EC%A4%80%29.pdf",
+            "domain": "www.gm.go.kr",
+            "title": "4-3 코로나19로 인한 폐업 자영업자, 실직자 지원",
+            "snippet": "❖ 코로나19로 인한 사업 운영의 어려움으로 폐업 후 재개장하는 소상공인에게 「폐업 소상공인 희망드림 재개장 지원금」을 지원하여 위기 극복과 재기 지원 ... ○ 추진근거 : 「소상공인"
+          },
+          {
+            "url": "https://www.sdmcouncil.go.kr/CLRecords/Files/FileAppendix/a9/A010437.pdf",
+            "domain": "www.sdmcouncil.go.kr",
+            "title": "일자리경제과\n- 21 -",
+            "snippet": "사업명 폐업 소상공인 지원 (영업제한업종) | 접수기간 2.11. ... ~ 계속 | 지원단가 (22년 기준) 100만원~1억원 | 지원실적 7,272개소 | 지원금액 27,416,000천원(국비) ※ 21년도 실적"
+          },
+          {
+            "url": "https://www.sgri.kr/policy/government",
+            "domain": "www.sgri.kr",
+            "title": "정부 지원금 공고 + 실시간 정책자금 검색 | 한국창업분석연구소",
+            "snippet": "점포철거비 지원 | 최대 600만원 | 폐업(예정) 소상공인 | 폐업 후 6개월 이내 | 희망리턴패키지 →재창업 사업화자금 | 최대 2,000만원 | 폐업 후 재창업 희망자"
+          },
+          {
+            "url": "https://www.icsp.or.kr/",
+            "domain": "www.icsp.or.kr",
+            "title": "성장대로｜인천소상공인종합지원포털",
+            "snippet": "성장지원 「모두의 창업 프로젝트」 통합 모집공고 (2차) 성장지원 2026년 찾아가는 1:1 디지털 교육 소상공인 모집 성장지원 2026년 혁신 소상공인 AI 활용 지원사업 상권활성화 강소 소공인"
+          }
+        ],
+        "dominant_result_ratio": 0.3333333333333333,
+        "score_components": {
+          "demand": 31.09,
+          "organic_opportunity": 17.78,
+          "trend": 0,
+          "intent_fit": 0
+        },
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "unavailable",
+        "selection_version": 6,
+        "selected_at": "2026-09-18T06:45:48.088475+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "소상공인폐업지원금"
+        ],
+        "status": "research_only",
         "decision_diagnostics": {
           "official_sources": [
+            {
+              "url": "https://www.110.go.kr/data/counselView.do?curPage=11&num=A01_702874&scCate1=&scCate2=&scIntt=&scText=&scType=",
+              "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
+              "excerpt_chars": 867
+            },
             {
               "url": "https://astr.or.kr/DOIx.php?id=10.4174%2Fastr.2021.101.2.93",
               "title": ":: astr.or.kr :: Annals of Surgical Treatment and Research",
               "excerpt_chars": 8000
             }
           ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          },
+          "analysis_status": "supported_true",
           "source_recovery": {
             "attempted": true,
             "initial_review": {
@@ -2103,26 +2198,329 @@
                 "code": "source_missing_detail"
               }
             },
-            "outcome": "no_changed_source"
-          }
-        }
-      },
-      {
-        "keyword": "자금조달계획서",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=01&ccrCnntSysDsCd=01&mi=1062&panId=BN-0006018&uppAisTpCd=01",
-              "title": "공고문 < \r\n\t\t\r\n\t\t\r\n\t\t\t토지 < \r\n\t\t\r\n\t\t\r\n\t\t청약 < \r\n\t\tLH청약플러스",
-              "excerpt_chars": 5502
+            "outcome": "review_passed",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.110.go.kr/data/counselView.do?curPage=11&num=A01_702874&scCate1=&scCate2=&scIntt=&scText=&scType=",
+                  "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
+                  "excerpt_chars": 867
+                },
+                {
+                  "url": "https://astr.or.kr/DOIx.php?id=10.4174%2Fastr.2021.101.2.93",
+                  "title": ":: astr.or.kr :: Annals of Surgical Treatment and Research",
+                  "excerpt_chars": 8000
+                }
+              ],
+              "analysis_status": "supported_true"
             }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "expired_information"
           }
+        },
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "소상공인폐업지원금",
+          "executed_query": "소상공인 폐업 지원금",
+          "topic": "소상공인폐업지원금 지원대상과 원스톱폐업지원 신청방법",
+          "intent": "폐업했거나 폐업 예정인 소상공인은 어떤 지원을 받고 어디에서 신청할 수 있나요?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "result_count": 10,
+          "domain_count": 9,
+          "dominant_ratio": 0.3333333333333333,
+          "search_review": {
+            "version": 1,
+            "query": "소상공인폐업지원금",
+            "executed_query": "소상공인 폐업 지원금",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-18T06:45:48.088475+00:00",
+            "raw_sha256": "e4a9f79945c97d3f14f636b278729cfccbb4a93ba424112478c11f64f63239f4",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "소상공인 폐업철거, 정부지원금으로 해결"
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "폐업을 결정한 소상공인에게 재기와 재취업을 지원하기 위해 마련된 국비 지원 제도입니다."
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "도내 폐업 및 예정 소상공인 대상으로 폐업 충격완화 및 재기 기회 제공을 위한 컨설팅 및 사업정리 지원"
+              },
+              {
+                "result_index": 3,
+                "relevant": false,
+                "quote": "소상공인 정책자금은 소상공인시장진흥공단이 제공하는 창업 분야 지원금입니다."
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "도내 폐업 및 예정 소상공인 대상으로 폐업 충격완화 및 재기 기회 제공을 위한 컨설팅 및 사업정리 지원"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "2026년에는 지원금 상한을 중앙정부 수준으로 확대한다는 계획"
+              },
+              {
+                "result_index": 6,
+                "relevant": false,
+                "quote": "폐업 후 재개장하는 소상공인에게 「폐업 소상공인 희망드림 재개장 지원금」을 지원"
+              },
+              {
+                "result_index": 7,
+                "relevant": false,
+                "quote": "사업명 폐업 소상공인 지원 (영업제한업종)"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "점포철거비 지원 | 최대 600만원 | 폐업(예정) 소상공인 | 폐업 후 6개월 이내"
+              },
+              {
+                "result_index": 9,
+                "relevant": false,
+                "quote": "성장지원 2026년 혁신 소상공인 AI 활용 지원사업"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 6,
+            "relevant_site_count": 5,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              8
+            ],
+            "relevance_ratio": 0.6,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.3333333333333333,
+            "site_concentration": 0.3333333333333333,
+            "organic_opportunity": 17.78
+          },
+          "scope": "full_keyword",
+          "target_keyword": "소상공인폐업지원금",
+          "matches": [
+            {
+              "result_index": 0,
+              "quote": "소상공인 폐업철거, 정부지원금으로 해결"
+            },
+            {
+              "result_index": 8,
+              "quote": "점포철거비 지원 | 최대 600만원 | 폐업(예정) 소상공인"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "input_sha256": "89bfa6a649e673c8d645166a291a0ecfc5ff684910e3e970693171b1d0a11e84",
+          "review": {
+            "scope": "narrower_query",
+            "target_keyword": "소상공인폐업지원금",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "『희망리턴패키지 원스톱폐업지원』 사업",
+                "entity": "희망리턴패키지 원스톱폐업지원",
+                "context": "system_rules"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "폐업 소상공인이 받을 수 있는 지원은 무엇인가?",
+                "answer": "원스톱폐업지원의 네 항목만 확인된다. 검색결과의 지역 사업정리 지원까지 포괄하는 범위는 아니다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "사업정리컨설팅, 법률자문, 채무조정 : 희망리턴패키지 홈페이지"
+              },
+              {
+                "facet": "지원금은 얼마이며 어떤 비용을 지원하는가?",
+                "answer": "점포철거비 지원의 존재만 확인된다. 지원한도·산정기준·인정 비용은 제공 본문에 없다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "점포철거비 지원 : 26년 1월 28일 ~ 예산 소진시"
+              },
+              {
+                "facet": "폐업일·사업기간·임대차 조건은 무엇인가?",
+                "answer": "2023년 1월 1일 이후 폐업, 사업개시 60일 경과, 유상 임대차 및 계약서 제출 조건을 안내한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "*(기 폐업) 폐업일이 `23년 1월 1일 이후인 경우 지원 가능"
+              },
+              {
+                "facet": "지원항목별 어디에서 신청하는가?",
+                "answer": "컨설팅·법률자문·채무조정은 희망리턴패키지, 점포철거비는 소상공인24에서 신청한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "점포철거비 지원 : 소상공인24 홈페이지"
+              },
+              {
+                "facet": "현재 신청 가능한 기간과 예산 소진 조건은 무엇인가?",
+                "answer": "접수 시작일과 예산 소진 조건만 있다. 9월 접수 가능 여부와 법률·채무조정의 실제 개시는 미확인이다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "법률자문,채무조정 : 26년 3월(예정) ~ 예산 소진시"
+              }
+            ],
+            "current_relevance": {
+              "kind": "unknown",
+              "source_index": 0,
+              "quote": "※ 본 내용은 정책 변경에 따라 수정되거나 종료될 수 있습니다.",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 48.87,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage",
+          "unverified_current_relevance"
+        ]
+      }
+    ],
+    "rejected": [
+      {
+        "keyword": "세금계산서발행",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 16480,
+        "organic_provider": "codex_native_search",
+        "organic_query": "세금계산서 발행",
+        "organic_results": [
+          {
+            "url": "https://www.sinokor.co.kr/PortalManual/EN/SHMTAXTAXMGT.html",
+            "domain": "www.sinokor.co.kr",
+            "title": "세금계산서 발행",
+            "snippet": "영업매출 세금계산서 발행 ... | 수정세금계산서 발행 사유 | 1."
+          },
+          {
+            "url": "https://ems.nts.go.kr/news/file/nts_news_120330.pdf",
+            "domain": "ems.nts.go.kr",
+            "title": "매입자 발행 세금계산서 제도",
+            "snippet": "- 신청인이 매입자발행세금계산서를 발행하고 부가가치세 신고 또는 경정청구를 할 때 매입자발행세금계산서합계표를 제출하는 경우, 매입세액으로 공제받을 수 있습니다. ... - 차명·가짜세금계산서를 발행한 경우에는 공급가액의 2%에 상당하는"
+          },
+          {
+            "url": "https://www.secbank.co.kr/",
+            "domain": "www.secbank.co.kr",
+            "title": "삼성전자새마을금고",
+            "snippet": "이용실적에 따라 금리를 더 드립니다!자녀의 꿈을 이루어줄 든든한 저축상품을 찾고 계신가요? ... 전세 자금이 부족하신가요? ... 고액권 수표 발급 및 현금 출금이 필요하시면 ... 수표·고액현금"
+          },
+          {
+            "url": "https://images.softcity.co.kr/images/help/Live_EDU_200409.pdf",
+            "domain": "images.softcity.co.kr",
+            "title": "8. 세금계산서 발행 방법 3가지",
+            "snippet": "세금계산서 발행 방법 3가지 ... 상단 예시 화면: 거래명세표입력 프로그램 창에서 하단의 [세금서(F6)] 버튼이 주황색으로 강조되어 있고, 이를 누르면 뜨는 “출력방법” 팝업에서 오른쪽의 [인쇄(P)]와 [전자세금계산서(E)]"
+          },
+          {
+            "url": "https://newzensolution.co.kr/manual/distribution/6013_%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C%EC%B2%98%EB%A6%AC%28%ED%8C%90%EB%A7%A4%29.pdf",
+            "domain": "newzensolution.co.kr",
+            "title": "입력방법\n\n[미처리 탭]\n\n1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당",
+            "snippet": "1) 기간 : 세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다. 입력된 기간내의 자료는 판매입력에서 일괄 입력한 데이터를 불러오며, 기간의 마지막 날짜가 세금계산서 발행일자가"
+          },
+          {
+            "url": "https://campaign-cdn.pstatic.net/nfs/commonParam/naverpayguide_files/20231110114543_56da57792a3490f0bf40fda8f2e67faa.pdf",
+            "domain": "campaign-cdn.pstatic.net",
+            "title": "4-1. 세금계산서 발행 정책",
+            "snippet": "• 이미 세금계산서가 발행된 구매확정 주문건이 익월 이후 구매확정 후 취소처리 될 경우, 취소처리 해당 월의 세금계산서에서 마이너스 처리되어 계산됩니다."
+          },
+          {
+            "url": "https://support.cafe24.com/hc/ko/articles/18645881788953-%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-%EB%B0%9C%ED%96%89-%EC%8B%9C-%EB%B0%B0%EC%86%A1%EB%B9%84-%EC%A0%81%EB%A6%BD%EA%B8%88-%ED%8F%AC%ED%95%A8%EB%90%98%EB%82%98%EC%9A%94",
+            "domain": "support.cafe24.com",
+            "title": "세금계산서&현금영수증 발행 시 배송비/적립금 포함되나요? – 카페24 Help Center",
+            "snippet": "# 세금계산서&현금영수증 발행 시 배송비/적립금 포함되나요? ... * 세금계산서 : 배송비 / 적립금 / 실결제금액으로 발행 설정 가능 [관리자] 쇼핑몰 설정 > 결제 설정 >"
+          },
+          {
+            "url": "https://qxguide.oopy.io/71fdb312-4a2b-4693-acb6-a987e1d71e40",
+            "domain": "qxguide.oopy.io",
+            "title": "청구서, 세금계산서 발행",
+            "snippet": "가입 시 등록한 정보와 인보이스(세금계산서) 발행 관련 정보가 다른 경우(담당자 등), “인보이스 정보”에서 수정 가능 (세금계산서 첫 발행 전에만 가능) ... N/ 승인 대기 :"
+          },
+          {
+            "url": "https://images.softcity.co.kr/images/help/Live_EDU_200326.pdf",
+            "domain": "images.softcity.co.kr",
+            "title": "8. 세금계산서 발행 방법 3가지",
+            "snippet": "세금계산서 발행 방법 3가지 ... 팝업에는 출력방법 선택(“수입 발행”, “세부내역인쇄”), 금액을 나누는 방식 선택(“청구”, “영수”, “공란”), 버튼 “인쇄(P)”, “전자세금계산서(E)”, “미리보기(V)”, “용지대책환경”, “취소(X)”, “수정계산서”, 입력칸 “VAT인쇄상호”,"
+          },
+          {
+            "url": "https://m.saramin.co.kr/job-search/view?rec_idx=54616283&searchword=news&t_category=search&t_content=connect_recruit",
+            "domain": "m.saramin.co.kr",
+            "title": "[(주)뉴스이십일] 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) (D-2) - 사람인",
+            "snippet": "# 뉴스21 사무 정규직 채용합니다(세금계산서 발행,행정,회계업무) ... 신문 발행업 ... 경기 고양시 일산서구 주엽동 83번지 레이크타운 519호 (인근전철: 서울 3호선 주엽에서 500m 이내)"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "세금계산서발행",
+          "executed_query": "세금계산서 발행",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "raw_sha256": "1fc108d03dfadc14dd74705ea82383d0ed617a2c85bc8c20289040407fcf3aae",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "영업매출 세금계산서 발행"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "매입자 발행 세금계산서 제도"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "자녀의 꿈을 이루어줄 든든한 저축상품"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "세금계산서 발행 방법 3가지"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "세금계산서 발행 대상이 되는 판매입력 자료의 해당 기간을 입력합니다."
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "취소처리 해당 월의 세금계산서에서 마이너스 처리되어 계산됩니다."
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "발행 시 배송비/적립금 포함되나요?"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "청구서, 세금계산서 발행"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "세금계산서 발행 방법 3가지"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "뉴스21 사무 정규직 채용합니다"
+            }
+          ]
         }
       },
       {
@@ -2202,33 +2600,33 @@
           "query": "경정청구환급기간",
           "executed_query": "경정청구 환급 기간",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-18T05:13:11.802349+00:00",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
           "raw_sha256": "2834fe60807fe61c0081ccaefe085c8b5a9287f5ff7f0a31ca4f44000589ab33",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "기업이 직전 5년간 납세한 법인세에 대한 조세감면 해당분을 찾고 환급까지 신고 지원받을 수 있습니다."
+              "quote": "기업이 직전 5년간 납세한 법인세에 대한 조세감면 해당분"
             },
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "환급이 결정되었다면, 경정청구 환급 처리 또한 2개월의 절차 기간 내에 함께 진행됩니다."
+              "quote": "경정청구 환급 처리 또한 2개월의 절차 기간 내에 함께 진행됩니다."
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "경정청구 기한은 부가가치세 신고 기한으로부터 5년이므로"
+              "quote": "경정청구 기한은 부가가치세 신고 기한으로부터 5년"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "2026년 기준으로 경정청구 기한, 신청 방법, 홈택스 절차, 환급까지 걸리는 기간을 정리했습니다."
+              "quote": "환급까지 걸리는 기간을 정리했습니다."
             },
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "경정청구 환급은 국세청 처리 기한인 접수일로부터 2개월 이내가 원칙이며"
+              "quote": "경정청구 환급은 국세청 처리 기한인 접수일로부터 2개월 이내가 원칙"
             },
             {
               "result_index": 5,
@@ -2243,7 +2641,7 @@
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "5월 연말정산 경정청구 방법 총정리 2026: 신청 기간·환급 절차·홈택스 단계별 가이드"
+              "quote": "5월 연말정산 경정청구 방법 총정리 2026"
             },
             {
               "result_index": 8,
@@ -2323,7 +2721,7 @@
             "url": "https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7804&mi=2483",
             "domain": "nts.go.kr",
             "title": "세무 안내",
-            "snippet": "* 일반과세자와 간이과세자는 부가가치세 계산 방법 및 세금계산서 발행 가능 여부 등의 차이가 있으므로 어느 유형이 자기의 사업에 적합한지 살펴본 후 사업자등록을 해야 합니다. ..."
+            "snippet": "525101 | 통신 판매업 | 전자상거래소매업 | 일반 대중을 대상으로 온라인 통신망(사회관계망서비스(SNS) 채널은 제외한다)을 통하여 각종 상품을 소매하는 산업활동을 말한다. ... * (규모에 따른 구분)"
           },
           {
             "url": "https://bal.pe.kr/tools/bugase/guide",
@@ -2337,8 +2735,8 @@
           "query": "개인사업자부가세환급",
           "executed_query": "개인사업자 부가세 환급",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-18T05:13:11.802349+00:00",
-          "raw_sha256": "8e6d0e70f2d960c5d67e4a392ad2cdd94b5627ecb4097d59402861dd56e90935",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "raw_sha256": "8f727c7313b82a41af3bf80c85d7b37f0a62d8c2255d3ca1702e24aad21d6a96",
           "decisions": [
             {
               "result_index": 0,
@@ -2363,7 +2761,7 @@
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "개인사업자분들을 위한 부가세 신고를 위한 준비 내용입니다."
+              "quote": "부가세 신고를 위한 준비 내용입니다."
             },
             {
               "result_index": 5,
@@ -2383,14 +2781,74 @@
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "어느 유형이 자기의 사업에 적합한지 살펴본 후 사업자등록을 해야 합니다."
+              "quote": "각종 상품을 소매하는 산업활동을 말한다."
             },
             {
               "result_index": 9,
               "relevant": true,
-              "quote": "일반과세가 유리한 경우는 ① 개업 초기 인테리어·설비 투자가 커서 환급이"
+              "quote": "반대로 일반과세가 유리한 경우는 ① 개업 초기 인테리어·설비 투자가 커서 환급이"
             }
           ]
+        }
+      },
+      {
+        "keyword": "자금조달계획서",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
+              "title": "부동산거래(신고,변경,해제)계약신고서(별지 및 위임장 포함) | 강남구청",
+              "excerpt_chars": 2701
+            },
+            {
+              "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=01&ccrCnntSysDsCd=01&mi=1062&panId=BN-0006018&uppAisTpCd=01",
+              "title": "공고문 < \r\n\t\t\r\n\t\t\r\n\t\t\t토지 < \r\n\t\t\r\n\t\t\r\n\t\t청약 < \r\n\t\tLH청약플러스",
+              "excerpt_chars": 5502
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=01&ccrCnntSysDsCd=01&mi=1062&panId=BN-0006018&uppAisTpCd=01",
+                  "title": "공고문 < \r\n\t\t\r\n\t\t\r\n\t\t\t토지 < \r\n\t\t\r\n\t\t\r\n\t\t청약 < \r\n\t\tLH청약플러스",
+                  "excerpt_chars": 5502
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
+                  "title": "부동산거래(신고,변경,해제)계약신고서(별지 및 위임장 포함) | 강남구청",
+                  "excerpt_chars": 2701
+                },
+                {
+                  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=01&ccrCnntSysDsCd=01&mi=1062&panId=BN-0006018&uppAisTpCd=01",
+                  "title": "공고문 < \r\n\t\t\r\n\t\t\r\n\t\t\t토지 < \r\n\t\t\r\n\t\t\r\n\t\t청약 < \r\n\t\tLH청약플러스",
+                  "excerpt_chars": 5502
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
+          }
         }
       },
       {
@@ -2431,12 +2889,6 @@
             "snippet": "소상공인기준이 법적으로 어떻게 정해지는지, 그 기준이 정책자금·진흥공단 심사·지원금·대출에서 실제로 어디에 걸리는지, 그리고 기준을 충족했다고 볼 때 2026년에 신청할 수 있는 자금의 조건과 접수 방법을 공식"
           },
           {
-            "url": "https://www.kosmes.or.kr/intro/download/kosmes_guide_manual.pdf",
-            "domain": "www.kosmes.or.kr",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "정책자금 온라인 신청 ... 소상공인에 해당하는 기업은 중진공 정책자금 지원 제외 대상이므로 예외조건을 확인하시기 바랍니다."
-          },
-          {
             "url": "https://yjss.or.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMjEyMjdlMTY2NDYzNDI4NjE1IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwMTA2NmIxMmY5ZDI1NTNmYyI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDEwNmJlY2ViOTRmODgzNGUiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ODQwN2IzYzBmMGUiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
             "domain": "yjss.or.kr",
             "title": "소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상",
@@ -2455,16 +2907,22 @@
             "snippet": "○ 대리대출 업무를 처리함에 있어, 관계 법령 및 고시, 중소벤처기업부 소관 소상공인 정책자금 융자계획 공고, 소상공인 융자사업 운영규정, 소상공인 융자사업 운영요령에서 정한 것 이외에는 이"
           },
           {
-            "url": "https://m.inje.go.kr/egf/bp/board/article/download?fileSeq=75421",
-            "domain": "m.inje.go.kr",
-            "title": "소상공인 정책자금 (대리대출) 4월 접수 계획 안내",
-            "snippet": "부산 중구, 부산 강서구장애인기업지원자금 | - 지원대상 : 장애인복지카드 또는 장애인기업확인서를 소지한 소상공인 ... ◦ 온라인 접수 : 소상공인정책자금 사이트(https://ols.sbiz.or.kr) → 대출신청 ... ※ 정책자금은"
+            "url": "https://www.yd.go.kr/DownLoad/etc/202504/%E2%98%852025%EB%85%84%20%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EC%82%B0%EB%B6%88%20%ED%94%BC%ED%95%B4%20%EC%A7%80%EC%9B%90%EC%95%88%EB%82%B4%EC%84%9C%280406%20%20%EB%B2%84%EC%A0%843%29.pdf",
+            "domain": "www.yd.go.kr",
+            "title": "7 소상공인 정책자금·긴급경영 안정자금 융자",
+            "snippet": "7 소상공인 정책자금·긴급경영 안정자금 융자 ... - 「소상공인 보호 및 지원에 관한 법률」제9조, 제12조2 ... - (대출한도) 업체당 1억원 이내 및 피해금액 또는 재해복구 소요자금"
           },
           {
-            "url": "https://sajangfund.kr/semas/",
-            "domain": "sajangfund.kr",
-            "title": "소상공인시장진흥공단 | 채용 대출 정책자금 인턴 신청 방법·대상",
-            "snippet": "첫째, 소상공인 해당 여부와 둘째, 신청하려는 자금의 신용 점수 구간(NCB 점수) 충족 여부, 셋째, 기존 정책자금 대출잔액이 남은 한도 안에 드는지입니다. ... 출처: 소상공인정책자금 온라인신청"
+            "url": "https://jinjucci.korcham.net/file/dext5uploaddata/2026/2026%EB%85%84%EB%8F%84%20%EC%A4%91%EC%86%8C%EB%B2%A4%EC%B2%98%EA%B8%B0%EC%97%85%20%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85%28%EC%9C%A0%EA%B4%80%EA%B8%B0%EA%B4%80%29_.pdf",
+            "domain": "jinjucci.korcham.net",
+            "title": "신청제외 대상  \n- 로컬지원사업 기 수혜자  \n- 소상공인 정책자금 지원 제외 업종을 영",
+            "snippet": "- 소상공인 정책자금 지원 제외 업종을 영위하거나 예정인 경우 ... - 중소벤처기업부 등 정부 사업의 참여 제한 등 제재조치를 받는 경우- 신청일 현재 ‘기업의 부도,"
+          },
+          {
+            "url": "https://www.fsc.go.kr/po010107/87106?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+            "domain": "www.fsc.go.kr",
+            "title": "국제협력 - 정책일반 - 정책마당 - 금융위원회",
+            "snippet": "2개 이상 의 사업장 을 운영하는 경우에는 모든 사업장의 소상공인확인서 발급 신청 이 필요 하다. ... 현재 사업장 을 운영하지 않고 있거나 운영 중인 사업장이"
           }
         ],
         "search_review": {
@@ -2472,8 +2930,8 @@
           "query": "소상공인정책자금신청",
           "executed_query": "소상공인 정책자금 신청",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-18T05:13:11.802349+00:00",
-          "raw_sha256": "bb4864b5150f93a699dbbeec9841210f774e779d7463c13ed8fe4df37faa1e16",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "raw_sha256": "1930d4f65c37eae37f6f4cb6bf8e0ad1b1494240a9b626f55e53e8fdd0a45879",
           "decisions": [
             {
               "result_index": 0,
@@ -2498,32 +2956,32 @@
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "소상공인에 해당하는 기업은 중진공 정책자금 지원 제외 대상"
+              "quote": "소상공인 정책자금 대리대출"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "소상공인 정책자금 대리대출"
+              "quote": "많이 찾는 검색어 민생회복 소비쿠폰"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "많이 찾는 검색어 민생회복 소비쿠폰"
+              "quote": "대리대출 업무를 처리함에 있어"
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "대리대출 업무를 처리함에 있어"
+              "quote": "피해금액 또는 재해복구 소요자금"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "소상공인 정책자금 (대리대출) 4월 접수 계획 안내"
+              "quote": "로컬지원사업 기 수혜자"
             },
             {
               "result_index": 9,
-              "relevant": true,
-              "quote": "첫째, 소상공인 해당 여부와 둘째, 신청하려는 자금의 신용 점수 구간(NCB 점수) 충족 여부"
+              "relevant": false,
+              "quote": "모든 사업장의 소상공인확인서 발급 신청 이 필요 하다."
             }
           ]
         }
@@ -2575,6 +3033,12 @@
             "snippet": "본 항목의 내용은 해당 분야 전문가의 추천으로 선정된 집필자의 학술적 견해로, 한국학중앙연구원의 공식 입장과 다를 수 있습니다. ... 우리나라의 지방세는 1949년 12월 22일 법률 84호로"
           },
           {
+            "url": "https://batgo.co.kr/calc/vat-final-return/",
+            "domain": "batgo.co.kr",
+            "title": "부가세 계산기 — 매출·매입 넣으면 낼 세금·환급 1분 계산 | Batgo",
+            "snippet": "낼 부가세(또는 환급액)를 즉시 계산해드려요. ... 세금계산서·카드전표·현금영수증으로 산 재료·물품·임차료 등 (부가세 뺀 금액) ... ⚠️ 의제매입·재고납부·가산세 등을 뺀 근사 추정치예요(간이과세자는 계산식이 달라 대상 아님)."
+          },
+          {
             "url": "https://www.skens.com/busan/rate/guide.do",
             "domain": "www.skens.com",
             "title": "요금안내 < 공급신청/요금 < 안내 | ㈜부산도시가스",
@@ -2605,6 +3069,12 @@
             "snippet": "부가가치세율 10%, 국세청 2021.7.1 이후 간이과세 업종별 부가가치율, 2026년 간이과세 기준금액을 적용한 단순 계산 ... 실제 납부세액은 여기서 매입 공급대가의 0.5% 등 공제세액을 뺀 뒤"
           },
           {
+            "url": "https://www.pocketinfo.co.kr/calculators/vat-calculator",
+            "domain": "www.pocketinfo.co.kr",
+            "title": "부가세 계산기 | 포켓인포",
+            "snippet": "※ 부가가치세율 10% 기준의 참고용 계산이며, 면세·영세율 등 특수 거래에는 적용되지 않습니다. ... 세금계산서를 받거나 영수증을 볼 때 \"이 금액에 부가세가 포함된 건가, 아닌가?\""
+          },
+          {
             "url": "https://www.kbiz.or.kr/download.do?fleDwnDs=bbsAttachFile&orgalFle=eca095ecb185eab1b4ec9d98ebb0b1ec849c5feca780ec97ad28ecb59ceca285292e706466&saveFle=177275550172514726.pdf&seq=90245",
             "domain": "www.kbiz.or.kr",
             "title": "중소기업 정책건의백서",
@@ -2615,18 +3085,6 @@
             "domain": "unolocus.com",
             "title": "부가가치세(VAT) 계산기 2026 | 일반·간이과세자 자영업자 - Unolocus",
             "snippet": "매출·매입과 과세유형(일반·간이)을 입력하면 부가가치세 납부세액 또는 환급액을 즉시 계산합니다. ... 한국의 부가가치세 표준 세율은 10%이며, 일반과세자·간이과세자·면세사업자 구분에 따라 신고·납부 방식이 다릅니다. ... 매입세액 공제를 받으려면"
-          },
-          {
-            "url": "https://info.fandit.net/tool/vat-calculator/",
-            "domain": "info.fandit.net",
-            "title": "부가세(부가가치세) 계산기 — 일반·간이 신고",
-            "snippet": "부가가치세(VAT)는 물건을 팔거나 서비스를 제공할 때 공급가액의 10%를 소비자에게 받아 대신 내는 세금이에요. ... 일반과세라면 개인·법인을 고른 뒤 매출·매입 공급가액(부가세 뺀 금액)과 카드·현금영수증 매출을 넣으면"
-          },
-          {
-            "url": "https://help.jobis.co/hc/ko/articles/115002759013-%EB%B6%80%EA%B0%80%EA%B0%80%EC%B9%98%EC%84%B8-%ED%99%98%EA%B8%89-%EA%B3%84%EC%82%B0-%EB%B0%8F-%EC%8B%9C%EA%B8%B0",
-            "domain": "help.jobis.co",
-            "title": "부가가치세 환급 계산 및 시기 – 자비스 고객센터",
-            "snippet": "부가가치세를 신고할 때 매입세액이 매출세액보다 많은 경우에 발생한 환급세액을 말합니다. ... 부가가치세 신고 및 납부에 관한 과세기간 및 기한은 다음과 같습니다."
           }
         ],
         "search_review": {
@@ -2634,8 +3092,8 @@
           "query": "부가세환급",
           "executed_query": "부가세 환급",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-18T05:13:11.802349+00:00",
-          "raw_sha256": "22bfdecfff8312f8bccab81d81b59ec589a7f5ae265766bc969fcb67ad8dae8c",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "raw_sha256": "5e55080ab869bb54e47a81c1443951ded1c9a0642f309e668c4c0b6edc867133",
           "decisions": [
             {
               "result_index": 0,
@@ -2644,48 +3102,48 @@
             },
             {
               "result_index": 1,
-              "relevant": false,
-              "quote": "요금안내 < 공급신청/요금 < 안내"
+              "relevant": true,
+              "quote": "낼 부가세(또는 환급액)를 즉시 계산해드려요."
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "주택용의 경우 900원/월의 기본요금이 부과됩니다."
+              "quote": "요금안내 < 공급신청/요금 < 안내"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "간이과세는 세 부담이 가볍지만 매입세액 환급이 없고"
+              "quote": "주택용의 경우 900원/월의 기본요금이 부과됩니다."
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "부가세 10%와 나머지 금액을 바로 환산합니다."
+              "quote": "간이과세는 세 부담이 가볍지만 매입세액 환급이 없고"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "부가세 계산기 — 공급가액·합계금액 역산, 간이과세"
+              "quote": "부가세 10%와 나머지 금액을 바로 환산합니다."
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "해당 제품에 납부된 부가세는 환급 불가"
+              "quote": "부가세 계산기 — 공급가액·합계금액 역산, 간이과세"
             },
             {
               "result_index": 7,
-              "relevant": true,
-              "quote": "부가가치세 납부세액 또는 환급액을 즉시 계산합니다."
+              "relevant": false,
+              "quote": "이 금액에 부가세가 포함된 건가, 아닌가?"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "부가세(부가가치세) 계산기 — 일반·간이 신고"
+              "quote": "처리하거나 할인 판매로 손실 감수하여 해당 제품에 납부된 부가세는 환급 불가"
             },
             {
               "result_index": 9,
               "relevant": true,
-              "quote": "부가가치세 환급 계산 및 시기"
+              "quote": "매출·매입과 과세유형(일반·간이)을 입력하면 부가가치세 납부세액 또는 환급액을 즉시 계산합니다."
             }
           ]
         }
@@ -2694,7 +3152,10 @@
         "keyword": "종합소득세율",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "low_search_relevance"
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
         ],
         "monthly_search": 7360,
         "organic_provider": "codex_native_search",
@@ -2766,23 +3227,23 @@
           "query": "종합소득세율",
           "executed_query": "종합소득세율",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-18T05:13:11.802349+00:00",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
           "raw_sha256": "5d5e6353eca8ab8167975758c39a1e411ab7c934f30d6bb274e218986328d907",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "종합소득세는 초과누진세율을 적용하므로"
+              "quote": "종합소득세는 초과누진세율을 적용하므로 과세표준이 높은 경우 더 많은 세금을 부담한다."
             },
             {
               "result_index": 1,
-              "relevant": true,
-              "quote": "소득 구간(연간) | 종합소득세율(예시)*"
+              "relevant": false,
+              "quote": "종합소득세율(예시)* 세율 평"
             },
             {
               "result_index": 2,
-              "relevant": true,
-              "quote": "[Button: 종합소득세율]"
+              "relevant": false,
+              "quote": "[Button: 종합소득세율] 실시간세금상담 (1분)"
             },
             {
               "result_index": 3,
@@ -2850,7 +3311,7 @@
             "url": "https://work.lifebase.kr/wiki/severance-pay-payment-date/",
             "domain": "work.lifebase.kr",
             "title": "퇴직금 지급일 — 퇴사 후 14일 기한과 넘기면 붙는 연 20% 지연이자 | 직장생활 가이드",
-            "snippet": "확정급여형(DB) 퇴직연금 | 급여를 지급할 사유가 발생한 날부터 14일 이내 | 특별한 사정 + 사용자·가입자·퇴직연금사업자 합의 | 근로자퇴직급여 보장법 제17조 제2항^{5} ... 근로기준법은 퇴직금(일시금)을 지급"
+            "snippet": "퇴사하고 2주가 지났는데 퇴직금이 들어오지 않았다면 법이 정한 기한을 이미 넘겼을 수 있습니다. ... 확정급여형(DB) 퇴직연금 | 급여를 지급할 사유가 발생한 날부터 14일 이내 |"
           },
           {
             "url": "https://hri-attachment.s3.ap-northeast-2.amazonaws.com/cylearn/operate_upload/N0285/%EA%B5%90%EC%95%88%EB%AF%B8%EB%93%B1%EB%A1%9D%20%EB%A6%AC%EC%8A%A4%ED%8A%B8/2024%EB%85%84%20%EA%B7%BC%EB%A1%9C%EB%B3%B5%EC%A7%80%EA%B3%B5%EB%8B%A8%20%ED%87%B4%EC%A7%81%EC%97%B0%EA%B8%88%28DC%29%20%EA%B0%80%EC%9E%85%EC%9E%90%EA%B5%90%EC%9E%AC_%EC%B5%9C%EC%A2%85.pdf",
@@ -2874,7 +3335,7 @@
             "url": "https://easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=6&cciNo=2&cnpClsNo=3&csmSeq=514&menuType=qna&popMenu=ov",
             "domain": "easylaw.go.kr",
             "title": "임금, 퇴직금 등 지급 < 해고근로자",
-            "snippet": "근로기준법 위반 사건은 공소시효가 3년이며 민법상 임금 채권소멸 시효는 3년으로 3년 이내 민사소송을 진행하여 확정판결시 일반채권으로 전환되어 그 소멸시효가 10년으로 연장됨을 알려드립니다. ... ※ 임금체불"
+            "snippet": "* 퇴직금 및 임금체불 구제방법 문의. ... <개별적인 사실관계에 따라 판단하여야 하는 노동관계의 특성상 인터넷 질의응답은 법적 효력이 없으므로, 각종 권리주장의 근거 또는 증거자료 등으로는"
           },
           {
             "url": "https://mods.go.kr/boardDownload.es?bid=11816&list_no=365345&seq=2",
@@ -2883,16 +3344,16 @@
             "snippet": "ㅇ 기준연도 말 현재 사업장에 실재하면서 퇴직연금이 적립ㆍ운용되고 있는 ... 행정 DB 구축 ① 모집단 DB | ② 퇴직연금 DB | ⇒ None | 통계적"
           },
           {
+            "url": "https://easylaw.go.kr/CSP/CnpClsMainBtr.laf?ccfNo=6&cciNo=2&cnpClsNo=2&csmSeq=514&menuType=qna&popMenu=ov",
+            "domain": "easylaw.go.kr",
+            "title": "임금, 퇴직금 등 지급 < 해고근로자",
+            "snippet": "* 제가 직장을 1년9개월 근무를했구요4대보험도 가입되어 달마다 보험료가 빠졌습니다. ... ① 연봉액에 포함될 퇴직금의 액수가 명확히 정해져 있어야 하며, 매월 지급받은 퇴직금의 합계가 중간정산 시점을"
+          },
+          {
             "url": "https://toejik.kr/calc-severance",
             "domain": "toejik.kr",
             "title": "퇴직금 계산기 (2026) — 입사일·퇴직일로 바로 계산 | 퇴직연구소",
             "snippet": "## 계산 방법 자세히 보기 ... 퇴직금은 퇴직일로부터 14일 이내에 지급되어야 합니다(당사자 합의로 연장 가능). ... 퇴직연금(DB·DC)에 가입된 회사라면 실제 수령액은 제도 유형에 따라 달라집니다."
-          },
-          {
-            "url": "https://tools.kimgoon.kr/retirement-pay",
-            "domain": "tools.kimgoon.kr",
-            "title": "퇴직금 계산기 — 평균임금 기준 법정 퇴직금 | 툴박스",
-            "snippet": "## 퇴직금 계산 방법 ... 실제 수령액은 퇴직소득세와 지방소득세를 뺀 금액이며, 퇴직소득세는 근속연수공제·환산급여공제를 거쳐 계산돼 근속이 길수록 세부담이 크게 줄어듭니다.또 퇴직연금(DB·DC)에 가입돼 있으면 지급 주체와"
           }
         ],
         "search_review": {
@@ -2900,13 +3361,13 @@
           "query": "퇴직연금가입방법",
           "executed_query": "퇴직연금 가입 방법",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-18T05:13:11.802349+00:00",
-          "raw_sha256": "c2fa9bd7d9fdfbded68e4ad0ee5f5ebba709e14abf9dc98e130550cf10bbf655",
+          "checked_at": "2026-09-18T06:45:48.088475+00:00",
+          "raw_sha256": "b5343e53980dc8b643083de1ade071f2175af40c08e8ad0b3ee39ae2196fa6a6",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "현재 퇴직연금제도 미설정일 경우 지급 방법 문의드립니다."
+              "quote": "퇴직연금제도 미설정일 경우 지급 방법 문의드립니다."
             },
             {
               "result_index": 1,
@@ -2916,12 +3377,12 @@
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "급여를 지급할 사유가 발생한 날부터 14일 이내"
+              "quote": "퇴직금 지급일 — 퇴사 후 14일 기한과 넘기면 붙는 연 20% 지연이자"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "근로복지공단 퇴직연금 홈페이지 가입 및 이용 안내"
+              "quote": "회원가입 및 가입자 정보 등록 방법"
             },
             {
               "result_index": 4,
@@ -2936,7 +3397,7 @@
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "임금, 퇴직금 등 지급 < 해고근로자"
+              "quote": "퇴직금 및 임금체불 구제방법 문의."
             },
             {
               "result_index": 7,
@@ -2946,12 +3407,12 @@
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "퇴직금 계산기 (2026) — 입사일·퇴직일로 바로 계산"
+              "quote": "연봉액에 포함될 퇴직금의 액수가 명확히 정해져 있어야 하며"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "퇴직금 계산기 — 평균임금 기준 법정 퇴직금"
+              "quote": "퇴직금 계산기 (2026) — 입사일·퇴직일로 바로 계산"
             }
           ]
         }
@@ -3027,32 +3488,32 @@
         "proposals": [
           {
             "keyword": "세금계산서발행",
-            "reason": "네이버 월 16,480회. 발행 대상·시기·절차와 준비사항을 묻는 구체적인 세무 행정 수요여서 조사할 가치가 있다.",
+            "reason": "네이버 월 16,480회. 발행 대상·기한·준비사항과 실제 발행 절차를 묻는 구체적인 세무 수요로 조사할 가치가 있다.",
             "search_query": "세금계산서 발행"
           },
           {
-            "keyword": "소상공인폐업지원금",
-            "reason": "네이버 월 7,700회. 폐업 시 지원 대상과 신청서류를 찾는 수요가 있어 현재 신청 조건과 접수 여부를 조사할 만하다.",
-            "search_query": "소상공인 폐업 지원금"
-          },
-          {
-            "keyword": "자금조달계획서",
-            "reason": "네이버 월 9,000회. 주택 거래 시 제출 대상·작성 방법·증빙서류에 관한 행정 절차를 조사할 가치가 있다.",
-            "search_query": "자금조달계획서"
-          },
-          {
             "keyword": "경정청구환급기간",
-            "reason": "네이버 월 1,510회. 청구 후 언제 환급되는지 묻는 구체적 수요로, 처리기간과 지연 시 확인 절차를 조사할 만하다.",
+            "reason": "네이버 월 1,510회. 기존 신고 유형 구분 글과 달리 청구 후 처리 기간과 지연 시 확인 절차가 핵심 질문이다.",
             "search_query": "경정청구 환급 기간"
           },
           {
             "keyword": "개인사업자부가세환급",
-            "reason": "네이버 월 790회인 롱테일이다. 개인사업자의 환급 조건과 신고·증빙 절차를 묻는 세금 정보 수요를 조사할 만하다.",
+            "reason": "네이버 월 790회. 개인사업자의 환급 조건·신고 서류·지급 시점을 확인하려는 구체적인 소규모 수요가 있다.",
             "search_query": "개인사업자 부가세 환급"
           },
           {
+            "keyword": "자금조달계획서",
+            "reason": "네이버 월 9,000회. 주택 거래 시 제출 대상·작성 방법·증빙서류를 확인하려는 행정 절차 수요를 조사할 수 있다.",
+            "search_query": "자금조달계획서"
+          },
+          {
+            "keyword": "소상공인폐업지원금",
+            "reason": "네이버 월 7,700회. 폐업 전후 신청 조건·지원 항목·증빙서류와 현재 접수 가능 여부를 확인할 필요가 있다.",
+            "search_query": "소상공인 폐업 지원금"
+          },
+          {
             "keyword": "소상공인정책자금신청",
-            "reason": "네이버 월 800회인 신청 절차형 검색어다. 현재 접수 가능 여부와 신청 자격·준비서류를 조사할 가치가 있다.",
+            "reason": "네이버 월 800회. 포괄어보다 신청 목적이 분명하며 현재 접수 일정·자격·준비서류를 조사하기에 적합하다.",
             "search_query": "소상공인 정책자금 신청"
           }
         ]
@@ -3124,22 +3585,22 @@
         "proposals": [
           {
             "keyword": "종합소득세환급일",
-            "reason": "월 6,360회. 신고 후 입금 시점과 지연 시 확인사항을 묻는 수요로, 현재 미입금 독자의 질문을 조사할 가치가 있다.",
+            "reason": "네이버 월 6,360회. 신고 후 입금 시점과 지연 시 확인사항이라는 구체적인 질문을 조사할 가치가 있다.",
             "search_query": "종합소득세 환급일"
           },
           {
             "keyword": "부가세환급",
-            "reason": "월 4,590회. 환급 대상 조건과 일반·조기환급 절차를 조사할 수 있어 기존 미수령 국세 조회 글과 목적이 다르다.",
+            "reason": "네이버 월 4,590회. 환급 발생 조건과 신청 절차, 일반·조기환급의 지급 시점에 관한 정보 수요를 조사할 후보다.",
             "search_query": "부가세 환급"
           },
           {
             "keyword": "종합소득세율",
-            "reason": "월 7,360회. 과세표준 구간별 적용 세율과 누진공제 해석을 찾는 정보 수요로, 환급 절차와 구별되는 조사 후보다.",
+            "reason": "네이버 월 7,360회. 과세표준별 적용 세율과 누진공제 해석을 묻는 세금 정보 수요로, 기존 환급 절차 글과 구별된다.",
             "search_query": "종합소득세율"
           },
           {
             "keyword": "퇴직연금가입방법",
-            "reason": "월 700회의 구체적인 절차 수요다. 가입 주체·유형별 절차와 준비서류를 조사할 수 있어 기존 디폴트옵션 글과 구별된다.",
+            "reason": "네이버 월 700회인 절차형 롱테일이다. 가입 주체별 절차와 준비서류를 조사하며 기존 디폴트옵션 선택 글과 구별된다.",
             "search_query": "퇴직연금 가입 방법"
           }
         ]
@@ -3148,25 +3609,23 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "세금계산서발행",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 16480,
-        "organic_query": "세금계산서 발행"
-      },
-      {
         "keyword": "소상공인폐업지원금",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
         "monthly_search": 7700,
+        "score": 48.87,
+        "status": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage",
+          "unverified_current_relevance"
+        ],
         "organic_query": "소상공인 폐업 지원금"
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "세금계산서발행",
         "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 9000,
-        "organic_query": "자금조달계획서"
+        "reason": "search quality insufficient",
+        "monthly_search": 16480,
+        "organic_query": "세금계산서 발행"
       },
       {
         "keyword": "경정청구환급기간",
@@ -3181,6 +3640,13 @@
         "reason": "search quality insufficient",
         "monthly_search": 790,
         "organic_query": "개인사업자 부가세 환급"
+      },
+      {
+        "keyword": "자금조달계획서",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 9000,
+        "organic_query": "자금조달계획서"
       },
       {
         "keyword": "소상공인정책자금신청",

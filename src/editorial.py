@@ -69,6 +69,24 @@ def _source_fetch_failure(reason: str) -> None:
     logger.warning("Official source fetch failed: %s", reason)
 
 
+def _source_body(soup):
+    """Prefer an explicit article body over legacy div-based navigation shells."""
+    for el in soup.select('script, style, nav, header, footer, noscript, '
+                          '[role="navigation"], #head, #foot, #allmenu_op, '
+                          '#menu_navi, #sidebar, #sidemenu, #location'):
+        el.decompose()
+    # Exact, common content containers, including the hospital's legacy CMS.
+    # Do not infer body text from arbitrary elements named *content* or promote
+    # a short/empty article by padding it with the whole site's navigation.
+    for selector in ('[itemprop="articleBody"]', 'article', '.view_type .cont_area',
+                     '.board_view .view_cont', '.board-view .view-content',
+                     '#cont_wrap', '#contents', 'main'):
+        nodes = soup.select(selector)
+        if nodes:
+            return max((node.get_text(' ', strip=True) for node in nodes), key=len)
+    return (soup.body or soup).get_text(' ', strip=True)
+
+
 def fetch_source(url: str, title: str = "") -> dict | None:
     """Read an official source, resolving only allowlisted HTTPS redirects.
 
@@ -135,11 +153,10 @@ def fetch_source(url: str, title: str = "") -> dict | None:
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
         soup = BeautifulSoup(bytes(data), "html.parser")
+        if time.monotonic() >= deadline:
+            return _source_fetch_failure("time_budget")
         page_title = soup.title.get_text(" ", strip=True) if soup.title else title
-        for el in soup(["script", "style", "nav", "header", "footer", "noscript"]):
-            el.decompose()
-        main = soup.find("article") or soup.find("main") or soup.body or soup
-        text = main.get_text(" ", strip=True)
+        text = _source_body(soup)
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
         if len(text) < 200:

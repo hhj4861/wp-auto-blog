@@ -57,6 +57,15 @@ def test_all_rows_reviewed_once_and_metrics_are_recomputed():
     assert metrics(original, bound)['organic_opportunity'] == 24.0
 
 
+def test_relevance_prompt_distinguishes_answer_components_from_complete_source_coverage():
+    # Prompt contract only: semantic model accuracy is not established by this mock.
+    _, model = review(rows())
+    prompt = model.call_args.args[0]
+    for term in ('CT', 'MRI', '심장 초음파', 'PET-CT', '건강보험료 조회'):
+        assert term in prompt
+    assert '개별 검색 결과 하나가' in prompt
+
+
 @pytest.mark.parametrize('positive_count,allowed', [(2, False), (5, False), (6, True), (10, True)])
 def test_all_raw_positions_remain_in_relevance_denominator(positive_count, allowed):
     results = rows(10)

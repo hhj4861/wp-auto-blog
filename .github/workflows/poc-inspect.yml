@@ -6,6 +6,10 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      connection_check:
+        description: 'WordPress 인증·게시물 목록 응답만 진단 (게시물 변경 없음)'
+        type: boolean
+        default: false
       status:
         description: '조회할 포스트 상태'
         required: false
@@ -26,9 +30,18 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests python-dotenv
+
+      - name: Check WordPress inventory access
+        if: inputs.connection_check == true
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+        run: python scripts/check_wordpress_inventory.py
 
       - name: Dump latest post
+        if: inputs.connection_check != true
         env:
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
@@ -37,6 +50,7 @@ jobs:
         run: python scripts/dump_latest_post.py
 
       - name: Upload dump artifact
+        if: inputs.connection_check != true
         uses: actions/upload-artifact@v4
         with:
           name: poc-dump

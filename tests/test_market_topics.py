@@ -534,6 +534,23 @@ def test_inventory_does_not_retry_permission_tls_http_or_invalid_payload(
     assert secret not in ''.join(traceback.format_exception(caught.value))
 
 
+@pytest.mark.parametrize('failure,reason', [(401, 'http_401'), (403, 'http_403'),
+                                         ('json', 'invalid_json'), ('title', 'invalid_inventory'),
+                                         ('pages', 'invalid_pagination')])
+def test_inventory_failure_logs_only_safe_reason_and_page(inventory_read, caplog, failure, reason):
+    response = market.requests.Response()
+    response.status_code = failure if isinstance(failure, int) else 200
+    response.url = 'https://trendpulse.blog/?private=secret'
+    response.headers['X-WP-TotalPages'] = 'secret' if failure == 'pages' else '2'
+    payload = [{'title': {'rendered': None}}] if failure == 'title' else []
+    response._content = b'secret' if failure == 'json' else json.dumps(payload).encode()
+    inventory_read.get.side_effect = [inventory_read.first, response]
+    with pytest.raises(RuntimeError, match='^WordPress inventory unavailable$'):
+        market.existing_titles()
+    assert [row.getMessage() for row in caplog.records] == [
+        f'WordPress inventory unavailable: reason={reason} page=2']
+
+
 def test_selection_requires_measured_keyword_source_and_serp(monkeypatch):
     proposal = {'keyword': '시험준비물', 'topic': '시험준비물 확인 방법', 'category': '취업',
                 'intent': '무엇을 준비하나', 'gap': '준비물 표', 'source_url': 'https://example.go.kr/info'}

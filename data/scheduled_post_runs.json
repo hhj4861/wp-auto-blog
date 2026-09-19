@@ -40,7 +40,8 @@
       "run_id": "35428005376",
       "category": "건강",
       "claimed_at": "2026-09-19T15:57:59.179785+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-09-19T07:21:55.865028+00:00"
     }
   }
 }

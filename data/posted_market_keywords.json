@@ -101,5 +101,26 @@
     "trend_status": "unavailable",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-11T02:55:13.303010+00:00"
+  },
+  {
+    "key": "콜레스테롤낮추는방법",
+    "keyword": "콜레스테롤낮추는방법",
+    "topic": "콜레스테롤낮추는방법: 식단·운동·생활습관 관리",
+    "category": "건강",
+    "post_id": 1760,
+    "url": "https://trendpulse.blog/cholesterol-lowering-habits/",
+    "selection_version": 6,
+    "monthly_search": 8620,
+    "score": 75.87,
+    "score_components": {
+      "demand": 31.48,
+      "organic_opportunity": 29.39,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-19T05:47:36.980443+00:00"
   }
 ]

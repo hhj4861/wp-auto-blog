@@ -24,6 +24,8 @@ def summarize(response):
     pages = response.headers.get('X-WP-TotalPages', '')
     result.update(shape='list', count=len(body), pages_valid=bool(re.fullmatch(r'[0-9]+', pages)),
                   invalid_title_rows=[], invalid_meta_rows=[])
+    if result['pages_valid']:
+        result['total_pages'] = int(pages)
     for index, row in enumerate(body):
         if (not isinstance(row, dict) or not isinstance(row.get('title'), dict)
                 or not isinstance(row['title'].get('rendered'), str)):
@@ -40,21 +42,29 @@ def check(env, get=requests.get):
     # Match dotenv parsing in the posting job without writing or logging secrets.
     parsed = dotenv_values(stream=StringIO('\n'.join(f'{key}={env[key]}' for key in keys)),
                            interpolate=False)
-    report = {'dotenv_roundtrip_equal': all(parsed.get(key) == env[key] for key in keys), 'probes': []}
+    interpolated = dotenv_values(stream=StringIO('\n'.join(f'{key}={env[key]}' for key in keys)))
+    report = {'dotenv_roundtrip_equal': all(parsed.get(key) == env[key] for key in keys),
+              'dotenv_interpolated_equal': all(interpolated.get(key) == env[key] for key in keys),
+              'heredoc_expansion_possible': any(any(char in env[key] for char in ('$','`','\\')) for key in keys),
+              'probes': []}
     standard = {'status': 'publish,draft,pending,future', 'per_page': 100,
                 'page': 1, '_fields': 'title,meta'}
     variants = [('inventory_view', standard), ('inventory_edit', {**standard, 'context': 'edit'}),
                 ('latest_published', {'status': 'publish', 'per_page': 1, 'context': 'edit'})]
     for name, params in variants:
-        try:
-            response = get('https://trendpulse.blog/wp-json/wp/v2/posts',
-                auth=(env[keys[1]], env[keys[2]]),
-                headers={'User-Agent': 'Mozilla/5.0 (TrendPulse topic selection)'},
-                params=params, timeout=30, allow_redirects=False)
-            summary = summarize(response)
-        except requests.RequestException:
-            summary = {'error': 'request_failed'}
-        report['probes'].append({'name': name, **summary})
+        for page in range(1, 21):
+            try:
+                response = get('https://trendpulse.blog/wp-json/wp/v2/posts',
+                    auth=(env[keys[1]], env[keys[2]]),
+                    headers={'User-Agent': 'Mozilla/5.0 (TrendPulse topic selection)'},
+                    params={**params, 'page': page}, timeout=30, allow_redirects=False)
+                summary = summarize(response)
+            except requests.RequestException:
+                summary = {'error': 'request_failed'}
+            report['probes'].append({'name': name, 'page': page, **summary})
+            if (name == 'latest_published' or summary.get('http_status') != 200
+                    or page >= summary.get('total_pages', 1)):
+                break
     return report
 
 

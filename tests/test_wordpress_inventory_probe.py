@@ -34,3 +34,16 @@ def test_unrelated_target_cannot_receive_credentials():
     assert check({'WP_GENERAL_URL': 'https://wrong.example', 'WP_GENERAL_USERNAME': 'u',
                   'WP_GENERAL_APP_PASSWORD': 'p'}, get) == {'status': 'invalid_configuration'}
     get.assert_not_called()
+
+
+def test_every_inventory_page_is_checked_without_reading_all_latest_posts():
+    response = Mock(status_code=200, headers={'X-WP-TotalPages': '4'})
+    response.json.return_value = [{'title': {'rendered': 'private'}, 'meta': {}}]
+    get = Mock(return_value=response)
+    result = check({'WP_GENERAL_URL': 'https://trendpulse.blog', 'WP_GENERAL_USERNAME': 'u',
+                    'WP_GENERAL_APP_PASSWORD': 'p'}, get)
+    assert [row['page'] for row in result['probes']] == [1, 2, 3, 4, 1, 2, 3, 4, 1]
+    assert all(row['http_status'] == 200 for row in result['probes'])
+    assert all(call.kwargs['auth'] == ('u', 'p') for call in get.call_args_list)
+    assert all(call.kwargs['timeout'] == 30 for call in get.call_args_list)
+    assert 'private' not in json.dumps(result)

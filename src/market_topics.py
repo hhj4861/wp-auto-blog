@@ -6,6 +6,7 @@ recorded but never treated as organic SEO difficulty. Missing evidence fails clo
 from datetime import datetime, timezone, timedelta
 from html import unescape
 import json
+import logging
 import math
 import os
 from pathlib import Path
@@ -151,6 +152,7 @@ def existing_titles():
     titles = historical_terms()
     retry_available = True  # One extra GET across the whole inventory, not per page.
     for page in range(1, 101):
+        failure = 'transport'
         try:
             while True:
                 try:
@@ -165,8 +167,12 @@ def existing_titles():
                     sleep(1)
                     continue
                 break
+            status = response.status_code
+            failure = f'http_{status}' if type(status) is int else 'http_response'
             response.raise_for_status()
+            failure = 'invalid_json'
             posts = response.json()
+            failure = 'invalid_inventory'
             if not isinstance(posts, list):
                 raise ValueError('Invalid inventory')
             for post in posts:
@@ -178,9 +184,13 @@ def existing_titles():
                 for field in ('_yoast_wpseo_focuskw', 'rank_math_focus_keyword'):
                     if isinstance(meta.get(field), str):
                         titles.extend(x.strip() for x in meta[field].split(',') if x.strip())
+            failure = 'invalid_pagination'
             if page >= int(response.headers.get('X-WP-TotalPages', '1')):
                 return titles
         except (requests.exceptions.RequestException, ValueError, TypeError, KeyError, AttributeError):
+            # Never include response bodies, URLs, credentials or provider exceptions.
+            logging.getLogger(__name__).warning('WordPress inventory unavailable: reason=%s page=%d',
+                                               failure, page)
             raise RuntimeError('WordPress inventory unavailable') from None
     raise RuntimeError('Duplicate inventory pagination incomplete')
 

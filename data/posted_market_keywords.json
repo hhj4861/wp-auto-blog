@@ -122,5 +122,26 @@
     "trend_status": "unavailable",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-19T05:47:36.980443+00:00"
+  },
+  {
+    "key": "고지혈증수치",
+    "keyword": "고지혈증수치",
+    "topic": "고지혈증수치 기준과 검사 결과 읽는 법, 생활습관 관리",
+    "category": "건강",
+    "post_id": 1763,
+    "url": "https://trendpulse.blog/cholesterol-levels-check-guide/",
+    "selection_version": 6,
+    "monthly_search": 8660,
+    "score": 79.83,
+    "score_components": {
+      "demand": 31.5,
+      "organic_opportunity": 33.33,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-19T07:21:52.628637+00:00"
   }
 ]

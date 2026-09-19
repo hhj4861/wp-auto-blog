@@ -254,6 +254,32 @@ FRESH_SOURCE_HTML = '<html><title>Current official guide</title><main>' + 'Fresh
 SOURCE_HTTP_URL = 'https://www.nts.go.kr/nts/guide?reference=public'
 
 
+@pytest.mark.parametrize('container', [
+    '<div id="contents"><div class="view_type"><div class="cont_area">{body}</div></div></div>',
+    '<div id="cont_wrap">{body}</div>',
+    '<main>{body}</main>',
+    '<article>{body}</article>',
+])
+def test_legacy_navigation_cannot_truncate_actual_source_body(source_http, container):
+    body = '검사 비용과 적용 범위를 확인하세요. ' * 30
+    table = '<table><tr><td>흉부 CT</td><td>100,000원</td></tr></table>'
+    html = ('<html><title>공식 상세 안내</title><body><div id="head">' + '메뉴 ' * 4000
+            + '<nav>중첩 메뉴</nav></div><div role="navigation">예약 메뉴</div>'
+            + container.format(body=body + table) + '<div id="foot">푸터</div></body></html>')
+    source_http.get.side_effect = [_source_response(html)]
+    result = fetch_source(SOURCE_HTTP_URL)
+    assert result['excerpt'] == body.strip() + ' 흉부 CT 100,000원'
+    assert result['sha256'] == hashlib.sha256(result['excerpt'].encode()).hexdigest()
+    assert result['title'] == '공식 상세 안내'
+
+
+def test_short_explicit_body_cannot_be_padded_with_surrounding_navigation(source_http):
+    html = '<body><div>' + '예약 및 진료과 메뉴 ' * 2000 + '</div><article>로그인 필요</article></body>'
+    source_http.get.side_effect = [_source_response(html)]
+    assert fetch_source(SOURCE_HTTP_URL) is None
+    source_http.get.assert_called_once()
+
+
 @pytest.mark.parametrize('error', [
     requests.Timeout, requests.ConnectTimeout, requests.ReadTimeout, requests.ConnectionError,
 ])

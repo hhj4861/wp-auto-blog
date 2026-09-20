@@ -204,7 +204,7 @@ def test_existing_category_jobs_keep_schedule_and_share_writer():
     workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
     assert 'post-codex' not in workflow['jobs']
     schedules = workflow.get('on', workflow.get(True))['schedule']
-    assert [entry['cron'] for entry in schedules] == ['0 2 * * 1,3,5', '0 2 * * 2,4', '0 2 * * 6', '17,47 2-13 * * 1-6']
+    assert [entry['cron'] for entry in schedules] == ['0 0 * * *', '0 9 * * *', '17,47 0-13 * * *']
     for name in ('post-general', 'post-queue'):
         job = workflow['jobs'][name]
         assert 'vars.BLOG_WRITER_PROVIDER' in job['env']['BLOG_WRITER_PROVIDER']
@@ -213,8 +213,7 @@ def test_existing_category_jobs_keep_schedule_and_share_writer():
         assert any('always()' in step.get('if', '') and 'persist' in step.get('run', '') for step in job['steps'])
     queue = next(s['run'] for s in workflow['jobs']['post-queue']['steps'] if s.get('name', '').startswith('Run pipeline'))
     assert 'python -m src.main --mode general --from-queue --auto-publish --category "$CAT"' in queue
-    for category in ('취업', '건강', '생활정보'):
-        assert f'CAT="{category}"' in queue
+    assert 'CAT="$SCHEDULE_CATEGORY"' in queue
 
 
 @pytest.mark.parametrize('worker_exit', [0, 1])
@@ -241,6 +240,29 @@ def test_queue_draft_recovery_skips_selection_and_new_post_creation(tmp_path, wo
     assert persistence['if'] == 'always()'
     for path in ('data/topic_queue_general.json', 'data/posted_market_keywords.json'):
         assert path in persistence['run']
+
+
+@pytest.mark.parametrize('category', ['생산성', '리뷰', '테크'])
+def test_queue_workflow_passes_claimed_category_to_selection_and_publication(tmp_path, category):
+    import os
+    import subprocess
+    from pathlib import Path
+    workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
+    script = next(s['run'] for s in workflow['jobs']['post-queue']['steps']
+                  if s.get('name', '').startswith('Run pipeline'))
+    calls = tmp_path/'calls'
+    fake_python = tmp_path/'python'
+    fake_python.write_text('#!/bin/sh\nprintf "%s\\n" "$*" >> "$POSTING_CALLS"\n')
+    fake_python.chmod(0o700)
+    result = subprocess.run(['bash', '-e', '-c', script], capture_output=True, text=True,
+        env={**os.environ, 'PATH': str(tmp_path) + os.pathsep + os.environ['PATH'],
+             'BLOG_RESUME_DRAFT_ID': '', 'BLOG_CATEGORY': '생활정보', 'BLOG_PUBLISH': 'true',
+             'SCHEDULE_CATEGORY': category, 'SCHEDULE_STAGE_PATH': str(tmp_path/'stage'),
+             'POSTING_CALLS': str(calls)})
+    assert result.returncode == 0, result.stderr
+    assert calls.read_text().splitlines() == [
+        f'scripts/select_blog_keywords.py --category {category} --enqueue --reuse',
+        f'-m src.main --mode general --from-queue --auto-publish --category {category}']
 
 
 @pytest.mark.parametrize('repo,event,ref,opt_in,allowed', [

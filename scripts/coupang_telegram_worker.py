@@ -17,9 +17,9 @@ from src.coupang_telegram import (RequestStore, TelegramClient, TelegramError,
                                 timeout_publication_allowed, REPLY_WAIT, UPDATE_RETENTION)
 
 from src.coupang_policy import is_product_promotion
+from src.posting_schedule import CATEGORIES
 
 DATA = Path('data')
-CATEGORIES = {'취업', '건강', '생활정보'}
 
 
 def now():

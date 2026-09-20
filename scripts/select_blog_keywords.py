@@ -10,6 +10,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from src.editorial import fetch_source
+from src.posting_schedule import KST, SLOTS, category_for_date
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
 
@@ -48,10 +49,13 @@ def _sources_accessible(item, source_cache):
 def main():
     load_dotenv()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--category', choices=['all', *CATEGORIES], default='all')
+    parser.add_argument('--category', choices=['all', 'scheduled', *CATEGORIES], default='all')
+    parser.add_argument('--slot', choices=SLOTS, default='morning', help='Slot for scheduled category research')
     parser.add_argument('--enqueue', action='store_true')
     parser.add_argument('--reuse', action='store_true', help='Reuse a verified report up to 36 hours old')
     args = parser.parse_args()
+    if args.category == 'scheduled':
+        args.category = category_for_date(datetime.now(KST).date(), args.slot)
     top_n = int(os.getenv('SELECT_TOP_N') or '2')
     if not 1 <= top_n <= 5:
         raise ValueError('SELECT_TOP_N must be between 1 and 5')

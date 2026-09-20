@@ -22,6 +22,7 @@ import requests
 
 POLICY_CATEGORIES = {"생활정보", "취업", "건강"}
 OFFICIAL_DOMAINS = {
+    "support.microsoft.com", "notion.com", "support.google.com", "apple.com",
     "samsung.com", "samsungcareers.com", "hyundai.com", "hyundaimotorgroup.com", "skcareers.com",
     "skhynix.com", "lg.com", "lguplus.com", "jal.com", "jal.co.jp",
     "emiratesgroupcareers.com", "emirates.com", "finnair.com", "airbusan.com",
@@ -405,6 +406,8 @@ OFFICIAL_LINK: 제공된 공식 자료의 실제 URL (없으면 빈 값)
 - 일정/신청 글은 첫 H2에 일정표 또는 준비물 체크리스트를 둔다.
 - 제공된 공식 원문에서 확인된 수치만 쓴다. 예상 일정은 현재 일정으로 단정하지 않는다.
   출처 확인일을 제도의 발표일/시행일로 쓰지 않는다.
+- 생산성·리뷰·테크 글은 공식 도움말·제품 사양으로 확인한 기능과 제약을 설명한다.
+  직접 사용·구매·성능 측정 경험을 지어내지 않는다. 제품 비교는 공식 자료 기반임을 밝힌다.
 - 수치뿐 아니라 원인·예외·검사 준비·진단 조건·FAQ의 설명도 제공된 발췌문으로만
   뒷받침한다. 일반 의학 지식이나 기억으로 설명을 보충하지 않는다. 필요한 근거가 없으면
   해당 설명을 생략한다. 제공되지 않은 기관명·출처 URL을 새로 추가하지 않는다.

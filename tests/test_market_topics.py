@@ -2029,6 +2029,78 @@ def test_selection_passes_requested_category_to_pool(monkeypatch):
     assert [item['keyword'] for item in report['selected']] == [keyword]
 
 
+@pytest.mark.parametrize('category,keyword,url', [
+    ('생산성', '엑셀함수사용법', 'https://support.microsoft.com/excel'),
+    ('리뷰', '로봇청소기비교', 'https://www.samsung.com/cleaner'),
+    ('테크', '아이폰백업방법', 'https://support.apple.com/iphone'),
+])
+def test_new_categories_select_verified_sources_and_enqueue(monkeypatch, category, keyword, url):
+    from src.posting_schedule import CATEGORIES
+    assert set(market.CATEGORIES) == CATEGORIES == set(market.CATEGORY_SCOPES)
+    measured = Mock(return_value={keyword: {'keyword': keyword, 'monthly': 1200}})
+    monkeypatch.setattr(market, 'demand_candidates', measured)
+    review = Mock(side_effect=[{'candidates': [{'keyword': keyword}]}, analysis(keyword, category)])
+    monkeypatch.setattr(market, 'ask', review)
+    monkeypatch.setattr(market, 'search_results', lambda key: ('google_custom_search', organic_sample(key)))
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence(url)])
+    monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
+    report = market.select_category(category, 1, titles=[])
+    measured.assert_called_once_with(market.CATEGORIES[category])
+    assert len(report['selected']) == 1
+    row = report['selected'][0]
+    assert row['category'] == category and row['keyword'] == keyword
+    assert market.fresh_market_item(row, category)
+    assert market.enqueue_report([], report) == [row]
+    assert '취업/생활정보/건강/생산성/리뷰/테크/기타' in review.call_args.args[0]
+    # Existing suitability evidence is bound to the verified bodies.
+    forged = deepcopy(row)
+    forged['verified_sources'][0]['excerpt'] = 'unsupported replacement'
+    assert not market.fresh_market_item(forged, category)
+
+
+@pytest.mark.parametrize('keyword,url', [
+    ('엑셀함수사용법', 'https://support.microsoft.com/excel'),
+    ('노션사용법', 'https://www.notion.com/help'),
+    ('구글스프레드시트함수', 'https://support.google.com/docs'),
+    ('아이폰백업방법', 'https://support.apple.com/iphone'),
+])
+def test_product_official_source_search_keeps_allowlist(monkeypatch, keyword, url):
+    from src.editorial import is_official_url
+    query = Mock(return_value=('google_custom_search', [{'url': url}, {'url': 'https://review.example/info'}]))
+    monkeypatch.setattr(market, 'search_results', query)
+    assert market.official_search_urls(keyword) == [url]
+    assert market._official_search_extra_domains(keyword)
+    assert not is_official_url('https://support.microsoft.com.evil.example/info')
+    assert not is_official_url('https://notion.site/customer-page')
+
+
+@pytest.mark.parametrize('day,slot,category', [
+    ('2026-09-21', 'morning', '생활정보'), ('2026-09-21', 'evening', '생산성'),
+    ('2026-09-22', 'morning', '취업'), ('2026-09-22', 'evening', '리뷰'),
+    ('2026-09-23', 'morning', '건강'), ('2026-09-23', 'evening', '테크'),
+    ('2026-09-24', 'morning', '생산성'), ('2026-09-24', 'evening', '생활정보'),
+    ('2026-09-25', 'morning', '리뷰'), ('2026-09-25', 'evening', '취업'),
+    ('2026-09-26', 'morning', '테크'), ('2026-09-26', 'evening', '건강')])
+def test_scheduled_research_only_selects_today_in_kst(tmp_path, monkeypatch, day, slot, category):
+    import scripts.select_blog_keywords as cli
+    import sys
+    class Clock(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            # Morning research belongs to the previous UTC day (07:30 KST).
+            local = '07:30' if slot == 'morning' else '16:30'
+            return datetime.fromisoformat(day + 'T' + local + ':00+09:00').astimezone(tz)
+    monkeypatch.setattr(cli, 'datetime', Clock)
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'REPORT', tmp_path/'report.json')
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [])
+    monkeypatch.setattr(cli, 'select_category', Mock(return_value={'selected': []}))
+    monkeypatch.setattr(sys, 'argv', ['select_blog_keywords.py', '--category', 'scheduled', '--slot', slot])
+    cli.main()
+    assert cli.select_category.call_count == 1
+    assert cli.select_category.call_args.args[0] == category
+
+
 def test_cross_category_proposal_is_rejected_even_if_it_reaches_pool(monkeypatch):
     keyword = '국가기술자격증종류'
     measured = {'keyword': keyword, 'monthly': 1200}

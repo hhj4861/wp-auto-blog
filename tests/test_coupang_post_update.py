@@ -70,8 +70,12 @@ def ready(c):
     return identifier
 
 
-def test_published_post_accepts_late_reply_updates_only_content_and_never_duplicates(published_case):
+@pytest.mark.parametrize('category', ['건강', '생산성', '리뷰', '테크'])
+def test_published_post_accepts_late_reply_updates_only_content_and_never_duplicates(published_case, category):
     c = published_case
+    rows = json.loads(c['queue_path'].read_text())
+    rows[1]['category'] = category
+    c['queue_path'].write_text(json.dumps(rows))
     identifier = ready(c)
     message = c['telegram']['sent'][0]['text']
     assert c['original']['link'] in message

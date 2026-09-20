@@ -33,11 +33,17 @@ CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
     '생활정보': ['신청방법', '환급금', '생활요금', '정부지원'],
     '건강': ['건강검진', '예방접종', '건강보험', '운동'],
+    '생산성': ['엑셀', '노션', '구글스프레드시트', '시간관리'],
+    '리뷰': ['로봇청소기', '무선청소기', '공기청정기', '노트북비교'],
+    '테크': ['갤럭시', '아이폰', '윈도우', '와이파이'],
 }
 CATEGORY_SCOPES = {
     '취업': '채용·구직·면접·직업훈련·직무 자격증·국가기술자격 시험과 경력 준비',
     '생활정보': '세금·주거·생활요금·일반 복지와 행정 절차. 의료비 세액공제 등 세금 목적 포함. 취업/자격증 및 의료 이용/건강보험 업무는 제외',
     '건강': '건강검진·예방접종·건강보험·의료 이용과 건강 관리. 의료 직종의 채용/자격증은 취업, 세액공제 등 세금 목적은 생활정보',
+    '생산성': '문서·스프레드시트·노트·업무 도구의 사용법과 시간 관리. 제품 구매 비교는 리뷰, 기기 설정·기술 설명은 테크',
+    '리뷰': '제품·서비스의 구매 전 선택 기준과 사양·기능·제약 비교. 제조사 공식 자료로 확인한 비교이며 직접 사용·측정한 경험을 지어내지 않음',
+    '테크': '기기·운영체제·네트워크의 기능·설정·호환성과 기술 설명. 구매 비교는 리뷰, 업무 도구 활용법은 생산성',
 }
 # Clear domain terms catch unrelated Naver suggestions before spending on research.
 # Career terms take precedence for medical qualifications. Mixed health/household
@@ -51,6 +57,9 @@ CATEGORY_TERMS = {
     '생활정보': ('종합소득세', '연말정산', '양도소득세', '재산세', '자동차세',
              '세액공제', '소득공제', '근로장려금', '전기요금', '가스요금', '수도요금', '주거급여',
              '기초연금', '청년월세', '전입신고', '전세보증금'),
+    '생산성': ('엑셀', '노션', '구글스프레드시트', '시간관리'),
+    '리뷰': ('로봇청소기', '무선청소기', '공기청정기'),
+    '테크': ('와이파이', '블루투스', '운영체제', '소프트웨어업데이트'),
 }
 SOURCE = 'category_market_v1'
 PROCESS_VERSION = 6
@@ -63,6 +72,12 @@ REJECTION_OPINION_CODES = frozenset({
     'unsupported_claim', 'other',
 })
 OFFICIAL_SEARCH_DOMAIN_HINTS = (
+    ('support.microsoft.com', ('엑셀', 'excel', '윈도우', 'windows', '오피스', '파워포인트')),
+    ('notion.com', ('노션', 'notion')),
+    ('support.google.com', ('구글', '스프레드시트', '안드로이드')),
+    ('apple.com', ('애플', '아이폰', '아이패드', '맥북', '에어팟')),
+    ('samsung.com', ('삼성', '갤럭시', '청소기', '공기청정기', '노트북')),
+    ('lg.com', ('엘지', 'lg', '청소기', '공기청정기', '노트북')),
     ('korcham.net', ('컴활', '컴퓨터활용능력', '워드프로세서', '전산회계운용사', '유통관리사', '무역영어')),
     ('korea.kr', ('정부', '정책', '지원', '환급', '보험', '검진', '고용', '세금', '연말정산',
                   '종합소득세', '예방접종', '장려금', '수당', '급여', '월세', '전입신고')),
@@ -476,7 +491,9 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
             + json.dumps(coverage_gaps, ensure_ascii=False))
     trace = client.research(f"""오늘 {now[:10]}, 한국 블로그 {category}의 검색어 {keyword}를 조사하세요.
 내장 웹검색 도구로 이 검색어의 구체적인 질문을 확인하고 이를 설명하는 공식 상세 안내를 찾으세요.
-go.kr, or.kr, gov, ac.kr 또는 기업의 공식 채용 사이트를 우선하세요.
+go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품 사양·지원 문서를 우선하세요.
+생산성·리뷰·테크는 제조사·서비스 제공자의 공식 도움말과 사양을 근거로 삼으세요.
+직접 사용 후기나 성능 측정 결과를 만들어내지 마세요.
 {domain_hint}
 {coverage_hint}
 공식 상세 페이지를 최대 6개 열어 본문을 확인하세요. open에는 검색 결과 참조 ID 대신
@@ -567,7 +584,7 @@ source_indices에는 이 기획에서 실제로 사용하는 공식 자료의 �
 검색결과 인덱스인 serp_indices와 공식 자료 인덱스인 source_indices를 혼동하지 마세요.
 자료가 부족해 판단할 수 없으면 false입니다.
 마감일이 있으면 valid_until에 ISO 날짜, 상시 정보는 JSON null을 넣으세요.
-category는 실제 목적에 따라 취업/생활정보/건강/기타 중 선택하고, 요청 카테고리와 다르면 supported=false입니다.
+category는 실제 목적에 따라 {'/'.join(CATEGORIES)}/기타 중 선택하고, 요청 카테고리와 다르면 supported=false입니다.
 supported=false일 때 선택적 rejection_reason에는 다음 코드 중 하나만 적으세요:
 source_navigation(공식 자료가 메뉴뿐), source_missing_detail(공식 자료에 필요한 상세 설명 없음),
 expired_information(종료되거나 만료된 정보), keyword_navigation(홈페이지 이동 목적의 검색어),

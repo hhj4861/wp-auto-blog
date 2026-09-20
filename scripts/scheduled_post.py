@@ -12,13 +12,12 @@ from pathlib import Path
 import re
 import sys
 from urllib.request import Request, build_opener, HTTPRedirectHandler, ProxyHandler
-from zoneinfo import ZoneInfo
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from src.posting_schedule import KST, CATEGORIES, category_for_date
 
-KST = ZoneInfo('Asia/Seoul')
 STATE = Path('data/scheduled_post_runs.json')
-CATEGORIES = ('생활정보', '취업', '생활정보', '취업', '생활정보', '건강')
 CRONS = {'0 2 * * 1,3,5': {0, 2, 4}, '0 2 * * 2,4': {1, 3},
-         '0 2 * * 6': {5}, '17,47 2-13 * * 1-6': set(range(6))}
+         '0 2 * * 6': {5}, '0 2 * * 0': {6}, '17,47 2-13 * * *': set(range(7))}
 
 
 def timestamp(value):
@@ -69,11 +68,11 @@ def claim(env, path=STATE, now=None):
     current = (now or datetime.now(timezone.utc)).astimezone(KST)
     day = created.date().isoformat()
     weekday = created.weekday()
-    if current < created or current.date() != created.date() or weekday == 6 or current.hour < 11:
+    if current < created or current.date() != created.date() or current.hour < 11:
         return {'run': 'false', 'reason': 'outside_scheduled_day'}
     if scheduled and weekday not in CRONS.get(env.get('SCHEDULE_CRON'), set()):
         return {'run': 'false', 'reason': 'schedule_day_mismatch'}
-    category = CATEGORIES[weekday]
+    category = category_for_date(created.date())
     if recovery and env.get('BLOG_CATEGORY') not in ('', None, category):
         raise ValueError('recovery_category_mismatch')
     run_id = env.get('GITHUB_RUN_ID', '')

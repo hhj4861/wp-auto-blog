@@ -31,7 +31,7 @@ on:
         description: '시장 탐색 카테고리'
         type: choice
         default: all
-        options: [all, 취업, 생활정보, 건강]
+        options: [all, scheduled, 취업, 생활정보, 건강, 생산성, 리뷰, 테크]
   schedule:
     - cron: '30 0 * * *' # 09:30 KST: category reports before existing 11:00 posting
 
@@ -145,7 +145,7 @@ jobs:
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           SELECT_TOP_N: ${{ inputs.top_n || '2' }}
-          SELECT_CATEGORY: ${{ inputs.category || 'all' }}
+          SELECT_CATEGORY: ${{ inputs.category || 'scheduled' }}
         run: python scripts/select_blog_keywords.py --category "$SELECT_CATEGORY"
       - name: Save category research report
         if: always() && inputs.auth_check_only != true && inputs.research_check_only != true

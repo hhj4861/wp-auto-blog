@@ -62,13 +62,14 @@ on:
     #    재개하려면 아래 두 크론 주석 해제 — 단 머니 키워드 전략과 충돌하므로 비권장.
     # - cron: '30 23 * * *'  # 오전 08:30 KST
     # - cron: '30 10 * * *'  # 오후 19:30 KST
-    # ▶ 큐 발행 (trendpulse.blog) - 주 6회, 카테고리 분리 운영
+    # ▶ 큐 발행 (trendpulse.blog) - 주 7회, 카테고리 분리 운영
     #   토픽은 data/topic_queue_general.json의 pending 항목을 카테고리별로 소진
     - cron: '0 2 * * 1,3,5'  # 11:00 KST 월/수/금 → 생활정보 (세금·지원금·금융 머니 큐)
     - cron: '0 2 * * 2,4'    # 11:00 KST 화/목 → 취업 (GSC 노출/클릭 최상위 니치)
     - cron: '0 2 * * 6'      # 11:00 KST 토 → 건강 (4050 실생활 의료·지원 키워드)
+    - cron: '0 2 * * 0'      # 11:00 KST 일 → 생산성·리뷰·테크 주간 순환
     # 최초 예약이 누락되면 11:17~22:47 KST에 복구 확인. 날짜별 claim으로 한 번만 실행.
-    - cron: '17,47 2-13 * * 1-6'
+    - cron: '17,47 2-13 * * *'
 
     # ⚠️ 2026-08-25 회생 실험(D0) — bytepulse 크론 4개 정지.
     #    발행량 감축(주25→6, decb1cd 7/21)은 이미 5주간 null이었다. 0으로 내리는 이유는
@@ -736,12 +737,13 @@ jobs:
 
   # 외항사 포스팅 (토픽 큐에서 처리)
   post-queue:
-    # 월/수/금(생활정보)·화/목(취업) 11:00 KST cron + workflow_dispatch(mode=queue)
+    # 월~일 11:00 KST 카테고리 예약 + workflow_dispatch(mode=queue)
     if: |
       (github.event.schedule == '0 2 * * 1,3,5' ||
       github.event.schedule == '0 2 * * 2,4' ||
       github.event.schedule == '0 2 * * 6' ||
-      github.event.schedule == '17,47 2-13 * * 1-6' ||
+      github.event.schedule == '0 2 * * 0' ||
+      github.event.schedule == '17,47 2-13 * * *' ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue'))
     runs-on: ubuntu-latest
     timeout-minutes: 60

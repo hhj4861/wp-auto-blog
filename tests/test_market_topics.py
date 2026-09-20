@@ -2074,22 +2074,28 @@ def test_product_official_source_search_keeps_allowlist(monkeypatch, keyword, ur
     assert not is_official_url('https://notion.site/customer-page')
 
 
-@pytest.mark.parametrize('day,category', [('2026-09-19', '건강'), ('2026-09-20', '생산성'),
-    ('2026-09-27', '리뷰'), ('2026-10-04', '테크')])
-def test_scheduled_research_only_selects_today_in_kst(tmp_path, monkeypatch, day, category):
+@pytest.mark.parametrize('day,slot,category', [
+    ('2026-09-21', 'morning', '생활정보'), ('2026-09-21', 'evening', '생산성'),
+    ('2026-09-22', 'morning', '취업'), ('2026-09-22', 'evening', '리뷰'),
+    ('2026-09-23', 'morning', '건강'), ('2026-09-23', 'evening', '테크'),
+    ('2026-09-24', 'morning', '생산성'), ('2026-09-24', 'evening', '생활정보'),
+    ('2026-09-25', 'morning', '리뷰'), ('2026-09-25', 'evening', '취업'),
+    ('2026-09-26', 'morning', '테크'), ('2026-09-26', 'evening', '건강')])
+def test_scheduled_research_only_selects_today_in_kst(tmp_path, monkeypatch, day, slot, category):
     import scripts.select_blog_keywords as cli
     import sys
     class Clock(datetime):
         @classmethod
         def now(cls, tz=None):
-            # 09:30 KST, the scheduled pre-publication research time.
-            return datetime.fromisoformat(day + 'T00:30:00+00:00').astimezone(tz)
+            # Morning research belongs to the previous UTC day (07:30 KST).
+            local = '07:30' if slot == 'morning' else '16:30'
+            return datetime.fromisoformat(day + 'T' + local + ':00+09:00').astimezone(tz)
     monkeypatch.setattr(cli, 'datetime', Clock)
     monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
     monkeypatch.setattr(cli, 'REPORT', tmp_path/'report.json')
     monkeypatch.setattr(cli, 'existing_titles', lambda: [])
     monkeypatch.setattr(cli, 'select_category', Mock(return_value={'selected': []}))
-    monkeypatch.setattr(sys, 'argv', ['select_blog_keywords.py', '--category', 'scheduled'])
+    monkeypatch.setattr(sys, 'argv', ['select_blog_keywords.py', '--category', 'scheduled', '--slot', slot])
     cli.main()
     assert cli.select_category.call_count == 1
     assert cli.select_category.call_args.args[0] == category

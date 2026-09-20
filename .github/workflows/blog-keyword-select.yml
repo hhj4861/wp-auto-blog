@@ -32,8 +32,14 @@ on:
         type: choice
         default: all
         options: [all, scheduled, 취업, 생활정보, 건강, 생산성, 리뷰, 테크]
+      slot:
+        description: 'scheduled 선택 시 조사할 발행 회차'
+        type: choice
+        default: morning
+        options: [morning, evening]
   schedule:
-    - cron: '30 0 * * *' # 09:30 KST: category reports before existing 11:00 posting
+    - cron: '30 22 * * *' # 07:30 KST: morning research
+    - cron: '30 7 * * *'  # 16:30 KST: evening research
 
 concurrency:
   group: trendpulse-general-posting
@@ -146,7 +152,8 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           SELECT_TOP_N: ${{ inputs.top_n || '2' }}
           SELECT_CATEGORY: ${{ inputs.category || 'scheduled' }}
-        run: python scripts/select_blog_keywords.py --category "$SELECT_CATEGORY"
+          SELECT_SLOT: ${{ inputs.slot || (github.event.schedule == '30 7 * * *' && 'evening' || 'morning') }}
+        run: python scripts/select_blog_keywords.py --category "$SELECT_CATEGORY" --slot "$SELECT_SLOT"
       - name: Save category research report
         if: always() && inputs.auth_check_only != true && inputs.research_check_only != true
         uses: actions/upload-artifact@v4

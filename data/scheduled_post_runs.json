@@ -1,47 +1,60 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "runs": {
-    "2026-09-14": {
+    "2026-09-14:morning": {
       "run_id": "34808814152",
       "category": "생활정보",
       "claimed_at": "2026-09-14T14:13:17.499884+09:00",
       "status": "success",
-      "completed_at": "2026-09-14T05:31:06.929978+00:00"
+      "completed_at": "2026-09-14T05:31:06.929978+00:00",
+      "slot": "morning"
     },
-    "2026-09-15": {
+    "2026-09-15:morning": {
       "run_id": "34939378880",
       "category": "취업",
       "claimed_at": "2026-09-15T15:58:27.193846+09:00",
       "status": "failure",
-      "completed_at": "2026-09-15T07:08:26.913722+00:00"
+      "completed_at": "2026-09-15T07:08:26.913722+00:00",
+      "slot": "morning"
     },
-    "2026-09-16": {
+    "2026-09-16:morning": {
       "run_id": "35065828022",
       "category": "생활정보",
       "claimed_at": "2026-09-16T15:53:48.066661+09:00",
       "status": "failure",
-      "completed_at": "2026-09-16T07:00:36.880260+00:00"
+      "completed_at": "2026-09-16T07:00:36.880260+00:00",
+      "slot": "morning"
     },
-    "2026-09-17": {
+    "2026-09-17:morning": {
       "run_id": "35192028155",
       "category": "취업",
       "claimed_at": "2026-09-17T15:55:32.877347+09:00",
       "status": "failure",
-      "completed_at": "2026-09-17T07:06:27.351334+00:00"
+      "completed_at": "2026-09-17T07:06:27.351334+00:00",
+      "slot": "morning"
     },
-    "2026-09-18": {
+    "2026-09-18:morning": {
       "run_id": "35316238452",
       "category": "생활정보",
       "claimed_at": "2026-09-18T15:45:04.520633+09:00",
       "status": "failure",
-      "completed_at": "2026-09-18T06:58:26.800447+00:00"
+      "completed_at": "2026-09-18T06:58:26.800447+00:00",
+      "slot": "morning"
     },
-    "2026-09-19": {
+    "2026-09-19:morning": {
       "run_id": "35428005376",
       "category": "건강",
       "claimed_at": "2026-09-19T15:57:59.179785+09:00",
       "status": "success",
-      "completed_at": "2026-09-19T07:21:55.865028+00:00"
+      "completed_at": "2026-09-19T07:21:55.865028+00:00",
+      "slot": "morning"
+    },
+    "2026-09-20:evening": {
+      "run_id": "35513822824",
+      "category": "건강",
+      "slot": "evening",
+      "claimed_at": "2026-09-20T22:32:58.201146+09:00",
+      "status": "started"
     }
   }
 }

@@ -56,6 +56,13 @@
       "claimed_at": "2026-09-20T22:32:58.201146+09:00",
       "status": "failure",
       "completed_at": "2026-09-20T13:53:05.856428+00:00"
+    },
+    "2026-09-21:morning": {
+      "run_id": "35557376942",
+      "category": "생활정보",
+      "slot": "morning",
+      "claimed_at": "2026-09-21T12:23:55.303052+09:00",
+      "status": "started"
     }
   }
 }

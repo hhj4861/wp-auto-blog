@@ -143,5 +143,25 @@
     "trend_status": "unavailable",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-19T07:21:52.628637+00:00"
+  },
+  {
+    "key": "엑셀조건부서식",
+    "keyword": "엑셀조건부서식",
+    "topic": "엑셀조건부서식 사용법: 셀 자동 색칠부터 수식 설정까지",
+    "category": "생산성",
+    "post_id": 1766,
+    "url": "https://trendpulse.blog/excel-conditional-formatting-2026/",
+    "selection_version": 6,
+    "monthly_search": 2130,
+    "score": 78.04,
+    "score_components": {
+      "demand": 26.63,
+      "organic_opportunity": 36.0,
+      "trend": 0.41,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-21T10:57:23.825142+00:00"
   }
 ]

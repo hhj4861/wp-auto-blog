@@ -72,6 +72,13 @@
       "claimed_at": "2026-09-21T19:46:23.517941+09:00",
       "status": "success",
       "completed_at": "2026-09-21T10:57:27.152106+00:00"
+    },
+    "2026-09-22:morning": {
+      "run_id": "35682937436",
+      "category": "취업",
+      "slot": "morning",
+      "claimed_at": "2026-09-22T12:23:00.978636+09:00",
+      "status": "started"
     }
   }
 }

@@ -7995,5 +7995,1073 @@
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."
+  },
+  "리뷰": {
+    "category": "리뷰",
+    "selected_at": "2026-09-22T10:00:46.843294+00:00",
+    "seeds": [
+      "로봇청소기",
+      "무선청소기",
+      "공기청정기",
+      "노트북비교"
+    ],
+    "selection_version": 6,
+    "research_rounds": 2,
+    "source_recovery_attempts": 2,
+    "cak_import": {
+      "status": "not_applicable",
+      "reason": "health_only",
+      "direct_count": 0,
+      "expanded_seed_count": 0,
+      "related_count": 0,
+      "seed_lookup_failed_count": 0
+    },
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 439,
+    "evaluated_candidates": 10,
+    "research_pool_size": 120,
+    "selected": [],
+    "held": [
+      {
+        "keyword": "무선청소기비교",
+        "category": "리뷰",
+        "topic": "무선청소기비교: 흡입력·사용시간·자동 먼지 비움 선택 기준",
+        "intent": "무선청소기 구매 전 흡입력, 사용시간, 관리 편의성을 어떤 기준으로 비교해야 할까?",
+        "gap": "삼성 공식 사양을 예시로 비교표를 만들고, 최대 흡입력의 지속시간과 최대 사용시간의 측정 조건을 확인하는 체크리스트를 제공한다.",
+        "source_url": "https://www.samsung.com/sec/vacuum-cleaners/Bespoke-jet-vs90f40cs-d2c/VS90F40CSK/",
+        "verified_sources": [
+          {
+            "url": "https://www.samsung.com/sec/vacuum-cleaners/Bespoke-jet-vs90f40cs-d2c/VS90F40CSK/",
+            "original_url": "https://www.samsung.com/sec/vacuum-cleaners/Bespoke-jet-vs90f40cs-d2c/VS90F40CSK/",
+            "title": "Bespoke AI 제트 400W | VS90F40CSK | Samsung 대한민국",
+            "checked_on": "2026-09-22",
+            "sha256": "f5219444efce14e29656e3e33345a8c837a4b09e48c5c0efa364aac221fd4224",
+            "excerpt": "추천 기획전 이전 슬라이드 다음 슬라이드 Bespoke 의류케어 삼닷 한가위 선물 특별전 환절기 의류케어도 AI 콤보 하나로 해결! 추석맞이 삼성닷컴 혜택을 놓치지 마세요 2026.09.01 - 2026.09.30 에어컨 삼닷 한가위 선물 특별전 기간 한정 선물 특가 + 삼성카드 캐시백까지 추석맞이 특별 혜택으로 만나보세요 2026.09.01 - 2026.09.30 무풍 시스템에어컨 삼닷 한가위 선물 특별전 풍성한 가을, 삼성카드 특별 캐시백과 AI 구독클럽 가입 혜택으로 만나보세요 2026.09.01 - 2026.09.30 청소기 삼닷 한가위 선물 특별전 청소기 추천 모델부터 신제품까지! 스팀 구독하고 액세서리 혜택도 놓치지 마세요 2026.09.01 - 2026.09.30 제습기/공기청정기 삼닷 한가위 선물 특별전 풍성한 한가위, 제습기와 공기청정기로  쾌적한 일상을 선물해보세요 2026.09.01 - 2026.09.30",
+            "locator_origin": "model_reported_locator"
+          },
+          {
+            "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
+            "original_url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
+            "title": "청소기 구매가이드  l Samsung 대한민국",
+            "checked_on": "2026-09-22",
+            "sha256": "6637b98e798df57f5a44eedf16d184c9d7ae49a6710165022c6cd24694f1e96e",
+            "excerpt": "본문 바로가기 일주일 그만보기 닫기 갤럭시 AI 폰 구매 고객님께 드리는 스마트태그2 를 지금 신청하세요! (대상 모델 : S24 시리즈, S23 FE, Z Fold5 | Z Flip5, S23 시리즈) 신청하기 갤럭시 캠퍼스 회원 이시네요! 리뉴얼 이벤트와 오리지널 콘텐츠, 더 풍성해진 커뮤니티까지! 새로워진 갤럭시 캠퍼스 를 만나보세요 갤럭시 캠퍼스로 이동하기 최근 본 제품 최근 본 제품 닫기 검색 결과 0 개 전체삭제 ※ 최근 본 제품은 30일간 보관됩니다. 구매가이드 > 청소기 유형 흡입력 청소시간 스마트 기능 주요 기능 유형 흡입력 청소시간 스마트 기능 주요 기능 우리 집에 꼭 필요한 청소기를 찾아보세요 우리 집과 나의 라이프 스타일에 딱 맞는 청소기를 선택해 보세요. 구매 전에 꼭 확인하세요 01 유형 라이프스타일에 어울리는 청소기 제품 유형을 선택해 보세요. 더 알아보기 02 흡입력 나의 청소 루틴에 맞는 최적의 흡입력을 선택해 보세요. 더 알아보기 03 청소시간 컴팩트한 공간부터 넓은 주택까지, 공간에 어울리는 제품을 선택해 보세요. 더 알아보기 04 스마트 기능 청소 환경을 감지하여 효율적으로 청소해주는 스마트 기능을 확인해 보세요. 더 알아보기 05 주요 기능 청소가 더 쉽고 편해지는 다양한 기능을 경험해 보세요. 더 알아보기 우리 집에 잘 맞는 청소기 타입 확인하기 우리 집은 깨끗해지고 일상은 더욱 편리해집니다. 공간과 라이프스타일에 맞춘 청소기 유형을 선택해 보세요. 무선 청소기 로봇 청소기 강력한 흡입력으로 깨끗하게 무선 청소기는 강력한 흡입력과 긴 사용 시간, 먼지 배출 없는 성능으로 손쉬운 청소를 지원합니다. 더 알아보기 AI가 알아서 똑똑하게 로봇 청소기는 3D 센서, AI 인식, 라이다(LiDAR)를 활용한 최적의 경로와 내비게이션으로 자동으로 청소하고 먼지통까지 비워줍니다. 더 알아보기 청소 루틴 확인하기 가벼운 정리부터 집중적인 청소까지 모든 청소 루틴을 위한 흡입력을 갖추었습니다. 라이프스타일에 맞는 제품으로 더욱 편리하고 깨끗하게 청소의 수준을 높여보세요. 이전 슬림 150W 일상적인 청소를 위한 가벼운 무게와 합리적인 흡입력으로 매일 빠르고 간단하게 청소하는 루틴에 적합합니다. 더 알아보기 제트 200~280W 다양한 환경에서 집중적인 청소를 위한 강력한 흡입력으로 일주일에 여러 번 청소하는 루틴에 적합합니다. 더 알아보기 제트 400W 강력하고 집중적인 청소를 위한 최대 흡입력으로 일주일에 한두 번 깨끗하게 청소하는 루틴에 적합합니다. 더 알아보기 다음 play Indicator 1 Close Close Close * 세부 기능은 모델에 따라 상이하며, 실사용 환경에 따라 사용시간이 달라질 수 있습니다. * 최대 400W 출력의 제트 모드 사용시 사용시간은 '1분'으로 실사용 환경에 따라 사용시간이 달라질 수 있습니다. 우리 집 공간사이즈 확인하기 컴팩트한 공간부터 넓은 가족형 주택까지 거주 공간별로 우리 집에 가장 어울리는 제품을 선택해 보세요. 이전 컴팩트한 곳에서 매일 가볍게 쓰는 데일리 청소기 최대 50분 청소 시간으로 침실, 주방 등 주요 주거 공간을 일상적으로 빠르게 청소하기에 적합합니다. 더 알아보기 중간 크기의 주거 공간에 맞춘 청소기 최대 60분 청소 시간으로 거실부터 침실까지, 중간 크기 공간을 충전 없이 한번에 청소하기에 적합합니다. 더 알아보기 가족 구성원이 많은 대가족 공간에 맞춘 청소기 최대 100분 청소 시간으로 넓은 주거 공간이나 복층 구조, 집 전체를 충전 없이 강력하게 청소하기에 적합합니다 더 알아보기 다음 play Indicator 1 Close Close Close * 세부 기능은 모델에 따라 상이하며, 실사용 환경에 따라 사용시간이 달라질 수 있습니다. * 사용시간 : Bespoke AI 제트 400W, 일반모드 100분은 대용량 배터리를 탑재한 핸디 기준 똑똑함을 더한 AI 기능 확인하기 한층 진화한 AI로 주거환경에 맞춘 편리하고 효율적인 청소를 만나보세요. 번거로움 없이 스마트한 청소로 일상이 여유로운 스마트홈을 경험할 수 있습니다. 이전 AI 바닥 인식 AI 바닥 인식으로 카펫, 나무 바닥, 타일 등 각 재질에 맞춰 최적화된 흡입력과 브러시 설정으로 청소합니다. 1 AI 사물 인식 RGB 카메라로 다양한 사물과 가구, 가전, 반려동물까지 식별하고 액체의 오염구역, 공간까지 인식해 끊김이나 걸림 없이 효율적으로 청소할 수 있습니다. * 해당 기능은 Bespoke AI 스팀 울트라(VR90F*) 모델에 한합니다. AI 액체 인식 적외선 LED 광과 RGB 카메라 기반의 AI 액체 인식 기술로 투명한 액체를 포함한 오염 구역을 정밀하게 감지합니다. * 해당 기능은 Bespoke AI 스팀 울트라(VR90F*) 모델에 한합니다. 다음 play Indicator 1 Close Close Close Close 편리함을 더한 주요 기능 확인하기 라이프스타일에 맞춰 설계한 청소 기능들로 편리하고 깨끗한 청소환경을 만나세요 무선 청소기 로봇 청소기 이전 청정 스테이션 하나의 청정 스테이션에서 무선 청소기의 먼지통을 비우고 충전까지 동시에 진행해 청소 관리가 더욱 편리해 집니다. 스마트 콜 알림 2 청소 중에도 중요한 전화나 메시지를 놓치지 않고 확인할 수 있습니다 3 . 다음 play Indicator 1 Close Close Close 이전 스팀 청정스테이션 먼지통 비움부터 충전, 보관까지 한 번에 해결하는 청정 스테이션으로 한 번 설치하면 손 댈 필요 없는 편리함을 제공합니다. 빅스비 음성 컨트롤 스마트홈 시스템과 연동하여 손으로 조작하지 않아도 음성 명령으로 간편하고 효율적인 청소가 가능합니다. 펫 케어 반려동물의 이상행동이 감지되면 스마트싱스 앱에서 알림을 받아 원격으로 음악이나 영상을 틀어줄 수 있습니다. 이지패스 휠 새로운 이지패스 휠(EasyPass Wheel™) 기술로 본체를 높여 문턱과 매트를 수월하게 넘고 끊김 없이 청소합니다. 다음 play Indicator 1 Close Close Close Close 추천 제품 Bespoke AI 제트 400W 구매하기 Bespoke AI 제트 280W Lite 구매하기 Bespoke AI 스팀 울트라 자동 급배수 구매하기 Bespoke AI 스팀 플러스 구매하기 play Indicator 1 Close Close Close Close 듀오 클리어 브러시 사용 시, 글로벌 평균 바닥 구성 비율(나무 바닥 76%, 카펫 24%)에 따른 내부 테스트 결과입니다. 실사용 환경에 따라 차이가 있을 수 있습니다. 안드로이드 11(R OS, Galaxy OneUI 3.1) 이상 버전의 삼성 스마트폰에서 사용 가능합니다. 단, 일부 모델(A1x, A2x, M1x, M2x 등) 및 타사 스마트폰에서는 지원되지 않습니다. 해당 기능을 사용하려면 SmartThings 앱 내 설정 및 Wi-Fi 연결이 필요합니다. 수신 전화 또는 메시지 알림은 스틱 청소기의 LCD 디스플레이에 표시되나, 실제 통화나 메시지 확인은 연결된 스마트폰에서만 가능합니다. * 이해를 돕기 위해 연출된 이미지로 실제 제품 및 기능과 차이가 있을 수 있습니다. * 제품별 적용된 기능이 상이합니다. 자세한 내용은 제품별 상세 페이지 및 스펙을 통해 확인하세요. [AI 액체 인식] * AI 사물 인식, AI 액체 인식, 오염 구역 집중 청소, 공간 인식 기능은 Bespoke AI 스팀 울트라 모델에 한해 지원합니다. * 액체 인식은 액체의 양이나 크기가 너무 작거나 (15ml 또는 7cm x 7cm 이하), 바닥 무늬/패턴, 어두운 바닥, 주변 조도, 직사광 또는 반사광, 액체의 형태 등에 따라 오인식 또는 미인식이 발생할 수 있습니다. * 액체 청소 기능을 사용하기 위해선 SmartThings 앱을 통해 사전 설정이 필요합니다. 액체 특성에 따라 미청소된 오염물이 바닥으로 퍼질 수 있습니다. * 사물 인식은 사물의 형태나 주변 환경에 따라 영향을 받을 수 있습니다. * 반려동물 중 개와 고양이만 인식이 가능하며, 반려동물 인식률은 동물의 종류와 거주 환경에 영향을 받을 수 있습니다. 반려묘 인식률은 고양이의 자세와 위치에 따라 영향을 받을 수 있습니다. * 견변 크기가 약 2cm x 3cm 보다 작으면 사물인식으로 인식하지 못할 수 있습니다. * 사람 인식 기능은 일반적인 시각적 특징을 통해 인식하며, 개별 인물을 구분하지 못합니다. 사람의 몸 전체가 보이지 않을 경우 인식률이 떨어질 수 있습니다. * 오염 구역은 액체가 아닌, 고체 상태의 불투명한 유색의 음료수 자국 등을 의미합니다. * 오염 구역의 크기가 너무 작거나 (4cm x 4cm 이하), 바닥 무늬/패턴에 따라 오인식이 발생할 수 있습니다. * 오염 구역 인식을 사용하기 위해서는 사전에 SmartThings 앱을 통해 설정이 필요합니다. [AI 바닥 인식] * 인식하는 카펫의 모 길이 기준은 5mm이며, 물걸레 리프팅 높이는 10mm입니다. * 카펫이 없는 경우 일반 기본 청소 모드로 작동합니다. * 센싱 정보 : 초음파 센서, 자이로(pitch, yaw, roll), 휠 부하(좌,우), 휠 엔코더(좌,우), 가속도(x, y, z 축), 선속도, 자이로 각속도, 엔코더 각속도 * 환경/바닥 종류에 따라 오 인식이 발생할 수 있습니다. * 카펫 종류에 따라 물걸레 리프팅 상태에서도 물걸레가 카펫에 닿을 수 있습니다. * 흡입/물걸레 동시 모드 설정 시의 동작에 대한 설명이며, 청소 모드 옵션 설정에 따라 청소 시나리오는 달라질 수 있습니다. 카펫이 없는 경우 일반 기본 청소 모드로 작동합니다 [빅스비 음성 컨트롤] * 빅스비는 삼성의 인공 지능 (AI) / 사물 인터넷 (IoT) 음성 비서 브랜드로, Wi-Fi 공유기와 삼성 계정이 필요합니다. * 국가마다 다른 언어가 지원되며, 서비스 제공 여부는 지역에 따라 다를 수 있습니다. * 빅스비 언어 10종 지원 : 한국어/영어(미국)/영어(영국)/영어(인도)/프랑스어/독일어/이탈리아어/스페인어(스페인)/스페인어(중남미)/포르투갈어(브라질) * 원하는 장소/구역 청소를 위해선 사전에 지도 그리기 및 구역 편집을 완료해야 합니다. * VR70F01*D* 모델은 모바일 빅스비를 지원합니다. [펫 케어] * 펫 케어, 패밀리 케어 기능은 Bespoke AI 스팀 울트라 (VR90*), 24년 출시된 Bespoke AI 스팀 (VR76MD97716*)에 한합니다. * 이상행동 알림(짖음 감지 기능)은 사전에 SmartThings 앱을 통해 설정이 필요하며, 반려견을 대상으로만 사용 가능합니다. * 개, 고양이만 인식이 가능합니다. 반려묘 인식률은 고양이의 자세와 위치에 따라 영향을 받을 수 있습니다. * 반려동물 인식률은 동물의 종류와 거주 환경에 영향을 받을 수 있습니다. * SmartThings 기능을 사용하기 위해서는 SmartThings 앱 설치 및 연동, 무선 네트워크 연결이 필요합니다. SmartThings에 관한 자세한 내용은 페이지 하단을 참고하세요. * 종단 간 암호화 기술(E2EE, End to End Encryption) 적용으로 데이터를 안전하게 보호합니다. - 안드로이드 8.1 이상의 삼성 디바이스에서만 사용할 수 있으며, 성능이 낮은 일부 디바이스에서 작동하지 않을 수 있습니다. - 해당 기능은 SmartThings 앱을 통해 설정 가능합니다. * 스트리밍 영상은 클라우드에 저장되지 않으며, 녹화 영상은 24시간 동안만 클라우드 내 보관되며 스마트폰에 다운로드 받을 수 있습니다. [이지패스 휠] * 5개의 바퀴 : 메인 휠 2개, 사이드 보조 휠 2개, 전방 보조 휠 1개 * 높은 문턱/매트 등반 사용을 위해서는 사전에 단차 구역 설정이 필요합니다. * 해당 제품은 내부 실험치 결과로, 단일 문턱 기준 최대 45mm/ 계단형 단차 기준 하부 45mm 및 추가 15mm 층을 포함한 60mm를 통과하는 실험을 거쳤습니다. 계단형 단차 기준, 각 층 사이의 간격이 90mm 이상이어야 합니다. 실제 환경에서는 다를 수 있습니다. * SmartThings 기능을 사용하기 위해서는 SmartThings 앱 설치 및 연동, 무선 네트워크 연결이 필요합니다. SmartThings에 관한 자세한 내용은 페이지 하단을 참고하세요. * 원하는 장소/구역 청소를 위해선 사전에 지도 그리기 및 구역 편집을 완료해야 합니다. [ 스마트싱스 ] - SmartThings 기능을 사용하기 위해서는 SmartThings 앱 설치 및 연동, 무선 네트워크 연결이 필요합니다. - SmartThings 앱은 Galaxy Store, Play Store 또는 App Store에서 다운로드 할 수 있습니다. - 제품과 연동된 스마트싱스 앱의 기능을 이용하기 위해서는 모바일 단말기의 OS를 최신 버전으로 업데이트 할 필요가 있을 수 있습니다. 구체적인 OS 버전 정보는 스마트싱스 앱 또는 스마트싱스 웹페이지(https://www.samsung.com/sec/smartthings/app/)를 참고해 주시기 바랍니다. - SmartThings 앱은 일부 태블릿 및 단말과 호환되지 않거나 연동 기기, 사용방법에 일부 제한이 있을 수 있습니다. - 제품에 따라 SmartThings 기능 지원 여부, 지원환경 및 사양이 다를 수 있습니다. - 앱 업데이트에 따라 지원 가능한 OS 사양, 앱 화면 구성 등은 변경될 수 있습니다. - SmartThings에 연결 가능한 기기 수는 장소(Location)당 최대 300개입니다. 사용자의 네트워크 환경에 따라 최대 연결 가능한 기기 수에 제약이 있을 수 있습니다. (계정당 장소는 최대 10개 사용 가능, 장소당 방은 최대 20개 사용 가능, 장소를 등록한 관리자는 계정 기준 최대 20명 멤버 초대 가능) 홈 구매가이드 청소기 구매가이드 확인 확인 취소 확인 팝업닫기 취소 확인 확인 팝업보기 이메일 무단 수집거부 본 웹사이트는 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단 수집되는 것을 거부합니다. 이를 위반 시 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』등에 의해 처벌받을 수 있습니다. 팝업닫기 아이디어 제안에 대한 정책 삼성전자 및 삼성전자 임직원은 당사가 공식적으로 요청하지 않았음에도 불구하고 여러분께서 일방적으로 당사에 제출하는 아이디어나 제안 등을 수령하거나 검토하지 않습니다. 이는 제출하신 내용이 당사 내부적으로 개발한 제품, 기술, 서비스와 유사할 경우 발생할 수 있는 오해와 분쟁을 방지하고 나아가 여러분의 창의적인 아이디어를 적극 보호하기 위함입니다. 이러한 취지를 이해하여 주시고 구체화되지 않은 아이디어나 콘셉트(Concept) 단계의 제안이 당사에 제출되지 않도록 하여 주시기 바랍니다. 팝업닫기 구매인증 서류 발급 유의사항 ※ 구매내역서는 제품 배송완료 이후 다운로드 가능합니다. ※ 으뜸효율 가전제품 구매비용 10% 환급 행사는 산업통상자원부 총괄, 한국에너지공단 주관입니다. ※ 으뜸효율 가전제품 환급 대상 모델에 한하여 환급 신청이 가능하며, 자세한 환급 방법 및 대상 모델 리스트는 '으뜸효율가전 안내 페이지' 에서 확인해 주시기 바랍니다. ※ 환급 적용 대상모델 구매 비용 10% 환급은 1인당 최대 30만원 한도이며, 재원 소진 시 조기종료됩니다. ※ 삼성전자는 가전제품을 구매하는 대상고객의 이해를 돕기위한 목적으로 행사내용을 안내합니다. ※ 구체적인 지원 조건 및 자세한 내용은 한국에너지공단 신청페이지를 참고해주시기 바랍니다. 팝업닫기 개인정보 제3자 제공 동의(선택) 해당 제품으로 으뜸효율 가전제품 환급사업 신청 예정 고객은 본 동의를 하셔야 환급사업 신청이 가능합니다. 귀하께서는 동의하지 않을 수 있으나 이 경우 으뜸효율 가전제품 환급 신청이 제한됩니다. 으뜸효율 가전제품 환급사업 관련 개인정보 제3자 제공 동의 삼성전자는 아래와 같이 개인정보를 제3자에 제공합니다. 1. 제공 받는 자 에너지공단㈜ 2. 제공 항목 구독주문번호, 구독계약일시, 고객확인사항에 기재된 제품가, 모델명, 계약유지 여부, 해지일자, 명의변경일자 3. 제공받는 자의 이용 목적 으뜸효율 가전제품 환급사업의 환급금 지급과 환수를 위함 4. 제공 받는 자의 보유 및 이용 기간 으뜸효율 가전제품 환급사업 종료시까지 위의 약관에 동의합니다. 개인정보 제3자 제공 동의 약관에 동의해 주세요. 확인 팝업닫기 환영합니다",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://www.consumuch.com/news/articleView.html?idxno=18245",
+          "https://lifebase.kr/blog/0213-cordless-vacuum-comparison/",
+          "https://www.shyeogi.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EC%88%9C%EC%9C%84-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90-%ED%9D%A1%EC%9E%85%EB%A0%A5-%EB%B0%B0%ED%84%B0%EB%A6%AC-%EC%88%98%EB%AA%85/"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 680,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "중간",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://www.samsung.com/sec/vacuum-cleaners/Bespoke-jet-vs90f40cs-d2c/VS90F40CSK/",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.lg.com/au/vacuum-cleaners/handstick-vacuum-cleaners/a9x-auto2/",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "무선청소기 비교",
+        "organic_domains": [
+          "eiec.kdi.re.kr",
+          "hsmoa.net",
+          "sallimlab.com",
+          "www.consumuch.com",
+          "lifebase.kr",
+          "plebplus.tistory.com",
+          "www.shyeogi.com",
+          "todaylifestyle.tistory.com",
+          "usb.kr",
+          "tripromance.tistory.com"
+        ],
+        "organic_results": [
+          {
+            "url": "https://eiec.kdi.re.kr/userdata/nara/202203/202203.pdf",
+            "domain": "eiec.kdi.re.kr",
+            "title": "국내 유일의 경제정책 정보지 nara.kdi.re.kr",
+            "snippet": "이 글은 한국소비자원의 『소비자시대』 2022년 3월호 ‘상품 테스트’ 기사를 전재한 것입니다. ... 무선청소기 7종 비교 결과, ... 이에 한국소비자원이 선호도가 높은 무선청소기 7개 제품을"
+          },
+          {
+            "url": "https://hsmoa.net/search?query=%EC%82%BC%EC%84%B1%EB%AC%B4%EC%84%A0%EC%8A%A4%ED%8B%B1%EC%B2%AD%EC%86%8C%EA%B8%B0",
+            "domain": "hsmoa.net",
+            "title": "삼성무선스틱청소기 홈쇼핑 검색결과 - 채널별 최저가·방송일정 비교 | 홈쇼핑모아",
+            "snippet": "NS홈쇼핑, K쇼핑, GS샵 등 5개 채널에서 판매하는 삼성무선스틱청소기 관련 상품 20개의 판매가(5,900원부터)와 방송 일정을 한 번에 비교할 수 있습니다. ... 홈쇼핑모아 삼성무선스틱청소기 검색 결과에서 NS홈쇼핑,"
+          },
+          {
+            "url": "https://sallimlab.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EB%B9%84%EA%B5%90/",
+            "domain": "sallimlab.com",
+            "title": "무선청소기 비교: 가벼운 경량형 vs 강력 흡입형, 원룸 자취생은? – 살림랩",
+            "snippet": "Image: 무선청소기 비교: 가벼운 경량형 vs 강력 흡입형, 원룸 자취생은? ... 바로 답부터 드리면, 무선청소기 비교에서 원룸·오피스텔에 혼자 사는 자취생이라면 대체로 가볍고 조용한 경량형이 만족도가"
+          },
+          {
+            "url": "https://www.consumuch.com/news/articleView.html?idxno=18245",
+            "domain": "www.consumuch.com",
+            "title": "[몇대몇] 잘 나가는 핸디스틱 '무선청소기' 주요 제품 스펙 비교 < 몇대몇 < 소비자뉴스 < 기사본문 - 컨슈머치",
+            "snippet": "[컨슈머치 = 이용석 기자] 가정 내 보급률이 82%에 이른다는 필수 생활가전인 청소기가 최근 1인 가구 증가와 맞물려 가볍고 사용이 간편해진 무선형태로 출시되고 있다. ... 컨슈머치는"
+          },
+          {
+            "url": "https://lifebase.kr/blog/0213-cordless-vacuum-comparison/",
+            "domain": "lifebase.kr",
+            "title": "무선청소기 추천 비교 가이드 - LifeBase",
+            "snippet": "# 무선청소기 추천 비교 가이드 ... 작성 시점 기준으로 무선청소기 시장은 스테이션형 자동 먼지 비움 기능, 흡입과 물걸레를 동시에 수행하는 겸용 모델, AI 기술을 활용한"
+          },
+          {
+            "url": "https://plebplus.tistory.com/83",
+            "domain": "plebplus.tistory.com",
+            "title": "무선청소기 추천 비교 후기 — 마트에서 직접 만져보고 고른 뒤 한 달 쓴 결과",
+            "snippet": "## 무선청소기 추천 비교 후기 — 마트에서 직접 만져보고 고른 뒤 한 달 쓴 결과 ... 집에 돌아와서 검색을 시작했고, 그게 이 무선청소기 추천 비교"
+          },
+          {
+            "url": "https://www.shyeogi.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EC%88%9C%EC%9C%84-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90-%ED%9D%A1%EC%9E%85%EB%A0%A5-%EB%B0%B0%ED%84%B0%EB%A6%AC-%EC%88%98%EB%AA%85/",
+            "domain": "www.shyeogi.com",
+            "title": "무선청소기 추천 순위 성능 비교 흡입력 배터리 수명, 다이슨, LG, 삼성, 샤오미, 테팔",
+            "snippet": "# 무선청소기 추천 순위 성능 비교 흡입력 배터리 수명, 다이슨, LG, 삼성, 샤오미, 테팔 ... 이에 한국소비자원은 소비자에게 객관적인 상품 품질정보를 제공하기 위해 소비자 선호도가"
+          },
+          {
+            "url": "https://todaylifestyle.tistory.com/entry/%EC%82%AC%EB%AC%B4%EC%8B%A4%C2%B7%EC%A7%91-%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EB%B9%84%EA%B5%90%EF%BD%9C2026%EB%85%84-%EA%B8%B0%EC%A4%80-%EA%B3%B5%EA%B0%84%EB%B3%84%EB%A1%9C-%EB%94%B1-%EB%A7%9E%EB%8A%94-%EC%84%A0%ED%83%9D%EB%B2%95",
+            "domain": "todaylifestyle.tistory.com",
+            "title": "사무실·집 무선청소기 추천 비교｜2026년 기준 공간별로 딱 맞는 선택법",
+            "snippet": "2026년 기준으로 공간별 실패 없는 무선청소기 추천 비교와 실사용 체크포인트를 정리했습니다. ... 지금 이 시점에서 무선청소기는 어디서 쓰느냐 가 선택의 절반을 결정합니다."
+          },
+          {
+            "url": "https://usb.kr/6qugt",
+            "domain": "usb.kr",
+            "title": "무선청소기 추천 – AI 자동 충전 올인원 · USB.KR",
+            "snippet": "추천 최신형 차이슨 AI 자동 충전 먼지 비움 올인원 스마트 타워 무선청소기, AI TOWER 청소기, 화이트 | 190,000원 | 로켓 | 보러가기 → ... 기존"
+          },
+          {
+            "url": "https://tripromance.tistory.com/190",
+            "domain": "tripromance.tistory.com",
+            "title": "💡 내 돈 내산 무선청소기 솔직 비교 – TOP3 추천 & 후기",
+            "snippet": "매장에서 직접 보고 산 내 돈 내산 무선청소기 3종을 실사용 기준으로 솔직하게 비교해봤습니다. ... * 총평: 기능과 편의성의 균형이 잘 맞는 ‘국산 프리미엄’ 무선청소기 ..."
+          }
+        ],
+        "dominant_result_ratio": 0.0,
+        "score_components": {
+          "demand": 22.66,
+          "organic_opportunity": 36.0,
+          "trend": 0,
+          "intent_fit": 0
+        },
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "unavailable",
+        "selection_version": 6,
+        "selected_at": "2026-09-22T10:00:46.843294+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "무선청소기비교"
+        ],
+        "status": "research_only",
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "무선청소기비교",
+          "executed_query": "무선청소기 비교",
+          "topic": "무선청소기비교: 흡입력·사용시간·자동 먼지 비움 선택 기준",
+          "intent": "무선청소기 구매 전 흡입력, 사용시간, 관리 편의성을 어떤 기준으로 비교해야 할까?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-22T10:00:46.843294+00:00",
+          "result_count": 10,
+          "domain_count": 10,
+          "dominant_ratio": 0.0,
+          "search_review": {
+            "version": 1,
+            "query": "무선청소기비교",
+            "executed_query": "무선청소기 비교",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-22T10:00:46.843294+00:00",
+            "raw_sha256": "20956b3ef7961d9218abc9cef86cab1bda50af5a5c71c33f7530f67a44e498d3",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "무선청소기 7종 비교 결과"
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "삼성무선스틱청소기 관련 상품 20개의 판매가(5,900원부터)와 방송 일정을 한 번에 비교할 수 있습니다."
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "무선청소기 비교: 가벼운 경량형 vs 강력 흡입형"
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "핸디스틱 '무선청소기' 주요 제품 스펙 비교"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "무선청소기 추천 비교 가이드"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "무선청소기 추천 비교 후기 — 마트에서 직접 만져보고 고른 뒤 한 달 쓴 결과"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "무선청소기 추천 순위 성능 비교 흡입력 배터리 수명"
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "공간별 실패 없는 무선청소기 추천 비교와 실사용 체크포인트를 정리했습니다."
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "차이슨 AI 자동 충전 먼지 비움 올인원 스마트 타워 무선청소기, AI TOWER 청소기, 화이트 | 190,000원"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "무선청소기 3종을 실사용 기준으로 솔직하게 비교해봤습니다."
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 10,
+            "relevant_site_count": 10,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 1.0,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.0,
+            "site_concentration": 0.1,
+            "organic_opportunity": 36.0
+          },
+          "scope": "full_keyword",
+          "target_keyword": "무선청소기비교",
+          "matches": [
+            {
+              "result_index": 3,
+              "quote": "잘 나가는 핸디스틱 '무선청소기' 주요 제품 스펙 비교"
+            },
+            {
+              "result_index": 4,
+              "quote": "무선청소기 추천 비교 가이드"
+            },
+            {
+              "result_index": 6,
+              "quote": "무선청소기 추천 순위 성능 비교 흡입력 배터리 수명"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-22T10:00:46.843294+00:00",
+          "input_sha256": "367359d5ea194b15ea892acb5fd67889fde6559cf192c9239bfe7845efed09a6",
+          "failure_code": "invalid_review"
+        },
+        "decision_diagnostics": {
+          "coverage_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "version": 1,
+              "checked_at": "2026-09-22T10:00:46.843294+00:00",
+              "input_sha256": "fc8e331e851c4f5d578116c4b8f646a3197d9c62206c1da5fee007a860b0de38",
+              "review": {
+                "scope": "narrower_query",
+                "target_keyword": "삼성 무선청소기 흡입력·사용시간·먼지 비움 비교 기준",
+                "sources": [
+                  {
+                    "source_index": 0,
+                    "quote": "추천 제품 Bespoke AI 제트 400W 구매하기 Bespoke AI 제트 280W Lite 구매하기",
+                    "entity": "Bespoke AI 제트",
+                    "context": "general"
+                  }
+                ],
+                "required_facets": [
+                  {
+                    "facet": "주요 무선청소기 제품의 성능과 편의성은 어떻게 다른가?",
+                    "answer": "검색결과는 여러 브랜드·제품 비교를 요구한다. 삼성 제품 안내만으로 전체 비교 수요를 충족하지 못한다.",
+                    "supported": false,
+                    "source_index": 0,
+                    "quote": "추천 제품 Bespoke AI 제트 400W 구매하기 Bespoke AI 제트 280W Lite 구매하기"
+                  },
+                  {
+                    "facet": "최대 흡입력과 해당 모드의 지속시간을 어떻게 비교해야 하는가?",
+                    "answer": "삼성 제트 400W는 최대 출력 모드에서 1분 사용한다. 최대 흡입력과 지속시간을 함께 확인하는 기준을 지원한다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "* 최대 400W 출력의 제트 모드 사용시 사용시간은 '1분'으로 실사용 환경에 따라 사용시간이 달라질 수 있습니다."
+                  },
+                  {
+                    "facet": "최대 사용시간은 어떤 배터리·모드·사용 형태에서 측정됐는가?",
+                    "answer": "Bespoke AI 제트 400W의 100분은 대용량 배터리·일반모드·핸디 기준이다. 최대 출력 지속시간과 구분해야 한다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "* 사용시간 : Bespoke AI 제트 400W, 일반모드 100분은 대용량 배터리를 탑재한 핸디 기준"
+                  },
+                  {
+                    "facet": "자동 먼지 비움 기능은 청소 후 관리에 어떤 편의를 제공하는가?",
+                    "answer": "삼성 청정 스테이션의 먼지통 비움과 충전 기능을 설명할 수 있다. 다른 제품과의 관리 편의성 비교는 지원하지 않는다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "하나의 청정 스테이션에서 무선 청소기의 먼지통을 비우고 충전까지 동시에 진행해 청소 관리가 더욱 편리해 집니다."
+                  }
+                ],
+                "current_relevance": {
+                  "kind": "evergreen",
+                  "source_index": 0,
+                  "quote": "우리 집과 나의 라이프 스타일에 딱 맞는 청소기를 선택해 보세요. 구매 전에 꼭 확인하세요",
+                  "event_start": null,
+                  "event_end": null,
+                  "date_quote": null
+                }
+              }
+            },
+            "requirements": {
+              "keyword": "무선청소기비교",
+              "topic": "무선청소기비교: 흡입력·사용시간·자동 먼지 비움 선택 기준",
+              "intent": "무선청소기 구매 전 흡입력, 사용시간, 관리 편의성을 어떤 기준으로 비교해야 할까?",
+              "scope": "narrower_query",
+              "hold_reasons": [
+                "narrower_source_coverage",
+                "unverified_source_coverage"
+              ],
+              "missing_facets": [
+                {
+                  "question": "주요 무선청소기 제품의 성능과 편의성은 어떻게 다른가?",
+                  "missing_evidence": "검색결과는 여러 브랜드·제품 비교를 요구한다. 삼성 제품 안내만으로 전체 비교 수요를 충족하지 못한다."
+                }
+              ],
+              "existing_urls": [
+                "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/"
+              ]
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "version": 1,
+              "checked_at": "2026-09-22T10:00:46.843294+00:00",
+              "input_sha256": "367359d5ea194b15ea892acb5fd67889fde6559cf192c9239bfe7845efed09a6",
+              "failure_code": "invalid_review"
+            }
+          }
+        },
+        "score": 58.66,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "missing_topic_suitability"
+        ]
+      }
+    ],
+    "rejected": [
+      {
+        "keyword": "로봇청소기비교",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        }
+      },
+      {
+        "keyword": "인덕션설치비용",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://medlineplus.gov/about/using/searchtips/",
+              "title": "MedlinePlus: Search Tips",
+              "excerpt_chars": 6259
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://medlineplus.gov/about/using/searchtips/",
+                  "title": "MedlinePlus: Search Tips",
+                  "excerpt_chars": 6259
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "no_changed_source"
+          }
+        }
+      },
+      {
+        "keyword": "무선청소기가격비교",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 690,
+        "organic_provider": "codex_native_search",
+        "organic_query": "무선청소기 가격 비교",
+        "organic_results": [
+          {
+            "url": "https://hsmoa.net/search?query=%EC%82%BC%EC%84%B1%EC%B2%AD%EC%86%8C%EA%B8%B0",
+            "domain": "hsmoa.net",
+            "title": "삼성청소기 홈쇼핑 검색결과 - 채널별 최저가·방송일정 비교 | 홈쇼핑모아",
+            "snippet": "* 현대홈쇼핑, 신세계쇼핑, CJ온스타일 등 6개 채널의 삼성청소기 상품 판매가·앱 전용가 무료 비교 혜택 ... '지난 방송' 탭에서 지난 방송 상품 10개의 가격 정보를 확인할"
+          },
+          {
+            "url": "https://hsmoa.net/search?query=%EC%82%BC%EC%84%B1%EB%AC%B4%EC%84%A0%EC%8A%A4%ED%8B%B1%EC%B2%AD%EC%86%8C%EA%B8%B0",
+            "domain": "hsmoa.net",
+            "title": "삼성무선스틱청소기 홈쇼핑 검색결과 - 채널별 최저가·방송일정 비교 | 홈쇼핑모아",
+            "snippet": "NS홈쇼핑, K쇼핑, GS샵 등 5개 채널에서 판매하는 삼성무선스틱청소기 관련 상품 20개의 판매가(5,900원부터)와 방송 일정을 한 번에 비교할 수 있습니다. ... * 여러 홈쇼핑 채널의 삼성무선스틱청소기"
+          },
+          {
+            "url": "https://hsmoa.net/search?query=%EC%83%A4%ED%81%AC%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0",
+            "domain": "hsmoa.net",
+            "title": "샤크무선청소기 홈쇼핑 검색결과 - 채널별 최저가·방송일정 비교 | 홈쇼핑모아",
+            "snippet": "GS샵, 신세계쇼핑, 롯데홈쇼핑 등 7개 채널에서 판매하는 샤크무선청소기 관련 상품 20개의 판매가(101,960원부터)와 방송 일정을 한 번에 비교할 수 있습니다. ... * 여러 홈쇼핑 채널의 샤크무선청소기"
+          },
+          {
+            "url": "https://www.consumuch.com/news/articleView.html?idxno=18245",
+            "domain": "www.consumuch.com",
+            "title": "[몇대몇] 잘 나가는 핸디스틱 '무선청소기' 주요 제품 스펙 비교 < 몇대몇 < 소비자뉴스 < 기사본문 - 컨슈머치",
+            "snippet": "[컨슈머치 = 이용석 기자] 가정 내 보급률이 82%에 이른다는 필수 생활가전인 청소기가 최근 1인 가구 증가와 맞물려 가볍고 사용이 간편해진 무선형태로 출시되고 있다. ... 컨슈머치는"
+          },
+          {
+            "url": "https://lifebase.kr/blog/0213-cordless-vacuum-comparison/",
+            "domain": "lifebase.kr",
+            "title": "무선청소기 추천 비교 가이드 - LifeBase",
+            "snippet": "# 무선청소기 추천 비교 가이드 ... 작성 시점 기준으로 무선청소기 시장은 스테이션형 자동 먼지 비움 기능, 흡입과 물걸레를 동시에 수행하는 겸용 모델, AI 기술을 활용한"
+          },
+          {
+            "url": "https://beforepick.com/product/cordless-vacuum/",
+            "domain": "beforepick.com",
+            "title": "미닉스 더슬림 무선청소기 제품 판단 허브 — BeforePick",
+            "snippet": "Image: 미닉스 더슬림 무선청소기 AI 보조 이미지 · 실물 식별 근거로 사용하지 않음 ... 공단 연간에너지비용은 비교용 표준값이며 실제 청구액 예측이 아닙니다. ... 연간 전기비"
+          },
+          {
+            "url": "https://content73455.tistory.com/88",
+            "domain": "content73455.tistory.com",
+            "title": "무선청소기 추천 | 틸루 스톰 vs 경쟁사 비교 분석 (14만원대 BLDC)",
+            "snippet": "이 글은 146명의 실제 구매자 리뷰를 분석하고, 비슷한 가격대의 다른 무선청소기들과 상세하게 비교한 결과를 정리한 내용입니다. ... 아래는 같은 가격대의 무선청소기들을 비교한 표입니다."
+          },
+          {
+            "url": "https://blog.naver.bytimes.kr/%EC%BF%A0%EC%BF%A0%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EC%83%81%ED%92%88%EA%B3%BC-%EA%B0%80%EA%B2%A9-%EB%B9%84%EA%B5%90-%EC%A0%95%EB%A6%AC/",
+            "domain": "blog.naver.bytimes.kr",
+            "title": "쿠쿠무선청소기 추천 및 제품정보 가격 비교 최저가 정보",
+            "snippet": "# 쿠쿠무선청소기 추천 및 제품정보 가격 비교 최저가 정보 ... 쿠쿠무선청소기 추천 상품과 가격 비교 정리"
+          },
+          {
+            "url": "https://koreacompanyanalyze.tistory.com/135",
+            "domain": "koreacompanyanalyze.tistory.com",
+            "title": "무선청소기 비교 – 다이슨 vs 삼성 제트 vs LG 코드제로 (2025년 최신)",
+            "snippet": "# 무선청소기 비교 – 다이슨 vs 삼성 제트 vs LG 코드제로 (2025년 최신) ... 고급 성능과 브랜드를 원한다면 다이슨 V15를, 가격과 배터리 효율을 중시한다면 삼성"
+          },
+          {
+            "url": "https://www.shyeogi.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EC%88%9C%EC%9C%84-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90-%ED%9D%A1%EC%9E%85%EB%A0%A5-%EB%B0%B0%ED%84%B0%EB%A6%AC-%EC%88%98%EB%AA%85/",
+            "domain": "www.shyeogi.com",
+            "title": "무선청소기 추천 순위 성능 비교 흡입력 배터리 수명, 다이슨, LG, 삼성, 샤오미, 테팔",
+            "snippet": "① 무선청소기 배터리는 장기간 충·방전을 반복하면 성능 저하가 발생하는 소모성 부품임. ... 무선청소기 선택 요령 및 사용 시 주의사항"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "무선청소기가격비교",
+          "executed_query": "무선청소기 가격 비교",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-22T10:00:46.843294+00:00",
+          "raw_sha256": "9e098740dcde93b0b4e8691d36e5f208d8da9912ada0c00ffa0cc8a995fec44e",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "삼성청소기 상품 판매가·앱 전용가 무료 비교 혜택"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "삼성무선스틱청소기 관련 상품 20개의 판매가(5,900원부터)"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "샤크무선청소기 관련 상품 20개의 판매가(101,960원부터)"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "핸디스틱 '무선청소기' 주요 제품 스펙 비교"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "스테이션형 자동 먼지 비움 기능"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "공단 연간에너지비용은 비교용 표준값이며 실제 청구액 예측이 아닙니다."
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "무선청소기 추천 | 틸루 스톰 vs 경쟁사 비교 분석 (14만원대 BLDC)"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "쿠쿠무선청소기 추천 상품과 가격 비교 정리"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "고급 성능과 브랜드를 원한다면 다이슨 V15를, 가격과 배터리 효율을 중시한다면 삼성"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "무선청소기 선택 요령 및 사용 시 주의사항"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "노트북비교",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
+              "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
+              "excerpt_chars": 616
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_navigation"
+          }
+        }
+      },
+      {
+        "keyword": "청소기비교",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://encykorea.aks.ac.kr/Article/E0056502",
+              "title": "청송군 - 한국민족문화대백과사전",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=89921",
+              "title": "Cheongsong Folk Museum (청송민속박물관)-  VISITKOREA",
+              "excerpt_chars": 3976
+            },
+            {
+              "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5e7fe2d2-d7b8-42c0-8619-4d85251ba042",
+              "title": "관광지·명소(상세) | 무장애 관광정보 | 열린관광 모두의 여행",
+              "excerpt_chars": 972
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
+      },
+      {
+        "keyword": "학생용노트북",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 9330,
+        "organic_provider": "codex_native_search",
+        "organic_query": "학생용 노트북",
+        "organic_results": [
+          {
+            "url": "https://wikidocs.net/406658",
+            "domain": "wikidocs.net",
+            "title": "학생용 노트북 CPU 고르는 법 — 과한 스펙이 오히려 손해인 이유 - CPU 매니아 — 인텔 vs AMD부터 결함 이슈까지, 사기 전 진짜 궁금했던 것들",
+            "snippet": "# 학생용 노트북 CPU 고르는 법 — 과한 스펙이 오히려 손해인 이유 ... 학생용 노트북을 고를 때 가장 흔한 실수는 문서작업과 인터넷 강의 수강이 주"
+          },
+          {
+            "url": "https://pbwoo.tistory.com/entry/%ED%95%99%EC%83%9D%EC%9A%A9-%EB%85%B8%ED%8A%B8%EB%B6%81-%EA%B3%B5%EB%B6%80-%ED%9A%A8%EC%9C%A8%EC%9D%84-%EB%86%92%EC%9D%B4%EB%8A%94-%EB%98%91%EB%98%91%ED%95%9C-%EC%84%A0%ED%83%9D%EB%B2%95-2025",
+            "domain": "pbwoo.tistory.com",
+            "title": "학생용 노트북, 공부 효율을 높이는 똑똑한 선택법 (2025)",
+            "snippet": "이 글에서는 공부에 최적화된 학생용 노트북 선택 기준과 추천 제품을 정리하여, 학습 효율을 높일 수 있는 스마트한 선택을 도와드립니다. ... 학생은 노트북을 매일 가방에 넣고"
+          },
+          {
+            "url": "https://edu.mpva.go.kr/file/downloadByNo.do/?attFileNo=17442&attSaveName=file%2F2024%2FGHO4RlpMlM6pAbj.pdf",
+            "domain": "edu.mpva.go.kr",
+            "title": "2023 보훈문화교육",
+            "snippet": "- 노트북(PC), Wifi, 코스페이시스 , 장사상륙작전 미션 맵, X-RAY 작전 미션 맵 | | 학습 ... [활동2] X-RAY 작전 수행하기 | 03‘ | ☞ 노트북(PC),"
+          },
+          {
+            "url": "https://sogereview.tistory.com/251",
+            "domain": "sogereview.tistory.com",
+            "title": "학생용 노트북 추천 베스트 3! 가성비, 성능 모두 잡았다!",
+            "snippet": "오늘은 가성비와 성능을 모두 잡은 학생용 노트북 추천 베스트 3 을 소개해 드리려고 해요! ... * 학생용 노트북 스펙 비교 및 장단점 분석 ... 휴대성이"
+          },
+          {
+            "url": "https://v.daum.net/v/20250126091205464",
+            "domain": "v.daum.net",
+            "title": "[정옥재의 스마트 라이프] 졸업입학 시즌, 학생용 노트북 어떤게 좋을까",
+            "snippet": "### [정옥재의 스마트 라이프] 졸업입학 시즌, 학생용 노트북 어떤게 좋을까 ... 학생용 노트북은 고사양이 필요하지 않지만 앞으로는 AI 교과서, 인터넷 강의 수강 등에 대비해야 한다."
+          },
+          {
+            "url": "https://prod.danawa.com/info/?pcode=93418007",
+            "domain": "prod.danawa.com",
+            "title": "라일리 Rly 가볍고편한 백팩 학생용 노트북 배낭 소풍 책가방 37292357 : 다나와 가격비교",
+            "snippet": "# 라일리 Rly 가볍고편한 백팩 학생용 노트북 배낭 소풍 책가방 37292357 : 다나와 가격비교 ... ### 라일리 Rly 가볍고편한 백팩 학생용 노트북 배낭 소풍 책가방"
+          },
+          {
+            "url": "https://file.aichallenge4all.or.kr/files/click-on-ai-program-guide-2026-v2.pdf",
+            "domain": "file.aichallenge4all.or.kr",
+            "title": "2026 클릭온 AI(구 온라인 코딩파티) 세부 프로그램 안내",
+            "snippet": "◈ 코드 슈팅 게임 (㈜인포앤북) - (권장연령) 초등학교 4학년 이상 - (내용) 변수·입출력에서 시작해 연산자, 조건문, 반복문, 문자열, 리스트까지 10개 스테이지를 통과해 나가며 키보드 입력"
+          },
+          {
+            "url": "https://kmr.or.kr/younghoon_m/education-intro/account_budget.do?articleNo=30441&attachNo=31298&mode=fileDownload",
+            "domain": "kmr.or.kr",
+            "title": "세출예산명세서",
+            "snippet": "67,765 학생용 노트북구입 : -431,000원*1년 = ... (성립전_2추)학생용 노트북구입 :"
+          },
+          {
+            "url": "https://clik.nanet.go.kr/clikr-collection/policyinfo/202/1014/2019/CLIKC6977935798185340_attach_1.pdf",
+            "domain": "clik.nanet.go.kr",
+            "title": "<BABBB9AE5FB1B3C0B0C1A4BAB8C8ADB9E9BCAD2E687770>",
+            "snippet": "현재까지 수행된 첨단교실 사업은 협력국의 교육 분야 ICT 정책 수립 및 집행에 긍정적인 영향을 끼치고 첨단교실 구축 학교의 교사 및 학생들의 ICT에 대한 태도, 활용"
+          },
+          {
+            "url": "https://aether.newaddress.kr/%ED%95%99%EC%83%9D%EC%9A%A9-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B6%94%EC%B2%9C-%EC%B5%9C%EC%8B%A0-%EB%AA%A8%EB%8D%B8%EB%B3%84-%EC%84%B1%EB%8A%A5%EA%B3%BC-%EA%B0%80%EA%B2%A9-%EB%B9%84%EA%B5%90/",
+            "domain": "aether.newaddress.kr",
+            "title": "학생용 노트북 추천 최신 모델별 성능과 가격 비교",
+            "snippet": "학업에 적합한 노트북은 가벼운 무게, 긴 배터리 수명, 빠른 처리 속도 등을 갖추어야 하며, 예산에 맞는 최적의 선택이 필요합니다. ... 이에 따라 학생들은 자신의 학습"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "학생용노트북",
+          "executed_query": "학생용 노트북",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-22T10:00:46.843294+00:00",
+          "raw_sha256": "b3d0474e98c4ced44881815ca2f2e3a64d3edbbbe38b50ee23993bcd38bbbbb2",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "학생용 노트북 CPU 고르는 법"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "공부에 최적화된 학생용 노트북 선택 기준과 추천 제품"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "[활동2] X-RAY 작전 수행하기"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "학생용 노트북 스펙 비교 및 장단점 분석"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "학생용 노트북은 고사양이 필요하지 않지만"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "백팩 학생용 노트북 배낭 소풍 책가방"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "코드 슈팅 게임 (㈜인포앤북)"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "학생용 노트북구입 : -431,000원*1년"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "협력국의 교육 분야 ICT 정책 수립 및 집행"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "학생용 노트북 추천 최신 모델별 성능과 가격 비교"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "업무용노트북",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.samsung.com/sec/galaxybook/galaxy-book5-pro-nt960xha-kd72/NT940XHA-KD72S/",
+              "title": "갤럭시 북5 프로 (35.6cm) Core™ Ultra 7 / 1TB NVMe SSD, Copilot+ PC|  NT940XHA-KD72S | Samsung 대한민국",
+              "excerpt_chars": 525
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
+      },
+      {
+        "keyword": "무선청소기추천",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.kh.or.kr/brd/board/1049/L/menu/885?bbIdx=118863&brdType=R",
+              "title": "Korea Cultural Heritage Foundation",
+              "excerpt_chars": 7769
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
+      },
+      {
+        "keyword": "로봇청소기추천",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=854373c5-a82e-4440-bc5b-43a777a35360",
+              "title": "관광지·명소(상세) | 무장애 관광정보 | 열린관광 모두의 여행",
+              "excerpt_chars": 1577
+            },
+            {
+              "url": "https://klac.or.kr/legalsmart/legalSmartGuide.do",
+              "title": "법률똑똑이 | 이용안내",
+              "excerpt_chars": 1403
+            },
+            {
+              "url": "https://www.kr.or.kr/main.do",
+              "title": "국가철도공단",
+              "excerpt_chars": 1847
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
+      }
+    ],
+    "excluded_keywords": [],
+    "selection_scope": "highest_score_among_evaluated",
+    "proposal_rounds": [
+      {
+        "round": 1,
+        "offered_keywords": [
+          "노트북비교",
+          "미세먼지",
+          "청소기비교",
+          "로봇청소기",
+          "차이슨무선청소기",
+          "무선청소기",
+          "차이슨",
+          "청소기",
+          "차이슨청소기",
+          "선풍기",
+          "베이크아웃방법",
+          "삼성노트북",
+          "로봇청소기비교",
+          "공기청정기",
+          "인덕션설치비용",
+          "로보락로봇청소기",
+          "무선청소기가격비교",
+          "게이밍노트북",
+          "무선청소기비교",
+          "물걸레청소기",
+          "LG그램",
+          "캠핑용품",
+          "전동드릴",
+          "샤크청소기",
+          "업소용청소기",
+          "LG로봇청소기",
+          "스텐리",
+          "환풍기",
+          "차량용청소기",
+          "삼성공기청정기",
+          "중고노트북",
+          "그라인더",
+          "LG그램노트북",
+          "애플매장",
+          "LG노트북",
+          "서울초미세먼지",
+          "LG청소기",
+          "유선청소기",
+          "노트북추천",
+          "엘지로봇청소기",
+          "LG코드제로A9",
+          "전열교환기",
+          "청소기추천",
+          "노트북가격",
+          "업무용노트북",
+          "그램노트북",
+          "삼성제습기",
+          "게임용노트북",
+          "무선청소기추천",
+          "청라코스트코",
+          "무선에어건",
+          "로보락청소기",
+          "위닉스공기청정기",
+          "바이러스",
+          "무선송풍기",
+          "노트북구매",
+          "로봇청소기추천",
+          "노트북할인",
+          "LG무선청소기",
+          "학생용노트북"
+        ],
+        "proposals": [
+          {
+            "keyword": "로봇청소기비교",
+            "reason": "월 1,100회 수요. 구매 전 자동 세척·먼지 비움·장애물 회피 기능과 설치 조건을 공식 자료로 비교할 필요가 있다.",
+            "search_query": "로봇청소기 비교"
+          },
+          {
+            "keyword": "무선청소기비교",
+            "reason": "월 680회 수요. 무게·배터리·구성품 차이를 묻는 구매 수요로, 공식 사양의 측정 조건까지 조사할 가치가 있다.",
+            "search_query": "무선청소기 비교"
+          },
+          {
+            "keyword": "인덕션설치비용",
+            "reason": "월 940회 수요. 구매 예산에 영향을 주는 기본 설치 범위와 타공·전기공사 추가 비용 조건을 공식 안내로 확인할 필요가 있다.",
+            "search_query": "인덕션 설치 비용"
+          },
+          {
+            "keyword": "무선청소기가격비교",
+            "reason": "월 690회 수요. 구성품·배터리·거치대 포함 여부에 따른 가격 차이를 공식 판매 자료로 조사할 가치가 있다.",
+            "search_query": "무선청소기 가격 비교"
+          },
+          {
+            "keyword": "노트북비교",
+            "reason": "월 8,590회 수요. 구매 전 용도별 성능·무게·메모리 확장성의 선택 기준을 공식 사양으로 비교할 필요가 있다.",
+            "search_query": "노트북 비교"
+          },
+          {
+            "keyword": "청소기비교",
+            "reason": "월 8,450회 수요. 유선·무선·로봇 방식 중 무엇을 고를지 판단하도록 전원·관리 방식과 기능 제약을 조사할 가치가 있다.",
+            "search_query": "청소기 비교"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "미세먼지",
+          "로봇청소기",
+          "차이슨무선청소기",
+          "무선청소기",
+          "차이슨",
+          "청소기",
+          "차이슨청소기",
+          "선풍기",
+          "베이크아웃방법",
+          "삼성노트북",
+          "공기청정기",
+          "로보락로봇청소기",
+          "게이밍노트북",
+          "물걸레청소기",
+          "LG그램",
+          "캠핑용품",
+          "전동드릴",
+          "샤크청소기",
+          "업소용청소기",
+          "LG로봇청소기",
+          "스텐리",
+          "환풍기",
+          "차량용청소기",
+          "삼성공기청정기",
+          "중고노트북",
+          "그라인더",
+          "LG그램노트북",
+          "애플매장",
+          "LG노트북",
+          "서울초미세먼지",
+          "LG청소기",
+          "유선청소기",
+          "노트북추천",
+          "엘지로봇청소기",
+          "LG코드제로A9",
+          "전열교환기",
+          "청소기추천",
+          "노트북가격",
+          "업무용노트북",
+          "그램노트북",
+          "삼성제습기",
+          "게임용노트북",
+          "무선청소기추천",
+          "청라코스트코",
+          "무선에어건",
+          "로보락청소기",
+          "위닉스공기청정기",
+          "바이러스",
+          "무선송풍기",
+          "노트북구매",
+          "로봇청소기추천",
+          "노트북할인",
+          "LG무선청소기",
+          "학생용노트북",
+          "청소기가격",
+          "엘지청소기",
+          "로보락QREVO",
+          "노트북컴퓨터",
+          "진공청소기",
+          "샤오미로봇청소기"
+        ],
+        "proposals": [
+          {
+            "keyword": "학생용노트북",
+            "reason": "월 9,330회 수요. 학습용 구매에 필요한 무게·메모리·단자·배터리 조건을 제조사 공식 사양으로 조사할 가치가 있다.",
+            "search_query": "학생용 노트북"
+          },
+          {
+            "keyword": "업무용노트북",
+            "reason": "월 12,560회 수요. 업무 프로그램에 필요한 사양과 외부 모니터 연결·확장성 등 구매 조건을 조사하기 적합하다.",
+            "search_query": "업무용 노트북"
+          },
+          {
+            "keyword": "무선청소기추천",
+            "reason": "월 11,890회로 구매 선택 의도가 명확하다. 무게·모드별 사용시간·배터리 교체 조건을 공식 자료로 확인할 후보이다.",
+            "search_query": "무선 청소기 추천"
+          },
+          {
+            "keyword": "로봇청소기추천",
+            "reason": "월 9,630회 수요. 문턱 통과·본체 높이·도크 설치 조건 등 주거 환경에 맞는 선택 기준의 공식 근거를 조사할 후보이다.",
+            "search_query": "로봇 청소기 추천"
+          }
+        ]
+      }
+    ],
+    "ranked_candidates": [],
+    "candidate_decisions": [
+      {
+        "keyword": "무선청소기비교",
+        "monthly_search": 680,
+        "score": 58.66,
+        "status": "held",
+        "reasons": [
+          "missing_topic_suitability"
+        ],
+        "organic_query": "무선청소기 비교"
+      },
+      {
+        "keyword": "로봇청소기비교",
+        "status": "rejected",
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 1100,
+        "organic_query": "로봇청소기 비교"
+      },
+      {
+        "keyword": "인덕션설치비용",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 940,
+        "organic_query": "인덕션 설치 비용"
+      },
+      {
+        "keyword": "무선청소기가격비교",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 690,
+        "organic_query": "무선청소기 가격 비교"
+      },
+      {
+        "keyword": "노트북비교",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 8590,
+        "organic_query": "노트북 비교"
+      },
+      {
+        "keyword": "청소기비교",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 8450,
+        "organic_query": "청소기 비교"
+      },
+      {
+        "keyword": "학생용노트북",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 9330,
+        "organic_query": "학생용 노트북"
+      },
+      {
+        "keyword": "업무용노트북",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 12560,
+        "organic_query": "업무용 노트북"
+      },
+      {
+        "keyword": "무선청소기추천",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 11890,
+        "organic_query": "무선 청소기 추천"
+      },
+      {
+        "keyword": "로봇청소기추천",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 9630,
+        "organic_query": "로봇 청소기 추천"
+      }
+    ],
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."
   }
 }

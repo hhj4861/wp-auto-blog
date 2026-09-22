@@ -163,5 +163,25 @@
     "trend_status": "measured",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-21T10:57:23.825142+00:00"
+  },
+  {
+    "key": "청소년상담사자격증",
+    "keyword": "청소년상담사자격증",
+    "topic": "청소년상담사자격증 취득 준비: 급수별 주요 응시자격·시험과목·연수",
+    "category": "취업",
+    "post_id": 1769,
+    "url": "https://trendpulse.blog/youth-counselor-certification-2026/",
+    "selection_version": 6,
+    "monthly_search": 1860,
+    "score": 67.41,
+    "score_components": {
+      "demand": 26.16,
+      "organic_opportunity": 26.25,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-22T03:27:45.327999+00:00"
   }
 ]

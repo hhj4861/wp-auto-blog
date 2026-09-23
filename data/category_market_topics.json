@@ -4985,7 +4985,7 @@
   },
   "건강": {
     "category": "건강",
-    "selected_at": "2026-09-20T13:33:53.736075+00:00",
+    "selected_at": "2026-09-23T00:52:47.108466+00:00",
     "seeds": [
       "건강검진",
       "예방접종",
@@ -4996,30 +4996,28 @@
     "research_rounds": 2,
     "source_recovery_attempts": 2,
     "cak_import": {
-      "status": "partial",
+      "status": "ok",
       "reason": null,
       "received_count": 80,
-      "validated_count": 79,
-      "rejected_count": 1,
-      "qualified_rising_count": 6,
+      "validated_count": 80,
+      "rejected_count": 0,
+      "qualified_rising_count": 17,
       "monthly_unavailable_count": 0,
-      "rejection_counts": {
-        "stale_trend": 1
-      },
+      "rejection_counts": {},
       "transport": {
         "status": "ok",
         "reason": "downloaded",
-        "sourceRunId": 35506358381,
-        "artifactId": 10604011368,
-        "headSha": "9b949c261d3f874156469288f4ebfb7bc46aa8ca",
-        "sourceRunCreatedAt": "2026-09-20T10:54:33Z"
+        "sourceRunId": 35720077591,
+        "artifactId": 10690977893,
+        "headSha": "de39cf8f79beeb02eb4e04f68f1a30bf3d968a33",
+        "sourceRunCreatedAt": "2026-09-22T11:11:35Z"
       },
       "export_metadata": {
         "schemaVersion": 1,
         "kind": "cak_keyword_candidates",
         "profile": "blog-kr",
-        "generatedAt": "2026-09-20T10:57:36.369Z",
-        "expiresAt": "2026-09-21T10:55:20.511Z",
+        "generatedAt": "2026-09-22T11:14:26.558Z",
+        "expiresAt": "2026-09-23T11:12:23.362Z",
         "compliance": {
           "resaleRestricted": true,
           "cacheTtlHours": 24
@@ -5036,439 +5034,48 @@
           "expired": 0,
           "unknownTimeUnit": 0,
           "nonDaily": 0,
-          "invalidSeries": 3,
-          "missingPreviousDay": 6,
-          "insufficientBaseline": 0
+          "invalidSeries": 5,
+          "missingPreviousDay": 2,
+          "insufficientBaseline": 2
         }
       },
       "direct_count": 72,
       "expanded_seed_count": 5,
-      "related_count": 353,
+      "related_count": 509,
       "seed_lookup_failed_count": 0,
-      "filtered_count": 7
+      "filtered_count": 8
     },
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords_and_cak_export",
-    "measured_candidates": 1371,
-    "evaluated_candidates": 8,
+    "measured_candidates": 1533,
+    "evaluated_candidates": 9,
     "research_pool_size": 120,
     "selected": [],
     "held": [
       {
-        "keyword": "종합건강검진비용",
-        "category": "건강",
-        "topic": "종합건강검진비용: 공식 프로그램별 가격과 별도 비용 확인법",
-        "intent": "종합건강검진은 얼마이며, 프로그램·성별·검사항목에 따라 비용이 어떻게 달라지나요?",
-        "gap": "한국건강관리협회 공식 사례로 남녀별 가격·포함검사 비교표와 대장내시경 수면비 별도·지부별 차이 확인표를 제공합니다.",
-        "source_url": "https://www.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-        "verified_sources": [
-          {
-            "url": "https://www.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-            "original_url": "https://www.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-            "title": "종합건강검진 : 홈 > 대표 > 건강검진 > 검진 프로그램 > 종합건강검진",
-            "checked_on": "2026-09-20",
-            "sha256": "8c2668bf7fa24c6f230cc90396425552ac8a0f9853c9d642f1c50ea51c1c5b9c",
-            "excerpt": "본문바로가기 주메뉴바로가기 보조메뉴바로가기 홈 검진 프로그램 종합건강검진 검진 프로그램 예약안내 검진예약 예약조회 결과조회 결과상담 신청 검진 프로그램 종합건강검진 국가건강검진 맞춤형건강검진 채용신체검진 검사항목 정보 검진 절차안내 검진 전 주의사항 내시경 검진 후 주의사항 기업검진안내 검진소개 검진 절차안내 예방접종 예방접종 안내 해외여행 예방접종 안내 예방접종 가이드 접종 후 주의사항 제증명 발급 의무기록열람 / 사본발급 안내 제증명(보건증)발급 바로가기 검진 안내 동영상 건강검진 FAQ 전국 의료진 소개 전국 센터 안내 종합건강검진 페이스북공유 트위터공유 네이버공유 밴드공유 카카오톡공유 카카오스토리 공유 URL 복사 각 프로그램을 클릭하면 프로그램별 검진 항목 및 정보를 확인할 수 있습니다. ※ 지부에 따라 검진프로그램 구성 및 비용, 가능여부가 상이할 수 있습니다. 예약하기 메디체크 종합검진 프로그램 한눈에 비교하기 기본 종합검진 일반적으로 성인에게서 많이 나타나는 질환을 중심으로 구성되어 전반적인 건강상태를 점검하기 위해 정기적으로 받아보실 수 있는 프로그램으로, 20~30대 연령대에 추천해드립니다. 검사비용 : 남 38만원대, 여 43만원대 플러스 종합검진 메디체크종합검진 외 CT검사, 초음파검사 등을 통해 성인기 발생가능한 주요 질환을 점검해 볼 수 있는 검진프로그램으로 30~40대 연령대에 추천해드립니다. 검사비용 : 남 64만원대, 여 81만원대 정밀 종합검진 메디체크플러스 종합검진 외 다양한 초음파검사, 대장내시경, 골밀도검사 등을 검사할 수 있는 정밀 검진프로그램으로 암, 골다공증 등을 포함하여 40대 이후 중년기 건강을 전반적으로 점검하시고 싶은 분들에게 추천해드립니다. 검사비용 : 남 133만원대, 여 152만원대 프리미엄종합검진 메디체크정밀종합검진 외 종양표지자, 특수혈액검사, 심장CT, MRI 등의 암,심혈관계질환 관련 검사가 추가된 검진프로그램으로 50대 중년기 이후 건강문제를 심도있게 점검하시고 싶은 분들에게 추천해드립니다. 검사비용 : 남 311만원대, 여 330만원대 메디체크PET-CT 정밀종합검진 MRI와 전신 암을 체크해 볼 수 있는 PET-CT 검사로 50대 중년기 이후 건강문제 전반을 가장 심도있게 점검하시고 싶은 분들에게 추천해드리는 고품격 정밀검진프로그램입니다. (검사가능지부: 부산동부) 검사비용 : 해당지부문의 종합검진프로그램 한눈에 보기 종합검진프로그램 한눈에 보기 기본 종합 플러스 종합 정밀 종합 프리미엄 종합 영양평가 O O O AI평가Ⅰ(안저기반심혈관AI평가) O O AI평가Ⅱ(심장대동맥AI평가, 인공지능체성분분석) O 기초검사 O O O O 체성분 O O O O 스트레스검사 O O O O 심전도 O O O O 안과검사 2종 O O O 동맥경화검사 O O O 호흡기능검사 O O 소변검사 O O O O 소변암검사 O O 대변검사 O O O O 혈액질환검사 18종 O O O O 간기능검사 8종 O O O O 당뇨검사 2종 O O O O 고지혈증검사 4종 O O O O 신장기능검사 4종 O O O O 통풍검사 O O O O 심혈관위험인자 hs-CRP O O O O 심혈관계검사 2종 O O 심뇌혈관질환예측 파라옥소나제 O 단백분획검사 O 췌장기능검사 O O LDH검사 O O 신기능장애검사 Cystatin C O O O 전해질검사 2종(Mg, 엽산) O 간염검사 A형 O 간염검사 B형 O O 간염검사 C형 O O O O 종양표지자검사 3종 AFP, CA19-9,PSA(남) O O O O 소화기성암종양표지자검사 O 폐암종양표지자 2종 O O O 난소암종양표지자 여 O O O 여성 부인과 혈액검사 2종(HE4, ROMA scroe) O O O 전립선종양표지자 2종 남 O O O 갑상선기능검사 3종 O O O O 칼슘검사 O O O 뇌/심혈관계위험인자 Homocysteine O O O 간섬유화 혈액검사 FIB-4 O O O O 간섬유화혈액검사 M2BPGi O O 체내산화스트레스 2종 O O 비타민D검사 3종 O O 지질대사혈액검사 2종 O 류마티스관절염검사 Anti CCP Ab IgG O NGS 암 유전 패널검사심장/암 택1 O 간질성폐질환검사 KL-6 O O 자가면역선별검사 CTD screen O HPV유전자형검사 여 O O 부인과검사 여 O O O O X선촬영 O O O O 유방검사 여 O O O O 골밀도검사 요추부, 대퇴부 O(여) O(남,여) O(남,여) 상복부초음파 O O O O 갑상선초음파 O O O O 유방초음파 여 O O O 경동맥초음파 O O 심장초음파 O O 질초음파 여 O O O 전립선초음파 남 O O O CT 두부/요추/경추/흉부 택1 O O O 위장검사 위조영/일반위내시경 택1 O O O O 일반대장내시경 수면비별도 O O 심장관상동맥조영CT O 췌장MRI O 뇌위축도MRI O MRI검사 택 2종 머리(뇌MRI/MRA/경부혈관MRA), 척추(경추/흉추/요추) O 확인 뷰어다운로드 한글뷰어 아크로뱃뷰어 최상단으로 이동 공유목록 열기 페이스북공유 트위터공유 네이버공유 밴드공유 카카오톡공유 카카오스토리 공유 URL 공유목록 닫기 전국검진센터전화번호를 나타내는 표입니다. 서울서부(서울 강서구) 02-2600-2000 1670-4612 서울동부(서울 동대문구) 02-3290-9800 1670-4613 서울강남(서울 송파구) 02-2140-6000 1670-4614 인천(인천 남동구) 032-890-8700 1670-4618 경기(수원 장안구) 031-250-5800 1670-4630 강원(춘천) 033-260-0800 1670-4631 충북세종(청주 흥덕구) 043-297-1100 1670-4632 대전충남(대전 서구) 042-532-9890 1670-4633 전북(전주 덕진구) 063-259-8900 1670-4634 광주전남(광주 서구) 062-363-4040 1670-4635 대구(대구 동구) 053-757-0500 1670-4617 경북(대구 북구) 053-350-9000 1670-4637 부산동부(부산 동래구) 051-553-6400 1670-4615 부산서부(부산 사상구) 051-601-9700 1670-4616 울산(울산 중구) 052-241-2000 1670-4619 경남(창원 마산회원구) 055-259-0100 1670-4638 제주(제주) 064-740-0200 1670-4639 본부(서울 화곡동) 문의게시판 확인",
-            "locator_origin": "model_reported_locator"
-          }
-        ],
-        "intent_results": [
-          "https://incheon.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-          "https://onthesweet.com/452",
-          "https://medihere.co.kr/%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EA%B0%80%EC%9D%B4%EB%93%9C/"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 5220,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://www.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://gg.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkList.do",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.kosinmed.or.kr/health/program/program_1.php?idx=3",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.cancer.go.kr/lay1/S1T553C556/contents.do",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6671",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148933042",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "종합 건강검진 비용",
-        "organic_domains": [
-          "incheon.kahp.or.kr",
-          "www.staging.modoodoc.com",
-          "www.mnd.go.kr",
-          "mas.smc.seoul.kr",
-          "diet-calories.com",
-          "www.jungdonghospital.com",
-          "onthesweet.com",
-          "www.jangbaro.co.kr",
-          "www.jungdonghospital.com",
-          "medihere.co.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://incheon.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-            "domain": "incheon.kahp.or.kr",
-            "title": "종합건강검진 : home > 지부(인천) > 건강검진 > 검진 프로그램 > 종합건강검진",
-            "snippet": "※ 지부에 따라 검진프로그램 구성 및 비용, 가능여부가 상이할 수 있습니다. ... * 프리미엄종합검진 메디체크정밀종합검진 외 종양표지자, 특수혈액검사, 심장CT, MRI 등의 암,심혈관계질환 관련 검사가 추가된"
-          },
-          {
-            "url": "https://www.staging.modoodoc.com/treatment-detail/5032/434/%EA%B5%AD%EB%AF%BC%EC%B2%B4%EB%A0%A5%EC%84%BC%ED%84%B0%EC%9D%98%EC%9B%90-%EC%A2%85%ED%95%A9%20%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84",
-            "domain": "www.staging.modoodoc.com",
-            "title": "[국민체력센터의원] 종합 건강검진 가격/비용/이벤트 (2026) | 모두닥",
-            "snippet": "기본검사 : 위내시경(수면), 골밀도, CBC, Diff.c 혈액, 소변검사, 체성분검사 선택검사 : 초음파(5종), 건강생활기능, 동맥경화협착 중 선택 2가지 총 58종 검사 ... 신청자 수와 남은 수량은"
-          },
-          {
-            "url": "https://www.mnd.go.kr/user/mnd/upload/pblictn/PBLICTNEBOOK_202503141022459290.pdf",
-            "domain": "www.mnd.go.kr",
-            "title": "제3편 제대군인에게 주어지는 혜택 알아가기!",
-            "snippet": "<td>검진비용</td> ... 라) 검진항목 : 상세 내역은 군인공제회 홈페이지 「종합 건강검진」 참조"
-          },
-          {
-            "url": "https://mas.smc.seoul.kr/attach/record/SEOUL/appendix/a11/A0071312.pdf?time=20260621104059",
-            "domain": "mas.smc.seoul.kr",
-            "title": "제3 3 4 회 임시회",
-            "snippet": "- 배달·가사·돌봄 등 취약노동자 종합건강검진 패키지 비용 지원(200명) ... 취약노동자 건강검진 협력병원(이대서울병원)과 업무 협의"
-          },
-          {
-            "url": "https://diet-calories.com/%EC%A1%B0%EC%9D%80%EA%B8%88%EA%B0%95%EB%B3%91%EC%9B%90-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EC%A2%85%ED%95%A9%EA%B2%80%EC%A7%84-%EA%B5%AD%EA%B0%80%EA%B2%80%EC%A7%84/",
-            "domain": "diet-calories.com",
-            "title": "조은금강병원 건강검진 비용 (종합검진 국가검진 예약) - 건강 도우미",
-            "snippet": "# 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) ... Image: 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) 1 ... 네, 조은금강병원은 국민건강보험공단에서 각종 성인질병 및 암질환을 조기에"
-          },
-          {
-            "url": "https://www.jungdonghospital.com/intro/page05.html?jb_code=20&jb_depth=41990&jb_group=4199&jb_idx=5320&jb_step=0&month=&page=363&search_key=&search_keyword=&type=",
-            "domain": "www.jungdonghospital.com",
-            "title": "관절,척추전문 정동병원",
-            "snippet": "#### 나도 올해 건강검진 대상자일까? ... 다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다! ... ​대장 내시경 중 용종 절제 시 하루 정도 입원하실 수 있으며,"
-          },
-          {
-            "url": "https://onthesweet.com/452",
-            "domain": "onthesweet.com",
-            "title": "60대 건강검진 비용 | 종합검진부터 국가검진까지 가격 비교 및 추천 항목",
-            "snippet": "# 60대 건강검진 비용 | 종합검진부터 국가검진까지 가격 비교 및 추천 항목 ... 본문에서는 종합 건강검진 비용, 국가검진 정보, 병원별 가격 차이 등을 상세히 소개합니다!"
-          },
-          {
-            "url": "https://www.jangbaro.co.kr/pages/phycheck_fit.php",
-            "domain": "www.jangbaro.co.kr",
-            "title": "맞춤 종합 건강검진 | 장바로내과",
-            "snippet": "* 비용 : 45만원 ... * 각종 암의 조기 진단과 예방을 위한 기본종합검진(20대 이상 가장 취약한 위암, 간암, 자궁경부암, 유방암, 갑상선암 등) ... 골밀도 검사"
-          },
-          {
-            "url": "https://www.jungdonghospital.com/intro/page05.html?jb_code=20&jb_depth=47160&jb_group=4716&jb_idx=5873&jb_step=0&month=&page=641&search_key=&search_keyword=&type=",
-            "domain": "www.jungdonghospital.com",
-            "title": "관절,척추전문 정동병원",
-            "snippet": "#### 건강검진 꼭 받아야 할까요? ... 다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다! ... ​대장 내시경 중 용종 절제 시 하루 정도 입원하실 수 있으며"
-          },
-          {
-            "url": "https://medihere.co.kr/%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EA%B0%80%EC%9D%B4%EB%93%9C/",
-            "domain": "medihere.co.kr",
-            "title": "건강검진 항목별 비용과 선택 가이드 | 병원콕 건강정보",
-            "snippet": "이 글에서는 국가건강검진과 종합건강검진의 차이, 항목별 추가 검사 비용, 그리고 나이와 성별에 따라 어떤 검진을 선택해야 하는지 체계적으로 안내합니다. ... 건강검진은 크게 국민건강보험공단이 지원하는 국가"
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 29.74,
-          "organic_opportunity": 28.57,
-          "trend": 0,
-          "intent_fit": 0
-        },
-        "trend_growth": null,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "unavailable",
-        "selection_version": 6,
-        "selected_at": "2026-09-20T13:33:53.736075+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "종합건강검진비용"
-        ],
-        "status": "research_only",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-              "title": "종합건강검진 : 홈 > 대표 > 건강검진 > 검진 프로그램 > 종합건강검진",
-              "excerpt_chars": 3124
-            },
-            {
-              "url": "https://gg.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkList.do",
-              "title": "종합건강검진 : home > 지부(경기) > 건강검진 > 검진 프로그램 > 종합건강검진",
-              "excerpt_chars": 5189
-            },
-            {
-              "url": "https://www.kosinmed.or.kr/health/program/program_1.php?idx=3",
-              "title": "고신대학교복음병원 건강증진센터",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.unist.ac.kr/unist/etc/support/checkup.do",
-                  "title": "종합건강검진비용 지원 | UNIST",
-                  "excerpt_chars": 767
-                },
-                {
-                  "url": "https://www.nhis.or.kr/static/html/wbde/c/b/wbdecb0503.html",
-                  "title": "국민건강보험",
-                  "excerpt_chars": 555
-                },
-                {
-                  "url": "https://www.cepa.or.kr/notice/cepapressdetail.do?seq=353",
-                  "title": "충남경제진흥원",
-                  "excerpt_chars": 1822
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkIntro.do",
-                  "title": "종합건강검진 : 홈 > 대표 > 건강검진 > 검진 프로그램 > 종합건강검진",
-                  "excerpt_chars": 3124
-                },
-                {
-                  "url": "https://gg.kahp.or.kr/ho/hlthChk/cprsvchk/cprsvchkList.do",
-                  "title": "종합건강검진 : home > 지부(경기) > 건강검진 > 검진 프로그램 > 종합건강검진",
-                  "excerpt_chars": 5189
-                },
-                {
-                  "url": "https://www.kosinmed.or.kr/health/program/program_1.php?idx=3",
-                  "title": "고신대학교복음병원 건강증진센터",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "종합건강검진비용",
-          "executed_query": "종합 건강검진 비용",
-          "topic": "종합건강검진비용: 공식 프로그램별 가격과 별도 비용 확인법",
-          "intent": "종합건강검진은 얼마이며, 프로그램·성별·검사항목에 따라 비용이 어떻게 달라지나요?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "result_count": 10,
-          "domain_count": 9,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "종합건강검진비용",
-            "executed_query": "종합 건강검진 비용",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-20T13:33:53.736075+00:00",
-            "raw_sha256": "0c229754c4f1761b36a2ba225438265f4da6482009b04d7bd080313bce71e680",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": false,
-                "quote": "지부에 따라 검진프로그램 구성 및 비용, 가능여부가 상이할 수 있습니다."
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "종합 건강검진 가격/비용/이벤트 (2026)"
-              },
-              {
-                "result_index": 2,
-                "relevant": false,
-                "quote": "상세 내역은 군인공제회 홈페이지 「종합 건강검진」 참조"
-              },
-              {
-                "result_index": 3,
-                "relevant": false,
-                "quote": "취약노동자 종합건강검진 패키지 비용 지원(200명)"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "조은금강병원 건강검진 비용 (종합검진 국가검진 예약)"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다!"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "본문에서는 종합 건강검진 비용, 국가검진 정보, 병원별 가격 차이 등을 상세히 소개합니다!"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "* 비용 : 45만원"
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다!"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "이 글에서는 국가건강검진과 종합건강검진의 차이, 항목별 추가 검사 비용"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 7,
-            "relevant_site_count": 6,
-            "relevant_indices": [
-              1,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "relevance_ratio": 0.7,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.2857142857142857,
-            "organic_opportunity": 28.57
-          },
-          "scope": "full_keyword",
-          "target_keyword": "종합건강검진비용",
-          "matches": [
-            {
-              "result_index": 0,
-              "quote": "지부에 따라 검진프로그램 구성 및 비용, 가능여부가 상이할 수 있습니다."
-            },
-            {
-              "result_index": 6,
-              "quote": "본문에서는 종합 건강검진 비용, 국가검진 정보, 병원별 가격 차이 등을 상세히 소개합니다!"
-            },
-            {
-              "result_index": 9,
-              "quote": "항목별 추가 검사 비용"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "input_sha256": "985d8f460f70d9c989ac26ea61bfa8d2766c8bcf25e823f060e7914a9fff75af",
-          "review": {
-            "scope": "narrower_query",
-            "target_keyword": "종합건강검진비용",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "메디체크 종합검진 프로그램 한눈에 비교하기",
-                "entity": "메디체크 종합검진 프로그램",
-                "context": "single_institution"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "종합건강검진 비용은 얼마이며 기관별로 어떻게 다른가?",
-                "answer": "메디체크 가격 사례만 확인된다. 독립 다기관 가격이나 공공 비용 분포가 없어 전체 비용 범위는 지원하지 못한다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "※ 지부에 따라 검진프로그램 구성 및 비용, 가능여부가 상이할 수 있습니다."
-              },
-              {
-                "facet": "프로그램과 성별에 따라 비용이 어떻게 달라지는가?",
-                "answer": "메디체크 기본은 남 38·여 43만원대, 플러스 64·81, 정밀 133·152, 프리미엄 311·330만원대다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "검사비용 : 남 38만원대, 여 43만원대"
-              },
-              {
-                "facet": "검사항목 구성에 따라 프로그램 비용이 어떻게 달라지는가?",
-                "answer": "메디체크 플러스는 CT·초음파, 정밀은 대장내시경·골밀도 등이 추가되는 구성이다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "메디체크플러스 종합검진 외 다양한 초음파검사, 대장내시경, 골밀도검사 등을 검사할 수 있는 정밀 검진프로그램으로"
-              },
-              {
-                "facet": "표시 가격 외 별도 비용과 지부별 차이는 무엇을 확인해야 하는가?",
-                "answer": "일반대장내시경 수면비는 별도다. 지부별 구성·비용·가능 여부 확인이 필요하며 수면비 금액은 제시되지 않았다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "일반대장내시경 수면비별도 O O"
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "전반적인 건강상태를 점검하기 위해 정기적으로 받아보실 수 있는 프로그램으로",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 58.31,
-        "publish_eligible": false,
-        "hold_reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
-        ]
-      },
-      {
         "keyword": "갑상선에좋은음식",
         "category": "건강",
-        "topic": "갑상선에좋은음식: 공통 식품과 저하증·항진증별 주의점",
-        "intent": "갑상선 건강에 도움이 되는 음식은 무엇이며, 저하증·항진증에 따라 주의할 음식은 어떻게 다른가?",
-        "gap": "공통 식품·질환별 식사 원칙 비교표와 요오드 과다 섭취·약 동시 섭취·저요오드식 적용 상황 체크리스트를 제공한다.",
+        "topic": "갑상선에좋은음식: 저하증·항진증별 식사 원칙과 주의할 음식",
+        "intent": "갑상선 건강을 위해 어떤 음식을 먹고 피해야 하며, 저하증과 항진증의 식사 관리는 어떻게 다른가?",
+        "gap": "공통 식품·질환별 식사 원칙 비교표와 요오드 과다·약 동시 섭취·저요오드식 적용 조건 체크리스트를 제공한다.",
         "source_url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
         "verified_sources": [
           {
             "url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
             "original_url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
             "title": "갑상선에 좋은 음식과 피해야 할 음식, 저하증·항진증별 정리 - 생명건강센터",
-            "checked_on": "2026-09-20",
+            "checked_on": "2026-09-23",
             "sha256": "b7de2072e5950990f5d2cca79f2f5dd71255125f59252c2f7f79479d6f74ff60",
             "excerpt": "핵심 요약 갑상선에 좋은 음식은 저하증·항진증에 따라 다릅니다. 공통으로 양질의 단백질과 셀레늄이 좋고, 요오드는 적정량이 중요합니다. 공통 좋은 것 양질의 단백질 · 셀레늄 저하증 초점 체중·변비·콜레스테롤 관리 저하증 주의 약 흡수 방해(칼슘·철분·콩·고섬유) 항진증 초점 충분한 열량 · 카페인 제한 공통 주의 요오드 과다(다시마환 등) 갑상선에 좋은 음식을 찾을 때 기억할 것은, 갑상선 질환이 저하증과 항진증 두 방향 이라 식이 접근도 조금씩 다르다는 점입니다. 다만 공통되는 원칙도 있습니다. 이 글에서 공통 원칙과 질환별 주의점을 나눠 정리했습니다. 음식은 약을 대신하지 못한다 먼저 분명히 할 것이 있습니다. 갑상선 질환의 치료 핵심은 약입니다. 저하증은 부족한 호르몬을 약으로 보충하고, 항진증은 항갑상선제 등으로 조절합니다. 음식은 이 치료를 뒷받침하는 역할 이지 약을 대신하지 않습니다. 이 전제 위에서, 좋은 식습관은 관리에 분명 도움이 됩니다. 갑상선에 좋은 음식, 공통으로 챙길 것 저하증·항진증 모두에 도움이 되는 것들이 있습니다. 양질의 단백질 이 대표적입니다. 살코기, 생선, 달걀, 두부, 콩은 신진대사를 돕고 근육을 지킵니다. 특히 항진증에서는 대사가 빨라져 근육이 잘 빠지므로 매 끼니 단백질을 챙기는 것이 중요합니다. 셀레늄 도 주목할 성분입니다. 셀레늄은 갑상선호르몬 합성을 돕고 갑상선 세포 보호에 관여합니다. 견과류, 달걀, 참치, 정어리 등에 풍부합니다. 채소, 과일, 콩류 같은 균형 잡힌 식품도 기본입니다. 항진증에서는 칼슘·비타민D를 챙기는 것도 권장됩니다. 저하증에서 신경 쓸 것 갑상선기능저하증은 대사가 느려 체중 증가, 변비, 콜레스테롤 상승 이 잘 동반됩니다. 그래서 식이 방향이 여기에 맞춰집니다. 칼로리를 적정하게 조절해 체중을 관리하고, 변비 예방을 위해 식이섬유와 수분을 충분히 섭취합니다. 잡곡밥, 채소, 과일이 도움이 됩니다. 고지혈증이 흔히 동반되므로 살코기·생선·두부로 양질의 단백질을 챙기되 포화지방은 줄이는 것이 좋습니다. 저하증의 중요한 주의점: 약 흡수 저하증에서 특히 중요한 것이 있습니다. 갑상선호르몬제(레보티록신)는 특정 음식·영양제와 함께 먹으면 흡수가 방해 됩니다. 칼슘, 철분, 콩류, 고섬유 식품이 대표적입니다. 그래서 갑상선약은 보통 아침 공복에 복용하고, 이런 음식·영양제와는 시간 간격을 두는 것이 권장됩니다. 약 흡수가 떨어지면 치료 효과가 줄어들 수 있으니, 복용 시간과 간격은 의료진 안내를 따르는 것이 중요합니다. 항진증에서 신경 쓸 것 갑상선기능항진증은 대사가 빨라 체중 감소와 근육 손실 이 문제입니다. 그래서 저하증과 반대로 충분한 열량 을 섭취하는 것이 중요합니다. 끼니를 거르지 말고 매 끼니 충분한 열량과 단백질을 챙깁니다. 근육 손실 예방을 위해 단백질 반찬을 매 끼니 1~2가지씩 곁들이는 것이 권장됩니다. 뼈 건강을 위해 칼슘·비타민D도 신경 씁니다. 반면 카페인과 자극적인 음식 은 주의합니다. 항진증은 이미 두근거림·불안이 있는 상태라, 카페인이 증상을 키울 수 있습니다. 요오드는 양날의 검 공통 주의점이 요오드입니다. 미역·다시마 같은 해조류의 요오드는 부족해도 과해도 갑상선에 문제를 일으킵니다. 반찬 정도면 대개 괜찮지만, 다시마환 같은 농축 건강식품은 피하는 것이 좋습니다. 특히 방사성요오드 치료를 앞둔 경우 저요오드식이 필요하므로 해조류·어패류를 엄격히 제한해야 합니다. 요오드 섭취 방향은 본인의 갑상선 상태에 따라 정반대일 수 있으니 의료진과 상의하시기 바랍니다. 정리 갑상선에 좋은 음식의 핵심은 ‘내 갑상선이 어느 방향인가’입니다. 저하증이면 체중·변비·콜레스테롤 관리와 약 흡수 간격에, 항진증이면 충분한 열량과 카페인 제한에 초점을 둡니다. 공통으로 양질의 단백질·셀레늄·균형 잡힌 식사가 도움이 되고, 요오드는 적정량이 중요합니다. 개인별 식단은 의료진·영양사와 상의하는 것이 정확합니다. 자세한 정보는 대한갑상선학회 자료를 참고하시기 바랍니다. 좋은 음식 양질의 단백질(살코기·생선·달걀·두부) 신진대사를 돕고 근육을 지킵니다. 특히 항진증에서 근육 손실 예방에 중요합니다. 셀레늄 식품(견과류·달걀·참치·정어리) 갑상선호르몬 합성을 돕고 갑상선 세포 보호에 관여합니다. 채소·과일 균형 잡힌 영양과 식이섬유를 제공합니다. 저하증의 변비 예방에도 도움이 됩니다. 잡곡밥·통곡물 식이섬유가 풍부해 저하증에 흔한 변비 예방에 좋습니다. 칼슘·비타민D 식품 특히 항진증에서 뼈 건강을 위해 챙기는 것이 권장됩니다. 피해야 할 음식 다시마환·해조류 농축 건강식품 요오드가 과도해 갑상선 기능 이상을 유발할 수 있습니다. 반찬 수준을 넘는 농축 섭취는 피합니다. 카페인·자극적인 음식(항진증) 이미 두근거림·불안이 있는 항진증에서 증상을 키울 수 있습니다. 약과 동시 섭취하는 칼슘·철분·콩·고섬유(저하증) 갑상선호르몬제 흡수를 방해합니다. 복용 시간과 간격을 두는 것이 중요합니다. 포화지방 많은 음식(저하증) 저하증에 흔히 동반되는 고지혈증을 악화시킬 수 있습니다. 해조류·어패류(저요오드식 필요 시) 방사성요오드 치료·갑상선암 수술 후 저요오드식에서는 엄격히 제한합니다. 식단 구성 요령 내 방향 확인 저하증인지 항진증인지에 따라 식이 초점이 달라집니다. 진단 결과를 먼저 확인합니다. 단백질·셀레늄 챙기기 공통으로 양질의 단백질과 셀레늄 식품을 매 끼니 곁들입니다. 저하증이면 체중·변비·콜레스테롤을 관리하고, 갑상선약은 공복에 먹되 칼슘·철분·콩과 간격을 둡니다. 항진증이면 충분한 열량과 단백질을 섭취하고 카페인·자극 음식을 줄입니다. 요오드 조절 반찬 수준으로 유지하고 농축 건강식품은 피합니다. 저요오드식은 의료진 지침을 따릅니다. 주의사항 이 글의 식이 원칙은 대한갑상선학회와 주요 병원 자료를 근거로 정리했습니다. 갑상선 질환은 저하증·항진증에 따라 식이 방향이 다르고, 방사성요오드 치료 여부에 따라 요오드 섭취 방침이 정반대일 수 있습니다. 음식은 약물 치료를 뒷받침할 뿐 대체하지 않습니다. 갑상선호르몬제 복용 간격, 요오드 섭취, 저요오드식 등은 반드시 담당 의료진의 안내를 따르시기 바랍니다. 개인별 식단은 영양사 상담이 가장 정확합니다. 자주 묻는 질문 갑상선에 좋은 음식이 저하증과 항진증이 다른가요? 초점이 다릅니다. 저하증은 체중·변비·콜레스테롤 관리에, 항진증은 충분한 열량과 카페인 제한에 맞춥니다. 다만 양질의 단백질, 셀레늄, 균형 잡힌 식사는 두 경우 모두에 공통으로 도움이 됩니다. 갑상선약을 먹을 때 음식을 조심해야 하나요? 네, 특히 저하증에서 중요합니다. 갑상선호르몬제는 칼슘, 철분, 콩류, 고섬유 식품과 함께 먹으면 흡수가 방해됩니다. 보통 아침 공복에 복용하고 이런 음식·영양제와 시간 간격을 둡니다. 복용 방법은 의료진 안내를 따르세요. 셀레늄은 왜 갑상선에 좋나요? 셀레늄은 갑상선호르몬 합성을 돕고 갑상선 세포가 파괴되는 것을 막는 역할에 관여합니다. 견과류, 달걀, 참치, 정어리 등에 풍부합니다. 다만 보충제로 과량 섭취하기보다 음식으로 적정량 섭취하는 것이 좋습니다. 항진증인데 살이 계속 빠져요. 뭘 먹어야 하나요? 항진증은 대사가 빨라 체중과 근육이 잘 빠집니다. 끼니를 거르지 말고 매 끼니 충분한 열량과 단백질을 챙기세요. 살코기·생선·달걀·두부 같은 단백질 반찬을 1~2가지씩 곁들이는 것이 권장됩니다. 다만 근본 치료는 약이므로 병행이 필요합니다. 저하증이면 미역국을 먹으면 안 되나요? 반찬 수준의 미역국은 대개 문제되지 않습니다. 다만 저하증이라고 요오드를 챙기려 미역·다시마를 과도하게 먹을 필요는 없습니다. 오히려 과다 섭취가 문제를 일으킬 수 있습니다. 다시마환 같은 농축 식품은 피하세요. 커피를 마시면 갑상선에 나쁜가요? 항진증이라면 주의가 필요합니다. 카페인은 이미 있는 두근거림·불안·불면을 키울 수 있습니다. 저하증에서는 카페인 자체보다 갑상선약과의 복용 간격에 더 신경 쓰는 것이 좋습니다. 커피와 약을 함께 먹지 않도록 시간을 두세요. 콩·두부는 갑상선에 좋나요 나쁘나요? 콩·두부는 양질의 단백질 공급원으로 유용합니다. 다만 저하증에서 갑상선약과 동시에 먹으면 약 흡수를 방해할 수 있으므로 복용 시간과 간격을 두는 것이 좋습니다. 적정량을 약과 시간차를 두고 먹으면 됩니다. 갑상선 식단만 잘하면 약을 안 먹어도 되나요? 그렇지 않습니다. 갑상선 질환의 치료 핵심은 약입니다. 저하증은 호르몬 보충, 항진증은 항갑상선제가 중심이고 음식은 이를 뒷받침할 뿐입니다. 식단이 좋아졌다고 임의로 약을 중단하지 말고 의료진과 상의하세요. 함께 보면 좋은 정보 질환정보 갑상선 증상 총정리, 기능저하증과 항진증 차이와 원인 정상수치 갑상선 수치 정상범위, TSH·T3·T4 검사 결과 읽는 법 자가진단 갑상선 자가진단 체크리스트, 저하증·항진증 증상 확인 음식효능 갑상선 미역 다시마, 요오드가 좋을까 나쁠까 건강보험 갑상선 검사 비용과 실비보험, 초음파도 청구될까 최종 검토일: 2026년 7월 23일 자료 출처 대한갑상선학회 가톨릭대학교 여의도성모병원 · 갑상선질환 식이요법 전남대학교병원 · 갑상선질환의 식이요법 본 콘텐츠는 일반적인 건강 정보 제공 목적이며 의학적 진단·치료를 대체할 수 없습니다. 증상이 있다면 반드시 의사와 상담하세요."
           }
         ],
         "intent_results": [
           "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
-          "https://jobsbee.kr/%EA%B0%91%EC%83%81%EC%84%A0-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-10%EA%B0%80%EC%A7%80-%EC%A7%88%ED%99%98%EB%B3%84-%EC%8B%9D%EB%8B%A8/"
+          "https://www.hyunmyoung.co.kr/general-medicine/hyperthyroidism-foods/"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 4800,
+        "monthly_search": 4850,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "높음",
@@ -5480,12 +5087,11 @@
           "spckorea.or.kr",
           "www.hyunmyoung.co.kr",
           "kormedi.com",
-          "jobsbee.kr",
           "eurekaclinic.com",
-          "health.chosun.com",
           "korean.people.com.cn",
           "enews.imbc.com",
-          "info-idea114.co.kr"
+          "info-idea114.co.kr",
+          "bongju500.tistory.com"
         ],
         "organic_results": [
           {
@@ -5507,22 +5113,10 @@
             "snippet": "주요 역할을 하는 만큼 각별한 관리가 필요한데, 갑상선에 문제가 생기면 요오드와 관련한 식단이 문제가 될 수 있기에 좋은 음식보다는 피해야 할 음식에 더 집중해야 한다."
           },
           {
-            "url": "https://jobsbee.kr/%EA%B0%91%EC%83%81%EC%84%A0-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-10%EA%B0%80%EC%A7%80-%EC%A7%88%ED%99%98%EB%B3%84-%EC%8B%9D%EB%8B%A8/",
-            "domain": "jobsbee.kr",
-            "title": "갑상선에 좋은 음식 10가지와 질환별 식단 가이드",
-            "snippet": "# 갑상선에 좋은 음식 10가지와 질환별 식단 가이드 ... 갑상선은 목 앞쪽에 위치한 나비 모양의 작은 기관이지만, 신진대사와 체온, 심장박동을 조절하는 중요한 역할을 해요. ..."
-          },
-          {
             "url": "https://eurekaclinic.com/bbs/board.php?bo_table=f02&wr_id=13",
             "domain": "eurekaclinic.com",
             "title": "갑상선에 좋은 음식 추천해주세요 > 유레카TV | 유레카내과",
             "snippet": "갑상선에 좋은 음식보다는 해로운 음식이 과학적으로 잘 증명되어있는데요. ... '갑상선에 좋은 음식‘에 대해 궁금한 점이나 이해하기 어려운 부분이 있으시다면 전문가의 조언을 찾아보는 것도 좋은 방법입니다."
-          },
-          {
-            "url": "https://health.chosun.com/site/data/html_dir/2010/05/07/2010050701207.html",
-            "domain": "health.chosun.com",
-            "title": "갑상선에 좋은 식품은 무엇일까? - 헬스조선",
-            "snippet": "홍교수는 \"음식으로 섭취하는 요오드 양은 일정치 않아서 요오드의 의도적인 섭취가 오히려 치료약에 대한 반응을 일정하지 않게 만들 수 있다. ... 건강보험공단 통계에 따르면 갑상선암은 유방암을"
           },
           {
             "url": "https://korean.people.com.cn/n4/2025/1201/c85872-20024322.html",
@@ -5534,19 +5128,25 @@
             "url": "https://enews.imbc.com/News/RetrieveNewsInfo/50952",
             "domain": "enews.imbc.com",
             "title": "여성에게 더 위험한 갑상선 질환의 모든 것",
-            "snippet": "지금 열거된 증상 중 절반 이상에 해당이 된다면 갑상선 기능 항진증을 의심해볼 수 있다. ... 최근 3년 이내에 건강 검진을 받지 않은 여성 20명으로 갑상선"
+            "snippet": "지금 열거된 증상 중 절반 이상에 해당이 된다면 갑상선 기능 항진증을 의심해볼 수 있다. ... 갑상선에 좋은 음식 ... 이 음식이 만병 통치약은 아니니 육식이"
           },
           {
             "url": "https://info-idea114.co.kr/entry/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-7%EA%B0%80%EC%A7%80%EC%99%80-%EC%B5%9C%EC%95%85%EC%9D%98-%EC%9D%8C%EC%8B%9D-%EC%B4%9D%EC%A0%95%EB%A6%AC?category=1290022",
             "domain": "info-idea114.co.kr",
             "title": "갑상선에 좋은 음식 7가지와 최악의 음식 총정리",
             "snippet": "내 몸의 활력을 되찾아 줄 갑상선에 좋은 음식부터 증상별로 주의해야 할 식습관까지 꼼꼼하게 정리해 드릴 테니, 끝까지 읽어보시고 건강 관리에 도움을 받아보시길 바랍니다! ... 오히려"
+          },
+          {
+            "url": "https://bongju500.tistory.com/17194256",
+            "domain": "bongju500.tistory.com",
+            "title": "갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\"",
+            "snippet": "## 갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\" ... 아연은 갑상선호르몬 합성과 T4의 T3 전환에 관여하고, 뇌하수체가 갑상선을 자극하는 갑상선자극호르몬(TSH)을 조절하는 데도 쓰인다."
           }
         ],
-        "dominant_result_ratio": 0.25,
+        "dominant_result_ratio": 0.125,
         "score_components": {
-          "demand": 29.45,
-          "organic_opportunity": 26.25,
+          "demand": 29.49,
+          "organic_opportunity": 30.62,
           "trend": 0,
           "intent_fit": 0
         },
@@ -5554,7 +5154,7 @@
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "unavailable",
         "selection_version": 6,
-        "selected_at": "2026-09-20T13:33:53.736075+00:00",
+        "selected_at": "2026-09-23T00:52:47.108466+00:00",
         "source": "category_market_v1",
         "keywords": [
           "갑상선에좋은음식"
@@ -5564,20 +5164,20 @@
           "version": 2,
           "query": "갑상선에좋은음식",
           "executed_query": "갑상선에 좋은 음식",
-          "topic": "갑상선에좋은음식: 공통 식품과 저하증·항진증별 주의점",
-          "intent": "갑상선 건강에 도움이 되는 음식은 무엇이며, 저하증·항진증에 따라 주의할 음식은 어떻게 다른가?",
+          "topic": "갑상선에좋은음식: 저하증·항진증별 식사 원칙과 주의할 음식",
+          "intent": "갑상선 건강을 위해 어떤 음식을 먹고 피해야 하며, 저하증과 항진증의 식사 관리는 어떻게 다른가?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "result_count": 9,
-          "domain_count": 9,
-          "dominant_ratio": 0.25,
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "result_count": 8,
+          "domain_count": 8,
+          "dominant_ratio": 0.125,
           "search_review": {
             "version": 1,
             "query": "갑상선에좋은음식",
             "executed_query": "갑상선에 좋은 음식",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-20T13:33:53.736075+00:00",
-            "raw_sha256": "e4972a306e63400d54b2aa10b2af4afa9c45824a8b01ba5ad53d708c64e02745",
+            "checked_at": "2026-09-23T00:52:47.108466+00:00",
+            "raw_sha256": "0c7b7afb87f4abd5aa315abe5b8a3506956494de855449dbc82214792e271dca",
             "decisions": [
               {
                 "result_index": 0,
@@ -5597,38 +5197,33 @@
               {
                 "result_index": 3,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식 10가지와 질환별 식단 가이드"
+                "quote": "갑상선에 좋은 음식보다는 해로운 음식이 과학적으로 잘 증명되어있는데요."
               },
               {
                 "result_index": 4,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식보다는 해로운 음식이 과학적으로 잘 증명되어있는데요."
+                "quote": "갑상선에 좋은 두가지 과일, 꾸준한 섭취 권장"
               },
               {
                 "result_index": 5,
                 "relevant": true,
-                "quote": "갑상선에 좋은 식품은 무엇일까?"
+                "quote": "갑상선에 좋은 음식"
               },
               {
                 "result_index": 6,
                 "relevant": true,
-                "quote": "갑상선에 좋은 두가지 과일, 꾸준한 섭취 권장"
+                "quote": "갑상선에 좋은 음식 7가지와 최악의 음식 총정리"
               },
               {
                 "result_index": 7,
-                "relevant": false,
-                "quote": "지금 열거된 증상 중 절반 이상에 해당이 된다면 갑상선 기능 항진증을 의심해볼 수 있다."
-              },
-              {
-                "result_index": 8,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식 7가지와 최악의 음식 총정리"
+                "quote": "갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\""
               }
             ]
           },
           "search_metrics": {
-            "raw_result_count": 9,
-            "canonical_result_count": 9,
+            "raw_result_count": 8,
+            "canonical_result_count": 8,
             "relevant_result_count": 8,
             "relevant_site_count": 8,
             "relevant_indices": [
@@ -5639,13 +5234,13 @@
               4,
               5,
               6,
-              8
+              7
             ],
-            "relevance_ratio": 0.8888888888888888,
+            "relevance_ratio": 1.0,
             "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.25,
+            "known_dominant_ratio": 0.125,
             "site_concentration": 0.125,
-            "organic_opportunity": 26.25
+            "organic_opportunity": 30.62
           },
           "scope": "full_keyword",
           "target_keyword": "갑상선에좋은음식",
@@ -5655,114 +5250,48 @@
               "quote": "갑상선에 좋은 음식과 피해야 할 음식, 저하증·항진증별 정리"
             },
             {
-              "result_index": 3,
-              "quote": "갑상선에 좋은 음식 10가지와 질환별 식단 가이드"
+              "result_index": 1,
+              "quote": "갑상선에 좋은 음식과 피해야 할 음식 — 기능항진증 기준"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "input_sha256": "373b91f1ed4ac8d26a216123c4fa80c13b147a601e156bccb55816fce5244cd5",
-          "review": {
-            "scope": "unknown",
-            "target_keyword": "갑상선에좋은음식",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "갑상선 질환은 저하증·항진증에 따라 식이 방향이 다르고, 방사성요오드 치료 여부에 따라 요오드 섭취 방침이 정반대일 수 있습니다.",
-                "entity": "갑상선 질환",
-                "context": "general"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "갑상선 건강에 도움이 되는 공통 음식과 식사의 역할은 무엇인가?",
-                "answer": "단백질·셀레늄 식품과 균형식을 제시하지만, 인용된 학회·병원의 실제 공식 본문이 없어 효능 근거가 부족하다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "공통으로 양질의 단백질·셀레늄·균형 잡힌 식사가 도움이 되고, 요오드는 적정량이 중요합니다."
-              },
-              {
-                "facet": "갑상선기능저하증에서는 어떤 음식을 챙기고 주의해야 하는가?",
-                "answer": "체중·변비·콜레스테롤 관리 식사를 설명하지만, 해당 권고를 검증할 공식 원문이 제공되지 않았다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "칼로리를 적정하게 조절해 체중을 관리하고, 변비 예방을 위해 식이섬유와 수분을 충분히 섭취합니다."
-              },
-              {
-                "facet": "갑상선기능항진증에서는 어떤 음식을 챙기고 주의해야 하는가?",
-                "answer": "충분한 열량·단백질과 카페인 제한을 제시하지만, 해당 권고의 공식 원문 근거가 없다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "끼니를 거르지 말고 매 끼니 충분한 열량과 단백질을 챙깁니다."
-              },
-              {
-                "facet": "갑상선약과 음식·영양제를 함께 섭취할 때 무엇을 주의해야 하는가?",
-                "answer": "흡수 방해와 복용 간격을 안내하지만, 식품별 적용 조건과 복용 원칙을 확인할 공식 원문이 없다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "갑상선호르몬제(레보티록신)는 특정 음식·영양제와 함께 먹으면 흡수가 방해 됩니다."
-              },
-              {
-                "facet": "요오드 과다 섭취를 어떻게 피하며 저요오드식은 언제 필요한가?",
-                "answer": "농축 식품 회피와 치료 전 제한을 설명하지만, 저요오드식 적용 상황을 확정할 공식 원문이 없다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "특히 방사성요오드 치료를 앞둔 경우 저요오드식이 필요하므로 해조류·어패류를 엄격히 제한해야 합니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "갑상선 질환은 저하증·항진증에 따라 식이 방향이 다르고, 방사성요오드 치료 여부에 따라 요오드 섭취 방침이 정반대일 수 있습니다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "input_sha256": "c86da0b8d057cd5aad86e766edf0f68e1d710825660e217e1a01a9a00b467182",
+          "failure_code": "invalid_review"
         },
-        "score": 55.7,
+        "score": 60.11,
         "publish_eligible": false,
         "hold_reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
+          "missing_topic_suitability"
         ]
       },
       {
-        "keyword": "MRI비용",
+        "keyword": "발톱무좀치료방법",
         "category": "건강",
-        "topic": "MRI비용: 병원 비급여 가격 사례와 뇌·뇌혈관 건강보험 적용 기준",
-        "intent": "MRI 검사비는 얼마이며, 비급여 고지 금액과 건강보험 적용 여부는 어떻게 확인할까?",
-        "gap": "을지대병원 검사별 고지액·변경일 표와 뇌·뇌혈관 급여 기준 체크리스트를 제공하고 전국 평균으로 일반화하지 않는다.",
-        "source_url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
+        "topic": "발톱무좀치료방법: 진단 확인과 먹는 약·바르는 약 병용 안내",
+        "intent": "발톱무좀은 어떻게 진단하고 치료하며, 먹는 약과 바르는 약은 어떻게 쓰이나요?",
+        "gap": "공식 본문에 근거해 진단·곰팡이 검사·먹는 약·병용 치료를 표로 정리하고 개인별 처방과 구분합니다.",
+        "source_url": "https://schmc.ac.kr/bucheon/selectBbsNttView.do?bbsNo=203&integrDeptCode=&key=1006&nttNo=144478&pageIndex=52&searchCnd=all&searchCtgry=&searchKrwd=",
         "verified_sources": [
           {
-            "url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
-            "original_url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
-            "title": "비급여수가 | 을지대학교병원",
-            "checked_on": "2026-09-20",
-            "sha256": "89eb83ca3cd550bbe83b3c99541cb7b1f939917dafc06c3142d0f7b56560dcbb",
-            "excerpt": "비급여수가 ※ 의료법 제45조 및 동법 시행규칙 제42조의 2 \"비급여 진료비 고지\"에 의거 비급여 진료비를 검색하는 화면입니다. [검색 조회] 행위료 치료재료대 약제비 제증명수수료 선택진료료 검색 [분류별 조회] 행위료 전체보기 기본진료료 상급병실료 검사료 초음파검사료 방사선치료료 초음파영상료 자기공명영상진단료 PET-CT 주사료 마취료 이학요법료 정신요법료 처치 및 수술료 치과 처치 및 수술료 치과보철료 기타 행위료 비급여수가 목록 분류 명칭 코드 구분 비용 최저비용 최대비용 특이사항 최종변경일 MRI 2 Sequnce(Spine)비급여 HH002 - 328,000 0 0 - 20250101 MRI Enterography (일반) - - 686,000 0 0 - 20250101 MRI-기본검사 MRI Shoulder Arthrography Rt (Post op,F/U)(일반) HE115 - 529,000 0 0 - 20250101 MRI-기본검사 MRI C Spine (Oblique Sag)(일반) HI109 - 171,000 0 0 - 20250101 MRI-기본검사 MRI C-Spine(FL-EX)(일반) HI409 - 171,000 0 0 - 20250101 MRI-기본검사 MRI Shoulder Arthrography Lt(Post op,F/U)(일반) HE115 - 529,000 0 0 - 20250101 근골격계 MRI Hip Arthrography(Rt)(일반) HE118 고관절 822,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 근골격계 MRI Hip Arthrography(Rt)(F/U) HE118 고관절 700,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 근골격계 MRI Hip Arthrography(Lt)(F/U)(일반) HE118 고관절 700,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 근골격계 MRI Shoulder Arthrography(Rt)(F/U)일반 HE115 견관절 700,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 1 2 3 4 5"
-          },
-          {
-            "url": "https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=377284&mid=a10503010100&nPage=168&tag=",
-            "original_url": "https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=377284&mid=a10503010100&nPage=168&tag=",
-            "title": "뇌·뇌혈관 MRI 검사, 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다 < 전체 < 보도자료 < 알림 : 힘이 되는 평생 친구, 보건복지부",
-            "checked_on": "2026-09-20",
-            "sha256": "db5b9736a71780f95c8eb3fc799e902aad77179447ca31a2de93190c77ece7db",
-            "excerpt": "뇌·뇌혈관 MRI 검사, 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다 작성일 : 2023-07-17 10:06 조회수 : 35,165 담당자 : 전예진 담당부서 : 의료보장혁신과 뇌·뇌혈관 MRI 검사, 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다 - 2023년 2월 ？건강보험 지속가능성 제고방안？ 후속 조치 - -「요양급여의 적용기준 및 방법에 관한 세부사항」고시 개정(7.17) - 보건복지부(장관 조규홍)는  7월 17일(월) 뇌·뇌혈관 MRI 급여기준 강화 내용을 담은「요양급여의 적용기준 및 방법에 관한 세부사항」고시를 개정한다고 밝혔다. 개정된 고시는 의료 현장의 준비 기간 등을 고려하여 일정 유예 기간을 거친 후 10월 1일부터 시행될 예정이다. 이번 고시 개정은 2023년 2월 발표한 ？건강보험 지속가능성 제고방안？의 후속 조치로 추진되었다. ？건강보험 보장성 강화 대책？으로 MRI, 초음파  검사에 건강보험이 적용됨에 따라 MRI, 초음파 검사 이용이 급증*한 바 있다. 이로 인해 건강보험의 지속가능성을 저해할 수 있다는 우려에 따라 복지부는 보장성 강화 항목에 대한 전반적인 점검을 추진하였다. * 자기공명영상(MRI)？초음파 검사 진료비 : 1,891억 원(‘18) → 1조 8476억 원(’21) ** 건강보험 적용 MRI 연간 총 촬영건수 : 126만(‘16) → 226만(’18) → 553만(‘20) 복지부는 단기간에 검사량이 급증*한 뇌·뇌혈관 MRI 검사에 대해 전문 의학회가 참여하는 급여기준개선협의체를 통해 의학적 필요도를 기준으로 급여기준 개정안을 마련하였다. 개정안은 5월 30일(화) 건강보험정책심의위원회 논의를 거쳐 결정된 바 있으며, 행정예고를 거쳐 확정되었다. *  두통？어지럼 뇌 MRI 급여 확대 전？후 진료비 : 143억 원(’17) → 1,766억 원(‘21), 1,135%↑ 개정된 고시 내용은 다음과 같으며, 보건복지부 및 건강보험심사평가원 인터넷 누리집에서도 확인할 수 있다. ※ 보건복지부(https://www.mohw.go.kr > 정보 > 법령 > 훈령/예규/고시/지침) 건강보험심사평가원(https://www.hira.or.kr > 제도·정책 > 보험인정기준 > 고시 < 두통？어지럼에 대한 뇌？뇌혈관 MRI 건강보험 적용 기준 강화 > ○ 뇌질환과 무관한 두통·어지럼에 MRI 검사가 남용되는 것을 방지하기 위하여 뇌질환이 의심되는 두통·어지럼에 대한 급여기준을 구체화하였다. - 의학적으로 모든 두통·어지럼에 MRI 검사가 필요한 것이 아니므로 진료의의 판단에 의해 뇌출혈, 뇌경색 등 뇌질환이 의심되는 두통？어지럼에 대해서만 MRI 검사 시 건강보험이 적용된다. - 따라서, 단순 편두통, 만성 두통 등 진료의가 의학적으로 MRI 검사 필요성이 낮다고 판단한 경우에 환자가 원하여 MRI 검사를 시행한다면 건강보험이 적용되지 않는다. - 다만, 기존에 뇌질환이 확진되었거나, 신경학적 검사(예 : 뇌신경 검사, 사지 운동기능 검사 등) 등에서 이상 소견이 있는 경우에는 기존과 같이 MRI 검사를 건강보험으로 보장한다. <뇌질환 의심 두통？어지럼 유형> 두통 어지럼 내 생애 처음 겪어보는, 벼락을 맞은 듯한 극심한 두통 번쩍이는 빛, 시야소실 등을 동반한 두통 콧물, 결막충혈 등을 동반하고 수일 이상 지속되는 심한 두통 기침, 배변 등 힘주기로 악화되는 두통 소아에서 발생한 새로운 형태의 심한 두통 또는 수개월 동안 강도가 심해지는 두통 암 또는 면역억제상태 환자에서 발생한 평소와는 다른 두통 특정 자세에서 눈(안구) 움직임의 변화를 동반한 어지럼 어지럼과 함께 걷기나 균형을 유지하기가 어려움 어지럼과 함께 갑자기 소리가 잘 들리지 않음 ※ 다만, 해당 두통·어지럼 증상이 있다고 해서 반드시 MRI 검사가 필요한 것은 아니며, MRI 검사 여부는 진료의를 통한 진단 필요 이번 고시 개정을 통해 MRI 검사 필요성이 낮은 단순 두통·어지럼에 대한 무분별한 MRI 검사 문화가 개선될 것으로 기대된다. 복지부는 앞으로도 건강보험의 재정 누수 요인을 지속 점검·개선하여 건강보험의 지속가능성을 확보해나가는 한편, 절감된 재정이 국민 생명과 직결된 필수의료 기반을 강화하는 데 투입될 수 있도록 노력할 계획이다. 복지부 정윤순 건강보험정책국장은 “MRI 등 고가의 영상검사에 대한 급격한 보장성 강화로 일부 불필요한 검사가 남용된 측면이 있다”라며,“이번 고시 개정을 통해 고가 영상 검사는 꼭 필요한 경우에 한해 건강보험으로 보장될 것이며, 이를 통해 절감된 재정은 중증, 필수 의료 등 가치 있는 분야에 투입될 수 있도록 건강보험을 내실화해나가겠다”라고 전했다. 첨부파일 [보도참고자료]뇌·뇌혈관 MRI 검사_ 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다.hwpx ( 2.98MB / 다운로드 1559회 / 미리보기 413회 ) 다운로드 미리보기/음성듣기 [보도참고자료]뇌·뇌혈관 MRI 검사_ 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다.pdf ( 703.42KB / 다운로드 1807회 / 미리보기 416회 ) 다운로드 미리보기/음성듣기 보건복지부인포그래픽_0717.pdf ( 213.24KB / 다운로드 635회 / 미리보기 368회 ) 다운로드 미리보기/음성듣기",
+            "url": "https://schmc.ac.kr/bucheon/selectBbsNttView.do?bbsNo=203&integrDeptCode=&key=1006&nttNo=144478&pageIndex=52&searchCnd=all&searchCtgry=&searchKrwd=",
+            "original_url": "https://schmc.ac.kr/bucheon/selectBbsNttView.do?bbsNo=203&integrDeptCode=&key=1006&nttNo=144478&pageIndex=52&searchCnd=all&searchCtgry=&searchKrwd=",
+            "title": "조갑백선 (손, 발톱 무좀)-\n\t\t\t     \n\t\t\t     \n\t\t\t     \n\t\t\t    \n\t\t\t\n\t\t\t\n\t\t\t건강정보>건강정보>순천향대학교 부속 부천병원",
+            "checked_on": "2026-09-23",
+            "sha256": "e74d948755bbc57d62c8d3b924646dc02a3de10bdb38e6eaca07b6542fb3a4b3",
+            "excerpt": "본문 바로가기 주 메뉴 바로가기 진료과/의료진 진료과 의료진 클리닉 전문진료센터 부설기관/연구소 일반검진센터 진료협력센터 건강증진센터 진료지원부서 의학도서관 이용안내 위치 안내 찾아오시는길 병원시설안내 주차안내 외래진료 안내 외래진료 절차안내 진료일정표 비급여수가조회 건강검진 안내 종합검진안내 일반검진안내 입퇴원 안내 입퇴원안내 수술실 CCTV 촬영 안내 응급진료 안내 채혈실 이용안내 병문안 안내 간호간병통합서비스 수납창구 안내 서류발급 안내 서류발급 신청시 구비서류 안내 의무기록 안내 보험사 사전팩스 신청제도 제증명 발급 안내 영상 CD복사 안내 온라인 서류발급 안내 전화번호 안내 장례식장 안내 모바일 앱 건강정보 건강정보 건강상담 세미나/강좌안내 일반인 대상 의료진 대상 의료원보 진료차트 예약내역 진료예약 내역 검진예약 내역 진료 내역 투약 내역 검사결과조회 검진 결과 내역 건강상담 내역조회 칭찬사연 내역 불편/건의 접수 내역 병원소개 병원개요 설립자 연혁 비전/미션/핵심가치 안전보건경영방침 병원장 인사말 사회공헌 의료봉사 함께 나누는 사회(기부) 자원봉사 공지사항 언론보도 희망을 찾는 사람들 인재채용 인재상 채용절차 복리후생 병원HI 순천향 네트워크 고객 행복글 입찰공고 건강정보 페이스북 공유 카카오톡 공유 URL 공유 페이스북 공유 카카오톡 공유 URL 공유 화면축소 화면확대 조갑백선 (손, 발톱 무좀) 1) 조갑백선이란? 손톱이나 발톱에 곰팡이가 침입하여 일으키는 병입니다. 주로 발에 무좀이 있다가 발톱으로 균이 들어가게 되므로 발톱 백선이 흔하고, 장기적으로 진행이 되다가 손톱까지 올라가게 됩니다. 2) 피부과 전문의와 상담을 ! 조갑백선의 증상은 흔히 손발톱이 노랗게 변하며 두꺼워지고 부스러지는 경향이 있습니다. 약사가 무좀이라고 지레 짐작하고 무좀 약을 권유하여, 몇 달씩 먹다가 안 좋아지니 그제야 병원에 와서 진료를 받는 경우를 종종 보게 됩니다. 반드시 피부과전문의의 진단을 받고 나서 치료를 시작해야 할 것입니다. 곰팡이 검사로 확인을 해봐야 하는 경우도 있습니다. 3) 외용제 만으로는 치료가 안됩니다. 최근에 개발된 먹는 무좀 약들은 인체에는 매우 안전하면서 (간 독성 등이 생기는 경우가 현저히 줄어들었습니다.) 치료효과가 높아서 3개월 정도의 투약으로 충분히 치료되는 경우가 많습니다. 먹는 약과 바르는 약을 같이 쓰면 치료기간을 어느 정도 단축할 수는 있습니다. 목록 비밀번호 입력 팝업 닫기 확인 취소 검진센터 안내 팝업 닫기 국민건강보험공단에서 실시하는 일반검진, 암검진을 받으시려는 고객께서는 일반검진센터를 이용해 주십시오. 일반검진센터 바로가기 건강증진센터 바로가기 고객의 소리 안내 팝업 닫기 불편/건의 접수 - 담당자들에 의해 성심성의껏 답변드릴 것을 약속 드립니다. - 신속한 답변을 위해 최선을 다하겠습니다. 불편/건의사항, 칭찬합니다와 관련없는 내용이나 같은 내용을 중복하여 등록할 경우 삭제합니다. 고객님께서 작성하신  글은 작성 후에도 인증을 통하여 지속적으로 작성 내역을 확인\n    \t\t\t하실 수 있습니다. 불편/건의사항 바로가기 칭찬합니다 바로가기",
             "locator_origin": "model_reported_locator"
           }
         ],
         "intent_results": [
-          "https://carepedia.kr/%EB%B9%84%EC%9A%A9/MRI",
-          "https://www.hira.or.kr/dummy.do?cmsurl=%2Fcms%2Fmedi_info%2F02%2F01%2F1343489_27565.html&pgmid=HIRAA050200000000&subject=MRI",
-          "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1"
+          "https://doctornow.co.kr/content/faq/863a782e36124a05bddb9b0bf1ef4863",
+          "https://www.a-ha.io/questions/44f4ac18dac2ededa00a5eb5c2f402b8"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 4190,
+        "monthly_search": 5980,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "높음",
@@ -5772,27 +5301,382 @@
           "searched": true,
           "locators": [
             {
-              "url": "https://www.hira.or.kr/bbsDummy.do?brdBltNo=11896&brdScnBltNo=4&pgmid=HIRAA020041000100",
+              "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5688",
               "origin": "model_reported_locator"
             },
             {
-              "url": "https://www.hira.or.kr/bbsDummy.do?brdBltNo=47557&brdScnBltNo=4&pgmid=HIRAA010006011300",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.hira.or.kr/bbsDummy.do?brdBltNo=47347&brdScnBltNo=4&pgmid=HIRAA010006011110",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=377284&mid=a10503010100&nPage=168&tag=",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.hira.or.kr/dummy.do?cmsurl=%2Fcms%2Fmedi_info%2F02%2F01%2F1343489_27565.html&pgmid=HIRAA050200000000&subject=MRI",
+              "url": "https://schmc.ac.kr/bucheon/selectBbsNttView.do?bbsNo=203&integrDeptCode=&key=1006&nttNo=144478&pageIndex=52&searchCnd=all&searchCtgry=&searchKrwd=",
               "origin": "model_reported_locator"
             }
           ]
         },
+        "organic_provider": "codex_native_search",
+        "organic_query": "발톱 무좀 치료 방법",
+        "organic_domains": [
+          "common.health.kr",
+          "www.health.kr",
+          "doctornow.co.kr",
+          "common.hanmi.co.kr",
+          "www.health.kr",
+          "cleanskin.kr",
+          "doctornow.co.kr",
+          "common.hanmi.co.kr",
+          "doctornow.co.kr",
+          "www.a-ha.io"
+        ],
+        "organic_results": [
+          {
+            "url": "https://common.health.kr/shared/healthkr/pharmreview/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
+            "domain": "common.health.kr",
+            "title": "무좀과 복약지도\n\n무좀의 치료\n\n무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데,",
+            "snippet": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다. ... 2014년 한국 노바티스제약의 설문조사 결과에 따르면, 전체 응답자 1,000명 중 절반이 넘는 506명"
+          },
+          {
+            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
+            "domain": "www.health.kr",
+            "title": "서론\n무좀과\u0001 복약지도\n저자\u0001 김성철\n영남대학교\u0001 임상약학대학원\u0001 겸임교수\n\u0001 \u0001 \u0001 \u0001",
+            "snippet": "무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데, 바르는 연고는 초기 무좀 치료에 효과가 있다. ... 발톱과 손톱에 무좀 균이 ... 치료 경험이 있는 응답자"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/faq/863a782e36124a05bddb9b0bf1ef4863",
+            "domain": "doctornow.co.kr",
+            "title": "발톱무좀 어떻게 치료하나요? - 닥터나우",
+            "snippet": "## 발톱무좀 치료 방법 알려주세요. ... 피부과에서 진료가 가능하며, 발톱무좀 진행 정도에 따라 치료 방향이 달라질 수 있어요."
+          },
+          {
+            "url": "https://common.hanmi.co.kr/upfile/ces/product/8112b629-0914-4473-99e5-b83a6bdd7dcd.pdf",
+            "domain": "common.hanmi.co.kr",
+            "title": "무조날®맥스  \n손·발톱 무좀, 간편함은 Up 효과는 Max  \n외용액 (테르비나핀염산염)",
+            "snippet": "무색 내지 연한 황색의 투명한 액제 ... 조갑진균증 (손, 발톱무좀) ... 치료기간이 끝난 후 국소 치료에 대한 부적절한 반응이 있는 경우 또는 하나 이상의 손발톱"
+          },
+          {
+            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%94%8C%EB%A3%A8%EC%BD%94%EB%82%98%EC%A1%B8%28fluconazole%29.pdf",
+            "domain": "www.health.kr",
+            "title": "플루코나졸(fluconazole)",
+            "snippet": "진균증 | 손발톱 진균증 | 1주 1회 150 mg ... | 무좀, 체부백선, 완선(사타구니 백선), ... 치료 등)의 크립토콕쿠스 수막염 재발 방지 | 1일 1회"
+          },
+          {
+            "url": "https://cleanskin.kr/laser-clinic07",
+            "domain": "cleanskin.kr",
+            "title": "클린의원",
+            "snippet": "먹는약 없이 손발톱 무좀치료가 가능한 레이저 시술입니다. ... 마취 방법 ... - 임산부지만 발톱무좀 치료를 원하시는 분"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/qna/5dc815e5610b47f4ad854ef4e17bbf1e",
+            "domain": "doctornow.co.kr",
+            "title": "발톱 무좀 빠르게 치료하는 방법 - 닥터나우",
+            "snippet": "# 발톱 무좀 빠르게 치료하는 방법 ... 무좀 치료 시에는 항진균제의 사용이 치료의 기본이 되며, 살리실산 성분의 연고 등을 이용하여 각질을 제거해주고, 생활을 함께 하는"
+          },
+          {
+            "url": "https://common.hanmi.co.kr/upfile/ces/product/d78eca7d-e00c-4162-8d65-f9c60ea7ae71.pdf",
+            "domain": "common.hanmi.co.kr",
+            "title": "손·발톱 무좀 전용 치료제",
+            "snippet": "손·발톱 무좀 전용 치료제 ... 조갑진균증 (손, 발톱무좀) ... 적용기간은 완전한 미생물학적 그리고 임상적 치료가 되고, 건강한 손발톱이 자랄 때까지 지속해야 하는데 일반적으로 손톱의 경우는"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/qna/f12236a336de494da2ba7895efd6f390",
+            "domain": "doctornow.co.kr",
+            "title": "새끼발톱 갈라짐이 무좀 증상인가요? - 닥터나우",
+            "snippet": "발톱무좀은 겉으로 좋아 보이더라도 균이 발톱 안쪽에 남아있으면 재발할 수 있으며, 발톱은 자라는 속도가 느려서 치료가 오래 걸리는 편이에요.발톱 제거 수술은 발톱무좀의 치료 방법 중"
+          },
+          {
+            "url": "https://www.a-ha.io/questions/44f4ac18dac2ededa00a5eb5c2f402b8",
+            "domain": "www.a-ha.io",
+            "title": "발톱 무좀 치료 방법 중에 효과 빠른 치료제가 어떻게 있을 까요? | 궁금할 땐, 아하!",
+            "snippet": "# 발톱 무좀 치료 방법 중에 효과 빠른 치료제가 어떻게 있을 까요? ... 발톱 무좀의 경우 바르는 약 만으로는 감염 부위에 충분히 약이 도달하지 못하여"
+          }
+        ],
+        "dominant_result_ratio": 0.0,
+        "score_components": {
+          "demand": 30.21,
+          "organic_opportunity": 28.0,
+          "trend": 0,
+          "intent_fit": 0
+        },
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "unavailable",
+        "selection_version": 6,
+        "selected_at": "2026-09-23T00:52:47.108466+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "발톱무좀치료방법"
+        ],
+        "status": "research_only",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://schmc.ac.kr/bucheon/selectBbsNttView.do?bbsNo=203&integrDeptCode=&key=1006&nttNo=144478&pageIndex=52&searchCnd=all&searchCtgry=&searchKrwd=",
+              "title": "조갑백선 (손, 발톱 무좀)-\n\t\t\t     \n\t\t\t     \n\t\t\t     \n\t\t\t    \n\t\t\t\n\t\t\t\n\t\t\t건강정보>건강정보>순천향대학교 부속 부천병원",
+              "excerpt_chars": 1526
+            },
+            {
+              "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z22&menuNo=200997&schAreaSeCd=z22",
+              "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
+              "excerpt_chars": 1027
+            },
+            {
+              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+              "title": "www.meca.or.kr",
+              "excerpt_chars": 261
+            }
+          ],
+          "analysis_status": "supported_true",
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z22&menuNo=200997&schAreaSeCd=z22",
+                  "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
+                  "excerpt_chars": 1027
+                },
+                {
+                  "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+                  "title": "www.meca.or.kr",
+                  "excerpt_chars": 261
+                },
+                {
+                  "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z14&menuNo=200997&schAreaSeCd=z14",
+                  "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
+                  "excerpt_chars": 1161
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_passed",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://schmc.ac.kr/bucheon/selectBbsNttView.do?bbsNo=203&integrDeptCode=&key=1006&nttNo=144478&pageIndex=52&searchCnd=all&searchCtgry=&searchKrwd=",
+                  "title": "조갑백선 (손, 발톱 무좀)-\n\t\t\t     \n\t\t\t     \n\t\t\t     \n\t\t\t    \n\t\t\t\n\t\t\t\n\t\t\t건강정보>건강정보>순천향대학교 부속 부천병원",
+                  "excerpt_chars": 1526
+                },
+                {
+                  "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z22&menuNo=200997&schAreaSeCd=z22",
+                  "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
+                  "excerpt_chars": 1027
+                },
+                {
+                  "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+                  "title": "www.meca.or.kr",
+                  "excerpt_chars": 261
+                }
+              ],
+              "analysis_status": "supported_true"
+            }
+          }
+        },
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "발톱무좀치료방법",
+          "executed_query": "발톱 무좀 치료 방법",
+          "topic": "발톱무좀치료방법: 진단 확인과 먹는 약·바르는 약 병용 안내",
+          "intent": "발톱무좀은 어떻게 진단하고 치료하며, 먹는 약과 바르는 약은 어떻게 쓰이나요?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "result_count": 10,
+          "domain_count": 5,
+          "dominant_ratio": 0.0,
+          "search_review": {
+            "version": 1,
+            "query": "발톱무좀치료방법",
+            "executed_query": "발톱 무좀 치료 방법",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-23T00:52:47.108466+00:00",
+            "raw_sha256": "3d37c8eb167696ec57e48e559392ec4a9d722ef67f31a97e680eb5a3a5154045",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다."
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데, 바르는 연고는 초기 무좀 치료에 효과가 있다."
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "피부과에서 진료가 가능하며, 발톱무좀 진행 정도에 따라 치료 방향이 달라질 수 있어요."
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "손·발톱 무좀, 간편함은 Up 효과는 Max  \n외용액 (테르비나핀염산염)"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "진균증 | 손발톱 진균증 | 1주 1회 150 mg"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "먹는약 없이 손발톱 무좀치료가 가능한 레이저 시술입니다."
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "무좀 치료 시에는 항진균제의 사용이 치료의 기본이 되며"
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "적용기간은 완전한 미생물학적 그리고 임상적 치료가 되고, 건강한 손발톱이 자랄 때까지 지속해야"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "발톱은 자라는 속도가 느려서 치료가 오래 걸리는 편이에요."
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "발톱 무좀의 경우 바르는 약 만으로는 감염 부위에 충분히 약이 도달하지 못하여"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 10,
+            "relevant_site_count": 5,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 1.0,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.0,
+            "site_concentration": 0.3,
+            "organic_opportunity": 28.0
+          },
+          "scope": "full_keyword",
+          "target_keyword": "발톱무좀치료방법",
+          "matches": [
+            {
+              "result_index": 2,
+              "quote": "발톱무좀 치료 방법 알려주세요."
+            },
+            {
+              "result_index": 9,
+              "quote": "발톱 무좀 치료 방법 중에 효과 빠른 치료제가 어떻게 있을 까요?"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "input_sha256": "7b795acf5be76442e6b87044f86520c91e5434a4f2df606c8287165bbcec0124",
+          "review": {
+            "scope": "unknown",
+            "target_keyword": "발톱무좀치료방법",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "조갑백선 (손, 발톱 무좀) 1) 조갑백선이란? 손톱이나 발톱에 곰팡이가 침입하여 일으키는 병입니다.",
+                "entity": "조갑백선 (손, 발톱 무좀)",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "발톱무좀은 어떻게 진단하고 확인하는가?",
+                "answer": "피부과 전문의의 진단 후 치료하며, 필요한 경우 곰팡이 검사로 확인한다고 안내할 수 있습니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "반드시 피부과전문의의 진단을 받고 나서 치료를 시작해야 할 것입니다. 곰팡이 검사로 확인을 해봐야 하는 경우도 있습니다."
+              },
+              {
+                "facet": "진행 정도에 따라 먹는 약과 바르는 약을 어떻게 선택하는가?",
+                "answer": "본문은 외용제 단독 치료를 일괄 부정하며, 진행 정도별 선택 기준과 외용제 적용 범위를 설명하지 않습니다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "3) 외용제 만으로는 치료가 안됩니다."
+              },
+              {
+                "facet": "먹는 약의 치료기간과 바르는 약 병용의 역할은 무엇인가?",
+                "answer": "약 3개월 투약으로 치료되는 경우와 병용 시 기간 단축 가능성을 설명하나, 모든 환자의 기간으로 일반화할 수 없습니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "3개월 정도의 투약으로 충분히 치료되는 경우가 많습니다. 먹는 약과 바르는 약을 같이 쓰면 치료기간을 어느 정도 단축할 수는 있습니다."
+              },
+              {
+                "facet": "먹는 약과 바르는 약은 실제로 어떻게 사용하는가?",
+                "answer": "병용 가능성만 제시합니다. 약제별 복용·도포 방법과 사용상 주의사항이 없어 기획의 사용법 설명을 지원하지 못합니다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "먹는 약과 바르는 약을 같이 쓰면 치료기간을 어느 정도 단축할 수는 있습니다."
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "주로 발에 무좀이 있다가 발톱으로 균이 들어가게 되므로 발톱 백선이 흔하고, 장기적으로 진행이 되다가 손톱까지 올라가게 됩니다.",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 58.21,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ]
+      },
+      {
+        "keyword": "MRI비용",
+        "category": "건강",
+        "topic": "MRI비용: 병원 공개 비급여 가격과 검사 항목별 확인사항",
+        "intent": "MRI 검사 비용은 얼마이며, 병원·촬영 부위·조영제 사용에 따라 공개 가격은 어떻게 다른가?",
+        "gap": "두 병원의 항목명·코드·비급여 가격·변경일 표와 조영제·판독료 포함 여부 체크리스트를 제공한다. 전국 평균으로 일반화하지 않는다.",
+        "source_url": "https://www.medical.or.kr/suwon/nonPaymentGuide.do?keyword=mri&menu_no=711&ptype=",
+        "verified_sources": [
+          {
+            "url": "https://www.medical.or.kr/suwon/nonPaymentGuide.do?keyword=mri&menu_no=711&ptype=",
+            "original_url": "https://www.medical.or.kr/suwon/nonPaymentGuide.do?keyword=mri&menu_no=711&ptype=",
+            "title": "경기도의료원 수원병원 > 진료안내 > 비급여수가 안내",
+            "checked_on": "2026-09-23",
+            "sha256": "5528433c9339c04cfe243724b88cb2715b3f2f3add7de58c6c9c58108763c6db",
+            "excerpt": "본문바로가기 주메뉴바로가기 조직안내 진료안내 진료과소개 병원소개 병원소식 공공보건의료사업 건강증진센터 장례식장 고객마당 진료안내 외래진료안내 응급진료안내 진료예약안내 수술절차안내 입퇴원절차안내 증명원발급 비급여수가 안내 의료관련서식 진료과소개 진료과소개 진료협력센터 재활치료센터 장애인 동행서비스 병원소개 설립목적&미션과 비전 병원장 인사말 병원연혁 로고 조직도 오시는 길 홍보동영상 전화번호 원내배치도 주차안내 면회안내 자원봉사안내/신청 병원소식 공지사항 보도자료 채용정보 입찰공고 휴진안내 공공보건의료사업 의료사회 복지사업 취약계층 의료지원 사업 공공보건의료 협력체계 구축 경기도 장애인구강진료센터 가정간호사업 찾아가는경기도돌봄의료센터 외국인근로자등 의료지원사업 의료소외계층 진료비지원사업 노숙인 의료서비스 자원봉사자 관리 간호간병통합서비스병동 건강증진센터 건강증진센터소개 의료진소개 종합검진프로그램 종합검진절차안내 검진시주의사항 국가건강검진안내 영유아검진안내 및 서식 장애친화 검진예약 장애친화검진 만족도조사 우리 회사 건강주치의 사업 장례식장 장례시설 031-888-0744, 0745 장의용품 장례절차 빈소현황 온라인장례견적 고객마당 고객의소리 포토갤러리 칭찬합니다 정보공개 경영공시 보건복지부 알리미 건강상담 공공데이터 개방 공익신고 개인정보 제공현황 CCTV현황 진료안내 외래진료안내 응급진료안내 진료예약안내 수술절차안내 입퇴원절차안내 증명원발급 비급여수가 안내 의료관련서식 진료과소개 진료과소개 진료협력센터 재활치료센터 장애인 동행서비스 병원소개 설립목적&미션과 비전 병원장 인사말 병원연혁 로고 조직도 오시는 길 홍보동영상 전화번호 원내배치도 주차안내 면회안내 자원봉사안내/신청 병원소식 공지사항 보도자료 채용정보 입찰공고 휴진안내 공공보건의료사업 의료사회 복지사업 취약계층 의료지원 사업 공공보건의료 협력체계 구축 경기도 장애인구강진료센터 가정간호사업 찾아가는경기도돌봄의료센터 외국인근로자등 의료지원사업 의료소외계층 진료비지원사업 노숙인 의료서비스 자원봉사자 관리 간호간병통합서비스병동 건강증진센터 건강증진센터소개 의료진소개 종합검진프로그램 종합검진절차안내 검진시주의사항 국가건강검진안내 영유아검진안내 및 서식 장애친화 검진예약 장애친화검진 만족도조사 우리 회사 건강주치의 사업 장례식장 장례시설 031-888-0744, 0745 장의용품 장례절차 빈소현황 온라인장례견적 고객마당 고객의소리 포토갤러리 칭찬합니다 정보공개 경영공시 보건복지부 알리미 건강상담 공공데이터 개방 공익신고 개인정보 제공현황 CCTV현황 진료안내 경기도의료원은 최상의 진료로 가장 신뢰받는 병원이 되겠습니다. 진료안내 진료안내 진료과소개 병원소개 병원소식 공공보건의료사업 건강증진센터 장례식장 고객마당 비급여수가 안내 외래진료안내 응급진료안내 진료예약안내 수술절차안내 입퇴원절차안내 증명원발급 비급여수가 안내 의료관련서식 경기도의료원에서는 의료법 제45조 '비급여 진료비용의 고지의무'에 따라 비급여항목과 금액을 공개합니다. 의료법 제45조 제1항 및 제2항과 시행규칙 제42조의 2 제1항 및 제2항에 의하여 비급여 진료비용을 고지하기 위한 검색 화면입니다. 조회된 비급여 진료비용은 단일 개별 항목의 1회 비용이므로 진료과정에서 처방량에 따라 해당 항목의 비용이 달라질 수 있습니다. 전체 행위 치료재료 약제 제증명수수료 검색 비급여수가 안내 리스트 - 분류,항목(명칭,코드),가격정보(구분,비용,최저비용,최고비용,치료재료대포함여부,약제비포함여부),특이사항, 최종변경일 제공 분류 항목 가격정보(단위:원) 특이사항 최종 변경일 명칭 코드 구분 비용 최저 비용 최고 비용 치료재료대 포함여부 약제비 포함여부 자기공명영상진단료(MRI) 뇌MRI diffusion mr20dx 250,000 급여 인정기준 외 실시한 경우 비급여 20231106 자기공명영상진단료(MRI) 뇌brain MRI + diffusion mr40dx 550,000 급여 인정기준 외 실시한 경우 비급여 20231106 자기공명영상진단료(MRI) 뇌brain MRI + diffusion + brain MRA mar60dx 710,000 급여 인정기준 외 실시한 경우 비급여 20231106 자기공명영상진단료(MRI) brainMRI+MRIDiffusion+brainMRA비급여(조영제) mar60edx 990,000 O 급여 인정기준 외 실시한 경우 비급여 20231106 자기공명영상진단료(MRI) 뇌brain MRI + diffusion +brain MRA + neck MRA marn75dx 960,000 급여 인정기준 외 실시한 경우 비급여 20231106 자기공명영상진단료(MRI) MRI,MRA mar50x 550,000 급여 인정기준 외 실시한 경우 비급여 20231106 자기공명영상진단료(MRI) MRI,MRA(조영제) mar50ex 850,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) brainMRI+MRIDiff+brainMRA+neckMRA비급여(조영제) mar75edx 1,140,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) brain MRI + MRI Diffusion 비급여(조영제사용 mr40edx 730,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) MRA(혈관)비급여 mr45ax 460,000 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) MRA(혈관)조영제사용,비급여 mr45eax 640,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) MRI(Sella dynamic)조영제사용 비급여 mr40exsd 560,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) 뇌-일반MRI HI101 420,000 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) 뇌-일반MRI 판독료 0.0 0 촬영료 금액에 포함 20181001 자기공명영상진단료(MRI) 뇌-조영제 주입 전 후 촬영료 HI201 560,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI) 뇌-조영제 주입 전 후 판독료 0.0 O 촬영료 금액에 포함 20181001 자기공명영상진단료(MRI)-두경부 경부-일반MRI촬영료 HI108 450,000 급여 인정기준 외 실시한 경우 비급여 20101125 자기공명영상진단료(MRI)-두경부 경부-일반MRI판독료 0.0 0 촬영료 금액에 포함 20101125 자기공명영상진단료(MRI)-두경부 경부-조영제 주입 전 후 촬영료MRI HI208 640,000 O 급여 인정기준 외 실시한 경우 비급여 20251001 자기공명영상진단료(MRI)-척추 경추-일반MRI촬영료 HE109 500,000 급여 인정기준 외 실시한 경우 비급여 20231106 1 2 3 4 경기도의료원본부 수원병원 의정부병원 파주병원 이천병원 안성병원 포천병원 경기도청 보건복지부 수원시청 의정부시청 파주시청 이천시청 안성시청 포천시청 수원시보건소 의정부보건소 파주시보건소 이천시보건소 안성시보건소 포천시보건소 고정형/이동형 영상정보처리기기운영ㆍ관리방침 서비스헌장 불만고충 접수 환자권리장전 환자의 권리와 의무 개인정보처리방침 페이스북 트위터 직원 인트라넷 웹메일 우.16316 경기도 수원시 장안구 수성로 245번길 69 (정자동) COPYRIGHT(C) 2008 경기도의료원. ALL RIGHTS RESERVED"
+          },
+          {
+            "url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
+            "original_url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
+            "title": "비급여수가 | 을지대학교병원",
+            "checked_on": "2026-09-23",
+            "sha256": "89eb83ca3cd550bbe83b3c99541cb7b1f939917dafc06c3142d0f7b56560dcbb",
+            "excerpt": "비급여수가 ※ 의료법 제45조 및 동법 시행규칙 제42조의 2 \"비급여 진료비 고지\"에 의거 비급여 진료비를 검색하는 화면입니다. [검색 조회] 행위료 치료재료대 약제비 제증명수수료 선택진료료 검색 [분류별 조회] 행위료 전체보기 기본진료료 상급병실료 검사료 초음파검사료 방사선치료료 초음파영상료 자기공명영상진단료 PET-CT 주사료 마취료 이학요법료 정신요법료 처치 및 수술료 치과 처치 및 수술료 치과보철료 기타 행위료 비급여수가 목록 분류 명칭 코드 구분 비용 최저비용 최대비용 특이사항 최종변경일 MRI 2 Sequnce(Spine)비급여 HH002 - 328,000 0 0 - 20250101 MRI Enterography (일반) - - 686,000 0 0 - 20250101 MRI-기본검사 MRI Shoulder Arthrography Rt (Post op,F/U)(일반) HE115 - 529,000 0 0 - 20250101 MRI-기본검사 MRI C Spine (Oblique Sag)(일반) HI109 - 171,000 0 0 - 20250101 MRI-기본검사 MRI C-Spine(FL-EX)(일반) HI409 - 171,000 0 0 - 20250101 MRI-기본검사 MRI Shoulder Arthrography Lt(Post op,F/U)(일반) HE115 - 529,000 0 0 - 20250101 근골격계 MRI Hip Arthrography(Rt)(일반) HE118 고관절 822,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 근골격계 MRI Hip Arthrography(Rt)(F/U) HE118 고관절 700,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 근골격계 MRI Hip Arthrography(Lt)(F/U)(일반) HE118 고관절 700,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 근골격계 MRI Shoulder Arthrography(Rt)(F/U)일반 HE115 견관절 700,000 0 0 급여 인정기준 외 실시한 경우 비급여 20250101 1 2 3 4 5"
+          }
+        ],
+        "intent_results": [
+          "https://carepedia.kr/%EB%B9%84%EC%9A%A9/MRI",
+          "https://hospitalprice.kr/price/mri-brain"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 4240,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": null,
         "organic_provider": "codex_native_search",
         "organic_query": "MRI 비용",
         "organic_domains": [
@@ -5803,16 +5687,16 @@
           "www.eulji.or.kr",
           "wbch.co.kr",
           "platformdodam.com",
-          "www.brmh.org",
           "my-doctor.io",
-          "www.brmh.org"
+          "www.brmh.org",
+          "www.stcarollo.or.kr"
         ],
         "organic_results": [
           {
             "url": "https://carepedia.kr/%EB%B9%84%EC%9A%A9/MRI",
             "domain": "carepedia.kr",
             "title": "MRI 검사 가격 — 전국 병원 비급여 비용 비교 · 케어피디아",
-            "snippet": "전국 병원급 의료기관 1,035곳이 신고한 MRI 검사 비급여 가격입니다. ... 또 촬영 부위를 여러 곳 하면 부위마다 비용이 더해집니다."
+            "snippet": "전국 병원급 의료기관 1,035곳이 신고한 MRI 검사 비급여 가격입니다. ... MRI 비용은 얼마인가요?"
           },
           {
             "url": "https://www.hira.or.kr/dummy.do?cmsurl=%2Fcms%2Fmedi_info%2F02%2F01%2F1343489_27565.html&pgmid=HIRAA050200000000&subject=MRI",
@@ -5823,7 +5707,7 @@
           {
             "url": "https://hospitalprice.kr/price/mri-brain",
             "domain": "hospitalprice.kr",
-            "title": "뇌 MRI 가격 — 전국 병원·의원 1,124곳 비교, 중앙값 450,000원 | 병원가격",
+            "title": "뇌 MRI 가격 — 전국 병원·의원 1,125곳 비교, 중앙값 450,000원 | 병원가격",
             "snippet": "내 지역 뇌 MRI 가격 보기 ... * MRI 비용: 목·허리·어깨·무릎·뇌, 부위마다 급여의 문이 다르게 열려 있다 비급여로 찍으면 어느 부위든 45만 원 언저리입니다."
           },
           {
@@ -5851,107 +5735,59 @@
             "snippet": "뇌혈관 MRI 비급여 비용을 경남·전남 등 시·도별로 비교합니다. ... 뇌혈관 MRI 시·도별 가격 — 시·도, 대상 기관 수, 중앙값, 최저~최고"
           },
           {
-            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=40&site=001&user_code=009011006",
-            "domain": "www.brmh.org",
-            "title": "| 서울대학교병원운영 서울특별시보라매병원",
-            "snippet": "자기공명영상진단료(MRI-기본검사) | 흉부 | 기본자기공명영상진단-흉부-흉부-일반 | HE125 | 판독료, 촬영료 등을 포함한 1회 비용 | 680000 | | | X | X | 급여 인정기준"
-          },
-          {
             "url": "https://my-doctor.io/medical-cost/MRI%EA%B2%80%EC%82%AC/MRI",
             "domain": "my-doctor.io",
             "title": "전국 MRI 종합 검사 영상의학과 병원 가격비교(2026)",
             "snippet": "전국 MRI 종합 가격 | 비용"
           },
           {
-            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=41&site=001&user_code=009011006",
+            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=11&site=001&user_code=009015000",
             "domain": "www.brmh.org",
             "title": "| 서울대학교병원운영 서울특별시보라매병원",
-            "snippet": "자기공명영상진단료(MRI-기본검사) | 혈관 | 기본자기공명영상진단-혈관-뇌혈관-일반 | HE135 | 판독료, 촬영료 등을 포함한 1회 비용 | 755000 | | | X | X | Neck MRA포함/급여"
+            "snippet": "자기공명영상진단료(MRI-기본검사) | 척추 | 기본자기공명영상진단-척추-흉추-조영제주입전·후 촬영판독 | HE210 | | 723000 | | | X | X | 급여 인정기준 외 비급여/조영 추가1회 비용 31940원"
+          },
+          {
+            "url": "https://www.stcarollo.or.kr/bbs/content.php?co_id=0701&page=20&wr_class1=01",
+            "domain": "www.stcarollo.or.kr",
+            "title": "비급여수가정보 | 성가롤로병원",
+            "snippet": "비급여수가정보 행위안내 : 중분류, 소분류, 진료비용항목, 항목별 가격정보, 특이사항, 최종변경일을 안내하며 진료비용항목은 코드와 명칭으로 구분하고, 항목별 가격정보는 구분, 비용, 최저비용, 최고비용, 치료재료대포함, 약재비초함을 안내합니다. ..."
           }
         ],
-        "dominant_result_ratio": 0.125,
+        "dominant_result_ratio": 0.14285714285714285,
         "score_components": {
-          "demand": 28.98,
-          "organic_opportunity": 26.25,
-          "trend": -0.5,
+          "demand": 29.02,
+          "organic_opportunity": 24.49,
+          "trend": -1.46,
           "intent_fit": 0
         },
-        "trend_growth": -0.05,
+        "trend_growth": -0.146,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "measured",
         "selection_version": 6,
-        "selected_at": "2026-09-20T13:33:53.736075+00:00",
+        "selected_at": "2026-09-23T00:52:47.108466+00:00",
         "source": "category_market_v1",
         "keywords": [
           "MRI비용"
         ],
         "status": "research_only",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=377284&mid=a10503010100&nPage=168&tag=",
-              "title": "뇌·뇌혈관 MRI 검사, 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다 < 전체 < 보도자료 < 알림 : 힘이 되는 평생 친구, 보건복지부",
-              "excerpt_chars": 2575
-            },
-            {
-              "url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
-              "title": "비급여수가 | 을지대학교병원",
-              "excerpt_chars": 1059
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
-                  "title": "비급여수가 | 을지대학교병원",
-                  "excerpt_chars": 1059
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=377284&mid=a10503010100&nPage=168&tag=",
-                  "title": "뇌·뇌혈관 MRI 검사, 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다 < 전체 < 보도자료 < 알림 : 힘이 되는 평생 친구, 보건복지부",
-                  "excerpt_chars": 2575
-                },
-                {
-                  "url": "https://www.eulji.or.kr/footer/footer_pg05.jsp?find=10000&search=MRI&str_page=1",
-                  "title": "비급여수가 | 을지대학교병원",
-                  "excerpt_chars": 1059
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
         "opportunity_evidence": {
           "version": 2,
           "query": "MRI비용",
           "executed_query": "MRI 비용",
-          "topic": "MRI비용: 병원 비급여 가격 사례와 뇌·뇌혈관 건강보험 적용 기준",
-          "intent": "MRI 검사비는 얼마이며, 비급여 고지 금액과 건강보험 적용 여부는 어떻게 확인할까?",
+          "topic": "MRI비용: 병원 공개 비급여 가격과 검사 항목별 확인사항",
+          "intent": "MRI 검사 비용은 얼마이며, 병원·촬영 부위·조영제 사용에 따라 공개 가격은 어떻게 다른가?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
           "result_count": 10,
-          "domain_count": 8,
-          "dominant_ratio": 0.125,
+          "domain_count": 9,
+          "dominant_ratio": 0.14285714285714285,
           "search_review": {
             "version": 1,
             "query": "MRI비용",
             "executed_query": "MRI 비용",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-20T13:33:53.736075+00:00",
-            "raw_sha256": "71da36f140c40eb04ffc27ce0c8ce6f65b23699673569601d489042947a83bb5",
+            "checked_at": "2026-09-23T00:52:47.108466+00:00",
+            "raw_sha256": "71bd6632bda7f1dc969711a4748e2e89434a65b36bab91ba92e1acfbff00dcbe",
             "decisions": [
               {
                 "result_index": 0,
@@ -5966,7 +5802,7 @@
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "비급여로 찍으면 어느 부위든 45만 원 언저리입니다."
+                "quote": "뇌 MRI 가격 — 전국 병원·의원 1,125곳 비교, 중앙값 450,000원"
               },
               {
                 "result_index": 3,
@@ -5976,12 +5812,12 @@
               {
                 "result_index": 4,
                 "relevant": false,
-                "quote": "MRI 2 Sequnce(Spine)비급여 | HH002"
+                "quote": "MRI 2 Sequnce(Spine)비급여"
               },
               {
                 "result_index": 5,
                 "relevant": false,
-                "quote": "자기공명영상 (MRI) | 뇌 | | 뇌/뇌혈관 동시촬영 | BRAIN MRI +"
+                "quote": "뇌/뇌혈관 동시촬영 | BRAIN MRI +"
               },
               {
                 "result_index": 6,
@@ -5991,24 +5827,24 @@
               {
                 "result_index": 7,
                 "relevant": true,
-                "quote": "판독료, 촬영료 등을 포함한 1회 비용 | 680000"
+                "quote": "전국 MRI 종합 가격 | 비용"
               },
               {
                 "result_index": 8,
                 "relevant": true,
-                "quote": "전국 MRI 종합 가격 | 비용"
+                "quote": "723000 | | | X | X | 급여 인정기준 외 비급여/조영 추가1회 비용 31940원"
               },
               {
                 "result_index": 9,
-                "relevant": true,
-                "quote": "판독료, 촬영료 등을 포함한 1회 비용 | 755000"
+                "relevant": false,
+                "quote": "비급여수가정보 행위안내 : 중분류, 소분류, 진료비용항목, 항목별 가격정보"
               }
             ]
           },
           "search_metrics": {
             "raw_result_count": 10,
             "canonical_result_count": 10,
-            "relevant_result_count": 8,
+            "relevant_result_count": 7,
             "relevant_site_count": 6,
             "relevant_indices": [
               0,
@@ -6017,14 +5853,13 @@
               3,
               6,
               7,
-              8,
-              9
+              8
             ],
-            "relevance_ratio": 0.8,
+            "relevance_ratio": 0.7,
             "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.125,
-            "site_concentration": 0.25,
-            "organic_opportunity": 26.25
+            "known_dominant_ratio": 0.14285714285714285,
+            "site_concentration": 0.2857142857142857,
+            "organic_opportunity": 24.49
           },
           "scope": "full_keyword",
           "target_keyword": "MRI비용",
@@ -6034,18 +5869,18 @@
               "quote": "MRI 검사 가격 — 전국 병원 비급여 비용 비교"
             },
             {
-              "result_index": 1,
-              "quote": "급여기준에 해당되어 요양급여 대상인 경우, MRI 비용은 해당 항목(촬영부위)에 따라"
+              "result_index": 2,
+              "quote": "MRI 비용: 목·허리·어깨·무릎·뇌, 부위마다 급여의 문이 다르게 열려 있다"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "input_sha256": "de52b791c2c7f7d3f5b9ff6ab490cb1a6823c64b89fb8fe1ffbdfbbc1fca0165",
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "input_sha256": "cee22f837e048e4f4f9e93909be21f89740b4b6e8b469f0e59a0c8a4f5ef54b9",
           "failure_code": "invalid_review"
         },
-        "score": 54.73,
+        "score": 52.05,
         "publish_eligible": false,
         "hold_reasons": [
           "missing_topic_suitability"
@@ -6059,14 +5894,9 @@
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.taebaek.go.kr/health/contents.do?key=635",
-              "title": "암질병관리 - 보건서비스 - 보건소",
-              "excerpt_chars": 1998
-            },
-            {
-              "url": "https://gh.cauhs.or.kr/health/conts/101001006000000.do",
-              "title": "중앙대학교 | 광명소하검진센터",
-              "excerpt_chars": 3268
+              "url": "https://ggh.asanfoundation.or.kr/asan/depts/D135/K/content.do?menuId=5199",
+              "title": "추가검사 | 종합건진 | 건강검진 | 금강아산병원",
+              "excerpt_chars": 1256
             }
           ],
           "analysis_status": "supported_false",
@@ -6081,10 +5911,9 @@
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
-          "low_search_relevance",
-          "dominant_search_results"
+          "low_search_relevance"
         ],
-        "monthly_search": 9610,
+        "monthly_search": 9770,
         "organic_provider": "codex_native_search",
         "organic_query": "건강보험료 조회",
         "organic_results": [
@@ -6092,41 +5921,23 @@
             "url": "https://www.nhis.or.kr/nhis/index.do?from=AppAgg.com",
             "domain": "www.nhis.or.kr",
             "title": "국민건강보험",
-            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
-          },
-          {
-            "url": "https://si4n.nhis.or.kr/jpba/JpBaa00103.do",
-            "domain": "si4n.nhis.or.kr",
-            "title": "사회보험통합징수포털",
-            "snippet": "* 보험료 조회/납부 ... * 보험료 산출내역 조회 ... * 요양기관정보마당 ... * 2025년 상반기 전자고지·자동이체 경품행사 당첨자 안내 2025-06-05 16:58:46.0 ... * 국민건강보험공단, 호국보훈의"
+            "snippet": "* 건강검진 대상조회 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원,"
           },
           {
             "url": "https://nhic.kr/nhis/index.do",
             "domain": "nhic.kr",
             "title": "국민건강보험",
-            "snippet": "* 건강검진 대상조회 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원,"
-          },
-          {
-            "url": "https://www.nhis.or.kr/nhis/index.do%3B",
-            "domain": "www.nhis.or.kr",
-            "title": "국민건강보험",
-            "snippet": "* 건강검진 대상조회 ... * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가 요구되는 중증질환으로 진료 시 건강보험 본인부담률을 경감시켜주는 제도입니다. ... 온라인이용 가능 신청대상"
+            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... 온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원, 본인부담완화 상세보기 * 본인일부부담금 산정특례 제도 진료비"
           },
           {
             "url": "https://go.lazyscheme.com/nhis/",
             "domain": "go.lazyscheme.com",
             "title": "국민건강보험공단 홈페이지·고객센터·지사찾기",
-            "snippet": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다. ... 건강보험 가입 자격 이력 | 자격득실확인서 발급 ... 직장가입자 보수월액 |"
+            "snippet": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다. ... 건강보험25시(구 The건강보험) 앱에서도 보험료 조회·납부, 환급금 조회·신청과 진료내역 확인을 처리할 수"
           },
           {
-            "url": "https://nhissmc.net/nhis/index.do",
-            "domain": "nhissmc.net",
-            "title": "국민건강보험",
-            "snippet": "* 건강검진 대상조회 ... * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가 요구되는 중증질환으로 진료 시 건강보험 본인부담률을 경감시켜주는 제도입니다. ... * 소득 부과"
-          },
-          {
-            "url": "https://xn--939a1gynmpm0ukuoxtbq59g.kr/nhis/index.do",
-            "domain": "xn--939a1gynmpm0ukuoxtbq59g.kr",
+            "url": "https://www.xn--939a1gynmpm0ukuoxtbq59g.kr/nhis/index.do",
+            "domain": "www.xn--939a1gynmpm0ukuoxtbq59g.kr",
             "title": "국민건강보험",
             "snippet": "* 건강검진 대상조회 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원,"
           },
@@ -6137,16 +5948,34 @@
             "snippet": "<td>사회보험료 자동이체 신청<br>인터넷 지로 납부<br>건강보험료 연말정산 보수총액통보서 신고</td> ... <td>사회보험료 고지/납부 현황 조회<br>사회보험료 산출내역 조회<br>건강보험료 사업장 가입자별 고지내역 조회<br>건강보험료 연말정산 산출내역 조회<br>사업장 직원 조회</td>"
           },
           {
-            "url": "https://xn--939a1gynq0rn3nmm0b.kr/nhis/index.do",
-            "domain": "xn--939a1gynq0rn3nmm0b.kr",
-            "title": "국민건강보험",
-            "snippet": "* 대표홈페이지 로그인서비스 일시중단 안내(9.14. ... 배포즉시] 국민건강보험공단-한국국제협력단(KOICA), 필헬스(PhilHealth) 대상 초청연수 실시 2026.09.18 ... * 국민건강보험공단, 추석맞이 「행가래, 강원」 공공기관 연합 봉사활동 실시 2026.09.16 ..."
-          },
-          {
             "url": "https://www.jdnc.or.kr/notice/notice.htm?act=download&no=3&seq=907",
             "domain": "www.jdnc.or.kr",
             "title": "PowerPoint 프레젠테이션",
             "snippet": "상단에 국민건강보험 로고와 메뉴(민원서비스, 건강모아, 정책·제도, 정보공개, 국민소통·참여, 공단소개)가 보이고, 중앙 배너에는 “국민건강보험은 소통과 배려로 국민과 함께 하겠습니다.” ... 아래 “자주 찾는 서비스” 영역에서 탭"
+          },
+          {
+            "url": "https://www.nhic.kr/nhis/index.do",
+            "domain": "www.nhic.kr",
+            "title": "국민건강보험",
+            "snippet": "* 대표홈페이지 로그인서비스 일시중단 안내(9.14. ... * 비대면진료 및 전자처방전 이용 관련 설문조사 경품 당첨자 발표 2026.09.09 ... * 국민건강보험공단, 병·의원 불법·부당청구 포상금 지급 결정"
+          },
+          {
+            "url": "https://www.jdnc.or.kr/notice/notice.htm?act=download&no=3&page=1&qtype=title&query=&seq=907",
+            "domain": "www.jdnc.or.kr",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "상단에 국민건강보험 로고와 메뉴(민원서비스, 건강모아, 정책·제도, 정보공개, 국민소통·참여, 공단소개)가 보이고, 중앙 배너에는 “국민건강보험은 소통과 배려로 국민과 함께 하겠습니다.” ... ③ 조회 ... 입력 항목은 “발급용도"
+          },
+          {
+            "url": "https://xn--939a1gynq0rn3nmm0b.kr/nhis/index.do",
+            "domain": "xn--939a1gynq0rn3nmm0b.kr",
+            "title": "국민건강보험",
+            "snippet": "* 추석 연휴기간 대표 홈페이지 및 건강보험25시 모바일앱 전산장애 문의 안내 2026.09.22 ... * 사회보장정보시스템(행복이음, 범정부) 서비스 중단 안내 2026.09.21 ... * 국민건강보험공단-연세원주의과대학, 보건의료 인재양성을"
+          },
+          {
+            "url": "https://boogi2.kr/api/notice_file/26",
+            "domain": "boogi2.kr",
+            "title": "Q 21. 본인 건강보험료 납부액은 어떻게 확인하나요?",
+            "snippet": "<td>국민건강보험 → 로그인 → 개인 → 보험료조회 → 직장보험료 조회 → 건강보험 산정보험료 확인(장기요양보험료 제외)</td> ... 건강보험료 산정 오류 등으로 7월 건강보험료 내역이 과다(과소) 된"
           }
         ],
         "search_review": {
@@ -6154,23 +5983,23 @@
           "query": "건강보험료조회",
           "executed_query": "건강보험료 조회",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "raw_sha256": "79b9150ddb44de4c646dea515e101b67374f417533c698a91ec21e62c78fcfad",
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "raw_sha256": "51814e88459477ef7c861ba4256f723db8fe0596b6f94ed9e701930a07377165",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": true,
-              "quote": "보험료 고지내역 조회"
+              "relevant": false,
+              "quote": "건강검진 대상조회"
             },
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "보험료 산출내역 조회"
+              "quote": "보험료 고지내역 조회"
             },
             {
               "result_index": 2,
-              "relevant": false,
-              "quote": "건강검진 대상조회"
+              "relevant": true,
+              "quote": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다."
             },
             {
               "result_index": 3,
@@ -6180,32 +6009,32 @@
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다."
+              "quote": "건강보험료 사업장 가입자별 고지내역 조회"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "건강검진 대상조회"
+              "quote": "아래 “자주 찾는 서비스” 영역에서 탭"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "건강검진 대상조회"
+              "relevant": true,
+              "quote": "대표홈페이지 로그인서비스 일시중단 안내"
             },
             {
               "result_index": 7,
-              "relevant": true,
-              "quote": "건강보험료 사업장 가입자별 고지내역 조회"
+              "relevant": false,
+              "quote": "입력 항목은 “발급용도"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "대표홈페이지 로그인서비스 일시중단 안내"
+              "quote": "사회보장정보시스템(행복이음, 범정부) 서비스 중단 안내"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "아래 “자주 찾는 서비스” 영역에서 탭"
+              "relevant": true,
+              "quote": "국민건강보험 → 로그인 → 개인 → 보험료조회 → 직장보험료 조회 → 건강보험 산정보험료 확인(장기요양보험료 제외)"
             }
           ]
         }
@@ -6216,7 +6045,7 @@
         "hold_reasons": [
           "concentrated_search_results"
         ],
-        "monthly_search": 6640,
+        "monthly_search": 6660,
         "organic_provider": "codex_native_search",
         "organic_query": "경동맥 초음파 비용",
         "organic_results": [
@@ -6227,34 +6056,16 @@
             "snippet": "전국 병원 1,105곳·의원 5,078곳이 경동맥 초음파 가격을 공개했으며, 종류마다 가격이 달라 종류별로 나눠 비교합니다. ... * 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고"
           },
           {
-            "url": "https://medinics.kr/prices/%EA%B2%BD%EB%8F%99%EB%A7%A5-%EC%B4%88%EC%9D%8C%ED%8C%8C",
-            "domain": "medinics.kr",
-            "title": "경동맥 초음파 가격 비교 — 병원별·지역별 | 메디닉스",
-            "snippet": "검사 초음파검사료(진단초음파)# 경동맥 초음파 ... 4 | 새론이비인후과의원 | 의원 | 서울 강동구 | 10,000원 지역평균보다 87%↓ | 10,000원 | -"
-          },
-          {
             "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul",
             "domain": "hospitalprice.kr",
-            "title": "서울 경동맥 초음파 가격 — 경동맥 5.7만원 · 기타 동맥 10만원 (병원·의원 1,423곳) | 병원가격",
+            "title": "서울 경동맥 초음파 가격 — 경동맥 6만원 · 기타 동맥 10만원 (병원·의원 1,425곳) | 병원가격",
             "snippet": "* 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 증상이 있어서 받으면 급여, 검진으로 받으면 비급여. ... 서울에서 경동맥 초음파 가격이 가장"
           },
           {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/seocho-gu",
-            "domain": "hospitalprice.kr",
-            "title": "서울 서초구 경동맥 초음파 가격 — 경동맥 8만원 · 기타 동맥 5.5만원 (병원·의원 79곳) | 병원가격",
-            "snippet": "받은 견적, 서초구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
-          },
-          {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeonggi/gwangju-si",
-            "domain": "hospitalprice.kr",
-            "title": "경기 광주시 경동맥 초음파 가격 — 경동맥 5만원 · 기타 동맥 15만원 (병원·의원 36곳) | 병원가격",
-            "snippet": "받은 견적, 광주시 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
-          },
-          {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/incheon",
-            "domain": "hospitalprice.kr",
-            "title": "인천 경동맥 초음파 가격 — 병원 59곳 비교, 중앙값 130,000원 | 병원가격",
-            "snippet": "* 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 증상이 있어서 받으면 급여, 검진으로 받으면 비급여. ... 인천에서 경동맥 초음파 가격이 가장"
+            "url": "https://zayeon.co.kr/%EA%B2%BD%EB%8F%99%EB%A7%A5%EC%B4%88%EC%9D%8C%ED%8C%8C-%EB%B9%84%EC%9A%A9%EF%BD%9C%EB%B9%84%EA%B8%89%EC%97%AC-%EA%B0%80%EA%B2%A9%C2%B7%EB%B3%B4%ED%97%98-%EC%A0%81%EC%9A%A9%EA%B3%BC-%EB%8F%99%EB%A7%A5/",
+            "domain": "zayeon.co.kr",
+            "title": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준 » 헬스픽",
+            "snippet": "“경동맥초음파 평균 비용은 얼마다”라고 단정하기보다는 내가 방문하려는 의료기관의 현재 EB482 가격을 직접 확인하는 방식이 더 정확합니다."
           },
           {
             "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/dobong-gu",
@@ -6263,22 +6074,40 @@
             "snippet": "받은 견적, 도봉구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
           },
           {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeonggi/gwangmyeong-si",
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeonggi/goyang-ilsanseo-gu",
             "domain": "hospitalprice.kr",
-            "title": "경기 광명시 경동맥 초음파 가격 — 병원 5곳·의원 44곳 비교, 최저 76,450원 | 병원가격",
-            "snippet": "광명시에서 경동맥 초음파 가격을 공개한 병원은 5곳, 의원급은 44곳이며 병원 중앙값은 200,000원입니다. ... 경기 광명시에서 경동맥 초음파 가격이 가장 낮은 병원은 어디인가요? ... 출처: 건강보험심사평가원"
+            "title": "경기 고양시 일산서구 경동맥 초음파 가격 — 경동맥 5만원 · 기타 동맥 8.2만원 (병원·의원 31곳) | 병원가격",
+            "snippet": "받은 견적, 고양시 일산서구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때"
           },
           {
-            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound",
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/gyeongbuk/gumi-si",
+            "domain": "hospitalprice.kr",
+            "title": "경북 구미시 경동맥 초음파 가격 — 경동맥 5만원 (병원·의원 41곳) | 병원가격",
+            "snippet": "받은 견적, 구미시 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
+          },
+          {
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/incheon/gyeyang-gu",
+            "domain": "hospitalprice.kr",
+            "title": "인천 계양구 경동맥 초음파 가격 — 경동맥 4.5만원 · 기타 동맥 22.2만원 (병원·의원 32곳) | 병원가격",
+            "snippet": "받은 견적, 계양구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
+          },
+          {
+            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/seoul",
             "domain": "platformdodam.com",
-            "title": "경동맥 도플러 초음파 비급여 비용 | 경기·서울 등 시·도별 가격 비교",
-            "snippet": "경동맥 도플러 초음파 비급여 비용을 부산·경남·대구·인천 등 시·도별로 비교합니다. ... 경동맥 도플러 초음파 시·도별 가격 — 시·도, 대상 기관 수, 중앙값, 최저~최고"
+            "title": "서울 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
+            "snippet": "서울 경동맥 도플러 초음파 비급여 비용을 강남구·영등포구·강동구 등 시·군·구에서 비교합니다. ... 연세대학교의과대학 강남세브란스병원 두개외 혈관 도플러 초음파 - 경동맥 | 상급종합 | 강남구 | 70,000~335,000원"
           },
           {
-            "url": "https://zayeon.co.kr/%EA%B2%BD%EB%8F%99%EB%A7%A5%EC%B4%88%EC%9D%8C%ED%8C%8C-%EB%B9%84%EC%9A%A9%EF%BD%9C%EB%B9%84%EA%B8%89%EC%97%AC-%EA%B0%80%EA%B2%A9%C2%B7%EB%B3%B4%ED%97%98-%EC%A0%81%EC%9A%A9%EA%B3%BC-%EB%8F%99%EB%A7%A5/",
-            "domain": "zayeon.co.kr",
-            "title": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준 » 헬스픽",
-            "snippet": "“경동맥초음파 평균 비용은 얼마다”라고 단정하기보다는 내가 방문하려는 의료기관의 현재 EB482 가격을 직접 확인하는 방식이 더 정확합니다."
+            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/gwangju",
+            "domain": "platformdodam.com",
+            "title": "광주 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
+            "snippet": "광주 경동맥 도플러 초음파 비급여 비용을 북구·광산구·서구·남구 등 시·군·구에서 비교합니다. ... 조선대학교병원 두개외혈관 도플러초음파[경동맥] | 상급종합 | 동구 | 230,160원"
+          },
+          {
+            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/daegu",
+            "domain": "platformdodam.com",
+            "title": "대구 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
+            "snippet": "대구 경동맥 도플러 초음파 비급여 비용을 달서구·북구·중구·동구 등 시·군·구에서 비교합니다. ... 대구한의대한방병원 특수초음파_경동맥 | 한방병원 | 동구 | 100,000원"
           }
         ],
         "search_review": {
@@ -6286,8 +6115,8 @@
           "query": "경동맥초음파비용",
           "executed_query": "경동맥 초음파 비용",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "raw_sha256": "de18ca0ce94e9be0d9b896fbfc618db0354a206966fd79c557d24c1c97712c52",
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "raw_sha256": "853d3b959585698c635753b8acdf21d22d60bad257e70f9328994fb7c4ffc028",
           "decisions": [
             {
               "result_index": 0,
@@ -6297,68 +6126,136 @@
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "10,000원 지역평균보다 87%↓"
+              "quote": "서울 경동맥 초음파 가격 — 경동맥 6만원"
             },
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "서울 경동맥 초음파 가격 — 경동맥 5.7만원"
+              "quote": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "서울 서초구 경동맥 초음파 가격 — 경동맥 8만원"
+              "quote": "서울 도봉구 경동맥 초음파 가격 — 경동맥 5.3만원"
             },
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "경기 광주시 경동맥 초음파 가격 — 경동맥 5만원"
+              "quote": "경기 고양시 일산서구 경동맥 초음파 가격 — 경동맥 5만원"
             },
             {
               "result_index": 5,
               "relevant": true,
-              "quote": "인천 경동맥 초음파 가격 — 병원 59곳 비교, 중앙값 130,000원"
+              "quote": "경북 구미시 경동맥 초음파 가격 — 경동맥 5만원"
             },
             {
               "result_index": 6,
               "relevant": true,
-              "quote": "서울 도봉구 경동맥 초음파 가격 — 경동맥 5.3만원"
+              "quote": "인천 계양구 경동맥 초음파 가격 — 경동맥 4.5만원"
             },
             {
               "result_index": 7,
               "relevant": true,
-              "quote": "경기 광명시 경동맥 초음파 가격 — 병원 5곳·의원 44곳 비교, 최저 76,450원"
+              "quote": "두개외 혈관 도플러 초음파 - 경동맥 | 상급종합 | 강남구 | 70,000~335,000원"
             },
             {
               "result_index": 8,
               "relevant": true,
-              "quote": "경동맥 도플러 초음파 비급여 비용을 부산·경남·대구·인천 등 시·도별로 비교합니다."
+              "quote": "조선대학교병원 두개외혈관 도플러초음파[경동맥] | 상급종합 | 동구 | 230,160원"
             },
             {
               "result_index": 9,
               "relevant": true,
-              "quote": "내가 방문하려는 의료기관의 현재 EB482 가격을 직접 확인하는 방식이 더 정확합니다."
+              "quote": "대구한의대한방병원 특수초음파_경동맥 | 한방병원 | 동구 | 100,000원"
             }
           ]
         }
+      },
+      {
+        "keyword": "종합건강검진비용",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 5240,
+        "organic_provider": "codex_native_search",
+        "organic_query": "종합 건강검진 비용",
+        "organic_results": [
+          {
+            "url": "https://www.staging.modoodoc.com/treatment-detail/5032/434/%EA%B5%AD%EB%AF%BC%EC%B2%B4%EB%A0%A5%EC%84%BC%ED%84%B0%EC%9D%98%EC%9B%90-%EC%A2%85%ED%95%A9%20%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84",
+            "domain": "www.staging.modoodoc.com",
+            "title": "[국민체력센터의원] 종합 건강검진 가격/비용/이벤트 (2026) | 모두닥",
+            "snippet": "기본검사 : 위내시경(수면), 골밀도, CBC, Diff.c 혈액, 소변검사, 체성분검사 선택검사 : 초음파(5종), 건강생활기능, 동맥경화협착 중 선택 2가지 총 58종 검사 ... 신청자 수와 남은 수량은"
+          },
+          {
+            "url": "https://www.mnd.go.kr/user/mnd/upload/pblictn/PBLICTNEBOOK_202503141022459290.pdf",
+            "domain": "www.mnd.go.kr",
+            "title": "제3편 제대군인에게 주어지는 혜택 알아가기!",
+            "snippet": "<td>검진비용</td> ... 라) 검진항목 : 상세 내역은 군인공제회 홈페이지 「종합 건강검진」 참조"
+          },
+          {
+            "url": "https://mas.smc.seoul.kr/attach/record/SEOUL/appendix/a11/A0071312.pdf?time=20260621104059",
+            "domain": "mas.smc.seoul.kr",
+            "title": "제3 3 4 회 임시회",
+            "snippet": "- 배달·가사·돌봄 등 취약노동자 종합건강검진 패키지 비용 지원(200명) ... 취약노동자 건강검진 협력병원(이대서울병원)과 업무 협의"
+          },
+          {
+            "url": "https://diet-calories.com/%EC%A1%B0%EC%9D%80%EA%B8%88%EA%B0%95%EB%B3%91%EC%9B%90-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EC%A2%85%ED%95%A9%EA%B2%80%EC%A7%84-%EA%B5%AD%EA%B0%80%EA%B2%80%EC%A7%84/",
+            "domain": "diet-calories.com",
+            "title": "조은금강병원 건강검진 비용 (종합검진 국가검진 예약) - 건강 도우미",
+            "snippet": "# 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) ... Image: 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) 1 ... 네, 조은금강병원은 국민건강보험공단에서 각종 성인질병 및 암질환을 조기에"
+          },
+          {
+            "url": "https://www.believesewoong.co.kr/center/healthexamination",
+            "domain": "www.believesewoong.co.kr",
+            "title": "안내 - 빌리브세웅병원",
+            "snippet": "| Image 스탠다드 종합검진 | Image 디럭스 종합검진 | Image 프리미엄 종합검진 ... 소개내용 | 각종 성인병 예방과 주요 장기의 질병을 조기 발견을 위한 성인남녀의"
+          },
+          {
+            "url": "https://www.jungdonghospital.com/intro/page05.html?jb_code=20&jb_depth=41990&jb_group=4199&jb_idx=5320&jb_step=0&month=&page=363&search_key=&search_keyword=&type=",
+            "domain": "www.jungdonghospital.com",
+            "title": "관절,척추전문 정동병원",
+            "snippet": "#### 나도 올해 건강검진 대상자일까? ... 다음은 정동병원 종합검진 순서와 비용에 대해 알려드리겠습니다! ... ​대장 내시경 중 용종 절제 시 하루 정도 입원하실 수 있으며,"
+          },
+          {
+            "url": "https://www.jangbaro.co.kr/pages/phycheck_fit.php",
+            "domain": "www.jangbaro.co.kr",
+            "title": "맞춤 종합 건강검진 | 장바로내과",
+            "snippet": "* 비용 : 45만원 ... * 각종 암의 조기 진단과 예방을 위한 기본종합검진(20대 이상 가장 취약한 위암, 간암, 자궁경부암, 유방암, 갑상선암 등) ... 골밀도 검사"
+          },
+          {
+            "url": "https://redwinters.com/2026-%EC%A2%85%ED%95%A9-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EB%B9%84%EA%B5%90-%EB%B0%8F-%ED%95%AD%EB%AA%A9-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%8B%A4%EB%B9%84/",
+            "domain": "redwinters.com",
+            "title": "2026 종합 건강검진 비용 비교 및 항목 추천 가이드 (실비 환급, 주의사항, 과태료 총정리) - 레윈의 블로그",
+            "snippet": "2026 종합 건강검진 평균 비용 및 병원별 차이 ... 검진 전날의 사소한 습관이 결과 수치를 왜곡하여 ‘재검사’라는 시간 낭비를 초래할 수 있습니다."
+          },
+          {
+            "url": "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/news/news/6647502.html",
+            "domain": "www.bokjiro.go.kr",
+            "title": "복지뉴스",
+            "snippet": "종합 건강검진 항목은 흉부 X선 촬영, 종양 표지자 검사 등 국가 검진*(건강보험공단)이 포함된 기본검진 뿐 아니라 MRI, CT, 초음파 검사, 대장내시경 등 선택검진**이 포함된 건설근로자"
+          },
+          {
+            "url": "https://www.zelarno.com/2026/07/blog-post_141.html?m=1",
+            "domain": "www.zelarno.com",
+            "title": "속초보광병원 건강검진 항목 및 비용 안내",
+            "snippet": "# 속초보광병원 건강검진 항목 및 비용 안내 ... 강원도 속초시 중앙로 11번지에 위치한 속초보광병원 건강검진센터는 국민건강보험공단 지정 일반·암 검진(위·폐·간·유방·대장·자궁경부암)은 물론 직장인 채용검진과 다양한 종합검진 프로그램을"
+          }
+        ]
       },
       {
         "keyword": "심장초음파비용",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
-          "insufficient_relevant_sites",
           "low_search_relevance"
         ],
-        "monthly_search": 4910,
+        "monthly_search": 4930,
         "organic_provider": "codex_native_search",
         "organic_query": "심장 초음파 비용",
         "organic_results": [
           {
-            "url": "https://seoul.eumc.ac.kr/wellness/private/private0102.do",
-            "domain": "seoul.eumc.ac.kr",
-            "title": "웰니스건강증진센터 | 이대서울병원",
-            "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할수 있는 건강진단 프로그램입니다. ... 검사항목 | 비용 ... 심장+부정맥(A) | 기본 +심장 초음파, 경동맥"
+            "url": "https://www.knuh.or.kr/hospitalinfo/hospitalinfo_04_07221.asp?page_no=12&stext=",
+            "domain": "www.knuh.or.kr",
+            "title": "강원대학교병원 > 비급여 진료비용안내()",
+            "snippet": "* 처치 및 수술의 경우 입원료, 마취료, 약제료, 치료재료 등은 별도산정 됩니다. ... 소분류 | 코드 | 명칭 | 구분 | 비용 | 최저비용 |"
           },
           {
             "url": "https://seosanmc.or.kr/uploads/content/%EB%B9%84%EA%B8%89%EC%97%AC%EC%A7%84%EB%A3%8C%EB%B9%84%EC%9A%A9_20250331.pdf",
@@ -6367,10 +6264,10 @@
             "snippet": "비용 | 치료재료대 ... 초음파 검사료 | 두경부-경부 초음파-갑상선·부갑상선 제외한 경부 | EB415 | | 8 0,000 | | | O | O | 21.01.01"
           },
           {
-            "url": "https://platformdodam.com/medical-fees/institutions/241aed704557",
-            "domain": "platformdodam.com",
-            "title": "의료법인 석경의료재단 센트럴병원 비급여 비용 | 경기 시흥시·종합병원",
-            "snippet": "건강보험심사평가원 (비급여 진료비용 공개) · 기준일 2026.09.13 · 공개 금액은 기관이 제출한 값이며 실제 청구액과 다를 수 있습니다 ... 의료적 조언·진단·처방을 대체하지 않으니, 진료·복약 같은"
+            "url": "https://nowdoc.co.kr/c/74611/",
+            "domain": "nowdoc.co.kr",
+            "title": "한림대학교성심병원 | 경기 안양동안구 평촌동 상급종합",
+            "snippet": "심장-경흉부 심초음파/전문 심장초음파검사(병실왕진 또는 야간) | 391,000원 ... 혈관-사지혈관 도플러 초음파/상지-동맥 초음파검사(도플러;사지동맥한쪽) | 235,000원임산부 초음파/제2,3삼분기 -정밀 임산부 초음파 (제2,3삼분기)(정밀) | 230,000원 ... 혈관-뇌혈류 초음파 뇌혈류영상진단(TCD)[최초]"
           },
           {
             "url": "https://price.hospitalk.net/items/EB4320000-%EC%B4%88%EC%9D%8C%ED%8C%8C%EA%B2%80%EC%82%AC%EB%A3%8C%EC%A7%84%EB%8B%A8%EC%B4%88%EC%9D%8C%ED%8C%8C%EC%8B%AC%EC%9E%A5-%EA%B2%BD%ED%9D%89%EB%B6%80-%EC%8B%AC%EC%B4%88%EC%9D%8C%ED%8C%8C%EC%9D%BC%EB%B0%98/area/%EC%84%9C%EC%9A%B8/%EC%86%A1%ED%8C%8C%EA%B5%AC/",
@@ -6379,28 +6276,16 @@
             "snippet": "# 서울 송파구 진단 초음파 · 심장-경흉부 심초음파 · 일반 비용 비교서울 송파구에서 진단 초음파 · 심장-경흉부 심초음파 · 일반 공개가격을 등록한 8개 병원을 비교합니다."
           },
           {
-            "url": "https://seoul.eumc.ac.kr/asset/dwfile/260313%20%EC%9B%B0%EB%8B%88%EC%8A%A4%20%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%84%BC%ED%84%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EC%84%B8%EB%A1%9C%ED%98%95.pdf",
-            "domain": "seoul.eumc.ac.kr",
-            "title": "260313 웰니스 건강증진센터 프로그램 세로형",
-            "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할 수 있는 건강진단 프로그램입니다. ... <th>비용</th> ... <td>기본 + 흉부 저선량 CT, 갑상선 초음파,"
-          },
-          {
             "url": "https://health.tickettime.co.kr/?cat=%EC%8B%AC%EC%9E%A5%C2%B7%ED%98%88%EA%B4%80",
             "domain": "health.tickettime.co.kr",
             "title": "‘심장·혈관’ 비급여 진료비 통계 | 진료비타임",
-            "snippet": "건강보험심사평가원(HIRA) 공시 데이터를 기준으로 진료과·신체부위별 대표 항목의 전국 평균 비용을 정리했습니다. ... * 상지 정맥 도플러 초음파 비급여 진료비 지역별·병원별 비교 168,225원 ... * 심장-경흉부"
+            "snippet": "심장·혈관 HIRA 공시 전국 평균 164,376원 심장·혈관 17개 시도 통계 대동맥초음파 비용 - 지역별·병원 종별 평균 건강보험심사평가원 공시 기준 전국 평균 금액은 164,376원입니다. ... 지역별·종별"
           },
           {
-            "url": "https://dongtan.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_cyber&screen=ptm120",
-            "domain": "dongtan.hallym.or.kr",
-            "title": "비급여진료비용 - 한림대학교동탄성심병원",
-            "snippet": "초음파 | 초음파 | (EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800 | | | | | | 2026-04-01 ... 초음파 | 초음파 | (EMU)응급-복합표적초음파-중증외상 | EB523"
-          },
-          {
-            "url": "https://seoul.eumc.ac.kr/m/wellness/private/private0103.do",
-            "domain": "seoul.eumc.ac.kr",
-            "title": "웰니스건강증진센터 | 이대서울병원",
-            "snippet": "WELLNESS CEO(검사항목, 비용) ... 퍼플 | 여성 | 주요암 + 경동맥 초음파, 심장(관상동맥_3D) CT, 뇌MRI+MRA, 여성호르몬, 스트레스, 동맥경화도, ... 남성 | 주요암 + 경동맥 초음파,"
+            "url": "https://www.modoodoc.com/hospital/81738/%EA%B5%AC%ED%8F%AC%EC%84%B1%EC%8B%AC%EB%B3%91%EC%9B%90-%EB%B6%80%EC%82%B0-%EA%B5%AC%ED%8F%AC%EB%8F%99/",
+            "domain": "www.modoodoc.com",
+            "title": "구포성심병원 후기/가격/비용 (2026) | 모두닥",
+            "snippet": "도수치료((비)도수치료SE2(서기+보행운동,1일당)) | 30,000 ~ 200,000 ... 단순(심장-경흉부 심초음파-단순) | 220,000 ... 전립선·정낭(복부-남성생식기 초음파-전립선·정낭) | 130,000 ~ 140,000"
           },
           {
             "url": "https://health.tickettime.co.kr/",
@@ -6409,10 +6294,22 @@
             "snippet": "지역별·종별 통계 비교자세히 보기】 두경부·갑상선 HIRA 공시 전국 평균 1,204,639원 두경부·갑상선 17개 시도 통계 갑상선 고주파절제술 비용 - 지역별·병원 종별 평균 2026년 9월 16일 기준"
           },
           {
-            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=60&site=001&user_code=009017001",
+            "url": "https://seoul.eumc.ac.kr/asset/dwfile/260313%20%EC%9B%B0%EB%8B%88%EC%8A%A4%20%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%84%BC%ED%84%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EC%84%B8%EB%A1%9C%ED%98%95.pdf",
+            "domain": "seoul.eumc.ac.kr",
+            "title": "260313 웰니스 건강증진센터 프로그램 세로형",
+            "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할 수 있는 건강진단 프로그램입니다. ... <th>비용</th> ... <td>기본 + 흉부 저선량 CT, 갑상선 초음파,"
+          },
+          {
+            "url": "https://www.brmh.org/medi_info/non_medifee.do?CSUBCD_NM1=&page=49&site=001&user_code=009015000",
             "domain": "www.brmh.org",
-            "title": "진료비 안내 | 서울대학교병원운영 서울특별시보라매병원",
-            "snippet": "비급여 진료비 행위료 관련 표이며, 중분류, 분류, 항목(명칭,코드), 진료비용등(단위:원)(구분,비용,최저비용, 최대비용, 치료재료대조합여부, 약제비포함여부), 특이사항, 최종변경일로 구성되어 있습니다. ... 초음파 검사료 | 초음파 검사료 | 초음파검사-심장-경흉부심초음파-일반 |"
+            "title": "| 서울대학교병원운영 서울특별시보라매병원",
+            "snippet": "비급여 진료비 행위료 관련 표이며, 중분류, 분류, 항목(명칭,코드), 진료비용등(단위:원)(구분,비용,최저비용, 최대비용, 치료재료대조합여부, 약제비포함여부), 특이사항, 최종변경일로 구성되어 있습니다. ... 초음파 검사료 | 초음파 검사료 | 유도초음파(Ⅲ) |"
+          },
+          {
+            "url": "https://dongtan.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_cyber&screen=ptm120",
+            "domain": "dongtan.hallym.or.kr",
+            "title": "비급여진료비용 - 한림대학교동탄성심병원",
+            "snippet": "초음파 | 초음파 | (EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800 | | | | | | 2026-04-01 ... 초음파 | 초음파 | (EMU)응급-복합표적초음파-중증외상 | EB523"
           }
         ],
         "search_review": {
@@ -6420,13 +6317,13 @@
           "query": "심장초음파비용",
           "executed_query": "심장 초음파 비용",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-20T13:33:53.736075+00:00",
-          "raw_sha256": "d32fb77465bc2790fc61e0e1d41176b856be9f35c45cc020262a357747a7400a",
+          "checked_at": "2026-09-23T00:52:47.108466+00:00",
+          "raw_sha256": "493b220f7fa59644127fcd4c010c70ab4835cbd7613c2d5d5386c700f624340a",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "기본 +심장 초음파, 경동맥"
+              "quote": "소분류 | 코드 | 명칭 | 구분 | 비용 | 최저비용"
             },
             {
               "result_index": 1,
@@ -6435,67 +6332,80 @@
             },
             {
               "result_index": 2,
-              "relevant": false,
-              "quote": "의료법인 석경의료재단 센트럴병원 비급여 비용"
+              "relevant": true,
+              "quote": "심장-경흉부 심초음파/전문 심장초음파검사(병실왕진 또는 야간) | 391,000원"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "심장-경흉부 심초음파 · 일반 비용 비교"
+              "quote": "서울 송파구 진단 초음파 · 심장-경흉부 심초음파 · 일반 비용 비교"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "기본 + 흉부 저선량 CT, 갑상선 초음파,"
+              "quote": "대동맥초음파 비용 - 지역별·병원 종별 평균"
             },
             {
               "result_index": 5,
-              "relevant": false,
-              "quote": "상지 정맥 도플러 초음파 비급여 진료비 지역별·병원별 비교 168,225원"
+              "relevant": true,
+              "quote": "단순(심장-경흉부 심초음파-단순) | 220,000"
             },
             {
               "result_index": 6,
-              "relevant": true,
-              "quote": "(EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "주요암 + 경동맥 초음파, 심장(관상동맥_3D) CT, 뇌MRI+MRA"
-            },
-            {
-              "result_index": 8,
               "relevant": false,
               "quote": "갑상선 고주파절제술 비용 - 지역별·병원 종별 평균"
             },
             {
-              "result_index": 9,
+              "result_index": 7,
               "relevant": false,
-              "quote": "초음파 검사료 | 초음파 검사료 | 초음파검사-심장-경흉부심초음파-일반 |"
+              "quote": "<td>기본 + 흉부 저선량 CT, 갑상선 초음파,"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "초음파 검사료 | 초음파 검사료 | 유도초음파(Ⅲ)"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "(EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800"
             }
           ]
         }
       },
       {
-        "keyword": "발톱무좀치료방법",
+        "keyword": "갱년기증상",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=201325",
-              "title": "| 화폐모조품 이용신청 | 민원신청 | 민원 | 대국민 서비스 |  한국은행 홈페이지",
-              "excerpt_chars": 310
-            },
-            {
-              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
-              "title": "www.meca.or.kr",
-              "excerpt_chars": 260
+              "url": "https://www.keis.or.kr/keis/ko/index.do",
+              "title": "한국고용정보원",
+              "excerpt_chars": 1871
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.keis.or.kr/keis/ko/index.do",
+                  "title": "한국고용정보원",
+                  "excerpt_chars": 1871
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "no_changed_source"
           }
         }
       }
@@ -6506,173 +6416,178 @@
       {
         "round": 1,
         "offered_keywords": [
-          "세라마이드 크림",
-          "피부과",
+          "PDRN 세럼",
+          "콜라겐",
           "도수치료",
           "이비인후과",
-          "콜라겐",
-          "리쥬란",
+          "질유산균",
+          "바디워시",
           "대상포진예방접종가격",
-          "립마스크",
-          "가정의학과",
-          "대상포진병원",
           "정형외과",
-          "맥주효모",
-          "비타민B",
-          "CT비용",
+          "립밤",
+          "골프웨어",
+          "대상포진병원",
           "스포츠",
-          "PDRN 세럼",
-          "비오틴",
+          "콜라겐 젤리",
+          "샤워기헤드",
+          "CT비용",
+          "독감예방접종",
+          "바디로션",
+          "갱년기증상",
           "암보험비교사이트",
           "산부인과",
-          "비오틴 5000",
-          "헤어에센스",
+          "어성초 토너",
+          "갱년기영양제",
           "건강보험료조회",
-          "독감예방접종",
-          "커큐민",
-          "PDRN",
-          "대상포진주사가격",
-          "마그네슘",
-          "NMN",
-          "모발콜라겐",
-          "위내시경비용",
           "콘드로이친",
-          "판테놀 앰플",
-          "아누아세럼",
-          "경동맥초음파비용",
+          "이너뷰티",
+          "바이오더마",
+          "대상포진주사가격",
           "대상포진증상",
-          "여주",
-          "고지혈증약",
-          "발톱무좀치료방법",
+          "여성 영양제",
+          "PDRN",
+          "위내시경비용",
           "하이록스",
-          "주름 개선 크림",
+          "단백질 보충제",
+          "여성질유산균",
+          "경동맥초음파비용",
+          "위고비",
+          "풋크림",
+          "아누아세럼",
+          "발톱무좀치료방법",
+          "요가매트",
+          "이눌린",
           "헤르페스입술",
           "건강보험료계산",
-          "위고비",
-          "콜라겐 젤리",
-          "미녹시딜여자",
+          "커큐민",
+          "남자 영양제",
+          "리스키",
           "종합건강검진비용",
-          "글루타치온 필름",
-          "PDRN앰플",
+          "미백 앰플",
+          "샤워기필터",
           "심장초음파비용",
-          "글루타치온",
-          "두피 스케일러",
-          "GPH콜라겐",
-          "보험비교",
-          "아르기닌",
-          "미백 세럼",
-          "비오틴효과",
+          "탈모 영양제",
+          "샤워기",
           "갑상선에좋은음식",
-          "요가매트",
-          "아이크림",
-          "쇼핑몰"
+          "홍삼",
+          "탄력 크림",
+          "PDRN앰플",
+          "보험비교",
+          "대장암초기증상",
+          "철분",
+          "갱년기"
         ],
         "proposals": [
           {
             "keyword": "CT비용",
-            "reason": "네이버 월 11,520회. 촬영 비용과 건강보험 적용 조건, 예약 전 확인할 비용 항목을 묻는 구체적 수요가 있어 조사할 만하다.",
+            "reason": "네이버 월 11,740회. 검사 예약 전 촬영 부위·조영제·보험 적용에 따른 비용 확인 질문을 조사할 가치가 있다.",
             "search_query": "CT 비용"
           },
           {
             "keyword": "건강보험료조회",
-            "reason": "네이버 월 9,610회. 본인의 보험료 확인 절차와 조회 내역 해석을 조사할 가치가 있으며, 기존 환급금 조회와 목적이 다르다.",
+            "reason": "네이버 월 9,770회. 부과액과 납부 내역을 어디서 어떻게 확인하는지 절차 수요를 조사하기 좋다.",
             "search_query": "건강보험료 조회"
           },
           {
             "keyword": "경동맥초음파비용",
-            "reason": "네이버 월 6,640회인 구체적 검사비 검색어다. 검사 전 비용 확인 방법과 급여·비급여 조건을 조사할 가치가 있다.",
+            "reason": "네이버 월 6,660회. 검사 전 보험 적용 조건과 본인부담 비용을 확인하려는 구체적인 수요가 있다.",
             "search_query": "경동맥 초음파 비용"
           },
           {
             "keyword": "종합건강검진비용",
-            "reason": "네이버 월 5,220회. 유료 검진의 포함 항목과 추가 비용에 관한 질문으로, 기존 국가건강검진 대상자 조회와 목적이 다르다.",
+            "reason": "네이버 월 5,240회. 유료 검진의 기본 항목과 추가 검사 비용을 알고 싶은 수요로 기존 국가검진 안내와 구별된다.",
             "search_query": "종합 건강검진 비용"
           },
           {
             "keyword": "심장초음파비용",
-            "reason": "네이버 월 4,910회의 중소 검색량 후보다. 검사 종류별 비용 확인 사항과 건강보험 적용 조건에 관한 정보 수요를 조사하기 좋다.",
+            "reason": "네이버 월 4,930회. 검사 종류와 보험 적용 여부에 따른 비용 확인이라는 중소 검색량의 구체적 질문을 조사할 수 있다.",
             "search_query": "심장 초음파 비용"
+          },
+          {
+            "keyword": "갱년기증상",
+            "reason": "네이버 월 39,150회. 일반적인 증상과 진료 시 확인할 사항을 찾는 건강 정보 수요로, 기존 글과 검색 목적이 겹치지 않는다.",
+            "search_query": "갱년기 증상"
           }
         ]
       },
       {
         "round": 2,
         "offered_keywords": [
-          "세라마이드 크림",
-          "피부과",
+          "PDRN 세럼",
+          "콜라겐",
           "도수치료",
           "이비인후과",
-          "콜라겐",
-          "리쥬란",
+          "질유산균",
+          "바디워시",
           "대상포진예방접종가격",
-          "립마스크",
-          "가정의학과",
-          "대상포진병원",
           "정형외과",
-          "맥주효모",
-          "비타민B",
+          "립밤",
+          "골프웨어",
+          "대상포진병원",
           "스포츠",
-          "PDRN 세럼",
-          "비오틴",
+          "콜라겐 젤리",
+          "샤워기헤드",
+          "독감예방접종",
+          "바디로션",
           "암보험비교사이트",
           "산부인과",
-          "비오틴 5000",
-          "헤어에센스",
-          "독감예방접종",
-          "커큐민",
-          "PDRN",
-          "대상포진주사가격",
-          "마그네슘",
-          "NMN",
-          "모발콜라겐",
-          "위내시경비용",
+          "어성초 토너",
+          "갱년기영양제",
           "콘드로이친",
-          "판테놀 앰플",
-          "아누아세럼",
+          "이너뷰티",
+          "바이오더마",
+          "대상포진주사가격",
           "대상포진증상",
-          "여주",
-          "고지혈증약",
-          "발톱무좀치료방법",
+          "여성 영양제",
+          "PDRN",
+          "위내시경비용",
           "하이록스",
-          "주름 개선 크림",
+          "단백질 보충제",
+          "여성질유산균",
+          "위고비",
+          "풋크림",
+          "아누아세럼",
+          "발톱무좀치료방법",
+          "요가매트",
+          "이눌린",
           "헤르페스입술",
           "건강보험료계산",
-          "위고비",
-          "콜라겐 젤리",
-          "미녹시딜여자",
-          "글루타치온 필름",
-          "PDRN앰플",
-          "글루타치온",
-          "두피 스케일러",
-          "GPH콜라겐",
-          "보험비교",
-          "아르기닌",
-          "미백 세럼",
-          "비오틴효과",
+          "커큐민",
+          "남자 영양제",
+          "리스키",
+          "미백 앰플",
+          "샤워기필터",
+          "탈모 영양제",
+          "샤워기",
           "갑상선에좋은음식",
-          "요가매트",
-          "아이크림",
-          "쇼핑몰",
-          "수면대장내시경비용",
-          "피쉬콜라겐",
-          "리쥬란힐러",
+          "홍삼",
+          "탄력 크림",
+          "PDRN앰플",
+          "보험비교",
+          "대장암초기증상",
+          "철분",
+          "갱년기",
           "MRI비용",
-          "대장암초기증상"
+          "크로스핏",
+          "글루타치온 필름",
+          "코코넛오일",
+          "수면대장내시경비용",
+          "당뇨초기증상"
         ],
         "proposals": [
           {
             "keyword": "MRI비용",
-            "reason": "네이버 월 4,190회. 검사 부위·보험 적용 조건별 본인부담과 예약 전 비용 확인 항목을 조사할 가치가 있다.",
+            "reason": "월 4,240회 실측 수요. 검사 전 비용과 건강보험 적용 조건을 확인하려는 질문이 구체적이어서 조사할 가치가 있다.",
             "search_query": "MRI 비용"
           },
           {
             "keyword": "발톱무좀치료방법",
-            "reason": "네이버 월 6,120회. 일반적인 치료 방식과 진료 과정에 관한 구체적 수요로, 공식 자료의 설명 범위를 조사하기 좋다.",
+            "reason": "월 5,980회 실측 수요. 치료 방법별 차이와 주의사항을 묻는 수요로, 개인별 처방 없이 일반 의료정보를 조사할 수 있다.",
             "search_query": "발톱 무좀 치료 방법"
           },
           {
             "keyword": "갑상선에좋은음식",
-            "reason": "네이버 월 4,800회. 질환별 식사 주의점과 음식의 효과를 어디까지 설명할 수 있는지 공식 근거를 조사할 필요가 있다.",
+            "reason": "월 4,850회 실측 수요. 음식의 효과에 대한 근거와 섭취 주의사항을 확인하려는 구체적인 건강관리 질문으로 조사 가치가 있다.",
             "search_query": "갑상선에 좋은 음식"
           }
         ]
@@ -6681,31 +6596,30 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "종합건강검진비용",
-        "monthly_search": 5220,
-        "score": 58.31,
-        "status": "held",
-        "reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
-        ],
-        "organic_query": "종합 건강검진 비용"
-      },
-      {
         "keyword": "갑상선에좋은음식",
-        "monthly_search": 4800,
-        "score": 55.7,
+        "monthly_search": 4850,
+        "score": 60.11,
         "status": "held",
         "reasons": [
-          "narrower_source_coverage",
-          "unverified_source_coverage"
+          "missing_topic_suitability"
         ],
         "organic_query": "갑상선에 좋은 음식"
       },
       {
+        "keyword": "발톱무좀치료방법",
+        "monthly_search": 5980,
+        "score": 58.21,
+        "status": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ],
+        "organic_query": "발톱 무좀 치료 방법"
+      },
+      {
         "keyword": "MRI비용",
-        "monthly_search": 4190,
-        "score": 54.73,
+        "monthly_search": 4240,
+        "score": 52.05,
         "status": "held",
         "reasons": [
           "missing_topic_suitability"
@@ -6716,36 +6630,43 @@
         "keyword": "CT비용",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 11520,
+        "monthly_search": 11740,
         "organic_query": "CT 비용"
       },
       {
         "keyword": "건강보험료조회",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 9610,
+        "monthly_search": 9770,
         "organic_query": "건강보험료 조회"
       },
       {
         "keyword": "경동맥초음파비용",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 6640,
+        "monthly_search": 6660,
         "organic_query": "경동맥 초음파 비용"
+      },
+      {
+        "keyword": "종합건강검진비용",
+        "status": "rejected",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 5240,
+        "organic_query": "종합 건강검진 비용"
       },
       {
         "keyword": "심장초음파비용",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 4910,
+        "monthly_search": 4930,
         "organic_query": "심장 초음파 비용"
       },
       {
-        "keyword": "발톱무좀치료방법",
+        "keyword": "갱년기증상",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 6120,
-        "organic_query": "발톱 무좀 치료 방법"
+        "monthly_search": 39150,
+        "organic_query": "갱년기 증상"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."

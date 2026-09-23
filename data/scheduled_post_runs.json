@@ -88,6 +88,13 @@
       "claimed_at": "2026-09-22T19:00:07.833525+09:00",
       "status": "failure",
       "completed_at": "2026-09-22T10:19:33.300816+00:00"
+    },
+    "2026-09-23:morning": {
+      "run_id": "35814159734",
+      "category": "건강",
+      "slot": "morning",
+      "claimed_at": "2026-09-23T12:24:00.615676+09:00",
+      "status": "started"
     }
   }
 }

@@ -8788,5 +8788,626 @@
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."
+  },
+  "테크": {
+    "category": "테크",
+    "selected_at": "2026-09-23T10:01:44.337146+00:00",
+    "seeds": [
+      "갤럭시",
+      "아이폰",
+      "윈도우",
+      "와이파이"
+    ],
+    "selection_version": 6,
+    "research_rounds": 2,
+    "source_recovery_attempts": 2,
+    "cak_import": {
+      "status": "not_applicable",
+      "reason": "health_only",
+      "direct_count": 0,
+      "expanded_seed_count": 0,
+      "related_count": 0,
+      "seed_lookup_failed_count": 0
+    },
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 602,
+    "evaluated_candidates": 4,
+    "research_pool_size": 120,
+    "selected": [],
+    "held": [],
+    "rejected": [
+      {
+        "keyword": "와이파이공유기설치방법",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://medlineplus.gov/about/using/searchtips/",
+              "title": "MedlinePlus: Search Tips",
+              "excerpt_chars": 6259
+            },
+            {
+              "url": "https://www.fipa.or.kr/fipa/cntnts/i-264/web.do",
+              "title": "정보공개 청구절차 | 정보공개제도",
+              "excerpt_chars": 799
+            },
+            {
+              "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+              "title": "www.meca.or.kr",
+              "excerpt_chars": 259
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://medlineplus.gov/about/using/searchtips/",
+                  "title": "MedlinePlus: Search Tips",
+                  "excerpt_chars": 6259
+                },
+                {
+                  "url": "https://www.fipa.or.kr/fipa/cntnts/i-264/web.do",
+                  "title": "정보공개 청구절차 | 정보공개제도",
+                  "excerpt_chars": 799
+                },
+                {
+                  "url": "https://www.meca.or.kr/api/communication/archive/download?attachFilePath=%2Freference%2Fold%2Fboard%2F1588909968392.pdf",
+                  "title": "www.meca.or.kr",
+                  "excerpt_chars": 259
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "no_changed_source"
+          }
+        }
+      },
+      {
+        "keyword": "윈도우10설치방법",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://support.microsoft.com/ko-kr/windows/deployment/install-upgrade/create-installation-media-for-windows",
+              "title": "Windows 용 설치 미디어 만들기 | Microsoft Support",
+              "excerpt_chars": 1578
+            },
+            {
+              "url": "https://support.microsoft.com/ko-kr/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media",
+              "title": "설치 미디어를 사용하여 Windows 다시 설치 | Microsoft Support",
+              "excerpt_chars": 4587
+            },
+            {
+              "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
+              "title": "Windows 정품 인증 | Microsoft Support",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://medlineplus.gov/about/using/searchtips/",
+                  "title": "MedlinePlus: Search Tips",
+                  "excerpt_chars": 6259
+                },
+                {
+                  "url": "https://lms.educare.or.kr/lms/guide/board/readBoard.edu?board.bbsnum=15209&paramCodeType=FQ01",
+                  "title": "중앙육아종합지원센터 : 이용안내 : 문의사항",
+                  "excerpt_chars": 939
+                },
+                {
+                  "url": "https://www.reb.or.kr/reb/na/ntt/selectNttInfo.do?mi=9665&nttSn=112025",
+                  "title": "한국부동산원-자주묻는질문-글보기",
+                  "excerpt_chars": 412
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://support.microsoft.com/ko-kr/windows/deployment/install-upgrade/create-installation-media-for-windows",
+                  "title": "Windows 용 설치 미디어 만들기 | Microsoft Support",
+                  "excerpt_chars": 1578
+                },
+                {
+                  "url": "https://support.microsoft.com/ko-kr/windows/deployment/install-upgrade/reinstall-windows-with-the-installation-media",
+                  "title": "설치 미디어를 사용하여 Windows 다시 설치 | Microsoft Support",
+                  "excerpt_chars": 4587
+                },
+                {
+                  "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
+                  "title": "Windows 정품 인증 | Microsoft Support",
+                  "excerpt_chars": 8000
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
+          }
+        }
+      },
+      {
+        "keyword": "휴대폰개통조회",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 1710,
+        "organic_provider": "codex_native_search",
+        "organic_query": "휴대폰 개통 조회",
+        "organic_results": [
+          {
+            "url": "https://mapps.kbcard.com/SVC/DVIEW/MSBM0002",
+            "domain": "mapps.kbcard.com",
+            "title": "KB 국민카드",
+            "snippet": "서비스 상세 통신사 개통이력 조회 * 통신사, 개통 회선수, 경과기간, MVNO(알뜰폰) 여부, 선후불 여부 등 개통 이력 상세 조회 가능 ... * KB국민카드에 등록하신 고객님의"
+          },
+          {
+            "url": "https://gachimobile.tistory.com/entry/%ED%9C%B4%EB%8C%80%ED%8F%B0-%EA%B0%9C%ED%86%B5-%EA%B0%80%EB%8A%A5%ED%9A%8C%EC%84%A0-%EC%A1%B0%ED%9A%8C%EF%BD%9C180%EC%9D%BC-%EA%B8%B0%EC%A4%80-%EB%82%A8%EC%9D%80-%ED%9A%8C%EC%84%A0-%EA%B3%84%EC%82%B0%EB%B2%95",
+            "domain": "gachimobile.tistory.com",
+            "title": "휴대폰 개통 가능회선 조회｜180일 기준 남은 회선 계산법",
+            "snippet": "휴대폰 개통 가능회선 조회｜180일 기준 남은 회선 계산법 본문으로 이동 ... 엠세이퍼의 가입사실현황조회 결과는 조회 시점의 본인 명의 개통현황입니다."
+          },
+          {
+            "url": "https://pf.kakao.com/_Uzbzxl",
+            "domain": "pf.kakao.com",
+            "title": "카카오톡채널 - 더갓폰",
+            "snippet": "✔ 인터넷 + TV + 휴대폰 동시 변경 시 ➡️ 최대 80만원 추가 지원 (비교 환영) 👆 이 정보 유용하셨나요? ... ●● 휴대폰 상담문의 :"
+          },
+          {
+            "url": "https://planfix.kr/hyudaepon-gaetong-johoe/",
+            "domain": "planfix.kr",
+            "title": "휴대폰 개통 조회 안 될 때 확인 방법",
+            "snippet": "충전은 분명 끝났는데 휴대폰 개통 조회를 해보면 아직 신호가 안 잡힌다고 나올 때가 있죠. ... 이 단계를 건너뛰면 휴대폰 개통 조회를 해도 계속 대기 중으로"
+          },
+          {
+            "url": "https://www.moyoplan.com/community/questions?word=%EC%B2%A0%ED%9A%8C",
+            "domain": "www.moyoplan.com",
+            "title": "알뜰폰 질문/답변 | 모요, 모두의요금제",
+            "snippet": "* 번호 이동 후 개통 철회 과정에서의 문제 해결 방법 이해하기 조회 5,062답변 1 ... * 아이폰 16 휴대폰 개통 철회가 가능할까요?"
+          },
+          {
+            "url": "https://www.kmcc.go.kr/download.do%3Bjsessionid%3D1zGSzQXn6LNV7e_zLqo7uAqIK9o-rie559HVa0DN.servlet-aihgcldhome20?fileSeq=57822",
+            "domain": "www.kmcc.go.kr",
+            "title": "2024년 2월\n2023년\n통신분쟁조정\n사례집",
+            "snippet": "명의도용으로 휴대폰이 개통되었다며 분쟁조정 신청 ... 대출사기 및 명의도용으로 휴대전화가 개통되어 막대한 피해가 발생하였다며 ... 대출 조회 중, 휴대폰을 담보로 대출이 가능하다는 안내를 받게 되었고"
+          },
+          {
+            "url": "https://game.dcinside.com/board/view/?id=cellularphone&no=1514019&page=1",
+            "domain": "game.dcinside.com",
+            "title": "폰식이햄 덕분에 개통 잘됐다 - 휴대폰 갤러리",
+            "snippet": "### 폰식이햄 덕분에 개통 잘됐다 모바일에서 작성 ... [Button: 스크랩] 조회 111 댓글 1 ... 휴대폰 잘 모르는 유동들한테도 추천함"
+          },
+          {
+            "url": "https://www.moyoplan.com/community/questions?word=%ED%9C%B4%EB%8C%80%ED%8F%B0+%EA%B0%9C%ED%86%B5",
+            "domain": "www.moyoplan.com",
+            "title": "알뜰폰 질문/답변 | 모요, 모두의요금제",
+            "snippet": "* 통신사 미납금이 있으면 알뜰폰 개통이 안되나요? ... * 휴대폰 개통 시 유튜브 프리미엄 이상한 연동 문제 조회 1,099답변 1"
+          },
+          {
+            "url": "https://sbpland2910643.tistory.com/392",
+            "domain": "sbpland2910643.tistory.com",
+            "title": "휴대폰 개통 이력 조회 방법 완벽 정리",
+            "snippet": "휴대폰 관련 조회 시 엠세이퍼를 먼저 생각하는 분들이 많지만, 개통 제한 여부 확인 용도로는 한계가 명확합니다. ... 휴대폰 개통 이력을 확인하는 방법은 여러 가지가 있지만,"
+          },
+          {
+            "url": "https://ktdw.co.kr/servlet/download?attachId=51011&ext=pdf&fileName=%ED%9C%B4%EB%8C%80%ED%8F%B0+%EC%A0%91%EC%88%98+%EB%B0%8F+%EA%B0%9C%ED%86%B5+%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4&month=04&year=2016",
+            "domain": "ktdw.co.kr",
+            "title": "휴대폰 접수 및 개통 프로세스",
+            "snippet": "휴대폰 접수 및 개통 프로세스 ... <td>KT동우회 모바일 특판 초기화면에서<br>- 주문/배송조회 클릭-&gt;이름,전화번호-&gt;로그인<br>주문배송,신청서 임시저장,신청서취소 등 가능함</td> ... <td>- 구단말기 정보 신단말기로 이관요청<br>• 올레프라자(전화국) 방문 이관요청<br>• kt직영대리점"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "휴대폰개통조회",
+          "executed_query": "휴대폰 개통 조회",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-23T10:01:44.337146+00:00",
+          "raw_sha256": "3e861456bcb918330ea65787aaa8c83644bfb819fc925ca67d5e3a8ba774000b",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "통신사 개통이력 조회"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "엠세이퍼의 가입사실현황조회 결과는 조회 시점의 본인 명의 개통현황입니다."
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "인터넷 + TV + 휴대폰 동시 변경 시"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "휴대폰 개통 조회 안 될 때 확인 방법"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "번호 이동 후 개통 철회 과정에서의 문제 해결 방법 이해하기"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "명의도용으로 휴대폰이 개통되었다며 분쟁조정 신청"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "폰식이햄 덕분에 개통 잘됐다"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "통신사 미납금이 있으면 알뜰폰 개통이 안되나요?"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "휴대폰 개통 이력 조회 방법 완벽 정리"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "주문배송,신청서 임시저장,신청서취소 등 가능함"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "인터넷속도",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 29740,
+        "organic_provider": "codex_native_search",
+        "organic_query": "인터넷 속도",
+        "organic_results": [
+          {
+            "url": "https://d.namu.moe/w/%EC%9D%B8%ED%8A%B8%EB%9D%BC%EB%84%B7",
+            "domain": "d.namu.moe",
+            "title": "인트라넷",
+            "snippet": "이후 프로토콜의 표준화 등으로 초기에 비해 비용이 비약적으로 낮아지기 시작했는데 비용 절감에 힘입어 이 시스템을 내부가 아닌 외부로 확장시킨 것이 현재의 인터넷 개념이다. ... 쿠바"
+          },
+          {
+            "url": "https://www.jne.go.kr/upload/sse/na/bbs_374/ntt_5139152/doc_171c72a5-1dcc-453d-a39b-b7ed8968b3df1741a6187b07628.pdf",
+            "domain": "www.jne.go.kr",
+            "title": "3 인터넷 속도 확인 방법",
+            "snippet": "• 인터넷 속도 측정은 NIA(한국지능정보사회진흥원) 인터넷 속도 측정 사이트 접속 후 [인터넷 속도] 아이콘을 클릭 ... 통신사 목록에는 “통신사 선택, KT, SK 브로드밴드, LG유플러스, JCN"
+          },
+          {
+            "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+            "domain": "bizok.incheon.go.kr",
+            "title": "기업정보 내용 | 비즈오케이>기업정보",
+            "snippet": "### (주)이너트론 ... * Image: 테스트 제품의 2번째 사진 썸네일 ... * 소재지 : (22014)인천광역시 연수구 하모니로 301 (송도동, 이너트론송도연구소)"
+          },
+          {
+            "url": "https://m.namu.moe/w/%EC%9D%B8%ED%8A%B8%EB%9D%BC%EB%84%B7",
+            "domain": "m.namu.moe",
+            "title": "인트라넷",
+            "snippet": "이후 프로토콜의 표준화 등으로 초기에 비해 비용이 비약적으로 낮아지기 시작했는데 비용 절감에 힘입어 이 시스템을 내부가 아닌 외부로 확장시킨 것이 현재의 인터넷 개념이다. ... 쿠바"
+          },
+          {
+            "url": "https://www.w.intnet.kr/kwa-question_v-15538?PB_1572920629=763",
+            "domain": "www.w.intnet.kr",
+            "title": "인터넷 속도 질문이요~ - 질문게시판 > INT통신",
+            "snippet": "# 인터넷 속도 질문이요~100메가 인터넷 쓰고 있는데 속도가 느려요 ... >> 일단 기존 통신사에서 그대로 속도만 올리는 것은 따로 지원금이 나오지는 않습니다."
+          },
+          {
+            "url": "https://itspeedtest.net/ko/blog",
+            "domain": "itspeedtest.net",
+            "title": "인터넷 속도 및 광대역 블로그 | ITSpeedTest.net",
+            "snippet": "인터넷 속도, 대역폭, 지연 시간, Wi-Fi에 대한 가이드와 팁 — 연결을 이해하고 최대한 활용하세요. ... 라우터 위치부터 ISP 속도 제한까지, 인터넷이 느린 12가지 원인과 해결법을"
+          },
+          {
+            "url": "https://www.namu.moe/w/%EC%9D%B8%ED%8A%B8%EB%9D%BC%EB%84%B7?from=%EB%82%B4%EB%B6%80%EB%A7%9D",
+            "domain": "www.namu.moe",
+            "title": "인트라넷",
+            "snippet": "이후 프로토콜의 표준화 등으로 초기에 비해 비용이 비약적으로 낮아지기 시작했는데 비용 절감에 힘입어 이 시스템을 내부가 아닌 외부로 확장시킨 것이 현재의 인터넷 개념이다. ... 원칙적으로"
+          },
+          {
+            "url": "https://downloads.linksys.com/support/assets/userguide/EA7500v3%20USER%20GUIDE%20INTL_RevB00.pdf",
+            "domain": "downloads.linksys.com",
+            "title": "속도 테스트\n\n네트워크의 인터넷 연결 속도를 테스트합니다.\n\n<visual_element",
+            "snippet": "네트워크의 인터넷 연결 속도를 테스트합니다. ... 가 보이고, 중앙에는 다운로드/업로드 속도를 나타내는 원형 속도계가 있으며 왼쪽은 “Download Speed”, 오른쪽은 “Upload Speed”로 표시된다.아래에 “Begin Test” 버튼이"
+          },
+          {
+            "url": "https://downloads.linksys.com/support/assets/userguide/EA7500v3%20USER%20GUIDE%20INTL_RevB02.pdf",
+            "domain": "downloads.linksys.com",
+            "title": "속도 테스트  \n네트워크의 인터넷 연결 속도를 테스트합니다.\n\n<visual_element",
+            "snippet": "속도 테스트네트워크의 인터넷 연결 속도를 테스트합니다."
+          },
+          {
+            "url": "https://cnc.cacf.or.kr/main/html/sub03/0312.html?file_id=19635&mode=D&no=3184721ad669508fd995a9fc8ff130ae",
+            "domain": "cnc.cacf.or.kr",
+            "title": "AR․VR․홀로그램\n문화유산 활성화 방안 연구\nA Study on the Activatio",
+            "snippet": "◦8개 기관 모두 인터넷이 사용 가능, 인터넷 속도는 VDSL~기가 수준 ... 인터넷 속도 ADSL | 응답 수 1 | 비율(%) 12.5% --- | --- |"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "인터넷속도",
+          "executed_query": "인터넷 속도",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-23T10:01:44.337146+00:00",
+          "raw_sha256": "d0d1b067665097641a241b766fb9949b7abb8f4eccd1215cf0b7a892c2d26960",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "이 시스템을 내부가 아닌 외부로 확장시킨 것이 현재의 인터넷 개념이다."
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "인터넷 속도 측정은 NIA(한국지능정보사회진흥원) 인터넷 속도 측정 사이트 접속 후"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "기업정보 내용 | 비즈오케이>기업정보"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "이 시스템을 내부가 아닌 외부로 확장시킨 것이 현재의 인터넷 개념이다."
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "100메가 인터넷 쓰고 있는데 속도가 느려요"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "라우터 위치부터 ISP 속도 제한까지, 인터넷이 느린 12가지 원인과 해결법을"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "이 시스템을 내부가 아닌 외부로 확장시킨 것이 현재의 인터넷 개념이다."
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "네트워크의 인터넷 연결 속도를 테스트합니다."
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "네트워크의 인터넷 연결 속도를 테스트합니다."
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "문화유산 활성화 방안 연구"
+            }
+          ]
+        }
+      }
+    ],
+    "excluded_keywords": [],
+    "selection_scope": "highest_score_among_evaluated",
+    "proposal_rounds": [
+      {
+        "round": 1,
+        "offered_keywords": [
+          "인터넷비교사이트",
+          "삼성닷컴",
+          "블랙프라이데이기간",
+          "아이폰17",
+          "인터넷신청",
+          "미세먼지",
+          "휴대폰개통조회",
+          "갤럭시",
+          "와이파이공유기설치방법",
+          "인터넷속도측정",
+          "인터넷비교",
+          "갤럭시S25",
+          "인터넷요금비교",
+          "세탁기",
+          "결혼준비신용카드",
+          "KT인터넷",
+          "블프기간",
+          "아이폰16",
+          "인터넷설치비용",
+          "아이폰사전예약",
+          "인터넷가입비교사이트",
+          "건조기",
+          "인터넷TV신청",
+          "통돌이세탁기",
+          "인터넷가격비교",
+          "윈도우11",
+          "인터넷가입비교",
+          "드럼세탁기",
+          "인터넷비용",
+          "아이폰15",
+          "윈도우10설치방법",
+          "아이폰16PRO",
+          "그래픽카드",
+          "KT요금제",
+          "조립PC",
+          "휴대폰",
+          "아이폰16프로",
+          "와이파이공유기",
+          "인터넷속도",
+          "COPILOT",
+          "삼성닷컴홈페이지",
+          "갤럭시S24",
+          "삼성갤럭시",
+          "LGU+",
+          "IPTIME",
+          "폴더폰",
+          "갤럭시S25울트라",
+          "공유기",
+          "MS오피스",
+          "KT인터넷고객센터",
+          "아이폰15PRO",
+          "삼성핸드폰",
+          "마이크로소프트365",
+          "삼성몰",
+          "전기밥솥",
+          "IPTIME공유기",
+          "미니건조기",
+          "세탁기건조기일체형",
+          "와이파이증폭기",
+          "아이폰사전예약혜택"
+        ],
+        "proposals": [
+          {
+            "keyword": "와이파이공유기설치방법",
+            "reason": "월 1,480건의 구체적인 설치 수요가 있어 케이블 연결, 초기 설정, 연결 실패 시 확인 절차를 조사할 가치가 있다.",
+            "search_query": "와이파이 공유기 설치 방법"
+          },
+          {
+            "keyword": "윈도우10설치방법",
+            "reason": "월 500건의 설치 절차 수요가 있다. 현재 공식 설치 파일 제공 여부와 지원 조건, USB 준비·설치 과정을 확인할 필요가 있다.",
+            "search_query": "윈도우10 설치 방법"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "인터넷비교사이트",
+          "삼성닷컴",
+          "블랙프라이데이기간",
+          "아이폰17",
+          "인터넷신청",
+          "미세먼지",
+          "휴대폰개통조회",
+          "갤럭시",
+          "인터넷속도측정",
+          "인터넷비교",
+          "갤럭시S25",
+          "인터넷요금비교",
+          "세탁기",
+          "결혼준비신용카드",
+          "KT인터넷",
+          "블프기간",
+          "아이폰16",
+          "인터넷설치비용",
+          "아이폰사전예약",
+          "인터넷가입비교사이트",
+          "건조기",
+          "인터넷TV신청",
+          "통돌이세탁기",
+          "인터넷가격비교",
+          "윈도우11",
+          "인터넷가입비교",
+          "드럼세탁기",
+          "인터넷비용",
+          "아이폰15",
+          "아이폰16PRO",
+          "그래픽카드",
+          "KT요금제",
+          "조립PC",
+          "휴대폰",
+          "아이폰16프로",
+          "와이파이공유기",
+          "인터넷속도",
+          "COPILOT",
+          "삼성닷컴홈페이지",
+          "갤럭시S24",
+          "삼성갤럭시",
+          "LGU+",
+          "IPTIME",
+          "폴더폰",
+          "갤럭시S25울트라",
+          "공유기",
+          "MS오피스",
+          "KT인터넷고객센터",
+          "아이폰15PRO",
+          "삼성핸드폰",
+          "마이크로소프트365",
+          "삼성몰",
+          "전기밥솥",
+          "IPTIME공유기",
+          "미니건조기",
+          "세탁기건조기일체형",
+          "와이파이증폭기",
+          "아이폰사전예약혜택",
+          "아이폰13",
+          "SK인터넷"
+        ],
+        "proposals": [
+          {
+            "keyword": "휴대폰개통조회",
+            "reason": "월 1,710건의 구체적 조회 수요가 있어, 본인 명의 개통 내역 확인 절차와 필요한 인증 수단을 조사할 가치가 있다.",
+            "search_query": "휴대폰 개통 조회"
+          },
+          {
+            "keyword": "인터넷속도",
+            "reason": "월 29,740건의 수요가 있어, 속도 단위의 의미와 유선·무선 연결에서 속도가 달라지는 원인을 설명할 정보 수요를 조사할 만하다.",
+            "search_query": "인터넷 속도"
+          }
+        ]
+      }
+    ],
+    "ranked_candidates": [],
+    "candidate_decisions": [
+      {
+        "keyword": "와이파이공유기설치방법",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 1480,
+        "organic_query": "와이파이 공유기 설치 방법"
+      },
+      {
+        "keyword": "윈도우10설치방법",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 500,
+        "organic_query": "윈도우10 설치 방법"
+      },
+      {
+        "keyword": "휴대폰개통조회",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 1710,
+        "organic_query": "휴대폰 개통 조회"
+      },
+      {
+        "keyword": "인터넷속도",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 29740,
+        "organic_query": "인터넷 속도"
+      }
+    ],
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."
   }
 }

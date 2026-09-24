@@ -118,7 +118,8 @@
       "category": "생활정보",
       "slot": "evening",
       "claimed_at": "2026-09-24T19:04:13.257266+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-09-24T10:23:05.146792+00:00"
     }
   }
 }

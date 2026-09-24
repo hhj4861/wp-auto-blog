@@ -203,5 +203,25 @@
     "trend_status": "measured",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-24T03:17:14.063070+00:00"
+  },
+  {
+    "key": "세금계산서발행",
+    "keyword": "세금계산서발행",
+    "topic": "세금계산서발행 방법과 준비물, 발급·전송기한 안내",
+    "category": "생활정보",
+    "post_id": 1775,
+    "url": "https://trendpulse.blog/tax-invoice-issuance-2026/",
+    "selection_version": 6,
+    "monthly_search": 16390,
+    "score": 76.68,
+    "score_components": {
+      "demand": 33.72,
+      "organic_opportunity": 27.65,
+      "trend": 0.31,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-24T10:23:01.487408+00:00"
   }
 ]

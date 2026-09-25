@@ -120,6 +120,13 @@
       "claimed_at": "2026-09-24T19:04:13.257266+09:00",
       "status": "success",
       "completed_at": "2026-09-24T10:23:05.146792+00:00"
+    },
+    "2026-09-25:morning": {
+      "run_id": "36090648868",
+      "category": "리뷰",
+      "slot": "morning",
+      "claimed_at": "2026-09-25T12:30:47.322012+09:00",
+      "status": "started"
     }
   }
 }

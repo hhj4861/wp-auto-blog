@@ -223,5 +223,25 @@
     "trend_status": "measured",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-24T10:23:01.487408+00:00"
+  },
+  {
+    "key": "경영지도사자격증",
+    "keyword": "경영지도사자격증",
+    "topic": "경영지도사자격증이란? 하는 일과 시험·등록 절차, 활동분야",
+    "category": "취업",
+    "post_id": 1778,
+    "url": "https://trendpulse.blog/management-consultant-certificate-2026/",
+    "selection_version": 6,
+    "monthly_search": 1480,
+    "score": 56.69,
+    "score_components": {
+      "demand": 25.36,
+      "organic_opportunity": 16.33,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-25T10:31:23.189292+00:00"
   }
 ]

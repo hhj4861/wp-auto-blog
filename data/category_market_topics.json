@@ -8228,7 +8228,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-09-25T00:44:09.298842+00:00",
+    "selected_at": "2026-09-25T03:31:31.715994+00:00",
     "seeds": [
       "로봇청소기",
       "무선청소기",
@@ -8249,44 +8249,35 @@
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 433,
-    "evaluated_candidates": 8,
+    "evaluated_candidates": 9,
     "research_pool_size": 120,
     "selected": [],
     "held": [
       {
-        "keyword": "무선청소기비교",
+        "keyword": "노트북비교",
         "category": "리뷰",
-        "topic": "무선청소기비교: 흡입력·사용시간·무게·보관 방식 선택 기준",
-        "intent": "무선청소기를 구매할 때 집 크기와 청소 습관에 맞춰 어떤 사양과 편의 기능을 비교해야 할까?",
-        "gap": "흡입력·사용시간의 측정 조건 비교표와 무게·보관·먼지통 관리 체크리스트를 제공하고 해외 모델은 구분한다.",
-        "source_url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
+        "topic": "노트북비교: 사무용·게임용·영상편집용 구매 전 사양과 선택 기준",
+        "intent": "사무·게임·영상편집 용도에 맞는 노트북을 고를 때 어떤 사양과 제약을 비교해야 할까?",
+        "gap": "LG 공식 가이드에 근거한 용도별 CPU·RAM·GPU 비교 항목표와 화면·휴대성·단자·업그레이드 체크리스트 제공",
+        "source_url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
         "verified_sources": [
           {
-            "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
-            "original_url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
-            "title": "청소기 구매가이드  l Samsung 대한민국",
+            "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
+            "original_url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
+            "title": "Step-by-Step Notebook Laptop Buying Guide | LG UK",
             "checked_on": "2026-09-25",
-            "sha256": "5b905ff9c0b442eec978d8a03b7f924b64c236a5adb2509c94528b6d5cd5e7a3",
-            "excerpt": "본문 바로가기 일주일 그만보기 닫기 갤럭시 AI 폰 구매 고객님께 드리는 스마트태그2 를 지금 신청하세요! (대상 모델 : S24 시리즈, S23 FE, Z Fold5 | Z Flip5, S23 시리즈) 신청하기 갤럭시 캠퍼스 회원 이시네요! 리뉴얼 이벤트와 오리지널 콘텐츠, 더 풍성해진 커뮤니티까지! 새로워진 갤럭시 캠퍼스 를 만나보세요 갤럭시 캠퍼스로 이동하기 최근 본 제품 최근 본 제품 닫기 검색 결과 0 개 전체삭제 ※ 최근 본 제품은 30일간 보관됩니다. 구매가이드 > 청소기 냉장고 김치냉장고 식기세척기 인덕션 정수기 의류케어 에어컨 시스템에어컨 공기청정기 유형 흡입력 청소시간 스마트 기능 주요 기능 유형 흡입력 청소시간 스마트 기능 주요 기능 우리 집에 꼭 필요한 청소기를 찾아보세요 우리 집과 나의 라이프 스타일에 딱 맞는 청소기를 선택해 보세요. 구매 전에 꼭 확인하세요 01 유형 라이프스타일에 어울리는 청소기 제품 유형을 선택해 보세요. 더 알아보기 02 흡입력 나의 청소 루틴에 맞는 최적의 흡입력을 선택해 보세요. 더 알아보기 03 청소시간 컴팩트한 공간부터 넓은 주택까지, 공간에 어울리는 제품을 선택해 보세요. 더 알아보기 04 스마트 기능 청소 환경을 감지하여 효율적으로 청소해주는 스마트 기능을 확인해 보세요. 더 알아보기 05 주요 기능 청소가 더 쉽고 편해지는 다양한 기능을 경험해 보세요. 더 알아보기 우리 집에 잘 맞는 청소기 타입 확인하기 우리 집은 깨끗해지고 일상은 더욱 편리해집니다. 공간과 라이프스타일에 맞춘 청소기 유형을 선택해 보세요. 무선 청소기 로봇 청소기 강력한 흡입력으로 깨끗하게 무선 청소기는 강력한 흡입력과 긴 사용 시간, 먼지 배출 없는 성능으로 손쉬운 청소를 지원합니다. 더 알아보기 AI가 알아서 똑똑하게 로봇 청소기는 3D 센서, AI 인식, 라이다(LiDAR)를 활용한 최적의 경로와 내비게이션으로 자동으로 청소하고 먼지통까지 비워줍니다. 더 알아보기 청소 루틴 확인하기 가벼운 정리부터 집중적인 청소까지 모든 청소 루틴을 위한 흡입력을 갖추었습니다. 라이프스타일에 맞는 제품으로 더욱 편리하고 깨끗하게 청소의 수준을 높여보세요. 이전 슬림 150W 일상적인 청소를 위한 가벼운 무게와 합리적인 흡입력으로 매일 빠르고 간단하게 청소하는 루틴에 적합합니다. 더 알아보기 제트 200~280W 다양한 환경에서 집중적인 청소를 위한 강력한 흡입력으로 일주일에 여러 번 청소하는 루틴에 적합합니다. 더 알아보기 제트 400W 강력하고 집중적인 청소를 위한 최대 흡입력으로 일주일에 한두 번 깨끗하게 청소하는 루틴에 적합합니다. 더 알아보기 다음 play Indicator 1 Close Close Close * 세부 기능은 모델에 따라 상이하며, 실사용 환경에 따라 사용시간이 달라질 수 있습니다. * 최대 400W 출력의 제트 모드 사용시 사용시간은 '1분'으로 실사용 환경에 따라 사용시간이 달라질 수 있습니다. 우리 집 공간사이즈 확인하기 컴팩트한 공간부터 넓은 가족형 주택까지 거주 공간별로 우리 집에 가장 어울리는 제품을 선택해 보세요. 이전 컴팩트한 곳에서 매일 가볍게 쓰는 데일리 청소기 최대 50분 청소 시간으로 침실, 주방 등 주요 주거 공간을 일상적으로 빠르게 청소하기에 적합합니다. 더 알아보기 중간 크기의 주거 공간에 맞춘 청소기 최대 60분 청소 시간으로 거실부터 침실까지, 중간 크기 공간을 충전 없이 한번에 청소하기에 적합합니다. 더 알아보기 가족 구성원이 많은 대가족 공간에 맞춘 청소기 최대 100분 청소 시간으로 넓은 주거 공간이나 복층 구조, 집 전체를 충전 없이 강력하게 청소하기에 적합합니다 더 알아보기 다음 play Indicator 1 Close Close Close * 세부 기능은 모델에 따라 상이하며, 실사용 환경에 따라 사용시간이 달라질 수 있습니다. * 사용시간 : Bespoke AI 제트 400W, 일반모드 100분은 대용량 배터리를 탑재한 핸디 기준 똑똑함을 더한 AI 기능 확인하기 한층 진화한 AI로 주거환경에 맞춘 편리하고 효율적인 청소를 만나보세요. 번거로움 없이 스마트한 청소로 일상이 여유로운 스마트홈을 경험할 수 있습니다. 이전 AI 바닥 인식 AI 바닥 인식으로 카펫, 나무 바닥, 타일 등 각 재질에 맞춰 최적화된 흡입력과 브러시 설정으로 청소합니다. 1 AI 사물 인식 RGB 카메라로 다양한 사물과 가구, 가전, 반려동물까지 식별하고 액체의 오염구역, 공간까지 인식해 끊김이나 걸림 없이 효율적으로 청소할 수 있습니다. * 해당 기능은 Bespoke AI 스팀 울트라(VR90F*) 모델에 한합니다. AI 액체 인식 적외선 LED 광과 RGB 카메라 기반의 AI 액체 인식 기술로 투명한 액체를 포함한 오염 구역을 정밀하게 감지합니다. * 해당 기능은 Bespoke AI 스팀 울트라(VR90F*) 모델에 한합니다. 다음 play Indicator 1 Close Close Close Close 편리함을 더한 주요 기능 확인하기 라이프스타일에 맞춰 설계한 청소 기능들로 편리하고 깨끗한 청소환경을 만나세요 무선 청소기 로봇 청소기 이전 청정 스테이션 하나의 청정 스테이션에서 무선 청소기의 먼지통을 비우고 충전까지 동시에 진행해 청소 관리가 더욱 편리해 집니다. 스마트 콜 알림 2 청소 중에도 중요한 전화나 메시지를 놓치지 않고 확인할 수 있습니다 3 . 다음 play Indicator 1 Close Close Close 이전 스팀 청정스테이션 먼지통 비움부터 충전, 보관까지 한 번에 해결하는 청정 스테이션으로 한 번 설치하면 손 댈 필요 없는 편리함을 제공합니다. 빅스비 음성 컨트롤 스마트홈 시스템과 연동하여 손으로 조작하지 않아도 음성 명령으로 간편하고 효율적인 청소가 가능합니다. 펫 케어 반려동물의 이상행동이 감지되면 스마트싱스 앱에서 알림을 받아 원격으로 음악이나 영상을 틀어줄 수 있습니다. 이지패스 휠 새로운 이지패스 휠(EasyPass Wheel™) 기술로 본체를 높여 문턱과 매트를 수월하게 넘고 끊김 없이 청소합니다. 다음 play Indicator 1 Close Close Close Close 추천 제품 Bespoke AI 제트 400W 구매하기 Bespoke AI 제트 280W Lite 구매하기 Bespoke AI 스팀 울트라 자동 급배수 구매하기 Bespoke AI 스팀 플러스 구매하기 play Indicator 1 Close Close Close Close 듀오 클리어 브러시 사용 시, 글로벌 평균 바닥 구성 비율(나무 바닥 76%, 카펫 24%)에 따른 내부 테스트 결과입니다. 실사용 환경에 따라 차이가 있을 수 있습니다. 안드로이드 11(R OS, Galaxy OneUI 3.1) 이상 버전의 삼성 스마트폰에서 사용 가능합니다. 단, 일부 모델(A1x, A2x, M1x, M2x 등) 및 타사 스마트폰에서는 지원되지 않습니다. 해당 기능을 사용하려면 SmartThings 앱 내 설정 및 Wi-Fi 연결이 필요합니다. 수신 전화 또는 메시지 알림은 스틱 청소기의 LCD 디스플레이에 표시되나, 실제 통화나 메시지 확인은 연결된 스마트폰에서만 가능합니다. * 이해를 돕기 위해 연출된 이미지로 실제 제품 및 기능과 차이가 있을 수 있습니다. * 제품별 적용된 기능이 상이합니다. 자세한 내용은 제품별 상세 페이지 및 스펙을 통해 확인하세요. [AI 액체 인식] * AI 사물 인식, AI 액체 인식, 오염 구역 집중 청소, 공간 인식 기능은 Bespoke AI 스팀 울트라 모델에 한해 지원합니다. * 액체 인식은 액체의 양이나 크기가 너무 작거나 (15ml 또는 7cm x 7cm 이하), 바닥 무늬/패턴, 어두운 바닥, 주변 조도, 직사광 또는 반사광, 액체의 형태 등에 따라 오인식 또는 미인식이 발생할 수 있습니다. * 액체 청소 기능을 사용하기 위해선 SmartThings 앱을 통해 사전 설정이 필요합니다. 액체 특성에 따라 미청소된 오염물이 바닥으로 퍼질 수 있습니다. * 사물 인식은 사물의 형태나 주변 환경에 따라 영향을 받을 수 있습니다. * 반려동물 중 개와 고양이만 인식이 가능하며, 반려동물 인식률은 동물의 종류와 거주 환경에 영향을 받을 수 있습니다. 반려묘 인식률은 고양이의 자세와 위치에 따라 영향을 받을 수 있습니다. * 견변 크기가 약 2cm x 3cm 보다 작으면 사물인식으로 인식하지 못할 수 있습니다. * 사람 인식 기능은 일반적인 시각적 특징을 통해 인식하며, 개별 인물을 구분하지 못합니다. 사람의 몸 전체가 보이지 않을 경우 인식률이 떨어질 수 있습니다. * 오염 구역은 액체가 아닌, 고체 상태의 불투명한 유색의 음료수 자국 등을 의미합니다. * 오염 구역의 크기가 너무 작거나 (4cm x 4cm 이하), 바닥 무늬/패턴에 따라 오인식이 발생할 수 있습니다. * 오염 구역 인식을 사용하기 위해서는 사전에 SmartThings 앱을 통해 설정이 필요합니다. [AI 바닥 인식] * 인식하는 카펫의 모 길이 기준은 5mm이며, 물걸레 리프팅 높이는 10mm입니다. * 카펫이 없는 경우 일반 기본 청소 모드로 작동합니다. * 센싱 정보 : 초음파 센서, 자이로(pitch, yaw, roll), 휠 부하(좌,우), 휠 엔코더(좌,우), 가속도(x, y, z 축), 선속도, 자이로 각속도, 엔코더 각속도 * 환경/바닥 종류에 따라 오 인식이 발생할 수 있습니다. * 카펫 종류에 따라 물걸레 리프팅 상태에서도 물걸레가 카펫에 닿을 수 있습니다. * 흡입/물걸레 동시 모드 설정 시의 동작에 대한 설명이며, 청소 모드 옵션 설정에 따라 청소 시나리오는 달라질 수 있습니다. 카펫이 없는 경우 일반 기본 청소 모드로 작동합니다 [빅스비 음성 컨트롤] * 빅스비는 삼성의 인공 지능 (AI) / 사물 인터넷 (IoT) 음성 비서 브랜드로, Wi-Fi 공유기와 삼성 계정이 필요합니다. * 국가마다 다른 언어가 지원되며, 서비스 제공 여부는 지역에 따라 다를 수 있습니다. * 빅스비 언어 10종 지원 : 한국어/영어(미국)/영어(영국)/영어(인도)/프랑스어/독일어/이탈리아어/스페인어(스페인)/스페인어(중남미)/포르투갈어(브라질) * 원하는 장소/구역 청소를 위해선 사전에 지도 그리기 및 구역 편집을 완료해야 합니다. * VR70F01*D* 모델은 모바일 빅스비를 지원합니다. [펫 케어] * 펫 케어, 패밀리 케어 기능은 Bespoke AI 스팀 울트라 (VR90*), 24년 출시된 Bespoke AI 스팀 (VR76MD97716*)에 한합니다. * 이상행동 알림(짖음 감지 기능)은 사전에 SmartThings 앱을 통해 설정이 필요하며, 반려견을 대상으로만 사용 가능합니다. * 개, 고양이만 인식이 가능합니다. 반려묘 인식률은 고양이의 자세와 위치에 따라 영향을 받을 수 있습니다. * 반려동물 인식률은 동물의 종류와 거주 환경에 영향을 받을 수 있습니다. * SmartThings 기능을 사용하기 위해서는 SmartThings 앱 설치 및 연동, 무선 네트워크 연결이 필요합니다. SmartThings에 관한 자세한 내용은 페이지 하단을 참고하세요. * 종단 간 암호화 기술(E2EE, End to End Encryption) 적용으로 데이터를 안전하게 보호합니다. - 안드로이드 8.1 이상의 삼성 디바이스에서만 사용할 수 있으며, 성능이 낮은 일부 디바이스에서 작동하지 않을 수 있습니다. - 해당 기능은 SmartThings 앱을 통해 설정 가능합니다. * 스트리밍 영상은 클라우드에 저장되지 않으며, 녹화 영상은 24시간 동안만 클라우드 내 보관되며 스마트폰에 다운로드 받을 수 있습니다. [이지패스 휠] * 5개의 바퀴 : 메인 휠 2개, 사이드 보조 휠 2개, 전방 보조 휠 1개 * 높은 문턱/매트 등반 사용을 위해서는 사전에 단차 구역 설정이 필요합니다. * 해당 제품은 내부 실험치 결과로, 단일 문턱 기준 최대 45mm/ 계단형 단차 기준 하부 45mm 및 추가 15mm 층을 포함한 60mm를 통과하는 실험을 거쳤습니다. 계단형 단차 기준, 각 층 사이의 간격이 90mm 이상이어야 합니다. 실제 환경에서는 다를 수 있습니다. * SmartThings 기능을 사용하기 위해서는 SmartThings 앱 설치 및 연동, 무선 네트워크 연결이 필요합니다. SmartThings에 관한 자세한 내용은 페이지 하단을 참고하세요. * 원하는 장소/구역 청소를 위해선 사전에 지도 그리기 및 구역 편집을 완료해야 합니다. [ 스마트싱스 ] - SmartThings 기능을 사용하기 위해서는 SmartThings 앱 설치 및 연동, 무선 네트워크 연결이 필요합니다. - SmartThings 앱은 Galaxy Store, Play Store 또는 App Store에서 다운로드 할 수 있습니다. - 제품과 연동된 스마트싱스 앱의 기능을 이용하기 위해서는 모바일 단말기의 OS를 최신 버전으로 업데이트 할 필요가 있을 수 있습니다. 구체적인 OS 버전 정보는 스마트싱스 앱 또는 스마트싱스 웹페이지(https://www.samsung.com/sec/smartthings/app/)를 참고해 주시기 바랍니다. - SmartThings 앱은 일부 태블릿 및 단말과 호환되지 않거나 연동 기기, 사용방법에 일부 제한이 있을 수 있습니다. - 제품에 따라 SmartThings 기능 지원 여부, 지원환경 및 사양이 다를 수 있습니다. - 앱 업데이트에 따라 지원 가능한 OS 사양, 앱 화면 구성 등은 변경될 수 있습니다. - SmartThings에 연결 가능한 기기 수는 장소(Location)당 최대 300개입니다. 사용자의 네트워크 환경에 따라 최대 연결 가능한 기기 수에 제약이 있을 수 있습니다. (계정당 장소는 최대 10개 사용 가능, 장소당 방은 최대 20개 사용 가능, 장소를 등록한 관리자는 계정 기준 최대 20명 멤버 초대 가능) 홈 구매가이드 청소기 구매가이드 확인 확인 취소 확인 팝업닫기 취소 확인 확인 팝업보기 이메일 무단 수집거부 본 웹사이트는 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단 수집되는 것을 거부합니다. 이를 위반 시 『정보통신망 이용 촉진 및 정보보호 등에 관한 법률』등에 의해 처벌받을 수 있습니다. 팝업닫기 아이디어 제안에 대한 정책 삼성전자 및 삼성전자 임직원은 당사가 공식적으로 요청하지 않았음에도 불구하고 여러분께서 일방적으로 당사에 제출하는 아이디어나 제안 등을 수령하거나 검토하지 않습니다. 이는 제출하신 내용이 당사 내부적으로 개발한 제품, 기술, 서비스와 유사할 경우 발생할 수 있는 오해와 분쟁을 방지하고 나아가 여러분의 창의적인 아이디어를 적극 보호하기 위함입니다. 이러한 취지를 이해하여 주시고 구체화되지 않은 아이디어나 콘셉트(Concept) 단계의 제안이 당사에 제출되지 않도록 하여 주시기 바랍니다. 팝업닫기 구매인증 서류 발급 유의사항 ※ 구매내역서는 제품 배송완료 이후 다운로드 가능합니다. ※ 으뜸효율 가전제품 구매비용 10% 환급 행사는 산업통상자원부 총괄, 한국에너지공단 주관입니다. ※ 으뜸효율 가전제품 환급 대상 모델에 한하여 환급 신청이 가능하며, 자세한 환급 방법 및 대상 모델 리스트는 '으뜸효율가전 안내 페이지' 에서 확인해 주시기 바랍니다. ※ 환급 적용 대상모델 구매 비용 10% 환급은 1인당 최대 30만원 한도이며, 재원 소진 시 조기종료됩니다. ※ 삼성전자는 가전제품을 구매하는 대상고객의 이해를 돕기위한 목적으로 행사내용을 안내합니다. ※ 구체적인 지원 조건 및 자세한 내용은 한국에너지공단 신청페이지를 참고해주시기 바랍니다. 팝업닫기 개인정보 제3자 제공 동의(선택) 해당 제품으로 으뜸효율 가전제품 환급사업 신청 예정 고객은 본 동의를 하셔야 환급사업 신청이 가능합니다. 귀하께서는 동의하지 않을 수 있으나 이 경우 으뜸효율 가전제품 환급 신청이 제한됩니다. 으뜸효율 가전제품 환급사업 관련 개인정보 제3자 제공 동의 삼성전자는 아래와 같이 개인정보를 제3자에 제공합니다. 1. 제공 받는 자 에너지공단㈜ 2. 제공 항목 구독주문번호, 구독계약일시, 고객확인사항에 기재된 제품가, 모델명, 계약유지 여부, 해지일자, 명의변경일자 3. 제공받는 자의 이용 목적 으뜸효율 가전제품 환급사업의 환급금 지급과 환수를 위함 4. 제공 받는 자의 보유 및 이용 기간 으뜸효율 가전제품 환급사업 종료시까지 위의 약관에 동의",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.lg.com/us/experience/how-to-pick-cordless-vacuum-cleaner",
-            "original_url": "https://www.lg.com/us/experience/how-to-pick-cordless-vacuum-cleaner",
-            "title": "Choosing the Best LG Cordless Vacuum Cleaner for a Small Apartment | LG US",
-            "checked_on": "2026-09-25",
-            "sha256": "64a946a0facf37747cf1d8c19ef2402b94671815dad1f95408d658d262041919",
-            "excerpt": "Top Deals: Save 30-47% on select home appliances Shop Now Top Deals: Save 30-47% on select home appliances Shop Now How to Pick the Best LG Cordless Vacuum Cleaner for a Small Apartment Published Jan 31, 2025 Reading Time: 4 min Share this content. You can share the items you like with your friends. When living in a small apartment, space-saving solutions are essential, and your choice of vacuum cleaner plays a significant role in maintaining a clean and clutter-free environment. Cordless vacuums have become a preferred option due to their compact design and versatility. Here's how to select the best LG cordless vacuum for your small space while addressing practical needs like storage, runtime, and cleaning efficiency. Why Cordless Vacuums Are Ideal for Small Apartments Choosing the right vacuum cleaner for a small apartment means considering factors such as size, storage, and efficiency. Here’s a breakdown of why a cordless vacuum might be the perfect solution: Space-Saving Design: Cordless vacuums are compact and lightweight, making them easy to maneuver and store in tight spaces. For smaller apartments, where storage can be a challenge, having a vacuum that doesn’t take up much room is a major plus. Ease of Use: Cordless vacuums are designed for portability. Without the hassle of cords, you can move between rooms easily and clean more efficiently without unplugging and replugging. Some models also come with adjustable handles or foldable parts, making them even easier to store. Multi-Surface Cleaning: These vacuums perform well on a variety of surfaces, including hardwood floors, carpets, and even upholstery. This versatility means you won’t need multiple tools to clean different parts of your apartment, saving both space and money. Quick Cleanup for Small Messes: In a small apartment, messes can build up quickly. Cordless vacuums allow for fast, daily spot cleaning, meaning you can stay on top of dirt and debris without lugging out a full-sized vacuum. What Features to Look for in a Cordless Vacuum for Small Apartments When deciding what vacuum to buy for a small apartment, keep an eye out for these key features: Runtime and Battery Life Cordless vacuums rely on rechargeable batteries, so their runtime is an important factor. Many models offer anywhere from 30 to 60 minutes of continuous use. If your apartment has multiple floor types or if you plan to do more thorough cleaning, look for models with higher battery capacity or quick-recharge options. Storage Solutions For small apartments, the ability to store your vacuum easily is crucial. Look for models with a wall mount or a compact charging station that doubles as storage. Cordless vacuums typically have a slim profile, and many come with foldable handles, making them easier to fit into small closets or corners. Weight and Maneuverability One of the main benefits of a cordless vacuum is its lightweight design. Look for models that are easy to lift and maneuver, especially if you need to clean high shelves or under furniture. Cordless vacuums with a telescopic wand or a detachable handheld vacuum offer flexibility for reaching tight spaces or elevated areas. Dust Capacity and Maintenance Smaller vacuums often have smaller dustbins, so it’s important to consider how much debris your vacuum can hold before it needs emptying. LG Cordless Vacuums: Smart Solutions for Small Apartments LG Cordless Vacuums offer a range of features designed to simplify cleaning in small spaces, making them a great fit for compact apartments. One standout feature is the LG ThinQ™ technology, which allows you to connect your vacuum to your smartphone. Through the ThinQ app, you can adjust settings, check battery levels, and even troubleshoot issues, giving you full control over your cleaning experience. Additionally, some models include Smart Turbo mode, which automatically adjusts suction power based on the surface being cleaned, providing optimized performance on both carpets and hard floors. This is particularly useful when transitioning between different floor types in your apartment. Discover the Best in LG’s Vacuum Technology: The A925KSM The LG CordZero™ Kompressor® A925KSM is perfect for those needing a powerful vacuum that can handle multiple surfaces. Equipped with the Dual Floor Max Nozzle and an LED light, it excels at cleaning both carpets and hard floors, even in low-light areas. The standout feature of this vacuum is its two quick-release batteries, providing up to 120 minutes of uninterrupted cleaning. Additionally, the Kompressor™ lever compresses dust and debris, doubling the bin capacity and minimizing how often you need to empty it. With a portable charging stand, there’s no need to drill holes for wall mounting, making it easy to store and charge wherever it's most convenient. The telescopic wand adjusts for high or low cleaning, and for quick touch-ups, the detachable handheld vacuum is ready to go. Plus, with built-in WiFi connectivity, you can connect the vacuum to the LG ThinQ app for tracking and diagnostics, making this model a powerful, user-friendly choice for small apartments. Whether you're looking for extended cleaning power or a compact solution for smaller spaces, LG Smart Vacuums offer versatile and efficient options to suit your needs. They are designed to simplify your cleaning routine with smart features, powerful performance, and user-friendly storage solutions. With the added convenience of LG ThinQ integration, you can enjoy a more connected, hassle-free cleaning experience. Choose the model that best fits your lifestyle and enjoy a cleaner, more organized home with ease. Featured Products: https://www.lg.com/us/vacuum-cleaners/lg-a925ksm-stick-vacuum https://www.lg.com/us/vacuum-cleaners/lg-a931kwm-stick-vacuum https://www.lg.com/us/vacuum-cleaners/lg-a949ktms-stick-vacuum Related Articles Best LG Camping Gadgets for Your Next Getaway | LG US Read Article LG’s Luxury Tech Gadgets & High-End Gifts Ideas for Men | LG US Read Article LG's Luxury Tech Gifts & Gadgets Ideas for Women | LG US Read Article Smart Home Devices: Top LG Tech for Home Automation | LG US Read Article 1 Disclaimer: Actual battery life may vary based on usage, settings, and environmental conditions. Images may be simulated and dramatized for illustrative purposes. Actual features, functionality, and other product specifications may differ and are subject to change without notice. Prices, promotions, and availability may vary by model, store, and online. Prices subject to change without notice. Quantities are limited. Check with your local retailers for their final price and availability. USA, English Online Chat Email Support Chat with a Product Expert Social Support /LGUSSupport @lgussupport Support Parts & Accessories Register a Product Order Status Software & Drivers Manuals & Documents Help Library Contact Us Easy Bluetooth Connect Guide Request a Repair LG Premium Care Custom Installation Online Chat Twitter Support How to become an LG Servicer Facebook Support Business Support Compliance Information Public Notices & Recalls LG Recycling Program Cookware Chemical Compliance Information Battery-embedded Product Chemistry Disclosure Products My Account About LG Offers Articles & Gift Guides Discount Programs USA, English Appliances Washers Refrigerators Dishwashers Cooking Appliances Kitchen Packages LG Signature SKS Dryers Washer Dryer Combos Styler Steam Closet Laundry Sets Vacuums Air Conditioners Window Air Conditioners Portable Air Conditioners Wall Air Conditioners Air Purifiers Dehumidifiers Other Appliance Accessories Kitchen Laundry Other TV & Home Theater TVs Projectors Sound Bars Blu-ray & DVD Players Lifestyle Products TV Audio Video Accessories Audio Sound Bars Headphones Earbuds Speakers Portable Speakers Party Speakers Gaming Speakers Monitors & Laptops Laptops Monitors Burners & Drives Monitor & Laptop Accessories Home Upgrades Heating & Air Conditioning Products Built-in Kitchen Applianc",
+            "sha256": "578a8d05f3bb9fccfe4f7ce089e1a9fee24f33e6d8467490ad176a77707c1647",
+            "excerpt": "Share this content.  You can share the items you like with your friends. Share this content.  You can share the items you like with your friends. facebook twitter-X instagram pinterest HELPFUL HINTS How to Choose a Notebook: A Step-by-Step Portable Laptop Buying Guide By LG A row of four LG gram laptops, each displaying a different colourful abstract design on their screens, arranged on a white surface with a light background. LG UK Figuring out what laptop to buy can be a tough choice. With so many different models on the market, each with a wide array of features, designs, and tech specs available, it can be difficult to know if you’re making the best choice. If you’re someone with an on-the-go lifestyle, or if you prioritise portability and convenience, a notebook laptop is a great choice for you! In this notebook computer buying guide, we’ll cover: What to consider when buying a notebook LG’s notebook buying recommendations FAQs What to consider when buying a notebook A home office setup with a LG gram laptop, keyboard, mouse, microphone, and ring light on a wooden desk. Shelves and a cabinet are in the background. LG UK 1. Portability Notebooks are lightweight, portable laptops. If being able to take your laptop on the go easily is a priority for you, a notebook is a great choice for carrying to school, work, or while travelling. 2. Versatility Notebooks come in various sizes and configurations to suit different needs. Whether you need a device for basic productivity tasks, entertainment, gaming, or creative work, there's likely a notebook that fits your requirements, making them a versatile choice. Many notebook laptops also offer features like 2-in-1 designs that allow them to be used as both a laptop and a tablet. 3. Performance Most notebook laptops will come equipped with powerful processors and hard drives. This is especially important if you’re using your notebook laptop frequently, whether it’s for working, studying, editing or gaming. There are a few different features to look out for when buying a notebook that impact performance: RAM: When you’re looking for a notebook computer, it's essential to consider the memory, or RAM, which the processor uses to store data while carrying out tasks. For everyday use, 8GB of RAM should do the trick. However, if you’re into video editing or serious gaming, at least 16GB is recommended. Also, aim for a notebook with a minimum of 256GB of storage for the best performance. CPU: A CPU (Central Processing Unit), also known as a processor, is like the brain of the computer! The speed and power of a CPU impact how quickly and smoothly your notebook will run. Performance can vary depending on the CPU manufacturer and grade, so it's important to choose one that suits your intended use. Factors like the number of cores, clock speed, number of threads, and cache memory play a role in performance. More cores mean the CPU can handle more tasks simultaneously, while a higher clock speed ensures faster execution of instructions. From simple tasks like web browsing and word processing to more demanding ones like video editing and high-intensity gaming, the CPU handles all the necessary tasks for running applications and the operating system of the laptop. Graphics Card (GPU): A graphics card, also known as a graphics processing unit (GPU), is a crucial component for rendering images and videos. There are two types of GPUs: integrated (iGPUs) and dedicated (dGPUs). Integrated GPUs are built into the laptop's processor, while dedicated GPUs are separate chips that provide additional power for graphics-intensive tasks. A graphics card is essential for running modern high-resolution games smoothly, as well as streaming media and visuals. Graphics cards can also improve the overall system performance of your notebook, by processing on behalf of the CPU. For users requiring more powerful performance, such as gamers or video editors, they can consider purchasing a separate external graphics card if integrated options do not suffice. 4. Battery Life A crucial thing to look out for when choosing a notebook laptop is good battery life. Notebooks are known for their portability, so strong battery performance is a non-negotiable for on-the-go work, streaming or browsing, without the need to plug-in. 5. Display Quality & Screen Size Notebook laptops come in various sizes, catering to different preferences and needs. Larger 16 or 17-inch displays offer a bigger viewing experience, ideal for those who prefer more screen real estate. On the other hand, if portability is key, compact 13 and 14-inch sizes are available, though the screen may feel smaller. Touchscreen functionality is beneficial for tasks like writing or sketching directly on the laptop. When choosing a screen, consider brightness measured in NIT units; a minimum of 300 nits is recommended for visibility in various lighting conditions. For optimal clarity, opt for at least Full HD (1080p) resolution, or for superior picture quality, consider 4K OLED displays. These features enhance the overall user experience, whether you're working, streaming, or gaming. 6. Connectivity Notebook laptops typically offer a variety of connectivity options, including USB ports, HDMI ports, etc. This allows you to easily connect your notebook with your other devices, like monitors, headphones or headsets, and speakers or TVs. For added convenience, consider laptops that support charging via USB-C, providing flexibility and compatibility with a wide range of accessories and power sources. 7. Security Features When buying a laptop, prioritise models with enhanced security features like fingerprint scanners and facial recognition to safeguard your data effectively. These built-in protections ensure your information stays secure against unauthorised access, offering peace of mind in today's digital world. 8. Upgradability Certain notebook laptops allow you easily and frequently upgrade features like storage, providing users with the flexibility to adapt their devices to their changing needs over time. LG’s picks on which notebook to buy Now that we’ve covered some of the key features of notebooks, knowing what models are available is the next step in how to choose a notebook laptop. The LG gram series is a great choice if you’re after a notebook. Thanks to their ultralightweight and compact design, they’re the perfect option for users who prioritise portability without compromising performance. So, if you're looking for a lightweight and highly portable notebook laptop with long battery life and powerful performance, an LG Gram might be for you! Here are some of our picks from the LG Gram series worth considering if you’re figuring out what the best notebook laptop for you is: Best LG notebook laptop for travel: LG gram Pro 2in1 LG gram Pro 2in1 laptop is shown in various positions, highlighting its flexibility and touchscreen capabilities, against a colourful sky background. LG UK The LG gram Pro 2in1 16-inch laptop is the perfect travel companion as it’s the world’s lightest 16-inch 2in1 laptop! Weighing in at just 1,399g and measuring just 12.4mm in thickness, this ultralight and portable notebook is easy to carry around, and is ideal for travellers on the go! Also, the 2in1 convertible touchscreen has a flexible 360° hinge, allowing you to use it in various modes. If you value versatility and want a laptop that can double as a tablet for reading, streaming, or working remotely, the LG gram 2in1 is a great all-in-one solution, especially when travelling! Read more: Must-Have Travel Gadgets for Tech-Forward Journeys Best LG notebook laptop for working Two people work at a desk with a LG gram laptop and +view portable monitor displaying charts, one points while the other uses a pen and mouse. LG UK Having a dual monitor setup is a great way to maximise productivity. With multiple screens, you can easily and seamlessly work on multiple tasks. However, a multi-screen display not only requ",
             "locator_origin": "model_reported_locator"
           }
         ],
         "intent_results": [
-          "https://sallimlab.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EB%B9%84%EA%B5%90/",
-          "https://www.consumuch.com/news/articleView.html?idxno=18245"
+          "https://www.gamemeca.com/view.php?gid=1777892",
+          "https://kimfree-tip.tistory.com/47?category=1313441"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 630,
+        "monthly_search": 7850,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "중간",
@@ -8296,128 +8287,119 @@
           "searched": true,
           "locators": [
             {
-              "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
+              "url": "https://www.samsung.com/sec/galaxybook/galaxy-book6-series/buy/",
               "origin": "model_reported_locator"
             },
             {
-              "url": "https://www.lg.com/us/experience/how-to-pick-cordless-vacuum-cleaner",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://www.lg.com/ae/lg-story/helpful-guide/how-to-choose-the-best-vacuum-cleaner-for-your-home",
+              "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
               "origin": "model_reported_locator"
             }
           ]
         },
         "organic_provider": "codex_native_search",
-        "organic_query": "무선청소기 비교",
+        "organic_query": "노트북 비교",
         "organic_domains": [
-          "eiec.kdi.re.kr",
-          "sallimlab.com",
-          "www.consumuch.com",
-          "lifebase.kr",
-          "plebplus.tistory.com",
-          "www.shyeogi.com",
-          "todaylifestyle.tistory.com",
-          "itsliving.tistory.com",
-          "work2do.tistory.com",
-          "ggultempsn004.tistory.com"
+          "www.gamemeca.com",
+          "oak.chosun.ac.kr",
+          "cputronic.com",
+          "www.mirae-n.com",
+          "m.enuri.com",
+          "note.com",
+          "m.enuri.com",
+          "kimfree-tip.tistory.com",
+          "www.allreport.co.kr",
+          "mediasvr.egentouch.com"
         ],
         "organic_results": [
           {
-            "url": "https://eiec.kdi.re.kr/userdata/nara/202203/202203.pdf",
-            "domain": "eiec.kdi.re.kr",
-            "title": "국내 유일의 경제정책 정보지 nara.kdi.re.kr",
-            "snippet": "이 글은 한국소비자원의 『소비자시대』 2022년 3월호 ‘상품 테스트’ 기사를 전재한 것입니다. ... 무선청소기 7종 비교 결과, ... 이에 한국소비자원이 선호도가 높은 무선청소기 7개 제품을"
+            "url": "https://www.gamemeca.com/view.php?gid=1777892",
+            "domain": "www.gamemeca.com",
+            "title": "복잡한 스펙 비교 없이 내게 맞는 노트북 찾기",
+            "snippet": "# 복잡한 스펙 비교 없이 내게 맞는 노트북 찾기 ... 본 가이드는 다나와 노트북 카테고리 인기상품순(2026년 7월 15일 기준)과 시장 조사 자료를 바탕으로 작성되었으며, 모든"
           },
           {
-            "url": "https://sallimlab.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EB%B9%84%EA%B5%90/",
-            "domain": "sallimlab.com",
-            "title": "무선청소기 비교: 가벼운 경량형 vs 강력 흡입형, 원룸 자취생은? – 살림랩",
-            "snippet": "Image: 무선청소기 비교: 가벼운 경량형 vs 강력 흡입형, 원룸 자취생은? ... 바로 답부터 드리면, 무선청소기 비교에서 원룸·오피스텔에 혼자 사는 자취생이라면 대체로 가볍고 조용한 경량형이 만족도가"
+            "url": "https://oak.chosun.ac.kr/bitstream/2020.oak/12134/2/%EC%A4%91%EA%B5%AD%EC%86%8C%EB%B9%84%EC%9E%90%EC%9D%98%20%ED%95%9C%EA%B5%AD%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EC%97%90%20%EB%8C%80%ED%95%9C%20%EC%A7%80%EA%B0%81%EB%90%9C%20%EB%A7%8C%EC%A1%B1%EB%8F%84%EC%99%80%20%EA%B5%AC%EB%A7%A4%EC%9D%98%EB%8F%84%EC%97%90%20%EA%B4%80%ED%95%9C%20%EC%97%B0%EA%B5%AC.pdf",
+            "domain": "oak.chosun.ac.kr",
+            "title": "표 2 노트북pc, 스마트폰, 일반 휴대전화 비교.",
+            "snippet": "표 2 노트북pc, 스마트폰, 일반 휴대전화 비교. ... 우선 운영체제에서 일반 휴대전화와 노트북/PC와 달리 Android, iOS, Symbian, RIM, Windows등 다수의 범용OS를 탑재하여 이용자들의 선택의 폭을"
           },
           {
-            "url": "https://www.consumuch.com/news/articleView.html?idxno=18245",
-            "domain": "www.consumuch.com",
-            "title": "[몇대몇] 잘 나가는 핸디스틱 '무선청소기' 주요 제품 스펙 비교 < 몇대몇 < 소비자뉴스 < 기사본문 - 컨슈머치",
-            "snippet": "[컨슈머치 = 이용석 기자] 가정 내 보급률이 82%에 이른다는 필수 생활가전인 청소기가 최근 1인 가구 증가와 맞물려 가볍고 사용이 간편해진 무선형태로 출시되고 있다. ... 컨슈머치는"
+            "url": "https://cputronic.com/ko/cpu/compare",
+            "domain": "cputronic.com",
+            "title": "CPU 사양 성능 비교 도구(노트북 및 데스크탑) - CpuTronic",
+            "snippet": "# 프로세서 비교여기서 성능 및 주요 특성별로 프로세서를 비교할 수 있습니다."
           },
           {
-            "url": "https://lifebase.kr/blog/0213-cordless-vacuum-comparison/",
-            "domain": "lifebase.kr",
-            "title": "무선청소기 추천 비교 가이드 - LifeBase",
-            "snippet": "# 무선청소기 추천 비교 가이드 ... 무선청소기는 이제 단순한 청소 도구를 넘어 생활 편의를 좌우하는 핵심 가전이 되었습니다.작성 시점 기준으로 무선청소기 시장은 스테이션형 자동 먼지"
+            "url": "https://www.mirae-n.com/UPLOAD/EShop/EduN/Archive/Learning/Upload/REF_PDS/200220093918554_%EA%B3%A0_%EB%89%B4%EC%98%AC%EB%A6%AC%EB%93%9C_%ED%86%B5%ED%95%A9%EC%82%AC%ED%9A%8C_%EB%B0%94%EB%A5%B8%EB%8B%B5%EC%95%8C%EC%B0%AC%ED%92%80%EC%9D%B4.pdf",
+            "domain": "www.mirae-n.com",
+            "title": "통합사회",
+            "snippet": "산에 비교 우위가 있고, 노트북 생산의 기회비용이 작은 을 ... 국이 노트북 생산에 비교 우위가 있다."
           },
           {
-            "url": "https://plebplus.tistory.com/83",
-            "domain": "plebplus.tistory.com",
-            "title": "무선청소기 추천 비교 후기 — 마트에서 직접 만져보고 고른 뒤 한 달 쓴 결과",
-            "snippet": "## 무선청소기 추천 비교 후기 — 마트에서 직접 만져보고 고른 뒤 한 달 쓴 결과 ... 집에 돌아와서 검색을 시작했고, 그게 이 무선청소기 추천 비교"
+            "url": "https://m.enuri.com/knowcom/detail.jsp?bbsname=guide&cateno=4&kbno=632856",
+            "domain": "m.enuri.com",
+            "title": "120만 원 미만 게임용 노트북 비교 - 에누리 쇼핑지식 구매가이드",
+            "snippet": "2017년 노트북 시장의 큰 줄기 중 하나는 게임용 노트북(또는 게이밍 노트북)이라 부르는 고성능 노트북이다.이에 게임용 노트북의 가격 및 상세 성능을 비교해보고 추천할만한 노트북은 무엇인지 알아본다."
           },
           {
-            "url": "https://www.shyeogi.com/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EC%88%9C%EC%9C%84-%EC%84%B1%EB%8A%A5-%EB%B9%84%EA%B5%90-%ED%9D%A1%EC%9E%85%EB%A0%A5-%EB%B0%B0%ED%84%B0%EB%A6%AC-%EC%88%98%EB%AA%85/",
-            "domain": "www.shyeogi.com",
-            "title": "무선청소기 추천 순위 성능 비교 흡입력 배터리 수명, 다이슨, LG, 삼성, 샤오미, 테팔",
-            "snippet": "# 무선청소기 추천 순위 성능 비교 흡입력 배터리 수명, 다이슨, LG, 삼성, 샤오미, 테팔 ... 이에 한국소비자원은 소비자에게 객관적인 상품 품질정보를 제공하기 위해 소비자 선호도가"
+            "url": "https://note.com/gifted_bonobo660/n/n0ddbd9e9cdd8?hl=ko",
+            "domain": "note.com",
+            "title": "노트북 스탠드 비교｜MOFT와 BoYata, 결국 무엇을 선택해야 할지 조사해 보았다｜まるちゃん",
+            "snippet": "재택근무로 맥북을 사용하면서 화면이 낮아 목과 어깨가 아프다는 것을 깨닫고 노트북 스탠드를 찾기 시작했지만, 'MOFT와 BoYata, 결국 무엇을 선택해야 할까'라고 검색하신 분들을 위해 휴대성과 가격대가"
           },
           {
-            "url": "https://todaylifestyle.tistory.com/entry/%EC%82%AC%EB%AC%B4%EC%8B%A4%C2%B7%EC%A7%91-%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%B6%94%EC%B2%9C-%EB%B9%84%EA%B5%90%EF%BD%9C2026%EB%85%84-%EA%B8%B0%EC%A4%80-%EA%B3%B5%EA%B0%84%EB%B3%84%EB%A1%9C-%EB%94%B1-%EB%A7%9E%EB%8A%94-%EC%84%A0%ED%83%9D%EB%B2%95",
-            "domain": "todaylifestyle.tistory.com",
-            "title": "사무실·집 무선청소기 추천 비교｜2026년 기준 공간별로 딱 맞는 선택법",
-            "snippet": "2026년 기준으로 공간별 실패 없는 무선청소기 추천 비교와 실사용 체크포인트를 정리했습니다. ... Image: 사무실과 집에서 사용하는 무선청소기 추천 비교 이미지 사무실과 집에서 사용하는 무선청소기 추천"
+            "url": "https://m.enuri.com/knowcom/detail.jsp?bbsname=qna&cateno=2&kbno=548390&page=95",
+            "domain": "m.enuri.com",
+            "title": "노트북 비교 해 주세요 - 에누리 쇼핑지식 쇼핑Q&A",
+            "snippet": "안녕하세요 에누리 가격비교 노트북 담당자입니다. ... CPU, 내장그래픽, 해상도, USB3.0 포트 지원 등 노트북5 사양이 월등히 높습니다."
           },
           {
-            "url": "https://itsliving.tistory.com/98",
-            "domain": "itsliving.tistory.com",
-            "title": "무선청소기 2종 비교: LG 코드제로 A7 Core vs 삼성 Bespoke 슬림",
-            "snippet": "# 무선청소기 2종 비교: LG 코드제로 A7 Core vs 삼성 Bespoke 슬림 ... 올인원타워까지 같이 두고 편하게 쓰고 싶으면 LG 코드제로 A7 Core, 슬림한 본체와"
+            "url": "https://kimfree-tip.tistory.com/47?category=1313441",
+            "domain": "kimfree-tip.tistory.com",
+            "title": "노트북 추천! 게이밍 / 사무용 / 영상편집 등 용도별 제품 추천 및 비교!",
+            "snippet": "게이밍 / 사무용 / 영상편집 등 용도별 제품 추천 및 비교! ... 게이밍 노트북은 고주사율 화면을 부드럽게 뽑아낼 수 있는 그래픽카드(GPU) 성능과, 장시간 게임 시"
           },
           {
-            "url": "https://work2do.tistory.com/entry/%EB%AC%B4%EC%84%A0%EC%B2%AD%EC%86%8C%EA%B8%B0-%EB%B9%84%EA%B5%90-%E2%80%93-%EB%8B%A4%EC%9D%B4%EC%8A%A8-vs-%EC%82%BC%EC%84%B1-%EC%A0%9C%ED%8A%B8-vs-%EC%83%A4%EC%98%A4%EB%AF%B8-%EB%93%9C%EB%A6%AC%EB%AF%B8-2025",
-            "domain": "work2do.tistory.com",
-            "title": "무선청소기 비교 – 다이슨 vs 삼성 제트 vs 샤오미 드리미 (2025)",
-            "snippet": "# 무선청소기 비교 – 다이슨 vs 삼성 제트 vs 샤오미 드리미 (2025) ... 공간 제약 없이 집안 곳곳을 청소할 수 있는 편의성과 점점 높아지는 흡입력"
+            "url": "https://www.allreport.co.kr/search/detail.asp?pk=28423668",
+            "domain": "www.allreport.co.kr",
+            "title": "소니, 아이패드, LG, 삼성 노트북 컴퓨터 비교(영문) - 올레포트",
+            "snippet": "# [경영과학] 소니, 아이패드, LG, 삼성 노트북 컴퓨터 비교(영문) ... 삼성을 비롯한 한국 기업들은 혁신 기술과 가격 경쟁력을 무기로 세계 시장에서 꾸준히 성장하고 있으며, 2022년"
           },
           {
-            "url": "https://ggultempsn004.tistory.com/32",
-            "domain": "ggultempsn004.tistory.com",
-            "title": "가성비 무선청소기 추천 | 한경희 파워포스 vs 신일 무선청소기 비교",
-            "snippet": "## 가성비 무선청소기 추천 | 한경희 파워포스 vs 신일 무선청소기 비교 ... 이번 글에서는 한 달간 900명 이상이 선택한 인기 이슈 모델 한경희 파워포스 무선청소기와"
+            "url": "https://mediasvr.egentouch.com/egentouch.media/apiFile.do?SCHOOL_ID=1007002&URL_KEY=9a769d08-431a-4de0-a77a-d2df34778173&action=view",
+            "domain": "mediasvr.egentouch.com",
+            "title": "OTT 서비스 플랫폼별 이용행태 비교 05",
+            "snippet": "OTT 서비스 플랫폼별 이용행태 비교 05- OTT플랫폼별 주로 이용하는 매체로는, 스마트폰 이용이 가장 높았으며, 그 외에 TV수상기, 노트북 컴퓨터, 태블릿PC 등을 이용함 ... - 넷플릭스,"
           }
         ],
         "dominant_result_ratio": 0.0,
         "score_components": {
-          "demand": 22.39,
-          "organic_opportunity": 36.0,
-          "trend": 0,
+          "demand": 31.16,
+          "organic_opportunity": 26.67,
+          "trend": -3.16,
           "intent_fit": 0
         },
-        "trend_growth": null,
+        "trend_growth": -0.316,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "unavailable",
+        "trend_status": "measured",
         "selection_version": 6,
-        "selected_at": "2026-09-25T00:44:09.298842+00:00",
+        "selected_at": "2026-09-25T03:31:31.715994+00:00",
         "source": "category_market_v1",
         "keywords": [
-          "무선청소기비교"
+          "노트북비교"
         ],
         "status": "research_only",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
-              "title": "청소기 구매가이드  l Samsung 대한민국",
+              "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
+              "title": "Step-by-Step Notebook Laptop Buying Guide | LG UK",
               "excerpt_chars": 8000
             },
             {
-              "url": "https://www.lg.com/us/experience/how-to-pick-cordless-vacuum-cleaner",
-              "title": "Choosing the Best LG Cordless Vacuum Cleaner for a Small Apartment | LG US",
-              "excerpt_chars": 8000
-            },
-            {
-              "url": "https://www.lg.com/ae/lg-story/helpful-guide/how-to-choose-the-best-vacuum-cleaner-for-your-home",
-              "title": "How To Choose The Best Vacuum For Your Home | LG STORY",
-              "excerpt_chars": 8000
+              "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
+              "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
+              "excerpt_chars": 616
             }
           ],
           "analysis_status": "supported_true",
@@ -8426,34 +8408,29 @@
             "initial_review": {
               "official_sources": [
                 {
-                  "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=18967b07-991d-4160-85b6-2da14562dc60",
-                  "title": "관광지·명소(상세) | 무장애 관광정보 | 열린관광 모두의 여행",
-                  "excerpt_chars": 1695
+                  "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
+                  "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
+                  "excerpt_chars": 616
                 }
               ],
               "analysis_status": "supported_false",
               "model_rejection_opinion": {
                 "kind": "model_opinion",
-                "code": "source_missing_detail"
+                "code": "source_navigation"
               }
             },
             "outcome": "review_passed",
             "retry_review": {
               "official_sources": [
                 {
-                  "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
-                  "title": "청소기 구매가이드  l Samsung 대한민국",
+                  "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
+                  "title": "Step-by-Step Notebook Laptop Buying Guide | LG UK",
                   "excerpt_chars": 8000
                 },
                 {
-                  "url": "https://www.lg.com/us/experience/how-to-pick-cordless-vacuum-cleaner",
-                  "title": "Choosing the Best LG Cordless Vacuum Cleaner for a Small Apartment | LG US",
-                  "excerpt_chars": 8000
-                },
-                {
-                  "url": "https://www.lg.com/ae/lg-story/helpful-guide/how-to-choose-the-best-vacuum-cleaner-for-your-home",
-                  "title": "How To Choose The Best Vacuum For Your Home | LG STORY",
-                  "excerpt_chars": 8000
+                  "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
+                  "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
+                  "excerpt_chars": 616
                 }
               ],
               "analysis_status": "supported_true"
@@ -8462,180 +8439,170 @@
         },
         "opportunity_evidence": {
           "version": 2,
-          "query": "무선청소기비교",
-          "executed_query": "무선청소기 비교",
-          "topic": "무선청소기비교: 흡입력·사용시간·무게·보관 방식 선택 기준",
-          "intent": "무선청소기를 구매할 때 집 크기와 청소 습관에 맞춰 어떤 사양과 편의 기능을 비교해야 할까?",
+          "query": "노트북비교",
+          "executed_query": "노트북 비교",
+          "topic": "노트북비교: 사무용·게임용·영상편집용 구매 전 사양과 선택 기준",
+          "intent": "사무·게임·영상편집 용도에 맞는 노트북을 고를 때 어떤 사양과 제약을 비교해야 할까?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-25T00:44:09.298842+00:00",
+          "checked_at": "2026-09-25T03:31:31.715994+00:00",
           "result_count": 10,
-          "domain_count": 10,
+          "domain_count": 9,
           "dominant_ratio": 0.0,
           "search_review": {
             "version": 1,
-            "query": "무선청소기비교",
-            "executed_query": "무선청소기 비교",
+            "query": "노트북비교",
+            "executed_query": "노트북 비교",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-25T00:44:09.298842+00:00",
-            "raw_sha256": "23ae2ab341a17e8e6c235ea3e0ca71308b5c44baa5512900b7ebb75f4d70a3bb",
+            "checked_at": "2026-09-25T03:31:31.715994+00:00",
+            "raw_sha256": "c80f3736fb0d00c94f8c359507370d11a5211c3a8bb896e78ec0729102262a16",
             "decisions": [
               {
                 "result_index": 0,
                 "relevant": true,
-                "quote": "무선청소기 7종 비교 결과"
+                "quote": "복잡한 스펙 비교 없이 내게 맞는 노트북 찾기"
               },
               {
                 "result_index": 1,
-                "relevant": true,
-                "quote": "무선청소기 비교: 가벼운 경량형 vs 강력 흡입형"
+                "relevant": false,
+                "quote": "표 2 노트북pc, 스마트폰, 일반 휴대전화 비교."
               },
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "핸디스틱 '무선청소기' 주요 제품 스펙 비교"
+                "quote": "CPU 사양 성능 비교 도구(노트북 및 데스크탑)"
               },
               {
                 "result_index": 3,
-                "relevant": true,
-                "quote": "무선청소기 추천 비교 가이드"
+                "relevant": false,
+                "quote": "국이 노트북 생산에 비교 우위가 있다."
               },
               {
                 "result_index": 4,
                 "relevant": true,
-                "quote": "무선청소기 추천 비교 후기"
+                "quote": "게임용 노트북의 가격 및 상세 성능을 비교해보고"
               },
               {
                 "result_index": 5,
-                "relevant": true,
-                "quote": "무선청소기 추천 순위 성능 비교 흡입력 배터리 수명"
+                "relevant": false,
+                "quote": "노트북 스탠드 비교｜MOFT와 BoYata"
               },
               {
                 "result_index": 6,
                 "relevant": true,
-                "quote": "공간별 실패 없는 무선청소기 추천 비교와 실사용 체크포인트를 정리했습니다."
+                "quote": "CPU, 내장그래픽, 해상도, USB3.0 포트 지원 등 노트북5 사양이 월등히 높습니다."
               },
               {
                 "result_index": 7,
                 "relevant": true,
-                "quote": "무선청소기 2종 비교: LG 코드제로 A7 Core vs 삼성 Bespoke 슬림"
+                "quote": "노트북 추천! 게이밍 / 사무용 / 영상편집 등 용도별 제품 추천 및 비교!"
               },
               {
                 "result_index": 8,
                 "relevant": true,
-                "quote": "무선청소기 비교 – 다이슨 vs 삼성 제트 vs 샤오미 드리미 (2025)"
+                "quote": "소니, 아이패드, LG, 삼성 노트북 컴퓨터 비교(영문)"
               },
               {
                 "result_index": 9,
-                "relevant": true,
-                "quote": "한경희 파워포스 vs 신일 무선청소기 비교"
+                "relevant": false,
+                "quote": "OTT 서비스 플랫폼별 이용행태 비교"
               }
             ]
           },
           "search_metrics": {
             "raw_result_count": 10,
             "canonical_result_count": 10,
-            "relevant_result_count": 10,
-            "relevant_site_count": 10,
+            "relevant_result_count": 6,
+            "relevant_site_count": 5,
             "relevant_indices": [
               0,
-              1,
               2,
-              3,
               4,
-              5,
               6,
               7,
-              8,
-              9
+              8
             ],
-            "relevance_ratio": 1.0,
+            "relevance_ratio": 0.6,
             "duplicate_ratio": 0.0,
             "known_dominant_ratio": 0.0,
-            "site_concentration": 0.1,
-            "organic_opportunity": 36.0
+            "site_concentration": 0.3333333333333333,
+            "organic_opportunity": 26.67
           },
           "scope": "full_keyword",
-          "target_keyword": "무선청소기비교",
+          "target_keyword": "노트북비교",
           "matches": [
             {
-              "result_index": 1,
-              "quote": "무선청소기 비교: 가벼운 경량형 vs 강력 흡입형"
+              "result_index": 0,
+              "quote": "복잡한 스펙 비교 없이 내게 맞는 노트북 찾기"
             },
             {
-              "result_index": 2,
-              "quote": "잘 나가는 핸디스틱 '무선청소기' 주요 제품 스펙 비교"
+              "result_index": 7,
+              "quote": "노트북 추천! 게이밍 / 사무용 / 영상편집 등 용도별 제품 추천 및 비교!"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-25T00:44:09.298842+00:00",
-          "input_sha256": "b268bc85cfd33a6e5d4e58335cd509faf4243ff303ddfd3463b08ba9c9c2d65a",
+          "checked_at": "2026-09-25T03:31:31.715994+00:00",
+          "input_sha256": "d160fa1470eb5891d2806f59882726a3c2ba752f4331ec68b2efc2fe67c3c078",
           "review": {
             "scope": "narrower_query",
-            "target_keyword": "무선청소기비교",
+            "target_keyword": "노트북비교",
             "sources": [
               {
                 "source_index": 0,
-                "quote": "* 사용시간 : Bespoke AI 제트 400W, 일반모드 100분은 대용량 배터리를 탑재한 핸디 기준",
-                "entity": "Bespoke AI 제트 400W",
-                "context": "single_institution"
-              },
-              {
-                "source_index": 1,
-                "quote": "How to Pick the Best LG Cordless Vacuum Cleaner for a Small Apartment",
+                "quote": "How to Choose a Notebook: A Step-by-Step Portable Laptop Buying Guide By LG",
                 "entity": "LG",
-                "context": "single_institution"
+                "context": "general"
               }
             ],
             "required_facets": [
               {
-                "facet": "구매 후보 무선청소기들의 성능과 편의성은 어떻게 다르고 무엇을 선택할까?",
-                "answer": "검색결과는 실제 제품 간 비교를 요구한다. 제공 본문과 기획은 선택 기준 중심으로 범위가 좁다.",
+                "facet": "구매 후보 노트북의 가격·사양·성능 차이와 용도별 선택은?",
+                "answer": "검색결과에는 제품 간 비교 수요가 있다. 기획과 공식 본문은 일반 선택 기준 중심으로 전체 요구보다 좁다.",
                 "supported": false,
                 "source_index": 0,
-                "quote": "자세한 내용은 제품별 상세 페이지 및 스펙을 통해 확인하세요."
+                "quote": "The LG gram series is a great choice if you’re after a notebook."
               },
               {
-                "facet": "흡입력과 사용시간을 어떤 측정 조건으로 비교해야 할까?",
-                "answer": "삼성 일부 모드·배터리·핸디 조건만 확인된다. 제품 간 흡입력·사용시간 측정 조건 비교표 근거는 부족하다.",
-                "supported": false,
-                "source_index": 0,
-                "quote": "* 사용시간 : Bespoke AI 제트 400W, 일반모드 100분은 대용량 배터리를 탑재한 핸디 기준"
-              },
-              {
-                "facet": "집 크기와 청소 습관에 따라 어떤 사양을 확인해야 할까?",
-                "answer": "공간 크기와 청소 루틴에 따라 흡입력·사용시간을 확인하는 일반 선택 기준은 지원한다.",
+                "facet": "사무·게임·영상편집 용도에 따라 CPU·RAM·GPU를 어떻게 비교하는가?",
+                "answer": "일상용 RAM 8GB, 편집·게임용 16GB 이상과 CPU 성능 요소, 내장·전용 GPU 구분을 안내할 근거가 있다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "컴팩트한 공간부터 넓은 가족형 주택까지 거주 공간별로 우리 집에 가장 어울리는 제품을 선택해 보세요."
+                "quote": "However, if you’re into video editing or serious gaming, at least 16GB is recommended."
               },
               {
-                "facet": "무게와 보관 방식은 어떻게 확인해야 할까?",
-                "answer": "LG 미국 소형 주거 안내는 들기·이동 편의, 벽걸이·충전 거치대 확인을 지원한다. 국내 제품별 비교는 없다.",
+                "facet": "화면 크기·품질과 휴대성·배터리를 어떻게 비교하는가?",
+                "answer": "화면 크기와 휴대성의 관계, 밝기·해상도 및 이동 중 배터리 중요성을 설명할 수 있다.",
                 "supported": true,
-                "source_index": 1,
-                "quote": "Look for models with a wall mount or a compact charging station that doubles as storage."
+                "source_index": 0,
+                "quote": "When choosing a screen, consider brightness measured in NIT units;"
               },
               {
-                "facet": "먼지통 관리 편의는 무엇을 비교해야 할까?",
-                "answer": "먼지통 용량과 비우는 빈도를 확인하는 체크리스트는 지원한다.",
+                "facet": "연결 단자와 충전 호환성은 무엇을 확인하는가?",
+                "answer": "USB·HDMI 단자와 USB-C 충전 지원 여부를 확인하도록 안내할 수 있다.",
                 "supported": true,
-                "source_index": 1,
-                "quote": "Smaller vacuums often have smaller dustbins, so it’s important to consider how much debris your vacuum can hold before it needs emptying."
+                "source_index": 0,
+                "quote": "Notebook laptops typically offer a variety of connectivity options, including USB ports, HDMI ports,"
+              },
+              {
+                "facet": "구매 전 업그레이드 가능 여부는 어떻게 확인하는가?",
+                "answer": "일부 제품의 저장장치 업그레이드 가능성을 확인하는 기준은 지원한다. 개별 모델의 가능 여부는 제시하지 않는다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "Certain notebook laptops allow you easily and frequently upgrade features like storage,"
               }
             ],
             "current_relevance": {
               "kind": "evergreen",
               "source_index": 0,
-              "quote": "우리 집과 나의 라이프 스타일에 딱 맞는 청소기를 선택해 보세요. 구매 전에 꼭 확인하세요",
+              "quote": "Figuring out what laptop to buy can be a tough choice.",
               "event_start": null,
               "event_end": null,
               "date_quote": null
             }
           }
         },
-        "score": 58.39,
+        "score": 54.67,
         "publish_eligible": false,
         "hold_reasons": [
           "narrower_source_coverage",
@@ -8646,18 +8613,20 @@
     "rejected": [
       {
         "keyword": "로봇청소기비교",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        }
+      },
+      {
+        "keyword": "무선청소기비교",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.samsung.com/sec/support/model/VR90F01SAG/",
-              "title": "Samsung 대한민국",
-              "excerpt_chars": 5105
-            },
-            {
-              "url": "https://www.lg.com/us/support/help-library/lg-robot-vacuum-how-to-clean-the-dust-bin--20153413481604",
-              "title": "LG Robot Vacuum - How to Clean the Dust Bin | LG USA Support",
-              "excerpt_chars": 3814
+              "url": "https://www.samsung.com/sec/vacuum-cleaners/bespoke-jet-vs28d950ac-d2c/VS28D950ACB/",
+              "title": "Bespoke AI 제트 Lite 280W | VS28D950ACB | Samsung 대한민국",
+              "excerpt_chars": 467
             }
           ],
           "analysis_status": "supported_false",
@@ -8704,24 +8673,6 @@
         }
       },
       {
-        "keyword": "노트북비교",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
-              "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
-              "excerpt_chars": 616
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_navigation"
-          }
-        }
-      },
-      {
         "keyword": "청소기비교",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
@@ -8732,14 +8683,14 @@
               "excerpt_chars": 8000
             },
             {
-              "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=89921",
-              "title": "Cheongsong Folk Museum (청송민속박물관)-  VISITKOREA",
-              "excerpt_chars": 3976
+              "url": "https://cb-platform.or.kr/",
+              "title": "충청북도사회서비스원 보건의료‧복지 플랫폼",
+              "excerpt_chars": 1040
             },
             {
-              "url": "https://cb.pass.or.kr/",
-              "title": "충청북도사회서비스원",
-              "excerpt_chars": 2622
+              "url": "https://encykorea.aks.ac.kr/Article/E0056517",
+              "title": "청송향교 - 한국민족문화대백과사전",
+              "excerpt_chars": 1646
             }
           ],
           "analysis_status": "supported_false",
@@ -8779,6 +8730,12 @@
             "snippet": "무선청소기에 사용되는 배터리는 충전과 방전이 반복되면 ... 서 성능저하가 발생할 수 있으며, 이로 인해 무선청소기의 ... * \u0007일반 유선청소기의 소음은 평균 81dB(75dB~86dB, 진공청소기 품질비교 ..."
           },
           {
+            "url": "https://yesgent.com/",
+            "domain": "yesgent.com",
+            "title": "쇼핑의 정석 – 가이드젠트가 함께합니다.",
+            "snippet": "## 무선청소기 추천 비교 (가격·특징 정리) ... *해당 링크를 통해서 구매하시면 파트너스 활동으로 일정 리워드를 지급받습니다* 오늘은 가장 저렴하게 구매할 수 있는 JONR 고온건조 자동세척"
+          },
+          {
             "url": "https://www.21innovation.org/categories/appliances/vacuum-cleaner",
             "domain": "www.21innovation.org",
             "title": "청소기 전문 리뷰 - 가전제품 전문가 분석 | 21이노베이션",
@@ -8789,12 +8746,6 @@
             "domain": "kimfree-tip.tistory.com",
             "title": "무선 청소기 추천 및 가격 비교 분석!",
             "snippet": "# 무선 청소기 추천 및 가격 비교 분석! ... 자동 먼지 비움 같은 부가 기능은 덜어내거나 단순화하는 대신, 청소기 본연의 흡입력과 가격 경쟁력에 집중한 모델들이에요."
-          },
-          {
-            "url": "https://techpick.compounding.co.kr/contents/1222",
-            "domain": "techpick.compounding.co.kr",
-            "title": "클레파 디베아 드림미 10만원대 무선 청소기 스펙 가격 성능 비교 - 테크픽",
-            "snippet": "Image: 클레파 디베아 드림미 10만원대 무선 청소기 스펙 가격 성능 비교 ... 오늘은 가성비 무선 청소기를 찾으시는 분들을 위해, 클레파, 디베아, 드림미 세 가지 인기"
           },
           {
             "url": "https://sallimlab.com/corded-vs-cordless-vacuum/",
@@ -8815,10 +8766,10 @@
             "snippet": "📋 청소기 선택 전 꼭 확인할 것내가 실제로 사용할 목적에 맞는지가격 대비 구성·품질이 적당한지구매자 평점과 리뷰 내용배송 방식과 교환·반품 조건💡 알아두세요! ... 🛍️ 청소기 인기"
           },
           {
-            "url": "https://tilnote.io/pages/6a3b1732478fbed2738c3282",
-            "domain": "tilnote.io",
-            "title": "2026 핸디 청소기 추천 차량용 무선 미니청소기 비교 - TILNOTE",
-            "snippet": "### 샤오미 미지아 차량용 무선청소기 MJXCQ01QW ... 그리고 해외구매판은 한국어 매뉴얼이 없으니, 처음 사는 사람은 정식 유통 모델을 권한다. ... 30kPa는 다이슨 V8 Slim의 115AW를"
+            "url": "https://mussoev.carjja.com/",
+            "domain": "mussoev.carjja.com",
+            "title": "KGM 무쏘 EV",
+            "snippet": "경기 수원 (주)굿카가 안내하는 무쏘 EV 중고차 시세는 2026-09-24 기준 3,780만~3,780만원대이며, 전기 2WD·AWD 매물부터 가솔린·디젤 무쏘(Q300) 트림까지 실시간 재고를 한 페이지에서 비교하실 수 있습니다. ..."
           }
         ],
         "search_review": {
@@ -8826,8 +8777,8 @@
           "query": "무선청소기가격비교",
           "executed_query": "무선 청소기 가격 비교",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-25T00:44:09.298842+00:00",
-          "raw_sha256": "faa504fde7bf1e33ec0fec719a80641644ddc5a5a262a26a7102ff2c39154d33",
+          "checked_at": "2026-09-25T03:31:31.715994+00:00",
+          "raw_sha256": "e0f7c43a3e27b786b54a2a6a1082d6e183c12d327c3be8e7357b73d8ac92853c",
           "decisions": [
             {
               "result_index": 0,
@@ -8846,18 +8797,18 @@
             },
             {
               "result_index": 3,
+              "relevant": true,
+              "quote": "무선청소기 추천 비교 (가격·특징 정리)"
+            },
+            {
+              "result_index": 4,
               "relevant": false,
               "quote": "무선청소기 13개 상품 비교 가능"
             },
             {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "무선 청소기 추천 및 가격 비교 분석!"
-            },
-            {
               "result_index": 5,
               "relevant": true,
-              "quote": "클레파 디베아 드림미 10만원대 무선 청소기 스펙 가격 성능 비교"
+              "quote": "무선 청소기 추천 및 가격 비교 분석!"
             },
             {
               "result_index": 6,
@@ -8872,14 +8823,44 @@
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "청소기 선택 전 꼭 확인할 것"
+              "quote": "청소기 선택 전 꼭 확인할 것내가 실제로 사용할 목적에 맞는지가격 대비 구성·품질이 적당한지"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "2026 핸디 청소기 추천 차량용 무선 미니청소기 비교"
+              "quote": "무쏘 EV 중고차 시세는 2026-09-24 기준 3,780만~3,780만원대"
             }
           ]
+        }
+      },
+      {
+        "keyword": "로봇청소기추천",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        }
+      },
+      {
+        "keyword": "업무용노트북",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.samsung.com/us/computers/galaxy-book/galaxy-book6-pro/",
+              "title": "Galaxy Book6 Pro | Samsung US",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.samsung.com/sec/business/insights/news/news_250106_04/",
+              "title": "제품뉴스 | Samsung Business 대한민국",
+              "excerpt_chars": 2755
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
         }
       },
       {
@@ -8908,138 +8889,6 @@
             "kind": "model_opinion",
             "code": "source_missing_detail"
           }
-        }
-      },
-      {
-        "keyword": "업무용노트북",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "low_search_relevance"
-        ],
-        "monthly_search": 11870,
-        "organic_provider": "codex_native_search",
-        "organic_query": "업무용 노트북",
-        "organic_results": [
-          {
-            "url": "https://www.acer.com/kr-ko/laptops/travelmate/travelmate-p4-13",
-            "domain": "www.acer.com",
-            "title": "Acer TravelMate P4 13 | 업무용 13인치 노트북 | Acer 한국",
-            "snippet": "16:10 디스플레이를 갖춘 얇고 내구성이 뛰어난 풀 HD^{1} 해상도 노트북에는 마그네슘 합금 섀시, 군사 표준 MIL-STD-810H 인증^{2} 및 Acer Dust Defender 기술 이 적용되었습니다. ..."
-          },
-          {
-            "url": "https://sujubut.com/bid/domestic/3158071/",
-            "domain": "sujubut.com",
-            "title": "의원 업무용 노트북 구매 · 서울특별시 의회사무처 | 수주벗",
-            "snippet": "# 의원 업무용 노트북 구매 ... 수주벗에 사업자번호만 넣으면 적합도 점수·입찰참가자격 충족 여부·비슷한 과거 사업과 낙찰가를 자동으로 알려드려요. ... 의원 업무용 노트북 구매 ... 적격심사제-추정가격이"
-          },
-          {
-            "url": "https://estore.workmarket9.com/common/introduceService",
-            "domain": "estore.workmarket9.com",
-            "title": "통합구매 솔루션 | 업무마켓9",
-            "snippet": "업무마켓9은 간접구매 관리 솔루션과 업무용 쇼핑몰을 제공하여 기업의 ... _{이사, 인테리어 레이아웃, 휴게실 공사} ... 원상 복구, 철거 ... 워크 플로우를 한번에 ... 구매할때 마다"
-          },
-          {
-            "url": "https://www.nypi.re.kr/fileDownload?bbsId=BOARD00023&fileDownType=C&fileId=mDVyPiTo7h&fileSn=1&menuKey=ppeX4WOS8Y",
-            "domain": "www.nypi.re.kr",
-            "title": "보 도 자 료 행정안전부 보도 일시 | 2022. 7. 19.(화) 12:00 | | --- | --- | --- | --- 보 도 자 료 행정안전부 담당 부서 | 디지털정부국 스마트행정기반과 | 책임자 | 과 장 김성록(044-205-2910) 보 도 자 료 행정안전부 None | | 담당자 | 사무관 권재식(044-205-2918)공무원 업무용 노트북 도입으로 스마트한 현장행정 강화",
-            "snippet": "모든 데이터가 연결되는 세계 최고의 디지털플랫폼 정부 구현 ... 업무용 노트북"
-          },
-          {
-            "url": "https://www.korearental.co.kr/esg/news/detail/267",
-            "domain": "www.korearental.co.kr",
-            "title": "업무용 노트북 비교, x86 vs ARM 차이와 선택 기준 · 뉴스룸 - 한국렌탈",
-            "snippet": "따라서 현재의 업무용 노트북 선택에서 x86과 ARM의 비교는 단순히 ‘어느 CPU가 더 빠른가’를 판단하는 문제와는 조금 다릅니다. ... x86 노트북은 ERP나 회계, 그룹웨어 등 기존"
-          },
-          {
-            "url": "https://www.yna.co.kr/view/AKR20250627159900062",
-            "domain": "www.yna.co.kr",
-            "title": "\"업무용 사적으로 써서\"…동료 노트북 숨긴 공무원 전과자 전락 | 연합뉴스",
-            "snippet": "(춘천=연합뉴스) 강태현 기자 = 직장 동료가 업무용 노트북을 사적으로 사용한다고 생각해 사무실 책상 서랍 등에 노트북을 숨긴 40대 공무원이 결국 전과자 신세로 전락했다. ... 또"
-          },
-          {
-            "url": "https://www.mt.co.kr/tech/2026/09/08/2026090808425080698",
-            "domain": "www.mt.co.kr",
-            "title": "델, 최대 16% 가벼워진 업무용 노트북 '델 프로 에센셜 14·15' 출시 - 머니투데이",
-            "snippet": "## 델, 최대 16% 가벼워진 업무용 노트북 '델 프로 에센셜 14·15' 출시 ... 델 테크놀로지스가 전작보다 최대 16% 가벼워진 SBM(중소·중견기업)용 업무 노트북을 선보였다. ... 유상모"
-          },
-          {
-            "url": "https://gimpocouncil.go.kr/upload/mnts/apndx/a08/A0000007965.pdf",
-            "domain": "gimpocouncil.go.kr",
-            "title": "(P - 48)\n\n# 디자인 업무용 노트북 구입\n\n<table id=\"e1\">\n<tr><t",
-            "snippet": "<td>·디자인 업무용 노트북<br>-MacBook Pro 14 : 2,690,000원*1대</td> ... ○ 콘텐츠 제작용의 대용량 이미지 파일과 동영상 파일의 특성상 기존의 행정업무용 PC로는 편집 프로그램의 원활한 구동이 어려움"
-          },
-          {
-            "url": "https://sujubut.com/bid/domestic/3440921/",
-            "domain": "sujubut.com",
-            "title": "국가통합빅데이터사업 수행을 위한 업무용 노트북 구매 · 한국과학기술정보연구원 | 수주벗",
-            "snippet": "# 국가통합빅데이터사업 수행을 위한 업무용 노트북 구매 ... 국가통합빅데이터사업 수행을 위한 업무용 노트북 구매"
-          },
-          {
-            "url": "https://web.joongna.com/product/217937722",
-            "domain": "web.joongna.com",
-            "title": "업무용 노트북 ASUS 비보북 (D515UA) 판매합니다. | 중고나라 - 안심되는 중고거래",
-            "snippet": "Image: 업무용 노트북 ASUS 비보북 (D515UA) 판매합니다. ... # 업무용 노트북 ASUS 비보북 (D515UA) 판매합니다. ... 학생들 과재용, 업무용, 사무용으로 사용하기 좋습니다 ! - 모델:"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "업무용노트북",
-          "executed_query": "업무용 노트북",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-25T00:44:09.298842+00:00",
-          "raw_sha256": "b55ef02ccfa30c76ba0e8a2154680d0c76c01a0eb40ef4d8b938f233000b0373",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "업무용 13인치 노트북"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "적합도 점수·입찰참가자격 충족 여부"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "간접구매 관리 솔루션과 업무용 쇼핑몰"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "공무원 업무용 노트북 도입으로 스마트한 현장행정 강화"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "업무용 노트북 비교, x86 vs ARM 차이와 선택 기준"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "동료 노트북 숨긴 공무원 전과자 전락"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "전작보다 최대 16% 가벼워진 SBM(중소·중견기업)용 업무 노트북"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "MacBook Pro 14 : 2,690,000원*1대"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "국가통합빅데이터사업 수행을 위한 업무용 노트북 구매"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "업무용 노트북 ASUS 비보북 (D515UA) 판매합니다."
-            }
-          ]
         }
       }
     ],
@@ -9113,27 +8962,27 @@
         "proposals": [
           {
             "keyword": "로봇청소기비교",
-            "reason": "월 1,050회. 구매 전 자동 세척·급배수·장애물 회피 기능과 설치 제약을 공식 자료로 비교할 수 있어 조사 가치가 있다.",
+            "reason": "월 1,050회 실측 수요. 구매 전 자동 세척·급배수·문턱 대응 조건을 묻는 검색으로, 제조사 공식 사양과 설치 제약을 조사할 가치가 있다.",
             "search_query": "로봇청소기 비교"
           },
           {
             "keyword": "무선청소기비교",
-            "reason": "월 630회. 무게·사용시간의 측정 조건·배터리 교체 여부를 확인하려는 구체적인 구매 판단 수요를 조사하기 좋다.",
+            "reason": "월 630회 실측된 비교 수요. 무게·배터리·구성품 선택에 필요한 공식 사양과 사용시간 측정 조건을 확인하기 좋다.",
             "search_query": "무선청소기 비교"
           },
           {
             "keyword": "인덕션설치비용",
-            "reason": "월 880회. 구매 예산에 영향을 주는 기본 설치 포함 범위와 타공·전기공사 추가 비용 조건을 공식 안내로 확인할 가치가 있다.",
+            "reason": "월 880회 실측 수요. 구매 예산에 영향을 주는 기본 설치 범위와 타공·전기공사 추가 비용 조건을 공식 안내로 조사할 필요가 있다.",
             "search_query": "인덕션 설치 비용"
           },
           {
             "keyword": "노트북비교",
-            "reason": "월 7,850회. 구매 전 용도별 사양·무게·포트·확장성 차이를 묻는 수요로, 제조사 공식 사양에 기반한 비교를 조사하기 좋다.",
+            "reason": "월 7,850회 실측 수요. 특정 모델 리뷰와 달리 용도별 구매 선택이 목적이며, 공식 사양에서 무게·메모리·확장성을 비교할 필요가 있다.",
             "search_query": "노트북 비교"
           },
           {
             "keyword": "청소기비교",
-            "reason": "월 7,760회. 유선·무선·로봇 방식 중 무엇을 선택할지 판단하는 수요로, 제품 유형별 기능과 제약을 조사할 가치가 있다.",
+            "reason": "월 7,760회 실측 수요. 청소기 유형을 고르는 독자를 위해 유선·무선·로봇의 기능과 관리 제약을 공식 자료로 조사할 가치가 있다.",
             "search_query": "청소기 비교"
           }
         ]
@@ -9205,18 +9054,23 @@
         "proposals": [
           {
             "keyword": "무선청소기가격비교",
-            "reason": "월 640회의 구체적인 가격 비교 수요가 있다. 공식 판매가와 구성품·배터리 포함 조건을 확인해 구매비용 비교가 가능한지 조사할 만하다.",
+            "reason": "월 640회 실측된 비교 수요다. 구매 전 가격 차이를 판단하도록 공식 구성품·배터리·보증 조건을 조사할 가치가 있다.",
             "search_query": "무선 청소기 가격 비교"
           },
           {
-            "keyword": "학생용노트북",
-            "reason": "월 8,730회로 용도가 명확한 수요다. 강의·과제용 구매자가 확인할 무게·메모리·단자·보증 조건을 제조사 자료로 조사할 만하다.",
-            "search_query": "학생용 노트북"
+            "keyword": "로봇청소기추천",
+            "reason": "월 9,570회로 구매 선택 의도가 명확하다. 공식 사양에서 문턱 대응·물걸레 관리·설치 조건을 확인할 후보다.",
+            "search_query": "로봇 청소기 추천"
           },
           {
             "keyword": "업무용노트북",
-            "reason": "월 11,870회의 업무 목적 수요가 있다. 구매 전 필요한 메모리·외부 화면 지원·연결 단자 등 선택 조건을 공식 사양으로 조사할 만하다.",
+            "reason": "월 11,870회이며 업무 용도라는 선택 조건이 있다. 공식 메모리·포트·무게 사양을 바탕으로 구매 기준을 조사할 후보다.",
             "search_query": "업무용 노트북"
+          },
+          {
+            "keyword": "학생용노트북",
+            "reason": "월 8,730회이며 학생 용도에 맞는 선택 수요다. 휴대성·저장공간·운영체제 포함 여부를 공식 자료로 조사할 가치가 있다.",
+            "search_query": "학생용 노트북"
           }
         ]
       }
@@ -9224,22 +9078,29 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "무선청소기비교",
-        "monthly_search": 630,
-        "score": 58.39,
+        "keyword": "노트북비교",
+        "monthly_search": 7850,
+        "score": 54.67,
         "status": "held",
         "reasons": [
           "narrower_source_coverage",
           "unverified_source_coverage"
         ],
-        "organic_query": "무선청소기 비교"
+        "organic_query": "노트북 비교"
       },
       {
         "keyword": "로봇청소기비교",
         "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
+        "reason": "no accessible official source supports topic",
         "monthly_search": 1050,
         "organic_query": "로봇청소기 비교"
+      },
+      {
+        "keyword": "무선청소기비교",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 630,
+        "organic_query": "무선청소기 비교"
       },
       {
         "keyword": "인덕션설치비용",
@@ -9247,13 +9108,6 @@
         "reason": "search intent or official evidence does not support an article",
         "monthly_search": 880,
         "organic_query": "인덕션 설치 비용"
-      },
-      {
-        "keyword": "노트북비교",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 7850,
-        "organic_query": "노트북 비교"
       },
       {
         "keyword": "청소기비교",
@@ -9270,18 +9124,25 @@
         "organic_query": "무선 청소기 가격 비교"
       },
       {
+        "keyword": "로봇청소기추천",
+        "status": "rejected",
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 9570,
+        "organic_query": "로봇 청소기 추천"
+      },
+      {
+        "keyword": "업무용노트북",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 11870,
+        "organic_query": "업무용 노트북"
+      },
+      {
         "keyword": "학생용노트북",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
         "monthly_search": 8730,
         "organic_query": "학생용 노트북"
-      },
-      {
-        "keyword": "업무용노트북",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 11870,
-        "organic_query": "업무용 노트북"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."

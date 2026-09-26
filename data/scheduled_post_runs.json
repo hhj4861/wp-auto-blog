@@ -136,6 +136,13 @@
       "claimed_at": "2026-09-25T19:13:41.607757+09:00",
       "status": "success",
       "completed_at": "2026-09-25T10:31:26.420150+00:00"
+    },
+    "2026-09-26:morning": {
+      "run_id": "36215299178",
+      "category": "테크",
+      "slot": "morning",
+      "claimed_at": "2026-09-26T12:36:02.497154+09:00",
+      "status": "started"
     }
   }
 }

@@ -6050,7 +6050,7 @@
   },
   "생산성": {
     "category": "생산성",
-    "selected_at": "2026-09-27T10:48:43.347630+00:00",
+    "selected_at": "2026-09-27T13:12:59.222737+00:00",
     "seeds": [
       "엑셀",
       "노션",
@@ -6059,7 +6059,7 @@
     ],
     "selection_version": 6,
     "research_rounds": 2,
-    "source_recovery_attempts": 1,
+    "source_recovery_attempts": 0,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -6076,76 +6076,6 @@
     "selected": [],
     "held": [],
     "rejected": [
-      {
-        "keyword": "서류정리",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://support.apple.com/ko-kr/108963",
-              "title": "iPhone 또는 iPad에서 문서를 스캔하는 방법 - Apple 지원 (KR)",
-              "excerpt_chars": 1353
-            },
-            {
-              "url": "https://support.apple.com/ko-kr/108306",
-              "title": "iCloud에 저장한 정보 아카이브하기 또는 복사본 만들기 - Apple 지원 (KR)",
-              "excerpt_chars": 6246
-            },
-            {
-              "url": "https://www.seouljewelry.or.kr/portal/main/contents.do?menuNo=200033",
-              "title": "찾아오시는길 | 서울주얼리지원센터",
-              "excerpt_chars": 729
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "insufficient_search_intent"
-          },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.seouljewelry.or.kr/portal/main/contents.do?menuNo=200033",
-                  "title": "찾아오시는길 | 서울주얼리지원센터",
-                  "excerpt_chars": 729
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_rejected",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://support.apple.com/ko-kr/108963",
-                  "title": "iPhone 또는 iPad에서 문서를 스캔하는 방법 - Apple 지원 (KR)",
-                  "excerpt_chars": 1353
-                },
-                {
-                  "url": "https://support.apple.com/ko-kr/108306",
-                  "title": "iCloud에 저장한 정보 아카이브하기 또는 복사본 만들기 - Apple 지원 (KR)",
-                  "excerpt_chars": 6246
-                },
-                {
-                  "url": "https://www.seouljewelry.or.kr/portal/main/contents.do?menuNo=200033",
-                  "title": "찾아오시는길 | 서울주얼리지원센터",
-                  "excerpt_chars": 729
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "insufficient_search_intent"
-              }
-            }
-          }
-        }
-      },
       {
         "keyword": "결혼준비엑셀",
         "reason": "search intent or official evidence does not support an article",
@@ -6172,6 +6102,138 @@
             "kind": "model_opinion",
             "code": "other"
           }
+        }
+      },
+      {
+        "keyword": "서류정리",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 530,
+        "organic_provider": "codex_native_search",
+        "organic_query": "서류 정리",
+        "organic_results": [
+          {
+            "url": "https://dictionary.reverso.net/korean-english/%EC%84%9C%EB%A5%98",
+            "domain": "dictionary.reverso.net",
+            "title": "서류 translation in English | Korean-English Dictionary | Reverso",
+            "snippet": "기록된 문서 ... 서류 정리 담당 직원은 아침마다 문서를 알맞은 위치에 나누어 꽂았다. ... 그는 서류를 정리해 들고 다니기 편해서 바퀴 달린 서류 가방을 더"
+          },
+          {
+            "url": "https://www.law.go.kr/flDownload.do?bylClsCd=110205&flSeq=87036081&gubun=",
+            "domain": "www.law.go.kr",
+            "title": "(6) 문서 관리  \n1) 서류 작성(복사 타이프)  \n2) 문서 정리  \n문서의 접수와",
+            "snippet": "1) 서류 작성(복사 타이프)2) 문서 정리 ... (3) 금속공이나 기계다루기등에 있어서는 특히 사고없이 진행되도록 유의하고 공구의 사용, 재료의 구입 보관등 관리 교육에 힘쓴다. ... (2)"
+          },
+          {
+            "url": "https://www.yes24.com/product/goods/122661419",
+            "domain": "www.yes24.com",
+            "title": "[예스24배송] 아코디언 서류 파일 정리 케이스 | 브리스크스타일(예스직배송) - 예스24",
+            "snippet": "Image: [예스24배송] 아코디언 서류 파일 정리 케이스 ... ## [예스24배송] 아코디언 서류 파일 정리 케이스 ... 클래스는 첫번째 회차 주문확정 시점부터 마지막 회차 주문확정 후"
+          },
+          {
+            "url": "https://www.law.go.kr/flDownload.do%3Fgubun%3D%26flSeq%3D87036081%26bylClsCd%3D110205",
+            "domain": "www.law.go.kr",
+            "title": "(6) 문서 관리  \n1) 서류 작성(복사 타입)  \n2) 문서 정리  \n문서의 접수와 발",
+            "snippet": "1) 서류 작성(복사 타입)2) 문서 정리 ... (3) 금속공이나 기계다루기등에 있어서는 특히 사고없이 진행되도록 유의하고 공구의 사용, 재료의 구입 보관등 관리 교육에 힘쓴다. ... (2)"
+          },
+          {
+            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49870015",
+            "domain": "www.jobkorea.co.kr",
+            "title": "한원푸드시스템㈜ 채용 - 경리 업무(ex. 입고 전표 정리) 출고 관련 서류 정리 | 잡코리아",
+            "snippet": "입고 전표 정리) 출고 관련 서류 정리 ... 경리업무,입고 전표정리, 출고 서류정리"
+          },
+          {
+            "url": "https://ssully.joins.com/",
+            "domain": "ssully.joins.com",
+            "title": "썰리 - 썰로 푸는 이슈 정리",
+            "snippet": "광안리 드론쇼의 비결 2026.09.12 ... * AI 연구자들이 경고한 ‘AI 종말론’ ... * 동전이 사라진다…한은도 제조 중단 ... * 초등학생 희망직업 ‘뜻밖의 1위’ 😯 *"
+          },
+          {
+            "url": "https://www.yes24.com/product/goods/122661419?ReviewYn=Y",
+            "domain": "www.yes24.com",
+            "title": "[예스24배송] 아코디언 서류 파일 정리 케이스 | 브리스크스타일(예스직배송) - 예스24",
+            "snippet": "Image: [예스24배송] 아코디언 서류 파일 정리 케이스 ... ## [예스24배송] 아코디언 서류 파일 정리 케이스"
+          },
+          {
+            "url": "https://www.skku.edu/skku_bak/campus/skk_comm/notice01.do?articleNo=79608&attachNo=62626&mode=download",
+            "domain": "www.skku.edu",
+            "title": "붙임 #12\n\n# 신원조사 서류정리 요령\n\n아래 그림과 같이 순서대로 서류 정리 후  \n클",
+            "snippet": "아래 그림과 같이 순서대로 서류 정리 후 ... 개인정보 수집·이용·제공동의서 1부(신용조사용) 3. ... 하단 주의문은 “※ 신원조사 서류정리 요령대로 서류를 준비하여 구비서류와 함께 면접평가지 제출”이다."
+          },
+          {
+            "url": "https://www.dongseo.ac.kr/kr/index.php?idx=77587&mode=fdn&num=1&pCode=MN2000360&pg=299",
+            "domain": "www.dongseo.ac.kr",
+            "title": "[붙임 #8]\n\n# 신원조사 서류 정리방법\n\n## 정리 순서\n1. ① 신원진술서 1쪽",
+            "snippet": "# 신원조사 서류 정리방법## 정리 순서 ... - ② ~ ⑥의 서류를 테이프로 부착한 신원진술서 사이에 끼워 넣습니다.."
+          },
+          {
+            "url": "https://rolecatcher.com/ko/skills/hard-skills/working-with-machinery-and-specialised-equipment/operating-machinery-for-the-manufacture-of-products/arrange-printer-sheets/",
+            "domain": "rolecatcher.com",
+            "title": "RoleCatcher | 프린터 시트 정리 기술 익히기: 서류 작업을 효율적으로 정리하기 위한 종합 가이드",
+            "snippet": "관리 역할, 고객 서비스, 금융, 교육 등 다양한 직종과 산업에서 잘 정리되고 쉽게 접근할 수 있는 서류 작업이 가장 중요합니다. ... 관리 역할에서 프린터 시트를"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "서류정리",
+          "executed_query": "서류 정리",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-27T13:12:59.222737+00:00",
+          "raw_sha256": "053c1e7f7502b09104bb7805f7903bd88d416df56579e3655bad781922f5d217",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "서류 translation in English"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "1) 서류 작성(복사 타이프)2) 문서 정리"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "아코디언 서류 파일 정리 케이스"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "1) 서류 작성(복사 타입)2) 문서 정리"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "한원푸드시스템㈜ 채용"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "썰리 - 썰로 푸는 이슈 정리"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "아코디언 서류 파일 정리 케이스"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "아래 그림과 같이 순서대로 서류 정리 후"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "② ~ ⑥의 서류를 테이프로 부착한 신원진술서 사이에 끼워 넣습니다."
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "서류 작업을 효율적으로 정리하기 위한 종합 가이드"
+            }
+          ]
         }
       },
       {
@@ -6251,18 +6313,18 @@
         ],
         "proposals": [
           {
-            "keyword": "서류정리",
-            "reason": "네이버 월 530회. 문서 분류·파일명·보관 체계 등 서류를 쉽게 찾는 정리 절차를 조사할 가치가 있다.",
-            "search_query": "서류 정리"
-          },
-          {
             "keyword": "결혼준비엑셀",
-            "reason": "네이버 월 560회. 준비 항목·예산·마감일을 엑셀로 정리하는 방법과 표 구성 수요를 조사하기 좋다.",
+            "reason": "네이버 월 560회. 준비 항목·예산·진행 상태를 엑셀로 정리하는 방법을 조사할 구체적인 활용 후보입니다.",
             "search_query": "결혼 준비 엑셀"
           },
           {
+            "keyword": "서류정리",
+            "reason": "네이버 월 530회. 문서 분류 기준과 보관·검색 방법을 찾는 수요에 답할 수 있어 조사할 가치가 있습니다.",
+            "search_query": "서류 정리"
+          },
+          {
             "keyword": "여행일정표",
-            "reason": "네이버 월 2,040회. 날짜·시간·이동 계획을 표로 구성하는 문서 작성 수요가 있어 작성 절차를 조사할 만하다.",
+            "reason": "네이버 월 2,040회. 시간·이동·예약 정보를 일정표로 작성하고 공유하는 문서 활용 수요를 조사할 후보입니다.",
             "search_query": "여행 일정표"
           }
         ]
@@ -6337,18 +6399,18 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "서류정리",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 530,
-        "organic_query": "서류 정리"
-      },
-      {
         "keyword": "결혼준비엑셀",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
         "monthly_search": 560,
         "organic_query": "결혼 준비 엑셀"
+      },
+      {
+        "keyword": "서류정리",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 530,
+        "organic_query": "서류 정리"
       },
       {
         "keyword": "여행일정표",

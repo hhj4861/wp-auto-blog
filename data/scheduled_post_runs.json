@@ -160,6 +160,13 @@
       "claimed_at": "2026-09-27T12:45:10.556439+09:00",
       "status": "failure",
       "completed_at": "2026-09-27T04:06:13.063613+00:00"
+    },
+    "2026-09-27:evening": {
+      "run_id": "36313691347",
+      "category": "생산성",
+      "slot": "evening",
+      "claimed_at": "2026-09-27T19:48:07.236064+09:00",
+      "status": "started"
     }
   }
 }

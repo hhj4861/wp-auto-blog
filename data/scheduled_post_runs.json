@@ -176,6 +176,13 @@
       "claimed_at": "2026-09-28T12:44:10.907420+09:00",
       "status": "failure",
       "completed_at": "2026-09-28T03:58:24.538016+00:00"
+    },
+    "2026-09-28:evening": {
+      "run_id": "36419131434",
+      "category": "리뷰",
+      "slot": "evening",
+      "claimed_at": "2026-09-28T21:01:07.325784+09:00",
+      "status": "started"
     }
   }
 }

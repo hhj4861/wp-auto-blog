@@ -5874,7 +5874,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-09-25T03:31:31.715994+00:00",
+    "selected_at": "2026-09-28T12:01:53.437880+00:00",
     "seeds": [
       "로봇청소기",
       "무선청소기",
@@ -5894,36 +5894,364 @@
     },
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 433,
-    "evaluated_candidates": 9,
+    "measured_candidates": 426,
+    "evaluated_candidates": 7,
     "research_pool_size": 120,
     "selected": [],
     "held": [
       {
-        "keyword": "노트북비교",
+        "keyword": "업무용노트북",
         "category": "리뷰",
-        "topic": "노트북비교: 사무용·게임용·영상편집용 구매 전 사양과 선택 기준",
-        "intent": "사무·게임·영상편집 용도에 맞는 노트북을 고를 때 어떤 사양과 제약을 비교해야 할까?",
-        "gap": "LG 공식 가이드에 근거한 용도별 CPU·RAM·GPU 비교 항목표와 화면·휴대성·단자·업그레이드 체크리스트 제공",
-        "source_url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
+        "topic": "업무용노트북 선택 기준: 휴대성·업무 유형·AI 기능 비교",
+        "intent": "출퇴근 휴대와 사무·창작 업무에 맞는 업무용노트북은 어떤 기준으로 선택해야 할까?",
+        "gap": "삼성·LG 공식 자료의 휴대성·업무별 기능·보안 비교표와 AI 제약 체크리스트 제공. LG 미국 사양은 국내와 구분.",
+        "source_url": "https://www.lg.com/us/business/press-release/lg-electronics-usa-introduces-new-lg-gram-business-laptop-lineup?category=ess",
         "verified_sources": [
           {
-            "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
-            "original_url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
-            "title": "Step-by-Step Notebook Laptop Buying Guide | LG UK",
-            "checked_on": "2026-09-25",
-            "sha256": "578a8d05f3bb9fccfe4f7ce089e1a9fee24f33e6d8467490ad176a77707c1647",
-            "excerpt": "Share this content.  You can share the items you like with your friends. Share this content.  You can share the items you like with your friends. facebook twitter-X instagram pinterest HELPFUL HINTS How to Choose a Notebook: A Step-by-Step Portable Laptop Buying Guide By LG A row of four LG gram laptops, each displaying a different colourful abstract design on their screens, arranged on a white surface with a light background. LG UK Figuring out what laptop to buy can be a tough choice. With so many different models on the market, each with a wide array of features, designs, and tech specs available, it can be difficult to know if you’re making the best choice. If you’re someone with an on-the-go lifestyle, or if you prioritise portability and convenience, a notebook laptop is a great choice for you! In this notebook computer buying guide, we’ll cover: What to consider when buying a notebook LG’s notebook buying recommendations FAQs What to consider when buying a notebook A home office setup with a LG gram laptop, keyboard, mouse, microphone, and ring light on a wooden desk. Shelves and a cabinet are in the background. LG UK 1. Portability Notebooks are lightweight, portable laptops. If being able to take your laptop on the go easily is a priority for you, a notebook is a great choice for carrying to school, work, or while travelling. 2. Versatility Notebooks come in various sizes and configurations to suit different needs. Whether you need a device for basic productivity tasks, entertainment, gaming, or creative work, there's likely a notebook that fits your requirements, making them a versatile choice. Many notebook laptops also offer features like 2-in-1 designs that allow them to be used as both a laptop and a tablet. 3. Performance Most notebook laptops will come equipped with powerful processors and hard drives. This is especially important if you’re using your notebook laptop frequently, whether it’s for working, studying, editing or gaming. There are a few different features to look out for when buying a notebook that impact performance: RAM: When you’re looking for a notebook computer, it's essential to consider the memory, or RAM, which the processor uses to store data while carrying out tasks. For everyday use, 8GB of RAM should do the trick. However, if you’re into video editing or serious gaming, at least 16GB is recommended. Also, aim for a notebook with a minimum of 256GB of storage for the best performance. CPU: A CPU (Central Processing Unit), also known as a processor, is like the brain of the computer! The speed and power of a CPU impact how quickly and smoothly your notebook will run. Performance can vary depending on the CPU manufacturer and grade, so it's important to choose one that suits your intended use. Factors like the number of cores, clock speed, number of threads, and cache memory play a role in performance. More cores mean the CPU can handle more tasks simultaneously, while a higher clock speed ensures faster execution of instructions. From simple tasks like web browsing and word processing to more demanding ones like video editing and high-intensity gaming, the CPU handles all the necessary tasks for running applications and the operating system of the laptop. Graphics Card (GPU): A graphics card, also known as a graphics processing unit (GPU), is a crucial component for rendering images and videos. There are two types of GPUs: integrated (iGPUs) and dedicated (dGPUs). Integrated GPUs are built into the laptop's processor, while dedicated GPUs are separate chips that provide additional power for graphics-intensive tasks. A graphics card is essential for running modern high-resolution games smoothly, as well as streaming media and visuals. Graphics cards can also improve the overall system performance of your notebook, by processing on behalf of the CPU. For users requiring more powerful performance, such as gamers or video editors, they can consider purchasing a separate external graphics card if integrated options do not suffice. 4. Battery Life A crucial thing to look out for when choosing a notebook laptop is good battery life. Notebooks are known for their portability, so strong battery performance is a non-negotiable for on-the-go work, streaming or browsing, without the need to plug-in. 5. Display Quality & Screen Size Notebook laptops come in various sizes, catering to different preferences and needs. Larger 16 or 17-inch displays offer a bigger viewing experience, ideal for those who prefer more screen real estate. On the other hand, if portability is key, compact 13 and 14-inch sizes are available, though the screen may feel smaller. Touchscreen functionality is beneficial for tasks like writing or sketching directly on the laptop. When choosing a screen, consider brightness measured in NIT units; a minimum of 300 nits is recommended for visibility in various lighting conditions. For optimal clarity, opt for at least Full HD (1080p) resolution, or for superior picture quality, consider 4K OLED displays. These features enhance the overall user experience, whether you're working, streaming, or gaming. 6. Connectivity Notebook laptops typically offer a variety of connectivity options, including USB ports, HDMI ports, etc. This allows you to easily connect your notebook with your other devices, like monitors, headphones or headsets, and speakers or TVs. For added convenience, consider laptops that support charging via USB-C, providing flexibility and compatibility with a wide range of accessories and power sources. 7. Security Features When buying a laptop, prioritise models with enhanced security features like fingerprint scanners and facial recognition to safeguard your data effectively. These built-in protections ensure your information stays secure against unauthorised access, offering peace of mind in today's digital world. 8. Upgradability Certain notebook laptops allow you easily and frequently upgrade features like storage, providing users with the flexibility to adapt their devices to their changing needs over time. LG’s picks on which notebook to buy Now that we’ve covered some of the key features of notebooks, knowing what models are available is the next step in how to choose a notebook laptop. The LG gram series is a great choice if you’re after a notebook. Thanks to their ultralightweight and compact design, they’re the perfect option for users who prioritise portability without compromising performance. So, if you're looking for a lightweight and highly portable notebook laptop with long battery life and powerful performance, an LG Gram might be for you! Here are some of our picks from the LG Gram series worth considering if you’re figuring out what the best notebook laptop for you is: Best LG notebook laptop for travel: LG gram Pro 2in1 LG gram Pro 2in1 laptop is shown in various positions, highlighting its flexibility and touchscreen capabilities, against a colourful sky background. LG UK The LG gram Pro 2in1 16-inch laptop is the perfect travel companion as it’s the world’s lightest 16-inch 2in1 laptop! Weighing in at just 1,399g and measuring just 12.4mm in thickness, this ultralight and portable notebook is easy to carry around, and is ideal for travellers on the go! Also, the 2in1 convertible touchscreen has a flexible 360° hinge, allowing you to use it in various modes. If you value versatility and want a laptop that can double as a tablet for reading, streaming, or working remotely, the LG gram 2in1 is a great all-in-one solution, especially when travelling! Read more: Must-Have Travel Gadgets for Tech-Forward Journeys Best LG notebook laptop for working Two people work at a desk with a LG gram laptop and +view portable monitor displaying charts, one points while the other uses a pen and mouse. LG UK Having a dual monitor setup is a great way to maximise productivity. With multiple screens, you can easily and seamlessly work on multiple tasks. However, a multi-screen display not only requ",
+            "url": "https://www.lg.com/us/business/press-release/lg-electronics-usa-introduces-new-lg-gram-business-laptop-lineup?category=ess",
+            "original_url": "https://www.lg.com/us/business/press-release/lg-electronics-usa-introduces-new-lg-gram-business-laptop-lineup?category=ess",
+            "title": "LG ELECTRONICS USA INTRODUCES NEW LG GRAM® BUSINESS LAPTOP LINEUP | LG USA",
+            "checked_on": "2026-09-28",
+            "sha256": "15ec52ae6cfbd3711127f1c9f9daba85314189eab4b6565bface5396672ca51a",
+            "excerpt": "To properly experience our LG.com website, you will need to use an alternate browser or upgrade to a newer version of internet Explorer (IE10 or greater). LG.com utilizes responsive design to provide a convenient experience that conforms to your devices screen size. In order to get the best possible experience from our website, please follow below instructions. If you’re using Internet Explorer 9 or earlier, you will need to use an alternate browser such as Firefox or Chrome or upgrade to a newer version of internet Explorer (IE10 or greater). Skip to Contents Skip to Accessibility Help Press Release Corporate Commercial Display IT Air Conditioning ESS Scroll Left Scroll Right [Commercial Display] Press Release Download Print Share Share this content. You can share the items you like with your friends. Facebook Twitter Pinterest E-Mail LG ELECTRONICS USA INTRODUCES NEW LG GRAM® BUSINESS LAPTOP LINEUP 7/7/2026 LG ELECTRONICS USA INTRODUCES NEW LG GRAM® BUSINESS LAPTOP LINEUP LG Debuts New Enterprise-Focused LG gram Business Lineup for Modern Workforces News Summary: • LG Electronics USA is announcing a new LG gram business laptop lineup designed for enterprise productivity, AI-enabled workflows, hybrid work and mobile professionals. • The portfolio includes LG gram Pro, LG gram Pro 2-in-1, LG gram and LG gram Book models tailored for different business workflows and workforce needs. • Powered by AI-ready capabilities, the devices support modern productivity workflows while offering lightweight designs, 8+ hours of battery life and enterprise-grade security. LINCOLNSHIRE, Ill., July 7, 2026 — LG Electronics USA , a leader in commercial display solutions, monitors and laptops, today announced its new LG gram business laptop lineup designed to support organizations managing increasingly mobile and hybrid work environments. The new portfolio combines lightweight mobility, enterprise-grade security and productivity-focused performance to help businesses support modern workflows across office, remote and travel-based work settings. Powered by next-generation Intel® Core Ultra and AMD Ryzen AI processors, the LG gram business lineup combines AI-ready performance with secure enterprise features. Select models weigh less than 3 pounds and include MIL-STD-810H-certified durability, TPM 2.0 encryption and facial recognition authentication. As organizations continue adopting AI-enabled applications, cloud collaboration platforms and distributed workforce models, demand has grown for devices that balance portability, reliability and enterprise manageability. LG’s latest gram business lineup is designed to address these evolving workplace requirements with lightweight form factors, AI-ready processing capability and business-focused durability features. “Businesses today need devices that can support productivity across multiple work environments while also preparing employees for the growing role of AI in everyday workflows,” said Victoria Sanville, Corporate and Public Sector Director at LG Electronics USA. “The LG gram business lineup combines lightweight portability, enterprise-grade security and AI-ready performance to help organizations support collaboration, multitasking and modern productivity across distributed teams.” AI-Ready Performance for Modern Enterprise Workflows The latest LG gram business lineup is designed to support AI-enabled productivity tools, collaboration platforms and multitasking workflows. It provides the neural processing capability required for real-time AI tasks such as live meeting transcription and background noise reduction. The lineup also supports extended productivity with more than eight hours of battery life on select models, helping reduce interruptions during presentations, meetings and daily business operations. Lightweight Design, Durability and Security Select LG gram Pro models are constructed with Aerominum™, LG’s structural material designed to reduce chassis weight while enhancing rigidity and scratch resistance. The LG gram Pro, LG gram Pro 2-in-1 and LG gram also meet MIL-STD-810H military-grade durability standards, verified for resistance to drops, shock, temperature extremes and other conditions associated with daily use. All featured models include hardware-level TPM 2.0 encryption and facial recognition authentication to help protect proprietary information and support secure employee access. LG gram Portfolio Supports Multiple Business Use Cases The LG gram business lineup includes multiple configurations designed for different professional workflows and enterprise needs. • LG gram Pro: Designed for professionals who require enhanced graphics performance and premium portability, the LG gram Pro is intended for power users, executives and professionals managing more demanding creative or technical applications. • LG gram Pro 2-in-1: Featuring a 360-degree hinge and integrated LG Stylus Pen support, the LG gram Pro 2-in-1 allows users to transition between laptop, presentation and tablet modes. It is designed for professionals who need flexible workflows while traveling or working across multiple environments. • LG gram: Designed for hybrid professionals who split time between office and remote environments, the LG gram supports daily business applications and productivity tasks. • LG gram Book: Positioned for general office productivity, web-based business tools and day-to-day administrative workflows, the LG gram Book is a fit for everyday business users. The lineup is available with AI-ready configurations, three-year warranty support and enterprise purchasing options for business customers. For more information on LG’s new gram business laptop lineup, click here . For images, click here . # # # About LG Electronics USA LG Electronics USA serves commercial display customers in the U.S. lodging and hospitality, digital signage, systems integration, healthcare, education, government and industrial markets. Based in Lincolnshire, Ill., with its dedicated engineering and customer support team, LG’s U.S. Media Entertainment Solution B2B division delivers business-to-business technology solutions tailored to the particular needs of business environments. Eleven-time ENERGY STAR® Partner of the Year LG Electronics USA Inc., headquartered in Englewood Cliffs, N.J., is the North American subsidiary of LG Electronics Inc., a leading smart life solutions company with annual global revenues of more than $60-billion from consumer electronics, home appliances, HVAC solutions and vehicle components. For more information, please visit www.LGSolutions.com . Stay up to date with @LGforBusinessUSA on LinkedIn , Instagram , Facebook and YouTube . Media Contacts: LG Electronics USA Kim Regillio +1 815 355 0509 kim.regillio@lge.com Molly Leahy lgelectronicspr@walkersands.com Back to List Previous LG ELECTRONICS USA LAUNCHES B2B FINANCING SERVICE FOR COMMERCIAL DISPLAY SOLUTIONS Next CONNECTED EDTECH SOLUTIONS FROM LG ELECTRONICS USA DEFINE THE FUTURE OF LEARNING AT ISTE LIVE 2026 Go to page top © Copyright 2024 ©LG Electronics USA, Inc. All rights reserved. LG and the LG logo are registered trademarks of LG Corp. All other trademarks are the property of their respective owners. Prices, promotions, and availability may vary by dealer. The information contained herein is subject to change without notice. All screen images are simulated.",
+            "locator_origin": "model_reported_locator"
+          },
+          {
+            "url": "https://www.samsung.com/sec/business/pc/galaxy-book-copilot-plus-pcs/",
+            "original_url": "https://www.samsung.com/sec/business/pc/galaxy-book-copilot-plus-pcs/",
+            "title": "갤럭시 북 | Copilot+ PC |  Samsung 대한민국",
+            "checked_on": "2026-09-28",
+            "sha256": "dc5646d83cffa202fcccd7a26c98168c412c995d5252a80ec1d5fb8a090d8222",
+            "excerpt": "본문 바로가기 최근 본 제품 최근 본 제품 닫기 검색 결과 0 개 전체삭제 ※ 최근 본 제품은 30일간 보관됩니다. Copilot+ PC 비즈니스용 토글 메뉴 Windows 11 Pro Copilot+ PC 비즈니스용 Copilot+ PC 비즈니스용 비즈니스에 실용적인 가치를 더하는 AI 구매하기 빠른 적응과 끊임없는 혁신으로 성과 창출 현대적인 관리를 위해 설계되었으며 강력한 데이터 보안과 최신 AI 혁신의 손쉬운 도입을 지원합니다. 1 변화를 주도하는 강력한 성능 사용 기간이 5년 이상인 Windows PC보다 5배 더 빠른 기기로 한 번 충전해 하루 종일 자유롭게 사용해 보세요. 더 오래 가는 배터리와 함께 향상된 화상 회의 기능과 전용 AI 기능을 경험해 보세요. 1,2,3 더 간편해진 효율, 더 가까워진 혁신 비즈니스 프로세스를 간소화하고 필요한 것을 빠르게 찾을 수 있는 클릭 투 두(Click to Do) 및 리콜과 같은 유용한 도구로 자주 사용하는 앱에서 AI의 편리함을 경험해 보세요. 4,5 클릭 투 두(Click to Do) 업무 흐름을 끊지 않고 이어가세요. 사용자는 PC, 모바일, 웹 등 다양한 기기에서 작업 목록을 동기화하며, 미리 알림, 기한 설정, 팀원 공유 등 다양한 기능을 활용 할 수 있습니다. 4 리콜 스냅샷 형식을 저장된 타임라인에서 문서, 이미지, 이메일 등 지난 활동을 빠르게 확인하여 시간 낭비를 줄여 줍니다. 5 재생 Indicator 1 닫기 닫기 차원이 다른 Windows 보안 중요한 핵심 업무를 안전하게 보호하세요. 씨큐어드-코어 PC(Secured-core PC : 하드웨어와 소프트웨어의 통합 보안 설계)와 마이크로소프트 플루톤 아키텍처(암호화 키 도용, 물리적 공격을 막고 쉬운 보안 펌웨어 업데이트)의 고급 보안 기능이 기본으로 적용되어 기기와 사용자 ID, 데이터를 체계적으로 보호합니다. 한층 높아지는 운영 효율성 세분화된 IT 제어와 강력한 데이터 보안, 맞춤형 AI 기반 도구로 새로운 기회를 만들고 경쟁 우위를 차지해 보세요. 업무에 적합한 PC 찾기 Galaxy Book5 Pro 더 알아보기 Galaxy Book5 Pro 360 더 알아보기 재생 Indicator 1 닫기 닫기 닫기 이해를 돕기 위해 연출된 이미지입니다. 실제 UX/UI는 소프트웨어 버전, 모델, 지역 및 기타 요인에 따라 다를 수 있습니다. 제품 사양은 제품 및 지역/국가에 따라 다를 수 있습니다. Copilot+ PC 지원과 업데이트 시기는 기기와 지역에 따라 다를 수 있으며 2025년까지 업데이트가 계속 제공될 수 있습니다. 자세한 내용은 Copilot+ PC FAQ를 참조하시기 바랍니다. 배터리 사용 시간은 설정, 사용량 및 기타 요인에 따라 디바이스별로 크게 달라집니다. 자세한 내용은 Copilot+ PC 클레임을 참조하시기 바랍니다. Cinebench 24 멀티 코어 벤치마크 기준입니다. 더 알아보기 클릭 투 두에서 사용 가능한 이미지 및 텍스트 작업은 기기, 지역, 언어 및 문자 세트에 따라 다를 수 있습니다. 일부 작업에는 구독이 필요할 수 있습니다. Copilot+ PC FAQ를 참조하시기 바랍니다. 리콜 기능은 Windows Hello 강화된 로그인 보안이 필요합니다. 일부 언어[영어, 중국어(간체), 프랑스어, 독일어, 일본어, 스페인어]에 최적화되어 있습니다. 콘텐츠 관련 제한 상황과 저장 공간 한도가 적용됩니다. 일부 정책 기반 관리 제어 기능을 사용하려면 엔터프라이즈 라이선스가 필요합니다. 자세한 내용은 Copilot+ PC FAQ를 참조하시기 바랍니다. 확인 확인 취소 확인 팝업닫기 취소 확인 확인 위로 비즈니스 정보 본인 확인 본 콘텐츠는 비즈니스 정보 열람/구독 신청에 동의하신 고객에게 제공하고 있습니다. 비즈니스 정보 열람/구독 신청하신 분은 이메일 주소로 인증 후 열람 가능합니다. 이메일 이메일을 입력해 주세요. 인증 비즈니스 정보 열람/구독신청이 되어 있는 회원의 경우 로그인을 하시면 정보 열람이 가능합니다. 로그인하기 비회원이거나 비즈니스 정보 열람/구독 신청을 하지 않으신 분은 아래 링크를 통해 신청해 주세요. 비즈니스 정보 열람/구독 신청하기 팝업닫기",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://www.teamblind.com/kr/post/%EC%97%85%EB%AC%B4%EC%9A%A9-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B6%94%EC%B2%9C-%EB%B6%80%ED%83%81%EB%93%9C%EB%A0%A4%EC%9A%94-kcffafcu",
+          "https://sidehustletips.tistory.com/entry/%EC%97%85%EB%AC%B4%EC%9A%A9-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B6%94%EC%B2%9C-2025-%EC%A7%81%EC%9E%A5%EC%9D%B8%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%9A%A9-BEST-5"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 10850,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "중간",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://www.samsung.com/sec/galaxybook/galaxy-book5-pro-nt960xha-kd72/NT940XHA-KD72S/",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.samsung.com/sec/business/pc/galaxy-book-copilot-plus-pcs/",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.lg.com/us/business/press-release/lg-electronics-usa-introduces-new-lg-gram-business-laptop-lineup?category=ess",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "업무용 노트북",
+        "organic_domains": [
+          "www.jabra.com",
+          "www.nypi.re.kr",
+          "www.korearental.co.kr",
+          "www.yna.co.kr",
+          "cdn.hancom.com",
+          "gimpocouncil.go.kr",
+          "web.joongna.com",
+          "www.teamblind.com",
+          "sidehustletips.tistory.com",
+          "web.joongna.com"
+        ],
+        "organic_results": [
+          {
+            "url": "https://www.jabra.com/ko-kr/c/global/why-professional-audio",
+            "domain": "www.jabra.com",
+            "title": "업무용 오디오",
+            "snippet": "은(는) 노트북 오디오를 사용하는 동료로 인해 소통의 답답함을 느끼고 있습니다. ... 노트북 스피커로 나오는 오디오의 품질은 심각하게 열악합니다. ... 편안한 착용감이 제공되며 업무 시간 내내"
+          },
+          {
+            "url": "https://www.nypi.re.kr/fileDownload?bbsId=BOARD00023&fileDownType=C&fileId=mDVyPiTo7h&fileSn=1&menuKey=ppeX4WOS8Y",
+            "domain": "www.nypi.re.kr",
+            "title": "보 도 자 료 행정안전부 보도 일시 | 2022. 7. 19.(화) 12:00 | | --- | --- | --- | --- 보 도 자 료 행정안전부 담당 부서 | 디지털정부국 스마트행정기반과 | 책임자 | 과 장 김성록(044-205-2910) 보 도 자 료 행정안전부 None | | 담당자 | 사무관 권재식(044-205-2918)공무원 업무용 노트북 도입으로 스마트한 현장행정 강화",
+            "snippet": "모든 데이터가 연결되는 세계 최고의 디지털플랫폼 정부 구현 ... 업무용 노트북"
+          },
+          {
+            "url": "https://www.korearental.co.kr/esg/news/detail/267",
+            "domain": "www.korearental.co.kr",
+            "title": "업무용 노트북 비교, x86 vs ARM 차이와 선택 기준 · 뉴스룸 - 한국렌탈",
+            "snippet": "따라서 현재의 업무용 노트북 선택에서 x86과 ARM의 비교는 단순히 ‘어느 CPU가 더 빠른가’를 판단하는 문제와는 조금 다릅니다. ... x86 노트북은 ERP나 회계, 그룹웨어 등 기존"
+          },
+          {
+            "url": "https://www.yna.co.kr/view/AKR20250627159900062",
+            "domain": "www.yna.co.kr",
+            "title": "\"업무용 사적으로 써서\"…동료 노트북 숨긴 공무원 전과자 전락 | 연합뉴스",
+            "snippet": "(춘천=연합뉴스) 강태현 기자 = 직장 동료가 업무용 노트북을 사적으로 사용한다고 생각해 사무실 책상 서랍 등에 노트북을 숨긴 40대 공무원이 결국 전과자 신세로 전락했다. ... 또"
+          },
+          {
+            "url": "https://cdn.hancom.com/link/docs/hancomgooroom_brochure_20220819.pdf",
+            "domain": "cdn.hancom.com",
+            "title": "HANCOM GOOROOM",
+            "snippet": "기존에 보안을 위해 업무용 · 인터넷용 PC 2대를 따로 사용하였던 불편함을 [온북] 1대의 노트북을 사용하도록 개선함과 동시에 한컴구름 플랫폼 기반의 VPN 인증 기술 등 최신"
+          },
+          {
+            "url": "https://gimpocouncil.go.kr/upload/mnts/apndx/a08/A0000007965.pdf",
+            "domain": "gimpocouncil.go.kr",
+            "title": "(P - 48)\n\n# 디자인 업무용 노트북 구입\n\n<table id=\"e1\">\n<tr><t",
+            "snippet": "<td>·디자인 업무용 노트북<br>-MacBook Pro 14 : 2,690,000원*1대</td> ... ○ 콘텐츠 제작용의 대용량 이미지 파일과 동영상 파일의 특성상 기존의 행정업무용 PC로는 편집 프로그램의 원활한 구동이 어려움"
+          },
+          {
+            "url": "https://web.joongna.com/product/217937722",
+            "domain": "web.joongna.com",
+            "title": "업무용 노트북 ASUS 비보북 (D515UA) 판매합니다. | 중고나라 - 안심되는 중고거래",
+            "snippet": "Image: 업무용 노트북 ASUS 비보북 (D515UA) 판매합니다. ... # 업무용 노트북 ASUS 비보북 (D515UA) 판매합니다. ... 학생들 과재용, 업무용, 사무용으로 사용하기 좋습니다 ! - 모델:"
+          },
+          {
+            "url": "https://www.teamblind.com/kr/post/%EC%97%85%EB%AC%B4%EC%9A%A9-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B6%94%EC%B2%9C-%EB%B6%80%ED%83%81%EB%93%9C%EB%A0%A4%EC%9A%94-kcffafcu",
+            "domain": "www.teamblind.com",
+            "title": "블라인드 | 회사생활: 업무용 노트북 추천 부탁드려요",
+            "snippet": "업무용 노트북을 회사에서 지원해준다고 해서 ... 출퇴근 왕복 4시간에 환승도 많아서 노트북 무게가 스트레스였습니다. ... 실제로 어떤 선택이 실용적인지 고민입니다."
+          },
+          {
+            "url": "https://sidehustletips.tistory.com/entry/%EC%97%85%EB%AC%B4%EC%9A%A9-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B6%94%EC%B2%9C-2025-%EC%A7%81%EC%9E%A5%EC%9D%B8%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%9A%A9-BEST-5",
+            "domain": "sidehustletips.tistory.com",
+            "title": "업무용 노트북 추천 2025: 직장인/프리랜서용 BEST 5",
+            "snippet": "# 업무용 노트북 추천 2025: 직장인/프리랜서용 BEST 5 ... 직장인과 프리랜서라면 노트북이 단순한 도구가 아니라 일의 효율을 좌우하는 파트너예요. ... 업무용 노트북 선택의 기준 ..."
+          },
+          {
+            "url": "https://web.joongna.com/product/228647055",
+            "domain": "web.joongna.com",
+            "title": "최고의 업무용 노트북 i5 1235u /16/256 | 중고나라 - 안심되는 중고거래",
+            "snippet": "Image: 최고의 업무용 노트북 i5 1235u /16/256 이미지 ... 레노버 아이디어패드 슬림3 노트북 판매해요 12세대 인텔 코어 i5-1235U 프로세서와 16GB RAM, 256GB 저장공간을 갖추고 있어요"
+          }
+        ],
+        "dominant_result_ratio": 0.14285714285714285,
+        "score_components": {
+          "demand": 32.28,
+          "organic_opportunity": 24.49,
+          "trend": 0,
+          "intent_fit": 0
+        },
+        "trend_growth": null,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "unavailable",
+        "selection_version": 6,
+        "selected_at": "2026-09-28T12:01:53.437880+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "업무용노트북"
+        ],
+        "status": "research_only",
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "업무용노트북",
+          "executed_query": "업무용 노트북",
+          "topic": "업무용노트북 선택 기준: 휴대성·업무 유형·AI 기능 비교",
+          "intent": "출퇴근 휴대와 사무·창작 업무에 맞는 업무용노트북은 어떤 기준으로 선택해야 할까?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-28T12:01:53.437880+00:00",
+          "result_count": 10,
+          "domain_count": 9,
+          "dominant_ratio": 0.14285714285714285,
+          "search_review": {
+            "version": 1,
+            "query": "업무용노트북",
+            "executed_query": "업무용 노트북",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-28T12:01:53.437880+00:00",
+            "raw_sha256": "507fc96c796d2ab1a620a6faa34da4f75574fa2adc237a529f4ea83230bb47ba",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": false,
+                "quote": "노트북 스피커로 나오는 오디오의 품질은 심각하게 열악합니다."
+              },
+              {
+                "result_index": 1,
+                "relevant": false,
+                "quote": "공무원 업무용 노트북 도입으로 스마트한 현장행정 강화"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "업무용 노트북 비교, x86 vs ARM 차이와 선택 기준"
+              },
+              {
+                "result_index": 3,
+                "relevant": false,
+                "quote": "동료 노트북 숨긴 공무원 전과자 전락"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "업무용 · 인터넷용 PC 2대를 따로 사용하였던 불편함을 [온북] 1대의 노트북을 사용하도록 개선"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "디자인 업무용 노트북<br>-MacBook Pro 14 : 2,690,000원*1대"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "업무용 노트북 ASUS 비보북 (D515UA) 판매합니다."
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "출퇴근 왕복 4시간에 환승도 많아서 노트북 무게가 스트레스였습니다."
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "업무용 노트북 추천 2025: 직장인/프리랜서용 BEST 5"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "12세대 인텔 코어 i5-1235U 프로세서와 16GB RAM, 256GB 저장공간을 갖추고 있어요"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 7,
+            "relevant_site_count": 6,
+            "relevant_indices": [
+              2,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 0.7,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.14285714285714285,
+            "site_concentration": 0.2857142857142857,
+            "organic_opportunity": 24.49
+          },
+          "scope": "full_keyword",
+          "target_keyword": "업무용노트북",
+          "matches": [
+            {
+              "result_index": 7,
+              "quote": "출퇴근 왕복 4시간에 환승도 많아서 노트북 무게가 스트레스였습니다."
+            },
+            {
+              "result_index": 8,
+              "quote": "업무용 노트북 선택의 기준"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-28T12:01:53.437880+00:00",
+          "input_sha256": "92369c1c51c201e293d53ab53d19d919211662b53c120b1ab96b708ccb3e6672",
+          "review": {
+            "scope": "narrower_query",
+            "target_keyword": "업무용노트북",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "LG Electronics USA is announcing a new LG gram business laptop lineup",
+                "entity": "LG Electronics USA",
+                "context": "general"
+              },
+              {
+                "source_index": 1,
+                "quote": "Copilot+ PC 비즈니스용 비즈니스에 실용적인 가치를 더하는 AI",
+                "entity": "Copilot+ PC 비즈니스용",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "출퇴근 휴대에 적합한 무게와 배터리를 어떻게 비교할까?",
+                "answer": "LG 미국 일부 모델의 무게·배터리는 확인되지만, 약속한 삼성·LG 휴대성 비교에 필요한 삼성 무게 근거가 없다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "Select models weigh less than 3 pounds"
+              },
+              {
+                "facet": "일반 사무와 창작 업무에 어떤 제품군이 적합할까?",
+                "answer": "LG 미국 자료는 Book의 일반 사무, gram의 하이브리드 업무, Pro의 창작·기술 업무 적합성을 설명한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "LG gram Book: Positioned for general office productivity, web-based business tools"
+              },
+              {
+                "facet": "기존 업무 프로그램과 호환되는 노트북을 어떻게 고를까?",
+                "answer": "검색결과의 x86·ARM 및 ERP 호환성 질문에 답할 공식 근거가 없다. AI 기능 중심 기획은 선택 수요보다 좁다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "Powered by next-generation Intel® Core Ultra and AMD Ryzen AI processors"
+              },
+              {
+                "facet": "업무용 보안 기능은 어떻게 다른가?",
+                "answer": "LG 미국 라인업의 TPM·얼굴 인증과 삼성 페이지의 통합 보안·플루톤을 비교할 수 있다. 국내 LG 적용은 미확인이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "All featured models include hardware-level TPM 2.0 encryption and facial recognition authentication"
+              },
+              {
+                "facet": "AI 기능을 선택할 때 어떤 사용 제약을 확인해야 할까?",
+                "answer": "기기·지역·언어별 차이, 구독, 리콜 로그인 보안·저장 한도·기업 라이선스 조건을 안내할 수 있다.",
+                "supported": true,
+                "source_index": 1,
+                "quote": "클릭 투 두에서 사용 가능한 이미지 및 텍스트 작업은 기기, 지역, 언어 및 문자 세트에 따라 다를 수 있습니다. 일부 작업에는 구독이 필요할 수 있습니다."
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "professionals who split time between office and remote environments",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 56.77,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ]
+      },
+      {
+        "keyword": "노트북비교",
+        "category": "리뷰",
+        "topic": "노트북비교: 용도에 맞는 화면·메모리·저장공간·연결 단자 선택 기준",
+        "intent": "문서 작업·휴대·게임·창작 용도에 맞는 노트북을 고르려면 어떤 사양과 기능을 비교해야 할까?",
+        "gap": "제조사 구매 가이드에 근거한 용도별 비교 항목표와 화면·RAM·CPU·SSD·단자·2-in-1 확인 체크리스트를 제공한다.",
+        "source_url": "https://www.lg.com/sg/lg-experience/buying-guides/laptop-buying-guide/",
+        "verified_sources": [
+          {
+            "url": "https://www.lg.com/sg/lg-experience/buying-guides/laptop-buying-guide/",
+            "original_url": "https://www.lg.com/sg/lg-experience/buying-guides/laptop-buying-guide/",
+            "title": "Laptop Buying Guide: What is The Best Laptop? | LG Singapore",
+            "checked_on": "2026-09-28",
+            "sha256": "64b3f9bad16ea8928f58a50c4140a98054a02f41f601d80193596d9c8c01bd72",
+            "excerpt": "facebook twitter-X linkedin Buying Guides Laptop Buying Guide: What Is The Best Laptop? By LG Singapore In a world that’s connected 24/7, laptops are a key purchase for most people. If you’re in the market for a new laptop, it’s worth doing a bit of research first to make sure it’s going to meet your needs. But don’t worry: our handy buying guide is here to help! Shop the full range of LG laptops here What to Look for When Buying a Laptop Before making a decision, you’ll need to think about how you’ll be using your laptop on a day-to-day basis. Will you be writing essays, crunching numbers or gaming? Will you need to carry your laptop with you regularly, or will you mostly be using it at home? With a range of features available, our laptops are designed to power your passion. From performance to portability, here are some of the key things you should consider when shopping for a new model. Laptop Screen Sizes The size of a laptop screen is measured diagonally, from corner to corner. You’ll find laptops with 14”, 16” and 17” screens in our store, so you can choose something that’s just right. The smaller the screen – you guessed it – the smaller the laptop. So, if you’re interested in a more compact model that’s easy to take anywhere, a 14” laptop may be best. If, however, you want to get the most out of streaming or gaming, or if you’ll be using your laptop for design work, a larger screen may be more suitable. A 16” laptop is a good option if you’re looking for something in-between; ours are easy to carry, with the power and usability you’d expect from LG. If you need to expand your screen size, the + View feature for our LG Gram laptops allows you to widen your view when paired with the portable monitor. . You can set up a dual monitor using a UBC Type-C™ connection – easy! Laptop Display Laptop screens contain millions of tiny pixels, which light up and change colour to create images. When we talk about ‘screen resolution,’ we’re referring to the number of pixels a screen can display horizontally and vertically – but all you really need to know is how this affects your display quality. The higher the screen resolution, the sharper your images will appear. Laptops with a 1920 x 1080 (or a 1080p) display offer a sharp, clean viewing experience. You should also consider the type of display when shopping for a new laptop. IPS display offers wide viewing angles, and anti-glare technology allows you to use your laptop outdoors or during the day with fewer reflections. Smart Features You’ll Find on LG Laptops Thanks to the development of new and innovative technologies, you’ll find an array of smart features designed to enhance the usability of your laptop, and your everyday experience of it. Below are some of the latest technologies you’ll come across when browsing our LG Gram and LG Gram 2-in-1 laptops. • Smart display: utilizing AI-based software, LG Glance by Mirametrix® uses face, eye and gaze sensing to boost security and improve your workflow. If you leave your laptop unattended, for example, your screen will automatically lock; your screen will blur if you’re looking away, or if someone is looking over your shoulder. And, if your laptop is connected to a separate monitor , the Snap Window and Smart Pointer features will move the cursor and active content over to the screen you’re looking at. • Smart player: if you tend to use your laptop to watch videos and other media, the Smart Player feature – which pauses videos automatically when you step away – will be especially useful. • Digital wellness: some of our latest models come with all sorts of handy features designed to put your wellbeing first. Prone to slouching when you surf? Spend far too long staring at the screen? Our Posture Warning and 20-20-20 technologies are designed to detect and alert you if you’re slumped over, or if you need a little break after 20 minutes of continuous working. • Videoconferencing features: facial recognition and noise-cancelling technologies amplify your videoconferencing experience, so that you’ll never miss a beat – wherever you are. 2-in-1 Functionality 2-in-1 laptops laptops are ultra-lightweight models that easily convert to give you the functionality of a tablet. They feature a keyboard, but you can flip the screen to best accommodate what you’re doing. Our LG Gram 2-in-1 laptops allow for 360° movement, so you can use them in tablet, tent, stand and flat mode, or simply use them as a regular laptop. They also feature touch screens and come with a stylus pen, so they’re a great option for artists and creators who want to digitize their work. Connectivity USB ports are a standard feature of most laptops today, so you’ll even find these in more basic models. However, most people need their laptops to be able to transmit data at speed, and often whilst charging other devices. USB-C ports transmit data quickly and efficiently, but Thunderbolt™ ports offer optimised speed and versatility. We have various models with Thunderbolt™ connectivity, allowing you to connect to other devices, charge your laptop faster and enjoy high-resolution displays with stability and security. And remember, if you want to connect your laptop to a TV or monitor, , you’ll need an HDMI port, too. Ergonomics You should consider the overall design of your laptop and think about how comfortable it’ll be for you to use. Size isn’t the only thing, either: the keyboard and touchpad contributes to its ergonomic function, and these things will ultimately impact how you feel about using your laptop on a daily basis. Look out for keyboards designed for comfort and efficiency, too. Some of our models feature large, flat keycaps that are slightly elevated, to reduce typos and relieve fatigue in your hands. Likewise, larger touchpads will alleviate discomfort, and provide you with a better overall experience when you need to focus. Jargon Buster: RAM, CPU, SSD Storage & GPU Things can get a little confusing when it comes to the more technical aspects of a laptop. You should always check the specs before buying, to make sure your new machine is going to meet your needs. The terms below all relate to a device’s hardware, so it’s a good idea to be familiar with them when choosing a new laptop. RAM RAM stands for random-access memory, and it’s responsible for storing currently running programs and tasks. It’s your system’s short-term data storage, so it doesn’t determine how many files and documents you’ll be able to store. The more RAM your laptop has, the more programs you’ll be able to run at the same time. 8GB of RAM will suffice if you just want to browse the web, stream media, write essays, edit videos and run regular applications. But, if you plan to use your laptop for gaming or other high-performance tasks, you’ll get more from a 16GB laptop. We have a selection of 8GB and 16GB laptops to choose from. CPU (Core Processor) The CPU – or central processing unit – can be thought of as the “brain” of your laptop. It interprets instructions and executes tasks, typically from the hardware and software programs running on your device. You’ll notice that our laptops are powered by Intel® Core™ Processors. These are trusted, high-performance CPUs that enable you to carry out multiple tasks at speed. The latest 13th Generation processors are powerful enough to deliver a seamless experience, even if you’re carrying out more intensive tasks like gaming. SSD Storage This is a laptop’s internal drive and it determines how much data a device can hold, including applications, games and other documents. Our laptops come with SSD drives, or solid-state drives. These are powerful and don’t drain the battery life, so they’re commonplace in laptops today. Most users will find that 1TB of storage space is more than enough. GPU The GPU, or graphics processing unit, is responsible for generating high-quality images, including video rendering. CPUs already come with integrated graphics, and most people will find that",
             "locator_origin": "model_reported_locator"
           }
         ],
         "intent_results": [
           "https://www.gamemeca.com/view.php?gid=1777892",
-          "https://kimfree-tip.tistory.com/47?category=1313441"
+          "https://via2162.tistory.com/m/31"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 7850,
+        "monthly_search": 7310,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "중간",
@@ -5937,7 +6265,19 @@
               "origin": "model_reported_locator"
             },
             {
-              "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
+              "url": "https://news.samsung.com/kr/삼성전자-갤럭시-북6-시리즈-공개",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://news.samsung.com/kr/삼성전자-new-갤럭시-북6-국내-출시",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.lg.com/sg/lg-experience/buying-guides/laptop-buying-guide/",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.lg.com/uk/laptops/gram-pro/16z90u-k-aub8an/",
               "origin": "model_reported_locator"
             }
           ]
@@ -5947,14 +6287,14 @@
         "organic_domains": [
           "www.gamemeca.com",
           "oak.chosun.ac.kr",
-          "cputronic.com",
+          "lowprice.koreall.site",
+          "via2162.tistory.com",
           "www.mirae-n.com",
           "m.enuri.com",
           "note.com",
           "m.enuri.com",
           "kimfree-tip.tistory.com",
-          "www.allreport.co.kr",
-          "mediasvr.egentouch.com"
+          "www.allreport.co.kr"
         ],
         "organic_results": [
           {
@@ -5970,10 +6310,16 @@
             "snippet": "표 2 노트북pc, 스마트폰, 일반 휴대전화 비교. ... 우선 운영체제에서 일반 휴대전화와 노트북/PC와 달리 Android, iOS, Symbian, RIM, Windows등 다수의 범용OS를 탑재하여 이용자들의 선택의 폭을"
           },
           {
-            "url": "https://cputronic.com/ko/cpu/compare",
-            "domain": "cputronic.com",
-            "title": "CPU 사양 성능 비교 도구(노트북 및 데스크탑) - CpuTronic",
-            "snippet": "# 프로세서 비교여기서 성능 및 주요 특성별로 프로세서를 비교할 수 있습니다."
+            "url": "https://lowprice.koreall.site/search/%EB%85%B8%ED%8A%B8%EB%B6%81",
+            "domain": "lowprice.koreall.site",
+            "title": "노트북 최저가 | 노트북 가격, 가격 비교, 30일 최저가 | LowPrice",
+            "snippet": "노트북로켓배송 HP 2025 노트북 15 인텔 N100, 내추럴실버커버 + 내추럴실버베이스, 128GB, 8GB, WIN11 S, HP 15-fd0247TU 559,000원6%↓30일 최저가 490,490원 노트북로켓배송 HP 2025 노트북 15 N-시리즈,"
+          },
+          {
+            "url": "https://via2162.tistory.com/m/31",
+            "domain": "via2162.tistory.com",
+            "title": "최신 노트북 구매 가이드 - 종류별 가격과 특징 비교",
+            "snippet": "### 최신 노트북 구매 가이드 - 종류별 가격과 특징 비교 ... 게이밍 노트북은 이름 그대로 게임에 최적화되어 있지만, 사실상 고성능이 필요한 대부분의 작업에서도 강력한 성능을"
           },
           {
             "url": "https://www.mirae-n.com/UPLOAD/EShop/EduN/Archive/Learning/Upload/REF_PDS/200220093918554_%EA%B3%A0_%EB%89%B4%EC%98%AC%EB%A6%AC%EB%93%9C_%ED%86%B5%ED%95%A9%EC%82%AC%ED%9A%8C_%EB%B0%94%EB%A5%B8%EB%8B%B5%EC%95%8C%EC%B0%AC%ED%92%80%EC%9D%B4.pdf",
@@ -6010,87 +6356,33 @@
             "domain": "www.allreport.co.kr",
             "title": "소니, 아이패드, LG, 삼성 노트북 컴퓨터 비교(영문) - 올레포트",
             "snippet": "# [경영과학] 소니, 아이패드, LG, 삼성 노트북 컴퓨터 비교(영문) ... 삼성을 비롯한 한국 기업들은 혁신 기술과 가격 경쟁력을 무기로 세계 시장에서 꾸준히 성장하고 있으며, 2022년"
-          },
-          {
-            "url": "https://mediasvr.egentouch.com/egentouch.media/apiFile.do?SCHOOL_ID=1007002&URL_KEY=9a769d08-431a-4de0-a77a-d2df34778173&action=view",
-            "domain": "mediasvr.egentouch.com",
-            "title": "OTT 서비스 플랫폼별 이용행태 비교 05",
-            "snippet": "OTT 서비스 플랫폼별 이용행태 비교 05- OTT플랫폼별 주로 이용하는 매체로는, 스마트폰 이용이 가장 높았으며, 그 외에 TV수상기, 노트북 컴퓨터, 태블릿PC 등을 이용함 ... - 넷플릭스,"
           }
         ],
         "dominant_result_ratio": 0.0,
         "score_components": {
-          "demand": 31.16,
-          "organic_opportunity": 26.67,
-          "trend": -3.16,
+          "demand": 30.91,
+          "organic_opportunity": 28.57,
+          "trend": -3.72,
           "intent_fit": 0
         },
-        "trend_growth": -0.316,
+        "trend_growth": -0.372,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "measured",
         "selection_version": 6,
-        "selected_at": "2026-09-25T03:31:31.715994+00:00",
+        "selected_at": "2026-09-28T12:01:53.437880+00:00",
         "source": "category_market_v1",
         "keywords": [
           "노트북비교"
         ],
         "status": "research_only",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
-              "title": "Step-by-Step Notebook Laptop Buying Guide | LG UK",
-              "excerpt_chars": 8000
-            },
-            {
-              "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
-              "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
-              "excerpt_chars": 616
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
-                  "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
-                  "excerpt_chars": 616
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_navigation"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.lg.com/uk/lg-experience/helpful-hints/laptop-buying-guide/",
-                  "title": "Step-by-Step Notebook Laptop Buying Guide | LG UK",
-                  "excerpt_chars": 8000
-                },
-                {
-                  "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=200575",
-                  "title": "| 정부기관 | 국내사이트 | 관련사이트 | 이용안내 |  한국은행 홈페이지",
-                  "excerpt_chars": 616
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
         "opportunity_evidence": {
           "version": 2,
           "query": "노트북비교",
           "executed_query": "노트북 비교",
-          "topic": "노트북비교: 사무용·게임용·영상편집용 구매 전 사양과 선택 기준",
-          "intent": "사무·게임·영상편집 용도에 맞는 노트북을 고를 때 어떤 사양과 제약을 비교해야 할까?",
+          "topic": "노트북비교: 용도에 맞는 화면·메모리·저장공간·연결 단자 선택 기준",
+          "intent": "문서 작업·휴대·게임·창작 용도에 맞는 노트북을 고르려면 어떤 사양과 기능을 비교해야 할까?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-25T03:31:31.715994+00:00",
+          "checked_at": "2026-09-28T12:01:53.437880+00:00",
           "result_count": 10,
           "domain_count": 9,
           "dominant_ratio": 0.0,
@@ -6099,8 +6391,8 @@
             "query": "노트북비교",
             "executed_query": "노트북 비교",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-25T03:31:31.715994+00:00",
-            "raw_sha256": "c80f3736fb0d00c94f8c359507370d11a5211c3a8bb896e78ec0729102262a16",
+            "checked_at": "2026-09-28T12:01:53.437880+00:00",
+            "raw_sha256": "63b5be755aa205323b882ae439fd0d7271a454d93289d12541b38efec703b035",
             "decisions": [
               {
                 "result_index": 0,
@@ -6115,63 +6407,64 @@
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "CPU 사양 성능 비교 도구(노트북 및 데스크탑)"
+                "quote": "노트북 최저가 | 노트북 가격, 가격 비교, 30일 최저가"
               },
               {
                 "result_index": 3,
+                "relevant": true,
+                "quote": "최신 노트북 구매 가이드 - 종류별 가격과 특징 비교"
+              },
+              {
+                "result_index": 4,
                 "relevant": false,
                 "quote": "국이 노트북 생산에 비교 우위가 있다."
               },
               {
-                "result_index": 4,
+                "result_index": 5,
                 "relevant": true,
                 "quote": "게임용 노트북의 가격 및 상세 성능을 비교해보고"
               },
               {
-                "result_index": 5,
+                "result_index": 6,
                 "relevant": false,
                 "quote": "노트북 스탠드 비교｜MOFT와 BoYata"
               },
               {
-                "result_index": 6,
+                "result_index": 7,
                 "relevant": true,
                 "quote": "CPU, 내장그래픽, 해상도, USB3.0 포트 지원 등 노트북5 사양이 월등히 높습니다."
               },
               {
-                "result_index": 7,
+                "result_index": 8,
                 "relevant": true,
                 "quote": "노트북 추천! 게이밍 / 사무용 / 영상편집 등 용도별 제품 추천 및 비교!"
               },
               {
-                "result_index": 8,
+                "result_index": 9,
                 "relevant": true,
                 "quote": "소니, 아이패드, LG, 삼성 노트북 컴퓨터 비교(영문)"
-              },
-              {
-                "result_index": 9,
-                "relevant": false,
-                "quote": "OTT 서비스 플랫폼별 이용행태 비교"
               }
             ]
           },
           "search_metrics": {
             "raw_result_count": 10,
             "canonical_result_count": 10,
-            "relevant_result_count": 6,
-            "relevant_site_count": 5,
+            "relevant_result_count": 7,
+            "relevant_site_count": 6,
             "relevant_indices": [
               0,
               2,
-              4,
-              6,
+              3,
+              5,
               7,
-              8
+              8,
+              9
             ],
-            "relevance_ratio": 0.6,
+            "relevance_ratio": 0.7,
             "duplicate_ratio": 0.0,
             "known_dominant_ratio": 0.0,
-            "site_concentration": 0.3333333333333333,
-            "organic_opportunity": 26.67
+            "site_concentration": 0.2857142857142857,
+            "organic_opportunity": 28.57
           },
           "scope": "full_keyword",
           "target_keyword": "노트북비교",
@@ -6181,74 +6474,74 @@
               "quote": "복잡한 스펙 비교 없이 내게 맞는 노트북 찾기"
             },
             {
-              "result_index": 7,
-              "quote": "노트북 추천! 게이밍 / 사무용 / 영상편집 등 용도별 제품 추천 및 비교!"
+              "result_index": 3,
+              "quote": "최신 노트북 구매 가이드 - 종류별 가격과 특징 비교"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-25T03:31:31.715994+00:00",
-          "input_sha256": "d160fa1470eb5891d2806f59882726a3c2ba752f4331ec68b2efc2fe67c3c078",
+          "checked_at": "2026-09-28T12:01:53.437880+00:00",
+          "input_sha256": "93dbb4b00eaa02c8891b8b3ab139f0e18d766ee9ed8393894dd8338e2f79dd72",
           "review": {
             "scope": "narrower_query",
             "target_keyword": "노트북비교",
             "sources": [
               {
                 "source_index": 0,
-                "quote": "How to Choose a Notebook: A Step-by-Step Portable Laptop Buying Guide By LG",
-                "entity": "LG",
-                "context": "general"
+                "quote": "Laptop Buying Guide: What Is The Best Laptop? By LG Singapore",
+                "entity": "LG Singapore",
+                "context": "single_institution"
               }
             ],
             "required_facets": [
               {
-                "facet": "구매 후보 노트북의 가격·사양·성능 차이와 용도별 선택은?",
-                "answer": "검색결과에는 제품 간 비교 수요가 있다. 기획과 공식 본문은 일반 선택 기준 중심으로 전체 요구보다 좁다.",
+                "facet": "실제 구매 후보의 가격·성능 차이와 용도별 선택은 무엇인가?",
+                "answer": "검색결과에는 제품·가격 비교 수요가 있으나 기획과 원문은 LG 중심의 일반 선택 기준에 한정된다.",
                 "supported": false,
                 "source_index": 0,
-                "quote": "The LG gram series is a great choice if you’re after a notebook."
+                "quote": "You should always check the specs before buying, to make sure your new machine is going to meet your needs."
               },
               {
-                "facet": "사무·게임·영상편집 용도에 따라 CPU·RAM·GPU를 어떻게 비교하는가?",
-                "answer": "일상용 RAM 8GB, 편집·게임용 16GB 이상과 CPU 성능 요소, 내장·전용 GPU 구분을 안내할 근거가 있다.",
+                "facet": "휴대·게임·창작 용도에 따라 화면 크기를 어떻게 비교하는가?",
+                "answer": "휴대에는 작은 화면, 게임·디자인에는 큰 화면을 고려하는 기준을 지원한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "However, if you’re into video editing or serious gaming, at least 16GB is recommended."
+                "quote": "The smaller the screen – you guessed it – the smaller the laptop."
               },
               {
-                "facet": "화면 크기·품질과 휴대성·배터리를 어떻게 비교하는가?",
-                "answer": "화면 크기와 휴대성의 관계, 밝기·해상도 및 이동 중 배터리 중요성을 설명할 수 있다.",
+                "facet": "RAM과 SSD는 각각 무엇을 결정하며 어떻게 비교하는가?",
+                "answer": "RAM은 동시 실행, SSD는 파일·앱 저장 용량을 비교하는 기준이다. 제시 용량을 최신 권장치로 단정할 수 없다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "When choosing a screen, consider brightness measured in NIT units;"
+                "quote": "The more RAM your laptop has, the more programs you’ll be able to run at the same time."
               },
               {
-                "facet": "연결 단자와 충전 호환성은 무엇을 확인하는가?",
-                "answer": "USB·HDMI 단자와 USB-C 충전 지원 여부를 확인하도록 안내할 수 있다.",
-                "supported": true,
+                "facet": "게임·창작 작업에 적합한 CPU·GPU 성능을 어떻게 비교하는가?",
+                "answer": "CPU 역할 설명은 있으나 현행 후보별 성능 비교가 없고 GPU 설명도 잘려 용도별 판단 근거가 부족하다.",
+                "supported": false,
                 "source_index": 0,
-                "quote": "Notebook laptops typically offer a variety of connectivity options, including USB ports, HDMI ports,"
+                "quote": "You’ll notice that our laptops are powered by Intel® Core™ Processors."
               },
               {
-                "facet": "구매 전 업그레이드 가능 여부는 어떻게 확인하는가?",
-                "answer": "일부 제품의 저장장치 업그레이드 가능성을 확인하는 기준은 지원한다. 개별 모델의 가능 여부는 제시하지 않는다.",
+                "facet": "주변기기 연결과 펜 작업에 필요한 기능은 무엇인가?",
+                "answer": "USB-C·Thunderbolt 연결과 LG Gram 2-in-1의 터치·펜 기능을 확인하는 기준을 지원한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Certain notebook laptops allow you easily and frequently upgrade features like storage,"
+                "quote": "USB-C ports transmit data quickly and efficiently, but Thunderbolt™ ports offer optimised speed and versatility."
               }
             ],
             "current_relevance": {
               "kind": "evergreen",
               "source_index": 0,
-              "quote": "Figuring out what laptop to buy can be a tough choice.",
+              "quote": "Before making a decision, you’ll need to think about how you’ll be using your laptop on a day-to-day basis.",
               "event_start": null,
               "event_end": null,
               "date_quote": null
             }
           }
         },
-        "score": 54.67,
+        "score": 55.76,
         "publish_eligible": false,
         "hold_reasons": [
           "narrower_source_coverage",
@@ -6259,38 +6552,23 @@
     "rejected": [
       {
         "keyword": "로봇청소기비교",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        }
-      },
-      {
-        "keyword": "무선청소기비교",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.samsung.com/sec/vacuum-cleaners/bespoke-jet-vs28d950ac-d2c/VS28D950ACB/",
-              "title": "Bespoke AI 제트 Lite 280W | VS28D950ACB | Samsung 대한민국",
-              "excerpt_chars": 467
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "인덕션설치비용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
+              "url": "https://www.samsung.com/sec/home-appliances/faq-robot-vacuum-cleaners/",
+              "title": "Samsung 로봇 청소기 FAQ | 제품, 고객지원",
+              "excerpt_chars": 8000
+            },
             {
-              "url": "https://statistics.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=3&searchGbn=0&searchOrderSort=0",
-              "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
-              "excerpt_chars": 2344
+              "url": "https://www.klac.or.kr/legalsmart/legalSmartGuide.do",
+              "title": "법률똑똑이 | 이용안내",
+              "excerpt_chars": 1403
+            },
+            {
+              "url": "https://kh.or.kr/brd/board/1409/L/menu/1309?bbIdx=119679&brdType=R&searchField=&searchText=&thisPage=1",
+              "title": "K-Royal Culture Festival",
+              "excerpt_chars": 3789
             }
           ],
           "analysis_status": "supported_false",
@@ -6303,9 +6581,14 @@
             "initial_review": {
               "official_sources": [
                 {
-                  "url": "https://statistics.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=3&searchGbn=0&searchOrderSort=0",
-                  "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
-                  "excerpt_chars": 2344
+                  "url": "https://www.klac.or.kr/legalsmart/legalSmartGuide.do",
+                  "title": "법률똑똑이 | 이용안내",
+                  "excerpt_chars": 1403
+                },
+                {
+                  "url": "https://kh.or.kr/brd/board/1409/L/menu/1309?bbIdx=119679&brdType=R&searchField=&searchText=&thisPage=1",
+                  "title": "K-Royal Culture Festival",
+                  "excerpt_chars": 3789
                 }
               ],
               "analysis_status": "supported_false",
@@ -6314,29 +6597,118 @@
                 "code": "source_missing_detail"
               }
             },
-            "outcome": "no_changed_source"
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.samsung.com/sec/home-appliances/faq-robot-vacuum-cleaners/",
+                  "title": "Samsung 로봇 청소기 FAQ | 제품, 고객지원",
+                  "excerpt_chars": 8000
+                },
+                {
+                  "url": "https://www.klac.or.kr/legalsmart/legalSmartGuide.do",
+                  "title": "법률똑똑이 | 이용안내",
+                  "excerpt_chars": 1403
+                },
+                {
+                  "url": "https://kh.or.kr/brd/board/1409/L/menu/1309?bbIdx=119679&brdType=R&searchField=&searchText=&thisPage=1",
+                  "title": "K-Royal Culture Festival",
+                  "excerpt_chars": 3789
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
           }
         }
       },
       {
-        "keyword": "청소기비교",
+        "keyword": "무선청소기비교",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://encykorea.aks.ac.kr/Article/E0056502",
-              "title": "청송군 - 한국민족문화대백과사전",
+              "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
+              "title": "청소기 구매가이드  l Samsung 대한민국",
               "excerpt_chars": 8000
             },
             {
-              "url": "https://cb-platform.or.kr/",
-              "title": "충청북도사회서비스원 보건의료‧복지 플랫폼",
-              "excerpt_chars": 1040
+              "url": "https://www.samsung.com/sec/vacuum-cleaners/jet-vs70h18gvg-d2c/VS70H18GVG/",
+              "title": "제트 핏 물걸레 브러시 패키지 | VS70H18GVG | Samsung 대한민국",
+              "excerpt_chars": 747
             },
             {
-              "url": "https://encykorea.aks.ac.kr/Article/E0056517",
-              "title": "청송향교 - 한국민족문화대백과사전",
-              "excerpt_chars": 1646
+              "url": "https://www.kosmes.or.kr/manual/2026_guide/2026_kosme_digital.html",
+              "title": "중소벤처기업진흥공단 > 누리집 설명서안내",
+              "excerpt_chars": 3139
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.kosmes.or.kr/manual/2026_guide/2026_kosme_digital.html",
+                  "title": "중소벤처기업진흥공단 > 누리집 설명서안내",
+                  "excerpt_chars": 3139
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.samsung.com/sec/home-appliances/buying-guide/vacuum-cleaners-buying-guide/",
+                  "title": "청소기 구매가이드  l Samsung 대한민국",
+                  "excerpt_chars": 8000
+                },
+                {
+                  "url": "https://www.samsung.com/sec/vacuum-cleaners/jet-vs70h18gvg-d2c/VS70H18GVG/",
+                  "title": "제트 핏 물걸레 브러시 패키지 | VS70H18GVG | Samsung 대한민국",
+                  "excerpt_chars": 747
+                },
+                {
+                  "url": "https://www.kosmes.or.kr/manual/2026_guide/2026_kosme_digital.html",
+                  "title": "중소벤처기업진흥공단 > 누리집 설명서안내",
+                  "excerpt_chars": 3139
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
+          }
+        }
+      },
+      {
+        "keyword": "인덕션설치비용",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://statistics.keis.or.kr/keis/en/bbs/300/detail.do?pageIndex=1&pageItm=10&pstSn=3&searchGbn=0&searchOrderSort=0",
+              "title": "한국고용정보원-영문\n\t\t\t\n\t\t\t\t | Publication\n\t\t\t\n\t\t\t\t | LMIS",
+              "excerpt_chars": 2344
+            },
+            {
+              "url": "https://medlineplus.gov/about/using/searchtips/",
+              "title": "MedlinePlus: Search Tips",
+              "excerpt_chars": 6259
             }
           ],
           "analysis_status": "supported_false",
@@ -6350,12 +6722,11 @@
         "keyword": "무선청소기가격비교",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "insufficient_relevant_results",
           "low_search_relevance"
         ],
-        "monthly_search": 640,
+        "monthly_search": 660,
         "organic_provider": "codex_native_search",
-        "organic_query": "무선 청소기 가격 비교",
+        "organic_query": "무선청소기 가격 비교",
         "organic_results": [
           {
             "url": "https://hsmoa.net/search?query=%EC%82%BC%EC%84%B1%EB%AC%B4%EC%84%A0%EC%8A%A4%ED%8B%B1%EC%B2%AD%EC%86%8C%EA%B8%B0",
@@ -6364,149 +6735,119 @@
             "snippet": "NS홈쇼핑, K쇼핑, GS샵 등 5개 채널에서 판매하는 삼성무선스틱청소기 관련 상품 20개의 판매가(5,900원부터)와 방송 일정을 한 번에 비교할 수 있습니다. ... * 여러 홈쇼핑 채널의 삼성무선스틱청소기"
           },
           {
-            "url": "https://hsmoa.net/search?query=%EC%82%BC%EC%84%B1%EC%B2%AD%EC%86%8C%EA%B8%B0",
-            "domain": "hsmoa.net",
-            "title": "삼성청소기 홈쇼핑 검색결과 - 채널별 최저가·방송일정 비교 | 홈쇼핑모아",
-            "snippet": "* 현대홈쇼핑, 신세계쇼핑, CJ온스타일 등 6개 채널의 삼성청소기 상품 판매가·앱 전용가 무료 비교 혜택 ... '지난 방송' 탭에서 지난 방송 상품 10개의 가격 정보를 확인할"
+            "url": "https://eiec.kdi.re.kr/userdata/nara/202203/202203.pdf",
+            "domain": "eiec.kdi.re.kr",
+            "title": "국내 유일의 경제정책 정보지 nara.kdi.re.kr",
+            "snippet": "무선청소기 7종 비교 결과, ... 이에 한국소비자원이 선호도가 높은 무선청소기 7개 제품을 ... 제품명 / 판매원 / 제조국 / 구입가격"
           },
           {
-            "url": "https://www.kca.go.kr/webzine/fileDownload?fileGubun=prewebzine&menuId=journal&systemFileName=20180411050113187.pdf&userFileName=2018+%EC%86%8C%EB%B9%84%EC%9E%90%EC%8B%9C%EB%8C%8003_04-09+%EB%AC%B4%EC%84%A0+%EC%B2%AD%EC%86%8C%EA%B8%B0+%ED%92%88%EC%A7%88%EB%B9%84%EA%B5%90.pdf",
-            "domain": "www.kca.go.kr",
-            "title": "무선(스틱형)청소기 품질비교",
-            "snippet": "무선청소기에 사용되는 배터리는 충전과 방전이 반복되면 ... 서 성능저하가 발생할 수 있으며, 이로 인해 무선청소기의 ... * \u0007일반 유선청소기의 소음은 평균 81dB(75dB~86dB, 진공청소기 품질비교 ..."
+            "url": "https://www.consumuch.com/news/articleView.html?idxno=18245",
+            "domain": "www.consumuch.com",
+            "title": "[몇대몇] 잘 나가는 핸디스틱 '무선청소기' 주요 제품 스펙 비교 < 몇대몇 < 소비자뉴스 < 기사본문 - 컨슈머치",
+            "snippet": "[컨슈머치 = 이용석 기자] 가정 내 보급률이 82%에 이른다는 필수 생활가전인 청소기가 최근 1인 가구 증가와 맞물려 가볍고 사용이 간편해진 무선형태로 출시되고 있다. ... 컨슈머치는"
           },
           {
-            "url": "https://yesgent.com/",
-            "domain": "yesgent.com",
-            "title": "쇼핑의 정석 – 가이드젠트가 함께합니다.",
-            "snippet": "## 무선청소기 추천 비교 (가격·특징 정리) ... *해당 링크를 통해서 구매하시면 파트너스 활동으로 일정 리워드를 지급받습니다* 오늘은 가장 저렴하게 구매할 수 있는 JONR 고온건조 자동세척"
+            "url": "https://coupang-partners-one.vercel.app/posts/2026-05-31-a52abe-top",
+            "domain": "coupang-partners-one.vercel.app",
+            "title": "2026 무선청소기 TOP 5 비교 추천 (가격·후기 총정리) | 꿀템 리뷰",
+            "snippet": "무선청소기 TOP 5을 가격·용량·기능으로 비교했습니다. ... 무선청소기 시장은 2만 원대 보급형부터 80만 원대 프리미엄까지 가격 스펙트럼이 넓어 어떤 제품을 골라야 할지 막막할 때가 많습니다."
           },
           {
-            "url": "https://www.21innovation.org/categories/appliances/vacuum-cleaner",
-            "domain": "www.21innovation.org",
-            "title": "청소기 전문 리뷰 - 가전제품 전문가 분석 | 21이노베이션",
-            "snippet": "클릭하여 비교 가전제품 > 청소기 > 무선청소기 13개 상품 비교 가능 상품 비교 클릭 클릭하여 비교 가전제품 > 청소기 > 로봇청소기 10개 상품 비교 가능"
+            "url": "https://lifebase.kr/blog/0213-cordless-vacuum-comparison/",
+            "domain": "lifebase.kr",
+            "title": "무선청소기 추천 비교 가이드 - LifeBase",
+            "snippet": "# 무선청소기 추천 비교 가이드 ... 작성 시점 기준으로 무선청소기 시장은 스테이션형 자동 먼지 비움 기능, 흡입과 물걸레를 동시에 수행하는 겸용 모델, AI 기술을 활용한"
           },
           {
-            "url": "https://kimfree-tip.tistory.com/61",
-            "domain": "kimfree-tip.tistory.com",
-            "title": "무선 청소기 추천 및 가격 비교 분석!",
-            "snippet": "# 무선 청소기 추천 및 가격 비교 분석! ... 자동 먼지 비움 같은 부가 기능은 덜어내거나 단순화하는 대신, 청소기 본연의 흡입력과 가격 경쟁력에 집중한 모델들이에요."
+            "url": "https://www.botonglee.com/blog/pick-post-208-20260729",
+            "domain": "www.botonglee.com",
+            "title": "무선청소기 추천: 흡입력보다 중요한 가격 비교와 구매 기준 | 보통리",
+            "snippet": "무선청소기 추천을 찾는 분들은 여러 기준을 한눈에 비교하고, 합리적인 가격대 제품을 고르길 원합니다.이 글을 끝까지 읽으면 무선청소기 선택 시 반드시 확인해야 할 핵심 기준과 가격대별"
           },
           {
-            "url": "https://sallimlab.com/corded-vs-cordless-vacuum/",
-            "domain": "sallimlab.com",
-            "title": "유선 무선 청소기 비교 — 흡입력·가성비·관리, 원룸엔 뭐가 맞을까 – 살림랩",
-            "snippet": "# 유선 무선 청소기 비교 — 흡입력·가성비·관리, 원룸엔 뭐가 맞을까 ... ## 한눈에 보는 유선 vs 무선 청소기 비교표 ... 배터리는 수명이 있는 소모품이라 시간이"
+            "url": "https://usb.kr/9xb6z",
+            "domain": "usb.kr",
+            "title": "무선청소기 고르는 법 – BLDC 모터와 35,000PA 흡입력의 차이슨 · USB.KR",
+            "snippet": "샤크 에보파워시스템 FIT+ 자동먼지비움 무선청소기, 아이보리 화이트, LC152KRIV | 487,890원 | 로켓 | 보러가기 → ... * 네이버 최저가와 쿠팡 가격을 비교하여 할인 프로모션 기간을"
           },
           {
-            "url": "https://www.maisonkorea.com/tech/2025/08/%EA%B0%95%EB%A0%A5%ED%95%98%EA%B3%A0-%EC%98%A4%EB%9E%98%EA%B0%80%EB%8A%94-%EC%B2%AD%EC%86%8C%EA%B8%B0-%EC%96%B4%EB%94%94-%EC%97%86%EB%82%98%EC%9A%94-%EB%AC%B4%EC%84%A0-%EC%B2%AD%EC%86%8C%EA%B8%B0-3/",
-            "domain": "www.maisonkorea.com",
-            "title": "강력하고 오래가는 청소기 어디 없나요? 무선 청소기 3종 비교 – 메종코리아",
-            "snippet": "무선 청소기 3종 비교 ... 다이슨, 샤크, 삼성 등 최근 가장 뜨거운 무선 청소기 3종을 직접 비교해봤다. ... 소음도 조용한 편인데다 AI로 전화나 문자 수신까지"
+            "url": "https://usb.kr/9823k",
+            "domain": "usb.kr",
+            "title": "무선청소기 고르는 법 – 22000pa 강력 흡입 RichMagic 차이슨 · USB.KR",
+            "snippet": "제품명 · 게재 시점 가격 · 참고 자료에서 확인된 항목만 적는다. ... 추천[국내발송] RichMagic 차이슨 22000pa 브러시리스 BLDC 무선청소기 다기능 휴대용 청소기 LED 배터리 잔량"
           },
           {
-            "url": "https://www.koreashopping.co.kr/",
-            "domain": "www.koreashopping.co.kr",
-            "title": "건강한 집엔 식물이 산다",
-            "snippet": "📋 청소기 선택 전 꼭 확인할 것내가 실제로 사용할 목적에 맞는지가격 대비 구성·품질이 적당한지구매자 평점과 리뷰 내용배송 방식과 교환·반품 조건💡 알아두세요! ... 🛍️ 청소기 인기"
+            "url": "https://getgearpick.com/wireless-vacuum-cleaner-buying-guide/",
+            "domain": "getgearpick.com",
+            "title": "무선 청소기 구매가이드: 스틱형부터 차량용, 물걸레 3in1까지 비교 - getgearpick",
+            "snippet": "# 무선 청소기 구매가이드: 스틱형부터 차량용, 물걸레 3in1까지 비교 ... 원룸·거실 중심이면 스틱형, 차량·책상·창틀 중심이면 휴대용, 바닥 오염이 잦다면 물걸레나 건습식 3in1 구성을 보는 편이"
           },
           {
-            "url": "https://mussoev.carjja.com/",
-            "domain": "mussoev.carjja.com",
-            "title": "KGM 무쏘 EV",
-            "snippet": "경기 수원 (주)굿카가 안내하는 무쏘 EV 중고차 시세는 2026-09-24 기준 3,780만~3,780만원대이며, 전기 2WD·AWD 매물부터 가솔린·디젤 무쏘(Q300) 트림까지 실시간 재고를 한 페이지에서 비교하실 수 있습니다. ..."
+            "url": "https://content73455.tistory.com/88",
+            "domain": "content73455.tistory.com",
+            "title": "무선청소기 추천 | 틸루 스톰 vs 경쟁사 비교 분석 (14만원대 BLDC)",
+            "snippet": "이 글은 146명의 실제 구매자 리뷰를 분석하고, 비슷한 가격대의 다른 무선청소기들과 상세하게 비교한 결과를 정리한 내용입니다. ... 아래는 같은 가격대의 무선청소기들을 비교한 표입니다."
           }
         ],
         "search_review": {
           "version": 1,
           "query": "무선청소기가격비교",
-          "executed_query": "무선 청소기 가격 비교",
+          "executed_query": "무선청소기 가격 비교",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-25T03:31:31.715994+00:00",
-          "raw_sha256": "e0f7c43a3e27b786b54a2a6a1082d6e183c12d327c3be8e7357b73d8ac92853c",
+          "checked_at": "2026-09-28T12:01:53.437880+00:00",
+          "raw_sha256": "f52b714c8c70cb7f4be9620529564b5b6be16f24793f4baea36e0747ecbbcbe2",
           "decisions": [
             {
               "result_index": 0,
               "relevant": true,
-              "quote": "삼성무선스틱청소기 관련 상품 20개의 판매가(5,900원부터)와 방송 일정을 한 번에 비교할 수 있습니다."
+              "quote": "판매가(5,900원부터)와 방송 일정을 한 번에 비교할 수 있습니다."
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "6개 채널의 삼성청소기 상품 판매가·앱 전용가 무료 비교 혜택"
+              "quote": "제품명 / 판매원 / 제조국 / 구입가격"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "무선(스틱형)청소기 품질비교"
+              "quote": "주요 제품 스펙 비교"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "무선청소기 추천 비교 (가격·특징 정리)"
+              "quote": "무선청소기 TOP 5을 가격·용량·기능으로 비교했습니다."
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "무선청소기 13개 상품 비교 가능"
+              "quote": "무선청소기 추천 비교 가이드"
             },
             {
               "result_index": 5,
               "relevant": true,
-              "quote": "무선 청소기 추천 및 가격 비교 분석!"
+              "quote": "흡입력보다 중요한 가격 비교와 구매 기준"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "유선 무선 청소기 비교 — 흡입력·가성비·관리, 원룸엔 뭐가 맞을까"
+              "relevant": true,
+              "quote": "샤크 에보파워시스템 FIT+ 자동먼지비움 무선청소기, 아이보리 화이트, LC152KRIV | 487,890원"
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "다이슨, 샤크, 삼성 등 최근 가장 뜨거운 무선 청소기 3종을 직접 비교해봤다."
+              "quote": "제품명 · 게재 시점 가격 · 참고 자료에서 확인된 항목만 적는다."
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "청소기 선택 전 꼭 확인할 것내가 실제로 사용할 목적에 맞는지가격 대비 구성·품질이 적당한지"
+              "quote": "스틱형부터 차량용, 물걸레 3in1까지 비교"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "무쏘 EV 중고차 시세는 2026-09-24 기준 3,780만~3,780만원대"
+              "relevant": true,
+              "quote": "틸루 스톰 vs 경쟁사 비교 분석 (14만원대 BLDC)"
             }
           ]
-        }
-      },
-      {
-        "keyword": "로봇청소기추천",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        }
-      },
-      {
-        "keyword": "업무용노트북",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.samsung.com/us/computers/galaxy-book/galaxy-book6-pro/",
-              "title": "Galaxy Book6 Pro | Samsung US",
-              "excerpt_chars": 8000
-            },
-            {
-              "url": "https://www.samsung.com/sec/business/insights/news/news_250106_04/",
-              "title": "제품뉴스 | Samsung Business 대한민국",
-              "excerpt_chars": 2755
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
         }
       },
       {
@@ -6518,16 +6859,6 @@
               "url": "https://certi.keis.or.kr/uei/ueiHissFxtyEmsc.do",
               "title": "고용서비스 통합시스템",
               "excerpt_chars": 789
-            },
-            {
-              "url": "https://data.kusf.or.kr/kusf/portal/mls/mlsmain/movePage.do?tab=1",
-              "title": "대학스포츠 알리미",
-              "excerpt_chars": 1495
-            },
-            {
-              "url": "https://www.ltikorea.or.kr/en/board/faq_en/boardList.do%3Bjsessionid%3D47A26DEB8CECD7CAAD3FC9671469601B",
-              "title": "LTI Korea | FAQ",
-              "excerpt_chars": 6207
             }
           ],
           "analysis_status": "supported_false",
@@ -6555,81 +6886,76 @@
           "차이슨청소기",
           "삼성노트북",
           "베이크아웃방법",
-          "선풍기",
-          "로봇청소기비교",
           "공기청정기",
+          "로봇청소기비교",
+          "선풍기",
           "인덕션설치비용",
           "로보락로봇청소기",
           "무선청소기가격비교",
-          "게이밍노트북",
-          "무선청소기비교",
           "물걸레청소기",
-          "LG그램",
+          "무선청소기비교",
           "캠핑용품",
-          "전동드릴",
-          "업소용청소기",
+          "게이밍노트북",
+          "LG그램",
           "샤크청소기",
+          "업소용청소기",
+          "전동드릴",
           "LG로봇청소기",
           "차량용청소기",
-          "환풍기",
-          "스텐리",
           "삼성공기청정기",
+          "스텐리",
+          "환풍기",
+          "애플매장",
           "중고노트북",
           "그라인더",
-          "애플매장",
           "LG그램노트북",
           "서울초미세먼지",
-          "LG노트북",
           "LG청소기",
-          "노트북추천",
+          "LG노트북",
           "유선청소기",
           "LG코드제로A9",
-          "전열교환기",
-          "엘지로봇청소기",
           "청라코스트코",
-          "그램노트북",
-          "청소기추천",
+          "노트북추천",
+          "엘지로봇청소기",
+          "전열교환기",
           "무선에어건",
+          "그램노트북",
+          "무선청소기추천",
+          "청소기추천",
+          "로보락청소기",
           "노트북가격",
           "업무용노트북",
-          "무선청소기추천",
           "게임용노트북",
-          "로보락청소기",
-          "삼성제습기",
           "바이러스",
+          "로봇청소기추천",
           "위닉스공기청정기",
           "무선송풍기",
-          "로봇청소기추천",
+          "삼성제습기",
           "LG무선청소기",
+          "진공청소기",
           "엘지청소기",
-          "노트북구매",
-          "진공청소기"
+          "로보락QREVO"
         ],
         "proposals": [
           {
             "keyword": "로봇청소기비교",
-            "reason": "월 1,050회 실측 수요. 구매 전 자동 세척·급배수·문턱 대응 조건을 묻는 검색으로, 제조사 공식 사양과 설치 제약을 조사할 가치가 있다.",
+            "reason": "월 1,080회 실측 수요. 구매 전 자동 세척·급배수·문턱 대응 조건을 묻는 수요로, 제조사 공식 사양과 설치 조건을 조사할 가치가 있다.",
             "search_query": "로봇청소기 비교"
           },
           {
             "keyword": "무선청소기비교",
-            "reason": "월 630회 실측된 비교 수요. 무게·배터리·구성품 선택에 필요한 공식 사양과 사용시간 측정 조건을 확인하기 좋다.",
+            "reason": "월 640회 실측 수요. 무게·배터리·구성품의 구매 판단 수요가 명확해 공식 사양과 사용 시간 측정 조건을 함께 조사하기 좋다.",
             "search_query": "무선청소기 비교"
           },
           {
             "keyword": "인덕션설치비용",
-            "reason": "월 880회 실측 수요. 구매 예산에 영향을 주는 기본 설치 범위와 타공·전기공사 추가 비용 조건을 공식 안내로 조사할 필요가 있다.",
+            "reason": "월 840회 실측 수요. 구매 총비용에 영향을 주는 기본 설치 범위와 타공·전기 공사 추가 비용 조건을 공식 안내로 확인할 필요가 있다.",
             "search_query": "인덕션 설치 비용"
           },
           {
             "keyword": "노트북비교",
-            "reason": "월 7,850회 실측 수요. 특정 모델 리뷰와 달리 용도별 구매 선택이 목적이며, 공식 사양에서 무게·메모리·확장성을 비교할 필요가 있다.",
+            "reason": "월 7,310회 실측 수요. 개별 제품 리뷰와 구별되는 구매 비교 목적이며, 공식 사양으로 메모리·무게·포트·보증 조건을 조사할 가치가 있다.",
             "search_query": "노트북 비교"
-          },
-          {
-            "keyword": "청소기비교",
-            "reason": "월 7,760회 실측 수요. 청소기 유형을 고르는 독자를 위해 유선·무선·로봇의 기능과 관리 제약을 공식 자료로 조사할 가치가 있다.",
-            "search_query": "청소기 비교"
           }
         ]
       },
@@ -6637,6 +6963,7 @@
         "round": 2,
         "offered_keywords": [
           "미세먼지",
+          "청소기비교",
           "로봇청소기",
           "차이슨무선청소기",
           "무선청소기",
@@ -6645,77 +6972,71 @@
           "차이슨청소기",
           "삼성노트북",
           "베이크아웃방법",
-          "선풍기",
           "공기청정기",
+          "선풍기",
           "로보락로봇청소기",
           "무선청소기가격비교",
-          "게이밍노트북",
           "물걸레청소기",
-          "LG그램",
           "캠핑용품",
-          "전동드릴",
-          "업소용청소기",
+          "게이밍노트북",
+          "LG그램",
           "샤크청소기",
+          "업소용청소기",
+          "전동드릴",
           "LG로봇청소기",
           "차량용청소기",
-          "환풍기",
-          "스텐리",
           "삼성공기청정기",
+          "스텐리",
+          "환풍기",
+          "애플매장",
           "중고노트북",
           "그라인더",
-          "애플매장",
           "LG그램노트북",
           "서울초미세먼지",
-          "LG노트북",
           "LG청소기",
-          "노트북추천",
+          "LG노트북",
           "유선청소기",
           "LG코드제로A9",
-          "전열교환기",
-          "엘지로봇청소기",
           "청라코스트코",
-          "그램노트북",
-          "청소기추천",
+          "노트북추천",
+          "엘지로봇청소기",
+          "전열교환기",
           "무선에어건",
+          "그램노트북",
+          "무선청소기추천",
+          "청소기추천",
+          "로보락청소기",
           "노트북가격",
           "업무용노트북",
-          "무선청소기추천",
           "게임용노트북",
-          "로보락청소기",
-          "삼성제습기",
           "바이러스",
+          "로봇청소기추천",
           "위닉스공기청정기",
           "무선송풍기",
-          "로봇청소기추천",
+          "삼성제습기",
           "LG무선청소기",
-          "엘지청소기",
-          "노트북구매",
           "진공청소기",
-          "노트북할인",
-          "학생용노트북",
+          "엘지청소기",
           "로보락QREVO",
-          "청소기가격",
-          "핸디청소기"
+          "핸디청소기",
+          "노트북구매",
+          "샤오미로봇청소기",
+          "학생용노트북"
         ],
         "proposals": [
           {
             "keyword": "무선청소기가격비교",
-            "reason": "월 640회 실측된 비교 수요다. 구매 전 가격 차이를 판단하도록 공식 구성품·배터리·보증 조건을 조사할 가치가 있다.",
-            "search_query": "무선 청소기 가격 비교"
-          },
-          {
-            "keyword": "로봇청소기추천",
-            "reason": "월 9,570회로 구매 선택 의도가 명확하다. 공식 사양에서 문턱 대응·물걸레 관리·설치 조건을 확인할 후보다.",
-            "search_query": "로봇 청소기 추천"
+            "reason": "월 660회 실측된 비교 수요다. 구매 전 가격 차이를 판단하도록 공식 판매 구성·배터리·액세서리 포함 조건을 조사할 가치가 있다.",
+            "search_query": "무선청소기 가격 비교"
           },
           {
             "keyword": "업무용노트북",
-            "reason": "월 11,870회이며 업무 용도라는 선택 조건이 있다. 공식 메모리·포트·무게 사양을 바탕으로 구매 기준을 조사할 후보다.",
+            "reason": "월 10,850회 수요로 용도가 명확하다. 업무용 구매에 필요한 메모리·무게·외부 화면 연결 조건을 제조사 공식 사양으로 조사할 수 있다.",
             "search_query": "업무용 노트북"
           },
           {
             "keyword": "학생용노트북",
-            "reason": "월 8,730회이며 학생 용도에 맞는 선택 수요다. 휴대성·저장공간·운영체제 포함 여부를 공식 자료로 조사할 가치가 있다.",
+            "reason": "월 8,200회 수요로 구매 대상이 구체적이다. 수업·과제용 선택에 필요한 휴대성·단자·운영체제 포함 여부를 공식 자료로 조사할 가치가 있다.",
             "search_query": "학생용 노트북"
           }
         ]
@@ -6724,9 +7045,20 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
+        "keyword": "업무용노트북",
+        "monthly_search": 10850,
+        "score": 56.77,
+        "status": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ],
+        "organic_query": "업무용 노트북"
+      },
+      {
         "keyword": "노트북비교",
-        "monthly_search": 7850,
-        "score": 54.67,
+        "monthly_search": 7310,
+        "score": 55.76,
         "status": "held",
         "reasons": [
           "narrower_source_coverage",
@@ -6737,57 +7069,36 @@
       {
         "keyword": "로봇청소기비교",
         "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 1050,
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 1080,
         "organic_query": "로봇청소기 비교"
       },
       {
         "keyword": "무선청소기비교",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 630,
+        "monthly_search": 640,
         "organic_query": "무선청소기 비교"
       },
       {
         "keyword": "인덕션설치비용",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 880,
+        "monthly_search": 840,
         "organic_query": "인덕션 설치 비용"
-      },
-      {
-        "keyword": "청소기비교",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 7760,
-        "organic_query": "청소기 비교"
       },
       {
         "keyword": "무선청소기가격비교",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 640,
-        "organic_query": "무선 청소기 가격 비교"
-      },
-      {
-        "keyword": "로봇청소기추천",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 9570,
-        "organic_query": "로봇 청소기 추천"
-      },
-      {
-        "keyword": "업무용노트북",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 11870,
-        "organic_query": "업무용 노트북"
+        "monthly_search": 660,
+        "organic_query": "무선청소기 가격 비교"
       },
       {
         "keyword": "학생용노트북",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 8730,
+        "monthly_search": 8200,
         "organic_query": "학생용 노트북"
       }
     ],

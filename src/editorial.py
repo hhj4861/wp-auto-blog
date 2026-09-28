@@ -12,6 +12,9 @@ import logging
 import re
 import time
 import uuid
+from contextlib import contextmanager
+from contextvars import ContextVar
+from copy import deepcopy
 from datetime import datetime
 from html import escape, unescape
 from html.parser import HTMLParser
@@ -33,6 +36,8 @@ OFFICIAL_DOMAINS = {
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35
 SOURCE_FETCH_BACKOFF_SECONDS = 1
+SOURCE_MAX_BYTES = 5_000_000
+_source_cache = ContextVar('official_source_cache', default=None)
 logger = logging.getLogger(__name__)
 
 
@@ -70,12 +75,19 @@ def _source_fetch_failure(reason: str) -> None:
     logger.warning("Official source fetch failed: %s", reason)
 
 
-def _source_body(soup):
+def _source_body(soup, url=""):
     """Prefer an explicit article body over legacy div-based navigation shells."""
     for el in soup.select('script, style, nav, header, footer, noscript, '
                           '[role="navigation"], #head, #foot, #allmenu_op, '
                           '#menu_navi, #sidebar, #sidemenu, #location'):
         el.decompose()
+    # Samsung product pages use <article> for unrelated promotion cards while
+    # the actual product text lives in these sections. Never pad an empty
+    # product section with promotions, reviews or the surrounding storefront.
+    if host_matches(https_host(url), 'samsung.com'):
+        product = soup.select('#compGoodsSpec, #compGoodsFeatures')
+        if product:
+            return ' '.join(node.get_text(' ', strip=True) for node in product).strip()
     # Exact, common content containers, including the hospital's legacy CMS.
     # Do not infer body text from arbitrary elements named *content* or promote
     # a short/empty article by padding it with the whole site's navigation.
@@ -88,7 +100,31 @@ def _source_body(soup):
     return (soup.body or soup).get_text(' ', strip=True)
 
 
+@contextmanager
+def source_fetch_scope():
+    """Reuse reads only within one selection; never persist stale evidence across runs."""
+    if _source_cache.get() is not None:
+        yield
+        return
+    token = _source_cache.set({})
+    try:
+        yield
+    finally:
+        _source_cache.reset(token)
+
+
 def fetch_source(url: str, title: str = "") -> dict | None:
+    cache = _source_cache.get()
+    key = (url, title)
+    if cache is not None and key in cache:
+        return deepcopy(cache[key])
+    source = _fetch_source(url, title)
+    if cache is not None and len(cache) < 128:
+        cache[key] = deepcopy(source)  # Includes exhausted failures, within this scope only.
+    return source
+
+
+def _fetch_source(url: str, title: str = "") -> dict | None:
     """Read an official source, resolving only allowlisted HTTPS redirects.
 
     No cookies/auth from WordPress or the user's browser are shared. A Google
@@ -132,7 +168,7 @@ def fetch_source(url: str, title: str = "") -> dict | None:
                         if time.monotonic() >= deadline:
                             return _source_fetch_failure("time_budget")
                         data.extend(chunk)
-                        if len(data) > 1_000_000:
+                        if len(data) > SOURCE_MAX_BYTES:
                             return _source_fetch_failure("body_too_large")
         except requests.exceptions.SSLError:
             return _source_fetch_failure("tls_failure")
@@ -157,7 +193,7 @@ def fetch_source(url: str, title: str = "") -> dict | None:
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
         page_title = soup.title.get_text(" ", strip=True) if soup.title else title
-        text = _source_body(soup)
+        text = _source_body(soup, url)
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
         if len(text) < 200:

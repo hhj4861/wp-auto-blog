@@ -9,7 +9,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
-from src.editorial import fetch_source
+from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
@@ -46,6 +46,7 @@ def _sources_accessible(item, source_cache):
     return True
 
 
+@source_fetch_scope()
 def main():
     load_dotenv()
     parser = argparse.ArgumentParser(description=__doc__)
@@ -104,7 +105,11 @@ def main():
             _write_reports(reports)
             print(json.dumps(report, ensure_ascii=False), flush=True)
             if not report['selected']:
-                raise RuntimeError('No candidate passed all checks')
+                failures.append(category)
+                print(f'{category}: selection held (no_candidate_passed); '
+                      f'rejected={len(report.get("rejected", []))} '
+                      f'held={len(report.get("held", []))}', file=sys.stderr, flush=True)
+                continue
             # Reserve selected keywords across this run's category reports too.
             for item in report['selected']:
                 titles.extend([item['keyword'], item['topic']])

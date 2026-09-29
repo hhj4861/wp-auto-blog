@@ -198,7 +198,8 @@
       "category": "테크",
       "slot": "evening",
       "claimed_at": "2026-09-29T20:36:43.622132+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-09-29T11:47:27.516104+00:00"
     }
   }
 }

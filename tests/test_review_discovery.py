@@ -115,3 +115,32 @@ def test_all_broad_terms_leave_auditable_report_without_forced_selection(monkeyp
     assert len(report['discovery_rejections']) == 3
     with pytest.raises(RuntimeError):
         market.enqueue_report([], report)
+
+
+@pytest.mark.parametrize('keyword', ['흡입력좋은청소기', '소음적은청소기추천', '노트북램가성비순위'])
+def test_facet_does_not_make_unbounded_recommendation_publishable(keyword):
+    assert review.discovery_issue(keyword) == 'review_recommendation_unbounded'
+
+
+def test_catalog_url_cannot_supply_comparison_evidence():
+    assert not review.relevant_source('노트북메모리', source(
+        'https://www.samsung.com/sec/memory-storage/all-memory-storage/', '노트북 메모리 16GB'))
+
+
+def test_robot_research_includes_two_manufacturers_and_consumer_agency(monkeypatch):
+    hosts = ['kr.roborock.com', 'store.kr.dreametech.com', 'samsung.com/sec', 'kca.go.kr']
+    queries = []
+    def search(query):
+        queries.append(query)
+        host = query.split('site:', 1)[1]
+        return 'test', [{'url': f'https://{host}/products/{i}'} for i in range(4)]
+    monkeypatch.setattr(market, 'search_results', search)
+    urls = market.official_search_urls('로봇청소기문턱')
+    assert queries == [f'로봇청소기문턱 제품 사양 site:{host}' for host in hosts]
+    assert urls[:4] == [f'https://{host}/products/0' for host in hosts]
+    assert len(urls) == 12
+    for host in hosts[:2]:
+        assert market.is_official_url('https://' + host + '/products/test')
+        assert not market.is_official_url('https://' + host + '.evil.example/products/test')
+        assert review.relevant_source('로봇청소기문턱', source(
+            'https://' + host + '/products/test', '로봇청소기 문턱 시험 조건'))

@@ -22,6 +22,7 @@ from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 import requests
+from src import source_tls
 
 POLICY_CATEGORIES = {"생활정보", "취업", "건강"}
 OFFICIAL_DOMAINS = {
@@ -32,6 +33,7 @@ OFFICIAL_DOMAINS = {
     "koreanair.com", "flyasiana.com", "qatarairways.com", "singaporeair.com",
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
     "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net", "korea.kr",
+    "kr.roborock.com", "store.kr.dreametech.com",
 }
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35
@@ -79,16 +81,40 @@ def _source_body(soup, url=""):
     """Prefer an explicit article body over legacy div-based navigation shells."""
     for el in soup.select('script, style, nav, header, footer, noscript, '
                           '[role="navigation"], #head, #foot, #allmenu_op, '
-                          '#menu_navi, #sidebar, #sidemenu, #location'):
+                          '#menu_navi, #sidebar, #sidemenu, #location, '
+                          '#shopify-section-header, #shopify-section-footer, '
+                          '#shopify-section-main-footer, #shopify-section-nav-bar, '
+                          '#shopify-section-location-country, #shopify-section-message-bar, '
+                          '.jdgm-widget, .spr-container'):
         el.decompose()
     # Samsung product pages use <article> for unrelated promotion cards while
     # the actual product text lives in these sections. Never pad an empty
     # product section with promotions, reviews or the surrounding storefront.
     if host_matches(https_host(url), 'samsung.com'):
+        if '/support/model/' in urlsplit(url).path:
+            # The raw support template repeats "삼성 노트북 9 Style" even for
+            # tablets. Only the populated specification table is model evidence.
+            specs = soup.select('#supportSection02 .spec-table')
+            return ' '.join(node.get_text(' ', strip=True) for node in specs).strip()
+        if soup.select_one('#pfProductCard') is not None:
+            # Client-rendered catalog shells contain unrelated global menus.
+            return ''
         product = soup.select('#compGoodsSpec, #compGoodsFeatures')
         if product:
             return ' '.join(node.get_text(' ', strip=True) for node in product).strip()
     # Exact, common content containers, including the hospital's legacy CMS.
+    if host_matches(https_host(url), 'kca.go.kr'):
+        board = soup.select_one('table.board_insert')
+        if board is not None:
+            body = board.select_one('td.substance')
+            if body is None or not body.get_text(strip=True):
+                # Attachment names and next/previous links are not article text.
+                return ''
+            heading = board.select_one('th.title')
+            date_label = board.find('th', string=lambda s: s and s.strip() == '등록일')
+            date = date_label.find_next_sibling('td') if date_label else None
+            return ' '.join(node.get_text(' ', strip=True) for node in (heading, date, body)
+                            if node is not None)
     # Do not infer body text from arbitrary elements named *content* or promote
     # a short/empty article by padding it with the whole site's navigation.
     for selector in ('[itemprop="articleBody"]', 'article', '.view_type .cont_area',
@@ -98,6 +124,17 @@ def _source_body(soup, url=""):
         if nodes:
             return max((node.get_text(' ', strip=True) for node in nodes), key=len)
     return (soup.body or soup).get_text(' ', strip=True)
+
+
+def _source_excerpt(text, url):
+    # Manufacturer test conditions often follow the feature descriptions. Keep
+    # both ends within the same budget, with an explicit omission boundary.
+    product_host = any(host_matches(https_host(url), host) for host in (
+        'samsung.com', 'lg.com', 'kr.roborock.com',
+        'store.kr.dreametech.com'))
+    if product_host and len(text) > 8000:
+        return text[:4500] + '\n[중간 본문 생략]\n' + text[-3400:]
+    return text[:8000]
 
 
 @contextmanager
@@ -146,7 +183,7 @@ def _fetch_source(url: str, title: str = "") -> dict | None:
             return _source_fetch_failure("time_budget")
         failure = None
         try:
-            with requests.get(url, timeout=min(15, remaining), allow_redirects=False, stream=True) as res:
+            with source_tls.get(url, timeout=min(15, remaining), allow_redirects=False, stream=True) as res:
                 if time.monotonic() >= deadline:
                     return _source_fetch_failure("time_budget")
                 if res.status_code in (301, 302, 303, 307, 308):
@@ -202,7 +239,7 @@ def _fetch_source(url: str, title: str = "") -> dict | None:
             "url": url, "original_url": original, "title": page_title or title or https_host(url),
             "checked_on": checked_today(),
             "sha256": hashlib.sha256(text.encode()).hexdigest(),
-            "excerpt": text[:8000],
+            "excerpt": _source_excerpt(text, url),
         }
     return _source_fetch_failure("redirect_limit")
 

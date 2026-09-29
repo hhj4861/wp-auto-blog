@@ -210,8 +210,8 @@ def test_kcci_lookalikes_credentials_and_other_schemes_never_request(url):
 @pytest.mark.parametrize("html,content_type", [
     ("<main>컴퓨터활용능력 시험안내</main>", "text/html"),
     ("<main>" + "본문" * 150 + "</main>", "application/pdf"),
-    ("x" * 1_000_001, "text/html"),
-])
+    ("x" * (editorial.SOURCE_MAX_BYTES + 1), "text/html"),
+], ids=['short-body', 'pdf', 'over-byte-limit'])
 def test_kcci_allowlist_does_not_bypass_body_or_media_limits(html, content_type):
     with patch("src.editorial.requests.get", return_value=_source_response(html, content_type)):
         assert fetch_source(KCCI_GUIDE_URLS[1]) is None
@@ -377,8 +377,8 @@ def test_source_non_transient_request_errors_never_retry_or_log_raw_error(source
 @pytest.mark.parametrize(('html', 'content_type', 'reason'), [
     (FRESH_SOURCE_HTML, 'application/pdf', 'non_html'),
     ('<main>Short guide</main>', 'text/html', 'short_body'),
-    ('x' * 1_000_001, 'text/html', 'body_too_large'),
-])
+    ('x' * (editorial.SOURCE_MAX_BYTES + 1), 'text/html', 'body_too_large'),
+], ids=['pdf', 'short-body', 'over-byte-limit'])
 def test_source_invalid_body_does_not_retry(source_http, caplog, html, content_type, reason):
     response = _source_response(html, content_type)
     source_http.get.side_effect = [response]
@@ -387,6 +387,59 @@ def test_source_invalid_body_does_not_retry(source_http, caplog, html, content_t
     source_http.sleep.assert_not_called()
     response.__exit__.assert_called_once()
     assert [record.getMessage() for record in caplog.records] == [f'Official source fetch failed: {reason}']
+
+
+def test_large_official_page_keeps_article_after_scripts_without_truncation(source_http):
+    html = '<html><script>' + 'x' * 1_500_000 + '</script>' + FRESH_SOURCE_HTML + '</html>'
+    source_http.get.side_effect = [_source_response(html)]
+    source = fetch_source(SOURCE_HTTP_URL)
+    assert source['excerpt'] == ('Fresh official body. ' * 20).strip()
+    assert source['sha256'] == hashlib.sha256(source['excerpt'].encode()).hexdigest()
+
+
+@pytest.mark.parametrize('body', ['제품의 흡입력과 배터리 사용 조건을 설명합니다. ' * 30, '스펙'])
+def test_samsung_product_evidence_uses_features_instead_of_promotion_articles(source_http, body):
+    html = ('<article>' + '무관한 기획전 홍보 ' * 60 + '</article>'
+            '<section id="compGoodsFeatures">' + body + '</section>'
+            '<section id="compGoodsComment">사용자 후기</section>')
+    source_http.get.side_effect = [_source_response(html)]
+    source = fetch_source('https://www.samsung.com/sec/vacuum-cleaners/example/')
+    if len(body) < 200:
+        assert source is None
+    else:
+        assert source['excerpt'] == body.strip()
+        assert '기획전' not in source['excerpt'] and '사용자 후기' not in source['excerpt']
+
+
+@pytest.mark.parametrize('succeeds', [True, False])
+def test_source_scope_deduplicates_reads_but_never_carries_evidence_to_next_run(source_http, succeeds):
+    response = _source_response(FRESH_SOURCE_HTML if succeeds else '<main>Login</main>')
+    source_http.get.side_effect = None
+    source_http.get.return_value = response
+    with editorial.source_fetch_scope():
+        first = fetch_source(SOURCE_HTTP_URL)
+        if first:
+            first['excerpt'] = 'Caller mutation must not corrupt cached evidence'
+        with editorial.source_fetch_scope():
+            second = fetch_source(SOURCE_HTTP_URL)
+        assert bool(second) is succeeds
+        if second:
+            assert second['excerpt'].startswith('Fresh official body.')
+        source_http.get.assert_called_once()
+    with editorial.source_fetch_scope():
+        fetch_source(SOURCE_HTTP_URL)
+    assert source_http.get.call_count == 2
+
+
+def test_source_scope_is_cleared_even_on_selection_error(source_http):
+    source_http.get.side_effect = None
+    source_http.get.return_value = _source_response(FRESH_SOURCE_HTML)
+    with pytest.raises(RuntimeError):
+        with editorial.source_fetch_scope():
+            fetch_source(SOURCE_HTTP_URL)
+            raise RuntimeError('selection failed')
+    fetch_source(SOURCE_HTTP_URL)
+    assert source_http.get.call_count == 2
 
 
 def test_source_retry_does_not_follow_unsafe_redirect_or_log_location(source_http, caplog):

@@ -19,7 +19,7 @@ import requests
 
 from src.keyword_gate import (fetch_keyword_stats, gov_ratio, MIN_MONTHLY_SEARCH,
                               HEAD_SEARCH_VOLUME, MAX_GOV_RATIO)
-from src.editorial import fetch_source, is_official_url
+from src.editorial import fetch_source, is_official_url, https_host, host_matches, source_fetch_scope
 from src.market_search import search_results
 from src.cak_candidates import (load_candidate_export, measurement_key, qualified_rising,
                                 valid_cak_provenance)
@@ -176,8 +176,16 @@ def existing_titles():
                         params={'status': 'publish,draft,pending,future', 'per_page': 100,
                                 'page': page, '_fields': 'title,meta'}, timeout=45)
                 except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as error:
+                    failure = ('tls_failure' if isinstance(error, requests.exceptions.SSLError)
+                               else 'timeout' if isinstance(error, requests.exceptions.Timeout)
+                               else 'connection_failure')
                     if isinstance(error, requests.exceptions.SSLError) or not retry_available:
                         raise
+                    retry_available = False
+                    sleep(1)
+                    continue
+                if response.status_code in (502, 503, 504) and retry_available:
+                    response.close()
                     retry_available = False
                     sleep(1)
                     continue
@@ -406,10 +414,31 @@ def _official_search_extra_domains(keyword):
 
 
 def official_search_urls(keyword):
-    """Discover official URLs from indexed results, not model-suggested URLs."""
-    domains = ['go.kr', 'or.kr', 'gov', 'ac.kr', *_official_search_extra_domains(keyword)]
-    _, rows = search_results(keyword + ' (' + ' OR '.join('site:' + domain for domain in domains) + ')')
-    return list(dict.fromkeys(row['url'] for row in rows if is_official_url(row['url'])))[:4]
+    """Use bounded, simple site queries; compound OR queries can lose topic intent.
+
+    These are source locators only, never replacements for the measured SERP.
+    Prioritize relevant manufacturers before broad institutional domains.
+    """
+    extras = _official_search_extra_domains(keyword)
+    domains = list(dict.fromkeys([*extras, 'go.kr', 'or.kr', 'gov', 'ac.kr']))[:4]
+    groups, seen = [], set()
+    for index, domain in enumerate(domains):
+        _, rows = search_results(f'{keyword} site:{domain}')
+        urls = []
+        for row in rows:
+            url = row.get('url', '')
+            if (is_official_url(url) and host_matches(https_host(url), domain)
+                    and url not in seen):
+                seen.add(url)
+                urls.append(url)
+                if len(urls) == 4:
+                    break
+        groups.append(urls)
+        if len(seen) >= 4 and index + 1 >= len(extras):
+            break
+    # A comparison needs more than one manufacturer's pages. Do not let the
+    # first site's navigation/results consume every available source slot.
+    return [group[rank] for rank in range(4) for group in groups if len(group) > rank][:4]
 
 
 def _append_distinct_source(sources, source):
@@ -802,6 +831,7 @@ def _review_source_coverage(candidate, now, *, budget):
     return retry_reasons
 
 
+@source_fetch_scope()
 def select_category(category, top_n=2, titles=None, *, excluded_keywords=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
@@ -930,7 +960,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             if dominance is not None and row['monthly'] >= HEAD_SEARCH_VOLUME and dominance > MAX_GOV_RATIO:
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
                 continue
-            sources = candidate_sources(keyword, relevant_results) if results else []
+            sources = candidate_sources(query, relevant_results) if results else []
             allow_recovery = bool(sources)
             if not sources:
                 try:

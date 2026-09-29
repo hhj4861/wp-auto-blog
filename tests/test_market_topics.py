@@ -2429,15 +2429,75 @@ def test_changed_sources_are_new_first_deduplicated_and_limited_to_three(detail_
     ('무역영어지원', ['korcham.net', 'korea.kr']),
     ('BIM자격증', []),
 ])
-def test_official_lookup_adds_only_relevant_bounded_domains_in_one_search(monkeypatch, keyword, extras):
+def test_official_lookup_uses_simple_bounded_queries_and_checks_returned_domain(monkeypatch, keyword, extras):
     rows = [organic(f'https://source{i}.go.kr/detail', keyword) for i in range(6)]
     lookup = Mock(return_value=('codex_native_search', rows))
     monkeypatch.setattr(market, 'search_results', lookup)
     assert market.official_search_urls(keyword) == [row['url'] for row in rows[:4]]
-    lookup.assert_called_once_with(keyword + ' (' + ' OR '.join(
-        'site:' + domain for domain in ['go.kr', 'or.kr', 'gov', 'ac.kr', *extras]) + ')')
+    # Provider ignores site filters in this fixture: unrelated domains cannot
+    # fill source slots, and the first matching query can end discovery early.
+    assert [call.args[0] for call in lookup.call_args_list] == [
+        f'{keyword} site:{domain}' for domain in [*extras, 'go.kr']]
     assert market._official_search_extra_domains(keyword) == extras
     assert len(extras) <= 2
+
+
+def test_official_lookup_prioritizes_manufacturers_and_bounds_empty_searches(monkeypatch):
+    lookup = Mock(return_value=('duckduckgo_proxy', []))
+    monkeypatch.setattr(market, 'search_results', lookup)
+    assert market.official_search_urls('무선 청소기 비교') == []
+    assert [call.args[0] for call in lookup.call_args_list] == [
+        '무선 청소기 비교 site:samsung.com', '무선 청소기 비교 site:lg.com',
+        '무선 청소기 비교 site:go.kr', '무선 청소기 비교 site:or.kr']
+
+
+def test_comparison_sources_include_both_manufacturers_before_more_same_site_pages(monkeypatch):
+    samsung = [f'https://www.samsung.com/sec/product-{i}' for i in range(4)]
+    lg = [f'https://www.lg.com/kr/product-{i}' for i in range(4)]
+    lookup = Mock(side_effect=[('duckduckgo_proxy', [{'url': u} for u in urls]) for urls in [samsung, lg]])
+    monkeypatch.setattr(market, 'search_results', lookup)
+    assert market.official_search_urls('무선 청소기 비교') == [samsung[0], lg[0], samsung[1], lg[1]]
+    assert lookup.call_count == 2
+
+
+@pytest.mark.parametrize('status', [502, 503, 504])
+def test_inventory_retries_transient_http_once_without_losing_duplicate_titles(inventory_read, status):
+    failed = market.requests.Response()
+    failed.status_code = status
+    failed._content = b'upstream unavailable'
+    failed._content_consumed = True
+    case = inventory_read
+    case.get.side_effect = [case.first, failed, case.second]
+    titles = market.existing_titles()
+    assert '이름이 바뀐 첫 글' in titles and '두 번째 글' in titles
+    assert [call.kwargs['params']['page'] for call in case.get.call_args_list] == [1, 2, 2]
+    case.pause.assert_called_once_with(1)
+
+
+def test_inventory_http_and_transport_failures_share_one_retry_budget(inventory_read, caplog):
+    failed = market.requests.Response()
+    failed.status_code = 503
+    failed._content = b'private upstream response'
+    failed._content_consumed = True
+    case = inventory_read
+    case.get.side_effect = [failed, case.first, market.requests.Timeout('private request')]
+    with pytest.raises(RuntimeError, match='WordPress inventory unavailable'):
+        market.existing_titles()
+    assert case.get.call_count == 3
+    case.pause.assert_called_once_with(1)
+    assert caplog.records[-1].getMessage() == 'WordPress inventory unavailable: reason=timeout page=2'
+
+
+def test_no_eligible_candidate_is_reported_as_hold_without_enqueue(reuse_cli, capsys):
+    c = reuse_cli
+    c.save([])
+    c.select.side_effect = None
+    c.select.return_value = {'category': '취업', 'selected': [], 'held': [],
+                            'rejected': [{'keyword': '시험준비물', 'reason': 'search quality insufficient'}]}
+    queue_before = c.queue.read_text()
+    assert c.cli.main() == 1
+    assert c.queue.read_text() == queue_before
+    assert 'no_candidate_passed); rejected=1 held=0' in capsys.readouterr().err
 
 
 @pytest.mark.parametrize('keyword,expected,absent', [
@@ -2598,7 +2658,8 @@ def test_spaced_search_query_preserves_measured_keyword_and_binds_cached_evidenc
         keyword: {'keyword': keyword, 'monthly': 1200}})
     search = Mock(return_value=('codex_native_search', organic_sample(keyword)))
     monkeypatch.setattr(market, 'search_results', search)
-    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    source_lookup = Mock(return_value=[evidence()])
+    monkeypatch.setattr(market, 'candidate_sources', source_lookup)
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     monkeypatch.setattr(market, 'ask', Mock(side_effect=[
         {'candidates': [{'keyword': keyword, 'search_query': query}]}, analysis(keyword),
@@ -2606,6 +2667,7 @@ def test_spaced_search_query_preserves_measured_keyword_and_binds_cached_evidenc
     report = market.select_category('취업', 1, titles=[])
     item = report['selected'][0]
     search.assert_called_once_with(query)
+    assert source_lookup.call_args.args[0] == query
     assert item['keyword'] == keyword and item['keywords'] == [keyword]
     assert item['monthly_search'] == 1200 and item['demand_scope'] == 'keyword_total'
     assert item['organic_query'] == query

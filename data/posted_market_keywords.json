@@ -263,5 +263,25 @@
     "trend_status": "unavailable",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-29T01:46:15.028971+00:00"
+  },
+  {
+    "key": "노트북인터넷연결",
+    "keyword": "노트북인터넷연결",
+    "topic": "노트북인터넷연결: 와이파이·유선 연결 방법과 연결 안 될 때 점검 순서",
+    "category": "테크",
+    "post_id": 1784,
+    "url": "https://trendpulse.blog/laptop-internet-connection-guide/",
+    "selection_version": 6,
+    "monthly_search": 1710,
+    "score": 75.21,
+    "score_components": {
+      "demand": 25.86,
+      "organic_opportunity": 29.39,
+      "trend": 4.96,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-29T11:47:24.527336+00:00"
   }
 ]

@@ -243,5 +243,25 @@
     "trend_status": "unavailable",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-25T10:31:23.189292+00:00"
+  },
+  {
+    "key": "발톱무좀치료방법",
+    "keyword": "발톱무좀치료방법",
+    "topic": "발톱무좀치료방법: 먹는 약·바르는 약과 치료 전 확인사항",
+    "category": "건강",
+    "post_id": 1781,
+    "url": "https://trendpulse.blog/toenail-fungus-treatment-checklist/",
+    "selection_version": 6,
+    "monthly_search": 5630,
+    "score": 73.0,
+    "score_components": {
+      "demand": 30.0,
+      "organic_opportunity": 28.0,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-29T01:46:15.028971+00:00"
   }
 ]

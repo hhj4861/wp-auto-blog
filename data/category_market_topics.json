@@ -3369,7 +3369,7 @@
   },
   "건강": {
     "category": "건강",
-    "selected_at": "2026-09-26T12:20:04.387191+00:00",
+    "selected_at": "2026-09-29T01:32:00.841076+00:00",
     "seeds": [
       "건강검진",
       "예방접종",
@@ -3385,23 +3385,23 @@
       "received_count": 80,
       "validated_count": 80,
       "rejected_count": 0,
-      "qualified_rising_count": 8,
+      "qualified_rising_count": 40,
       "monthly_unavailable_count": 0,
       "rejection_counts": {},
       "transport": {
         "status": "ok",
         "reason": "downloaded",
-        "sourceRunId": 36237548174,
-        "artifactId": 10904686953,
-        "headSha": "170fe8b92dda5f3a5de1ac2fc7126f0c2b486a0b",
-        "sourceRunCreatedAt": "2026-09-26T11:01:43Z"
+        "sourceRunId": 36427461625,
+        "artifactId": 10972931422,
+        "headSha": "e978ba317361d90f9f84e96f32534d022ce00ecb",
+        "sourceRunCreatedAt": "2026-09-28T13:16:38Z"
       },
       "export_metadata": {
         "schemaVersion": 1,
         "kind": "cak_keyword_candidates",
         "profile": "blog-kr",
-        "generatedAt": "2026-09-26T11:04:06.514Z",
-        "expiresAt": "2026-09-27T11:02:25.366Z",
+        "generatedAt": "2026-09-28T13:19:23.332Z",
+        "expiresAt": "2026-09-29T13:17:31.129Z",
         "compliance": {
           "resaleRestricted": true,
           "cacheTtlHours": 24
@@ -3423,690 +3423,216 @@
           "insufficientBaseline": 2
         }
       },
-      "direct_count": 70,
+      "direct_count": 71,
       "expanded_seed_count": 5,
-      "related_count": 367,
+      "related_count": 402,
       "seed_lookup_failed_count": 0,
-      "filtered_count": 10
+      "filtered_count": 9
     },
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords_and_cak_export",
-    "measured_candidates": 1375,
+    "measured_candidates": 1407,
     "evaluated_candidates": 10,
     "research_pool_size": 120,
     "selected": [
       {
-        "keyword": "헤르페스입술",
+        "keyword": "발톱무좀치료방법",
         "category": "건강",
-        "topic": "헤르페스입술 증상·전염 경로·재발과 치료의 기본 정보",
-        "intent": "입술 헤르페스는 어떤 증상이 있고 성병과 어떤 관계이며, 어떻게 전염·재발하고 치료하나요?",
-        "gap": "공식 자료로 증상·경과 표, 전염 예방과 진료 필요 신호 체크리스트, 항바이러스 크림의 한계를 정리합니다.",
-        "source_url": "https://medlineplus.gov/ency/article/000606.htm",
+        "topic": "발톱무좀치료방법: 먹는 약·바르는 약과 치료 전 확인사항",
+        "intent": "발톱무좀은 어떻게 치료하며, 먹는 약·바르는 약의 역할과 치료 전 확인사항은 무엇인가?",
+        "gap": "공식 본문의 경구·국소 치료 설명을 표로 정리하고, 복용약·간기능 확인과 민간요법 주의사항 체크리스트를 제공한다.",
+        "source_url": "https://mediahub.seoul.go.kr/archives/187780",
         "verified_sources": [
           {
-            "url": "https://medlineplus.gov/ency/article/000606.htm",
-            "original_url": "https://medlineplus.gov/ency/article/000606.htm",
-            "title": "Herpes - oral: MedlinePlus Medical Encyclopedia",
-            "checked_on": "2026-09-26",
-            "sha256": "1e778beff8f60f9d790b34adf986a05ad91d8447dc60fe86e6c58d854f737ba0",
-            "excerpt": "Herpes - oral Oral herpes is an infection of the lips, mouth, or gums due to the herpes simplex virus. It causes small, painful blisters commonly called cold sores or fever blisters. Oral herpes is also called herpes labialis. Causes Oral herpes is a common infection of the mouth area. It is usually caused by the herpes simplex virus type 1 (HSV-1). Most people in the United States are infected with this virus by age 20. After the first infection, the virus becomes dormant (an inactive state) in the nerve tissues in the face. Sometimes, the virus later reactivates, causing cold sores. Herpes virus type 2 (HSV-2) most often causes genital herpes . However, sometimes HSV-2 is spread to the mouth during oral sex, causing oral herpes. Herpes viruses spread most easily from individuals with an active outbreak or sore. You can catch this virus if you: Have intimate or personal contact with someone who is infected Touch an open herpes sore or something that has been in contact with the herpes virus, such as infected razors, towels, dishes, and other shared items Parents may spread the virus to their children during regular daily activities. Symptoms Some people get mouth ulcers when they first come into contact with HSV-1 virus. Others have no symptoms. Symptoms most often occur in kids between 1 and 5 years old. Symptoms may be mild or severe. They most often appear within 1 to 3 weeks after you come into contact with the virus. They may last up to 3 weeks. Warning symptoms include: Itching of the lips or skin around the mouth Burning near the lips or mouth area Tingling near the lips or mouth area Before blisters appear, you may have: Sore throat Fever Swollen glands in the face or neck Painful swallowing Blisters or a rash may form on your: Gums Lips Mouth Throat When blisters are present, it is called a herpes outbreak. You may have: Red blisters that break open and leak Small blisters filled with clear yellowish fluid Several smaller blisters that may grow together into a large blister Yellow and crusty blister as it heals, which eventually turns into pink skin Symptoms may be triggered by: Menstruation or hormone changes Being out in the sun Fever Stress If the symptoms return later, they are usually milder. Exams and Tests Your health care provider can diagnose oral herpes by looking at your mouth area. Sometimes, a sample of the sore is taken and sent to a laboratory for closer examination. Tests may include: Viral culture Viral DNA test Tzanck test to check for HSV Treatment Symptoms will go away on their own without treatment in 1 to 2 weeks. Your provider can prescribe medicines to fight the virus. This is called antiviral medicine. It can help reduce pain and make your symptoms go away sooner. Medicines used to treat mouth sores include: Acyclovir Famciclovir Valacyclovir These medicines work best if you take them when you have warning signs of a mouth sore, before any blisters develop. If you get mouth sores frequently, you may need to take these medicines all the time. Antiviral skin creams may also be used. However, they are expensive and often only shorten the outbreak by a few hours to a day. The following steps can also help make you feel better: Apply ice in a washcloth or a warm washcloth to the sores to help ease pain. Wash the blisters gently with germ-fighting (antiseptic) soap and water. This helps prevent spreading the virus to other body areas. Avoid hot beverages, spicy and salty foods, and citrus. Gargle with cool water or eat fruit-flavored ice pops. Rinse with salt water. Take a pain reliever such as acetaminophen (Tylenol) or ibuprofen (Advil, Motrin). Outlook (Prognosis) Oral herpes most often goes away by itself in 1 to 2 weeks. However, it may come back. Herpes infection may be severe and dangerous if: It occurs in or near the eye. You have a weakened immune system due to certain diseases or medicines. Possible Complications Herpes infection of the eye is a leading cause of blindness in the United States. It causes scarring of the cornea (the surface of the eye). Other complications of oral herpes may include: Return of mouth sores and blisters Spread of the virus to other skin areas Bacterial skin infection Widespread body infection, which may be life threatening in people who have a weakened immune system due to atopic dermatitis , cancer , or HIV infection When to Contact a Medical Professional Contact your provider if you have: Symptoms that are severe or that don't go away after 2 weeks Sores or blisters near your eyes Herpes symptoms and a weakened immune system due to certain diseases or medicines Prevention Here are some tips to prevent mouth sores: Apply sunblock or lip balm containing zinc oxide to your lips before you go outside. Apply a moisturizing balm to prevent your lips from becoming too dry. Avoid direct contact with herpes sores. Wash items such as towels and linens in boiling hot water after each use. Do not share utensils, straws, glasses, or other items if someone has oral herpes. Do not have oral sex if you have oral herpes, especially if you have blisters. You can spread the virus to the genitals. Both oral and genital herpes viruses can sometimes be spread, even when you do not have mouth sores or blisters. Alternative Names Cold sore; Fever blister; Oral herpes simplex; Herpes labialis; Herpes simplex Images Herpes simplex - close-up References Dinulos JGH. Warts, herpes simplex, and other viral infections. In: Dinulos JGH, ed. Habif's Clinical Dermatology: A Color Guide in Diagnosis and Therapy . 7th ed. Philadelphia, PA: Elsevier; 2021:chap 12. Schiffer JT, Corey L. Herpes simplex virus. In: Blaser MJ, Cohen JI, Holland SM, et al, eds. Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases . 10th ed. Philadelphia, PA: Elsevier; 2026:chap 142. Whitley RJ, Gnann JW. Herpes simplex virus infections. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 345. Review Date 7/3/2025 Updated by: Linda J. Vorvick, MD, Clinical Professor Emeritus, Department of Family Medicine, UW Medicine, School of Medicine, University of Washington, Seattle, WA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Cold Sores",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-            "original_url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-            "title": "Acyclovir Topical: MedlinePlus Drug Information",
-            "checked_on": "2026-09-26",
-            "sha256": "ce307381a6548b87c906745452810a1529c4de091e6da3a662c766da383ab35c",
-            "excerpt": "Acyclovir Topical pronounced as (ay sye' kloe veer) Why is this medication prescribed? Acyclovir cream is used to treat cold sores (fever blisters; blisters that are caused by a virus called herpes simplex) on the face or lips. Acyclovir ointment is used to treat first outbreaks of genital herpes (a herpes virus infection that causes sores to form around the genitals and rectum from time to time) and to treat certain types of sores caused by the herpes simplex virus in people with weak immune systems. Acyclovir is in a class of antiviral medications called synthetic nucleoside analogues.\r\nIt works by stopping the spread of the herpes virus in the body.\r\nAcyclovir does not cure cold sores or genital herpes, does not prevent outbreaks of these conditions, and does not stop the spread of these conditions to other people. How should this medicine be used? Topical acyclovir comes as a cream and an ointment to apply to the skin.\r\nAcyclovir cream is usually applied 5 times a day for 4 days. Acyclovir cream may be applied at any time during a cold sore outbreak, but it works best when it is applied at the very beginning of a cold sore outbreak, when there is tingling, redness, itching, or a bump but the cold sore has not yet formed. Acyclovir ointment is usually applied 6 times a day (usually 3 hours apart) for 7 days. It is best to begin using acyclovir ointment as soon as possible after you experience the first symptoms of infection. Follow the directions on your prescription label carefully, and ask your doctor or pharmacist to explain any part you do not understand. Use topical acyclovir exactly as directed. Do not use more or less of it or use it more often than prescribed by your doctor. Your symptoms should improve during your treatment with topical acyclovir. If your symptoms do not improve or if they get worse, call your doctor. Acyclovir cream and ointment are for use only on the skin.\r\nDo not let acyclovir cream or ointment get into your eyes,\r\nor inside your mouth or nose, and do not swallow the medication. Acyclovir cream should only be applied to skin where a cold sore has formed or seems likely to form. Do not apply acyclovir cream to any unaffected skin, or to genital herpes sores. Do not apply other skin medications or other types of skin products such as cosmetics, sun screen, or lip balm to the cold sore area while using acyclovir cream unless your doctor tells you that you should. To use acyclovir cream, follow these steps: Wash your hands. Clean and dry the area of skin where you will be applying the cream. Apply a layer of cream to cover the skin where the cold sore has formed or seems likely to form. Rub the cream into the skin until it disappears. Leave the skin where you applied the medication uncovered. Do not apply a bandage or dressing unless your doctor tells you that you should. Wash your hands with soap and water to remove any cream left on your hands. Be careful not to wash the cream off of your skin. Do not bathe, shower, or swim right after applying acyclovir cream. Avoid irritation of the cold sore area while using acyclovir cream. To use acyclovir ointment, follow these steps: Put on a clean finger cot or rubber glove. Apply enough ointment to cover all of your sores. Take off the finger cot or rubber glove and dispose of it safely, so that it is out of reach of children. Keep the affected area(s) clean and dry, and avoid wearing tight-fitting clothing over the affected area. Ask your pharmacist or doctor for a copy of the manufacturer's information for the patient. Read this information before you start using acyclovir and each time you refill your prescription. Other uses for this medicine This medication may be prescribed for other uses; ask your doctor or pharmacist for more information. What special precautions should I follow? Before using topical acyclovir, tell your doctor and pharmacist if you are allergic to acyclovir, valacyclovir (Valtrex), any other medications, or any of the ingredients in acyclovir cream or ointment.\r\nAsk your pharmacist for a list of the ingredients. Tell your doctor and pharmacist what prescription and nonprescription medications, vitamins, nutritional supplements, and herbal products you are taking or plan to take. tell your doctor if you have or have ever had any condition that affects your immune system such as human immunodeficiency virus (HIV) or acquired immunodeficiency syndrome (AIDS). tell your doctor if you are pregnant, plan to become pregnant, or are breast-feeding. If you become pregnant while using acyclovir, call your doctor. What special dietary instructions should I follow? Unless your doctor tells you otherwise, continue your normal diet. What should I do if I forget a dose? Apply the missed dose as soon as you remember it. However, if it is almost time for the next dose, skip the missed dose and continue your regular dosing schedule. Do not apply extra cream or ointment to make up for a missed dose. What side effects can this medication cause? Topical acyclovir may cause side effects. Tell your doctor if any of these symptoms are severe or do not go away: dry or cracked lips flaky, peeling, or dry skin burning or stinging skin redness, swelling, or irritation in the place where you applied the medication Some side effects can be serious. If you experience any of these symptoms, call your doctor immediately: hives rash itching difficulty breathing or swallowing swelling of the face, throat, lips, eyes, hands, feet, ankles, or lower legs hoarseness Topical acyclovir may cause other side effects. Call your doctor if you have any unusual problems while using this medication. If you experience a serious side effect, you or your doctor may send a report to the Food and Drug Administration's (FDA) MedWatch Adverse Event Reporting program online ( https://www.fda.gov/Safety/MedWatch ) or by phone (1-800-332-1088). What should I know about storage and disposal of this medication? Keep this medication in the container it came in, with the cap on and tightly closed, and out of reach of children. Store it at room temperature and away from excess heat and moisture (not in the bathroom). Never leave this medication in your car in cold or hot weather. Dispose of unneeded medications in a way so that pets, children, and other people cannot take them. Do not flush this medication down the toilet. Use a medicine take-back program. Talk to your pharmacist about take-back programs in your community. Visit the FDA's Safe Disposal of Medicines website https://goo.gl/c4Rm4p for more information. Keep all medication out of sight and reach of children as many containers are not child-resistant. Always lock safety caps. Place the medication in a safe location – one that is up and away and out of their sight and reach. https://www.upandaway.org In case of emergency/overdose If someone swallows topical acyclovir, call your local poison control center at 1-800-222-1222. If the victim has collapsed or is not breathing, call local emergency services at 911. What other information should I know? Keep all appointments with your doctor. Do not let anyone else use your medication. Ask your pharmacist any questions you have about refilling your prescription. Keep a written list of all of the prescription and nonprescription (over-the-counter) medicines, vitamins, minerals, and dietary supplements you are taking. Bring this list with you each time you visit a doctor or if you are admitted to the hospital. You should carry the list with you in case of emergencies. Brand names Zovirax ® Cream Zovirax ® Ointment Brand names of combination products Xerese ® (containing Acyclovir, Hydrocortisone) Other names Acycloguanosine ACV Last Revised - 10/15/2023 Browse Drugs and Medicines Learn how to cite this page",
-            "locator_origin": "model_reported_locator"
+            "url": "https://mediahub.seoul.go.kr/archives/187780",
+            "original_url": "https://mediahub.seoul.go.kr/archives/187780",
+            "title": "서울시 - 내 손안에 서울",
+            "checked_on": "2026-09-29",
+            "sha256": "2d6123b30d9e012221102b1f866695764b548245653dbd6db08e8f9af4455788",
+            "excerpt": "본문 바로가기 참을 수 없는 가려움, 아무데서나 긁을 수도 없고~ 조소연 발행일 2010.09.10. 00:00 수정일 2010.09.10. 00:00 조회 7,169 좋아요 204 트위터 페이스북 카카오톡 페이지 URL 복사 인쇄하기 새창열림 글자 크기 크게 변경하기 글자 크기 작게 변경하기 수영장이나 공중목욕탕 등 사람 많이 모이는 곳에서 감염될 수 있어 무좀은 발 피부의 각질층을 침범하는 곰팡이 감염이다. 매일 깨끗하게 발을 씻지 않으면 땀과 노폐물이 피부 표면에 쌓여서 곰팡이가 생존하기 좋은 습하고 불결한 여건을 만들어주어 무좀이 더 잘 생길 수 있지만, 그 외에도 원래 존재하는 발의 구조적 문제, 예를 들면 발가락 사이가 딱 붙어 있어서 늘 땀이 차 있다든지, 노화가 진행되면서 몸의 면역반응이 원활하지 않아서 곰팡이 감염에 취약해진다든지 할 때 잘 걸릴 수 있다. 또 당뇨, 림프종, 에이즈, 말초혈관질환, 장기 이식 후 장기간 면역억제제를 복용하는 경우와 스테로이드나 항생제 같은 약물을 장기 복용하는 경우에는 누구나 무좀에 더 잘 걸릴 수 있다. 발은 습도가 높고, 보행에 의한 기계적 자극으로 피부에 손상이 생겨 곰팡이 감염이 쉽게 일어날 수 있기 때문에 마라톤이나 축구 같은 스포츠 활동이나 꽉 끼는 신발에 의해 발에 상처가 생겨서 감염될 수 있고, 수영장이나 공중목욕탕같이 사람이 많이 모이는 곳에서 환자에게서 떨어져 나온 각질을 통해 발에서 발로 전염될 수 있다. 발무좀을 방치하면 곰팡이가 발톱을 침범해서 발톱무좀이 생길 수 있고, 손으로 자꾸 감염된 발을 만지면 손무좀, 손톱무좀이 생길 수 있다. 그 외에도 사타구니, 몸, 얼굴, 두피, 수염 등 몸의 다른 부위에도 무좀이 번질 수 있다. 발무좀의 임상적 형태는 크게 3가지가 있는데, 가장 흔한 형태가 지간형으로, 발가락 사이의 피부가 하얗게 짓무르고 가렵고 냄새가 심할 수 있다(사진 1). 두 번째로 소수포형 무좀은 발바닥과 발 옆에 작은 물집이 많이 생기고, 굉장히 가려운 게 특징이다. 각화형 무좀은 발바닥 전체에 걸쳐 각질이 두꺼워지고 긁으면 고운 가루처럼 떨어지는 형태다. 발무좀을 치료하지 않고 방치하면 발톱에까지 곰팡이가 침범해서 발톱이 대개 바깥쪽부터 광택을 잃고 누렇게 변색되고 두꺼워지고 깎을 때 부스러지는 발톱무좀으로 진행할 수 있다(사진 2). 발톱무좀이 진행되면 너무 두꺼워져서 아무리 무좀약을 복용해도 아예 발톱이 자라지 않고 단단한 돌덩어리처럼 붙어있는 경우가 있는데, 이럴 땐 전기 연마기로 발톱을 갈아내거나 아예 병든 발톱을 뽑은 후 무좀약을 장기간 복용하는 방법이 있다. 또 발톱무좀으로 인해 발톱이 변형되고 휘어서 살 속으로 파고 들어갈 수도 있는데, 심하지 않으면 발톱이 자라나올 때까지 소염진통제를 복용하면서 치실로 발톱 끝을 위로 들어 올려주거나 거즈를 발톱과 살 사이에 끼워주는 방법도 있다. 심할 경우엔 발톱을 일부 잘라내는 수술을 할 수도 있다. 무좀으로 인해 이차적 세균 감염이 될 수도 있는데, 손발톱에 녹농균 같은 세균 감염이 되면 손발톱이 초록색으로 변하고, 팔다리의 연부조직 감염인 봉소염이 생겨서 국소적으로 팔다리가 붓고 아프고 빨갛게 될 수도 있고, 발톱은 발가락뼈 바로 위에 있기 때문에 골수염이 생길 수도 있다. 무좀과 습진 모두 가려운 수포가 생길 수 있기 때문에 감별진단 어려울 수 있어 발에 가려운 병변이 생긴다고 모두 무좀은 아니다. 무좀과 습진 모두 가려운 수포가 생길 수 있기 때문에 감별진단이 어려울 수 있다. 이럴 땐 반드시 피부과 전문의에게 진찰을 받고 제대로 진단을 받아야 올바른 치료를 할 수 있다. 왜냐하면 무좀인데 스테로이드 제제인 습진 치료제를 바르면 겉으로는 증상이 조금 완화되는 것처럼 보여도 실은 무좀곰팡이가 잠복해서 잘 낫지도 않는 만성무좀이 되기 때문이다. 피부과에 가면 물집을 터뜨려서 현미경으로 균사를 확인하거나 발바닥의 각질을 긁어서 진균 배양검사를 하거나 무좀치료, 즉 항진균제 치료에 대한 반응을 보고 무좀으로 확진할 수 있다. 무좀 치료는 요즘은 경구약과 연고 효능이 좋기 때문에 발톱을 침범하지 않은 단순한 무좀은 하루에 한 번 치료제를 지속적으로 바르거나 약을 2~3주 복용하면 치료가 잘 된다. 그러나 일단 발톱에 무좀이 파급되면 병든 발톱이 곰팡이의 저수지 작용을 하기 때문에 발무좀 치료만 해서는 소용이 없고 반드시 병든 발톱이 다 자라 나가서 깨끗한 새 발톱으로 대치될 때까지 경구 무좀약을 복용해야 완치할 수 있다. 손톱은 3개월에 1cm, 발톱은 6~8개월에 1cm 정도 자라므로 반드시 경구 항진균제를 3~12개월간 복용해야 완치할 수 있다. 먹는 무좀약 즉 항진균제는 원인균, 환자가 복용하는 다른 약과의 상호작용, 환자의 나이와 건강상태 등을 고려하여 선택하게 되는데, 매일 한 번씩 복용하는 약, 한 달에 일주일씩 복용하는 약, 일주일에 한 번씩 복용하는 약 이렇게 세 가지가 있고, 내복약과 동시에 연고와 매니큐어 제품 같은 국소도포제를 병행하면 치료효과가 더 높다. 무좀약은 독하다는 잘못된 선입견을 가진 분이 많은데, 치료 전에 피검사를 통해 간기능을 확인하고 복용을 하게 되며 치료 전 간기능이 정상인 경우 대부분 수개월간의 치료 완료 후에도 간기능에 아무 문제가 없다. 간기능이나 신장기능이 떨어진 환자들에서는 약의 용량을 줄이거나 불가피한 경우 발톱을 갈아내고 매니큐어약을 바르는 국소치료제만으로도 적극적인 치료를 하면 크게 호전될 수 있다. 중요한 것은 발톱무좀은 계속 진행하는 질환이므로 일찍 치료를 시작할수록 치료기간도 짧아지고 합병증도 예방할 수 있다는 것이다. 또 발톱무좀이 있으면 남에게 계속 무좀을 옮길 수 있으므로 완치될 때까지 치료해야 한다. 그러나 식초, 빙초산, 우황청심환을 녹인 물, 목초액, 소금이나 모래찜질, 길거리 상인한테 구입한 중국약, 태국약 등을 사용한 후 발바닥 피부가 다 벗겨지거나 강산이나 뜨거운 모래, 소금에 화상을 입거나, 접촉피부염 등이 생겨서 결국은 합병증까지 생긴 상태로 피부과로 오는 경우가 많다(사진 3). 민간요법은 어디까지나 보조적 요법일 뿐 무좀의 원인 곰팡이를 죽이는 근치방법이 될 수 없다. 특히 희석을 해도 빙초산은 너무나 위험하다. 피부과에 가면 더 좋은 찜질용 용액 형태의 약도 있으니 꼭 전문의의 진단과 처방을 받도록 한다. 무좀 예방을 위해서는 발을 청결하고 시원하고 건조하게 유지하고, 땀은 빨리 닦고, 양말을 신어 신속하게 흡수해야 한다. 굽이 낮고 앞이 좁지 않은 잘 맞는 편안한 신발을 신고, 낡은 신발, 남이 신던 신발은 버려야 한다. 평소에 발가락에 상처를 입지 않도록 보호하고, 발톱을 깎을 때는 일자로 깎고 발톱 가장자리를 너무 짧게 깎지 않아야 발톱이 살 속으로 파고들지 않는다. 그리고 무좀이 있는 발톱을 가장 마지막에 깎아서 다른 발톱으로 퍼지는 것을 막아야 한다. 발과 몸의 다른 부위에 이미 존재하는 무좀이 있다면 이것을 먼저 치료해야 하겠고, 무좀이 완치된 후에도 체질적으로 무좀이 잘 생기는 분들은 재감염이 될 수 있기 때문에 치료 완료 후에도 재감염 방지 차원에서 발과 발톱에 광범위 무좀연고를 매일 한 번씩 바르는 것이 좋다. 당뇨 환자들은 특히 발무좀이 잘 생길 수 있기 때문에 매일 발을 한 번씩 잘 관찰해서 무좀이 생기면 조기에 치료를 받도록 한다. 남성들의 사타구니에 흔히 생기는 완선을 예방하기 위해서는 통풍이 잘 되는 사각팬티를 입고 발무좀이 있다면 옷 입을 때 양말을 먼저 신고 바지를 입어서 발의 곰팡이가 사타구니로 파급되는 것을 막도록 한다. 그리고 특히 여성들은 손을 물에 너무 자주 담그지 않도록 한다. 글:조소연(서울특별시보라매병원 피부과 서울의대 교수) 기사 관련 태그 태그 #정보 #질병 #건강 #무좀 좋아요 204 트위터 페이스북 카카오톡 댓글은 자유로운 의견 공유의 장이므로 서울시에 대한 신고, 제안, 건의 등 답변이나 개선이 필요한 사항에 대해서는 전자민원 응답소 누리집을 이용 하여 주시기 바랍니다. 상업성 광고, 저작권 침해, 저속한 표현, 특정인에 대한 비방, 명예훼손, 정치적 목적, 유사한 내용의 반복적 글, 개인정보 유출,그 밖에 공익을 저해하거나 운영 취지에 맞지 않는 댓글은 서울특별시 조례 및 개인정보보호법에 의해 통보없이 삭제될 수 있습니다. 응답소 누리집 바로가기 본 저작물은 \"공공누리\" 제4유형:출처표시+상업적 이용금지+변경금지 조건에 따라 이용 할 수 있습니다. 최신 뉴스 1 이런 섬이 서울에 있다고? '■■ 글로벌 예술섬' 매력이 어썸! 2 휴대는 가볍게, 경고음은 크게…'동행안심벨' 새 단장 3 첫 입주 시작한 '모아주택'…10월부터 '주민설명회' 개최 4 40~64세 위한 '중장년 일자리 박람회' 열린다! 사전등록 무료 5 매일 밤 빛나는 'DDP 365라이트'…관광객 모여드는 야간 명소 만든다 많이 본 뉴스 1 외롭고 답답할 땐, 가까운 '서울■■편의점'으로 오세요! 2 추석 연휴 전 꼭 확인! 막차·쓰레기 배출 등 알짜정보 3 가을 한강, 이 시간에 가야 가장 예쁩니다! 노을 명소 총정리 4 명절에 문 여는 병의원·약국 어디? 추석 연휴 응급의료기관 안내 5 충정로는 왜 충정로일까? 2호선 역명 따라 서울 역사 산책 시민기자 인기뉴스 '퇴근길에 피클볼 한 판!' 지하철역이 운동·문화공간으로…'문정 운동정원' 시민기자 이혜숙 추석 연휴, \"피카츄\"와 가을 소풍 떠나볼까? 서울갤러리부터 전망대까지 시민기자 이정민 좁은 집에 쌓아두지 말고, 잠깐 쓸 물건은 빌려 쓰세요! 1인가구 무료 물품대여 시민기자 황진희 그리스 신화부터 MBTI까지…인생샷 보장 '안양천 빛축제'서 가을밤 산책 시민기자 김성무 숲이 길을 품었다! 서울시 조경상 대상 선정 '남산 하늘숲길' 소개 시민기자 김대진 맨 위로 맨 아래로 전체 서비스 바로 가기 뉴스 기획·이슈 핫이슈 특별기획 전문칼럼 테마 뉴스 분야별 뉴스 문화 / 경제 복지 / 교통 환경 / 주택 안전 / 행정 비주얼 뉴스 사진 뉴스 영상 뉴스 카드 뉴스 우리동네 뉴스 시민기자 뉴스 취재 뉴스 사진 뉴스 영상 뉴스 테마 뉴스 시민기자 안내 알림방 마이페이지 영상 생중계 생중계 편성표 광장 24시 생중계다시보기 영상저장소 최신영상 서울홍보영상 분야별영상 프로그램 서울소울러 서울소울러영상 서울소울러 만나기 함께방송 자치구방송국 매거진 문화/여행 문화마당 생활/아슈 서울소식 에세이 연재칼럼 TV 알림 독자 참여 서울을 색칠하자 공지사항 서울사서함 로컬 매거진 모아보기 서울사랑소개 월별 모아보기 월간지 구독 신청/변경 온라인 소식지 신청 온라인 소식지 모아보기 어린이신문 꼼꼼 서울소식 기사 보기 추천! 어린이 기사 만화 내친구 TV 별별 순위 뭐든지 무한도전 지난호 보기 팡팡 서울놀이 낱말 맞추기 서울을 색칠하자 숨은 속담찾기 두뇌 단련장 찾아보아요 ASMR 퀴즈 콩콩 어린이 기자 기자 알림방 자유주제 기사쓰기 지정주제 기사쓰기 신청합니다 질문있어요 취재사진 내려받기 어린이기자 활동 안내 나의 공간 이벤트·공지 내친구서울 소개 공지사항 이벤트 서울시 소개 알면 좋은 링크 내친구서울 새싹 새싹 소개 새싹 신문 보기 새싹 참여 보기 공모전 이벤트 내 손안에 서울 소개 공지사항 캠페인 RSS 이용안내 전체 서비스 바로 가기 닫기 페이지 상단으로 이동"
           }
         ],
         "intent_results": [
-          "https://doctornow.co.kr/content/faq/aa204eb524e742b78d2bf51f1c2dc935",
-          "https://www.msdmanuals.com/ko/home/%EA%B0%90%EC%97%BC/%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-%EA%B0%90%EC%97%BC/%EB%8B%A8%EC%88%9C-%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-hsv-%EA%B0%90%EC%97%BC",
-          "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4%20%EC%B9%98%EB%A3%8C%EC%A0%9C.pdf"
+          "https://common.health.kr/shared/healthkr/pharmreview/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
+          "https://doctornow.co.kr/content/qna/5dc815e5610b47f4ad854ef4e17bbf1e"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 20920,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "cak_provenance": {
-          "relationship": "related_seed",
-          "item": {
-            "keyword": "립밤",
-            "capturedAt": "2026-09-26T11:03:26.217Z",
-            "expiresAt": "2026-09-27T11:03:26.217Z",
-            "trend": {
-              "source": "naver_datalab_search",
-              "timeUnit": "date",
-              "timeUnitOrigin": "provider_response",
-              "startDate": "2026-09-12",
-              "endDate": "2026-09-26",
-              "latestPeriod": "2026-09-25",
-              "previousPeriod": "2026-09-24",
-              "baselineStart": "2026-09-18",
-              "baselineEnd": "2026-09-24",
-              "latestRatio": 100,
-              "previousRatio": 79.39201,
-              "baselineMean": 68.24723000000002,
-              "expectedBaselineDays": 7,
-              "observedBaselineDays": 7,
-              "dayPct": 25.957259426987676,
-              "baselinePct": 46.5260934399828,
-              "dayPctStatus": "measured",
-              "baselinePctStatus": "measured",
-              "hotScore": 26,
-              "calculationVersion": "daily_observed_v2"
-            },
-            "searchad": {
-              "attemptedAt": "2026-09-26T11:03:39.631Z",
-              "measuredAt": "2026-09-26T11:03:40.350Z",
-              "lookupStatus": "exact",
-              "matchMode": "whitespace_exact",
-              "matchedKeyword": "립밤",
-              "monthlyPc": 9010,
-              "monthlyMobile": 24800,
-              "monthlyTotal": 33810,
-              "monthlyPcStatus": "measured",
-              "monthlyMobileStatus": "measured",
-              "monthlyTotalStatus": "measured",
-              "advertisingCompetition": "mid",
-              "failureCode": null
-            }
-          },
-          "export": {
-            "schemaVersion": 1,
-            "kind": "cak_keyword_candidates",
-            "profile": "blog-kr",
-            "generatedAt": "2026-09-26T11:04:06.514Z",
-            "expiresAt": "2026-09-27T11:02:25.366Z",
-            "compliance": {
-              "resaleRestricted": true,
-              "cacheTtlHours": 24
-            },
-            "scope": {
-              "seedSet": "g2-seeds",
-              "requestedKeywordCount": 182,
-              "storedKeywordCount": 182,
-              "eligibleDailyCount": 170,
-              "exportedCount": 80,
-              "truncatedCount": 90
-            },
-            "exclusionCounts": {
-              "expired": 0,
-              "unknownTimeUnit": 0,
-              "nonDaily": 0,
-              "invalidSeries": 5,
-              "missingPreviousDay": 5,
-              "insufficientBaseline": 2
-            }
-          },
-          "transport": {
-            "status": "ok",
-            "reason": "downloaded",
-            "sourceRunId": 36237548174,
-            "artifactId": 10904686953,
-            "headSha": "170fe8b92dda5f3a5de1ac2fc7126f0c2b486a0b",
-            "sourceRunCreatedAt": "2026-09-26T11:01:43Z"
-          },
-          "relatedKeyword": "헤르페스입술",
-          "relatedMonthly": 20920,
-          "relatedMeasuredAt": "2026-09-26T12:20:04.387191+00:00"
-        },
-        "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://medlineplus.gov/ency/article/000606.htm",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
-        "organic_provider": "codex_native_search",
-        "organic_query": "헤르페스 입술",
-        "organic_domains": [
-          "common.health.kr",
-          "www.msdmanuals.com",
-          "www.msdmanuals.com",
-          "mobile.hidoc.co.kr",
-          "doctornow.co.kr",
-          "mobile.hidoc.co.kr",
-          "www.msdmanuals.com",
-          "common.health.kr",
-          "www.health.kr",
-          "mobile.hidoc.co.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://common.health.kr/shared/images/insert_pdf/In_A11A0300B0004_00.pdf",
-            "domain": "common.health.kr",
-            "title": "[전문의약품]\n\n헤르페스 바이러스 질환치료제  \n국제 아시클로버정\n\n국제아시클로버정은 입술",
-            "snippet": "국제아시클로버정은 입술·생식기등에 급성 수포성 질환을 유발하는 단순포진 바이러스 I, II형 (Herpes simplex virus type I, II) 및 신경절에 염증성 병변을 일으켜 피부에 수포와 심한 통증을"
-          },
-          {
-            "url": "https://www.msdmanuals.com/ko/home/multimedia/image/%EC%9E%85%EC%88%A0-%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4",
-            "domain": "www.msdmanuals.com",
-            "title": "Image:입술 헤르페스-MSD 매뉴얼 - 일반인용",
-            "snippet": "이는 아랫입술의 입술 헤르페스(열성 수포라고도 알려짐)의 근접 사진입니다."
-          },
-          {
-            "url": "https://www.msdmanuals.com/ko/home/multimedia/3dmodel/%EC%9E%85%EC%88%A0-%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4",
-            "domain": "www.msdmanuals.com",
-            "title": "3D Model: 입술 헤르페스-MSD 매뉴얼 - 일반인용",
-            "snippet": "# 입술 헤르페스"
-          },
-          {
-            "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000820654",
-            "domain": "mobile.hidoc.co.kr",
-            "title": "입술 헤르페스? 포다이스반? | 건강Q&A",
-            "snippet": "Question 입술 헤르페스? ... 평소 헤르페스는 성기쪽에 처음 재발 한번도 성기쪽 이었습니다. ... 입술에 난 1-2mm 크기의 무색 또는 연한 황색의 알갱이는 'Fordyce spot' 일"
-          },
-          {
-            "url": "https://doctornow.co.kr/content/faq/aa204eb524e742b78d2bf51f1c2dc935",
-            "domain": "doctornow.co.kr",
-            "title": "입술 헤르페스 성병인가요? - 닥터나우",
-            "snippet": "헤르페스 바이러스(HSV)에 의해 발생하는 감염성 질환인 헤르페스는, 주로 입술이나 얼굴, 생식기에 작은 물집(수포)을 발생시키는 질환인데요. ... 입술과 입 주변, 얼굴 등에 발생하는 입술 헤르페스는 성적인"
-          },
-          {
-            "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000820653",
-            "domain": "mobile.hidoc.co.kr",
-            "title": "입술 헤르페스? 포다이스반? | 건강Q&A",
-            "snippet": "Question 입술 헤르페스? ... 평소 성기쪽에 초발 후 재발 한번 있었고 입술 쪽으로는 아예 없었습니다. ... 사진상으로는 헤르페스보다는 Fordyce spot이 더 의심스럽습니다."
-          },
-          {
-            "url": "https://www.msdmanuals.com/ko/home/%EA%B0%90%EC%97%BC/%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-%EA%B0%90%EC%97%BC/%EB%8B%A8%EC%88%9C-%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-hsv-%EA%B0%90%EC%97%BC",
-            "domain": "www.msdmanuals.com",
-            "title": "단순 포진 바이러스(HSV) 감염 - 감염 - MSD 매뉴얼 - 일반인용",
-            "snippet": "* 입술의 입술 헤르페스(구순 포진), 특정 접촉 스포츠 동안 감염되었을 수 있는 피부 부위의 물집 군집(검상 포진), 눈 각막의 궤양(단순포진각막염)의 일반적인 원인인 HSV-1 ... 음부"
-          },
-          {
-            "url": "https://common.health.kr/shared/healthkr/pharmreview/%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4%281%29%280%29.pdf",
-            "domain": "common.health.kr",
-            "title": "헤르페스(1)\n\n2. 패 다양한 바이러스\n\n헤르페스 질환은 DNA 바이러스인 헤르페스 바이",
-            "snippet": "헤르페스 질환은 DNA 바이러스인 헤르페스 바이러스의 감염과 증식에 의해 일어난다. ... 즉, 손가락에 발생되는 경우도 있고, 눈으로 감염되면 약하게는 각막에 결막염을 일으키는 정도로 끝나지만, 심할"
-          },
-          {
-            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4%20%EC%B9%98%EB%A3%8C%EC%A0%9C.pdf",
-            "domain": "www.health.kr",
-            "title": "헤르페스\u0001 치료제\n요약  | \n--- | ---\n헤르페스 치료제는 헤르페스 바이러스의 DN",
-            "snippet": "* 구순 헤르페스(herpes labiales): 단순포진 바이러스의 감염에 의해 입술에 작은 수포가 생기는 감염성 질환 ... 각막 단순성 헤르페스는 감기ž발열ž과로 등의 뒤에 일어나며, 때로는 입술 헤르페스와"
-          },
-          {
-            "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000938537",
-            "domain": "mobile.hidoc.co.kr",
-            "title": "입술 헤르페스 인가요?.. | 건강Q&A",
-            "snippet": "Question 입술 헤르페스 인가요?.. ... 헤르페스의 경우는 입술 주변 얇은 점막을 뚫고 여러개가 올라오는 경향이 있는데"
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 34.56,
-          "organic_opportunity": 26.67,
-          "trend": -5,
-          "cak_trend": 0,
-          "intent_fit": 15
-        },
-        "trend_growth": -0.547,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-26T12:20:04.387191+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "헤르페스입술"
-        ],
-        "status": "pending",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://medlineplus.gov/ency/article/000606.htm",
-              "title": "Herpes - oral: MedlinePlus Medical Encyclopedia",
-              "excerpt_chars": 6378
-            },
-            {
-              "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-              "title": "Acyclovir Topical: MedlinePlus Drug Information",
-              "excerpt_chars": 7793
-            },
-            {
-              "url": "https://www.kipris.or.kr/khome/detail/newWindow.do",
-              "title": "KIPRIS 지식재산정보 검색 서비스",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.kipris.or.kr/khome/detail/newWindow.do",
-                  "title": "KIPRIS 지식재산정보 검색 서비스",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://medlineplus.gov/ency/article/000606.htm",
-                  "title": "Herpes - oral: MedlinePlus Medical Encyclopedia",
-                  "excerpt_chars": 6378
-                },
-                {
-                  "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-                  "title": "Acyclovir Topical: MedlinePlus Drug Information",
-                  "excerpt_chars": 7793
-                },
-                {
-                  "url": "https://www.kipris.or.kr/khome/detail/newWindow.do",
-                  "title": "KIPRIS 지식재산정보 검색 서비스",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "헤르페스입술",
-          "executed_query": "헤르페스 입술",
-          "topic": "헤르페스입술 증상·전염 경로·재발과 치료의 기본 정보",
-          "intent": "입술 헤르페스는 어떤 증상이 있고 성병과 어떤 관계이며, 어떻게 전염·재발하고 치료하나요?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "result_count": 10,
-          "domain_count": 4,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "헤르페스입술",
-            "executed_query": "헤르페스 입술",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-26T12:20:04.387191+00:00",
-            "raw_sha256": "4833c1b7aa2fffcb01cfc891dac6f04127a67784616e921bfe090be3ca482b72",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "국제아시클로버정은 입술·생식기등에 급성 수포성 질환을 유발하는 단순포진 바이러스"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "이는 아랫입술의 입술 헤르페스(열성 수포라고도 알려짐)의 근접 사진입니다."
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "3D Model: 입술 헤르페스"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "입술에 난 1-2mm 크기의 무색 또는 연한 황색의 알갱이는 'Fordyce spot'"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "입술 헤르페스 성병인가요?"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "사진상으로는 헤르페스보다는 Fordyce spot이 더 의심스럽습니다."
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "입술의 입술 헤르페스(구순 포진)"
-              },
-              {
-                "result_index": 7,
-                "relevant": false,
-                "quote": "손가락에 발생되는 경우도 있고, 눈으로 감염되면"
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "단순포진 바이러스의 감염에 의해 입술에 작은 수포가 생기는 감염성 질환"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "헤르페스의 경우는 입술 주변 얇은 점막을 뚫고 여러개가 올라오는 경향이 있는데"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 9,
-            "relevant_site_count": 4,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              8,
-              9
-            ],
-            "relevance_ratio": 0.9,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.3333333333333333,
-            "organic_opportunity": 26.67
-          },
-          "scope": "full_keyword",
-          "target_keyword": "헤르페스입술",
-          "matches": [
-            {
-              "result_index": 4,
-              "quote": "입술 헤르페스 성병인가요?"
-            },
-            {
-              "result_index": 6,
-              "quote": "입술의 입술 헤르페스(구순 포진)"
-            },
-            {
-              "result_index": 8,
-              "quote": "단순포진 바이러스의 감염에 의해 입술에 작은 수포가 생기는 감염성 질환"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "input_sha256": "59943fd2e4c2369225954dd88c869222ead6cce7aed930dcbe727c85b555dc50",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "헤르페스입술",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "Oral herpes is an infection of the lips, mouth, or gums due to the herpes simplex virus.",
-                "entity": "Oral herpes",
-                "context": "general"
-              },
-              {
-                "source_index": 1,
-                "quote": "Acyclovir cream is used to treat cold sores (fever blisters; blisters that are caused by a virus called herpes simplex) on the face or lips.",
-                "entity": "Acyclovir cream",
-                "context": "general"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "증상과 확인 방법은?",
-                "answer": "통증성 물집이 특징이며 의료진이 입 주변을 진찰해 진단합니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Your health care provider can diagnose oral herpes by looking at your mouth area."
-              },
-              {
-                "facet": "성병과 어떤 관계인가요?",
-                "answer": "일상 접촉으로도 전파되므로 성접촉 감염으로 단정할 수 없고, 구강성교로 생식기에 전파할 수도 있습니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Parents may spread the virus to their children during regular daily activities."
-              },
-              {
-                "facet": "전염과 예방에서 무엇을 알아야 하나요?",
-                "answer": "병변 직접 접촉과 물품 공유를 피해야 하며, 물집이 없어도 전파될 수 있습니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Both oral and genital herpes viruses can sometimes be spread, even when you do not have mouth sores or blisters."
-              },
-              {
-                "facet": "경과와 재발은 어떤가요?",
-                "answer": "대개 1~2주 내 자연 호전하지만 재발할 수 있습니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Oral herpes most often goes away by itself in 1 to 2 weeks. However, it may come back."
-              },
-              {
-                "facet": "항바이러스 치료와 크림의 한계는?",
-                "answer": "항바이러스제는 통증과 증상 기간을 줄일 수 있습니다. 크림의 기간 단축 효과는 수 시간에서 하루 정도입니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Antiviral skin creams may also be used. However, they are expensive and often only shorten the outbreak by a few hours to a day."
-              },
-              {
-                "facet": "크림으로 완치하거나 전파를 막을 수 있나요?",
-                "answer": "국소 아시클로버는 완치·재발 방지·타인 전파 방지를 보장하지 않습니다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "Acyclovir does not cure cold sores or genital herpes, does not prevent outbreaks of these conditions, and does not stop the spread of these conditions to other people."
-              },
-              {
-                "facet": "언제 진료가 필요한가요?",
-                "answer": "증상이 심하거나 2주 이상 지속되거나, 눈 주변 병변 또는 면역저하가 있으면 진료가 필요합니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Contact your provider if you have: Symptoms that are severe or that don't go away after 2 weeks Sores or blisters near your eyes Herpes symptoms and a weakened immune system due to certain diseases or medicines"
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "Oral herpes most often goes away by itself in 1 to 2 weeks. However, it may come back.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 71.23,
-        "publish_eligible": true,
-        "hold_reasons": []
-      }
-    ],
-    "held": [
-      {
-        "keyword": "갑상선에좋은음식",
-        "category": "건강",
-        "topic": "갑상선에좋은음식: 저하증·항진증별 식사 원칙과 주의할 음식",
-        "intent": "갑상선에 좋은 음식과 주의할 음식은 무엇이며, 저하증과 항진증에 따라 식사 관리가 어떻게 다른가?",
-        "gap": "공통 식품과 질환별 식사 초점을 비교표로 정리하고, 요오드 과다·약 동시 섭취·저요오드식 적용 조건을 체크리스트로 제공한다.",
-        "source_url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
-        "verified_sources": [
-          {
-            "url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
-            "original_url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
-            "title": "갑상선에 좋은 음식과 피해야 할 음식, 저하증·항진증별 정리 - 생명건강센터",
-            "checked_on": "2026-09-26",
-            "sha256": "b7de2072e5950990f5d2cca79f2f5dd71255125f59252c2f7f79479d6f74ff60",
-            "excerpt": "핵심 요약 갑상선에 좋은 음식은 저하증·항진증에 따라 다릅니다. 공통으로 양질의 단백질과 셀레늄이 좋고, 요오드는 적정량이 중요합니다. 공통 좋은 것 양질의 단백질 · 셀레늄 저하증 초점 체중·변비·콜레스테롤 관리 저하증 주의 약 흡수 방해(칼슘·철분·콩·고섬유) 항진증 초점 충분한 열량 · 카페인 제한 공통 주의 요오드 과다(다시마환 등) 갑상선에 좋은 음식을 찾을 때 기억할 것은, 갑상선 질환이 저하증과 항진증 두 방향 이라 식이 접근도 조금씩 다르다는 점입니다. 다만 공통되는 원칙도 있습니다. 이 글에서 공통 원칙과 질환별 주의점을 나눠 정리했습니다. 음식은 약을 대신하지 못한다 먼저 분명히 할 것이 있습니다. 갑상선 질환의 치료 핵심은 약입니다. 저하증은 부족한 호르몬을 약으로 보충하고, 항진증은 항갑상선제 등으로 조절합니다. 음식은 이 치료를 뒷받침하는 역할 이지 약을 대신하지 않습니다. 이 전제 위에서, 좋은 식습관은 관리에 분명 도움이 됩니다. 갑상선에 좋은 음식, 공통으로 챙길 것 저하증·항진증 모두에 도움이 되는 것들이 있습니다. 양질의 단백질 이 대표적입니다. 살코기, 생선, 달걀, 두부, 콩은 신진대사를 돕고 근육을 지킵니다. 특히 항진증에서는 대사가 빨라져 근육이 잘 빠지므로 매 끼니 단백질을 챙기는 것이 중요합니다. 셀레늄 도 주목할 성분입니다. 셀레늄은 갑상선호르몬 합성을 돕고 갑상선 세포 보호에 관여합니다. 견과류, 달걀, 참치, 정어리 등에 풍부합니다. 채소, 과일, 콩류 같은 균형 잡힌 식품도 기본입니다. 항진증에서는 칼슘·비타민D를 챙기는 것도 권장됩니다. 저하증에서 신경 쓸 것 갑상선기능저하증은 대사가 느려 체중 증가, 변비, 콜레스테롤 상승 이 잘 동반됩니다. 그래서 식이 방향이 여기에 맞춰집니다. 칼로리를 적정하게 조절해 체중을 관리하고, 변비 예방을 위해 식이섬유와 수분을 충분히 섭취합니다. 잡곡밥, 채소, 과일이 도움이 됩니다. 고지혈증이 흔히 동반되므로 살코기·생선·두부로 양질의 단백질을 챙기되 포화지방은 줄이는 것이 좋습니다. 저하증의 중요한 주의점: 약 흡수 저하증에서 특히 중요한 것이 있습니다. 갑상선호르몬제(레보티록신)는 특정 음식·영양제와 함께 먹으면 흡수가 방해 됩니다. 칼슘, 철분, 콩류, 고섬유 식품이 대표적입니다. 그래서 갑상선약은 보통 아침 공복에 복용하고, 이런 음식·영양제와는 시간 간격을 두는 것이 권장됩니다. 약 흡수가 떨어지면 치료 효과가 줄어들 수 있으니, 복용 시간과 간격은 의료진 안내를 따르는 것이 중요합니다. 항진증에서 신경 쓸 것 갑상선기능항진증은 대사가 빨라 체중 감소와 근육 손실 이 문제입니다. 그래서 저하증과 반대로 충분한 열량 을 섭취하는 것이 중요합니다. 끼니를 거르지 말고 매 끼니 충분한 열량과 단백질을 챙깁니다. 근육 손실 예방을 위해 단백질 반찬을 매 끼니 1~2가지씩 곁들이는 것이 권장됩니다. 뼈 건강을 위해 칼슘·비타민D도 신경 씁니다. 반면 카페인과 자극적인 음식 은 주의합니다. 항진증은 이미 두근거림·불안이 있는 상태라, 카페인이 증상을 키울 수 있습니다. 요오드는 양날의 검 공통 주의점이 요오드입니다. 미역·다시마 같은 해조류의 요오드는 부족해도 과해도 갑상선에 문제를 일으킵니다. 반찬 정도면 대개 괜찮지만, 다시마환 같은 농축 건강식품은 피하는 것이 좋습니다. 특히 방사성요오드 치료를 앞둔 경우 저요오드식이 필요하므로 해조류·어패류를 엄격히 제한해야 합니다. 요오드 섭취 방향은 본인의 갑상선 상태에 따라 정반대일 수 있으니 의료진과 상의하시기 바랍니다. 정리 갑상선에 좋은 음식의 핵심은 ‘내 갑상선이 어느 방향인가’입니다. 저하증이면 체중·변비·콜레스테롤 관리와 약 흡수 간격에, 항진증이면 충분한 열량과 카페인 제한에 초점을 둡니다. 공통으로 양질의 단백질·셀레늄·균형 잡힌 식사가 도움이 되고, 요오드는 적정량이 중요합니다. 개인별 식단은 의료진·영양사와 상의하는 것이 정확합니다. 자세한 정보는 대한갑상선학회 자료를 참고하시기 바랍니다. 좋은 음식 양질의 단백질(살코기·생선·달걀·두부) 신진대사를 돕고 근육을 지킵니다. 특히 항진증에서 근육 손실 예방에 중요합니다. 셀레늄 식품(견과류·달걀·참치·정어리) 갑상선호르몬 합성을 돕고 갑상선 세포 보호에 관여합니다. 채소·과일 균형 잡힌 영양과 식이섬유를 제공합니다. 저하증의 변비 예방에도 도움이 됩니다. 잡곡밥·통곡물 식이섬유가 풍부해 저하증에 흔한 변비 예방에 좋습니다. 칼슘·비타민D 식품 특히 항진증에서 뼈 건강을 위해 챙기는 것이 권장됩니다. 피해야 할 음식 다시마환·해조류 농축 건강식품 요오드가 과도해 갑상선 기능 이상을 유발할 수 있습니다. 반찬 수준을 넘는 농축 섭취는 피합니다. 카페인·자극적인 음식(항진증) 이미 두근거림·불안이 있는 항진증에서 증상을 키울 수 있습니다. 약과 동시 섭취하는 칼슘·철분·콩·고섬유(저하증) 갑상선호르몬제 흡수를 방해합니다. 복용 시간과 간격을 두는 것이 중요합니다. 포화지방 많은 음식(저하증) 저하증에 흔히 동반되는 고지혈증을 악화시킬 수 있습니다. 해조류·어패류(저요오드식 필요 시) 방사성요오드 치료·갑상선암 수술 후 저요오드식에서는 엄격히 제한합니다. 식단 구성 요령 내 방향 확인 저하증인지 항진증인지에 따라 식이 초점이 달라집니다. 진단 결과를 먼저 확인합니다. 단백질·셀레늄 챙기기 공통으로 양질의 단백질과 셀레늄 식품을 매 끼니 곁들입니다. 저하증이면 체중·변비·콜레스테롤을 관리하고, 갑상선약은 공복에 먹되 칼슘·철분·콩과 간격을 둡니다. 항진증이면 충분한 열량과 단백질을 섭취하고 카페인·자극 음식을 줄입니다. 요오드 조절 반찬 수준으로 유지하고 농축 건강식품은 피합니다. 저요오드식은 의료진 지침을 따릅니다. 주의사항 이 글의 식이 원칙은 대한갑상선학회와 주요 병원 자료를 근거로 정리했습니다. 갑상선 질환은 저하증·항진증에 따라 식이 방향이 다르고, 방사성요오드 치료 여부에 따라 요오드 섭취 방침이 정반대일 수 있습니다. 음식은 약물 치료를 뒷받침할 뿐 대체하지 않습니다. 갑상선호르몬제 복용 간격, 요오드 섭취, 저요오드식 등은 반드시 담당 의료진의 안내를 따르시기 바랍니다. 개인별 식단은 영양사 상담이 가장 정확합니다. 자주 묻는 질문 갑상선에 좋은 음식이 저하증과 항진증이 다른가요? 초점이 다릅니다. 저하증은 체중·변비·콜레스테롤 관리에, 항진증은 충분한 열량과 카페인 제한에 맞춥니다. 다만 양질의 단백질, 셀레늄, 균형 잡힌 식사는 두 경우 모두에 공통으로 도움이 됩니다. 갑상선약을 먹을 때 음식을 조심해야 하나요? 네, 특히 저하증에서 중요합니다. 갑상선호르몬제는 칼슘, 철분, 콩류, 고섬유 식품과 함께 먹으면 흡수가 방해됩니다. 보통 아침 공복에 복용하고 이런 음식·영양제와 시간 간격을 둡니다. 복용 방법은 의료진 안내를 따르세요. 셀레늄은 왜 갑상선에 좋나요? 셀레늄은 갑상선호르몬 합성을 돕고 갑상선 세포가 파괴되는 것을 막는 역할에 관여합니다. 견과류, 달걀, 참치, 정어리 등에 풍부합니다. 다만 보충제로 과량 섭취하기보다 음식으로 적정량 섭취하는 것이 좋습니다. 항진증인데 살이 계속 빠져요. 뭘 먹어야 하나요? 항진증은 대사가 빨라 체중과 근육이 잘 빠집니다. 끼니를 거르지 말고 매 끼니 충분한 열량과 단백질을 챙기세요. 살코기·생선·달걀·두부 같은 단백질 반찬을 1~2가지씩 곁들이는 것이 권장됩니다. 다만 근본 치료는 약이므로 병행이 필요합니다. 저하증이면 미역국을 먹으면 안 되나요? 반찬 수준의 미역국은 대개 문제되지 않습니다. 다만 저하증이라고 요오드를 챙기려 미역·다시마를 과도하게 먹을 필요는 없습니다. 오히려 과다 섭취가 문제를 일으킬 수 있습니다. 다시마환 같은 농축 식품은 피하세요. 커피를 마시면 갑상선에 나쁜가요? 항진증이라면 주의가 필요합니다. 카페인은 이미 있는 두근거림·불안·불면을 키울 수 있습니다. 저하증에서는 카페인 자체보다 갑상선약과의 복용 간격에 더 신경 쓰는 것이 좋습니다. 커피와 약을 함께 먹지 않도록 시간을 두세요. 콩·두부는 갑상선에 좋나요 나쁘나요? 콩·두부는 양질의 단백질 공급원으로 유용합니다. 다만 저하증에서 갑상선약과 동시에 먹으면 약 흡수를 방해할 수 있으므로 복용 시간과 간격을 두는 것이 좋습니다. 적정량을 약과 시간차를 두고 먹으면 됩니다. 갑상선 식단만 잘하면 약을 안 먹어도 되나요? 그렇지 않습니다. 갑상선 질환의 치료 핵심은 약입니다. 저하증은 호르몬 보충, 항진증은 항갑상선제가 중심이고 음식은 이를 뒷받침할 뿐입니다. 식단이 좋아졌다고 임의로 약을 중단하지 말고 의료진과 상의하세요. 함께 보면 좋은 정보 질환정보 갑상선 증상 총정리, 기능저하증과 항진증 차이와 원인 정상수치 갑상선 수치 정상범위, TSH·T3·T4 검사 결과 읽는 법 자가진단 갑상선 자가진단 체크리스트, 저하증·항진증 증상 확인 음식효능 갑상선 미역 다시마, 요오드가 좋을까 나쁠까 건강보험 갑상선 검사 비용과 실비보험, 초음파도 청구될까 최종 검토일: 2026년 7월 23일 자료 출처 대한갑상선학회 가톨릭대학교 여의도성모병원 · 갑상선질환 식이요법 전남대학교병원 · 갑상선질환의 식이요법 본 콘텐츠는 일반적인 건강 정보 제공 목적이며 의학적 진단·치료를 대체할 수 없습니다. 증상이 있다면 반드시 의사와 상담하세요."
-          }
-        ],
-        "intent_results": [
-          "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
-          "https://www.hyunmyoung.co.kr/general-medicine/hyperthyroidism-foods/"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 4580,
+        "monthly_search": 5630,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "높음",
         "evidence_mode": "serp",
         "research_evidence": null,
         "organic_provider": "codex_native_search",
-        "organic_query": "갑상선에 좋은 음식",
+        "organic_query": "발톱 무좀 치료 방법",
         "organic_domains": [
-          "spckorea.or.kr",
-          "www.hyunmyoung.co.kr",
-          "kormedi.com",
-          "eurekaclinic.com",
-          "parklanda.tistory.com",
-          "enews.imbc.com",
-          "info-idea114.co.kr",
-          "www.theyulclinic.com",
-          "bongju500.tistory.com"
+          "common.health.kr",
+          "www.health.kr",
+          "common.hanmi.co.kr",
+          "www.health.kr",
+          "yoonbitskin.com",
+          "www.doctalk.co.kr",
+          "cleanskin.kr",
+          "nailderella.com",
+          "mp.info-idea114.co.kr",
+          "doctornow.co.kr"
         ],
         "organic_results": [
           {
-            "url": "https://spckorea.or.kr/goodfood/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D/",
-            "domain": "spckorea.or.kr",
-            "title": "갑상선에 좋은 음식과 피해야 할 음식, 저하증·항진증별 정리 - 생명건강센터",
-            "snippet": "갑상선에 좋은 음식의 핵심은 ‘내 갑상선이 어느 방향인가’입니다. ... * 다시마환·해조류 농축 건강식품 요오드가 과도해 갑상선 기능 이상을 유발할 수 있습니다. ... 갑상선에 좋은 음식이"
+            "url": "https://common.health.kr/shared/healthkr/pharmreview/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
+            "domain": "common.health.kr",
+            "title": "무좀과 복약지도\n\n무좀의 치료\n\n무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데,",
+            "snippet": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다. ... 2014년 한국 노바티스제약의 설문조사 결과에 따르면, 전체 응답자 1,000명 중 절반이 넘는 506명"
           },
           {
-            "url": "https://www.hyunmyoung.co.kr/general-medicine/hyperthyroidism-foods/",
-            "domain": "www.hyunmyoung.co.kr",
-            "title": "갑상선에 좋은 음식과 피해야 할 음식 — 기능항진증 기준 | 현명내과 & 류마티스내과",
-            "snippet": "갑상선기능항진증은 음식과 어느 정도 관련이 있지만, 치료의 중심은 약입니다. ... 따라서 ‘좋은 음식’만으로 해결하려 하기보다, 진료받아 진단·치료하고 요오드·영양·뼈 건강 같은 식사 관리를 약물치료와 함께하는 것이"
+            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
+            "domain": "www.health.kr",
+            "title": "서론\n무좀과\u0001 복약지도\n저자\u0001 김성철\n영남대학교\u0001 임상약학대학원\u0001 겸임교수\n\u0001 \u0001 \u0001 \u0001",
+            "snippet": "무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데, 바르는 연고는 초기 무좀 치료에 효과가 있다. ... 발톱과 손톱에 무좀 균이 ... 치료 경험이 있는 응답자"
           },
           {
-            "url": "https://kormedi.com/1716053/",
-            "domain": "kormedi.com",
-            "title": "갑상선에 이상 있다면? 주의해야 할 음식 4 - 코메디닷컴",
-            "snippet": "주요 역할을 하는 만큼 각별한 관리가 필요한데, 갑상선에 문제가 생기면 요오드와 관련한 식단이 문제가 될 수 있기에 좋은 음식보다는 피해야 할 음식에 더 집중해야 한다."
+            "url": "https://common.hanmi.co.kr/upfile/ces/product/8112b629-0914-4473-99e5-b83a6bdd7dcd.pdf",
+            "domain": "common.hanmi.co.kr",
+            "title": "무조날®맥스  \n손·발톱 무좀, 간편함은 Up 효과는 Max  \n외용액 (테르비나핀염산염)",
+            "snippet": "무색 내지 연한 황색의 투명한 액제 ... 조갑진균증 (손, 발톱무좀) ... 치료기간이 끝난 후 국소 치료에 대한 부적절한 반응이 있는 경우 또는 하나 이상의 손발톱"
           },
           {
-            "url": "https://eurekaclinic.com/bbs/board.php?bo_table=f02&wr_id=13",
-            "domain": "eurekaclinic.com",
-            "title": "갑상선에 좋은 음식 추천해주세요 > 유레카TV | 유레카내과",
-            "snippet": "갑상선에 좋은 음식보다는 해로운 음식이 과학적으로 잘 증명되어있는데요. ... '갑상선에 좋은 음식‘에 대해 궁금한 점이나 이해하기 어려운 부분이 있으시다면 전문가의 조언을 찾아보는 것도 좋은 방법입니다."
+            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%94%8C%EB%A3%A8%EC%BD%94%EB%82%98%EC%A1%B8%28fluconazole%29.pdf",
+            "domain": "www.health.kr",
+            "title": "플루코나졸(fluconazole)",
+            "snippet": "진균증 | 손발톱 진균증 | 1주 1회 150 mg ... | 무좀, 체부백선, 완선(사타구니 백선), ... 치료 등)의 크립토콕쿠스 수막염 재발 방지 | 1일 1회"
           },
           {
-            "url": "https://parklanda.tistory.com/m/entry/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%9D%B4%EC%83%81-%EC%9E%88%EB%8B%A4%EB%A9%B4-%EC%A3%BC%EC%9D%98%ED%95%B4%EC%95%BC-%ED%95%A0-%EC%9D%8C%EC%8B%9D-4%EA%B0%80%EC%A7%80-2",
-            "domain": "parklanda.tistory.com",
-            "title": "갑상선에 이상 있다면 주의해야 할 음식 4가지",
-            "snippet": "### 갑상선에 이상 있다면 주의해야 할 음식 4가지 ... 갑상선에 문제가 생기면 요오드와 관련한 식단이 문제가 될 수 있기에좋은 음식보다는 피해야 할 음식에 더 집중해야"
+            "url": "https://yoonbitskin.com/onychomycosis-treatment/",
+            "domain": "yoonbitskin.com",
+            "title": "발톱 무좀 원인, 증상, 치료 - 윤빛한의원 수원영통",
+            "snippet": "오늘은 수원 영통 윤빛한의원에서 발톱 무좀의 원인과 증상을 알아보고, 바르는 약의 한계를 극복하는 한의원 레이저 복합 치료 방법과 생활 관리 수칙 에 대해 자세히 설명해"
           },
           {
-            "url": "https://enews.imbc.com/News/RetrieveNewsInfo/50952",
-            "domain": "enews.imbc.com",
-            "title": "여성에게 더 위험한 갑상선 질환의 모든 것",
-            "snippet": "갑상선에 좋은 음식 ... 이외에도 갑상선 기능 항진증에는 양배추가 좋고, 갑상선 기능 저하증에는 해조류가 좋다. ... 이 음식이 만병 통치약은 아니니 육식이 아닌 채식 위주의"
+            "url": "https://www.doctalk.co.kr/counsel/view/c-uJlbib0-1regnh0-lYZT",
+            "domain": "www.doctalk.co.kr",
+            "title": "새끼 발톱 무좀 치료 어떻게 해야 하나요? (분당 판교 백선) | 닥톡 Doctalk",
+            "snippet": "통증은 없지만 발톱의 변형과 색 변화는 무좀이 만성화된 상태를 의미할 수 있습니다. ... 치료 방법 ... 발톱 무좀은 만성화되면 치료가 까다로울 수 있지만, 꾸준한 관리와"
           },
           {
-            "url": "https://info-idea114.co.kr/entry/%EA%B0%91%EC%83%81%EC%84%A0%EC%97%90-%EC%A2%8B%EC%9D%80-%EC%9D%8C%EC%8B%9D-7%EA%B0%80%EC%A7%80%EC%99%80-%EC%B5%9C%EC%95%85%EC%9D%98-%EC%9D%8C%EC%8B%9D-%EC%B4%9D%EC%A0%95%EB%A6%AC?category=1290022",
-            "domain": "info-idea114.co.kr",
-            "title": "갑상선에 좋은 음식 7가지와 최악의 음식 총정리",
-            "snippet": "내 몸의 활력을 되찾아 줄 갑상선에 좋은 음식부터 증상별로 주의해야 할 식습관까지 꼼꼼하게 정리해 드릴 테니, 끝까지 읽어보시고 건강 관리에 도움을 받아보시길 바랍니다! ... 오히려"
+            "url": "https://cleanskin.kr/laser-clinic07",
+            "domain": "cleanskin.kr",
+            "title": "클린의원",
+            "snippet": "먹는약 없이 손발톱 무좀치료가 가능한 레이저 시술입니다. ... 마취 방법 ... - 임산부지만 발톱무좀 치료를 원하시는 분"
           },
           {
-            "url": "https://www.theyulclinic.com/women-clinic/hyperthyroidism/food/",
-            "domain": "www.theyulclinic.com",
-            "title": "갑상선기능항진증에 좋은 음식 | 인천 송도 더율한의원",
-            "snippet": "# 갑상선기능항진증에 좋은 음식, ... Image: 인천 송도 더율한의원 - 갑상선기능항진증 음식 여성 클리닉 · 갑상선기능항진증 · 음식 ... 음식의 역할은 이 빠져나가는 몫을 채워"
+            "url": "https://nailderella.com/%EB%82%B4%EC%84%B1%EB%B0%9C%ED%86%B1%EA%B3%BC-%EB%B0%9C%ED%86%B1%EB%AC%B4%EC%A2%80-%EC%B0%A8%EC%9D%B4%EC%A0%90%EA%B3%BC-%EA%B4%80%EB%A6%AC%EB%B2%95/",
+            "domain": "nailderella.com",
+            "title": "내성발톱과 발톱무좀, 차이점과 관리법 | 네일더렐라",
+            "snippet": "검수 기준 2026.09 미국피부과학회 손톱 관리 안내 Image: 짧고 깨끗한 자연 손톱과 큐티클 오일, 무표기 핸드크림, 네일 파일을 배치한 손톱 관리 화보 네일더렐라 오리지널 AI"
           },
           {
-            "url": "https://bongju500.tistory.com/17194256",
-            "domain": "bongju500.tistory.com",
-            "title": "갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\"",
-            "snippet": "## 갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\" ... 갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\" ... 아이오딘이 부족하면 호르몬 생산이"
+            "url": "https://mp.info-idea114.co.kr/entry/%EB%B0%9C%ED%86%B1-%EB%AC%B4%EC%A2%80-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B0%A9%EB%B2%95-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%A7%91%EC%97%90%EC%84%9C-%ED%95%98%EB%8A%94-%ED%99%95%EC%8B%A4%ED%95%9C-%EC%B9%98%EB%A3%8C%EB%B2%95",
+            "domain": "mp.info-idea114.co.kr",
+            "title": "발톱 무좀 없애는 방법 완벽 가이드 : 집에서 하는 확실한 치료법",
+            "snippet": "# 발톱 무좀 없애는 방법 완벽 가이드 : 집에서 하는 확실한 치료법 ... 발톱 무좀약은 며칠 발라서 단숨에 눈에 띄는 효과가 나타나는 마법의 지우개가 아니며,"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/qna/5dc815e5610b47f4ad854ef4e17bbf1e",
+            "domain": "doctornow.co.kr",
+            "title": "발톱 무좀 빠르게 치료하는 방법 - 닥터나우",
+            "snippet": "# 발톱 무좀 빠르게 치료하는 방법 ... 무좀 치료 시에는 항진균제의 사용이 치료의 기본이 되며, 살리실산 성분의 연고 등을 이용하여 각질을 제거해주고, 생활을 함께 하는"
           }
         ],
-        "dominant_result_ratio": 0.1111111111111111,
+        "dominant_result_ratio": 0.0,
         "score_components": {
-          "demand": 29.29,
-          "organic_opportunity": 31.6,
+          "demand": 30.0,
+          "organic_opportunity": 28.0,
           "trend": 0,
-          "intent_fit": 0
+          "intent_fit": 15
         },
         "trend_growth": null,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "unavailable",
         "selection_version": 6,
-        "selected_at": "2026-09-26T12:20:04.387191+00:00",
+        "selected_at": "2026-09-29T01:32:00.841076+00:00",
         "source": "category_market_v1",
         "keywords": [
-          "갑상선에좋은음식"
+          "발톱무좀치료방법"
         ],
-        "status": "research_only",
+        "status": "pending",
         "opportunity_evidence": {
           "version": 2,
-          "query": "갑상선에좋은음식",
-          "executed_query": "갑상선에 좋은 음식",
-          "topic": "갑상선에좋은음식: 저하증·항진증별 식사 원칙과 주의할 음식",
-          "intent": "갑상선에 좋은 음식과 주의할 음식은 무엇이며, 저하증과 항진증에 따라 식사 관리가 어떻게 다른가?",
+          "query": "발톱무좀치료방법",
+          "executed_query": "발톱 무좀 치료 방법",
+          "topic": "발톱무좀치료방법: 먹는 약·바르는 약과 치료 전 확인사항",
+          "intent": "발톱무좀은 어떻게 치료하며, 먹는 약·바르는 약의 역할과 치료 전 확인사항은 무엇인가?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "result_count": 9,
-          "domain_count": 9,
-          "dominant_ratio": 0.1111111111111111,
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "result_count": 10,
+          "domain_count": 8,
+          "dominant_ratio": 0.0,
           "search_review": {
             "version": 1,
-            "query": "갑상선에좋은음식",
-            "executed_query": "갑상선에 좋은 음식",
+            "query": "발톱무좀치료방법",
+            "executed_query": "발톱 무좀 치료 방법",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-26T12:20:04.387191+00:00",
-            "raw_sha256": "0c5343540b62c4cd6c3d938e1c9eefa9fe3d341265897963fabae259b7b6a555",
+            "checked_at": "2026-09-29T01:32:00.841076+00:00",
+            "raw_sha256": "df748c917f26e79eb3bba1a85723fc142b74f0d203377fd95c16eefeb44eb38b",
             "decisions": [
               {
                 "result_index": 0,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식과 피해야 할 음식, 저하증·항진증별 정리"
+                "quote": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다."
               },
               {
                 "result_index": 1,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식과 피해야 할 음식 — 기능항진증 기준"
+                "quote": "무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데, 바르는 연고는 초기 무좀 치료에 효과가 있다."
               },
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "갑상선에 문제가 생기면 요오드와 관련한 식단이 문제가 될 수 있기에"
+                "quote": "손·발톱 무좀, 간편함은 Up 효과는 Max"
               },
               {
                 "result_index": 3,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식보다는 해로운 음식이 과학적으로 잘 증명되어있는데요."
+                "quote": "손발톱 진균증 | 1주 1회 150 mg"
               },
               {
                 "result_index": 4,
                 "relevant": true,
-                "quote": "갑상선에 이상 있다면 주의해야 할 음식 4가지"
+                "quote": "바르는 약의 한계를 극복하는 한의원 레이저 복합 치료 방법과 생활 관리 수칙"
               },
               {
                 "result_index": 5,
                 "relevant": true,
-                "quote": "갑상선 기능 항진증에는 양배추가 좋고, 갑상선 기능 저하증에는 해조류가 좋다."
+                "quote": "새끼 발톱 무좀 치료 어떻게 해야 하나요?"
               },
               {
                 "result_index": 6,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식 7가지와 최악의 음식 총정리"
+                "quote": "먹는약 없이 손발톱 무좀치료가 가능한 레이저 시술입니다."
               },
               {
                 "result_index": 7,
                 "relevant": true,
-                "quote": "갑상선기능항진증에 좋은 음식"
+                "quote": "내성발톱과 발톱무좀, 차이점과 관리법"
               },
               {
                 "result_index": 8,
                 "relevant": true,
-                "quote": "갑상선에 좋은 음식 5가지… \"갑상선 기능 저하 위험 낮춘다\""
+                "quote": "발톱 무좀 없애는 방법 완벽 가이드 : 집에서 하는 확실한 치료법"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "무좀 치료 시에는 항진균제의 사용이 치료의 기본이 되며"
               }
             ]
           },
           "search_metrics": {
-            "raw_result_count": 9,
-            "canonical_result_count": 9,
-            "relevant_result_count": 9,
-            "relevant_site_count": 9,
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 10,
+            "relevant_site_count": 8,
             "relevant_indices": [
               0,
               1,
@@ -4116,34 +3642,474 @@
               5,
               6,
               7,
-              8
+              8,
+              9
             ],
             "relevance_ratio": 1.0,
             "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.1111111111111111,
-            "site_concentration": 0.1111111111111111,
-            "organic_opportunity": 31.6
+            "known_dominant_ratio": 0.0,
+            "site_concentration": 0.3,
+            "organic_opportunity": 28.0
           },
           "scope": "full_keyword",
-          "target_keyword": "갑상선에좋은음식",
+          "target_keyword": "발톱무좀치료방법",
           "matches": [
             {
               "result_index": 0,
-              "quote": "갑상선에 좋은 음식과 피해야 할 음식, 저하증·항진증별 정리"
+              "quote": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다."
             },
             {
-              "result_index": 1,
-              "quote": "갑상선에 좋은 음식과 피해야 할 음식 — 기능항진증 기준"
+              "result_index": 9,
+              "quote": "발톱 무좀 빠르게 치료하는 방법"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "input_sha256": "acc13ac2efef33391f8526a7447bbefde6da5a45822ed3abf23be63b5494ecc3",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "input_sha256": "d594cf571ba1bdd859dbc0c3989dd7aa807f16926b1277affc412df0ce1655d2",
+          "review": {
+            "scope": "full_keyword",
+            "target_keyword": "발톱무좀치료방법",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "중요한 것은 발톱무좀은 계속 진행하는 질환이므로 일찍 치료를 시작할수록 치료기간도 짧아지고 합병증도 예방할 수 있다는 것이다.",
+                "entity": "발톱무좀",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "먹는 약과 바르는 약은 치료에서 어떤 역할을 하는가?",
+                "answer": "경구 항진균제와 국소도포제 병행을 설명한다. 간·신장기능 저하 시 국소치료 선택도 다룬다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "내복약과 동시에 연고와 매니큐어 제품 같은 국소도포제를 병행하면 치료효과가 더 높다."
+              },
+              {
+                "facet": "먹는 약을 사용하기 어려울 때 어떤 치료를 고려하는가?",
+                "answer": "간·신장기능이 저하된 환자의 용량 조절이나 발톱 연마와 국소치료를 설명할 근거가 있다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "간기능이나 신장기능이 떨어진 환자들에서는 약의 용량을 줄이거나 불가피한 경우 발톱을 갈아내고 매니큐어약을 바르는 국소치료제만으로도 적극적인 치료를 하면 크게 호전될 수 있다."
+              },
+              {
+                "facet": "치료 전에 복용약과 건강상태에서 무엇을 확인해야 하는가?",
+                "answer": "다른 약과의 상호작용, 나이·건강상태 및 치료 전 간기능 검사를 확인한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "원인균, 환자가 복용하는 다른 약과의 상호작용, 환자의 나이와 건강상태 등을 고려하여 선택하게 되는데"
+              },
+              {
+                "facet": "치료 전 간기능은 어떻게 확인하는가?",
+                "answer": "본문은 복용 전 혈액검사를 통한 간기능 확인을 설명한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "치료 전에 피검사를 통해 간기능을 확인하고 복용을 하게 되며"
+              },
+              {
+                "facet": "치료가 오래 걸리는 이유와 치료기간은 무엇인가?",
+                "answer": "새 발톱으로 대체되는 데 시간이 걸린다. 2010년 본문의 3~12개월을 현재의 일률적 처방으로 제시해서는 안 된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "손톱은 3개월에 1cm, 발톱은 6~8개월에 1cm 정도 자라므로 반드시 경구 항진균제를 3~12개월간 복용해야 완치할 수 있다."
+              },
+              {
+                "facet": "민간요법으로 치료할 수 있으며 어떤 주의가 필요한가?",
+                "answer": "민간요법은 원인균을 제거하는 치료를 대신하지 못하며, 빙초산 등은 피부 손상 위험이 있다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "민간요법은 어디까지나 보조적 요법일 뿐 무좀의 원인 곰팡이를 죽이는 근치방법이 될 수 없다. 특히 희석을 해도 빙초산은 너무나 위험하다."
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "중요한 것은 발톱무좀은 계속 진행하는 질환이므로 일찍 치료를 시작할수록 치료기간도 짧아지고 합병증도 예방할 수 있다는 것이다.",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 73.0,
+        "publish_eligible": true,
+        "hold_reasons": []
+      }
+    ],
+    "held": [
+      {
+        "keyword": "CT비용",
+        "category": "건강",
+        "topic": "CT비용 얼마일까? 부위·조영제·건강보험에 따른 차이",
+        "intent": "뇌·흉부·복부 CT비용은 얼마이며, 조영제 사용과 건강보험 적용에 따라 부담이 어떻게 달라지는가?",
+        "gap": "심평원 급여·비용 구성 체크리스트와 청양군 검진비 예시표를 제공하고, 2020년 수가는 현재 금액과 구분한다.",
+        "source_url": "https://www.schmc.ac.kr/bucheonCphshealth/contents.do?key=4085",
+        "verified_sources": [
+          {
+            "url": "https://www.schmc.ac.kr/bucheonCphshealth/contents.do?key=4085",
+            "original_url": "https://www.schmc.ac.kr/bucheonCphshealth/contents.do?key=4085",
+            "title": "추가 선택 검사>프로그램 안내>종합건진프로그램>부천병원 건강증진센터",
+            "checked_on": "2026-09-29",
+            "sha256": "d504a8a9e09552020a3b230ecad99c3a61e74ed4b36488d078679942da962f8f",
+            "excerpt": "본문 바로가기 주 메뉴 바로가기 센터소개 센터소개 센터장 인사말 의료진 소개 주요 시설 및  의료장비 소개 찾아오시는 길 종합건진프로그램 프로그램 안내 나에게 맞는 검진찾기 건강검진 안내 건강검진 절차 검진 전 안내 FAQ 이런 것들이 궁금합니다. 기업검진 계약 안내 건강도우미 자가진단 연령별 운동상식 질환별 운동상식 마이페이지 예약신청 검진예약 내역 검진결과 확인 페이스북 공유 카카오톡 공유 URL 공유 페이스북 공유 카카오톡 공유 URL 공유 화면축소 화면확대 추가 선택 검사 기본종합건강진단(A형) 기본종합건강진단(B형) 특화 건강진단 프리미엄 암검진 프리미엄 정밀검진 숙박검진 추가 선택 검사 초음파 검사 초음파 검사를 나타낸 표 심장초음파 [검진비용 23만원] 심장초음파는 심장판맥질환, 심근증, 선천성 심장질환, 대동맥류, 허혈성 심장질환(협심증, 심근경색) 등의 질환을 진단하기 위해 시행하는 검사입니다. 경동맥초음파 [검진비용 21만원] 경동맥초음파는 경동맥협착, 뇌졸중 발병위험 예측 등을 진단하기 위해 시행하는 검사입니다. 갑상선초음파 [검진비용 16만원] 갑상선초음파는 갑상선종양 및 기타 갑상선질환, 림프종 등을 진단하기 위해 시행하는 검사입니다. 전립선초음파 [검진비용 15만원] 전립선초음파는 전립선비대증, 전립선암 등을 진단하기 위해 시행하는 검사입니다. 유방초음파 [검진비용 18만원] 유방초음파는 유방암 및 기타 유방질환 등을 진단하기 위해 시행하는 검사입니다. 부인과초음파 [검진비용 15만원] 부인과초음파는 난소 및 자궁질환 등을 진단하기 위해 시행하는 검사입니다. CT 검사 CT 검사를 나타낸 표 심장CT 심장CT [검진비용 26만원] 심장칼슘수치검사, 허혈성 심장질환 등을 진단하기 위해 시행하는 검사입니다. 정밀 심장CT [검진비용 40만원] 허혈성 심장질환(협심증, 심근경색), 폐암 및 기타 폐질환 등을 진단하기 위해 시행하는 검사입니다. 흉부CT 저선량 흉부CT [검진비용 15만원] 폐암 및 기타 폐질환을 정밀진단하기 위해 시행하는 저선량 흉부CT 검사입니다. 정밀 흉부CT [검진비용 29만원] 폐암 및 기타 폐질환을 세부적으로 정밀진단하기 위해 시행하는 검사입니다. 복부CT [검진비용 29만원] 복부CT는 간, 췌장, 담낭 및 담도, 비장, 신장의 악성 및 양성질환 등을 진단하기 위해 시행하는 검사입니다. 경추 또는 요추CT [검진비용 15만원] 경추/요추 CT는 경추/요추 디스크질환 등을 진단하기 위해 시행하는 검사입니다. 뇌CT [검진비용 15만원] 뇌CT는 뇌종양, 뇌출혈, 뇌경색 등을 진단하기 위해 시행하는 검사입니다. MRI, PET-CT 검사 MRI, PET-CT 검사를 나타낸 표 뇌MRI [검진비용 63만원] 뇌MRI는 뇌종양, 뇌출혈, 뇌경색 등을 진단하기 위해 시행하는 검사입니다. 뇌MRI+MRA [검진비용 100만원] 뇌MRI는 뇌종양, 뇌출혈, 뇌경색, 뇌혈관 기형 등을 진단하기 위해 시행하는 검사입니다. 경추 또는 요추MRI [검진비용 63만원] 경추/요추 MRI는 경추/요추 디스크질환 등을 진단하기 위해 시행하는 검사입니다. PET-CT(뇌+전신) [검진비용 104만원] PET-CT(뇌+전신)는 전신의 각종 암을 진단하기 위해 시행하는 검사입니다. PET-CT(Torso) [검진비용 80만원] PET-CT(Torso)는 상반신 부위의 각종 암을 진단하기 위해 시행하는 검사입니다. PET-CT(뇌) [검진비용 67만원] PET-CT(뇌)는 악성 뇌종양을 진단하기 위해 시행하는 검사입니다. PET-CT(Amyloid) [검진비용 90만원] PET-CT(Amyloid)는 치매 조기 발견을 위해 시행하는 검사입니다. PET-CT(파킨슨) [검진비용 80만원] PET-CT(파킨슨)는 파킨슨병을 진단하기 위해 시행하는 검사입니다. 기타 추가검사 기타 추가검사를 나타낸 표 골밀도 검사 [검진비용 7만원] 골밀도 검사는 골감소증, 골다공증 등을 진단하기 위해 시행하는 검사입니다. 인유두종 바이러스 검사 (HPV) [검진비용 9.5만원] 인유두종바이러스검사(HPV)는 자궁경부암 발생위험도를 평가하기 위해 시행하는 검사입니다. 동맥경화도검사 [검진비용 4만원] 동맥경화도검사는 동맥경화정도 및 혈관협착을 간접적으로 진단하기 위해 시행하는 검사입니다. NK세포활성도검사 [검진비용 8만원] NK세포활성도검사는 암세포 등의 악성세포를 공격하는 NK세포의 활성도를 측정하여 개인의 면역상태를 확인하는 검사입니다. 혈중중금속 4종 검사 [검진비용 8만원] 혈중중금속 4종 검사는 비소, 카드늄, 납, 수은 등의 중금속 노출정도를 확인하기 위해 시행하는 검사입니다. 진정 위내시경 [검진비용 10만원] 진정 위내시경,역류성식도염,위염 위궤양,십이지장궤양,위암 진정 대장내시경 [검진비용 22만원] 직장암,대장암,대장용종,대장염 등 비진정 대장내시경 [검진비용 12만원] 직장암,대장암,대장용종,대장염 등 MastoCheck [검진비용 9만원] 유방암 선별 혈액 검사를 통한 유방암의 위험도 측정 MAST 알레르기 108종 검사 [검진비용 14만원] 혈액검사를 통해 108종의 주요 흡인성·식이성 알레르기 원인 물진에 대한 반응 여부를 확인하는 검사입니다. 알츠온 검사 [검진비용 12만원] 알츠하이머 위험도 혈액검사 유전자 검사 (플래티넘 라이트) [검진비용 60만원] 총 81종(암 22종 + 일반질환 59종)에 대한 유전적 위험도 예측 유전자 검사 (플래티넘) [검진비용 100만원] 총 91종(플래티넘 라이트 + 약물반응/신체적특징 10종)에 대한 유전적 위험도 예측 유전자 검사 (노블) [검진비용 200만원] 총 135종(플래티넘 + 희귀질환 44종)에 대한 유전적 위험도 예측 생물학적 선량평가 검사 (방사선 피폭 손상 평가) [검진비용 150만원] 혈액채취를 통한 염색체분석을 바탕으로 방사선 피폭선량 추정",
+            "locator_origin": "model_reported_locator"
+          },
+          {
+            "url": "https://www.dkmc.or.kr/Health/healthprg/healthprg05.php",
+            "original_url": "https://www.dkmc.or.kr/Health/healthprg/healthprg05.php",
+            "title": "인간사랑을 실천하는 병원 -동강병원-",
+            "checked_on": "2026-09-29",
+            "sha256": "7b46819efcfaf316b831f70607ba9859eb2180e840774b3d25d5239bf0442b92",
+            "excerpt": "동강병원 건강관리센터 회원가입 프로그램 안내 예약신청 절차 안내 센터소개 프로그램 안내 검사항목 기본종합검진 정밀검진 특화검진 추가선택검사 예약신청 건강검진예약 건강검진결과조회(~2020년 까지) 절차 안내 건강검진절차 검진유의사항 의료장비/검사정보 영양정보 센터소개 센터장 인사말 의료진 소개 주요장비 안내 센터둘러보기 전화번호안내 주차안내 찾아오시는길 검사항목 기본종합검진 정밀검진 특화검진 추가선택검사 건강검진예약 검진예약조회 검진유의사항 검진결과 FAQ 프로그램안내 > 추가선택검사 동강병원 추가선택 정밀검진 안내입니다. 프로그램 검진금액(원) 및 검사항목 초음파검사 갑상선초음파 - 80,000 전립선초음파(남) - 80,000 유방초음파(여) - 150,000 심장초음파 - 200,000 질초음파 - 50,000 CT 촬영 복부 CT - 230,000 흉부 CT - 230,000 뇌 CT - 230,000 뇌혈관 CT - 250,000 관상동맥 CT - 250,000 저선량 폐 CT (비조영) - 150,000 경추 CT (비조영) - 150,000 요추 CT (비조영) - 150,000 칼슘스코어링 CT (비조영) - 150,000 복부지방,중심근육 CT (비조영) - 150,000 MRI촬영 뇌 MRI + MRA(자기공명영상 및 혈관촬영술) - 700,000 상복부 MRI - 500,000 하복부 MRI - 500,000 뇌 MRI (비조영) - 450,000 뇌혈관 MRA (비조영) - 450,000 경추 MRI (비조영) - 500,000 요추 MRI (비조영) - 500,000 PET-CT촬영 PET-CT(뇌+토르소) 기타추가검사 대장내시경(일반) - 100,000 대장내시경(수면) - 170,000 골밀도검사(2부위) - 50,000 수면 검사신청시 - 70,000 동맥경화검사 - 50,000 생체나이검사 - 50,000 NK세포 활성도 검사 - 70,000 암 유전자(남성암 12종, 여성암 13종) - 170,000 질환 유전자(뇌심혈관질환 10종) - 170,000 대상포진 예방접종(스카이조스타) - 150,000 대상포진 예방접종(싱그릭스) - 회당 230,000(2회) 폐렴접종(박스뉴반스) - 150,000 자궁경부암 예방접종 - 180,000 아밀로이드베타 + APOE – 240,000 안저AI분석(안저촬영) – 50,000 혈당건강유형분석 – 50,000 환자권리장전 개인정보취급방침 이용약관 이메일무단수집거부 사이트맵 44455 울산광역시 중구 태화로 239 전화 : 052)241.1420~2 팩스 : 052)241.1932 Copyright (c) 동강병원 All Rights Reserved. 패밀리사이트 동강병원 강남동강병원 여성ㆍ학교폭력피해자 대한의사협회 국민건강보험공단 보건복지가족부 응급상황1339",
+            "locator_origin": "model_reported_locator"
+          },
+          {
+            "url": "https://www.nhis.or.kr/static/html/wbma/c/wbmac0103.html",
+            "original_url": "https://www.nhis.or.kr/static/html/wbma/c/wbmac0103.html",
+            "title": "급여의 범위 및 비용부담",
+            "checked_on": "2026-09-29",
+            "sha256": "da2f8b10ddbd98e2d017f3fc15317304db6280c9060d1047c56cc55fc82279eb",
+            "excerpt": "관련근거 요양급여의 담당 및 절차 급여의 범위 및 비용부담 비급여항목 (국민건강보험 요양급여의 기준에 관한 규칙 제9조 제1항) 요양급여적용기준 급여의 범위 및 비용부담 급여비용의 부담 요양급여를 받은 자는 건강보험법 제44조에 따라 그 비용의 일부만을 본인이 부담한다. 본인이 부담하는 비용은 요양기관의 청구에 의하여 가입자 또는 피부양자가 요양기관에 지불한다. 1. 본인일부부담금(국민건강보험법 시행령 제19조 1항) ※ 급여비용 본인부담율 다운로드(별첨) ① 입원진료 : 요양급여비용 총액의 20% CT, MRI, PET 등 보건복지부장관이 정하는 의료장비 : 외래본인부담률 식대총액의 50% ② 외래진료 : 요양기관 종별 및 소재지에 따라 차이 ※ 아래 표 참고 ③ 약국 본인부담금: 요양급여비용 총액의 30% 단, 경증질환(100개)으로 상급종합병원 또는 종합병원 외래 진료시 발급된 원외처방에 의해 약국조제시 본인부담률 차등 적용 상급종합병원 : 50%, 종합병원 : 40% 급여비용 본인부담율 차상위 건강보험 전환자의 본인부담율 외래본인부담률 외래본인부담률 기관종류 소재지 환자구분 본인일부부담금 상급종합 병원 모든 지역 일반환자 진찰료 총액 + (요양급여비용 총액 - 진찰료총액) × 60/100. 다만, 임신부 외래진료의 경우에는 요양급여비용 총액의 40/100, 1세 미만 영유아 외래진료의 경우에는 요양급여비용 총액의 20/100으로 한다. 의약분업 예외환자 진찰료 총액 + (요양급여비용 총액 - 약값 총액 - 진찰료 총액) × 60/100 + 약값 총액 × 30/100. 다만, 임신부 외래진료의 경우에는 (요양급여비용 총액 - 약값 총액) × 40/100 + 약값 총액 × 30/100, 1세 미만 영유아 외래진료의 경우에는 (요양급여비용 총액 - 약값 총액) × 20/100 + 약값 총액 × 21/100로 한다. 종합병원 동지역 일반환자 요양급여비용 총액 × 50/100(임신부 외래진료의 경우에는 30/100, 1세 미만 영유아 외래진료의 경우에는 15/100) 의약분업 예외환자 (요양급여비용 총액 - 약값 총액) × 50/100(임신부 외래진료의 경우에는 30/100, 1세 미만 영유아 외래진료의 경우에는 15/100) + 약값 총액 × 30/100(1세 미만 영유아의 경우에는 21/100) 읍·면지역 일반환자 요양급여비용 총액 × 45/100(임신부 외래진료의 경우에는 30/100, 1세 미만 영유아 외래진료의 경우에는 15/100) 의약분업 예외환자 (요양급여비용 총액 - 약값 총액) × 45/100(임신부  외래진료의 경우에는 30/100, 1세 미만 영유아 외래진료의 경우에는 15/100) + 약값 총액 × 30/100(1세 미만 영유아의 경우에는 21/100) 병원, 치과병원, 한방병원, 요양병원 동지역 일반환자 요양급여비용 총액 × 40/100(임신부 외래진료의 경우에는 20/100, 1세 미만 영유아 외래진료의 경우에는 10/100) 의약분업 예외환자 (요양급여비용 총액 - 약값 총액)  × 40/100(임신부 외래진료의 경우에는 20/100, 1세 미만 영유아 외래진료의 경우에는 10/100) + 약값 총액  × 30/100(1세 미만 영유아의 경우에는 21/100) 읍·면지역 일반환자 요양급여비용 총액 × 35/100(임신부 외래진료의 경우에는 20/100, 1세 미만 영유아 외래진료의 경우에는 10/100) 의약분업 예외환자 (요양급여비용 총액 - 약값 총액) × 35/100(임신부  외래진료의 경우에는 20/100, 1세 미만 영유아 외래진료의 경우에는 10/100) + 약값 총액 × 30/100(1세 미만 영유아의 경우에는 21/100) 의원, 치과의원, 한의원, 보건의료원 모든지역 일반환자 요양급여비용 총액 × 30/100(임신부 외래진료의 경우에는 10/100, 1세 미만 영유아 외래진료의 경우에는 5/100). 다만, 요양급여를 받는 사람이 65세 이상이면서 해당 요양급여비용 총액이 보건복지부령으로 정하는 금액을 넘지 않으면 보건복지부령으로 정하는 금액을 본인일부부담금으로 한다. 의약분업 예외환자 (요양급여비용 총액 - 약값 총액) × 30/100(임신부 외래진료의 경우에는 10/100, 1세 미만 영유아 외래진료의 경우에는 5/100) + 약값 총액 × 30/100(1세 미만 영유아의 경우에는 21/100). 다만, 요양급여를 받는 사람이 65세 이상이면서 해당 요양급여비용 총액이 보건복지부령으로 정하는 금액을 넘지 않으면 보건복지부령으로 정하는 금액을 본인일부부담금으로 한다. 보건소, 보건지소, 보건진료소 모든지역 요양급여비용 총액 × 30/100.  다만, 요양급여비용 총액이 보건복지부령으로 정하는 금액을 넘지 않으면 보건복지부령으로 정하는 금액을 본인일부부담금으로 한다.",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://zayeon.co.kr/ct-%EA%B2%80%EC%82%AC-%EB%B9%84%EC%9A%A9-2026%EF%BD%9C%EB%87%8C%C2%B7%ED%9D%89%EB%B6%80%C2%B7%EB%B3%B5%EB%B6%80%C2%B7%EC%A1%B0%EC%98%81%EC%A0%9C-%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%EC%A0%81/",
+          "https://rgoba.kr/1438"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 10840,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://www.schmc.ac.kr/bucheonCphshealth/contents.do?key=4085",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.dkmc.or.kr/Health/healthprg/healthprg05.php",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.nhis.or.kr/static/html/wbma/c/wbmac0103.html",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.nhis.or.kr/static/html/wbma/c/wbmac0104.html",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "CT 비용",
+        "organic_domains": [
+          "www.banksalad.com",
+          "hcube.kr",
+          "www.hira.or.kr",
+          "zayeon.co.kr",
+          "zayeon.co.kr",
+          "rgoba.kr",
+          "seoul.eumc.ac.kr",
+          "www.gcimed.com",
+          "medihere.co.kr",
+          "yeonsuleaders.com"
+        ],
+        "organic_results": [
+          {
+            "url": "https://www.banksalad.com/articles/%EB%B3%B4%ED%97%98-%EC%83%9D%EB%AA%85%EB%B3%B4%ED%97%98-CT%EB%B9%84%EC%9A%A9",
+            "domain": "www.banksalad.com",
+            "title": "CT 비용(복부·뇌·폐) 얼마일까? 실비 청구 기준 총정리 | 뱅크샐러드",
+            "snippet": "몸에 포도당 기반 방사성 추적자를 주입한 뒤, 대사 활동이 활발한 부위를 영상으로 분석하기 때문에 일반 CT보다 검사 과정이 복잡하고, 그만큼 비용도 높게 발생하는 편입니다."
+          },
+          {
+            "url": "https://hcube.kr/guide/non-benefit.php?boardid=non_benefit&idx=4&mNum=7&mode=view&sNum=3",
+            "domain": "hcube.kr",
+            "title": "에이치큐브병원",
+            "snippet": "비급여 [ CT · 내시경 관리 ] 비용"
+          },
+          {
+            "url": "https://www.hira.or.kr/dummy.do?cmsurl=%2Fcms%2Fmedi_info%2F02%2F01%2F1343491_27565.html&pgmid=HIRAA050200000000&subject=CT+28%EC%A0%84%EC%82%B0%ED%99%94%EB%8B%A8%EC%B8%B5%EC%98%81%EC%83%81%EC%A7%84%EB%8B%A8",
+            "domain": "www.hira.or.kr",
+            "title": "세부조건별 의료기관 찾기 < 의료정보 < 건강보험심사평가원",
+            "snippet": "* 전산화단층영상진단(Computed Tomography, CT)은 촬영 부위에 따라 두부, 안면 및 두개기저(안와, 부비동, 측두골,기타), 경부, 흉부, 복부[골반 포함], 척추, 상지, 하지로 수가가 나뉘고 세부 부위별로 비용이"
+          },
+          {
+            "url": "https://zayeon.co.kr/ct-%EA%B2%80%EC%82%AC-%EB%B9%84%EC%9A%A9-2026%EF%BD%9C%EB%87%8C%C2%B7%ED%9D%89%EB%B6%80%C2%B7%EB%B3%B5%EB%B6%80%C2%B7%EC%A1%B0%EC%98%81%EC%A0%9C-%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%EC%A0%81/",
+            "domain": "zayeon.co.kr",
+            "title": "CT 검사 비용 2026｜뇌·흉부·복부·조영제, 건강보험 적용하면 얼마? » 헬스픽",
+            "snippet": "CT 비용을 이해할 때는 단순히 ‘머리 CT 얼마, 복부 CT 얼마’로 보지 않는 편이 정확합니다."
+          },
+          {
+            "url": "https://zayeon.co.kr/%ED%9D%89%EB%B6%80-ct-%EB%B9%84%EC%9A%A9-%EC%96%BC%EB%A7%88%EC%9D%BC%EA%B9%8C-%EC%A0%80%EC%84%A0%EB%9F%89-%ED%8F%90-ct%EC%99%80-%EC%9D%BC%EB%B0%98-ct-%EC%B0%A8%EC%9D%B4%C2%B7%EA%B1%B4%EA%B0%95/",
+            "domain": "zayeon.co.kr",
+            "title": "흉부 CT 비용 얼마일까? 저선량 폐 CT와 일반 CT 차이·건강보험 적용 기준 » 헬스픽",
+            "snippet": "흉부 CT 비용을 찾아보면 병원마다 금액이 다르고, 어떤 곳은 ‘저선량 폐 CT’, 다른 곳은 ‘흉부 CT’ 또는 ‘조영 CT’라고 적혀 있어 비교하기가 쉽지 않습니다."
+          },
+          {
+            "url": "https://rgoba.kr/1438",
+            "domain": "rgoba.kr",
+            "title": "CT비용 아끼려면 이렇게 확인하세요: 병원 가기 전 알아둘 금액 기준 | 알고바 | 알아두면 좋은 생활정보",
+            "snippet": "예를 들어 두부 CT보다 복부·골반 CT가 더 비싼 편이고, 조영제를 사용하면 약값과 주사 관련 비용이 추가될 수 있습니다."
+          },
+          {
+            "url": "https://seoul.eumc.ac.kr/wellness/private/private0107.do",
+            "domain": "seoul.eumc.ac.kr",
+            "title": "웰니스건강증진센터 | 이대서울병원",
+            "snippet": "대장내시경 의식하진정(수면) 비용 | 90,000 ... PET-CT | 뇌&전신 PET | 방사성 의약품 사용 | 1,300,000"
+          },
+          {
+            "url": "https://www.gcimed.com/gangbuk/cscenter/sub5_7_1?srchGubunCode=10807",
+            "domain": "www.gcimed.com",
+            "title": "GC녹십자아이메드 강북의원",
+            "snippet": "행위료는 단일 개별 항목의 비용으로 시행 횟수 및 범위에 따라 달라질 수 있으며, 치료 재료 및 약제가 필요한 경우 별도 산정 됩니다. ... * 복부CT"
+          },
+          {
+            "url": "https://medihere.co.kr/mri-ct-%EC%B4%AC%EC%98%81-%EB%B9%84%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C/",
+            "domain": "medihere.co.kr",
+            "title": "MRI/CT 촬영 비용: 병원별 차이가 왜 이렇게 클까? | 병원콕 건강정보",
+            "snippet": "### CT 부위별 비용 비교"
+          },
+          {
+            "url": "https://yeonsuleaders.com/notice/?bmode=view&idx=15933185",
+            "domain": "yeonsuleaders.com",
+            "title": "[비급여 항목 안내] : 연수리더스내과",
+            "snippet": "명칭 | 비용(단위:원) ... 뇌혈관CT (조영제 포함) | 300,000"
+          }
+        ],
+        "dominant_result_ratio": 0.125,
+        "score_components": {
+          "demand": 32.28,
+          "organic_opportunity": 26.25,
+          "trend": 0.43,
+          "intent_fit": 0
+        },
+        "trend_growth": 0.043,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 6,
+        "selected_at": "2026-09-29T01:32:00.841076+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "CT비용"
+        ],
+        "status": "research_only",
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "CT비용",
+          "executed_query": "CT 비용",
+          "topic": "CT비용 얼마일까? 부위·조영제·건강보험에 따른 차이",
+          "intent": "뇌·흉부·복부 CT비용은 얼마이며, 조영제 사용과 건강보험 적용에 따라 부담이 어떻게 달라지는가?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "result_count": 10,
+          "domain_count": 9,
+          "dominant_ratio": 0.125,
+          "search_review": {
+            "version": 1,
+            "query": "CT비용",
+            "executed_query": "CT 비용",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-29T01:32:00.841076+00:00",
+            "raw_sha256": "9ac33828792d56d5c4c76672cae4206ce36d4cec5ff4d08a9f32976653de2c07",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "CT 비용(복부·뇌·폐) 얼마일까?"
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "비급여 [ CT · 내시경 관리 ] 비용"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "하지로 수가가 나뉘고 세부 부위별로 비용이"
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "CT 검사 비용 2026｜뇌·흉부·복부·조영제, 건강보험 적용하면 얼마?"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "흉부 CT 비용을 찾아보면 병원마다 금액이 다르고"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "조영제를 사용하면 약값과 주사 관련 비용이 추가될 수 있습니다."
+              },
+              {
+                "result_index": 6,
+                "relevant": false,
+                "quote": "PET-CT | 뇌&전신 PET | 방사성 의약품 사용 | 1,300,000"
+              },
+              {
+                "result_index": 7,
+                "relevant": false,
+                "quote": "치료 재료 및 약제가 필요한 경우 별도 산정 됩니다. ... * 복부CT"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "CT 부위별 비용 비교"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "뇌혈관CT (조영제 포함) | 300,000"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 8,
+            "relevant_site_count": 7,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              9
+            ],
+            "relevance_ratio": 0.8,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.125,
+            "site_concentration": 0.25,
+            "organic_opportunity": 26.25
+          },
+          "scope": "full_keyword",
+          "target_keyword": "CT비용",
+          "matches": [
+            {
+              "result_index": 3,
+              "quote": "CT 검사 비용 2026｜뇌·흉부·복부·조영제, 건강보험 적용하면 얼마?"
+            },
+            {
+              "result_index": 5,
+              "quote": "CT비용 아끼려면 이렇게 확인하세요: 병원 가기 전 알아둘 금액 기준"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "input_sha256": "bafb47cd253d73865053fc0aeaaa02046aedbc9da52160aa510eccdd07d2bd01",
           "failure_code": "invalid_review"
         },
-        "score": 60.89,
+        "decision_diagnostics": {
+          "coverage_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "version": 1,
+              "checked_at": "2026-09-29T01:32:00.841076+00:00",
+              "input_sha256": "ecd5b4f7257585c11cd84578e9f8e5a99158b8702422843121ec5b401d252b3a",
+              "review": {
+                "scope": "unknown",
+                "target_keyword": "CT비용",
+                "sources": [
+                  {
+                    "source_index": 0,
+                    "quote": "CT 촬영비용은 부위 및 촬영 종류에 따라 2020년 의원단가 기준으로 1부위 검사당 최저 약 5만7천원 ~ 최고 약 15만원(순수촬영비용)까지입니다.",
+                    "entity": "CT",
+                    "context": "system_rules"
+                  },
+                  {
+                    "source_index": 1,
+                    "quote": "유료건강검진 유료예방접종 - 항목, 수가(원), 비고 항목(1회) 수가(원) 비고 혈액종합검진 140,000~180,000 복부 CT 80,000 조영제 미포함 금액",
+                    "entity": "유료건강검진",
+                    "context": "single_institution"
+                  }
+                ],
+                "required_facets": [
+                  {
+                    "facet": "뇌·흉부·복부 CT의 현재 비용은 얼마인가?",
+                    "answer": "심평원 금액은 2020년 순수촬영비다. 청양군 단일 검진표만으로 현재 부위별 전체 비용을 답할 수 없다.",
+                    "supported": false,
+                    "source_index": 0,
+                    "quote": "2020년 의원단가 기준으로 1부위 검사당 최저 약 5만7천원 ~ 최고 약 15만원(순수촬영비용)까지입니다."
+                  },
+                  {
+                    "facet": "촬영 부위와 조영제 사용에 따라 비용이 왜 달라지는가?",
+                    "answer": "부위·촬영기법별로 수가가 구분되며 조영제 비용이 추가된다. 현재 추가 금액까지는 확인되지 않는다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "조영제를 사용하지 않는 경우, 조영제를 사용하는 경우, 이중시기 또는 삼중시기 CT, 삼차원 CT, CT혈관조영, 관절강내조영촬영, Cine CT, 제한적 CT로 다시 분류됩니다."
+                  },
+                  {
+                    "facet": "CT에 건강보험이 적용되는 조건은 무엇인가?",
+                    "answer": "일반·부위별 급여기준과 예외 인정 조건이 제시돼 있어 적용 조건 안내는 가능하다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "위 항목에 포함되지 않는 질환들 중 진료담당의사의 진단 및 치료방향 설정을 위해 부득이 촬영했을 때는 합당한 관련 자료와 소견서를 첨부하여 촬영의 필요성이 인정된 경우 급여 대상입니다."
+                  },
+                  {
+                    "facet": "건강보험 적용 여부와 의료기관에 따라 실제 본인부담은 얼마나 달라지는가?",
+                    "answer": "기관별 차등·경감 설명만 있다. 현재 부담률과 비급여 총액 근거가 없어 실제 부담 비교는 불충분하다.",
+                    "supported": false,
+                    "source_index": 0,
+                    "quote": "CT 촬영에 대한 본인부담금은 입원하여 검사한 경우라도 외래 본인부담율을 적용되며 기관 종별에 따라 본인부담율은 차등적용 되고 있습니다."
+                  }
+                ],
+                "current_relevance": {
+                  "kind": "evergreen",
+                  "source_index": 0,
+                  "quote": "고객이 자주 묻는 질문(검사, 수술 등)에 대한 수가, 급여기준 및 비용에 관한 내용을 확인하실 수 있습니다.",
+                  "event_start": null,
+                  "event_end": null,
+                  "date_quote": null
+                }
+              }
+            },
+            "requirements": {
+              "keyword": "CT비용",
+              "topic": "CT비용 얼마일까? 부위·조영제·건강보험에 따른 차이",
+              "intent": "뇌·흉부·복부 CT비용은 얼마이며, 조영제 사용과 건강보험 적용에 따라 부담이 어떻게 달라지는가?",
+              "scope": "unknown",
+              "hold_reasons": [
+                "narrower_source_coverage",
+                "unverified_source_coverage"
+              ],
+              "missing_facets": [
+                {
+                  "question": "뇌·흉부·복부 CT의 현재 비용은 얼마인가?",
+                  "missing_evidence": "심평원 금액은 2020년 순수촬영비다. 청양군 단일 검진표만으로 현재 부위별 전체 비용을 답할 수 없다."
+                },
+                {
+                  "question": "건강보험 적용 여부와 의료기관에 따라 실제 본인부담은 얼마나 달라지는가?",
+                  "missing_evidence": "기관별 차등·경감 설명만 있다. 현재 부담률과 비급여 총액 근거가 없어 실제 부담 비교는 불충분하다."
+                }
+              ],
+              "existing_urls": [
+                "https://www.hira.or.kr/dummy.do?cmsurl=%2Fcms%2Fmedi_info%2F02%2F01%2F1343491_27565.html&pgmid=HIRAA050200000000&subject=CT+28%EC%A0%84%EC%82%B0%ED%99%94%EB%8B%A8%EC%B8%B5%EC%98%81%EC%83%81%EC%A7%84%EB%8B%A8",
+                "https://www.cheongyang.go.kr/health/sub02_04.do"
+              ]
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "version": 1,
+              "checked_at": "2026-09-29T01:32:00.841076+00:00",
+              "input_sha256": "bafb47cd253d73865053fc0aeaaa02046aedbc9da52160aa510eccdd07d2bd01",
+              "failure_code": "invalid_review"
+            }
+          }
+        },
+        "score": 58.96,
         "publish_eligible": false,
         "hold_reasons": [
           "missing_topic_suitability"
@@ -4152,228 +4118,74 @@
     ],
     "rejected": [
       {
-        "keyword": "CT비용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.ish.or.kr/h1/contents.do?idx=6007",
-              "title": "Alert!!!",
-              "excerpt_chars": 278
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "건강보험료조회",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results",
-          "dominant_search_results"
-        ],
-        "monthly_search": 9150,
-        "organic_provider": "codex_native_search",
-        "organic_query": "건강보험료 조회",
-        "organic_results": [
-          {
-            "url": "https://www.nhis.or.kr/nhis/index.do?from=AppAgg.com",
-            "domain": "www.nhis.or.kr",
-            "title": "국민건강보험",
-            "snippet": "* 건강검진 대상조회 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원,"
-          },
-          {
-            "url": "https://nhic.kr/nhis/index.do",
-            "domain": "nhic.kr",
-            "title": "국민건강보험",
-            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
-          },
-          {
-            "url": "https://www.nhis.or.kr/nhis/index.do%3B",
-            "domain": "www.nhis.or.kr",
-            "title": "국민건강보험",
-            "snippet": "* 건강검진 대상조회 ... * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가 요구되는 중증질환으로 진료 시 건강보험 본인부담률을 경감시켜주는 제도입니다. ... 온라인이용 가능 신청대상"
-          },
-          {
-            "url": "https://nhissmc.net/nhis/index.do",
-            "domain": "nhissmc.net",
-            "title": "국민건강보험",
-            "snippet": "* 국민건강보험 EDI서비스 ... * (26464) 강원특별자치도 원주시 건강로 32(반곡동) 국민건강보험공단 * 대표전화 1577-1000(유료, 평일 09시~18시) ... 보건복지부 이 누리집은 보건복지부 산하기관 누리집입니다."
-          },
-          {
-            "url": "https://mulbul.kr/health-insurance",
-            "domain": "mulbul.kr",
-            "title": "건강보험료 계산기 (지역가입자) | 프리랜서·자영업자용 | 물불 계산기",
-            "snippet": "재산 부분은 재산 과세표준을 복잡한 구간별 점수표로 환산한 뒤 점수당 211.5원을 곱하는 방식이라, 정확한 점수는 국민건강보험공단에서 직접 조회해야 해요. ... 국민건강보험공단2026년도 건강보험·장기요양보험료율원문 확인 2026.08.16 국민건강보험공단2026년"
-          },
-          {
-            "url": "https://www.xn--939a1gynmpm0ukuoxtbq59g.kr/nhis/index.do",
-            "domain": "www.xn--939a1gynmpm0ukuoxtbq59g.kr",
-            "title": "국민건강보험",
-            "snippet": "* 건강검진 대상조회 ... 온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원, 본인부담완화 상세보기 * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가"
-          },
-          {
-            "url": "https://www.nps.or.kr/html/download/insure_cal_download2013.pdf",
-            "domain": "www.nps.or.kr",
-            "title": "National Pension Service",
-            "snippet": "<td>사회보험료 자동이체 신청<br>인터넷 지로 납부<br>건강보험료 연말정산 보수총액통보서 신고</td> ... <td>사회보험료 고지/납부 현황 조회<br>사회보험료 산출내역 조회<br>건강보험료 사업장 가입자별 고지내역 조회<br>건강보험료 연말정산 산출내역 조회<br>사업장 직원 조회</td>"
-          },
-          {
-            "url": "https://www.jdnc.or.kr/notice/notice.htm?act=download&no=3&seq=907",
-            "domain": "www.jdnc.or.kr",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "상단에 국민건강보험 로고와 메뉴(민원서비스, 건강모아, 정책·제도, 정보공개, 국민소통·참여, 공단소개)가 보이고, 중앙 배너에는 “국민건강보험은 소통과 배려로 국민과 함께 하겠습니다.” ... 아래 “자주 찾는 서비스” 영역에서 탭"
-          },
-          {
-            "url": "https://www.jdnc.or.kr/notice/notice.htm?act=download&no=3&page=1&qtype=title&query=&seq=907",
-            "domain": "www.jdnc.or.kr",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "상단에 국민건강보험 로고와 메뉴(민원서비스, 건강모아, 정책·제도, 정보공개, 국민소통·참여, 공단소개)가 보이고, 중앙 배너에는 “국민건강보험은 소통과 배려로 국민과 함께 하겠습니다.” ... ③ 조회 ... 입력 항목은 “발급용도"
-          },
-          {
-            "url": "https://nikom.or.kr/board/boardFile/download/153/564910/34478.do",
-            "domain": "nikom.or.kr",
-            "title": "<5B39B1B35DBAD9C0D32E2032303234B3E220C7D1C0C7BEE020C0B0BCBA20C1F6BFAAB0E8C8B920BCF6B8B320BEC8B3BB2DC0CEBCE2B9D7B5F0C0DAC0CEBFEB5FBAAFC8AF2E687770>",
-            "snippet": "구 분 None | | 지 표 None | 단 위 시 도 | 시 군 구 | 자료 수집 방법 None --- | ---"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "건강보험료조회",
-          "executed_query": "건강보험료 조회",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "raw_sha256": "d6d75784a6b3d400ea63a434329a19683ee0d2a3f4179c043dde79eec787df09",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "건강검진 대상조회"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "보험료 고지내역 조회 타 사이트 이동"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "건강검진 대상조회"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "국민건강보험 EDI서비스"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "정확한 점수는 국민건강보험공단에서 직접 조회해야 해요."
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "건강검진 대상조회"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "건강보험료 사업장 가입자별 고지내역 조회"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "아래 “자주 찾는 서비스” 영역에서 탭"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "입력 항목은 “발급용도"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "자료 수집 방법 None"
-            }
-          ]
-        }
-      },
-      {
         "keyword": "경동맥초음파비용",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "concentrated_search_results"
         ],
-        "monthly_search": 6190,
+        "monthly_search": 5960,
         "organic_provider": "codex_native_search",
         "organic_query": "경동맥 초음파 비용",
         "organic_results": [
           {
             "url": "https://hospitalprice.kr/price/carotid-ultrasound",
             "domain": "hospitalprice.kr",
-            "title": "경동맥 초음파 가격 — 경동맥 5만원 · 기타 동맥 9.2만원 (전국 병원·의원 6,183곳) | 병원가격",
-            "snippet": "전국 병원 1,105곳·의원 5,078곳이 경동맥 초음파 가격을 공개했으며, 종류마다 가격이 달라 종류별로 나눠 비교합니다. ... * 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고"
+            "title": "경동맥 초음파 가격 — 경동맥 5만원 · 기타 동맥 9.2만원 (전국 병원·의원 6,187곳) | 병원가격",
+            "snippet": "전국 병원 1,105곳·의원 5,082곳이 경동맥 초음파 가격을 공개했으며, 종류마다 가격이 달라 종류별로 나눠 비교합니다. ... * 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고"
           },
           {
             "url": "https://medinics.kr/prices/%EA%B2%BD%EB%8F%99%EB%A7%A5-%EC%B4%88%EC%9D%8C%ED%8C%8C",
             "domain": "medinics.kr",
             "title": "경동맥 초음파 가격 비교 — 병원별·지역별 | 메디닉스",
-            "snippet": "검사 초음파검사료(진단초음파)# 경동맥 초음파"
+            "snippet": "검사 초음파검사료(진단초음파)# 경동맥 초음파 ... 4 | 새론이비인후과의원 | 의원 | 서울 강동구 | 10,000원 지역평균보다 87%↓ | 10,000원 | -"
           },
           {
             "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul",
             "domain": "hospitalprice.kr",
-            "title": "서울 경동맥 초음파 가격 — 경동맥 6만원 · 기타 동맥 10만원 (병원·의원 1,425곳) | 병원가격",
-            "snippet": "서울에서 경동맥 초음파 가격을 공개한 곳은 병원 197곳·의원 1,228곳입니다. ... 서울에서 경동맥 초음파 가격이 가장 낮은 곳은 어디인가요? ... 출처: 건강보험심사평가원 비급여 진료비용 공개 데이터"
-          },
-          {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/jung-gu",
-            "domain": "hospitalprice.kr",
-            "title": "서울 중구 경동맥 초음파 가격 — 경동맥 7만원 · 기타 동맥 6.7만원 (병원·의원 38곳) | 병원가격",
-            "snippet": "받은 견적, 중구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
+            "title": "서울 경동맥 초음파 가격 — 경동맥 6만원 · 기타 동맥 10만원 (병원·의원 1,426곳) | 병원가격",
+            "snippet": "* 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 증상이 있어서 받으면 급여, 검진으로 받으면 비급여. ... 서울에서 경동맥 초음파 가격이 가장"
           },
           {
             "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/gangdong-gu",
             "domain": "hospitalprice.kr",
             "title": "서울 강동구 경동맥 초음파 가격 — 경동맥 6만원 · 기타 동맥 13만원 (병원·의원 84곳) | 병원가격",
-            "snippet": "받은 견적, 강동구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
+            "snippet": "강동구에서 경동맥 초음파 가격을 공개한 곳은 병원 13곳·의원 71곳, 모두 84곳입니다. ... 서울 강동구에서 경동맥 초음파 가격이 가장 낮은 곳은 어디인가요? ... 출처: 건강보험심사평가원 비급여"
           },
           {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/daegu",
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/seocho-gu",
             "domain": "hospitalprice.kr",
-            "title": "대구 경동맥 초음파 가격 — 경동맥 5만원 · 기타 동맥 8.1만원 (병원·의원 445곳) | 병원가격",
-            "snippet": "* 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 증상이 있어서 받으면 급여, 검진으로 받으면 비급여. ... 대구에서 경동맥 초음파 가격이 가장"
+            "title": "서울 서초구 경동맥 초음파 가격 — 경동맥 8만원 · 기타 동맥 5.5만원 (병원·의원 80곳) | 병원가격",
+            "snippet": "받은 견적, 서초구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
+          },
+          {
+            "url": "https://zayeon.co.kr/%EA%B2%BD%EB%8F%99%EB%A7%A5%EC%B4%88%EC%9D%8C%ED%8C%8C-%EB%B9%84%EC%9A%A9%EF%BD%9C%EB%B9%84%EA%B8%89%EC%97%AC-%EA%B0%80%EA%B2%A9%C2%B7%EB%B3%B4%ED%97%98-%EC%A0%81%EC%9A%A9%EA%B3%BC-%EB%8F%99%EB%A7%A5/",
+            "domain": "zayeon.co.kr",
+            "title": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준 » 헬스픽",
+            "snippet": "“경동맥초음파 평균 비용은 얼마다”라고 단정하기보다는 내가 방문하려는 의료기관의 현재 EB482 가격을 직접 확인하는 방식이 더 정확합니다."
+          },
+          {
+            "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/guro-gu",
+            "domain": "hospitalprice.kr",
+            "title": "서울 구로구 경동맥 초음파 가격 — 경동맥 5만원 · 기타 동맥 8.7만원 (병원·의원 53곳) | 병원가격",
+            "snippet": "받은 견적, 구로구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
+          },
+          {
+            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/gyeonggi",
+            "domain": "platformdodam.com",
+            "title": "경기 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
+            "snippet": "경기 경동맥 도플러 초음파 비급여 비용을 수원시·성남시 등 시·군·구에서 비교합니다. ... 경기 경동맥 도플러 초음파 시·군·구별 가격 — 시·군·구, 대상 기관 수, 중앙값, 최저~최고"
+          },
+          {
+            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/chungnam",
+            "domain": "platformdodam.com",
+            "title": "충남 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
+            "snippet": "충남 경동맥 도플러 초음파 비급여 비용을 천안시·당진시 등 시·군·구에서 비교합니다. ... 충남 경동맥 도플러 초음파 비급여 비용은 얼마인가요?"
           },
           {
             "url": "https://hospitalprice.kr/price/carotid-ultrasound/seoul/dobong-gu",
             "domain": "hospitalprice.kr",
             "title": "서울 도봉구 경동맥 초음파 가격 — 경동맥 5.3만원 · 기타 동맥 10.1만원 (병원·의원 36곳) | 병원가격",
             "snippet": "받은 견적, 도봉구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
-          },
-          {
-            "url": "https://hospitalprice.kr/price/carotid-ultrasound/daegu/dong-gu",
-            "domain": "hospitalprice.kr",
-            "title": "대구 동구 경동맥 초음파 가격 — 경동맥 5만원 (병원·의원 54곳) | 병원가격",
-            "snippet": "받은 견적, 동구 시세와 비교하기 펼치기 함께 읽기 초음파 검사 비용: 갑상선·유방·심장·경동맥, 같은 검사가 왜 3만 원이고 20만 원인가 국가검진에 '하나만 더' 얹었을 때 나오는"
-          },
-          {
-            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/gyeonggi",
-            "domain": "platformdodam.com",
-            "title": "경기 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
-            "snippet": "경기 경동맥 도플러 초음파 비급여 비용을 수원시·성남시 등 시·군·구에서 비교합니다. ... 경기 경동맥 도플러 초음파 비급여 비용은 얼마인가요?"
-          },
-          {
-            "url": "https://platformdodam.com/medical-fees/carotid-doppler-ultrasound/incheon",
-            "domain": "platformdodam.com",
-            "title": "인천 경동맥 도플러 초음파 비급여 비용 | 시·군·구별 가격 비교",
-            "snippet": "인천 경동맥 도플러 초음파 비급여 비용을 남동구·미추홀구·부평구 등 시·군·구에서 비교합니다. ... 스카이한방병원 U/S-Carotid(경동맥 초음파) | 한방병원 | 영종구 | 2025-09-03 | 50,000원"
           }
         ],
         "search_review": {
@@ -4381,8 +4193,8 @@
           "query": "경동맥초음파비용",
           "executed_query": "경동맥 초음파 비용",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "raw_sha256": "43308a291f9ed7356421ecfee24a142c4a233788a2848de1d345d748a9a329d9",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "raw_sha256": "3535e06b67590ac2630518e7dbde71e6522bb83afb1ad2a816cef5425681108f",
           "decisions": [
             {
               "result_index": 0,
@@ -4392,7 +4204,7 @@
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "경동맥 초음파 가격 비교 — 병원별·지역별"
+              "quote": "10,000원 지역평균보다 87%↓"
             },
             {
               "result_index": 2,
@@ -4402,37 +4214,37 @@
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "서울 중구 경동맥 초음파 가격 — 경동맥 7만원"
+              "quote": "서울 강동구 경동맥 초음파 가격 — 경동맥 6만원"
             },
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "서울 강동구 경동맥 초음파 가격 — 경동맥 6만원"
+              "quote": "서울 서초구 경동맥 초음파 가격 — 경동맥 8만원"
             },
             {
               "result_index": 5,
               "relevant": true,
-              "quote": "대구 경동맥 초음파 가격 — 경동맥 5만원"
+              "quote": "경동맥초음파 비용｜비급여 가격·보험 적용과 동맥경화 검사 결과 기준"
             },
             {
               "result_index": 6,
               "relevant": true,
-              "quote": "서울 도봉구 경동맥 초음파 가격 — 경동맥 5.3만원"
+              "quote": "서울 구로구 경동맥 초음파 가격 — 경동맥 5만원"
             },
             {
               "result_index": 7,
               "relevant": true,
-              "quote": "대구 동구 경동맥 초음파 가격 — 경동맥 5만원"
+              "quote": "경기 경동맥 도플러 초음파 비급여 비용을 수원시·성남시 등 시·군·구에서 비교합니다."
             },
             {
               "result_index": 8,
               "relevant": true,
-              "quote": "경기 경동맥 도플러 초음파 비급여 비용을 수원시·성남시 등 시·군·구에서 비교합니다."
+              "quote": "충남 경동맥 도플러 초음파 비급여 비용을 천안시·당진시 등 시·군·구에서 비교합니다."
             },
             {
               "result_index": 9,
               "relevant": true,
-              "quote": "스카이한방병원 U/S-Carotid(경동맥 초음파) | 한방병원 | 영종구 | 2025-09-03 | 50,000원"
+              "quote": "서울 도봉구 경동맥 초음파 가격 — 경동맥 5.3만원"
             }
           ]
         }
@@ -4440,7 +4252,7 @@
       {
         "keyword": "종합건강검진비용",
         "reason": "search relevance review unavailable",
-        "monthly_search": 4950,
+        "monthly_search": 4980,
         "organic_provider": "codex_native_search",
         "organic_query": "종합 건강검진 비용",
         "organic_results": [
@@ -4457,16 +4269,22 @@
             "snippet": "<td>검진비용</td> ... 라) 검진항목 : 상세 내역은 군인공제회 홈페이지 「종합 건강검진」 참조"
           },
           {
-            "url": "https://www.believesewoong.co.kr/center/healthexamination",
-            "domain": "www.believesewoong.co.kr",
-            "title": "안내 - 빌리브세웅병원",
-            "snippet": "| Image 스탠다드 종합검진 | Image 디럭스 종합검진 | Image 프리미엄 종합검진 ... 소개내용 | 각종 성인병 예방과 주요 장기의 질병을 조기 발견을 위한 성인남녀의"
+            "url": "https://mas.smc.seoul.kr/attach/record/SEOUL/appendix/a11/A0071312.pdf?time=20260621104059",
+            "domain": "mas.smc.seoul.kr",
+            "title": "제3 3 4 회 임시회",
+            "snippet": "- 배달·가사·돌봄 등 취약노동자 종합건강검진 패키지 비용 지원(200명) ... 취약노동자 건강검진 협력병원(이대서울병원)과 업무 협의"
           },
           {
             "url": "https://diet-calories.com/%EC%A1%B0%EC%9D%80%EA%B8%88%EA%B0%95%EB%B3%91%EC%9B%90-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EC%A2%85%ED%95%A9%EA%B2%80%EC%A7%84-%EA%B5%AD%EA%B0%80%EA%B2%80%EC%A7%84/",
             "domain": "diet-calories.com",
             "title": "조은금강병원 건강검진 비용 (종합검진 국가검진 예약) - 건강 도우미",
             "snippet": "# 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) ... Image: 조은금강병원 건강검진 비용 (종합검진 국가검진 예약) 1 ... 네, 조은금강병원은 국민건강보험공단에서 각종 성인질병 및 암질환을 조기에"
+          },
+          {
+            "url": "https://www.believesewoong.co.kr/center/healthexamination",
+            "domain": "www.believesewoong.co.kr",
+            "title": "안내 - 빌리브세웅병원",
+            "snippet": "| Image 스탠다드 종합검진 | Image 디럭스 종합검진 | Image 프리미엄 종합검진 ... 소개내용 | 각종 성인병 예방과 주요 장기의 질병을 조기 발견을 위한 성인남녀의"
           },
           {
             "url": "https://www.jangbaro.co.kr/pages/phycheck_fit.php",
@@ -4481,22 +4299,16 @@
             "snippet": "# 60대 건강검진 비용 | 종합검진부터 국가검진까지 가격 비교 및 추천 항목 ... 본문에서는 종합 건강검진 비용, 국가검진 정보, 병원별 가격 차이 등을 상세히 소개합니다!"
           },
           {
-            "url": "https://www.si.re.kr/sites/default/files/2007-R-25_0.pdf",
-            "domain": "www.si.re.kr",
-            "title": "시정연 2007-R-25",
-            "snippet": "상품명 | | 주요 검진 내용 | 비용 ... 종합 | | 암, 성인병 진단을 위한 검진 | 50대 기준 100만원 ... 하버디대 파트너헬스케이 제공"
+            "url": "https://diet-calories.com/%EC%86%A1%EB%8F%84-%EC%A7%84%ED%97%AC%EC%8A%A4-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84%EC%84%BC%ED%84%B0-%EB%B9%84%EC%9A%A9-%EC%98%88%EC%95%BD-%EC%BC%80%EC%96%B4/",
+            "domain": "diet-calories.com",
+            "title": "송도 진헬스 건강검진센터 비용 및 예약 안내 - 건강 도우미",
+            "snippet": "# 송도 진헬스 건강검진센터 비용 및 예약 안내 ... 베이직종합검진 | 618,000원 | 668,000원 ... 송도 진헬스케어는 국민건강보험공단에서 각종 성인병, 생활습관형 질환, 암질환 등을 조기에"
           },
           {
             "url": "https://redwinters.com/2026-%EC%A2%85%ED%95%A9-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%EB%B9%84%EC%9A%A9-%EB%B9%84%EA%B5%90-%EB%B0%8F-%ED%95%AD%EB%AA%A9-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%8B%A4%EB%B9%84/",
             "domain": "redwinters.com",
             "title": "2026 종합 건강검진 비용 비교 및 항목 추천 가이드 (실비 환급, 주의사항, 과태료 총정리) - 레윈의 블로그",
             "snippet": "2026 종합 건강검진 평균 비용 및 병원별 차이 ... 검진 전날의 사소한 습관이 결과 수치를 왜곡하여 ‘재검사’라는 시간 낭비를 초래할 수 있습니다."
-          },
-          {
-            "url": "https://ch.cauhs.or.kr/ghealth/conts/102001004000000.do",
-            "domain": "ch.cauhs.or.kr",
-            "title": "중앙대학교병원 | 일반검진센터",
-            "snippet": "항공기 건강진단서의 종류와 유효기간에 관한 표 입니다. ... 10종), 심전도, 흉부X-ray, 안과 정밀 검진, 이비인후과 정밀 검진 ... 검진예약 및 비용 ... 건강검진 문의 1800-1114"
           },
           {
             "url": "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/news/news/6647502.html",
@@ -4507,14 +4319,321 @@
         ]
       },
       {
+        "keyword": "고혈압낮추는방법",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 13900,
+        "organic_provider": "codex_native_search",
+        "organic_query": "고혈압 낮추는 방법",
+        "organic_results": [
+          {
+            "url": "https://www.guideline.or.kr/newsletter/vol1603/vol1603/file/201603_03.pdf",
+            "domain": "www.guideline.or.kr",
+            "title": "발간등록번호\n11-1352159-000419-01\n나와 가족을 위한 \n고혈압 \n예방과 관리",
+            "snippet": "실천 방법 ... 혈압을 낮추는 식단을 알고, 필요할 경우 적절히 활용합니다. ... ▶ \u0007고혈압을 낮추기 위한 DASH 식사 요법 식습관을 가집니다. ... ·\u0007채식주의자들은 육식을 주로"
+          },
+          {
+            "url": "https://snuh.re.kr/hypertension-treatment-guide-blood-pressure-management-strategy",
+            "domain": "snuh.re.kr",
+            "title": "고혈압 완전 관리 가이드: 약물 치료부터 생활 습관 교정까지 혈압을 낮추는 모든 것",
+            "snippet": "# 고혈압 완전 관리 가이드: 약물 치료부터 생활 습관 교정까지 혈압을 낮추는 모든 것 ... 대한고혈압학회의 기준에 따르면 성인에서 수축기 혈압 140mmHg 이상 또는 이완기"
+          },
+          {
+            "url": "https://www.goe.go.kr/resource/old/BBSMSTR_000000030131/BBS_202208100122513280.pdf",
+            "domain": "www.goe.go.kr",
+            "title": "○ 약물 치료  \n- 가장 간단하고 쉬운 고혈압 관리 방법  \n- 충분한 생활습관 개선 등",
+            "snippet": "- 가장 간단하고 쉬운 고혈압 관리 방법 ... ○ 인슐린이 부족하면 혈액 속의 혈당이 에너지로 이용되지 못하고 혈액 속에 쌓여 고혈당 증상이 나타남 ... -"
+          },
+          {
+            "url": "https://www.heart.org/-/media/Healthy-Living-Files/LE8-Fact-Sheets/LE8_Blood_Pressure_Korean.pdf?sc_lang=en",
+            "domain": "www.heart.org",
+            "title": "혈압 관리 방법",
+            "snippet": "# 혈압 관리 방법 ... 심장마비, 뇌졸중, 치매, 심부전, 신장 질환/신부전, 시력 상실 등 다른 건강 문제의 원인이 될 수 있습니다. ... 일부 약국, 의원,"
+          },
+          {
+            "url": "https://ksn.or.kr/upload/general/ksn_news/ksn_cardnews_230829.pdf",
+            "domain": "ksn.or.kr",
+            "title": "고혈압 낮추는 가장 쉬운 방법 1편",
+            "snippet": "고혈압 낮추는 가장 쉬운 방법 1편콩팥의 역할"
+          },
+          {
+            "url": "https://ksn.or.kr/upload/general/ksn_news/ksn_cardnews_230913.pdf",
+            "domain": "ksn.or.kr",
+            "title": "고혈압 낮추는 가장 쉬운 방법 3편",
+            "snippet": "저는 콩팥병이고, 고혈압은 없는데... ... 만성 콩팥병에서 단계가 진행되면 말기 ... 혈압 조절이 결국 콩팥병의 시작을 막고,"
+          },
+          {
+            "url": "https://home.catholic.or.kr/bbsm/bbs_view.asp?Page=36&SORT=C&id=403821&menu=4781&num=874",
+            "domain": "home.catholic.or.kr",
+            "title": "GOODNEWS 게시판 - 고혈압 낮추는 방법<펌>",
+            "snippet": "우선 귀 뒤쪽에 있는 강압구에 엄지손가락을 대고 귀 표면을 검지로 눌러준다. ... 또 귓불을 당겨주면 뒷목 부위의 혈액순환을 원활하게 해주고 고혈압 환자 특유의 뒷목이 뻣뻣해지는"
+          },
+          {
+            "url": "https://life-healthcare.tistory.com/entry/%EA%B3%A0%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B0%A9%EB%B2%95-4%EA%B0%80%EC%A7%80%EC%99%80-%ED%98%88%EA%B4%80%EB%B2%BD%EC%9D%84-%EB%84%93%ED%9E%88%EB%8A%94-%EB%8C%80%EC%8B%9CDASH-%EC%8B%9D%EB%8B%A8-%EC%88%98%EC%B9%99",
+            "domain": "life-healthcare.tistory.com",
+            "title": "고혈압 낮추는 방법 4가지와 혈관벽을 넓히는 대시(DASH) 식단 수칙 :: 헬스케어 라이프",
+            "snippet": "## 고혈압 낮추는 방법 4가지와 혈관벽을 넓히는 대시(DASH) 식단 수칙 ... 정기 검진이나 가정용 혈압계를 통해 최고혈압 수치가 130 mmHg~139mmHg 이상으로 나오는 '고혈압 전단계' 혹은"
+          },
+          {
+            "url": "https://www.chosun.com/culture-life/health/2021/04/17/JYQDJQ7JMZHSNHXQQRWOPFOXF4/",
+            "domain": "www.chosun.com",
+            "title": "고혈압 환자들이 약 없이 혈압 낮추는 방법 15가지",
+            "snippet": "혈압이 높은 게 뭐가 문젤까 싶지만 고혈압은 전신 건강을 망가트리는 주범 중 하나다. ... 미국의 건강매체 ‘메디컬 뉴스 투데이(Medical News Today)’에 게재된 약 없이 혈압"
+          },
+          {
+            "url": "https://ttobaklife.tistory.com/entry/%EA%B3%A0%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B0%A9%EB%B2%95",
+            "domain": "ttobaklife.tistory.com",
+            "title": "고혈압 낮추는 방법",
+            "snippet": "# 고혈압 낮추는 방법 ... 고혈압 낮추는 방법의 핵심은 짜게 먹는 습관을 줄이고, ... * 김치, 장아찌, 젓갈은 한 번에 먹는 양을 줄입니다. ... 다만"
+          }
+        ]
+      },
+      {
+        "keyword": "아르기닌효능",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-Consumer/",
+              "title": "Dietary Supplements for Exercise and Athletic Performance - Consumer",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.nccih.nih.gov/health/bodybuilding-and-performance-enhancement-supplements",
+              "title": "Bodybuilding and Performance Enhancement Supplements | NCCIH",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2314197",
+              "title": "국립국어원 온용어",
+              "excerpt_chars": 426
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2314197",
+                  "title": "국립국어원 온용어",
+                  "excerpt_chars": 426
+                },
+                {
+                  "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2314587",
+                  "title": "국립국어원 온용어",
+                  "excerpt_chars": 733
+                },
+                {
+                  "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2314196",
+                  "title": "국립국어원 온용어",
+                  "excerpt_chars": 463
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-Consumer/",
+                  "title": "Dietary Supplements for Exercise and Athletic Performance - Consumer",
+                  "excerpt_chars": 8000
+                },
+                {
+                  "url": "https://www.nccih.nih.gov/health/bodybuilding-and-performance-enhancement-supplements",
+                  "title": "Bodybuilding and Performance Enhancement Supplements | NCCIH",
+                  "excerpt_chars": 8000
+                },
+                {
+                  "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2314197",
+                  "title": "국립국어원 온용어",
+                  "excerpt_chars": 426
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
+          }
+        }
+      },
+      {
+        "keyword": "이노시톨효능",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://cityfarm.bucheon.go.kr/site/program/board/basicboard/view?boardid=622397&boardtypeid=26308&menuid=142005005002&pagesize=10",
+              "title": "작물별 재배요령 | 작물재배법 | 정보나눔터 | 도시농업한마당",
+              "excerpt_chars": 1261
+            },
+            {
+              "url": "https://mcee.go.kr/home/web/board/read.do;jsessionid=i8A8Rz87D1O6Rw0No12Ll4c1seDkND-qyscXlSnk.mehome2?boardCategoryId=39&boardId=1594050&boardMasterId=1&decorator=&maxIndexPages=10&maxPageItems=10&menuId=&orgCd=&pagerOffset=2580&searchKey=&searchValue=",
+              "title": "기후에너지환경부    \r\n        상세 - 이삭물수세미에서 피부염증 개선 효능 확인",
+              "excerpt_chars": 3099
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        }
+      },
+      {
+        "keyword": "건강보험료조회",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 9080,
+        "organic_provider": "codex_native_search",
+        "organic_query": "건강보험료 조회",
+        "organic_results": [
+          {
+            "url": "https://www.nhic.kr/nhis/index.do",
+            "domain": "www.nhic.kr",
+            "title": "국민건강보험",
+            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
+          },
+          {
+            "url": "https://www.nhis.or.kr/nhis/index.do?from=AppAgg.com",
+            "domain": "www.nhis.or.kr",
+            "title": "국민건강보험",
+            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
+          },
+          {
+            "url": "https://nhic.kr/nhis/index.do",
+            "domain": "nhic.kr",
+            "title": "국민건강보험",
+            "snippet": "* 보험료 고지내역 조회 타 사이트 이동 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자"
+          },
+          {
+            "url": "https://go.lazyscheme.com/nhis/",
+            "domain": "go.lazyscheme.com",
+            "title": "국민건강보험공단 홈페이지·고객센터·지사찾기",
+            "snippet": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다. ... 건강보험25시(구 The건강보험) 앱에서도 보험료 조회·납부, 환급금 조회·신청과 진료내역 확인을 처리할 수"
+          },
+          {
+            "url": "https://nhissmc.net/nhis/index.do",
+            "domain": "nhissmc.net",
+            "title": "국민건강보험",
+            "snippet": "* 건강검진 대상조회 ... 온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원, 본인부담완화 상세보기 * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가"
+          },
+          {
+            "url": "https://xn--939a1gynq0rn3nmm0b.kr/nhis/index.do",
+            "domain": "xn--939a1gynq0rn3nmm0b.kr",
+            "title": "국민건강보험",
+            "snippet": "* 건강검진 대상조회 ... * 본인부담상한제 건강보험 본인일부부담금 총액이 본인부담상한액을 초과하는 경우 초과액을 공단에서 부담하는 제도입니다.온라인이용 가능 신청대상 지역가입자, 직장가입자 분야 보험료 상세보기】 ... *"
+          },
+          {
+            "url": "https://www.xn--939a1gynmpm0ukuoxtbq59g.kr/nhis/index.do",
+            "domain": "www.xn--939a1gynmpm0ukuoxtbq59g.kr",
+            "title": "국민건강보험",
+            "snippet": "* 건강검진 대상조회 ... 온라인이용 가능 신청대상 지역가입자, 직장가입자, 피부양자 분야 환급금, 현금급여, 의료비지원, 본인부담완화 상세보기 * 본인일부부담금 산정특례 제도 진료비 본인부담이 높고 장기간 치료가"
+          },
+          {
+            "url": "https://nps.or.kr/html/download/insure_cal_download2013.pdf",
+            "domain": "nps.or.kr",
+            "title": "National Pension Service",
+            "snippet": "<td>사회보험료 자동이체 신청<br>인터넷 지로 납부<br>건강보험료 연말정산 보수총액통보서 신고</td> ... <td>사회보험료 고지/납부 현황 조회<br>사회보험료 산출내역 조회<br>건강보험료 사업장 가입자별 고지내역 조회<br>건강보험료 연말정산 산출내역 조회<br>사업장 직원 조회</td>"
+          },
+          {
+            "url": "https://www.jdnc.or.kr/notice/notice.htm?act=download&no=3&seq=907",
+            "domain": "www.jdnc.or.kr",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "상단에 국민건강보험 로고와 메뉴(민원서비스, 건강모아, 정책·제도, 정보공개, 국민소통·참여, 공단소개)가 보이고, 중앙 배너에는 “국민건강보험은 소통과 배려로 국민과 함께 하겠습니다.” ... 아래 “자주 찾는 서비스” 영역에서 탭"
+          },
+          {
+            "url": "https://www.jdnc.or.kr/notice/notice.htm?act=download&no=3&page=1&qtype=title&query=&seq=907",
+            "domain": "www.jdnc.or.kr",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "상단에 국민건강보험 로고와 메뉴(민원서비스, 건강모아, 정책·제도, 정보공개, 국민소통·참여, 공단소개)가 보이고, 중앙 배너에는 “국민건강보험은 소통과 배려로 국민과 함께 하겠습니다.” ... ③ 조회 ... 입력 항목은 “발급용도"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "건강보험료조회",
+          "executed_query": "건강보험료 조회",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "raw_sha256": "6640d217251b6dbe6570ed01f3fffa6e6465bc889d4aad97a8376f41c413fb7b",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "보험료 고지내역 조회"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "보험료 고지내역 조회"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "보험료 고지내역 조회"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "보험료 조회·납부와 증명서 발급은 국민건강보험 홈페이지 민원서비스 또는 건강보험25시 앱에서 처리할 수 있습니다."
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "건강검진 대상조회"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "건강검진 대상조회"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "건강검진 대상조회"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "건강보험료 사업장 가입자별 고지내역 조회"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "상단에 국민건강보험 로고와 메뉴"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "상단에 국민건강보험 로고와 메뉴"
+            }
+          ]
+        }
+      },
+      {
         "keyword": "심장초음파비용",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
           "insufficient_relevant_sites",
-          "low_search_relevance"
+          "low_search_relevance",
+          "concentrated_search_results",
+          "dominant_search_results"
         ],
-        "monthly_search": 4580,
+        "monthly_search": 4450,
         "organic_provider": "codex_native_search",
         "organic_query": "심장 초음파 비용",
         "organic_results": [
@@ -4525,10 +4644,28 @@
             "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할수 있는 건강진단 프로그램입니다. ... 검사항목 | 비용 ... 심장+부정맥(A) | 기본 +심장 초음파, 경동맥"
           },
           {
+            "url": "https://health.tickettime.co.kr/?cat=%EC%8B%AC%EC%9E%A5%C2%B7%ED%98%88%EA%B4%80",
+            "domain": "health.tickettime.co.kr",
+            "title": "‘심장·혈관’ 비급여 진료비 통계 | 진료비타임",
+            "snippet": "건강보험심사평가원(HIRA) 공시 데이터를 기준으로 진료과·신체부위별 대표 항목의 전국 평균 비용을 정리했습니다. ... * 연부조직정밀초음파 비용 - 지역별·병원 종별 평균 126,416원 ... * 손가락관절초음파 비용 -"
+          },
+          {
             "url": "https://seosanmc.or.kr/uploads/content/%EB%B9%84%EA%B8%89%EC%97%AC%EC%A7%84%EB%A3%8C%EB%B9%84%EC%9A%A9_20250331.pdf",
             "domain": "seosanmc.or.kr",
             "title": "Ⅰ. 행위\n분류  | 진료비항목  |  | 가격정보(단위: 원)  |  |  |  |  |",
             "snippet": "비용 | 치료재료대 ... 초음파 검사료 | 두경부-경부 초음파-갑상선·부갑상선 제외한 경부 | EB415 | | 8 0,000 | | | O | O | 21.01.01"
+          },
+          {
+            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=39&site=001&user_code=009015000",
+            "domain": "www.brmh.org",
+            "title": "| 서울대학교병원운영 서울특별시보라매병원",
+            "snippet": "비급여 진료비 행위료 관련 표이며, 중분류, 분류, 항목(명칭,코드), 진료비용등(단위:원)(구분,비용,최저비용, 최대비용, 치료재료대조합여부, 약제비포함여부), 특이사항, 최종변경일로 구성되어 있습니다. ... 초음파 검사료 | 초음파 검사료 | 심장-경흉부 심초음파-단순"
+          },
+          {
+            "url": "https://health.tickettime.co.kr/",
+            "domain": "health.tickettime.co.kr",
+            "title": "2026년 비급여 진료비 지역별 통계 | 진료비타임",
+            "snippet": "지역별·종별 통계 비교자세히 보기】 두경부·갑상선 HIRA 공시 전국 평균 1,204,639원 두경부·갑상선 17개 시도 통계 갑상선 고주파절제술 비용 - 지역별·병원 종별 평균 2026년 9월 16일 기준"
           },
           {
             "url": "https://seoul.eumc.ac.kr/asset/dwfile/260313%20%EC%9B%B0%EB%8B%88%EC%8A%A4%20%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%84%BC%ED%84%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EC%84%B8%EB%A1%9C%ED%98%95.pdf",
@@ -4537,34 +4674,16 @@
             "snippet": "연령, 가족력, 병력을 고려하여 한국인에게 호발하는 암, 심혈관, 뇌혈관질환을 조기발견하고 예방할 수 있는 건강진단 프로그램입니다. ... <th>비용</th> ... <td>기본 + 흉부 저선량 CT, 갑상선 초음파,"
           },
           {
-            "url": "https://dongtan.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_cyber&screen=ptm120",
-            "domain": "dongtan.hallym.or.kr",
-            "title": "비급여진료비용 - 한림대학교동탄성심병원",
-            "snippet": "초음파 | 초음파 | (EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800 | | | | | | 2026-04-01 ... 초음파 | 초음파 | (EMU)응급-복합표적초음파-중증외상 | EB523"
-          },
-          {
             "url": "https://seoul.eumc.ac.kr/m/wellness/private/private0103.do",
             "domain": "seoul.eumc.ac.kr",
             "title": "웰니스건강증진센터 | 이대서울병원",
             "snippet": "WELLNESS CEO(검사항목, 비용) ... 퍼플 | 여성 | 주요암 + 경동맥 초음파, 심장(관상동맥_3D) CT, 뇌MRI+MRA, 여성호르몬, 스트레스, 동맥경화도, ... 남성 | 주요암 + 경동맥 초음파,"
           },
           {
-            "url": "https://www.brmh.org/medi_info/non_medifee.do?page=60&site=001&user_code=009017001",
-            "domain": "www.brmh.org",
-            "title": "진료비 안내 | 서울대학교병원운영 서울특별시보라매병원",
-            "snippet": "비급여 진료비 행위료 관련 표이며, 중분류, 분류, 항목(명칭,코드), 진료비용등(단위:원)(구분,비용,최저비용, 최대비용, 치료재료대조합여부, 약제비포함여부), 특이사항, 최종변경일로 구성되어 있습니다. ... 초음파 검사료 | 초음파 검사료 | 초음파검사-심장-경흉부심초음파-일반 |"
-          },
-          {
-            "url": "https://weclinic.kr/info",
-            "domain": "weclinic.kr",
-            "title": "도봉연세위 내과",
-            "snippet": "비급여 비용안내 ... 진정 내시경 환자 관리료 III | 대장 내시경 수면 관리료 | 80,000 ... 심장 초음파 | 100,000 ... 복부 초음파 ... 단순"
-          },
-          {
-            "url": "https://repository.hira.or.kr/bitstream/2019.oak/1678/2/%EC%9E%A5%EA%B8%B0%EC%9D%B4%EC%8B%9D%20%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98%20%EC%A0%81%EC%9A%A9%20%ED%99%95%EB%8C%80%EB%B0%A9%EC%95%88.pdf",
-            "domain": "repository.hira.or.kr",
-            "title": "연구결과점검보고서",
-            "snippet": "<th>비용(원)</th> ... <tr><td>분자병리</td><td>결핵균 및 리팜핀 내성검사 [실시간 이중중합효소연쇄반응] 나-595-4</td><td>71,240</td><td>1</td><td>71,240</td></tr> ... <tr><td>처치</td><td>사후처치+사후시트</td><td>43,300</td><td>1</td><td>43,3"
+            "url": "https://dongtan.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_cyber&screen=ptm120",
+            "domain": "dongtan.hallym.or.kr",
+            "title": "비급여진료비용 - 한림대학교동탄성심병원",
+            "snippet": "초음파 | 초음파 | (EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800 | | | | | | 2026-04-01 ... 초음파 | 초음파 | (EMU)응급-복합표적초음파-중증외상 | EB523"
           },
           {
             "url": "https://www.rapigenhc.com/nonpayment/payment.php",
@@ -4576,7 +4695,7 @@
             "url": "https://www.modoodoc.com/hospital/4452/%EC%B0%B8%ED%8F%AC%EB%8F%84%EB%82%98%EB%AC%B4%EB%B3%91%EC%9B%90-%EC%84%9C%EC%9A%B8-%EC%96%91%EC%9E%AC%EB%8F%99",
             "domain": "www.modoodoc.com",
             "title": "참포도나무병원 후기/가격/비용 (2026) | 모두닥",
-            "snippet": "증상/치료, 궁금한 점이 있나요? ... 💬 무엇이든 물어보세요 혹은, 의료상담 서비스에 다양한 게시글 보러가기 ... ※ 비급여 항목의 경우, 추가비용 등으로 실제 가격과 상이할 수"
+            "snippet": "* 증식치료 ... 사지관절부위(Prolotherapy 10 (OS)) | 100,000 ~ 200,000 ... * 심장-경흉부 심초음파 ... 간·담낭·담도·비장·췌장-일반(초음파검사- 상복부 (B)) | 200,000 ... 손가락(Joint SONO) | 100,000"
           }
         ],
         "search_review": {
@@ -4584,8 +4703,8 @@
           "query": "심장초음파비용",
           "executed_query": "심장 초음파 비용",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "raw_sha256": "6e21463be804c01c2a9d4ec768c029edcff30b0dfce2da9a159e440fae0e82fc",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "raw_sha256": "a26d76d63f642e1910c5aac56a8b0843af2a0e44e76f7b15cf9a629d8f2e8432",
           "decisions": [
             {
               "result_index": 0,
@@ -4595,37 +4714,37 @@
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "두경부-경부 초음파-갑상선·부갑상선 제외한 경부"
+              "quote": "연부조직정밀초음파 비용 - 지역별·병원 종별 평균 126,416원"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "기본 + 흉부 저선량 CT, 갑상선 초음파,"
+              "quote": "두경부-경부 초음파-갑상선·부갑상선 제외한 경부"
             },
             {
               "result_index": 3,
-              "relevant": true,
-              "quote": "(EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800"
+              "relevant": false,
+              "quote": "초음파 검사료 | 초음파 검사료 | 심장-경흉부 심초음파-단순"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "경동맥 초음파, 심장(관상동맥_3D) CT"
+              "quote": "갑상선 고주파절제술 비용 - 지역별·병원 종별 평균"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "초음파 검사료 | 초음파 검사료 | 초음파검사-심장-경흉부심초음파-일반 |"
+              "quote": "기본 + 흉부 저선량 CT, 갑상선 초음파,"
             },
             {
               "result_index": 6,
-              "relevant": true,
-              "quote": "심장 초음파 | 100,000"
+              "relevant": false,
+              "quote": "주요암 + 경동맥 초음파, 심장(관상동맥_3D) CT"
             },
             {
               "result_index": 7,
-              "relevant": false,
-              "quote": "결핵균 및 리팜핀 내성검사"
+              "relevant": true,
+              "quote": "(EMU)응급,중환자초음파(1부위)-심장 | EB521 | | 61,800"
             },
             {
               "result_index": 8,
@@ -4635,105 +4754,26 @@
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "※ 비급여 항목의 경우, 추가비용 등으로 실제 가격과 상이할 수"
+              "quote": "심장-경흉부 심초음파 ... 간·담낭·담도·비장·췌장-일반(초음파검사- 상복부 (B)) | 200,000"
             }
           ]
         }
       },
       {
-        "keyword": "발톱무좀치료방법",
+        "keyword": "고지혈증증상",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=201325",
-              "title": "| 화폐모조품 이용신청 | 민원신청 | 민원 | 대국민 서비스 |  한국은행 홈페이지",
-              "excerpt_chars": 310
-            },
-            {
-              "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z20&menuNo=200997&schAreaSeCd=z20",
-              "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
-              "excerpt_chars": 989
-            },
-            {
-              "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z22&menuNo=200997&schAreaSeCd=z22",
-              "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
-              "excerpt_chars": 1027
+              "url": "https://tax.nonsan.go.kr/health/html/sub05/050805.html",
+              "title": "심근경색 > 질환별건강관리 > 정보마당 >  보건소",
+              "excerpt_chars": 1185
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
-          },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.bok.or.kr/portal/main/contents.do?menuNo=201325",
-                  "title": "| 화폐모조품 이용신청 | 민원신청 | 민원 | 대국민 서비스 |  한국은행 홈페이지",
-                  "excerpt_chars": 310
-                },
-                {
-                  "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z20&menuNo=200997&schAreaSeCd=z20",
-                  "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
-                  "excerpt_chars": 989
-                },
-                {
-                  "url": "https://www.bok.or.kr/portal/singl/coxhResve/viewCoxhLmt.do?areaSeCd=z22&menuNo=200997&schAreaSeCd=z22",
-                  "title": "| 화폐교환 한도 | 화폐 교환 기준 및 방법 | 화폐교환 및 주화수급 | 대국민 서비스 |  한국은행 홈페이지",
-                  "excerpt_chars": 1027
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "no_changed_source"
-          }
-        }
-      },
-      {
-        "keyword": "뇌MRI비용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=377284&mid=a10503010100&nPage=168&tag=",
-              "title": "뇌·뇌혈관 MRI 검사, 뇌질환 의심 등 꼭 필요한 경우에만 건강보험 보장됩니다 < 전체 < 보도자료 < 알림 : 힘이 되는 평생 친구, 보건복지부",
-              "excerpt_chars": 2575
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "건강보험료계산",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.nhis.or.kr/announce/wbhaec11100m01.do",
-              "title": "건강보험 및 노인장기요양보험 운영 체계 < 일반현황 | 경영공시",
-              "excerpt_chars": 2238
-            },
-            {
-              "url": "https://www.nhis.or.kr/nhis/index.do?from=AppAgg.com",
-              "title": "국민건강보험",
-              "excerpt_chars": 2933
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "other"
           }
         }
       }
@@ -4744,553 +4784,387 @@
       {
         "round": 1,
         "offered_keywords": [
-          "로즈힙 오일",
-          "바디워시",
-          "도수치료",
+          "폴리코사놀",
+          "이노시톨",
+          "콜레스테롤수치",
           "이비인후과",
-          "아데노신 크림",
-          "골프웨어",
-          "대상포진예방접종가격",
+          "PDRN 앰플",
+          "아르기닌",
+          "도수치료",
           "정형외과",
-          "여주",
-          "샤워기헤드",
+          "맥주효모",
+          "비타민B",
+          "대상포진예방접종가격",
+          "독감예방접종",
+          "시트룰린",
+          "아르기닌효능",
           "대상포진병원",
           "스포츠",
-          "립밤",
-          "바이오더마",
-          "CT비용",
-          "독감예방접종",
-          "바디로션",
-          "재생크림",
-          "암보험비교사이트",
+          "여성 영양제",
+          "고혈압낮추는방법",
           "산부인과",
-          "새치 샴푸",
-          "리스키",
-          "건강보험료조회",
+          "바디스크럽",
+          "탈모샴푸",
+          "콜레스테롤낮추는음식",
           "마그네슘",
-          "홍국",
-          "헤르페스입술",
-          "대상포진주사가격",
-          "콘드로이친",
-          "샤워기필터",
-          "위내시경비용",
+          "흑염소 진액",
+          "PDRN",
+          "CT비용",
           "대상포진증상",
-          "이눌린",
-          "샤워기",
-          "경동맥초음파비용",
+          "프로바이오틱스",
+          "LDL콜레스테롤",
+          "암보험비교사이트",
           "하이록스",
-          "나이아신아마이드 앰플",
-          "살리실산",
-          "발톱무좀치료방법",
+          "헤어 트리트먼트",
+          "고지혈증증상",
+          "건강보험료조회",
+          "립마스크",
+          "아누아세럼",
+          "혈관에좋은음식",
           "위고비",
-          "비오틴 5000",
-          "코코넛오일",
-          "건강보험료계산",
+          "새치 샴푸",
+          "이노시톨효능",
+          "대상포진주사가격",
           "나이아신아마이드",
-          "낫토키나제",
-          "아로마오일",
-          "종합건강검진비용",
-          "코엔자임Q10",
-          "히알루론산",
-          "호호바오일",
-          "갑상선에좋은음식",
+          "펩타이드 세럼",
+          "히알루론산앰플",
+          "위내시경비용",
+          "클렌징폼",
+          "HDL콜레스테롤",
+          "경동맥초음파비용",
           "요가매트",
-          "석류즙",
-          "립스틱",
-          "심장초음파비용",
+          "글루타치온 필름",
+          "유산균추천",
+          "발톱무좀치료방법",
           "스크린골프",
-          "갱년기 영양제",
-          "타이블라우스",
-          "보험비교",
+          "백수오",
+          "매스틱화장품",
+          "건강보험료계산",
           "파킨슨병",
-          "히비스커스"
+          "미녹시딜여자",
+          "종합건강검진비용",
+          "대장암초기증상"
         ],
         "proposals": [
           {
             "keyword": "CT비용",
-            "reason": "월 11,060회. 촬영 부위·조영제 사용·보험 적용에 따른 비용 확인 질문이 구체적이어서 조사할 가치가 있다.",
+            "reason": "네이버 월 10,840회. 검사 부위·조영제 사용·보험 적용 조건별 비용을 묻는 구체적 수요로 조사할 가치가 있다.",
             "search_query": "CT 비용"
           },
           {
-            "keyword": "건강보험료조회",
-            "reason": "월 9,150회. 보험료 고지 내역을 확인하는 절차와 인증 준비물을 찾는 수요로, 기존 환급금 조회 글과 목적이 다르다.",
-            "search_query": "건강보험료 조회"
-          },
-          {
             "keyword": "경동맥초음파비용",
-            "reason": "월 6,190회. 검사 예약 전 비용과 보험 적용 조건을 확인하려는 구체적인 의료 이용 수요가 있다.",
+            "reason": "네이버 월 5,960회. 검사 예약 전 비용과 보험 적용 조건을 확인하려는 중소 검색량 수요가 있어 조사할 만하다.",
             "search_query": "경동맥 초음파 비용"
           },
           {
             "keyword": "종합건강검진비용",
-            "reason": "월 4,950회. 유료 종합검진의 포함 항목과 추가 비용을 묻는 수요로, 기존 국가검진 대상자 안내와 목적이 다르다.",
+            "reason": "네이버 월 4,980회. 유료 검진의 포함 항목과 추가 비용 질문으로, 기존 국가검진 대상자 조회와 목적이 다르다.",
             "search_query": "종합 건강검진 비용"
           },
           {
-            "keyword": "심장초음파비용",
-            "reason": "월 4,580회. 검사 종류와 보험 적용 여부에 따른 본인부담 확인 수요가 있어 공식 비용 기준을 조사할 만하다.",
-            "search_query": "심장 초음파 비용"
+            "keyword": "고혈압낮추는방법",
+            "reason": "네이버 월 13,900회. 혈압 관리를 위한 일반적인 생활습관과 주의사항을 묻는 방법형 수요가 있어 조사할 만하다.",
+            "search_query": "고혈압 낮추는 방법"
           },
           {
-            "keyword": "발톱무좀치료방법",
-            "reason": "월 5,640회. 치료 방식과 진료 절차를 알고 싶은 구체적 수요가 있어 개인별 처방 없이 일반적인 공식 안내를 조사할 만하다.",
-            "search_query": "발톱 무좀 치료 방법"
+            "keyword": "아르기닌효능",
+            "reason": "네이버 월 40,990회. 성분의 효과와 근거 수준을 확인하려는 수요로, 효능 주장의 범위와 한계를 조사할 가치가 있다.",
+            "search_query": "아르기닌 효능"
+          },
+          {
+            "keyword": "이노시톨효능",
+            "reason": "네이버 월 22,930회. 성분명만의 검색보다 질문이 구체적이며, 알려진 효능의 근거와 섭취 주의사항을 조사할 만하다.",
+            "search_query": "이노시톨 효능"
           }
         ]
       },
       {
         "round": 2,
         "offered_keywords": [
-          "로즈힙 오일",
-          "바디워시",
-          "도수치료",
+          "폴리코사놀",
+          "이노시톨",
+          "콜레스테롤수치",
           "이비인후과",
-          "아데노신 크림",
-          "골프웨어",
-          "대상포진예방접종가격",
+          "PDRN 앰플",
+          "아르기닌",
+          "도수치료",
           "정형외과",
-          "여주",
-          "샤워기헤드",
+          "맥주효모",
+          "비타민B",
+          "대상포진예방접종가격",
+          "독감예방접종",
+          "시트룰린",
           "대상포진병원",
           "스포츠",
-          "립밤",
-          "바이오더마",
-          "독감예방접종",
-          "바디로션",
-          "재생크림",
-          "암보험비교사이트",
+          "여성 영양제",
           "산부인과",
-          "새치 샴푸",
-          "리스키",
+          "바디스크럽",
+          "탈모샴푸",
+          "콜레스테롤낮추는음식",
           "마그네슘",
-          "홍국",
-          "헤르페스입술",
-          "대상포진주사가격",
-          "콘드로이친",
-          "샤워기필터",
-          "위내시경비용",
+          "흑염소 진액",
+          "PDRN",
           "대상포진증상",
-          "이눌린",
-          "샤워기",
+          "프로바이오틱스",
+          "LDL콜레스테롤",
+          "암보험비교사이트",
           "하이록스",
-          "나이아신아마이드 앰플",
-          "살리실산",
+          "헤어 트리트먼트",
+          "고지혈증증상",
+          "건강보험료조회",
+          "립마스크",
+          "아누아세럼",
+          "혈관에좋은음식",
           "위고비",
-          "비오틴 5000",
-          "코코넛오일",
-          "건강보험료계산",
+          "새치 샴푸",
+          "대상포진주사가격",
           "나이아신아마이드",
-          "낫토키나제",
-          "아로마오일",
-          "코엔자임Q10",
-          "히알루론산",
-          "호호바오일",
-          "갑상선에좋은음식",
+          "펩타이드 세럼",
+          "히알루론산앰플",
+          "위내시경비용",
+          "클렌징폼",
+          "HDL콜레스테롤",
           "요가매트",
-          "석류즙",
-          "립스틱",
+          "글루타치온 필름",
+          "유산균추천",
+          "발톱무좀치료방법",
           "스크린골프",
-          "갱년기 영양제",
-          "타이블라우스",
-          "보험비교",
+          "백수오",
+          "매스틱화장품",
+          "건강보험료계산",
           "파킨슨병",
-          "히비스커스",
-          "EGF재생크림",
-          "뇌MRI비용",
+          "미녹시딜여자",
           "대장암초기증상",
-          "수면팩",
-          "우레아크림",
-          "MRI비용"
+          "바디워시",
+          "비오틴효과",
+          "심장초음파비용",
+          "가르시니아",
+          "PDRN효과",
+          "갑상선에좋은음식"
         ],
         "proposals": [
           {
-            "keyword": "뇌MRI비용",
-            "reason": "네이버 월 4,000회. 검사 전 비용 구성과 건강보험 적용 조건을 확인하려는 구체적인 의료 이용 수요가 있어 조사할 만하다.",
-            "search_query": "뇌 MRI 비용"
+            "keyword": "건강보험료조회",
+            "reason": "네이버 월 9,080회. 부과액·납부내역을 확인하려는 절차 수요로, 인증 준비물과 조회 방법을 조사할 가치가 있다.",
+            "search_query": "건강보험료 조회"
           },
           {
-            "keyword": "건강보험료계산",
-            "reason": "네이버 월 5,640회. 계산 자체의 실측 수요가 있으며, 가입 유형별 산정 기준과 계산 방법을 설명할 수 있는지 조사할 가치가 있다.",
-            "search_query": "건강보험료 계산"
+            "keyword": "심장초음파비용",
+            "reason": "네이버 월 4,450회. 검사 전 비용과 건강보험 적용 조건을 묻는 구체적 수요가 있어 공식 기준을 조사하기 좋다.",
+            "search_query": "심장 초음파 비용"
           },
           {
-            "keyword": "갑상선에좋은음식",
-            "reason": "네이버 월 4,580회. 음식과 갑상선 건강의 관계를 묻는 구체적 수요가 있어, 일반적인 식사 원칙과 주의사항의 공식 근거를 조사할 만하다.",
-            "search_query": "갑상선에 좋은 음식"
+            "keyword": "발톱무좀치료방법",
+            "reason": "네이버 월 5,630회. 일반적인 치료 방식과 주의사항에 관한 수요로, 개인별 처방 없이 공식 환자 안내를 조사할 수 있다.",
+            "search_query": "발톱 무좀 치료 방법"
           },
           {
-            "keyword": "헤르페스입술",
-            "reason": "네이버 월 20,920회. 입술에 생기는 헤르페스의 전파·재발·생활 주의사항에 관한 일반 건강정보 수요를 조사할 가치가 있다.",
-            "search_query": "헤르페스 입술"
+            "keyword": "고지혈증증상",
+            "reason": "네이버 월 27,120회. 증상으로 알아챌 수 있는지 묻는 수요로, 기존 수치 해석·생활관리 글과 구분해 조사할 가치가 있다.",
+            "search_query": "고지혈증 증상"
           }
         ]
       }
     ],
     "ranked_candidates": [
       {
-        "keyword": "헤르페스입술",
+        "keyword": "발톱무좀치료방법",
         "category": "건강",
-        "topic": "헤르페스입술 증상·전염 경로·재발과 치료의 기본 정보",
-        "intent": "입술 헤르페스는 어떤 증상이 있고 성병과 어떤 관계이며, 어떻게 전염·재발하고 치료하나요?",
-        "gap": "공식 자료로 증상·경과 표, 전염 예방과 진료 필요 신호 체크리스트, 항바이러스 크림의 한계를 정리합니다.",
-        "source_url": "https://medlineplus.gov/ency/article/000606.htm",
+        "topic": "발톱무좀치료방법: 먹는 약·바르는 약과 치료 전 확인사항",
+        "intent": "발톱무좀은 어떻게 치료하며, 먹는 약·바르는 약의 역할과 치료 전 확인사항은 무엇인가?",
+        "gap": "공식 본문의 경구·국소 치료 설명을 표로 정리하고, 복용약·간기능 확인과 민간요법 주의사항 체크리스트를 제공한다.",
+        "source_url": "https://mediahub.seoul.go.kr/archives/187780",
         "verified_sources": [
           {
-            "url": "https://medlineplus.gov/ency/article/000606.htm",
-            "original_url": "https://medlineplus.gov/ency/article/000606.htm",
-            "title": "Herpes - oral: MedlinePlus Medical Encyclopedia",
-            "checked_on": "2026-09-26",
-            "sha256": "1e778beff8f60f9d790b34adf986a05ad91d8447dc60fe86e6c58d854f737ba0",
-            "excerpt": "Herpes - oral Oral herpes is an infection of the lips, mouth, or gums due to the herpes simplex virus. It causes small, painful blisters commonly called cold sores or fever blisters. Oral herpes is also called herpes labialis. Causes Oral herpes is a common infection of the mouth area. It is usually caused by the herpes simplex virus type 1 (HSV-1). Most people in the United States are infected with this virus by age 20. After the first infection, the virus becomes dormant (an inactive state) in the nerve tissues in the face. Sometimes, the virus later reactivates, causing cold sores. Herpes virus type 2 (HSV-2) most often causes genital herpes . However, sometimes HSV-2 is spread to the mouth during oral sex, causing oral herpes. Herpes viruses spread most easily from individuals with an active outbreak or sore. You can catch this virus if you: Have intimate or personal contact with someone who is infected Touch an open herpes sore or something that has been in contact with the herpes virus, such as infected razors, towels, dishes, and other shared items Parents may spread the virus to their children during regular daily activities. Symptoms Some people get mouth ulcers when they first come into contact with HSV-1 virus. Others have no symptoms. Symptoms most often occur in kids between 1 and 5 years old. Symptoms may be mild or severe. They most often appear within 1 to 3 weeks after you come into contact with the virus. They may last up to 3 weeks. Warning symptoms include: Itching of the lips or skin around the mouth Burning near the lips or mouth area Tingling near the lips or mouth area Before blisters appear, you may have: Sore throat Fever Swollen glands in the face or neck Painful swallowing Blisters or a rash may form on your: Gums Lips Mouth Throat When blisters are present, it is called a herpes outbreak. You may have: Red blisters that break open and leak Small blisters filled with clear yellowish fluid Several smaller blisters that may grow together into a large blister Yellow and crusty blister as it heals, which eventually turns into pink skin Symptoms may be triggered by: Menstruation or hormone changes Being out in the sun Fever Stress If the symptoms return later, they are usually milder. Exams and Tests Your health care provider can diagnose oral herpes by looking at your mouth area. Sometimes, a sample of the sore is taken and sent to a laboratory for closer examination. Tests may include: Viral culture Viral DNA test Tzanck test to check for HSV Treatment Symptoms will go away on their own without treatment in 1 to 2 weeks. Your provider can prescribe medicines to fight the virus. This is called antiviral medicine. It can help reduce pain and make your symptoms go away sooner. Medicines used to treat mouth sores include: Acyclovir Famciclovir Valacyclovir These medicines work best if you take them when you have warning signs of a mouth sore, before any blisters develop. If you get mouth sores frequently, you may need to take these medicines all the time. Antiviral skin creams may also be used. However, they are expensive and often only shorten the outbreak by a few hours to a day. The following steps can also help make you feel better: Apply ice in a washcloth or a warm washcloth to the sores to help ease pain. Wash the blisters gently with germ-fighting (antiseptic) soap and water. This helps prevent spreading the virus to other body areas. Avoid hot beverages, spicy and salty foods, and citrus. Gargle with cool water or eat fruit-flavored ice pops. Rinse with salt water. Take a pain reliever such as acetaminophen (Tylenol) or ibuprofen (Advil, Motrin). Outlook (Prognosis) Oral herpes most often goes away by itself in 1 to 2 weeks. However, it may come back. Herpes infection may be severe and dangerous if: It occurs in or near the eye. You have a weakened immune system due to certain diseases or medicines. Possible Complications Herpes infection of the eye is a leading cause of blindness in the United States. It causes scarring of the cornea (the surface of the eye). Other complications of oral herpes may include: Return of mouth sores and blisters Spread of the virus to other skin areas Bacterial skin infection Widespread body infection, which may be life threatening in people who have a weakened immune system due to atopic dermatitis , cancer , or HIV infection When to Contact a Medical Professional Contact your provider if you have: Symptoms that are severe or that don't go away after 2 weeks Sores or blisters near your eyes Herpes symptoms and a weakened immune system due to certain diseases or medicines Prevention Here are some tips to prevent mouth sores: Apply sunblock or lip balm containing zinc oxide to your lips before you go outside. Apply a moisturizing balm to prevent your lips from becoming too dry. Avoid direct contact with herpes sores. Wash items such as towels and linens in boiling hot water after each use. Do not share utensils, straws, glasses, or other items if someone has oral herpes. Do not have oral sex if you have oral herpes, especially if you have blisters. You can spread the virus to the genitals. Both oral and genital herpes viruses can sometimes be spread, even when you do not have mouth sores or blisters. Alternative Names Cold sore; Fever blister; Oral herpes simplex; Herpes labialis; Herpes simplex Images Herpes simplex - close-up References Dinulos JGH. Warts, herpes simplex, and other viral infections. In: Dinulos JGH, ed. Habif's Clinical Dermatology: A Color Guide in Diagnosis and Therapy . 7th ed. Philadelphia, PA: Elsevier; 2021:chap 12. Schiffer JT, Corey L. Herpes simplex virus. In: Blaser MJ, Cohen JI, Holland SM, et al, eds. Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases . 10th ed. Philadelphia, PA: Elsevier; 2026:chap 142. Whitley RJ, Gnann JW. Herpes simplex virus infections. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 345. Review Date 7/3/2025 Updated by: Linda J. Vorvick, MD, Clinical Professor Emeritus, Department of Family Medicine, UW Medicine, School of Medicine, University of Washington, Seattle, WA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Cold Sores",
-            "locator_origin": "model_reported_locator"
-          },
-          {
-            "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-            "original_url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-            "title": "Acyclovir Topical: MedlinePlus Drug Information",
-            "checked_on": "2026-09-26",
-            "sha256": "ce307381a6548b87c906745452810a1529c4de091e6da3a662c766da383ab35c",
-            "excerpt": "Acyclovir Topical pronounced as (ay sye' kloe veer) Why is this medication prescribed? Acyclovir cream is used to treat cold sores (fever blisters; blisters that are caused by a virus called herpes simplex) on the face or lips. Acyclovir ointment is used to treat first outbreaks of genital herpes (a herpes virus infection that causes sores to form around the genitals and rectum from time to time) and to treat certain types of sores caused by the herpes simplex virus in people with weak immune systems. Acyclovir is in a class of antiviral medications called synthetic nucleoside analogues.\r\nIt works by stopping the spread of the herpes virus in the body.\r\nAcyclovir does not cure cold sores or genital herpes, does not prevent outbreaks of these conditions, and does not stop the spread of these conditions to other people. How should this medicine be used? Topical acyclovir comes as a cream and an ointment to apply to the skin.\r\nAcyclovir cream is usually applied 5 times a day for 4 days. Acyclovir cream may be applied at any time during a cold sore outbreak, but it works best when it is applied at the very beginning of a cold sore outbreak, when there is tingling, redness, itching, or a bump but the cold sore has not yet formed. Acyclovir ointment is usually applied 6 times a day (usually 3 hours apart) for 7 days. It is best to begin using acyclovir ointment as soon as possible after you experience the first symptoms of infection. Follow the directions on your prescription label carefully, and ask your doctor or pharmacist to explain any part you do not understand. Use topical acyclovir exactly as directed. Do not use more or less of it or use it more often than prescribed by your doctor. Your symptoms should improve during your treatment with topical acyclovir. If your symptoms do not improve or if they get worse, call your doctor. Acyclovir cream and ointment are for use only on the skin.\r\nDo not let acyclovir cream or ointment get into your eyes,\r\nor inside your mouth or nose, and do not swallow the medication. Acyclovir cream should only be applied to skin where a cold sore has formed or seems likely to form. Do not apply acyclovir cream to any unaffected skin, or to genital herpes sores. Do not apply other skin medications or other types of skin products such as cosmetics, sun screen, or lip balm to the cold sore area while using acyclovir cream unless your doctor tells you that you should. To use acyclovir cream, follow these steps: Wash your hands. Clean and dry the area of skin where you will be applying the cream. Apply a layer of cream to cover the skin where the cold sore has formed or seems likely to form. Rub the cream into the skin until it disappears. Leave the skin where you applied the medication uncovered. Do not apply a bandage or dressing unless your doctor tells you that you should. Wash your hands with soap and water to remove any cream left on your hands. Be careful not to wash the cream off of your skin. Do not bathe, shower, or swim right after applying acyclovir cream. Avoid irritation of the cold sore area while using acyclovir cream. To use acyclovir ointment, follow these steps: Put on a clean finger cot or rubber glove. Apply enough ointment to cover all of your sores. Take off the finger cot or rubber glove and dispose of it safely, so that it is out of reach of children. Keep the affected area(s) clean and dry, and avoid wearing tight-fitting clothing over the affected area. Ask your pharmacist or doctor for a copy of the manufacturer's information for the patient. Read this information before you start using acyclovir and each time you refill your prescription. Other uses for this medicine This medication may be prescribed for other uses; ask your doctor or pharmacist for more information. What special precautions should I follow? Before using topical acyclovir, tell your doctor and pharmacist if you are allergic to acyclovir, valacyclovir (Valtrex), any other medications, or any of the ingredients in acyclovir cream or ointment.\r\nAsk your pharmacist for a list of the ingredients. Tell your doctor and pharmacist what prescription and nonprescription medications, vitamins, nutritional supplements, and herbal products you are taking or plan to take. tell your doctor if you have or have ever had any condition that affects your immune system such as human immunodeficiency virus (HIV) or acquired immunodeficiency syndrome (AIDS). tell your doctor if you are pregnant, plan to become pregnant, or are breast-feeding. If you become pregnant while using acyclovir, call your doctor. What special dietary instructions should I follow? Unless your doctor tells you otherwise, continue your normal diet. What should I do if I forget a dose? Apply the missed dose as soon as you remember it. However, if it is almost time for the next dose, skip the missed dose and continue your regular dosing schedule. Do not apply extra cream or ointment to make up for a missed dose. What side effects can this medication cause? Topical acyclovir may cause side effects. Tell your doctor if any of these symptoms are severe or do not go away: dry or cracked lips flaky, peeling, or dry skin burning or stinging skin redness, swelling, or irritation in the place where you applied the medication Some side effects can be serious. If you experience any of these symptoms, call your doctor immediately: hives rash itching difficulty breathing or swallowing swelling of the face, throat, lips, eyes, hands, feet, ankles, or lower legs hoarseness Topical acyclovir may cause other side effects. Call your doctor if you have any unusual problems while using this medication. If you experience a serious side effect, you or your doctor may send a report to the Food and Drug Administration's (FDA) MedWatch Adverse Event Reporting program online ( https://www.fda.gov/Safety/MedWatch ) or by phone (1-800-332-1088). What should I know about storage and disposal of this medication? Keep this medication in the container it came in, with the cap on and tightly closed, and out of reach of children. Store it at room temperature and away from excess heat and moisture (not in the bathroom). Never leave this medication in your car in cold or hot weather. Dispose of unneeded medications in a way so that pets, children, and other people cannot take them. Do not flush this medication down the toilet. Use a medicine take-back program. Talk to your pharmacist about take-back programs in your community. Visit the FDA's Safe Disposal of Medicines website https://goo.gl/c4Rm4p for more information. Keep all medication out of sight and reach of children as many containers are not child-resistant. Always lock safety caps. Place the medication in a safe location – one that is up and away and out of their sight and reach. https://www.upandaway.org In case of emergency/overdose If someone swallows topical acyclovir, call your local poison control center at 1-800-222-1222. If the victim has collapsed or is not breathing, call local emergency services at 911. What other information should I know? Keep all appointments with your doctor. Do not let anyone else use your medication. Ask your pharmacist any questions you have about refilling your prescription. Keep a written list of all of the prescription and nonprescription (over-the-counter) medicines, vitamins, minerals, and dietary supplements you are taking. Bring this list with you each time you visit a doctor or if you are admitted to the hospital. You should carry the list with you in case of emergencies. Brand names Zovirax ® Cream Zovirax ® Ointment Brand names of combination products Xerese ® (containing Acyclovir, Hydrocortisone) Other names Acycloguanosine ACV Last Revised - 10/15/2023 Browse Drugs and Medicines Learn how to cite this page",
-            "locator_origin": "model_reported_locator"
+            "url": "https://mediahub.seoul.go.kr/archives/187780",
+            "original_url": "https://mediahub.seoul.go.kr/archives/187780",
+            "title": "서울시 - 내 손안에 서울",
+            "checked_on": "2026-09-29",
+            "sha256": "2d6123b30d9e012221102b1f866695764b548245653dbd6db08e8f9af4455788",
+            "excerpt": "본문 바로가기 참을 수 없는 가려움, 아무데서나 긁을 수도 없고~ 조소연 발행일 2010.09.10. 00:00 수정일 2010.09.10. 00:00 조회 7,169 좋아요 204 트위터 페이스북 카카오톡 페이지 URL 복사 인쇄하기 새창열림 글자 크기 크게 변경하기 글자 크기 작게 변경하기 수영장이나 공중목욕탕 등 사람 많이 모이는 곳에서 감염될 수 있어 무좀은 발 피부의 각질층을 침범하는 곰팡이 감염이다. 매일 깨끗하게 발을 씻지 않으면 땀과 노폐물이 피부 표면에 쌓여서 곰팡이가 생존하기 좋은 습하고 불결한 여건을 만들어주어 무좀이 더 잘 생길 수 있지만, 그 외에도 원래 존재하는 발의 구조적 문제, 예를 들면 발가락 사이가 딱 붙어 있어서 늘 땀이 차 있다든지, 노화가 진행되면서 몸의 면역반응이 원활하지 않아서 곰팡이 감염에 취약해진다든지 할 때 잘 걸릴 수 있다. 또 당뇨, 림프종, 에이즈, 말초혈관질환, 장기 이식 후 장기간 면역억제제를 복용하는 경우와 스테로이드나 항생제 같은 약물을 장기 복용하는 경우에는 누구나 무좀에 더 잘 걸릴 수 있다. 발은 습도가 높고, 보행에 의한 기계적 자극으로 피부에 손상이 생겨 곰팡이 감염이 쉽게 일어날 수 있기 때문에 마라톤이나 축구 같은 스포츠 활동이나 꽉 끼는 신발에 의해 발에 상처가 생겨서 감염될 수 있고, 수영장이나 공중목욕탕같이 사람이 많이 모이는 곳에서 환자에게서 떨어져 나온 각질을 통해 발에서 발로 전염될 수 있다. 발무좀을 방치하면 곰팡이가 발톱을 침범해서 발톱무좀이 생길 수 있고, 손으로 자꾸 감염된 발을 만지면 손무좀, 손톱무좀이 생길 수 있다. 그 외에도 사타구니, 몸, 얼굴, 두피, 수염 등 몸의 다른 부위에도 무좀이 번질 수 있다. 발무좀의 임상적 형태는 크게 3가지가 있는데, 가장 흔한 형태가 지간형으로, 발가락 사이의 피부가 하얗게 짓무르고 가렵고 냄새가 심할 수 있다(사진 1). 두 번째로 소수포형 무좀은 발바닥과 발 옆에 작은 물집이 많이 생기고, 굉장히 가려운 게 특징이다. 각화형 무좀은 발바닥 전체에 걸쳐 각질이 두꺼워지고 긁으면 고운 가루처럼 떨어지는 형태다. 발무좀을 치료하지 않고 방치하면 발톱에까지 곰팡이가 침범해서 발톱이 대개 바깥쪽부터 광택을 잃고 누렇게 변색되고 두꺼워지고 깎을 때 부스러지는 발톱무좀으로 진행할 수 있다(사진 2). 발톱무좀이 진행되면 너무 두꺼워져서 아무리 무좀약을 복용해도 아예 발톱이 자라지 않고 단단한 돌덩어리처럼 붙어있는 경우가 있는데, 이럴 땐 전기 연마기로 발톱을 갈아내거나 아예 병든 발톱을 뽑은 후 무좀약을 장기간 복용하는 방법이 있다. 또 발톱무좀으로 인해 발톱이 변형되고 휘어서 살 속으로 파고 들어갈 수도 있는데, 심하지 않으면 발톱이 자라나올 때까지 소염진통제를 복용하면서 치실로 발톱 끝을 위로 들어 올려주거나 거즈를 발톱과 살 사이에 끼워주는 방법도 있다. 심할 경우엔 발톱을 일부 잘라내는 수술을 할 수도 있다. 무좀으로 인해 이차적 세균 감염이 될 수도 있는데, 손발톱에 녹농균 같은 세균 감염이 되면 손발톱이 초록색으로 변하고, 팔다리의 연부조직 감염인 봉소염이 생겨서 국소적으로 팔다리가 붓고 아프고 빨갛게 될 수도 있고, 발톱은 발가락뼈 바로 위에 있기 때문에 골수염이 생길 수도 있다. 무좀과 습진 모두 가려운 수포가 생길 수 있기 때문에 감별진단 어려울 수 있어 발에 가려운 병변이 생긴다고 모두 무좀은 아니다. 무좀과 습진 모두 가려운 수포가 생길 수 있기 때문에 감별진단이 어려울 수 있다. 이럴 땐 반드시 피부과 전문의에게 진찰을 받고 제대로 진단을 받아야 올바른 치료를 할 수 있다. 왜냐하면 무좀인데 스테로이드 제제인 습진 치료제를 바르면 겉으로는 증상이 조금 완화되는 것처럼 보여도 실은 무좀곰팡이가 잠복해서 잘 낫지도 않는 만성무좀이 되기 때문이다. 피부과에 가면 물집을 터뜨려서 현미경으로 균사를 확인하거나 발바닥의 각질을 긁어서 진균 배양검사를 하거나 무좀치료, 즉 항진균제 치료에 대한 반응을 보고 무좀으로 확진할 수 있다. 무좀 치료는 요즘은 경구약과 연고 효능이 좋기 때문에 발톱을 침범하지 않은 단순한 무좀은 하루에 한 번 치료제를 지속적으로 바르거나 약을 2~3주 복용하면 치료가 잘 된다. 그러나 일단 발톱에 무좀이 파급되면 병든 발톱이 곰팡이의 저수지 작용을 하기 때문에 발무좀 치료만 해서는 소용이 없고 반드시 병든 발톱이 다 자라 나가서 깨끗한 새 발톱으로 대치될 때까지 경구 무좀약을 복용해야 완치할 수 있다. 손톱은 3개월에 1cm, 발톱은 6~8개월에 1cm 정도 자라므로 반드시 경구 항진균제를 3~12개월간 복용해야 완치할 수 있다. 먹는 무좀약 즉 항진균제는 원인균, 환자가 복용하는 다른 약과의 상호작용, 환자의 나이와 건강상태 등을 고려하여 선택하게 되는데, 매일 한 번씩 복용하는 약, 한 달에 일주일씩 복용하는 약, 일주일에 한 번씩 복용하는 약 이렇게 세 가지가 있고, 내복약과 동시에 연고와 매니큐어 제품 같은 국소도포제를 병행하면 치료효과가 더 높다. 무좀약은 독하다는 잘못된 선입견을 가진 분이 많은데, 치료 전에 피검사를 통해 간기능을 확인하고 복용을 하게 되며 치료 전 간기능이 정상인 경우 대부분 수개월간의 치료 완료 후에도 간기능에 아무 문제가 없다. 간기능이나 신장기능이 떨어진 환자들에서는 약의 용량을 줄이거나 불가피한 경우 발톱을 갈아내고 매니큐어약을 바르는 국소치료제만으로도 적극적인 치료를 하면 크게 호전될 수 있다. 중요한 것은 발톱무좀은 계속 진행하는 질환이므로 일찍 치료를 시작할수록 치료기간도 짧아지고 합병증도 예방할 수 있다는 것이다. 또 발톱무좀이 있으면 남에게 계속 무좀을 옮길 수 있으므로 완치될 때까지 치료해야 한다. 그러나 식초, 빙초산, 우황청심환을 녹인 물, 목초액, 소금이나 모래찜질, 길거리 상인한테 구입한 중국약, 태국약 등을 사용한 후 발바닥 피부가 다 벗겨지거나 강산이나 뜨거운 모래, 소금에 화상을 입거나, 접촉피부염 등이 생겨서 결국은 합병증까지 생긴 상태로 피부과로 오는 경우가 많다(사진 3). 민간요법은 어디까지나 보조적 요법일 뿐 무좀의 원인 곰팡이를 죽이는 근치방법이 될 수 없다. 특히 희석을 해도 빙초산은 너무나 위험하다. 피부과에 가면 더 좋은 찜질용 용액 형태의 약도 있으니 꼭 전문의의 진단과 처방을 받도록 한다. 무좀 예방을 위해서는 발을 청결하고 시원하고 건조하게 유지하고, 땀은 빨리 닦고, 양말을 신어 신속하게 흡수해야 한다. 굽이 낮고 앞이 좁지 않은 잘 맞는 편안한 신발을 신고, 낡은 신발, 남이 신던 신발은 버려야 한다. 평소에 발가락에 상처를 입지 않도록 보호하고, 발톱을 깎을 때는 일자로 깎고 발톱 가장자리를 너무 짧게 깎지 않아야 발톱이 살 속으로 파고들지 않는다. 그리고 무좀이 있는 발톱을 가장 마지막에 깎아서 다른 발톱으로 퍼지는 것을 막아야 한다. 발과 몸의 다른 부위에 이미 존재하는 무좀이 있다면 이것을 먼저 치료해야 하겠고, 무좀이 완치된 후에도 체질적으로 무좀이 잘 생기는 분들은 재감염이 될 수 있기 때문에 치료 완료 후에도 재감염 방지 차원에서 발과 발톱에 광범위 무좀연고를 매일 한 번씩 바르는 것이 좋다. 당뇨 환자들은 특히 발무좀이 잘 생길 수 있기 때문에 매일 발을 한 번씩 잘 관찰해서 무좀이 생기면 조기에 치료를 받도록 한다. 남성들의 사타구니에 흔히 생기는 완선을 예방하기 위해서는 통풍이 잘 되는 사각팬티를 입고 발무좀이 있다면 옷 입을 때 양말을 먼저 신고 바지를 입어서 발의 곰팡이가 사타구니로 파급되는 것을 막도록 한다. 그리고 특히 여성들은 손을 물에 너무 자주 담그지 않도록 한다. 글:조소연(서울특별시보라매병원 피부과 서울의대 교수) 기사 관련 태그 태그 #정보 #질병 #건강 #무좀 좋아요 204 트위터 페이스북 카카오톡 댓글은 자유로운 의견 공유의 장이므로 서울시에 대한 신고, 제안, 건의 등 답변이나 개선이 필요한 사항에 대해서는 전자민원 응답소 누리집을 이용 하여 주시기 바랍니다. 상업성 광고, 저작권 침해, 저속한 표현, 특정인에 대한 비방, 명예훼손, 정치적 목적, 유사한 내용의 반복적 글, 개인정보 유출,그 밖에 공익을 저해하거나 운영 취지에 맞지 않는 댓글은 서울특별시 조례 및 개인정보보호법에 의해 통보없이 삭제될 수 있습니다. 응답소 누리집 바로가기 본 저작물은 \"공공누리\" 제4유형:출처표시+상업적 이용금지+변경금지 조건에 따라 이용 할 수 있습니다. 최신 뉴스 1 이런 섬이 서울에 있다고? '■■ 글로벌 예술섬' 매력이 어썸! 2 휴대는 가볍게, 경고음은 크게…'동행안심벨' 새 단장 3 첫 입주 시작한 '모아주택'…10월부터 '주민설명회' 개최 4 40~64세 위한 '중장년 일자리 박람회' 열린다! 사전등록 무료 5 매일 밤 빛나는 'DDP 365라이트'…관광객 모여드는 야간 명소 만든다 많이 본 뉴스 1 외롭고 답답할 땐, 가까운 '서울■■편의점'으로 오세요! 2 추석 연휴 전 꼭 확인! 막차·쓰레기 배출 등 알짜정보 3 가을 한강, 이 시간에 가야 가장 예쁩니다! 노을 명소 총정리 4 명절에 문 여는 병의원·약국 어디? 추석 연휴 응급의료기관 안내 5 충정로는 왜 충정로일까? 2호선 역명 따라 서울 역사 산책 시민기자 인기뉴스 '퇴근길에 피클볼 한 판!' 지하철역이 운동·문화공간으로…'문정 운동정원' 시민기자 이혜숙 추석 연휴, \"피카츄\"와 가을 소풍 떠나볼까? 서울갤러리부터 전망대까지 시민기자 이정민 좁은 집에 쌓아두지 말고, 잠깐 쓸 물건은 빌려 쓰세요! 1인가구 무료 물품대여 시민기자 황진희 그리스 신화부터 MBTI까지…인생샷 보장 '안양천 빛축제'서 가을밤 산책 시민기자 김성무 숲이 길을 품었다! 서울시 조경상 대상 선정 '남산 하늘숲길' 소개 시민기자 김대진 맨 위로 맨 아래로 전체 서비스 바로 가기 뉴스 기획·이슈 핫이슈 특별기획 전문칼럼 테마 뉴스 분야별 뉴스 문화 / 경제 복지 / 교통 환경 / 주택 안전 / 행정 비주얼 뉴스 사진 뉴스 영상 뉴스 카드 뉴스 우리동네 뉴스 시민기자 뉴스 취재 뉴스 사진 뉴스 영상 뉴스 테마 뉴스 시민기자 안내 알림방 마이페이지 영상 생중계 생중계 편성표 광장 24시 생중계다시보기 영상저장소 최신영상 서울홍보영상 분야별영상 프로그램 서울소울러 서울소울러영상 서울소울러 만나기 함께방송 자치구방송국 매거진 문화/여행 문화마당 생활/아슈 서울소식 에세이 연재칼럼 TV 알림 독자 참여 서울을 색칠하자 공지사항 서울사서함 로컬 매거진 모아보기 서울사랑소개 월별 모아보기 월간지 구독 신청/변경 온라인 소식지 신청 온라인 소식지 모아보기 어린이신문 꼼꼼 서울소식 기사 보기 추천! 어린이 기사 만화 내친구 TV 별별 순위 뭐든지 무한도전 지난호 보기 팡팡 서울놀이 낱말 맞추기 서울을 색칠하자 숨은 속담찾기 두뇌 단련장 찾아보아요 ASMR 퀴즈 콩콩 어린이 기자 기자 알림방 자유주제 기사쓰기 지정주제 기사쓰기 신청합니다 질문있어요 취재사진 내려받기 어린이기자 활동 안내 나의 공간 이벤트·공지 내친구서울 소개 공지사항 이벤트 서울시 소개 알면 좋은 링크 내친구서울 새싹 새싹 소개 새싹 신문 보기 새싹 참여 보기 공모전 이벤트 내 손안에 서울 소개 공지사항 캠페인 RSS 이용안내 전체 서비스 바로 가기 닫기 페이지 상단으로 이동"
           }
         ],
         "intent_results": [
-          "https://doctornow.co.kr/content/faq/aa204eb524e742b78d2bf51f1c2dc935",
-          "https://www.msdmanuals.com/ko/home/%EA%B0%90%EC%97%BC/%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-%EA%B0%90%EC%97%BC/%EB%8B%A8%EC%88%9C-%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-hsv-%EA%B0%90%EC%97%BC",
-          "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4%20%EC%B9%98%EB%A3%8C%EC%A0%9C.pdf"
+          "https://common.health.kr/shared/healthkr/pharmreview/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
+          "https://doctornow.co.kr/content/qna/5dc815e5610b47f4ad854ef4e17bbf1e"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 20920,
+        "monthly_search": 5630,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "높음",
-        "cak_provenance": {
-          "relationship": "related_seed",
-          "item": {
-            "keyword": "립밤",
-            "capturedAt": "2026-09-26T11:03:26.217Z",
-            "expiresAt": "2026-09-27T11:03:26.217Z",
-            "trend": {
-              "source": "naver_datalab_search",
-              "timeUnit": "date",
-              "timeUnitOrigin": "provider_response",
-              "startDate": "2026-09-12",
-              "endDate": "2026-09-26",
-              "latestPeriod": "2026-09-25",
-              "previousPeriod": "2026-09-24",
-              "baselineStart": "2026-09-18",
-              "baselineEnd": "2026-09-24",
-              "latestRatio": 100,
-              "previousRatio": 79.39201,
-              "baselineMean": 68.24723000000002,
-              "expectedBaselineDays": 7,
-              "observedBaselineDays": 7,
-              "dayPct": 25.957259426987676,
-              "baselinePct": 46.5260934399828,
-              "dayPctStatus": "measured",
-              "baselinePctStatus": "measured",
-              "hotScore": 26,
-              "calculationVersion": "daily_observed_v2"
-            },
-            "searchad": {
-              "attemptedAt": "2026-09-26T11:03:39.631Z",
-              "measuredAt": "2026-09-26T11:03:40.350Z",
-              "lookupStatus": "exact",
-              "matchMode": "whitespace_exact",
-              "matchedKeyword": "립밤",
-              "monthlyPc": 9010,
-              "monthlyMobile": 24800,
-              "monthlyTotal": 33810,
-              "monthlyPcStatus": "measured",
-              "monthlyMobileStatus": "measured",
-              "monthlyTotalStatus": "measured",
-              "advertisingCompetition": "mid",
-              "failureCode": null
-            }
-          },
-          "export": {
-            "schemaVersion": 1,
-            "kind": "cak_keyword_candidates",
-            "profile": "blog-kr",
-            "generatedAt": "2026-09-26T11:04:06.514Z",
-            "expiresAt": "2026-09-27T11:02:25.366Z",
-            "compliance": {
-              "resaleRestricted": true,
-              "cacheTtlHours": 24
-            },
-            "scope": {
-              "seedSet": "g2-seeds",
-              "requestedKeywordCount": 182,
-              "storedKeywordCount": 182,
-              "eligibleDailyCount": 170,
-              "exportedCount": 80,
-              "truncatedCount": 90
-            },
-            "exclusionCounts": {
-              "expired": 0,
-              "unknownTimeUnit": 0,
-              "nonDaily": 0,
-              "invalidSeries": 5,
-              "missingPreviousDay": 5,
-              "insufficientBaseline": 2
-            }
-          },
-          "transport": {
-            "status": "ok",
-            "reason": "downloaded",
-            "sourceRunId": 36237548174,
-            "artifactId": 10904686953,
-            "headSha": "170fe8b92dda5f3a5de1ac2fc7126f0c2b486a0b",
-            "sourceRunCreatedAt": "2026-09-26T11:01:43Z"
-          },
-          "relatedKeyword": "헤르페스입술",
-          "relatedMonthly": 20920,
-          "relatedMeasuredAt": "2026-09-26T12:20:04.387191+00:00"
-        },
         "evidence_mode": "serp",
-        "research_evidence": {
-          "provider": "codex_web",
-          "searched": true,
-          "locators": [
-            {
-              "url": "https://medlineplus.gov/ency/article/000606.htm",
-              "origin": "model_reported_locator"
-            },
-            {
-              "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-              "origin": "model_reported_locator"
-            }
-          ]
-        },
+        "research_evidence": null,
         "organic_provider": "codex_native_search",
-        "organic_query": "헤르페스 입술",
+        "organic_query": "발톱 무좀 치료 방법",
         "organic_domains": [
           "common.health.kr",
-          "www.msdmanuals.com",
-          "www.msdmanuals.com",
-          "mobile.hidoc.co.kr",
-          "doctornow.co.kr",
-          "mobile.hidoc.co.kr",
-          "www.msdmanuals.com",
-          "common.health.kr",
           "www.health.kr",
-          "mobile.hidoc.co.kr"
+          "common.hanmi.co.kr",
+          "www.health.kr",
+          "yoonbitskin.com",
+          "www.doctalk.co.kr",
+          "cleanskin.kr",
+          "nailderella.com",
+          "mp.info-idea114.co.kr",
+          "doctornow.co.kr"
         ],
         "organic_results": [
           {
-            "url": "https://common.health.kr/shared/images/insert_pdf/In_A11A0300B0004_00.pdf",
+            "url": "https://common.health.kr/shared/healthkr/pharmreview/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
             "domain": "common.health.kr",
-            "title": "[전문의약품]\n\n헤르페스 바이러스 질환치료제  \n국제 아시클로버정\n\n국제아시클로버정은 입술",
-            "snippet": "국제아시클로버정은 입술·생식기등에 급성 수포성 질환을 유발하는 단순포진 바이러스 I, II형 (Herpes simplex virus type I, II) 및 신경절에 염증성 병변을 일으켜 피부에 수포와 심한 통증을"
+            "title": "무좀과 복약지도\n\n무좀의 치료\n\n무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데,",
+            "snippet": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다. ... 2014년 한국 노바티스제약의 설문조사 결과에 따르면, 전체 응답자 1,000명 중 절반이 넘는 506명"
           },
           {
-            "url": "https://www.msdmanuals.com/ko/home/multimedia/image/%EC%9E%85%EC%88%A0-%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4",
-            "domain": "www.msdmanuals.com",
-            "title": "Image:입술 헤르페스-MSD 매뉴얼 - 일반인용",
-            "snippet": "이는 아랫입술의 입술 헤르페스(열성 수포라고도 알려짐)의 근접 사진입니다."
-          },
-          {
-            "url": "https://www.msdmanuals.com/ko/home/multimedia/3dmodel/%EC%9E%85%EC%88%A0-%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4",
-            "domain": "www.msdmanuals.com",
-            "title": "3D Model: 입술 헤르페스-MSD 매뉴얼 - 일반인용",
-            "snippet": "# 입술 헤르페스"
-          },
-          {
-            "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000820654",
-            "domain": "mobile.hidoc.co.kr",
-            "title": "입술 헤르페스? 포다이스반? | 건강Q&A",
-            "snippet": "Question 입술 헤르페스? ... 평소 헤르페스는 성기쪽에 처음 재발 한번도 성기쪽 이었습니다. ... 입술에 난 1-2mm 크기의 무색 또는 연한 황색의 알갱이는 'Fordyce spot' 일"
-          },
-          {
-            "url": "https://doctornow.co.kr/content/faq/aa204eb524e742b78d2bf51f1c2dc935",
-            "domain": "doctornow.co.kr",
-            "title": "입술 헤르페스 성병인가요? - 닥터나우",
-            "snippet": "헤르페스 바이러스(HSV)에 의해 발생하는 감염성 질환인 헤르페스는, 주로 입술이나 얼굴, 생식기에 작은 물집(수포)을 발생시키는 질환인데요. ... 입술과 입 주변, 얼굴 등에 발생하는 입술 헤르페스는 성적인"
-          },
-          {
-            "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000820653",
-            "domain": "mobile.hidoc.co.kr",
-            "title": "입술 헤르페스? 포다이스반? | 건강Q&A",
-            "snippet": "Question 입술 헤르페스? ... 평소 성기쪽에 초발 후 재발 한번 있었고 입술 쪽으로는 아예 없었습니다. ... 사진상으로는 헤르페스보다는 Fordyce spot이 더 의심스럽습니다."
-          },
-          {
-            "url": "https://www.msdmanuals.com/ko/home/%EA%B0%90%EC%97%BC/%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-%EA%B0%90%EC%97%BC/%EB%8B%A8%EC%88%9C-%ED%8F%AC%EC%A7%84-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-hsv-%EA%B0%90%EC%97%BC",
-            "domain": "www.msdmanuals.com",
-            "title": "단순 포진 바이러스(HSV) 감염 - 감염 - MSD 매뉴얼 - 일반인용",
-            "snippet": "* 입술의 입술 헤르페스(구순 포진), 특정 접촉 스포츠 동안 감염되었을 수 있는 피부 부위의 물집 군집(검상 포진), 눈 각막의 궤양(단순포진각막염)의 일반적인 원인인 HSV-1 ... 음부"
-          },
-          {
-            "url": "https://common.health.kr/shared/healthkr/pharmreview/%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4%281%29%280%29.pdf",
-            "domain": "common.health.kr",
-            "title": "헤르페스(1)\n\n2. 패 다양한 바이러스\n\n헤르페스 질환은 DNA 바이러스인 헤르페스 바이",
-            "snippet": "헤르페스 질환은 DNA 바이러스인 헤르페스 바이러스의 감염과 증식에 의해 일어난다. ... 즉, 손가락에 발생되는 경우도 있고, 눈으로 감염되면 약하게는 각막에 결막염을 일으키는 정도로 끝나지만, 심할"
-          },
-          {
-            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%97%A4%EB%A5%B4%ED%8E%98%EC%8A%A4%20%EC%B9%98%EB%A3%8C%EC%A0%9C.pdf",
+            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%EB%AC%B4%EC%A2%80%EA%B3%BC%20%EB%B3%B5%EC%95%BD%EC%A7%80%EB%8F%84.pdf",
             "domain": "www.health.kr",
-            "title": "헤르페스\u0001 치료제\n요약  | \n--- | ---\n헤르페스 치료제는 헤르페스 바이러스의 DN",
-            "snippet": "* 구순 헤르페스(herpes labiales): 단순포진 바이러스의 감염에 의해 입술에 작은 수포가 생기는 감염성 질환 ... 각막 단순성 헤르페스는 감기ž발열ž과로 등의 뒤에 일어나며, 때로는 입술 헤르페스와"
+            "title": "서론\n무좀과\u0001 복약지도\n저자\u0001 김성철\n영남대학교\u0001 임상약학대학원\u0001 겸임교수\n\u0001 \u0001 \u0001 \u0001",
+            "snippet": "무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데, 바르는 연고는 초기 무좀 치료에 효과가 있다. ... 발톱과 손톱에 무좀 균이 ... 치료 경험이 있는 응답자"
           },
           {
-            "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000938537",
-            "domain": "mobile.hidoc.co.kr",
-            "title": "입술 헤르페스 인가요?.. | 건강Q&A",
-            "snippet": "Question 입술 헤르페스 인가요?.. ... 헤르페스의 경우는 입술 주변 얇은 점막을 뚫고 여러개가 올라오는 경향이 있는데"
+            "url": "https://common.hanmi.co.kr/upfile/ces/product/8112b629-0914-4473-99e5-b83a6bdd7dcd.pdf",
+            "domain": "common.hanmi.co.kr",
+            "title": "무조날®맥스  \n손·발톱 무좀, 간편함은 Up 효과는 Max  \n외용액 (테르비나핀염산염)",
+            "snippet": "무색 내지 연한 황색의 투명한 액제 ... 조갑진균증 (손, 발톱무좀) ... 치료기간이 끝난 후 국소 치료에 대한 부적절한 반응이 있는 경우 또는 하나 이상의 손발톱"
+          },
+          {
+            "url": "https://www.health.kr/Menu.PharmReview/_uploadfiles/%ED%94%8C%EB%A3%A8%EC%BD%94%EB%82%98%EC%A1%B8%28fluconazole%29.pdf",
+            "domain": "www.health.kr",
+            "title": "플루코나졸(fluconazole)",
+            "snippet": "진균증 | 손발톱 진균증 | 1주 1회 150 mg ... | 무좀, 체부백선, 완선(사타구니 백선), ... 치료 등)의 크립토콕쿠스 수막염 재발 방지 | 1일 1회"
+          },
+          {
+            "url": "https://yoonbitskin.com/onychomycosis-treatment/",
+            "domain": "yoonbitskin.com",
+            "title": "발톱 무좀 원인, 증상, 치료 - 윤빛한의원 수원영통",
+            "snippet": "오늘은 수원 영통 윤빛한의원에서 발톱 무좀의 원인과 증상을 알아보고, 바르는 약의 한계를 극복하는 한의원 레이저 복합 치료 방법과 생활 관리 수칙 에 대해 자세히 설명해"
+          },
+          {
+            "url": "https://www.doctalk.co.kr/counsel/view/c-uJlbib0-1regnh0-lYZT",
+            "domain": "www.doctalk.co.kr",
+            "title": "새끼 발톱 무좀 치료 어떻게 해야 하나요? (분당 판교 백선) | 닥톡 Doctalk",
+            "snippet": "통증은 없지만 발톱의 변형과 색 변화는 무좀이 만성화된 상태를 의미할 수 있습니다. ... 치료 방법 ... 발톱 무좀은 만성화되면 치료가 까다로울 수 있지만, 꾸준한 관리와"
+          },
+          {
+            "url": "https://cleanskin.kr/laser-clinic07",
+            "domain": "cleanskin.kr",
+            "title": "클린의원",
+            "snippet": "먹는약 없이 손발톱 무좀치료가 가능한 레이저 시술입니다. ... 마취 방법 ... - 임산부지만 발톱무좀 치료를 원하시는 분"
+          },
+          {
+            "url": "https://nailderella.com/%EB%82%B4%EC%84%B1%EB%B0%9C%ED%86%B1%EA%B3%BC-%EB%B0%9C%ED%86%B1%EB%AC%B4%EC%A2%80-%EC%B0%A8%EC%9D%B4%EC%A0%90%EA%B3%BC-%EA%B4%80%EB%A6%AC%EB%B2%95/",
+            "domain": "nailderella.com",
+            "title": "내성발톱과 발톱무좀, 차이점과 관리법 | 네일더렐라",
+            "snippet": "검수 기준 2026.09 미국피부과학회 손톱 관리 안내 Image: 짧고 깨끗한 자연 손톱과 큐티클 오일, 무표기 핸드크림, 네일 파일을 배치한 손톱 관리 화보 네일더렐라 오리지널 AI"
+          },
+          {
+            "url": "https://mp.info-idea114.co.kr/entry/%EB%B0%9C%ED%86%B1-%EB%AC%B4%EC%A2%80-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B0%A9%EB%B2%95-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%A7%91%EC%97%90%EC%84%9C-%ED%95%98%EB%8A%94-%ED%99%95%EC%8B%A4%ED%95%9C-%EC%B9%98%EB%A3%8C%EB%B2%95",
+            "domain": "mp.info-idea114.co.kr",
+            "title": "발톱 무좀 없애는 방법 완벽 가이드 : 집에서 하는 확실한 치료법",
+            "snippet": "# 발톱 무좀 없애는 방법 완벽 가이드 : 집에서 하는 확실한 치료법 ... 발톱 무좀약은 며칠 발라서 단숨에 눈에 띄는 효과가 나타나는 마법의 지우개가 아니며,"
+          },
+          {
+            "url": "https://doctornow.co.kr/content/qna/5dc815e5610b47f4ad854ef4e17bbf1e",
+            "domain": "doctornow.co.kr",
+            "title": "발톱 무좀 빠르게 치료하는 방법 - 닥터나우",
+            "snippet": "# 발톱 무좀 빠르게 치료하는 방법 ... 무좀 치료 시에는 항진균제의 사용이 치료의 기본이 되며, 살리실산 성분의 연고 등을 이용하여 각질을 제거해주고, 생활을 함께 하는"
           }
         ],
         "dominant_result_ratio": 0.0,
         "score_components": {
-          "demand": 34.56,
-          "organic_opportunity": 26.67,
-          "trend": -5,
-          "cak_trend": 0,
+          "demand": 30.0,
+          "organic_opportunity": 28.0,
+          "trend": 0,
           "intent_fit": 15
         },
-        "trend_growth": -0.547,
+        "trend_growth": null,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
+        "trend_status": "unavailable",
         "selection_version": 6,
-        "selected_at": "2026-09-26T12:20:04.387191+00:00",
+        "selected_at": "2026-09-29T01:32:00.841076+00:00",
         "source": "category_market_v1",
         "keywords": [
-          "헤르페스입술"
+          "발톱무좀치료방법"
         ],
         "status": "pending",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://medlineplus.gov/ency/article/000606.htm",
-              "title": "Herpes - oral: MedlinePlus Medical Encyclopedia",
-              "excerpt_chars": 6378
-            },
-            {
-              "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-              "title": "Acyclovir Topical: MedlinePlus Drug Information",
-              "excerpt_chars": 7793
-            },
-            {
-              "url": "https://www.kipris.or.kr/khome/detail/newWindow.do",
-              "title": "KIPRIS 지식재산정보 검색 서비스",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_true",
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.kipris.or.kr/khome/detail/newWindow.do",
-                  "title": "KIPRIS 지식재산정보 검색 서비스",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_passed",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://medlineplus.gov/ency/article/000606.htm",
-                  "title": "Herpes - oral: MedlinePlus Medical Encyclopedia",
-                  "excerpt_chars": 6378
-                },
-                {
-                  "url": "https://medlineplus.gov/druginfo/meds/a606001.html",
-                  "title": "Acyclovir Topical: MedlinePlus Drug Information",
-                  "excerpt_chars": 7793
-                },
-                {
-                  "url": "https://www.kipris.or.kr/khome/detail/newWindow.do",
-                  "title": "KIPRIS 지식재산정보 검색 서비스",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_true"
-            }
-          }
-        },
         "opportunity_evidence": {
           "version": 2,
-          "query": "헤르페스입술",
-          "executed_query": "헤르페스 입술",
-          "topic": "헤르페스입술 증상·전염 경로·재발과 치료의 기본 정보",
-          "intent": "입술 헤르페스는 어떤 증상이 있고 성병과 어떤 관계이며, 어떻게 전염·재발하고 치료하나요?",
+          "query": "발톱무좀치료방법",
+          "executed_query": "발톱 무좀 치료 방법",
+          "topic": "발톱무좀치료방법: 먹는 약·바르는 약과 치료 전 확인사항",
+          "intent": "발톱무좀은 어떻게 치료하며, 먹는 약·바르는 약의 역할과 치료 전 확인사항은 무엇인가?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
           "result_count": 10,
-          "domain_count": 4,
+          "domain_count": 8,
           "dominant_ratio": 0.0,
           "search_review": {
             "version": 1,
-            "query": "헤르페스입술",
-            "executed_query": "헤르페스 입술",
+            "query": "발톱무좀치료방법",
+            "executed_query": "발톱 무좀 치료 방법",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-26T12:20:04.387191+00:00",
-            "raw_sha256": "4833c1b7aa2fffcb01cfc891dac6f04127a67784616e921bfe090be3ca482b72",
+            "checked_at": "2026-09-29T01:32:00.841076+00:00",
+            "raw_sha256": "df748c917f26e79eb3bba1a85723fc142b74f0d203377fd95c16eefeb44eb38b",
             "decisions": [
               {
                 "result_index": 0,
                 "relevant": true,
-                "quote": "국제아시클로버정은 입술·생식기등에 급성 수포성 질환을 유발하는 단순포진 바이러스"
+                "quote": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다."
               },
               {
                 "result_index": 1,
                 "relevant": true,
-                "quote": "이는 아랫입술의 입술 헤르페스(열성 수포라고도 알려짐)의 근접 사진입니다."
+                "quote": "무좀은 균의 형태와 증상에 따라 치료 방법이 달라지는데, 바르는 연고는 초기 무좀 치료에 효과가 있다."
               },
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "3D Model: 입술 헤르페스"
+                "quote": "손·발톱 무좀, 간편함은 Up 효과는 Max"
               },
               {
                 "result_index": 3,
                 "relevant": true,
-                "quote": "입술에 난 1-2mm 크기의 무색 또는 연한 황색의 알갱이는 'Fordyce spot'"
+                "quote": "손발톱 진균증 | 1주 1회 150 mg"
               },
               {
                 "result_index": 4,
                 "relevant": true,
-                "quote": "입술 헤르페스 성병인가요?"
+                "quote": "바르는 약의 한계를 극복하는 한의원 레이저 복합 치료 방법과 생활 관리 수칙"
               },
               {
                 "result_index": 5,
                 "relevant": true,
-                "quote": "사진상으로는 헤르페스보다는 Fordyce spot이 더 의심스럽습니다."
+                "quote": "새끼 발톱 무좀 치료 어떻게 해야 하나요?"
               },
               {
                 "result_index": 6,
                 "relevant": true,
-                "quote": "입술의 입술 헤르페스(구순 포진)"
+                "quote": "먹는약 없이 손발톱 무좀치료가 가능한 레이저 시술입니다."
               },
               {
                 "result_index": 7,
-                "relevant": false,
-                "quote": "손가락에 발생되는 경우도 있고, 눈으로 감염되면"
+                "relevant": true,
+                "quote": "내성발톱과 발톱무좀, 차이점과 관리법"
               },
               {
                 "result_index": 8,
                 "relevant": true,
-                "quote": "단순포진 바이러스의 감염에 의해 입술에 작은 수포가 생기는 감염성 질환"
+                "quote": "발톱 무좀 없애는 방법 완벽 가이드 : 집에서 하는 확실한 치료법"
               },
               {
                 "result_index": 9,
                 "relevant": true,
-                "quote": "헤르페스의 경우는 입술 주변 얇은 점막을 뚫고 여러개가 올라오는 경향이 있는데"
+                "quote": "무좀 치료 시에는 항진균제의 사용이 치료의 기본이 되며"
               }
             ]
           },
           "search_metrics": {
             "raw_result_count": 10,
             "canonical_result_count": 10,
-            "relevant_result_count": 9,
-            "relevant_site_count": 4,
+            "relevant_result_count": 10,
+            "relevant_site_count": 8,
             "relevant_indices": [
               0,
               1,
@@ -5299,201 +5173,184 @@
               4,
               5,
               6,
+              7,
               8,
               9
             ],
-            "relevance_ratio": 0.9,
+            "relevance_ratio": 1.0,
             "duplicate_ratio": 0.0,
             "known_dominant_ratio": 0.0,
-            "site_concentration": 0.3333333333333333,
-            "organic_opportunity": 26.67
+            "site_concentration": 0.3,
+            "organic_opportunity": 28.0
           },
           "scope": "full_keyword",
-          "target_keyword": "헤르페스입술",
+          "target_keyword": "발톱무좀치료방법",
           "matches": [
             {
-              "result_index": 4,
-              "quote": "입술 헤르페스 성병인가요?"
+              "result_index": 0,
+              "quote": "발톱과 손톱에 무좀 균이 침범했다면 바르는 약과 병행해서 치료할 필요가 있다."
             },
             {
-              "result_index": 6,
-              "quote": "입술의 입술 헤르페스(구순 포진)"
-            },
-            {
-              "result_index": 8,
-              "quote": "단순포진 바이러스의 감염에 의해 입술에 작은 수포가 생기는 감염성 질환"
+              "result_index": 9,
+              "quote": "발톱 무좀 빠르게 치료하는 방법"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-26T12:20:04.387191+00:00",
-          "input_sha256": "59943fd2e4c2369225954dd88c869222ead6cce7aed930dcbe727c85b555dc50",
+          "checked_at": "2026-09-29T01:32:00.841076+00:00",
+          "input_sha256": "d594cf571ba1bdd859dbc0c3989dd7aa807f16926b1277affc412df0ce1655d2",
           "review": {
             "scope": "full_keyword",
-            "target_keyword": "헤르페스입술",
+            "target_keyword": "발톱무좀치료방법",
             "sources": [
               {
                 "source_index": 0,
-                "quote": "Oral herpes is an infection of the lips, mouth, or gums due to the herpes simplex virus.",
-                "entity": "Oral herpes",
-                "context": "general"
-              },
-              {
-                "source_index": 1,
-                "quote": "Acyclovir cream is used to treat cold sores (fever blisters; blisters that are caused by a virus called herpes simplex) on the face or lips.",
-                "entity": "Acyclovir cream",
+                "quote": "중요한 것은 발톱무좀은 계속 진행하는 질환이므로 일찍 치료를 시작할수록 치료기간도 짧아지고 합병증도 예방할 수 있다는 것이다.",
+                "entity": "발톱무좀",
                 "context": "general"
               }
             ],
             "required_facets": [
               {
-                "facet": "증상과 확인 방법은?",
-                "answer": "통증성 물집이 특징이며 의료진이 입 주변을 진찰해 진단합니다.",
+                "facet": "먹는 약과 바르는 약은 치료에서 어떤 역할을 하는가?",
+                "answer": "경구 항진균제와 국소도포제 병행을 설명한다. 간·신장기능 저하 시 국소치료 선택도 다룬다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Your health care provider can diagnose oral herpes by looking at your mouth area."
+                "quote": "내복약과 동시에 연고와 매니큐어 제품 같은 국소도포제를 병행하면 치료효과가 더 높다."
               },
               {
-                "facet": "성병과 어떤 관계인가요?",
-                "answer": "일상 접촉으로도 전파되므로 성접촉 감염으로 단정할 수 없고, 구강성교로 생식기에 전파할 수도 있습니다.",
+                "facet": "먹는 약을 사용하기 어려울 때 어떤 치료를 고려하는가?",
+                "answer": "간·신장기능이 저하된 환자의 용량 조절이나 발톱 연마와 국소치료를 설명할 근거가 있다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Parents may spread the virus to their children during regular daily activities."
+                "quote": "간기능이나 신장기능이 떨어진 환자들에서는 약의 용량을 줄이거나 불가피한 경우 발톱을 갈아내고 매니큐어약을 바르는 국소치료제만으로도 적극적인 치료를 하면 크게 호전될 수 있다."
               },
               {
-                "facet": "전염과 예방에서 무엇을 알아야 하나요?",
-                "answer": "병변 직접 접촉과 물품 공유를 피해야 하며, 물집이 없어도 전파될 수 있습니다.",
+                "facet": "치료 전에 복용약과 건강상태에서 무엇을 확인해야 하는가?",
+                "answer": "다른 약과의 상호작용, 나이·건강상태 및 치료 전 간기능 검사를 확인한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Both oral and genital herpes viruses can sometimes be spread, even when you do not have mouth sores or blisters."
+                "quote": "원인균, 환자가 복용하는 다른 약과의 상호작용, 환자의 나이와 건강상태 등을 고려하여 선택하게 되는데"
               },
               {
-                "facet": "경과와 재발은 어떤가요?",
-                "answer": "대개 1~2주 내 자연 호전하지만 재발할 수 있습니다.",
+                "facet": "치료 전 간기능은 어떻게 확인하는가?",
+                "answer": "본문은 복용 전 혈액검사를 통한 간기능 확인을 설명한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Oral herpes most often goes away by itself in 1 to 2 weeks. However, it may come back."
+                "quote": "치료 전에 피검사를 통해 간기능을 확인하고 복용을 하게 되며"
               },
               {
-                "facet": "항바이러스 치료와 크림의 한계는?",
-                "answer": "항바이러스제는 통증과 증상 기간을 줄일 수 있습니다. 크림의 기간 단축 효과는 수 시간에서 하루 정도입니다.",
+                "facet": "치료가 오래 걸리는 이유와 치료기간은 무엇인가?",
+                "answer": "새 발톱으로 대체되는 데 시간이 걸린다. 2010년 본문의 3~12개월을 현재의 일률적 처방으로 제시해서는 안 된다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Antiviral skin creams may also be used. However, they are expensive and often only shorten the outbreak by a few hours to a day."
+                "quote": "손톱은 3개월에 1cm, 발톱은 6~8개월에 1cm 정도 자라므로 반드시 경구 항진균제를 3~12개월간 복용해야 완치할 수 있다."
               },
               {
-                "facet": "크림으로 완치하거나 전파를 막을 수 있나요?",
-                "answer": "국소 아시클로버는 완치·재발 방지·타인 전파 방지를 보장하지 않습니다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "Acyclovir does not cure cold sores or genital herpes, does not prevent outbreaks of these conditions, and does not stop the spread of these conditions to other people."
-              },
-              {
-                "facet": "언제 진료가 필요한가요?",
-                "answer": "증상이 심하거나 2주 이상 지속되거나, 눈 주변 병변 또는 면역저하가 있으면 진료가 필요합니다.",
+                "facet": "민간요법으로 치료할 수 있으며 어떤 주의가 필요한가?",
+                "answer": "민간요법은 원인균을 제거하는 치료를 대신하지 못하며, 빙초산 등은 피부 손상 위험이 있다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Contact your provider if you have: Symptoms that are severe or that don't go away after 2 weeks Sores or blisters near your eyes Herpes symptoms and a weakened immune system due to certain diseases or medicines"
+                "quote": "민간요법은 어디까지나 보조적 요법일 뿐 무좀의 원인 곰팡이를 죽이는 근치방법이 될 수 없다. 특히 희석을 해도 빙초산은 너무나 위험하다."
               }
             ],
             "current_relevance": {
               "kind": "evergreen",
               "source_index": 0,
-              "quote": "Oral herpes most often goes away by itself in 1 to 2 weeks. However, it may come back.",
+              "quote": "중요한 것은 발톱무좀은 계속 진행하는 질환이므로 일찍 치료를 시작할수록 치료기간도 짧아지고 합병증도 예방할 수 있다는 것이다.",
               "event_start": null,
               "event_end": null,
               "date_quote": null
             }
           }
         },
-        "score": 71.23,
+        "score": 73.0,
         "publish_eligible": true,
         "hold_reasons": []
       }
     ],
     "candidate_decisions": [
       {
-        "keyword": "헤르페스입술",
-        "monthly_search": 20920,
+        "keyword": "발톱무좀치료방법",
+        "monthly_search": 5630,
         "rank": 1,
-        "score": 71.23,
+        "score": 73.0,
         "score_components": {
-          "demand": 34.56,
-          "organic_opportunity": 26.67,
-          "trend": -5,
-          "cak_trend": 0,
+          "demand": 30.0,
+          "organic_opportunity": 28.0,
+          "trend": 0,
           "intent_fit": 15
         },
         "status": "selected",
         "reason": "highest_score_among_evaluated",
-        "organic_query": "헤르페스 입술"
+        "organic_query": "발톱 무좀 치료 방법"
       },
       {
-        "keyword": "갑상선에좋은음식",
-        "monthly_search": 4580,
-        "score": 60.89,
+        "keyword": "CT비용",
+        "monthly_search": 10840,
+        "score": 58.96,
         "status": "held",
         "reasons": [
           "missing_topic_suitability"
         ],
-        "organic_query": "갑상선에 좋은 음식"
-      },
-      {
-        "keyword": "CT비용",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 11060,
         "organic_query": "CT 비용"
-      },
-      {
-        "keyword": "건강보험료조회",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 9150,
-        "organic_query": "건강보험료 조회"
       },
       {
         "keyword": "경동맥초음파비용",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 6190,
+        "monthly_search": 5960,
         "organic_query": "경동맥 초음파 비용"
       },
       {
         "keyword": "종합건강검진비용",
         "status": "rejected",
         "reason": "search relevance review unavailable",
-        "monthly_search": 4950,
+        "monthly_search": 4980,
         "organic_query": "종합 건강검진 비용"
+      },
+      {
+        "keyword": "고혈압낮추는방법",
+        "status": "rejected",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 13900,
+        "organic_query": "고혈압 낮추는 방법"
+      },
+      {
+        "keyword": "아르기닌효능",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 40990,
+        "organic_query": "아르기닌 효능"
+      },
+      {
+        "keyword": "이노시톨효능",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 22930,
+        "organic_query": "이노시톨 효능"
+      },
+      {
+        "keyword": "건강보험료조회",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 9080,
+        "organic_query": "건강보험료 조회"
       },
       {
         "keyword": "심장초음파비용",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 4580,
+        "monthly_search": 4450,
         "organic_query": "심장 초음파 비용"
       },
       {
-        "keyword": "발톱무좀치료방법",
+        "keyword": "고지혈증증상",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 5640,
-        "organic_query": "발톱 무좀 치료 방법"
-      },
-      {
-        "keyword": "뇌MRI비용",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 4000,
-        "organic_query": "뇌 MRI 비용"
-      },
-      {
-        "keyword": "건강보험료계산",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 5640,
-        "organic_query": "건강보험료 계산"
+        "monthly_search": 27120,
+        "organic_query": "고지혈증 증상"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested."

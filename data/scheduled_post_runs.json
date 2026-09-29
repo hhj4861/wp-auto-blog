@@ -192,6 +192,13 @@
       "claimed_at": "2026-09-29T10:31:17.715628+09:00",
       "status": "success",
       "completed_at": "2026-09-29T01:46:18.215091+00:00"
+    },
+    "2026-09-29:evening": {
+      "run_id": "36562814997",
+      "category": "테크",
+      "slot": "evening",
+      "claimed_at": "2026-09-29T20:36:43.622132+09:00",
+      "status": "started"
     }
   }
 }

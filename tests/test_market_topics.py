@@ -340,6 +340,8 @@ def test_cak_rising_never_bypasses_official_source_review(tmp_path, monkeypatch,
 def test_cak_serp_outage_does_not_invent_organic_opportunity(tmp_path, monkeypatch):
     install_cak_feed(tmp_path, monkeypatch)
     _, trend, _ = mock_health_selection(monkeypatch, ['혈당관리방법'])
+    # Isolate the measured CAK candidate; fallback exploration has separate tests.
+    monkeypatch.setattr(market, 'demand_candidates', lambda _: {})
     monkeypatch.setattr(market, 'search_results', lambda _: (None, []))
     source = web_evidence('https://health.go.kr/info', origin='model_reported_locator')
     monkeypatch.setattr(market, 'research_official_sources', lambda *_: ([source], web_research_evidence(source)))
@@ -2190,7 +2192,8 @@ def test_cached_wrong_category_report_cannot_be_enqueued(evidence_mode, keyword,
 def test_correct_category_cached_report_remains_usable(evidence_mode, keyword, category):
     kwargs = dict(category=category, keyword=keyword, topic=keyword + ' 확인 방법', keywords=[keyword])
     row = web_candidate(**kwargs) if evidence_mode == 'official_pages' else candidate(**kwargs)
-    assert market.fresh_research_item(row, category)
+    # Broad terms no longer qualify for source-only long-tail research.
+    assert market.fresh_research_item(row, category) == (evidence_mode == 'serp')
     if evidence_mode == 'serp':
         assert market.fresh_market_item(row, category)
         assert market.enqueue_report([], {'category': category, 'selected': [row]}) == [row]

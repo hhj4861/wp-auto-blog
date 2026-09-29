@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
+from src.selection_feedback import load_history
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
 
@@ -71,6 +72,8 @@ def main():
         diagnostics = None
         previous = reports.get(category, {})
         try:
+            history = load_history(previous, category, datetime.now(timezone.utc))
+            selection_options = {'failure_history': history} if history else {}
             usable = [x for x in previous.get('selected', [])
                       if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)]
             if args.reuse and usable:
@@ -96,11 +99,11 @@ def main():
                     reports[category] = {**previous, 'selected': [], 'reuse_source_diagnostics': diagnostics}
                     _write_reports(reports)
                     excluded = [row['keyword'] for row in diagnostics['failed_candidates']]
-                    report = select_category(category, top_n, titles, excluded_keywords=excluded)
+                    report = select_category(category, top_n, titles, excluded_keywords=excluded, **selection_options)
                     diagnostics['outcome'] = 'reselected' if report['selected'] else 'no_candidate_passed'
                     report = {**report, 'reuse_source_diagnostics': diagnostics}
             else:
-                report = select_category(category, top_n, titles)
+                report = select_category(category, top_n, titles, **selection_options)
             reports[category] = report
             _write_reports(reports)
             print(json.dumps(report, ensure_ascii=False), flush=True)

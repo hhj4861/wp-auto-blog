@@ -419,8 +419,11 @@ def fetch_trend_change(keyword):
 def _official_search_extra_domains(keyword):
     """A small, topic-specific hint list; never broaden the measured SERP query."""
     key = norm(keyword)
-    return [domain for domain, terms in OFFICIAL_SEARCH_DOMAIN_HINTS
-            if any(term in key for term in terms)]
+    domains = [domain for domain, terms in OFFICIAL_SEARCH_DOMAIN_HINTS
+               if any(term in key for term in terms)]
+    if any(term in key for term in ('로봇청소기', '로보락', '드리미')):
+        domains = ['kr.roborock.com', 'store.kr.dreametech.com', *domains]
+    return domains
 
 
 def official_search_urls(keyword):
@@ -433,7 +436,7 @@ def official_search_urls(keyword):
     domains = list(dict.fromkeys([*extras, 'go.kr', 'or.kr', 'gov', 'ac.kr']))[:4]
     purchase_question = review_discovery.discovery_issue(keyword) is None
     if purchase_question:
-        domains = list(dict.fromkeys([*extras, 'kca.go.kr']))[:4]
+        domains = list(dict.fromkeys([*extras[:3], 'kca.go.kr']))[:4]
     groups, seen = [], set()
     for index, domain in enumerate(domains):
         scope = {'lg.com': 'lg.com/kr', 'samsung.com': 'samsung.com/sec'}.get(domain, domain) if purchase_question else domain

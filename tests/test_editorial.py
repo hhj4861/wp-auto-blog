@@ -686,3 +686,58 @@ def test_refresh_related_links_exclude_same_id_after_title_change(mock_env_vars)
         {"id": 2, "title": "GSAT 준비 방법", "slug": "gsat-study"}]
     related = pipeline._get_related_posts(exclude_title="새 GSAT 일정", keywords=["GSAT"], exclude_post_id=1)
     assert [r["url"] for r in related] == ["https://trendpulse.blog/gsat-study/"]
+
+
+@pytest.mark.parametrize('spec,expected', [
+    ('디스플레이 태블릿 메모리 2 GB 화면 크기 9.7인치 ', False),
+    ('형태 Laptop 메모리 16 GB LPDDR5X 온보드 ', True),
+    ('', False),
+])
+def test_support_template_heading_cannot_turn_tablet_into_laptop(source_http, spec, expected):
+    from src.review_discovery import relevant_source
+    html = ('<title>제품 지원</title><div id="supportSection02">'
+            '<h2 class="spec-itm-title">삼성 노트북 9 Style</h2>'
+            '<div class="spec-table">' + spec * 20 + '</div></div>'
+            '<div>노트북 메모리 메뉴 ' + '홍보 ' * 100 + '</div>')
+    source_http.get.side_effect = [_source_response(html)]
+    source = fetch_source('https://www.samsung.com/sec/support/model/example/')
+    assert relevant_source('노트북메모리', source) is expected
+    if source:
+        assert '9 Style' not in source['excerpt'] and '홍보' not in source['excerpt']
+
+
+def test_empty_catalog_cannot_use_navigation_as_product_evidence(source_http):
+    source_http.get.side_effect = [_source_response(
+        '<div id="pfProductCard"></div><div>' + '노트북 메모리 제품 메뉴 ' * 100 + '</div>')]
+    assert fetch_source('https://www.samsung.com/sec/memory-storage/all-memory-storage/') is None
+
+
+@pytest.mark.parametrize('host', ['kr.roborock.com', 'store.kr.dreametech.com'])
+def test_manufacturer_body_keeps_end_conditions_and_excludes_navigation_reviews(source_http, host):
+    body = '로봇청소기 문턱 등반 기능. ' * 650 + '제조사 내부 시험: 실제 환경과 이중 문턱 조건에 따라 다릅니다.'
+    html = ('<div id="shopify-section-nav-bar">메뉴</div><div>' + body + '</div>'
+            '<div id="shopify-section-main-footer">푸터</div>'
+            '<div class="jdgm-widget">고객 후기 문턱 10cm</div>')
+    source_http.get.side_effect = [_source_response(html)]
+    source = fetch_source('https://' + host + '/products/test')
+    assert len(source['excerpt']) <= 8000
+    assert source['excerpt'].startswith('로봇청소기')
+    assert source['excerpt'].endswith('실제 환경과 이중 문턱 조건에 따라 다릅니다.')
+    assert '[중간 본문 생략]' in source['excerpt']
+    assert '메뉴' not in source['excerpt'] and '고객 후기' not in source['excerpt']
+    assert source['sha256'] == hashlib.sha256(body.encode()).hexdigest()
+
+
+@pytest.mark.parametrize('article', ['', '실제 시험 결과와 조건입니다. ' * 30])
+def test_kca_only_uses_article_with_date_not_attachment_or_previous_article(monkeypatch, article):
+    html = ('<table class="board_insert"><tr><th class="title">시험 결과</th></tr>'
+            '<tr><th>등록일</th><td>2016-11-13</td></tr>'
+            '<tr><td>첨부파일.pdf ' + '문턱 성능 ' * 100 + '</td></tr>'
+            + ('<tr><td class="substance">' + article + '</td></tr>' if article else '')
+            + '<tr><td class="prev_cont">이전 글</td></tr></table>')
+    monkeypatch.setattr(editorial.source_tls, 'get', Mock(return_value=_source_response(html)))
+    source = fetch_source('https://www.kca.go.kr/home/sub.do?mode=view&no=1')
+    if article:
+        assert source['excerpt'] == '시험 결과 2016-11-13 ' + article.strip()
+    else:
+        assert source is None

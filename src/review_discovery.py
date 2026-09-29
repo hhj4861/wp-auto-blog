@@ -31,6 +31,7 @@ FACETS = {
     '호환': ('호환', '단자', '포트', 'compatib', 'connector', 'port'),
 }
 MAINTENANCE = ('청소방법', '교체방법', '수리', '고장', '오류', '설정방법', '연결방법', '사용법')
+UNBOUNDED_RECOMMENDATION = ('좋은', '추천', '순위', '가성비', '베스트')
 NON_PURCHASE_URL = re.compile(
     r'help-library/.*(?:troubleshoot|poor-suction|how-to-clean|won-t|wont|replacement-lamp)'
     r'|/license/|selectcrtfcinfo|/freeboard|/product/list\.do', re.I)
@@ -58,6 +59,8 @@ def discovery_issue(keyword):
         return 'review_product_unidentified'
     if any(word in key for word in MAINTENANCE):
         return 'review_maintenance_intent'
+    if any(word in key for word in UNBOUNDED_RECOMMENDATION):
+        return 'review_recommendation_unbounded'
     if not facets:
         return 'review_purchase_question_unbounded'
     return None
@@ -74,6 +77,8 @@ def relevant_source(keyword, source):
     except (ValueError, TypeError, AttributeError):
         return False
     if NON_PURCHASE_URL.search(path):
+        return False
+    if re.search(r'/all-[^/]+/?$', path):
         return False
     # All named facets must have body evidence; a navigation title is insufficient.
     return (all(any(alias in title + body for alias in PRODUCTS[name]) for name in products)

@@ -11,7 +11,7 @@ import math
 import os
 from pathlib import Path
 import re
-from time import sleep
+from time import monotonic, sleep
 import unicodedata
 from zoneinfo import ZoneInfo
 
@@ -28,6 +28,7 @@ from src import topic_suitability as suitability
 from src.market_opportunity import review_search
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query
+from src.selection_feedback import load_history, deferred_keywords
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -63,8 +64,10 @@ CATEGORY_TERMS = {
 }
 SOURCE = 'category_market_v1'
 PROCESS_VERSION = 6
-MAX_RESEARCH_ROUNDS = 2
+MAX_RESEARCH_ROUNDS = 4
 PROPOSALS_PER_ROUND = 6
+MAX_RESEARCH_SECONDS = 25 * 60
+MAX_HISTORY_RETRIES = 2
 MAX_SOURCE_RECOVERIES = 2
 REJECTION_OPINION_CODES = frozenset({
     'source_navigation', 'source_missing_detail', 'expired_information',
@@ -240,9 +243,13 @@ def demand_candidates(seeds, min_volume=MIN_MONTHLY_SEARCH):
 
 
 def specificity_score(keyword):
-    return 15 if any(x in keyword for x in (
-        '방법', '조건', '일정', '준비', '대상', '신청', '차이', '비교', '서류',
-        '기간', '비용', '조회', '계산', '자격', '기준', '수치', '음식', '환급',
+    # Comparison/cost/qualification alone says nothing about answerable scope.
+    # It also bounds source-only research; actual scope still needs source review.
+    key = norm(keyword)
+    return 15 if key.endswith(('대상', '대상자')) or any(x in key for x in (
+        '방법', '절차', '조건', '일정', '준비', '신청', '서류',
+        '조회', '계산', '응시자격', '지원자격', '자격요건', '발급', '등록',
+        '설정', '연결', '오류', '해결', '사용법',
     )) else 5
 
 
@@ -366,6 +373,7 @@ def merge_cak_candidates(stats, titles, category, now):
 def candidate_prompt_row(row):
     """Keep seed-level measurements out of a related keyword's analysis input."""
     result = {key: row[key] for key in ('keyword', 'monthly', 'comp') if key in row}
+    result['discovery_specificity'] = specificity_score(row['keyword'])
     provenance = row.get('cak_provenance')
     if provenance is not None:
         signal = provenance['item']
@@ -832,7 +840,7 @@ def _review_source_coverage(candidate, now, *, budget):
 
 
 @source_fetch_scope()
-def select_category(category, top_n=2, titles=None, *, excluded_keywords=None):
+def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
     if type(top_n) is not int or not 1 <= top_n <= 5:
@@ -843,23 +851,50 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None):
         raise ValueError('Invalid excluded market keywords')
     excluded_keys = {norm(keyword) for keyword in excluded_keywords or []}
     now = datetime.now(timezone.utc).isoformat()
+    clock = datetime.fromisoformat(now)
+    started = monotonic()
+    history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
+    deferred = deferred_keywords(history, clock)
     seeds = list(CATEGORIES[category])
     stats = demand_candidates(seeds)
     titles = existing_titles() if titles is None else titles
     stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
-    pool = candidate_pool({key: row for key, row in stats.items()
-                           if norm(row['keyword']) not in excluded_keys}, titles, category)
-    if not pool:
+    eligible = {key: row for key, row in stats.items()
+                if norm(row['keyword']) not in excluded_keys
+                and measurement_key(row['keyword']) not in deferred}
+    past_failures = {measurement_key(row['keyword']): row for row in history}
+    pool = candidate_pool({key: row for key, row in eligible.items()
+                           if measurement_key(row['keyword']) not in past_failures}, titles, category)
+    retries = []
+    if past_failures:
+        retries = candidate_pool({key: row for key, row in eligible.items()
+                                  if measurement_key(row['keyword']) in past_failures}, titles, category)
+        retries.sort(key=lambda row: datetime.fromisoformat(
+            past_failures[measurement_key(row['keyword'])]['failed_at']))
+        retries = retries[:MAX_HISTORY_RETRIES]
+        # Expiry allows a limited fresh check, not a return to the same whole batch.
+        pool = pool[:120 - len(retries)] + retries
+    retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
+    if not pool and not deferred:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
+    offered = set()
     executed_queries = {}
     proposal_rounds = []
     recovery_budget = {'attempts': 0}
     rounds = 0
+    stop_reason = 'round_limit'
     for _ in range(MAX_RESEARCH_ROUNDS):
-        remaining = [row for row in pool if norm(row['keyword']) not in seen][:60]
-        if not remaining:
+        if monotonic() - started >= MAX_RESEARCH_SECONDS:
+            stop_reason = 'time_budget'
             break
+        available = [row for row in pool if norm(row['keyword']) not in seen]
+        # Show unseen parts of the measured pool before recycling a shortlist.
+        remaining = sorted(available, key=lambda row: norm(row['keyword']) in offered)[:60]
+        if not remaining:
+            stop_reason = 'pool_exhausted'
+            break
+        offered.update(norm(row['keyword']) for row in remaining)
         rounds += 1
         proposals = ask(f"""한국 블로그 {category} 카테고리의 검색 유입을 위한 조사 후보를 고르세요.
 오늘 {now[:10]}. 아래 실측 후보에서 정확한 keyword를 최대 {PROPOSALS_PER_ROUND}개 반환하세요.
@@ -874,6 +909,9 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 계산 방법·계산기 사용법을 고르려면 아래 목록에 그 정보형 검색어 자체의 실측 수요가 있어야 합니다.
 실측된 중소 검색량 롱테일 후보도 포함하세요. 제목/URL/차별점은 아직 만들지 마세요.
 월 5만 미만이며 질문/조건/방법/일정 등 구체적인 정보 수요가 있는 후보를 우선 포함하세요.
+비교·비용·자격·추천이라는 단어만으로 구체적인 질문이라고 판단하지 마세요.
+공식 문서에서 확인 가능한 절차·조건·설정 질문을 우선하세요. 포괄 비교·추천은
+전체 선택 범위를 뒷받침할 공식 자료가 필요하며 한두 제품 자료로 대신할 수 없습니다.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
 각 후보의 reason에는 지금 조사할 이유를 적으세요. 확인하지 않은 상승률·경쟁 우위는 주장하지 마세요.
 search_query에는 같은 검색어를 자연스러운 한국어 띄어쓰기로 적으세요.
@@ -885,10 +923,20 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
 기존 제목: {json.dumps(titles, ensure_ascii=False)}
 이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}
 출처 범위·현재성 부족 등으로 보류한 후보: {json.dumps([{'keyword': x['keyword'], 'reasons': x['hold_reasons']} for x in held], ensure_ascii=False)}
+이전 실행에서 탈락했으나 보류 기간이 지나 재검토 가능한 후보: {json.dumps(retry_context, ensure_ascii=False)}
+신규 후보를 우선하고, 재검토 후보는 이전 탈락 사유를 해결할 근거를 새로 확인해야 합니다.
 앞서 보류한 포괄어를 반복하기보다, 목록 안에서 전체 질문을 공식 근거로 답할 수 있는 다른 실측 후보를 조사하세요.""")
         candidates = proposals.get('candidates', []) if isinstance(proposals, dict) else []
         if not isinstance(candidates, list):
             candidates = []
+        allowed = {row['keyword'] for row in remaining}
+        fallback = not any(isinstance(row, dict) and isinstance(row.get('keyword'), str)
+                           and row['keyword'] in allowed for row in candidates[:PROPOSALS_PER_ROUND])
+        if fallback:
+            # A poor shortlist cannot end research or invent demand. Every measured
+            # fallback goes through exactly the same search/source/publication gates.
+            candidates = [{'keyword': row['keyword'], 'search_query': row['keyword'],
+                           'reason': 'measured_pool_fallback'} for row in remaining[:PROPOSALS_PER_ROUND]]
         proposed = []
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
             if not isinstance(proposal, dict):
@@ -903,10 +951,12 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 record['query_status'] = 'invalid_search_query'
             proposed.append(record)
         proposal_rounds.append({'round': rounds, 'offered_keywords': [x['keyword'] for x in remaining],
-                               'proposals': proposed})
-        allowed = {row['keyword'] for row in remaining}
+                               'proposals': proposed, 'measured_fallback': fallback})
         attempted_before = len(seen)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
+            if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                stop_reason = 'time_budget'
+                break
             keyword = proposal.get('keyword', '') if isinstance(proposal, dict) else ''
             if not isinstance(keyword, str) or keyword not in allowed or norm(keyword) in seen:
                 rejected.append({'keyword': str(keyword), 'reason': 'invalid or repeated measured keyword'})
@@ -1020,7 +1070,10 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 held.append(candidate)
             else:
                 selected.append(candidate)
-        if len(selected) >= top_n or len(seen) == attempted_before:
+        if len(selected) >= top_n:
+            stop_reason = 'selection_target'
+            break
+        if stop_reason == 'time_budget' or len(seen) == attempted_before:
             break
     selected.sort(key=lambda item: -item['score'])
     held.sort(key=lambda item: -item['score'])
@@ -1037,7 +1090,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                       'monthly_search': stats.get(item['keyword'], {}).get('monthly')} for item in rejected)
     for decision in decisions:
         decision['organic_query'] = executed_queries.get(decision['keyword'])
-    return {'category': category, 'selected_at': now, 'seeds': seeds,
+    report = {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
             'analyst': 'codex_subscription',
@@ -1046,6 +1099,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'measured_candidates': len(stats), 'evaluated_candidates': len(seen),
             'research_pool_size': len(pool), 'selected': selected[:top_n], 'held': held, 'rejected': rejected,
             'excluded_keywords': sorted(excluded_keys),
+            'deferred_keywords': sorted(deferred), 'research_stop_reason': stop_reason,
+            'retry_keywords': [row['keyword'] for row in retries],
             'selection_scope': 'highest_score_among_evaluated', 'proposal_rounds': proposal_rounds,
             'ranked_candidates': selected, 'candidate_decisions': decisions,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '
@@ -1056,6 +1111,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                      'The executed organic query may change ASCII spacing only; its binding is retained. '
                      'CAK exact rising candidates use their own daily trend score; related discoveries use '
                      'only their own Google trend. Null Google trend means unavailable or not requested.'}
+    report['failure_history'] = load_history({**report, 'failure_history': history}, category, clock)
+    return report
 
 
 def fresh_research_item(item, category, now=None):

@@ -1,0 +1,35 @@
+{
+  "version": "editorial-illustrated-v2",
+  "title": "발톱무좀치료방법: 먹는 약·바르는 약과 치료 전 확인사항",
+  "headings": [
+    "치료 전 확인사항"
+  ],
+  "headline": "발톱무좀 치료방법",
+  "subtitle": "먹는 약·바르는 약과 치료 전 확인사항",
+  "subject": "footcare",
+  "layout": "split",
+  "palette": [
+    "#EDF5F3",
+    "#173D38",
+    "#438E80",
+    "#D1E5DD"
+  ],
+  "headline_bounds": [
+    [
+      185,
+      259,
+      441,
+      325
+    ],
+    [
+      185,
+      341,
+      441,
+      407
+    ]
+  ],
+  "category": "건강",
+  "body_sha256": "e9870ccf4ef24c076f5d6761c2624926c50d702e8fd5eaf344b27baa8fcb5fbd",
+  "width": 1200,
+  "height": 900
+}

@@ -30,7 +30,7 @@ def install_selection(monkeypatch, keywords, *, passing=(), category='리뷰', s
     monkeypatch.setattr(market, 'demand_candidates', lambda _: deepcopy(stats))
     search = Mock(side_effect=lambda key: ('codex_native_search', organic_sample(key)))
     monkeypatch.setattr(market, 'search_results', search)
-    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence()])
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_, **kw: [evidence()])
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     monkeypatch.setattr(market, 'research_official_sources', lambda *_: ([], None))
     offered = []
@@ -123,7 +123,7 @@ def test_malformed_legacy_diagnostics_do_not_abort_new_research():
 def test_legacy_seven_review_failures_are_skipped_before_search(monkeypatch):
     now = datetime.now(timezone.utc)
     history = feedback.load_history(failed_report(REPEATED_REVIEW, at=now), '리뷰', now)
-    new = '무선청소기필터교체방법'
+    new = '무선청소기흡입력비교'
     stats, search, offered = install_selection(monkeypatch, [*REPEATED_REVIEW, new], passing=[new])
     report = market.select_category('리뷰', 1, [], failure_history=history)
     search.assert_called_once_with(new)
@@ -149,19 +149,19 @@ def test_all_deferred_writes_a_report_without_retrying_or_fabricating_candidates
 def test_expired_failures_cannot_take_over_the_next_category_run(monkeypatch):
     now = datetime.now(timezone.utc)
     history = feedback.load_history(failed_report(REPEATED_REVIEW, at=now - timedelta(days=4)), '리뷰', now)
-    new = '무선청소기필터교체방법'
+    new = '무선청소기흡입력비교'
     _, search, offered = install_selection(monkeypatch, [*REPEATED_REVIEW, new], passing=[new])
     report = market.select_category('리뷰', 1, [], failure_history=history)
     assert offered[0][0] == new
-    assert len(report['retry_keywords']) == 2
-    assert search.call_count == 3
+    assert report['retry_keywords'] == []  # Expired broad terms still fail discovery.
+    assert search.call_count == 1
     assert report['selected'][0]['keyword'] == new
     assert len(report['failure_history']) == 7
 
 
 def test_expired_failure_may_pass_only_after_new_full_evidence_review(monkeypatch):
     now = datetime.now(timezone.utc)
-    key = '노트북비교'
+    key = '노트북램비교'
     history = feedback.load_history(failed_report([key], at=now - timedelta(days=4)), '리뷰', now)
     _, search, _ = install_selection(monkeypatch, [key], passing=[key])
     report = market.select_category('리뷰', 1, [], failure_history=history)
@@ -170,8 +170,20 @@ def test_expired_failure_may_pass_only_after_new_full_evidence_review(monkeypatc
     assert report['failure_history'] == []
 
 
+def test_expired_bounded_questions_still_have_limited_retry_budget(monkeypatch):
+    now = datetime.now(timezone.utc)
+    old = [f'노트북{i}메모리비교' for i in range(7)]
+    history = feedback.load_history(failed_report(old, at=now - timedelta(days=4)), '리뷰', now)
+    new = '무선청소기흡입력비교'
+    _, search, offered = install_selection(monkeypatch, old + [new], passing=[new])
+    report = market.select_category('리뷰', 1, [], failure_history=history)
+    assert offered[0][0] == new
+    assert len(report['retry_keywords']) == 2 and search.call_count == 3
+    assert report['selected'][0]['keyword'] == new
+
+
 def test_second_round_explores_unoffered_half_of_120_pool(monkeypatch):
-    keys = [f'제품{i}확인방법' for i in range(120)]
+    keys = [f'노트북{i}메모리비교' for i in range(120)]
     stats, search, offered = install_selection(monkeypatch, keys, passing=[keys[60]])
     monkeypatch.setattr(market, 'candidate_pool', lambda *_: list(stats.values()))
     report = market.select_category('리뷰', 1, [])
@@ -182,7 +194,7 @@ def test_second_round_explores_unoffered_half_of_120_pool(monkeypatch):
 
 
 def test_third_round_can_find_valid_topic_after_twelve_failures(monkeypatch):
-    keys = [f'제품{i}확인방법' for i in range(13)]
+    keys = [f'노트북{i}메모리비교' for i in range(13)]
     stats, search, _ = install_selection(monkeypatch, keys, passing=[keys[-1]])
     monkeypatch.setattr(market, 'candidate_pool', lambda *_: list(stats.values()))
     report = market.select_category('리뷰', 1, [])
@@ -193,19 +205,33 @@ def test_third_round_can_find_valid_topic_after_twelve_failures(monkeypatch):
 
 @pytest.mark.parametrize('shortlist', [lambda _: {'candidates': []},
                                      lambda _: {'candidates': [{'keyword': 'unmeasured invented keyword'}]}])
-def test_bad_shortlist_uses_only_measured_alternatives_with_full_gates(monkeypatch, shortlist):
-    keys = ['제품확인방법', '제품연결방법']
+def test_bad_shortlist_does_not_force_publish_or_research_unendorsed_candidates(monkeypatch, shortlist):
+    keys = ['노트북램비교', '무선청소기흡입력비교']
     _, search, _ = install_selection(monkeypatch, keys, passing=keys[:1], shortlist=shortlist)
     report = market.select_category('리뷰', 1, [])
-    assert {c.args[0] for c in search.call_args_list} == set(keys)
-    assert report['selected'][0]['keyword'] == keys[0]
-    assert len(report['rejected']) == 1
-    assert report['proposal_rounds'][0]['measured_fallback'] is True
-    assert market.fresh_market_item(report['selected'][0], '리뷰')
+    search.assert_not_called()
+    assert report['selected'] == [] and report['evaluated_candidates'] == 0
+    assert report['proposal_rounds'][0]['measured_fallback'] is False
+    assert report['proposal_rounds'][0]['no_eligible_proposal'] is True
+    with pytest.raises(RuntimeError):
+        market.enqueue_report([], report)
+
+
+def test_empty_shortlist_moves_to_unoffered_candidates(monkeypatch):
+    keys = [f'노트북{i}메모리비교' for i in range(120)]
+    def shortlist(rows):
+        return {'candidates': [] if keys[0] in [r['keyword'] for r in rows]
+                else [{'keyword': keys[60]}]}
+    stats, search, offered = install_selection(monkeypatch, keys, passing=[keys[60]], shortlist=shortlist)
+    monkeypatch.setattr(market, 'candidate_pool', lambda *_: list(stats.values()))
+    report = market.select_category('리뷰', 1, [])
+    assert set(offered[0]).isdisjoint(offered[1])
+    search.assert_called_once_with(keys[60])
+    assert report['selected'][0]['keyword'] == keys[60]
 
 
 def test_round_and_time_budgets_stop_with_persistable_diagnostics(monkeypatch):
-    keys = [f'제품{i}확인방법' for i in range(120)]
+    keys = [f'노트북{i}메모리비교' for i in range(120)]
     _, search, _ = install_selection(monkeypatch, keys)
     report = market.select_category('리뷰', 1, [])
     assert report['evaluated_candidates'] == 24 and search.call_count == 24
@@ -221,7 +247,7 @@ def test_round_and_time_budgets_stop_with_persistable_diagnostics(monkeypatch):
 
 def test_cli_repeated_invocations_preserve_memory_and_select_different_keyword(tmp_path, monkeypatch):
     from scripts import select_blog_keywords as cli
-    old, new = '노트북비교', '노트북연결방법'
+    old, new = '노트북램비교', '노트북배터리사용시간'
     _, first_search, _ = install_selection(monkeypatch, [old])
     report_path = tmp_path / 'report.json'
     (tmp_path / 'data').mkdir(exist_ok=True)

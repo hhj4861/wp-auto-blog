@@ -2033,7 +2033,7 @@ def test_selection_passes_requested_category_to_pool(monkeypatch):
 
 @pytest.mark.parametrize('category,keyword,url', [
     ('생산성', '엑셀함수사용법', 'https://support.microsoft.com/excel'),
-    ('리뷰', '로봇청소기비교', 'https://www.samsung.com/cleaner'),
+    ('리뷰', '로봇청소기문턱', 'https://www.samsung.com/cleaner'),
     ('테크', '아이폰백업방법', 'https://support.apple.com/iphone'),
 ])
 def test_new_categories_select_verified_sources_and_enqueue(monkeypatch, category, keyword, url):
@@ -2044,7 +2044,7 @@ def test_new_categories_select_verified_sources_and_enqueue(monkeypatch, categor
     review = Mock(side_effect=[{'candidates': [{'keyword': keyword}]}, analysis(keyword, category)])
     monkeypatch.setattr(market, 'ask', review)
     monkeypatch.setattr(market, 'search_results', lambda key: ('google_custom_search', organic_sample(key)))
-    monkeypatch.setattr(market, 'candidate_sources', lambda *_: [evidence(url)])
+    monkeypatch.setattr(market, 'candidate_sources', lambda *_, **kw: [evidence(url)])
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     report = market.select_category(category, 1, titles=[])
     measured.assert_called_once_with(market.CATEGORIES[category])

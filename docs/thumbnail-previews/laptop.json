@@ -1,0 +1,29 @@
+{
+  "version": "editorial-illustrated-v2",
+  "title": "노트북 램 16GB·32GB: 내 작업에 맞게 고르기",
+  "headings": [
+    "작업별 메모리 확인"
+  ],
+  "headline": "노트북 램 16GB·32GB",
+  "subtitle": "내 작업에 맞게 고르기",
+  "subject": "laptop",
+  "layout": "stacked",
+  "palette": [
+    "#EFF1FA",
+    "#283357",
+    "#6278BB",
+    "#D4DCF4"
+  ],
+  "headline_bounds": [
+    [
+      185,
+      583,
+      816,
+      645
+    ]
+  ],
+  "category": "리뷰",
+  "body_sha256": "b3b81e966f1f3480ad099a3811814d55607bd78d710f935e054a596ca1195181",
+  "width": 1200,
+  "height": 900
+}

@@ -1,0 +1,29 @@
+{
+  "version": "editorial-illustrated-v2",
+  "title": "면접 자기소개: 경험을 명확하게 전하는 법",
+  "headings": [
+    "경험 선택과 구성"
+  ],
+  "headline": "면접 자기소개",
+  "subtitle": "경험을 명확하게 전하는 법",
+  "subject": "career",
+  "layout": "stacked",
+  "palette": [
+    "#F0F1F8",
+    "#353C59",
+    "#7887B5",
+    "#DCDFEE"
+  ],
+  "headline_bounds": [
+    [
+      185,
+      582,
+      563,
+      645
+    ]
+  ],
+  "category": "취업",
+  "body_sha256": "20acf5de6eaa0ddf9296a645dd8f1813a41bdb37163cf2b03b1bfe985b1fb6eb",
+  "width": 1200,
+  "height": 900
+}

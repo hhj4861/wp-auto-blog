@@ -1,0 +1,29 @@
+{
+  "version": "editorial-illustrated-v2",
+  "title": "공기청정기 평수: 사용 면적 확인하기",
+  "headings": [
+    "공간에 맞는 사용 면적"
+  ],
+  "headline": "공기청정기 평수",
+  "subtitle": "사용 면적 확인하기",
+  "subject": "air",
+  "layout": "stacked",
+  "palette": [
+    "#EDF4F8",
+    "#263F52",
+    "#5B97B7",
+    "#D0E5ED"
+  ],
+  "headline_bounds": [
+    [
+      185,
+      582,
+      623,
+      644
+    ]
+  ],
+  "category": "리뷰",
+  "body_sha256": "8bff4b9d47edaf6abc187ebbfd81ee35f3e06c29328d86a23dd5d3f636473784",
+  "width": 1200,
+  "height": 900
+}

@@ -1,0 +1,29 @@
+{
+  "version": "editorial-illustrated-v2",
+  "title": "엑셀 조건부 서식: 필요한 데이터만 한눈에",
+  "headings": [
+    "조건에 맞는 셀 강조하기"
+  ],
+  "headline": "엑셀 조건부 서식",
+  "subtitle": "필요한 데이터만 한눈에",
+  "subject": "spreadsheet",
+  "layout": "stacked",
+  "palette": [
+    "#ECF4EF",
+    "#183D32",
+    "#398261",
+    "#CCE3D6"
+  ],
+  "headline_bounds": [
+    [
+      185,
+      583,
+      641,
+      645
+    ]
+  ],
+  "category": "생산성",
+  "body_sha256": "a25ff62b643cf79aec4d869bc1aed3ed15e38a5a3e785b8df00a59c13f0078ef",
+  "width": 1200,
+  "height": 900
+}

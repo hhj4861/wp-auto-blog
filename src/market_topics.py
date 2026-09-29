@@ -14,6 +14,7 @@ import re
 from time import monotonic, sleep
 import unicodedata
 from zoneinfo import ZoneInfo
+from urllib.parse import urlsplit
 
 import requests
 
@@ -29,13 +30,14 @@ from src.market_opportunity import review_search
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query
 from src.selection_feedback import load_history, deferred_keywords
+from src import review_discovery
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
     '생활정보': ['신청방법', '환급금', '생활요금', '정부지원'],
     '건강': ['건강검진', '예방접종', '건강보험', '운동'],
     '생산성': ['엑셀', '노션', '구글스프레드시트', '시간관리'],
-    '리뷰': ['로봇청소기', '무선청소기', '공기청정기', '노트북비교'],
+    '리뷰': list(review_discovery.SEEDS),
     '테크': ['갤럭시', '아이폰', '윈도우', '와이파이'],
 }
 CATEGORY_SCOPES = {
@@ -429,24 +431,31 @@ def official_search_urls(keyword):
     """
     extras = _official_search_extra_domains(keyword)
     domains = list(dict.fromkeys([*extras, 'go.kr', 'or.kr', 'gov', 'ac.kr']))[:4]
+    purchase_question = review_discovery.discovery_issue(keyword) is None
+    if purchase_question:
+        domains = list(dict.fromkeys([*extras, 'kca.go.kr']))[:4]
     groups, seen = [], set()
     for index, domain in enumerate(domains):
-        _, rows = search_results(f'{keyword} site:{domain}')
+        scope = {'lg.com': 'lg.com/kr', 'samsung.com': 'samsung.com/sec'}.get(domain, domain) if purchase_question else domain
+        query = f'{keyword} 제품 사양 site:{scope}' if purchase_question else f'{keyword} site:{domain}'
+        _, rows = search_results(query)
         urls = []
         for row in rows:
             url = row.get('url', '')
             if (is_official_url(url) and host_matches(https_host(url), domain)
+                    and (scope == domain or urlsplit(url).path.startswith('/' + scope.split('/', 1)[1] + '/'))
                     and url not in seen):
                 seen.add(url)
                 urls.append(url)
                 if len(urls) == 4:
                     break
         groups.append(urls)
-        if len(seen) >= 4 and index + 1 >= len(extras):
+        if not purchase_question and len(seen) >= 4 and index + 1 >= len(extras):
             break
     # A comparison needs more than one manufacturer's pages. Do not let the
     # first site's navigation/results consume every available source slot.
-    return [group[rank] for rank in range(4) for group in groups if len(group) > rank][:4]
+    limit = 12 if purchase_question else 4
+    return [group[rank] for rank in range(4) for group in groups if len(group) > rank][:limit]
 
 
 def _append_distinct_source(sources, source):
@@ -466,7 +475,7 @@ def _append_distinct_source(sources, source):
     return True
 
 
-def candidate_sources(keyword, results):
+def candidate_sources(keyword, results, *, category=None):
     sources, seen = [], set()
 
     def read(urls):
@@ -475,6 +484,8 @@ def candidate_sources(keyword, results):
                 continue
             seen.add(url)
             source = fetch_source(url)
+            if category == '리뷰' and not review_discovery.relevant_source(keyword, source):
+                continue
             _append_distinct_source(sources, source)
             if len(sources) >= 3:
                 break
@@ -517,6 +528,8 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
         model=os.environ.get('BLOG_CODEX_MODEL', ''), timeout=240)
     extra_domains = ', '.join(_official_search_extra_domains(keyword))
     domain_hint = f'이 검색어와 관련된 공식 도메인 {extra_domains}의 상세 안내도 우선 조사하세요.' if extra_domains else ''
+    if category == '리뷰':
+        domain_hint += '\n' + review_discovery.source_hint(keyword)
     coverage_hint = ''
     if coverage_gaps is not None:
         coverage_hint = (
@@ -546,7 +559,7 @@ go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품
     locators = research_source_locators(trace)
     for locator in locators:
         source = fetch_source(locator['url'])
-        if source:
+        if source and (category != '리뷰' or review_discovery.relevant_source(keyword, source)):
             _append_distinct_source(sources, {**source, 'locator_origin': locator['origin']})
         if len(sources) >= 3:
             break
@@ -862,6 +875,11 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     eligible = {key: row for key, row in stats.items()
                 if norm(row['keyword']) not in excluded_keys
                 and measurement_key(row['keyword']) not in deferred}
+    discovery_rejections = []
+    if category == '리뷰':
+        discovery_rejections = [{'keyword': row['keyword'], 'reason': review_discovery.discovery_issue(row['keyword'])}
+                                for row in eligible.values() if review_discovery.discovery_issue(row['keyword'])]
+        eligible = {key: row for key, row in eligible.items() if not review_discovery.discovery_issue(row['keyword'])}
     past_failures = {measurement_key(row['keyword']): row for row in history}
     pool = candidate_pool({key: row for key, row in eligible.items()
                            if measurement_key(row['keyword']) not in past_failures}, titles, category)
@@ -875,10 +893,11 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         # Expiry allows a limited fresh check, not a return to the same whole batch.
         pool = pool[:120 - len(retries)] + retries
     retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
-    if not pool and not deferred:
+    if not pool and not deferred and not discovery_rejections:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
     offered = set()
+    not_proposed = set()
     executed_queries = {}
     proposal_rounds = []
     recovery_budget = {'attempts': 0}
@@ -888,7 +907,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         if monotonic() - started >= MAX_RESEARCH_SECONDS:
             stop_reason = 'time_budget'
             break
-        available = [row for row in pool if norm(row['keyword']) not in seen]
+        available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed]
         # Show unseen parts of the measured pool before recycling a shortlist.
         remaining = sorted(available, key=lambda row: norm(row['keyword']) in offered)[:60]
         if not remaining:
@@ -910,6 +929,9 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 실측된 중소 검색량 롱테일 후보도 포함하세요. 제목/URL/차별점은 아직 만들지 마세요.
 월 5만 미만이며 질문/조건/방법/일정 등 구체적인 정보 수요가 있는 후보를 우선 포함하세요.
 비교·비용·자격·추천이라는 단어만으로 구체적인 질문이라고 판단하지 마세요.
+리뷰는 제품군과 구매 판단 항목(흡입력·사용 면적·문턱·메모리 등)이 함께 있는 후보에서
+해당 항목의 의미·제약·시험 조건을 설명할 질문을 고르세요. 제품군 전체 순위·추천으로 넓히지 마세요.
+청소·수리·고장 해결은 구매 비교 목적이 아닙니다. 적합한 후보가 없으면 빈 목록을 반환하세요.
 공식 문서에서 확인 가능한 절차·조건·설정 질문을 우선하세요. 포괄 비교·추천은
 전체 선택 범위를 뒷받침할 공식 자료가 필요하며 한두 제품 자료로 대신할 수 없습니다.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
@@ -930,13 +952,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
         if not isinstance(candidates, list):
             candidates = []
         allowed = {row['keyword'] for row in remaining}
-        fallback = not any(isinstance(row, dict) and isinstance(row.get('keyword'), str)
+        no_proposal = not any(isinstance(row, dict) and isinstance(row.get('keyword'), str)
                            and row['keyword'] in allowed for row in candidates[:PROPOSALS_PER_ROUND])
-        if fallback:
-            # A poor shortlist cannot end research or invent demand. Every measured
-            # fallback goes through exactly the same search/source/publication gates.
-            candidates = [{'keyword': row['keyword'], 'search_query': row['keyword'],
-                           'reason': 'measured_pool_fallback'} for row in remaining[:PROPOSALS_PER_ROUND]]
         proposed = []
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
             if not isinstance(proposal, dict):
@@ -951,7 +968,11 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 record['query_status'] = 'invalid_search_query'
             proposed.append(record)
         proposal_rounds.append({'round': rounds, 'offered_keywords': [x['keyword'] for x in remaining],
-                               'proposals': proposed, 'measured_fallback': fallback})
+                               'proposals': proposed, 'measured_fallback': False,
+                               'no_eligible_proposal': no_proposal})
+        if no_proposal:
+            not_proposed.update(norm(row['keyword']) for row in remaining)
+            continue
         attempted_before = len(seen)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
             if monotonic() - started >= MAX_RESEARCH_SECONDS:
@@ -964,6 +985,9 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             seen.add(norm(keyword))
             if not category_matches(keyword, category):
                 rejected.append({'keyword': keyword, 'reason': 'category mismatch'})
+                continue
+            if category == '리뷰' and review_discovery.discovery_issue(keyword):
+                rejected.append({'keyword': keyword, 'reason': review_discovery.discovery_issue(keyword)})
                 continue
             try:
                 proposed_query = proposal.get('search_query')
@@ -1010,7 +1034,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             if dominance is not None and row['monthly'] >= HEAD_SEARCH_VOLUME and dominance > MAX_GOV_RATIO:
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
                 continue
-            sources = candidate_sources(query, relevant_results) if results else []
+            source_options = {'category': category} if category == '리뷰' else {}
+            sources = candidate_sources(query, relevant_results, **source_options) if results else []
             allow_recovery = bool(sources)
             if not sources:
                 try:
@@ -1101,6 +1126,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'excluded_keywords': sorted(excluded_keys),
             'deferred_keywords': sorted(deferred), 'research_stop_reason': stop_reason,
             'retry_keywords': [row['keyword'] for row in retries],
+            'discovery_rejections': discovery_rejections,
             'selection_scope': 'highest_score_among_evaluated', 'proposal_rounds': proposal_rounds,
             'ranked_candidates': selected, 'candidate_decisions': decisions,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '

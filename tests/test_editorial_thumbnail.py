@@ -54,3 +54,34 @@ def test_local_upload_uses_generated_bytes_only(tmp_path, monkeypatch):
         upload.reset_mock()
         assert client._upload_media('/etc/passwd', '') == (None, None)
         upload.assert_not_called()
+
+
+@pytest.mark.parametrize('title,subject', [
+    ('무선청소기 흡입력 비교: 시험 조건 읽기', 'vacuum'),
+    ('공기청정기 평수', 'air'), ('엑셀 조건부 서식', 'spreadsheet'),
+    ('노트북 램 16GB·32GB', 'laptop'), ('아이폰 배터리', 'phone'),
+    ('와이파이 공유기', 'router'), ('발톱무좀치료방법', 'footcare'),
+    ('건강검진 준비', 'health'), ('세금 환급', 'wallet'), ('접수 일정', 'calendar'),
+    ('면접 자기소개', 'career'), ('노션 메모', 'notebook'), ('전입신고', 'home'),
+    ('일상에서 확인할 내용', 'document'), ('장문제목' * 40, 'document'),
+])
+def test_subject_art_and_headline_stay_readable_inside_square_crop(tmp_path, monkeypatch, title, subject):
+    monkeypatch.setattr(module, 'OUTPUT', tmp_path)
+    path = Path(module.create_editorial_thumbnail(title, '<h2>본문의 확인 항목</h2>').url)
+    audit = json.loads(path.with_suffix('.json').read_text())
+    assert audit['version'] == module.VERSION and audit['subject'] == subject
+    assert audit['headline'].replace(' ', '') == title.split(':')[0].replace(' ', '')
+    assert all(150 <= x0 < x1 <= 1050 and 100 <= y0 < y1 < 785
+               for x0, y0, x1, y1 in audit['headline_bounds'])
+    # An actual non-text illustration occupies the upper central area.
+    image = Image.open(path)
+    assert len(image.crop((650, 200, 1000, 550)).getcolors(350 * 350)) > 100
+
+
+def test_version_and_category_invalidate_old_thumbnail_identity(tmp_path, monkeypatch):
+    monkeypatch.setattr(module, 'OUTPUT', tmp_path)
+    original = module.create_editorial_thumbnail('본문 확인', '', '건강')
+    different_category = module.create_editorial_thumbnail('본문 확인', '', '리뷰')
+    monkeypatch.setattr(module, 'VERSION', 'next-design')
+    updated = module.create_editorial_thumbnail('본문 확인', '', '건강')
+    assert len({original.url, different_category.url, updated.url}) == 3

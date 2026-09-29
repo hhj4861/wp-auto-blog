@@ -1,0 +1,35 @@
+{
+  "version": "editorial-illustrated-v2",
+  "title": "무선청소기 흡입력 비교: 수치와 시험 조건 읽는 법",
+  "headings": [
+    "흡입력 단위와 시험 조건"
+  ],
+  "headline": "무선청소기 흡입력 비교",
+  "subtitle": "수치와 시험 조건 읽는 법",
+  "subject": "vacuum",
+  "layout": "split",
+  "palette": [
+    "#F1F0F7",
+    "#39344F",
+    "#8271B3",
+    "#DED8EE"
+  ],
+  "headline_bounds": [
+    [
+      185,
+      259,
+      505,
+      325
+    ],
+    [
+      185,
+      341,
+      524,
+      407
+    ]
+  ],
+  "category": "리뷰",
+  "body_sha256": "c79dd9e18b7d21a498c01682da1fad19a962c3114c72db66b1941b4d8e2cbcb9",
+  "width": 1200,
+  "height": 900
+}

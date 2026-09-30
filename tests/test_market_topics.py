@@ -2450,13 +2450,13 @@ def test_official_lookup_prioritizes_manufacturers_and_bounds_empty_searches(mon
     monkeypatch.setattr(market, 'search_results', lookup)
     assert market.official_search_urls('무선 청소기 비교') == []
     assert [call.args[0] for call in lookup.call_args_list] == [
-        '무선 청소기 비교 site:samsung.com', '무선 청소기 비교 site:lg.com',
+        '무선 청소기 비교 site:samsung.com', '무선 청소기 비교 site:lge.co.kr',
         '무선 청소기 비교 site:go.kr', '무선 청소기 비교 site:or.kr']
 
 
 def test_comparison_sources_include_both_manufacturers_before_more_same_site_pages(monkeypatch):
     samsung = [f'https://www.samsung.com/sec/product-{i}' for i in range(4)]
-    lg = [f'https://www.lg.com/kr/product-{i}' for i in range(4)]
+    lg = [f'https://www.lge.co.kr/product-{i}' for i in range(4)]
     lookup = Mock(side_effect=[('duckduckgo_proxy', [{'url': u} for u in urls]) for urls in [samsung, lg]])
     monkeypatch.setattr(market, 'search_results', lookup)
     assert market.official_search_urls('무선 청소기 비교') == [samsung[0], lg[0], samsung[1], lg[1]]

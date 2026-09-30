@@ -1,5 +1,4 @@
 """Regression coverage for TrendPulse's evidence and safe update boundaries."""
-import copy
 import hashlib
 import json
 from pathlib import Path
@@ -741,3 +740,46 @@ def test_kca_only_uses_article_with_date_not_attachment_or_previous_article(monk
         assert source['excerpt'] == '시험 결과 2016-11-13 ' + article.strip()
     else:
         assert source is None
+
+
+@pytest.mark.parametrize('body', ['', '스펙', '무선청소기 본체 무게 1.98kg 사용시간 40분 흡입구 미장착. ' * 12])
+def test_lg_korea_uses_product_panels_not_subscription_promotions(source_http, body):
+    html = ('<title>LG 코드제로 A5 A520WC</title><article>' + '구독 할인 홍보 ' * 100 + '</article>'
+            '<section id="tab-panel-spec">' + body + '</section>'
+            '<section id="tab-panel-overview"><div id="overview"></div></section>'
+            '<section id="tab-panel-review">고객 후기</section>')
+    source_http.get.side_effect = [_source_response(html)]
+    source = fetch_source('https://www.lge.co.kr/vacuum-cleaners/a520wc')
+    if len(body) < 200:
+        assert source is None
+    else:
+        from src.review_discovery import relevant_source
+        assert source['excerpt'] == body.strip()
+        assert relevant_source('가벼운청소기', source)
+        assert '홍보' not in source['excerpt'] and '후기' not in source['excerpt']
+
+
+@pytest.mark.parametrize('wrapper', [True, False])
+def test_lg_specs_features_and_end_conditions_are_kept_once(source_http, wrapper):
+    specs = '제품 상세 스펙 무선청소기 본체 무게 1.98kg 사용시간 40분 흡입구 미장착.'
+    feature = 'LG 코드제로 A5 약 1.97kg의 가벼운 무게. ' + '제품 설명 ' * 1600 + '시험 조건: 본체와 배터리 무게는 약 1.1kg.'
+    overview = '<div id="overview">' + feature + '</div>'
+    if wrapper:
+        overview = '<section id="tab-panel-overview">' + overview + '</section>'
+    source_http.get.side_effect = [_source_response('<div id="tab-panel-spec">' + specs + '</div>' + overview)]
+    source = fetch_source('https://www.lge.co.kr/vacuum-cleaners/a520wc')
+    assert source['excerpt'].startswith(specs)
+    assert source['excerpt'].endswith('시험 조건: 본체와 배터리 무게는 약 1.1kg.')
+    assert len(source['excerpt']) <= 8000
+    assert source['sha256'] == hashlib.sha256((specs + ' ' + feature).encode()).hexdigest()
+
+
+@pytest.mark.parametrize('url,allowed', [
+    ('https://www.lge.co.kr/vacuum-cleaners/a520wc', True),
+    ('http://www.lge.co.kr/vacuum-cleaners/a520wc', False),
+    ('https://lge.co.kr.evil.test/product', False),
+    ('https://lge.co.kr@evil.test/product', False),
+    ('https://lge.co.kr:123/product', False),
+])
+def test_lg_official_domain_keeps_https_and_host_boundaries(url, allowed):
+    assert is_official_url(url) is allowed

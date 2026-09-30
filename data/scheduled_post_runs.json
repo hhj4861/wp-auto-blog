@@ -206,7 +206,8 @@
       "category": "생산성",
       "slot": "morning",
       "claimed_at": "2026-09-30T13:02:57.219111+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-09-30T04:07:44.859582+00:00"
     }
   }
 }

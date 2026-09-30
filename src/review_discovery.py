@@ -131,4 +131,28 @@ def source_hint(keyword):
     return ('구매 전 판단 질문입니다. ' + ', '.join(products) + '의 ' + ', '.join(facets)
             + '를 직접 설명하는 국내 공식 제품 사양·비교표·시험 조건을 찾으세요. '
               '청소·고장 해결 도움말, 인증 등록 목록, 다른 제품 자료는 제외하세요. '
-              '비교 질문은 비교 대상 양쪽의 동일 항목과 측정 조건을 확인하세요.')
+              '비교 질문은 비교 대상 양쪽의 동일 항목과 측정 조건을 확인하세요. '
+              '특정 브랜드를 지정하지 않은 여러 제품의 구매 선택 질문이라면 서로 다른 제조사의 '
+              '관련 모델 사양을 찾아 같은 구성·측정 조건으로 비교 가능한지 확인하세요. '
+              '자료 개수나 제조사 수만으로 질문 전체를 지원한다고 판단하지 마세요.')
+
+
+def source_publisher(source):
+    """Group known manufacturer subdomains; URL diversity alone is not evidence."""
+    host = (urlsplit(source['url']).hostname or '').lower().removeprefix('www.')
+    if host == 'lge.co.kr' or host.endswith('.lge.co.kr'):
+        return 'lg.com'
+    for domain in ('samsung.com', 'lg.com', 'apple.com', 'roborock.com', 'dreametech.com'):
+        if host == domain or host.endswith('.' + domain):
+            return domain
+    return host
+
+
+def diverse_sources(sources, limit=3):
+    """Give each fetched publisher one slot before using its other pages."""
+    groups = {}
+    for source in sources:
+        groups.setdefault(source_publisher(source), []).append(source)
+    ordered = [rows[index] for index in range(max(map(len, groups.values()), default=0))
+               for rows in groups.values() if index < len(rows)]
+    return ordered[:limit]

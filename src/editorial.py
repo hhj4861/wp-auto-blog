@@ -28,7 +28,7 @@ POLICY_CATEGORIES = {"생활정보", "취업", "건강"}
 OFFICIAL_DOMAINS = {
     "support.microsoft.com", "notion.com", "support.google.com", "apple.com",
     "samsung.com", "samsungcareers.com", "hyundai.com", "hyundaimotorgroup.com", "skcareers.com",
-    "skhynix.com", "lg.com", "lguplus.com", "jal.com", "jal.co.jp",
+    "skhynix.com", "lg.com", "lge.co.kr", "lguplus.com", "jal.com", "jal.co.jp",
     "emiratesgroupcareers.com", "emirates.com", "finnair.com", "airbusan.com",
     "koreanair.com", "flyasiana.com", "qatarairways.com", "singaporeair.com",
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
@@ -102,6 +102,17 @@ def _source_body(soup, url=""):
         product = soup.select('#compGoodsSpec, #compGoodsFeatures')
         if product:
             return ' '.join(node.get_text(' ', strip=True) for node in product).strip()
+    # LG Korea uses small <article> blocks for subscription promotions. Read
+    # the rendered product panels, with specifications before long feature text.
+    # Empty panels must not fall back to unrelated storefront copy.
+    if host_matches(https_host(url), 'lge.co.kr'):
+        specs = soup.select_one('#tab-panel-spec')
+        overview = soup.select_one('#tab-panel-overview')
+        if overview is None:
+            overview = soup.select_one('#overview')
+        if specs is not None or overview is not None:
+            return ' '.join(node.get_text(' ', strip=True) for node in (specs, overview)
+                            if node is not None).strip()
     # Exact, common content containers, including the hospital's legacy CMS.
     if host_matches(https_host(url), 'kca.go.kr'):
         board = soup.select_one('table.board_insert')
@@ -130,7 +141,7 @@ def _source_excerpt(text, url):
     # Manufacturer test conditions often follow the feature descriptions. Keep
     # both ends within the same budget, with an explicit omission boundary.
     product_host = any(host_matches(https_host(url), host) for host in (
-        'samsung.com', 'lg.com', 'kr.roborock.com',
+        'samsung.com', 'lg.com', 'lge.co.kr', 'kr.roborock.com',
         'store.kr.dreametech.com'))
     if product_host and len(text) > 8000:
         return text[:4500] + '\n[중간 본문 생략]\n' + text[-3400:]

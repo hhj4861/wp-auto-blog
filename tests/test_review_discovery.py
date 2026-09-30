@@ -7,7 +7,7 @@ import pytest
 from src import market_topics as market
 from src import review_discovery as review
 from tests.test_selection_feedback import install_selection
-from tests.test_market_topics import isolated_market_history
+from tests.test_market_topics import isolated_market_history as isolated_market_history
 
 
 @pytest.mark.parametrize('keyword', [
@@ -57,16 +57,16 @@ def test_official_research_uses_domestic_product_scopes_and_keeps_later_urls(mon
             return 'test', [{'url': f'https://www.samsung.com/sec/vacuums/model{i}'} for i in range(4)] + [
                 {'url': 'https://www.samsung.com/us/vacuums/other'},
                 {'url': 'https://www.samsung.com.evil.example/sec/vacuums'}]
-        if 'site:lg.com/kr' in query:
-            return 'test', [{'url': f'https://www.lg.com/kr/vacuum-cleaners/{i}'} for i in range(4)]
+        if 'site:lge.co.kr' in query:
+            return 'test', [{'url': f'https://www.lge.co.kr/vacuum-cleaners/{i}'} for i in range(4)]
         return 'test', [{'url': 'https://www.kca.go.kr/test/cleaner'}]
     monkeypatch.setattr(market, 'search_results', search)
     urls = market.official_search_urls('무선청소기흡입력')
     assert len(urls) == 9
-    assert '/sec/' in urls[0] and '/kr/' in urls[1] and 'kca.go.kr' in urls[2]
+    assert '/sec/' in urls[0] and 'lge.co.kr' in urls[1] and 'kca.go.kr' in urls[2]
     assert all('/us/' not in url and 'evil' not in url for url in urls)
     assert queries == ['무선청소기흡입력 제품 사양 site:samsung.com/sec',
-                       '무선청소기흡입력 제품 사양 site:lg.com/kr',
+                       '무선청소기흡입력 제품 사양 site:lge.co.kr',
                        '무선청소기흡입력 제품 사양 site:kca.go.kr']
 
 
@@ -169,5 +169,51 @@ def test_supplemental_product_families_have_domestic_manufacturer_searches(monke
     monkeypatch.setattr(market, 'search_results', lambda q: (queries.append(q), []))
     market.official_search_urls('모니터주사율')
     assert queries == ['모니터주사율 제품 사양 site:samsung.com/sec',
-                       '모니터주사율 제품 사양 site:lg.com/kr',
+                       '모니터주사율 제품 사양 site:lge.co.kr',
                        '모니터주사율 제품 사양 site:kca.go.kr']
+
+
+@pytest.mark.parametrize('native', [False, True])
+def test_three_first_manufacturer_pages_do_not_hide_second_manufacturer(monkeypatch, native):
+    urls = [f'https://www.samsung.com/sec/vacuum/{i}' for i in range(3)] + ['https://www.lg.com/kr/vacuum/4']
+    bodies = [source(url, f'청소기 흡입력 시험 조건 모델 {i}') for i, url in enumerate(urls)]
+    fetch = Mock(side_effect=lambda url: bodies[urls.index(url)])
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    if native:
+        from types import SimpleNamespace
+        trace = {'searched': True, 'opened_urls': urls, 'text': '{}'}
+        monkeypatch.setattr('src.codex_client.CodexSubscriptionClient',
+                            lambda **kw: SimpleNamespace(research=lambda _: trace))
+        selected, _ = market.research_official_sources('청소기흡입력', '리뷰', '2026-09-30')
+    else:
+        monkeypatch.setattr(market, 'official_search_urls', lambda _: urls[2:])
+        selected = market.candidate_sources('청소기흡입력', [{'url': u} for u in urls[:2]], category='리뷰')
+    assert fetch.call_count == 4
+    assert [row['url'] for row in selected] == [urls[0], urls[3], urls[1]]
+    assert len(selected) == 3
+
+
+def test_manufacturer_subdomains_do_not_count_as_independent_publishers():
+    rows = [source('https://www.samsung.com/a', '청소기 무게'),
+            source('https://news.samsung.com/b', '다른 청소기 무게'),
+            source('https://www.lge.co.kr/c', 'LG 청소기 무게')]
+    assert review.diverse_sources(rows) == [rows[0], rows[2], rows[1]]
+
+
+def test_lg_global_and_korean_store_are_same_manufacturer():
+    assert review.source_publisher({'url': 'https://www.lge.co.kr/a'}) == review.source_publisher({'url': 'https://www.lg.com/a'})
+
+
+def test_recovery_does_not_spend_new_source_slots_on_known_urls(monkeypatch):
+    from types import SimpleNamespace
+    old = 'https://www.samsung.com/sec/old'
+    new = 'https://www.lge.co.kr/vacuum-cleaners/new'
+    trace = {'searched': True, 'opened_urls': [old, new], 'text': '{}'}
+    monkeypatch.setattr('src.codex_client.CodexSubscriptionClient',
+                        lambda **kw: SimpleNamespace(research=lambda _: trace))
+    fetch = Mock(return_value=source(new, '청소기 무게 및 운전 조건'))
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    rows, _ = market.research_official_sources('가벼운청소기', '리뷰', '2026-09-30',
+        coverage_gaps={'existing_urls': [old], 'recovery_type': 'review_plan'})
+    fetch.assert_called_once_with(new)
+    assert rows[0]['url'] == new

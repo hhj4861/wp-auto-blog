@@ -283,5 +283,25 @@
     "trend_status": "measured",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-29T11:47:24.527336+00:00"
+  },
+  {
+    "key": "엑셀표만들기",
+    "keyword": "엑셀표만들기",
+    "topic": "엑셀표만들기: 표 생성부터 서식·머리글 설정과 정렬·필터링까지",
+    "category": "생산성",
+    "post_id": 1787,
+    "url": "https://trendpulse.blog/excel-table-format-filter-2026/",
+    "selection_version": 6,
+    "monthly_search": 4610,
+    "score": 77.64,
+    "score_components": {
+      "demand": 29.31,
+      "organic_opportunity": 33.33,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "published_at": "2026-09-30T04:07:40.991451+00:00"
   }
 ]

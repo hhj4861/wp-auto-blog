@@ -10248,7 +10248,16 @@
         "retry_after": "2026-09-27T19:12:59.222737+00:00",
         "attempts": 1
       }
-    ]
+    ],
+    "reuse_source_diagnostics": {
+      "checked_at": "2026-09-30T04:03:43.349742+00:00",
+      "failed_candidates": [],
+      "reused_keywords": [
+        "엑셀표만들기",
+        "엑셀틀고정"
+      ],
+      "outcome": "reused"
+    }
   },
   "리뷰": {
     "category": "리뷰",

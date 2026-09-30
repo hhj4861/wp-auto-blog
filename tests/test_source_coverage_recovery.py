@@ -57,11 +57,11 @@ def test_new_body_is_rechecked_without_changing_query_or_measured_demand(recover
     budget = {'attempts': 0}
     assert run(item, budget) == []
     assert budget['attempts'] == 1 and len(calls) == 2
-    assert item['verified_sources'] == [detail, *original['verified_sources']]
+    assert item['verified_sources'] == [*original['verified_sources'], detail]
     for key in ('keyword', 'topic', 'intent', 'gap', 'monthly_search', 'organic_results',
                 'organic_provider', 'selected_at', 'opportunity_evidence'):
         assert item[key] == original[key]
-    assert item['source_url'] == detail['url']
+    assert item['source_url'] == original['source_url']
     audit = item['decision_diagnostics']['coverage_recovery']
     assert audit['outcome'] == 'review_passed'
     assert audit['requirements']['missing_facets'] == [
@@ -175,3 +175,60 @@ def test_selection_and_queue_accept_only_revalidated_coverage(recovery, monkeypa
     assert market.enqueue_report([], report) == [selected]
     assert selected['monthly_search'] == 1200 and selected['keyword'] == keyword
     research.assert_called_once()
+
+
+@pytest.mark.parametrize('existing_count', [1, 2])
+def test_three_recovered_pages_cannot_evict_existing_plan_evidence(recovery, monkeypatch, existing_count):
+    item, detail, research = recovery
+    for number in range(1, existing_count):
+        extra = evidence(f'https://original.go.kr/part-{number}')
+        extra['excerpt'] += f' 기존 기획의 필수 원문 {number}를 유지합니다.'
+        extra['sha256'] = sha256(extra['excerpt'].encode()).hexdigest()
+        item['verified_sources'].append(extra)
+    originals = deepcopy(item['verified_sources'])
+    recovered = []
+    for number in range(3):
+        extra = {**detail, 'url': f'https://additional.go.kr/detail-{number}',
+                 'excerpt': detail['excerpt'] + f' 새로 확인한 조건 {number}입니다.'}
+        extra['sha256'] = sha256(extra['excerpt'].encode()).hexdigest()
+        recovered.append(extra)
+    research.return_value = (recovered, {'provider': 'codex_web', 'searched': True})
+    calls = []
+
+    def reviewer(candidate, now, _):
+        calls.append(deepcopy(candidate))
+        raw = deepcopy(synthetic_plan_review(candidate, now, None)['review'])
+        urls = [source['url'] for source in candidate['verified_sources']]
+        complete = (all(source['url'] in urls for source in originals)
+                    and recovered[0]['url'] in urls)
+        if not complete:
+            raw['scope'] = 'unknown'
+            raw['required_facets'][0].update(supported=False, answer='기존 제품 또는 추가 조건의 근거가 부족합니다.')
+        else:
+            idx = urls.index(recovered[0]['url'])
+            raw['required_facets'].append({'facet': '추가 조건은 무엇인가?',
+                'answer': '새 공식 자료에 명시된 조건을 확인합니다.', 'supported': True,
+                'source_index': idx, 'quote': recovered[0]['excerpt']})
+        return market.suitability.review_plan(candidate, now, lambda _: raw)
+
+    monkeypatch.setattr(market, 'review_plan', reviewer)
+    assert run(item) == []
+    assert len(calls) == 2
+    assert len(item['verified_sources']) == 3
+    assert item['verified_sources'][:existing_count] == originals
+    assert item['source_url'] == originals[0]['url']
+    assert market.suitability.issues(item, datetime.fromisoformat(item['selected_at'])) == []
+
+
+def test_full_source_slots_preserve_hold_without_wasting_recovery_budget(recovery, monkeypatch):
+    item, _, research = recovery
+    item['verified_sources'] += [evidence('https://second.go.kr/info'), evidence('https://third.go.kr/info')]
+    original = deepcopy(item)
+    calls = install_reviews(monkeypatch)
+    budget = {'attempts': 0}
+    assert set(run(item, budget)) == {'narrower_source_coverage', 'unverified_source_coverage'}
+    assert item['verified_sources'] == original['verified_sources']
+    assert item['source_url'] == original['source_url']
+    assert budget['attempts'] == 0 and len(calls) == 1
+    assert item['decision_diagnostics']['coverage_recovery']['outcome'] == 'source_capacity'
+    research.assert_not_called()

@@ -1934,7 +1934,7 @@
   },
   "생활정보": {
     "category": "생활정보",
-    "selected_at": "2026-09-30T11:23:49.124924+00:00",
+    "selected_at": "2026-09-30T14:04:44.220105+00:00",
     "seeds": [
       "신청방법",
       "환급금",
@@ -1942,7 +1942,7 @@
       "정부지원"
     ],
     "selection_version": 6,
-    "research_rounds": 3,
+    "research_rounds": 4,
     "source_recovery_attempts": 1,
     "cak_import": {
       "status": "not_applicable",
@@ -1955,13 +1955,427 @@
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 192,
-    "evaluated_candidates": 9,
+    "evaluated_candidates": 7,
     "research_pool_size": 120,
-    "selected": [],
+    "selected": [
+      {
+        "keyword": "영세율",
+        "category": "생활정보",
+        "topic": "영세율 뜻과 면세의 차이: 부가가치세 0%의 의미",
+        "intent": "영세율은 무엇이며, 면세와 어떻게 다르고 수출품에 적용하는 이유는 무엇인가?",
+        "gap": "공식 용어사전을 근거로 영세율과 면세의 매입세액공제 차이를 표로 정리하고 수출품 적용 취지를 설명한다.",
+        "source_url": "https://mofe.go.kr/sisa/dictionary/detail?idx=1840",
+        "verified_sources": [
+          {
+            "url": "https://mofe.go.kr/sisa/dictionary/detail?idx=1840",
+            "original_url": "https://mofe.go.kr/sisa/dictionary/detail?idx=1840",
+            "title": "시사경제용어사전",
+            "checked_on": "2026-09-30",
+            "sha256": "5d93c9ee32ca9527423cb76c840be56ce8cb9e0f3cac81a684766ab576136f52",
+            "excerpt": "시사경제용어사전 메뉴 닫기 사전 단어장 문제은행 정책홍보 보도자료 사진 뉴스 동영상 뉴스 인포그래픽 카드뉴스 FAQ 의견 사전 영세율 세율은 세액을 산출하기 위하여 과세표준에 곱하는 비율 또는 과세표준의 단위당 금액으로, 이러한 세율이 영(Zero)인 것을 말한다. 따라서 영세율이 적용되는 경우 당해 과세표준의 크기에 관계없이 산출한 세액은 항상 영이 된다. 현행 세법 중에서 영세율에 관한 규정을 두고 있는 것은 부가가치세법과 증권거래세법이 있다. 영세율이 적용되는 재화 또는 용역의 공급은 부가가치세가 완전면세된다. 증권거래세법상 탄력세제를 선택하여 대통령령이 정하는 바에 의하여 영의 세율을 적용할 수 있음을 규정하고 있다. 영세율제도는 면세 기능을 한다는 점에서 면세제도와 같으나 매입세액공제가 허용되지 않아 불완전면세가 되는 면세제도와 구분된다. 영세율제도는 완벽한 비과세 제도라 할 수 있다. 최종 단계에서 영세율 조치를 취하면 세부담액은 0이 된다. 그러나 중간 단계에 영세율이 적용되면 아무런 효과가 없게 된다. 일반적으로 이중과세를 방지하기 위해서 GATT의 소비지 과세원칙에 의하여 수출재화에 대하여 영세율을 적용하고 있다. 우리나라를 비롯한 대부분의 국가들은 수출품에 영세율을 적용하고 있다. WTO규정에서 허용하고 있는 수출품에 대한 소비세 환급은 바로 이 부가가치세에 대한 영세율을 적용하고 있는 것이다. 반면에 수입품에 대해서는 수입가액 전체에 대해 부가가치세를 부과하는 것이 보통이다. 부가가치세 영세율은 1977년 외화획득 장려차원에서 적용되기도 하였으나, 그동안 폐지와 부활을 반복하다가 2004년 12월 일몰시한으로 종료 되었다. 최근에 정부는 2007년 7월부터 2008년 12말까지 관광산업 활성화 차원에서 관광호텔의 외국인 숙박에 대한 부가가치세 영세율 제도 부활 등을 내용으로 하는 부가가치세법 시행령개정안을 시행했다. 등록일 2020-11-03. 신규 용어 새로 등록된 호가 단어를 아시나요? 공유하기 페이스북 트위터 카카오톡 닫기"
+          }
+        ],
+        "intent_results": [
+          "https://www.forwarder.kr/dictionary/4882",
+          "https://www.etoday.co.kr/news/view/2489388"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 1170,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": null,
+        "organic_provider": "codex_native_search",
+        "organic_query": "영세율",
+        "organic_domains": [
+          "law.go.kr",
+          "down.kacpta.or.kr",
+          "down.kacpta.or.kr",
+          "www.forwarder.kr",
+          "www.forwarder.kr",
+          "law.go.kr",
+          "www.etoday.co.kr",
+          "www.kacpta.or.kr",
+          "lawplayer.com",
+          "www.fomek.or.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://law.go.kr/LSW/flDownload.do?bylClsCd=110201&flSeq=27687335&gubun=",
+            "domain": "law.go.kr",
+            "title": "[별표 \n1] \n<개정 \n2008.2.22>          \n         \n  영세율",
+            "snippet": "영세율이"
+          },
+          {
+            "url": "https://down.kacpta.or.kr/PDF/%ED%95%9C%EA%B5%AD%EC%84%B8%EB%AC%B4%EC%82%AC%ED%9A%8C%202025%20%ED%95%B5%EC%8B%AC%20%EA%B0%9C%EC%A0%95%EC%84%B8%EB%B2%95.pdf",
+            "domain": "down.kacpta.or.kr",
+            "title": "상세본 | 133\n\n41 농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화  \n(조",
+            "snippet": "□ 농어업용 기자재에 대한 부가가치세 영세율<br>○ (영세율) 농·어민이 적용대상 기자재를 국내에서 구입<br>"
+          },
+          {
+            "url": "https://down.kacpta.or.kr/PDF/%5BPart%203%5D%202025%20%EA%B0%9C%EC%A0%95%EC%84%B8%EB%B2%95%20%EC%A2%85%EC%A0%84-%EA%B0%9C%EC%A0%95%EC%82%AC%ED%95%AD%20%EB%B9%84%EA%B5%90%28%EC%83%81%EC%84%B8%EB%B3%B8%29.pdf",
+            "domain": "down.kacpta.or.kr",
+            "title": "상세본 | 133\n\n41 농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화  \n(조",
+            "snippet": "□ 농어업용 기자재에 대한 부가가치세 영세율<br>○ (영세율) 농·어민이 적용대상 기자재를 국내에서 구입<br>"
+          },
+          {
+            "url": "https://www.forwarder.kr/dictionary/4882",
+            "domain": "www.forwarder.kr",
+            "title": "영세율",
+            "snippet": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써 재화나 용역의 최종원가에 부가가치세를 전혀 포함시키지 아니하는 완전면세제도."
+          },
+          {
+            "url": "https://www.forwarder.kr/dictionary/4882?device=mobile&seq=4882",
+            "domain": "www.forwarder.kr",
+            "title": "영세율",
+            "snippet": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써 재화나 용역의 최종원가에 부가가치세를 전혀 포함시키지 아니하는 완전면세제도."
+          },
+          {
+            "url": "https://law.go.kr/flDownload.do?flNm=%5B%EB%B3%84%ED%91%9C+1%5D+%EC%98%81%EC%84%B8%EC%9C%A8%EC%9D%B4+%EC%A0%81%EC%9A%A9%EB%90%98%EB%8A%94+%EB%86%8D%EC%97%85%EA%B8%B0%EA%B3%84%28%EC%A0%9C3%EC%A1%B0%EC%A0%9C3%ED%95%AD%EA%B4%80%EB%A0%A8%29%0A&flSeq=95942041",
+            "domain": "law.go.kr",
+            "title": "■ 농·축산·임·어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정",
+            "snippet": "■ 농·축산·임·어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정"
+          },
+          {
+            "url": "https://www.etoday.co.kr/news/view/2489388",
+            "domain": "www.etoday.co.kr",
+            "title": "[이투데이 말투데이] 학여불급(學如不及)/영세율 - 이투데이",
+            "snippet": "영세율 규정은 현행 부가가치세법과 증권거래세법에만 있다.영세율이 적용되면 부가가치세가 완전히 면제된다."
+          },
+          {
+            "url": "https://www.kacpta.or.kr/data/Board/PublishSearch/%EC%A1%B0%EC%82%AC%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EC%A0%9C5%EC%A7%91%20%EC%A3%BC%EC%9A%94%EA%B5%AD%EC%9D%98%20%EC%86%8C%EB%B9%84%EA%B3%BC%EC%84%B8%EC%A0%9C%EB%8F%84.pdf",
+            "domain": "www.kacpta.or.kr",
+            "title": "110  英國篇\n\nD : 연간총매출액  \nE : B + 영세율 재화의 기초재고 - 영세율",
+            "snippet": "정상세율 및 영세율 적용대상사업에 적용되나 용역은 正常稅率이 적용되는 경우에 한한다."
+          },
+          {
+            "url": "https://lawplayer.com/kr/article/003281/000100",
+            "domain": "lawplayer.com",
+            "title": "농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정 제1조(목적) | 조문 전문 | LawPlayer",
+            "snippet": "LawPlayer›대한민국 법령›법령 목록›농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정›농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에"
+          },
+          {
+            "url": "https://www.fomek.or.kr/data/file/news10/31267458_u62mWAkq_2._25EB8584_EC84B8ECA09CEAB09CED8EB8_ED9B84EC868D_EC8B9CED9689EBA0B9_EAB09CECA095EC9588EC8381EC84B8EBB3B8.pdf",
+            "domain": "www.fomek.or.kr",
+            "title": "(2) 영세율 적용대상 외국항행용역 범위 명확화(부가령 §32)",
+            "snippet": "(2) 영세율 적용대상 외국항행용역 범위 명확화(부가령 §32)"
+          }
+        ],
+        "dominant_result_ratio": 0.5555555555555556,
+        "score_components": {
+          "demand": 24.55,
+          "organic_opportunity": 11.85,
+          "trend": -3.27,
+          "intent_fit": 15
+        },
+        "trend_growth": -0.327,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 6,
+        "selected_at": "2026-09-30T14:04:44.220105+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "영세율"
+        ],
+        "status": "pending",
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "영세율",
+          "executed_query": "영세율",
+          "topic": "영세율 뜻과 면세의 차이: 부가가치세 0%의 의미",
+          "intent": "영세율은 무엇이며, 면세와 어떻게 다르고 수출품에 적용하는 이유는 무엇인가?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "result_count": 10,
+          "domain_count": 6,
+          "dominant_ratio": 0.5555555555555556,
+          "search_review": {
+            "version": 1,
+            "query": "영세율",
+            "executed_query": "영세율",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-30T14:04:44.220105+00:00",
+            "raw_sha256": "3aa5f66dd4948c82d4af8ea2201f4b76052fea5c679380eaf53f8b1aba0397e3",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": false,
+                "quote": "<개정 \n2008.2.22>"
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화"
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "농·축산·임·어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "영세율이 적용되면 부가가치세가 완전히 면제된다."
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "정상세율 및 영세율 적용대상사업에 적용되나 용역은 正常稅率이 적용되는 경우에 한한다."
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정 제1조(목적)"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "영세율 적용대상 외국항행용역 범위 명확화"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 9,
+            "relevant_site_count": 6,
+            "relevant_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 0.9,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.5555555555555556,
+            "site_concentration": 0.3333333333333333,
+            "organic_opportunity": 11.85
+          },
+          "scope": "full_keyword",
+          "target_keyword": "영세율",
+          "matches": [
+            {
+              "result_index": 3,
+              "quote": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써"
+            },
+            {
+              "result_index": 6,
+              "quote": "영세율이 적용되면 부가가치세가 완전히 면제된다."
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "input_sha256": "d1bb92eb148334c7f492bef5e6f23dbade9040800458622edda85a7423b682c7",
+          "review": {
+            "scope": "full_keyword",
+            "target_keyword": "영세율",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "현행 세법 중에서 영세율에 관한 규정을 두고 있는 것은 부가가치세법과 증권거래세법이 있다. 영세율이 적용되는 재화 또는 용역의 공급은 부가가치세가 완전면세된다.",
+                "entity": "영세율이 적용되는 재화 또는 용역의 공급",
+                "context": "system_rules"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "영세율은 무엇이며 세액은 어떻게 되는가?",
+                "answer": "과세표준에 적용하는 세율이 0이므로 과세표준의 크기와 관계없이 산출세액은 0이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "이러한 세율이 영(Zero)인 것을 말한다. 따라서 영세율이 적용되는 경우 당해 과세표준의 크기에 관계없이 산출한 세액은 항상 영이 된다."
+              },
+              {
+                "facet": "영세율과 면세는 매입세액공제에서 어떻게 다른가?",
+                "answer": "영세율은 매입세액공제를 허용하는 완전면세이고, 면세는 매입세액공제를 허용하지 않는 불완전면세이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "영세율제도는 면세 기능을 한다는 점에서 면세제도와 같으나 매입세액공제가 허용되지 않아 불완전면세가 되는 면세제도와 구분된다."
+              },
+              {
+                "facet": "수출품에 영세율을 적용하는 이유는 무엇인가?",
+                "answer": "소비지 과세원칙에 따라 수출재화의 이중과세를 방지하려는 취지이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "일반적으로 이중과세를 방지하기 위해서 GATT의 소비지 과세원칙에 의하여 수출재화에 대하여 영세율을 적용하고 있다."
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "영세율제도는 면세 기능을 한다는 점에서 면세제도와 같으나 매입세액공제가 허용되지 않아 불완전면세가 되는 면세제도와 구분된다.",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 48.13,
+        "publish_eligible": true,
+        "hold_reasons": []
+      }
+    ],
     "held": [],
     "rejected": [
       {
-        "keyword": "근로소득세계산법",
+        "keyword": "근로소득세율",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 9580,
+        "organic_provider": "codex_native_search",
+        "organic_query": "근로소득세율",
+        "organic_results": [
+          {
+            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7703&mi=2292",
+            "domain": "www.nts.go.kr",
+            "title": "가산세",
+            "snippet": "근로 | 근로소득(연말정산) | 기본세율 |매월 분 근로소득 | 기본세율 | 간이세액표 적용"
+          },
+          {
+            "url": "https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7871&mi=6435",
+            "domain": "d.nts.go.kr",
+            "title": "근로소득",
+            "snippet": "* 근로소득 간이세액표 ... * 총급여액은 해당 과세기간에 근로 제공 대가로 받은 연간 근로소득(일용근로소득 제외)에서 비과세소득을 차감한 금액임"
+          },
+          {
+            "url": "https://b.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7863&mi=6584",
+            "domain": "b.nts.go.kr",
+            "title": "근로소득",
+            "snippet": "특 징 | 근로계약상 근로제공에 대한 시간 또는 일수나 그 성과에 의하지 아니하고 월정액에 의해 급여를 지급받는 경우 (고용기간 관계없이 일반근로소득) | 근로를 제공한 날이나"
+          },
+          {
+            "url": "https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7893&mi=6457",
+            "domain": "d.nts.go.kr",
+            "title": "기타소득",
+            "snippet": "* (취지) 공유경제의 한 형태인 플랫폼업체(통신판매중개업자)를 통해 물품 및 장소(주차장 등)를 대여하고 연소득이 500만원 이하인 경우 기타소득으로 보아 세부담·신고부담을 완화(연 500만원 초과시 : 전액 사업소득으로"
+          },
+          {
+            "url": "https://tax.lim.kr/",
+            "domain": "tax.lim.kr",
+            "title": "소득세 계산기 (연말정산 / 종합소득세)",
+            "snippet": "⚠ 총급여·상여는 비과세 금액이 포함된 총지급액을 입력하세요. ... 근로소득세율 | 0% | | | ... 특별소득공제 (건강·고용보험료 등) | - | - | - |"
+          },
+          {
+            "url": "https://file-cdn.bok.or.kr/portal/450895374515255bd2e19d288e914dc5/1/FILE_201803300743585551.PDF?token=st%3D1770541341~exp%3D1770544941~acl%3D%2Fportal%2F450895374515255bd2e19d288e914dc5%2F1%2FFILE_201803300743585551.PDF%2A~hmac%3Dcd9aceaa77c0828d7f253634858669f5cfbb51bfea53a90367b355003595f4e9",
+            "domain": "file-cdn.bok.or.kr",
+            "title": "인구고령화의파급영향및대응방향:",
+            "snippet": "근로소득세율은평균적임금수준에부과되는국세·지방세율에건강보험, 고용보험등각종사회보"
+          },
+          {
+            "url": "https://bizbible.net/earned-income-tax-rate/",
+            "domain": "bizbible.net",
+            "title": "근로소득세율 — 6~45% 구간표와 실효세율 계산 - 비즈바이블",
+            "snippet": "「근로소득세율이 몇 퍼센트냐」는 질문에는 답이 두 개입니다. ... 본인 기본공제 150만원과 국민연금·건강보험·장기요양·고용보험 근로자 부담분만 반영한 추정치입니다. ... ①근로소득공제로 총급여의 상당 부분이 먼저 빠지고 ②인적공제와 보험료가"
+          },
+          {
+            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7917&mi=6637",
+            "domain": "www.nts.go.kr",
+            "title": "비거주자 원천징수",
+            "snippet": "비거주자의 국내원천소득 과세방법(조세조약이 없는 경우) - 국내원천소득(소득세법 제119조), 국내사업장이 있는 비거주자, 분리과세 원천징수 세율(%)(소득세법상) 포함 ... * 국내사업장 또는 부동산소득이 있는 비거주자의 경우에도 일용근로자 급여,"
+          },
+          {
+            "url": "https://www.nabo.go.kr/board/file/down.do?fid=11961",
+            "domain": "www.nabo.go.kr",
+            "title": "<323031342E3820BCD2B1D4B8F0B0B3B9E6B0E6C1A6C0C720B0C5BDC32EC0E7C1A4B8F0C7FC28C3D6C1BE292E687770>",
+            "snippet": "ⅱ)  : 부가가치세율,  : 근로소득세율,  : 자본소득세율"
+          },
+          {
+            "url": "https://www.kiri.or.kr/report/downloadFile.do?docId=45",
+            "domain": "www.kiri.or.kr",
+            "title": "기업휴지보험활성화방안연구",
+            "snippet": "| α | 노동소득분배율 | 60% | 노동소득분배율 | ... | τ_h | 근로소득세율 | 20.0% | 관련 문헌 | ... 먼저 가계의 고령화 확률(π_o)은"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "근로소득세율",
+          "executed_query": "근로소득세율",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "raw_sha256": "357f51566b3de56e02a93676f34b5c1375ddd95a692106797df7f56198ed5760",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "근로소득(연말정산) | 기본세율 |매월 분 근로소득 | 기본세율 | 간이세액표 적용"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "총급여액은 해당 과세기간에 근로 제공 대가로 받은 연간 근로소득(일용근로소득 제외)에서 비과세소득을 차감한 금액임"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "월정액에 의해 급여를 지급받는 경우 (고용기간 관계없이 일반근로소득)"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "연소득이 500만원 이하인 경우 기타소득으로 보아"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "소득세 계산기 (연말정산 / 종합소득세)"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "근로소득세율은평균적임금수준에부과되는국세·지방세율에건강보험, 고용보험등각종사회보"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "근로소득세율 — 6~45% 구간표와 실효세율 계산"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "비거주자의 국내원천소득 과세방법(조세조약이 없는 경우)"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "근로소득세율,  : 자본소득세율"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "| τ_h | 근로소득세율 | 20.0% | 관련 문헌 |"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "종합소득세조회",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
@@ -1970,166 +2384,176 @@
           "concentrated_search_results",
           "dominant_search_results"
         ],
-        "monthly_search": 1820,
+        "monthly_search": 710,
         "organic_provider": "codex_native_search",
-        "organic_query": "근로소득세 계산법",
+        "organic_query": "종합소득세 조회",
         "organic_results": [
           {
-            "url": "https://www.goe.go.kr/resource/goe/na/bbs_2114/2025/05/09f77687-daa9-4824-99f0-7a1f6eb03c24.pdf",
-            "domain": "www.goe.go.kr",
-            "title": "○ 소득 계산법\n\n<visual_element id=\"e1\">\n회색 박스 안에 소득 계산법",
-            "snippet": "○ 소득 계산법 ... 회색 박스 안에 소득 계산법 설명이 있음. ... ① 일반소득 = 근로소득 + 연금소득 + 임대소득 + 사업소득 + 농업소득 등"
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7896&mi=6616",
+            "url": "https://www.nts.go.kr/jongno/main.do",
             "domain": "www.nts.go.kr",
-            "title": "기타소득",
-            "snippet": "* 복권 및 복권기금법 제2조에 규정된 복권의 당첨금 ... * 종업원등 또는 대학 교직원이 근로와 관계없거나 퇴직 후 지급받는 직무발명보상금 ... 다음의 기타소득은 원천징수 대상이"
+            "title": "종로세무서",
+            "snippet": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회 ... * 보도 국민의 목소리를 담아 새롭게 도약하는 국세행정 2026.09.28. ... 종로세무서 서울노인복지센터 사회공헌활동 종로세무서(서장 권태윤)는"
           },
           {
-            "url": "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7701&mi=2413",
-            "domain": "g.nts.go.kr",
-            "title": "원천징수 개요",
-            "snippet": "* 이자·근로·퇴직·기타소득을 지급하는 자가 사업자등록번호 또는 고유번호가 없는 개인인 경우에도 원천징수의무자에 해당되어, 원천징수한 세금을 신고·납부 및 지급명세서 제출의무가 있음 ... 소득세법 | 거주자 | 이자소득,"
+            "url": "https://teht.hometax.go.kr/doc/rn/a/a/2.%EC%9E%90%EC%A3%BC%20%EB%AC%BB%EB%8A%94%20%ED%99%88%ED%83%9D%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%EB%B0%A9%EB%B2%95%20%EB%B0%8F%20%EC%A3%BC%EC%9A%94%20%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD_20%EA%B7%80%EC%86%8D.pdf",
+            "domain": "teht.hometax.go.kr",
+            "title": "1\n 자주 묻는 질문\n-- ’21\n’21 귀속 종합소득세 신고 -\n귀속 종합소득세 신고 -",
+            "snippet": "- [종합소득세 신고도움 서비스] ... - [연금건강고용산재 보험료 조회] (납세자) 본인"
           },
           {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7701&mi=2271",
-            "domain": "www.nts.go.kr",
-            "title": "부가가치세",
-            "snippet": "소득세법 | 거주자 | 이자소득, 배당소득, 사업소득, 근로소득, 연금소득, 기타소득(종교인소득 포함), 퇴직소득 | 소득종류에 따라 달라짐 (근로소득세, 퇴직소득세 등) ... 이자·배당소득 | 조세특례제한법에 의해 소득세를"
-          },
-          {
-            "url": "https://d.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7893&mi=6457",
-            "domain": "d.nts.go.kr",
-            "title": "기타소득",
-            "snippet": "* 원천징수의무자가 기타소득을 원천징수할 때 조세특례제한법 제100조의18(동업기업 소득금액 등의 계산 및 배분) 제1항에 따라 배분받은 소득 ... * (취지) 공유경제의 한 형태인 플랫폼업체(통신판매중개업자)를 통해 물품"
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7701&mi=2446",
-            "domain": "www.nts.go.kr",
-            "title": "사업자등록 정정",
-            "snippet": "* 이자·근로·퇴직·기타소득을 지급하는 자가 사업자등록번호 또는 고유번호가 없는 개인인 경우에도 원천징수의무자에 해당되어, 원천징수한 세금을 신고·납부 및 지급명세서 제출의무가 있음 ... 소득세법 | 거주자 | 이자소득,"
-          },
-          {
-            "url": "https://d.nts.go.kr/nts/na/ntt/selectNttList.do?bbsId=30014&mi=2306",
-            "domain": "d.nts.go.kr",
-            "title": "참고자료실",
-            "snippet": "43 | 근로소득간이세액표(개정안_20230228) | Image: 첨부파일 | 75269 ... 41 | 중소기업 청년근로자 및 핵심인력 성과보상기금 수령액에 대한 소득세 감면 신청서(개정안) | Image: 첨부파일 |"
-          },
-          {
-            "url": "https://j.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7893&mi=6612",
+            "url": "https://j.nts.go.kr/jongno/main.do",
             "domain": "j.nts.go.kr",
-            "title": "기타소득",
-            "snippet": "* 원천징수의무자가 기타소득을 원천징수할 때 조세특례제한법 제100조의18(동업기업 소득금액 등의 계산 및 배분) 제1항에 따라 배분받은 소득 ... * 다음의 어느 하나에 해당하는 경우 거주자가 받은"
+            "title": "종로세무서",
+            "snippet": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회 ... * 보도 국민의 목소리를 담아 새롭게 도약하는 국세행정 2026.09.28. ... 종로세무서 서울노인복지센터 사회공헌활동 종로세무서(서장 권태윤)는"
           },
           {
-            "url": "https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7897&mi=6461",
-            "domain": "i.nts.go.kr",
-            "title": "기타소득",
-            "snippet": "* 고용관계 없이 다수인에게 강연을 하고 강연료 등의 대가를 받는 용역(소득세법 제21조 제1항 제19호 가목) ... 원고료 125,000원을 지급받는 경우 건별 기타소득금액이 5만원 이하로 과세최저한에"
+            "url": "https://taxstudy.nts.go.kr/taxedu/main.do",
+            "domain": "taxstudy.nts.go.kr",
+            "title": "납세자세법교실",
+            "snippet": "소득유형별 세무실무(사업)_1인 크리에이터 | 2026-09-08 | 2026-08-24~2026-09-07 ... * 종합소득세 ... 참가신청 신청 조회/취소/반환 오시는 길"
           },
           {
-            "url": "https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7893&mi=6457",
+            "url": "https://taxstudy.nts.go.kr/taxedu/main/mainc.do",
+            "domain": "taxstudy.nts.go.kr",
+            "title": "납세자세법교실",
+            "snippet": "온라인 라이브 | 소득유형별 세무실무(사업)_1인 크리에이터 | 2026-09-08 | 2026-08-24~2026-09-07 ... [Button: 종합소득세] ... 참가신청 신청 조회/취소/반환 오시는 길"
+          },
+          {
+            "url": "https://taxstudy.nts.go.kr/taxedu/main/main.do",
+            "domain": "taxstudy.nts.go.kr",
+            "title": "납세자세법교실",
+            "snippet": "(20260908) 소득유형별 세무실무(사업)_1인 크리에이터 증가 ... * 종합소득세 ... 참가신청 신청 조회/취소/반환 오시는 길"
+          },
+          {
+            "url": "https://www.nts.go.kr/yesan/main.do",
+            "domain": "www.nts.go.kr",
+            "title": "예산세무서",
+            "snippet": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회 ... * 보도 국민의 목소리를 담아 새롭게 도약하는 국세행정 2026.09.28. ... 「제58회 납세자의 날」기념행사 예산세무서(서장 김태수)는"
+          },
+          {
+            "url": "https://www.nts.go.kr/dongjak/main.do",
+            "domain": "www.nts.go.kr",
+            "title": "동작세무서",
+            "snippet": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회 ... * 보도 ｢의식주｣ 국민 필수 생활비 관련 물가 불안 조장 탈세 혐의자 세무조사 2026.09.14. ..."
+          },
+          {
+            "url": "https://i.nts.go.kr/yesan/main.do",
             "domain": "i.nts.go.kr",
-            "title": "기타소득",
-            "snippet": "* 원천징수의무자가 기타소득을 원천징수할 때 조세특례제한법 제100조의18(동업기업 소득금액 등의 계산 및 배분) 제1항에 따라 배분받은 소득 ... * (매월 원천징수) 매월 종교인 소득을 지급할 때"
+            "title": "예산세무서",
+            "snippet": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회 ... * 보도 ｢의식주｣ 국민 필수 생활비 관련 물가 불안 조장 탈세 혐의자 세무조사 2026.09.14. ..."
+          },
+          {
+            "url": "https://www.kacpta.or.kr/data/board/boardkacpta/dg/2024%EA%B7%80%EC%86%8D%20%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8%20%EC%8B%A0%EA%B3%A0%EA%B0%84%EB%8B%B4%ED%9A%8C%20%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C_%EC%B5%9C%EC%A2%85.pdf",
+            "domain": "www.kacpta.or.kr",
+            "title": "3 종합소득세 신고도움 서비스",
+            "snippet": "○ 홈택스 > 세금신고 > 종합소득세 신고 > 신고도움서비스 ... • 신고안내유형, 기장의무 구분, ARS 개별인증번호 등 엔티스 인별수입금액에서 조회되는 사항과 납부기한 직권연장 여부 조회"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "근로소득세계산법",
-          "executed_query": "근로소득세 계산법",
+          "query": "종합소득세조회",
+          "executed_query": "종합소득세 조회",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-30T11:23:49.124924+00:00",
-          "raw_sha256": "5c842bbac45886289f4ff85ceb55610cf0578ea064e3181963eabf27c61c1bb6",
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "raw_sha256": "faca5d61c00f567ea65555a5e88a4ad8f4633c7f9ee9ae8483063762d5465d69",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "① 일반소득 = 근로소득 + 연금소득 + 임대소득 + 사업소득 + 농업소득 등"
+              "quote": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회"
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "복권 및 복권기금법 제2조에 규정된 복권의 당첨금"
+              "quote": "- [종합소득세 신고도움 서비스] ... - [연금건강고용산재 보험료 조회] (납세자) 본인"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "원천징수한 세금을 신고·납부 및 지급명세서 제출의무가 있음"
+              "quote": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "소득종류에 따라 달라짐 (근로소득세, 퇴직소득세 등)"
+              "quote": "참가신청 신청 조회/취소/반환 오시는 길"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "원천징수의무자가 기타소득을 원천징수할 때"
+              "quote": "참가신청 신청 조회/취소/반환 오시는 길"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "원천징수한 세금을 신고·납부 및 지급명세서 제출의무가 있음"
+              "quote": "참가신청 신청 조회/취소/반환 오시는 길"
             },
             {
               "result_index": 6,
-              "relevant": true,
-              "quote": "근로소득간이세액표(개정안_20230228)"
+              "relevant": false,
+              "quote": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회"
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "원천징수의무자가 기타소득을 원천징수할 때"
+              "quote": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "고용관계 없이 다수인에게 강연을 하고 강연료 등의 대가를 받는 용역"
+              "quote": "종합소득세 제도 ... 종합소득세 신고하기 ... 민원실 대기인원 조회"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "(매월 원천징수) 매월 종교인 소득을 지급할 때"
+              "relevant": true,
+              "quote": "신고안내유형, 기장의무 구분, ARS 개별인증번호 등 엔티스 인별수입금액에서 조회되는 사항과 납부기한 직권연장 여부 조회"
             }
           ]
         }
       },
       {
-        "keyword": "통상임금계산법",
+        "keyword": "고용증대세액공제",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://1350.moel.go.kr/rtmview.do?id=1000285269",
-              "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-              "excerpt_chars": 4086
+              "url": "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7809&mi=2498",
+              "title": "제도 안내",
+              "excerpt_chars": 3506
             },
             {
-              "url": "https://1350.moel.go.kr/rtmview.do?id=1000298246&page=1&type=ALL",
-              "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-              "excerpt_chars": 449
+              "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148935994",
+              "title": "‘주소 세탁’으로 납세 회피…탈세 꼼수 근절한다 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+              "excerpt_chars": 5956
             },
             {
-              "url": "https://1350.moel.go.kr/rtmview.do?id=1000309147",
-              "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-              "excerpt_chars": 1791
+              "url": "https://i.nts.go.kr/nowon/na/ntt/selectNttInfo.do?mi=5890&nttSn=1328750",
+              "title": "공지사항",
+              "excerpt_chars": 1075
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
-            "code": "source_missing_detail"
+            "code": "expired_information"
           },
           "source_recovery": {
             "attempted": true,
             "initial_review": {
               "official_sources": [
                 {
-                  "url": "https://1350.moel.go.kr/rtmview.do?id=1000265016",
-                  "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-                  "excerpt_chars": 4170
+                  "url": "https://i.nts.go.kr/nowon/na/ntt/selectNttInfo.do?mi=5890&nttSn=1328750",
+                  "title": "공지사항",
+                  "excerpt_chars": 1075
+                },
+                {
+                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148910697",
+                  "title": "2023년부터 이렇게 달라집니다- 세제·금융 편 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+                  "excerpt_chars": 4916
+                },
+                {
+                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958167",
+                  "title": "세제개편 후속 시행령 개정안 마련…경제 대도약 및 민생 안정 지원 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+                  "excerpt_chars": 8000
                 }
               ],
               "analysis_status": "supported_false",
@@ -2142,558 +2566,380 @@
             "retry_review": {
               "official_sources": [
                 {
-                  "url": "https://1350.moel.go.kr/rtmview.do?id=1000285269",
-                  "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-                  "excerpt_chars": 4086
+                  "url": "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7809&mi=2498",
+                  "title": "제도 안내",
+                  "excerpt_chars": 3506
                 },
                 {
-                  "url": "https://1350.moel.go.kr/rtmview.do?id=1000298246&page=1&type=ALL",
-                  "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-                  "excerpt_chars": 449
+                  "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148935994",
+                  "title": "‘주소 세탁’으로 납세 회피…탈세 꼼수 근절한다 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+                  "excerpt_chars": 5956
                 },
                 {
-                  "url": "https://1350.moel.go.kr/rtmview.do?id=1000309147",
-                  "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-                  "excerpt_chars": 1791
+                  "url": "https://i.nts.go.kr/nowon/na/ntt/selectNttInfo.do?mi=5890&nttSn=1328750",
+                  "title": "공지사항",
+                  "excerpt_chars": 1075
                 }
               ],
               "analysis_status": "supported_false",
               "model_rejection_opinion": {
                 "kind": "model_opinion",
-                "code": "source_missing_detail"
+                "code": "expired_information"
               }
             }
           }
         }
       },
       {
-        "keyword": "종합소득세중간예납",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "dominant_search_results"
-        ],
-        "monthly_search": 750,
-        "organic_provider": "codex_native_search",
-        "organic_query": "종합소득세 중간예납",
-        "organic_results": [
-          {
-            "url": "https://www.nabo.go.kr/board/file/down.do?fid=33318516",
-            "domain": "www.nabo.go.kr",
-            "title": "중간예납\n\n본래 소득세는 과세기간이 끝난 후 확정신고와 함께 세액을 납부하는 것이 원칙으로",
-            "snippet": "본래 소득세는 과세기간이 끝난 후 확정신고와 함께 세액을 납부하는 것이 원칙으로 하지만, 종합소득이 있는 거주자에 대해서는 해당 과세연도 상반기(1월 1일부터 6월 30일까지)에 대한 소득세를 과세기간"
-          },
-          {
-            "url": "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7673&mi=2236",
-            "domain": "g.nts.go.kr",
-            "title": "중간예납 안내",
-            "snippet": "### 종합소득세 중간예납이란 ... * 소득세 중간예납을 고지제로 운영 하는 것은 납세자의 신고에 따른 납세협력비용과 행정비용 등 사회적 비용을 축소 하기 위한 것임 ... (후원)방문판매에"
-          },
-          {
-            "url": "https://mob.tbht.hometax.go.kr/jsonAction.do?actionId=UTBRNAAD05F001",
-            "domain": "mob.tbht.hometax.go.kr",
-            "title": "국세청 차세대 모바일",
-            "snippet": "* 국세청에서 직전 과세기간 소득세액(=중간예납기준액)의 1/2을 중간예납세액(토지 등 매매차익예정신고 납부세액이 있으면 이를 공제한 후 세액)으로 계산하여 송달한 납세고지서로 납부(50만원 미만인 경우에는 소액부징수로 고지받지 않음) ..."
-          },
-          {
-            "url": "https://www.nabo.go.kr/board/file/down.do?fid=33316992",
-            "domain": "www.nabo.go.kr",
-            "title": "2022 대한민국 조세",
-            "snippet": "종합소득이 있는 개인사업자는 1월 1일부터 6월 30일까지의 기간을 중간예납기간으로 하여 전년도에 종합소득세로서 납부하였거나 납부할 세액의 2분의 1에 상당하는 금액(중간예납세액)을 11월 30일까지 납부하여야 한다. ... 기납부세액이란"
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7875&mi=2238",
-            "domain": "www.nts.go.kr",
-            "title": "중간예납 안내",
-            "snippet": "* 중간예납세액의 계산 및 납부방법 ... * 종합소득이 있는 거주자가 연금계좌에 납입한 금액 중 다음에 해당하는 금액을 제외한 금액을 해당 과세기간의 종합소득 산출세액에서 공제합니다. ..."
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7794&mi=2236",
-            "domain": "www.nts.go.kr",
-            "title": "중간예납 안내",
-            "snippet": "* 종합소득세 ... * 중간예납제도의 취지 및 납부대상자 * 중간예납세액의 계산 및 납부방법 ... * 필요경비 인정(소득세법 제160조의2, 법인세법 제116조) : 사업과 관련하여 현금(지출증빙)이 기재된"
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7952&mi=2236",
-            "domain": "www.nts.go.kr",
-            "title": "중간예납 안내",
-            "snippet": "* 종합소득세 ... * 중간예납제도의 취지 및 납부대상자 * 중간예납세액의 계산 및 납부방법 ... * 근로복지기본법에 따른 사내근로복지기금 또는 근로복기본법에 따른 우리사주조합 및 근로복지진흥기금에 유증"
-          },
-          {
-            "url": "https://www.nabo.go.kr/board/file/bulkDown.do?bid=19&idx=7735",
-            "domain": "www.nabo.go.kr",
-            "title": "2022 대한민국 조세",
-            "snippet": "종합소득이 있는 개인사업자는 1월 1일부터 6월 30일까지의 기간을 중간예납기간으로 하여 전년도에 종합소득세로서 납부하였거나 납부할 세액의 2분의 1에 상당하는 금액(중간예납세액)을 11월 30일까지 납부하여야 한다. ... 기납부세액이란"
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7720&mi=2235",
-            "domain": "www.nts.go.kr",
-            "title": "중간예납 안내",
-            "snippet": "* 종합소득세 ... * 중간예납제도의 취지 및 납부대상자 * 중간예납세액의 계산 및 납부방법 ... * 피상속인이 상속개시일 전 10년(5년) 이내에 상속인(상속인이 아닌 자)에게 증여한 재산가액"
-          },
-          {
-            "url": "https://www.law.go.kr/flDownload.do?bylClsCd=110202&flSeq=151415381&gubun=",
-            "domain": "www.law.go.kr",
-            "title": "|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | )",
-            "snippet": " 세액감면 ㆍ  세액공제:「소득세법 시행규칙」별지 제40호 \"종합소득세 ㆍ 농어촌특별세 과세표준확정신고 및 납부계산서\" 서식의 세액감면명세서 또는 세액공제명세서상의 법조문, 감면 ...  중간예납: 종합소득세의 중간예납세액을 기재합니다."
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "종합소득세중간예납",
-          "executed_query": "종합소득세 중간예납",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-30T11:23:49.124924+00:00",
-          "raw_sha256": "bb7e60de967f63218468f790bad6c301ac8e6f0e16705a65adaac3b23921bdf2",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "종합소득이 있는 거주자에 대해서는 해당 과세연도 상반기(1월 1일부터 6월 30일까지)에 대한 소득세"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "납세자의 신고에 따른 납세협력비용과 행정비용 등 사회적 비용을 축소 하기 위한 것임"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "국세청에서 직전 과세기간 소득세액(=중간예납기준액)의 1/2을 중간예납세액"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "금액(중간예납세액)을 11월 30일까지 납부하여야 한다."
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "종합소득이 있는 거주자가 연금계좌에 납입한 금액"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "필요경비 인정(소득세법 제160조의2, 법인세법 제116조)"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "근로복지기본법에 따른 사내근로복지기금"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "금액(중간예납세액)을 11월 30일까지 납부하여야 한다."
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "피상속인이 상속개시일 전 10년(5년) 이내에 상속인(상속인이 아닌 자)에게 증여한 재산가액"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "중간예납: 종합소득세의 중간예납세액을 기재합니다."
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "퇴직연금세액공제",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        }
-      },
-      {
-        "keyword": "개인사업자폐업",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance"
-        ],
-        "monthly_search": 1170,
-        "organic_provider": "codex_native_search",
-        "organic_query": "개인사업자 폐업",
-        "organic_results": [
-          {
-            "url": "https://m.mss.go.kr/common/board/Download.do?bcIdx=1057323&cbIdx=310&streFileNm=4cd0f806-1171-4c4e-b1c9-0503e85f48f0.pdf",
-            "domain": "m.mss.go.kr",
-            "title": "중소벤처기업부공고제2025 – 192호",
-            "snippet": "※ 포괄양수도 계약에 의한 법인전환 : 양도기업(기존 개인사업자) 개시일로부터 7년 이내인 창업기업(창업 ... ※ 동종의 범위 : ‘한국표준산업분류(제11차)’를 기준으로 세세분류(코드번호 5자리)가 모두 일치하면 “동종” ..."
-          },
-          {
-            "url": "https://cnc.cacf.or.kr/main/html/sub04/0406.html?file_id=20068&mode=D&no=4702525199f97a5e1ba7d87963e51db6",
-            "domain": "cnc.cacf.or.kr",
-            "title": "「2026 오늘전통 창업 도약기업」공모",
-            "snippet": "신청기업구분 개인기업 | 상세 구분 창 | 업(사업 | 을 개시한 날부터) 3년 초과 7년 이하 | | 창업여부 창업 | 기본요건 --- | ---"
-          },
-          {
-            "url": "https://www.winnersshop.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMDA3MjdlYWQ5ZGEyZTgyNzkxIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwMTE0MGM3M2JlNGQ3ZjVlOCI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDExNGIzMTRlZTBhNmZjZDIiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ODk5NmE3ZWE0NGYiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
-            "domain": "www.winnersshop.kr",
-            "title": "중소벤처기업부공고제2024–74호",
-            "snippet": "신청기업구분 None | 상세 구분 기존 개인사업자 폐업 | 이종창업 - 폐업 3년 초과 폐업 3년 까지 동종창업 부도/파산 – 2년 초과 부도/파산 – 2년"
-          },
-          {
-            "url": "https://bizbegin.me/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMzExMDdlNGU4YWIyYmVjMjllIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjYwNDIxNjI2NjUxZmMyYmYxMCI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI2MDQyMTM0NDM3NzNhMjM2OTgiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjZhMTQwNzk5ZGQ3MzQiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
-            "domain": "bizbegin.me",
-            "title": "중소벤처기업부공고제2026–275호",
-            "snippet": "이전 창업은 경과조치 적용 여부 확인 신청기업구분 None | 상세 구분 기존 개인사업자 폐업 | 이종창업 - 폐업 3년 초과 폐업 3년 까지 동종창업 부도/파산"
-          },
-          {
-            "url": "https://www.winnersshop.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMDA3MjdlYWQ5ZGEyZTgyNzkxIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwMjE4OTUzNDVhMjAxMmRmNCI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDIxOGNlZWFmNjJiMzg4OGUiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjZhMTUzZTdiNWJkMGMiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
-            "domain": "www.winnersshop.kr",
-            "title": "중소벤처기업부공고제2025–106호",
-            "snippet": "신청기업구분 개인기업 | 상세 구분 창업(사업을 개시한 날부터) 7년 이내 | | 창업여부 창업 기본요건 --- | --- | --- | --- 신청기업구분 None |"
-          },
-          {
-            "url": "https://www.jbci.or.kr/filedown.php?filename=busi%2F20220117094356%28%EA%B3%B5%EA%B3%A0_%EC%A0%9C2022-47%ED%98%B8%29_2022%EB%85%84_%EC%82%AC%EB%82%B4%EB%B2%A4%EC%B2%98_%EC%9C%A1%EC%84%B1_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EA%B0%9C%EB%B0%A9%ED%98%95_%EB%B6%84%EC%82%AC%EC%B0%BD%EC%97%85%EA%B8%B0%EC%97%85_%EB%AA%A8%EC%A7%91_%EA%B3%B5%EA%B3%A0.pdf&savefilename=%28%EA%B3%B5%EA%B3%A0_%EC%A0%9C2022-47%ED%98%B8%29_2022%EB%85%84_%EC%82%AC%EB%82%B4%EB%B2%A4%EC%B2%98_%EC%9C%A1%EC%84%B1_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EA%B0%9C%EB%B0%A9%ED%98%95_%EB%B6%84%EC%82%AC%EC%B0%BD%EC%97%85%EA%B8%B0%EC%97%85_%EB%AA%A8%EC%A7%91_%EA%B3%B5%EA%B3%A0.pdf",
-            "domain": "www.jbci.or.kr",
-            "title": "중소벤처기업부공고제2022-47호",
-            "snippet": "사업자(개인‧법인)를소지하고있거나폐업한이력이있는경우, ... 유지 또는 폐업 | - | 창 업※ 포괄양수도 계약에 의한 법인전환 : 양도기업(기존 개인사업자) 개시일로부터 7년 이내인 ... 규정에 따라 창업하여 사업을"
-          },
-          {
-            "url": "https://www.incheon.go.kr/eco/ECO010409/4443",
-            "domain": "www.incheon.go.kr",
-            "title": "홈>인천경제>투자>투자가이드 > 법인설립 | 경제·투자",
-            "snippet": "이중 현지법인 설립과 개인사업자를 형태를 통한 진출은 외국인투자촉진법의 적용을 받으며, 국내지점 또는 사무소 설립을 통한 진출은 외국환거래법의 적용을 받습니다. ... 개인사업자의 형태로 사업을 영위하는 경우에는"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "개인사업자폐업",
-          "executed_query": "개인사업자 폐업",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-30T11:23:49.124924+00:00",
-          "raw_sha256": "98cd16c9d9efb7d6762a5b7e48354f646178c19607f604133f2c02fb83ef5992",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "포괄양수도 계약에 의한 법인전환"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "「2026 오늘전통 창업 도약기업」공모"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "이종창업 - 폐업 3년 초과 폐업 3년 까지 동종창업"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "이종창업 - 폐업 3년 초과 폐업 3년 까지 동종창업"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "상세 구분 창업(사업을 개시한 날부터) 7년 이내"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "포괄양수도 계약에 의한 법인전환"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "국내지점 또는 사무소 설립을 통한 진출은 외국환거래법의 적용을 받습니다."
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "알바세금신고",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "low_search_relevance"
-        ],
-        "monthly_search": 670,
-        "organic_provider": "codex_native_search",
-        "organic_query": "알바 세금 신고",
-        "organic_results": [
-          {
-            "url": "https://albacheck.co.kr/",
-            "domain": "albacheck.co.kr",
-            "title": "알바 급여 계산기 — 주휴·야간·퇴직금 무료 | 월급체크",
-            "snippet": "3.3% 세금 세전 급여에서 빠지는공제액을 비교해요. ... 세전과 실수령 범위 신고 유형마다 달라지는 실수령은 범위로 보여줘요. ... 알바 모드의 급여 계산과 근무 기록은 무료예요. ..."
-          },
-          {
-            "url": "https://www.segumfit.co.kr/daily-worker-tax",
-            "domain": "www.segumfit.co.kr",
-            "title": "알바 세금 계산기 2026 — 일용직 일당 세후 실수령·원천징수 — 세금핏",
-            "snippet": "# 알바 세금 계산기 일용직 일당 세후 확인 ... 일용근로는 보통 원천징수로 종결되지만, 사업소득·기타소득은 신고 흐름이 다릅니다. ... 알바 세금 계산기"
-          },
-          {
-            "url": "https://drkjaf.com/calculator/",
-            "domain": "drkjaf.com",
-            "title": "급여·세금 계산기 | My Pay",
-            "snippet": "급여·세금 계산기[Button: 계산 기준·도움말]홈으로 ← 홈 ... [Button: 월급 실수령액] [Button: 일당 실수령액] [Button: 알바 급여] [Button: 프리랜서 수령액] [Button: 종합소득세 예상액] [Button: 계산 기준·도움말]"
-          },
-          {
-            "url": "https://www.smart-alba.com/",
-            "domain": "www.smart-alba.com",
-            "title": "슬기로운 알바관리 | QR 출퇴근·급여 자동 계산",
-            "snippet": "알바생이 스마트폰 카메라로 QR 코드 스캔 ... 알바생이 앱에서 연장근무를 신청하면 사장님이 승인/거절합니다. ... 계산식은 주 총 근무시간 ÷ 5 × 시급이며 급여명세서에 자동 반영됩니다."
-          },
-          {
-            "url": "https://albabee.pages.dev/",
-            "domain": "albabee.pages.dev",
-            "title": "알바BEE | 알바비 계산기",
-            "snippet": "# 알바비 계산기 ... 법정수당 계산 옵션 연장, 야간, 휴일, 주휴수당과 세금 방식을 마지막으로 확인하세요. ... 계산 기준 보기 주휴·가산수당 적용 기준이 궁금할 때만 펼쳐보세요."
-          },
-          {
-            "url": "https://generaltimes.co.kr/123",
-            "domain": "generaltimes.co.kr",
-            "title": "알바 세금신고에서 자주 틀리는 5가지 기준 | 세금노트",
-            "snippet": "알바 세금신고는 어려운 절세 문제가 아니라 내 소득이 어떤 이름으로 신고됐는지부터 확인하는 일입니다. ... 알바 세금신고는 금액이 작아도 그냥 넘기면 나중에 번거로운 일이 생깁니다."
-          },
-          {
-            "url": "https://cgangsalary.pages.dev/alba",
-            "domain": "cgangsalary.pages.dev",
-            "title": "알바비 계산기 — 시급·주휴수당·4대보험 포함 월급 계산 (2026 최저시급) | CgangSalary",
-            "snippet": "4대보험 없이 세금만 떼며, 다음 해 5월 종합소득세 신고로 일부를 돌려받는 경우가 많습니다. ... 연 소득이 적은 알바생은 원천징수된 세금 대부분을 환급받는 경우가 많습니다."
-          },
-          {
-            "url": "https://mykkultips.com/calculator-hourly-wage/",
-            "domain": "mykkultips.com",
-            "title": "시급 알바비 계산기 - 주휴수당·야간수당 포함 실수령액까지 한번에 - 마이꿀팁스360",
-            "snippet": "많은 알바생이 “시급 × 근무시간”만 계산하고 끝내지만, 실제 받아야 할 금액은 그보다 많은 경우가 대부분입니다. ... ## 알바비 세금, 얼마나 떼일까?"
-          },
-          {
-            "url": "https://barohworks.com/tools/part-time-pay",
-            "domain": "barohworks.com",
-            "title": "알바 급여 계산기 — 주휴·야간 포함 월 실수령액 | 바로웍스",
-            "snippet": "알바(시급제) 급여는 크게 네 가지로 이뤄집니다. ... ## 공제(세금·4대보험)는 어떻게 빠지나요? ... 실제 공제율은 소득 구간과 사업장 신고 방식에 따라 달라지므로, 이 계산기는 대표 공제율로"
-          },
-          {
-            "url": "https://koilab.co.kr/tools/salary-take-home",
-            "domain": "koilab.co.kr",
-            "title": "실수령액 계산기 | 월급·연봉·시급·알바 세후 급여 계산, 최저임금 — CalcLab",
-            "snippet": "알바·아르바이트 시급 기준 주급·월급·연봉 환산과 연도별 최저시급(최저임금) 조회를 지원하며, 근로소득(4대보험) 또는 3.3% 원천징수 중 정산 방식을 선택할 수 있습니다. ... 세금 상세 설정 ... 알바·아르바이트"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "알바세금신고",
-          "executed_query": "알바 세금 신고",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-30T11:23:49.124924+00:00",
-          "raw_sha256": "f175b671f122897ea80b3fc69bdb6d18f01b11da32997297c25b215ddbbd92ca",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "신고 유형마다 달라지는 실수령은 범위로 보여줘요."
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "일용근로는 보통 원천징수로 종결되지만, 사업소득·기타소득은 신고 흐름이 다릅니다."
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "[Button: 월급 실수령액] [Button: 일당 실수령액]"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "알바생이 앱에서 연장근무를 신청하면 사장님이 승인/거절합니다."
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "법정수당 계산 옵션 연장, 야간, 휴일, 주휴수당과 세금 방식을 마지막으로 확인하세요."
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "알바 세금신고는 어려운 절세 문제가 아니라 내 소득이 어떤 이름으로 신고됐는지부터 확인하는 일입니다."
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "4대보험 없이 세금만 떼며, 다음 해 5월 종합소득세 신고로 일부를 돌려받는 경우가 많습니다."
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "알바비 세금, 얼마나 떼일까?"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "실제 공제율은 소득 구간과 사업장 신고 방식에 따라 달라지므로, 이 계산기는 대표 공제율로"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "근로소득(4대보험) 또는 3.3% 원천징수 중 정산 방식을 선택할 수 있습니다."
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "종합소득세납부",
+        "keyword": "종합소득세신고서",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_sites",
-          "low_search_relevance",
           "concentrated_search_results",
           "dominant_search_results"
         ],
-        "monthly_search": 1240,
+        "monthly_search": 570,
         "organic_provider": "codex_native_search",
-        "organic_query": "종합소득세 납부",
+        "organic_query": "종합소득세 신고서",
         "organic_results": [
           {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7666&mi=2223",
-            "domain": "www.nts.go.kr",
-            "title": "종합소득세",
-            "snippet": "* 종합소득 과세표준 ... * 납부지연 가산세 ... * - 기납부세액"
+            "url": "https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7664&mi=2224",
+            "domain": "i.nts.go.kr",
+            "title": "종합소득세 개요",
+            "snippet": "#### 당해 과세기간에 종합소득금액이 있는 자는 다음해 5월 1일부터 5월 31일(성실신고확인서 제출자는 6월 30일)까지 종합소득세를 신고·납부하여야 합니다(소득세법 §70, §70조의2)."
           },
           {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7666&mi=2224",
+            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7713&mi=2224",
             "domain": "www.nts.go.kr",
             "title": "종합소득세 개요",
-            "snippet": "* 종합소득 과세표준 ... * 납부지연 가산세 ... * - 기납부세액"
+            "snippet": "## 종합소득세 개요 ... * 자본적지출액·양도비 증빙자료, 감가상각비명세 등 * (예) 중개수수료 지급액, 신고서작성비용, 법무사수수료 지급액 등 ... * 홈택스서비스(www.hometax.go.kr)를 통해 전자신고(신고/납부 → 세금신고 →"
           },
           {
-            "url": "https://law.go.kr/LSW/flDownload.do?flNm=%5B%EB%B3%84%EC%A7%80+%EC%A0%9C40%ED%98%B8%EC%84%9C%EC%8B%9D%5D+%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8%E3%86%8D%EB%86%8D%EC%96%B4%EC%B4%8C%ED%8A%B9%EB%B3%84%EC%84%B8%E3%86%8D%EC%A7%80%EB%B0%A9%EC%86%8C%EB%93%9D%EC%84%B8+%EA%B3%BC%EC%84%B8%ED%91%9C%EC%A4%80%ED%99%95%EC%A0%95%EC%8B%A0%EA%B3%A0+%EB%B0%8F+%EB%82%A9%EB%B6%80%EA%B3%84%EC%82%B0%EC%84%9C%0A&flSeq=56606315",
-            "domain": "law.go.kr",
-            "title": "(2쪽)\n\n관리번호: -\n\n( 년 귀속) 종합소득세·지방소득세  \n과세표준확정신고 및 납부",
-            "snippet": "과세표준확정신고 및 납부계산서 ... 3 종합소득세액의 계산 ... 48 연금보험료공제: 국민연금보험료를 납부한 금액을 적습니다."
+            "url": "https://s.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7664&mi=2224",
+            "domain": "s.nts.go.kr",
+            "title": "종합소득세 개요",
+            "snippet": "※ 홈택스(www.hometax.go.kr) 전자신고 : 종합소득세 신고서비스 바로가기 클릭 → 로그인 → 신고서 선택 → 신고서 작성 및 제출 → 소득세 신고완료 후 ‘개인지방소득세 신고 이동’"
           },
           {
-            "url": "https://j.nts.go.kr/nts/main.do",
+            "url": "https://s.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238910&mi=40296",
+            "domain": "s.nts.go.kr",
+            "title": "신고·납부방법",
+            "snippet": "* 홈택스 → 로그인 → 세금신고 → 종합소득세 신고 → 신고서 선택, 정기신고 작성 → 신고서 작성 및 제출 → 지방소득세 신고하기"
+          },
+          {
+            "url": "https://webtv.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238910&mi=40296",
+            "domain": "webtv.nts.go.kr",
+            "title": "신고·납부방법",
+            "snippet": "* 홈택스 → 로그인 → 세금신고 → 종합소득세 신고 → 신고서 선택, 정기신고 작성 → 신고서 작성 및 제출 → 지방소득세 신고하기 ... ※ 납부서"
+          },
+          {
+            "url": "https://j.nts.go.kr/jongno/main.do",
             "domain": "j.nts.go.kr",
-            "title": "국세청",
-            "snippet": "* 납부안내 ... * (일용 · 간이 · 용역) 소득자료 제출 ... * 종합소득세 ... * 납세자 세금신고(부가가치세과)"
+            "title": "종로세무서",
+            "snippet": "종합소득세 신고하기 ... 종로세무서는 ㈜동화엘에스씨 이석창 대표이사를 명예세무서장, 인우세무회계 백원일 대표세무사를 명예민원봉사실장..."
           },
           {
-            "url": "https://www.nts.go.kr/",
-            "domain": "www.nts.go.kr",
-            "title": "국세청",
-            "snippet": "* 개별소비세 과세유흥장소 신고 납부 ... * 종합소득세 제도 ... * 세금 모의계산 ... * (일용 · 간이 · 용역) 소득자료 제출 ... * 모범납세자귀하의"
-          },
-          {
-            "url": "https://www.law.go.kr/lbook/lbFileDownload.do?flExt=pdf&lbookConflSeq=37121&lbookSeq=44863",
-            "domain": "www.law.go.kr",
-            "title": "(2쪽)\n\n관리번호: -\n\n( 년 귀속) 종합소득세·지방소득세  \n과세표준확정신고 및 납부",
-            "snippet": "과세표준확정신고 및 납부계산서 ... 3 종합소득세액의 계산"
-          },
-          {
-            "url": "https://g.nts.go.kr/nts/main.do",
-            "domain": "g.nts.go.kr",
-            "title": "국세청",
-            "snippet": "* 납부안내 ... * (일용 · 간이 · 용역) 소득자료 제출 ... * 종합소득세 ... * 납세자 세금신고(부가가치세과)"
-          },
-          {
-            "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7738&mi=2227",
+            "url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?bbsId=131038&mi=2312",
             "domain": "www.nts.go.kr",
             "title": "세율",
-            "snippet": "* 종합소득세 ... ### 종합부동산세 고지 및 납부 안내"
+            "snippet": "동영상대본 지금부터 간편장부에 의한 신고서 작성사례에 대해 종합소득세 전자신고 요령을 설명하겠습니다."
           },
           {
-            "url": "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239072&mi=41095",
-            "domain": "g.nts.go.kr",
-            "title": "모두채움 신고 안내(환급)",
-            "snippet": "* 작년에 미리 납부한 세금(기납부세액)이 이번 종합소득세 신고 시 납부할 세금(총결정세액)보다 많으면 환급금이 발생 합니다. ... ’24년 과세기간의 종합소득세 납부세액 100만원 이상자 등 일부만 해당"
+            "url": "https://mob.hometax.go.kr/jsonAction.do?actionId=UTBMPABA29F001",
+            "domain": "mob.hometax.go.kr",
+            "title": "손택스 | 신고도움",
+            "snippet": "#### 홈택스 종합소득세 신고 시 ... * 금융소득 신고 - 이자배당소득 명세서"
           },
           {
-            "url": "https://b.nts.go.kr/nts/main.do",
-            "domain": "b.nts.go.kr",
-            "title": "국세청",
-            "snippet": "* 종합소득세 제도 ... * 종합소득세 신고하기 ... * 납부안내 ... * 납세자 세금신고(부가가치세과)"
+            "url": "https://www.nts.go.kr/nts/na/ntt/selectNttList.do?bbsId=131038&mi=2354",
+            "domain": "www.nts.go.kr",
+            "title": "세율",
+            "snippet": "동영상대본 지금부터 간편장부에 의한 신고서 작성사례에 대해 종합소득세 전자신고 요령을 설명하겠습니다."
+          },
+          {
+            "url": "https://j.nts.go.kr/nts/na/ntt/selectNttList.do?bbsId=131038&mi=40526",
+            "domain": "j.nts.go.kr",
+            "title": "동영상자료실",
+            "snippet": "지금부터 간편장부에 의한 신고서 작성사례에 대해 종합소득세 전자신고 요령을 설명하겠습니다."
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "종합소득세납부",
-          "executed_query": "종합소득세 납부",
+          "query": "종합소득세신고서",
+          "executed_query": "종합소득세 신고서",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-30T11:23:49.124924+00:00",
-          "raw_sha256": "ccb34ce435d54f64df9435ad15e098fa32c7fb135c09c1deab57ab1df124776a",
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "raw_sha256": "d39feb1ba6d3654fd5972165dad7a2dbfd5696e67b206755bdf40a64efa5f31c",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": true,
-              "quote": "납부지연 가산세 ... * - 기납부세액"
+              "relevant": false,
+              "quote": "종합소득세를 신고·납부하여야 합니다"
             },
             {
               "result_index": 1,
-              "relevant": true,
-              "quote": "납부지연 가산세 ... * - 기납부세액"
+              "relevant": false,
+              "quote": "자본적지출액·양도비 증빙자료, 감가상각비명세 등"
             },
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "과세표준확정신고 및 납부계산서 ... 3 종합소득세액의 계산"
+              "quote": "신고서 선택 → 신고서 작성 및 제출"
             },
             {
               "result_index": 3,
-              "relevant": false,
-              "quote": "* 납부안내 ... * (일용 · 간이 · 용역) 소득자료 제출"
+              "relevant": true,
+              "quote": "종합소득세 신고 → 신고서 선택, 정기신고 작성"
             },
             {
               "result_index": 4,
-              "relevant": false,
-              "quote": "* 종합소득세 제도 ... * 세금 모의계산"
+              "relevant": true,
+              "quote": "종합소득세 신고 → 신고서 선택, 정기신고 작성"
             },
             {
               "result_index": 5,
-              "relevant": true,
-              "quote": "과세표준확정신고 및 납부계산서 ... 3 종합소득세액의 계산"
+              "relevant": false,
+              "quote": "종로세무서는 ㈜동화엘에스씨 이석창 대표이사를 명예세무서장"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "* 납부안내 ... * (일용 · 간이 · 용역) 소득자료 제출"
+              "relevant": true,
+              "quote": "간편장부에 의한 신고서 작성사례"
             },
             {
               "result_index": 7,
-              "relevant": false,
-              "quote": "종합부동산세 고지 및 납부 안내"
+              "relevant": true,
+              "quote": "금융소득 신고 - 이자배당소득 명세서"
             },
             {
               "result_index": 8,
               "relevant": true,
-              "quote": "작년에 미리 납부한 세금(기납부세액)이 이번 종합소득세 신고 시 납부할 세금(총결정세액)보다 많으면 환급금이 발생 합니다."
+              "quote": "간편장부에 의한 신고서 작성사례"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "* 종합소득세 제도 ... * 종합소득세 신고하기 ... * 납부안내"
+              "relevant": true,
+              "quote": "간편장부에 의한 신고서 작성사례"
             }
           ]
         }
       },
       {
-        "keyword": "종합소득세구간",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
+        "keyword": "잔고증명",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 780,
+        "organic_provider": "codex_native_search",
+        "organic_query": "잔고 증명",
+        "organic_results": [
+          {
+            "url": "https://www.scourt.go.kr/portal/news/NewsViewAction.work?gubun=2&seqnum=6237",
+            "domain": "www.scourt.go.kr",
+            "title": "'50억 허위 잔고 증명' 사기범 징역형 - 언론보도판결",
+            "snippet": "* 전국법원 주요판결 ... 제목 | '50억 허위 잔고 증명' 사기범 징역형"
+          },
+          {
+            "url": "https://www.scourt.go.kr/portal/news/NewsViewAction.work?gubun=2&pageIndex=1&searchOption=&searchWord=&seqnum=6237",
+            "domain": "www.scourt.go.kr",
+            "title": "'50억 허위 잔고 증명' 사기범 징역형 - 언론보도판결",
+            "snippet": "* 전국법원 주요판결 ... 제목 | '50억 허위 잔고 증명' 사기범 징역형 ... 이전글 | 대법, 송영길 前보좌관에 '불법 정치자금' 징역 1년2개월 확정"
+          },
+          {
+            "url": "https://www.woosungfinance.com/",
+            "domain": "www.woosungfinance.com",
+            "title": "우성파이낸스",
+            "snippet": "12월 31일 연말 결산 법인 잔고 증명 ... ### 잔고증명 구비 서류 [전화 상담 또는 방문 상담으로 제반 사항 상담 후 진행] ... | 사업자등록증원본,"
+          },
+          {
+            "url": "https://www.yna.co.kr/view/AKR20220107141400060",
+            "domain": "www.yna.co.kr",
+            "title": "'통장 잔고 증명 위조' 윤석열 장모 공범 징역 1년 6월 구형 | 연합뉴스",
+            "snippet": "안씨는 2013년 4∼10월 경기 성남시 도촌동 땅 매입 과정에서 윤석열 국민의힘 대선후보의 장모 최씨와 공모해 은행에 347억원을 예치한 것처럼 통장 잔고 증명서를 위조한 혐의로 기소됐다."
+          },
+          {
+            "url": "https://www.bugs.ac.kr/global/9385/subview.do",
+            "domain": "www.bugs.ac.kr",
+            "title": "한국어",
+            "snippet": "5-1 | 친족관계증명서 | 공증본 | • 본인과 부모관계가 한 호구부상에서 확인이 되지 않을 경우 제출 ... *부모명의의 잔고 증명 제출시 반드시 영사인증이 된 가족관계증명을"
+          },
+          {
+            "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200201&flNm=%5B%EB%B3%84%ED%91%9C+2%5D+%EA%B3%B5%EC%82%AC%EC%88%98%ED%96%89%EB%8A%A5%EB%A0%A5+%EC%84%B8%EB%B6%80+%EC%8B%AC%EC%82%AC%EB%B0%A9%EB%B2%95&flSeq=154621675",
+            "domain": "www.law.go.kr",
+            "title": "[별표 2] 공사수행능력 세부 심사방법",
+            "snippet": "· 최근년도 자금 유동성*(최근 45일간 회사 명의 은행 잔고 증명서상 평균 금액)이 입찰공고 기초금액의 5% 이상인 경우 4점 배점 ... 부채비율은 총부채 금액/총 자본 금액"
+          },
+          {
+            "url": "https://www.segye.com/newsView/20260922516344",
+            "domain": "www.segye.com",
+            "title": "“1000만원 없으면 박탈”… 비자 연장 발목 잡는 ‘잔고 증명’ [심층기획-외국인유학 30만 시대의 그늘] | 세계일보",
+            "snippet": "그와 같은 대학교, 같은 학과에서 석사 과정을 마친 우즈베키스탄 국적 B도 “불법체류자가 될 생각이 있었다면 9년 동안 합법으로 살지 않았을 것”이라며 체류 연장 절차에 대한"
+          },
+          {
+            "url": "https://www.studyinkorea.go.kr/file/srcFileDown.do?fileStorePath=fileStorePath&filename=20_531010_201607081021395870.pdf&orgfilename=BAEKSEOK+UNIVERSITY-Freshmen+and+Transfer%28KR%29.pdf",
+            "domain": "www.studyinkorea.go.kr",
+            "title": "2017학년도 학부 신·편입학",
+            "snippet": "| 7-1 | 친족관계증명서(본인과 부모관계가 한 호구부상에서 확인 ... 잔고 증명 ... -부모명의의 잔고 증명 제출시 반드시 영사인증이 된 ... -반드시 서류 제출시 수료증 및"
+          },
+          {
+            "url": "https://museum.scourt.go.kr/portal/news/NewsViewAction.work?gubun=2&searchOption=&searchWord=&seqnum=6237",
+            "domain": "museum.scourt.go.kr",
+            "title": "'50억 허위 잔고 증명' 사기범 징역형 - 언론보도판결",
+            "snippet": "제목 | '50억 허위 잔고 증명' 사기범 징역형"
+          },
+          {
+            "url": "https://www.newspim.com/news/view/20260128001309",
+            "domain": "www.newspim.com",
+            "title": "\"잔고 증명 후 돌려줄게\" 300억 편취…평택 프리미엄아울렛 회장 구속기소",
+            "snippet": "[서울=뉴스핌] 백승은 기자 = 잔고 증명 후 돌려주겠다며 300억원을 받은 뒤 개인 채무 변제에 활용한 혐의를 받는 평택 프리미엄 아울렛 회장 A씨가 구속 기소됐다.수원지검 평택지청"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "잔고증명",
+          "executed_query": "잔고 증명",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "raw_sha256": "64d0de4e967a5147bc910b99e5b9ed579a71eb79ecd11e915cb9acdbc207bb11",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "'50억 허위 잔고 증명' 사기범 징역형"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "'50억 허위 잔고 증명' 사기범 징역형"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "잔고증명 구비 서류 [전화 상담 또는 방문 상담으로 제반 사항 상담 후 진행]"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "통장 잔고 증명서를 위조한 혐의로 기소됐다."
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "부모명의의 잔고 증명 제출시 반드시 영사인증이 된 가족관계증명을"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "최근 45일간 회사 명의 은행 잔고 증명서상 평균 금액"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "“1000만원 없으면 박탈”… 비자 연장 발목 잡는 ‘잔고 증명’"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "부모명의의 잔고 증명 제출시 반드시 영사인증이 된"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "'50억 허위 잔고 증명' 사기범 징역형"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "300억원을 받은 뒤 개인 채무 변제에 활용한 혐의"
+            }
+          ]
         }
       },
       {
-        "keyword": "부가가치세환급",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        }
+        "keyword": "소득세율표",
+        "reason": "search relevance review unavailable",
+        "monthly_search": 3970,
+        "organic_provider": "codex_native_search",
+        "organic_query": "소득세율표",
+        "organic_results": [
+          {
+            "url": "https://fincalc.kr/tax-rates/",
+            "domain": "fincalc.kr",
+            "title": "2026년 소득세율표 — 과세표준 구간·누진공제 | fincalc",
+            "snippet": "# 2026년 소득세율표 ... 세율표를 처음 보면 “과세표준이 5,000만원을 1원 넘으면 24%가 적용되어 세금이 갑자기 뛰는 것 아닌가” 하는 오해가 생깁니다."
+          },
+          {
+            "url": "https://www.korcham.net/File/econ/ec01_files/%EC%A4%91%EA%B5%AD%ED%88%AC%EC%9E%90%EB%89%B4%EC%8A%A4%EC%A0%9C245%ED%98%B8%28110429%29.pdf",
+            "domain": "www.korcham.net",
+            "title": "<C1DFB1B9C5F5C0DAB4BABDBAC1A6323435C8A328313130343239292E687770>",
+            "snippet": "- 개정안이 발표되면 3대 보험(양로보험, 실업보험, 의료보험)과 주택공적금을 제외한 근로소득이 1만9000위안 미만인 소득자는 세금이 경감되고, 반대의 경우 세액이 높아질 전망소득세법 개정 전후 소득세율표 비교(근로소득자 대상)"
+          },
+          {
+            "url": "https://beezbook.com/indicators",
+            "domain": "beezbook.com",
+            "title": "2026 경제 지표 모음 — 4대보험 요율표·소득세율표·최저임금 연혁 | 비즈북",
+            "snippet": "# 2026 경제 지표 모음 ... ## 종합소득세율표 (2026) ... 지방소득세는 위 소득세의 10%가 별도로 부과됩니다."
+          },
+          {
+            "url": "https://kids.nts.go.kr/comm/ntsFileDown.do?filePath=%2Fupload%2Fnts%2F03%2F0308%2F030801%2F_nts_news_%EC%84%B8%EB%AC%B4%EC%95%88%EB%82%B4-%EC%95%84%EB%A5%B4%ED%97%A8%ED%8B%B0%EB%82%98.pdf",
+            "domain": "kids.nts.go.kr",
+            "title": "머리말\n국세청에서는 해외에 진출한 우리기업이 현지 국가의 조세제도와 조세행정에 \n대한 정보",
+            "snippet": "아르헨티나의 개인에게 부과되는 소득세율은 소득금액에 따라 다음과 같이 ... <표-10> 개인 소득세율표"
+          },
+          {
+            "url": "https://www.samsungpop.com/common.do?cmd=down&fileName=1010%2F2024070319062816K_02_03.pdf&saveKey=research.pdf",
+            "domain": "www.samsungpop.com",
+            "title": "기업가치 제고를 위한 세제 혜택",
+            "snippet": "직전 평균치(A)의 5% (D=A x 5%) ... ex) 배당소득이 1,000만원에서 1,200만원으로 증가한 경우 ... 소득세율표"
+          },
+          {
+            "url": "https://www.ii.re.kr/storage/board/thumbnail/2024/07/26/THUMBNAIL_ATTACH_1721956532143.pdf",
+            "domain": "www.ii.re.kr",
+            "title": "인천발전연구원 \n인천발전연구원 \n인천발전연구원 \n인천발전연구원 \n인천발전연구원 \n인천발전연",
+            "snippet": "세금종목 | | | 소득세율표 세율 | | --- | --- | --- | --- | --- | --- | | | 소득세율표 일반지역 |"
+          },
+          {
+            "url": "https://www.codil.or.kr/filebank/original/MA/OTKCMA211017/OTKCMA211017.pdf",
+            "domain": "www.codil.or.kr",
+            "title": "록된 업체의 경우는 등재 후 3년까지 27%를 징수한다.",
+            "snippet": "• 개인소득세 과세대상은 모든 케냐 거주인(Resident)이며, 거주인의 요건은 케냐에 거주하고 있거나 거주하지 않더라도 연중 183일 이상 또는 3년 연속 연평균 122일 이상 케냐에서 직장에 종사한"
+          },
+          {
+            "url": "https://xn--989a00af8jnslv3dba.com/wiki/%ED%8B%80%3A%EC%86%8C%EB%93%9D%EC%84%B8%EC%9C%A8%ED%91%9C",
+            "domain": "xn--989a00af8jnslv3dba.com",
+            "title": "틀:소득세율표 - 부동산위키",
+            "snippet": "# 틀:소득세율표"
+          },
+          {
+            "url": "https://file2.taxnet.co.kr/taxnetfile/taxnetdata/200909031740311.pdf",
+            "domain": "file2.taxnet.co.kr",
+            "title": "목    차\n제1 절  원천징수 개요······························",
+            "snippet": "※ 소득세율표과 세 표 준 12백만원이하 | 기 본 세 율 과세표준의 6%"
+          },
+          {
+            "url": "https://alert.tistory.com/1251",
+            "domain": "alert.tistory.com",
+            "title": "소득세율표,소득세누진공제표,양도소득세율 :: 주환용세무회계사무소,강서구세무사,화곡동세무사 02-2698-5957~8",
+            "snippet": "## 소득세율표,소득세누진공제표,양도소득세율"
+          }
+        ]
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
-      "자금조달계획서"
+      "개인사업자폐업",
+      "근로소득세계산법",
+      "부가가치세환급",
+      "알바세금신고",
+      "자금조달계획서",
+      "종합소득세구간",
+      "종합소득세납부",
+      "종합소득세중간예납",
+      "통상임금계산법",
+      "퇴직연금세액공제"
     ],
-    "research_stop_reason": "time_budget",
+    "research_stop_reason": "round_limit",
     "retry_keywords": [
       "퇴직연금가입방법",
       "소상공인스마트상점"
@@ -2701,7 +2947,16 @@
     "discovery_rejections": [],
     "discovery_replenishment": [],
     "deferred_measured_keywords": [
-      "자금조달계획서"
+      "개인사업자폐업",
+      "근로소득세계산법",
+      "부가가치세환급",
+      "알바세금신고",
+      "자금조달계획서",
+      "종합소득세구간",
+      "종합소득세납부",
+      "종합소득세중간예납",
+      "통상임금계산법",
+      "퇴직연금세액공제"
     ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
@@ -2712,27 +2967,25 @@
           "소상공인정책자금",
           "연말정산환급금조회",
           "소상공인지원금",
-          "통상임금계산법",
-          "상한제사후환급금",
-          "근로소득세계산법",
-          "청년지원금",
           "사업자대출조건",
-          "소상공인",
+          "상한제사후환급금",
           "종합소득세환급금조회",
-          "국비지원교육",
+          "청년지원금",
           "근로소득세계산",
-          "사업자대출",
+          "소상공인",
           "종합소득세환급신청",
-          "재무제표",
+          "국비지원교육",
           "마이너스통장조건",
-          "개인사업자대출",
+          "사업자대출",
           "고용지원금대상",
-          "청년창업지원금",
+          "재무제표",
           "종합소득세조회",
-          "대전신용보증재단",
+          "개인사업자대출",
           "기업신용정보조회",
-          "근로소득세율",
+          "청년창업지원금",
           "퇴직연금계산",
+          "대전신용보증재단",
+          "근로소득세율",
           "중소기업청년지원금",
           "종합소득세환급",
           "중소기업정책자금",
@@ -2767,18 +3020,20 @@
           "자영업자지원금",
           "창업지원금",
           "사업소득세",
-          "통신비환급금"
+          "통신비환급금",
+          "개인사업자지원금",
+          "세금환급"
         ],
         "proposals": [
           {
-            "keyword": "근로소득세계산법",
-            "reason": "월 1,820회로 계산 방법 자체의 수요가 있다. 월급 실수령액과 구분되는 연간 과세표준·세액 산정 절차를 조사할 만하다.",
-            "search_query": "근로소득세 계산법"
+            "keyword": "근로소득세율",
+            "reason": "월 9,580회 수요. 급여 원천징수와 연간 과세표준별 세율의 차이를 묻는 독자를 위해 공식 기준을 조사할 가치가 있다.",
+            "search_query": "근로소득세율"
           },
           {
-            "keyword": "통상임금계산법",
-            "reason": "월 1,850회의 방법형 수요가 있다. 통상임금에 포함되는 임금 항목과 시간급 환산 기준을 공식 자료로 조사할 만하다.",
-            "search_query": "통상임금 계산법"
+            "keyword": "종합소득세조회",
+            "reason": "월 710회 롱테일 수요. 환급 신청과 구별되는 신고·납부 내역 확인 절차를 공식 안내에서 조사할 가치가 있다.",
+            "search_query": "종합소득세 조회"
           }
         ],
         "measured_fallback": false,
@@ -2805,23 +3060,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "상한제사후환급금",
+            "keyword": "사업자대출조건",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "청년지원금",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "사업자대출조건",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소상공인",
-            "reason_code": "scope_too_broad",
+            "keyword": "상한제사후환급금",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2830,17 +3075,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "국비지원교육",
-            "reason_code": "category_mismatch",
+            "keyword": "청년지원금",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "근로소득세계산",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "사업자대출",
+            "keyword": "소상공인",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -2850,22 +3095,37 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "재무제표",
+            "keyword": "국비지원교육",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "마이너스통장조건",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "개인사업자대출",
-            "reason_code": "scope_too_broad",
+            "keyword": "사업자대출",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "고용지원금대상",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "재무제표",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "개인사업자대출",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "기업신용정보조회",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -2875,27 +3135,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "종합소득세조회",
+            "keyword": "퇴직연금계산",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "대전신용보증재단",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "기업신용정보조회",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "근로소득세율",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "퇴직연금계산",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -2956,7 +3201,7 @@
           },
           {
             "keyword": "청년사업자대출",
-            "reason_code": "scope_too_broad",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3006,7 +3251,7 @@
           },
           {
             "keyword": "청년창업대출",
-            "reason_code": "scope_too_broad",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3016,7 +3261,7 @@
           },
           {
             "keyword": "세무사랑",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3041,7 +3286,7 @@
           },
           {
             "keyword": "중소기업대출",
-            "reason_code": "scope_too_broad",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3066,11 +3311,21 @@
           },
           {
             "keyword": "사업소득세",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "통신비환급금",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "개인사업자지원금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세금환급",
             "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           }
@@ -3079,8 +3334,6 @@
       {
         "round": 2,
         "offered_keywords": [
-          "개인사업자지원금",
-          "세금환급",
           "소상공인진흥공단정책자금",
           "정부정책자금",
           "퇴직연금담보대출",
@@ -3103,11 +3356,9 @@
           "개인사업자신용대출",
           "지게차렌탈",
           "나라배움카드",
-          "종합소득세납부",
           "국비지원교육종류",
           "종소세환급",
           "개인사업자햇살론",
-          "개인사업자폐업",
           "영세율",
           "소상공인희망리턴패키지",
           "국비교육",
@@ -3116,7 +3367,6 @@
           "전월세보증금담보대출",
           "지자체지원금",
           "KOSME",
-          "종합소득세구간",
           "사업자금대출",
           "신용보증재단대출",
           "보증보험대출",
@@ -3128,63 +3378,48 @@
           "개인사업자담보대출",
           "종합소득세경정청구",
           "사업자마이너스통장",
-          "종합소득세중간예납",
-          "퇴직연금세액공제",
           "소상공인창업지원금",
           "백엔드개발자",
-          "알바세금신고",
           "기업대출",
           "임산부알바",
           "정부환급금",
-          "부가가치세환급",
+          "중소기업벤처",
+          "퇴직연금대출",
+          "정책자금컨설팅",
+          "가계자금",
+          "소공인특화자금",
+          "장애인대출",
+          "개인사업자마이너스통장",
+          "종합소득세신고서",
+          "중소기업지원사업",
           "퇴직연금가입방법",
           "소상공인스마트상점"
         ],
         "proposals": [
           {
-            "keyword": "종합소득세중간예납",
-            "reason": "월 750회. 하반기 납부 준비에 필요한 대상·제외 조건과 납부 절차를 공식 안내로 조사할 후보다.",
-            "search_query": "종합소득세 중간예납"
+            "keyword": "고용증대세액공제",
+            "reason": "월 1,310회 수요. 세금 공제 목적이 명확하며 귀속연도별 적용 조건과 사후관리 의무를 조사할 가치가 있다.",
+            "search_query": "고용증대 세액공제"
           },
           {
-            "keyword": "퇴직연금세액공제",
-            "reason": "월 720회. 연말을 앞두고 공제 대상 납입금과 한도·증빙을 확인하려는 세금 목적의 조사 후보다.",
-            "search_query": "퇴직연금 세액공제"
+            "keyword": "종합소득세신고서",
+            "reason": "월 570회 수요. 신고서 서식 선택과 작성·제출 절차를 찾는 문서 중심 수요로, 기존 환급 글과 구분해 조사할 수 있다.",
+            "search_query": "종합소득세 신고서"
           },
           {
-            "keyword": "개인사업자폐업",
-            "reason": "월 1,170회. 폐업 신고 준비물·접수 절차와 이후 세무 신고를 확인하려는 구체적인 행정 수요가 있다.",
-            "search_query": "개인사업자 폐업"
+            "keyword": "영세율",
+            "reason": "월 1,170회 수요. 세금 개념이 특정되어 있어 적용 거래와 증빙 요건, 면세와의 차이를 공식 안내로 조사할 가치가 있다.",
+            "search_query": "영세율"
           },
           {
-            "keyword": "알바세금신고",
-            "reason": "월 670회. 소득 유형에 따른 신고 필요 여부와 신고 절차를 묻는 수요로, 취업 준비와 구분된다.",
-            "search_query": "알바 세금 신고"
-          },
-          {
-            "keyword": "종합소득세납부",
-            "reason": "월 1,240회. 납부 경로·기한·분납 조건을 확인하려는 절차 수요이며 기존 환급 글과 목적이 다르다.",
-            "search_query": "종합소득세 납부"
-          },
-          {
-            "keyword": "종합소득세구간",
-            "reason": "월 980회. 과세표준별 세율과 구간 적용 방식을 묻는 정보 수요로, 계산 도구 없이 설명할 수 있다.",
-            "search_query": "종합소득세 구간"
+            "keyword": "잔고증명",
+            "reason": "월 780회 수요. 증명서 발급 준비물과 기준일 등 행정 서류 질문을 조사하되, 제출 목적별 차이를 확인할 필요가 있다.",
+            "search_query": "잔고 증명"
           }
         ],
         "measured_fallback": false,
         "no_eligible_proposal": false,
         "skipped": [
-          {
-            "keyword": "개인사업자지원금",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세금환급",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "소상공인진흥공단정책자금",
             "reason_code": "insufficient_specificity",
@@ -3212,7 +3447,7 @@
           },
           {
             "keyword": "자영업자대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3227,7 +3462,7 @@
           },
           {
             "keyword": "법인사업자대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3257,7 +3492,7 @@
           },
           {
             "keyword": "법인대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3273,11 +3508,6 @@
           {
             "keyword": "산기협",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "고용증대세액공제",
-            "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3302,7 +3532,7 @@
           },
           {
             "keyword": "종소세환급",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3311,13 +3541,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "영세율",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "소상공인희망리턴패키지",
-            "reason_code": "not_reported",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3352,7 +3577,7 @@
           },
           {
             "keyword": "사업자금대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3386,11 +3611,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "잔고증명",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "개인사업자담보대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
@@ -3417,7 +3637,7 @@
           },
           {
             "keyword": "기업대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3431,8 +3651,43 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "부가가치세환급",
-            "reason_code": "not_reported",
+            "keyword": "중소기업벤처",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퇴직연금대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "정책자금컨설팅",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "가계자금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "소공인특화자금",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "장애인대출",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "개인사업자마이너스통장",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "중소기업지원사업",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -3450,56 +3705,20 @@
       {
         "round": 3,
         "offered_keywords": [
-          "근로소득세율",
           "소득세율표",
-          "고용증대세액공제",
-          "영세율",
-          "소상공인희망리턴패키지",
-          "잔고증명",
-          "부가가치세환급",
           "퇴직연금가입방법",
           "소상공인스마트상점"
         ],
         "proposals": [
           {
-            "keyword": "부가가치세환급",
-            "reason": "네이버 월 640회. 환급 발생 조건과 신고 절차·지급 시기를 확인하려는 세금 정보 수요로 조사할 만하다.",
-            "search_query": "부가가치세 환급"
-          },
-          {
-            "keyword": "고용증대세액공제",
-            "reason": "네이버 월 1,310회. 채용 준비가 아닌 세금 공제 목적이며, 적용 귀속연도와 공제 요건을 조사할 필요가 있다.",
-            "search_query": "고용증대 세액공제"
-          },
-          {
-            "keyword": "잔고증명",
-            "reason": "네이버 월 780회. 증명서 발급 절차와 준비물·기준일을 확인하는 행정 정보 후보로 조사할 가치가 있다.",
-            "search_query": "잔고 증명"
-          },
-          {
-            "keyword": "근로소득세율",
-            "reason": "네이버 월 9,580회. 근로소득에 적용하는 세율 구간과 과세표준을 확인하려는 수요로, 실수령액 계산과 구분해 조사할 만하다.",
-            "search_query": "근로소득세율"
+            "keyword": "소득세율표",
+            "reason": "네이버 월 3,970회 실측 수요가 있으며, 과세표준 구간별 적용 세율을 확인하려는 질문이 구체적이어서 공식 세율표 조사에 적합하다.",
+            "search_query": "소득세율표"
           }
         ],
         "measured_fallback": false,
         "no_eligible_proposal": false,
         "skipped": [
-          {
-            "keyword": "소득세율표",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "영세율",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소상공인희망리턴패키지",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "퇴직연금가입방법",
             "reason_code": "not_reported",
@@ -3507,80 +3726,413 @@
           },
           {
             "keyword": "소상공인스마트상점",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "offered_keywords": [
+          "퇴직연금가입방법"
+        ],
+        "proposals": [],
+        "measured_fallback": false,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "퇴직연금가입방법",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           }
         ]
       }
     ],
-    "ranked_candidates": [],
+    "ranked_candidates": [
+      {
+        "keyword": "영세율",
+        "category": "생활정보",
+        "topic": "영세율 뜻과 면세의 차이: 부가가치세 0%의 의미",
+        "intent": "영세율은 무엇이며, 면세와 어떻게 다르고 수출품에 적용하는 이유는 무엇인가?",
+        "gap": "공식 용어사전을 근거로 영세율과 면세의 매입세액공제 차이를 표로 정리하고 수출품 적용 취지를 설명한다.",
+        "source_url": "https://mofe.go.kr/sisa/dictionary/detail?idx=1840",
+        "verified_sources": [
+          {
+            "url": "https://mofe.go.kr/sisa/dictionary/detail?idx=1840",
+            "original_url": "https://mofe.go.kr/sisa/dictionary/detail?idx=1840",
+            "title": "시사경제용어사전",
+            "checked_on": "2026-09-30",
+            "sha256": "5d93c9ee32ca9527423cb76c840be56ce8cb9e0f3cac81a684766ab576136f52",
+            "excerpt": "시사경제용어사전 메뉴 닫기 사전 단어장 문제은행 정책홍보 보도자료 사진 뉴스 동영상 뉴스 인포그래픽 카드뉴스 FAQ 의견 사전 영세율 세율은 세액을 산출하기 위하여 과세표준에 곱하는 비율 또는 과세표준의 단위당 금액으로, 이러한 세율이 영(Zero)인 것을 말한다. 따라서 영세율이 적용되는 경우 당해 과세표준의 크기에 관계없이 산출한 세액은 항상 영이 된다. 현행 세법 중에서 영세율에 관한 규정을 두고 있는 것은 부가가치세법과 증권거래세법이 있다. 영세율이 적용되는 재화 또는 용역의 공급은 부가가치세가 완전면세된다. 증권거래세법상 탄력세제를 선택하여 대통령령이 정하는 바에 의하여 영의 세율을 적용할 수 있음을 규정하고 있다. 영세율제도는 면세 기능을 한다는 점에서 면세제도와 같으나 매입세액공제가 허용되지 않아 불완전면세가 되는 면세제도와 구분된다. 영세율제도는 완벽한 비과세 제도라 할 수 있다. 최종 단계에서 영세율 조치를 취하면 세부담액은 0이 된다. 그러나 중간 단계에 영세율이 적용되면 아무런 효과가 없게 된다. 일반적으로 이중과세를 방지하기 위해서 GATT의 소비지 과세원칙에 의하여 수출재화에 대하여 영세율을 적용하고 있다. 우리나라를 비롯한 대부분의 국가들은 수출품에 영세율을 적용하고 있다. WTO규정에서 허용하고 있는 수출품에 대한 소비세 환급은 바로 이 부가가치세에 대한 영세율을 적용하고 있는 것이다. 반면에 수입품에 대해서는 수입가액 전체에 대해 부가가치세를 부과하는 것이 보통이다. 부가가치세 영세율은 1977년 외화획득 장려차원에서 적용되기도 하였으나, 그동안 폐지와 부활을 반복하다가 2004년 12월 일몰시한으로 종료 되었다. 최근에 정부는 2007년 7월부터 2008년 12말까지 관광산업 활성화 차원에서 관광호텔의 외국인 숙박에 대한 부가가치세 영세율 제도 부활 등을 내용으로 하는 부가가치세법 시행령개정안을 시행했다. 등록일 2020-11-03. 신규 용어 새로 등록된 호가 단어를 아시나요? 공유하기 페이스북 트위터 카카오톡 닫기"
+          }
+        ],
+        "intent_results": [
+          "https://www.forwarder.kr/dictionary/4882",
+          "https://www.etoday.co.kr/news/view/2489388"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 1170,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": null,
+        "organic_provider": "codex_native_search",
+        "organic_query": "영세율",
+        "organic_domains": [
+          "law.go.kr",
+          "down.kacpta.or.kr",
+          "down.kacpta.or.kr",
+          "www.forwarder.kr",
+          "www.forwarder.kr",
+          "law.go.kr",
+          "www.etoday.co.kr",
+          "www.kacpta.or.kr",
+          "lawplayer.com",
+          "www.fomek.or.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://law.go.kr/LSW/flDownload.do?bylClsCd=110201&flSeq=27687335&gubun=",
+            "domain": "law.go.kr",
+            "title": "[별표 \n1] \n<개정 \n2008.2.22>          \n         \n  영세율",
+            "snippet": "영세율이"
+          },
+          {
+            "url": "https://down.kacpta.or.kr/PDF/%ED%95%9C%EA%B5%AD%EC%84%B8%EB%AC%B4%EC%82%AC%ED%9A%8C%202025%20%ED%95%B5%EC%8B%AC%20%EA%B0%9C%EC%A0%95%EC%84%B8%EB%B2%95.pdf",
+            "domain": "down.kacpta.or.kr",
+            "title": "상세본 | 133\n\n41 농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화  \n(조",
+            "snippet": "□ 농어업용 기자재에 대한 부가가치세 영세율<br>○ (영세율) 농·어민이 적용대상 기자재를 국내에서 구입<br>"
+          },
+          {
+            "url": "https://down.kacpta.or.kr/PDF/%5BPart%203%5D%202025%20%EA%B0%9C%EC%A0%95%EC%84%B8%EB%B2%95%20%EC%A2%85%EC%A0%84-%EA%B0%9C%EC%A0%95%EC%82%AC%ED%95%AD%20%EB%B9%84%EA%B5%90%28%EC%83%81%EC%84%B8%EB%B3%B8%29.pdf",
+            "domain": "down.kacpta.or.kr",
+            "title": "상세본 | 133\n\n41 농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화  \n(조",
+            "snippet": "□ 농어업용 기자재에 대한 부가가치세 영세율<br>○ (영세율) 농·어민이 적용대상 기자재를 국내에서 구입<br>"
+          },
+          {
+            "url": "https://www.forwarder.kr/dictionary/4882",
+            "domain": "www.forwarder.kr",
+            "title": "영세율",
+            "snippet": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써 재화나 용역의 최종원가에 부가가치세를 전혀 포함시키지 아니하는 완전면세제도."
+          },
+          {
+            "url": "https://www.forwarder.kr/dictionary/4882?device=mobile&seq=4882",
+            "domain": "www.forwarder.kr",
+            "title": "영세율",
+            "snippet": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써 재화나 용역의 최종원가에 부가가치세를 전혀 포함시키지 아니하는 완전면세제도."
+          },
+          {
+            "url": "https://law.go.kr/flDownload.do?flNm=%5B%EB%B3%84%ED%91%9C+1%5D+%EC%98%81%EC%84%B8%EC%9C%A8%EC%9D%B4+%EC%A0%81%EC%9A%A9%EB%90%98%EB%8A%94+%EB%86%8D%EC%97%85%EA%B8%B0%EA%B3%84%28%EC%A0%9C3%EC%A1%B0%EC%A0%9C3%ED%95%AD%EA%B4%80%EB%A0%A8%29%0A&flSeq=95942041",
+            "domain": "law.go.kr",
+            "title": "■ 농·축산·임·어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정",
+            "snippet": "■ 농·축산·임·어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정"
+          },
+          {
+            "url": "https://www.etoday.co.kr/news/view/2489388",
+            "domain": "www.etoday.co.kr",
+            "title": "[이투데이 말투데이] 학여불급(學如不及)/영세율 - 이투데이",
+            "snippet": "영세율 규정은 현행 부가가치세법과 증권거래세법에만 있다.영세율이 적용되면 부가가치세가 완전히 면제된다."
+          },
+          {
+            "url": "https://www.kacpta.or.kr/data/Board/PublishSearch/%EC%A1%B0%EC%82%AC%EB%B3%B4%EA%B3%A0%EC%84%9C%20%EC%A0%9C5%EC%A7%91%20%EC%A3%BC%EC%9A%94%EA%B5%AD%EC%9D%98%20%EC%86%8C%EB%B9%84%EA%B3%BC%EC%84%B8%EC%A0%9C%EB%8F%84.pdf",
+            "domain": "www.kacpta.or.kr",
+            "title": "110  英國篇\n\nD : 연간총매출액  \nE : B + 영세율 재화의 기초재고 - 영세율",
+            "snippet": "정상세율 및 영세율 적용대상사업에 적용되나 용역은 正常稅率이 적용되는 경우에 한한다."
+          },
+          {
+            "url": "https://lawplayer.com/kr/article/003281/000100",
+            "domain": "lawplayer.com",
+            "title": "농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정 제1조(목적) | 조문 전문 | LawPlayer",
+            "snippet": "LawPlayer›대한민국 법령›법령 목록›농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정›농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에"
+          },
+          {
+            "url": "https://www.fomek.or.kr/data/file/news10/31267458_u62mWAkq_2._25EB8584_EC84B8ECA09CEAB09CED8EB8_ED9B84EC868D_EC8B9CED9689EBA0B9_EAB09CECA095EC9588EC8381EC84B8EBB3B8.pdf",
+            "domain": "www.fomek.or.kr",
+            "title": "(2) 영세율 적용대상 외국항행용역 범위 명확화(부가령 §32)",
+            "snippet": "(2) 영세율 적용대상 외국항행용역 범위 명확화(부가령 §32)"
+          }
+        ],
+        "dominant_result_ratio": 0.5555555555555556,
+        "score_components": {
+          "demand": 24.55,
+          "organic_opportunity": 11.85,
+          "trend": -3.27,
+          "intent_fit": 15
+        },
+        "trend_growth": -0.327,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 6,
+        "selected_at": "2026-09-30T14:04:44.220105+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "영세율"
+        ],
+        "status": "pending",
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "영세율",
+          "executed_query": "영세율",
+          "topic": "영세율 뜻과 면세의 차이: 부가가치세 0%의 의미",
+          "intent": "영세율은 무엇이며, 면세와 어떻게 다르고 수출품에 적용하는 이유는 무엇인가?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "result_count": 10,
+          "domain_count": 6,
+          "dominant_ratio": 0.5555555555555556,
+          "search_review": {
+            "version": 1,
+            "query": "영세율",
+            "executed_query": "영세율",
+            "provider": "codex_native_search",
+            "checked_at": "2026-09-30T14:04:44.220105+00:00",
+            "raw_sha256": "3aa5f66dd4948c82d4af8ea2201f4b76052fea5c679380eaf53f8b1aba0397e3",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": false,
+                "quote": "<개정 \n2008.2.22>"
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "농어업용 기자재 영세율 적용기한 연장 및 추징사유 합리화"
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "농·축산·임·어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "영세율이 적용되면 부가가치세가 완전히 면제된다."
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "정상세율 및 영세율 적용대상사업에 적용되나 용역은 正常稅率이 적용되는 경우에 한한다."
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "농ㆍ축산ㆍ임ㆍ어업용 기자재 및 석유류에 대한 부가가치세 영세율 및 면세 적용 등에 관한 특례규정 제1조(목적)"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "영세율 적용대상 외국항행용역 범위 명확화"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 9,
+            "relevant_site_count": 6,
+            "relevant_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 0.9,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.5555555555555556,
+            "site_concentration": 0.3333333333333333,
+            "organic_opportunity": 11.85
+          },
+          "scope": "full_keyword",
+          "target_keyword": "영세율",
+          "matches": [
+            {
+              "result_index": 3,
+              "quote": "부가가치세 과세표준에 영(0)의 세율을 적용함으로써"
+            },
+            {
+              "result_index": 6,
+              "quote": "영세율이 적용되면 부가가치세가 완전히 면제된다."
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-09-30T14:04:44.220105+00:00",
+          "input_sha256": "d1bb92eb148334c7f492bef5e6f23dbade9040800458622edda85a7423b682c7",
+          "review": {
+            "scope": "full_keyword",
+            "target_keyword": "영세율",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "현행 세법 중에서 영세율에 관한 규정을 두고 있는 것은 부가가치세법과 증권거래세법이 있다. 영세율이 적용되는 재화 또는 용역의 공급은 부가가치세가 완전면세된다.",
+                "entity": "영세율이 적용되는 재화 또는 용역의 공급",
+                "context": "system_rules"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "영세율은 무엇이며 세액은 어떻게 되는가?",
+                "answer": "과세표준에 적용하는 세율이 0이므로 과세표준의 크기와 관계없이 산출세액은 0이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "이러한 세율이 영(Zero)인 것을 말한다. 따라서 영세율이 적용되는 경우 당해 과세표준의 크기에 관계없이 산출한 세액은 항상 영이 된다."
+              },
+              {
+                "facet": "영세율과 면세는 매입세액공제에서 어떻게 다른가?",
+                "answer": "영세율은 매입세액공제를 허용하는 완전면세이고, 면세는 매입세액공제를 허용하지 않는 불완전면세이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "영세율제도는 면세 기능을 한다는 점에서 면세제도와 같으나 매입세액공제가 허용되지 않아 불완전면세가 되는 면세제도와 구분된다."
+              },
+              {
+                "facet": "수출품에 영세율을 적용하는 이유는 무엇인가?",
+                "answer": "소비지 과세원칙에 따라 수출재화의 이중과세를 방지하려는 취지이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "일반적으로 이중과세를 방지하기 위해서 GATT의 소비지 과세원칙에 의하여 수출재화에 대하여 영세율을 적용하고 있다."
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "영세율제도는 면세 기능을 한다는 점에서 면세제도와 같으나 매입세액공제가 허용되지 않아 불완전면세가 되는 면세제도와 구분된다.",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 48.13,
+        "publish_eligible": true,
+        "hold_reasons": []
+      }
+    ],
     "candidate_decisions": [
       {
-        "keyword": "근로소득세계산법",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 1820,
-        "organic_query": "근로소득세 계산법"
+        "keyword": "영세율",
+        "monthly_search": 1170,
+        "rank": 1,
+        "score": 48.13,
+        "score_components": {
+          "demand": 24.55,
+          "organic_opportunity": 11.85,
+          "trend": -3.27,
+          "intent_fit": 15
+        },
+        "status": "selected",
+        "reason": "highest_score_among_evaluated",
+        "organic_query": "영세율"
       },
       {
-        "keyword": "통상임금계산법",
+        "keyword": "근로소득세율",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 9580,
+        "organic_query": "근로소득세율"
+      },
+      {
+        "keyword": "종합소득세조회",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 710,
+        "organic_query": "종합소득세 조회"
+      },
+      {
+        "keyword": "고용증대세액공제",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 1850,
-        "organic_query": "통상임금 계산법"
+        "monthly_search": 1310,
+        "organic_query": "고용증대 세액공제"
       },
       {
-        "keyword": "종합소득세중간예납",
+        "keyword": "종합소득세신고서",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 750,
-        "organic_query": "종합소득세 중간예납"
+        "monthly_search": 570,
+        "organic_query": "종합소득세 신고서"
       },
       {
-        "keyword": "퇴직연금세액공제",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 720,
-        "organic_query": "퇴직연금 세액공제"
-      },
-      {
-        "keyword": "개인사업자폐업",
+        "keyword": "잔고증명",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 1170,
-        "organic_query": "개인사업자 폐업"
+        "monthly_search": 780,
+        "organic_query": "잔고 증명"
       },
       {
-        "keyword": "알바세금신고",
+        "keyword": "소득세율표",
         "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 670,
-        "organic_query": "알바 세금 신고"
-      },
-      {
-        "keyword": "종합소득세납부",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 1240,
-        "organic_query": "종합소득세 납부"
-      },
-      {
-        "keyword": "종합소득세구간",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 980,
-        "organic_query": "종합소득세 구간"
-      },
-      {
-        "keyword": "부가가치세환급",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 640,
-        "organic_query": "부가가치세 환급"
+        "reason": "search relevance review unavailable",
+        "monthly_search": 3970,
+        "organic_query": "소득세율표"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "근로소득세율",
+        "reason_code": "search_quality",
+        "failed_at": "2026-09-30T14:04:44.220105+00:00",
+        "retry_after": "2026-10-01T14:04:44.220105+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "종합소득세조회",
+        "reason_code": "search_quality",
+        "failed_at": "2026-09-30T14:04:44.220105+00:00",
+        "retry_after": "2026-10-01T14:04:44.220105+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "고용증대세액공제",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-09-30T14:04:44.220105+00:00",
+        "retry_after": "2026-10-03T14:04:44.220105+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "종합소득세신고서",
+        "reason_code": "search_quality",
+        "failed_at": "2026-09-30T14:04:44.220105+00:00",
+        "retry_after": "2026-10-01T14:04:44.220105+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "잔고증명",
+        "reason_code": "search_quality",
+        "failed_at": "2026-09-30T14:04:44.220105+00:00",
+        "retry_after": "2026-10-01T14:04:44.220105+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "소득세율표",
+        "reason_code": "temporary_failure",
+        "failed_at": "2026-09-30T14:04:44.220105+00:00",
+        "retry_after": "2026-09-30T20:04:44.220105+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "근로소득세계산법",
         "reason_code": "search_quality",

@@ -727,8 +727,8 @@ def _source_recovery_sample(provider, results):
             and len({row['domain'] for _, row in rows}) >= opportunity.MIN_DOMAINS)
 
 
-def _changed_source_set(previous, recovered):
-    """Prioritize fresh detail, never re-review identical body under a new URL."""
+def _changed_source_set(previous, recovered, *, preserve_existing=False):
+    """Add changed evidence within three slots; optionally retain the existing plan."""
     hashes = {source.get('sha256') for source in previous}
     previous_urls = {source.get('url') for source in previous}
     excerpts = {' '.join(source.get('excerpt', '').split()) for source in previous}
@@ -746,7 +746,12 @@ def _changed_source_set(previous, recovered):
         urls.add(url)
     if not changed:
         return []
-    # Recovered evidence gets the scarce source slots before the rejected input.
+    if preserve_existing:
+        # Coverage repair keeps the accepted plan: its existing model/claim
+        # evidence must survive. Only fill free slots, never silently evict it.
+        slots = 3 - len(previous)
+        return [*previous, *changed[:slots]] if slots > 0 else []
+    # A rejected initial plan may be rebuilt around fresh detail instead.
     for source in previous:
         if source['url'] not in urls:
             changed.append(source)
@@ -821,6 +826,11 @@ def _review_source_coverage(candidate, now, *, budget):
             or 'source_recovery' in diagnostics or 'coverage_recovery' in diagnostics
             or budget['attempts'] >= MAX_SOURCE_RECOVERIES):
         return reasons
+    if len(candidate['verified_sources']) >= 3:
+        candidate['decision_diagnostics'] = {**diagnostics, 'coverage_recovery': {
+            'attempted': False, 'outcome': 'source_capacity',
+            'initial_review': candidate['suitability_evidence']}}
+        return reasons
     initial = candidate['suitability_evidence']
     review = initial['review']
     gaps = {
@@ -841,7 +851,7 @@ def _review_source_coverage(candidate, now, *, budget):
                 or trace.get('searched') is not True):
             audit['outcome'] = 'unverified_research'
             return reasons
-        sources = _changed_source_set(candidate['verified_sources'], recovered)
+        sources = _changed_source_set(candidate['verified_sources'], recovered, preserve_existing=True)
         if not sources:
             audit['outcome'] = 'no_changed_source'
             return reasons

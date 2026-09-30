@@ -81,8 +81,8 @@ OFFICIAL_SEARCH_DOMAIN_HINTS = (
     ('notion.com', ('노션', 'notion')),
     ('support.google.com', ('구글', '스프레드시트', '안드로이드')),
     ('apple.com', ('애플', '아이폰', '아이패드', '맥북', '에어팟')),
-    ('samsung.com', ('삼성', '갤럭시', '청소기', '공기청정기', '노트북')),
-    ('lg.com', ('엘지', 'lg', '청소기', '공기청정기', '노트북')),
+    ('samsung.com', ('삼성', '갤럭시', '청소기', '공기청정기', '노트북', '모니터', '제습기', '스마트폰')),
+    ('lg.com', ('엘지', 'lg', '청소기', '공기청정기', '노트북', '모니터', '제습기')),
     ('korcham.net', ('컴활', '컴퓨터활용능력', '워드프로세서', '전산회계운용사', '유통관리사', '무역영어')),
     ('korea.kr', ('정부', '정책', '지원', '환급', '보험', '검진', '고용', '세금', '연말정산',
                   '종합소득세', '예방접종', '장려금', '수당', '급여', '월세', '전입신고')),
@@ -228,6 +228,10 @@ def duplicate(keyword, title, titles):
     return any(target == norm(old) or (key and key in norm(old)) for old in titles)
 
 
+class NoMeasuredDemand(RuntimeError):
+    """The lookup produced no candidate with independently measured demand."""
+
+
 def demand_candidates(seeds, min_volume=MIN_MONTHLY_SEARCH):
     if not all(os.getenv(k) for k in ('NAVER_AD_CUSTOMER_ID', 'NAVER_AD_API_KEY', 'NAVER_AD_SECRET_KEY')):
         raise RuntimeError('Measured market demand requires Naver credentials')
@@ -240,7 +244,7 @@ def demand_candidates(seeds, min_volume=MIN_MONTHLY_SEARCH):
             if row['monthly'] > candidates.get(keyword, {}).get('monthly', -1):
                 candidates[keyword] = row
     if not candidates:
-        raise RuntimeError('No measured demand; do not fall back to old queue')
+        raise NoMeasuredDemand('No measured demand; do not fall back to old queue')
     return candidates
 
 
@@ -855,6 +859,32 @@ def _review_source_coverage(candidate, now, *, budget):
     return retry_reasons
 
 
+def _selection_pool(stats, titles, category, excluded_keys, deferred, past_failures,
+                    retired_keys=(), retry_keys=None):
+    eligible = {key: row for key, row in stats.items()
+                if norm(row['keyword']) not in excluded_keys
+                and measurement_key(row['keyword']) not in deferred}
+    discovery_rejections = []
+    if category == '리뷰':
+        discovery_rejections = [{'keyword': row['keyword'], 'reason': review_discovery.discovery_issue(row['keyword'])}
+                                for row in eligible.values() if review_discovery.discovery_issue(row['keyword'])]
+        eligible = {key: row for key, row in eligible.items() if not review_discovery.discovery_issue(row['keyword'])}
+    pool = candidate_pool({key: row for key, row in eligible.items()
+                           if measurement_key(row['keyword']) not in past_failures
+                           and norm(row['keyword']) not in retired_keys}, titles, category)
+    retries = []
+    if past_failures:
+        retries = candidate_pool({key: row for key, row in eligible.items()
+                                  if measurement_key(row['keyword']) in past_failures
+                                  and (retry_keys is None or norm(row['keyword']) in retry_keys)}, titles, category)
+        retries.sort(key=lambda row: datetime.fromisoformat(
+            past_failures[measurement_key(row['keyword'])]['failed_at']))
+        retries = retries[:MAX_HISTORY_RETRIES]
+        # Expiry allows a limited fresh check, not a return to the same whole batch.
+        pool = pool[:120 - len(retries)] + [row for row in retries if norm(row['keyword']) not in retired_keys]
+    return pool, retries, discovery_rejections
+
+
 @source_fetch_scope()
 def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
     if category not in CATEGORIES:
@@ -872,31 +902,27 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
     deferred = deferred_keywords(history, clock)
     seeds = list(CATEGORIES[category])
-    stats = demand_candidates(seeds)
+    try:
+        stats = demand_candidates(seeds)
+    except NoMeasuredDemand:
+        if category != '리뷰':
+            raise
+        stats = {}
     titles = existing_titles() if titles is None else titles
     stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
-    eligible = {key: row for key, row in stats.items()
-                if norm(row['keyword']) not in excluded_keys
-                and measurement_key(row['keyword']) not in deferred}
-    discovery_rejections = []
-    if category == '리뷰':
-        discovery_rejections = [{'keyword': row['keyword'], 'reason': review_discovery.discovery_issue(row['keyword'])}
-                                for row in eligible.values() if review_discovery.discovery_issue(row['keyword'])]
-        eligible = {key: row for key, row in eligible.items() if not review_discovery.discovery_issue(row['keyword'])}
     past_failures = {measurement_key(row['keyword']): row for row in history}
-    pool = candidate_pool({key: row for key, row in eligible.items()
-                           if measurement_key(row['keyword']) not in past_failures}, titles, category)
-    retries = []
-    if past_failures:
-        retries = candidate_pool({key: row for key, row in eligible.items()
-                                  if measurement_key(row['keyword']) in past_failures}, titles, category)
-        retries.sort(key=lambda row: datetime.fromisoformat(
-            past_failures[measurement_key(row['keyword'])]['failed_at']))
-        retries = retries[:MAX_HISTORY_RETRIES]
-        # Expiry allows a limited fresh check, not a return to the same whole batch.
-        pool = pool[:120 - len(retries)] + retries
+
+    def refresh_pool(retired_keys=(), retry_keys=None):
+        return _selection_pool(stats, titles, category, excluded_keys, deferred, past_failures,
+                               retired_keys, retry_keys)
+
+    pool, retries, discovery_rejections = refresh_pool()
     retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
-    if not pool and not deferred and not discovery_rejections:
+    history_retry_keys = {norm(row['keyword']) for row in retries}
+    pool_keywords = {norm(row['keyword']) for row in pool}
+    replenishment = []
+    refill_seeds = iter(review_discovery.expansion_seeds(clock) if category == '리뷰' else ())
+    if category != '리뷰' and not pool and not deferred and not discovery_rejections:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
     offered = set()
@@ -911,6 +937,41 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
             stop_reason = 'time_budget'
             break
         available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed]
+        # Re-measure other buying questions when the available pool is scarce.
+        # Never reopen cooled-down failures, reuse seed volume, or force a shortlist.
+        if category == '리뷰' and not available:
+            while len(available) < PROPOSALS_PER_ROUND:
+                if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                    break
+                seed = next(refill_seeds, None)
+                if seed is None:
+                    break
+                entry = {'seed': seed, 'available_before': len(available), 'added_count': 0,
+                         'status': 'measured', 'trigger': 'available_pool_exhausted'}
+                try:
+                    extra = demand_candidates([seed])
+                except NoMeasuredDemand:
+                    extra = {}
+                    entry['status'] = 'no_measured_demand'
+                except (OSError, ValueError, RuntimeError):
+                    extra = {}
+                    entry['status'] = 'lookup_unavailable'
+                known = {measurement_key(row['keyword']) for row in stats.values()}
+                for key, row in extra.items():
+                    identity = measurement_key(row['keyword'])
+                    if identity not in known:
+                        stats[key] = row
+                        known.add(identity)
+                        entry['added_count'] += 1
+                pool, retries, discovery_rejections = refresh_pool(seen | not_proposed, history_retry_keys)
+                pool_keywords.update(norm(row['keyword']) for row in pool)
+                retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
+                available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed]
+                entry.update(measured_count=len(extra), available_after=len(available))
+                replenishment.append(entry)
+            if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                stop_reason = 'time_budget'
+                break
         # Show unseen parts of the measured pool before recycling a shortlist.
         remaining = sorted(available, key=lambda row: norm(row['keyword']) in offered)[:60]
         if not remaining:
@@ -943,7 +1004,10 @@ search_query에는 같은 검색어를 자연스러운 한국어 띄어쓰기로
 예: 대상포진초기증상 → 대상포진 초기 증상, 전기기사시험일정 → 전기기사 시험 일정.
 ASCII 공백만 추가·제거할 수 있습니다. 문자·숫자·기호·대소문자를 바꾸거나 연도·설명·검색 연산자를 추가하면 안 됩니다.
 keyword는 반드시 아래 실측 목록의 원문을 그대로 유지하세요. 검색량은 그 원래 keyword의 측정값입니다.
-JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색어의 띄어쓰기만 보정","reason":"실측 수요와 현재 독자 질문에 근거한 조사 이유"}}]}}
+부적합해서 선택하지 않은 후보는 skipped에 keyword와 reason_code를 기록하세요.
+reason_code는 purchase_intent_unclear, scope_too_broad, maintenance_intent, duplicate_intent,
+category_mismatch, insufficient_specificity 중 하나입니다. 단순 우선순위 미선택을 부적합으로 꾸미지 마세요.
+JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색어의 띄어쓰기만 보정","reason":"실측 수요와 현재 독자 질문에 근거한 조사 이유"}}], "skipped":[{{"keyword":"...","reason_code":"purchase_intent_unclear"}}]}}
 후보: {json.dumps([candidate_prompt_row(row) for row in remaining], ensure_ascii=False)}
 기존 제목: {json.dumps(titles, ensure_ascii=False)}
 이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}
@@ -972,7 +1036,11 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             proposed.append(record)
         proposal_rounds.append({'round': rounds, 'offered_keywords': [x['keyword'] for x in remaining],
                                'proposals': proposed, 'measured_fallback': False,
-                               'no_eligible_proposal': no_proposal})
+                               'no_eligible_proposal': no_proposal,
+                               'skipped': review_discovery.shortlist_skips(
+                                   remaining, candidates[:PROPOSALS_PER_ROUND], proposals)})
+        not_proposed.update(norm(row['keyword']) for row in proposal_rounds[-1]['skipped']
+                            if row['reason_code'] != 'not_reported')
         if no_proposal:
             not_proposed.update(norm(row['keyword']) for row in remaining)
             continue
@@ -1125,11 +1193,14 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']
                                    else 'naver_related_keywords'),
             'measured_candidates': len(stats), 'evaluated_candidates': len(seen),
-            'research_pool_size': len(pool), 'selected': selected[:top_n], 'held': held, 'rejected': rejected,
+            'research_pool_size': len(pool_keywords), 'selected': selected[:top_n], 'held': held, 'rejected': rejected,
             'excluded_keywords': sorted(excluded_keys),
             'deferred_keywords': sorted(deferred), 'research_stop_reason': stop_reason,
             'retry_keywords': [row['keyword'] for row in retries],
             'discovery_rejections': discovery_rejections,
+            'discovery_replenishment': replenishment,
+            'deferred_measured_keywords': sorted(row['keyword'] for row in stats.values()
+                                                if measurement_key(row['keyword']) in deferred),
             'selection_scope': 'highest_score_among_evaluated', 'proposal_rounds': proposal_rounds,
             'ranked_candidates': selected, 'candidate_decisions': decisions,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '

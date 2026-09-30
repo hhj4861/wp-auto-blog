@@ -8,6 +8,19 @@ import unicodedata
 from urllib.parse import urlsplit
 
 SEEDS = ('무선청소기흡입력', '공기청정기평수', '노트북램', '로봇청소기문턱')
+# Query hints only: every returned candidate needs its own measured demand.
+# Rotating the starting point prevents a scarce category always sampling one family.
+EXPANSION_SEEDS = (
+    '모니터주사율', '제습기소비전력', '가벼운무선청소기', '노트북SSD',
+    '로봇청소기직배수설치', '공기청정기필터', '스마트폰배터리', '모니터해상도',
+    '무선청소기소음', '노트북배터리', '제습기평수', '로봇청소기먼지비움',
+)
+SHORTLIST_SKIP_CODES = frozenset({
+    'purchase_intent_unclear', 'scope_too_broad', 'maintenance_intent',
+    'duplicate_intent', 'category_mismatch', 'insufficient_specificity',
+})
+
+
 PRODUCTS = {
     '청소기': ('청소기', 'vacuum', 'cordzero', 'jetbot', 'roborock'),
     '공기청정기': ('공기청정기', 'airpurifier', 'aircleaner', '퓨리케어', 'puricare'),
@@ -29,12 +42,37 @@ FACETS = {
     '필터': ('필터', 'filter', 'hepa'),
     '화면': ('해상도', '주사율', '화면크기', 'resolution', 'refreshrate', 'screensize'),
     '호환': ('호환', '단자', '포트', 'compatib', 'connector', 'port'),
+    '급배수설치': ('직배수', '급배수', '자동급수', 'waterconnection', 'drainage'),
+    '먼지비움': ('먼지비움', '먼지비우기', '자동먼지수거', 'autoempty', 'autodust'),
 }
-MAINTENANCE = ('청소방법', '교체방법', '수리', '고장', '오류', '설정방법', '연결방법', '사용법')
+# Colloquial query words never substitute for specification evidence in the body.
+QUERY_FACET_ALIASES = {'무게': ('가벼운', '가벼움', '경량')}
+MAINTENANCE = ('청소방법', '교체방법', '수리', '고장', '오류', '설정방법', '설치방법', '연결방법', '사용법')
 UNBOUNDED_RECOMMENDATION = ('좋은', '추천', '순위', '가성비', '베스트')
 NON_PURCHASE_URL = re.compile(
     r'help-library/.*(?:troubleshoot|poor-suction|how-to-clean|won-t|wont|replacement-lamp)'
     r'|/license/|selectcrtfcinfo|/freeboard|/product/list\.do', re.I)
+
+
+def expansion_seeds(clock):
+    offset = clock.date().toordinal() % len(EXPANSION_SEEDS)
+    return EXPANSION_SEEDS[offset:] + EXPANSION_SEEDS[:offset]
+
+
+def shortlist_skips(remaining, candidates, response):
+    """Record model opinions, with an explicit missing-reason fallback."""
+    proposed = {row.get('keyword') for row in candidates if isinstance(row, dict)
+                and isinstance(row.get('keyword'), str)}
+    skipped = response.get('skipped', []) if isinstance(response, dict) else []
+    reasons = {}
+    for row in skipped[:60] if isinstance(skipped, list) else []:
+        if not isinstance(row, dict):
+            continue
+        keyword, code = row.get('keyword'), row.get('reason_code')
+        if isinstance(keyword, str) and isinstance(code, str) and code in SHORTLIST_SKIP_CODES:
+            reasons.setdefault(keyword, code)
+    return [{'keyword': row['keyword'], 'reason_code': reasons.get(row['keyword'], 'not_reported'),
+             'kind': 'model_shortlist_opinion'} for row in remaining if row['keyword'] not in proposed]
 
 
 def compact(value):
@@ -48,7 +86,8 @@ def requirements(keyword):
                              if name == '스마트폰' else key) for x in aliases)]
     # "그램" is a product family, not evidence of a RAM question.
     facet_key = key.replace('그램', '')
-    facets = [name for name, aliases in FACETS.items() if any(x in facet_key for x in aliases)]
+    facets = [name for name, aliases in FACETS.items()
+              if any(x in facet_key for x in (*aliases, *QUERY_FACET_ALIASES.get(name, ())))]
     return products, facets
 
 

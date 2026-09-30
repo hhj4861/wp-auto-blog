@@ -1,0 +1,421 @@
+{
+  "source_run": 36530747099,
+  "selected_at": "2026-09-29T06:23:32.597173+00:00",
+  "discovery_rejections": [
+    {
+      "keyword": "무선청소기추천",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "청소기추천",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "진공청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "청소기가격",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "청소기비교",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "테팔무선청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "저렴한청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "무선진공청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "무선청소기순위",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "청소기순위",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "가벼운무선청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "가벼운청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "원룸청소",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "유선청소기추천",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "가성비무선청소기",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "가성비청소기",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "홈쇼핑무선청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "머리카락청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "가정용청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "원룸무선청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "진공청소기추천",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "스틱청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "자취방청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "청소기헤드",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "아파트청소",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "먼지비움무선청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "가정용무선청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "CPU",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "DDR416G",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "램16기가",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "RAM",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "DDR48G",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "램8기가",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "램가격",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "DDR432G",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "SSD가격",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "라데온",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "DDR416GB",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "NZXT",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "DDR48GB",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "CPU가격",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "GTA5사양",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "컴퓨터그래픽카드",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "삼성램",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "DDR38GB",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "LG로봇청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로보락청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로봇청소기추천",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "로보락QREVO",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로보락물걸레청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로보락AS",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "인덕션받침대",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로보락Q8",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "인덕션설치",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "식기세척기설치",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로보락물걸레",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로봇청소기로보락",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "가성비로봇청소기",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "로봇청소기직배수설치",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로봇청소기순위",
+      "reason": "review_recommendation_unbounded"
+    },
+    {
+      "keyword": "로보락습건식청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "삼성AI로봇청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "자동청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "인덕션프레임",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "저렴한로봇청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로보락S6MAXV",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "ROBOROCK",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "인덕션거치대",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로봇청소기물걸레",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로봇청소기가격",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "로보락큐레보",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "천연대리석",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "청소로봇",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로보락S7MAXVULTRA",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "로보락S5MAX",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "삼성식기세척기이전설치",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "타마로봇청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "국산로봇청소기",
+      "reason": "review_purchase_question_unbounded"
+    },
+    {
+      "keyword": "인덕션케이스",
+      "reason": "review_product_unidentified"
+    },
+    {
+      "keyword": "식기세척기이전설치",
+      "reason": "review_product_unidentified"
+    }
+  ],
+  "failure_history": [
+    {
+      "keyword": "흡입력좋은청소기"
+    },
+    {
+      "keyword": "로봇청소기문턱"
+    },
+    {
+      "keyword": "노트북램"
+    },
+    {
+      "keyword": "노트북메모리"
+    },
+    {
+      "keyword": "무선청소기"
+    },
+    {
+      "keyword": "청소기"
+    },
+    {
+      "keyword": "베이크아웃방법"
+    },
+    {
+      "keyword": "미세먼지"
+    },
+    {
+      "keyword": "로봇청소기"
+    },
+    {
+      "keyword": "삼성노트북"
+    },
+    {
+      "keyword": "공기청정기렌탈"
+    },
+    {
+      "keyword": "원룸청소기"
+    },
+    {
+      "keyword": "스팀물걸레청소기"
+    },
+    {
+      "keyword": "차량용무선청소기"
+    },
+    {
+      "keyword": "가습기공기청정기"
+    },
+    {
+      "keyword": "공기청정기"
+    },
+    {
+      "keyword": "선풍기"
+    },
+    {
+      "keyword": "로보락로봇청소기"
+    },
+    {
+      "keyword": "물걸레청소기"
+    },
+    {
+      "keyword": "캠핑용품"
+    },
+    {
+      "keyword": "게이밍노트북"
+    },
+    {
+      "keyword": "사무용노트북"
+    },
+    {
+      "keyword": "리퍼노트북"
+    },
+    {
+      "keyword": "유선청소기"
+    },
+    {
+      "keyword": "업무용노트북"
+    },
+    {
+      "keyword": "노트북비교"
+    },
+    {
+      "keyword": "로봇청소기비교"
+    },
+    {
+      "keyword": "무선청소기비교"
+    },
+    {
+      "keyword": "인덕션설치비용"
+    },
+    {
+      "keyword": "무선청소기가격비교"
+    },
+    {
+      "keyword": "학생용노트북"
+    }
+  ]
+}

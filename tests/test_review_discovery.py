@@ -144,3 +144,30 @@ def test_robot_research_includes_two_manufacturers_and_consumer_agency(monkeypat
         assert not market.is_official_url('https://' + host + '.evil.example/products/test')
         assert review.relevant_source('로봇청소기문턱', source(
             'https://' + host + '/products/test', '로봇청소기 문턱 시험 조건'))
+
+
+@pytest.mark.parametrize('keyword,facet', [
+    ('가벼운무선청소기', '무게'), ('경량노트북', '무게'),
+    ('로봇청소기직배수설치', '급배수설치'), ('먼지비움무선청소기', '먼지비움'),
+])
+def test_colloquial_buying_conditions_require_corresponding_body_evidence(keyword, facet):
+    assert review.discovery_issue(keyword) is None
+    assert facet in review.requirements(keyword)[1]
+    url = 'https://www.samsung.com/sec/products/spec'
+    assert not review.relevant_source(keyword, source(url, '제품을 소개합니다.', keyword))
+    assert review.relevant_source(keyword, source(url, keyword + ' ' + review.FACETS[facet][0] + ' 사양과 조건'))
+
+
+def test_lightweight_advertising_does_not_substitute_for_weight_specification():
+    assert not review.relevant_source('가벼운무선청소기', source(
+        'https://www.samsung.com/sec/vacuum/spec', '가벼운 무선청소기를 소개합니다.'))
+    assert review.discovery_issue('로봇청소기직배수설치방법') == 'review_maintenance_intent'
+
+
+def test_supplemental_product_families_have_domestic_manufacturer_searches(monkeypatch):
+    queries = []
+    monkeypatch.setattr(market, 'search_results', lambda q: (queries.append(q), []))
+    market.official_search_urls('모니터주사율')
+    assert queries == ['모니터주사율 제품 사양 site:samsung.com/sec',
+                       '모니터주사율 제품 사양 site:lg.com/kr',
+                       '모니터주사율 제품 사양 site:kca.go.kr']

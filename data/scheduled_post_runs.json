@@ -200,6 +200,13 @@
       "claimed_at": "2026-09-29T20:36:43.622132+09:00",
       "status": "success",
       "completed_at": "2026-09-29T11:47:27.516104+00:00"
+    },
+    "2026-09-30:morning": {
+      "run_id": "36667108894",
+      "category": "생산성",
+      "slot": "morning",
+      "claimed_at": "2026-09-30T13:02:57.219111+09:00",
+      "status": "started"
     }
   }
 }

@@ -187,3 +187,10 @@ def test_adaptive_generation_deadline_prevents_demand_and_research(monkeypatch):
     assert report['research_stop_reason'] == 'time_budget'
     demand.assert_called_once()
     search.assert_not_called()
+
+
+def test_new_questions_cannot_only_swap_capacity_after_failed_family():
+    seeds, audit = REAL_PROPOSE(stats('SSD'), [], lambda _: {'questions': [
+        {'anchor':'SSD','seed':'SSD4TB'}, {'anchor':'SSD','seed':'SSD1TB호환'}]},
+        [{'keyword':'SSD1TB','reason':'search quality insufficient'}])
+    assert seeds == ['SSD1TB호환']

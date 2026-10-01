@@ -1156,6 +1156,58 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     search_review_diagnostics = []
     rounds = 0
     stop_reason = 'round_limit'
+    adaptive_candidate_keys = set()
+
+    def measure_seed(seed, available, researched_families, trigger):
+        nonlocal pool, retries, discovery_rejections, retry_context
+        before_keys = set(stats)
+        entry = {'seed': seed, 'available_before': len(available), 'added_count': 0,
+                 'status': 'measured', 'trigger': trigger}
+        try:
+            extra = demand_candidates([seed])
+        except NoMeasuredDemand:
+            extra = {}
+            entry['status'] = 'no_measured_demand'
+        except (OSError, ValueError, RuntimeError):
+            extra = {}
+            entry['status'] = 'lookup_unavailable'
+        known = {measurement_key(row['keyword']) for row in stats.values()}
+        for key, row in extra.items():
+            identity = measurement_key(row['keyword'])
+            if identity not in known:
+                stats[key] = row
+                known.add(identity)
+                entry['added_count'] += 1
+        pool, retries, discovery_rejections = refresh_pool(seen | not_proposed | family_deferred, history_retry_keys)
+        pool_keywords.update(norm(row['keyword']) for row in pool)
+        retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
+        # New measurements can contain additional aliases of the same
+        # uncertain question; keep these out of this run's refill too.
+        family_deferred.update(norm(row['keyword']) for row in pool
+            if review_discovery.research_family(row['keyword']) in researched_families)
+        available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed | family_deferred]
+        entry.update(measured_count=len(extra), available_after=len(available))
+        replenishment.append(entry)
+        if seed in adaptive_seeds:
+            exploration['measured'].append(dict(entry))
+            for proposal in exploration['seeds']:
+                if proposal['seed'] == seed:
+                    proposal['status'] = 'lookup_completed' if entry['status'] == 'measured' else entry['status']
+        if seed in adaptive_seeds:
+            adaptive_candidate_keys.update(norm(stats[key]['keyword']) for key in set(stats) - before_keys)
+        return available
+
+    def start_exploration(trigger):
+        nonlocal exploration_started, exploration, adaptive_seeds
+        exploration_started = True
+        proposed_seeds, exploration = review_exploration.propose(stats,
+            [*stats, *excluded_keys, *deferred, *review_discovery.SEEDS,
+             *review_discovery.EXPANSION_SEEDS, *past_failures], ask, [*rejected, *held])
+        exploration['trigger'] = trigger
+        adaptive_seeds = set(proposed_seeds)
+        runtime.raise_if_fatal()
+        return proposed_seeds
+
     for _ in range(MAX_RESEARCH_ROUNDS):
         runtime.raise_if_fatal()
         if monotonic() - started >= MAX_RESEARCH_SECONDS:
@@ -1173,6 +1225,16 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 if norm(row['keyword']) in uncertain_pending - seen
                 and review_discovery.research_family(row['keyword']) in researched_families)
         available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed | family_deferred]
+        # Failed product variants must not consume every round before fresh
+        # questions are measured. One exploration call still has a four-seed cap.
+        if category == '리뷰' and rounds and not selected and (rejected or held) and not exploration_started:
+            for seed in start_exploration('no_pass_after_round'):
+                if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                    break
+                available = measure_seed(seed, available, researched_families, 'no_pass_after_round')
+            if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                stop_reason = 'time_budget'
+                break
         # Re-measure other buying questions when the available pool is scarce.
         # Never reopen cooled-down failures, reuse seed volume, or force a shortlist.
         if category == '리뷰' and not available:
@@ -1181,55 +1243,20 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                     break
                 seed = next(refill_seeds, None)
                 if seed is None and not exploration_started:
-                    exploration_started = True
-                    proposed_seeds, exploration = review_exploration.propose(stats,
-                        [*stats, *excluded_keys, *deferred, *review_discovery.SEEDS,
-                         *review_discovery.EXPANSION_SEEDS, *past_failures], ask)
-                    adaptive_seeds = set(proposed_seeds)
-                    refill_seeds = iter(proposed_seeds)
+                    refill_seeds = iter(start_exploration('fixed_seeds_exhausted'))
                     seed = next(refill_seeds, None)
                     runtime.raise_if_fatal()
                     if monotonic() - started >= MAX_RESEARCH_SECONDS:
                         break
                 if seed is None:
                     break
-                entry = {'seed': seed, 'available_before': len(available), 'added_count': 0,
-                         'status': 'measured', 'trigger': 'available_pool_exhausted'}
-                try:
-                    extra = demand_candidates([seed])
-                except NoMeasuredDemand:
-                    extra = {}
-                    entry['status'] = 'no_measured_demand'
-                except (OSError, ValueError, RuntimeError):
-                    extra = {}
-                    entry['status'] = 'lookup_unavailable'
-                known = {measurement_key(row['keyword']) for row in stats.values()}
-                for key, row in extra.items():
-                    identity = measurement_key(row['keyword'])
-                    if identity not in known:
-                        stats[key] = row
-                        known.add(identity)
-                        entry['added_count'] += 1
-                pool, retries, discovery_rejections = refresh_pool(seen | not_proposed | family_deferred, history_retry_keys)
-                pool_keywords.update(norm(row['keyword']) for row in pool)
-                retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
-                # New measurements can contain additional aliases of the same
-                # uncertain question; keep these out of this run's refill too.
-                family_deferred.update(norm(row['keyword']) for row in pool
-                    if review_discovery.research_family(row['keyword']) in researched_families)
-                available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed | family_deferred]
-                entry.update(measured_count=len(extra), available_after=len(available))
-                replenishment.append(entry)
-                if seed in adaptive_seeds:
-                    exploration['measured'].append(dict(entry))
-                    for proposal in exploration['seeds']:
-                        if proposal['seed'] == seed:
-                            proposal['status'] = 'lookup_completed' if entry['status'] == 'measured' else entry['status']
+                available = measure_seed(seed, available, researched_families, 'available_pool_exhausted')
             if monotonic() - started >= MAX_RESEARCH_SECONDS:
                 stop_reason = 'time_budget'
                 break
         # Show unseen parts of the measured pool before recycling a shortlist.
-        remaining = sorted(available, key=lambda row: norm(row['keyword']) in offered)[:60]
+        remaining = sorted(available, key=lambda row: (norm(row['keyword']) not in adaptive_candidate_keys,
+                                                      norm(row['keyword']) in offered))[:60]
         if not remaining:
             stop_reason = 'pool_exhausted'
             break

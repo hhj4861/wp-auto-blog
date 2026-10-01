@@ -136,3 +136,18 @@ def test_recovered_transport_followed_by_bad_schema_cannot_multiply_calls():
     with pytest.raises(runtime.AnalysisError, match='invalid_schema'):
         runtime.validated_call(lambda prompt: runtime.validated_call(call, prompt), 'input', schema)
     assert call.call_count == 2
+
+
+def test_all_adapter_fixed_codes_survive_diagnostics_without_raw_error_text():
+    from src.codex_search import _REASONS
+    for reason in _REASONS:
+        assert runtime.error_code(NativeSearchError(reason)) == reason
+
+
+@pytest.mark.parametrize('reason', ['unexpected_search_query','unexpected_tool_activity','unsafe_thread_configuration'])
+def test_protocol_boundary_failures_remain_non_retryable(reason):
+    call = Mock(side_effect=NativeSearchError(reason))
+    with pytest.raises(runtime.AnalysisError) as caught:
+        runtime.validated_call(call, 'private prompt')
+    assert caught.value.code == reason
+    call.assert_called_once()

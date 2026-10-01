@@ -696,6 +696,15 @@ JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","int
             status = 'supported_invalid_type'
         audit['analysis_status'] = status
         if status == 'supported_false':
+            if category == '리뷰':
+                # Each retry can use a different source set. Keep the input of
+                # this exact negative decision, not only the initial sources.
+                audit['review_inputs'] = {
+                    'keyword': keyword, 'category': category, 'checked_at': now,
+                    'evidence_mode': evidence_mode, 'search_results': results,
+                    'official_sources': [{key: source.get(key) for key in
+                        ('url', 'title', 'excerpt', 'sha256', 'checked_on')} for source in sources],
+                }
             opinion = analysis.get('rejection_reason')
             audit['model_rejection_opinion'] = {
                 'kind': 'model_opinion',

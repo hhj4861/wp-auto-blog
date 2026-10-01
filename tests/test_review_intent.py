@@ -81,3 +81,22 @@ def test_followup_shortlist_does_not_repeat_full_evidence_bodies(monkeypatch):
     assert len(prompts) >= 2 and report['rejected'][0]['verified_sources']
     assert 'verified_sources' not in prompts[1] and 'official_sources' not in prompts[1]
     assert report['rejected'][0]['reason'] in prompts[1]
+
+
+def test_rejected_source_recovery_preserves_both_distinct_decision_inputs(monkeypatch):
+    key = '가벼운무선청소기'
+    first = evidence('https://www.lge.co.kr/vacuum-cleaners/fixture-first')
+    second = evidence('https://www.samsung.com/sec/vacuum-cleaners/fixture-second')
+    second.update(excerpt=second['excerpt'] + ' 추가 검증 자료', sha256='different-fixture-hash')
+    monkeypatch.setattr(market, 'ask', lambda _: {'supported': False, 'rejection_reason': 'source_missing_detail'})
+    monkeypatch.setattr(market, 'research_official_sources', lambda *_: ([second], {'provider': 'codex_web', 'searched': True}))
+    now = datetime.now(timezone.utc).isoformat()
+    _, reason, _, audit = market._review_with_source_recovery(key, '리뷰', now,
+        organic_sample(key), [first], provider='codex_native_search', evidence_mode='serp',
+        research=None, allow_recovery=True, budget={'attempts': 0})
+    assert reason and audit['source_recovery']['outcome'] == 'review_rejected'
+    initial = audit['source_recovery']['initial_review']['review_inputs']
+    retry = audit['source_recovery']['retry_review']['review_inputs']
+    assert initial['official_sources'][0]['url'] == first['url']
+    assert retry['official_sources'][0]['url'] == second['url']
+    assert initial['search_results'] == retry['search_results'] == organic_sample(key)

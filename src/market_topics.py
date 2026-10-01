@@ -28,6 +28,7 @@ from src.cak_candidates import (load_candidate_export, measurement_key, qualifie
 from src import market_opportunity as opportunity
 from src import topic_suitability as suitability
 from src.market_opportunity import review_search
+from src.search_quality import SearchReviewError
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query
 from src.selection_feedback import load_history, deferred_keywords
@@ -425,6 +426,10 @@ def fetch_trend_change(keyword):
 
 def _official_search_extra_domains(keyword):
     """A small, topic-specific hint list; never broaden the measured SERP query."""
+    preferred = (review_discovery.preferred_source_domains(keyword)
+                 if review_discovery.discovery_issue(keyword) is None else [])
+    if preferred:
+        return preferred
     key = norm(keyword)
     domains = [domain for domain, terms in OFFICIAL_SEARCH_DOMAIN_HINTS
                if any(term in key for term in terms)]
@@ -498,14 +503,14 @@ def candidate_sources(keyword, results, *, category=None):
             if category == '리뷰' and not review_discovery.relevant_source(keyword, source):
                 continue
             _append_distinct_source(sources, source, limit=limit)
-            if (len(sources) >= limit or len(sources) >= 3 and
+            if (len(sources) >= limit or len(sources) >= 3 and not review_discovery.storage_question(keyword) and
                     len({review_discovery.source_publisher(row) for row in sources}) >= 2):
                 break
 
     # Leave room for an alternative to organic links that may be only homepages.
     read([row['url'] for row in results if is_official_url(row['url'])][:2])
     read(official_search_urls(keyword))
-    return review_discovery.diverse_sources(sources) if category == '리뷰' else sources
+    return review_discovery.prioritize_sources(keyword, sources) if category == '리뷰' else sources
 
 
 def research_source_locators(trace):
@@ -582,11 +587,11 @@ go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품
         source = fetch_source(locator['url'])
         if source and (category != '리뷰' or review_discovery.relevant_source(keyword, source)):
             _append_distinct_source(sources, {**source, 'locator_origin': locator['origin']}, limit=limit)
-        if (len(sources) >= limit or len(sources) >= 3 and
+        if (len(sources) >= limit or len(sources) >= 3 and not review_discovery.storage_question(keyword) and
                 len({review_discovery.source_publisher(row) for row in sources}) >= 2):
             break
     if category == '리뷰':
-        sources = review_discovery.diverse_sources(sources)
+        sources = review_discovery.prioritize_sources(keyword, sources)
     return sources, {'provider': 'codex_web', 'searched': True, 'locators': locators}
 
 
@@ -1029,6 +1034,51 @@ def _selection_pool(stats, titles, category, excluded_keys, deferred, past_failu
     return pool, retries, discovery_rejections
 
 
+SEARCH_REVIEW_RETRY_CODES = frozenset({
+    'model_review_failed', 'invalid_result_review', 'incomplete_result_review',
+    'unverified_result_quote', 'conflicting_duplicate_review',
+})
+SEARCH_REVIEW_ERROR_CODES = SEARCH_REVIEW_RETRY_CODES | {
+    'invalid_search_input', 'site_identity_unavailable',
+}
+MAX_SEARCH_REVIEW_RECOVERIES = 2
+
+
+def _search_review_error_code(exc):
+    code = exc.reason if isinstance(exc, SearchReviewError) else None
+    return code if isinstance(code, str) and code in SEARCH_REVIEW_ERROR_CODES else 'unexpected_review_error'
+
+
+def _search_review_with_recovery(keyword, provider, results, now, query, *, budget, audit):
+    """Retry one technical/format failure on identical evidence, never a verdict.
+
+    Shared run budget bounds added calls. Only fixed error codes are retained;
+    arbitrary exceptions and raw model output may contain private information.
+    """
+    audit.update(keyword=keyword, executed_query=query, attempts=[])
+    previous_code = None
+    for attempt in range(2):
+        def call(prompt):
+            if previous_code:
+                prompt += ('\n이전 응답 검증 오류: ' + previous_code
+                           + '. 같은 검색 결과의 모든 인덱스를 다시 검수하세요. '
+                             '판정을 유리하게 바꾸지 말고 JSON 형식, 누락, 실제 원문 인용을 바로잡으세요.')
+            return ask(prompt)
+        try:
+            result = review_search(keyword, provider, results, now, call, executed_query=query)
+        except (RuntimeError, ValueError, TypeError, KeyError) as exc:
+            code = _search_review_error_code(exc)
+            audit['attempts'].append({'attempt': attempt + 1, 'status': 'error', 'code': code})
+            if (attempt or code not in SEARCH_REVIEW_RETRY_CODES
+                    or budget['attempts'] >= MAX_SEARCH_REVIEW_RECOVERIES):
+                raise
+            budget['attempts'] += 1
+            previous_code = code
+        else:
+            audit['attempts'].append({'attempt': attempt + 1, 'status': 'returned'})
+            return result
+
+
 @source_fetch_scope()
 def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
     if category not in CATEGORIES:
@@ -1075,6 +1125,8 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     proposal_rounds = []
     shortlist_research_attempts = 0
     recovery_budget = {'attempts': 0}
+    search_review_budget = {'attempts': 0}
+    search_review_diagnostics = []
     rounds = 0
     stop_reason = 'round_limit'
     for _ in range(MAX_RESEARCH_ROUNDS):
@@ -1236,8 +1288,12 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             search_review, metrics = None, None
             relevant_results = []
             if results:
+                search_audit = {}
                 try:
-                    search_review = review_search(keyword, provider, results, now, ask, executed_query=query)
+                    search_review = _search_review_with_recovery(
+                        keyword, provider, results, now, query, budget=search_review_budget, audit=search_audit)
+                    if len(search_audit['attempts']) > 1:
+                        search_review_diagnostics.append(search_audit)
                     search_problems = opportunity.quality_issues(keyword, provider, results, now, search_review,
                                                                 executed_query=query)
                     if search_problems:
@@ -1249,8 +1305,12 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                     metrics = opportunity.search_metrics(keyword, provider, results, now, search_review,
                                                          executed_query=query)
                     relevant_results = [results[index] for index in metrics['relevant_indices']]
-                except (RuntimeError, ValueError, TypeError, KeyError):
+                except (RuntimeError, ValueError, TypeError, KeyError) as exc:
+                    search_audit['failure_code'] = _search_review_error_code(exc)
+                    if search_audit not in search_review_diagnostics:
+                        search_review_diagnostics.append(search_audit)
                     rejected.append({'keyword': keyword, 'reason': 'search relevance review unavailable',
+                        'search_review_diagnostics': search_audit,
                         'monthly_search': row['monthly'], 'organic_provider': provider, 'organic_query': query,
                         'organic_results': results})
                     continue
@@ -1368,6 +1428,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
     report = {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
+            'search_review_recovery_attempts': search_review_budget['attempts'],
+            'search_review_diagnostics': search_review_diagnostics,
             'shortlist_research_attempts': shortlist_research_attempts,
             'analyst': 'codex_subscription',
             'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']

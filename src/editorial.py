@@ -33,7 +33,7 @@ OFFICIAL_DOMAINS = {
     "koreanair.com", "flyasiana.com", "qatarairways.com", "singaporeair.com",
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
     "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net", "korea.kr",
-    "kr.roborock.com", "store.kr.dreametech.com",
+    "kr.roborock.com", "store.kr.dreametech.com", "sandisk.com", "kingston.com",
 }
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35
@@ -90,6 +90,11 @@ def _source_body(soup, url=""):
     # Samsung product pages use <article> for unrelated promotion cards while
     # the actual product text lives in these sections. Never pad an empty
     # product section with promotions, reviews or the surrounding storefront.
+    if host_matches(https_host(url), 'semiconductor.samsung.com'):
+        # Observed component-site content wrapper; cookie/contact overlays are
+        # body siblings and must never pad a missing article or occupy its tail.
+        panels = soup.select('.cm-semi-container')
+        return max((node.get_text(' ', strip=True) for node in panels), default='', key=len)
     if host_matches(https_host(url), 'samsung.com'):
         if '/support/model/' in urlsplit(url).path:
             # The raw support template repeats "삼성 노트북 9 Style" even for

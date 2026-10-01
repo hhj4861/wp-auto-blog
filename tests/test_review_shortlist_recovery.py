@@ -62,9 +62,8 @@ def test_explicit_hard_rejections_are_not_researched(monkeypatch, code):
 
 
 @pytest.mark.parametrize('response', [None, [], {}, {'candidates': None}, {'candidates': 'bad'},
-    {'candidates': [None]}, {'candidates': [{'keyword': 'invented'}]},
-    {'candidates': [{'keyword': '노트북램', 'search_query': '노트북램 site:lg.com'}]}])
-def test_malformed_or_invalid_proposals_do_not_trigger_recovery(monkeypatch, response):
+    {'candidates': [None]}, {'candidates': [{'keyword': 'invented'}]}])
+def test_malformed_or_unmeasured_proposals_do_not_trigger_recovery(monkeypatch, response):
     _, search, _ = install_selection(monkeypatch, ['노트북램'], passing=['노트북램'], shortlist=lambda _: response)
     report = market.select_category('리뷰', 1, [])
     search.assert_not_called()
@@ -166,3 +165,15 @@ def test_failed_additional_research_is_cooled_down_on_next_run(monkeypatch):
     second.assert_not_called()
     assert retry['failure_history'] == report['failure_history']
     assert retry['selected'] == [] and retry['shortlist_research_attempts'] == 0
+
+
+def test_invalid_query_of_measured_proposal_uses_original_without_shortlist_fallback(monkeypatch):
+    key = '노트북램'
+    _, search, _ = install_selection(monkeypatch, [key], passing=[key], shortlist=lambda _: {
+        'candidates': [{'keyword': key, 'search_query': key + ' site:lg.com'}]})
+    report = market.select_category('리뷰', 1, [])
+    search.assert_called_once_with(key)
+    assert report['shortlist_research_attempts'] == 0
+    assert report['proposal_rounds'][0]['measured_fallback'] is False
+    assert report['proposal_rounds'][0]['proposals'][0]['query_status'] == 'original_keyword_recovery'
+    assert report['selected'][0]['organic_query'] == key

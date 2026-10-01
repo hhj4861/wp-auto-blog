@@ -1,0 +1,128 @@
+{
+  "run_id": 36868976079,
+  "selected_at": "2026-10-01T13:38:52.966988+00:00",
+  "category": "리뷰",
+  "research_pool_size": 31,
+  "research_stop_reason": "round_limit",
+  "candidate_decisions": [
+    {
+      "keyword": "DDR416G",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 13110,
+      "organic_query": null
+    },
+    {
+      "keyword": "DDR48G",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 8800,
+      "organic_query": null
+    },
+    {
+      "keyword": "DDR432G",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 3050,
+      "organic_query": null
+    },
+    {
+      "keyword": "DDR38GB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 500,
+      "organic_query": null
+    },
+    {
+      "keyword": "청소기필터",
+      "status": "rejected",
+      "reason": "search relevance review unavailable",
+      "monthly_search": 800,
+      "organic_query": "청소기 필터"
+    },
+    {
+      "keyword": "SSD1TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 26800,
+      "organic_query": null
+    },
+    {
+      "keyword": "1테라외장하드",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 7950,
+      "organic_query": "1테라 외장하드"
+    },
+    {
+      "keyword": "외장하드2TB",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 5560,
+      "organic_query": "외장하드 2TB"
+    },
+    {
+      "keyword": "외장SSD1TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 1960,
+      "organic_query": null
+    },
+    {
+      "keyword": "17인치노트북",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 1920,
+      "organic_query": "17인치 노트북"
+    },
+    {
+      "keyword": "외장SSD4TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 630,
+      "organic_query": null
+    },
+    {
+      "keyword": "SSD2TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 10350,
+      "organic_query": null
+    },
+    {
+      "keyword": "HDD1TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 2980,
+      "organic_query": null
+    },
+    {
+      "keyword": "삼성SSD1TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 2950,
+      "organic_query": null
+    },
+    {
+      "keyword": "SSD500GB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 1520,
+      "organic_query": null
+    },
+    {
+      "keyword": "외장SSD2TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 1360,
+      "organic_query": null
+    },
+    {
+      "keyword": "삼성SSD2TB",
+      "status": "rejected",
+      "reason": "invalid search query transformation",
+      "monthly_search": 1130,
+      "organic_query": null
+    }
+  ]
+}

@@ -2693,21 +2693,21 @@ def test_spaced_search_query_preserves_measured_keyword_and_binds_cached_evidenc
 
 
 @pytest.mark.parametrize('query', ['시험 준비물 2026', '면접 준비물', '시험 준비물 site:go.kr'])
-def test_query_rewrite_is_rejected_before_search_or_source_calls(monkeypatch, query):
+def test_invalid_query_rewrite_executes_only_measured_original(monkeypatch, query):
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {
         '시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
-    search = Mock(side_effect=AssertionError('Invalid query reached search'))
-    source = Mock(side_effect=AssertionError('Invalid query reached source fetch'))
+    search = Mock(return_value=(None, []))
+    source = Mock(side_effect=AssertionError('No search evidence available for source fetch'))
+    monkeypatch.setattr(market, 'research_official_sources', lambda *_: ([], None))
     monkeypatch.setattr(market, 'search_results', search)
     monkeypatch.setattr(market, 'candidate_sources', source)
     monkeypatch.setattr(market, 'ask', Mock(return_value={
         'candidates': [{'keyword': '시험준비물', 'search_query': query}]}))
     report = market.select_category('취업', 1, titles=[])
     assert not report['selected']
-    assert report['rejected'][0]['reason'] == 'invalid search query transformation'
-    assert report['proposal_rounds'][0]['proposals'][0]['query_status'] == 'invalid_search_query'
-    assert report['candidate_decisions'][0]['organic_query'] is None
-    search.assert_not_called()
+    assert report['proposal_rounds'][0]['proposals'][0]['query_status'] == 'original_keyword_recovery'
+    assert report['candidate_decisions'][0]['organic_query'] == '시험준비물'
+    search.assert_called_once_with('시험준비물')
     source.assert_not_called()
 
 

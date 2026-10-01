@@ -224,6 +224,13 @@
       "claimed_at": "2026-10-01T13:14:27.535501+09:00",
       "status": "failure",
       "completed_at": "2026-10-01T04:15:51.826356+00:00"
+    },
+    "2026-10-01:evening": {
+      "run_id": "36868051994",
+      "category": "취업",
+      "slot": "evening",
+      "claimed_at": "2026-10-01T22:21:19.342450+09:00",
+      "status": "started"
     }
   }
 }

@@ -1,6 +1,6 @@
 # 검색·심사·발행 안정성 개선 — 2026-10-01
 
-상태: PR #71은 운영 main에 반영됐으나, 이후 실제 발행 실행은 선정 단계에서 실패했다. 신규 글은 발행되지 않았다. 아래 후속 수정은 별도 PR이며 운영 반영 전이다.
+상태: PR #71은 운영 main에 반영됐으나, 이후 실제 발행 실행은 선정 단계에서 실패했다. 신규 글은 발행되지 않았다. 후속 PR #72도 운영 main에 반영했다. 유튜브 단독 점검에서 API 키 무효 오류를 확인했으며 전체 자동포스팅 복구는 미확인이다.
 
 ## 확인한 원인과 확인할 수 없는 부분
 
@@ -80,4 +80,19 @@ API 계약: [YouTube search.list](https://developers.google.com/youtube/v3/docs/
 
 이번 운영의 실제 후보·탈락·호출 진단은 `tests/fixtures/review_filter_cluster_20261001.json`에 저장했다. 회귀 검증에서 후속 후보의 승인 응답은 테스트 대체값이며 실제 수요나 운영 발행 성공으로 주장하지 않는다.
 
-후속 검증: 관련 15개 테스트 모듈 **1,158 passed**, 종료 코드 0. Python 구문, 새 워크플로의 main 제한·읽기 권한·단일 Secret 사용, 실제 실패 fixture, Ruff 및 diff 공백 검사를 통과했다. 테스트 로그는 사용자 지정 iCloud 작업 루트의 `wp-auto-blog/review-family-budget-20261001/verified.log`다. 기존 전체 테스트의 알려진 실패 8건은 이 후속 변경의 검증과 별개이며 전체 저장소 테스트 통과를 뜻하지 않는다. 후속 PR 머지와 운영 YouTube 단독 점검은 아직 수행하지 않았다.
+후속 검증: 관련 15개 테스트 모듈 **1,158 passed**, 종료 코드 0. Python 구문, 새 워크플로의 main 제한·읽기 권한·단일 Secret 사용, 실제 실패 fixture, Ruff 및 diff 공백 검사를 통과했다. 테스트 로그는 사용자 지정 iCloud 작업 루트의 `wp-auto-blog/review-family-budget-20261001/verified.log`다. 기존 전체 테스트의 알려진 실패 8건은 이 후속 변경의 검증과 별개이며 전체 저장소 테스트 통과를 뜻하지 않는다. 이 검증 이후 PR #72 머지와 운영 YouTube 단독 점검을 수행했으며 결과는 아래에 기록했다.
+
+
+## PR #72 반영 후 YouTube 단독 점검 — 2026-10-01 18:26 KST
+
+사용자 승인 후 PR #72를 18:25 KST에 main으로 머지했다. 운영 커밋은 `7162238a81e9d97815d53d665ebefaad71adebfb`이며 현재 프로젝트 checkout에도 fast-forward로 반영했다.
+
+`YouTube Discovery Check` 실행 `36842662369`는 같은 운영 커밋에서 종료됐다. 의존성 설치와 점검 스크립트 실행은 성공했고 실제 Google API의 search 요청이 다음 결과를 반환해 점검이 종료 코드 1로 끝났다.
+
+```json
+{"status":"api_unavailable","error":{"endpoint":"search","code":"api_key_invalid","http_status":400},"verified_video_count":0}
+```
+
+이는 유튜브 수집 실패의 확인된 원인이다. 키 삭제·만료·잘못된 값 중 구체적인 관리 원인은 이 응답만으로 구분할 수 없다. GitHub에 YOUTUBE_API_KEY Secret은 등록돼 있으며 최종 갱신 시각은 2026-01-22T08:45:04Z다. Secret 값은 조회하거나 출력하지 않았다. 조회 가능한 로컬 프로젝트 `.env`나 프로세스 환경에도 대체 YouTube 키가 없었다.
+
+남은 조치는 저장소의 YOUTUBE_API_KEY Secret에 유효한 키를 저장한 뒤 같은 단독 점검을 다시 실행하는 것이다. 키를 새로 발급·교체하거나 인증 설정을 추측으로 바꾸지 않았다. 이번 단독 점검은 모델·주제 보고서·WordPress를 실행하지 않았으며 신규 발행은 없다. 키 문제 해결만으로 전체 발행 복구가 확인되는 것은 아니며, 이후 실제 선정·독립 심사·작성·최종 심사·공개 URL 검증이 남아 있다.

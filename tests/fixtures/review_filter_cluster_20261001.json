@@ -1,0 +1,356 @@
+{
+  "selected_at": "2026-10-01T09:07:54.010192+00:00",
+  "measured_candidates": 341,
+  "research_pool_size": 10,
+  "proposal_rounds": [
+    {
+      "round": 1,
+      "offered_keywords": [
+        "엘지공기청정기필터",
+        "LG퓨리케어필터",
+        "LG퓨리케어공기청정기필터",
+        "엘지퓨리케어필터",
+        "LG퓨리케어360필터",
+        "퓨리케어필터",
+        "퓨리케어공기청정기필터",
+        "LG공기청정기필터교체",
+        "삼성큐브공기청정기필터",
+        "노트북SSD추가"
+      ],
+      "proposals": [],
+      "measured_fallback": true,
+      "no_eligible_proposal": true,
+      "skipped": [
+        {
+          "keyword": "엘지공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "엘지퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어360필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "퓨리케어공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG공기청정기필터교체",
+          "reason_code": "maintenance_intent",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "삼성큐브공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "노트북SSD추가",
+          "reason_code": "category_mismatch",
+          "kind": "model_shortlist_opinion"
+        }
+      ],
+      "research_fallback": [
+        {
+          "keyword": "엘지공기청정기필터",
+          "search_query": "엘지 공기청정기 필터",
+          "reason": "bounded_research_of_shortlist_uncertainty",
+          "shortlist_reason_code": "insufficient_specificity"
+        },
+        {
+          "keyword": "LG퓨리케어필터",
+          "search_query": "LG 퓨리케어 필터",
+          "reason": "bounded_research_of_shortlist_uncertainty",
+          "shortlist_reason_code": "insufficient_specificity"
+        }
+      ],
+      "research_fallback_attempted": [
+        "엘지공기청정기필터",
+        "LG퓨리케어필터"
+      ]
+    },
+    {
+      "round": 2,
+      "offered_keywords": [
+        "LG퓨리케어공기청정기필터",
+        "엘지퓨리케어필터",
+        "LG퓨리케어360필터",
+        "퓨리케어필터",
+        "퓨리케어공기청정기필터",
+        "삼성큐브공기청정기필터"
+      ],
+      "proposals": [],
+      "measured_fallback": true,
+      "no_eligible_proposal": true,
+      "skipped": [
+        {
+          "keyword": "LG퓨리케어공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "엘지퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어360필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "퓨리케어공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "삼성큐브공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        }
+      ],
+      "research_fallback": [
+        {
+          "keyword": "LG퓨리케어공기청정기필터",
+          "search_query": "LG 퓨리케어 공기청정기 필터",
+          "reason": "bounded_research_of_shortlist_uncertainty",
+          "shortlist_reason_code": "insufficient_specificity"
+        }
+      ],
+      "research_fallback_attempted": [
+        "LG퓨리케어공기청정기필터"
+      ]
+    }
+  ],
+  "discovery_replenishment": [
+    {
+      "seed": "스마트폰배터리",
+      "available_before": 0,
+      "added_count": 0,
+      "status": "no_measured_demand",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 0,
+      "available_after": 0
+    },
+    {
+      "seed": "모니터해상도",
+      "available_before": 0,
+      "added_count": 1,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 1,
+      "available_after": 0
+    },
+    {
+      "seed": "무선청소기소음",
+      "available_before": 0,
+      "added_count": 0,
+      "status": "no_measured_demand",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 0,
+      "available_after": 0
+    },
+    {
+      "seed": "노트북배터리",
+      "available_before": 0,
+      "added_count": 12,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 12,
+      "available_after": 0
+    },
+    {
+      "seed": "제습기평수",
+      "available_before": 0,
+      "added_count": 0,
+      "status": "no_measured_demand",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 0,
+      "available_after": 0
+    },
+    {
+      "seed": "로봇청소기먼지비움",
+      "available_before": 0,
+      "added_count": 0,
+      "status": "no_measured_demand",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 0,
+      "available_after": 0
+    },
+    {
+      "seed": "모니터주사율",
+      "available_before": 0,
+      "added_count": 1,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 1,
+      "available_after": 0
+    },
+    {
+      "seed": "제습기소비전력",
+      "available_before": 0,
+      "added_count": 0,
+      "status": "no_measured_demand",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 0,
+      "available_after": 0
+    },
+    {
+      "seed": "가벼운무선청소기",
+      "available_before": 0,
+      "added_count": 92,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 128,
+      "available_after": 0
+    },
+    {
+      "seed": "노트북SSD",
+      "available_before": 0,
+      "added_count": 63,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 65,
+      "available_after": 1
+    },
+    {
+      "seed": "로봇청소기직배수설치",
+      "available_before": 1,
+      "added_count": 3,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 12,
+      "available_after": 1
+    },
+    {
+      "seed": "공기청정기필터",
+      "available_before": 1,
+      "added_count": 75,
+      "status": "measured",
+      "trigger": "available_pool_exhausted",
+      "measured_count": 76,
+      "available_after": 10
+    }
+  ],
+  "analysis_diagnostics": [
+    {
+      "stage": "shortlist",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 16662
+    },
+    {
+      "stage": "native_search",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 11278
+    },
+    {
+      "stage": "search_review",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 13798
+    },
+    {
+      "stage": "native_search",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 6151
+    },
+    {
+      "stage": "search_review",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 15600
+    },
+    {
+      "stage": "shortlist",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 10868
+    },
+    {
+      "stage": "native_search",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 6722
+    },
+    {
+      "stage": "search_review",
+      "attempt": 1,
+      "status": "returned",
+      "elapsed_ms": 17213
+    }
+  ],
+  "youtube_discovery": {
+    "provider": "youtube_data_api_v3",
+    "status": "api_unavailable",
+    "checked_at": "2026-10-01T09:07:54.010192+00:00",
+    "lookback_days": 90,
+    "ranking": "viewCount_within_recent_search_sample",
+    "videos": [],
+    "seeds": [],
+    "note": "Video views are not search demand or measured trend growth."
+  },
+  "run_id": "36840624859",
+  "rejected": [
+    {
+      "keyword": "엘지공기청정기필터",
+      "monthly_search": 4210,
+      "reason": "search quality insufficient",
+      "hold_reasons": [
+        "low_search_relevance",
+        "concentrated_search_results"
+      ]
+    },
+    {
+      "keyword": "LG퓨리케어필터",
+      "monthly_search": 2550,
+      "reason": "search quality insufficient",
+      "hold_reasons": [
+        "insufficient_relevant_results",
+        "insufficient_relevant_sites",
+        "low_search_relevance",
+        "concentrated_search_results"
+      ]
+    },
+    {
+      "keyword": "LG퓨리케어공기청정기필터",
+      "monthly_search": 1480,
+      "reason": "search quality insufficient",
+      "hold_reasons": [
+        "insufficient_relevant_results",
+        "insufficient_relevant_sites",
+        "low_search_relevance",
+        "concentrated_search_results"
+      ]
+    }
+  ]
+}

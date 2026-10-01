@@ -104,3 +104,61 @@ def test_seed_model_failure_is_redacted_and_optional(api):
     seeds, audit = youtube.discover('리뷰', NOW, Mock(side_effect=RuntimeError('private-secret')))
     assert seeds == [] and audit['status'] == 'seed_analysis_unavailable'
     assert 'private-secret' not in json.dumps(audit)
+
+
+@pytest.mark.parametrize('reason,code', list(youtube.API_ERROR_CODES.items()))
+def test_api_failure_reports_only_typed_safe_code(monkeypatch, api, reason, code):
+    http = api()
+    response = Mock(status_code=403, json=lambda: {'error': {'message': 'secret-only-in-request',
+        'errors': [{'reason': reason}], 'details': [{'metadata': {'key': 'private-key'}}]}})
+    response.raise_for_status.side_effect = requests.HTTPError('URL?key=secret-only-in-request')
+    http.side_effect = None
+    http.return_value = response
+    model = Mock()
+    _, audit = youtube.discover('리뷰', NOW, model)
+    assert audit['error'] == {'endpoint': 'search', 'code': code, 'http_status': 403}
+    assert 'secret-only' not in json.dumps(audit) and 'private-key' not in json.dumps(audit)
+    assert http.call_count == 1
+    model.assert_not_called()
+
+
+@pytest.mark.parametrize('body', [None, {'error': None}, {'error': {'errors': None}},
+    {'error': {'errors': [{'reason': 'keyInvalid secret-token'}], 'message': 'keyInvalid'}},
+    {'error': {'details': [{'reason': ['API_KEY_INVALID']}]}}])
+def test_untrusted_reason_or_message_cannot_become_diagnostic(body):
+    result = youtube.api_failure(Mock(status_code=403, json=lambda: body), requests.HTTPError(), 'search')
+    assert result == {'endpoint': 'search', 'code': 'http_error', 'http_status': 403}
+
+
+def test_statistics_timeout_does_not_reuse_success_status(api):
+    http = api()
+    search_response = Mock(status_code=200, json=lambda: {'items': [{'id': {'videoId': ID}}]})
+    http.side_effect = [search_response, search_response, requests.Timeout('private-key')]
+    _, audit = youtube.discover('리뷰', NOW, Mock())
+    assert audit['error'] == {'endpoint': 'videos', 'code': 'timeout', 'http_status': None}
+    assert http.call_count == 3 and 'private-key' not in json.dumps(audit)
+
+
+def test_readonly_probe_never_calls_model_and_emits_no_video_content(api, capsys, monkeypatch):
+    from scripts import check_youtube_discovery as probe
+    monkeypatch.setattr(probe, 'datetime', Mock(now=Mock(return_value=NOW)))
+    api()
+    assert probe.main() == 0
+    output = json.loads(capsys.readouterr().out)
+    assert output['verified_video_count'] == 1
+    assert output['status'] == 'no_grounded_seeds'
+    assert '노트북' not in str(output) and 'secret-only' not in str(output)
+
+
+def test_readonly_probe_reports_missing_configuration(monkeypatch, capsys):
+    from scripts.check_youtube_discovery import main
+    monkeypatch.delenv('YOUTUBE_API_KEY', raising=False)
+    assert main() == 1
+    assert json.loads(capsys.readouterr().out)['status'] == 'not_configured'
+
+
+def test_typed_service_error_takes_precedence_over_generic_forbidden():
+    response = Mock(status_code=403, json=lambda: {'error': {
+        'errors': [{'reason': 'forbidden'}],
+        'details': [{'reason': 'API_KEY_SERVICE_BLOCKED'}]}})
+    assert youtube.api_failure(response, requests.HTTPError(), 'search')['code'] == 'api_key_service_blocked'

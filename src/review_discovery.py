@@ -7,6 +7,8 @@ import re
 import unicodedata
 from urllib.parse import urlsplit
 
+from src.search_query import validated_search_query
+
 SEEDS = ('무선청소기흡입력', '공기청정기평수', '노트북램', '로봇청소기문턱')
 # Query hints only: every returned candidate needs its own measured demand.
 # Rotating the starting point prevents a scarce category always sampling one family.
@@ -54,6 +56,34 @@ NON_PURCHASE_URL = re.compile(
     r'|/license/|selectcrtfcinfo|/freeboard|/product/list\.do', re.I)
 
 
+# Shared by discovery, planning and independent coverage review. These are
+# distinctions to verify in real evidence, never an unconditional approval.
+BUYING_INTENT_GUIDANCE = """리뷰의 정보 목적에는 구매 전 비교·선택 판단도 포함됩니다.
+단순 판매처 이동·주문·최저가 링크만 원하는 거래 목적과, 사양·조건을 비교해 고르려는 목적을 구분하세요.
+상품 페이지가 검색 결과에 있다는 이유만으로 정보 목적을 부정하지 마세요. 제목·요약에
+해당 선택 항목(무게·메모리·사용면적 등)이 실제 나타나는지 확인하고 근거 없는 의도는 만들지 마세요.
+'가벼운무선청소기'의 핵심은 구성별 무게·사용 조건을 비교해 선택하는 것이며,
+모든 판매 모델의 순위·최저가·직접 사용 후기를 자동으로 요구하지 않습니다.
+'노트북램'은 검색 근거에 따라 구매 용량 선택이면 리뷰, 증설 작업 방법이면 테크입니다.
+제품군+판단 항목 후보는 이름만으로 카테고리 불일치를 확정하지 말고 실제 검색으로 구분하세요.
+대표 제품을 비교 예시로 쓰려면 서로 다른 제품의 실제 사양과 비교 조건을 공식 본문으로 입증하고,
+선택 기준이라는 핵심 질문 전체에 답해야 합니다. 한 제품 소개만으로 전체 선택 질문을 대신하지 마세요.
+실측 검색어·검색량·인용 조건은 유지하세요. 근거 없는 추천·우열·체험 주장은 허용하지 않습니다."""
+
+
+def research_query(keyword):
+    """Space known Korean buying terms, retaining exact measured characters."""
+    terms = {'무선청소기', '로봇청소기', '가벼운', '경량'}
+    for aliases in (*PRODUCTS.values(), *FACETS.values()):
+        terms.update(word for word in aliases if re.fullmatch(r'[가-힣]+', word))
+    pattern = '|'.join(re.escape(word) for word in sorted(terms, key=lambda word: (-len(word), word)))
+    proposed = re.sub(pattern, lambda match: ' ' + match[0] + ' ', keyword)
+    try:
+        return validated_search_query(keyword, proposed)
+    except ValueError:
+        return validated_search_query(keyword)
+
+
 def expansion_seeds(clock):
     offset = clock.date().toordinal() % len(EXPANSION_SEEDS)
     return EXPANSION_SEEDS[offset:] + EXPANSION_SEEDS[:offset]
@@ -93,7 +123,7 @@ def shortlist_research_candidates(skipped, limit):
             row['reason_code'] != 'not_reported'))
         eligible.remove(row)
         families.add(tuple(map(tuple, requirements(row['keyword']))))
-        chosen.append({'keyword': row['keyword'], 'search_query': row['keyword'],
+        chosen.append({'keyword': row['keyword'], 'search_query': research_query(row['keyword']),
                        'reason': 'bounded_research_of_shortlist_uncertainty',
                        'shortlist_reason_code': row['reason_code']})
     return chosen

@@ -26,7 +26,7 @@ def test_october_first_failure_reaches_real_gates_and_only_eligible_item_is_queu
         [rounds[1]['offered_keywords']], passing=[good] if passing else [],
         shortlist=lambda _: next(responses))
     report = market.select_category('리뷰', 1, [])
-    searched = [call.args[0] for call in search.call_args_list]
+    searched = [market.norm(call.args[0]) for call in search.call_args_list]
     assert set(searched[:2]) == {'노트북램', good}
     assert report['proposal_rounds'][0]['proposals'] == []
     assert sorted(report['proposal_rounds'][0]['skipped'], key=lambda row: row['keyword']) == sorted(
@@ -38,7 +38,7 @@ def test_october_first_failure_reaches_real_gates_and_only_eligible_item_is_queu
         assert len(offered) == 1
         item = report['selected'][0]
         assert item['keyword'] == good and item['monthly_search'] == stats[good]['monthly']
-        assert item['organic_query'] == good
+        assert item['organic_query'] == review.research_query(good)
         assert market.fresh_market_item(item, '리뷰')
         assert market.enqueue_report([], report)[0]['keyword'] == good
     else:
@@ -74,7 +74,7 @@ def test_recovery_is_diverse_bounded_and_keeps_exact_queries():
     skipped = [{'keyword': key, 'reason_code': 'insufficient_specificity'} for key in keys]
     picked = review.shortlist_research_candidates(skipped, 2)
     assert [row['keyword'] for row in picked] == [keys[0], keys[2]]
-    assert all(row['search_query'] == row['keyword'] for row in picked)
+    assert all(row['search_query'].replace(' ', '') == row['keyword'] for row in picked)
     assert review.shortlist_research_candidates(skipped, 0) == []
     assert review.shortlist_research_candidates([
         {'keyword': '청소기', 'reason_code': 'not_reported'},
@@ -93,7 +93,7 @@ def test_recovery_retains_demand_cooldown_exclusion_duplicate_and_retry_limits(m
     history = feedback.load_history(failed_report([keys[1]], at=datetime.now(timezone.utc)),
                                     '리뷰', datetime.now(timezone.utc))
     report = market.select_category('리뷰', 1, [keys[2]], excluded_keywords=[keys[3]], failure_history=history)
-    search.assert_called_once_with(keys[4])
+    search.assert_called_once_with(review.research_query(keys[4]))
     assert report['failure_history'] == history and report['retry_keywords'] == []
 
 
@@ -146,7 +146,7 @@ def test_recovery_does_not_bypass_publication_evidence_gates(monkeypatch, gate):
     else:
         monkeypatch.setattr(market, 'review_plan', lambda *_, **kw: {})
     report = market.select_category('리뷰', 1, [])
-    search.assert_called_once_with(key)
+    search.assert_called_once_with(review.research_query(key))
     assert report['selected'] == [] and report['shortlist_research_attempts'] == 1
     assert report['rejected'] or report['held']
     with pytest.raises(RuntimeError):
@@ -157,7 +157,7 @@ def test_failed_additional_research_is_cooled_down_on_next_run(monkeypatch):
     key = '노트북램'
     _, first, _ = install_selection(monkeypatch, [key], shortlist=empty_shortlist)
     report = market.select_category('리뷰', 1, [])
-    first.assert_called_once_with(key)
+    first.assert_called_once_with(review.research_query(key))
     assert report['failure_history'][0]['keyword'] == key
     _, second, _ = install_selection(monkeypatch, [key], passing=[key], shortlist=empty_shortlist)
     retry = market.select_category('리뷰', 1, [], failure_history=report['failure_history'])

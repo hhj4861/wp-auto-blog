@@ -52,7 +52,7 @@ def test_recorded_96_candidate_failure_can_refill_without_clearing_31_failures(m
     assert report['proposal_rounds'][0]['skipped'][0]['reason_code'] == 'purchase_intent_unclear'
     assert report['discovery_replenishment'][0]['available_after'] == 1
     assert good not in offered[0] and good in offered[1]
-    searched = [call.args[0] for call in search.call_args_list]
+    searched = [market.norm(call.args[0]) for call in search.call_args_list]
     assert len(searched) == 3 and searched[-1] == good and '청소기필터' in searched
     assert not set(searched) & set(historical)
     assert demand.call_count == 2
@@ -94,7 +94,7 @@ def test_expansion_exhaustion_stops_without_forcing_or_inventing_demand(monkeypa
     assert len(report['discovery_replenishment']) == 3
     assert offered == [[key]]
     assert report['proposal_rounds'][0]['skipped'][0]['reason_code'] == 'not_reported'
-    search.assert_called_once_with(key)
+    search.assert_called_once_with(review.research_query(key))
     with pytest.raises(RuntimeError):
         market.enqueue_report([], report)
 

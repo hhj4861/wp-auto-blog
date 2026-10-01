@@ -6,6 +6,10 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
+      demand_check_only:
+        description: '네이버 리뷰 후보 실측만 점검 (Codex·보고서·발행 없음)'
+        type: boolean
+        default: false
       search_check_only:
         description: 'Google·DuckDuckGo 접근만 점검 (운영 Codex 검색은 별도 진단)'
         type: boolean
@@ -47,8 +51,26 @@ concurrency:
   queue: max
 
 jobs:
+  demand-check:
+    if: inputs.demand_check_only == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4 'tldextract>=5.1,<6'
+      - name: Measure review discovery without model or publication
+        env:
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+        run: python scripts/check_review_demand.py
   search-check:
-    if: inputs.search_check_only == true
+    if: inputs.demand_check_only != true && inputs.search_check_only == true
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -65,7 +87,7 @@ jobs:
           GOOGLE_SEARCH_ENGINE_ID: ${{ secrets.GOOGLE_CSE_ID }}
         run: python scripts/check_market_search.py
   candidate-check:
-    if: inputs.search_check_only != true && inputs.candidate_check_only == true && inputs.auth_check_only != true && inputs.research_check_only != true
+    if: inputs.demand_check_only != true && inputs.search_check_only != true && inputs.candidate_check_only == true && inputs.auth_check_only != true && inputs.research_check_only != true
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -97,7 +119,7 @@ jobs:
               raise SystemExit(1)
           PY
   select:
-    if: inputs.search_check_only != true && (inputs.candidate_check_only != true || inputs.auth_check_only == true || inputs.research_check_only == true)
+    if: inputs.demand_check_only != true && inputs.search_check_only != true && (inputs.candidate_check_only != true || inputs.auth_check_only == true || inputs.research_check_only == true)
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:

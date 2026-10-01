@@ -30,8 +30,13 @@ PRODUCTS = {
     '모니터': ('모니터', 'monitor', 'display'),
     '스마트폰': ('스마트폰', 'smartphone', '아이폰', 'iphone', '갤럭시', 'galaxy'),
     '제습기': ('제습기', 'dehumidifier'),
+    '저장장치': ('ssd', 'hdd', '외장하드', 'harddrive', 'solidstatedrive'),
+    '램': ('메모리', '램', 'ddr', 'memory', 'ram'),
 }
 FACETS = {
+    '용량': ('용량', 'capacity', 'tb', 'gb', '테라', '기가'),
+    '화면크기': ('인치', '형', 'inch', '화면크기', 'screensize'),
+    '규격': ('ddr3', 'ddr4', 'ddr5', 'nvme', 'sata'),
     '흡입력': ('흡입력', 'suction', 'airwatt'),
     '사용면적': ('사용면적', '적용면적', '평수', '권장면적', 'coverage', 'roomsize', 'cadr'),
     '문턱': ('문턱', '단차', '등반', 'threshold', 'obstacle', 'climbing'),
@@ -139,15 +144,48 @@ def compact(value):
     return re.sub(r'[^가-힣a-z0-9]', '', unicodedata.normalize('NFKC', value if isinstance(value, str) else '').lower())
 
 
+def numeric_constraints(text):
+    text = unicodedata.normalize('NFKC', text if isinstance(text, str) else '').lower()
+    text = re.sub(r'(ddr[345])(?=\d)', r'\1 ', text)
+    # Compact Korean memory queries use DDR416G for DDR4 16 GB.
+    text = re.sub(r'(ddr[345]\s+\d+)g(?![a-z])', r'\1gb', text)
+    def numbers(pattern):
+        return {(str(float(n)).removesuffix('.0'), unit) for n, unit in re.findall(pattern, text)}
+    capacity = numbers(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(tb|gb|테라(?:바이트)?|기가(?:바이트)?)(?![a-z])')
+    capacity = {(n, 'tb' if unit.startswith('테라') else 'gb' if unit.startswith('기가') else unit)
+                for n, unit in capacity}
+    screen = numbers(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(인치|inch(?:es)?|형)(?![a-z])')
+    return {'capacity': capacity, 'screen': {(n, 'inch') for n, _ in screen},
+            'standard': set(re.findall(r'ddr[345]|nvme|sata', text))}
+
+
 def requirements(keyword):
     key = compact(keyword)
     products = [name for name, aliases in PRODUCTS.items()
-                if any(x in (key.replace('갤럭시북', '').replace('galaxybook', '')
+                if name not in {'저장장치', '램'} and any(x in (key.replace('갤럭시북', '').replace('galaxybook', '')
                              if name == '스마트폰' else key) for x in aliases)]
+    # Components are products in their own right; a laptop query remains a
+    # laptop question and must still have laptop compatibility evidence.
+    if not products:
+        products = [name for name in ('저장장치', '램')
+                    if any(x in key for x in PRODUCTS[name])]
     # "그램" is a product family, not evidence of a RAM question.
     facet_key = key.replace('그램', '')
     facets = [name for name, aliases in FACETS.items()
               if any(x in facet_key for x in (*aliases, *QUERY_FACET_ALIASES.get(name, ())))]
+    if products == ['저장장치']:
+        facets = [facet for facet in facets if facet != '저장장치']
+    if products == ['램']:
+        facets = [facet for facet in facets if facet != '메모리']
+    # Numeric size/capacity must be explicit, not a stray substring in a model.
+    constraints = numeric_constraints(keyword)
+    facets = [facet for facet in facets if facet not in {'용량', '화면크기'}]
+    if constraints['capacity']:
+        facets.append('용량')
+    if constraints['screen'] and any(x in products for x in ('노트북', '모니터', '스마트폰')):
+        facets.append('화면크기')
+    if products == ['저장장치'] and not any(x in facet_key for x in ('메모리', '램', 'memory', 'ram')):
+        facets = [facet for facet in facets if facet != '메모리']
     return products, facets
 
 
@@ -183,7 +221,8 @@ def named_brand_domains(keyword):
 
 
 def storage_question(keyword):
-    return '저장장치' in requirements(keyword)[1]
+    products, facets = requirements(keyword)
+    return '저장장치' in products or '저장장치' in facets
 
 
 def preferred_source_domains(keyword):
@@ -191,6 +230,9 @@ def preferred_source_domains(keyword):
     if storage_question(keyword):
         domains = ('sandisk.com', 'semiconductor.samsung.com', 'kingston.com')
         return [domain for domain in domains
+                if not brands or any(domain == brand or domain.endswith('.' + brand) for brand in brands)]
+    if '램' in requirements(keyword)[0]:
+        return [domain for domain in ('semiconductor.samsung.com', 'kingston.com')
                 if not brands or any(domain == brand or domain.endswith('.' + brand) for brand in brands)]
     if brands:
         return [domain for _, domains in BRAND_DOMAINS for domain in domains if domain in brands]
@@ -232,6 +274,12 @@ def relevant_source(keyword, source):
         return False
     if re.search(r'/all-[^/]+/?$', path):
         return False
+    requested = numeric_constraints(keyword)
+    observed = numeric_constraints(source.get('excerpt', ''))
+    if any(values and not values & observed[kind] for kind, values in requested.items()):
+        return False
+    # A comparison page can support one requested size; the independent review
+    # must verify all alternatives across the final set of fetched documents.
     # All named facets must have body evidence; a navigation title is insufficient.
     return (all(any(alias in title + body for alias in PRODUCTS[name]) for name in products)
             and all(any(alias in (body.replace('그램', '').replace('program', '').replace('gram', '')

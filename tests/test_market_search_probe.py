@@ -307,7 +307,7 @@ def test_search_probe_workflow_is_exclusive_and_has_no_publication_or_codex_cred
     workflow = yaml.safe_load(Path('.github/workflows/blog-keyword-select.yml').read_text())
     jobs = workflow['jobs']
     probe_job = jobs['search-check']
-    assert probe_job['if'] == 'inputs.search_check_only == true'
+    assert probe_job['if'] == 'inputs.demand_check_only != true && inputs.search_check_only == true'
     assert probe_job['permissions'] == {'contents': 'read'}
     for name in ('select', 'candidate-check'):
         assert 'inputs.search_check_only != true' in jobs[name]['if']

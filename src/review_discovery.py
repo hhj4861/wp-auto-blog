@@ -159,6 +159,51 @@ def discovery_issue(keyword):
     return None
 
 
+# Known brand constraints are input pruning, not proof that a document answers
+# the question. Neutral institutional comparisons remain eligible for review.
+BRAND_DOMAINS = (
+    (('삼성', 'samsung', '갤럭시'), ('samsung.com',)),
+    (('엘지', 'lg', '퓨리케어'), ('lge.co.kr', 'lg.com')),
+    (('샌디스크', 'sandisk'), ('sandisk.com',)),
+    (('킹스톤', 'kingston'), ('kingston.com',)),
+    (('애플', 'apple', '맥북'), ('apple.com',)),
+)
+
+
+def named_brand_domains(keyword):
+    key = compact(keyword)
+    return {domain for aliases, domains in BRAND_DOMAINS
+            if any(alias in key for alias in aliases) for domain in domains}
+
+
+def storage_question(keyword):
+    return '저장장치' in requirements(keyword)[1]
+
+
+def preferred_source_domains(keyword):
+    brands = named_brand_domains(keyword)
+    if storage_question(keyword):
+        domains = ('sandisk.com', 'semiconductor.samsung.com', 'kingston.com')
+        return [domain for domain in domains
+                if not brands or any(domain == brand or domain.endswith('.' + brand) for brand in brands)]
+    if brands:
+        return [domain for _, domains in BRAND_DOMAINS for domain in domains if domain in brands]
+    return []
+
+
+def prioritize_sources(keyword, sources, limit=3):
+    # SSD choice requires drive/compatibility documents first. Laptop specs can
+    # supplement these, but must not evict them just because fetched earlier.
+    if storage_question(keyword):
+        primary = [source for source in sources if any(
+            term in compact(source.get('title', '')) for term in ('ssd', 'hdd', '저장장치'))
+            and not re.search(r'/(?:notebook|galaxybook|macbook)/|/support/model/',
+                              urlsplit(source['url']).path, re.I)]
+        rest = [source for source in sources if source not in primary]
+        return (diverse_sources(primary, limit) + diverse_sources(rest, limit))[:limit]
+    return diverse_sources(sources, limit)
+
+
 def relevant_source(keyword, source):
     if not isinstance(source, dict) or discovery_issue(keyword):
         return False
@@ -166,8 +211,16 @@ def relevant_source(keyword, source):
     body = compact(source.get('excerpt', ''))
     title = compact(source.get('title', ''))
     try:
-        path = urlsplit(source.get('url') or '').path
+        parts = urlsplit(source.get('url') or '')
+        path = parts.path
+        host = (parts.hostname or '').lower()
     except (ValueError, TypeError, AttributeError):
+        return False
+    brands = named_brand_domains(keyword)
+    known = {domain for _, domains in BRAND_DOMAINS for domain in domains}
+    def belongs(domains):
+        return any(host == domain or host.endswith('.' + domain) for domain in domains)
+    if brands and belongs(known) and not belongs(brands):
         return False
     if NON_PURCHASE_URL.search(path):
         return False
@@ -182,7 +235,12 @@ def relevant_source(keyword, source):
 
 def source_hint(keyword):
     products, facets = requirements(keyword)
-    return ('구매 전 판단 질문입니다. ' + ', '.join(products) + '의 ' + ', '.join(facets)
+    detail = ('SSD 자체의 인터페이스(NVMe/SATA), 폼팩터, 용량, 노트북 호환 조건을 설명하는 '
+              '저장장치 제조사 자료를 우선하세요. 노트북 본체의 SSD 탑재 용량만으로 '
+              'SSD 선택 질문의 근거를 대신하지 마세요. ' if storage_question(keyword) else '')
+    if named_brand_domains(keyword):
+        detail += '검색어에 명시된 브랜드의 자료를 찾으세요. 다른 브랜드 본체 자료로 대체하지 마세요. '
+    return (detail + '구매 전 판단 질문입니다. ' + ', '.join(products) + '의 ' + ', '.join(facets)
             + '를 직접 설명하는 국내 공식 제품 사양·비교표·시험 조건을 찾으세요. '
               '청소·고장 해결 도움말, 인증 등록 목록, 다른 제품 자료는 제외하세요. '
               '비교 질문은 비교 대상 양쪽의 동일 항목과 측정 조건을 확인하세요. '

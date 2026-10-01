@@ -646,6 +646,7 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
 일반적인 신청·조회 방법이어도 자격증/직업 준비는 취업, 건강보험/의료 이용은 건강입니다.
 의료비 세액공제처럼 최종 목적이 세금 신고/공제인 경우에는 생활정보입니다.
 {evidence_instruction}
+{review_discovery.BUYING_INTENT_GUIDANCE if category == '리뷰' else ''}
 {repair_instruction}
 공식 본문으로 뒷받침할 수 있는 주제를 고르세요.
 공식 자료가 메뉴뿐이거나 무관하거나, 종료된 신청/마감된 채용이면 supported=false.
@@ -695,6 +696,15 @@ JSON만 반환: {{"supported":true,"category":"실제 분류","topic":"...","int
             status = 'supported_invalid_type'
         audit['analysis_status'] = status
         if status == 'supported_false':
+            if category == '리뷰':
+                # Each retry can use a different source set. Keep the input of
+                # this exact negative decision, not only the initial sources.
+                audit['review_inputs'] = {
+                    'keyword': keyword, 'category': category, 'checked_at': now,
+                    'evidence_mode': evidence_mode, 'search_results': results,
+                    'official_sources': [{key: source.get(key) for key in
+                        ('url', 'title', 'excerpt', 'sha256', 'checked_on')} for source in sources],
+                }
             opinion = analysis.get('rejection_reason')
             audit['model_rejection_opinion'] = {
                 'kind': 'model_opinion',
@@ -1131,6 +1141,7 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 리뷰는 제품군과 구매 판단 항목(흡입력·사용 면적·문턱·메모리 등)이 함께 있는 후보에서
 해당 항목의 의미·제약·시험 조건을 설명할 질문을 고르세요. 제품군 전체 순위·추천으로 넓히지 마세요.
 청소·수리·고장 해결은 구매 비교 목적이 아닙니다. 적합한 후보가 없으면 빈 목록을 반환하세요.
+{review_discovery.BUYING_INTENT_GUIDANCE if category == '리뷰' else ''}
 공식 문서에서 확인 가능한 절차·조건·설정 질문을 우선하세요. 포괄 비교·추천은
 전체 선택 범위를 뒷받침할 공식 자료가 필요하며 한두 제품 자료로 대신할 수 없습니다.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
@@ -1145,7 +1156,7 @@ category_mismatch, insufficient_specificity 중 하나입니다. 단순 우선�
 JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색어의 띄어쓰기만 보정","reason":"실측 수요와 현재 독자 질문에 근거한 조사 이유"}}], "skipped":[{{"keyword":"...","reason_code":"purchase_intent_unclear"}}]}}
 후보: {json.dumps([candidate_prompt_row(row) for row in remaining], ensure_ascii=False)}
 기존 제목: {json.dumps(titles, ensure_ascii=False)}
-이번 실행의 탈락 후보: {json.dumps(rejected, ensure_ascii=False)}
+이번 실행의 탈락 후보: {json.dumps([{'keyword': x['keyword'], 'reason': x['reason'], 'hold_reasons': x.get('hold_reasons', [])} for x in rejected], ensure_ascii=False)}
 출처 범위·현재성 부족 등으로 보류한 후보: {json.dumps([{'keyword': x['keyword'], 'reasons': x['hold_reasons']} for x in held], ensure_ascii=False)}
 이전 실행에서 탈락했으나 보류 기간이 지나 재검토 가능한 후보: {json.dumps(retry_context, ensure_ascii=False)}
 신규 후보를 우선하고, 재검토 후보는 이전 탈락 사유를 해결할 근거를 새로 확인해야 합니다.
@@ -1274,7 +1285,17 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             if not reason and duplicate(keyword, item['topic'], titles + [x['keyword'] for x in selected]):
                 reason = 'already covered'
             if reason:
-                rejected.append({'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit})
+                rejection = {'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit}
+                if category == '리뷰':
+                    # Keep the exact inputs of negative opinions for replay. The
+                    # next shortlist receives only a summary, not repeated bodies.
+                    rejection.update(monthly_search=row['monthly'], organic_provider=provider,
+                        organic_query=query, organic_results=results, search_review=search_review,
+                        evidence_mode=mode, verified_sources=[
+                            {key: source.get(key) for key in
+                             ('url', 'title', 'excerpt', 'sha256', 'checked_on')}
+                            for source in sources])
+                rejected.append(rejection)
                 continue
             cak_provenance = row.get('cak_provenance')
             direct_rising = (cak_provenance is not None and cak_provenance['relationship'] == 'exact'

@@ -11162,7 +11162,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-10-01T01:27:25.305638+00:00",
+    "selected_at": "2026-10-01T04:15:08.611440+00:00",
     "seeds": [
       "무선청소기흡입력",
       "공기청정기평수",
@@ -12584,7 +12584,7 @@
           },
           {
             "keyword": "노트북램",
-            "reason_code": "not_reported",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {

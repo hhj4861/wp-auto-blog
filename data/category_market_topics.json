@@ -11162,7 +11162,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-09-30T13:04:32.058783+00:00",
+    "selected_at": "2026-10-01T01:27:25.305638+00:00",
     "seeds": [
       "무선청소기흡입력",
       "공기청정기평수",
@@ -11170,7 +11170,7 @@
       "로봇청소기문턱"
     ],
     "selection_version": 6,
-    "research_rounds": 3,
+    "research_rounds": 2,
     "source_recovery_attempts": 0,
     "cak_import": {
       "status": "not_applicable",
@@ -11182,15 +11182,14 @@
     },
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 342,
+    "measured_candidates": 341,
     "evaluated_candidates": 0,
-    "research_pool_size": 17,
+    "research_pool_size": 18,
     "selected": [],
     "held": [],
     "rejected": [],
     "excluded_keywords": [],
     "deferred_keywords": [
-      "가벼운무선청소기",
       "가벼운청소기",
       "가습기공기청정기",
       "공기청정기",
@@ -11211,17 +11210,16 @@
       "원룸청소기",
       "인덕션설치비용",
       "자동먼지비움청소기",
-      "저소음청소기",
       "청소기",
       "캠핑용품",
       "필터없는공기청정기",
       "학생용노트북",
-      "헤파필터청소기",
       "흡입력좋은청소기"
     ],
     "research_stop_reason": "pool_exhausted",
     "retry_keywords": [
-      "노트북램"
+      "노트북램",
+      "가벼운무선청소기"
     ],
     "discovery_rejections": [
       {
@@ -11441,19 +11439,15 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "로보락물걸레",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "로봇청소기로보락",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "가성비로봇청소기",
-        "reason": "review_recommendation_unbounded"
+        "keyword": "로보락물걸레",
+        "reason": "review_product_unidentified"
       },
       {
-        "keyword": "로봇청소기순위",
+        "keyword": "가성비로봇청소기",
         "reason": "review_recommendation_unbounded"
       },
       {
@@ -11461,19 +11455,27 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "삼성AI로봇청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "자동청소기",
-        "reason": "review_purchase_question_unbounded"
+        "keyword": "로봇청소기순위",
+        "reason": "review_recommendation_unbounded"
       },
       {
         "keyword": "인덕션프레임",
         "reason": "review_product_unidentified"
       },
       {
+        "keyword": "자동청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "삼성AI로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
         "keyword": "저렴한로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "ROBOROCK",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -11481,20 +11483,16 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "ROBOROCK",
-        "reason": "review_purchase_question_unbounded"
+        "keyword": "인덕션거치대",
+        "reason": "review_product_unidentified"
       },
       {
-        "keyword": "인덕션거치대",
+        "keyword": "천연대리석",
         "reason": "review_product_unidentified"
       },
       {
         "keyword": "로봇청소기물걸레",
         "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "천연대리석",
-        "reason": "review_product_unidentified"
       },
       {
         "keyword": "로보락큐레보",
@@ -11509,20 +11507,20 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "로보락S7MAXVULTRA",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "삼성식기세척기이전설치",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "로보락S5MAX",
+        "keyword": "로보락S7MAXVULTRA",
         "reason": "review_product_unidentified"
       },
       {
         "keyword": "타마로봇청소기",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락S5MAX",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "인덕션케이스",
@@ -11534,254 +11532,6 @@
       },
       {
         "keyword": "식기세척기이전설치",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "미세먼지",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "욕실환풍기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "집진기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "전열교환기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "위닉스공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "엘지공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "차량용공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "새집증후군",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "자동차에어컨필터교체",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "공기청정기추천",
-        "reason": "review_recommendation_unbounded"
-      },
-      {
-        "keyword": "후드필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG퓨리케어공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "전열교환기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "헤파필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG퓨리케어360",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "발뮤다공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "FILTER",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "삼성큐브공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "WF19T6000KW",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "아파트전열교환기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG공기청정기청소",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "엘지퓨리케어공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "에어필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG공기청정기렌탈",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "휴대용공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "환풍기설치",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "활성탄필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "호환필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "삼성공기청정기청소",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "공기순환기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "CFX-G100D",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "프리필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG공기청정기퓨리케어",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "롤부직포",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "삼성비스포크공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "탈취필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG전자공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "삼성블루스카이공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "공기청정기LG",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "FFU",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "블루스카이3100",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "부직포필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "비염차",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "차량공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "필터교체",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "아기방공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "해파필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "PAO",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "백필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "코앤잠",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "전열교환기소자",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "신생아공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "CFX-D100D",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "공기청정기청소",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "엘지공청기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "담배냄새제거",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "블루스카이5500",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "환풍기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "공조기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "AS153HWWC",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "HEPA",
         "reason": "review_product_unidentified"
       },
       {
@@ -11885,19 +11635,19 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "무선미니청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "차량용무선청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "SWING",
-        "reason": "review_product_unidentified"
+        "keyword": "무선미니청소기",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "친구생일선물",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "SWING",
         "reason": "review_product_unidentified"
       },
       {
@@ -11917,11 +11667,11 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "샤오미청소기",
+        "keyword": "스팀청소기대여",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "스팀청소기대여",
+        "keyword": "샤오미청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -11937,12 +11687,12 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "키보드청소",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "차량용청소기추천",
         "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "키보드청소",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "휴대용청소기",
@@ -11961,6 +11711,10 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "새차선물",
+        "reason": "review_product_unidentified"
+      },
+      {
         "keyword": "핸디형청소기",
         "reason": "review_purchase_question_unbounded"
       },
@@ -11969,8 +11723,8 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "새차선물",
-        "reason": "review_product_unidentified"
+        "keyword": "무선차량청소기",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "친구집들이선물",
@@ -11989,10 +11743,6 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "무선차량청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "20만원대선물",
         "reason": "review_product_unidentified"
       },
@@ -12009,16 +11759,12 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "소형무선청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "사무실청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "10만원대선물",
         "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "소형무선청소기",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "무선침구청소기",
@@ -12029,7 +11775,15 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "사무실청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
         "keyword": "신혼선물",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "5만원선물",
         "reason": "review_product_unidentified"
       },
       {
@@ -12037,15 +11791,11 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "5만원선물",
+        "keyword": "30만원대선물",
         "reason": "review_product_unidentified"
       },
       {
         "keyword": "이직선물",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "30만원대선물",
         "reason": "review_product_unidentified"
       },
       {
@@ -12057,11 +11807,15 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "차량용진공청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
         "keyword": "센스있는집들이선물",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "차량용진공청소기",
+        "keyword": "차량무선청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -12069,20 +11823,16 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "차량무선청소기",
+        "keyword": "습건식청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "습건식청소기",
+        "keyword": "자동물걸레청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "신혼집들이선물",
         "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "자동물걸레청소기",
-        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "미니핸디청소기",
@@ -12097,7 +11847,7 @@
         "reason": "review_recommendation_unbounded"
       },
       {
-        "keyword": "창틀청소기",
+        "keyword": "소형진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -12105,7 +11855,7 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "소형진공청소기",
+        "keyword": "창틀청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -12125,15 +11875,11 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "집들이선물세트",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "핸디형무선청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "차량용품선물",
+        "keyword": "집들이선물세트",
         "reason": "review_product_unidentified"
       },
       {
@@ -12141,19 +11887,19 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "스팀진공청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "차량용미니청소기",
-        "reason": "review_purchase_question_unbounded"
+        "keyword": "차량용품선물",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "무선물걸레",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "LG진공청소기",
+        "keyword": "차량용미니청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "스팀진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -12170,6 +11916,10 @@
       },
       {
         "keyword": "미니핸드청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "LG진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -12265,16 +12015,16 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "삼성SSD1TB",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "HDD1TB",
         "reason": "review_product_unidentified"
       },
       {
         "keyword": "노트북중고",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "삼성SSD1TB",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "삼성외장SSD",
@@ -12305,11 +12055,15 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "1테라",
+        "reason": "review_product_unidentified"
+      },
+      {
         "keyword": "노트북키보드",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "1테라",
+        "keyword": "삼성SSD외장하드",
         "reason": "review_product_unidentified"
       },
       {
@@ -12317,15 +12071,11 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "삼성SSD외장하드",
+        "keyword": "외장SSD2TB",
         "reason": "review_product_unidentified"
       },
       {
         "keyword": "삼성T7",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "외장SSD2TB",
         "reason": "review_product_unidentified"
       },
       {
@@ -12357,23 +12107,23 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "레노버AS",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "노트북윈도우설치",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "레노버AS",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "노트북액정수리",
         "reason": "review_maintenance_intent"
       },
       {
-        "keyword": "외장하드100GB",
+        "keyword": "삼성T71TB",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "삼성T71TB",
+        "keyword": "외장하드100GB",
         "reason": "review_product_unidentified"
       },
       {
@@ -12389,19 +12139,19 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "노트북업그레이드",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "외장하드SSD1TB",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "SSD하드",
+        "keyword": "외장SSD4TB",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "외장SSD4TB",
+        "keyword": "노트북업그레이드",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "SSD하드",
         "reason": "review_product_unidentified"
       },
       {
@@ -12417,16 +12167,12 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "레노버노트북수리",
-        "reason": "review_maintenance_intent"
-      },
-      {
         "keyword": "SSD128G",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "레노버고객센터",
-        "reason": "review_product_unidentified"
+        "keyword": "레노버노트북수리",
+        "reason": "review_maintenance_intent"
       },
       {
         "keyword": "물걸레로봇청소기",
@@ -12439,18 +12185,257 @@
       {
         "keyword": "로봇물걸레청소기",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "미세먼지",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "욕실환풍기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "집진기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "전열교환기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "위닉스공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "엘지공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "차량용공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "새집증후군",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "자동차에어컨필터교체",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "공기청정기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "후드필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG퓨리케어공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "전열교환기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "헤파필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG퓨리케어360",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "발뮤다공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "FILTER",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성큐브공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "아파트전열교환기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "WF19T6000KW",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG공기청정기청소",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "엘지퓨리케어공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "에어필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "휴대용공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "LG공기청정기렌탈",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "호환필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "활성탄필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "환풍기설치",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "공기순환기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성공기청정기청소",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "프리필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "CFX-G100D",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG공기청정기퓨리케어",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "롤부직포",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성비스포크공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "탈취필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG전자공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "공기청정기LG",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "FFU",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성블루스카이공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "비염차",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "블루스카이3100",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "차량공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "부직포필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "필터교체",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "코앤잠",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "해파필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "PAO",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "백필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "아기방공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "공기청정기청소",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "전열교환기소자",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "엘지공청기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "CFX-D100D",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "담배냄새제거",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "신생아공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "환풍기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "공조기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "HEPA",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "AS153HWWC",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "블루스카이5500",
+        "reason": "review_product_unidentified"
       }
     ],
     "discovery_replenishment": [
-      {
-        "seed": "공기청정기필터",
-        "available_before": 0,
-        "added_count": 75,
-        "status": "measured",
-        "trigger": "available_pool_exhausted",
-        "measured_count": 76,
-        "available_after": 12
-      },
       {
         "seed": "스마트폰배터리",
         "available_before": 0,
@@ -12535,10 +12520,10 @@
       {
         "seed": "노트북SSD",
         "available_before": 1,
-        "added_count": 64,
+        "added_count": 63,
         "status": "measured",
         "trigger": "available_pool_exhausted",
-        "measured_count": 66,
+        "measured_count": 65,
         "available_after": 3
       },
       {
@@ -12549,10 +12534,18 @@
         "trigger": "available_pool_exhausted",
         "measured_count": 12,
         "available_after": 3
+      },
+      {
+        "seed": "공기청정기필터",
+        "available_before": 3,
+        "added_count": 75,
+        "status": "measured",
+        "trigger": "available_pool_exhausted",
+        "measured_count": 76,
+        "available_after": 15
       }
     ],
     "deferred_measured_keywords": [
-      "가벼운무선청소기",
       "가벼운청소기",
       "노트북메모리",
       "로봇청소기",
@@ -12567,10 +12560,8 @@
       "원룸청소기",
       "인덕션설치비용",
       "자동먼지비움청소기",
-      "저소음청소기",
       "청소기",
       "필터없는공기청정기",
-      "헤파필터청소기",
       "흡입력좋은청소기"
     ],
     "selection_scope": "highest_score_among_evaluated",
@@ -12579,7 +12570,8 @@
         "round": 1,
         "offered_keywords": [
           "청소기필터",
-          "노트북램"
+          "노트북램",
+          "가벼운무선청소기"
         ],
         "proposals": [],
         "measured_fallback": false,
@@ -12592,7 +12584,12 @@
           },
           {
             "keyword": "노트북램",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "가벼운무선청소기",
+            "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           }
         ]
@@ -12605,13 +12602,16 @@
           "공기청정기필터",
           "엘지공기청정기필터",
           "LG퓨리케어필터",
+          "노트북SSD",
           "LG퓨리케어공기청정기필터",
           "엘지퓨리케어필터",
           "LG퓨리케어360필터",
           "퓨리케어필터",
           "퓨리케어공기청정기필터",
           "LG공기청정기필터교체",
-          "삼성큐브공기청정기필터"
+          "삼성큐브공기청정기필터",
+          "삼성노트북배터리",
+          "노트북SSD추가"
         ],
         "proposals": [],
         "measured_fallback": false,
@@ -12639,6 +12639,11 @@
           },
           {
             "keyword": "LG퓨리케어필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노트북SSD",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -12676,33 +12681,15 @@
             "keyword": "삼성큐브공기청정기필터",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
-          }
-        ]
-      },
-      {
-        "round": 3,
-        "offered_keywords": [
-          "노트북SSD",
-          "노트북SSD추가",
-          "삼성노트북배터리"
-        ],
-        "proposals": [],
-        "measured_fallback": false,
-        "no_eligible_proposal": true,
-        "skipped": [
+          },
           {
-            "keyword": "노트북SSD",
+            "keyword": "삼성노트북배터리",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "노트북SSD추가",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성노트북배터리",
-            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           }
         ]

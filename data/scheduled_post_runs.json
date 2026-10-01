@@ -216,6 +216,13 @@
       "claimed_at": "2026-09-30T20:23:07.186978+09:00",
       "status": "failure",
       "completed_at": "2026-09-30T11:49:32.263861+00:00"
+    },
+    "2026-10-01:morning": {
+      "run_id": "36814168288",
+      "category": "리뷰",
+      "slot": "morning",
+      "claimed_at": "2026-10-01T13:14:27.535501+09:00",
+      "status": "started"
     }
   }
 }

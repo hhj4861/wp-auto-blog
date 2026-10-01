@@ -20,6 +20,11 @@ def _date(value):
 
 def failure_code(row):
     """Use fixed diagnostics, never copy provider/model free text into memory."""
+    evidence = row.get('suitability_evidence')
+    if isinstance(evidence, dict) and evidence.get('failure_code') in {'review_failed', 'invalid_review'}:
+        return None  # Provider outages are not evidence against this keyword.
+    if row.get('operational_error'):
+        return None
     reason = row.get('reason', '')
     reason = reason if isinstance(reason, str) else ''
     holds = row.get('hold_reasons', [])

@@ -16,6 +16,8 @@ import unicodedata
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
+from src import analysis_runtime as runtime
+
 
 VERSION = 1
 MAX_AGE = timedelta(hours=36)
@@ -155,8 +157,9 @@ def _review_shape(raw, sources):
                                   ('kind', 'source_index', 'quote', 'event_start', 'event_end', 'date_quote')}}
 
 
+@runtime.stage('topic_suitability')
 def review_plan(item, now, call_llm):
-    """Run one independent review. Errors return only a fixed, nonsecret code."""
+    """Run an independent review with bounded recovery and nonsecret error codes."""
     evidence = {'version': VERSION}
     try:
         snapshot, clock = _snapshot(item), _clock(now)
@@ -225,18 +228,21 @@ def review_plan(item, now, call_llm):
         'JSON만 반환하세요. 스키마: ' + json.dumps(schema, ensure_ascii=False)
         + '\n데이터: ' + json.dumps({'today_kst': clock.astimezone(ZoneInfo('Asia/Seoul')).date().isoformat(),
                                       'candidate': snapshot}, ensure_ascii=False, allow_nan=False))
-    try:
-        raw = call_llm(prompt)
-    except Exception:
-        return {**evidence, 'failure_code': 'review_failed'}
-    try:
+    def validate(raw):
         if isinstance(raw, str):
             if len(raw) > 30_000:
                 raise ValueError('response size')
-            raw = json.loads(re.sub(r'^```(?:json)?\s*|\s*```$', '', raw.strip()))
-        evidence['review'] = _review_shape(raw, item['verified_sources'])
-    except (ValueError, TypeError, KeyError, OverflowError):
-        return {**evidence, 'failure_code': 'invalid_review'}
+            raw = runtime.parse_json(raw)
+        return _review_shape(raw, item['verified_sources'])
+
+    try:
+        evidence['review'] = runtime.validated_call(call_llm, prompt, validate,
+                                                    label='topic_suitability')
+    except runtime.AnalysisError as error:
+        return {**evidence, 'failure_code': ('invalid_review' if error.code in
+                    {'invalid_json', 'invalid_schema'} else 'review_failed'),
+                'diagnostics': {'stage': 'topic_suitability', 'code': error.code,
+                                'attempts': error.attempts}}
     return evidence
 
 

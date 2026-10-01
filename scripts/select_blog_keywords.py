@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
 from src.selection_feedback import load_history
+from src.analysis_runtime import error_code
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
 
@@ -123,13 +124,18 @@ def main():
                 temp = path.with_suffix('.tmp')
                 temp.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
                 temp.replace(path)
-        except Exception:
+        except Exception as error:
             failures.append(category)
+            reports[category] = {"category": category, "selected_at": datetime.now(timezone.utc).isoformat(),
+                "selected": [], "held": [], "rejected": [],
+                "failure_history": load_history(previous, category, datetime.now(timezone.utc)),
+                "research_stop_reason": "selection_failed", "operational_error": error_code(error)}
+            _write_reports(reports)
             if diagnostics is not None and diagnostics['outcome'] == 'selecting_replacement':
                 diagnostics['outcome'] = 'selection_failed'
-                reports[category] = {**previous, 'selected': [], 'reuse_source_diagnostics': diagnostics}
+                reports[category]["reuse_source_diagnostics"] = diagnostics
                 _write_reports(reports)
-            print(f'{category}: selection held (selection_failed)', file=sys.stderr, flush=True)
+            print(f'{category}: selection held (selection_failed: {error_code(error)})', file=sys.stderr, flush=True)
     return 1 if failures else 0
 
 

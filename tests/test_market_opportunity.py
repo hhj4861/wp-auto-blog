@@ -632,10 +632,13 @@ def test_visible_body_quote_is_accepted_with_markup_spacing_and_entities(approve
     None, True, [], {}, '', 'not-json', '[]', 'true', 'null', '{}',
     '{"covers_primary_intent": "true", "answer_quote": "실제 인용이 있어도 문자열 true는 금지"}',
 ])
-def test_malformed_model_response_fails_closed_without_another_call(approved_article_brief, raw):
+def test_malformed_model_response_fails_closed_after_bounded_recovery(approved_article_brief, raw):
     model = Mock(return_value=raw)
-    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [HELD_ARTICLE]
-    model.assert_called_once()
+    code = 'invalid_json' if raw in ('', 'not-json') else 'invalid_schema'
+    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [
+        '최종 검색 의도 심사 오류: ' + code]
+    assert model.call_count == 2
+
 
 
 @pytest.mark.parametrize('mode', ['exception', 'invalid_response', 'invented_quote'])
@@ -643,10 +646,14 @@ def test_provider_errors_and_model_output_are_never_exposed(approved_article_bri
     secret = 'secret-token=private-value https://private.example/api?key=private-value'
     model = (Mock(side_effect=RuntimeError(secret)) if mode == 'exception' else
              Mock(return_value=secret if mode == 'invalid_response' else article_response(quote=secret)))
-    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [HELD_ARTICLE]
+    expected = {'exception': '최종 검색 의도 심사 오류: unexpected_error',
+                'invalid_response': '최종 검색 의도 심사 오류: invalid_json',
+                'invented_quote': HELD_ARTICLE}[mode]
+    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [expected]
     output = capsys.readouterr()
     assert secret not in output.out + output.err + caplog.text
-    model.assert_called_once()
+    assert model.call_count == (2 if mode == 'invalid_response' else 1)
+
 
 
 @pytest.mark.parametrize('offset', [timedelta(hours=36, seconds=1), timedelta(seconds=-1)])

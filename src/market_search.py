@@ -86,7 +86,8 @@ def _native_results(query):
     try:
         from src.codex_search import native_search
 
-        observed = native_search(query)
+        from src.analysis_runtime import validated_call
+        observed = validated_call(native_search, query, label='native_search')
         if not isinstance(observed, list):
             raise ValueError()
         rows = []
@@ -100,7 +101,12 @@ def _native_results(query):
                 rows.append(row)
         if rows:
             return provider, rows
-    except Exception:
+    except Exception as error:
+        from src.analysis_runtime import error_code, FATAL, AnalysisError
+        code = error_code(error)
+        if code in FATAL:
+            raise AnalysisError(code) from None
+        search_failure(provider, reason=code)
         # Adapter errors can contain command output or credentials. Keep the
         # provider boundary fixed and never fall back to another paid/API path.
         pass

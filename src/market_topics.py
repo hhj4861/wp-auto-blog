@@ -32,7 +32,7 @@ from src.search_quality import SearchReviewError
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query
 from src.selection_feedback import load_history, deferred_keywords
-from src import review_discovery
+from src import review_discovery, review_exploration
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
 
@@ -1136,6 +1136,9 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     pool_keywords = {norm(row['keyword']) for row in pool}
     replenishment = []
     refill_seeds = iter(review_discovery.expansion_seeds(clock) if category == '리뷰' else ())
+    exploration = {'status': 'not_needed', 'seeds': [], 'measured': []}
+    exploration_started = False
+    adaptive_seeds = set()
     if category != '리뷰' and not pool and not deferred and not discovery_rejections:
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
@@ -1177,6 +1180,17 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 if monotonic() - started >= MAX_RESEARCH_SECONDS:
                     break
                 seed = next(refill_seeds, None)
+                if seed is None and not exploration_started:
+                    exploration_started = True
+                    proposed_seeds, exploration = review_exploration.propose(stats,
+                        [*stats, *excluded_keys, *deferred, *review_discovery.SEEDS,
+                         *review_discovery.EXPANSION_SEEDS, *past_failures], ask)
+                    adaptive_seeds = set(proposed_seeds)
+                    refill_seeds = iter(proposed_seeds)
+                    seed = next(refill_seeds, None)
+                    runtime.raise_if_fatal()
+                    if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                        break
                 if seed is None:
                     break
                 entry = {'seed': seed, 'available_before': len(available), 'added_count': 0,
@@ -1206,6 +1220,11 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed | family_deferred]
                 entry.update(measured_count=len(extra), available_after=len(available))
                 replenishment.append(entry)
+                if seed in adaptive_seeds:
+                    exploration['measured'].append(dict(entry))
+                    for proposal in exploration['seeds']:
+                        if proposal['seed'] == seed:
+                            proposal['status'] = 'lookup_completed' if entry['status'] == 'measured' else entry['status']
             if monotonic() - started >= MAX_RESEARCH_SECONDS:
                 stop_reason = 'time_budget'
                 break
@@ -1476,6 +1495,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
             'youtube_discovery': youtube_import,
+            'review_question_discovery': exploration,
             'search_review_recovery_attempts': search_review_budget['attempts'],
             'search_review_diagnostics': search_review_diagnostics,
             'shortlist_research_attempts': shortlist_research_attempts,

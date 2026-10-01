@@ -92,6 +92,7 @@ def analysis(keyword='시험준비물', category='취업', **extra):
 
 @pytest.fixture(autouse=True)
 def isolated_market_history(tmp_path, monkeypatch):
+    monkeypatch.setattr(market.review_exploration, 'propose', lambda *a: ([], {'status': 'test_isolated', 'seeds': [], 'measured': []}))
     monkeypatch.setattr(market, 'review_search', synthetic_search_review)
     monkeypatch.setattr(market, 'review_plan', synthetic_plan_review)
     monkeypatch.delenv('CAK_KEYWORD_CANDIDATES_FILE', raising=False)

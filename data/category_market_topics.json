@@ -11162,7 +11162,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-10-01T07:24:22.923293+00:00",
+    "selected_at": "2026-10-01T09:07:54.010192+00:00",
     "seeds": [
       "무선청소기흡입력",
       "공기청정기평수",
@@ -11170,7 +11170,7 @@
       "로봇청소기문턱"
     ],
     "selection_version": 6,
-    "research_rounds": 1,
+    "research_rounds": 2,
     "source_recovery_attempts": 0,
     "cak_import": {
       "status": "not_applicable",
@@ -11180,402 +11180,433 @@
       "related_count": 0,
       "seed_lookup_failed_count": 0
     },
+    "youtube_discovery": {
+      "provider": "youtube_data_api_v3",
+      "status": "api_unavailable",
+      "checked_at": "2026-10-01T09:07:54.010192+00:00",
+      "lookback_days": 90,
+      "ranking": "viewCount_within_recent_search_sample",
+      "videos": [],
+      "seeds": [],
+      "note": "Video views are not search demand or measured trend growth."
+    },
     "search_review_recovery_attempts": 0,
     "search_review_diagnostics": [],
-    "shortlist_research_attempts": 2,
+    "shortlist_research_attempts": 3,
+    "unresearched_budget_keywords": [
+      "lg퓨리케어360필터",
+      "삼성큐브공기청정기필터",
+      "엘지퓨리케어필터",
+      "퓨리케어공기청정기필터",
+      "퓨리케어필터"
+    ],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 341,
-    "evaluated_candidates": 2,
-    "research_pool_size": 12,
+    "evaluated_candidates": 3,
+    "research_pool_size": 10,
     "selected": [],
-    "held": [
+    "held": [],
+    "rejected": [
       {
-        "keyword": "공기청정기필터",
-        "category": "리뷰",
-        "topic": "공기청정기필터 구매 전 확인할 호환성·성능·안전성 선택 기준",
-        "intent": "공기청정기필터를 고를 때 호환 모델, 필터 종류, 성능과 안전성 자료를 어떻게 확인해야 할까?",
-        "gap": "LG 전용 필터의 호환 제한·구성과 삼성 S 필터의 성능 시험조건을 표로 정리하고 구매 확인 체크리스트를 제공한다.",
-        "source_url": "https://www.lge.co.kr/product/care-accessories/360-air-purifier/adq30041407",
-        "verified_sources": [
-          {
-            "url": "https://www.lge.co.kr/product/care-accessories/360-air-purifier/adq30041407",
-            "original_url": "https://www.lge.co.kr/product/care-accessories/360-air-purifier/adq30041407",
-            "title": "LG 360° 공기청정기 퓨리청정 V 펫 필터 (PFSARC01) | ADQ30041407 | 360° 공기청정기 | 공기청정기 | 가전 구독 | LG전자",
-            "checked_on": "2026-10-01",
-            "sha256": "0162645a2c53891f613e6bfdd2cf55e88dae540b2892de5fde58235f6427c808",
-            "excerpt": "LG 360° 공기청정기 퓨리청정 V 펫 필터 (PFSARC01) 모델명 : ADQ30041407 제품의 색상 및 사이즈는 실제와 약간 다를 수 있습니다 제품의 외관 및 사양, 가격 등은 제품 개량을 위해 사전 예고 없이 변경 될 수 있으며 본 상품번호와 호환되는 다른 상품으로 배송될 수 있으니 참고바랍니다 ⚠️ 구매 전 필수 확인 본 제품은 360 공기청정기 전용 필터로, 에어로 시리즈 공기청정기 필터와는 규격이 달라 호환되지 않습니다. 구매하시기 전에 사용 가능한 모델을 꼭 확인해 주시기 바랍니다. * 살생물 물질 6종 : MIT, CMIT, OIT, 트라클로산, 염화벤잘코늄류, NaDCC 6종 살생물 물질 불검출 검증되어 믿고 사용할 수 있는 LG 정품 필터 청정 성능을 결정하는 필터, 성능은 물론 안전한 성분은 기본이겠죠? LG전자에서 판매하는 정품필터는 6가지 살생물 물질이 검출되지 않아 믿고 사용하실 수 있어요. 확실한 탈취와 집진 정품필터가 보장하는 청정 성능 정품필터를 사용해야 LG 퓨리케어가 약속한 공기청정기 탈취와 집진 성능을 보장할 수 있어요. LG 공기청정기의 성능은 정품필터를 넣고 시험한 기준으로 명시하고 있습니다. * 정품필터가 인식되지 않으면 필터 모양의 아이콘이 주황색으로 바뀌며, 5초에 한 번씩 깜박입니다. 정품필터 인식 센서 인식 센서로 정품 여부 확인 가능 LG 공기청정기에는 정품필터 인식 센서가 탑재되어 있어요. 장착된 필터가 정품인지는 디스플레이와 LG ThinQ를 통해 확인할 수 있습니다. 간편한 폐기 종이 소재로 버릴 때도 편리하게 필터의 프레임이 종이로 제작되어 수명이 다한 필터는 구겨서 버리시면 됩니다. 공기청정기를 구독하시면 케어 매니저가 교체와 폐기까지 알아서 해주어 더욱 편리합니다. * 필터 잔여량 확인 방법은 제품에 따라 다르오니,자세한 내용은 각 제품 상세페이지를 참고해주세요. 필터 수명 인식 센서 필터 잔여량 확인하고 교체 제품에 따라 디스플레이 또는 LG ThinQ 앱을 통해 필터 잔여량을 확인할 수 있어요. 상품 상세 본 상품은 사진의 360° 퓨리청정 V 펫 필터 1개로 구성되어있으며 극세필터가 부착되어 있습니다 장착 위치 보다 자세한 설명은 보유하신 모델의 제품사용설명서를 참고하세요 교체 방법 보다 자세한 설명은 보유하신 모델의 제품사용설명서를 참고하세요 [필터 교체 방법] 1. 제품 후면 기준으로 커버의 상단 양옆을 잡고 살짝 당겨 분리하세요 디스플레이부에 PuriCare/Objet 로고가 있는 방향이 제품 후면입니다 2. 필터 손잡이를 당겨 필터를 꺼내주세요 3. 필터의 비닐을 제거한 후, 손잡이가 달린 면이 위를 향하도록 장착하세요 4. 커버 하단의 고정부를 제품 하단 고정 홈에 끼운 후 커버를 닫아주세요 2단 제품의 경우 하부 공기청정기의 필터도 동일한 방법으로 교체해 주세요 [퓨리케어 360 (몽블랑D) 필터 교체 알림 초기화 방법] ▷ 1단 제품: [청정세기 + 먼지상태] 버튼을 3초 이상 누르세요 ▷ 2단 상부 필터: [청정세기 + 먼지상태] 버튼을 3초 이상 누르세요 ▷ 2단 하부 필터: [먼지상태 + 취침예약] 버튼을 3초 이상 누르세요 [퓨리케어 360 α 필터 교체 알림 초기화 방법] ▷ 설정 → 필터 잔여량 → 필터 초기화 → 교체한 필터 선택 → 확인을 누르세요 * 상품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 상품과 차이가 있을 수 있으며 상품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 상품 이미지는 촬영 컷으로 실제 상품과 차이가 있을 수 있으며, 상품 색상은 모니터 해상도, 밝기 설정 및 PC 사양에 따라 차이가 있을 수 있습니다. * 해당 상품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다."
-          },
-          {
-            "url": "https://www.samsung.com/sec/air-cleaner/air-purifier-ax100db900dd-d2c/AX100DB900UDD/",
-            "original_url": "https://www.samsung.com/sec/air-cleaner/air-purifier-ax100db900dd-d2c/AX100DB900UDD/",
-            "title": "Infinite AI 공기청정기 (100㎡, S 필터) | AX100DB900UDD | Samsung 대한민국",
-            "checked_on": "2026-10-01",
-            "sha256": "e71d198b9520855e8bec68f4f2f80da057c9c00dfc89eb69b6067b6637bb8492",
-            "excerpt": "BESPOKE cube™ Air Infinite Lined의 세련된 디자인과 디자인 컨셉을 영상으로 표현하고 있습니다. 어떤 공간에도 어우러지는 심플하고 감각적인 어떤 공간에도 어우러지는 심플하고 감각적인 인피니트 디자인 인피니트 디자인 공기청정기에 프리미엄 인피니트 디자인을 적용했습니다. 슬림해진 디자인과 스트라이프 라인 사이로 보이는 투 톤 컬러의 대비는 단아하면서도 세련된 분위기로 공간에 녹아듭니다. 공기청정기에 프리미엄 인피니트 디자인을 적용했습니다. 슬림해진 디자인과 스트라이프 라인 사이로 보이는 투 톤 컬러의 대비는 단아하면서도 세련된 분위기로 공간에 녹아듭니다. * 기존 Bespoke 큐브™ Air 모델(AX053C**) 대비 바닥면적이 34% 슬림해진 인피니트 디자인 - Bespoke 큐브™ Air (380x406mm, 가로x세로) / Infinite AI (320x320mm, 가로x세로) * 기존 Bespoke 큐브™ Air 모델(AX053C**) 대비  바닥면적이 34% 슬림해진 인피니트 디자인 - Bespoke 큐브™ Air (380x406mm, 가로x세로) / Infinite AI (320x320mm, 가로x세로) * 기존 Bespoke 큐브™ Air 모델(AX053C**) 대비 바닥면적이 34% 슬림해진 인피니트 디자인 - Bespoke 큐브™ Air (380x406mm, 가로x세로) / Infinite AI (320x320mm, 가로x세로) * 기존 Bespoke 큐브™ Air 모델(AX053C**) 대비  바닥면적이 34% 슬림해진 인피니트 디자인 - Bespoke 큐브™ Air (380x406mm, 가로x세로) / Infinite AI (320x320mm, 가로x세로) 4면 흡입과 4면 토출로 더욱더 효과적이고 강력한 4면 흡입과 4면 토출로 더욱더 효과적이고 강력한 4way 서라운드 & 부스터 청정 4way 서라운드 & 부스터 청정 4면에서 오염된 공기를 흡입하고, 깨끗해진 공기를 4면으로 내보냅니다. 팝업 청정 부스터를 작동시키면 넓은 공간의 공기도 더 빠르게 청정할 수 있죠. 이제 흡입구와 토출구 방향에 관계 없이 원하는 위치에서 공기청정기를 사용해보세요. 4면에서 오염된 공기를 흡입하고, 깨끗해진 공기를 4면으로 내보냅니다. 팝업 청정 부스터를 작동시키면 넓은 공간의 공기도 더 빠르게 청정할 수 있죠. 이제 흡입구와 토출구 방향에 관계 없이 원하는 위치에서 공기청정기를 사용해보세요. BESPOKE cube™ Air Infinite Line 100 ㎡ 평형이 공기를 4면으로 내보내는 모습을 보여주는 영상 입니다. * 4way 서라운드 청정은 측면 4개의 패널(4면)에서 공기를 흡입 및 토출하여 청정하는 방식입니다. * 팝업 청정 부스터는 AX100DB9*** 및 AP90H101*** 모델에 한하여 탑재된 기능입니다. * 사용 시 벽면과의 거리는 1m 이상 유지해 주세요. * 11m 팝업 청정 부스터 - 팝업 청정 부스터 작동 각도는 SmartThings로 조작 가능 - 팝업 청정 부스터 관련 자세한 내용은 페이지 하단을 참고하세요. * 이해를 돕기 위해 연출된 이미지입니다. * 4way 서라운드 청정은 측면 4개의 패널(4면)에서 공기를 흡입 및 토출하여 청정하는 방식입니다. * 팝업 청정 부스터는 AX100DB9*** 및 AP90H101*** 모델에 한하여 탑재된 기능입니다. * 사용 시 벽면과의 거리는 1m 이상 유지해 주세요. * 11m 팝업 청정 부스터 - 팝업 청정 부스터 작동 각도는 SmartThings로 조작 가능 - 팝업 청정 부스터 관련 자세한 내용은 페이지 하단을 참고하세요. * 이해를 돕기 위해 연출된 이미지입니다. * 4way 서라운드 청정은 측면 4개의 패널(4면)에서 공기를 흡입 및 토출하여 청정하는 방식입니다. * 팝업 청정 부스터는 AX100DB9*** 및 AP90H101*** 모델에 한하여 탑재된 기능입니다. * 사용 시 벽면과의 거리는 1m 이상 유지해 주세요. * 11m 팝업 청정 부스터 - 팝업 청정 부스터 작동 각도는 SmartThings로 조작 가능 - 팝업 청정 부스터 관련 자세한 내용은 페이지 하단을 참고하세요. * 이해를 돕기 위해 연출된 이미지입니다. * 4way 서라운드 청정은 측면 4개의 패널(4면)에서 공기를 흡입 및 토출하여 청정하는 방식입니다. * 팝업 청정 부스터는 AX100DB9*** 및 AP90H101*** 모델에 한하여 탑재된 기능입니다. * 사용 시 벽면과의 거리는 1m 이상 유지해 주세요. * 11m 팝업 청정 부스터 - 팝업 청정 부스터 작동 각도는 SmartThings로 조작 가능 - 팝업 청정 부스터 관련 자세한 내용은 페이지 하단을 참고하세요. * 이해를 돕기 위해 연출된 이미지입니다. S 필터 S 필터 일반 유해가스는 기본, 반려동물의 체취 및 냄새 제거에 특화된 숯 탈취 강화 필터 적용으로 생활 속 냄새는 물론 반려동물의 냄새까지 한 번에 제거합니다. 나아가 필터를 거쳐 깨끗해진 공기가 지나가는 바람길까지 UV LED로 살균하고, 세균과 바이러스의 증식을 억제합니다. 일반 유해가스는 기본, 반려동물의 체취 및 냄새 제거에 특화된 숯 탈취 강화 필터 적용으로 생활 속 냄새는 물론 반려동물의 냄새까지 한 번에 제거합니다. 나아가 필터를 거쳐 깨끗해진 공기가 지나가는 바람길까지 UV LED로 살균하고, 세균과 바이러스의 증식을 억제합니다. 재생 정지 * 항균 처리된 집진 필터 기능 - 내용 : 집진 필터에 구리를 포함한 항균 처리된 소재를 적용하여 필터의 청결 강화 - 국내 공인기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 항균 처리된 집진 필터 기능 관련 자세한 내용은 페이지 하단을 참고하세요. * 집진 필터 곰팡이 성장 억제 기능 - 내용 : 집진 필터에 구리를 포함한 항균 처리된 소재를 적용하여 필터 내 곰팡이 성장 억제 - 국내 공인기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 집진 필터 곰팡이 성장 억제 기능 관련 자세한 내용은 페이지 하단을 참고하세요. * 집진 필터 바이러스 비활성화 기능 - 연세대학교 바이오의약 연구실의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 집진 필터 바이러스 비활성화 기능 관련 자세한 내용은 페이지 하단을 참고하세요. * 항균 처리된 극세 필터 기능 - 내용 : 극세 필터에 구리를 포함한 항균 처리된 소재를 적용하여 필터의 청결 강화 - 국내 공인시험기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 항균 처리된 극세 필터 기능 관련 자세한 내용은 페이지 하단을 참고하세요. * S필터 펫탈취 효율 99% - 시험 방법 : 실험 챔버 내에서 60분간 가동하여 전, 후의 가스농도 비교로 효율 산출 * S필터 펫탈취 효율 관련 자세한 내용은 페이지 하단을 참고하세요. ​* 탈취(CADR) 기능 - 내용 : 일반필터보다 촘촘한 활성탄으로 탈취 CADR 증가 - 한국공기청정협회의 시험결과로 실 사용 환경에 따라 다를 수 있음 * 탈취(CADR) 기능 관련 자세한 내용은 페이지 하단을 참고하세요. * 99.999 % 초미세청정(대형) - 내용 : 0.01 ㎛ 미세먼지 제거효율 99.999 % - 국내 공인시험기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 초미세청정 관련 자세한 내용은 페이지 하단을 참고하세요. * UV LED 살균 - 내용 : UV-C LED를 팬 가장자리에 조사하여 해당 영역 99.9 % 살균 * UV LED 살균 관련 자세한 내용은 페이지 하단을 참고하세요. * 극세 필터, 탈취 필터, 집진 필터는 일반쓰레기로 배출하세요. * 필터 상, 하단의 플라스틱 틀은 재활용 쓰레기로 배출하세요. * 극세 필터, 탈취 필터, 집진 필터는 일반쓰레기로 배출하세요. * 필터 상, 하단의 플라스틱 틀은 재활용 쓰레기로 배출하세요. * 극세 필터, 탈취 필터, 집진 필터는 일반쓰레기로 배출하세요. * 필터 상, 하단의 플라스틱 틀은 재활용 쓰레기로 배출하세요. * 극세 필터, 탈취 필터, 집진 필터는 일반쓰레기로 배출하세요. * 필터 상, 하단의 플라스틱 틀은 재활용 쓰레기로 배출하세요. 실내 공기질까지 학습해 맞춰주는 실내 공기질까지 학습해 맞춰주는 맞춤 청정 AI+ 맞춤 청정 AI+ AI+ 청정 기술로 실내외 공기질을 비교 및 학습하여 오염도가 높아질 것을 예측하고 미리 실내 공기를 정화합니다. AI+ 청정 기술로 실내외 공기질을 비교 및 학습하여 오염도가 높아질 것을 예측하고 미리 실내 공기를 정화합니다. * AI+ 청정 - 학습된 실내외 공기질 데이터를 기반으로 제품이 꺼져 있을 때에도 10분마다 제품 내 센서 동작하여 공기질을 예측하여 미리 ON 동작 - 실외 공기질은 지역별 공기질 측정 데이터를 기반으로 하므로 실 사용환경에 따라 다를 수 있음 * 한국 표준 협회 주관 AI+ 인증을 취득했습니다. - Bespoke AI+ 기술에 대한 제품 소프트웨어 품질을 인증 취득 (관련 국제 표준 : ISO/IEC 25023:2016) * SmartThings - 맞춤청정 AI+기능을 사용하기 위해 최초 1회 SmartThings 에서 ‘인공지능 청정’ 으로 셋팅 필요 - SmartThings 기능을 사용하기 위해 S\n[중간 본문 생략]\n 다를 수 있음 [S 필터] * 항균 처리된 집진 필터 기능 - 내용 : 집진 필터에 구리를 포함한 항균 처리된 소재를 적용하여 필터의 청결 강화 - 시험결과 : 집진 필터 내 세균 증식 억제 - 시험조건 : 시험균을 항균 처리된 집진 필터에 주입한 후 18시간 뒤 항균력이 없는 표준 면포에 균을 주입한 경우와 비교해 균의 성장이 억제된 정도(정균감소율)를 계산함 - 시험환경 : 온도 37±1 ℃ (증식에 유리한 온도) - 대상모델 : 구리를 포함한 항균 처리된 집진 필터 원단 - 참조규격 : KS K 0693:2016 - 국내 공인기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 집진 필터 곰팡이 성장 억제 기능 - 내용 : 집진 필터에 구리를 포함한 항균 처리된 소재를 적용, 필터 내 곰팡이 성장 억제 - 시험결과 : 집진필터 내 곰팡이 성장 억제 - 시험조건 : 5종 포자 현탁액을 집진 필터와 접촉시킨 뒤 28일 동안 시험 챔버에서 방치 - 시험환경 : 29 ℃, 고습환경 (활성에 유리한 온도) - 대상모델 : 항균 처리된 집진 필터 원단 - 참조규격 : ASTM G21-15 - 국내 공인기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 집진 필터 바이러스 비활성화 기능 - 내용 :집진 필터에 구리를 포함한 항균 처리된 소재를 적용, 필터 내 바이러스 비활성화하여 필터의 청결 강화 - 시험결과 : 집진 필터 내 바이러스 비활성화 - 시험조건 : 시험 바이러스를 항균 처리된 집진 필터와 5분 동안 접촉시킨 뒤 항균 처리된 소재 무처리 대조군과 비교해서 바이러스 저해율을 계산함 - 시험환경 : 4 ℃ (활성에 유리한 온도) - 대상모델 : 항균 처리된 집진 필터 원단 - 연세대학교 바이오의약 연구실의 시험 결과로 실 사용 환경에 따라 다를 수 있음 ​* 탈취 CADR (대형) - 내용 : 일반 필터보다 촘촘한 활성탄으로 탈취 CADR 증가 - 시험결과 : 탈취 CADR 120㎥/h (기존 Bespoke 큐브™ Air 106 ㎡ 일반 모델 (AX106CB800*) 탈취 CADR 76.7㎥/h) - 시험조건 : 시험 유해가스 3종을 접촉시킨 뒤 비교하여 정화능력을 계산함. - 대상 모델 : AX100DB900* * 한국 공기청정협회의 시험 결과로 실 사용 환경에 따라 다를 수 있음 * 99.999 % 초미세청정(대형) - 내용 : 0.01 ㎛ 미세먼지 제거효율 99.999 % - 시험결과 : 0.01 ㎛ 입자의 분진감소율 99.999 % - 시험조건 : 시험챔버 내에서 공기청정기를 강풍으로 작동시켜 분진감소율이 99.999 % 이상 도달 할 때까지의 시간을 측정 - 시험조건 : 온도 23 ℃, 습도 50 %, 시험챔버  30㎥, 시험입자 0.01 ㎛ KCl - 대상모델 : AX100DB900*** - 참조규격 : 한국공기청정협회 실내공기청정기 시험평가  (SPS-KACA 002-0132:2018) - 국내 공인시험기관의 시험 결과로, 실 사용 환경에 따라 다를 수 있음 * 항균 처리된 극세 필터 기능 - 내용 : 극세 필터에 구리를 포함한 항균 처리된 소재를 적용하여 필터의 청결 강화 - 시험결과 :  극세 필터 내 세균 증식 억제 - 시험조건 :  시험균을 항균 처리된 극세 필터에 주입한 후 18시간 뒤 항균력이 없는 표준 면포에 균을 주입한 경우와 비교해 균의 성장이 억제된 정도(정균감소율)을 계산함 - 시험환경 : 온도 37±1℃ (증식에 유리한 온도) - 대상모델 : 구리를 포함하는 항균 처리된 극세 필터 원단 - 참조규격 : KS K 0693:2016 - 국내 공인시험기관의 시험 결과로 실 사용 환경에 따라 다를 수 있음 [UV LED 살균] - 내용 : UV-C LED를 팬 가장자리에 조사하여 해당 영역 99.9 % 살균 - 시험결과 : 상기 살균 부위에서 대장균, 황색포도상구균 99.9 % 제거 - 시험조건 : 살균 부위 중 3곳에 균을 접종한 후 1.5시간 처리 후 UV-C LED를 장착하지 않은 경우와 비교해 살균율을 계산함 (3곳의 평균값) - 처리방법 : 무풍모드에서 UV-C LED를 30분 작동 후 30분 중지하기를 3회 반복 - 시험환경 : 온도 25±5 ℃, 습도 50±15 % - 대상모델 : AX***DB9***** - 참조규격 : ISO 22196:2007 - 국제시험·검사기관인 Intertek에서 시험 검증한 결과로서 실 사용 환경에 따라 다를 수 있음 [맞춤 청정 AI+] * AI+ 청정 - 내용 : 학습된 실내외 공기질 데이터를 기반으로 제품이 꺼져 있을 때에도 10분마다 제품 내 센서 동작하여 공기질을 예측하여 미리 ON 동작 - 실외 공기질은 지역별 공기질 측정 데이터를 기반으로 하므로 실 사용환경에 따라 다를 수 있음 * 한국 표준 협회 주관 AI+ 인증을 취득했습니다. - Bespoke AI+ 기술에 대한 제품 소프트웨어 품질을 인증 취득 (관련 국제 표준 : ISO/IEC 25023:2016) [AI 절약] * AI 절약모드 - 내용 : AI 절약모드는 공기질이 '좋음' 상태를 유지할 때 바람세기를 조절하여 에너지를 절약 - 이 기능은 스마트 모드에서만 사용할 수 있음 - 시험 조건 : 49.5 ㎡ 공간에서 PM10 미세먼지 200 ug/㎥ (실외 PM10 농도 30 ug/㎥) - 시험 모드 : 스마트 모드 - 시험 방법 : 스마트 모드에서 AI 절약모드 켜짐 유/무에 따른 소비전력량 비교 (공기청정기 가동 시뮬레이션) - 시험 모델 : 당사 AX100DB900* * 자사 시뮬레이션 결과로 실 사용 환경에 따라 다를 수 있습니다. * SmartThings 연결 및 최신버전으로 업데이트 후 AI 절약 모드 사용이 가능합니다. * AI 절약모드 설정 조건 - AI 절약모드로 누진 단계에 따른 에너지 관리를 하기 위해서는 사용 환경에 따라 스마트 미터기 별도 구매가 필요합니다. - AI 절약모드는 SmartThings에서만 지원하며, SmartThings는 지원 환경 및 사용 방법에 일부 제한이 있습니다. - AI 절약모드는 SmartThings Energy 서비스에서 AI 절약모드 ‘월간 목표 사용량 설정’ 을  ‘최대 절약’ 모드로 선택하면 즉시 가동되며, 누진단계/직접 설정 모드로 선택할 경우 각 모드에서 사용자가 설정한 조건에 따라 AI 절약모드의 가동시간과 에너지 절약 수준이 달라질 수 있습니다. [무풍청정] * 18 dB 저소음 - 내용 : 취침 모드 동작 시 소음 18dB - 시험 방법 : 제품 전면, 우측면, 좌측면, 상면 4점 측정하여 평균 소음값 표기 (동일 모델 3개 샘플 평균) - 시험 모드 : 취침모드 - 대상 모델 : AX100DB9**, AX33DB9** - 시험 결과 : 4점 평균 소음 18dB - 자사 무향 무음실 측정 시험치이며, 실사용 환경에 따라 다를 수 있음 * 도서관 수준의 소음 : 40 dB (국가 소음정보시스템 기준) 제품정보 더보기 제품정보 접기 스펙 탑재 어플리케이션 정보"
-          }
+        "keyword": "엘지공기청정기필터",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance",
+          "concentrated_search_results"
         ],
-        "intent_results": [
-          "https://www.coupang.com/vp/products/1316782093",
-          "https://www.naturalfilter.co.kr/category/%EC%9C%84%EB%8B%88%EC%95%84/69/",
-          "https://eiec.kdi.re.kr/policy/materialView.do?num=262633"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 5280,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": null,
+        "monthly_search": 4210,
         "organic_provider": "codex_native_search",
-        "organic_query": "공기청정기 필터",
-        "organic_domains": [
-          "www.coupang.com",
-          "gscs-b2c.lge.com",
-          "www.naturalfilter.co.kr",
-          "www.documents.philips.com",
-          "www.documents.philips.com",
-          "www.documents.philips.com",
-          "www.documents.philips.com",
-          "www.documents.philips.com",
-          "eiec.kdi.re.kr",
-          "eiec.kdi.re.kr"
-        ],
+        "organic_query": "엘지 공기청정기 필터",
         "organic_results": [
-          {
-            "url": "https://www.coupang.com/vp/products/1316782093",
-            "domain": "www.coupang.com",
-            "title": "공기청정기 필터 - 공기청정기 액세서리 | 쿠팡",
-            "snippet": "# 공기청정기 필터 ... * 공기청정기 필터 종류: 탈취필터 ... * 가격, 판매자, 교환/환불 및 배송 등 해당 상품 자체와 관련 없는 문의는 고객센터 내"
-          },
-          {
-            "url": "https://gscs-b2c.lge.com/open/downloadFile?fileId=Lgy0XYzzX3TZBvq0u5RGjw",
-            "domain": "gscs-b2c.lge.com",
-            "title": "사용설명서\n공기청정기\n제품을 안전하고 편리하게 사용하기 위해 제품을 사용하기 전에 사용설명",
-            "snippet": "- 표준 시험 조건 : 한국 공기청정협회의 ... • 필터는 소모품이므로 보증 기간 중이라도 수명이 다하면 ... 센터나 LG전자 홈페이지(www.lge.com)에서 별도로 ... 필터를 분리하기 전에"
-          },
-          {
-            "url": "https://www.naturalfilter.co.kr/category/%EC%9C%84%EB%8B%88%EC%95%84/69/",
-            "domain": "www.naturalfilter.co.kr",
-            "title": "공기청정기 필터 - 위니아 - 환경필터",
-            "snippet": "공기청정기 필터 ... 총6개의 상품이 있습니다. ... 상품명 : [호환] 환경필터 위니아 공기청정기 필터 에어캐스터 EPA16DAAP 프리미엄"
-          },
           {
             "url": "https://www.documents.philips.com/assets/20230217/bd62e75133d14c97af2cafac009e259f.pdf",
             "domain": "www.documents.philips.com",
             "title": "5.2 필터 교체 후 공기청정기 재작동방법",
-            "snippet": "5.2 필터 교체 후 공기청정기 재작동방법 ... 왼쪽 하단 그림: 손이 필터를 들어 공기청정기 앞쪽 홈에 맞춰 새 필터를 삽입하는 모습. ... 오른쪽 상단 그림:"
+            "snippet": "왼쪽 하단 그림: 손이 필터를 들어 공기청정기 앞쪽 홈에 맞춰 새 필터를 삽입하는 모습. ... 필터 교체 표시등이 빨간색으로 15초간 깜박이다가 꺼지면 필터 리셋이 완료된"
           },
           {
-            "url": "https://www.documents.philips.com/assets/20230216/53fe5d1c76134d60b6a9afab00a4af14.pdf",
-            "domain": "www.documents.philips.com",
-            "title": "5.2 필터 교체 후 공기청정기 다시 작동한 방법",
-            "snippet": "그림 3: 손이 공기청정기 상단의 필터를 들어 올려 제거하는 모습. ... 그림 4: 필터를 공기청정기 앞쪽의 홈에 맞춰 새로 삽입하는 모습."
+            "url": "https://www.enuri.com/detail.jsp?modelno=12996637",
+            "domain": "www.enuri.com",
+            "title": "에코필터 엘지 공기청정기 호환용 필터 - 에누리 가격비교",
+            "snippet": "# 에코필터 엘지 공기청정기 호환용 필터 - 에누리 가격비교 ... 에코필터 엘지 공기청정기 호환용 필터"
           },
           {
             "url": "https://www.documents.philips.com/assets/20230213/a643a64e53694132b5f4afa8012910a2.pdf",
             "domain": "www.documents.philips.com",
             "title": "5.2 필터 교체 후 공기청정기 다시 작동한 방법",
-            "snippet": "왼쪽 상단 그림: 손이 공기청정기 상단의 필터를 들어 올려 제거하는 모습. ... 왼쪽 중단 그림: 손이 새 필터를 공기청정기 앞쪽 홈에 맞춰 삽입하는 모습. ..."
+            "snippet": "왼쪽 중단 그림: 손이 새 필터를 공기청정기 앞쪽 홈에 맞춰 삽입하는 모습. ... 필터 교체 표시등이 빨간색으로 15초간 깜박이다가 꺼지면 필터 리셋이 완료된 것입니다."
+          },
+          {
+            "url": "https://nosearch.com/qna/air_purifier/8753",
+            "domain": "nosearch.com",
+            "title": "공기청정기 엘지 퓨리케어 AS303DWFA와 추천받은 엘지 공기청정기 사이의 필터 차이는 무엇인가요?",
+            "snippet": "공기청정기 엘지 퓨리케어 AS303DWFA와 추천받은 엘지 공기청정기 사이의 필터 차이는 무엇인가요?"
+          },
+          {
+            "url": "https://www.documents.philips.com/assets/20230216/53fe5d1c76134d60b6a9afab00a4af14.pdf",
+            "domain": "www.documents.philips.com",
+            "title": "5.2 필터 교체 후 공기청정기 다시 작동한 방법",
+            "snippet": "그림 3: 손이 공기청정기 상단의 필터를 들어 올려 제거하는 모습. ... 필터 교체 표시등이 빨간색으로 15초간 깜박이다가 꺼지면 필터 리셋이 완료된 것입니다."
           },
           {
             "url": "https://www.documents.philips.com/assets/20230217/b83ab9f03ea0457ba1d2afac00cbdb2e.pdf",
             "domain": "www.documents.philips.com",
             "title": "5.2 필터 교체 후 공기청정기 다시 작동한 방법",
-            "snippet": "5.2 필터 교체 후 공기청정기 다시 작동한 방법 ... 4 앞쪽의 홈에 맞춰 새 필터를 삽입합니다. ... 필터 교체 표시등이 빨간색으로 15초간 깜빡이다가 꺼지면 필터"
+            "snippet": "5.2 필터 교체 후 공기청정기 다시 작동한 방법 ... 필터 교체 표시등이 빨간색으로 15초간 깜빡이다가 꺼지면 필터 리셋이 완료된 것입니다."
+          },
+          {
+            "url": "https://web.joongna.com/product/227849172",
+            "domain": "web.joongna.com",
+            "title": "엘지 360 공기청정기 필터 팝니다 | 중고나라 - 안심되는 중고거래",
+            "snippet": "Image: 엘지 360 공기청정기 필터 팝니다 이미지 ... # 엘지 360 공기청정기 필터 팝니다"
+          },
+          {
+            "url": "https://www.enuri.com/search.jsp?keyword=AS205NSJA",
+            "domain": "www.enuri.com",
+            "title": "AS205NSJA 최저가 검색 - 에누리 가격비교",
+            "snippet": "* (호환) 엘지 공기청정기 AS205NSJA 필터 국산 H13 헤파형 착한 최저 가격 0 원~ (0개 판매처) - / 5.0 (리뷰 없음) ... * [(주)네이처테이블][호환] 먼방사"
           },
           {
             "url": "https://www.documents.philips.com/assets/20230216/a35d2b96db3c44d68962afab0062dc7e.pdf",
             "domain": "www.documents.philips.com",
             "title": "5.2 필터 교체 후 공기청정기 다시 작동한 방법",
-            "snippet": "5.2 필터 교체 후 공기청정기 다시 작동한 방법 ... 4 앞쪽의 홈에 맞춰 새 필터를 삽입합니다. ... 필터 교체 표시등이 빨간색으로 15초간 깜박이다가 꺼지면 필터"
+            "snippet": "5.2 필터 교체 후 공기청정기 다시 작동한 방법 ... 필터 교체 표시등이 빨간색으로 15초간 깜박이다가 꺼지면 필터 리셋이 완료된 것입니다."
           },
           {
-            "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=283798&pg=&pp=&topic=P",
-            "domain": "eiec.kdi.re.kr",
-            "title": "70억 원 상당 해외 유명브랜드 짝퉁 공기청정기 필터 등 밀수·유통조직 검거 | 경제정책자료 |KDI 경제교육·정보센터",
-            "snippet": "금) 70억 원 상당의 해외 유명브랜드를 도용한 가짜 공기청정기 필터 등 6만 9천점을 중국에서 밀수입해 국내에 유통한 조직을 검거했다고 밝혔다.- 공기청정기 필터 등 가짜 필터류를"
-          },
-          {
-            "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=262633",
-            "domain": "eiec.kdi.re.kr",
-            "title": "공기청정기 필터 42개 제품 조사… 8개 제품에서 사용금지 물질 검출 | 경제정책자료 |KDI 경제교육·정보센터",
-            "snippet": "환경부는 한국소비자원 및 한국환경산업기술원과 지난해(2024년) 시중에 유통 중인 공기청정기 필터 42개 제품의 안전성을 조사한 결과, 호환용 필터 8개 제품에서 사용이 금지된 살생물물질이 검출됐다고 밝혔다."
-          }
-        ],
-        "dominant_result_ratio": 0.0,
-        "score_components": {
-          "demand": 29.78,
-          "organic_opportunity": 20.0,
-          "trend": -0.27,
-          "intent_fit": 0
-        },
-        "trend_growth": -0.027,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-10-01T07:24:22.923293+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "공기청정기필터"
-        ],
-        "status": "research_only",
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "공기청정기필터",
-          "executed_query": "공기청정기 필터",
-          "topic": "공기청정기필터 구매 전 확인할 호환성·성능·안전성 선택 기준",
-          "intent": "공기청정기필터를 고를 때 호환 모델, 필터 종류, 성능과 안전성 자료를 어떻게 확인해야 할까?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T07:24:22.923293+00:00",
-          "result_count": 10,
-          "domain_count": 5,
-          "dominant_ratio": 0.0,
-          "search_review": {
-            "version": 1,
-            "query": "공기청정기필터",
-            "executed_query": "공기청정기 필터",
-            "provider": "codex_native_search",
-            "checked_at": "2026-10-01T07:24:22.923293+00:00",
-            "raw_sha256": "8cee4a245ecfabfb9806210f9c9f674b7c7123dad74b729286a05ecfc0abce24",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "공기청정기 필터 종류: 탈취필터"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "필터는 소모품이므로 보증 기간 중이라도 수명이 다하면"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "환경필터 위니아 공기청정기 필터 에어캐스터 EPA16DAAP 프리미엄"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "5.2 필터 교체 후 공기청정기 재작동방법"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "필터를 공기청정기 앞쪽의 홈에 맞춰 새로 삽입하는 모습."
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "손이 새 필터를 공기청정기 앞쪽 홈에 맞춰 삽입하는 모습."
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "5.2 필터 교체 후 공기청정기 다시 작동한 방법"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "5.2 필터 교체 후 공기청정기 다시 작동한 방법"
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "해외 유명브랜드를 도용한 가짜 공기청정기 필터"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "호환용 필터 8개 제품에서 사용이 금지된 살생물물질이 검출됐다고 밝혔다."
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 10,
-            "relevant_site_count": 5,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "relevance_ratio": 1.0,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
-            "site_concentration": 0.5,
-            "organic_opportunity": 20.0
-          },
-          "scope": "full_keyword",
-          "target_keyword": "공기청정기필터",
-          "matches": [
-            {
-              "result_index": 0,
-              "quote": "공기청정기 필터 종류: 탈취필터"
-            },
-            {
-              "result_index": 2,
-              "quote": "[호환] 환경필터 위니아 공기청정기 필터 에어캐스터 EPA16DAAP 프리미엄"
-            },
-            {
-              "result_index": 9,
-              "quote": "공기청정기 필터 42개 제품 조사… 8개 제품에서 사용금지 물질 검출"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-10-01T07:24:22.923293+00:00",
-          "input_sha256": "15c433cdc99c032f0b1d90798b52dd26751cb231236fa03d1443c5a35b25304c",
-          "failure_code": "review_failed"
-        },
-        "score": 49.51,
-        "publish_eligible": false,
-        "hold_reasons": [
-          "missing_topic_suitability"
-        ]
-      }
-    ],
-    "rejected": [
-      {
-        "keyword": "삼성노트북배터리",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
-        ],
-        "monthly_search": 520,
-        "organic_provider": "codex_native_search",
-        "organic_query": "삼성 노트북 배터리",
-        "organic_results": [
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/22045",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 노트북 배터리(Battery) 잔량을 확인하고 싶어요",
-            "snippet": "# 노트북 배터리(Battery) 잔량을 확인하고 싶어요 ... AC 어댑터가 분리된 상태에서, 마우스 커서를 작업 표시줄의 배터리 아이콘 위로 이동하면 현재 배터리의 잔량을 확인할 수 있습니다."
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/1321653",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] BIOS의 Smart Battery Power Off 기능",
-            "snippet": "Smart Battery Power Off 기능은 3개월 이상 장기간 노트북을 사용하지 않을 경우 Smart Battery Power Off 기능을 사용하여 배터리 수명이 빨리 단축되지 않을 수 있도록"
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/32280",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 삼성 노트북 화면이 안나와요",
-            "snippet": "# 삼성 노트북 화면이 안나와요 ... 최근 출시되는 노트북은 내장형 배터리 방식이고 배터리 차단 비상 구멍이 없으니 소프트 RTC 리셋 방법 으로 조치해보시기 바랍니다."
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/25548",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 무선 배터리 공유(Wireless Power Share)란",
-            "snippet": "무선 배터리 공유(WPS, Wireless Power Share)는 삼성 노트북의 배터리를 이용해 스마트폰과 같은 다른 기기를 별도의 케이블 없이 무선으로 충전할 수 있는 기능입니다. ... - 노트북"
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/22192",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 노트북9 Always, 보조 배터리 충전 조건이 궁금합니다",
-            "snippet": "다만, 메시지로 안내해드리는 바와 같이 장시간 사용시 시스템 배터리(노트북 내장 배터리)가 방전될 수 있으니 가능한 정격 어댑터를 연결하여 사용하시길 권유 드립니다. ... 따라서 시스템 배터리(노트북"
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/88599",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 노트북 전원이 안 켜집니다",
-            "snippet": "Image: 노트북 전원 안켜짐 증상일때 전원 어댑터와 전원잭에 동작 표시등 확인하기 ... 최근 출시되는 노트북은 내장형 배터리 방식이고 배터리 차단 비상 구멍이 없으니 소프트 RTC"
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/39572",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 삼성 로고에서 멈추고 윈도우 부팅이 안됩니다",
-            "snippet": "* 삼성 로고에서 멈추고 부팅이 안된다면 USB 저장장치 , 외장하드 등의 외부 장치로 인해 부팅시 방해를 받을 수 있습니다. ... 최근 출시된 노트북은 내장형 배터리"
-          },
-          {
-            "url": "https://www.samsungsvc.co.kr/solution/21974",
-            "domain": "www.samsungsvc.co.kr",
-            "title": "[삼성 PC] 블루투스 S Pen(SPA-MTA1SBW) 궁금합니다",
-            "snippet": "* ① 상단 배터리 캡을 잡고 반시계 방향으로 돌려 캡을 제거합니다. ... 삼성 노트북과 블루투스 S-Pen을 기기와 연결하면 전원/블루투스 버튼으로 응용 프로그램을 사용할 수 있습니다."
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/1533864285",
-            "domain": "www.coupang.com",
-            "title": "삼성 AA-PBZN2TP 노트북 배터리 - 배터리 | 쿠팡",
-            "snippet": "삼성전자# 삼성 AA-PBZN2TP 노트북 배터리 ... Image: 계좌이체 계좌이체"
-          },
-          {
-            "url": "https://images.samsung.com/is/content/samsung/p5/sec/business/insights/catalog-download/2019/GB-20190102-2.pdf",
-            "domain": "images.samsung.com",
-            "title": "노트북  \n삼성전자는 Windows 10 Pro를 권장합니다.\n\nBattery Life E",
-            "snippet": "■ NT950QAA-X509S / NT950QAA-X507S ■ 멀티미디어 : 내장 듀얼 디지털마이크, 스테레오 스피커 (1.5 W x 2), SoundAlive™, 720p HD 카메라 (IR 카메라) ■ 포트 :"
+            "url": "https://www.enuri.com/detail.jsp?modelno=10954539",
+            "domain": "www.enuri.com",
+            "title": "오클레어 엘지 공기청정기 호환용 필터 - 에누리 가격비교",
+            "snippet": "# 오클레어 엘지 공기청정기 호환용 필터 - 에누리 가격비교 ... 오클레어 엘지 공기청정기 호환용 필터 ... [Button: 닫기] | 배송비 | 무이자 할부 | 구매하기"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "삼성노트북배터리",
-          "executed_query": "삼성 노트북 배터리",
+          "query": "엘지공기청정기필터",
+          "executed_query": "엘지 공기청정기 필터",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-01T07:24:22.923293+00:00",
-          "raw_sha256": "7d8f2d211940055579b0be3a0f945be09f711ff8577890aaa8f3a5ce7aa92051",
+          "checked_at": "2026-10-01T09:07:54.010192+00:00",
+          "raw_sha256": "a42437b311dd16a60f49e570853829454f374843901cebbf97cf1ab7d27d76c0",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": true,
-              "quote": "노트북 배터리(Battery) 잔량을 확인하고 싶어요"
+              "relevant": false,
+              "quote": "5.2 필터 교체 후 공기청정기 재작동방법"
             },
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "배터리 수명이 빨리 단축되지 않을 수 있도록"
+              "quote": "에코필터 엘지 공기청정기 호환용 필터"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "삼성 노트북 화면이 안나와요"
+              "quote": "5.2 필터 교체 후 공기청정기 다시 작동한 방법"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "삼성 노트북의 배터리를 이용해 스마트폰과 같은 다른 기기를 별도의 케이블 없이 무선으로 충전할 수 있는 기능입니다."
+              "quote": "공기청정기 엘지 퓨리케어 AS303DWFA와 추천받은 엘지 공기청정기 사이의 필터 차이는 무엇인가요?"
             },
             {
               "result_index": 4,
-              "relevant": true,
-              "quote": "노트북9 Always, 보조 배터리 충전 조건이 궁금합니다"
+              "relevant": false,
+              "quote": "그림 3: 손이 공기청정기 상단의 필터를 들어 올려 제거하는 모습."
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "노트북 전원이 안 켜집니다"
+              "quote": "5.2 필터 교체 후 공기청정기 다시 작동한 방법"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "엘지 360 공기청정기 필터 팝니다"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "엘지 공기청정기 AS205NSJA 필터 국산 H13 헤파형"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "5.2 필터 교체 후 공기청정기 다시 작동한 방법"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "오클레어 엘지 공기청정기 호환용 필터"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "LG퓨리케어필터",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 2550,
+        "organic_provider": "codex_native_search",
+        "organic_query": "LG 퓨리케어 필터",
+        "organic_results": [
+          {
+            "url": "https://www.lge.co.kr/product/air-purifier/e2cjpv22?modelId=MD09165838&pdpType=PURCHASE&sKwd=%EC%98%A8%ED%92%8D%EA%B2%B8%EC%9A%A9+%EC%97%90%EC%96%B4%EB%A1%9C%ED%83%80%EC%9B%8C&sRank=8&sTab=unit_product_list",
+            "domain": "www.lge.co.kr",
+            "title": "LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) | E2CJPV22 | 공기청정기 | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "# LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) ... LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) ... 네이처 클레이"
+          },
+          {
+            "url": "https://bestshop.lge.co.kr/kr/ebook/2026/march/best/catImage/630/20260304_best_catalogue.pdf",
+            "domain": "bestshop.lge.co.kr",
+            "title": "LG PuriCare | Objet Collection",
+            "snippet": "LG PuriCare | Objet Collection ... 전면으로 흡입한 공기 속의 곰팡이, 세균, 바이러스를 제거하여 위아래로 청정 공기를 토출합니다.2 클린 케어 ... <td>월핏 퓨리청정 V 필터</td>"
+          },
+          {
+            "url": "https://www.enuri.com/search.jsp?keyword=LG+%ED%93%A8%EB%A6%AC%EC%BC%80%EC%96%B4+%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0+%ED%95%84%ED%84%B0",
+            "domain": "www.enuri.com",
+            "title": "LG 퓨리케어 공기청정기 필터 최저가 검색 - 에누리 가격비교",
+            "snippet": "# LG 퓨리케어 공기청정기 필터 최저가 검색 - 에누리 가격비교 ... * LG전자 오브제컬렉션 퓨리케어360˚ 알파 UP 전용 PFSABC01 360˚ G 펫 필터 최저 가격"
+          },
+          {
+            "url": "https://www.lge.co.kr/product/aerotower/e2cjpv22?modelId=MD09165838&pdpType=PURCHASE",
+            "domain": "www.lge.co.kr",
+            "title": "LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) | E2CJPV22 | undefined | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "# LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) ... 다만, 모델에 따라 탑재된 모드나 모드 이름이 다를 수 있으니, 자세한 내용은 제품"
+          },
+          {
+            "url": "https://www.lge.co.kr/product/air-purifier/fs061pgrc-b",
+            "domain": "www.lge.co.kr",
+            "title": "LG 퓨리케어 오브제컬렉션 에어로타워 (온풍 겸용) | FS061PGRC | 공기청정기 | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "따라서 청정 면적이 넓은 곳에서는 2단 LG 퓨리케어 360˚ 공기청정기를, 비교적 좁은 곳에서는 1단 360˚ 공기청정기나 에어로 시리즈가 적합합니다. ... 다만, 공기청정기능과 가습기능이 모두 탑재된"
+          },
+          {
+            "url": "https://www.lge.co.kr/product/air-purifier/p2euqh11?modelId=MD09818827&pdpType=PURCHASE&sKwd=LG+%ED%93%A8%EB%A6%AC%EC%BC%80%EC%96%B4+%EC%97%90%EC%96%B4%EB%A1%9C%ED%8D%BC%EB%8B%88%EC%B2%98&sRank=14&sTab=unit_product_list",
+            "domain": "www.lge.co.kr",
+            "title": "LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer) | P2EUQH11 | 공기청정기 | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "# LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer) ... * * * * * LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer) ... 첫 월급을 받고, 어떻게 보답할지"
+          },
+          {
+            "url": "https://www.lge.co.kr/kr/ebook/2024/july/jo/catImage/411/20240708_jo_catalogue.pdf",
+            "domain": "www.lge.co.kr",
+            "title": "LG 퓨리케어 공기청정기 | 가전 구독",
+            "snippet": "LG 퓨리케어 공기청정기 | 가전 구독 ... <td>잠금 기능/ Wi-Fi/ 필터교체 알림/ 리모컨</td> ... <td>항균/탈취알러지/집진 플러스 케어</td> ... * 계약은 상품 인도/설치 후 성립되며, 계약성립"
+          },
+          {
+            "url": "https://bestshop.lge.co.kr/kr/ebook/2026/january/best/catImage/622/202601_best_catalogue.pdf",
+            "domain": "bestshop.lge.co.kr",
+            "title": "LG PuriCare | Objet Collection",
+            "snippet": "LG 퓨리케어 오브제컬렉션 ... Main hero image of a minimalist showroom with a standing water purifier centered in front of a curved wall; top-left branding"
+          },
+          {
+            "url": "https://puri-home.com/products/index/air",
+            "domain": "puri-home.com",
+            "title": "엘지전자 퓨리케어 가전구독 공식인증점 제이씨파트너",
+            "snippet": "탈취필터 ... LG 퓨리케어 오브제컬렉션 360˚ 렌탈전용 공기청정기(네이처베이지) ... LG 퓨리케어 오브제컬렉션 360˚ 렌탈전용 공기청정기(네이처베이지)"
+          },
+          {
+            "url": "https://www.enuri.com/search.jsp?keyword=LG%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0",
+            "domain": "www.enuri.com",
+            "title": "LG공기청정기필터 최저가 검색 - 에누리 가격비교",
+            "snippet": "* 플룬드 LG전자 퓨리케어 300 호환용 필터세트 최저 가격 41381 원~ (56개 판매처) 4.0 / 5.0 (1개 리뷰) 별점 4.0점 * 연희테크 참필터 LG전자 퓨리케어"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "LG퓨리케어필터",
+          "executed_query": "LG 퓨리케어 필터",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-01T09:07:54.010192+00:00",
+          "raw_sha256": "8d169134e0ac743c820866af125f6b61ebf08c5b0d168d44b1bfab653252fbd3",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용)"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "월핏 퓨리청정 V 필터"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "LG전자 오브제컬렉션 퓨리케어360˚ 알파 UP 전용 PFSABC01 360˚ G 펫 필터"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "자세한 내용은 제품"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "비교적 좁은 곳에서는 1단 360˚ 공기청정기나 에어로 시리즈가 적합합니다."
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer)"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "삼성 로고에서 멈추고 윈도우 부팅이 안됩니다"
+              "quote": "잠금 기능/ Wi-Fi/ 필터교체 알림/ 리모컨"
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "블루투스 S Pen(SPA-MTA1SBW) 궁금합니다"
+              "quote": "LG 퓨리케어 오브제컬렉션"
             },
             {
               "result_index": 8,
-              "relevant": true,
-              "quote": "삼성 AA-PBZN2TP 노트북 배터리"
+              "relevant": false,
+              "quote": "LG 퓨리케어 오브제컬렉션 360˚ 렌탈전용 공기청정기(네이처베이지)"
             },
             {
               "result_index": 9,
+              "relevant": true,
+              "quote": "플룬드 LG전자 퓨리케어 300 호환용 필터세트 최저 가격 41381 원~"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "LG퓨리케어공기청정기필터",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 1480,
+        "organic_provider": "codex_native_search",
+        "organic_query": "LG 퓨리케어 공기청정기 필터",
+        "organic_results": [
+          {
+            "url": "https://brand.lge.co.kr/search/result?force=false&search=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0+%ED%95%84%ED%84%B0",
+            "domain": "brand.lge.co.kr",
+            "title": "LG 공기청정기 필터 검색결과 | LG전자",
+            "snippet": "LG 퓨리케어 오브제컬렉션 AI 360˚ 공기청정기 (G 필터) 66㎡ 2등급 ... LG 퓨리케어 오브제컬렉션 AI 360˚ 공기청정기 (G 필터) + 무빙휠 세트 66㎡ 2등급"
+          },
+          {
+            "url": "https://bestshop.lge.co.kr/kr/ebook/2026/march/best/catImage/630/20260304_best_catalogue.pdf",
+            "domain": "bestshop.lge.co.kr",
+            "title": "LG PuriCare | Objet Collection",
+            "snippet": "* 부유세균 99.0% 제거 : 시험 의뢰 : 25.08.19~25.08.21 / 시험기관 : 한국건설생활환경시험연구원(KCL) / 시험방법 : 시험용 60m³ 챔버내 부유세균 및 시험균 농도와 측정값 비교"
+          },
+          {
+            "url": "https://www.enuri.com/search.jsp?keyword=LG+%ED%93%A8%EB%A6%AC%EC%BC%80%EC%96%B4+%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0+%ED%95%84%ED%84%B0",
+            "domain": "www.enuri.com",
+            "title": "LG 퓨리케어 공기청정기 필터 최저가 검색 - 에누리 가격비교",
+            "snippet": "# LG 퓨리케어 공기청정기 필터 최저가 검색 - 에누리 가격비교"
+          },
+          {
+            "url": "https://www.lge.co.kr/product/air-purifier/fs061pgrc-b",
+            "domain": "www.lge.co.kr",
+            "title": "LG 퓨리케어 오브제컬렉션 에어로타워 (온풍 겸용) | FS061PGRC | 공기청정기 | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "따라서 청정 면적이 넓은 곳에서는 2단 LG 퓨리케어 360˚ 공기청정기를, 비교적 좁은 곳에서는 1단 360˚ 공기청정기나 에어로 시리즈가 적합합니다. ... LG 퓨리케어 공기청정기는 기본적으로 전"
+          },
+          {
+            "url": "https://www.lge.co.kr/product/air-purifier/e2cjpv22?modelId=MD09165838&pdpType=PURCHASE&sKwd=%EC%98%A8%ED%92%8D%EA%B2%B8%EC%9A%A9+%EC%97%90%EC%96%B4%EB%A1%9C%ED%83%80%EC%9B%8C&sRank=8&sTab=unit_product_list",
+            "domain": "www.lge.co.kr",
+            "title": "LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) | E2CJPV22 | 공기청정기 | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "# LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) ... LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용) ... 네이처 클레이"
+          },
+          {
+            "url": "https://bestshop.lge.co.kr/kr/ebook/2026/january/best/catImage/622/202601_best_catalogue.pdf",
+            "domain": "bestshop.lge.co.kr",
+            "title": "LG전자 소모품\n\n더+ 새것같이 더+ 오래오래 더+ 깨끗하게\n\n우리집 가전 더 새것같이 더",
+            "snippet": "LG전자 소모품 ... <th>뷰케이스</th> ... 360° 공기청정기 필터 및 액세서리 ... <th>에어로 퓨리청정 V 필터</th>"
+          },
+          {
+            "url": "https://puri-home.com/products/index/air",
+            "domain": "puri-home.com",
+            "title": "엘지전자 퓨리케어 가전구독 공식인증점 제이씨파트너",
+            "snippet": "LG 퓨리케어 오브제컬렉션 360˚ 렌탈전용 공기청정기(네이처베이지) ... LG 퓨리케어 오브제컬렉션 360˚ 렌탈전용 공기청정기(네이처베이지)"
+          },
+          {
+            "url": "https://www.lge.co.kr/product/air-purifier/p2euqh11?modelId=MD09818827&pdpType=PURCHASE&sKwd=LG+%ED%93%A8%EB%A6%AC%EC%BC%80%EC%96%B4+%EC%97%90%EC%96%B4%EB%A1%9C%ED%8D%BC%EB%8B%88%EC%B2%98&sRank=14&sTab=unit_product_list",
+            "domain": "www.lge.co.kr",
+            "title": "LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer) | P2EUQH11 | 공기청정기 | 에어컨/에어케어 | 제품/소모품 | LG전자",
+            "snippet": "# LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer) ... * * * * * LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer) ... 저에게는 항상 가장 좋은 음식,"
+          },
+          {
+            "url": "https://image5.lge.co.kr/uploads/kr/business/catalog/comprehensive/201907_g2b.pdf",
+            "domain": "image5.lge.co.kr",
+            "title": "LG 퓨리케어 공기청정기 케어솔루션",
+            "snippet": "LG 퓨리케어 공기청정기 케어솔루션 ... LG전자만의 차원이 다른 가전 관리 서비스입니다. ... 공기청정필터"
+          },
+          {
+            "url": "https://www.enuri.com/search.jsp?keyword=LG%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0",
+            "domain": "www.enuri.com",
+            "title": "LG공기청정기필터 최저가 검색 - 에누리 가격비교",
+            "snippet": "# LG공기청정기필터 최저가 검색 - 에누리 가격비교 ... * LG전자 퓨리케어360˚ 전용 PFSAJC01 퓨리청정 V 필터 최저 가격 76980 원~ (299개 판매처) 4.9 / 5.0"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "LG퓨리케어공기청정기필터",
+          "executed_query": "LG 퓨리케어 공기청정기 필터",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-01T09:07:54.010192+00:00",
+          "raw_sha256": "e9161ee295b98fa1ac704600e9645221ca31b8e4a5c10cf42f41220cf7a5df16",
+          "decisions": [
+            {
+              "result_index": 0,
               "relevant": false,
-              "quote": "삼성전자는 Windows 10 Pro를 권장합니다."
+              "quote": "LG 퓨리케어 오브제컬렉션 AI 360˚ 공기청정기 (G 필터) 66㎡ 2등급"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "시험용 60m³ 챔버내 부유세균 및 시험균 농도와 측정값 비교"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "LG 퓨리케어 공기청정기 필터 최저가 검색 - 에누리 가격비교"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "비교적 좁은 곳에서는 1단 360˚ 공기청정기나 에어로 시리즈가 적합합니다."
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "LG 퓨리케어 360˚ 알파 (펫 필터) + 에어로타워 (온풍 겸용)"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "360° 공기청정기 필터 및 액세서리"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "LG 퓨리케어 오브제컬렉션 360˚ 렌탈전용 공기청정기(네이처베이지)"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "LG퓨리케어 오브제컬렉션 에어로퍼니처(김선우 에디션 Secret Admirer)"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "LG전자만의 차원이 다른 가전 관리 서비스입니다."
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "LG전자 퓨리케어360˚ 전용 PFSAJC01 퓨리청정 V 필터 최저 가격 76980 원~"
             }
           ]
         }
@@ -11589,6 +11620,7 @@
       "가습기공기청정기",
       "공기청정기",
       "공기청정기렌탈",
+      "공기청정기필터",
       "노트북SSD",
       "노트북램",
       "노트북메모리",
@@ -11603,6 +11635,7 @@
       "무선청소기비교",
       "물걸레청소기",
       "삼성공기청정기필터",
+      "삼성노트북배터리",
       "선풍기",
       "업무용노트북",
       "원룸청소기",
@@ -12866,85 +12899,86 @@
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 12,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "제습기평수",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "로봇청소기먼지비움",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "모니터주사율",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 1,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 1,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "제습기소비전력",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "가벼운무선청소기",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 92,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 128,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "노트북SSD",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 63,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 65,
-        "available_after": 2
+        "available_after": 1
       },
       {
         "seed": "로봇청소기직배수설치",
-        "available_before": 2,
+        "available_before": 1,
         "added_count": 3,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 12,
-        "available_after": 2
+        "available_after": 1
       },
       {
         "seed": "공기청정기필터",
-        "available_before": 2,
+        "available_before": 1,
         "added_count": 75,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 76,
-        "available_after": 12
+        "available_after": 10
       }
     ],
     "deferred_measured_keywords": [
       "LG공기청정기필터",
       "가벼운무선청소기",
       "가벼운청소기",
+      "공기청정기필터",
       "노트북SSD",
       "노트북램",
       "노트북메모리",
@@ -12958,6 +12992,7 @@
       "무선청소기비교",
       "물걸레청소기",
       "삼성공기청정기필터",
+      "삼성노트북배터리",
       "원룸청소기",
       "인덕션설치비용",
       "자동먼지비움청소기",
@@ -12971,7 +13006,6 @@
       {
         "round": 1,
         "offered_keywords": [
-          "공기청정기필터",
           "엘지공기청정기필터",
           "LG퓨리케어필터",
           "LG퓨리케어공기청정기필터",
@@ -12981,7 +13015,6 @@
           "퓨리케어공기청정기필터",
           "LG공기청정기필터교체",
           "삼성큐브공기청정기필터",
-          "삼성노트북배터리",
           "노트북SSD추가"
         ],
         "proposals": [],
@@ -12989,43 +13022,38 @@
         "no_eligible_proposal": true,
         "skipped": [
           {
-            "keyword": "공기청정기필터",
+            "keyword": "엘지공기청정기필터",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "엘지공기청정기필터",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "LG퓨리케어필터",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "LG퓨리케어공기청정기필터",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "엘지퓨리케어필터",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "LG퓨리케어360필터",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "퓨리케어필터",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "퓨리케어공기청정기필터",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -13035,12 +13063,7 @@
           },
           {
             "keyword": "삼성큐브공기청정기필터",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성노트북배터리",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -13051,46 +13074,128 @@
         ],
         "research_fallback": [
           {
-            "keyword": "공기청정기필터",
-            "search_query": "공기청정기 필터",
+            "keyword": "엘지공기청정기필터",
+            "search_query": "엘지 공기청정기 필터",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           },
           {
-            "keyword": "삼성노트북배터리",
-            "search_query": "삼성 노트북 배터리",
+            "keyword": "LG퓨리케어필터",
+            "search_query": "LG 퓨리케어 필터",
             "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "purchase_intent_unclear"
+            "shortlist_reason_code": "insufficient_specificity"
           }
         ],
         "research_fallback_attempted": [
-          "공기청정기필터",
-          "삼성노트북배터리"
+          "엘지공기청정기필터",
+          "LG퓨리케어필터"
+        ]
+      },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "LG퓨리케어공기청정기필터",
+          "엘지퓨리케어필터",
+          "LG퓨리케어360필터",
+          "퓨리케어필터",
+          "퓨리케어공기청정기필터",
+          "삼성큐브공기청정기필터"
+        ],
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "LG퓨리케어공기청정기필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엘지퓨리케어필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LG퓨리케어360필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퓨리케어필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퓨리케어공기청정기필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성큐브공기청정기필터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "LG퓨리케어공기청정기필터",
+            "search_query": "LG 퓨리케어 공기청정기 필터",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "LG퓨리케어공기청정기필터"
         ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "공기청정기필터",
-        "monthly_search": 5280,
-        "score": 49.51,
-        "status": "held",
-        "reasons": [
-          "missing_topic_suitability"
-        ],
-        "organic_query": "공기청정기 필터"
-      },
-      {
-        "keyword": "삼성노트북배터리",
+        "keyword": "엘지공기청정기필터",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 520,
-        "organic_query": "삼성 노트북 배터리"
+        "monthly_search": 4210,
+        "organic_query": "엘지 공기청정기 필터"
+      },
+      {
+        "keyword": "LG퓨리케어필터",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 2550,
+        "organic_query": "LG 퓨리케어 필터"
+      },
+      {
+        "keyword": "LG퓨리케어공기청정기필터",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 1480,
+        "organic_query": "LG 퓨리케어 공기청정기 필터"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "엘지공기청정기필터",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-01T09:07:54.010192+00:00",
+        "retry_after": "2026-10-02T09:07:54.010192+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "LG퓨리케어필터",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-01T09:07:54.010192+00:00",
+        "retry_after": "2026-10-02T09:07:54.010192+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "LG퓨리케어공기청정기필터",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-01T09:07:54.010192+00:00",
+        "retry_after": "2026-10-02T09:07:54.010192+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "공기청정기필터",
         "reason_code": "temporary_failure",
@@ -13413,7 +13518,58 @@
         "retry_after": "2026-10-01T12:01:53.437880+00:00",
         "attempts": 1
       }
-    ]
+    ],
+    "analysis_diagnostics": [
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 16662
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11278
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 13798
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6151
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 15600
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10868
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6722
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 17213
+      }
+    ],
+    "analysis_recovery_attempts": 0
   },
   "테크": {
     "category": "테크",

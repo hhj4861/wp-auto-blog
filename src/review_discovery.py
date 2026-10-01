@@ -105,7 +105,12 @@ def shortlist_skips(remaining, candidates, response):
              'kind': 'model_shortlist_opinion'} for row in remaining if row['keyword'] not in proposed]
 
 
-def shortlist_research_candidates(skipped, limit):
+def research_family(keyword):
+    """Group buying questions across brand/spelling variants for research scheduling."""
+    return tuple(map(tuple, requirements(keyword)))
+
+
+def shortlist_research_candidates(skipped, limit, researched=()):
     """Investigate uncertainty, never turn a name-only opinion into approval.
 
     Call only for a well-formed, empty shortlist. Inputs have already passed
@@ -116,13 +121,14 @@ def shortlist_research_candidates(skipped, limit):
                 if row['reason_code'] in {'not_reported', 'purchase_intent_unclear',
                                           'insufficient_specificity'}
                 and not discovery_issue(row['keyword'])]
-    chosen, families = [], set()
+    chosen, families = [], {research_family(keyword) for keyword in researched}
     while eligible and len(chosen) < limit:
-        row = min(eligible, key=lambda row: (
-            tuple(map(tuple, requirements(row['keyword']))) in families,
-            row['reason_code'] != 'not_reported'))
+        eligible = [row for row in eligible if research_family(row['keyword']) not in families]
+        if not eligible:
+            break
+        row = min(eligible, key=lambda row: row['reason_code'] != 'not_reported')
         eligible.remove(row)
-        families.add(tuple(map(tuple, requirements(row['keyword']))))
+        families.add(research_family(row['keyword']))
         chosen.append({'keyword': row['keyword'], 'search_query': research_query(row['keyword']),
                        'reason': 'bounded_research_of_shortlist_uncertainty',
                        'shortlist_reason_code': row['reason_code']})

@@ -70,7 +70,7 @@ def test_all_rejected_shortlist_gets_distinct_new_pool_not_same_top_120(monkeypa
     assert offered[2] == [good]
     assert report['selected'][0]['keyword'] == good
     assert report['research_pool_size'] == 121
-    assert search.call_count == market.MAX_SHORTLIST_RESEARCH + 1
+    assert search.call_count == 2  # One uncertain memory question, then the new endorsed family.
     assert search.call_args.args == (good,)
 
 

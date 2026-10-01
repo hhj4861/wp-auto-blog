@@ -19,6 +19,44 @@ QUERIES = {
 }
 
 
+# Only typed, allowlisted codes cross the API boundary. Google error messages
+# and request URLs can contain credentials and must never enter reports.
+API_ERROR_CODES = {
+    'accessNotConfigured': 'api_not_enabled', 'SERVICE_DISABLED': 'api_not_enabled',
+    'API_KEY_SERVICE_BLOCKED': 'api_key_service_blocked',
+    'API_KEY_HTTP_REFERRER_BLOCKED': 'api_key_restricted',
+    'API_KEY_IP_ADDRESS_BLOCKED': 'api_key_restricted',
+    'ipRefererBlocked': 'api_key_restricted', 'keyInvalid': 'api_key_invalid',
+    'API_KEY_INVALID': 'api_key_invalid', 'quotaExceeded': 'quota_exceeded',
+    'dailyLimitExceeded': 'daily_quota_exceeded', 'rateLimitExceeded': 'rate_limit_exceeded',
+    'userRateLimitExceeded': 'rate_limit_exceeded', 'forbidden': 'forbidden',
+    'badRequest': 'invalid_request', 'invalidParameter': 'invalid_request',
+}
+
+
+def api_failure(response, error, endpoint):
+    status = getattr(response, 'status_code', None)
+    status = status if type(status) is int and 100 <= status <= 599 else None
+    code = ('timeout' if isinstance(error, requests.Timeout) else
+            'network_error' if isinstance(error, requests.RequestException) and status is None else
+            'http_error' if status is not None and status >= 400 else 'invalid_response')
+    if response is not None and status is not None and status >= 400:
+        try:
+            body = response.json()
+            detail = body.get('error', {}) if isinstance(body, dict) else {}
+            reasons = []
+            if isinstance(detail, dict):
+                for field in ('details', 'errors'):
+                    rows = detail.get(field, [])
+                    for row in rows[:20] if isinstance(rows, list) else []:
+                        if isinstance(row, dict) and isinstance(row.get('reason'), str):
+                            reasons.append(row['reason'])
+            code = next((API_ERROR_CODES[reason] for reason in reasons if reason in API_ERROR_CODES), code)
+        except (ValueError, TypeError, AttributeError):
+            pass
+    return {'endpoint': endpoint, 'code': code, 'http_status': status}
+
+
 def _compact(value):
     return re.sub(r'\s+', '', value).casefold()
 
@@ -34,10 +72,13 @@ def discover(category, now, call_llm):
         return [], audit
     since = now - timedelta(days=90)
     videos = {}
+    response = None
+    endpoint = 'search'
     try:
         # Two fixed category queries and one statistics batch; no pagination/scraping.
         ids = set()
         for query in QUERIES[category]:
+            response = None
             response = requests.get(API + 'search', params={'key': key, 'part': 'snippet',
                 'type': 'video', 'q': query, 'order': 'viewCount', 'regionCode': 'KR',
                 'relevanceLanguage': 'ko', 'publishedAfter': since.isoformat(),
@@ -48,6 +89,8 @@ def discover(category, now, call_llm):
                 if isinstance(video_id, str) and re.fullmatch(r'[A-Za-z0-9_-]{11}', video_id):
                     ids.add(video_id)
         if ids:
+            endpoint = 'videos'
+            response = None
             response = requests.get(API + 'videos', params={'key': key, 'part': 'snippet,statistics',
                 'id': ','.join(sorted(ids)), 'maxResults': 50}, timeout=15)
             response.raise_for_status()
@@ -76,8 +119,9 @@ def discover(category, now, call_llm):
             ranked.append(video)
             channels[channel] = channels.get(channel, 0) + 1
         audit['videos'] = ranked[:10]
-    except (requests.RequestException, ValueError, TypeError, AttributeError):
+    except (requests.RequestException, ValueError, TypeError, AttributeError) as error:
         audit['status'] = 'api_unavailable'
+        audit['error'] = api_failure(response, error, endpoint)
         return [], audit
     if not audit['videos']:
         audit['status'] = 'no_recent_videos'

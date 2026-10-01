@@ -1142,6 +1142,8 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     offered = set()
     not_proposed = set()
     uncertain_pending = set()
+    fallback_researched = []
+    family_deferred = set()
     unresearched = set()
     executed_queries = {}
     proposal_rounds = []
@@ -1159,7 +1161,15 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         if category == '리뷰' and shortlist_research_attempts >= MAX_SHORTLIST_RESEARCH:
             unresearched.update(uncertain_pending - seen)
             not_proposed.update(uncertain_pending)
-        available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed]
+        # Name-only uncertainty must not consume the remaining budget on brand
+        # variants of a buying question already researched in this run. This is
+        # a scheduling deferral, not a negative verdict or persistent cooldown.
+        if category == '리뷰':
+            researched_families = {review_discovery.research_family(key) for key in fallback_researched}
+            family_deferred.update(norm(row['keyword']) for row in pool
+                if norm(row['keyword']) in uncertain_pending - seen
+                and review_discovery.research_family(row['keyword']) in researched_families)
+        available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed | family_deferred]
         # Re-measure other buying questions when the available pool is scarce.
         # Never reopen cooled-down failures, reuse seed volume, or force a shortlist.
         if category == '리뷰' and not available:
@@ -1186,10 +1196,14 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                         stats[key] = row
                         known.add(identity)
                         entry['added_count'] += 1
-                pool, retries, discovery_rejections = refresh_pool(seen | not_proposed, history_retry_keys)
+                pool, retries, discovery_rejections = refresh_pool(seen | not_proposed | family_deferred, history_retry_keys)
                 pool_keywords.update(norm(row['keyword']) for row in pool)
                 retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
-                available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed]
+                # New measurements can contain additional aliases of the same
+                # uncertain question; keep these out of this run's refill too.
+                family_deferred.update(norm(row['keyword']) for row in pool
+                    if review_discovery.research_family(row['keyword']) in researched_families)
+                available = [row for row in pool if norm(row['keyword']) not in seen | not_proposed | family_deferred]
                 entry.update(measured_count=len(extra), available_after=len(available))
                 replenishment.append(entry)
             if monotonic() - started >= MAX_RESEARCH_SECONDS:
@@ -1276,7 +1290,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 research_fallback = review_discovery.shortlist_research_candidates(
                     proposal_rounds[-1]['skipped'],
                     min(SHORTLIST_RESEARCH_PER_ROUND,
-                        MAX_SHORTLIST_RESEARCH - shortlist_research_attempts))
+                        MAX_SHORTLIST_RESEARCH - shortlist_research_attempts),
+                    researched=fallback_researched)
             proposal_rounds[-1]['research_fallback'] = research_fallback
             if not research_fallback:
                 not_proposed.update(norm(row['keyword']) for row in remaining)
@@ -1295,6 +1310,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 continue
             seen.add(norm(keyword))
             if research_fallback:
+                fallback_researched.append(keyword)
                 shortlist_research_attempts += 1
                 proposal_rounds[-1].setdefault('research_fallback_attempted', []).append(keyword)
             if not category_matches(keyword, category):
@@ -1464,6 +1480,10 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'search_review_diagnostics': search_review_diagnostics,
             'shortlist_research_attempts': shortlist_research_attempts,
             'unresearched_budget_keywords': sorted(unresearched),
+            'deferred_research_family_keywords': sorted(family_deferred),
+            'researched_fallback_families': [
+                {'products': list(family[0]), 'facets': list(family[1])}
+                for family in dict.fromkeys(review_discovery.research_family(key) for key in fallback_researched)],
             'analyst': 'codex_subscription',
             'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']
                                    else 'naver_related_keywords'),

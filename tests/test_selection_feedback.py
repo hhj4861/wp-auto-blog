@@ -226,7 +226,7 @@ def test_empty_shortlist_moves_to_unoffered_candidates(monkeypatch):
     monkeypatch.setattr(market, 'candidate_pool', lambda *_: list(stats.values()))
     report = market.select_category('리뷰', 1, [])
     assert set(offered[0]).isdisjoint(offered[1])
-    assert [market.norm(call.args[0]) for call in search.call_args_list] == [*keys[:2], keys[60]]
+    assert [market.norm(call.args[0]) for call in search.call_args_list] == [keys[0], keys[60]]
     assert report['selected'][0]['keyword'] == keys[60]
 
 

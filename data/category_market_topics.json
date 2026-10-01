@@ -11162,7 +11162,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-10-01T04:15:08.611440+00:00",
+    "selected_at": "2026-10-01T04:38:35.612675+00:00",
     "seeds": [
       "무선청소기흡입력",
       "공기청정기평수",
@@ -11180,14 +11180,197 @@
       "related_count": 0,
       "seed_lookup_failed_count": 0
     },
+    "shortlist_research_attempts": 3,
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 341,
-    "evaluated_candidates": 0,
+    "evaluated_candidates": 3,
     "research_pool_size": 18,
     "selected": [],
     "held": [],
-    "rejected": [],
+    "rejected": [
+      {
+        "keyword": "노트북램",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.lge.co.kr/upload/PC_HTML/P430_P530_UG_110427/help/ko-KR/ch06_s03_specification.html",
+              "title": "제품 규격 및 사양",
+              "excerpt_chars": 2176
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "category_mismatch"
+          }
+        }
+      },
+      {
+        "keyword": "가벼운무선청소기",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.lge.co.kr/product/vacuum-cleaners/a520wc",
+              "title": "LG 코드제로 A5 | A520WC | 청소기 | 생활가전 | 제품/소모품 | LG전자",
+              "excerpt_chars": 7912
+            },
+            {
+              "url": "https://www.samsung.com/sec/vacuum-cleaners/jet-vs70h18gxg-d2c/VS70H18GXG/",
+              "title": "제트 핏 침구 브러시 패키지 | VS70H18GXG | Samsung 대한민국",
+              "excerpt_chars": 7912
+            },
+            {
+              "url": "https://www.samsung.com/sec/vacuum-cleaners/bespoke-jet-vs28d950ac-d2c/VS28D950ACB/",
+              "title": "Bespoke AI 제트 Lite 280W | VS28D950ACB | Samsung 대한민국",
+              "excerpt_chars": 7912
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "insufficient_search_intent"
+          }
+        }
+      },
+      {
+        "keyword": "LG공기청정기필터",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 15000,
+        "organic_provider": "codex_native_search",
+        "organic_query": "LG공기청정기필터",
+        "organic_results": [
+          {
+            "url": "https://www.lge.co.kr/m/sch?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=product",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "가전구독(검색결과 갯수22)소모품(검색결과 갯수96)"
+          },
+          {
+            "url": "https://www.lge.co.kr/sch?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=all",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "최근 검색 기록이 없습니다. ... * 가전구독(검색결과 갯수22) ... * LG소식"
+          },
+          {
+            "url": "https://www.lge.co.kr/search?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=disposable",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "최근 검색 기록이 없습니다. ... * 가전구독(검색결과 갯수23)"
+          },
+          {
+            "url": "https://www.lge.co.kr/m/sch?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=all",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "가전구독(검색결과 갯수26)소모품(검색결과 갯수102)"
+          },
+          {
+            "url": "https://www.lge.co.kr/m/sch?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=disposable",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "가전구독(검색결과 갯수22)소모품(검색결과 갯수96)선택됨"
+          },
+          {
+            "url": "https://www.lge.co.kr/m/sch?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=subscribe",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "가전구독(검색결과 갯수22)선택됨소모품(검색결과 갯수95)"
+          },
+          {
+            "url": "https://www.lge.co.kr/m/search?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=subscribe",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "최근 검색 기록이 없습니다. ... * 가전구독(검색결과 갯수21)선택됨"
+          },
+          {
+            "url": "https://www.lge.co.kr/kr/ebook/2025/november/b2b/catImage/613/20251112_b2b_catalogue.pdf",
+            "domain": "www.lge.co.kr",
+            "title": "다양한 주거공간을 위한 최적의 솔루션,",
+            "snippet": "<td>탈취필터<br>실내 공간의 냄새 제거</td> ... [케어서비스] * 시스템에어컨 구독 후, 공기청정기 추가 구입에 대해서는 케어서비스 대상이 아닙니다. ... [공기청정기필터] * PM1.0 0.1㎛ 크기 초미세먼지 /"
+          },
+          {
+            "url": "https://www.lge.co.kr/search?keyword=%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0%ED%95%84%ED%84%B0&tab=subscribe",
+            "domain": "www.lge.co.kr",
+            "title": "LG 공기청정기필터 검색결과 | LG전자",
+            "snippet": "최근 검색 기록이 없습니다. ... * 가전구독(검색결과 갯수21)선택됨 ... * LG소식"
+          },
+          {
+            "url": "https://www.lge.co.kr/kr/ebook/2025/july/b2b/catImage/592/20250708_b2b_catalogue.pdf",
+            "domain": "www.lge.co.kr",
+            "title": "LG WHISEN 시스템에어컨",
+            "snippet": "LG WHISEN 시스템에어컨 ... 5단계 청정관리 바람이 들어오는 프리필터부터 내보내는 팬까지 바람이 지나는 모든 길을 청정하게 관리합니다. ... - CAC 인증 대용량 공기청정 ※ CAC"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "LG공기청정기필터",
+          "executed_query": "LG공기청정기필터",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-01T04:38:35.612675+00:00",
+          "raw_sha256": "b44867eefac155782d1304ab53ca614fcd485dd1c51f030330f6ce5a8ae8ebac",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "가전구독(검색결과 갯수22)소모품(검색결과 갯수96)"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "최근 검색 기록이 없습니다."
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "최근 검색 기록이 없습니다."
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "가전구독(검색결과 갯수26)소모품(검색결과 갯수102)"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "가전구독(검색결과 갯수22)소모품(검색결과 갯수96)선택됨"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "가전구독(검색결과 갯수22)선택됨소모품(검색결과 갯수95)"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "최근 검색 기록이 없습니다."
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "[공기청정기필터] * PM1.0 0.1㎛ 크기 초미세먼지"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "최근 검색 기록이 없습니다."
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "LG WHISEN 시스템에어컨"
+            }
+          ]
+        }
+      }
+    ],
     "excluded_keywords": [],
     "deferred_keywords": [
       "가벼운청소기",
@@ -12574,7 +12757,7 @@
           "가벼운무선청소기"
         ],
         "proposals": [],
-        "measured_fallback": false,
+        "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
           {
@@ -12584,7 +12767,7 @@
           },
           {
             "keyword": "노트북램",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12592,6 +12775,24 @@
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "노트북램",
+            "search_query": "노트북램",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "not_reported"
+          },
+          {
+            "keyword": "가벼운무선청소기",
+            "search_query": "가벼운무선청소기",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "not_reported"
+          }
+        ],
+        "research_fallback_attempted": [
+          "노트북램",
+          "가벼운무선청소기"
         ]
       },
       {
@@ -12614,17 +12815,17 @@
           "노트북SSD추가"
         ],
         "proposals": [],
-        "measured_fallback": false,
+        "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
           {
             "keyword": "LG공기청정기필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "삼성공기청정기필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12634,12 +12835,12 @@
           },
           {
             "keyword": "엘지공기청정기필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "LG퓨리케어필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12649,27 +12850,27 @@
           },
           {
             "keyword": "LG퓨리케어공기청정기필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "엘지퓨리케어필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "LG퓨리케어360필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "퓨리케어필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "퓨리케어공기청정기필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12679,12 +12880,12 @@
           },
           {
             "keyword": "삼성큐브공기청정기필터",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "삼성노트북배터리",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12692,13 +12893,67 @@
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "LG공기청정기필터",
+            "search_query": "LG공기청정기필터",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "purchase_intent_unclear"
+          }
+        ],
+        "research_fallback_attempted": [
+          "LG공기청정기필터"
         ]
       }
     ],
     "ranked_candidates": [],
-    "candidate_decisions": [],
+    "candidate_decisions": [
+      {
+        "keyword": "노트북램",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 1500,
+        "organic_query": "노트북램"
+      },
+      {
+        "keyword": "가벼운무선청소기",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 2590,
+        "organic_query": "가벼운무선청소기"
+      },
+      {
+        "keyword": "LG공기청정기필터",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 15000,
+        "organic_query": "LG공기청정기필터"
+      }
+    ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "가벼운무선청소기",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-01T04:38:35.612675+00:00",
+        "retry_after": "2026-10-08T04:38:35.612675+00:00",
+        "attempts": 2
+      },
+      {
+        "keyword": "노트북램",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-01T04:38:35.612675+00:00",
+        "retry_after": "2026-10-08T04:38:35.612675+00:00",
+        "attempts": 2
+      },
+      {
+        "keyword": "LG공기청정기필터",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-01T04:38:35.612675+00:00",
+        "retry_after": "2026-10-02T04:38:35.612675+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "가벼운청소기",
         "reason_code": "source_coverage",
@@ -12718,13 +12973,6 @@
         "reason_code": "intent_mismatch",
         "failed_at": "2026-09-30T08:10:36.226726+00:00",
         "retry_after": "2026-10-07T08:10:36.226726+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "가벼운무선청소기",
-        "reason_code": "temporary_failure",
-        "failed_at": "2026-09-30T08:10:36.226726+00:00",
-        "retry_after": "2026-09-30T14:10:36.226726+00:00",
         "attempts": 1
       },
       {
@@ -12774,13 +13022,6 @@
         "reason_code": "source_coverage",
         "failed_at": "2026-09-29T04:50:18.601774+00:00",
         "retry_after": "2026-10-02T04:50:18.601774+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "노트북램",
-        "reason_code": "search_quality",
-        "failed_at": "2026-09-29T04:50:18.601774+00:00",
-        "retry_after": "2026-09-30T04:50:18.601774+00:00",
         "attempts": 1
       },
       {

@@ -75,6 +75,30 @@ def shortlist_skips(remaining, candidates, response):
              'kind': 'model_shortlist_opinion'} for row in remaining if row['keyword'] not in proposed]
 
 
+def shortlist_research_candidates(skipped, limit):
+    """Investigate uncertainty, never turn a name-only opinion into approval.
+
+    Call only for a well-formed, empty shortlist. Inputs have already passed
+    measured demand, category, duplicate and cooldown filters. Prefer missing
+    opinions and spread a small research budget across product/facet families.
+    """
+    eligible = [row for row in skipped
+                if row['reason_code'] in {'not_reported', 'purchase_intent_unclear',
+                                          'insufficient_specificity'}
+                and not discovery_issue(row['keyword'])]
+    chosen, families = [], set()
+    while eligible and len(chosen) < limit:
+        row = min(eligible, key=lambda row: (
+            tuple(map(tuple, requirements(row['keyword']))) in families,
+            row['reason_code'] != 'not_reported'))
+        eligible.remove(row)
+        families.add(tuple(map(tuple, requirements(row['keyword']))))
+        chosen.append({'keyword': row['keyword'], 'search_query': row['keyword'],
+                       'reason': 'bounded_research_of_shortlist_uncertainty',
+                       'shortlist_reason_code': row['reason_code']})
+    return chosen
+
+
 def compact(value):
     return re.sub(r'[^가-힣a-z0-9]', '', unicodedata.normalize('NFKC', value if isinstance(value, str) else '').lower())
 

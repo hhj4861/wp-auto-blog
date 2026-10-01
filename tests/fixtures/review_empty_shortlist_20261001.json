@@ -1,0 +1,137 @@
+{
+  "selected_at": "2026-10-01T01:27:25.305638+00:00",
+  "measured_candidates": 341,
+  "evaluated_candidates": 0,
+  "research_stop_reason": "pool_exhausted",
+  "proposal_rounds": [
+    {
+      "round": 1,
+      "offered_keywords": [
+        "청소기필터",
+        "노트북램",
+        "가벼운무선청소기"
+      ],
+      "proposals": [],
+      "measured_fallback": false,
+      "no_eligible_proposal": true,
+      "skipped": [
+        {
+          "keyword": "청소기필터",
+          "reason_code": "purchase_intent_unclear",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "노트북램",
+          "reason_code": "not_reported",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "가벼운무선청소기",
+          "reason_code": "not_reported",
+          "kind": "model_shortlist_opinion"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "offered_keywords": [
+        "LG공기청정기필터",
+        "삼성공기청정기필터",
+        "공기청정기필터",
+        "엘지공기청정기필터",
+        "LG퓨리케어필터",
+        "노트북SSD",
+        "LG퓨리케어공기청정기필터",
+        "엘지퓨리케어필터",
+        "LG퓨리케어360필터",
+        "퓨리케어필터",
+        "퓨리케어공기청정기필터",
+        "LG공기청정기필터교체",
+        "삼성큐브공기청정기필터",
+        "삼성노트북배터리",
+        "노트북SSD추가"
+      ],
+      "proposals": [],
+      "measured_fallback": false,
+      "no_eligible_proposal": true,
+      "skipped": [
+        {
+          "keyword": "LG공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "삼성공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "엘지공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "노트북SSD",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "엘지퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG퓨리케어360필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "퓨리케어필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "퓨리케어공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "LG공기청정기필터교체",
+          "reason_code": "maintenance_intent",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "삼성큐브공기청정기필터",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "삼성노트북배터리",
+          "reason_code": "insufficient_specificity",
+          "kind": "model_shortlist_opinion"
+        },
+        {
+          "keyword": "노트북SSD추가",
+          "reason_code": "category_mismatch",
+          "kind": "model_shortlist_opinion"
+        }
+      ]
+    }
+  ],
+  "run_url": "https://github.com/hhj4861/wp-auto-blog/actions/runs/36801143479"
+}

@@ -68,6 +68,8 @@ CATEGORY_TERMS = {
 SOURCE = 'category_market_v1'
 PROCESS_VERSION = 6
 MAX_RESEARCH_ROUNDS = 4
+MAX_SHORTLIST_RESEARCH = 3
+SHORTLIST_RESEARCH_PER_ROUND = 2
 PROPOSALS_PER_ROUND = 6
 MAX_RESEARCH_SECONDS = 25 * 60
 MAX_HISTORY_RETRIES = 2
@@ -1061,6 +1063,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     not_proposed = set()
     executed_queries = {}
     proposal_rounds = []
+    shortlist_research_attempts = 0
     recovery_budget = {'attempts': 0}
     rounds = 0
     stop_reason = 'round_limit'
@@ -1173,9 +1176,22 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                                    remaining, candidates[:PROPOSALS_PER_ROUND], proposals)})
         not_proposed.update(norm(row['keyword']) for row in proposal_rounds[-1]['skipped']
                             if row['reason_code'] != 'not_reported')
+        research_fallback = []
         if no_proposal:
             not_proposed.update(norm(row['keyword']) for row in remaining)
-            continue
+            # Only an explicitly empty, well-formed shortlist can trigger this.
+            # Malformed responses and invented/invalid proposals must not be
+            # reinterpreted as an empty shortlist.
+            if category == '리뷰' and isinstance(proposals, dict) and proposals.get('candidates') == []:
+                research_fallback = review_discovery.shortlist_research_candidates(
+                    proposal_rounds[-1]['skipped'],
+                    min(SHORTLIST_RESEARCH_PER_ROUND,
+                        MAX_SHORTLIST_RESEARCH - shortlist_research_attempts))
+            proposal_rounds[-1]['research_fallback'] = research_fallback
+            if not research_fallback:
+                continue
+            candidates = research_fallback
+            proposal_rounds[-1]['measured_fallback'] = True
         attempted_before = len(seen)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
             if monotonic() - started >= MAX_RESEARCH_SECONDS:
@@ -1186,6 +1202,9 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 rejected.append({'keyword': str(keyword), 'reason': 'invalid or repeated measured keyword'})
                 continue
             seen.add(norm(keyword))
+            if research_fallback:
+                shortlist_research_attempts += 1
+                proposal_rounds[-1].setdefault('research_fallback_attempted', []).append(keyword)
             if not category_matches(keyword, category):
                 rejected.append({'keyword': keyword, 'reason': 'category mismatch'})
                 continue
@@ -1328,6 +1347,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
     report = {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
+            'shortlist_research_attempts': shortlist_research_attempts,
             'analyst': 'codex_subscription',
             'discovery_provider': ('naver_related_keywords_and_cak_export' if cak_import['direct_count']
                                    else 'naver_related_keywords'),

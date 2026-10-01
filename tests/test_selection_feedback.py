@@ -203,7 +203,7 @@ def test_third_round_can_find_valid_topic_after_twelve_failures(monkeypatch):
     assert report['research_stop_reason'] == 'selection_target'
 
 
-@pytest.mark.parametrize('shortlist', [lambda _: {'candidates': []},
+@pytest.mark.parametrize('shortlist', [lambda _: {'candidates': None},
                                      lambda _: {'candidates': [{'keyword': 'unmeasured invented keyword'}]}])
 def test_bad_shortlist_does_not_force_publish_or_research_unendorsed_candidates(monkeypatch, shortlist):
     keys = ['노트북램비교', '무선청소기흡입력비교']
@@ -226,7 +226,7 @@ def test_empty_shortlist_moves_to_unoffered_candidates(monkeypatch):
     monkeypatch.setattr(market, 'candidate_pool', lambda *_: list(stats.values()))
     report = market.select_category('리뷰', 1, [])
     assert set(offered[0]).isdisjoint(offered[1])
-    search.assert_called_once_with(keys[60])
+    assert [call.args[0] for call in search.call_args_list] == [*keys[:2], keys[60]]
     assert report['selected'][0]['keyword'] == keys[60]
 
 

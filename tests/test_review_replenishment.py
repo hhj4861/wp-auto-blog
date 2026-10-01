@@ -45,13 +45,16 @@ def test_recorded_96_candidate_failure_can_refill_without_clearing_31_failures(m
     assert report['selected'][0]['monthly_search'] == stats[good]['monthly']
     assert market.fresh_market_item(report['selected'][0], '리뷰')
     assert market.enqueue_report([], report)[0]['keyword'] == good
-    assert report['failure_history'] == history
+    assert all(row in report['failure_history'] for row in history)
+    assert len(report['failure_history']) == len(history) + 2
     assert len(report['deferred_keywords']) == 31
     assert len(report['deferred_measured_keywords']) == 15
     assert report['proposal_rounds'][0]['skipped'][0]['reason_code'] == 'purchase_intent_unclear'
     assert report['discovery_replenishment'][0]['available_after'] == 1
     assert good not in offered[0] and good in offered[1]
-    search.assert_called_once_with(good)
+    searched = [call.args[0] for call in search.call_args_list]
+    assert len(searched) == 3 and searched[-1] == good and '청소기필터' in searched
+    assert not set(searched) & set(historical)
     assert demand.call_count == 2
 
 
@@ -67,7 +70,8 @@ def test_all_rejected_shortlist_gets_distinct_new_pool_not_same_top_120(monkeypa
     assert offered[2] == [good]
     assert report['selected'][0]['keyword'] == good
     assert report['research_pool_size'] == 121
-    search.assert_called_once_with(good)
+    assert search.call_count == market.MAX_SHORTLIST_RESEARCH + 1
+    assert search.call_args.args == (good,)
 
 
 def test_refilled_candidate_still_needs_full_source_and_search_review(monkeypatch):
@@ -90,7 +94,7 @@ def test_expansion_exhaustion_stops_without_forcing_or_inventing_demand(monkeypa
     assert len(report['discovery_replenishment']) == 3
     assert offered == [[key]]
     assert report['proposal_rounds'][0]['skipped'][0]['reason_code'] == 'not_reported'
-    search.assert_not_called()
+    search.assert_called_once_with(key)
     with pytest.raises(RuntimeError):
         market.enqueue_report([], report)
 

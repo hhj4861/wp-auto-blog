@@ -147,6 +147,8 @@ def compact(value):
 def numeric_constraints(text):
     text = unicodedata.normalize('NFKC', text if isinstance(text, str) else '').lower()
     text = re.sub(r'(ddr[345])(?=\d)', r'\1 ', text)
+    # Compact Korean memory queries use DDR416G for DDR4 16 GB.
+    text = re.sub(r'(ddr[345]\s+\d+)g(?![a-z])', r'\1gb', text)
     def numbers(pattern):
         return {(str(float(n)).removesuffix('.0'), unit) for n, unit in re.findall(pattern, text)}
     capacity = numbers(r'(?<![\d.])(\d+(?:\.\d+)?)\s*(tb|gb|테라(?:바이트)?|기가(?:바이트)?)(?![a-z])')
@@ -230,7 +232,8 @@ def preferred_source_domains(keyword):
         return [domain for domain in domains
                 if not brands or any(domain == brand or domain.endswith('.' + brand) for brand in brands)]
     if '램' in requirements(keyword)[0]:
-        return ['semiconductor.samsung.com', 'kingston.com']
+        return [domain for domain in ('semiconductor.samsung.com', 'kingston.com')
+                if not brands or any(domain == brand or domain.endswith('.' + brand) for brand in brands)]
     if brands:
         return [domain for _, domains in BRAND_DOMAINS for domain in domains if domain in brands]
     return []

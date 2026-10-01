@@ -45,6 +45,7 @@ def source(body, title='제품 사양'):
     ('17인치노트북', '노트북 16인치 화면 상세', False),
     ('DDR416GB', 'DDR4 memory 16 GB', True), ('DDR416GB', 'DDR4 memory 8 GB', False),
     ('DDR416GB', 'DDR5 memory 16 GB', False),
+    ('DDR416G', 'DDR4 memory 16 GB', True), ('DDR416G', 'DDR4 memory 8 GB', False),
 ])
 def test_fetched_body_must_support_requested_constraint(key, body, accepted):
     assert review.relevant_source(key, source(body, title=key)) is accepted
@@ -143,3 +144,46 @@ def test_demand_probe_workflow_cannot_run_model_or_publication_jobs():
         if name != 'demand-check': assert 'inputs.demand_check_only != true' in job['if']
     env = [step['env'] for step in jobs['demand-check']['steps'] if 'env' in step]
     assert len(env) == 1 and set(env[0]) == {'NAVER_AD_CUSTOMER_ID','NAVER_AD_API_KEY','NAVER_AD_SECRET_KEY'}
+
+
+def test_memory_source_domains_respect_named_brand():
+    assert review.preferred_source_domains('삼성DDR416GB') == ['semiconductor.samsung.com']
+    assert review.preferred_source_domains('킹스톤DDR416GB') == ['kingston.com']
+
+
+@pytest.mark.parametrize('outcome', ['below_floor', 'empty', 'lookup_failure'])
+def test_adaptive_refill_cannot_borrow_volume_or_loop_after_failure(monkeypatch, outcome):
+    real_demand = market.demand_candidates
+    install_refills(monkeypatch, [], [])
+    for name in ('NAVER_AD_CUSTOMER_ID', 'NAVER_AD_API_KEY', 'NAVER_AD_SECRET_KEY'):
+        monkeypatch.setenv(name, 'test-only')
+    proposal = Mock(return_value=(['SSD1TB'], {'status': 'proposed',
+        'seeds': [{'seed': 'SSD1TB', 'status': 'unmeasured'}], 'measured': []}))
+    monkeypatch.setattr(explore, 'propose', proposal)
+    def lookup(seed):
+        if seed != 'SSD1TB': return [{'keyword': 'SSD', 'monthly': 90000}]
+        if outcome == 'lookup_failure': raise OSError('private provider error')
+        return [{'keyword': 'SSD1TB', 'monthly': 499}] if outcome == 'below_floor' else []
+    lookup_mock = Mock(side_effect=lookup)
+    monkeypatch.setattr(market, 'fetch_keyword_stats', lookup_mock)
+    monkeypatch.setattr(market, 'demand_candidates', real_demand)
+    report = market.select_category('리뷰', 1, [])
+    assert not report['selected'] and report['research_stop_reason'] == 'pool_exhausted'
+    proposal.assert_called_once()
+    assert [call.args for call in lookup_mock.call_args_list].count(('SSD1TB',)) == 1
+    assert 'private provider error' not in json.dumps(report)
+    with pytest.raises(RuntimeError): market.enqueue_report([], report)
+
+
+def test_adaptive_generation_deadline_prevents_demand_and_research(monkeypatch):
+    _, search, _, demand = install_refills(monkeypatch, [], [])
+    elapsed = [0]
+    monkeypatch.setattr(market, 'monotonic', lambda: elapsed[0])
+    def propose(*args):
+        elapsed[0] = market.MAX_RESEARCH_SECONDS + 1
+        return ['SSD1TB'], {'status': 'proposed', 'seeds': [], 'measured': []}
+    monkeypatch.setattr(explore, 'propose', propose)
+    report = market.select_category('리뷰', 1, [])
+    assert report['research_stop_reason'] == 'time_budget'
+    demand.assert_called_once()
+    search.assert_not_called()

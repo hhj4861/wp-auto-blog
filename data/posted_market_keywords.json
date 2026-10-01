@@ -303,5 +303,26 @@
     "trend_status": "unavailable",
     "demand_provider": "naver_searchad_pc_mobile",
     "published_at": "2026-09-30T04:07:40.991451+00:00"
+  },
+  {
+    "key": "경력기술서",
+    "keyword": "경력기술서",
+    "topic": "경력기술서 양식과 작성법: 주요 업무·역할·성과 정리",
+    "category": "취업",
+    "post_id": 1790,
+    "url": "https://trendpulse.blog/career-description-writing/",
+    "selection_version": 6,
+    "monthly_search": 5660,
+    "score": 68.68,
+    "score_components": {
+      "demand": 30.02,
+      "organic_opportunity": 19.6,
+      "trend": 4.06,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-01T13:37:48.586947+00:00"
   }
 ]

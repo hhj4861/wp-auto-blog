@@ -50,7 +50,7 @@ def build_report(ledger, query, inspect, now=None, *, on_progress=None, time_bud
             raise ValueError('Invalid published keyword ledger') from None
         seen.add(item['url'])
         row = {key: item.get(key) for key in ('keyword', 'category', 'post_id', 'url', 'published_at',
-            'selection_version', 'monthly_search', 'score', 'score_components', 'trend_status')}
+            'selection_version', 'monthly_search', 'score', 'score_components', 'trend_status', 'youtube_discovery')}
         row.update(age_days=age, windows={}, index={'status': 'not_checked'})
         reports.append(row)
         filters = [{'dimension': 'page', 'operator': 'equals', 'expression': item['url']}]

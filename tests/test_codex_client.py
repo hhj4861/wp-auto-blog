@@ -6,7 +6,7 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from src.codex_client import CodexSubscriptionClient, failure_reason
+from src.codex_client import CodexSubscriptionClient, CodexRequestError, failure_reason
 from src.content_generator import ContentConfig, ContentGenerator, LLMProvider
 
 
@@ -87,10 +87,10 @@ def test_subscription_errors_never_fall_back_to_paid_api(client, monkeypatch):
     generator = ContentGenerator.__new__(ContentGenerator)
     generator.config = ContentConfig(provider=LLMProvider.CODEX)
     generator._codex_client = MagicMock()
-    generator._codex_client.generate.side_effect = RuntimeError("usage limit")
+    generator._codex_client.generate.side_effect = CodexRequestError(1, "usage limit")
     for name in ("_call_openai", "_call_gemini", "_call_claude_agent_sdk"):
         monkeypatch.setattr(generator, name, MagicMock(side_effect=AssertionError("unexpected fallback")))
-    with pytest.raises(RuntimeError, match="usage limit"):
+    with pytest.raises(RuntimeError, match="usage_limit"):
         generator._call_llm("prompt")
     generator._call_openai.assert_not_called()
     generator._call_gemini.assert_not_called()

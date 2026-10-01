@@ -122,3 +122,21 @@ def test_progress_is_written_before_a_query_can_be_interrupted():
                      on_progress=lambda value: snapshots.append(str(value)))
     assert 'query_pending' in snapshots[-1]
     assert 'industrial-engineer-exam-2026' in snapshots[-1]
+
+
+def test_discovery_provenance_survives_publication_and_readonly_performance_report(tmp_path, monkeypatch):
+    import json
+    from src import market_topics as market
+    now = datetime.now(timezone.utc)
+    provenance = {'relationship': 'related_seed', 'seed': '모니터',
+                  'video_id': 'abcdefghijk', 'checked_at': now.isoformat()}
+    item = {'keyword': '모니터주사율', 'topic': '모니터주사율 선택 기준', 'category': '리뷰',
+            'youtube_discovery': provenance, 'monthly_search': 1230}
+    monkeypatch.setattr(market, 'LEDGER', tmp_path / 'ledger.json')
+    market.record_published_keyword(item, 99, 'https://trendpulse.blog/synthetic-monitor-guide/')
+    saved = json.loads(market.LEDGER.read_text())
+    report = build_report(saved, Mock(), Mock(), now)
+    row = report['posts'][0]
+    assert row['youtube_discovery'] == provenance and row['monthly_search'] == 1230
+    assert row['windows']['7']['metrics'] is None
+    assert row['url'] == 'https://trendpulse.blog/synthetic-monitor-guide/'

@@ -74,11 +74,11 @@ def test_codex_uses_one_bounded_call_and_writer_configuration(
 def test_codex_unclear_response_fails_closed_without_raw_output(codex_pipeline, answer):
     pipeline, client, factory, log = codex_pipeline
     client.generate.return_value = answer
-    with pytest.raises(RuntimeError, match='^Codex topic review unavailable$'):
+    with pytest.raises(RuntimeError, match='^Codex topic review unavailable: invalid_schema$'):
         pipeline._is_duplicate('새 주제')
-    client.generate.assert_called_once()
+    assert client.generate.call_count == 2
     factory.assert_called_once()
-    log.warning.assert_called_once_with('Codex topic review unavailable')
+    log.warning.assert_called_once_with('Codex topic review unavailable: %s', 'invalid_schema')
     assert 'private-model-response' not in str(log.mock_calls)
     pipeline._check_duplicate_keywords.assert_not_called()
     pipeline._process_topic.assert_not_called()
@@ -94,7 +94,7 @@ def test_codex_failures_are_fixed_and_never_retry(codex_pipeline, error, during_
     (factory if during_init else client.generate).side_effect = error
     with pytest.raises(RuntimeError) as caught:
         pipeline._is_duplicate('새 주제')
-    assert str(caught.value) == 'Codex topic review unavailable'
+    assert str(caught.value) == 'Codex topic review unavailable: unexpected_error'
     assert caught.value.__suppress_context__ is True
     assert 'Duplicate' not in str(caught.value)
     assert 'private-' not in str(log.mock_calls)

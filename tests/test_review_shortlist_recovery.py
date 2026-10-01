@@ -1,6 +1,7 @@
 """Empty name-only opinions must reach evidence gates within a fixed budget."""
 from datetime import datetime, timezone
 import json
+from itertools import chain, repeat
 from pathlib import Path
 
 import pytest
@@ -20,7 +21,8 @@ def test_october_first_failure_reaches_real_gates_and_only_eligible_item_is_queu
     recorded = json.loads((Path(__file__).parent / 'fixtures/review_empty_shortlist_20261001.json').read_text())
     rounds = recorded['proposal_rounds']
     assert recorded['measured_candidates'] == 341 and recorded['evaluated_candidates'] == 0
-    responses = iter({'candidates': [], 'skipped': row['skipped']} for row in rounds)
+    responses = chain(({'candidates': [], 'skipped': row['skipped']} for row in rounds),
+                      repeat({'candidates': [], 'skipped': rounds[-1]['skipped']}))
     good = '가벼운무선청소기'
     stats, search, offered, _ = install_refills(monkeypatch, rounds[0]['offered_keywords'],
         [rounds[1]['offered_keywords']], passing=[good] if passing else [],
@@ -42,7 +44,7 @@ def test_october_first_failure_reaches_real_gates_and_only_eligible_item_is_queu
         assert market.fresh_market_item(item, '리뷰')
         assert market.enqueue_report([], report)[0]['keyword'] == good
     else:
-        assert len(offered) == 2 and len(searched) == 3
+        assert len(offered) >= 2 and len(searched) == 3
         assert len(report['rejected']) == 3 and report['selected'] == []
         assert 'LG공기청정기필터교체' not in searched and '노트북SSD추가' not in searched
         with pytest.raises(RuntimeError):

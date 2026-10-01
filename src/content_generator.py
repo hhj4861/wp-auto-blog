@@ -2584,7 +2584,8 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         """
         # Subscription selection is explicit: never silently switch billing/providers.
         if self.config.provider == LLMProvider.CODEX:
-            result = self._codex_client.generate(prompt)
+            from .analysis_runtime import validated_call
+            result = validated_call(self._codex_client.generate, prompt, label='writer')
             logger.info("Content generated using: Codex CLI (ChatGPT subscription)")
             return result
 

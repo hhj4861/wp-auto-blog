@@ -169,13 +169,21 @@ def review_article(title, html, description, brief, call_llm):
                       'sources': suitability_review.get('sources', []),
                       'current_relevance': suitability_review.get('current_relevance'),
                       'title': title, 'description': description, 'article': text}, ensure_ascii=False))
-    try:
-        raw = call_llm(prompt).strip()
-        result = json.loads(re.sub(r'^```(?:json)?\s*|\s*```$', '', raw))
+    from src.analysis_runtime import validated_call, parse_json, AnalysisError
+
+    def validate(raw):
+        result = parse_json(raw) if isinstance(raw, str) else raw
+        if not isinstance(result, dict) or type(result.get('covers_primary_intent')) is not bool:
+            raise ValueError('verdict')
         quote = result.get('answer_quote')
-        if (result.get('covers_primary_intent') is True and isinstance(quote, str)
-                and len(compact(quote)) >= 8 and compact(quote) in compact(answer_text)):
+        if result['covers_primary_intent'] and (not isinstance(quote, str)
+                or len(compact(quote)) < 8 or compact(quote) not in compact(answer_text)):
+            return False  # A well-formed but ungrounded opinion remains held.
+        return result['covers_primary_intent']
+
+    try:
+        if validated_call(call_llm, prompt, validate, label='article_intent'):
             return []
-    except Exception:
-        pass  # Neither model output nor provider exceptions belong in publication logs.
+    except AnalysisError as error:
+        return ['최종 검색 의도 심사 오류: ' + error.code]
     return ['최종 글이 검증된 검색어의 주된 질문에 답하는지 확인되지 않음']

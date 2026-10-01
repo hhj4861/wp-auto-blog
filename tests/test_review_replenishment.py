@@ -46,14 +46,14 @@ def test_recorded_96_candidate_failure_can_refill_without_clearing_31_failures(m
     assert market.fresh_market_item(report['selected'][0], '리뷰')
     assert market.enqueue_report([], report)[0]['keyword'] == good
     assert all(row in report['failure_history'] for row in history)
-    assert len(report['failure_history']) == len(history) + 2
+    assert len(report['failure_history']) == len(history) + 3
     assert len(report['deferred_keywords']) == 31
     assert len(report['deferred_measured_keywords']) == 15
     assert report['proposal_rounds'][0]['skipped'][0]['reason_code'] == 'purchase_intent_unclear'
     assert report['discovery_replenishment'][0]['available_after'] == 1
-    assert good not in offered[0] and good in offered[1]
+    assert good not in offered[0] and good in offered[-1]
     searched = [market.norm(call.args[0]) for call in search.call_args_list]
-    assert len(searched) == 3 and searched[-1] == good and '청소기필터' in searched
+    assert len(searched) == 4 and searched[-1] == good and '청소기필터' in searched
     assert not set(searched) & set(historical)
     assert demand.call_count == 2
 
@@ -209,6 +209,6 @@ def test_explicit_skips_retire_only_offered_candidates_and_never_selected_propos
                                         passing=[good], shortlist=shortlist)
     report = market.select_category('리뷰', 1, [])
     assert report['selected'][0]['keyword'] == good
-    assert len(offered) == 2 and offered[1] == [good]
+    assert offered == [[skipped, bad], [skipped], [good]]
     assert report['proposal_rounds'][0]['skipped'] == [
         {'keyword': skipped, 'reason_code': 'purchase_intent_unclear', 'kind': 'model_shortlist_opinion'}]

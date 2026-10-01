@@ -177,6 +177,8 @@ jobs:
           WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
 
+          # Recent video popularity discovers seeds; measured keyword demand remains required.
+          YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
           # 네이버 검색광고 API (키워드 수요 게이트)
           NAVER_AD_CUSTOMER_ID=${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY=${{ secrets.NAVER_AD_API_KEY }}
@@ -841,6 +843,8 @@ jobs:
           WP_GENERAL_USERNAME=${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD=${{ secrets.WP_GENERAL_APP_PASSWORD }}
 
+          # Recent video popularity discovers seeds; measured keyword demand remains required.
+          YOUTUBE_API_KEY=${{ secrets.YOUTUBE_API_KEY }}
           # 네이버 검색광고 API (키워드 수요 게이트)
           NAVER_AD_CUSTOMER_ID=${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY=${{ secrets.NAVER_AD_API_KEY }}

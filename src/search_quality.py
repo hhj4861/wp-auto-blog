@@ -185,7 +185,10 @@ def review_search(keyword, provider, results, checked_at, call_llm, *, executed_
             response = call_llm(prompt)
             if isinstance(response, str):
                 response = json.loads(re.sub(r'^```(?:json)?\s*|\s*```$', '', response.strip()))
-        except Exception:
+        except Exception as error:
+            from src.analysis_runtime import AnalysisError
+            if isinstance(error, AnalysisError):
+                raise
             raise SearchReviewError('model_review_failed') from None
         if not isinstance(response, dict):
             raise SearchReviewError('invalid_result_review')

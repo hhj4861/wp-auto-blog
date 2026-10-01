@@ -1047,12 +1047,19 @@ Return exactly DUPLICATE or NOT_DUPLICATE, without any reason or other text.
                     home=config.codex_home, model=config.model_codex,
                     timeout=min(config.codex_timeout, 60),
                 )
-                verdict = client.generate(codex_prompt).strip()
-                if verdict not in ("DUPLICATE", "NOT_DUPLICATE"):
-                    raise ValueError("invalid verdict")
-            except Exception:
-                logger.warning("Codex topic review unavailable")
-                raise RuntimeError("Codex topic review unavailable") from None
+                from src.analysis_runtime import validated_call
+                def validate_verdict(raw):
+                    verdict = raw.strip()
+                    if verdict not in ("DUPLICATE", "NOT_DUPLICATE"):
+                        raise ValueError("invalid verdict")
+                    return verdict
+                verdict = validated_call(client.generate, codex_prompt, validate_verdict,
+                                         label='duplicate_review')
+            except Exception as error:
+                from src.analysis_runtime import error_code
+                code = error_code(error)
+                logger.warning("Codex topic review unavailable: %s", code)
+                raise RuntimeError("Codex topic review unavailable: " + code) from None
             logger.info("Codex topic review completed")
             return verdict == "DUPLICATE"
 

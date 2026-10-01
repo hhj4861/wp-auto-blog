@@ -57,6 +57,13 @@ class CodexRequestError(RuntimeError):
         )
 
 
+class CodexResponseError(RuntimeError):
+    """Transport failures with safe, machine-readable codes."""
+    def __init__(self, reason, message):
+        self.reason = reason
+        super().__init__(message)
+
+
 def _research_url(value):
     """Accept public-looking web URLs; the fetcher must still check DNS/redirects."""
     if not isinstance(value, str) or not value or len(value) > 8192:
@@ -243,13 +250,13 @@ class CodexSubscriptionClient:
                 else:
                     process.kill()
                 process.communicate()
-                raise RuntimeError("Codex subscription request timed out; no provider fallback was attempted") from None
+                raise CodexResponseError("timeout", "Codex subscription request timed out; no provider fallback was attempted") from None
             if process.returncode:
                 stderr = captured[1] if isinstance(captured, tuple) and len(captured) == 2 else ''
                 raise CodexRequestError(process.returncode, stderr)
             result = output.read_text(encoding="utf-8").strip() if output.is_file() else ""
             if not result:
-                raise RuntimeError("Codex returned no final message")
+                raise CodexResponseError("empty_response", "Codex returned no final message")
             stdout = captured[0] if isinstance(captured, tuple) and len(captured) == 2 else ""
             if research:
                 searched, opened_urls, diagnostics = _research_activity(stdout)

@@ -30,7 +30,7 @@ from src import topic_suitability as suitability
 from src.market_opportunity import review_search
 from src.search_quality import SearchReviewError
 from src.topic_suitability import review_plan
-from src.search_query import validated_search_query
+from src.search_query import validated_search_query, resolved_search_query
 from src.selection_feedback import load_history, deferred_keywords
 from src import review_discovery, review_exploration
 from src.youtube_discovery import discover as discover_youtube
@@ -1260,6 +1260,7 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 search_query에는 같은 검색어를 자연스러운 한국어 띄어쓰기로 적으세요.
 예: 대상포진초기증상 → 대상포진 초기 증상, 전기기사시험일정 → 전기기사 시험 일정.
 ASCII 공백만 추가·제거할 수 있습니다. 문자·숫자·기호·대소문자를 바꾸거나 연도·설명·검색 연산자를 추가하면 안 됩니다.
+SSD1TB, DDR416G처럼 연속된 영문·숫자는 분리하지 말고 원문 그대로 두세요.
 keyword는 반드시 아래 실측 목록의 원문을 그대로 유지하세요. 검색량은 그 원래 keyword의 측정값입니다.
 부적합해서 선택하지 않은 후보는 skipped에 keyword와 reason_code를 기록하세요.
 reason_code는 purchase_intent_unclear, scope_too_broad, maintenance_intent, duplicate_intent,
@@ -1286,8 +1287,9 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                       'reason': proposal.get('reason', '')[:500] if isinstance(proposal.get('reason', ''), str) else ''}
             try:
                 proposed_query = proposal.get('search_query')
-                record['search_query'] = validated_search_query(proposal.get('keyword'),
-                    proposal.get('keyword') if proposed_query is None else proposed_query)
+                record['search_query'], query_error = resolved_search_query(proposal.get('keyword'), proposed_query)
+                if query_error:
+                    record.update(query_status='original_keyword_recovery', query_error=query_error)
             except ValueError:
                 record['query_status'] = 'invalid_search_query'
             proposed.append(record)
@@ -1340,7 +1342,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 continue
             try:
                 proposed_query = proposal.get('search_query')
-                query = validated_search_query(keyword, keyword if proposed_query is None else proposed_query)
+                query, _ = resolved_search_query(keyword, proposed_query)
             except ValueError:
                 rejected.append({'keyword': keyword, 'reason': 'invalid search query transformation'})
                 continue

@@ -164,3 +164,27 @@ def test_error_messages_never_include_model_text_or_source_quotes(raw, reason):
         validated_search_query('대상포진초기증상', raw)
     assert str(failure.value) == reason
     assert raw not in str(failure.value)
+
+
+@pytest.mark.parametrize('proposed', ['SSD 1TB', 'ssd1tb', 'SSD1TB site:evil.test',
+    'SSD1TB\nsecret', {'bad': 'shape'}, '', 'SSD1TB' + ' ' * 256])
+def test_invalid_proposal_recovers_original_without_relaxing_validator(proposed):
+    from src.search_query import resolved_search_query
+    with pytest.raises(ValueError) as error:
+        validated_search_query('SSD1TB', proposed)
+    query, reason = resolved_search_query('SSD1TB', proposed)
+    assert query == 'SSD1TB' and reason == str(error.value)
+    assert validated_search_query('SSD1TB', query) == query
+
+
+@pytest.mark.parametrize('keyword', [None, [], '', 'SSD\n1TB', 'a' * 257])
+def test_recovery_does_not_rescue_invalid_original(keyword):
+    from src.search_query import resolved_search_query
+    with pytest.raises(ValueError, match='^invalid_keyword$'):
+        resolved_search_query(keyword, 'SSD1TB')
+
+
+def test_recovery_keeps_valid_spaced_query_and_optional_original():
+    from src.search_query import resolved_search_query
+    assert resolved_search_query('시험준비물', '시험 준비물') == ('시험 준비물', None)
+    assert resolved_search_query('SSD1TB') == ('SSD1TB', None)

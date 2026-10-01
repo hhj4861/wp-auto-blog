@@ -49,3 +49,18 @@ def validated_search_query(keyword, proposed=None) -> str:
     if re.findall(r'[A-Za-z0-9]+', keyword) != re.findall(r'[A-Za-z0-9]+', query):
         raise ValueError('search_query_token_change')
     return query
+
+
+def resolved_search_query(keyword, proposed=None):
+    """Discard invalid model rewrites; research only the measured original.
+
+    Callers must first bind keyword to the eligible measured pool. This does not
+    relax validation of cached evidence or allow the proposed invalid text to be
+    executed. An invalid original still raises. The second return value is a
+    fixed validation code, never the rejected model text.
+    """
+    original = validated_search_query(keyword)
+    try:
+        return validated_search_query(keyword, proposed), None
+    except ValueError as error:
+        return original, str(error)

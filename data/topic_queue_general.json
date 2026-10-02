@@ -11422,7 +11422,7 @@
     "keywords": [
       "엑셀틀고정"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "엑셀틀고정",
@@ -13340,6 +13340,640 @@
       }
     },
     "score": 75.91,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "엑셀틀고정",
+    "category": "생산성",
+    "topic": "엑셀틀고정 방법: 첫 행·열부터 여러 행·열 동시 고정과 해제까지",
+    "intent": "스크롤해도 제목 행과 열을 표시하려면 어떤 셀을 선택하고 어떻게 틀을 고정하거나 해제하나요?",
+    "gap": "고정 범위별 기준 셀 예시표와 설정·해제 절차, Mac에서 고정 버튼이 회색일 때 확인할 항목을 제공합니다.",
+    "source_url": "https://support.microsoft.com/ko-kr/excel/get-started/freeze-panes-to-lock-rows-and-columns",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/get-started/freeze-panes-to-lock-rows-and-columns",
+        "original_url": "https://support.microsoft.com/ko-kr/excel/get-started/freeze-panes-to-lock-rows-and-columns",
+        "title": "틀을 고정하여 행과 열 잠그기 | Microsoft Support",
+        "checked_on": "2026-10-02",
+        "sha256": "fbb5882273b0b21df5b770a3c25f3ac378005efbb9d71a17b2682757568a6161",
+        "excerpt": "틀을 고정하여 행과 열 잠그기 적용 대상 Microsoft 365용 Excel Excel 2024 Excel 2021 Excel 2019 Excel 2016 Copilot 도움말 보기 Excel에서 행이나 열을 고정하려면 어떻게 하나요? 행이나 열을 숨기거나 표시하는 방법은 무엇인가요? ‘창 고정’ 참조 카드를 만들어 주세요. 워크시트의 다른 영역으로 스크롤할 때 워크시트의 한 영역을 표시하도록 유지하려면 보기 탭으로 이동하여 창을 고정 하여 특정 행과 열을 잠그거나 창을 분할 하여 같은 워크시트의 개별 창을 만들 수 있습니다. 참고 보기 탭이 보이지 않으면 Excel Starter를 사용하고 있을 가능성이 높습니다. 일부 기능은 Excel Starter에서 지원되지 않습니다. 행 또는 열 고정 틀 고정은 선택한 셀의 위쪽 행과 왼쪽 열을 고정합니다. 처음 두 열 고정하기 세 번째 열을 선택합니다. 보기 > , 틀 > 고정 , 틀 고정을 선택합니다. 열 및 행 고정하기 스크롤할 때 계속 표시할 열 오른쪽과 행 아래에 있는 셀을 선택합니다. 보기 > , 틀 > 고정 , 틀 고정을 선택합니다. 행 또는 열 고정 취소 보기 탭 > 에서 틀 > 고정, 틀 고정을 취소합니다. 추가 지원 언제든지 Excel 기술 커뮤니티 의 전문가에게 문의하거나 커뮤니티에서 지원을 받을 수 있습니다. 참고 항목 창을 나눠 별도의 워크시트 영역에 행 또는 열 잠그기 Excel의 수식 개요 수식 손상을 방지하는 방법 수식의 오류 찾기 및 수정 Excel의 바로 가기 키 Excel 함수(사전순) Excel 함수(범주별) 웹용 Excel 무료로 시작"
+      },
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/freeze-panes-to-lock-the-first-row-or-column-in-excel-for-mac",
+        "original_url": "https://support.microsoft.com/ko-kr/excel/freeze-panes-to-lock-the-first-row-or-column-in-excel-for-mac",
+        "title": "Mac용 Excel 에서 틀을 고정하여 첫 번째 행 또는 열 잠그기 | Microsoft Support",
+        "checked_on": "2026-10-02",
+        "sha256": "1143c9cf774ca890fff731fbc7a32f26f70c00d7ac42bef11d6d76d385471bbd",
+        "excerpt": "Mac용 Excel 에서 틀을 고정하여 첫 번째 행 또는 열 잠그기 적용 대상 Mac용 Microsoft 365용 Excel Excel 2024 Mac용 Excel 2024 Mac용 Excel 2021 Copilot 도움말 보기 첫 번째 행 또는 열을 고정하기 위해 창 고정에 대해 알려주세요. 첫 번째 열 숨기기 해제에 대한 팁과 제안을 알려주세요. 첫 번째 열이나 행을 숨기지 않도록 설정하는 방법을 설명해주세요. 스크롤할 때 맨 위 행이나 왼쪽 열이 움직이지 않도록 하려면 행이나 열을 고정합니다. 이렇게 하려면 보기 탭에서 고정 버튼을 사용합니다. 고정 버튼이 회색으로 표시되면 보기 탭에서 보통 을 선택합니다. 첫 행 고정 보기 탭에서 첫 행 고정 을 선택합니다. 이렇게 하면 행 1 아래의 테두리가 다른 테두리보다 약간 진하게 표시되어 그 위의 행이 고정되었음을 나타냅니다. 첫 열 고정 보기 탭에서 첫 열 고정 을 선택합니다. 이렇게 하면 열 A의 오른쪽 선이 다른 선보다 약간 진하게 표시되어 그 왼쪽의 열이 고정되었음을 나타냅니다. 첫 행과 첫 열 고정 첫 행 및 첫 열을 동시에 고정하려면 B2 셀을 선택합니다. 그런 다음 보기 탭에서 틀 고정 을 선택합니다. 원하는 만큼의 행 또는 열 고정 여러 행이나 열을 고정하려는 경우 원하는 수만큼 고정할 수 있습니다. 단, 항상 첫 행과 첫 열부터 시작해야 합니다. 여러 행 또는 열을 고정하려면: 고정하려는 마지막 행 아래 또는 마지막 열의 오른쪽에 있는 행을 선택합니다. 보기 탭에서 틀 고정 을 선택합니다 . 맨 위 행 또는 첫 번째 열부터 시작하는 셀 블록(예: 상위 4개 행과 가장 왼쪽에 있는 3개의 열)을 고정하려면 셀(예: D5)을 선택합니다. 보기 탭에서 틀 고정 을 선택합니다 . 행 및 열을 고정하면 마지막 고정된 행 아래의 테두리와 마지막 고정된 열 오른쪽의 테두리가 좀 더 굵게 표시됩니다(여기에서는 행 4 아래와 열 C 오른쪽). 행 또는 열 고정 취소 행, 열 또는 둘 다 고정을 취소하고 싶으신가요? [View ] 탭에서 [Unfreeze Panes] 를 선택합니다 ."
+      }
+    ],
+    "intent_results": [
+      "https://office.tiplab.kr/blog/%EC%97%91%EC%85%80-%ED%8B%80%EA%B3%A0%EC%A0%95-%EC%B0%BD%EB%82%98%EB%88%84%EA%B8%B0/",
+      "https://www.moamoang.co.kr/excel/freeze-panes/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 4030,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "중간",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "엑셀 틀 고정",
+    "organic_domains": [
+      "zeronico.kr",
+      "www.ajd.co.kr",
+      "office.tiplab.kr",
+      "m-freedom.com",
+      "www.moamoang.co.kr",
+      "talesemotion.tistory.com",
+      "excel.chemboss.co.kr",
+      "oks0998.tistory.com",
+      "xlworks.net"
+    ],
+    "organic_results": [
+      {
+        "url": "https://zeronico.kr/etc/excel-freeze-panes-guide/",
+        "domain": "zeronico.kr",
+        "title": "엑셀 틀 고정이 자꾸 틀릴 때 확인해야 할 기준 셀 선택법 - 무니코틴 전자담배 매거진",
+        "snippet": "엑셀로 데이터를 조회하다 보면 틀 고정 외에도 수식 오류에 막히는 경우가 있는데, VLOOKUP에서 #N/A 오류가 반복된다면 먼저 확인해야 할 것 을 함께 살펴보면 조회 작업"
+      },
+      {
+        "url": "https://www.ajd.co.kr/contents/basic-tip/detail/%EC%97%91%EC%85%80_%ED%8B%80%EA%B3%A0%EC%A0%95_%EC%9D%B8%EC%87%84_%EB%B0%A9%EB%B2%95%EB%B6%80%ED%84%B0_%EB%8B%A8%EC%B6%95%ED%82%A4_%EC%9D%B4%EA%B2%83%EB%A7%8C_%EC%95%8C%EB%A9%B4_%EB%81%9D-26366",
+        "domain": "www.ajd.co.kr",
+        "title": "엑셀 틀고정 인쇄 방법부터 단축키 이것만 알면 끝",
+        "snippet": "# 엑셀 틀고정 인쇄 방법부터 단축키 이것만 알면 끝 ... 틀이 만들어지는 위치는 선택한 셀의 위쪽과 왼쪽에 있습니다."
+      },
+      {
+        "url": "https://office.tiplab.kr/blog/%EC%97%91%EC%85%80-%ED%8B%80%EA%B3%A0%EC%A0%95-%EC%B0%BD%EB%82%98%EB%88%84%EA%B8%B0/",
+        "domain": "office.tiplab.kr",
+        "title": "엑셀 틀 고정하는 법과 창 나누기 — 행·열 동시 고정까지",
+        "snippet": "20페이지짜리 표의 모든 장에 머리글을 찍으려면 [페이지 레이아웃] → [인쇄 제목] → '반복할 행'에 `$1:$1` 같은 식으로 지정해야 합니다. ... 엑셀은 둘 중 하나만 적용하며,"
+      },
+      {
+        "url": "https://m-freedom.com/excel-freeze-panes-2026/",
+        "domain": "m-freedom.com",
+        "title": "엑셀 틀 고정 – 기준 셀만 알면 끝납니다 (2026)",
+        "snippet": "이럴 때 쓰는 것이 틀 고정인데, 막상 눌러보면 엉뚱한 곳이 고정되거나 원하는 대로 안 됩니다. ... 엑셀 틀 고정이 어렵게 느껴지는 이유는 기능이 복잡해서가 아니라"
+      },
+      {
+        "url": "https://www.moamoang.co.kr/excel/freeze-panes/",
+        "domain": "www.moamoang.co.kr",
+        "title": "엑셀 틀 고정 — 여러 행·열 고정과 안 될 때 해결 | moamoang",
+        "snippet": "엑셀 틀 고정은 워크시트를 스크롤해도 위쪽 행과 왼쪽 열이 화면에 남도록 잠그는 보기 기능입니다. ... 화면이 아니라 수식을 복사할 때 셀 주소가 바뀌지 않게 고정하려는"
+      },
+      {
+        "url": "https://talesemotion.tistory.com/908",
+        "domain": "talesemotion.tistory.com",
+        "title": "엑셀에서 틀 고정 방법 :: 마음 속 풍경",
+        "snippet": "엑셀을 사용하다 보면 데이터가 많아 스크롤을 내리거나 옆으로 이동할 때, 첫 번째 행이나 열이 사라져서 불편했던 경험이 있지 않나요? ... 틀 고정은 엑셀에서 특정 행이나"
+      },
+      {
+        "url": "https://excel.chemboss.co.kr/entry/%EC%97%91%EC%85%80-%ED%96%89-%EA%B3%A0%EC%A0%95-%ED%95%98%EA%B8%B0",
+        "domain": "excel.chemboss.co.kr",
+        "title": "엑셀 행 고정 하기",
+        "snippet": "엑셀에서 “행 고정”은 스크롤을 내려도 특정 행(주로 제목행)이 화면에 계속 남도록 만드는 기능이다. ... 본 글은 실무에서 가장 많이 쓰는 행 고정 방법을 상황별로 정리하고,"
+      },
+      {
+        "url": "https://moamoang.co.kr/excel/freeze-panes/",
+        "domain": "moamoang.co.kr",
+        "title": "엑셀 틀 고정 — 여러 행·열 고정과 안 될 때 해결 | moamoang",
+        "snippet": "Ctrl+T로 만든 표는 표 밖의 셀을 선택하면 머리글 대신 원래 열 문자가 보이므로, 표 위에 보고서 제목 행이 있거나 표 밖을 자주 오가는 시트에서는 틀"
+      },
+      {
+        "url": "https://oks0998.tistory.com/48",
+        "domain": "oks0998.tistory.com",
+        "title": "엑셀 셀 고정(틀 고정) 방법 완벽 정리 — 헤더 고정, 행/열 고정까지 쉽게!",
+        "snippet": "엑셀 표의 1행이 제목일 때 가장 많이 사용하는 방식입니다. ... Image B2셀 선택후 틀고정하면 이런식으로 고정이 한번에 됩니다. ... 틀 고정 기능만 제대로 알아도 엑셀에서"
+      },
+      {
+        "url": "https://xlworks.net/excel-tutorial-beginner1-16/",
+        "domain": "xlworks.net",
+        "title": "16강 - 엑셀에서 틀 고정, 셀숨기기 - 엑셀웍스",
+        "snippet": "실습용 엑셀파일 다운로드 : [엑셀기초강좌] 16강 – 엑셀시트에서 틀고정_셀숨기기.xlsx ... 목록형태의 자료의 제목이 여러 행일 경우에는 첫 행 고정기능을 사용하면 맨 위의 행만 고정이 되는"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 28.84,
+      "organic_opportunity": 35.56,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 6,
+    "selected_at": "2026-10-02T12:46:13.654348+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "엑셀틀고정"
+    ],
+    "status": "completed",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "엑셀틀고정",
+      "executed_query": "엑셀 틀 고정",
+      "topic": "엑셀틀고정 방법: 첫 행·열부터 여러 행·열 동시 고정과 해제까지",
+      "intent": "스크롤해도 제목 행과 열을 표시하려면 어떤 셀을 선택하고 어떻게 틀을 고정하거나 해제하나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-02T12:46:13.654348+00:00",
+      "result_count": 9,
+      "domain_count": 9,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "엑셀틀고정",
+        "executed_query": "엑셀 틀 고정",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-02T12:46:13.654348+00:00",
+        "raw_sha256": "b74aabc8d529e75e04b18149345cef34971a0a3dbb5136071a53963716f51e6b",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "엑셀 틀 고정이 자꾸 틀릴 때 확인해야 할 기준 셀 선택법"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "틀이 만들어지는 위치는 선택한 셀의 위쪽과 왼쪽에 있습니다."
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "엑셀 틀 고정하는 법과 창 나누기 — 행·열 동시 고정까지"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "엑셀 틀 고정 – 기준 셀만 알면 끝납니다"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "엑셀 틀 고정은 워크시트를 스크롤해도 위쪽 행과 왼쪽 열이 화면에 남도록 잠그는 보기 기능입니다."
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "엑셀에서 틀 고정 방법"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "엑셀에서 “행 고정”은 스크롤을 내려도 특정 행(주로 제목행)이 화면에 계속 남도록 만드는 기능이다."
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "엑셀 틀 고정 — 여러 행·열 고정과 안 될 때 해결"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "B2셀 선택후 틀고정하면 이런식으로 고정이 한번에 됩니다."
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "16강 - 엑셀에서 틀 고정, 셀숨기기 - 엑셀웍스"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 9,
+        "relevant_result_count": 9,
+        "relevant_site_count": 9,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.9,
+        "duplicate_ratio": 0.1,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.1111111111111111,
+        "organic_opportunity": 35.56
+      },
+      "scope": "full_keyword",
+      "target_keyword": "엑셀틀고정",
+      "matches": [
+        {
+          "result_index": 2,
+          "quote": "엑셀 틀 고정하는 법과 창 나누기 — 행·열 동시 고정까지"
+        },
+        {
+          "result_index": 4,
+          "quote": "엑셀 틀 고정 — 여러 행·열 고정과 안 될 때 해결"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-02T12:46:13.654348+00:00",
+      "input_sha256": "d6071f7738f6f9c75d377304dcf99fcdf6e547ddb6293e4d3ca5d8b664aa5386",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "엑셀틀고정",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "틀을 고정하여 행과 열 잠그기 적용 대상 Microsoft 365용 Excel Excel 2024 Excel 2021 Excel 2019 Excel 2016",
+            "entity": "Microsoft 365용 Excel",
+            "context": "system_rules"
+          },
+          {
+            "source_index": 1,
+            "quote": "Mac용 Excel 에서 틀을 고정하여 첫 번째 행 또는 열 잠그기 적용 대상 Mac용 Microsoft 365용 Excel",
+            "entity": "Mac용 Microsoft 365용 Excel",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "틀 고정 범위는 선택한 셀을 기준으로 어떻게 결정되나요?",
+            "answer": "선택한 셀 위쪽 행과 왼쪽 열이 고정됩니다. 첫 두 행은 A3, 첫 두 열은 C1을 기준으로 설정합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "틀 고정은 선택한 셀의 위쪽 행과 왼쪽 열을 고정합니다."
+          },
+          {
+            "facet": "첫 행이나 첫 열은 어떻게 고정하나요?",
+            "answer": "보기 탭에서 첫 행 고정 또는 첫 열 고정을 선택합니다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "첫 행 고정 보기 탭에서 첫 행 고정 을 선택합니다."
+          },
+          {
+            "facet": "여러 행과 열을 동시에 고정할 때 어떤 셀과 메뉴를 선택하나요?",
+            "answer": "마지막 고정 행 아래와 마지막 고정 열 오른쪽의 셀을 선택하고 보기에서 틀 고정을 실행합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "스크롤할 때 계속 표시할 열 오른쪽과 행 아래에 있는 셀을 선택합니다. 보기 > , 틀 > 고정 , 틀 고정을 선택합니다."
+          },
+          {
+            "facet": "여러 행·열 동시 고정의 기준 셀 예시는 무엇인가요?",
+            "answer": "B2는 첫 행·첫 열, D5는 위쪽 4개 행·왼쪽 3개 열을 고정합니다. 고정은 첫 행·열부터 시작합니다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "맨 위 행 또는 첫 번째 열부터 시작하는 셀 블록(예: 상위 4개 행과 가장 왼쪽에 있는 3개의 열)을 고정하려면 셀(예: D5)을 선택합니다."
+          },
+          {
+            "facet": "설정한 틀 고정은 어떻게 해제하나요?",
+            "answer": "보기 탭의 틀 고정 취소를 선택합니다. Mac에서는 Unfreeze Panes를 선택합니다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "행 또는 열 고정 취소 행, 열 또는 둘 다 고정을 취소하고 싶으신가요? [View ] 탭에서 [Unfreeze Panes] 를 선택합니다 ."
+          },
+          {
+            "facet": "Mac에서 고정 버튼이 회색이면 무엇을 확인하나요?",
+            "answer": "보기 탭에서 보통을 선택합니다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "고정 버튼이 회색으로 표시되면 보기 탭에서 보통 을 선택합니다."
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 1,
+          "quote": "스크롤할 때 맨 위 행이나 왼쪽 열이 움직이지 않도록 하려면 행이나 열을 고정합니다.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 79.4,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1802,
+    "url": "https://trendpulse.blog/excel-freeze-panes/",
+    "post_status": "publish",
+    "completed_at": "2026-10-02T13:04:07.673145"
+  },
+  {
+    "keyword": "VLOOKUP",
+    "category": "생산성",
+    "topic": "VLOOKUP 사용법: 기본 수식부터 정확히 일치·근사 일치와 오류 해결까지",
+    "intent": "엑셀에서 VLOOKUP으로 원하는 값을 찾으려면 수식과 검색 범위를 어떻게 설정해야 하나요?",
+    "gap": "인수별 설정표, FALSE·TRUE 선택 기준, 범위 고정 절차와 #N/A·#REF! 오류 점검표를 제공합니다.",
+    "source_url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+        "original_url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+        "title": "VLOOKUP function | Microsoft Support",
+        "checked_on": "2026-10-02",
+        "sha256": "5d9ac485811d60bd7251d1b9ffaeb5f23c5fc4857cb764dce2a199c226c147da",
+        "excerpt": "VLOOKUP function Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2024 for Mac Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2016 Get help with Copilot How do I use the VLOOKUP function in Excel? Show me modern alternatives to VLOOKUP Write a VLOOKUP formula I can paste and adapt Tip Try using the new XLOOKUP function, an improved version of VLOOKUP that works in any direction and returns exact matches by default, making it easier and more convenient to use than its predecessor. Use VLOOKUP when you need to find things in a table or a range by row. For example, look up a price of an automotive part by the part number, or find an employee name based on their employee ID. In its simplest form, the VLOOKUP function says: =VLOOKUP(What you want to look up, where you want to look for it, the column number in the range containing the value to return, return an Approximate or Exact match – indicated as 1/TRUE, or 0/FALSE). Tip The secret to VLOOKUP is to organize your data so that the value you look up (Fruit) is to the left of the return value (Amount) you want to find. If you're a Microsoft Copilot subscriber Copilot can make it even easier to insert and use VLookup or XLookup functions. See Get data insights with Copilot in Excel. Technical details Use the VLOOKUP function to look up a value in a table. Syntax VLOOKUP (lookup_value, table_array, col_index_num, [range_lookup]) For example: =VLOOKUP(A2,A10:C20,2,TRUE) =VLOOKUP(\"Fontana\",B2:E7,2,FALSE) =VLOOKUP(A2,'Client Details'!A:F,3,FALSE) Argument name Description lookup_value (required) The value you want to look up. The value you want to look up must be in the first column of the range of cells you specify in the table_array argument. For example, if table-array spans cells B2:D7, then your lookup_value must be in column B. Lookup_value can be a value or a reference to a cell. table_array (required) The range of cells in which the VLOOKUP will search for the lookup_value and the return value. You can use a named range or a table, and you can use names in the argument instead of cell references. The first column in the cell range must contain the lookup_value . The cell range also needs to include the return value you want to find. col_index_num (required) The column number (starting with 1 for the left-most column of table_array ) that contains the return value. range_lookup (optional) A logical value that specifies whether you want VLOOKUP to find an approximate or an exact match: Approximate match - 1/TRUE assumes the first column in the table is sorted either numerically or alphabetically, and will then search for the closest value. This is the default method if you don't specify one. For example, =VLOOKUP(90,A1:B100,2,TRUE). Exact match - 0/FALSE searches for the exact value in the first column. For example, =VLOOKUP(\"Smith\",A1:B100,2,FALSE). How to get started There are four pieces of information that you will need in order to build the VLOOKUP syntax: The value you want to look up, also called the lookup value. The range where the lookup value is located. Remember that the lookup value should always be in the first column in the range for VLOOKUP to work correctly. For example, if your lookup value is in cell C2 then your range should start with C. The column number in the range that contains the return value. For example, if you specify B2:D11 as the range, you should count B as the first column, C as the second, and so on. Optionally, you can specify TRUE if you want an approximate match or FALSE if you want an exact match of the return value. If you don't specify anything, the default value will always be TRUE or approximate match. Now put all of the above together as follows: =VLOOKUP(lookup value, range containing the lookup value, the column number in the range containing the return value, Approximate match (TRUE) or Exact match (FALSE)). Examples Here are a few examples of VLOOKUP: Example 1 Example 2 Example 3 Example 4 Example 5 Common Problems Problem What went wrong Wrong value returned If range_lookup is TRUE or left out, the first column needs to be sorted alphabetically or numerically. If the first column isn't sorted, the return value might be something you don't expect. Either sort the first column, or use FALSE for an exact match. #N/A in cell If range_lookup is TRUE, then if the value in the lookup_value is smaller than the smallest value in the first column of the table_array , you'll get the #N/A error value. If range_lookup is FALSE, the #N/A error value indicates that the exact number isn't found. For more information on resolving #N/A errors in VLOOKUP, see How to correct a #N/A error in the VLOOKUP function . #REF! in cell If col_index_num is greater than the number of columns in table-array , you'll get the #REF! error value. For more information on resolving #REF! errors in VLOOKUP, see How to correct a #REF! error . #VALUE! in cell If the table_array is less than 1, you'll get the #VALUE! error value. For more information on resolving #VALUE! errors in VLOOKUP, see How to correct a #VALUE! error in the VLOOKUP function . #NAME? in cell The #NAME? error value usually means that the formula is missing quotes. To look up a person's name, make sure you use quotes around the name in the formula. For example, enter the name as \"Fontana\" in =VLOOKUP(\"Fontana\",B2:E7,2,FALSE). For more information, see How to correct a #NAME! error . #SPILL! in cell This particular #SPILL! error usually means that your formula is relying on implicit intersection for the lookup value, and using an entire column as a reference. For example, =VLOOKUP( A:A ,A:C,2,FALSE). You can resolve the issue by anchoring the lookup reference with the @ operator like this: =VLOOKUP( @A:A ,A:C,2,FALSE). Alternatively, you can use the traditional VLOOKUP method and refer to a single cell instead of an entire column: =VLOOKUP( A2 ,A:C,2,FALSE). Best practices Do this Why Use absolute references for range_lookup Using absolute references allows you to fill-down a formula so that it always looks at the same exact lookup range. Learn how to use absolute cell references . Don't store number or date values as text. When searching number or date values, be sure the data in the first column of table_array isn't stored as text values. Otherwise, VLOOKUP might return an incorrect or unexpected value. Sort the first column Sort the first column of the table_array before using VLOOKUP when range_lookup is TRUE. Use wildcard characters If range_lookup is FALSE and lookup_value is text, you can use the wildcard characters—the question mark (?) and asterisk (*)—in lookup_value . A question mark matches any single character. An asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) in front of the character. For example, =VLOOKUP(\"Fontan?\",B2:E7,2,FALSE) will search for all instances of Fontana with a last letter that could vary. Make sure your data doesn't contain erroneous characters. When searching text values in the first column, make sure the data in the first column doesn't have leading spaces, trailing spaces, inconsistent use of straight ( ' or \" ) and curly ( ‘ or \") quotation marks, or nonprinting characters. In these cases, VLOOKUP might return an unexpected value. To get accurate results, try using the CLEAN function or the TRIM function to remove trailing spaces after table values in a cell. Need more help? You can always ask an expert in the Excel Tech Community or get support in Communities ."
+      }
+    ],
+    "intent_results": [
+      "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+      "https://vlookup.com/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 3550,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "중간",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "VLOOKUP",
+    "organic_domains": [
+      "support.microsoft.com",
+      "support.google.com",
+      "vlookup.com",
+      "support.microsoft.com",
+      "learn.microsoft.com",
+      "exploreexcel.com",
+      "www.w3schools.com",
+      "www.youtube.com",
+      "trumpexcel.com",
+      "e115.engr.ncsu.edu"
+    ],
+    "organic_results": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+        "domain": "support.microsoft.com",
+        "title": "VLOOKUP function | Microsoft Support",
+        "snippet": "Use VLOOKUP when you need to find things in a table or a range by row. ... See Get data insights with Copilot in Excel."
+      },
+      {
+        "url": "https://support.google.com/docs/answer/3093318?hl=en",
+        "domain": "support.google.com",
+        "title": "VLOOKUP - Google Docs Editors Help",
+        "snippet": "`VLOOKUP(\"Apple\",table_name! ... `search_key` that uses cell reference of \"Apple\" in G9 | =VLOOKUP(G9, B4:D8, 3, FALSE) Return value = $1.50"
+      },
+      {
+        "url": "https://vlookup.com/",
+        "domain": "vlookup.com",
+        "title": "How to use VLOOKUP in Excel",
+        "snippet": "In Excel, VLOOKUP is a fast and easy way to find information when the data is organized in columns. ... The final formula is: `=VLOOKUP(G3,"
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/excel/quick-reference-card-vlookup-refresher",
+        "domain": "support.microsoft.com",
+        "title": "Quick Reference Card: VLOOKUP refresher | Microsoft Support",
+        "snippet": "VLOOKUP is one of the most popular, useful functions in Excel, but it’s hard to remember the formula if you don’t use it that often."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.vlookup",
+        "domain": "learn.microsoft.com",
+        "title": "WorksheetFunction.VLookup method (Excel) | Microsoft Learn",
+        "snippet": "# WorksheetFunction.VLookup method (Excel) ... When searching text values in the first column of table_array, ensure that the data in the first column of table_array"
+      },
+      {
+        "url": "https://exploreexcel.com/formulas/vlookup/",
+        "domain": "exploreexcel.com",
+        "title": "VLOOKUP function in Excel | Explore Excel",
+        "snippet": "VLOOKUP Change a value in the formula, or edit any outlined cell. ... =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) ... If your file might be opened in"
+      },
+      {
+        "url": "https://www.w3schools.com/excel/excel_vlookup.php",
+        "domain": "www.w3schools.com",
+        "title": "W3Schools.com",
+        "snippet": "﻿ Excel VLOOKUP Function ... =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) ... Range_lookup: TRUE if numbers (1) or FALSE if text (0)."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=aJXgqNhRWMM",
+        "domain": "www.youtube.com",
+        "title": "How to use VLOOKUP in Excel - YouTube",
+        "snippet": "In Excel, use VLOOKUP when you need to find things in a table or range by row."
+      },
+      {
+        "url": "https://trumpexcel.com/excel-functions/vlookup/",
+        "domain": "trumpexcel.com",
+        "title": "VLOOKUP Function in Excel (10 Examples)",
+        "snippet": "The value you search for has to sit in the leftmost column of your table, and VLOOKUP can only return something from a column to"
+      },
+      {
+        "url": "https://e115.engr.ncsu.edu/spreadsheets/vlookup/",
+        "domain": "e115.engr.ncsu.edu",
+        "title": "VLOOKUP – E 115: Introduction to Computing Environments",
+        "snippet": "VLOOKUP is an Excel function that is used to find data. ... * Remember to use static cell referencing for the reference table if you"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 28.4,
+      "organic_opportunity": 28.0,
+      "trend": -4.44,
+      "intent_fit": 15
+    },
+    "trend_growth": -0.444,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 6,
+    "selected_at": "2026-10-02T12:46:13.654348+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "VLOOKUP"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "VLOOKUP",
+      "executed_query": "VLOOKUP",
+      "topic": "VLOOKUP 사용법: 기본 수식부터 정확히 일치·근사 일치와 오류 해결까지",
+      "intent": "엑셀에서 VLOOKUP으로 원하는 값을 찾으려면 수식과 검색 범위를 어떻게 설정해야 하나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-02T12:46:13.654348+00:00",
+      "result_count": 10,
+      "domain_count": 8,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "VLOOKUP",
+        "executed_query": "VLOOKUP",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-02T12:46:13.654348+00:00",
+        "raw_sha256": "c5eab101248dcc1dbb00c7422e2a06ff8198357c218ccce900a2aca7efe66086",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "Use VLOOKUP when you need to find things in a table or a range by row."
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "=VLOOKUP(G9, B4:D8, 3, FALSE) Return value = $1.50"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "How to use VLOOKUP in Excel"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "Quick Reference Card: VLOOKUP refresher | Microsoft Support"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "WorksheetFunction.VLookup method (Excel)"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "In Excel, use VLOOKUP when you need to find things in a table or range by row."
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "VLOOKUP Function in Excel (10 Examples)"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "VLOOKUP is an Excel function that is used to find data."
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 10,
+        "relevant_site_count": 8,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 1.0,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.3,
+        "organic_opportunity": 28.0
+      },
+      "scope": "full_keyword",
+      "target_keyword": "VLOOKUP",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "Use VLOOKUP when you need to find things in a table or a range by row."
+        },
+        {
+          "result_index": 2,
+          "quote": "How to use VLOOKUP in Excel"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-02T12:46:13.654348+00:00",
+      "input_sha256": "c94339a922c6f842274bfc916999a461e0dbd65d591d6887fe06204b0f1b2c20",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "VLOOKUP",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "VLOOKUP function Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024",
+            "entity": "Excel for Microsoft 365",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "VLOOKUP은 언제 사용하나요?",
+            "answer": "표에서 행을 기준으로 검색값에 대응하는 다른 열의 값을 찾을 때 사용합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Use VLOOKUP when you need to find things in a table or a range by row."
+          },
+          {
+            "facet": "기본 수식과 인수는 어떻게 구성하나요?",
+            "answer": "=VLOOKUP(검색값, 검색범위, 반환열번호, 일치방식)으로 작성합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "VLOOKUP (lookup_value, table_array, col_index_num, [range_lookup])"
+          },
+          {
+            "facet": "검색 범위와 반환 열은 어떻게 설정하나요?",
+            "answer": "검색값은 범위의 첫 열에 두고 반환 열까지 포함합니다. 반환 열번호는 범위 왼쪽부터 1로 셉니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "The column number (starting with 1 for the left-most column of table_array )"
+          },
+          {
+            "facet": "검색값과 반환값의 위치에는 어떤 제약이 있나요?",
+            "answer": "검색값이 있는 첫 열에서 오른쪽에 있는 값을 반환하도록 표를 구성해야 합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "The first column in the cell range must contain the lookup_value ."
+          },
+          {
+            "facet": "FALSE와 TRUE는 언제 선택하나요?",
+            "answer": "정확히 일치하면 FALSE, 근사 일치면 TRUE를 사용합니다. 생략 시 TRUE이며 첫 열 정렬이 필요합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Either sort the first column, or use FALSE for an exact match."
+          },
+          {
+            "facet": "수식을 복사할 때 검색 범위를 어떻게 고정하나요?",
+            "answer": "검색 범위에 절대참조를 적용합니다. 예를 들어 $A$10:$C$20으로 고정하면 아래로 복사해도 유지됩니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Using absolute references allows you to fill-down a formula"
+          },
+          {
+            "facet": "#N/A 오류는 어떻게 점검하나요?",
+            "answer": "FALSE에서는 정확한 값이 없는지, TRUE에서는 검색값이 첫 열의 최솟값보다 작은지 확인합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "If range_lookup is FALSE, the #N/A error value indicates that the exact number isn't found."
+          },
+          {
+            "facet": "#REF! 오류는 어떻게 해결하나요?",
+            "answer": "반환 열번호가 검색 범위의 열 수를 초과하지 않도록 열번호나 범위를 수정합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "If col_index_num is greater than the number of columns in table-array"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Use VLOOKUP when you need to find things in a table or a range by row.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 66.96,
     "publish_eligible": true,
     "hold_reasons": []
   }

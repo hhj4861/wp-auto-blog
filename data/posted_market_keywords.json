@@ -388,5 +388,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-02T11:51:30.760144+00:00"
+  },
+  {
+    "key": "엑셀틀고정",
+    "keyword": "엑셀틀고정",
+    "topic": "엑셀틀고정 방법: 첫 행·열부터 여러 행·열 동시 고정과 해제까지",
+    "category": "생산성",
+    "post_id": 1802,
+    "url": "https://trendpulse.blog/excel-freeze-panes/",
+    "selection_version": 6,
+    "monthly_search": 4030,
+    "score": 79.4,
+    "score_components": {
+      "demand": 28.84,
+      "organic_opportunity": 35.56,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-02T13:04:07.511666+00:00"
   }
 ]

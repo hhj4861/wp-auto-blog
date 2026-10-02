@@ -366,5 +366,27 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-02T04:11:57.473090+00:00"
+  },
+  {
+    "key": "고지혈증원인",
+    "keyword": "고지혈증원인",
+    "topic": "고지혈증원인: 유전·식습관·관련 질환 정리",
+    "category": "건강",
+    "post_id": 1799,
+    "url": "https://trendpulse.blog/hyperlipidemia-causes-guide/",
+    "selection_version": 6,
+    "monthly_search": 8290,
+    "score": 77.46,
+    "score_components": {
+      "demand": 31.35,
+      "organic_opportunity": 31.11,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-02T11:51:30.760144+00:00"
   }
 ]

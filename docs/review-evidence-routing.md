@@ -20,4 +20,15 @@ PR #74는 사용자 승인 후 main 8fdf772로 머지했다. 실행 36935231882�
 
 실제 fetch_source로 [Seagate Portable](https://www.seagate.com/products/external-hard-drives/portable-drive/) 본문 8,000자와 [Toshiba Canvio Basics](https://www.toshiba-storage.com/products/canvio-basics/?form=MG0AV3) 본문 5,154자를 읽었다. 두 문서 모두 외장 HDD·1TB의 사전 조건을 충족했다. 전체 구매 질문에 대한 독립 심사나 새 글 발행을 통과했다는 뜻은 아니다.
 
-이 보완은 구현 브랜치에서 커밋·push하며 운영 미반영이다. 새 질문의 실제 모델 제안부터 공개 발행까지는 해당 PR의 명시적 머지 승인 후 main에서 검증해야 한다. YouTube API 키 오류도 별도 미해결이다.
+PR #75는 사용자 승인 후 2026-10-02 10:40 KST에 main 5c2c351로 머지했다. 로컬 main도 같은 변경으로 동기화했으며 핵심 회귀 테스트 13개가 통과했다(6.99초, 종료 코드 0). 운영 검증 실행 36952114609는 10:41 KST에 해당 커밋으로 시작했고 11:04 KST에 성공 종료했다. 리뷰·Codex·실제 발행 모드로 실행했으며 발행 검증 단계의 `VERIFIED CODEX PUBLISHED`를 확인했다. YouTube API 키 오류는 별도 미해결이다.
+
+
+## PR #75 운영 발행 검증 결과
+
+- 실행: 36952114609, main 5c2c351. 실제 공개 시각 2026-10-02 11:04:11 KST.
+- 공개 포스트: [1TB외장하드 선택 기준: 무게·크기·연결 규격·보증 비교](https://trendpulse.blog/portable-hard-drive-comparison/). 공개 페이지 HTTP 200, canonical URL과 RSS 등록을 확인했다.
+- 실측 후보 342개, 조사 풀 22개, 4회차에서 12개 평가. 선정 1개·보류 1개·제외 10개다. 선정 키워드는 `1TB외장하드`, 네이버 월 검색량 2,130회다. 검색·출처 적합성 심사를 통과한 뒤 작성·발행과 발행 검증까지 완료됐다.
+- 실제 공식 출처는 Seagate 대한민국 Ultra Touch HDD 지원 페이지와 Toshiba Canvio Flex EMEA 페이지다. 이전의 HDD 요청에 SSD 자료가 연결되는 문제가 이번 선정 글에서는 재현되지 않았다. 지역별 보증 차이도 본문 판단 근거에 구분했다.
+- 새 질문 탐색은 `no_pass_after_round` 조건으로 실제 실행됐지만 결과는 `no_valid_questions`였다. 호출 지연 문제의 개선은 확인했으나, 유효한 새 질문 발굴까지 성공했다고 볼 수는 없다. 이번 글은 기존 실측 후보에서 선정됐다.
+- 별도 미해결: YouTube는 `api_key_invalid`(HTTP 400)다. 이번 성공은 네이버 수요 측정과 공식 자료에 기반한다. 후보별 근거 부족·검색 품질 제외는 여전히 발생하며, 이번 한 번의 성공이 향후 모든 실행 성공이나 방문자 증가를 보장하지 않는다.
+- 운영 데이터는 자동화 커밋 bf186ef로 저장됐으며 로컬 main에 동기화했다. 이 문서는 실제 실행 결과를 기록하며, 자동화의 품질 조건을 낮추거나 후보 제외를 성공으로 계산하지 않는다.

@@ -19857,6 +19857,14 @@
         "elapsed_ms": 28236
       }
     ],
-    "analysis_recovery_attempts": 1
+    "analysis_recovery_attempts": 1,
+    "reuse_source_diagnostics": {
+      "checked_at": "2026-10-02T04:08:29.544746+00:00",
+      "failed_candidates": [],
+      "reused_keywords": [
+        "윈도우11정품인증"
+      ],
+      "outcome": "reused"
+    }
   }
 }

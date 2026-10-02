@@ -345,5 +345,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-02T02:04:12.811204+00:00"
+  },
+  {
+    "key": "윈도우11정품인증",
+    "keyword": "윈도우11정품인증",
+    "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
+    "category": "테크",
+    "post_id": 1796,
+    "url": "https://trendpulse.blog/windows-activation-guide-2026/",
+    "selection_version": 6,
+    "monthly_search": 6110,
+    "score": 76.26,
+    "score_components": {
+      "demand": 30.29,
+      "organic_opportunity": 32.4,
+      "trend": -1.43,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-02T04:11:57.473090+00:00"
   }
 ]

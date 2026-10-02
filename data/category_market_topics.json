@@ -17860,7 +17860,7 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-09-29T14:14:36.594257+00:00",
+    "selected_at": "2026-10-02T02:04:46.174328+00:00",
     "seeds": [
       "갤럭시",
       "아이폰",
@@ -17869,7 +17869,7 @@
     ],
     "selection_version": 6,
     "research_rounds": 3,
-    "source_recovery_attempts": 1,
+    "source_recovery_attempts": 0,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -17878,25 +17878,51 @@
       "related_count": 0,
       "seed_lookup_failed_count": 0
     },
+    "youtube_discovery": {
+      "provider": "youtube_data_api_v3",
+      "status": "api_unavailable",
+      "checked_at": "2026-10-02T02:04:46.174328+00:00",
+      "lookback_days": 90,
+      "ranking": "viewCount_within_recent_search_sample",
+      "videos": [],
+      "seeds": [],
+      "note": "Video views are not search demand or measured trend growth.",
+      "error": {
+        "endpoint": "search",
+        "code": "api_key_invalid",
+        "http_status": 400
+      }
+    },
+    "review_question_discovery": {
+      "status": "not_needed",
+      "seeds": [],
+      "measured": []
+    },
+    "search_review_recovery_attempts": 0,
+    "search_review_diagnostics": [],
+    "shortlist_research_attempts": 0,
+    "unresearched_budget_keywords": [],
+    "deferred_research_family_keywords": [],
+    "researched_fallback_families": [],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 585,
-    "evaluated_candidates": 3,
+    "measured_candidates": 583,
+    "evaluated_candidates": 2,
     "research_pool_size": 120,
     "selected": [
       {
         "keyword": "윈도우11정품인증",
         "category": "테크",
-        "topic": "윈도우11정품인증 방법: 제품 키·디지털 라이선스와 인증 상태 확인",
-        "intent": "윈도우11을 어떻게 정품 인증하며, 제품 키 없이 가능한 조건과 인증 실패 시 공식 절차는 무엇인가?",
-        "gap": "라이선스별 인증 방법 표, 상태 메시지별 확인 체크리스트, 재설치·하드웨어 변경 및 오프라인 인증 절차를 제공한다.",
+        "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
+        "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
+        "gap": "인증 상태별 의미표, 라이선스별 인증 절차, 재설치·부품 변경 체크리스트와 빌드별 오프라인 인증 경로를 제공한다.",
         "source_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
         "verified_sources": [
           {
             "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
             "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
             "title": "Windows 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
+            "checked_on": "2026-10-02",
             "sha256": "14448cb040e32c8f3e739e49127427db6cd0af84c9461859086552f8acf22689",
             "excerpt": "Windows 정품 인증 적용 대상 Windows 11 Windows 10 Copilot 도움말 보기 Windows를 재설치한 후 활성화하려면 어떻게 하나요? 내 Windows 버전을 확인하려면 어떻게 해야 하나요? 제품 키로 Windows를 어떻게 활성화하나요? Windows 11 Windows 10 팁 Windows를 정품 인증하는 데 문제가 있나요? Windows 정품 인증 오류에 대한 도움말 보기 에서 문제 해결 단계를 시도해 보세요. 정품 인증은 제품 키 또는 디지털 권한을 장치의 하드웨어 구성과 페어링하는 기술 프로세스입니다. 이는 복사본 자체의 신뢰성을 평가하지 않으며 Windows 복사본이 정품 임을 보장하지 않습니다. 제품 키 또는 디지털 권한이 하드웨어 구성에 유효한지 확인하기만 합니다. 반면에 유효성 검사는 중요한 Windows 라이선스 파일이 손상, 삭제 또는 제거되지 않았으며 특정 업데이트 및 다운로드를 받아야 하는지 확인하는 프로세스입니다. 동영상을 재생하는 데 문제가 있나요? YouTube에서 시청하세요. Windows 11에서 Windows 정품 인증 상태 확인 먼저 Windows 11이 정품 인증되어 있고 Microsoft 계정에 연결되어 있는지 확인해야 합니다. Microsoft 계정을 장치의 Windows 11 라이선스에 연결하는 것이 중요합니다. Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. Windows 11에서 Windows 정품 인증 상태를 검사하는 방법 Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다.  정품 인증 상태 옆에 정품 인증 상태 가 표시됩니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에서 다음 정품 인증 상태 메시지 중 하나를 볼 수 있습니다. 정품 인증 상태 설명 Windows가 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정 연결 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows가 정품 인증되지 않음 정품 인증이 되지 않았습니다. 실패를 설명하는 오류 메시지가 표시됩니다. 정품 인증을 받으려면 Windows 11를 구입해야 할 수 있습니다. 장치에 대한 라이선스를 구입해야 하는 경우에는 \"Windows 11 라이선스 구입하기\"를 찾아보세요. 이미 해당 장치에 대한 라이선스를 구입했음에도 계속 오류 메시지가 표시되는 경우 정품 인증 방법 으로 계속합니다. 정품 인증을 위해 Microsoft 계정을 Windows 11에 연결합니다. Microsoft 계정을 연결하려면 다음의 지침을 따릅니다. 관리자로 로그인하여 Microsoft 계정을 추가합니다. 관리자 계정을 사용하고 있는지 확인하려면 시작 단추를 선택한 다음, 설정 > 계정 > 사용자 정보 를 선택합니다. 사용자 이름 아래에 관리자가 표시됩니다. 관리자가 아닌 경우 Windows에서 사용자 계정 관리를 참조하여 관리자 계정을 만듭니다. 설정의 정보로 이동 전자 메일 주소가 관리자 위에 표시되는지 확인하여 관리자 계정이 Microsoft 계정이기도 한지 확인합니다. 이메일 주소가 표시되면 이 계정은 Microsoft 계정입니다. 이메일 주소가 표시되지 않으면 로컬 계정을 사용하여 로그인한 것입니다. 아직 Microsoft 계정이 없다면 새 Microsoft 계정을 만드는 방법 을 참조하세요. 관리자이고 Microsoft 계정을 사용하고 있음을 확인한 후 정품 인증 페이지로 돌아가서 계정 추가 를 선택하고 Microsoft 계정 및 암호를 입력한 다음 로그인 을 선택합니다. Microsoft 계정이 추가된 후에는 정품 인증 페이지에서 Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증되었습니다 라고 표시됩니다. Windows 11용 Windows 정품 인증 방법 Windows 11을 구입한 방법에 따라 정품 인증을 위해 디지털 라이선스 또는 25자 제품 키가 필요합니다. 이 중 하나가 없으면 장치를 정품 인증할 수 없습니다. 디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다. 제품 키는 Windows를 정품 인증하는 데 사용되는 25문자 코드입니다. 제품 키가 다음과 같이 보입니다. XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. 사용할 정품 인증 방법을 결정한 후 디지털 라이선스를 사용하여 정품 인증하기 또는 제품 키를 사용하여 정품 인증하기 의 해당 단계를 따르세요. Windows 11의 경우 디지털 라이선스와 제품 키 중 어떤 Windows 정품 인증 방법을 사용하나요? 정품 인증 방법은 Windows 11을 구매한 방법에 따라 다릅니다. Windows 11을 받은 방법 정품 인증 방법 Windows 10, Windows 8.1 또는 Windows 7의 정품을 실행하는 적격 기기에서 Windows 11로 무료 업그레이드 디지털 라이선스 Microsoft 계정을 연결하거나 Microsoft 계정에 로그인하거나 MSA를 디지털 라이선스와 연결한 경우 해당 MSA가 디지털 라이선스를 포함합니다. Microsoft Store 앱에서 Windows 11 Pro 업그레이드를 구매하고 Windows 11을 성공적으로 정품 인증했습니다. 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 참가자이며 정품 인증된 이전 버전의 Windows 11 및 Windows 11 Preview를 실행 중인 적합한 장치에서 최신 Windows 11 Insider Preview 빌드로 업그레이드하기 디지털 라이선스 Windows Insider 로그인에 사용한 전자 메일 주소는 디지털 라이선스가 포함된 MSA일 수 있습니다. Microsoft Store 앱에서 정품 Windows 11 구입하기 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 11과 함께 제공되는 PC를 구입합니다. 제품 키 장치 패키징 또는 장치에 부착된 COA(인증서)에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 박스 복사본 구입하기 제품 키 Windows 11 박스의 내부 레이블에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 디지털 복사본 구입하기 제품 키 Windows 11을 구입한 후 받은 확인 메일 또는 대리점의 웹 사이트를 통해 액세스할 수 있는 디지털 락커에서 제품 키를 찾을 수 있습니다. 입력한 올바른 제품 키를 기준으로 장치에 Windows 11에 대한 디지털 라이선스가 부여됩니다. Windows 11에 대한 볼륨 라이선싱 계약 또는 MSDN 구독이 있음 제품 키 프로그램의 웹 포털을 통해 제품 키를 사용할 수 있습니다. Windows 11을 실행하는 새 장치 또는 리퍼비시 장치 구입하기 제품 키 장치에 제품 키가 사전 설치되어 있거나, 장치 패키지에 포함되어 있거나, 장치에 부착된 카드로 또는 COA(정품 인증서)에 포함되어 있습니다. 리퍼비시 PC를 구입한 경우, Microsoft가 아닌 리퍼비셔에서 제품 키를 제공해야 합니다. Microsoft Store 온라인에서 구입하기 제품 키 주문 기록이 포함된 확인 메일에서 제품 키를 찾습니다. Purchase a Windows 11 라이선스 구입하기 디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다. 방법은 다음과 같습니다. 시작 단추를 선택합니다. 설정 > 시스템 > 정품 인증 을 선택합니다. Microsoft Store로 이동 을 선택합니다. Windows 11 디지털 라이선스를 구입할 수 있는 Microsoft Store 앱을 엽니다. 디지털 라이선스를 사용하여 Windows 11 정품 인증하기 디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다. PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다. 디지털 라이센스가 없는 경우 정품 인증을 위해 제품 키를 사용할 수 있습니다.  제품 키를 사용하여 정품 인증하는 방법을 알아보하려면 제품 키를 사용하여 정품 인증 의 단계를 따릅니다. 새 장치 또는 마더보드에서 처음으로 Windows 설치 및 정품 인증 Windows 11 새 장치나 마더보드에 Windows를 처음 설치하고 제품 키가 없는 경우 설치 설정 화면에서 제품 키가 없습니다 를 선택합니다.  메시지가 표시되면 이 디바이스에 대한 디지털 라이선스를 구입하는 데 사용할 Microsoft 계정을 입력합니다. 설치 화면이 완료되고 Windows 설치가 완료되면 정품 인증 설정으로 이동합니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증을 선택합니다. 그런 다음 스토어 열기 를 선택하여 Windows를 정품 인증하기 위한 디지털 라이선스를 구입합니다. Windows 11을 다시 설치한 후 정품 인증 장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다. 다시 설치를 시도해 보기 전에 Windows 11이 정품 인증되었는지 확인합니다. 확인하려면 시작 단추를 선택한 다음 설정 > 시스템 > 활성화 를 선택합니다 . Windows 11이 정품 인증되었으며 Microsoft 계정이 디지털 라이선스와 연결되어 있음을 확인할 수 있습니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에 표시될 메시지는 다음과 같습니다. 정품 인증 상태 설명 Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 디지털 라이센스가 Microsoft 계정에 연결되어 있지 않은 경우, 정품 인증 상태 확인하기 아래에 있는 Microsoft 계정에 연결하기 의 단계를 따릅니다. 계정을 연결하면 설치 프로그램을 실행하여 Windows 11을 다시 설치할 수 있습니다. Windows 11을 다시 설치하기 위해 설치 미디어를 만드는 방법에 대한 자세한 내용은 Microsoft 소프트웨어 다운로드 웹 사이트 로 이동하세요. 설치 미디어를 만들 때 장치에 이미 설치된 버전과 일치하는 Windows 11 버전을 선택해야 합니다. 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시되는 경우 제품 키가 없음 을 선택하여 이 단계를 건너뛸 수 있습니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. 디지털 라이선스를 Microsoft 계정과 연결한 경우 디지털 라이선스와 연결된 Microsoft 계정에 로그인해야 합니다. 하드웨어 변경 후 Windows 11 다시 정품 인증하기 마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다. 하드웨어 변경을 대비하기 위해 Microsoft 계정을 디지털 라이센스에 연결해야 합니다. 이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. 자세한 내용은 하드웨어 변경 후 Windows 다시 정품 인증 을 참조하세요. 제품 키를 사용하여 Windows 11 정품 인증 제품 키는 25 문자 코드로 다음과 같이 표시됩니다. 제품 키: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다.  또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 제품 키를 찾으려면 정품 인증 방법의 제품 키 표 디지털 라이선스와 제품 키 중 어떤 제품 인증 방법을 사용하나요? 를 참조하세요. 참고 Microsoft는 Microsoft 온라인 스토어에서 구입한 경우에만 제품 키 기록을 보관합니다. 사용자 Microsoft 계정 주문 내역 에서 제품을 Microsoft에서 구입했는지 알아볼 수 있습니다. 자세한 도움말을 보려면 Windows 제품 키 찾기 를 참조하세요. 제품 키가 있는 경우 다음 시나리오에서 제품 키 변경을 사용하여 Windows 11을 정품 인증할 수 있습니다. 다음은 정품 인증에 도움이 되는 추가 정보입니다. 새 장치 또는 Windows 11용 마더보드에서 처음으로 Windows 설치 및 정품 인증을 수행하는 방법 정품 인증된 Windows 11이 있었던 적이 없는 장치에서는 올바른 제품 키를 사용하여 Windows 11을 정품 인증해야 합니다. 장치에서 이전에 정품 인증된 적이 없는 Windows 11 버전을 설치하는 경우에도 올바른 제품 키를 사용해야 합니다. 예를 들어 Windows 11 Home이 설치되었던 장치에 Windows 11 Pro를 설치하고 정품 인증하려면 올바른 제품 키가 필요합니다. 설치하는 동안 올바른 제품 키를 입력하라는 메시지가 표시됩니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. Windows 11에서 정품 인증 상태를 검사하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 을 선택합니다. 설정에서 정품 인증 상태 확인 Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 참고 경우에 따라서는 장치 패키지와 함께 제공되거나, 카드로 포함되어 있거나, 장치에 부착된 COA(정품 인증서)에 표시되는 Windows 11 제품 키를 입력해야 할 수 있습니다. Windows 11 제품 키가 없는 경우, 설치 중 제품 키를 구입할 수 있는 옵션이 나타납니다. Windows 11을 실행하는 리퍼비시 장치 정품 인증 Windows 11을 실행하는 리퍼비시 장치를 구입할 때는 장치에 부착된 정품 인증서 (COA)의 제품 키를 사용하여 Windows를 정품 인증해야 합니다. OEM(Original Hardware Manufacturer)이 마더보드를 변경한 경우, PC에서 자동으로 정품 인증이 되어야 합니다. 정품 인증을 받지 않으면 OEM에서 회색 스크래치 덮개 아래에 25자의 키가 있는 COA 카드를 제공했을 수 있습니다. 정품 인증을 받으려면 다음 단계를 따르세요. 참고 제품 키를 가리고 있는 회색 코팅을 제거하려면 동전이나 손톱을 사용하여 조심스럽게 긁어내세요. 시작 버튼을 선택한 다음 설정 > 시스템 > 활성화를 선택합니다. 제품 키 변경 을 선택합니다. COA에 있는 제품 키를 입력하고, 지침을 따릅니다. 설정에서 제품 키 변경 Windows 11을 다시 설치한 후 정품 인증하는 방법 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다. 제품 키를 입력하면 Windows 11 정품 인증된 버전을 갖게 됩니다. 설치가 끝나고 제품 키를 입력하지 않은 경우에도 제품 키를 입력할 수 있습니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 하드웨어 변경 후 Windo"
           },
@@ -17904,18 +17930,19 @@
             "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
             "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
             "title": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 정품 인증 또는 오프라인 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
+            "checked_on": "2026-10-02",
             "sha256": "c04152d5cd71cb9bbd70ac41763595bbf226b7ab909f9f8afa8cec4a756477cc",
             "excerpt": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11 Windows 8.1 Windows Vista Windows XP 요약​​ 이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.\n온라인 정품 인증 단계, 제품 정품 인증 포털을 통한 오프라인 정품 인증 및 세 가지 오프라인 워크플로(정품 인증 페이지, SLMGR 명령 프롬프트 및 SLUI 명령 프롬프트)에 대해 설명합니다. 또한 정품 인증 실패에 대한 대체 지침과 Office 정품 인증 리소스에 대한 링크도 포함되어 있습니다. 정품 인증은 가지고 있는 Windows 복사본이 정품이며 Microsoft 소프트웨어 사용 조건에서 허용하는 것보다 더 많은 장치에서 사용되지 않았는지 확인하는 데 도움이 됩니다. 인터넷을 통해 온라인 으로, 제품 정품 인증 포털 을 사용하거나 Microsoft 지원 의 지원을 사용하여 오프라인으로 Microsoft 제품을 정품 인증하는 몇 가지 방법이 있습니다. 온라인 정품 인증 - 인터넷 : 인터넷에 연결하면 Windows에서 인터넷 연결을 사용하여 온라인으로 정품 인증을 시도합니다. 온라인 정품 인증 단계에 따라 정품 인증되었는지, 아니면 인터넷을 통해 정품 인증을 시도하는지 확인합니다. 오프라인 정품 인증 - 제품 정품 인증 포털 & Microsoft 지원 : 온라인으로 정품 인증하는 데 문제가 있거나 인터넷에 연결되어 있지 않은 경우 오프라인으로 정품 인증을 시도할 수 있습니다. 오프라인 정품 인증 단계를 수행합니다. 설치 ID 를 입력한 다음 확인 ID 를 입력하여 정품 인증을 완료하라는 메시지가 표시될 수 있습니다. 이 문서에서는 온라인으로 정품 인증하는 단계를 제공하고 설치 ID 를 찾는 방법과 오프라인 정품 인증을 위해 받은 확인 ID 를 입력하는 위치에 대해 설명합니다. 온라인 정품 인증 인터넷에 연결되어 있는 경우 Windows가 자동으로 정품 인증을 시도합니다. 온라인 정품 인증을 사용하려면 인터넷 연결이 필요하므로 먼저 Windows가 인터넷에 연결되어 있는지 확인합니다 . 그런 다음 아래에서 Windows 버전을 찾고 단계에 따라 온라인으로 정품 인증합니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 시스템 > 정품 인증을 선택하거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 활성화 상태를 검토합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 보안 > 업데이트 & 정 품 인증을 열거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 필요한 경우 제품 키를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증을 선택하거나 복구 > 정품 인증 & 업데이트를 선택합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 온라인 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 지금 온라인으로 Windows 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 이제 인터넷을 통해 Windows를 정품 인증하겠습니다를 선택합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 오프라인 정품 인증 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 인터넷에 연결되어 있지 않으므로 오프라인에서 Windows를 정품 인증해야 합니다. Windows 정품 인증이 온라인에서 성공적으로 완료되지 않았습니다. 제품 정품 인증 포털에서 설치 ID를 요청합니다. Microsoft 지원 담당자가 설치 ID를 요청합니다. 중요 오프라인으로 정품 인증을 시도할 때 전화할 정품 인증 전화 번호가 표시될 수 있습니다. 전화 번호에는 전화를 걸지 마세요. 대신 제품 정품 인증 포털 을 방문하여 이 흐름의 정보를 사용하여 정품 인증 시도를 완료하세요. 정품 인증 요청을 검토하기 위해 Microsoft 지원이 필요한 경우 지원 옵션이 제공됩니다. 설치 ID를 찾아 확인 ID를 입력합니다. 아래에서 Windows 버전을 찾고 단계에 따라 설치 ID를 찾습니다. 찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다. 오프라인으로 정품 인증하는 방법에는 세 가지가 있습니다. 방법은 다음과 같습니다. 방법 1: Windows 설정의 정품 인증 페이지 사용(권장) Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 빌드 : 26200.8973, 26100.8973 이상 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 빌드 : 이전 빌드 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 업데이트 & 보안 > 활성화를 엽니다 . 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > 정품 인증을 선택합니다. WindowsWindows 10 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증 또는 복구 > 정 품 인증 & 업데이트를 선택한 다음 고객 지원에 문의를 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( WindowsWindows > 8.1 또는 8 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows 7 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows Vista )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 지금 고객 서비스 담당자에게 전화하여 Windows를 정품 인증하고 싶습니다 . 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > Windows XP 정품 인증을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 방법 2: SLMGR 명령 프롬프트 사용 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 자동 도움말 또는 전화로 정품 인증 이 정품 인증 페이지에 표시되지 않습니다. SLUI 명령 프롬프트를 사용할 수 없습니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. Command를 입력하고 명령 프롬프트를 마우스 오른쪽 단추로"
           }
         ],
         "intent_results": [
-          "https://infotips24.com/windows-activation-without-product-key/",
-          "https://blacktrees.tistory.com/m/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EC%89%BD%EA%B3%A0-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94-%EA%B0%80%EC%9D%B4%EB%93%9C"
+          "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
+          "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
+          "https://infotips24.com/windows-activation-without-product-key/"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 6180,
+        "monthly_search": 6110,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "중간",
@@ -17924,29 +17951,35 @@
         "organic_provider": "codex_native_search",
         "organic_query": "윈도우11 정품 인증",
         "organic_domains": [
+          "k-info104.com",
+          "blog.naver.com",
           "www.coupang.com",
-          "www.klog.kr",
           "ddnews.co.kr",
           "forbes.tistory.com",
+          "seogilang.tistory.com",
           "infotips24.com",
           "ittalk.co.kr",
-          "blacktrees.tistory.com",
           "extrememanual.net",
-          "clumsier.tistory.com",
-          "zzshkorea123.tistory.com"
+          "a2.moneyall.kr"
         ],
         "organic_results": [
+          {
+            "url": "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
+            "domain": "k-info104.com",
+            "title": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁 (라이선스 만료 대처) – k-info104.com",
+            "snippet": "윈도우 11 정품 인증이 필요한 이유 ... 윈도우 11 정품 인증 오류는 대부분 네트워크 일시 장애, 부품 변경, 혹은 잘못된 제품 키 입력으로 인해 발생합니다."
+          },
+          {
+            "url": "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
+            "domain": "blog.naver.com",
+            "title": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법 (정품 인증 방법) : 네이버 블로그",
+            "snippet": "※ Windows 11 업그레이드 후 정품 인증을 받고 사용하다가 포맷 후 Windows 11을 다시 재설치 하는 경우 정품 인증 정보는 마이크로소프트 서버에 저장되어 있기에,하드웨어의 변경사항이"
+          },
           {
             "url": "https://www.coupang.com/np/search?q=%EC%9C%88%EB%8F%84%EC%9A%B0+10+%EC%A0%95%ED%92%88+%EC%9D%B8%EC%A6%9D",
             "domain": "www.coupang.com",
             "title": "쿠팡이 추천하는 윈도우 10 정품 인증 관련 혜택과 특가",
             "snippet": "* 한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함 Windows11 Home + AOHI 케이블, win11 home+ aohi 케이블~~239,000원~~14%205,000원 6/2(화) 도착 예정 무료배송 ∙ 오늘출발"
-          },
-          {
-            "url": "https://www.klog.kr/technology/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D",
-            "domain": "www.klog.kr",
-            "title": "윈도우 11 정품인증 제품키 없이 사용하는 방법",
-            "snippet": "마이크로소프트 (MS)社가 윈도우 11을 설치하는 과정에서 정품인증을 강제하지 않는 이유는 무엇보다 설치하는 과정에서 편의를 제공하고, 궁극적으로 윈도우 제품을 많이 이용하도록 하기 위함입니다. ... 이 약관"
           },
           {
             "url": "https://ddnews.co.kr/window11-watermark/",
@@ -17958,7 +17991,13 @@
             "url": "https://forbes.tistory.com/1303",
             "domain": "forbes.tistory.com",
             "title": "윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드)",
-            "snippet": "### 윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드) ... 명령어 실행 즉시 \"Windows(R), Professional edition: 볼륨 정품 인증이 2022-10-29 오후 8:19:11에 만료됩니다.\""
+            "snippet": "### 윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드) ... PC를 인터넷에 연결한 이후에도 Windows 11 정품 인증이 정상적으로 완료되지 않으면 잠시 기다려 봅니다."
+          },
+          {
+            "url": "https://seogilang.tistory.com/m/2565",
+            "domain": "seogilang.tistory.com",
+            "title": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)",
+            "snippet": "윈도우11을 설치하고 정품 인증을 하지 않으면 오른쪽 하단에 정품 인증을 하라는 워터마크가 표시된다. ... 하지만 상황이 여의치 않아 당장 정품 인증을 할 수 없다면 정품"
           },
           {
             "url": "https://infotips24.com/windows-activation-without-product-key/",
@@ -17973,42 +18012,30 @@
             "snippet": "# 윈도우11 정품 인증 확인, 이걸 놓치면 모든 기능이 멈춘다! ... 이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
           },
           {
-            "url": "https://blacktrees.tistory.com/m/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EC%89%BD%EA%B3%A0-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94-%EA%B0%80%EC%9D%B4%EB%93%9C",
-            "domain": "blacktrees.tistory.com",
-            "title": "윈도우 11 정품인증 쉽고 안전하게 해결하는 가이드",
-            "snippet": "최근 프리도스(Free-DOS) 노트북이나 조립 PC를 구매하는 소비자가 늘어나면서, OS 설치 후 거쳐야 하는 윈도우 11 정품인증 과정에 대한 관심이 어느 때보다 뜨겁습니다. ... 성공적으로 키가"
-          },
-          {
             "url": "https://extrememanual.net/41036",
             "domain": "extrememanual.net",
             "title": "윈도우11 정품 인증 오류 0xc004F074 해결 방법 - 익스트림 매뉴얼",
             "snippet": "만일 인터넷에서 윈도우11 라이센스를 정상가 보다 싸게 구매한 경우 정상적인 정품 키가 아니므로 정품 인증이 되지 않을 수 있습니다. ... 이 경우 KMS 서버 관리자에게"
           },
           {
-            "url": "https://clumsier.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EB%B2%95",
-            "domain": "clumsier.tistory.com",
-            "title": "윈도우 11 프로그램 설치없이 정품 인증 방법 :: 방구석에서 GPT랑 놀기",
-            "snippet": "* 윈도우 11 프로그램 설치없이 정품 인증 방법 ... CMD창에 [slmgr /skms kms8.msguides.com]을 입력후 Enter키를 치면 키 관리 서비스 컴퓨터 이름을 kms8~으로 설정했다고 알림창이 다시"
-          },
-          {
-            "url": "https://zzshkorea123.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%A0%95%ED%92%88%ED%82%A4-%ED%8F%AC%ED%95%A8",
-            "domain": "zzshkorea123.tistory.com",
-            "title": "윈도우 11 정품 인증하는 방법(정품키 포함) :: 리차슨의 세상 탐구",
-            "snippet": "이 때 윈도우 11에 맞는 고유의 키 코드가 있어야 하지만, CMD 명령어를 통해 정품 인증을 하실 수도 있습니다."
+            "url": "https://a2.moneyall.kr/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EB%B9%84%EC%9A%A9%EA%B3%BC-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EB%B2%95%EB%B3%84-%EA%B0%80%EA%B2%A9-%EB%B9%84%EA%B5%90/",
+            "domain": "a2.moneyall.kr",
+            "title": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교 - 알뜰 재테크 노트",
+            "snippet": "* 윈도우11 정품 인증키 합리적 구매 방법 소개 – 정품 vs 저가 키 장단점 비교 설명돼 있어요. ... 또 일부 무료 인증키나 KMS 방식 인증은"
           }
         ],
-        "dominant_result_ratio": 0.0,
+        "dominant_result_ratio": 0.1,
         "score_components": {
-          "demand": 30.33,
-          "organic_opportunity": 36.0,
-          "trend": 1.45,
+          "demand": 30.29,
+          "organic_opportunity": 32.4,
+          "trend": -1.43,
           "intent_fit": 15
         },
-        "trend_growth": 0.145,
+        "trend_growth": -0.143,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "measured",
         "selection_version": 6,
-        "selected_at": "2026-09-29T14:14:36.594257+00:00",
+        "selected_at": "2026-10-02T02:04:46.174328+00:00",
         "source": "category_market_v1",
         "keywords": [
           "윈도우11정품인증"
@@ -18018,70 +18045,70 @@
           "version": 2,
           "query": "윈도우11정품인증",
           "executed_query": "윈도우11 정품 인증",
-          "topic": "윈도우11정품인증 방법: 제품 키·디지털 라이선스와 인증 상태 확인",
-          "intent": "윈도우11을 어떻게 정품 인증하며, 제품 키 없이 가능한 조건과 인증 실패 시 공식 절차는 무엇인가?",
+          "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
+          "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
+          "checked_at": "2026-10-02T02:04:46.174328+00:00",
           "result_count": 10,
           "domain_count": 10,
-          "dominant_ratio": 0.0,
+          "dominant_ratio": 0.1,
           "search_review": {
             "version": 1,
             "query": "윈도우11정품인증",
             "executed_query": "윈도우11 정품 인증",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-29T14:14:36.594257+00:00",
-            "raw_sha256": "ef515a3b34a3e1962eaa280fe71fa02f7c55ef2e253d404dd15828426055afaf",
+            "checked_at": "2026-10-02T02:04:46.174328+00:00",
+            "raw_sha256": "4f010febdf37cb469742f2ef1decd8a8e335addb58b3b31da24aad3fb746b7bf",
             "decisions": [
               {
                 "result_index": 0,
                 "relevant": true,
-                "quote": "윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
+                "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
               },
               {
                 "result_index": 1,
                 "relevant": true,
-                "quote": "윈도우 11 정품인증 제품키 없이 사용하는 방법"
+                "quote": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법"
               },
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법"
+                "quote": "한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
               },
               {
                 "result_index": 3,
                 "relevant": true,
-                "quote": "윈도우11 정품 인증 상태를 확인하는 방법"
+                "quote": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법"
               },
               {
                 "result_index": 4,
                 "relevant": true,
-                "quote": "윈도우 11은 설정 → 시스템 → 정품 인증"
+                "quote": "윈도우11 정품 인증 상태를 확인하는 방법"
               },
               {
                 "result_index": 5,
                 "relevant": true,
-                "quote": "이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
+                "quote": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)"
               },
               {
                 "result_index": 6,
                 "relevant": true,
-                "quote": "윈도우 11 정품인증 쉽고 안전하게 해결하는 가이드"
+                "quote": "윈도우 11은 설정 → 시스템 → 정품 인증"
               },
               {
                 "result_index": 7,
                 "relevant": true,
-                "quote": "윈도우11 정품 인증 오류 0xc004F074 해결 방법"
+                "quote": "이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
               },
               {
                 "result_index": 8,
                 "relevant": true,
-                "quote": "윈도우 11 프로그램 설치없이 정품 인증 방법"
+                "quote": "윈도우11 정품 인증 오류 0xc004F074 해결 방법"
               },
               {
                 "result_index": 9,
                 "relevant": true,
-                "quote": "윈도우 11 정품 인증하는 방법(정품키 포함)"
+                "quote": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교"
               }
             ]
           },
@@ -18104,27 +18131,31 @@
             ],
             "relevance_ratio": 1.0,
             "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
+            "known_dominant_ratio": 0.1,
             "site_concentration": 0.1,
-            "organic_opportunity": 36.0
+            "organic_opportunity": 32.4
           },
           "scope": "full_keyword",
           "target_keyword": "윈도우11정품인증",
           "matches": [
             {
-              "result_index": 4,
-              "quote": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026)"
+              "result_index": 0,
+              "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
+            },
+            {
+              "result_index": 1,
+              "quote": "정품 인증 제품 키 입력하는 방법 (정품 인증 방법)"
             },
             {
               "result_index": 6,
-              "quote": "윈도우 11 정품인증 쉽고 안전하게 해결하는 가이드"
+              "quote": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026)"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
-          "input_sha256": "131ae99f480aeb22d5fce022e421b62bc13067bf1be7bd663c74642d34586e59",
+          "checked_at": "2026-10-02T02:04:46.174328+00:00",
+          "input_sha256": "7a4a7d569aca5aacb2434831734d3f0c042fd9463dba4056ac4dded117a69655",
           "review": {
             "scope": "full_keyword",
             "target_keyword": "윈도우11정품인증",
@@ -18137,327 +18168,6 @@
               },
               {
                 "source_index": 1,
-                "quote": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11",
-                "entity": "Windows 11",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "Windows 11 정품 인증에 필요한 조건과 제품 키 없는 인증 조건은 무엇인가?",
-                "answer": "디지털 라이선스나 25자 제품 키가 필요하다. 디지털 라이선스가 있으면 제품 키 입력 없이 인증할 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다."
-              },
-              {
-                "facet": "제품 키와 디지털 라이선스로 각각 어떻게 인증하는가?",
-                "answer": "제품 키는 설정의 제품 키 변경에서 입력한다. 디지털 라이선스는 인터넷 연결 후 연결된 Microsoft 계정으로 로그인한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다."
-              },
-              {
-                "facet": "정품 인증 상태와 계정 연결 여부는 어떻게 확인하는가?",
-                "answer": "설정 > 시스템 > 정품 인증에서 상태를 확인하고, 상태 메시지로 인증 여부와 Microsoft 계정 연결 여부를 구분한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다."
-              },
-              {
-                "facet": "재설치하거나 주요 하드웨어를 변경하면 어떻게 다시 인증하는가?",
-                "answer": "디지털 라이선스가 있으면 동일 버전 재설치 후 온라인 인증한다. 주요 하드웨어 변경은 계정 연결 후 문제 해결사를 이용한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
-              },
-              {
-                "facet": "온라인 인증 실패나 인터넷 미연결 시 어떤 공식 절차를 이용하는가?",
-                "answer": "설치 ID를 제품 정품 인증 포털이나 Microsoft 지원에 제공하고 받은 확인 ID를 입력한다. 표시된 전화번호로 전화하지 않는다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다."
-              },
-              {
-                "facet": "오프라인 인증 화면은 Windows 11 빌드에 따라 어떻게 다른가?",
-                "answer": "26200.8973·26100.8973 이상은 자동화된 도움말, 이전 빌드는 전화로 정품 인증에서 설치 ID를 확인한다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 82.78,
-        "publish_eligible": true,
-        "hold_reasons": []
-      },
-      {
-        "keyword": "윈도우정품인증",
-        "category": "테크",
-        "topic": "윈도우정품인증 확인과 설정 방법: 제품 키·디지털 라이선스·재인증",
-        "intent": "윈도우 정품 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 인증·재인증하려면 어떻게 하나요?",
-        "gap": "인증 상태별 의미 표, 제품 키·디지털 라이선스 선택표, 재설치·하드웨어 변경 체크리스트와 오프라인 인증 절차를 제공합니다.",
-        "source_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-        "verified_sources": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "title": "Windows 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
-            "sha256": "14448cb040e32c8f3e739e49127427db6cd0af84c9461859086552f8acf22689",
-            "excerpt": "Windows 정품 인증 적용 대상 Windows 11 Windows 10 Copilot 도움말 보기 Windows를 재설치한 후 활성화하려면 어떻게 하나요? 내 Windows 버전을 확인하려면 어떻게 해야 하나요? 제품 키로 Windows를 어떻게 활성화하나요? Windows 11 Windows 10 팁 Windows를 정품 인증하는 데 문제가 있나요? Windows 정품 인증 오류에 대한 도움말 보기 에서 문제 해결 단계를 시도해 보세요. 정품 인증은 제품 키 또는 디지털 권한을 장치의 하드웨어 구성과 페어링하는 기술 프로세스입니다. 이는 복사본 자체의 신뢰성을 평가하지 않으며 Windows 복사본이 정품 임을 보장하지 않습니다. 제품 키 또는 디지털 권한이 하드웨어 구성에 유효한지 확인하기만 합니다. 반면에 유효성 검사는 중요한 Windows 라이선스 파일이 손상, 삭제 또는 제거되지 않았으며 특정 업데이트 및 다운로드를 받아야 하는지 확인하는 프로세스입니다. 동영상을 재생하는 데 문제가 있나요? YouTube에서 시청하세요. Windows 11에서 Windows 정품 인증 상태 확인 먼저 Windows 11이 정품 인증되어 있고 Microsoft 계정에 연결되어 있는지 확인해야 합니다. Microsoft 계정을 장치의 Windows 11 라이선스에 연결하는 것이 중요합니다. Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. Windows 11에서 Windows 정품 인증 상태를 검사하는 방법 Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다.  정품 인증 상태 옆에 정품 인증 상태 가 표시됩니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에서 다음 정품 인증 상태 메시지 중 하나를 볼 수 있습니다. 정품 인증 상태 설명 Windows가 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정 연결 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows가 정품 인증되지 않음 정품 인증이 되지 않았습니다. 실패를 설명하는 오류 메시지가 표시됩니다. 정품 인증을 받으려면 Windows 11를 구입해야 할 수 있습니다. 장치에 대한 라이선스를 구입해야 하는 경우에는 \"Windows 11 라이선스 구입하기\"를 찾아보세요. 이미 해당 장치에 대한 라이선스를 구입했음에도 계속 오류 메시지가 표시되는 경우 정품 인증 방법 으로 계속합니다. 정품 인증을 위해 Microsoft 계정을 Windows 11에 연결합니다. Microsoft 계정을 연결하려면 다음의 지침을 따릅니다. 관리자로 로그인하여 Microsoft 계정을 추가합니다. 관리자 계정을 사용하고 있는지 확인하려면 시작 단추를 선택한 다음, 설정 > 계정 > 사용자 정보 를 선택합니다. 사용자 이름 아래에 관리자가 표시됩니다. 관리자가 아닌 경우 Windows에서 사용자 계정 관리를 참조하여 관리자 계정을 만듭니다. 설정의 정보로 이동 전자 메일 주소가 관리자 위에 표시되는지 확인하여 관리자 계정이 Microsoft 계정이기도 한지 확인합니다. 이메일 주소가 표시되면 이 계정은 Microsoft 계정입니다. 이메일 주소가 표시되지 않으면 로컬 계정을 사용하여 로그인한 것입니다. 아직 Microsoft 계정이 없다면 새 Microsoft 계정을 만드는 방법 을 참조하세요. 관리자이고 Microsoft 계정을 사용하고 있음을 확인한 후 정품 인증 페이지로 돌아가서 계정 추가 를 선택하고 Microsoft 계정 및 암호를 입력한 다음 로그인 을 선택합니다. Microsoft 계정이 추가된 후에는 정품 인증 페이지에서 Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증되었습니다 라고 표시됩니다. Windows 11용 Windows 정품 인증 방법 Windows 11을 구입한 방법에 따라 정품 인증을 위해 디지털 라이선스 또는 25자 제품 키가 필요합니다. 이 중 하나가 없으면 장치를 정품 인증할 수 없습니다. 디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다. 제품 키는 Windows를 정품 인증하는 데 사용되는 25문자 코드입니다. 제품 키가 다음과 같이 보입니다. XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. 사용할 정품 인증 방법을 결정한 후 디지털 라이선스를 사용하여 정품 인증하기 또는 제품 키를 사용하여 정품 인증하기 의 해당 단계를 따르세요. Windows 11의 경우 디지털 라이선스와 제품 키 중 어떤 Windows 정품 인증 방법을 사용하나요? 정품 인증 방법은 Windows 11을 구매한 방법에 따라 다릅니다. Windows 11을 받은 방법 정품 인증 방법 Windows 10, Windows 8.1 또는 Windows 7의 정품을 실행하는 적격 기기에서 Windows 11로 무료 업그레이드 디지털 라이선스 Microsoft 계정을 연결하거나 Microsoft 계정에 로그인하거나 MSA를 디지털 라이선스와 연결한 경우 해당 MSA가 디지털 라이선스를 포함합니다. Microsoft Store 앱에서 Windows 11 Pro 업그레이드를 구매하고 Windows 11을 성공적으로 정품 인증했습니다. 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 참가자이며 정품 인증된 이전 버전의 Windows 11 및 Windows 11 Preview를 실행 중인 적합한 장치에서 최신 Windows 11 Insider Preview 빌드로 업그레이드하기 디지털 라이선스 Windows Insider 로그인에 사용한 전자 메일 주소는 디지털 라이선스가 포함된 MSA일 수 있습니다. Microsoft Store 앱에서 정품 Windows 11 구입하기 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 11과 함께 제공되는 PC를 구입합니다. 제품 키 장치 패키징 또는 장치에 부착된 COA(인증서)에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 박스 복사본 구입하기 제품 키 Windows 11 박스의 내부 레이블에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 디지털 복사본 구입하기 제품 키 Windows 11을 구입한 후 받은 확인 메일 또는 대리점의 웹 사이트를 통해 액세스할 수 있는 디지털 락커에서 제품 키를 찾을 수 있습니다. 입력한 올바른 제품 키를 기준으로 장치에 Windows 11에 대한 디지털 라이선스가 부여됩니다. Windows 11에 대한 볼륨 라이선싱 계약 또는 MSDN 구독이 있음 제품 키 프로그램의 웹 포털을 통해 제품 키를 사용할 수 있습니다. Windows 11을 실행하는 새 장치 또는 리퍼비시 장치 구입하기 제품 키 장치에 제품 키가 사전 설치되어 있거나, 장치 패키지에 포함되어 있거나, 장치에 부착된 카드로 또는 COA(정품 인증서)에 포함되어 있습니다. 리퍼비시 PC를 구입한 경우, Microsoft가 아닌 리퍼비셔에서 제품 키를 제공해야 합니다. Microsoft Store 온라인에서 구입하기 제품 키 주문 기록이 포함된 확인 메일에서 제품 키를 찾습니다. Purchase a Windows 11 라이선스 구입하기 디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다. 방법은 다음과 같습니다. 시작 단추를 선택합니다. 설정 > 시스템 > 정품 인증 을 선택합니다. Microsoft Store로 이동 을 선택합니다. Windows 11 디지털 라이선스를 구입할 수 있는 Microsoft Store 앱을 엽니다. 디지털 라이선스를 사용하여 Windows 11 정품 인증하기 디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다. PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다. 디지털 라이센스가 없는 경우 정품 인증을 위해 제품 키를 사용할 수 있습니다.  제품 키를 사용하여 정품 인증하는 방법을 알아보하려면 제품 키를 사용하여 정품 인증 의 단계를 따릅니다. 새 장치 또는 마더보드에서 처음으로 Windows 설치 및 정품 인증 Windows 11 새 장치나 마더보드에 Windows를 처음 설치하고 제품 키가 없는 경우 설치 설정 화면에서 제품 키가 없습니다 를 선택합니다.  메시지가 표시되면 이 디바이스에 대한 디지털 라이선스를 구입하는 데 사용할 Microsoft 계정을 입력합니다. 설치 화면이 완료되고 Windows 설치가 완료되면 정품 인증 설정으로 이동합니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증을 선택합니다. 그런 다음 스토어 열기 를 선택하여 Windows를 정품 인증하기 위한 디지털 라이선스를 구입합니다. Windows 11을 다시 설치한 후 정품 인증 장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다. 다시 설치를 시도해 보기 전에 Windows 11이 정품 인증되었는지 확인합니다. 확인하려면 시작 단추를 선택한 다음 설정 > 시스템 > 활성화 를 선택합니다 . Windows 11이 정품 인증되었으며 Microsoft 계정이 디지털 라이선스와 연결되어 있음을 확인할 수 있습니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에 표시될 메시지는 다음과 같습니다. 정품 인증 상태 설명 Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 디지털 라이센스가 Microsoft 계정에 연결되어 있지 않은 경우, 정품 인증 상태 확인하기 아래에 있는 Microsoft 계정에 연결하기 의 단계를 따릅니다. 계정을 연결하면 설치 프로그램을 실행하여 Windows 11을 다시 설치할 수 있습니다. Windows 11을 다시 설치하기 위해 설치 미디어를 만드는 방법에 대한 자세한 내용은 Microsoft 소프트웨어 다운로드 웹 사이트 로 이동하세요. 설치 미디어를 만들 때 장치에 이미 설치된 버전과 일치하는 Windows 11 버전을 선택해야 합니다. 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시되는 경우 제품 키가 없음 을 선택하여 이 단계를 건너뛸 수 있습니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. 디지털 라이선스를 Microsoft 계정과 연결한 경우 디지털 라이선스와 연결된 Microsoft 계정에 로그인해야 합니다. 하드웨어 변경 후 Windows 11 다시 정품 인증하기 마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다. 하드웨어 변경을 대비하기 위해 Microsoft 계정을 디지털 라이센스에 연결해야 합니다. 이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. 자세한 내용은 하드웨어 변경 후 Windows 다시 정품 인증 을 참조하세요. 제품 키를 사용하여 Windows 11 정품 인증 제품 키는 25 문자 코드로 다음과 같이 표시됩니다. 제품 키: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다.  또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 제품 키를 찾으려면 정품 인증 방법의 제품 키 표 디지털 라이선스와 제품 키 중 어떤 제품 인증 방법을 사용하나요? 를 참조하세요. 참고 Microsoft는 Microsoft 온라인 스토어에서 구입한 경우에만 제품 키 기록을 보관합니다. 사용자 Microsoft 계정 주문 내역 에서 제품을 Microsoft에서 구입했는지 알아볼 수 있습니다. 자세한 도움말을 보려면 Windows 제품 키 찾기 를 참조하세요. 제품 키가 있는 경우 다음 시나리오에서 제품 키 변경을 사용하여 Windows 11을 정품 인증할 수 있습니다. 다음은 정품 인증에 도움이 되는 추가 정보입니다. 새 장치 또는 Windows 11용 마더보드에서 처음으로 Windows 설치 및 정품 인증을 수행하는 방법 정품 인증된 Windows 11이 있었던 적이 없는 장치에서는 올바른 제품 키를 사용하여 Windows 11을 정품 인증해야 합니다. 장치에서 이전에 정품 인증된 적이 없는 Windows 11 버전을 설치하는 경우에도 올바른 제품 키를 사용해야 합니다. 예를 들어 Windows 11 Home이 설치되었던 장치에 Windows 11 Pro를 설치하고 정품 인증하려면 올바른 제품 키가 필요합니다. 설치하는 동안 올바른 제품 키를 입력하라는 메시지가 표시됩니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. Windows 11에서 정품 인증 상태를 검사하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 을 선택합니다. 설정에서 정품 인증 상태 확인 Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 참고 경우에 따라서는 장치 패키지와 함께 제공되거나, 카드로 포함되어 있거나, 장치에 부착된 COA(정품 인증서)에 표시되는 Windows 11 제품 키를 입력해야 할 수 있습니다. Windows 11 제품 키가 없는 경우, 설치 중 제품 키를 구입할 수 있는 옵션이 나타납니다. Windows 11을 실행하는 리퍼비시 장치 정품 인증 Windows 11을 실행하는 리퍼비시 장치를 구입할 때는 장치에 부착된 정품 인증서 (COA)의 제품 키를 사용하여 Windows를 정품 인증해야 합니다. OEM(Original Hardware Manufacturer)이 마더보드를 변경한 경우, PC에서 자동으로 정품 인증이 되어야 합니다. 정품 인증을 받지 않으면 OEM에서 회색 스크래치 덮개 아래에 25자의 키가 있는 COA 카드를 제공했을 수 있습니다. 정품 인증을 받으려면 다음 단계를 따르세요. 참고 제품 키를 가리고 있는 회색 코팅을 제거하려면 동전이나 손톱을 사용하여 조심스럽게 긁어내세요. 시작 버튼을 선택한 다음 설정 > 시스템 > 활성화를 선택합니다. 제품 키 변경 을 선택합니다. COA에 있는 제품 키를 입력하고, 지침을 따릅니다. 설정에서 제품 키 변경 Windows 11을 다시 설치한 후 정품 인증하는 방법 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다. 제품 키를 입력하면 Windows 11 정품 인증된 버전을 갖게 됩니다. 설치가 끝나고 제품 키를 입력하지 않은 경우에도 제품 키를 입력할 수 있습니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 하드웨어 변경 후 Windo"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "title": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 정품 인증 또는 오프라인 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
-            "sha256": "c04152d5cd71cb9bbd70ac41763595bbf226b7ab909f9f8afa8cec4a756477cc",
-            "excerpt": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11 Windows 8.1 Windows Vista Windows XP 요약​​ 이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.\n온라인 정품 인증 단계, 제품 정품 인증 포털을 통한 오프라인 정품 인증 및 세 가지 오프라인 워크플로(정품 인증 페이지, SLMGR 명령 프롬프트 및 SLUI 명령 프롬프트)에 대해 설명합니다. 또한 정품 인증 실패에 대한 대체 지침과 Office 정품 인증 리소스에 대한 링크도 포함되어 있습니다. 정품 인증은 가지고 있는 Windows 복사본이 정품이며 Microsoft 소프트웨어 사용 조건에서 허용하는 것보다 더 많은 장치에서 사용되지 않았는지 확인하는 데 도움이 됩니다. 인터넷을 통해 온라인 으로, 제품 정품 인증 포털 을 사용하거나 Microsoft 지원 의 지원을 사용하여 오프라인으로 Microsoft 제품을 정품 인증하는 몇 가지 방법이 있습니다. 온라인 정품 인증 - 인터넷 : 인터넷에 연결하면 Windows에서 인터넷 연결을 사용하여 온라인으로 정품 인증을 시도합니다. 온라인 정품 인증 단계에 따라 정품 인증되었는지, 아니면 인터넷을 통해 정품 인증을 시도하는지 확인합니다. 오프라인 정품 인증 - 제품 정품 인증 포털 & Microsoft 지원 : 온라인으로 정품 인증하는 데 문제가 있거나 인터넷에 연결되어 있지 않은 경우 오프라인으로 정품 인증을 시도할 수 있습니다. 오프라인 정품 인증 단계를 수행합니다. 설치 ID 를 입력한 다음 확인 ID 를 입력하여 정품 인증을 완료하라는 메시지가 표시될 수 있습니다. 이 문서에서는 온라인으로 정품 인증하는 단계를 제공하고 설치 ID 를 찾는 방법과 오프라인 정품 인증을 위해 받은 확인 ID 를 입력하는 위치에 대해 설명합니다. 온라인 정품 인증 인터넷에 연결되어 있는 경우 Windows가 자동으로 정품 인증을 시도합니다. 온라인 정품 인증을 사용하려면 인터넷 연결이 필요하므로 먼저 Windows가 인터넷에 연결되어 있는지 확인합니다 . 그런 다음 아래에서 Windows 버전을 찾고 단계에 따라 온라인으로 정품 인증합니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 시스템 > 정품 인증을 선택하거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 활성화 상태를 검토합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 보안 > 업데이트 & 정 품 인증을 열거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 필요한 경우 제품 키를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증을 선택하거나 복구 > 정품 인증 & 업데이트를 선택합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 온라인 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 지금 온라인으로 Windows 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 이제 인터넷을 통해 Windows를 정품 인증하겠습니다를 선택합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 오프라인 정품 인증 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 인터넷에 연결되어 있지 않으므로 오프라인에서 Windows를 정품 인증해야 합니다. Windows 정품 인증이 온라인에서 성공적으로 완료되지 않았습니다. 제품 정품 인증 포털에서 설치 ID를 요청합니다. Microsoft 지원 담당자가 설치 ID를 요청합니다. 중요 오프라인으로 정품 인증을 시도할 때 전화할 정품 인증 전화 번호가 표시될 수 있습니다. 전화 번호에는 전화를 걸지 마세요. 대신 제품 정품 인증 포털 을 방문하여 이 흐름의 정보를 사용하여 정품 인증 시도를 완료하세요. 정품 인증 요청을 검토하기 위해 Microsoft 지원이 필요한 경우 지원 옵션이 제공됩니다. 설치 ID를 찾아 확인 ID를 입력합니다. 아래에서 Windows 버전을 찾고 단계에 따라 설치 ID를 찾습니다. 찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다. 오프라인으로 정품 인증하는 방법에는 세 가지가 있습니다. 방법은 다음과 같습니다. 방법 1: Windows 설정의 정품 인증 페이지 사용(권장) Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 빌드 : 26200.8973, 26100.8973 이상 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 빌드 : 이전 빌드 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 업데이트 & 보안 > 활성화를 엽니다 . 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > 정품 인증을 선택합니다. WindowsWindows 10 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증 또는 복구 > 정 품 인증 & 업데이트를 선택한 다음 고객 지원에 문의를 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( WindowsWindows > 8.1 또는 8 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows 7 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows Vista )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 지금 고객 서비스 담당자에게 전화하여 Windows를 정품 인증하고 싶습니다 . 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > Windows XP 정품 인증을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 방법 2: SLMGR 명령 프롬프트 사용 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 자동 도움말 또는 전화로 정품 인증 이 정품 인증 페이지에 표시되지 않습니다. SLUI 명령 프롬프트를 사용할 수 없습니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. Command를 입력하고 명령 프롬프트를 마우스 오른쪽 단추로"
-          }
-        ],
-        "intent_results": [
-          "https://405.kr/guide/windows-activation.html",
-          "https://dailythetrend.com/win11-activation-status-check-guide/",
-          "https://vency.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EC%A2%85%EB%A5%98%EC%99%80-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC-%E2%80%94-%EB%94%94%EC%A7%80%ED%84%B8-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%B6%80%ED%84%B0-%EC%A0%9C%ED%92%88-%ED%82%A4%EA%B9%8C%EC%A7%80"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 8270,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": null,
-        "organic_provider": "codex_native_search",
-        "organic_query": "윈도우 정품 인증",
-        "organic_domains": [
-          "www.coupang.com",
-          "405.kr",
-          "k-info104.com",
-          "thegoodinfo.co.kr",
-          "dailythetrend.com",
-          "thegoodinfo.co.kr",
-          "o365.dge.go.kr",
-          "vency.tistory.com",
-          "economyfactory.com",
-          "rideofwirte.tistory.com"
-        ],
-        "organic_results": [
-          {
-            "url": "https://www.coupang.com/np/search?q=%EC%9C%88%EB%8F%84%EC%9A%B0+10+%EC%A0%95%ED%92%88+%EC%9D%B8%EC%A6%9D",
-            "domain": "www.coupang.com",
-            "title": "쿠팡이 추천하는 윈도우 10 정품 인증 관련 혜택과 특가",
-            "snippet": "* 한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함 Windows11 Home + AOHI 케이블, win11 home+ aohi 케이블~~239,000원~~14%205,000원 6/2(화) 도착 예정 무료배송 ∙ 오늘출발"
-          },
-          {
-            "url": "https://405.kr/guide/windows-activation.html",
-            "domain": "405.kr",
-            "title": "윈도우 정품 인증 확인·해결 방법 — 워터마크·재인증 | 405.kr 가이드",
-            "snippet": "한 번 정품 인증한 PC는 그 하드웨어 구성에 라이선스가 연결되어, 같은 PC에 윈도우를 다시 설치하면 인터넷에 연결되는 순간 대개 자동으로 다시 인증됩니다. ... * ①"
-          },
-          {
-            "url": "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
-            "domain": "k-info104.com",
-            "title": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁 (라이선스 만료 대처) – k-info104.com",
-            "snippet": "윈도우 11은 정품 인증을 받지 않아도 기본 업무나 웹 서핑 등의 핵심 기능은 작동하지만, 다음과 같은 제한 사항이 발생합니다. ... 컴퓨터의 메인보드를 교체했거나 주요 부품을"
-          },
-          {
-            "url": "https://thegoodinfo.co.kr/%EC%A0%95%EB%B3%B4/%EC%9C%88%EB%8F%84%EC%9A%B011-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D%EB%B6%80%ED%84%B0-%EA%B5%AC%EB%A7%A4%EA%B9%8C%EC%A7%80-%EA%B0%80%EC%9E%A5-%EC%89%BD%EA%B2%8C/",
-            "domain": "thegoodinfo.co.kr",
-            "title": "윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법 - 인사이트",
-            "snippet": "# 윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법 ... * 윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법"
-          },
-          {
-            "url": "https://dailythetrend.com/win11-activation-status-check-guide/",
-            "domain": "dailythetrend.com",
-            "title": "윈도우 11 정품인증 확인 방법 및 제품 키 디지털 라이선스 연결법 - dailythetrend.com",
-            "snippet": "Image: 윈도우 11 정품인증 확인을 위해 CMD 명령 프롬프트 창에 slmgr /xpr을 입력하고 '컴퓨터가 영구적으로 정품 인증되었습니다'라는 안내창이 뜬 데스크톱 화면 ... * 앞서 들어간"
-          },
-          {
-            "url": "https://thegoodinfo.co.kr/%EC%A0%95%EB%B3%B4/%EC%83%88%EB%A1%9C-%EC%82%B0-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%B4%EB%82%98-%ED%8F%AC%EB%A7%B7%ED%95%9C-pc-%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EB%8B%A8-3%EB%B6%84/",
-            "domain": "thegoodinfo.co.kr",
-            "title": "새로 산 노트북이나 포맷한 PC, 윈도우 11 정품 인증 단 3분 만에 끝내는 초간단 가이드 - 인사이트",
-            "snippet": "윈도우 11 정품 인증이 왜 중요할까요?"
-          },
-          {
-            "url": "https://o365.dge.go.kr/uploads/02-01.%20%EC%9C%88%EB%8F%84%EC%9A%B0%20%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C.pdf",
-            "domain": "o365.dge.go.kr",
-            "title": "<visual_element id=\"e1\">",
-            "snippet": "윈도우 버전 및 정품인증 확인 ... (Windows is activated) with body text “이 Windows 복사본이 정품 인증되었습니다.”"
-          },
-          {
-            "url": "https://vency.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EC%A2%85%EB%A5%98%EC%99%80-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC-%E2%80%94-%EB%94%94%EC%A7%80%ED%84%B8-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%B6%80%ED%84%B0-%EC%A0%9C%ED%92%88-%ED%82%A4%EA%B9%8C%EC%A7%80",
-            "domain": "vency.tistory.com",
-            "title": "윈도우 정품 인증 종류와 방법 총정리 — 디지털 라이선스부터 제품 키까지",
-            "snippet": "윈도우를 정품으로 인증해야만 보안 업데이트와 최신 기능을 안정적으로 사용할 수 있습니다. ... 삼성 PC는 윈도우8부터 제품키가 적혀있는 COA 라벨이 제공되지 않고 인터넷 연결 사용 시"
-          },
-          {
-            "url": "https://economyfactory.com/remove-windows-10-activation/",
-            "domain": "economyfactory.com",
-            "title": "윈도우 10 정품 인증 제거 | 워터 마크 없애기",
-            "snippet": "윈도우 10 정품 워터마크 인증 표시가 계속해서 나온다면 컴퓨터 이용이 매우 불편할 것입니다."
-          },
-          {
-            "url": "https://rideofwirte.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EC%95%88%EB%90%A0-%EB%95%8C-%ED%99%95%EC%9D%B8%ED%95%A0-5%EA%B0%80%EC%A7%80",
-            "domain": "rideofwirte.tistory.com",
-            "title": "윈도우 11 정품 인증 실패 이유와 해결법 (CMD 포함)",
-            "snippet": "윈도우 11을 설치했는데 정품 인증이 안 되어 있나요? ... 윈도우 11을 설치한 뒤 정품 인증을 하지 않으면 다양한 기능 제한과 함께 보안 리스크가 발생합니다."
-          }
-        ],
-        "dominant_result_ratio": 0.1,
-        "score_components": {
-          "demand": 31.34,
-          "organic_opportunity": 28.8,
-          "trend": 0.33,
-          "intent_fit": 15
-        },
-        "trend_growth": 0.033,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-29T14:14:36.594257+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "윈도우정품인증"
-        ],
-        "status": "pending",
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "윈도우정품인증",
-          "executed_query": "윈도우 정품 인증",
-          "topic": "윈도우정품인증 확인과 설정 방법: 제품 키·디지털 라이선스·재인증",
-          "intent": "윈도우 정품 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 인증·재인증하려면 어떻게 하나요?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
-          "result_count": 10,
-          "domain_count": 9,
-          "dominant_ratio": 0.1,
-          "search_review": {
-            "version": 1,
-            "query": "윈도우정품인증",
-            "executed_query": "윈도우 정품 인증",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-29T14:14:36.594257+00:00",
-            "raw_sha256": "8cd236680eaf37b387f58a95591f51fe1d6395335f3bc1284551a42c699482d6",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "윈도우 정품 인증 확인·해결 방법"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "윈도우 11 정품인증 확인 방법 및 제품 키 디지털 라이선스 연결법"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 단 3분 만에 끝내는 초간단 가이드"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "윈도우 버전 및 정품인증 확인"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "윈도우 정품 인증 종류와 방법 총정리 — 디지털 라이선스부터 제품 키까지"
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "윈도우 10 정품 인증 제거 | 워터 마크 없애기"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 실패 이유와 해결법 (CMD 포함)"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 10,
-            "relevant_site_count": 9,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "relevance_ratio": 1.0,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.1,
-            "site_concentration": 0.2,
-            "organic_opportunity": 28.8
-          },
-          "scope": "full_keyword",
-          "target_keyword": "윈도우정품인증",
-          "matches": [
-            {
-              "result_index": 1,
-              "quote": "윈도우 정품 인증 확인·해결 방법"
-            },
-            {
-              "result_index": 4,
-              "quote": "윈도우 11 정품인증 확인 방법 및 제품 키 디지털 라이선스 연결법"
-            },
-            {
-              "result_index": 7,
-              "quote": "윈도우 정품 인증 종류와 방법 총정리 — 디지털 라이선스부터 제품 키까지"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
-          "input_sha256": "775384f82bf54ac261ce9b6f25780af2691abc51fdc2e9a1bfcdb7d6bcad0146",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "윈도우정품인증",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "Windows 정품 인증 적용 대상 Windows 11 Windows 10",
-                "entity": "Windows 11 Windows 10",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
                 "quote": "이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.",
                 "entity": "Windows 11",
                 "context": "system_rules"
@@ -18465,50 +18175,57 @@
             ],
             "required_facets": [
               {
-                "facet": "정품 인증 상태는 어디서 확인하고 어떻게 해석하나요?",
-                "answer": "Windows 11 설정의 시스템 > 정품 인증에서 확인하며, 인증 여부와 Microsoft 계정 연결 여부를 구분합니다.",
+                "facet": "정품 인증 상태는 어디서 확인하고 상태별 의미는 무엇인가?",
+                "answer": "설정의 시스템 > 정품 인증에서 확인한다. 인증 여부와 디지털 라이선스·Microsoft 계정 연결 여부를 구분한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다."
+                "quote": "Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다."
               },
               {
-                "facet": "제품 키와 디지털 라이선스 중 무엇이 필요하며, 없으면 어떻게 하나요?",
-                "answer": "구매 경로에 따라 디지털 라이선스 또는 25자 제품 키가 필요하며, 둘 다 없으면 Microsoft Store에서 구매할 수 있습니다.",
+                "facet": "인증에 필요한 라이선스는 무엇이며 둘 다 없으면 어떻게 하는가?",
+                "answer": "디지털 라이선스 또는 25자 제품 키가 필요하다. 둘 다 없으면 설치 후 Microsoft Store에서 라이선스를 구매한다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다."
               },
               {
-                "facet": "제품 키로 정품 인증하려면 어떻게 하나요?",
-                "answer": "설치 중 키를 입력하거나 설치 후 설정의 제품 키 변경에서 해당 버전에 맞는 키를 입력합니다.",
+                "facet": "제품 키 없이 디지털 라이선스로 어떻게 인증하는가?",
+                "answer": "해당 하드웨어의 디지털 라이선스와 연결된 Microsoft 계정으로 인터넷에 연결해 로그인한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다."
+              },
+              {
+                "facet": "제품 키는 어디에 입력하는가?",
+                "answer": "설치 중 입력하거나 설치 후 설정 > 시스템 > 정품 인증 > 제품 키 변경에서 입력한다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다."
               },
               {
-                "facet": "디지털 라이선스로 정품 인증하려면 어떻게 하나요?",
-                "answer": "라이선스가 연결된 하드웨어에서 인터넷에 연결하고 해당 Microsoft 계정으로 로그인합니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다."
-              },
-              {
-                "facet": "재설치 후 다시 정품 인증할 수 있나요?",
-                "answer": "기존 인증과 계정 연결을 확인하고 동일한 버전을 재설치하면 제품 키 입력 없이 온라인 자동 인증이 가능합니다.",
+                "facet": "재설치할 때 기존 인증을 어떻게 유지하는가?",
+                "answer": "기존 인증과 계정 연결을 확인하고 동일한 버전을 재설치한다. 디지털 라이선스가 있으면 키 입력을 건너뛰고 온라인 인증한다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다."
               },
               {
-                "facet": "주요 하드웨어 변경으로 인증이 풀리면 어떻게 대응하나요?",
-                "answer": "변경 전에 Microsoft 계정을 디지털 라이선스에 연결하고, 변경 후 정품 인증 문제 해결사를 사용합니다.",
+                "facet": "인증 실패나 주요 부품 변경 시 무엇을 확인하는가?",
+                "answer": "인터넷 연결·오류 메시지·버전에 맞는 키를 확인한다. 주요 부품 변경은 사전 계정 연결과 정품 인증 문제 해결사를 안내한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
+                "quote": "이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
               },
               {
-                "facet": "온라인 인증이 실패하거나 PC가 오프라인이면 어떻게 인증하나요?",
-                "answer": "설치 ID를 제품 정품 인증 포털에 제출하고 받은 확인 ID를 입력합니다. 표시된 전화번호로 전화하지 않도록 안내합니다.",
+                "facet": "빌드별 오프라인 인증 진입 경로는 어떻게 다른가?",
+                "answer": "26200.8973·26100.8973 이상은 자동화된 도움말, 이전 빌드는 전화로 정품 인증에서 설치 ID를 확인한다.",
+                "supported": true,
+                "source_index": 1,
+                "quote": "시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다."
+              },
+              {
+                "facet": "오프라인 인증은 어떻게 완료하는가?",
+                "answer": "설치 ID를 제품 정품 인증 포털에 제출하고 받은 확인 ID를 Windows에 입력한다. 표시된 전화번호로 전화하지 않는다.",
                 "supported": true,
                 "source_index": 1,
                 "quote": "찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다."
@@ -18524,7 +18241,7 @@
             }
           }
         },
-        "score": 75.47,
+        "score": 76.26,
         "publish_eligible": true,
         "hold_reasons": []
       }
@@ -18532,98 +18249,153 @@
     "held": [],
     "rejected": [
       {
-        "keyword": "윈도우11업데이트",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/install-windows-updates",
-              "title": "Install Windows Updates | Microsoft Support",
-              "excerpt_chars": 2930
-            },
-            {
-              "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows",
-              "title": "Troubleshoot problems updating Windows | Microsoft Support",
-              "excerpt_chars": 8000
-            },
-            {
-              "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/how-to-uninstall-a-windows-update",
-              "title": "How to uninstall a Windows Update | Microsoft Support",
-              "excerpt_chars": 2366
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
+        "keyword": "윈도우11다운로드",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 8050,
+        "organic_provider": "codex_native_search",
+        "organic_query": "윈도우11 다운로드",
+        "organic_results": [
+          {
+            "url": "https://cbnews.co.kr/%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%A0%80%EC%9E%A5-%EA%B3%B5%EA%B0%84-%EC%84%BC%EC%8A%A4-%EC%84%A4%EC%A0%95%EF%BD%9C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%ED%8F%B4%EB%8D%94-%EC%82%AD%EC%A0%9C-%EC%A0%84/",
+            "domain": "cbnews.co.kr",
+            "title": "윈도우11 저장 공간 센스 설정｜다운로드 폴더 삭제 전 확인 - CB NEWS",
+            "snippet": "# 윈도우11 저장 공간 센스 설정｜다운로드 폴더 삭제 전 확인 ... Image: 윈도우 저장 공간 관리 화면과 외장 드라이브 저장 공간 센스를 켜기 전 휴지통과"
           },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://support.microsoft.com/ko-kr/servicing/os/windows-11/2026/02/windows-11-version-26h1-update-history",
-                  "title": "Windows 11 버전 26H1 업데이트 기록 | Microsoft Support",
-                  "excerpt_chars": 842
-                },
-                {
-                  "url": "https://support.microsoft.com/ko-kr/servicing/os/azure-marketplace/windows-client/2026/windows-10-and-windows-11-client-images-for-april-2026",
-                  "title": "2026년 4월 Windows 10 및 Windows 11 클라이언트 이미지 | Microsoft Support",
-                  "excerpt_chars": 6745
-                },
-                {
-                  "url": "https://support.microsoft.com/ko-kr/servicing/dotnetframework/windows-11/21h2/2021/09/history-of-cumulative-updates-for-net-framework-for-windows-11",
-                  "title": ".NET Framework Windows 11 누적 업데이트 기록 | Microsoft Support",
-                  "excerpt_chars": 610
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_rejected",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/install-windows-updates",
-                  "title": "Install Windows Updates | Microsoft Support",
-                  "excerpt_chars": 2930
-                },
-                {
-                  "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows",
-                  "title": "Troubleshoot problems updating Windows | Microsoft Support",
-                  "excerpt_chars": 8000
-                },
-                {
-                  "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/how-to-uninstall-a-windows-update",
-                  "title": "How to uninstall a Windows Update | Microsoft Support",
-                  "excerpt_chars": 2366
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            }
+          {
+            "url": "https://winfixguide.kr/%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EA%B0%80-%EB%A9%88%EC%B7%84%EC%9D%84-%EB%95%8C%EF%BD%9C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%C2%B7%EC%84%A4%EC%B9%98%EA%B0%80/",
+            "domain": "winfixguide.kr",
+            "title": "윈도우11 업데이트가 멈췄을 때｜다운로드·설치가 진행되지 않는 경우 확인 순서 - 디지털진단소",
+            "snippet": "# 윈도우11 업데이트가 멈췄을 때｜다운로드·설치가 진행되지 않는 경우 확인 순서 ... 윈도우11에서 Windows 업데이트를 실행했는데 다운로드가 0%에서 움직이지 않거나, 특정 퍼센트에서 오랫동안 멈춰 있는 경우가"
+          },
+          {
+            "url": "https://oguonline.com/2026/07/22/%EB%B0%98%EB%94%94%EC%A7%91-%EB%AC%B4%EB%A3%8C-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%8F-%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95/",
+            "domain": "oguonline.com",
+            "title": "반디집 무료 다운로드 및 윈도우 11 최적화 설정 방법 – 오구온라인",
+            "snippet": "# 반디집 무료 다운로드 및 윈도우 11 최적화 설정 방법 ... 작성 남기훈 최종 업데이트 2026년 7월 31일 이 글은 오구온라인 편집팀의 사실 확인과 정확성"
+          },
+          {
+            "url": "https://everythinking7.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%9A%A9%EB%9F%89-%EB%B6%80%EC%A1%B1%EF%BD%9C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%C2%B7%ED%9C%B4%EC%A7%80%ED%86%B5%C2%B7Windowsold-%EC%A7%80%EC%9B%8C%EB%8F%84-%EB%90%A0%EA%B9%8C",
+            "domain": "everythinking7.tistory.com",
+            "title": "윈도우 11 C드라이브 용량 부족｜다운로드·휴지통·Windows.old 지워도 될까?",
+            "snippet": "# 윈도우 11 C드라이브 용량 부족｜다운로드·휴지통·Windows.old 지워도 될까? ... ‘임시 파일’이라고 되어 있어도 다운로드나 이전 Windows 설치처럼 쉽게 체크하기 어려운 항목이 섞여 있기 때문이죠."
+          },
+          {
+            "url": "https://policybrp.com/%EC%9C%88%EB%8F%84%EC%9A%B011-iso-%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84-%EC%A0%95%EC%8B%9D-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%A9%EB%B2%95/",
+            "domain": "policybrp.com",
+            "title": "윈도우11 ISO 최신버전 정식 다운로드 방법",
+            "snippet": "윈도우11 ISO는 마이크로소프트 공식 다운로드 페이지에서 별도의 우회 없이 바로 받을 수 있습니다.예전처럼 브라우저를 속이거나 인터넷 익스플로러를 실행할 필요가 전혀 없고, 페이지 하단의 ‘Windows 11"
+          },
+          {
+            "url": "https://www.wps.com/blog/ko-KR/ko-how-to-download-google-docs-for-pc-win10-and-win11/",
+            "domain": "www.wps.com",
+            "title": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)",
+            "snippet": "# PC용 Google Docs 다운로드 방법 (윈도우 10 & 11) ... Windows 10 및 11에서 Google Docs를 다운로드하는 간단한 가이드를 안내드립니다: ... * 목차 생성:"
+          },
+          {
+            "url": "https://www.klog.kr/download/tiny11-download",
+            "domain": "www.klog.kr",
+            "title": "Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드",
+            "snippet": "# Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드 ... Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드 및 설치 안내입니다."
+          },
+          {
+            "url": "https://www.itechguides.com/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%86%8C%ED%94%84%ED%8A%B8-arm-%EA%B8%B0%EA%B8%B0%EC%9A%A9-%EC%9C%88%EB%8F%84%EC%9A%B0-11-iso-%ED%8C%8C%EC%9D%BC-%EA%B3%B5%EC%8B%9D-%EA%B3%B5%EA%B0%9C-25h2/",
+            "domain": "www.itechguides.com",
+            "title": "마이크로소프트 Arm 기기용 윈도우 11 ISO 공식 공개: 25H2 다운로드·설치",
+            "snippet": "# 마이크로소프트, Arm 기기용 윈도우 11 ISO 파일 공식 공개…25H2 다운로드·설치 조건 ... 마이크로소프트는 2026년 8월 18일 기준 Arm 기기용 윈도우 11 ISO 파일을 공식"
+          },
+          {
+            "url": "https://digitaluserguide.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%84%BC%ED%84%B0-%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0%EF%BD%9C25H2-ISO%C2%B7%EC%84%A4%EC%B9%98%EB%8F%84%EC%9A%B0%EB%AF%B8%C2%B7USB-%EC%84%A4%EC%B9%98%EB%B0%A9%EB%B2%95",
+            "domain": "digitaluserguide.tistory.com",
+            "title": "윈도우 11 다운로드 센터 바로가기｜25H2 ISO·설치도우미·USB 설치방법",
+            "snippet": "26H1도 별도의 Windows 11 버전으로 존재하지만 기존 24H2·25H2 PC에 제공하는 일반적인 기능 업데이트가 아니라 2026년 출시된 일부 신규 장치를 대상으로 설계된 버전이므로, 기존 PC에서 공식"
+          },
+          {
+            "url": "https://richdadsky.tistory.com/entry/%ED%81%AC%EB%A1%AC%C2%B7%EC%97%A3%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%9C%84%EC%B9%98-%EC%84%A4%EC%A0%95%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%80%EC%9E%A5-%ED%8F%B4%EB%8D%94-%EB%B0%94%EA%BE%B8%EA%B8%B0%EC%99%80-%E2%80%98%EB%AC%BB%EA%B8%B0%E2%80%99-%EC%98%B5%EC%85%98-%EC%A0%95%EB%A6%AC",
+            "domain": "richdadsky.tistory.com",
+            "title": "크롬·엣지 다운로드 위치 설정(윈도우 11): 저장 폴더 바꾸기와 ‘묻기’ 옵션 정리",
+            "snippet": "크롬·엣지 다운로드 위치 설정(윈도우 11): 저장 폴더 바꾸기와 ‘묻기’ 옵션 정리 ... 이 글은 윈도우 11에서 크롬과 엣지의 다운로드 저장 위치를 정리하는 방법을 안내합니다."
           }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "윈도우11다운로드",
+          "executed_query": "윈도우11 다운로드",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-02T02:04:46.174328+00:00",
+          "raw_sha256": "46ffe5d3e82314b07d51bc54d8a876eea8b340fd1562b09a38466a825ad7ecf4",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "윈도우11 저장 공간 센스 설정｜다운로드 폴더 삭제 전 확인"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "윈도우11에서 Windows 업데이트를 실행했는데 다운로드가 0%에서 움직이지 않거나"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "반디집 무료 다운로드 및 윈도우 11 최적화 설정 방법"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "윈도우 11 C드라이브 용량 부족｜다운로드·휴지통·Windows.old 지워도 될까?"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "윈도우11 ISO는 마이크로소프트 공식 다운로드 페이지에서 별도의 우회 없이 바로 받을 수 있습니다."
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드 및 설치 안내입니다."
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "마이크로소프트 Arm 기기용 윈도우 11 ISO 공식 공개: 25H2 다운로드·설치"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "윈도우 11 다운로드 센터 바로가기｜25H2 ISO·설치도우미·USB 설치방법"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "이 글은 윈도우 11에서 크롬과 엣지의 다운로드 저장 위치를 정리하는 방법을 안내합니다."
+            }
+          ]
         }
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
-      "KT공유기설정",
-      "와이파이공유기설치방법",
-      "윈도우10설치방법",
-      "인터넷선연결",
-      "인터넷속도",
-      "휴대폰개통조회"
+      "윈도우11업데이트"
     ],
-    "research_stop_reason": "selection_target",
-    "retry_keywords": [],
+    "research_stop_reason": "pool_exhausted",
+    "retry_keywords": [
+      "휴대폰개통조회",
+      "인터넷속도"
+    ],
     "discovery_rejections": [],
+    "discovery_replenishment": [],
+    "deferred_measured_keywords": [
+      "윈도우11업데이트"
+    ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
       {
@@ -18632,9 +18404,9 @@
           "인터넷신청",
           "삼성닷컴",
           "컴퓨터와이파이연결",
-          "아이폰17",
-          "컴퓨터인터넷연결",
           "미세먼지",
+          "컴퓨터인터넷연결",
+          "아이폰17",
           "결혼준비신용카드",
           "갤럭시",
           "와이파이연결",
@@ -18649,8 +18421,8 @@
           "건조기",
           "통돌이세탁기",
           "윈도우11",
-          "드럼세탁기",
           "아이폰15",
+          "드럼세탁기",
           "아이폰16PRO",
           "그래픽카드",
           "아이폰16프로",
@@ -18660,206 +18432,944 @@
           "갤럭시S24",
           "와이파이공유기",
           "COPILOT",
-          "삼성갤럭시",
           "LGU+",
           "아이폰15PRO",
-          "갤럭시S25울트라",
           "IPTIME",
-          "폴더폰",
-          "삼성닷컴홈페이지",
-          "MS오피스",
+          "갤럭시S25울트라",
+          "삼성갤럭시",
           "인터넷비교사이트",
-          "공유기",
-          "전기밥솥",
+          "폴더폰",
+          "MS오피스",
           "KT인터넷고객센터",
-          "삼성핸드폰",
+          "전기밥솥",
+          "삼성닷컴홈페이지",
           "마이크로소프트365",
-          "미니건조기",
-          "세탁기건조기일체형",
+          "공유기",
+          "삼성핸드폰",
           "삼성몰",
+          "세탁기건조기일체형",
           "IPTIME공유기",
+          "미니건조기",
           "아이폰13",
           "아이폰사전예약혜택",
           "와이파이증폭기",
           "아이폰15프로",
           "갤럭시스토어",
           "SK인터넷",
+          "인터넷가입",
           "갤럭시A시리즈",
           "삼성전자몰",
-          "인터넷가입",
-          "아이폰16E",
-          "빨래건조기"
+          "갤럭시탭S9",
+          "아이폰16E"
         ],
         "proposals": [],
         "measured_fallback": false,
-        "no_eligible_proposal": true
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "인터넷신청",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성닷컴",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터와이파이연결",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "미세먼지",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터인터넷연결",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰17",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼준비신용카드",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "와이파이연결",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도측정",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터네트워크연결",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷TV신청",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S25",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰16",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "건조기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "통돌이세탁기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "드럼세탁기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰16PRO",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "그래픽카드",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰16프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT요금제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "조립PC",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "휴대폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S24",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "와이파이공유기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "COPILOT",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LGU+",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15PRO",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "IPTIME",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S25울트라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성갤럭시",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷비교사이트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "폴더폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS오피스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷고객센터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "전기밥솥",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성닷컴홈페이지",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공유기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성핸드폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성몰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁기건조기일체형",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "IPTIME공유기",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "미니건조기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰13",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰사전예약혜택",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "와이파이증폭기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시스토어",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷가입",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시A시리즈",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자몰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시탭S9",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰16E",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": []
       },
       {
         "round": 2,
         "offered_keywords": [
-          "갤럭시탭S9",
-          "S25",
           "세탁기건조기",
-          "청라코스트코",
+          "S25",
+          "빨래건조기",
           "DDR416G",
+          "청라코스트코",
           "오피스365",
-          "삼성폰",
           "램16기가",
+          "삼성폰",
           "삼성휴대폰",
+          "인터넷설치",
           "갤럭시S24울트라",
           "아이폰가격",
-          "인터넷설치",
           "노키아",
-          "SK요금제",
-          "삼성가전",
-          "공유기추천",
-          "아이폰출시일",
-          "윈도우11업데이트",
           "SKT인터넷",
+          "SK요금제",
           "LG인터넷",
+          "삼성가전",
           "아이폰12",
-          "효도폰",
           "아이폰15프로맥스",
+          "효도폰",
           "윈도우10",
-          "삼성폴더폰",
           "MICROSOFT365",
+          "삼성폴더폰",
+          "아이폰출시일",
           "마이크로소프트오피스",
+          "공유기추천",
           "윈도우정품인증",
-          "갤럭시울트라",
           "아이폰12미니",
+          "갤럭시울트라",
           "윈도우11다운로드",
+          "블랙프라이데이기간",
           "삼성핸드폰신형",
           "갤럭시A",
           "갤럭시25울트라",
           "S24",
-          "공유기가격",
-          "블랙프라이데이기간",
-          "서피스프로",
-          "갤럭시자급제폰",
-          "SK브로드밴드인터넷",
           "랜케이블",
+          "서피스프로",
+          "SK브로드밴드인터넷",
           "MSOFFICE",
-          "셋톱박스",
+          "갤럭시자급제폰",
           "REMOTE",
-          "삼성전자스토어",
-          "아이폰SE1",
+          "셋톱박스",
           "세탁기렌탈",
+          "아이폰SE1",
           "윈도우11정품인증",
-          "세탁건조기",
+          "삼성전자스토어",
           "인터넷속도테스트",
-          "아이폰출시",
-          "코스트코청라점",
+          "세탁건조기",
           "OFFICE365",
-          "세탁기건조기세트",
           "EXCEL",
+          "공유기가격",
+          "코스트코청라점",
           "갤럭시S",
-          "애플사전예약",
           "KT인터넷설치",
+          "세탁기건조기세트",
+          "아이폰출시",
+          "애플사전예약",
           "아이폰공기계",
-          "2G폰"
+          "휴대폰개통조회",
+          "인터넷속도"
         ],
         "proposals": [
           {
-            "keyword": "윈도우11업데이트",
-            "reason": "네이버 월 9,610회. 업데이트 실행 방법과 설치 조건, 진행되지 않을 때의 점검 절차를 공식 문서로 조사할 가치가 있다.",
-            "search_query": "윈도우11 업데이트"
+            "keyword": "윈도우11정품인증",
+            "reason": "월 6,110회 수요가 있는 운영체제 인증 질문이다. 인증 상태 확인과 정품 인증 조건·절차를 공식 문서로 조사할 가치가 있다.",
+            "search_query": "윈도우11 정품 인증"
           },
           {
-            "keyword": "윈도우11정품인증",
-            "reason": "네이버 월 6,180회. 인증 상태 확인과 제품 키·디지털 라이선스별 인증 절차를 묻는 구체적인 설정 수요가 있다.",
-            "search_query": "윈도우11 정품 인증"
+            "keyword": "윈도우11다운로드",
+            "reason": "월 8,050회 수요가 있다. 설치 파일을 받기 전 확인할 호환 조건과 다운로드 방식별 절차를 공식 자료로 조사할 후보다.",
+            "search_query": "윈도우11 다운로드"
           }
         ],
         "measured_fallback": false,
-        "no_eligible_proposal": false
+        "no_eligible_proposal": false,
+        "skipped": [
+          {
+            "keyword": "세탁기건조기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "S25",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "빨래건조기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "DDR416G",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청라코스트코",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "오피스365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "램16기가",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성휴대폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷설치",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S24울트라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노키아",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SKT인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK요금제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LG인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성가전",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰12",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15프로맥스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "효도폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우10",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MICROSOFT365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성폴더폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시일",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트오피스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공유기추천",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우정품인증",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰12미니",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시울트라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "블랙프라이데이기간",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성핸드폰신형",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시A",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시25울트라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "S24",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "랜케이블",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "서피스프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK브로드밴드인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSOFFICE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시자급제폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "REMOTE",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "셋톱박스",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁기렌탈",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰SE1",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자스토어",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도테스트",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁건조기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "OFFICE365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "EXCEL",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공유기가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "코스트코청라점",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷설치",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁기건조기세트",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰공기계",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "휴대폰개통조회",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          }
+        ]
       },
       {
         "round": 3,
         "offered_keywords": [
-          "갤럭시탭S9",
           "S25",
-          "세탁기건조기",
-          "청라코스트코",
           "DDR416G",
           "오피스365",
-          "삼성폰",
           "램16기가",
-          "삼성휴대폰",
-          "갤럭시S24울트라",
-          "아이폰가격",
           "인터넷설치",
-          "노키아",
-          "SK요금제",
-          "삼성가전",
-          "공유기추천",
-          "아이폰출시일",
+          "갤럭시S24울트라",
           "SKT인터넷",
           "LG인터넷",
           "아이폰12",
-          "효도폰",
           "아이폰15프로맥스",
-          "윈도우10",
-          "삼성폴더폰",
           "MICROSOFT365",
+          "삼성폴더폰",
+          "아이폰출시일",
           "마이크로소프트오피스",
-          "윈도우정품인증",
-          "갤럭시울트라",
           "아이폰12미니",
-          "윈도우11다운로드",
+          "갤럭시울트라",
           "삼성핸드폰신형",
           "갤럭시A",
           "갤럭시25울트라",
           "S24",
-          "공유기가격",
-          "블랙프라이데이기간",
           "서피스프로",
-          "갤럭시자급제폰",
           "SK브로드밴드인터넷",
-          "랜케이블",
           "MSOFFICE",
-          "셋톱박스",
-          "REMOTE",
-          "삼성전자스토어",
+          "갤럭시자급제폰",
           "아이폰SE1",
-          "세탁기렌탈",
-          "세탁건조기",
+          "삼성전자스토어",
           "인터넷속도테스트",
-          "아이폰출시",
-          "코스트코청라점",
           "OFFICE365",
-          "세탁기건조기세트",
-          "EXCEL",
           "갤럭시S",
-          "애플사전예약",
           "KT인터넷설치",
+          "세탁기건조기세트",
+          "아이폰출시",
           "아이폰공기계",
-          "2G폰"
+          "휴대폰개통조회"
         ],
-        "proposals": [
+        "proposals": [],
+        "measured_fallback": false,
+        "no_eligible_proposal": true,
+        "skipped": [
           {
-            "keyword": "윈도우정품인증",
-            "reason": "네이버 월 8,270회 실측 수요. 인증 상태 확인과 제품 키·디지털 라이선스별 인증 절차를 공식 문서로 조사할 가치가 있다.",
-            "search_query": "윈도우 정품 인증"
+            "keyword": "S25",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "DDR416G",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "오피스365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "램16기가",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷설치",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S24울트라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SKT인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LG인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰12",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15프로맥스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MICROSOFT365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성폴더폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시일",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트오피스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰12미니",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시울트라",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성핸드폰신형",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시A",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시25울트라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "S24",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "서피스프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK브로드밴드인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSOFFICE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시자급제폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰SE1",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자스토어",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도테스트",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "OFFICE365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷설치",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁기건조기세트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰공기계",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "휴대폰개통조회",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
           }
         ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false
+        "research_fallback": []
       }
     ],
     "ranked_candidates": [
       {
         "keyword": "윈도우11정품인증",
         "category": "테크",
-        "topic": "윈도우11정품인증 방법: 제품 키·디지털 라이선스와 인증 상태 확인",
-        "intent": "윈도우11을 어떻게 정품 인증하며, 제품 키 없이 가능한 조건과 인증 실패 시 공식 절차는 무엇인가?",
-        "gap": "라이선스별 인증 방법 표, 상태 메시지별 확인 체크리스트, 재설치·하드웨어 변경 및 오프라인 인증 절차를 제공한다.",
+        "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
+        "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
+        "gap": "인증 상태별 의미표, 라이선스별 인증 절차, 재설치·부품 변경 체크리스트와 빌드별 오프라인 인증 경로를 제공한다.",
         "source_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
         "verified_sources": [
           {
             "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
             "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
             "title": "Windows 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
+            "checked_on": "2026-10-02",
             "sha256": "14448cb040e32c8f3e739e49127427db6cd0af84c9461859086552f8acf22689",
             "excerpt": "Windows 정품 인증 적용 대상 Windows 11 Windows 10 Copilot 도움말 보기 Windows를 재설치한 후 활성화하려면 어떻게 하나요? 내 Windows 버전을 확인하려면 어떻게 해야 하나요? 제품 키로 Windows를 어떻게 활성화하나요? Windows 11 Windows 10 팁 Windows를 정품 인증하는 데 문제가 있나요? Windows 정품 인증 오류에 대한 도움말 보기 에서 문제 해결 단계를 시도해 보세요. 정품 인증은 제품 키 또는 디지털 권한을 장치의 하드웨어 구성과 페어링하는 기술 프로세스입니다. 이는 복사본 자체의 신뢰성을 평가하지 않으며 Windows 복사본이 정품 임을 보장하지 않습니다. 제품 키 또는 디지털 권한이 하드웨어 구성에 유효한지 확인하기만 합니다. 반면에 유효성 검사는 중요한 Windows 라이선스 파일이 손상, 삭제 또는 제거되지 않았으며 특정 업데이트 및 다운로드를 받아야 하는지 확인하는 프로세스입니다. 동영상을 재생하는 데 문제가 있나요? YouTube에서 시청하세요. Windows 11에서 Windows 정품 인증 상태 확인 먼저 Windows 11이 정품 인증되어 있고 Microsoft 계정에 연결되어 있는지 확인해야 합니다. Microsoft 계정을 장치의 Windows 11 라이선스에 연결하는 것이 중요합니다. Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. Windows 11에서 Windows 정품 인증 상태를 검사하는 방법 Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다.  정품 인증 상태 옆에 정품 인증 상태 가 표시됩니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에서 다음 정품 인증 상태 메시지 중 하나를 볼 수 있습니다. 정품 인증 상태 설명 Windows가 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정 연결 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows가 정품 인증되지 않음 정품 인증이 되지 않았습니다. 실패를 설명하는 오류 메시지가 표시됩니다. 정품 인증을 받으려면 Windows 11를 구입해야 할 수 있습니다. 장치에 대한 라이선스를 구입해야 하는 경우에는 \"Windows 11 라이선스 구입하기\"를 찾아보세요. 이미 해당 장치에 대한 라이선스를 구입했음에도 계속 오류 메시지가 표시되는 경우 정품 인증 방법 으로 계속합니다. 정품 인증을 위해 Microsoft 계정을 Windows 11에 연결합니다. Microsoft 계정을 연결하려면 다음의 지침을 따릅니다. 관리자로 로그인하여 Microsoft 계정을 추가합니다. 관리자 계정을 사용하고 있는지 확인하려면 시작 단추를 선택한 다음, 설정 > 계정 > 사용자 정보 를 선택합니다. 사용자 이름 아래에 관리자가 표시됩니다. 관리자가 아닌 경우 Windows에서 사용자 계정 관리를 참조하여 관리자 계정을 만듭니다. 설정의 정보로 이동 전자 메일 주소가 관리자 위에 표시되는지 확인하여 관리자 계정이 Microsoft 계정이기도 한지 확인합니다. 이메일 주소가 표시되면 이 계정은 Microsoft 계정입니다. 이메일 주소가 표시되지 않으면 로컬 계정을 사용하여 로그인한 것입니다. 아직 Microsoft 계정이 없다면 새 Microsoft 계정을 만드는 방법 을 참조하세요. 관리자이고 Microsoft 계정을 사용하고 있음을 확인한 후 정품 인증 페이지로 돌아가서 계정 추가 를 선택하고 Microsoft 계정 및 암호를 입력한 다음 로그인 을 선택합니다. Microsoft 계정이 추가된 후에는 정품 인증 페이지에서 Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증되었습니다 라고 표시됩니다. Windows 11용 Windows 정품 인증 방법 Windows 11을 구입한 방법에 따라 정품 인증을 위해 디지털 라이선스 또는 25자 제품 키가 필요합니다. 이 중 하나가 없으면 장치를 정품 인증할 수 없습니다. 디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다. 제품 키는 Windows를 정품 인증하는 데 사용되는 25문자 코드입니다. 제품 키가 다음과 같이 보입니다. XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. 사용할 정품 인증 방법을 결정한 후 디지털 라이선스를 사용하여 정품 인증하기 또는 제품 키를 사용하여 정품 인증하기 의 해당 단계를 따르세요. Windows 11의 경우 디지털 라이선스와 제품 키 중 어떤 Windows 정품 인증 방법을 사용하나요? 정품 인증 방법은 Windows 11을 구매한 방법에 따라 다릅니다. Windows 11을 받은 방법 정품 인증 방법 Windows 10, Windows 8.1 또는 Windows 7의 정품을 실행하는 적격 기기에서 Windows 11로 무료 업그레이드 디지털 라이선스 Microsoft 계정을 연결하거나 Microsoft 계정에 로그인하거나 MSA를 디지털 라이선스와 연결한 경우 해당 MSA가 디지털 라이선스를 포함합니다. Microsoft Store 앱에서 Windows 11 Pro 업그레이드를 구매하고 Windows 11을 성공적으로 정품 인증했습니다. 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 참가자이며 정품 인증된 이전 버전의 Windows 11 및 Windows 11 Preview를 실행 중인 적합한 장치에서 최신 Windows 11 Insider Preview 빌드로 업그레이드하기 디지털 라이선스 Windows Insider 로그인에 사용한 전자 메일 주소는 디지털 라이선스가 포함된 MSA일 수 있습니다. Microsoft Store 앱에서 정품 Windows 11 구입하기 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 11과 함께 제공되는 PC를 구입합니다. 제품 키 장치 패키징 또는 장치에 부착된 COA(인증서)에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 박스 복사본 구입하기 제품 키 Windows 11 박스의 내부 레이블에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 디지털 복사본 구입하기 제품 키 Windows 11을 구입한 후 받은 확인 메일 또는 대리점의 웹 사이트를 통해 액세스할 수 있는 디지털 락커에서 제품 키를 찾을 수 있습니다. 입력한 올바른 제품 키를 기준으로 장치에 Windows 11에 대한 디지털 라이선스가 부여됩니다. Windows 11에 대한 볼륨 라이선싱 계약 또는 MSDN 구독이 있음 제품 키 프로그램의 웹 포털을 통해 제품 키를 사용할 수 있습니다. Windows 11을 실행하는 새 장치 또는 리퍼비시 장치 구입하기 제품 키 장치에 제품 키가 사전 설치되어 있거나, 장치 패키지에 포함되어 있거나, 장치에 부착된 카드로 또는 COA(정품 인증서)에 포함되어 있습니다. 리퍼비시 PC를 구입한 경우, Microsoft가 아닌 리퍼비셔에서 제품 키를 제공해야 합니다. Microsoft Store 온라인에서 구입하기 제품 키 주문 기록이 포함된 확인 메일에서 제품 키를 찾습니다. Purchase a Windows 11 라이선스 구입하기 디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다. 방법은 다음과 같습니다. 시작 단추를 선택합니다. 설정 > 시스템 > 정품 인증 을 선택합니다. Microsoft Store로 이동 을 선택합니다. Windows 11 디지털 라이선스를 구입할 수 있는 Microsoft Store 앱을 엽니다. 디지털 라이선스를 사용하여 Windows 11 정품 인증하기 디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다. PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다. 디지털 라이센스가 없는 경우 정품 인증을 위해 제품 키를 사용할 수 있습니다.  제품 키를 사용하여 정품 인증하는 방법을 알아보하려면 제품 키를 사용하여 정품 인증 의 단계를 따릅니다. 새 장치 또는 마더보드에서 처음으로 Windows 설치 및 정품 인증 Windows 11 새 장치나 마더보드에 Windows를 처음 설치하고 제품 키가 없는 경우 설치 설정 화면에서 제품 키가 없습니다 를 선택합니다.  메시지가 표시되면 이 디바이스에 대한 디지털 라이선스를 구입하는 데 사용할 Microsoft 계정을 입력합니다. 설치 화면이 완료되고 Windows 설치가 완료되면 정품 인증 설정으로 이동합니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증을 선택합니다. 그런 다음 스토어 열기 를 선택하여 Windows를 정품 인증하기 위한 디지털 라이선스를 구입합니다. Windows 11을 다시 설치한 후 정품 인증 장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다. 다시 설치를 시도해 보기 전에 Windows 11이 정품 인증되었는지 확인합니다. 확인하려면 시작 단추를 선택한 다음 설정 > 시스템 > 활성화 를 선택합니다 . Windows 11이 정품 인증되었으며 Microsoft 계정이 디지털 라이선스와 연결되어 있음을 확인할 수 있습니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에 표시될 메시지는 다음과 같습니다. 정품 인증 상태 설명 Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 디지털 라이센스가 Microsoft 계정에 연결되어 있지 않은 경우, 정품 인증 상태 확인하기 아래에 있는 Microsoft 계정에 연결하기 의 단계를 따릅니다. 계정을 연결하면 설치 프로그램을 실행하여 Windows 11을 다시 설치할 수 있습니다. Windows 11을 다시 설치하기 위해 설치 미디어를 만드는 방법에 대한 자세한 내용은 Microsoft 소프트웨어 다운로드 웹 사이트 로 이동하세요. 설치 미디어를 만들 때 장치에 이미 설치된 버전과 일치하는 Windows 11 버전을 선택해야 합니다. 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시되는 경우 제품 키가 없음 을 선택하여 이 단계를 건너뛸 수 있습니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. 디지털 라이선스를 Microsoft 계정과 연결한 경우 디지털 라이선스와 연결된 Microsoft 계정에 로그인해야 합니다. 하드웨어 변경 후 Windows 11 다시 정품 인증하기 마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다. 하드웨어 변경을 대비하기 위해 Microsoft 계정을 디지털 라이센스에 연결해야 합니다. 이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. 자세한 내용은 하드웨어 변경 후 Windows 다시 정품 인증 을 참조하세요. 제품 키를 사용하여 Windows 11 정품 인증 제품 키는 25 문자 코드로 다음과 같이 표시됩니다. 제품 키: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다.  또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 제품 키를 찾으려면 정품 인증 방법의 제품 키 표 디지털 라이선스와 제품 키 중 어떤 제품 인증 방법을 사용하나요? 를 참조하세요. 참고 Microsoft는 Microsoft 온라인 스토어에서 구입한 경우에만 제품 키 기록을 보관합니다. 사용자 Microsoft 계정 주문 내역 에서 제품을 Microsoft에서 구입했는지 알아볼 수 있습니다. 자세한 도움말을 보려면 Windows 제품 키 찾기 를 참조하세요. 제품 키가 있는 경우 다음 시나리오에서 제품 키 변경을 사용하여 Windows 11을 정품 인증할 수 있습니다. 다음은 정품 인증에 도움이 되는 추가 정보입니다. 새 장치 또는 Windows 11용 마더보드에서 처음으로 Windows 설치 및 정품 인증을 수행하는 방법 정품 인증된 Windows 11이 있었던 적이 없는 장치에서는 올바른 제품 키를 사용하여 Windows 11을 정품 인증해야 합니다. 장치에서 이전에 정품 인증된 적이 없는 Windows 11 버전을 설치하는 경우에도 올바른 제품 키를 사용해야 합니다. 예를 들어 Windows 11 Home이 설치되었던 장치에 Windows 11 Pro를 설치하고 정품 인증하려면 올바른 제품 키가 필요합니다. 설치하는 동안 올바른 제품 키를 입력하라는 메시지가 표시됩니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. Windows 11에서 정품 인증 상태를 검사하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 을 선택합니다. 설정에서 정품 인증 상태 확인 Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 참고 경우에 따라서는 장치 패키지와 함께 제공되거나, 카드로 포함되어 있거나, 장치에 부착된 COA(정품 인증서)에 표시되는 Windows 11 제품 키를 입력해야 할 수 있습니다. Windows 11 제품 키가 없는 경우, 설치 중 제품 키를 구입할 수 있는 옵션이 나타납니다. Windows 11을 실행하는 리퍼비시 장치 정품 인증 Windows 11을 실행하는 리퍼비시 장치를 구입할 때는 장치에 부착된 정품 인증서 (COA)의 제품 키를 사용하여 Windows를 정품 인증해야 합니다. OEM(Original Hardware Manufacturer)이 마더보드를 변경한 경우, PC에서 자동으로 정품 인증이 되어야 합니다. 정품 인증을 받지 않으면 OEM에서 회색 스크래치 덮개 아래에 25자의 키가 있는 COA 카드를 제공했을 수 있습니다. 정품 인증을 받으려면 다음 단계를 따르세요. 참고 제품 키를 가리고 있는 회색 코팅을 제거하려면 동전이나 손톱을 사용하여 조심스럽게 긁어내세요. 시작 버튼을 선택한 다음 설정 > 시스템 > 활성화를 선택합니다. 제품 키 변경 을 선택합니다. COA에 있는 제품 키를 입력하고, 지침을 따릅니다. 설정에서 제품 키 변경 Windows 11을 다시 설치한 후 정품 인증하는 방법 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다. 제품 키를 입력하면 Windows 11 정품 인증된 버전을 갖게 됩니다. 설치가 끝나고 제품 키를 입력하지 않은 경우에도 제품 키를 입력할 수 있습니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 하드웨어 변경 후 Windo"
           },
@@ -18867,18 +19377,19 @@
             "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
             "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
             "title": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 정품 인증 또는 오프라인 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
+            "checked_on": "2026-10-02",
             "sha256": "c04152d5cd71cb9bbd70ac41763595bbf226b7ab909f9f8afa8cec4a756477cc",
             "excerpt": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11 Windows 8.1 Windows Vista Windows XP 요약​​ 이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.\n온라인 정품 인증 단계, 제품 정품 인증 포털을 통한 오프라인 정품 인증 및 세 가지 오프라인 워크플로(정품 인증 페이지, SLMGR 명령 프롬프트 및 SLUI 명령 프롬프트)에 대해 설명합니다. 또한 정품 인증 실패에 대한 대체 지침과 Office 정품 인증 리소스에 대한 링크도 포함되어 있습니다. 정품 인증은 가지고 있는 Windows 복사본이 정품이며 Microsoft 소프트웨어 사용 조건에서 허용하는 것보다 더 많은 장치에서 사용되지 않았는지 확인하는 데 도움이 됩니다. 인터넷을 통해 온라인 으로, 제품 정품 인증 포털 을 사용하거나 Microsoft 지원 의 지원을 사용하여 오프라인으로 Microsoft 제품을 정품 인증하는 몇 가지 방법이 있습니다. 온라인 정품 인증 - 인터넷 : 인터넷에 연결하면 Windows에서 인터넷 연결을 사용하여 온라인으로 정품 인증을 시도합니다. 온라인 정품 인증 단계에 따라 정품 인증되었는지, 아니면 인터넷을 통해 정품 인증을 시도하는지 확인합니다. 오프라인 정품 인증 - 제품 정품 인증 포털 & Microsoft 지원 : 온라인으로 정품 인증하는 데 문제가 있거나 인터넷에 연결되어 있지 않은 경우 오프라인으로 정품 인증을 시도할 수 있습니다. 오프라인 정품 인증 단계를 수행합니다. 설치 ID 를 입력한 다음 확인 ID 를 입력하여 정품 인증을 완료하라는 메시지가 표시될 수 있습니다. 이 문서에서는 온라인으로 정품 인증하는 단계를 제공하고 설치 ID 를 찾는 방법과 오프라인 정품 인증을 위해 받은 확인 ID 를 입력하는 위치에 대해 설명합니다. 온라인 정품 인증 인터넷에 연결되어 있는 경우 Windows가 자동으로 정품 인증을 시도합니다. 온라인 정품 인증을 사용하려면 인터넷 연결이 필요하므로 먼저 Windows가 인터넷에 연결되어 있는지 확인합니다 . 그런 다음 아래에서 Windows 버전을 찾고 단계에 따라 온라인으로 정품 인증합니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 시스템 > 정품 인증을 선택하거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 활성화 상태를 검토합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 보안 > 업데이트 & 정 품 인증을 열거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 필요한 경우 제품 키를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증을 선택하거나 복구 > 정품 인증 & 업데이트를 선택합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 온라인 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 지금 온라인으로 Windows 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 이제 인터넷을 통해 Windows를 정품 인증하겠습니다를 선택합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 오프라인 정품 인증 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 인터넷에 연결되어 있지 않으므로 오프라인에서 Windows를 정품 인증해야 합니다. Windows 정품 인증이 온라인에서 성공적으로 완료되지 않았습니다. 제품 정품 인증 포털에서 설치 ID를 요청합니다. Microsoft 지원 담당자가 설치 ID를 요청합니다. 중요 오프라인으로 정품 인증을 시도할 때 전화할 정품 인증 전화 번호가 표시될 수 있습니다. 전화 번호에는 전화를 걸지 마세요. 대신 제품 정품 인증 포털 을 방문하여 이 흐름의 정보를 사용하여 정품 인증 시도를 완료하세요. 정품 인증 요청을 검토하기 위해 Microsoft 지원이 필요한 경우 지원 옵션이 제공됩니다. 설치 ID를 찾아 확인 ID를 입력합니다. 아래에서 Windows 버전을 찾고 단계에 따라 설치 ID를 찾습니다. 찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다. 오프라인으로 정품 인증하는 방법에는 세 가지가 있습니다. 방법은 다음과 같습니다. 방법 1: Windows 설정의 정품 인증 페이지 사용(권장) Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 빌드 : 26200.8973, 26100.8973 이상 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 빌드 : 이전 빌드 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 업데이트 & 보안 > 활성화를 엽니다 . 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > 정품 인증을 선택합니다. WindowsWindows 10 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증 또는 복구 > 정 품 인증 & 업데이트를 선택한 다음 고객 지원에 문의를 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( WindowsWindows > 8.1 또는 8 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows 7 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows Vista )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 지금 고객 서비스 담당자에게 전화하여 Windows를 정품 인증하고 싶습니다 . 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > Windows XP 정품 인증을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 방법 2: SLMGR 명령 프롬프트 사용 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 자동 도움말 또는 전화로 정품 인증 이 정품 인증 페이지에 표시되지 않습니다. SLUI 명령 프롬프트를 사용할 수 없습니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. Command를 입력하고 명령 프롬프트를 마우스 오른쪽 단추로"
           }
         ],
         "intent_results": [
-          "https://infotips24.com/windows-activation-without-product-key/",
-          "https://blacktrees.tistory.com/m/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EC%89%BD%EA%B3%A0-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94-%EA%B0%80%EC%9D%B4%EB%93%9C"
+          "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
+          "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
+          "https://infotips24.com/windows-activation-without-product-key/"
         ],
         "valid_until": null,
         "article_type": "information",
-        "monthly_search": 6180,
+        "monthly_search": 6110,
         "demand_provider": "naver_searchad_pc_mobile",
         "demand_scope": "keyword_total",
         "advertising_competition": "중간",
@@ -18887,29 +19398,35 @@
         "organic_provider": "codex_native_search",
         "organic_query": "윈도우11 정품 인증",
         "organic_domains": [
+          "k-info104.com",
+          "blog.naver.com",
           "www.coupang.com",
-          "www.klog.kr",
           "ddnews.co.kr",
           "forbes.tistory.com",
+          "seogilang.tistory.com",
           "infotips24.com",
           "ittalk.co.kr",
-          "blacktrees.tistory.com",
           "extrememanual.net",
-          "clumsier.tistory.com",
-          "zzshkorea123.tistory.com"
+          "a2.moneyall.kr"
         ],
         "organic_results": [
+          {
+            "url": "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
+            "domain": "k-info104.com",
+            "title": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁 (라이선스 만료 대처) – k-info104.com",
+            "snippet": "윈도우 11 정품 인증이 필요한 이유 ... 윈도우 11 정품 인증 오류는 대부분 네트워크 일시 장애, 부품 변경, 혹은 잘못된 제품 키 입력으로 인해 발생합니다."
+          },
+          {
+            "url": "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
+            "domain": "blog.naver.com",
+            "title": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법 (정품 인증 방법) : 네이버 블로그",
+            "snippet": "※ Windows 11 업그레이드 후 정품 인증을 받고 사용하다가 포맷 후 Windows 11을 다시 재설치 하는 경우 정품 인증 정보는 마이크로소프트 서버에 저장되어 있기에,하드웨어의 변경사항이"
+          },
           {
             "url": "https://www.coupang.com/np/search?q=%EC%9C%88%EB%8F%84%EC%9A%B0+10+%EC%A0%95%ED%92%88+%EC%9D%B8%EC%A6%9D",
             "domain": "www.coupang.com",
             "title": "쿠팡이 추천하는 윈도우 10 정품 인증 관련 혜택과 특가",
             "snippet": "* 한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함 Windows11 Home + AOHI 케이블, win11 home+ aohi 케이블~~239,000원~~14%205,000원 6/2(화) 도착 예정 무료배송 ∙ 오늘출발"
-          },
-          {
-            "url": "https://www.klog.kr/technology/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D",
-            "domain": "www.klog.kr",
-            "title": "윈도우 11 정품인증 제품키 없이 사용하는 방법",
-            "snippet": "마이크로소프트 (MS)社가 윈도우 11을 설치하는 과정에서 정품인증을 강제하지 않는 이유는 무엇보다 설치하는 과정에서 편의를 제공하고, 궁극적으로 윈도우 제품을 많이 이용하도록 하기 위함입니다. ... 이 약관"
           },
           {
             "url": "https://ddnews.co.kr/window11-watermark/",
@@ -18921,7 +19438,13 @@
             "url": "https://forbes.tistory.com/1303",
             "domain": "forbes.tistory.com",
             "title": "윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드)",
-            "snippet": "### 윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드) ... 명령어 실행 즉시 \"Windows(R), Professional edition: 볼륨 정품 인증이 2022-10-29 오후 8:19:11에 만료됩니다.\""
+            "snippet": "### 윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드) ... PC를 인터넷에 연결한 이후에도 Windows 11 정품 인증이 정상적으로 완료되지 않으면 잠시 기다려 봅니다."
+          },
+          {
+            "url": "https://seogilang.tistory.com/m/2565",
+            "domain": "seogilang.tistory.com",
+            "title": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)",
+            "snippet": "윈도우11을 설치하고 정품 인증을 하지 않으면 오른쪽 하단에 정품 인증을 하라는 워터마크가 표시된다. ... 하지만 상황이 여의치 않아 당장 정품 인증을 할 수 없다면 정품"
           },
           {
             "url": "https://infotips24.com/windows-activation-without-product-key/",
@@ -18936,42 +19459,30 @@
             "snippet": "# 윈도우11 정품 인증 확인, 이걸 놓치면 모든 기능이 멈춘다! ... 이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
           },
           {
-            "url": "https://blacktrees.tistory.com/m/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EC%89%BD%EA%B3%A0-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%98%EB%8A%94-%EA%B0%80%EC%9D%B4%EB%93%9C",
-            "domain": "blacktrees.tistory.com",
-            "title": "윈도우 11 정품인증 쉽고 안전하게 해결하는 가이드",
-            "snippet": "최근 프리도스(Free-DOS) 노트북이나 조립 PC를 구매하는 소비자가 늘어나면서, OS 설치 후 거쳐야 하는 윈도우 11 정품인증 과정에 대한 관심이 어느 때보다 뜨겁습니다. ... 성공적으로 키가"
-          },
-          {
             "url": "https://extrememanual.net/41036",
             "domain": "extrememanual.net",
             "title": "윈도우11 정품 인증 오류 0xc004F074 해결 방법 - 익스트림 매뉴얼",
             "snippet": "만일 인터넷에서 윈도우11 라이센스를 정상가 보다 싸게 구매한 경우 정상적인 정품 키가 아니므로 정품 인증이 되지 않을 수 있습니다. ... 이 경우 KMS 서버 관리자에게"
           },
           {
-            "url": "https://clumsier.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EB%B2%95",
-            "domain": "clumsier.tistory.com",
-            "title": "윈도우 11 프로그램 설치없이 정품 인증 방법 :: 방구석에서 GPT랑 놀기",
-            "snippet": "* 윈도우 11 프로그램 설치없이 정품 인증 방법 ... CMD창에 [slmgr /skms kms8.msguides.com]을 입력후 Enter키를 치면 키 관리 서비스 컴퓨터 이름을 kms8~으로 설정했다고 알림창이 다시"
-          },
-          {
-            "url": "https://zzshkorea123.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%A0%95%ED%92%88%ED%82%A4-%ED%8F%AC%ED%95%A8",
-            "domain": "zzshkorea123.tistory.com",
-            "title": "윈도우 11 정품 인증하는 방법(정품키 포함) :: 리차슨의 세상 탐구",
-            "snippet": "이 때 윈도우 11에 맞는 고유의 키 코드가 있어야 하지만, CMD 명령어를 통해 정품 인증을 하실 수도 있습니다."
+            "url": "https://a2.moneyall.kr/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EB%B9%84%EC%9A%A9%EA%B3%BC-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EB%B2%95%EB%B3%84-%EA%B0%80%EA%B2%A9-%EB%B9%84%EA%B5%90/",
+            "domain": "a2.moneyall.kr",
+            "title": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교 - 알뜰 재테크 노트",
+            "snippet": "* 윈도우11 정품 인증키 합리적 구매 방법 소개 – 정품 vs 저가 키 장단점 비교 설명돼 있어요. ... 또 일부 무료 인증키나 KMS 방식 인증은"
           }
         ],
-        "dominant_result_ratio": 0.0,
+        "dominant_result_ratio": 0.1,
         "score_components": {
-          "demand": 30.33,
-          "organic_opportunity": 36.0,
-          "trend": 1.45,
+          "demand": 30.29,
+          "organic_opportunity": 32.4,
+          "trend": -1.43,
           "intent_fit": 15
         },
-        "trend_growth": 0.145,
+        "trend_growth": -0.143,
         "trend_provider": "google_trends_relative_7d_vs_previous_7d",
         "trend_status": "measured",
         "selection_version": 6,
-        "selected_at": "2026-09-29T14:14:36.594257+00:00",
+        "selected_at": "2026-10-02T02:04:46.174328+00:00",
         "source": "category_market_v1",
         "keywords": [
           "윈도우11정품인증"
@@ -18981,70 +19492,70 @@
           "version": 2,
           "query": "윈도우11정품인증",
           "executed_query": "윈도우11 정품 인증",
-          "topic": "윈도우11정품인증 방법: 제품 키·디지털 라이선스와 인증 상태 확인",
-          "intent": "윈도우11을 어떻게 정품 인증하며, 제품 키 없이 가능한 조건과 인증 실패 시 공식 절차는 무엇인가?",
+          "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
+          "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
           "provider": "codex_native_search",
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
+          "checked_at": "2026-10-02T02:04:46.174328+00:00",
           "result_count": 10,
           "domain_count": 10,
-          "dominant_ratio": 0.0,
+          "dominant_ratio": 0.1,
           "search_review": {
             "version": 1,
             "query": "윈도우11정품인증",
             "executed_query": "윈도우11 정품 인증",
             "provider": "codex_native_search",
-            "checked_at": "2026-09-29T14:14:36.594257+00:00",
-            "raw_sha256": "ef515a3b34a3e1962eaa280fe71fa02f7c55ef2e253d404dd15828426055afaf",
+            "checked_at": "2026-10-02T02:04:46.174328+00:00",
+            "raw_sha256": "4f010febdf37cb469742f2ef1decd8a8e335addb58b3b31da24aad3fb746b7bf",
             "decisions": [
               {
                 "result_index": 0,
                 "relevant": true,
-                "quote": "윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
+                "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
               },
               {
                 "result_index": 1,
                 "relevant": true,
-                "quote": "윈도우 11 정품인증 제품키 없이 사용하는 방법"
+                "quote": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법"
               },
               {
                 "result_index": 2,
                 "relevant": true,
-                "quote": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법"
+                "quote": "한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
               },
               {
                 "result_index": 3,
                 "relevant": true,
-                "quote": "윈도우11 정품 인증 상태를 확인하는 방법"
+                "quote": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법"
               },
               {
                 "result_index": 4,
                 "relevant": true,
-                "quote": "윈도우 11은 설정 → 시스템 → 정품 인증"
+                "quote": "윈도우11 정품 인증 상태를 확인하는 방법"
               },
               {
                 "result_index": 5,
                 "relevant": true,
-                "quote": "이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
+                "quote": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)"
               },
               {
                 "result_index": 6,
                 "relevant": true,
-                "quote": "윈도우 11 정품인증 쉽고 안전하게 해결하는 가이드"
+                "quote": "윈도우 11은 설정 → 시스템 → 정품 인증"
               },
               {
                 "result_index": 7,
                 "relevant": true,
-                "quote": "윈도우11 정품 인증 오류 0xc004F074 해결 방법"
+                "quote": "이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
               },
               {
                 "result_index": 8,
                 "relevant": true,
-                "quote": "윈도우 11 프로그램 설치없이 정품 인증 방법"
+                "quote": "윈도우11 정품 인증 오류 0xc004F074 해결 방법"
               },
               {
                 "result_index": 9,
                 "relevant": true,
-                "quote": "윈도우 11 정품 인증하는 방법(정품키 포함)"
+                "quote": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교"
               }
             ]
           },
@@ -19067,27 +19578,31 @@
             ],
             "relevance_ratio": 1.0,
             "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.0,
+            "known_dominant_ratio": 0.1,
             "site_concentration": 0.1,
-            "organic_opportunity": 36.0
+            "organic_opportunity": 32.4
           },
           "scope": "full_keyword",
           "target_keyword": "윈도우11정품인증",
           "matches": [
             {
-              "result_index": 4,
-              "quote": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026)"
+              "result_index": 0,
+              "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
+            },
+            {
+              "result_index": 1,
+              "quote": "정품 인증 제품 키 입력하는 방법 (정품 인증 방법)"
             },
             {
               "result_index": 6,
-              "quote": "윈도우 11 정품인증 쉽고 안전하게 해결하는 가이드"
+              "quote": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026)"
             }
           ]
         },
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
-          "input_sha256": "131ae99f480aeb22d5fce022e421b62bc13067bf1be7bd663c74642d34586e59",
+          "checked_at": "2026-10-02T02:04:46.174328+00:00",
+          "input_sha256": "7a4a7d569aca5aacb2434831734d3f0c042fd9463dba4056ac4dded117a69655",
           "review": {
             "scope": "full_keyword",
             "target_keyword": "윈도우11정품인증",
@@ -19100,327 +19615,6 @@
               },
               {
                 "source_index": 1,
-                "quote": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11",
-                "entity": "Windows 11",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "Windows 11 정품 인증에 필요한 조건과 제품 키 없는 인증 조건은 무엇인가?",
-                "answer": "디지털 라이선스나 25자 제품 키가 필요하다. 디지털 라이선스가 있으면 제품 키 입력 없이 인증할 수 있다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다."
-              },
-              {
-                "facet": "제품 키와 디지털 라이선스로 각각 어떻게 인증하는가?",
-                "answer": "제품 키는 설정의 제품 키 변경에서 입력한다. 디지털 라이선스는 인터넷 연결 후 연결된 Microsoft 계정으로 로그인한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다."
-              },
-              {
-                "facet": "정품 인증 상태와 계정 연결 여부는 어떻게 확인하는가?",
-                "answer": "설정 > 시스템 > 정품 인증에서 상태를 확인하고, 상태 메시지로 인증 여부와 Microsoft 계정 연결 여부를 구분한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다."
-              },
-              {
-                "facet": "재설치하거나 주요 하드웨어를 변경하면 어떻게 다시 인증하는가?",
-                "answer": "디지털 라이선스가 있으면 동일 버전 재설치 후 온라인 인증한다. 주요 하드웨어 변경은 계정 연결 후 문제 해결사를 이용한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
-              },
-              {
-                "facet": "온라인 인증 실패나 인터넷 미연결 시 어떤 공식 절차를 이용하는가?",
-                "answer": "설치 ID를 제품 정품 인증 포털이나 Microsoft 지원에 제공하고 받은 확인 ID를 입력한다. 표시된 전화번호로 전화하지 않는다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다."
-              },
-              {
-                "facet": "오프라인 인증 화면은 Windows 11 빌드에 따라 어떻게 다른가?",
-                "answer": "26200.8973·26100.8973 이상은 자동화된 도움말, 이전 빌드는 전화로 정품 인증에서 설치 ID를 확인한다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 82.78,
-        "publish_eligible": true,
-        "hold_reasons": []
-      },
-      {
-        "keyword": "윈도우정품인증",
-        "category": "테크",
-        "topic": "윈도우정품인증 확인과 설정 방법: 제품 키·디지털 라이선스·재인증",
-        "intent": "윈도우 정품 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 인증·재인증하려면 어떻게 하나요?",
-        "gap": "인증 상태별 의미 표, 제품 키·디지털 라이선스 선택표, 재설치·하드웨어 변경 체크리스트와 오프라인 인증 절차를 제공합니다.",
-        "source_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-        "verified_sources": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "title": "Windows 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
-            "sha256": "14448cb040e32c8f3e739e49127427db6cd0af84c9461859086552f8acf22689",
-            "excerpt": "Windows 정품 인증 적용 대상 Windows 11 Windows 10 Copilot 도움말 보기 Windows를 재설치한 후 활성화하려면 어떻게 하나요? 내 Windows 버전을 확인하려면 어떻게 해야 하나요? 제품 키로 Windows를 어떻게 활성화하나요? Windows 11 Windows 10 팁 Windows를 정품 인증하는 데 문제가 있나요? Windows 정품 인증 오류에 대한 도움말 보기 에서 문제 해결 단계를 시도해 보세요. 정품 인증은 제품 키 또는 디지털 권한을 장치의 하드웨어 구성과 페어링하는 기술 프로세스입니다. 이는 복사본 자체의 신뢰성을 평가하지 않으며 Windows 복사본이 정품 임을 보장하지 않습니다. 제품 키 또는 디지털 권한이 하드웨어 구성에 유효한지 확인하기만 합니다. 반면에 유효성 검사는 중요한 Windows 라이선스 파일이 손상, 삭제 또는 제거되지 않았으며 특정 업데이트 및 다운로드를 받아야 하는지 확인하는 프로세스입니다. 동영상을 재생하는 데 문제가 있나요? YouTube에서 시청하세요. Windows 11에서 Windows 정품 인증 상태 확인 먼저 Windows 11이 정품 인증되어 있고 Microsoft 계정에 연결되어 있는지 확인해야 합니다. Microsoft 계정을 장치의 Windows 11 라이선스에 연결하는 것이 중요합니다. Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. Windows 11에서 Windows 정품 인증 상태를 검사하는 방법 Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다.  정품 인증 상태 옆에 정품 인증 상태 가 표시됩니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에서 다음 정품 인증 상태 메시지 중 하나를 볼 수 있습니다. 정품 인증 상태 설명 Windows가 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정 연결 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows가 정품 인증되지 않음 정품 인증이 되지 않았습니다. 실패를 설명하는 오류 메시지가 표시됩니다. 정품 인증을 받으려면 Windows 11를 구입해야 할 수 있습니다. 장치에 대한 라이선스를 구입해야 하는 경우에는 \"Windows 11 라이선스 구입하기\"를 찾아보세요. 이미 해당 장치에 대한 라이선스를 구입했음에도 계속 오류 메시지가 표시되는 경우 정품 인증 방법 으로 계속합니다. 정품 인증을 위해 Microsoft 계정을 Windows 11에 연결합니다. Microsoft 계정을 연결하려면 다음의 지침을 따릅니다. 관리자로 로그인하여 Microsoft 계정을 추가합니다. 관리자 계정을 사용하고 있는지 확인하려면 시작 단추를 선택한 다음, 설정 > 계정 > 사용자 정보 를 선택합니다. 사용자 이름 아래에 관리자가 표시됩니다. 관리자가 아닌 경우 Windows에서 사용자 계정 관리를 참조하여 관리자 계정을 만듭니다. 설정의 정보로 이동 전자 메일 주소가 관리자 위에 표시되는지 확인하여 관리자 계정이 Microsoft 계정이기도 한지 확인합니다. 이메일 주소가 표시되면 이 계정은 Microsoft 계정입니다. 이메일 주소가 표시되지 않으면 로컬 계정을 사용하여 로그인한 것입니다. 아직 Microsoft 계정이 없다면 새 Microsoft 계정을 만드는 방법 을 참조하세요. 관리자이고 Microsoft 계정을 사용하고 있음을 확인한 후 정품 인증 페이지로 돌아가서 계정 추가 를 선택하고 Microsoft 계정 및 암호를 입력한 다음 로그인 을 선택합니다. Microsoft 계정이 추가된 후에는 정품 인증 페이지에서 Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증되었습니다 라고 표시됩니다. Windows 11용 Windows 정품 인증 방법 Windows 11을 구입한 방법에 따라 정품 인증을 위해 디지털 라이선스 또는 25자 제품 키가 필요합니다. 이 중 하나가 없으면 장치를 정품 인증할 수 없습니다. 디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다. 제품 키는 Windows를 정품 인증하는 데 사용되는 25문자 코드입니다. 제품 키가 다음과 같이 보입니다. XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. 사용할 정품 인증 방법을 결정한 후 디지털 라이선스를 사용하여 정품 인증하기 또는 제품 키를 사용하여 정품 인증하기 의 해당 단계를 따르세요. Windows 11의 경우 디지털 라이선스와 제품 키 중 어떤 Windows 정품 인증 방법을 사용하나요? 정품 인증 방법은 Windows 11을 구매한 방법에 따라 다릅니다. Windows 11을 받은 방법 정품 인증 방법 Windows 10, Windows 8.1 또는 Windows 7의 정품을 실행하는 적격 기기에서 Windows 11로 무료 업그레이드 디지털 라이선스 Microsoft 계정을 연결하거나 Microsoft 계정에 로그인하거나 MSA를 디지털 라이선스와 연결한 경우 해당 MSA가 디지털 라이선스를 포함합니다. Microsoft Store 앱에서 Windows 11 Pro 업그레이드를 구매하고 Windows 11을 성공적으로 정품 인증했습니다. 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 참가자이며 정품 인증된 이전 버전의 Windows 11 및 Windows 11 Preview를 실행 중인 적합한 장치에서 최신 Windows 11 Insider Preview 빌드로 업그레이드하기 디지털 라이선스 Windows Insider 로그인에 사용한 전자 메일 주소는 디지털 라이선스가 포함된 MSA일 수 있습니다. Microsoft Store 앱에서 정품 Windows 11 구입하기 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 11과 함께 제공되는 PC를 구입합니다. 제품 키 장치 패키징 또는 장치에 부착된 COA(인증서)에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 박스 복사본 구입하기 제품 키 Windows 11 박스의 내부 레이블에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 디지털 복사본 구입하기 제품 키 Windows 11을 구입한 후 받은 확인 메일 또는 대리점의 웹 사이트를 통해 액세스할 수 있는 디지털 락커에서 제품 키를 찾을 수 있습니다. 입력한 올바른 제품 키를 기준으로 장치에 Windows 11에 대한 디지털 라이선스가 부여됩니다. Windows 11에 대한 볼륨 라이선싱 계약 또는 MSDN 구독이 있음 제품 키 프로그램의 웹 포털을 통해 제품 키를 사용할 수 있습니다. Windows 11을 실행하는 새 장치 또는 리퍼비시 장치 구입하기 제품 키 장치에 제품 키가 사전 설치되어 있거나, 장치 패키지에 포함되어 있거나, 장치에 부착된 카드로 또는 COA(정품 인증서)에 포함되어 있습니다. 리퍼비시 PC를 구입한 경우, Microsoft가 아닌 리퍼비셔에서 제품 키를 제공해야 합니다. Microsoft Store 온라인에서 구입하기 제품 키 주문 기록이 포함된 확인 메일에서 제품 키를 찾습니다. Purchase a Windows 11 라이선스 구입하기 디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다. 방법은 다음과 같습니다. 시작 단추를 선택합니다. 설정 > 시스템 > 정품 인증 을 선택합니다. Microsoft Store로 이동 을 선택합니다. Windows 11 디지털 라이선스를 구입할 수 있는 Microsoft Store 앱을 엽니다. 디지털 라이선스를 사용하여 Windows 11 정품 인증하기 디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다. PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다. 디지털 라이센스가 없는 경우 정품 인증을 위해 제품 키를 사용할 수 있습니다.  제품 키를 사용하여 정품 인증하는 방법을 알아보하려면 제품 키를 사용하여 정품 인증 의 단계를 따릅니다. 새 장치 또는 마더보드에서 처음으로 Windows 설치 및 정품 인증 Windows 11 새 장치나 마더보드에 Windows를 처음 설치하고 제품 키가 없는 경우 설치 설정 화면에서 제품 키가 없습니다 를 선택합니다.  메시지가 표시되면 이 디바이스에 대한 디지털 라이선스를 구입하는 데 사용할 Microsoft 계정을 입력합니다. 설치 화면이 완료되고 Windows 설치가 완료되면 정품 인증 설정으로 이동합니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증을 선택합니다. 그런 다음 스토어 열기 를 선택하여 Windows를 정품 인증하기 위한 디지털 라이선스를 구입합니다. Windows 11을 다시 설치한 후 정품 인증 장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다. 다시 설치를 시도해 보기 전에 Windows 11이 정품 인증되었는지 확인합니다. 확인하려면 시작 단추를 선택한 다음 설정 > 시스템 > 활성화 를 선택합니다 . Windows 11이 정품 인증되었으며 Microsoft 계정이 디지털 라이선스와 연결되어 있음을 확인할 수 있습니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에 표시될 메시지는 다음과 같습니다. 정품 인증 상태 설명 Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 디지털 라이센스가 Microsoft 계정에 연결되어 있지 않은 경우, 정품 인증 상태 확인하기 아래에 있는 Microsoft 계정에 연결하기 의 단계를 따릅니다. 계정을 연결하면 설치 프로그램을 실행하여 Windows 11을 다시 설치할 수 있습니다. Windows 11을 다시 설치하기 위해 설치 미디어를 만드는 방법에 대한 자세한 내용은 Microsoft 소프트웨어 다운로드 웹 사이트 로 이동하세요. 설치 미디어를 만들 때 장치에 이미 설치된 버전과 일치하는 Windows 11 버전을 선택해야 합니다. 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시되는 경우 제품 키가 없음 을 선택하여 이 단계를 건너뛸 수 있습니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. 디지털 라이선스를 Microsoft 계정과 연결한 경우 디지털 라이선스와 연결된 Microsoft 계정에 로그인해야 합니다. 하드웨어 변경 후 Windows 11 다시 정품 인증하기 마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다. 하드웨어 변경을 대비하기 위해 Microsoft 계정을 디지털 라이센스에 연결해야 합니다. 이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. 자세한 내용은 하드웨어 변경 후 Windows 다시 정품 인증 을 참조하세요. 제품 키를 사용하여 Windows 11 정품 인증 제품 키는 25 문자 코드로 다음과 같이 표시됩니다. 제품 키: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다.  또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 제품 키를 찾으려면 정품 인증 방법의 제품 키 표 디지털 라이선스와 제품 키 중 어떤 제품 인증 방법을 사용하나요? 를 참조하세요. 참고 Microsoft는 Microsoft 온라인 스토어에서 구입한 경우에만 제품 키 기록을 보관합니다. 사용자 Microsoft 계정 주문 내역 에서 제품을 Microsoft에서 구입했는지 알아볼 수 있습니다. 자세한 도움말을 보려면 Windows 제품 키 찾기 를 참조하세요. 제품 키가 있는 경우 다음 시나리오에서 제품 키 변경을 사용하여 Windows 11을 정품 인증할 수 있습니다. 다음은 정품 인증에 도움이 되는 추가 정보입니다. 새 장치 또는 Windows 11용 마더보드에서 처음으로 Windows 설치 및 정품 인증을 수행하는 방법 정품 인증된 Windows 11이 있었던 적이 없는 장치에서는 올바른 제품 키를 사용하여 Windows 11을 정품 인증해야 합니다. 장치에서 이전에 정품 인증된 적이 없는 Windows 11 버전을 설치하는 경우에도 올바른 제품 키를 사용해야 합니다. 예를 들어 Windows 11 Home이 설치되었던 장치에 Windows 11 Pro를 설치하고 정품 인증하려면 올바른 제품 키가 필요합니다. 설치하는 동안 올바른 제품 키를 입력하라는 메시지가 표시됩니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. Windows 11에서 정품 인증 상태를 검사하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 을 선택합니다. 설정에서 정품 인증 상태 확인 Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 참고 경우에 따라서는 장치 패키지와 함께 제공되거나, 카드로 포함되어 있거나, 장치에 부착된 COA(정품 인증서)에 표시되는 Windows 11 제품 키를 입력해야 할 수 있습니다. Windows 11 제품 키가 없는 경우, 설치 중 제품 키를 구입할 수 있는 옵션이 나타납니다. Windows 11을 실행하는 리퍼비시 장치 정품 인증 Windows 11을 실행하는 리퍼비시 장치를 구입할 때는 장치에 부착된 정품 인증서 (COA)의 제품 키를 사용하여 Windows를 정품 인증해야 합니다. OEM(Original Hardware Manufacturer)이 마더보드를 변경한 경우, PC에서 자동으로 정품 인증이 되어야 합니다. 정품 인증을 받지 않으면 OEM에서 회색 스크래치 덮개 아래에 25자의 키가 있는 COA 카드를 제공했을 수 있습니다. 정품 인증을 받으려면 다음 단계를 따르세요. 참고 제품 키를 가리고 있는 회색 코팅을 제거하려면 동전이나 손톱을 사용하여 조심스럽게 긁어내세요. 시작 버튼을 선택한 다음 설정 > 시스템 > 활성화를 선택합니다. 제품 키 변경 을 선택합니다. COA에 있는 제품 키를 입력하고, 지침을 따릅니다. 설정에서 제품 키 변경 Windows 11을 다시 설치한 후 정품 인증하는 방법 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다. 제품 키를 입력하면 Windows 11 정품 인증된 버전을 갖게 됩니다. 설치가 끝나고 제품 키를 입력하지 않은 경우에도 제품 키를 입력할 수 있습니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 하드웨어 변경 후 Windo"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "title": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 정품 인증 또는 오프라인 정품 인증 | Microsoft Support",
-            "checked_on": "2026-09-29",
-            "sha256": "c04152d5cd71cb9bbd70ac41763595bbf226b7ab909f9f8afa8cec4a756477cc",
-            "excerpt": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11 Windows 8.1 Windows Vista Windows XP 요약​​ 이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.\n온라인 정품 인증 단계, 제품 정품 인증 포털을 통한 오프라인 정품 인증 및 세 가지 오프라인 워크플로(정품 인증 페이지, SLMGR 명령 프롬프트 및 SLUI 명령 프롬프트)에 대해 설명합니다. 또한 정품 인증 실패에 대한 대체 지침과 Office 정품 인증 리소스에 대한 링크도 포함되어 있습니다. 정품 인증은 가지고 있는 Windows 복사본이 정품이며 Microsoft 소프트웨어 사용 조건에서 허용하는 것보다 더 많은 장치에서 사용되지 않았는지 확인하는 데 도움이 됩니다. 인터넷을 통해 온라인 으로, 제품 정품 인증 포털 을 사용하거나 Microsoft 지원 의 지원을 사용하여 오프라인으로 Microsoft 제품을 정품 인증하는 몇 가지 방법이 있습니다. 온라인 정품 인증 - 인터넷 : 인터넷에 연결하면 Windows에서 인터넷 연결을 사용하여 온라인으로 정품 인증을 시도합니다. 온라인 정품 인증 단계에 따라 정품 인증되었는지, 아니면 인터넷을 통해 정품 인증을 시도하는지 확인합니다. 오프라인 정품 인증 - 제품 정품 인증 포털 & Microsoft 지원 : 온라인으로 정품 인증하는 데 문제가 있거나 인터넷에 연결되어 있지 않은 경우 오프라인으로 정품 인증을 시도할 수 있습니다. 오프라인 정품 인증 단계를 수행합니다. 설치 ID 를 입력한 다음 확인 ID 를 입력하여 정품 인증을 완료하라는 메시지가 표시될 수 있습니다. 이 문서에서는 온라인으로 정품 인증하는 단계를 제공하고 설치 ID 를 찾는 방법과 오프라인 정품 인증을 위해 받은 확인 ID 를 입력하는 위치에 대해 설명합니다. 온라인 정품 인증 인터넷에 연결되어 있는 경우 Windows가 자동으로 정품 인증을 시도합니다. 온라인 정품 인증을 사용하려면 인터넷 연결이 필요하므로 먼저 Windows가 인터넷에 연결되어 있는지 확인합니다 . 그런 다음 아래에서 Windows 버전을 찾고 단계에 따라 온라인으로 정품 인증합니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 시스템 > 정품 인증을 선택하거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 활성화 상태를 검토합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 보안 > 업데이트 & 정 품 인증을 열거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 필요한 경우 제품 키를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증을 선택하거나 복구 > 정품 인증 & 업데이트를 선택합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 온라인 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 지금 온라인으로 Windows 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 이제 인터넷을 통해 Windows를 정품 인증하겠습니다를 선택합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 오프라인 정품 인증 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 인터넷에 연결되어 있지 않으므로 오프라인에서 Windows를 정품 인증해야 합니다. Windows 정품 인증이 온라인에서 성공적으로 완료되지 않았습니다. 제품 정품 인증 포털에서 설치 ID를 요청합니다. Microsoft 지원 담당자가 설치 ID를 요청합니다. 중요 오프라인으로 정품 인증을 시도할 때 전화할 정품 인증 전화 번호가 표시될 수 있습니다. 전화 번호에는 전화를 걸지 마세요. 대신 제품 정품 인증 포털 을 방문하여 이 흐름의 정보를 사용하여 정품 인증 시도를 완료하세요. 정품 인증 요청을 검토하기 위해 Microsoft 지원이 필요한 경우 지원 옵션이 제공됩니다. 설치 ID를 찾아 확인 ID를 입력합니다. 아래에서 Windows 버전을 찾고 단계에 따라 설치 ID를 찾습니다. 찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다. 오프라인으로 정품 인증하는 방법에는 세 가지가 있습니다. 방법은 다음과 같습니다. 방법 1: Windows 설정의 정품 인증 페이지 사용(권장) Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 빌드 : 26200.8973, 26100.8973 이상 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 빌드 : 이전 빌드 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 업데이트 & 보안 > 활성화를 엽니다 . 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > 정품 인증을 선택합니다. WindowsWindows 10 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증 또는 복구 > 정 품 인증 & 업데이트를 선택한 다음 고객 지원에 문의를 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( WindowsWindows > 8.1 또는 8 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows 7 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows Vista )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 지금 고객 서비스 담당자에게 전화하여 Windows를 정품 인증하고 싶습니다 . 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > Windows XP 정품 인증을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 방법 2: SLMGR 명령 프롬프트 사용 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 자동 도움말 또는 전화로 정품 인증 이 정품 인증 페이지에 표시되지 않습니다. SLUI 명령 프롬프트를 사용할 수 없습니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. Command를 입력하고 명령 프롬프트를 마우스 오른쪽 단추로"
-          }
-        ],
-        "intent_results": [
-          "https://405.kr/guide/windows-activation.html",
-          "https://dailythetrend.com/win11-activation-status-check-guide/",
-          "https://vency.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EC%A2%85%EB%A5%98%EC%99%80-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC-%E2%80%94-%EB%94%94%EC%A7%80%ED%84%B8-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%B6%80%ED%84%B0-%EC%A0%9C%ED%92%88-%ED%82%A4%EA%B9%8C%EC%A7%80"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 8270,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "높음",
-        "evidence_mode": "serp",
-        "research_evidence": null,
-        "organic_provider": "codex_native_search",
-        "organic_query": "윈도우 정품 인증",
-        "organic_domains": [
-          "www.coupang.com",
-          "405.kr",
-          "k-info104.com",
-          "thegoodinfo.co.kr",
-          "dailythetrend.com",
-          "thegoodinfo.co.kr",
-          "o365.dge.go.kr",
-          "vency.tistory.com",
-          "economyfactory.com",
-          "rideofwirte.tistory.com"
-        ],
-        "organic_results": [
-          {
-            "url": "https://www.coupang.com/np/search?q=%EC%9C%88%EB%8F%84%EC%9A%B0+10+%EC%A0%95%ED%92%88+%EC%9D%B8%EC%A6%9D",
-            "domain": "www.coupang.com",
-            "title": "쿠팡이 추천하는 윈도우 10 정품 인증 관련 혜택과 특가",
-            "snippet": "* 한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함 Windows11 Home + AOHI 케이블, win11 home+ aohi 케이블~~239,000원~~14%205,000원 6/2(화) 도착 예정 무료배송 ∙ 오늘출발"
-          },
-          {
-            "url": "https://405.kr/guide/windows-activation.html",
-            "domain": "405.kr",
-            "title": "윈도우 정품 인증 확인·해결 방법 — 워터마크·재인증 | 405.kr 가이드",
-            "snippet": "한 번 정품 인증한 PC는 그 하드웨어 구성에 라이선스가 연결되어, 같은 PC에 윈도우를 다시 설치하면 인터넷에 연결되는 순간 대개 자동으로 다시 인증됩니다. ... * ①"
-          },
-          {
-            "url": "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
-            "domain": "k-info104.com",
-            "title": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁 (라이선스 만료 대처) – k-info104.com",
-            "snippet": "윈도우 11은 정품 인증을 받지 않아도 기본 업무나 웹 서핑 등의 핵심 기능은 작동하지만, 다음과 같은 제한 사항이 발생합니다. ... 컴퓨터의 메인보드를 교체했거나 주요 부품을"
-          },
-          {
-            "url": "https://thegoodinfo.co.kr/%EC%A0%95%EB%B3%B4/%EC%9C%88%EB%8F%84%EC%9A%B011-%EB%9D%BC%EC%9D%B4%EC%84%BC%EC%8A%A4-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D%EB%B6%80%ED%84%B0-%EA%B5%AC%EB%A7%A4%EA%B9%8C%EC%A7%80-%EA%B0%80%EC%9E%A5-%EC%89%BD%EA%B2%8C/",
-            "domain": "thegoodinfo.co.kr",
-            "title": "윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법 - 인사이트",
-            "snippet": "# 윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법 ... * 윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법"
-          },
-          {
-            "url": "https://dailythetrend.com/win11-activation-status-check-guide/",
-            "domain": "dailythetrend.com",
-            "title": "윈도우 11 정품인증 확인 방법 및 제품 키 디지털 라이선스 연결법 - dailythetrend.com",
-            "snippet": "Image: 윈도우 11 정품인증 확인을 위해 CMD 명령 프롬프트 창에 slmgr /xpr을 입력하고 '컴퓨터가 영구적으로 정품 인증되었습니다'라는 안내창이 뜬 데스크톱 화면 ... * 앞서 들어간"
-          },
-          {
-            "url": "https://thegoodinfo.co.kr/%EC%A0%95%EB%B3%B4/%EC%83%88%EB%A1%9C-%EC%82%B0-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9D%B4%EB%82%98-%ED%8F%AC%EB%A7%B7%ED%95%9C-pc-%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EB%8B%A8-3%EB%B6%84/",
-            "domain": "thegoodinfo.co.kr",
-            "title": "새로 산 노트북이나 포맷한 PC, 윈도우 11 정품 인증 단 3분 만에 끝내는 초간단 가이드 - 인사이트",
-            "snippet": "윈도우 11 정품 인증이 왜 중요할까요?"
-          },
-          {
-            "url": "https://o365.dge.go.kr/uploads/02-01.%20%EC%9C%88%EB%8F%84%EC%9A%B0%20%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C%20%EA%B0%80%EC%9D%B4%EB%93%9C.pdf",
-            "domain": "o365.dge.go.kr",
-            "title": "<visual_element id=\"e1\">",
-            "snippet": "윈도우 버전 및 정품인증 확인 ... (Windows is activated) with body text “이 Windows 복사본이 정품 인증되었습니다.”"
-          },
-          {
-            "url": "https://vency.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EC%A2%85%EB%A5%98%EC%99%80-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC-%E2%80%94-%EB%94%94%EC%A7%80%ED%84%B8-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4%EB%B6%80%ED%84%B0-%EC%A0%9C%ED%92%88-%ED%82%A4%EA%B9%8C%EC%A7%80",
-            "domain": "vency.tistory.com",
-            "title": "윈도우 정품 인증 종류와 방법 총정리 — 디지털 라이선스부터 제품 키까지",
-            "snippet": "윈도우를 정품으로 인증해야만 보안 업데이트와 최신 기능을 안정적으로 사용할 수 있습니다. ... 삼성 PC는 윈도우8부터 제품키가 적혀있는 COA 라벨이 제공되지 않고 인터넷 연결 사용 시"
-          },
-          {
-            "url": "https://economyfactory.com/remove-windows-10-activation/",
-            "domain": "economyfactory.com",
-            "title": "윈도우 10 정품 인증 제거 | 워터 마크 없애기",
-            "snippet": "윈도우 10 정품 워터마크 인증 표시가 계속해서 나온다면 컴퓨터 이용이 매우 불편할 것입니다."
-          },
-          {
-            "url": "https://rideofwirte.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%EC%95%88%EB%90%A0-%EB%95%8C-%ED%99%95%EC%9D%B8%ED%95%A0-5%EA%B0%80%EC%A7%80",
-            "domain": "rideofwirte.tistory.com",
-            "title": "윈도우 11 정품 인증 실패 이유와 해결법 (CMD 포함)",
-            "snippet": "윈도우 11을 설치했는데 정품 인증이 안 되어 있나요? ... 윈도우 11을 설치한 뒤 정품 인증을 하지 않으면 다양한 기능 제한과 함께 보안 리스크가 발생합니다."
-          }
-        ],
-        "dominant_result_ratio": 0.1,
-        "score_components": {
-          "demand": 31.34,
-          "organic_opportunity": 28.8,
-          "trend": 0.33,
-          "intent_fit": 15
-        },
-        "trend_growth": 0.033,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-09-29T14:14:36.594257+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "윈도우정품인증"
-        ],
-        "status": "pending",
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "윈도우정품인증",
-          "executed_query": "윈도우 정품 인증",
-          "topic": "윈도우정품인증 확인과 설정 방법: 제품 키·디지털 라이선스·재인증",
-          "intent": "윈도우 정품 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 인증·재인증하려면 어떻게 하나요?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
-          "result_count": 10,
-          "domain_count": 9,
-          "dominant_ratio": 0.1,
-          "search_review": {
-            "version": 1,
-            "query": "윈도우정품인증",
-            "executed_query": "윈도우 정품 인증",
-            "provider": "codex_native_search",
-            "checked_at": "2026-09-29T14:14:36.594257+00:00",
-            "raw_sha256": "8cd236680eaf37b387f58a95591f51fe1d6395335f3bc1284551a42c699482d6",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "윈도우 정품 인증 확인·해결 방법"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "윈도우11 라이센스 정품 인증부터 구매까지 가장 쉽게 해결하는 방법"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "윈도우 11 정품인증 확인 방법 및 제품 키 디지털 라이선스 연결법"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 단 3분 만에 끝내는 초간단 가이드"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "윈도우 버전 및 정품인증 확인"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "윈도우 정품 인증 종류와 방법 총정리 — 디지털 라이선스부터 제품 키까지"
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "윈도우 10 정품 인증 제거 | 워터 마크 없애기"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 실패 이유와 해결법 (CMD 포함)"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 10,
-            "relevant_site_count": 9,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "relevance_ratio": 1.0,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.1,
-            "site_concentration": 0.2,
-            "organic_opportunity": 28.8
-          },
-          "scope": "full_keyword",
-          "target_keyword": "윈도우정품인증",
-          "matches": [
-            {
-              "result_index": 1,
-              "quote": "윈도우 정품 인증 확인·해결 방법"
-            },
-            {
-              "result_index": 4,
-              "quote": "윈도우 11 정품인증 확인 방법 및 제품 키 디지털 라이선스 연결법"
-            },
-            {
-              "result_index": 7,
-              "quote": "윈도우 정품 인증 종류와 방법 총정리 — 디지털 라이선스부터 제품 키까지"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-09-29T14:14:36.594257+00:00",
-          "input_sha256": "775384f82bf54ac261ce9b6f25780af2691abc51fdc2e9a1bfcdb7d6bcad0146",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "윈도우정품인증",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "Windows 정품 인증 적용 대상 Windows 11 Windows 10",
-                "entity": "Windows 11 Windows 10",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
                 "quote": "이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.",
                 "entity": "Windows 11",
                 "context": "system_rules"
@@ -19428,50 +19622,57 @@
             ],
             "required_facets": [
               {
-                "facet": "정품 인증 상태는 어디서 확인하고 어떻게 해석하나요?",
-                "answer": "Windows 11 설정의 시스템 > 정품 인증에서 확인하며, 인증 여부와 Microsoft 계정 연결 여부를 구분합니다.",
+                "facet": "정품 인증 상태는 어디서 확인하고 상태별 의미는 무엇인가?",
+                "answer": "설정의 시스템 > 정품 인증에서 확인한다. 인증 여부와 디지털 라이선스·Microsoft 계정 연결 여부를 구분한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다."
+                "quote": "Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다."
               },
               {
-                "facet": "제품 키와 디지털 라이선스 중 무엇이 필요하며, 없으면 어떻게 하나요?",
-                "answer": "구매 경로에 따라 디지털 라이선스 또는 25자 제품 키가 필요하며, 둘 다 없으면 Microsoft Store에서 구매할 수 있습니다.",
+                "facet": "인증에 필요한 라이선스는 무엇이며 둘 다 없으면 어떻게 하는가?",
+                "answer": "디지털 라이선스 또는 25자 제품 키가 필요하다. 둘 다 없으면 설치 후 Microsoft Store에서 라이선스를 구매한다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다."
               },
               {
-                "facet": "제품 키로 정품 인증하려면 어떻게 하나요?",
-                "answer": "설치 중 키를 입력하거나 설치 후 설정의 제품 키 변경에서 해당 버전에 맞는 키를 입력합니다.",
+                "facet": "제품 키 없이 디지털 라이선스로 어떻게 인증하는가?",
+                "answer": "해당 하드웨어의 디지털 라이선스와 연결된 Microsoft 계정으로 인터넷에 연결해 로그인한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다."
+              },
+              {
+                "facet": "제품 키는 어디에 입력하는가?",
+                "answer": "설치 중 입력하거나 설치 후 설정 > 시스템 > 정품 인증 > 제품 키 변경에서 입력한다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다."
               },
               {
-                "facet": "디지털 라이선스로 정품 인증하려면 어떻게 하나요?",
-                "answer": "라이선스가 연결된 하드웨어에서 인터넷에 연결하고 해당 Microsoft 계정으로 로그인합니다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다."
-              },
-              {
-                "facet": "재설치 후 다시 정품 인증할 수 있나요?",
-                "answer": "기존 인증과 계정 연결을 확인하고 동일한 버전을 재설치하면 제품 키 입력 없이 온라인 자동 인증이 가능합니다.",
+                "facet": "재설치할 때 기존 인증을 어떻게 유지하는가?",
+                "answer": "기존 인증과 계정 연결을 확인하고 동일한 버전을 재설치한다. 디지털 라이선스가 있으면 키 입력을 건너뛰고 온라인 인증한다.",
                 "supported": true,
                 "source_index": 0,
                 "quote": "장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다."
               },
               {
-                "facet": "주요 하드웨어 변경으로 인증이 풀리면 어떻게 대응하나요?",
-                "answer": "변경 전에 Microsoft 계정을 디지털 라이선스에 연결하고, 변경 후 정품 인증 문제 해결사를 사용합니다.",
+                "facet": "인증 실패나 주요 부품 변경 시 무엇을 확인하는가?",
+                "answer": "인터넷 연결·오류 메시지·버전에 맞는 키를 확인한다. 주요 부품 변경은 사전 계정 연결과 정품 인증 문제 해결사를 안내한다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
+                "quote": "이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
               },
               {
-                "facet": "온라인 인증이 실패하거나 PC가 오프라인이면 어떻게 인증하나요?",
-                "answer": "설치 ID를 제품 정품 인증 포털에 제출하고 받은 확인 ID를 입력합니다. 표시된 전화번호로 전화하지 않도록 안내합니다.",
+                "facet": "빌드별 오프라인 인증 진입 경로는 어떻게 다른가?",
+                "answer": "26200.8973·26100.8973 이상은 자동화된 도움말, 이전 빌드는 전화로 정품 인증에서 설치 ID를 확인한다.",
+                "supported": true,
+                "source_index": 1,
+                "quote": "시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다."
+              },
+              {
+                "facet": "오프라인 인증은 어떻게 완료하는가?",
+                "answer": "설치 ID를 제품 정품 인증 포털에 제출하고 받은 확인 ID를 Windows에 입력한다. 표시된 전화번호로 전화하지 않는다.",
                 "supported": true,
                 "source_index": 1,
                 "quote": "찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다."
@@ -19487,7 +19688,7 @@
             }
           }
         },
-        "score": 75.47,
+        "score": 76.26,
         "publish_eligible": true,
         "hold_reasons": []
       }
@@ -19495,13 +19696,13 @@
     "candidate_decisions": [
       {
         "keyword": "윈도우11정품인증",
-        "monthly_search": 6180,
+        "monthly_search": 6110,
         "rank": 1,
-        "score": 82.78,
+        "score": 76.26,
         "score_components": {
-          "demand": 30.33,
-          "organic_opportunity": 36.0,
-          "trend": 1.45,
+          "demand": 30.29,
+          "organic_opportunity": 32.4,
+          "trend": -1.43,
           "intent_fit": 15
         },
         "status": "selected",
@@ -19509,30 +19710,22 @@
         "organic_query": "윈도우11 정품 인증"
       },
       {
-        "keyword": "윈도우정품인증",
-        "monthly_search": 8270,
-        "rank": 2,
-        "score": 75.47,
-        "score_components": {
-          "demand": 31.34,
-          "organic_opportunity": 28.8,
-          "trend": 0.33,
-          "intent_fit": 15
-        },
-        "status": "selected",
-        "reason": "highest_score_among_evaluated",
-        "organic_query": "윈도우 정품 인증"
-      },
-      {
-        "keyword": "윈도우11업데이트",
+        "keyword": "윈도우11다운로드",
         "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 9610,
-        "organic_query": "윈도우11 업데이트"
+        "reason": "search quality insufficient",
+        "monthly_search": 8050,
+        "organic_query": "윈도우11 다운로드"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "윈도우11다운로드",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-02T02:04:46.174328+00:00",
+        "retry_after": "2026-10-03T02:04:46.174328+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "윈도우11업데이트",
         "reason_code": "source_coverage",
@@ -19582,6 +19775,88 @@
         "retry_after": "2026-10-01T15:46:47.439049+00:00",
         "attempts": 1
       }
-    ]
+    ],
+    "analysis_diagnostics": [
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 40992
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 47893
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11227
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 13444
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9670
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12485
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 54592
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "error",
+        "code": "invalid_schema",
+        "elapsed_ms": 54592
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 40011
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 2,
+        "status": "returned",
+        "elapsed_ms": 40018
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7196
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 15806
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 28236
+      }
+    ],
+    "analysis_recovery_attempts": 1
   }
 }

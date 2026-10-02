@@ -240,6 +240,13 @@
       "claimed_at": "2026-10-02T13:07:43.015684+09:00",
       "status": "success",
       "completed_at": "2026-10-02T04:12:01.013765+00:00"
+    },
+    "2026-10-02:evening": {
+      "run_id": "37000611461",
+      "category": "건강",
+      "slot": "evening",
+      "claimed_at": "2026-10-02T20:22:11.026057+09:00",
+      "status": "started"
     }
   }
 }

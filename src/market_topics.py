@@ -32,7 +32,7 @@ from src.search_quality import SearchReviewError
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query, resolved_search_query
 from src.selection_feedback import load_history, deferred_keywords
-from src import review_discovery, review_exploration
+from src import review_discovery, review_exploration, recent_search_trend as recent
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
 
@@ -142,7 +142,7 @@ def record_published_keyword(item, post_id, url):
         rows.append({'key': key, 'keyword': item['keyword'], 'topic': item['topic'],
                      'category': item['category'], 'post_id': post_id, 'url': url,
                      **{field: item.get(field) for field in ('selection_version', 'monthly_search', 'score',
-                         'score_components', 'trend_status', 'demand_provider', 'youtube_discovery')},
+                         'score_components', 'trend_status', 'demand_provider', 'youtube_discovery', 'recent_search_trend')},
                      'published_at': datetime.now(timezone.utc).isoformat()})
         LEDGER.parent.mkdir(parents=True, exist_ok=True)
         temp = LEDGER.with_suffix('.tmp')
@@ -233,7 +233,10 @@ class NoMeasuredDemand(RuntimeError):
     """The lookup produced no candidate with independently measured demand."""
 
 
-def demand_candidates(seeds, min_volume=MIN_MONTHLY_SEARCH):
+def demand_candidates(seeds, min_volume=None):
+    # Preserve measured small terms for daily-trend screening; never infer masked counts.
+    if min_volume is None:
+        min_volume = 10 if recent.configured() else MIN_MONTHLY_SEARCH
     if not all(os.getenv(k) for k in ('NAVER_AD_CUSTOMER_ID', 'NAVER_AD_API_KEY', 'NAVER_AD_SECRET_KEY')):
         raise RuntimeError('Measured market demand requires Naver credentials')
     candidates = {}
@@ -278,7 +281,8 @@ def score_candidate(volume, domains, keyword):
 def candidate_pool(stats, titles, category=None):
     """Mix measured long-tail questions with demand leaders before AI shortlisting."""
     ranked = sorted((row for row in stats.values()
-                     if not duplicate(row['keyword'], row['keyword'], titles)
+                     if (row['monthly'] >= MIN_MONTHLY_SEARCH or recent.rising(row.get('recent_search_trend')))
+                     and not duplicate(row['keyword'], row['keyword'], titles)
                      and not suitability.content_capability_issues(row['keyword'])
                      and (category is None or category_matches(row['keyword'], category))),
                     key=lambda row: -row['monthly'])
@@ -289,7 +293,16 @@ def candidate_pool(stats, titles, category=None):
                                      -(row['cak_provenance']['item']['trend']['hotScore'] or 0), -row['monthly']))
     related = [row for row in ranked if row.get('cak_provenance', {}).get('relationship') == 'related_seed'
                or row.get('youtube_discovery')]
+    rising = sorted((row for row in ranked if recent.rising(row.get('recent_search_trend'))),
+                    key=lambda row: recent.rank(row['recent_search_trend']), reverse=True)
     pool, seen = [], set()
+    for row in rising:
+        key = norm(row['keyword'])
+        if key not in seen:
+            pool.append(row)
+            seen.add(key)
+        if len(pool) == 120:
+            return pool
     for index in range(len(ranked)):
         for group in (direct, related, specific, ranked):
             if index >= len(group):
@@ -382,6 +395,9 @@ def candidate_prompt_row(row):
     """Keep seed-level measurements out of a related keyword's analysis input."""
     result = {key: row[key] for key in ('keyword', 'monthly', 'comp') if key in row}
     result['discovery_specificity'] = specificity_score(row['keyword'])
+    if row.get('recent_search_trend'):
+        result['recent_search_trend'] = {key: value for key, value in row['recent_search_trend'].items()
+                                         if key != 'data'}
     provenance = row.get('cak_provenance')
     if provenance is not None:
         signal = provenance['item']
@@ -1035,6 +1051,43 @@ def _selection_pool(stats, titles, category, excluded_keys, deferred, past_failu
     return pool, retries, discovery_rejections
 
 
+def enrich_recent_trends(stats, titles, category, collector, excluded=(), deferred=()):
+    if not collector.enabled:
+        return
+    eligible = [row for row in stats.values() if row.get('monthly', 0) >= 10
+                and norm(row['keyword']) not in excluded
+                and measurement_key(row['keyword']) not in deferred
+                and category_matches(row['keyword'], category)
+                and not duplicate(row['keyword'], row['keyword'], titles)
+                and not suitability.content_capability_issues(row['keyword'])
+                and (category != '리뷰' or not review_discovery.discovery_issue(row['keyword']))]
+    # Reserve a third of the bounded probe for small measured terms that the old
+    # monthly threshold discarded. No seed's trend is inherited by related terms.
+    small = sorted((row for row in eligible if row['monthly'] < MIN_MONTHLY_SEARCH),
+                   key=lambda row: (-specificity_score(row['keyword']), -row['monthly']))
+    regular = candidate_pool({row['keyword']: row for row in eligible}, titles, category)
+    requests = [row['keyword'] for row in small[:40] + regular[:80]]
+    requests += [row['keyword'] for row in eligible if row['keyword'] not in requests]
+    requests = list(dict.fromkeys(requests))[:recent.MAX_KEYWORDS]
+    signals = collector.collect(requests)
+    for row in stats.values():
+        row['recent_search_trend'] = signals.get(row['keyword']) or collector.cache.get(row['keyword']) or recent.unavailable(
+            row['keyword'], collector.now, 'budget_exhausted')
+
+
+def priority_key(item):
+    """Qualified recent rises precede evergreen topics, after all publication gates."""
+    return (int(recent.rising(item.get('recent_search_trend'))), item.get('score', 0))
+
+
+def apply_recent_components(components, signal):
+    if signal:
+        # Missing daily data must not regain a larger monthly weight than a
+        # successfully measured flat candidate in the same selection.
+        components['demand'] = min(15, components['demand'])
+        components['recent_trend'] = signal['points'] if signal.get('status') == 'measured' else 0
+
+
 SEARCH_REVIEW_RETRY_CODES = frozenset({
     'model_review_failed', 'invalid_result_review', 'incomplete_result_review',
     'unverified_result_quote', 'conflicting_duplicate_review',
@@ -1124,6 +1177,8 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                     'relationship': 'related_seed', 'seed': seed['seed'], 'video_id': seed['video_id'],
                     'checked_at': now}}
     stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
+    trend_collector = recent.Collector(clock)
+    enrich_recent_trends(stats, titles, category, trend_collector, excluded_keys, deferred)
     past_failures = {measurement_key(row['keyword']): row for row in history}
 
     def refresh_pool(retired_keys=(), retry_keys=None):
@@ -1178,6 +1233,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 stats[key] = row
                 known.add(identity)
                 entry['added_count'] += 1
+        enrich_recent_trends(stats, titles, category, trend_collector, excluded_keys | seen, deferred)
         pool, retries, discovery_rejections = refresh_pool(seen | not_proposed | family_deferred, history_retry_keys)
         pool_keywords.update(norm(row['keyword']) for row in pool)
         retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
@@ -1255,7 +1311,8 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 stop_reason = 'time_budget'
                 break
         # Show unseen parts of the measured pool before recycling a shortlist.
-        remaining = sorted(available, key=lambda row: (norm(row['keyword']) not in adaptive_candidate_keys,
+        remaining = sorted(available, key=lambda row: (not recent.rising(row.get('recent_search_trend')),
+                                                      norm(row['keyword']) not in adaptive_candidate_keys,
                                                       norm(row['keyword']) in offered))[:60]
         if not remaining:
             stop_reason = 'pool_exhausted'
@@ -1266,6 +1323,10 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
 오늘 {now[:10]}. 아래 실측 후보에서 정확한 keyword를 최대 {PROPOSALS_PER_ROUND}개 반환하세요.
 카테고리 구분: {json.dumps(CATEGORY_SCOPES, ensure_ascii=False)}
 요청 카테고리의 주된 목적에 맞는 후보만 고르세요. 시드의 연관 검색어라도 다른 분야면 제외하세요.
+recent_search_trend는 해당 검색어 자체의 일별 상대지수 분석입니다. 실제 일 검색 횟수가 아닙니다.
+qualified_rising=true인 후보를 먼저 검토하세요. 최신 완료일·최근 3일·지난주 같은 요일을 비교한 값입니다.
+당일 미완성 수치, 누락·오래된 데이터는 상승 근거로 삼지 마세요. 월 검색량은 보조이며,
+검증된 상승 후보를 월 500회 미만이라는 이유만으로 제외하지 마세요. 근거·카테고리·검색 의도 기준은 동일합니다.
 수요는 네이버 월간 PC+모바일이며 구글 검색량/상승률이 아닙니다. comp는 광고 경쟁도이며 SEO 난이도가 아닙니다.
 CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 item은 발견 계기가 된 시드 자료이며,
 해당 후보의 상승률이 아닙니다. related 후보의 monthly만 그 후보를 별도로 측정한 수요입니다.
@@ -1347,6 +1408,9 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             candidates = research_fallback
             proposal_rounds[-1]['measured_fallback'] = True
         attempted_before = len(seen)
+        candidates = sorted(candidates[:PROPOSALS_PER_ROUND], key=lambda proposal:
+            not recent.rising(stats.get(proposal.get('keyword', ''), {}).get('recent_search_trend'))
+            if isinstance(proposal, dict) and isinstance(proposal.get('keyword', ''), str) else True)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
             runtime.raise_if_fatal()
             if monotonic() - started >= MAX_RESEARCH_SECONDS:
@@ -1454,16 +1518,20 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             cak_provenance = row.get('cak_provenance')
             direct_rising = (cak_provenance is not None and cak_provenance['relationship'] == 'exact'
                              and qualified_rising(cak_provenance['item']))
-            growth = None if direct_rising else fetch_trend_change(keyword)
+            recent_signal = row.get('recent_search_trend')
+            recent_measured = bool(recent_signal and recent_signal['status'] == 'measured')
+            growth = None if direct_rising or recent_measured else fetch_trend_change(keyword)
             components = score_components(row['monthly'], domains, keyword, growth, evidence_mode=mode)
             if metrics:
                 components['organic_opportunity'] = metrics['organic_opportunity']
             if cak_provenance is not None:
                 components['cak_trend'] = round(cak_provenance['item']['trend']['hotScore'] / 10, 2) if direct_rising else 0
+            apply_recent_components(components, recent_signal)
             review = item.pop('intent_evidence', None)
             candidate = {**item, 'article_type': 'information', 'monthly_search': row['monthly'],
                 'demand_provider': row.get('demand_provider', 'naver_searchad_pc_mobile'),
                 'demand_scope': 'keyword_total',
+                **({'recent_search_trend': recent_signal} if recent_signal is not None else {}),
                 'advertising_competition': row.get('comp'),
                 **({'cak_provenance': cak_provenance} if cak_provenance is not None else {}),
                 **({'youtube_discovery': row['youtube_discovery']} if row.get('youtube_discovery') else {}),
@@ -1505,14 +1573,15 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             break
         if stop_reason == 'time_budget' or len(seen) == attempted_before:
             break
-    selected.sort(key=lambda item: -item['score'])
+    selected.sort(key=priority_key, reverse=True)
     held.sort(key=lambda item: -item['score'])
     chosen_keywords = {item['keyword'] for item in selected[:top_n]}
     decisions = [
         {'keyword': item['keyword'], 'monthly_search': item['monthly_search'], 'rank': rank,
          'score': item['score'], 'score_components': item['score_components'],
          'status': 'selected' if item['keyword'] in chosen_keywords else 'eligible_not_selected',
-         'reason': 'highest_score_among_evaluated' if item['keyword'] in chosen_keywords else 'selection_limit'}
+         'reason': ('recent_rise_then_score' if recent.rising(item.get('recent_search_trend')) else
+                    'highest_score_among_evaluated') if item['keyword'] in chosen_keywords else 'selection_limit'}
         for rank, item in enumerate(selected, 1)]
     decisions.extend({'keyword': item['keyword'], 'monthly_search': item['monthly_search'],
                       'score': item['score'], 'status': 'held', 'reasons': item['hold_reasons']} for item in held)
@@ -1525,6 +1594,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
             'youtube_discovery': youtube_import,
             'review_question_discovery': exploration,
+            'recent_search_trend': trend_collector.summary(),
             'search_review_recovery_attempts': search_review_budget['attempts'],
             'search_review_diagnostics': search_review_diagnostics,
             'shortlist_research_attempts': shortlist_research_attempts,
@@ -1545,7 +1615,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             'discovery_replenishment': replenishment,
             'deferred_measured_keywords': sorted(row['keyword'] for row in stats.values()
                                                 if measurement_key(row['keyword']) in deferred),
-            'selection_scope': 'highest_score_among_evaluated', 'proposal_rounds': proposal_rounds,
+            'selection_scope': 'recent_rise_then_score' if trend_collector.enabled else 'highest_score_among_evaluated',
+            'proposal_rounds': proposal_rounds,
             'ranked_candidates': selected, 'candidate_decisions': decisions,
             'notes': 'Priority score is a heuristic, not predicted traffic. Demand is Naver; '
                      'organic provider is recorded per candidate. Independently fetched official pages are '
@@ -1573,7 +1644,13 @@ def fresh_research_item(item, category, now=None):
         valid_evidence = any(isinstance(source, dict) and source.get('url') == item.get('source_url')
                              and bool(source.get('excerpt')) for source in evidence)
         valid_score = math.isfinite(item.get('score', float('nan')))
-        valid_volume = item.get('monthly_search', 0) >= MIN_MONTHLY_SEARCH
+        signal = item.get('recent_search_trend')
+        if signal is not None and not recent.valid(signal, item.get('keyword'), now):
+            return False
+        if recent.configured() and signal is None:
+            return False  # Old 36-hour caches must first pass the new daily research.
+        valid_volume = (item.get('monthly_search', 0) >= MIN_MONTHLY_SEARCH
+                        or item.get('monthly_search', 0) >= 10 and recent.rising(signal))
         if ('cak_provenance' not in item
                 and (item.get('demand_provider') == 'cak_naver_searchad_whitespace_exact'
                      or 'cak_trend' in (item.get('score_components') or {}))):
@@ -1670,6 +1747,12 @@ def current_priority(item):
         components['organic_opportunity'] = metrics['organic_opportunity']
         components.pop('specificity')
         components['intent_fit'] = 15
+        signal = item.get('recent_search_trend')
+        if signal is not None and not recent.valid(signal, item.get('keyword')):
+            return False
+        if signal and signal.get('status') == 'measured' and growth is not None:
+            return False
+        apply_recent_components(components, signal)
         if provenance is not None:
             components['cak_trend'] = round(provenance['item']['trend']['hotScore'] / 10, 2) if rising else 0
         return (item.get('trend_status') == status and item.get('score_components') == components

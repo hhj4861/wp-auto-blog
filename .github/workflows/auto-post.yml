@@ -198,6 +198,8 @@ jobs:
       - name: Run pipeline (General Blog - trendpulse.blog)
         timeout-minutes: 30
         env:
+          NAVER_API_HUB_CLIENT_ID: ${{ secrets.NAVER_API_HUB_CLIENT_ID }}
+          NAVER_API_HUB_CLIENT_SECRET: ${{ secrets.NAVER_API_HUB_CLIENT_SECRET }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
         run: |
@@ -866,6 +868,8 @@ jobs:
         if: steps.daily.outputs.run == 'true'
         timeout-minutes: 50
         env:
+          NAVER_API_HUB_CLIENT_ID: ${{ secrets.NAVER_API_HUB_CLIENT_ID }}
+          NAVER_API_HUB_CLIENT_SECRET: ${{ secrets.NAVER_API_HUB_CLIENT_SECRET }}
           MARKET_SEARCH_PROVIDER: codex_native_search
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}

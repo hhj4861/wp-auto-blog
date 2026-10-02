@@ -238,7 +238,8 @@
       "category": "테크",
       "slot": "morning",
       "claimed_at": "2026-10-02T13:07:43.015684+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-02T04:12:01.013765+00:00"
     }
   }
 }

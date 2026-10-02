@@ -324,5 +324,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-01T13:37:48.586947+00:00"
+  },
+  {
+    "key": "1tb외장하드",
+    "keyword": "1TB외장하드",
+    "topic": "1TB외장하드 선택 기준: 무게·크기·연결 규격·보증 비교",
+    "category": "리뷰",
+    "post_id": 1793,
+    "url": "https://trendpulse.blog/portable-hard-drive-comparison/",
+    "selection_version": 6,
+    "monthly_search": 2130,
+    "score": 61.63,
+    "score_components": {
+      "demand": 26.63,
+      "organic_opportunity": 20.0,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-02T02:04:12.811204+00:00"
   }
 ]

@@ -34,6 +34,7 @@ OFFICIAL_DOMAINS = {
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
     "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net", "korea.kr",
     "kr.roborock.com", "store.kr.dreametech.com", "sandisk.com", "kingston.com",
+    "seagate.com", "toshiba-storage.com",
 }
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35

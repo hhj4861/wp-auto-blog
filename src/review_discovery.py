@@ -209,6 +209,8 @@ BRAND_DOMAINS = (
     (('삼성', 'samsung', '갤럭시'), ('samsung.com',)),
     (('엘지', 'lg', '퓨리케어'), ('lge.co.kr', 'lg.com')),
     (('샌디스크', 'sandisk'), ('sandisk.com',)),
+    (('씨게이트', '시게이트', 'seagate'), ('seagate.com',)),
+    (('도시바', 'toshiba'), ('toshiba-storage.com',)),
     (('킹스톤', 'kingston'), ('kingston.com',)),
     (('애플', 'apple', '맥북'), ('apple.com',)),
 )
@@ -220,6 +222,31 @@ def named_brand_domains(keyword):
             if any(alias in key for alias in aliases) for domain in domains}
 
 
+def storage_types(keyword):
+    key = compact(keyword)
+    kinds = {'ssd'} if 'ssd' in key else set()
+    if 'hdd' in key or 'harddisk' in key or ('외장하드' in key or 'harddrive' in key) and not kinds:
+        kinds.add('hdd')
+    return kinds
+
+
+def storage_source_matches(keyword, source):
+    requested = storage_types(keyword)
+    body = compact(source.get('excerpt', ''))
+    title_types = storage_types(source.get('title', ''))
+    # A competing device mentioned in marketing copy is not the page's product.
+    if requested and title_types and requested.isdisjoint(title_types):
+        return False
+    aliases = {'ssd': ('ssd', 'solidstatedrive'),
+               'hdd': ('hdd', 'harddrive', 'harddisk', '하드디스크', '외장하드')}
+    if any(not any(term in body for term in aliases[kind]) for kind in requested):
+        return False
+    if requested and any(term in compact(keyword) for term in ('외장', 'external', 'portable')):
+        if not any(term in body for term in ('외장', 'external', 'portable', '휴대용')):
+            return False
+    return True
+
+
 def storage_question(keyword):
     products, facets = requirements(keyword)
     return '저장장치' in products or '저장장치' in facets
@@ -228,7 +255,8 @@ def storage_question(keyword):
 def preferred_source_domains(keyword):
     brands = named_brand_domains(keyword)
     if storage_question(keyword):
-        domains = ('sandisk.com', 'semiconductor.samsung.com', 'kingston.com')
+        domains = (('seagate.com', 'toshiba-storage.com') if storage_types(keyword) == {'hdd'}
+                   else ('sandisk.com', 'semiconductor.samsung.com', 'kingston.com'))
         return [domain for domain in domains
                 if not brands or any(domain == brand or domain.endswith('.' + brand) for brand in brands)]
     if '램' in requirements(keyword)[0]:
@@ -244,7 +272,7 @@ def prioritize_sources(keyword, sources, limit=3):
     # supplement these, but must not evict them just because fetched earlier.
     if storage_question(keyword):
         primary = [source for source in sources if any(
-            term in compact(source.get('title', '')) for term in ('ssd', 'hdd', '저장장치'))
+            term in compact(source.get('title', '')) for term in ('ssd', 'hdd', '저장장치', 'harddrive', 'harddisk'))
             and not re.search(r'/(?:notebook|galaxybook|macbook)/|/support/model/',
                               urlsplit(source['url']).path, re.I)]
         rest = [source for source in sources if source not in primary]
@@ -274,6 +302,8 @@ def relevant_source(keyword, source):
         return False
     if re.search(r'/all-[^/]+/?$', path):
         return False
+    if not storage_source_matches(keyword, source):
+        return False
     requested = numeric_constraints(keyword)
     observed = numeric_constraints(source.get('excerpt', ''))
     if any(values and not values & observed[kind] for kind, values in requested.items()):
@@ -292,6 +322,9 @@ def source_hint(keyword):
     detail = ('SSD 자체의 인터페이스(NVMe/SATA), 폼팩터, 용량, 노트북 호환 조건을 설명하는 '
               '저장장치 제조사 자료를 우선하세요. 노트북 본체의 SSD 탑재 용량만으로 '
               'SSD 선택 질문의 근거를 대신하지 마세요. ' if storage_question(keyword) else '')
+    if storage_types(keyword) == {'hdd'}:
+        detail = ('HDD 하드디스크의 용량·인터페이스·전원·폼팩터를 설명하는 실제 제품 사양을 찾으세요. '
+                  'SSD 자료로 HDD 질문을 대신하지 마세요. 외장 HDD 질문에는 USB 연결·전원·휴대 조건이 필요합니다. ')
     if named_brand_domains(keyword):
         detail += '검색어에 명시된 브랜드의 자료를 찾으세요. 다른 브랜드 본체 자료로 대체하지 마세요. '
     return (detail + '구매 전 판단 질문입니다. ' + ', '.join(products) + '의 ' + ', '.join(facets)

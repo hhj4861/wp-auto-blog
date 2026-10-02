@@ -21,7 +21,13 @@ FATAL = frozenset({'refresh_token_reused', 'refresh_token_expired', 'refresh_tok
 NATIVE_CODES = frozenset({'native_search_failed', 'invalid_protocol', 'output_limit',
     'unexpected_eof', 'server_request_denied', 'rpc_failed', 'turn_failed',
     'structured_results_unavailable', 'empty_structured_results', 'structured_fields_incomplete',
-    'native_fields_incomplete', 'no_observed_search', 'invalid_results_shape'})
+    'native_fields_incomplete', 'no_observed_search', 'invalid_results_shape',
+    'invalid_query', 'unsafe_thread_configuration', 'unexpected_home_configuration',
+    'unexpected_tool_activity', 'unexpected_web_activity', 'unexpected_search_query',
+    'invalid_search_arguments', 'missing_search_arguments', 'unbound_search_arguments',
+    'invalid_raw_item', 'unexpected_raw_item_type', 'unexpected_raw_agent_recipient',
+    'unexpected_raw_function_identity', 'unexpected_raw_output_identity',
+    'invalid_raw_call_id', 'invalid_raw_output_id'})
 CODES = RETRYABLE | FATAL | NATIVE_CODES | {'unclassified', 'unexpected_error', 'retry_budget_exhausted'}
 MAX_EXTRA_CALLS = 4
 

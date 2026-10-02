@@ -1,0 +1,121 @@
+{
+  "run_id": 36935231882,
+  "selected_at": "2026-10-01T22:28:52.869906+00:00",
+  "candidate_decisions": [
+    {
+      "keyword": "DDR416G",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 13050,
+      "organic_query": "DDR416G"
+    },
+    {
+      "keyword": "DDR48G",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 8760,
+      "organic_query": "DDR48G"
+    },
+    {
+      "keyword": "DDR432G",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 3070,
+      "organic_query": "DDR432G"
+    },
+    {
+      "keyword": "청소기필터",
+      "status": "rejected",
+      "reason": "organic lookup unavailable; requires a specific measured long-tail",
+      "monthly_search": 800,
+      "organic_query": "청소기 필터"
+    },
+    {
+      "keyword": "SSD1TB",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 26600,
+      "organic_query": "SSD1TB"
+    },
+    {
+      "keyword": "SSD2TB",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 10330,
+      "organic_query": "SSD2TB"
+    },
+    {
+      "keyword": "외장하드1TB",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 6350,
+      "organic_query": "외장 하드 1TB"
+    },
+    {
+      "keyword": "외장SSD1TB",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 1950,
+      "organic_query": "외장 SSD1TB"
+    },
+    {
+      "keyword": "외장SSD2TB",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 1350,
+      "organic_query": "외장 SSD2TB"
+    },
+    {
+      "keyword": "외장SSD4TB",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 630,
+      "organic_query": "외장 SSD4TB"
+    },
+    {
+      "keyword": "HDD1TB",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 2970,
+      "organic_query": "HDD1TB"
+    }
+  ],
+  "source_failures": [
+    {
+      "keyword": "외장하드1TB",
+      "sources": [
+        {
+          "url": "https://www.sandisk.com/ko-kr/products/ssd/internal-ssd/pc-sa510-sata-ssd?sku=SDBSBXD-1000",
+          "title": "1TB 2.5-Inch SANDISK PC SA510 SATA SSD | Sandisk",
+          "excerpt": "ssd 내장 1tb 500gb"
+        },
+        {
+          "url": "https://www.sandisk.com/ko-kr/topics/fwc26/portable-ssd",
+          "title": "공식 라이선스를 받은 2026년 FIFA 월드컵™ 휴대용 SSD | Sandisk",
+          "excerpt": "ssd portable 휴대용 1tb"
+        },
+        {
+          "url": "https://www.sandisk.com/ko-kr/products/ssd/external-ssd/sandisk-portable-ssd-v3",
+          "title": "500GB SANDISK Portable SSD (V3) | Sandisk",
+          "excerpt": "ssd 외장하드 portable 휴대용 1tb 500gb 2tb"
+        }
+      ]
+    },
+    {
+      "keyword": "HDD1TB",
+      "sources": [
+        {
+          "url": "https://www.sandisk.com/ko-kr/solutions/solid-state-drives/internal-ssds",
+          "title": "PC 및 노트북용 내장 SSD | NVMe 및 SATA 호환성 | Sandisk",
+          "excerpt": "ssd hdd 내장 1tb 500gb 2tb"
+        },
+        {
+          "url": "https://www.sandisk.com/ko-kr/products/ssd/internal-ssd/pc-sa510-sata-ssd?sku=SDBSNXD-1000",
+          "title": "1TB M.2 2280 SANDISK PC SA510 SATA SSD | Sandisk",
+          "excerpt": "ssd 내장 1tb 500gb"
+        }
+      ]
+    }
+  ],
+  "fixture_scope": "Original URL/title with extracted body terms only; not a complete source body or publication evidence."
+}

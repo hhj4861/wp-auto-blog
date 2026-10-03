@@ -13782,7 +13782,7 @@
     "keywords": [
       "VLOOKUP"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "VLOOKUP",
@@ -14470,5 +14470,325 @@
     "url": "https://trendpulse.blog/income-tax-brackets-2026/",
     "post_status": "publish",
     "completed_at": "2026-10-03T03:51:37.660027"
+  },
+  {
+    "keyword": "VLOOKUP",
+    "category": "생산성",
+    "topic": "VLOOKUP 사용법: 기본 수식부터 정확히 일치·근사 일치와 오류 해결까지",
+    "intent": "엑셀에서 VLOOKUP으로 원하는 값을 찾으려면 수식과 검색 범위를 어떻게 설정해야 하나요?",
+    "gap": "인수별 설정표, FALSE·TRUE 선택 기준, 범위 고정 절차와 #N/A·#REF! 오류 점검표를 제공합니다.",
+    "source_url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+        "original_url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+        "title": "VLOOKUP function | Microsoft Support",
+        "checked_on": "2026-10-02",
+        "sha256": "5d9ac485811d60bd7251d1b9ffaeb5f23c5fc4857cb764dce2a199c226c147da",
+        "excerpt": "VLOOKUP function Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2024 for Mac Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2016 Get help with Copilot How do I use the VLOOKUP function in Excel? Show me modern alternatives to VLOOKUP Write a VLOOKUP formula I can paste and adapt Tip Try using the new XLOOKUP function, an improved version of VLOOKUP that works in any direction and returns exact matches by default, making it easier and more convenient to use than its predecessor. Use VLOOKUP when you need to find things in a table or a range by row. For example, look up a price of an automotive part by the part number, or find an employee name based on their employee ID. In its simplest form, the VLOOKUP function says: =VLOOKUP(What you want to look up, where you want to look for it, the column number in the range containing the value to return, return an Approximate or Exact match – indicated as 1/TRUE, or 0/FALSE). Tip The secret to VLOOKUP is to organize your data so that the value you look up (Fruit) is to the left of the return value (Amount) you want to find. If you're a Microsoft Copilot subscriber Copilot can make it even easier to insert and use VLookup or XLookup functions. See Get data insights with Copilot in Excel. Technical details Use the VLOOKUP function to look up a value in a table. Syntax VLOOKUP (lookup_value, table_array, col_index_num, [range_lookup]) For example: =VLOOKUP(A2,A10:C20,2,TRUE) =VLOOKUP(\"Fontana\",B2:E7,2,FALSE) =VLOOKUP(A2,'Client Details'!A:F,3,FALSE) Argument name Description lookup_value (required) The value you want to look up. The value you want to look up must be in the first column of the range of cells you specify in the table_array argument. For example, if table-array spans cells B2:D7, then your lookup_value must be in column B. Lookup_value can be a value or a reference to a cell. table_array (required) The range of cells in which the VLOOKUP will search for the lookup_value and the return value. You can use a named range or a table, and you can use names in the argument instead of cell references. The first column in the cell range must contain the lookup_value . The cell range also needs to include the return value you want to find. col_index_num (required) The column number (starting with 1 for the left-most column of table_array ) that contains the return value. range_lookup (optional) A logical value that specifies whether you want VLOOKUP to find an approximate or an exact match: Approximate match - 1/TRUE assumes the first column in the table is sorted either numerically or alphabetically, and will then search for the closest value. This is the default method if you don't specify one. For example, =VLOOKUP(90,A1:B100,2,TRUE). Exact match - 0/FALSE searches for the exact value in the first column. For example, =VLOOKUP(\"Smith\",A1:B100,2,FALSE). How to get started There are four pieces of information that you will need in order to build the VLOOKUP syntax: The value you want to look up, also called the lookup value. The range where the lookup value is located. Remember that the lookup value should always be in the first column in the range for VLOOKUP to work correctly. For example, if your lookup value is in cell C2 then your range should start with C. The column number in the range that contains the return value. For example, if you specify B2:D11 as the range, you should count B as the first column, C as the second, and so on. Optionally, you can specify TRUE if you want an approximate match or FALSE if you want an exact match of the return value. If you don't specify anything, the default value will always be TRUE or approximate match. Now put all of the above together as follows: =VLOOKUP(lookup value, range containing the lookup value, the column number in the range containing the return value, Approximate match (TRUE) or Exact match (FALSE)). Examples Here are a few examples of VLOOKUP: Example 1 Example 2 Example 3 Example 4 Example 5 Common Problems Problem What went wrong Wrong value returned If range_lookup is TRUE or left out, the first column needs to be sorted alphabetically or numerically. If the first column isn't sorted, the return value might be something you don't expect. Either sort the first column, or use FALSE for an exact match. #N/A in cell If range_lookup is TRUE, then if the value in the lookup_value is smaller than the smallest value in the first column of the table_array , you'll get the #N/A error value. If range_lookup is FALSE, the #N/A error value indicates that the exact number isn't found. For more information on resolving #N/A errors in VLOOKUP, see How to correct a #N/A error in the VLOOKUP function . #REF! in cell If col_index_num is greater than the number of columns in table-array , you'll get the #REF! error value. For more information on resolving #REF! errors in VLOOKUP, see How to correct a #REF! error . #VALUE! in cell If the table_array is less than 1, you'll get the #VALUE! error value. For more information on resolving #VALUE! errors in VLOOKUP, see How to correct a #VALUE! error in the VLOOKUP function . #NAME? in cell The #NAME? error value usually means that the formula is missing quotes. To look up a person's name, make sure you use quotes around the name in the formula. For example, enter the name as \"Fontana\" in =VLOOKUP(\"Fontana\",B2:E7,2,FALSE). For more information, see How to correct a #NAME! error . #SPILL! in cell This particular #SPILL! error usually means that your formula is relying on implicit intersection for the lookup value, and using an entire column as a reference. For example, =VLOOKUP( A:A ,A:C,2,FALSE). You can resolve the issue by anchoring the lookup reference with the @ operator like this: =VLOOKUP( @A:A ,A:C,2,FALSE). Alternatively, you can use the traditional VLOOKUP method and refer to a single cell instead of an entire column: =VLOOKUP( A2 ,A:C,2,FALSE). Best practices Do this Why Use absolute references for range_lookup Using absolute references allows you to fill-down a formula so that it always looks at the same exact lookup range. Learn how to use absolute cell references . Don't store number or date values as text. When searching number or date values, be sure the data in the first column of table_array isn't stored as text values. Otherwise, VLOOKUP might return an incorrect or unexpected value. Sort the first column Sort the first column of the table_array before using VLOOKUP when range_lookup is TRUE. Use wildcard characters If range_lookup is FALSE and lookup_value is text, you can use the wildcard characters—the question mark (?) and asterisk (*)—in lookup_value . A question mark matches any single character. An asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) in front of the character. For example, =VLOOKUP(\"Fontan?\",B2:E7,2,FALSE) will search for all instances of Fontana with a last letter that could vary. Make sure your data doesn't contain erroneous characters. When searching text values in the first column, make sure the data in the first column doesn't have leading spaces, trailing spaces, inconsistent use of straight ( ' or \" ) and curly ( ‘ or \") quotation marks, or nonprinting characters. In these cases, VLOOKUP might return an unexpected value. To get accurate results, try using the CLEAN function or the TRIM function to remove trailing spaces after table values in a cell. Need more help? You can always ask an expert in the Excel Tech Community or get support in Communities ."
+      }
+    ],
+    "intent_results": [
+      "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+      "https://vlookup.com/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 3550,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "중간",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "VLOOKUP",
+    "organic_domains": [
+      "support.microsoft.com",
+      "support.google.com",
+      "vlookup.com",
+      "support.microsoft.com",
+      "learn.microsoft.com",
+      "exploreexcel.com",
+      "www.w3schools.com",
+      "www.youtube.com",
+      "trumpexcel.com",
+      "e115.engr.ncsu.edu"
+    ],
+    "organic_results": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function",
+        "domain": "support.microsoft.com",
+        "title": "VLOOKUP function | Microsoft Support",
+        "snippet": "Use VLOOKUP when you need to find things in a table or a range by row. ... See Get data insights with Copilot in Excel."
+      },
+      {
+        "url": "https://support.google.com/docs/answer/3093318?hl=en",
+        "domain": "support.google.com",
+        "title": "VLOOKUP - Google Docs Editors Help",
+        "snippet": "`VLOOKUP(\"Apple\",table_name! ... `search_key` that uses cell reference of \"Apple\" in G9 | =VLOOKUP(G9, B4:D8, 3, FALSE) Return value = $1.50"
+      },
+      {
+        "url": "https://vlookup.com/",
+        "domain": "vlookup.com",
+        "title": "How to use VLOOKUP in Excel",
+        "snippet": "In Excel, VLOOKUP is a fast and easy way to find information when the data is organized in columns. ... The final formula is: `=VLOOKUP(G3,"
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/excel/quick-reference-card-vlookup-refresher",
+        "domain": "support.microsoft.com",
+        "title": "Quick Reference Card: VLOOKUP refresher | Microsoft Support",
+        "snippet": "VLOOKUP is one of the most popular, useful functions in Excel, but it’s hard to remember the formula if you don’t use it that often."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/office/vba/api/excel.worksheetfunction.vlookup",
+        "domain": "learn.microsoft.com",
+        "title": "WorksheetFunction.VLookup method (Excel) | Microsoft Learn",
+        "snippet": "# WorksheetFunction.VLookup method (Excel) ... When searching text values in the first column of table_array, ensure that the data in the first column of table_array"
+      },
+      {
+        "url": "https://exploreexcel.com/formulas/vlookup/",
+        "domain": "exploreexcel.com",
+        "title": "VLOOKUP function in Excel | Explore Excel",
+        "snippet": "VLOOKUP Change a value in the formula, or edit any outlined cell. ... =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) ... If your file might be opened in"
+      },
+      {
+        "url": "https://www.w3schools.com/excel/excel_vlookup.php",
+        "domain": "www.w3schools.com",
+        "title": "W3Schools.com",
+        "snippet": "﻿ Excel VLOOKUP Function ... =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]) ... Range_lookup: TRUE if numbers (1) or FALSE if text (0)."
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=aJXgqNhRWMM",
+        "domain": "www.youtube.com",
+        "title": "How to use VLOOKUP in Excel - YouTube",
+        "snippet": "In Excel, use VLOOKUP when you need to find things in a table or range by row."
+      },
+      {
+        "url": "https://trumpexcel.com/excel-functions/vlookup/",
+        "domain": "trumpexcel.com",
+        "title": "VLOOKUP Function in Excel (10 Examples)",
+        "snippet": "The value you search for has to sit in the leftmost column of your table, and VLOOKUP can only return something from a column to"
+      },
+      {
+        "url": "https://e115.engr.ncsu.edu/spreadsheets/vlookup/",
+        "domain": "e115.engr.ncsu.edu",
+        "title": "VLOOKUP – E 115: Introduction to Computing Environments",
+        "snippet": "VLOOKUP is an Excel function that is used to find data. ... * Remember to use static cell referencing for the reference table if you"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 28.4,
+      "organic_opportunity": 28.0,
+      "trend": -4.44,
+      "intent_fit": 15
+    },
+    "trend_growth": -0.444,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 6,
+    "selected_at": "2026-10-02T12:46:13.654348+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "VLOOKUP"
+    ],
+    "status": "completed",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "VLOOKUP",
+      "executed_query": "VLOOKUP",
+      "topic": "VLOOKUP 사용법: 기본 수식부터 정확히 일치·근사 일치와 오류 해결까지",
+      "intent": "엑셀에서 VLOOKUP으로 원하는 값을 찾으려면 수식과 검색 범위를 어떻게 설정해야 하나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-02T12:46:13.654348+00:00",
+      "result_count": 10,
+      "domain_count": 8,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "VLOOKUP",
+        "executed_query": "VLOOKUP",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-02T12:46:13.654348+00:00",
+        "raw_sha256": "c5eab101248dcc1dbb00c7422e2a06ff8198357c218ccce900a2aca7efe66086",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "Use VLOOKUP when you need to find things in a table or a range by row."
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "=VLOOKUP(G9, B4:D8, 3, FALSE) Return value = $1.50"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "How to use VLOOKUP in Excel"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "Quick Reference Card: VLOOKUP refresher | Microsoft Support"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "WorksheetFunction.VLookup method (Excel)"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "In Excel, use VLOOKUP when you need to find things in a table or range by row."
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "VLOOKUP Function in Excel (10 Examples)"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "VLOOKUP is an Excel function that is used to find data."
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 10,
+        "relevant_site_count": 8,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 1.0,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.3,
+        "organic_opportunity": 28.0
+      },
+      "scope": "full_keyword",
+      "target_keyword": "VLOOKUP",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "Use VLOOKUP when you need to find things in a table or a range by row."
+        },
+        {
+          "result_index": 2,
+          "quote": "How to use VLOOKUP in Excel"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-02T12:46:13.654348+00:00",
+      "input_sha256": "c94339a922c6f842274bfc916999a461e0dbd65d591d6887fe06204b0f1b2c20",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "VLOOKUP",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "VLOOKUP function Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024",
+            "entity": "Excel for Microsoft 365",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "VLOOKUP은 언제 사용하나요?",
+            "answer": "표에서 행을 기준으로 검색값에 대응하는 다른 열의 값을 찾을 때 사용합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Use VLOOKUP when you need to find things in a table or a range by row."
+          },
+          {
+            "facet": "기본 수식과 인수는 어떻게 구성하나요?",
+            "answer": "=VLOOKUP(검색값, 검색범위, 반환열번호, 일치방식)으로 작성합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "VLOOKUP (lookup_value, table_array, col_index_num, [range_lookup])"
+          },
+          {
+            "facet": "검색 범위와 반환 열은 어떻게 설정하나요?",
+            "answer": "검색값은 범위의 첫 열에 두고 반환 열까지 포함합니다. 반환 열번호는 범위 왼쪽부터 1로 셉니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "The column number (starting with 1 for the left-most column of table_array )"
+          },
+          {
+            "facet": "검색값과 반환값의 위치에는 어떤 제약이 있나요?",
+            "answer": "검색값이 있는 첫 열에서 오른쪽에 있는 값을 반환하도록 표를 구성해야 합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "The first column in the cell range must contain the lookup_value ."
+          },
+          {
+            "facet": "FALSE와 TRUE는 언제 선택하나요?",
+            "answer": "정확히 일치하면 FALSE, 근사 일치면 TRUE를 사용합니다. 생략 시 TRUE이며 첫 열 정렬이 필요합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Either sort the first column, or use FALSE for an exact match."
+          },
+          {
+            "facet": "수식을 복사할 때 검색 범위를 어떻게 고정하나요?",
+            "answer": "검색 범위에 절대참조를 적용합니다. 예를 들어 $A$10:$C$20으로 고정하면 아래로 복사해도 유지됩니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Using absolute references allows you to fill-down a formula"
+          },
+          {
+            "facet": "#N/A 오류는 어떻게 점검하나요?",
+            "answer": "FALSE에서는 정확한 값이 없는지, TRUE에서는 검색값이 첫 열의 최솟값보다 작은지 확인합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "If range_lookup is FALSE, the #N/A error value indicates that the exact number isn't found."
+          },
+          {
+            "facet": "#REF! 오류는 어떻게 해결하나요?",
+            "answer": "반환 열번호가 검색 범위의 열 수를 초과하지 않도록 열번호나 범위를 수정합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "If col_index_num is greater than the number of columns in table-array"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Use VLOOKUP when you need to find things in a table or a range by row.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 66.96,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1808,
+    "url": "https://trendpulse.blog/vlookup-excel-guide-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-03T09:05:43.683283"
   }
 ]

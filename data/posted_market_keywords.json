@@ -430,5 +430,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-03T03:51:37.214141+00:00"
+  },
+  {
+    "key": "vlookup",
+    "keyword": "VLOOKUP",
+    "topic": "VLOOKUP 사용법: 기본 수식부터 정확히 일치·근사 일치와 오류 해결까지",
+    "category": "생산성",
+    "post_id": 1808,
+    "url": "https://trendpulse.blog/vlookup-excel-guide-2026/",
+    "selection_version": 6,
+    "monthly_search": 3550,
+    "score": 66.96,
+    "score_components": {
+      "demand": 28.4,
+      "organic_opportunity": 28.0,
+      "trend": -4.44,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-03T09:05:43.334065+00:00"
   }
 ]

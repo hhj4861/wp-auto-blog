@@ -31,6 +31,32 @@ class SharedDiscoveryTests(unittest.TestCase):
                 os.environ['BLOG_CODEX_MODEL']='other-model'
                 options['assert_connection'](input['runtime'])
         with self.assertRaisesRegex(RuntimeError,'connection_changed'):shared.discover('리뷰',client=Client(),generator=Mock(),check=Mock())
+    def test_native_draft_disables_search_and_tools_in_spawn_arguments(self):
+        import tempfile
+        from pathlib import Path
+        from src.codex_client import CodexSubscriptionClient
+        def launch(command, **options):
+            self.assertIn('web_search="disabled"',command)
+            for feature in ('shell_tool','apps','multi_agent','computer_use','browser_use','image_generation'):
+                self.assertIn(f'features.{feature}=false',command)
+            self.assertNotIn('--search',command)
+            self.assertIn('--ignore-user-config',command)
+            output=Path(command[command.index('--output-last-message')+1])
+            process=Mock(returncode=0)
+            process.communicate.side_effect=lambda *a,**k: output.write_text('{"candidates":[]}')
+            return process
+        with tempfile.TemporaryDirectory() as home, patch('src.codex_client.require_private_actions'), patch('src.codex_client.shutil.which',return_value='/synthetic/codex'), patch('src.codex_client.subprocess.Popen',side_effect=launch) as spawn:
+            native=CodexSubscriptionClient(home=home)
+            self.assertEqual(native.generate('server evidence',draft_only=True),'{"candidates":[]}')
+            spawn.assert_called_once()
+        class Client:
+            def discover(self,input,**options):
+                options['generate']('server draft')
+                return {'state':'complete','candidates':[{'decision':'accepted'}]}
+        with patch('src.codex_client.CodexSubscriptionClient') as factory:
+            factory.return_value.generate.return_value='{"candidates":[]}'
+            shared.discover('테크',client=Client(),check=Mock())
+            factory.return_value.generate.assert_called_once_with('server draft',draft_only=True)
     def test_unverified_related_keywords_cannot_enter_market_pool(self):
         from src import market_topics as market
         observed=[]

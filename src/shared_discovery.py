@@ -27,7 +27,7 @@ def discover(category, titles=(), *, brief=None, client=None, generator=None, ch
         result=subprocess.run(['codex','login','status'],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=15)
         if result.returncode:raise DiscoveryError('connection_unavailable')
     def generate(prompt):
-        value=generator(prompt) if generator else native.generate(prompt)
+        value=generator(prompt) if generator else native.generate(prompt,draft_only=True)
         return json.loads(value) if isinstance(value,str) else value
     client=client or DiscoveryClient(os.environ.get('DISCOVERY_URL',''),os.environ.get('DISCOVERY_API_KEY',''),os.environ.get('DISCOVERY_SUBJECT',''),allow_localhost=os.environ.get('DISCOVERY_ALLOW_LOCALHOST')=='1')
     result=client.discover({'profile':'content','category':category,

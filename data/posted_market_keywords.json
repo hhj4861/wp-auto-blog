@@ -451,5 +451,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-03T09:05:43.334065+00:00"
+  },
+  {
+    "key": "폐암초기증상",
+    "keyword": "폐암초기증상",
+    "topic": "폐암초기증상: 무증상 가능성과 주요 증상, 진료가 필요한 신호",
+    "category": "건강",
+    "post_id": 1811,
+    "url": "https://trendpulse.blog/lung-cancer-symptoms-2026/",
+    "selection_version": 6,
+    "monthly_search": 31020,
+    "score": 77.65,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 27.65,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-03T13:10:46.246626+00:00"
   }
 ]

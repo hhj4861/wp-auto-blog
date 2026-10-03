@@ -7574,7 +7574,16 @@
         "elapsed_ms": 23466
       }
     ],
-    "analysis_recovery_attempts": 0
+    "analysis_recovery_attempts": 0,
+    "reuse_source_diagnostics": {
+      "checked_at": "2026-10-03T13:07:25.669069+00:00",
+      "failed_candidates": [],
+      "reused_keywords": [
+        "폐암초기증상",
+        "위암초기증상"
+      ],
+      "outcome": "reused"
+    }
   },
   "생산성": {
     "category": "생산성",

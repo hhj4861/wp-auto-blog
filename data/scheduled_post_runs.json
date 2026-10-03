@@ -248,6 +248,17 @@
       "claimed_at": "2026-10-02T20:22:11.026057+09:00",
       "status": "success",
       "completed_at": "2026-10-02T11:51:33.933388+00:00"
+    },
+    "2026-10-03:morning": {
+      "scheduled_for": "2026-10-03T09:00:00+09:00",
+      "run_created_at": "2026-10-03T12:45:19+09:00",
+      "start_delay_seconds": 13530,
+      "trigger": "external_timer",
+      "run_id": "37094260393",
+      "category": "생활정보",
+      "slot": "morning",
+      "claimed_at": "2026-10-03T12:45:30.506453+09:00",
+      "status": "started"
     }
   }
 }

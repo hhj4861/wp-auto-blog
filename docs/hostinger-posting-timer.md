@@ -6,10 +6,21 @@ Mac이 꺼져 있어도 예약을 요청하도록 Hostinger Business Web Hosting
 글 생성과 WordPress 발행은 기존 GitHub Actions `main`에서 수행한다. 서버에 WordPress나
 Codex 인증을 복사하지 않는다. GitHub cron은 보조 트리거로 유지한다.
 
-현재는 구현 브랜치의 준비 단계다. Hostinger 로그인, PHP 8.3 표시, Cron Jobs 화면과
-홈 디렉터리 접근은 확인했다. 브라우저 연결이 끊겨 **서버 업로드·cron 설치·서버 실행은 미완료**다.
-기존 Mac LaunchAgent는 서버 검증이 끝날 때까지 유지한다. 로컬 PHP 8.4 검증이
-호스팅 PHP 8.3에서 실행됐다는 의미는 아니다.
+PR #80을 사용자 승인으로 main에 머지하고 동일 PHP 파일을 Hostinger 비공개 홈 폴더에
+배포했다. PHP 8.3.33의 실제 `probe_ok`와 매분 `--apply` 운영 cron 등록을 확인했다.
+사용자가 전용 토큰을 저장했으며, 21:44 KST 서버 실행에서 토큰 형식·파일 권한 검사를
+통과했다. 21:45:02 KST에는 `already_attempted`, `2026-10-03:evening`, `outcome=success`로
+기존 성공 회차의 중복 요청을 차단했다. 이는 **서버 설치·주기 실행 확인**이며,
+GitHub에 토큰을 보내는 최초 dispatch 성공까지 확인한 것은 아니다.
+점검용 `--probe` cron은 제거했으며, 운영 `--apply` cron 하나만 남아 있다.
+
+다음 미시도 회차는 2026-10-04 09:00 KST다. 서버의 실제 dispatch, Actions 종료,
+공개 URL을 확인할 때까지 기존 Mac LaunchAgent를 유지한다. Mac 전원을 끈 상태의
+실제 회차 검증과 Mac 타이머 해제는 아직 완료되지 않았다.
+
+전용 토큰은 `hhj4861/wp-auto-blog` 한 저장소의 Actions 읽기·쓰기와 필수 Metadata 읽기
+권한으로 생성했으며 **2027-01-01 만료**다. 교체 담당은 저장소 소유자이며 만료 전에
+같은 범위로 교체하고 실제 서버 요청을 확인해야 한다. 값은 문서·Git·로그에 기록하지 않는다.
 
 ## 실행 계약
 
@@ -70,6 +81,20 @@ Hostinger의 설치/출력 절차:
 
 ## 장애 확인과 중단
 
+### File Manager 저장 시 405
+
+파일 편집 주소가 `github-token.txt/`처럼 파일명 뒤 `/`로 끝나면 저장 시
+`405 Method Not Allowed`가 발생했다. 파일 목록에서 더블클릭 또는 Edit로 열어
+`github-token.txt`로 끝나는 실제 편집 주소를 사용한다. 상단 경로 링크의 주소를
+그대로 편집 URL로 재사용하지 않는다. 비밀값 없는 별도 파일로 정상 주소의 저장·새로고침
+후 내용 유지와 끝에 `/`가 있는 주소의 405를 비교 재현했다. 토큰 파일 권한 600은 유지한다.
+
+403이 발생한 오래된 File Manager 세션은 hPanel → Files → File Manager →
+Access all files of Business Web Hosting에서 다시 연다. 토큰이 남은 편집기의 내용을
+로그나 캡처에 포함하지 않으며, 파일 목록의 크기와 서버 출력으로 저장 여부를 확인한다.
+
+### 타이머 출력
+
 | 출력 | 의미와 조치 |
 |---|---|
 | `probe_ok` | 공개 이력 읽기만 확인됨. 인증·실제 발행은 별도 검증 |
@@ -92,4 +117,6 @@ Hostinger View Output을 확인해야 한다. 기존 Actions에 진입한 후의
   원격/로컬 이력 손상, 비공개 토큰 권한, 실제 별도 프로세스 잠금 충돌을 검증했다.
 - 로컬 `--probe`에서 실제 원격 이력을 읽고 2026-10-03 오후 회차 success를 확인했다.
   인증 없이 조회했으며 새 발행 요청은 보내지 않았다.
-- 호스팅 PHP 8.3 probe, 서버 인증 dispatch, cron 주기 실행, Mac 해제는 미검증/미적용이다.
+- 호스팅 PHP 8.3.33 실제 probe 성공. 배포한 PHP 본문은 승인된 소스와 일치함을 확인했다.
+- 매분 `--apply` cron이 실제 실행됐고, 토큰 파일 검사와 원격 성공 회차의 중복 차단을 확인했다.
+- 서버 인증 dispatch, 다음 09시/18시 실제 발행, Mac 전원 OFF 회차 검증 및 Mac 해제는 남아 있다.

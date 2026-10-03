@@ -17,3 +17,12 @@ PR #78 is merged; production is **not enabled** yet. The common service image fa
 Roll back deliberately by setting `DISCOVERY_ENABLED=0` (old category selection remains available). Do not erase request history or rotate native Codex tokens. Revoke/replace discovery keys through Cloudflare and the server platform map together; no raw key in GitHub CLI arguments/logs. Live checking is pending approval of the companion fixes; fixture tests do not prove production quality.
 
 Validation: 620 related fixture tests passed (618 in the combined run; two existing Reddit fixtures rechecked after installing their optional `praw` test dependency). The OIDC loader's 13 cases cover scope, redirect prevention, response-key injection, invalid runtime and unavailable broker. Both workflow YAML files parsed successfully. No live model call or WordPress publication was made by these tests.
+
+
+## Research-before-draft opt-in
+
+The shared server's `research-v2` workflow selects investigation leads first, fetches evidence on that server, then requests the final grounded draft. The Python transport remains an exact copy of `commerce-automation-kit/services/topic-discovery/client.py`; it consumes at most two action IDs, rechecks the existing account before claims and completion, and resumes an unclaimed draft after a lost research completion response. No selection rubric is copied into this client.
+
+Default remains the legacy single generation. Set server-only `DISCOVERY_WORKFLOW=research-v2` (repository variable for the category workflow) only after the reviewed v2 server is deployed and a live check passes. The manual **Shared Discovery Live Check** accepts `workflow: research-v2` independently of activation and still cannot publish. Each v2 request has at most two subscription generations, four searches, three Jev calls and the original ten-minute request deadline; v1 remains one generation. Do not enable just because fixture tests pass.
+
+#134's v1.1 production deployment succeeded, but blog live run 37113523275 still ended with `no_verified_topics`; authentication load/restore/cleanup succeeded. As of this change, scheduled discovery remains disabled and v2 is not deployed.

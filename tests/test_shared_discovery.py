@@ -22,6 +22,13 @@ class SharedDiscoveryTests(unittest.TestCase):
         result,report=shared.discover('리뷰',['이전 주제'],client=client,generator=generate,check=check)
         self.assertEqual(result,[accepted]);self.assertEqual(client.input['runtime'],{'provider':'codex','model':'test-model'})
         self.assertEqual(client.input['history'],[{'title':'이전 주제'}]);generate.assert_called_once_with('server-owned prompt')
+    def test_research_workflow_is_explicit_opt_in(self):
+        client=Mock();client.discover.return_value={'state':'complete','candidates':[{'decision':'accepted'}]}
+        for workflow in ('','research-v2'):
+            with patch.dict(os.environ,{'DISCOVERY_WORKFLOW':workflow}):
+                shared.discover('테크',client=client,generator=Mock(),check=Mock())
+            sent=client.discover.call_args.args[0]
+            self.assertEqual(sent.get('workflow'),workflow or None)
     def test_failed_verification_never_falls_back(self):
         client=Mock();client.discover.return_value={'state':'held','candidates':[]}
         with self.assertRaisesRegex(RuntimeError,'no_verified_topics'):shared.discover('테크',client=client,generator=Mock(),check=Mock())

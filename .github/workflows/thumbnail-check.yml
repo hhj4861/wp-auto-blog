@@ -1,0 +1,60 @@
+name: Dynamic Thumbnail Check
+on:
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: Preview one topic without publishing a post
+        type: choice
+        default: lung
+        options: [lung, spreadsheet, vacuum, laptop, career, air, footcare]
+permissions:
+  contents: read
+concurrency:
+  group: trendpulse-general-posting
+  cancel-in-progress: false
+  queue: max
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      SAMPLE: ${{ inputs.sample }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install -g @openai/codex@0.153.4
+      - name: Set isolated paths
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          echo "PREVIEW_OUTPUT=$RUNNER_TEMP/thumbnail-preview" >> "$GITHUB_ENV"
+      - name: Restore Codex authentication
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py restore
+      - name: Generate and verify native thumbnail
+        run: python scripts/preview_editorial_thumbnails.py --provider codex --sample "$SAMPLE" --output "$PREVIEW_OUTPUT"
+      - name: Upload preview only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dynamic-thumbnail-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/thumbnail-preview/*.jpg
+            ${{ runner.temp }}/thumbnail-preview/*.json
+          retention-days: 7
+      - name: Persist refreshed authentication and clean up
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist

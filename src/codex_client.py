@@ -200,7 +200,12 @@ class CodexSubscriptionClient:
         """Run live web discovery and return independently recorded tool activity."""
         return self._run(prompt, research=True)
 
-    def _run(self, prompt: str, *, research: bool = False, draft_only: bool = False) -> dict:
+    def generate_image(self, prompt: str) -> Path:
+        """Return only a new raster artifact from this invocation's native ImageGen."""
+        return Path(self._run(prompt, image_generation=True)["image_path"])
+
+    def _run(self, prompt: str, *, research: bool = False, draft_only: bool = False,
+             image_generation: bool = False) -> dict:
         if not prompt.strip():
             raise ValueError("Codex prompt must not be empty")
         # Do not forward WordPress secrets, API keys, or another agent's OAuth token.
@@ -215,10 +220,12 @@ class CodexSubscriptionClient:
                 "-c", 'model_provider="openai"',
                 "-a", "never",
             ]
-            if draft_only:
+            if draft_only or image_generation:
                 command.extend(["-c", 'web_search="disabled"'])
                 for feature in ('shell_tool','apps','multi_agent','computer_use','browser_use','image_generation'):
                     command.extend(["-c", f"features.{feature}=false"])
+            if image_generation:
+                command.extend(["-c", "features.image_generation=true", "-c", "features.view_image=false"])
             if research:
                 # Codex 0.153.4 does not forward the TUI --search field to exec.
                 # Explicit config overrides do reach exec with user config ignored.
@@ -232,14 +239,14 @@ class CodexSubscriptionClient:
                 "--ephemeral", "--ignore-user-config",
                 "--output-last-message", str(output),
             ])
-            if research:
+            if research or image_generation:
                 command.append("--json")
             if self.model:
                 command.extend(["--model", self.model])
             command.append("-")
             process = subprocess.Popen(
                 command, cwd=workdir, env=env, stdin=subprocess.PIPE,
-                stdout=subprocess.PIPE if research else subprocess.DEVNULL,
+                stdout=subprocess.PIPE if research or image_generation else subprocess.DEVNULL,
                 stderr=subprocess.PIPE,
                 text=True, encoding="utf-8", start_new_session=True,
             )
@@ -259,11 +266,39 @@ class CodexSubscriptionClient:
                 stderr = captured[1] if isinstance(captured, tuple) and len(captured) == 2 else ''
                 raise CodexRequestError(process.returncode, stderr)
             result = output.read_text(encoding="utf-8").strip() if output.is_file() else ""
-            if not result:
+            if not result and not image_generation:
                 raise CodexResponseError("empty_response", "Codex returned no final message")
             stdout = captured[0] if isinstance(captured, tuple) and len(captured) == 2 else ""
+            if image_generation:
+                return {"image_path": str(_generated_image_path(stdout, self.home))}
             if research:
                 searched, opened_urls, diagnostics = _research_activity(stdout)
                 return {"text": result, "searched": searched, "opened_urls": opened_urls,
                         "diagnostics": diagnostics}
             return {"text": result, "searched": False, "opened_urls": []}
+
+
+def _generated_image_path(stdout, home):
+    """Bind files to the CLI thread event, never to a model-proposed path or URL."""
+    threads = set()
+    for line in (stdout or "").splitlines():
+        try:
+            event = json.loads(line)
+        except (ValueError, RecursionError):
+            continue
+        if isinstance(event, dict) and event.get("type") == "thread.started":
+            value = event.get("thread_id")
+            if isinstance(value, str) and re.fullmatch(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}", value):
+                threads.add(value)
+    if len(threads) != 1:
+        raise CodexResponseError("image_thread_missing", "Image generation did not identify one CLI thread")
+    root = home / "generated_images"
+    folder = root / threads.pop()
+    if root.is_symlink() or folder.is_symlink() or not folder.is_dir():
+        raise CodexResponseError("image_artifact_missing", "Native ImageGen did not save an image")
+    candidates = [p for p in folder.iterdir() if p.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp")]
+    if len(candidates) != 1 or candidates[0].is_symlink() or not candidates[0].is_file():
+        raise CodexResponseError("image_artifact_invalid", "Expected exactly one native ImageGen raster")
+    if not 1024 <= candidates[0].stat().st_size <= 20_000_000:
+        raise CodexResponseError("image_artifact_invalid", "Native ImageGen raster size is invalid")
+    return candidates[0]

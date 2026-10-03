@@ -107,6 +107,7 @@ jobs:
       queue: max
     env:
       BLOG_MODE: general
+      BLOG_THUMBNAIL_PROVIDER: codex
       MARKET_SEARCH_PROVIDER: codex_native_search
       BLOG_COUPANG_TELEGRAM: '1'
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -271,7 +272,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pipeline-logs-general-${{ github.run_id }}
-          path: data/logs/
+          path: |
+            data/logs/
+            data/generated-thumbnails/*.json
           retention-days: 7
 
   post-tech:
@@ -754,6 +757,7 @@ jobs:
       queue: max
     env:
       BLOG_MODE: queue
+      BLOG_THUMBNAIL_PROVIDER: codex
       BLOG_COUPANG_TELEGRAM: '1'
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -962,7 +966,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pipeline-logs-queue-${{ github.run_id }}
-          path: data/logs/
+          path: |
+            data/logs/
+            data/generated-thumbnails/*.json
           retention-days: 7
 
       - name: Notify scheduled posting failure

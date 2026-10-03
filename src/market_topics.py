@@ -35,6 +35,7 @@ from src.selection_feedback import load_history, deferred_keywords
 from src import review_discovery, review_exploration
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
+from src import shared_discovery
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -1102,15 +1103,26 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     started = monotonic()
     history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
     deferred = deferred_keywords(history, clock)
-    seeds = list(CATEGORIES[category])
+    titles = existing_titles() if titles is None else titles
+    shared_result = None
+    approved_keys = None
+    if shared_discovery.enabled():
+        proposals, shared_result = shared_discovery.discover(category, titles, brief=CATEGORY_SCOPES[category] + '\n이미 알고 있는 상식보다 의외의 답과 실제 출처가 있는 블로그 주제를 선정하세요.')
+        seeds = list(dict.fromkeys(p['keyword'] for p in proposals))
+        approved_keys = {norm(k) for k in seeds}
+    else:
+        seeds = list(CATEGORIES[category])
     try:
         stats = demand_candidates(seeds)
     except NoMeasuredDemand:
         if category != '리뷰':
             raise
         stats = {}
-    titles = existing_titles() if titles is None else titles
-    youtube_seeds, youtube_import = discover_youtube(category, clock, ask)
+    if approved_keys is not None:
+        stats = {k:r for k,r in stats.items() if norm(r['keyword']) in approved_keys}
+        youtube_seeds, youtube_import = [], {'status':'shared_discovery'}
+    else:
+        youtube_seeds, youtube_import = discover_youtube(category, clock, ask)
     for seed in youtube_seeds:
         try:
             extra = demand_candidates([seed['seed']])
@@ -1123,7 +1135,10 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 stats[keyword] = {**row, 'youtube_discovery': {
                     'relationship': 'related_seed', 'seed': seed['seed'], 'video_id': seed['video_id'],
                     'checked_at': now}}
-    stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
+    if approved_keys is None:
+        stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
+    else:
+        cak_import = {'status':'shared_discovery','direct_count':0}
     past_failures = {measurement_key(row['keyword']): row for row in history}
 
     def refresh_pool(retired_keys=(), retry_keys=None):
@@ -1135,7 +1150,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     history_retry_keys = {norm(row['keyword']) for row in retries}
     pool_keywords = {norm(row['keyword']) for row in pool}
     replenishment = []
-    refill_seeds = iter(review_discovery.expansion_seeds(clock) if category == '리뷰' else ())
+    refill_seeds = iter(review_discovery.expansion_seeds(clock) if category == '리뷰' and approved_keys is None else ())
     exploration = {'status': 'not_needed', 'seeds': [], 'measured': []}
     exploration_started = False
     adaptive_seeds = set()
@@ -1200,6 +1215,9 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     def start_exploration(trigger):
         nonlocal exploration_started, exploration, adaptive_seeds
         exploration_started = True
+        if approved_keys is not None:
+            exploration = {'status':'shared_discovery_only','seeds':[],'measured':[]}
+            return []
         proposed_seeds, exploration = review_exploration.propose(stats,
             [*stats, *excluded_keys, *deferred, *review_discovery.SEEDS,
              *review_discovery.EXPANSION_SEEDS, *past_failures], ask, [*rejected, *held])
@@ -1555,6 +1573,9 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                      'The executed organic query may change ASCII spacing only; its binding is retained. '
                      'CAK exact rising candidates use their own daily trend score; related discoveries use '
                      'only their own Google trend. Null Google trend means unavailable or not requested.'}
+    if shared_result is not None:
+        report['shared_discovery'] = shared_result
+        report['discovery_provider'] = 'shared_jev_discovery'
     report['failure_history'] = load_history({**report, 'failure_history': history}, category, clock)
     return report
 

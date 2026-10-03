@@ -193,14 +193,14 @@ class CodexSubscriptionClient:
         self.model = model
         self.timeout = timeout
 
-    def generate(self, prompt: str) -> str:
-        return self._run(prompt)["text"]
+    def generate(self, prompt: str, *, draft_only: bool = False) -> str:
+        return self._run(prompt, draft_only=draft_only)["text"]
 
     def research(self, prompt: str) -> dict:
         """Run live web discovery and return independently recorded tool activity."""
         return self._run(prompt, research=True)
 
-    def _run(self, prompt: str, *, research: bool = False) -> dict:
+    def _run(self, prompt: str, *, research: bool = False, draft_only: bool = False) -> dict:
         if not prompt.strip():
             raise ValueError("Codex prompt must not be empty")
         # Do not forward WordPress secrets, API keys, or another agent's OAuth token.
@@ -215,6 +215,10 @@ class CodexSubscriptionClient:
                 "-c", 'model_provider="openai"',
                 "-a", "never",
             ]
+            if draft_only:
+                command.extend(["-c", 'web_search="disabled"'])
+                for feature in ('shell_tool','apps','multi_agent','computer_use','browser_use','image_generation'):
+                    command.extend(["-c", f"features.{feature}=false"])
             if research:
                 # Codex 0.153.4 does not forward the TUI --search field to exec.
                 # Explicit config overrides do reach exec with user config ignored.

@@ -57,6 +57,7 @@ CLAUDE_MODEL = "claude-opus-4-8"
 class TrendSource(Enum):
     """Enumeration of trend sources."""
 
+    SHARED_DISCOVERY = "shared_jev_discovery"
     GOOGLE_TRENDS = "google_trends"
     HACKER_NEWS = "hacker_news"
     REDDIT = "reddit"
@@ -524,6 +525,19 @@ class TrendDetector:
         Returns:
             List of recommended Topic objects
         """
+        from src import shared_discovery
+        if use_llm and shared_discovery.enabled():
+            registry=get_registry_path(self.config.mode.value)
+            prior=[]
+            if registry.exists():
+                data=json.loads(registry.read_text())
+                rows=data.get('posts',[]) if isinstance(data,dict) else data
+                if not isinstance(rows,list): raise RuntimeError('Duplicate inventory unavailable')
+                prior=[r.get('title',r.get('topic','')) for r in rows if isinstance(r,dict)]
+            candidates,_=shared_discovery.discover(os.environ.get('DISCOVERY_CATEGORY',self.config.mode.value),prior)
+            # Zero is an unmeasured local score, never fabricated popularity.
+            return [Topic(topic=c['title'],keywords=[c['keyword']],source=TrendSource.SHARED_DISCOVERY,
+                          score=0,suggested_title=c['title'],category=os.environ.get('DISCOVERY_CATEGORY')) for c in candidates]
         # First, collect topics from sources
         raw_topics = self.collect()
 

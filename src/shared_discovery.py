@@ -30,7 +30,7 @@ def discover(category, titles=(), *, brief=None, client=None, generator=None, ch
         value=generator(prompt) if generator else native.generate(prompt,draft_only=True)
         return json.loads(value) if isinstance(value,str) else value
     client=client or DiscoveryClient(os.environ.get('DISCOVERY_URL',''),os.environ.get('DISCOVERY_API_KEY',''),os.environ.get('DISCOVERY_SUBJECT',''),allow_localhost=os.environ.get('DISCOVERY_ALLOW_LOCALHOST')=='1')
-    result=client.discover({'profile':'content','category':category,
+    result=client.discover({**({'workflow':os.environ['DISCOVERY_WORKFLOW']} if os.environ.get('DISCOVERY_WORKFLOW') else {}),'profile':'content','category':category,
         'brief':brief or '실제 사례와 일상에 도움이 되는 의외의 답을 갖춘 블로그 주제를 찾습니다. 독자는 한국어 사용자입니다. 허위 사용 후기와 효능을 만들지 마세요.',
         'runtime':runtime,'history':[{'title':t[:1000]} for t in list(titles)[-100:] if isinstance(t,str) and t.strip()]},
         idempotency_key='blog-'+hashlib.sha256((request_key+':'+category).encode()).hexdigest(),generate=generate,assert_connection=assert_connection)

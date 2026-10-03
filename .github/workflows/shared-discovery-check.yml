@@ -7,6 +7,11 @@ on:
         type: choice
         options: [테크, 생활정보, 생산성]
         default: 테크
+      workflow:
+        description: Explicitly opt into research before drafting; no publication
+        type: choice
+        options: [legacy, research-v2]
+        default: legacy
 permissions:
   contents: read
   id-token: write
@@ -22,6 +27,7 @@ jobs:
     env:
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       DISCOVERY_ENABLED: '1'
+      DISCOVERY_WORKFLOW: ${{ inputs.workflow == 'research-v2' && 'research-v2' || '' }}
       DISCOVERY_URL: https://shared-ai-d5cy7m6i7q-uc.a.run.app/discovery
       DISCOVERY_CHECK_CATEGORY: ${{ inputs.category }}
     steps:

@@ -1,4 +1,3 @@
-# Protocol transport mirrored from commerce-automation-kit/services/topic-discovery/client.py (discovery-v1).
 """Backend-only HTTP adapter. All discovery/review policy lives on the shared server."""
 import json
 import re
@@ -41,17 +40,30 @@ class DiscoveryClient:
     def discover(self,input,*,idempotency_key,generate,assert_connection):
         assert_connection(input['runtime'])
         result=self.request('/v1/discover',input,idempotency_key)
-        if result['state'] in ('complete','held'): return result
-        if result['state']!='awaiting_generation': raise DiscoveryError('discovery_in_progress')
-        path='/v1/discover/'+quote(result['requestId'],safe='')
-        result=self.request(path+'/claim',{'actionId':result['action']['id']})
-        action=result['action']
-        if action.get('runtime')!=input['runtime'] or not isinstance(action.get('prompt'),str) or len(action['prompt'])>350000: raise DiscoveryError('invalid_generation_action')
-        assert_connection(input['runtime'])
-        try: output=generate(action['prompt'])
-        except Exception:
-            try: self.request(path+'/complete',{'actionId':action['id'],'runtime':input['runtime'],'generationError':True})
-            except Exception: pass
-            raise DiscoveryError('generation_failed') from None
-        assert_connection(input['runtime'])
-        return self.request(path+'/complete',{'actionId':action['id'],'runtime':input['runtime'],'output':output})
+        stages=('research','draft') if input.get('workflow')=='research-v2' else (None,)
+        seen=set()
+        if result['state'] in ('complete','held'):return result
+        if result['state']!='awaiting_generation':raise DiscoveryError('discovery_in_progress')
+        try: offset=stages.index(result.get('action',{}).get('stage'))
+        except (ValueError,AttributeError):raise DiscoveryError('invalid_generation_action') from None
+        for index in range(offset,len(stages)):
+            stage=stages[index]
+            if result['state'] in ('complete','held'): return result
+            if result['state']!='awaiting_generation': raise DiscoveryError('discovery_in_progress')
+            path='/v1/discover/'+quote(result['requestId'],safe='')
+            action=result.get('action')
+            if not isinstance(action,dict) or not isinstance(action.get('id'),str) or action['id'] in seen or action.get('stage')!=stage or action.get('runtime')!=input['runtime'] or not isinstance(action.get('prompt'),str) or len(action['prompt'])>350000 or (input.get('workflow')=='research-v2' and result.get('usage',{}).get('generationClaims')!=index): raise DiscoveryError('invalid_generation_action')
+            assert_connection(input['runtime'])
+            result=self.request(path+'/claim',{'actionId':action['id']})
+            if result.get('state')!='generating' or result.get('action')!=action or (input.get('workflow')=='research-v2' and result.get('usage',{}).get('generationClaims')!=index+1):raise DiscoveryError('invalid_generation_action')
+            seen.add(action['id'])
+            assert_connection(input['runtime'])
+            try: output=generate(action['prompt'])
+            except Exception:
+                try: self.request(path+'/complete',{'actionId':action['id'],'runtime':input['runtime'],'generationError':True})
+                except Exception: pass
+                raise DiscoveryError('generation_failed') from None
+            assert_connection(input['runtime'])
+            result=self.request(path+'/complete',{'actionId':action['id'],'runtime':input['runtime'],'output':output})
+        if result['state'] not in ('complete','held'): raise DiscoveryError('discovery_step_limit')
+        return result

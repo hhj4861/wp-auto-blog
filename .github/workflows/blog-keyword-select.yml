@@ -128,6 +128,7 @@ jobs:
     env:
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       DISCOVERY_ENABLED: ${{ vars.DISCOVERY_ENABLED || '0' }}
+      DISCOVERY_WORKFLOW: ${{ vars.DISCOVERY_WORKFLOW || '' }}
       DISCOVERY_URL: https://shared-ai-d5cy7m6i7q-uc.a.run.app/discovery
     steps:
       - uses: actions/checkout@v4

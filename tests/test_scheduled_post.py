@@ -249,3 +249,41 @@ def test_one_run_cannot_own_two_slots(tmp_path):
     env = environment(cron='0 9 * * *', time='09:00')
     assert schedule.claim(env, path, at(time='18:00'))['reason'] == 'run_already_claimed'
     assert len(schedule.read_state(path)['runs']) == 1
+
+
+@pytest.mark.parametrize('target', ['2026-09-14:morning', '2026-09-13:evening'])
+def test_external_request_cannot_turn_into_evening_or_next_day(tmp_path, target):
+    env={**environment(time='09:00'), 'GITHUB_EVENT_NAME':'workflow_dispatch',
+         'SCHEDULE_RECOVERY':'true','SCHEDULE_TARGET':target}
+    assert schedule.claim(env,tmp_path/'runs.json',at(time='18:00'))['reason']=='outside_requested_slot'
+    assert not (tmp_path/'runs.json').exists()
+
+
+@pytest.mark.parametrize('target', ['bad','2026-09-14:night','2026-09-14:morning\n'])
+def test_external_target_is_strict(tmp_path,target):
+    env={**environment(),'GITHUB_EVENT_NAME':'workflow_dispatch',
+         'SCHEDULE_RECOVERY':'true','SCHEDULE_TARGET':target}
+    with pytest.raises(ValueError):
+        schedule.claim(env,tmp_path/'runs.json',at())
+
+
+def test_target_cannot_bypass_recovery_claim(tmp_path):
+    with pytest.raises(ValueError):
+        schedule.claim({'GITHUB_EVENT_NAME':'workflow_dispatch','SCHEDULE_TARGET':'2026-09-14:morning'},
+                       tmp_path/'runs.json',at())
+
+
+def test_start_delay_is_durable(tmp_path):
+    path=tmp_path/'runs.json'
+    schedule.claim(environment(time='04:07'),path,at(time='13:08'))
+    row=schedule.read_state(path)['runs']['2026-09-14:morning']
+    assert row['scheduled_for']=='2026-09-14T09:00:00+09:00'
+    assert row['run_created_at']=='2026-09-14T13:07:00+09:00'
+    assert row['start_delay_seconds']==14880
+
+
+def test_workflow_passes_target_and_keeps_input_limit():
+    wf=yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
+    inputs=wf.get('on',wf.get(True))['workflow_dispatch']['inputs']
+    assert len(inputs)<=10 and inputs['scheduled_target']['type']=='string'
+    assert wf['jobs']['post-queue']['env']['SCHEDULE_TARGET']=='${{ inputs.scheduled_target }}'

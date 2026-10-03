@@ -48,13 +48,16 @@ on:
         description: 'Recover current morning/evening slot once (mode=queue, publish=true)'
         type: boolean
         default: false
+      scheduled_target:
+        description: 'External timer target YYYY-MM-DD:morning|evening (requires scheduled_recovery)'
+        type: string
       category:
         description: 'Filter by category (optional)'
         required: false
         type: string
 
   # Scheduled runs (UTC time)
-  # GitHub Actions 지연 고려하여 30분 앞당김
+  # GitHub cron은 지연 가능한 보조 트리거. 독립 타이머는 workflow_dispatch로 같은 회차를 요청.
   # ⚠️ General과 Tech는 15분 시간차로 실행 (동시 실행 시 호스팅 WAF 403 방지)
   schedule:
     # === General Blog (trendpulse.blog) - KST 기준 ===
@@ -764,6 +767,7 @@ jobs:
       BLOG_TOPIC: ${{ inputs.topic }}
       BLOG_CATEGORY: ${{ inputs.category }}
       SCHEDULE_RECOVERY: ${{ inputs.scheduled_recovery && 'true' || 'false' }}
+      SCHEDULE_TARGET: ${{ inputs.scheduled_target }}
       SCHEDULE_CRON: ${{ github.event.schedule }}
 
     steps:

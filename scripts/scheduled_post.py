@@ -30,7 +30,10 @@ def timestamp(value):
 def read_state(path):
     if not path.exists():
         return {'schema_version': 2, 'runs': {}}
-    data = json.loads(path.read_text())
+    return validate_state(json.loads(path.read_text()))
+
+
+def validate_state(data):
     if (not isinstance(data, dict) or data.get('schema_version') not in (1, 2)
             or not isinstance(data.get('runs'), dict)):
         raise ValueError('invalid_schedule_state')
@@ -63,6 +66,9 @@ def save(path, data):
 def claim(env, path=STATE, now=None):
     scheduled = env.get('GITHUB_EVENT_NAME') == 'schedule'
     recovery = env.get('SCHEDULE_RECOVERY') == 'true'
+    expected = env.get('SCHEDULE_TARGET', '')
+    if expected and not recovery:
+        raise ValueError('target_requires_recovery')
     if not scheduled and not recovery:
         return {'run': 'true', 'reason': 'explicit_manual_run'}
     if (env.get('GITHUB_REF') != 'refs/heads/main'
@@ -83,6 +89,11 @@ def claim(env, path=STATE, now=None):
     slot = cron_slot if scheduled and cron_slot in SLOTS else slot_at(created)
     if slot is None or slot_at(created) != slot or slot_at(current) != slot:
         return {'run': 'false', 'reason': 'outside_scheduled_slot'}
+    if expected:
+        if not re.fullmatch(r'\d{4}-\d{2}-\d{2}:(morning|evening)', expected):
+            raise ValueError('invalid_schedule_target')
+        if expected != f'{day}:{slot}':
+            return {'run': 'false', 'reason': 'outside_requested_slot'}
     category = category_for_date(created.date(), slot)
     if recovery and env.get('BLOG_CATEGORY') not in ('', None, category):
         raise ValueError('recovery_category_mismatch')
@@ -97,7 +108,11 @@ def claim(env, path=STATE, now=None):
     # One Actions run owns only one attempt, even with inconsistent recovery inputs.
     if any(row['run_id'] == run_id for row in state['runs'].values()):
         return {'run': 'false', 'reason': 'run_already_claimed'}
-    state['runs'][key] = {'run_id': run_id, 'category': category, 'slot': slot,
+    target = created.replace(hour=9 if slot == 'morning' else 18, minute=0, second=0, microsecond=0)
+    timing = {'scheduled_for': target.isoformat(), 'run_created_at': created.isoformat(),
+              'start_delay_seconds': int((current - target).total_seconds()),
+              'trigger': 'external_timer' if expected else 'recovery' if recovery else 'schedule'}
+    state['runs'][key] = {**timing, 'run_id': run_id, 'category': category, 'slot': slot,
                           'claimed_at': current.isoformat(), 'status': 'started'}
     save(path, state)
     return {'run': 'true', 'reason': 'claimed', 'day': day, 'slot': slot, 'category': category}

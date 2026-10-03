@@ -63,3 +63,83 @@ GitHub 내부의 지연과 누락 중 어느 원인이었는지는 확정할 수
 텔레그램으로 글 주소와 상품 검색어를 안내한다. 답장이 오면 검수 후 같은 공개 글에 상품 링크를 추가한다.
 답장 대기 시간 제한은 없으며, 답장이 없으면 공개 글을 유지한다. 기존 초안 요청의 검증 조건은 유지하고 만료 초안을 자동 복구하지 않는다.
 알림 단계에서 실패했다면 글은 이미 공개됐을 수 있으므로 재발행 전에 WordPress와 큐를 확인한다.
+
+## 독립 타이머 보완 (2026-10-03)
+
+### 확인한 문제와 변경
+
+2026-10-02 오전 cron(`0 0 * * *`)의 Actions 실행 `36963169588`은 13:07:36 KST에
+생성돼 13:07:38에 runner가 시작했다. 09시 예약 대비 **실행 생성 단계에서 4시간 7분 지연**됐다.
+09:17부터의 복구 cron도 같은 GitHub 스케줄러에 의존하므로 독립적인 장애 대책이 아니었다.
+
+`scripts/posting_timer.py`를 GitHub 밖에서 매분 실행하면 KST 09시·18시부터 운영 원격 이력을
+확인하고, 미시도 회차만 `workflow_dispatch`로 요청한다. `ref=main`, `mode=queue`,
+`writer_provider=codex`, `publish=true`, `scheduled_recovery=true`는 고정이다.
+기존 GitHub cron은 보조 트리거로 유지하며 작성·출처·품질 심사와 인증 정책은 그대로 따른다.
+
+- 요청에 `scheduled_target=YYYY-MM-DD:morning|evening`을 고정한다. 서버에서는 요청 날짜와
+  회차가 실제 생성 시각 및 실행 시각과 일치할 때만 처리한다. 지연 요청이 다음 회차로 바뀌지 않는다.
+- 서버의 기존 공유 concurrency와 main에 먼저 push하는 회차 기록이 중복 방지의 기준이다.
+  독립 타이머, 늦게 도착한 cron, 중복 dispatch가 같은 회차에 도착해도 한 번만 진행한다.
+- 원격 회차가 `started/success/failure/cancelled` 중 하나면 재발행하지 않는다. 실패한 글을
+  재생성하는 타이머가 아니다. 실패 복구는 기존 초안·공개 상태를 확인한 뒤 진행한다.
+- 로컬 파일 잠금과 요청 전 기록으로 같은 호스트의 동시 요청을 막는다. 응답이 불명확하거나
+  아직 서버 기록이 없으면 최소 15분 기다리고 회차당 최대 3회만 요청한다. 그 뒤에도 기록이
+  없으면 `unconfirmed_dispatch_limit`/종료 코드 1로 남긴다. 접수 성공은 발행 성공이 아니다.
+- 매 회차 첫 30분은 매분 확인하고 이후에는 5분마다 확인해 로그인/잠자기 해제 후 따라잡는다.
+  오전은 17:59까지, 오후는 23:59까지이며 다음 날에 전날 글을 자동 보충하지 않는다.
+- 원격 이력 조회·검증 실패는 요청 중단으로 처리한다. 인증정보/CLI 오류 원문은 출력하지 않는다.
+  기존 `gh` 인증을 사용하고 새 토큰을 복사하거나 GitHub의 Codex 인증을 로컬로 내려받지 않는다.
+- 새 회차 기록에는 `scheduled_for`, `run_created_at`, `start_delay_seconds`, `trigger`를
+  남겨 설정 시각과 실제 시작 시각을 구분한다. 기존 이력은 보존한다.
+
+### Mac 설치 절차 — PR 머지와 운영 위치 확정 후
+
+현재 구현은 작업 브랜치에만 있으며 **아직 운영 타이머를 등록하지 않았다**.
+사용할 호스트가 상시 가동 서버라면 같은 스크립트를 해당 서버의 타이머로 매분 호출한다.
+Mac LaunchAgent는 해당 사용자가 로그인한 상태에서 Mac이 깨어 있고 인터넷에 연결돼 있어야 한다.
+컴퓨터를 깨우거나 부팅시키는 설정은 추가하지 않는다. GitHub runner 대기·네트워크 장애까지
+없애지는 못하며 **09시 공개 완료 보장**이 아닌 **09시 발행 작업 요청**을 목표로 한다.
+
+아래 명령은 승인된 main을 로컬 checkout에 반영한 뒤 실행한다. `python3`는 3.11 이상,
+`gh`는 이 저장소의 contents 조회/actions 실행 권한이 있는 기존 인증이 필요하다.
+실제 설치 전에 read-only 실행과 plist 내용을 확인한다. 구현 worktree를 영구 서비스 경로로 쓰지 않는다.
+
+```sh
+cd /Users/admin/workSpace/wp-auto-blog
+TIMER_STATE="$HOME/Library/Application Support/TrendPulse/posting-timer"
+TIMER_LOG='/Users/admin/Library/Mobile Documents/com~apple~CloudDocs/gpt 작업/wp-auto-blog/posting-timer-runtime'
+TIMER_PLIST="$HOME/Library/LaunchAgents/blog.trendpulse.posting-timer.plist"
+
+# 기본은 읽기 전용. 발행 요청이나 상태 파일 변경 없음.
+python3 -B scripts/posting_timer.py --state-dir "$TIMER_STATE"
+
+# 산출물은 지정된 작업 폴더, 상태는 로컬 전용 폴더.
+mkdir -p "$TIMER_LOG" "$HOME/Library/LaunchAgents"
+python3 -B scripts/posting_timer.py --state-dir "$TIMER_STATE" \
+  --print-launchd-plist --log-dir "$TIMER_LOG" > "$TIMER_LOG/posting-timer.plist"
+plutil -lint "$TIMER_LOG/posting-timer.plist"
+
+# 기존 동일 label이 등록돼 있으면 덮어쓰기 전에 해당 서비스 소유/경로부터 확인.
+cp "$TIMER_LOG/posting-timer.plist" "$TIMER_PLIST"
+launchctl bootstrap "gui/$(id -u)" "$TIMER_PLIST"
+launchctl print "gui/$(id -u)/blog.trendpulse.posting-timer"
+```
+
+등록 시 `RunAtLoad`가 현재 회차를 확인하므로 아직 시도하지 않은 회차라면 바로 요청한다.
+plist에는 생성 시점의 Python·gh·스크립트 절대 경로를 넣으며 비밀값은 넣지 않는다.
+시스템 시간대와 무관하게 매분 실행되는 스크립트가 KST 회차를 판정한다.
+정시 캘린더 호출은 Mac 시간대를 따르지만 매분 호출을 함께 사용해 다른 시간대에서도 동작한다.
+
+중단은 `launchctl bootout "gui/$(id -u)" "$TIMER_PLIST"`로 수행한다.
+GitHub 기본 cron과 원격 이력은 그대로 남으므로 이미 공개된 글이나 과거 회차를 삭제하지 않는다.
+매분 로그의 `dispatch_accepted` 뒤 실제 Actions 종료·회차 기록·공개 포스트 URL까지 확인해야
+운영 발행 검증이 끝난다. 현재 로컬 회귀/읽기 전용 점검은 이 검증을 대신하지 않는다.
+
+### 검증
+
+- 예약 제어·타이머 및 관련 발행 워크플로 회귀 테스트 120개 통과: 중복 cron, 회차/날짜 경계, 응답 불명,
+  요청 전 기록, 실제 별도 프로세스의 잠금 충돌, 재시도 제한, 원격 상태 오류, 실패 회차 비재시도 및 시간대 변환.
+- 실제 GitHub 운영 이력 조회 성공. 10/2 오전 성공 회차에 대해 `already_attempted`를
+  확인했다. read-only로 수행했으며 새 발행 요청·운영 데이터 변경은 없었다.
+- 운영 타이머 등록 및 실제 09시/18시 dispatch→공개 발행은 아직 미검증이다.

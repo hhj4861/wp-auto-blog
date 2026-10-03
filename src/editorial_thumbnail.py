@@ -1,6 +1,7 @@
 """Deterministic, article-grounded TrendPulse title cards; no stock fallback."""
 from hashlib import sha256
 import json
+import os
 from pathlib import Path
 import re
 
@@ -59,6 +60,34 @@ def wrap(draw, text, font, width):
 
 
 def create_editorial_thumbnail(title, body, category=''):
+    """Generate a per-article scene; retain an explicitly audited outage fallback."""
+    # Validate labels before either path. The offline preview is explicitly opt-in.
+    article_labels(title, body)
+    provider = os.getenv('BLOG_THUMBNAIL_PROVIDER', 'codex')
+    if provider not in ('codex', 'editorial'):
+        raise ValueError('Unknown BLOG_THUMBNAIL_PROVIDER')
+    if provider == 'editorial':
+        return _create_fallback_thumbnail(title, body, category)
+    from src.dynamic_thumbnail import create_dynamic_thumbnail
+    from loguru import logger
+    try:
+        result = create_dynamic_thumbnail(title, body, category, output=OUTPUT)
+        logger.info('Dynamic thumbnail ready (provider=codex_imagegen)')
+        return result
+    except Exception as error:
+        # Do not print CLI stderr, credentials or model output. Publishing remains available.
+        from src.codex_client import CodexRequestError, CodexResponseError
+        reason = error.reason if isinstance(error, (CodexRequestError, CodexResponseError)) else 'thumbnail_generation_failed'
+        logger.warning('Dynamic thumbnail unavailable; using editorial fallback (reason={})', reason)
+        result = _create_fallback_thumbnail(title, body, category)
+        audit_path = Path(result.url).with_suffix('.json')
+        audit = json.loads(audit_path.read_text())
+        audit.update(requested_provider='codex', provider='editorial_fallback', fallback_reason=reason)
+        audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding='utf-8')
+        return result
+
+
+def _create_fallback_thumbnail(title, body, category=''):
     title, headings = article_labels(title, body)
     if not FONT.is_file():
         raise RuntimeError('Bundled Korean font missing; refusing substitute font')

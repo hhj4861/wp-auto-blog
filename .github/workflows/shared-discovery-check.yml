@@ -1,0 +1,52 @@
+name: Shared Discovery Live Check
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: One category, maximum three candidates; no publication
+        type: choice
+        options: [테크, 생활정보, 생산성]
+        default: 테크
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: trendpulse-general-posting
+  cancel-in-progress: false
+  queue: max
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      DISCOVERY_ENABLED: '1'
+      DISCOVERY_URL: https://shared-ai-d5cy7m6i7q-uc.a.run.app/discovery
+      DISCOVERY_CHECK_CATEGORY: ${{ inputs.category }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install -g @openai/codex@0.153.4
+      - name: Load scoped discovery key from Cloudflare
+        run: python scripts/load_discovery_credentials.py
+      - name: Restore existing dedicated Codex authentication
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          python scripts/codex_worker_auth.py restore
+      - name: Discover once without publishing or editing reports
+        run: python scripts/check_shared_discovery.py
+      - name: Persist refreshed Codex auth and clean up
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist

@@ -122,8 +122,13 @@ jobs:
     if: inputs.demand_check_only != true && inputs.search_check_only != true && (inputs.candidate_check_only != true || inputs.auth_check_only == true || inputs.research_check_only == true)
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    permissions:
+      contents: write
+      id-token: write
     env:
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      DISCOVERY_ENABLED: ${{ vars.DISCOVERY_ENABLED || '0' }}
+      DISCOVERY_URL: https://shared-ai-d5cy7m6i7q-uc.a.run.app/discovery
     steps:
       - uses: actions/checkout@v4
         with:
@@ -162,6 +167,9 @@ jobs:
           python scripts/fetch_cak_candidates.py \
             --output "$RUNNER_TEMP/cak-keyword-candidates.json" \
             --status-file "$RUNNER_TEMP/cak-fetch-status.json"
+      - name: Load scoped discovery key from Cloudflare
+        if: vars.DISCOVERY_ENABLED == '1' && inputs.auth_check_only != true && inputs.research_check_only != true
+        run: python scripts/load_discovery_credentials.py
       - name: Discover and verify category topics
         if: inputs.auth_check_only != true && inputs.research_check_only != true
         env:

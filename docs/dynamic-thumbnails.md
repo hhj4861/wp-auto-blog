@@ -43,8 +43,21 @@ python scripts/preview_editorial_thumbnails.py --provider codex --sample lung --
 
 구현 시 관련 회귀 테스트 407개 통과, 변경 모듈 커버리지 95.22%, 새 모듈·테스트 Ruff 검사와
 `git diff --check` 통과를 확인했다. 건강·엑셀 주제의 실제 ImageGen 그림과 합성 결과도 육안 검증했다. 시각 검증용 그림은 대화 내 내장 도구로 생성했으며, CI의 Codex exec 연결 성공 증거와는 다르다.
-현재 로컬 전용 인증 파일이 없어 CI의 실제 구독 호출·WordPress 업로드는 머지 후 확인해야 한다.
-PR 머지 전에는 운영에 적용되지 않는다.
+2026-10-04 KST 사용자 승인으로 PR #82를 main에 머지했다
+(`76f249ff4eed57464c26f9498d62c55337e4770e`). 이후 운영 인증을 사용하는
+`Dynamic Thumbnail Check` 두 실행이 모두 성공했다.
+
+- [건강/폐암 생성 실행](https://github.com/hhj4861/wp-auto-blog/actions/runs/37163170347):
+  폐 모형 그림, `provider=codex_imagegen`, 1200×900 JPG.
+- [생산성/엑셀 생성 실행](https://github.com/hhj4861/wp-auto-blog/actions/runs/37163283872):
+  조건별 셀 강조 그림, `provider=codex_imagegen`, 1200×900 JPG.
+
+두 실행의 이미지·본문·프롬프트 해시가 서로 다르고, 이미지 해시는 내려받은 실제 파일과 일치한다.
+최종 JPG를 직접 열어 주제별 그림과 한글 제목을 확인했다. 두 실행 모두 인증 복원·생성·artifact 업로드·
+인증 갱신 저장과 정리가 성공했다. 실패 대체 썸네일을 성공으로 처리한 결과가 아니다.
+운영 main 및 일반·큐 자동 포스팅에 적용됐으며 다음 새 글부터 사용한다.
+이번 검증은 이미지 생성 전용으로 새 글을 발행하거나 기존 글의 대표 이미지를 수정하지 않았다.
+새 방식의 WordPress 업로드·공개 페이지 반영은 이후 실제 자동 발행에서 확인할 항목이다.
 
 구현 근거: [Codex CLI 공식 문서](https://learn.chatgpt.com/docs/developer-commands),
 [운영 버전의 native ImageGen 계약](https://github.com/openai/codex/blob/rust-v0.153.0/codex-rs/ext/image-generation/imagegen_description.md),

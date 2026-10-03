@@ -409,5 +409,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-02T13:04:07.511666+00:00"
+  },
+  {
+    "key": "종합소득과세표준",
+    "keyword": "종합소득과세표준",
+    "topic": "종합소득과세표준 구간별 기본세율과 산출세액 이해",
+    "category": "생활정보",
+    "post_id": 1805,
+    "url": "https://trendpulse.blog/income-tax-brackets-2026/",
+    "selection_version": 6,
+    "monthly_search": 560,
+    "score": 48.19,
+    "score_components": {
+      "demand": 21.99,
+      "organic_opportunity": 11.2,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-03T03:51:37.214141+00:00"
   }
 ]

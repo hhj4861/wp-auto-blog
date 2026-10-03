@@ -5512,7 +5512,15 @@
         "elapsed_ms": 36713
       }
     ],
-    "analysis_recovery_attempts": 0
+    "analysis_recovery_attempts": 0,
+    "reuse_source_diagnostics": {
+      "checked_at": "2026-10-03T03:46:28.024891+00:00",
+      "failed_candidates": [],
+      "reused_keywords": [
+        "종합소득과세표준"
+      ],
+      "outcome": "reused"
+    }
   },
   "건강": {
     "category": "건강",

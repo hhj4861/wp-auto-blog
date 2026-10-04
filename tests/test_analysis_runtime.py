@@ -151,3 +151,35 @@ def test_protocol_boundary_failures_remain_non_retryable(reason):
         runtime.validated_call(call, 'private prompt')
     assert caught.value.code == reason
     call.assert_called_once()
+
+
+def test_safe_validation_detail_retries_with_feedback_and_keeps_global_budget(caplog):
+    calls = []
+    @runtime.selection_scope
+    def run(category):
+        for _ in range(6):
+            call = Mock(return_value='private response')
+            calls.append(call)
+            def validate(_):
+                raise runtime.SchemaValidationError('source_entity', 1)
+            try:
+                runtime.validated_call(call, 'private prompt', validate)
+            except runtime.AnalysisError:
+                pass
+        return {'selected': []}
+    report = run('생산성')
+    assert [c.call_count for c in calls] == [2, 2, 2, 2, 1, 1]
+    assert report['analysis_recovery_attempts'] == 4
+    assert report['analysis_diagnostics'][0]['validation'] == {'reason': 'source_entity', 'row_index': 1}
+    assert 'source_entity' in calls[0].call_args_list[1].args[0]
+    assert 'private' not in caplog.text + json.dumps(report)
+
+
+def test_unknown_validation_detail_is_not_logged_or_echoed(caplog):
+    call = Mock(return_value='{}')
+    def validate(_):
+        raise runtime.SchemaValidationError('API-KEY-SECRET', 'SECRET')
+    with pytest.raises(runtime.AnalysisError) as caught:
+        runtime.validated_call(call, 'input', validate)
+    assert caught.value.attempts[0]['validation'] == {'reason': 'invalid_value'}
+    assert 'SECRET' not in caplog.text + str(call.call_args_list)

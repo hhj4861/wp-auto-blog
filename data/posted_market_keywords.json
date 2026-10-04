@@ -472,5 +472,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-03T13:10:46.246626+00:00"
+  },
+  {
+    "key": "로봇청소기문턱",
+    "keyword": "로봇청소기문턱",
+    "topic": "로봇청소기문턱 몇 cm까지 넘을까? 구매 전 모델별 조건 비교",
+    "category": "리뷰",
+    "post_id": 1814,
+    "url": "https://trendpulse.blog/robot-vacuum-threshold-2026/",
+    "selection_version": 6,
+    "monthly_search": 2030,
+    "score": 73.46,
+    "score_components": {
+      "demand": 26.46,
+      "organic_opportunity": 32.0,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-04T09:12:40.005193+00:00"
   }
 ]

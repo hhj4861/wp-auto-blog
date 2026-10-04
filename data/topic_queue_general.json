@@ -15888,5 +15888,334 @@
     "url": "https://trendpulse.blog/robot-vacuum-threshold-2026/",
     "post_status": "publish",
     "completed_at": "2026-10-04T09:12:40.115933"
+  },
+  {
+    "keyword": "엑셀매크로",
+    "category": "생산성",
+    "topic": "엑셀매크로 사용법: 반복 작업 기록부터 실행·편집까지",
+    "intent": "엑셀의 반복 작업을 매크로로 기록하고 실행·편집하려면 어떻게 해야 하나요?",
+    "gap": "Windows·Mac 개발자 탭 설정 비교표와 기록→실행→편집 절차, 단축키 충돌 주의 체크리스트를 제공합니다.",
+    "source_url": "https://support.microsoft.com/ko-kr/excel/get-started-with-excel/quick-start-create-a-macro",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/get-started-with-excel/quick-start-create-a-macro",
+        "original_url": "https://support.microsoft.com/ko-kr/excel/get-started-with-excel/quick-start-create-a-macro",
+        "title": "빠른 시작: 매크로 만들기 | Microsoft Support",
+        "checked_on": "2026-10-04",
+        "sha256": "db0e56781adeea3fc30255cfc8df267580c500799d6d4e2bef17207a21fbeba6",
+        "excerpt": "빠른 시작: 매크로 만들기 적용 대상 Microsoft 365용 Excel Mac용 Microsoft 365용 Excel Excel 2024 Mac용 Excel 2024 Mac용 Excel 2021 Copilot 도움말 보기 빠른 시작: 매크로 생성에 대해 알려주세요. 매크로 기록기를 사용하여 작업을 자동화하는 방법을 설명해주세요. 개발자 탭을 사용하여 생성하거나 삭제하는 방법은 무엇인가요? Microsoft Excel에서 반복적으로 수행하는 작업이 있는 경우 매크로를 기록하여 해당 작업을 자동화할 수 있습니다. 매크로는 원하는 만큼 실행할 수 있는 작업 또는 작업 집합입니다. 매크로를 만들 때 마우스 클릭과 키 입력이 기록됩니다. 매크로를 만든 후에는 매크로를 편집하여 작동 방식을 약간 변경할 수 있습니다. 매월 회계 관리자를 위한 보고서를 만든다고 가정해 보겠습니다. 연체 계정이 있는 고객의 이름 서식을 빨간색으로 지정하고 굵게 서식을 적용하려고 합니다. 이러한 서식 변경 내용을 선택한 셀에 빠르게 적용하는 매크로를 만든 다음 실행할 수 있습니다. Windows Mac 방법 매크로를 기록하기 전에 매크로 및 VBA 도구는 기본적으로 숨겨져 있는 개발자 탭에서 찾을 수 있으므로 첫 번째 단계는 활성화하는 것입니다. 자세한 내용은 개발자 탭 표시 를 참조하세요. 매크로 기록 개발자 탭의 코드 그룹에서 매 크로 기록을 선택합니다. 매크로 이름 상자에 매크로 이름을 입력하고, 바로 가기 키 상자에 바로 가기 키를 입력하고, 설명 상자에 설명을 입력합니다. 확인 을 선택하여 녹음을 시작합니다. 상용구를 입력하거나 데이터 열을 채우는 등 자동화하려는 작업을 수행합니다. 개발자 탭에서 녹음 중지 를 선택합니다. 매크로 자세히 살펴보기 매크로를 편집하여 Visual Basic 프로그래밍 언어에 대해 조금 배울 수 있습니다. 매크로를 편집하려면 개발자 탭의 코드 그룹에서 매크로 를 선택하고 매크로 이름을 선택한 다음 편집을 누릅니다. 그러면 Visual Basic Editor가 시작됩니다. 기록한 작업이 코드로 어떻게 표시되는지 확인합니다. 코드 중 일부는 명확할 수 있고 일부는 약간 신비할 수 있습니다. 코드를 실험하고 Visual Basic Editor를 닫은 다음 매크로를 다시 실행합니다. 이번에는 다른 일이 발생하는지 확인하세요! 다음 단계 매크로 만들기에 대한 자세한 내용은 매크로 만들기 또는 삭제를 참조하세요. 매크로를 실행하는 방법에 대한 자세한 내용은 매크로 실행 을 참조하세요. 방법 매크로를 기록하기 전에 리본에 개발자 탭이 표시되는지 확인합니다. 기본적으로 개발자 탭은 표시되지 않으므로 다음을 수행합니다. Excel > 기본 설정 으로 이동...> 도구 모음& 리본 . 리본 사용자 지정 범주의 기본 탭 목록에서 개발자 검사란을 선택한 다음 저장 을 선택합니다. 매크로 기록 개발자 탭에서 매크로 기록을 선택합니다. 필요에 따라 매크로 이름 상자에 매크로 이름을 입력하고, 바로 가기 키 상자에 바로 가기 키를 입력하고, 설명 상자에 설명을 입력합니다. 확인 을 선택하여 녹음을 시작합니다. 상용구를 입력하거나 데이터 열을 채우는 등 자동화하려는 작업을 수행합니다. 개발자 탭의 코드 그룹에서 녹음 중지 를 선택합니다. 매크로 자세히 살펴보기 매크로를 편집하여 Visual Basic 프로그래밍 언어에 대해 조금 배울 수 있습니다. 매크로를 편집하려면 개발자 탭에서 매크로 를 클릭하고 매크로 이름을 선택한 다음 편집을 누릅니다. 그러면 Visual Basic Editor가 시작됩니다. 기록한 작업이 코드로 어떻게 표시되는지 확인합니다. 코드 중 일부는 명확할 수 있고 일부는 약간 신비할 수 있습니다. 코드를 실험하고 Visual Basic Editor를 닫은 다음 매크로를 다시 실행합니다. 이번에는 다른 일이 발생하는지 확인하세요! 추가 지원 언제든지 Excel 기술 커뮤니티 의 전문가에게 문의하거나 커뮤니티에서 지원을 받을 수 있습니다."
+      },
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/run-a-macro-in-excel",
+        "original_url": "https://support.microsoft.com/ko-kr/excel/run-a-macro-in-excel",
+        "title": "Excel에서 매크로 실행 | Microsoft Support",
+        "checked_on": "2026-10-04",
+        "sha256": "1881cb79fd32b7790f97391a67dbcb3b1ea8b1eadc67541257199d9e9fb2990b",
+        "excerpt": "Excel에서 매크로 실행 적용 대상 Microsoft 365용 Excel Mac용 Microsoft 365용 Excel Excel 2024 Mac용 Excel 2024 Excel 2021 Mac용 Excel 2021 Excel 2019 Excel 2016 Copilot 도움말 보기 매크로를 실행하는 것에 대해 알려주세요. 작업 자동화를 위한 팁과 제안을 알려주세요. 매크로 레코더로 작업을 자동화하는 방법을 보여주세요. Microsoft Excel에서 매크로를 실행하는 방법에는 여러 가지가 있습니다. 매크로는 작업을 자동화하는 데 사용할 수 있는 작업 또는 작업 집합입니다. 매크로는 Visual Basic for Applications 프로그래밍 언어로 기록됩니다. 항상 리본의 개발자 탭에서 매크로 명령을 선택하여 매크로를 실행할 수 있습니다. 매크로가 실행되도록 할당된 방법에 따라 조합 바로 가기 키를 누르거나, 빠른 실행 도구 모음 또는 리본의 사용자 지정 그룹에서 단추를 선택하거나, 개체, 그래픽 또는 컨트롤을 선택하여 매크로를 실행할 수도 있습니다. 또한 통합 문서를 열 때마다 매크로를 자동으로 실행할 수 있습니다. 매크로를 실행하기 전에 매크로 작업을 시작하기 전에 개발자 탭을 활성화해야 합니다. Windows 의 경우 파일 > 옵션 > 사용자 지정 리본 으로 이동한 다음 리본 사용자 지정 섹션의 기본 탭 에서 개발자 검사 상자를 검사하고 확인을 누릅니다 . Mac 의 경우 Excel > 기본 설정으로 이동하세요... > 리본 & 도구 모음 을 클릭한 다음 리본 사용자 지정 섹션의 기본 탭 에서 개발자 검사 상자를 검사하고 확인을 누릅니다 . 개발자 탭에서 매크로 실행 매크로가 포함된 통합 문서를 엽니다. 개발자 탭에서 매크로 를 선택합니다. 매 크로 이름 상자에서 실행할 매크로를 선택하고 실행 단추를 누릅니다. 다른 선택 사항도 있습니다. 옵션 - 바로 가기 키 또는 매크로 설명을 추가합니다. 한 단계씩 실행할 수 있습니다. - Visual Basic Editor에서 매크로의 첫 번째 줄까지 열립니다. F8 키를 누르면 매크로 코드를 한 번에 한 줄씩 실행할 수 있습니다. 편집 - Visual Basic Editor가 열리고 필요에 따라 매크로 코드를 편집할 수 있습니다. 변경한 후 F5 키를 눌러 편집기에서 매크로를 실행할 수 있습니다. 조합 바로 가기 키를 눌러 매크로 실행 매크로를 기록할 때 매크로에 조합 바로 가기 키를 추가할 수 있으며 기존 매크로에 추가할 수도 있습니다. 개발자 탭에서 매크로 를 선택합니다. 매크로 이름 상자에서 조합 바로 가기 키에 할당할 매크로를 선택합니다. 옵션 을 선택합니다. 매크로 옵션 대화 상자가 나타납니다. 바로 가기 키 상자에 바로 가기 키와 함께 사용할 소문자나 대문자를 입력합니다. 참고 Windows 에서 소문자의 바로 가기 키는 Ctrl+문자 입니다. 대문자의 경우 Ctrl+Shift+Letter 입니다. Mac 에서 소문자의 바로 가기 키는 Option+Command+문자 이지만 Ctrl+문자 도 작동합니다. 대문자의 경우 Ctrl+Shift+Letter 입니다. 매크로가 포함된 통합 문서가 열려 있는 동안 바로 가기 키를 재정의하므로 바로 가기 키를 할당하는 데 주의하세요. 예를 들어 매크로를 Ctrl+z 에 할당하면 실행 취소 기능이 손실됩니다. 이 때문에 일반적으로 Excel에 해당하는 바로 가기가 없는 Ctrl+Shift+Z 와 같이 Ctrl+Shift+대문자 를 대신 사용하는 것이 좋습니다. Excel에서 이미 할당된 Ctrl 조합 바로 가기 키 목록은 Excel 바로 가기 및 기능 키 문서를 참조하세요. 설명 상자에 매크로 설명을 입력합니다. 확인 을 선택하여 변경 내용을 저장한 다음 취소 를 클릭하여 매크로 대화 상자를 닫습니다. 빠른 실행 도구 모음에서 단추를 선택하여 매크로 실행 빠른 실행 도구 모음의 단추에서 매크로를 실행하려면 먼저 도구 모음에 단추를 추가해야 합니다. 이렇게 하려면 단추에 매크로 할당 을 참조하세요. 리본의 사용자 지정 그룹에서 단추를 선택하여 매크로 실행 리본의 탭에 표시되는 사용자 지정 그룹을 만든 다음 해당 그룹의 단추에 매크로를 할당할 수 있습니다. 예를 들어 \"내 매크로\"라는 사용자 지정 그룹을 개발자 탭에 추가한 다음 새 그룹에 단추로 표시되는 매크로를 추가할 수 있습니다. 이렇게 하려면 단추에 매크로 할당 을 참조하세요. 그래픽 개체의 영역을 선택하여 매크로 실행 사용자가 매크로를 실행하기 위해 클릭할 수 있는 핫스팟을 그래픽에 만들 수 있습니다. 워크시트에서 그림과 같은 그래픽 개체를 삽입하거나 도형을 그립니다. 일반적인 시나리오는 둥근 사각형 도형을 그리고 단추처럼 보이도록 서식을 지정하는 것입니다. 그래픽 개체 삽입에 대한 자세한 내용은 도형 추가, 변경 또는 삭제를 참조하세요. 만든 핫스팟을 마우스 오른쪽 단추로 클릭한 다음 매크로 할당 을 선택합니다. 다음 중 하나를 실행합니다. 기존 매크로를 그래픽 개체에 할당하려면 매크로를 두 번 클릭하거나 매크로 이름 상자에 이름을 입력합니다. 선택한 그래픽 개체에 할당할 새 매크로를 기록하려면 매크로 기록 을 선택하고 매크로 기록 대화 상자에 매크로 이름을 입력한 다음 확인 을 선택하여 매크로 기록을 시작합니다. 매크로 기록을 마쳤으면 코드 그룹의 개발자 탭에서 기록 중지 선택합니다. 팁 상태 표시줄 왼쪽에서 녹음 중지 선택할 수도 있습니다. 기존 매크로를 편집하려면 매크로 이름 상자에서 매크로 이름을 선택한 다음 편집 을 선택합니다. 확인 을 선택합니다. VBE(Visual Basic Editor)에서 매크로 실행 개발자 탭에서 Visual Basic을 선택하여 VBE ( Visual Basic Editor )를 시작합니다. Project Explorer 에서 실행하려는 매크로가 포함된 모듈로 찾아 엽니다. 해당 모듈의 모든 매크로가 오른쪽 창에 나열됩니다. 매크로 내의 아무 곳에나 커서를 놓고 F5 키를 눌러 실행할 매크로를 선택하거나 메뉴에서 매크로 실행 >으로 이동합니다. 통합 문서를 열 때 자동으로 실행되도록 매크로 구성 Workbook_Open 이벤트를 만듭니다. 다음 예제에서는 Open 이벤트를 사용하여 통합 문서를 열 때 매크로를 실행합니다. 매크로를 추가할 통합 문서를 열거나 새 통합 문서를 만듭니다. 개발자 탭의 코드 그룹에서 Visual Basic 을 선택합니다. Project Explorer 창에서 ThisWorkbook 개체를 마우스 오른쪽 단추로 클릭한 다음 코드 보기 를 선택합니다. 팁 Project Explorer 창이 표시되지 않으면 View 메뉴에서 Project Explorer를 선택합니다. 코드 창 위의 개체 목록에서 통합 문서를 선택합니다. 이렇게 하면 다음과 같은 Open 이벤트에 대한 빈 프로시저가 자동으로 만들어집니다. Private Sub Workbook_Open() End Sub 프로시저에 다음 코드 줄을 추가합니다. Private Sub Workbook_Open() MsgBox 날짜 Worksheets(\"Sheet1\"). range(\"A1\"). 값 = 날짜 End Sub Excel로 전환하고 통합 문서를 매크로 사용 통합 문서(.xlsm)로 저장합니다. 통합 문서를 닫았다가 다시 엽니다. 통합 문서를 다시 열면 메시지 상자에 오늘 날짜가 표시되는 Workbook_Open 절차가 실행됩니다. 메시지 상자에서 확인 을 선택합니다. 참고 Sheet1의 A1 셀에는 Workbook_Open 프로시저를 실행한 결과로 날짜도 포함됩니다. 추가 지원 언제든지 Excel 기술 커뮤니티 의 전문가에게 문의하거나 커뮤니티에서 지원을 받을 수 있습니다. 맨 위로 이동 참고 항목 통합 문서를 열 때 매크로 자동 실행 매크로 기록을 사용하여 작업 자동화 Excel을 시작할 때 특정 통합 문서가 열리도록 매크로 기록 단일 통합 문서에 모든 매크로를 만들어 저장 매크로 저장"
+      }
+    ],
+    "intent_results": [
+      "https://aiworktip.com/excel-macro-create-unblock/",
+      "https://ella-devblog.tistory.com/235",
+      "https://shiningsense.com/931"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 1310,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "엑셀 매크로",
+    "organic_domains": [
+      "aiworktip.com",
+      "www.hanbit.co.kr",
+      "www.aladin.co.kr",
+      "www.kbi.or.kr",
+      "ella-devblog.tistory.com",
+      "dispire.tistory.com",
+      "excel.yesform.com",
+      "library.kaist.ac.kr",
+      "shiningsense.com",
+      "learn.microsoft.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://aiworktip.com/excel-macro-create-unblock/",
+        "domain": "aiworktip.com",
+        "title": "엑셀 매크로 만들기 처음이라면｜VBA 몰라도 되는 기록 방법부터 차단 해제까지 - 대체불가일잘러",
+        "snippet": "인터넷에서 내려받은 파일의 매크로를 엑셀이 기본으로 막습니다. ... Image: 엑셀 매크로 안될때 원인, 메일 첨부와 원드라이브 등 경로별 차단 차이 어떤 경로로 받았느냐에 따라 표식이"
+      },
+      {
+        "url": "https://www.hanbit.co.kr/books/%EC%97%91%EC%85%80-%EB%A7%A4%ED%81%AC%EB%A1%9C-%EC%8B%9C%EC%9E%91%EB%B6%80%ED%84%B0-%ED%99%9C%EC%9A%A9%EA%B9%8C%EC%A7%80?code=B3320653027",
+        "domain": "www.hanbit.co.kr",
+        "title": "엑셀 매크로 시작부터 활용까지 - 한빛+",
+        "snippet": "이 책은 엑셀을 사용하는 과정에서 단순 반복적이며 복잡한 작업을 단 몇줄의 코드를 사용해 매크로를 작성함으로써 아주 쉽게 작업할 수 있다는 점을 알기 쉽게 설명해 준다."
+      },
+      {
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=206404926",
+        "domain": "www.aladin.co.kr",
+        "title": "엑셀 매크로 & VBA 바이블 | 엑셀 바이블 시리즈 | 최준선 | 알라딘",
+        "snippet": "* 엑셀 매크로 & VBA 바이블 - 실무에 최적화된 엑셀 사용서, 모든 버전 사용 가능 | 엑셀 바이블 시리즈 ... 엑셀 매크로 & VBA 바이블"
+      },
+      {
+        "url": "https://www.kbi.or.kr/kbidata/htdocs/main/AI_digital_program.pdf",
+        "domain": "www.kbi.or.kr",
+        "title": "IT 프로젝트 관리 실무",
+        "snippet": "엑셀 매크로 개발도구의 정의와 기록 방법을 학습하고,실제 엑셀 매크로가 동작하고 수행하는 범위를 파악하며,"
+      },
+      {
+        "url": "https://ella-devblog.tistory.com/235",
+        "domain": "ella-devblog.tistory.com",
+        "title": "엑셀 매크로 사용하기. VBA 구문 몇 가지. (feat. Excel2007...)",
+        "snippet": "## 엑셀 매크로 사용하기. ... 보기 > 매크로 > 매크로 보기(V)를 클릭하면 위와 같이 매크로 리스트가 나오고, 이 창에서 실행과 편집, 삭제 등을 할 수"
+      },
+      {
+        "url": "https://dispire.tistory.com/7408897",
+        "domain": "dispire.tistory.com",
+        "title": "엑셀 매크로(VBA) 사용법 — 자동화의 핵심 기능 가이드",
+        "snippet": "# 엑셀 매크로(VBA) 사용법 — 자동화의 핵심 기능 가이드 ... 반복되는 엑셀 작업에 매번 손이 아프신가요?"
+      },
+      {
+        "url": "https://excel.yesform.com/contents/consult_45809.html",
+        "domain": "excel.yesform.com",
+        "title": "엑셀 매크로 관련문의 - 예스폼 엑셀서식 상담실",
+        "snippet": "엑셀 매크로 관련문의 | 2024-02-26 ... 엑셀 자동화 프로그램을 사용하려면 매크로 문제를 해결하라는데 ... 추가 문의 사항이 있는 경우 사용하는 파일과 함께 문의하여 주시면 검토"
+      },
+      {
+        "url": "https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=922178&ty=B",
+        "domain": "library.kaist.ac.kr",
+        "title": "엑셀 매크로 &amp; VBA 바이블 : 실무에 최적화된 엑셀 사용서",
+        "snippet": "엑셀 매크로 & VBA 바이블 : 실무에 최적화된 엑셀 사용서 ... 서명 / 저자 | 엑셀 매크로 & VBA 바이블 : 실무에 최적화된 엑셀 사용서"
+      },
+      {
+        "url": "https://shiningsense.com/931",
+        "domain": "shiningsense.com",
+        "title": "엑셀 매크로 만들기: 업무 효율성을 극대화하는 방법",
+        "snippet": "오늘은 엑셀 초보자들이 매크로를 처음 접할 때 유용한 엑셀 매크로 만들기 가이드를 소개해드리겠습니다. ... 오늘 소개한 엑셀 매크로 만들기 비기너 가이드를 통해 여러분의 업무 효율성을"
+      },
+      {
+        "url": "https://learn.microsoft.com/ko-kr/answers/questions/4936478/question-4936478",
+        "domain": "learn.microsoft.com",
+        "title": "아이패드용 오피스 엑셀 매크로 사용 - Microsoft Q&A",
+        "snippet": "# 아이패드용 오피스 엑셀 매크로 사용 ... 아이패드에서 엑셀 사용시 매크로를 지원하지 않는 것 같습니다. ... 관련된 추가 질문이 있으실 경우 [응답] 버튼을 눌러 질문해주시기"
+      }
+    ],
+    "dominant_result_ratio": 0.14285714285714285,
+    "score_components": {
+      "demand": 24.94,
+      "organic_opportunity": 29.39,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 6,
+    "selected_at": "2026-10-04T11:43:55.102386+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "엑셀매크로"
+    ],
+    "status": "completed",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "엑셀매크로",
+      "executed_query": "엑셀 매크로",
+      "topic": "엑셀매크로 사용법: 반복 작업 기록부터 실행·편집까지",
+      "intent": "엑셀의 반복 작업을 매크로로 기록하고 실행·편집하려면 어떻게 해야 하나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-04T11:43:55.102386+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.14285714285714285,
+      "search_review": {
+        "version": 1,
+        "query": "엑셀매크로",
+        "executed_query": "엑셀 매크로",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-04T11:43:55.102386+00:00",
+        "raw_sha256": "374d1c31fde61c25090e81edb254157fa75671c62cf64a8c8b1296a1690de6bf",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "엑셀 매크로 만들기 처음이라면｜VBA 몰라도 되는 기록 방법부터 차단 해제까지 - 대체불가일잘러"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "이 책은 엑셀을 사용하는 과정에서 단순 반복적이며 복잡한 작업을 단 몇줄의 코드를 사용해 매크로를 작성함으로써 아주 쉽게 작업할 수 있다는 점을 알기 쉽게 설명해 준다."
+          },
+          {
+            "result_index": 2,
+            "relevant": false,
+            "quote": "* 엑셀 매크로 & VBA 바이블 - 실무에 최적화된 엑셀 사용서, 모든 버전 사용 가능 | 엑셀 바이블 시리즈 ... 엑셀 매크로 & VBA 바이블"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "엑셀 매크로 개발도구의 정의와 기록 방법을 학습하고,실제 엑셀 매크로가 동작하고 수행하는 범위를 파악하며,"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "## 엑셀 매크로 사용하기. ... 보기 > 매크로 > 매크로 보기(V)를 클릭하면 위와 같이 매크로 리스트가 나오고, 이 창에서 실행과 편집, 삭제 등을 할 수"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "엑셀 매크로(VBA) 사용법 — 자동화의 핵심 기능 가이드"
+          },
+          {
+            "result_index": 6,
+            "relevant": false,
+            "quote": "엑셀 매크로 관련문의 | 2024-02-26 ... 엑셀 자동화 프로그램을 사용하려면 매크로 문제를 해결하라는데 ... 추가 문의 사항이 있는 경우 사용하는 파일과 함께 문의하여 주시면 검토"
+          },
+          {
+            "result_index": 7,
+            "relevant": false,
+            "quote": "엑셀 매크로 & VBA 바이블 : 실무에 최적화된 엑셀 사용서 ... 서명 / 저자 | 엑셀 매크로 & VBA 바이블 : 실무에 최적화된 엑셀 사용서"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "오늘은 엑셀 초보자들이 매크로를 처음 접할 때 유용한 엑셀 매크로 만들기 가이드를 소개해드리겠습니다. ... 오늘 소개한 엑셀 매크로 만들기 비기너 가이드를 통해 여러분의 업무 효율성을"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "# 아이패드용 오피스 엑셀 매크로 사용 ... 아이패드에서 엑셀 사용시 매크로를 지원하지 않는 것 같습니다. ... 관련된 추가 질문이 있으실 경우 [응답] 버튼을 눌러 질문해주시기"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 7,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.7,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.14285714285714285,
+        "site_concentration": 0.14285714285714285,
+        "organic_opportunity": 29.39
+      },
+      "scope": "full_keyword",
+      "target_keyword": "엑셀매크로",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "엑셀 매크로 만들기 처음이라면｜VBA 몰라도 되는 기록 방법부터 차단 해제까지"
+        },
+        {
+          "result_index": 4,
+          "quote": "이 창에서 실행과 편집, 삭제 등을 할 수"
+        },
+        {
+          "result_index": 8,
+          "quote": "오늘은 엑셀 초보자들이 매크로를 처음 접할 때 유용한 엑셀 매크로 만들기 가이드를 소개해드리겠습니다."
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-04T11:43:55.102386+00:00",
+      "input_sha256": "85aaa289b94159bb457720dc0140ea4f34ca42db362169d60260827bf6f21d2f",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "엑셀매크로",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "Microsoft Excel에서 반복적으로 수행하는 작업이 있는 경우 매크로를 기록하여 해당 작업을 자동화할 수 있습니다.",
+            "entity": "Microsoft Excel",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "Microsoft Excel에서 매크로를 실행하는 방법에는 여러 가지가 있습니다. 매크로는 작업을 자동화하는 데 사용할 수 있는 작업 또는 작업 집합입니다.",
+            "entity": "Microsoft Excel",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "엑셀 매크로는 무엇이며 어떤 작업에 사용하는가?",
+            "answer": "클릭과 키 입력을 기록하여 반복 작업을 자동화한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "매크로는 원하는 만큼 실행할 수 있는 작업 또는 작업 집합입니다. 매크로를 만들 때 마우스 클릭과 키 입력이 기록됩니다."
+          },
+          {
+            "facet": "Windows에서 개발자 탭을 어떻게 활성화하는가?",
+            "answer": "파일 → 옵션 → 사용자 지정 리본의 기본 탭에서 개발자를 선택한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "Windows 의 경우 파일 > 옵션 > 사용자 지정 리본 으로 이동한 다음 리본 사용자 지정 섹션의 기본 탭 에서 개발자 검사 상자를 검사하고 확인을 누릅니다 ."
+          },
+          {
+            "facet": "Mac에서 개발자 탭을 어떻게 활성화하는가?",
+            "answer": "Excel 기본 설정의 리본 및 도구 모음에서 기본 탭의 개발자를 선택한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "Mac 의 경우 Excel > 기본 설정으로 이동하세요... > 리본 & 도구 모음 을 클릭한 다음 리본 사용자 지정 섹션의 기본 탭 에서 개발자 검사 상자를 검사하고 확인을 누릅니다 ."
+          },
+          {
+            "facet": "반복 작업을 매크로로 어떻게 기록하는가?",
+            "answer": "개발자 탭에서 매크로 기록을 선택하고 이름 등을 설정한 뒤 작업을 수행하고 기록을 중지한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "확인 을 선택하여 녹음을 시작합니다. 상용구를 입력하거나 데이터 열을 채우는 등 자동화하려는 작업을 수행합니다. 개발자 탭에서 녹음 중지 를 선택합니다."
+          },
+          {
+            "facet": "기록한 매크로를 어떻게 실행하는가?",
+            "answer": "매크로가 포함된 통합 문서를 열고 개발자 탭의 매크로 목록에서 선택하여 실행한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "개발자 탭에서 매크로 를 선택합니다. 매 크로 이름 상자에서 실행할 매크로를 선택하고 실행 단추를 누릅니다."
+          },
+          {
+            "facet": "기록한 매크로를 어떻게 편집하는가?",
+            "answer": "매크로 목록에서 편집을 선택하여 Visual Basic Editor에서 코드를 수정한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "매크로를 편집하려면 개발자 탭에서 매크로 를 클릭하고 매크로 이름을 선택한 다음 편집을 누릅니다. 그러면 Visual Basic Editor가 시작됩니다."
+          },
+          {
+            "facet": "매크로 단축키를 지정할 때 어떤 충돌에 주의해야 하는가?",
+            "answer": "통합 문서가 열려 있으면 기존 단축키를 덮어쓰므로 Ctrl+z 같은 기본 기능 키를 피한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "예를 들어 매크로를 Ctrl+z 에 할당하면 실행 취소 기능이 손실됩니다."
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Microsoft Excel에서 반복적으로 수행하는 작업이 있는 경우 매크로를 기록하여 해당 작업을 자동화할 수 있습니다.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 69.33,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1817,
+    "url": "https://trendpulse.blog/excel-macro-workflow-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-04T12:00:57.793907"
   }
 ]

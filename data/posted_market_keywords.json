@@ -493,5 +493,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-04T09:12:40.005193+00:00"
+  },
+  {
+    "key": "엑셀매크로",
+    "keyword": "엑셀매크로",
+    "topic": "엑셀매크로 사용법: 반복 작업 기록부터 실행·편집까지",
+    "category": "생산성",
+    "post_id": 1817,
+    "url": "https://trendpulse.blog/excel-macro-workflow-2026/",
+    "selection_version": 6,
+    "monthly_search": 1310,
+    "score": 69.33,
+    "score_components": {
+      "demand": 24.94,
+      "organic_opportunity": 29.39,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-04T12:00:57.638848+00:00"
   }
 ]

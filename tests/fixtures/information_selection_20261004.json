@@ -1,0 +1,2371 @@
+{
+  "source_commit": "f4efaeb",
+  "runs": {
+    "생산성": 37170594942,
+    "건강": 37170852921
+  },
+  "categories": {
+    "생산성": {
+      "selected_at": "2026-10-04T02:18:04.120206+00:00",
+      "measured_candidates": 351,
+      "evaluated_candidates": 1,
+      "proposal_rounds": [
+        {
+          "round": 1,
+          "offered_keywords": [
+            "컴퓨터활용능력2급시험일정",
+            "캘린더",
+            "컴퓨터활용능력시험일정",
+            "한국사능력검정",
+            "컴활1급시험일정",
+            "한능검",
+            "주식공부방법",
+            "그래픽카드",
+            "컴퓨터활용능력1급시험일정",
+            "한국실용글쓰기",
+            "NOTION사용법",
+            "NOTION",
+            "결혼식준비순서",
+            "SUNO",
+            "결혼준비리스트",
+            "미드저니",
+            "결혼준비카페",
+            "컴활2급필기",
+            "구글스프레드시트",
+            "구글시트",
+            "MS오피스",
+            "마이크로소프트365",
+            "한국사검정능력시험",
+            "컴퓨터활용능력2급",
+            "한국어능력시험",
+            "스크래치",
+            "회계사",
+            "자기계발",
+            "심리상담센터",
+            "우울증초기증상",
+            "고교학점제",
+            "컴활1급필기",
+            "스프레드시트",
+            "오피스365",
+            "컴활2급",
+            "아두이노",
+            "SLACK",
+            "워드프로세서",
+            "MS오피스365",
+            "심리상담",
+            "윈도우11업데이트",
+            "논문사이트",
+            "자기개발",
+            "윈도우10",
+            "김승호회장",
+            "MICROSOFT365",
+            "FIGMA",
+            "컴활2급실기",
+            "마이크로소프트오피스",
+            "윈도우11다운로드",
+            "윈도우정품인증",
+            "HTML",
+            "실용글쓰기",
+            "생성형AI",
+            "타이포그래피",
+            "이미지검색",
+            "ENTRY",
+            "GAMMA",
+            "어도비스톡",
+            "가계부어플추천"
+          ],
+          "proposals": [],
+          "measured_fallback": false,
+          "no_eligible_proposal": true,
+          "skipped": [
+            {
+              "keyword": "컴퓨터활용능력2급시험일정",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "캘린더",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴퓨터활용능력시험일정",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "한국사능력검정",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활1급시험일정",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "한능검",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "주식공부방법",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "그래픽카드",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴퓨터활용능력1급시험일정",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "한국실용글쓰기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "NOTION사용법",
+              "reason_code": "duplicate_intent",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "NOTION",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "결혼식준비순서",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "SUNO",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "결혼준비리스트",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "미드저니",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "결혼준비카페",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활2급필기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "구글스프레드시트",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "구글시트",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS오피스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "한국사검정능력시험",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴퓨터활용능력2급",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "한국어능력시험",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "스크래치",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "회계사",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "자기계발",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "심리상담센터",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "우울증초기증상",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "고교학점제",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활1급필기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "스프레드시트",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "오피스365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활2급",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아두이노",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "SLACK",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "워드프로세서",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS오피스365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "심리상담",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "윈도우11업데이트",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "논문사이트",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "자기개발",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "윈도우10",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "김승호회장",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MICROSOFT365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "FIGMA",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활2급실기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트오피스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "윈도우11다운로드",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "윈도우정품인증",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "HTML",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "실용글쓰기",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "생성형AI",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "타이포그래피",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "이미지검색",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "ENTRY",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "GAMMA",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "어도비스톡",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "가계부어플추천",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            }
+          ],
+          "research_fallback": []
+        },
+        {
+          "round": 2,
+          "offered_keywords": [
+            "엑셀구매",
+            "MSOFFICE",
+            "EXCEL",
+            "OFFICE365",
+            "노션템플릿",
+            "컴활1급실기",
+            "무료엑셀",
+            "결혼식2부드레스",
+            "RESEARCH",
+            "윈도우11시디키",
+            "MS오피스영구",
+            "컴퓨터활용능력시험",
+            "마이크로오피스",
+            "MS365",
+            "WINDOWS11",
+            "컴활1급2급차이",
+            "어도비파이어플라이",
+            "OCR",
+            "내신5등급대학",
+            "GRID",
+            "AI영상제작",
+            "엑셀함수",
+            "엔트리코딩",
+            "편한가계부",
+            "직업적성테스트",
+            "인간관계론",
+            "마이크로소프트엑셀",
+            "출퇴근기록기",
+            "가계부엑셀",
+            "머메이드드레스",
+            "엑셀수식",
+            "RPA",
+            "OFFICE",
+            "MICROSOFTSTORE",
+            "마이크로소프트엣지",
+            "FIREFLY",
+            "MS오피스무료",
+            "컴활2급필기독학",
+            "어도비익스프레스",
+            "컨설턴트",
+            "워드클라우드",
+            "웹하드순위",
+            "가계부양식",
+            "인간관계",
+            "한국사검정시험",
+            "자신감",
+            "RUNWAYAI",
+            "카네기인간관계론",
+            "FGI",
+            "윈도우10다운로드",
+            "엑셀가계부",
+            "컴활시험",
+            "엑셀정품인증",
+            "마이크로소프트팀즈",
+            "웨딩카페",
+            "페이퍼로지",
+            "VISUALSTUDIO",
+            "비주얼스튜디오",
+            "여행일정표",
+            "결혼준비엑셀"
+          ],
+          "proposals": [
+            {
+              "keyword": "엑셀정품인증",
+              "reason": "네이버 월 2,300회. 엑셀 사용을 위한 인증 절차와 계정·라이선스 확인 조건을 공식 문서로 조사할 수 있다.",
+              "search_query": "엑셀 정품 인증"
+            }
+          ],
+          "measured_fallback": false,
+          "no_eligible_proposal": false,
+          "skipped": [
+            {
+              "keyword": "엑셀구매",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MSOFFICE",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "EXCEL",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "OFFICE365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "노션템플릿",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활1급실기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "무료엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "결혼식2부드레스",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "RESEARCH",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "윈도우11시디키",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS오피스영구",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴퓨터활용능력시험",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로오피스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "WINDOWS11",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활1급2급차이",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "어도비파이어플라이",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "OCR",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "내신5등급대학",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "GRID",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "AI영상제작",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "엑셀함수",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "엔트리코딩",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "편한가계부",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "직업적성테스트",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "인간관계론",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "출퇴근기록기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "가계부엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "머메이드드레스",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "엑셀수식",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "RPA",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "OFFICE",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MICROSOFTSTORE",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트엣지",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "FIREFLY",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS오피스무료",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활2급필기독학",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "어도비익스프레스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컨설턴트",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "워드클라우드",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "웹하드순위",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "가계부양식",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "인간관계",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "한국사검정시험",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "자신감",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "RUNWAYAI",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "카네기인간관계론",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "FGI",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "윈도우10다운로드",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "엑셀가계부",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "컴활시험",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트팀즈",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "웨딩카페",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "페이퍼로지",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "VISUALSTUDIO",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "비주얼스튜디오",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "여행일정표",
+              "reason_code": "not_reported",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "결혼준비엑셀",
+              "reason_code": "not_reported",
+              "kind": "model_shortlist_opinion"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "offered_keywords": [
+            "MSOFFICE",
+            "EXCEL",
+            "OFFICE365",
+            "노션템플릿",
+            "무료엑셀",
+            "마이크로오피스",
+            "MS365",
+            "어도비파이어플라이",
+            "GRID",
+            "편한가계부",
+            "마이크로소프트엑셀",
+            "가계부엑셀",
+            "OFFICE",
+            "MICROSOFTSTORE",
+            "FIREFLY",
+            "MS오피스무료",
+            "어도비익스프레스",
+            "워드클라우드",
+            "가계부양식",
+            "RUNWAYAI",
+            "엑셀가계부",
+            "마이크로소프트팀즈",
+            "페이퍼로지",
+            "VISUALSTUDIO",
+            "비주얼스튜디오",
+            "여행일정표",
+            "결혼준비엑셀"
+          ],
+          "proposals": [],
+          "measured_fallback": false,
+          "no_eligible_proposal": true,
+          "skipped": [
+            {
+              "keyword": "MSOFFICE",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "EXCEL",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "OFFICE365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "노션템플릿",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "무료엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로오피스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS365",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "어도비파이어플라이",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "GRID",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "편한가계부",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "가계부엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "OFFICE",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MICROSOFTSTORE",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "FIREFLY",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "MS오피스무료",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "어도비익스프레스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "워드클라우드",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "가계부양식",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "RUNWAYAI",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "엑셀가계부",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "마이크로소프트팀즈",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "페이퍼로지",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "VISUALSTUDIO",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "비주얼스튜디오",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "여행일정표",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "결혼준비엑셀",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            }
+          ],
+          "research_fallback": []
+        }
+      ],
+      "research_stop_reason": "pool_exhausted",
+      "search_review_diagnostics": [],
+      "rejected": [
+        {
+          "keyword": "엑셀정품인증",
+          "reason": "search intent or official evidence does not support an article",
+          "hold_reasons": null,
+          "decision_diagnostics": {
+            "official_sources": [
+              {
+                "url": "https://support.microsoft.com/ko-kr/excel/troubleshooting-and-support",
+                "title": "문제 해결 및 지원 | Microsoft Support",
+                "excerpt_chars": 537
+              },
+              {
+                "url": "https://support.microsoft.com/ko-kr/windows/activation/product-activation-for-windows-online-microsoft-support-product-activation-portal",
+                "title": "Windows용 제품 정품 인증 - 온라인 & Microsoft 지원 제품 정품 인증 포털 | Microsoft Support",
+                "excerpt_chars": 3378
+              },
+              {
+                "url": "https://support.microsoft.com/ko-kr/microsoft-365-activation-licensing/fixes-or-workarounds-for-recent-office-installation-or-activation-issues",
+                "title": "최근 Office 설치 또는 정품 인증 문제의 수정 또는 해결 방법 | Microsoft Support",
+                "excerpt_chars": 2065
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "category_mismatch"
+            }
+          },
+          "search_review_diagnostics": null
+        }
+      ]
+    },
+    "건강": {
+      "selected_at": "2026-10-04T02:23:16.061766+00:00",
+      "measured_candidates": 1428,
+      "evaluated_candidates": 5,
+      "proposal_rounds": [
+        {
+          "round": 1,
+          "offered_keywords": [
+            "비타민C 앰플",
+            "비타민C",
+            "보험금조회",
+            "이비인후과",
+            "아데노신 크림",
+            "골프웨어",
+            "보험금청구서류",
+            "독감예방접종",
+            "립밤",
+            "바디워시",
+            "나의보험조회",
+            "정형외과",
+            "펩타이드 세럼",
+            "매스틱",
+            "보험료계산",
+            "스포츠",
+            "바디로션",
+            "샤워기헤드",
+            "호호바오일사용법",
+            "산부인과",
+            "코엔자임Q10",
+            "바이오더마",
+            "보험료조회",
+            "대상포진증상",
+            "면역력 영양제",
+            "PDRN",
+            "내가입보험조회",
+            "고함량 비타민B",
+            "재생크림",
+            "하이록스",
+            "올인원 로션",
+            "리스키",
+            "위고비",
+            "펩타이드 크림",
+            "히알루론산앰플",
+            "나이아신아마이드",
+            "나이아신아마이드 앰플",
+            "헤르페스입술",
+            "글루타치온",
+            "저분자 콜라겐",
+            "PDRN앰플",
+            "요가매트",
+            "핸드크림",
+            "샤워기",
+            "아르기닌",
+            "세라마이드",
+            "샤워기필터",
+            "스크린골프",
+            "수면팩",
+            "리포좀글루타치온",
+            "독감주사",
+            "판테놀 크림",
+            "코코넛오일",
+            "헤어오일",
+            "EGF재생크림",
+            "가정의학과",
+            "포스트바이오틱스",
+            "매스틱화장품",
+            "수분 크림",
+            "PDRN효과"
+          ],
+          "proposals": [
+            {
+              "keyword": "호호바오일사용법",
+              "reason": "월 750회 실측된 사용법 질문이다. 피부 보습 목적의 사용 방법과 주의사항을 공식 자료로 확인할 조사 가치가 있다.",
+              "search_query": "호호바 오일 사용법"
+            },
+            {
+              "keyword": "헤르페스입술",
+              "reason": "월 20,260회 수요이며 발생 부위가 구체적이다. 개인 진단 없이 전파 예방과 의료 이용 관련 질문을 조사할 수 있다.",
+              "search_query": "헤르페스 입술"
+            }
+          ],
+          "measured_fallback": false,
+          "no_eligible_proposal": false,
+          "skipped": [
+            {
+              "keyword": "비타민C 앰플",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "비타민C",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험금조회",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "이비인후과",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아데노신 크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "골프웨어",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험금청구서류",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "독감예방접종",
+              "reason_code": "duplicate_intent",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "립밤",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바디워시",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "나의보험조회",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "정형외과",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "펩타이드 세럼",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "매스틱",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험료계산",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "스포츠",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바디로션",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "샤워기헤드",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "산부인과",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "코엔자임Q10",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바이오더마",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험료조회",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "대상포진증상",
+              "reason_code": "duplicate_intent",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "면역력 영양제",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "PDRN",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "내가입보험조회",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "고함량 비타민B",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "재생크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "하이록스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "올인원 로션",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "리스키",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "위고비",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "펩타이드 크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "히알루론산앰플",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "나이아신아마이드",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "나이아신아마이드 앰플",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "글루타치온",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "저분자 콜라겐",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "PDRN앰플",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "요가매트",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "핸드크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "샤워기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아르기닌",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "세라마이드",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "샤워기필터",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "스크린골프",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "수면팩",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "리포좀글루타치온",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "독감주사",
+              "reason_code": "duplicate_intent",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "판테놀 크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "코코넛오일",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "헤어오일",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "EGF재생크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "가정의학과",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "포스트바이오틱스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "매스틱화장품",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "수분 크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "PDRN효과",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "offered_keywords": [
+            "비타민C 세럼",
+            "호호바오일",
+            "탈모 영양제",
+            "흑자제거",
+            "파킨슨병",
+            "미백 앰플",
+            "타이블라우스",
+            "로즈힙 오일",
+            "펩타이드",
+            "응급실",
+            "흑염소 진액",
+            "립스틱",
+            "크로스핏",
+            "빌베리",
+            "우레아크림",
+            "갑상선기능저하증",
+            "히비스커스",
+            "아기로션",
+            "아이크림",
+            "엉덩이뾰루지",
+            "통증의학과",
+            "프로폴리스 스프레이",
+            "니트가디건",
+            "정신건강의학과",
+            "세라마이드 크림",
+            "기미없애는법",
+            "프로폴리스",
+            "홍국",
+            "바디로션추천",
+            "수영장",
+            "피부오돌토돌",
+            "부평역",
+            "헤어에센스",
+            "필터샤워기",
+            "근처헬스장",
+            "풋크림",
+            "바세린립밤",
+            "역류성식도염",
+            "이너뷰티",
+            "바디미스트",
+            "골프연습장",
+            "아데노신",
+            "비오틴",
+            "글램스",
+            "니베아립밤",
+            "파스타종류",
+            "왼쪽옆구리통증",
+            "멀티비타민",
+            "바이오더마립밤",
+            "콤부차",
+            "멜라토닝",
+            "아연",
+            "검버섯",
+            "보스웰리아",
+            "금화규",
+            "과민성대장증후군",
+            "달맞이꽃종자유",
+            "재생크림추천",
+            "건강보험료조회",
+            "CT비용"
+          ],
+          "proposals": [
+            {
+              "keyword": "기미없애는법",
+              "reason": "월 9,490회로 관리 방법을 묻는 수요가 구체적이다. 일반적인 관리 원칙과 치료의 한계를 공식 자료로 조사할 가치가 있다.",
+              "search_query": "기미 없애는 법"
+            }
+          ],
+          "measured_fallback": false,
+          "no_eligible_proposal": false,
+          "skipped": [
+            {
+              "keyword": "비타민C 세럼",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "호호바오일",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "탈모 영양제",
+              "reason_code": "duplicate_intent",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "흑자제거",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "파킨슨병",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "미백 앰플",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "타이블라우스",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "로즈힙 오일",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "펩타이드",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "응급실",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "흑염소 진액",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "립스틱",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "크로스핏",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "빌베리",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "우레아크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "갑상선기능저하증",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "히비스커스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아기로션",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아이크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "엉덩이뾰루지",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "통증의학과",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "프로폴리스 스프레이",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "니트가디건",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "정신건강의학과",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "세라마이드 크림",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "프로폴리스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "홍국",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바디로션추천",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "수영장",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "피부오돌토돌",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "부평역",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "헤어에센스",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "필터샤워기",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "근처헬스장",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "풋크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바세린립밤",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "역류성식도염",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "이너뷰티",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바디미스트",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "골프연습장",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아데노신",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "비오틴",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "글램스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "니베아립밤",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "파스타종류",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "왼쪽옆구리통증",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "멀티비타민",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "바이오더마립밤",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "콤부차",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "멜라토닝",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "아연",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "검버섯",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보스웰리아",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "금화규",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "과민성대장증후군",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "달맞이꽃종자유",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "재생크림추천",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "건강보험료조회",
+              "reason_code": "not_reported",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "CT비용",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "offered_keywords": [
+            "보험금조회",
+            "보험금청구서류",
+            "매스틱",
+            "보험료계산",
+            "보험료조회",
+            "면역력 영양제",
+            "고함량 비타민B",
+            "하이록스",
+            "리스키",
+            "위고비",
+            "저분자 콜라겐",
+            "리포좀글루타치온",
+            "판테놀 크림",
+            "포스트바이오틱스",
+            "PDRN효과",
+            "호호바오일",
+            "흑자제거",
+            "로즈힙 오일",
+            "흑염소 진액",
+            "빌베리",
+            "우레아크림",
+            "히비스커스",
+            "엉덩이뾰루지",
+            "프로폴리스 스프레이",
+            "프로폴리스",
+            "홍국",
+            "수영장",
+            "피부오돌토돌",
+            "풋크림",
+            "비오틴",
+            "글램스",
+            "왼쪽옆구리통증",
+            "멀티비타민",
+            "콤부차",
+            "멜라토닝",
+            "검버섯",
+            "보스웰리아",
+            "금화규",
+            "달맞이꽃종자유",
+            "건강보험료조회",
+            "CT비용"
+          ],
+          "proposals": [
+            {
+              "keyword": "엉덩이뾰루지",
+              "reason": "네이버 월 9,760회 수요. 특정 부위의 피부 증상에 관한 일반 정보와 진료가 필요한 신호를 조사할 후보입니다.",
+              "search_query": "엉덩이 뾰루지"
+            },
+            {
+              "keyword": "왼쪽옆구리통증",
+              "reason": "네이버 월 36,980회 수요. 개인별 진단 대신 동반 증상과 의료 이용 시 확인할 사항을 조사할 후보입니다.",
+              "search_query": "왼쪽 옆구리 통증"
+            }
+          ],
+          "measured_fallback": false,
+          "no_eligible_proposal": false,
+          "skipped": [
+            {
+              "keyword": "보험금조회",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험금청구서류",
+              "reason_code": "category_mismatch",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "매스틱",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험료계산",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험료조회",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "면역력 영양제",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "고함량 비타민B",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "하이록스",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "리스키",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "위고비",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "저분자 콜라겐",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "리포좀글루타치온",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "판테놀 크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "포스트바이오틱스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "PDRN효과",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "호호바오일",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "흑자제거",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "로즈힙 오일",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "흑염소 진액",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "빌베리",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "우레아크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "히비스커스",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "프로폴리스 스프레이",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "프로폴리스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "홍국",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "수영장",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "피부오돌토돌",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "풋크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "비오틴",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "글램스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "멀티비타민",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "콤부차",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "멜라토닝",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "검버섯",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보스웰리아",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "금화규",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "달맞이꽃종자유",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "건강보험료조회",
+              "reason_code": "not_reported",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "CT비용",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "offered_keywords": [
+            "매스틱",
+            "보험료계산",
+            "보험료조회",
+            "고함량 비타민B",
+            "리스키",
+            "위고비",
+            "저분자 콜라겐",
+            "리포좀글루타치온",
+            "판테놀 크림",
+            "포스트바이오틱스",
+            "PDRN효과",
+            "호호바오일",
+            "흑자제거",
+            "로즈힙 오일",
+            "흑염소 진액",
+            "빌베리",
+            "우레아크림",
+            "프로폴리스 스프레이",
+            "프로폴리스",
+            "홍국",
+            "피부오돌토돌",
+            "풋크림",
+            "비오틴",
+            "글램스",
+            "멀티비타민",
+            "콤부차",
+            "멜라토닝",
+            "보스웰리아",
+            "금화규",
+            "달맞이꽃종자유",
+            "건강보험료조회",
+            "CT비용"
+          ],
+          "proposals": [],
+          "measured_fallback": false,
+          "no_eligible_proposal": true,
+          "skipped": [
+            {
+              "keyword": "매스틱",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험료계산",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보험료조회",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "고함량 비타민B",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "리스키",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "위고비",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "저분자 콜라겐",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "리포좀글루타치온",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "판테놀 크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "포스트바이오틱스",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "PDRN효과",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "호호바오일",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "흑자제거",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "로즈힙 오일",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "흑염소 진액",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "빌베리",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "우레아크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "프로폴리스 스프레이",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "프로폴리스",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "홍국",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "피부오돌토돌",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "풋크림",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "비오틴",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "글램스",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "멀티비타민",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "콤부차",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "멜라토닝",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "보스웰리아",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "금화규",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "달맞이꽃종자유",
+              "reason_code": "scope_too_broad",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "건강보험료조회",
+              "reason_code": "not_reported",
+              "kind": "model_shortlist_opinion"
+            },
+            {
+              "keyword": "CT비용",
+              "reason_code": "insufficient_specificity",
+              "kind": "model_shortlist_opinion"
+            }
+          ],
+          "research_fallback": []
+        }
+      ],
+      "research_stop_reason": "round_limit",
+      "search_review_diagnostics": [
+        {
+          "keyword": "기미없애는법",
+          "executed_query": "기미 없애는 법",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "code": "unverified_result_quote"
+            },
+            {
+              "attempt": 2,
+              "status": "error",
+              "code": "unverified_result_quote"
+            }
+          ],
+          "failure_code": "unverified_result_quote"
+        }
+      ],
+      "rejected": [
+        {
+          "keyword": "호호바오일사용법",
+          "reason": "search intent or official evidence does not support an article",
+          "hold_reasons": null,
+          "decision_diagnostics": {
+            "official_sources": [
+              {
+                "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1032427261",
+                "title": "국가법령정보센터 | 조문정보",
+                "excerpt_chars": 1861
+              },
+              {
+                "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032080823",
+                "title": "국가법령정보센터 | 조문정보",
+                "excerpt_chars": 530
+              },
+              {
+                "url": "https://www.law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000521110",
+                "title": "조문정보 | 국가법령정보센터",
+                "excerpt_chars": 2360
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "source_missing_detail"
+            },
+            "source_recovery": {
+              "attempted": true,
+              "initial_review": {
+                "official_sources": [
+                  {
+                    "url": "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1032427261",
+                    "title": "국가법령정보센터 | 조문정보",
+                    "excerpt_chars": 1861
+                  },
+                  {
+                    "url": "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032080823",
+                    "title": "국가법령정보센터 | 조문정보",
+                    "excerpt_chars": 530
+                  },
+                  {
+                    "url": "https://www.law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1000521110",
+                    "title": "조문정보 | 국가법령정보센터",
+                    "excerpt_chars": 2360
+                  }
+                ],
+                "analysis_status": "supported_false",
+                "model_rejection_opinion": {
+                  "kind": "model_opinion",
+                  "code": "source_missing_detail"
+                }
+              },
+              "outcome": "no_changed_source"
+            }
+          },
+          "search_review_diagnostics": null
+        },
+        {
+          "keyword": "기미없애는법",
+          "reason": "search relevance review unavailable",
+          "hold_reasons": null,
+          "decision_diagnostics": null,
+          "search_review_diagnostics": {
+            "keyword": "기미없애는법",
+            "executed_query": "기미 없애는 법",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "error",
+                "code": "unverified_result_quote"
+              },
+              {
+                "attempt": 2,
+                "status": "error",
+                "code": "unverified_result_quote"
+              }
+            ],
+            "failure_code": "unverified_result_quote"
+          }
+        },
+        {
+          "keyword": "엉덩이뾰루지",
+          "reason": "search intent or official evidence does not support an article",
+          "hold_reasons": null,
+          "decision_diagnostics": {
+            "official_sources": [
+              {
+                "url": "https://www.110.go.kr/data/counselView.do?curPage=153&num=C06_663441&scCate1=&scCate2=&scIntt=&scText=&scType=",
+                "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
+                "excerpt_chars": 373
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "source_missing_detail"
+            }
+          },
+          "search_review_diagnostics": null
+        },
+        {
+          "keyword": "왼쪽옆구리통증",
+          "reason": "search quality insufficient",
+          "hold_reasons": [
+            "insufficient_relevant_results",
+            "insufficient_relevant_sites",
+            "low_search_relevance",
+            "concentrated_search_results"
+          ],
+          "decision_diagnostics": null,
+          "search_review_diagnostics": null
+        }
+      ]
+    }
+  },
+  "quote_failure_results": [
+    {
+      "url": "https://yegazine.com/melasma-removal-guide/",
+      "domain": "yegazine.com",
+      "title": "기미 없애는 법 총정리 | 집에서·시술·먹는약까지",
+      "snippet": "# 기미 없애는 법: 집에서·시술·먹는약까지 총정리 ... 기미 없애는 법을 찾다 보면 “이거 바르면 사라진다, 한 번에 없앤다”는 말이 넘쳐나는데, 솔직히 기미는 그렇게 단순하지 않습니다."
+    },
+    {
+      "url": "https://hakomong.com/entry/%EA%B8%B0%EB%AF%B8-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95-%EB%A0%88%EC%9D%B4%EC%A0%80-%EC%97%86%EC%9D%B4-%EA%B4%80%EB%A6%AC-%EA%B0%80%EB%8A%A5%ED%95%A0%EA%B9%8C-%EC%9B%90%EC%9D%B8%EB%B3%84-5%EA%B0%80%EC%A7%80-%EC%A0%95%EB%A6%AC",
+      "domain": "hakomong.com",
+      "title": "기미 없애는 법, 레이저 없이 관리 가능할까 원인별 5가지 정리",
+      "snippet": "# 기미 없애는 법, 레이저 없이 관리 가능할까 원인별 5가지 정리 ... 거울을 볼 때마다 광대와 볼에 번진 갈색 얼룩이 신경 쓰여 속상하셨을 거예요. ..."
+    },
+    {
+      "url": "https://beautyarchive.kr/melasma-ampoule-basic-guide/",
+      "domain": "beautyarchive.kr",
+      "title": "기미앰플 고르는 법 — 전성분 표기 방식과 용량 대비 단가를 비교하는 기준 - 뷰티아카이브",
+      "snippet": "수분·진정형 앰플 | 자극이 덜한 제형이 많아 민감한 피부라도 덧바르기 쉬운 편이다 | 기미 개선 자체를 단독으로 기대하기보다 보조 관리용으로 쓰는 것이 적절하다 ... *"
+    },
+    {
+      "url": "https://skincarelabs.org/cream-guide/melasma-ointment-online/",
+      "domain": "skincarelabs.org",
+      "title": "기미 연고, 온라인으로 사도 되나? — '함익병 기미 연고'로 검색되는 그 이름 뒤에 실제로 있는 것 | 스킨케어랩",
+      "snippet": "이 글은 어떤 제품을 사라거나 사지 말라고 권하는 글이 아니라, '기미 연고 인터넷 구매'라는 검색 뒤에 무엇이 놓여 있는지를 법령 원문과 식약처 허가정보로 확인해 분류하는"
+    },
+    {
+      "url": "https://yousoyou.co.kr/entry/%EA%B8%B0%EB%AF%B8-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95-%ED%94%BC%EB%B6%80%EA%B3%BC-%EC%8B%9C%EC%88%A0-%EC%97%86%EC%9D%B4-%EC%A7%91%EC%97%90%EC%84%9C-%EA%B0%80%EB%8A%A5%ED%95%9C-5%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95",
+      "domain": "yousoyou.co.kr",
+      "title": "기미 없애는 법, 피부과 시술 없이 집에서 가능한 5가지 방법",
+      "snippet": "# 기미 없애는 법, 피부과 시술 없이 집에서 가능한 5가지 방법 ... 기미 없애는 고급 홈케어 루틴 – AHA 각질제거, LED 마스크, 쌀뜨물 팩 ..."
+    },
+    {
+      "url": "https://law.go.kr/main.html",
+      "domain": "law.go.kr",
+      "title": "국가법령정보센터",
+      "snippet": "* 법적효력/저작권법제처는 우리나라의 모든 법령정보를 제공합니다. ... 현행법령 검색구분 목록 펼치기 ... 법분야별 찾기 총 44개 법령 분야 ... * 독도 등 도서지역의 생태계 보전에"
+    },
+    {
+      "url": "https://8want.com/%EA%B8%B0%EB%AF%B8-%EC%A7%91%EC%97%90%EC%84%9C-%EC%97%86%EC%95%A0%EB%8A%94-%EB%B2%95-%ED%94%BC%EB%B6%80%EA%B3%BC-%EC%95%88-%EA%B0%80%EB%8F%84-%EB%8F%BC%EC%9A%94/",
+      "domain": "8want.com",
+      "title": "기미, 집에서 없애는 법 (피부과 안 가도 돼요!)",
+      "snippet": "# 기미, 집에서 없애는 법 (피부과 안 가도 돼요!) ... 이 글에서는 피부과 안 가고도 기미를 집에서 효과적으로 없애는 꿀팁 5가지를 알려드릴게요. ... 기미는 자외선,"
+    },
+    {
+      "url": "https://sjbnews.com/news/news.php?number=810999",
+      "domain": "sjbnews.com",
+      "title": "레이저 대신 집에서 기미 없애는 법, 장희빈미안법 과학적 근거는 있을까? - 새전북신문",
+      "snippet": "장희빈미안법은 녹두, 감초, 율무, 백강잠, 백복령, 토사자, 진주, 연근, 흑축, 쌀겨, 팥, 살구씨 등 총 12가지 재료로써 비율에 맞게 사용하는것으로, 이 방법은 조선시대 장희빈이 실제로"
+    },
+    {
+      "url": "https://v.daum.net/v/20250619200200478",
+      "domain": "v.daum.net",
+      "title": "기미일까 주근깨일까?...거뭇한 잡티 없애는 법 [건강톡톡]",
+      "snippet": "거뭇한 잡티 없애는 법 [건강톡톡] ... 하이닥 전문가들과 기미와 주근깨의 차이점을 짚고, 이를 없애는 방법까지 알아본다. ... - 가정의학과 정지연 원장(맑은선의원) ... 기미, 오타모반와 같은"
+    },
+    {
+      "url": "https://www.yeoshin.co.kr/ja/tvs/960",
+      "domain": "www.yeoshin.co.kr",
+      "title": "기미 없애는 법? | 皮膚施術のすべての情報 - YeoTi TV",
+      "snippet": "기미 없애는 법? ... ✦ 기미 때문에 얼굴이 지저분해 보여서 고민이라고요?"
+    }
+  ]
+}

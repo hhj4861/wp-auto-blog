@@ -48,8 +48,8 @@ CATEGORIES = {
 CATEGORY_SCOPES = {
     '취업': '채용·구직·면접·직업훈련·직무 자격증·국가기술자격 시험과 경력 준비',
     '생활정보': '세금·주거·생활요금·일반 복지와 행정 절차. 의료비 세액공제 등 세금 목적 포함. 취업/자격증 및 의료 이용/건강보험 업무는 제외',
-    '건강': '건강검진·예방접종·건강보험·의료 이용과 건강 관리. 의료 직종의 채용/자격증은 취업, 세액공제 등 세금 목적은 생활정보',
-    '생산성': '문서·스프레드시트·노트·업무 도구의 사용법과 시간 관리. 제품 구매 비교는 리뷰, 기기 설정·기술 설명은 테크',
+    '건강': '질환·증상·예방·건강 관리의 일반 정보와 건강검진·예방접종·건강보험·의료 이용. 개인 진단·처방은 제외. 의료 직종의 채용/자격증은 취업, 세액공제 등 세금 목적은 생활정보',
+    '생산성': '문서·스프레드시트·노트·업무 도구의 사용법과 시간 관리. 업무 소프트웨어의 설치·계정·라이선스 문제 해결도 포함. 제품 구매 비교는 리뷰, 기기 설정·기술 설명은 테크',
     '리뷰': '제품·서비스의 구매 전 선택 기준과 사양·기능·제약 비교. 제조사 공식 자료로 확인한 비교이며 직접 사용·측정한 경험을 지어내지 않음',
     '테크': '기기·운영체제·네트워크의 기능·설정·호환성과 기술 설명. 구매 비교는 리뷰, 업무 도구 활용법은 생산성',
 }
@@ -439,7 +439,28 @@ def _official_search_extra_domains(keyword):
     return domains
 
 
-def official_search_urls(keyword):
+def clinical_health_query(keyword, category):
+    """Clinical explanations need medical sources, not administrative statutes."""
+    return category == '건강' and not any(term in norm(keyword) for term in (
+        '보험', '지원금', '지원사업', '환급', '청구', '의료법', '법률', '급여기준',
+        '비용', '가격', '수수료', '검진대상'))
+
+
+def information_research_candidates(skipped, limit, category):
+    """Investigate uncertain names; never approve or change a measured keyword."""
+    eligible = [row for row in skipped
+                if row['reason_code'] in {'not_reported', 'insufficient_specificity'}
+                and category_matches(row['keyword'], category)
+                and not suitability.content_capability_issues(row['keyword'])]
+    eligible.sort(key=lambda row: (-specificity_score(row['keyword']),
+                                  row['reason_code'] != 'not_reported'))
+    return [{'keyword': row['keyword'], 'search_query': row['keyword'],
+             'reason': 'bounded_research_of_shortlist_uncertainty',
+             'shortlist_reason_code': row['reason_code']}
+            for row in eligible[:max(0, limit)]]
+
+
+def official_search_urls(keyword, category=None):
     """Use bounded, simple site queries; compound OR queries can lose topic intent.
 
     These are source locators only, never replacements for the measured SERP.
@@ -447,7 +468,10 @@ def official_search_urls(keyword):
     """
     extras = _official_search_extra_domains(keyword)
     domains = list(dict.fromkeys([*extras, 'go.kr', 'or.kr', 'gov', 'ac.kr']))[:4]
-    purchase_question = review_discovery.discovery_issue(keyword) is None
+    if clinical_health_query(keyword, category):
+        domains = ['kdca.go.kr', 'cancer.go.kr', 'medlineplus.gov', 'cdc.gov']
+        extras = domains
+    purchase_question = category != '건강' and review_discovery.discovery_issue(keyword) is None
     if purchase_question:
         domains = list(dict.fromkeys([*extras[:3], 'kca.go.kr']))[:4]
     groups, seen = [], set()
@@ -491,13 +515,14 @@ def _append_distinct_source(sources, source, *, limit=3):
     return True
 
 
-def candidate_sources(keyword, results, *, category=None):
+def candidate_sources(keyword, results, category=None):
     sources, seen = [], set()
     limit = 6 if category == '리뷰' else 3
 
     def read(urls):
         for url in urls:
-            if url in seen or not is_official_url(url):
+            if (url in seen or not is_official_url(url)
+                    or clinical_health_query(keyword, category) and host_matches(https_host(url), 'law.go.kr')):
                 continue
             seen.add(url)
             source = fetch_source(url)
@@ -510,7 +535,7 @@ def candidate_sources(keyword, results, *, category=None):
 
     # Leave room for an alternative to organic links that may be only homepages.
     read([row['url'] for row in results if is_official_url(row['url'])][:2])
-    read(official_search_urls(keyword))
+    read(official_search_urls(keyword, category) if category == '건강' else official_search_urls(keyword))
     return review_discovery.prioritize_sources(keyword, sources) if category == '리뷰' else sources
 
 
@@ -548,6 +573,11 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
     domain_hint = f'이 검색어와 관련된 공식 도메인 {extra_domains}의 상세 안내도 우선 조사하세요.' if extra_domains else ''
     if category == '리뷰':
         domain_hint += '\n' + review_discovery.source_hint(keyword)
+    elif clinical_health_query(keyword, category):
+        domain_hint += ('\n질병·증상·건강 관리의 의학적 설명이 필요합니다. 질병관리청·국가암정보센터·'
+                        'MedlinePlus·CDC·NIH의 환자용 상세 안내를 조사하세요. 필요하면 영어 의학 용어로 '
+                        '출처를 찾되 원래 한국어 검색어의 질문을 바꾸지 마세요. 법령·상품 규정은 '
+                        '사용법·증상·효과의 근거가 아닙니다. 개인 진단이나 처방을 만들지 마세요.')
     coverage_hint = ''
     if coverage_gaps is not None:
         coverage_hint = (
@@ -583,7 +613,8 @@ go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품
     locators = research_source_locators(trace)
     existing_urls = set((coverage_gaps or {}).get('existing_urls', []))
     for locator in locators:
-        if locator['url'] in existing_urls:
+        if (locator['url'] in existing_urls
+                or clinical_health_query(keyword, category) and host_matches(https_host(locator['url']), 'law.go.kr')):
             continue
         source = fetch_source(locator['url'])
         if source and (category != '리뷰' or review_discovery.relevant_source(keyword, source)):
@@ -1061,10 +1092,12 @@ def _search_review_with_recovery(keyword, provider, results, now, query, *, budg
     """
     audit.update(keyword=keyword, executed_query=query, attempts=[])
     previous_code = None
+    previous_index = None
     for attempt in range(2):
         def call(prompt):
             if previous_code:
                 prompt += ('\n이전 응답 검증 오류: ' + previous_code
+                           + (f' (result_index={previous_index})' if previous_index is not None else '')
                            + '. 같은 검색 결과의 모든 인덱스를 다시 검수하세요. '
                              '판정을 유리하게 바꾸지 말고 JSON 형식, 누락, 실제 원문 인용을 바로잡으세요.')
             return ask(prompt)
@@ -1074,13 +1107,16 @@ def _search_review_with_recovery(keyword, provider, results, now, query, *, budg
             if isinstance(exc, runtime.AnalysisError):
                 raise
             code = _search_review_error_code(exc)
-            audit['attempts'].append({'attempt': attempt + 1, 'status': 'error', 'code': code})
+            audit['attempts'].append({'attempt': attempt + 1, 'status': 'error', 'code': code,
+                                      **({'result_index': exc.result_index} if isinstance(exc, SearchReviewError)
+                                         and exc.result_index is not None else {})})
             if (attempt or code not in SEARCH_REVIEW_RETRY_CODES
                     or budget['attempts'] >= MAX_SEARCH_REVIEW_RECOVERIES
                     or not runtime.can_retry()):
                 raise
             budget['attempts'] += 1
             previous_code = code
+            previous_index = exc.result_index if isinstance(exc, SearchReviewError) else None
         else:
             audit['attempts'].append({'attempt': attempt + 1, 'status': 'returned'})
             return result
@@ -1231,9 +1267,15 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         if monotonic() - started >= MAX_RESEARCH_SECONDS:
             stop_reason = 'time_budget'
             break
-        if category == '리뷰' and shortlist_research_attempts >= MAX_SHORTLIST_RESEARCH:
+        if shortlist_research_attempts >= MAX_SHORTLIST_RESEARCH:
             unresearched.update(uncertain_pending - seen)
             not_proposed.update(uncertain_pending)
+        # Refill before the 120-row cap: retiring the visible batch must not
+        # permanently hide the remaining independently measured questions.
+        if category != '리뷰' and rounds:
+            pool, retries, discovery_rejections = refresh_pool(seen | not_proposed, history_retry_keys)
+            pool_keywords.update(norm(row['keyword']) for row in pool)
+            retry_context = [past_failures[measurement_key(row['keyword'])] for row in retries]
         # Name-only uncertainty must not consume the remaining budget on brand
         # variants of a buying question already researched in this run. This is
         # a scheduling deferral, not a negative verdict or persistent cooldown.
@@ -1358,6 +1400,11 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                     min(SHORTLIST_RESEARCH_PER_ROUND,
                         MAX_SHORTLIST_RESEARCH - shortlist_research_attempts),
                     researched=fallback_researched)
+            elif category != '리뷰' and isinstance(proposals, dict) and proposals.get('candidates') == []:
+                research_fallback = information_research_candidates(
+                    proposal_rounds[-1]['skipped'],
+                    min(SHORTLIST_RESEARCH_PER_ROUND,
+                        MAX_SHORTLIST_RESEARCH - shortlist_research_attempts), category)
             proposal_rounds[-1]['research_fallback'] = research_fallback
             if not research_fallback:
                 not_proposed.update(norm(row['keyword']) for row in remaining)
@@ -1440,7 +1487,8 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
                 continue
             source_options = {'category': category} if category == '리뷰' else {}
-            sources = candidate_sources(query, relevant_results, **source_options) if results else []
+            sources = (candidate_sources(query, relevant_results, category) if category == '건강'
+                       else candidate_sources(query, relevant_results, **source_options)) if results else []
             allow_recovery = bool(sources)
             if not sources:
                 try:

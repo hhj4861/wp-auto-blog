@@ -98,7 +98,7 @@ def test_recovery_retains_demand_cooldown_exclusion_duplicate_and_retry_limits(m
     assert report['failure_history'] == history and report['retry_keywords'] == []
 
 
-def test_partial_shortlist_and_other_categories_keep_existing_behavior(monkeypatch):
+def test_partial_shortlist_is_unchanged_and_information_uncertainty_is_researched(monkeypatch):
     keys = ['노트북램', '청소기필터']
     _, search, _ = install_selection(monkeypatch, keys, passing=keys,
         shortlist=lambda _: {'candidates': [{'keyword': keys[0]}]})
@@ -107,8 +107,8 @@ def test_partial_shortlist_and_other_categories_keep_existing_behavior(monkeypat
     assert report['shortlist_research_attempts'] == 0
     _, search, _ = install_selection(monkeypatch, ['엑셀함수'], category='생산성', shortlist=empty_shortlist)
     report = market.select_category('생산성', 1, [])
-    search.assert_not_called()
-    assert report['shortlist_research_attempts'] == 0
+    search.assert_called_once_with('엑셀함수')
+    assert report['shortlist_research_attempts'] == 1
 
 
 def test_timeout_before_or_during_recovery_records_only_actual_attempts(monkeypatch):

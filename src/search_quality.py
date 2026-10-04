@@ -24,8 +24,9 @@ MAX_KNOWN_DOMINANT_RATIO = 0.6
 class SearchReviewError(RuntimeError):
     """Only fixed reason codes, never provider errors or model output."""
 
-    def __init__(self, reason):
+    def __init__(self, reason, result_index=None):
         self.reason = reason
+        self.result_index = result_index if type(result_index) is int and 0 <= result_index < 10 else None
         super().__init__('Search quality review unavailable: ' + reason)
 
 
@@ -140,13 +141,40 @@ def _decisions(rows, decisions):
         row = indexed[index]
         if (not isinstance(quote, str) or len(quote) > 1300 or len(compact(quote)) < 8
                 or compact(quote) not in compact(row['title'] + ' ' + row['snippet'])):
-            raise SearchReviewError('unverified_result_quote')
+            raise SearchReviewError('unverified_result_quote', index)
         identity = canonical_url(row['url'])
         if identity in aliases and aliases[identity] != relevant:
             raise SearchReviewError('conflicting_duplicate_review')
         aliases[identity] = relevant
         checked[index] = {'result_index': index, 'relevant': relevant, 'quote': quote}
     return [checked[index] for index, _ in rows]
+
+
+def quote_choices(row):
+    """Stable verbatim passages: the reviewer chooses evidence instead of rewriting it."""
+    choices = []
+    for text in (row['title'], row['snippet']):
+        for start in range(0, len(text), 240):
+            passage = text[start:start + 240].strip()
+            if len(compact(passage)) >= 8 and passage not in choices:
+                choices.append(passage)
+    return choices[:8]
+
+
+def resolve_quote_choices(rows, decisions):
+    if not isinstance(decisions, list):
+        return decisions
+    available = {index: quote_choices(row) for index, row in rows}
+    resolved = []
+    for decision in decisions:
+        if isinstance(decision, dict) and 'quote_index' in decision:
+            index, choice = decision.get('result_index'), decision['quote_index']
+            if (type(index) is not int or index not in available or type(choice) is not int
+                    or not 0 <= choice < len(available[index])):
+                raise SearchReviewError('unverified_result_quote', index)
+            decision = {**decision, 'quote': available[index][choice]}
+        resolved.append(decision)
+    return resolved
 
 
 def review_search(keyword, provider, results, checked_at, call_llm, *, executed_query=None):
@@ -175,11 +203,13 @@ def review_search(keyword, provider, results, checked_at, call_llm, *, executed_
             '건강보험료 조회에서 건강검진 대상 조회는 다른 대상이므로 false입니다. '
             '일반 로그인·홈페이지·메뉴나 관련 없는 검사와 묶인 패키지만으로 원래 질문에 답할 수 없으면 false입니다. '
             '실제로 유용한 부분 답변과 단어만 겹치는 무관한 결과를 구분하세요. '
-            '관련/무관 모두 판단 근거 quote를 해당 title 또는 snippet에서 8자 이상 그대로 복사하세요. '
+            '관련/무관 모두 판단 근거를 해당 결과의 quote_choices에서 선택하고 0부터 시작하는 quote_index를 적으세요. '
+            '선택한 문구가 판정을 뒷받침해야 합니다. 근거 문구를 다시 쓰거나 다른 결과의 번호를 사용하지 마세요. '
             'URL의 www 별칭은 같은 문서로 취급해 관련성 판단을 일치시키세요. '
-            'JSON만 반환: {"decisions":[{"result_index":0,"relevant":true,"quote":"실제 원문"}]}.\n'
+            'JSON만 반환: {"decisions":[{"result_index":0,"relevant":true,"quote_index":0}]}.\n'
             + json.dumps({'keyword': keyword, 'executed_query': actual_query, 'results': [
-                {'result_index': index, **{key: row[key] for key in ('url', 'title', 'snippet')}}
+                {'result_index': index, 'quote_choices': quote_choices(row),
+                 **{key: row[key] for key in ('url', 'title', 'snippet')}}
                 for index, row in rows]}, ensure_ascii=False))
         try:
             response = call_llm(prompt)
@@ -192,7 +222,7 @@ def review_search(keyword, provider, results, checked_at, call_llm, *, executed_
             raise SearchReviewError('model_review_failed') from None
         if not isinstance(response, dict):
             raise SearchReviewError('invalid_result_review')
-        decisions = _decisions(rows, response.get('decisions'))
+        decisions = _decisions(rows, resolve_quote_choices(rows, response.get('decisions')))
     return {'version': VERSION, 'query': keyword, 'executed_query': actual_query, 'provider': provider,
             'checked_at': checked_at, 'raw_sha256': digest, 'decisions': decisions}
 

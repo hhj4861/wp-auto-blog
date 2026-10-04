@@ -1,7 +1,7 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-10-01T14:40:45.039824+00:00",
+    "selected_at": "2026-10-04T01:56:18.847236+00:00",
     "seeds": [
       "채용",
       "공기업",
@@ -9,7 +9,7 @@
       "면접"
     ],
     "selection_version": 6,
-    "research_rounds": 4,
+    "research_rounds": 3,
     "source_recovery_attempts": 1,
     "cak_import": {
       "status": "not_applicable",
@@ -22,7 +22,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-01T14:40:45.039824+00:00",
+      "checked_at": "2026-10-04T01:56:18.847236+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -47,1284 +47,574 @@
     "researched_fallback_families": [],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 702,
-    "evaluated_candidates": 14,
+    "measured_candidates": 692,
+    "evaluated_candidates": 1,
     "research_pool_size": 120,
     "selected": [],
-    "held": [],
-    "rejected": [
+    "held": [
       {
-        "keyword": "이직준비",
-        "reason": "search intent or official evidence does not support an article",
+        "keyword": "컴활2급",
+        "category": "취업",
+        "topic": "컴활2급 필기·실기 준비: 시험과목, 합격기준, 수험료와 연습자료",
+        "intent": "컴활2급 필기·실기는 무엇을 준비하며, 합격기준·시험시간·사용 프로그램과 연습자료는 어떻게 확인하나요?",
+        "gap": "필기·실기 비교표와 응시조건·프로그램 체크리스트를 제공하고, 상시시험 비공개 원칙과 공식 예제 목록을 구분합니다.",
+        "source_url": "https://license.korcham.net/co/examguide.do?cd=0103&mm=202",
+        "verified_sources": [
+          {
+            "url": "https://license.korcham.net/co/examguide.do?cd=0103&mm=202",
+            "original_url": "https://license.korcham.net/co/examguide.do?cd=0103&mm=202",
+            "title": "종목소개 시험안내",
+            "checked_on": "2026-10-04",
+            "sha256": "afb3d3792ca0bf24852cfea791259bcd22223f5dde1c441f00002e6544f489a0",
+            "excerpt": "닫기 사이트맵 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/화장품 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 개별접수 접수안내 원서접수안내 접수유의사항 시험장정보조회 결제내역조회 시험접수 장애인상시시험접수 접수내역변경 환불신청 수험료 환불 기타 100% 예외환불 단체접수 접수안내 접수안내 접수유의사항 시험장정보조회 정기시험접수 수험자용 관리자용 접수확인 및 수험표출력 개별인증 필기면제대상자 명단등록 서류출력 및 조회 상시시험접수 수험자용 관리자용 접수확인 및 수험표출력 수험료 환불 합격확인 합격자현황 및 출력 자격증신청 단체자격증신청 자격증 신청확인 자격진위 신청 및 결과 마이페이지 접수 및 환불내역 접수내역 환불내역 취득내역 취득내역 디지털 배지 시험결과 자격증신청 자격증 발급안내 자격증신청 신청확인 및 환불 개인정보관리 개인정보수정 회원탈퇴 비서실기면제신청 진위여부 신청 및 결과 필기면제 신청 및 내역 고객센터 공지사항 전국상의별 공지안내 공지사항 자주하는 질문 문의하기 자료실 수험자가이드 원격지원 활용현황 자격특전 자격활용사례 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/마케팅 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 HOME 시험안내 시험문제 시험일정 관련자료 FAQ 자격활용사례 종목소개 산업계의 정보화가 진전되면서 영업, 재무, 생산 등의 분야에 대한 경영분석은 물론 데이터 관리가 필수적입니다. <컴퓨터활용능력> 검정은 사무자동화의 필수 프로그램인 스프레드시트(SpreadSheet), 데이터베이스(Database) 활용능력을 평가하는 국가기술자격 시험입니다. 응시자격 제한없음(단, 실기 시험은 필기 합격 후 2년 이내 있는 실기 시험 응시 가능) 시험과목 시험과목 목록 등급 시험방법 시험과목 출제형태 시험시간 1급 필기시험 컴퓨터 일반 스프레드시트 일반 데이터베이스 일반 객관식 60문항 60분 실기시험 스프레드시트 실무 데이터베이스 실무 컴퓨터 작업형 90분 (과목별 45분) 2급 필기시험 컴퓨터 일반 스프레드시트 일반 객관식 40문항 40분 실기시험 스프레드시트 실무 컴퓨터 작업형 40분 윈도우 계산기 및 메모장 기능 사용 불가 실기프로그램:  MS오피스 LTSC Professional Plus 2021, 컴퓨터활용능력 2급은 MS오피스 LTSC Standard 2021 도 사용가능 합격결정기준 필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상 실기 : 100점 만점에 70점 이상(1급은 두과목 모두 70점 이상) 수험료 필기 : 20,500원 실기 : 25,000원 자격특전 공무원 채용 가산점 - 소방공무원(사무관리직) : 컴퓨터활용능력1급(3%), 컴퓨터활용능력2급(1%) - 해양경찰공무원 : 컴퓨터활용능력1, 2급(1점) 학점은행제 학점인정 : 1급 14학점, 2급 6학점 100여개 공공기관·공기업 등 채용·승진 우대 첨부파일 2024-2026년 컴퓨터활용능력 출제기준_202307(수정) .pdf"
+          },
+          {
+            "url": "https://license.korcham.net/co/examguide02.do?cd=&mm=21",
+            "original_url": "https://license.korcham.net/co/examguide02.do?cd=&mm=21",
+            "title": "종목소개 시험문제",
+            "checked_on": "2026-10-04",
+            "sha256": "248da88c3d8800561890478246ed9957588ad4d7b1da1e4e6032b43d2c311c11",
+            "excerpt": "닫기 사이트맵 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/화장품 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 개별접수 접수안내 원서접수안내 접수유의사항 시험장정보조회 결제내역조회 시험접수 장애인상시시험접수 접수내역변경 환불신청 수험료 환불 기타 100% 예외환불 단체접수 접수안내 접수안내 접수유의사항 시험장정보조회 정기시험접수 수험자용 관리자용 접수확인 및 수험표출력 개별인증 필기면제대상자 명단등록 서류출력 및 조회 상시시험접수 수험자용 관리자용 접수확인 및 수험표출력 수험료 환불 합격확인 합격자현황 및 출력 자격증신청 단체자격증신청 자격증 신청확인 자격진위 신청 및 결과 마이페이지 접수 및 환불내역 접수내역 환불내역 취득내역 취득내역 디지털 배지 시험결과 자격증신청 자격증 발급안내 자격증신청 신청확인 및 환불 개인정보관리 개인정보수정 회원탈퇴 비서실기면제신청 진위여부 신청 및 결과 필기면제 신청 및 내역 고객센터 공지사항 전국상의별 공지안내 공지사항 자주하는 질문 문의하기 자료실 수험자가이드 원격지원 활용현황 자격특전 자격활용사례 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/마케팅 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 HOME 종목소개 컴퓨터활용능력 컴퓨터활용능력 국가기술자격 시험안내 시험문제 시험일정 관련자료 FAQ 컴퓨터활용능력 시험문제 상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다. 시험문제 공개는 투명한 자격제도 운영을 위해 공개하는 것이므로 상업적 또는 비상업적으로 복사하여 비축, 활용, 출판하는 행위는 저작권법에 의해 처벌 받을 수 있습니다. 시험문제 목록 번호 제목 첨부 등록일 1 (2026년~2030년 적용) 비서 출제기준  현행-개편안 비교표 2025-07-01 2 무역영어 시험 출제기준(2026~) 2025-06-27 3 맞춤형화장품조제관리사 교수학습가이드(개정4판) 2025-06-27 4 맞춤형화장품조제관리사 출제문제 이의신청 안내 2025-05-22 5 경영정보시각화능력 함수출제범위 2024-08-29 6 (2025년~2027년 적용) 전산회계운용사 출제기준 주요변경사항 비교 및 현행-개편(안) 비교표 2024-06-28 7 경영정보시각화능력 필기 모의문제 정정 안내 2024-06-05 8 경영정보시각화능력 실기시험 태블로 프로그램 변경 관련 모의문제 업데이트 안내 2024-05-20 9 경영정보시각화능력 실기 모의문제 2024-05-20 10 한글속기 모의 테스트 설치파일 2024-04-26 11 맞춤형화장품조제관리사 출제기준 2024-04-15 12 2024년 IT Plus 필실기 시험 수험용 프로그램 업그레이드 안내 2024-03-21 13 2024년 IT Plus 출제기준 2024-03-21 14 IT Plus 실기 연습예제(2016버전) 2024-03-21 15 IT Plus 모의고사 문제집(과목별) 2024-03-21 16 IT Plus 수험가이드북_2010버전(통합본) 2024-03-21 17 IT Plus 수험가이드북_2010버전(문제지와 소스) 2024-03-21 18 IT Plus 수험가이드북_2010버전(과목별) 2024-03-21 19 2024년 한글 플러스 출제기준 2024-03-21 20 한글플러스 연습문제 2024-03-21 21 2024년 파워포인트 플러스 출제기준 2024-03-21 22 파워포인트플러스 연습문제 2024-03-21 23 2024년 엑셀 플러스 출제기준 2024-03-21 24 엑셀플러스 연습문제 2024-03-21 25 2024년 한글속기 채점 기준 2024-03-21 26 상공회의소 한자 검정기준 2024-03-21 27 학습용 문제모음집 2024-03-21 28 초급한자 지침서 2024-03-21 29 급수별(1~9급) 배정한자 2024-03-21 30 2013년 상공회의소 한자 모의문제 2024-03-21 31 FLEX 문제 풀이 전략_스페인어 2024-03-21 32 FLEX 문제 풀이 전략_영어 2024-03-21 33 FLEX 문제 풀이 전략_중국어 2024-03-21 34 FLEX 문제 풀이 전략_프랑스어 2024-03-21 35 FLEX 문제 풀이 전략_러시아어 2024-03-21 36 FLEX 문제 풀이 전략_독일어 2024-03-21 37 FLEX 문제 풀이 전략_일본어 2024-03-21 38 FLEX 쓰기 답안지(서양어 동양어) 2024-03-21 39 외국어능력시험(FLEX) 평가영역 2024-03-21 40 2023년 무역영어 세부출제기준 2024-03-21 41 (CAMP)2024년 전산회계운용사 3급 공개형 2024-03-21 42 (CAMP)2024년 전산회계운용사 2급 공개형 2024-03-21 43 (SPLUS)2024년 전산회계운용사 3급 공개형 2024-03-21 44 (SPLUS)2024년 전산회계운용사 2급 공개형 2024-03-21 45 2023년 전산회계운용사 2급 공개형_SPLUS 2024-03-21 46 전산회계운용사 자격 출제기준 현행-개편(안) 비교표 2024-03-21 47 2022년 전산회계운용사 출제기준 주요 변경사항 비교 2024-03-21 48 2022년 전산회계운용사 출제기준 2024-03-21 49 맞춤형화장품조제관리사 자격시험 예시문항 2차 2024-03-21 50 맞춤형화장품조제관리사 자격시험 예시문항 1차 2024-03-21 51 맞춤형화장품조제관리사 답안지 양식 2024-03-21 52 2024년 유통관리사 출제기준 2024-03-21 53 2021년 비서 출제기준 2024-03-21 54 경영정보시각화능력 필기 모의문제 2024-03-21 55 2024년 워드프로세서 실기 예제 문제 2024-03-21 56 MSWord 예제 문제 공지 2024-03-21 57 2022년 워드프로세서 실기 예제 문제 2024-03-21 58 2021년 워드프로세서 실기 예제 문제 2024-03-21 59 2024년 컴퓨터활용능력 1·2급 예제 문제 2024-03-21 60 컴퓨터활용능력 실기 연습 예제 문제 2024-03-21"
+          },
+          {
+            "url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=71&no=273172&pg=1",
+            "original_url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=71&no=273172&pg=1",
+            "title": "종목소개 관련자료",
+            "checked_on": "2026-10-04",
+            "sha256": "487461d95f40afab4038eca46a541791febc3d1ed1ae46359b808352070d038e",
+            "excerpt": "닫기 사이트맵 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/화장품 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 개별접수 접수안내 원서접수안내 접수유의사항 시험장정보조회 결제내역조회 시험접수 장애인상시시험접수 접수내역변경 환불신청 수험료 환불 기타 100% 예외환불 단체접수 접수안내 접수안내 접수유의사항 시험장정보조회 정기시험접수 수험자용 관리자용 접수확인 및 수험표출력 개별인증 필기면제대상자 명단등록 서류출력 및 조회 상시시험접수 수험자용 관리자용 접수확인 및 수험표출력 수험료 환불 합격확인 합격자현황 및 출력 자격증신청 단체자격증신청 자격증 신청확인 자격진위 신청 및 결과 마이페이지 접수 및 환불내역 접수내역 환불내역 취득내역 취득내역 디지털 배지 시험결과 자격증신청 자격증 발급안내 자격증신청 신청확인 및 환불 개인정보관리 개인정보수정 회원탈퇴 비서실기면제신청 진위여부 신청 및 결과 필기면제 신청 및 내역 고객센터 공지사항 전국상의별 공지안내 공지사항 자주하는 질문 문의하기 자료실 수험자가이드 원격지원 활용현황 자격특전 자격활용사례 종목소개 시험일정 사무정보 컴퓨터활용능력 경영정보시각화능력 워드프로세서 비서 유통/마케팅 유통관리사 맞춤형화장품조제관리사 전자상거래관리사 전자상거래운용사 회계/세무 전산회계운용사 외국어/한자 무역영어 상공회의소 한자 전문기술 한글속기 우대법령 종목소개 채용 모의테스트 K-NCS Test K-NCS 직업기초능력평가 시험안내 시험문제 시험일정 관련자료 FAQ 자격활용사례 K-NCS Test 관련자료 관련자료 2024년 컴퓨터활용능력 필/실기시험 수험용 프로그램 업그레이드 안내(재공지) 종목명 : 컴퓨터활용능력 등록일 : 2023-07-11 조회수 : 34627 2024년부터 컴퓨터활용능력 필/실기 시험 프로그램이 Microsoft Office LTSC Professional Plus 2021 으로 변경되오니 시험준비에 참고하시기 바랍니다. 1. 필기시험 < 1과목 컴퓨터 일반 > - 운영체제 : Windows 10 버전 - 웹브라우저 : 버전과 상관없이 웹브라우저의 공통 기능 < 2과목 스프레드시트 일반 및 3과목 데이터베이스 일반> - Microsoft Office LTSC Professional Plus 2021 2. 실기시험 구  분 현행 (2021~2023년) 조정 (2024~2026년) 실기시험 Microsoft Office 2016 Microsoft Office LTSC Professional Plus 2021 * 참고로 제시된 2024~2026년 컴퓨터활용능력 실기 연습예제는 기능에 따른 변경 배점을 안내하기 위한 것입니다. 시험 문제에 포함되는 기능은 출제기준을 참고하시길 바랍니다. ※ 적용시기 : 2024년 1월 1일부터 첨부파일 2024~2026년 컴퓨터활용능력 필실기시험 수험용 프로그램 업그레이드 안내 (재공지).pdf 이전글 2021년 컴퓨터활용능력 필/실기시험 수험용 프로그램 업그레이드 안내 다음글 2024~2026년 컴퓨터활용능력 출제기준 목록",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://www.sinagong.co.kr/pds/003002003/books",
+          "https://cert-it.lifelearn.kr/wiki/computer-proficiency-level2-written/"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 12030,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://license.korcham.net/co/examguide04Sub.do?cd=0103&mm=71&no=273172&pg=1",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0031&tracseId=ACG20253001131516&tracseTme=40&trainstCstmrId=500020020261",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://bukbu.seoulcareerup.or.kr/bukbu/edu/selectEduProgram.do?sch_class_code=C100156012",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "컴활 2급",
+        "organic_domains": [
+          "passbank.kr",
+          "www.sinagong.co.kr",
+          "m.yes24.com",
+          "play.google.com",
+          "cert-it.lifelearn.kr",
+          "www.sinagong.co.kr",
+          "www.sinagong.co.kr",
+          "play.google.com",
+          "www.aladin.co.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://passbank.kr/compu2/archive",
+            "domain": "passbank.kr",
+            "title": "컴퓨터활용능력 2급 기출문제 해설집 | 패스뱅크",
+            "snippet": "컴활 2급 필기 기출문제를 회차별로 모았습니다. ... 실제로 풀어보며 학습하려면 문제풀이 모드 를 이용하세요."
+          },
+          {
+            "url": "https://www.sinagong.co.kr/pds/003002003/books",
+            "domain": "www.sinagong.co.kr",
+            "title": "컴퓨터활용능력 2급 필기+실기 - 자료실 | 시나공",
+            "snippet": "제목 조회수 등록일 * 2027 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급) 119 2026-09-302027 한 권으로 끝내는 시나공 컴활 2급 필기+실기 (컴퓨터활용능력 2급)"
+          },
+          {
+            "url": "https://m.yes24.com/goods/detail/173938864",
+            "domain": "m.yes24.com",
+            "title": "2026 선넘는 컴퓨터활용능력 2급 필기+실기 | 김쌤(김경화) | 쏠티북스 - 예스24",
+            "snippet": "이미 소장하고 있다면 판매해 보세요. ... 『2026 선넘는 컴퓨터활용능력 2급 필기+실기』는 이론과 실기를 한 권에 통합하여, 효율적으로 합격할 수 있도록 설계된 교재입니다.<br/><br/>본서는 필기와 실기를 한"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?hl=ko&id=dev.daylab.comhwal2",
+            "domain": "play.google.com",
+            "title": "컴활 2급 필기 컴퓨터활용능력 개념정리 - 컴활메이트 - Google Play 앱",
+            "snippet": "컴활메이트는 컴퓨터활용능력 2급 필기(컴퓨터 일반·스프레드시트 일반)를 1~2주 안에 합격선까지 끌어올리도록 설계한 학습 앱입니다. ... 오늘 푼 문제 수, 누적 정답률, 연속 학습일, 남은 문제 수를"
+          },
+          {
+            "url": "https://cert-it.lifelearn.kr/wiki/computer-proficiency-level2-written/",
+            "domain": "cert-it.lifelearn.kr",
+            "title": "컴활 2급 필기 (40문항 40분·과락 기준·출제범위 세부항목) | IT자격증 위키",
+            "snippet": "컴활 2급 필기는 컴퓨터 일반·스프레드시트 일반 2과목을 객관식 40문항, 40분으로 치릅니다. ... 잘하는 과목으로 평균을 채워도 약한 과목이 40점을 넘지 못하면 소용이 없는 구조네요. ..."
+          },
+          {
+            "url": "https://www.sinagong.co.kr/community/003002001/exam-reviews",
+            "domain": "www.sinagong.co.kr",
+            "title": "컴퓨터활용능력 2급 필기 - 시험후기 | 시나공",
+            "snippet": "도서명 제목 작성자 시험일 조회수 ... * 2026 시나공 컴퓨터활용능력2급 필기 총정리 컴활 2급 필기 3일만에 독학으로 1트 합격! ... * 2025 시나공 컴퓨터활용능력 2급"
+          },
+          {
+            "url": "https://www.sinagong.co.kr/community/003002002/exam-reviews",
+            "domain": "www.sinagong.co.kr",
+            "title": "컴퓨터활용능력 2급 실기 - 시험후기 | 시나공",
+            "snippet": "2급 실기 한번에 합격한 후기 장*연 2026-07-23 285 ... * 2025 시나공 컴퓨터활용능력 2급 실기 기본서 (ver.2021) 시나공 실기 기본서로 컴활 2급 합격했습니다 이*경 2026-07-16"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?id=dev.daylab.comhwal2",
+            "domain": "play.google.com",
+            "title": "컴활 2급 필기 컴퓨터활용능력 개념정리 - 컴활메이트 - Apps on Google Play",
+            "snippet": "# 컴활 2급 필기 컴퓨터활용능력 개념정리 - 컴활메이트 ... 바우뫼로 91, 1층 10,11호 서초구, 서울특별시 06751 South Korea ... 생활스포츠지도사 2급 - 생체2급 필기 문제풀이"
+          },
+          {
+            "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373447996",
+            "domain": "www.aladin.co.kr",
+            "title": "2026 한 권으로 끝내는 시나공 컴활 2급 필기 + 실기 (컴퓨터활용능력 2급) | 2026 시나공 컴퓨터활용능력 | 길벗 R&D 외 | 알라딘",
+            "snippet": "### 이 책을 읽고 싶은 사람 ... * 2026 한 권으로 끝내는 시나공 컴활 2급 필기 + 실기 (컴퓨터활용능력 2급) | 2026 시나공 컴퓨터활용능력 ..."
+          }
+        ],
+        "dominant_result_ratio": 0.0,
+        "score_components": {
+          "demand": 32.64,
+          "organic_opportunity": 26.67,
+          "trend": 0.74,
+          "intent_fit": 0
+        },
+        "trend_growth": 0.074,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 6,
+        "selected_at": "2026-10-04T01:56:18.847236+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "컴활2급"
+        ],
+        "status": "research_only",
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "컴활2급",
+          "executed_query": "컴활 2급",
+          "topic": "컴활2급 필기·실기 준비: 시험과목, 합격기준, 수험료와 연습자료",
+          "intent": "컴활2급 필기·실기는 무엇을 준비하며, 합격기준·시험시간·사용 프로그램과 연습자료는 어떻게 확인하나요?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-04T01:56:18.847236+00:00",
+          "result_count": 9,
+          "domain_count": 6,
+          "dominant_ratio": 0.0,
+          "search_review": {
+            "version": 1,
+            "query": "컴활2급",
+            "executed_query": "컴활 2급",
+            "provider": "codex_native_search",
+            "checked_at": "2026-10-04T01:56:18.847236+00:00",
+            "raw_sha256": "8bc6e517770d57d61148b8dfe4b77df16e795d11dbb11beb9bcd3488eb47e201",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "컴활 2급 필기 기출문제를 회차별로 모았습니다."
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "컴퓨터활용능력 2급 필기+실기 - 자료실"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "이론과 실기를 한 권에 통합하여, 효율적으로 합격할 수 있도록 설계된 교재입니다."
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "컴활메이트는 컴퓨터활용능력 2급 필기(컴퓨터 일반·스프레드시트 일반)를 1~2주 안에 합격선까지 끌어올리도록 설계한 학습 앱입니다."
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "컴활 2급 필기는 컴퓨터 일반·스프레드시트 일반 2과목을 객관식 40문항, 40분으로 치릅니다."
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "컴활 2급 필기 3일만에 독학으로 1트 합격!"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "시나공 실기 기본서로 컴활 2급 합격했습니다"
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "컴활 2급 필기 컴퓨터활용능력 개념정리 - 컴활메이트"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "2026 한 권으로 끝내는 시나공 컴활 2급 필기 + 실기 (컴퓨터활용능력 2급)"
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 9,
+            "canonical_result_count": 9,
+            "relevant_result_count": 9,
+            "relevant_site_count": 6,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "relevance_ratio": 1.0,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.0,
+            "site_concentration": 0.3333333333333333,
+            "organic_opportunity": 26.67
+          },
+          "scope": "full_keyword",
+          "target_keyword": "컴활2급",
+          "matches": [
+            {
+              "result_index": 1,
+              "quote": "컴퓨터활용능력 2급 필기+실기 - 자료실"
+            },
+            {
+              "result_index": 4,
+              "quote": "컴활 2급 필기 (40문항 40분·과락 기준·출제범위 세부항목)"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-04T01:56:18.847236+00:00",
+          "input_sha256": "c0cbbed820820925cb2822ca7f7b5054d025de87d9458092569ba52656718430",
+          "review": {
+            "scope": "unknown",
+            "target_keyword": "컴활2급",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "<컴퓨터활용능력> 검정은 사무자동화의 필수 프로그램인 스프레드시트(SpreadSheet), 데이터베이스(Database) 활용능력을 평가하는 국가기술자격 시험입니다.",
+                "entity": "컴퓨터활용능력",
+                "context": "system_rules"
+              },
+              {
+                "source_index": 1,
+                "quote": "컴퓨터활용능력 시험문제 상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다.",
+                "entity": "컴퓨터활용능력",
+                "context": "system_rules"
+              },
+              {
+                "source_index": 2,
+                "quote": "2024년부터 컴퓨터활용능력 필/실기 시험 프로그램이 Microsoft Office LTSC Professional Plus 2021 으로 변경되오니 시험준비에 참고하시기 바랍니다.",
+                "entity": "컴퓨터활용능력",
+                "context": "system_rules"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "응시조건과 실기 응시 가능 기간은 무엇인가요?",
+                "answer": "응시자격 제한은 없으며, 실기는 필기 합격 후 2년 이내 있는 시험에 응시할 수 있습니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "응시자격 제한없음(단, 실기 시험은 필기 합격 후 2년 이내 있는 실기 시험 응시 가능)"
+              },
+              {
+                "facet": "필기·실기 과목과 시험방식·시간은 무엇인가요?",
+                "answer": "필기는 컴퓨터 일반·스프레드시트 일반 40문항 40분, 실기는 스프레드시트 실무 작업형 40분입니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "2급 필기시험 컴퓨터 일반 스프레드시트 일반 객관식 40문항 40분 실기시험 스프레드시트 실무 컴퓨터 작업형 40분"
+              },
+              {
+                "facet": "필기·실기 합격기준은 무엇인가요?",
+                "answer": "필기는 과목별 40점 이상이면서 평균 60점 이상, 2급 실기는 70점 이상입니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상 실기 : 100점 만점에 70점 이상(1급은 두과목 모두 70점 이상)"
+              },
+              {
+                "facet": "수험료는 얼마인가요?",
+                "answer": "공식 안내의 필기 수험료는 20,500원, 실기는 25,000원입니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "수험료 필기 : 20,500원 실기 : 25,000원"
+              },
+              {
+                "facet": "준비할 프로그램과 사용 제한은 무엇인가요?",
+                "answer": "실기는 Office LTSC 2021을 사용하며 2급은 Standard도 가능합니다. 윈도우 계산기·메모장은 사용할 수 없습니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "윈도우 계산기 및 메모장 기능 사용 불가 실기프로그램:  MS오피스 LTSC Professional Plus 2021, 컴퓨터활용능력 2급은 MS오피스 LTSC Standard 2021 도 사용가능"
+              },
+              {
+                "facet": "공식 연습자료는 무엇이며 실제 상시시험 문제와 어떻게 다른가요?",
+                "answer": "공식 목록에 2024년 1·2급 예제와 실기 연습 예제가 있습니다. 실제 상시시험 문제는 비공개입니다.",
+                "supported": true,
+                "source_index": 1,
+                "quote": "59 2024년 컴퓨터활용능력 1·2급 예제 문제 2024-03-21 60 컴퓨터활용능력 실기 연습 예제 문제 2024-03-21"
+              },
+              {
+                "facet": "현재 필기·실기 준비에 필요한 구체적인 학습 범위는 무엇인가요?",
+                "answer": "과목·프로그램은 확인되지만 출제기준 본문이 없습니다. 예제만으로 현재 학습 범위를 설명하기에는 근거가 부족합니다.",
+                "supported": false,
+                "source_index": 2,
+                "quote": "시험 문제에 포함되는 기능은 출제기준을 참고하시길 바랍니다."
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 1,
+              "quote": "컴퓨터활용능력 시험문제 상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다.",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
         "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.work24.go.kr/wk/r/d/1110/resumeSelfIntroGuide1.do",
-              "title": "이력서, 자소서 작성가이드 | 취업가이드 | 취업지원",
-              "excerpt_chars": 3382
-            },
-            {
-              "url": "https://1350.moel.go.kr/rtmview.do?id=1000318641",
-              "title": ":: 고용노동부 모바일페이지 고객센터 ::",
-              "excerpt_chars": 498
-            },
-            {
-              "url": "https://www.moel.go.kr/retirementpayCal.do",
-              "title": "퇴직금 계산 < 고용노동부",
-              "excerpt_chars": 2952
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          }
-        }
-      },
-      {
-        "keyword": "컴퓨터활용능력2급",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "concentrated_search_results",
-          "dominant_search_results"
-        ],
-        "monthly_search": 19140,
-        "organic_provider": "codex_native_search",
-        "organic_query": "컴퓨터활용능력 2급",
-        "organic_results": [
-          {
-            "url": "https://certpass.kr/cert/comhwal2/",
-            "domain": "certpass.kr",
-            "title": "컴퓨터활용능력 2급 자격증 안내 — 시험과목·합격기준·상시검정 | CertPass",
-            "snippet": "# 컴퓨터활용능력 2급 시험 가이드 ... 컴퓨터활용능력 2급은 국가자격인가요?"
-          },
-          {
-            "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&cstmConsTme=&focusId=&tracseId=AIG20250000521676&tracseReqstsCd=&tracseTme=2&trainstCstmrId=500033267697",
-            "domain": "www.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"컴퓨터활용능력2급(필기+실기)자격증취득\" 훈련과정에 최종 \"선발\" 되셨습니다. ... 컴퓨터활용능력2급(필기+실기)자격증취득"
-          },
-          {
-            "url": "https://lms.gg.go.kr/gangseo/service/hr/class_detail_info.do?openNum=10766&sbjctNum=10500",
-            "domain": "lms.gg.go.kr",
-            "title": "잡아바 러닝센터",
-            "snippet": "1차시 | 컴퓨터활용능력 2급 필기 - 컴퓨터일반 (2024 개정)-01 | 24분 39초"
-          },
-          {
-            "url": "https://m.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0031&tracseId=ACG20253001123382&tracseTme=241&trainstCstmrId=500034225481",
-            "domain": "m.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"[한끝] 컴퓨터활용능력 2급 올인원 (필기 + 실기)\" 훈련과정에 \"선발\" 되셨습니다. ... 컴퓨터활용능력 2급 필기 시험 과목인 컴퓨터 일반, 스프레드시트 일반과 컴퓨터활용능력 2급 실기"
-          },
-          {
-            "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&tracseId=AIG20250000528643&tracseTme=5&trainstCstmrId=500042856569",
-            "domain": "www.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"컴퓨터활용능력2급(필기/실기)\" 훈련과정에 최종 \"선발\" 되셨습니다. ... 훈련기관 안내사항 컴퓨터활용능력2급 필기/실기 자격증 과정(야간과정입니다)"
-          },
-          {
-            "url": "https://www.q-net.or.kr/jm/before_jikmu_history_27.pdf",
-            "domain": "www.q-net.or.kr",
-            "title": "27. 기초사무(대한상공회의소 시행)",
-            "snippet": "<td>(신) 컴퓨터활용능력2급</td>"
-          },
-          {
-            "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&cstmConsTme=&focusId=&tracseId=AIG20240000486832&tracseReqstsCd=&tracseTme=12&trainstCstmrId=500020011165",
-            "domain": "www.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"[ 컴퓨터활용능력 2급 ] 컴활 2급 (필기+실기) 자격증 취득\" 훈련과정에 최종 \"선발\" 되셨습니다. ... ✔ 과정명 : [ 컴퓨터활용능력 2급 ] 컴활 2급"
-          },
-          {
-            "url": "https://www.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&tracseId=AIG20250000506660&tracseTme=22&trainstCstmrId=500020047983",
-            "domain": "www.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"『완벽대비』 컴퓨터활용능력 2급(컴활2급) 필기,실기 자격증 취득\" 훈련과정에 최종 \"선발\" 되셨습니다. ... | 인터넷과 | IT PLUS,ITQ 공인강사,디지털정보활용능력(DIAT),워드프로세서 1급,워드프로세스,정보처리산업기사,직업능력개발훈련교사(총무·일반사무, 3급),컴퓨터활용능력1급"
-          },
-          {
-            "url": "https://m.work24.go.kr/hr/a/a/3100/selectTracseDetl.do?crseTracseSe=C0061&cstmConsTme=&focusId=&tracseId=AIG20240000486832&tracseReqstsCd=&tracseTme=16&trainstCstmrId=500020011165",
-            "domain": "m.work24.go.kr",
-            "title": "국민내일배움카드 훈련과정상세 | 국민내일배움카드 훈련과정 | 훈련 찾기·신청 | 직업능력개발",
-            "snippet": "### 귀하는 \"[ 컴퓨터활용능력 2급 ] 컴활 2급 (필기+실기) 자격증 취득\" 훈련과정에 최종 \"선발\" 되셨습니다. ... [ 컴퓨터활용능력 2급 ] 컴활 2급 (필기+실기) 자격증 취득"
-          },
-          {
-            "url": "https://gfile.gilbut.co.kr/gilbut/bookdata/BN004520/copyright/%EA%B5%90%EC%9E%AC%EC%B1%84%ED%83%9D%EC%9A%A9_2026%EC%8B%9C%EB%82%98%EA%B3%B5_%EC%BB%B4%ED%99%9C2%EA%B8%89_%ED%95%84%EA%B8%B0_%EC%B4%9D%EC%A0%95%EB%A6%AC.pdf",
-            "domain": "gfile.gilbut.co.kr",
-            "title": "컴퓨터활용능력 2급 필기",
-            "snippet": "컴퓨터활용능력 2급 필기"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "컴퓨터활용능력2급",
-          "executed_query": "컴퓨터활용능력 2급",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "daf98e99b97dcb67e953a4fc051218116b487a590de95a5318e3cdb9854dcd4a",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "컴퓨터활용능력 2급 자격증 안내 — 시험과목·합격기준·상시검정"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "컴퓨터활용능력2급(필기+실기)자격증취득"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "컴퓨터활용능력 2급 필기 - 컴퓨터일반 (2024 개정)"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "컴퓨터활용능력 2급 필기 시험 과목인 컴퓨터 일반, 스프레드시트 일반"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "컴퓨터활용능력2급 필기/실기 자격증 과정(야간과정입니다)"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "27. 기초사무(대한상공회의소 시행)"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "[ 컴퓨터활용능력 2급 ] 컴활 2급 (필기+실기) 자격증 취득"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "『완벽대비』 컴퓨터활용능력 2급(컴활2급) 필기,실기 자격증 취득"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "[ 컴퓨터활용능력 2급 ] 컴활 2급 (필기+실기) 자격증 취득"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "컴퓨터활용능력 2급 필기"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "농협채용공고",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_sites",
-          "concentrated_search_results",
-          "dominant_search_results"
-        ],
-        "monthly_search": 6720,
-        "organic_provider": "codex_native_search",
-        "organic_query": "농협 채용 공고",
-        "organic_results": [
-          {
-            "url": "https://www.nonghyup.com/introduction/nhperson/procedure.do",
-            "domain": "www.nonghyup.com",
-            "title": "채용절차 > 인재상과 채용 > 농협",
-            "snippet": "적합한 인재선발을 위한 최종단계로 서류전형과 필기 시험을 보완하여, 농협이 추구하는 인재상 부합여부, 잠재적 역량과 열정 등을 평가하기 위한 단계입니다. ... 근무지가 채용공고문에 명시된 경우는 해당"
-          },
-          {
-            "url": "https://www.nonghyup.com/introduction/nhperson/person.do",
-            "domain": "www.nonghyup.com",
-            "title": "농협의 인재상 > 인재상과 채용 > 농협",
-            "snippet": "* 농협의 인재상 ... * 채용공고 ... 항상 열린 마음으로 계통간, 구성원간에 존경과 협력을 다하여 조직 전체의 성과가 극대화될 수 있도록 시너지 제고를 위해 노력하는"
-          },
-          {
-            "url": "https://bhwizard.nonghyup.com/sites/cswy/index.do",
-            "domain": "bhwizard.nonghyup.com",
-            "title": "충서원예농협",
-            "snippet": "* 공지사항 충서원예농협 기간제근로자(일반계약직) 전형채용 재공고 제2026-25호 충서원예농협 기간제근로자(일반계약직) 전형채용 재공고 2026.08.26 ... * 2026년 상반기 신규직원 채용 임용장 교부 새로운 대한민국 농협을 이끌어 갈"
-          },
-          {
-            "url": "https://janghowon.nonghyup.com/sites/janghowon/index.do",
-            "domain": "janghowon.nonghyup.com",
-            "title": "장호원농협",
-            "snippet": "* 공지사항 기간제근로자(일반계약직) 채용 재공고(4차) 장호원농협에서 함께 근무할 성실하고 유능한 직원을 채용하고자 붙임의 내용과 같이 재공고합니다.1. ... * 공지사항 기간제근로자(일반계약직) 채용 재공고(3차) 장호원농협에서 함께 근무할"
-          },
-          {
-            "url": "https://kgnh.nonghyup.com/sites/kgnh/index.do",
-            "domain": "kgnh.nonghyup.com",
-            "title": "강경농협",
-            "snippet": "* 공지사항 강경농협 기간제근로자 영업지원직(경제) 채용 공고 강경농협 기간제근로자 채용 공고 2026.02.27 * 공지사항 강경농협 기간제근로자 영업지원직(경제) 채용 공고 강경농협 기간제근로자 영업지원직(경제)채용 공고 2026.02.20"
-          },
-          {
-            "url": "https://with.nonghyup.com/jbnf/jbnfDtl.do?jbnfSqno=76613",
-            "domain": "with.nonghyup.com",
-            "title": "범농협 채용시스템",
-            "snippet": "### [농협경제지주] 농협경제지주 젖소개량사업소 일반계약직 채용 공고 주소복사 ... - 관련법령에 따라 채용심사비용은 구인자(채용사무소)가 부담 (예 : 신체검사 비용 등) - 채용일정은 내부사정 등에 따라"
-          },
-          {
-            "url": "https://www.work.go.kr/framework/filedownload/keisDownload.do?filePathName=0tEQfG23gc4CboXzCZKQ0LSVGOT90Oa4gCTQs%2Bvc3ZgBH9oWviAEhnK0oAk6Fz%2Fd&realFileNm=MS4g6riw6rCE7KCc6re866Gc7J6QKOq4iOycte2FlOufrOyngSkg7LGE7Jqp6rO16rOg66y4KOyViCkucGRm",
-            "domain": "www.work.go.kr",
-            "title": "공고 제2025- 52호",
-            "snippet": "이 고지는 ｢채용절차의 공정화에 관한 법률｣ 제11조제5항에 따른 것으로, 최종합격자를 제외한 ... 우리 농협 채용에 응시한 지원자 중 최종합격이 되지 못한 지원자는 최종합격자 발표일 이후"
-          },
-          {
-            "url": "https://with.nonghyup.com/jbnf/jbnfDtl.do?jbnfSqno=73257",
-            "domain": "with.nonghyup.com",
-            "title": "범농협 채용시스템",
-            "snippet": "### [농협경제지주] 농협경제지주(주) 충남세종본부 일반계약직 직원 신규채용 공고 주소복사 ... * □ 근무형태 : 주 5일근무 □ 급 여 : 시급 10,630원(시간외수당, 특별성과급, 피복비 등"
-          },
-          {
-            "url": "https://yonghyeon.nonghyup.com/",
-            "domain": "yonghyeon.nonghyup.com",
-            "title": "용현농협",
-            "snippet": "* 공지사항 개인금융채권의 관리 및 개인금융채무자의 보호에 관한 법률에 따른 채무조정 내부기준 농축협채무조정 2026.07.21 ... * 공지사항 영업지원직(경제)채용 공고 용현농협 공고 제2025 5호 기간제근로자(영업지원직-경제) 채용"
-          },
-          {
-            "url": "https://gonggeom.nonghyup.com/sites/gonggeom/index.do",
-            "domain": "gonggeom.nonghyup.com",
-            "title": "공검농협",
-            "snippet": "* 주요연혁 공검농협이 설립 이후 현재까지 걸어온 주요 변화와 성장의 과정을 연도별로 확인할 수 있습니다. ... * 사무소 안내 공검농협 각 사무소의 위치와 연락처 등"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "농협채용공고",
-          "executed_query": "농협 채용 공고",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "fa716df7fd75cee6fc61cd543e8fbf9b6875d58d8caeb9515b929485c05e09e6",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "적합한 인재선발을 위한 최종단계로 서류전형과 필기 시험을 보완하여"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "항상 열린 마음으로 계통간, 구성원간에 존경과 협력을 다하여"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "충서원예농협 기간제근로자(일반계약직) 전형채용 재공고"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "장호원농협에서 함께 근무할 성실하고 유능한 직원을 채용하고자"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "강경농협 기간제근로자 영업지원직(경제) 채용 공고"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "농협경제지주 젖소개량사업소 일반계약직 채용 공고"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "우리 농협 채용에 응시한 지원자 중 최종합격이 되지 못한 지원자는"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "농협경제지주(주) 충남세종본부 일반계약직 직원 신규채용 공고"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "용현농협 공고 제2025 5호 기간제근로자(영업지원직-경제) 채용"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "공검농협 각 사무소의 위치와 연락처 등"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "KT&G채용",
-        "reason": "invalid search query transformation"
-      },
-      {
-        "keyword": "IBK기업은행채용",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_sites",
-          "concentrated_search_results"
-        ],
-        "monthly_search": 8820,
-        "organic_provider": "codex_native_search",
-        "organic_query": "IBK기업은행 채용",
-        "organic_results": [
-          {
-            "url": "https://ibk.incruit.com/index_main_2025.asp",
-            "domain": "ibk.incruit.com",
-            "title": "IBK 기업은행 채용페이지",
-            "snippet": "2026 상반기 IBK기업은행 신입행원 채용"
-          },
-          {
-            "url": "https://ibk4.incruit.com/hire/hirelist.asp",
-            "domain": "ibk4.incruit.com",
-            "title": "2026년 IBK기업은행 채용사이트",
-            "snippet": "4 | IBK기업은행 2026년 하반기 1차 시간선택제 준정규직(장애·보훈) 채용"
-          },
-          {
-            "url": "https://blog.ibk.co.kr/569692",
-            "domain": "blog.ibk.co.kr",
-            "title": "2026년 하반기 IBK기업은행 신입행원 채용",
-            "snippet": "2026년 하반기 IBK기업은행 신입행원 채용이 시작됩니다!"
-          },
-          {
-            "url": "https://blog.ibk.co.kr/m/569692",
-            "domain": "blog.ibk.co.kr",
-            "title": "2026년 하반기 IBK기업은행 신입행원 채용",
-            "snippet": "2026년 하반기 IBK기업은행 신입행원 채용이 시작됩니다!"
-          },
-          {
-            "url": "https://ibk.incruit.com/jobinfo/ibk_prosess.html",
-            "domain": "ibk.incruit.com",
-            "title": "IBK 기업은행 채용정보 - 채용프로세스",
-            "snippet": "적부심사(채용분야별 입행지원서 내용의 불량·불성실* 검증) ... ※ 직무수행의 주요 출제 과목은 채용 전용 홈페이지(http://ibk.incruit.com) FAQ 참조 ... 10월 말 ~ 11월 초·중순 예정 / 기업은행"
-          },
-          {
-            "url": "https://ibk.incruit.com/jobinfo/job_faq.html",
-            "domain": "ibk.incruit.com",
-            "title": "IBK 기업은행 채용정보 - 채용FAQ",
-            "snippet": "IBK기업은행은 블라인드 채용 가이드라인을 준수하며, 그 취지에 따라 학력, 학교명, 나이, 성별 등의 정보를 요구하지 않습니다. ... 채용 전용 홈페이지 좌측의 '입행지원서 확인'을 통해 해당"
-          },
-          {
-            "url": "https://www.ibkcredit.co.kr/",
-            "domain": "www.ibkcredit.co.kr",
-            "title": "IBK 신용정보",
-            "snippet": "* 2026년 하반기 IBK신용정보 준정규직 채용 공고 2026-08-07 ... * IBK기업은행"
-          },
-          {
-            "url": "https://ibk.incruit.com/apply/index.asp",
-            "domain": "ibk.incruit.com",
-            "title": "IBK기업은행 채용정보",
-            "snippet": "### 채용정보"
-          },
-          {
-            "url": "https://ibk3.incruit.com/hire/viewhire.asp?projectid=106",
-            "domain": "ibk3.incruit.com",
-            "title": "2026년 IBK기업은행 채용사이트",
-            "snippet": "* 반환청구방법 : ‘채용서류 반환청구서’ 양식을 작성하여 이메일(recruit@ibk.co.kr)로 신청, 접수 후 14일 이내 일반등기 발송 또는 방문수령 가능 ... 전염병 등 국내외 특수한 상황 발생"
-          },
-          {
-            "url": "https://ibk.incruit.com/preview/preview_list.html",
-            "domain": "ibk.incruit.com",
-            "title": "IBK 기업은행 채용정보 - 채용프로세스",
-            "snippet": "최근 입행 직원들의 채용 과정 노하우 듣기! ... Image: IBK기업은행"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "IBK기업은행채용",
-          "executed_query": "IBK기업은행 채용",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "1cc5a97095785bdbeee9d58487bfb3bb4b5063d9837260d1fefa9ab63bc7e23a",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "2026 상반기 IBK기업은행 신입행원 채용"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "IBK기업은행 2026년 하반기 1차 시간선택제 준정규직(장애·보훈) 채용"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "2026년 하반기 IBK기업은행 신입행원 채용이 시작됩니다!"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "2026년 하반기 IBK기업은행 신입행원 채용이 시작됩니다!"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "적부심사(채용분야별 입행지원서 내용의 불량·불성실* 검증)"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "IBK기업은행은 블라인드 채용 가이드라인을 준수하며"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "2026년 하반기 IBK신용정보 준정규직 채용 공고"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "IBK기업은행 채용정보"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "반환청구방법 : ‘채용서류 반환청구서’ 양식을 작성하여 이메일(recruit@ibk.co.kr)로 신청"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "최근 입행 직원들의 채용 과정 노하우 듣기!"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "국정원채용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.mju.ac.kr/bbs/sba/253/233010/artclView.do",
-              "title": "K2Web Wizard",
-              "excerpt_chars": 557
-            },
-            {
-              "url": "https://www.work.go.kr/yesan/main.do",
-              "title": "메인 - 예산고용복지센터",
-              "excerpt_chars": 3539
-            },
-            {
-              "url": "https://www.110.go.kr/data/counselView.do?curPage=340&num=A01_659627",
-              "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
-              "excerpt_chars": 864
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          },
-          "source_recovery": {
+          "coverage_recovery": {
             "attempted": true,
             "initial_review": {
-              "official_sources": [
+              "version": 1,
+              "checked_at": "2026-10-04T01:56:18.847236+00:00",
+              "input_sha256": "9ad6915d77513e36f0bccdbba9757760e7ccfffe1a3afecabc58f23498bb8f82",
+              "review": {
+                "scope": "unknown",
+                "target_keyword": "컴활2급",
+                "sources": [
+                  {
+                    "source_index": 0,
+                    "quote": "2급 필기시험 컴퓨터 일반 스프레드시트 일반 객관식 40문항 40분 실기시험 스프레드시트 실무 컴퓨터 작업형 40분",
+                    "entity": "2급",
+                    "context": "system_rules"
+                  },
+                  {
+                    "source_index": 1,
+                    "quote": "컴퓨터활용능력 시험문제 상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다.",
+                    "entity": "컴퓨터활용능력",
+                    "context": "system_rules"
+                  }
+                ],
+                "required_facets": [
+                  {
+                    "facet": "필기·실기의 시험과목과 문항·작업 형식, 시험시간은 무엇인가?",
+                    "answer": "필기는 컴퓨터 일반·스프레드시트 일반 40문항 40분, 실기는 스프레드시트 실무 작업형 40분이다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "2급 필기시험 컴퓨터 일반 스프레드시트 일반 객관식 40문항 40분 실기시험 스프레드시트 실무 컴퓨터 작업형 40분"
+                  },
+                  {
+                    "facet": "응시조건과 필기 합격 후 실기 응시 가능 기간은?",
+                    "answer": "응시자격 제한은 없으며 실기는 필기 합격 후 2년 이내에 응시해야 한다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "응시자격 제한없음(단, 실기 시험은 필기 합격 후 2년 이내 있는 실기 시험 응시 가능)"
+                  },
+                  {
+                    "facet": "필기·실기의 합격기준은?",
+                    "answer": "필기는 과목당 40점 이상이면서 평균 60점 이상, 실기는 70점 이상이다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상 실기 : 100점 만점에 70점 이상(1급은 두과목 모두 70점 이상)"
+                  },
+                  {
+                    "facet": "실기 연습에 사용할 프로그램은?",
+                    "answer": "MS오피스 LTSC Professional Plus 2021을 사용하며 2급은 LTSC Standard 2021도 가능하다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "실기프로그램:  MS오피스 LTSC Professional Plus 2021, 컴퓨터활용능력 2급은 MS오피스 LTSC Standard 2021 도 사용가능"
+                  },
+                  {
+                    "facet": "필기·실기 수험료는?",
+                    "answer": "공식 수험료는 필기 20,500원, 실기 25,000원이다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "수험료 필기 : 20,500원 실기 : 25,000원"
+                  },
+                  {
+                    "facet": "현재 필기·실기에서 구체적으로 무엇을 학습해야 하는가?",
+                    "answer": "과목명과 2024~2026년 출제기준 첨부명만 확인된다. 실제 세부 학습 범위를 설명할 본문은 없다.",
+                    "supported": false,
+                    "source_index": 0,
+                    "quote": "첨부파일 2024-2026년 컴퓨터활용능력 출제기준_202307(수정) .pdf"
+                  },
+                  {
+                    "facet": "상시시험 실제 문제는 공개되는가?",
+                    "answer": "상시 필기·실기 문제는 문제은행 방식으로 운영되어 비공개다.",
+                    "supported": true,
+                    "source_index": 1,
+                    "quote": "상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다."
+                  },
+                  {
+                    "facet": "공식 연습자료는 어떤 목록에서 확인할 수 있는가?",
+                    "answer": "공식 시험문제 목록에 2024년 1·2급 예제와 실기 연습 예제가 있다. 첨부 내용 자체는 제공되지 않았다.",
+                    "supported": true,
+                    "source_index": 1,
+                    "quote": "59 2024년 컴퓨터활용능력 1·2급 예제 문제 2024-03-21 60 컴퓨터활용능력 실기 연습 예제 문제 2024-03-21"
+                  }
+                ],
+                "current_relevance": {
+                  "kind": "evergreen",
+                  "source_index": 0,
+                  "quote": "<컴퓨터활용능력> 검정은 사무자동화의 필수 프로그램인 스프레드시트(SpreadSheet), 데이터베이스(Database) 활용능력을 평가하는 국가기술자격 시험입니다.",
+                  "event_start": null,
+                  "event_end": null,
+                  "date_quote": null
+                }
+              }
+            },
+            "requirements": {
+              "keyword": "컴활2급",
+              "topic": "컴활2급 필기·실기 준비: 시험과목, 합격기준, 수험료와 연습자료",
+              "intent": "컴활2급 필기·실기는 무엇을 준비하며, 합격기준·시험시간·사용 프로그램과 연습자료는 어떻게 확인하나요?",
+              "scope": "unknown",
+              "hold_reasons": [
+                "narrower_source_coverage",
+                "unverified_source_coverage"
+              ],
+              "missing_facets": [
                 {
-                  "url": "https://www.work.go.kr/yesan/main.do",
-                  "title": "메인 - 예산고용복지센터",
-                  "excerpt_chars": 3539
-                },
-                {
-                  "url": "https://www.110.go.kr/data/counselView.do?curPage=340&num=A01_659627",
-                  "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
-                  "excerpt_chars": 864
-                },
-                {
-                  "url": "https://www.work.go.kr/chungju/main.do",
-                  "title": "메인 - 충주고용복지+센터",
-                  "excerpt_chars": 4070
+                  "question": "현재 필기·실기에서 구체적으로 무엇을 학습해야 하는가?",
+                  "missing_evidence": "과목명과 2024~2026년 출제기준 첨부명만 확인된다. 실제 세부 학습 범위를 설명할 본문은 없다."
                 }
               ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
+              "existing_urls": [
+                "https://license.korcham.net/co/examguide.do?cd=0103&mm=202",
+                "https://license.korcham.net/co/examguide02.do?cd=&mm=21"
+              ]
             },
             "outcome": "review_rejected",
             "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.mju.ac.kr/bbs/sba/253/233010/artclView.do",
-                  "title": "K2Web Wizard",
-                  "excerpt_chars": 557
-                },
-                {
-                  "url": "https://www.work.go.kr/yesan/main.do",
-                  "title": "메인 - 예산고용복지센터",
-                  "excerpt_chars": 3539
-                },
-                {
-                  "url": "https://www.110.go.kr/data/counselView.do?curPage=340&num=A01_659627",
-                  "title": "자주묻는질문 < 자료마당 | 정부민원안내콜센터",
-                  "excerpt_chars": 864
+              "version": 1,
+              "checked_at": "2026-10-04T01:56:18.847236+00:00",
+              "input_sha256": "c0cbbed820820925cb2822ca7f7b5054d025de87d9458092569ba52656718430",
+              "review": {
+                "scope": "unknown",
+                "target_keyword": "컴활2급",
+                "sources": [
+                  {
+                    "source_index": 0,
+                    "quote": "<컴퓨터활용능력> 검정은 사무자동화의 필수 프로그램인 스프레드시트(SpreadSheet), 데이터베이스(Database) 활용능력을 평가하는 국가기술자격 시험입니다.",
+                    "entity": "컴퓨터활용능력",
+                    "context": "system_rules"
+                  },
+                  {
+                    "source_index": 1,
+                    "quote": "컴퓨터활용능력 시험문제 상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다.",
+                    "entity": "컴퓨터활용능력",
+                    "context": "system_rules"
+                  },
+                  {
+                    "source_index": 2,
+                    "quote": "2024년부터 컴퓨터활용능력 필/실기 시험 프로그램이 Microsoft Office LTSC Professional Plus 2021 으로 변경되오니 시험준비에 참고하시기 바랍니다.",
+                    "entity": "컴퓨터활용능력",
+                    "context": "system_rules"
+                  }
+                ],
+                "required_facets": [
+                  {
+                    "facet": "응시조건과 실기 응시 가능 기간은 무엇인가요?",
+                    "answer": "응시자격 제한은 없으며, 실기는 필기 합격 후 2년 이내 있는 시험에 응시할 수 있습니다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "응시자격 제한없음(단, 실기 시험은 필기 합격 후 2년 이내 있는 실기 시험 응시 가능)"
+                  },
+                  {
+                    "facet": "필기·실기 과목과 시험방식·시간은 무엇인가요?",
+                    "answer": "필기는 컴퓨터 일반·스프레드시트 일반 40문항 40분, 실기는 스프레드시트 실무 작업형 40분입니다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "2급 필기시험 컴퓨터 일반 스프레드시트 일반 객관식 40문항 40분 실기시험 스프레드시트 실무 컴퓨터 작업형 40분"
+                  },
+                  {
+                    "facet": "필기·실기 합격기준은 무엇인가요?",
+                    "answer": "필기는 과목별 40점 이상이면서 평균 60점 이상, 2급 실기는 70점 이상입니다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "필기 : 매과목 100점 만점에 과목당 40점 이상이고 평균 60점 이상 실기 : 100점 만점에 70점 이상(1급은 두과목 모두 70점 이상)"
+                  },
+                  {
+                    "facet": "수험료는 얼마인가요?",
+                    "answer": "공식 안내의 필기 수험료는 20,500원, 실기는 25,000원입니다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "수험료 필기 : 20,500원 실기 : 25,000원"
+                  },
+                  {
+                    "facet": "준비할 프로그램과 사용 제한은 무엇인가요?",
+                    "answer": "실기는 Office LTSC 2021을 사용하며 2급은 Standard도 가능합니다. 윈도우 계산기·메모장은 사용할 수 없습니다.",
+                    "supported": true,
+                    "source_index": 0,
+                    "quote": "윈도우 계산기 및 메모장 기능 사용 불가 실기프로그램:  MS오피스 LTSC Professional Plus 2021, 컴퓨터활용능력 2급은 MS오피스 LTSC Standard 2021 도 사용가능"
+                  },
+                  {
+                    "facet": "공식 연습자료는 무엇이며 실제 상시시험 문제와 어떻게 다른가요?",
+                    "answer": "공식 목록에 2024년 1·2급 예제와 실기 연습 예제가 있습니다. 실제 상시시험 문제는 비공개입니다.",
+                    "supported": true,
+                    "source_index": 1,
+                    "quote": "59 2024년 컴퓨터활용능력 1·2급 예제 문제 2024-03-21 60 컴퓨터활용능력 실기 연습 예제 문제 2024-03-21"
+                  },
+                  {
+                    "facet": "현재 필기·실기 준비에 필요한 구체적인 학습 범위는 무엇인가요?",
+                    "answer": "과목·프로그램은 확인되지만 출제기준 본문이 없습니다. 예제만으로 현재 학습 범위를 설명하기에는 근거가 부족합니다.",
+                    "supported": false,
+                    "source_index": 2,
+                    "quote": "시험 문제에 포함되는 기능은 출제기준을 참고하시길 바랍니다."
+                  }
+                ],
+                "current_relevance": {
+                  "kind": "evergreen",
+                  "source_index": 1,
+                  "quote": "컴퓨터활용능력 시험문제 상시검정(필기/실기) 시험문제는 문제은행식으로 운영되고 있어 관리의 어려움으로 공개하지 않습니다.",
+                  "event_start": null,
+                  "event_end": null,
+                  "date_quote": null
                 }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
               }
             }
           }
-        }
-      },
-      {
-        "keyword": "한국수자원공사채용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.alioplus.go.kr/news/recruitList.do%3Bjsessionid%3DMuQIyJvrvmZ6wRNSQKAKLKyv.node21",
-              "title": "새소식 > 공공기관 알리오플러스",
-              "excerpt_chars": 1648
-            },
-            {
-              "url": "https://www.ice.go.kr/jci/na/ntt/selectNttInfo.do?mi=10427&nttSn=3370268",
-              "title": "채용정보 < 채용·기업정보 | 직업계고 취업지원센터",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "expired_information"
-          }
-        }
-      },
-      {
-        "keyword": "인천국제공항공사채용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://m.work24.go.kr/wk/a/b/1500/empDetailAuthView.do?infoTypeCd=OEW&infoTypeGroup=tb_workinfoopen&wantedAuthNo=176905",
-              "title": "채용정보 상세 | 채용정보 상세검색 | 일자리 찾기 | 채용정보",
-              "excerpt_chars": 1967
-            },
-            {
-              "url": "https://www.work24.go.kr/wk/a/b/1500/empDetailAuthView.do?infoTypeCd=OEW&infoTypeGroup=tb_workinfoopen&wantedAuthNo=168173",
-              "title": "채용정보 상세 | 채용정보 상세검색 | 일자리 찾기 | 채용정보",
-              "excerpt_chars": 2876
-            },
-            {
-              "url": "https://www.incheon.go.kr/jobs/main/recruit/search.do",
-              "title": "일자리플랫폼 - 채용정보 - 채용 통합검색",
-              "excerpt_chars": 2946
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "expired_information"
-          }
-        }
-      },
-      {
-        "keyword": "코트라채용",
-        "reason": "search quality insufficient",
+        },
+        "score": 60.05,
+        "publish_eligible": false,
         "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance"
-        ],
-        "monthly_search": 5300,
-        "organic_provider": "codex_native_search",
-        "organic_query": "코트라 채용",
-        "organic_results": [
-          {
-            "url": "https://m.saramin.co.kr/search/company?q=%EC%BD%94%ED%8A%B8%EB%9D%BC",
-            "domain": "m.saramin.co.kr",
-            "title": "코트라 기업정보 | 총 9건의 검색결과 - 사람인",
-            "snippet": "기업이미지 (주)코트라스 중소기업 대구 북구 그 외 기타 의료용 기기 제조업 ... [연구전담부서 인력 채용] 섬유강화 열가소성 복합재료 관련 외 1건 ... 코트라코(주) 중소기업 경기"
-          },
-          {
-            "url": "https://www.kotra.or.kr/kp/index.do",
-            "domain": "www.kotra.or.kr",
-            "title": "KOTRA 무역투자24",
-            "snippet": "상담회, 전시회, 지사화 등 KOTRA의 핵심 지원 사업을 신청하세요 ... * 글로벌 인재 채용 ... 2026년 베트남 해양에너지 파트너링 사업 참가기업 모집공고(에너지·전력) ... * New"
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/MC9Yc09FSUJ2VW5VQWllU2ZRWGU4QT09/company_nm/%28%EC%A3%BC%29%EC%BD%94%ED%8A%B8%EB%9D%BC",
-            "domain": "www.saramin.co.kr",
-            "title": "(주)코트라 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "# (주)코트라 기업정보 ... * 채용정보 ... 김선라 ... 해당 정보는 최신 정보와 상이할 수 있고, (주)사람인은 정보의 오류·누락 또는 지연에 대한 일체의 책임을 부담하지"
-          },
-          {
-            "url": "https://admin.tompsonai.com/board/job-competency/3651/",
-            "domain": "admin.tompsonai.com",
-            "title": "2026년 코트라 직무역량평가 강좌(26년 7/4개강) - TompsonEDU",
-            "snippet": "하반기 코트라 65명 채용용인원 중, 54명, 약 83%의 최종합격률 달성!!! ... 커버레터 특강 前 국민체육진흥공단, 기금운용전문위원(Specialist) 前 모닝스트코리아(Morningstar Inc) 선임 애널리스트 前 모닝스타투자자문(Morningstar Associates), 이코노미스트"
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/MC9Yc09FSUJ2VW5VQWllU2ZRWGU4QT09/company_nm/%28%EC%A3%BC%29%EC%BD%94%ED%8A%B8%EB%9D%BC?nomo=1",
-            "domain": "www.saramin.co.kr",
-            "title": "(주)코트라 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "# (주)코트라 기업정보 ... 김선라 ... 해당 정보는 최신 정보와 상이할 수 있고, (주)사람인은 정보의 오류·누락 또는 지연에 대한 일체의 책임을 부담하지 않습니다."
-          },
-          {
-            "url": "https://www.kocham.org.uk/wp-content/uploads/2024/01/Newsletter_V12020124.pdf",
-            "domain": "www.kocham.org.uk",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "[코트라] 인재 채용 지원 서비스 안내 ... 하단에 파란 하늘 배경 위로 영국 런던의 스카이라인 사진/일러스트가 크게 배치되어 있으며, 여러 고층 빌딩이 보인다."
-          },
-          {
-            "url": "https://www.daangn.com/kr/local-profile/%EC%BD%94%ED%8A%B8%EB%9D%BC%ED%81%B4%EB%9F%BD-uhpqdbnkigzw/",
-            "domain": "www.daangn.com",
-            "title": "코트라클럽 | 서울특별시 서초구 염곡동 | 일반중식점 | 당근 동네 업체",
-            "snippet": "* 서울 서초구 헌릉로 13 대한무역투자진흥공사(코트라) ... * 코식 (코트라 구내식당) ... 좀 잘 나온 편인데 체감상 주5일 중 하루이틀 정도 괜찮은 것 같습니다. ..."
-          },
-          {
-            "url": "https://m.etoday.co.kr/news/view/1924529",
-            "domain": "m.etoday.co.kr",
-            "title": "[취린이 입사 가이드③] '코트라' 채용 합격가이드…인사담당자가 말하는 '우리는 이런 인재 선호한다' - 이투데이",
-            "snippet": "# [취린이 입사 가이드③] '코트라' 채용 합격가이드…인사담당자가 말하는 '우리는 이런 인재 선호한다' ... 현재 코로나19라는 특수한 상황을 맞이한 만큼 현재의 코트라가 하는 일도 혁신적으로 변하고"
-          },
-          {
-            "url": "https://v2.www.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=04398486645576512",
-            "domain": "v2.www.edaily.co.kr",
-            "title": "코트라, 싱가포르·인도서 첨단인재 유치…500여건 채용상담",
-            "snippet": "[이데일리 박민웅 기자] 대한무역투자진흥공사(코트라)가 반도체·인공지능(AI) 등 첨단산업의 글로벌 인재 확보를 위해 싱가포르와 인도에서 채용 지원에 나섰다. ... 강상엽 코트라 부사장 겸 중소중견기업본부장은 “싱가포르는 아시아 1위"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/Review/ServiceView?ucoNo=43502054",
-            "domain": "www.jobkorea.co.kr",
-            "title": "코트라 기업 리뷰 - 전·현직자의 생생한 후기 | 잡코리아",
-            "snippet": "코트라코트라 ... ■ 그래프 : 급여/워라밸/복리후생/고용안정성(사업성)/커리어 성장/조직문화 각 카테고리별 5점 만점 측정 점수를 100점 만점으로 환산하여 평균을 낸 점수입니다. ... 전·현직자가 선택한 이 회사의 장점"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "코트라채용",
-          "executed_query": "코트라 채용",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "7b900eca0d875df649634d2b8f69e491f3ac04c346458e4d1f20d2155a18ee58",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "코트라 기업정보 | 총 9건의 검색결과"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "상담회, 전시회, 지사화 등 KOTRA의 핵심 지원 사업을 신청하세요"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "(주)코트라 2026년 기업정보"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "2026년 코트라 직무역량평가 강좌(26년 7/4개강)"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "(주)코트라 2026년 기업정보"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "[코트라] 인재 채용 지원 서비스 안내"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "코트라클럽 | 서울특별시 서초구 염곡동 | 일반중식점"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "'코트라' 채용 합격가이드…인사담당자가 말하는 '우리는 이런 인재 선호한다'"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "싱가포르와 인도에서 채용 지원에 나섰다."
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "코트라 기업 리뷰 - 전·현직자의 생생한 후기"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "한국투자증권채용",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "concentrated_search_results"
-        ],
-        "monthly_search": 5180,
-        "organic_provider": "codex_native_search",
-        "organic_query": "한국투자증권 채용",
-        "organic_results": [
-          {
-            "url": "https://linkareer.com/company-info/112/recruit",
-            "domain": "linkareer.com",
-            "title": "한국투자증권 채용정보 - 진행 중인 공고 1건 | 링커리어",
-            "snippet": "마감[한국투자증권] FY2026 호남지역 업무직원 수시채용 기획/경영, 영업/CS | 신입 | 전북특별자치도 외 2 | ~ 06.28 | 1,396 | 15"
-          },
-          {
-            "url": "https://m.jobkorea.co.kr/Recruit/Co_Read/Recruit/C/c-042109?ChkDispType=0&GI_Part_Code=1000386&Page=1",
-            "domain": "m.jobkorea.co.kr",
-            "title": "한국투자증권(주) 채용 - 2026년 진행 중인 공고 총 17건 | 잡코리아",
-            "snippet": "Image: 한국투자증권(주) ... * 마감 (~2026.06.30) FY2026 eBiz고객부 PD/디자이너 전문직급 공개채용 경력 서울특별시 초대졸↑ 증권·보험·카드,그래픽디자이너 외 1개"
-          },
-          {
-            "url": "https://www.yna.co.kr/amp/view/AKR20260318100300008",
-            "domain": "www.yna.co.kr",
-            "title": "한투증권, 상반기 업무직·상담 전문직 공개 채용 | 연합뉴스",
-            "snippet": "채용 시 전국 한국투자증권 영업점에서 계좌 개설, 금융상품 및 퇴직연금 안내, 현금·증권 출납 등 지점 내방 고객과 유선 고객을 대상으로 한 자산 관리 지원 및"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/company/1795613/Recruit",
-            "domain": "www.jobkorea.co.kr",
-            "title": "한국투자증권(주) 채용 - 2026년 진행 중인 공고 총 1건 | 잡코리아",
-            "snippet": "FY2026 한국투자증권 IT/디지털 경력직 공개채용 경력 서울 대졸↑ D-5 백엔드개발자,시스템엔지니어 외 5 스크랩"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49611052?Oem_Code=C1&listno=307&logpath=1&stext=%EC%9D%80%ED%96%89+%EA%B2%BD%EB%A0%A5%EC%A7%81+%EC%B1%84%EC%9A%A9",
-            "domain": "www.jobkorea.co.kr",
-            "title": "한국투자증권㈜ 채용 - [한국투자증권 건대역지점] 지점 영업 경력직 채용 | 잡코리아",
-            "snippet": "# [한국투자증권 건대역지점] 지점 영업 경력직 채용"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/50004178",
-            "domain": "www.jobkorea.co.kr",
-            "title": "한국투자증권(주) 채용 - FY2026 일반 공채(신입사원 5급) - 경영관리(전략/기획) | 잡코리아",
-            "snippet": "한국투자증권(주)# FY2026 일반 공채(신입사원 5급) - 경영관리(전략/기획)"
-          },
-          {
-            "url": "https://www.jobplanet.co.kr/companies/2980/benefits/%ED%95%9C%EA%B5%AD%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C%28%EC%A3%BC%29",
-            "domain": "www.jobplanet.co.kr",
-            "title": "한국투자증권 2026년 하반기 채용 | 60건의 복지정보 0 전체 복지 통계",
-            "snippet": "채용 중 19# 한국투자증권(주) ... ##### ‘한국투자증권(주)’의 복지"
-          },
-          {
-            "url": "https://www.yna.co.kr/amp/view/AKR20260827039800008",
-            "domain": "www.yna.co.kr",
-            "title": "한투증권, 하반기 대학생 채용·증시 설명회 '캠퍼스 투어' | 연합뉴스",
-            "snippet": "(서울=연합뉴스) 임은진 기자 = 한국투자증권은 대학생을 대상으로 한 채용 및 증시 설명회 '한투 캠퍼스 투어'의 올해 하반기 일정을 진행한다고 27일 밝혔다."
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/view?rec_idx=55053324&t_category=top1000&t_content=generic&tab=introduce",
-            "domain": "m.saramin.co.kr",
-            "title": "[한국투자증권(주)] 한국투자증권 일반 공채(신입사원 5급)(AI/디지털/정보보호) (D-26) - 사람인",
-            "snippet": "# 채용정보# 한국투자증권 일반 공채(신입사원 5급)(AI/디지털/정보보호)"
-          },
-          {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/50003990?Oem_Code=C1&listno=7&logpath=1&sc=630&stext=PB",
-            "domain": "www.jobkorea.co.kr",
-            "title": "한국투자증권(주) 채용 - FY2026 일반 공채(신입사원 5급) - PB | 잡코리아",
-            "snippet": "한국투자증권(주)# FY2026 일반 공채(신입사원 5급) - PB"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "한국투자증권채용",
-          "executed_query": "한국투자증권 채용",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "7e50e5711830432fd969013251c10a1885c82c44e3e28afc980bd08a1d615951",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "[한국투자증권] FY2026 호남지역 업무직원 수시채용"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "FY2026 eBiz고객부 PD/디자이너 전문직급 공개채용"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "한투증권, 상반기 업무직·상담 전문직 공개 채용"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "FY2026 한국투자증권 IT/디지털 경력직 공개채용"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "[한국투자증권 건대역지점] 지점 영업 경력직 채용"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "FY2026 일반 공채(신입사원 5급) - 경영관리(전략/기획)"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "‘한국투자증권(주)’의 복지"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "한국투자증권은 대학생을 대상으로 한 채용 및 증시 설명회"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "한국투자증권 일반 공채(신입사원 5급)(AI/디지털/정보보호)"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "FY2026 일반 공채(신입사원 5급) - PB"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "삼성생명채용",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "concentrated_search_results"
-        ],
-        "monthly_search": 4970,
-        "organic_provider": "codex_native_search",
-        "organic_query": "삼성생명 채용",
-        "organic_results": [
-          {
-            "url": "https://ert.korcham.net/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMzA4MjRhNmEyNjdjMWQ3Y2Y4IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjYwMzEwOTk4MGU1MWYwN2UwYyI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI2MDMxMDFmYjI2ZTdhYWYyYTYiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjZhMTY1MTAzNDA4ZTciO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
-            "domain": "ert.korcham.net",
-            "title": "삼성생명 2025 ESG 보고서",
-            "snippet": "지표 신규 채용 인원 | | 단위 명 | 2021 203 | 2022 196 | 2023 200 | 2024 175 --- | --- | ---"
-          },
-          {
-            "url": "https://kind.krx.co.kr/external/2024/06/26/000509/20240626001112/%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85%202024%20ESG%EB%B3%B4%EA%B3%A0%EC%84%9C_KOR.pdf",
-            "domain": "kind.krx.co.kr",
-            "title": "삼성생명 2024 ESG 보고서",
-            "snippet": "삼성생명 2024 ESG 보고서 ... 신규 채용 현황 구분 | | 단위 | 2021 2022 | | 2023 --- | --- | --- | ---"
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit/csn/b2tSNDdaZjdBcUQ3Q1BLNzhYUzhnQT09/company_nm/%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85?nomo=1",
-            "domain": "www.saramin.co.kr",
-            "title": "삼성생명 채용 | 2026년 진행 중인 공고 - 사람인",
-            "snippet": "# 삼성생명 채용 ... 최근 2개월간 마감된 채용 이력이 없습니다."
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/company-info-view/recruit?csn=b2tSNDdaZjdBcUQ3Q1BLNzhYUzhnQT09",
-            "domain": "m.saramin.co.kr",
-            "title": "삼성생명 채용 | 2026년 진행 중인 공고 - 사람인",
-            "snippet": "# 삼성생명 채용 ... 최근 2개월간 마감된 채용 이력이 없습니다."
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/company-info-view/recruit?csn=L1RjRjByVTBVQy9Xdk0wY3FrT3VJZz09&t_ref_content=generic",
-            "domain": "m.saramin.co.kr",
-            "title": "삼성생명 채용 | 2026년 진행 중인 공고 - 사람인",
-            "snippet": "# 삼성생명 채용 ... 최근 2개월간 마감된 채용 이력이 없습니다."
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=K2xVcGI4OE9ZWFJYNVdhdlNwVDRPdz09",
-            "domain": "www.saramin.co.kr",
-            "title": "삼성생명 기업영업부 채용 | 2026년 진행 중인 공고 - 사람인",
-            "snippet": "# 삼성생명 기업영업부 채용 ... 최근 2개월간 마감된 채용 이력이 없습니다."
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54532312",
-            "domain": "www.saramin.co.kr",
-            "title": "[(주)우송에이치알컨설팅] 삼성생명 지역단 사무보조 채용 (양천구 목동/일7시간) - 사람인",
-            "snippet": "# 삼성생명 지역단 사무보조 채용 (양천구 목동/일7시간) ... (주)우송에이치알컨설팅에서 채용공고가 시작되면 이메일로 알려드립니다. ... · ㈜우송에이치알컨설팅 소속 (파견) → 삼성생명 각 지역단 근무 ... ·"
-          },
-          {
-            "url": "https://www.alba.co.kr/job/Detail?adid=146160697&listmenucd=SIMILARVIEW&recomyn=Y",
-            "domain": "www.alba.co.kr",
-            "title": "(주)케이티씨에스 채용정보 : 영업X프로모션多 삼성생명 유지전담 콜센터 인바운드 상담사 채용 - 알바천국",
-            "snippet": "## 영업X프로모션多 삼성생명 유지전담 콜센터 인바운드 상담사 채용 ... 파견, 아웃소싱 등의 업체에서 올린 공고의 경우 채용 기업명과 근무 기업명이 서로 다를 수 있습니다. ..."
-          },
-          {
-            "url": "https://16040174901918127181.googlegroups.com/attach/7d124573d0215/%EA%B8%80%EB%A1%9C%EB%B2%8C%EC%84%9D%EB%B0%95%EC%82%AC%20%EB%B8%8C%EB%A1%9C%EC%8A%88%EC%96%B4.pdf?part=0.1&vt=ANaJVrGOZ6BX0hkr1bfSp3Hao-Y4XFZf0qPll8LLftBa-c1ipWXVb9cc4xMRobR-3wSdSEZRYyMWuIgQyFoHhZCk4BojatMK7c9iP9Uax0ktNVYwYPAMh5s",
-            "domain": "16040174901918127181.googlegroups.com",
-            "title": "삼성생명 \n글로벌 석박사 \n채용 안내\n앞으로 더 빛날 당신과 함께\n삼성생명의 내일이 시작됩",
-            "snippet": "삼성생명은 고객중심의 밸류체인을 통해 ... 삼성생명의 지속가능성을 위해 통합적 관점으로 고객의 니즈와 ... 상품판매는 삼성생명이 고객에게 보험의 가치를 공유하는 첫 단계이며, ... 저금리 기조가 장기화됨에"
-          },
-          {
-            "url": "https://www.mpva.go.kr/icnc/selectBbsNttView.do%3Bjsessionid%3DNwgJPjjK-55VEa%2BUzId5RHpL.node20?bbsNo=15&integrDeptCode=&key=710&nttNo=2673&pageIndex=285&searchCnd=all&searchCtgry=&searchKrwd=",
-            "domain": "www.mpva.go.kr",
-            "title": "국립이천호국원",
-            "snippet": "6月 호국보훈의 달을 맞아 삼성생명에서 국가보훈대상자 특별채용 을 실시합니다.첨부된 채용 공고문을 참고하시고 문의 사항은 삼성생명 인사팀(02-751-8722, 02-2259-7301)으로 연락주시기 바랍니다."
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "삼성생명채용",
-          "executed_query": "삼성생명 채용",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "62046be8b490659d4bb77e51bfaa3ae50c484ab5da8e5981356b44cf33cf1012",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "삼성생명 2025 ESG 보고서"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "삼성생명 2024 ESG 보고서"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "삼성생명 채용 | 2026년 진행 중인 공고"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "삼성생명 채용 | 2026년 진행 중인 공고"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "삼성생명 채용 | 2026년 진행 중인 공고"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "삼성생명 기업영업부 채용"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "삼성생명 지역단 사무보조 채용"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "삼성생명 유지전담 콜센터 인바운드 상담사 채용"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "삼성생명 \n글로벌 석박사 \n채용 안내"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "삼성생명에서 국가보훈대상자 특별채용 을 실시합니다."
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "한국은행채용",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.korea.kr/archive/recruitInfoView.do?dataId=393587",
-              "title": "한국은행 커뮤니케이션국 아카이브반 전문보조원(아카이브) 채용 안내 - 채용정보 | 정책자료 | 대한민국 정책브리핑",
-              "excerpt_chars": 5698
-            },
-            {
-              "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=301150",
-              "title": "나라일터",
-              "excerpt_chars": 2478
-            },
-            {
-              "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=282549",
-              "title": "나라일터",
-              "excerpt_chars": 2595
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "expired_information"
-          }
-        }
-      },
-      {
-        "keyword": "신협채용",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_sites",
-          "concentrated_search_results"
-        ],
-        "monthly_search": 4940,
-        "organic_provider": "codex_native_search",
-        "organic_query": "신협 채용",
-        "organic_results": [
-          {
-            "url": "https://product.cu.co.kr/cu/na/ntt/selectNttList.do?bbsId=1070&mi=100074",
-            "domain": "product.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협 채용 > 공동채용",
-            "snippet": "50 | 2025년 상반기 신협 신입직원 공동채용 최종 합격자 공고 | 2025.06.23 | 2025.06.24 | 5897 | Image: 첨부파일"
-          },
-          {
-            "url": "https://www.cu.co.kr/cu/na/ntt/selectNttInfo.do?bbsId=1012&mi=100072&nttSn=112745",
-            "domain": "www.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협중앙회 채용",
-            "snippet": "### 2026년 신협중앙회 일반계약직(사무행정) 채용 공고"
-          },
-          {
-            "url": "https://eng.cu.co.kr/cu/na/ntt/selectNttList.do?bbsId=1070&mi=100074",
-            "domain": "eng.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협 채용 > 공동채용",
-            "snippet": "50 | 2025년 상반기 신협 신입직원 공동채용 최종 합격자 공고 | 2025.06.23 | 2025.06.24 | 5893 | Image: 첨부파일"
-          },
-          {
-            "url": "https://cu.co.kr/product/main.do",
-            "domain": "cu.co.kr",
-            "title": "신협금융상품",
-            "snippet": "장바구니를 풍성하게 채워줄 신협만이 가진 독보적인 카드 ... 대출 햇살론 서민금융진흥원 및 지역신용보증재단의 보증서를 발급받는 정책 대출상품 바로가기 햇살론 서민금융진흥원 및 지역신용보증재단의 보증서를 발급받는 정책"
-          },
-          {
-            "url": "https://www.cu.co.kr/cu/na/ntt/selectNttInfo.do?mi=100072&nttSn=112745",
-            "domain": "www.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협중앙회 채용",
-            "snippet": "### 2026년 신협중앙회 일반계약직(사무행정) 채용 공고"
-          },
-          {
-            "url": "https://product.cu.co.kr/news/na/ntt/selectNttInfo.do?mi=201136&nttSn=112642",
-            "domain": "product.cu.co.kr",
-            "title": "신협뉴스룸 > 보도자료 > 신협 보도자료",
-            "snippet": "신협중앙회(회장 고영철)가 2026년도 하반기 신입 및 경력직원을 공개 채용한다고 밝혔다. ... 여신·수신직군 경력직원은 각각 금융기관 및 유관기관에서 여신업무 또는 수신업무 경력 3년 이상을 보유해야 하며,"
-          },
-          {
-            "url": "https://www.cu.co.kr/cu/na/ntt/selectNttInfo.do?mi=100072&nttSn=112487",
-            "domain": "www.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협중앙회 채용",
-            "snippet": "### 2026년 하반기 신협중앙회 신입 및 경력직원 채용공고 ... <신협중앙회 신입 및 경력직원 채용 바로가기>"
-          },
-          {
-            "url": "https://cu.co.kr/cu/na/ntt/selectNttInfo.do?nttSn=112711",
-            "domain": "cu.co.kr",
-            "title": "신협 >",
-            "snippet": "* 이전글 2026년 신협중앙회 계약직(전기통신금융사기 대응) 채용 공고"
-          },
-          {
-            "url": "https://product.cu.co.kr/cu/na/ntt/selectNttInfo.do?mi=100072&nttSn=111858",
-            "domain": "product.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협중앙회 채용",
-            "snippet": "* (신협중앙회)채용결격사유.hwp (다운로드 : 611회) [바로보기]"
-          },
-          {
-            "url": "https://www.cu.co.kr/cu/na/ntt/selectNttInfo.do?mi=100072&nttSn=112603",
-            "domain": "www.cu.co.kr",
-            "title": "신협 > 신협소식 > 신협중앙회 채용",
-            "snippet": "### 2026년 신협중앙회 계약직(여신심사지도역) 채용 공고"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "신협채용",
-          "executed_query": "신협 채용",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "3d1c19e9f189bb9915b9fe8915fddbee37830373bac8447bec555b6098b38318",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "2025년 상반기 신협 신입직원 공동채용 최종 합격자 공고"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "2026년 신협중앙회 일반계약직(사무행정) 채용 공고"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "2025년 상반기 신협 신입직원 공동채용 최종 합격자 공고"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "장바구니를 풍성하게 채워줄 신협만이 가진 독보적인 카드"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "2026년 신협중앙회 일반계약직(사무행정) 채용 공고"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "신협중앙회(회장 고영철)가 2026년도 하반기 신입 및 경력직원을 공개 채용한다고 밝혔다."
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "2026년 하반기 신협중앙회 신입 및 경력직원 채용공고"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "이전글 2026년 신협중앙회 계약직(전기통신금융사기 대응) 채용 공고"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "(신협중앙회)채용결격사유.hwp"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "2026년 신협중앙회 계약직(여신심사지도역) 채용 공고"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "심평원채용",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "low_search_relevance"
-        ],
-        "monthly_search": 4900,
-        "organic_provider": "codex_native_search",
-        "organic_query": "심평원 채용",
-        "organic_results": [
-          {
-            "url": "https://www.jobkorea.co.kr/Search?stext=%EC%8B%AC%ED%8F%89%EC%9B%90",
-            "domain": "www.jobkorea.co.kr",
-            "title": "'심평원' 관련 📢 채용공고 | 총 14건의 검색결과",
-            "snippet": "원주 건강보험 심평원 IBM AIX 구축 TA 모집 스크랩경력9년↑학력무관 프리랜서 서울 영등포구~07/10(목) ... [바로선병원] 인사팀 대리급 채용 (사세 확장에 따른 충원)스크랩 ... #회식비 지원#경조사 지원"
-          },
-          {
-            "url": "https://mods.go.kr/boardDownload.es?bid=12030&list_no=434419&seq=1",
-            "domain": "mods.go.kr",
-            "title": "□ 요양급여 적정성 평가 수행 절차(조사업무 흐름 포함)",
-            "snippet": "<tr><td>자료취합 및 자료 점검</td><td>평가 기초자료를 구축하기 위하여 수집된 조사표 자료를 진료기록부와 일치도를 점검하는 신뢰도 점검 수행</td><td>심평원</td></tr> ... <tr><td>의료평가조정위원회 심의</td><td>최종 산출된 결과물을 위원회 심의 및 보고</td><td>심평원</td></tr>"
-          },
-          {
-            "url": "https://www.alio.go.kr/download/download.json?fileNo=2715709",
-            "domain": "www.alio.go.kr",
-            "title": "별첨 1\n직원 채용 공고문 (안)\n국립중앙의료원 채용공고 제2022–230호\n국립중앙의료원",
-            "snippet": "건강보험심사평가원데이터베이스를통한 ... * 일상생활에서 부르는 용어를 사용하지 말고 심평원 홈페이지에서 검색된 공식적인 명칭을 그대로 기술해 ... 분당서울대병원(X) → “분당 서울대학교병원”, 경북대칠곡병원(X) → “칠곡 경북대학교병원”"
-          },
-          {
-            "url": "https://www.alio.go.kr/download/download.json?fileNo=2988265",
-            "domain": "www.alio.go.kr",
-            "title": "국립중앙의료원 채용공고 제2025 - 279호국립중앙의료원 사무행정직 직원 채용 공고공공의료의 중심인 국립중앙의료원에서는 투철한 소명의식과 전문성을",
-            "snippet": "[불임 2]건강보험심사평가원 데이터베이스를 통한 ... 심평원 홈페이지에서 검색된 내용 그대로 작성(내용 변경 금지)근무경력이 있는 종합병원명 :병원 *병원명 기재* 일상생활에서 부르는 용어를 사용하지 말고 심평원 홈페이지에서"
-          },
-          {
-            "url": "https://v.daum.net/v/tnF2hwMVWX",
-            "domain": "v.daum.net",
-            "title": "심평원, 언론 출신 ‘정책소통’ 별도 채용...비서실에 왜 두나",
-            "snippet": "### 심평원, 언론 출신 ‘정책소통’ 별도 채용... ... [의학신문·일간보사=이재원 기자] 건강보험심사평가원이 기관장 정책소통을 전담할 전문가를 별도로 채용한다. ... 뿐만 아니라, 관련 부서 소속은 아니나, 심평원에는"
-          },
-          {
-            "url": "https://www.yna.co.kr/amp/view/AKR20240821071700530",
-            "domain": "www.yna.co.kr",
-            "title": "심평원 하반기 신규 직원 64명 채용…내달 3일까지 원서 접수 | 연합뉴스",
-            "snippet": "(서울=연합뉴스) 권지현 기자 = 건강보험심사평가원(심평원)은 2024년 하반기 신규 직원 64명을 채용한다고 21일 밝혔다. ... 심평원은 이번 채용에서 다자녀 양육자 가산점과 자립준비청년 가산점을 신설하고 기초생활수급자와 다문화가족"
-          },
-          {
-            "url": "https://www.alio.go.kr/download/download.json?fileNo=2987524",
-            "domain": "www.alio.go.kr",
-            "title": "국립중앙의료원 채용공고 제2025 - 259호국립중앙의료원 무기계약직 직원 채용 공고공공의료의 중심인 국립중앙의료원에서는 투철한 소명의식과 전문성을",
-            "snippet": "[불임 2]건강보험심사평가원 데이터베이스를 통한 ... 심평원 홈페이지에서 검색된 내용 그대로 작성(내용 변경 금지)☐ 6개월 이상 약제 관련부서 근무경력이 있는 의료기관명 : 000000병원 *병원명 기재• 일상생활에서"
-          },
-          {
-            "url": "https://m.ypbooks.co.kr/books/202601072796677409",
-            "domain": "m.ypbooks.co.kr",
-            "title": "All-New 건강보험심사평가원 심평원 통합기본서(2026) - 영풍문고",
-            "snippet": "안전하고 수준 높은 의료환경을 만들어 국민의 건강한 삶에 기여하기 위해 끊임없이 노력하는 건강보험심사평가원은 2026 년 상반기에 신규직원을 채용할 예정이다. ... 또한 필기시험 고득점자 순으로 심사직(4"
-          },
-          {
-            "url": "https://www.alio.go.kr/download/download.json?fileNo=2844505",
-            "domain": "www.alio.go.kr",
-            "title": "[     채용 직무 설명자료 직종별로 찾기     ]",
-            "snippet": "채용직무 설명자료(심사간호사) ... · 수가관리: 요양기관에서 발생하는 의료와 관련된 모든 의료수가 (약제, 치료재료, 행위수가)를 관리하며, 수가 관련 심평원 신고업무를 합니다. ... · 타 부서와의 협업"
-          },
-          {
-            "url": "https://repository.hira.or.kr/bitstream/2019.oak/1619/3/%EA%B3%A0%EA%B0%9D%EC%84%BC%ED%84%B0%20%EC%9A%B4%EC%98%81%20%EA%B3%A0%EB%8F%84%ED%99%94%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EC%97%B0%EA%B5%AC.pdf",
-            "domain": "repository.hira.or.kr",
-            "title": "슬라이드 1",
-            "snippet": "• 심평원 고객센터의 취업동기는 자기계발에 도움이 되어서(32.1%) &gt; 출퇴근거리가 가까워서(29.8%) &gt; 근무환경이 좋아서(23.8%)의 순으로 나타남<br> ... • 장기적으로는 심평원의 업무상담 숙련도가 높은 상담사들의 비율을 지속적으로"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "심평원채용",
-          "executed_query": "심평원 채용",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-01T14:40:45.039824+00:00",
-          "raw_sha256": "d822a242999b22545f45dee273e4da49973100c4f29c15119c61454bfb933685",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "원주 건강보험 심평원 IBM AIX 구축 TA 모집"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "요양급여 적정성 평가 수행 절차"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "국립중앙의료원 채용공고 제2022–230호"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "국립중앙의료원 사무행정직 직원 채용 공고"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "건강보험심사평가원이 기관장 정책소통을 전담할 전문가를 별도로 채용한다."
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "심평원 하반기 신규 직원 64명 채용…내달 3일까지 원서 접수"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "국립중앙의료원 무기계약직 직원 채용 공고"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "건강보험심사평가원은 2026 년 상반기에 신규직원을 채용할 예정이다."
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "수가 관련 심평원 신고업무를 합니다."
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "심평원 고객센터의 취업동기는 자기계발에 도움이 되어서"
-            }
-          ]
-        }
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ]
       }
     ],
+    "rejected": [],
     "excluded_keywords": [],
     "deferred_keywords": [
-      "AI역량검사",
-      "NCS난이도",
       "SQL자격증",
-      "국가자격증조회",
-      "기사자격요건",
+      "국정원채용",
       "민간자격증조회",
-      "사무자동화산업기사응시자격",
+      "이직준비",
       "이직확인서작성방법",
-      "자격증발급",
+      "인천국제공항공사채용",
       "컴활2급필기",
-      "평판조회",
-      "학력조회"
+      "한국수자원공사채용",
+      "한국은행채용"
     ],
-    "research_stop_reason": "round_limit",
+    "research_stop_reason": "pool_exhausted",
     "retry_keywords": [
       "안전관리자자격증",
       "엑셀자격증"
@@ -1332,18 +622,15 @@
     "discovery_rejections": [],
     "discovery_replenishment": [],
     "deferred_measured_keywords": [
-      "AI역량검사",
-      "NCS난이도",
       "SQL자격증",
-      "국가자격증조회",
-      "기사자격요건",
+      "국정원채용",
       "민간자격증조회",
-      "사무자동화산업기사응시자격",
+      "이직준비",
       "이직확인서작성방법",
-      "자격증발급",
+      "인천국제공항공사채용",
       "컴활2급필기",
-      "평판조회",
-      "학력조회"
+      "한국수자원공사채용",
+      "한국은행채용"
     ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
@@ -1354,73 +641,68 @@
           "현대모비스채용",
           "박람회일정",
           "예초기",
-          "전기기사일정",
-          "일산킨텍스",
           "대학면접준비",
-          "농협채용",
+          "일산킨텍스",
           "공기업준비",
+          "농협채용",
+          "전기기사일정",
           "박람회",
           "신분증발급",
           "한국전력공사채용",
           "코엑스박람회일정",
-          "국민건강보험공단채용",
-          "이직준비",
-          "코레일채용",
-          "자격증시험일정",
-          "금융투자협회채용",
-          "취업준비",
           "농협은행채용",
-          "수시면접준비",
+          "자격증시험일정",
+          "국민건강보험공단채용",
+          "취업준비",
           "기업은행채용",
+          "수시면접준비",
+          "코레일채용",
           "전시회일정",
-          "국민연금공단채용",
-          "하반기공채일정",
-          "한전채용",
-          "건강보험공단채용",
-          "한국도로공사채용",
+          "금융투자협회채용",
           "지역농협채용",
+          "국민연금공단채용",
+          "한전채용",
+          "한국도로공사채용",
+          "건강보험공단채용",
           "생활한복",
           "구인구직사이트",
           "근로복지공단채용",
-          "코엑스전시회",
           "농협중앙회채용",
-          "컴퓨터활용능력2급",
+          "코엑스전시회",
           "한국공항공사채용",
           "현대로템채용",
-          "검정고시로대학가기",
-          "현대글로비스채용",
           "아모레퍼시픽채용",
           "원데이클래스",
-          "노인일자리",
           "대구엑스코",
-          "신용보증기금채용",
-          "한국철도공사채용",
           "서울행사",
-          "단기알바",
-          "사이버대학교",
+          "검정고시로대학가기",
+          "노인일자리",
+          "현대글로비스채용",
+          "신용보증기금채용",
           "한국남부발전채용",
-          "공공기관채용",
+          "한국철도공사채용",
+          "단기알바",
           "LH채용",
-          "하이닉스채용",
-          "컴활2급",
-          "채용공고",
-          "금융감독원채용",
+          "사이버대학교",
           "서울시설공단채용",
-          "롯데그룹채용",
-          "삼성공채",
+          "공공기관채용",
+          "하이닉스채용",
+          "채용공고",
+          "컴활2급",
+          "국가철도공단채용",
+          "신분증",
           "구직사이트",
+          "롯데그룹채용",
+          "금융감독원채용",
+          "삼성공채",
+          "취업박람회",
           "서울교통공사채용"
         ],
         "proposals": [
           {
-            "keyword": "이직준비",
-            "reason": "네이버 월 1,080회. 이직 준비 순서와 지원 전 확인할 서류 수요를 조사하되 기존 경력기술서 작성법과 구분할 필요가 있다.",
-            "search_query": "이직 준비"
-          },
-          {
-            "keyword": "컴퓨터활용능력2급",
-            "reason": "네이버 월 19,140회. 2급 응시·접수 절차와 시험 준비사항을 공식 안내로 조사할 수 있으며 기존 1급 글과 대상이 다르다.",
-            "search_query": "컴퓨터활용능력 2급"
+            "keyword": "컴활2급",
+            "reason": "네이버 월 12,030회 수요가 있고 급수가 명확하다. 기존 1급 글과 구분해 공식 시험과목·합격기준·접수 절차를 조사할 만하다.",
+            "search_query": "컴활 2급"
           }
         ],
         "measured_fallback": false,
@@ -1447,8 +729,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "전기기사일정",
-            "reason_code": "duplicate_intent",
+            "keyword": "대학면접준비",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1457,8 +739,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "대학면접준비",
-            "reason_code": "category_mismatch",
+            "keyword": "공기업준비",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1467,7 +749,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "공기업준비",
+            "keyword": "전기기사일정",
             "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
@@ -1492,12 +774,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "국민건강보험공단채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "코레일채용",
+            "keyword": "농협은행채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1507,7 +784,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "금융투자협회채용",
+            "keyword": "국민건강보험공단채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1517,7 +794,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "농협은행채용",
+            "keyword": "기업은행채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1527,7 +804,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "기업은행채용",
+            "keyword": "코레일채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1537,22 +814,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "금융투자협회채용",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "지역농협채용",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "국민연금공단채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "하반기공채일정",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "한전채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "건강보험공단채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1562,7 +839,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "지역농협채용",
+            "keyword": "건강보험공단채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1582,13 +859,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "코엑스전시회",
-            "reason_code": "category_mismatch",
+            "keyword": "농협중앙회채용",
+            "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "농협중앙회채용",
-            "reason_code": "not_reported",
+            "keyword": "코엑스전시회",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1598,16 +875,6 @@
           },
           {
             "keyword": "현대로템채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "검정고시로대학가기",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "현대글로비스채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1622,17 +889,37 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "노인일자리",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "대구엑스코",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "서울행사",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "검정고시로대학가기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노인일자리",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "현대글로비스채용",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "신용보증기금채용",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국남부발전채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1642,13 +929,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "서울행사",
-            "reason_code": "category_mismatch",
+            "keyword": "단기알바",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "단기알바",
-            "reason_code": "insufficient_specificity",
+            "keyword": "LH채용",
+            "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1657,7 +944,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국남부발전채용",
+            "keyword": "서울시설공단채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1667,18 +954,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "LH채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "하이닉스채용",
             "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "컴활2급",
-            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1687,17 +964,27 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "금융감독원채용",
+            "keyword": "국가철도공단채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "서울시설공단채용",
-            "reason_code": "not_reported",
+            "keyword": "신분증",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "구직사이트",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "롯데그룹채용",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "금융감독원채용",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
@@ -1707,7 +994,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "구직사이트",
+            "keyword": "취업박람회",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -1721,124 +1008,73 @@
       {
         "round": 2,
         "offered_keywords": [
-          "신분증",
-          "한국수자원공사채용",
-          "KT&G채용",
-          "취업박람회",
-          "전기예초기",
           "채용사이트",
-          "전기산업기사",
           "취업정보사이트",
-          "한수원채용",
+          "전기산업기사",
           "자기개발자기계발",
-          "인천국제공항공사채용",
-          "자기개발",
-          "국가철도공단채용",
+          "KT&G채용",
+          "전기예초기",
           "강아지유치원",
-          "한국수력원자력채용",
+          "자기개발",
           "한국토지주택공사채용",
-          "건보채용",
-          "국정원채용",
-          "IBK기업은행채용",
           "한국중부발전채용",
-          "한화시스템채용",
-          "한국산업인력공단채용",
-          "자격증추천",
-          "한국전력기술채용",
           "GS리테일채용",
-          "스피치학원",
-          "스피치",
-          "예금보험공사채용",
           "한국농어촌공사채용",
-          "농협채용공고",
+          "건보채용",
+          "예금보험공사채용",
+          "한국전력기술채용",
+          "스피치",
+          "한국산업인력공단채용",
+          "스피치학원",
+          "자격증추천",
+          "한수원채용",
+          "한화시스템채용",
           "인적성검사",
-          "한국주택금융공사채용",
+          "한국수력원자력채용",
+          "대학면접복장",
           "애견유치원",
+          "한국주택금융공사채용",
+          "한국마사회채용",
           "현대엘리베이터채용",
           "보험설계사",
-          "한국마사회채용",
+          "서울나들이",
           "헤드헌터",
           "국가자격증종류",
+          "국가기술자격증",
           "공인노무사",
-          "전정기",
           "정년퇴직",
           "공기업순위",
-          "국가기술자격증",
-          "대상채용",
+          "전정기",
           "취업사이트",
-          "코트라채용",
-          "대학면접복장",
+          "대상채용",
           "대기업채용",
-          "한국투자증권채용",
-          "서울나들이",
+          "금융결제원채용",
           "안전관리자",
-          "고추건조기",
           "비료살포기",
-          "삼성생명채용",
-          "한국은행채용",
-          "신협채용",
+          "대구전시회",
+          "승무원학원",
           "사원증",
-          "심평원채용",
+          "일자리구하기",
+          "나인하이어",
+          "한국전력채용",
+          "수시면접학원",
+          "한국증권금융채용",
+          "온보딩",
+          "부산교통공사채용",
+          "국가기술자격",
+          "기사자격증",
+          "고추건조기",
+          "한국부동산원채용",
+          "큐텐재팬",
           "안전관리자자격증",
           "엑셀자격증"
         ],
-        "proposals": [
-          {
-            "keyword": "농협채용공고",
-            "reason": "월 6,720회. 지원자가 공고별 모집 법인·직무·접수기한·지원요건을 구분할 수 있도록 공식 공고를 조사할 가치가 있다.",
-            "search_query": "농협 채용 공고"
-          },
-          {
-            "keyword": "KT&G채용",
-            "reason": "월 10,830회. 해당 기업 지원자의 모집 직무·지원조건·전형 절차 질문을 공식 채용 공고에서 확인할 조사 후보다.",
-            "query_status": "invalid_search_query"
-          },
-          {
-            "keyword": "IBK기업은행채용",
-            "reason": "월 8,820회. 채용 분야별 지원요건과 필기·면접 절차를 확인하려는 수요에 맞춰 공식 모집요강을 조사할 만하다.",
-            "search_query": "IBK기업은행 채용"
-          },
-          {
-            "keyword": "국정원채용",
-            "reason": "월 8,970회. 채용 유형별 응시조건·제출서류·전형 절차를 공식 공고로 확인할 수 있는지 조사할 가치가 있다.",
-            "search_query": "국정원 채용"
-          },
-          {
-            "keyword": "한국수자원공사채용",
-            "reason": "월 10,830회. 기관별 지원요건·자격증 인정기준·제출서류를 조사해 기존 공기업 채용 일정 글과 목적이 구분되는지 확인한다.",
-            "search_query": "한국수자원공사 채용"
-          },
-          {
-            "keyword": "인천국제공항공사채용",
-            "reason": "월 9,750회. 공사 지원자의 직무별 응시조건·어학요건·전형 절차를 공식 공고에서 확인할 조사 후보다.",
-            "search_query": "인천국제공항공사 채용"
-          }
-        ],
+        "proposals": [],
         "measured_fallback": false,
-        "no_eligible_proposal": false,
+        "no_eligible_proposal": true,
         "skipped": [
           {
-            "keyword": "신분증",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "취업박람회",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "전기예초기",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "채용사이트",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "전기산업기사",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -1848,12 +1084,27 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한수원채용",
-            "reason_code": "not_reported",
+            "keyword": "전기산업기사",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "자기개발자기계발",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT&G채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "전기예초기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "강아지유치원",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -1863,62 +1114,37 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "국가철도공단채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "강아지유치원",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국수력원자력채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "한국토지주택공사채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "건보채용",
-            "reason_code": "not_reported",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "한국중부발전채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한화시스템채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국산업인력공단채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "자격증추천",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국전력기술채용",
-            "reason_code": "not_reported",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "GS리테일채용",
-            "reason_code": "not_reported",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "스피치학원",
+            "keyword": "한국농어촌공사채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "건보채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "예금보험공사채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국전력기술채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -1928,13 +1154,28 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "예금보험공사채용",
-            "reason_code": "not_reported",
+            "keyword": "한국산업인력공단채용",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국농어촌공사채용",
-            "reason_code": "not_reported",
+            "keyword": "스피치학원",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "자격증추천",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한수원채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한화시스템채용",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1943,8 +1184,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국주택금융공사채용",
-            "reason_code": "not_reported",
+            "keyword": "한국수력원자력채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "대학면접복장",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1953,8 +1199,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "한국주택금융공사채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국마사회채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "현대엘리베이터채용",
-            "reason_code": "not_reported",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1963,8 +1219,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국마사회채용",
-            "reason_code": "not_reported",
+            "keyword": "서울나들이",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1978,13 +1234,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "공인노무사",
-            "reason_code": "insufficient_specificity",
+            "keyword": "국가기술자격증",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "전정기",
-            "reason_code": "category_mismatch",
+            "keyword": "공인노무사",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -1994,17 +1250,12 @@
           },
           {
             "keyword": "공기업순위",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "국가기술자격증",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "대상채용",
-            "reason_code": "not_reported",
+            "keyword": "전정기",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2013,13 +1264,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "코트라채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "대학면접복장",
-            "reason_code": "category_mismatch",
+            "keyword": "대상채용",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2028,13 +1274,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국투자증권채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "서울나들이",
-            "reason_code": "category_mismatch",
+            "keyword": "금융결제원채용",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2043,28 +1284,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "고추건조기",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "비료살포기",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성생명채용",
-            "reason_code": "not_reported",
+            "keyword": "대구전시회",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국은행채용",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "신협채용",
-            "reason_code": "not_reported",
+            "keyword": "승무원학원",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2073,8 +1304,63 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "심평원채용",
-            "reason_code": "not_reported",
+            "keyword": "일자리구하기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "나인하이어",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국전력채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "수시면접학원",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국증권금융채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "온보딩",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "부산교통공사채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "국가기술자격",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "기사자격증",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "고추건조기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국부동산원채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "큐텐재팬",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2087,7 +1373,8 @@
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           }
-        ]
+        ],
+        "research_fallback": []
       },
       {
         "round": 3,
@@ -2095,63 +1382,37 @@
           "현대모비스채용",
           "농협채용",
           "한국전력공사채용",
+          "농협은행채용",
           "국민건강보험공단채용",
+          "기업은행채용",
           "코레일채용",
           "금융투자협회채용",
-          "농협은행채용",
-          "기업은행채용",
+          "지역농협채용",
           "국민연금공단채용",
           "한전채용",
-          "건강보험공단채용",
           "한국도로공사채용",
-          "지역농협채용",
+          "건강보험공단채용",
           "구인구직사이트",
           "근로복지공단채용",
           "농협중앙회채용",
           "한국공항공사채용",
           "현대로템채용",
-          "현대글로비스채용",
           "아모레퍼시픽채용",
           "노인일자리",
+          "현대글로비스채용",
           "신용보증기금채용",
+          "한국남부발전채용",
           "한국철도공사채용",
           "단기알바",
-          "한국남부발전채용",
           "LH채용",
-          "하이닉스채용",
-          "금융감독원채용",
           "서울시설공단채용",
-          "롯데그룹채용",
-          "구직사이트",
-          "서울교통공사채용",
-          "취업박람회",
-          "채용사이트",
-          "전기산업기사",
-          "취업정보사이트",
-          "한수원채용",
+          "하이닉스채용",
           "국가철도공단채용",
-          "한국수력원자력채용",
-          "한국토지주택공사채용",
-          "건보채용",
-          "한국중부발전채용",
-          "한화시스템채용",
-          "한국산업인력공단채용",
-          "한국전력기술채용",
-          "GS리테일채용",
-          "스피치학원",
-          "예금보험공사채용",
-          "한국농어촌공사채용",
-          "인적성검사",
-          "한국주택금융공사채용",
-          "현대엘리베이터채용",
-          "보험설계사",
-          "한국마사회채용",
-          "헤드헌터",
-          "공인노무사",
-          "정년퇴직",
-          "공기업순위",
-          "대상채용",
-          "취업사이트"
+          "구직사이트",
+          "롯데그룹채용",
+          "금융감독원채용",
+          "취업박람회",
+          "서울교통공사채용"
         ],
         "proposals": [],
         "measured_fallback": false,
@@ -2164,7 +1425,7 @@
           },
           {
             "keyword": "농협채용",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2173,7 +1434,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "농협은행채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "국민건강보험공단채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "기업은행채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -2188,13 +1459,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "농협은행채용",
+            "keyword": "지역농협채용",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "기업은행채용",
-            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -2208,17 +1474,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "건강보험공단채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "한국도로공사채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "지역농협채용",
+            "keyword": "건강보험공단채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -2248,11 +1509,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "현대글로비스채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "아모레퍼시픽채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
@@ -2263,7 +1519,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "현대글로비스채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "신용보증기금채용",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국남부발전채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -2278,22 +1544,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국남부발전채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "LH채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "하이닉스채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "금융감독원채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -2303,42 +1554,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "롯데그룹채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "구직사이트",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "서울교통공사채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "취업박람회",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "채용사이트",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "전기산업기사",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "취업정보사이트",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한수원채용",
+            "keyword": "하이닉스채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -2348,287 +1564,57 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국수력원자력채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국토지주택공사채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "건보채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국중부발전채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한화시스템채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국산업인력공단채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국전력기술채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "GS리테일채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "스피치학원",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "예금보험공사채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국농어촌공사채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인적성검사",
+            "keyword": "구직사이트",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국주택금융공사채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "현대엘리베이터채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "보험설계사",
+            "keyword": "롯데그룹채용",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한국마사회채용",
+            "keyword": "금융감독원채용",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "헤드헌터",
+            "keyword": "취업박람회",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "공인노무사",
+            "keyword": "서울교통공사채용",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "정년퇴직",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "공기업순위",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "대상채용",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "취업사이트",
-            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": []
-      },
-      {
-        "round": 4,
-        "offered_keywords": [
-          "코트라채용",
-          "한국투자증권채용",
-          "안전관리자",
-          "삼성생명채용",
-          "한국은행채용",
-          "신협채용",
-          "심평원채용",
-          "안전관리자자격증",
-          "엑셀자격증"
-        ],
-        "proposals": [
-          {
-            "keyword": "코트라채용",
-            "reason": "월 5,300회 수요. 지원 준비에 필요한 모집 구분별 지원요건·전형 절차를 공식 공고에서 조사할 후보.",
-            "search_query": "코트라 채용"
-          },
-          {
-            "keyword": "한국투자증권채용",
-            "reason": "월 5,180회 수요. 직무별 지원요건과 제출서류·접수 절차를 공식 채용 공고로 확인할 후보.",
-            "search_query": "한국투자증권 채용"
-          },
-          {
-            "keyword": "삼성생명채용",
-            "reason": "월 4,970회 수요. 기존 GSAT 일정 글과 구분되는 직무별 지원요건·제출서류 질문을 조사할 후보.",
-            "search_query": "삼성생명 채용"
-          },
-          {
-            "keyword": "한국은행채용",
-            "reason": "월 4,960회 수요. 채용 구분별 지원요건과 시험·서류 준비 절차를 공식 공고에서 확인할 후보.",
-            "search_query": "한국은행 채용"
-          },
-          {
-            "keyword": "신협채용",
-            "reason": "월 4,940회 수요. 채용 주체별 지원요건과 접수 방식이 어떻게 구분되는지 공식 공고로 조사할 후보.",
-            "search_query": "신협 채용"
-          },
-          {
-            "keyword": "심평원채용",
-            "reason": "월 4,900회 수요. 의료 이용이 아닌 취업 목적이며, 직렬별 지원요건·증빙서류를 조사할 후보.",
-            "search_query": "심평원 채용"
-          }
-        ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false,
-        "skipped": [
-          {
-            "keyword": "안전관리자",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "안전관리자자격증",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "엑셀자격증",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          }
-        ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "이직준비",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 1080,
-        "organic_query": "이직 준비"
-      },
-      {
-        "keyword": "컴퓨터활용능력2급",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 19140,
-        "organic_query": "컴퓨터활용능력 2급"
-      },
-      {
-        "keyword": "농협채용공고",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 6720,
-        "organic_query": "농협 채용 공고"
-      },
-      {
-        "keyword": "KT&G채용",
-        "status": "rejected",
-        "reason": "invalid search query transformation",
-        "monthly_search": 10830,
-        "organic_query": null
-      },
-      {
-        "keyword": "IBK기업은행채용",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 8820,
-        "organic_query": "IBK기업은행 채용"
-      },
-      {
-        "keyword": "국정원채용",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 8970,
-        "organic_query": "국정원 채용"
-      },
-      {
-        "keyword": "한국수자원공사채용",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 10830,
-        "organic_query": "한국수자원공사 채용"
-      },
-      {
-        "keyword": "인천국제공항공사채용",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 9750,
-        "organic_query": "인천국제공항공사 채용"
-      },
-      {
-        "keyword": "코트라채용",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 5300,
-        "organic_query": "코트라 채용"
-      },
-      {
-        "keyword": "한국투자증권채용",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 5180,
-        "organic_query": "한국투자증권 채용"
-      },
-      {
-        "keyword": "삼성생명채용",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 4970,
-        "organic_query": "삼성생명 채용"
-      },
-      {
-        "keyword": "한국은행채용",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 4960,
-        "organic_query": "한국은행 채용"
-      },
-      {
-        "keyword": "신협채용",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 4940,
-        "organic_query": "신협 채용"
-      },
-      {
-        "keyword": "심평원채용",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 4900,
-        "organic_query": "심평원 채용"
+        "keyword": "컴활2급",
+        "monthly_search": 12030,
+        "score": 60.05,
+        "status": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ],
+        "organic_query": "컴활 2급"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "컴활2급",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-04T01:56:18.847236+00:00",
+        "retry_after": "2026-10-07T01:56:18.847236+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "이직준비",
         "reason_code": "source_coverage",
@@ -2866,259 +1852,73 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 42596
+        "elapsed_ms": 43463
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11008
+        "elapsed_ms": 13476
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 16139
+        "elapsed_ms": 18174
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 10030
+        "elapsed_ms": 9212
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 14499
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 57676
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 57677
       },
       {
         "stage": "official_research",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 73250
+        "elapsed_ms": 59832
       },
       {
-        "stage": "topic_plan",
+        "stage": "topic_suitability",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 18575
+        "elapsed_ms": 21526
       },
       {
-        "stage": "native_search",
+        "stage": "topic_suitability",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9409
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 17270
+        "elapsed_ms": 21528
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 42424
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 11517
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 17004
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 7413
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14660
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9844
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 16701
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 12216
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 15127
-      },
-      {
-        "stage": "official_research",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 71504
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 15602
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10752
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14074
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8591
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 13355
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14896
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14359
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 13680
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10883
+        "elapsed_ms": 48311
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 41610
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 22289
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 12497
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14864
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8587
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14649
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 13947
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14966
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9326
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14121
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8692
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 14131
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6537
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 19248
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8727
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 15608
+        "elapsed_ms": 32255
       }
     ],
     "analysis_recovery_attempts": 0

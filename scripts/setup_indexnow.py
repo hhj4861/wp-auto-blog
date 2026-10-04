@@ -1,71 +1,59 @@
 #!/usr/bin/env python3
-"""IndexNow 최초 설정: 키 파일을 WP 미디어에 업로드하고 기존 발행 URL을 일괄 제출한다."""
-
-import os
-import re
+"""Read-only ownership check by default; submit existing URLs only explicitly."""
+import argparse
+import json
+from pathlib import Path
 import sys
+from urllib.parse import urlsplit
+import xml.etree.ElementTree as ET
 
 import requests
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from src.indexnow import INDEXNOW_KEY, INDEXNOW_KEY_LOCATION, ping_urls  # noqa: E402
-
-BASE_URL = (os.environ.get("WP_GENERAL_URL") or "").rstrip("/")
-API = f"{BASE_URL}/wp-json/wp/v2"
-
-session = requests.Session()
-session.auth = (os.environ.get("WP_GENERAL_USERNAME", ""),
-                os.environ.get("WP_GENERAL_APP_PASSWORD", ""))
-session.headers.update({"User-Agent": "Mozilla/5.0 (trendpulse-indexnow-setup)"})
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from dotenv import load_dotenv
+from src.indexnow import check_key, submit_urls
 
 
-def ensure_bing_plugin():
-    """Microsoft 공식 IndexNow 플러그인 설치/활성화 — 루트 키 서빙과
-    발행 시 자동 제출을 플러그인이 처리한다."""
-    r = session.get(f"{API}/plugins", params={"search": "indexnow"}, timeout=40)
-    if r.status_code == 200:
-        for p in r.json():
-            if "indexnow" in p.get("plugin", "").lower():
-                print(f"IndexNow 플러그인 이미 설치됨: {p['plugin']} (status={p['status']})")
-                if p["status"] != "active":
-                    ar = session.post(f"{API}/plugins/{p['plugin']}",
-                                      json={"status": "active"}, timeout=60)
-                    print(f"활성화: {ar.status_code}")
-                return True
-    ir = session.post(f"{API}/plugins",
-                      json={"slug": "indexnow", "status": "active"}, timeout=120)
-    if ir.status_code == 201:
-        print(f"IndexNow 플러그인 설치+활성화 완료: {ir.json().get('plugin')}")
-        return True
-    print(f"⚠️ 플러그인 설치 실패({ir.status_code}): {ir.text[:200]}")
-    return False
+def main(argv=None):
+    load_dotenv()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--host', default='trendpulse.blog')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--submit', action='append', metavar='PUBLIC_URL')
+    group.add_argument('--sitemap', metavar='SITEMAP_URL')
+    args = parser.parse_args(argv)
+    key_status = check_key(args.host)
+    print(json.dumps({'key_check': key_status}))
+    if key_status != 'key_matches':
+        return 1
+    urls = args.submit or []
+    if args.sitemap:
+        parsed = urlsplit(args.sitemap)
+        if (parsed.scheme != 'https' or parsed.hostname != args.host
+                or parsed.username or parsed.password or parsed.port not in (None, 443)):
+            parser.error('Sitemap must belong to the selected HTTPS host')
+        try:
+            response = requests.get(args.sitemap, timeout=30, allow_redirects=False)
+        except requests.RequestException:
+            print(json.dumps({'status': 'sitemap_network_error'}))
+            return 1
+        if response.status_code != 200:
+            print(json.dumps({'status': 'sitemap_unavailable'}))
+            return 1
+        try:
+            root = ET.fromstring(response.content)
+        except ET.ParseError:
+            print(json.dumps({'status': 'invalid_sitemap'}))
+            return 1
+        if root.tag.split('}')[-1] != 'urlset':
+            parser.error('Use a URL sitemap, not a sitemap index')
+        urls = [node.text for node in root.findall('.//{*}loc') if node.text]
+    if urls:
+        result = submit_urls(urls, args.host)
+        print(json.dumps(result))
+        return 0 if result['accepted'] else 1
+    return 0
 
 
-def check_root_key():
-    """루트 키 파일 존재 확인 (수동 업로드 필요 항목)."""
-    r = requests.get(INDEXNOW_KEY_LOCATION, timeout=20,
-                     headers={"User-Agent": "Mozilla/5.0"})
-    ok = r.status_code == 200 and r.text.strip() == INDEXNOW_KEY
-    if ok:
-        print(f"루트 키 파일 확인: {INDEXNOW_KEY_LOCATION}")
-    else:
-        print(f"루트 키 파일 없음(HTTP {r.status_code}) — Hostinger 파일 관리자에서 "
-              f"public_html/{INDEXNOW_KEY}.txt (내용: 키 문자열)를 업로드하면 "
-              f"일괄 제출이 가능해집니다")
-    return ok
-
-
-def bulk_ping():
-    r = requests.get(f"{BASE_URL}/post-sitemap.xml", timeout=30,
-                     headers={"User-Agent": "Mozilla/5.0"})
-    r.raise_for_status()
-    urls = re.findall(r"<loc>([^<]+)</loc>", r.text)
-    print(f"사이트맵 URL {len(urls)}건 수집")
-    ok = ping_urls(urls)
-    print(f"일괄 제출 결과: {'성공' if ok else '실패'}")
-
-
-if __name__ == "__main__":
-    ensure_bing_plugin()
-    if check_root_key():
-        bulk_ping()
+if __name__ == '__main__':
+    raise SystemExit(main())

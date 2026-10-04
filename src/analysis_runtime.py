@@ -32,10 +32,31 @@ CODES = RETRYABLE | FATAL | NATIVE_CODES | {'unclassified', 'unexpected_error', 
 MAX_EXTRA_CALLS = 4
 
 
+# Closed diagnostic vocabulary: never copy model fields or exception text.
+VALIDATION_REASONS = frozenset({
+    'review_object', 'scope', 'target_keyword', 'sources_list', 'facets_list',
+    'relevance_object', 'source_index', 'source_quote', 'source_entity',
+    'source_context', 'source_duplicate', 'source_coverage', 'facet_quote',
+    'facet_text', 'facet_answer', 'facet_supported', 'relevance_quote',
+    'relevance_kind', 'event_start', 'event_end', 'date_quote',
+    'quote_index', 'quote_conflict', 'response_size',
+})
+
+
+class SchemaValidationError(ValueError):
+    def __init__(self, reason, row_index=None):
+        self.detail = {'reason': reason if isinstance(reason, str) and reason in VALIDATION_REASONS
+                       else 'invalid_value'}
+        if type(row_index) is int and 0 <= row_index < 8:
+            self.detail['row_index'] = row_index
+        super().__init__('invalid_schema')
+
+
 class AnalysisError(RuntimeError):
-    def __init__(self, code, attempts=()):
+    def __init__(self, code, attempts=(), *, validation=None):
         self.code = code if code in CODES else 'unexpected_error'
         self.attempts = list(attempts)
+        self.validation = validation
         super().__init__(self.code)
 
 
@@ -115,16 +136,19 @@ def validated_call(call, prompt, validate=lambda value: value, *, label=None):
     attempts = []
     name = label or _STAGE.get()
     state = _STATE.get()
+    request_prompt = prompt
     for index in range(2):
         started = monotonic()
         try:
             if state and state['fatal']:
                 raise AnalysisError(state['fatal'])
-            raw = call(prompt)
+            raw = call(request_prompt)
             try:
                 value = validate(raw)
             except AnalysisError:
                 raise
+            except SchemaValidationError as error:
+                raise AnalysisError('invalid_schema', validation=error.detail) from None
             except json.JSONDecodeError:
                 raise AnalysisError('invalid_json') from None
             except (ValueError, TypeError, KeyError, OverflowError, AttributeError):
@@ -133,6 +157,17 @@ def validated_call(call, prompt, validate=lambda value: value, *, label=None):
             code = error_code(error)
             event = {'stage': name, 'attempt': index + 1, 'status': 'error', 'code': code,
                      'elapsed_ms': round((monotonic() - started) * 1000)}
+            detail = getattr(error, 'validation', None)
+            if (isinstance(detail, dict) and isinstance(detail.get('reason'), str)
+                    and detail['reason'] in VALIDATION_REASONS | {'invalid_value'}):
+                safe_detail = {'reason': detail['reason']}
+                row = detail.get('row_index')
+                if type(row) is int and 0 <= row < 8:
+                    safe_detail['row_index'] = row
+                event['validation'] = safe_detail
+                request_prompt = prompt + '\n검증 오류(고정 코드): ' + json.dumps(safe_detail) + (
+                    '\n해당 항목을 입력 원문과 스키마에 맞게 수정해 전체 JSON을 다시 반환하세요. '
+                    '근거와 부정 판정은 바꾸지 마세요. 인용은 원문의 구절 번호를 선택하세요.')
             attempts.append(event)
             if state is not None:
                 state['events'].append(event)

@@ -1,56 +1,128 @@
-"""IndexNow 핑 — 발행 즉시 참여 검색엔진(Bing·Naver·Yandex 등)에 URL 제출.
+"""IndexNow notifications through one explicitly selected participating endpoint.
 
-trendpulse.blog 전용: 키 파일은 WP 미디어 라이브러리에 업로드되어 있다
-(scripts/setup_indexnow.py로 최초 1회 설정).
+Acceptance is a notification receipt, never proof of indexing. Ownership failures
+are reported separately from publication, without retrying another provider.
 """
-
 from __future__ import annotations
 
 import os
+import re
+from urllib.parse import urlsplit, unquote
+import posixpath
 
 import requests
 from loguru import logger
 
-# 주의: IndexNow는 키 파일 경로가 인증 범위(prefix)를 결정하므로 키 파일은
-# 반드시 사이트 루트에 있어야 전체 URL을 제출할 수 있다 (Hostinger 파일 관리자로 업로드).
 INDEXNOW_KEY = os.getenv("INDEXNOW_KEY", "413338ab31bcc9bb0ed71149930283af")
 INDEXNOW_KEY_LOCATION = os.getenv(
-    "INDEXNOW_KEY_LOCATION",
-    "https://trendpulse.blog/413338ab31bcc9bb0ed71149930283af.txt",
-)
-INDEXNOW_API = "https://api.indexnow.org/indexnow"
+    "INDEXNOW_KEY_LOCATION", "https://trendpulse.blog/413338ab31bcc9bb0ed71149930283af.txt")
+# The global endpoint rejects this site's valid public key (403). Naver accepted
+# the identical submission; IndexNow participants share received notifications.
+INDEXNOW_API = "https://searchadvisor.naver.com/indexnow"
+ENDPOINTS = {INDEXNOW_API, "https://api.indexnow.org/indexnow"}
+ERROR_CODES = {'UserForbiddedToAccessSite', 'SiteVerificationNotCompleted',
+               'InvalidRequest', 'InvalidKey'}
 
 
-def ping_urls(urls: list[str], host: str = "trendpulse.blog") -> bool:
-    """URL 목록을 IndexNow로 제출한다 (최대 10,000건/호출).
-
-    Returns:
-        True if accepted (200/202), False otherwise. 실패해도 발행 흐름을 막지 않는다.
-    """
-    # 한글 경로 등 비ASCII URL은 퍼센트 인코딩해야 IndexNow 스키마를 통과한다
-    encoded = []
-    seen = set()
-    for u in urls:
-        if not u or host not in u:
-            continue
-        eu = requests.utils.requote_uri(u)
-        if eu not in seen:
-            seen.add(eu)
-            encoded.append(eu)
-    if not encoded:
+def _same_host_url(url, host):
+    if not isinstance(url, str) or re.search(r'[\s\\\x00-\x1f\x7f]', url):
         return False
-    payload = {
-        "host": host,
-        "key": INDEXNOW_KEY,
-        "keyLocation": INDEXNOW_KEY_LOCATION,
-        "urlList": encoded[:10000],
-    }
     try:
-        r = requests.post(INDEXNOW_API, json=payload, timeout=30)
-    except requests.RequestException as e:
-        logger.warning(f"IndexNow ping 실패: {e}")
+        parts = urlsplit(url)
+        return (parts.scheme in ('http', 'https') and parts.hostname == host
+                and not parts.username and not parts.password and not parts.fragment
+                and parts.port in (None, 443 if parts.scheme == 'https' else 80))
+    except ValueError:
         return False
-    ok = r.status_code in (200, 202)
-    log = logger.info if ok else logger.warning
-    log(f"IndexNow ping: {len(payload['urlList'])}건 제출 → HTTP {r.status_code}")
-    return ok
+
+
+def _configuration(host):
+    endpoint = os.getenv('INDEXNOW_API', INDEXNOW_API)
+    key = os.getenv('INDEXNOW_KEY', INDEXNOW_KEY)
+    location = os.getenv('INDEXNOW_KEY_LOCATION', INDEXNOW_KEY_LOCATION)
+    if (not isinstance(host, str) or not re.fullmatch(r'[a-z0-9.-]+', host)
+            or endpoint not in ENDPOINTS or not re.fullmatch(r'[A-Za-z0-9-]{8,128}', key)
+            or not _same_host_url(location, host) or urlsplit(location).query):
+        return None
+    return endpoint, key, location
+
+
+def check_key(host='trendpulse.blog'):
+    """Bounded public ownership check; a local success is not engine verification."""
+    config = _configuration(host)
+    if not config:
+        return 'invalid_configuration'
+    _, key, location = config
+    try:
+        with requests.get(location, timeout=15, allow_redirects=False, stream=True) as response:
+            if response.status_code != 200:
+                return 'key_http_error'
+            body = bytearray()
+            for chunk in response.iter_content(chunk_size=256):
+                body.extend(chunk)
+                if len(body) > 1024:
+                    return 'key_content_mismatch'
+            try:
+                return ('key_matches' if body.decode('utf-8-sig').strip() == key
+                        else 'key_content_mismatch')
+            except UnicodeError:
+                return 'key_content_mismatch'
+    except requests.RequestException:
+        return 'key_network_error'
+
+
+def submit_urls(urls: list[str], host='trendpulse.blog') -> dict:
+    """Submit once, returning safe diagnostics. No cross-provider fallback."""
+    config = _configuration(host)
+    if not config:
+        return {'status': 'invalid_configuration', 'accepted': False}
+    endpoint, key, location = config
+    scope = posixpath.dirname(unquote(urlsplit(location).path)).rstrip('/') + '/'
+    encoded, seen = [], set()
+    for url in urls:
+        if not _same_host_url(url, host):
+            continue
+        path = posixpath.normpath(unquote(urlsplit(url).path))
+        if scope != '/' and not path.startswith(scope):
+            continue
+        value = requests.utils.requote_uri(url)
+        if value not in seen:
+            seen.add(value)
+            encoded.append(value)
+    if not encoded:
+        return {'status': 'no_valid_urls', 'accepted': False}
+    # Never silently drop URLs beyond the protocol's per-request limit.
+    if len(encoded) > 10000:
+        return {'status': 'too_many_urls', 'accepted': False}
+    result = {'endpoint': urlsplit(endpoint).hostname, 'submitted_count': len(encoded),
+              'accepted': False}
+    try:
+        response = requests.post(endpoint, json={'host': host, 'key': key,
+            'keyLocation': location, 'urlList': encoded}, timeout=30, allow_redirects=False)
+    except requests.RequestException:
+        return {**result, 'status': 'network_error'}
+    result['http_status'] = response.status_code
+    if response.status_code in (200, 202):
+        return {**result, 'accepted': True,
+                'status': 'accepted' if response.status_code == 200 else 'verification_pending'}
+    result['status'] = {403: 'ownership_rejected', 429: 'rate_limited',
+                        400: 'invalid_request', 422: 'invalid_request'}.get(
+                            response.status_code, 'http_error')
+    try:
+        data = response.json()
+        code = data.get('errorCode', data.get('code')) if isinstance(data, dict) else None
+        if isinstance(code, str) and code in ERROR_CODES:
+            result['error_code'] = code
+    except (ValueError, TypeError):
+        pass
+    if response.status_code == 403:
+        result['key_check'] = check_key(host)
+    return result
+
+
+def ping_urls(urls: list[str], host: str = 'trendpulse.blog') -> bool:
+    """Non-blocking notification result, separate from WordPress publication."""
+    result = submit_urls(urls, host)
+    log = logger.info if result['accepted'] else logger.warning
+    log('IndexNow notification: {}', result)
+    return result['accepted']

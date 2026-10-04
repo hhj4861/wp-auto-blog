@@ -477,3 +477,94 @@ def test_invalid_or_absent_json_is_fixed_failure():
     result = suitability.review_plan(item, NOW, llm)
     assert result['failure_code'] == 'invalid_review'
     assert 'PROVIDER-SECRET' not in json.dumps(result)
+
+
+def indexed_review(item):
+    raw = review(item)
+    raw['sources'] = [{'source_index': i, 'quote_index': 0, 'entity': 'Microsoft',
+                      'context': 'system_rules'} for i in range(len(item['verified_sources']))]
+    raw['required_facets'][0].pop('quote')
+    raw['required_facets'][0]['quote_index'] = 0
+    raw['current_relevance'].pop('quote')
+    raw['current_relevance']['quote_index'] = 0
+    return raw
+
+
+def actual_held_candidate():
+    from pathlib import Path
+    return json.loads((Path(__file__).parent / 'fixtures/suitability_held_20261004.json').read_text())['candidate']
+
+
+def test_actual_held_sources_resolve_indexed_quotes_and_preserve_binding():
+    item = actual_held_candidate()
+    # Response is synthetic: the failed production raw response was not logged.
+    raw = indexed_review(item)
+    saved = json.dumps(raw)
+    call = Mock(return_value=raw)
+    now = datetime.fromisoformat(item['selected_at'])
+    evidence = suitability.review_plan(item, now, call)
+    assert 'failure_code' not in evidence
+    assert json.dumps(raw) == saved
+    for index, row in enumerate(evidence['review']['sources']):
+        assert row['quote'] == suitability.source_quote_choices(item['verified_sources'])[index][0]
+        assert row['quote'] in item['verified_sources'][index]['excerpt']
+        assert 'quote_index' not in row
+    item['suitability_evidence'] = evidence
+    assert suitability.issues(item, now) == []
+    item['verified_sources'][0]['excerpt'] += 'modified evidence'
+    assert suitability.issues(item, now)
+    assert 'source_quote_choices' in call.call_args.args[0]
+
+
+def test_all_excerpt_regions_remain_available():
+    item = actual_held_candidate()
+    for source, choices in zip(item['verified_sources'], suitability.source_quote_choices(item['verified_sources'])):
+        assert all(8 <= len(q) <= 900 and q in source['excerpt'] for q in choices)
+        assert choices[0].startswith(source['excerpt'][:10])
+        assert choices[-1].endswith(source['excerpt'][-10:])
+
+
+@pytest.mark.parametrize('index', [-1, 999, True, '0', None])
+def test_invalid_quote_choice_stays_held_with_fixed_diagnostics(index):
+    item = actual_held_candidate()
+    raw = indexed_review(item)
+    raw['required_facets'][0]['quote_index'] = index
+    call = Mock(return_value=raw)
+    result = suitability.review_plan(item, datetime.fromisoformat(item['selected_at']), call)
+    assert result['failure_code'] == 'invalid_review'
+    assert call.call_count == 2
+    assert result['diagnostics']['attempts'][-1]['validation'] == {'reason': 'quote_index', 'row_index': 0}
+
+
+@pytest.mark.parametrize('mutate,reason', [
+    (lambda x: x['sources'][0].update(source_index=True), 'source_index'),
+    (lambda x: x['sources'][0].update(quote='SECRET fabricated quotation'), 'quote_conflict'),
+    (lambda x: x['sources'][0].update(entity='SECRET nonexistent entity'), 'source_entity'),
+    (lambda x: x['sources'][0].update(context='SECRET invalid context'), 'source_context'),
+    (lambda x: x['sources'].pop(), 'source_coverage'),
+    (lambda x: x['required_facets'][0].update(supported='true'), 'facet_supported'),
+])
+def test_targeted_retry_retains_negative_opinion_and_does_not_leak(mutate, reason, caplog):
+    from copy import deepcopy
+    item = actual_held_candidate()
+    valid = indexed_review(item)
+    valid['required_facets'][0]['supported'] = False
+    bad = deepcopy(valid)
+    mutate(bad)
+    call = Mock(side_effect=[bad, valid])
+    now = datetime.fromisoformat(item['selected_at'])
+    item['suitability_evidence'] = suitability.review_plan(item, now, call)
+    assert call.call_count == 2
+    assert reason in call.call_args_list[1].args[0]
+    assert 'SECRET' not in call.call_args_list[1].args[0] + caplog.text + json.dumps(item['suitability_evidence'])
+    assert 'unverified_source_coverage' in suitability.issues(item, now)
+
+
+def test_quote_index_cannot_borrow_from_another_source():
+    item = actual_held_candidate()
+    raw = indexed_review(item)
+    raw['sources'][1]['quote_index'] = 9  # Exists for source 0, not the shorter source 1.
+    call = Mock(return_value=raw)
+    evidence = suitability.review_plan(item, datetime.fromisoformat(item['selected_at']), call)
+    assert evidence['failure_code'] == 'invalid_review'
+    assert evidence['diagnostics']['attempts'][0]['validation']['reason'] == 'quote_index'

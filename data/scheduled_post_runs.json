@@ -282,7 +282,8 @@
       "category": "취업",
       "slot": "morning",
       "claimed_at": "2026-10-04T09:00:13.345577+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-04T00:00:58.312800+00:00"
     }
   }
 }

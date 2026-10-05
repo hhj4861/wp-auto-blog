@@ -16459,7 +16459,7 @@
     "keywords": [
       "구내염빨리낫는법"
     ],
-    "status": "held_draft",
+    "status": "completed",
     "opportunity_evidence": {
       "version": 2,
       "query": "구내염빨리낫는법",
@@ -16652,9 +16652,11 @@
     "publish_eligible": true,
     "hold_reasons": [],
     "post_id": 1820,
-    "url": "https://trendpulse.blog/?p=1820",
-    "post_status": "draft",
-    "held_at": "2026-10-05T00:17:49.235676"
+    "url": "https://trendpulse.blog/mouth-ulcer-care-2026/",
+    "post_status": "publish",
+    "held_at": "2026-10-05T00:17:49.235676",
+    "published_at": "2026-10-05T09:18:00.680914+00:00",
+    "completed_at": "2026-10-05T09:18:00.680914+00:00"
   },
   {
     "keyword": "정상혈압",

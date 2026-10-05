@@ -83,6 +83,13 @@ REJECTION_OPINION_CODES = frozenset({
     'keyword_navigation', 'insufficient_search_intent', 'category_mismatch',
     'unsupported_claim', 'other',
 })
+RECRUITMENT_DOMAIN_HINTS = (
+    ('kepco-enc.com', ('한국전력기술',)),
+    ('reb.or.kr', ('한국부동산원',)),
+    ('kftc.or.kr', ('금융결제원',)),
+    ('samsungcareers.com', ('삼성',)),
+    ('skcareers.com', ('sk', '에스케이')),
+)
 OFFICIAL_SEARCH_DOMAIN_HINTS = (
     ('support.microsoft.com', ('엑셀', 'excel', '윈도우', 'windows', '오피스', '파워포인트')),
     ('notion.com', ('노션', 'notion')),
@@ -427,6 +434,10 @@ def fetch_trend_change(keyword):
 
 def _official_search_extra_domains(keyword):
     """A small, topic-specific hint list; never broaden the measured SERP query."""
+    key = norm(keyword)
+    if '채용' in key:
+        return [domain for domain, terms in RECRUITMENT_DOMAIN_HINTS
+                if any(term in key for term in terms)]
     preferred = (review_discovery.preferred_source_domains(keyword)
                  if review_discovery.discovery_issue(keyword) is None else [])
     if preferred:
@@ -467,17 +478,21 @@ def official_search_urls(keyword, category=None):
     Prioritize relevant manufacturers before broad institutional domains.
     """
     extras = _official_search_extra_domains(keyword)
-    domains = list(dict.fromkeys([*extras, 'go.kr', 'or.kr', 'gov', 'ac.kr']))[:4]
+    recruitment = '채용' in norm(keyword) and category in (None, '취업')
+    defaults = ['job.alio.go.kr', 'gojobs.go.kr', 'work24.go.kr'] if recruitment else ['go.kr', 'or.kr', 'gov', 'ac.kr']
+    domains = list(dict.fromkeys([*extras, *defaults]))[:4]
     if clinical_health_query(keyword, category):
         domains = ['kdca.go.kr', 'cancer.go.kr', 'medlineplus.gov', 'cdc.gov']
         extras = domains
-    purchase_question = category != '건강' and review_discovery.discovery_issue(keyword) is None
+    purchase_question = not recruitment and category != '건강' and review_discovery.discovery_issue(keyword) is None
     if purchase_question:
         domains = list(dict.fromkeys([*extras[:3], 'kca.go.kr']))[:4]
     groups, seen = [], set()
     for index, domain in enumerate(domains):
         scope = {'samsung.com': 'samsung.com/sec'}.get(domain, domain) if purchase_question else domain
         query = f'{keyword} 제품 사양 site:{scope}' if purchase_question else f'{keyword} site:{domain}'
+        if recruitment:
+            query = f'{keyword} {datetime.now(ZoneInfo("Asia/Seoul")).year} 채용공고 site:{domain}'
         _, rows = search_results(query)
         urls = []
         for row in rows:
@@ -571,6 +586,11 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
         model=os.environ.get('BLOG_CODEX_MODEL', ''), timeout=240)
     extra_domains = ', '.join(_official_search_extra_domains(keyword))
     domain_hint = f'이 검색어와 관련된 공식 도메인 {extra_domains}의 상세 안내도 우선 조사하세요.' if extra_domains else ''
+    if category == '취업' and '채용' in norm(keyword):
+        domain_hint += ('\n채용은 오늘 기준 접수 중인 공고와 상시 채용 안내를 구분하세요. '
+                        '기관의 채용 게시판과 공식 공공 채용 포털의 최신 상세 공고를 확인하세요. '
+                        '지난 채용 실적·학교 재게시·마감된 공고를 현재 접수 중인 공고로 사용하지 마세요. '
+                        '현재 공고가 없으면 없다고 판단하고 과거 마감일을 올해로 바꾸지 마세요.')
     if category == '리뷰':
         domain_hint += '\n' + review_discovery.source_hint(keyword)
     elif clinical_health_query(keyword, category):
@@ -844,10 +864,12 @@ def _review_with_source_recovery(keyword, category, now, results, sources, *,
     item, reason = topic_from_evidence(keyword, category, now, results, sources,
                                       evidence_mode=evidence_mode, audit=initial)
     opinion = initial.get('model_rejection_opinion', {})
+    expired_recruitment = (category == '취업' and '채용' in norm(keyword)
+                           and opinion.get('code') == 'expired_information')
     if (not allow_recovery or evidence_mode != 'serp' or not sources or not reason
             or initial.get('analysis_status') != 'supported_false'
             or opinion.get('kind') != 'model_opinion'
-            or opinion.get('code') not in {'source_navigation', 'source_missing_detail'}
+            or not (opinion.get('code') in {'source_navigation', 'source_missing_detail'} or expired_recruitment)
             or budget['attempts'] >= MAX_SOURCE_RECOVERIES
             or not _source_recovery_sample(provider, results)):
         return item, reason, research, initial
@@ -856,7 +878,14 @@ def _review_with_source_recovery(keyword, category, now, results, sources, *,
     recovery = {'attempted': True, 'initial_review': initial, 'outcome': 'research_failed'}
     audit = {**initial, 'source_recovery': recovery}
     try:
-        recovered, retrace = research_official_sources(keyword, category, now)
+        options = {}
+        if expired_recruitment:
+            recovery['requirements'] = {'recovery_type': 'current_recruitment',
+                'as_of': now[:10], 'keyword': keyword,
+                'existing_urls': [source['url'] for source in sources],
+                'missing_evidence': '현재 접수 중인 채용 공고의 접수 기간·지원 자격·전형 절차'}
+            options['coverage_gaps'] = recovery['requirements']
+        recovered, retrace = research_official_sources(keyword, category, now, **options)
     except Exception:
         return None, reason, research, audit  # No arbitrary exception in a report.
     if (not isinstance(retrace, dict) or retrace.get('provider') != 'codex_web'
@@ -864,6 +893,10 @@ def _review_with_source_recovery(keyword, category, now, results, sources, *,
         recovery['outcome'] = 'unverified_research'
         return None, reason, research, audit
     updated = _changed_source_set(sources, recovered)
+    if expired_recruitment:
+        # Never let an old announcement fill the replacement plan's source slots.
+        old_urls = {source['url'] for source in sources}
+        updated = [source for source in updated if source['url'] not in old_urls]
     if not updated:
         recovery['outcome'] = 'no_changed_source'
         return None, reason, research, audit
@@ -1506,7 +1539,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 reason = 'already covered'
             if reason:
                 rejection = {'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit}
-                if category == '리뷰':
+                if category == '리뷰' or category == '취업' and '채용' in norm(keyword):
                     # Keep the exact inputs of negative opinions for replay. The
                     # next shortlist receives only a summary, not repeated bodies.
                     rejection.update(monthly_search=row['monthly'], organic_provider=provider,

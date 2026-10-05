@@ -30,7 +30,7 @@ OFFICIAL_DOMAINS = {
     "samsung.com", "samsungcareers.com", "hyundai.com", "hyundaimotorgroup.com", "skcareers.com",
     "skhynix.com", "lg.com", "lge.co.kr", "lguplus.com", "jal.com", "jal.co.jp",
     "emiratesgroupcareers.com", "emirates.com", "finnair.com", "airbusan.com",
-    "koreanair.com", "flyasiana.com", "qatarairways.com", "singaporeair.com",
+    "koreanair.com", "flyasiana.com", "kepco-enc.com", "qatarairways.com", "singaporeair.com",
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
     "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net", "korea.kr",
     "kr.roborock.com", "store.kr.dreametech.com", "sandisk.com", "kingston.com",

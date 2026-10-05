@@ -180,7 +180,8 @@ def validated_call(call, prompt, validate=lambda value: value, *, label=None):
                     state['fatal'] = code
             log.warning('analysis_attempt %s', json.dumps(event))
             # An inner bounded call already exhausted its recovery; never multiply it.
-            if (index == 0 and code in RETRYABLE and not isinstance(error, AnalysisError)
+            if (index == 0 and (code in RETRYABLE or name == 'native_search' and code == 'invalid_search_arguments')
+                    and not isinstance(error, AnalysisError)
                     and can_retry()):
                 sleep(1 if code in {'timeout', 'network_or_service'} else 0)
                 continue

@@ -14698,7 +14698,7 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-10-02T02:04:46.174328+00:00",
+    "selected_at": "2026-10-05T09:00:57.597349+00:00",
     "seeds": [
       "갤럭시",
       "아이폰",
@@ -14706,8 +14706,8 @@
       "와이파이"
     ],
     "selection_version": 6,
-    "research_rounds": 3,
-    "source_recovery_attempts": 0,
+    "research_rounds": 4,
+    "source_recovery_attempts": 2,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -14719,7 +14719,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-02T02:04:46.174328+00:00",
+      "checked_at": "2026-10-05T09:00:57.597349+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -14738,511 +14738,966 @@
     },
     "search_review_recovery_attempts": 0,
     "search_review_diagnostics": [],
-    "shortlist_research_attempts": 0,
-    "unresearched_budget_keywords": [],
+    "shortlist_research_attempts": 3,
+    "unresearched_budget_keywords": [
+      "2g폰",
+      "copilot",
+      "ddr416g",
+      "iptime",
+      "iptime공유기",
+      "kt인터넷",
+      "kt인터넷고객센터",
+      "kt인터넷설치",
+      "lgu",
+      "lgu인터넷",
+      "lgu플러스인터넷",
+      "lg유플러스인터넷",
+      "lg인터넷",
+      "lte라우터",
+      "remote",
+      "s24",
+      "s25",
+      "skt인터넷",
+      "sk브로드밴드인터넷",
+      "sk인터넷",
+      "갤럭시25울트라",
+      "갤럭시s2",
+      "갤럭시s24",
+      "갤럭시s24울트라",
+      "갤럭시s25",
+      "갤럭시s25울트라",
+      "갤럭시공기계",
+      "갤럭시보급형",
+      "갤럭시스토어",
+      "갤럭시와이드",
+      "갤럭시울트라",
+      "갤럭시점프2",
+      "갤럭시탭s9",
+      "갤럭시폴더",
+      "갤럭시폴더2",
+      "갤럭시폴더블",
+      "램16기가",
+      "빨래건조기",
+      "삼성닷컴홈페이지",
+      "삼성몰",
+      "삼성전자몰",
+      "삼성최신폰",
+      "삼성폴더블",
+      "삼성폴더폰",
+      "삼성핸드폰신형",
+      "삼성효도폰",
+      "서피스프로",
+      "세탁건조기",
+      "세탁기건조기세트",
+      "아이폰12",
+      "아이폰12미니",
+      "아이폰13",
+      "아이폰15",
+      "아이폰15pro",
+      "아이폰15프로",
+      "아이폰15프로맥스",
+      "아이폰15플러스",
+      "아이폰16",
+      "아이폰16e",
+      "아이폰16pro",
+      "아이폰16프로",
+      "아이폰se1",
+      "아이폰출시",
+      "아이폰출시일",
+      "아이폰프로",
+      "애플케이스",
+      "유플러스인터넷",
+      "인터넷설치",
+      "인터넷속도체크",
+      "인터넷속도측정"
+    ],
     "deferred_research_family_keywords": [],
-    "researched_fallback_families": [],
-    "analyst": "codex_subscription",
-    "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 583,
-    "evaluated_candidates": 2,
-    "research_pool_size": 120,
-    "selected": [
+    "researched_fallback_families": [
       {
-        "keyword": "윈도우11정품인증",
-        "category": "테크",
-        "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
-        "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
-        "gap": "인증 상태별 의미표, 라이선스별 인증 절차, 재설치·부품 변경 체크리스트와 빌드별 오프라인 인증 경로를 제공한다.",
-        "source_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-        "verified_sources": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "title": "Windows 정품 인증 | Microsoft Support",
-            "checked_on": "2026-10-02",
-            "sha256": "14448cb040e32c8f3e739e49127427db6cd0af84c9461859086552f8acf22689",
-            "excerpt": "Windows 정품 인증 적용 대상 Windows 11 Windows 10 Copilot 도움말 보기 Windows를 재설치한 후 활성화하려면 어떻게 하나요? 내 Windows 버전을 확인하려면 어떻게 해야 하나요? 제품 키로 Windows를 어떻게 활성화하나요? Windows 11 Windows 10 팁 Windows를 정품 인증하는 데 문제가 있나요? Windows 정품 인증 오류에 대한 도움말 보기 에서 문제 해결 단계를 시도해 보세요. 정품 인증은 제품 키 또는 디지털 권한을 장치의 하드웨어 구성과 페어링하는 기술 프로세스입니다. 이는 복사본 자체의 신뢰성을 평가하지 않으며 Windows 복사본이 정품 임을 보장하지 않습니다. 제품 키 또는 디지털 권한이 하드웨어 구성에 유효한지 확인하기만 합니다. 반면에 유효성 검사는 중요한 Windows 라이선스 파일이 손상, 삭제 또는 제거되지 않았으며 특정 업데이트 및 다운로드를 받아야 하는지 확인하는 프로세스입니다. 동영상을 재생하는 데 문제가 있나요? YouTube에서 시청하세요. Windows 11에서 Windows 정품 인증 상태 확인 먼저 Windows 11이 정품 인증되어 있고 Microsoft 계정에 연결되어 있는지 확인해야 합니다. Microsoft 계정을 장치의 Windows 11 라이선스에 연결하는 것이 중요합니다. Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. Windows 11에서 Windows 정품 인증 상태를 검사하는 방법 Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다.  정품 인증 상태 옆에 정품 인증 상태 가 표시됩니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에서 다음 정품 인증 상태 메시지 중 하나를 볼 수 있습니다. 정품 인증 상태 설명 Windows가 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정 연결 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows가 정품 인증되지 않음 정품 인증이 되지 않았습니다. 실패를 설명하는 오류 메시지가 표시됩니다. 정품 인증을 받으려면 Windows 11를 구입해야 할 수 있습니다. 장치에 대한 라이선스를 구입해야 하는 경우에는 \"Windows 11 라이선스 구입하기\"를 찾아보세요. 이미 해당 장치에 대한 라이선스를 구입했음에도 계속 오류 메시지가 표시되는 경우 정품 인증 방법 으로 계속합니다. 정품 인증을 위해 Microsoft 계정을 Windows 11에 연결합니다. Microsoft 계정을 연결하려면 다음의 지침을 따릅니다. 관리자로 로그인하여 Microsoft 계정을 추가합니다. 관리자 계정을 사용하고 있는지 확인하려면 시작 단추를 선택한 다음, 설정 > 계정 > 사용자 정보 를 선택합니다. 사용자 이름 아래에 관리자가 표시됩니다. 관리자가 아닌 경우 Windows에서 사용자 계정 관리를 참조하여 관리자 계정을 만듭니다. 설정의 정보로 이동 전자 메일 주소가 관리자 위에 표시되는지 확인하여 관리자 계정이 Microsoft 계정이기도 한지 확인합니다. 이메일 주소가 표시되면 이 계정은 Microsoft 계정입니다. 이메일 주소가 표시되지 않으면 로컬 계정을 사용하여 로그인한 것입니다. 아직 Microsoft 계정이 없다면 새 Microsoft 계정을 만드는 방법 을 참조하세요. 관리자이고 Microsoft 계정을 사용하고 있음을 확인한 후 정품 인증 페이지로 돌아가서 계정 추가 를 선택하고 Microsoft 계정 및 암호를 입력한 다음 로그인 을 선택합니다. Microsoft 계정이 추가된 후에는 정품 인증 페이지에서 Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증되었습니다 라고 표시됩니다. Windows 11용 Windows 정품 인증 방법 Windows 11을 구입한 방법에 따라 정품 인증을 위해 디지털 라이선스 또는 25자 제품 키가 필요합니다. 이 중 하나가 없으면 장치를 정품 인증할 수 없습니다. 디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다. 제품 키는 Windows를 정품 인증하는 데 사용되는 25문자 코드입니다. 제품 키가 다음과 같이 보입니다. XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. 사용할 정품 인증 방법을 결정한 후 디지털 라이선스를 사용하여 정품 인증하기 또는 제품 키를 사용하여 정품 인증하기 의 해당 단계를 따르세요. Windows 11의 경우 디지털 라이선스와 제품 키 중 어떤 Windows 정품 인증 방법을 사용하나요? 정품 인증 방법은 Windows 11을 구매한 방법에 따라 다릅니다. Windows 11을 받은 방법 정품 인증 방법 Windows 10, Windows 8.1 또는 Windows 7의 정품을 실행하는 적격 기기에서 Windows 11로 무료 업그레이드 디지털 라이선스 Microsoft 계정을 연결하거나 Microsoft 계정에 로그인하거나 MSA를 디지털 라이선스와 연결한 경우 해당 MSA가 디지털 라이선스를 포함합니다. Microsoft Store 앱에서 Windows 11 Pro 업그레이드를 구매하고 Windows 11을 성공적으로 정품 인증했습니다. 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 참가자이며 정품 인증된 이전 버전의 Windows 11 및 Windows 11 Preview를 실행 중인 적합한 장치에서 최신 Windows 11 Insider Preview 빌드로 업그레이드하기 디지털 라이선스 Windows Insider 로그인에 사용한 전자 메일 주소는 디지털 라이선스가 포함된 MSA일 수 있습니다. Microsoft Store 앱에서 정품 Windows 11 구입하기 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 11과 함께 제공되는 PC를 구입합니다. 제품 키 장치 패키징 또는 장치에 부착된 COA(인증서)에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 박스 복사본 구입하기 제품 키 Windows 11 박스의 내부 레이블에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 디지털 복사본 구입하기 제품 키 Windows 11을 구입한 후 받은 확인 메일 또는 대리점의 웹 사이트를 통해 액세스할 수 있는 디지털 락커에서 제품 키를 찾을 수 있습니다. 입력한 올바른 제품 키를 기준으로 장치에 Windows 11에 대한 디지털 라이선스가 부여됩니다. Windows 11에 대한 볼륨 라이선싱 계약 또는 MSDN 구독이 있음 제품 키 프로그램의 웹 포털을 통해 제품 키를 사용할 수 있습니다. Windows 11을 실행하는 새 장치 또는 리퍼비시 장치 구입하기 제품 키 장치에 제품 키가 사전 설치되어 있거나, 장치 패키지에 포함되어 있거나, 장치에 부착된 카드로 또는 COA(정품 인증서)에 포함되어 있습니다. 리퍼비시 PC를 구입한 경우, Microsoft가 아닌 리퍼비셔에서 제품 키를 제공해야 합니다. Microsoft Store 온라인에서 구입하기 제품 키 주문 기록이 포함된 확인 메일에서 제품 키를 찾습니다. Purchase a Windows 11 라이선스 구입하기 디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다. 방법은 다음과 같습니다. 시작 단추를 선택합니다. 설정 > 시스템 > 정품 인증 을 선택합니다. Microsoft Store로 이동 을 선택합니다. Windows 11 디지털 라이선스를 구입할 수 있는 Microsoft Store 앱을 엽니다. 디지털 라이선스를 사용하여 Windows 11 정품 인증하기 디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다. PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다. 디지털 라이센스가 없는 경우 정품 인증을 위해 제품 키를 사용할 수 있습니다.  제품 키를 사용하여 정품 인증하는 방법을 알아보하려면 제품 키를 사용하여 정품 인증 의 단계를 따릅니다. 새 장치 또는 마더보드에서 처음으로 Windows 설치 및 정품 인증 Windows 11 새 장치나 마더보드에 Windows를 처음 설치하고 제품 키가 없는 경우 설치 설정 화면에서 제품 키가 없습니다 를 선택합니다.  메시지가 표시되면 이 디바이스에 대한 디지털 라이선스를 구입하는 데 사용할 Microsoft 계정을 입력합니다. 설치 화면이 완료되고 Windows 설치가 완료되면 정품 인증 설정으로 이동합니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증을 선택합니다. 그런 다음 스토어 열기 를 선택하여 Windows를 정품 인증하기 위한 디지털 라이선스를 구입합니다. Windows 11을 다시 설치한 후 정품 인증 장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다. 다시 설치를 시도해 보기 전에 Windows 11이 정품 인증되었는지 확인합니다. 확인하려면 시작 단추를 선택한 다음 설정 > 시스템 > 활성화 를 선택합니다 . Windows 11이 정품 인증되었으며 Microsoft 계정이 디지털 라이선스와 연결되어 있음을 확인할 수 있습니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에 표시될 메시지는 다음과 같습니다. 정품 인증 상태 설명 Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 디지털 라이센스가 Microsoft 계정에 연결되어 있지 않은 경우, 정품 인증 상태 확인하기 아래에 있는 Microsoft 계정에 연결하기 의 단계를 따릅니다. 계정을 연결하면 설치 프로그램을 실행하여 Windows 11을 다시 설치할 수 있습니다. Windows 11을 다시 설치하기 위해 설치 미디어를 만드는 방법에 대한 자세한 내용은 Microsoft 소프트웨어 다운로드 웹 사이트 로 이동하세요. 설치 미디어를 만들 때 장치에 이미 설치된 버전과 일치하는 Windows 11 버전을 선택해야 합니다. 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시되는 경우 제품 키가 없음 을 선택하여 이 단계를 건너뛸 수 있습니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. 디지털 라이선스를 Microsoft 계정과 연결한 경우 디지털 라이선스와 연결된 Microsoft 계정에 로그인해야 합니다. 하드웨어 변경 후 Windows 11 다시 정품 인증하기 마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다. 하드웨어 변경을 대비하기 위해 Microsoft 계정을 디지털 라이센스에 연결해야 합니다. 이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. 자세한 내용은 하드웨어 변경 후 Windows 다시 정품 인증 을 참조하세요. 제품 키를 사용하여 Windows 11 정품 인증 제품 키는 25 문자 코드로 다음과 같이 표시됩니다. 제품 키: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다.  또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 제품 키를 찾으려면 정품 인증 방법의 제품 키 표 디지털 라이선스와 제품 키 중 어떤 제품 인증 방법을 사용하나요? 를 참조하세요. 참고 Microsoft는 Microsoft 온라인 스토어에서 구입한 경우에만 제품 키 기록을 보관합니다. 사용자 Microsoft 계정 주문 내역 에서 제품을 Microsoft에서 구입했는지 알아볼 수 있습니다. 자세한 도움말을 보려면 Windows 제품 키 찾기 를 참조하세요. 제품 키가 있는 경우 다음 시나리오에서 제품 키 변경을 사용하여 Windows 11을 정품 인증할 수 있습니다. 다음은 정품 인증에 도움이 되는 추가 정보입니다. 새 장치 또는 Windows 11용 마더보드에서 처음으로 Windows 설치 및 정품 인증을 수행하는 방법 정품 인증된 Windows 11이 있었던 적이 없는 장치에서는 올바른 제품 키를 사용하여 Windows 11을 정품 인증해야 합니다. 장치에서 이전에 정품 인증된 적이 없는 Windows 11 버전을 설치하는 경우에도 올바른 제품 키를 사용해야 합니다. 예를 들어 Windows 11 Home이 설치되었던 장치에 Windows 11 Pro를 설치하고 정품 인증하려면 올바른 제품 키가 필요합니다. 설치하는 동안 올바른 제품 키를 입력하라는 메시지가 표시됩니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. Windows 11에서 정품 인증 상태를 검사하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 을 선택합니다. 설정에서 정품 인증 상태 확인 Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 참고 경우에 따라서는 장치 패키지와 함께 제공되거나, 카드로 포함되어 있거나, 장치에 부착된 COA(정품 인증서)에 표시되는 Windows 11 제품 키를 입력해야 할 수 있습니다. Windows 11 제품 키가 없는 경우, 설치 중 제품 키를 구입할 수 있는 옵션이 나타납니다. Windows 11을 실행하는 리퍼비시 장치 정품 인증 Windows 11을 실행하는 리퍼비시 장치를 구입할 때는 장치에 부착된 정품 인증서 (COA)의 제품 키를 사용하여 Windows를 정품 인증해야 합니다. OEM(Original Hardware Manufacturer)이 마더보드를 변경한 경우, PC에서 자동으로 정품 인증이 되어야 합니다. 정품 인증을 받지 않으면 OEM에서 회색 스크래치 덮개 아래에 25자의 키가 있는 COA 카드를 제공했을 수 있습니다. 정품 인증을 받으려면 다음 단계를 따르세요. 참고 제품 키를 가리고 있는 회색 코팅을 제거하려면 동전이나 손톱을 사용하여 조심스럽게 긁어내세요. 시작 버튼을 선택한 다음 설정 > 시스템 > 활성화를 선택합니다. 제품 키 변경 을 선택합니다. COA에 있는 제품 키를 입력하고, 지침을 따릅니다. 설정에서 제품 키 변경 Windows 11을 다시 설치한 후 정품 인증하는 방법 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다. 제품 키를 입력하면 Windows 11 정품 인증된 버전을 갖게 됩니다. 설치가 끝나고 제품 키를 입력하지 않은 경우에도 제품 키를 입력할 수 있습니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 하드웨어 변경 후 Windo"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "title": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 정품 인증 또는 오프라인 정품 인증 | Microsoft Support",
-            "checked_on": "2026-10-02",
-            "sha256": "c04152d5cd71cb9bbd70ac41763595bbf226b7ab909f9f8afa8cec4a756477cc",
-            "excerpt": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11 Windows 8.1 Windows Vista Windows XP 요약​​ 이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.\n온라인 정품 인증 단계, 제품 정품 인증 포털을 통한 오프라인 정품 인증 및 세 가지 오프라인 워크플로(정품 인증 페이지, SLMGR 명령 프롬프트 및 SLUI 명령 프롬프트)에 대해 설명합니다. 또한 정품 인증 실패에 대한 대체 지침과 Office 정품 인증 리소스에 대한 링크도 포함되어 있습니다. 정품 인증은 가지고 있는 Windows 복사본이 정품이며 Microsoft 소프트웨어 사용 조건에서 허용하는 것보다 더 많은 장치에서 사용되지 않았는지 확인하는 데 도움이 됩니다. 인터넷을 통해 온라인 으로, 제품 정품 인증 포털 을 사용하거나 Microsoft 지원 의 지원을 사용하여 오프라인으로 Microsoft 제품을 정품 인증하는 몇 가지 방법이 있습니다. 온라인 정품 인증 - 인터넷 : 인터넷에 연결하면 Windows에서 인터넷 연결을 사용하여 온라인으로 정품 인증을 시도합니다. 온라인 정품 인증 단계에 따라 정품 인증되었는지, 아니면 인터넷을 통해 정품 인증을 시도하는지 확인합니다. 오프라인 정품 인증 - 제품 정품 인증 포털 & Microsoft 지원 : 온라인으로 정품 인증하는 데 문제가 있거나 인터넷에 연결되어 있지 않은 경우 오프라인으로 정품 인증을 시도할 수 있습니다. 오프라인 정품 인증 단계를 수행합니다. 설치 ID 를 입력한 다음 확인 ID 를 입력하여 정품 인증을 완료하라는 메시지가 표시될 수 있습니다. 이 문서에서는 온라인으로 정품 인증하는 단계를 제공하고 설치 ID 를 찾는 방법과 오프라인 정품 인증을 위해 받은 확인 ID 를 입력하는 위치에 대해 설명합니다. 온라인 정품 인증 인터넷에 연결되어 있는 경우 Windows가 자동으로 정품 인증을 시도합니다. 온라인 정품 인증을 사용하려면 인터넷 연결이 필요하므로 먼저 Windows가 인터넷에 연결되어 있는지 확인합니다 . 그런 다음 아래에서 Windows 버전을 찾고 단계에 따라 온라인으로 정품 인증합니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 시스템 > 정품 인증을 선택하거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 활성화 상태를 검토합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 보안 > 업데이트 & 정 품 인증을 열거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 필요한 경우 제품 키를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증을 선택하거나 복구 > 정품 인증 & 업데이트를 선택합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 온라인 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 지금 온라인으로 Windows 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 이제 인터넷을 통해 Windows를 정품 인증하겠습니다를 선택합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 오프라인 정품 인증 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 인터넷에 연결되어 있지 않으므로 오프라인에서 Windows를 정품 인증해야 합니다. Windows 정품 인증이 온라인에서 성공적으로 완료되지 않았습니다. 제품 정품 인증 포털에서 설치 ID를 요청합니다. Microsoft 지원 담당자가 설치 ID를 요청합니다. 중요 오프라인으로 정품 인증을 시도할 때 전화할 정품 인증 전화 번호가 표시될 수 있습니다. 전화 번호에는 전화를 걸지 마세요. 대신 제품 정품 인증 포털 을 방문하여 이 흐름의 정보를 사용하여 정품 인증 시도를 완료하세요. 정품 인증 요청을 검토하기 위해 Microsoft 지원이 필요한 경우 지원 옵션이 제공됩니다. 설치 ID를 찾아 확인 ID를 입력합니다. 아래에서 Windows 버전을 찾고 단계에 따라 설치 ID를 찾습니다. 찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다. 오프라인으로 정품 인증하는 방법에는 세 가지가 있습니다. 방법은 다음과 같습니다. 방법 1: Windows 설정의 정품 인증 페이지 사용(권장) Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 빌드 : 26200.8973, 26100.8973 이상 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 빌드 : 이전 빌드 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 업데이트 & 보안 > 활성화를 엽니다 . 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > 정품 인증을 선택합니다. WindowsWindows 10 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증 또는 복구 > 정 품 인증 & 업데이트를 선택한 다음 고객 지원에 문의를 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( WindowsWindows > 8.1 또는 8 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows 7 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows Vista )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 지금 고객 서비스 담당자에게 전화하여 Windows를 정품 인증하고 싶습니다 . 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > Windows XP 정품 인증을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 방법 2: SLMGR 명령 프롬프트 사용 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 자동 도움말 또는 전화로 정품 인증 이 정품 인증 페이지에 표시되지 않습니다. SLUI 명령 프롬프트를 사용할 수 없습니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. Command를 입력하고 명령 프롬프트를 마우스 오른쪽 단추로"
-          }
+        "products": [],
+        "facets": []
+      },
+      {
+        "products": [
+          "스마트폰"
         ],
-        "intent_results": [
-          "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
-          "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
-          "https://infotips24.com/windows-activation-without-product-key/"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 6110,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "중간",
-        "evidence_mode": "serp",
-        "research_evidence": null,
-        "organic_provider": "codex_native_search",
-        "organic_query": "윈도우11 정품 인증",
-        "organic_domains": [
-          "k-info104.com",
-          "blog.naver.com",
-          "www.coupang.com",
-          "ddnews.co.kr",
-          "forbes.tistory.com",
-          "seogilang.tistory.com",
-          "infotips24.com",
-          "ittalk.co.kr",
-          "extrememanual.net",
-          "a2.moneyall.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
-            "domain": "k-info104.com",
-            "title": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁 (라이선스 만료 대처) – k-info104.com",
-            "snippet": "윈도우 11 정품 인증이 필요한 이유 ... 윈도우 11 정품 인증 오류는 대부분 네트워크 일시 장애, 부품 변경, 혹은 잘못된 제품 키 입력으로 인해 발생합니다."
-          },
-          {
-            "url": "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
-            "domain": "blog.naver.com",
-            "title": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법 (정품 인증 방법) : 네이버 블로그",
-            "snippet": "※ Windows 11 업그레이드 후 정품 인증을 받고 사용하다가 포맷 후 Windows 11을 다시 재설치 하는 경우 정품 인증 정보는 마이크로소프트 서버에 저장되어 있기에,하드웨어의 변경사항이"
-          },
-          {
-            "url": "https://www.coupang.com/np/search?q=%EC%9C%88%EB%8F%84%EC%9A%B0+10+%EC%A0%95%ED%92%88+%EC%9D%B8%EC%A6%9D",
-            "domain": "www.coupang.com",
-            "title": "쿠팡이 추천하는 윈도우 10 정품 인증 관련 혜택과 특가",
-            "snippet": "* 한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함 Windows11 Home + AOHI 케이블, win11 home+ aohi 케이블~~239,000원~~14%205,000원 6/2(화) 도착 예정 무료배송 ∙ 오늘출발"
-          },
-          {
-            "url": "https://ddnews.co.kr/window11-watermark/",
-            "domain": "ddnews.co.kr",
-            "title": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법 (2026년 최신) - 뚝딱 뉴스",
-            "snippet": "# 윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법 (2026년 최신) ... 윈도우 11을 설치하거나 업데이트한 후, 우측 하단에 ‘Windows 정품 인증’ 혹은"
-          },
-          {
-            "url": "https://forbes.tistory.com/1303",
-            "domain": "forbes.tistory.com",
-            "title": "윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드)",
-            "snippet": "### 윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드) ... PC를 인터넷에 연결한 이후에도 Windows 11 정품 인증이 정상적으로 완료되지 않으면 잠시 기다려 봅니다."
-          },
-          {
-            "url": "https://seogilang.tistory.com/m/2565",
-            "domain": "seogilang.tistory.com",
-            "title": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)",
-            "snippet": "윈도우11을 설치하고 정품 인증을 하지 않으면 오른쪽 하단에 정품 인증을 하라는 워터마크가 표시된다. ... 하지만 상황이 여의치 않아 당장 정품 인증을 할 수 없다면 정품"
-          },
-          {
-            "url": "https://infotips24.com/windows-activation-without-product-key/",
-            "domain": "infotips24.com",
-            "title": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026) - 인포팁스24",
-            "snippet": "윈도우 11은 설정 → 시스템 → 정품 인증, 윈도우 10은 설정 → 업데이트 및 보안 → 정품 인증입니다. ... 윈도우 정품인증 방법 cmd로 검색하면 상태"
-          },
-          {
-            "url": "https://ittalk.co.kr/%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EC%9D%B4%EA%B1%B8-%EB%86%93%EC%B9%98%EB%A9%B4-%EB%AA%A8%EB%93%A0-%EA%B8%B0%EB%8A%A5%EC%9D%B4-%EB%A9%88%EC%B6%98/",
-            "domain": "ittalk.co.kr",
-            "title": "윈도우11 정품 인증 확인, 이걸 놓치면 모든 기능이 멈춘다! - IT Talk",
-            "snippet": "# 윈도우11 정품 인증 확인, 이걸 놓치면 모든 기능이 멈춘다! ... 이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
-          },
-          {
-            "url": "https://extrememanual.net/41036",
-            "domain": "extrememanual.net",
-            "title": "윈도우11 정품 인증 오류 0xc004F074 해결 방법 - 익스트림 매뉴얼",
-            "snippet": "만일 인터넷에서 윈도우11 라이센스를 정상가 보다 싸게 구매한 경우 정상적인 정품 키가 아니므로 정품 인증이 되지 않을 수 있습니다. ... 이 경우 KMS 서버 관리자에게"
-          },
-          {
-            "url": "https://a2.moneyall.kr/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EB%B9%84%EC%9A%A9%EA%B3%BC-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EB%B2%95%EB%B3%84-%EA%B0%80%EA%B2%A9-%EB%B9%84%EA%B5%90/",
-            "domain": "a2.moneyall.kr",
-            "title": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교 - 알뜰 재테크 노트",
-            "snippet": "* 윈도우11 정품 인증키 합리적 구매 방법 소개 – 정품 vs 저가 키 장단점 비교 설명돼 있어요. ... 또 일부 무료 인증키나 KMS 방식 인증은"
-          }
-        ],
-        "dominant_result_ratio": 0.1,
-        "score_components": {
-          "demand": 30.29,
-          "organic_opportunity": 32.4,
-          "trend": -1.43,
-          "intent_fit": 15
-        },
-        "trend_growth": -0.143,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-10-02T02:04:46.174328+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "윈도우11정품인증"
-        ],
-        "status": "pending",
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "윈도우11정품인증",
-          "executed_query": "윈도우11 정품 인증",
-          "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
-          "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-02T02:04:46.174328+00:00",
-          "result_count": 10,
-          "domain_count": 10,
-          "dominant_ratio": 0.1,
-          "search_review": {
-            "version": 1,
-            "query": "윈도우11정품인증",
-            "executed_query": "윈도우11 정품 인증",
-            "provider": "codex_native_search",
-            "checked_at": "2026-10-02T02:04:46.174328+00:00",
-            "raw_sha256": "4f010febdf37cb469742f2ef1decd8a8e335addb58b3b31da24aad3fb746b7bf",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "윈도우11 정품 인증 상태를 확인하는 방법"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "윈도우 11은 설정 → 시스템 → 정품 인증"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "윈도우11 정품 인증 오류 0xc004F074 해결 방법"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 10,
-            "relevant_site_count": 10,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "relevance_ratio": 1.0,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.1,
-            "site_concentration": 0.1,
-            "organic_opportunity": 32.4
-          },
-          "scope": "full_keyword",
-          "target_keyword": "윈도우11정품인증",
-          "matches": [
-            {
-              "result_index": 0,
-              "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
-            },
-            {
-              "result_index": 1,
-              "quote": "정품 인증 제품 키 입력하는 방법 (정품 인증 방법)"
-            },
-            {
-              "result_index": 6,
-              "quote": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026)"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-10-02T02:04:46.174328+00:00",
-          "input_sha256": "7a4a7d569aca5aacb2434831734d3f0c042fd9463dba4056ac4dded117a69655",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "윈도우11정품인증",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "Windows 정품 인증 적용 대상 Windows 11 Windows 10",
-                "entity": "Windows 11",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
-                "quote": "이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.",
-                "entity": "Windows 11",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "정품 인증 상태는 어디서 확인하고 상태별 의미는 무엇인가?",
-                "answer": "설정의 시스템 > 정품 인증에서 확인한다. 인증 여부와 디지털 라이선스·Microsoft 계정 연결 여부를 구분한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다."
-              },
-              {
-                "facet": "인증에 필요한 라이선스는 무엇이며 둘 다 없으면 어떻게 하는가?",
-                "answer": "디지털 라이선스 또는 25자 제품 키가 필요하다. 둘 다 없으면 설치 후 Microsoft Store에서 라이선스를 구매한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다."
-              },
-              {
-                "facet": "제품 키 없이 디지털 라이선스로 어떻게 인증하는가?",
-                "answer": "해당 하드웨어의 디지털 라이선스와 연결된 Microsoft 계정으로 인터넷에 연결해 로그인한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다."
-              },
-              {
-                "facet": "제품 키는 어디에 입력하는가?",
-                "answer": "설치 중 입력하거나 설치 후 설정 > 시스템 > 정품 인증 > 제품 키 변경에서 입력한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다."
-              },
-              {
-                "facet": "재설치할 때 기존 인증을 어떻게 유지하는가?",
-                "answer": "기존 인증과 계정 연결을 확인하고 동일한 버전을 재설치한다. 디지털 라이선스가 있으면 키 입력을 건너뛰고 온라인 인증한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다."
-              },
-              {
-                "facet": "인증 실패나 주요 부품 변경 시 무엇을 확인하는가?",
-                "answer": "인터넷 연결·오류 메시지·버전에 맞는 키를 확인한다. 주요 부품 변경은 사전 계정 연결과 정품 인증 문제 해결사를 안내한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
-              },
-              {
-                "facet": "빌드별 오프라인 인증 진입 경로는 어떻게 다른가?",
-                "answer": "26200.8973·26100.8973 이상은 자동화된 도움말, 이전 빌드는 전화로 정품 인증에서 설치 ID를 확인한다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다."
-              },
-              {
-                "facet": "오프라인 인증은 어떻게 완료하는가?",
-                "answer": "설치 ID를 제품 정품 인증 포털에 제출하고 받은 확인 ID를 Windows에 입력한다. 표시된 전화번호로 전화하지 않는다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 76.26,
-        "publish_eligible": true,
-        "hold_reasons": []
+        "facets": []
       }
     ],
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 571,
+    "evaluated_candidates": 9,
+    "research_pool_size": 300,
+    "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "윈도우11다운로드",
+        "keyword": "삼성닷컴",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 293300,
+        "organic_provider": "codex_native_search",
+        "organic_query": "삼성닷컴",
+        "organic_results": [
+          {
+            "url": "https://www.samsungcard.com/",
+            "domain": "www.samsungcard.com",
+            "title": "삼성카드",
+            "snippet": "* 쓰면 쓸수록 혜택이 플러스트라이플러스 삼성카드 해피오더/F&B/hy 정기결제20% 할인아모레 10% 뷰티포인트 적립 ... 금토일엔 할인이 2배 우리의 주말은 금요일부터삼성 iD SELECT ON 카드 ... 연회비"
+          },
+          {
+            "url": "https://biz.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001?webViewFirstPage=true",
+            "domain": "biz.samsungcard.com",
+            "title": "추천 카드안내_삼성카드",
+            "snippet": "삼성카드 & MILEAGE PLATINUM (스카이패스) 1,000원당 스카이패스 1 마일리지 적립1,000원당 스카이패스 1 마일리지 추가 적립 ... 국내 온라인 가맹점 2~3개월 무이자할부 ... 편의점/배달앱/대중교통/택시/주유 3% 빅포인트"
+          },
+          {
+            "url": "https://pf.kakao.com/_JwRdu",
+            "domain": "pf.kakao.com",
+            "title": "카카오톡채널 - 삼성닷컴",
+            "snippet": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
+          },
+          {
+            "url": "https://www.samsung.com/sec/eventList/creditcard_benefit/?msockid=2359f254467c69a9280ae40e477e68c1",
+            "domain": "www.samsung.com",
+            "title": "삼성닷컴 카드사 혜택",
+            "snippet": "## 삼성닷컴 카드사 혜택 ... 제품별 별도의 결제일 할인 및 무이자 할부 혜택이 적용됩니다. ... ※ 본 페이지의 카드사 공통혜택과 개별 제품페이지의 혜택 내용이 다른"
+          },
+          {
+            "url": "https://pf.kakao.com/_JwRdu/85704821",
+            "domain": "pf.kakao.com",
+            "title": "카카오톡채널 - 삼성닷컴",
+            "snippet": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
+          },
+          {
+            "url": "https://www.samsung.com/sec/eventList/benefitzone/",
+            "domain": "www.samsung.com",
+            "title": "삼성닷컴 회원 혜택 l Samsung 대한민국",
+            "snippet": "## 삼성닷컴 회원 혜택 ... 동일한 삼성전자멤버십 ID로 동일한 날짜에 한 개의 판매전표로 동시구매 시,"
+          },
+          {
+            "url": "https://www.samsungstore.com/shop/selectFindShopMain.sesc",
+            "domain": "www.samsungstore.com",
+            "title": "SAMSUNG 삼성전자판매",
+            "snippet": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... GPS 수신이 불안정하여 정상적으로 현재 위치를 확인할 수 없습니다.단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요."
+          },
+          {
+            "url": "https://www.samsungstore.com/shop/selectFindShopMain.sesc?menu=w401",
+            "domain": "www.samsungstore.com",
+            "title": "매장찾기 | 매장안내 | SAMSUNG 삼성전자판매",
+            "snippet": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... * * * * 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포"
+          },
+          {
+            "url": "https://samsungstore.com/shop/selectFindShopMain.sesc",
+            "domain": "samsungstore.com",
+            "title": "SAMSUNG 삼성전자판매",
+            "snippet": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... 단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요. ... * 경기도 성남시 분당구 황새울로311번길 28 (서현동)"
+          },
+          {
+            "url": "https://www.namu.moe/w/%EC%82%BC%EC%84%B1%EB%8B%B7%EC%BB%B4",
+            "domain": "www.namu.moe",
+            "title": "삼성닷컴",
+            "snippet": "매장 | 삼성닷컴 | 삼성스토어 | 갤럭시 캠퍼스 | 삼성 킹스크로스 | 갤럭시 하라주쿠 ... 자회사 | 세메스 | 삼성메디슨 | 하만 | 삼성전자로지텍 |"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "삼성닷컴",
+          "executed_query": "삼성닷컴",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T09:00:57.597349+00:00",
+          "raw_sha256": "ebcb1a3c2d4ffdd64c2dc763b850a96097523b77faf01097dd4d4aede122e8f6",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "* 쓰면 쓸수록 혜택이 플러스트라이플러스 삼성카드 해피오더/F&B/hy 정기결제20% 할인아모레 10% 뷰티포인트 적립 ... 금토일엔 할인이 2배 우리의 주말은 금요일부터삼성 iD SELECT ON 카드 ... 연회비"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "삼성카드 & MILEAGE PLATINUM (스카이패스) 1,000원당 스카이패스 1 마일리지 적립1,000원당 스카이패스 1 마일리지 추가 적립 ... 국내 온라인 가맹점 2~3개월 무이자할부 ... 편의점/배달앱/대중교통/택시/주유 3% 빅포인트"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "## 삼성닷컴 카드사 혜택 ... 제품별 별도의 결제일 할인 및 무이자 할부 혜택이 적용됩니다. ... ※ 본 페이지의 카드사 공통혜택과 개별 제품페이지의 혜택 내용이 다른"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "## 삼성닷컴 회원 혜택 ... 동일한 삼성전자멤버십 ID로 동일한 날짜에 한 개의 판매전표로 동시구매 시,"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... GPS 수신이 불안정하여 정상적으로 현재 위치를 확인할 수 없습니다.단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요."
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "매장찾기 | 매장안내 | SAMSUNG 삼성전자판매"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... 단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요. ... * 경기도 성남시 분당구 황새울로311번길 28 (서현동)"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "매장 | 삼성닷컴 | 삼성스토어 | 갤럭시 캠퍼스 | 삼성 킹스크로스 | 갤럭시 하라주쿠 ... 자회사 | 세메스 | 삼성메디슨 | 하만 | 삼성전자로지텍 |"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "아이폰17",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://support.apple.com/ko-kr/125089",
+              "title": "iPhone 17 - 기술 사양 - Apple 지원 (KR)",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://images.apple.com/kr/iphone-17/",
+              "title": "iPhone 17 - Apple (KR)",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://apps.apple.com/kr/app/%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%ED%99%88/id1629564686",
+              "title": "‎아이파크홈 앱 - App Store",
+              "excerpt_chars": 7925
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "category_mismatch"
+          }
+        }
+      },
+      {
+        "keyword": "세탁기건조기",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1408106354&cntType=O",
+              "title": "(주)세기",
+              "excerpt_chars": 5655
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "category_mismatch"
+          }
+        }
+      },
+      {
+        "keyword": "컴퓨터포맷하는법",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "low_search_relevance"
+        ],
+        "monthly_search": 3940,
+        "organic_provider": "codex_native_search",
+        "organic_query": "컴퓨터 포맷하는 법",
+        "organic_results": [
+          {
+            "url": "https://www.onkorea.co.kr/plus/digitalinfo/573",
+            "domain": "www.onkorea.co.kr",
+            "title": "컴퓨터 본체를 팔려고 하는데 포맷하는 방법이 궁금해요. 어떻게 하면 될까요? | 온코리아",
+            "snippet": "# 컴퓨터 본체를 팔려고 하는데 포맷하는 방법이 궁금해요. ... 포맷은 하드 드라이브의 모든 데이터를 지우므로, ... 포맷을 시작하려면, 먼저 운영 체제 설치 미디어가 필요합니다. ..."
+          },
+          {
+            "url": "https://law.go.kr/LSW/lsInfoP.do?lsiSeq=54504",
+            "domain": "law.go.kr",
+            "title": "법령 > 본문 > 컴퓨터프로그램보호법 | 국가법령정보센터",
+            "snippet": "특정한 컴퓨터외에는 사용할 수 없는 프로그램을 다른 컴퓨터에 사용할 수 있도록 하기 위하여 필요한 범위안에서의 변경 ... * [Input] 제18조 (프로그램저작권자가 불명인 프로그램의 사용) ①프로그램을"
+          },
+          {
+            "url": "https://jwiseflow.com/computer-format-windows-mac-guide/",
+            "domain": "jwiseflow.com",
+            "title": "컴퓨터 포맷하는 법 2026 : 윈도우·맥 백업 초기화 총정리 | JLOGUE",
+            "snippet": "컴퓨터 포맷하는 법은 단순히 “초기화 버튼을 누르는 일”이 아니라, 중요한 파일을 먼저 백업하고 운영체제에 맞는 초기화 방식을 선택한 뒤 다시 복원하는 과정입니다. ... 포맷 전"
+          },
+          {
+            "url": "https://shiningsense.com/3773",
+            "domain": "shiningsense.com",
+            "title": "컴퓨터 포맷 하는 법, 윈도우 초기화 완벽 가이드 (윈도우10/11 기준)",
+            "snippet": "윈도우 설치 USB로 포맷하는 법 (정상 부팅 불가 시) ... 컴퓨터 포맷이란 하드디스크나 SSD에 저장된 모든 데이터를 삭제하고, 윈도우 운영체제를 새로 설치하는 작업을 의미합니다.불필요하게 쌓인"
+          },
+          {
+            "url": "https://www.sony.co.kr/electronics/support/memory-cards-memory-stick/msh-128/articles/S500080088",
+            "domain": "www.sony.co.kr",
+            "title": "메모리스틱 포맷하는 방법 | Sony KR",
+            "snippet": "# 메모리스틱 포맷하는 방법 ... 모든 메모리스틱은 공장에서 출하되기 전에 최적의 상태로 포맷(초기화)되어 있습니다. ... * 내 컴퓨터 메뉴에 있는 일반 윈도즈 포맷 툴을 사용하여"
+          },
+          {
+            "url": "https://www.coffeeforte.com/service/cs",
+            "domain": "www.coffeeforte.com",
+            "title": "포르테커피 포모나 공식 쇼핑몰",
+            "snippet": "[A]포머니는 계속 운영되며, 카파로쇼핑몰이 폐쇄되면서 쇼핑몰 적립금이 소멸됩니다. ... [A] 홈페이지 > 로그인 >마이페이지 > 회원정보에서 수정이 가능합니다. 회원정보는 배송 및 이벤트 제공의 기초자료가 되기"
+          },
+          {
+            "url": "https://www.keyzard.cc/queen0326/nb/224271483862",
+            "domain": "www.keyzard.cc",
+            "title": "컴퓨터 포맷하는 법 - 윈도우 초기화부터 블루스크린 해결까지 한번에",
+            "snippet": "컴퓨터가 갑자기 느려지거나, 파란 화면이 뜨거나, 이상한 오류가 반복된다면 포맷을 고민하게 되죠? ... 컴퓨터 포맷은 저장장치의 데이터를 모두 지우고 운영체제를 새로 설치하는 과정입니다. ... 원문링크"
+          },
+          {
+            "url": "https://www.hankyung.com/article/1996082902231",
+            "domain": "www.hankyung.com",
+            "title": "디스켓 다루기 .. 포맷하는 법 | 한국경제",
+            "snippet": "'포맷하는 법' ... 구글 검색 선호 출처로 추가 ... 더욱이 멀티미디어 시대에 이르러서는 파일의 단위가 매우 커져 디스켓한 장에 담을수 있는 데이터의 종류도 점점 적어져"
+          },
+          {
+            "url": "https://marketplace.coupang.com/information-center/blog-news7",
+            "domain": "marketplace.coupang.com",
+            "title": "판매 불가 품목 안내",
+            "snippet": "\"모의 총포\"란, 금속 또는 금속 외의 소재로 만들어 모양이 총포와 아주 비슷한 것으로 범죄에 악용될 소지가 있거나 인명·신체상의 위해를 가할 우려가 있는 것 ... -"
+          },
+          {
+            "url": "https://www.onkorea.co.kr/plus/digitalinfo/3606",
+            "domain": "www.onkorea.co.kr",
+            "title": "컴퓨터 성능이 떨어져서 포맷하려고 하는데, 포맷하는 절차가 어떻게 되는지 궁금해요. | 온코리아",
+            "snippet": "# 컴퓨터 성능이 떨어져서 포맷하려고 하는데, 포맷하는 절차가 어떻게 되는지 궁금해요. ... 포맷을 진행하면 모든 파일과 프로그램이 삭제되므로, USB 드라이브나 외장 하드 디스크에 필요한 파일들을"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "컴퓨터포맷하는법",
+          "executed_query": "컴퓨터 포맷하는 법",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T09:00:57.597349+00:00",
+          "raw_sha256": "682a2acb3f0d30fa6b4b25d5b80a4c8146f214132faa9804286888ceca0f1387",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "# 컴퓨터 본체를 팔려고 하는데 포맷하는 방법이 궁금해요. ... 포맷은 하드 드라이브의 모든 데이터를 지우므로, ... 포맷을 시작하려면, 먼저 운영 체제 설치 미디어가 필요합니다. ..."
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "법령 > 본문 > 컴퓨터프로그램보호법 | 국가법령정보센터"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "컴퓨터 포맷하는 법은 단순히 “초기화 버튼을 누르는 일”이 아니라, 중요한 파일을 먼저 백업하고 운영체제에 맞는 초기화 방식을 선택한 뒤 다시 복원하는 과정입니다. ... 포맷 전"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "컴퓨터 포맷 하는 법, 윈도우 초기화 완벽 가이드 (윈도우10/11 기준)"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "메모리스틱 포맷하는 방법 | Sony KR"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "포르테커피 포모나 공식 쇼핑몰"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "컴퓨터 포맷하는 법 - 윈도우 초기화부터 블루스크린 해결까지 한번에"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "디스켓 다루기 .. 포맷하는 법 | 한국경제"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "\"모의 총포\"란, 금속 또는 금속 외의 소재로 만들어 모양이 총포와 아주 비슷한 것으로 범죄에 악용될 소지가 있거나 인명·신체상의 위해를 가할 우려가 있는 것 ... -"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "# 컴퓨터 성능이 떨어져서 포맷하려고 하는데, 포맷하는 절차가 어떻게 되는지 궁금해요. ... 포맷을 진행하면 모든 파일과 프로그램이 삭제되므로, USB 드라이브나 외장 하드 디스크에 필요한 파일들을"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "와이파이설치",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://news.seoul.go.kr/gov/archives/516134",
+              "title": "서울 무료 와이파이 SEOUL_Secure 마음껏 이용하세요! < 행정 | 서울특별시",
+              "excerpt_chars": 2632
+            },
+            {
+              "url": "https://www.data.go.kr/data/15155062/openapi.do",
+              "title": "행정안전부_무료와이파이정보 조회서비스 | 공공데이터포털",
+              "excerpt_chars": 2814
+            },
+            {
+              "url": "https://www.data.go.kr/data/15104461/fileData.do?recommendDataYn=Y",
+              "title": "인천광역시_공공시설 공공와이파이 설치현황_20260831 | 공공데이터포털",
+              "excerpt_chars": 4458
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://news.seoul.go.kr/gov/archives/516134",
+                  "title": "서울 무료 와이파이 SEOUL_Secure 마음껏 이용하세요! < 행정 | 서울특별시",
+                  "excerpt_chars": 2632
+                },
+                {
+                  "url": "https://www.data.go.kr/data/15155062/openapi.do",
+                  "title": "행정안전부_무료와이파이정보 조회서비스 | 공공데이터포털",
+                  "excerpt_chars": 2814
+                },
+                {
+                  "url": "https://www.data.go.kr/data/15104461/fileData.do?recommendDataYn=Y",
+                  "title": "인천광역시_공공시설 공공와이파이 설치현황_20260831 | 공공데이터포털",
+                  "excerpt_chars": 4458
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "no_changed_source"
+          }
+        }
+      },
+      {
+        "keyword": "노트북초기화",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "concentrated_search_results"
+        ],
+        "monthly_search": 1870,
+        "organic_provider": "codex_native_search",
+        "organic_query": "노트북 초기화",
+        "organic_results": [
+          {
+            "url": "https://macbeomki.com/guide/laptop-factory-reset",
+            "domain": "macbeomki.com",
+            "title": "노트북 초기화 ― 삼성 F4·LG F11 공장 초기화와 안 될 때 | macbeomki",
+            "snippet": "삼성·LG는 Windows 11로 업그레이드한 노트북을 공장 초기화하면 Windows 10으로 돌아간다고 안내합니다. ... 출고 당시 Windows 10이었던 노트북은 Windows 11로 업그레이드했더라도 제조사 복구로 초기화하면 Windows 10으로"
+          },
+          {
+            "url": "https://support.hp.com/kr-ko/document/c08231962",
+            "domain": "support.hp.com",
+            "title": "HP 상업용 노트북 및 데스크탑 PC - 클라우드 복구 도구를 여는 동안 \"초기화 중 오류\" 오류가 표시됨 | HP® 지원",
+            "snippet": "# HP 상업용 노트북 및 데스크탑 PC - 클라우드 복구 도구를 여는 동안 \"초기화 중 오류\" 오류가 표시됨 ... * HP Elite Dragonfly 13.5인치 G3"
+          },
+          {
+            "url": "https://thebestinformation.co.kr/%EC%A0%95%EB%B3%B4/%EA%B0%91%EC%9E%90%EA%B8%B0-%EB%8A%90%EB%A0%A4%EC%A7%84-%EB%82%B4-%EB%85%B8%ED%8A%B8%EB%B6%81-%ED%8F%AC%EB%A7%B7-%EB%8C%80%EC%8B%A0-%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%B4%88%EA%B8%B0%ED%99%94%EB%A1%9C/",
+            "domain": "thebestinformation.co.kr",
+            "title": "갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는 초간단 방법 - 도움정보",
+            "snippet": "# 갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는 초간단 방법 ... * 갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는"
+          },
+          {
+            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/X202E/K7620_eManual_S200E.pdf?model=F201E",
+            "domain": "dlcdnets.asus.com",
+            "title": "노트북 PC \ne-매뉴얼",
+            "snippet": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
+          },
+          {
+            "url": "https://beoksolution.com/blog/%EB%B0%98%ED%92%88-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85-6%EB%8B%A8%EA%B3%84-%EC%A0%90%EA%B2%80%EB%B6%80%ED%84%B0-%EA%B2%8C%EC%9E%84-%EA%B5%AC%EB%8F%99%EA%B9%8C%EC%A7%80-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+            "domain": "beoksolution.com",
+            "title": "반품 노트북 초기 세팅 6단계: 점검부터 게임 구동까지 총정리 | 비오케이솔루션 · 홍커뮤니케이션 블로그",
+            "snippet": "# 반품 노트북 초기 세팅 6단계: 점검부터 게임 구동까지 총정리 ... 결론 먼저: 반품 노트북은 '점검 → 초기화 → 드라이버 → 발열 확인' 순서가 |"
+          },
+          {
+            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/X550JF/0412.pdf",
+            "domain": "dlcdnets.asus.com",
+            "title": "노트북 PC \ne-매뉴얼",
+            "snippet": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
+          },
+          {
+            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/S451LN/0412_K8134_B.pdf",
+            "domain": "dlcdnets.asus.com",
+            "title": "노트북 컴퓨터 \ne-매뉴얼",
+            "snippet": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 킹퓨터가 플"
+          },
+          {
+            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/N550JX/0412_K7914_A.pdf",
+            "domain": "dlcdnets.asus.com",
+            "title": "노트북 컴퓨터 \ne-매뉴얼",
+            "snippet": "Reset your PC (PC 초기화)를 사용하여 노트북 킹퓨터를 기본 ... 시스템을 초기화하려면 노트북 킹퓨터가"
+          },
+          {
+            "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2095887",
+            "domain": "kli.korean.go.kr",
+            "title": "내용 보기 | 국립국어원 온용어",
+            "snippet": "조선 시대 관이나 민가에서 일하던 노비가 입던 옷. ... * 이 자료는 국립국어원 개방형 사전 《우리말샘》(2023년 6월 기준)의 전문 용어를 국가과학기술표준분류체계에 따라 분류한 자료입니다. ..."
+          },
+          {
+            "url": "https://dlcdnet.asus.com/pub/ASUS/nb/N751JK/0412_K9333_A.pdf",
+            "domain": "dlcdnet.asus.com",
+            "title": "K9333\n초판 V1\n2014년 7월\n노트북 컴퓨터 \ne-매뉴얼",
+            "snippet": "Reset your PC (PC 초기화)를 사용하여 노트북 컴퓨터를 기본 ... 시스템을 초기화하려면 노트북 컴퓨터가"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "노트북초기화",
+          "executed_query": "노트북 초기화",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T09:00:57.597349+00:00",
+          "raw_sha256": "102e94949d834d850f93b3ffaf2fc8cb7ff00011a081fe14f1ab623811c6d1e8",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "노트북 초기화 ― 삼성 F4·LG F11 공장 초기화와 안 될 때 | macbeomki"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "HP 상업용 노트북 및 데스크탑 PC - 클라우드 복구 도구를 여는 동안 \"초기화 중 오류\" 오류가 표시됨 | HP® 지원"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는 초간단 방법 - 도움정보"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "# 반품 노트북 초기 세팅 6단계: 점검부터 게임 구동까지 총정리 ... 결론 먼저: 반품 노트북은 '점검 → 초기화 → 드라이버 → 발열 확인' 순서가 |"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 킹퓨터가 플"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "Reset your PC (PC 초기화)를 사용하여 노트북 킹퓨터를 기본 ... 시스템을 초기화하려면 노트북 킹퓨터가"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "조선 시대 관이나 민가에서 일하던 노비가 입던 옷. ... * 이 자료는 국립국어원 개방형 사전 《우리말샘》(2023년 6월 기준)의 전문 용어를 국가과학기술표준분류체계에 따라 분류한 자료입니다. ..."
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "Reset your PC (PC 초기화)를 사용하여 노트북 컴퓨터를 기본 ... 시스템을 초기화하려면 노트북 컴퓨터가"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "데이터쉐어링",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
           "low_search_relevance"
         ],
-        "monthly_search": 8050,
+        "monthly_search": 2460,
         "organic_provider": "codex_native_search",
-        "organic_query": "윈도우11 다운로드",
+        "organic_query": "데이터 쉐어링",
         "organic_results": [
           {
-            "url": "https://cbnews.co.kr/%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%A0%80%EC%9E%A5-%EA%B3%B5%EA%B0%84-%EC%84%BC%EC%8A%A4-%EC%84%A4%EC%A0%95%EF%BD%9C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%ED%8F%B4%EB%8D%94-%EC%82%AD%EC%A0%9C-%EC%A0%84/",
-            "domain": "cbnews.co.kr",
-            "title": "윈도우11 저장 공간 센스 설정｜다운로드 폴더 삭제 전 확인 - CB NEWS",
-            "snippet": "# 윈도우11 저장 공간 센스 설정｜다운로드 폴더 삭제 전 확인 ... Image: 윈도우 저장 공간 관리 화면과 외장 드라이브 저장 공간 센스를 켜기 전 휴지통과"
+            "url": "https://www.db-detre.co.kr/web/main.do",
+            "domain": "www.db-detre.co.kr",
+            "title": "디에트르",
+            "snippet": "파주 운정신도시7차 디에트르 프리미어 ... 일상에 활력을 불어넣는 공동시설 ... 자연의 여유로움을 담은 단지조경 ... 이곳에서만큼은 자신이 이루고 싶은 미래와 목표를 ... 고객님이신가요?"
           },
           {
-            "url": "https://winfixguide.kr/%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EA%B0%80-%EB%A9%88%EC%B7%84%EC%9D%84-%EB%95%8C%EF%BD%9C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%C2%B7%EC%84%A4%EC%B9%98%EA%B0%80/",
-            "domain": "winfixguide.kr",
-            "title": "윈도우11 업데이트가 멈췄을 때｜다운로드·설치가 진행되지 않는 경우 확인 순서 - 디지털진단소",
-            "snippet": "# 윈도우11 업데이트가 멈췄을 때｜다운로드·설치가 진행되지 않는 경우 확인 순서 ... 윈도우11에서 Windows 업데이트를 실행했는데 다운로드가 0%에서 움직이지 않거나, 특정 퍼센트에서 오랫동안 멈춰 있는 경우가"
+            "url": "https://gamjimobile.kr/data-sharing-vs-tethering/",
+            "domain": "gamjimobile.kr",
+            "title": "데이터 쉐어링이란? 테더링과 차이점 쉽게 알아보기 | 감지모바일 | 앤텔레콤 인증 판매점",
+            "snippet": "데이터 쉐어링은 스마트폰이 사용하는 메인 회선의 데이터를 다른 스마트기기와 나누어 사용하는 서비스입니다. ... 데이터 쉐어링은 별도 유심을 등록한 스마트기기가 이동통신망에 직접 연결되는 방식입니다."
           },
           {
-            "url": "https://oguonline.com/2026/07/22/%EB%B0%98%EB%94%94%EC%A7%91-%EB%AC%B4%EB%A3%8C-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%8F-%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95/",
-            "domain": "oguonline.com",
-            "title": "반디집 무료 다운로드 및 윈도우 11 최적화 설정 방법 – 오구온라인",
-            "snippet": "# 반디집 무료 다운로드 및 윈도우 11 최적화 설정 방법 ... 작성 남기훈 최종 업데이트 2026년 7월 31일 이 글은 오구온라인 편집팀의 사실 확인과 정확성"
+            "url": "https://yogo.kt.com/direct/directShare.do",
+            "domain": "yogo.kt.com",
+            "title": "데이터쉐어링가입 | 본사직영 온라인샵 | KT 다이렉트샵",
+            "snippet": "* 신규 가입이 제한된 단종요금제의 경우에는 KT다이렉트에서 데이터쉐어링 온라인 셀프 개통이 불가능하오니, 유심 구매 전 114 고객센터를 통해 확인 후 고객 가까운 KT 플라자로 방문하여"
           },
           {
-            "url": "https://everythinking7.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-C%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C-%EC%9A%A9%EB%9F%89-%EB%B6%80%EC%A1%B1%EF%BD%9C%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%C2%B7%ED%9C%B4%EC%A7%80%ED%86%B5%C2%B7Windowsold-%EC%A7%80%EC%9B%8C%EB%8F%84-%EB%90%A0%EA%B9%8C",
-            "domain": "everythinking7.tistory.com",
-            "title": "윈도우 11 C드라이브 용량 부족｜다운로드·휴지통·Windows.old 지워도 될까?",
-            "snippet": "# 윈도우 11 C드라이브 용량 부족｜다운로드·휴지통·Windows.old 지워도 될까? ... ‘임시 파일’이라고 되어 있어도 다운로드나 이전 Windows 설치처럼 쉽게 체크하기 어려운 항목이 섞여 있기 때문이죠."
+            "url": "https://apps.apple.com/kr/app/%EB%8B%A4%EC%9D%B4%ED%8A%B8-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8-ai%EC%8B%9D%EB%8B%A8%EA%B8%B0%EB%A1%9D-1-1%EC%98%81%EC%96%91%EC%BD%94%EC%B9%AD-%ED%98%88%EB%8B%B9%EB%B6%84%EC%84%9D/id6450912983",
+            "domain": "apps.apple.com",
+            "title": "‎다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 앱 - App Store",
+            "snippet": "● 혈당관리 - 다이트가 새롭게 선보이는 “혈당관리”기능을 활용해보세요 - 내가 먹은 식단에 대한 혈당을 눈으로 확인하고 효과적인 관리를 할 수 있어요 ● 분석 - 식단,"
           },
           {
-            "url": "https://policybrp.com/%EC%9C%88%EB%8F%84%EC%9A%B011-iso-%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84-%EC%A0%95%EC%8B%9D-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%A9%EB%B2%95/",
-            "domain": "policybrp.com",
-            "title": "윈도우11 ISO 최신버전 정식 다운로드 방법",
-            "snippet": "윈도우11 ISO는 마이크로소프트 공식 다운로드 페이지에서 별도의 우회 없이 바로 받을 수 있습니다.예전처럼 브라우저를 속이거나 인터넷 익스플로러를 실행할 필요가 전혀 없고, 페이지 하단의 ‘Windows 11"
+            "url": "https://play.google.com/store/apps/details?hl=ko&id=kr.co.wedaeat.app.aos",
+            "domain": "play.google.com",
+            "title": "다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 - Google Play 앱",
+            "snippet": "- 오늘 먹은 식단의 영양정보를 간편하게 분석해보세요. ... 데이터 개인 정보 보호 및 보안 관행은 사용자의 앱 사용, 지역, 연령에 따라 다를 수 있습니다. ..."
+          },
+          {
+            "url": "https://www.newsis.com/view/NISX20190201_0000548430",
+            "domain": "www.newsis.com",
+            "title": "데이터 쉐어링과 테더링, 어떻게 다를까? :: 공감언론 뉴시스 ::",
+            "snippet": "6일 LG유플러스에 따르면 '데이터 쉐어링'과 '데이터 테더링'은 스마트폰의 데이터를 가져다가 태블릿이나 노트북에서 사용할 수 있다는 공통점이 있다. ... 데이터 쉐어링을 할 단말기에 전용 USIM을 꽂고"
+          },
+          {
+            "url": "https://play.google.com/store/apps/details?hl=ko&id=kr.co.dartapp",
+            "domain": "play.google.com",
+            "title": "다트(DART) - 전동 킥보드 공유 서비스 - Google Play 앱",
+            "snippet": "이 같은 대중교통의 틈새를 매울 수 있는 마이크로 모빌리티 쉐어링 서비스 DART. ... 다트쉐어링(주) 대한민국 서울특별시 강남구 ... 데이터 개인 정보 보호 및 보안 관행은"
+          },
+          {
+            "url": "https://www.db-detre.co.kr/web/intrcomp/retrieveList.do?sale_type=all",
+            "domain": "www.db-detre.co.kr",
+            "title": "디에트르",
+            "snippet": "분양중, 분양예정 단지 정보를 알려드립니다. ... 오픈예정 ... ## 분양가/임대가"
+          },
+          {
+            "url": "https://apps.apple.com/kr/app/%EB%8B%A5%ED%84%B0%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EB%8F%88%EB%B2%84%EB%8A%94-%ED%98%88%EB%8B%B9-%EC%8B%9D%EB%8B%A8-%EC%B2%B4%EC%A4%91-%EB%A7%8C%EB%B3%B4%EA%B8%B0-%EC%95%B1/id1156758689",
+            "domain": "apps.apple.com",
+            "title": "‎닥터다이어리 – 돈버는 혈당, 식단, 체중, 만보기 앱 앱 - App Store",
+            "snippet": "혈당뿐만 아니라 식사, 운동, 체중 등 혈당에 영향을 줄 수 있는 다양한 생활 데이터를 함께 관리할 수 있습니다. - 공복 혈당·식후 혈당 등 혈당 기록"
+          },
+          {
+            "url": "https://datatree21.com/",
+            "domain": "datatree21.com",
+            "title": "주식회사 데이터트리 | DATATREE - 데이터 플랫폼 프로바이더",
+            "snippet": "연구과제 소상공인 상권분석 마이데이터사업 공공기관 연구과제 수행 데이터 관련 사업 수행 자세히 보기 유지보수 공공기관 통합유지보수 상주 및 비상주 전문인력 투입 자세히 보기 솔루션 제조품질"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "데이터쉐어링",
+          "executed_query": "데이터 쉐어링",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T09:00:57.597349+00:00",
+          "raw_sha256": "8c092c046fb6a4fb6ed9eca20be3525b3494e45c2a251cac5fa823a3a4f0d9a8",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "파주 운정신도시7차 디에트르 프리미어 ... 일상에 활력을 불어넣는 공동시설 ... 자연의 여유로움을 담은 단지조경 ... 이곳에서만큼은 자신이 이루고 싶은 미래와 목표를 ... 고객님이신가요?"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "데이터 쉐어링은 스마트폰이 사용하는 메인 회선의 데이터를 다른 스마트기기와 나누어 사용하는 서비스입니다. ... 데이터 쉐어링은 별도 유심을 등록한 스마트기기가 이동통신망에 직접 연결되는 방식입니다."
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "* 신규 가입이 제한된 단종요금제의 경우에는 KT다이렉트에서 데이터쉐어링 온라인 셀프 개통이 불가능하오니, 유심 구매 전 114 고객센터를 통해 확인 후 고객 가까운 KT 플라자로 방문하여"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "‎다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 앱 - App Store"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 - Google Play 앱"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "6일 LG유플러스에 따르면 '데이터 쉐어링'과 '데이터 테더링'은 스마트폰의 데이터를 가져다가 태블릿이나 노트북에서 사용할 수 있다는 공통점이 있다. ... 데이터 쉐어링을 할 단말기에 전용 USIM을 꽂고"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "다트(DART) - 전동 킥보드 공유 서비스 - Google Play 앱"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "분양중, 분양예정 단지 정보를 알려드립니다. ... 오픈예정 ... ## 분양가/임대가"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "‎닥터다이어리 – 돈버는 혈당, 식단, 체중, 만보기 앱 앱 - App Store"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "연구과제 소상공인 상권분석 마이데이터사업 공공기관 연구과제 수행 데이터 관련 사업 수행 자세히 보기 유지보수 공공기관 통합유지보수 상주 및 비상주 전문인력 투입 자세히 보기 솔루션 제조품질"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "윈도우10다운로드",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 2360,
+        "organic_provider": "codex_native_search",
+        "organic_query": "윈도우10 다운로드",
+        "organic_results": [
+          {
+            "url": "https://arxiv.org/abs/2301.11963",
+            "domain": "arxiv.org",
+            "title": "On 10 dimensional Exceptional Drinfel'd Algebras",
+            "snippet": "Title: On 10 dimensional Exceptional Drinfel'd Algebras"
+          },
+          {
+            "url": "https://www.kcopa.or.kr/download.do?uuid=0d081ec6-807f-4811-8f81-f7b662c4e294.pdf",
+            "domain": "www.kcopa.or.kr",
+            "title": "- 성원영 전문위원 : 프로그램의 경우에는 상업적 저작물이기 때문에 다름",
+            "snippet": "- 정현순 전문위원 : 마이크로소프트 공식 홈페이지에서 ‘윈도우10’ 업데이트 파일 이외 윈도우 설치파일을 확인하기 어려움 ... - 정현순 전문위원 : 위원님 말씀은 웹하드에 게시된 윈도우10"
           },
           {
             "url": "https://www.wps.com/blog/ko-KR/ko-how-to-download-google-docs-for-pc-win10-and-win11/",
             "domain": "www.wps.com",
             "title": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)",
-            "snippet": "# PC용 Google Docs 다운로드 방법 (윈도우 10 & 11) ... Windows 10 및 11에서 Google Docs를 다운로드하는 간단한 가이드를 안내드립니다: ... * 목차 생성:"
+            "snippet": "# PC용 Google Docs 다운로드 방법 (윈도우 10 & 11) ... Windows 10 및 11에서 Google Docs를 다운로드하는 간단한 가이드를 안내드립니다: ... 이것은 단순히 데스크톱"
           },
           {
-            "url": "https://www.klog.kr/download/tiny11-download",
-            "domain": "www.klog.kr",
-            "title": "Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드",
-            "snippet": "# Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드 ... Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드 및 설치 안내입니다."
+            "url": "https://www.hunnytip.kr/%EC%9C%88%EB%8F%84%EC%9A%B010-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-usb-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC/",
+            "domain": "www.hunnytip.kr",
+            "title": "윈도우10 다운로드 usb 만들기 방법 총정리 - 파두남",
+            "snippet": "가장 안전한 윈도우10 다운로드 USB 만들기 방법은 마이크로소프트 공식 소프트웨어 다운로드 페이지를 이용하는 것입니다. ... 윈도우10 공식 다운로드 페이지 바로가기"
           },
           {
-            "url": "https://www.itechguides.com/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%86%8C%ED%94%84%ED%8A%B8-arm-%EA%B8%B0%EA%B8%B0%EC%9A%A9-%EC%9C%88%EB%8F%84%EC%9A%B0-11-iso-%ED%8C%8C%EC%9D%BC-%EA%B3%B5%EC%8B%9D-%EA%B3%B5%EA%B0%9C-25h2/",
-            "domain": "www.itechguides.com",
-            "title": "마이크로소프트 Arm 기기용 윈도우 11 ISO 공식 공개: 25H2 다운로드·설치",
-            "snippet": "# 마이크로소프트, Arm 기기용 윈도우 11 ISO 파일 공식 공개…25H2 다운로드·설치 조건 ... 마이크로소프트는 2026년 8월 18일 기준 Arm 기기용 윈도우 11 ISO 파일을 공식"
+            "url": "https://hae-su.tistory.com/m/98",
+            "domain": "hae-su.tistory.com",
+            "title": "원키 고스트 윈도우10 (32비트,64비트) 복원 사용법/다운로드",
+            "snippet": "### 원키 고스트 윈도우10 (32비트,64비트) 복원 사용법/다운로드 ... 위에 원키 고스트 윈도우10 프로그램(32비트,64비트)을 다운로드 받으시고 ... 만약 위의 맨트가 나오고 무한 재부팅이 된다면 포맷 이"
           },
           {
-            "url": "https://digitaluserguide.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%84%BC%ED%84%B0-%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0%EF%BD%9C25H2-ISO%C2%B7%EC%84%A4%EC%B9%98%EB%8F%84%EC%9A%B0%EB%AF%B8%C2%B7USB-%EC%84%A4%EC%B9%98%EB%B0%A9%EB%B2%95",
-            "domain": "digitaluserguide.tistory.com",
-            "title": "윈도우 11 다운로드 센터 바로가기｜25H2 ISO·설치도우미·USB 설치방법",
-            "snippet": "26H1도 별도의 Windows 11 버전으로 존재하지만 기존 24H2·25H2 PC에 제공하는 일반적인 기능 업데이트가 아니라 2026년 출시된 일부 신규 장치를 대상으로 설계된 버전이므로, 기존 PC에서 공식"
+            "url": "https://jumpmap.tistory.com/809",
+            "domain": "jumpmap.tistory.com",
+            "title": "윈도우10, 윈도우7 핀볼 다운로드",
+            "snippet": "# 윈도우10, 윈도우7 핀볼 다운로드 ... 윈도우10과 윈도우7에는 과거의 3D 핀볼이 기본 프로그램으로 들어 있지 않기 때문에, 검색 결과가 비어 있어도 설치가 잘못된 것은 아닙니다."
           },
           {
-            "url": "https://richdadsky.tistory.com/entry/%ED%81%AC%EB%A1%AC%C2%B7%EC%97%A3%EC%A7%80-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EC%9C%84%EC%B9%98-%EC%84%A4%EC%A0%95%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%80%EC%9E%A5-%ED%8F%B4%EB%8D%94-%EB%B0%94%EA%BE%B8%EA%B8%B0%EC%99%80-%E2%80%98%EB%AC%BB%EA%B8%B0%E2%80%99-%EC%98%B5%EC%85%98-%EC%A0%95%EB%A6%AC",
-            "domain": "richdadsky.tistory.com",
-            "title": "크롬·엣지 다운로드 위치 설정(윈도우 11): 저장 폴더 바꾸기와 ‘묻기’ 옵션 정리",
-            "snippet": "크롬·엣지 다운로드 위치 설정(윈도우 11): 저장 폴더 바꾸기와 ‘묻기’ 옵션 정리 ... 이 글은 윈도우 11에서 크롬과 엣지의 다운로드 저장 위치를 정리하는 방법을 안내합니다."
+            "url": "https://wallpapers4screen.com/ko/%EC%BB%B4%ED%93%A8%ED%84%B0/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EB%A1%9C%EA%B3%A0-%EB%82%98%EB%AC%B4-%ED%94%84%EB%A0%88%EC%9E%84-%EC%A0%80%EB%85%81-%EC%9D%BC%EB%AA%B0-%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EC%97%A0%EB%B8%94%EB%9F%BC-90850",
+            "domain": "wallpapers4screen.com",
+            "title": "다운로드 윈도우 10 로고, 나무 프레임, 저녁, 일몰, 윈도우 10 엠블럼, 파란색 windows 10 로고, 윈도우 사인, 윈도우 로고, 윈도우 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림",
+            "snippet": "# 다운로드 윈도우 10 로고, 나무 프레임, 저녁, 일몰, 윈도우 10 엠블럼, 파란색 windows 10 로고, 윈도우 사인, 윈도우 로고, 윈도우 바탕 화면 무료 데스크톱"
+          },
+          {
+            "url": "https://www.corrections.go.kr/sites/corrections/download/ClientManual.pdf",
+            "domain": "www.corrections.go.kr",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "- 운영체제가 윈도우 7, 윈도우 10인 경우(공통) ... 목록에서 인터넷화상접견 프로그램 항목이 선택되어 있고, 우클릭 메뉴의 “제거(U)”가 강조되어 있다. ... 법무부 교정보부 홈페이지 ▶ 인터넷서신"
+          },
+          {
+            "url": "https://wallpapers4screen.com/ko/%EC%BB%B4%ED%93%A8%ED%84%B0/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EB%A1%9C%EA%B3%A0-4k-%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98-%EA%B2%80%EC%9D%80-%EB%B0%B0%EA%B2%BD-%EB%84%A4%EC%98%A8-%EB%A1%9C%EA%B3%A0-38769",
+            "domain": "wallpapers4screen.com",
+            "title": "다운로드 윈도우 10 로고, 4k, 미니멀리즘, 검은 배경, 네온 로고, 윈도우 10, 창의적인, 윈도우 10 미니멀리즘 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림",
+            "snippet": "# 다운로드 윈도우 10 로고, 4k, 미니멀리즘, 검은 배경, 네온 로고, 윈도우 10, 창의적인, 윈도우 10 미니멀리즘 바탕 화면 무료 데스크톱 용."
+          },
+          {
+            "url": "https://www.bixolon.co.kr/kr/download_view.php?idx=24&s_key=%EC%9C%88%EB%8F%84%EC%9A%B0",
+            "domain": "www.bixolon.co.kr",
+            "title": "빅솔론 | 지원 및 다운로드 :: SRP-350III ::윈도우::",
+            "snippet": "##### 윈도우즈 드라이버 #Windows #윈도우즈 #Window #윈도우 #Driver #드라이버 ... * OS :Microsoft Windows 7 (32bit/64bit), Microsoft Windows 8 (32bit/64bit),Microsoft Windows 8.1 (32bit/64bit), Microsoft Windows"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "윈도우11다운로드",
-          "executed_query": "윈도우11 다운로드",
+          "query": "윈도우10다운로드",
+          "executed_query": "윈도우10 다운로드",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-02T02:04:46.174328+00:00",
-          "raw_sha256": "46ffe5d3e82314b07d51bc54d8a876eea8b340fd1562b09a38466a825ad7ecf4",
+          "checked_at": "2026-10-05T09:00:57.597349+00:00",
+          "raw_sha256": "a346af4047c05b3358851cce24bcbcb7aef3f28a7b076822e6cb743ccb82147e",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "윈도우11 저장 공간 센스 설정｜다운로드 폴더 삭제 전 확인"
+              "quote": "On 10 dimensional Exceptional Drinfel'd Algebras"
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "윈도우11에서 Windows 업데이트를 실행했는데 다운로드가 0%에서 움직이지 않거나"
+              "quote": "- 정현순 전문위원 : 마이크로소프트 공식 홈페이지에서 ‘윈도우10’ 업데이트 파일 이외 윈도우 설치파일을 확인하기 어려움 ... - 정현순 전문위원 : 위원님 말씀은 웹하드에 게시된 윈도우10"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "반디집 무료 다운로드 및 윈도우 11 최적화 설정 방법"
+              "quote": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)"
             },
             {
               "result_index": 3,
-              "relevant": false,
-              "quote": "윈도우 11 C드라이브 용량 부족｜다운로드·휴지통·Windows.old 지워도 될까?"
+              "relevant": true,
+              "quote": "가장 안전한 윈도우10 다운로드 USB 만들기 방법은 마이크로소프트 공식 소프트웨어 다운로드 페이지를 이용하는 것입니다. ... 윈도우10 공식 다운로드 페이지 바로가기"
             },
             {
               "result_index": 4,
-              "relevant": true,
-              "quote": "윈도우11 ISO는 마이크로소프트 공식 다운로드 페이지에서 별도의 우회 없이 바로 받을 수 있습니다."
+              "relevant": false,
+              "quote": "### 원키 고스트 윈도우10 (32비트,64비트) 복원 사용법/다운로드 ... 위에 원키 고스트 윈도우10 프로그램(32비트,64비트)을 다운로드 받으시고 ... 만약 위의 맨트가 나오고 무한 재부팅이 된다면 포맷 이"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)"
+              "quote": "윈도우10, 윈도우7 핀볼 다운로드"
             },
             {
               "result_index": 6,
-              "relevant": true,
-              "quote": "Tiny11 다운로드 (윈도우 11 저사양 버전) ISO 다운로드 및 설치 안내입니다."
+              "relevant": false,
+              "quote": "다운로드 윈도우 10 로고, 나무 프레임, 저녁, 일몰, 윈도우 10 엠블럼, 파란색 windows 10 로고, 윈도우 사인, 윈도우 로고, 윈도우 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림"
             },
             {
               "result_index": 7,
-              "relevant": true,
-              "quote": "마이크로소프트 Arm 기기용 윈도우 11 ISO 공식 공개: 25H2 다운로드·설치"
+              "relevant": false,
+              "quote": "- 운영체제가 윈도우 7, 윈도우 10인 경우(공통) ... 목록에서 인터넷화상접견 프로그램 항목이 선택되어 있고, 우클릭 메뉴의 “제거(U)”가 강조되어 있다. ... 법무부 교정보부 홈페이지 ▶ 인터넷서신"
             },
             {
               "result_index": 8,
-              "relevant": true,
-              "quote": "윈도우 11 다운로드 센터 바로가기｜25H2 ISO·설치도우미·USB 설치방법"
+              "relevant": false,
+              "quote": "다운로드 윈도우 10 로고, 4k, 미니멀리즘, 검은 배경, 네온 로고, 윈도우 10, 창의적인, 윈도우 10 미니멀리즘 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "이 글은 윈도우 11에서 크롬과 엣지의 다운로드 저장 위치를 정리하는 방법을 안내합니다."
+              "quote": "##### 윈도우즈 드라이버 #Windows #윈도우즈 #Window #윈도우 #Driver #드라이버 ... * OS :Microsoft Windows 7 (32bit/64bit), Microsoft Windows 8 (32bit/64bit),Microsoft Windows 8.1 (32bit/64bit), Microsoft Windows"
             }
           ]
+        }
+      },
+      {
+        "keyword": "와이파이속도",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://support.apple.com/ko-kr/guide/mac-help/mchlf4de377f/27/mac/27",
+              "title": "Mac에서 무선 진단 사용하기 - Apple 지원 (KR)",
+              "excerpt_chars": 4288
+            },
+            {
+              "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001996529",
+              "title": "와이파이 속도 극대화 애플리케이션",
+              "excerpt_chars": 2993
+            },
+            {
+              "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932",
+              "title": "서울소식 | 서울특별시",
+              "excerpt_chars": 2983
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001996529",
+                  "title": "와이파이 속도 극대화 애플리케이션",
+                  "excerpt_chars": 2993
+                },
+                {
+                  "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932",
+                  "title": "서울소식 | 서울특별시",
+                  "excerpt_chars": 2983
+                },
+                {
+                  "url": "https://news.seoul.go.kr/gov/archives/516134",
+                  "title": "서울 무료 와이파이 SEOUL_Secure 마음껏 이용하세요! < 행정 | 서울특별시",
+                  "excerpt_chars": 2632
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://support.apple.com/ko-kr/guide/mac-help/mchlf4de377f/27/mac/27",
+                  "title": "Mac에서 무선 진단 사용하기 - Apple 지원 (KR)",
+                  "excerpt_chars": 4288
+                },
+                {
+                  "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001996529",
+                  "title": "와이파이 속도 극대화 애플리케이션",
+                  "excerpt_chars": 2993
+                },
+                {
+                  "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932",
+                  "title": "서울소식 | 서울특별시",
+                  "excerpt_chars": 2983
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            }
+          }
         }
       }
     ],
     "excluded_keywords": [],
-    "deferred_keywords": [
-      "윈도우11업데이트"
-    ],
-    "research_stop_reason": "pool_exhausted",
+    "deferred_keywords": [],
+    "research_stop_reason": "round_limit",
     "retry_keywords": [
       "휴대폰개통조회",
       "인터넷속도"
     ],
     "discovery_rejections": [],
     "discovery_replenishment": [],
-    "deferred_measured_keywords": [
-      "윈도우11업데이트"
-    ],
+    "deferred_measured_keywords": [],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
       {
         "round": 1,
         "offered_keywords": [
           "인터넷신청",
-          "삼성닷컴",
-          "컴퓨터와이파이연결",
           "미세먼지",
+          "컴퓨터와이파이연결",
+          "삼성닷컴",
           "컴퓨터인터넷연결",
           "아이폰17",
           "결혼준비신용카드",
@@ -15258,7 +15713,6 @@
           "아이폰사전예약",
           "건조기",
           "통돌이세탁기",
-          "윈도우11",
           "아이폰15",
           "드럼세탁기",
           "아이폰16PRO",
@@ -15266,26 +15720,26 @@
           "아이폰16프로",
           "KT요금제",
           "조립PC",
-          "휴대폰",
           "갤럭시S24",
+          "휴대폰",
           "와이파이공유기",
           "COPILOT",
           "LGU+",
           "아이폰15PRO",
-          "IPTIME",
           "갤럭시S25울트라",
-          "삼성갤럭시",
+          "IPTIME",
           "인터넷비교사이트",
+          "삼성갤럭시",
           "폴더폰",
+          "전기밥솥",
           "MS오피스",
           "KT인터넷고객센터",
-          "전기밥솥",
-          "삼성닷컴홈페이지",
+          "삼성핸드폰",
           "마이크로소프트365",
           "공유기",
-          "삼성핸드폰",
-          "삼성몰",
+          "삼성닷컴홈페이지",
           "세탁기건조기일체형",
+          "삼성몰",
           "IPTIME공유기",
           "미니건조기",
           "아이폰13",
@@ -15294,14 +15748,15 @@
           "아이폰15프로",
           "갤럭시스토어",
           "SK인터넷",
-          "인터넷가입",
           "갤럭시A시리즈",
-          "삼성전자몰",
+          "인터넷가입",
+          "아이폰16E",
           "갤럭시탭S9",
-          "아이폰16E"
+          "삼성전자몰",
+          "청라코스트코"
         ],
         "proposals": [],
-        "measured_fallback": false,
+        "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
           {
@@ -15310,8 +15765,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성닷컴",
-            "reason_code": "insufficient_specificity",
+            "keyword": "미세먼지",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15320,8 +15775,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "미세먼지",
-            "reason_code": "category_mismatch",
+            "keyword": "삼성닷컴",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15400,11 +15855,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "윈도우11",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "아이폰15",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
@@ -15440,13 +15890,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "휴대폰",
-            "reason_code": "scope_too_broad",
+            "keyword": "갤럭시S24",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시S24",
-            "reason_code": "insufficient_specificity",
+            "keyword": "휴대폰",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15456,7 +15906,7 @@
           },
           {
             "keyword": "COPILOT",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15470,18 +15920,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "IPTIME",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "갤럭시S25울트라",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성갤럭시",
-            "reason_code": "scope_too_broad",
+            "keyword": "IPTIME",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15490,13 +15935,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "삼성갤럭시",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "폴더폰",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "전기밥솥",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "MS오피스",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15505,7 +15960,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "전기밥솥",
+            "keyword": "삼성핸드폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트365",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공유기",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -15515,28 +15980,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "마이크로소프트365",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "공유기",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성핸드폰",
+            "keyword": "세탁기건조기일체형",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "삼성몰",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세탁기건조기일체형",
-            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15580,17 +16030,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷가입",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "갤럭시A시리즈",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성전자몰",
+            "keyword": "인터넷가입",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰16E",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -15600,12 +16050,34 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰16E",
+            "keyword": "삼성전자몰",
             "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청라코스트코",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           }
         ],
-        "research_fallback": []
+        "research_fallback": [
+          {
+            "keyword": "삼성닷컴",
+            "search_query": "삼성닷컴",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          },
+          {
+            "keyword": "아이폰17",
+            "search_query": "아이폰17",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "삼성닷컴",
+          "아이폰17"
+        ]
       },
       {
         "round": 2,
@@ -15614,81 +16086,70 @@
           "S25",
           "빨래건조기",
           "DDR416G",
-          "청라코스트코",
           "오피스365",
-          "램16기가",
           "삼성폰",
           "삼성휴대폰",
+          "램16기가",
           "인터넷설치",
           "갤럭시S24울트라",
           "아이폰가격",
           "노키아",
-          "SKT인터넷",
           "SK요금제",
-          "LG인터넷",
-          "삼성가전",
+          "SKT인터넷",
           "아이폰12",
+          "삼성가전",
+          "LG인터넷",
           "아이폰15프로맥스",
           "효도폰",
+          "삼성폴더폰",
           "윈도우10",
           "MICROSOFT365",
-          "삼성폴더폰",
-          "아이폰출시일",
-          "마이크로소프트오피스",
-          "공유기추천",
-          "윈도우정품인증",
-          "아이폰12미니",
-          "갤럭시울트라",
-          "윈도우11다운로드",
           "블랙프라이데이기간",
-          "삼성핸드폰신형",
+          "아이폰12미니",
+          "마이크로소프트오피스",
+          "윈도우정품인증",
+          "갤럭시울트라",
           "갤럭시A",
+          "아이폰출시일",
+          "삼성핸드폰신형",
+          "공유기추천",
           "갤럭시25울트라",
           "S24",
-          "랜케이블",
           "서피스프로",
-          "SK브로드밴드인터넷",
-          "MSOFFICE",
-          "갤럭시자급제폰",
+          "랜케이블",
           "REMOTE",
-          "셋톱박스",
-          "세탁기렌탈",
+          "MSOFFICE",
+          "SK브로드밴드인터넷",
+          "갤럭시자급제폰",
           "아이폰SE1",
-          "윈도우11정품인증",
-          "삼성전자스토어",
-          "인터넷속도테스트",
-          "세탁건조기",
-          "OFFICE365",
-          "EXCEL",
-          "공유기가격",
+          "셋톱박스",
           "코스트코청라점",
+          "세탁기렌탈",
+          "삼성전자스토어",
+          "세탁건조기",
+          "EXCEL",
+          "인터넷속도테스트",
+          "OFFICE365",
           "갤럭시S",
-          "KT인터넷설치",
           "세탁기건조기세트",
-          "아이폰출시",
+          "KT인터넷설치",
           "애플사전예약",
           "아이폰공기계",
-          "휴대폰개통조회",
-          "인터넷속도"
+          "인터넷속도측정사이트",
+          "아이폰프로",
+          "2G폰",
+          "유플러스인터넷",
+          "삼성폴더블",
+          "KT인터넷요금제",
+          "아이폰출시"
         ],
-        "proposals": [
-          {
-            "keyword": "윈도우11정품인증",
-            "reason": "월 6,110회 수요가 있는 운영체제 인증 질문이다. 인증 상태 확인과 정품 인증 조건·절차를 공식 문서로 조사할 가치가 있다.",
-            "search_query": "윈도우11 정품 인증"
-          },
-          {
-            "keyword": "윈도우11다운로드",
-            "reason": "월 8,050회 수요가 있다. 설치 파일을 받기 전 확인할 호환 조건과 다운로드 방식별 절차를 공식 자료로 조사할 후보다.",
-            "search_query": "윈도우11 다운로드"
-          }
-        ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false,
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
         "skipped": [
           {
             "keyword": "세탁기건조기",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15698,7 +16159,7 @@
           },
           {
             "keyword": "빨래건조기",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15707,18 +16168,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "청라코스트코",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "오피스365",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "램16기가",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15729,6 +16180,11 @@
           {
             "keyword": "삼성휴대폰",
             "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "램16기가",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15752,17 +16208,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "SKT인터넷",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "SK요금제",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "LG인터넷",
+            "keyword": "SKT인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰12",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -15772,7 +16228,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰12",
+            "keyword": "LG인터넷",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -15783,7 +16239,12 @@
           },
           {
             "keyword": "효도폰",
-            "reason_code": "scope_too_broad",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성폴더폰",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15793,26 +16254,21 @@
           },
           {
             "keyword": "MICROSOFT365",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성폴더폰",
-            "reason_code": "insufficient_specificity",
+            "keyword": "블랙프라이데이기간",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰출시일",
+            "keyword": "아이폰12미니",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "마이크로소프트오피스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "공유기추천",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -15822,18 +16278,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰12미니",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "갤럭시울트라",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "블랙프라이데이기간",
-            "reason_code": "category_mismatch",
+            "keyword": "갤럭시A",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시일",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15842,8 +16298,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시A",
-            "reason_code": "insufficient_specificity",
+            "keyword": "공유기추천",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15857,13 +16313,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "서피스프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "랜케이블",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "서피스프로",
+            "keyword": "REMOTE",
             "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSOFFICE",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15872,27 +16338,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "MSOFFICE",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "갤럭시자급제폰",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "REMOTE",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "셋톱박스",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세탁기렌탈",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -15902,33 +16348,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성전자스토어",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷속도테스트",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세탁건조기",
+            "keyword": "셋톱박스",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "OFFICE365",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "EXCEL",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "공유기가격",
-            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15937,13 +16358,38 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시S",
+            "keyword": "세탁기렌탈",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자스토어",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세탁건조기",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "KT인터넷설치",
-            "reason_code": "insufficient_specificity",
+            "keyword": "EXCEL",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도테스트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "OFFICE365",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15952,7 +16398,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰출시",
+            "keyword": "KT인터넷설치",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -15963,215 +16409,36 @@
           },
           {
             "keyword": "아이폰공기계",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "휴대폰개통조회",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷속도",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          }
-        ]
-      },
-      {
-        "round": 3,
-        "offered_keywords": [
-          "S25",
-          "DDR416G",
-          "오피스365",
-          "램16기가",
-          "인터넷설치",
-          "갤럭시S24울트라",
-          "SKT인터넷",
-          "LG인터넷",
-          "아이폰12",
-          "아이폰15프로맥스",
-          "MICROSOFT365",
-          "삼성폴더폰",
-          "아이폰출시일",
-          "마이크로소프트오피스",
-          "아이폰12미니",
-          "갤럭시울트라",
-          "삼성핸드폰신형",
-          "갤럭시A",
-          "갤럭시25울트라",
-          "S24",
-          "서피스프로",
-          "SK브로드밴드인터넷",
-          "MSOFFICE",
-          "갤럭시자급제폰",
-          "아이폰SE1",
-          "삼성전자스토어",
-          "인터넷속도테스트",
-          "OFFICE365",
-          "갤럭시S",
-          "KT인터넷설치",
-          "세탁기건조기세트",
-          "아이폰출시",
-          "아이폰공기계",
-          "휴대폰개통조회"
-        ],
-        "proposals": [],
-        "measured_fallback": false,
-        "no_eligible_proposal": true,
-        "skipped": [
-          {
-            "keyword": "S25",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "DDR416G",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "오피스365",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "램16기가",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷설치",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시S24울트라",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "SKT인터넷",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "LG인터넷",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰12",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰15프로맥스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MICROSOFT365",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성폴더폰",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰출시일",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "마이크로소프트오피스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰12미니",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시울트라",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성핸드폰신형",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시A",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시25울트라",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "S24",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "서피스프로",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "SK브로드밴드인터넷",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MSOFFICE",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시자급제폰",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰SE1",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성전자스토어",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷속도테스트",
+            "keyword": "인터넷속도측정사이트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰프로",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "OFFICE365",
+            "keyword": "2G폰",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시S",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "KT인터넷설치",
+            "keyword": "유플러스인터넷",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "세탁기건조기세트",
+            "keyword": "삼성폴더블",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷요금제",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -16179,384 +16446,894 @@
             "keyword": "아이폰출시",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "세탁기건조기",
+            "search_query": "세탁기건조기",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "세탁기건조기"
+        ]
+      },
+      {
+        "round": 3,
+        "offered_keywords": [
+          "윈도우11시디키",
+          "MS오피스영구",
+          "SAMSUNG",
+          "KT아이폰사전예약",
+          "마이크로오피스",
+          "공유기가격",
+          "WINDOWS11",
+          "MS365",
+          "갤럭시보급형",
+          "LTE라우터",
+          "갤럭시폴더",
+          "폴더블",
+          "삼성전자홈페이지",
+          "갤럭시와이드",
+          "아이폰매장",
+          "무선공유기",
+          "삼성스토어몰",
+          "컴퓨터포맷하는법",
+          "와이파이설치",
+          "갤럭시공기계",
+          "LGU플러스인터넷",
+          "삼성전자매장",
+          "삼성노트",
+          "삼성온라인스토어",
+          "인터넷티비",
+          "인터넷티비현금많이주는곳",
+          "삼성휴대폰가격",
+          "삼성매장",
+          "인터넷공유기",
+          "아디다스갤럭시7",
+          "OFFICE",
+          "램가격",
+          "인터넷가입사은품많이주는곳",
+          "통신사변경",
+          "갤럭시핸드폰",
+          "갤럭시S2",
+          "삼성홈페이지",
+          "한글설치",
+          "LG유플러스인터넷",
+          "애플케이스",
+          "삼성효도폰",
+          "VAN",
+          "갤럭시폴더블",
+          "갤럭시폰",
+          "피쳐폰",
+          "갤럭시폴더2",
+          "애플아이폰",
+          "삼성전자임직원몰",
+          "LGU+인터넷",
+          "갤럭시점프2",
+          "삼성대리점",
+          "아이폰15플러스",
+          "인터넷선",
+          "아이폰15프로중고",
+          "한글2020무료설치",
+          "인터넷속도체크",
+          "삼성최신폰",
+          "인터넷TV",
+          "LG요금제",
+          "삼성스마트폰"
+        ],
+        "proposals": [
+          {
+            "keyword": "컴퓨터포맷하는법",
+            "reason": "월 3,940회 수요로 포맷 절차가 명확한 질문이다. 백업 준비와 초기화·재설치 방법을 공식 문서로 조사할 가치가 있다.",
+            "search_query": "컴퓨터 포맷하는 법"
           },
           {
-            "keyword": "아이폰공기계",
+            "keyword": "와이파이설치",
+            "reason": "월 3,920회 수요다. 공유기 배선과 무선망 초기 설정 절차를 조사할 수 있어 기존 노트북 연결 글과 목적이 구분된다.",
+            "search_query": "와이파이 설치"
+          }
+        ],
+        "measured_fallback": false,
+        "no_eligible_proposal": false,
+        "skipped": [
+          {
+            "keyword": "윈도우11시디키",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS오피스영구",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SAMSUNG",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT아이폰사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로오피스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공유기가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WINDOWS11",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS365",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시보급형",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "휴대폰개통조회",
+            "keyword": "LTE라우터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폴더",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "폴더블",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자홈페이지",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시와이드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰매장",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "무선공유기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성스토어몰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시공기계",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LGU플러스인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자매장",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성노트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성온라인스토어",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷티비",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷티비현금많이주는곳",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성휴대폰가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성매장",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷공유기",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아디다스갤럭시7",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "OFFICE",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "램가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷가입사은품많이주는곳",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "통신사변경",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시핸드폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S2",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성홈페이지",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한글설치",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LG유플러스인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플케이스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성효도폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "VAN",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폴더블",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "피쳐폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폴더2",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플아이폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자임직원몰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LGU+인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시점프2",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성대리점",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15플러스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷선",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15프로중고",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한글2020무료설치",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도체크",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성최신폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷TV",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LG요금제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성스마트폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
           }
-        ],
-        "research_fallback": []
-      }
-    ],
-    "ranked_candidates": [
-      {
-        "keyword": "윈도우11정품인증",
-        "category": "테크",
-        "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
-        "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
-        "gap": "인증 상태별 의미표, 라이선스별 인증 절차, 재설치·부품 변경 체크리스트와 빌드별 오프라인 인증 경로를 제공한다.",
-        "source_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-        "verified_sources": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows",
-            "title": "Windows 정품 인증 | Microsoft Support",
-            "checked_on": "2026-10-02",
-            "sha256": "14448cb040e32c8f3e739e49127427db6cd0af84c9461859086552f8acf22689",
-            "excerpt": "Windows 정품 인증 적용 대상 Windows 11 Windows 10 Copilot 도움말 보기 Windows를 재설치한 후 활성화하려면 어떻게 하나요? 내 Windows 버전을 확인하려면 어떻게 해야 하나요? 제품 키로 Windows를 어떻게 활성화하나요? Windows 11 Windows 10 팁 Windows를 정품 인증하는 데 문제가 있나요? Windows 정품 인증 오류에 대한 도움말 보기 에서 문제 해결 단계를 시도해 보세요. 정품 인증은 제품 키 또는 디지털 권한을 장치의 하드웨어 구성과 페어링하는 기술 프로세스입니다. 이는 복사본 자체의 신뢰성을 평가하지 않으며 Windows 복사본이 정품 임을 보장하지 않습니다. 제품 키 또는 디지털 권한이 하드웨어 구성에 유효한지 확인하기만 합니다. 반면에 유효성 검사는 중요한 Windows 라이선스 파일이 손상, 삭제 또는 제거되지 않았으며 특정 업데이트 및 다운로드를 받아야 하는지 확인하는 프로세스입니다. 동영상을 재생하는 데 문제가 있나요? YouTube에서 시청하세요. Windows 11에서 Windows 정품 인증 상태 확인 먼저 Windows 11이 정품 인증되어 있고 Microsoft 계정에 연결되어 있는지 확인해야 합니다. Microsoft 계정을 장치의 Windows 11 라이선스에 연결하는 것이 중요합니다. Microsoft 계정을 디지털 라이선스와 연결하면 중요한 하드웨어를 변경할 때마다 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. Windows 11에서 Windows 정품 인증 상태를 검사하는 방법 Windows 11에서 정품 인증 상태 검사하려면 시작 단추를 선택한 다음 설정 > 시스템을 선택한 다음 정 품 인증을 선택합니다.  정품 인증 상태 옆에 정품 인증 상태 가 표시됩니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에서 다음 정품 인증 상태 메시지 중 하나를 볼 수 있습니다. 정품 인증 상태 설명 Windows가 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정 연결 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows가 정품 인증되지 않음 정품 인증이 되지 않았습니다. 실패를 설명하는 오류 메시지가 표시됩니다. 정품 인증을 받으려면 Windows 11를 구입해야 할 수 있습니다. 장치에 대한 라이선스를 구입해야 하는 경우에는 \"Windows 11 라이선스 구입하기\"를 찾아보세요. 이미 해당 장치에 대한 라이선스를 구입했음에도 계속 오류 메시지가 표시되는 경우 정품 인증 방법 으로 계속합니다. 정품 인증을 위해 Microsoft 계정을 Windows 11에 연결합니다. Microsoft 계정을 연결하려면 다음의 지침을 따릅니다. 관리자로 로그인하여 Microsoft 계정을 추가합니다. 관리자 계정을 사용하고 있는지 확인하려면 시작 단추를 선택한 다음, 설정 > 계정 > 사용자 정보 를 선택합니다. 사용자 이름 아래에 관리자가 표시됩니다. 관리자가 아닌 경우 Windows에서 사용자 계정 관리를 참조하여 관리자 계정을 만듭니다. 설정의 정보로 이동 전자 메일 주소가 관리자 위에 표시되는지 확인하여 관리자 계정이 Microsoft 계정이기도 한지 확인합니다. 이메일 주소가 표시되면 이 계정은 Microsoft 계정입니다. 이메일 주소가 표시되지 않으면 로컬 계정을 사용하여 로그인한 것입니다. 아직 Microsoft 계정이 없다면 새 Microsoft 계정을 만드는 방법 을 참조하세요. 관리자이고 Microsoft 계정을 사용하고 있음을 확인한 후 정품 인증 페이지로 돌아가서 계정 추가 를 선택하고 Microsoft 계정 및 암호를 입력한 다음 로그인 을 선택합니다. Microsoft 계정이 추가된 후에는 정품 인증 페이지에서 Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증되었습니다 라고 표시됩니다. Windows 11용 Windows 정품 인증 방법 Windows 11을 구입한 방법에 따라 정품 인증을 위해 디지털 라이선스 또는 25자 제품 키가 필요합니다. 이 중 하나가 없으면 장치를 정품 인증할 수 없습니다. 디지털 라이선스(Windows 11에서는 디지털 권한이라고 함)는 제품 키를 입력할 필요가 없는 Windows 11의 정품 인증 방법입니다. 제품 키는 Windows를 정품 인증하는 데 사용되는 25문자 코드입니다. 제품 키가 다음과 같이 보입니다. XXXXX-XXXXX-XXXXX-XXXXX-XXXXX. 사용할 정품 인증 방법을 결정한 후 디지털 라이선스를 사용하여 정품 인증하기 또는 제품 키를 사용하여 정품 인증하기 의 해당 단계를 따르세요. Windows 11의 경우 디지털 라이선스와 제품 키 중 어떤 Windows 정품 인증 방법을 사용하나요? 정품 인증 방법은 Windows 11을 구매한 방법에 따라 다릅니다. Windows 11을 받은 방법 정품 인증 방법 Windows 10, Windows 8.1 또는 Windows 7의 정품을 실행하는 적격 기기에서 Windows 11로 무료 업그레이드 디지털 라이선스 Microsoft 계정을 연결하거나 Microsoft 계정에 로그인하거나 MSA를 디지털 라이선스와 연결한 경우 해당 MSA가 디지털 라이선스를 포함합니다. Microsoft Store 앱에서 Windows 11 Pro 업그레이드를 구매하고 Windows 11을 성공적으로 정품 인증했습니다. 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 참가자이며 정품 인증된 이전 버전의 Windows 11 및 Windows 11 Preview를 실행 중인 적합한 장치에서 최신 Windows 11 Insider Preview 빌드로 업그레이드하기 디지털 라이선스 Windows Insider 로그인에 사용한 전자 메일 주소는 디지털 라이선스가 포함된 MSA일 수 있습니다. Microsoft Store 앱에서 정품 Windows 11 구입하기 디지털 라이선스 Microsoft Store에서 구매 시 확인 이메일이 전송되어 구매를 확인했습니다. 해당 전자 메일 주소(MSA)에 디지털 라이선스가 포함됩니다. Windows 11과 함께 제공되는 PC를 구입합니다. 제품 키 장치 패키징 또는 장치에 부착된 COA(인증서)에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 박스 복사본 구입하기 제품 키 Windows 11 박스의 내부 레이블에서 제품 키를 찾습니다. 공식 대리점에서 Windows 11 디지털 복사본 구입하기 제품 키 Windows 11을 구입한 후 받은 확인 메일 또는 대리점의 웹 사이트를 통해 액세스할 수 있는 디지털 락커에서 제품 키를 찾을 수 있습니다. 입력한 올바른 제품 키를 기준으로 장치에 Windows 11에 대한 디지털 라이선스가 부여됩니다. Windows 11에 대한 볼륨 라이선싱 계약 또는 MSDN 구독이 있음 제품 키 프로그램의 웹 포털을 통해 제품 키를 사용할 수 있습니다. Windows 11을 실행하는 새 장치 또는 리퍼비시 장치 구입하기 제품 키 장치에 제품 키가 사전 설치되어 있거나, 장치 패키지에 포함되어 있거나, 장치에 부착된 카드로 또는 COA(정품 인증서)에 포함되어 있습니다. 리퍼비시 PC를 구입한 경우, Microsoft가 아닌 리퍼비셔에서 제품 키를 제공해야 합니다. Microsoft Store 온라인에서 구입하기 제품 키 주문 기록이 포함된 확인 메일에서 제품 키를 찾습니다. Purchase a Windows 11 라이선스 구입하기 디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다. 방법은 다음과 같습니다. 시작 단추를 선택합니다. 설정 > 시스템 > 정품 인증 을 선택합니다. Microsoft Store로 이동 을 선택합니다. Windows 11 디지털 라이선스를 구입할 수 있는 Microsoft Store 앱을 엽니다. 디지털 라이선스를 사용하여 Windows 11 정품 인증하기 디지털 라이선스는 사용자의 하드웨어와 관련되어 있고 Microsoft 계정에 연결되어 있으므로 PC에서 찾을 필요가 없습니다. PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다. 디지털 라이센스가 없는 경우 정품 인증을 위해 제품 키를 사용할 수 있습니다.  제품 키를 사용하여 정품 인증하는 방법을 알아보하려면 제품 키를 사용하여 정품 인증 의 단계를 따릅니다. 새 장치 또는 마더보드에서 처음으로 Windows 설치 및 정품 인증 Windows 11 새 장치나 마더보드에 Windows를 처음 설치하고 제품 키가 없는 경우 설치 설정 화면에서 제품 키가 없습니다 를 선택합니다.  메시지가 표시되면 이 디바이스에 대한 디지털 라이선스를 구입하는 데 사용할 Microsoft 계정을 입력합니다. 설치 화면이 완료되고 Windows 설치가 완료되면 정품 인증 설정으로 이동합니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증을 선택합니다. 그런 다음 스토어 열기 를 선택하여 Windows를 정품 인증하기 위한 디지털 라이선스를 구입합니다. Windows 11을 다시 설치한 후 정품 인증 장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다. 다시 설치를 시도해 보기 전에 Windows 11이 정품 인증되었는지 확인합니다. 확인하려면 시작 단추를 선택한 다음 설정 > 시스템 > 활성화 를 선택합니다 . Windows 11이 정품 인증되었으며 Microsoft 계정이 디지털 라이선스와 연결되어 있음을 확인할 수 있습니다. 설정에서 정품 인증 상태 확인 정품 인증 페이지에 표시될 메시지는 다음과 같습니다. 정품 인증 상태 설명 Windows가 디지털 라이선스를 사용하여 정품 인증되었습니다. Microsoft 계정이 디지털 라이센스에 연결되어 있지 않습니다. Microsoft 계정에 연결하기 의 지침을 따릅니다. Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다. Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 디지털 라이센스가 Microsoft 계정에 연결되어 있지 않은 경우, 정품 인증 상태 확인하기 아래에 있는 Microsoft 계정에 연결하기 의 단계를 따릅니다. 계정을 연결하면 설치 프로그램을 실행하여 Windows 11을 다시 설치할 수 있습니다. Windows 11을 다시 설치하기 위해 설치 미디어를 만드는 방법에 대한 자세한 내용은 Microsoft 소프트웨어 다운로드 웹 사이트 로 이동하세요. 설치 미디어를 만들 때 장치에 이미 설치된 버전과 일치하는 Windows 11 버전을 선택해야 합니다. 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시되는 경우 제품 키가 없음 을 선택하여 이 단계를 건너뛸 수 있습니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. 디지털 라이선스를 Microsoft 계정과 연결한 경우 디지털 라이선스와 연결된 Microsoft 계정에 로그인해야 합니다. 하드웨어 변경 후 Windows 11 다시 정품 인증하기 마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다. 하드웨어 변경을 대비하기 위해 Microsoft 계정을 디지털 라이센스에 연결해야 합니다. 이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다. 자세한 내용은 하드웨어 변경 후 Windows 다시 정품 인증 을 참조하세요. 제품 키를 사용하여 Windows 11 정품 인증 제품 키는 25 문자 코드로 다음과 같이 표시됩니다. 제품 키: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다.  또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 제품 키를 찾으려면 정품 인증 방법의 제품 키 표 디지털 라이선스와 제품 키 중 어떤 제품 인증 방법을 사용하나요? 를 참조하세요. 참고 Microsoft는 Microsoft 온라인 스토어에서 구입한 경우에만 제품 키 기록을 보관합니다. 사용자 Microsoft 계정 주문 내역 에서 제품을 Microsoft에서 구입했는지 알아볼 수 있습니다. 자세한 도움말을 보려면 Windows 제품 키 찾기 를 참조하세요. 제품 키가 있는 경우 다음 시나리오에서 제품 키 변경을 사용하여 Windows 11을 정품 인증할 수 있습니다. 다음은 정품 인증에 도움이 되는 추가 정보입니다. 새 장치 또는 Windows 11용 마더보드에서 처음으로 Windows 설치 및 정품 인증을 수행하는 방법 정품 인증된 Windows 11이 있었던 적이 없는 장치에서는 올바른 제품 키를 사용하여 Windows 11을 정품 인증해야 합니다. 장치에서 이전에 정품 인증된 적이 없는 Windows 11 버전을 설치하는 경우에도 올바른 제품 키를 사용해야 합니다. 예를 들어 Windows 11 Home이 설치되었던 장치에 Windows 11 Pro를 설치하고 정품 인증하려면 올바른 제품 키가 필요합니다. 설치하는 동안 올바른 제품 키를 입력하라는 메시지가 표시됩니다. 설치가 완료된 후 Windows 11이 온라인에서 자동으로 정품 인증됩니다. Windows 11에서 정품 인증 상태를 검사하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 을 선택합니다. 설정에서 정품 인증 상태 확인 Windows 11이 장치에서 정품 인증되지 않은 경우, 자세한 내용은 Windows 정품 인증 오류에 대한 도움말 보기 를 참조하세요. 참고 경우에 따라서는 장치 패키지와 함께 제공되거나, 카드로 포함되어 있거나, 장치에 부착된 COA(정품 인증서)에 표시되는 Windows 11 제품 키를 입력해야 할 수 있습니다. Windows 11 제품 키가 없는 경우, 설치 중 제품 키를 구입할 수 있는 옵션이 나타납니다. Windows 11을 실행하는 리퍼비시 장치 정품 인증 Windows 11을 실행하는 리퍼비시 장치를 구입할 때는 장치에 부착된 정품 인증서 (COA)의 제품 키를 사용하여 Windows를 정품 인증해야 합니다. OEM(Original Hardware Manufacturer)이 마더보드를 변경한 경우, PC에서 자동으로 정품 인증이 되어야 합니다. 정품 인증을 받지 않으면 OEM에서 회색 스크래치 덮개 아래에 25자의 키가 있는 COA 카드를 제공했을 수 있습니다. 정품 인증을 받으려면 다음 단계를 따르세요. 참고 제품 키를 가리고 있는 회색 코팅을 제거하려면 동전이나 손톱을 사용하여 조심스럽게 긁어내세요. 시작 버튼을 선택한 다음 설정 > 시스템 > 활성화를 선택합니다. 제품 키 변경 을 선택합니다. COA에 있는 제품 키를 입력하고, 지침을 따릅니다. 설정에서 제품 키 변경 Windows 11을 다시 설치한 후 정품 인증하는 방법 다시 설치하는 동안 제품 키를 입력하라는 메시지가 표시됩니다. 제품 키를 입력하면 Windows 11 정품 인증된 버전을 갖게 됩니다. 설치가 끝나고 제품 키를 입력하지 않은 경우에도 제품 키를 입력할 수 있습니다. 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다. 설정에서 제품 키 변경 하드웨어 변경 후 Windo"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "original_url": "https://support.microsoft.com/ko-kr/windows/activation/activate-windows-online-or-offline-using-installation-and-confirmation-id",
-            "title": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 정품 인증 또는 오프라인 정품 인증 | Microsoft Support",
-            "checked_on": "2026-10-02",
-            "sha256": "c04152d5cd71cb9bbd70ac41763595bbf226b7ab909f9f8afa8cec4a756477cc",
-            "excerpt": "Windows 정품 인증: 설치 ID 및 확인 ID를 사용하여 온라인 또는 오프라인 정품 인증 적용 대상 Windows 7 Windows 8.1 Windows 10 Windows 11 Windows 8.1 Windows Vista Windows XP 요약​​ 이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.\n온라인 정품 인증 단계, 제품 정품 인증 포털을 통한 오프라인 정품 인증 및 세 가지 오프라인 워크플로(정품 인증 페이지, SLMGR 명령 프롬프트 및 SLUI 명령 프롬프트)에 대해 설명합니다. 또한 정품 인증 실패에 대한 대체 지침과 Office 정품 인증 리소스에 대한 링크도 포함되어 있습니다. 정품 인증은 가지고 있는 Windows 복사본이 정품이며 Microsoft 소프트웨어 사용 조건에서 허용하는 것보다 더 많은 장치에서 사용되지 않았는지 확인하는 데 도움이 됩니다. 인터넷을 통해 온라인 으로, 제품 정품 인증 포털 을 사용하거나 Microsoft 지원 의 지원을 사용하여 오프라인으로 Microsoft 제품을 정품 인증하는 몇 가지 방법이 있습니다. 온라인 정품 인증 - 인터넷 : 인터넷에 연결하면 Windows에서 인터넷 연결을 사용하여 온라인으로 정품 인증을 시도합니다. 온라인 정품 인증 단계에 따라 정품 인증되었는지, 아니면 인터넷을 통해 정품 인증을 시도하는지 확인합니다. 오프라인 정품 인증 - 제품 정품 인증 포털 & Microsoft 지원 : 온라인으로 정품 인증하는 데 문제가 있거나 인터넷에 연결되어 있지 않은 경우 오프라인으로 정품 인증을 시도할 수 있습니다. 오프라인 정품 인증 단계를 수행합니다. 설치 ID 를 입력한 다음 확인 ID 를 입력하여 정품 인증을 완료하라는 메시지가 표시될 수 있습니다. 이 문서에서는 온라인으로 정품 인증하는 단계를 제공하고 설치 ID 를 찾는 방법과 오프라인 정품 인증을 위해 받은 확인 ID 를 입력하는 위치에 대해 설명합니다. 온라인 정품 인증 인터넷에 연결되어 있는 경우 Windows가 자동으로 정품 인증을 시도합니다. 온라인 정품 인증을 사용하려면 인터넷 연결이 필요하므로 먼저 Windows가 인터넷에 연결되어 있는지 확인합니다 . 그런 다음 아래에서 Windows 버전을 찾고 단계에 따라 온라인으로 정품 인증합니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 시스템 > 정품 인증을 선택하거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 활성화 상태를 검토합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 보안 > 업데이트 & 정 품 인증을 열거나 아래 단추를 선택하여 정품 인증 설정을 엽니다. 정품 인증 설정 열기 필요한 경우 제품 키를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증을 선택하거나 복구 > 정품 인증 & 업데이트를 선택합니다. 필요한 경우 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 온라인 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 지금 온라인으로 Windows 정품 인증을 선택합니다. 메시지가 표시되면 제품 키를 입력합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 인터넷 연결을 사용하여 정품 인증 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 이제 인터넷을 통해 Windows를 정품 인증하겠습니다를 선택합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 오프라인 정품 인증 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 인터넷에 연결되어 있지 않으므로 오프라인에서 Windows를 정품 인증해야 합니다. Windows 정품 인증이 온라인에서 성공적으로 완료되지 않았습니다. 제품 정품 인증 포털에서 설치 ID를 요청합니다. Microsoft 지원 담당자가 설치 ID를 요청합니다. 중요 오프라인으로 정품 인증을 시도할 때 전화할 정품 인증 전화 번호가 표시될 수 있습니다. 전화 번호에는 전화를 걸지 마세요. 대신 제품 정품 인증 포털 을 방문하여 이 흐름의 정보를 사용하여 정품 인증 시도를 완료하세요. 정품 인증 요청을 검토하기 위해 Microsoft 지원이 필요한 경우 지원 옵션이 제공됩니다. 설치 ID를 찾아 확인 ID를 입력합니다. 아래에서 Windows 버전을 찾고 단계에 따라 설치 ID를 찾습니다. 찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다. 오프라인으로 정품 인증하는 방법에는 세 가지가 있습니다. 방법은 다음과 같습니다. 방법 1: Windows 설정의 정품 인증 페이지 사용(권장) Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 빌드 : 26200.8973, 26100.8973 이상 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 >, 시스템 > 정품 인증 , 자동화된 도움말 을 차례로 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 빌드 : 이전 빌드 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인합니다. Microsoft 제품 > 정품 인증을 선택합니다. WindowsWindows > 11 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 설정 > 업데이트 & 보안 > 활성화를 엽니다 . 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > 정품 인증을 선택합니다. WindowsWindows 10 . 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 입력을 선택합니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 8.1/8에 대한 지원이 종료되었습니다. Windows 8.1에 대한 지원은 2023년 1월 10일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. PC 설정을 입력하고 선택하여 엽니다. Windows 정품 인증 또는 복구 > 정 품 인증 & 업데이트를 선택한 다음 고객 지원에 문의를 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( WindowsWindows > 8.1 또는 8 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 활성화 를 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows 7에 대한 지원이 종료되었습니다. Windows 7에 대한 지원은 2020년 1월 14일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 제어판 > 시스템 및 보안 > 시스템을 엽니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows 7 )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. Windows 정품 인증을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows Vista에 대한 지원이 종료되었습니다. Windows Vista에 대한 지원은 2017년 4월 11일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 컴퓨터를 마우스 오른쪽 단추 로 클릭하고 속성을 선택한 다음 Windows 정품 인증 으로 스크롤합니다. 지금 Windows 정품 인증을 선택한 다음 자동 전화 시스템 사용을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > 정품 인증( Windows > Windows Vista )을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 참고 Windows XP에 대한 지원이 종료되었습니다. Windows XP에 대한 지원이 2014년 4월 8일에 종료되었습니다. Microsoft에서 보안 업데이트를 계속 받으려면 Windows 11 PC로 이동하는 것이 좋습니다. 자세히 알아보세요 . 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. 모든 프로그램 > 선택 액세서리 > 시스템 도구 > Windows를 정품 인증 한 다음 예, 지금 고객 서비스 담당자에게 전화하여 Windows를 정품 인증하고 싶습니다 . 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다. 확인 ID 받기 제품 정품 인증 포털 을 방문하세요. Captcha 챌린지를 통과하고 로그인한 다음 Microsoft 제품 > > Windows XP 정품 인증을 선택합니다. 설치 ID 를 입력하고 제출을 선택합니다. 확인 ID 가 반환됩니다. Windows 정품 인증 Windows 정품 인증 화면으로 돌아갑니다. 확인 ID 를 입력합니다. 다음 을 선택합니다. 이제 Windows가 정품 인증됩니다. 방법 2: SLMGR 명령 프롬프트 사용 다음과 같은 경우에 이 프로세스가 필요할 수 있습니다. 자동 도움말 또는 전화로 정품 인증 이 정품 인증 페이지에 표시되지 않습니다. SLUI 명령 프롬프트를 사용할 수 없습니다. Windows 11 Windows 10 Windows 8.1/8 Windows 7 Windows Vista Windows XP 단계 지침 설치 ID 찾기 Windows의 작업 표시줄에서 Windows 로고 를 선택하거나 키보드를 사용하여 Windows 로고 키를 눌러 시작 메뉴를 엽니다. Command를 입력하고 명령 프롬프트를 마우스 오른쪽 단추로"
-          }
-        ],
-        "intent_results": [
-          "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
-          "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
-          "https://infotips24.com/windows-activation-without-product-key/"
-        ],
-        "valid_until": null,
-        "article_type": "information",
-        "monthly_search": 6110,
-        "demand_provider": "naver_searchad_pc_mobile",
-        "demand_scope": "keyword_total",
-        "advertising_competition": "중간",
-        "evidence_mode": "serp",
-        "research_evidence": null,
-        "organic_provider": "codex_native_search",
-        "organic_query": "윈도우11 정품 인증",
-        "organic_domains": [
-          "k-info104.com",
-          "blog.naver.com",
-          "www.coupang.com",
-          "ddnews.co.kr",
-          "forbes.tistory.com",
-          "seogilang.tistory.com",
-          "infotips24.com",
-          "ittalk.co.kr",
-          "extrememanual.net",
-          "a2.moneyall.kr"
-        ],
-        "organic_results": [
-          {
-            "url": "https://k-info104.com/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95-%EB%B0%8F-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-%ED%8C%81-%EB%9D%BC%EC%9D%B4%EC%84%A0/",
-            "domain": "k-info104.com",
-            "title": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁 (라이선스 만료 대처) – k-info104.com",
-            "snippet": "윈도우 11 정품 인증이 필요한 이유 ... 윈도우 11 정품 인증 오류는 대부분 네트워크 일시 장애, 부품 변경, 혹은 잘못된 제품 키 입력으로 인해 발생합니다."
-          },
-          {
-            "url": "https://blog.naver.com/PostView.nhn?blogId=hansarangcnc&logNo=222663836028",
-            "domain": "blog.naver.com",
-            "title": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법 (정품 인증 방법) : 네이버 블로그",
-            "snippet": "※ Windows 11 업그레이드 후 정품 인증을 받고 사용하다가 포맷 후 Windows 11을 다시 재설치 하는 경우 정품 인증 정보는 마이크로소프트 서버에 저장되어 있기에,하드웨어의 변경사항이"
-          },
-          {
-            "url": "https://www.coupang.com/np/search?q=%EC%9C%88%EB%8F%84%EC%9A%B0+10+%EC%A0%95%ED%92%88+%EC%9D%B8%EC%A6%9D",
-            "domain": "www.coupang.com",
-            "title": "쿠팡이 추천하는 윈도우 10 정품 인증 관련 혜택과 특가",
-            "snippet": "* 한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함 Windows11 Home + AOHI 케이블, win11 home+ aohi 케이블~~239,000원~~14%205,000원 6/2(화) 도착 예정 무료배송 ∙ 오늘출발"
-          },
-          {
-            "url": "https://ddnews.co.kr/window11-watermark/",
-            "domain": "ddnews.co.kr",
-            "title": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법 (2026년 최신) - 뚝딱 뉴스",
-            "snippet": "# 윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법 (2026년 최신) ... 윈도우 11을 설치하거나 업데이트한 후, 우측 하단에 ‘Windows 정품 인증’ 혹은"
-          },
-          {
-            "url": "https://forbes.tistory.com/1303",
-            "domain": "forbes.tistory.com",
-            "title": "윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드)",
-            "snippet": "### 윈도우11 정품 인증 상태를 확인하는 방법 (Windows 10에서 업그레이드) ... PC를 인터넷에 연결한 이후에도 Windows 11 정품 인증이 정상적으로 완료되지 않으면 잠시 기다려 봅니다."
-          },
-          {
-            "url": "https://seogilang.tistory.com/m/2565",
-            "domain": "seogilang.tistory.com",
-            "title": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)",
-            "snippet": "윈도우11을 설치하고 정품 인증을 하지 않으면 오른쪽 하단에 정품 인증을 하라는 워터마크가 표시된다. ... 하지만 상황이 여의치 않아 당장 정품 인증을 할 수 없다면 정품"
-          },
-          {
-            "url": "https://infotips24.com/windows-activation-without-product-key/",
-            "domain": "infotips24.com",
-            "title": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026) - 인포팁스24",
-            "snippet": "윈도우 11은 설정 → 시스템 → 정품 인증, 윈도우 10은 설정 → 업데이트 및 보안 → 정품 인증입니다. ... 윈도우 정품인증 방법 cmd로 검색하면 상태"
-          },
-          {
-            "url": "https://ittalk.co.kr/%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%A0%95%ED%92%88-%EC%9D%B8%EC%A6%9D-%ED%99%95%EC%9D%B8-%EC%9D%B4%EA%B1%B8-%EB%86%93%EC%B9%98%EB%A9%B4-%EB%AA%A8%EB%93%A0-%EA%B8%B0%EB%8A%A5%EC%9D%B4-%EB%A9%88%EC%B6%98/",
-            "domain": "ittalk.co.kr",
-            "title": "윈도우11 정품 인증 확인, 이걸 놓치면 모든 기능이 멈춘다! - IT Talk",
-            "snippet": "# 윈도우11 정품 인증 확인, 이걸 놓치면 모든 기능이 멈춘다! ... 이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
-          },
-          {
-            "url": "https://extrememanual.net/41036",
-            "domain": "extrememanual.net",
-            "title": "윈도우11 정품 인증 오류 0xc004F074 해결 방법 - 익스트림 매뉴얼",
-            "snippet": "만일 인터넷에서 윈도우11 라이센스를 정상가 보다 싸게 구매한 경우 정상적인 정품 키가 아니므로 정품 인증이 되지 않을 수 있습니다. ... 이 경우 KMS 서버 관리자에게"
-          },
-          {
-            "url": "https://a2.moneyall.kr/%EC%9C%88%EB%8F%84%EC%9A%B0-11-%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D-%EB%B9%84%EC%9A%A9%EA%B3%BC-%EC%9D%B8%EC%A6%9D-%EB%B0%A9%EB%B2%95%EB%B3%84-%EA%B0%80%EA%B2%A9-%EB%B9%84%EA%B5%90/",
-            "domain": "a2.moneyall.kr",
-            "title": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교 - 알뜰 재테크 노트",
-            "snippet": "* 윈도우11 정품 인증키 합리적 구매 방법 소개 – 정품 vs 저가 키 장단점 비교 설명돼 있어요. ... 또 일부 무료 인증키나 KMS 방식 인증은"
-          }
-        ],
-        "dominant_result_ratio": 0.1,
-        "score_components": {
-          "demand": 30.29,
-          "organic_opportunity": 32.4,
-          "trend": -1.43,
-          "intent_fit": 15
-        },
-        "trend_growth": -0.143,
-        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
-        "trend_status": "measured",
-        "selection_version": 6,
-        "selected_at": "2026-10-02T02:04:46.174328+00:00",
-        "source": "category_market_v1",
-        "keywords": [
-          "윈도우11정품인증"
-        ],
-        "status": "pending",
-        "opportunity_evidence": {
-          "version": 2,
-          "query": "윈도우11정품인증",
-          "executed_query": "윈도우11 정품 인증",
-          "topic": "윈도우11정품인증 방법: 상태 확인부터 제품 키·디지털 라이선스와 재설치까지",
-          "intent": "윈도우11 인증 상태는 어디서 확인하고, 제품 키나 디지털 라이선스로 어떻게 인증하며 실패하면 무엇을 확인할까?",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-02T02:04:46.174328+00:00",
-          "result_count": 10,
-          "domain_count": 10,
-          "dominant_ratio": 0.1,
-          "search_review": {
-            "version": 1,
-            "query": "윈도우11정품인증",
-            "executed_query": "윈도우11 정품 인증",
-            "provider": "codex_native_search",
-            "checked_at": "2026-10-02T02:04:46.174328+00:00",
-            "raw_sha256": "4f010febdf37cb469742f2ef1decd8a8e335addb58b3b31da24aad3fb746b7bf",
-            "decisions": [
-              {
-                "result_index": 0,
-                "relevant": true,
-                "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
-              },
-              {
-                "result_index": 1,
-                "relevant": true,
-                "quote": "윈도우 11(Windows 11) 정품 인증 제품 키 입력하는 방법"
-              },
-              {
-                "result_index": 2,
-                "relevant": true,
-                "quote": "한국 마이크로소프트 윈도우11 Home FPP 처음사용자용 USB 정품인증키 포함"
-              },
-              {
-                "result_index": 3,
-                "relevant": true,
-                "quote": "윈도우11 정품인증 cmd 무료 설정 및 워터마크 영구 제거 방법"
-              },
-              {
-                "result_index": 4,
-                "relevant": true,
-                "quote": "윈도우11 정품 인증 상태를 확인하는 방법"
-              },
-              {
-                "result_index": 5,
-                "relevant": true,
-                "quote": "윈도우11 정품 인증 표시 없애는 방법(임시 정품 인증)"
-              },
-              {
-                "result_index": 6,
-                "relevant": true,
-                "quote": "윈도우 11은 설정 → 시스템 → 정품 인증"
-              },
-              {
-                "result_index": 7,
-                "relevant": true,
-                "quote": "이 화면에서 현재 사용 중인 윈도우11의 정품 인증 상태를 확인할 수 있습니다."
-              },
-              {
-                "result_index": 8,
-                "relevant": true,
-                "quote": "윈도우11 정품 인증 오류 0xc004F074 해결 방법"
-              },
-              {
-                "result_index": 9,
-                "relevant": true,
-                "quote": "윈도우 11 정품인증 비용과 인증 방법별 가격 비교"
-              }
-            ]
-          },
-          "search_metrics": {
-            "raw_result_count": 10,
-            "canonical_result_count": 10,
-            "relevant_result_count": 10,
-            "relevant_site_count": 10,
-            "relevant_indices": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "relevance_ratio": 1.0,
-            "duplicate_ratio": 0.0,
-            "known_dominant_ratio": 0.1,
-            "site_concentration": 0.1,
-            "organic_opportunity": 32.4
-          },
-          "scope": "full_keyword",
-          "target_keyword": "윈도우11정품인증",
-          "matches": [
-            {
-              "result_index": 0,
-              "quote": "윈도우 11 정품 인증 확인 방법 및 오류 해결 팁"
-            },
-            {
-              "result_index": 1,
-              "quote": "정품 인증 제품 키 입력하는 방법 (정품 인증 방법)"
-            },
-            {
-              "result_index": 6,
-              "quote": "윈도우 정품인증 방법, 제품키 없이 되는 3가지 (2026)"
-            }
-          ]
-        },
-        "suitability_evidence": {
-          "version": 1,
-          "checked_at": "2026-10-02T02:04:46.174328+00:00",
-          "input_sha256": "7a4a7d569aca5aacb2434831734d3f0c042fd9463dba4056ac4dded117a69655",
-          "review": {
-            "scope": "full_keyword",
-            "target_keyword": "윈도우11정품인증",
-            "sources": [
-              {
-                "source_index": 0,
-                "quote": "Windows 정품 인증 적용 대상 Windows 11 Windows 10",
-                "entity": "Windows 11",
-                "context": "system_rules"
-              },
-              {
-                "source_index": 1,
-                "quote": "이 문서에서는 Windows 11, Windows 10, Windows 8.1/8, Windows 7, Windows Vista 및 Windows XP에서 설치 ID 및 확인 ID를 사용하여 온라인으로 또는 오프라인으로 Windows를 정품 인증하는 방법을 설명합니다.",
-                "entity": "Windows 11",
-                "context": "system_rules"
-              }
-            ],
-            "required_facets": [
-              {
-                "facet": "정품 인증 상태는 어디서 확인하고 상태별 의미는 무엇인가?",
-                "answer": "설정의 시스템 > 정품 인증에서 확인한다. 인증 여부와 디지털 라이선스·Microsoft 계정 연결 여부를 구분한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "Windows가 Microsoft 계정에 연결된 디지털 라이선스를 사용하여 정품 인증됨 정품 인증되었습니다. Microsoft 계정이 이미 디지털 라이센스에 연결되어 있습니다."
-              },
-              {
-                "facet": "인증에 필요한 라이선스는 무엇이며 둘 다 없으면 어떻게 하는가?",
-                "answer": "디지털 라이선스 또는 25자 제품 키가 필요하다. 둘 다 없으면 설치 후 Microsoft Store에서 라이선스를 구매한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "디지털 라이선스 또는 제품 키가 없는 경우, 설치가 완료된 후 Windows 11 디지털 라이선스를 구매할 수 있습니다."
-              },
-              {
-                "facet": "제품 키 없이 디지털 라이선스로 어떻게 인증하는가?",
-                "answer": "해당 하드웨어의 디지털 라이선스와 연결된 Microsoft 계정으로 인터넷에 연결해 로그인한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "PC가 인터넷에 연결되어 있는 상태에서 Microsoft 계정에 로그인하면 준비가 완료된 것입니다."
-              },
-              {
-                "facet": "제품 키는 어디에 입력하는가?",
-                "answer": "설치 중 입력하거나 설치 후 설정 > 시스템 > 정품 인증 > 제품 키 변경에서 입력한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "또는 설치 후 제품 키를 입력하려면 시작 단추를 선택한 다음 설정 > 시스템 > 정품 인증 > 제품 키 변경 을 선택합니다."
-              },
-              {
-                "facet": "재설치할 때 기존 인증을 어떻게 유지하는가?",
-                "answer": "기존 인증과 계정 연결을 확인하고 동일한 버전을 재설치한다. 디지털 라이선스가 있으면 키 입력을 건너뛰고 온라인 인증한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "장치에 디지털 라이선스가 있을 경우 제품 키를 입력하지 않고 동일한 버전의 Windows 11을 다시 설치할 수 있습니다."
-              },
-              {
-                "facet": "인증 실패나 주요 부품 변경 시 무엇을 확인하는가?",
-                "answer": "인터넷 연결·오류 메시지·버전에 맞는 키를 확인한다. 주요 부품 변경은 사전 계정 연결과 정품 인증 문제 해결사를 안내한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "이 연결을 사용하면 나중에 주요 하드웨어 변경을 수행하는 경우, 정품 인증 문제 해결사를 사용하여 Windows를 다시 정품 인증할 수 있습니다."
-              },
-              {
-                "facet": "빌드별 오프라인 인증 진입 경로는 어떻게 다른가?",
-                "answer": "26200.8973·26100.8973 이상은 자동화된 도움말, 이전 빌드는 전화로 정품 인증에서 설치 ID를 확인한다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "시스템 > 정품 인증을 선택한 다음 전화로 정품 인증을 선택합니다. 국가 또는 지역 을 선택한 후 다음을 선택합니다. 설치 ID 가 화면에 표시됩니다."
-              },
-              {
-                "facet": "오프라인 인증은 어떻게 완료하는가?",
-                "answer": "설치 ID를 제품 정품 인증 포털에 제출하고 받은 확인 ID를 Windows에 입력한다. 표시된 전화번호로 전화하지 않는다.",
-                "supported": true,
-                "source_index": 1,
-                "quote": "찾으면 제품 정품 인증 포털에 입력하거나 Microsoft 지원 담당자에게 제공합니다. 확인 ID가 배달되면 Windows에 입력하여 활성화를 완료합니다."
-              }
-            ],
-            "current_relevance": {
-              "kind": "evergreen",
-              "source_index": 0,
-              "quote": "마더보드를 교체하는 등의 중요한 하드웨어 변경 작업을 수행하면 Windows 11을 더 이상 정품 인증하지 못할 수 있습니다.",
-              "event_start": null,
-              "event_end": null,
-              "date_quote": null
-            }
-          }
-        },
-        "score": 76.26,
-        "publish_eligible": true,
-        "hold_reasons": []
-      }
-    ],
-    "candidate_decisions": [
-      {
-        "keyword": "윈도우11정품인증",
-        "monthly_search": 6110,
-        "rank": 1,
-        "score": 76.26,
-        "score_components": {
-          "demand": 30.29,
-          "organic_opportunity": 32.4,
-          "trend": -1.43,
-          "intent_fit": 15
-        },
-        "status": "selected",
-        "reason": "highest_score_among_evaluated",
-        "organic_query": "윈도우11 정품 인증"
+        ]
       },
       {
-        "keyword": "윈도우11다운로드",
+        "round": 4,
+        "offered_keywords": [
+          "인터넷가입현금지원",
+          "아이폰15자급제",
+          "16프로",
+          "데이터쉐어링",
+          "GTX1650",
+          "사전예약",
+          "갤럭시중고폰",
+          "인텔CPU",
+          "KT인터넷가입",
+          "윈도우10다운로드",
+          "갤럭시S시리즈",
+          "아이폰15핑크",
+          "폴더블폰",
+          "삼성디지털플라자",
+          "삼성전자공식몰",
+          "삼성폰종류",
+          "셋탑박스",
+          "아이폰신형",
+          "갤럭시S20케이스",
+          "MIVE폴더폰",
+          "아이폰15프로색상",
+          "INTEL",
+          "KT와이파이",
+          "삼성전자온라인몰",
+          "아이폰핑크",
+          "VISUALSTUDIO",
+          "아이폰대여",
+          "비주얼스튜디오",
+          "I59400F",
+          "WIFI",
+          "와이파이속도",
+          "아이폰15프로출시일",
+          "윈도우11프로",
+          "애플폰",
+          "갤럭시시리즈",
+          "플립폰",
+          "갤럭시AI",
+          "SSD가격",
+          "케이블정리",
+          "라데온",
+          "폴더폰공기계",
+          "SK인터넷가입",
+          "KT사전예약",
+          "노트북초기화",
+          "한국블랙프라이데이",
+          "갤럭시A시리즈순서",
+          "윈도우정품",
+          "인터넷모뎀",
+          "케이티닷컴",
+          "윈도우포맷",
+          "KT인터넷속도",
+          "아이폰예약",
+          "블프기간",
+          "건조기렌탈",
+          "삼성핸드폰가격",
+          "기기변경",
+          "갤럭시A12",
+          "SK인터넷설치",
+          "인터넷설치현금",
+          "아이폰카메라"
+        ],
+        "proposals": [
+          {
+            "keyword": "노트북초기화",
+            "reason": "월 1,870회. 초기화 전 준비와 파일 유지·전체 삭제 선택을 묻는 절차 수요로, 제조사별 복구 안내를 조사할 가치가 있다.",
+            "search_query": "노트북 초기화"
+          },
+          {
+            "keyword": "데이터쉐어링",
+            "reason": "월 2,460회. 다른 기기에서 데이터를 함께 쓰기 위한 지원 단말·회선 조건과 설정 절차를 공식 안내로 조사할 수 있다.",
+            "search_query": "데이터 쉐어링"
+          },
+          {
+            "keyword": "윈도우10다운로드",
+            "reason": "월 2,360회. 설치 파일을 받으려는 구체적 수요가 있어 공식 제공 여부와 다운로드·설치 매체 준비 절차를 확인할 가치가 있다.",
+            "search_query": "윈도우10 다운로드"
+          },
+          {
+            "keyword": "와이파이속도",
+            "reason": "월 2,090회. 무선 연결 속도에 영향을 주는 규격·주파수·설정 조건을 설명할 수 있어, 측정 도구 외 정보 수요를 조사할 만하다.",
+            "search_query": "와이파이 속도"
+          }
+        ],
+        "measured_fallback": false,
+        "no_eligible_proposal": false,
+        "skipped": [
+          {
+            "keyword": "인터넷가입현금지원",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15자급제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "16프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "GTX1650",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "사전예약",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시중고폰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인텔CPU",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷가입",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S시리즈",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15핑크",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "폴더블폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성디지털플라자",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자공식몰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성폰종류",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "셋탑박스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰신형",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S20케이스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MIVE폴더폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15프로색상",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "INTEL",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT와이파이",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자온라인몰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰핑크",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "VISUALSTUDIO",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰대여",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "비주얼스튜디오",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "I59400F",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WIFI",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰15프로출시일",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11프로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시시리즈",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "플립폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시AI",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SSD가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "케이블정리",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "라데온",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "폴더폰공기계",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK인터넷가입",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국블랙프라이데이",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시A시리즈순서",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우정품",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷모뎀",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "케이티닷컴",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우포맷",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT인터넷속도",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "블프기간",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "건조기렌탈",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성핸드폰가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "기기변경",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시A12",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK인터넷설치",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷설치현금",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰카메라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ]
+      }
+    ],
+    "ranked_candidates": [],
+    "candidate_decisions": [
+      {
+        "keyword": "삼성닷컴",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 8050,
-        "organic_query": "윈도우11 다운로드"
+        "monthly_search": 293300,
+        "organic_query": "삼성닷컴"
+      },
+      {
+        "keyword": "아이폰17",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 282400,
+        "organic_query": "아이폰17"
+      },
+      {
+        "keyword": "세탁기건조기",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 13290,
+        "organic_query": "세탁기건조기"
+      },
+      {
+        "keyword": "컴퓨터포맷하는법",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 3940,
+        "organic_query": "컴퓨터 포맷하는 법"
+      },
+      {
+        "keyword": "와이파이설치",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 3920,
+        "organic_query": "와이파이 설치"
+      },
+      {
+        "keyword": "노트북초기화",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 1870,
+        "organic_query": "노트북 초기화"
+      },
+      {
+        "keyword": "데이터쉐어링",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 2460,
+        "organic_query": "데이터 쉐어링"
+      },
+      {
+        "keyword": "윈도우10다운로드",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 2360,
+        "organic_query": "윈도우10 다운로드"
+      },
+      {
+        "keyword": "와이파이속도",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 2090,
+        "organic_query": "와이파이 속도"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "삼성닷컴",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-06T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "아이폰17",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-12T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "세탁기건조기",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-12T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "컴퓨터포맷하는법",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-06T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "와이파이설치",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-08T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "노트북초기화",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-06T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "데이터쉐어링",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-06T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "윈도우10다운로드",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-06T09:00:57.597349+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "와이파이속도",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-05T09:00:57.597349+00:00",
+        "retry_after": "2026-10-08T09:00:57.597349+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "윈도우11다운로드",
         "reason_code": "search_quality",
@@ -16619,90 +17396,201 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 40992
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 47893
+        "elapsed_ms": 42520
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11227
+        "elapsed_ms": 9383
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 13444
+        "elapsed_ms": 12452
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9670
+        "elapsed_ms": 12324
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10364
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11175
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 12485
-      },
-      {
-        "stage": "topic_suitability",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 54592
-      },
-      {
-        "stage": "topic_suitability",
-        "attempt": 1,
-        "status": "error",
-        "code": "invalid_schema",
-        "elapsed_ms": 54592
-      },
-      {
-        "stage": "topic_suitability",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 40011
-      },
-      {
-        "stage": "topic_suitability",
-        "attempt": 2,
-        "status": "returned",
-        "elapsed_ms": 40018
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 7196
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 15806
+        "elapsed_ms": 15594
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 28236
+        "elapsed_ms": 37461
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8885
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10089
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7335
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11023
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 48265
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 24622
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8414
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8039
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12376
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 13968
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12379
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 29036
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 56369
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6225
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11495
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7049
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9019
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7892
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8395
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11956
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 24295
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8820
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 14198
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 52022
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12931
       }
     ],
-    "analysis_recovery_attempts": 1,
-    "reuse_source_diagnostics": {
-      "checked_at": "2026-10-02T04:08:29.544746+00:00",
-      "failed_candidates": [],
-      "reused_keywords": [
-        "윈도우11정품인증"
-      ],
-      "outcome": "reused"
-    }
+    "analysis_recovery_attempts": 0
   }
 }

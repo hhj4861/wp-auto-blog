@@ -585,8 +585,8 @@ def test_narrow_login_only_article_stays_held_when_scope_reviewer_rejects_it(app
 @pytest.mark.parametrize('quote', ['본문에 없는 자격증 조회 안내 문구입니다.', '조회', '', None, [], True])
 def test_model_true_cannot_replace_a_substantive_existing_body_quote(approved_article_brief, quote):
     model = Mock(return_value=article_response(quote=quote))
-    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [HELD_ARTICLE]
-    model.assert_called_once()
+    assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == ['최종 검색 의도 심사 오류: invalid_schema:article_quote']
+    assert model.call_count == 2
 
 
 @pytest.mark.parametrize('location', ['title', 'description'])
@@ -595,7 +595,7 @@ def test_quote_present_only_in_title_or_description_cannot_prove_body_coverage(a
     description = ANSWER if location == 'description' else ''
     model = Mock(return_value=article_response())
     html = '<article><p>이 본문은 로그인 오류에 관한 짧은 설명만 제공합니다.</p></article>'
-    assert opportunity.review_article(title, html, description, approved_article_brief, model) == [HELD_ARTICLE]
+    assert opportunity.review_article(title, html, description, approved_article_brief, model) == ['최종 검색 의도 심사 오류: invalid_schema:article_quote']
 
 
 @pytest.mark.parametrize('heading', ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
@@ -603,7 +603,7 @@ def test_heading_alone_is_not_a_substantive_answer_quote(approved_article_brief,
     model = Mock(return_value=article_response())
     html = ('<article><' + heading + '>' + ANSWER + '</' + heading + '>'
             '<p>실제 설명은 로그인 문제만 짧게 다룹니다.</p></article>')
-    assert opportunity.review_article(TOPIC, html, '', approved_article_brief, model) == [HELD_ARTICLE]
+    assert opportunity.review_article(TOPIC, html, '', approved_article_brief, model) == ['최종 검색 의도 심사 오류: invalid_schema:article_quote']
     # Headings still provide context for the model; they cannot prove body coverage.
     assert ANSWER in model.call_args.args[0]
 
@@ -617,7 +617,7 @@ def test_navigation_sources_related_ads_and_code_cannot_supply_answer_quote(appr
     model = Mock(return_value=article_response())
     html = ('<article><p>실제 본문은 로그인 문제만 설명합니다.</p>'
             + outside_body.format(ANSWER) + '</article>')
-    assert opportunity.review_article(TOPIC, html, '', approved_article_brief, model) == [HELD_ARTICLE]
+    assert opportunity.review_article(TOPIC, html, '', approved_article_brief, model) == ['최종 검색 의도 심사 오류: invalid_schema:article_quote']
     prompt = model.call_args.args[0]
     assert ANSWER not in prompt
 
@@ -636,7 +636,7 @@ def test_malformed_model_response_fails_closed_after_bounded_recovery(approved_a
     model = Mock(return_value=raw)
     code = 'invalid_json' if raw in ('', 'not-json') else 'invalid_schema'
     assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [
-        '최종 검색 의도 심사 오류: ' + code]
+        '최종 검색 의도 심사 오류: ' + code + (':article_verdict' if code == 'invalid_schema' else '')]
     assert model.call_count == 2
 
 
@@ -648,11 +648,11 @@ def test_provider_errors_and_model_output_are_never_exposed(approved_article_bri
              Mock(return_value=secret if mode == 'invalid_response' else article_response(quote=secret)))
     expected = {'exception': '최종 검색 의도 심사 오류: unexpected_error',
                 'invalid_response': '최종 검색 의도 심사 오류: invalid_json',
-                'invented_quote': HELD_ARTICLE}[mode]
+                'invented_quote': '최종 검색 의도 심사 오류: invalid_schema:article_quote'}[mode]
     assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == [expected]
     output = capsys.readouterr()
     assert secret not in output.out + output.err + caplog.text
-    assert model.call_count == (2 if mode == 'invalid_response' else 1)
+    assert model.call_count == (1 if mode == 'exception' else 2)
 
 
 
@@ -693,7 +693,9 @@ def test_final_article_receives_required_facets_sources_and_current_relevance(ap
         'current_relevance': {'kind': 'evergreen', 'source_index': 0, 'quote': '현재 조회할 수 있습니다'},
     }
     approved_article_brief['suitability_evidence'] = {'review': requirements}
-    model = Mock(return_value=article_response())
+    response = json.loads(article_response())
+    response['facet_reviews'] = [{'facet_index': 0, 'covered': True, 'reason': 'covered', 'answer_quote': ANSWER}]
+    model = Mock(return_value=response)
     assert opportunity.review_article(TOPIC, ARTICLE, '', approved_article_brief, model) == []
     prompt = model.call_args.args[0]
     assert 'supported=true인 모든 필수 항목' in prompt

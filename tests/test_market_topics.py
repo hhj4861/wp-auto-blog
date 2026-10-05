@@ -1224,7 +1224,9 @@ def market_pipeline(mock_env_vars, monkeypatch, tmp_path):
         article = pipeline.content_generator.generate.return_value.html
         quote = BeautifulSoup(article, 'html.parser').find('p').get_text(' ', strip=True)
         assert quote in payload['article']
-        return json.dumps({'covers_primary_intent': True, 'answer_quote': quote})
+        return json.dumps({'covers_primary_intent': True, 'answer_quote': quote,
+            'facet_reviews': [{'facet_index': i, 'covered': True, 'reason': 'covered', 'answer_quote': quote}
+                              for i, row in enumerate(payload['required_facets']) if row['supported']]})
 
     pipeline.content_generator._call_llm.side_effect = review_scope
     pipeline.trend_detector = Mock()
@@ -1415,7 +1417,9 @@ def test_final_article_with_narrower_scope_is_saved_as_draft(market_pipeline):
     reviewer = market_pipeline.content_generator._call_llm
     reviewer.side_effect = None
     reviewer.return_value = json.dumps({'covers_primary_intent': False,
-                                       'answer_quote': '신분증을 분실한 상황만 안내합니다.'})
+                                       'answer_quote': '신분증을 분실한 상황만 안내합니다.',
+                                       'facet_reviews': [{'facet_index': 0, 'covered': True, 'reason': 'covered',
+                                                          'answer_quote': '신분증을 분실한 상황만 안내합니다.'}]})
     market_pipeline.wp_client.create_post.return_value.status = PostStatus.DRAFT
     result = market_pipeline.run_single(item['topic'], item['keywords'], '취업', market_brief=item)
     assert result.success and result.post.status == PostStatus.DRAFT

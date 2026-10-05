@@ -4266,7 +4266,7 @@
   },
   "생활정보": {
     "category": "생활정보",
-    "selected_at": "2026-10-03T12:59:21.099946+00:00",
+    "selected_at": "2026-10-05T16:18:06.013399+00:00",
     "seeds": [
       "신청방법",
       "환급금",
@@ -4274,8 +4274,8 @@
       "정부지원"
     ],
     "selection_version": 6,
-    "research_rounds": 3,
-    "source_recovery_attempts": 0,
+    "research_rounds": 4,
+    "source_recovery_attempts": 1,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -4287,7 +4287,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-03T12:59:21.099946+00:00",
+      "checked_at": "2026-10-05T16:18:06.013399+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -4306,54 +4306,665 @@
     },
     "search_review_recovery_attempts": 0,
     "search_review_diagnostics": [],
-    "shortlist_research_attempts": 0,
+    "shortlist_research_attempts": 3,
     "unresearched_budget_keywords": [],
     "deferred_research_family_keywords": [],
-    "researched_fallback_families": [],
+    "researched_fallback_families": [
+      {
+        "products": [],
+        "facets": []
+      }
+    ],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 185,
-    "evaluated_candidates": 1,
-    "research_pool_size": 120,
+    "measured_candidates": 178,
+    "evaluated_candidates": 6,
+    "research_pool_size": 115,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "소상공인희망리턴패키지",
+        "keyword": "근로소득세계산",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1064370&cbIdx=86",
-              "title": "보도자료 -  보도자료  -  알림소식  - 중소벤처기업부",
-              "excerpt_chars": 8000
+              "url": "https://g.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7873&mi=6594",
+              "title": "근로소득",
+              "excerpt_chars": 989
+            },
+            {
+              "url": "https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7873&mi=6437",
+              "title": "근로소득",
+              "excerpt_chars": 988
+            },
+            {
+              "url": "https://nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7870&mi=6591",
+              "title": "근로소득",
+              "excerpt_chars": 848
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
-            "code": "source_missing_detail"
+            "code": "other"
           }
+        }
+      },
+      {
+        "keyword": "연말정산간소화",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "dominant_search_results"
+        ],
+        "monthly_search": 1530,
+        "organic_provider": "codex_native_search",
+        "organic_query": "연말정산 간소화",
+        "organic_results": [
+          {
+            "url": "https://file2.taxnet.co.kr/taxnetfile/public_data/%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0%20%EA%B0%84%EC%86%8C%ED%99%94%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EA%B4%80%EB%A0%A8%20%EC%A3%BC%EC%9A%94%20%EB%AC%B8%EB%8B%B5%EC%9E%90%EB%A3%8C%28FAQ%29_5613939.pdf",
+            "domain": "file2.taxnet.co.kr",
+            "title": "연말정산 간소화 서비스 관련 주요 문답자료(FAQ)",
+            "snippet": "[PC] 홈택스→장려금･연말정산･전자기부금→연말정산 간소화→영수증발급처 자료 ... [모바일] 손택스→장려금･연말정산･전자기부금→연말정산 간소화→조회되지 않는"
+          },
+          {
+            "url": "https://j.nts.go.kr/comm/ntsFileDown.do?filePath=%2Fupload%2Fnts%2F02%2F0201%2F2020%EB%85%84_%EA%B7%80%EC%86%8D_%EA%B7%BC%EB%A1%9C%EC%9E%90%EC%9A%A9_%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0_%EC%95%88%EB%82%B4%28%EA%B2%8C%EC%8B%9C%EC%9A%A9%29.pdf",
+            "domain": "j.nts.go.kr",
+            "title": "2020년 귀속 \n연말정산 안내\n(근로자용)\n2020. 12.",
+            "snippet": "｢모바일 연말정산 서비스｣은 연말정산을 보다 시간과 장소에 구애됨이 없이 간편하게 ... 신규제공 | ｢연말정산 간소화｣ 조회 내역을 회사에"
+          },
+          {
+            "url": "https://j.nts.go.kr/comm/ntsFileDown.do?filePath=%2Fupload%2Fnts%2F02%2F0201%2F%EC%9B%90%EC%B2%9C%EC%A7%95%EC%88%98_%EC%9D%98%EB%AC%B4%EC%9E%90%EB%A5%BC_%EC%9C%84%ED%95%9C_%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0_%EC%95%88%EB%82%B4_%EB%A6%AC%ED%94%8C%EB%A6%BF%28%EA%B2%8C%EC%8B%9C%EC%9A%A9%29.pdf",
+            "domain": "j.nts.go.kr",
+            "title": "2020년 귀속\n원천징수의무자  를 위한\n연말정산 안내",
+            "snippet": "실손보험금 수령내역 조회 | 연말정산간소화서비스 이용(www.hometax.go.kr ... (내선 1-5번) 연말정산간소화 상담"
+          },
+          {
+            "url": "https://j.nts.go.kr/comm/ntsFileDown.do?filePath=%2Fupload%2Fnts%2F02%2F0201%2F%EA%B7%BC%EB%A1%9C%EC%9E%90%EB%A5%BC_%EC%9C%84%ED%95%9C_%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0_%EC%95%88%EB%82%B4_%EB%A6%AC%ED%94%8C%EB%A6%BF%28%EA%B2%8C%EC%8B%9C%EC%9A%A9%29.pdf",
+            "domain": "j.nts.go.kr",
+            "title": "2020년 귀속\n근로자  를 위한\n연말정산 안내",
+            "snippet": "연말정산간소화서비스 이용(www.hometax.go.kr → ... (내선 1-5번)연말정산간소화 상담"
+          },
+          {
+            "url": "https://home.pen.go.kr/upload/dongnae/na/bbs_3629/ntt_894204/doc_9da8v2a85-b5v12-4cvf0-adv04-6839vd356v0a22_v4165.pdf",
+            "domain": "home.pen.go.kr",
+            "title": "국세청  \n원천징수의무자를 위한  \n2024년 연말정산 신고안내\n\n라. 간소화 자료를 온라",
+            "snippet": "<tr><td colspan=\"2\">□ 이용대상 : 자체 연말정산 시스템이 있는 회사로서 근로자의 연말정산간소화 자료를 간편제출* 서비스를 이용하여 온라인 제출받는 경우<br>* 근로자가 간소화 자료 등을 편리한 연말정산을 통해"
+          },
+          {
+            "url": "https://www.yna.co.kr/view/AKR20240111057700017",
+            "domain": "www.yna.co.kr",
+            "title": "토스, 15일부터 연말정산 간소화 서비스 제공 | 연합뉴스",
+            "snippet": "토스 애플리케이션(앱)에서 토스 인증서를 발급받으면 국세청 홈택스 웹사이트나 손택스 앱에서 연말정산 간소화 서비스 전체를 이용할 수 있다. ... (서울=연합뉴스) 최현석 기자 = 토스는 오는 15일"
+          },
+          {
+            "url": "https://www.yna.co.kr/view/AKR20200115028400002",
+            "domain": "www.yna.co.kr",
+            "title": "연말정산 간소화 서비스 오늘 개통…산후조리원 자료도 제공 | 연합뉴스",
+            "snippet": "(세종=연합뉴스) 신호경 기자 = 국세청의 '연말정산 간소화 서비스'가 15일 오전 8시 개통되면서 본격적으로 근로소득자들의 '2019년도 연말정산' 작업이 시작됐다."
+          },
+          {
+            "url": "https://www.yna.co.kr/view/AKR20170112059200002",
+            "domain": "www.yna.co.kr",
+            "title": "[연말정산] 간소화 서비스 주요 일정(표) | 연합뉴스",
+            "snippet": "[연말정산] 간소화 서비스 주요 일정(표) ... - 연말정산간소화 서비스에서 소득·세액공제 자료 조회 가능"
+          },
+          {
+            "url": "https://www.yna.co.kr/amp/view/AKR20260423094800002",
+            "domain": "www.yna.co.kr",
+            "title": "국민성장펀드 3년 유지하면 소득공제…연말정산 간소화 적용 | 연합뉴스",
+            "snippet": "# 국민성장펀드 3년 유지하면 소득공제…연말정산 간소화 적용 ... 가입자가 별도의 증빙 서류를 발급받지 않아도 연말정산 시스템 등에서 펀드 납입 내역이 자동으로 조회되도록 행정적 근거를 마련한"
+          },
+          {
+            "url": "https://livewiser.tistory.com/entry/%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0-%EA%B0%84%EC%86%8C%ED%99%94-%EC%9E%90%EB%A3%8C%EB%8A%94-%EC%96%B8%EC%A0%9C-%EB%9C%B0%EA%B9%8C-%EA%B3%B5%EA%B0%9C-%EC%8B%9C%EA%B8%B0-%EC%82%AC%EC%A0%84-%EC%A4%80%EB%B9%84-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+            "domain": "livewiser.tistory.com",
+            "title": "연말정산 간소화 자료는 언제 뜰까? | 공개 시기 & 사전 준비 총정리",
+            "snippet": "연말정산 간소화 자료는 매년 시점이 조금씩 다르지만 보통 1월 중순 이후부터 대부분의 자료가 공개됩니다. ... 2025 연말정산 일정·자료 준비·입력 방법 실전 가이드 연말정산 시즌이 다가오면"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "연말정산간소화",
+          "executed_query": "연말정산 간소화",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T16:18:06.013399+00:00",
+          "raw_sha256": "1d8282768f3fdbe4483f5d8e202cb1b73bf1013aa3ff65a92ed5fa4ea252bd95",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "연말정산 간소화 서비스 관련 주요 문답자료(FAQ)"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "｢모바일 연말정산 서비스｣은 연말정산을 보다 시간과 장소에 구애됨이 없이 간편하게 ... 신규제공 | ｢연말정산 간소화｣ 조회 내역을 회사에"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "실손보험금 수령내역 조회 | 연말정산간소화서비스 이용(www.hometax.go.kr ... (내선 1-5번) 연말정산간소화 상담"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "연말정산간소화서비스 이용(www.hometax.go.kr → ... (내선 1-5번)연말정산간소화 상담"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "<tr><td colspan=\"2\">□ 이용대상 : 자체 연말정산 시스템이 있는 회사로서 근로자의 연말정산간소화 자료를 간편제출* 서비스를 이용하여 온라인 제출받는 경우<br>* 근로자가 간소화 자료 등을 편리한 연말정산을 통해"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "토스 애플리케이션(앱)에서 토스 인증서를 발급받으면 국세청 홈택스 웹사이트나 손택스 앱에서 연말정산 간소화 서비스 전체를 이용할 수 있다. ... (서울=연합뉴스) 최현석 기자 = 토스는 오는 15일"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "연말정산 간소화 서비스 오늘 개통…산후조리원 자료도 제공 | 연합뉴스"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "[연말정산] 간소화 서비스 주요 일정(표) ... - 연말정산간소화 서비스에서 소득·세액공제 자료 조회 가능"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "# 국민성장펀드 3년 유지하면 소득공제…연말정산 간소화 적용 ... 가입자가 별도의 증빙 서류를 발급받지 않아도 연말정산 시스템 등에서 펀드 납입 내역이 자동으로 조회되도록 행정적 근거를 마련한"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "연말정산 간소화 자료는 매년 시점이 조금씩 다르지만 보통 1월 중순 이후부터 대부분의 자료가 공개됩니다. ... 2025 연말정산 일정·자료 준비·입력 방법 실전 가이드 연말정산 시즌이 다가오면"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "종합소득세경정청구",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "dominant_search_results"
+        ],
+        "monthly_search": 690,
+        "organic_provider": "codex_native_search",
+        "organic_query": "종합소득세 경정청구",
+        "organic_results": [
+          {
+            "url": "https://teht.hometax.go.kr/doc/rn/a/a/2018%EB%85%84_%EA%B7%80%EC%86%8D_%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC_%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+            "domain": "teht.hometax.go.kr",
+            "title": "2018년 귀속 경정청구 작성하기 매뉴얼",
+            "snippet": "⑤ 귀하의 종합소득세 과세대상 연말정산 사업소득이 존재합니다(근로소득 경정청구 대상 ... 금액에 관계없이 종합소득세 과세대상에 해당합니다(근로소득 경정청구 대상 아님)."
+          },
+          {
+            "url": "https://www.nts.go.kr/webtv/na/ntt/selectNttInfo.do?mi=&nttSn=1303956",
+            "domain": "www.nts.go.kr",
+            "title": "Web-TV",
+            "snippet": "'신고/납부'에서 ‘세금신고’ '종합소득세'를 클릭하고 '근로소득자 신고서'에서 '경정청구 작성'을 선택한 뒤 경정청구할 귀속 연도를 선택하고, 소득·세액공제명세서와 부속서류를 조회해 확인한 뒤 신고서에서 누락한 공제 항목을 수정한 다음,"
+          },
+          {
+            "url": "https://j.nts.go.kr/comm/ntsFileDown.do?filePath=%2Fupload%2Fnts%2F02%2F0201%2F%EA%B7%BC%EB%A1%9C%EC%9E%90%EB%A5%BC_%EC%9C%84%ED%95%9C_%EC%97%B0%EB%A7%90%EC%A0%95%EC%82%B0_%EC%95%88%EB%82%B4_%EB%A6%AC%ED%94%8C%EB%A6%BF%28%EA%B2%8C%EC%8B%9C%EC%9A%A9%29.pdf",
+            "domain": "j.nts.go.kr",
+            "title": "2020년 귀속\n근로자  를 위한\n연말정산 안내",
+            "snippet": "세액의 납부기한 경과 후 5년 이내 경정을 청구하여 추가로 공제를 받을 수 ... 원천징수의무자를 통한 연말정산 수정신고 또는 종합소득세 과세표준"
+          },
+          {
+            "url": "https://www.nts.go.kr/webtv/na/ntt/selectNttList.do?bbsId=30145&nttSn=1322808",
+            "domain": "www.nts.go.kr",
+            "title": "Web-TV",
+            "snippet": "그런데, 만약 종합소득 확정 신고 기간에 누락분을 바로잡지 못했거나 종합소득 확정 신고 기간이 지난 후에누락 사실을 알았다면, 그때는 경정청구를 통해 연말정산에서 누락된 소득·세액공제를 반영할 수"
+          },
+          {
+            "url": "https://help.3o3.co.kr/hc/ko/articles/34289299067801-%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8-%ED%99%98%EA%B8%89-%EB%8D%94-%EB%B0%9B%EB%8A%94-%EB%90%98%EA%B2%8C-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%B0%A9%EB%B2%95-ft-%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC",
+            "domain": "help.3o3.co.kr",
+            "title": "종합소득세 환급 더 받는 되게 간단한 방법(ft. 경정청구) – 삼쩜삼 고객센터",
+            "snippet": "다시 말해, 현재 기준으론 2019년 귀속 소득세 신고분부터 경정청구가 가능한 셈이죠. ... 일단 홈택스에 접속해 로그인한 후, [세금신고 > 종합소득세 신고 > 일반신고 > 경정청구]"
+          },
+          {
+            "url": "https://gsit.jnu.ac.kr/bbs/sanhak/1151/793730/download.do",
+            "domain": "gsit.jnu.ac.kr",
+            "title": "2024년 귀속\n근로자를 위한\n연말정산 안내",
+            "snippet": "세액의 납부기한 경과 후 5년 이내 경정을 청구하여 추가로 공제를 받을 수 ... ※ ‌\u0007경정청구 대상 연도를 선택하면 지급명세서 내용으로 미리 채워주고 근로자 ... 원천징수의무자를"
+          },
+          {
+            "url": "https://file2.taxnet.co.kr/taxnetfile/public_data/2023%EB%85%84%20%EC%A2%85%EA%B5%90%EC%9D%B8%EC%86%8C%EB%93%9D%20%EC%8B%A0%EA%B3%A0%EC%95%88%EB%82%B4_4098097.pdf",
+            "domain": "file2.taxnet.co.kr",
+            "title": "\u000e\n\u000f\n\u0010\n\u0012\u0012\u0013\u0012\u0014\u0012\u0015\u0015\u0015\u0015\u0013\u0015\u0015\u0015\u0016\u0014\u0017\u0013\u0012\u0015\n\u000b\f\u000b\r\n\u0002\u0003\u0004\u0005\u0006\n\u0007\b\t\n\u0004\u0005\u0006\u0007\b\t\u0005",
+            "snippet": "수정신고･경정청구･기한후 신고 ... 종합소득세 확정신고기한까지 신고하지 않은 경우, 과세관청이 결정하여 통지하기"
+          },
+          {
+            "url": "https://hometex.kr/%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8-%EA%B2%BD%EC%A0%95%EC%B2%AD%EA%B5%AC-%EB%B0%A9%EB%B2%95-%EC%B5%9C%EB%8C%80-5%EB%85%84%EC%B9%98-%ED%99%98%EA%B8%89-%EB%B0%9B%EB%8A%94-%EB%B2%95/",
+            "domain": "hometex.kr",
+            "title": "종합소득세 경정청구 방법 (최대 5년치 환급 받는 법) - 세금가이드",
+            "snippet": "종합소득세 신고 후 잘못 납부했거나 누락된 세금이 있다면 최대 5년 전까지 경정청구를 통해 환급받을 수 있습니다. ... 종합소득세 경정청구는 납세자가 신고한 세액이 법정 세액보다 많거나,"
+          },
+          {
+            "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148902765",
+            "domain": "www.korea.kr",
+            "title": "경정청구 통해 세금 환급받은 이야기 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑",
+            "snippet": "일반적인 직장인이라면 12월에 연말정산을 진행하고, 나 같은 프리랜서는 5월 종합소득세 신고 기간에 세금 신고를 진행한다. ... 한편 경정청구의 경우 법정 신고 기한이 지난 뒤 5년"
+          },
+          {
+            "url": "https://www.ulex.co.kr/%EB%B2%95%EB%A5%A0/2100000275590-96341-%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8",
+            "domain": "www.ulex.co.kr",
+            "title": "종합소득세 성과포상금 지급에 관한 규정 고시 | U-LEX 법률우주",
+            "snippet": "### 제1조(목적) 이 고시는 「」 및 「」 에 따라 종합소득세의 부과ㆍ징수에 특별한 공로가 인정되는 세무공무원에 대한 성과포상금의 지급대상, 지급기준, 지급금액 및 지급신청 등 그 밖에"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "종합소득세경정청구",
+          "executed_query": "종합소득세 경정청구",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T16:18:06.013399+00:00",
+          "raw_sha256": "06d9d16e3b3c4969e19026c538b4c00f04af91a641ccdc6e61a0d14056a060b5",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "⑤ 귀하의 종합소득세 과세대상 연말정산 사업소득이 존재합니다(근로소득 경정청구 대상 ... 금액에 관계없이 종합소득세 과세대상에 해당합니다(근로소득 경정청구 대상 아님)."
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "'신고/납부'에서 ‘세금신고’ '종합소득세'를 클릭하고 '근로소득자 신고서'에서 '경정청구 작성'을 선택한 뒤 경정청구할 귀속 연도를 선택하고, 소득·세액공제명세서와 부속서류를 조회해 확인한 뒤 신고서에서 누락한 공제 항목을 수정한 다음,"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "세액의 납부기한 경과 후 5년 이내 경정을 청구하여 추가로 공제를 받을 수 ... 원천징수의무자를 통한 연말정산 수정신고 또는 종합소득세 과세표준"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "그런데, 만약 종합소득 확정 신고 기간에 누락분을 바로잡지 못했거나 종합소득 확정 신고 기간이 지난 후에누락 사실을 알았다면, 그때는 경정청구를 통해 연말정산에서 누락된 소득·세액공제를 반영할 수"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "다시 말해, 현재 기준으론 2019년 귀속 소득세 신고분부터 경정청구가 가능한 셈이죠. ... 일단 홈택스에 접속해 로그인한 후, [세금신고 > 종합소득세 신고 > 일반신고 > 경정청구]"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "세액의 납부기한 경과 후 5년 이내 경정을 청구하여 추가로 공제를 받을 수 ... ※ ‌\u0007경정청구 대상 연도를 선택하면 지급명세서 내용으로 미리 채워주고 근로자 ... 원천징수의무자를"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "수정신고･경정청구･기한후 신고 ... 종합소득세 확정신고기한까지 신고하지 않은 경우, 과세관청이 결정하여 통지하기"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "종합소득세 신고 후 잘못 납부했거나 누락된 세금이 있다면 최대 5년 전까지 경정청구를 통해 환급받을 수 있습니다. ... 종합소득세 경정청구는 납세자가 신고한 세액이 법정 세액보다 많거나,"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "일반적인 직장인이라면 12월에 연말정산을 진행하고, 나 같은 프리랜서는 5월 종합소득세 신고 기간에 세금 신고를 진행한다. ... 한편 경정청구의 경우 법정 신고 기한이 지난 뒤 5년"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "### 제1조(목적) 이 고시는 「」 및 「」 에 따라 종합소득세의 부과ㆍ징수에 특별한 공로가 인정되는 세무공무원에 대한 성과포상금의 지급대상, 지급기준, 지급금액 및 지급신청 등 그 밖에"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "대전신용보증재단",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "dominant_search_results"
+        ],
+        "monthly_search": 9140,
+        "organic_provider": "codex_native_search",
+        "organic_query": "대전신용보증재단",
+        "organic_results": [
+          {
+            "url": "https://hope.sinbo.or.kr/apply",
+            "domain": "hope.sinbo.or.kr",
+            "title": "대전신용보증재단 - 신청하기",
+            "snippet": "#### 대전신용보증재단은 2026년 소상공인 경영회복 지원사업과 관련하여 「개인정보 보호법」 제15조 제1항 제1호, 제17조 제1항 제1호, 제22조, 제24조 제1항 제1호에 따라 아래 사항에 대하여 본인의 동의를"
+          },
+          {
+            "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=289652",
+            "domain": "www.gojobs.go.kr",
+            "title": "모집공고 < 일반채용 | 나라일터(상세)",
+            "snippet": "월) 18:00까지 (24시간 접수가능) ○ 접수방법 : 대전광역시 공공기관 직원 통합채용 홈페이지 접속 후 대전신용보증재단 채용 홈페이지로 이동하여 개별 접수 (http://daejeon.saramin.co.kr) ※ 방문접수, 우편접수, E-mail"
+          },
+          {
+            "url": "https://www.daejeon.go.kr/drh/DrhContentsHtmlView.do?menuSeq=7944",
+            "domain": "www.daejeon.go.kr",
+            "title": "자금지원 | 대전광역시청",
+            "snippet": "대전신용보증재단 홈페이지"
+          },
+          {
+            "url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=1632&ntatcSeq=1044653&pageIndex=2503&recordCountPerPage=10&searchCondition=&searchKeyword=",
+            "domain": "www.daejeon.go.kr",
+            "title": "대전신용보증재단 이사장, 남승철씨 내정 | 대전광역시청",
+            "snippet": "○ 남승철 이 사장 내정자는 대전 출신으로 대전고와 충남대 행정학과를 졸 업하 고, 1981 년 충청은행에 입사하여 충청은행 인사과장, 종합기획팀장, 태평동지점장을 역임하고, 하 나은행 도마동지점장,"
+          },
+          {
+            "url": "https://www.mwu.ac.kr/kr/html/sub06/0604.html?file_id=794040&mode=D&no=31ff71029411b1d7070ac69dffbe19db",
+            "domain": "www.mwu.ac.kr",
+            "title": "공고번호 : 대전신용보증재단 제2026-02호",
+            "snippet": "대전신용보증재단은 「대전광역시내에 소재하고 있는 담보력은 미약하나 성장잠재력이 있고 신용상태가 양호한 ... 채용분야 계약직원 (소상공인 경영회복 지원사업) | 근 무 조 건 • 근 무 지"
+          },
+          {
+            "url": "https://council.daedeok.go.kr/kr/bbs/download.do?bbs_id=committeeResult&uid=E61409CE0E3633CAAF953E45A0589829",
+            "domain": "council.daedeok.go.kr",
+            "title": "2026년도 대전신용보증재단 출연 동의안",
+            "snippet": "대덕벤크사업(소상공인 경영안정자금 지원) 추진을 위한 2026년도 출연금을 「지역신용보증재단법」 제1조 및 제9조에 따라 설립된 대전신용보증재단에 출연하기 위해 「지방재정법」 제18조 제3항에 따라 구의회 의결을 얻고자 함."
+          },
+          {
+            "url": "https://www.korea.kr/archive/recruitInfoView.do?dataId=373142",
+            "domain": "www.korea.kr",
+            "title": "2026년 대전신용보증재단 4차 계약직원 공개경쟁시험 채용공고 - 채용정보 | 정책자료 | 대한민국 정책브리핑",
+            "snippet": "[붙임2] 대전신용보증재단 2026년 4차 계약직원 채용예정직무 설명자료.hwpx 바로보기 내려받기 ... ○ 담 당 자 : 대전신용보증재단 인사총무부 곽은지 대리(042-380-3922)"
+          },
+          {
+            "url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=1632&ntatcSeq=1044653&pageIndex=2503",
+            "domain": "www.daejeon.go.kr",
+            "title": "대전신용보증재단 이사장, 남승철씨 내정 | 대전광역시청",
+            "snippet": "○ 남승철 이 사장 내정자는 대전 출신으로 대전고와 충남대 행정학과를 졸 업하 고, 1981 년 충청은행에 입사하여 충청은행 인사과장, 종합기획팀장, 태평동지점장을 역임하고, 하 나은행 도마동지점장,"
+          },
+          {
+            "url": "https://www.distep.re.kr/_files/board/20230609/cec45989a17785b9cf5b665553d34bf8.pdf",
+            "domain": "www.distep.re.kr",
+            "title": "대전신용보증재단(본원)",
+            "snippet": "대전신용보증재단(본원) ... - 설립목적: 담보력은 미약하나 성장잠재력이 있고 신용상태 양호한 대전 내 소기업·소상공인 등에 대한 채무를 보증함으로써 자금 융통을 원활히 하고 신용정보의 효율적인 관리·운용을 통하여"
+          },
+          {
+            "url": "https://grant-documents.thevc.kr/286440_%2826%EB%85%841%EC%B0%A8%29%EB%8C%80%EC%A0%84%ED%98%95_%EC%B4%88%EC%A0%80%EA%B8%88%EB%A6%AC_%ED%8A%B9%EB%B3%84%EC%9E%90%EA%B8%88_%EA%B3%B5%EA%B3%A0%EB%AC%B8.pdf",
+            "domain": "grant-documents.thevc.kr",
+            "title": "□ 신청방법\n\n1. 대전신용보증재단 홈페이지(www.sinbo.or.kr)를 통한 온라인",
+            "snippet": "대전신용보증재단 이사장"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "대전신용보증재단",
+          "executed_query": "대전신용보증재단",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T16:18:06.013399+00:00",
+          "raw_sha256": "bd196be44c5933b4dad0b7f0b446bfd72493222949f90a9a02ece2eb8c0b134f",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "#### 대전신용보증재단은 2026년 소상공인 경영회복 지원사업과 관련하여 「개인정보 보호법」 제15조 제1항 제1호, 제17조 제1항 제1호, 제22조, 제24조 제1항 제1호에 따라 아래 사항에 대하여 본인의 동의를"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "월) 18:00까지 (24시간 접수가능) ○ 접수방법 : 대전광역시 공공기관 직원 통합채용 홈페이지 접속 후 대전신용보증재단 채용 홈페이지로 이동하여 개별 접수 (http://daejeon.saramin.co.kr) ※ 방문접수, 우편접수, E-mail"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "대전신용보증재단 홈페이지"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "대전신용보증재단 이사장, 남승철씨 내정 | 대전광역시청"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "대전신용보증재단은 「대전광역시내에 소재하고 있는 담보력은 미약하나 성장잠재력이 있고 신용상태가 양호한 ... 채용분야 계약직원 (소상공인 경영회복 지원사업) | 근 무 조 건 • 근 무 지"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "대덕벤크사업(소상공인 경영안정자금 지원) 추진을 위한 2026년도 출연금을 「지역신용보증재단법」 제1조 및 제9조에 따라 설립된 대전신용보증재단에 출연하기 위해 「지방재정법」 제18조 제3항에 따라 구의회 의결을 얻고자 함."
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "2026년 대전신용보증재단 4차 계약직원 공개경쟁시험 채용공고 - 채용정보 | 정책자료 | 대한민국 정책브리핑"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "대전신용보증재단 이사장, 남승철씨 내정 | 대전광역시청"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "대전신용보증재단(본원) ... - 설립목적: 담보력은 미약하나 성장잠재력이 있고 신용상태 양호한 대전 내 소기업·소상공인 등에 대한 채무를 보증함으로써 자금 융통을 원활히 하고 신용정보의 효율적인 관리·운용을 통하여"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "□ 신청방법\n\n1. 대전신용보증재단 홈페이지(www.sinbo.or.kr)를 통한 온라인"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "소진공",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://ols.semas.or.kr/ols/pfa/SPFA207P/page.do",
+              "title": "소상공인정책자금",
+              "excerpt_chars": 2149
+            },
+            {
+              "url": "https://m.easylaw.go.kr/MOB/CsmInfoRetrieve.laf?ccfNo=2&cciNo=3&cnpClsNo=1&csmSeq=706",
+              "title": "커피전문점 창업ㆍ운영 > 사전 준비 > 자금계획 > 자금지원 < 책자형 생활법령 : 모바일 생활법령",
+              "excerpt_chars": 2752
+            },
+            {
+              "url": "https://bokji.gangnam.go.kr/board/BBS_QNA/223/view.do?mid=ID03_03",
+              "title": "소상공인 지원(융자)  | 복지플랫폼 > 복지정보 > 이럴 땐 어떻게 해야하나요? | 전체",
+              "excerpt_chars": 746
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "insufficient_search_intent"
+          },
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://mss.go.kr/site/smba/ex/organchart/organchart_office.do?dept_id=000005831&page_no=01",
+                  "title": "조직도 -  조직안내  -  기관소개  - 중소벤처기업부",
+                  "excerpt_chars": 715
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_rejected",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://ols.semas.or.kr/ols/pfa/SPFA207P/page.do",
+                  "title": "소상공인정책자금",
+                  "excerpt_chars": 2149
+                },
+                {
+                  "url": "https://m.easylaw.go.kr/MOB/CsmInfoRetrieve.laf?ccfNo=2&cciNo=3&cnpClsNo=1&csmSeq=706",
+                  "title": "커피전문점 창업ㆍ운영 > 사전 준비 > 자금계획 > 자금지원 < 책자형 생활법령 : 모바일 생활법령",
+                  "excerpt_chars": 2752
+                },
+                {
+                  "url": "https://bokji.gangnam.go.kr/board/BBS_QNA/223/view.do?mid=ID03_03",
+                  "title": "소상공인 지원(융자)  | 복지플랫폼 > 복지정보 > 이럴 땐 어떻게 해야하나요? | 전체",
+                  "excerpt_chars": 746
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "insufficient_search_intent"
+              }
+            }
+          }
+        }
+      },
+      {
+        "keyword": "코이타",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance"
+        ],
+        "monthly_search": 1530,
+        "organic_provider": "codex_native_search",
+        "organic_query": "코이타",
+        "organic_results": [
+          {
+            "url": "https://keyword.dynamiclabs.co.kr/k/%EC%BD%94%EC%9D%B4%ED%83%80",
+            "domain": "keyword.dynamiclabs.co.kr",
+            "title": "코이타 검색량 조회 — 월간 검색량·블로그 발행량·진입 난이도 | 키워드렉스",
+            "snippet": "발행량 1,149건을 검색량 2,950회로 나누면 0.39에 그대로 맞아떨어지는데, 이는 검색 1회당 문서 수라는 지표가 코이타의 실제 발행량과 검색량 격차에서 그대로 나온 숫자라는 뜻입니다. ... 다만"
+          },
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view-inner-finance/csn/bDRJVGxyakNzbjl1SENiamdBRjBDZz09/company_nm/%EC%BD%94%EC%9D%B4%ED%83%80%28%EC%A3%BC%29",
+            "domain": "www.saramin.co.kr",
+            "title": "코이타(주) 2025년 재무정보 | 매출액 35억 587만원 영업이익, 자본금, 공시정보 등 - 사람인",
+            "snippet": "# 코이타(주)재무정보 ... 기업의 활동으로 얻는 연간 수익금액으로 기업의 규모를 가늠하는데 참고할 수 있는 정보입니다. ... 매출액에서 매출원가, 판매비, 관리비 등을 빼고 여기에 영업외 수익과"
+          },
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/bDRJVGxyakNzbjl1SENiamdBRjBDZz09/company_nm/%EC%BD%94%EC%9D%B4%ED%83%80%28%EC%A3%BC%29",
+            "domain": "www.saramin.co.kr",
+            "title": "코이타(주) 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "# 코이타(주)기업정보 ... 본 정보는 사람인 빅데이터를 분석한 결과이며, ... 코이타 주시회사 창립 ... 해당 정보는 최신 정보와 상이할 수 있고, (주)사람인은 정보의 오류·누락 또는"
+          },
+          {
+            "url": "https://bizno.net/article/1438122746",
+            "domain": "bizno.net",
+            "title": "코이타（주)",
+            "snippet": "코이타（주) ... > ※ 비즈노의 기업정보는 공공기관으로 부터 주기적으로 자료를 수집 및 제공받아 2차가공하여 서비스하는 것으로 각각의 행정기관의 자료 갱신시점에 따라 현재 정보와 상이할 수"
+          },
+          {
+            "url": "https://d.namu.moe/w/%ED%98%84%EB%8C%80%20%EC%BD%94%ED%8B%B0%EB%82%98",
+            "domain": "d.namu.moe",
+            "title": "현대 코티나",
+            "snippet": "변속기는 전진 4단, 후진 1단인 수동변속기 를 적용했고, 연료 탱크 용량은 45.5ℓ, 승차 정원은 6명이었다.[ ... 그러나 조사단이 부실하게 원인 조사를 했는지, 해당 보고서에는 코티나는"
+          },
+          {
+            "url": "https://seore.org/w/%EC%BD%94%EC%9D%B4%ED%8B%B0%EB%B9%84",
+            "domain": "seore.org",
+            "title": "코이티비",
+            "snippet": "이름이 비슷한 대원방송 성우극회 소속 성우 이경태의 유튜브 채널 코이튜브에 대한 내용은 이경태(성우) 문서를 참고해 주세요 ... 구독자 수에 따른 여행 유튜브 채널 인기 순위"
+          },
+          {
+            "url": "https://m.namu.moe/w/%EC%95%84%EB%B6%80%EB%B0%94%EC%B9%B4%EB%A6%AC%20%EC%BD%94%EC%9D%B4%ED%83%80",
+            "domain": "m.namu.moe",
+            "title": "아부바카리 코이타",
+            "snippet": "아부바카리 코이타 ... <colbgcolor=#ffcc01,#ffcc01><colcolor=#000> 본명 | 아부바카리 옐리 코이타 ... * 다카르 주 출신 인물"
+          },
+          {
+            "url": "https://www.yeogi.com/accommodation/gr/city-koita",
+            "domain": "www.yeogi.com",
+            "title": "그리스 코이타 추천 호텔, 숙소 베스트 10 | 여기어때",
+            "snippet": "이러한 숙소는 자유롭고 독립적인 여행을 선호하는 이들에게 인기가 있으며, 종종 전용 수영장이나 정원을 갖추고 있어 프라이빗한 휴가를 즐길 수 있습니다. ... * 디로스 동굴: 코이타"
+          },
+          {
+            "url": "https://www.nicebizinfo.com/ep/EP0100M002GE.nice?kiscode=L78986",
+            "domain": "www.nicebizinfo.com",
+            "title": "코이타(주) - 2026년 기업정보 - 매출액, 재무제표, 신용등급보고서",
+            "snippet": "코이타(주) ... 3인 이상 법인 사업자에 한하여 연봉정보를 제공하며, ... 기업이 영위하는 대표 산업에 대한 정보로, ... 정상 업체 : 금융권에서 신용공여가 이루어졌고, 부도 상태가"
+          },
+          {
+            "url": "https://dark.namu.moe/w/%EC%BD%94%EC%9D%B4%ED%8B%B0%EB%B9%84/%EB%93%B1%EC%9E%A5%EC%9D%B8%EB%AC%BC",
+            "domain": "dark.namu.moe",
+            "title": "코이티비/등장인물",
+            "snippet": "코이의 회사 사업이 커지며 코이티비 출연진으로써 출연은 줄고 개인 유튜브 채널에 전념하게 되었지만 건강이 안 좋아져 얼마 후 그만두게 되었다. ... 결혼 후 뉴질랜드에 정착했는데"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "코이타",
+          "executed_query": "코이타",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-05T16:18:06.013399+00:00",
+          "raw_sha256": "124bf997b844468e7b809719f36bfe64c88feaacf977da815854b84874392daf",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "코이타 검색량 조회 — 월간 검색량·블로그 발행량·진입 난이도 | 키워드렉스"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "코이타(주) 2025년 재무정보 | 매출액 35억 587만원 영업이익, 자본금, 공시정보 등 - 사람인"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "코이타(주) 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인"
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "코이타（주) ... > ※ 비즈노의 기업정보는 공공기관으로 부터 주기적으로 자료를 수집 및 제공받아 2차가공하여 서비스하는 것으로 각각의 행정기관의 자료 갱신시점에 따라 현재 정보와 상이할 수"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "변속기는 전진 4단, 후진 1단인 수동변속기 를 적용했고, 연료 탱크 용량은 45.5ℓ, 승차 정원은 6명이었다.[ ... 그러나 조사단이 부실하게 원인 조사를 했는지, 해당 보고서에는 코티나는"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "이름이 비슷한 대원방송 성우극회 소속 성우 이경태의 유튜브 채널 코이튜브에 대한 내용은 이경태(성우) 문서를 참고해 주세요 ... 구독자 수에 따른 여행 유튜브 채널 인기 순위"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "아부바카리 코이타 ... <colbgcolor=#ffcc01,#ffcc01><colcolor=#000> 본명 | 아부바카리 옐리 코이타 ... * 다카르 주 출신 인물"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "그리스 코이타 추천 호텔, 숙소 베스트 10 | 여기어때"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "코이타(주) - 2026년 기업정보 - 매출액, 재무제표, 신용등급보고서"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "코이티비/등장인물"
+            }
+          ]
         }
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
-      "고용증대세액공제",
-      "영세율",
-      "자금조달계획서"
+      "소상공인희망리턴패키지"
     ],
-    "research_stop_reason": "pool_exhausted",
+    "research_stop_reason": "round_limit",
     "retry_keywords": [
       "소상공인스마트상점",
-      "소상공인폐업지원금"
+      "자금조달계획서"
     ],
     "discovery_rejections": [],
     "discovery_replenishment": [],
     "deferred_measured_keywords": [
-      "고용증대세액공제",
-      "영세율",
-      "자금조달계획서"
+      "소상공인희망리턴패키지"
     ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
@@ -4365,16 +4976,14 @@
           "연말정산환급금조회",
           "소상공인지원금",
           "사업자대출조건",
-          "상한제사후환급금",
-          "근로소득세계산",
           "청년지원금",
+          "근로소득세계산",
+          "국비지원교육",
           "마이너스통장조건",
           "소상공인",
           "고용지원금대상",
-          "국비지원교육",
-          "종합소득세환급신청",
           "사업자대출",
-          "기업신용정보조회",
+          "상한제사후환급금",
           "재무제표",
           "개인사업자대출",
           "청년창업지원금",
@@ -4382,48 +4991,61 @@
           "중소기업청년지원금",
           "3톤미만지게차",
           "중소기업정책자금",
-          "중진공정책자금",
           "중고지게차",
+          "중진공정책자금",
           "조세특례제한법",
           "소진공",
           "병원비환급",
           "고용촉진장려금",
           "청년사업자대출",
-          "고용지원금",
           "지게차가격",
           "국비지원카드",
-          "부가가치세법",
           "BLENDER",
+          "고용지원금",
+          "부가가치세법",
           "경기도지원금",
-          "종합소득세환급",
           "청년전용창업자금",
           "국민배움내일카드",
           "중소기업지원금",
           "청년창업대출",
           "세무사랑",
           "소상공인지원",
+          "종합소득세환급",
+          "통신비환급금",
           "국비지원종류",
           "입식지게차",
           "청년지원",
-          "통신비환급금",
           "정부지원사업",
           "중소기업대출",
-          "청년고용지원금",
           "세액공제",
-          "사업소득세",
+          "청년고용지원금",
           "창업지원금",
-          "자영업자지원금",
+          "사업소득세",
           "세금환급",
+          "자영업자지원금",
           "개인사업자지원금",
-          "소상공인진흥공단정책자금",
           "정부정책자금",
+          "소상공인진흥공단정책자금",
           "퇴직연금담보대출",
           "고령자고용지원금",
-          "자영업자대출"
+          "자영업자대출",
+          "청년지원사업",
+          "연말정산간소화"
         ],
-        "proposals": [],
+        "proposals": [
+          {
+            "keyword": "근로소득세계산",
+            "reason": "월 1,110회 수요가 있는 계산 정보형 검색어다. 세액 산출 순서와 필요한 소득·공제 항목을 공식 자료로 조사할 가치가 있다.",
+            "search_query": "근로소득세 계산"
+          },
+          {
+            "keyword": "연말정산간소화",
+            "reason": "월 1,530회 수요가 있다. 연말정산 준비를 위해 공제자료 조회·제출 절차와 누락 자료 처리 방법을 조사할 가치가 있다.",
+            "search_query": "연말정산 간소화"
+          }
+        ],
         "measured_fallback": false,
-        "no_eligible_proposal": true,
+        "no_eligible_proposal": false,
         "skipped": [
           {
             "keyword": "세금환급금조회",
@@ -4447,22 +5069,17 @@
           },
           {
             "keyword": "사업자대출조건",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "상한제사후환급금",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "근로소득세계산",
-            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "청년지원금",
             "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "국비지원교육",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4481,22 +5098,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "국비지원교육",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "종합소득세환급신청",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "사업자대출",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "기업신용정보조회",
+            "keyword": "상한제사후환급금",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -4536,13 +5143,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "중진공정책자금",
-            "reason_code": "scope_too_broad",
+            "keyword": "중고지게차",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "중고지게차",
-            "reason_code": "category_mismatch",
+            "keyword": "중진공정책자금",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4571,11 +5178,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "고용지원금",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "지게차가격",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
@@ -4586,23 +5188,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "부가가치세법",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "BLENDER",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "경기도지원금",
+            "keyword": "고용지원금",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "부가가치세법",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "종합소득세환급",
-            "reason_code": "duplicate_intent",
+            "keyword": "경기도지원금",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4636,6 +5238,16 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "종합소득세환급",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "통신비환급금",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "국비지원종류",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
@@ -4651,11 +5263,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "통신비환급금",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "정부지원사업",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
@@ -4666,18 +5273,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "청년고용지원금",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "세액공제",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "사업소득세",
-            "reason_code": "insufficient_specificity",
+            "keyword": "청년고용지원금",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4686,7 +5288,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "자영업자지원금",
+            "keyword": "사업소득세",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -4696,17 +5298,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "자영업자지원금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "개인사업자지원금",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "소상공인진흥공단정책자금",
+            "keyword": "정부정책자금",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "정부정책자금",
+            "keyword": "소상공인진흥공단정책자금",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -4724,92 +5331,95 @@
             "keyword": "자영업자대출",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청년지원사업",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
           }
-        ],
-        "research_fallback": []
+        ]
       },
       {
         "round": 2,
         "offered_keywords": [
-          "청년지원사업",
           "코이타",
-          "자바스크립트",
           "강소기업",
+          "자바스크립트",
           "법인사업자대출",
-          "연말정산간소화",
           "지게차임대",
           "전기지게차",
           "법인대출",
-          "소상공인지원사업",
           "개인사업자신용대출",
           "지게차렌탈",
+          "소상공인지원사업",
           "나라배움카드",
-          "산기협",
           "국비지원교육종류",
+          "산기협",
           "개인사업자햇살론",
-          "소상공인희망리턴패키지",
-          "코워킹스페이스",
           "전월세보증금담보대출",
+          "코워킹스페이스",
           "국비교육",
           "정책지원금",
-          "고용장려금",
           "KOSME",
           "사업자금대출",
+          "고용장려금",
           "보증보험대출",
           "종소세환급",
           "신용보증재단대출",
-          "지자체지원금",
-          "지원사업",
           "사업자대출한도",
-          "국가정책자금",
+          "지원사업",
+          "지자체지원금",
           "정부지원",
+          "국가정책자금",
           "개인사업자담보대출",
           "종합소득세경정청구",
-          "종합소득세기한후환급",
-          "사업자마이너스통장",
           "백엔드개발자",
-          "소상공인창업지원금",
-          "임산부알바",
-          "기업대출",
+          "사업자마이너스통장",
           "연말정산간소화서비스",
-          "가계자금",
-          "퇴직연금대출",
-          "장애인대출",
+          "소상공인창업지원금",
           "정부정책자금대출",
-          "정책자금컨설팅",
+          "임산부알바",
+          "장애인대출",
+          "퇴직연금대출",
+          "기업대출",
+          "가계자금",
+          "종합소득세기한후환급",
           "개인사업자마이너스통장",
-          "운전자금",
-          "소공인특화자금",
-          "중소기업지원사업",
-          "중소기업벤처",
-          "청년사업자금대출",
           "국비무료교육",
-          "사업자정책자금",
+          "정책자금컨설팅",
+          "운전자금",
           "연체자비상금대출",
-          "상가보증금대출",
+          "소공인특화자금",
           "스마트농업",
-          "정부환급금",
+          "관광농원",
+          "청년사업자금대출",
+          "사업자정책자금",
+          "중소기업지원사업",
           "소상공인스마트상점",
-          "소상공인폐업지원금"
+          "자금조달계획서",
+          "대전신용보증재단",
+          "중소기업청년지원금",
+          "소진공",
+          "청년전용창업자금"
         ],
         "proposals": [
           {
-            "keyword": "소상공인희망리턴패키지",
-            "reason": "월 1,140회 실측 수요가 있다. 폐업·재기 지원의 신청 조건과 제출서류를 공식 공고로 확인할 조사 후보다.",
-            "search_query": "소상공인 희망리턴패키지"
+            "keyword": "종합소득세경정청구",
+            "reason": "월 690회 실측 수요가 있는 세금 정정 절차 검색어다. 청구 대상·기한·제출 서류와 신청 절차를 공식 안내로 조사할 가치가 있다.",
+            "search_query": "종합소득세 경정청구"
           }
         ],
         "measured_fallback": false,
         "no_eligible_proposal": false,
         "skipped": [
           {
-            "keyword": "청년지원사업",
-            "reason_code": "scope_too_broad",
+            "keyword": "코이타",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "코이타",
-            "reason_code": "insufficient_specificity",
+            "keyword": "강소기업",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4818,18 +5428,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "강소기업",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "법인사업자대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "연말정산간소화",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4844,12 +5444,7 @@
           },
           {
             "keyword": "법인대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소상공인지원사업",
-            "reason_code": "scope_too_broad",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4863,7 +5458,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "소상공인지원사업",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "나라배움카드",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "국비지원교육종류",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -4873,23 +5478,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "국비지원교육종류",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "개인사업자햇살론",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "코워킹스페이스",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "전월세보증금담보대출",
             "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "코워킹스페이스",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4903,18 +5503,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "고용장려금",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "KOSME",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "사업자금대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "고용장려금",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -4933,7 +5533,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "지자체지원금",
+            "keyword": "사업자대출한도",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -4943,12 +5543,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "사업자대출한도",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "국가정책자금",
+            "keyword": "지자체지원금",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -4958,22 +5553,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "국가정책자금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "개인사업자담보대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "종합소득세경정청구",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "종합소득세기한후환급",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "사업자마이너스통장",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -4983,17 +5568,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "소상공인창업지원금",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "임산부알바",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "기업대출",
+            "keyword": "사업자마이너스통장",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -5003,18 +5578,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "가계자금",
+            "keyword": "소상공인창업지원금",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "퇴직연금대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "장애인대출",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -5023,37 +5588,37 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "정책자금컨설팅",
+            "keyword": "임산부알바",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "장애인대출",
             "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퇴직연금대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "기업대출",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "가계자금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "종합소득세기한후환급",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "개인사업자마이너스통장",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "운전자금",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소공인특화자금",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "중소기업지원사업",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "중소기업벤처",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "청년사업자금대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -5063,8 +5628,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "사업자정책자금",
-            "reason_code": "scope_too_broad",
+            "keyword": "정책자금컨설팅",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "운전자금",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -5073,8 +5643,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "상가보증금대출",
-            "reason_code": "insufficient_specificity",
+            "keyword": "소공인특화자금",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -5083,8 +5653,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "정부환급금",
+            "keyword": "관광농원",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청년사업자금대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "사업자정책자금",
             "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "중소기업지원사업",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -5093,8 +5678,28 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "소상공인폐업지원금",
+            "keyword": "자금조달계획서",
             "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "대전신용보증재단",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "중소기업청년지원금",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "소진공",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청년전용창업자금",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           }
         ]
@@ -5102,57 +5707,182 @@
       {
         "round": 3,
         "offered_keywords": [
+          "대전신용보증재단",
+          "소진공",
           "코이타",
-          "법인사업자대출",
-          "연말정산간소화",
-          "법인대출",
           "개인사업자신용대출",
           "산기협",
           "개인사업자햇살론",
-          "코워킹스페이스",
           "전월세보증금담보대출",
           "KOSME",
-          "사업자금대출",
           "보증보험대출",
           "신용보증재단대출",
           "개인사업자담보대출",
           "사업자마이너스통장",
-          "기업대출",
           "연말정산간소화서비스",
-          "퇴직연금대출",
           "장애인대출",
-          "정책자금컨설팅",
+          "퇴직연금대출",
           "개인사업자마이너스통장",
-          "소공인특화자금",
-          "중소기업벤처",
-          "청년사업자금대출",
           "연체자비상금대출",
-          "상가보증금대출",
+          "관광농원",
+          "청년사업자금대출",
           "소상공인스마트상점",
-          "소상공인폐업지원금"
+          "자금조달계획서"
         ],
         "proposals": [],
-        "measured_fallback": false,
+        "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
+          {
+            "keyword": "대전신용보증재단",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "소진공",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
           {
             "keyword": "코이타",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "법인사업자대출",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "연말정산간소화",
+            "keyword": "개인사업자신용대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "법인대출",
-            "reason_code": "category_mismatch",
+            "keyword": "산기협",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "개인사업자햇살론",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "전월세보증금담보대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KOSME",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "보증보험대출",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "신용보증재단대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "개인사업자담보대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "사업자마이너스통장",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "연말정산간소화서비스",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "장애인대출",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퇴직연금대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "개인사업자마이너스통장",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "연체자비상금대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "관광농원",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청년사업자금대출",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "소상공인스마트상점",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "자금조달계획서",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "대전신용보증재단",
+            "search_query": "대전신용보증재단",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          },
+          {
+            "keyword": "소진공",
+            "search_query": "소진공",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "대전신용보증재단",
+          "소진공"
+        ]
+      },
+      {
+        "round": 4,
+        "offered_keywords": [
+          "코이타",
+          "개인사업자신용대출",
+          "산기협",
+          "개인사업자햇살론",
+          "전월세보증금담보대출",
+          "KOSME",
+          "신용보증재단대출",
+          "개인사업자담보대출",
+          "사업자마이너스통장",
+          "퇴직연금대출",
+          "개인사업자마이너스통장",
+          "연체자비상금대출",
+          "소상공인스마트상점",
+          "자금조달계획서"
+        ],
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "코이타",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -5171,27 +5901,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "코워킹스페이스",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "전월세보증금담보대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "KOSME",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "사업자금대출",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "보증보험대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -5211,47 +5926,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "기업대출",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "연말정산간소화서비스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "퇴직연금대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "장애인대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "정책자금컨설팅",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "개인사업자마이너스통장",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소공인특화자금",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "중소기업벤처",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "청년사업자금대출",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -5261,36 +5941,118 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "상가보증금대출",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "소상공인스마트상점",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "소상공인폐업지원금",
+            "keyword": "자금조달계획서",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           }
         ],
-        "research_fallback": []
+        "research_fallback": [
+          {
+            "keyword": "코이타",
+            "search_query": "코이타",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "코이타"
+        ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "소상공인희망리턴패키지",
+        "keyword": "근로소득세계산",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 1140,
-        "organic_query": "소상공인 희망리턴패키지"
+        "monthly_search": 1110,
+        "organic_query": "근로소득세 계산"
+      },
+      {
+        "keyword": "연말정산간소화",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 1530,
+        "organic_query": "연말정산 간소화"
+      },
+      {
+        "keyword": "종합소득세경정청구",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 690,
+        "organic_query": "종합소득세 경정청구"
+      },
+      {
+        "keyword": "대전신용보증재단",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 9140,
+        "organic_query": "대전신용보증재단"
+      },
+      {
+        "keyword": "소진공",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 4120,
+        "organic_query": "소진공"
+      },
+      {
+        "keyword": "코이타",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 1530,
+        "organic_query": "코이타"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "근로소득세계산",
+        "reason_code": "temporary_failure",
+        "failed_at": "2026-10-05T16:18:06.013399+00:00",
+        "retry_after": "2026-10-05T22:18:06.013399+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "연말정산간소화",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T16:18:06.013399+00:00",
+        "retry_after": "2026-10-06T16:18:06.013399+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "종합소득세경정청구",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T16:18:06.013399+00:00",
+        "retry_after": "2026-10-06T16:18:06.013399+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "대전신용보증재단",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T16:18:06.013399+00:00",
+        "retry_after": "2026-10-06T16:18:06.013399+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "소진공",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-05T16:18:06.013399+00:00",
+        "retry_after": "2026-10-12T16:18:06.013399+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "코이타",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-05T16:18:06.013399+00:00",
+        "retry_after": "2026-10-06T16:18:06.013399+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "소상공인희망리턴패키지",
         "reason_code": "source_coverage",
@@ -5486,49 +6248,133 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 67810
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 79062
+        "elapsed_ms": 59649
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7934
+        "elapsed_ms": 14134
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 19280
+        "elapsed_ms": 10143
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9118
-      },
-      {
-        "stage": "official_research",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 79176
+        "elapsed_ms": 9408
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 17501
+        "elapsed_ms": 12131
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10276
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9900
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 33325
+        "elapsed_ms": 45743
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12560
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10324
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 21047
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9323
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11026
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6468
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12568
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7824
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 17198
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 64271
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 14933
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 17372
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 13981
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9946
       }
     ],
     "analysis_recovery_attempts": 0

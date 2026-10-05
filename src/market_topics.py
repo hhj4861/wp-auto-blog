@@ -35,7 +35,7 @@ from src.selection_feedback import load_history, deferred_keywords
 from src import review_discovery, review_exploration
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
-from src import shared_discovery
+from src import shared_discovery, recruitment_sources
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -505,11 +505,11 @@ def official_search_urls(keyword, category=None):
                 if len(urls) == 4:
                     break
         groups.append(urls)
-        if not purchase_question and len(seen) >= 4 and index + 1 >= len(extras):
+        if not purchase_question and not recruitment and len(seen) >= 4 and index + 1 >= len(extras):
             break
     # A comparison needs more than one manufacturer's pages. Do not let the
     # first site's navigation/results consume every available source slot.
-    limit = 12 if purchase_question else 4
+    limit = 12 if purchase_question else 8 if recruitment else 4
     return [group[rank] for rank in range(4) for group in groups if len(group) > rank][:limit]
 
 
@@ -534,13 +534,22 @@ def candidate_sources(keyword, results, category=None):
     sources, seen = [], set()
     limit = 6 if category == '리뷰' else 3
 
-    def read(urls):
+    recruitment = category in (None, '취업') and recruitment_sources.employer(keyword)
+
+    def read(urls, target=None):
         for url in urls:
+            if recruitment and len(sources) >= (target or limit):
+                break
             if (url in seen or not is_official_url(url)
                     or clinical_health_query(keyword, category) and host_matches(https_host(url), 'law.go.kr')):
                 continue
             seen.add(url)
             source = fetch_source(url)
+            source_problem = (recruitment_sources.source_issue(keyword, source)
+                              if category in (None, '취업') else None)
+            if source_problem:
+                logging.getLogger(__name__).warning('Recruitment source excluded: %s', source_problem)
+                continue
             if category == '리뷰' and not review_discovery.relevant_source(keyword, source):
                 continue
             _append_distinct_source(sources, source, limit=limit)
@@ -549,7 +558,8 @@ def candidate_sources(keyword, results, category=None):
                 break
 
     # Leave room for an alternative to organic links that may be only homepages.
-    read([row['url'] for row in results if is_official_url(row['url'])][:2])
+    read([row['url'] for row in results if is_official_url(row['url'])]
+         [:6 if recruitment else 2], target=2)
     read(official_search_urls(keyword, category) if category == '건강' else official_search_urls(keyword))
     return review_discovery.prioritize_sources(keyword, sources) if category == '리뷰' else sources
 
@@ -637,6 +647,12 @@ go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품
                 or clinical_health_query(keyword, category) and host_matches(https_host(locator['url']), 'law.go.kr')):
             continue
         source = fetch_source(locator['url'])
+        source_problem = (recruitment_sources.source_issue(keyword, source,
+                today=datetime.fromisoformat(now).astimezone(ZoneInfo('Asia/Seoul')).date())
+                if category == '취업' else None)
+        if source_problem:
+            logging.getLogger(__name__).warning('Recruitment source excluded: %s', source_problem)
+            continue
         if source and (category != '리뷰' or review_discovery.relevant_source(keyword, source)):
             _append_distinct_source(sources, {**source, 'locator_origin': locator['origin']}, limit=limit)
         if (len(sources) >= limit or len(sources) >= 3 and not review_discovery.storage_question(keyword) and

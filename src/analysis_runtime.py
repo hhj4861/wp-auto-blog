@@ -40,6 +40,8 @@ VALIDATION_REASONS = frozenset({
     'facet_text', 'facet_answer', 'facet_supported', 'relevance_quote',
     'relevance_kind', 'event_start', 'event_end', 'date_quote',
     'quote_index', 'quote_conflict', 'response_size',
+    'article_quote', 'article_facets', 'article_facet_index', 'article_facet_quote',
+    'article_facet_verdict', 'article_verdict',
 })
 
 
@@ -167,7 +169,10 @@ def validated_call(call, prompt, validate=lambda value: value, *, label=None):
                 event['validation'] = safe_detail
                 request_prompt = prompt + '\n검증 오류(고정 코드): ' + json.dumps(safe_detail) + (
                     '\n해당 항목을 입력 원문과 스키마에 맞게 수정해 전체 JSON을 다시 반환하세요. '
-                    '근거와 부정 판정은 바꾸지 마세요. 인용은 원문의 구절 번호를 선택하세요.')
+                    '근거와 부정 판정은 바꾸지 마세요. '
+                    + ('본문에서 실질 답변을 그대로 복사하세요. 제목·소제목·고지는 인용할 수 없습니다.'
+                       if safe_detail['reason'].startswith('article_') else
+                       '인용은 원문의 구절 번호를 선택하세요.'))
             attempts.append(event)
             if state is not None:
                 state['events'].append(event)

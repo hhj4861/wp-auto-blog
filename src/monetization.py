@@ -654,10 +654,15 @@ def add_policy_disclaimers(html: str, category: str = "", topic: str = "") -> st
     if 'id="policy-notice"' in html:
         return html
 
+    clinical = category == "건강" and not re.search(
+        r"지원금|지원사업|지원대상|지원조건|지원자격|신청|보조금|바우처|환급|보험료|본인부담|의료비지원", topic)
+    notice_text = ("건강 정보는 자료의 확인 시점과 개인의 상태에 따라 달라질 수 있습니다. "
+                   "출처와 확인일을 함께 살펴보세요." if clinical else
+                   "제도와 수치는 변경될 수 있습니다. 자료별 확인일은 출처 목록에 표시하며, "
+                   "신청·결정 전 공식 공고를 확인하세요.")
     notice = (
         f'<p id="policy-notice" style="max-width:800px;margin:10px auto;color:#94a3b8;'
-        f'font-size:0.85em;">제도와 수치는 변경될 수 있습니다. '
-        f'자료별 확인일은 출처 목록에 표시하며, 신청·결정 전 공식 공고를 확인하세요.</p>')
+        f'font-size:0.85em;">{notice_text}</p>')
     html = notice + "\n" + html
 
     tails = []
@@ -665,7 +670,9 @@ def add_policy_disclaimers(html: str, category: str = "", topic: str = "") -> st
         tails.append("본 글은 제도·세금 정보 안내이며 특정 상품이나 종목에 대한 투자 권유가 "
                      "아닙니다. 투자 판단과 그에 따른 책임은 본인에게 있습니다.")
     if category == "건강" or _MEDICAL_TOPIC_RE.search(topic):
-        tails.append("본 글은 지원 제도 안내이며 의학적 진단·치료에 대한 조언이 아닙니다. "
+        tails.append("본 글은 일반적인 건강 정보이며 개인에 대한 의학적 진단·치료를 대신하지 않습니다. "
+                     "증상과 치료에 관한 판단은 의료진과 상담하세요." if clinical else
+                     "본 글은 지원 제도 안내이며 의학적 진단·치료에 대한 조언이 아닙니다. "
                      "구체적인 사항은 관할 기관 또는 의료기관에서 확인하세요.")
     if tails:
         joined = "<br/>".join(tails)

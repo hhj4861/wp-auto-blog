@@ -145,7 +145,9 @@ def test_selection_queue_writer_final_review_publication_and_ledger(
     monkeypatch.setattr(entry, 'BlogPipeline', lambda *a, **kw: market_pipeline)
     market_pipeline._is_duplicate = Mock(return_value=False)
     positive = json.dumps({'covers_primary_intent': final_outcome != 'negative',
-                          'answer_quote': '시험준비물은 신분증과 수험표 등 공식 준비물 목록을 확인하세요.'})
+                          'answer_quote': '시험준비물은 신분증과 수험표 등 공식 준비물 목록을 확인하세요.',
+                          'facet_reviews': [{'facet_index': 0, 'covered': True, 'reason': 'covered',
+                                            'answer_quote': '시험준비물은 신분증과 수험표 등 공식 준비물 목록을 확인하세요.'}]})
     error = CodexResponseError('timeout', 'private')
     market_pipeline.content_generator._call_llm.side_effect = (
         [error, positive] if final_outcome != 'outage' else [error, error])

@@ -152,7 +152,9 @@ def market_case(tmp_path, monkeypatch):
             payload = json.loads(prompt.split('\n', 1)[1])
             quote = BeautifulSoup(body, 'html.parser').find('p').get_text(' ', strip=True)
             assert quote in payload['article']
-            return json.dumps({'covers_primary_intent': True, 'answer_quote': quote})
+            return json.dumps({'covers_primary_intent': True, 'answer_quote': quote,
+            'facet_reviews': [{'facet_index': i, 'covered': True, 'reason': 'covered', 'answer_quote': quote}
+                              for i, row in enumerate(payload['required_facets']) if row['supported']]})
         raise AssertionError('Unexpected mocked prompt')
 
     client = Mock(generate=Mock(side_effect=generate))
@@ -207,7 +209,11 @@ def test_market_recovery_refuses_final_article_that_only_answers_a_narrower_ques
     def generate(prompt):
         if prompt.startswith('최종 검색 의도 검수입니다.'):
             return json.dumps({'covers_primary_intent': False,
-                               'answer_quote': '공식 자료로 확인된 기준'})
+                               'answer_quote': '공식 자료로 확인된 기준',
+                               'facet_reviews': [{'facet_index': i, 'covered': True, 'reason': 'covered',
+                                                 'answer_quote': '공식 자료로 확인된 기준'}
+                                                for i, row in enumerate(c['brief']['suitability_evidence']['review']['required_facets'])
+                                                if row['supported']]})
         return original_generate(prompt)
 
     c['client'].generate.side_effect = generate

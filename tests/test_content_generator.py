@@ -92,6 +92,12 @@ class TestContentType:
         assert ContentType.NEWS
 
 
+@pytest.fixture(autouse=True)
+def no_live_generation_research(monkeypatch):
+    # These unit tests must never invoke real web research with fixture credentials.
+    monkeypatch.setattr(ContentGenerator, 'research_with_grounding', Mock(return_value=''))
+
+
 class TestContentGenerator:
     """Test ContentGenerator main class."""
 
@@ -170,10 +176,11 @@ class TestContentGenerator:
             )
 
         # Check for required elements (from PRD)
-        assert "<h1>" in content.html  # H1 title
-        assert content.html.count("<h2>") >= 4  # At least 4 H2 sections
-        # FAQ section with H3s
-        assert "<h2>FAQ" in content.html or "<h2>FAQ" in content.html.upper()
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(content.html, 'html.parser')
+        assert content.title == 'Test Title' and not soup.find('h1')
+        assert len(soup.find_all('h2')) >= 4
+        assert any('FAQ' in h.get_text() for h in soup.find_all('h2'))
 
     @pytest.mark.unit
     def test_generate_creates_meta_description(self, generator):
@@ -225,7 +232,11 @@ class TestMarketEvidenceRepair:
         }
         brief = {'keyword': '당화혈색소정상수치', 'topic': '당화혈색소정상수치: 기준 확인',
                  'intent': '정상 기준은 무엇인가요?', 'gap': '정상 기준 설명',
-                 'source_url': source['url'], 'verified_sources': [source]}
+                 'source_url': source['url'], 'verified_sources': [source],
+                 'suitability_evidence': {'review': {
+                     'required_facets': [{'facet': '정상 기준은 무엇인가요?'}],
+                     'sources': [{'entity': '공식 안내', 'context': '일반'}],
+                     'current_relevance': {'kind': 'evergreen', 'event_start': None, 'event_end': None}}}}
         article = (
             '---SEO-META---\nFOCUS_KEYPHRASE: 당화혈색소정상수치\n'
             'META_DESCRIPTION: 당화혈색소정상수치를 제공된 공식 자료의 정상 기준으로 확인합니다.\n'
@@ -262,6 +273,8 @@ class TestMarketEvidenceRepair:
             content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE,
                                          category='건강', market_brief=brief)
 
+        assert '핵심 행동을 단순히 상담하세요 또는 확인하세요로 대체하지' in prompts[0]
+        assert '진료 기준과 재발 빈도를 빠뜨리지' in prompts[0]
         assert len(prompts) == 4  # initial writer, review, one correction, final review
         assert 'NIDDK' not in content.html
         assert source['excerpt'] in content.html
@@ -423,7 +436,7 @@ class TestLLMIntegration:
             choices=[MagicMock(message=MagicMock(content="<h1>OpenAI Content</h1>"))]
         )
 
-        with patch.object(generator, "_call_anthropic_cli", mock_cli_fail):
+        with patch.object(generator, "_call_claude_agent_sdk", mock_cli_fail), patch.object(generator, "_call_anthropic_cli", mock_cli_fail):
             with patch("src.content_generator.OpenAI", return_value=mock_openai_client):
                 result = generator._call_llm("Generate content")
 
@@ -496,18 +509,19 @@ class TestContentValidation:
         good_content = """
         <h1>Main Title Here</h1>
         <h2>Section One</h2>
-        <p>""" + " ".join(["word"] * 400) + """</p>
+        <p>""" + '</p><p>'.join([" ".join(["word"] * 100)] * 2) + """</p>
         <h2>Section Two</h2>
-        <p>""" + " ".join(["word"] * 400) + """</p>
+        <p>""" + '</p><p>'.join([" ".join(["word"] * 100)] * 2) + """</p>
         <h2>Section Three</h2>
-        <p>""" + " ".join(["word"] * 400) + """</p>
+        <p>""" + '</p><p>'.join([" ".join(["word"] * 100)] * 2) + """</p>
         <h2>Section Four</h2>
-        <p>""" + " ".join(["word"] * 400) + """</p>
+        <p>""" + '</p><p>'.join([" ".join(["word"] * 100)] * 2) + """</p>
         <h2>FAQ</h2>
         <h3>Question?</h3>
         <p>Answer</p>
         """
 
+        good_content += ''.join(f'<a href="https://example.org/source/{i}">Source</a>' for i in range(3))
         is_valid, errors = generator._validate(good_content)
 
         assert is_valid is True

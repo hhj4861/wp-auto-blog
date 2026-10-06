@@ -18,6 +18,7 @@ def main():
     now = datetime.now(timezone.utc)
     stats, audit = recruitment_discovery.prepare({}, market.demand_candidates,
         now.astimezone(ZoneInfo('Asia/Seoul')).date(), deadline=monotonic() + 240)
+    stats = {k: r for k, r in stats.items() if r.get('recruitment_notices')}
     old = json.loads(market.REPORT.read_text()).get('취업', {})
     history = load_history(old, '취업', now)
     pool, retries, _ = market._selection_pool(stats, market.historical_terms(), '취업', set(),

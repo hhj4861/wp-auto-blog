@@ -62,7 +62,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install requests beautifulsoup4 'tldextract>=5.1,<6'
+      - run: pip install requests beautifulsoup4 loguru 'tldextract>=5.1,<6'
       - name: Measure discovery without model or publication
         env:
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}

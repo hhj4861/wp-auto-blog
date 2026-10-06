@@ -229,3 +229,19 @@ def test_saved_current_job_expires_at_korean_closing_day_even_with_null_model_de
     assert market.fresh_research_item(item, '취업', now)
     assert not market.fresh_research_item(item, '취업', now + timedelta(hours=1))
     assert not market.fresh_research_item(item, '취업', (now + timedelta(hours=1)).astimezone(timezone.utc))
+
+
+def test_diagnostic_counts_only_jobs_not_other_related_queries(monkeypatch, tmp_path, capsys):
+    import json
+    from scripts import check_recruitment_discovery as check
+    row = notice()
+    data = {row['keyword']: {'keyword': row['keyword'], 'monthly': 1500, 'recruitment_notices': [row]},
+            '시험준비물': {'keyword': '시험준비물', 'monthly': 9999}}
+    monkeypatch.setattr(discovery, 'prepare', lambda *a, **kw: (data, {'status': 'ready'}))
+    report = tmp_path / 'report.json'
+    report.write_text('{}')
+    monkeypatch.setattr(market, 'REPORT', report)
+    assert check.main() == 0
+    output = json.loads(capsys.readouterr().out)
+    assert output['eligible_after_saved_history'] == 1
+    assert output['candidates'][0]['keyword'] == row['keyword']

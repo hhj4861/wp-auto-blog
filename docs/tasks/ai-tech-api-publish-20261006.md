@@ -36,3 +36,12 @@
 
 - Verification milestone: 19 focused tests passed; read-only CI 37437027880 succeeded; production update 37437187031 succeeded at d152242, exact HTML and protected metadata read back for all three posts.
 - Browser review found a theme interaction: the site uses a dark background while the article declared dark text. The diagram cards were readable but ordinary paragraphs were not. Corrective revision adds an explicit light article surface and heading/link colors; content text stays unchanged. Revalidate and apply this presentation fix before completion.
+
+## Verified enrichment result
+
+- Content update 37437187031 succeeded. Contrast correction 37437411585 succeeded. Final flow-layout update 37437673678 completed successfully at d3f07ae.
+- Final unauthenticated checks returned HTTP 200 for all three public URLs and exact article-text matches: Muse 6504 characters / 2 diagrams; Dots 6884 / 2; Jev 7669 / 3. All pages contain the explicit light reading surface and vertical flow rules.
+- Existing canonical URLs and cover images are preserved. The theme renders the cover as a CSS background and OG image; an initial img-only assertion was incorrect, and verification was corrected to inspect the actual rendered background declaration and OG metadata. No cover mutation occurred.
+- Browser review verified the Jev probability bars, Muse mobile step/arrow flow at 390px, and ordinary text/table contrast on the public page. Desktop review exposed a wrapped arrow at the end of a row; final CSS now uses the same unambiguous vertical flow at all widths. The last desktop refresh timed out, so final vertical CSS presence is verified in public HTML, not claimed as a new successful screenshot. Temporary viewport override was reset.
+- Tests: 19 focused publication/update tests passed; 9 affected updater tests passed after the contrast revision; all three final HTML bodies passed editorial/diagram validation.
+- Existing three published posts updated through WordPress API. Own changes committed and pushed to the configured task-branch upstream. No main merge or scheduled-generation pipeline change. Future tech drafting guidance in this task record requires explanatory diagrams.

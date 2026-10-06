@@ -6,10 +6,12 @@ This task-specific entry point never generates or replaces article content.
 import hashlib
 import json
 import os
+from io import BytesIO
 from pathlib import Path
 from urllib.parse import urlsplit
 
 import requests
+from PIL import Image, UnidentifiedImageError
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://trendpulse.blog'
@@ -70,8 +72,19 @@ class Publisher:
                 'Unexpected media host')
         require(media.get('media_type') == 'image' and media.get('mime_type') == 'image/png', 'Unexpected media type')
         response = self.public.get(url, timeout=(10, 60), allow_redirects=False)
-        require(response.status_code == 200 and hashlib.sha256(response.content).hexdigest() == spec[3],
-                'Uploaded image bytes do not match reviewed cover')
+        require(response.status_code == 200, 'Uploaded image unavailable')
+        # WordPress may strip PNG metadata or recompress the container. Verify
+        # decoded pixels as well as dimensions, rather than encoded bytes alone.
+        original = Image.open(ROOT / 'data/editorial/2026-10-06' / (spec[0] + '.png')).convert('RGB')
+        try:
+            actual = Image.open(BytesIO(response.content)).convert('RGB')
+        except (UnidentifiedImageError, OSError):
+            raise RuntimeError('Uploaded image bytes are not a valid image')
+        emit(stage='media_integrity', media_id=media.get('id'), original_size=original.size,
+             uploaded_size=actual.size, encoded_match=hashlib.sha256(response.content).hexdigest() == spec[3],
+             pixels_match=original.size == actual.size and original.tobytes() == actual.tobytes())
+        require(original.size == actual.size and original.tobytes() == actual.tobytes(),
+                'Uploaded image pixels do not match reviewed cover')
         return url
 
     def run(self, ids, apply=False):

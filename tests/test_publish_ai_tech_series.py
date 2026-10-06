@@ -94,6 +94,16 @@ class Tests(unittest.TestCase):
         writes = len(p.writes); p.run([1838, 1840, 1843], True)
         self.assertEqual(len(p.writes), writes)
 
+    def test_lossless_png_reencoding_is_accepted(self):
+        from io import BytesIO
+        from PIL import Image
+        p = FakePublisher()
+        buf = BytesIO()
+        Image.open(m.ROOT / 'data/editorial/2026-10-06/muse.png').save(buf, format='PNG', compress_level=0)
+        p.public.get = lambda *a, **k: SimpleNamespace(status_code=200, content=buf.getvalue())
+        p.run([1838], True)
+        self.assertEqual(p.posts[1838]['status'], 'publish')
+
     def test_wrong_media_bytes_hold_publication(self):
         p = FakePublisher(); p.public.get = lambda *a, **k: SimpleNamespace(status_code=200, content=b'wrong')
         with self.assertRaisesRegex(RuntimeError, 'image bytes'):

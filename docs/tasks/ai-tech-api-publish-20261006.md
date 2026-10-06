@@ -7,3 +7,5 @@
 - Done: image bytes and attachment verified, publish status read back, public pages and images checked.
 - Verification: targeted mocked transport tests; read-only production preflight; authorized apply; unauthenticated public verification.
 - Current: Seven focused tests passed (upload failure, concurrent edits, approved identity, exact image bytes, three-cover publication and idempotent rerun). Production preflight next.
+
+- Production preflight 37434447128 passed. Apply 37434542518 uploaded Muse but held before attachment/publication because encoded file bytes differed. Verify decoded pixels to allow lossless server PNG recompression; reuse deterministic media slug.

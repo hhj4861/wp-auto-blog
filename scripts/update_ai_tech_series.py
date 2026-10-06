@@ -13,9 +13,9 @@ from bs4 import BeautifulSoup
 from publish_ai_tech_series import Publisher, ROOT, SITE, SPECS, emit, require, snapshot
 
 BASE_TEXT_DIGESTS = {
-    1838: 'f43c7bff792737cc79ecaf700b07039ce91a76af872882915b1e3bb8f576d445',
-    1840: '5fb8b0cf0189783cc98d5365043e75e08933c0106c4c3330b7dfac62a470cc5d',
-    1843: '8c147f945c0c08675e9f8099ade0e39c84fb0bcd28ea6076716542def6ad5c6c',
+    1838: 'f1ef84001e3550f2e0f3d90474c09ea3ba9ed5aff72063a33b1b2d73674414a3',
+    1840: '78de29880f99e5bcdfeecf3951a8f36935dbad422b1c5a373587491255d6dbd0',
+    1843: '10589cbe80c5b54980a540ce46cb8912b41c0106b3b1a836c26c5db06825e514',
 }
 MEDIA_IDS = {1838:1846, 1840:1847, 1843:1848}
 PRESERVE = ('id','slug','status','title','excerpt','date','date_gmt','link','featured_media','categories','tags')
@@ -38,7 +38,7 @@ def validate_body(body, pid):
             'Diagram caption, explanation or nodes missing')
     require(soup.find('style') and '@media(max-width:600px)' in body, 'Responsive diagram styles missing')
     require(not soup.select('script,iframe,ins,form'), 'Unexpected active or advertising content')
-    require(SPECS[pid][5] in body and '가정' in body or SPECS[pid][5] in body and '가상' in body,
+    require(SPECS[pid][5] in body and ('가정' in body or '가상' in body),
             'Sources or illustrative-example labels missing')
     return body
 

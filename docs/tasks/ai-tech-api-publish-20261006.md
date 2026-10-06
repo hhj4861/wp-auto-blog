@@ -33,3 +33,6 @@
 - Prepared: Muse 6504 visible characters/2 diagrams, Dots 6884/2, Jev 7669/3 (previously 3069/3095/3449).
 - Updater pins the original public text, checks all inputs before writes, preserves title/URL/date/cover/metadata, backs up originals on CI, checks concurrent edits, and reads back exact saved HTML.
 - Current: local reviewed content and updater prepared; verification and production API update pending. Scheduled posting pipeline remains unchanged.
+
+- Verification milestone: 19 focused tests passed; read-only CI 37437027880 succeeded; production update 37437187031 succeeded at d152242, exact HTML and protected metadata read back for all three posts.
+- Browser review found a theme interaction: the site uses a dark background while the article declared dark text. The diagram cards were readable but ordinary paragraphs were not. Corrective revision adds an explicit light article surface and heading/link colors; content text stays unchanged. Revalidate and apply this presentation fix before completion.

@@ -536,5 +536,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-05T09:18:00.053159+00:00"
+  },
+  {
+    "key": "레퍼런스체크",
+    "keyword": "레퍼런스체크",
+    "topic": "레퍼런스체크 뜻과 진행 방식, 질문 항목·추천인 선정 준비",
+    "category": "취업",
+    "post_id": 1826,
+    "url": "https://trendpulse.blog/reference-check-preparation/",
+    "selection_version": 6,
+    "monthly_search": 1910,
+    "score": 77.4,
+    "score_components": {
+      "demand": 26.25,
+      "organic_opportunity": 30.0,
+      "trend": 6.15,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-06T02:17:50.465509+00:00"
   }
 ]

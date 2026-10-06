@@ -11,7 +11,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 import requests
-from PIL import Image, UnidentifiedImageError
+from PIL import Image, ImageChops, ImageStat, UnidentifiedImageError
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://trendpulse.blog'
@@ -80,11 +80,21 @@ class Publisher:
             actual = Image.open(BytesIO(response.content)).convert('RGB')
         except (UnidentifiedImageError, OSError):
             raise RuntimeError('Uploaded image bytes are not a valid image')
+        require(actual.size in (original.size, (1600, 900)), 'Unexpected server image dimensions')
+        # The production image optimizer caps these covers at 1600x900.
+        # Compare their appearance after the known resize; a different cover
+        # or material visual change must still hold publication.
+        reference = original.resize(actual.size, Image.Resampling.LANCZOS)
+        rms = max(ImageStat.Stat(ImageChops.difference(reference, actual)).rms)
+        def dhash(image):
+            small = image.convert('L').resize((9, 8), Image.Resampling.LANCZOS)
+            pixels = list(small.getdata())
+            return [pixels[y*9+x] > pixels[y*9+x+1] for y in range(8) for x in range(8)]
+        distance = sum(a != b for a, b in zip(dhash(reference), dhash(actual)))
         emit(stage='media_integrity', media_id=media.get('id'), original_size=original.size,
              uploaded_size=actual.size, encoded_match=hashlib.sha256(response.content).hexdigest() == spec[3],
-             pixels_match=original.size == actual.size and original.tobytes() == actual.tobytes())
-        require(original.size == actual.size and original.tobytes() == actual.tobytes(),
-                'Uploaded image pixels do not match reviewed cover')
+             pixel_rms=round(rms, 3), visual_hash_distance=distance)
+        require(rms <= 8 and distance <= 3, 'Uploaded image differs from reviewed cover')
         return url
 
     def run(self, ids, apply=False):

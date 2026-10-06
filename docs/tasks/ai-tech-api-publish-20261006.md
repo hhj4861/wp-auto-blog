@@ -9,3 +9,5 @@
 - Current: Seven focused tests passed (upload failure, concurrent edits, approved identity, exact image bytes, three-cover publication and idempotent rerun). Production preflight next.
 
 - Production preflight 37434447128 passed. Apply 37434542518 uploaded Muse but held before attachment/publication because encoded file bytes differed. Verify decoded pixels to allow lossless server PNG recompression; reuse deterministic media slug.
+
+- Apply 37434783505 identified exact cause: server resizes 1672x941 PNG to 1600x900 (media 1846). Permit only original or observed dimensions, with pixel RMS <= 8 and visual hash distance <= 3; reject another valid cover.

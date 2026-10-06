@@ -104,6 +104,23 @@ class Tests(unittest.TestCase):
         p.run([1838], True)
         self.assertEqual(p.posts[1838]['status'], 'publish')
 
+    def test_known_server_resize_is_accepted(self):
+        from io import BytesIO
+        from PIL import Image
+        p = FakePublisher(); buf = BytesIO()
+        Image.open(m.ROOT / 'data/editorial/2026-10-06/muse.png').resize((1600, 900), Image.Resampling.BICUBIC).save(buf, format='PNG')
+        p.public.get = lambda *a, **k: SimpleNamespace(status_code=200, content=buf.getvalue())
+        p.run([1838], True)
+        self.assertEqual(p.posts[1838]['status'], 'publish')
+
+    def test_different_valid_cover_is_rejected(self):
+        p = FakePublisher()
+        wrong = (m.ROOT / 'data/editorial/2026-10-06/jev.png').read_bytes()
+        p.public.get = lambda *a, **k: SimpleNamespace(status_code=200, content=wrong)
+        with self.assertRaisesRegex(RuntimeError, 'differs from reviewed'):
+            p.run([1838], True)
+        self.assertEqual(p.posts[1838]['status'], 'draft')
+
     def test_wrong_media_bytes_hold_publication(self):
         p = FakePublisher(); p.public.get = lambda *a, **k: SimpleNamespace(status_code=200, content=b'wrong')
         with self.assertRaisesRegex(RuntimeError, 'image bytes'):

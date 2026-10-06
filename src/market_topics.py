@@ -35,7 +35,7 @@ from src.selection_feedback import load_history, deferred_keywords
 from src import review_discovery, review_exploration
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
-from src import shared_discovery, recruitment_sources
+from src import shared_discovery, recruitment_sources, recruitment_discovery
 
 CATEGORIES = {
     '취업': ['채용', '공기업', '자격증', '면접'],
@@ -297,9 +297,10 @@ def candidate_pool(stats, titles, category=None):
                                      -(row['cak_provenance']['item']['trend']['hotScore'] or 0), -row['monthly']))
     related = [row for row in ranked if row.get('cak_provenance', {}).get('relationship') == 'related_seed'
                or row.get('youtube_discovery')]
+    current_jobs = [row for row in ranked if row.get('recruitment_notices')]
     pool, seen = [], set()
     for index in range(len(ranked)):
-        for group in (direct, related, specific, ranked):
+        for group in (current_jobs, direct, related, specific, ranked):
             if index >= len(group):
                 continue
             row = group[index]
@@ -400,6 +401,9 @@ def candidate_prompt_row(row):
         else:
             result['discovery'] = {'seedKeyword': signal['keyword'], 'relationship': 'related_seed',
                                    'candidateGrowthMeasured': False}
+    if row.get('recruitment_notices'):
+        result['current_official_notices'] = [{key: notice[key] for key in
+            ('title', 'url', 'deadline', 'employer')} for notice in row['recruitment_notices']]
     if row.get('youtube_discovery'):
         result['youtube_discovery'] = {**row['youtube_discovery'], 'candidateGrowthMeasured': False}
     return result
@@ -1200,7 +1204,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     try:
         stats = demand_candidates(seeds)
     except NoMeasuredDemand:
-        if category != '리뷰':
+        if category not in ('리뷰', '취업'):
             raise
         stats = {}
     if approved_keys is not None:
@@ -1224,6 +1228,13 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         stats, cak_import = merge_cak_candidates(stats, titles, category, datetime.fromisoformat(now))
     else:
         cak_import = {'status':'shared_discovery','direct_count':0}
+    recruitment_audit = {'status': 'not_applicable'}
+    if category == '취업':
+        stats, recruitment_audit = recruitment_discovery.prepare(
+            stats, demand_candidates, clock.astimezone(ZoneInfo('Asia/Seoul')).date(),
+            deadline=started + MAX_RESEARCH_SECONDS)
+        if approved_keys is not None:
+            stats = {k: r for k, r in stats.items() if norm(r['keyword']) in approved_keys}
     past_failures = {measurement_key(row['keyword']): row for row in history}
 
     def refresh_pool(retired_keys=(), retry_keys=None):
@@ -1239,7 +1250,9 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     exploration = {'status': 'not_needed', 'seeds': [], 'measured': []}
     exploration_started = False
     adaptive_seeds = set()
-    if category != '리뷰' and not pool and not deferred and not discovery_rejections:
+    if (category != '리뷰' and not pool and not deferred and not discovery_rejections
+            and not recruitment_audit.get('unsupported_hiring_keywords')
+            and recruitment_audit.get('status') not in {'empty', 'unavailable'}):
         raise RuntimeError('No uncovered measured candidates in this category')
     selected, held, rejected, seen = [], [], [], set()
     offered = set()
@@ -1364,7 +1377,8 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
                 stop_reason = 'time_budget'
                 break
         # Show unseen parts of the measured pool before recycling a shortlist.
-        remaining = sorted(available, key=lambda row: (norm(row['keyword']) not in adaptive_candidate_keys,
+        remaining = sorted(available, key=lambda row: (not bool(row.get('recruitment_notices')),
+                                                      norm(row['keyword']) not in adaptive_candidate_keys,
                                                       norm(row['keyword']) in offered))[:60]
         if not remaining:
             stop_reason = 'pool_exhausted'
@@ -1391,6 +1405,8 @@ CAK exact의 지표는 해당 검색어 자체 측정입니다. related_seed의 
 {review_discovery.BUYING_INTENT_GUIDANCE if category == '리뷰' else ''}
 공식 문서에서 확인 가능한 절차·조건·설정 질문을 우선하세요. 포괄 비교·추천은
 전체 선택 범위를 뒷받침할 공식 자료가 필요하며 한두 제품 자료로 대신할 수 없습니다.
+current_official_notices가 있으면 별도 HTTP로 확인한 현재 접수 중 공고입니다. 해당 후보를 우선 조사하세요.
+기관 전체 검색어를 특정 지역·직무 공고 하나만으로 충분히 답한다고 가정하지 마세요.
 후속 단계에서 실제 검색 결과와 공식 본문을 읽고 최종 주제를 결정합니다.
 각 후보의 reason에는 지금 조사할 이유를 적으세요. 확인하지 않은 상승률·경쟁 우위는 주장하지 마세요.
 search_query에는 같은 검색어를 자연스러운 한국어 띄어쓰기로 적으세요.
@@ -1537,7 +1553,11 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 continue
             source_options = {'category': category} if category == '리뷰' else {}
             sources = (candidate_sources(query, relevant_results, category) if category == '건강'
-                       else candidate_sources(query, relevant_results, **source_options)) if results else []
+                       else candidate_sources(query, relevant_results, **source_options)) if results and not row.get('recruitment_notices') else []
+            if row.get('recruitment_notices'):
+                # The preflight already fetched these exact current documents.
+                # Preserve them ahead of stale search-index locators.
+                sources = [notice['source'] for notice in row['recruitment_notices']]
             allow_recovery = bool(sources)
             if not sources:
                 try:
@@ -1566,6 +1586,10 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                             for source in sources])
                 rejected.append(rejection)
                 continue
+            if row.get('recruitment_notices'):
+                job_deadline = min(notice['deadline'] for notice in row['recruitment_notices'])
+                item['recruitment_deadline'] = job_deadline
+                item['valid_until'] = min(item.get('valid_until') or job_deadline, job_deadline)
             cak_provenance = row.get('cak_provenance')
             direct_rising = (cak_provenance is not None and cak_provenance['relationship'] == 'exact'
                              and qualified_rising(cak_provenance['item']))
@@ -1638,7 +1662,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
     report = {'category': category, 'selected_at': now, 'seeds': seeds,
             'selection_version': PROCESS_VERSION, 'research_rounds': rounds,
             'source_recovery_attempts': recovery_budget['attempts'], 'cak_import': cak_import,
-            'youtube_discovery': youtube_import,
+            'youtube_discovery': youtube_import, 'recruitment_discovery': recruitment_audit,
             'review_question_discovery': exploration,
             'search_review_recovery_attempts': search_review_budget['attempts'],
             'search_review_diagnostics': search_review_diagnostics,
@@ -1683,6 +1707,10 @@ def fresh_research_item(item, category, now=None):
     now = now or datetime.now(timezone.utc)
     try:
         age = now - datetime.fromisoformat(item['selected_at'])
+        if item.get('recruitment_deadline') and (
+                datetime.fromisoformat(item['recruitment_deadline']).date()
+                <= now.astimezone(ZoneInfo('Asia/Seoul')).date()):
+            return False
         if item.get('valid_until') and datetime.fromisoformat(item['valid_until']).date() < now.date():
             return False
         evidence = item.get('verified_sources') or []

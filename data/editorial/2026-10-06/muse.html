@@ -1,0 +1,108 @@
+<style>
+.wpab-article{line-height:1.85;color:#243247;overflow-wrap:anywhere}
+.wpab-article h2{margin:2.5em 0 .8em;line-height:1.4}.wpab-article h3{margin-top:1.8em}
+.wpab-article table{display:block;overflow-x:auto;border-collapse:collapse;width:100%;margin:24px 0;font-size:.95em}
+.wpab-article th,.wpab-article td{padding:12px;border:1px solid #dbe3ed;vertical-align:top;min-width:110px}
+.wpab-article th{background:#edf2f8}.wpab-article blockquote{margin:24px 0;padding:18px 22px;background:#f4f7fb;border-left:4px solid #347080}
+.wpab-article #quick-answer{padding:22px;background:#edf5f4;border-radius:16px}
+.wpab-article .tp-diagram{margin:30px 0;padding:24px;background:#f3f6fa;border:1px solid #dce4ef;border-radius:18px}
+.wpab-article .tp-diagram figcaption{font-weight:700;color:#123949;line-height:1.5;margin-bottom:18px}
+.wpab-article .tp-flow{display:flex;align-items:stretch;gap:9px;flex-wrap:wrap}
+.wpab-article .tp-node{flex:1 1 130px;min-width:0;background:#fff;border:1px solid #c7d8e1;border-radius:12px;padding:14px;box-sizing:border-box}
+.wpab-article .tp-node strong{display:block;color:#12576a;font-size:1.05em}.wpab-article .tp-node span{display:block;font-size:.88em;margin-top:7px;line-height:1.6}
+.wpab-article .tp-arrow{align-self:center;color:#426579;font-size:24px;font-weight:700}
+.wpab-article .tp-split{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:14px}
+.wpab-article .tp-stop{border-top:4px solid #a45236}.wpab-article .tp-pass{border-top:4px solid #238471}
+.wpab-article .tp-note{font-size:.88em;line-height:1.65;margin:16px 0 0;color:#4b5e70}
+.wpab-article pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:20px;background:#152b3b;color:#ecf4fa;border-radius:12px;font-size:.88em}
+.wpab-article .tp-bar{height:18px;background:#2f7c83;border-radius:4px;margin:5px 0 12px}
+@media(max-width:600px){.wpab-article .tp-diagram{padding:16px}.wpab-article .tp-flow{flex-direction:column}.wpab-article .tp-node{flex:auto;width:100%}.wpab-article .tp-arrow{transform:rotate(90deg)}.wpab-article .tp-split{grid-template-columns:1fr}}
+</style>
+<article class="wpab-article">
+<p><small>AI 에이전트·판단 모델 시리즈 · Muse 편 | 확인 기준: 2026년 10월 6일</small></p>
+<section id="quick-answer">
+<h2>Meta Muse, 무엇을 대신 해줄까?</h2>
+<p><strong>Muse는 Meta가 만든 개인 AI 에이전트입니다.</strong> 질문에 답하는 대화에서 한발 더 나아가, 연결한 앱과 전용 클라우드 컴퓨터에서 일을 이어가는 서비스입니다. 다만 한국에서 곧바로 쓸 수 있다고 기대하기 전에 제공 지역을 확인해야 합니다. 9월 29일 Meta 발표에서 확인되는 지역은 미국·캐나다입니다.</p>
+</section>
+<p>일정을 정리해 달라고 부탁했는데 정리 방법만 길게 돌아온 경험이 있나요? AI 에이전트에서 살펴볼 변화는 답변의 길이보다 <strong>실제 작업을 어디까지 맡길 수 있는가</strong>입니다. 이 글은 공식 발표와 설계 문서를 바탕으로 기능, 접근 조건, 권한 설정을 정리한 안내입니다. 자체 성능 테스트나 국내 실사용 후기는 아닙니다.</p>
+<h2>1. Muse와 Muse Spark는 어떻게 다를까?</h2>
+<p>Muse는 사용자가 대화하고 일을 맡기는 <strong>서비스</strong>이고, Muse Spark는 그 안에서 판단과 작업 수행을 뒷받침하는 <strong>모델</strong>입니다. 모델 이름과 앱 이름을 구분하면 발표를 읽기 쉬워집니다. Meta는 2026년 9월 8일 Muse를 발표하며 앱이나 WhatsApp에서 대화하고, 브라우저를 통해 작업할 수 있다고 설명했습니다. <a href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">Meta 공식 출시 발표</a></p>
+<p>예를 들어 ‘여행 준비를 도와줘’라는 목표에는 후보 조사, 일정 조율, 예약 정보 정리처럼 여러 단계가 있습니다. 사람은 원하는 결과와 제약을 주고, 에이전트는 필요한 작업을 이어갑니다. 실제 예약·발송처럼 외부에 영향을 주는 단계에서는 해당 권한과 승인 조건이 중요해집니다.</p>
+<h2>2. 챗봇과 다른 세 가지 지점</h2>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>Muse의 설계</th>
+<th>사용자가 확인할 점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>지속적인 작업</td>
+<td>목표·일정·관련 변화에 맞춰 작업을 이어감</td>
+<td>완료 조건과 중단 조건을 명확히 지정</td>
+</tr>
+<tr>
+<td>결과물</td>
+<td>문서, PDF, 웹페이지 등 산출물 작성</td>
+<td>원본 근거와 수정 가능한 결과 확인</td>
+</tr>
+<tr>
+<td>진행 상황</td>
+<td>활동 기록과 목표별 진행 상태 제공</td>
+<td>‘시도함’과 실제 완료를 구분</td>
+</tr>
+</tbody>
+</table>
+<p>Meta의 제품 설계 글에는 앱을 닫아도 백그라운드 작업을 수행하며, 아바타에서 활동 기록을 확인하고 Goals 탭에서 목표를 추적하는 방식이 설명돼 있습니다. 대화 기억을 바탕으로 먼저 제안하기도 합니다. 이것은 모든 작업의 성공이나 중단 없는 실행을 보장한다는 뜻은 아닙니다. <a href="https://introducing.muse.ai/">Muse 제품 설계 설명</a></p>
+<h2>3. 개인 업무에서 소상공인 업무로</h2>
+<p>9월 29일 발표된 Muse for Small Business는 별도의 새로운 모델 이름이라기보다, 기존 Muse에서 사업에 필요한 연결과 작업을 확장하는 방향입니다. Meta는 Instagram·Facebook 비즈니스 계정뿐 아니라 Notion, Shopify, Slack, Canva 등과의 연결을 소개했습니다. 제공되는 전체 연결 목록은 앱 설정에서 확인하도록 안내합니다. <a href="https://about.fb.com/news/2026/09/introducing-muse-small-business/">소상공인용 기능 공식 발표</a></p>
+<p><strong>독자에게 제안하는 첫 과제</strong>는 매출을 당장 올려 달라는 큰 주문보다 ‘지난주 문의를 분류하고, 반복 질문에 대한 답변 초안을 만들어 달라’는 구체적인 일입니다. 유입이나 매출은 상품, 가격, 노출, 고객 수요에도 영향을 받습니다. 에이전트가 콘텐츠를 만들었다는 사실만으로 성과를 단정할 수는 없습니다.</p>
+<blockquote><p>예시 요청: “지난주 고객 문의에서 반복된 질문 5개를 찾아줘. 각각 근거가 된 문의와 답변 초안을 정리해줘. 고객에게 보내거나 게시하지 말고, 내가 검토할 문서로만 만들어줘.”</p></blockquote>
+<p>이 예시는 편집부가 구성한 활용안이며 실행 결과가 아닙니다. 계정 연결과 이용 가능 여부에 따라 수행할 수 있는 범위가 달라집니다.</p>
+<h2>4. 안전장치가 있다는 말의 정확한 의미</h2>
+<p>Muse는 개인별 전용 클라우드 환경인 Secure VM에서 작동합니다. 별도의 Sentinel이 외부 서비스 사용과 네트워크 요청을 검사하고, 허용·차단·사용자 승인 요청을 결정하는 구조입니다. 민감한 인증정보는 주 에이전트가 직접 보지 않도록 분리한다고 설명합니다. <a href="https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse">Meta의 보안 설계 문서</a></p>
+<p><strong>Secure VM과 Confidential VM을 같은 것으로 이해하면 안 됩니다.</strong> 해당 보안 문서에서 Confidential VM은 연내 제공을 목표로 하는 별도 기능으로 소개됩니다. 현재 Secure VM 설명만으로 ‘Meta도 어떤 경우에도 데이터를 볼 수 없다’고 말할 수 없습니다. Meta 역시 오류와 프롬프트 인젝션 가능성이 남아 있다고 밝힙니다.</p>
+<p>연결 전에 읽기와 쓰기 권한을 나눌 수 있는지, 어떤 행동에 승인이 필요한지, 모델 학습에 사용되는 데이터의 설정이 무엇인지 확인하세요. 처음에는 읽기와 초안 작성 범위에서 결과를 검토하고, 정확도가 확인된 작업부터 권한을 넓히는 것이 실용적인 시작입니다.</p>
+<h2>5. 한국 이용자가 먼저 확인할 조건</h2>
+<ul>
+<li><strong>제공 지역:</strong> 9월 29일 공식 발표는 미국·캐나다를 명시합니다. 이번 확인 자료만으로 한국 정식 제공을 확인하지 못했습니다.</li>
+<li><strong>요금:</strong> Meta는 무료 이용 범위와 추가 구독을 안내하지만, 모든 기능이 무제한 무료라는 뜻은 아닙니다. 실제 계정의 요금·사용량 화면을 확인하세요.</li>
+<li><strong>접속 경로:</strong> 공식 발표에서 연결하는 <a href="https://muse.ai/">Muse 공식 서비스</a>를 이용하세요. 이름이 같은 다른 서비스와 구분해야 합니다.</li>
+<li><strong>업무 자료:</strong> 연결한 서비스의 권한과 회사의 자료 취급 기준을 먼저 확인하세요.</li>
+</ul>
+
+<h2>작동 흐름으로 이해하기: 요청 한 문장이 결과가 되기까지</h2>
+<p>에이전트를 평가할 때는 “답변을 잘했나”와 “맡긴 일이 끝났나”를 나누어 보아야 합니다. 여행 일정을 표로 만들었다고 항공권이 예약된 것은 아니고, 홍보 문구를 작성했다고 매장 계정에 게시된 것도 아닙니다. 사용자가 정한 목표가 자료 수집, 판단, 초안, 승인, 실행 중 어디까지인지 먼저 정해야 결과를 정확히 평가할 수 있습니다.</p>
+<figure class="tp-diagram" id="muse-workflow"><figcaption>도식 1 · 목표에서 확인 가능한 결과까지</figcaption><div class="tp-flow"><div class="tp-node"><strong>목표 정의</strong><span>자료·기간·완료 조건</span></div><div aria-hidden="true" class="tp-arrow">→</div><div class="tp-node"><strong>자료 확인</strong><span>연결 범위 안에서 읽기</span></div><div aria-hidden="true" class="tp-arrow">→</div><div class="tp-node"><strong>초안 작성</strong><span>근거와 미확인 사항</span></div><div aria-hidden="true" class="tp-arrow">→</div><div class="tp-node"><strong>승인·실행</strong><span>허용 범위에서 행동</span></div><div aria-hidden="true" class="tp-arrow">→</div><div class="tp-node"><strong>결과 확인</strong><span>실제 문서·게시물 검토</span></div></div><p class="tp-note">편집부의 업무 위임 개념도. 각 단계의 결과를 확인하고 필요한 지점에서 멈춥니다.</p></figure>
+<p>이 도식은 공식 제품 화면을 복제한 것이 아니라 업무를 위임하는 과정을 설명한 편집부의 개념도입니다. Muse의 모든 작업이 정해진 다섯 단계로 실행된다는 뜻도 아닙니다. 중요한 점은 중간 산출물을 눈으로 확인할 수 있게 만드는 것입니다. 자료를 못 읽었는데 그럴듯한 답변부터 만들면, 마지막 단계에서 문장만 다듬어서는 문제를 해결할 수 없습니다.</p>
+<h3>완료 조건에는 동사와 확인할 증거를 함께 적자</h3>
+<p>“고객 문의를 처리해줘”는 너무 넓습니다. 분류만 할지, 답변을 작성할지, 발송까지 할지에 따라 필요한 권한과 실수의 영향이 달라집니다. 첫 과제는 “문의 목록에서 반복 질문을 묶어 검토용 표를 만들고, 각 행에 원문 위치를 남겨줘” 정도가 적당합니다. 표에 없는 질문을 억지로 다섯 개 채우지 말고, 자료가 부족한 항목은 부족하다고 표시하도록 요청하세요.</p>
+<h2>실전 설계: 작은 쇼핑몰의 주간 문의 정리</h2>
+<p>다음은 실제 Muse 실행 결과가 아닌 <strong>편집부가 만든 가상 업무 예시</strong>입니다. 운영자가 지난주 문의 목록과 현재 배송·교환 안내문을 준비했다고 가정하겠습니다. 시작부터 고객 계정 전체를 연결하기보다 개인정보를 뺀 작은 자료로 분류와 답변의 품질을 먼저 확인할 수 있습니다.</p>
+<blockquote>지난주 월요일 00:00부터 일요일 23:59까지, 한국 시간 기준으로 접수된 문의를 정리해줘. 내가 제공한 문의 목록과 최신 운영 안내문만 근거로 써줘. 배송·교환·상품 정보·기타로 묶고, 질문 원문 위치와 답변 근거를 함께 표시해줘. 안내문에 없는 약속은 만들지 말고 ‘담당자 확인 필요’로 남겨줘. 결과는 검토용 표와 반복 질문 답변 초안으로 작성하고, 고객 발송이나 공개 게시 전에는 승인을 요청해줘.</blockquote>
+<p>이 요청은 자료 범위, 기간, 결과 형식, 모르는 내용의 처리, 실행 권한을 함께 정합니다. 실제 연결 도구에서 이 범위를 설정할 수 있는지는 계정에서 확인해야 합니다. 프롬프트에 제한을 써두는 것과 서비스 자체의 접근 권한을 좁히는 것은 별개이므로, 연결 설정도 함께 살펴보세요.</p>
+<table><thead><tr><th>가상 문의</th><th>검토용 결과의 예</th><th>사람이 확인할 부분</th></tr></thead><tbody><tr><td>“오늘 주문하면 내일 오나요?”</td><td>배송 문의. 출고 마감 시간과 일반 배송 안내를 연결. 내일 도착 확약은 보류.</td><td>재고·지역·휴일 정보가 있는가?</td></tr><tr><td>“개봉했는데 교환되나요?”</td><td>교환 문의. 해당 상품의 교환 조건 원문을 제시하고 적용 여부 확인 요청.</td><td>단순 변심인지 불량인지 구별했는가?</td></tr><tr><td>“이 상품과 지난번 제품의 차이는?”</td><td>상품 정보 문의. 두 제품의 확인 가능한 사양만 나란히 정리.</td><td>다른 모델의 사양이 섞이지 않았는가?</td></tr></tbody></table>
+<p>좋은 결과물에는 매끄러운 답변뿐 아니라 <strong>어떤 자료로 답했는지, 어디부터 확인이 필요한지</strong>가 남습니다. 위 사례에서 “내일 도착합니다”처럼 고객이 좋아할 문장을 만드는 것은 쉬워도, 자료에 없는 도착일을 확약하면 운영 부담이 커집니다. 에이전트에 맡길 가치는 이런 확인 과정을 줄이면서도 근거를 남기는 데 있습니다.</p>
+<h2>승인 경계: 읽을 수 있다는 것이 보낼 수 있다는 뜻은 아니다</h2>
+<figure class="tp-diagram" id="muse-approval"><figcaption>도식 2 · 결과물 작성과 외부 실행을 구분하기</figcaption><div class="tp-node"><strong>작업 요청</strong><span>무엇을 읽고 무엇을 바꿀지 범위를 정합니다.</span></div><div aria-hidden="true" style="text-align:center;font-size:24px;color:#426579">↓</div><div class="tp-split"><div class="tp-node tp-pass"><strong>초기 시험 범위</strong><span>자료 읽기 → 분류 → 검토용 초안. 연결 권한 안에서 수행.</span></div><div class="tp-node tp-stop"><strong>추가 확인이 필요한 범위</strong><span>외부 발송·공개 게시·지출 → 대상과 내용 검토 → 필요한 승인 후 실행.</span></div></div><p class="tp-note">색상뿐 아니라 제목과 설명으로 두 경로를 구분했습니다. 실제 승인 방식은 서비스 설정에 따릅니다.</p></figure>
+<p>Meta의 <a href="https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse">보안 설계 설명</a>에 나오는 권한 통제는 이런 경계를 이해하는 데 도움이 됩니다. 다만 실제 승인 대상은 작업·연결 서비스·이전에 허용한 범위에 따라 달라질 수 있습니다. 위 도식은 처음 운영할 때 권하는 보수적인 업무 구분이며, 제품의 모든 승인 규칙을 그대로 옮긴 표는 아닙니다.</p>
+<h3>승인하기 전에 볼 네 가지</h3>
+<ul><li><strong>대상:</strong> 어느 계정, 어느 고객, 어느 게시물인가?</li><li><strong>내용:</strong> 미리 본 초안과 실제 실행할 내용이 같은가?</li><li><strong>범위:</strong> 한 번만 허용하는가, 반복 작업에도 적용하는가?</li><li><strong>결과:</strong> 실행 뒤 확인할 공개 URL·발송 기록·변경 내역은 무엇인가?</li></ul>
+<p>예를 들어 할인 안내를 승인할 때 문구만 확인하면 가격이나 적용 기간이 어긋날 수 있습니다. 게시 채널, 시작·종료 시각, 대상 상품, 확인 가능한 가격표를 한 묶음으로 검토하는 편이 좋습니다. 승인 뒤에는 완료 메시지와 실제 게시물을 비교해야 합니다. 이는 Muse만의 문제가 아니라 외부 서비스에 쓰기 작업을 하는 모든 자동화에 필요한 확인입니다.</p>
+<h2>작업이 멈췄을 때: 재시도보다 먼저 확인할 것</h2>
+<table><thead><tr><th>증상</th><th>먼저 확인</th><th>권하는 대처</th></tr></thead><tbody><tr><td>관련 자료를 못 찾음</td><td>자료 존재 여부, 연결 계정, 조회 기간</td><td>입력 자료를 좁혀 다시 제공하고 누락 목록을 받기</td></tr><tr><td>초안은 있는데 작업이 끝나지 않음</td><td>승인 대기인지, 실행 도구 오류인지</td><td>대기 사유를 확인하고 필요한 단계만 이어가기</td></tr><tr><td>게시 요청 후 성공 여부가 모호함</td><td>대상 서비스에 이미 생성된 결과가 있는지</td><td>실제 게시물을 확인한 뒤 중복 없이 복구하기</td></tr><tr><td>답변 내용이 자꾸 틀림</td><td>최신 운영 규정과 예외 조건 제공 여부</td><td>틀린 사례를 정리해 입력과 완료 기준부터 보완하기</td></tr></tbody></table>
+<p>한 번의 실패에 권한을 전부 열어주는 방식은 원인을 가리기 쉽습니다. 자료 부족이면 자료를, 승인 대기면 승인 범위를, 실행 오류면 해당 도구와 결과를 확인해야 합니다. 중복 발송이나 중복 게시 가능성이 있는 작업은 특히 “한 번 더 실행”하기 전에 실제 대상 서비스의 상태부터 확인하는 편이 안전합니다.</p>
+<h3>첫 일주일의 도입 판단표</h3>
+<p>평가할 때는 초안 수보다 확인 비용을 기록해 보세요. 예를 들어 기존에 문의 정리에 40분이 들고, 에이전트 초안 검토에 15분·수정에 10분이 든다면 총 25분입니다. 이 숫자는 설명을 위한 가정이며 Muse의 측정 성능이 아닙니다. 검토 시간을 빼고 “작성은 2분”만 비교하면 절감 효과를 과장하기 쉽습니다.</p>
+<p>일주일 동안 원문 근거가 빠진 항목 수, 사람이 고친 핵심 오류 수, 중복 작업 여부를 함께 기록하세요. 같은 종류의 오류가 반복되면 더 큰 일을 맡기기보다 그 입력 조건을 먼저 고치는 편이 낫습니다. 반대로 짧고 반복적인 일에서 확인 부담이 줄었다면 그다음 연결 자료나 작업 범위를 하나씩 넓혀볼 수 있습니다.</p>
+<h2>자주 묻는 질문</h2>
+<h3>내 컴퓨터를 계속 켜둬야 하나요?</h3>
+<p>Muse의 기본 실행 환경은 전용 클라우드 컴퓨터입니다. 다만 특정 작업이 실제로 완료됐는지는 활동 기록과 결과물로 확인해야 합니다. 앱을 닫아도 일한다는 설명을 모든 연결 서비스의 무중단 보장으로 읽지는 마세요.</p>
+<h3>사업을 알아서 운영해 주나요?</h3>
+<p>공식 발표는 업무 보조와 실행 범위 확대를 강조합니다. 매출 목표 달성이나 운영 책임까지 보장하지는 않습니다. 발송·게시·지출 전에 무엇을 승인하는지 확인할 수 있는 업무부터 맡기는 편이 좋습니다.</p>
+<h3>지금 주목할 이유는 무엇인가요?</h3>
+<p>편집부의 관점에서 Muse의 관전 포인트는 화려한 한 번의 답변보다 <strong>맥락을 기억하며 반복 업무를 이어가는 능력과 사용자의 통제권</strong>입니다. 도입을 검토한다면 반복 업무 하나를 골라 기존 소요 시간, 수정 횟수, 실제 완료율을 비교해 보세요.</p>
+<p><small>표지 이미지는 AI로 제작한 개념 일러스트이며 실제 Muse 화면이나 공식 캐릭터가 아닙니다. 기능·지역·요금은 변경될 수 있습니다.</small></p>
+<h2>함께 읽으면 좋은 글</h2><p><a href="https://trendpulse.blog/openai-dots-ai-agent-guide/">OpenAI Dots</a> · <a href="https://trendpulse.blog/typesafe-jev-decision-model-guide/">TypeSafe Jev</a></p></article>

@@ -23,3 +23,13 @@
 - https://trendpulse.blog/openai-dots-ai-agent-guide/
 - https://trendpulse.blog/typesafe-jev-decision-model-guide/
 - Task execution code remains on ops/ai-tech-api-publish-20261006; no main merge and no scheduled-pipeline change.
+
+## Content enrichment and mandatory diagrams — 2026-10-06
+
+- User request: articles are thin; explanatory diagrams are mandatory. Apply this editorial requirement to the current three-part series and retain it for subsequent tech article preparation.
+- Scope/owner: this session, existing published posts 1838/1840/1843. Richer practical examples, outputs, permissions, error recovery, evaluation and responsive HTML diagrams; no new posts or covers.
+- Base revision: db70849. Done: reviewed source HTML, safe API content-only update, public content/diagram verification, own commit and upstream push.
+- Sources: retain linked official sources; new worked examples and illustrative numerical examples explicitly distinguished from product tests.
+- Prepared: Muse 6504 visible characters/2 diagrams, Dots 6884/2, Jev 7669/3 (previously 3069/3095/3449).
+- Updater pins the original public text, checks all inputs before writes, preserves title/URL/date/cover/metadata, backs up originals on CI, checks concurrent edits, and reads back exact saved HTML.
+- Current: local reviewed content and updater prepared; verification and production API update pending. Scheduled posting pipeline remains unchanged.

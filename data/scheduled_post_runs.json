@@ -354,7 +354,8 @@
       "category": "리뷰",
       "slot": "morning",
       "claimed_at": "2026-10-07T09:00:12.081654+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-07T00:08:01.233770+00:00"
     }
   }
 }

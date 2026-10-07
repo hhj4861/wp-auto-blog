@@ -557,5 +557,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-06T02:17:50.465509+00:00"
+  },
+  {
+    "key": "국가자격증종류",
+    "keyword": "국가자격증종류",
+    "topic": "국가자격증종류: 국가기술·국가전문자격 구분과 대표 종목",
+    "category": "취업",
+    "post_id": 1859,
+    "url": "https://trendpulse.blog/national-qualification-types/",
+    "selection_version": 6,
+    "monthly_search": 5700,
+    "score": 69.54,
+    "score_components": {
+      "demand": 30.05,
+      "organic_opportunity": 24.49,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-07T09:32:24.806573+00:00"
   }
 ]

@@ -344,6 +344,17 @@
       "claimed_at": "2026-10-06T18:00:12.266622+09:00",
       "status": "failure",
       "completed_at": "2026-10-06T09:06:44.471761+00:00"
+    },
+    "2026-10-07:morning": {
+      "scheduled_for": "2026-10-07T09:00:00+09:00",
+      "run_created_at": "2026-10-07T09:00:04+09:00",
+      "start_delay_seconds": 12,
+      "trigger": "external_timer",
+      "run_id": "37549587195",
+      "category": "리뷰",
+      "slot": "morning",
+      "claimed_at": "2026-10-07T09:00:12.081654+09:00",
+      "status": "started"
     }
   }
 }

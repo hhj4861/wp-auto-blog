@@ -120,7 +120,8 @@ def test_isp_sources_are_not_forced_to_router_manufacturers():
 
 def test_technical_question_seeds_still_require_their_own_measured_demand(monkeypatch):
     seeds = market.CATEGORIES['테크']
-    assert {'윈도우초기화', '아이폰백업', '와이파이비밀번호', '블루투스연결'} <= set(seeds)
+    assert not {'윈도우초기화', '아이폰백업', '와이파이비밀번호', '블루투스연결'} & set(seeds)
+    assert 'AI에이전트' in seeds
     for name in ('NAVER_AD_CUSTOMER_ID', 'NAVER_AD_API_KEY', 'NAVER_AD_SECRET_KEY'):
         monkeypatch.setenv(name, 'synthetic-test-only')
     lookup = Mock(return_value=[{'keyword': '아이폰백업', 'monthly': 0},

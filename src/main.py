@@ -323,7 +323,8 @@ def main() -> int:
                 if require_market:
                     cands = [item for item in cands
                              if fresh_market_item(item, args.category or item.get('category'))]
-                    return max(cands, key=lambda item: item.get("score", 0), default=None)
+                    from src.latest_issues import priority
+                    return max(cands, key=priority, default=None)
                 if not cands:
                     return None
 

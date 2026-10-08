@@ -92,6 +92,13 @@ def analysis(keyword='시험준비물', category='취업', **extra):
 
 @pytest.fixture(autouse=True)
 def isolated_market_history(tmp_path, monkeypatch):
+    # These legacy tests isolate demand/intent/source recovery. The new mandatory
+    # event boundary is exercised without these stubs in test_latest_issues.py.
+    monkeypatch.setattr(market.latest_issues, 'discover', lambda *a, **kw: ([], {'status': 'test_isolated'}))
+    monkeypatch.setattr(market.latest_issues, 'review', lambda *a, **kw: {'review': {'event_date': '2026-10-08'}})
+    monkeypatch.setattr(market.latest_issues, 'issues', lambda *a, **kw: [])
+    monkeypatch.setattr(market.latest_issues, 'current_sources_match', lambda *a, **kw: True)
+    monkeypatch.setattr(market.latest_issues, 'review_article', lambda *a, **kw: [])
     monkeypatch.setattr(market.recruitment_discovery, 'prepare',
                         lambda stats, *a, **kw: (stats, {'status': 'test_isolated'}))
     monkeypatch.setattr(market.review_exploration, 'propose', lambda *a: ([], {'status': 'test_isolated', 'seeds': [], 'measured': []}))
@@ -125,6 +132,7 @@ def candidate(category='취업', **extra):
             'intent': '무엇을 준비하나', 'gap': '공식 준비물 체크리스트',
             'verified_sources': [evidence()], 'organic_results': results,
             'intent_results': [results[0]['url']], **extra}
+    row.setdefault('latest_issue_evidence', {'review': {'event_date': '2026-10-08'}})
     row.setdefault('opportunity_evidence', opportunity_evidence(row))
     row.setdefault('suitability_evidence', synthetic_plan_review(row, datetime.now(timezone.utc), None))
     return row
@@ -1829,7 +1837,7 @@ def test_search_outage_holds_verified_longtail_without_invented_competition(monk
     assert row['verified_sources'] == [{**source, 'locator_origin': origin}]
     assert row['research_evidence'] == web_research_evidence(web_evidence(origin=origin))
     assert row['intent_results'] == [source['url']]
-    assert row['selection_version'] == 6
+    assert row['selection_version'] == market.PROCESS_VERSION
     assert row['status'] == 'research_only' and row['publish_eligible'] is False
     assert 'organic_results_unavailable' in row['hold_reasons']
     assert row['score_components']['intent_fit'] == 0
@@ -2755,7 +2763,7 @@ def test_v6_preserves_all_eligible_ranked_plans_when_top_n_limits_selection(monk
     report = market.select_category('취업', top_n=1, titles=[])
     # Saving/reloading the report must preserve the plan below the selection cut.
     saved = json.loads(json.dumps(report, ensure_ascii=False))
-    assert saved['selection_version'] == 6
+    assert saved['selection_version'] == market.PROCESS_VERSION
     assert len(saved['selected']) == 1 and len(saved['ranked_candidates']) == 2
     assert saved['selected'][0]['keyword'] == '면접준비물'
     assert [row['keyword'] for row in saved['ranked_candidates']] == ['면접준비물', '시험준비물']

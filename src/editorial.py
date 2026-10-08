@@ -36,6 +36,10 @@ OFFICIAL_DOMAINS = {
     "kr.roborock.com", "store.kr.dreametech.com", "sandisk.com", "kingston.com",
     "seagate.com", "toshiba-storage.com", "tp-link.com", "iptime.com",
 }
+# News publisher hosts are exact: community forums on sibling subdomains are not official announcements.
+OFFICIAL_NEWS_HOSTS = {"blogs.microsoft.com", "news.microsoft.com", "www.microsoft.com", "blogs.windows.com",
+    "openai.com", "www.openai.com", "anthropic.com", "www.anthropic.com", "ai.meta.com",
+    "blog.google", "deepmind.google", "github.blog"}
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35
 SOURCE_FETCH_BACKOFF_SECONDS = 1
@@ -69,7 +73,7 @@ def host_matches(host: str, domain: str) -> bool:
 def is_official_url(url: str) -> bool:
     host = https_host(url)
     return bool(host) and (
-        host.endswith((".go.kr", ".or.kr", ".gov", ".ac.kr"))
+        host in OFFICIAL_NEWS_HOSTS or host.endswith((".go.kr", ".or.kr", ".gov", ".ac.kr"))
         or any(host_matches(host, d) for d in OFFICIAL_DOMAINS)
     )
 
@@ -145,6 +149,36 @@ def _source_body(soup, url=""):
         if nodes:
             return max((node.get_text(' ', strip=True) for node in nodes), key=len)
     return (soup.body or soup).get_text(' ', strip=True)
+
+
+def _publication_dates(soup):
+    """Keep publisher-supplied publication dates, never fetched/modified/footer dates."""
+    values = []
+    for node in soup.select('meta[property="article:published_time"], meta[name="pubdate"], '
+                            '[itemprop="datePublished"]'):
+        value = node.get('content') or node.get('datetime') or node.get_text(' ', strip=True)
+        if isinstance(value, str) and len(value) <= 100:
+            values.append(value)
+    for node in soup.select('script[type="application/ld+json"]'):
+        try:
+            data = json.loads(node.string or node.get_text())
+        except (ValueError, TypeError):
+            continue
+        pending = [data]
+        while pending:
+            row = pending.pop()
+            if isinstance(row, list):
+                pending.extend(row[:30])
+            elif isinstance(row, dict):
+                kind = row.get('@type')
+                kinds = kind if isinstance(kind, list) else [kind]
+                if any(k in ('Article', 'NewsArticle', 'BlogPosting', 'TechArticle') for k in kinds):
+                    value = row.get('datePublished')
+                    if isinstance(value, str) and len(value) <= 100:
+                        values.append(value)
+                if isinstance(row.get('@graph'), list):
+                    pending.extend(row['@graph'][:30])
+    return list(dict.fromkeys(values))[:4]
 
 
 def _source_excerpt(text, url):
@@ -268,6 +302,7 @@ def _fetch_source(url: str, title: str = "") -> dict | None:
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
         page_title = soup.title.get_text(" ", strip=True) if soup.title else title
+        publication_dates = _publication_dates(soup)
         text = _source_body(soup, url)
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
@@ -275,7 +310,7 @@ def _fetch_source(url: str, title: str = "") -> dict | None:
             return _source_fetch_failure("short_body")
         return {
             "url": url, "original_url": original, "title": page_title or title or https_host(url),
-            "checked_on": checked_today(),
+            "checked_on": checked_today(), "publication_dates": publication_dates,
             "sha256": hashlib.sha256(text.encode()).hexdigest(),
             "excerpt": _source_excerpt(text, url),
         }

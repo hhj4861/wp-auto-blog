@@ -246,6 +246,9 @@ class TestMarketEvidenceRepair:
             '<h2 id="normal">정상 기준</h2><p>제공되지 않은 NIDDK 주장입니다.</p>'
             '<h2 id="faq">FAQ</h2><h3 id="what">무엇인가요?</h3><p>확인한 기준을 정리합니다.</p>'
         )
+        # This fixture isolates evidence repair, not the independently tested event gate.
+        brief['latest_issue_evidence'] = {'review': {'event_date': '2026-10-08'}}
+        monkeypatch.setattr('src.latest_issues.current_sources_match', lambda *args: True)
         monkeypatch.setattr('src.market_topics.fresh_market_item', lambda *args: True)
         monkeypatch.setattr('src.content_generator.fetch_source', lambda *args: dict(source))
         monkeypatch.setattr(generator, '_validate', lambda html: (True, []))

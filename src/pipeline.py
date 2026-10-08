@@ -646,6 +646,10 @@ class BlogPipeline:
                     gate_issues += review_article(
                         content.title, content.html, content.meta_description, market_brief,
                         self.content_generator._call_llm)
+                    from src.latest_issues import review_article as review_latest_article
+                    gate_issues += review_latest_article(
+                        content.title, content.html, market_brief, content.sources,
+                        self.content_generator._call_llm)
                 if gate_issues:
                     logger.warning(f"품질 게이트 실패 {len(gate_issues)}건: {gate_issues}")
                     if refresh_post_id:

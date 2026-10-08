@@ -6,7 +6,7 @@ from unittest.mock import Mock
 import pytest
 
 from scripts import publish_codex_draft as module
-from tests.test_market_topics import candidate, organic_sample, web_evidence
+from tests.test_market_topics import candidate, organic_sample, web_evidence, isolated_market_history
 
 
 def test_metadata_is_generated_from_existing_body():

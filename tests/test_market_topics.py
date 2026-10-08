@@ -838,7 +838,7 @@ def inventory_cli(tmp_path, monkeypatch, refill):
     monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
     monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
     monkeypatch.setattr(cli, 'existing_titles', lambda: [])
-    monkeypatch.setattr(cli, 'refill_categories', lambda queue, now, limit: refill[:limit])
+    monkeypatch.setattr(cli, 'refill_categories', lambda queue, now, limit, **_: refill[:limit])
     monkeypatch.setattr('sys.argv', ['select', '--category', 'inventory', '--enqueue'])
     return cli, data / 'topic_queue_general.json'
 
@@ -864,6 +864,22 @@ def test_inventory_refill_fails_only_when_no_category_was_stocked(tmp_path, monk
     monkeypatch.setattr(cli, 'select_category',
                         lambda category, *a, **k: {'category': category, 'selected': []})
     assert cli.main() == 1
+
+
+def test_inventory_refill_does_not_count_duplicate_stock(tmp_path, monkeypatch):
+    import scripts.select_blog_keywords as cli
+    _, queue_path = inventory_cli(tmp_path, monkeypatch, [])
+    stock = candidate()
+    queue_path.write_text(json.dumps([stock], ensure_ascii=False))
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [stock['topic']])
+    seen = {}
+    def refill(queue, now, limit, fresh=None):
+        seen['counted'] = fresh(queue[0], '취업', now)
+        return []
+    monkeypatch.setattr(cli, 'refill_categories', refill)
+    monkeypatch.setattr(cli, 'select_category', Mock(side_effect=AssertionError('not called')))
+    assert cli.main() == 0
+    assert seen == {'counted': False}
 
 
 def test_inventory_refill_is_a_no_op_when_every_category_is_stocked(tmp_path, monkeypatch):

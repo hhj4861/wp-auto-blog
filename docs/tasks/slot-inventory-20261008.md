@@ -41,3 +41,9 @@
 
 - Codex 인증은 기본 브랜치의 `workflow_dispatch`/`schedule`에서만 허용되므로 Actions E2E는 머지 후에만 가능하다(인증 제한은 변경하지 않음).
 - 수동 실행은 슬롯을 claim하지 않아 기존 경로를 탄다. `workflow_dispatch` 입력은 이미 10개 상한이므로 `mode`에 `slot_test`를 추가했다. post-queue 잡만 반응하며, 회차 기록 없이 예약 회차와 같은 재고 사용 → 즉석 탐색 → 다른 카테고리 대체 경로를 `category` 입력으로 실행한다. `publish=false`면 `--dry-run`이라 WordPress 클라이언트를 만들지 않는다.
+
+## E2E에서 발견한 결함: 중복 재고 (2026-10-08)
+
+- `slot_test` 생활정보(37753649624): 생활정보 재고 없음 → 즉석 조사 보류 → 테크 대체 선택까지 의도대로 진행했다. 그런데 테크의 유일한 재고 `윈도우재설치`가 같은 날 함께 선정된 `윈도우11설치` 글과 겹쳐 작성 단계에서 `skipped_duplicate`가 됐고, `No fresh verified market topic`으로 실패했다(artifact `pipeline.log` 09:17:55~09:18:10).
+- 원인: 재고 판정(`fresh_market_item`)은 WordPress 기존 글과의 중복을 보지 않고, 중복 검사는 작성 직전에만 한다. 함께 선정된 후보는 1위가 발행되면 중복이 된다.
+- 수정: `pick_slot_category.py`와 재고 보충의 재고 집계에 작성 단계와 같은 `existing_titles` + `duplicate` 검사를 적용했다. 중복 재고는 재고로 세지 않고, 대체 카테고리로도 고르지 않는다.

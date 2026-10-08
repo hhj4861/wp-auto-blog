@@ -68,17 +68,20 @@ def main():
     if args.category == 'inventory' and not args.enqueue:
         raise ValueError('Inventory refill requires --enqueue')
     reports = json.loads(REPORT.read_text()) if REPORT.exists() else {}
+    titles = existing_titles()
     if args.category == 'inventory':
         # Stock only empty categories, nearest slots first, so a slot never
         # depends on a single just-in-time selection.
         limit = int(os.getenv('SELECT_INVENTORY_LIMIT') or '2')
         queue = json.loads((ROOT / 'data/topic_queue_general.json').read_text())
-        categories = refill_categories(queue, datetime.now(timezone.utc), limit)
+        # Stock that duplicates a later post is not stock: the writer would skip it.
+        categories = refill_categories(queue, datetime.now(timezone.utc), limit,
+            fresh=lambda row, category, now: (fresh_market_item(row, category, now)
+                                              and not duplicate(row['keyword'], row['topic'], titles)))
         print(f'Inventory refill categories: {categories or "none (stocked)"}', flush=True)
     else:
         categories = list(CATEGORIES) if args.category == 'all' else [args.category]
     failures = []
-    titles = existing_titles()
     source_cache = {}  # Share successful and failed URL checks across this one run.
     for category in categories:
         diagnostics = None

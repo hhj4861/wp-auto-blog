@@ -217,12 +217,16 @@ def test_workflows_research_and_post_all_scheduled_categories():
     research = yaml.safe_load(Path('.github/workflows/blog-keyword-select.yml').read_text())
     choices = research.get('on', research.get(True))['workflow_dispatch']['inputs']['category']['options']
     assert schedule.CATEGORIES <= set(choices)
+    assert 'inventory' in choices and 'scheduled' in choices
     step = next(s for s in research['jobs']['select']['steps'] if 'SELECT_CATEGORY' in s.get('env', {}))
-    assert step['env']['SELECT_CATEGORY'] == "${{ inputs.category || 'scheduled' }}"
+    # Scheduled research refills verified stock ahead of the 09:00/18:00 slots (KST 03/07/13/16).
+    assert step['env']['SELECT_CATEGORY'] == "${{ inputs.category || 'inventory' }}"
     assert research.get('on', research.get(True))['schedule'] == [
-        {'cron': '30 22 * * *'}, {'cron': '30 7 * * *'}]
-    assert "github.event.schedule == '30 7 * * *' && 'evening' || 'morning'" in step['env']['SELECT_SLOT']
+        {'cron': '0 18 * * *'}, {'cron': '0 22 * * *'}, {'cron': '0 4 * * *'}, {'cron': '0 7 * * *'}]
+    assert '--category inventory --enqueue' in step['run']
     assert '--slot "$SELECT_SLOT"' in step['run']
+    commit = next(s for s in research['jobs']['select']['steps'] if s.get('name') == 'Commit verified report')
+    assert 'data/topic_queue_general.json' in commit['run']
 
 
 @pytest.mark.parametrize('time,slot', [('08:59', None), ('09:00', 'morning'),
@@ -287,3 +291,23 @@ def test_workflow_passes_target_and_keeps_input_limit():
     inputs=wf.get('on',wf.get(True))['workflow_dispatch']['inputs']
     assert len(inputs)<=10 and inputs['scheduled_target']['type']=='string'
     assert wf['jobs']['post-queue']['env']['SCHEDULE_TARGET']=='${{ inputs.scheduled_target }}'
+
+
+def test_finish_records_the_fallback_category_actually_published(tmp_path):
+    path = tmp_path/'runs.json'
+    env = environment()
+    claimed = schedule.claim(env, path, at(time='09:00'))
+    schedule.finish({**env, 'SCHEDULE_JOB_STATUS': 'success',
+                     'SCHEDULE_PUBLISHED_CATEGORY': '건강'}, path)
+    row = json.loads(path.read_text())['runs']['2026-09-14:morning']
+    assert row['category'] == claimed['category']  # rotation stays the claimed slot category
+    assert row['published_category'] == '건강'
+    schedule.read_state(path)  # the extra field keeps the state valid
+
+
+def test_finish_ignores_an_unknown_published_category(tmp_path):
+    path = tmp_path/'runs.json'
+    env = environment()
+    schedule.claim(env, path, at(time='09:00'))
+    schedule.finish({**env, 'SCHEDULE_JOB_STATUS': 'failure', 'SCHEDULE_PUBLISHED_CATEGORY': ''}, path)
+    assert 'published_category' not in json.loads(path.read_text())['runs']['2026-09-14:morning']

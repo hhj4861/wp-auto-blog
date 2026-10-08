@@ -31,6 +31,15 @@ from src.pipeline import BlogPipeline, PipelineConfig
 from src.content_generator import ContentType, ContentConfig, LLMProvider
 from src.trend_detector import TrendConfig, TrendMode, TrendDetector
 
+# No usable verified stock is left for the category (none queued, or the writer
+# skipped every candidate as a duplicate). Nothing was written, so a scheduled
+# slot may safely pick another category's stock and retry.
+NO_FRESH_MARKET_TOPIC = 3
+
+
+class NoFreshMarketTopic(RuntimeError):
+    pass
+
 
 def setup_logging(verbose: bool = False) -> None:
     """Configure logging.
@@ -380,7 +389,7 @@ def main() -> int:
                         continue
                 if pending_topic is None:
                     if require_market:
-                        raise RuntimeError("No fresh verified market topic for scheduled category")
+                        raise NoFreshMarketTopic("No fresh verified market topic for scheduled category")
                     # 생활정보 등은 큐 소진 시 무관 토픽 자동 생성 금지 (머니 키워드 전략 유지)
                     logger.warning(
                         "No pending topics in queue"
@@ -453,6 +462,9 @@ def main() -> int:
             logger.info("Running full pipeline (trend detection + processing)")
             results = pipeline.run()
 
+    except NoFreshMarketTopic as e:
+        logger.error(f"Pipeline execution failed: {e}")
+        return NO_FRESH_MARKET_TOPIC
     except Exception as e:
         logger.error(f"Pipeline execution failed: {e}")
         return 1

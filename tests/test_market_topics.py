@@ -777,6 +777,14 @@ def test_workflow_selects_before_existing_category_pipeline():
     assert command.index('select_blog_keywords.py') < command.index('python -m src.main')
     assert '--category "$CAT" --enqueue --reuse' in command
     assert 'BLOG_REQUIRE_MARKET_TOPIC=1' in command
+    # Scheduled slots publish from verified stock and fall back to another stocked category.
+    assert command.index('pick_slot_category.py --preferred "$CAT"') < command.index('python -m src.main')
+    assert '--category "$PUBLISH_CAT"' in command
+    assert 'echo "category=$PUBLISH_CAT" >> "$GITHUB_OUTPUT"' in command
+    assert step['id'] == 'pipeline'
+    finish = next(s for s in workflow['jobs']['post-queue']['steps']
+                  if s.get('name') == 'Record scheduled attempt outcome')
+    assert finish['env']['SCHEDULE_PUBLISHED_CATEGORY'] == '${{ steps.pipeline.outputs.category }}'
     selector = Path('.github/workflows/blog-keyword-select.yml').read_text()
     assert "inputs.top_n || '2'" in selector
     assert 'scaffold_post.py' not in selector
@@ -826,6 +834,66 @@ def test_cli_empty_top_n_and_category_enqueue(tmp_path, monkeypatch):
     monkeypatch.setattr(cli, 'select_category', lambda *a: {'category':'취업','selected':[]})
     assert cli.main() == 1
     assert json.loads(queue_path.read_text()) == queued
+
+
+def inventory_cli(tmp_path, monkeypatch, refill):
+    import json
+    import scripts.select_blog_keywords as cli
+    data = tmp_path / 'data'
+    data.mkdir()
+    (data / 'topic_queue_general.json').write_text('[]')
+    monkeypatch.setattr(cli, 'ROOT', tmp_path)
+    monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [])
+    monkeypatch.setattr(cli, 'refill_categories', lambda queue, now, limit, **_: refill[:limit])
+    monkeypatch.setattr('sys.argv', ['select', '--category', 'inventory', '--enqueue'])
+    return cli, data / 'topic_queue_general.json'
+
+
+def test_inventory_refill_enqueues_each_empty_category_it_can_verify(tmp_path, monkeypatch):
+    import json
+    cli, queue_path = inventory_cli(tmp_path, monkeypatch, ['취업', '건강', '테크'])
+    monkeypatch.setenv('SELECT_INVENTORY_LIMIT', '2')
+    calls = []
+    def select(category, top_n, titles, **_):
+        calls.append(category)
+        return {'category': category, 'selected': [candidate()] if category == '취업' else []}
+    monkeypatch.setattr(cli, 'select_category', select)
+    assert cli.main() == 0  # one category stocked; the held one stays visible in the report
+    assert calls == ['취업', '건강']
+    queued = json.loads(queue_path.read_text())
+    assert [row['category'] for row in queued] == ['취업']
+    assert market.fresh_market_item(queued[0], '취업')
+
+
+def test_inventory_refill_fails_only_when_no_category_was_stocked(tmp_path, monkeypatch):
+    cli, _ = inventory_cli(tmp_path, monkeypatch, ['건강'])
+    monkeypatch.setattr(cli, 'select_category',
+                        lambda category, *a, **k: {'category': category, 'selected': []})
+    assert cli.main() == 1
+
+
+def test_inventory_refill_does_not_count_duplicate_stock(tmp_path, monkeypatch):
+    import scripts.select_blog_keywords as cli
+    _, queue_path = inventory_cli(tmp_path, monkeypatch, [])
+    stock = candidate()
+    queue_path.write_text(json.dumps([stock], ensure_ascii=False))
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [stock['topic']])
+    seen = {}
+    def refill(queue, now, limit, fresh=None):
+        seen['counted'] = fresh(queue[0], '취업', now)
+        return []
+    monkeypatch.setattr(cli, 'refill_categories', refill)
+    monkeypatch.setattr(cli, 'select_category', Mock(side_effect=AssertionError('not called')))
+    assert cli.main() == 0
+    assert seen == {'counted': False}
+
+
+def test_inventory_refill_is_a_no_op_when_every_category_is_stocked(tmp_path, monkeypatch):
+    cli, _ = inventory_cli(tmp_path, monkeypatch, [])
+    monkeypatch.setattr(cli, 'select_category', Mock(side_effect=AssertionError('no research needed')))
+    assert cli.main() == 0
 
 
 @pytest.fixture
@@ -957,6 +1025,25 @@ def test_failed_reselection_persists_original_diagnostics_but_cannot_enqueue(reu
     assert c.queue.read_text() == before_queue and market.LEDGER.read_text() == before_ledger
     output = capsys.readouterr()
     assert 'PRIVATE' not in output.out + output.err + c.cli.REPORT.read_text()
+
+
+@pytest.mark.parametrize('status', ['skipped_duplicate', 'completed'])
+def test_reuse_never_revives_a_topic_the_writer_already_rejected_or_used(reuse_cli, status):
+    # E2E 37753700784: the writer marked 윈도우재설치 skipped_duplicate (semantic
+    # duplicate), but --reuse re-enqueued it from the report and the slot failed again.
+    c = reuse_cli
+    good = evidence('https://example.go.kr/good')
+    rejected = candidate(source_url=good['url'], verified_sources=[good])
+    other = candidate(keyword='면접준비물', keywords=['면접준비물'], topic='면접준비물 확인 방법',
+                      source_url=good['url'], verified_sources=[good])
+    c.queue.write_text(json.dumps([{**rejected, 'status': status}], ensure_ascii=False))
+    c.save([rejected, other])
+    c.fetch.side_effect = lambda url: good
+    assert c.cli.main() == 0
+    c.select.assert_not_called()
+    queued = json.loads(c.queue.read_text())
+    assert [row['status'] for row in queued if row['keyword'] == rejected['keyword']] == [status]
+    assert json.loads(c.cli.REPORT.read_text())['취업']['selected'] == [other]
 
 
 def test_reuse_does_not_probe_stale_or_posted_candidates_or_add_them_to_exclusions(reuse_cli):
@@ -1467,12 +1554,37 @@ def test_market_queue_infers_gate_without_env_and_never_uses_legacy_or_career_fa
     monkeypatch.delenv('BLOG_REQUIRE_MARKET_TOPIC', raising=False)
     monkeypatch.setattr('sys.argv', ['main', '--mode', 'general', '--from-queue',
                                    '--auto-publish', '--category', '취업'])
-    assert entry.main() == 1
+    assert entry.main() == entry.NO_FRESH_MARKET_TOPIC == 3
     run.assert_not_called()
     detector.assert_not_called()
     market_pipeline.wp_client.create_post.assert_not_called()
     assert not market.LEDGER.exists()
     assert path.read_text() == before
+
+
+def test_writer_duplicate_skip_that_exhausts_stock_exits_with_retryable_code(
+        market_pipeline, tmp_path, monkeypatch):
+    # E2E 37753700784: the only stock was a semantic duplicate. The slot must be able to
+    # tell "no usable stock left" (safe to re-pick another category) from other failures.
+    from src import main as entry
+    from src.pipeline import PipelineResult
+    item = candidate()
+    path = tmp_path / 'data/topic_queue_general.json'
+    path.parent.mkdir(exist_ok=True)
+    path.write_text(json.dumps([item], ensure_ascii=False))
+    monkeypatch.setattr(entry, '__file__', str(tmp_path / 'src/main.py'))
+    monkeypatch.setattr(entry, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(entry, 'setup_logging', lambda **kw: None)
+    monkeypatch.setattr(entry, 'BlogPipeline', lambda *a, **kw: market_pipeline)
+    monkeypatch.setattr(market, 'existing_titles', lambda: [])
+    monkeypatch.setattr(market_pipeline, 'run_single', Mock(return_value=PipelineResult(
+        topic=item['topic'], success=False, error='Duplicate topic - already exists in registry')))
+    monkeypatch.setenv('BLOG_REQUIRE_MARKET_TOPIC', '1')
+    monkeypatch.setattr('sys.argv', ['main', '--mode', 'general', '--from-queue',
+                                   '--auto-publish', '--category', '취업'])
+    assert entry.main() == 3
+    assert json.loads(path.read_text())[0]['status'] == 'skipped_duplicate'
+    market_pipeline.wp_client.create_post.assert_not_called()
 
 
 def test_published_history_survives_failure_after_wordpress_write(market_pipeline, monkeypatch):

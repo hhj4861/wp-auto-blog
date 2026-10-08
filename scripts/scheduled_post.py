@@ -126,6 +126,10 @@ def finish(env, path=STATE):
             if status not in {'success', 'failure', 'cancelled'}:
                 raise ValueError('invalid_job_status')
             row.update(status=status, completed_at=datetime.now(timezone.utc).isoformat())
+            # A slot may publish another category's verified stock; keep the claimed rotation.
+            published = env.get('SCHEDULE_PUBLISHED_CATEGORY')
+            if published in CATEGORIES:
+                row['published_category'] = published
             save(path, state)
             return
 

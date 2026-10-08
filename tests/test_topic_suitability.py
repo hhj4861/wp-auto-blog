@@ -568,3 +568,26 @@ def test_quote_index_cannot_borrow_from_another_source():
     evidence = suitability.review_plan(item, datetime.fromisoformat(item['selected_at']), call)
     assert evidence['failure_code'] == 'invalid_review'
     assert evidence['diagnostics']['attempts'][0]['validation']['reason'] == 'quote_index'
+
+
+def test_review_prompt_states_the_required_facet_count_limit():
+    # Production runs failed twice with invalid_schema/facets_list: the 1~8 bound
+    # was enforced by validation but never stated to the reviewer.
+    item = candidate()
+    llm = attach(item)
+    assert 'required_facets는 1~8개' in llm.call_args.args[0]
+
+
+def test_too_many_facets_retry_explains_the_count_without_waiving_unsupported_facets():
+    item = candidate()
+    valid = review(item)
+    too_many = {**valid, 'required_facets': valid['required_facets'] * 9}
+    llm = Mock(side_effect=[json.dumps(too_many, ensure_ascii=False),
+                            json.dumps(valid, ensure_ascii=False)])
+    evidence = suitability.review_plan(item, NOW, llm)
+    assert evidence.get('review') and 'failure_code' not in evidence
+    retry_prompt = llm.call_args_list[1].args[0]
+    assert '"facets_list"' in retry_prompt
+    assert 'required_facets는 1~8개' in retry_prompt.split('검증 오류(고정 코드):', 1)[1]
+    assert 'supported=false' in retry_prompt.split('검증 오류(고정 코드):', 1)[1]
+    assert '인용은 원문의 구절 번호를 선택하세요' not in retry_prompt.split('검증 오류(고정 코드):', 1)[1]

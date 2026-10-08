@@ -12,9 +12,13 @@ from dotenv import load_dotenv
 from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
 from src.selection_feedback import load_history
+from src.topic_inventory import refill_categories
 from src.analysis_runtime import error_code
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
+
+
+WRITER_DONE = ('skipped_duplicate', 'completed')
 
 
 def _write_reports(reports):
@@ -52,7 +56,7 @@ def _sources_accessible(item, source_cache):
 def main():
     load_dotenv()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--category', choices=['all', 'scheduled', *CATEGORIES], default='all')
+    parser.add_argument('--category', choices=['all', 'scheduled', 'inventory', *CATEGORIES], default='all')
     parser.add_argument('--slot', choices=SLOTS, default='morning', help='Slot for scheduled category research')
     parser.add_argument('--enqueue', action='store_true')
     parser.add_argument('--reuse', action='store_true', help='Reuse a verified report up to 36 hours old')
@@ -64,10 +68,28 @@ def main():
         raise ValueError('SELECT_TOP_N must be between 1 and 5')
     if args.enqueue and args.category == 'all':
         raise ValueError('Enqueue requires a specific scheduled category')
+    if args.category == 'inventory' and not args.enqueue:
+        raise ValueError('Inventory refill requires --enqueue')
     reports = json.loads(REPORT.read_text()) if REPORT.exists() else {}
-    categories = list(CATEGORIES) if args.category == 'all' else [args.category]
-    failures = []
     titles = existing_titles()
+    if args.category == 'inventory':
+        # Stock only empty categories, nearest slots first, so a slot never
+        # depends on a single just-in-time selection.
+        limit = int(os.getenv('SELECT_INVENTORY_LIMIT') or '2')
+        queue = json.loads((ROOT / 'data/topic_queue_general.json').read_text())
+        # Stock that duplicates a later post is not stock: the writer would skip it.
+        categories = refill_categories(queue, datetime.now(timezone.utc), limit,
+            fresh=lambda row, category, now: (fresh_market_item(row, category, now)
+                                              and not duplicate(row['keyword'], row['topic'], titles)))
+        print(f'Inventory refill categories: {categories or "none (stocked)"}', flush=True)
+    else:
+        categories = list(CATEGORIES) if args.category == 'all' else [args.category]
+    failures = []
+    # The writer's verdict is final: never revive a topic it skipped as a
+    # (semantic) duplicate or already used, even if the report still lists it.
+    queue_path = ROOT / 'data/topic_queue_general.json'
+    writer_done = {row['keyword'] for row in (json.loads(queue_path.read_text()) if queue_path.exists() else [])
+                   if isinstance(row, dict) and row.get('status') in WRITER_DONE and row.get('keyword')}
     source_cache = {}  # Share successful and failed URL checks across this one run.
     for category in categories:
         diagnostics = None
@@ -76,7 +98,8 @@ def main():
             history = load_history(previous, category, datetime.now(timezone.utc))
             selection_options = {'failure_history': history} if history else {}
             usable = [x for x in previous.get('selected', [])
-                      if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)]
+                      if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)
+                      and x['keyword'] not in writer_done]
             if args.reuse and usable:
                 diagnostics = {'checked_at': datetime.now(timezone.utc).isoformat(),
                                'failed_candidates': [], 'reused_keywords': [], 'outcome': 'checking_sources'}
@@ -139,6 +162,9 @@ def main():
                 reports[category]["reuse_source_diagnostics"] = diagnostics
                 _write_reports(reports)
             print(f'{category}: selection held (selection_failed: {error_code(error)})', file=sys.stderr, flush=True)
+    if args.category == 'inventory':
+        # A held category is normal; fail only when no requested refill succeeded.
+        return 1 if categories and len(failures) == len(categories) else 0
     return 1 if failures else 0
 
 

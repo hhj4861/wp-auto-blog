@@ -19,6 +19,7 @@ on:
           - kculture
           - queue
           - both
+          - slot_test  # queue job with the scheduled stock/fallback path, without a slot claim
       writer_provider:
         description: 'TrendPulse writer (Codex uses ChatGPT subscription)'
         type: choice
@@ -748,7 +749,7 @@ jobs:
       (github.event.schedule == '0 0 * * *' ||
       github.event.schedule == '0 9 * * *' ||
       github.event.schedule == '17,47 0-13 * * *' ||
-      (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'queue'))
+      (github.event_name == 'workflow_dispatch' && (github.event.inputs.mode == 'queue' || github.event.inputs.mode == 'slot_test')))
     runs-on: ubuntu-latest
     timeout-minutes: 60
     concurrency:
@@ -773,6 +774,7 @@ jobs:
       SCHEDULE_RECOVERY: ${{ inputs.scheduled_recovery && 'true' || 'false' }}
       SCHEDULE_TARGET: ${{ inputs.scheduled_target }}
       SCHEDULE_CRON: ${{ github.event.schedule }}
+      BLOG_SLOT_TEST: ${{ inputs.mode == 'slot_test' && 'true' || 'false' }}
 
     steps:
       - name: Checkout repository
@@ -871,6 +873,7 @@ jobs:
             --status-file "$RUNNER_TEMP/cak-fetch-status.json"
 
       - name: Run pipeline (Queue Mode - 카테고리별 큐)
+        id: pipeline
         if: steps.daily.outputs.run == 'true'
         timeout-minutes: 50
         env:
@@ -894,14 +897,51 @@ jobs:
           fi
           echo "Queue category: $CAT"
           echo selection > "$SCHEDULE_STAGE_PATH"
-          python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
+          PUBLISH_CAT="$CAT"
+          SLOT_PATH=false
+          if [ -n "$SCHEDULE_CATEGORY" ] || [ "$BLOG_SLOT_TEST" = true ]; then
+            SLOT_PATH=true
+            # Scheduled slots (and manual slot_test E2E runs) publish verified stock (refilled by Blog Keyword Select).
+            # Research the slot category only when it has no stock; if that is held,
+            # publish another category's fresh stock instead of leaving the slot empty.
+            PUBLISH_CAT="$(python scripts/pick_slot_category.py --preferred "$CAT" || true)"
+            if [ "$PUBLISH_CAT" != "$CAT" ]; then
+              if ! python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse; then
+                echo "::warning::$CAT selection held; falling back to verified stock"
+              fi
+              PUBLISH_CAT="$(python scripts/pick_slot_category.py --preferred "$CAT")"
+            fi
+          else
+            python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse
+          fi
+          echo "Publishing category: $PUBLISH_CAT"
           echo generation > "$SCHEDULE_STAGE_PATH"
           export BLOG_REQUIRE_MARKET_TOPIC=1
           if [ "$BLOG_PUBLISH" = "true" ]; then
-            python -m src.main --mode general --from-queue --auto-publish --category "$CAT"
+            PUBLISH_FLAG=--auto-publish
           else
-            python -m src.main --mode general --from-queue --dry-run --category "$CAT"
+            PUBLISH_FLAG=--dry-run
           fi
+          ATTEMPT=1
+          while :; do
+            STATUS=0
+            python -m src.main --mode general --from-queue "$PUBLISH_FLAG" --category "$PUBLISH_CAT" || STATUS=$?
+            # Exit 3: no usable stock left in that category (e.g. the writer skipped a
+            # semantic duplicate). Nothing was written, so a slot re-picks from the
+            # updated queue. Any other failure may have left a draft: never retry it.
+            if [ "$STATUS" -ne 3 ] || [ "$SLOT_PATH" != true ] || [ "$ATTEMPT" -ge 3 ]; then
+              break
+            fi
+            NEXT_CAT="$(python scripts/pick_slot_category.py --preferred "$CAT" || true)"
+            if [ -z "$NEXT_CAT" ]; then
+              break
+            fi
+            ATTEMPT=$((ATTEMPT + 1))
+            PUBLISH_CAT="$NEXT_CAT"
+            echo "Retrying with category: $PUBLISH_CAT (attempt $ATTEMPT)"
+          done
+          echo "category=$PUBLISH_CAT" >> "$GITHUB_OUTPUT"
+          exit "$STATUS"
 
       - name: Verify Codex publication result
         if: steps.daily.outputs.run == 'true' && (success() && env.BLOG_WRITER_PROVIDER == 'codex')
@@ -928,6 +968,7 @@ jobs:
         if: always() && steps.daily.outputs.reason == 'claimed'
         env:
           SCHEDULE_JOB_STATUS: ${{ job.status }}
+          SCHEDULE_PUBLISHED_CATEGORY: ${{ steps.pipeline.outputs.category }}
         run: python3 scripts/scheduled_post.py finish
 
       - name: Commit queue and registry updates

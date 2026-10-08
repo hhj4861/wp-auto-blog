@@ -212,7 +212,8 @@ def test_existing_category_jobs_keep_schedule_and_share_writer():
         assert job['concurrency']['cancel-in-progress'] is False
         assert any('always()' in step.get('if', '') and 'persist' in step.get('run', '') for step in job['steps'])
     queue = next(s['run'] for s in workflow['jobs']['post-queue']['steps'] if s.get('name', '').startswith('Run pipeline'))
-    assert 'python -m src.main --mode general --from-queue --auto-publish --category "$CAT"' in queue
+    assert 'python -m src.main --mode general --from-queue "$PUBLISH_FLAG" --category "$PUBLISH_CAT"' in queue
+    assert 'PUBLISH_FLAG=--auto-publish' in queue
     assert 'CAT="$SCHEDULE_CATEGORY"' in queue
 
 
@@ -242,8 +243,8 @@ def test_queue_draft_recovery_skips_selection_and_new_post_creation(tmp_path, wo
         assert path in persistence['run']
 
 
-@pytest.mark.parametrize('category', ['생산성', '리뷰', '테크'])
-def test_queue_workflow_passes_claimed_category_to_selection_and_publication(tmp_path, category):
+def run_queue_step(tmp_path, category, *, stock, select_exit=0, extra_env=None):
+    """Run the real step script with a fake python that records calls."""
     import os
     import subprocess
     from pathlib import Path
@@ -252,17 +253,107 @@ def test_queue_workflow_passes_claimed_category_to_selection_and_publication(tmp
                   if s.get('name', '').startswith('Run pipeline'))
     calls = tmp_path/'calls'
     fake_python = tmp_path/'python'
-    fake_python.write_text('#!/bin/sh\nprintf "%s\\n" "$*" >> "$POSTING_CALLS"\n')
+    fake_python.write_text(
+        '#!/bin/bash\nprintf "%s\\n" "$*" >> "$POSTING_CALLS"\n'
+        'n() { c=$(cat "$1" 2>/dev/null || echo 0); echo $((c+1)) > "$1"; echo $c; }\n'
+        'case "$*" in *pick_slot_category*) i=$(n "$POSTING_CALLS.pick"); s=(${FAKE_STOCK}); '
+        '[ ${#s[@]} -gt 0 ] || exit 1; last=${s[$((${#s[@]}-1))]}; echo "${s[$i]:-$last}";; '
+        '*select_blog_keywords*) exit "$FAKE_SELECT_EXIT";; '
+        '*src.main*) i=$(n "$POSTING_CALLS.main"); e=(${FAKE_MAIN_EXITS:-0}); exit "${e[$i]:-0}";; esac\n')
     fake_python.chmod(0o700)
     result = subprocess.run(['bash', '-e', '-c', script], capture_output=True, text=True,
         env={**os.environ, 'PATH': str(tmp_path) + os.pathsep + os.environ['PATH'],
              'BLOG_RESUME_DRAFT_ID': '', 'BLOG_CATEGORY': '생활정보', 'BLOG_PUBLISH': 'true',
              'SCHEDULE_CATEGORY': category, 'SCHEDULE_STAGE_PATH': str(tmp_path/'stage'),
-             'POSTING_CALLS': str(calls)})
+             'GITHUB_OUTPUT': str(tmp_path/'output'), 'FAKE_STOCK': stock,
+             'FAKE_SELECT_EXIT': str(select_exit), 'POSTING_CALLS': str(calls), **(extra_env or {})})
+    lines = calls.read_text().splitlines() if calls.exists() else []
+    output = (tmp_path/'output').read_text() if (tmp_path/'output').exists() else ''
+    return result, lines, output
+
+
+@pytest.mark.parametrize('category', ['생산성', '리뷰', '테크'])
+def test_queue_workflow_publishes_claimed_category_stock_without_new_research(tmp_path, category):
+    result, calls, output = run_queue_step(tmp_path, category, stock=category)
     assert result.returncode == 0, result.stderr
-    assert calls.read_text().splitlines() == [
-        f'scripts/select_blog_keywords.py --category {category} --enqueue --reuse',
-        f'-m src.main --mode general --from-queue --auto-publish --category {category}']
+    assert calls == [f'scripts/pick_slot_category.py --preferred {category}',
+                     f'-m src.main --mode general --from-queue --auto-publish --category {category}']
+    assert output == f'category={category}\n'
+
+
+def test_queue_workflow_researches_then_falls_back_to_other_category_stock(tmp_path):
+    result, calls, output = run_queue_step(tmp_path, '테크', stock='건강', select_exit=1)
+    assert result.returncode == 0, result.stderr
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
+                     'scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --auto-publish --category 건강']
+    assert output == 'category=건강\n'
+
+
+def test_manual_slot_test_reproduces_the_scheduled_path_without_claiming(tmp_path):
+    # E2E: a manual dispatch (no slot claim) must exercise the same stock/fallback path.
+    result, calls, output = run_queue_step(tmp_path, '', stock='건강', select_exit=1,
+        extra_env={'BLOG_SLOT_TEST': 'true', 'BLOG_CATEGORY': '테크', 'BLOG_PUBLISH': 'false'})
+    assert result.returncode == 0, result.stderr
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
+                     'scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --dry-run --category 건강']
+    assert output == 'category=건강\n'
+
+
+def test_slot_test_mode_is_a_manual_queue_job_option():
+    from pathlib import Path
+    workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
+    triggers = workflow.get('on', workflow.get(True))
+    assert 'slot_test' in triggers['workflow_dispatch']['inputs']['mode']['options']
+    job = workflow['jobs']['post-queue']
+    assert "github.event.inputs.mode == 'slot_test'" in job['if']
+    assert job['env']['BLOG_SLOT_TEST'] == "${{ inputs.mode == 'slot_test' && 'true' || 'false' }}"
+    for name, other in workflow['jobs'].items():
+        if name != 'post-queue':
+            assert 'slot_test' not in str(other.get('if', ''))
+
+
+def test_slot_repicks_when_the_writer_finds_no_usable_stock(tmp_path):
+    # E2E 37753700784: the picked category's only stock was a semantic duplicate (exit 3).
+    result, calls, output = run_queue_step(tmp_path, '테크', stock='테크 건강',
+                                           extra_env={'FAKE_MAIN_EXITS': '3 0'})
+    assert result.returncode == 0, result.stderr
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --auto-publish --category 테크',
+                     'scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --auto-publish --category 건강']
+    assert output == 'category=건강\n'
+
+
+def test_slot_never_retries_other_writer_failures(tmp_path):
+    result, calls, output = run_queue_step(tmp_path, '테크', stock='테크 건강',
+                                           extra_env={'FAKE_MAIN_EXITS': '1 0'})
+    assert result.returncode == 1
+    assert sum('src.main' in call for call in calls) == 1
+    assert output == 'category=테크\n'
+
+
+def test_slot_retries_no_usable_stock_at_most_three_times(tmp_path):
+    result, calls, _ = run_queue_step(tmp_path, '테크', stock='테크 건강 취업 리뷰',
+                                      extra_env={'FAKE_MAIN_EXITS': '3 3 3 0'})
+    assert result.returncode == 3
+    assert [c.rsplit(' ', 1)[1] for c in calls if 'src.main' in c] == ['테크', '건강', '취업']
+
+
+def test_manual_run_never_repicks_another_category(tmp_path):
+    result, calls, _ = run_queue_step(tmp_path, '', stock='건강',
+        extra_env={'BLOG_CATEGORY': '테크', 'FAKE_MAIN_EXITS': '3 0'})
+    assert result.returncode == 3
+    assert not any('pick_slot_category' in call for call in calls)
+
+
+def test_queue_workflow_fails_without_any_verified_stock(tmp_path):
+    result, calls, _ = run_queue_step(tmp_path, '테크', stock='', select_exit=1)
+    assert result.returncode != 0
+    assert not any('src.main' in call for call in calls)
 
 
 @pytest.mark.parametrize('repo,event,ref,opt_in,allowed', [

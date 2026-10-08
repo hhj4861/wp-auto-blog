@@ -578,5 +578,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-07T09:32:24.806573+00:00"
+  },
+  {
+    "key": "윈도우11설치",
+    "keyword": "윈도우11설치",
+    "topic": "윈도우11설치 방법: 업그레이드와 USB 새 설치 절차",
+    "category": "테크",
+    "post_id": 1862,
+    "url": "https://trendpulse.blog/windows-eleven-install-guide-2026/",
+    "selection_version": 6,
+    "monthly_search": 8390,
+    "score": 81.7,
+    "score_components": {
+      "demand": 31.39,
+      "organic_opportunity": 33.33,
+      "trend": 1.98,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-08T04:34:43.686566+00:00"
   }
 ]

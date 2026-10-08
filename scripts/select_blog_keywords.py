@@ -18,6 +18,9 @@ from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
 
 
+WRITER_DONE = ('skipped_duplicate', 'completed')
+
+
 def _write_reports(reports):
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     temp = REPORT.with_suffix('.tmp')
@@ -82,6 +85,11 @@ def main():
     else:
         categories = list(CATEGORIES) if args.category == 'all' else [args.category]
     failures = []
+    # The writer's verdict is final: never revive a topic it skipped as a
+    # (semantic) duplicate or already used, even if the report still lists it.
+    queue_path = ROOT / 'data/topic_queue_general.json'
+    writer_done = {row['keyword'] for row in (json.loads(queue_path.read_text()) if queue_path.exists() else [])
+                   if isinstance(row, dict) and row.get('status') in WRITER_DONE and row.get('keyword')}
     source_cache = {}  # Share successful and failed URL checks across this one run.
     for category in categories:
         diagnostics = None
@@ -90,7 +98,8 @@ def main():
             history = load_history(previous, category, datetime.now(timezone.utc))
             selection_options = {'failure_history': history} if history else {}
             usable = [x for x in previous.get('selected', [])
-                      if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)]
+                      if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)
+                      and x['keyword'] not in writer_done]
             if args.reuse and usable:
                 diagnostics = {'checked_at': datetime.now(timezone.utc).isoformat(),
                                'failed_candidates': [], 'reused_keywords': [], 'outcome': 'checking_sources'}

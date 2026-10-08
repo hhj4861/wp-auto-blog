@@ -212,7 +212,8 @@ def test_existing_category_jobs_keep_schedule_and_share_writer():
         assert job['concurrency']['cancel-in-progress'] is False
         assert any('always()' in step.get('if', '') and 'persist' in step.get('run', '') for step in job['steps'])
     queue = next(s['run'] for s in workflow['jobs']['post-queue']['steps'] if s.get('name', '').startswith('Run pipeline'))
-    assert 'python -m src.main --mode general --from-queue --auto-publish --category "$PUBLISH_CAT"' in queue
+    assert 'python -m src.main --mode general --from-queue "$PUBLISH_FLAG" --category "$PUBLISH_CAT"' in queue
+    assert 'PUBLISH_FLAG=--auto-publish' in queue
     assert 'CAT="$SCHEDULE_CATEGORY"' in queue
 
 
@@ -253,9 +254,12 @@ def run_queue_step(tmp_path, category, *, stock, select_exit=0, extra_env=None):
     calls = tmp_path/'calls'
     fake_python = tmp_path/'python'
     fake_python.write_text(
-        '#!/bin/sh\nprintf "%s\\n" "$*" >> "$POSTING_CALLS"\n'
-        'case "$*" in *pick_slot_category*) [ -n "$FAKE_STOCK" ] || exit 1; echo "$FAKE_STOCK";; '
-        '*select_blog_keywords*) exit "$FAKE_SELECT_EXIT";; esac\n')
+        '#!/bin/bash\nprintf "%s\\n" "$*" >> "$POSTING_CALLS"\n'
+        'n() { c=$(cat "$1" 2>/dev/null || echo 0); echo $((c+1)) > "$1"; echo $c; }\n'
+        'case "$*" in *pick_slot_category*) i=$(n "$POSTING_CALLS.pick"); s=(${FAKE_STOCK}); '
+        '[ ${#s[@]} -gt 0 ] || exit 1; last=${s[$((${#s[@]}-1))]}; echo "${s[$i]:-$last}";; '
+        '*select_blog_keywords*) exit "$FAKE_SELECT_EXIT";; '
+        '*src.main*) i=$(n "$POSTING_CALLS.main"); e=(${FAKE_MAIN_EXITS:-0}); exit "${e[$i]:-0}";; esac\n')
     fake_python.chmod(0o700)
     result = subprocess.run(['bash', '-e', '-c', script], capture_output=True, text=True,
         env={**os.environ, 'PATH': str(tmp_path) + os.pathsep + os.environ['PATH'],
@@ -310,6 +314,40 @@ def test_slot_test_mode_is_a_manual_queue_job_option():
     for name, other in workflow['jobs'].items():
         if name != 'post-queue':
             assert 'slot_test' not in str(other.get('if', ''))
+
+
+def test_slot_repicks_when_the_writer_finds_no_usable_stock(tmp_path):
+    # E2E 37753700784: the picked category's only stock was a semantic duplicate (exit 3).
+    result, calls, output = run_queue_step(tmp_path, '테크', stock='테크 건강',
+                                           extra_env={'FAKE_MAIN_EXITS': '3 0'})
+    assert result.returncode == 0, result.stderr
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --auto-publish --category 테크',
+                     'scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --auto-publish --category 건강']
+    assert output == 'category=건강\n'
+
+
+def test_slot_never_retries_other_writer_failures(tmp_path):
+    result, calls, output = run_queue_step(tmp_path, '테크', stock='테크 건강',
+                                           extra_env={'FAKE_MAIN_EXITS': '1 0'})
+    assert result.returncode == 1
+    assert sum('src.main' in call for call in calls) == 1
+    assert output == 'category=테크\n'
+
+
+def test_slot_retries_no_usable_stock_at_most_three_times(tmp_path):
+    result, calls, _ = run_queue_step(tmp_path, '테크', stock='테크 건강 취업 리뷰',
+                                      extra_env={'FAKE_MAIN_EXITS': '3 3 3 0'})
+    assert result.returncode == 3
+    assert [c.rsplit(' ', 1)[1] for c in calls if 'src.main' in c] == ['테크', '건강', '취업']
+
+
+def test_manual_run_never_repicks_another_category(tmp_path):
+    result, calls, _ = run_queue_step(tmp_path, '', stock='건강',
+        extra_env={'BLOG_CATEGORY': '테크', 'FAKE_MAIN_EXITS': '3 0'})
+    assert result.returncode == 3
+    assert not any('pick_slot_category' in call for call in calls)
 
 
 def test_queue_workflow_fails_without_any_verified_stock(tmp_path):

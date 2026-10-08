@@ -217,3 +217,17 @@ def test_closed_windows_candidate_cannot_be_recovered_as_market_draft():
     row = json.loads((Path(__file__).parent / 'fixtures/windows_install_published_20261008.json').read_text())
     row['selection_version'] = market.PROCESS_VERSION
     with pytest.raises(RuntimeError): _fresh(row)
+
+
+@pytest.mark.parametrize('value', ['20261008', '2026-W41-4', None, 20261008])
+def test_event_date_uses_canonical_day_for_priority(value):
+    row = item(); row['latest_issue_evidence'] = latest.review(row, NOW, lambda _: verdict(event_date=value))
+    assert latest.issues(row, NOW) == ['invalid_issue_date']
+
+
+def test_invalid_review_is_not_a_negative_content_verdict():
+    row = item(); row['latest_issue_evidence'] = latest.review(row, NOW, lambda _: {})
+    assert latest.issues(row, NOW) == ['invalid_issue_review']
+    row = approved()
+    html = '<p>2026-10-08 ' + EVENT + '</p>'
+    assert latest.review_article(row['topic'], html, row, row['verified_sources'], lambda _: {}, NOW) == ['invalid_latest_issue_article_review']

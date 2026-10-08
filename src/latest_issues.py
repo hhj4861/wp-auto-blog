@@ -66,7 +66,8 @@ def dates(text):
 
 
 def _validate(raw, item, now):
-    if not isinstance(raw, dict): return 'invalid_issue_review'
+    if (not isinstance(raw, dict) or type(raw.get('is_new_event')) is not bool
+            or type(raw.get('topic_is_about_event')) is not bool): return 'invalid_issue_review'
     if (raw.get('is_new_event') is not True or raw.get('topic_is_about_event') is not True
             or raw.get('scope') != 'full_topic' or raw.get('event_kind') not in KINDS):
         return 'not_a_current_issue'
@@ -86,6 +87,8 @@ def _validate(raw, item, now):
             or not (compact(date_quote) in compact(source.get('excerpt'))
                     or date_quote in publication_dates)):
         return 'ungrounded_issue_date'
+    if not isinstance(raw.get('event_date'), str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', raw['event_date']):
+        return 'invalid_issue_date'
     try:
         event_date = date.fromisoformat(raw['event_date'])
         start, end = window(now)
@@ -225,10 +228,13 @@ def review_article(title, html, brief, fresh_sources, call_llm, now=None):
             'JSON {"about_event":true,"date_correct":true,"article_quote":"도입에서 새 사건을 설명한 원문 30자 이상"}\n'
             + json.dumps({'event': event, 'article': text}, ensure_ascii=False))
         if isinstance(raw, str): raw = runtime.parse_json(raw)
-        quote = raw.get('article_quote') if isinstance(raw, dict) else None
+        if (not isinstance(raw, dict) or type(raw.get('about_event')) is not bool
+                or type(raw.get('date_correct')) is not bool):
+            return ['invalid_latest_issue_article_review']
+        quote = raw.get('article_quote')
         if (raw.get('about_event') is True and raw.get('date_correct') is True
                 and isinstance(quote, str) and len(quote) >= 30 and compact(quote) in compact(text)):
             return []
     except (ValueError, TypeError, KeyError, RuntimeError, AttributeError):
-        pass
+        return ['latest_issue_article_review_unavailable']
     return ['article_not_about_verified_latest_issue']

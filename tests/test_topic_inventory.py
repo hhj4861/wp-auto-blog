@@ -6,8 +6,8 @@ from src.posting_schedule import category_for_date
 
 
 def item(category, score=50.0, fresh=True, status='pending'):
-    return {'category': category, 'keyword': f'{category}{score}', 'score': score,
-            'status': status, 'fresh': fresh}
+    return {'category': category, 'keyword': f'{category}{score}', 'topic': f'{category} 주제 {score}',
+            'score': score, 'status': status, 'fresh': fresh}
 
 
 def is_fresh(row, category, now=None):
@@ -82,8 +82,26 @@ def test_slot_pick_cli_prints_the_publishing_category_or_fails_without_stock(tmp
     queue.write_text(json.dumps([item('건강', 70)], ensure_ascii=False))
     monkeypatch.setattr(cli, 'QUEUE', queue)
     monkeypatch.setattr(cli, 'fresh_market_item', is_fresh)
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [])
     assert cli.main(['--preferred', '테크']) == 0
     assert capsys.readouterr().out.strip() == '건강'
     queue.write_text('[]')
     assert cli.main(['--preferred', '테크']) == 1
     assert capsys.readouterr().out.strip() == ''
+
+
+def test_slot_pick_cli_skips_stock_that_duplicates_an_existing_post(tmp_path, monkeypatch, capsys):
+    # E2E 37753649624: the only 테크 stock duplicated a post published after its
+    # selection, so the writer skipped it and the fallback slot failed.
+    import json
+    import scripts.pick_slot_category as cli
+    duplicate_stock = {**item('테크', 90), 'keyword': '윈도우재설치', 'topic': '윈도우재설치 방법'}
+    queue = tmp_path / 'queue.json'
+    queue.write_text(json.dumps([duplicate_stock, item('건강', 60)], ensure_ascii=False))
+    monkeypatch.setattr(cli, 'QUEUE', queue)
+    monkeypatch.setattr(cli, 'fresh_market_item', is_fresh)
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: ['윈도우재설치 방법'])
+    assert cli.main(['--preferred', '생활정보']) == 0
+    assert capsys.readouterr().out.strip() == '건강'

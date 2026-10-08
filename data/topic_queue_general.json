@@ -16902,7 +16902,7 @@
     "keywords": [
       "정상혈압"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -18769,6 +18769,842 @@
       }
     },
     "score": 74.29,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "코세척방법",
+    "category": "건강",
+    "topic": "코세척방법: 세척액 준비부터 자세·기구 관리·주의사항까지",
+    "intent": "코세척에 쓸 물과 세척액은 어떻게 준비하고, 어떤 자세와 순서로 안전하게 세척하나요?",
+    "gap": "공식 자료에 근거한 단계별 세척 절차, 안전한 물 선택표, 기구 세척·건조 및 진료 필요 신호 체크리스트를 제공합니다.",
+    "source_url": "https://medlineplus.gov/ency/patientinstructions/000801.htm",
+    "verified_sources": [
+      {
+        "url": "https://medlineplus.gov/ency/patientinstructions/000801.htm",
+        "original_url": "https://medlineplus.gov/ency/patientinstructions/000801.htm",
+        "title": "Saline nasal washes: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-08",
+        "sha256": "9e4fbe6cd3e6e6ecc8b3564e7faf49a1dac268fd866811a565c0d87dbc2ba0e3",
+        "excerpt": "Saline nasal washes A saline nasal wash helps flush pollen, dust, and other debris from your nasal passages. It also helps remove excess mucus (snot) and adds moisture. Your nasal passages are open spaces behind your nose. Air passes through your nasal passages before entering your throat and lungs. Nasal washes can help relieve nasal allergy symptoms and help prevent sinus infections ( sinusitis ). How to use Saline Nasal Washes You can buy a device such as a neti pot, squeeze bottle, or rubber nasal bulb at your drug store. You can also buy saline solution made specifically for nasal rinses. Or, you can make your own rinse by mixing: 1 teaspoon (tsp) or 5 grams (g) canning or pickling salt (no iodine) A pinch of baking soda 2 cups (0.5 liters) warm distilled, filtered, or boiled water To use the wash: Fill the device with half the saline solution. Keeping your head over a sink or in the shower, tilt your head sideways to the left. Breathe through your open mouth. Gently pour or squeeze the solution into your right nostril. The water should come out your left nostril. You can adjust the tilt of your head to keep the solution from going into your throat or into your ears. Repeat on the other side. Gently blow your nose to remove remaining water and mucus. Important Tips You should: Be sure you only use distilled, boiled, or filtered water. While rare, some tap water may contain small germs that can cause infection. Always clean the neti pot or nasal bulb with distilled, boiled, or filtered water after every use and let it dry. Use the nasal wash before using other medicines, such as a nasal spray. This will help your nasal passages better absorb the medicine. It may take a few attempts to learn the technique of washing your nasal passages. You also may feel a slight burn at first, which should go away. If needed, use a little less salt in your saline solution. Do not use if your nasal passages are completely blocked. When to Call the Doctor Be sure to contact your health care provider if you notice: Nosebleeds Fever Pain Headaches Alternative Names Salt water washes; Nasal irrigation; Nasal lavage; Sinusitis - nasal wash References DeMuri GP, Wald ER. In: Blaser MJ, Cohen JI, Holland SM, et al, eds. Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases . 10th ed. Philadelphia, PA: Elsevier; 2026:chap 64. Ivker RS. Chronic sinusitis. In: Rakel D, Minichiello VJ, eds. Integrative Medicine . 5th ed. Philadelphia, PA: Elsevier; 2023:chap 18. Review Date 10/1/2025 Updated by: Linda J. Vorvick, MD, Clinical Professor Emeritus, Department of Family Medicine, UW Medicine, School of Medicine, University of Washington, Seattle, WA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Allergy Sinusitis Browse the Encyclopedia",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://www.cdc.gov/naegleria/prevention/sinus-rinsing.html",
+        "original_url": "https://www.cdc.gov/naegleria/prevention/sinus-rinsing.html",
+        "title": "How to Safely Rinse Sinuses | Naegleria fowleri Infection | CDC",
+        "checked_on": "2026-10-08",
+        "sha256": "cfaa8b3d01f2149ae01367dd239f08711fa33dcff46a94ec2a40073fcc984bc0",
+        "excerpt": "How to Safely Rinse Sinuses July 16, 2025 Español Key points Although rare, people have died from rinsing their sinuses with tap or faucet water containing the germs Naegleria fowleri and Acanthamoeba . When rinsing your sinuses or nasal passages, use store-bought distilled or sterilized water, or tap or faucet water that's been boiled and cooled. Overview When immediate care is needed Seek medical attention right away if you or a loved one develops a headache, fever, confusion, or vomiting after rinsing your sinuses or nasal passages. Many people rinse their sinuses and nasal passages. Some do it to ease symptoms of colds or allergies. Ritual nasal rinsing is common in some religious practices, including Islam, as well as yoga and ayurveda. Germs such as the amebas Naegleria fowleri and Acanthamoeba can grow in public and private water tanks and pipes. They can also grow in the pipes and water heaters in some homes and buildings. Naegleria fowleri and Acanthamoeba can pose a serious risk to your health if they are in the water you use to rinse your sinuses or nasal passages. If the amebas go up the nose and to the brain, they can cause nearly always fatal brain infections. Although rare, people have died from rinsing their sinuses with tap water containing Naegleria fowleri and Acanthamoeba. If you rinse your sinuses or nasal passages, take steps to make sure your water is safe from Naegleria fowleri and Acanthamoeba . Use distilled, sterile, or boiled water When rinsing your sinuses or nasal passages, use store-bought water that is labeled \"distilled\" or \"sterile.\" You can also use water you get from the tap or faucet that's been boiled and cooled. Always use distilled, sterile, or boiled and cooled water for sinus or nasal rinsing. Steps for boiling tap water Bring water to a rolling boil for 1 minute (at elevations above 6,500 feet, boil for 3 minutes). Let the water cool. Store unused boiled water in clean, sanitized containers with tight covers. Disinfecting water for nasal rinsing If none of the options above are available, disinfect your water with unscented liquid household chlorine bleach. How much bleach you use will depend on the bleach, the amount of water you're disinfecting, and whether the water is clear or cloudy and murky (turbid). Particles in cloudy and murky water may prevent chlorine from killing Naegleria fowleri . Note: The protocol below is intended only for sinus or nasal rinsing, not for disinfecting drinking water. It uses a higher level of bleach than recommended for drinking water. See how much bleach to add to your water in the tables below. Steps for disinfecting water If the water is cloudy or murky, first filter it through a clean cloth, paper towel, or coffee filter. Another option is to let it settle. Then draw off the clear water and go to the next step. With a medicine dropper, add the recommended number of drops of unscented liquid household chlorine bleach for the amount of water to be disinfected. (See table below). Stir the mixture well and let it stand for at least 30 minutes. Store disinfected water in clean, sanitized, covered containers. Disinfecting household bleach with 4% to 5.9% concentration of sodium hypochlorite Amount of water 1 quart or liter 5 drops of bleach 1 gallon 20 drops of bleach Note: If water is cloudy, murky, or very cold, double the amount of bleach. Disinfecting household bleach with 6% to 8.25% concentration of sodium hypochlorite Amount of water 1 quart or liter 4 drops of bleach 1 gallon 13 drops of bleach Note: If water is cloudy, murky, or very cold, double the amount of bleach. If liquid bleach is not available, solid chlorine tablets or powder may be used. Two common forms that may be available are chlorinated isocyanurates and calcium hypochlorite. Follow the manufacturer's instructions. Resources Safe Ritual Nasal Rinsing (English) Safe Ritual Nasal Rinsing (English) May 14, 2024 Download Download Safe Ritual Nasal Rinsing (Arabic) Safe Ritual Nasal Rinsing (Arabic) May 13, 2024 Download Download Safe Ritual Nasal Rinsing (Urdu) Thumbnail image for Safe Ritual Nasal Rinsing (Urdu) May 13, 2024 Download Download On This Page Overview Use distilled, sterile, or boiled water Disinfecting water for nasal rinsing Resources July 16, 2025 Sources Print Share Facebook LinkedIn Twitter Syndicate Content Source: National Center for Emerging and Zoonotic Infectious Diseases (NCEZID) Sources Acanthamoeba Infection and Nasal Rinsing, United States, 1994–2022 Primary amebic meningoencephalitis deaths associated with sinus irrigation using contaminated tap water Notes from the field: primary amebic meningoencephalitis associated with ritual nasal rinsing--St. Thomas, U.S. Virgin Islands, 2012",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://mobile.hidoc.co.kr/healthqna/view/C0000988322",
+      "https://health.chosun.com/site/data/html_dir/2019/09/26/2019092601726.html"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 2630,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "NMN",
+        "capturedAt": "2026-10-08T05:14:35.371Z",
+        "expiresAt": "2026-10-09T05:14:35.371Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-08",
+          "latestPeriod": "2026-10-07",
+          "previousPeriod": "2026-10-06",
+          "baselineStart": "2026-09-30",
+          "baselineEnd": "2026-10-06",
+          "latestRatio": 100,
+          "previousRatio": 81.97097,
+          "baselineMean": 72.48717142857143,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 21.99440850828044,
+          "baselinePct": 37.95544512112685,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 24,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-08T05:14:45.044Z",
+          "measuredAt": "2026-10-08T05:14:45.359Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "NMN",
+          "monthlyPc": 7310,
+          "monthlyMobile": 25600,
+          "monthlyTotal": 32910,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-08T05:15:06.194Z",
+        "expiresAt": "2026-10-09T05:13:24.845Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 172,
+          "exportedCount": 80,
+          "truncatedCount": 92
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 5,
+          "missingPreviousDay": 3,
+          "insufficientBaseline": 2
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 37731219514,
+        "artifactId": 11530305731,
+        "headSha": "985831e9592d34e78fa869a67f5c4f0f1a486e20",
+        "sourceRunCreatedAt": "2026-10-08T05:12:32Z"
+      },
+      "relatedKeyword": "코세척방법",
+      "relatedMonthly": 2630,
+      "relatedMeasuredAt": "2026-10-08T07:56:29.470411+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://medlineplus.gov/ency/patientinstructions/000801.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/naegleria/prevention/sinus-rinsing.html",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.fda.gov/consumers/consumer-updates/rinsing-your-sinuses-neti-pots-safe",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "코 세척 방법",
+    "organic_domains": [
+      "widocs.com",
+      "www.namu.moe",
+      "m.namu.moe",
+      "mobile.hidoc.co.kr",
+      "v.daum.net",
+      "health.chosun.com",
+      "v.daum.net",
+      "purluck.tistory.com",
+      "www.documents.philips.com",
+      "doctornow.co.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://widocs.com/wiki/%EC%BD%94-%EC%84%B8%EC%B2%99/",
+        "domain": "widocs.com",
+        "title": "코 세척 뜻과 정리 - 용어위키 | 위닥스",
+        "snippet": "코 세척은 생리식염수로 비강의 콧물·딱지·먼지·알레르겐을 씻어내는 방법으로, 비염·비부비동염과 코 수술 후 관리에 활용됩니다. ... 코가 완전히 막혀 식염수가 전혀 통과하지 않거나 심한 코피가 지속되는 경우,"
+      },
+      {
+        "url": "https://www.namu.moe/w/%EC%BD%94%20%EC%84%B8%EC%B2%99",
+        "domain": "www.namu.moe",
+        "title": "코 세척",
+        "snippet": "세척 방법 6. ... 특히 실수하면 귀에 물이 들어가 문제가 생길 수 있고, 오랜 기간 동안 너무 자주 세척할 경우 코 내부의 점액이 너무 없어져서"
+      },
+      {
+        "url": "https://m.namu.moe/w/%EC%BD%94%20%EC%84%B8%EC%B2%99",
+        "domain": "m.namu.moe",
+        "title": "코 세척",
+        "snippet": "증상별 코세척 방법 | Can Saline Irrigation Help Nasal Allergies? ... 코 세척을 제대로 해본 사람이라면 코 세척 애찬론자가 될 수밖에 없는데, 그게 그럴 것이"
+      },
+      {
+        "url": "https://mobile.hidoc.co.kr/healthqna/view/C0000988322",
+        "domain": "mobile.hidoc.co.kr",
+        "title": "코 세척 부작용 있을까요? | 건강Q&A",
+        "snippet": "코 세척 시 중이염을 막기 위해 세척액을 강하게 주입하거나 침을 삼키지 말고 ... 코 세척의 부작용과 안전한 방법"
+      },
+      {
+        "url": "https://v.daum.net/v/20230118160114248",
+        "domain": "v.daum.net",
+        "title": "비염에 좋다는 코 세척, ‘이렇게’ 해야 효과 있어 [코/목/귀 상담소]",
+        "snippet": "하이닥 이비인후과 상담의사 권오진 원장(핑이비인후과의원)은 “코 세척은 제대로 된 방법으로 시행한다면 부작용 없이 코 불편감을 줄이고 코 질환 치료에 도움을 줄 수 있는 효과적인 치료법”이라며,"
+      },
+      {
+        "url": "https://health.chosun.com/site/data/html_dir/2019/09/26/2019092601726.html",
+        "domain": "health.chosun.com",
+        "title": "비염에 효과적인 '코 세척' 제대로 하는 방법 - 헬스조선",
+        "snippet": "비염에 효과적인 '코 세척' 제대로 하는 방법 ... 세척할 때는 주사기(20~100㏄, 바늘이 없고, 코 세척용 튜브가 있는 것)나 코 세척 전용 기구를 준비한다."
+      },
+      {
+        "url": "https://v.daum.net/v/0Tv1HhD7UN",
+        "domain": "v.daum.net",
+        "title": "증상별 코 세척 방법, 정확히 알아야",
+        "snippet": "코 세척 방법과 세척액 등은 어디를 가도 쉽게 찾을 수 있는 정보이지만, 증상에 따른 정확한 코 세척 방향에 대해서는 잘 모를 때가 많다.코 세척의 목적은"
+      },
+      {
+        "url": "https://purluck.tistory.com/218",
+        "domain": "purluck.tistory.com",
+        "title": "코 세척 올바른 방법: 단계별 완벽 가이드 (비염·코막힘 예방)",
+        "snippet": "> 💰 절약 팁: 약국에서 파는 코 세척용 분말 가루와 미지근한 정제수를 섞어 쓰면 비용이 훨씬 절약돼요. ... 코 세척은 꾸준히 하는 것이 중요하지만, 방법과"
+      },
+      {
+        "url": "https://www.documents.philips.com/assets/Instruction%20for%20Use/20260330/44e27a7aa1624412b77cb41d00dc9480.pdf",
+        "domain": "www.documents.philips.com",
+        "title": "L1117325b10.pdf",
+        "snippet": "매주: 직접이 아닌 부분을 손세척하십시오. ... 5 올바른 착용 방법 ... 마스크 착용 전 설명을 먼저 읽고 코의 폭에 맞는 코 부분의 개체치를 선택합니다."
+      },
+      {
+        "url": "https://doctornow.co.kr/content/qna/42dcb26973484c68bc7fac686705d2a4",
+        "domain": "doctornow.co.kr",
+        "title": "후비루 있을 때 코 세척 방법이 다른가요? - 닥터나우",
+        "snippet": "후비루가 있는 경우에도 보통의 코 세척 방법, 즉 한쪽 코를 세척하고 반대 코로 나오게 하는 방법으로 하면 되는지, 아니면 좀 다른 방식의 코 세척이 필요한지"
+      }
+    ],
+    "dominant_result_ratio": 0.1111111111111111,
+    "score_components": {
+      "demand": 27.36,
+      "organic_opportunity": 27.65,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 6,
+    "selected_at": "2026-10-08T07:56:29.470411+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "코세척방법"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "코세척방법",
+      "executed_query": "코 세척 방법",
+      "topic": "코세척방법: 세척액 준비부터 자세·기구 관리·주의사항까지",
+      "intent": "코세척에 쓸 물과 세척액은 어떻게 준비하고, 어떤 자세와 순서로 안전하게 세척하나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-08T07:56:29.470411+00:00",
+      "result_count": 10,
+      "domain_count": 8,
+      "dominant_ratio": 0.1111111111111111,
+      "search_review": {
+        "version": 1,
+        "query": "코세척방법",
+        "executed_query": "코 세척 방법",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-08T07:56:29.470411+00:00",
+        "raw_sha256": "78e20b72e8d3c40359d998a0953ff12cf46fd9a4d904e3efc7564ef39f329de1",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "코 세척은 생리식염수로 비강의 콧물·딱지·먼지·알레르겐을 씻어내는 방법으로, 비염·비부비동염과 코 수술 후 관리에 활용됩니다. ... 코가 완전히 막혀 식염수가 전혀 통과하지 않거나 심한 코피가 지속되는 경우,"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "세척 방법 6. ... 특히 실수하면 귀에 물이 들어가 문제가 생길 수 있고, 오랜 기간 동안 너무 자주 세척할 경우 코 내부의 점액이 너무 없어져서"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "증상별 코세척 방법 | Can Saline Irrigation Help Nasal Allergies? ... 코 세척을 제대로 해본 사람이라면 코 세척 애찬론자가 될 수밖에 없는데, 그게 그럴 것이"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "코 세척 시 중이염을 막기 위해 세척액을 강하게 주입하거나 침을 삼키지 말고 ... 코 세척의 부작용과 안전한 방법"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "비염에 좋다는 코 세척, ‘이렇게’ 해야 효과 있어 [코/목/귀 상담소]"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "비염에 효과적인 '코 세척' 제대로 하는 방법 ... 세척할 때는 주사기(20~100㏄, 바늘이 없고, 코 세척용 튜브가 있는 것)나 코 세척 전용 기구를 준비한다."
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "증상별 코 세척 방법, 정확히 알아야"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "코 세척 올바른 방법: 단계별 완벽 가이드 (비염·코막힘 예방)"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "매주: 직접이 아닌 부분을 손세척하십시오. ... 5 올바른 착용 방법 ... 마스크 착용 전 설명을 먼저 읽고 코의 폭에 맞는 코 부분의 개체치를 선택합니다."
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "후비루가 있는 경우에도 보통의 코 세척 방법, 즉 한쪽 코를 세척하고 반대 코로 나오게 하는 방법으로 하면 되는지, 아니면 좀 다른 방식의 코 세척이 필요한지"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 9,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "relevance_ratio": 0.9,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.1111111111111111,
+        "site_concentration": 0.2222222222222222,
+        "organic_opportunity": 27.65
+      },
+      "scope": "full_keyword",
+      "target_keyword": "코세척방법",
+      "matches": [
+        {
+          "result_index": 3,
+          "quote": "코 세척의 부작용과 안전한 방법"
+        },
+        {
+          "result_index": 5,
+          "quote": "비염에 효과적인 '코 세척' 제대로 하는 방법"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-08T07:56:29.470411+00:00",
+      "input_sha256": "cb743d87be13a4b33d058c8d09ff7ec86785075184f55fb0da59885caa6d573d",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "코세척방법",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "Saline nasal washes A saline nasal wash helps flush pollen, dust, and other debris from your nasal passages. It also helps remove excess mucus (snot) and adds moisture. Your nasal passages are open spaces behind your nose. Air passes through your nasal passages before entering your throat and lungs. Nasal washes can help relieve nasal allergy symptoms and help prevent sinus infections ( sinusitis ). How to use Saline Nasal Washes You can buy a device such as a neti pot, squeeze bottle, or rubber nasal bulb at your drug store. You can also buy saline solution made specifically for nasal rinses. Or, you can make your own rinse by mixing: 1 teaspoon (tsp) or 5 grams (g) canning or pickling salt (no iodine) A pinch of baking soda 2 cups (0.5 liters) warm distilled, filtered, or boiled water To use the wash: Fill the device with half the saline solution. Keeping your head over a sink or in th",
+            "entity": "Saline nasal washes",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "How to Safely Rinse Sinuses July 16, 2025 Español Key points Although rare, people have died from rinsing their sinuses with tap or faucet water containing the germs Naegleria fowleri and Acanthamoeba . When rinsing your sinuses or nasal passages, use store-bought distilled or sterilized water, or tap or faucet water that's been boiled and cooled. Overview When immediate care is needed Seek medical attention right away if you or a loved one develops a headache, fever, confusion, or vomiting after rinsing your sinuses or nasal passages. Many people rinse their sinuses and nasal passages. Some do it to ease symptoms of colds or allergies. Ritual nasal rinsing is common in some religious practices, including Islam, as well as yoga and ayurveda. Germs such as the amebas Naegleria fowleri and Acanthamoeba can grow in public and private water tanks and pipes. They can also grow in the pipes an",
+            "entity": "sinuses or nasal passages",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "코세척에 사용할 물은 어떻게 준비하나요?",
+            "answer": "증류수·멸균수 또는 끓여 식힌 물을 사용합니다. 수돗물은 1분, 고도 6,500피트 초과에서는 3분 끓입니다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "r sinuses or nasal passages, use store-bought water that is labeled \"distilled\" or \"sterile.\" You can also use water you get from the tap or faucet that's been boiled and cooled. Always use distilled, sterile, or boiled and cooled water for sinus or nasal rinsing. Steps for boiling tap water Bring water to a rolling boil for 1 minute (at elevations above 6,500 feet, boil for 3 minutes). Let the water cool. Store unused boiled water in clean, sanitized containers with tight covers. Disinfecting water for nasal rinsing If none of the options above are available, disinfect your water with unscented liquid household chlorine bleach. How much bleach you use will depend on the bleach, the amount of water you're disinfecting, and whether the water is clear or cloudy and murky (turbid). Particles in cloudy and murky water may prevent chlorine from killing Naegleria fowleri . Note: The protocol b"
+          },
+          {
+            "facet": "세척액과 도구는 어떻게 준비하나요?",
+            "answer": "코세척용 식염수와 전용 기구를 준비합니다. 직접 만들 때는 따뜻한 안전한 물 0.5L에 무요오드 소금 5g과 소량의 베이킹소다를 섞습니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Saline nasal washes A saline nasal wash helps flush pollen, dust, and other debris from your nasal passages. It also helps remove excess mucus (snot) and adds moisture. Your nasal passages are open spaces behind your nose. Air passes through your nasal passages before entering your throat and lungs. Nasal washes can help relieve nasal allergy symptoms and help prevent sinus infections ( sinusitis ). How to use Saline Nasal Washes You can buy a device such as a neti pot, squeeze bottle, or rubber nasal bulb at your drug store. You can also buy saline solution made specifically for nasal rinses. Or, you can make your own rinse by mixing: 1 teaspoon (tsp) or 5 grams (g) canning or pickling salt (no iodine) A pinch of baking soda 2 cups (0.5 liters) warm distilled, filtered, or boiled water To use the wash: Fill the device with half the saline solution. Keeping your head over a sink or in th"
+          },
+          {
+            "facet": "어떤 자세와 순서로 코를 세척하나요?",
+            "answer": "싱크대 위에서 머리를 옆으로 기울이고 입으로 호흡하며 부드럽게 주입합니다. 반대쪽도 반복하고 코를 살살 풉니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ters) warm distilled, filtered, or boiled water To use the wash: Fill the device with half the saline solution. Keeping your head over a sink or in the shower, tilt your head sideways to the left. Breathe through your open mouth. Gently pour or squeeze the solution into your right nostril. The water should come out your left nostril. You can adjust the tilt of your head to keep the solution from going into your throat or into your ears. Repeat on the other side. Gently blow your nose to remove remaining water and mucus. Important Tips You should: Be sure you only use distilled, boiled, or filtered water. While rare, some tap water may contain small germs that can cause infection. Always clean the neti pot or nasal bulb with distilled, boiled, or filtered water after every use and let it dry. Use the nasal wash before using other medicines, such as a nasal spray. This will help your nasal"
+          },
+          {
+            "facet": "사용한 세척 기구는 어떻게 관리하나요?",
+            "answer": "매번 사용 후 증류수나 끓인 물 등 안전한 물로 기구를 씻고 건조합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ters) warm distilled, filtered, or boiled water To use the wash: Fill the device with half the saline solution. Keeping your head over a sink or in the shower, tilt your head sideways to the left. Breathe through your open mouth. Gently pour or squeeze the solution into your right nostril. The water should come out your left nostril. You can adjust the tilt of your head to keep the solution from going into your throat or into your ears. Repeat on the other side. Gently blow your nose to remove remaining water and mucus. Important Tips You should: Be sure you only use distilled, boiled, or filtered water. While rare, some tap water may contain small germs that can cause infection. Always clean the neti pot or nasal bulb with distilled, boiled, or filtered water after every use and let it dry. Use the nasal wash before using other medicines, such as a nasal spray. This will help your nasal"
+          },
+          {
+            "facet": "언제 세척을 피하거나 의료진에게 상담해야 하나요?",
+            "answer": "코가 완전히 막혔다면 사용하지 않습니다. 코피·발열·통증·두통이 나타나면 의료진에게 연락합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "d, or filtered water after every use and let it dry. Use the nasal wash before using other medicines, such as a nasal spray. This will help your nasal passages better absorb the medicine. It may take a few attempts to learn the technique of washing your nasal passages. You also may feel a slight burn at first, which should go away. If needed, use a little less salt in your saline solution. Do not use if your nasal passages are completely blocked. When to Call the Doctor Be sure to contact your health care provider if you notice: Nosebleeds Fever Pain Headaches Alternative Names Salt water washes; Nasal irrigation; Nasal lavage; Sinusitis - nasal wash References DeMuri GP, Wald ER. In: Blaser MJ, Cohen JI, Holland SM, et al, eds. Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases . 10th ed. Philadelphia, PA: Elsevier; 2026:chap 64. Ivker RS. Chronic sinusitis. "
+          },
+          {
+            "facet": "세척 후 즉시 진료가 필요한 신호는 무엇인가요?",
+            "answer": "세척 후 두통·발열·혼란·구토가 발생하면 즉시 진료를 받습니다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "How to Safely Rinse Sinuses July 16, 2025 Español Key points Although rare, people have died from rinsing their sinuses with tap or faucet water containing the germs Naegleria fowleri and Acanthamoeba . When rinsing your sinuses or nasal passages, use store-bought distilled or sterilized water, or tap or faucet water that's been boiled and cooled. Overview When immediate care is needed Seek medical attention right away if you or a loved one develops a headache, fever, confusion, or vomiting after rinsing your sinuses or nasal passages. Many people rinse their sinuses and nasal passages. Some do it to ease symptoms of colds or allergies. Ritual nasal rinsing is common in some religious practices, including Islam, as well as yoga and ayurveda. Germs such as the amebas Naegleria fowleri and Acanthamoeba can grow in public and private water tanks and pipes. They can also grow in the pipes an"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "ters) warm distilled, filtered, or boiled water To use the wash: Fill the device with half the saline solution. Keeping your head over a sink or in the shower, tilt your head sideways to the left. Breathe through your open mouth. Gently pour or squeeze the solution into your right nostril. The water should come out your left nostril. You can adjust the tilt of your head to keep the solution from going into your throat or into your ears. Repeat on the other side. Gently blow your nose to remove remaining water and mucus. Important Tips You should: Be sure you only use distilled, boiled, or filtered water. While rare, some tap water may contain small germs that can cause infection. Always clean the neti pot or nasal bulb with distilled, boiled, or filtered water after every use and let it dry. Use the nasal wash before using other medicines, such as a nasal spray. This will help your nasal",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 70.01,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "숙취해소법",
+    "category": "건강",
+    "topic": "숙취해소법: 수분·휴식과 음식의 효과, 피해야 할 속설",
+    "intent": "술 마신 다음 날 숙취를 어떻게 관리하며, 음식·음료와 흔한 해소법은 실제로 효과가 있을까?",
+    "gap": "수분·휴식·음식·해장술·커피의 근거 비교표와 진통제 주의 체크리스트로 수분 보충과 숙취 치료 효과를 구분한다.",
+    "source_url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/hangovers",
+    "verified_sources": [
+      {
+        "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/hangovers",
+        "original_url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/hangovers",
+        "title": "Hangovers | National Institute on Alcohol Abuse and Alcoholism (NIAAA)",
+        "checked_on": "2026-10-08",
+        "sha256": "de15291fac1e87961b72d50a3c51b187040e1940e00d0b0fe5908ad0e19b8bfb",
+        "excerpt": "Hangovers Image For many people, a night of drinking can lead to a painful morning after and the dreaded effects of a hangover. What does science tell us about this phenomenon? What causes the typical symptoms of a hangover? And the question perhaps as old as hangovers themselves—are there any real remedies? What Is a Hangover? A hangover refers to a set of symptoms that occur as a consequence of drinking too much. Typical symptoms include fatigue, weakness, thirst, headache, muscle aches, nausea, stomach pain, vertigo, sensitivity to light and sound, anxiety, irritability, sweating, and increased blood pressure. A hangover can vary from person to person. Other Substances That Contribute to Hangover Symptoms Alcohol is the main culprit in a hangover, but other components of alcoholic beverages might contribute to hangover symptoms or make a hangover worse. Congeners are compounds, other than ethyl alcohol, that are produced during fermentation. These substances contribute to the taste and smell of alcoholic beverages. Darker spirits, such as bourbon, which tend to have higher levels of congeners than clear spirits, could worsen hangover symptoms for some people. Sulfites are compounds that are added to wine as preservatives. People who have a sensitivity to sulfites may experience a headache after drinking wine. What Causes Hangover Symptoms? A number of factors can contribute to hangovers: Mild dehydration: Alcohol suppresses the release of vasopressin, a hormone produced by the brain that sends signals to the kidneys causing them to retain fluid. As a result, alcohol increases urination and excess loss of fluids. The mild dehydration that results likely contributes to hangover symptoms such as thirst, fatigue, and a headache. Disrupted sleep: People may fall asleep faster after drinking alcohol, but their sleep is fragmented, and they tend to wake up earlier. This contributes to fatigue, as well as lost productivity. Gastrointestinal irritation: Alcohol directly irritates the lining of the stomach and increases acid release. This can lead to nausea and stomach discomfort. Inflammation: Alcohol increases inflammation in the body. Inflammation contributes to the malaise that people feel when they are sick, so it may play a role in hangover symptoms as well. Acetaldehyde exposure: Alcohol metabolism, primarily by the liver, creates the compound acetaldehyde, a toxic, short-lived byproduct, which contributes to inflammation in the liver, pancreas, brain, gastrointestinal tract, and other organs. Mini-withdrawal: While drinking, individuals may feel calmer, more relaxed, and even euphoric, but the brain quickly adjusts to those positive effects as it tries to maintain balance. As a result, when the buzz wears off, people can feel more restless and anxious than before they drank. Because individuals are so different, it is difficult to predict how many drinks will cause a hangover. Any time people drink to intoxication, there is a chance they could have a hangover the next day. When Does a Hangover Peak and How Long Does It Last? Hangover symptoms peak when the blood alcohol concentration in the body returns to about zero. The symptoms can last 24 hours or longer. Are Hangovers Dangerous or Just Painful? Hangovers can be both painful and dangerous. During a hangover, a person’s attention, decision-making, and muscle coordination can all be impaired. Also, the ability to perform important tasks, such as driving, operating machinery, or caring for others can be negatively affected. Common Myths About Hangovers Myth: Certain actions, such as drinking coffee or taking a shower, can prevent or cure a hangover. Fact: The only way to completely avoid a hangover is to not drink alcohol at all or to keep alcohol intake to a minimum. There is no cure for a hangover other than time. Myth: The order of drinks will affect a hangover—as captured in the expression, “beer before liquor, never sicker.” Fact: In general, the more alcohol a person drinks, the worse the hangover will be. This is true regardless of whether a person drinks beer, wine, distilled spirits, or a combination of these. Myth: Having an alcoholic drink in the morning after a night of drinking will help avoid a hangover—a practice known colloquially as “a hair of the dog that bit you.” Fact: While this might temporarily minimize some symptoms, it could contribute to and prolong the malaise and other symptoms of the hangover. Are There Any Remedies for a Hangover? Although many remedies for alleviating hangovers are mentioned on the web and in social media, none have been scientifically proven to be effective. There is no magic potion for beating hangovers—and only time can help. A person must wait for the body to finish clearing the toxic byproducts of alcohol metabolism, to rehydrate, to heal irritated tissue, and to restore immune and brain activity to normal. There is no way to speed up the brain’s recovery from alcohol use—drinking coffee, taking a shower, or having an alcoholic beverage the next morning will not cure a hangover. Some people take over-the-counter pain relievers (often acetaminophen) before going to bed to minimize hangovers. It is important to recognize that the combination of alcohol and acetaminophen can be toxic to the liver. Like alcohol, certain over-the-counter pain relievers, including aspirin and ibuprofen, can increase acid release and irritate the lining of the stomach. Proceed with caution when using these medications before or after consuming alcohol. To help ease their hangover symptoms, some people turn to electrolyte-rich sports drinks or other products, or even intravenous (IV) treatments, in an effort to treat electrolyte imbalance caused by increased urination and fluid loss as a result of drinking. Research has not found a correlation between the extent of electrolyte disruptions and the severity of hangovers, or the impact of added electrolytes on hangover severity. In most people, the body will quickly restore electrolyte balance once the effects of alcohol subside. Ultimately, the only surefire remedy for a hangover is to avoid getting one by drinking in moderation or choosing not to drink. For more information, visit Alcohol's Effects on Health .",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/002041.htm",
+        "original_url": "https://medlineplus.gov/ency/article/002041.htm",
+        "title": "Hangover treatment: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-08",
+        "sha256": "2b147fc8e529b1be942208e63e03821e47ebebaef7dd36eab7aa1f423cfcbe14",
+        "excerpt": "Hangover treatment A hangover is the unpleasant symptoms a person has after drinking too much alcohol. Symptoms can include: Headache and dizziness Nausea Fatigue Sensitivity to light and sound Rapid heartbeat Depression , anxiety and irritability Tips for safe drinking and preventing a hangover: Drink alcohol-containing drinks slowly and on a full stomach. If you are a small person, the effects of alcohol are greater on you than on a larger person. Drink alcohol-containing drinks in moderation. Women should have no more than 1 drink per day and men no more than 2 drinks per day. One drink is defined as 12 fluid ounces (360 milliliters) of beer that has about 5% alcohol, 5 fluid ounces (150 milliliters) of wine that has about 12% alcohol, or 1 1/2 fluid ounces (45 milliliters) of 80-proof (40% alcohol) liquor. Drink a glass of water in between drinks containing alcohol. This will help you drink less alcohol and decrease dehydration from drinking alcohol. Avoid alcohol completely to prevent hangovers. If you have a hangover, consider the following for relief: Certain measures, such as fruit juice or honey, have been recommended to treat a hangover. But there is very little scientific evidence to show that such measures help. Recovery from a hangover is usually just a matter of time. Most hangovers are gone within 24 hours. Electrolyte solutions (such as sports drinks) and bouillon soup are good for replacing the salt and potassium you lose from drinking alcohol. Get plenty of rest. Even if you feel good the morning after heavy drinking, the lasting effects of alcohol reduce your ability to perform at your best. Avoid taking any medicines for your hangover that contain acetaminophen (such as Tylenol). Acetaminophen may cause liver damage when combined with alcohol. Images Hangover remedies References Finnell JT. Alcohol-related disease. In: Walls RM, ed. Rosen's Emergency Medicine: Concepts and Clinical Practice . 10th ed. Philadelphia, PA: Elsevier; 2023:chap 137. O'Connor PG. Alcohol use disorders. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 364. Review Date 5/19/2025 Updated by: Jacob Berman, MD, MPH, Clinical Assistant Professor of Medicine, Division of General Internal Medicine, University of Washington School of Medicine, Seattle, WA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://trendmetriclab.com/guides/hangover-cure-guide/",
+      "https://www.gqkorea.co.kr/2025/01/27/soju/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 9150,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "NMN",
+        "capturedAt": "2026-10-08T05:14:35.371Z",
+        "expiresAt": "2026-10-09T05:14:35.371Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-08",
+          "latestPeriod": "2026-10-07",
+          "previousPeriod": "2026-10-06",
+          "baselineStart": "2026-09-30",
+          "baselineEnd": "2026-10-06",
+          "latestRatio": 100,
+          "previousRatio": 81.97097,
+          "baselineMean": 72.48717142857143,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 21.99440850828044,
+          "baselinePct": 37.95544512112685,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 24,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-08T05:14:45.044Z",
+          "measuredAt": "2026-10-08T05:14:45.359Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "NMN",
+          "monthlyPc": 7310,
+          "monthlyMobile": 25600,
+          "monthlyTotal": 32910,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-08T05:15:06.194Z",
+        "expiresAt": "2026-10-09T05:13:24.845Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 172,
+          "exportedCount": 80,
+          "truncatedCount": 92
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 5,
+          "missingPreviousDay": 3,
+          "insufficientBaseline": 2
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 37731219514,
+        "artifactId": 11530305731,
+        "headSha": "985831e9592d34e78fa869a67f5c4f0f1a486e20",
+        "sourceRunCreatedAt": "2026-10-08T05:12:32Z"
+      },
+      "relatedKeyword": "숙취해소법",
+      "relatedMonthly": 9150,
+      "relatedMeasuredAt": "2026-10-08T07:56:29.470411+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/hangovers",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/002041.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/patientinstructions/000122.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/dehydration.html",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-dangers-of-alcohol-overdose",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "숙취 해소법",
+    "organic_domains": [
+      "trendmetriclab.com",
+      "www.hankyung.com",
+      "www.yes24.com",
+      "www.yna.co.kr",
+      "m.yes24.com",
+      "www.gqkorea.co.kr",
+      "www.gqkorea.co.kr",
+      "www.kyeonggi.com",
+      "seoulwelfare.tistory.com",
+      "yuyu.co.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://trendmetriclab.com/guides/hangover-cure-guide/",
+        "domain": "trendmetriclab.com",
+        "title": "숙취 해소법 완벽 가이드 — 과학적으로 검증된 방법과 속설 구분 | 2026년 최신 가이드 | TrendMetricLab",
+        "snippet": "누구나 한 번쯤은 겪어본 숙취의 고통이죠. ... 정상적으로는 아세트알데히드가 다시 아세트산으로 분해되면서 무해해지는데, 음주량이 너무 많으면 분해 속도가 따라가지 못하면서 체내에 쌓이는 거예요.특히 한국인의 약"
+      },
+      {
+        "url": "https://www.hankyung.com/article/1998062501741",
+        "domain": "www.hankyung.com",
+        "title": "(5) 숙취 해소법 | 한국경제",
+        "snippet": "# [건강만사성 '생활의학'] (5) '숙취 해소법' ... 또 틈틈히 물을 많이 마시면 체내에 남아있는 알코올이 빨리 배설되므로 ... 숙취가 심하면 미지근한 물에 볶은 소금과 마그밀을"
+      },
+      {
+        "url": "https://www.yes24.com/product/goods/141696240",
+        "domain": "www.yes24.com",
+        "title": "하마의 숙취 해소법 | 하마 | 너른산 - 예스24",
+        "snippet": "<B>매일 밤 나는 생각해요.<br/>수많은 색깔 중 하나로서 받아들이고 사랑할 것이며,<br/>지금까지 흘린 눈물이 행복으로 이어줄 거라고.<br/>그래서 매일 다짐해요.<br/>‘나’답게 살아가기로….</b><br/><br/>‘행복한 만화책방’ 시리즈 다섯 번째 단행본이자 2025년을 여는"
+      },
+      {
+        "url": "https://www.yna.co.kr/view/AKR20171130175900797",
+        "domain": "www.yna.co.kr",
+        "title": "[카드뉴스] 배즙·초코우유·피클…소문난 숙취 해소법 체험해봤더니 | 연합뉴스",
+        "snippet": "숙취란 술에 취한 뒤 하루 이상 지속하는 특이한 불쾌감을 일컫죠. ... 알코올 농도를 희석하고 소변을 통해 알코올이 몸 밖으로 빠져나가도록 하죠. ... 다양한 방법을 직접"
+      },
+      {
+        "url": "https://m.yes24.com/Goods/Detail/141696240",
+        "domain": "m.yes24.com",
+        "title": "하마의 숙취 해소법 | 하마 | 너른산 - 예스24",
+        "snippet": "‘행복한 만화책방’ 시리즈 다섯 번째 단행본이자 2025년을 여는 작품으로, 5.6만 명 팔로워의 인스타툰 작가 ‘하마’의 작품을 갈무리하여 엮은 《하마의 숙취 해소법》이 출간되었다. ... 긴장감 속에서"
+      },
+      {
+        "url": "https://www.gqkorea.co.kr/2025/01/27/soju/",
+        "domain": "www.gqkorea.co.kr",
+        "title": "어제의 나를 반성하며, 술 마신 다음 날 숙취 해소법 | 지큐 코리아 (GQ Korea)",
+        "snippet": "# 어제의 나를 반성하며, 술 마신 다음 날 숙취 해소법 ... 오이 : 오이는 수분과 전해질 함량이 높아 숙취 해소에 도움을 준다. ... 가뜩이나 간이"
+      },
+      {
+        "url": "https://www.gqkorea.co.kr/2024/01/15/%EC%9E%98%EB%AA%BB-%EC%95%8C%EB%A0%A4%EC%A7%84-%EC%88%99%EC%B7%A8-%EC%98%88%EB%B0%A9-%EB%B0%8F-%ED%95%B4%EC%86%8C%EB%B2%95-7/",
+        "domain": "www.gqkorea.co.kr",
+        "title": "잘못 알려진 숙취 예방 및 해소법 7 | 지큐 코리아 (GQ Korea)",
+        "snippet": "숙취 해소한답시고 해서는 안 될 잘못된 숙취 해소법. ... 위스키처럼 독한 술은 숙취를 불러올 수 있는 알코올 발효의 부산물, 즉 착향료를 함유하고 있어 이러한 종류의"
+      },
+      {
+        "url": "https://www.kyeonggi.com/article/200412170027687",
+        "domain": "www.kyeonggi.com",
+        "title": "숙취 해소법 바로알기",
+        "snippet": "* * * * * * * * # 숙취 해소법 바로알기 ... 연말 송년회 때 과음을 한 회사원 김모씨(29세·의왕시 내손동)는 다음날 해장국으로 매운 짬뽕을"
+      },
+      {
+        "url": "https://seoulwelfare.tistory.com/911",
+        "domain": "seoulwelfare.tistory.com",
+        "title": "숙취 해소법 (두통, 울렁거림, 술병났을때) | 해장에 좋은음식, 음료 | 편의점 숙취해소제 추천 순위 비교 TOP5 | 여명808 효능 | 깨수깡 효과 | 알유21 후기",
+        "snippet": "# 숙취 해소법 (두통, 울렁거림, 술병났을때) | 해장에 좋은음식, 음료 | 편의점 숙취해소제 추천 순위 비교 TOP5 | 여명808 효능 | 깨수깡 효과 | 알유21"
+      },
+      {
+        "url": "https://yuyu.co.kr/blog/ddd0711b-5ddb-435e-8f44-3756c4bf1410/",
+        "domain": "yuyu.co.kr",
+        "title": "유유제약 | 술 마신 다음 날, 해장국의 반전? 간 건강을 지키는 5가지 올바른 숙취 해소법",
+        "snippet": "간 건강을 지키는 5가지 올바른 숙취 해소법 ... 사우나 주의: 음주 직후 사우나는 탈수를 가속화하고 혈압에 무리를 줄 수 있어 피하는 것이 좋습니다. ... 숙취"
+      }
+    ],
+    "dominant_result_ratio": 0.25,
+    "score_components": {
+      "demand": 31.69,
+      "organic_opportunity": 22.5,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 6,
+    "selected_at": "2026-10-08T07:56:29.470411+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "숙취해소법"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "숙취해소법",
+      "executed_query": "숙취 해소법",
+      "topic": "숙취해소법: 수분·휴식과 음식의 효과, 피해야 할 속설",
+      "intent": "술 마신 다음 날 숙취를 어떻게 관리하며, 음식·음료와 흔한 해소법은 실제로 효과가 있을까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-08T07:56:29.470411+00:00",
+      "result_count": 10,
+      "domain_count": 8,
+      "dominant_ratio": 0.25,
+      "search_review": {
+        "version": 1,
+        "query": "숙취해소법",
+        "executed_query": "숙취 해소법",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-08T07:56:29.470411+00:00",
+        "raw_sha256": "a0af7cf3b9ff1be1064e5858ba7475f275ec712db0b5fa05e5fccb992e52d35d",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "숙취 해소법 완벽 가이드 — 과학적으로 검증된 방법과 속설 구분 | 2026년 최신 가이드 | TrendMetricLab"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "# [건강만사성 '생활의학'] (5) '숙취 해소법' ... 또 틈틈히 물을 많이 마시면 체내에 남아있는 알코올이 빨리 배설되므로 ... 숙취가 심하면 미지근한 물에 볶은 소금과 마그밀을"
+          },
+          {
+            "result_index": 2,
+            "relevant": false,
+            "quote": "<B>매일 밤 나는 생각해요.<br/>수많은 색깔 중 하나로서 받아들이고 사랑할 것이며,<br/>지금까지 흘린 눈물이 행복으로 이어줄 거라고.<br/>그래서 매일 다짐해요.<br/>‘나’답게 살아가기로….</b><br/><br/>‘행복한 만화책방’ 시리즈 다섯 번째 단행본이자 2025년을 여는"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "[카드뉴스] 배즙·초코우유·피클…소문난 숙취 해소법 체험해봤더니 | 연합뉴스"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "‘행복한 만화책방’ 시리즈 다섯 번째 단행본이자 2025년을 여는 작품으로, 5.6만 명 팔로워의 인스타툰 작가 ‘하마’의 작품을 갈무리하여 엮은 《하마의 숙취 해소법》이 출간되었다. ... 긴장감 속에서"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "# 어제의 나를 반성하며, 술 마신 다음 날 숙취 해소법 ... 오이 : 오이는 수분과 전해질 함량이 높아 숙취 해소에 도움을 준다. ... 가뜩이나 간이"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "잘못 알려진 숙취 예방 및 해소법 7 | 지큐 코리아 (GQ Korea)"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "숙취 해소법 바로알기"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "숙취 해소법 (두통, 울렁거림, 술병났을때) | 해장에 좋은음식, 음료 | 편의점 숙취해소제 추천 순위 비교 TOP5 | 여명808 효능 | 깨수깡 효과 | 알유21 후기"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "간 건강을 지키는 5가지 올바른 숙취 해소법 ... 사우나 주의: 음주 직후 사우나는 탈수를 가속화하고 혈압에 무리를 줄 수 있어 피하는 것이 좋습니다. ... 숙취"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.25,
+        "site_concentration": 0.25,
+        "organic_opportunity": 22.5
+      },
+      "scope": "full_keyword",
+      "target_keyword": "숙취해소법",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "숙취 해소법 완벽 가이드 — 과학적으로 검증된 방법과 속설 구분"
+        },
+        {
+          "result_index": 5,
+          "quote": "어제의 나를 반성하며, 술 마신 다음 날 숙취 해소법"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-08T07:56:29.470411+00:00",
+      "input_sha256": "3ec8295d84cbf95d08bb2b479cf3ca0f5b479db2a740d65bad7c72adab711b9b",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "숙취해소법",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "ave a hangover the next day. When Does a Hangover Peak and How Long Does It Last? Hangover symptoms peak when the blood alcohol concentration in the body returns to about zero. The symptoms can last 24 hours or longer. Are Hangovers Dangerous or Just Painful? Hangovers can be both painful and dangerous. During a hangover, a person’s attention, decision-making, and muscle coordination can all be impaired. Also, the ability to perform important tasks, such as driving, operating machinery, or caring for others can be negatively affected. Common Myths About Hangovers Myth: Certain actions, such as drinking coffee or taking a shower, can prevent or cure a hangover. Fact: The only way to completely avoid a hangover is to not drink alcohol at all or to keep alcohol intake to a minimum. There is no cure for a hangover other than time. Myth: The order of drinks will affect a hangover—as captured ",
+            "entity": "Hangovers",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "Hangover treatment A hangover is the unpleasant symptoms a person has after drinking too much alcohol. Symptoms can include: Headache and dizziness Nausea Fatigue Sensitivity to light and sound Rapid heartbeat Depression , anxiety and irritability Tips for safe drinking and preventing a hangover: Drink alcohol-containing drinks slowly and on a full stomach. If you are a small person, the effects of alcohol are greater on you than on a larger person. Drink alcohol-containing drinks in moderation. Women should have no more than 1 drink per day and men no more than 2 drinks per day. One drink is defined as 12 fluid ounces (360 milliliters) of beer that has about 5% alcohol, 5 fluid ounces (150 milliliters) of wine that has about 12% alcohol, or 1 1/2 fluid ounces (45 milliliters) of 80-proof (40% alcohol) liquor. Drink a glass of water in between drinks containing alcohol. This will help yo",
+            "entity": "Hangover treatment",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "숙취가 생겼을 때 수분과 휴식으로 어떻게 관리하는가?",
+            "answer": "수분·전해질 보충과 충분한 휴식을 안내할 수 있다. 회복에는 시간이 필요하며 대부분 24시간 안에 호전된다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "r 1 1/2 fluid ounces (45 milliliters) of 80-proof (40% alcohol) liquor. Drink a glass of water in between drinks containing alcohol. This will help you drink less alcohol and decrease dehydration from drinking alcohol. Avoid alcohol completely to prevent hangovers. If you have a hangover, consider the following for relief: Certain measures, such as fruit juice or honey, have been recommended to treat a hangover. But there is very little scientific evidence to show that such measures help. Recovery from a hangover is usually just a matter of time. Most hangovers are gone within 24 hours. Electrolyte solutions (such as sports drinks) and bouillon soup are good for replacing the salt and potassium you lose from drinking alcohol. Get plenty of rest. Even if you feel good the morning after heavy drinking, the lasting effects of alcohol reduce your ability to perform at your best. Avoid taking"
+          },
+          {
+            "facet": "음식이나 음료가 숙취를 치료하는가?",
+            "answer": "과일주스·꿀의 효과는 과학적 근거가 매우 적다. 스포츠음료·국물의 염분 보충을 숙취 치료와 구분해야 한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "r 1 1/2 fluid ounces (45 milliliters) of 80-proof (40% alcohol) liquor. Drink a glass of water in between drinks containing alcohol. This will help you drink less alcohol and decrease dehydration from drinking alcohol. Avoid alcohol completely to prevent hangovers. If you have a hangover, consider the following for relief: Certain measures, such as fruit juice or honey, have been recommended to treat a hangover. But there is very little scientific evidence to show that such measures help. Recovery from a hangover is usually just a matter of time. Most hangovers are gone within 24 hours. Electrolyte solutions (such as sports drinks) and bouillon soup are good for replacing the salt and potassium you lose from drinking alcohol. Get plenty of rest. Even if you feel good the morning after heavy drinking, the lasting effects of alcohol reduce your ability to perform at your best. Avoid taking"
+          },
+          {
+            "facet": "전해질을 추가로 보충하면 숙취가 줄어드는가?",
+            "answer": "전해질 이상 정도와 숙취 강도의 상관관계나 추가 전해질의 숙취 완화 효과는 연구에서 확인되지 않았다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ol and acetaminophen can be toxic to the liver. Like alcohol, certain over-the-counter pain relievers, including aspirin and ibuprofen, can increase acid release and irritate the lining of the stomach. Proceed with caution when using these medications before or after consuming alcohol. To help ease their hangover symptoms, some people turn to electrolyte-rich sports drinks or other products, or even intravenous (IV) treatments, in an effort to treat electrolyte imbalance caused by increased urination and fluid loss as a result of drinking. Research has not found a correlation between the extent of electrolyte disruptions and the severity of hangovers, or the impact of added electrolytes on hangover severity. In most people, the body will quickly restore electrolyte balance once the effects of alcohol subside. Ultimately, the only surefire remedy for a hangover is to avoid getting one by "
+          },
+          {
+            "facet": "커피·샤워·해장술로 숙취 회복을 앞당길 수 있는가?",
+            "answer": "커피·샤워·다음 날 음주는 숙취를 치료하거나 뇌의 회복을 앞당기지 못한다. 회복에는 시간이 필요하다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ough many remedies for alleviating hangovers are mentioned on the web and in social media, none have been scientifically proven to be effective. There is no magic potion for beating hangovers—and only time can help. A person must wait for the body to finish clearing the toxic byproducts of alcohol metabolism, to rehydrate, to heal irritated tissue, and to restore immune and brain activity to normal. There is no way to speed up the brain’s recovery from alcohol use—drinking coffee, taking a shower, or having an alcoholic beverage the next morning will not cure a hangover. Some people take over-the-counter pain relievers (often acetaminophen) before going to bed to minimize hangovers. It is important to recognize that the combination of alcohol and acetaminophen can be toxic to the liver. Like alcohol, certain over-the-counter pain relievers, including aspirin and ibuprofen, can increase a"
+          },
+          {
+            "facet": "숙취에 진통제를 사용할 때 무엇을 주의해야 하는가?",
+            "answer": "알코올과 아세트아미노펜 병용은 간독성 위험이 있다. 아스피린·이부프로펜은 위산 분비와 위점막 자극에 주의한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ol and acetaminophen can be toxic to the liver. Like alcohol, certain over-the-counter pain relievers, including aspirin and ibuprofen, can increase acid release and irritate the lining of the stomach. Proceed with caution when using these medications before or after consuming alcohol. To help ease their hangover symptoms, some people turn to electrolyte-rich sports drinks or other products, or even intravenous (IV) treatments, in an effort to treat electrolyte imbalance caused by increased urination and fluid loss as a result of drinking. Research has not found a correlation between the extent of electrolyte disruptions and the severity of hangovers, or the impact of added electrolytes on hangover severity. In most people, the body will quickly restore electrolyte balance once the effects of alcohol subside. Ultimately, the only surefire remedy for a hangover is to avoid getting one by "
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "ough many remedies for alleviating hangovers are mentioned on the web and in social media, none have been scientifically proven to be effective. There is no magic potion for beating hangovers—and only time can help. A person must wait for the body to finish clearing the toxic byproducts of alcohol metabolism, to rehydrate, to heal irritated tissue, and to restore immune and brain activity to normal. There is no way to speed up the brain’s recovery from alcohol use—drinking coffee, taking a shower, or having an alcoholic beverage the next morning will not cure a hangover. Some people take over-the-counter pain relievers (often acetaminophen) before going to bed to minimize hangovers. It is important to recognize that the combination of alcohol and acetaminophen can be toxic to the liver. Like alcohol, certain over-the-counter pain relievers, including aspirin and ibuprofen, can increase a",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 69.19,
     "publish_eligible": true,
     "hold_reasons": []
   }

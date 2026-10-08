@@ -460,6 +460,8 @@ def _publish_draft(post_id, env, *, affiliate_request=None):
         if brief:
             from src.market_opportunity import review_article
             issues += review_article(meta['title'], html, meta['meta_description'], brief, client.generate)
+            from src.latest_issues import review_article as review_latest_article
+            issues += review_latest_article(meta['title'], html, brief, sources, client.generate)
         return issues + review_evidence(review_html, sources, client.generate)
 
     issues = gates(body)

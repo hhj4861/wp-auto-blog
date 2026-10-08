@@ -80,7 +80,7 @@ def recover(case, *, budget=None, reasons=None, titles=(), deadline=float('inf')
 
 
 def publishable(item):
-    item.update(status='pending', hold_reasons=[], publish_eligible=True)
+    item.update(status='pending', hold_reasons=[], publish_eligible=True, selection_version=market.PROCESS_VERSION)
     item['score_components']['intent_fit'] = 15
     item['score'] = round(sum(item['score_components'].values()), 2)
     return market.fresh_market_item(item, '리뷰', datetime.fromisoformat(item['selected_at']))

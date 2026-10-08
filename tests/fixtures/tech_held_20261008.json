@@ -1,0 +1,299 @@
+{
+  "run": 37720998428,
+  "candidate": {
+    "keyword": "집와이파이설치",
+    "category": "테크",
+    "topic": "집와이파이설치: 증폭기 설정과 설치 위치·연결 확인 방법",
+    "intent": "기존 집 와이파이의 범위를 넓히려면 증폭기를 어떻게 설정하고 어디에 설치해야 할까?",
+    "gap": "ipTIME ID 설치·등록 절차와 적용 조건, TP-Link의 위치·LED·인터넷 연결 확인 체크리스트를 제공한다.",
+    "source_url": "https://www.tp-link.com/kr/support/faq/2692/",
+    "verified_sources": [
+      {
+        "url": "https://www.tp-link.com/kr/support/faq/2692/",
+        "original_url": "https://www.tp-link.com/kr/support/faq/2692/",
+        "title": "TP-Link 와이파이 증폭기의 설치 위치 및 작동 상태 확인 방법",
+        "checked_on": "2026-10-08",
+        "sha256": "9a08071bb481b9edd3e8708757fc88118240a36c2b7b7bea0252a239ca50ff4d",
+        "excerpt": "TP-Link 와이파이 증폭기의 설치 위치 및 작동 상태 확인 방법 설정 가이드 수정일5월 18, 2026 TP-Link 와이파이 증폭기가 제대로 연결되어 정상적으로 작동하는지 확인하는 몇 가지 간단한 방법이 있습니다. 이 페이지에서는 설정 후 와이파이 증폭기가 작동하는지 확인하는 방법과, 와이파이 증폭기가 강력한 Wi-Fi 커버리지를 확보할 수 있는 최적의 위치에 설치되어 있는지 확인하는 방법을 모두 다룹니다. 주요 내용 TP-Link 와이파이 증폭기의 신호(Signal) LED 표시등이 색상이나 막대 개수와 관계없이 계속 켜져 있으면 라우터에 성공적으로 연결된 것입니다. www.tplinkrepeater.net 또는 http://192.168.0.254 에 로그인하여 설정 > 상태를 확인하여 연결 상태를 확인할 수도 있습니다. 증폭기에 연결된 기기가 인터넷에 접속할 수 있다면 증폭기는 정상적으로 작동하는 것입니다. 최상의 Wi-Fi 커버리지를 얻으려면, 라우터와 사각 지대의 중간 지점, 라우터의 범위 내에 증폭기를 배치하십시오. 신호 LED 표시등의 색상이나 개수는 증폭기와 라우터 간의 연결 강도를 나타냅니다. 빨간색 불이 켜져 있으면 신호가 약한 것이므로 증폭기를 라우터에 더 가까이 이동해야 합니다. 빠른 시작 가이드 또는 사용자 가이드에 따라 와이파이 증폭기가 올바르게 설정되면, 증폭기에 연결했을 때 인터넷에 접속할 수 있어야 합니다. 와이파이 증폭기가 최상의 신호로 성공적으로 설정되었는지 확인하려면 다음 방법을 시도해 보십시오. 와이파이 증폭기가 작동하는지 확인하는 방법 방법 1: 신호 LED 확인 모든 와이파이 증폭기에는 라우터와의 연결 성공 여부를 나타내는 신호 LED 표시등이 있습니다(표시등 형태는 모델에 따라 다를 수 있음). 와이파이 증폭기가 무선 라우터에 성공적으로 연결되면 신호 LED 표시등이 계속 켜져 있습니다(색상이나 신호 막대 개수와 관계없이). 다음은 다양한 와이파이 증폭기의 예시입니다: 방법 2: 인터넷 상태 확인 1. 웹 브라우저를 실행하고 www.tplinkrepeater.net 또는 http://192.168.0.254에 접속한 후, 증폭기에 설정한 비밀번호로 로그인합니다. 2. 설정 > 상태로 이동하여 증폭기의 인터넷 상태를 확인하세요. 아래와 같이 모든 항목이 정상으로 표시되면 증폭기가 라우터에 성공적으로 연결된 것입니다. 방법 3: 기기의 인터넷 연결 테스트 기기를 무선 또는 이더넷 케이블을 통해 증폭기에 연결합니다. 기기가 인터넷에 접속할 수 있다면 증폭기가 라우터에 성공적으로 연결된 것입니다. 범위 확장기가 적합한 위치에 있습니까? 더 나은 Wi-Fi 커버리지와 신호 강도를 얻기 위해 구성을 마친 후에 공유기와 Wi-Fi 데드존 사이 중간 지점 에 확장기를 연결합니다. 선택한 위치는 공유기 범위 내에 있어야 합니다 . 범위 확장기가 최적의 위치에 있는지 확인하기 위해 신호 LED 표시등 (표시등 스타일은 확장기에 따라 다를 수 있습니다)을 사용하세요. 색상 또는 신호 LED 표시등의 수 는 메인 공유기에서 범위 확장기가 얻는 신호 강도를 나타냅니다. 예를 들어 RE200이 공유기에 연결되어 있고 신호가 안정적인 경우, 2.4G 또는 5G 표시등 (신호 LED 표시등)이 녹색으로 켜지며, 신호가 불안정할 때는 적색 LED가 켜집니다.더 나은 신호 품질을 얻기 위해 범위 확장기를 공유기에 더 가깝게 배치해야 합니다. 범위 확장기에 대한 자세한 정보는 빠른 설치 가이드 또는 사용 설명서를 참고하세요. 관련  FAQ TP-Link 범위 확장기에 대한 FAQ (자주 묻는 질문) Wi-Fi 신호 향상 방법: TP-Link 와이파이 증폭기, 파워라인, 메시 솔루션의 비교 TP-Link 와이파이 증폭기가 공유기에 연결되지 않을 때 문제 해결 가이드 범위 확장기가 Wi-Fi 범위를 확장시키지 못하면 어떻게 해야 합니까? TP-Link 와이파이 증폭기 설정: 자주 묻는 질문 및 해결 방법 최상의 신호와 성능을 위해 TP-Link Wi-Fi 증폭기를 배치하는 방법 더 알아보기 Fast, Reliable, Long Range – An Advanced G.hn Powerline Protocol Wi-Fi Range Extender: Why Choose Them and How to Install Them 해당 FAQ가 유용했나요? 여러분의 의견은 사이트 개선을 위해 소중하게 사용됩니다. 네 아니요 해당 본문에 문제가 있습니까? 제품에 대한 불만족 너무 복잡함 명확하지 않은 제목 적용되지 않음 너무 모호함 기타 당사는 귀하의 피드백을 소중하게 생각합니다. 이 컨텐츠의 개선을 위한 귀하의 의견을 들려주세요. 제출하기 감사합니다 귀하의 의견에 감사드립니다. TP-Link 기술 지원팀에 문의하려면 여기를 클릭 해주세요. 관련 제품 RE505X AX1500 Wi-Fi 와이파이 증폭기 인기 제품 RE305 AC1200 메시 AC1200 Wi-Fi 와이파이 증폭기 인기 제품 RE705X AX3000 메시 Wi-Fi 6 와이파이 증폭기 TP-Link Community Still need help? Search for answers, ask questions, and get help from TP-Link experts and other users around the world. Visit the Community >"
+      },
+      {
+        "url": "https://iptime.com/support/faq/27542",
+        "original_url": "https://iptime.com/support/faq/27542",
+        "title": "[ipTIME ID] 와이파이 증폭기(Extedner) 등록 및 사용 방법 | 고객지원-자주묻는질문 | EFM - ipTIME",
+        "checked_on": "2026-10-08",
+        "sha256": "f902128b928cccfb810bb529e0aa27430236e89938f7f871779ec81ef8f18431",
+        "excerpt": "[ipTIME ID] 와이파이 증폭기(Extedner) 등록 및 사용 방법 2026.09.21 · 조회 107 [ipTIME ID]  와이파이 증폭기(Extedner) 등록 및 사용 방법 ipTIME ID는 공유기, 와이파이 확장기, IP 카메라(홈캠) 등 다양한 ipTIME 제품을 하나의 앱에서 등록하고 관리할 수 있는 통합 관리 앱입니다. 등록된 제품의 온라인·오프라인 상태와 펌웨어 버전, 연결된 스테이션의 정보를 언제 어디서든 확인할 수 있으며 알림 확인,  관리도구 접속, Easy Mesh, 펌웨어 업그레이드, PC 켜기(WOL) 등 제품 관리에 필요한 주요 기능을 간편하게 이용할 수 있습니다. ipTIME ID에서는 사용 중인 공유기를 추가하거나, 새 공유기의 설치와 초기 설정부터 등록까지 진행할 수 있습니다. 와이파이 확장기는  새로 설치하거나 초기화 후 다시 설치하는 과정에서 ipTIME ID에 등록할 수 있으며, IP 카메라(홈캠)는 ipTIME CCTV 앱에서 사용하는 계정과 연동하여 관리할 수 있습니다. 또한 ipTIME ID는 패스키(Passkey) 로그인을 지원합니다. 비밀번호 없이 스마트폰이나 태블릿의 얼굴 인식, 지문 인식,  PIN 등의 인증 방식을 이용하여 간편하게 로그인할 수 있습니다. ※ 하나의 계정(패스키)당 공유기와 와이파이 확장기를 최대 20대까지 등록할 수 있으며, IP 카메라(홈캠)는 등록 가능 대수 제한에 포함되지 않습니다. ※ ipTIME ID는 펌웨어 16.00.00 이상의 공유기 및 와이파이 확장기에서 사용할 수 있습니다. 본 게시물에서는 사용 중인 ipTIME 와이파이 증폭기 설치 및 등록, 등록 후 ipTIME ID에서 와이파이 증폭기를 사용하는 방법을 안내합니다. [진행 순서] 1. ipTIME ID 앱 설치하기 2. ipTIME ID 패스키 생성 및 로그인하기 3. 와이파이 증폭기 설치 및 등록하기 4. ipTIME ID에서 와이파이 증폭기 사용하기 1. ipTIME ID 앱 설치하기 App Store(iOS) 또는 Play 스토어(Android)에서 'ipTIME ID'를 검색하여 앱을 다운로드한 후 설치합니다. 2. ipTIME ID 패스키 생성 및 로그인하기 패스키는 비밀번호 대신 스마트폰의 얼굴 인식, 지문 인식, PIN 등 기기에서 지원하는 인증 방식을 이용하여  보다 안전하고 간편하게 로그인할 수 있는 인증 방식입니다. ipTIME ID를 처음 사용하는 경우 먼저 패스키를 생성하여야 하며,  패스키 생성 후에는 등록된 패스키를 이용하여 ipTIME ID에 로그인할 수 있습니다. 1) ipTIME ID 앱을 실행한 후 ⓛ [새로운 패스키 생성]을 선택하고, ② 필수 약관에 동의한 후 ③ [동의하고 계속]을 선택합니다. 2) 사용할 패스키 이름을 입력하고 [패스키 생성]을 선택합니다. 3) 패스키 저장 화면이 표시되면 [패스키 추가]를 선택합니다. 기기에서 지원하는 인증 방식으로 본인 인증을 진행하면 패스키가 저장됩니다. ※ 사용 중인 기기에 따라 패스키 저장 화면과 인증 방식은 다르게 표시될 수 있습니다. 4) 패스키 생성이 완료되면 [시작하기]를 선택합니다. 이제 ipTIME ID에서 제품 등록 및 관리를 진행할 수 있습니다. [참고] 복수 패스키 생성 시 로그인 선택 방법 1. ipTIME ID 홈 화면 우측 상단의 ⓛ [설정 아이콘]을 선택한 후 설정 화면 하단의 ② [로그아웃]을 선택합니다. 2. 로그인 화면에서 ⓛ [패스키 로그인]을 선택하고, 사용할 ② [패스키를 선택]한 후 ③ [선택한 패스키 사용]을 선택하여 로그인합니다. 3. 와이파이 확장기(Extender) 설치 및 등록하기 ipTIME ID에서는 새로 구입하거나 초기화한 와이파이 확장기를 설치하고 등록을 진행할 수 있습니다. 설치 과정이 완료되면 와이파이 확장기가 ipTIME ID에 등록됩니다. ※ 사용 중인 와이파이 확장기는 초기화 후 다시 설치하여 ipTIME ID에 등록할 수 있습니다. 1) ipTIME ID 홈 화면에서 ① 우측 상단의 [+]를 선택한 후 ② [Extender 등록]을 선택합니다. 2) 설치 준비 및 와이파이 확장기 전원 연결 ① 셀룰러 데이터를 끄고 [다음]을 선택합니다. ② 와이파이 확장기를 전원에 연결하고 부팅(약 1분)이 완료된 후, 와이파이 확장기의 LED가 켜진 상태로 유지되면 [LED가 켜져 있음]을 선택합니다. 3) 와이파이 확장기 연결 및 설정 시작 ① [연결]을 선택하면 iptime_extender Wi-Fi에 자동으로 연결됩니다. ② 와이파이 확장기 연결 완료 화면이 표시되면 [설정 시작하기]를 클릭합니다. 4) Wi-Fi 확장 설정 (1) 확장 방식 선택 ① 사용할 Wi-Fi 확장 방식을 선택합니다. ② [다음]을 선택합니다. (2) 확장할 Wi-Fi 선택 및 암호 입력 ※ 와이파이 확장기 모델에 따라 지원하는 무선 주파수가 다르며, 지원 여부에 따라 2.4GHz, 5GHz, 6GHz 설정 화면이 표시됩니다. 아래 예시는 2.4GHz와 5GHz를 지원하는 모델 기준입니다. ① 확장할 메인 AP의 2.4GHz 와이파이 이름을 선택합니다. ② Wi-Fi암호를 입력하고 [다음]을 선택합니다. ③ 확장할 메인 AP의 5GHz 와이파이 이름을 선택합니다. ④ Wi-Fi암호를 입력하고 [다음]을 선택합니다. 5) 확장 와이파이 확인 및 설정 ① 4)에서 선택한 2.4GHz/5GHz Wi-Fi 정보를 확인합니다. ② [다음]을 선택합니다. ③ 확장된 Wi-Fi의 이름을 2.4GHz/5GHz 각각 설정합니다. ④ [다음]을 선택합니다. 6) Wi-Fi 연결 및 확장 설정 완료 ① 공유기 Wi-Fi 신호 연결 확인 창이 표시되면 [연결]을 클릭하여 메인 Wi-Fi에 연결합니다. ② 이어서 iptime_extender 연결 확인 창이 표시되면 [연결]을 클릭합니다. 연결 후 와이파이 확장기가 자동으로 재부팅됩니다. ③ Wi-Fi 확장 설정이 완료되면 [다음]을 클릭하여 ipTIME ID 등록을 계속 진행합니다. 7) Extender 연결 및 관리자 설정 ① [연결]을 선택하면 5)에서 설정한 확장된 Wi-Fi에 자동으로 연결됩니다. ② 원하는 관리자 계정과 암호를 설정합니다. ③ 보안 문자를 입력합니다. ④ [다음]을 선택합니다. 8) 와이파이 확장기 이름 설정 및 등록 완료 ⓛ ipTIME ID에서 사용할 Extender 이름을 선택하거나 직접 입력합니다. ② [등록]을 선택합니다. ③ 등록이 완료되면 [홈으로 이동]을 선택합니다. 9) ipTIME ID 홈 화면에 설치한 와이파이 확장기가 등록된 것을 확인할 수 있습니다. 이제 기기 정보, 알림, 관리도구 등의 메뉴를 사용할 수 있습니다. 목록으로"
+      }
+    ],
+    "intent_results": [
+      "https://life8m.com/%EC%A7%91-%EC%95%88-%EA%B5%AC%EC%84%9D%EA%B9%8C%EC%A7%80-%ED%84%B0%EC%A7%80%EA%B2%8C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4-%EC%A6%9D%ED%8F%AD%EA%B8%B0-%EC%84%A4%EC%B9%98/",
+      "https://itreview.kr/%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4-%EC%A6%9D%ED%8F%AD%EA%B8%B0-%EC%84%A4%EC%B9%98-%EC%9C%84%EC%B9%98%EC%99%80-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%A7%91-%EC%9D%B8%ED%84%B0%EB%84%B7%EC%86%8D%EB%8F%84/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 1140,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "집 와이파이 설치",
+    "organic_domains": [
+      "freepia.kr",
+      "life8m.com",
+      "modoo.io",
+      "a.dltbfkdlqm.kr",
+      "slrclub.win",
+      "tag-music.tistory.com",
+      "itreview.kr",
+      "itreview.kr",
+      "netpick.co.kr",
+      "www.gogoido.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://freepia.kr/posts/home-internet.html",
+        "domain": "freepia.kr",
+        "title": "한국 집 인터넷·와이파이 설치 가이드 | Freepia",
+        "snippet": "# 한국 집 인터넷·와이파이 설치 가이드 ... 기사는 회선을 끌어오거나 개통하고, 모뎀을 설치한 뒤, 집 전체에서 무선을 쓸 수 있도록 와이파이 공유기를 설치해 줍니다."
+      },
+      {
+        "url": "https://life8m.com/%EC%A7%91-%EC%95%88-%EA%B5%AC%EC%84%9D%EA%B9%8C%EC%A7%80-%ED%84%B0%EC%A7%80%EA%B2%8C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4-%EC%A6%9D%ED%8F%AD%EA%B8%B0-%EC%84%A4%EC%B9%98/",
+        "domain": "life8m.com",
+        "title": "집 안 구석까지 터지게 만드는 와이파이 증폭기 설치 요령 - 모래성",
+        "snippet": "# 집 안 구석까지 터지게 만드는 와이파이 증폭기 설치 요령 ... 와이파이 증폭기를 설치했는데도 기대만큼 속도가 나오지 않거나 연결이 불안정하다면 기기 성능보다는 설치 위치를 먼저"
+      },
+      {
+        "url": "https://modoo.io/content/132400",
+        "domain": "modoo.io",
+        "title": "와이파이설치 처음이라면 집 구조부터 확인하는 방법",
+        "snippet": "# 와이파이설치 처음이라면 집 구조부터 확인하는 방법 ... 와이파이설치는 장비만 좋은 걸 사는 것보다 집 구조, 인터넷 회선, 공유기 위치를 같이 맞추는 게 훨씬 중요합니다."
+      },
+      {
+        "url": "https://a.dltbfkdlqm.kr/2026/01/blog-post_9.html",
+        "domain": "a.dltbfkdlqm.kr",
+        "title": "집 와이파이 공유기 추천부터 설치 방법, 끊김 없는 팁까지 한 번에!",
+        "snippet": "# 집 와이파이 공유기 추천부터 설치 방법, 끊김 없는 팁까지 한 번에! ... # 집 와이파이 공유기 추천부터 설치 방법, 끊김 없는 팁까지 한 번에!"
+      },
+      {
+        "url": "https://slrclub.win/%EB%A9%94%EC%8B%9C-%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4-%EC%84%A4%EC%B9%98-%ED%8C%90%EB%8B%A8-%EA%B8%B0%EC%A4%80/",
+        "domain": "slrclub.win",
+        "title": "메시 와이파이 입문 초보 가이드 - 집 구조별 설치 판단 기준 - 스르륵클럽윈",
+        "snippet": "# 메시 와이파이 입문 초보 가이드 – 집 구조별 설치 판단 기준 ... “메시 와이파이는 최신 장비가 아니라 집 안 불편 구간을 해결하는 도구로 봐야"
+      },
+      {
+        "url": "https://tag-music.tistory.com/127",
+        "domain": "tag-music.tistory.com",
+        "title": "집 와이파이 느릴 때 점검 6가지",
+        "snippet": "### 집 와이파이 느릴 때 점검 6가지 ... 집 안에서 체감하는 느림의 상당수는 회선 속도가 아니라 와이파이 신호 문제입니다."
+      },
+      {
+        "url": "https://itreview.kr/%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4-%EC%A6%9D%ED%8F%AD%EA%B8%B0-%EC%84%A4%EC%B9%98-%EC%9C%84%EC%B9%98%EC%99%80-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%A7%91-%EC%9D%B8%ED%84%B0%EB%84%B7%EC%86%8D%EB%8F%84/",
+        "domain": "itreview.kr",
+        "title": "와이파이 증폭기 설치 위치와 사용법, 집 인터넷속도 저하 해결하기 - IT Review",
+        "snippet": "만약 집 공유기에 WPS가 없다면 스마트폰이나 노트북으로 증폭기 임시 와이파이에 접속해서 설정 페이지에 들어가는 방식으로 진행해야해요. ... 이 과정에서 새로 만들어질 와이파이 이름을 기존과 같게"
+      },
+      {
+        "url": "https://itreview.kr/%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4-%EC%A6%9D%ED%8F%AD%EA%B8%B0-%ED%9A%A8%EA%B3%BC-%EC%9E%88%EC%9D%84%EA%B9%8C-%EC%84%A4%EC%B9%98-%EC%9C%84%EC%B9%98-%EC%82%AC%EC%9A%A9%EB%B2%95/",
+        "domain": "itreview.kr",
+        "title": "와이파이 증폭기, 효과 있을까? 설치 위치 + 사용법 - IT Review",
+        "snippet": "만약 집 공유기에 WPS가 없다면 스마트폰이나 노트북으로 증폭기 임시 와이파이에 접속해서 설정 페이지에 들어가는 방식으로 진행해야해요. ... 이 과정에서 새로 만들어질 와이파이 이름을 기존과 같게"
+      },
+      {
+        "url": "https://netpick.co.kr/internet-guide/speed",
+        "domain": "netpick.co.kr",
+        "title": "인터넷 속도·와이파이 가이드 — 요금·설치·현금사은품 총정리 | 넷픽",
+        "snippet": "인터넷 설치 인터넷 설치, 기가 가능 여부 확인부터 리드타임까지 총정리 자세히 보기 →사무실 인터넷 사무실 인터넷 속도, 업종별로 정직하게 산정하는 법 자세히 보기 →인터넷 속도"
+      },
+      {
+        "url": "https://www.gogoido.com/community/tips/sk-wings-wifi-installation-guide",
+        "domain": "www.gogoido.com",
+        "title": "SK 윙즈 설치 전 확인할 것, 와이파이 음영지역 해결과 설치 위치 | 통신정보 | 이득온",
+        "snippet": "Image: SK 윙즈 와이파이 보조 공유기로 집 전체 무선 인터넷 음영지역을 개선하는 설치 환경 ... SK브로드밴드는 현재 공식 상품 안내에서 윙즈를 와이파이 신호를 확장해 집안의"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 24.46,
+      "organic_opportunity": 30.0,
+      "trend": 0,
+      "intent_fit": 0
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 6,
+    "selected_at": "2026-10-08T03:05:36.136736+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "집와이파이설치"
+    ],
+    "status": "research_only",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "집와이파이설치",
+      "executed_query": "집 와이파이 설치",
+      "topic": "집와이파이설치: 증폭기 설정과 설치 위치·연결 확인 방법",
+      "intent": "기존 집 와이파이의 범위를 넓히려면 증폭기를 어떻게 설정하고 어디에 설치해야 할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-08T03:05:36.136736+00:00",
+      "result_count": 10,
+      "domain_count": 9,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "집와이파이설치",
+        "executed_query": "집 와이파이 설치",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-08T03:05:36.136736+00:00",
+        "raw_sha256": "4e37554244ebd81f817f11250132a0a28e2581f1d2962b75e27da07007840dc9",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "# 한국 집 인터넷·와이파이 설치 가이드 ... 기사는 회선을 끌어오거나 개통하고, 모뎀을 설치한 뒤, 집 전체에서 무선을 쓸 수 있도록 와이파이 공유기를 설치해 줍니다."
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "집 안 구석까지 터지게 만드는 와이파이 증폭기 설치 요령 - 모래성"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "# 와이파이설치 처음이라면 집 구조부터 확인하는 방법 ... 와이파이설치는 장비만 좋은 걸 사는 것보다 집 구조, 인터넷 회선, 공유기 위치를 같이 맞추는 게 훨씬 중요합니다."
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "집 와이파이 공유기 추천부터 설치 방법, 끊김 없는 팁까지 한 번에!"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "메시 와이파이 입문 초보 가이드 - 집 구조별 설치 판단 기준 - 스르륵클럽윈"
+          },
+          {
+            "result_index": 5,
+            "relevant": false,
+            "quote": "### 집 와이파이 느릴 때 점검 6가지 ... 집 안에서 체감하는 느림의 상당수는 회선 속도가 아니라 와이파이 신호 문제입니다."
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "만약 집 공유기에 WPS가 없다면 스마트폰이나 노트북으로 증폭기 임시 와이파이에 접속해서 설정 페이지에 들어가는 방식으로 진행해야해요. ... 이 과정에서 새로 만들어질 와이파이 이름을 기존과 같게"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "만약 집 공유기에 WPS가 없다면 스마트폰이나 노트북으로 증폭기 임시 와이파이에 접속해서 설정 페이지에 들어가는 방식으로 진행해야해요. ... 이 과정에서 새로 만들어질 와이파이 이름을 기존과 같게"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "인터넷 설치 인터넷 설치, 기가 가능 여부 확인부터 리드타임까지 총정리 자세히 보기 →사무실 인터넷 사무실 인터넷 속도, 업종별로 정직하게 산정하는 법 자세히 보기 →인터넷 속도"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "SK 윙즈 설치 전 확인할 것, 와이파이 음영지역 해결과 설치 위치 | 통신정보 | 이득온"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.25,
+        "organic_opportunity": 30.0
+      },
+      "scope": "narrower_query",
+      "target_keyword": "집 와이파이 증폭기 설치 방법",
+      "matches": [
+        {
+          "result_index": 1,
+          "quote": "집 안 구석까지 터지게 만드는 와이파이 증폭기 설치 요령"
+        },
+        {
+          "result_index": 6,
+          "quote": "와이파이 증폭기 설치 위치와 사용법, 집 인터넷속도 저하 해결하기"
+        }
+      ]
+    },
+    "score": 54.46,
+    "publish_eligible": false,
+    "hold_reasons": [
+      "narrower_or_unverified_search_intent"
+    ]
+  },
+  "decisions": [
+    {
+      "keyword": "집와이파이설치",
+      "monthly_search": 1140,
+      "score": 54.46,
+      "status": "held",
+      "reasons": [
+        "narrower_or_unverified_search_intent"
+      ],
+      "organic_query": "집 와이파이 설치"
+    },
+    {
+      "keyword": "윈도우10포맷",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 980,
+      "organic_query": "윈도우10 포맷"
+    },
+    {
+      "keyword": "인터넷이전설치",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 610,
+      "organic_query": "인터넷 이전 설치"
+    },
+    {
+      "keyword": "삼성노트북포맷",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 560,
+      "organic_query": "삼성 노트북 포맷"
+    },
+    {
+      "keyword": "인터넷선설치",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 520,
+      "organic_query": "인터넷 선 설치"
+    },
+    {
+      "keyword": "PC포맷",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 510,
+      "organic_query": "PC 포맷"
+    }
+  ],
+  "new_source": {
+    "url": "https://www.tp-link.com/kr/support/faq/3316/",
+    "original_url": "https://www.tp-link.com/kr/support/faq/3316/",
+    "title": "TP-Link 공유기의 초기 설치 방법",
+    "checked_on": "2026-10-08",
+    "sha256": "aa39cd70dad18c9f63a0d0fd893ee4d22a3a8f07515a4814ea702b4f5980113a",
+    "excerpt": "TP-Link 공유기의 초기 설치 방법 설정 및 애플리케이션 수정일03-11-2022 11:41:04 AM 256795 해당 FAQ 에서는 컴퓨터를 통한 TP-Link 공유기의 초기 설치 방법을 설명합니다. 하드웨어 설치 1. 동봉된 설명서의 안내에 따라, 공유기의 전원을 연결하고 모뎀, 혹은 벽면에서 송출되는 인터넷 선을 공유기의 WAN 포트에 연결합니다. 2. 사용하는 PC 를 공유기의 LAN 포트에 연결하거나, 공유기의 기본 Wi-Fi 에 연결 합니다. (공유기의 기본 Wi-Fi 이름은 제품 하단 스티커 라벨에 명기되어 있습니다.) SSID -> Wi-Fi 이름 Wireless Password -> 비밀번호 설정 방법 1. 사용하는 PC 의 인터넷 브라우저(크롬, 익스플로러 등) 을 실행 후, 주소창에 http://tplinkwifi.net/ 을 입력합니다. 2. 만일 http://tplinkwifi.net/ 에 접속이 불가한 경우, 아래 절차를 따라하세요. http://tplinkwifi.net/ 에 접속이 가능한 경우, 7번 절차부터 따라하세요. 3. PC 자판 왼쪽 아래의 윈도우 키를 눌러, 검색창을 띄운 후 명령 프롬프트 를 검색 후 실행 합니다. 4. 실행된 명령 프롬프트 창에서, IPCONFIG 명령어를 입력합니다. 5. 출력된 결과물을 확인하여, 기본 게이트웨이 주소 를 복사합니다. 일반적으로 192.168.0.1 이나, 환경에 따라 다를 수 있습니다. 출력된 값을 복사하세요. 6. 인터넷 주소창에 기본 게이트웨이 주소를 입력 후 접속합니다. 7. 다음 페이지에 접속되는지 확인하세요. 8. 상단 메뉴의 English 를 클릭하여, 언어를 한국어 로 변경합니다. 9. 규칙에 맞추어, 비밀번호를 생성합니다. 규칙은 아래와 같습니다. ● 6~32 글자 이내여야 합니다. ● 문자와 숫자, 특수문자 중 적어도 2 가지 이상을 포함하여야 합니다. 10. 시간대를 (UTC + 09 : 00) 서울 특별시 로 지정한 후, 다음 을 누릅니다. 11. 인터넷 연결 유형을 동적 IP 로 지정 후 다음 을 누릅니다. 12. 초기 MAC 주소 사용 을 유지하고, 다음 을 누릅니다. (해당 옵션은 특정 상황에서만 사용됩니다.) 12-1. 통신사 IPTV 셋톱박스 를 공유기에 연결하려는 경우, 특별 ISP 설정 을 누른 후 ISP 프로필을 브리지 로 지정합니다. 이 경우 통신사 셋톱박스는 LAN4 에 연결되어야 정상적으로 작동합니다. 13. 사용하려는 Wi-Fi 이름 과 비밀번호 를 지정하고 다음 을 누릅니다. ● Smart Connect 는 2.4Ghz 와 5Ghz 대역의 이름을 같게 해주는 기능입니다. ● 무선으로 연결한 경우, 이 과정에서 인터넷이 끊어질 수 있습니다. 변경한 Wi-Fi 이름을 찾아 다시 연결하세요. 14. 공유기가 인터넷에 연결됩니다. 15. 자동 업데이트(권장) 켜기 를 선택 후 다음을 누릅니다. 16. 설정이 완료되었습니다. 다음을 누르세요. 17. 설정이 완료되었습니다. TP-Link(Tether 어플리케이션) 계정이 있으신 경우 로그인 하시고, 계정이 없는 경우 건너뛰기 를 눌러주세요. Tether 어플리케이션에 대한 설명은 이곳 을 참고하십시오. 해당 설치 과정을 따라할 수 없거나, 도중에 문제가 발생하는 경우 스크린샷을 캡쳐하여 support.kr@tp-link.com 으로 문의주십시오. 더 알아보기 [블로그] 안전한 공유기 설치 및 사용 보안 수칙 [블로그] 농막·농장 인터넷 구축 추천 BEST 3! 인터넷 공사 없이 사용하는 LTE·실외 공유기 총정리 [블로그] AX 공유기 인터넷 연결 불가시 도움이 될 수 있는 베타 펌웨어 해당 FAQ가 유용했나요? 여러분의 의견은 사이트 개선을 위해 소중하게 사용됩니다. 네 아니요 해당 본문에 문제가 있습니까? 제품에 대한 불만족 너무 복잡함 명확하지 않은 제목 적용되지 않음 너무 모호함 기타 당사는 귀하의 피드백을 소중하게 생각합니다. 이 컨텐츠의 개선을 위한 귀하의 의견을 들려주세요. 제출하기 감사합니다 귀하의 의견에 감사드립니다. TP-Link 기술 지원팀에 문의하려면 여기를 클릭 해주세요."
+  }
+}

@@ -242,7 +242,7 @@ def test_queue_draft_recovery_skips_selection_and_new_post_creation(tmp_path, wo
         assert path in persistence['run']
 
 
-def run_queue_step(tmp_path, category, *, stock, select_exit=0):
+def run_queue_step(tmp_path, category, *, stock, select_exit=0, extra_env=None):
     """Run the real step script with a fake python that records calls."""
     import os
     import subprocess
@@ -262,7 +262,7 @@ def run_queue_step(tmp_path, category, *, stock, select_exit=0):
              'BLOG_RESUME_DRAFT_ID': '', 'BLOG_CATEGORY': '생활정보', 'BLOG_PUBLISH': 'true',
              'SCHEDULE_CATEGORY': category, 'SCHEDULE_STAGE_PATH': str(tmp_path/'stage'),
              'GITHUB_OUTPUT': str(tmp_path/'output'), 'FAKE_STOCK': stock,
-             'FAKE_SELECT_EXIT': str(select_exit), 'POSTING_CALLS': str(calls)})
+             'FAKE_SELECT_EXIT': str(select_exit), 'POSTING_CALLS': str(calls), **(extra_env or {})})
     lines = calls.read_text().splitlines() if calls.exists() else []
     output = (tmp_path/'output').read_text() if (tmp_path/'output').exists() else ''
     return result, lines, output
@@ -285,6 +285,31 @@ def test_queue_workflow_researches_then_falls_back_to_other_category_stock(tmp_p
                      'scripts/pick_slot_category.py --preferred 테크',
                      '-m src.main --mode general --from-queue --auto-publish --category 건강']
     assert output == 'category=건강\n'
+
+
+def test_manual_slot_test_reproduces_the_scheduled_path_without_claiming(tmp_path):
+    # E2E: a manual dispatch (no slot claim) must exercise the same stock/fallback path.
+    result, calls, output = run_queue_step(tmp_path, '', stock='건강', select_exit=1,
+        extra_env={'BLOG_SLOT_TEST': 'true', 'BLOG_CATEGORY': '테크', 'BLOG_PUBLISH': 'false'})
+    assert result.returncode == 0, result.stderr
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
+                     'scripts/pick_slot_category.py --preferred 테크',
+                     '-m src.main --mode general --from-queue --dry-run --category 건강']
+    assert output == 'category=건강\n'
+
+
+def test_slot_test_mode_is_a_manual_queue_job_option():
+    from pathlib import Path
+    workflow = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
+    triggers = workflow.get('on', workflow.get(True))
+    assert 'slot_test' in triggers['workflow_dispatch']['inputs']['mode']['options']
+    job = workflow['jobs']['post-queue']
+    assert "github.event.inputs.mode == 'slot_test'" in job['if']
+    assert job['env']['BLOG_SLOT_TEST'] == "${{ inputs.mode == 'slot_test' && 'true' || 'false' }}"
+    for name, other in workflow['jobs'].items():
+        if name != 'post-queue':
+            assert 'slot_test' not in str(other.get('if', ''))
 
 
 def test_queue_workflow_fails_without_any_verified_stock(tmp_path):

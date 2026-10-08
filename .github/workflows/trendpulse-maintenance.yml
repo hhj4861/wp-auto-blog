@@ -12,6 +12,15 @@ on:
         default: true
         type: boolean
 
+      close_post_id:
+        description: '비공개 초안으로 전환할 글 ID (빈 값이면 기존 유지보수)'
+        required: false
+        type: string
+      close_post_slug:
+        description: '비공개 대상의 정확한 슬러그 (ID와 함께 필수)'
+        required: false
+        type: string
+
 jobs:
   maintain:
     runs-on: ubuntu-latest
@@ -35,4 +44,11 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           WP_PROXY: ${{ secrets.WP_PROXY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
-        run: python scripts/trendpulse_maintenance.py
+          CLOSE_POST_ID: ${{ inputs.close_post_id }}
+          CLOSE_POST_SLUG: ${{ inputs.close_post_slug }}
+        run: |
+          if [ -n "$CLOSE_POST_ID" ] || [ -n "$CLOSE_POST_SLUG" ]; then
+            python scripts/close_post.py
+          else
+            python scripts/trendpulse_maintenance.py
+          fi

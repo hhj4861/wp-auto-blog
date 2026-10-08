@@ -5410,7 +5410,7 @@
   },
   "생활정보": {
     "category": "생활정보",
-    "selected_at": "2026-10-08T10:52:20.259804+00:00",
+    "selected_at": "2026-10-08T22:56:57.768066+00:00",
     "seeds": [
       "신청방법",
       "환급금",
@@ -5418,8 +5418,8 @@
       "정부지원"
     ],
     "selection_version": 6,
-    "research_rounds": 3,
-    "source_recovery_attempts": 1,
+    "research_rounds": 2,
+    "source_recovery_attempts": 0,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -5431,7 +5431,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-08T10:52:20.259804+00:00",
+      "checked_at": "2026-10-08T22:56:57.768066+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -5460,14 +5460,20 @@
       "개인사업자담보대출",
       "개인사업자마이너스통장",
       "관광농원",
+      "법인대출",
+      "법인사업자대출",
       "보증보험대출",
-      "사업자금대출",
       "사업자마이너스통장",
       "상가보증금대출",
-      "소상공인폐업지원금",
       "연체자비상금대출",
+      "자영업자대출",
       "장애인대출",
-      "청년사업자금대출"
+      "정책자금컨설팅",
+      "중소기업대출",
+      "청년사업자금대출",
+      "청년사업자대출",
+      "청년창업대출",
+      "코워킹스페이스"
     ],
     "deferred_research_family_keywords": [],
     "researched_fallback_families": [
@@ -5478,306 +5484,320 @@
     ],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 182,
-    "evaluated_candidates": 5,
-    "research_pool_size": 96,
+    "measured_candidates": 179,
+    "evaluated_candidates": 3,
+    "research_pool_size": 92,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "소상공인",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "concentrated_search_results",
-          "dominant_search_results"
-        ],
-        "monthly_search": 17280,
+        "keyword": "사업자대출",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1350157",
+              "title": "www.nts.go.kr",
+              "excerpt_chars": 987
+            },
+            {
+              "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2207&nttSn=1350157",
+              "title": "공지사항",
+              "excerpt_chars": 987
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "expired_information"
+          }
+        },
+        "monthly_search": 15120,
         "organic_provider": "codex_native_search",
-        "organic_query": "소상공인",
+        "organic_query": "사업자대출",
         "organic_results": [
           {
-            "url": "https://www.sosangkong.com/",
-            "domain": "www.sosangkong.com",
-            "title": "소상공닷컴 - 소상공인과 공급업체를 잇는 거래처 매칭 플랫폼",
-            "snippet": "이용 중인 소상공인 사업장 ... 가격만 보고 고르면 항상 배송이 문제였는데, 배송정시율이랑 응답률이 같이 보이니까 비교가 쉬웠어요. ... 전화 영업 대신 프로필과 배송조건만 등록하면, 조건이"
+            "url": "https://nabo.go.kr/board/file/down.do?fid=33318639",
+            "domain": "nabo.go.kr",
+            "title": "2025 대한민국 경제",
+            "snippet": "[그림 II-176] 개인사업자 예금은행 대출금 규모와 GDP 대비 비율 추이"
           },
           {
-            "url": "https://unsplash.com/ko/s/%EC%82%AC%EC%A7%84/%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8",
-            "domain": "unsplash.com",
-            "title": "소상공인 사진 | Unsplash에서 무료 이미지 다운로드",
-            "snippet": "# 소상공인 ... 식물 애호가"
+            "url": "https://www.nabo.go.kr/board/file/down.do?fid=33318639",
+            "domain": "www.nabo.go.kr",
+            "title": "2025 대한민국 경제",
+            "snippet": "- 2015: 사업자대출 잔액 274, 가계대출 잔액 151- 2016: 사업자대출 잔액 309, 가계대출 잔액 174"
           },
           {
-            "url": "https://yjss.or.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMjEyMjdlMTY2NDYzNDI4NjE1IjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjUwMTA2NmIxMmY5ZDI1NTNmYyI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI1MDEwNmJlY2ViOTRmODgzNGUiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ODQwN2IzYzBmMGUiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
-            "domain": "yjss.or.kr",
-            "title": "소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상공인 \n소상",
-            "snippet": "소 상 공 인 시 장 진 흥 공 단 앞 ... ① 사업자등록증(명) 상 업태가 2개 이상(예: 제조업+도소매업)이면서,"
+            "url": "https://www.kacta.or.kr/data/Board/BoardInfoNotice/%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8%20%EC%8B%A0%EA%B3%A0%20%EC%95%88%EB%82%B4%EC%82%AC%ED%95%AD.pdf",
+            "domain": "www.kacta.or.kr",
+            "title": "’25년 귀속 종합소득세 신고 안내 사항",
+            "snippet": "까지해당 사업자 대출을 상환하고 기존에 필요경비에 산입한 ... - 사업자대출 관련 이자비용이 확인되는 경우 ｢사업자대출 용도 외 유용｣인지"
           },
           {
-            "url": "https://www.icsp.or.kr/",
-            "domain": "www.icsp.or.kr",
-            "title": "성장대로｜인천소상공인종합지원포털",
-            "snippet": "성장지원 「모두의 창업 프로젝트」 통합 모집공고 (2차) 성장지원 2026년 찾아가는 1:1 디지털 교육 소상공인 모집 성장지원 2026년 혁신 소상공인 AI 활용 지원사업 상권활성화 강소 소공인"
+            "url": "https://www.smartbank.co.kr/566_PrfLovaInfo_007.act",
+            "domain": "www.smartbank.co.kr",
+            "title": "사업자대출",
+            "snippet": "#### 사업자대출 ... 대출금리 + 3% (단, 연체이자율 상한 연 24% 이내)"
           },
           {
-            "url": "https://www.icsp.or.kr/main/bsns/local_ancm/list.do",
-            "domain": "www.icsp.or.kr",
-            "title": "성장대로｜인천소상공인종합지원포털 - 군/구",
-            "snippet": "* 유관기관 마감 (서구) 2026년 서구 소상공인 스마트 마케팅 실전과정 교육생 모집 지원대상 소상공인,예비창업자 신청기간 2026-06-05 ~ 2026-06-22 지원기간 2026-06-19 ~ 2026-06-30 ... * 유관기관"
+            "url": "https://file-cdn.bok.or.kr/ucms/563ce891ec0125525906ab61d57b47bd/1/tempFile.pdf?token=st%3D1773326779~exp%3D1773330379~acl%3D%2Fucms%2F563ce891ec0125525906ab61d57b47bd%2F1%2FtempFile.pdf%2A~hmac%3D0e896876c04ebcc2d98f8a1f0a8624959b60ebef0c18983abe50fc3a8a4a2f16",
+            "domain": "file-cdn.bok.or.kr",
+            "title": "제주특별자치도중소기업을위한",
+            "snippet": "다만, 아파트/연립주택의 경우 30세대 이상 건축허가대상도 가능 대 출 명 None | | | 주택도시기금 사업자대출 85㎡ 이하 | 80백만원 | 연 4.5% | 대"
           },
           {
-            "url": "https://www.icsp.or.kr/main/main.do",
-            "domain": "www.icsp.or.kr",
-            "title": "성장대로｜인천소상공인종합지원포털",
-            "snippet": "* 소상공인지원 성장지원 2026년 1인 자영업자 고용보험료 지원사업 접수중 2026.04.01 ~ 2026.12.18 ... * (인천광역시) 하반기 소상공인시장진흥자금 25억 원 지원 2026-08-18"
+            "url": "https://www.kosvc.co.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMjEwMTNmODUxZGIwNmQxZTIyIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjQwODEzODNkZWZkNDc3NjQxYiI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDI0MDgxMzAwMGE3ZDk5ZGExOTYiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5ZTlhYzA3ZWY0NzciO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
+            "domain": "www.kosvc.co.kr",
+            "title": "중소벤처기업부 공고 제2024 – 454호",
+            "snippet": "이전 취급된 ②사업자대출 또는 ③사업용도가계대출 ... - ②(사업자대출) 신용․ ... 대구), 전북, 제주, 농협, 수협, 기업, 산업, 수출입, 케이, 카카오, 토스 --- | --- 구분"
           },
           {
-            "url": "https://www.khan.co.kr/article/202609131651001",
-            "domain": "www.khan.co.kr",
-            "title": "[인터뷰]인태연 소진공 이사장 “소상공인 총생산지표, 소상공인 존재가치에 대한 인식 바꿀 것” - 경향신문",
-            "snippet": "지난 10일 서울 마포구 드림스퀘어에서 만난 그는 “갯벌은 겉으로 볼 때는 아파트도 못 세우는 가치 없는 땅이지만, 자연을 지속 가능하게 하는 생태계의 보고”라며 “전통시장과 소상공인이"
+            "url": "https://og.kakaobank.io/download/f980dfda-ef83-440b-a2ba-9bd39795347e",
+            "domain": "og.kakaobank.io",
+            "title": "대출거래 추가약정서 (폐업지원 대한대출용)",
+            "snippet": "「폐업지원 대한대출」 지원 취지에 따라 동 대출 이용중에 신규사업자 개업 등에 의한 사업자대출 신규 취급이 제한¹ 되며, 사업자대출 신규 취급이 필요한 경우에는 「폐업지원 대한대출」을 전액"
           },
           {
-            "url": "https://www.icsp.or.kr/main/bsns/guide/find.do",
-            "domain": "www.icsp.or.kr",
-            "title": "성장대로｜인천소상공인종합지원포털 - 맞춤 사업 찾기",
-            "snippet": "* 상권활성화 2026년 소공인 로컬브랜드 육성 지원사업 관내 소공인에 대한 홍보와 유통채널 부족으로 시장 진입이 어려운 소공인에게 박람회 공동관 참가 지원을 통한 판로 확대 지원대상"
+            "url": "https://play.google.com/store/apps/details?hl=ko&id=com.misk.cashdphdp",
+            "domain": "play.google.com",
+            "title": "모바일 담보대출 - 소상공인 개인 법인 사업자대출 앱 - Google Play 앱",
+            "snippet": "# 모바일 담보대출 - 소상공인 개인 법인 사업자대출 앱 ... 가능한 담보대출의 종류에는 사업자 분양자금 대출, 사업자 아파트 담보대출, 사업자 후순위 아파트 담보대출, 사업자 운전자금"
           },
           {
-            "url": "https://www.icsp.or.kr/main/bsns/ancm/list.do",
-            "domain": "www.icsp.or.kr",
-            "title": "성장대로｜인천소상공인종합지원포털 - 통합공고",
-            "snippet": "소상공인지원 D-2 2026년 송림소공인특화지원센터 성과보고대회「소공인 유공 포상 변경공고」 지원대상 소상공인 신청기간 2026-09-11 ~ 2026-09-28 지원기간 2026-09-11 ~ 2026-09-28 ... * 교육 마감 이커머스 판로지원 클래스"
+            "url": "https://bankings.kr/scfirstbank-business-loan/",
+            "domain": "bankings.kr",
+            "title": "SC제일은행 사업자대출 종류, 외국계 은행의 기업금융 강점 – 전국은행위치",
+            "snippet": "* SC제일은행 사업자대출은 부동산담보 기반 일반자금대출과 자금관리·비즈니스성장·자산증대 세 카테고리로 구성 ... 💡 SC제일은행 사업자대출은 담보 기반 일반자금대출 외에도 수출입 기업을 위한 무역금융 연계 상담이 가능하다는"
           },
           {
-            "url": "https://www.icsp.or.kr/main/content/view.do?sn=58",
-            "domain": "www.icsp.or.kr",
-            "title": "성장대로｜인천소상공인종합지원포털 - 포털소개",
-            "snippet": "지속가능한 성장을 이룰 수 있도록 돕는 인천형 소상공인 통합 지원 플랫폼입니다. ... 인천 소상공인의 자생력 강화와 도약을 위해‘성장대로’가 앞장서겠습니다."
+            "url": "https://www.xn--299a49i38dc22a.org/faq/14",
+            "domain": "www.xn--299a49i38dc22a.org",
+            "title": "대출고래 | 대출고래 FAQ | 직장인대출·사업자대출 등 유형별 업체는 어디에서 찾나요?",
+            "snippet": "‘상품별 대출검색’에서 직장인대출, 사업자대출, 소액대출 등 원하는 유형의 업체 정보를 찾아보실 수 있습니다. ... 대출고래는 한국대부금융협회, 지자체 정식허가 업체만 광고 등록이 가능합니다."
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "소상공인",
-          "executed_query": "소상공인",
+          "query": "사업자대출",
+          "executed_query": "사업자대출",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-08T10:52:20.259804+00:00",
-          "raw_sha256": "b3f6f6a4414f8024d08ad5d84b4b981e081b5295621d627ed703920d96cbf62f",
+          "checked_at": "2026-10-08T22:56:57.768066+00:00",
+          "raw_sha256": "cc884b3702b89fc568e76af1bec4223685f71441334647edb49aa1b3694ab477",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": true,
-              "quote": "소상공닷컴 - 소상공인과 공급업체를 잇는 거래처 매칭 플랫폼"
+              "relevant": false,
+              "quote": "[그림 II-176] 개인사업자 예금은행 대출금 규모와 GDP 대비 비율 추이"
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "소상공인 사진 | Unsplash에서 무료 이미지 다운로드"
+              "quote": "- 2015: 사업자대출 잔액 274, 가계대출 잔액 151- 2016: 사업자대출 잔액 309, 가계대출 잔액 174"
             },
             {
               "result_index": 2,
-              "relevant": false,
-              "quote": "소 상 공 인 시 장 진 흥 공 단 앞 ... ① 사업자등록증(명) 상 업태가 2개 이상(예: 제조업+도소매업)이면서,"
+              "relevant": true,
+              "quote": "까지해당 사업자 대출을 상환하고 기존에 필요경비에 산입한 ... - 사업자대출 관련 이자비용이 확인되는 경우 ｢사업자대출 용도 외 유용｣인지"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "성장지원 「모두의 창업 프로젝트」 통합 모집공고 (2차) 성장지원 2026년 찾아가는 1:1 디지털 교육 소상공인 모집 성장지원 2026년 혁신 소상공인 AI 활용 지원사업 상권활성화 강소 소공인"
+              "quote": "#### 사업자대출 ... 대출금리 + 3% (단, 연체이자율 상한 연 24% 이내)"
             },
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "* 유관기관 마감 (서구) 2026년 서구 소상공인 스마트 마케팅 실전과정 교육생 모집 지원대상 소상공인,예비창업자 신청기간 2026-06-05 ~ 2026-06-22 지원기간 2026-06-19 ~ 2026-06-30 ... * 유관기관"
+              "quote": "다만, 아파트/연립주택의 경우 30세대 이상 건축허가대상도 가능 대 출 명 None | | | 주택도시기금 사업자대출 85㎡ 이하 | 80백만원 | 연 4.5% | 대"
             },
             {
               "result_index": 5,
               "relevant": true,
-              "quote": "* 소상공인지원 성장지원 2026년 1인 자영업자 고용보험료 지원사업 접수중 2026.04.01 ~ 2026.12.18 ... * (인천광역시) 하반기 소상공인시장진흥자금 25억 원 지원 2026-08-18"
+              "quote": "이전 취급된 ②사업자대출 또는 ③사업용도가계대출 ... - ②(사업자대출) 신용․ ... 대구), 전북, 제주, 농협, 수협, 기업, 산업, 수출입, 케이, 카카오, 토스 --- | --- 구분"
             },
             {
               "result_index": 6,
               "relevant": true,
-              "quote": "[인터뷰]인태연 소진공 이사장 “소상공인 총생산지표, 소상공인 존재가치에 대한 인식 바꿀 것” - 경향신문"
+              "quote": "「폐업지원 대한대출」 지원 취지에 따라 동 대출 이용중에 신규사업자 개업 등에 의한 사업자대출 신규 취급이 제한¹ 되며, 사업자대출 신규 취급이 필요한 경우에는 「폐업지원 대한대출」을 전액"
             },
             {
               "result_index": 7,
               "relevant": true,
-              "quote": "* 상권활성화 2026년 소공인 로컬브랜드 육성 지원사업 관내 소공인에 대한 홍보와 유통채널 부족으로 시장 진입이 어려운 소공인에게 박람회 공동관 참가 지원을 통한 판로 확대 지원대상"
+              "quote": "# 모바일 담보대출 - 소상공인 개인 법인 사업자대출 앱 ... 가능한 담보대출의 종류에는 사업자 분양자금 대출, 사업자 아파트 담보대출, 사업자 후순위 아파트 담보대출, 사업자 운전자금"
             },
             {
               "result_index": 8,
               "relevant": true,
-              "quote": "소상공인지원 D-2 2026년 송림소공인특화지원센터 성과보고대회「소공인 유공 포상 변경공고」 지원대상 소상공인 신청기간 2026-09-11 ~ 2026-09-28 지원기간 2026-09-11 ~ 2026-09-28 ... * 교육 마감 이커머스 판로지원 클래스"
+              "quote": "* SC제일은행 사업자대출은 부동산담보 기반 일반자금대출과 자금관리·비즈니스성장·자산증대 세 카테고리로 구성 ... 💡 SC제일은행 사업자대출은 담보 기반 일반자금대출 외에도 수출입 기업을 위한 무역금융 연계 상담이 가능하다는"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "지속가능한 성장을 이룰 수 있도록 돕는 인천형 소상공인 통합 지원 플랫폼입니다. ... 인천 소상공인의 자생력 강화와 도약을 위해‘성장대로’가 앞장서겠습니다."
+              "quote": "‘상품별 대출검색’에서 직장인대출, 사업자대출, 소액대출 등 원하는 유형의 업체 정보를 찾아보실 수 있습니다. ... 대출고래는 한국대부금융협회, 지자체 정식허가 업체만 광고 등록이 가능합니다."
+            }
+          ]
+        },
+        "evidence_mode": "serp",
+        "verified_sources": [
+          {
+            "url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1350157",
+            "title": "www.nts.go.kr",
+            "excerpt": "사업자대출 용도 외 유용 자진시정 안내 작성자 관리자 작성일자 2026.04.08. 조회수 56926 사업자대출 용도 외 유용 자진시정 안내\r\n\r\n공지사항\r\n사업자대출 용도 외 유용 전수검증에 앞서 자발적 시정 기회 부여\r\n\r\n대상자 및 시정기한\r\n대 상 자 : 사업자대출을 받고 용도 외 유용한 개인·법인\r\n시정기한 : ’26. 6. 30.(화)\r\n시정내용 : 용도 외 유용한 대출금을 상환하고 수정신고서 제출\r\n\r\n서류제출\r\n제출방법 : 세무서 방문 및 우편 접수(수정신고서는 홈택스 제출 가능)\r\n제출서류 \r\n1. 수정신고서    ※ ’25년 귀속분의 경우 정기 신고서 제출\r\n2. 사업자대출 자진시정 소명서\r\n3. 관련 증빙서류\r\n▶ 용도 외 유용 사실을 확인할 수 있는 자료\r\n- [부동산 취득자금] 부동산매매계약서, 매매대금(대출금) 이체 내역 등\r\n- [기타] 기타 사용처에 대한 사용내역을 증빙할 수 있는 서류\r\n▶ 사업자대출 상환 사실을 확인할 수 있는 자료\r\n- 사업자대출 상환증명서, 대출거래 내역서 등\r\n▶ 사업자대출 상환자금 원천을 확인할 수 있는 자료\r\n- [부동산 처분대금] 부동산매매계약서, 매매대금 입금 내역\r\n- [예금 등] 예금 잔액증명서 및 주식·채권·가상자산 매각 증빙서류 등\r\n- [상속·증여자금] 상속·증여세 신고서\r\n- [대출] 금융대출 ▶ 대출 관련 증빙서류, 사인간 채무 ▶ 금전소비대차계약서\r\n※ 자진시정 소명서 양식은 국세청 홈페이지 공지사항에서 내려받으실 수 있습니다.\r\n\r\n검증제외\r\n아래 요건을 모두 충족하면 전수검증 대상에서 제외됩니다.\r\n- 사업자대출 관련 탈세 사항의 수정신고가 적정한 경우\r\n- 용도 외 유용한 사업자대출 상환이 완료된 경우\r\n- 대출 상환자금의 원천이 확인되는 경우 첨부파일 (서식) 사업자대출 자진시정 소명서.hwp (작성예시) 사업자대출 자진시정 소명서.hwp 다음글 2026년 지역인재 9급 임용관계서류 등 제출 안내 이전글 해외진출 중소·중견기업을 위한 이중과세 안심센터 목록",
+            "sha256": "e14a56b26677bbca65bb3d4b0d23532cf986e0eb2aed2c8b2d3d0f8990a5f600",
+            "checked_on": "2026-10-09"
+          },
+          {
+            "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2207&nttSn=1350157",
+            "title": "공지사항",
+            "excerpt": "사업자대출 용도 외 유용 자진시정 안내 작성자 관리자 작성일자 2026.04.08. 조회수 56927 사업자대출 용도 외 유용 자진시정 안내\r\n\r\n공지사항\r\n사업자대출 용도 외 유용 전수검증에 앞서 자발적 시정 기회 부여\r\n\r\n대상자 및 시정기한\r\n대 상 자 : 사업자대출을 받고 용도 외 유용한 개인·법인\r\n시정기한 : ’26. 6. 30.(화)\r\n시정내용 : 용도 외 유용한 대출금을 상환하고 수정신고서 제출\r\n\r\n서류제출\r\n제출방법 : 세무서 방문 및 우편 접수(수정신고서는 홈택스 제출 가능)\r\n제출서류 \r\n1. 수정신고서    ※ ’25년 귀속분의 경우 정기 신고서 제출\r\n2. 사업자대출 자진시정 소명서\r\n3. 관련 증빙서류\r\n▶ 용도 외 유용 사실을 확인할 수 있는 자료\r\n- [부동산 취득자금] 부동산매매계약서, 매매대금(대출금) 이체 내역 등\r\n- [기타] 기타 사용처에 대한 사용내역을 증빙할 수 있는 서류\r\n▶ 사업자대출 상환 사실을 확인할 수 있는 자료\r\n- 사업자대출 상환증명서, 대출거래 내역서 등\r\n▶ 사업자대출 상환자금 원천을 확인할 수 있는 자료\r\n- [부동산 처분대금] 부동산매매계약서, 매매대금 입금 내역\r\n- [예금 등] 예금 잔액증명서 및 주식·채권·가상자산 매각 증빙서류 등\r\n- [상속·증여자금] 상속·증여세 신고서\r\n- [대출] 금융대출 ▶ 대출 관련 증빙서류, 사인간 채무 ▶ 금전소비대차계약서\r\n※ 자진시정 소명서 양식은 국세청 홈페이지 공지사항에서 내려받으실 수 있습니다.\r\n\r\n검증제외\r\n아래 요건을 모두 충족하면 전수검증 대상에서 제외됩니다.\r\n- 사업자대출 관련 탈세 사항의 수정신고가 적정한 경우\r\n- 용도 외 유용한 사업자대출 상환이 완료된 경우\r\n- 대출 상환자금의 원천이 확인되는 경우 첨부파일 (서식) 사업자대출 자진시정 소명서.hwp (작성예시) 사업자대출 자진시정 소명서.hwp 다음글 2026년 지역인재 9급 임용관계서류 등 제출 안내 이전글 해외진출 중소·중견기업을 위한 이중과세 안심센터 목록",
+            "sha256": "08df6526734ad8f48f5d9b993f5945e3059a9d0b4547c5ebf8cd6f58728b33cf",
+            "checked_on": "2026-10-09"
+          }
+        ]
+      },
+      {
+        "keyword": "개인사업자대출",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "dominant_search_results"
+        ],
+        "monthly_search": 11300,
+        "organic_provider": "codex_native_search",
+        "organic_query": "개인사업자대출",
+        "organic_results": [
+          {
+            "url": "https://www.yna.co.kr/view/AKR20220402050000002",
+            "domain": "www.yna.co.kr",
+            "title": "토스뱅크, 개인사업자대출 출시 한달반만에 2천억원 돌파 | 연합뉴스",
+            "snippet": "시중은행의 보증부 대출을 제외한 개인사업자 대출(무보증)이 하루 평균 6억7천만∼10억원 규모로 취급되는 것을 고려하면 토스뱅크의 개인사업자 대출 성장세가 두드러진다. ... 토스뱅크는 지난 2월 14일 인터넷 전문은행"
+          },
+          {
+            "url": "https://www.yna.co.kr/view/AKR20220214035200002",
+            "domain": "www.yna.co.kr",
+            "title": "토스뱅크, 개인사업자대출 출시…최저금리 3%대·최대한도 1억 | 연합뉴스",
+            "snippet": "(서울=연합뉴스) 오주현 기자 = 토스뱅크가 14일 인터넷 전문은행 최초로 무보증·무담보 개인사업자 대출을 출시했다. ... 이용 대상은 실제 사업을 영위하고 있는 자영업자, 소상공인 등 개인사업자다. ..."
+          },
+          {
+            "url": "https://www.mss.go.kr/common/board/Download.do?bcIdx=1055382&cbIdx=86&streFileNm=9ff896d2-60bd-4983-848c-98a6c4ad76c9.pdf",
+            "domain": "www.mss.go.kr",
+            "title": "보도자료\n                      \n보도시점(전매체) 12.23(월) 10:",
+            "snippet": "개인사업자대출119 프로그램을 ‘지원대상 확대, 장기분할상환 ... (신규) 금융감독원 신용등급체계(10등급) 상 6등급 이하 개인사업자·법인기업 ... □ 연체우려차주 기준으로 대출액 기준 약 20% 수준이 될 것으로 예상"
+          },
+          {
+            "url": "https://www.korea.kr/goNews/resources/attaches/2019.01/29/d4353c35406e61f1a3492732955e1425.pdf",
+            "domain": "www.korea.kr",
+            "title": "| 보 도 자 료  |  |  |  |",
+            "snippet": "「자영업 성장·혁신 종합대책」을 마련(’18.12.20일)하였으며, ... - 금융회사에 대해 개인사업자대출 연간 관리계획을 제출받아점검 ... - 은행권 사회공헌자금 활용 자영업 맞춤형 보증지원(6,000억원) ... ➍ (개인사업자대출 여신심사 고도화)"
+          },
+          {
+            "url": "https://file-cdn.bok.or.kr/portal/cc75a4dac0e61c526a4c752bb90d1004/1/FILE_201803300833282271.pdf?token=st%3D1773457571~exp%3D1773461171~acl%3D%2Fportal%2Fcc75a4dac0e61c526a4c752bb90d1004%2F1%2FFILE_201803300833282271.pdf%2A~hmac%3Dc3d0139b3df6fa7bb5fe2a2abac613f5326d3f5821fbbd84b9a92e85d57cd55e",
+            "domain": "file-cdn.bok.or.kr",
+            "title": "대구지역 자영업자 대출 현황 및",
+            "snippet": "* 가계대출이 아닌 중소기업대출로 분류되나 부채상환의 책임이 차주 개인에게 ... ⇒한국은행 가계부채 DB*의 미시자료(12년∼17.2분기)를 활용**하여 역내 자영 ... 추정 가능(개인사업자대출 없이 가계대출만을 보유한 자영업자의 대출은"
+          },
+          {
+            "url": "https://m.kisrating.com/fileDown.do?fileName=rs20231128-24.pdf&gubun=2&menuCd=R8",
+            "domain": "m.kisrating.com",
+            "title": "롯데캐피탈(주)\n\n소비자금융은 가계신용대출, 개인사업자대출 등으로 구성되어 있다. 이 중",
+            "snippet": "소비자금융은 가계신용대출, 개인사업자대출 등으로 구성되어 있다. ... 2023년 9월 말 기준 부동산금융자산(일반기업대출로 분류된 브릿지론 및 부동산/토지담보대출 포함) 잔액은 1.5조원으로 영업자산의 19%를 차지하고 있다. ... 변제순위"
+          },
+          {
+            "url": "https://www.kiri.or.kr/report/downloadFile.do?docId=1633",
+            "domain": "www.kiri.or.kr",
+            "title": "KiRi_Weekly_제191호(2012.7.16).hwp",
+            "snippet": "금감원에 따르면 국내은행의 개인사업자에 대한 대출1)은 취급유인2)이 높아지고 자영업자 수도 늘어 ... 2012년 5월 말 국내은행 개인사업자대출 잔액은 164조 8,000억 원으로 중소기업대출 잔액의"
+          },
+          {
+            "url": "https://og.kakaobank.io/download/6acc6847-a23d-4985-853f-af86c6a69191",
+            "domain": "og.kakaobank.io",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "개인사업자 대출은 안정적 포트폴리오 중심으로 성장 지속하며 2.3조원 잔액 달성; ... - 대출 상품/서비스: 신용대출, 보증서대출, 이차보전상품, 정책자금 통합조회, 1억원 초과 신용대출, 비대면 담보대출 ..."
+          },
+          {
+            "url": "https://epts.kdi.re.kr/archive/frwdHist/view2?EPIC_NUM=201178",
+            "domain": "epts.kdi.re.kr",
+            "title": "채무상환이 어렵다면 ‘개인사업자대출119’를 이용해 보세요 - 경제정책 시계열서비스",
+            "snippet": "채무상환이 어렵다면 ‘개인사업자대출119’를 이용해 보세요 ... 금) 밝혔다. - ‘개인사업자대출119’는 은행권에서 유동성 부족 등으로 채무상환에 일시적 어려움을 겪는 개인사업자의 대출에 대해 만기연장 등을 통해 채무상환부담을"
+          },
+          {
+            "url": "https://www.yna.co.kr/amp/view/AKR20220214035200002",
+            "domain": "www.yna.co.kr",
+            "title": "토스뱅크, 개인사업자대출 출시…최저금리 3%대·최대한도 1억 | 연합뉴스",
+            "snippet": "(서울=연합뉴스) 오주현 기자 = 토스뱅크가 14일 인터넷 전문은행 최초로 무보증·무담보 개인사업자 대출을 출시했다. ... 이용 대상은 실제 사업을 영위하고 있는 자영업자, 소상공인 등 개인사업자다. ..."
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "개인사업자대출",
+          "executed_query": "개인사업자대출",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-08T22:56:57.768066+00:00",
+          "raw_sha256": "ad4712dd841a131866d154c3520ce2e337acc9663d371f60e69909afe6310b96",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "시중은행의 보증부 대출을 제외한 개인사업자 대출(무보증)이 하루 평균 6억7천만∼10억원 규모로 취급되는 것을 고려하면 토스뱅크의 개인사업자 대출 성장세가 두드러진다. ... 토스뱅크는 지난 2월 14일 인터넷 전문은행"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "토스뱅크, 개인사업자대출 출시…최저금리 3%대·최대한도 1억 | 연합뉴스"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "개인사업자대출119 프로그램을 ‘지원대상 확대, 장기분할상환 ... (신규) 금융감독원 신용등급체계(10등급) 상 6등급 이하 개인사업자·법인기업 ... □ 연체우려차주 기준으로 대출액 기준 약 20% 수준이 될 것으로 예상"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "「자영업 성장·혁신 종합대책」을 마련(’18.12.20일)하였으며, ... - 금융회사에 대해 개인사업자대출 연간 관리계획을 제출받아점검 ... - 은행권 사회공헌자금 활용 자영업 맞춤형 보증지원(6,000억원) ... ➍ (개인사업자대출 여신심사 고도화)"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "* 가계대출이 아닌 중소기업대출로 분류되나 부채상환의 책임이 차주 개인에게 ... ⇒한국은행 가계부채 DB*의 미시자료(12년∼17.2분기)를 활용**하여 역내 자영 ... 추정 가능(개인사업자대출 없이 가계대출만을 보유한 자영업자의 대출은"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "소비자금융은 가계신용대출, 개인사업자대출 등으로 구성되어 있다. ... 2023년 9월 말 기준 부동산금융자산(일반기업대출로 분류된 브릿지론 및 부동산/토지담보대출 포함) 잔액은 1.5조원으로 영업자산의 19%를 차지하고 있다. ... 변제순위"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "금감원에 따르면 국내은행의 개인사업자에 대한 대출1)은 취급유인2)이 높아지고 자영업자 수도 늘어 ... 2012년 5월 말 국내은행 개인사업자대출 잔액은 164조 8,000억 원으로 중소기업대출 잔액의"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "개인사업자 대출은 안정적 포트폴리오 중심으로 성장 지속하며 2.3조원 잔액 달성; ... - 대출 상품/서비스: 신용대출, 보증서대출, 이차보전상품, 정책자금 통합조회, 1억원 초과 신용대출, 비대면 담보대출 ..."
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "채무상환이 어렵다면 ‘개인사업자대출119’를 이용해 보세요 ... 금) 밝혔다. - ‘개인사업자대출119’는 은행권에서 유동성 부족 등으로 채무상환에 일시적 어려움을 겪는 개인사업자의 대출에 대해 만기연장 등을 통해 채무상환부담을"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "토스뱅크, 개인사업자대출 출시…최저금리 3%대·최대한도 1억 | 연합뉴스"
             }
           ]
         }
       },
       {
-        "keyword": "강소기업",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "dominant_search_results"
-        ],
-        "monthly_search": 1540,
-        "organic_provider": "codex_native_search",
-        "organic_query": "강소기업",
-        "organic_results": [
-          {
-            "url": "https://www.smes.go.kr/gsmb/",
-            "domain": "www.smes.go.kr",
-            "title": "참 괜찮은 강소기업",
-            "snippet": "「참 괜찮은 강소기업」이 개선된 선정기준과 함께 업데이트 되었습니다. ... * [교육부/한국발명진흥회] 2026 직업계고 인재성장 기업포럼 신청 안내 2026.07.30 ... 로그인 후 마이페이지에서 재직자 인증을 받으시면"
-          },
-          {
-            "url": "https://www.smes.go.kr/gsmb/search",
-            "domain": "www.smes.go.kr",
-            "title": "조건별 기업검색 | 참 괜찮은 강소기업",
-            "snippet": "# 참 괜찮은 강소기업 ... 「참 괜찮은 강소기업」 을 원하시는 조건에 따라 찾아보세요. ... 기업명 검색 [Input: 기업명, 지역, 업종을 검색해주세요.] ... [Input] 대구 수성구"
-          },
-          {
-            "url": "https://www.smes.go.kr/gsmb/?abExternalOpen=true",
-            "domain": "www.smes.go.kr",
-            "title": "참 괜찮은 강소기업",
-            "snippet": "전국의 괜찮은 강소기업 일자리를 지도로 한 눈에 확인할 수 있습니다. ... 「참 괜찮은 강소기업」이 개선된 선정기준과 함께 업데이트 되었습니다."
-          },
-          {
-            "url": "https://kangso.kova.or.kr/",
-            "domain": "kangso.kova.or.kr",
-            "title": "청년일자리 강소기업",
-            "snippet": "### 기업이신가요? 강소기업 선정에 신청합니다"
-          },
-          {
-            "url": "https://www.work24.go.kr/wk/a/d/1000/retrieveBusiSearch.do",
-            "domain": "www.work24.go.kr",
-            "title": "통합기업정보 | 일자리 찾기 | 채용정보",
-            "snippet": "[Input] 전체 [Input] 청년일자리 강소기업 [Input] 강소기업 [Input] 일학습병행기업 [Input] 가족친화인증기업 [Input] 사회적기업 [Input] 인재육성형 중소기업 [Input] 일자리으뜸기업 [Input] 남녀고용평등 우수기업 [Input] 일·생활 균형 우수기업"
-          },
-          {
-            "url": "https://www.smes.go.kr/gsmb/general_outlinel",
-            "domain": "www.smes.go.kr",
-            "title": "참!기업 알기 | 참 괜찮은 강소기업",
-            "snippet": "* ② 임금 수준이 3,500만원 이상인 기업 ... 구직자들은 플랫폼 내 여러 기능을 활용해 조건/테마별로 ‘참 괜찮은 강소기업’과 중소기업 관련 취업 콘텐츠를 확인할 수 있고,참"
-          },
-          {
-            "url": "https://www.nicebizinfo.com/ep/EP0100M002GE.nice?kiscode=JG9255",
-            "domain": "www.nicebizinfo.com",
-            "title": "강소기업 - 2026년 기업정보 - 매출액, 재무제표, 신용등급보고서",
-            "snippet": "강소기업 ... 존재하지 않을 경우 사업자등록증 상 개업일자 표시 | 2014.02.25 | 주소 | (27652) 충북 음성군 삼성면 대성로 *** ... 보고서 구매 시 기업평가등급,"
-          },
-          {
-            "url": "https://namu.moe/w/%EA%B0%95%EC%86%8C%EA%B8%B0%EC%97%85",
-            "domain": "namu.moe",
-            "title": "강소기업",
-            "snippet": "중소기업 에 속하지만 아주 특이한 매출 구조를 가진 소수의 사업장, 또는 고유 기술을 가진 스타트업, 중견기업 이상으로의 성장을 노릴 역량이 있는 경계선 규모의 기업, 혹은"
-          },
-          {
-            "url": "https://d.namu.moe/w/%EA%B0%95%EC%86%8C%EA%B8%B0%EC%97%85",
-            "domain": "d.namu.moe",
-            "title": "강소기업",
-            "snippet": "이름 그대로 풀이하면 '작지만 강한 기업'이지만 재무건전성이나 매출과 같은 객관적 지표가 선행되지 않기 때문에 기업규모나 역량, 재무건전성 등에 대한 법적 경제적 평가와는 관련이 없다. ..."
-          },
-          {
-            "url": "https://www.biz360.kr/",
-            "domain": "www.biz360.kr",
-            "title": "부울경 강소기업 2,000곳 · 제조업 정보 | BIZ360",
-            "snippet": "AI 브랜딩(주)부산정밀기계 CNC 가공 기술자 정규직 부산 사상구 연봉 3,500~4,500만원 5축 CNC 가공 경험자 우대, 주 5일 근무, 4대보험 완비 2026년 10월 6일 등록 울산중공업(주)용접"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "강소기업",
-          "executed_query": "강소기업",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-08T10:52:20.259804+00:00",
-          "raw_sha256": "d560376688bfd27f7a46391c08bfd7b0e72545c39f3c97c857fb5595da20cbf0",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "「참 괜찮은 강소기업」이 개선된 선정기준과 함께 업데이트 되었습니다. ... * [교육부/한국발명진흥회] 2026 직업계고 인재성장 기업포럼 신청 안내 2026.07.30 ... 로그인 후 마이페이지에서 재직자 인증을 받으시면"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "# 참 괜찮은 강소기업 ... 「참 괜찮은 강소기업」 을 원하시는 조건에 따라 찾아보세요. ... 기업명 검색 [Input: 기업명, 지역, 업종을 검색해주세요.] ... [Input] 대구 수성구"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "전국의 괜찮은 강소기업 일자리를 지도로 한 눈에 확인할 수 있습니다. ... 「참 괜찮은 강소기업」이 개선된 선정기준과 함께 업데이트 되었습니다."
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "### 기업이신가요? 강소기업 선정에 신청합니다"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "[Input] 전체 [Input] 청년일자리 강소기업 [Input] 강소기업 [Input] 일학습병행기업 [Input] 가족친화인증기업 [Input] 사회적기업 [Input] 인재육성형 중소기업 [Input] 일자리으뜸기업 [Input] 남녀고용평등 우수기업 [Input] 일·생활 균형 우수기업"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "* ② 임금 수준이 3,500만원 이상인 기업 ... 구직자들은 플랫폼 내 여러 기능을 활용해 조건/테마별로 ‘참 괜찮은 강소기업’과 중소기업 관련 취업 콘텐츠를 확인할 수 있고,참"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "강소기업 ... 존재하지 않을 경우 사업자등록증 상 개업일자 표시 | 2014.02.25 | 주소 | (27652) 충북 음성군 삼성면 대성로 *** ... 보고서 구매 시 기업평가등급,"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "중소기업 에 속하지만 아주 특이한 매출 구조를 가진 소수의 사업장, 또는 고유 기술을 가진 스타트업, 중견기업 이상으로의 성장을 노릴 역량이 있는 경계선 규모의 기업, 혹은"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "이름 그대로 풀이하면 '작지만 강한 기업'이지만 재무건전성이나 매출과 같은 객관적 지표가 선행되지 않기 때문에 기업규모나 역량, 재무건전성 등에 대한 법적 경제적 평가와는 관련이 없다. ..."
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "부울경 강소기업 2,000곳 · 제조업 정보 | BIZ360"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "소상공인창업지원금",
+        "keyword": "소상공인폐업지원금",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
           "low_search_relevance"
         ],
-        "monthly_search": 610,
+        "monthly_search": 6650,
         "organic_provider": "codex_native_search",
-        "organic_query": "소상공인 창업 지원금",
+        "organic_query": "소상공인폐업지원금",
         "organic_results": [
-          {
-            "url": "https://awoo.or.kr/subsidies/small-biz-loan/",
-            "domain": "awoo.or.kr",
-            "title": "소상공인 정책자금 — 소상공인시장진흥공단 | 지원금가이드",
-            "snippet": "소상공인 운영·창업 자금을 연 2~3% 저금리로 최대 7천만원 융자. ... 소상공인 정책자금은 소상공인시장진흥공단이 제공하는 창업 분야 지원금입니다."
-          },
-          {
-            "url": "https://nabo.go.kr/board/file/down.do?fid=33318912",
-            "domain": "nabo.go.kr",
-            "title": "<322E28BAB8B0EDBCAD29BCD2BBF3B0F8C0CE20C1F6BFF820C0E7C1A4BBE7BEF720C6F2B0A120BAB8B0EDBCAD20C0CEBCE2BFEB5F32303235313033315FC6C7C7FCBCF6C1A45F3135BDC33330BAD02E687770>",
-            "snippet": "중소벤처기업부가 정의하는 ‘기업가형 소상공인’이란 의식주 등 생활문화 분야에 ‘제조기반, 서비스혁신’을 통해 새로운 부가가치를 창출하는 기업이며, 최근에는 기업가정신, 장인정신 및 창의성을 기반으로 혁신적 사업모델을 창출하고 성장을"
-          },
-          {
-            "url": "https://50plus.or.kr/upload/im/2025/04/9d031fb2-cd97-41a5-9f9d-43c172f16959.pdf",
-            "domain": "50plus.or.kr",
-            "title": "[중소벤처기업부 공고 제2024-626호]",
-            "snippet": "4월 | 소관 부처 정읍시 (일자리 정책과) | 전담(주관) 기관 정읍시 청년지원센터 (창업컨설팅) | 비고 청년 지원 창업 사업 연번 114 | 지역 구분 전북"
-          },
           {
             "url": "https://www.icsp.or.kr/",
             "domain": "www.icsp.or.kr",
@@ -5791,469 +5811,159 @@
             "snippet": "* 소상공인지원 성장지원 2026년 1인 자영업자 고용보험료 지원사업 접수중 2026.04.01 ~ 2026.12.18 ... * (인천광역시) 하반기 소상공인시장진흥자금 25억 원 지원 2026-08-18 ... [창업 지원] 인천"
           },
           {
-            "url": "https://grant-documents.thevc.kr/291912_%EC%9A%B0%EC%A3%BC%ED%95%AD%EA%B3%B5%EC%B2%AD%2B%EC%9D%B4%EC%A3%BC%EC%A7%81%EC%9B%90%2B%EA%B0%80%EC%A1%B1%2B%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8%2B%EC%B0%BD%EC%97%85%2B%EC%A7%80%EC%9B%90%EC%82%AC%EC%97%85%2B%EA%B3%B5%EA%B3%A0%EB%AC%B8.pdf",
-            "domain": "grant-documents.thevc.kr",
-            "title": "진주시 공고 제\n호\n2026-580\n우주항공청 이주직원 가족 소상공인 창업 지원사업 공고",
-            "snippet": "지원대상 : 이주 직원의 가족 중 진주시에 신규 창업한 소상공인* ... 주된 업종별 평균매출액 등이 소기업 규모 기준 ... 공 통소상공인 정책자금 지원제외 대상 업종"
+            "url": "https://portal.barogov.kr/target/smallbiz/",
+            "domain": "portal.barogov.kr",
+            "title": "정부정책포털 - 소상공인",
+            "snippet": "한국장애인고용공단을 중심으로 장애인 고용장려금, 근로지원인 서비스, 보조공학기기 지원, 작업환경 개선, 직업훈련과 취업알선 등 다양한 지원이 제공되며, 개인과 사업주가 각각 필요한 유형을 선택해 신청할 수 있습니다."
           },
           {
-            "url": "https://www.startupfastlane.kr/jiwon",
-            "domain": "www.startupfastlane.kr",
-            "title": "지역별 · 사업별 지원금 모아보기 | 창업추월차선",
-            "snippet": "시 · 도를 고르면 그 지역 소상공인 지원금과 지자체 창업 지원사업이, 사업 이름을 고르면 심사 기준과 준비 서류가 나와요. ... 서울 동작구 3 서울 강동구"
+            "url": "https://www.jobkorea.co.kr/company/1456119/salary",
+            "domain": "www.jobkorea.co.kr",
+            "title": "소상공인시장진흥공단 연봉정보 - 평균연봉 5,148만원 | 잡코리아",
+            "snippet": "기업별로 성과금, 비과세액, 계약직근로자 포함여부 등이 다를 수 있기 때문에 기업의 실제 연봉과 차이가 있을 수 있으니, 참고용으로만 사용하시길 권장드립니다. ... \"소상공인시장진흥공단의 평균연봉이 가장 많이"
           },
           {
-            "url": "https://sajangfund.kr/sbiz/",
-            "domain": "sajangfund.kr",
-            "title": "소상공인 | 정책자금 진흥공단 지원금 대출 신청 방법·대상",
-            "snippet": "소상공인이라는 단어 하나로 검색하면 대출인지 지원금인지, 진흥공단 사이트인지 통합 포털인지 구분이 안 서는 경우가 많습니다. ... 소상공인이 실제로 신청하는 창구를 정책자금 대출·경영안정 바우처·폐업지원·지역 상담으로 나눠,"
+            "url": "https://site.kpark.co.kr/",
+            "domain": "site.kpark.co.kr",
+            "title": "케이파크 사이트 - 자동차·카테크·생활정보를 한눈에",
+            "snippet": "### 소상공인폐업지원금 신청자격 및 서류 2026 최신 총정리2026년 기준 소상공인폐업지원금 신청 자격부터 필수 서류, 철거비 지원 범위, 재기 컨설팅까지 폐업을 고민하는 사장님을 위한 종합 가이드를"
           },
           {
-            "url": "https://sajangfund.kr/sbiz-startup-loan/",
-            "domain": "sajangfund.kr",
-            "title": "소상공인창업대출 | 조건 정책자금 진흥공단 지원금 신청 방법·조건",
-            "snippet": "창업 자금을 검색하면 민간 대출 광고와 정부 지원이 뒤섞여 나오고, 조건이라고 검색해도 자금 이름마다 금리·한도·대상이 달라 무엇이 자기 사업에 맞는지 판단이 어렵습니다. ... 소상공인창업대출이라는 단일"
+            "url": "https://cafe.daangn.com/golyeososang-go",
+            "domain": "cafe.daangn.com",
+            "title": "소상공인폐업철거",
+            "snippet": "소상공인폐업지원금 철거·고정됨 폐업 지원금, 챙기셨나요?"
           },
           {
-            "url": "https://sbalimi.infovista.kr/policies/",
-            "domain": "sbalimi.infovista.kr",
-            "title": "전체 지원사업 | 소상공인 지원금 알리미",
-            "snippet": "전체 💰 정책자금 🎫 바우처/경비지원 📚 교육/컨설팅 🛒 판로/마케팅 🚀 창업/성장 지원 🔄 재기 지원 🏪 전통시장/상권 🏭 제조/스마트 ... 소상공인 폐업 절차 원스톱 지원"
+            "url": "https://gov8282.com/small-business-closure-support-fund/",
+            "domain": "gov8282.com",
+            "title": "소상공인폐업지원금 신청절차 및 신청조건 신청서류 - TMI 스토리",
+            "snippet": "> 소상공인 폐업지원금은 정식 명칭이 희망리턴패키지 원스톱폐업지원입니다. ... 소상공인폐업지원금 신청 바로가기"
+          },
+          {
+            "url": "https://dreamcheolgeo.imweb.me/index",
+            "domain": "dreamcheolgeo.imweb.me",
+            "title": "드림철거연합",
+            "snippet": "확정 #상가철거#카페철거#식당철거#학원철거#회사철거#석면철거#공장철거#화장실철거#주탁철거#폐기물처리#집기매입#폐업지원금#희망리턴패키지 ... #철거#철거전문#구축물해체#폐업#폐업전문#폐기물 #상가철거#사무실철거#카페철거#식당철거#학원철거#미용실철거#인테리어철거#노래방철거#병원철거#폐기물처리#폐기물#철거지원금#폐업지원금#소상공인 폐업지원금"
+          },
+          {
+            "url": "https://xn--v69a350byqevvac0o.com/%EC%B6%A9%EB%82%A8/%EC%84%9C%EC%82%B0%EC%8B%9C/%ED%8F%90%EC%97%85%EC%A7%80%EC%9B%90%EA%B8%88/",
+            "domain": "xn--v69a350byqevvac0o.com",
+            "title": "서산시폐업지원금 – 서산 소상공인폐업지원금·소상공인철거지원금·희망리턴패키지 | 철거의정석",
+            "snippet": "* 범위서산시 소상공인폐업지원금 · 서산시 소상공인철거지원금 · 서산시 철거지원금 까지 한 번의 실측으로 확인하고 항목별 확정 견적서를 드립니다. ... 서산시 소상공인폐업지원금은 얼마까지 받을 수 있나요?"
+          },
+          {
+            "url": "https://xn--v69a350byqevvac0o.com/%EA%B2%BD%EA%B8%B0/%EC%98%A4%EC%82%B0%EC%8B%9C/%ED%8F%90%EC%97%85%EC%A7%80%EC%9B%90%EA%B8%88/",
+            "domain": "xn--v69a350byqevvac0o.com",
+            "title": "오산시폐업지원금 – 오산 소상공인폐업지원금·소상공인철거지원금·희망리턴패키지 | 철거의정석",
+            "snippet": "* 범위오산시 소상공인폐업지원금 · 오산시 소상공인철거지원금 · 오산시 철거지원금 까지 한 번의 실측으로 확인하고 항목별 확정 견적서를 드립니다. ... 오산시 소상공인폐업지원금은 얼마까지 받을 수 있나요?"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "소상공인창업지원금",
-          "executed_query": "소상공인 창업 지원금",
+          "query": "소상공인폐업지원금",
+          "executed_query": "소상공인폐업지원금",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-08T10:52:20.259804+00:00",
-          "raw_sha256": "aa832eec3adb2406f386f2b0ac3b92ba6af84fb124340137dc1e42da2579ec07",
+          "checked_at": "2026-10-08T22:56:57.768066+00:00",
+          "raw_sha256": "b27d7194b269ee1a2bc0eb4bd6dbc171a8ffaf890d038ac22c9a38101cbffe14",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": true,
-              "quote": "소상공인 운영·창업 자금을 연 2~3% 저금리로 최대 7천만원 융자. ... 소상공인 정책자금은 소상공인시장진흥공단이 제공하는 창업 분야 지원금입니다."
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "중소벤처기업부가 정의하는 ‘기업가형 소상공인’이란 의식주 등 생활문화 분야에 ‘제조기반, 서비스혁신’을 통해 새로운 부가가치를 창출하는 기업이며, 최근에는 기업가정신, 장인정신 및 창의성을 기반으로 혁신적 사업모델을 창출하고 성장을"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "4월 | 소관 부처 정읍시 (일자리 정책과) | 전담(주관) 기관 정읍시 청년지원센터 (창업컨설팅) | 비고 청년 지원 창업 사업 연번 114 | 지역 구분 전북"
-            },
-            {
-              "result_index": 3,
               "relevant": false,
               "quote": "성장지원 「모두의 창업 프로젝트」 통합 모집공고 (2차) 성장지원 2026년 찾아가는 1:1 디지털 교육 소상공인 모집 성장지원 2026년 혁신 소상공인 AI 활용 지원사업 상권활성화 강소 소공인"
             },
             {
-              "result_index": 4,
+              "result_index": 1,
               "relevant": false,
               "quote": "* 소상공인지원 성장지원 2026년 1인 자영업자 고용보험료 지원사업 접수중 2026.04.01 ~ 2026.12.18 ... * (인천광역시) 하반기 소상공인시장진흥자금 25억 원 지원 2026-08-18 ... [창업 지원] 인천"
             },
             {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "지원대상 : 이주 직원의 가족 중 진주시에 신규 창업한 소상공인* ... 주된 업종별 평균매출액 등이 소기업 규모 기준 ... 공 통소상공인 정책자금 지원제외 대상 업종"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "시 · 도를 고르면 그 지역 소상공인 지원금과 지자체 창업 지원사업이, 사업 이름을 고르면 심사 기준과 준비 서류가 나와요. ... 서울 동작구 3 서울 강동구"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "소상공인이라는 단어 하나로 검색하면 대출인지 지원금인지, 진흥공단 사이트인지 통합 포털인지 구분이 안 서는 경우가 많습니다. ... 소상공인이 실제로 신청하는 창구를 정책자금 대출·경영안정 바우처·폐업지원·지역 상담으로 나눠,"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "소상공인창업대출 | 조건 정책자금 진흥공단 지원금 신청 방법·조건"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "전체 💰 정책자금 🎫 바우처/경비지원 📚 교육/컨설팅 🛒 판로/마케팅 🚀 창업/성장 지원 🔄 재기 지원 🏪 전통시장/상권 🏭 제조/스마트 ... 소상공인 폐업 절차 원스톱 지원"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "퇴직연금대출",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance"
-        ],
-        "monthly_search": 600,
-        "organic_provider": "codex_native_search",
-        "organic_query": "퇴직연금 대출",
-        "organic_results": [
-          {
-            "url": "https://file.shinhansec.com/filedoc/clause/rks_guide.pdf",
-            "domain": "file.shinhansec.com",
-            "title": "퇴직연금\n가입자교육\n확정급여형(DB) / 확정기여형(DC)\n개인형퇴직연금(IRP)\n- 1",
-            "snippet": "퇴직연금제도의 급여를 받을 권리는 양도 또는 압류하거나 담보로 ... 사유 무주택자인 가입자가 본인 명의로 주택구입 | 중도 인출 O | 담보 대출* O --- |"
-          },
-          {
-            "url": "https://www.samsunglife.com/dcms/upload/2025/03/31/%28%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85%29FY2024%20%EA%B2%BD%EC%98%81%EA%B3%B5%EC%8B%9C_vF.pdf",
-            "domain": "www.samsunglife.com",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "구 분 None | 예입 과목 | 금액 | 운용 과목 | 금액 | 비고 None --- | --- | --- | --- | ---"
-          },
-          {
-            "url": "https://www.mowatool.com/calculators/employment/severance-interim-settlement-loss",
-            "domain": "www.mowatool.com",
-            "title": "퇴직금 중간정산 손익 계산기 | 2026 합산정산·대출 비교 | 모아툴",
-            "snippet": "하지만 지금 받는 금액만 보면 장래 임금 상승에 따라 늘어날 퇴직금, 중간정산 당시 낸 세금, 대출로 같은 자금을 마련했을 때의 이자를 놓칠 수 있습니다. ..."
-          },
-          {
-            "url": "https://esedy.com/",
-            "domain": "esedy.com",
-            "title": "생활계산기 — 연봉·대출·통신비 생활 계산",
-            "snippet": "연봉·퇴직금·대출·부동산·자동차·통신비까지 복잡한 숫자를 쉽고 빠르게 계산하세요. ... * 실업급여 이직 전 평균임금과 고용보험 가입기간으로 구직급여 예상 금액과 지급일수를 계산합니다. ... * 급여·직장11연봉 실수령액, 월급, 4대보험,"
-          },
-          {
-            "url": "https://pension.knowmoney.kr/wiki/retirement-pension-loan/",
-            "domain": "pension.knowmoney.kr",
-            "title": "퇴직연금 담보대출 (가능 사유·적립금 50% 한도·중도인출과 차이) | 연금 위키",
-            "snippet": "결론부터 말하면 퇴직연금은 가입자별 적립금의 100분의 50까지 담보로 맡기고 대출을 받을 수 있습니다^{1}. ... 주택구입 등 대통령령으로 정하는 사유와 요건을 갖추면 정해진 한도 안에서 담보로"
-          },
-          {
-            "url": "https://money2.daishin.com/e5/pagelet/board/fileupload/filedownload.aspx?gubun=1&p1=mboard&p2=PType_basic_Pension_Main&p3=seq&seq=0kaV270dF517SNFF54V72WtdKEpZaE341wz6aBJXN66ekS9c074Mktp4rxAoI1302Y5WN05uKyJkUfts55l9AHj86Wed0UFmd0aN06",
-            "domain": "money2.daishin.com",
-            "title": "확정급여형 퇴직연금",
-            "snippet": "무주택자 가입자가 주거 목적으로 전세금 또는 임차 보증금 부담 2 (DB·DC 가입자는 재직 중 1회 한정, IRP에서는 횟수 제한 없음) | | 퇴직연금 가입자는 아래의"
-          },
-          {
-            "url": "https://dasem.org/",
-            "domain": "dasem.org",
-            "title": "다셈 — 2026 급여·세금·대출·부동산 생활 계산기",
-            "snippet": "4대보험료 주휴수당 최저임금 퇴직금 실업급여 시급↔연봉 연장야간휴일수당 연차수당대출·이자 ... * 국민연금공단 연금보험료 ... * 고용노동부 퇴직금 계산 * 금융위원회 차주단위 DSR 규제비율 안내 ... 신고·계약·대출"
-          },
-          {
-            "url": "https://kiri.or.kr/report/downloadFile.do?docId=831139",
-            "domain": "kiri.or.kr",
-            "title": "<32362D345F3230323520BAB8C7E8BCD2BAF1C0DAC7E0C5C2C1B6BBE75FC1DFB0EDB7C9BCD2BAF1C0DAC0C720B1DDC0B6BFAAB7AE20C1F8B4DCB0FA20B0ADC8ADB9E6BEC85F33C2F720C1B6C6C72E687770>",
-            "snippet": "구분 총 자산 | 1억 원 미만 | 응답자 수 606 | 이자율 54.5 | 물가 상승률 78.1 | 위험 분산 65.7 | 담보 대출"
-          },
-          {
-            "url": "https://www.reko.co.kr/",
-            "domain": "www.reko.co.kr",
-            "title": "Reko — 연봉·대출·퇴직금 계산기 & 금융 정보",
-            "snippet": "퇴직소득세 계산기 근속연수공제를 반영한 세후 실수령 퇴직금을 계산합니다. ... 라는 질문에 답하려면 국민연금·건강보험 요율부터 소득세 누진세율, 근로기준법상 퇴직금 산정 방식까지 여러 정보를 챙겨야 합니다. ..."
-          },
-          {
-            "url": "https://esedy.com/calculator/severance",
-            "domain": "esedy.com",
-            "title": "퇴직금 계산기 | 평균임금 기준 예상 수령액",
-            "snippet": "기본급 + 정기적·일률적·고정적으로 지급되는 수당의 합계. ... * 고용노동부 — 근로자퇴직급여 보장법 제8조 (퇴직금 = 1일 평균임금 × 30일 × 재직일수/365)적용 2012-07-26 ~ · 확인"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "퇴직연금대출",
-          "executed_query": "퇴직연금 대출",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-08T10:52:20.259804+00:00",
-          "raw_sha256": "9f1f3884eab886825acc82e763cdb6a5b6ff45a40ec208a3296e2a16a369f4ed",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "퇴직연금제도의 급여를 받을 권리는 양도 또는 압류하거나 담보로 ... 사유 무주택자인 가입자가 본인 명의로 주택구입 | 중도 인출 O | 담보 대출* O --- |"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "구 분 None | 예입 과목 | 금액 | 운용 과목 | 금액 | 비고 None --- | --- | --- | --- | ---"
-            },
-            {
               "result_index": 2,
               "relevant": false,
-              "quote": "하지만 지금 받는 금액만 보면 장래 임금 상승에 따라 늘어날 퇴직금, 중간정산 당시 낸 세금, 대출로 같은 자금을 마련했을 때의 이자를 놓칠 수 있습니다. ..."
+              "quote": "한국장애인고용공단을 중심으로 장애인 고용장려금, 근로지원인 서비스, 보조공학기기 지원, 작업환경 개선, 직업훈련과 취업알선 등 다양한 지원이 제공되며, 개인과 사업주가 각각 필요한 유형을 선택해 신청할 수 있습니다."
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "연봉·퇴직금·대출·부동산·자동차·통신비까지 복잡한 숫자를 쉽고 빠르게 계산하세요. ... * 실업급여 이직 전 평균임금과 고용보험 가입기간으로 구직급여 예상 금액과 지급일수를 계산합니다. ... * 급여·직장11연봉 실수령액, 월급, 4대보험,"
+              "quote": "소상공인시장진흥공단 연봉정보 - 평균연봉 5,148만원 | 잡코리아"
             },
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "결론부터 말하면 퇴직연금은 가입자별 적립금의 100분의 50까지 담보로 맡기고 대출을 받을 수 있습니다^{1}. ... 주택구입 등 대통령령으로 정하는 사유와 요건을 갖추면 정해진 한도 안에서 담보로"
+              "quote": "### 소상공인폐업지원금 신청자격 및 서류 2026 최신 총정리2026년 기준 소상공인폐업지원금 신청 자격부터 필수 서류, 철거비 지원 범위, 재기 컨설팅까지 폐업을 고민하는 사장님을 위한 종합 가이드를"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "무주택자 가입자가 주거 목적으로 전세금 또는 임차 보증금 부담 2 (DB·DC 가입자는 재직 중 1회 한정, IRP에서는 횟수 제한 없음) | | 퇴직연금 가입자는 아래의"
+              "quote": "소상공인폐업지원금 철거·고정됨 폐업 지원금, 챙기셨나요?"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "4대보험료 주휴수당 최저임금 퇴직금 실업급여 시급↔연봉 연장야간휴일수당 연차수당대출·이자 ... * 국민연금공단 연금보험료 ... * 고용노동부 퇴직금 계산 * 금융위원회 차주단위 DSR 규제비율 안내 ... 신고·계약·대출"
+              "relevant": true,
+              "quote": "> 소상공인 폐업지원금은 정식 명칭이 희망리턴패키지 원스톱폐업지원입니다. ... 소상공인폐업지원금 신청 바로가기"
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "구분 총 자산 | 1억 원 미만 | 응답자 수 606 | 이자율 54.5 | 물가 상승률 78.1 | 위험 분산 65.7 | 담보 대출"
+              "quote": "확정 #상가철거#카페철거#식당철거#학원철거#회사철거#석면철거#공장철거#화장실철거#주탁철거#폐기물처리#집기매입#폐업지원금#희망리턴패키지 ... #철거#철거전문#구축물해체#폐업#폐업전문#폐기물 #상가철거#사무실철거#카페철거#식당철거#학원철거#미용실철거#인테리어철거#노래방철거#병원철거#폐기물처리#폐기물#철거지원금#폐업지원금#소상공인 폐업지원금"
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "퇴직소득세 계산기 근속연수공제를 반영한 세후 실수령 퇴직금을 계산합니다. ... 라는 질문에 답하려면 국민연금·건강보험 요율부터 소득세 누진세율, 근로기준법상 퇴직금 산정 방식까지 여러 정보를 챙겨야 합니다. ..."
+              "relevant": true,
+              "quote": "* 범위서산시 소상공인폐업지원금 · 서산시 소상공인철거지원금 · 서산시 철거지원금 까지 한 번의 실측으로 확인하고 항목별 확정 견적서를 드립니다. ... 서산시 소상공인폐업지원금은 얼마까지 받을 수 있나요?"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "퇴직금 계산기 | 평균임금 기준 예상 수령액"
+              "relevant": true,
+              "quote": "* 범위오산시 소상공인폐업지원금 · 오산시 소상공인철거지원금 · 오산시 철거지원금 까지 한 번의 실측으로 확인하고 항목별 확정 견적서를 드립니다. ... 오산시 소상공인폐업지원금은 얼마까지 받을 수 있나요?"
             }
           ]
         }
-      },
-      {
-        "keyword": "자금조달계획서",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
-              "title": "부동산거래신고(신고,변경,해제)신고서(별지 및 위임장 포함) | 강남구청",
-              "excerpt_chars": 2638
-            },
-            {
-              "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-              "title": "보도자료",
-              "excerpt_chars": 299
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-                  "title": "보도자료",
-                  "excerpt_chars": 299
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_rejected",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
-                  "title": "부동산거래신고(신고,변경,해제)신고서(별지 및 위임장 포함) | 강남구청",
-                  "excerpt_chars": 2638
-                },
-                {
-                  "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-                  "title": "보도자료",
-                  "excerpt_chars": 299
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            }
-          }
-        },
-        "monthly_search": 8150,
-        "organic_provider": "codex_native_search",
-        "organic_query": "자금조달계획서",
-        "organic_results": [
-          {
-            "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200203&flNm=%5B%EB%B3%84%EC%A7%80+2%5D+%EC%82%AC%EC%97%85%EB%B9%84+%EB%B0%8F+%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%EA%B3%84%ED%9A%8D%EC%84%9C&flSeq=153911491",
-            "domain": "www.law.go.kr",
-            "title": "[별지 제2호 서식] 사업비 및 자금조달계획서",
-            "snippet": "자 금 조 달 계 획 작성기관 | ○○○ 회계법인 | | | | | | 작성자 | | | 성명 (인) | --- |"
-          },
-          {
-            "url": "https://cdn.korea.legal/wp-content/uploads/2021/07/%EB%B6%80%EB%8F%99%EC%82%B0%EA%B1%B0%EB%9E%98%EC%8B%A0%EA%B3%A0-%EC%97%85%EB%AC%B4%EB%A7%A4%EB%89%B4%EC%96%BC-%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%EA%B3%84%ED%9A%8D%EC%84%9C_-%EC%A6%9D%EB%B9%99%EC%84%9C%EB%A5%98_-%EB%B2%95%EC%9D%B8%EC%8B%A0%EA%B3%A0%EC%84%9C_%EB%AF%BC%EC%9B%90%EC%9D%B8%EC%9A%A9-1.pdf",
-            "domain": "cdn.korea.legal",
-            "title": "부동산거래신고 업무매뉴얼",
-            "snippet": "□직거래 계약의 경우, 매수인이 실거래 신고서와 함께 자금조달계획서 ... 매수인(법인)은 25일 이내에 개업공인중개사에게 자금조달계획서"
-          },
-          {
-            "url": "https://kbthink.com/content/dam/tam-dcp-cms/kbcontent/realestate/home-funding-plan/home-funding-plan-document.pdf",
-            "domain": "kbthink.com",
-            "title": "자금조달계획서 제출 대상과 증빙서류, 작성 방법까지 총정리",
-            "snippet": "# 주택취득자금 조달 및 입주계획서 ... <td>기존 주택 보유 여부 (주택담보대출이 있는 경우만 기재) [ ] 미보유 [ ] 보유 ( 건)</td> ... <td>[ ]"
-          },
-          {
-            "url": "https://xn--294-ju1mi55bm8o6mr.com/images/win_file_08.pdf",
-            "domain": "xn--294-ju1mi55bm8o6mr.com",
-            "title": "자금조달계획서",
-            "snippet": "<td>당첨자 본인 명의의 주식, 채권 및 각종 유가증권 매각대금 원</td> ... 「부동산 거래신고 등에 관한 법률 시행령」 별표 1 제2호나목, 같은 표 제3호가목 전단, 같은"
-          },
-          {
-            "url": "https://workpedia.kr/category/fund-plan/",
-            "domain": "workpedia.kr",
-            "title": "자금조달계획서 - 자금출처 소명 연구소",
-            "snippet": "📋 상속세 및 증여세법 법령 및 조세심판원 실무 기준 검증 완료 | 자금조달계획서 전산 신고 및 지자체 소명 대비 생애 첫 보금자리를 마련하는 예비부부와 신혼부부에게"
-          },
-          {
-            "url": "https://www.codil.or.kr/filebank/moct2014/201309/MOCT1296_1.PDF?nserialno=1296",
-            "domain": "www.codil.or.kr",
-            "title": "14. 자금조달계획서",
-            "snippet": "자금조달계획서 ... 공익성 : 주택건설등 사업자가 토지취득 및 사업계획승인 등의 애로요인을 해소하기 위한 것으로서 관련 법규상 주택건설이 가능하고, 다음 각 목의 어느 하나에 해당할 것"
-          },
-          {
-            "url": "https://pundoni.com/wp-content/uploads/2024/02/2023%EB%85%84_%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C.pdf",
-            "domain": "pundoni.com",
-            "title": "www.molit.go.kr",
-            "snippet": "◦투기과열주택거래신고를하는경우주택취득자금조달및입주계획서제출을 ... 거래가액외에자금조달계획서, 증빙서류, ... ◦(자료활용) 자금출처확인등을통해증여세등탈루여부, 대출유용등각종부동산불법행의조사및부동산거래정보대국민서비스활용*"
-          },
-          {
-            "url": "https://www.yesform.com/wdata/doc-1574968.php",
-            "domain": "www.yesform.com",
-            "title": "자금조달계획서",
-            "snippet": "* * 부동산거래신고 업무매뉴얼 (자금조달계획서, 증빙서류, 법인신고 등) 정회원 0 ... * * [서식 12의2] 토지취득자금조달계획서(시행일자 2015-01-01) 정회원 0"
-          },
-          {
-            "url": "https://plpax.net/detail.do?seq_board=20833",
-            "domain": "plpax.net",
-            "title": "자금조달계획서 쓰는 이유, 꼭 알아야 하는 핵심 정리 - 플팍스(plpax)",
-            "snippet": "오늘은 부동산 계약 시 꼭 작성해야 하는 자금조달계획서의 이유, 대상, 항목, 그리고 작성 요령까지 알기 쉽게 정리해본다. ... 차용의 경우 반드시 차용증, 통장 거래내역, 상환"
-          },
-          {
-            "url": "https://www.toheomap.com/blog/131",
-            "domain": "www.toheomap.com",
-            "title": "토허제 자금조달계획서, 심사관이 보는 5가지 — 반려 막는 작성법 | 토허맵 블로그",
-            "snippet": "토허제자금조달계획서 토지거래허가자금조달 자금조달계획서작성법 DSR한도 잔액증명서 증여세신고 자금출처소명 자금조달계획서반려사유 토허제신청자금증빙 자금조달계획서심사기준 ... 2026년 2월 10일부터는 시행규칙이 개정되면서 양식 자체가 바뀌었어요. ... 증여 자금이 있다면 증여세 신고확인서를"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "자금조달계획서",
-          "executed_query": "자금조달계획서",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-08T10:52:20.259804+00:00",
-          "raw_sha256": "5e00fc464aa4e3df52081bda4cb1defa8b07f2bbd662455ddc26fb3227df22c4",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "[별지 제2호 서식] 사업비 및 자금조달계획서"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "□직거래 계약의 경우, 매수인이 실거래 신고서와 함께 자금조달계획서 ... 매수인(법인)은 25일 이내에 개업공인중개사에게 자금조달계획서"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "자금조달계획서 제출 대상과 증빙서류, 작성 방법까지 총정리"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "<td>당첨자 본인 명의의 주식, 채권 및 각종 유가증권 매각대금 원</td> ... 「부동산 거래신고 등에 관한 법률 시행령」 별표 1 제2호나목, 같은 표 제3호가목 전단, 같은"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "📋 상속세 및 증여세법 법령 및 조세심판원 실무 기준 검증 완료 | 자금조달계획서 전산 신고 및 지자체 소명 대비 생애 첫 보금자리를 마련하는 예비부부와 신혼부부에게"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "14. 자금조달계획서"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "◦투기과열주택거래신고를하는경우주택취득자금조달및입주계획서제출을 ... 거래가액외에자금조달계획서, 증빙서류, ... ◦(자료활용) 자금출처확인등을통해증여세등탈루여부, 대출유용등각종부동산불법행의조사및부동산거래정보대국민서비스활용*"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "* * 부동산거래신고 업무매뉴얼 (자금조달계획서, 증빙서류, 법인신고 등) 정회원 0 ... * * [서식 12의2] 토지취득자금조달계획서(시행일자 2015-01-01) 정회원 0"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "오늘은 부동산 계약 시 꼭 작성해야 하는 자금조달계획서의 이유, 대상, 항목, 그리고 작성 요령까지 알기 쉽게 정리해본다. ... 차용의 경우 반드시 차용증, 통장 거래내역, 상환"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "토허제 자금조달계획서, 심사관이 보는 5가지 — 반려 막는 작성법 | 토허맵 블로그"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": [
-          {
-            "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
-            "title": "부동산거래신고(신고,변경,해제)신고서(별지 및 위임장 포함) | 강남구청",
-            "excerpt": "본문바로가기 주메뉴 바로가기 푸터 바로가기 이 누리집은 대한민국 공식 전자정부 누리집입니다. 민원서식(사무편람) 부동산거래신고(신고,변경,해제)신고서(별지 및 위임장 포함) 담당부서 : \r\n\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t부동산정보과 2026-02-06 조회수 101648 추가 입력 수수료 0 처리기간 즉시 구비서류 부동산거래계약신고서, 신청인 신분증 위임신청의 경우 개인 위임 : 위임장, 위임인 신분증 사본에 위임인 자필서명 법인 위임 : 위임장, 법인인감증명 처리절차 부동산거래계약신고서 제출하시면 신고내용 확인 후 필증 발급 관련법규 부동산거래신고에 관한 법률 처리요령 및 유의사항 부동산거래(매매) 하신 경우, 계약일로부터 30일이내 거래신고 하여야 합니다. 공인중개사 중개 물건의 경우 부동산거래계약신고는 공인중개사의 의무사항입니다. 인터넷 신고 시, 모든 신고의무자가 전자서명을 완료하여야 신고 접수가 이루어집니다. 따라서 신고의무자의 전자서명 미접수 상태임에 따른 과태료 등 처벌을 받지 않도록 유의하여 주시기 바랍니다. 신청방법 방문 제출 또는 인터넷(공인인증서를 이용) 신청장소 구청 동산거래신고 관련 법률 개정요약 (2026.2.10. 시행 ) □ 공인중개사의 실거래 신고 의무 강화 ❍ 허위 신고 ( 자전거래 , 실거래가 띄우기 ) 를 방지하기 위해 중개인의 제출서류 추가 - 매매계약서 및 입금 증빙 제출 : 공인중개사가 부동산 거래를 신고할 때 , 필요시 매매계약서 사본과 계약금 지급 증빙자료 ( 이체 확인증 등 ) 를 첨부하도록 규정하여 실제 계약 여부에 대한 검증강화 □ 자금조달계획서 및 증빙서류 강화 ❍ 불법 자금 유입과 탈세를 막기 위해 자금 출처 조사 항목 추가 - 상세 내역 기재 : 자금조달계획서 작성 시 대출 종류뿐만 아니라 금융기관명 기재 - 토지거래허가구역 증빙 강화 : 투기과열지구뿐만 아니라 토지거래허가구역 내 주택 거래시에도 자금조달계획서와 함께 이를 입증할 증빙서류 제출 필요 □ 외국인 주택 거래 신고 항목 신설 ❍ 외국인이 국내 부동산을 매수할 때 투명성을 높이기 위해 신고 항목이 대폭 강화됩니다 . - 체류자격 및 거소 여부 신고 : 외국인이 주택을 매수할 경우 , 국내 체류자격 ( 비자 종류 ) 와 실제 국내 거주 여부 (183 일 이상 거주 여부 등 ) 신고 □ 시행일 및 적용 대상 ❍ 시행일 :2026 년 2 월 10 일 ❍ 적용 대상 : 시행일 이후 체결되는 계약분부터 적용 ※ 제출양식변경 - 부동산거래계약 신고서 ( 별지 1 호서식 ) - 주택취득자금 조달 및 입주계획서 ( 별지 제 1 호의 3 서식 ) - 토지취득자금 조달 및 토지이용계획서 ( 별지 제 1 호의 4 서식 ) 자금조달계획서 증빙서류 제출 관련 안내문.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[1.24 MB] 미리보기 부동산거래신고 서식(2.법인 주택 거래계약 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[19 KB] 미리보기 부동산거래신고 서식(3.부동산거래계약 변경 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[53 KB] 미리보기 부동산거래신고 서식(4.부동산거래계약 해제등 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[20 KB] 미리보기 부동산거래신고 서식(법인 주택 거래계약 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[19 KB] 미리보기 부동산거래신고 서식(별지_공동중개,관계지번).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[14.5 KB] 미리보기 부동산거래신고 서식(별지_매도인추가).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[15.5 KB] 미리보기 부동산거래신고 서식(별지_매수인추가).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[15.5 KB] 미리보기 부동산거래신고 서식(부동산거래계약 해제등 신고서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[20 KB] 미리보기 부동산거래신고 서식(위임장).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[12.5 KB] 미리보기 부동산거래신고 서식(증빙서류 미제출 사유서).hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[14 KB] 미리보기 부동산거래신고 서식(1-3.주택취득자금 조달 및 입주계획서)-2026.2.10.이후.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[68 KB] 미리보기 부동산거래신고 서식(1-4. 토지취득자금 조달 및 토지이용계획서)-2026.2.10. 이후.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[127.5 KB] 미리보기 부동산거래신고 서식(1.부동산거래계약 신고서)-2026.2.10.이후.hwp\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t[71.5 KB] 미리보기 다음글 대부(중개)업 등록신청 위임장 이전글 의료기관 시설 장비 인력개요서 및 자가점검표 목록 강남구청 카카오톡 실시간 정보와 다양한 혜택·안내를 친구 추가로 간편히 받아보세요! 관련사이트 바로가기 본 저작물은 \"공공누리\" 제4유형:출처표시+상업적 이용금지+변경금지 조건에 따라 이용 할 수 있습니다. 이 페이지에서 제공하는 정보에 대하여 만족하십니까? 매우만족 만족 보통 불만족 매우불만족 입력 × 닫기 × 제목 YYYY-MM-DD 닫기 저장 원본이미지 닫기 × 닫기",
-            "sha256": "88dac3036a8d5ccbccfe6000f62642738a14544d499bacf526b9163411fd2386",
-            "checked_on": "2026-10-08"
-          },
-          {
-            "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-            "title": "보도자료",
-            "excerpt": "자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증 담당부서 부동산납세과 작성일자 2025.10.30. 조회수 78201 첨부파일 ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwpx ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwp ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.pdf 다음글 근로･자녀장려금 5월에 깜빡했다면, 12.1.까지 꼭 신청! 이전글 국세청은 지금...「AI 대전환」을 향해 열공 중~! 목록",
-            "sha256": "8ed6db984fd76f25ea2dfdbb7b42c87850e0d348b39ed227d39ee58186c2c08e",
-            "checked_on": "2026-10-08"
-          }
-        ]
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
+      "강소기업",
       "개인사업자햇살론",
       "마이너스통장조건",
       "사업소득세",
       "소공인특화자금",
+      "소상공인",
       "소상공인스마트상점",
+      "소상공인창업지원금",
       "소진공",
       "신용보증재단대출",
       "연말정산간소화서비스",
+      "자금조달계획서",
       "전월세보증금담보대출",
       "청년전용창업자금",
       "퇴직연금담보대출",
-      "홈택스경정청구"
+      "퇴직연금대출"
     ],
     "research_stop_reason": "pool_exhausted",
     "retry_keywords": [
-      "자금조달계획서",
-      "소상공인폐업지원금"
+      "소상공인폐업지원금",
+      "종합소득세율"
     ],
     "discovery_rejections": [],
     "discovery_replenishment": [],
     "deferred_measured_keywords": [
+      "강소기업",
       "개인사업자햇살론",
       "마이너스통장조건",
       "사업소득세",
       "소공인특화자금",
+      "소상공인",
       "소상공인스마트상점",
+      "소상공인창업지원금",
       "소진공",
       "신용보증재단대출",
       "연말정산간소화서비스",
+      "자금조달계획서",
       "전월세보증금담보대출",
       "청년전용창업자금",
       "퇴직연금담보대출",
-      "홈택스경정청구"
+      "퇴직연금대출"
     ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
@@ -6267,7 +5977,6 @@
           "고용지원금대상",
           "청년지원금",
           "기업신용정보조회",
-          "소상공인",
           "국비지원교육",
           "사업자대출",
           "재무제표",
@@ -6281,14 +5990,14 @@
           "중진공정책자금",
           "병원비환급",
           "고용촉진장려금",
-          "청년사업자대출",
           "지게차가격",
+          "청년사업자대출",
+          "부가가치세법",
           "고용지원금",
           "국비지원카드",
-          "부가가치세법",
           "BLENDER",
-          "경기도지원금",
           "국민배움내일카드",
+          "경기도지원금",
           "세무사랑",
           "중소기업지원금",
           "청년창업대출",
@@ -6296,30 +6005,31 @@
           "소상공인지원",
           "국비지원종류",
           "입식지게차",
-          "정부지원사업",
-          "청년지원",
           "중소기업대출",
           "세액공제",
+          "정부지원사업",
+          "청년지원",
           "청년고용지원금",
           "창업지원금",
           "세금환급",
           "소상공인진흥공단정책자금",
-          "자영업자지원금",
           "개인사업자지원금",
+          "자영업자지원금",
           "정부정책자금",
-          "고령자고용지원금",
           "자영업자대출",
+          "고령자고용지원금",
           "청년지원사업",
-          "강소기업",
-          "자바스크립트",
           "법인사업자대출",
+          "자바스크립트",
           "지게차임대",
           "전기지게차",
           "법인대출",
           "지게차렌탈",
           "소상공인지원사업",
+          "국비지원교육종류",
           "나라배움카드",
-          "국비지원교육종류"
+          "정책지원금",
+          "국비교육"
         ],
         "proposals": [],
         "measured_fallback": true,
@@ -6361,18 +6071,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "소상공인",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "국비지원교육",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "사업자대출",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6382,7 +6087,7 @@
           },
           {
             "keyword": "개인사업자대출",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6431,13 +6136,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "청년사업자대출",
+            "keyword": "지게차가격",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "지게차가격",
-            "reason_code": "category_mismatch",
+            "keyword": "청년사업자대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "부가가치세법",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6451,23 +6161,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "부가가치세법",
-            "reason_code": "scope_too_broad",
+            "keyword": "BLENDER",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "BLENDER",
+            "keyword": "국민배움내일카드",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "경기도지원금",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "국민배움내일카드",
-            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6482,7 +6187,7 @@
           },
           {
             "keyword": "청년창업대출",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6506,22 +6211,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "중소기업대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "세액공제",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "정부지원사업",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "청년지원",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "중소기업대출",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세액공제",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -6546,12 +6251,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "자영업자지원금",
+            "keyword": "개인사업자지원금",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "개인사업자지원금",
+            "keyword": "자영업자지원금",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -6561,12 +6266,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "고령자고용지원금",
-            "reason_code": "category_mismatch",
+            "keyword": "자영업자대출",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "자영업자대출",
+            "keyword": "고령자고용지원금",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -6576,17 +6281,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "강소기업",
+            "keyword": "법인사업자대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "자바스크립트",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "법인사업자대출",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -6602,7 +6302,7 @@
           },
           {
             "keyword": "법인대출",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6616,90 +6316,15 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "국비지원교육종류",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "나라배움카드",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
-          {
-            "keyword": "국비지원교육종류",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": [
-          {
-            "keyword": "소상공인",
-            "search_query": "소상공인",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
-          },
-          {
-            "keyword": "강소기업",
-            "search_query": "강소기업",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
-          }
-        ],
-        "research_fallback_attempted": [
-          "소상공인",
-          "강소기업"
-        ]
-      },
-      {
-        "round": 2,
-        "offered_keywords": [
-          "정책지원금",
-          "국비교육",
-          "코워킹스페이스",
-          "사업자금대출",
-          "KOSME",
-          "고용장려금",
-          "보증보험대출",
-          "종소세환급",
-          "사업자대출한도",
-          "지원사업",
-          "정부지원",
-          "국가정책자금",
-          "백엔드개발자",
-          "개인사업자담보대출",
-          "지자체지원금",
-          "사업자마이너스통장",
-          "정부정책자금대출",
-          "장애인대출",
-          "임산부알바",
-          "소상공인창업지원금",
-          "퇴직연금대출",
-          "가계자금",
-          "스마트농업",
-          "개인사업자마이너스통장",
-          "국비무료교육",
-          "운전자금",
-          "정책자금컨설팅",
-          "연체자비상금대출",
-          "기업대출",
-          "상가보증금대출",
-          "관광농원",
-          "청년사업자금대출",
-          "소상공인정부지원금",
-          "사업자정책자금",
-          "자금조달계획서",
-          "소상공인폐업지원금"
-        ],
-        "proposals": [
-          {
-            "keyword": "소상공인창업지원금",
-            "reason": "월 610회 실측. 창업 단계의 지원 대상·신청 절차를 묻는 후보로, 공식 공고에서 답변 범위를 확인할 가치가 있다.",
-            "search_query": "소상공인 창업 지원금"
-          },
-          {
-            "keyword": "퇴직연금대출",
-            "reason": "월 600회 실측. 대출 가능 여부와 허용 조건을 조사할 후보다. 기존 디폴트옵션·퇴직금 중간정산 글과 질문이 다르다.",
-            "search_query": "퇴직연금 대출"
-          }
-        ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false,
-        "skipped": [
           {
             "keyword": "정책지원금",
             "reason_code": "scope_too_broad",
@@ -6709,15 +6334,81 @@
             "keyword": "국비교육",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "사업자대출",
+            "search_query": "사업자대출",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
           },
           {
+            "keyword": "개인사업자대출",
+            "search_query": "개인사업자대출",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "사업자대출",
+          "개인사업자대출"
+        ]
+      },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "코워킹스페이스",
+          "사업자금대출",
+          "KOSME",
+          "고용장려금",
+          "보증보험대출",
+          "사업자대출한도",
+          "지원사업",
+          "종소세환급",
+          "국가정책자금",
+          "정부지원",
+          "백엔드개발자",
+          "개인사업자담보대출",
+          "임산부알바",
+          "장애인대출",
+          "정부정책자금대출",
+          "사업자마이너스통장",
+          "지자체지원금",
+          "가계자금",
+          "스마트농업",
+          "운전자금",
+          "연체자비상금대출",
+          "관광농원",
+          "개인사업자마이너스통장",
+          "국비무료교육",
+          "정책자금컨설팅",
+          "기업대출",
+          "소상공인정부지원금",
+          "상가보증금대출",
+          "청년사업자금대출",
+          "사업자정책자금",
+          "소상공인폐업지원금",
+          "종합소득세율",
+          "청년사업자대출",
+          "청년창업대출",
+          "중소기업대출",
+          "자영업자대출",
+          "법인사업자대출",
+          "법인대출"
+        ],
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
             "keyword": "코워킹스페이스",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "사업자금대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6736,11 +6427,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "종소세환급",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "사업자대출한도",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
@@ -6751,12 +6437,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "정부지원",
-            "reason_code": "scope_too_broad",
+            "keyword": "종소세환급",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "국가정책자금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "정부지원",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -6771,12 +6462,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "지자체지원금",
-            "reason_code": "scope_too_broad",
+            "keyword": "임산부알바",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "사업자마이너스통장",
+            "keyword": "장애인대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -6786,13 +6477,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "장애인대출",
+            "keyword": "사업자마이너스통장",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "임산부알바",
-            "reason_code": "category_mismatch",
+            "keyword": "지자체지원금",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6806,6 +6497,21 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "운전자금",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "연체자비상금대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "관광농원",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "개인사업자마이너스통장",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
@@ -6816,18 +6522,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "운전자금",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "정책자금컨설팅",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "연체자비상금대출",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6836,23 +6532,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "상가보증금대출",
-            "reason_code": "insufficient_specificity",
+            "keyword": "소상공인정부지원금",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "관광농원",
+            "keyword": "상가보증금대출",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "청년사업자금대출",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소상공인정부지원금",
-            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -6861,163 +6552,106 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "자금조달계획서",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "소상공인폐업지원금",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
-          }
-        ]
-      },
-      {
-        "round": 3,
-        "offered_keywords": [
-          "사업자금대출",
-          "KOSME",
-          "보증보험대출",
-          "개인사업자담보대출",
-          "사업자마이너스통장",
-          "장애인대출",
-          "가계자금",
-          "개인사업자마이너스통장",
-          "연체자비상금대출",
-          "상가보증금대출",
-          "관광농원",
-          "청년사업자금대출",
-          "자금조달계획서",
-          "소상공인폐업지원금"
-        ],
-        "proposals": [],
-        "measured_fallback": true,
-        "no_eligible_proposal": true,
-        "skipped": [
+          },
           {
-            "keyword": "사업자금대출",
+            "keyword": "종합소득세율",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청년사업자대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "청년창업대출",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "중소기업대출",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "KOSME",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "보증보험대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "개인사업자담보대출",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "사업자마이너스통장",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "장애인대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "가계자금",
+            "keyword": "자영업자대출",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "개인사업자마이너스통장",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "연체자비상금대출",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "상가보증금대출",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "관광농원",
+            "keyword": "법인사업자대출",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "청년사업자금대출",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "자금조달계획서",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "소상공인폐업지원금",
-            "reason_code": "not_reported",
+            "keyword": "법인대출",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "자금조달계획서",
-            "search_query": "자금조달계획서",
+            "keyword": "소상공인폐업지원금",
+            "search_query": "소상공인폐업지원금",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "not_reported"
           }
         ],
         "research_fallback_attempted": [
-          "자금조달계획서"
+          "소상공인폐업지원금"
         ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "소상공인",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 17280,
-        "organic_query": "소상공인"
-      },
-      {
-        "keyword": "강소기업",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 1540,
-        "organic_query": "강소기업"
-      },
-      {
-        "keyword": "소상공인창업지원금",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 610,
-        "organic_query": "소상공인 창업 지원금"
-      },
-      {
-        "keyword": "퇴직연금대출",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 600,
-        "organic_query": "퇴직연금 대출"
-      },
-      {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 8150,
-        "organic_query": "자금조달계획서"
+        "monthly_search": 15120,
+        "organic_query": "사업자대출"
+      },
+      {
+        "keyword": "개인사업자대출",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 11300,
+        "organic_query": "개인사업자대출"
+      },
+      {
+        "keyword": "소상공인폐업지원금",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 6650,
+        "organic_query": "소상공인폐업지원금"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "소상공인폐업지원금",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-08T22:56:57.768066+00:00",
+        "retry_after": "2026-10-09T22:56:57.768066+00:00",
+        "attempts": 2
+      },
+      {
+        "keyword": "사업자대출",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-08T22:56:57.768066+00:00",
+        "retry_after": "2026-10-11T22:56:57.768066+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "개인사업자대출",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-08T22:56:57.768066+00:00",
+        "retry_after": "2026-10-09T22:56:57.768066+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "자금조달계획서",
         "reason_code": "source_coverage",
@@ -7327,13 +6961,6 @@
         "attempts": 1
       },
       {
-        "keyword": "소상공인폐업지원금",
-        "reason_code": "search_quality",
-        "failed_at": "2026-09-27T03:46:03.846940+00:00",
-        "retry_after": "2026-09-28T03:46:03.846940+00:00",
-        "attempts": 1
-      },
-      {
         "keyword": "종합소득세환급일",
         "reason_code": "source_coverage",
         "failed_at": "2026-09-27T03:46:03.846940+00:00",
@@ -7388,112 +7015,70 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 31220
+        "elapsed_ms": 28891
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 13947
+        "elapsed_ms": 6560
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 16757
+        "elapsed_ms": 11675
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9020
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8516
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 36074
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6923
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8873
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6909
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8264
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 21009
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6027
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 11038
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9112
+        "elapsed_ms": 6873
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 10180
+        "elapsed_ms": 10467
       },
       {
-        "stage": "official_research",
+        "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 76283
+        "elapsed_ms": 7152
       },
       {
-        "stage": "topic_plan",
+        "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 16440
+        "elapsed_ms": 10178
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 29134
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 5924
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10437
       }
     ],
     "analysis_recovery_attempts": 0,
     "source_discovery_audit": [
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_fetch",
-        "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200203&flNm=%5B%EB%B3%84%EC%A7%80+2%5D+%EC%82%AC%EC%97%85%EB%B9%84+%EB%B0%8F+%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%EA%B3%84%ED%9A%8D%EC%84%9C&flSeq=153911491",
+        "url": "https://www.kacta.or.kr/data/Board/BoardInfoNotice/%EC%A2%85%ED%95%A9%EC%86%8C%EB%93%9D%EC%84%B8%20%EC%8B%A0%EA%B3%A0%20%EC%95%88%EB%82%B4%EC%82%AC%ED%95%AD.pdf",
         "outcome": "fetch_failed",
         "failure_codes": [
           "non_html"
@@ -7503,156 +7088,121 @@
         "excerpt_chars": 0
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_fetch",
-        "url": "https://www.codil.or.kr/filebank/moct2014/201309/MOCT1296_1.PDF?nserialno=1296",
+        "url": "https://file-cdn.bok.or.kr/ucms/563ce891ec0125525906ab61d57b47bd/1/tempFile.pdf?token=st%3D1773326779~exp%3D1773330379~acl%3D%2Fucms%2F563ce891ec0125525906ab61d57b47bd%2F1%2FtempFile.pdf%2A~hmac%3D0e896876c04ebcc2d98f8a1f0a8624959b60ebef0c18983abe50fc3a8a4a2f16",
         "outcome": "fetch_failed",
         "failure_codes": [
-          "tls_failure"
+          "http_status"
         ],
         "final_url": null,
         "title": "",
         "excerpt_chars": 0
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_search_requested",
-        "query": "자금조달계획서 site:go.kr"
+        "query": "사업자대출 site:go.kr"
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_search",
-        "query": "자금조달계획서 site:go.kr",
+        "query": "사업자대출 site:go.kr",
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=200203&flNm=%5B%EB%B3%84%EC%A7%80+2%5D+%EC%82%AC%EC%97%85%EB%B9%84+%EB%B0%8F+%EC%9E%90%EA%B8%88%EC%A1%B0%EB%8B%AC%EA%B3%84%ED%9A%8D%EC%84%9C&flSeq=153911491",
-            "title": "[별지 제2호 서식] 사업비 및 자금조달계획서",
-            "snippet": "자 금 조 달 계 획 작성기관 | ○○○ 회계법인 | | | | | | 작성자 | | | 성명 (인) | --- |"
+            "url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1350157",
+            "title": "특례세율 적용 증여",
+            "snippet": "관련 증빙서류 ▶ 용도 외 유용 사실을 확인할 수 있는 자료 - [부동산 취득자금] 부동산매매계약서, 매매대금(대출금) 이체 내역 등 - [기타] 기타 사용처에 대한 사용내역을"
           },
           {
-            "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-            "title": "보도자료",
-            "snippet": "* ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwpx Image: 미리보기"
+            "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2207&nttSn=1350157",
+            "title": "공지사항",
+            "snippet": "관련 증빙서류 ▶ 용도 외 유용 사실을 확인할 수 있는 자료 - [부동산 취득자금] 부동산매매계약서, 매매대금(대출금) 이체 내역 등 - [기타] 기타 사용처에 대한 사용내역을"
           },
           {
-            "url": "https://www.molit.go.kr/portal/common/download/DownloadMltm2.jsp?FileName=2022%EB%85%84_%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C%28%EA%B5%AD%ED%86%A0%EA%B5%90%ED%86%B5%EB%B6%80%29%28%EC%B5%9C%EC%A2%85%29_fianl.pdf&FilePath=portal%2FDextUpload%2F202209%2F20220928_084519_055.pdf",
-            "title": "www.molit.go.kr",
-            "snippet": "◦투기과열주택거래신고를하는경우주택취득자금조달및입주계획서제출을 ... 거래가액외에자금조달계획서, 증빙서류, ... ◦(자료활용) 자금출처확인등을통해증여세등탈루여부, 대출유용등각종부동산불법행의조사및부동산거래정보대국민서비스활용*"
+            "url": "https://www.mss.go.kr/common/board/Download.do?bcIdx=1058009&cbIdx=310&streFileNm=07cd9191-b721-457b-bdc0-e62cbc11fa02.pdf",
+            "title": "중소벤처기업부 공고 제2025 – 254호",
+            "snippet": "중인 ③사업자대출 또는 ④사업용도 가계대출 ... - ③(사업자대출) 신용․"
           },
           {
-            "url": "https://www.molit.go.kr/portal/common/download/DownloadMltm2.jsp?FileName=2021%EB%85%84+%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C%28%EC%B5%9C%EC%A2%85%29.pdf&FilePath=portal%2FDextUpload%2F202107%2F20210726_162134_943.pdf",
-            "title": "Ⅰ. 일반현황·················································································· 1",
-            "snippet": "◦투기과열주택거래신고를하는경우주택취득자금조달및입주계획서제출을 ... 거래가액외에자금조달계획서, 증빙서류, ... 부동산불법행의조사및부동산거래정보대국민서비스활용*"
+            "url": "https://www.law.go.kr/LSW/flDownload.do?flNm=%5B%EB%B3%84%ED%91%9C+7%5D+%EA%B5%AD%EB%AF%BC%EC%A3%BC%ED%83%9D%EA%B8%B0%EA%B8%88%EC%9A%B4%EC%9A%A9%E3%86%8D%EA%B4%80%EB%A6%AC%EC%82%AC%EB%AC%B4+%EB%B0%8F+%EC%B1%84%EA%B6%8C%EB%93%B1%EB%A1%9D%EC%97%85%EB%AC%B4%EC%88%98%EC%88%98%EB%A3%8C%28%EC%A0%9C37%EC%A1%B0%EC%A0%9C1%ED%95%AD+%EA%B4%80%EB%A0%A8%29%0A&flSeq=50183581",
+            "title": "[별표7] <개정2007.12.26>",
+            "snippet": "사업자대출중공공기관및민간에대한신규좌수수수료동인에"
           },
           {
-            "url": "https://s.nts.go.kr/yangsan/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-            "title": "보도자료",
-            "snippet": "* ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwpx Image: 미리보기"
+            "url": "https://www.mods.go.kr/boardDownload.es?bid=11113&list_no=442536&seq=1",
+            "title": "<C6EDC1FD2D32303234B3E220C0CFC0DAB8AEC7E0C1A4C5EBB0E820B0B3C0CEBBE7BEF7C0DA20BACEC3A428C0E1C1A4295FC3D6C1BE2E687770>",
+            "snippet": "구 분 None | 평균대출* 전체 | 대출용도별 | | 금융기관별 | | 연체율(대출잔액 기준) 전체 | 대출용도별 | | 금융기관별 | --- | ---"
           },
           {
-            "url": "https://t.nts.go.kr/gyeongju/na/ntt/selectNttInfo.do?mi=6039&nttSn=1346104",
-            "title": "보도자료",
-            "snippet": "* ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwpx Image: 미리보기"
+            "url": "https://newsletter.mss.go.kr/common/board/Download.do?bcIdx=1057000&cbIdx=310&streFileNm=27d62549-e8d0-4e4b-bb47-4e3129cb6ffa.pdf",
+            "title": "중소벤처기업부 공고 제2025 – 150호",
+            "snippet": "중인 ③사업자대출 또는 ④사업용도 가계대출 ... - ③(사업자대출) 신용․ ... ②(비은행권) 저축은행, 여신금융전문회사, 상호금융(신협, 지역농협,"
           },
           {
-            "url": "https://www.molit.go.kr/portal/common/download/DownloadMltm2.jsp?FileName=2019%EB%85%84+%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C%28%EC%B5%9C%EC%A2%85%29.pdf&FilePath=portal%2FDextUpload%2F201902%2F20190228_105640_966.pdf",
-            "title": "주택 업무 편람\n2019. 2",
-            "snippet": "ㅇ (신고대상) 자금조달계획서 및 입주계획서는 투기과열지구내 3억원 이상의 ... 계약일, 거래가액 외에 자금조달계획 및 입주계획 추가 ... * 지자체는 신고 내용을 관할 세무서의 장에게 통보하여"
+            "url": "https://www.nabo.go.kr/board/file/down.do?fid=33318639",
+            "title": "2025 대한민국 경제",
+            "snippet": "[그림 II-176] 개인사업자 예금은행 대출금 규모와 GDP 대비 비율 추이"
           },
           {
-            "url": "https://t.nts.go.kr/gumi/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1346104",
-            "title": "보도자료",
-            "snippet": "* ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwpx Image: 미리보기"
+            "url": "https://www.fsc.go.kr/po010101/86914?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+            "title": "금융정책 - 정책일반 - 정책마당 - 금융위원회",
+            "snippet": "금감원·금융회사의 동 점검 을 통해 사업자대출의 용도 외 유용이 적발 되는 경 우 즉각적인 대출 회수 조치가 이루어진다."
           },
           {
-            "url": "https://i.nts.go.kr/seodaemun/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-            "title": "보도자료",
-            "snippet": "* ★ (보도자료) 251030 자금조달계획서 실시간 공유로 부동산 탈세 철저히 검증.hwpx Image: 미리보기"
-          },
-          {
-            "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95082879&lcmspage=33",
-            "title": "보도자료 - 전체",
-            "snippet": "#### 자금조달계획서 등 실거래 고강도 집중조사를 통해 불법행위 없는 건전한 부동산 시장을 만들겠습니다. ... * 첨부파일 191007(14시이후)자금조달계획서 등 실거래 고강도 집중조사를 통해 불법행위 없는 건전한"
+            "url": "https://fsc.go.kr/po010101/85549?curPage=25&srchBeginDt=&srchCtgry=1&srchEndDt=&srchKey=&srchText=",
+            "title": "금융정책 - 정책일반 - 정책마당 - 금융위원회",
+            "snippet": "- 아직 처리가 완료되지 않은 20건 에 대해서는 차주 소명 등 관련 절차를 거쳐 연말까지 대출금 회수 등을 마무리할 계획이며, 위반 차주 에 대해서는 일정"
           }
         ]
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_fetch",
-        "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
+        "url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1350157",
         "outcome": "fetched",
         "failure_codes": [],
-        "final_url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2201&nttSn=1346104",
-        "title": "보도자료",
-        "excerpt_chars": 299
+        "final_url": "https://www.nts.go.kr/nts/na/ntt/selectNttInfo.do?nttSn=1350157",
+        "title": "www.nts.go.kr",
+        "excerpt_chars": 987
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_fetch",
-        "url": "https://www.molit.go.kr/portal/common/download/DownloadMltm2.jsp?FileName=2022%EB%85%84_%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C%28%EA%B5%AD%ED%86%A0%EA%B5%90%ED%86%B5%EB%B6%80%29%28%EC%B5%9C%EC%A2%85%29_fianl.pdf&FilePath=portal%2FDextUpload%2F202209%2F20220928_084519_055.pdf",
+        "url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2207&nttSn=1350157",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://sc.nts.go.kr/nts/na/ntt/selectNttInfo.do?mi=2207&nttSn=1350157",
+        "title": "공지사항",
+        "excerpt_chars": 987
+      },
+      {
+        "keyword": "사업자대출",
+        "category": "생활정보",
+        "stage": "source_fetch",
+        "url": "https://www.mss.go.kr/common/board/Download.do?bcIdx=1058009&cbIdx=310&streFileNm=07cd9191-b721-457b-bdc0-e62cbc11fa02.pdf",
         "outcome": "fetch_failed",
         "failure_codes": [
-          "redirect_limit"
+          "non_html"
         ],
         "final_url": null,
         "title": "",
         "excerpt_chars": 0
       },
       {
-        "keyword": "자금조달계획서",
+        "keyword": "사업자대출",
         "category": "생활정보",
         "stage": "source_fetch",
-        "url": "https://www.molit.go.kr/portal/common/download/DownloadMltm2.jsp?FileName=2021%EB%85%84+%EC%A3%BC%ED%83%9D%EC%97%85%EB%AC%B4%ED%8E%B8%EB%9E%8C%28%EC%B5%9C%EC%A2%85%29.pdf&FilePath=portal%2FDextUpload%2F202107%2F20210726_162134_943.pdf",
+        "url": "https://www.law.go.kr/LSW/flDownload.do?flNm=%5B%EB%B3%84%ED%91%9C+7%5D+%EA%B5%AD%EB%AF%BC%EC%A3%BC%ED%83%9D%EA%B8%B0%EA%B8%88%EC%9A%B4%EC%9A%A9%E3%86%8D%EA%B4%80%EB%A6%AC%EC%82%AC%EB%AC%B4+%EB%B0%8F+%EC%B1%84%EA%B6%8C%EB%93%B1%EB%A1%9D%EC%97%85%EB%AC%B4%EC%88%98%EC%88%98%EB%A3%8C%28%EC%A0%9C37%EC%A1%B0%EC%A0%9C1%ED%95%AD+%EA%B4%80%EB%A0%A8%29%0A&flSeq=50183581",
         "outcome": "fetch_failed",
         "failure_codes": [
-          "redirect_limit"
-        ],
-        "final_url": null,
-        "title": "",
-        "excerpt_chars": 0
-      },
-      {
-        "keyword": "자금조달계획서",
-        "category": "생활정보",
-        "stage": "native_source_research",
-        "locators": [
-          {
-            "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.seohae.go.kr/open_content/main/civil/land/realty_property.jsp",
-            "origin": "model_reported_locator"
-          }
-        ],
-        "searched": true,
-        "coverage_gaps": null
-      },
-      {
-        "keyword": "자금조달계획서",
-        "category": "생활정보",
-        "stage": "source_fetch",
-        "url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.gangnam.go.kr/board/B_000060/3979/view.do?mid=ID03_0",
-        "title": "부동산거래신고(신고,변경,해제)신고서(별지 및 위임장 포함) | 강남구청",
-        "excerpt_chars": 2638
-      },
-      {
-        "keyword": "자금조달계획서",
-        "category": "생활정보",
-        "stage": "source_fetch",
-        "url": "https://www.seohae.go.kr/open_content/main/civil/land/realty_property.jsp",
-        "outcome": "fetch_failed",
-        "failure_codes": [
-          "short_body"
+          "non_html"
         ],
         "final_url": null,
         "title": "",
@@ -7661,12 +7211,12 @@
     ],
     "selection_outcome": "no_pass_among_evaluated",
     "selection_funnel": {
-      "measured": 182,
-      "pool": 96,
-      "shortlist_offered_unique": 96,
-      "evaluated": 5,
+      "measured": 179,
+      "pool": 92,
+      "shortlist_offered_unique": 92,
+      "evaluated": 3,
       "held": 0,
-      "rejected": 5,
+      "rejected": 3,
       "selected": 0,
       "stop_reason": "pool_exhausted"
     }

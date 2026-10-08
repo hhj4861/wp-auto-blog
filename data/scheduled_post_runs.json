@@ -380,6 +380,17 @@
       "claimed_at": "2026-10-08T09:00:11.021168+09:00",
       "status": "failure",
       "completed_at": "2026-10-08T00:10:15.387790+00:00"
+    },
+    "2026-10-08:evening": {
+      "scheduled_for": "2026-10-08T18:00:00+09:00",
+      "run_created_at": "2026-10-08T18:00:04+09:00",
+      "start_delay_seconds": 13,
+      "trigger": "external_timer",
+      "run_id": "37753603338",
+      "category": "건강",
+      "slot": "evening",
+      "claimed_at": "2026-10-08T18:00:13.753533+09:00",
+      "status": "started"
     }
   }
 }

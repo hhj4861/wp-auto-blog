@@ -32,7 +32,7 @@ from src.search_quality import SearchReviewError
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query, resolved_search_query
 from src.selection_feedback import load_history, deferred_keywords
-from src import review_discovery, review_exploration
+from src import review_discovery, review_exploration, selection_trace
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
 from src import shared_discovery, recruitment_sources, recruitment_discovery
@@ -92,6 +92,8 @@ RECRUITMENT_DOMAIN_HINTS = (
 )
 OFFICIAL_SEARCH_DOMAIN_HINTS = (
     ('support.microsoft.com', ('엑셀', 'excel', '윈도우', 'windows', '오피스', '파워포인트')),
+    ('tp-link.com', ('공유기', '와이파이', '인터넷', '라우터', 'wifi')),
+    ('iptime.com', ('공유기', '와이파이', '라우터', 'iptime')),
     ('notion.com', ('노션', 'notion')),
     ('support.google.com', ('구글', '스프레드시트', '안드로이드')),
     ('apple.com', ('애플', '아이폰', '아이패드', '맥북', '에어팟')),
@@ -264,7 +266,7 @@ def specificity_score(keyword):
     return 15 if key.endswith(('대상', '대상자')) or any(x in key for x in (
         '방법', '절차', '조건', '일정', '준비', '신청', '서류',
         '조회', '계산', '응시자격', '지원자격', '자격요건', '발급', '등록',
-        '설정', '연결', '오류', '해결', '사용법',
+        '설정', '연결', '오류', '해결', '사용법', '설치', '포맷', '초기화',
     )) else 5
 
 
@@ -466,7 +468,8 @@ def information_research_candidates(skipped, limit, category):
     eligible = [row for row in skipped
                 if row['reason_code'] in {'not_reported', 'insufficient_specificity'}
                 and category_matches(row['keyword'], category)
-                and not suitability.content_capability_issues(row['keyword'])]
+                and not suitability.content_capability_issues(row['keyword'])
+                and (category != '테크' or specificity_score(row['keyword']) == 15)]
     eligible.sort(key=lambda row: (-specificity_score(row['keyword']),
                                   row['reason_code'] != 'not_reported'))
     return [{'keyword': row['keyword'], 'search_query': row['keyword'],
@@ -485,10 +488,14 @@ def official_search_urls(keyword, category=None):
     recruitment = '채용' in norm(keyword) and category in (None, '취업')
     defaults = ['job.alio.go.kr', 'gojobs.go.kr', 'work24.go.kr'] if recruitment else ['go.kr', 'or.kr', 'gov', 'ac.kr']
     domains = list(dict.fromkeys([*extras, *defaults]))[:4]
+    if category in ('테크', '생산성'):
+        # No government-domain fallback for device/software documentation.
+        # Unknown products go to independently fetched native research below.
+        domains = extras[:4]
     if clinical_health_query(keyword, category):
         domains = ['kdca.go.kr', 'cancer.go.kr', 'medlineplus.gov', 'cdc.gov']
         extras = domains
-    purchase_question = not recruitment and category != '건강' and review_discovery.discovery_issue(keyword) is None
+    purchase_question = not recruitment and category not in ('건강', '테크', '생산성') and review_discovery.discovery_issue(keyword) is None
     if purchase_question:
         domains = list(dict.fromkeys([*extras[:3], 'kca.go.kr']))[:4]
     groups, seen = [], set()
@@ -497,7 +504,10 @@ def official_search_urls(keyword, category=None):
         query = f'{keyword} 제품 사양 site:{scope}' if purchase_question else f'{keyword} site:{domain}'
         if recruitment:
             query = f'{keyword} {datetime.now(ZoneInfo("Asia/Seoul")).year} 채용공고 site:{domain}'
-        _, rows = search_results(query)
+        selection_trace.record(keyword, category, 'source_search_requested', query=query)
+        provider, rows = search_results(query)
+        selection_trace.record(keyword, category, 'source_search', query=query, provider=provider,
+                               results=[{k: row.get(k, '') for k in ('url', 'title', 'snippet')} for row in rows[:10]])
         urls = []
         for row in rows:
             url = row.get('url', '')
@@ -534,6 +544,58 @@ def _append_distinct_source(sources, source, *, limit=3):
     return True
 
 
+def _source_route_issue(keyword, category, url):
+    """Category routing is a prefilter, never proof that a body supports a claim."""
+    if category not in ('테크', '생산성'):
+        return None
+    host = https_host(url)
+    domains = _official_search_extra_domains(keyword)
+    if domains and not any(host_matches(host, domain) for domain in domains):
+        return 'wrong_topic_publisher'
+    if not domains and host.endswith(('.go.kr', '.or.kr', '.gov', '.ac.kr')):
+        return 'institutional_source_for_technical_question'
+    return None
+
+
+def _source_subject_issue(keyword, category, source):
+    if category not in ('테크', '생산성') or not source:
+        return None
+    # Reject clear unrelated bodies (e.g. an App Store taxi listing) before they
+    # consume scarce source slots. Full intent/facet coverage is still reviewed.
+    aliases = (
+        (('아이폰', 'iphone'), ('아이폰', 'iphone')),
+        (('갤럭시', 'galaxy'), ('갤럭시', 'galaxy')),
+        (('윈도우', 'windows'), ('윈도우', 'windows')),
+        (('공유기', '라우터'), ('공유기', '라우터', 'router')),
+        (('엑셀', 'excel'), ('엑셀', 'excel')),
+        (('노션', 'notion'), ('노션', 'notion')),
+    )
+    key = norm(keyword)
+    body = norm(source.get('title', '') + ' ' + source.get('excerpt', ''))
+    for triggers, terms in aliases:
+        if any(term in key for term in triggers) and not any(term in body for term in terms):
+            return 'subject_missing_from_body'
+    return None
+
+
+def _read_candidate_source(keyword, category, url):
+    problem = _source_route_issue(keyword, category, url)
+    if problem:
+        selection_trace.record(keyword, category, 'source_fetch', url=url, outcome=problem)
+        return None
+    from src.editorial import source_failure_scope
+    with source_failure_scope() as failures:
+        source = fetch_source(url)
+    problem = ((_source_route_issue(keyword, category, source['url']) if source else None)
+               or _source_subject_issue(keyword, category, source))
+    selection_trace.record(keyword, category, 'source_fetch', url=url,
+        outcome=problem or ('fetched' if source else 'fetch_failed'), failure_codes=failures,
+        final_url=source.get('url') if source else None,
+        title=source.get('title', '')[:300] if source else '',
+        excerpt_chars=len(source.get('excerpt', '')) if source else 0)
+    return None if problem else source
+
+
 def candidate_sources(keyword, results, category=None):
     sources, seen = [], set()
     limit = 6 if category == '리뷰' else 3
@@ -548,7 +610,7 @@ def candidate_sources(keyword, results, category=None):
                     or clinical_health_query(keyword, category) and host_matches(https_host(url), 'law.go.kr')):
                 continue
             seen.add(url)
-            source = fetch_source(url)
+            source = _read_candidate_source(keyword, category, url)
             source_problem = (recruitment_sources.source_issue(keyword, source)
                               if category in (None, '취업') else None)
             if source_problem:
@@ -564,7 +626,7 @@ def candidate_sources(keyword, results, category=None):
     # Leave room for an alternative to organic links that may be only homepages.
     read([row['url'] for row in results if is_official_url(row['url'])]
          [:6 if recruitment else 2], target=2)
-    read(official_search_urls(keyword, category) if category == '건강' else official_search_urls(keyword))
+    read(official_search_urls(keyword, category) if category is not None else official_search_urls(keyword))
     return review_discovery.prioritize_sources(keyword, sources) if category == '리뷰' else sources
 
 
@@ -605,6 +667,9 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
                         '기관의 채용 게시판과 공식 공공 채용 포털의 최신 상세 공고를 확인하세요. '
                         '지난 채용 실적·학교 재게시·마감된 공고를 현재 접수 중인 공고로 사용하지 마세요. '
                         '현재 공고가 없으면 없다고 판단하고 과거 마감일을 올해로 바꾸지 마세요.')
+    if category in ('테크', '생산성'):
+        domain_hint += ('\n기술 질문은 해당 제조사·서비스의 설치·설정·지원 상세 문서를 찾으세요. '
+                        '일반 정부·지자체·채용·기업정보 페이지는 이 질문의 근거가 아닙니다.')
     if category == '리뷰':
         domain_hint += '\n' + review_discovery.source_hint(keyword)
     elif clinical_health_query(keyword, category):
@@ -626,9 +691,12 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
                               '검색 의도는 유지하고, 특정 모델에 치우친 기존 기획의 약속을 고수하지 마세요. '
                               '누락된 비교 대상·유형과 동일 조건의 공식 사양을 우선 조사하세요. '
                               '기존 URL·복제 본문 외에 실제 새 근거가 필요합니다.')
+    source_policy = ('주제의 제조사·서비스 제공자의 공식 도움말·설치·설정·사양 문서를 조사하세요.'
+                     if category in ('테크', '생산성') else
+                     'go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품 사양·지원 문서를 우선하세요.')
     trace = runtime.validated_call(client.research, f"""오늘 {now[:10]}, 한국 블로그 {category}의 검색어 {keyword}를 조사하세요.
 내장 웹검색 도구로 이 검색어의 구체적인 질문을 확인하고 이를 설명하는 공식 상세 안내를 찾으세요.
-go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품 사양·지원 문서를 우선하세요.
+{source_policy}
 생산성·리뷰·테크는 제조사·서비스 제공자의 공식 도움말과 사양을 근거로 삼으세요.
 직접 사용 후기나 성능 측정 결과를 만들어내지 마세요.
 {domain_hint}
@@ -645,12 +713,14 @@ go.kr, or.kr, gov, ac.kr 또는 주제에 맞는 기업의 공식 채용·제품
     sources = []
     limit = 6 if category == '리뷰' else 3
     locators = research_source_locators(trace)
+    selection_trace.record(keyword, category, 'native_source_research', locators=locators,
+                           searched=True, coverage_gaps=coverage_gaps)
     existing_urls = set((coverage_gaps or {}).get('existing_urls', []))
     for locator in locators:
         if (locator['url'] in existing_urls
                 or clinical_health_query(keyword, category) and host_matches(https_host(locator['url']), 'law.go.kr')):
             continue
-        source = fetch_source(locator['url'])
+        source = _read_candidate_source(keyword, category, locator['url'])
         source_problem = (recruitment_sources.source_issue(keyword, source,
                 today=datetime.fromisoformat(now).astimezone(ZoneInfo('Asia/Seoul')).date())
                 if category == '취업' else None)
@@ -922,6 +992,8 @@ def _review_with_source_recovery(keyword, category, now, results, sources, *,
         return None, reason, research, audit
     retry = {}
     recovery['retry_review'] = retry
+    recovery['reviewed_sources'] = [{key: source.get(key) for key in
+        ('url', 'title', 'excerpt', 'sha256', 'checked_on')} for source in updated]
     recovery['outcome'] = 'review_failed'
     try:
         item, retry_reason = topic_from_evidence(keyword, category, now, results, updated,
@@ -1175,6 +1247,7 @@ def _search_review_with_recovery(keyword, provider, results, now, query, *, budg
             return result
 
 
+@selection_trace.capture
 @runtime.selection_scope
 @source_fetch_scope()
 def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
@@ -1551,9 +1624,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             if dominance is not None and row['monthly'] >= HEAD_SEARCH_VOLUME and dominance > MAX_GOV_RATIO:
                 rejected.append({'keyword': keyword, 'reason': 'competitive head term; research other measured long-tails'})
                 continue
-            source_options = {'category': category} if category == '리뷰' else {}
-            sources = (candidate_sources(query, relevant_results, category) if category == '건강'
-                       else candidate_sources(query, relevant_results, **source_options)) if results and not row.get('recruitment_notices') else []
+            sources = candidate_sources(query, relevant_results, category) if results and not row.get('recruitment_notices') else []
             if row.get('recruitment_notices'):
                 # The preflight already fetched these exact current documents.
                 # Preserve them ahead of stale search-index locators.
@@ -1571,19 +1642,19 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                 keyword, category, now, results, sources, provider=provider,
                 evidence_mode=mode, research=research, allow_recovery=allow_recovery,
                 budget=recovery_budget)
+            reviewed_sources = audit.get('source_recovery', {}).pop('reviewed_sources', sources)
             if not reason and duplicate(keyword, item['topic'], titles + [x['keyword'] for x in selected]):
                 reason = 'already covered'
             if reason:
                 rejection = {'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit}
-                if category == '리뷰' or category == '취업' and '채용' in norm(keyword):
-                    # Keep the exact inputs of negative opinions for replay. The
-                    # next shortlist receives only a summary, not repeated bodies.
-                    rejection.update(monthly_search=row['monthly'], organic_provider=provider,
-                        organic_query=query, organic_results=results, search_review=search_review,
-                        evidence_mode=mode, verified_sources=[
-                            {key: source.get(key) for key in
-                             ('url', 'title', 'excerpt', 'sha256', 'checked_on')}
-                            for source in sources])
+                # Keep the exact inputs of negative opinions for replay. The
+                # next shortlist receives only a summary, not repeated bodies.
+                rejection.update(monthly_search=row['monthly'], organic_provider=provider,
+                    organic_query=query, organic_results=results, search_review=search_review,
+                    evidence_mode=mode, verified_sources=[
+                        {key: source.get(key) for key in
+                         ('url', 'title', 'excerpt', 'sha256', 'checked_on')}
+                        for source in reviewed_sources])
                 rejected.append(rejection)
                 continue
             if row.get('recruitment_notices'):

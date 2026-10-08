@@ -564,7 +564,7 @@ def test_selection_requires_measured_keyword_source_and_serp(monkeypatch):
     monkeypatch.setattr(market, 'ask', lambda *a, **k: next(responses))
     monkeypatch.setattr(market, 'demand_candidates', lambda seeds: {'시험준비물':{'keyword':'시험준비물','monthly':1200,'comp':'높음'}})
     monkeypatch.setattr(market, 'fetch_source', lambda *a: evidence())
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: [proposal['source_url']])
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: [proposal['source_url']])
     monkeypatch.setattr(market, 'search_results', lambda *a: ('google_custom_search', organic_sample()))
     result = market.select_category('취업', titles=[])
     assert result['selected'][0]['monthly_search'] == 1200
@@ -596,7 +596,7 @@ def test_analysis_uses_subscription_and_retries_invalid_json(monkeypatch):
 
 def test_source_search_reads_full_page_and_rejects_unsupported(monkeypatch):
     official = evidence('https://real.go.kr/info')
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: [official['url']])
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: [official['url']])
     monkeypatch.setattr(market, 'fetch_source', lambda url: official if url == official['url'] else None)
     monkeypatch.setattr(market, 'ask', lambda prompt: analysis('자격증'))
     sources = market.candidate_sources('자격증', [organic('https://missing.or.kr/')])
@@ -737,7 +737,8 @@ def test_selector_persists_rejection_diagnostics_without_selecting_or_scoring(mo
     monkeypatch.setattr(market, 'score_components', score)
     report = market.select_category('취업', 1, titles=[])
     assert report['selected'] == report['held'] == []
-    assert report['rejected'] == [{
+    assert [{k: row[k] for k in ('keyword', 'reason', 'decision_diagnostics')}
+            for row in report['rejected']] == [{
         'keyword': '시험준비물', 'reason': 'search intent or official evidence does not support an article',
         'decision_diagnostics': {
             'analysis_status': 'supported_false',
@@ -1045,7 +1046,7 @@ def test_failed_sources_and_competitive_heads_trigger_next_measured_candidate(mo
              [('거대키워드', 100000), ('서류준비', 5000), ('환급서류', 1500)]}
     monkeypatch.setattr(market, 'demand_candidates', lambda _: stats)
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
-    monkeypatch.setattr(market, 'candidate_sources', lambda key, _: [] if key == '서류준비' else [evidence()])
+    monkeypatch.setattr(market, 'candidate_sources', lambda key, _, category=None: [] if key == '서류준비' else [evidence()])
     monkeypatch.setattr(market, 'research_official_sources', lambda *args: ([], None))
     def search(key):
         return 'google_custom_search', ([organic('https://example.go.kr/info', key)]
@@ -1268,7 +1269,7 @@ def test_selection_to_scheduled_publication_carries_brief_and_never_reposts(
     monkeypatch.setenv('SELECT_TOP_N', '1')
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {'시험준비물': {'keyword': '시험준비물', 'monthly': 1200}})
     monkeypatch.setattr(market, 'search_results', lambda keyword: ('google_custom_search', organic_sample(keyword)))
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: [evidence()['url']])
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: [evidence()['url']])
     monkeypatch.setattr(market, 'fetch_source', lambda _: evidence())
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)
     responses = iter([{'candidates': [{'keyword': '시험준비물'}]}, analysis()])
@@ -1781,8 +1782,11 @@ def test_model_reported_locator_cannot_replace_accessible_relevant_body(monkeypa
             'official_sources': [{'url': source['url'], 'title': source['title'],
                                   'excerpt_chars': len(source['excerpt'])}],
         }
-    assert report['rejected'] == [{'keyword': '시험준비물', 'reason': reason,
-                                  'decision_diagnostics': diagnostics}]
+    assert [{k: row[k] for k in ('keyword', 'reason', 'decision_diagnostics')}
+            for row in report['rejected']] == [{'keyword': '시험준비물', 'reason': reason,
+                                               'decision_diagnostics': diagnostics}]
+    assert report['rejected'][0]['verified_sources'] == ([{k: source[k] for k in
+        ('url', 'title', 'excerpt', 'sha256', 'checked_on')}] if fetchable else [])
     assert analyze.call_count == (2 if fetchable else 1)
     if fetchable:
         prompt = analyze.call_args.args[0]
@@ -2378,7 +2382,10 @@ def test_detail_recovery_cannot_override_semantic_or_opportunity_gates(detail_re
         assert len(report['held']) == 1 and not market.fresh_market_item(report['held'][0], '취업')
     else:
         assert report['held'] == []
-        assert report['rejected'][0]['decision_diagnostics']['source_recovery']['outcome'] == expected
+        rejection = report['rejected'][0]
+        assert rejection['decision_diagnostics']['source_recovery']['outcome'] == expected
+        assert [row['url'] for row in rejection['verified_sources']] == [case.detail['url'], case.original['url']]
+        assert 'reviewed_sources' not in rejection['decision_diagnostics']['source_recovery']
 
 
 def test_detail_recovery_keeps_final_duplicate_gate(detail_recovery, monkeypatch):

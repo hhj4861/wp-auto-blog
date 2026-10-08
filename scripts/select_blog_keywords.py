@@ -110,9 +110,12 @@ def main():
             print(json.dumps(report, ensure_ascii=False), flush=True)
             if not report['selected']:
                 failures.append(category)
-                print(f'{category}: selection held (no_candidate_passed); '
+                print(f'{category}: selection held ({report.get("selection_outcome", "no_candidate_passed")}); '
                       f'rejected={len(report.get("rejected", []))} '
-                      f'held={len(report.get("held", []))}', file=sys.stderr, flush=True)
+                      f'held={len(report.get("held", []))} '
+                      f'evaluated={report.get("evaluated_candidates", 0)}/'
+                      f'measured={report.get("measured_candidates", 0)} '
+                      f'stop={report.get("research_stop_reason", "unknown")}', file=sys.stderr, flush=True)
                 continue
             # Reserve selected keywords across this run's category reports too.
             for item in report['selected']:

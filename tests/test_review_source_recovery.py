@@ -162,7 +162,7 @@ def test_component_documents_survive_earlier_laptop_specs_in_both_paths(monkeypa
                             lambda **kw: SimpleNamespace(research=lambda _: trace))
         found, _ = market.research_official_sources('노트북SSD', '리뷰', STAMP)
     else:
-        monkeypatch.setattr(market, 'official_search_urls', lambda _: list(lookup)[2:])
+        monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: list(lookup)[2:])
         found = market.candidate_sources('노트북SSD', [{'url': s['url']} for s in laptop[:2]], category='리뷰')
     assert [s['url'] for s in found[:2]] == [s['url'] for s in drives]
     assert len(found) == 3

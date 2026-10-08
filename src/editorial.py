@@ -34,13 +34,14 @@ OFFICIAL_DOMAINS = {
     "cathaypacific.com", "etihad.com", "goindigo.in", "jejuair.net",
     "twayair.com", "jinair.com", "airpremia.com", "q-net.or.kr", "korcham.net", "korea.kr",
     "kr.roborock.com", "store.kr.dreametech.com", "sandisk.com", "kingston.com",
-    "seagate.com", "toshiba-storage.com",
+    "seagate.com", "toshiba-storage.com", "tp-link.com", "iptime.com",
 }
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35
 SOURCE_FETCH_BACKOFF_SECONDS = 1
 SOURCE_MAX_BYTES = 5_000_000
 _source_cache = ContextVar('official_source_cache', default=None)
+_source_failures = ContextVar('official_source_failures', default=None)
 logger = logging.getLogger(__name__)
 
 
@@ -75,6 +76,9 @@ def is_official_url(url: str) -> bool:
 
 def _source_fetch_failure(reason: str) -> None:
     # Callers supply fixed codes only; request errors/URLs/headers may contain secrets.
+    failures = _source_failures.get()
+    if failures is not None:
+        failures.append(reason)
     logger.warning("Official source fetch failed: %s", reason)
 
 
@@ -155,6 +159,17 @@ def _source_excerpt(text, url):
 
 
 @contextmanager
+def source_failure_scope():
+    """Capture fixed failure codes per read without URLs, headers or exception text."""
+    failures = []
+    token = _source_failures.set(failures)
+    try:
+        yield failures
+    finally:
+        _source_failures.reset(token)
+
+
+@contextmanager
 def source_fetch_scope():
     """Reuse reads only within one selection; never persist stale evidence across runs."""
     if _source_cache.get() is not None:
@@ -171,10 +186,16 @@ def fetch_source(url: str, title: str = "") -> dict | None:
     cache = _source_cache.get()
     key = (url, title)
     if cache is not None and key in cache:
-        return deepcopy(cache[key])
-    source = _fetch_source(url, title)
+        source, failures = cache[key]
+        if _source_failures.get() is not None:
+            _source_failures.get().extend(failures)
+        return deepcopy(source)
+    with source_failure_scope() as failures:
+        source = _fetch_source(url, title)
+    if _source_failures.get() is not None:
+        _source_failures.get().extend(failures)
     if cache is not None and len(cache) < 128:
-        cache[key] = deepcopy(source)  # Includes exhausted failures, within this scope only.
+        cache[key] = (deepcopy(source), list(failures))
     return source
 
 

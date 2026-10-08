@@ -71,7 +71,7 @@ def test_invalid_bodies_do_not_exhaust_slots_before_later_organic_detail(monkeyp
     items = [*invalid, valid]
     lookup = {row['url']: row for row in items}
     monkeypatch.setattr(market, 'fetch_source', lambda url: lookup[url])
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: [])
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: [])
     assert market.candidate_sources('부산교통공사채용', items) == [valid]
     assert caplog.text.count('recruitment_employer_mismatch') == 3
 
@@ -104,7 +104,7 @@ def test_no_valid_replacement_returns_empty_instead_of_promoting_old_sources(mon
     rows = [row['source'] for row in FIXTURE['sources'] if row['keyword'] == '국민건강보험공단채용']
     lookup = {row['url']: row for row in rows}
     monkeypatch.setattr(market, 'fetch_source', lambda url: lookup[url])
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: [])
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: [])
     assert market.candidate_sources('국민건강보험공단채용', rows) == []
 
 
@@ -133,7 +133,7 @@ def test_filtered_sources_trigger_fresh_research_before_full_selection(monkeypat
     monkeypatch.setattr(market, 'demand_candidates', lambda _: {keyword: {'keyword': keyword, 'monthly': 1200}})
     monkeypatch.setattr(market, 'search_results', Mock(return_value=('codex_native_search', organic_sample(keyword))))
     monkeypatch.setattr(market, 'fetch_source', lambda url: lookup.get(url))
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: list(lookup))
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: list(lookup))
     monkeypatch.setattr(market, 'research_official_sources', research)
     monkeypatch.setattr(market, 'ask', Mock(side_effect=[{'candidates': [{'keyword': keyword}]}, analysis(keyword)]))
     monkeypatch.setattr(market, 'fetch_trend_change', lambda _: None)

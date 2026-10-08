@@ -76,7 +76,7 @@ def test_unrelated_sources_do_not_hide_later_fetched_product_evidence(monkeypatc
     bodies += [source(url, f'무선청소기 흡입력 시험 조건 제품 {i}') for i, url in enumerate(urls[5:])]
     fetch = Mock(side_effect=lambda url: bodies[urls.index(url)])
     monkeypatch.setattr(market, 'fetch_source', fetch)
-    monkeypatch.setattr(market, 'official_search_urls', lambda _: urls[2:])
+    monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: urls[2:])
     assert market.candidate_sources('무선청소기흡입력', [{'url': url} for url in urls[:2]], category='리뷰') == bodies[5:]
     assert fetch.call_count == 8
 
@@ -186,7 +186,7 @@ def test_three_first_manufacturer_pages_do_not_hide_second_manufacturer(monkeypa
                             lambda **kw: SimpleNamespace(research=lambda _: trace))
         selected, _ = market.research_official_sources('청소기흡입력', '리뷰', '2026-09-30')
     else:
-        monkeypatch.setattr(market, 'official_search_urls', lambda _: urls[2:])
+        monkeypatch.setattr(market, 'official_search_urls', lambda _, category=None: urls[2:])
         selected = market.candidate_sources('청소기흡입력', [{'url': u} for u in urls[:2]], category='리뷰')
     assert fetch.call_count == 4
     assert [row['url'] for row in selected] == [urls[0], urls[3], urls[1]]

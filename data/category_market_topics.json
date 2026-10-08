@@ -5398,7 +5398,15 @@
         "elapsed_ms": 45415
       }
     ],
-    "analysis_recovery_attempts": 0
+    "analysis_recovery_attempts": 0,
+    "reuse_source_diagnostics": {
+      "checked_at": "2026-10-08T09:18:58.563698+00:00",
+      "failed_candidates": [],
+      "reused_keywords": [
+        "전기기사과목"
+      ],
+      "outcome": "reused"
+    }
   },
   "생활정보": {
     "category": "생활정보",

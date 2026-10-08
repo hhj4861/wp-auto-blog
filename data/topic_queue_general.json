@@ -19004,7 +19004,7 @@
     "keywords": [
       "코세척방법"
     ],
-    "status": "pending",
+    "status": "completed",
     "opportunity_evidence": {
       "version": 2,
       "query": "코세척방법",
@@ -19188,7 +19188,11 @@
     },
     "score": 70.01,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 1865,
+    "url": "https://trendpulse.blog/nasal-rinse-safety-guide/",
+    "post_status": "publish",
+    "completed_at": "2026-10-08T09:07:31.295600"
   },
   {
     "keyword": "숙취해소법",

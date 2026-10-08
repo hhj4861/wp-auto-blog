@@ -599,5 +599,27 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-08T04:34:43.686566+00:00"
+  },
+  {
+    "key": "코세척방법",
+    "keyword": "코세척방법",
+    "topic": "코세척방법: 세척액 준비부터 자세·기구 관리·주의사항까지",
+    "category": "건강",
+    "post_id": 1865,
+    "url": "https://trendpulse.blog/nasal-rinse-safety-guide/",
+    "selection_version": 6,
+    "monthly_search": 2630,
+    "score": 70.01,
+    "score_components": {
+      "demand": 27.36,
+      "organic_opportunity": 27.65,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-08T09:07:30.238613+00:00"
   }
 ]

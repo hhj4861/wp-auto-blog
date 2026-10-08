@@ -368,6 +368,17 @@
       "claimed_at": "2026-10-07T18:00:48.130716+09:00",
       "status": "success",
       "completed_at": "2026-10-07T09:32:29.477650+00:00"
+    },
+    "2026-10-08:morning": {
+      "scheduled_for": "2026-10-08T09:00:00+09:00",
+      "run_created_at": "2026-10-08T09:00:04+09:00",
+      "start_delay_seconds": 11,
+      "trigger": "external_timer",
+      "run_id": "37705362162",
+      "category": "테크",
+      "slot": "morning",
+      "claimed_at": "2026-10-08T09:00:11.021168+09:00",
+      "status": "started"
     }
   }
 }

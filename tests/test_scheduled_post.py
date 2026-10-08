@@ -311,3 +311,9 @@ def test_finish_ignores_an_unknown_published_category(tmp_path):
     schedule.claim(env, path, at(time='09:00'))
     schedule.finish({**env, 'SCHEDULE_JOB_STATUS': 'failure', 'SCHEDULE_PUBLISHED_CATEGORY': ''}, path)
     assert 'published_category' not in json.loads(path.read_text())['runs']['2026-09-14:morning']
+
+
+def test_only_scheduled_refills_are_guarded_near_posting_slots():
+    research = yaml.safe_load(Path('.github/workflows/blog-keyword-select.yml').read_text())
+    step = next(s for s in research['jobs']['select']['steps'] if 'SELECT_CATEGORY' in s.get('env', {}))
+    assert step['env']['SELECT_SLOT_GUARD'] == "${{ github.event_name == 'schedule' && '1' || '0' }}"

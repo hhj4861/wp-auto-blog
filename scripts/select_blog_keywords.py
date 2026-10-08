@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
 from src.selection_feedback import load_history
-from src.topic_inventory import refill_categories
+from src.topic_inventory import near_posting_slot, refill_categories
 from src.analysis_runtime import error_code
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
@@ -70,6 +70,11 @@ def main():
         raise ValueError('Enqueue requires a specific scheduled category')
     if args.category == 'inventory' and not args.enqueue:
         raise ValueError('Inventory refill requires --enqueue')
+    if (args.category == 'inventory' and os.getenv('SELECT_SLOT_GUARD') == '1'
+            and near_posting_slot(datetime.now(timezone.utc))):
+        # A late GitHub schedule must never hold the posting concurrency group at a slot.
+        print('Inventory refill skipped: started near a posting slot', flush=True)
+        return 0
     reports = json.loads(REPORT.read_text()) if REPORT.exists() else {}
     titles = existing_titles()
     if args.category == 'inventory':

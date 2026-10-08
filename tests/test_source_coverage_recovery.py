@@ -9,7 +9,7 @@ import pytest
 from src import market_topics as market
 from tests.test_market_topics import (
     candidate, evidence, synthetic_plan_review, synthetic_search_review,
-    analysis, organic_sample,
+    analysis, organic_sample, isolated_market_history,
 )
 
 

@@ -1,0 +1,503 @@
+{
+  "selected_at": "2026-10-08T00:00:44.218807+00:00",
+  "measured_candidates": 570,
+  "evaluated_candidates": 6,
+  "research_pool_size": 300,
+  "research_stop_reason": "round_limit",
+  "candidate_decisions": [
+    {
+      "keyword": "갤럭시S25",
+      "monthly_search": 81000,
+      "score": 53.93,
+      "status": "held",
+      "reasons": [
+        "narrower_source_coverage",
+        "unverified_source_coverage"
+      ],
+      "organic_query": "갤럭시S25"
+    },
+    {
+      "keyword": "인터넷속도측정",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 115100,
+      "organic_query": "인터넷속도측정"
+    },
+    {
+      "keyword": "인터넷설치",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 11590,
+      "organic_query": "인터넷설치"
+    },
+    {
+      "keyword": "공유기설치",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 1840,
+      "organic_query": "공유기 설치"
+    },
+    {
+      "keyword": "윈도우포맷",
+      "status": "rejected",
+      "reason": "search quality insufficient",
+      "monthly_search": 1770,
+      "organic_query": "윈도우 포맷"
+    },
+    {
+      "keyword": "아이폰15프로출시일",
+      "status": "rejected",
+      "reason": "search intent or official evidence does not support an article",
+      "monthly_search": 2050,
+      "organic_query": "아이폰15 프로 출시일"
+    }
+  ],
+  "youtube_discovery": {
+    "provider": "youtube_data_api_v3",
+    "status": "api_unavailable",
+    "checked_at": "2026-10-08T00:00:44.218807+00:00",
+    "lookback_days": 90,
+    "ranking": "viewCount_within_recent_search_sample",
+    "videos": [],
+    "seeds": [],
+    "note": "Video views are not search demand or measured trend growth.",
+    "error": {
+      "endpoint": "search",
+      "code": "api_key_invalid",
+      "http_status": 400
+    }
+  },
+  "sources": [
+    {
+      "keyword": "인터넷속도측정",
+      "diagnostics": {
+        "official_sources": [
+          {
+            "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+            "title": "기업정보 내용 | 비즈오케이>기업정보",
+            "excerpt_chars": 339
+          },
+          {
+            "url": "https://www.incheon.go.kr/jobs/main/ic_cmpy/cmpy/list.do",
+            "title": "일자리플랫폼 - 인천기업관 - 인천기업검색",
+            "excerpt_chars": 1854
+          },
+          {
+            "url": "https://www.incheon.go.kr/eco/ECO010606",
+            "title": "홈>인천경제>산업단지>일반산업단지>송도지식정보산업단지\r\n\t\t |\r\n\t\t경제·투자",
+            "excerpt_chars": 2258
+          }
+        ],
+        "analysis_status": "supported_false",
+        "model_rejection_opinion": {
+          "kind": "model_opinion",
+          "code": "source_missing_detail"
+        },
+        "source_recovery": {
+          "attempted": true,
+          "initial_review": {
+            "official_sources": [
+              {
+                "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+                "title": "기업정보 내용 | 비즈오케이>기업정보",
+                "excerpt_chars": 339
+              },
+              {
+                "url": "https://www.incheon.go.kr/jobs/main/ic_cmpy/cmpy/list.do",
+                "title": "일자리플랫폼 - 인천기업관 - 인천기업검색",
+                "excerpt_chars": 1854
+              },
+              {
+                "url": "https://www.incheon.go.kr/eco/ECO010606",
+                "title": "홈>인천경제>산업단지>일반산업단지>송도지식정보산업단지\r\n\t\t |\r\n\t\t경제·투자",
+                "excerpt_chars": 2258
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "source_missing_detail"
+            }
+          },
+          "outcome": "no_changed_source"
+        }
+      }
+    },
+    {
+      "keyword": "인터넷설치",
+      "diagnostics": {
+        "official_sources": [
+          {
+            "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1428110795",
+            "title": "(주)인투씨엔에스",
+            "excerpt_chars": 8000
+          },
+          {
+            "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+            "title": "기업정보 내용 | 비즈오케이>기업정보",
+            "excerpt_chars": 339
+          }
+        ],
+        "analysis_status": "supported_false",
+        "model_rejection_opinion": {
+          "kind": "model_opinion",
+          "code": "category_mismatch"
+        }
+      }
+    },
+    {
+      "keyword": "공유기설치",
+      "diagnostics": {
+        "official_sources": [
+          {
+            "url": "https://www.moel.go.kr/info/lawinfo/instruction/view.do?bbs_seq=20260400639",
+            "title": "고용노동부",
+            "excerpt_chars": 292
+          }
+        ],
+        "analysis_status": "supported_false",
+        "model_rejection_opinion": {
+          "kind": "model_opinion",
+          "code": "source_missing_detail"
+        }
+      }
+    },
+    {
+      "keyword": "아이폰15프로출시일",
+      "diagnostics": {
+        "official_sources": [
+          {
+            "url": "https://www.apple.com/kr/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/",
+            "title": "Apple, iPhone 15 Pro와 iPhone 15 Pro Max 공개 - Apple (KR)",
+            "excerpt_chars": 8000
+          },
+          {
+            "url": "https://www.apple.com/kr/iphone/compare/",
+            "title": "iPhone - 모델 비교하기 - Apple (KR)",
+            "excerpt_chars": 8000
+          },
+          {
+            "url": "https://apps.apple.com/kr/app/k%EB%A7%98%ED%83%9D%EC%8B%9C/id6670617418",
+            "title": "‎K맘택시 앱 - App Store",
+            "excerpt_chars": 3536
+          }
+        ],
+        "analysis_status": "supported_false",
+        "model_rejection_opinion": {
+          "kind": "model_opinion",
+          "code": "source_missing_detail"
+        }
+      }
+    }
+  ],
+  "shortlist_skips": [
+    {
+      "keyword": "인터넷신청",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "미세먼지",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "컴퓨터와이파이연결",
+      "reason_code": "duplicate_intent",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "컴퓨터인터넷연결",
+      "reason_code": "duplicate_intent",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "인터넷속도측정",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "결혼준비신용카드",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "세탁기",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "와이파이연결",
+      "reason_code": "duplicate_intent",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시S25",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "인터넷TV신청",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "KT인터넷",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "컴퓨터네트워크연결",
+      "reason_code": "duplicate_intent",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰16",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "건조기",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰사전예약",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "통돌이세탁기",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰15",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "드럼세탁기",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰16PRO",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "그래픽카드",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰16프로",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "KT요금제",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "조립PC",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시S24",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "LGU+",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "휴대폰",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "와이파이공유기",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "COPILOT",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰15PRO",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "인터넷비교사이트",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "IPTIME",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시S25울트라",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "KT인터넷고객센터",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "전기밥솥",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "폴더폰",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "MS오피스",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "삼성갤럭시",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "마이크로소프트365",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "삼성핸드폰",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "IPTIME공유기",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "세탁기건조기일체형",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "삼성몰",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "공유기",
+      "reason_code": "scope_too_broad",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "미니건조기",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰13",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "삼성닷컴홈페이지",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "와이파이증폭기",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰사전예약혜택",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰15프로",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시스토어",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "SK인터넷",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "인터넷가입",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시A시리즈",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "갤럭시탭S9",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "아이폰16E",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "삼성전자몰",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "청라코스트코",
+      "reason_code": "category_mismatch",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "DDR416G",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    },
+    {
+      "keyword": "S25",
+      "reason_code": "insufficient_specificity",
+      "kind": "model_shortlist_opinion"
+    }
+  ],
+  "galaxy_missing_facets": [
+    {
+      "facet": "갤럭시S25의 구매 가격과 판매 선택지는 무엇인가?",
+      "answer": "검색결과에 가격·구매 수요가 확인되지만 공식 인용은 제품 구분만 제공한다. 사양 중심 기획은 전체 검색어보다 좁다.",
+      "supported": false,
+      "source_index": 0
+    }
+  ]
+}

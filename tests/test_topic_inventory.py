@@ -1,6 +1,8 @@
 """Slot inventory: refill ahead of slots and never leave a slot empty while stock exists."""
 from datetime import datetime
 
+import pytest
+
 from src import topic_inventory as inventory
 from src.posting_schedule import category_for_date
 
@@ -105,3 +107,31 @@ def test_slot_pick_cli_skips_stock_that_duplicates_an_existing_post(tmp_path, mo
     monkeypatch.setattr(cli, 'existing_titles', lambda: ['윈도우재설치 방법'])
     assert cli.main(['--preferred', '생활정보']) == 0
     assert capsys.readouterr().out.strip() == '건강'
+
+
+@pytest.mark.parametrize('local,blocked', [
+    ('2026-10-09T07:00', False), ('2026-10-09T07:49', False), ('2026-10-09T07:50', True),
+    ('2026-10-09T09:00', True), ('2026-10-09T09:44', True), ('2026-10-09T09:45', False),
+    ('2026-10-09T13:00', False), ('2026-10-09T16:50', True), ('2026-10-09T18:44', True),
+    ('2026-10-09T18:45', False), ('2026-10-09T03:00', False)])
+def test_refill_never_starts_where_it_could_delay_a_posting_slot(local, blocked):
+    # Refill shares the posting concurrency group and can run 60 minutes; GitHub
+    # schedules are often hours late (the 03:00 refill had not started by 07:01).
+    assert inventory.near_posting_slot(at(local)) is blocked
+
+
+def test_scheduled_refill_near_a_slot_exits_without_research(tmp_path, monkeypatch, capsys):
+    import scripts.select_blog_keywords as cli
+    data = tmp_path / 'data'
+    data.mkdir()
+    (data / 'topic_queue_general.json').write_text('[]')
+    monkeypatch.setattr(cli, 'ROOT', tmp_path)
+    monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'near_posting_slot', lambda now: True)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: (_ for _ in ()).throw(AssertionError('no WordPress read')))
+    monkeypatch.setattr(cli, 'select_category', lambda *a, **k: (_ for _ in ()).throw(AssertionError('no research')))
+    monkeypatch.setenv('SELECT_SLOT_GUARD', '1')
+    monkeypatch.setattr('sys.argv', ['select', '--category', 'inventory', '--enqueue'])
+    assert cli.main() == 0
+    assert 'near a posting slot' in capsys.readouterr().out

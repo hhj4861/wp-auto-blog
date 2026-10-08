@@ -33,6 +33,21 @@ def upcoming_categories(now, slots=3):
     return list(dict.fromkeys(found))
 
 
+# Refill shares the posting concurrency group and may run up to 60 minutes.
+REFILL_GUARD_BEFORE = timedelta(minutes=70)
+REFILL_GUARD_AFTER = timedelta(minutes=45)
+
+
+def near_posting_slot(now):
+    """True where a starting refill could delay a 09:00/18:00 KST posting slot."""
+    local = now.astimezone(KST)
+    for hour in SLOT_HOURS.values():
+        slot = local.replace(hour=hour, minute=0, second=0, microsecond=0)
+        if slot - REFILL_GUARD_BEFORE <= local < slot + REFILL_GUARD_AFTER:
+            return True
+    return False
+
+
 def refill_categories(queue, now, limit, *, fresh=fresh_market_item):
     """Empty categories, nearest upcoming slots first, then spare stock for fallback."""
     counts = fresh_counts(queue, now, fresh=fresh)

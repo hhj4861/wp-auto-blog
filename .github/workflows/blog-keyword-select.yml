@@ -196,6 +196,7 @@ jobs:
           SELECT_CATEGORY: ${{ inputs.category || 'inventory' }}
           SELECT_SLOT: ${{ inputs.slot || 'morning' }}
           SELECT_INVENTORY_LIMIT: '2'
+          SELECT_SLOT_GUARD: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: |
           if [ "$SELECT_CATEGORY" = inventory ]; then
             python scripts/select_blog_keywords.py --category inventory --enqueue

@@ -769,6 +769,14 @@ def test_workflow_selects_before_existing_category_pipeline():
     assert command.index('select_blog_keywords.py') < command.index('python -m src.main')
     assert '--category "$CAT" --enqueue --reuse' in command
     assert 'BLOG_REQUIRE_MARKET_TOPIC=1' in command
+    # Scheduled slots publish from verified stock and fall back to another stocked category.
+    assert command.index('pick_slot_category.py --preferred "$CAT"') < command.index('python -m src.main')
+    assert '--category "$PUBLISH_CAT"' in command
+    assert 'echo "category=$PUBLISH_CAT" >> "$GITHUB_OUTPUT"' in command
+    assert step['id'] == 'pipeline'
+    finish = next(s for s in workflow['jobs']['post-queue']['steps']
+                  if s.get('name') == 'Record scheduled attempt outcome')
+    assert finish['env']['SCHEDULE_PUBLISHED_CATEGORY'] == '${{ steps.pipeline.outputs.category }}'
     selector = Path('.github/workflows/blog-keyword-select.yml').read_text()
     assert "inputs.top_n || '2'" in selector
     assert 'scaffold_post.py' not in selector
@@ -818,6 +826,50 @@ def test_cli_empty_top_n_and_category_enqueue(tmp_path, monkeypatch):
     monkeypatch.setattr(cli, 'select_category', lambda *a: {'category':'취업','selected':[]})
     assert cli.main() == 1
     assert json.loads(queue_path.read_text()) == queued
+
+
+def inventory_cli(tmp_path, monkeypatch, refill):
+    import json
+    import scripts.select_blog_keywords as cli
+    data = tmp_path / 'data'
+    data.mkdir()
+    (data / 'topic_queue_general.json').write_text('[]')
+    monkeypatch.setattr(cli, 'ROOT', tmp_path)
+    monkeypatch.setattr(cli, 'REPORT', data / 'report.json')
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [])
+    monkeypatch.setattr(cli, 'refill_categories', lambda queue, now, limit: refill[:limit])
+    monkeypatch.setattr('sys.argv', ['select', '--category', 'inventory', '--enqueue'])
+    return cli, data / 'topic_queue_general.json'
+
+
+def test_inventory_refill_enqueues_each_empty_category_it_can_verify(tmp_path, monkeypatch):
+    import json
+    cli, queue_path = inventory_cli(tmp_path, monkeypatch, ['취업', '건강', '테크'])
+    monkeypatch.setenv('SELECT_INVENTORY_LIMIT', '2')
+    calls = []
+    def select(category, top_n, titles, **_):
+        calls.append(category)
+        return {'category': category, 'selected': [candidate()] if category == '취업' else []}
+    monkeypatch.setattr(cli, 'select_category', select)
+    assert cli.main() == 0  # one category stocked; the held one stays visible in the report
+    assert calls == ['취업', '건강']
+    queued = json.loads(queue_path.read_text())
+    assert [row['category'] for row in queued] == ['취업']
+    assert market.fresh_market_item(queued[0], '취업')
+
+
+def test_inventory_refill_fails_only_when_no_category_was_stocked(tmp_path, monkeypatch):
+    cli, _ = inventory_cli(tmp_path, monkeypatch, ['건강'])
+    monkeypatch.setattr(cli, 'select_category',
+                        lambda category, *a, **k: {'category': category, 'selected': []})
+    assert cli.main() == 1
+
+
+def test_inventory_refill_is_a_no_op_when_every_category_is_stocked(tmp_path, monkeypatch):
+    cli, _ = inventory_cli(tmp_path, monkeypatch, [])
+    monkeypatch.setattr(cli, 'select_category', Mock(side_effect=AssertionError('no research needed')))
+    assert cli.main() == 0
 
 
 @pytest.fixture

@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
 from src.selection_feedback import load_history
+from src.topic_inventory import refill_categories
 from src.analysis_runtime import error_code
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
@@ -52,7 +53,7 @@ def _sources_accessible(item, source_cache):
 def main():
     load_dotenv()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--category', choices=['all', 'scheduled', *CATEGORIES], default='all')
+    parser.add_argument('--category', choices=['all', 'scheduled', 'inventory', *CATEGORIES], default='all')
     parser.add_argument('--slot', choices=SLOTS, default='morning', help='Slot for scheduled category research')
     parser.add_argument('--enqueue', action='store_true')
     parser.add_argument('--reuse', action='store_true', help='Reuse a verified report up to 36 hours old')
@@ -64,8 +65,18 @@ def main():
         raise ValueError('SELECT_TOP_N must be between 1 and 5')
     if args.enqueue and args.category == 'all':
         raise ValueError('Enqueue requires a specific scheduled category')
+    if args.category == 'inventory' and not args.enqueue:
+        raise ValueError('Inventory refill requires --enqueue')
     reports = json.loads(REPORT.read_text()) if REPORT.exists() else {}
-    categories = list(CATEGORIES) if args.category == 'all' else [args.category]
+    if args.category == 'inventory':
+        # Stock only empty categories, nearest slots first, so a slot never
+        # depends on a single just-in-time selection.
+        limit = int(os.getenv('SELECT_INVENTORY_LIMIT') or '2')
+        queue = json.loads((ROOT / 'data/topic_queue_general.json').read_text())
+        categories = refill_categories(queue, datetime.now(timezone.utc), limit)
+        print(f'Inventory refill categories: {categories or "none (stocked)"}', flush=True)
+    else:
+        categories = list(CATEGORIES) if args.category == 'all' else [args.category]
     failures = []
     titles = existing_titles()
     source_cache = {}  # Share successful and failed URL checks across this one run.
@@ -139,6 +150,9 @@ def main():
                 reports[category]["reuse_source_diagnostics"] = diagnostics
                 _write_reports(reports)
             print(f'{category}: selection held (selection_failed: {error_code(error)})', file=sys.stderr, flush=True)
+    if args.category == 'inventory':
+        # A held category is normal; fail only when no requested refill succeeded.
+        return 1 if categories and len(failures) == len(categories) else 0
     return 1 if failures else 0
 
 

@@ -30,6 +30,9 @@ NATIVE_CODES = frozenset({'native_search_failed', 'invalid_protocol', 'output_li
     'invalid_raw_call_id', 'invalid_raw_output_id'})
 CODES = RETRYABLE | FATAL | NATIVE_CODES | {'unclassified', 'unexpected_error', 'retry_budget_exhausted'}
 MAX_EXTRA_CALLS = 4
+# Count errors are not quote errors. Merging must never drop an unsupported core question.
+FACETS_LIST_FEEDBACK = ('required_facets는 1~8개 항목의 배열이어야 합니다. 관련 질문을 핵심 질문으로 묶어 '
+                        '8개 이하로 줄이되, supported=false인 핵심 질문은 빼거나 true로 바꾸지 마세요.')
 
 
 # Closed diagnostic vocabulary: never copy model fields or exception text.
@@ -172,6 +175,7 @@ def validated_call(call, prompt, validate=lambda value: value, *, label=None):
                     '근거와 부정 판정은 바꾸지 마세요. '
                     + ('본문에서 실질 답변을 그대로 복사하세요. 제목·소제목·고지는 인용할 수 없습니다.'
                        if safe_detail['reason'].startswith('article_') else
+                       FACETS_LIST_FEEDBACK if safe_detail['reason'] == 'facets_list' else
                        '인용은 원문의 구절 번호를 선택하세요.'))
             attempts.append(event)
             if state is not None:

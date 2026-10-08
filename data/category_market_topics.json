@@ -17604,7 +17604,7 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-10-05T09:00:57.597349+00:00",
+    "selected_at": "2026-10-08T00:00:44.218807+00:00",
     "seeds": [
       "갤럭시",
       "아이폰",
@@ -17625,7 +17625,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-05T09:00:57.597349+00:00",
+      "checked_at": "2026-10-08T00:00:44.218807+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -17637,6 +17637,9 @@
         "http_status": 400
       }
     },
+    "recruitment_discovery": {
+      "status": "not_applicable"
+    },
     "review_question_discovery": {
       "status": "not_needed",
       "seeds": [],
@@ -17646,6 +17649,7 @@
     "search_review_diagnostics": [],
     "shortlist_research_attempts": 3,
     "unresearched_budget_keywords": [
+      "16프로",
       "2g폰",
       "copilot",
       "ddr416g",
@@ -17660,20 +17664,20 @@
       "lg유플러스인터넷",
       "lg인터넷",
       "lte라우터",
-      "remote",
       "s24",
       "s25",
       "skt인터넷",
       "sk브로드밴드인터넷",
       "sk인터넷",
       "갤럭시25울트라",
+      "갤럭시a",
+      "갤럭시a시리즈",
+      "갤럭시s",
       "갤럭시s2",
       "갤럭시s24",
       "갤럭시s24울트라",
-      "갤럭시s25",
       "갤럭시s25울트라",
       "갤럭시공기계",
-      "갤럭시보급형",
       "갤럭시스토어",
       "갤럭시와이드",
       "갤럭시울트라",
@@ -17681,20 +17685,18 @@
       "갤럭시탭s9",
       "갤럭시폴더",
       "갤럭시폴더2",
-      "갤럭시폴더블",
+      "드럼세탁기",
+      "랜케이블",
       "램16기가",
-      "빨래건조기",
+      "미니건조기",
       "삼성닷컴홈페이지",
       "삼성몰",
       "삼성전자몰",
-      "삼성최신폰",
       "삼성폴더블",
       "삼성폴더폰",
       "삼성핸드폰신형",
-      "삼성효도폰",
       "서피스프로",
-      "세탁건조기",
-      "세탁기건조기세트",
+      "세탁기건조기일체형",
       "아이폰12",
       "아이폰12미니",
       "아이폰13",
@@ -17712,10 +17714,15 @@
       "아이폰출시일",
       "아이폰프로",
       "애플케이스",
+      "와이파이공유기",
+      "와이파이증폭기",
       "유플러스인터넷",
-      "인터넷설치",
+      "인터넷선",
       "인터넷속도체크",
-      "인터넷속도측정"
+      "인터넷속도측정사이트",
+      "인터넷속도테스트",
+      "통돌이세탁기",
+      "효도폰"
     ],
     "deferred_research_family_keywords": [],
     "researched_fallback_families": [
@@ -17732,341 +17739,427 @@
     ],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 571,
-    "evaluated_candidates": 9,
+    "measured_candidates": 570,
+    "evaluated_candidates": 6,
     "research_pool_size": 300,
     "selected": [],
-    "held": [],
+    "held": [
+      {
+        "keyword": "갤럭시S25",
+        "category": "테크",
+        "topic": "갤럭시S25 사양과 지원 기능: 화면·카메라·저장공간·연결 규격",
+        "intent": "갤럭시S25의 주요 사양은 무엇이며 카메라·통신·주변기기 연결은 어떤 기능을 지원하나요?",
+        "gap": "공식 사양표와 지원 여부 체크리스트로 줌 종류, 실제 사용 가능 저장공간, SIM 구성과 연결 규격을 정리합니다.",
+        "source_url": "https://www.samsung.com/sec/smartphones/galaxy-s25/specs/",
+        "verified_sources": [
+          {
+            "url": "https://www.samsung.com/sec/smartphones/galaxy-s25/specs/",
+            "original_url": "https://www.samsung.com/sec/smartphones/galaxy-s25/specs/",
+            "title": "스펙 | 삼성 갤럭시 S25 | S25+ | Samsung 대한민국",
+            "checked_on": "2026-10-08",
+            "sha256": "d34be9c3101057b33b9538d253aea3ecf0466cd66278717179736ab9aa993f0a",
+            "excerpt": "스 펙 디자인 갤럭시 S25 자급제/통신사폰 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) 갤럭시 S25+ 자급제/통신사폰 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) 색상 아이스블루 네이비 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 네이비 아이스블루 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 상세 스펙 갤럭시 S25 자급제/통신사폰 (256 GB) 갤럭시 S25 자급제/통신사폰 (512 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25+ 자급제/통신사폰 (256 GB) 갤럭시 S25+ 자급제/통신사폰 (512 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25 자급제/통신사폰 (256 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 MP 전면 카메라 - 조리개 값 F2.2 전면 카메라 - 오토 포커스 예 동영상 녹화 해상도 UHD 8K (7680 x 4320) | @30fps 슬로우 모션 240fps @FHD,120fps @FHD,120fps @UHD 메모리/스토리지 (저장 용량) 메모리 (GB) 12 GB 스토리지(저장 용량) (GB) 256 GB 사용 가능한 스토리지(저장 용량) (GB) 226.8 GB 네트워크 SIM 개수 Dual-SIM SIM 슬롯 타입 SIM 1 + eSIM / Dual eSIM 인프라 2G GSM,3G WCDMA,4G LTE FDD,4G LTE TDD,5G Sub6 FDD,5G Sub6 TDD 네트워크(S/W 사용) 2G GSM GSM850,GSM900,DCS1800,PCS1900 3G UMTS B1(2100),B2(1900),B4(AWS),B5(850),B8(900) 4G FDD LTE B1(2100),B2(1900),B3(1800),B4(AWS),B5(850),B7(2600),B8(900),B12(700),B13(700),B17(700),B18(800),B19(800),B20(800),B25(1900),B26(850),B28(700),B66(AWS-3) 4G TDD LTE B38(2600),B39(1900),B40(2300),B41(2500) 5G FDD Sub6 N1(2100),N2(1900),N3(1800),N5(850),N7(2600),N8(900),N12(700),N20(800),N25(1900),N26(850),N28(700),N66(AWS-3) 5G TDD Sub6 N38(2600),N40(2300),N41(2500),N77(3700),N78(3500) 연결 USB 인터페이스 USB Type-C USB 버전 USB 3.2 Gen 1 위치 기술 GPS,Glonass,Beidou,Galileo,QZSS 이어잭 USB Type-C MHL 아니오 Wi-Fi 802.11a/b/g/n/ac/ax/be 2.4GHz+5GHz+6GHz, EHT320, MIMO, 4096-QAM Wi-Fi Direct 예 블루투스 버전 Bluetooth v5.4 NFC 예 UWB (Ultra-Wideband) 아니오 PC 싱크 Smart Switch (PC version) 운영체제 Android 기본 사양 색상 아이스블루 형태 터치 바 센서 가속도 센서,기압 센서,지문 센서,자이로 센서,지자기 센서,홀 센서,조도 센서,근접 센서 외관 사양 크기(세로x가로x두께, mm) 146.9 x 70.5 x 7.2 무게(g) 162 배터리 비디오 재생 시간(Hours) 최대 29 배터리 용량(mAh, Typical) 4000 교체 가능 아니오 오디오/비디오 스테레오 지원 예 동영상 지원 포맷 MP4,M4V,3GP,3G2,AVI,FLV,MKV,WEBM 동영상 지원 해상도 UHD 8K (7680 x 4320) | @60fps 오디오 지원 포맷 MP3,M4A,3GA,AAC,OGG,OGA,WAV,AMR,AWB,FLAC,MID,MIDI,XMF,MXMF,IMY,RTTTL,RTX,OTA,DFF,DSF,APE 서비스 Gear 서포트 갤럭시 링,갤럭시 버즈3 프로,갤럭시 버즈2 프로,갤럭시 버즈 프로,갤럭시 버즈 라이브,갤럭시 버즈+,갤럭시 버즈3,갤럭시 버즈2,갤럭시 버즈,갤럭시 버즈 FE,갤럭시 핏3,갤럭시 핏2,갤럭시 핏e,갤럭시 핏,갤럭시 워치 FE,갤럭시 워치 울트라,갤럭시 워치7,갤럭시 워치6,갤럭시 워치5,갤럭시 워치4,갤럭시 워치3,갤럭시 워치,갤럭시 워치 액티브2,갤럭시 워치 액티브 삼성 덱스 서포트 지원 모바일 TV 아니오 블루투스 보청기 지원 보청기용 안드로이드 오디오 스트리밍 프로토콜(ASHA) SmartThings 지원 지원 상품 기본 정보 제품명 5G NR 이동통신용 무선설비의 기기(3.5 GHz)(육상이동국의 송수신장치) 제조자/수입자 삼성전자㈜ 제조국가 한국, 베트남 KC 인증 필 유무 R-C-SEC-SMS931 동일모델의 출시년월 25년 1월 A/S 책임자와 전화번호 삼성전자서비스센터/1588-3366 품질보증기준 결함·하자 등에 따른 소비자 피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능 갤럭시 S25 자급제/통신사폰 (512 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 MP 전면 카메라 - 조리개 값 F2.2 전면 카메라 - 오토 포커스 예 동영상 녹화 해상도 UHD 8K (7680 x 4320) | @30fps 슬로우 모션 240fps @FHD,120fps @FHD,120fps @UHD 메모리/스토리지 (저장 용량) 메모리 (GB) 12 GB 스토리지(저장 용량) (GB) 512 GB 사용 가능한 스토리지(저장 용량) (GB) 481.7 GB 네트워크 SIM 개수 Dual-SIM SIM 슬롯 타입 SIM 1 + eSIM / Dual eSIM 인프라 2G GSM,3G WCDMA,4G LTE FDD,4G LTE TDD,5G Sub6 FDD,5G Sub6 TDD 네트워크(S/W 사용) 2G GSM GSM850,GSM900,DCS1800,PCS1900 3G UMTS B1(2100),B2(1900),B4(AWS),B5(850),B8(900) 4G FDD LTE B1(2100),B2(1900),B3(1800),B4(AWS),B5(850),B7(2600),B8(900),B12(700),B13(700),B17(700),B18(800),B19(800),B20(800),B25(1900),B26(850),B28(700),B66(AWS-3) 4G TDD LTE B38(2600),B39(1900),B40(2300),B41(2500) 5G FDD Sub6 N1(2100),N2(1900),N3(1800),N5(850),N7(2600),N8(900),N12(700),N20(800),N25(1900),N26(850),N28(700),N66(AWS-3) 5G TDD Sub6 N38(2600),N40(2300),N41(2500),N77(3700),N78(3500) 연결 USB 인터페이스 USB Type-C USB 버전 USB 3.2 Gen 1 위치 기술 GPS,Glonass,Beidou,Galileo,QZSS 이어잭 USB Type-C MHL 아니오 Wi-Fi 802.11a/b/g/n/ac/ax/be 2.4GHz+5GHz+6GHz, EHT320, MIMO, 4096-QAM Wi-Fi Direct 예 블루투스 버전 Bluetooth v5.4 NFC 예 UWB (Ultra-Wideband) 아니오 PC 싱크 Smart Switch \n[중간 본문 생략]\n지원 상품 기본 정보 제품명 5G NR 이동통신용 무선설비의 기기(3.5 GHz)(육상이동국의 송수신장치) 제조자/수입자 삼성전자㈜ 제조국가 한국, 베트남 KC 인증 필 유무 R-C-SEC-SMS936 동일모델의 출시년월 25년 1월 A/S 책임자와 전화번호 삼성전자서비스센터/1588-3366 품질보증기준 결함·하자 등에 따른 소비자 피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 169.1mm 해상도 (Main Display) 3120 x 1440 (Quad HD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 MP 전면 카메라 - 조리개 값 F2.2 전면 카메라 - 오토 포커스 예 동영상 녹화 해상도 UHD 8K (7680 x 4320) | @30fps 슬로우 모션 240fps @FHD,120fps @FHD,120fps @UHD 메모리/스토리지 (저장 용량) 메모리 (GB) 12 GB 스토리지(저장 용량) (GB) 512 GB 사용 가능한 스토리지(저장 용량) (GB) 482.0 GB 네트워크 SIM 개수 Dual-SIM SIM 슬롯 타입 SIM 1 + eSIM / Dual eSIM 인프라 2G GSM,3G WCDMA,4G LTE FDD,4G LTE TDD,5G Sub6 FDD,5G Sub6 TDD 네트워크(S/W 사용) 2G GSM GSM850,GSM900,DCS1800,PCS1900 3G UMTS B1(2100),B2(1900),B4(AWS),B5(850),B8(900) 4G FDD LTE B1(2100),B2(1900),B3(1800),B4(AWS),B5(850),B7(2600),B8(900),B12(700),B13(700),B17(700),B18(800),B19(800),B20(800),B25(1900),B26(850),B28(700),B66(AWS-3) 4G TDD LTE B38(2600),B39(1900),B40(2300),B41(2500) 5G FDD Sub6 N1(2100),N2(1900),N3(1800),N5(850),N7(2600),N8(900),N12(700),N20(800),N25(1900),N26(850),N28(700),N66(AWS-3) 5G TDD Sub6 N38(2600),N40(2300),N41(2500),N77(3700),N78(3500) 연결 USB 인터페이스 USB Type-C USB 버전 USB 3.2 Gen 1 위치 기술 GPS,Glonass,Beidou,Galileo,QZSS 이어잭 USB Type-C MHL 아니오 Wi-Fi 802.11a/b/g/n/ac/ax/be 2.4GHz+5GHz+6GHz, EHT320, MIMO, 4096-QAM Wi-Fi Direct 예 블루투스 버전 Bluetooth v5.4 NFC 예 UWB (Ultra-Wideband) 예 PC 싱크 Smart Switch (PC version) 운영체제 Android 기본 사양 색상 블루블랙 형태 터치 바 센서 가속도 센서,기압 센서,지문 센서,자이로 센서,지자기 센서,홀 센서,조도 센서,근접 센서 외관 사양 크기(세로x가로x두께, mm) 158.4 x 75.8 x 7.3 무게(g) 190 배터리 비디오 재생 시간(Hours) 최대 30 배터리 용량(mAh, Typical) 4900 교체 가능 아니오 오디오/비디오 스테레오 지원 예 동영상 지원 포맷 MP4,M4V,3GP,3G2,AVI,FLV,MKV,WEBM 동영상 지원 해상도 UHD 8K (7680 x 4320) | @60fps 오디오 지원 포맷 MP3,M4A,3GA,AAC,OGG,OGA,WAV,AMR,AWB,FLAC,MID,MIDI,XMF,MXMF,IMY,RTTTL,RTX,OTA,DFF,DSF,APE 서비스 Gear 서포트 갤럭시 링,갤럭시 버즈3 프로,갤럭시 버즈2 프로,갤럭시 버즈 프로,갤럭시 버즈 라이브,갤럭시 버즈+,갤럭시 버즈3,갤럭시 버즈2,갤럭시 버즈,갤럭시 버즈 FE,갤럭시 핏3,갤럭시 핏2,갤럭시 핏e,갤럭시 핏,갤럭시 워치 FE,갤럭시 워치 울트라,갤럭시 워치7,갤럭시 워치6,갤럭시 워치5,갤럭시 워치4,갤럭시 워치3,갤럭시 워치,갤럭시 워치 액티브2,갤럭시 워치 액티브 삼성 덱스 서포트 지원 모바일 TV 아니오 블루투스 보청기 지원 보청기용 안드로이드 오디오 스트리밍 프로토콜(ASHA) SmartThings 지원 지원 상품 기본 정보 제품명 5G NR 이동통신용 무선설비의 기기(3.5 GHz)(육상이동국의 송수신장치) 제조자/수입자 삼성전자㈜ 제조국가 한국, 베트남 KC 인증 필 유무 R-C-SEC-SMS936 동일모델의 출시년월 25년 1월 A/S 책임자와 전화번호 삼성전자서비스센터/1588-3366 품질보증기준 결함·하자 등에 따른 소비자 피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능 * 색상은 국가, 이동통신사에 따라 다를 수 있습니다. * 삼성닷컴/삼성 강남 전용컬러 제품은 오직 삼성닷컴과 삼성 강남에서만 구매할 수 있습니다. * 배터리 용량(Typical)은 외부 실험실 환경에서 측정한 값입니다. 배터리 용량(Typical)은 IEC 61960 표준에 따라 테스트 된 배터리 샘플 간의 배터리 용량 편차를 고려한 예상 평균 값입니다. 정격 용량은 갤럭시 S25의 경우 3,885mAh, 갤럭시 S25+의 경우 4,755mAh, 갤럭시 S25 울트라의 경우 4,855mAh입니다. * 디스플레이 크기는 대각선으로 측정하였습니다. 둥근 모서리와 카메라 홀로 인해 실제 보이는 영역은 디스플레이 크기보다 작습니다. 갤럭시 S25의 디스플레이 크기는 코너 곡선을 제외하고 직각화하여 대각선으로 측정 시 156.4mm이며, 직각화하지 않고 측정 시 152.3mm입니다. 갤럭시 S25+의 디스플레이 크기는 코너 곡선을 제외하고 직각화하여 대각선으로 측정 시 169.1mm이며, 직각화하지 않고 측정 시 164.5mm입니다. 갤럭시 S25 울트라의 디스플레이 크기는 코너 곡선을 제외하고 직각화하여 대각선으로 측정 시 174.2mm이며, 직각화하지 않고 측정 시 172.2mm입니다. C C 나의 네트워크 속도 - 고속 인터넷 모드 - 저속 인터넷 모드",
+            "locator_origin": "model_reported_locator"
+          }
+        ],
+        "intent_results": [
+          "https://www.samsungsvc.co.kr/solution/3187302",
+          "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s25-%EC%8B%9C%EB%A6%AC%EC%A6%88-%EA%B3%B5%EA%B0%9C"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": 81000,
+        "demand_provider": "naver_searchad_pc_mobile",
+        "demand_scope": "keyword_total",
+        "advertising_competition": "높음",
+        "evidence_mode": "serp",
+        "research_evidence": {
+          "provider": "codex_web",
+          "searched": true,
+          "locators": [
+            {
+              "url": "https://www.samsung.com/sec/smartphones/galaxy-s25/specs/",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.samsung.com/sec/support/newsalert/3184/",
+              "origin": "model_reported_locator"
+            },
+            {
+              "url": "https://www.samsung.com/us/support/answer/ANS10004605/",
+              "origin": "model_reported_locator"
+            }
+          ]
+        },
+        "organic_provider": "codex_native_search",
+        "organic_query": "갤럭시S25",
+        "organic_domains": [
+          "www.samsungsvc.co.kr",
+          "news.samsung.com",
+          "news.samsung.com",
+          "news.samsung.com",
+          "search.danawa.com",
+          "search.danawa.com",
+          "search.danawa.com",
+          "search.danawa.com",
+          "search.danawa.com",
+          "www.lg.co.kr"
+        ],
+        "organic_results": [
+          {
+            "url": "https://www.samsungsvc.co.kr/solution/3187302",
+            "domain": "www.samsungsvc.co.kr",
+            "title": "[삼성 스마트폰] 갤럭시 S25/S25+/S25 Ultra, 사양(스펙) 및 기능이 궁금합니다.",
+            "snippet": "# 갤럭시 S25/S25+/S25 Ultra, 사양(스펙) 및 기능이 궁금합니다."
+          },
+          {
+            "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s25-%EC%8B%9C%EB%A6%AC%EC%A6%88-%EC%A0%84-%EC%84%B8%EA%B3%84-%EB%B3%B8%EA%B2%A9-%EC%B6%9C%EC%8B%9C",
+            "domain": "news.samsung.com",
+            "title": "삼성전자, ‘갤럭시 S25 시리즈’ 전 세계 본격 출시 – Samsung Newsroom Korea",
+            "snippet": "‘갤럭시 S25 시리즈’는 이달 3일까지 진행한 국내 사전 판매에서 130만대를 기록하며, 이는 역대 갤럭시 S 시리즈 사전 판매 중 최다 판매 신기록이다."
+          },
+          {
+            "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s25-%EC%8B%9C%EB%A6%AC%EC%A6%88-%EA%B3%B5%EA%B0%9C",
+            "domain": "news.samsung.com",
+            "title": "삼성전자, ‘갤럭시 S25 시리즈’ 공개 – Samsung Newsroom Korea",
+            "snippet": "Image: ※ 제품 세부 사양 (국내 출시 기준) 갤럭시 S25 울트라 (Galaxy S25 Ultra) 디스플레이 174.2mm (6.9형) Quad HD+플랫 디스플레이 다이나믹 AMOLED 2X 디스플레이 3,120"
+          },
+          {
+            "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s25-%EC%8B%9C%EB%A6%AC%EC%A6%88-%EC%82%AC%EC%A0%84-%ED%8C%90%EB%A7%A4-%EC%8B%9C%EC%9E%91",
+            "domain": "news.samsung.com",
+            "title": "삼성전자, ‘갤럭시 S25 시리즈’ 사전 판매 시작 – Samsung Newsroom Korea",
+            "snippet": "‘갤럭시 S25 시리즈’ 사전 판매는 전국 삼성스토어와 삼성닷컴, 이동통신사 온·오프라인 매장 등에서 진행되고, 1월 24일 0시에는 삼성닷컴, 쿠팡, 네이버, 11번가, G마켓, CJ온스타일 등에서 라이브 커머스를"
+          },
+          {
+            "url": "https://search.danawa.com/mobile/dsearch.php?keyword=+%EA%B0%A4%EB%9F%AD%EC%8B%9CS25",
+            "domain": "search.danawa.com",
+            "title": "갤럭시S25 : 다나와 통합검색",
+            "snippet": "* 삼성전자 갤럭시S25 256GB, 자급제 (네이비) 1,072,880 원 (221몰)"
+          },
+          {
+            "url": "https://search.danawa.com/mobile/dsearch.php?keyword=%EA%B2%94%EB%9F%AD%EC%8B%9Cs25",
+            "domain": "search.danawa.com",
+            "title": "겔럭시s25 : 다나와 통합검색",
+            "snippet": "* 삼성전자 갤럭시S25 플러스 256GB, 자급제 (네이비) 1,479,990 원 (71몰)"
+          },
+          {
+            "url": "https://search.danawa.com/dsearch.php?query=%EA%B0%A4%EB%9F%AD%EC%8B%9Cs25",
+            "domain": "search.danawa.com",
+            "title": "갤럭시s25 : 다나와 통합검색",
+            "snippet": "삼성전자 갤럭시S25 256GB, 공기계 ... 삼성전자 갤럭시S25 256GB, 자급제"
+          },
+          {
+            "url": "https://search.danawa.com/dsearch.php?query=%EA%B2%94%EB%9F%AD%EC%8B%9Cs25",
+            "domain": "search.danawa.com",
+            "title": "겔럭시s25 : 다나와 통합검색",
+            "snippet": "삼성전자 갤럭시S25 256GB, 공기계 ... 대세는 슬림 갤럭시S25 엣지"
+          },
+          {
+            "url": "https://search.danawa.com/dsearch.php?query=%EA%B0%A4%EB%9F%AD%EC%8B%9C+s25",
+            "domain": "search.danawa.com",
+            "title": "갤럭시 s25 : 다나와 통합검색",
+            "snippet": "삼성전자 갤럭시S25 256GB, 공기계"
+          },
+          {
+            "url": "https://www.lg.co.kr/media/release/28624",
+            "domain": "www.lg.co.kr",
+            "title": "보도자료 | 미디어 | LG",
+            "snippet": "LG유플러스(www.lguplus.com)가 사전예약 고객을 대상으로 삼성전자 플래그십 스마트폰 갤럭시 S25 시리즈의 개통을 시작한다."
+          }
+        ],
+        "dominant_result_ratio": 0.0,
+        "score_components": {
+          "demand": 35,
+          "organic_opportunity": 20.0,
+          "trend": -1.07,
+          "intent_fit": 0
+        },
+        "trend_growth": -0.107,
+        "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+        "trend_status": "measured",
+        "selection_version": 6,
+        "selected_at": "2026-10-08T00:00:44.218807+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "갤럭시S25"
+        ],
+        "status": "research_only",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.samsung.com/sec/smartphones/galaxy-s25/specs/",
+              "title": "스펙 | 삼성 갤럭시 S25 | S25+ | Samsung 대한민국",
+              "excerpt_chars": 7912
+            },
+            {
+              "url": "https://www.samsung.com/sec/support/newsalert/3184/",
+              "title": "고객서비스 알림 | Samsung 대한민국",
+              "excerpt_chars": 7912
+            },
+            {
+              "url": "https://www.samsung.com/us/support/answer/ANS10004605/",
+              "title": "Set up the Now brief and Now bar on your Samsung Galaxy device",
+              "excerpt_chars": 7167
+            }
+          ],
+          "analysis_status": "supported_true",
+          "source_recovery": {
+            "attempted": true,
+            "initial_review": {
+              "official_sources": [
+                {
+                  "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EA%B0%A4%EB%9F%AD%EC%8B%9C-s25-%EC%8B%9C%EB%A6%AC%EC%A6%88-%EC%A0%84-%EC%84%B8%EA%B3%84-%EB%B3%B8%EA%B2%A9-%EC%B6%9C%EC%8B%9C",
+                  "title": "삼성전자, ‘갤럭시 S25 시리즈’ 전 세계 본격 출시 – Samsung Newsroom Korea",
+                  "excerpt_chars": 3014
+                }
+              ],
+              "analysis_status": "supported_false",
+              "model_rejection_opinion": {
+                "kind": "model_opinion",
+                "code": "source_missing_detail"
+              }
+            },
+            "outcome": "review_passed",
+            "retry_review": {
+              "official_sources": [
+                {
+                  "url": "https://www.samsung.com/sec/smartphones/galaxy-s25/specs/",
+                  "title": "스펙 | 삼성 갤럭시 S25 | S25+ | Samsung 대한민국",
+                  "excerpt_chars": 7912
+                },
+                {
+                  "url": "https://www.samsung.com/sec/support/newsalert/3184/",
+                  "title": "고객서비스 알림 | Samsung 대한민국",
+                  "excerpt_chars": 7912
+                },
+                {
+                  "url": "https://www.samsung.com/us/support/answer/ANS10004605/",
+                  "title": "Set up the Now brief and Now bar on your Samsung Galaxy device",
+                  "excerpt_chars": 7167
+                }
+              ],
+              "analysis_status": "supported_true"
+            }
+          }
+        },
+        "opportunity_evidence": {
+          "version": 2,
+          "query": "갤럭시S25",
+          "executed_query": "갤럭시S25",
+          "topic": "갤럭시S25 사양과 지원 기능: 화면·카메라·저장공간·연결 규격",
+          "intent": "갤럭시S25의 주요 사양은 무엇이며 카메라·통신·주변기기 연결은 어떤 기능을 지원하나요?",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-08T00:00:44.218807+00:00",
+          "result_count": 10,
+          "domain_count": 4,
+          "dominant_ratio": 0.0,
+          "search_review": {
+            "version": 1,
+            "query": "갤럭시S25",
+            "executed_query": "갤럭시S25",
+            "provider": "codex_native_search",
+            "checked_at": "2026-10-08T00:00:44.218807+00:00",
+            "raw_sha256": "d545cb93e25de5890d28ec8db174987830506ecb4412ffe43165c173e42d16da",
+            "decisions": [
+              {
+                "result_index": 0,
+                "relevant": true,
+                "quote": "[삼성 스마트폰] 갤럭시 S25/S25+/S25 Ultra, 사양(스펙) 및 기능이 궁금합니다."
+              },
+              {
+                "result_index": 1,
+                "relevant": true,
+                "quote": "삼성전자, ‘갤럭시 S25 시리즈’ 전 세계 본격 출시 – Samsung Newsroom Korea"
+              },
+              {
+                "result_index": 2,
+                "relevant": true,
+                "quote": "Image: ※ 제품 세부 사양 (국내 출시 기준) 갤럭시 S25 울트라 (Galaxy S25 Ultra) 디스플레이 174.2mm (6.9형) Quad HD+플랫 디스플레이 다이나믹 AMOLED 2X 디스플레이 3,120"
+              },
+              {
+                "result_index": 3,
+                "relevant": true,
+                "quote": "‘갤럭시 S25 시리즈’ 사전 판매는 전국 삼성스토어와 삼성닷컴, 이동통신사 온·오프라인 매장 등에서 진행되고, 1월 24일 0시에는 삼성닷컴, 쿠팡, 네이버, 11번가, G마켓, CJ온스타일 등에서 라이브 커머스를"
+              },
+              {
+                "result_index": 4,
+                "relevant": true,
+                "quote": "* 삼성전자 갤럭시S25 256GB, 자급제 (네이비) 1,072,880 원 (221몰)"
+              },
+              {
+                "result_index": 5,
+                "relevant": true,
+                "quote": "* 삼성전자 갤럭시S25 플러스 256GB, 자급제 (네이비) 1,479,990 원 (71몰)"
+              },
+              {
+                "result_index": 6,
+                "relevant": true,
+                "quote": "삼성전자 갤럭시S25 256GB, 공기계 ... 삼성전자 갤럭시S25 256GB, 자급제"
+              },
+              {
+                "result_index": 7,
+                "relevant": true,
+                "quote": "삼성전자 갤럭시S25 256GB, 공기계 ... 대세는 슬림 갤럭시S25 엣지"
+              },
+              {
+                "result_index": 8,
+                "relevant": true,
+                "quote": "삼성전자 갤럭시S25 256GB, 공기계"
+              },
+              {
+                "result_index": 9,
+                "relevant": true,
+                "quote": "LG유플러스(www.lguplus.com)가 사전예약 고객을 대상으로 삼성전자 플래그십 스마트폰 갤럭시 S25 시리즈의 개통을 시작한다."
+              }
+            ]
+          },
+          "search_metrics": {
+            "raw_result_count": 10,
+            "canonical_result_count": 10,
+            "relevant_result_count": 10,
+            "relevant_site_count": 4,
+            "relevant_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "relevance_ratio": 1.0,
+            "duplicate_ratio": 0.0,
+            "known_dominant_ratio": 0.0,
+            "site_concentration": 0.5,
+            "organic_opportunity": 20.0
+          },
+          "scope": "full_keyword",
+          "target_keyword": "갤럭시S25",
+          "matches": [
+            {
+              "result_index": 0,
+              "quote": "갤럭시 S25/S25+/S25 Ultra, 사양(스펙) 및 기능이 궁금합니다."
+            },
+            {
+              "result_index": 2,
+              "quote": "제품 세부 사양 (국내 출시 기준)"
+            }
+          ]
+        },
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-08T00:00:44.218807+00:00",
+          "input_sha256": "57fef88b622afa42a01c5531340b37eb583f95886596aab6c4e3b21f6e3b4ced",
+          "review": {
+            "scope": "narrower_query",
+            "target_keyword": "갤럭시S25",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "스 펙 디자인 갤럭시 S25 자급제/통신사폰 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) 갤럭시 S25+ 자급제/통신사폰 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) 색상 아이스블루 네이비 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 네이비 아이스블루 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 상세 스펙 갤럭시 S25 자급제/통신사폰 (256 GB) 갤럭시 S25 자급제/통신사폰 (512 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25+ 자급제/통신사폰 (256 GB) 갤럭시 S25+ 자급제/통신사폰 (512 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25 자급제/통신사폰 (256 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 ",
+                "entity": "갤럭시 S25 자급제/통신사폰 (256 GB)",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "갤럭시S25의 주요 성능과 화면 사양은 무엇인가?",
+                "answer": "CPU는 4.47GHz·3.5GHz 옥타코어이며 화면은 156.4mm FHD+ Dynamic AMOLED 2X, 최대 120Hz다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "스 펙 디자인 갤럭시 S25 자급제/통신사폰 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) 갤럭시 S25+ 자급제/통신사폰 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) 색상 아이스블루 네이비 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 네이비 아이스블루 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 상세 스펙 갤럭시 S25 자급제/통신사폰 (256 GB) 갤럭시 S25 자급제/통신사폰 (512 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25+ 자급제/통신사폰 (256 GB) 갤럭시 S25+ 자급제/통신사폰 (512 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25 자급제/통신사폰 (256 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 "
+              },
+              {
+                "facet": "카메라와 줌은 어떤 기능을 지원하는가?",
+                "answer": "후면은 50·10·12MP이며 3배 광학 줌, 광학 줌 수준의 2배 줌, 최대 30배 디지털 줌을 지원한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "스 펙 디자인 갤럭시 S25 자급제/통신사폰 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) 갤럭시 S25+ 자급제/통신사폰 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) 색상 아이스블루 네이비 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 네이비 아이스블루 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 상세 스펙 갤럭시 S25 자급제/통신사폰 (256 GB) 갤럭시 S25 자급제/통신사폰 (512 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25+ 자급제/통신사폰 (256 GB) 갤럭시 S25+ 자급제/통신사폰 (512 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25 자급제/통신사폰 (256 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 "
+              },
+              {
+                "facet": "256GB 모델의 메모리와 실제 사용 가능 저장공간은 얼마인가?",
+                "answer": "메모리는 12GB이며 256GB 모델의 표기된 사용 가능 저장공간은 226.8GB다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "iple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 MP 전면 카메라 - 조리개 값 F2.2 전면 카메라 - 오토 포커스 예 동영상 녹화 해상도 UHD 8K (7680 x 4320) | @30fps 슬로우 모션 240fps @FHD,120fps @FHD,120fps @UHD 메모리/스토리지 (저장 용량) 메모리 (GB) 12 GB 스토리지(저장 용량) (GB) 256 GB 사용 가능한 스토리지(저장 용량) (GB) 226.8 GB 네트워크 SIM 개수 Dual-SIM SIM 슬롯 타입 SIM 1 + eSIM / Dual eSIM 인프라 2G GSM,3G WCDMA,4G LTE FDD,4G LTE TDD,5G Sub6 FDD,5G Sub6 TDD 네트워크(S/W 사용) 2G GSM GSM850,GSM900,DCS1800,PCS1900 3G UMTS B1(2100),B2(1900),B4(AWS),B5(850),B8(900) 4G FDD LTE B1(2100),B2(1900),B3(1800),B4(AWS),B5(850),B7(2600),B8(900),B12(700),B13(700),B17(700),B18(800),B19(800),B20(800),B25(1900),B26(850),B28(700),B66(AWS-3) 4G TDD LTE B38(2600),B39(1900),B40(2300),B41(2500) 5G FDD Sub6 N1(2100),N2(1900),N3(1800),N5(850),N7(2600),N8(900),N12(700),N20(800),N25(1900),N26(850"
+              },
+              {
+                "facet": "512GB 모델의 실제 사용 가능 저장공간은 얼마인가?",
+                "answer": "512GB 모델의 표기된 사용 가능 저장공간은 481.7GB다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "z CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 MP 전면 카메라 - 조리개 값 F2.2 전면 카메라 - 오토 포커스 예 동영상 녹화 해상도 UHD 8K (7680 x 4320) | @30fps 슬로우 모션 240fps @FHD,120fps @FHD,120fps @UHD 메모리/스토리지 (저장 용량) 메모리 (GB) 12 GB 스토리지(저장 용량) (GB) 512 GB 사용 가능한 스토리지(저장 용량) (GB) 481.7 GB 네트워크 SIM 개수 Dual-SIM SIM 슬롯 타입 SIM 1 + eSIM / Dual eSIM 인프라 2G GSM,3G WCDMA,4G LTE FDD,4G LTE TDD,5G Sub6 FDD,5G Sub6 TDD 네트워크(S/W 사용) 2G GSM GSM850,GSM900,DCS1800,PCS1900 3G UMTS B1(2100),B2(1900),B4(AWS),B5(850),B8(900) 4G FDD LTE B1(2100),B2(1900),B3(1800),B4(AWS),B5(850),B7(2600)"
+              },
+              {
+                "facet": "SIM 구성과 이동통신 규격은 무엇인가?",
+                "answer": "SIM 1+eSIM 또는 Dual eSIM 구성이며 2G·3G·4G LTE·5G Sub6를 지원한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "iple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 MP 전면 카메라 - 조리개 값 F2.2 전면 카메라 - 오토 포커스 예 동영상 녹화 해상도 UHD 8K (7680 x 4320) | @30fps 슬로우 모션 240fps @FHD,120fps @FHD,120fps @UHD 메모리/스토리지 (저장 용량) 메모리 (GB) 12 GB 스토리지(저장 용량) (GB) 256 GB 사용 가능한 스토리지(저장 용량) (GB) 226.8 GB 네트워크 SIM 개수 Dual-SIM SIM 슬롯 타입 SIM 1 + eSIM / Dual eSIM 인프라 2G GSM,3G WCDMA,4G LTE FDD,4G LTE TDD,5G Sub6 FDD,5G Sub6 TDD 네트워크(S/W 사용) 2G GSM GSM850,GSM900,DCS1800,PCS1900 3G UMTS B1(2100),B2(1900),B4(AWS),B5(850),B8(900) 4G FDD LTE B1(2100),B2(1900),B3(1800),B4(AWS),B5(850),B7(2600),B8(900),B12(700),B13(700),B17(700),B18(800),B19(800),B20(800),B25(1900),B26(850),B28(700),B66(AWS-3) 4G TDD LTE B38(2600),B39(1900),B40(2300),B41(2500) 5G FDD Sub6 N1(2100),N2(1900),N3(1800),N5(850),N7(2600),N8(900),N12(700),N20(800),N25(1900),N26(850"
+              },
+              {
+                "facet": "유무선 연결 규격과 지원 여부는 무엇인가?",
+                "answer": "USB 3.2 Gen 1 Type-C, Wi-Fi a/b/g/n/ac/ax/be, Bluetooth 5.4, NFC를 지원하며 UWB·MHL은 미지원이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "4G TDD LTE B38(2600),B39(1900),B40(2300),B41(2500) 5G FDD Sub6 N1(2100),N2(1900),N3(1800),N5(850),N7(2600),N8(900),N12(700),N20(800),N25(1900),N26(850),N28(700),N66(AWS-3) 5G TDD Sub6 N38(2600),N40(2300),N41(2500),N77(3700),N78(3500) 연결 USB 인터페이스 USB Type-C USB 버전 USB 3.2 Gen 1 위치 기술 GPS,Glonass,Beidou,Galileo,QZSS 이어잭 USB Type-C MHL 아니오 Wi-Fi 802.11a/b/g/n/ac/ax/be 2.4GHz+5GHz+6GHz, EHT320, MIMO, 4096-QAM Wi-Fi Direct 예 블루투스 버전 Bluetooth v5.4 NFC 예 UWB (Ultra-Wideband) 아니오 PC 싱크 Smart Switch (PC version) 운영체제 Android 기본 사양 색상 아이스블루 형태 터치 바 센서 가속도 센서,기압 센서,지문 센서,자이로 센서,지자기 센서,홀 센서,조도 센서,근접 센서 외관 사양 크기(세로x가로x두께, mm) 146.9 x 70.5 x 7.2 무게(g) 162 배터리 비디오 재생 시간(Hours) 최대 29 배터리 용량(mAh, Typical) 4000 교체 가능 아니오 오디오/비디오 스테레오 지원 예 동영상 지원 포맷 MP4,M4V,3GP,3G2,AVI,FLV,MKV,WEBM 동영상 지원 해상도 UHD 8K (7680 x 4320) | @60fps 오디오 지원 포맷 MP3,M4A,3GA,AAC,OGG,OGA,WAV,AMR,AWB,FLAC,MID,MIDI,XMF,MXMF,IMY,RTTTL,RTX,"
+              },
+              {
+                "facet": "주변기기와 연동 기능은 무엇을 지원하는가?",
+                "answer": "명시된 갤럭시 링·버즈·핏·워치 제품과 삼성 덱스, ASHA 보청기 스트리밍, SmartThings를 지원한다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": ",3GP,3G2,AVI,FLV,MKV,WEBM 동영상 지원 해상도 UHD 8K (7680 x 4320) | @60fps 오디오 지원 포맷 MP3,M4A,3GA,AAC,OGG,OGA,WAV,AMR,AWB,FLAC,MID,MIDI,XMF,MXMF,IMY,RTTTL,RTX,OTA,DFF,DSF,APE 서비스 Gear 서포트 갤럭시 링,갤럭시 버즈3 프로,갤럭시 버즈2 프로,갤럭시 버즈 프로,갤럭시 버즈 라이브,갤럭시 버즈+,갤럭시 버즈3,갤럭시 버즈2,갤럭시 버즈,갤럭시 버즈 FE,갤럭시 핏3,갤럭시 핏2,갤럭시 핏e,갤럭시 핏,갤럭시 워치 FE,갤럭시 워치 울트라,갤럭시 워치7,갤럭시 워치6,갤럭시 워치5,갤럭시 워치4,갤럭시 워치3,갤럭시 워치,갤럭시 워치 액티브2,갤럭시 워치 액티브 삼성 덱스 서포트 지원 모바일 TV 아니오 블루투스 보청기 지원 보청기용 안드로이드 오디오 스트리밍 프로토콜(ASHA) SmartThings 지원 지원 상품 기본 정보 제품명 5G NR 이동통신용 무선설비의 기기(3.5 GHz)(육상이동국의 송수신장치) 제조자/수입자 삼성전자㈜ 제조국가 한국, 베트남 KC 인증 필 유무 R-C-SEC-SMS931 동일모델의 출시년월 25년 1월 A/S 책임자와 전화번호 삼성전자서비스센터/1588-3366 품질보증기준 결함·하자 등에 따른 소비자 피해에 대해서는 소비자분쟁해결기준(소비자기본법 제16조)에 따라 보상 가능 갤럭시 S25 자급제/통신사폰 (512 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대"
+              },
+              {
+                "facet": "갤럭시S25의 구매 가격과 판매 선택지는 무엇인가?",
+                "answer": "검색결과에 가격·구매 수요가 확인되지만 공식 인용은 제품 구분만 제공한다. 사양 중심 기획은 전체 검색어보다 좁다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "스 펙 디자인 갤럭시 S25 자급제/통신사폰 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) 갤럭시 S25+ 자급제/통신사폰 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) 색상 아이스블루 네이비 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 네이비 아이스블루 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 상세 스펙 갤럭시 S25 자급제/통신사폰 (256 GB) 갤럭시 S25 자급제/통신사폰 (512 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25+ 자급제/통신사폰 (256 GB) 갤럭시 S25+ 자급제/통신사폰 (512 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25 자급제/통신사폰 (256 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 "
+              }
+            ],
+            "current_relevance": {
+              "kind": "evergreen",
+              "source_index": 0,
+              "quote": "스 펙 디자인 갤럭시 S25 자급제/통신사폰 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) 갤럭시 S25+ 자급제/통신사폰 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) 색상 아이스블루 네이비 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 네이비 아이스블루 실버 쉐도우 민트 블루블랙 코랄레드 핑크골드 상세 스펙 갤럭시 S25 자급제/통신사폰 (256 GB) 갤럭시 S25 자급제/통신사폰 (512 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25+ 자급제/통신사폰 (256 GB) 갤럭시 S25+ 자급제/통신사폰 (512 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (256 GB) 갤럭시 S25+ 자급제 (삼성닷컴/삼성 강남 전용컬러) (512 GB) 갤럭시 S25 자급제/통신사폰 (256 GB) 프로세서 CPU 속도 4.47GHz,3.5GHz CPU 종류 Octa-Core 디스플레이 크기 (Main Display) 156.4mm 해상도 (Main Display) 2340 x 1080 (FHD+) 종류 (Main Display) Dynamic AMOLED 2X 색심도 (Main Display) 16M 최대 주사율 (Main Display) 120 Hz 카메라 후면 카메라 - 화소 (Multiple) 50.0 MP + 10.0 MP + 12.0 MP 후면 카메라 - 조리개 값 (Multiple) F1.8, F2.4, F2.2 후면 카메라 - 오토 포커스 예 후면 카메라 - OIS 예 후면 카메라 - 줌 3배 광학 줌, 광학 줌 수준의 2배 줌(적응형 픽셀 센서 활용), 최대 30배 디지털 줌 후면 카메라 - 플래쉬 예 전면 카메라 - 화소 12.0 ",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score": 53.93,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ]
+      }
+    ],
     "rejected": [
       {
-        "keyword": "삼성닷컴",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "low_search_relevance"
-        ],
-        "monthly_search": 293300,
-        "organic_provider": "codex_native_search",
-        "organic_query": "삼성닷컴",
-        "organic_results": [
-          {
-            "url": "https://www.samsungcard.com/",
-            "domain": "www.samsungcard.com",
-            "title": "삼성카드",
-            "snippet": "* 쓰면 쓸수록 혜택이 플러스트라이플러스 삼성카드 해피오더/F&B/hy 정기결제20% 할인아모레 10% 뷰티포인트 적립 ... 금토일엔 할인이 2배 우리의 주말은 금요일부터삼성 iD SELECT ON 카드 ... 연회비"
-          },
-          {
-            "url": "https://biz.samsungcard.com/home/card/cardinfo/PGHPPDCCardCardinfoRecommendPC001?webViewFirstPage=true",
-            "domain": "biz.samsungcard.com",
-            "title": "추천 카드안내_삼성카드",
-            "snippet": "삼성카드 & MILEAGE PLATINUM (스카이패스) 1,000원당 스카이패스 1 마일리지 적립1,000원당 스카이패스 1 마일리지 추가 적립 ... 국내 온라인 가맹점 2~3개월 무이자할부 ... 편의점/배달앱/대중교통/택시/주유 3% 빅포인트"
-          },
-          {
-            "url": "https://pf.kakao.com/_JwRdu",
-            "domain": "pf.kakao.com",
-            "title": "카카오톡채널 - 삼성닷컴",
-            "snippet": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
-          },
-          {
-            "url": "https://www.samsung.com/sec/eventList/creditcard_benefit/?msockid=2359f254467c69a9280ae40e477e68c1",
-            "domain": "www.samsung.com",
-            "title": "삼성닷컴 카드사 혜택",
-            "snippet": "## 삼성닷컴 카드사 혜택 ... 제품별 별도의 결제일 할인 및 무이자 할부 혜택이 적용됩니다. ... ※ 본 페이지의 카드사 공통혜택과 개별 제품페이지의 혜택 내용이 다른"
-          },
-          {
-            "url": "https://pf.kakao.com/_JwRdu/85704821",
-            "domain": "pf.kakao.com",
-            "title": "카카오톡채널 - 삼성닷컴",
-            "snippet": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
-          },
-          {
-            "url": "https://www.samsung.com/sec/eventList/benefitzone/",
-            "domain": "www.samsung.com",
-            "title": "삼성닷컴 회원 혜택 l Samsung 대한민국",
-            "snippet": "## 삼성닷컴 회원 혜택 ... 동일한 삼성전자멤버십 ID로 동일한 날짜에 한 개의 판매전표로 동시구매 시,"
-          },
-          {
-            "url": "https://www.samsungstore.com/shop/selectFindShopMain.sesc",
-            "domain": "www.samsungstore.com",
-            "title": "SAMSUNG 삼성전자판매",
-            "snippet": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... GPS 수신이 불안정하여 정상적으로 현재 위치를 확인할 수 없습니다.단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요."
-          },
-          {
-            "url": "https://www.samsungstore.com/shop/selectFindShopMain.sesc?menu=w401",
-            "domain": "www.samsungstore.com",
-            "title": "매장찾기 | 매장안내 | SAMSUNG 삼성전자판매",
-            "snippet": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... * * * * 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포"
-          },
-          {
-            "url": "https://samsungstore.com/shop/selectFindShopMain.sesc",
-            "domain": "samsungstore.com",
-            "title": "SAMSUNG 삼성전자판매",
-            "snippet": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... 단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요. ... * 경기도 성남시 분당구 황새울로311번길 28 (서현동)"
-          },
-          {
-            "url": "https://www.namu.moe/w/%EC%82%BC%EC%84%B1%EB%8B%B7%EC%BB%B4",
-            "domain": "www.namu.moe",
-            "title": "삼성닷컴",
-            "snippet": "매장 | 삼성닷컴 | 삼성스토어 | 갤럭시 캠퍼스 | 삼성 킹스크로스 | 갤럭시 하라주쿠 ... 자회사 | 세메스 | 삼성메디슨 | 하만 | 삼성전자로지텍 |"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "삼성닷컴",
-          "executed_query": "삼성닷컴",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-05T09:00:57.597349+00:00",
-          "raw_sha256": "ebcb1a3c2d4ffdd64c2dc763b850a96097523b77faf01097dd4d4aede122e8f6",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "* 쓰면 쓸수록 혜택이 플러스트라이플러스 삼성카드 해피오더/F&B/hy 정기결제20% 할인아모레 10% 뷰티포인트 적립 ... 금토일엔 할인이 2배 우리의 주말은 금요일부터삼성 iD SELECT ON 카드 ... 연회비"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "삼성카드 & MILEAGE PLATINUM (스카이패스) 1,000원당 스카이패스 1 마일리지 적립1,000원당 스카이패스 1 마일리지 추가 적립 ... 국내 온라인 가맹점 2~3개월 무이자할부 ... 편의점/배달앱/대중교통/택시/주유 3% 빅포인트"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "## 삼성닷컴 카드사 혜택 ... 제품별 별도의 결제일 할인 및 무이자 할부 혜택이 적용됩니다. ... ※ 본 페이지의 카드사 공통혜택과 개별 제품페이지의 혜택 내용이 다른"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "## Image: 프로필이미지 삼성닷컴 공식채널 ... 삼성닷컴만의 소식을 지금 바로 만나보세요."
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "## 삼성닷컴 회원 혜택 ... 동일한 삼성전자멤버십 ID로 동일한 날짜에 한 개의 판매전표로 동시구매 시,"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... GPS 수신이 불안정하여 정상적으로 현재 위치를 확인할 수 없습니다.단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요."
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "매장찾기 | 매장안내 | SAMSUNG 삼성전자판매"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "* ### 삼성닷컴삼성전자 제품의 액세서리를 온라인에서 편리하게 구매하실 수 있습니다. ... 단말기 설정에서 \"위치 서비스\" 설정을 확인해주세요. ... * 경기도 성남시 분당구 황새울로311번길 28 (서현동)"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "매장 | 삼성닷컴 | 삼성스토어 | 갤럭시 캠퍼스 | 삼성 킹스크로스 | 갤럭시 하라주쿠 ... 자회사 | 세메스 | 삼성메디슨 | 하만 | 삼성전자로지텍 |"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "아이폰17",
+        "keyword": "인터넷속도측정",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://support.apple.com/ko-kr/125089",
-              "title": "iPhone 17 - 기술 사양 - Apple 지원 (KR)",
-              "excerpt_chars": 8000
+              "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+              "title": "기업정보 내용 | 비즈오케이>기업정보",
+              "excerpt_chars": 339
             },
             {
-              "url": "https://images.apple.com/kr/iphone-17/",
-              "title": "iPhone 17 - Apple (KR)",
-              "excerpt_chars": 8000
+              "url": "https://www.incheon.go.kr/jobs/main/ic_cmpy/cmpy/list.do",
+              "title": "일자리플랫폼 - 인천기업관 - 인천기업검색",
+              "excerpt_chars": 1854
             },
             {
-              "url": "https://apps.apple.com/kr/app/%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%ED%99%88/id1629564686",
-              "title": "‎아이파크홈 앱 - App Store",
-              "excerpt_chars": 7925
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "category_mismatch"
-          }
-        }
-      },
-      {
-        "keyword": "세탁기건조기",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1408106354&cntType=O",
-              "title": "(주)세기",
-              "excerpt_chars": 5655
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "category_mismatch"
-          }
-        }
-      },
-      {
-        "keyword": "컴퓨터포맷하는법",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "low_search_relevance"
-        ],
-        "monthly_search": 3940,
-        "organic_provider": "codex_native_search",
-        "organic_query": "컴퓨터 포맷하는 법",
-        "organic_results": [
-          {
-            "url": "https://www.onkorea.co.kr/plus/digitalinfo/573",
-            "domain": "www.onkorea.co.kr",
-            "title": "컴퓨터 본체를 팔려고 하는데 포맷하는 방법이 궁금해요. 어떻게 하면 될까요? | 온코리아",
-            "snippet": "# 컴퓨터 본체를 팔려고 하는데 포맷하는 방법이 궁금해요. ... 포맷은 하드 드라이브의 모든 데이터를 지우므로, ... 포맷을 시작하려면, 먼저 운영 체제 설치 미디어가 필요합니다. ..."
-          },
-          {
-            "url": "https://law.go.kr/LSW/lsInfoP.do?lsiSeq=54504",
-            "domain": "law.go.kr",
-            "title": "법령 > 본문 > 컴퓨터프로그램보호법 | 국가법령정보센터",
-            "snippet": "특정한 컴퓨터외에는 사용할 수 없는 프로그램을 다른 컴퓨터에 사용할 수 있도록 하기 위하여 필요한 범위안에서의 변경 ... * [Input] 제18조 (프로그램저작권자가 불명인 프로그램의 사용) ①프로그램을"
-          },
-          {
-            "url": "https://jwiseflow.com/computer-format-windows-mac-guide/",
-            "domain": "jwiseflow.com",
-            "title": "컴퓨터 포맷하는 법 2026 : 윈도우·맥 백업 초기화 총정리 | JLOGUE",
-            "snippet": "컴퓨터 포맷하는 법은 단순히 “초기화 버튼을 누르는 일”이 아니라, 중요한 파일을 먼저 백업하고 운영체제에 맞는 초기화 방식을 선택한 뒤 다시 복원하는 과정입니다. ... 포맷 전"
-          },
-          {
-            "url": "https://shiningsense.com/3773",
-            "domain": "shiningsense.com",
-            "title": "컴퓨터 포맷 하는 법, 윈도우 초기화 완벽 가이드 (윈도우10/11 기준)",
-            "snippet": "윈도우 설치 USB로 포맷하는 법 (정상 부팅 불가 시) ... 컴퓨터 포맷이란 하드디스크나 SSD에 저장된 모든 데이터를 삭제하고, 윈도우 운영체제를 새로 설치하는 작업을 의미합니다.불필요하게 쌓인"
-          },
-          {
-            "url": "https://www.sony.co.kr/electronics/support/memory-cards-memory-stick/msh-128/articles/S500080088",
-            "domain": "www.sony.co.kr",
-            "title": "메모리스틱 포맷하는 방법 | Sony KR",
-            "snippet": "# 메모리스틱 포맷하는 방법 ... 모든 메모리스틱은 공장에서 출하되기 전에 최적의 상태로 포맷(초기화)되어 있습니다. ... * 내 컴퓨터 메뉴에 있는 일반 윈도즈 포맷 툴을 사용하여"
-          },
-          {
-            "url": "https://www.coffeeforte.com/service/cs",
-            "domain": "www.coffeeforte.com",
-            "title": "포르테커피 포모나 공식 쇼핑몰",
-            "snippet": "[A]포머니는 계속 운영되며, 카파로쇼핑몰이 폐쇄되면서 쇼핑몰 적립금이 소멸됩니다. ... [A] 홈페이지 > 로그인 >마이페이지 > 회원정보에서 수정이 가능합니다. 회원정보는 배송 및 이벤트 제공의 기초자료가 되기"
-          },
-          {
-            "url": "https://www.keyzard.cc/queen0326/nb/224271483862",
-            "domain": "www.keyzard.cc",
-            "title": "컴퓨터 포맷하는 법 - 윈도우 초기화부터 블루스크린 해결까지 한번에",
-            "snippet": "컴퓨터가 갑자기 느려지거나, 파란 화면이 뜨거나, 이상한 오류가 반복된다면 포맷을 고민하게 되죠? ... 컴퓨터 포맷은 저장장치의 데이터를 모두 지우고 운영체제를 새로 설치하는 과정입니다. ... 원문링크"
-          },
-          {
-            "url": "https://www.hankyung.com/article/1996082902231",
-            "domain": "www.hankyung.com",
-            "title": "디스켓 다루기 .. 포맷하는 법 | 한국경제",
-            "snippet": "'포맷하는 법' ... 구글 검색 선호 출처로 추가 ... 더욱이 멀티미디어 시대에 이르러서는 파일의 단위가 매우 커져 디스켓한 장에 담을수 있는 데이터의 종류도 점점 적어져"
-          },
-          {
-            "url": "https://marketplace.coupang.com/information-center/blog-news7",
-            "domain": "marketplace.coupang.com",
-            "title": "판매 불가 품목 안내",
-            "snippet": "\"모의 총포\"란, 금속 또는 금속 외의 소재로 만들어 모양이 총포와 아주 비슷한 것으로 범죄에 악용될 소지가 있거나 인명·신체상의 위해를 가할 우려가 있는 것 ... -"
-          },
-          {
-            "url": "https://www.onkorea.co.kr/plus/digitalinfo/3606",
-            "domain": "www.onkorea.co.kr",
-            "title": "컴퓨터 성능이 떨어져서 포맷하려고 하는데, 포맷하는 절차가 어떻게 되는지 궁금해요. | 온코리아",
-            "snippet": "# 컴퓨터 성능이 떨어져서 포맷하려고 하는데, 포맷하는 절차가 어떻게 되는지 궁금해요. ... 포맷을 진행하면 모든 파일과 프로그램이 삭제되므로, USB 드라이브나 외장 하드 디스크에 필요한 파일들을"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "컴퓨터포맷하는법",
-          "executed_query": "컴퓨터 포맷하는 법",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-05T09:00:57.597349+00:00",
-          "raw_sha256": "682a2acb3f0d30fa6b4b25d5b80a4c8146f214132faa9804286888ceca0f1387",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "# 컴퓨터 본체를 팔려고 하는데 포맷하는 방법이 궁금해요. ... 포맷은 하드 드라이브의 모든 데이터를 지우므로, ... 포맷을 시작하려면, 먼저 운영 체제 설치 미디어가 필요합니다. ..."
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "법령 > 본문 > 컴퓨터프로그램보호법 | 국가법령정보센터"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "컴퓨터 포맷하는 법은 단순히 “초기화 버튼을 누르는 일”이 아니라, 중요한 파일을 먼저 백업하고 운영체제에 맞는 초기화 방식을 선택한 뒤 다시 복원하는 과정입니다. ... 포맷 전"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "컴퓨터 포맷 하는 법, 윈도우 초기화 완벽 가이드 (윈도우10/11 기준)"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "메모리스틱 포맷하는 방법 | Sony KR"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "포르테커피 포모나 공식 쇼핑몰"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "컴퓨터 포맷하는 법 - 윈도우 초기화부터 블루스크린 해결까지 한번에"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "디스켓 다루기 .. 포맷하는 법 | 한국경제"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "\"모의 총포\"란, 금속 또는 금속 외의 소재로 만들어 모양이 총포와 아주 비슷한 것으로 범죄에 악용될 소지가 있거나 인명·신체상의 위해를 가할 우려가 있는 것 ... -"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "# 컴퓨터 성능이 떨어져서 포맷하려고 하는데, 포맷하는 절차가 어떻게 되는지 궁금해요. ... 포맷을 진행하면 모든 파일과 프로그램이 삭제되므로, USB 드라이브나 외장 하드 디스크에 필요한 파일들을"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "와이파이설치",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://news.seoul.go.kr/gov/archives/516134",
-              "title": "서울 무료 와이파이 SEOUL_Secure 마음껏 이용하세요! < 행정 | 서울특별시",
-              "excerpt_chars": 2632
-            },
-            {
-              "url": "https://www.data.go.kr/data/15155062/openapi.do",
-              "title": "행정안전부_무료와이파이정보 조회서비스 | 공공데이터포털",
-              "excerpt_chars": 2814
-            },
-            {
-              "url": "https://www.data.go.kr/data/15104461/fileData.do?recommendDataYn=Y",
-              "title": "인천광역시_공공시설 공공와이파이 설치현황_20260831 | 공공데이터포털",
-              "excerpt_chars": 4458
+              "url": "https://www.incheon.go.kr/eco/ECO010606",
+              "title": "홈>인천경제>산업단지>일반산업단지>송도지식정보산업단지\r\n\t\t |\r\n\t\t경제·투자",
+              "excerpt_chars": 2258
             }
           ],
           "analysis_status": "supported_false",
@@ -18079,19 +18172,19 @@
             "initial_review": {
               "official_sources": [
                 {
-                  "url": "https://news.seoul.go.kr/gov/archives/516134",
-                  "title": "서울 무료 와이파이 SEOUL_Secure 마음껏 이용하세요! < 행정 | 서울특별시",
-                  "excerpt_chars": 2632
+                  "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+                  "title": "기업정보 내용 | 비즈오케이>기업정보",
+                  "excerpt_chars": 339
                 },
                 {
-                  "url": "https://www.data.go.kr/data/15155062/openapi.do",
-                  "title": "행정안전부_무료와이파이정보 조회서비스 | 공공데이터포털",
-                  "excerpt_chars": 2814
+                  "url": "https://www.incheon.go.kr/jobs/main/ic_cmpy/cmpy/list.do",
+                  "title": "일자리플랫폼 - 인천기업관 - 인천기업검색",
+                  "excerpt_chars": 1854
                 },
                 {
-                  "url": "https://www.data.go.kr/data/15104461/fileData.do?recommendDataYn=Y",
-                  "title": "인천광역시_공공시설 공공와이파이 설치현황_20260831 | 공공데이터포털",
-                  "excerpt_chars": 4458
+                  "url": "https://www.incheon.go.kr/eco/ECO010606",
+                  "title": "홈>인천경제>산업단지>일반산업단지>송도지식정보산업단지\r\n\t\t |\r\n\t\t경제·투자",
+                  "excerpt_chars": 2258
                 }
               ],
               "analysis_status": "supported_false",
@@ -18105,496 +18198,228 @@
         }
       },
       {
-        "keyword": "노트북초기화",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "concentrated_search_results"
-        ],
-        "monthly_search": 1870,
-        "organic_provider": "codex_native_search",
-        "organic_query": "노트북 초기화",
-        "organic_results": [
-          {
-            "url": "https://macbeomki.com/guide/laptop-factory-reset",
-            "domain": "macbeomki.com",
-            "title": "노트북 초기화 ― 삼성 F4·LG F11 공장 초기화와 안 될 때 | macbeomki",
-            "snippet": "삼성·LG는 Windows 11로 업그레이드한 노트북을 공장 초기화하면 Windows 10으로 돌아간다고 안내합니다. ... 출고 당시 Windows 10이었던 노트북은 Windows 11로 업그레이드했더라도 제조사 복구로 초기화하면 Windows 10으로"
-          },
-          {
-            "url": "https://support.hp.com/kr-ko/document/c08231962",
-            "domain": "support.hp.com",
-            "title": "HP 상업용 노트북 및 데스크탑 PC - 클라우드 복구 도구를 여는 동안 \"초기화 중 오류\" 오류가 표시됨 | HP® 지원",
-            "snippet": "# HP 상업용 노트북 및 데스크탑 PC - 클라우드 복구 도구를 여는 동안 \"초기화 중 오류\" 오류가 표시됨 ... * HP Elite Dragonfly 13.5인치 G3"
-          },
-          {
-            "url": "https://thebestinformation.co.kr/%EC%A0%95%EB%B3%B4/%EA%B0%91%EC%9E%90%EA%B8%B0-%EB%8A%90%EB%A0%A4%EC%A7%84-%EB%82%B4-%EB%85%B8%ED%8A%B8%EB%B6%81-%ED%8F%AC%EB%A7%B7-%EB%8C%80%EC%8B%A0-%EC%9C%88%EB%8F%84%EC%9A%B011-%EC%B4%88%EA%B8%B0%ED%99%94%EB%A1%9C/",
-            "domain": "thebestinformation.co.kr",
-            "title": "갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는 초간단 방법 - 도움정보",
-            "snippet": "# 갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는 초간단 방법 ... * 갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는"
-          },
-          {
-            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/X202E/K7620_eManual_S200E.pdf?model=F201E",
-            "domain": "dlcdnets.asus.com",
-            "title": "노트북 PC \ne-매뉴얼",
-            "snippet": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
-          },
-          {
-            "url": "https://beoksolution.com/blog/%EB%B0%98%ED%92%88-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85-6%EB%8B%A8%EA%B3%84-%EC%A0%90%EA%B2%80%EB%B6%80%ED%84%B0-%EA%B2%8C%EC%9E%84-%EA%B5%AC%EB%8F%99%EA%B9%8C%EC%A7%80-%EC%B4%9D%EC%A0%95%EB%A6%AC",
-            "domain": "beoksolution.com",
-            "title": "반품 노트북 초기 세팅 6단계: 점검부터 게임 구동까지 총정리 | 비오케이솔루션 · 홍커뮤니케이션 블로그",
-            "snippet": "# 반품 노트북 초기 세팅 6단계: 점검부터 게임 구동까지 총정리 ... 결론 먼저: 반품 노트북은 '점검 → 초기화 → 드라이버 → 발열 확인' 순서가 |"
-          },
-          {
-            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/X550JF/0412.pdf",
-            "domain": "dlcdnets.asus.com",
-            "title": "노트북 PC \ne-매뉴얼",
-            "snippet": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
-          },
-          {
-            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/S451LN/0412_K8134_B.pdf",
-            "domain": "dlcdnets.asus.com",
-            "title": "노트북 컴퓨터 \ne-매뉴얼",
-            "snippet": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 킹퓨터가 플"
-          },
-          {
-            "url": "https://dlcdnets.asus.com/pub/ASUS/nb/N550JX/0412_K7914_A.pdf",
-            "domain": "dlcdnets.asus.com",
-            "title": "노트북 컴퓨터 \ne-매뉴얼",
-            "snippet": "Reset your PC (PC 초기화)를 사용하여 노트북 킹퓨터를 기본 ... 시스템을 초기화하려면 노트북 킹퓨터가"
-          },
-          {
-            "url": "https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2095887",
-            "domain": "kli.korean.go.kr",
-            "title": "내용 보기 | 국립국어원 온용어",
-            "snippet": "조선 시대 관이나 민가에서 일하던 노비가 입던 옷. ... * 이 자료는 국립국어원 개방형 사전 《우리말샘》(2023년 6월 기준)의 전문 용어를 국가과학기술표준분류체계에 따라 분류한 자료입니다. ..."
-          },
-          {
-            "url": "https://dlcdnet.asus.com/pub/ASUS/nb/N751JK/0412_K9333_A.pdf",
-            "domain": "dlcdnet.asus.com",
-            "title": "K9333\n초판 V1\n2014년 7월\n노트북 컴퓨터 \ne-매뉴얼",
-            "snippet": "Reset your PC (PC 초기화)를 사용하여 노트북 컴퓨터를 기본 ... 시스템을 초기화하려면 노트북 컴퓨터가"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "노트북초기화",
-          "executed_query": "노트북 초기화",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-05T09:00:57.597349+00:00",
-          "raw_sha256": "102e94949d834d850f93b3ffaf2fc8cb7ff00011a081fe14f1ab623811c6d1e8",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "노트북 초기화 ― 삼성 F4·LG F11 공장 초기화와 안 될 때 | macbeomki"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "HP 상업용 노트북 및 데스크탑 PC - 클라우드 복구 도구를 여는 동안 \"초기화 중 오류\" 오류가 표시됨 | HP® 지원"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "갑자기 느려진 내 노트북, 포맷 대신 윈도우11 초기화로 새것처럼 되돌리는 초간단 방법 - 도움정보"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "# 반품 노트북 초기 세팅 6단계: 점검부터 게임 구동까지 총정리 ... 결론 먼저: 반품 노트북은 '점검 → 초기화 → 드라이버 → 발열 확인' 순서가 |"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 PC가 플러그"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "PC 초기화 화면에서 글머리 기호 부분을 읽어 이 ... 시스템을 초기화하려면 노트북 킹퓨터가 플"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "Reset your PC (PC 초기화)를 사용하여 노트북 킹퓨터를 기본 ... 시스템을 초기화하려면 노트북 킹퓨터가"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "조선 시대 관이나 민가에서 일하던 노비가 입던 옷. ... * 이 자료는 국립국어원 개방형 사전 《우리말샘》(2023년 6월 기준)의 전문 용어를 국가과학기술표준분류체계에 따라 분류한 자료입니다. ..."
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "Reset your PC (PC 초기화)를 사용하여 노트북 컴퓨터를 기본 ... 시스템을 초기화하려면 노트북 컴퓨터가"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "데이터쉐어링",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "low_search_relevance"
-        ],
-        "monthly_search": 2460,
-        "organic_provider": "codex_native_search",
-        "organic_query": "데이터 쉐어링",
-        "organic_results": [
-          {
-            "url": "https://www.db-detre.co.kr/web/main.do",
-            "domain": "www.db-detre.co.kr",
-            "title": "디에트르",
-            "snippet": "파주 운정신도시7차 디에트르 프리미어 ... 일상에 활력을 불어넣는 공동시설 ... 자연의 여유로움을 담은 단지조경 ... 이곳에서만큼은 자신이 이루고 싶은 미래와 목표를 ... 고객님이신가요?"
-          },
-          {
-            "url": "https://gamjimobile.kr/data-sharing-vs-tethering/",
-            "domain": "gamjimobile.kr",
-            "title": "데이터 쉐어링이란? 테더링과 차이점 쉽게 알아보기 | 감지모바일 | 앤텔레콤 인증 판매점",
-            "snippet": "데이터 쉐어링은 스마트폰이 사용하는 메인 회선의 데이터를 다른 스마트기기와 나누어 사용하는 서비스입니다. ... 데이터 쉐어링은 별도 유심을 등록한 스마트기기가 이동통신망에 직접 연결되는 방식입니다."
-          },
-          {
-            "url": "https://yogo.kt.com/direct/directShare.do",
-            "domain": "yogo.kt.com",
-            "title": "데이터쉐어링가입 | 본사직영 온라인샵 | KT 다이렉트샵",
-            "snippet": "* 신규 가입이 제한된 단종요금제의 경우에는 KT다이렉트에서 데이터쉐어링 온라인 셀프 개통이 불가능하오니, 유심 구매 전 114 고객센터를 통해 확인 후 고객 가까운 KT 플라자로 방문하여"
-          },
-          {
-            "url": "https://apps.apple.com/kr/app/%EB%8B%A4%EC%9D%B4%ED%8A%B8-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8-ai%EC%8B%9D%EB%8B%A8%EA%B8%B0%EB%A1%9D-1-1%EC%98%81%EC%96%91%EC%BD%94%EC%B9%AD-%ED%98%88%EB%8B%B9%EB%B6%84%EC%84%9D/id6450912983",
-            "domain": "apps.apple.com",
-            "title": "‎다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 앱 - App Store",
-            "snippet": "● 혈당관리 - 다이트가 새롭게 선보이는 “혈당관리”기능을 활용해보세요 - 내가 먹은 식단에 대한 혈당을 눈으로 확인하고 효과적인 관리를 할 수 있어요 ● 분석 - 식단,"
-          },
-          {
-            "url": "https://play.google.com/store/apps/details?hl=ko&id=kr.co.wedaeat.app.aos",
-            "domain": "play.google.com",
-            "title": "다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 - Google Play 앱",
-            "snippet": "- 오늘 먹은 식단의 영양정보를 간편하게 분석해보세요. ... 데이터 개인 정보 보호 및 보안 관행은 사용자의 앱 사용, 지역, 연령에 따라 다를 수 있습니다. ..."
-          },
-          {
-            "url": "https://www.newsis.com/view/NISX20190201_0000548430",
-            "domain": "www.newsis.com",
-            "title": "데이터 쉐어링과 테더링, 어떻게 다를까? :: 공감언론 뉴시스 ::",
-            "snippet": "6일 LG유플러스에 따르면 '데이터 쉐어링'과 '데이터 테더링'은 스마트폰의 데이터를 가져다가 태블릿이나 노트북에서 사용할 수 있다는 공통점이 있다. ... 데이터 쉐어링을 할 단말기에 전용 USIM을 꽂고"
-          },
-          {
-            "url": "https://play.google.com/store/apps/details?hl=ko&id=kr.co.dartapp",
-            "domain": "play.google.com",
-            "title": "다트(DART) - 전동 킥보드 공유 서비스 - Google Play 앱",
-            "snippet": "이 같은 대중교통의 틈새를 매울 수 있는 마이크로 모빌리티 쉐어링 서비스 DART. ... 다트쉐어링(주) 대한민국 서울특별시 강남구 ... 데이터 개인 정보 보호 및 보안 관행은"
-          },
-          {
-            "url": "https://www.db-detre.co.kr/web/intrcomp/retrieveList.do?sale_type=all",
-            "domain": "www.db-detre.co.kr",
-            "title": "디에트르",
-            "snippet": "분양중, 분양예정 단지 정보를 알려드립니다. ... 오픈예정 ... ## 분양가/임대가"
-          },
-          {
-            "url": "https://apps.apple.com/kr/app/%EB%8B%A5%ED%84%B0%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%EB%8F%88%EB%B2%84%EB%8A%94-%ED%98%88%EB%8B%B9-%EC%8B%9D%EB%8B%A8-%EC%B2%B4%EC%A4%91-%EB%A7%8C%EB%B3%B4%EA%B8%B0-%EC%95%B1/id1156758689",
-            "domain": "apps.apple.com",
-            "title": "‎닥터다이어리 – 돈버는 혈당, 식단, 체중, 만보기 앱 앱 - App Store",
-            "snippet": "혈당뿐만 아니라 식사, 운동, 체중 등 혈당에 영향을 줄 수 있는 다양한 생활 데이터를 함께 관리할 수 있습니다. - 공복 혈당·식후 혈당 등 혈당 기록"
-          },
-          {
-            "url": "https://datatree21.com/",
-            "domain": "datatree21.com",
-            "title": "주식회사 데이터트리 | DATATREE - 데이터 플랫폼 프로바이더",
-            "snippet": "연구과제 소상공인 상권분석 마이데이터사업 공공기관 연구과제 수행 데이터 관련 사업 수행 자세히 보기 유지보수 공공기관 통합유지보수 상주 및 비상주 전문인력 투입 자세히 보기 솔루션 제조품질"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "데이터쉐어링",
-          "executed_query": "데이터 쉐어링",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-05T09:00:57.597349+00:00",
-          "raw_sha256": "8c092c046fb6a4fb6ed9eca20be3525b3494e45c2a251cac5fa823a3a4f0d9a8",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "파주 운정신도시7차 디에트르 프리미어 ... 일상에 활력을 불어넣는 공동시설 ... 자연의 여유로움을 담은 단지조경 ... 이곳에서만큼은 자신이 이루고 싶은 미래와 목표를 ... 고객님이신가요?"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "데이터 쉐어링은 스마트폰이 사용하는 메인 회선의 데이터를 다른 스마트기기와 나누어 사용하는 서비스입니다. ... 데이터 쉐어링은 별도 유심을 등록한 스마트기기가 이동통신망에 직접 연결되는 방식입니다."
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "* 신규 가입이 제한된 단종요금제의 경우에는 KT다이렉트에서 데이터쉐어링 온라인 셀프 개통이 불가능하오니, 유심 구매 전 114 고객센터를 통해 확인 후 고객 가까운 KT 플라자로 방문하여"
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "‎다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 앱 - App Store"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "다이트 - 다이어트 AI식단기록,1:1영양코칭,혈당분석 - Google Play 앱"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "6일 LG유플러스에 따르면 '데이터 쉐어링'과 '데이터 테더링'은 스마트폰의 데이터를 가져다가 태블릿이나 노트북에서 사용할 수 있다는 공통점이 있다. ... 데이터 쉐어링을 할 단말기에 전용 USIM을 꽂고"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "다트(DART) - 전동 킥보드 공유 서비스 - Google Play 앱"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "분양중, 분양예정 단지 정보를 알려드립니다. ... 오픈예정 ... ## 분양가/임대가"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "‎닥터다이어리 – 돈버는 혈당, 식단, 체중, 만보기 앱 앱 - App Store"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "연구과제 소상공인 상권분석 마이데이터사업 공공기관 연구과제 수행 데이터 관련 사업 수행 자세히 보기 유지보수 공공기관 통합유지보수 상주 및 비상주 전문인력 투입 자세히 보기 솔루션 제조품질"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "윈도우10다운로드",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
-        ],
-        "monthly_search": 2360,
-        "organic_provider": "codex_native_search",
-        "organic_query": "윈도우10 다운로드",
-        "organic_results": [
-          {
-            "url": "https://arxiv.org/abs/2301.11963",
-            "domain": "arxiv.org",
-            "title": "On 10 dimensional Exceptional Drinfel'd Algebras",
-            "snippet": "Title: On 10 dimensional Exceptional Drinfel'd Algebras"
-          },
-          {
-            "url": "https://www.kcopa.or.kr/download.do?uuid=0d081ec6-807f-4811-8f81-f7b662c4e294.pdf",
-            "domain": "www.kcopa.or.kr",
-            "title": "- 성원영 전문위원 : 프로그램의 경우에는 상업적 저작물이기 때문에 다름",
-            "snippet": "- 정현순 전문위원 : 마이크로소프트 공식 홈페이지에서 ‘윈도우10’ 업데이트 파일 이외 윈도우 설치파일을 확인하기 어려움 ... - 정현순 전문위원 : 위원님 말씀은 웹하드에 게시된 윈도우10"
-          },
-          {
-            "url": "https://www.wps.com/blog/ko-KR/ko-how-to-download-google-docs-for-pc-win10-and-win11/",
-            "domain": "www.wps.com",
-            "title": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)",
-            "snippet": "# PC용 Google Docs 다운로드 방법 (윈도우 10 & 11) ... Windows 10 및 11에서 Google Docs를 다운로드하는 간단한 가이드를 안내드립니다: ... 이것은 단순히 데스크톱"
-          },
-          {
-            "url": "https://www.hunnytip.kr/%EC%9C%88%EB%8F%84%EC%9A%B010-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-usb-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC/",
-            "domain": "www.hunnytip.kr",
-            "title": "윈도우10 다운로드 usb 만들기 방법 총정리 - 파두남",
-            "snippet": "가장 안전한 윈도우10 다운로드 USB 만들기 방법은 마이크로소프트 공식 소프트웨어 다운로드 페이지를 이용하는 것입니다. ... 윈도우10 공식 다운로드 페이지 바로가기"
-          },
-          {
-            "url": "https://hae-su.tistory.com/m/98",
-            "domain": "hae-su.tistory.com",
-            "title": "원키 고스트 윈도우10 (32비트,64비트) 복원 사용법/다운로드",
-            "snippet": "### 원키 고스트 윈도우10 (32비트,64비트) 복원 사용법/다운로드 ... 위에 원키 고스트 윈도우10 프로그램(32비트,64비트)을 다운로드 받으시고 ... 만약 위의 맨트가 나오고 무한 재부팅이 된다면 포맷 이"
-          },
-          {
-            "url": "https://jumpmap.tistory.com/809",
-            "domain": "jumpmap.tistory.com",
-            "title": "윈도우10, 윈도우7 핀볼 다운로드",
-            "snippet": "# 윈도우10, 윈도우7 핀볼 다운로드 ... 윈도우10과 윈도우7에는 과거의 3D 핀볼이 기본 프로그램으로 들어 있지 않기 때문에, 검색 결과가 비어 있어도 설치가 잘못된 것은 아닙니다."
-          },
-          {
-            "url": "https://wallpapers4screen.com/ko/%EC%BB%B4%ED%93%A8%ED%84%B0/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EB%A1%9C%EA%B3%A0-%EB%82%98%EB%AC%B4-%ED%94%84%EB%A0%88%EC%9E%84-%EC%A0%80%EB%85%81-%EC%9D%BC%EB%AA%B0-%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EC%97%A0%EB%B8%94%EB%9F%BC-90850",
-            "domain": "wallpapers4screen.com",
-            "title": "다운로드 윈도우 10 로고, 나무 프레임, 저녁, 일몰, 윈도우 10 엠블럼, 파란색 windows 10 로고, 윈도우 사인, 윈도우 로고, 윈도우 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림",
-            "snippet": "# 다운로드 윈도우 10 로고, 나무 프레임, 저녁, 일몰, 윈도우 10 엠블럼, 파란색 windows 10 로고, 윈도우 사인, 윈도우 로고, 윈도우 바탕 화면 무료 데스크톱"
-          },
-          {
-            "url": "https://www.corrections.go.kr/sites/corrections/download/ClientManual.pdf",
-            "domain": "www.corrections.go.kr",
-            "title": "PowerPoint 프레젠테이션",
-            "snippet": "- 운영체제가 윈도우 7, 윈도우 10인 경우(공통) ... 목록에서 인터넷화상접견 프로그램 항목이 선택되어 있고, 우클릭 메뉴의 “제거(U)”가 강조되어 있다. ... 법무부 교정보부 홈페이지 ▶ 인터넷서신"
-          },
-          {
-            "url": "https://wallpapers4screen.com/ko/%EC%BB%B4%ED%93%A8%ED%84%B0/%EC%9C%88%EB%8F%84%EC%9A%B0-10-%EB%A1%9C%EA%B3%A0-4k-%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98-%EA%B2%80%EC%9D%80-%EB%B0%B0%EA%B2%BD-%EB%84%A4%EC%98%A8-%EB%A1%9C%EA%B3%A0-38769",
-            "domain": "wallpapers4screen.com",
-            "title": "다운로드 윈도우 10 로고, 4k, 미니멀리즘, 검은 배경, 네온 로고, 윈도우 10, 창의적인, 윈도우 10 미니멀리즘 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림",
-            "snippet": "# 다운로드 윈도우 10 로고, 4k, 미니멀리즘, 검은 배경, 네온 로고, 윈도우 10, 창의적인, 윈도우 10 미니멀리즘 바탕 화면 무료 데스크톱 용."
-          },
-          {
-            "url": "https://www.bixolon.co.kr/kr/download_view.php?idx=24&s_key=%EC%9C%88%EB%8F%84%EC%9A%B0",
-            "domain": "www.bixolon.co.kr",
-            "title": "빅솔론 | 지원 및 다운로드 :: SRP-350III ::윈도우::",
-            "snippet": "##### 윈도우즈 드라이버 #Windows #윈도우즈 #Window #윈도우 #Driver #드라이버 ... * OS :Microsoft Windows 7 (32bit/64bit), Microsoft Windows 8 (32bit/64bit),Microsoft Windows 8.1 (32bit/64bit), Microsoft Windows"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "윈도우10다운로드",
-          "executed_query": "윈도우10 다운로드",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-05T09:00:57.597349+00:00",
-          "raw_sha256": "a346af4047c05b3358851cce24bcbcb7aef3f28a7b076822e6cb743ccb82147e",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "On 10 dimensional Exceptional Drinfel'd Algebras"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "- 정현순 전문위원 : 마이크로소프트 공식 홈페이지에서 ‘윈도우10’ 업데이트 파일 이외 윈도우 설치파일을 확인하기 어려움 ... - 정현순 전문위원 : 위원님 말씀은 웹하드에 게시된 윈도우10"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "PC용 Google Docs 다운로드 방법 (윈도우 10 & 11)"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "가장 안전한 윈도우10 다운로드 USB 만들기 방법은 마이크로소프트 공식 소프트웨어 다운로드 페이지를 이용하는 것입니다. ... 윈도우10 공식 다운로드 페이지 바로가기"
-            },
-            {
-              "result_index": 4,
-              "relevant": false,
-              "quote": "### 원키 고스트 윈도우10 (32비트,64비트) 복원 사용법/다운로드 ... 위에 원키 고스트 윈도우10 프로그램(32비트,64비트)을 다운로드 받으시고 ... 만약 위의 맨트가 나오고 무한 재부팅이 된다면 포맷 이"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "윈도우10, 윈도우7 핀볼 다운로드"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "다운로드 윈도우 10 로고, 나무 프레임, 저녁, 일몰, 윈도우 10 엠블럼, 파란색 windows 10 로고, 윈도우 사인, 윈도우 로고, 윈도우 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림"
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "- 운영체제가 윈도우 7, 윈도우 10인 경우(공통) ... 목록에서 인터넷화상접견 프로그램 항목이 선택되어 있고, 우클릭 메뉴의 “제거(U)”가 강조되어 있다. ... 법무부 교정보부 홈페이지 ▶ 인터넷서신"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "다운로드 윈도우 10 로고, 4k, 미니멀리즘, 검은 배경, 네온 로고, 윈도우 10, 창의적인, 윈도우 10 미니멀리즘 바탕 화면 무료 데스크톱 용. 무료 데스크톱 용 그림"
-            },
-            {
-              "result_index": 9,
-              "relevant": false,
-              "quote": "##### 윈도우즈 드라이버 #Windows #윈도우즈 #Window #윈도우 #Driver #드라이버 ... * OS :Microsoft Windows 7 (32bit/64bit), Microsoft Windows 8 (32bit/64bit),Microsoft Windows 8.1 (32bit/64bit), Microsoft Windows"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "와이파이속도",
+        "keyword": "인터넷설치",
         "reason": "search intent or official evidence does not support an article",
         "decision_diagnostics": {
           "official_sources": [
             {
-              "url": "https://support.apple.com/ko-kr/guide/mac-help/mchlf4de377f/27/mac/27",
-              "title": "Mac에서 무선 진단 사용하기 - Apple 지원 (KR)",
-              "excerpt_chars": 4288
+              "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1428110795",
+              "title": "(주)인투씨엔에스",
+              "excerpt_chars": 8000
             },
             {
-              "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001996529",
-              "title": "와이파이 속도 극대화 애플리케이션",
-              "excerpt_chars": 2993
-            },
+              "url": "https://bizok.incheon.go.kr/platform/ofc/ofcDetail.do?ofc_key=4242",
+              "title": "기업정보 내용 | 비즈오케이>기업정보",
+              "excerpt_chars": 339
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "category_mismatch"
+          }
+        }
+      },
+      {
+        "keyword": "공유기설치",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
             {
-              "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932",
-              "title": "서울소식 | 서울특별시",
-              "excerpt_chars": 2983
+              "url": "https://www.moel.go.kr/info/lawinfo/instruction/view.do?bbs_seq=20260400639",
+              "title": "고용노동부",
+              "excerpt_chars": 292
             }
           ],
           "analysis_status": "supported_false",
           "model_rejection_opinion": {
             "kind": "model_opinion",
             "code": "source_missing_detail"
+          }
+        }
+      },
+      {
+        "keyword": "윈도우포맷",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 1770,
+        "organic_provider": "codex_native_search",
+        "organic_query": "윈도우 포맷",
+        "organic_results": [
+          {
+            "url": "https://www.daangn.com/kr/local-profile/%EC%9C%88%EB%8F%84%EC%9A%B0-%EC%84%A4%EC%B9%98-%ED%8F%AC%EB%A7%B7-%EC%A0%84%EB%AC%B8-yibpyd7ey49k/",
+            "domain": "www.daangn.com",
+            "title": "윈도우 설치 포맷 전문 | 인천광역시 남동구 간석동 | 컴퓨터수리 | 당근 동네 업체",
+            "snippet": "# 윈도우 설치 포맷 전문 ... 윈도우 설치 , 재설치, 오피스, 한글, 포토샵 그 외 문의주시면 설치가능여부 확인 후 진행"
           },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001996529",
-                  "title": "와이파이 속도 극대화 애플리케이션",
-                  "excerpt_chars": 2993
-                },
-                {
-                  "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932",
-                  "title": "서울소식 | 서울특별시",
-                  "excerpt_chars": 2983
-                },
-                {
-                  "url": "https://news.seoul.go.kr/gov/archives/516134",
-                  "title": "서울 무료 와이파이 SEOUL_Secure 마음껏 이용하세요! < 행정 | 서울특별시",
-                  "excerpt_chars": 2632
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
+          {
+            "url": "https://hotkim.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B011-%ED%8F%AC%EB%A7%B7-%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC%EF%BD%9C%EC%B4%88%EA%B8%B0%ED%99%94%C2%B7%EC%9E%AC%EC%84%A4%EC%B9%98%C2%B7%EA%B0%9C%EC%9D%B8%ED%8C%8C%EC%9D%BC-%EC%9C%A0%EC%A7%80%C2%B7%EA%B3%B5%EC%9E%A5%EC%B4%88%EA%B8%B0%ED%99%94%EA%B9%8C%EC%A7%80-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C?category=1260979",
+            "domain": "hotkim.tistory.com",
+            "title": "윈도우11 포맷 방법 총정리｜초기화·재설치·개인파일 유지·공장초기화까지 완벽 가이드",
+            "snippet": "이번 글에서는 윈도우11 포맷 방법부터 초기화와 재설치 차이, 개인 파일 유지 설정, USB를 이용한 포맷 방법, 정품인증 유지 여부까지 초보자도 쉽게 따라 할 수 있도록"
+          },
+          {
+            "url": "https://geniuss.kr/post_file_download.cm?c=YTo1OntzOjEwOiJib2FyZF9jb2RlIjtzOjIyOiJiMjAyMTA0MTQ3NjYzODBlZmVkNzdhIjtzOjk6InBvc3RfY29kZSI7czoyMjoicDIwMjExMDIwNTIzM2UwOGIyMmU2MSI7czo5OiJmaWxlX2NvZGUiO3M6MjI6InAyMDIxMTAyMGY2NTgxNjJiMTcyNDMiO3M6MTk6InBvc3RfZG93bmxvYWRfdG9rZW4iO3M6MTM6IjY5YjRkMzJjNjRmY2QiO3M6MTE6Im1lbWJlcl9jb2RlIjtOO30%3D",
+            "domain": "geniuss.kr",
+            "title": "DLM4000 시리즈",
+            "snippet": "또한, 고휘도 점등되어 있는 키의 윈도우 파형이 ZOOM 노브 대상 ... 줌윈도우의 표시분할 포맷을 다음 중 선택합니다."
+          },
+          {
+            "url": "https://toyota.co.kr/files/manual/2021-04-26-10-16-36-3898.pdf?bt_code=sns_facebook_feed_quiet_re_dec",
+            "domain": "toyota.co.kr",
+            "title": "untitled",
+            "snippet": "#### 호환되는 파일 포맷(오디오) ... *1: 오직 윈도우 미디어 오디오 표준과 호환됩니다."
+          },
+          {
+            "url": "https://sacaruna.tistory.com/15",
+            "domain": "sacaruna.tistory.com",
+            "title": "🔧 윈도우 초기화(포맷) 안전하게 하는 방법 총정리 – 파일 지키면서 새 컴퓨터처럼 만드는 법",
+            "snippet": "# 🔧 윈도우 초기화(포맷) 안전하게 하는 방법 총정리 – 파일 지키면서 새 컴퓨터처럼 만드는 법 ... # 🔧 윈도우 초기화(포맷) 안전하게 하는 방법 총정리 –"
+          },
+          {
+            "url": "https://flexwatch.co.kr/uploads/M4030_03_Flex_WATCH_Web_Admin_With_GPL_c2b7ca593d.pdf",
+            "domain": "flexwatch.co.kr",
+            "title": "FlexWATCH® Web Admin 사용자 매뉴얼 (한글 펌웨어)",
+            "snippet": "아래 설명 문구와 하단 버튼 “파티션 & 포맷”이 보인다. ... 윈도우의 일반 포맷과 동일한 기능입니다."
+          },
+          {
+            "url": "https://toyota.co.kr/files/manual/2021-04-26-10-16-36-3898.pdf",
+            "domain": "toyota.co.kr",
+            "title": "untitled",
+            "snippet": "호환되는 파일 포맷(오디오) ... *1: 오직 윈도우 미디어 오디오 표준과 호환됩니다."
+          },
+          {
+            "url": "https://www.coupang.com/vp/products/8497572296",
+            "domain": "www.coupang.com",
+            "title": "4K HD USB 카메라 5배 광학 줌 1050mm 가변 렌즈 미니 웹캠 마이크 포함 1920x108060fps 수동 초점 MJPEG 및 YUY2 이미지 포맷 지원 윈도우 XP - 웹캠 | 쿠팡",
+            "snippet": "# 4K HD USB 카메라 5배 광학 줌 1050mm 가변 렌즈 미니 웹캠 마이크 포함 1920x108060fps 수동 초점 MJPEG 및 YUY2 이미지 포맷 지원 윈도우"
+          },
+          {
+            "url": "https://brunch.co.kr/%40flowappic/68",
+            "domain": "brunch.co.kr",
+            "title": "윈도우 포맷 후 필수 설치 유틸리티 프로그램 모음",
+            "snippet": "컴퓨터 포맷을 마치고 나면 바탕화면이 깔끔해져서 기분은 좋지만, 한편으론 “뭘 다시 깔아야 하지?” ... 윈도우 포맷 후 필수 유틸리티 TOP 7 정리 노트북이나 데스크탑을 포맷하고"
+          },
+          {
+            "url": "https://k2me.tistory.com/169",
+            "domain": "k2me.tistory.com",
+            "title": "윈도우 11 비밀번호 잊어버렸을 때, 포맷 없이 해결하는 방법",
+            "snippet": "## 윈도우 11 비밀번호 잊어버렸을 때, 포맷 없이 해결하는 방법 ... 그래서 직접 해결 방법을 찾아봤고, 다행히 포맷 없이도 로그인 화면을 통과할 방법이 있어서 정리해봅니다."
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "윈도우포맷",
+          "executed_query": "윈도우 포맷",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-08T00:00:44.218807+00:00",
+          "raw_sha256": "5d979a70e20dd6aaa5cb41b1bf6b123d782ca618751b6971f22a32ff0c6db250",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "# 윈도우 설치 포맷 전문 ... 윈도우 설치 , 재설치, 오피스, 한글, 포토샵 그 외 문의주시면 설치가능여부 확인 후 진행"
             },
-            "outcome": "review_rejected",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://support.apple.com/ko-kr/guide/mac-help/mchlf4de377f/27/mac/27",
-                  "title": "Mac에서 무선 진단 사용하기 - Apple 지원 (KR)",
-                  "excerpt_chars": 4288
-                },
-                {
-                  "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001996529",
-                  "title": "와이파이 속도 극대화 애플리케이션",
-                  "excerpt_chars": 2993
-                },
-                {
-                  "url": "https://www.seoul.go.kr/news/news_report.do?nttNo=455932",
-                  "title": "서울소식 | 서울특별시",
-                  "excerpt_chars": 2983
-                }
-              ],
-              "analysis_status": "supported_false",
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "이번 글에서는 윈도우11 포맷 방법부터 초기화와 재설치 차이, 개인 파일 유지 설정, USB를 이용한 포맷 방법, 정품인증 유지 여부까지 초보자도 쉽게 따라 할 수 있도록"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "또한, 고휘도 점등되어 있는 키의 윈도우 파형이 ZOOM 노브 대상 ... 줌윈도우의 표시분할 포맷을 다음 중 선택합니다."
+            },
+            {
+              "result_index": 3,
+              "relevant": false,
+              "quote": "#### 호환되는 파일 포맷(오디오) ... *1: 오직 윈도우 미디어 오디오 표준과 호환됩니다."
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "🔧 윈도우 초기화(포맷) 안전하게 하는 방법 총정리 – 파일 지키면서 새 컴퓨터처럼 만드는 법"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "FlexWATCH® Web Admin 사용자 매뉴얼 (한글 펌웨어)"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "호환되는 파일 포맷(오디오) ... *1: 오직 윈도우 미디어 오디오 표준과 호환됩니다."
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "4K HD USB 카메라 5배 광학 줌 1050mm 가변 렌즈 미니 웹캠 마이크 포함 1920x108060fps 수동 초점 MJPEG 및 YUY2 이미지 포맷 지원 윈도우 XP - 웹캠 | 쿠팡"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "컴퓨터 포맷을 마치고 나면 바탕화면이 깔끔해져서 기분은 좋지만, 한편으론 “뭘 다시 깔아야 하지?” ... 윈도우 포맷 후 필수 유틸리티 TOP 7 정리 노트북이나 데스크탑을 포맷하고"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "## 윈도우 11 비밀번호 잊어버렸을 때, 포맷 없이 해결하는 방법 ... 그래서 직접 해결 방법을 찾아봤고, 다행히 포맷 없이도 로그인 화면을 통과할 방법이 있어서 정리해봅니다."
             }
+          ]
+        }
+      },
+      {
+        "keyword": "아이폰15프로출시일",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://www.apple.com/kr/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/",
+              "title": "Apple, iPhone 15 Pro와 iPhone 15 Pro Max 공개 - Apple (KR)",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.apple.com/kr/iphone/compare/",
+              "title": "iPhone - 모델 비교하기 - Apple (KR)",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://apps.apple.com/kr/app/k%EB%A7%98%ED%83%9D%EC%8B%9C/id6670617418",
+              "title": "‎K맘택시 앱 - App Store",
+              "excerpt_chars": 3536
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
           }
         }
       }
     ],
     "excluded_keywords": [],
-    "deferred_keywords": [],
+    "deferred_keywords": [
+      "세탁기건조기",
+      "아이폰17",
+      "와이파이설치",
+      "와이파이속도"
+    ],
     "research_stop_reason": "round_limit",
     "retry_keywords": [
       "휴대폰개통조회",
-      "인터넷속도"
+      "와이파이공유기설치방법"
     ],
     "discovery_rejections": [],
     "discovery_replenishment": [],
-    "deferred_measured_keywords": [],
+    "deferred_measured_keywords": [
+      "세탁기건조기",
+      "아이폰17",
+      "와이파이설치",
+      "와이파이속도"
+    ],
     "selection_scope": "highest_score_among_evaluated",
     "proposal_rounds": [
       {
@@ -18603,21 +18428,19 @@
           "인터넷신청",
           "미세먼지",
           "컴퓨터와이파이연결",
-          "삼성닷컴",
-          "컴퓨터인터넷연결",
-          "아이폰17",
-          "결혼준비신용카드",
           "갤럭시",
-          "와이파이연결",
+          "컴퓨터인터넷연결",
           "인터넷속도측정",
-          "컴퓨터네트워크연결",
+          "결혼준비신용카드",
           "세탁기",
-          "인터넷TV신청",
+          "와이파이연결",
           "갤럭시S25",
+          "인터넷TV신청",
           "KT인터넷",
+          "컴퓨터네트워크연결",
           "아이폰16",
-          "아이폰사전예약",
           "건조기",
+          "아이폰사전예약",
           "통돌이세탁기",
           "아이폰15",
           "드럼세탁기",
@@ -18627,39 +18450,41 @@
           "KT요금제",
           "조립PC",
           "갤럭시S24",
+          "LGU+",
           "휴대폰",
           "와이파이공유기",
           "COPILOT",
-          "LGU+",
           "아이폰15PRO",
-          "갤럭시S25울트라",
-          "IPTIME",
           "인터넷비교사이트",
-          "삼성갤럭시",
-          "폴더폰",
-          "전기밥솥",
-          "MS오피스",
+          "IPTIME",
+          "갤럭시S25울트라",
           "KT인터넷고객센터",
-          "삼성핸드폰",
+          "전기밥솥",
+          "폴더폰",
+          "MS오피스",
+          "삼성갤럭시",
           "마이크로소프트365",
-          "공유기",
-          "삼성닷컴홈페이지",
+          "삼성핸드폰",
+          "IPTIME공유기",
           "세탁기건조기일체형",
           "삼성몰",
-          "IPTIME공유기",
+          "공유기",
           "미니건조기",
           "아이폰13",
-          "아이폰사전예약혜택",
+          "삼성닷컴홈페이지",
           "와이파이증폭기",
+          "아이폰사전예약혜택",
           "아이폰15프로",
           "갤럭시스토어",
           "SK인터넷",
-          "갤럭시A시리즈",
           "인터넷가입",
-          "아이폰16E",
+          "갤럭시A시리즈",
           "갤럭시탭S9",
+          "아이폰16E",
           "삼성전자몰",
-          "청라코스트코"
+          "청라코스트코",
+          "DDR416G",
+          "S25"
         ],
         "proposals": [],
         "measured_fallback": true,
@@ -18681,32 +18506,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성닷컴",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "컴퓨터인터넷연결",
-            "reason_code": "duplicate_intent",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰17",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "결혼준비신용카드",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "갤럭시",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "와이파이연결",
+            "keyword": "컴퓨터인터넷연결",
             "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
@@ -18716,8 +18521,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "컴퓨터네트워크연결",
-            "reason_code": "duplicate_intent",
+            "keyword": "결혼준비신용카드",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18726,8 +18531,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷TV신청",
-            "reason_code": "category_mismatch",
+            "keyword": "와이파이연결",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18736,8 +18541,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "인터넷TV신청",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "KT인터넷",
             "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터네트워크연결",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18746,18 +18561,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰사전예약",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "건조기",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "아이폰사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "통돌이세탁기",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18767,7 +18582,7 @@
           },
           {
             "keyword": "드럼세탁기",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18801,22 +18616,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "LGU+",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "휴대폰",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "와이파이공유기",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "COPILOT",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "LGU+",
+            "keyword": "COPILOT",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -18826,8 +18641,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시S25울트라",
-            "reason_code": "insufficient_specificity",
+            "keyword": "인터넷비교사이트",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18836,12 +18651,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷비교사이트",
-            "reason_code": "category_mismatch",
+            "keyword": "갤럭시S25울트라",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성갤럭시",
+            "keyword": "KT인터넷고객센터",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "전기밥솥",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -18851,22 +18671,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "전기밥솥",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "MS오피스",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "KT인터넷고객센터",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성핸드폰",
+            "keyword": "삼성갤럭시",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -18876,23 +18686,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "공유기",
+            "keyword": "삼성핸드폰",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성닷컴홈페이지",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세탁기건조기일체형",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성몰",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18901,8 +18696,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "미니건조기",
+            "keyword": "세탁기건조기일체형",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성몰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공유기",
             "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "미니건조기",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18911,13 +18721,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰사전예약혜택",
-            "reason_code": "category_mismatch",
+            "keyword": "삼성닷컴홈페이지",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "와이파이증폭기",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰사전예약혜택",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -18936,22 +18751,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시A시리즈",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "인터넷가입",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰16E",
+            "keyword": "갤럭시A시리즈",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "갤럭시탭S9",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰16E",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -18964,97 +18779,9 @@
             "keyword": "청라코스트코",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": [
-          {
-            "keyword": "삼성닷컴",
-            "search_query": "삼성닷컴",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
           },
           {
-            "keyword": "아이폰17",
-            "search_query": "아이폰17",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
-          }
-        ],
-        "research_fallback_attempted": [
-          "삼성닷컴",
-          "아이폰17"
-        ]
-      },
-      {
-        "round": 2,
-        "offered_keywords": [
-          "세탁기건조기",
-          "S25",
-          "빨래건조기",
-          "DDR416G",
-          "오피스365",
-          "삼성폰",
-          "삼성휴대폰",
-          "램16기가",
-          "인터넷설치",
-          "갤럭시S24울트라",
-          "아이폰가격",
-          "노키아",
-          "SK요금제",
-          "SKT인터넷",
-          "아이폰12",
-          "삼성가전",
-          "LG인터넷",
-          "아이폰15프로맥스",
-          "효도폰",
-          "삼성폴더폰",
-          "윈도우10",
-          "MICROSOFT365",
-          "블랙프라이데이기간",
-          "아이폰12미니",
-          "마이크로소프트오피스",
-          "윈도우정품인증",
-          "갤럭시울트라",
-          "갤럭시A",
-          "아이폰출시일",
-          "삼성핸드폰신형",
-          "공유기추천",
-          "갤럭시25울트라",
-          "S24",
-          "서피스프로",
-          "랜케이블",
-          "REMOTE",
-          "MSOFFICE",
-          "SK브로드밴드인터넷",
-          "갤럭시자급제폰",
-          "아이폰SE1",
-          "셋톱박스",
-          "코스트코청라점",
-          "세탁기렌탈",
-          "삼성전자스토어",
-          "세탁건조기",
-          "EXCEL",
-          "인터넷속도테스트",
-          "OFFICE365",
-          "갤럭시S",
-          "세탁기건조기세트",
-          "KT인터넷설치",
-          "애플사전예약",
-          "아이폰공기계",
-          "인터넷속도측정사이트",
-          "아이폰프로",
-          "2G폰",
-          "유플러스인터넷",
-          "삼성폴더블",
-          "KT인터넷요금제",
-          "아이폰출시"
-        ],
-        "proposals": [],
-        "measured_fallback": true,
-        "no_eligible_proposal": true,
-        "skipped": [
-          {
-            "keyword": "세탁기건조기",
+            "keyword": "DDR416G",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19062,15 +18789,98 @@
             "keyword": "S25",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "인터넷속도측정",
+            "search_query": "인터넷속도측정",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
           },
+          {
+            "keyword": "갤럭시S25",
+            "search_query": "갤럭시S25",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "인터넷속도측정",
+          "갤럭시S25"
+        ]
+      },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "빨래건조기",
+          "오피스365",
+          "삼성폰",
+          "인터넷설치",
+          "램16기가",
+          "삼성휴대폰",
+          "갤럭시S24울트라",
+          "아이폰가격",
+          "노키아",
+          "SKT인터넷",
+          "SK요금제",
+          "LG인터넷",
+          "아이폰12",
+          "아이폰15프로맥스",
+          "블랙프라이데이기간",
+          "삼성가전",
+          "효도폰",
+          "삼성폴더폰",
+          "윈도우10",
+          "MICROSOFT365",
+          "아이폰12미니",
+          "마이크로소프트오피스",
+          "윈도우정품인증",
+          "갤럭시울트라",
+          "갤럭시A",
+          "삼성핸드폰신형",
+          "갤럭시25울트라",
+          "S24",
+          "REMOTE",
+          "서피스프로",
+          "MSOFFICE",
+          "셋톱박스",
+          "SK브로드밴드인터넷",
+          "아이폰SE1",
+          "랜케이블",
+          "갤럭시자급제폰",
+          "세탁기렌탈",
+          "공유기추천",
+          "아이폰출시일",
+          "코스트코청라점",
+          "EXCEL",
+          "삼성전자스토어",
+          "OFFICE365",
+          "세탁건조기",
+          "KT인터넷설치",
+          "세탁기건조기세트",
+          "갤럭시S",
+          "인터넷속도테스트",
+          "아이폰공기계",
+          "인터넷속도측정사이트",
+          "유플러스인터넷",
+          "애플사전예약",
+          "아이폰프로",
+          "KT인터넷요금제",
+          "2G폰",
+          "윈도우11시디키",
+          "MS오피스영구",
+          "SAMSUNG",
+          "마이크로오피스",
+          "삼성폴더블"
+        ],
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
+        "skipped": [
           {
             "keyword": "빨래건조기",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "DDR416G",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19084,8 +18894,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성휴대폰",
-            "reason_code": "scope_too_broad",
+            "keyword": "인터넷설치",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19094,8 +18904,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷설치",
-            "reason_code": "insufficient_specificity",
+            "keyword": "삼성휴대폰",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19114,12 +18924,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "SKT인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "SK요금제",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "SKT인터넷",
+            "keyword": "LG인터넷",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19129,23 +18944,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성가전",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "LG인터넷",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "아이폰15프로맥스",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "효도폰",
+            "keyword": "블랙프라이데이기간",
             "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성가전",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "효도폰",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19160,11 +18975,6 @@
           },
           {
             "keyword": "MICROSOFT365",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "블랙프라이데이기간",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19190,22 +19000,12 @@
           },
           {
             "keyword": "갤럭시A",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰출시일",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "삼성핸드폰신형",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "공유기추천",
-            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19219,17 +19019,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "서피스프로",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "랜케이블",
+            "keyword": "REMOTE",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "REMOTE",
+            "keyword": "서피스프로",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19239,7 +19034,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "셋톱박스",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "SK브로드밴드인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰SE1",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "랜케이블",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19249,13 +19059,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰SE1",
-            "reason_code": "insufficient_specificity",
+            "keyword": "세탁기렌탈",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "셋톱박스",
-            "reason_code": "scope_too_broad",
+            "keyword": "공유기추천",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시일",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19264,7 +19079,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "세탁기렌탈",
+            "keyword": "EXCEL",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19274,33 +19089,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "세탁건조기",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "EXCEL",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷속도테스트",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "OFFICE365",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시S",
+            "keyword": "세탁건조기",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "세탁기건조기세트",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19309,8 +19104,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "애플사전예약",
+            "keyword": "세탁기건조기세트",
             "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷속도테스트",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19320,16 +19125,6 @@
           },
           {
             "keyword": "인터넷속도측정사이트",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰프로",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "2G폰",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19339,7 +19134,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성폴더블",
+            "keyword": "애플사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰프로",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19349,102 +19149,10 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰출시",
+            "keyword": "2G폰",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": [
-          {
-            "keyword": "세탁기건조기",
-            "search_query": "세탁기건조기",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
-          }
-        ],
-        "research_fallback_attempted": [
-          "세탁기건조기"
-        ]
-      },
-      {
-        "round": 3,
-        "offered_keywords": [
-          "윈도우11시디키",
-          "MS오피스영구",
-          "SAMSUNG",
-          "KT아이폰사전예약",
-          "마이크로오피스",
-          "공유기가격",
-          "WINDOWS11",
-          "MS365",
-          "갤럭시보급형",
-          "LTE라우터",
-          "갤럭시폴더",
-          "폴더블",
-          "삼성전자홈페이지",
-          "갤럭시와이드",
-          "아이폰매장",
-          "무선공유기",
-          "삼성스토어몰",
-          "컴퓨터포맷하는법",
-          "와이파이설치",
-          "갤럭시공기계",
-          "LGU플러스인터넷",
-          "삼성전자매장",
-          "삼성노트",
-          "삼성온라인스토어",
-          "인터넷티비",
-          "인터넷티비현금많이주는곳",
-          "삼성휴대폰가격",
-          "삼성매장",
-          "인터넷공유기",
-          "아디다스갤럭시7",
-          "OFFICE",
-          "램가격",
-          "인터넷가입사은품많이주는곳",
-          "통신사변경",
-          "갤럭시핸드폰",
-          "갤럭시S2",
-          "삼성홈페이지",
-          "한글설치",
-          "LG유플러스인터넷",
-          "애플케이스",
-          "삼성효도폰",
-          "VAN",
-          "갤럭시폴더블",
-          "갤럭시폰",
-          "피쳐폰",
-          "갤럭시폴더2",
-          "애플아이폰",
-          "삼성전자임직원몰",
-          "LGU+인터넷",
-          "갤럭시점프2",
-          "삼성대리점",
-          "아이폰15플러스",
-          "인터넷선",
-          "아이폰15프로중고",
-          "한글2020무료설치",
-          "인터넷속도체크",
-          "삼성최신폰",
-          "인터넷TV",
-          "LG요금제",
-          "삼성스마트폰"
-        ],
-        "proposals": [
-          {
-            "keyword": "컴퓨터포맷하는법",
-            "reason": "월 3,940회 수요로 포맷 절차가 명확한 질문이다. 백업 준비와 초기화·재설치 방법을 공식 문서로 조사할 가치가 있다.",
-            "search_query": "컴퓨터 포맷하는 법"
           },
-          {
-            "keyword": "와이파이설치",
-            "reason": "월 3,920회 수요다. 공유기 배선과 무선망 초기 설정 절차를 조사할 수 있어 기존 노트북 연결 글과 목적이 구분된다.",
-            "search_query": "와이파이 설치"
-          }
-        ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false,
-        "skipped": [
           {
             "keyword": "윈도우11시디키",
             "reason_code": "duplicate_intent",
@@ -19461,17 +19169,103 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "KT아이폰사전예약",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "마이크로오피스",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "공유기가격",
+            "keyword": "삼성폴더블",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "인터넷설치",
+            "search_query": "인터넷설치",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "인터넷설치"
+        ]
+      },
+      {
+        "round": 3,
+        "offered_keywords": [
+          "MS365",
+          "KT아이폰사전예약",
+          "WINDOWS11",
+          "LTE라우터",
+          "갤럭시보급형",
+          "아이폰출시",
+          "갤럭시폴더",
+          "무선공유기",
+          "갤럭시와이드",
+          "아이폰매장",
+          "폴더블",
+          "삼성전자홈페이지",
+          "삼성스토어몰",
+          "LGU플러스인터넷",
+          "갤럭시공기계",
+          "인터넷티비",
+          "인터넷티비현금많이주는곳",
+          "삼성노트",
+          "삼성온라인스토어",
+          "삼성전자매장",
+          "공유기가격",
+          "삼성휴대폰가격",
+          "아디다스갤럭시7",
+          "OFFICE",
+          "인터넷공유기",
+          "인터넷가입사은품많이주는곳",
+          "삼성매장",
+          "통신사변경",
+          "LG유플러스인터넷",
+          "램가격",
+          "한글설치",
+          "갤럭시핸드폰",
+          "애플케이스",
+          "갤럭시S2",
+          "삼성홈페이지",
+          "삼성효도폰",
+          "VAN",
+          "LGU+인터넷",
+          "갤럭시점프2",
+          "피쳐폰",
+          "삼성전자임직원몰",
+          "갤럭시폰",
+          "갤럭시폴더블",
+          "삼성대리점",
+          "애플아이폰",
+          "갤럭시폴더2",
+          "아이폰15플러스",
+          "인터넷선",
+          "아이폰15프로중고",
+          "인터넷속도체크",
+          "한글2020무료설치",
+          "인터넷TV",
+          "삼성최신폰",
+          "인터넷가입현금지원",
+          "LG요금제",
+          "한국블랙프라이데이",
+          "아이폰15자급제",
+          "KT인터넷가입",
+          "삼성스마트폰",
+          "16프로"
+        ],
+        "proposals": [],
+        "measured_fallback": false,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "MS365",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT아이폰사전예약",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19481,17 +19275,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "MS365",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시보급형",
+            "keyword": "LTE라우터",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "LTE라우터",
+            "keyword": "갤럭시보급형",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰출시",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -19501,13 +19295,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "폴더블",
+            "keyword": "무선공유기",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성전자홈페이지",
-            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19521,8 +19310,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "무선공유기",
+            "keyword": "폴더블",
             "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자홈페이지",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19531,17 +19325,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시공기계",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "LGU플러스인터넷",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성전자매장",
+            "keyword": "갤럭시공기계",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷티비",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷티비현금많이주는곳",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19556,28 +19355,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷티비",
-            "reason_code": "scope_too_broad",
+            "keyword": "삼성전자매장",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인터넷티비현금많이주는곳",
+            "keyword": "공유기가격",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "삼성휴대폰가격",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성매장",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷공유기",
-            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19591,12 +19380,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "램가격",
-            "reason_code": "category_mismatch",
+            "keyword": "인터넷공유기",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "인터넷가입사은품많이주는곳",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성매장",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19606,8 +19400,28 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "LG유플러스인터넷",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "램가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한글설치",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "갤럭시핸드폰",
             "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플케이스",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19621,58 +19435,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "한글설치",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "LG유플러스인터넷",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "애플케이스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "삼성효도폰",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "VAN",
             "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시폴더블",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시폰",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "피쳐폰",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시폴더2",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "애플아이폰",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성전자임직원몰",
-            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19686,8 +19455,38 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "피쳐폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성전자임직원몰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폴더블",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "삼성대리점",
             "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플아이폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폴더2",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19697,16 +19496,11 @@
           },
           {
             "keyword": "인터넷선",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "아이폰15프로중고",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한글2020무료설치",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19716,8 +19510,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성최신폰",
-            "reason_code": "insufficient_specificity",
+            "keyword": "한글2020무료설치",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19726,108 +19520,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "삼성최신폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷가입현금지원",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "LG요금제",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성스마트폰",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          }
-        ]
-      },
-      {
-        "round": 4,
-        "offered_keywords": [
-          "인터넷가입현금지원",
-          "아이폰15자급제",
-          "16프로",
-          "데이터쉐어링",
-          "GTX1650",
-          "사전예약",
-          "갤럭시중고폰",
-          "인텔CPU",
-          "KT인터넷가입",
-          "윈도우10다운로드",
-          "갤럭시S시리즈",
-          "아이폰15핑크",
-          "폴더블폰",
-          "삼성디지털플라자",
-          "삼성전자공식몰",
-          "삼성폰종류",
-          "셋탑박스",
-          "아이폰신형",
-          "갤럭시S20케이스",
-          "MIVE폴더폰",
-          "아이폰15프로색상",
-          "INTEL",
-          "KT와이파이",
-          "삼성전자온라인몰",
-          "아이폰핑크",
-          "VISUALSTUDIO",
-          "아이폰대여",
-          "비주얼스튜디오",
-          "I59400F",
-          "WIFI",
-          "와이파이속도",
-          "아이폰15프로출시일",
-          "윈도우11프로",
-          "애플폰",
-          "갤럭시시리즈",
-          "플립폰",
-          "갤럭시AI",
-          "SSD가격",
-          "케이블정리",
-          "라데온",
-          "폴더폰공기계",
-          "SK인터넷가입",
-          "KT사전예약",
-          "노트북초기화",
-          "한국블랙프라이데이",
-          "갤럭시A시리즈순서",
-          "윈도우정품",
-          "인터넷모뎀",
-          "케이티닷컴",
-          "윈도우포맷",
-          "KT인터넷속도",
-          "아이폰예약",
-          "블프기간",
-          "건조기렌탈",
-          "삼성핸드폰가격",
-          "기기변경",
-          "갤럭시A12",
-          "SK인터넷설치",
-          "인터넷설치현금",
-          "아이폰카메라"
-        ],
-        "proposals": [
-          {
-            "keyword": "노트북초기화",
-            "reason": "월 1,870회. 초기화 전 준비와 파일 유지·전체 삭제 선택을 묻는 절차 수요로, 제조사별 복구 안내를 조사할 가치가 있다.",
-            "search_query": "노트북 초기화"
-          },
-          {
-            "keyword": "데이터쉐어링",
-            "reason": "월 2,460회. 다른 기기에서 데이터를 함께 쓰기 위한 지원 단말·회선 조건과 설정 절차를 공식 안내로 조사할 수 있다.",
-            "search_query": "데이터 쉐어링"
-          },
-          {
-            "keyword": "윈도우10다운로드",
-            "reason": "월 2,360회. 설치 파일을 받으려는 구체적 수요가 있어 공식 제공 여부와 다운로드·설치 매체 준비 절차를 확인할 가치가 있다.",
-            "search_query": "윈도우10 다운로드"
-          },
-          {
-            "keyword": "와이파이속도",
-            "reason": "월 2,090회. 무선 연결 속도에 영향을 주는 규격·주파수·설정 조건을 설명할 수 있어, 측정 도구 외 정보 수요를 조사할 만하다.",
-            "search_query": "와이파이 속도"
-          }
-        ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false,
-        "skipped": [
-          {
-            "keyword": "인터넷가입현금지원",
+            "keyword": "한국블랙프라이데이",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19837,8 +19545,110 @@
             "kind": "model_shortlist_opinion"
           },
           {
+            "keyword": "KT인터넷가입",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성스마트폰",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
             "keyword": "16프로",
             "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": []
+      },
+      {
+        "round": 4,
+        "offered_keywords": [
+          "인텔CPU",
+          "GTX1650",
+          "사전예약",
+          "갤럭시중고폰",
+          "아이폰15핑크",
+          "삼성전자공식몰",
+          "갤럭시S20케이스",
+          "INTEL",
+          "삼성디지털플라자",
+          "갤럭시S시리즈",
+          "삼성폰종류",
+          "셋탑박스",
+          "폴더블폰",
+          "블프기간",
+          "아이폰15프로색상",
+          "KT와이파이",
+          "아이폰대여",
+          "WIFI",
+          "아이폰핑크",
+          "I59400F",
+          "윈도우11프로",
+          "MIVE폴더폰",
+          "아이폰신형",
+          "아이폰15프로출시일",
+          "VISUALSTUDIO",
+          "갤럭시시리즈",
+          "삼성전자온라인몰",
+          "비주얼스튜디오",
+          "애플폰",
+          "폴더폰공기계",
+          "SSD가격",
+          "플립폰",
+          "케이티닷컴",
+          "라데온",
+          "갤럭시AI",
+          "케이블정리",
+          "공유기설치",
+          "인터넷모뎀",
+          "윈도우정품",
+          "KT사전예약",
+          "SK인터넷설치",
+          "KT인터넷속도",
+          "인터넷설치현금",
+          "기기변경",
+          "아이폰싸게사는법",
+          "SK인터넷가입",
+          "LG인터넷이전설치",
+          "윈도우포맷",
+          "건조기렌탈",
+          "삼성핸드폰가격",
+          "갤럭시A시리즈순서",
+          "갤럭시A12",
+          "인터넷요금",
+          "아이폰카메라",
+          "KT아이폰",
+          "아이폰예약",
+          "갤럭시S25가격",
+          "애플사전예약혜택",
+          "초고속인터넷",
+          "갤럭시폴더폰"
+        ],
+        "proposals": [
+          {
+            "keyword": "공유기설치",
+            "reason": "월 1,840회. 공유기 배선과 초기 설정 절차를 찾는 수요로, 제조사 공식 설치 안내를 조사할 가치가 있다.",
+            "search_query": "공유기 설치"
+          },
+          {
+            "keyword": "윈도우포맷",
+            "reason": "월 1,770회. 초기화·재설치 방법과 데이터 삭제 범위를 묻는 수요로, 공식 복구 안내를 조사하기 적합하다.",
+            "search_query": "윈도우 포맷"
+          },
+          {
+            "keyword": "아이폰15프로출시일",
+            "reason": "월 2,050회. 특정 모델의 출시 시점을 묻는 정보 수요로, 공식 발표에서 국내외 출시일을 확인할 수 있는 후보다.",
+            "search_query": "아이폰15 프로 출시일"
+          }
+        ],
+        "measured_fallback": false,
+        "no_eligible_proposal": false,
+        "skipped": [
+          {
+            "keyword": "인텔CPU",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19848,7 +19658,7 @@
           },
           {
             "keyword": "사전예약",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19857,27 +19667,22 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "인텔CPU",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "KT인터넷가입",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시S시리즈",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "아이폰15핑크",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "폴더블폰",
+            "keyword": "삼성전자공식몰",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S20케이스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "INTEL",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -19887,8 +19692,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "삼성전자공식몰",
-            "reason_code": "category_mismatch",
+            "keyword": "갤럭시S시리즈",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19902,18 +19707,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰신형",
-            "reason_code": "insufficient_specificity",
+            "keyword": "폴더블폰",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "갤럭시S20케이스",
+            "keyword": "블프기간",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MIVE폴더폰",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19922,28 +19722,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "INTEL",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "KT와이파이",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "삼성전자온라인몰",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰핑크",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "VISUALSTUDIO",
-            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19952,7 +19732,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "비주얼스튜디오",
+            "keyword": "WIFI",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰핑크",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -19962,23 +19747,23 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "WIFI",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "아이폰15프로출시일",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "윈도우11프로",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "애플폰",
-            "reason_code": "scope_too_broad",
+            "keyword": "MIVE폴더폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰신형",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "VISUALSTUDIO",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -19987,27 +19772,17 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "플립폰",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시AI",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "SSD가격",
+            "keyword": "삼성전자온라인몰",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "케이블정리",
+            "keyword": "비주얼스튜디오",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "라데온",
+            "keyword": "애플폰",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
@@ -20017,32 +19792,12 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "SK인터넷가입",
+            "keyword": "SSD가격",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "KT사전예약",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한국블랙프라이데이",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "갤럭시A시리즈순서",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "윈도우정품",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷모뎀",
+            "keyword": "플립폰",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -20052,8 +19807,38 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "윈도우포맷",
+            "keyword": "라데온",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시AI",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "케이블정리",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인터넷모뎀",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우정품",
             "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT사전예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK인터넷설치",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -20062,12 +19847,27 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "아이폰예약",
+            "keyword": "인터넷설치현금",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "블프기간",
+            "keyword": "기기변경",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰싸게사는법",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SK인터넷가입",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "LG인터넷이전설치",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
@@ -20082,7 +19882,7 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "기기변경",
+            "keyword": "갤럭시A시리즈순서",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
@@ -20092,17 +19892,42 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "SK인터넷설치",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인터넷설치현금",
+            "keyword": "인터넷요금",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "아이폰카메라",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KT아이폰",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰예약",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시S25가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "애플사전예약혜택",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "초고속인터넷",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "갤럭시폴더폰",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           }
@@ -20112,71 +19937,96 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "삼성닷컴",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 293300,
-        "organic_query": "삼성닷컴"
+        "keyword": "갤럭시S25",
+        "monthly_search": 81000,
+        "score": 53.93,
+        "status": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ],
+        "organic_query": "갤럭시S25"
       },
       {
-        "keyword": "아이폰17",
+        "keyword": "인터넷속도측정",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 282400,
-        "organic_query": "아이폰17"
+        "monthly_search": 115100,
+        "organic_query": "인터넷속도측정"
       },
       {
-        "keyword": "세탁기건조기",
+        "keyword": "인터넷설치",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 13290,
-        "organic_query": "세탁기건조기"
+        "monthly_search": 11590,
+        "organic_query": "인터넷설치"
       },
       {
-        "keyword": "컴퓨터포맷하는법",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 3940,
-        "organic_query": "컴퓨터 포맷하는 법"
-      },
-      {
-        "keyword": "와이파이설치",
+        "keyword": "공유기설치",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 3920,
-        "organic_query": "와이파이 설치"
+        "monthly_search": 1840,
+        "organic_query": "공유기 설치"
       },
       {
-        "keyword": "노트북초기화",
+        "keyword": "윈도우포맷",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 1870,
-        "organic_query": "노트북 초기화"
+        "monthly_search": 1770,
+        "organic_query": "윈도우 포맷"
       },
       {
-        "keyword": "데이터쉐어링",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 2460,
-        "organic_query": "데이터 쉐어링"
-      },
-      {
-        "keyword": "윈도우10다운로드",
-        "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 2360,
-        "organic_query": "윈도우10 다운로드"
-      },
-      {
-        "keyword": "와이파이속도",
+        "keyword": "아이폰15프로출시일",
         "status": "rejected",
         "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 2090,
-        "organic_query": "와이파이 속도"
+        "monthly_search": 2050,
+        "organic_query": "아이폰15 프로 출시일"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "갤럭시S25",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-08T00:00:44.218807+00:00",
+        "retry_after": "2026-10-11T00:00:44.218807+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "인터넷속도측정",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-08T00:00:44.218807+00:00",
+        "retry_after": "2026-10-11T00:00:44.218807+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "인터넷설치",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-08T00:00:44.218807+00:00",
+        "retry_after": "2026-10-15T00:00:44.218807+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "공유기설치",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-08T00:00:44.218807+00:00",
+        "retry_after": "2026-10-11T00:00:44.218807+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "윈도우포맷",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-08T00:00:44.218807+00:00",
+        "retry_after": "2026-10-09T00:00:44.218807+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "아이폰15프로출시일",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-08T00:00:44.218807+00:00",
+        "retry_after": "2026-10-11T00:00:44.218807+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "삼성닷컴",
         "reason_code": "search_quality",
@@ -20302,199 +20152,187 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 42520
+        "elapsed_ms": 25190
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9383
+        "elapsed_ms": 5699
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 12452
+        "elapsed_ms": 7380
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 12324
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10364
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 11175
+        "elapsed_ms": 7032
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 15594
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 37461
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8885
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10089
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 7335
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 11023
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 48265
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 24622
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8414
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8039
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 12376
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 13968
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 12379
+        "elapsed_ms": 9104
       },
       {
         "stage": "official_research",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 29036
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 56369
+        "elapsed_ms": 66974
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6225
+        "elapsed_ms": 8155
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11495
+        "elapsed_ms": 5502
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7049
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9019
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 7892
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8395
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 11956
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 24295
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8820
+        "elapsed_ms": 6429
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 14198
+        "elapsed_ms": 15798
       },
       {
         "stage": "official_research",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 52022
+        "elapsed_ms": 34059
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 12931
+        "elapsed_ms": 12584
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 21489
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 21493
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 27413
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6286
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8090
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7726
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 16088
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 20313
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 34053
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6843
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7772
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8484
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7178
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 5803
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8246
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8134
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11186
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6632
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9683
       }
     ],
     "analysis_recovery_attempts": 0

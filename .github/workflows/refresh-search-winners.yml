@@ -11,8 +11,11 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: trendpulse-editorial
+  # Codex refresh tokens rotate on use: share the posting lock so only one job
+  # holds the subscription auth at a time.
+  group: trendpulse-general-posting
   cancel-in-progress: false
+  queue: max
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -24,14 +27,28 @@ jobs:
           python-version: '3.11'
           cache: pip
       - run: pip install -r requirements.txt google-auth
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Codex subscription writer
+        run: npm install -g @openai/codex@0.153.4
+      - name: Restore Codex authentication
+        env:
+          CODEX_AUTH_JSON: ${{ secrets.CODEX_AUTH_JSON }}
+          WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: |
+          echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          python scripts/codex_worker_auth.py restore
       - name: Refresh with source and publication gates
         env:
+          # The Anthropic subscription hit its session limit on every run (9/24~10/9).
+          BLOG_WRITER_PROVIDER: codex
+          BLOG_CODEX_PUBLIC_AUTOMATION: '1'
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
           APPLY: ${{ github.event_name == 'schedule' || inputs.apply }}
         run: |
@@ -40,6 +57,11 @@ jobs:
           else
             python scripts/refresh_search_winners.py --limit 2
           fi
+      - name: Persist refreshed Codex authentication and clean up
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
+        run: python scripts/codex_worker_auth.py persist
       - uses: actions/upload-artifact@v4
         if: always()
         with:

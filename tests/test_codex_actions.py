@@ -376,3 +376,24 @@ def test_authorized_public_manual_boundary(tmp_path, monkeypatch, repo, event, r
     else:
         with pytest.raises(RuntimeError):
             require_private_actions()
+
+
+def test_search_winner_refresh_writes_with_codex_and_shares_the_codex_auth_lock():
+    # 9/24~10/9: every refresh failed on the Anthropic subscription session limit.
+    from pathlib import Path
+    workflow = yaml.safe_load(Path('.github/workflows/refresh-search-winners.yml').read_text())
+    posting = yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())['jobs']['post-queue']
+    job = workflow['jobs']['refresh']
+    # Codex refresh tokens rotate: one writer at a time across posting and refresh.
+    assert workflow.get('concurrency', job.get('concurrency'))['group'] == posting['concurrency']['group']
+    steps = job['steps']
+    runs = [step.get('run', '') for step in steps]
+    restore = next(i for i, run in enumerate(runs) if 'codex_worker_auth.py restore' in run)
+    refresh = next(i for i, run in enumerate(runs) if 'refresh_search_winners.py' in run)
+    assert any('npm install -g @openai/codex@' in run for run in runs[:restore])
+    assert restore < refresh
+    assert any(step.get('if') == 'always()' and 'codex_worker_auth.py persist' in step.get('run', '')
+               for step in steps[refresh + 1:])
+    env = steps[refresh]['env']
+    assert env['BLOG_WRITER_PROVIDER'] == 'codex' and env['BLOG_CODEX_PUBLIC_AUTOMATION'] == '1'
+    assert 'CLAUDE_CODE_OAUTH_TOKEN' not in env

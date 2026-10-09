@@ -22630,7 +22630,7 @@
     "keywords": [
       "황새치 S/T 2호"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-09T05:48:30.753330+00:00",
@@ -22701,7 +22701,11 @@
     },
     "score": 20,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 1871,
+    "url": "https://trendpulse.blog/swordfish-recall-october-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-09T06:05:50.603406"
   },
   {
     "keyword": "한-이집트 사회보장협정 서명",

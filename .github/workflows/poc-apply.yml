@@ -1,4 +1,4 @@
-name: POC Apply Money Template
+name: Reviewed KPF Draft Correction
 
 permissions:
   contents: read
@@ -9,7 +9,7 @@ on:
       post_id:
         description: '적용할 draft 포스트 ID'
         required: false
-        default: '1411'
+        default: '1894'
         type: string
 
 jobs:
@@ -28,10 +28,18 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Apply money template to draft
+      - name: Correct reviewed draft 1894 only
         env:
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           POC_POST_ID: ${{ github.event.inputs.post_id }}
-        run: python scripts/apply_money_template_poc.py
+        run: python scripts/repair_kpf_draft.py
+
+      - name: Preserve correction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kpf-draft-review-${{ github.run_id }}
+          path: ${{ runner.temp }}/kpf-draft-review/
+          retention-days: 7

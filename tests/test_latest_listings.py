@@ -200,3 +200,15 @@ def test_same_announcement_from_two_korea_lists_is_listed_once():
     pages = {listings.KOREA_PRESS_URL.format(page=1): press, listings.KOREA_NEWS_URL.format(page=1): KOREA_PAGE}
     rows = listings.collect('건강', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))
     assert [row['title'] for row in rows].count("메틸수은 기준 초과 '수산물가공품' 회수 조치") == 1
+
+
+def test_collect_interleaves_publishers_so_job_postings_reach_the_evaluated_head():
+    # 2026-10-09: policy press rows filled the first six fetched sources, so ALIO
+    # postings (전남대병원 약무직 등) were never evaluated for the jobs category.
+    press = ''.join(KOREA_PAGE.replace('newsId=1&', f'newsId={i}&').replace(
+        "메틸수은 기준 초과 &#39;수산물가공품&#39; 회수 조치", f'고용 정책 발표 {i}').replace(
+        '식품의약품안전처', '고용노동부') for i in range(10, 16))
+    pages = {listings.KOREA_PRESS_URL.format(page=1): press, listings.ALIO_URL.format(page=1): ALIO_PAGE}
+    rows = listings.collect('취업', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))
+    hosts = [row['url'].split('/')[2] for row in rows[:2]]
+    assert 'job.alio.go.kr' in hosts

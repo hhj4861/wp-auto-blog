@@ -395,5 +395,9 @@ def test_search_winner_refresh_writes_with_codex_and_shares_the_codex_auth_lock(
     assert any(step.get('if') == 'always()' and 'codex_worker_auth.py persist' in step.get('run', '')
                for step in steps[refresh + 1:])
     env = steps[refresh]['env']
-    assert env['BLOG_WRITER_PROVIDER'] == 'codex' and env['BLOG_CODEX_PUBLIC_AUTOMATION'] == '1'
+    assert env['BLOG_WRITER_PROVIDER'] == 'codex'
     assert 'CLAUDE_CODE_OAUTH_TOKEN' not in env
+    # Run 37926597756: restore/persist also need the public-automation opt-in, so
+    # it must be job-wide (as in the posting job), not only on the refresh step.
+    assert job['env']['BLOG_CODEX_PUBLIC_AUTOMATION'] == '1'
+    assert posting['env']['BLOG_CODEX_PUBLIC_AUTOMATION'] == '1'

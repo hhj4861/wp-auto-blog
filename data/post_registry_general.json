@@ -4672,5 +4672,15 @@
     "category": "취업",
     "identifier": "전기기사과목",
     "created_at": "2026-10-09T06:39:37.688243"
+  },
+  {
+    "topic": "Earlibot, 10월 8일 스마트 디바이스 공모전 최우수상 수상과 기술 용도",
+    "title": "Earlibot 최우수상 수상: 식품 공정 용도와 상용화 지원",
+    "keywords": [
+      "Earlibot"
+    ],
+    "category": "테크",
+    "identifier": "earlibot",
+    "created_at": "2026-10-09T06:48:29.061710"
   }
 ]

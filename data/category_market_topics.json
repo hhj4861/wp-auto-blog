@@ -18097,9 +18097,12 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-10-09T03:46:47.041333+00:00",
+    "selected_at": "2026-10-09T06:40:35.469368+00:00",
     "seeds": [
-      "2026 전국 스마트 디바이스 공모전 결선",
+      "2026 전국 스마트 디바이스 공모전",
+      "EdgeGuard",
+      "Earlibot",
+      "Psyco-Neu Vision",
       "Pollo Agent",
       "Dark Clark"
     ],
@@ -18110,6 +18113,13 @@
         "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
         "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
         "lead": "- 2026년 정보통신 스마트 디바이스 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 온디바이스 AI, 피지컬 AI 등 결선 6팀 경합 - '알파팜텍' 기업 부문 대상, '드란비(Dranvi)' 일반 부문 대상 수상",
+        "published": "2026-10-08",
+        "publisher": "과학기술정보통신부"
+      },
+      {
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784602",
+        "title": "반도체가 자라는 '시작점'까지 설계… 고집적·저전력 인공지능 반도체 구현의 새 길",
+        "lead": "- 한국과학기술원·울산과학기술원(KAIST·UNIST)·한양대·TDS Innovation 연구팀, 2차원 반도체의 핵생성을 원하는 위치로 제어...네이처 게재- 2차원 반도체 결정의 단일 중심 성장 성공, 차세대 적층 공정 활용으로 고집적·저전력 반도체 구현 기대",
         "published": "2026-10-08",
         "publisher": "과학기술정보통신부"
       },
@@ -18152,29 +18162,31 @@
     "analyst": "codex_subscription",
     "discovery_provider": "official_dated_listings",
     "measured_candidates": 0,
-    "evaluated_candidates": 3,
-    "selected": [],
-    "held": [
+    "evaluated_candidates": 4,
+    "selected": [
       {
-        "keyword": "Dark Clark",
+        "keyword": "Earlibot",
         "category": "테크",
-        "topic": "Dark Clark: 10월 8일 공개된 AI 악용 여론공작과 독자가 알아야 할 정보 유통 위험",
-        "intent": "10월 8일 OpenAI가 공개한 Dark Clark은 누구를 겨냥했고, AI를 어떻게 악용해 독자에게 접근했나?",
-        "gap": "공식 발표에 근거해 표적 지역·AI 사용 업무·위장 조직·유통 경로를 표로 정리하고, 발표일과 차단 시점을 구분합니다.",
-        "source_url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations/",
+        "topic": "Earlibot, 10월 8일 스마트 디바이스 공모전 최우수상 수상과 기술 용도",
+        "intent": "10월 8일 수상한 Earlibot은 식품 공정에서 어떤 용도로 쓰이며, 독자가 확인할 기술 정보와 상용화 지원은 무엇인가?",
+        "gap": "개발사·기술 용도·수상 결과·수상팀 지원을 표로 정리하고, 미공개 성능·출시 일정은 구분한다.",
+        "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
         "verified_sources": [
           {
-            "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations/",
-            "original_url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-            "title": "Disrupting AI-enabled “false front” operations | OpenAI",
+            "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
             "checked_on": "2026-10-09",
-            "publication_dates": [],
-            "sha256": "0bd97ad13a1209a8e4e46bb76e124a7884c879cc80abc839bb50402872479fc4",
-            "excerpt": "October 8, 2026 Safety Disrupting AI-enabled “false front” operations Loading… Share Over the past two and a half years, we’ve reported on many of the ways in which threat actors tried to use our models to conduct cyber attacks, covert influence operations (IO), scams, and other violations of our Usage Policies. We publish these reports to inform regulators, our industry peers, and wider society of how we see threat actors trying to leverage AI, and to shine a light on the vulnerabilities they try to exploit. We recently banned two IO—one from Russia and one from Iran—that used our models in combination with more traditional techniques and technologies to support sophisticated “false front” entities. They used those entities to launder geopolitical, conflict-related messaging into their target audiences. The Iranian operation included a stable of seven “journalist” personas which it used to pitch long-form articles to small and medium online outlets around the world; the Russian operation appears to have co-opted unwitting people in Latin America to run a “think tank” on the ground. Both operations were multi-dimensional, trying a range of different tactics to achieve their goals. As well as long-form articles, the Iranian operation generated batches of social media comments, generally on topics related to the US-Iran war. As well as controlling the “think tank,” the Russian operation created fake “leaked” documents and audio scripts, some of which we identified being spread online. Both operations also made heavy use of AI to draft internal reports (the Russian operation did this more than anything else); in both cases, the actors used questionable or outright deceitful methodologies to exaggerate the operators’ effectiveness. What is most striking about these operations is that they closely resembled complex influence operations of the pre-AI age, but used AI to make some of the workflows easier. The journalist personas run by the Iranian operation bore a family resemblance to the fake journalist “ Alice ⁠ (opens in a new window) Donovan ⁠ (opens in a new window) ,” a front for Russian military intelligence whose articles were published by a range of Western outlets in 2016-17. In 2020, individuals associated with past activity by the Russian Internet Research Agency ran a fake “news” outlet called “ PeaceData ⁠ (opens in a new window) ,” which co-opted unwitting journalists around the world into writing for it. These operations were also unusual for their potential reach. Using the IO Breakout Scale ⁠ (opens in a new window) , which rates IO on a scale of 1 (lowest) to 6 (highest), we would assess the Russia-origin operation as belonging in Category 5 . This is the first Category 5 operation we’ve disrupted since we began our reporting. The Iran-origin operation reached Category 4 . Both managed to land their content (not all of which was generated from our models) in mainstream media outlets, rather than simply posting it on social media. This is consistent with a pattern we’ve observed across the 30 covert influence operations we’ve exposed in the last two and a half years: the operations which try to land their content in real media outlets, rather than relying on fake social media distribution, tend to have the highest potential reach and impact. Matrix of the 30 IO we’ve exposed since early 2024, assessed by primary distribution method (social media, operation-run website, external publications) and score on the Breakout Scale. Operations which used more than one distribution method, such as running a website and promoting it on social media, are classified by the method which appeared to constitute the core of the operation. AI can give such false-front operations greater scale, efficiency, linguistic fluency, and editorial ability. The operators can use these advantages to exploit unsuspecting victims, such as employees or editors, and plant their content in front of audiences who have no idea who was behind it, or what their motivations were. These operations also demonstrate the complexity and sophistication of threat actors’ use of false personas and entities to achieve their goals. Understanding the vulnerabilities that threat actors exploit in these efforts, and how those vulnerabilities can translate into audience and reach, will be essential to maintaining robust defenses across organizations. But the covert nature of these false-front operations also makes them particularly vulnerable to responsible disclosure. Both “Alice Donovan” and “PeaceData” ceased their activity after they were exposed. That’s why our goal in reporting these false-front operations is to make further research and disruption easier—and make continuing the operations harder. Russia: Operation “Dark Clark” Russia-origin actors running influence campaigns across Latin America. Actor We banned a cluster of ChatGPT accounts that originated in Russia. They used ChatGPT for a range of tasks associated with covert influence operations targeting countries across Latin America. Much of this activity appeared aimed at undermining Ukraine’s reputation in the region, but some appeared aimed at influencing local political outcomes, especially in Argentina and Bolivia. Most of the operators prompted in Russian; one prompted in Spanish, but nevertheless appeared to be located in Russia. We have shared information on this case with the relevant authorities. The operators used ChatGPT to perform three main tasks: writing internal reports on their activities (and other people’s activities which they could plausibly take credit for), creating content for their operations, and drafting reports on the performance of a self-described “research platform” in Latin America called the Social Research Center (SRC). They appear to have controlled the SRC via a fake persona named “Mia Clark”; in honor of the name, we have nicknamed this operation “Dark Clark.” Since we do not allow access to our models from Russia, they used VPNs to connect to our services. In their internal reports, the operators claimed to have spread fake stories across Latin America to undermine Ukraine or local leaders. Some of these fakes have been attributed by open-source ⁠ (opens in a new window) researchers ⁠ (opens in a new window) to a Russian entity known as “Politology” or “La Compania,” a reported successor to the Wagner Group and other entities founded by Russian oligarch Yevgeniy Prigozhin. The operators also asked our models to translate or explain public reporting about Politology and Wagner, far more than asking about any other Russia-origin networks. This operation was unusual in two ways. First, it appears to have successfully co-opted individuals in Latin America to work for the SRC. The Russian operators’ reports on the SRC referred to decisions over issues such as pay scales, hiring, and firing, suggesting that they controlled the entity, rather than cooperating with it. The available evidence indicates that the SRC’s employees in Latin America were not aware that they were working for a Russian group. Unlike another Russia-linked “think tank” that we recently exposed , the SRC appears to have produced a majority of original content via its co-opted staff. This stands out as the most complex attempt to run a front identity that we’ve disrupted over the past two and a half years. Second, some open-source evidence suggests that Dark Clark’s fakes spread widely enough to provoke fact checks ⁠ (opens in a new window) and official denials ⁠ (opens in a new window) , indicating a degree of penetration which goes beyond any of the influence operations we disrupted over the past two years. One fake that the operation claimed to have planted in Peru even fed into public tensions between Ukraine and Poland. Internal reporting The main way the operators used ChatGPT was to draft and update internal reports to an unknown superior. These regular reports described efforts to conduct covert influence campaigns a"
+            "publication_dates": [
+              "2026-10-08T16:00:00+09:00"
+            ],
+            "sha256": "d5453ae117da68a186cc0ac5571b78476955e4a236f7619728adb55be162c40a",
+            "excerpt": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-6253)",
+            "attachment_url": "https://www.korea.kr/common/download.do?fileId=198567740&tblKey=GMN"
           }
         ],
         "intent_results": [
-          "https://openai.com/index/disrupting-ai-enabled-false-front-operations/"
+          "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733"
         ],
         "valid_until": null,
         "article_type": "information",
@@ -18183,9 +18195,9 @@
         "demand_provider": null,
         "evidence_mode": "latest_issue",
         "latest_issue_listing": {
-          "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-          "title": "Disrupting AI-enabled “false front” operations",
-          "publisher": "openai_news",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
           "published": "2026-10-08"
         },
         "organic_provider": null,
@@ -18197,68 +18209,316 @@
         "trend_provider": null,
         "trend_status": "not_applicable",
         "selection_version": 8,
-        "selected_at": "2026-10-09T03:46:47.041333+00:00",
+        "selected_at": "2026-10-09T06:40:35.469368+00:00",
         "source": "category_market_v1",
         "keywords": [
-          "Dark Clark"
+          "Earlibot"
         ],
         "status": "pending",
         "suitability_evidence": {
           "version": 1,
-          "checked_at": "2026-10-09T03:46:47.041333+00:00",
-          "input_sha256": "e23cf91dc650496d11141df63b0f170441f45cc676e3796050398d4e13e9781e",
+          "checked_at": "2026-10-09T06:40:35.469368+00:00",
+          "input_sha256": "db13433eeeb64d1ac30f1b8ed07ee56103ccad6455c0133b66a81fb682e7c2cb",
           "review": {
             "scope": "full_keyword",
-            "target_keyword": "Dark Clark",
+            "target_keyword": "Earlibot",
             "sources": [
               {
                 "source_index": 0,
-                "quote": " disclosure. Both “Alice Donovan” and “PeaceData” ceased their activity after they were exposed. That’s why our goal in reporting these false-front operations is to make further research and disruption easier—and make continuing the operations harder. Russia: Operation “Dark Clark” Russia-origin actors running influence campaigns across Latin America. Actor We banned a cluster of ChatGPT accounts that originated in Russia. They used ChatGPT for a range of tasks associated with covert influence operations targeting countries across Latin America. Much of this activity appeared aimed at undermining Ukraine’s reputation in the region, but some appeared aimed at influencing local political outcomes, especially in Argentina and Bolivia. Most of the operators prompted in Russian; one prompted in Spanish, but nevertheless appeared to be located in Russia. We have shared information on this case",
-                "entity": "Dark Clark",
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-",
+                "entity": "㈜트라이 포드랩",
                 "context": "general"
               }
             ],
             "required_facets": [
               {
-                "facet": "Dark Clark은 무엇이며 누구를 겨냥했나?",
-                "answer": "러시아발 비밀 여론공작으로, 중남미에서 우크라이나 평판과 아르헨티나·볼리비아 정치에 영향을 노렸다.",
+                "facet": "Earlibot은 누가 개발했으며 어떤 용도로 쓰이는가?",
+                "answer": "㈜트라이 포드랩의 Physical AI 기반 식품 공정 특화 정량 디스펜싱 로봇 암이다. 구체적 성능·출시 일정은 제공 본문에서 확인되지 않는다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": " disclosure. Both “Alice Donovan” and “PeaceData” ceased their activity after they were exposed. That’s why our goal in reporting these false-front operations is to make further research and disruption easier—and make continuing the operations harder. Russia: Operation “Dark Clark” Russia-origin actors running influence campaigns across Latin America. Actor We banned a cluster of ChatGPT accounts that originated in Russia. They used ChatGPT for a range of tasks associated with covert influence operations targeting countries across Latin America. Much of this activity appeared aimed at undermining Ukraine’s reputation in the region, but some appeared aimed at influencing local political outcomes, especially in Argentina and Bolivia. Most of the operators prompted in Russian; one prompted in Spanish, but nevertheless appeared to be located in Russia. We have shared information on this case"
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
               },
               {
-                "facet": "AI를 어떤 업무에 사용했나?",
-                "answer": "ChatGPT로 내부 활동 보고서, 공작 콘텐츠, Social Research Center의 성과 보고서를 작성했다.",
+                "facet": "Earlibot의 공모전 수상 결과는 무엇인가?",
+                "answer": "2026 전국 스마트 디바이스 공모전에서 ㈜트라이 포드랩의 Earlibot이 기업 부문 최우수상에 선정됐다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "the operators prompted in Russian; one prompted in Spanish, but nevertheless appeared to be located in Russia. We have shared information on this case with the relevant authorities. The operators used ChatGPT to perform three main tasks: writing internal reports on their activities (and other people’s activities which they could plausibly take credit for), creating content for their operations, and drafting reports on the performance of a self-described “research platform” in Latin America called the Social Research Center (SRC). They appear to have controlled the SRC via a fake persona named “Mia Clark”; in honor of the name, we have nicknamed this operation “Dark Clark.” Since we do not allow access to our models from Russia, they used VPNs to connect to our services. In their internal reports, the operators claimed to have spread fake stories across Latin America to undermine Ukraine "
+                "quote": " 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지"
               },
               {
-                "facet": "어떤 위장 조직과 인물로 독자에게 접근했나?",
-                "answer": "가짜 인물 Mia Clark을 통해 SRC를 통제한 것으로 보이며, 현지 직원들은 러시아 조직과의 관계를 몰랐다.",
+                "facet": "수상에 따른 상용화 지원은 무엇인가?",
+                "answer": "수상팀에 시험인증 연계 혜택이 제공된다. 3,700만 원은 전체 상금 규모이며 왕중왕전 출전 연계는 기업 부문 대상팀에 한정된다.",
                 "supported": true,
                 "source_index": 0,
-                "quote": "r the SRC. The Russian operators’ reports on the SRC referred to decisions over issues such as pay scales, hiring, and firing, suggesting that they controlled the entity, rather than cooperating with it. The available evidence indicates that the SRC’s employees in Latin America were not aware that they were working for a Russian group. Unlike another Russia-linked “think tank” that we recently exposed , the SRC appears to have produced a majority of original content via its co-opted staff. This stands out as the most complex attempt to run a front identity that we’ve disrupted over the past two and a half years. Second, some open-source evidence suggests that Dark Clark’s fakes spread widely enough to provoke fact checks ⁠ (opens in a new window) and official denials ⁠ (opens in a new window) , indicating a degree of penetration which goes beyond any of the influence operations we disrup"
-              },
-              {
-                "facet": "콘텐츠는 어디까지 유통됐으며 정보 유통 위험은 무엇인가?",
-                "answer": "러시아발 공작 콘텐츠 일부는 주류 언론에 실렸다. 잠재 도달 범위 평가인 5등급을 실제 설득 효과와 구분해야 한다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": " with past activity by the Russian Internet Research Agency ran a fake “news” outlet called “ PeaceData ⁠ (opens in a new window) ,” which co-opted unwitting journalists around the world into writing for it. These operations were also unusual for their potential reach. Using the IO Breakout Scale ⁠ (opens in a new window) , which rates IO on a scale of 1 (lowest) to 6 (highest), we would assess the Russia-origin operation as belonging in Category 5 . This is the first Category 5 operation we’ve disrupted since we began our reporting. The Iran-origin operation reached Category 4 . Both managed to land their content (not all of which was generated from our models) in mainstream media outlets, rather than simply posting it on social media. This is consistent with a pattern we’ve observed across the 30 covert influence operations we’ve exposed in the last two and a half years: the operations"
-              },
-              {
-                "facet": "발표일과 계정 차단 시점은 어떻게 다른가?",
-                "answer": "발표일은 2026년 10월 8일이다. 본문은 최근 차단했다고만 밝혀 정확한 차단일은 확인되지 않는다.",
-                "supported": true,
-                "source_index": 0,
-                "quote": "October 8, 2026 Safety Disrupting AI-enabled “false front” operations Loading… Share Over the past two and a half years, we’ve reported on many of the ways in which threat actors tried to use our models to conduct cyber attacks, covert influence operations (IO), scams, and other violations of our Usage Policies. We publish these reports to inform regulators, our industry peers, and wider society of how we see threat actors trying to leverage AI, and to shine a light on the vulnerabilities they try to exploit. We recently banned two IO—one from Russia and one from Iran—that used our models in combination with more traditional techniques and technologies to support sophisticated “false front” entities. They used those entities to launder geopolitical, conflict-related messaging into their target audiences. The Iranian operation included a stable of seven “journalist” personas which it used"
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
               }
             ],
             "current_relevance": {
               "kind": "unknown",
               "source_index": 0,
-              "quote": "October 8, 2026 Safety Disrupting AI-enabled “false front” operations Loading… Share Over the past two and a half years, we’ve reported on many of the ways in which threat actors tried to use our models to conduct cyber attacks, covert influence operations (IO), scams, and other violations of our Usage Policies. We publish these reports to inform regulators, our industry peers, and wider society of how we see threat actors trying to leverage AI, and to shine a light on the vulnerabilities they try to exploit. We recently banned two IO—one from Russia and one from Iran—that used our models in combination with more traditional techniques and technologies to support sophisticated “false front” entities. They used those entities to launder geopolitical, conflict-related messaging into their target audiences. The Iranian operation included a stable of seven “journalist” personas which it used",
+              "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "latest_issue_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T15:40:35.469368+09:00",
+          "window_start": "2026-10-08T00:00:00+09:00",
+          "input_sha256": "7a7932e2bcd110aa71731fc2803c2f8040fcdb03272e42d78311160de403e91b",
+          "review": {
+            "is_new_event": true,
+            "topic_is_about_event": true,
+            "scope": "full_topic",
+            "event_kind": "announcement",
+            "event_date": "2026-10-08",
+            "source_index": 0,
+            "date_quote": "2026-10-08T16:00:00+09:00",
+            "event_quote": "최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다."
+          }
+        },
+        "score_components": {
+          "latest_issue": 5,
+          "intent_fit": 15
+        },
+        "score": 20,
+        "publish_eligible": true,
+        "hold_reasons": []
+      },
+      {
+        "keyword": "Psyco-Neu Vision",
+        "category": "테크",
+        "topic": "Psyco-Neu Vision, 10월 8일 스마트 디바이스 공모전 최우수상 수상과 기술 목적",
+        "intent": "10월 8일 수상한 Psyco-Neu Vision은 어떤 기술이며, 피지컬 AI 개발자가 알아둘 후속 지원은 무엇인가?",
+        "gap": "수상일·기업·기술 목적·수상팀 지원을 표로 정리하고, 미공개된 성능·출시 일정은 구분한다.",
+        "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+        "verified_sources": [
+          {
+            "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+            "checked_on": "2026-10-09",
+            "publication_dates": [
+              "2026-10-08T16:00:00+09:00"
+            ],
+            "sha256": "d5453ae117da68a186cc0ac5571b78476955e4a236f7619728adb55be162c40a",
+            "excerpt": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-6253)",
+            "attachment_url": "https://www.korea.kr/common/download.do?fileId=198567740&tblKey=GMN"
+          }
+        ],
+        "intent_results": [
+          "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": null,
+        "demand_scope": "latest_issue_exempt",
+        "demand_provider": null,
+        "evidence_mode": "latest_issue",
+        "latest_issue_listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        },
+        "organic_provider": null,
+        "organic_query": null,
+        "organic_results": [],
+        "organic_domains": [],
+        "dominant_result_ratio": null,
+        "trend_growth": null,
+        "trend_provider": null,
+        "trend_status": "not_applicable",
+        "selection_version": 8,
+        "selected_at": "2026-10-09T06:40:35.469368+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "Psyco-Neu Vision"
+        ],
+        "status": "pending",
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T06:40:35.469368+00:00",
+          "input_sha256": "4647c737625534cd4d8ee570e9f89f712ffdf267ce5be450fc46c580128d1fef",
+          "review": {
+            "scope": "full_keyword",
+            "target_keyword": "Psyco-Neu Vision",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-",
+                "entity": "㈜에이드올",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "Psyco-Neu Vision은 누구의 기술이며 목적은 무엇인가?",
+                "answer": "㈜에이드올의 결정론적 머신비전 프레임워크로, 피지컬 AI의 기능 안전 보장을 목적으로 소개됐다. 성능 검증 결과는 제시되지 않았다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "어떤 상을 받았는가?",
+                "answer": "2026 전국 스마트 디바이스 공모전 기업 부문 최우수상 수상작이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "수상 행사는 언제 열렸는가?",
+                "answer": "2026년 공모전 결선과 시상식은 10월 8일 개최됐다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6"
+              },
+              {
+                "facet": "수상팀 후속 지원은 무엇이며 누구에게 적용되는가?",
+                "answer": "수상팀에는 시험인증 연계 혜택이 제공된다. 왕중왕전 출전 연계는 기업 부문 대상팀에 한정되며 일반 개발자 지원이 아니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              }
+            ],
+            "current_relevance": {
+              "kind": "unknown",
+              "source_index": 0,
+              "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "latest_issue_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T15:40:35.469368+09:00",
+          "window_start": "2026-10-08T00:00:00+09:00",
+          "input_sha256": "33f91b42f2998c9d1abeb412aabec926f9ab5446e4e82b7537df3f839db92faf",
+          "review": {
+            "is_new_event": true,
+            "topic_is_about_event": true,
+            "scope": "full_topic",
+            "event_kind": "announcement",
+            "event_date": "2026-10-08",
+            "source_index": 0,
+            "date_quote": "2026-10-08T16:00:00+09:00",
+            "event_quote": "심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다."
+          }
+        },
+        "score_components": {
+          "latest_issue": 5,
+          "intent_fit": 15
+        },
+        "score": 20,
+        "publish_eligible": true,
+        "hold_reasons": []
+      }
+    ],
+    "held": [
+      {
+        "keyword": "2026 전국 스마트 디바이스 공모전",
+        "category": "테크",
+        "topic": "2026 전국 스마트 디바이스 공모전, 10월 8일 결선 결과와 온디바이스 AI 적용 사례",
+        "intent": "10월 8일 발표된 수상작은 어떤 현장에 AI를 적용하며, 수상팀의 상용화에는 어떤 지원이 제공되나?",
+        "gap": "결선 6팀의 제품명·적용 분야·수상 결과를 표로 정리하고, 시험인증 및 후속 경진대회 연계 대상을 구분한다.",
+        "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+        "verified_sources": [
+          {
+            "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+            "checked_on": "2026-10-09",
+            "publication_dates": [
+              "2026-10-08T16:00:00+09:00"
+            ],
+            "sha256": "d5453ae117da68a186cc0ac5571b78476955e4a236f7619728adb55be162c40a",
+            "excerpt": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-6253)",
+            "attachment_url": "https://www.korea.kr/common/download.do?fileId=198567740&tblKey=GMN"
+          }
+        ],
+        "intent_results": [
+          "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": null,
+        "demand_scope": "latest_issue_exempt",
+        "demand_provider": null,
+        "evidence_mode": "latest_issue",
+        "latest_issue_listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        },
+        "organic_provider": null,
+        "organic_query": null,
+        "organic_results": [],
+        "organic_domains": [],
+        "dominant_result_ratio": null,
+        "trend_growth": null,
+        "trend_provider": null,
+        "trend_status": "not_applicable",
+        "selection_version": 8,
+        "selected_at": "2026-10-09T06:40:35.469368+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "2026 전국 스마트 디바이스 공모전"
+        ],
+        "status": "pending",
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T06:40:35.469368+00:00",
+          "input_sha256": "0db419ad0d1c9559a3b36764135e9c2f7f3bff41dc1c30b3ff81a1f38b153aac",
+          "review": {
+            "scope": "narrower_query",
+            "target_keyword": "2026 전국 스마트 디바이스 공모전",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
+                "entity": "과학기술정보통신부",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "2026 공모전의 주제, 참가 대상과 진행 일정은 무엇인가?",
+                "answer": "온디바이스 AI 주제, 국민 누구나 참여, 접수 시작·결선일은 확인된다. 전체 일정은 없고 기획은 결과에 한정된다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6"
+              },
+              {
+                "facet": "결선 진출팀과 수상 결과는 무엇인가?",
+                "answer": "알파팜텍·드란비가 대상, 트라이포드랩·에이드올·로보인·불랩스가 최우수상으로 확인된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": " 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지"
+              },
+              {
+                "facet": "수상작은 어떤 현장과 기능에 AI를 적용하는가?",
+                "answer": "병원 투약·실행 제어는 앞 구절, 식품 공정·기능 안전·건물관리·소방관 길안내는 이 구절에서 확인된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "수상팀의 상용화 지원과 후속 대회 연계 대상은 누구인가?",
+                "answer": "수상팀에는 시험인증 연계 혜택, 기업 부문 대상팀에는 2026 K-디지털 왕중왕전 출전 연계 기회가 제공된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              }
+            ],
+            "current_relevance": {
+              "kind": "unknown",
+              "source_index": 0,
+              "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
               "event_start": null,
               "event_end": null,
               "date_quote": null
@@ -18272,68 +18532,454 @@
         "score": 20,
         "publish_eligible": false,
         "hold_reasons": [
-          "unverified_current_relevance"
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ]
+      },
+      {
+        "keyword": "EdgeGuard",
+        "category": "테크",
+        "topic": "EdgeGuard, 10월 8일 스마트 디바이스 공모전 대상 수상: 플랫폼 개요와 후속 지원",
+        "intent": "10월 8일 대상을 받은 EdgeGuard는 어떤 플랫폼이며, 수상팀 지원과 일반 사용자 출시·이용 일정은 어디까지 발표됐나?",
+        "gap": "개발팀·플랫폼 명칭·수상일·수상팀 지원을 표로 정리하고, 출시·이용 일정은 본문에 명시되지 않았음을 구분한다.",
+        "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+        "verified_sources": [
+          {
+            "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+            "checked_on": "2026-10-09",
+            "publication_dates": [
+              "2026-10-08T16:00:00+09:00"
+            ],
+            "sha256": "d5453ae117da68a186cc0ac5571b78476955e4a236f7619728adb55be162c40a",
+            "excerpt": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-6253)",
+            "attachment_url": "https://www.korea.kr/common/download.do?fileId=198567740&tblKey=GMN"
+          }
+        ],
+        "intent_results": [
+          "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": null,
+        "demand_scope": "latest_issue_exempt",
+        "demand_provider": null,
+        "evidence_mode": "latest_issue",
+        "latest_issue_listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        },
+        "organic_provider": null,
+        "organic_query": null,
+        "organic_results": [],
+        "organic_domains": [],
+        "dominant_result_ratio": null,
+        "trend_growth": null,
+        "trend_provider": null,
+        "trend_status": "not_applicable",
+        "selection_version": 8,
+        "selected_at": "2026-10-09T06:40:35.469368+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "EdgeGuard"
+        ],
+        "status": "pending",
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T06:40:35.469368+00:00",
+          "input_sha256": "f3f455ab2bb3198f80d802444e9245c05bcf7d29da06b971e2e4fc3bbb7e877c",
+          "review": {
+            "scope": "narrower_query",
+            "target_keyword": "EdgeGuard",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": " 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지",
+                "entity": "드란비(Dranvi)",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "EdgeGuard는 누가 개발한 어떤 플랫폼이며 어떤 기능을 제공하는가?",
+                "answer": "드란비가 개발한 온디바이스 AI Runtime Control 플랫폼이라는 명칭만 확인되며 구체적 기능 설명은 없다.",
+                "supported": false,
+                "source_index": 0,
+                "quote": " 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지"
+              },
+              {
+                "facet": "EdgeGuard의 수상 내역과 수상일은 무엇인가?",
+                "answer": "2026년 10월 8일 열린 공모전에서 일반 부문 대상을 수상했다. 수상 대상은 구절 1에서 확인된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6"
+              },
+              {
+                "facet": "수상팀에게 어떤 후속 지원이 제공되는가?",
+                "answer": "수상팀 전체 상금은 총 3,700만 원이며 시험인증 연계 혜택이 제공된다. 왕중왕전 연계는 기업 부문 대상에 한정된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "일반 사용자 출시·이용 일정은 어디까지 발표됐는가?",
+                "answer": "제공된 보도자료에는 일반 사용자 출시·이용 일정이 명시되지 않았다. 다른 발표의 존재 여부는 확인할 수 없다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              }
+            ],
+            "current_relevance": {
+              "kind": "unknown",
+              "source_index": 0,
+              "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "score_components": {
+          "latest_issue": 5,
+          "intent_fit": 15
+        },
+        "score": 20,
+        "publish_eligible": false,
+        "hold_reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
         ]
       }
     ],
-    "rejected": [
+    "rejected": [],
+    "excluded_keywords": [],
+    "research_stop_reason": "selection_target",
+    "ranked_candidates": [
       {
-        "keyword": "2026 전국 스마트 디바이스 공모전 결선",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
-              "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
-              "excerpt_chars": 2411
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
+        "keyword": "Earlibot",
+        "category": "테크",
+        "topic": "Earlibot, 10월 8일 스마트 디바이스 공모전 최우수상 수상과 기술 용도",
+        "intent": "10월 8일 수상한 Earlibot은 식품 공정에서 어떤 용도로 쓰이며, 독자가 확인할 기술 정보와 상용화 지원은 무엇인가?",
+        "gap": "개발사·기술 용도·수상 결과·수상팀 지원을 표로 정리하고, 미공개 성능·출시 일정은 구분한다.",
+        "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+        "verified_sources": [
+          {
+            "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+            "checked_on": "2026-10-09",
+            "publication_dates": [
+              "2026-10-08T16:00:00+09:00"
+            ],
+            "sha256": "d5453ae117da68a186cc0ac5571b78476955e4a236f7619728adb55be162c40a",
+            "excerpt": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-6253)",
+            "attachment_url": "https://www.korea.kr/common/download.do?fileId=198567740&tblKey=GMN"
           }
+        ],
+        "intent_results": [
+          "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": null,
+        "demand_scope": "latest_issue_exempt",
+        "demand_provider": null,
+        "evidence_mode": "latest_issue",
+        "latest_issue_listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        },
+        "organic_provider": null,
+        "organic_query": null,
+        "organic_results": [],
+        "organic_domains": [],
+        "dominant_result_ratio": null,
+        "trend_growth": null,
+        "trend_provider": null,
+        "trend_status": "not_applicable",
+        "selection_version": 8,
+        "selected_at": "2026-10-09T06:40:35.469368+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "Earlibot"
+        ],
+        "status": "pending",
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T06:40:35.469368+00:00",
+          "input_sha256": "db13433eeeb64d1ac30f1b8ed07ee56103ccad6455c0133b66a81fb682e7c2cb",
+          "review": {
+            "scope": "full_keyword",
+            "target_keyword": "Earlibot",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-",
+                "entity": "㈜트라이 포드랩",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "Earlibot은 누가 개발했으며 어떤 용도로 쓰이는가?",
+                "answer": "㈜트라이 포드랩의 Physical AI 기반 식품 공정 특화 정량 디스펜싱 로봇 암이다. 구체적 성능·출시 일정은 제공 본문에서 확인되지 않는다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "Earlibot의 공모전 수상 결과는 무엇인가?",
+                "answer": "2026 전국 스마트 디바이스 공모전에서 ㈜트라이 포드랩의 Earlibot이 기업 부문 최우수상에 선정됐다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": " 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지"
+              },
+              {
+                "facet": "수상에 따른 상용화 지원은 무엇인가?",
+                "answer": "수상팀에 시험인증 연계 혜택이 제공된다. 3,700만 원은 전체 상금 규모이며 왕중왕전 출전 연계는 기업 부문 대상팀에 한정된다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              }
+            ],
+            "current_relevance": {
+              "kind": "unknown",
+              "source_index": 0,
+              "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "latest_issue_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T15:40:35.469368+09:00",
+          "window_start": "2026-10-08T00:00:00+09:00",
+          "input_sha256": "7a7932e2bcd110aa71731fc2803c2f8040fcdb03272e42d78311160de403e91b",
+          "review": {
+            "is_new_event": true,
+            "topic_is_about_event": true,
+            "scope": "full_topic",
+            "event_kind": "announcement",
+            "event_date": "2026-10-08",
+            "source_index": 0,
+            "date_quote": "2026-10-08T16:00:00+09:00",
+            "event_quote": "최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다."
+          }
+        },
+        "score_components": {
+          "latest_issue": 5,
+          "intent_fit": 15
+        },
+        "score": 20,
+        "publish_eligible": true,
+        "hold_reasons": []
+      },
+      {
+        "keyword": "Psyco-Neu Vision",
+        "category": "테크",
+        "topic": "Psyco-Neu Vision, 10월 8일 스마트 디바이스 공모전 최우수상 수상과 기술 목적",
+        "intent": "10월 8일 수상한 Psyco-Neu Vision은 어떤 기술이며, 피지컬 AI 개발자가 알아둘 후속 지원은 무엇인가?",
+        "gap": "수상일·기업·기술 목적·수상팀 지원을 표로 정리하고, 미공개된 성능·출시 일정은 구분한다.",
+        "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+        "verified_sources": [
+          {
+            "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+            "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+            "checked_on": "2026-10-09",
+            "publication_dates": [
+              "2026-10-08T16:00:00+09:00"
+            ],
+            "sha256": "d5453ae117da68a186cc0ac5571b78476955e4a236f7619728adb55be162c40a",
+            "excerpt": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6개 팀이 결선에 진출하였다. 결선 심사는 출품작에 대한 기술 혁신성, 사업화 확장 가능성, 해외 진출 역량 등을 각 팀이 발표하고, 이를 벤처캐피탈, 기술 사업 관리자(PM) 등 5인의 전문가 심사위원단이 현장에서 심사하는 공개 방식으로 진행하였다. 심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다. ※ 대상(과기정통부 장관상) 2팀, 최우수상(정보통신기획평가원<IITP>, 정보통신산업진흥원<NIPA> 원장상) 4팀, 우수상 8팀 < 결선 결과 > 구분 기업·팀명 제품·아이디어명 대상 기업 부문 알파팜텍 협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템 일반 부문 드란비 (Dranvi) EdgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-6253)",
+            "attachment_url": "https://www.korea.kr/common/download.do?fileId=198567740&tblKey=GMN"
+          }
+        ],
+        "intent_results": [
+          "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733"
+        ],
+        "valid_until": null,
+        "article_type": "information",
+        "monthly_search": null,
+        "demand_scope": "latest_issue_exempt",
+        "demand_provider": null,
+        "evidence_mode": "latest_issue",
+        "latest_issue_listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        },
+        "organic_provider": null,
+        "organic_query": null,
+        "organic_results": [],
+        "organic_domains": [],
+        "dominant_result_ratio": null,
+        "trend_growth": null,
+        "trend_provider": null,
+        "trend_status": "not_applicable",
+        "selection_version": 8,
+        "selected_at": "2026-10-09T06:40:35.469368+00:00",
+        "source": "category_market_v1",
+        "keywords": [
+          "Psyco-Neu Vision"
+        ],
+        "status": "pending",
+        "suitability_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T06:40:35.469368+00:00",
+          "input_sha256": "4647c737625534cd4d8ee570e9f89f712ffdf267ce5be450fc46c580128d1fef",
+          "review": {
+            "scope": "full_keyword",
+            "target_keyword": "Psyco-Neu Vision",
+            "sources": [
+              {
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-",
+                "entity": "㈜에이드올",
+                "context": "general"
+              }
+            ],
+            "required_facets": [
+              {
+                "facet": "Psyco-Neu Vision은 누구의 기술이며 목적은 무엇인가?",
+                "answer": "㈜에이드올의 결정론적 머신비전 프레임워크로, 피지컬 AI의 기능 안전 보장을 목적으로 소개됐다. 성능 검증 결과는 제시되지 않았다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "어떤 상을 받았는가?",
+                "answer": "2026 전국 스마트 디바이스 공모전 기업 부문 최우수상 수상작이다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              },
+              {
+                "facet": "수상 행사는 언제 열렸는가?",
+                "answer": "2026년 공모전 결선과 시상식은 10월 8일 개최됐다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6"
+              },
+              {
+                "facet": "수상팀 후속 지원은 무엇이며 누구에게 적용되는가?",
+                "answer": "수상팀에는 시험인증 연계 혜택이 제공된다. 왕중왕전 출전 연계는 기업 부문 대상팀에 한정되며 일반 개발자 지원이 아니다.",
+                "supported": true,
+                "source_index": 0,
+                "quote": "dgeGuard: 지능형 기기 내장형 인공지능(온디바이스 AI) Runtime Control 이음터(플랫폼) 최우수상 기업 부문 ㈜트라이 포드랩 물리적 인공지능(Physical AI) 기반 식품 공정 특화 정량 디스펜싱 로봇 암 Earlibot ㈜에이드올 물리적 인공지능(피지컬AI)의 기능 안전을 보장하는 결정론적 머신비전 프레임워크 Psyco-Neu Vision 일반 부문 로보인 UMMA(건물관리 자율이동 로봇) 불랩스 공간 왜곡 건축물 내 소방관 인지 오류 차단을 위한 기기 내장형 인공지능(온디바이스 A)I 기반 독립형 층수 보정 및 재난 길안내(내비게이션) 시스템 수상팀에게는 총 3,700만 원 규모의 상금과 함께 제품 상용화를 위한 실질적인 사후 혜택이 지원된다. 구체적으로는 5세대 이동통신 기기(5G 디바이스 단말) 검증, 정보통신기술(ICT) 융합품질인증 등의 시험인증 연계 혜택이 제공되며 기업 부문 대상 수상팀에게는 국내 우수 디지털 창업 초기 기업(스타트업)들이 모여 겨루는 통합 경진대회인 「2026 K-디지털 왕중왕전(그랜드 챔피언십)」출전 연계 기회가 부여된다. 과기정통부 박태완 정보통신산업정책관은 “최근 지능형 기기(스마트 디바이스) 산업은 기기 내장형 인공지능( 온디바이스 AI)과 물리적 인공지능(피지컬 AI)이 결합하면서 기기가 스스로 주변 환경을 물리적 으로 인지하고 안전하게 제어하는 고도화 단계로 빠르게 진화하고 있다”라며, “정부는 국내 중소·창업 초기 기업(스타트업)이 개발한 독창적인 제품들이 국내 시장 뿐만 아니라 세계 시장에도 진출할 수 있도록 적극 노력하겠다”라고 밝혔다. 담당 부서 과학기술정보통신부 책임자 팀장 송창종 (044-202-6250) 디바이스AX혁신팀 담당자 사무관 윤홍준 (044-202-6251) 담당자 주무관 김홍석 (044-202-"
+              }
+            ],
+            "current_relevance": {
+              "kind": "unknown",
+              "source_index": 0,
+              "quote": "보도자료 보도 시점 배포 시점 배포 2026.10.8.(목) 16:00 인공지능을 우리 일상의 곳곳에... 2026 전국 지능형 기기(스마트 디바이스) 공모전 결선 개최 - 2026년 정보통신 지능형 기기(스마트 디바이스) 전국 공모전 결선 및 시상식 개최 - 총 161건 접수… 기기 내장형 인공지능(온디바이스 AI), 물리적 인공지능 (피지컬 AI) 등 결선 6팀 경합 - ‘알파팜텍 ’ 기업 부문 대상, ‘드란비(Dranvi)’ 일반 부문 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’) 는 기기 내장형 인공지능( 온디바이스 AI) 등 디지털 기술을 활용한 혁신적인 제품과 아이디어를 발굴 하기 위한 「 2026년 정보통신기술 지능형 기기( ICT 스마트 디바이스 ) 전국 공모전 」 (이하 ‘공모전’) 의 결선 대회 와 시상식 을 10월 8일 에 서울 LW컨벤션 그랜드볼룸 에서 개최하였다. 본 공모전은 디지털 혁신 아이디어와 기술을 보유한 국민 누구나 참여하여 기술성, 사업성, 해외 진출 가능성 등을 겨루는 대표적인 기기(디바이스) 경진대회로, 지난 2014년 첫 개최 이래 올해로 13회를 맞이하였으며, 올해는 단순한 지능형(스마트) 기기를 넘어 외부 인터넷 기반 정보통신자원 통합 공유(클라우드) 연결 없이도 기기 자체에서 실시간으로 판단·작동하는 기기 내장형 인공지능(온디바이스 AI)을 핵심 주제로 설정하였다. 올해 공모전에는 5월 26일부터 접수를 시작해 총 161건 (기업 부문 64건, 일반 부문 97건) 의 유망 아이디어·기술이 접수되었으며, 예선과 본선 심사를 거쳐 최종 14개 수상팀이 확정되었고, 이 중 우수한 기술력과 사업성을 입증한 ‘알파팜텍’, ‘㈜에이드올’, ‘㈜트라이포드랩’, ‘드란비’, ‘로보인’, ‘불랩스’ 등 총 6",
+              "event_start": null,
+              "event_end": null,
+              "date_quote": null
+            }
+          }
+        },
+        "latest_issue_evidence": {
+          "version": 1,
+          "checked_at": "2026-10-09T15:40:35.469368+09:00",
+          "window_start": "2026-10-08T00:00:00+09:00",
+          "input_sha256": "33f91b42f2998c9d1abeb412aabec926f9ab5446e4e82b7537df3f839db92faf",
+          "review": {
+            "is_new_event": true,
+            "topic_is_about_event": true,
+            "scope": "full_topic",
+            "event_kind": "announcement",
+            "event_date": "2026-10-08",
+            "source_index": 0,
+            "date_quote": "2026-10-08T16:00:00+09:00",
+            "event_quote": "심사 결과, 기업 부문에서는 ‘협동 로봇 기반 병원 투약 안전 자동 분주 로봇 시스템’을 선보인 ‘알파팜텍’(김현수)이, 일반 부문에서는 ‘EdgeGuard: 지능형 기기 내장형 인공지능 Runtime Control 이음터(지능형 온디바이스 AI Runtime Control 플랫폼)’를 개발한 ‘드란비(Dranvi)’(박지윤)가 가장 우수한 성적을 거두며 대상(부총리상)을 수상하였으며, 최우수상에는 ‘㈜트라이 포드랩’(이정윤), ‘㈜에이드올’(김제필), ‘로보인’(박성현), ‘불랩스 ’(이경민) 4개 팀이 선정되었다."
+          }
+        },
+        "score_components": {
+          "latest_issue": 5,
+          "intent_fit": 15
+        },
+        "score": 20,
+        "publish_eligible": true,
+        "hold_reasons": []
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "keyword": "2026 전국 스마트 디바이스 공모전",
+        "decision": "held",
+        "reasons": [
+          "narrower_source_coverage",
+          "unverified_source_coverage"
+        ],
+        "listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
         }
       },
       {
-        "keyword": "Pollo Agent",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://openai.com/index/pollo-ai/",
-              "title": "Pollo AI turns creative ideas into campaigns with OpenAI | OpenAI",
-              "excerpt_chars": 6331
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "category_mismatch"
-          }
-        }
-      }
-    ],
-    "excluded_keywords": [],
-    "research_stop_reason": "latest_listing_exhausted",
-    "ranked_candidates": [],
-    "candidate_decisions": [
-      {
-        "keyword": "Dark Clark",
+        "keyword": "EdgeGuard",
         "decision": "held",
         "reasons": [
-          "unverified_current_relevance"
+          "narrower_source_coverage",
+          "unverified_source_coverage"
         ],
         "listing": {
-          "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-          "title": "Disrupting AI-enabled “false front” operations",
-          "publisher": "openai_news",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        }
+      },
+      {
+        "keyword": "Earlibot",
+        "decision": "selected",
+        "reasons": [],
+        "listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
+          "published": "2026-10-08"
+        }
+      },
+      {
+        "keyword": "Psyco-Neu Vision",
+        "decision": "selected",
+        "reasons": [],
+        "listing": {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784733",
+          "title": "인공지능을 우리 일상의 곳곳에... 2026 전국 스마트 디바이스 공모전 결선 개최",
+          "publisher": "과학기술정보통신부",
           "published": "2026-10-08"
         }
       }
     ],
     "notes": "Latest issues come from dated official listings; monthly search volume is exempt.",
     "failure_history": [
+      {
+        "keyword": "2026 전국 스마트 디바이스 공모전",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-09T06:40:35.469368+00:00",
+        "retry_after": "2026-10-12T06:40:35.469368+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "EdgeGuard",
+        "reason_code": "source_coverage",
+        "failed_at": "2026-10-09T06:40:35.469368+00:00",
+        "retry_after": "2026-10-12T06:40:35.469368+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "Dark Clark",
         "reason_code": "temporary_failure",
@@ -18676,51 +19322,122 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 8438
+        "elapsed_ms": 7873
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6730
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9455
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9920
+        "elapsed_ms": 10602
       },
       {
         "stage": "topic_suitability",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 20223
+        "elapsed_ms": 26515
       },
       {
         "stage": "topic_suitability",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 20228
+        "elapsed_ms": 26517
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11476
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 22322
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "error",
+        "code": "invalid_schema",
+        "elapsed_ms": 22323,
+        "validation": {
+          "reason": "source_duplicate",
+          "row_index": 1
+        }
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 18693
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 2,
+        "status": "returned",
+        "elapsed_ms": 18695
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9314
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 35326
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 35328
+      },
+      {
+        "stage": "latest_issue_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11878
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10369
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 16392
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 16394
+      },
+      {
+        "stage": "latest_issue_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 12814
       }
     ],
-    "analysis_recovery_attempts": 0,
+    "analysis_recovery_attempts": 1,
     "source_discovery_audit": [],
-    "selection_outcome": "no_pass_among_evaluated",
+    "selection_outcome": "selected",
     "selection_funnel": {
       "measured": 0,
       "pool": 0,
       "shortlist_offered_unique": 0,
-      "evaluated": 3,
-      "held": 1,
-      "rejected": 2,
-      "selected": 0,
-      "stop_reason": "latest_listing_exhausted"
+      "evaluated": 4,
+      "held": 2,
+      "rejected": 0,
+      "selected": 2,
+      "stop_reason": "selection_target"
     }
   }
 }

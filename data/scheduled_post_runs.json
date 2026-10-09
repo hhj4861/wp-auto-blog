@@ -403,7 +403,8 @@
       "category": "생활정보",
       "slot": "morning",
       "claimed_at": "2026-10-09T09:00:12.470515+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-09T00:11:03.695292+00:00"
     }
   }
 }

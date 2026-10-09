@@ -783,3 +783,68 @@ def test_lg_specs_features_and_end_conditions_are_kept_once(source_http, wrapper
 ])
 def test_lg_official_domain_keeps_https_and_host_boundaries(url, allowed):
     assert is_official_url(url) is allowed
+
+
+def _hwpx_bytes(*paragraphs):
+    import io, zipfile
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, 'w') as archive:
+        archive.writestr('mimetype', 'application/hwp+zip')
+        body = ''.join(f'<hp:p><hp:run><hp:t>{text}</hp:t></hp:run></hp:p>' for text in paragraphs)
+        archive.writestr('Contents/section0.xml', f'<hs:sec xmlns:hp="x" xmlns:hs="y">{body}</hs:sec>')
+    return buffer.getvalue()
+
+
+def _binary_response(data, content_type='application/octet-stream'):
+    response = _source_response('', content_type)
+    response.iter_content.return_value = [data]
+    return response
+
+
+PRESS_SHELL = ('<html><head><title>보도자료 | 식품의약품안전처</title></head><body><nav>홈 보도자료</nav>'
+               '<main><h2>[보도참고] 수산물가공품 회수 조치</h2>' + '첨부파일 보기 다운받기 ' * 20 +
+               '<a href="./down.do?brd_id=ntc0021&amp;seq=1&amp;file_seq=1">회수.hwp</a>'
+               '<a href="./down.do?brd_id=ntc0021&amp;seq=1&amp;file_seq=2">회수.hwpx</a>'
+               '<a href="https://evil.example/down.do?x=1">외부</a></main></body></html>')
+PRESS_TEXT = ('보도시점 배포 즉시 배포 2026. 10. 8.(목) 식품의약품안전처는 기타 수산물가공품에서 메틸수은이 '
+              '기준보다 초과 검출되어 해당 제품을 판매 중단하고 회수 조치한다고 밝혔다. ' * 3)
+
+
+def test_official_press_page_uses_its_hwpx_attachment_as_the_body(monkeypatch):
+    # E2E 2026-10-09: ministry press pages hold the release only in HWP/HWPX/PDF
+    # attachments, so the HTML shell failed as source_missing_detail.
+    calls = []
+    def get(url, **kwargs):
+        calls.append(url)
+        if 'view.do' in url:
+            return _source_response(PRESS_SHELL)
+        if url.endswith('file_seq=1'):
+            return _binary_response(b'\xd0\xcf\x11\xe0legacy-hwp')  # old binary HWP: skipped
+        return _binary_response(_hwpx_bytes(PRESS_TEXT))
+    monkeypatch.setattr(editorial.source_tls, 'get', get)
+    source = editorial.fetch_source('https://www.mfds.go.kr/brd/m_99/view.do?seq=1')
+    assert source['url'] == 'https://www.mfds.go.kr/brd/m_99/view.do?seq=1'
+    assert '메틸수은이 기준보다 초과 검출' in source['excerpt']
+    assert '2026. 10. 8.' in source['excerpt']
+    assert not any('evil.example' in url for url in calls)
+    assert source['attachment_url'] == 'https://www.mfds.go.kr/brd/m_99/down.do?brd_id=ntc0021&seq=1&file_seq=2'
+
+
+def test_attachment_body_is_only_used_on_listed_official_press_hosts(monkeypatch):
+    def get(url, **kwargs):
+        if 'down.do' in url:
+            raise AssertionError('attachments are not read for other hosts')
+        return _source_response(PRESS_SHELL)
+    monkeypatch.setattr(editorial.source_tls, 'get', get)
+    source = editorial.fetch_source('https://support.google.com/view.do?x=1')
+    assert source is not None and '메틸수은' not in source['excerpt']
+
+
+def test_unreadable_attachments_keep_the_html_body(monkeypatch):
+    def get(url, **kwargs):
+        if 'view.do' in url:
+            return _source_response(PRESS_SHELL)
+        return _binary_response(b'not a zip')
+    monkeypatch.setattr(editorial.source_tls, 'get', get)
+    source = editorial.fetch_source('https://www.mfds.go.kr/brd/m_99/view.do?seq=2')
+    assert source is not None and 'attachment_url' not in source

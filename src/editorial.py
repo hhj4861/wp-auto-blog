@@ -7,11 +7,13 @@ editorial review; missing evidence or an unavailable review blocks publication.
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import logging
 import re
 import time
 import uuid
+import zipfile
 from contextlib import contextmanager
 from contextvars import ContextVar
 from copy import deepcopy
@@ -42,6 +44,12 @@ OFFICIAL_NEWS_HOSTS = {"blogs.microsoft.com", "news.microsoft.com", "www.microso
     "blog.google", "deepmind.google", "github.blog",
     "workspaceupdates.googleblog.com", "news.skhynix.co.kr"}
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
+# Government press pages whose release text lives only in an attached document.
+# Only HWPX (zip + section XML) on the same official host is read; legacy HWP/PDF
+# and other hosts keep the HTML body.
+ATTACHMENT_BODY_HOSTS = {"www.korea.kr", "www.mfds.go.kr", "www.kca.go.kr", "www.moel.go.kr"}
+ATTACHMENT_LINK = re.compile(r"(?:^|/)(?:down|download)\.do\?", re.I)
+MAX_ATTACHMENT_TRIES = 4
 SOURCE_FETCH_BUDGET_SECONDS = 35
 SOURCE_FETCH_BACKOFF_SECONDS = 1
 SOURCE_MAX_BYTES = 5_000_000
@@ -77,6 +85,59 @@ def is_official_url(url: str) -> bool:
         host in OFFICIAL_NEWS_HOSTS or host.endswith((".go.kr", ".or.kr", ".gov", ".ac.kr"))
         or any(host_matches(host, d) for d in OFFICIAL_DOMAINS)
     )
+
+
+def _hwpx_text(data: bytes) -> str:
+    """Body text of an HWPX document; empty for anything else."""
+    if not data.startswith(b"PK"):
+        return ""
+    try:
+        with zipfile.ZipFile(io.BytesIO(data)) as archive:
+            sections = sorted((n for n in archive.namelist() if re.fullmatch(r"Contents/section\d+\.xml", n)),
+                              key=lambda n: int(re.search(r"\d+", n).group()))
+            parts = []
+            for name in sections[:20]:
+                xml = archive.read(name)[:2_000_000].decode("utf-8", "ignore")
+                parts.extend(unescape(t) for t in re.findall(r"<hp:t[^>]*>([^<]*)</hp:t>", xml))
+    except (zipfile.BadZipFile, KeyError, ValueError, OSError):
+        return ""
+    # Drop private-use glyphs used for table rules and bullets.
+    text = re.sub(r"[\ue000-\uf8ff\U000f0000-\U0010ffff]", " ", " ".join(parts))
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _attachment_body(soup, page_url: str, deadline: float) -> tuple[str, str]:
+    """First readable same-host HWPX attachment of an official press page."""
+    host = https_host(page_url)
+    if host not in ATTACHMENT_BODY_HOSTS:
+        return "", ""
+    links = []
+    for anchor in soup.find_all("a", href=True):
+        url = urljoin(page_url, anchor["href"])
+        if (ATTACHMENT_LINK.search(url) and https_host(url) == host and is_official_url(url)
+                and url not in links):
+            links.append(url)
+    for url in links[:MAX_ATTACHMENT_TRIES]:
+        remaining = deadline - time.monotonic()
+        if remaining <= 1:
+            break
+        try:
+            with source_tls.get(url, timeout=min(15, remaining), allow_redirects=False, stream=True) as res:
+                if res.status_code != 200:
+                    continue
+                data = bytearray()
+                for chunk in res.iter_content(65536):
+                    data.extend(chunk)
+                    if len(data) > SOURCE_MAX_BYTES or time.monotonic() >= deadline:
+                        break
+                if len(data) > SOURCE_MAX_BYTES:
+                    continue
+        except requests.RequestException:
+            continue
+        text = _hwpx_text(bytes(data))
+        if len(text) >= 200:
+            return text, url
+    return "", ""
 
 
 def _source_fetch_failure(reason: str) -> None:
@@ -305,6 +366,10 @@ def _fetch_source(url: str, title: str = "") -> dict | None:
         page_title = soup.title.get_text(" ", strip=True) if soup.title else title
         publication_dates = _publication_dates(soup)
         text = _source_body(soup, url)
+        attachment_text, attachment_url = _attachment_body(soup, url, deadline)
+        if attachment_text:
+            # The attached release is the official body; the page is navigation around it.
+            text = attachment_text
         if time.monotonic() >= deadline:
             return _source_fetch_failure("time_budget")
         if len(text) < 200:
@@ -314,6 +379,7 @@ def _fetch_source(url: str, title: str = "") -> dict | None:
             "checked_on": checked_today(), "publication_dates": publication_dates,
             "sha256": hashlib.sha256(text.encode()).hexdigest(),
             "excerpt": _source_excerpt(text, url),
+            **({"attachment_url": attachment_url} if attachment_url else {}),
         }
     return _source_fetch_failure("redirect_limit")
 

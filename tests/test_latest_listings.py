@@ -61,7 +61,8 @@ def test_collect_stops_paging_once_listing_is_older_than_the_window():
         calls.append(url)
         return KOREA_PAGE  # page already reaches 10/01, older than the window
     listings.collect('건강', NOW, get_text=get_text)
-    assert calls == [listings.KOREA_NEWS_URL.format(page=1)]
+    # Each list (press releases, policy news) stops after its first page.
+    assert calls == [listings.KOREA_PRESS_URL.format(page=1), listings.KOREA_NEWS_URL.format(page=1)]
 
 
 def test_feed_categories_read_their_newsrooms_and_tolerate_one_failing_source():
@@ -157,3 +158,14 @@ def test_labor_ministry_press_list_gives_html_body_pages_for_jobs():
     pages = {listings.MOEL_PRESS_URL: MOEL_PAGE}
     collected = listings.collect('취업', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))
     assert [row['url'] for row in collected] == [rows[0]['url']]
+
+
+def test_korea_reads_both_press_releases_and_policy_news():
+    # Press-release bodies are now read from their HWPX attachments (editorial).
+    press = KOREA_PAGE.replace('/news/policyNewsView.do?newsId=1&', '/briefing/pressReleaseView.do?newsId=7&')
+    rows = listings.parse_korea_news(press)
+    assert rows[0]['url'] == 'https://www.korea.kr/briefing/pressReleaseView.do?newsId=7'
+    pages = {listings.KOREA_PRESS_URL.format(page=1): press, listings.KOREA_NEWS_URL.format(page=1): KOREA_PAGE}
+    urls = [row['url'] for row in listings.collect('건강', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))]
+    assert urls == ['https://www.korea.kr/briefing/pressReleaseView.do?newsId=7',
+                    'https://www.korea.kr/news/policyNewsView.do?newsId=1']

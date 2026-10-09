@@ -216,4 +216,14 @@ def collect(category, now, *, get_text=_get_text):
             continue  # same announcement listed as press release and policy news
         titles.add(key)
         unique[row['url']] = row
-    return list(unique.values())
+    # Round-robin by publisher host: only the first few sources are fetched and
+    # evaluated, so one prolific list must not crowd out the others.
+    groups = {}
+    for row in unique.values():
+        groups.setdefault(row['url'].split('/')[2], []).append(row)
+    interleaved, lists = [], list(groups.values())
+    while any(lists):
+        for group in lists:
+            if group:
+                interleaved.append(group.pop(0))
+    return interleaved

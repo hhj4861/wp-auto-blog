@@ -678,5 +678,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-09T06:48:28.182727+00:00"
+  },
+  {
+    "key": "psyconeuvision",
+    "keyword": "Psyco-Neu Vision",
+    "topic": "Psyco-Neu Vision, 10월 8일 스마트 디바이스 공모전 최우수상 수상과 기술 목적",
+    "category": "테크",
+    "post_id": 1883,
+    "url": "https://trendpulse.blog/psyco-neu-vision-award-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 20,
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-09T06:54:29.712658+00:00"
   }
 ]

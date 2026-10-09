@@ -1046,6 +1046,19 @@ def test_reuse_never_revives_a_topic_the_writer_already_rejected_or_used(reuse_c
     assert json.loads(c.cli.REPORT.read_text())['취업']['selected'] == [other]
 
 
+def test_reuse_in_latest_mode_skips_evergreen_report_items_and_researches_latest(reuse_cli, monkeypatch):
+    # E2E 37894073472: an evergreen PT면접 report was reused, so the new job-posting
+    # listing was never read and another category's stock was published instead.
+    c = reuse_cli
+    good = evidence('https://example.go.kr/good')
+    c.save([candidate(source_url=good['url'], verified_sources=[good])])
+    c.fetch.side_effect = lambda url: good
+    monkeypatch.setattr(market, 'LATEST_LISTING_SELECTION', True)
+    c.select.side_effect = lambda *a, **k: {'category': '취업', 'selected': []}
+    assert c.cli.main() == 1
+    c.select.assert_called_once()
+
+
 def test_reuse_does_not_probe_stale_or_posted_candidates_or_add_them_to_exclusions(reuse_cli):
     c = reuse_cli
     stale = candidate(selected_at=(datetime.now(timezone.utc) - timedelta(days=2)).isoformat())

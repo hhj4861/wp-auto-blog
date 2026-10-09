@@ -418,3 +418,18 @@ def test_selection_does_not_run_the_evergreen_path_when_a_latest_issue_passed(li
     monkeypatch.setattr(market, 'demand_candidates', Mock(side_effect=AssertionError('no evergreen research')))
     report = market.select_category('테크', top_n=1, titles=[])
     assert report['selection_scope'] == 'latest_issue_listing' and report['selected']
+
+
+def test_one_announcement_yields_at_most_one_candidate(listing_case, monkeypatch):
+    # E2E 2026-10-09: one MSIT contest release produced two award posts (Earlibot,
+    # Psyco-Neu Vision), and one KCA comparison produced a product-name duplicate.
+    original = market.ask
+    def ask(prompt):
+        if '검색어를 최대 6개 추출하세요' in prompt:
+            return {'candidates': [{'keyword': '새에이전트', 'source_index': 0},
+                                   {'keyword': '승인 절차', 'source_index': 0}]}
+        return original(prompt)
+    monkeypatch.setattr(market, 'ask', ask)
+    report = market.select_category('테크', top_n=2, titles=[])
+    assert [row['keyword'] for row in report['selected']] == ['새에이전트']
+    assert any(row['reason'] == 'same announcement already evaluated' for row in report['rejected'])

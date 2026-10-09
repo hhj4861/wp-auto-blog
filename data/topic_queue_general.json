@@ -26518,5 +26518,909 @@
     "score": 65.22,
     "publish_eligible": true,
     "hold_reasons": []
+  },
+  {
+    "keyword": "혈당정상수치",
+    "category": "건강",
+    "topic": "혈당정상수치: 공복혈당·당화혈색소·포도당부하 2시간 검사 기준",
+    "intent": "공복혈당·당화혈색소·2시간 혈당의 정상 범위와 당뇨병 전단계·당뇨병 기준은 무엇인가?",
+    "gap": "검사별 기준표와 금식 조건 체크리스트를 제공하고, 일반 식후 측정과 포도당부하검사·자가측정과 확진의 차이를 설명한다.",
+    "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+    "verified_sources": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+        "original_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+        "title": "Diabetes Tests & Diagnosis - NIDDK",
+        "checked_on": "2026-10-09",
+        "publication_dates": [
+          "2025-10-06 20:06:56 -04:00"
+        ],
+        "sha256": "c54dd35d2ca2181446bbdb5e2ab9aac01e92b9e9bf8b6ac447afb5384d37fad2",
+        "excerpt": "Diabetes Tests & Diagnosis In this section: Who should be tested for diabetes? What tests are used to diagnose diabetes? What test results tell me if I have diabetes or prediabetes? Which tests help my doctor know what kind of diabetes I have? Your doctor can diagnose diabetes , prediabetes , and gestational diabetes using blood tests. The blood tests show if your blood glucose level , also called blood sugar, is higher than the range that is healthy for you. Blood tests can also help identify the type of diabetes you have. Don’t try to diagnose yourself if you think you might have diabetes. Blood testing equipment that you can buy over the counter, such as a blood glucose meter , cannot diagnose diabetes. Who should be tested for diabetes? Anyone who has symptoms of diabetes should be tested for the disease. Some people will not have any symptoms but may have risk factors for type 2 diabetes and need to be tested. Most pregnant women should also be tested for gestational diabetes. Testing helps doctors find diabetes sooner, so they can work with their patients to manage the disease and prevent health problems . If you have Medicare, it may cover the cost of tests if you have certain risk factors for diabetes. If you have different insurance, ask your insurance company if it covers diabetes tests. Blood tests help doctors diagnose diabetes and prediabetes. Type 1 diabetes Doctors often diagnose type 1 diabetes in children and young adults when they have diabetes symptoms, such as feeling thirsty and having to urinate more often, or if they may have diabetic ketoacidosis . Symptoms in adults may be less specific. 1 Type 1 diabetes can run in families. A study called TrialNet offers free testing to relatives of people with type 1 diabetes, even if the relatives don’t have symptoms. Type 2 diabetes Experts recommend routine testing for type 2 diabetes if you have certain risk factors . You may have a higher risk of developing type 2 diabetes if you are age 35 or older American Indian, Black or African American, Asian American, Hispanic/Latino, or Pacific Islander overweight or have obesity and have at least one other risk factor a woman who had gestational diabetes Take the American Diabetes Association Diabetes Risk Test to see if you are at risk for type 2 diabetes. Children can also develop type 2 diabetes. Experts recommend testing children and teens between the ages of 10 and 18 who are overweight or have obesity and have at least one more risk factor, such as a low birth weight, a parent who had diabetes while pregnant, or another factor. 1 Adults and children with normal diabetes test results should be retested every 3 years. 1 If your blood glucose levels are higher than the target range, but not high enough to be diagnosed with diabetes, doctors will diagnose you with prediabetes . Having prediabetes is serious because it raises the chance of developing type 2 diabetes. But developing type 2 diabetes can be prevented . Adults and children diagnosed with prediabetes should be tested for type 2 diabetes every year. Testing for type 2 diabetes before and during pregnancy All women who are planning to get pregnant should be tested for type 2 diabetes, especially if they have risk factors. If you are already pregnant, you should be tested for type 2 diabetes at the first prenatal appointment, or in the first 15 weeks of pregnancy. If you have diabetes, you should receive special care during your pregnancy to avoid problems for you and the baby. Gestational diabetes All pregnant women who do not have a previous diagnosis of diabetes should be tested for gestational diabetes between 24 and 28 weeks of pregnancy. 1 If you have gestational diabetes, you should get tested after your baby is born to see if you have type 2 diabetes, usually within 12 weeks after delivery. What tests are used to diagnose diabetes? Doctors use a variety of tests to diagnose diabetes and prediabetes. Your doctor may recommend different tests depending on whether you have symptoms or not, or whether you are pregnant. Fasting plasma glucose test The fasting plasma glucose (FPG) test measures your blood glucose level at a single point in time. For the most reliable results, your doctor will give you the test in the morning after you have fasted for at least 8 hours. Fasting means having nothing to eat or drink except sips of water. A1C test The A1C test is a blood test that provides your average levels of blood glucose over the last 3 months. Other names for the A1C test are hemoglobin A1C, HbA1C, glycated hemoglobin, and glycosylated hemoglobin test. You can eat and drink before this test. Before using the A1C test to diagnose diabetes, your doctor will consider factors, such as whether you are in your second or third trimester of pregnancy or whether you have certain types of anemia or another problem with your blood. 1 The A1C test might not be accurate in those cases. Certain types of hemoglobin , called hemoglobin variants, can interfere with measuring A1C levels. Most A1C tests used in the United States are not affected by the most common variants. If your A1C test results and blood glucose levels do not match, your doctor should consider that the A1C test may not be a reliable test for you. Your doctor will report your A1C test result as a percentage, such as an A1C of 7%. The higher the percentage is, the higher your average blood glucose levels are. Random plasma glucose test Sometimes doctors use the random plasma glucose test to diagnose diabetes when you have symptoms of diabetes and they do not want to wait until you have fasted for 8 hours. You may have this blood test at any time. Glucose challenge test If you are pregnant, your doctor might test you for gestational diabetes with the glucose challenge test. Another name for this test is the glucose screening test. In this test, a health care professional will take a sample of your blood 1 hour after you drink a sweet liquid containing glucose. You do not need to fast for this test. If your blood glucose level is too high—135 mg/dL to 140 mg/dL or higher—you may need to return for an oral glucose tolerance test while fasting. Oral glucose tolerance test The oral glucose tolerance test (OGTT) helps doctors detect type 2 diabetes, prediabetes, and gestational diabetes. However, the OGTT is a more expensive test than the FPG test and the glucose challenge test, and it is not as easy to give. Before the test, you will need to fast for at least 8 hours. A health care professional will take a blood sample to measure your glucose level after fasting. Next, you will drink a liquid that is high in sugar. Another blood sample is taken 2 hours later to check your blood glucose level. If your blood glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels are high two or more times during the OGTT, you may have gestational diabetes. What test results tell me if I have diabetes or prediabetes? Each test to detect diabetes and prediabetes uses a different measurement. Usually, your doctor will use a second test to confirm you have diabetes. The table below helps you understand what your test results mean if you are not pregnant. 1 If you are pregnant, some tests use different cutoffs. Ask your doctor what your test results mean. Test results for diagnosis of prediabetes and diabetes Diagnosis A1C Fasting Plasma Glucose Oral Glucose Tolerance Test* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/003482.htm",
+        "original_url": "https://medlineplus.gov/ency/article/003482.htm",
+        "title": "Blood sugar test: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-09",
+        "publication_dates": [],
+        "sha256": "55ece5a4dd406ea815e7c67007bb0351ca215e114781f74a69625dafbb562004",
+        "excerpt": "Blood sugar test A blood sugar test measures the amount of sugar (glucose) in a sample of your blood. Glucose is a major source of energy for most cells of the body, including brain cells. Glucose is a building block for carbohydrates. Carbohydrates are found in fruit, cereal, bread, pasta, and rice. Carbohydrates are quickly turned into glucose in your body. This can raise your blood glucose level. The hormone insulin made in the body helps control the blood glucose level. How the Test is Performed A blood sample is needed. How to Prepare for the Test The test may be done in the following ways: After you have not eaten anything for at least 8 hours (fasting) At any time of the day (random) Two hours after you drink a fluid with a certain amount of glucose (2 hour post-prandial glucose test or oral glucose tolerance test ) How the Test will Feel When the needle is inserted to draw blood, some people feel moderate pain. Others feel only a prick or stinging. Afterward, there may be some throbbing or slight bruising. This soon goes away. Why the Test is Performed Your health care provider may order this test if you have signs of diabetes . More than likely, your provider will order a fasting blood sugar test. The blood glucose test is also used to monitor people who already have diabetes. The test may also be done if you have: An increase in how often you need to urinate Recently gained a lot of weight Blurred vision Confusion or a change in the way you normally talk or behave Fainting spells Seizures (for the first time) Unconsciousness or coma SCREENING FOR DIABETES This test may also be used to screen for diabetes. High blood sugar and diabetes may not cause symptoms in the early stages. A fasting blood sugar test is the most common test done to screen for diabetes, usually starting at age 35. If you have no other diabetes risk factors, you should be tested every 3 years (in some cases, more often if your weight is rising). If you're overweight and have any of the other risk factors below, ask your provider about getting tested at an earlier age or more often: High blood sugar level on a previous test Blood pressure of 140/90 mm Hg or higher, or unhealthy cholesterol levels History of heart disease Member of a high-risk ethnic group (African American, Latino, Native American, Asian American, or Pacific Islander) Woman who has been previously diagnosed with gestational diabetes Polycystic ovary disease (a condition in which a woman has an imbalance of female sex hormones which may cause cysts in the ovaries) Close relative with diabetes (such as a parent, brother, or sister) Not physically active Children age 10 and older who are overweight and have at least two of the risk factors listed above should be tested for type 2 diabetes every 3 years, even if they have no symptoms. In 2022, the US Preventive Services Task Force concluded that there was not enough evidence to recommend screening for type 2 diabetes in people 18 years old or younger. Some experts do advocate such screening for overweight children. Ask your child’s provider what is best for them. Normal Results If you had a fasting blood glucose test, a level of 70 to 99 mg/dL (3.9 and 5.5 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be 125 mg/dL (6.9 mmol/L) or lower. The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories. Some labs use different measurements or may test different specimens. Talk to your provider about the meaning of your specific test results. Blood glucose measured by a blood test from a vein is considered more accurate than blood glucose measured from a fingerstick with a blood glucose meter, or blood glucose measured by a continuous glucose monitor. What Abnormal Results Mean If you had a fasting blood glucose test: A level of 100 to 125 mg/dL (5.6 to 6.9 mmol/L) means you have impaired fasting glucose, a type of prediabetes. This increases your risk of developing type 2 diabetes and you should consult with your provider. A level of 126 mg/dL (7 mmol/L) or higher usually means you have diabetes. If you had a random blood glucose test: A level of 200 mg/dL (11.1 mmol/L) or higher often means you have diabetes. Your provider will order a fasting blood glucose, A1C test , or glucose tolerance test , depending on your random blood glucose test result. In someone who has diabetes, an abnormal result on the random blood glucose test may mean that the diabetes is not well controlled. Talk with your provider about your blood glucose goals if you have diabetes. Other medical problems can also cause a higher-than-normal blood glucose level, including: Overactive thyroid gland Pancreatic cancer Swelling and inflammation of the pancreas ( pancreatitis ) Stress due to trauma, stroke , heart attack , or surgery Rare tumors, including pheochromocytoma , acromegaly , Cushing syndrome , or glucagonoma A lower-than-normal blood glucose level ( hypoglycemia ) may be due to: Hypopituitarism (a pituitary gland disorder) Underactive thyroid gland or adrenal gland Tumor in the pancreas ( insulinoma - very rare) Too little food Too much insulin or other diabetes medicines Liver or kidney disease Weight loss after weight loss surgery Vigorous exercise Some medicines can raise or lower your blood glucose level. Before having the test, tell your provider about all the medicines you are taking. For some people, mainly those who are thin and young, a fasting blood sugar level below 70 mg/dL (3.9 mmol/L) may be normal. Risks There is little risk involved with having your blood taken. Veins and arteries vary in size from one person to another and from one side of the body to the other. Obtaining a blood sample from some people may be more difficult than from others. Other risks associated with having blood drawn are slight, but may include: Excessive bleeding Fainting or feeling lightheaded Multiple punctures to locate veins Hematoma (blood accumulating under the skin) Infection (a slight risk any time the skin is broken) Alternative Names Random blood sugar; Blood sugar level; Fasting blood sugar; Glucose test; Diabetic screening - blood sugar test; Diabetes - blood sugar test Patient Instructions Type 2 diabetes - what to ask your doctor Images Blood test References American Diabetes Association Professional Practice Committee. 2. Diagnosis and classification of diabetes: standards of care in diabetes - 2025. Diabetes Care . 2025;48(Supplement_1):S27-S49. PMID: 39651986 pubmed.ncbi.nlm.nih.gov/39651986/ . US Preventive Services Task Force; Davidson KW, et al. Screening for prediabetes and type 2 diabetes: US Preventive Services Task Force Recommendation Statement. JAMA . 2021;326(8):736-743. PMID: 34427594 pubmed.ncbi.nlm.nih.gov/34427594/ . US Preventive Services Task Force; Mangione CM, Barry MJ, et al. Screening for prediabetes and type 2 diabetes in children and adolescents: US Preventive Services Task Force Recommendation Statement. JAMA . 2022;328(10):963-967. PMID: 36098719 pubmed.ncbi.nlm.nih.gov/36098719/ . Review Date 1/10/2025 Updated by: Sandeep K. Dhaliwal, MD, board-certified in Diabetes, Endocrinology, and Metabolism, Springfield, VA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Blood Glucose Diabetes Diabetes in Children and Teens Prediabetes",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://com2a.tistory.com/entry/%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%ED%98%88%EB%8B%B9-%EC%88%98%EC%B9%98-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC-%EC%A0%95%EC%83%81-%EC%A0%84%EB%8B%A8%EA%B3%84-%EB%8B%B9%EB%87%A8-%EA%B8%B0%EC%A4%80%EA%B3%BC-%EA%B4%80%EB%A6%AC%EB%B2%95",
+      "https://www.chimff.com/3718"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 30800,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "코엔자임Q10",
+        "capturedAt": "2026-10-09T12:50:16.611Z",
+        "expiresAt": "2026-10-10T12:50:16.611Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-09-25",
+          "endDate": "2026-10-09",
+          "latestPeriod": "2026-10-08",
+          "previousPeriod": "2026-10-07",
+          "baselineStart": "2026-10-01",
+          "baselineEnd": "2026-10-07",
+          "latestRatio": 81.45654,
+          "previousRatio": 52.81517,
+          "baselineMean": 61.06399285714286,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 54.22943824662497,
+          "baselinePct": 33.39537129608413,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 24,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-09T12:51:35.348Z",
+          "measuredAt": "2026-10-09T12:51:35.789Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "코엔자임Q10",
+          "monthlyPc": 6010,
+          "monthlyMobile": 50100,
+          "monthlyTotal": 56110,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-09T12:52:05.242Z",
+        "expiresAt": "2026-10-10T12:50:13.939Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 172,
+          "exportedCount": 80,
+          "truncatedCount": 92
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 5,
+          "missingPreviousDay": 3,
+          "insufficientBaseline": 2
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 37932553932,
+        "artifactId": 11617370821,
+        "headSha": "f84182f238f5e70b3eeac057fa1a1960c6bca1e4",
+        "sourceRunCreatedAt": "2026-10-09T12:49:15Z"
+      },
+      "relatedKeyword": "혈당정상수치",
+      "relatedMonthly": 30800,
+      "relatedMeasuredAt": "2026-10-09T14:20:56.295487+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/003482.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/003466.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/diabetes/diabetes-testing/monitoring-blood-sugar.html",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "혈당 정상 수치",
+    "organic_domains": [
+      "diabetes.or.kr",
+      "kdca.go.kr",
+      "m.korea.kr",
+      "common.health.kr",
+      "repository.hira.or.kr",
+      "www.idph.state.il.us",
+      "www.kslms.or.kr",
+      "com2a.tistory.com",
+      "www.chimff.com",
+      "www.caninsulin.co.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://diabetes.or.kr/upload/bbs/ebook/edu_01_08.pdf",
+        "domain": "diabetes.or.kr",
+        "title": "[기본] 8. 자가혈당측정",
+        "snippet": "<th>정상 수치</th> ... (약 복용 또는 인슐린 주사 전) ... 나의 식전, 식후 혈당, 당화혈색소 목표를"
+      },
+      {
+        "url": "https://kdca.go.kr/bbs/kdca/42/309414/download.do",
+        "domain": "kdca.go.kr",
+        "title": "□ 인터넷 배너\n\n○ 질병관리청 누리집(https://www.kdca.go.kr)\n\n- 알",
+        "snippet": "인터넷 배너 예시 이미지 4개가 배치되어 있으며, 모두 질병관리청의 “자기혈관 숫자알기 / 레드서클” 홍보 배너이다.각 이미지에는 분홍색 배경, 캐릭터 그림, 원형 “레드서클” 로고, 그리고 혈압·혈당·콜레스테롤"
+      },
+      {
+        "url": "https://m.korea.kr/expertWeb/resources/files/data/document_file/2017/2017%EB%85%84_%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C_%ED%86%B5%ED%95%A9%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%82%AC%EC%97%85_%EC%95%88%EB%82%B4%28%EC%8B%A0%EC%B2%B4%ED%99%9C%EB%8F%99_%EB%B6%84%EC%95%BC%29462.pdf",
+        "domain": "m.korea.kr",
+        "title": "체활동]",
+        "snippet": "식후 2시간 혈당치 | 200mg/dL 이 | 상구분 | 정상 | 수치 | 조절목표 ... 대사증후군 복부비만, ... 중성지방, HDL, 혈압, 공복혈당 ... 의 자각증상"
+      },
+      {
+        "url": "https://common.health.kr/shared/docs/healthkr/approval_result/%28%EC%8B%A0%EC%95%BD%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C%29_%EC%8B%9C%EA%B7%B8%EB%8B%88%ED%8F%AC%EB%9D%BC%EB%A5%B4%EC%A3%BC%EC%82%AC20%2C40%2C60%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8%28%EB%9D%BC%EC%8B%9C%EB%A0%88%EC%98%A4%ED%83%80%EC%9D%B4%EB%93%9C%ED%8C%8C%EB%AA%A8%EC%82%B0%EC%97%BC%29%20%ED%97%88%EA%B0%80%EB%B3%B4%EA%B3%A0%EC%84%9C%28%EC%B5%9C%EC%A2%85%29.pdf",
+        "domain": "common.health.kr",
+        "title": "의약품 품목허가 보고서",
+        "snippet": "아틴포스포키나제(CPK) 증가 | 혈중 아밀라아제 증가 ... 말단비대증 환자 임상시험(C2305)에서 5명의 환자(2명은 이 약 개시 시점에서 혈당 정상수치)가 359~506mg/dL의 혈당 수치로 인하여 입원하였다. ... 로"
+      },
+      {
+        "url": "https://repository.hira.or.kr/bitstream/2019.oak/3096/2/%EA%B0%80%EC%B9%98%EA%B8%B0%EB%B0%98%20%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C%EC%A4%91%EC%8B%AC%20%EC%9D%BC%EC%B0%A8%EC%9D%98%EB%A3%8C%20%EA%B1%B4%EA%B0%95%EA%B4%80%EB%A6%AC%20%EB%AA%A8%EB%8D%B8%20%ED%9A%A8%EA%B3%BC%EB%B6%84%EC%84%9D%20%EC%97%B0%EA%B5%AC.pdf",
+        "domain": "repository.hira.or.kr",
+        "title": "(2D(_˝ÝÀ½)",
+        "snippet": "제4장 지역사회 중심 일차의료 건강관리 모형 시범 운영 효과성 평가• 혈당 수치가 확보된 125명을 기준으로 비중을 산출할 경우 8.0%가 정상 혈당, 40.0%가 당뇨병 경계, 52.0%가"
+      },
+      {
+        "url": "https://www.idph.state.il.us/heartstroke/H-S_knownumbers_Korean.pdf",
+        "domain": "www.idph.state.il.us",
+        "title": "Know Your Numbers",
+        "snippet": "정상적인 수치의 에라고 할 수 있습니다. ... 당뇨병이란 혈액 내 과다한 당분을 갖고 있을 때 생기는 병입니다. ... 당뇨병이 있을 경우 적당한 혈당 수치는 식전"
+      },
+      {
+        "url": "https://www.kslms.or.kr/7889",
+        "domain": "www.kslms.or.kr",
+        "title": "공복 혈당 검사 방법 금식 시간 정상 수치 당뇨 전단계 기준 주의사항",
+        "snippet": "# 공복 혈당 검사 방법 금식 시간 정상 수치 당뇨 전단계 기준 주의사항 ... 결과지에는 “공복혈당 92 mg/dL”처럼 숫자로 나오고, 옆에 정상 참고치와 판정이 함께"
+      },
+      {
+        "url": "https://com2a.tistory.com/entry/%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84-%ED%98%88%EB%8B%B9-%EC%88%98%EC%B9%98-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC-%EC%A0%95%EC%83%81-%EC%A0%84%EB%8B%A8%EA%B3%84-%EB%8B%B9%EB%87%A8-%EA%B8%B0%EC%A4%80%EA%B3%BC-%EA%B4%80%EB%A6%AC%EB%B2%95",
+        "domain": "com2a.tistory.com",
+        "title": "건강검진 혈당 수치 완벽 정리! 정상, 전단계, 당뇨 기준과 관리법",
+        "snippet": "매년 혹은 격년으로 받는 건강검진, 결과표를 받으면 가장 먼저 눈이 가는 수치 중 하나가 바로 '혈당'입니다. ... 오늘은 건강검진 결과표에 나오는 공복혈당과 당화혈색소 수치가 무엇을"
+      },
+      {
+        "url": "https://www.chimff.com/3718",
+        "domain": "www.chimff.com",
+        "title": "당뇨 혈당 수치 표 공복혈당 식후혈당 당화혈색소 진단 기준 관리 목표",
+        "snippet": "이 글에서는 공복혈당, 식후 2시간 혈당, 당화혈색소의 정상·전단계·당뇨 기준을 구분해서 보고, 이미 당뇨 진단을 받은 분의 관리 목표 수치와 검사 시 알아둘 점을 짚어요. ..."
+      },
+      {
+        "url": "https://www.caninsulin.co.kr/dogs/about-dogs/dog-diabetes-monitoring/",
+        "domain": "www.caninsulin.co.kr",
+        "title": "강아지 혈당 모니터링 방법 총정리 ㅡ 측정 방법·정상 수치·기록법까지",
+        "snippet": "## 강아지 정상 혈당 수치는 얼마인가요? ... 정상(공복)^{2} | 80~120mg/dL | 건강한 강아지 기준 ... 혈당 수치도 중요하지만, 매일의 생활 변화는 혈당 조절 상태를 가장"
+      }
+    ],
+    "dominant_result_ratio": 0.5,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 16.67,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-09T14:20:56.295487+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "혈당정상수치"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+          "title": "Diabetes Tests & Diagnosis - NIDDK",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/",
+          "title": "The A1C Test & Diabetes - NIDDK",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/003482.htm",
+          "title": "Blood sugar test: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 7594
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://www.cancer.go.kr/lay1/program/S1T211C221/cancer/view.do?cancer_seq=5117&menu_seq=5139",
+              "title": "홈 >내가 알고 싶은 암>암의 종류>췌장암> 췌장암",
+              "excerpt_chars": 1212
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+              "title": "Diabetes Tests & Diagnosis - NIDDK",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test/",
+              "title": "The A1C Test & Diabetes - NIDDK",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://medlineplus.gov/ency/article/003482.htm",
+              "title": "Blood sugar test: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 7594
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "혈당정상수치",
+      "executed_query": "혈당 정상 수치",
+      "topic": "혈당정상수치: 공복혈당·당화혈색소·포도당부하 2시간 검사 기준",
+      "intent": "공복혈당·당화혈색소·2시간 혈당의 정상 범위와 당뇨병 전단계·당뇨병 기준은 무엇인가?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-09T14:20:56.295487+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.5,
+      "search_review": {
+        "version": 1,
+        "query": "혈당정상수치",
+        "executed_query": "혈당 정상 수치",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-09T14:20:56.295487+00:00",
+        "raw_sha256": "8bbab583feb6df54b973162e349f205862c2125ae50a2f920626cdf766ed8cfe",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "<th>정상 수치</th> ... (약 복용 또는 인슐린 주사 전) ... 나의 식전, 식후 혈당, 당화혈색소 목표를"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "인터넷 배너 예시 이미지 4개가 배치되어 있으며, 모두 질병관리청의 “자기혈관 숫자알기 / 레드서클” 홍보 배너이다.각 이미지에는 분홍색 배경, 캐릭터 그림, 원형 “레드서클” 로고, 그리고 혈압·혈당·콜레스테롤"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "식후 2시간 혈당치 | 200mg/dL 이 | 상구분 | 정상 | 수치 | 조절목표 ... 대사증후군 복부비만, ... 중성지방, HDL, 혈압, 공복혈당 ... 의 자각증상"
+          },
+          {
+            "result_index": 3,
+            "relevant": false,
+            "quote": "아틴포스포키나제(CPK) 증가 | 혈중 아밀라아제 증가 ... 말단비대증 환자 임상시험(C2305)에서 5명의 환자(2명은 이 약 개시 시점에서 혈당 정상수치)가 359~506mg/dL의 혈당 수치로 인하여 입원하였다. ... 로"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "제4장 지역사회 중심 일차의료 건강관리 모형 시범 운영 효과성 평가• 혈당 수치가 확보된 125명을 기준으로 비중을 산출할 경우 8.0%가 정상 혈당, 40.0%가 당뇨병 경계, 52.0%가"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "정상적인 수치의 에라고 할 수 있습니다. ... 당뇨병이란 혈액 내 과다한 당분을 갖고 있을 때 생기는 병입니다. ... 당뇨병이 있을 경우 적당한 혈당 수치는 식전"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "공복 혈당 검사 방법 금식 시간 정상 수치 당뇨 전단계 기준 주의사항"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "건강검진 혈당 수치 완벽 정리! 정상, 전단계, 당뇨 기준과 관리법"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "이 글에서는 공복혈당, 식후 2시간 혈당, 당화혈색소의 정상·전단계·당뇨 기준을 구분해서 보고, 이미 당뇨 진단을 받은 분의 관리 목표 수치와 검사 시 알아둘 점을 짚어요. ..."
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "## 강아지 정상 혈당 수치는 얼마인가요? ... 정상(공복)^{2} | 80~120mg/dL | 건강한 강아지 기준 ... 혈당 수치도 중요하지만, 매일의 생활 변화는 혈당 조절 상태를 가장"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 6,
+        "relevant_site_count": 6,
+        "relevant_indices": [
+          0,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "relevance_ratio": 0.6,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.5,
+        "site_concentration": 0.16666666666666666,
+        "organic_opportunity": 16.67
+      },
+      "scope": "full_keyword",
+      "target_keyword": "혈당정상수치",
+      "matches": [
+        {
+          "result_index": 7,
+          "quote": "건강검진 혈당 수치 완벽 정리! 정상, 전단계, 당뇨 기준과 관리법"
+        },
+        {
+          "result_index": 8,
+          "quote": "공복혈당, 식후 2시간 혈당, 당화혈색소의 정상·전단계·당뇨 기준을 구분해서 보고"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-09T14:20:56.295487+00:00",
+      "input_sha256": "e4db81d27a41a228e7c45b458848ad20f3166d52470dc02b6b037067bcf2f966",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "혈당정상수치",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav",
+            "entity": "American Diabetes Association",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": " experts do advocate such screening for overweight children. Ask your child’s provider what is best for them. Normal Results If you had a fasting blood glucose test, a level of 70 to 99 mg/dL (3.9 and 5.5 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be 125 mg/dL (6.9 mmol/L) or lower. The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories. Some labs use different measurements or may test different specimens. Talk to your provider about the meaning of your specific test results. Blood glucose measured by a blood test from a vein is considered more accurate than blood glucose measured from a fingerstick with a blood glucose meter, or blood glucose measured by a continuous glucose monitor",
+            "entity": "fasting blood glucose test",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "공복혈당·당화혈색소·포도당부하 2시간 검사의 정상·전단계·당뇨 기준은?",
+            "answer": "정상/전단계/당뇨: 공복 ≤99/100~125/≥126, 부하2시간 ≤139/140~199/≥200mg/dL, A1C <5.7/5.7~6.4/≥6.5%.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav"
+          },
+          {
+            "facet": "공복혈당 정상 범위의 하한과 임의 측정값의 해석은?",
+            "answer": "공복 정상은 70~99mg/dL이다. 임의 혈당은 마지막 식사 시점에 따라 해석하며 검사실별 참고 범위도 다를 수 있다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": " experts do advocate such screening for overweight children. Ask your child’s provider what is best for them. Normal Results If you had a fasting blood glucose test, a level of 70 to 99 mg/dL (3.9 and 5.5 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be 125 mg/dL (6.9 mmol/L) or lower. The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories. Some labs use different measurements or may test different specimens. Talk to your provider about the meaning of your specific test results. Blood glucose measured by a blood test from a vein is considered more accurate than blood glucose measured from a fingerstick with a blood glucose meter, or blood glucose measured by a continuous glucose monitor"
+          },
+          {
+            "facet": "공복혈당과 당화혈색소 검사 전 금식 조건은?",
+            "answer": "공복혈당은 최소 8시간 금식하며 물만 조금 허용된다. 당화혈색소는 최근 3개월 평균을 반영하며 금식이 필요 없다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "by is born to see if you have type 2 diabetes, usually within 12 weeks after delivery. What tests are used to diagnose diabetes? Doctors use a variety of tests to diagnose diabetes and prediabetes. Your doctor may recommend different tests depending on whether you have symptoms or not, or whether you are pregnant. Fasting plasma glucose test The fasting plasma glucose (FPG) test measures your blood glucose level at a single point in time. For the most reliable results, your doctor will give you the test in the morning after you have fasted for at least 8 hours. Fasting means having nothing to eat or drink except sips of water. A1C test The A1C test is a blood test that provides your average levels of blood glucose over the last 3 months. Other names for the A1C test are hemoglobin A1C, HbA1C, glycated hemoglobin, and glycosylated hemoglobin test. You can eat and drink before this test. B"
+          },
+          {
+            "facet": "포도당부하 2시간 검사는 일반 식후 측정과 어떻게 다른가?",
+            "answer": "최소 8시간 금식 후 채혈하고 당이 많은 검사액을 마신 뒤 2시간 후 재채혈한다. 일반 식사를 한 뒤 재는 조건과 다르다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "not need to fast for this test. If your blood glucose level is too high—135 mg/dL to 140 mg/dL or higher—you may need to return for an oral glucose tolerance test while fasting. Oral glucose tolerance test The oral glucose tolerance test (OGTT) helps doctors detect type 2 diabetes, prediabetes, and gestational diabetes. However, the OGTT is a more expensive test than the FPG test and the glucose challenge test, and it is not as easy to give. Before the test, you will need to fast for at least 8 hours. A health care professional will take a blood sample to measure your glucose level after fasting. Next, you will drink a liquid that is high in sugar. Another blood sample is taken 2 hours later to check your blood glucose level. If your blood glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels "
+          },
+          {
+            "facet": "자가측정 혈당으로 당뇨병을 확진할 수 있는가?",
+            "answer": "시판 혈당측정기로 당뇨병을 진단할 수 없다. 의사가 혈액검사를 통해 진단한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Diabetes Tests & Diagnosis In this section: Who should be tested for diabetes? What tests are used to diagnose diabetes? What test results tell me if I have diabetes or prediabetes? Which tests help my doctor know what kind of diabetes I have? Your doctor can diagnose diabetes , prediabetes , and gestational diabetes using blood tests. The blood tests show if your blood glucose level , also called blood sugar, is higher than the range that is healthy for you. Blood tests can also help identify the type of diabetes you have. Don’t try to diagnose yourself if you think you might have diabetes. Blood testing equipment that you can buy over the counter, such as a blood glucose meter , cannot diagnose diabetes. Who should be tested for diabetes? Anyone who has symptoms of diabetes should be tested for the disease. Some people will not have any symptoms but may have risk factors for type 2 dia"
+          },
+          {
+            "facet": "진단 기준표의 적용 대상과 확진 시 주의점은?",
+            "answer": "기준표는 임신하지 않은 사람에게 적용된다. 임신 중에는 일부 기준이 다르며, 보통 두 번째 검사로 당뇨병을 확인한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels are high two or more times during the OGTT, you may have gestational diabetes. What test results tell me if I have diabetes or prediabetes? Each test to detect diabetes and prediabetes uses a different measurement. Usually, your doctor will use a second test to confirm you have diabetes. The table below helps you understand what your test results mean if you are not pregnant. 1 If you are pregnant, some tests use different cutoffs. Ask your doctor what your test results mean. Test results for diagnosis of prediabetes and diabetes Diagnosis A1C Fasting Plasma Glucose Oral Glucose Tolerance Test* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels are high two or more times during the OGTT, you may have gestational diabetes. What test results tell me if I have diabetes or prediabetes? Each test to detect diabetes and prediabetes uses a different measurement. Usually, your doctor will use a second test to confirm you have diabetes. The table below helps you understand what your test results mean if you are not pregnant. 1 If you are pregnant, some tests use different cutoffs. Ask your doctor what your test results mean. Test results for diagnosis of prediabetes and diabetes Diagnosis A1C Fasting Plasma Glucose Oral Glucose Tolerance Test* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 66.67,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "혈압낮추는법",
+    "category": "건강",
+    "topic": "혈압낮추는법: 식단·운동·수면과 꾸준한 생활습관 관리",
+    "intent": "혈압을 낮추기 위해 식단·운동·수면 등 일상에서 무엇을 바꾸고, 약물치료와 어떻게 병행해야 할까?",
+    "gap": "공식 자료에 근거한 DASH 식품 선택표와 운동·수면·절주 실천 체크리스트, 약을 임의로 중단하지 않는 원칙을 제공한다.",
+    "source_url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment",
+    "verified_sources": [
+      {
+        "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment",
+        "original_url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment",
+        "title": "High Blood Pressure - Treatment | NHLBI, NIH",
+        "checked_on": "2026-10-09",
+        "publication_dates": [],
+        "sha256": "d9df0150b8bb82a20e0c3ed5c70584f52699ef2d466522478f3a830d11891af5",
+        "excerpt": "High Blood Pressure Home Health Topics < Back To High Blood Pressure Treatment 0 High Blood Pressure MENU Home Health Topics < Back To High Blood Pressure Treatment What Is High Blood Pressure? Symptoms Diagnosis Causes and Risk Factors Treatment Living With High Blood Pressure Pregnancy and High Blood Pressure MORE INFORMATION Participate in a Study Fact Sheets and Handouts Research High Blood Pressure High Blood Pressure Treatment Watch this video to learn more about treatments for high blood pressure and how they work. Medical Animation Copyright © Nucleus Medical Media, All rights reserved. For most people with high blood pressure, a healthcare provider will work with you to develop a treatment plan that may include heart-healthy lifestyle changes alone or with medicines. Your provider can help you manage your blood pressure and prevent complications. They may use a risk calculator to estimate your risk of complications and guide a discussion with you about choosing the best treatments. Your provider may also involve other experts in your treatment, including a nutritionist or dietician, a pharmacist, and specialists for other conditions you have, including heart conditions. If your high blood pressure is caused by another health condition or medicine, it may get better once the cause is treated or removed. Research Research (REE-serch): The scientific study of nature that sometimes includes processes of health and disease in people. Biomedical research can be defined as basic and pre-clinical, clinical and population science, implementation, and translational.\n\nBasic research seeks to understand the mechanisms of biology, disease, or behavior. Pre-clinical research connects basic science with clinical research. Clinical and population science research includes clinical trials that find safe and effective ways to prevent, detect, or treat diseases. Implementation research involves the adoption of interventions into routine clinical care for the general population. Translational research moves scientific discovery from basic and pre-clinical research to clinical studies and finally to clinical practice. suggests that getting your systolic blood pressure below 120 mm Hg can reduce your risk of serious complications. Risk calculators Your provider may use a risk calculator to estimate your risk of having a stroke or heart attack or dying from a heart or blood vessel disease. This information can help you both choose the best treatment to prevent long-term complications. For example, the Atherosclerotic Cardiovascular Disease (ASCVD) Risk Estimator considers your cholesterol levels, age, sex, race, and blood pressure. It also factors in if you smoke or take medicines to manage high blood pressure or cholesterol. Keep in mind that your cholesterol numbers and your risk score are only part of the story. You should talk to your provider to learn what the numbers mean for you. Also, the ASCVD Risk Estimator Plus isn’t the only type of risk calculator — and that’s a good thing, because no single risk calculator is right for everyone. For example, your provider might use the Predicting Risk of cardiovascular disease EVENTs (PREVENTTM) app to help assess your risk for serious complication. Studies show that some calculators overestimate risk for certain groups, while others may underestimate risk. Talk with your provider about your personal risk level. Healthy lifestyle changes If you have high blood pressure, your provider may recommend that you adopt a heart-healthy lifestyle to help lower and control high blood pressure. Choose heart-healthy foods such as those in the DASH eating plan. NHLBI-funded research has shown that DASH combined with a low-salt eating plan can be as effective as medicines in lowering high blood pressure. Living With the DASH Eating Plan and Tips to Reduce Salt and Sodium offer more information. Avoid or limit alcohol. Talk to your provider about how much alcohol you drink. You may need to limit it or stop drinking. Resources and support are available at the Alcohol Treatment Navigator from the National Institute on Alcohol Abuse and Alcoholism. Get regular physical activity. There are many health benefits to getting the recommended amount of physical activity each week. Studies have shown that physical activity can help lower and control high blood pressure levels. Even a small amount of physical activity may help, like walking for 10 minutes each day. Reducing the amount of time you sit each day can also help you achieve your blood pressure goal. Before starting any exercise program, ask your provider what level of activity is right for you. Aim for a healthy weight. If you are an adult who is living with overweight or obesity, losing 5% to 10% of your weight over 6 months can improve your health. Even losing just 3% to 5% of your weight can improve blood pressure. Quit smoking. The Tips to Quit Smoking Fact Sheet has information about how to quit smoking. For free help and support to quit smoking, you can call the National Cancer Institute’s Smoking Quitline at 1-877-44U-QUIT (1-877-448-7848). Manage stress. Learning how to manage stress and cope with problems can improve your mental and physical health. Relaxation techniques, talking to a counselor, and finding a support group can all help. Get enough good-quality sleep. The recommended amount for adults is 7 to 9 hours of sleep per day. Develop healthy sleep habits by going to sleep and getting up at regular times, following a calming bedtime routine, and keeping your bedroom cool and dark. Changing habits can be hard. To help make heart-healthy changes that last a lifetime, try making one change at a time. Add another change when you feel comfortable with the previous one. Practice a few healthy lifestyle habits together. When you can keep them up over time, you’re more likely to manage your blood pressure well. Medicines When healthy lifestyle changes alone do not control or lower high blood pressure, your provider may prescribe blood pressure medicines. These medicines act in different ways to lower blood pressure. When prescribing medicines, your provider also considers their effects on other conditions you may have, such as heart or kidney disease. Keep up your healthy lifestyle changes while taking these medicines. The combination of medicines and heart-healthy lifestyle changes can help control and lower your high blood pressure and prevent heart disease. Talk to your provider if you have any concerns about side effects from the medicines. Your provider may change the dose or give you a new medicine. To manage high blood pressure, many people need to take two or more medicines. There are several common high blood pressure medicines your provider can prescribe: Angiotensin-converting enzyme enzyme (EN-zime): A protein that speeds up chemical reactions in the body. inhibitors keep your blood vessels from narrowing as much. Angiotensin II receptor receptor (reh-SEP-ter): A protein inside a cell or on the surface of a cell that recognizes or binds to specific molecules or proteins and causes a specific effect in the cell. blockers also keep blood vessels from narrowing. Calcium channel blockers prevent calcium from entering the muscle cells of your heart and blood vessels. This allows blood vessels to relax. Diuretics remove extra water and sodium (salt) from your body, lowering the amount of fluid in your blood. The main diuretic for high blood pressure treatment is thiazide. Diuretics are often used with other high blood pressure medicines, sometimes in one combined pill. If you are planning to get pregnant or are pregnant , talk with your provider about medicines you’re taking to lower your blood pressure. Not all medicines are safe during pregnancy, but some are. Controlling your blood pressure while you’re pregnant can lower your risk of pregnancy complications. Last updated on April 30, 2024",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/patientinstructions/000770.htm",
+        "original_url": "https://medlineplus.gov/ency/patientinstructions/000770.htm",
+        "title": "DASH diet to lower high blood pressure: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-09",
+        "publication_dates": [],
+        "sha256": "82e89e86e859fc97a4cf97ff1183f9c763f3c07b32cc9f044a15dd702d3f0779",
+        "excerpt": "DASH diet to lower high blood pressure DASH stands for Dietary Approaches to Stop Hypertension and is recommended by the US National Heart, Lung and Blood Institute. The DASH diet can help lower high blood pressure, cholesterol and other fats in your blood. It can help lower your risk for heart attack and stroke and help you lose weight. This diet is low in sodium (salt) and rich in nutrients. How DASH Works The DASH diet reduces high blood pressure by lowering the amount of sodium in your diet to 2300 milligrams (mg) a day. Lowering sodium to 1500 mg a day reduces blood pressure even more. The DASH diet also includes a variety of foods rich in nutrients that may help some people lower blood pressure, such as potassium, calcium, and magnesium. On the DASH diet, you will: Get plenty of vegetables, fruits, and fat-free or low-fat dairy Include whole grains, beans, seeds, nuts, and vegetable oils Eat lean meats, poultry, and fish Cut back on salt, red meat, sweets, and sugary drinks Limit alcoholic beverages: The Dietary Guidelines for Americans recommends no more than 1 to 2 drinks or fewer a day for men and 1 drink or less a day for women. For those who do not drink alcohol, it is recommended not to start drinking. You should also get at least 30 minutes of moderate intensity exercise most days of the week. Examples include brisk walking or riding a bike. Aim to get at least 2 hours and 30 minutes of exercise per week. You can follow the DASH diet if you want to prevent high blood pressure. It can also help you lose extra weight. Most people can benefit from lowering sodium intake to 2300 mg a day. Your health care provider may suggest cutting back to 1500 mg a day if you: Already have high blood pressure Have diabetes or chronic kidney disease Are African American Are age 51 years or older If you take medicine to treat high blood pressure, do not stop taking your medicine while on the DASH diet. Be sure to tell your provider you are following the DASH diet. How to get Started On the DASH diet, you can eat foods from all food groups. But you will include more of the foods that are naturally low in salt, cholesterol, and saturated fats. You will also include foods that are high in potassium, calcium, magnesium, and fiber. Here's a list of the food groups and how many servings of each you should have per day. For a diet that has 2000 calories per day, you should eat: Vegetables (4 to 5 servings a day) Fruits (4 to 5 servings a day) Low-fat or fat-free dairy products, such as milk or yogurt (2 to 3 servings a day) Grains (6 to 8 servings a day, and 3 should be whole grains) Fish, lean meats, and poultry (2 servings or less a day) Beans, seeds, and nuts (4 to 5 servings a week) Fats and oils (2 to 3 servings a day) Sweets or added sugars, such as jelly, hard candy, maple syrup, sorbet, and sugar (fewer than 5 servings a week) The number of servings you have each day depends on how many calories you need. If you're trying to lose weight, you may need fewer servings than listed. If you are not very active, aim for the lower number of servings listed. If you are moderately active, have the higher number of servings. If you are very active, you may need more servings than listed. Your provider can help find the right number of servings a day for you. Know your Serving Sizes To know how much to eat, you need to know serving sizes. Below are sample servings for each food group. Vegetables: 1 cup (70 grams) raw leafy vegetables ½ cup (90 grams) chopped raw or cooked vegetables Fruits: 1 medium fruit (6 ounces or 168 grams) ½ cup (90 grams) fresh, frozen, or canned fruit ¼ cup (25 grams) dried fruit Fat-free or low-fat dairy products: 1 cup (240 milliliters) milk or yogurt 1½ ounce (oz) or 42 grams cheese Grains (Aim to make all of your grain choices whole grain. Whole grain products contain more fiber and protein than \"refined\" grain products.): 1 slice bread ½ cup (80 grams) cooked rice, pasta, or cereal 1 ounce (28 grams) dry cereal Lean meats, poultry, fish, and eggs: 1 oz (28 grams) of cooked fish, lean meat, or poultry 1 egg Nuts, seeds, and legumes: ½ cup (90 grams) cooked legumes (dried beans, peas) 1/3 cup (45 grams) of unsalted nuts 1 tablespoon (10 grams) seeds Fats and oils: 1 teaspoon (5 milliliters) vegetable oil 2 tablespoons (30 grams) low-fat salad dressing 1 teaspoon (5 grams) soft margarine 1 tablespoon (15 grams) low-fat mayonnaise Sweets and added sugars: 1 tablespoon (15 grams) sugar 1 tablespoon (15 grams) jelly or jam ½ cup (75 grams) sorbet, gelatin 1cup (240 milliliters) lemonade Tips for Following the DASH Diet The DASH diet is designed to be easy to follow. But it might mean making some changes to how you currently eat. To get started: Do not try to make changes all at once. It's fine to change your eating habits gradually. To add vegetables to your diet, try having a salad at lunch. Or, add cucumber, lettuce, shredded carrots, or tomatoes to your sandwiches. There should always be something green on your plate. It's fine to use frozen vegetables instead of fresh. Just make sure the package does not contain added salt or fat. Add sliced fruit to your cereal or oatmeal for breakfast. For dessert, choose fresh fruit or low-fat frozen yogurt instead of high-calorie sweets, such as cakes or pies. Choose healthy snacks, such as unsalted rice cakes or popcorn, raw vegetables, or yogurt. Dried fruits, seeds, and nuts also make great snack choices. Just keep these portions small because these foods are high in total calories. Think of meat as part of your meal, instead of the main course. Limit your servings of lean meat to 6 ounces (170 grams) a day. You can have two 3-ounce (85 grams) servings during the day. Try cooking without meat at least twice each week. Instead, eat beans, nuts, tofu, or eggs for your protein. Tips to Lower Your Salt To lower the amount of salt in your diet: Take the salt shaker off the table. Flavor your food with herbs and spices instead of salt. Lemon, lime, and vinegar also add flavor. Avoid canned foods and frozen entrees. They are often high in salt. When you make things from scratch you have more control over how much salt goes in them. Check all food labels for sodium. You may be surprised at how much you find, and where you find it. Frozen dinners, soups, salad dressings, and prepared foods often have a lot of sodium. Choose foods that contain less than 5% of the daily value of sodium. Look for low-sodium versions of foods when you can find them. Limit foods and condiments that have a lot of salt, such as pickles, olives, cured meats, ketchup, soy sauce, mustard, and barbeque sauce. When dining out, ask that your food be made with no added salt or MSG. Where to get More Information There are many books about the DASH diet plan to help you get started. These books can also provide sample meal plans and recipe ideas. Images DASH diet References Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA Guideline on the primary prevention of cardiovascular disease: A report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation . 2019;140(11):e596-e646. PMID: 30879355 pubmed.ncbi.nlm.nih.gov/30879355/ . Bakris GL, Sorrentino MJ. Systemic hypertension: mechanisms, diagnosis, and treatment. In: Libby P, Bonow RO, Mann DL, Tomaselli GF, Bhatt DL, Solomon SD, eds. Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine . 12th ed. Philadelphia, PA: Elsevier; 2022:chap 26. Mozaffarian D. Nutrition and cardiovascular and metabolic diseases. In: Libby P, Bonow RO, Mann DL, Tomaselli GF, Bhatt DL, Solomon SD, eds. Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine . 12th ed. Philadelphia, PA: Elsevier; 2022:chap 29. National Heart, Lung, and Blood Institute (NIH) website. DASH eating plan. www.nhlbi.nih.gov/education/dash-eating-plan . Updated December 29, 2021. Accessed December 6, 2024. Rayner B, Charlton KE, Derman W, Jones E. Nonp",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://ksn.or.kr/upload/general/ksn_news/ksn_cardnews_230829.pdf",
+      "https://healthy-storytellring.tistory.com/entry/%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B2%95-%EC%8B%9D%EB%8B%A8%C2%B7%EC%9A%B4%EB%8F%99%C2%B7%EC%83%9D%ED%99%9C%EC%8A%B5%EA%B4%80-%EC%A7%80%EA%B8%88-%EB%8B%B9%EC%9E%A5-%EC%8B%A4%EC%B2%9C-%EA%B0%80%EB%8A%A5%ED%95%9C-8%EA%B0%80%EC%A7%80?category=1227079"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 30800,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "코엔자임Q10",
+        "capturedAt": "2026-10-09T12:50:16.611Z",
+        "expiresAt": "2026-10-10T12:50:16.611Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-09-25",
+          "endDate": "2026-10-09",
+          "latestPeriod": "2026-10-08",
+          "previousPeriod": "2026-10-07",
+          "baselineStart": "2026-10-01",
+          "baselineEnd": "2026-10-07",
+          "latestRatio": 81.45654,
+          "previousRatio": 52.81517,
+          "baselineMean": 61.06399285714286,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 54.22943824662497,
+          "baselinePct": 33.39537129608413,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 24,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-09T12:51:35.348Z",
+          "measuredAt": "2026-10-09T12:51:35.789Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "코엔자임Q10",
+          "monthlyPc": 6010,
+          "monthlyMobile": 50100,
+          "monthlyTotal": 56110,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-09T12:52:05.242Z",
+        "expiresAt": "2026-10-10T12:50:13.939Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 172,
+          "exportedCount": 80,
+          "truncatedCount": 92
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 5,
+          "missingPreviousDay": 3,
+          "insufficientBaseline": 2
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 37932553932,
+        "artifactId": 11617370821,
+        "headSha": "f84182f238f5e70b3eeac057fa1a1960c6bca1e4",
+        "sourceRunCreatedAt": "2026-10-09T12:49:15Z"
+      },
+      "relatedKeyword": "혈압낮추는법",
+      "relatedMonthly": 30800,
+      "relatedMeasuredAt": "2026-10-09T14:20:56.295487+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/treatment",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/patientinstructions/000770.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/high-blood-pressure/prevention/",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/living-with",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "혈압 낮추는 법",
+    "organic_domains": [
+      "nikom.or.kr",
+      "ksn.or.kr",
+      "ksn.or.kr",
+      "ksn.or.kr",
+      "jbl4.tistory.com",
+      "evolve0.tistory.com",
+      "healthy-storytellring.tistory.com",
+      "a-nice-break.tistory.com",
+      "www.043w.or.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://nikom.or.kr/nckm/module/practiceGuide/download.do?file_type=pdf&guide_idx=163",
+        "domain": "nikom.or.kr",
+        "title": "고혈압 한의표준임상진료지침",
+        "snippet": "기기 유도 호흡법 치료는 미국 식품의약품 안전청(Food and Drug Administration)의 승인을 받은 호흡 중심의 바이오 피드백 장치인 “RESPeRATE; InterCure Ltd” 및 기타 유사 장비 등을"
+      },
+      {
+        "url": "https://ksn.or.kr/upload/general/ksn_news/ksn_cardnews_230913.pdf",
+        "domain": "ksn.or.kr",
+        "title": "고혈압 낮추는 가장 쉬운 방법 3편",
+        "snippet": "저는 콩팥병이고, 고혈압은 없는데... ... 말기콩팥병의 가장 흔한 원인은 당뇨병과 ... 혈압 조절이 결국 콩팥병의 시작을 막고, ... 약제를 처방하는 경우도 있습니다."
+      },
+      {
+        "url": "https://ksn.or.kr/upload/general/ksn_news/ksn_cardnews_230829.pdf",
+        "domain": "ksn.or.kr",
+        "title": "고혈압 낮추는 가장 쉬운 방법 1편",
+        "snippet": "혈압은 심박출량과 혈관의 경직도에 의해서 나타납니다. ... 원 안에 콩팥 그림이 들어간 말풍선 아이콘이 있고, 오른쪽에는 팔에 혈압계를 착용한 사람이 책상에 앉아 있는 일러스트가 보인다."
+      },
+      {
+        "url": "https://ksn.or.kr/bbs/skin/publication/download.php?code=g_guideline&number=2252",
+        "domain": "ksn.or.kr",
+        "title": "이 사망률과 관계가 없거나 U자형 연관성을 보였다. 이러한 현상을 볼 때, 혈액투석 환자의 혈압을 낮추는 전략이 실질적인 임상적 이득을 제공하는지에 대해서는 의문이 제기된다. 최근 연구들은 이를 투석 전 혈압이 실제 혈압을 충분히 반영하지 못하기 때문에 보고 있다. 미국의 혈액투석 환자 44,000명 이상을 대상으로 한 연구에서는, 투석 후 맥압이 10 mmHg 증가할 때마다 사망 위험이 12% 증가한 반면, 투석 후 수축기혈압은 사망 위험과 역상관관계를 보였다[26]. 또 다른 연구에서는 투석 후 수축기혈압이 높은 것과 투석 전후",
+        "snippet": "이러한 현상을 볼 때, 혈액투석 환자의 혈압을 낮추는 전략이 실질적인 임상적 이득을 제공하는지에 대해서는 의문이 제기된다. ... 대한신장학회 KORDS에 등록된 환자 70,670명의 데이터를 분석한 국내연구진의"
+      },
+      {
+        "url": "https://jbl4.tistory.com/entry/%ED%98%88%EC%95%95%EA%B4%80%EB%A6%AC-%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%95%98%EB%8A%94-%EB%B2%95-%EA%B3%A0%ED%98%88%EC%95%95%EA%B3%BC-%EC%A0%80%ED%98%88%EC%95%95-%EB%AA%A8%EB%91%90-%EC%A3%BC%EC%9D%98%ED%95%98%EC%84%B8%EC%9A%94",
+        "domain": "jbl4.tistory.com",
+        "title": "혈압관리 제대로 하는 법! 고혈압과 저혈압 모두 주의하세요",
+        "snippet": "오늘은 혈압측정 방법부터 고혈압증상, 저혈압증상, 그리고 일상에서 실천할 수 있는 혈압낮추는법까지, 건강을 위한 혈압관리법을 정리해드립니다. ... 혈압이란 혈액이 혈관 벽을 누르는 압력을 말합니다. ... *"
+      },
+      {
+        "url": "https://evolve0.tistory.com/entry/%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B2%95-%EC%95%BD%EB%B3%B4%EB%8B%A4-%EB%A8%BC%EC%A0%80-%EC%8B%A4%EC%B2%9C%ED%95%B4%EC%95%BC-%ED%95%A0-10%EA%B0%80%EC%A7%80-%EC%83%9D%ED%99%9C%EC%8A%B5%EA%B4%80",
+        "domain": "evolve0.tistory.com",
+        "title": "혈압 낮추는 법, 약보다 먼저 실천해야 할 10가지 생활습관",
+        "snippet": "# 혈압 낮추는 법, 약보다 먼저 실천해야 할 10가지 생활습관 ... 혈압이 높아도 자각하기 어려워 방치하는 경우가 많지만, 장기간 지속되면 심근경색, 뇌졸중, 심부전, 만성콩팥병 등의"
+      },
+      {
+        "url": "https://healthy-storytellring.tistory.com/entry/%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B2%95-%EC%8B%9D%EB%8B%A8%C2%B7%EC%9A%B4%EB%8F%99%C2%B7%EC%83%9D%ED%99%9C%EC%8A%B5%EA%B4%80-%EC%A7%80%EA%B8%88-%EB%8B%B9%EC%9E%A5-%EC%8B%A4%EC%B2%9C-%EA%B0%80%EB%8A%A5%ED%95%9C-8%EA%B0%80%EC%A7%80?category=1227079",
+        "domain": "healthy-storytellring.tistory.com",
+        "title": "혈압 낮추는 법 | 식단·운동·생활습관 지금 당장 실천 가능한 8가지",
+        "snippet": "## 혈압 낮추는 법 | 식단·운동·생활습관 지금 당장 실천 가능한 8가지 ... 고혈압은 특별히 아프거나 불편한 증상 없이 진행되다가, 어느 날 갑자기 뇌졸중·심근경색·신부전 같은 무서운"
+      },
+      {
+        "url": "https://a-nice-break.tistory.com/entry/%EA%B3%A0%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%89%AC%EC%9A%B4-%EB%B0%A9%EB%B2%95-%EA%B1%B4%EC%84%A4-%ED%98%84%EC%9E%A5-%ED%98%88%EC%95%95-%EB%82%AE%EC%B6%94%EB%8A%94-%EB%B2%95-%EB%B0%8F-%ED%98%88%EC%95%95-%EC%9D%B4-%EB%86%92%EC%9D%84-%EB%95%8C-%EC%9D%91%EA%B8%89-%EC%B2%98%EC%B9%98",
+        "domain": "a-nice-break.tistory.com",
+        "title": "고혈압 낮추는 가장 쉬운 방법? 건설 현장 혈압 낮추는 법 및 혈압 이 높을 때 응급 처치",
+        "snippet": "이 때문에 현장직 근로자들 사이에서 암암리에 퍼진 측정 직전 담배를 참거나 찬물을 급하게 마시는 임시방편의 혈압 빨리 낮추는 법은 오히려 혈관을 일시적으로 더 수축시켜 심근경색을"
+      },
+      {
+        "url": "https://www.043w.or.kr/DATA/wml/5bfca28f-4d4c-4c4d-add5-53e36a84887e.pdf",
+        "domain": "www.043w.or.kr",
+        "title": "<303332332028C6ED2D33C2F72DBCF6C1A429A1DA20323230333231203230323220B1C7BFAABCBEC5CD20BFEEBFB5C1F6C4A75FBCF6C1A4C1DF5F76335FBAB9C1F6BACE2E687770>",
+        "snippet": "<tr><td colspan=\"2\">• 국이나 국물은 먹을 때만 먹기<br>• 매스튜드, 가공식품(어묵, 햄, 라면 등) 줄여서 줄이기<br>• 염장식품(장아찌, 젓갈류) 피하기<br>• 소금 대신 향신료(후추, 마늘, 고추가루, 파, 생강, 카레"
+      }
+    ],
+    "dominant_result_ratio": 0.5,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 15.0,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-09T14:20:56.295487+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "혈압낮추는법"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "혈압낮추는법",
+      "executed_query": "혈압 낮추는 법",
+      "topic": "혈압낮추는법: 식단·운동·수면과 꾸준한 생활습관 관리",
+      "intent": "혈압을 낮추기 위해 식단·운동·수면 등 일상에서 무엇을 바꾸고, 약물치료와 어떻게 병행해야 할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-09T14:20:56.295487+00:00",
+      "result_count": 9,
+      "domain_count": 7,
+      "dominant_ratio": 0.5,
+      "search_review": {
+        "version": 1,
+        "query": "혈압낮추는법",
+        "executed_query": "혈압 낮추는 법",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-09T14:20:56.295487+00:00",
+        "raw_sha256": "6304c0867354bab92e31c432e8f895bb3f157cb93e27df2dca823893dd984d18",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "기기 유도 호흡법 치료는 미국 식품의약품 안전청(Food and Drug Administration)의 승인을 받은 호흡 중심의 바이오 피드백 장치인 “RESPeRATE; InterCure Ltd” 및 기타 유사 장비 등을"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "고혈압 낮추는 가장 쉬운 방법 3편"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "고혈압 낮추는 가장 쉬운 방법 1편"
+          },
+          {
+            "result_index": 3,
+            "relevant": false,
+            "quote": "이러한 현상을 볼 때, 혈액투석 환자의 혈압을 낮추는 전략이 실질적인 임상적 이득을 제공하는지에 대해서는 의문이 제기된다. ... 대한신장학회 KORDS에 등록된 환자 70,670명의 데이터를 분석한 국내연구진의"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "오늘은 혈압측정 방법부터 고혈압증상, 저혈압증상, 그리고 일상에서 실천할 수 있는 혈압낮추는법까지, 건강을 위한 혈압관리법을 정리해드립니다. ... 혈압이란 혈액이 혈관 벽을 누르는 압력을 말합니다. ... *"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "혈압 낮추는 법, 약보다 먼저 실천해야 할 10가지 생활습관"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "혈압 낮추는 법 | 식단·운동·생활습관 지금 당장 실천 가능한 8가지"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "고혈압 낮추는 가장 쉬운 방법? 건설 현장 혈압 낮추는 법 및 혈압 이 높을 때 응급 처치"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "<tr><td colspan=\"2\">• 국이나 국물은 먹을 때만 먹기<br>• 매스튜드, 가공식품(어묵, 햄, 라면 등) 줄여서 줄이기<br>• 염장식품(장아찌, 젓갈류) 피하기<br>• 소금 대신 향신료(후추, 마늘, 고추가루, 파, 생강, 카레"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 9,
+        "canonical_result_count": 9,
+        "relevant_result_count": 8,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "relevance_ratio": 0.8888888888888888,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.5,
+        "site_concentration": 0.25,
+        "organic_opportunity": 15.0
+      },
+      "scope": "full_keyword",
+      "target_keyword": "혈압낮추는법",
+      "matches": [
+        {
+          "result_index": 2,
+          "quote": "고혈압 낮추는 가장 쉬운 방법 1편"
+        },
+        {
+          "result_index": 6,
+          "quote": "혈압 낮추는 법 | 식단·운동·생활습관 지금 당장 실천 가능한 8가지"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-09T14:20:56.295487+00:00",
+      "input_sha256": "af895bbd0a9eae5613353795637a7da50bbc52dad81ffb877385238d828e91b8",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "혈압낮추는법",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": " — and that’s a good thing, because no single risk calculator is right for everyone. For example, your provider might use the Predicting Risk of cardiovascular disease EVENTs (PREVENTTM) app to help assess your risk for serious complication. Studies show that some calculators overestimate risk for certain groups, while others may underestimate risk. Talk with your provider about your personal risk level. Healthy lifestyle changes If you have high blood pressure, your provider may recommend that you adopt a heart-healthy lifestyle to help lower and control high blood pressure. Choose heart-healthy foods such as those in the DASH eating plan. NHLBI-funded research has shown that DASH combined with a low-salt eating plan can be as effective as medicines in lowering high blood pressure. Living With the DASH Eating Plan and Tips to Reduce Salt and Sodium offer more information. Avoid or limit",
+            "entity": "NHLBI",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "DASH diet to lower high blood pressure DASH stands for Dietary Approaches to Stop Hypertension and is recommended by the US National Heart, Lung and Blood Institute. The DASH diet can help lower high blood pressure, cholesterol and other fats in your blood. It can help lower your risk for heart attack and stroke and help you lose weight. This diet is low in sodium (salt) and rich in nutrients. How DASH Works The DASH diet reduces high blood pressure by lowering the amount of sodium in your diet to 2300 milligrams (mg) a day. Lowering sodium to 1500 mg a day reduces blood pressure even more. The DASH diet also includes a variety of foods rich in nutrients that may help some people lower blood pressure, such as potassium, calcium, and magnesium. On the DASH diet, you will: Get plenty of vegetables, fruits, and fat-free or low-fat dairy Include whole grains, beans, seeds, nuts, and vegetabl",
+            "entity": "US National Heart, Lung and Blood Institute",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "혈압을 낮추는 DASH 식단은 어떤 식품과 분량으로 구성하는가?",
+            "answer": "하루 2,000kcal 기준 채소·과일 각각 4~5회분 등 식품군별 분량을 제시하며 필요 열량에 따라 조정한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "nd fiber. Here's a list of the food groups and how many servings of each you should have per day. For a diet that has 2000 calories per day, you should eat: Vegetables (4 to 5 servings a day) Fruits (4 to 5 servings a day) Low-fat or fat-free dairy products, such as milk or yogurt (2 to 3 servings a day) Grains (6 to 8 servings a day, and 3 should be whole grains) Fish, lean meats, and poultry (2 servings or less a day) Beans, seeds, and nuts (4 to 5 servings a week) Fats and oils (2 to 3 servings a day) Sweets or added sugars, such as jelly, hard candy, maple syrup, sorbet, and sugar (fewer than 5 servings a week) The number of servings you have each day depends on how many calories you need. If you're trying to lose weight, you may need fewer servings than listed. If you are not very active, aim for the lower number of servings listed. If you are moderately active, have the higher numb"
+          },
+          {
+            "facet": "나트륨 섭취는 얼마나 줄이는가?",
+            "answer": "DASH는 하루 나트륨을 2,300mg으로 줄이며, 1,500mg으로 줄이면 혈압 감소 효과가 더 크다고 설명한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "DASH diet to lower high blood pressure DASH stands for Dietary Approaches to Stop Hypertension and is recommended by the US National Heart, Lung and Blood Institute. The DASH diet can help lower high blood pressure, cholesterol and other fats in your blood. It can help lower your risk for heart attack and stroke and help you lose weight. This diet is low in sodium (salt) and rich in nutrients. How DASH Works The DASH diet reduces high blood pressure by lowering the amount of sodium in your diet to 2300 milligrams (mg) a day. Lowering sodium to 1500 mg a day reduces blood pressure even more. The DASH diet also includes a variety of foods rich in nutrients that may help some people lower blood pressure, such as potassium, calcium, and magnesium. On the DASH diet, you will: Get plenty of vegetables, fruits, and fat-free or low-fat dairy Include whole grains, beans, seeds, nuts, and vegetabl"
+          },
+          {
+            "facet": "운동과 절주는 어떻게 실천하는가?",
+            "answer": "빠르게 걷기 등 중강도 운동을 주 150분 이상 권한다. 음주량을 제한하고 비음주자는 시작하지 않는다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "um. On the DASH diet, you will: Get plenty of vegetables, fruits, and fat-free or low-fat dairy Include whole grains, beans, seeds, nuts, and vegetable oils Eat lean meats, poultry, and fish Cut back on salt, red meat, sweets, and sugary drinks Limit alcoholic beverages: The Dietary Guidelines for Americans recommends no more than 1 to 2 drinks or fewer a day for men and 1 drink or less a day for women. For those who do not drink alcohol, it is recommended not to start drinking. You should also get at least 30 minutes of moderate intensity exercise most days of the week. Examples include brisk walking or riding a bike. Aim to get at least 2 hours and 30 minutes of exercise per week. You can follow the DASH diet if you want to prevent high blood pressure. It can also help you lose extra weight. Most people can benefit from lowering sodium intake to 2300 mg a day. Your health care provider"
+          },
+          {
+            "facet": "수면과 생활습관을 어떻게 꾸준히 관리하는가?",
+            "answer": "성인은 하루 7~9시간 수면, 규칙적인 취침·기상, 어둡고 시원한 침실을 권하며 습관을 하나씩 바꾼다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "king to a counselor, and finding a support group can all help. Get enough good-quality sleep. The recommended amount for adults is 7 to 9 hours of sleep per day. Develop healthy sleep habits by going to sleep and getting up at regular times, following a calming bedtime routine, and keeping your bedroom cool and dark. Changing habits can be hard. To help make heart-healthy changes that last a lifetime, try making one change at a time. Add another change when you feel comfortable with the previous one. Practice a few healthy lifestyle habits together. When you can keep them up over time, you’re more likely to manage your blood pressure well. Medicines When healthy lifestyle changes alone do not control or lower high blood pressure, your provider may prescribe blood pressure medicines. These medicines act in different ways to lower blood pressure. When prescribing medicines, your provider a"
+          },
+          {
+            "facet": "체중·흡연·스트레스는 어떻게 관리하는가?",
+            "answer": "과체중·비만 성인은 체중의 3~5% 감량도 혈압 개선에 도움이 된다. 금연과 이완·상담 등 스트레스 관리를 권한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "can also help you achieve your blood pressure goal. Before starting any exercise program, ask your provider what level of activity is right for you. Aim for a healthy weight. If you are an adult who is living with overweight or obesity, losing 5% to 10% of your weight over 6 months can improve your health. Even losing just 3% to 5% of your weight can improve blood pressure. Quit smoking. The Tips to Quit Smoking Fact Sheet has information about how to quit smoking. For free help and support to quit smoking, you can call the National Cancer Institute’s Smoking Quitline at 1-877-44U-QUIT (1-877-448-7848). Manage stress. Learning how to manage stress and cope with problems can improve your mental and physical health. Relaxation techniques, talking to a counselor, and finding a support group can all help. Get enough good-quality sleep. The recommended amount for adults is 7 to 9 hours of sle"
+          },
+          {
+            "facet": "생활습관 개선을 혈압약과 어떻게 병행하는가?",
+            "answer": "DASH 식단을 실천해도 혈압약을 중단하지 말고, 식단 실천 사실을 의료진에게 알린다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "lood pressure. It can also help you lose extra weight. Most people can benefit from lowering sodium intake to 2300 mg a day. Your health care provider may suggest cutting back to 1500 mg a day if you: Already have high blood pressure Have diabetes or chronic kidney disease Are African American Are age 51 years or older If you take medicine to treat high blood pressure, do not stop taking your medicine while on the DASH diet. Be sure to tell your provider you are following the DASH diet. How to get Started On the DASH diet, you can eat foods from all food groups. But you will include more of the foods that are naturally low in salt, cholesterol, and saturated fats. You will also include foods that are high in potassium, calcium, magnesium, and fiber. Here's a list of the food groups and how many servings of each you should have per day. For a diet that has 2000 calories per day, you shoul"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "king to a counselor, and finding a support group can all help. Get enough good-quality sleep. The recommended amount for adults is 7 to 9 hours of sleep per day. Develop healthy sleep habits by going to sleep and getting up at regular times, following a calming bedtime routine, and keeping your bedroom cool and dark. Changing habits can be hard. To help make heart-healthy changes that last a lifetime, try making one change at a time. Add another change when you feel comfortable with the previous one. Practice a few healthy lifestyle habits together. When you can keep them up over time, you’re more likely to manage your blood pressure well. Medicines When healthy lifestyle changes alone do not control or lower high blood pressure, your provider may prescribe blood pressure medicines. These medicines act in different ways to lower blood pressure. When prescribing medicines, your provider a",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 65.0,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

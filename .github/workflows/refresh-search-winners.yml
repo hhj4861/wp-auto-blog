@@ -20,6 +20,9 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      # Codex auth restore/persist and the writer all require this opt-in.
+      BLOG_CODEX_PUBLIC_AUTOMATION: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -43,7 +46,6 @@ jobs:
         env:
           # The Anthropic subscription hit its session limit on every run (9/24~10/9).
           BLOG_WRITER_PROVIDER: codex
-          BLOG_CODEX_PUBLIC_AUTOMATION: '1'
           WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
           WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}

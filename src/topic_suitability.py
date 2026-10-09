@@ -420,7 +420,13 @@ def issues(item, now=None):
             problems.append('unverified_source_coverage')
         if not _cost_supported(item, review):
             problems.append('narrower_source_coverage')
-        problems.extend(_time_issues(item, review, clock))
+        # A listing-discovered latest issue has its announcement date grounded by the
+        # mandatory latest-issue gate; the reviewer has no "news" kind for it. Keep
+        # concrete application/payment windows (seasonal/upcoming) verified here.
+        latest_news = (item.get('evidence_mode') == 'latest_issue'
+                       and review['current_relevance']['kind'] in {'unknown', 'trending', 'evergreen'})
+        if not latest_news:
+            problems.extend(_time_issues(item, review, clock))
         return list(dict.fromkeys(problems))
     except (ValueError, TypeError, KeyError, OverflowError, AttributeError):
         return ['unverified_topic_suitability']

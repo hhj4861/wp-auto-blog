@@ -19748,7 +19748,7 @@
     "keywords": [
       "전기기사과목"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "전기기사과목",
@@ -23028,7 +23028,7 @@
     "keywords": [
       "보타닉포레소프트"
     ],
-    "status": "pending",
+    "status": "skipped_duplicate",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-09T06:06:53.459235+00:00",
@@ -23112,6 +23112,595 @@
       "intent_fit": 15
     },
     "score": 20,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "skipped_at": "2026-10-09T06:35:59.168924"
+  },
+  {
+    "keyword": "전기기사과목",
+    "category": "취업",
+    "topic": "전기기사과목: 필기 5과목·실기 구성과 합격기준",
+    "intent": "전기기사 필기·실기 과목은 무엇이며, 시험 방식과 과락·합격기준은 어떻게 되나요?",
+    "gap": "공식 과목·문항 수·시험시간·합격기준 비교표와 회로이론 및 제어공학의 통합 과목 여부, 최신 규정 확인 체크리스트를 제공합니다.",
+    "source_url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0&jmNm=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC",
+    "verified_sources": [
+      {
+        "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0&jmNm=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC",
+        "original_url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0&jmNm=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC",
+        "title": "www.q-net.or.kr",
+        "checked_on": "2026-10-09",
+        "publication_dates": [],
+        "sha256": "3983490395a348786922ac88792df5981536c7f7d71ba96d675b5b3aa235342f",
+        "excerpt": "시험일정 전기기사(원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지 임) 전기기사 구분,필기원서접수(인터넷)(휴일제외),필기시험(예정자)발표,실기원서접수(휴일제외),실기시험,최종합격자 발표일 항목 순으로 시험일정 안내표 구분 필기원서접수 (인터넷) (휴일제외) 필기시험 필기합격 (예정자)발표 실기원서접수 (휴일제외) 실기시험 최종합격자 발표일 2026년 정기 기사 1회 2026.01.12 ~ 2026.01.15 [빈자리접수 : 2026.01.24 ~ 2026.01.25] 2026.01.30 ~ 2026.03.03 2026.03.11 2026.03.23 ~ 2026.03.26 빈자리접수 : 2026.04.12 ~ 2026.04.13 2026.04.18 ~ 2026.05.06 2026.06.12 2026년 정기 기사 2회 2026.04.20 ~ 2026.04.23 [빈자리접수 : 2026.05.03 ~ 2026.05.04] 2026.05.09 ~ 2026.05.29 2026.06.10 2026.06.22 ~ 2026.06.25 빈자리접수 : 2026.07.12 ~ 2026.07.13 2026.07.18 ~ 2026.08.05 2026.09.11 2026년 정기 기사 3회 2026.07.20 ~ 2026.07.23 [빈자리접수 : 2026.08.01 ~ 2026.08.02] 2026.08.07 ~ 2026.09.01 2026.09.09 2026.09.21 ~ 2026.09.28 빈자리접수 : 2026.10.18 ~ 2026.10.19 2026.10.24 ~ 2026.11.13 2026.12.18 원서접수시간은 원서접수 첫날 10:00부터 마지막 날 18:00까지임 필기시험 합격예정자 및 최종합격자 발표시간은 해당 발표일 09:00임 시험 일정은 종목별, 지역별로 상이할수 있음 '접수 일정 전에 공지되는해당 회별 수험자 안내(Q-net 공지사항 게시)' 참조 필수 시험정보 수수료 필기, 실기 항목순으로 수수료 안내표 필기 실기 19,400원 22,600원 출제경향 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<title>전기기사 출제경향</title>\r\n<meta content=\"text/html; charset=euc-kr\" http-equiv=\"Content-Type\" /><link rel=\"stylesheet\" href=\"http://www.q-net.or.kr/editor_css/editor_default.css\" />\r\n<style type=\"text/css\">\r\nBODY {\r\n\tFONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px\r\n}\r\nP {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}\r\nLI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p style=\"LINE-HEIGHT: 150%\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">- </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">필기시험의 내용은 고객만족</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">자료실의 출제기준을 참고바랍니다</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">.</span></p>\r\n<p class=\"0\" style=\"WORD-BREAK: keep-all; TEXT-ALIGN: left; LINE-HEIGHT: 150%; TEXT-AUTOSPACE: \"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">- </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">실기시험은 필답형으로 시행되며 고객만족</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">자료실의 출제기준을 참고바랍니다</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">.</span></p>\r\n<p style=\"LINE-HEIGHT: 150%\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">- </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">전기설비기술기준</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">, </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">한국전기설비규정 등은 시험일자 기준으로 시험 시행 전 최근 고시된 기준 및 규정으로</span></p>\r\n<p style=\"LINE-HEIGHT: 150%\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">  수험준비에 임하여야 합니다</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">.</span></p>\r\n</body>\r\n</html> 취득방법 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<title>전기기사 취득방법</title>\r\n<meta content=\"text/html; charset=euc-kr\" http-equiv=\"Content-Type\" /><link rel=\"stylesheet\" href=\"http://www.q-net.or.kr/editor_css/editor_default.css\" />\r\n<style type=\"text/css\">\r\nBODY {\r\n\tFONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px\r\n}\r\nP {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}\r\nLI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p><strong>① 시 행 처</strong> : 한국산업인력공단 </p>\r\n<p><strong>② 관련학과</strong> : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 </p>\r\n<p><strong>③ </strong><strong>시험과목</strong>     </p>\r\n<p> - 필기 : 1. 전기자기학  2. 전력공학  3. 전기기기  4. 회로이론 및 제어공학  5. 전기설비기술기준</p>\r\n<p> - 실기 : 전기설비설계 및 관리 </p>\r\n<p><strong>④ 검정방법 </strong></p>\r\n<p> - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>\r\n<p> - 실기 : 필답형(2시간 30분) </p>\r\n<p><strong>⑤ 합격기준 </strong></p>\r\n<p> - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상  </p>\r\n</body>\r\n</html> 출제기준 1. 전기기사 (2024.1.1 ~ 2026.12.31) 2. 전기기사 (2027.1.1 ~ 2029.12.31) 메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://dunebrain.com/%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC-%EA%B3%BC%EB%AA%A9/",
+      "https://seollem.tistory.com/94"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 1020,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.q-net.or.kr/crf005.do?id=crf00503s02&jmCd=1150&jmInfoDivCcd=B0&jmNm=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "전기기사 과목",
+    "organic_domains": [
+      "drillstudy.com",
+      "www.yes24.com",
+      "www.yes24.com",
+      "dunebrain.com",
+      "seollem.tistory.com",
+      "ment.wsu.ac.kr",
+      "www.bookmouse.co.kr",
+      "www.bookmouse.co.kr",
+      "www.yes24.com",
+      "cdn.businesspeople.co.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://drillstudy.com/blog/%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC-%ED%95%A9%EA%B2%A9-%EC%A0%84%EB%9E%B5",
+        "domain": "drillstudy.com",
+        "title": "전기기사 합격 전략: 5과목 기출 회독 순서와 과락 방지법 — 미니기출 수험 가이드 | 미니기출",
+        "snippet": "5과목이라 한 과목 과락이 나도 나머지로 만회할 여지가 있지만, 계산 과목(전기자기학·회로이론)의 과락이 흔하므로 주의해야 한다. ... 미니기출(drillstudy.com)에서 전기기사 기출을 과목별 OX·해설로 회독할 수 있다."
+      },
+      {
+        "url": "https://www.yes24.com/product/goods/133710937",
+        "domain": "www.yes24.com",
+        "title": "2025 전기기사 필기 3주 완성+전 과목 무료동영상 | 인천대산전기직업학교 | 예문사 - 예스24",
+        "snippet": "Image: 2025 전기기사 필기 3주 완성+전 과목 무료동영상 Image Image ... 따라서 이 책의 각 과목들은 모두 15년 이상의 강의경험을 가진 최고의 강사들의 노하우를 토대로"
+      },
+      {
+        "url": "https://www.yes24.com/product/goods/160884536",
+        "domain": "www.yes24.com",
+        "title": "2026 시대에듀 EBS 전기기사·산업기사 필기 기본서 세트(5과목) | 민병진 | 시대고시기획 시대교육 - 예스24",
+        "snippet": "Image: 2026 시대에듀 EBS 전기기사&#183;산업기사 필기 기본서 세트(5과목) ... ① 2026 시대에듀 EBS 전기기사/산업기사 필기 [전기자기학]<br/>Chapter 01 벡터의 해석<br/>Chapter 02 진공 중의 정전계<br/>Chapter 03 진공"
+      },
+      {
+        "url": "https://dunebrain.com/%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC-%EA%B3%BC%EB%AA%A9/",
+        "domain": "dunebrain.com",
+        "title": "전기기사 과목 및 시험 구성 - 자격증 길잡이",
+        "snippet": "* 실무와 밀접한 전기기기 및 과목별 깊이 ... 전기기사 과목 중 한국전기설비규정(KEC)을 포함한 법규 영역은 암기량이 절대적으로 많습니다."
+      },
+      {
+        "url": "https://seollem.tistory.com/94",
+        "domain": "seollem.tistory.com",
+        "title": "전기기사 비전공자 필기 과목 공부 순서 합격 전략",
+        "snippet": "전기기사 필기는 5과목이고, 각 과목 100점 만점에 과목당 40점 이상, 전 과목 평균 60점 이상이면 합격이에요. ... 이 두 과목이 전기기기·전력공학의 기초가 되기 때문에, 먼저"
+      },
+      {
+        "url": "https://ment.wsu.ac.kr/site/ent/download/info/railsignal.pdf",
+        "domain": "ment.wsu.ac.kr",
+        "title": "PowerPoint 프레젠테이션",
+        "snippet": "국가기술자격 시험 과목 ... <td rowspan=\"2\">전기기사</td>"
+      },
+      {
+        "url": "https://www.bookmouse.co.kr/shop/shopdetail.html?branduid=12259863",
+        "domain": "www.bookmouse.co.kr",
+        "title": "[2026 전기기사.전기산업기사 필기 핵심요약집 / 세진사 / 분철가능]",
+        "snippet": "③ 최고 강사의 핵심정리 및 기출예상문제 해설로 전기기사, 전기산업기사 필기 완전정복! ... 첫째, 학원 강의교재의 발췌를 통하여 학원에서의 적중도 높은 문제들을 직접 설명함으로써 수험생으로 하여금"
+      },
+      {
+        "url": "https://www.bookmouse.co.kr/m/product_detail.html?brand_uid=12259863",
+        "domain": "www.bookmouse.co.kr",
+        "title": "[]",
+        "snippet": "[1]전기자기학, [2]전력공학, [3]전기기기, [4]회로이론, [5]제어공학, [6]전기설비기술기준 6과목 핵식요약집으로 8주완성!!! ... ③ 최고 강사의 핵심정리 및 기출예상문제 해설로 전기기사, 전기산업기사 필기 완전정복! ... 둘째, 최신경향 문제를"
+      },
+      {
+        "url": "https://www.yes24.com/product/goods/146957068",
+        "domain": "www.yes24.com",
+        "title": "[전자책] 전기기사 필기 5과목(전기설비기술수준) 문제은행 | 김종육 | 유페이퍼 - 예스24",
+        "snippet": "Image: 전기기사 필기 5과목(전기설비기술수준) 문제은행 ... <우리동네 어린이병원 이유식 백과>"
+      },
+      {
+        "url": "https://cdn.businesspeople.co.kr/file/real/biz/BR250313A00249/%EB%B6%99%EC%9E%84.%202025%EB%85%84%EB%8F%84%20%EC%A0%9C1%EC%B0%A8%204%EC%A7%81%EA%B8%89%20%EC%8B%A0%EC%9E%85%EC%A7%81%EC%9B%90%20%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0.pdf",
+        "domain": "cdn.businesspeople.co.kr",
+        "title": "3. 전형방법\n\n<table id=\"e1\">\n<tr>\n<th>구분</th>\n<th>내용</",
+        "snippet": "<td>[전기기사 과목]<br> ... ※ 난이도 : 관련분야 기사 원론 수준 50% 이상 출제<br>"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 24.07,
+      "organic_opportunity": 26.67,
+      "trend": 3.83,
+      "intent_fit": 15
+    },
+    "trend_growth": 0.383,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 8,
+    "selected_at": "2026-10-09T06:18:25.773222+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "전기기사과목"
+    ],
+    "status": "held_draft",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "전기기사과목",
+      "executed_query": "전기기사 과목",
+      "topic": "전기기사과목: 필기 5과목·실기 구성과 합격기준",
+      "intent": "전기기사 필기·실기 과목은 무엇이며, 시험 방식과 과락·합격기준은 어떻게 되나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-09T06:18:25.773222+00:00",
+      "result_count": 10,
+      "domain_count": 7,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "전기기사과목",
+        "executed_query": "전기기사 과목",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-09T06:18:25.773222+00:00",
+        "raw_sha256": "a5fe21b78c4fdd53c259207147e739541cf2ee6f86e7adee346048abe6b39a08",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "5과목이라 한 과목 과락이 나도 나머지로 만회할 여지가 있지만, 계산 과목(전기자기학·회로이론)의 과락이 흔하므로 주의해야 한다. ... 미니기출(drillstudy.com)에서 전기기사 기출을 과목별 OX·해설로 회독할 수 있다."
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "Image: 2025 전기기사 필기 3주 완성+전 과목 무료동영상 Image Image ... 따라서 이 책의 각 과목들은 모두 15년 이상의 강의경험을 가진 최고의 강사들의 노하우를 토대로"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "Image: 2026 시대에듀 EBS 전기기사&#183;산업기사 필기 기본서 세트(5과목) ... ① 2026 시대에듀 EBS 전기기사/산업기사 필기 [전기자기학]<br/>Chapter 01 벡터의 해석<br/>Chapter 02 진공 중의 정전계<br/>Chapter 03 진공"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "* 실무와 밀접한 전기기기 및 과목별 깊이 ... 전기기사 과목 중 한국전기설비규정(KEC)을 포함한 법규 영역은 암기량이 절대적으로 많습니다."
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "전기기사 필기는 5과목이고, 각 과목 100점 만점에 과목당 40점 이상, 전 과목 평균 60점 이상이면 합격이에요. ... 이 두 과목이 전기기기·전력공학의 기초가 되기 때문에, 먼저"
+          },
+          {
+            "result_index": 5,
+            "relevant": false,
+            "quote": "국가기술자격 시험 과목 ... <td rowspan=\"2\">전기기사</td>"
+          },
+          {
+            "result_index": 6,
+            "relevant": false,
+            "quote": "③ 최고 강사의 핵심정리 및 기출예상문제 해설로 전기기사, 전기산업기사 필기 완전정복! ... 첫째, 학원 강의교재의 발췌를 통하여 학원에서의 적중도 높은 문제들을 직접 설명함으로써 수험생으로 하여금"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "[1]전기자기학, [2]전력공학, [3]전기기기, [4]회로이론, [5]제어공학, [6]전기설비기술기준 6과목 핵식요약집으로 8주완성!!! ... ③ 최고 강사의 핵심정리 및 기출예상문제 해설로 전기기사, 전기산업기사 필기 완전정복! ... 둘째, 최신경향 문제를"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "[전자책] 전기기사 필기 5과목(전기설비기술수준) 문제은행 | 김종육 | 유페이퍼 - 예스24"
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "<td>[전기기사 과목]<br> ... ※ 난이도 : 관련분야 기사 원론 수준 50% 이상 출제<br>"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 6,
+        "relevant_site_count": 5,
+        "relevant_indices": [
+          0,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "relevance_ratio": 0.6,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.3333333333333333,
+        "organic_opportunity": 26.67
+      },
+      "scope": "full_keyword",
+      "target_keyword": "전기기사과목",
+      "matches": [
+        {
+          "result_index": 3,
+          "quote": "전기기사 과목 및 시험 구성"
+        },
+        {
+          "result_index": 4,
+          "quote": "전기기사 필기는 5과목이고, 각 과목 100점 만점에 과목당 40점 이상, 전 과목 평균 60점 이상이면 합격이에요."
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-09T06:18:25.773222+00:00",
+      "input_sha256": "bdcd055571260b8cdfbd4ea5bb99abfa8ccac0de0fa18afeb6d786ecee75edc5",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "전기기사과목",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "LI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p><strong>① 시 행 처</strong> : 한국산업인력공단 </p>\r\n<p><strong>② 관련학과</strong> : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 </p>\r\n<p><strong>③ </strong><strong>시험과목</strong>     </p>\r\n<p> - 필기 : 1. 전기자기학  2. 전력공학  3. 전기기기  4. 회로이론 및 제어공학  5. 전기설비기술기준</p>\r\n<p> - 실기 : 전기설비설계 및 관리 </p>\r\n<p><strong>④ 검정방법 </strong></p>\r\n<p> - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>\r\n<p> - 실기 : 필답형(2시간 30분) </p>\r\n<p><strong>⑤ 합격기준 </strong></p>\r\n<p> - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상  </p>\r\n</body>\r\n</html> 출제기준 1. 전기기사 (2024.1.1 ~ 2026.12.31) 2. 전기기사 (2027.1.1 ~ 2029.12.31) 메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+            "entity": "한국산업인력공단",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "필기·실기 과목은 무엇이며 회로이론과 제어공학은 한 과목인가?",
+            "answer": "필기는 전기자기학·전력공학·전기기기·회로이론 및 제어공학·전기설비기술기준 5과목이다. 실기는 전기설비설계 및 관리다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "LI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p><strong>① 시 행 처</strong> : 한국산업인력공단 </p>\r\n<p><strong>② 관련학과</strong> : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 </p>\r\n<p><strong>③ </strong><strong>시험과목</strong>     </p>\r\n<p> - 필기 : 1. 전기자기학  2. 전력공학  3. 전기기기  4. 회로이론 및 제어공학  5. 전기설비기술기준</p>\r\n<p> - 실기 : 전기설비설계 및 관리 </p>\r\n<p><strong>④ 검정방법 </strong></p>\r\n<p> - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>\r\n<p> - 실기 : 필답형(2시간 30분) </p>\r\n<p><strong>⑤ 합격기준 </strong></p>\r\n<p> - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상  </p>\r\n</body>\r\n</html> 출제기준 1. 전기기사 (2024.1.1 ~ 2026.12.31) 2. 전기기사 (2027.1.1 ~ 2029.12.31) 메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다."
+          },
+          {
+            "facet": "필기·실기의 시험 방식, 문항 수와 시험시간은?",
+            "answer": "필기는 객관식 4지 택일형으로 과목당 20문항·30분이다. 실기는 필답형으로 2시간 30분이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "LI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p><strong>① 시 행 처</strong> : 한국산업인력공단 </p>\r\n<p><strong>② 관련학과</strong> : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 </p>\r\n<p><strong>③ </strong><strong>시험과목</strong>     </p>\r\n<p> - 필기 : 1. 전기자기학  2. 전력공학  3. 전기기기  4. 회로이론 및 제어공학  5. 전기설비기술기준</p>\r\n<p> - 실기 : 전기설비설계 및 관리 </p>\r\n<p><strong>④ 검정방법 </strong></p>\r\n<p> - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>\r\n<p> - 실기 : 필답형(2시간 30분) </p>\r\n<p><strong>⑤ 합격기준 </strong></p>\r\n<p> - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상  </p>\r\n</body>\r\n</html> 출제기준 1. 전기기사 (2024.1.1 ~ 2026.12.31) 2. 전기기사 (2027.1.1 ~ 2029.12.31) 메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다."
+          },
+          {
+            "facet": "과락과 합격기준은 어떻게 되는가?",
+            "answer": "필기는 과목당 40점 이상이면서 전과목 평균 60점 이상이어야 한다. 실기는 100점 만점에 60점 이상이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "LI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p><strong>① 시 행 처</strong> : 한국산업인력공단 </p>\r\n<p><strong>② 관련학과</strong> : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 </p>\r\n<p><strong>③ </strong><strong>시험과목</strong>     </p>\r\n<p> - 필기 : 1. 전기자기학  2. 전력공학  3. 전기기기  4. 회로이론 및 제어공학  5. 전기설비기술기준</p>\r\n<p> - 실기 : 전기설비설계 및 관리 </p>\r\n<p><strong>④ 검정방법 </strong></p>\r\n<p> - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>\r\n<p> - 실기 : 필답형(2시간 30분) </p>\r\n<p><strong>⑤ 합격기준 </strong></p>\r\n<p> - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상  </p>\r\n</body>\r\n</html> 출제기준 1. 전기기사 (2024.1.1 ~ 2026.12.31) 2. 전기기사 (2027.1.1 ~ 2029.12.31) 메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다."
+          },
+          {
+            "facet": "출제기준 적용 기간과 최신 규정 확인 기준은?",
+            "answer": "출제기준은 2024~2026년과 2027~2029년으로 구분된다. 전기설비기술기준·한국전기설비규정은 시험 시행 전 최근 고시 기준을 확인한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">- </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">실기시험은 필답형으로 시행되며 고객만족</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">></span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">자료실의 출제기준을 참고바랍니다</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">.</span></p>\r\n<p style=\"LINE-HEIGHT: 150%\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">- </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">전기설비기술기준</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt\">, </span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">한국전기설비규정 등은 시험일자 기준으로 시험 시행 전 최근 고시된 기준 및 규정으로</span></p>\r\n<p style=\"LINE-HEIGHT: 150%\"><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕\">  수험준비에 임하여야 합니다</span><span style=\"FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING:"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "LI {\r\n\tMARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2\r\n}</style>\r\n</head>\r\n<body style=\"FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic\">\r\n<p><strong>① 시 행 처</strong> : 한국산업인력공단 </p>\r\n<p><strong>② 관련학과</strong> : 대학의 전기공학, 전기제어공학, 전기전자공학 등 관련학과 </p>\r\n<p><strong>③ </strong><strong>시험과목</strong>     </p>\r\n<p> - 필기 : 1. 전기자기학  2. 전력공학  3. 전기기기  4. 회로이론 및 제어공학  5. 전기설비기술기준</p>\r\n<p> - 실기 : 전기설비설계 및 관리 </p>\r\n<p><strong>④ 검정방법 </strong></p>\r\n<p> - 필기 : 객관식 4지 택일형, 과목당 20문항(과목당 30분) </p>\r\n<p> - 실기 : 필답형(2시간 30분) </p>\r\n<p><strong>⑤ 합격기준 </strong></p>\r\n<p> - 필기 : 100점을 만점으로 하여 과목당 40점 이상, 전과목 평균 60점이상 </p>\r\n<p> - 실기 : 100점을 만점으로 하여 60점 이상  </p>\r\n</body>\r\n</html> 출제기준 1. 전기기사 (2024.1.1 ~ 2026.12.31) 2. 전기기사 (2027.1.1 ~ 2029.12.31) 메뉴상단 고객지원-자료실-출제기준 에서도 보실 수 있습니다.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 69.57,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1877,
+    "url": "https://trendpulse.blog/?p=1877",
+    "post_status": "draft",
+    "held_at": "2026-10-09T06:39:37.691512"
+  },
+  {
+    "keyword": "PT면접",
+    "category": "취업",
+    "topic": "PT면접 준비법: 발표 구성부터 예상 질문과 실전 연습까지",
+    "intent": "PT면접은 무엇을 평가하며, 발표 구성과 질의응답은 어떻게 준비해야 할까?",
+    "gap": "잡아바 본문을 근거로 발표 구성표와 직무·업종·기업 조사, 예상 질문·시간·동선 연습 체크리스트를 제공한다.",
+    "source_url": "https://job.gg.go.kr/thema/exprcDtl.do?cntntsSeCd=01&seq=1853",
+    "verified_sources": [
+      {
+        "url": "https://job.gg.go.kr/thema/exprcDtl.do?cntntsSeCd=01&seq=1853",
+        "original_url": "https://job.gg.go.kr/thema/exprcDtl.do?cntntsSeCd=01&seq=1853",
+        "title": "PT면접, 이렇게 준비하고 합격에 한 발 더 다가가자! | 잡아바 잡학사전",
+        "checked_on": "2026-10-09",
+        "publication_dates": [],
+        "sha256": "501faf1c954109c7ac1d23a5a33d157528319a054bd15f843251e8a00838ed49",
+        "excerpt": "주요 사업 문의처 안내 X 잡아바 질문응답 게시판을 이용해 주셔서 감사합니다. 자주 접수되는 정책 문의는 아래 담당 기관에 직접 문의하시면 빠르고 정확한 답변을 받을 수\n\t\t\t\t  있습니다. 경기도 청년 기본소득 1877-0566 자세히보기 ▶ 경기청년 역량강화 기회지원 시군청 담당부서에 문의 자세히보기 ▶ 경기도 청년 면접수당 1877-2046 자세히보기 ▶ 청년 복지포인트 1577-0014 자세히보기 ▶ 중소기업 청년노동자 지원사업 1577-0014 자세히보기 ▶ 오늘 하루 보지 않기 닫기 통합검색 검색어 검색 추천검색어 청년인턴 공공기관 면접수당 직무교육 통합로그인 회원가입 통합검색 러닝센터 잡아바 어플라이 일자리맵 기업서비스 PT면접, 이렇게 준비하고 합격에 한 발 더 다가가자! #PT면접 #면접준비방법 #직무지식 #업종트렌드 #기업비전방향성 관심 스크랩 페이스북 공유 내 폰에서 보기 주소 복사 조회수 : 6,815 | 관심 : 0 ​ 공기업, 금융권, 대기업 등 공채 면접에서 빠지지 않고 등장하는 PT면접! 어떻게 준비해야 할까요? PT면접 경험이 없으신 분들, PT면접 준비가 어려운 분들을 위해 지금부터 PT면접 준비방법과 면접 시 주의사항에 대해 알려드리겠습니다! ​ PT면접이란? PT면접이란 일반적으로 주어진 주제에 대한 접근 방식과 해결 방법을 제시하는 과정을 보여주는 면접 방식으로, 면접관을 대상으로 발표하는 형태로 진행 됩니다. ​ ​ 면접관들은 이를 통해 지원자의 직무적합성, 논리력, 분석력, 소통능력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리 전개 구조를 명확히 하는 것이 필요한데요. ​ 서론 에서는 주제와 과제설정, ​ 본론 에서는 과제에 대한 해결방안 및 근거 제시, ​ 결론 에서는 ​ 핵심 내용 요약 및 Q&A 등이 포함됩니다. ​ PT면접 준비 방법 다음은 모두 실제 기업 PT면접에서 출제된 적이 있는 주제 들인데요! ​ ​ - 아이템 활성화 방안과 프로모션 전략을 제시하시오. ​ - 경쟁에서 앞서갈 수 있는 마케팅 전략을 제시하시오. ​ - 당사의 장단점에 대해 설명하시오. ​ - 20대와 40대 소비자의 구매결정 과정의 차이점을 제시하시오. ​ - 환율 변동이 경제에 미치는 영향을 설명하시오. ​ - 당사의 지속가능한 성장 전략을 제시하시오. ​ - 우수 인력 유치를 위한 방안을 제시하시오. ​ - 지원 직무가 당사에 기여하는 역할을 설명하시오. ​ ​ 여기서, PT면접의 주제와 상관없이 반드시 알아야할 세 가지! 1. 직무 지식 2. 업종 트렌드 3. 기업 비전 및 방향성 기업 홈페이지 혹은 최신 뉴스 기사, 이전 면접자들의 면접 후기 등을 통해 세 가지를 알아보았다면 어떠한 주제에 대해서도 조금 더 수월하게 준비할 수 있겠죠!? ​ 발표 자료를 준비하고, 발표 내용을 생각했다면 바로 연습이 필요한 단계입니다! ​ 다음 세 가지 사항에 유의하여 연습하는 것이 효과적인데요. 1. 예상 질문을 만들고 답변해보기 2. 실제 면접 시간에 맞춰서 발표해보기 3. 실전과 같은 동선을 고려하여 발표해보기 연습을 하는 횟수만큼 PT실력이 향상되는 것은 당연하겠지요~! ​ PT면접 시  숙지사항 다음은 실제 면접 상황에서의 숙지사항입니다. ​ 1. 발표 전 자기소개로 강한 인상 남기기 ​ 2. 타당성 있는 근거와 설득 논리를 바탕으로 주장하기 ​ 3. 핵심 키워드 중심으로 전달하기 ​ ​ 4. 자세, 아이컨택, 제스처, 동선 등 시각적 연출을 활용하여 면접관의 주목도 높이기 ​ 5. 목소리 크기, 속도, 발음 등 내용에 따라 목소리를 조절하여 설득력 높이기 ​ 6. 입사후 각오를 밝히며 마무리 하기 ​ 7. 다른 사람이 발표할 때 경청하기 ​ PT면접은 본인이 가진 역량을 표현할 수 있는 자리입니다. 위 7가지 사항에 유의하며 면접관 분들께 제대로 보여드리자구요!! PT면접 준비방법은 알았는데 PPT만들기가 고민이네.. ​ ​ PPT만들기가 고민이신 분들을 위해서 <실무에 바로 적용하는, PPT디자인 스킬> 특강이 12월 5일 목요일 예정되어있는데요! ​ 청년재단에서 PT면접 컨설팅을 여러 번 진행해주셨던 지효선 스타트런 대표님 께서 강의해주실 예정이므로, 이 강의에 참여해보시는 것도 좋겠죠? ​ ▼ 특강 신청페이지 바로가기 ▼ 바로 그 다음 날인 12월 6일 금요일 에는 <청년 모의면접 및 코칭 & VR 면접 체험> 프로그램이 진행됩니다. ​ VR면접, 토론면접, PT면접, 심층면접 등 다양한 면접을 직접 해보고, 코칭 피드백까지 받을 수 있으니 놓치지말고 참여해보세요~! ​ 원문출처 : 청년재단 공식 블로그 다른 정보 보기 이전 다음 × 닫기 × 닫기 × 확인 취소 로그인이 필요해요 닫기 로그인 × 닫기 마이페이지 × 주소검색"
+      }
+    ],
+    "intent_results": [
+      "https://www.korealms.co.kr/column/3144",
+      "https://slideguard.kr/guide/pt-interview-guide"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 910,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "PT 면접",
+    "organic_domains": [
+      "job.mpva.go.kr",
+      "www.saramin.co.kr",
+      "www.korealms.co.kr",
+      "slideguard.kr",
+      "librewiki.net",
+      "librewiki.net",
+      "community.linkareer.com",
+      "community.linkareer.com",
+      "dark.namu.moe",
+      "community.linkareer.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://job.mpva.go.kr/jobGdn/content08.do?menuKey=201",
+        "domain": "job.mpva.go.kr",
+        "title": "국가보훈부 취업정보시스템 - 면접의 전략",
+        "snippet": "다수(통상 2인)의 면접관과 지원자 한 사람이 참여하는 것이 일반적이며, PT면접 질문은 인문계 지원자의 경우에 대개 시사이슈에 대한 해결책 또는 본인의 견해를 묻거나 특정상황하에서 해결방안 제시를"
+      },
+      {
+        "url": "https://www.saramin.co.kr/zf_user/store/product?salePrdCd=PM0dc115432ed04b6d9d&t_ref=category_S04&t_ref_content=list_sort_recommended",
+        "domain": "www.saramin.co.kr",
+        "title": "한권으로 끝내는 PT면접 가이드북,샘플 | 면접 코칭 | 사람인스토어 - 사람인",
+        "snippet": "PT면접이란 뭘까? : PT면접 기초이론 ... : PT면접 흐름 빈 양식에 직접 제작해보기(별도 양식파일 제공)"
+      },
+      {
+        "url": "https://www.korealms.co.kr/column/3144",
+        "domain": "www.korealms.co.kr",
+        "title": "PT면접 준비, 발표 구성부터 예상질문·질의응답까지 총정리 | 국민원격교육관리센터",
+        "snippet": "PT면접은 기업과 기관에 따라 세부 진행방식이 다르지만, 주어진 주제나 자료를 분석해 일정 시간 안에 자신의 의견을 정리하고 면접관 앞에서 발표하는 형태로 진행될 수 있습니다. ..."
+      },
+      {
+        "url": "https://slideguard.kr/guide/pt-interview-guide",
+        "domain": "slideguard.kr",
+        "title": "PT 면접 준비법 — 발표 면접 구성과 질의응답 대비",
+        "snippet": "PT 면접은 발표 실력보다 생각하는 방식을 봅니다. ... 기관과 회사마다 다르지만 보통 주제를 받고 → 정해진 시간 동안 준비한 뒤 → 발표하고 → 면접관의 질문을"
+      },
+      {
+        "url": "https://librewiki.net/wiki/PT_%EB%A9%B4%EC%A0%91",
+        "domain": "librewiki.net",
+        "title": "PT 면접 - 리브레 위키",
+        "snippet": "프레젠테이션 면접(PresenTation interview)은 프레젠테이션(PT) 자료를 만들어서 그 자료 보고를 하는 형식으로 면접 진행을 하는 면접 방법이다. ... 대학발표와 PT 면접이 같다고 생각하는데 많이 다르다."
+      },
+      {
+        "url": "https://librewiki.net/wiki/PT",
+        "domain": "librewiki.net",
+        "title": "PT - 리브레 위키",
+        "snippet": "* PT 면접 은 곧 프리젠테이션 면접을 뜻한다. ... * PT는 게임 《슈퍼로봇대전 시리즈》의 오리지널 메카닉 퍼스널 트루퍼 의 약자다."
+      },
+      {
+        "url": "https://community.linkareer.com/community/4985276",
+        "domain": "community.linkareer.com",
+        "title": "2025 PT면접 준비법 5단계 ｜직무별 체크리스트, PPT 구성 예시, 평가 기준 - 링커리어 커뮤니티",
+        "snippet": "PT면접이란 무엇이고, 어떻게 준비해야 합격에 가까워질 수 있을까? ... 아래 표는 실제 기업 PT면접에서 활용되는 대표 평가 항목과 비중 을 정리한 자료입니다."
+      },
+      {
+        "url": "https://community.linkareer.com/best/4985276",
+        "domain": "community.linkareer.com",
+        "title": "2025 PT면접 준비법 5단계 ｜직무별 체크리스트, PPT 구성 예시, 평가 기준 - 링커리어 커뮤니티",
+        "snippet": "PT면접이란 무엇이고, 어떻게 준비해야 합격에 가까워질 수 있을까? ... 아래 표는 실제 기업 PT면접에서 활용되는 대표 평가 항목과 비중 을 정리한 자료입니다."
+      },
+      {
+        "url": "https://dark.namu.moe/w/PT",
+        "domain": "dark.namu.moe",
+        "title": "PT",
+        "snippet": "흔히 PT 면접 을 본다고 하면 프레젠테이션 으로 발표하는 면접을 말한다. ... 미군 작전계획발표(Tactical Plan, TP)를 잘못 부르면서 시작되었다는 설, PresenTation에서 따왔다는 설, 확장자 PPT"
+      },
+      {
+        "url": "https://community.linkareer.com/employment_data/4151910",
+        "domain": "community.linkareer.com",
+        "title": "PT 면접 준비법과 PPT 예시 | 구조, 발표 꿀팁, 실전 템플릿 - 링커리어 커뮤니티",
+        "snippet": "이 글에서는 PT 면접의 구조, PPT 구성법, 발표 꿀팁까지 실제 사례와 함께 정리해드립니다. ... 일부 기업은 발표 시간만 3분 이내로 요구하는 '마이크로 PT 면접'을 시행하기도"
+      }
+    ],
+    "dominant_result_ratio": 0.1,
+    "score_components": {
+      "demand": 23.67,
+      "organic_opportunity": 25.2,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-09T06:18:25.773222+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "PT면접"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "PT면접",
+      "executed_query": "PT 면접",
+      "topic": "PT면접 준비법: 발표 구성부터 예상 질문과 실전 연습까지",
+      "intent": "PT면접은 무엇을 평가하며, 발표 구성과 질의응답은 어떻게 준비해야 할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-09T06:18:25.773222+00:00",
+      "result_count": 10,
+      "domain_count": 7,
+      "dominant_ratio": 0.1,
+      "search_review": {
+        "version": 1,
+        "query": "PT면접",
+        "executed_query": "PT 면접",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-09T06:18:25.773222+00:00",
+        "raw_sha256": "96ed34fe06c6f3b25ee80a03ad287506325fcbe3cadec37309440b2d626f24de",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "다수(통상 2인)의 면접관과 지원자 한 사람이 참여하는 것이 일반적이며, PT면접 질문은 인문계 지원자의 경우에 대개 시사이슈에 대한 해결책 또는 본인의 견해를 묻거나 특정상황하에서 해결방안 제시를"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "PT면접이란 뭘까? : PT면접 기초이론 ... : PT면접 흐름 빈 양식에 직접 제작해보기(별도 양식파일 제공)"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "PT면접은 기업과 기관에 따라 세부 진행방식이 다르지만, 주어진 주제나 자료를 분석해 일정 시간 안에 자신의 의견을 정리하고 면접관 앞에서 발표하는 형태로 진행될 수 있습니다. ..."
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "PT 면접은 발표 실력보다 생각하는 방식을 봅니다. ... 기관과 회사마다 다르지만 보통 주제를 받고 → 정해진 시간 동안 준비한 뒤 → 발표하고 → 면접관의 질문을"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "프레젠테이션 면접(PresenTation interview)은 프레젠테이션(PT) 자료를 만들어서 그 자료 보고를 하는 형식으로 면접 진행을 하는 면접 방법이다. ... 대학발표와 PT 면접이 같다고 생각하는데 많이 다르다."
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "* PT 면접 은 곧 프리젠테이션 면접을 뜻한다. ... * PT는 게임 《슈퍼로봇대전 시리즈》의 오리지널 메카닉 퍼스널 트루퍼 의 약자다."
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "PT면접이란 무엇이고, 어떻게 준비해야 합격에 가까워질 수 있을까? ... 아래 표는 실제 기업 PT면접에서 활용되는 대표 평가 항목과 비중 을 정리한 자료입니다."
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "PT면접이란 무엇이고, 어떻게 준비해야 합격에 가까워질 수 있을까? ... 아래 표는 실제 기업 PT면접에서 활용되는 대표 평가 항목과 비중 을 정리한 자료입니다."
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "흔히 PT 면접 을 본다고 하면 프레젠테이션 으로 발표하는 면접을 말한다. ... 미군 작전계획발표(Tactical Plan, TP)를 잘못 부르면서 시작되었다는 설, PresenTation에서 따왔다는 설, 확장자 PPT"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "이 글에서는 PT 면접의 구조, PPT 구성법, 발표 꿀팁까지 실제 사례와 함께 정리해드립니다. ... 일부 기업은 발표 시간만 3분 이내로 요구하는 '마이크로 PT 면접'을 시행하기도"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 10,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 1.0,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.1,
+        "site_concentration": 0.3,
+        "organic_opportunity": 25.2
+      },
+      "scope": "full_keyword",
+      "target_keyword": "PT면접",
+      "matches": [
+        {
+          "result_index": 2,
+          "quote": "PT면접 준비, 발표 구성부터 예상질문·질의응답까지 총정리"
+        },
+        {
+          "result_index": 3,
+          "quote": "PT 면접 준비법 — 발표 면접 구성과 질의응답 대비"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-09T06:18:25.773222+00:00",
+      "input_sha256": "3a8489bd90d33ef55343dab2cb8004c854d86af78a5e836f224f75f66ad802c4",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "PT면접",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "주요 사업 문의처 안내 X 잡아바 질문응답 게시판을 이용해 주셔서 감사합니다. 자주 접수되는 정책 문의는 아래 담당 기관에 직접 문의하시면 빠르고 정확한 답변을 받을 수\n\t\t\t\t  있습니다. 경기도 청년 기본소득 1877-0566 자세히보기 ▶ 경기청년 역량강화 기회지원 시군청 담당부서에 문의 자세히보기 ▶ 경기도 청년 면접수당 1877-2046 자세히보기 ▶ 청년 복지포인트 1577-0014 자세히보기 ▶ 중소기업 청년노동자 지원사업 1577-0014 자세히보기 ▶ 오늘 하루 보지 않기 닫기 통합검색 검색어 검색 추천검색어 청년인턴 공공기관 면접수당 직무교육 통합로그인 회원가입 통합검색 러닝센터 잡아바 어플라이 일자리맵 기업서비스 PT면접, 이렇게 준비하고 합격에 한 발 더 다가가자! #PT면접 #면접준비방법 #직무지식 #업종트렌드 #기업비전방향성 관심 스크랩 페이스북 공유 내 폰에서 보기 주소 복사 조회수 : 6,815 | 관심 : 0 ​ 공기업, 금융권, 대기업 등 공채 면접에서 빠지지 않고 등장하는 PT면접! 어떻게 준비해야 할까요? PT면접 경험이 없으신 분들, PT면접 준비가 어려운 분들을 위해 지금부터 PT면접 준비방법과 면접 시 주의사항에 대해 알려드리겠습니다! ​ PT면접이란? PT면접이란 일반적으로 주어진 주제에 대한 접근 방식과 해결 방법을 제시하는 과정을 보여주는 면접 방식으로, 면접관을 대상으로 발표하는 형태로 진행 됩니다. ​ ​ 면접관들은 이를 통해 지원자의 직무적합성, 논리력, 분석력, 소통능력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리",
+            "entity": "잡아바",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "PT면접은 어떻게 진행되며 무엇을 평가하는가?",
+            "answer": "주어진 주제의 접근·해결 방법을 발표하며 직무적합성, 논리력, 소통능력, 문제해결능력 등을 평가한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "주요 사업 문의처 안내 X 잡아바 질문응답 게시판을 이용해 주셔서 감사합니다. 자주 접수되는 정책 문의는 아래 담당 기관에 직접 문의하시면 빠르고 정확한 답변을 받을 수\n\t\t\t\t  있습니다. 경기도 청년 기본소득 1877-0566 자세히보기 ▶ 경기청년 역량강화 기회지원 시군청 담당부서에 문의 자세히보기 ▶ 경기도 청년 면접수당 1877-2046 자세히보기 ▶ 청년 복지포인트 1577-0014 자세히보기 ▶ 중소기업 청년노동자 지원사업 1577-0014 자세히보기 ▶ 오늘 하루 보지 않기 닫기 통합검색 검색어 검색 추천검색어 청년인턴 공공기관 면접수당 직무교육 통합로그인 회원가입 통합검색 러닝센터 잡아바 어플라이 일자리맵 기업서비스 PT면접, 이렇게 준비하고 합격에 한 발 더 다가가자! #PT면접 #면접준비방법 #직무지식 #업종트렌드 #기업비전방향성 관심 스크랩 페이스북 공유 내 폰에서 보기 주소 복사 조회수 : 6,815 | 관심 : 0 ​ 공기업, 금융권, 대기업 등 공채 면접에서 빠지지 않고 등장하는 PT면접! 어떻게 준비해야 할까요? PT면접 경험이 없으신 분들, PT면접 준비가 어려운 분들을 위해 지금부터 PT면접 준비방법과 면접 시 주의사항에 대해 알려드리겠습니다! ​ PT면접이란? PT면접이란 일반적으로 주어진 주제에 대한 접근 방식과 해결 방법을 제시하는 과정을 보여주는 면접 방식으로, 면접관을 대상으로 발표하는 형태로 진행 됩니다. ​ ​ 면접관들은 이를 통해 지원자의 직무적합성, 논리력, 분석력, 소통능력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리"
+          },
+          {
+            "facet": "발표 내용을 어떻게 구성해야 하는가?",
+            "answer": "서론은 주제·과제 설정, 본론은 해결방안·근거, 결론은 핵심 요약·질의응답으로 구성한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리 전개 구조를 명확히 하는 것이 필요한데요. ​ 서론 에서는 주제와 과제설정, ​ 본론 에서는 과제에 대한 해결방안 및 근거 제시, ​ 결론 에서는 ​ 핵심 내용 요약 및 Q&A 등이 포함됩니다. ​ PT면접 준비 방법 다음은 모두 실제 기업 PT면접에서 출제된 적이 있는 주제 들인데요! ​ ​ - 아이템 활성화 방안과 프로모션 전략을 제시하시오. ​ - 경쟁에서 앞서갈 수 있는 마케팅 전략을 제시하시오. ​ - 당사의 장단점에 대해 설명하시오. ​ - 20대와 40대 소비자의 구매결정 과정의 차이점을 제시하시오. ​ - 환율 변동이 경제에 미치는 영향을 설명하시오. ​ - 당사의 지속가능한 성장 전략을 제시하시오. ​ - 우수 인력 유치를 위한 방안을 제시하시오. ​ - 지원 직무가 당사에 기여하는 역할을 설명하시오. ​ ​ 여기서, PT면접의 주제와 상관없이 반드시 알아야할 세 가지! 1. 직무 지식 2. 업종 트렌드 3. 기업 비전 및 방향성 기업 홈페이지 혹은 최신 뉴스 기사, 이전 면접자들의 면접 후기 등을 통해 세 가지를 알아보았다면 어떠한 주제에 대해서도 조금 더 수월하게 준비할 수 있겠죠!? ​ 발표 자료를 준비하고, 발표 내용을 생각했다면 바로 연습이 필요한 단계입니다! ​ 다음 세 가지 사항에 유의하여 연습하는 것이 효과적인데요. 1. 예상 질문을 만들고 답변해보기 2. 실제 면접 시간에 맞춰서 발표해보기 3. 실전과 같은 동선을 고려하여 발표해보기 연습을 하는 횟수만큼 PT실력이 향상되는 것은 당연하겠"
+          },
+          {
+            "facet": "출제 주제에 대비해 무엇을 조사해야 하는가?",
+            "answer": "전략·기업 장단점·직무 기여 등의 예시를 참고하고 직무 지식, 업종 트렌드, 기업 비전·방향성을 조사한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리 전개 구조를 명확히 하는 것이 필요한데요. ​ 서론 에서는 주제와 과제설정, ​ 본론 에서는 과제에 대한 해결방안 및 근거 제시, ​ 결론 에서는 ​ 핵심 내용 요약 및 Q&A 등이 포함됩니다. ​ PT면접 준비 방법 다음은 모두 실제 기업 PT면접에서 출제된 적이 있는 주제 들인데요! ​ ​ - 아이템 활성화 방안과 프로모션 전략을 제시하시오. ​ - 경쟁에서 앞서갈 수 있는 마케팅 전략을 제시하시오. ​ - 당사의 장단점에 대해 설명하시오. ​ - 20대와 40대 소비자의 구매결정 과정의 차이점을 제시하시오. ​ - 환율 변동이 경제에 미치는 영향을 설명하시오. ​ - 당사의 지속가능한 성장 전략을 제시하시오. ​ - 우수 인력 유치를 위한 방안을 제시하시오. ​ - 지원 직무가 당사에 기여하는 역할을 설명하시오. ​ ​ 여기서, PT면접의 주제와 상관없이 반드시 알아야할 세 가지! 1. 직무 지식 2. 업종 트렌드 3. 기업 비전 및 방향성 기업 홈페이지 혹은 최신 뉴스 기사, 이전 면접자들의 면접 후기 등을 통해 세 가지를 알아보았다면 어떠한 주제에 대해서도 조금 더 수월하게 준비할 수 있겠죠!? ​ 발표 자료를 준비하고, 발표 내용을 생각했다면 바로 연습이 필요한 단계입니다! ​ 다음 세 가지 사항에 유의하여 연습하는 것이 효과적인데요. 1. 예상 질문을 만들고 답변해보기 2. 실제 면접 시간에 맞춰서 발표해보기 3. 실전과 같은 동선을 고려하여 발표해보기 연습을 하는 횟수만큼 PT실력이 향상되는 것은 당연하겠"
+          },
+          {
+            "facet": "질의응답과 실전 발표는 어떻게 연습해야 하는가?",
+            "answer": "예상 질문을 만들고 답변하며, 실제 면접 시간과 동선을 고려해 발표를 연습한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리 전개 구조를 명확히 하는 것이 필요한데요. ​ 서론 에서는 주제와 과제설정, ​ 본론 에서는 과제에 대한 해결방안 및 근거 제시, ​ 결론 에서는 ​ 핵심 내용 요약 및 Q&A 등이 포함됩니다. ​ PT면접 준비 방법 다음은 모두 실제 기업 PT면접에서 출제된 적이 있는 주제 들인데요! ​ ​ - 아이템 활성화 방안과 프로모션 전략을 제시하시오. ​ - 경쟁에서 앞서갈 수 있는 마케팅 전략을 제시하시오. ​ - 당사의 장단점에 대해 설명하시오. ​ - 20대와 40대 소비자의 구매결정 과정의 차이점을 제시하시오. ​ - 환율 변동이 경제에 미치는 영향을 설명하시오. ​ - 당사의 지속가능한 성장 전략을 제시하시오. ​ - 우수 인력 유치를 위한 방안을 제시하시오. ​ - 지원 직무가 당사에 기여하는 역할을 설명하시오. ​ ​ 여기서, PT면접의 주제와 상관없이 반드시 알아야할 세 가지! 1. 직무 지식 2. 업종 트렌드 3. 기업 비전 및 방향성 기업 홈페이지 혹은 최신 뉴스 기사, 이전 면접자들의 면접 후기 등을 통해 세 가지를 알아보았다면 어떠한 주제에 대해서도 조금 더 수월하게 준비할 수 있겠죠!? ​ 발표 자료를 준비하고, 발표 내용을 생각했다면 바로 연습이 필요한 단계입니다! ​ 다음 세 가지 사항에 유의하여 연습하는 것이 효과적인데요. 1. 예상 질문을 만들고 답변해보기 2. 실제 면접 시간에 맞춰서 발표해보기 3. 실전과 같은 동선을 고려하여 발표해보기 연습을 하는 횟수만큼 PT실력이 향상되는 것은 당연하겠"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "력, 설득능력, 기획력, 창의성, 태도, 성격, 문제해결능력, 시간관리능력, 대응능력 등을 종합적으로 평가합니다! ​ 따라서, 명확하게 정리된 내용 의 발표가 이루어져야하며, 제한 시간을 지키는 것이 중요 합니다. ​ 이를 위해서는 서론-본론-결론 형식으로 나누어 논리 전개 구조를 명확히 하는 것이 필요한데요. ​ 서론 에서는 주제와 과제설정, ​ 본론 에서는 과제에 대한 해결방안 및 근거 제시, ​ 결론 에서는 ​ 핵심 내용 요약 및 Q&A 등이 포함됩니다. ​ PT면접 준비 방법 다음은 모두 실제 기업 PT면접에서 출제된 적이 있는 주제 들인데요! ​ ​ - 아이템 활성화 방안과 프로모션 전략을 제시하시오. ​ - 경쟁에서 앞서갈 수 있는 마케팅 전략을 제시하시오. ​ - 당사의 장단점에 대해 설명하시오. ​ - 20대와 40대 소비자의 구매결정 과정의 차이점을 제시하시오. ​ - 환율 변동이 경제에 미치는 영향을 설명하시오. ​ - 당사의 지속가능한 성장 전략을 제시하시오. ​ - 우수 인력 유치를 위한 방안을 제시하시오. ​ - 지원 직무가 당사에 기여하는 역할을 설명하시오. ​ ​ 여기서, PT면접의 주제와 상관없이 반드시 알아야할 세 가지! 1. 직무 지식 2. 업종 트렌드 3. 기업 비전 및 방향성 기업 홈페이지 혹은 최신 뉴스 기사, 이전 면접자들의 면접 후기 등을 통해 세 가지를 알아보았다면 어떠한 주제에 대해서도 조금 더 수월하게 준비할 수 있겠죠!? ​ 발표 자료를 준비하고, 발표 내용을 생각했다면 바로 연습이 필요한 단계입니다! ​ 다음 세 가지 사항에 유의하여 연습하는 것이 효과적인데요. 1. 예상 질문을 만들고 답변해보기 2. 실제 면접 시간에 맞춰서 발표해보기 3. 실전과 같은 동선을 고려하여 발표해보기 연습을 하는 횟수만큼 PT실력이 향상되는 것은 당연하겠",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 63.87,
     "publish_eligible": true,
     "hold_reasons": []
   }

@@ -276,7 +276,7 @@ def run_queue_step(tmp_path, category, *, stock, select_exit=0, extra_env=None):
 def test_queue_workflow_publishes_claimed_category_stock_without_new_research(tmp_path, category):
     result, calls, output = run_queue_step(tmp_path, category, stock=category)
     assert result.returncode == 0, result.stderr
-    assert calls == [f'scripts/pick_slot_category.py --preferred {category}',
+    assert calls == [f'scripts/pick_slot_category.py --preferred {category} --latest-only',
                      f'-m src.main --mode general --from-queue --auto-publish --category {category}']
     assert output == f'category={category}\n'
 
@@ -284,7 +284,7 @@ def test_queue_workflow_publishes_claimed_category_stock_without_new_research(tm
 def test_queue_workflow_researches_then_falls_back_to_other_category_stock(tmp_path):
     result, calls, output = run_queue_step(tmp_path, '테크', stock='건강', select_exit=1)
     assert result.returncode == 0, result.stderr
-    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크 --latest-only',
                      'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
                      'scripts/pick_slot_category.py --preferred 테크',
                      '-m src.main --mode general --from-queue --auto-publish --category 건강']
@@ -296,7 +296,7 @@ def test_manual_slot_test_reproduces_the_scheduled_path_without_claiming(tmp_pat
     result, calls, output = run_queue_step(tmp_path, '', stock='건강', select_exit=1,
         extra_env={'BLOG_SLOT_TEST': 'true', 'BLOG_CATEGORY': '테크', 'BLOG_PUBLISH': 'false'})
     assert result.returncode == 0, result.stderr
-    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크 --latest-only',
                      'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
                      'scripts/pick_slot_category.py --preferred 테크',
                      '-m src.main --mode general --from-queue --dry-run --category 건강']
@@ -321,7 +321,7 @@ def test_slot_repicks_when_the_writer_finds_no_usable_stock(tmp_path):
     result, calls, output = run_queue_step(tmp_path, '테크', stock='테크 건강',
                                            extra_env={'FAKE_MAIN_EXITS': '3 0'})
     assert result.returncode == 0, result.stderr
-    assert calls == ['scripts/pick_slot_category.py --preferred 테크',
+    assert calls == ['scripts/pick_slot_category.py --preferred 테크 --latest-only',
                      '-m src.main --mode general --from-queue --auto-publish --category 테크',
                      'scripts/pick_slot_category.py --preferred 테크',
                      '-m src.main --mode general --from-queue --auto-publish --category 건강']

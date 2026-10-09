@@ -145,3 +145,23 @@ def test_pick_prefers_any_latest_issue_stock_over_evergreen_stock():
     latest_slot = {**item('테크', 20), 'evidence_mode': 'latest_issue'}
     assert inventory.pick_category([evergreen_slot, latest_slot, latest_other], '테크', now, fresh=is_fresh) == '테크'
     assert inventory.pick_category([evergreen_slot], '테크', now, fresh=is_fresh) == '테크'
+
+
+def test_slot_first_pick_can_ignore_evergreen_stock_so_latest_research_runs_first(tmp_path, monkeypatch, capsys):
+    # Real-publish E2E 2026-10-09: an evergreen PT면접 stock made the jobs slot skip
+    # research, so new ALIO postings were never considered.
+    import json
+    import scripts.pick_slot_category as cli
+    queue = tmp_path / 'queue.json'
+    evergreen = {**item('취업', 90), 'evidence_mode': 'serp'}
+    queue.write_text(json.dumps([evergreen], ensure_ascii=False))
+    monkeypatch.setattr(cli, 'QUEUE', queue)
+    monkeypatch.setattr(cli, 'fresh_market_item', is_fresh)
+    monkeypatch.setattr(cli, 'load_dotenv', lambda: None)
+    monkeypatch.setattr(cli, 'existing_titles', lambda: [])
+    assert cli.main(['--preferred', '취업', '--latest-only']) == 1
+    assert cli.main(['--preferred', '취업']) == 0
+    capsys.readouterr()
+    queue.write_text(json.dumps([evergreen, {**item('취업', 10), 'evidence_mode': 'latest_issue'}], ensure_ascii=False))
+    assert cli.main(['--preferred', '취업', '--latest-only']) == 0
+    assert capsys.readouterr().out.strip() == '취업'

@@ -778,7 +778,7 @@ def test_workflow_selects_before_existing_category_pipeline():
     assert '--category "$CAT" --enqueue --reuse' in command
     assert 'BLOG_REQUIRE_MARKET_TOPIC=1' in command
     # Scheduled slots publish from verified stock and fall back to another stocked category.
-    assert command.index('pick_slot_category.py --preferred "$CAT"') < command.index('python -m src.main')
+    assert command.index('pick_slot_category.py --preferred "$CAT" --latest-only') < command.index('python -m src.main')
     assert '--category "$PUBLISH_CAT"' in command
     assert 'echo "category=$PUBLISH_CAT" >> "$GITHUB_OUTPUT"' in command
     assert step['id'] == 'pipeline'

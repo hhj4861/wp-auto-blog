@@ -697,5 +697,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-09T06:54:29.712658+00:00"
+  },
+  {
+    "key": "부터달라지는저소득층구분모집",
+    "keyword": "2027년부터 달라지는 저소득층 구분모집",
+    "topic": "2027년부터 달라지는 저소득층 구분모집: 10월 8일 발표한 9급 공채 대상 확대와 요건 완화",
+    "category": "취업",
+    "post_id": 1886,
+    "url": "https://trendpulse.blog/low-income-recruitment-2027/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 20,
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-09T07:55:25.963649+00:00"
   }
 ]

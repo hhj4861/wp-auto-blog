@@ -23,6 +23,9 @@ KOREA_PRESS_URL = 'https://www.korea.kr/briefing/pressReleaseList.do?pageIndex={
 MAX_KOREA_PAGES = 6
 # Ministry of Employment and Labor press list: view pages carry the HTML body.
 MOEL_PRESS_URL = 'https://www.moel.go.kr/news/enews/report/enewsList.do'
+# Public-institution job postings (ALIO): registration date marks a new posting.
+ALIO_URL = 'https://job.alio.go.kr/recruit.do?pageNo={page}'
+MAX_ALIO_PAGES = 3
 # Korea Consumer Agency press releases include dated product quality comparisons.
 KCA_PRESS_URL = 'https://www.kca.go.kr/home/sub.do?menukey=4002'
 FEEDS = {
@@ -36,7 +39,7 @@ FEEDS = {
 # Ministries whose announcements answer each category's reader questions.
 SOURCES = {
     '건강': {'press': ('보건복지부', '질병관리청', '식품의약품안전처')},
-    '취업': {'press': ('고용노동부', '인사혁신처'), 'moel': True},
+    '취업': {'press': ('고용노동부', '인사혁신처'), 'moel': True, 'alio': True},
     '생활정보': {'press': ('국토교통부', '국세청', '행정안전부', '금융위원회', '공정거래위원회',
                        '재정경제부', '기획재정부', '보건복지부', '기후에너지환경부', '환경부',
                        '국가보훈부', '성평등가족부', '경찰청', '관세청')},
@@ -82,6 +85,28 @@ def parse_moel_press(page):
         rows.append({'url': f'https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq={link.group(1)}',
                      'title': _text(link.group(2)), 'lead': '',
                      'published': datetime.strptime(day.group(1), '%Y.%m.%d').date(), 'publisher': '고용노동부'})
+    return rows
+
+
+def parse_alio(page):
+    """Open postings with registration and closing dates; closed postings are dropped."""
+    rows = []
+    for row in re.findall(r'<tr>(.*?)</tr>', page, re.S):
+        cells = re.findall(r'<td[^>]*>(.*?)</td>', row, re.S)
+        if len(cells) != 9:
+            continue
+        link = re.search(r'href="/recruitview\.do\?idx=(\d+)"', cells[2])
+        registered = re.search(r'(\d{4})\.(\d{2})\.(\d{2})', _text(cells[6]))
+        closing = re.search(r'(\d{2})\.(\d{2})\.(\d{2})', _text(cells[7]))
+        if not link or not registered or not closing or _text(cells[8]) != '진행중':
+            continue
+        deadline = f'20{closing.group(1)}-{closing.group(2)}-{closing.group(3)}'
+        employer, kind, region = _text(cells[3]), _text(cells[5]), _text(cells[4])
+        rows.append({'url': f'https://job.alio.go.kr/recruitview.do?idx={link.group(1)}',
+                     'title': _text(cells[2]),
+                     'lead': f'{employer} {kind} {region} 채용, 접수 마감 {deadline}',
+                     'published': datetime.strptime('.'.join(registered.groups()), '%Y.%m.%d').date(),
+                     'publisher': employer, 'deadline': deadline})
     return rows
 
 
@@ -159,6 +184,16 @@ def collect(category, now, *, get_text=_get_text):
             # The list is newest first: stop once it reaches days before the window.
             if not listed or min(row['published'] for row in listed) < start.date():
                 break
+    if config.get('alio'):
+        for page in range(1, MAX_ALIO_PAGES + 1):
+            try:
+                listed = parse_alio(get_text(ALIO_URL.format(page=page)))
+            except (OSError, requests.RequestException):
+                break
+            # A posting must still be open after today to be worth announcing.
+            rows.extend(row for row in listed if in_window(row) and row['deadline'] > end.date().isoformat())
+            if not listed or min(row['published'] for row in listed) < start.date():
+                break
     if config.get('moel'):
         try:
             rows.extend(row for row in parse_moel_press(get_text(MOEL_PRESS_URL)) if in_window(row))
@@ -174,7 +209,11 @@ def collect(category, now, *, get_text=_get_text):
             rows.extend(row for row in parse_feed(get_text(FEEDS[name]), name) if in_window(row))
         except (OSError, requests.RequestException):
             continue
-    unique = {}
+    unique, titles = {}, set()
     for row in rows:
-        unique.setdefault(row['url'], row)
+        key = (row['publisher'], re.sub(r'\s+', '', row['title']))
+        if row['url'] in unique or key in titles:
+            continue  # same announcement listed as press release and policy news
+        titles.add(key)
+        unique[row['url']] = row
     return list(unique.values())

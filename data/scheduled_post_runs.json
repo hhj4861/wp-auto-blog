@@ -405,6 +405,17 @@
       "claimed_at": "2026-10-09T09:00:12.470515+09:00",
       "status": "failure",
       "completed_at": "2026-10-09T00:11:03.695292+00:00"
+    },
+    "2026-10-09:evening": {
+      "scheduled_for": "2026-10-09T18:00:00+09:00",
+      "run_created_at": "2026-10-09T18:00:04+09:00",
+      "start_delay_seconds": 12,
+      "trigger": "external_timer",
+      "run_id": "37908451880",
+      "category": "생산성",
+      "slot": "evening",
+      "claimed_at": "2026-10-09T18:00:12.810889+09:00",
+      "status": "started"
     }
   }
 }

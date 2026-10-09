@@ -149,8 +149,14 @@ def issues(item, now=None):
         return ['invalid_latest_issue_evidence']
 
 
+def required(item):
+    """Only listing-discovered latest issues carry the event gate; evergreen fallback does not."""
+    return isinstance(item, dict) and item.get('evidence_mode') == 'latest_issue'
+
+
 def current_sources_match(item, fresh_sources, now=None):
     """Same event/date must still be supported by newly fetched writer inputs."""
+    if not required(item): return True
     if issues(item, now): return False
     evidence = item['latest_issue_evidence']['review']
     original_url = item['verified_sources'][evidence['source_index']]['url']
@@ -223,6 +229,8 @@ def priority(item):
 def review_article(title, html, brief, fresh_sources, call_llm, now=None):
     """Do not let the writer turn a valid new event into an evergreen guide."""
     from bs4 import BeautifulSoup
+    if not required(brief):
+        return []  # evergreen fallback: the measured-demand gates apply instead
     if not current_sources_match(brief, fresh_sources, now):
         return ['latest_issue_expired_or_source_changed']
     text = title + '\n' + BeautifulSoup(html, 'html.parser').get_text(' ', strip=True)

@@ -135,3 +135,13 @@ def test_scheduled_refill_near_a_slot_exits_without_research(tmp_path, monkeypat
     monkeypatch.setattr('sys.argv', ['select', '--category', 'inventory', '--enqueue'])
     assert cli.main() == 0
     assert 'near a posting slot' in capsys.readouterr().out
+
+
+def test_pick_prefers_any_latest_issue_stock_over_evergreen_stock():
+    evergreen_slot = {**item('테크', 99), 'evidence_mode': 'serp'}
+    latest_other = {**item('건강', 20), 'evidence_mode': 'latest_issue'}
+    now = at('2026-10-09T09:00')
+    assert inventory.pick_category([evergreen_slot, latest_other], '테크', now, fresh=is_fresh) == '건강'
+    latest_slot = {**item('테크', 20), 'evidence_mode': 'latest_issue'}
+    assert inventory.pick_category([evergreen_slot, latest_slot, latest_other], '테크', now, fresh=is_fresh) == '테크'
+    assert inventory.pick_category([evergreen_slot], '테크', now, fresh=is_fresh) == '테크'

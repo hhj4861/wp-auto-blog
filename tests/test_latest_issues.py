@@ -14,7 +14,7 @@ EVENT = '새 에이전트가 도구 실행 권한을 사용자에게 먼저 확�
 
 def item():
     return {'keyword': '새에이전트', 'category': '테크', 'topic': '새에이전트 공개: 달라진 실행 승인',
-            'intent': '새 기능에서 무엇이 바뀌었나?', 'score': 20,
+            'intent': '새 기능에서 무엇이 바뀌었나?', 'score': 20, 'evidence_mode': 'latest_issue',
             'verified_sources': [{'url': 'https://openai.com/index/example/', 'title': '새에이전트 공개',
              'excerpt': '2026년 10월 8일 발표. ' + EVENT + ' 상세 설명입니다.' * 20,
              'publication_dates': ['2026-10-08T01:00:00Z']}]}
@@ -134,17 +134,22 @@ def test_newer_event_beats_high_monthly_demand_score():
     assert max([older, newer], key=latest.priority) is newer
 
 
-def test_real_published_windows_candidate_cannot_be_reused_or_enqueued():
+def test_real_windows_candidate_is_evergreen_fallback_and_its_draft_blocks_republication():
+    # Policy 2026-10-09: an evergreen guide may be published only as a fallback when no
+    # latest issue exists. The closed #1862 draft stays in the inventory (drafts count),
+    # so the same guide is a duplicate and cannot be republished automatically.
     row = json.loads((Path(__file__).parent / 'fixtures/windows_install_published_20261008.json').read_text())
-    # Upgrading a cached version number cannot manufacture missing issue evidence.
     row['selection_version'] = market.PROCESS_VERSION
     now = datetime.fromisoformat(row['selected_at']) + timedelta(minutes=1)
-    assert market.fresh_research_item(row, '테크', now)
-    assert not market.opportunity.issues(row, now) and not market.suitability.issues(row, now)
-    assert market.current_priority(row)
-    assert latest.issues(row, now) == ['missing_latest_issue_evidence']
-    assert not market.fresh_market_item(row, '테크', now)
-    with pytest.raises(RuntimeError): market.enqueue_report([], {'category': '테크', 'selected': [row]})
+    assert not latest.required(row)
+    assert market.fresh_market_item(row, '테크', now)
+    assert market.duplicate(row['keyword'], row['topic'], ['윈도우11설치 방법: 업그레이드와 USB 새 설치 상세가이드'])
+    from src import topic_inventory
+    latest_row = {**approved(), 'category': '테크', 'status': 'pending'}
+    fresh = lambda r, c, n: r is row or r is latest_row
+    assert topic_inventory.pick_category([row, latest_row], '테크', now, fresh=fresh) == '테크'
+    assert topic_inventory.pick_category([row, {**latest_row, 'category': '건강'}], '테크', now,
+                                         fresh=lambda r, c, n: True) == '건강'
 
 
 @pytest.fixture
@@ -188,22 +193,18 @@ def selection_case(monkeypatch, tmp_path):
     return state
 
 
-def test_full_selection_enqueues_verified_new_issue(selection_case):
+def test_measured_selection_produces_an_evergreen_fallback_item(selection_case):
     report = market.select_category('테크', top_n=1, titles=[])
     assert len(report['selected']) == 1, report['candidate_decisions']
     row = report['selected'][0]
-    assert not latest.issues(row)
+    assert not latest.required(row) and 'latest_issue_evidence' not in row
     assert market.fresh_market_item(row, '테크')
     assert market.enqueue_report([], report) == [row]
-    assert report['selection_scope'] == 'newest_verified_issue_then_score'
 
 
-def test_full_selection_high_demand_and_trend_cannot_override_old_issue(selection_case):
-    selection_case['is_new_event'] = False
-    report = market.select_category('테크', top_n=1, titles=[])
-    assert not report['selected']
-    assert any('not_a_current_issue' in row['hold_reasons'] for row in report['held'])
-    with pytest.raises(RuntimeError): market.enqueue_report([], report)
+def test_newer_latest_issue_ranks_before_a_high_demand_evergreen_item(selection_case):
+    evergreen = market.select_category('테크', top_n=1, titles=[])['selected'][0]
+    assert latest.priority(approved()) > latest.priority(evergreen)
 
 
 def test_announcement_host_does_not_allow_user_community_subdomains():
@@ -212,11 +213,10 @@ def test_announcement_host_does_not_allow_user_community_subdomains():
     assert not is_official_url('https://community.openai.com/t/announcement')
 
 
-def test_closed_windows_candidate_cannot_be_recovered_as_market_draft():
+def test_closed_windows_draft_from_an_older_selection_version_cannot_be_recovered():
     from scripts.publish_codex_draft import _fresh
     row = json.loads((Path(__file__).parent / 'fixtures/windows_install_published_20261008.json').read_text())
-    row['selection_version'] = market.PROCESS_VERSION
-    with pytest.raises(RuntimeError): _fresh(row)
+    with pytest.raises(RuntimeError): _fresh(row)  # selection_version 6 is not current
 
 
 @pytest.mark.parametrize('value', ['20261008', '2026-W41-4', None, 20261008])
@@ -250,8 +250,13 @@ def listing_case(monkeypatch, tmp_path):
     monkeypatch.setattr(market, 'LATEST_LISTING_SELECTION', True)
     monkeypatch.setattr(market.latest_listings, 'collect', lambda category, now: list(listing))
     monkeypatch.setattr(market, 'fetch_source', lambda url, *a, **k: dict(page) if url == page['url'] else None)
-    for name in ('demand_candidates', 'search_results', 'candidate_sources', 'fetch_trend_change',
-                 'discover_youtube', 'merge_cak_candidates'):
+    # The latest path never measures demand; an empty measured pool keeps the
+    # evergreen fallback (run only when no latest issue passes) from selecting.
+    monkeypatch.setattr(market, 'demand_candidates', lambda seeds: {})
+    monkeypatch.setattr(market.latest_issues, 'discover', lambda *a, **kw: ([], {'status': 'test'}))
+    monkeypatch.setattr(market, 'discover_youtube', lambda *a: ([], {'status': 'test'}))
+    monkeypatch.setattr(market, 'merge_cak_candidates', lambda stats, *a: (stats, {'direct_count': 0}))
+    for name in ('search_results', 'candidate_sources', 'fetch_trend_change'):
         monkeypatch.setattr(market, name, Mock(side_effect=AssertionError(name + ' must not run')))
     state = {'is_new_event': True}
     def ask(prompt):
@@ -290,13 +295,16 @@ def test_listing_issue_that_is_not_new_is_held(listing_case):
     listing_case['is_new_event'] = False
     report = market.select_category('테크', top_n=1, titles=[])
     assert not report['selected']
+    # No measured evergreen candidate either: the latest diagnostics are kept as the report.
     assert any('not_a_current_issue' in row['hold_reasons'] for row in report['held'])
+    assert report['evergreen_fallback_error']
 
 
-def test_listing_without_window_items_selects_nothing_and_never_falls_back_to_evergreen(listing_case, monkeypatch):
+def test_listing_without_window_items_records_the_attempt_before_evergreen_fallback(listing_case, monkeypatch):
     monkeypatch.setattr(market.latest_listings, 'collect', lambda category, now: [])
     report = market.select_category('테크', top_n=1, titles=[])
-    assert report['selected'] == [] and report['research_stop_reason'] == 'no_latest_listing_items'
+    assert report['research_stop_reason'] == 'no_latest_listing_items'
+    assert report['selected'] == [] and report['evergreen_fallback_error']
 
 
 @pytest.mark.parametrize('change', [
@@ -373,3 +381,40 @@ def test_evergreen_item_still_cannot_use_unknown_relevance():
     item = candidate()
     attach(item, review(item, kind='unknown'))
     assert 'unverified_current_relevance' in market.suitability.issues(item, datetime.fromisoformat(item['selected_at']))
+
+
+# --- Evergreen fallback (user decision 2026-10-09): publish a verified evergreen
+# topic only when no latest issue is available; latest stock always comes first.
+
+def test_evergreen_brief_is_not_held_to_the_latest_issue_gate():
+    from tests.test_market_topics import candidate
+    row = candidate()
+    assert not latest.required(row)
+    assert market.fresh_market_item(row, '취업')
+    assert latest.current_sources_match(row, row['verified_sources'])
+    assert latest.review_article('제목', '<p>본문</p>', row, row['verified_sources'], Mock()) == []
+
+
+def test_latest_brief_still_requires_the_latest_issue_gate(listing_case):
+    row = market.select_category('테크', top_n=1, titles=[])['selected'][0]
+    assert market.fresh_market_item(row, '테크')
+    stale = {**row, 'latest_issue_evidence': {**row['latest_issue_evidence'], 'version': -1}}
+    assert not market.fresh_market_item(stale, '테크')
+
+
+def test_selection_falls_back_to_measured_evergreen_only_when_no_latest_issue(selection_case, monkeypatch):
+    monkeypatch.setattr(market, 'LATEST_LISTING_SELECTION', True)
+    monkeypatch.setattr(market.latest_listings, 'collect', lambda category, now: [])
+    selection_case['is_new_event'] = False  # the measured topic is not a new event
+    report = market.select_category('테크', top_n=1, titles=[])
+    assert len(report['selected']) == 1, report.get('candidate_decisions')
+    row = report['selected'][0]
+    assert row['demand_scope'] == 'keyword_total' and 'latest_issue_evidence' not in row
+    assert market.fresh_market_item(row, '테크')
+    assert report['latest_issue_attempt']['research_stop_reason'] == 'no_latest_listing_items'
+
+
+def test_selection_does_not_run_the_evergreen_path_when_a_latest_issue_passed(listing_case, monkeypatch):
+    monkeypatch.setattr(market, 'demand_candidates', Mock(side_effect=AssertionError('no evergreen research')))
+    report = market.select_category('테크', top_n=1, titles=[])
+    assert report['selection_scope'] == 'latest_issue_listing' and report['selected']

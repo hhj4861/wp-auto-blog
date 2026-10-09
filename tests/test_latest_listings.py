@@ -167,5 +167,36 @@ def test_korea_reads_both_press_releases_and_policy_news():
     assert rows[0]['url'] == 'https://www.korea.kr/briefing/pressReleaseView.do?newsId=7'
     pages = {listings.KOREA_PRESS_URL.format(page=1): press, listings.KOREA_NEWS_URL.format(page=1): KOREA_PAGE}
     urls = [row['url'] for row in listings.collect('건강', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))]
-    assert urls == ['https://www.korea.kr/briefing/pressReleaseView.do?newsId=7',
-                    'https://www.korea.kr/news/policyNewsView.do?newsId=1']
+    # The same announcement in both lists is kept once (press release first).
+    assert urls == ['https://www.korea.kr/briefing/pressReleaseView.do?newsId=7']
+
+
+ALIO_PAGE = '''<table><tbody>
+<tr><td></td><td>1899</td><td><a href="/recruitview.do?idx=305841">2026년 10월 전남대학교병원 직원(약무직) 공개채용</a></td>
+<td>전남대학교병원</td><td>전남광주</td><td>정규직</td><td>2026.10.08</td><td>26.10.22 D-12</td><td>진행중</td></tr>
+<tr><td></td><td>1890</td><td><a href="/recruitview.do?idx=305000">지난주 등록 공고</a></td>
+<td>한국전력공사</td><td>전국</td><td>정규직</td><td>2026.10.01</td><td>26.10.20 D-10</td><td>진행중</td></tr>
+<tr><td></td><td>1889</td><td><a href="/recruitview.do?idx=305001">마감 공고</a></td>
+<td>국립공원공단</td><td>강원</td><td>비정규직</td><td>2026.10.08</td><td>26.10.08 D-0</td><td>마감</td></tr>
+</tbody></table>'''
+
+
+def test_open_public_job_postings_registered_in_the_window_are_job_issues():
+    # 2026-10-09: the jobs category only read labor-policy press releases and never
+    # saw actual public-sector postings, so 채용 topics were missing.
+    rows = listings.parse_alio(ALIO_PAGE)
+    assert rows[0] == {'url': 'https://job.alio.go.kr/recruitview.do?idx=305841',
+                       'title': '2026년 10월 전남대학교병원 직원(약무직) 공개채용',
+                       'lead': '전남대학교병원 정규직 전남광주 채용, 접수 마감 2026-10-22',
+                       'published': date(2026, 10, 8), 'publisher': '전남대학교병원', 'deadline': '2026-10-22'}
+    assert listings.SOURCES['취업'].get('alio') is True
+    pages = {listings.ALIO_URL.format(page=1): ALIO_PAGE}
+    collected = listings.collect('취업', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))
+    assert [row['url'] for row in collected] == ['https://job.alio.go.kr/recruitview.do?idx=305841']
+
+
+def test_same_announcement_from_two_korea_lists_is_listed_once():
+    press = KOREA_PAGE.replace('/news/policyNewsView.do?newsId=1&', '/briefing/pressReleaseView.do?newsId=7&')
+    pages = {listings.KOREA_PRESS_URL.format(page=1): press, listings.KOREA_NEWS_URL.format(page=1): KOREA_PAGE}
+    rows = listings.collect('건강', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))
+    assert [row['title'] for row in rows].count("메틸수은 기준 초과 '수산물가공품' 회수 조치") == 1

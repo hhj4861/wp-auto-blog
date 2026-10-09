@@ -6,14 +6,14 @@ from src import latest_listings as listings
 NOW = datetime.fromisoformat('2026-10-09T09:00:00+09:00')
 
 KOREA_PAGE = '''<div class="list_type"><ul>
-<li><a href="/briefing/pressReleaseView.do?newsId=1&amp;pageIndex=1">
+<li><a href="/news/policyNewsView.do?newsId=1&amp;pageIndex=1">
 <span class="text"><strong>메틸수은 기준 초과 &#39;수산물가공품&#39; 회수 조치</strong>
 <span class="lead">식약처는 해당 제품을 회수한다고 밝혔다.</span>
 <span class="source"><span>2026.10.08</span><span>식품의약품안전처</span></span></span></a></li>
-<li><a href="/briefing/pressReleaseView.do?newsId=2&amp;pageIndex=1">
+<li><a href="/news/policyNewsView.do?newsId=2&amp;pageIndex=1">
 <span class="text"><strong>외교부 공관장 인사</strong><span class="lead">붙임 참조</span>
 <span class="source"><span>2026.10.08</span><span>외교부</span></span></span></a></li>
-<li><a href="/briefing/pressReleaseView.do?newsId=3&amp;pageIndex=1">
+<li><a href="/news/policyNewsView.do?newsId=3&amp;pageIndex=1">
 <span class="text"><strong>지난주 질병 발표</strong><span class="lead">과거</span>
 <span class="source"><span>2026.10.01</span><span>질병관리청</span></span></span></a></li>
 </ul></div>'''
@@ -29,9 +29,11 @@ ATOM = '''<feed><entry><title>새 기능</title><link href="https://www.apple.co
 <updated>2026-10-08T21:00:00-07:00</updated><summary>요약</summary></entry></feed>'''
 
 
-def test_korea_press_rows_carry_absolute_url_title_department_and_date():
-    rows = listings.parse_korea_press(KOREA_PAGE)
-    assert rows[0] == {'url': 'https://www.korea.kr/briefing/pressReleaseView.do?newsId=1',
+def test_korea_news_rows_carry_absolute_url_title_department_and_date():
+    # Press-release pages keep the body in a scripted document viewer (attachments);
+    # policy news articles carry the full HTML body that fetch_source can ground.
+    rows = listings.parse_korea_news(KOREA_PAGE)
+    assert rows[0] == {'url': 'https://www.korea.kr/news/policyNewsView.do?newsId=1',
                        'title': "메틸수은 기준 초과 '수산물가공품' 회수 조치",
                        'lead': '식약처는 해당 제품을 회수한다고 밝혔다.',
                        'published': date(2026, 10, 8), 'publisher': '식품의약품안전처'}
@@ -47,8 +49,8 @@ def test_rss_and_atom_entries_use_kst_publication_dates():
 
 
 def test_collect_keeps_only_window_items_from_category_publishers(monkeypatch):
-    pages = {listings.KOREA_PRESS_URL.format(page=1): KOREA_PAGE,
-             listings.KOREA_PRESS_URL.format(page=2): '<ul></ul>'}
+    pages = {listings.KOREA_NEWS_URL.format(page=1): KOREA_PAGE,
+             listings.KOREA_NEWS_URL.format(page=2): '<ul></ul>'}
     rows = listings.collect('건강', NOW, get_text=lambda url: pages.get(url, ''))
     assert [row['title'] for row in rows] == ["메틸수은 기준 초과 '수산물가공품' 회수 조치"]
 
@@ -59,7 +61,7 @@ def test_collect_stops_paging_once_listing_is_older_than_the_window():
         calls.append(url)
         return KOREA_PAGE  # page already reaches 10/01, older than the window
     listings.collect('건강', NOW, get_text=get_text)
-    assert calls == [listings.KOREA_PRESS_URL.format(page=1)]
+    assert calls == [listings.KOREA_NEWS_URL.format(page=1)]
 
 
 def test_feed_categories_read_their_newsrooms_and_tolerate_one_failing_source():
@@ -136,3 +138,22 @@ def test_consumer_agency_listing_uses_the_pinned_chain_fetcher(monkeypatch):
     monkeypatch.setattr(listings.source_tls, 'get', lambda url, **kw: calls.append(url) or Response())
     assert listings._get_text(listings.KCA_PRESS_URL) == 'ok'
     assert calls == [listings.KCA_PRESS_URL]
+
+
+MOEL_PAGE = '''<table class="tstyle_list"><tbody>
+<tr><td class="m_hidden" aria-label="번호">16079</td><td class="txt_left" aria-label="제목"><strong class="b_tit">
+<a href="enewsView.do?news_seq=20054" class="ellipsis" onclick="scEventListener.fnView('20054');return false;" title="(참고) 사회적 대화 제3차 실무협의체 개최">(참고) 사회적 대화 제3차 실무협의체 개최</a>
+</strong></td><td aria-label="첨부"></td><td aria-label="등록일">2026.10.08</td><td aria-label="조회" class="txt_right">522</td></tr>
+<tr><td aria-label="번호">16070</td><td aria-label="제목"><strong class="b_tit"><a href="enewsView.do?news_seq=20040" title="지난 발표">지난 발표</a></strong></td>
+<td aria-label="등록일">2026.10.01</td></tr></tbody></table>'''
+
+
+def test_labor_ministry_press_list_gives_html_body_pages_for_jobs():
+    rows = listings.parse_moel_press(MOEL_PAGE)
+    assert rows[0] == {'url': 'https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20054',
+                       'title': '(참고) 사회적 대화 제3차 실무협의체 개최', 'lead': '',
+                       'published': date(2026, 10, 8), 'publisher': '고용노동부'}
+    assert listings.SOURCES['취업'].get('moel') is True
+    pages = {listings.MOEL_PRESS_URL: MOEL_PAGE}
+    collected = listings.collect('취업', NOW, get_text=lambda url: pages.get(url, '<ul></ul>'))
+    assert [row['url'] for row in collected] == [rows[0]['url']]

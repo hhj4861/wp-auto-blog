@@ -2,7 +2,7 @@
 
 The web search provider ignores date operators, so "what was announced
 yesterday or today" comes from official listings that carry their own
-publication date: the government press-release list (with the issuing
+publication date: the government policy-news list (with the issuing
 ministry) and official newsroom feeds. Listings only locate candidates;
 the latest-issue review still grounds the event and date in the fetched body.
 """
@@ -16,8 +16,12 @@ import requests
 from src import source_tls
 from src.latest_issues import KST, window
 
-KOREA_PRESS_URL = 'https://www.korea.kr/briefing/pressReleaseList.do?pageIndex={page}'
+# Policy news articles carry their full HTML body; press-release pages keep it in
+# a scripted document viewer that fetch_source cannot read (only attachments).
+KOREA_NEWS_URL = 'https://www.korea.kr/news/policyNewsList.do?pageIndex={page}'
 MAX_KOREA_PAGES = 6
+# Ministry of Employment and Labor press list: view pages carry the HTML body.
+MOEL_PRESS_URL = 'https://www.moel.go.kr/news/enews/report/enewsList.do'
 # Korea Consumer Agency press releases include dated product quality comparisons.
 KCA_PRESS_URL = 'https://www.kca.go.kr/home/sub.do?menukey=4002'
 FEEDS = {
@@ -31,7 +35,7 @@ FEEDS = {
 # Ministries whose announcements answer each category's reader questions.
 SOURCES = {
     '건강': {'press': ('보건복지부', '질병관리청', '식품의약품안전처')},
-    '취업': {'press': ('고용노동부', '인사혁신처')},
+    '취업': {'press': ('고용노동부', '인사혁신처'), 'moel': True},
     '생활정보': {'press': ('국토교통부', '국세청', '행정안전부', '금융위원회', '공정거래위원회',
                        '재정경제부', '기획재정부', '보건복지부', '기후에너지환경부', '환경부',
                        '국가보훈부', '성평등가족부', '경찰청', '관세청')},
@@ -47,9 +51,9 @@ def _text(fragment):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', fragment or ''))).strip()
 
 
-def parse_korea_press(page):
+def parse_korea_news(page):
     rows = []
-    for href, body in re.findall(r'<a href="(/briefing/pressReleaseView\.do\?[^"]+)"[^>]*>(.*?)</a>', page, re.S):
+    for href, body in re.findall(r'<a href="(/news/policyNewsView\.do\?[^"]+)"[^>]*>(.*?)</a>', page, re.S):
         news_id = re.search(r'newsId=(\d+)', href)
         title = re.search(r'<strong>(.*?)</strong>', body, re.S)
         lead = re.search(r'<span class="lead">(.*?)</span>', body, re.S)
@@ -61,9 +65,22 @@ def parse_korea_press(page):
             published = datetime.strptime(_text(source[0]), '%Y.%m.%d').date()
         except ValueError:
             continue
-        rows.append({'url': f'https://www.korea.kr/briefing/pressReleaseView.do?newsId={news_id.group(1)}',
+        rows.append({'url': f'https://www.korea.kr/news/policyNewsView.do?newsId={news_id.group(1)}',
                      'title': _text(title.group(1)), 'lead': _text(lead.group(1) if lead else ''),
                      'published': published, 'publisher': _text(source[1])})
+    return rows
+
+
+def parse_moel_press(page):
+    rows = []
+    for row in re.findall(r'<tr>(.*?)</tr>', page, re.S):
+        link = re.search(r'<a href="enewsView\.do\?news_seq=(\d+)"[^>]*>(.*?)</a>', row, re.S)
+        day = re.search(r'aria-label="등록일">\s*(\d{4}\.\d{2}\.\d{2})\s*<', row)
+        if not link or not day:
+            continue
+        rows.append({'url': f'https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq={link.group(1)}',
+                     'title': _text(link.group(2)), 'lead': '',
+                     'published': datetime.strptime(day.group(1), '%Y.%m.%d').date(), 'publisher': '고용노동부'})
     return rows
 
 
@@ -134,13 +151,18 @@ def collect(category, now, *, get_text=_get_text):
     if publishers:
         for page in range(1, MAX_KOREA_PAGES + 1):
             try:
-                listed = parse_korea_press(get_text(KOREA_PRESS_URL.format(page=page)))
+                listed = parse_korea_news(get_text(KOREA_NEWS_URL.format(page=page)))
             except (OSError, requests.RequestException):
                 break
             rows.extend(row for row in listed if row['publisher'] in publishers and in_window(row))
             # The list is newest first: stop once it reaches days before the window.
             if not listed or min(row['published'] for row in listed) < start.date():
                 break
+    if config.get('moel'):
+        try:
+            rows.extend(row for row in parse_moel_press(get_text(MOEL_PRESS_URL)) if in_window(row))
+        except (OSError, requests.RequestException):
+            pass
     if config.get('kca'):
         try:
             rows.extend(row for row in parse_kca_press(get_text(KCA_PRESS_URL)) if in_window(row))

@@ -13,15 +13,20 @@ import re
 
 import requests
 
+from src import source_tls
 from src.latest_issues import KST, window
 
 KOREA_PRESS_URL = 'https://www.korea.kr/briefing/pressReleaseList.do?pageIndex={page}'
 MAX_KOREA_PAGES = 6
+# Korea Consumer Agency press releases include dated product quality comparisons.
+KCA_PRESS_URL = 'https://www.kca.go.kr/home/sub.do?menukey=4002'
 FEEDS = {
     'samsung_newsroom': 'https://news.samsung.com/kr/feed',
     'apple_newsroom': 'https://www.apple.com/kr/newsroom/rss-feed.rss',
     'google_korea_blog': 'https://blog.google/intl/ko-kr/rss/',
     'openai_news': 'https://openai.com/news/rss.xml',
+    'google_workspace_updates': 'https://workspaceupdates.googleblog.com/feeds/posts/default',
+    'skhynix_newsroom': 'https://news.skhynix.co.kr/feed/',
 }
 # Ministries whose announcements answer each category's reader questions.
 SOURCES = {
@@ -31,9 +36,10 @@ SOURCES = {
                        '재정경제부', '기획재정부', '보건복지부', '기후에너지환경부', '환경부',
                        '국가보훈부', '성평등가족부', '경찰청', '관세청')},
     '테크': {'press': ('과학기술정보통신부',),
-             'feeds': ('openai_news', 'google_korea_blog', 'samsung_newsroom')},
-    '생산성': {'feeds': ('google_korea_blog', 'openai_news')},
-    '리뷰': {'feeds': ('samsung_newsroom', 'apple_newsroom')},
+             'feeds': ('openai_news', 'google_korea_blog', 'samsung_newsroom', 'skhynix_newsroom')},
+    # Feature releases of work tools, not vendor customer stories.
+    '생산성': {'feeds': ('google_workspace_updates', 'google_korea_blog')},
+    '리뷰': {'kca': True, 'feeds': ('samsung_newsroom', 'apple_newsroom')},
 }
 
 
@@ -61,6 +67,19 @@ def parse_korea_press(page):
     return rows
 
 
+def parse_kca_press(page):
+    rows = []
+    for row in re.findall(r'<tr>(.*?)</tr>', page, re.S):
+        link = re.search(r'<a href="\?menukey=4002&amp;mode=view&amp;no=(\d+)"[^>]*>(.*?)</a>', row, re.S)
+        day = re.search(r'<td class="b_date">\s*(\d{4}-\d{2}-\d{2})\s*</td>', row)
+        if not link or not day:
+            continue
+        rows.append({'url': f'{KCA_PRESS_URL}&mode=view&no={link.group(1)}', 'title': _text(link.group(2)),
+                     'lead': '', 'published': datetime.strptime(day.group(1), '%Y-%m-%d').date(),
+                     'publisher': '한국소비자원'})
+    return rows
+
+
 def _feed_date(value):
     value = (value or '').strip()
     try:
@@ -78,22 +97,30 @@ def parse_feed(document, publisher):
     for item in re.findall(r'<(item|entry)\b[^>]*>(.*?)</\1>', document, re.S):
         body = item[1]
         title = re.search(r'<title[^>]*>(.*?)</title>', body, re.S)
-        link = (re.search(r'<link>(.*?)</link>', body, re.S)
-                or re.search(r'<link[^>]*href="([^"]+)"', body))
+        # RSS <link>url</link>, or the Atom alternate (article) link, either quote style.
+        atom_links = re.findall(r'<link\b([^>]*)/?>', body)
+        alternate = next((re.search(r'href=[\'"]([^\'"]+)', attrs) for attrs in atom_links
+                          if re.search(r'href=', attrs) and (not re.search(r'rel=', attrs)
+                                                              or re.search(r'rel=[\'"]alternate', attrs))), None)
+        link = re.search(r'<link>(.*?)</link>', body, re.S) or alternate
         stamp = re.search(r'<(pubDate|published|updated)>(.*?)</\1>', body, re.S)
         summary = re.search(r'<(description|summary)[^>]*>(.*?)</\1>', body, re.S)
         clean = lambda value: _text(re.sub(r'<!\[CDATA\[|\]\]>', '', value))
         published = _feed_date(stamp.group(2)) if stamp else None
         if not title or not link or not published:
             continue
-        rows.append({'url': clean(link.group(1)), 'title': clean(title.group(1)),
+        url = clean(link.group(1))
+        if url.startswith('http://'):
+            url = 'https://' + url[len('http://'):]  # feeds list http; fetch over verified HTTPS
+        rows.append({'url': url, 'title': clean(title.group(1)),
                      'lead': clean(summary.group(2)) if summary else '',
                      'published': published, 'publisher': publisher})
     return rows
 
 
 def _get_text(url):
-    response = requests.get(url, timeout=20, headers={'User-Agent': 'Mozilla/5.0 (TrendPulse latest issues)'})
+    # source_tls keeps full verification and pins the intermediate missing from kca.go.kr.
+    response = source_tls.get(url, timeout=20, headers={'User-Agent': 'Mozilla/5.0 (TrendPulse latest issues)'})
     response.raise_for_status()
     return response.text
 
@@ -114,6 +141,11 @@ def collect(category, now, *, get_text=_get_text):
             # The list is newest first: stop once it reaches days before the window.
             if not listed or min(row['published'] for row in listed) < start.date():
                 break
+    if config.get('kca'):
+        try:
+            rows.extend(row for row in parse_kca_press(get_text(KCA_PRESS_URL)) if in_window(row))
+        except (OSError, requests.RequestException):
+            pass
     for name in config.get('feeds', ()):
         try:
             rows.extend(row for row in parse_feed(get_text(FEEDS[name]), name) if in_window(row))

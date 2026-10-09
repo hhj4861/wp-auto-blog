@@ -4,7 +4,7 @@ Naver volume is a demand proxy, never Google volume. Advertising competition is
 recorded but never treated as organic SEO difficulty. Missing evidence fails closed.
 """
 from copy import deepcopy
-from datetime import datetime, timezone, timedelta
+from datetime import date, datetime, timezone, timedelta
 from html import unescape
 import json
 import logging
@@ -32,7 +32,7 @@ from src.search_quality import SearchReviewError
 from src.topic_suitability import review_plan
 from src.search_query import validated_search_query, resolved_search_query
 from src.selection_feedback import load_history, deferred_keywords
-from src import review_discovery, review_exploration, selection_trace, latest_issues
+from src import review_discovery, review_exploration, selection_trace, latest_issues, latest_listings
 from src.youtube_discovery import discover as discover_youtube
 from src import analysis_runtime as runtime
 from src import shared_discovery, recruitment_sources, recruitment_discovery
@@ -70,7 +70,12 @@ CATEGORY_TERMS = {
     '테크': ('와이파이', '블루투스', '운영체제', '소프트웨어업데이트'),
 }
 SOURCE = 'category_market_v1'
-PROCESS_VERSION = 7
+PROCESS_VERSION = 8
+# Scheduled selection discovers dated official announcements instead of the
+# measured-demand pool; brand-new issues are exempt from monthly search volume.
+LATEST_LISTING_SELECTION = True
+MAX_LATEST_SOURCES = 6
+MAX_LATEST_EVALUATIONS = 4
 MAX_RESEARCH_ROUNDS = 4
 MAX_SHORTLIST_RESEARCH = 3
 SHORTLIST_RESEARCH_PER_ROUND = 2
@@ -779,11 +784,15 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
         return None, capability_issues[0]
     if not sources:
         return None, 'no accessible official source supports topic'
-    source_only = evidence_mode == 'official_pages'
+    source_only = evidence_mode in ('official_pages', 'latest_issue')
     indices_key = 'source_indices' if source_only else 'serp_indices'
     intent_rows = sources if source_only else results
     source_selection_schema = '' if source_only else '"source_indices":[0],'
     evidence_instruction = (
+        '공식 보도자료·뉴스룸 목록에서 전일~오늘 발표를 발견했고 검색결과와 검색량은 사용하지 않습니다. '
+        '별도 HTTP 요청으로 읽은 공식 본문만 근거입니다. 새 발표의 내용·대상·일정·독자 영향을 질문으로 정하세요. '
+        '경쟁 우위/검색 결과 대비 차별점은 주장하지 마세요. source_indices는 질문을 뒷받침하는 공식 자료 인덱스입니다.'
+        if evidence_mode == 'latest_issue' else
         '검색 순위나 경쟁 결과는 확보하지 못했습니다. 웹검색 실행 후 별도 HTTP 요청으로 읽은 공식 본문만 있습니다. '
         '주소 후보를 모델이 보고했을 수 있으며, 검색결과 색인이나 Codex의 열람 자체는 입증하지 않습니다. '
         '이 검색어에 직접 답하는 구체적인 독자 질문을 공식 본문에서 확인하세요. '
@@ -1269,6 +1278,82 @@ def _search_review_with_recovery(keyword, provider, results, now, query, *, budg
             return result
 
 
+def latest_score_components(item):
+    """Priority among verified issues only: same-day announcements first. Not traffic."""
+    published = date.fromisoformat(item['latest_issue_listing']['published'])
+    selected = datetime.fromisoformat(item['selected_at']).astimezone(ZoneInfo('Asia/Seoul')).date()
+    return {'latest_issue': 10 if published == selected else 5, 'intent_fit': 15}
+
+
+def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), history=None):
+    """Dated official listing -> fetched body -> plan -> suitability -> latest gate.
+
+    No Naver demand, SERP or trend lookups: a brand-new issue has no measured
+    volume yet. Every source/scope/event/duplicate gate still applies.
+    """
+    now = datetime.now(timezone.utc).isoformat()
+    clock = datetime.fromisoformat(now)
+    selected, held, rejected, decisions = [], [], [], []
+    listing = [row for row in latest_listings.collect(category, clock)
+               if is_official_url(row.get('url', '')) and category_matches(row.get('title'), category)
+               and not duplicate(row['title'], row['title'], titles)]
+    sources, rows_by_index = [], []
+    for row in listing[:MAX_LATEST_SOURCES]:
+        source = fetch_source(row['url'])
+        if source and isinstance(source.get('excerpt'), str) and source['excerpt'].strip():
+            sources.append(source)
+            rows_by_index.append(row)
+    keywords = latest_issues.extract_keywords(category, sources, clock, ask) if sources else []
+    for keyword, index in keywords[:MAX_LATEST_EVALUATIONS]:
+        if norm(keyword) in excluded_keys or duplicate(keyword, keyword, titles + [x['keyword'] for x in selected]):
+            rejected.append({'keyword': keyword, 'reason': 'excluded or duplicate latest issue'})
+            continue
+        audit = {}
+        item, reason = topic_from_evidence(keyword, category, now, [], [sources[index]],
+                                           evidence_mode='latest_issue', audit=audit)
+        if not item:
+            rejected.append({'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit})
+            continue
+        row = rows_by_index[index]
+        item.pop('intent_evidence', None)
+        candidate = {**item, 'article_type': 'information', 'monthly_search': None,
+                     'demand_scope': 'latest_issue_exempt', 'demand_provider': None,
+                     'evidence_mode': 'latest_issue',
+                     'latest_issue_listing': {'url': row['url'], 'title': row['title'],
+                                              'publisher': row['publisher'],
+                                              'published': row['published'].isoformat()},
+                     'organic_provider': None, 'organic_query': None, 'organic_results': [],
+                     'organic_domains': [], 'dominant_result_ratio': None,
+                     'trend_growth': None, 'trend_provider': None, 'trend_status': 'not_applicable',
+                     'selection_version': PROCESS_VERSION, 'selected_at': now, 'source': SOURCE,
+                     'keywords': [keyword], 'status': 'pending'}
+        candidate['suitability_evidence'] = review_plan(candidate, clock, ask)
+        reasons = suitability.issues(candidate, clock)
+        if not reasons:
+            candidate['latest_issue_evidence'] = latest_issues.review(candidate, now, ask)
+            reasons = latest_issues.issues(candidate, now)
+        components = latest_score_components(candidate)
+        candidate.update(score_components=components, score=round(sum(components.values()), 2),
+                         publish_eligible=not reasons, hold_reasons=reasons)
+        (held if reasons else selected).append(candidate)
+        decisions.append({'keyword': keyword, 'decision': 'held' if reasons else 'selected',
+                          'reasons': reasons, 'listing': candidate['latest_issue_listing']})
+    selected.sort(key=latest_issues.priority, reverse=True)
+    stop = ('no_latest_listing_items' if not listing else 'no_latest_sources' if not sources
+            else 'selection_target' if len(selected) >= top_n else 'latest_listing_exhausted')
+    report = {'category': category, 'selected_at': now, 'seeds': [k for k, _ in keywords],
+              'selection_version': PROCESS_VERSION, 'selection_scope': 'latest_issue_listing',
+              'latest_issue_listing': [{**row, 'published': row['published'].isoformat()} for row in listing],
+              'analyst': 'codex_subscription', 'discovery_provider': 'official_dated_listings',
+              'measured_candidates': 0, 'evaluated_candidates': len(decisions) + len(rejected),
+              'selected': selected[:top_n], 'held': held, 'rejected': rejected,
+              'excluded_keywords': sorted(excluded_keys), 'research_stop_reason': stop,
+              'ranked_candidates': selected, 'candidate_decisions': decisions,
+              'notes': 'Latest issues come from dated official listings; monthly search volume is exempt.'}
+    report['failure_history'] = load_history({**report, 'failure_history': history}, category, clock)
+    return report
+
+
 @selection_trace.capture
 @runtime.selection_scope
 @source_fetch_scope()
@@ -1288,6 +1373,9 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
     deferred = deferred_keywords(history, clock)
     titles = existing_titles() if titles is None else titles
+    if LATEST_LISTING_SELECTION and category in latest_listings.SOURCES:
+        # Evergreen pool candidates cannot pass the mandatory latest-issue gate.
+        return select_latest_issues(category, top_n, titles, excluded_keys=excluded_keys, history=history)
     shared_result = None
     approved_keys = None
     if shared_discovery.enabled():
@@ -1826,7 +1914,11 @@ def fresh_research_item(item, category, now=None):
         valid_evidence = any(isinstance(source, dict) and source.get('url') == item.get('source_url')
                              and bool(source.get('excerpt')) for source in evidence)
         valid_score = math.isfinite(item.get('score', float('nan')))
-        valid_volume = item.get('monthly_search', 0) >= MIN_MONTHLY_SEARCH
+        latest = item.get('evidence_mode') == 'latest_issue'
+        # Only a listing-discovered latest issue may lack measured demand, and it
+        # must not carry a number that could be mistaken for one.
+        valid_volume = (item.get('monthly_search') is None if latest
+                        else item.get('monthly_search', 0) >= MIN_MONTHLY_SEARCH)
         if ('cak_provenance' not in item
                 and (item.get('demand_provider') == 'cak_naver_searchad_whitespace_exact'
                      or 'cak_trend' in (item.get('score_components') or {}))):
@@ -1844,7 +1936,22 @@ def fresh_research_item(item, category, now=None):
             if direct_rising and (components.get('trend') != 0 or item.get('trend_growth') is not None
                                   or item.get('trend_provider') is not None):
                 return False
-        if item.get('evidence_mode', 'serp') == 'official_pages':
+        if latest:
+            listing = item.get('latest_issue_listing')
+            start, end = latest_issues.window(now)
+            verified_urls = {source.get('url') for source in evidence
+                             if is_official_url(source.get('url', '')) and source.get('excerpt')
+                             and source.get('sha256') and source.get('checked_on')}
+            intents = item.get('intent_results') or []
+            valid_search = (
+                item.get('demand_scope') == 'latest_issue_exempt' and 'cak_provenance' not in item
+                and isinstance(listing, dict) and is_official_url(listing.get('url', ''))
+                and listing.get('url') == item.get('source_url') and item.get('source_url') in verified_urls
+                and start.date() <= date.fromisoformat(listing['published']) <= end.date()
+                and not item.get('organic_results') and not item.get('organic_domains')
+                and item.get('organic_provider') is None and item.get('dominant_result_ratio') is None
+                and isinstance(intents, list) and bool(intents) and all(url in verified_urls for url in intents))
+        elif item.get('evidence_mode', 'serp') == 'official_pages':
             research = item.get('research_evidence') or {}
             if not isinstance(research, dict) or not isinstance(item.get('score_components'), dict):
                 return False
@@ -1900,14 +2007,25 @@ def fresh_market_item(item, category, now=None):
     """Only current, search-verified candidates may reach queue, writer or WordPress."""
     return (fresh_research_item(item, category, now)
             and item.get('status') == 'pending' and item.get('publish_eligible') is True
-            and not item.get('hold_reasons') and item.get('demand_scope') == 'keyword_total'
-            and not opportunity.issues(item, now) and not suitability.issues(item, now)
+            and not item.get('hold_reasons')
+            and item.get('demand_scope') == ('latest_issue_exempt' if item.get('evidence_mode') == 'latest_issue'
+                                             else 'keyword_total')
+            # Search-opportunity evidence does not exist for a listing-discovered issue;
+            # its provenance is checked in fresh_research_item instead.
+            and (item.get('evidence_mode') == 'latest_issue' or not opportunity.issues(item, now))
+            and not suitability.issues(item, now)
             and current_priority(item) and not latest_issues.issues(item, now))
 
 
 def current_priority(item):
     """Do not trust cached priority or a zero standing in for unavailable trend data."""
     try:
+        if item.get('evidence_mode') == 'latest_issue':
+            components = latest_score_components(item)
+            return (item.get('trend_status') == 'not_applicable' and item.get('trend_growth') is None
+                    and item.get('score_components') == components and item.get('organic_domains') == []
+                    and item.get('dominant_result_ratio') is None
+                    and item.get('score') == round(sum(components.values()), 2))
         growth = item.get('trend_growth')
         if growth is not None and (type(growth) not in (int, float) or not math.isfinite(growth)):
             return False

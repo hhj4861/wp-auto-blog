@@ -136,7 +136,15 @@ def review_article(title, html, description, brief, call_llm):
     capability_issues = content_capability_issues(brief.get('keyword') if isinstance(brief, dict) else None)
     if capability_issues:
         return capability_issues
-    if issues(brief) or not all(isinstance(value, str) for value in (title, html, description)):
+    # A listing-discovered latest issue has no search-opportunity evidence; its
+    # provenance and event are checked by the latest-issue gate instead.
+    latest = isinstance(brief, dict) and brief.get('evidence_mode') == 'latest_issue'
+    if latest:
+        from src.latest_issues import issues as latest_issue_problems
+        invalid = bool(latest_issue_problems(brief))
+    else:
+        invalid = bool(issues(brief))
+    if invalid or not all(isinstance(value, str) for value in (title, html, description)):
         return ['검색 의도 검수 입력이 유효하지 않음']
     soup = BeautifulSoup(html, 'html.parser')
     for element in soup(['script', 'style', 'nav', 'footer']):
@@ -176,7 +184,7 @@ def review_article(title, html, description, brief, call_llm):
         '"facet_reviews":[{"facet_index":0,"covered":true,"reason":"covered","answer_quote":"본문 원문"}]}.\n'
         + json.dumps({'keyword': brief['keyword'], 'approved_topic': brief['topic'],
                       'approved_intent': brief['intent'], 'planned_value': brief.get('gap'),
-                      'search_evidence': brief['opportunity_evidence']['matches'],
+                      'search_evidence': [] if latest else brief['opportunity_evidence']['matches'],
                       'required_facets': suitability_review.get('required_facets', []),
                       'sources': suitability_review.get('sources', []),
                       'current_relevance': suitability_review.get('current_relevance'),

@@ -73,3 +73,66 @@ def test_feed_categories_read_their_newsrooms_and_tolerate_one_failing_source():
 
 def test_every_category_has_dated_official_sources():
     assert set(listings.SOURCES) == {'생활정보', '취업', '건강', '생산성', '리뷰', '테크'}
+
+
+KCA_PAGE = '''<table class="board m_board"><tbody>
+<tr><td class="brd_none b_num">3725</td><td class="title">
+<a href="?menukey=4002&amp;mode=view&amp;no=1004568797" class="title" style="">[화장실용 화장지 품질비교 결과] 흡수성은 모든 제품이 우수하고, 물풀림성도 향상돼&nbsp;<img src='/new.gif' alt='새글' /></a>
+</td><td class="b_write">섬유신소재팀</td><td class="b_date">2026-10-08</td><td class="b_hit">199</td></tr>
+<tr><td class="brd_none b_num">3720</td><td class="title">
+<a href="?menukey=4002&amp;mode=view&amp;no=1004500000" class="title">[지난 시험] 예전 결과</a>
+</td><td class="b_write">시험팀</td><td class="b_date">2026-10-01</td><td class="b_hit">776</td></tr>
+</tbody></table>'''
+
+
+def test_consumer_agency_product_tests_are_dated_review_sources():
+    rows = listings.parse_kca_press(KCA_PAGE)
+    assert rows[0] == {'url': 'https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1004568797',
+                       'title': '[화장실용 화장지 품질비교 결과] 흡수성은 모든 제품이 우수하고, 물풀림성도 향상돼',
+                       'lead': '', 'published': date(2026, 10, 8), 'publisher': '한국소비자원'}
+    def get_text(url):
+        if url == listings.KCA_PRESS_URL:
+            return KCA_PAGE
+        raise OSError('feeds down')
+    assert [row['url'] for row in listings.collect('리뷰', NOW, get_text=get_text)] == [rows[0]['url']]
+
+
+def test_productivity_uses_workspace_feature_updates_not_customer_stories():
+    assert 'google_workspace_updates' in listings.SOURCES['생산성']['feeds']
+    assert 'openai_news' not in listings.SOURCES['생산성']['feeds']
+    assert 'skhynix_newsroom' in listings.SOURCES['테크']['feeds']
+
+
+def test_every_listed_feed_is_an_official_publisher():
+    from src.editorial import is_official_url
+    samples = {'samsung_newsroom': 'https://news.samsung.com/kr/x', 'apple_newsroom': 'https://www.apple.com/kr/newsroom/x',
+               'google_korea_blog': 'https://blog.google/intl/ko-kr/x/', 'openai_news': 'https://openai.com/index/x/',
+               'google_workspace_updates': 'https://workspaceupdates.googleblog.com/2026/10/x.html',
+               'skhynix_newsroom': 'https://news.skhynix.co.kr/x/'}
+    assert set(samples) == set(listings.FEEDS)
+    assert all(is_official_url(url) for url in samples.values())
+    # Exact hosts only: an arbitrary blog on the same platform is not official.
+    assert not is_official_url('https://someone.googleblog.com/x.html')
+
+
+BLOGGER = """<feed><entry><published>2026-10-08T08:34:24.249-07:00</published>
+<title type='text'>Carrier Link for Google Voice</title>
+<link rel='replies' type='application/atom+xml' href='https://workspaceupdates.googleblog.com/feeds/1/comments/default'/>
+<link rel='alternate' type='text/html' href='http://workspaceupdates.googleblog.com/2026/10/carrier-link.html'/>
+</entry></feed>"""
+
+
+def test_blogger_atom_uses_the_alternate_article_link_with_single_quotes():
+    row = listings.parse_feed(BLOGGER, 'google_workspace_updates')[0]
+    assert row['url'] == 'https://workspaceupdates.googleblog.com/2026/10/carrier-link.html'
+    assert row['published'] == date(2026, 10, 9)  # 08:34 PDT = 00:34 KST next day
+
+
+def test_consumer_agency_listing_uses_the_pinned_chain_fetcher(monkeypatch):
+    calls = []
+    class Response:
+        text = 'ok'
+        def raise_for_status(self): pass
+    monkeypatch.setattr(listings.source_tls, 'get', lambda url, **kw: calls.append(url) or Response())
+    assert listings._get_text(listings.KCA_PRESS_URL) == 'ok'
+    assert calls == [listings.KCA_PRESS_URL]

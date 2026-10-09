@@ -462,7 +462,11 @@ class BlogPipeline:
 
         # 키워드 게이트: 검색 수요가 없는 토픽은 생성 비용을 쓰기 전에 차단한다
         # (자격증명이 없거나 조회 실패면 unknown → 통과시켜 발행을 막지 않는다)
-        if self.config.mode == "general":
+        # A verified latest-issue brief is exempt by design: brand-new issues have
+        # no monthly volume yet (fresh_market_item already validated the brief).
+        latest_exempt = (isinstance(market_brief, dict)
+                         and market_brief.get('demand_scope') == 'latest_issue_exempt')
+        if self.config.mode == "general" and not latest_exempt:
             verdict = evaluate_keyword(topic.topic, topic.keywords)
             logger.info(f"키워드 게이트: {verdict['verdict']} — {verdict['reason']}")
             if verdict["verdict"] == "skip":

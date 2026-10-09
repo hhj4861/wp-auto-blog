@@ -39,7 +39,8 @@ OFFICIAL_DOMAINS = {
 # News publisher hosts are exact: community forums on sibling subdomains are not official announcements.
 OFFICIAL_NEWS_HOSTS = {"blogs.microsoft.com", "news.microsoft.com", "www.microsoft.com", "blogs.windows.com",
     "openai.com", "www.openai.com", "anthropic.com", "www.anthropic.com", "ai.meta.com",
-    "blog.google", "deepmind.google", "github.blog"}
+    "blog.google", "deepmind.google", "github.blog",
+    "workspaceupdates.googleblog.com", "news.skhynix.co.kr"}
 GROUNDING_HOSTS = {"vertexaisearch.cloud.google.com"}
 SOURCE_FETCH_BUDGET_SECONDS = 35
 SOURCE_FETCH_BACKOFF_SECONDS = 1

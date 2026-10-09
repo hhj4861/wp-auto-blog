@@ -15,6 +15,13 @@ def isolated_post_registry(tmp_path, monkeypatch):
     return tmp_path
 
 
+@pytest.fixture(autouse=True)
+def measured_selection_path(monkeypatch):
+    """Legacy selection tests exercise the measured-demand path; listing tests opt in."""
+    import src.market_topics as market
+    monkeypatch.setattr(market, "LATEST_LISTING_SELECTION", False)
+
+
 @pytest.fixture
 def mock_env_vars(monkeypatch):
     """Set up mock environment variables for testing."""

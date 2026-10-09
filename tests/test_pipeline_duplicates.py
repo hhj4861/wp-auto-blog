@@ -14,6 +14,16 @@ from src.pipeline import BlogPipeline
 from tests.test_market_topics import market_pipeline, candidate
 
 
+@pytest.fixture(autouse=True)
+def isolated_latest_issue_gate(monkeypatch):
+    # These tests cover promotion/affiliate/duplicate flows with evergreen fixtures.
+    # The mandatory latest-issue gate is exercised in test_latest_issues.py.
+    from src import latest_issues
+    monkeypatch.setattr(latest_issues, 'issues', lambda *a, **kw: [])
+    monkeypatch.setattr(latest_issues, 'current_sources_match', lambda *a, **kw: True)
+    monkeypatch.setattr(latest_issues, 'review_article', lambda *a, **kw: [])
+
+
 @pytest.fixture
 def codex_pipeline(monkeypatch):
     pipeline = BlogPipeline.__new__(BlogPipeline)

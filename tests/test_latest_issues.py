@@ -231,3 +231,119 @@ def test_invalid_review_is_not_a_negative_content_verdict():
     row = approved()
     html = '<p>2026-10-08 ' + EVENT + '</p>'
     assert latest.review_article(row['topic'], html, row, row['verified_sources'], lambda _: {}, NOW) == ['invalid_latest_issue_article_review']
+
+
+@pytest.fixture
+def listing_case(monkeypatch, tmp_path):
+    """Listing-driven latest path: real gates, no demand/SERP lookups at all."""
+    from hashlib import sha256
+    from tests.test_market_topics import analysis
+    today = datetime.now(timezone.utc).astimezone(latest.KST).date()
+    page = {'url': 'https://www.korea.kr/briefing/pressReleaseView.do?newsId=9', 'title': '새에이전트 공개',
+            'excerpt': today.isoformat() + ' ' + EVENT + ' 새에이전트 공식 발표 내용입니다.' * 15,
+            'checked_on': today.isoformat(), 'publication_dates': [today.isoformat()]}
+    page['sha256'] = sha256(page['excerpt'].encode()).hexdigest()
+    listing = [{'url': page['url'], 'title': '새에이전트 공개', 'lead': EVENT,
+                'published': today, 'publisher': '과학기술정보통신부'}]
+    monkeypatch.setattr(market, 'ROOT', tmp_path)
+    monkeypatch.setattr(market, 'LEDGER', tmp_path / 'history.json')
+    monkeypatch.setattr(market, 'LATEST_LISTING_SELECTION', True)
+    monkeypatch.setattr(market.latest_listings, 'collect', lambda category, now: list(listing))
+    monkeypatch.setattr(market, 'fetch_source', lambda url, *a, **k: dict(page) if url == page['url'] else None)
+    for name in ('demand_candidates', 'search_results', 'candidate_sources', 'fetch_trend_change',
+                 'discover_youtube', 'merge_cak_candidates'):
+        monkeypatch.setattr(market, name, Mock(side_effect=AssertionError(name + ' must not run')))
+    state = {'is_new_event': True}
+    def ask(prompt):
+        if '검색어를 최대 6개 추출하세요' in prompt:
+            return {'candidates': [{'keyword': '새에이전트', 'source_index': 0}]}
+        if '최신 이슈 발행 필수 심사입니다' in prompt:
+            return verdict(event_date=today.isoformat(), date_quote=today.isoformat(),
+                           is_new_event=state['is_new_event'])
+        return analysis('새에이전트', '테크', topic='새에이전트 신규 기능 공개',
+                        intent='새 승인 기능은 무엇이 달라졌나?', source_indices=[0])
+    monkeypatch.setattr(market, 'ask', ask)
+    def independent_plan(candidate, now, _):
+        quote = candidate['verified_sources'][0]['excerpt']
+        return market.suitability.review_plan(candidate, now, lambda _: {
+            'scope': 'full_keyword', 'target_keyword': candidate['keyword'],
+            'sources': [{'source_index': 0, 'quote': quote, 'entity': '새에이전트', 'context': 'system_rules'}],
+            'required_facets': [{'facet': candidate['intent'], 'answer': EVENT, 'supported': True, 'source_index': 0, 'quote': quote}],
+            'current_relevance': {'kind': 'evergreen', 'source_index': 0, 'quote': quote, 'event_start': None, 'event_end': None, 'date_quote': None}})
+    monkeypatch.setattr(market, 'review_plan', independent_plan)
+    return state
+
+
+def test_listing_issue_is_selected_without_search_volume_and_enqueued(listing_case):
+    report = market.select_category('테크', top_n=1, titles=[])
+    assert len(report['selected']) == 1, report['candidate_decisions']
+    row = report['selected'][0]
+    assert row['monthly_search'] is None and row['demand_scope'] == 'latest_issue_exempt'
+    assert row['evidence_mode'] == 'latest_issue' and row['organic_results'] == []
+    assert row['latest_issue_listing']['publisher'] == '과학기술정보통신부'
+    assert market.fresh_market_item(row, '테크')
+    assert market.enqueue_report([], report) == [row]
+    assert report['selection_scope'] == 'latest_issue_listing'
+
+
+def test_listing_issue_that_is_not_new_is_held(listing_case):
+    listing_case['is_new_event'] = False
+    report = market.select_category('테크', top_n=1, titles=[])
+    assert not report['selected']
+    assert any('not_a_current_issue' in row['hold_reasons'] for row in report['held'])
+
+
+def test_listing_without_window_items_selects_nothing_and_never_falls_back_to_evergreen(listing_case, monkeypatch):
+    monkeypatch.setattr(market.latest_listings, 'collect', lambda category, now: [])
+    report = market.select_category('테크', top_n=1, titles=[])
+    assert report['selected'] == [] and report['research_stop_reason'] == 'no_latest_listing_items'
+
+
+@pytest.mark.parametrize('change', [
+    {'monthly_search': 300}, {'demand_scope': 'keyword_total'}, {'evidence_mode': 'official_pages'},
+    {'organic_results': [{'url': 'https://example.org', 'title': 'x', 'snippet': 'y'}]},
+    {'score': 999}, {'latest_issue_listing': None}])
+def test_exempt_latest_item_cannot_be_relabelled_or_tampered(listing_case, change):
+    row = market.select_category('테크', top_n=1, titles=[])['selected'][0]
+    assert not market.fresh_market_item({**row, **change}, '테크')
+
+
+def test_evergreen_item_cannot_claim_the_latest_demand_exemption(monkeypatch):
+    from tests.test_market_topics import candidate
+    monkeypatch.setattr(market.latest_issues, 'issues', lambda *a, **k: [])  # isolate the demand gate
+    row = candidate()
+    assert market.fresh_market_item(row, '취업')
+    assert not market.fresh_market_item({**row, 'demand_scope': 'latest_issue_exempt'}, '취업')
+    assert not market.fresh_market_item({**row, 'monthly_search': None}, '취업')
+
+
+def test_final_intent_review_accepts_a_latest_brief_without_search_evidence(listing_case):
+    from src import market_opportunity
+    row = market.select_category('테크', top_n=1, titles=[])['selected'][0]
+    prompts = []
+    def llm(prompt):
+        prompts.append(prompt)
+        return json.dumps({'covers_primary_intent': False, 'answer_quote': '', 'facet_reviews': []})
+    html = '<p>' + EVENT + '</p>'
+    market_opportunity.review_article(row['topic'], html, row['intent'], row, llm)
+    assert prompts, 'a latest brief must reach the final intent review, not fail as invalid input'
+    assert json.loads(prompts[0].split('\n', 1)[1])['search_evidence'] == []
+
+
+def test_writer_demand_gate_is_skipped_only_for_a_latest_issue_brief(listing_case, monkeypatch, mock_env_vars):
+    from src import pipeline as module
+    from src.pipeline import BlogPipeline, PipelineConfig
+    from src.trend_detector import Topic, TrendSource
+    row = market.select_category('테크', top_n=1, titles=[])['selected'][0]
+    gate = Mock(return_value={'verdict': 'skip', 'reason': '월 검색량 0회'})
+    monkeypatch.setattr(module, 'evaluate_keyword', gate)
+    pipeline = BlogPipeline(PipelineConfig(mode='general', category='테크', auto_publish=True, use_llm_topics=False))
+    pipeline.content_generator = Mock()
+    pipeline.content_generator.generate.side_effect = RuntimeError('reached writer')
+    topic = Topic(topic=row['topic'], keywords=row['keywords'], source=TrendSource.HACKER_NEWS,
+                  score=100, suggested_title=row['topic'], category='테크')
+    result = pipeline._process_topic(topic, market_brief=row)
+    gate.assert_not_called()
+    assert '검색 수요 부족' not in (result.error or '')
+    evergreen = pipeline._process_topic(topic)
+    assert '검색 수요 부족' in evergreen.error

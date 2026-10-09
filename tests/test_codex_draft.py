@@ -54,6 +54,11 @@ def test_recovery_preserves_body_and_checks_before_writing(tmp_path, monkeypatch
 
 @pytest.fixture
 def market_case(tmp_path, monkeypatch):
+    # Draft/Coupang flows use an evergreen brief; the mandatory latest-issue gate
+    # is exercised in test_latest_issues.py.
+    monkeypatch.setattr(module.market.latest_issues, 'issues', lambda *a, **kw: [])
+    monkeypatch.setattr(module.market.latest_issues, 'current_sources_match', lambda *a, **kw: True)
+    monkeypatch.setattr(module.market.latest_issues, 'review_article', lambda *a, **kw: [])
     monkeypatch.chdir(tmp_path)
     data = tmp_path / 'data'
     data.mkdir()

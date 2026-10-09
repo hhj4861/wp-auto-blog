@@ -16,9 +16,10 @@ import requests
 from src import source_tls
 from src.latest_issues import KST, window
 
-# Policy news articles carry their full HTML body; press-release pages keep it in
-# a scripted document viewer that fetch_source cannot read (only attachments).
+# Policy news articles carry a full HTML body; press-release bodies are read from
+# their HWPX attachments by editorial.fetch_source.
 KOREA_NEWS_URL = 'https://www.korea.kr/news/policyNewsList.do?pageIndex={page}'
+KOREA_PRESS_URL = 'https://www.korea.kr/briefing/pressReleaseList.do?pageIndex={page}'
 MAX_KOREA_PAGES = 6
 # Ministry of Employment and Labor press list: view pages carry the HTML body.
 MOEL_PRESS_URL = 'https://www.moel.go.kr/news/enews/report/enewsList.do'
@@ -53,7 +54,7 @@ def _text(fragment):
 
 def parse_korea_news(page):
     rows = []
-    for href, body in re.findall(r'<a href="(/news/policyNewsView\.do\?[^"]+)"[^>]*>(.*?)</a>', page, re.S):
+    for path, href, body in re.findall(r'<a href="(/news/policyNewsView\.do|/briefing/pressReleaseView\.do)(\?[^"]+)"[^>]*>(.*?)</a>', page, re.S):
         news_id = re.search(r'newsId=(\d+)', href)
         title = re.search(r'<strong>(.*?)</strong>', body, re.S)
         lead = re.search(r'<span class="lead">(.*?)</span>', body, re.S)
@@ -65,7 +66,7 @@ def parse_korea_news(page):
             published = datetime.strptime(_text(source[0]), '%Y.%m.%d').date()
         except ValueError:
             continue
-        rows.append({'url': f'https://www.korea.kr/news/policyNewsView.do?newsId={news_id.group(1)}',
+        rows.append({'url': f'https://www.korea.kr{path}?newsId={news_id.group(1)}',
                      'title': _text(title.group(1)), 'lead': _text(lead.group(1) if lead else ''),
                      'published': published, 'publisher': _text(source[1])})
     return rows
@@ -148,10 +149,10 @@ def collect(category, now, *, get_text=_get_text):
     in_window = lambda row: start.date() <= row['published'] <= end.date()
     config, rows = SOURCES[category], []
     publishers = set(config.get('press', ()))
-    if publishers:
+    for list_url in (KOREA_PRESS_URL, KOREA_NEWS_URL) if publishers else ():
         for page in range(1, MAX_KOREA_PAGES + 1):
             try:
-                listed = parse_korea_news(get_text(KOREA_NEWS_URL.format(page=page)))
+                listed = parse_korea_news(get_text(list_url.format(page=page)))
             except (OSError, requests.RequestException):
                 break
             rows.extend(row for row in listed if row['publisher'] in publishers and in_window(row))

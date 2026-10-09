@@ -347,3 +347,29 @@ def test_writer_demand_gate_is_skipped_only_for_a_latest_issue_brief(listing_cas
     assert '검색 수요 부족' not in (result.error or '')
     evergreen = pipeline._process_topic(topic)
     assert '검색 수요 부족' in evergreen.error
+
+
+@pytest.mark.parametrize('kind', ['unknown', 'trending', 'evergreen'])
+def test_latest_issue_timeliness_is_delegated_to_the_event_gate(listing_case, monkeypatch, kind):
+    # E2E 37880177007: an OpenAI announcement was held as unverified_current_relevance
+    # because the reviewer has no "news" kind and answered unknown.
+    original = market.suitability.review_plan
+    def plan(candidate, now, _):
+        quote = candidate['verified_sources'][0]['excerpt']
+        return original(candidate, now, lambda _: {
+            'scope': 'full_keyword', 'target_keyword': candidate['keyword'],
+            'sources': [{'source_index': 0, 'quote': quote, 'entity': '새에이전트', 'context': 'system_rules'}],
+            'required_facets': [{'facet': candidate['intent'], 'answer': EVENT, 'supported': True, 'source_index': 0, 'quote': quote}],
+            'current_relevance': {'kind': kind, 'source_index': 0, 'quote': quote,
+                                  'event_start': None, 'event_end': None, 'date_quote': None}})
+    monkeypatch.setattr(market, 'review_plan', plan)
+    report = market.select_category('테크', top_n=1, titles=[])
+    assert len(report['selected']) == 1, report['held']
+    assert market.fresh_market_item(report['selected'][0], '테크')
+
+
+def test_evergreen_item_still_cannot_use_unknown_relevance():
+    from tests.test_topic_suitability import candidate, review, attach
+    item = candidate()
+    attach(item, review(item, kind='unknown'))
+    assert 'unverified_current_relevance' in market.suitability.issues(item, datetime.fromisoformat(item['selected_at']))

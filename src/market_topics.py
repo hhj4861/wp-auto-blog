@@ -1305,7 +1305,12 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
             sources.append(source)
             rows_by_index.append(row)
     keywords = latest_issues.extract_keywords(category, sources, clock, ask) if sources else []
+    planned_sources = set()
     for keyword, index in keywords[:MAX_LATEST_EVALUATIONS]:
+        if index in planned_sources:
+            # One announcement is one article: no per-product or per-winner spin-offs.
+            rejected.append({'keyword': keyword, 'reason': 'same announcement already evaluated'})
+            continue
         if norm(keyword) in excluded_keys or duplicate(keyword, keyword, titles + [x['keyword'] for x in selected]):
             rejected.append({'keyword': keyword, 'reason': 'excluded or duplicate latest issue'})
             continue
@@ -1315,6 +1320,7 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
         if not item:
             rejected.append({'keyword': keyword, 'reason': reason, 'decision_diagnostics': audit})
             continue
+        planned_sources.add(index)
         row = rows_by_index[index]
         item.pop('intent_evidence', None)
         candidate = {**item, 'article_type': 'information', 'monthly_search': None,

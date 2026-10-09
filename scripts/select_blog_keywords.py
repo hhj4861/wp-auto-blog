@@ -13,6 +13,8 @@ from src.editorial import fetch_source, source_fetch_scope
 from src.posting_schedule import KST, SLOTS, category_for_date
 from src.selection_feedback import load_history
 from src.topic_inventory import near_posting_slot, refill_categories
+from src import latest_issues, latest_listings
+import src.market_topics as market_module
 from src.analysis_runtime import error_code
 from src.market_topics import (CATEGORIES, REPORT, ROOT, select_category,
                                fresh_market_item, existing_titles, duplicate, enqueue_report)
@@ -102,9 +104,13 @@ def main():
         try:
             history = load_history(previous, category, datetime.now(timezone.utc))
             selection_options = {'failure_history': history} if history else {}
+            # With latest-issue selection, only reuse latest items: an evergreen report
+            # must not stop today's listing from being read.
+            latest_mode = market_module.LATEST_LISTING_SELECTION and category in latest_listings.SOURCES
             usable = [x for x in previous.get('selected', [])
                       if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)
-                      and x['keyword'] not in writer_done]
+                      and x['keyword'] not in writer_done
+                      and (not latest_mode or latest_issues.required(x))]
             if args.reuse and usable:
                 diagnostics = {'checked_at': datetime.now(timezone.utc).isoformat(),
                                'failed_candidates': [], 'reused_keywords': [], 'outcome': 'checking_sources'}

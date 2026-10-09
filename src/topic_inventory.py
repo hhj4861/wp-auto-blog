@@ -59,6 +59,9 @@ def pick_category(queue, preferred, now, *, fresh=fresh_market_item):
     """The slot's category when stocked, otherwise the best-scored stocked category."""
     stocked = [row for row in queue if isinstance(row, dict)
                and row.get('category') in CATEGORY_ROTATION and fresh(row, row['category'], now)]
+    # Latest issues first (any category); evergreen stock only when none exists.
+    latest = [row for row in stocked if row.get('evidence_mode') == 'latest_issue']
+    stocked = latest or stocked
     if any(row['category'] == preferred for row in stocked):
         return preferred
     best = max(stocked, key=lambda row: row.get('score', 0), default=None)

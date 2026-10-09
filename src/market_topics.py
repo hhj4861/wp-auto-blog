@@ -800,6 +800,10 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
         if source_only else
         '실제 검색 결과에 드러난 독자의 질문에 답하세요. 검색 결과 요약은 의도 참고용일 뿐 사실 근거가 아닙니다. '
         '모든 경쟁 글을 읽었다고 주장하지 마세요. serp_indices는 의도를 확인한 검색 결과 인덱스입니다.')
+    latest_instruction = ('KST 전일~오늘 실제 발표·출시·변경·사건이 주제의 중심이어야 합니다.\n'
+                          '오래된 제품의 상시 설치/사용법, 수정일·연도만 새로운 안내는 supported=false입니다.\n'
+                          '최신 이슈의 변화 내용·영향·사용자가 지금 알아야 할 사항을 intent와 topic에 명시하세요.\n'
+                          if evidence_mode == 'latest_issue' else '')
     repair_instruction = ''
     if repair_context is not None:
         repair_instruction = ('기존 기획은 아래 검증에서 보류됐습니다. 추가로 HTTP 검증한 새 공식 본문을 '
@@ -819,10 +823,7 @@ def topic_from_evidence(keyword, category, now, results, sources, *, evidence_mo
 {review_discovery.BUYING_INTENT_GUIDANCE if category == '리뷰' else ''}
 {repair_instruction}
 공식 본문으로 뒷받침할 수 있는 주제를 고르세요.
-KST 전일~오늘 실제 발표·출시·변경·사건이 주제의 중심이어야 합니다.
-오래된 제품의 상시 설치/사용법, 수정일·연도만 새로운 안내는 supported=false입니다.
-최신 이슈의 변화 내용·영향·사용자가 지금 알아야 할 사항을 intent와 topic에 명시하세요.
-공식 자료가 메뉴뿐이거나 무관하거나, 종료된 신청/마감된 채용이면 supported=false.
+{latest_instruction}공식 자료가 메뉴뿐이거나 무관하거나, 종료된 신청/마감된 채용이면 supported=false.
 카테고리가 맞지 않거나 홈페이지 이동/상품 구매만 원하는 검색, 개인별 진단·치료 권유도 false.
 현재 출력은 정보 안내 글이며 입력값을 받아 동작하는 계산기 등 도구를 제공하거나 검증하지 않습니다.
 도구 자체가 주된 요구이면 supported=false입니다. 수식·예시표·외부 링크로 도구 제공을 대신하지 마세요.
@@ -1358,6 +1359,40 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
 @runtime.selection_scope
 @source_fetch_scope()
 def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
+    """Latest issues first; a verified evergreen topic only when none passes (2026-10-09)."""
+    if not (LATEST_LISTING_SELECTION and category in latest_listings.SOURCES):
+        return _select_measured_category(category, top_n, titles, excluded_keywords=excluded_keywords,
+                                         failure_history=failure_history)
+    if category not in CATEGORIES:
+        raise ValueError('Unsupported scheduled category')
+    if type(top_n) is not int or not 1 <= top_n <= 5:
+        raise ValueError('top_n must be between 1 and 5')
+    if excluded_keywords is not None and (
+            not isinstance(excluded_keywords, (list, tuple, set))
+            or any(not isinstance(keyword, str) or not norm(keyword) for keyword in excluded_keywords)):
+        raise ValueError('Invalid excluded market keywords')
+    clock = datetime.now(timezone.utc)
+    titles = existing_titles() if titles is None else titles
+    history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
+    latest_report = select_latest_issues(category, top_n, titles,
+                                         excluded_keys={norm(k) for k in excluded_keywords or []}, history=history)
+    if latest_report['selected']:
+        return latest_report
+    attempt = {key: latest_report.get(key) for key in (
+        'research_stop_reason', 'evaluated_candidates', 'seeds', 'held', 'rejected', 'latest_issue_listing')}
+    try:
+        report = _select_measured_category(category, top_n, titles, excluded_keywords=excluded_keywords,
+                                           failure_history=failure_history)
+    except Exception as error:
+        # Keep the latest-issue diagnostics; the evergreen fallback simply had nothing.
+        latest_report['evergreen_fallback_error'] = runtime.error_code(error)
+        return latest_report
+    report['latest_issue_attempt'] = attempt
+    report['selection_scope'] = 'evergreen_fallback_after_no_latest_issue'
+    return report
+
+
+def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
     if type(top_n) is not int or not 1 <= top_n <= 5:
@@ -1373,9 +1408,6 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
     deferred = deferred_keywords(history, clock)
     titles = existing_titles() if titles is None else titles
-    if LATEST_LISTING_SELECTION and category in latest_listings.SOURCES:
-        # Evergreen pool candidates cannot pass the mandatory latest-issue gate.
-        return select_latest_issues(category, top_n, titles, excluded_keys=excluded_keys, history=history)
     shared_result = None
     approved_keys = None
     if shared_discovery.enabled():
@@ -1574,8 +1606,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         offered.update(norm(row['keyword']) for row in remaining)
         rounds += 1
         proposals = ask(f"""한국 블로그 {category} 카테고리의 검색 유입을 위한 조사 후보를 고르세요.
-오늘 {clock.astimezone(ZoneInfo("Asia/Seoul")).date()} KST. 전일~오늘 실제 새 발표·출시·정책 변경을 다루는 최신 이슈만 허용합니다.
-상시 설치·초기화·백업·일반 안내는 제외하며 연도나 조회일을 붙인다고 최신 이슈가 되지 않습니다.
+오늘 {clock.astimezone(ZoneInfo("Asia/Seoul")).date()} KST. 최신 이슈가 없어 실측 검색 수요가 있는 상시 정보 주제를 고릅니다.
 최신 공식 원문 발견: {json.dumps(latest_audit.get("candidates", []), ensure_ascii=False)}
 아래 실측 후보에서 정확한 keyword를 최대 {PROPOSALS_PER_ROUND}개 반환하세요.
 카테고리 구분: {json.dumps(CATEGORY_SCOPES, ensure_ascii=False)}
@@ -1819,10 +1850,6 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
             if category in ('리뷰', '테크') and reasons:
                 reasons = _recover_review_plan(candidate, now, reasons, budget=recovery_budget,
                     titles=titles + [x['keyword'] for x in selected], deadline=started + MAX_RESEARCH_SECONDS)
-            # The event gate is mandatory after all scope/source repairs; no score can override it.
-            if not reasons:
-                candidate['latest_issue_evidence'] = latest_issues.review(candidate, now, ask)
-                reasons.extend(latest_issues.issues(candidate, now))
             # Lexical specificity is only for discovery. Final points require search-backed intent.
             components.pop('specificity')
             components['intent_fit'] = 15 if not reasons else 0
@@ -2014,7 +2041,8 @@ def fresh_market_item(item, category, now=None):
             # its provenance is checked in fresh_research_item instead.
             and (item.get('evidence_mode') == 'latest_issue' or not opportunity.issues(item, now))
             and not suitability.issues(item, now)
-            and current_priority(item) and not latest_issues.issues(item, now))
+            and current_priority(item)
+            and (not latest_issues.required(item) or not latest_issues.issues(item, now)))
 
 
 def current_priority(item):

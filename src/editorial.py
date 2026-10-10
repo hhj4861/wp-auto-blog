@@ -569,6 +569,23 @@ def repair_evidence(html: str, sources: list[dict], call_llm, issues: list[str],
             raise EvidenceRepairError("template_changed")
         if before.select_one(".wpab-article #quick-answer") and not after.select_one(".wpab-article #quick-answer"):
             raise EvidenceRepairError("template_changed")
+        # New recruitment drafts must retain their approved body format through
+        # evidence-only repairs; legacy drafts keep their existing contract.
+        recruitment = before.select_one('[data-article-format="recruitment-reader-v1"]')
+        if recruitment is not None:
+            from src.recruitment_format import recruitment_format_issues
+            if (not after.select_one('.wpab-recruitment[data-article-format="recruitment-reader-v1"]')
+                    or recruitment_format_issues(str(after))):
+                raise EvidenceRepairError("template_changed")
+        menu_reader = before.select_one('[data-reader-version="category-menu-v1"]')
+        if menu_reader is not None:
+            from src.category_format import category_format_issues
+            category = menu_reader.get('data-reader-category', '')
+            repaired_reader = after.select_one('.wpab-menu-reader[data-reader-version="category-menu-v1"]')
+            if (repaired_reader is None or repaired_reader.get('data-reader-category') != category
+                    or category_format_issues(str(after), category)
+                    or len(before.select('[data-reader-panel]')) != len(after.select('[data-reader-panel]'))):
+                raise EvidenceRepairError("template_changed")
         outline = lambda soup: [(node.name, node.get("id")) for node in soup.find_all(["h2", "h3"])]
         if outline(before) != outline(after) or after.select_one("#quick-answer").find_previous(["h2", "h3", "table"]):
             raise EvidenceRepairError("template_changed")

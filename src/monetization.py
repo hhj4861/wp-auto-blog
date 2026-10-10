@@ -49,7 +49,7 @@ def _ad_slots() -> list[str]:
 
 def _ad_unit(client: str, slot: str, label: str = "광고") -> str:
     return f'''
-<div style="max-width:800px;margin:35px auto;">
+<div data-monetization="ad" style="max-width:800px;margin:35px auto;">
 <p style="text-align:center;color:#94a3b8;font-size:0.75em;letter-spacing:2px;margin:0 0 4px 0;">{label}</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client}" crossorigin="anonymous"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center; min-height:280px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="{client}" data-ad-slot="{slot}"></ins>
@@ -60,7 +60,7 @@ def _ad_unit(client: str, slot: str, label: str = "광고") -> str:
 
 def _cta_button(label: str, url: str, sub: str) -> str:
     return f'''
-<div style="max-width:800px;margin:45px auto;text-align:center;">
+<div data-monetization="cta" style="max-width:800px;margin:45px auto;text-align:center;">
 <a href="{url}" target="_blank" rel="noopener" style="display:inline-block;background:#0066cc;color:#ffffff;font-size:1.15em;font-weight:bold;padding:18px 42px;border-radius:12px;text-decoration:none;box-shadow:0 4px 15px rgba(0,102,204,0.4);">{label}</a>
 <p style="color:#94a3b8;font-size:0.8em;margin-top:8px;">{sub}</p>
 </div>
@@ -73,7 +73,7 @@ def _related_box(posts: list[dict], heading: str = "📌 함께 보면 좋은 �
         f'style="color:#67e8f9;text-decoration:none;">{p["title"]}</a></li>'
         for p in posts)
     return f'''
-<div style="max-width:800px;margin:35px auto;padding:20px;background:#2d2d3a;border-radius:12px;border-left:4px solid #5046e5;">
+<div data-monetization="related" style="max-width:800px;margin:35px auto;padding:20px;background:#2d2d3a;border-radius:12px;border-left:4px solid #5046e5;">
 <p style="margin:0 0 12px 0;font-size:1.05em;font-weight:bold;color:#ffffff;">{heading}</p>
 <ul style="margin:0;padding-left:18px;color:#e0e0e0;line-height:1.6;">{items}</ul>
 </div>
@@ -731,6 +731,12 @@ def build_faq_schema(html: str) -> str:
             if question.name == "h2":
                 break
             answer = question.find_next_sibling()
+            # Recruitment FAQ uses native details; retain JSON-LD after a
+            # reviewed draft removes and rebuilds derived structured data.
+            if question.parent.name == "summary":
+                card = question.find_parent("details", attrs={"data-faq-card": True})
+                if card is not None:
+                    answer = card.find("p", recursive=False)
             if answer and answer.name == "p":
                 q, a = question.get_text(" ", strip=True), answer.get_text(" ", strip=True)
                 if len(q) >= 6 and len(a) >= 10:

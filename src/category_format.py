@@ -91,6 +91,8 @@ CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
 .wpab-menu-reader [data-reader-menu]>p{display:contents}
 .wpab-menu-reader [data-table-scroll]{border:1px solid var(--line);border-radius:6px}
 .wpab-menu-reader th{background:var(--tint)}
+.wpab-menu-reader pre{font-size:14px;line-height:1.7;background:var(--tint);color:var(--ink);border:1px solid var(--line);padding:18px 20px;border-radius:6px;white-space:pre;overflow-x:auto}
+.wpab-menu-reader pre code{font:inherit;color:inherit;background:transparent;padding:0}
 .wpab-menu-reader [data-step-number]{background:var(--blue);color:#fff}
 @container(min-width:740px){.wpab-menu-reader .wpab-reader-layout{display:grid;grid-template-columns:176px minmax(0,1fr);gap:30px;align-items:start}.wpab-menu-reader .wpab-reader-layout>[data-reader-menu]{grid-template-columns:1fr;margin:0;max-height:calc(100dvh - var(--reader-top) - 24px);overflow-y:auto}.wpab-menu-reader .wpab-reader-layout>[data-reader-menu] :is(button,a){text-align:left;padding:13px 12px}.wpab-menu-reader .wpab-reader-layout>[data-reader-panels]{--reader-scroll-offset:32px}}
 @media(max-width:600px){.wpab-article.wpab-menu-reader{--reader-top:8px}.wpab-menu-reader [data-reader-menu]{margin:16px 0}}

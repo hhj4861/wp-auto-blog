@@ -42,3 +42,7 @@
 - 수정: 신규 포맷의 전용 CSS를 한 줄로 저장. 기존 글 보정은 정확한 ID/slug 및 publish 상태를 확인하고 owned style 내부 공백만 바꾸며 나머지 본문 bytes/제목/게시일/미디어/카테고리/태그/요약을 보존한다. 변경 감지 및 인증된 readback 포함.
 - 회귀 43개 통과. 공식 WordPress 6.8 formatting.php의 실제 PHP wpautop로 6개 카테고리 모두 기존 오류 재현 및 수정 후 CSS 보존 검증. source SHA256 aab325fd23d24ed19827c310d06cd3dd42bf7b1c9c70361ccaa1f707e4264ae5. 공식 문서 https://developer.wordpress.org/reference/functions/wpautop/.
 - 남은 작업: #1907 스타일 보정 및 공개 브라우저 재검증, 수정 PR 승인 후 main 생성 경로 반영, 나머지 5개 카테고리 발행·검증.
+
+- 실제 보정 실행 38058661955 success. #1907 인증 readback에서 본문 스타일 외 보존 확인. Chrome 재조회에서 corruptedCss=false, nav display=grid, 390px에서 3개 열(각 88.6641px), 생산성 accent=#236945 확인. 메뉴 전환 및 새로고침 후 체크 0/5 확인. 임시 viewport override 해제.
+- 테크 job 114228515967 로그에는 Queue category 이후 조사 단계 취소만 있으며 작성/게시 로그가 없다. 나머지 4개는 대기 중 취소. 여섯 작업 감시 프로세스도 모두 terminal 확인 후 exit 0.
+- 수정 PR #109: https://github.com/hhj4861/wp-auto-blog/pull/109. 승인 질문 발송했으며 아직 머지하지 않았다. 현재 성과는 생산성 1편 공개 및 스타일 보정 완료, 나머지 5개 카테고리 미발행이다.

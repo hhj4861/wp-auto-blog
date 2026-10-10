@@ -25205,7 +25205,7 @@
     "keywords": [
       "전기산업기사"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "전기산업기사",
@@ -25536,7 +25536,7 @@
     "keywords": [
       "민간자격증"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -27473,7 +27473,7 @@
     "keywords": [
       "Play Store 서비스 장애 정상화"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-09T22:20:23.750274+00:00",
@@ -27536,6 +27536,716 @@
       "intent_fit": 15
     },
     "score": 20,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1901,
+    "url": "https://trendpulse.blog/play-store-service-restored-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-10T00:18:37.080753"
+  },
+  {
+    "keyword": "영어면접자기소개",
+    "category": "취업",
+    "topic": "영어면접자기소개: 1분 구성과 영어 예문, 연습 체크리스트",
+    "intent": "영어 면접에서 자기소개를 어떤 순서와 길이로 말하며, 내 경험에 맞는 영어 답변은 어떻게 준비할까?",
+    "gap": "공식 지침 기반의 강점·경험·지원 동기 구성표, 영어 예문과 해석, 직무 연관성·속도·명료성 연습 체크리스트 제공",
+    "source_url": "https://www.training.nih.gov/oite-careers-blog/creating-an-effective-elevator-pitch/",
+    "verified_sources": [
+      {
+        "url": "https://www.training.nih.gov/oite-careers-blog/creating-an-effective-elevator-pitch/",
+        "original_url": "https://www.training.nih.gov/oite-careers-blog/creating-an-effective-elevator-pitch/",
+        "title": "Creating an Effective Elevator Pitch | Office of Intramural Training & Education at the National Institutes of Health",
+        "checked_on": "2026-10-10",
+        "publication_dates": [],
+        "sha256": "3b7863da69bf621e519f912828bdae560fbda2117d17b1637790e40645eaf880",
+        "excerpt": "Creating an Effective Elevator Pitch January 2026 Amanda Langer, OITE Career Counselor The term “elevator pitch” comes from the idea that you get into an elevator with a CEO who is usually going to an office on the top level of the building. Therefore, you have the length of that elevator ride to make your sales pitch. Within the world of job searching, you need an elevator pitch for everything from interviews to networking events. One of the key principles of an elevator pitch is that it is concise, usually about 60 seconds . Your elevator pitch should be a brief monologue answering the prompt “Tell me about yourself.” It is a key statement to prepare as it really forces you to clarify and distill your experiences in a “ready-made” two-sentence answer. Ideally, you are going to tailor your elevator pitch for the situation, but there are some good general must have sections. First, ask yourself, “What is your strongest selling point?” Is it your education, your experience, or your leadership experience in a club? Begin with that point giving a little bit more context including your primary transferable skills, strengths, and/or accomplishments. It is important to mention your goals and then conclude with action items. Key Components of an Elevator Pitch Your Strongest Selling Point Start with your most impressive credential. This could be: Your current role or education A significant accomplishment Relevant experience or expertise Leadership positions Transferable Skills & Accomplishments Build on your opening by highlighting 1-2 key skills or achievements that demonstrate your value. Focus on concrete examples rather than vague statements. Your Goals Briefly share what you're working toward or interested in pursuing. This helps your listener understand how they might be able to help you, or how you might collaborate. A Clear Call to Action End with purpose. Are you seeking advice? Looking for an introduction? Hoping to schedule a follow-up conversation? Make it specific. Example Hi, my name is _____ and I’m a graduate student at the NIH working on my PhD in Immunology. For the past two years, I have worked as Health Chair of the Graduate Research Committee ( primary selling point ), I which has significantly strengthened my communication skills. ( transferable skills ) Through this involvement I’ve become interested in utilizing my communication skills in a career in public health policy ( goal ). Would it be possible to follow up with you to discuss your career path at ABC? ( action item ) Your elevator pitch should be practiced yet should come across as more conversational than formal. As with all oral communication skills, try to note if you are rambling or speaking too fast. It is okay to add in some small personal tidbits, but overall your focus should be on your professional self. Disclaimer of Endorsement These views and posted comments do not necessarily reflect those of the U.S. Department of Health and Human Services, the NIH, or the federal government. Read this exit disclaimer for important information regarding linked websites.",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://wgcdd.wyo.gov/employment/employment-virtual-library/what-to-say-in-an-interview",
+        "original_url": "https://wgcdd.wyo.gov/employment/employment-virtual-library/what-to-say-in-an-interview",
+        "title": "WGCDD - What to Say in an Interview",
+        "checked_on": "2026-10-10",
+        "publication_dates": [],
+        "sha256": "9220680751c58bf013773533e757be012308a5be31a86fef169b262995b4de96",
+        "excerpt": "Search this site Embedded Files Skip to main content Skip to navigation What to Say in an Interview Practical tips and resources to help you prepare, communicate your strengths, and answer interview questions with confidence. Interviews can be nerve-wracking, but they aren't a test where you have to be perfect. An interview is an opportunity to tell the employer about yourself, show how your skills fit the job, and share what kind of worker you would be. Before the Interview Taking a few small steps before your interview can help you feel more prepared, build confidence, and reduce anxiety. Research the Company Research the company before your interview. Find out what type of work they do, where they are located, and what services or products they provide. Learning a little about the employer can help you feel more prepared and show that you are interested in the job. Review the Job Posting Reread the job posting carefully before your interview. Pay attention to the skills, responsibilities, and qualifications the employer is looking for. Write down any questions you would like to ask the interviewer so you are ready to discuss the position. Familiarize Yourself with the Location Find out where the interview will take place. If possible, drive by the location before your interview. Find the entrance and determine where you will park. Knowing what to expect when you arrive can help you feel more comfortable, confident, and at ease. Practice Your Answers Like many things, interviews become easier with practice. Try answering common interview questions in front of a mirror. Practice making eye contact, speaking clearly, and avoiding filler words such as \"um\" and \"uh.\" Common interview questions include: Tell me about yourself. Why are you interested in this position? What are your strengths? Ask a friend, family member, or employment specialist to conduct a mock interview with you. Practicing with another person can help you become more comfortable answering questions and give you an opportunity to receive helpful feedback. Get Ready to Answer Questions Once you've done some preparation, the next step is to think about what you might be asked during the interview. You don't need to memorize perfect answers. Instead, think about your experiences, skills, and strengths and how you can share them with the interviewer. Below are some common interview questions, along with tips to help you think about your answers and examples of what you could say. Tell Me About Yourself What is the interviewer trying to learn? They want to get to know you and learn about your skills, experience, and interests. How to think about your answer: Talk about what you are doing now, what you are good at, and why you are interested in the job. Example: “I like working with people and helping others. I’m dependable and I like learning new things. I’m interested in this job because I think I would be good at this kind of work.” Why Are You Interested in This Job? What is the interviewer trying to learn? They want to know why you want the job and what interests you about the work. How to think about your answer: Think about what caught your attention about the job. Maybe you like the type of work, want to learn something new, or enjoy helping people. Example: “I’m interested in this job because I like working with people. I think I would enjoy the work, and I’m interested in learning more about the job.” What Are Your Strengths? What is the interviewer trying to learn? They want to know what you do well. How to think about your answer: Think about something you are good at that would help you do the job. Example: “I’m dependable. If I say I’m going to do something, I do it. I also work well with other people.” What Is Something You Are Working to Improve? What is the interviewer trying to learn? They want to know if you can recognize something you want to improve and are willing to learn. How to think about your answer: Pick something you are working on. Talk about what you are doing to get better. Example: “Sometimes I get nervous when I have to speak in front of people. I’ve been practicing so I can feel more comfortable.” Tell Me About a Challenge You Have Faced. What is the interviewer trying to learn? They want to know how you handle problems. How to think about your answer: Think of a time when something was difficult. What did you do? Who did you ask for help? Example: “At my last job, we had a very busy day and were short-staffed. I stayed calm, asked what needed to be done first, and helped where I was needed.” Why Should We Hire You? What is the interviewer trying to learn? They want to know what you can bring to the job. How to think about your answer: Think about two or three things you can offer, such as being dependable, working hard, getting along with others, or being willing to learn. Example: “I’m dependable, I work hard, and I’m willing to learn. I may need some training at first, but I’m ready to learn and do my best.” Remember: You Can Ask for What You Need You don't have to do everything exactly the same way as everyone else to have a successful interview. If you need an accommodation to participate in the interview, you can ask for one. Learn more about interview and workplace accommodations, your employment rights, and how to ask for the support you need. Explore Accommodations & Your Employment Rights Need Help Preparing for an Interview? You don't have to prepare for an interview alone. Employment specialists, job coaches, and workforce professionals can help you practice answering questions, learn about employers, and feel more confident. In Cheyenne, help may be available through: Vocational Rehabilitation (DVR) — Employment counseling, job search and placement assistance, and interview preparation Magic City Enterprises — Community employment and employment support for people with disabilities. Cheyenne Workforce Center — Resume help, interview skills, job search, and job placement assistance. Career Quick Guides Practical resources to help you navigate the job search , prepare for employment , and build confidence along the way. Managing Job Search Anxiety: 7 Tips for Success See Tips Here Myth vs Reality: Workplace Accommodations Explore Accommodations Words We Can Retire: Choosing Strength-Based Language See the Language Guide Report abuse Report abuse",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://preply.com/ko/blog/introduce-yourself-in-english/",
+      "https://blog.quik-voca.com/career-english-interview-self-introduction"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 1040,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.training.nih.gov/oite-careers-blog/creating-an-effective-elevator-pitch/",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://wgcdd.wyo.gov/employment/employment-virtual-library/what-to-say-in-an-interview",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nycourts.gov/careers/interview-tips-and-best-practices",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "영어 면접 자기소개",
+    "organic_domains": [
+      "wisdomtrip.kr",
+      "preply.com",
+      "weateach.com",
+      "blog.quik-voca.com",
+      "note.com",
+      "community.memory-word.com",
+      "www.happycampus.com",
+      "www.keepdesk.app",
+      "englishuk-online.tistory.com",
+      "www.reportworld.co.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://wisdomtrip.kr/speech/interview/english/",
+        "domain": "wisdomtrip.kr",
+        "title": "영어면접 1:1 과외 · 화상영어 면접 준비 | 영어 자기소개·단골 질문·발음 위즈덤트립",
+        "snippet": "영어면접 대비, 영어인터뷰 준비의 출발점은 문법이 아닙니다. ... 한국어 화자의 영어가 안 들리는 주된 이유는 개별 발음이 아니라 모든 단어를 같은 세기로 말하기 때문입니다. ..."
+      },
+      {
+        "url": "https://preply.com/ko/blog/introduce-yourself-in-english/",
+        "domain": "preply.com",
+        "title": "영어 자기소개 완벽 가이드 – 8단계 구조, 면접 예문, 30초~3분 스크립트",
+        "snippet": "영어 자기소개 8단계 구조와 30초~3분 스크립트, 면접 예문, 발음·연습 팁까지 한 번에 정리한 2026년 최신 가이드입니다. ... 일상 영어 인사 표현이 더 궁금하다면 다양한 영어"
+      },
+      {
+        "url": "https://weateach.com/ko/blog/job-interview-in-english-preparation",
+        "domain": "weateach.com",
+        "title": "영어 면접 준비: 2주 플랜 | WeaTeach",
+        "snippet": "제2외국어로 진행되는 면접은 대부분 준비의 문제입니다. ... \"자기소개 해주세요\"는 이력서를 읽어달라는 질문이 아닙니다. ... 2주 안에 영어 취업 면접을 어떻게 준비하나요?첫째 주에는 자료를 만드세요: \"자기소개를"
+      },
+      {
+        "url": "https://blog.quik-voca.com/career-english-interview-self-introduction",
+        "domain": "blog.quik-voca.com",
+        "title": "영어 면접 자기소개 완벽 가이드 | 합격률 높이는 필수 표현 & 1분 템플릿 - Quik",
+        "snippet": "외국계 기업은 물론 국내 대기업까지 영어 면접 비중이 높아지고 있는 지금, 첫 인상을 좌우하는 자기소개를 전략적으로 준비해야 합니다. ... 영어 면접 자기소개에서 가장 흔한 실수는"
+      },
+      {
+        "url": "https://note.com/toratenshoku/n/n6f9024e94d8d?hl=ko",
+        "domain": "note.com",
+        "title": "영어 면접 자기소개에서는 무엇을 대답해야 하는가. 영어 면접 자기소개에서 평가받는 3가지 포인트｜とらてん｜英語を活かした転職を応援！",
+        "snippet": "이 글에서는 영어 면접 자기소개에서 실제로 평가받는 포인트를 3가지로 정리하여, 구성·길이·흐름이 끊겼을 때의 대처법·구체적인 사례 제시 방법까지 순서대로 작성하겠습니다. ... 를 '자기소개해 주세요'라고 번역하면 일본어식"
+      },
+      {
+        "url": "https://community.memory-word.com/english-study-tips/95223859",
+        "domain": "community.memory-word.com",
+        "title": "대기업 영어 면접 :: 영어 면접 자기소개 / 질문 예시 / 질문 모음 / 면접 후기 - 메모리워드 커뮤니티",
+        "snippet": "# 대기업 영어 면접 :: 영어 면접 자기소개 / 질문 예시 / 질문 모음 / 면접 후기 ... 이 글에서는 대기업 영어 면접 을 ..."
+      },
+      {
+        "url": "https://www.happycampus.com/intro-doc/11541026/",
+        "domain": "www.happycampus.com",
+        "title": "[영어면접][영어면접 질문][영어면접 예시][English Interview][영어 자기소개] 영어 면접 질문 20개와 예시 답변 자기소개서",
+        "snippet": "# [영어면접][영어면접 질문][영어면접 예시][English Interview][영어 자기소개] 영어 면접 질문 20개와 예시 답변 ... 이 자료에서는 자기소개, 좋아하는 음식 만드는 방법, 존경하는 인물, 자신의 장점 등영어"
+      },
+      {
+        "url": "https://www.keepdesk.app/blog/opic-english-interview-script-pronunciation/",
+        "domain": "www.keepdesk.app",
+        "title": "하반기 공채 영어 면접(OPIc): 1분 자기소개 스크립트, 강세 표시된 미국식 한글 발음으로 변환하기 | Keepdesk 블로그",
+        "snippet": "# 하반기 공채 영어 면접(OPIc): 1분 자기소개 스크립트, 강세 표시된 미국식 한글 발음으로 변환하기 ... ## 취업 준비의 첫 관문, 영어 면접과 1분 자기소개 스크립트"
+      },
+      {
+        "url": "https://englishuk-online.tistory.com/entry/%EB%A9%B4%EC%A0%91-%EC%98%81%EC%96%B4-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%EC%98%88%EC%8B%9C-%EB%8C%80%ED%95%99-%EC%A1%B8%EC%97%85%EC%9E%90",
+        "domain": "englishuk-online.tistory.com",
+        "title": "면접 영어 자기소개 예시 (대학 졸업자) :: EnglishUK.online",
+        "snippet": "면접 시 영어로 자기소개 예시가 필요를 했던 적이 있다. ... 자기소개를 바탕으로 연결된 질문이 나올 수 있으니, 준비하도록 한다."
+      },
+      {
+        "url": "https://www.reportworld.co.kr/thema/t9185237",
+        "domain": "www.reportworld.co.kr",
+        "title": "[면접 자료] 영어 자기소개 영어자기소개서 영문 이력서 커버레터 영어면접 면접 우수 예문 면접 질문 및 답변",
+        "snippet": "Image: [면접 자료] 영어 자기소개 영어자기소개서 영문 이력서 커버레터 영어면접 면접 우수 예문 면접 질문 및 답변 ... # [면접 자료] 영어 자기소개 영어자기소개서 영문"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 24.14,
+      "organic_opportunity": 35.56,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-10T00:01:22.062485+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "영어면접자기소개"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "영어면접자기소개",
+      "executed_query": "영어 면접 자기소개",
+      "topic": "영어면접자기소개: 1분 구성과 영어 예문, 연습 체크리스트",
+      "intent": "영어 면접에서 자기소개를 어떤 순서와 길이로 말하며, 내 경험에 맞는 영어 답변은 어떻게 준비할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-10T00:01:22.062485+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "영어면접자기소개",
+        "executed_query": "영어 면접 자기소개",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-10T00:01:22.062485+00:00",
+        "raw_sha256": "091c5730757459a1a8a5c2828e38db16850a96030e3eb86ff8b95de57fb85bbd",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": false,
+            "quote": "영어면접 대비, 영어인터뷰 준비의 출발점은 문법이 아닙니다. ... 한국어 화자의 영어가 안 들리는 주된 이유는 개별 발음이 아니라 모든 단어를 같은 세기로 말하기 때문입니다. ..."
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "영어 자기소개 8단계 구조와 30초~3분 스크립트, 면접 예문, 발음·연습 팁까지 한 번에 정리한 2026년 최신 가이드입니다. ... 일상 영어 인사 표현이 더 궁금하다면 다양한 영어"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "제2외국어로 진행되는 면접은 대부분 준비의 문제입니다. ... \"자기소개 해주세요\"는 이력서를 읽어달라는 질문이 아닙니다. ... 2주 안에 영어 취업 면접을 어떻게 준비하나요?첫째 주에는 자료를 만드세요: \"자기소개를"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "영어 면접 자기소개 완벽 가이드 | 합격률 높이는 필수 표현 & 1분 템플릿 - Quik"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "이 글에서는 영어 면접 자기소개에서 실제로 평가받는 포인트를 3가지로 정리하여, 구성·길이·흐름이 끊겼을 때의 대처법·구체적인 사례 제시 방법까지 순서대로 작성하겠습니다. ... 를 '자기소개해 주세요'라고 번역하면 일본어식"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "대기업 영어 면접 :: 영어 면접 자기소개 / 질문 예시 / 질문 모음 / 면접 후기 - 메모리워드 커뮤니티"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "# [영어면접][영어면접 질문][영어면접 예시][English Interview][영어 자기소개] 영어 면접 질문 20개와 예시 답변 ... 이 자료에서는 자기소개, 좋아하는 음식 만드는 방법, 존경하는 인물, 자신의 장점 등영어"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "하반기 공채 영어 면접(OPIc): 1분 자기소개 스크립트, 강세 표시된 미국식 한글 발음으로 변환하기 | Keepdesk 블로그"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "면접 영어 자기소개 예시 (대학 졸업자) :: EnglishUK.online"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "[면접 자료] 영어 자기소개 영어자기소개서 영문 이력서 커버레터 영어면접 면접 우수 예문 면접 질문 및 답변"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 9,
+        "relevant_site_count": 9,
+        "relevant_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.9,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.1111111111111111,
+        "organic_opportunity": 35.56
+      },
+      "scope": "full_keyword",
+      "target_keyword": "영어면접자기소개",
+      "matches": [
+        {
+          "result_index": 1,
+          "quote": "영어 자기소개 8단계 구조와 30초~3분 스크립트, 면접 예문, 발음·연습 팁까지"
+        },
+        {
+          "result_index": 3,
+          "quote": "영어 면접 자기소개 완벽 가이드 | 합격률 높이는 필수 표현 & 1분 템플릿"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-10T00:01:22.062485+00:00",
+      "input_sha256": "209fd61b6f3e0fcb66d41c9de46d9a49679aa35b3564a2e8904dad76295d7059",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "영어면접자기소개",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "Creating an Effective Elevator Pitch January 2026 Amanda Langer, OITE Career Counselor The term “elevator pitch” comes from the idea that you get into an elevator with a CEO who is usually going to an office on the top level of the building. Therefore, you have the length of that elevator ride to make your sales pitch. Within the world of job searching, you need an elevator pitch for everything from interviews to networking events. One of the key principles of an elevator pitch is that it is concise, usually about 60 seconds . Your elevator pitch should be a brief monologue answering the prompt “Tell me about yourself.” It is a key statement to prepare as it really forces you to clarify and distill your experiences in a “ready-made” two-sentence answer. Ideally, you are going to tailor your elevator pitch for the situation, but there are some good general must have sections. First, ask y",
+            "entity": "OITE",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "d, think about your experiences, skills, and strengths and how you can share them with the interviewer. Below are some common interview questions, along with tips to help you think about your answers and examples of what you could say. Tell Me About Yourself What is the interviewer trying to learn? They want to get to know you and learn about your skills, experience, and interests. How to think about your answer: Talk about what you are doing now, what you are good at, and why you are interested in the job. Example: “I like working with people and helping others. I’m dependable and I like learning new things. I’m interested in this job because I think I would be good at this kind of work.” Why Are You Interested in This Job? What is the interviewer trying to learn? They want to know why you want the job and what interests you about the work. How to think about your answer: Think about wh",
+            "entity": "Tell Me About Yourself",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "영어 면접 자기소개는 어느 정도 길이로 준비하는가?",
+            "answer": "면접에도 쓰이는 자기소개 피치는 보통 약 60초로 간결하게 준비한다. 모든 면접의 고정 제한은 아니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Creating an Effective Elevator Pitch January 2026 Amanda Langer, OITE Career Counselor The term “elevator pitch” comes from the idea that you get into an elevator with a CEO who is usually going to an office on the top level of the building. Therefore, you have the length of that elevator ride to make your sales pitch. Within the world of job searching, you need an elevator pitch for everything from interviews to networking events. One of the key principles of an elevator pitch is that it is concise, usually about 60 seconds . Your elevator pitch should be a brief monologue answering the prompt “Tell me about yourself.” It is a key statement to prepare as it really forces you to clarify and distill your experiences in a “ready-made” two-sentence answer. Ideally, you are going to tailor your elevator pitch for the situation, but there are some good general must have sections. First, ask y"
+          },
+          {
+            "facet": "어떤 순서로 구성하고 내 경험과 지원 직무에 맞추는가?",
+            "answer": "현재 하는 일, 잘하는 것, 해당 직무에 관심을 갖는 이유를 중심으로 경험·강점·관심사를 연결한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "d, think about your experiences, skills, and strengths and how you can share them with the interviewer. Below are some common interview questions, along with tips to help you think about your answers and examples of what you could say. Tell Me About Yourself What is the interviewer trying to learn? They want to get to know you and learn about your skills, experience, and interests. How to think about your answer: Talk about what you are doing now, what you are good at, and why you are interested in the job. Example: “I like working with people and helping others. I’m dependable and I like learning new things. I’m interested in this job because I think I would be good at this kind of work.” Why Are You Interested in This Job? What is the interviewer trying to learn? They want to know why you want the job and what interests you about the work. How to think about your answer: Think about wh"
+          },
+          {
+            "facet": "활용할 영어 자기소개 예문과 그 의미는 무엇인가?",
+            "answer": "공식 영어 예문은 사람 돕기를 좋아함, 신뢰성, 배움에 대한 의지와 직무 관심을 표현하며 번역·맞춤화할 수 있다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "d, think about your experiences, skills, and strengths and how you can share them with the interviewer. Below are some common interview questions, along with tips to help you think about your answers and examples of what you could say. Tell Me About Yourself What is the interviewer trying to learn? They want to get to know you and learn about your skills, experience, and interests. How to think about your answer: Talk about what you are doing now, what you are good at, and why you are interested in the job. Example: “I like working with people and helping others. I’m dependable and I like learning new things. I’m interested in this job because I think I would be good at this kind of work.” Why Are You Interested in This Job? What is the interviewer trying to learn? They want to know why you want the job and what interests you about the work. How to think about your answer: Think about wh"
+          },
+          {
+            "facet": "전달력과 자연스러움을 어떻게 연습하고 점검하는가?",
+            "answer": "거울·모의면접으로 명료한 말하기와 불필요한 추임새를 점검하고 피드백을 받는다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "views become easier with practice. Try answering common interview questions in front of a mirror. Practice making eye contact, speaking clearly, and avoiding filler words such as \"um\" and \"uh.\" Common interview questions include: Tell me about yourself. Why are you interested in this position? What are your strengths? Ask a friend, family member, or employment specialist to conduct a mock interview with you. Practicing with another person can help you become more comfortable answering questions and give you an opportunity to receive helpful feedback. Get Ready to Answer Questions Once you've done some preparation, the next step is to think about what you might be asked during the interview. You don't need to memorize perfect answers. Instead, think about your experiences, skills, and strengths and how you can share them with the interviewer. Below are some common interview questions, alo"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "trengthened my communication skills. ( transferable skills ) Through this involvement I’ve become interested in utilizing my communication skills in a career in public health policy ( goal ). Would it be possible to follow up with you to discuss your career path at ABC? ( action item ) Your elevator pitch should be practiced yet should come across as more conversational than formal. As with all oral communication skills, try to note if you are rambling or speaking too fast. It is okay to add in some small personal tidbits, but overall your focus should be on your professional self. Disclaimer of Endorsement These views and posted comments do not necessarily reflect those of the U.S. Department of Health and Human Services, the NIH, or the federal government. Read this exit disclaimer for important information regarding linked websites.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 74.7,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "직업적성테스트",
+    "category": "취업",
+    "topic": "직업적성테스트 종류와 선택 기준, 결과를 진로에 활용하는 방법",
+    "intent": "나에게 맞는 직업적성테스트는 무엇이며, 추천 직업과 검사 결과를 진로·취업 준비에 어떻게 활용할까?",
+    "gap": "공식 안내에 근거한 검사별 대상·측정 목적·소요시간 비교표와 결과 해석 시 흥미·가치관·경험·자격 점검표를 제공한다.",
+    "source_url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000185&systCnntId=CI00001224&systId=SI00000327&upprSystClId=",
+    "verified_sources": [
+      {
+        "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000185&systCnntId=CI00001224&systId=SI00000327&upprSystClId=",
+        "original_url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000185&systCnntId=CI00001224&systId=SI00000327&upprSystClId=",
+        "title": "고용정책 상세_제도안내 | 고용정책 목록 | 정책/제도 | 고객센터",
+        "checked_on": "2026-10-10",
+        "publication_dates": [],
+        "sha256": "8ba4141c6a78f0a664465b11823752fef699d8a03d3830ab1e00a4a665550212",
+        "excerpt": "고객센터 고객센터 홈 고용24 소개 사이트 소개 BI 소개 관련기관 연락처 기관찾기 직업소개소 고용서비스우수기관 이용안내 고용24 활용하기 이용가이드 장애인 이용안내 인증서 이용 안내 보안프로그램 설치 정책/제도 고용정책 지원금 모의계산 직종별 임금정보 자주하는 질문 개선의견 전산개선 제안 공지사항 공지사항 고용24 활용 수기 설문조사 자료실 서식자료실 홍보자료실 뉴스레터 모아보기 홈페이지 운영 정책 이용약관 개인정보처리방침 아동·청소년 개인정보처리방침 이메일주소무단수집거부 저작권정책 웹 접근성 정책 OPEN-API Open-API 소개 서비스 소개 및 신청 신청현황 OPEN-API 공지사항 홈 고객센터 고객센터 정책/제도 고객센터 홈 고용24 소개 이용안내 정책/제도 자주하는 질문 개선의견 공지사항 자료실 홈페이지 운영 정책 OPEN-API 고용정책 고용정책 지원금 모의계산 직종별 임금정보 고용정책 상세_제도안내 페이스북(공유하기) 엑스(공유하기) 카카오(공유하기) 프린트하기 직업심리검사 목차 개요 서비스 대상 서비스 내용 신청방법 목록 고용센터에서는 진로나 직업 선택을 위해 흥미 , 역량 , 가치 등의 개인적인 특징을 알아볼 수 있도록 다양한 직업 심리 검사를 무료로 제공하고 있습니다 . 워크넷 (Work-net) 에 방문하여 ‘ 직업진로지도 - 직업심리검사 메뉴를 통해 온라인으로 간편하게 받거나 고용센터를 방문하여 담당자의 안내에 따라 편안하게 받을 수 있습니다 . 서비스 대상 청소년 , 대학생 , 성인 , 국민 누구나 무료로 직업심리검사를 받을 수 있습니다 . 초등학생부터 고등학생을 대상으로 한 청소년 대상 직업심리검사 , 대학생 및 성인대상 직업 심리검사가 준비되어 있습니다 .. 특히 , 이런 분들에게 꼭 추천합니다 . ○ 진로 · 직업 선택을 위해 자기 탐색이 필요한 구직자 , ○ 취업준비가 얼마나 되어 있는지 알아보고 싶은 구직자 ○ 자신이 가진 직업적 흥미가 어떤 것인지 , 기본역량이 얼마나 되진지 궁금한 사람 서비스 내용 1) 대학생· 성인 대상 직업심리검사 직업흥미 등 선호도를 측정하는 검사부터 직무역량 ( 능력 ) 을 측정하는 9 가지 검사를 이용하실 수 있습니다 .  18 세 이상 국민이면 누구나 받을 수 있습니다 직업선호도 검사 S 형 직업 흥미를 측정할 수 있는 문항들에 대한 객관식 검사로 25 분 동안 실시되며 , 검사결과 직업 흥미 유형을 알 수 있으며 흥미에 적합한 직업을 추천받을 수 있습니다 . 활동에 대한 관심 , 유능감 , 직업에 대한 선호 , 선호분야 , 일반성향의 다양한 특성을 측정하며 이를 기초로 개인의 흥미 유형을 6 가지 유형으로 분류하여 결과를 알수 있습니다 . 직업선호도검사 (S 형 ) 은 Holland 의 6 가지 흥미유형 분류에 근거하여 자신의 특성을 탐색하고 흥미유형에 적합한 직업을 알려주고 있습니다 직업선호도 검사 L 형 직업선호도 검사 S 형에 성격과 생활 특성을 알아볼 수 있는 문항들이 추가된 검사입니다 . 문항수가 많아서 60 분정도 검사 시간이 필요합니다 . 직업이나 직무를 선택할 때 참고자료로 활용할 수 있으며 , 자기소개서 작성이나 면접준비시 자신을 객관적이고 구체적으로 소개하기 위한 기초자료로 참고 할 수 있습니다 . 주의할 점은 직업선호도검사는 개인의 현재 보유능력이나 학력 , 전공 , 자격 , 가치관 등은 반영하지 않고 오로지 흥미성향과 성격 , 생활사 등에 관련된 정보만을 알려준다는 점입니다 . 직업 적성검사에서 비슷한 결과를 얻은 사람이라 할지라도 개인의 세계관 , 가치관 , 인생관 등이 다르고 , 흥미도 다를 수 있습니다 . 따라서 직업적성검사의 결과에 전적으로 의존하기 보다는 검사 결과와 함께 흥미 , 희망직업 , 현직업 , 개인의 특수한 상황 등을 고려하여 종합적인 직업탐색 및 직업선택을 하시기 바랍니다 . 구직준비도검사 스스로 취업할 준비가 얼마나 되어 있는지 알아볼 수 있는 검사입니다 . 현재 구직을 준비하는데 취약한 부분은 무엇인지 , 구직동기와 구직기술에 대한 준비 정도가 어느 정도인지 알아볼 수 있으며 20 분정도 시간이 필요합니다 . 직업가치관검사 _ 인터넷 전용 직업을 선택할 때 중요하게 생각하는 것이 무엇인지를 알아보고 , 가치에 적합한 직업을 추천해주는 검사입니다 . 사람들은 중요하다고 생각하는 가치에 적합한 직업을 선택할 때 보다 만족하며 일할 수 있습니다 . 직업가치관 검사를 통해 측정할 수 있는 직업가치는 ① 사회적 공헌 , ② 변화 지향성 , ③ 성취 , ④ 경제적 보상 , ⑤ 자기개발 , ⑥ 일과 삶의 균형 , ⑦ 사회적 인정 , ⑧ 자율성 , ⑨ 직업안정성 등이며 , 검사시간은 20 분정도입니다 . 직업적성검사 직업선택 시 중요한 능력과 적성을 토대로 적합한 직업을 선택할 수 있도록 도와주기 위한 검사입니다 . 11 개 직업기초능력을 얼마나 갖추고 있는지 점수를 통해 확인할 수 있으며 , 측정된 능력에 적합한 직업을 알려줍니다 . 각 항목별 시간제한이 있으며 , 전체 80 분안에 검사를 실시해야 합니다 . 직업적성검사에서 알 수 있는 직업기초능력은  언어력 , 수리력 , 추리력 , 공간지각력 , 상황판단력 , 기계능력 , 집중력 , 색채지각력 , 문제해결능력 , 사고유창력입니다 . 직업을 성공적으로 수행할 수 있는지 능력을 알아보는 것은 중요한 의미가 있지만 , 적성검사에서 비슷한 결과를 얻은 사람이라 할지라도 개인의 세계관 , 가치관 , 인생관 등이 다르고 , 흥미도 다를 수 있습니다 . 또한 적성검사를 통해 추천되는 직업은 좋아하거나 관심 있는 직업과 차이가 있을 수 있습니다 . 그러므로 최종적으로 직업을 선택할 때에는 적성검사 결과 외에도 흥미나 가치관 , 직업 ( 무 ) 경험 , 특기 , 자격 등을 종합적으로 고려하여야 합니다 . 영업직무 기본역량검사 영업마케팅 분야로 취업을 준비하는 사람에게 추천합니다 . 영업직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 영업직무를 수행하는 데 얼마나 적합한 역량을 갖추고 있는지 알려주는 검사입니다 . 시간 제한이 있는 능력검사이며 , 적성과 인성을 종합적으로 알아볼 수 있습니다 . 검사시간은 50 분 정도입니다 . IT 직무 기본역량검사 IT 분야로 취업을 준비하는 사람에게 추천합니다 . IT 직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 IT 직무에 필요한 역량이 갖추어졌는지를 알아 볼 수 있는 검사입니다 . 검사 시간은 총 95 분 정도입니다 . 창업적성검사 창업을 희망하는 개인에게 창업소질이 있는지 진단해주고 , 가장 적합한 업종이 무엇인지 추천해 줍니다 . 20 분 정도 검사시간이 필요하며 , 창업을 희망하는 사람이면 도움이 될 수 있습니다 . 2) 청소년 대상 직업심리검사 진로발달 단계를 고려하여 초등학생부터 고등학생을 대상으로 한 직업심리검사가 개발되어 청소년의 특성에 따라 필요한 검사를 무료로 받을 수 있습니다 . 청소년 대상 직업심리검사는 학교에서 단체로 실시하거나 , 개인이 직접 워크넷이나 고용센터를 방문하면 받을 수 있습니다 . 청소년 직업흥미검사 중학교 1 학년 이상 학생들을 대상으로 개발된 검사입니다 . 직업흥미를 알아보고 흥미에 적합한 학과와 직업정보를 알려줍니다 . 성인을 대상으로 한 흥미검사와 달리 추천학과 정보가 제공되며 30 분정도 검사시간이 필요합니다 . 청소년 인성검사 청소년 인성검사는 개인의 성격적인 특징을 알아보는 검사입니다 . 중학교 1 학년 이상 학생들이 참여할 수 있으며 , 성격을 5 가지 요인으로 구분하여 각 특성별로 발달 정도를 알려줍니다 . 외향성 , 호감성 , 성실성 , 개방성 , 정서적 불안정성이 어느 수준에 있는지를 그래프와 위치점수를 통해 확인할 수 있습니다 . 검사시간은 25 분 정도입니다 . 청소년 진로발달도 검사 중학교 2 학년 이상 학생부터 참여할 수 있습니다 진로발달검사는 진로성숙도와 진로의사결정 능력을 알아보는 검사입니다 . 진로성숙도는 진로에 대하여 어느정도 관심을 가지고 있는지 , 진로에 대한 정보나 지식은 얼마나 있는지 , 진로준비하기 위한 활동 경험이 있는지 등 통해 측정하고 있습니다 . 진로의사결정능력은 개인의 진로결정에 영향을 미치는 다양한 요인들을 확인합니다 . 결정동기 , 정보지식 부족 , 갈등요인등을 측정하여 개인의 특성을 알려줍니다 . 진로발달도 검사는 중학생용과 고등학생용이 분리되어 있으며 15 분정도 검사시간이 필요합니다 . 직업가치관검사 _ 인터넷 전용 직업선택 시 중요하게 생각하는 직업가치관을 측정하여 자신의 직업가치를 확인하고 적합한 직업을 알려줍니다 . 성인용 가치관 검사와 동일하게 9 가지 직업가치에 대한 개인의 중요도를 그래프로 보여주고 있으며 검사 시간은 20 분정도 필요합니다 고등학생 적성검사 고등학교 1 학년 ~3 학년까지 적합한 검사로  직무수행에서 요구되는 9 개 기초직업능력을 측정하여 개인의 능력에 적합한 직업을 알려줍니다 . 언어능력 , 수리능력 , 추리능력 , 공간능력 , 지각능력 , 과학원리 , 집중능력 , 색채능력 , 사고유연성 등에 대한 개인이 능력보유 수준을 그래프와 점수를 통해 확인할 수 있습니다 . 항목별로 문제풀이 시간이 제한되어 있으며 총 65 분정도 검사시간이 필요합니다 . 무엇을 잘할 수 있는지 궁금하다면 적성검사를 통해 자신이 가지고 있는 직업기초 능력을 확인할 수 있습니다 . 중학생 적성검사 중학교 1 학년에서 3 학년까지 받을 수 있는 검사입니다 . 이 검사는 8 개 직업적성에 대한 능력을 측정하여 적합한 학과와 직업분야를 알려줍니다 . 중학생 적성검사에서 알 수 있는 직업적성은 언어능력 , 수리능력 , 공간능력 , 추리능력 , 지각속도 , 과학능력 , 색채능력 , 사고유연성 등 8 가지 항목이며 , 검사시간은 63 분입니다 . 각 적성능력별로 개인의 뛰어난 능력과 부족한 능력을 그래프와 점수로 확인할 수 있습니다 . 진학이나 직업을 선택하기 위해 잘하는 것이 무엇인지 궁금하다면 도움이 되는 검사입니다 . 초등학생 진로인식검사 초등학교 5 학년 ~6 학년을 대상으로 실시가 가능한 검사입니다 . 자신과 직업에 대하여 잘 이해하고 있는지 , 진로를 탐색하는데 적극적으로 노력하고 있는지 등을 알 수 있는 검사입니다 . 원하는 직업 , 알고싶은 직업 전공하고 싶은 직업 등 희망직업을 비교해볼 수 있습니다 . 검사시간은 20 분 ~30 분정도입니다 . 신청방법 가까운 고용센터나 대한민국 취업포털 워크넷 (Work-net) www.work.go.kr 신청하세요 ~ 가까운 고용센터는 고용노동부 고객센터 1350 나 고용복지 + 센터 누리집 에서 알려드립니다 . 유사 제도 잡케어(JobCare) 서비스 최종 수정일: 2025-07-09",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://sejongsi.kr/1755",
+      "https://nantena.net/1687"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 3610,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000185&systCnntId=CI00001224&systId=SI00000327&upprSystClId=",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://gncep.gne.go.kr/std/crr/info/CrrInspIntDetail3StdPage.do?ssoCheck=fail",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "직업적성테스트",
+    "organic_domains": [
+      "sejongsi.kr",
+      "nantena.net",
+      "wikijob.kr",
+      "www.hongsimdang.kr",
+      "janet.co.kr",
+      "shortents.net",
+      "emotionte.com",
+      "top7.kr",
+      "blokey.co.kr",
+      "top7.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://sejongsi.kr/1755",
+        "domain": "sejongsi.kr",
+        "title": "직업적성테스트 제대로 활용하는 방법, 결과보다 중요한 선택 기준 | 세종시 생활정보 | 세종특별자치시 소식",
+        "snippet": "얼마 전 지인이 이직을 고민하면서 직업적성테스트를 세 개나 해봤다고 하더라고요. ... 사실 직업적성테스트의 가장 큰 장점은 ‘나를 설명하는 언어’를 얻는 데 있습니다."
+      },
+      {
+        "url": "https://nantena.net/1687",
+        "domain": "nantena.net",
+        "title": "직업적성테스트 제대로 활용하는 방법, 결과지에서 내 길 찾기 | 난테나 | 트렌드 안테나",
+        "snippet": "얼마 전 지인이 직업적성테스트를 해봤는데 결과에 ‘기획형’과 ‘탐구형’이 같이 나왔다고 하더라고요. ... 예를 들어 직업적성테스트에서 교육, 상담, 코칭 계열이 높게 나왔다면 바로 관련 자격증부터 찾기보다"
+      },
+      {
+        "url": "https://wikijob.kr/aptitude",
+        "domain": "wikijob.kr",
+        "title": "국비지원 직업적성테스트 | 국비교육 플랫폼",
+        "snippet": "# 국비지원 직업적성테스트"
+      },
+      {
+        "url": "https://www.hongsimdang.kr/%EC%A7%81%EC%97%85%EC%A0%81%EC%84%B1%ED%85%8C%EC%8A%A4%ED%8A%B8",
+        "domain": "www.hongsimdang.kr",
+        "title": "직업적성테스트 무료 체크 — 인적성검사 뜻·이직 기준 | 홍심당",
+        "snippet": "인적성검사는 채용 과정에서 조직 적합성과 문제 해결 방식을 보는 도구이고, 직업적성테스트는 내가 오래 힘을 낼 수 있는 일과 환경을 찾는 데 가깝습니다. ... 직업적성테스트는 사람·자료·아이디어·현장"
+      },
+      {
+        "url": "https://janet.co.kr/jnRcmd/job_test.php",
+        "domain": "janet.co.kr",
+        "title": "직업적성테스트 - 자격증넷 | 자넷 시작부터 끝까지, 자격증에 대한 모든 것",
+        "snippet": "직업적성테스트"
+      },
+      {
+        "url": "https://shortents.net/11925",
+        "domain": "shortents.net",
+        "title": "직업적성테스트 제대로 활용하는 방법, 결과지에서 진짜 힌트 찾기 | 숏텐츠",
+        "snippet": "직업적성테스트 결과지를 보면 보통 추천 직업 목록이 가장 눈에 들어옵니다."
+      },
+      {
+        "url": "https://emotionte.com/%EB%AC%B4%EB%A3%8C-%EC%A7%81%EC%97%85%EC%A0%81%EC%84%B1%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8-top-5-ai-%EC%B6%94%EC%B2%9C-%ED%8F%AC%ED%95%A8/",
+        "domain": "emotionte.com",
+        "title": "무료 직업적성테스트 사이트 TOP 5 (AI 추천 포함) | emotionte 실무 가이드",
+        "snippet": "직업적성테스트는 단일 결과보다 2~3개 사이트를 비교해 교차 확인하는 방식이 더 유용합니다."
+      },
+      {
+        "url": "https://top7.kr/926",
+        "domain": "top7.kr",
+        "title": "직업적성테스트 제대로 활용하는 방법, 결과에 끌려가지 않고 진로 찾기 | 주관적인 삶",
+        "snippet": "직업적성테스트를 할 때 의외로 많은 사람이 ‘좋아 보이는 나’를 기준으로 답합니다. ... 이 과정을 거치면 직업적성테스트가 훨씬 실용적인 도구가 됩니다."
+      },
+      {
+        "url": "https://blokey.co.kr/k/%EC%A7%81%EC%97%85%EC%A0%81%EC%84%B1%ED%85%8C%EC%8A%A4%ED%8A%B8",
+        "domain": "blokey.co.kr",
+        "title": "직업적성테스트 황금키워드 등급 D · 검색량·블로그 문서수 분석 | 블로키",
+        "snippet": "\"직업적성테스트\" 연관 키워드 수백 개를 한 번에 등급 분석"
+      },
+      {
+        "url": "https://top7.kr/767",
+        "domain": "top7.kr",
+        "title": "직업적성테스트 제대로 활용하는 방법, 결과표 보고 진로 고르는 요령 | 주관적인 삶",
+        "snippet": "얼마 전 지인이 이직을 고민하면서 직업적성테스트를 해봤다고 하더라고요. ... 직업적성테스트 결과를 보면 보통 추천 직업 목록이 가장 먼저 눈에 들어옵니다."
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 28.46,
+      "organic_opportunity": 31.11,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-10T00:01:22.062485+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "직업적성테스트"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000185&systCnntId=CI00001224&systId=SI00000327&upprSystClId=",
+          "title": "고용정책 상세_제도안내 | 고용정책 목록 | 정책/제도 | 고객센터",
+          "excerpt_chars": 5198
+        },
+        {
+          "url": "https://gncep.gne.go.kr/std/crr/info/CrrInspIntDetail3StdPage.do?ssoCheck=fail",
+          "title": "직업적성검사 | 아이꿈봄",
+          "excerpt_chars": 4285
+        },
+        {
+          "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1148658727",
+          "title": "직스테크놀로지",
+          "excerpt_chars": 8000
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1148658727",
+              "title": "직스테크놀로지",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://m.work24.go.kr/wk/a/b/1500/empDetailAuthView.do?infoTypeCd=VALIDATION&infoTypeGroup=tb_workinfoworknet&wantedAuthNo=KEC1102609110003",
+              "title": "채용정보 상세 | 채용정보 상세검색 | 일자리 찾기 | 채용정보",
+              "excerpt_chars": 3560
+            },
+            {
+              "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1348684215",
+              "title": "(주)정석테크",
+              "excerpt_chars": 6396
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000185&systCnntId=CI00001224&systId=SI00000327&upprSystClId=",
+              "title": "고용정책 상세_제도안내 | 고용정책 목록 | 정책/제도 | 고객센터",
+              "excerpt_chars": 5198
+            },
+            {
+              "url": "https://gncep.gne.go.kr/std/crr/info/CrrInspIntDetail3StdPage.do?ssoCheck=fail",
+              "title": "직업적성검사 | 아이꿈봄",
+              "excerpt_chars": 4285
+            },
+            {
+              "url": "https://job.gg.go.kr/empmn/desEntDtl.do?bizrno=1148658727",
+              "title": "직스테크놀로지",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "직업적성테스트",
+      "executed_query": "직업적성테스트",
+      "topic": "직업적성테스트 종류와 선택 기준, 결과를 진로에 활용하는 방법",
+      "intent": "나에게 맞는 직업적성테스트는 무엇이며, 추천 직업과 검사 결과를 진로·취업 준비에 어떻게 활용할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-10T00:01:22.062485+00:00",
+      "result_count": 10,
+      "domain_count": 9,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "직업적성테스트",
+        "executed_query": "직업적성테스트",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-10T00:01:22.062485+00:00",
+        "raw_sha256": "4795f245c414fd4f81cd4390412bbefa379a5713d99b1e261d3170000c56c61a",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "직업적성테스트 제대로 활용하는 방법, 결과보다 중요한 선택 기준 | 세종시 생활정보 | 세종특별자치시 소식"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "직업적성테스트 제대로 활용하는 방법, 결과지에서 내 길 찾기 | 난테나 | 트렌드 안테나"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "국비지원 직업적성테스트 | 국비교육 플랫폼"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "인적성검사는 채용 과정에서 조직 적합성과 문제 해결 방식을 보는 도구이고, 직업적성테스트는 내가 오래 힘을 낼 수 있는 일과 환경을 찾는 데 가깝습니다. ... 직업적성테스트는 사람·자료·아이디어·현장"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "직업적성테스트 - 자격증넷 | 자넷 시작부터 끝까지, 자격증에 대한 모든 것"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "직업적성테스트 제대로 활용하는 방법, 결과지에서 진짜 힌트 찾기 | 숏텐츠"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "무료 직업적성테스트 사이트 TOP 5 (AI 추천 포함) | emotionte 실무 가이드"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "직업적성테스트 제대로 활용하는 방법, 결과에 끌려가지 않고 진로 찾기 | 주관적인 삶"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "직업적성테스트 황금키워드 등급 D · 검색량·블로그 문서수 분석 | 블로키"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "직업적성테스트 제대로 활용하는 방법, 결과표 보고 진로 고르는 요령 | 주관적인 삶"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 9,
+        "relevant_site_count": 8,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "relevance_ratio": 0.9,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.2222222222222222,
+        "organic_opportunity": 31.11
+      },
+      "scope": "full_keyword",
+      "target_keyword": "직업적성테스트",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "직업적성테스트 제대로 활용하는 방법, 결과보다 중요한 선택 기준"
+        },
+        {
+          "result_index": 1,
+          "quote": "직업적성테스트 제대로 활용하는 방법, 결과지에서 내 길 찾기"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-10T00:01:22.062485+00:00",
+      "input_sha256": "2f8dadd29e567ef615adf34c7c46a49df43af6b4b481571817266efe2315bacc",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "직업적성테스트",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "고객센터 고객센터 홈 고용24 소개 사이트 소개 BI 소개 관련기관 연락처 기관찾기 직업소개소 고용서비스우수기관 이용안내 고용24 활용하기 이용가이드 장애인 이용안내 인증서 이용 안내 보안프로그램 설치 정책/제도 고용정책 지원금 모의계산 직종별 임금정보 자주하는 질문 개선의견 전산개선 제안 공지사항 공지사항 고용24 활용 수기 설문조사 자료실 서식자료실 홍보자료실 뉴스레터 모아보기 홈페이지 운영 정책 이용약관 개인정보처리방침 아동·청소년 개인정보처리방침 이메일주소무단수집거부 저작권정책 웹 접근성 정책 OPEN-API Open-API 소개 서비스 소개 및 신청 신청현황 OPEN-API 공지사항 홈 고객센터 고객센터 정책/제도 고객센터 홈 고용24 소개 이용안내 정책/제도 자주하는 질문 개선의견 공지사항 자료실 홈페이지 운영 정책 OPEN-API 고용정책 고용정책 지원금 모의계산 직종별 임금정보 고용정책 상세_제도안내 페이스북(공유하기) 엑스(공유하기) 카카오(공유하기) 프린트하기 직업심리검사 목차 개요 서비스 대상 서비스 내용 신청방법 목록 고용센터에서는 진로나 직업 선택을 위해 흥미 , 역량 , 가치 등의 개인적인 특징을 알아볼 수 있도록 다양한 직업 심리 검사를 무료로 제공하고 있습니다 . 워크넷 (Work-net) 에 방문하여 ‘ 직업진로지도 - 직업심리검사 메뉴를 통해 온라인으로 간편하게 받거나 고용센터를 방문하여 담당자의 안내에 따라 편안하게 받을 수 있습니다 . 서비스 대상 청소년 , 대학생 , 성인 , 국민 누구나 무료로 직업심리검사를 받을 수 있습니다 . 초등학생부터 고등학생을 대상으로 한 청소년 대상 직업심리검사 , 대학생 및 성인대상 직업 심리검사가 준비되어 있습니다 .. 특히 , 이런 분들에게 꼭 추천합니다 . ○ 진로 · 직업 선택을 위해 자기 탐색이 필요한 구직자",
+            "entity": "고용센터",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "누가 무료 검사를 받을 수 있으며 어디서 이용하는가?",
+            "answer": "청소년·대학생·성인 누구나 무료로 이용하며, 본문은 워크넷 온라인 검사와 고용센터 방문을 안내한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "고객센터 고객센터 홈 고용24 소개 사이트 소개 BI 소개 관련기관 연락처 기관찾기 직업소개소 고용서비스우수기관 이용안내 고용24 활용하기 이용가이드 장애인 이용안내 인증서 이용 안내 보안프로그램 설치 정책/제도 고용정책 지원금 모의계산 직종별 임금정보 자주하는 질문 개선의견 전산개선 제안 공지사항 공지사항 고용24 활용 수기 설문조사 자료실 서식자료실 홍보자료실 뉴스레터 모아보기 홈페이지 운영 정책 이용약관 개인정보처리방침 아동·청소년 개인정보처리방침 이메일주소무단수집거부 저작권정책 웹 접근성 정책 OPEN-API Open-API 소개 서비스 소개 및 신청 신청현황 OPEN-API 공지사항 홈 고객센터 고객센터 정책/제도 고객센터 홈 고용24 소개 이용안내 정책/제도 자주하는 질문 개선의견 공지사항 자료실 홈페이지 운영 정책 OPEN-API 고용정책 고용정책 지원금 모의계산 직종별 임금정보 고용정책 상세_제도안내 페이스북(공유하기) 엑스(공유하기) 카카오(공유하기) 프린트하기 직업심리검사 목차 개요 서비스 대상 서비스 내용 신청방법 목록 고용센터에서는 진로나 직업 선택을 위해 흥미 , 역량 , 가치 등의 개인적인 특징을 알아볼 수 있도록 다양한 직업 심리 검사를 무료로 제공하고 있습니다 . 워크넷 (Work-net) 에 방문하여 ‘ 직업진로지도 - 직업심리검사 메뉴를 통해 온라인으로 간편하게 받거나 고용센터를 방문하여 담당자의 안내에 따라 편안하게 받을 수 있습니다 . 서비스 대상 청소년 , 대학생 , 성인 , 국민 누구나 무료로 직업심리검사를 받을 수 있습니다 . 초등학생부터 고등학생을 대상으로 한 청소년 대상 직업심리검사 , 대학생 및 성인대상 직업 심리검사가 준비되어 있습니다 .. 특히 , 이런 분들에게 꼭 추천합니다 . ○ 진로 · 직업 선택을 위해 자기 탐색이 필요한 구직자"
+          },
+          {
+            "facet": "성인은 흥미와 검사 목적에 따라 어떤 검사를 선택하는가?",
+            "answer": "18세 이상 대상이며, 흥미를 보는 S형은 25분, 성격·생활 특성을 추가한 L형은 약 60분이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "구나 무료로 직업심리검사를 받을 수 있습니다 . 초등학생부터 고등학생을 대상으로 한 청소년 대상 직업심리검사 , 대학생 및 성인대상 직업 심리검사가 준비되어 있습니다 .. 특히 , 이런 분들에게 꼭 추천합니다 . ○ 진로 · 직업 선택을 위해 자기 탐색이 필요한 구직자 , ○ 취업준비가 얼마나 되어 있는지 알아보고 싶은 구직자 ○ 자신이 가진 직업적 흥미가 어떤 것인지 , 기본역량이 얼마나 되진지 궁금한 사람 서비스 내용 1) 대학생· 성인 대상 직업심리검사 직업흥미 등 선호도를 측정하는 검사부터 직무역량 ( 능력 ) 을 측정하는 9 가지 검사를 이용하실 수 있습니다 .  18 세 이상 국민이면 누구나 받을 수 있습니다 직업선호도 검사 S 형 직업 흥미를 측정할 수 있는 문항들에 대한 객관식 검사로 25 분 동안 실시되며 , 검사결과 직업 흥미 유형을 알 수 있으며 흥미에 적합한 직업을 추천받을 수 있습니다 . 활동에 대한 관심 , 유능감 , 직업에 대한 선호 , 선호분야 , 일반성향의 다양한 특성을 측정하며 이를 기초로 개인의 흥미 유형을 6 가지 유형으로 분류하여 결과를 알수 있습니다 . 직업선호도검사 (S 형 ) 은 Holland 의 6 가지 흥미유형 분류에 근거하여 자신의 특성을 탐색하고 흥미유형에 적합한 직업을 알려주고 있습니다 직업선호도 검사 L 형 직업선호도 검사 S 형에 성격과 생활 특성을 알아볼 수 있는 문항들이 추가된 검사입니다 . 문항수가 많아서 60 분정도 검사 시간이 필요합니다 . 직업이나 직무를 선택할 때 참고자료로 활용할 수 있으며 , 자기소개서 작성이나 면접준비시 자신을 객관적이고 구체적으로 소개하기 위한 기초자료로 참고 할 수 있습니다 . 주의할 점은 직업선호도검사는 개인의 현재 보유능력이나 학력 , 전공 , 자격 , 가치관 등은 반영하지 않고 오로지 흥"
+          },
+          {
+            "facet": "능력·적성을 확인하려면 어떤 검사를 선택하고 얼마나 걸리는가?",
+            "answer": "직업적성검사는 기초능력 점수와 적합 직업을 제공하며 전체 80분 이내에 실시한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "직업안정성 등이며 , 검사시간은 20 분정도입니다 . 직업적성검사 직업선택 시 중요한 능력과 적성을 토대로 적합한 직업을 선택할 수 있도록 도와주기 위한 검사입니다 . 11 개 직업기초능력을 얼마나 갖추고 있는지 점수를 통해 확인할 수 있으며 , 측정된 능력에 적합한 직업을 알려줍니다 . 각 항목별 시간제한이 있으며 , 전체 80 분안에 검사를 실시해야 합니다 . 직업적성검사에서 알 수 있는 직업기초능력은  언어력 , 수리력 , 추리력 , 공간지각력 , 상황판단력 , 기계능력 , 집중력 , 색채지각력 , 문제해결능력 , 사고유창력입니다 . 직업을 성공적으로 수행할 수 있는지 능력을 알아보는 것은 중요한 의미가 있지만 , 적성검사에서 비슷한 결과를 얻은 사람이라 할지라도 개인의 세계관 , 가치관 , 인생관 등이 다르고 , 흥미도 다를 수 있습니다 . 또한 적성검사를 통해 추천되는 직업은 좋아하거나 관심 있는 직업과 차이가 있을 수 있습니다 . 그러므로 최종적으로 직업을 선택할 때에는 적성검사 결과 외에도 흥미나 가치관 , 직업 ( 무 ) 경험 , 특기 , 자격 등을 종합적으로 고려하여야 합니다 . 영업직무 기본역량검사 영업마케팅 분야로 취업을 준비하는 사람에게 추천합니다 . 영업직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 영업직무를 수행하는 데 얼마나 적합한 역량을 갖추고 있는지 알려주는 검사입니다 . 시간 제한이 있는 능력검사이며 , 적성과 인성을 종합적으로 알아볼 수 있습니다 . 검사시간은 50 분 정도입니다 . IT 직무 기본역량검사 IT 분야로 취업을 준비하는 사람에게 추천합니다 . IT 직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 IT 직무에 필요한 역량이 갖추어졌는지를 알아 볼 수 있는 검사입니다 . 검사 시간은 총 95 분 정도입니다 . 창업적성검사"
+          },
+          {
+            "facet": "취업 준비 상태나 직업 선택 가치관을 확인할 검사는 무엇인가?",
+            "answer": "구직준비도검사는 취업 준비의 취약점을, 직업가치관검사는 중요 가치와 적합 직업을 확인하며 각각 약 20분이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "선택할 때 참고자료로 활용할 수 있으며 , 자기소개서 작성이나 면접준비시 자신을 객관적이고 구체적으로 소개하기 위한 기초자료로 참고 할 수 있습니다 . 주의할 점은 직업선호도검사는 개인의 현재 보유능력이나 학력 , 전공 , 자격 , 가치관 등은 반영하지 않고 오로지 흥미성향과 성격 , 생활사 등에 관련된 정보만을 알려준다는 점입니다 . 직업 적성검사에서 비슷한 결과를 얻은 사람이라 할지라도 개인의 세계관 , 가치관 , 인생관 등이 다르고 , 흥미도 다를 수 있습니다 . 따라서 직업적성검사의 결과에 전적으로 의존하기 보다는 검사 결과와 함께 흥미 , 희망직업 , 현직업 , 개인의 특수한 상황 등을 고려하여 종합적인 직업탐색 및 직업선택을 하시기 바랍니다 . 구직준비도검사 스스로 취업할 준비가 얼마나 되어 있는지 알아볼 수 있는 검사입니다 . 현재 구직을 준비하는데 취약한 부분은 무엇인지 , 구직동기와 구직기술에 대한 준비 정도가 어느 정도인지 알아볼 수 있으며 20 분정도 시간이 필요합니다 . 직업가치관검사 _ 인터넷 전용 직업을 선택할 때 중요하게 생각하는 것이 무엇인지를 알아보고 , 가치에 적합한 직업을 추천해주는 검사입니다 . 사람들은 중요하다고 생각하는 가치에 적합한 직업을 선택할 때 보다 만족하며 일할 수 있습니다 . 직업가치관 검사를 통해 측정할 수 있는 직업가치는 ① 사회적 공헌 , ② 변화 지향성 , ③ 성취 , ④ 경제적 보상 , ⑤ 자기개발 , ⑥ 일과 삶의 균형 , ⑦ 사회적 인정 , ⑧ 자율성 , ⑨ 직업안정성 등이며 , 검사시간은 20 분정도입니다 . 직업적성검사 직업선택 시 중요한 능력과 적성을 토대로 적합한 직업을 선택할 수 있도록 도와주기 위한 검사입니다 . 11 개 직업기초능력을 얼마나 갖추고 있는지 점수를 통해 확인할 수 있으며 , 측정된 능력에 적합한 "
+          },
+          {
+            "facet": "청소년은 대상 연령과 목적에 따라 어떤 검사를 선택하는가?",
+            "answer": "중2 이상 진로발달도검사는 약 15분, 고1~3 적성검사는 기초직업능력을 측정하며 약 65분이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": ". 검사시간은 25 분 정도입니다 . 청소년 진로발달도 검사 중학교 2 학년 이상 학생부터 참여할 수 있습니다 진로발달검사는 진로성숙도와 진로의사결정 능력을 알아보는 검사입니다 . 진로성숙도는 진로에 대하여 어느정도 관심을 가지고 있는지 , 진로에 대한 정보나 지식은 얼마나 있는지 , 진로준비하기 위한 활동 경험이 있는지 등 통해 측정하고 있습니다 . 진로의사결정능력은 개인의 진로결정에 영향을 미치는 다양한 요인들을 확인합니다 . 결정동기 , 정보지식 부족 , 갈등요인등을 측정하여 개인의 특성을 알려줍니다 . 진로발달도 검사는 중학생용과 고등학생용이 분리되어 있으며 15 분정도 검사시간이 필요합니다 . 직업가치관검사 _ 인터넷 전용 직업선택 시 중요하게 생각하는 직업가치관을 측정하여 자신의 직업가치를 확인하고 적합한 직업을 알려줍니다 . 성인용 가치관 검사와 동일하게 9 가지 직업가치에 대한 개인의 중요도를 그래프로 보여주고 있으며 검사 시간은 20 분정도 필요합니다 고등학생 적성검사 고등학교 1 학년 ~3 학년까지 적합한 검사로  직무수행에서 요구되는 9 개 기초직업능력을 측정하여 개인의 능력에 적합한 직업을 알려줍니다 . 언어능력 , 수리능력 , 추리능력 , 공간능력 , 지각능력 , 과학원리 , 집중능력 , 색채능력 , 사고유연성 등에 대한 개인이 능력보유 수준을 그래프와 점수를 통해 확인할 수 있습니다 . 항목별로 문제풀이 시간이 제한되어 있으며 총 65 분정도 검사시간이 필요합니다 . 무엇을 잘할 수 있는지 궁금하다면 적성검사를 통해 자신이 가지고 있는 직업기초 능력을 확인할 수 있습니다 . 중학생 적성검사 중학교 1 학년에서 3 학년까지 받을 수 있는 검사입니다 . 이 검사는 8 개 직업적성에 대한 능력을 측정하여 적합한 학과와 직업분야를 알려줍니다 . 중학생 적성검사에서 알"
+          },
+          {
+            "facet": "추천 직업과 검사 결과를 진로·취업 준비에 어떻게 활용하는가?",
+            "answer": "추천 직업을 확정 답으로 삼지 않고 흥미·가치관·직무 경험·특기·자격을 함께 검토해 직업 선택에 활용한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "직업안정성 등이며 , 검사시간은 20 분정도입니다 . 직업적성검사 직업선택 시 중요한 능력과 적성을 토대로 적합한 직업을 선택할 수 있도록 도와주기 위한 검사입니다 . 11 개 직업기초능력을 얼마나 갖추고 있는지 점수를 통해 확인할 수 있으며 , 측정된 능력에 적합한 직업을 알려줍니다 . 각 항목별 시간제한이 있으며 , 전체 80 분안에 검사를 실시해야 합니다 . 직업적성검사에서 알 수 있는 직업기초능력은  언어력 , 수리력 , 추리력 , 공간지각력 , 상황판단력 , 기계능력 , 집중력 , 색채지각력 , 문제해결능력 , 사고유창력입니다 . 직업을 성공적으로 수행할 수 있는지 능력을 알아보는 것은 중요한 의미가 있지만 , 적성검사에서 비슷한 결과를 얻은 사람이라 할지라도 개인의 세계관 , 가치관 , 인생관 등이 다르고 , 흥미도 다를 수 있습니다 . 또한 적성검사를 통해 추천되는 직업은 좋아하거나 관심 있는 직업과 차이가 있을 수 있습니다 . 그러므로 최종적으로 직업을 선택할 때에는 적성검사 결과 외에도 흥미나 가치관 , 직업 ( 무 ) 경험 , 특기 , 자격 등을 종합적으로 고려하여야 합니다 . 영업직무 기본역량검사 영업마케팅 분야로 취업을 준비하는 사람에게 추천합니다 . 영업직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 영업직무를 수행하는 데 얼마나 적합한 역량을 갖추고 있는지 알려주는 검사입니다 . 시간 제한이 있는 능력검사이며 , 적성과 인성을 종합적으로 알아볼 수 있습니다 . 검사시간은 50 분 정도입니다 . IT 직무 기본역량검사 IT 분야로 취업을 준비하는 사람에게 추천합니다 . IT 직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 IT 직무에 필요한 역량이 갖추어졌는지를 알아 볼 수 있는 검사입니다 . 검사 시간은 총 95 분 정도입니다 . 창업적성검사"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "직업안정성 등이며 , 검사시간은 20 분정도입니다 . 직업적성검사 직업선택 시 중요한 능력과 적성을 토대로 적합한 직업을 선택할 수 있도록 도와주기 위한 검사입니다 . 11 개 직업기초능력을 얼마나 갖추고 있는지 점수를 통해 확인할 수 있으며 , 측정된 능력에 적합한 직업을 알려줍니다 . 각 항목별 시간제한이 있으며 , 전체 80 분안에 검사를 실시해야 합니다 . 직업적성검사에서 알 수 있는 직업기초능력은  언어력 , 수리력 , 추리력 , 공간지각력 , 상황판단력 , 기계능력 , 집중력 , 색채지각력 , 문제해결능력 , 사고유창력입니다 . 직업을 성공적으로 수행할 수 있는지 능력을 알아보는 것은 중요한 의미가 있지만 , 적성검사에서 비슷한 결과를 얻은 사람이라 할지라도 개인의 세계관 , 가치관 , 인생관 등이 다르고 , 흥미도 다를 수 있습니다 . 또한 적성검사를 통해 추천되는 직업은 좋아하거나 관심 있는 직업과 차이가 있을 수 있습니다 . 그러므로 최종적으로 직업을 선택할 때에는 적성검사 결과 외에도 흥미나 가치관 , 직업 ( 무 ) 경험 , 특기 , 자격 등을 종합적으로 고려하여야 합니다 . 영업직무 기본역량검사 영업마케팅 분야로 취업을 준비하는 사람에게 추천합니다 . 영업직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 영업직무를 수행하는 데 얼마나 적합한 역량을 갖추고 있는지 알려주는 검사입니다 . 시간 제한이 있는 능력검사이며 , 적성과 인성을 종합적으로 알아볼 수 있습니다 . 검사시간은 50 분 정도입니다 . IT 직무 기본역량검사 IT 분야로 취업을 준비하는 사람에게 추천합니다 . IT 직무수행과 관련한 역량을 인성과 적성의 측면으로 측정하여 IT 직무에 필요한 역량이 갖추어졌는지를 알아 볼 수 있는 검사입니다 . 검사 시간은 총 95 분 정도입니다 . 창업적성검사",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 74.57,
     "publish_eligible": true,
     "hold_reasons": []
   }

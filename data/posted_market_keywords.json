@@ -737,5 +737,24 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-09T09:16:03.277342+00:00"
+  },
+  {
+    "key": "playstore서비스장애정상화",
+    "keyword": "Play Store 서비스 장애 정상화",
+    "topic": "Play Store 서비스 장애 정상화: 10월 9일 일부 이용자 장애 복구 안내",
+    "category": "테크",
+    "post_id": 1901,
+    "url": "https://trendpulse.blog/play-store-service-restored-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 20,
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-10T00:18:36.136886+00:00"
   }
 ]

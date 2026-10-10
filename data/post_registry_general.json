@@ -4728,5 +4728,15 @@
     "category": "취업",
     "identifier": "sk",
     "created_at": "2026-10-09T12:27:32.601214"
+  },
+  {
+    "topic": "Play Store 서비스 장애 정상화: 10월 9일 일부 이용자 장애 복구 안내",
+    "title": "Play Store 서비스 장애 정상화: 10월 9일 복구 안내",
+    "keywords": [
+      "Play Store 서비스 장애 정상화"
+    ],
+    "category": "테크",
+    "identifier": "play store",
+    "created_at": "2026-10-10T00:18:37.075607"
   }
 ]

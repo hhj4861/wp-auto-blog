@@ -60,6 +60,10 @@ jobs:
           CLOSE_POST_ID: ${{ inputs.close_post_id }}
           CLOSE_POST_SLUG: ${{ inputs.close_post_slug }}
         run: |
+          if [ "$UPGRADE_READER_ASSETS" = "true" ]; then
+            test -n "$REPAIR_READER_POST_ID"
+            test -n "$REPAIR_READER_POST_SLUG"
+          fi
           if [ -n "$REPAIR_READER_POST_ID" ] || [ -n "$REPAIR_READER_POST_SLUG" ]; then
             test -z "$CLOSE_POST_ID$CLOSE_POST_SLUG"
             python -m scripts.repair_reader_css

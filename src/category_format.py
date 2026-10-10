@@ -67,6 +67,7 @@ def category_format_issues(html, category):
 
 # Match the approved reading width, with navigation scoped to reader posts only.
 CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
+.single-post .wrapper-outer:has(.wpab-menu-reader){overflow:clip}
 .single-post .entry .post-content:has(>.wpab-menu-reader){width:100%;max-width:1040px;margin-inline:auto}
 .single-post .entry:has(.wpab-menu-reader){box-sizing:border-box;width:100%;max-width:1120px}
 .wpab-article.wpab-menu-reader{width:100%;max-width:1040px;--reader-top:16px;--reader-scroll-offset:150px;--tint:color-mix(in srgb,var(--blue) 7%,white)}

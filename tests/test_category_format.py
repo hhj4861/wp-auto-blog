@@ -19,6 +19,8 @@ def test_format_preserves_content_sources_schema_and_visible_monetization(catego
         official_link='공식 안내|https://www.gov.kr/', related_posts=[dict(url='https://trendpulse.blog/example/', title='관련 안내')])
     soup = BeautifulSoup(rendered, 'html.parser')
     assert not category_format_issues(rendered, category)
+    style = soup.select_one('#wpab-reading-styles').string
+    assert '\n' not in style and '\r' not in style  # WordPress wpautop must not paragraph CSS
     assert len(soup.select('[data-reader-panel]')) == 5
     assert len(soup.select('[data-reader-menu] a')) == 6
     assert not soup.select('[data-reader-panel][hidden]')

@@ -12,6 +12,12 @@ on:
         default: true
         type: boolean
 
+      repair_reader_post_id:
+        description: 'Repair only reader CSS whitespace on this exact post'
+        type: string
+      repair_reader_post_slug:
+        description: 'Exact slug required with repair_reader_post_id'
+        type: string
       close_post_id:
         description: '비공개 초안으로 전환할 글 ID (빈 값이면 기존 유지보수)'
         required: false
@@ -44,10 +50,15 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           WP_PROXY: ${{ secrets.WP_PROXY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          REPAIR_READER_POST_ID: ${{ inputs.repair_reader_post_id }}
+          REPAIR_READER_POST_SLUG: ${{ inputs.repair_reader_post_slug }}
           CLOSE_POST_ID: ${{ inputs.close_post_id }}
           CLOSE_POST_SLUG: ${{ inputs.close_post_slug }}
         run: |
-          if [ -n "$CLOSE_POST_ID" ] || [ -n "$CLOSE_POST_SLUG" ]; then
+          if [ -n "$REPAIR_READER_POST_ID" ] || [ -n "$REPAIR_READER_POST_SLUG" ]; then
+            test -z "$CLOSE_POST_ID$CLOSE_POST_SLUG"
+            python scripts/repair_reader_css.py
+          elif [ -n "$CLOSE_POST_ID" ] || [ -n "$CLOSE_POST_SLUG" ]; then
             python scripts/close_post.py
           else
             python scripts/trendpulse_maintenance.py

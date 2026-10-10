@@ -33,3 +33,16 @@
 - 38048497138(생산성), 38048555279(테크)는 인증 복원 단계 실패. 작성/WordPress 발행 이전이다. 나머지 38048556987, 38048558748, 38048560593, 38048562397은 취소·종료 확인.
 - 최종 수정은 queue 수동 실행용 notify_telegram boolean(default true) 옵션만 추가한다. false일 때 affiliate Telegram 모드 및 register/persist-intents/notify 단계를 끈다. queue/registry 최종 저장·공식 출처·수요·검수·기본 브랜치 인증·공통 동시성은 유지한다. 예약 실행은 기존 알림 동작을 유지한다.
 - tests/test_codex_actions.py 42개 통과. 실제 발행은 수정 PR 머지 승인 후 main에서 notify_telegram=false로 실행해야 한다. 6편 실포스팅은 미완료다.
+
+## 실제 발행에서 발견한 WordPress CSS 변환 문제
+
+- PR #108 승인 후 ceab983으로 머지. notify_telegram=false로 실행한 생산성 38057361804는 success. 실제 공개 글 #1907 https://trendpulse.blog/excel-chart-guide/ 확인.
+- 실제 Chrome에서 메뉴 전환, 개인 체크 1/5, 전체 본문 표시를 확인했다. 그러나 wpautop가 CSS의 빈 줄을 </p><p>로 바꿔 메뉴 grid 및 카테고리 색 규칙이 적용되지 않는 오류를 발견했다. 390px 테스트에서는 광고 iframe의 가로 넘침도 관찰했다(광고 자체는 이번 수정 범위 아님).
+- 동일 포맷 확산을 피하기 위해 나머지 실행 38057377766, 38057379677, 38057381622, 38057383670, 38057385713을 취소하고 terminal cancelled 확인. 테크 인증 정리 및 큐 저장 단계는 success.
+- 수정: 신규 포맷의 전용 CSS를 한 줄로 저장. 기존 글 보정은 정확한 ID/slug 및 publish 상태를 확인하고 owned style 내부 공백만 바꾸며 나머지 본문 bytes/제목/게시일/미디어/카테고리/태그/요약을 보존한다. 변경 감지 및 인증된 readback 포함.
+- 회귀 43개 통과. 공식 WordPress 6.8 formatting.php의 실제 PHP wpautop로 6개 카테고리 모두 기존 오류 재현 및 수정 후 CSS 보존 검증. source SHA256 aab325fd23d24ed19827c310d06cd3dd42bf7b1c9c70361ccaa1f707e4264ae5. 공식 문서 https://developer.wordpress.org/reference/functions/wpautop/.
+- 남은 작업: #1907 스타일 보정 및 공개 브라우저 재검증, 수정 PR 승인 후 main 생성 경로 반영, 나머지 5개 카테고리 발행·검증.
+
+- 실제 보정 실행 38058661955 success. #1907 인증 readback에서 본문 스타일 외 보존 확인. Chrome 재조회에서 corruptedCss=false, nav display=grid, 390px에서 3개 열(각 88.6641px), 생산성 accent=#236945 확인. 메뉴 전환 및 새로고침 후 체크 0/5 확인. 임시 viewport override 해제.
+- 테크 job 114228515967 로그에는 Queue category 이후 조사 단계 취소만 있으며 작성/게시 로그가 없다. 나머지 4개는 대기 중 취소. 여섯 작업 감시 프로세스도 모두 terminal 확인 후 exit 0.
+- 수정 PR #109: https://github.com/hhj4861/wp-auto-blog/pull/109. 승인 질문 발송했으며 아직 머지하지 않았다. 현재 성과는 생산성 1편 공개 및 스타일 보정 완료, 나머지 5개 카테고리 미발행이다.

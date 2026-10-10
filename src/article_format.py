@@ -125,4 +125,8 @@ def format_general_article(html: str, *, sources=None, category="", topic="",
     html = add_coupang_disclosure(html)
     html = add_policy_disclaimers(html, category=category, topic=topic)
     html = insert_monetization(html, official_link=official_link, related_posts=related_posts)
-    return finish_reading_layout(insert_faq_schema(html))
+    html = finish_reading_layout(insert_faq_schema(html))
+    if category == "취업":
+        from .recruitment_format import apply_recruitment_layout
+        html = apply_recruitment_layout(html)
+    return html

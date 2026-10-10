@@ -731,6 +731,12 @@ def build_faq_schema(html: str) -> str:
             if question.name == "h2":
                 break
             answer = question.find_next_sibling()
+            # Recruitment FAQ uses native details; retain JSON-LD after a
+            # reviewed draft removes and rebuilds derived structured data.
+            if question.parent.name == "summary":
+                card = question.find_parent("details", attrs={"data-faq-card": True})
+                if card is not None:
+                    answer = card.find("p", recursive=False)
             if answer and answer.name == "p":
                 q, a = question.get_text(" ", strip=True), answer.get_text(" ", strip=True)
                 if len(q) >= 6 and len(a) >= 10:

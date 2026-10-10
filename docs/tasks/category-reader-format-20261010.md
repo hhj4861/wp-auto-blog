@@ -17,3 +17,12 @@
 - 운영 적용 및 카테고리별 실제 공개 URL 검증은 PR #107 머지 승인 후 진행. 기존 포스팅 워크플로의 공식 출처/수요/중복/품질 게이트를 유지한다.
 
 - Node/jsdom DOM 상호작용 검증 통과: 첫 화면·해시 대상·전체 보기·키보드 Home/좌우·체크 유지·다른 본문과 상태 분리·local/session storage 미사용·중복 초기화 방지. 실행: NODE_PATH=<지정 iCloud 테스트 폴더>/dom-test/node_modules node tests/test_category_reader.cjs.
+
+## 2026-10-10 머지 승인 후 진행
+
+- 사용자: “응 머지 하고 실포스팅 해줘”. PR #107 명시 승인 및 6개 카테고리 1편씩 발행 승인.
+- PR #107 MERGED 확인. merge commit b0b213cef387f107bfedfecacdcece481ab087a2. 현재 main에 ff-only 동기화 완료.
+- Chrome 공개 글 접근 복구 확인. 새 글 발행 후 실제 메뉴 UI 확인 가능.
+- 실제 발행 dispatch는 아직 하지 않았다. 기존 auto-post.yml의 queue/general 실행은 상품 소개 글 및 기존 대기 요청에 대해 Telegram 알림을 보낼 수 있으며, 이 메시지 발송 허용 여부를 사용자에게 질문했다. 실포스팅 승인을 재요청한 것은 아니다.
+- 최근 재고 보충 실행 38045097667은 생활정보 공식 출처 timeout 및 no_pass_among_evaluated로 보류됐다. 새 실행에서도 기존 출처/수요/검수 기준을 유지한다.
+- 다음: 텔레그램 알림 답변에 맞춰 발행 경로 확정 → 카테고리별 실행 → 공개 URL 및 메뉴/본문 검증. 운영 글은 이 후속 작업에서 아직 생성·수정하지 않았다.

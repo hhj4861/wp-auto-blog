@@ -777,5 +777,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-10T09:09:19.943585+00:00"
+  },
+  {
+    "key": "엑셀차트만들기",
+    "keyword": "엑셀차트만들기",
+    "topic": "엑셀차트만들기: 데이터 선택부터 막대·꺾은선·원형 차트와 제목 편집까지",
+    "category": "생산성",
+    "post_id": 1907,
+    "url": "https://trendpulse.blog/excel-chart-guide/",
+    "selection_version": 8,
+    "monthly_search": 680,
+    "score": 70.99,
+    "score_components": {
+      "demand": 22.66,
+      "organic_opportunity": 33.33,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-10T14:05:03.167669+00:00"
   }
 ]

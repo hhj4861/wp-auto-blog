@@ -12,6 +12,10 @@ on:
         default: true
         type: boolean
 
+      upgrade_reader_assets:
+        description: 'Update only owned reader CSS/JS on the exact repair target'
+        type: boolean
+        default: false
       repair_reader_post_id:
         description: 'Repair only reader CSS whitespace on this exact post'
         type: string
@@ -41,7 +45,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests beautifulsoup4
 
       - name: Run maintenance
         env:
@@ -50,6 +54,7 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           WP_PROXY: ${{ secrets.WP_PROXY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          UPGRADE_READER_ASSETS: ${{ inputs.upgrade_reader_assets }}
           REPAIR_READER_POST_ID: ${{ inputs.repair_reader_post_id }}
           REPAIR_READER_POST_SLUG: ${{ inputs.repair_reader_post_slug }}
           CLOSE_POST_ID: ${{ inputs.close_post_id }}
@@ -57,7 +62,7 @@ jobs:
         run: |
           if [ -n "$REPAIR_READER_POST_ID" ] || [ -n "$REPAIR_READER_POST_SLUG" ]; then
             test -z "$CLOSE_POST_ID$CLOSE_POST_SLUG"
-            python scripts/repair_reader_css.py
+            python -m scripts.repair_reader_css
           elif [ -n "$CLOSE_POST_ID" ] || [ -n "$CLOSE_POST_SLUG" ]; then
             python scripts/close_post.py
           else

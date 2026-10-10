@@ -12,7 +12,7 @@
       // IDs generated per instance avoid collisions on multi-article pages.
       const prefix = 'wpab-reader-' + [...document.querySelectorAll('.wpab-menu-reader')].indexOf(article);
       container.id = prefix + '-all';
-      panels.forEach((panel, i) => panel.id = prefix + '-panel-' + i);
+      panels.forEach((panel, i) => { if (!panel.id) panel.id = prefix + '-panel-' + i; });
       const tabs = links.map((link, i) => {
         const tab = document.createElement('button');
         tab.type = 'button'; tab.textContent = link.textContent;
@@ -21,8 +21,28 @@
         tab.setAttribute('aria-controls', i < panels.length ? panels[i].id : container.id);
         link.replaceWith(tab); return tab;
       });
+      // Flatten any paragraphs inserted around anchors by WordPress wpautop.
+      nav.replaceChildren(...tabs);
       nav.setAttribute('role', 'tablist');
-      function activate(index, focus = false) {
+      const layout = document.createElement('div'); layout.className = 'wpab-reader-layout';
+      nav.before(layout); layout.append(nav, container);
+      function measure() {
+        const side = getComputedStyle(layout).display === 'grid';
+        nav.setAttribute('aria-orientation', side ? 'vertical' : 'horizontal');
+        const top = parseFloat(getComputedStyle(nav).top) || 0;
+        container.style.setProperty('--reader-scroll-offset', (side ? top + 16 : top + nav.getBoundingClientRect().height + 16) + 'px');
+      }
+      if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(nav);
+      window.addEventListener('resize', measure);
+      measure();
+      function showStart() {
+        measure();
+        const offset = parseFloat(getComputedStyle(container).getPropertyValue('--reader-scroll-offset')) || 150;
+        const delta = container.getBoundingClientRect().top - offset;
+        // A sticky menu can be clicked far down a long panel: reveal the new start.
+        if (Math.abs(delta) > 2) window.scrollBy({top:delta, behavior:'instant'});
+      }
+      function activate(index, focus = false, scroll = false) {
         const all = index === panels.length;
         tabs.forEach((tab, i) => {
           tab.setAttribute('aria-selected', String(i === index));
@@ -42,14 +62,15 @@
             panel.setAttribute('aria-labelledby', tabs[i].id); panel.tabIndex = 0;
           }
         });
-        if (focus) tabs[index].focus();
+        if (focus) tabs[index].focus({preventScroll:true});
+        if (scroll) showStart();
       }
       tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => activate(index));
+        tab.addEventListener('click', () => activate(index, false, true));
         tab.addEventListener('keydown', event => {
-          const next = {ArrowRight:(index+1)%tabs.length, ArrowLeft:(index+tabs.length-1)%tabs.length, Home:0, End:tabs.length-1};
+          const next = {ArrowRight:(index+1)%tabs.length, ArrowLeft:(index+tabs.length-1)%tabs.length, ArrowDown:(index+1)%tabs.length, ArrowUp:(index+tabs.length-1)%tabs.length, Home:0, End:tabs.length-1};
           if (Object.prototype.hasOwnProperty.call(next, event.key)) {
-            event.preventDefault(); activate(next[event.key], true);
+            event.preventDefault(); activate(next[event.key], true, true);
           }
         });
       });

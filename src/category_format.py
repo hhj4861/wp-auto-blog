@@ -170,7 +170,7 @@ def apply_category_layout(html, category):
     style = soup.find('style', id='wpab-reading-styles')
     if style is None:
         style = soup.new_tag('style', id='wpab-reading-styles'); article.insert_before(style)
-    style.string = CSS + '\n.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
+    style.string = ' '.join(CSS.split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
     script = soup.new_tag('script', id='wpab-category-reader')
     script.string = Path(__file__).with_name('category_reader.js').read_text(encoding='utf-8')
     article.insert_after(script)

@@ -43,17 +43,19 @@ def test_shared_formatter_preserves_content_provenance_ads_and_faq(monkeypatch):
         assert p.get_text() in soup.get_text()
     for link in soup.select('#article-toc a'):
         assert soup.find(id=link['href'][1:])
-    assert apply_recruitment_layout(html) == html
+    from src.category_format import apply_category_layout
+    assert apply_category_layout(html, '취업') == html
     assert not soup.select_one('#recruitment-details h2').get('style')
 
 
 @pytest.mark.parametrize('category', ['생활정보', '건강', '리뷰', '테크', '생산성'])
-def test_unapproved_categories_keep_existing_format(category):
+def test_approved_categories_use_readable_menu_format(category):
     html = format_general_article(RAW, category=category)
     soup = BeautifulSoup(html, 'html.parser')
     assert not soup.select_one('.wpab-recruitment')
-    assert len(soup.select('div[data-faq-card]')) == 3
-    assert '#292f33' in soup.select_one('#wpab-reading-styles').string
+    assert len(soup.select('details[data-faq-card]')) == 3
+    assert soup.select_one('.wpab-menu-reader')
+    assert '#292f33' not in soup.select_one('#wpab-reading-styles').string
 
 
 def test_missing_or_thin_sections_are_reported_without_inventing_content():

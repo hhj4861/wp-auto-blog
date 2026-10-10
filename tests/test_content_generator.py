@@ -243,8 +243,16 @@ class TestMarketEvidenceRepair:
             'SLUG: hba1c-normal-range\n---CONTENT---\n'
             '<h1>당화혈색소정상수치: 기준 확인</h1>'
             '<section id="quick-answer"><p>당화혈색소정상수치를 확인하세요.</p></section>'
-            '<h2 id="normal">정상 기준</h2><p>제공되지 않은 NIDDK 주장입니다.</p>'
-            '<h2 id="faq">FAQ</h2><h3 id="what">무엇인가요?</h3><p>확인한 기준을 정리합니다.</p>'
+            '<section id="reader-overview"><h2 id="normal">정상 기준</h2>'
+            '<p>제공되지 않은 NIDDK 주장입니다.</p><p>개인 상태와 구분해 읽습니다.</p></section>'
+            '<section id="reader-process"><h2>기록 순서</h2><ol data-visual="steps">'
+            '<li>자료 확인</li><li>질문 정리</li></ol></section>'
+            '<section id="reader-details"><h2>기록 예시</h2><p>편집부의 기록 예시입니다.</p>'
+            '<p>진단을 대신하지 않습니다.</p></section>'
+            '<section id="reader-faq"><h2 id="faq">FAQ</h2><h3 id="what">무엇인가요?</h3>'
+            '<p>확인한 기준을 정리합니다.</p></section>'
+            '<section id="reader-check"><h2>최종 확인</h2><ul data-visual="checklist">'
+            '<li>원문 확인</li><li>질문 확인</li></ul></section>'
         )
         # This fixture isolates evidence repair, not the independently tested event gate.
         brief['latest_issue_evidence'] = {'review': {'event_date': '2026-10-08'}}

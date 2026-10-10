@@ -44,9 +44,9 @@ def test_real_codex_article_has_complete_shared_format():
     soup = BeautifulSoup(formatted, 'html.parser')
     assert soup.select_one('#policy-notice')
     assert soup.select_one('#quick-answer')
-    assert soup.select_one('#article-toc')
-    assert soup.select_one('details#article-toc summary')
-    assert not soup.select_one('#article-toc').has_attr('open')
+    assert soup.select_one('[data-reader-menu]')
+    assert not soup.select_one('#article-toc')
+    assert soup.select_one('#wpab-category-reader')
     assert soup.select_one('#verified-sources')
     assert len(soup.select('[data-faq-card]')) == 3
     assert len(soup.select('ins.adsbygoogle')) == 2

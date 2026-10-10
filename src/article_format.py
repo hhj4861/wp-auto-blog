@@ -129,4 +129,5 @@ def format_general_article(html: str, *, sources=None, category="", topic="",
     if category == "취업":
         from .recruitment_format import apply_recruitment_layout
         html = apply_recruitment_layout(html)
-    return html
+    from .category_format import apply_category_layout
+    return apply_category_layout(html, category)

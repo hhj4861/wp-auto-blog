@@ -1,15 +1,15 @@
 # 카테고리별 작성 포맷 확정 현황
 
-사용자 요청: 2026-10-10. 채용은 내용 보강 2안 승인. 최신 요청에 따라 건강·리뷰·테크·생산성 시안을 한 번에 작성해 비교한다. 시안 생성은 운영 포맷 확정을 뜻하지 않는다.
+사용자 요청: 2026-10-10. 채용은 내용 보강 2안 승인. 최신 요청에 따라 건강·리뷰·테크·생산성 시안을 한 번에 작성해 비교한다. 후속 사용자 요청 “이대로해서 포멧 지정하고 각 카테고리별 실포스팅 해서 확인해보자”로 메뉴형 포맷 확정. 운영 적용과 실제 발행은 아직 대기다.
 
 | 카테고리 | 사용자 확정 | 기준/시안 | 자동 작성 적용 |
 |---|---|---|---|
 | 취업·채용 | 확정 | [내용 보강 2안](trendpulse-reading-concept.html), recruitment-reader-v1 | [PR #107](https://github.com/hhj4861/wp-auto-blog/pull/107) 검증·push 완료. 머지 승인 대기, 운영 미적용 |
-| 생활정보 | 검토 대기 | [시안 2: 메뉴형 폐가전 무상방문수거](trendpulse-life-concept.html) | 미적용 |
-| 건강 | 검토 대기 | [수면 습관 시안](trendpulse-category-concepts.html#health) | 기존 포맷 유지 |
-| 리뷰 | 검토 대기 | [USB-C 충전기 비교 시안](trendpulse-category-concepts.html#review) | 기존 포맷 유지 |
-| 테크 | 검토 대기 | [패스키 원리 시안](trendpulse-category-concepts.html#tech) | 기존 포맷 유지 |
-| 생산성 | 검토 대기 | [스프레드시트 공유 시안](trendpulse-category-concepts.html#productivity) | 기존 포맷 유지 |
+| 생활정보 | 확정 | [시안 2: 메뉴형 폐가전 무상방문수거](trendpulse-life-concept.html) | 미적용 |
+| 건강 | 확정 | [수면 습관 시안](trendpulse-category-concepts.html#health) | 기존 포맷 유지 |
+| 리뷰 | 확정 | [USB-C 충전기 비교 시안](trendpulse-category-concepts.html#review) | 기존 포맷 유지 |
+| 테크 | 확정 | [패스키 원리 시안](trendpulse-category-concepts.html#tech) | 기존 포맷 유지 |
+| 생산성 | 확정 | [스프레드시트 공유 시안](trendpulse-category-concepts.html#productivity) | 기존 포맷 유지 |
 
 ## 확정된 채용 원칙
 
@@ -40,3 +40,10 @@
 검증: HTML 고유 ID, 각 시안의 5개 본문 패널·4개 체크 항목, JavaScript 비활성 시 전체 본문 노출 구조, Node 스크립트 문법 검사, git diff --check 통과. Chrome 자동 연결이 반복해서 응답하지 않아 데스크톱·모바일 실제 렌더와 클릭 검증은 미완료다. 이전 생활정보 시안의 브라우저 결과를 이번 네 시안의 검증으로 대체하지 않는다.
 
 현재 결과: 로컬 디자인 시안 작성. WordPress 및 자동 작성 경로 미적용. 다음 작업: 브라우저에서 실제 화면·상호작용 검증 후 사용자 디자인 확정.
+
+## 전체 포맷 구현 승인 후 상태
+
+- 사용자 확정: 여섯 카테고리 메뉴형 본문과 개인 점검 체크리스트. 개인 점검/비공유/새로고침 초기화 안내 포함.
+- 구현: PR #107을 전체 카테고리로 확장. 작성 규칙·구조 검수·상세 본문·공식 출처·메뉴 및 전체 보기. JS가 제거되거나 실행되지 않으면 전체 본문과 앵커 링크 유지.
+- 운영 상태: 작업 브랜치에서 구현·검증, main/WordPress 미적용. PR #107의 명시적 머지 승인 필요. 시안의 예시 본문을 자동으로 공개하지 않음.
+- 발행 범위: 승인된 코드 반영 후 여섯 카테고리 각각 1편. 최신 공식 원문 및 기존 수요/중복/품질 검사를 통과한 주제만 사용하고, 보류는 실제 발행으로 보고하지 않음.

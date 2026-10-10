@@ -45,6 +45,10 @@ on:
         required: false
         default: true
         type: boolean
+      notify_telegram:
+        description: 'Request product links via Telegram (disable for posting only)'
+        type: boolean
+        default: true
       scheduled_recovery:
         description: 'Recover current morning/evening slot once (mode=queue, publish=true)'
         type: boolean
@@ -759,7 +763,10 @@ jobs:
     env:
       BLOG_MODE: queue
       BLOG_THUMBNAIL_PROVIDER: codex
-      BLOG_COUPANG_TELEGRAM: '0'
+      BLOG_COUPANG_TELEGRAM: ${{ (github.event_name != 'workflow_dispatch' || inputs.notify_telegram) && '1' || '0' }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_ALLOWED_USER_ID: ${{ secrets.TELEGRAM_ALLOWED_USER_ID }}
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
@@ -778,7 +785,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # Resolve this branch/tag after concurrency wait; a branch may have newer code and queue state.
-          ref: main
+          ref: ${{ github.ref }}
 
       - name: Claim current scheduled posting slot
         id: daily
@@ -944,6 +951,23 @@ jobs:
       - name: Verify Codex publication result
         if: steps.daily.outputs.run == 'true' && (success() && env.BLOG_WRITER_PROVIDER == 'codex')
         run: python scripts/verify_codex_run.py
+
+      - name: Record Coupang link request intents
+        if: steps.daily.outputs.run == 'true' && env.BLOG_COUPANG_TELEGRAM == '1'
+        id: coupang_requests
+        run: |
+          echo notification > "$SCHEDULE_STAGE_PATH"
+          python scripts/coupang_telegram_worker.py register
+
+      - name: Persist post and notification intents
+        if: steps.daily.outputs.run == 'true' && env.BLOG_COUPANG_TELEGRAM == '1'
+        run: bash scripts/commit_coupang_state.sh
+
+      - name: Request Coupang links through Telegram
+        if: steps.daily.outputs.run == 'true' && env.BLOG_COUPANG_TELEGRAM == '1'
+        env:
+          NOTIFICATION_IDS: ${{ steps.coupang_requests.outputs.notification_ids }}
+        run: python scripts/coupang_telegram_worker.py notify
 
       - name: Record scheduled attempt outcome
         if: always() && steps.daily.outputs.reason == 'claimed'

@@ -756,5 +756,26 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-10T00:18:36.136886+00:00"
+  },
+  {
+    "key": "가벼운무선청소기",
+    "keyword": "가벼운무선청소기",
+    "topic": "가벼운무선청소기 선택 기준: 무게·흡입구 구성·사용 조건 비교",
+    "category": "리뷰",
+    "post_id": 1904,
+    "url": "https://trendpulse.blog/lightweight-cordless-vacuum-2026/",
+    "selection_version": 8,
+    "monthly_search": 2600,
+    "score": 72.32,
+    "score_components": {
+      "demand": 27.32,
+      "organic_opportunity": 30.0,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-10T09:09:19.943585+00:00"
   }
 ]

@@ -12,7 +12,7 @@
       // IDs generated per instance avoid collisions on multi-article pages.
       const prefix = 'wpab-reader-' + [...document.querySelectorAll('.wpab-menu-reader')].indexOf(article);
       container.id = prefix + '-all';
-      panels.forEach((panel, i) => { if (!panel.id) panel.id = prefix + '-panel-' + i; });
+      panels.forEach((panel, i) => { if (!panel.id || [...document.querySelectorAll('[id]')].filter(node => node.id === panel.id).length > 1) panel.id = prefix + '-panel-' + i; });
       const tabs = links.map((link, i) => {
         const tab = document.createElement('button');
         tab.type = 'button'; tab.textContent = link.textContent;
@@ -27,6 +27,15 @@
       const layout = document.createElement('div'); layout.className = 'wpab-reader-layout';
       nav.before(layout); layout.append(nav, container);
       function measure() {
+        // Existing WordPress/advertising fixed bars must not cover the reader controls.
+        let inset = innerWidth <= 600 ? 8 : 16;
+        document.querySelectorAll('ins[data-anchor-status="displayed"], #wpadminbar').forEach(bar => {
+          const rect = bar.getBoundingClientRect(), css = getComputedStyle(bar);
+          if (css.position === 'fixed' && css.visibility !== 'hidden' && rect.top <= 1 && rect.bottom > 0 && rect.height < innerHeight / 2)
+            inset = Math.max(inset, rect.bottom + 8);
+        });
+        const value = inset + 'px';
+        if (article.style.getPropertyValue('--reader-top') !== value) article.style.setProperty('--reader-top', value);
         const side = getComputedStyle(layout).display === 'grid';
         nav.setAttribute('aria-orientation', side ? 'vertical' : 'horizontal');
         const top = parseFloat(getComputedStyle(nav).top) || 0;
@@ -34,6 +43,17 @@
       }
       if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(nav);
       window.addEventListener('resize', measure);
+      let pendingMeasure = false;
+      function scheduleMeasure() {
+        if (pendingMeasure) return;
+        pendingMeasure = true;
+        requestAnimationFrame(() => { pendingMeasure = false; measure(); });
+      }
+      window.addEventListener('scroll', scheduleMeasure, {passive:true});
+      new MutationObserver(changes => {
+        if (changes.some(change => change.type === 'childList' || change.target.matches('ins[data-anchor-status], #wpadminbar')))
+          scheduleMeasure();
+      }).observe(document.documentElement, {subtree:true, childList:true, attributes:true, attributeFilter:['style','data-anchor-status','data-anchor-shown']});
       measure();
       function showStart() {
         measure();

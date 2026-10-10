@@ -68,7 +68,7 @@ def category_format_issues(html, category):
 # Match the approved reading width, with navigation scoped to reader posts only.
 CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
 .single-post .entry .post-content:has(>.wpab-menu-reader){width:100%;max-width:1040px;margin-inline:auto}
-.single-post .entry:has(.wpab-menu-reader){width:100%;max-width:1040px}
+.single-post .entry:has(.wpab-menu-reader){box-sizing:border-box;width:100%;max-width:1120px}
 .wpab-article.wpab-menu-reader{width:100%;max-width:1040px;--reader-top:16px;--reader-scroll-offset:150px;--tint:color-mix(in srgb,var(--blue) 7%,white)}
 .wpab-menu-reader #quick-answer{border-left:3px solid var(--blue);background:var(--tint);padding:22px 26px}
 .wpab-menu-reader [data-reader-menu]{position:sticky;top:var(--reader-top);z-index:20;align-self:start;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:24px 0;padding:6px;border:1px solid var(--line);border-radius:8px;background:#f2f5f7;box-shadow:0 2px 10px #2430470d}

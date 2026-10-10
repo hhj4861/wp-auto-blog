@@ -6,7 +6,7 @@
       const panels = [...article.querySelectorAll(':scope > [data-reader-panels] > [data-reader-panel]')];
       const nav = article.querySelector(':scope > [data-reader-menu]');
       const container = article.querySelector(':scope > [data-reader-panels]');
-      if (!nav || !container || panels.length < 2) return;
+      if (!nav || !container || 2 > panels.length) return;
       const links = [...nav.querySelectorAll('a')];
       if (links.length !== panels.length + 1) return;
       // IDs generated per instance avoid collisions on multi-article pages.
@@ -18,7 +18,7 @@
         tab.type = 'button'; tab.textContent = link.textContent;
         tab.id = prefix + '-tab-' + i;
         tab.setAttribute('role', 'tab');
-        tab.setAttribute('aria-controls', i < panels.length ? panels[i].id : container.id);
+        tab.setAttribute('aria-controls', panels.length > i ? panels[i].id : container.id);
         link.replaceWith(tab); return tab;
       });
       // Flatten any paragraphs inserted around anchors by WordPress wpautop.
@@ -28,10 +28,10 @@
       nav.before(layout); layout.append(nav, container);
       function measure() {
         // Existing WordPress/advertising fixed bars must not cover the reader controls.
-        let inset = innerWidth <= 600 ? 8 : 16;
+        let inset = 600 >= innerWidth ? 8 : 16;
         document.querySelectorAll('ins[data-anchor-status="displayed"], #wpadminbar').forEach(bar => {
           const rect = bar.getBoundingClientRect(), css = getComputedStyle(bar);
-          if (css.position === 'fixed' && css.visibility !== 'hidden' && rect.top <= 1 && rect.bottom > 0 && rect.height < innerHeight / 2)
+          if (css.position === 'fixed' && css.visibility !== 'hidden' && 1 >= rect.top && rect.bottom > 0 && innerHeight / 2 > rect.height)
             inset = Math.max(inset, rect.bottom + 8);
         });
         const value = inset + 'px';
@@ -100,7 +100,7 @@
         if (!id) return false;
         const target = [...article.querySelectorAll('[id]')].find(node => node.id === id);
         const index = panels.findIndex(panel => panel === target || panel.contains(target));
-        if (index < 0) return false;
+        if (0 > index) return false;
         activate(index);
         return true;
       }

@@ -3,6 +3,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const {JSDOM} = require('jsdom');
 const script = fs.readFileSync('src/category_reader.js', 'utf8');
+// WordPress text filters can mistake < ... > in inline JS for markup and entity-escape &&.
+assert.ok(!script.includes('<'));
 const article = n => `<div class="wpab-menu-reader"><nav data-reader-menu>
 <a href="#p-${n}-1">이해</a><a href="#p-${n}-2">점검</a><a href="#quick-answer">전체 보기</a></nav>
 <div data-reader-panels><section data-reader-panel><h2 id="p-${n}-1">이해</h2><p>중요 본문</p><a href="#p-${n}-2">점검 이동</a></section>

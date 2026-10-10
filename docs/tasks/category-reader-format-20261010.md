@@ -26,3 +26,10 @@
 - 실제 발행 dispatch는 아직 하지 않았다. 기존 auto-post.yml의 queue/general 실행은 상품 소개 글 및 기존 대기 요청에 대해 Telegram 알림을 보낼 수 있으며, 이 메시지 발송 허용 여부를 사용자에게 질문했다. 실포스팅 승인을 재요청한 것은 아니다.
 - 최근 재고 보충 실행 38045097667은 생활정보 공식 출처 timeout 및 no_pass_among_evaluated로 보류됐다. 새 실행에서도 기존 출처/수요/검수 기준을 유지한다.
 - 다음: 텔레그램 알림 답변에 맞춰 발행 경로 확정 → 카테고리별 실행 → 공개 URL 및 메뉴/본문 검증. 운영 글은 이 후속 작업에서 아직 생성·수정하지 않았다.
+
+## 알림 제외 실포스팅 실행 시도 및 보완
+
+- 사용자 “실포스팅부터”에 따라 알림을 제외한 경로를 준비했다. 일회성 브랜치에서 main 소스를 checkout해도 Codex의 GITHUB_REF 기본 브랜치 제한으로 실행할 수 없었다. 이 제한은 변경하지 않는다.
+- 38048497138(생산성), 38048555279(테크)는 인증 복원 단계 실패. 작성/WordPress 발행 이전이다. 나머지 38048556987, 38048558748, 38048560593, 38048562397은 취소·종료 확인.
+- 최종 수정은 queue 수동 실행용 notify_telegram boolean(default true) 옵션만 추가한다. false일 때 affiliate Telegram 모드 및 register/persist-intents/notify 단계를 끈다. queue/registry 최종 저장·공식 출처·수요·검수·기본 브랜치 인증·공통 동시성은 유지한다. 예약 실행은 기존 알림 동작을 유지한다.
+- tests/test_codex_actions.py 42개 통과. 실제 발행은 수정 PR 머지 승인 후 main에서 notify_telegram=false로 실행해야 한다. 6편 실포스팅은 미완료다.

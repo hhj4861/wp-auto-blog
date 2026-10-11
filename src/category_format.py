@@ -65,10 +65,16 @@ def category_format_issues(html, category):
     return issues
 
 
-# Inherit the approved readable body styles, then scope menu behavior locally.
+# Match the approved reading width, with navigation scoped to reader posts only.
 CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
-.wpab-menu-reader [data-reader-menu]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:24px 0;padding:6px;border:1px solid var(--line);border-radius:8px;background:#f2f5f7}
+.single-post .wrapper-outer:has(.wpab-menu-reader){overflow:clip}
+.single-post .entry .post-content:has(>.wpab-menu-reader){width:100%;max-width:1040px;margin-inline:auto}
+.single-post .entry:has(.wpab-menu-reader){box-sizing:border-box;width:100%;max-width:1120px}
+.wpab-article.wpab-menu-reader{width:100%;max-width:1040px;--reader-top:16px;--reader-scroll-offset:150px;--tint:color-mix(in srgb,var(--blue) 7%,white)}
+.wpab-menu-reader #quick-answer{border-left:3px solid var(--blue);background:var(--tint);padding:22px 26px}
+.wpab-menu-reader [data-reader-menu]{position:sticky;top:var(--reader-top);z-index:20;align-self:start;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:24px 0;padding:6px;border:1px solid var(--line);border-radius:8px;background:#f2f5f7;box-shadow:0 2px 10px #2430470d}
 .wpab-menu-reader [data-reader-menu] :is(button,a){font:inherit;font-size:14px;font-weight:650;line-height:1.5;text-align:center;display:block;border:0;border-radius:5px;background:transparent;color:var(--ink);padding:12px 8px;text-decoration:none;cursor:pointer}
+.wpab-menu-reader [data-reader-menu] :is(button,a):hover{background:var(--line)}
 .wpab-menu-reader [data-reader-menu] button[aria-selected="true"]{background:var(--blue);color:white}
 .wpab-menu-reader [hidden]{display:none!important}
 .wpab-menu-reader [data-reader-panel]>:first-child{margin-top:0}
@@ -79,10 +85,28 @@ CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
 .wpab-menu-reader .wpab-personal-check input:checked+span{color:var(--muted);text-decoration:line-through}
 .wpab-menu-reader :is(.wpab-check-note,.wpab-check-progress){font-size:13px;color:var(--muted)}
 .wpab-menu-reader :is(button,input):focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wpab-menu-reader [data-reader-panel]{scroll-margin-top:24px}
+.wpab-menu-reader [data-reader-panels]{min-width:0;scroll-margin-top:var(--reader-scroll-offset)}
+.wpab-menu-reader [data-reader-panel]{scroll-margin-top:var(--reader-scroll-offset)}
+.wpab-menu-reader [data-reader-panel] [id]{scroll-margin-top:var(--reader-scroll-offset)}
+.wpab-menu-reader [data-reader-menu]>p{display:contents}
+.wpab-menu-reader [data-table-scroll]{border:1px solid var(--line);border-radius:6px}
+.wpab-menu-reader th{background:var(--tint)}
+.wpab-menu-reader pre{font-size:14px;line-height:1.7;background:var(--tint);color:var(--ink);border:1px solid var(--line);padding:18px 20px;border-radius:6px;white-space:pre;overflow-x:auto}
+.wpab-menu-reader pre code{font:inherit;color:inherit;background:transparent;padding:0}
+.wpab-menu-reader [data-step-number]{background:var(--blue);color:#fff}
+@container(min-width:740px){.wpab-menu-reader .wpab-reader-layout{display:grid;grid-template-columns:176px minmax(0,1fr);gap:30px;align-items:start}.wpab-menu-reader .wpab-reader-layout>[data-reader-menu]{grid-template-columns:1fr;margin:0;max-height:calc(100dvh - var(--reader-top) - 24px);overflow-y:auto}.wpab-menu-reader .wpab-reader-layout>[data-reader-menu] :is(button,a){text-align:left;padding:13px 12px}.wpab-menu-reader .wpab-reader-layout>[data-reader-panels]{--reader-scroll-offset:32px}}
+@media(max-width:600px){.wpab-article.wpab-menu-reader{--reader-top:8px}.wpab-menu-reader [data-reader-menu]{margin:16px 0}}
+@media(prefers-reduced-motion:reduce){.wpab-menu-reader{scroll-behavior:auto}}
 @container(max-width:500px){.wpab-menu-reader [data-reader-menu] :is(button,a){font-size:13px;padding:12px 4px}}
-@media print{.wpab-menu-reader [data-reader-menu]{display:none}.wpab-menu-reader [data-reader-panel][hidden]{display:block!important}.wpab-menu-reader details>*{display:block!important}}
+@media print{.wpab-menu-reader .wpab-reader-layout{display:block}.wpab-menu-reader [data-reader-menu]{display:none}.wpab-menu-reader [data-reader-panel][hidden]{display:block!important}.wpab-menu-reader details>*{display:block!important}}
 '''
+
+
+def reader_styles(category):
+    """One line prevents WordPress wpautop from corrupting owned CSS."""
+    if category not in COLORS:
+        raise ValueError('Unknown reader category')
+    return ' '.join(CSS.split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
 
 
 def apply_category_layout(html, category):
@@ -170,7 +194,7 @@ def apply_category_layout(html, category):
     style = soup.find('style', id='wpab-reading-styles')
     if style is None:
         style = soup.new_tag('style', id='wpab-reading-styles'); article.insert_before(style)
-    style.string = ' '.join(CSS.split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
+    style.string = reader_styles(category)
     script = soup.new_tag('script', id='wpab-category-reader')
     script.string = Path(__file__).with_name('category_reader.js').read_text(encoding='utf-8')
     article.insert_after(script)

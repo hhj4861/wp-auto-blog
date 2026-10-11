@@ -6,23 +6,63 @@
       const panels = [...article.querySelectorAll(':scope > [data-reader-panels] > [data-reader-panel]')];
       const nav = article.querySelector(':scope > [data-reader-menu]');
       const container = article.querySelector(':scope > [data-reader-panels]');
-      if (!nav || !container || panels.length < 2) return;
+      if (!nav || !container || 2 > panels.length) return;
       const links = [...nav.querySelectorAll('a')];
       if (links.length !== panels.length + 1) return;
       // IDs generated per instance avoid collisions on multi-article pages.
       const prefix = 'wpab-reader-' + [...document.querySelectorAll('.wpab-menu-reader')].indexOf(article);
       container.id = prefix + '-all';
-      panels.forEach((panel, i) => panel.id = prefix + '-panel-' + i);
+      panels.forEach((panel, i) => { if (!panel.id || [...document.querySelectorAll('[id]')].filter(node => node.id === panel.id).length > 1) panel.id = prefix + '-panel-' + i; });
       const tabs = links.map((link, i) => {
         const tab = document.createElement('button');
         tab.type = 'button'; tab.textContent = link.textContent;
         tab.id = prefix + '-tab-' + i;
         tab.setAttribute('role', 'tab');
-        tab.setAttribute('aria-controls', i < panels.length ? panels[i].id : container.id);
+        tab.setAttribute('aria-controls', panels.length > i ? panels[i].id : container.id);
         link.replaceWith(tab); return tab;
       });
+      // Flatten any paragraphs inserted around anchors by WordPress wpautop.
+      nav.replaceChildren(...tabs);
       nav.setAttribute('role', 'tablist');
-      function activate(index, focus = false) {
+      const layout = document.createElement('div'); layout.className = 'wpab-reader-layout';
+      nav.before(layout); layout.append(nav, container);
+      function measure() {
+        // Existing WordPress/advertising fixed bars must not cover the reader controls.
+        let inset = 600 >= innerWidth ? 8 : 16;
+        document.querySelectorAll('ins[data-anchor-status="displayed"], #wpadminbar').forEach(bar => {
+          const rect = bar.getBoundingClientRect(), css = getComputedStyle(bar);
+          if (css.position === 'fixed' && css.visibility !== 'hidden' && 1 >= rect.top && rect.bottom > 0 && innerHeight / 2 > rect.height)
+            inset = Math.max(inset, rect.bottom + 8);
+        });
+        const value = inset + 'px';
+        if (article.style.getPropertyValue('--reader-top') !== value) article.style.setProperty('--reader-top', value);
+        const side = getComputedStyle(layout).display === 'grid';
+        nav.setAttribute('aria-orientation', side ? 'vertical' : 'horizontal');
+        const top = parseFloat(getComputedStyle(nav).top) || 0;
+        container.style.setProperty('--reader-scroll-offset', (side ? top + 16 : top + nav.getBoundingClientRect().height + 16) + 'px');
+      }
+      if (typeof ResizeObserver !== 'undefined') new ResizeObserver(measure).observe(nav);
+      window.addEventListener('resize', measure);
+      let pendingMeasure = false;
+      function scheduleMeasure() {
+        if (pendingMeasure) return;
+        pendingMeasure = true;
+        requestAnimationFrame(() => { pendingMeasure = false; measure(); });
+      }
+      window.addEventListener('scroll', scheduleMeasure, {passive:true});
+      new MutationObserver(changes => {
+        if (changes.some(change => change.type === 'childList' || change.target.matches('ins[data-anchor-status], #wpadminbar')))
+          scheduleMeasure();
+      }).observe(document.documentElement, {subtree:true, childList:true, attributes:true, attributeFilter:['style','data-anchor-status','data-anchor-shown']});
+      measure();
+      function showStart() {
+        measure();
+        const offset = parseFloat(getComputedStyle(container).getPropertyValue('--reader-scroll-offset')) || 150;
+        const delta = container.getBoundingClientRect().top - offset;
+        // A sticky menu can be clicked far down a long panel: reveal the new start.
+        if (Math.abs(delta) > 2) window.scrollBy({top:delta, behavior:'instant'});
+      }
+      function activate(index, focus = false, scroll = false) {
         const all = index === panels.length;
         tabs.forEach((tab, i) => {
           tab.setAttribute('aria-selected', String(i === index));
@@ -42,14 +82,15 @@
             panel.setAttribute('aria-labelledby', tabs[i].id); panel.tabIndex = 0;
           }
         });
-        if (focus) tabs[index].focus();
+        if (focus) tabs[index].focus({preventScroll:true});
+        if (scroll) showStart();
       }
       tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => activate(index));
+        tab.addEventListener('click', () => activate(index, false, true));
         tab.addEventListener('keydown', event => {
-          const next = {ArrowRight:(index+1)%tabs.length, ArrowLeft:(index+tabs.length-1)%tabs.length, Home:0, End:tabs.length-1};
+          const next = {ArrowRight:(index+1)%tabs.length, ArrowLeft:(index+tabs.length-1)%tabs.length, ArrowDown:(index+1)%tabs.length, ArrowUp:(index+tabs.length-1)%tabs.length, Home:0, End:tabs.length-1};
           if (Object.prototype.hasOwnProperty.call(next, event.key)) {
-            event.preventDefault(); activate(next[event.key], true);
+            event.preventDefault(); activate(next[event.key], true, true);
           }
         });
       });
@@ -59,7 +100,7 @@
         if (!id) return false;
         const target = [...article.querySelectorAll('[id]')].find(node => node.id === id);
         const index = panels.findIndex(panel => panel === target || panel.contains(target));
-        if (index < 0) return false;
+        if (0 > index) return false;
         activate(index);
         return true;
       }

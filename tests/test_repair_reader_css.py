@@ -50,3 +50,18 @@ def test_readback_detects_lost_metadata():
     session, post, saved, response = client(); saved['title']={'raw':'wrong'}
     session.get.side_effect=[response(post),response(post),response(saved)]
     with pytest.raises(RuntimeError,match='preservation'): repair(session,1907,'excel-chart-guide',apply=True)
+
+
+def test_upgrade_preserves_every_byte_outside_owned_assets():
+    from scripts.repair_reader_css import upgrade_assets, STYLE
+    from src.article_format import format_general_article
+    from tests.test_category_format import RAW as BODY
+    import re
+    raw = format_general_article(BODY, category='생산성')
+    raw = raw.replace('.wpab-reader-layout{display:grid;', '.wpab-reader-layout{display:block;')
+    fixed = upgrade_assets(raw)
+    strip = lambda value: re.sub(r'(<script id="wpab-category-reader">).*?(</script>)', r'\1\2', STYLE.sub(lambda m: m[1] + m[3], value), flags=re.S)
+    assert strip(fixed) == strip(raw)
+    assert upgrade_assets(fixed) == fixed
+    for bad in [raw.replace('category-menu-v1', 'unknown'), raw.replace('wpab-category-reader', 'foreign'), raw + raw]:
+        with pytest.raises(ValueError): upgrade_assets(bad)

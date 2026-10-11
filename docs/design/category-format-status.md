@@ -1,15 +1,17 @@
 # 카테고리별 작성 포맷 확정 현황
 
-사용자 요청: 2026-10-10. 채용은 내용 보강 2안 승인. 최신 요청에 따라 건강·리뷰·테크·생산성 시안을 한 번에 작성해 비교한다. 후속 사용자 요청 “이대로해서 포멧 지정하고 각 카테고리별 실포스팅 해서 확인해보자”로 메뉴형 포맷 확정. 운영 적용과 실제 발행은 아직 대기다.
+사용자 요청: 2026-10-10. 채용은 내용 보강 2안 승인. 최신 요청에 따라 건강·리뷰·테크·생산성 시안을 한 번에 작성해 비교한다. 후속 사용자 요청 “이대로해서 포멧 지정하고 각 카테고리별 실포스팅 해서 확인해보자”로 메뉴형 포맷 확정. PR #107/#109/#110이 승인 후 main에 반영됐다. 생산성 공개 글에서 실제 메뉴 검증을 마쳤으며 나머지 다섯 카테고리는 실포스팅 검증 중이다.
 
 | 카테고리 | 사용자 확정 | 기준/시안 | 자동 작성 적용 |
 |---|---|---|---|
-| 취업·채용 | 확정 | [내용 보강 2안](trendpulse-reading-concept.html), recruitment-reader-v1 | [PR #107](https://github.com/hhj4861/wp-auto-blog/pull/107) 검증·push 완료. 머지 승인 대기, 운영 미적용 |
-| 생활정보 | 확정 | [시안 2: 메뉴형 폐가전 무상방문수거](trendpulse-life-concept.html) | 미적용 |
-| 건강 | 확정 | [수면 습관 시안](trendpulse-category-concepts.html#health) | 기존 포맷 유지 |
-| 리뷰 | 확정 | [USB-C 충전기 비교 시안](trendpulse-category-concepts.html#review) | 기존 포맷 유지 |
-| 테크 | 확정 | [패스키 원리 시안](trendpulse-category-concepts.html#tech) | 기존 포맷 유지 |
-| 생산성 | 확정 | [스프레드시트 공유 시안](trendpulse-category-concepts.html#productivity) | 기존 포맷 유지 |
+| 취업·채용 | 확정 | [내용 보강 2안](trendpulse-reading-concept.html), recruitment-reader-v1 | main 적용 (#107/#110), 실제 발행 검증 중 |
+| 생활정보 | 확정 | [시안 2: 메뉴형 폐가전 무상방문수거](trendpulse-life-concept.html) | main 적용, 실제 발행 검증 중 |
+| 건강 | 확정 | [수면 습관 시안](trendpulse-category-concepts.html#health) | main 적용, 실제 발행 검증 중 |
+| 리뷰 | 확정 | [USB-C 충전기 비교 시안](trendpulse-category-concepts.html#review) | main 적용, 실제 발행 검증 중 |
+| 테크 | 확정 | [패스키 원리 시안](trendpulse-category-concepts.html#tech) | main 적용, 실제 발행 검증 중 |
+| 생산성 | 확정 | [스프레드시트 공유 시안](trendpulse-category-concepts.html#productivity) | main 적용, [엑셀 글](https://trendpulse.blog/excel-chart-guide/) 공개·메뉴 검증 완료 |
+
+이하 기록은 단계별 이력이다. 최신 실행 상태는 [실포스팅 작업 기록](../tasks/category-reader-format-20261010.md)을 따른다.
 
 ## 확정된 채용 원칙
 

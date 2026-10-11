@@ -46,3 +46,10 @@
 - 실제 보정 실행 38058661955 success. #1907 인증 readback에서 본문 스타일 외 보존 확인. Chrome 재조회에서 corruptedCss=false, nav display=grid, 390px에서 3개 열(각 88.6641px), 생산성 accent=#236945 확인. 메뉴 전환 및 새로고침 후 체크 0/5 확인. 임시 viewport override 해제.
 - 테크 job 114228515967 로그에는 Queue category 이후 조사 단계 취소만 있으며 작성/게시 로그가 없다. 나머지 4개는 대기 중 취소. 여섯 작업 감시 프로세스도 모두 terminal 확인 후 exit 0.
 - 수정 PR #109: https://github.com/hhj4861/wp-auto-blog/pull/109. 승인 질문 발송했으며 아직 머지하지 않았다. 현재 성과는 생산성 1편 공개 및 스타일 보정 완료, 나머지 5개 카테고리 미발행이다.
+
+## PR #110 승인·머지 및 나머지 실포스팅 — 2026-10-11
+
+- 사용자 “응 머지해줘” 승인으로 PR #110을 ca90c8b98f9cef4f87f75bfb3d27ff1675149858에 머지했다. 기존 #1907은 재발행하지 않는다.
+- main의 mode=queue, writer_provider=codex, publish=true, notify_telegram=false로 각 1회 요청. 공통 trendpulse-general-posting 잠금 아래 순차 실행한다.
+- 테크 38106940431, 건강 38106943640, 취업 38106947525, 리뷰 38106950873, 생활정보 38106954506.
+- 실행 요청 완료와 실제 발행은 구분한다. 현재 조사/실행 대기이며 공개 글 확인은 후속 기록한다. 공식 출처·수요·중복·사실 검수는 유지한다.

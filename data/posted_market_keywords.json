@@ -819,5 +819,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-11T03:09:23.187417+00:00"
+  },
+  {
+    "key": "자궁경부암검사",
+    "keyword": "자궁경부암검사",
+    "topic": "자궁경부암검사 방법과 준비사항, 세포검사·HPV검사 결과 이해",
+    "category": "건강",
+    "post_id": 1919,
+    "url": "https://trendpulse.blog/cervical-screening-guide-2026/",
+    "selection_version": 8,
+    "monthly_search": 22550,
+    "score": 69.71,
+    "score_components": {
+      "demand": 34.83,
+      "organic_opportunity": 20.74,
+      "trend": -0.86,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-11T03:35:23.198146+00:00"
   }
 ]

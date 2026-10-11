@@ -12,6 +12,10 @@ on:
         default: true
         type: boolean
 
+      reformat_legacy_recruitment:
+        description: 'Convert only the explicitly requested KPF/citygas legacy posts, preserving content'
+        type: boolean
+        default: false
       upgrade_reader_assets:
         description: 'Update only owned reader CSS/JS on the exact repair target'
         type: boolean
@@ -54,13 +58,15 @@ jobs:
           WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
           WP_PROXY: ${{ secrets.WP_PROXY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          REFORMAT_LEGACY_RECRUITMENT: ${{ inputs.reformat_legacy_recruitment }}
+          READER_BACKUP_DIR: ${{ runner.temp }}/reader-format-backup
           UPGRADE_READER_ASSETS: ${{ inputs.upgrade_reader_assets }}
           REPAIR_READER_POST_ID: ${{ inputs.repair_reader_post_id }}
           REPAIR_READER_POST_SLUG: ${{ inputs.repair_reader_post_slug }}
           CLOSE_POST_ID: ${{ inputs.close_post_id }}
           CLOSE_POST_SLUG: ${{ inputs.close_post_slug }}
         run: |
-          if [ "$UPGRADE_READER_ASSETS" = "true" ]; then
+          if [ "$UPGRADE_READER_ASSETS" = "true" ] || [ "$REFORMAT_LEGACY_RECRUITMENT" = "true" ]; then
             test -n "$REPAIR_READER_POST_ID"
             test -n "$REPAIR_READER_POST_SLUG"
           fi
@@ -72,3 +78,12 @@ jobs:
           else
             python scripts/trendpulse_maintenance.py
           fi
+
+      - name: Preserve reader conversion original and proposed content
+        if: always() && inputs.reformat_legacy_recruitment
+        uses: actions/upload-artifact@v4
+        with:
+          name: reader-format-backup-${{ inputs.repair_reader_post_id }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/reader-format-backup/
+          retention-days: 30
+          if-no-files-found: warn

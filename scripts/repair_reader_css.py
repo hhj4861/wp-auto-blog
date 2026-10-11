@@ -41,7 +41,7 @@ def upgrade_assets(html):
     return script.sub(lambda m: m[1] + js + m[3], fixed)
 
 
-def repair(session, post_id, slug, *, apply=False, upgrade=False):
+def repair(session, post_id, slug, *, apply=False, upgrade=False, legacy_recruitment=False, backup_dir=None):
     if type(post_id) is not int or post_id <= 0 or not slug or '/' in slug:
         raise ValueError('Exact post ID and slug required')
     url = f'{BASE}/wp-json/wp/v2/posts/{post_id}'
@@ -53,7 +53,20 @@ def repair(session, post_id, slug, *, apply=False, upgrade=False):
     if original.get('id') != post_id or original.get('slug') != slug or original.get('status') != 'publish':
         raise RuntimeError('Published post identity mismatch')
     raw = original['content']['raw']
-    fixed = upgrade_assets(raw) if upgrade else compact_style(raw)
+    if legacy_recruitment:
+        if upgrade:
+            raise ValueError('Choose either legacy conversion or asset upgrade')
+        from scripts.reformat_recruitment_posts import convert_legacy_recruitment
+        fixed = convert_legacy_recruitment(raw, post_id, slug)
+        if backup_dir is None:
+            raise ValueError('Backup directory required for legacy conversion')
+        from pathlib import Path
+        folder = Path(backup_dir)
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / f'{post_id}-original.html').write_text(raw, encoding='utf-8')
+        (folder / f'{post_id}-proposed.html').write_text(fixed, encoding='utf-8')
+    else:
+        fixed = upgrade_assets(raw) if upgrade else compact_style(raw)
     if not apply:
         return {'post_id': post_id, 'dry_run': True, 'changed': fixed != raw}
     if fixed != raw:
@@ -77,7 +90,9 @@ def main():
     session.headers['User-Agent'] = 'Mozilla/5.0 (TrendPulse reader CSS repair)'
     print(repair(session, int(os.environ['REPAIR_READER_POST_ID']), os.environ['REPAIR_READER_POST_SLUG'],
                  apply=os.environ.get('DRY_RUN') == 'false',
-                 upgrade=os.environ.get('UPGRADE_READER_ASSETS') == 'true'), flush=True)
+                 upgrade=os.environ.get('UPGRADE_READER_ASSETS') == 'true',
+                 legacy_recruitment=os.environ.get('REFORMAT_LEGACY_RECRUITMENT') == 'true',
+                 backup_dir=os.environ.get('READER_BACKUP_DIR')), flush=True)
 
 
 if __name__ == '__main__':

@@ -29284,7 +29284,7 @@
     "keywords": [
       "위암초기증상"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "위암초기증상",
@@ -29563,7 +29563,7 @@
     "keywords": [
       "자궁경부암검사"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "자궁경부암검사",
@@ -30017,5 +30017,665 @@
     "url": "https://trendpulse.blog/excel-chart-guide/",
     "post_status": "publish",
     "completed_at": "2026-10-10T14:05:04.002554"
+  },
+  {
+    "keyword": "위암초기증상",
+    "category": "건강",
+    "topic": "위암초기증상: 무증상 가능성과 위염·소화불량 구분의 한계",
+    "intent": "위암 초기에는 어떤 증상이 나타나며, 위염이나 소화불량과 증상만으로 구분할 수 있을까?",
+    "gap": "국가암정보센터 본문에 근거해 조기·진행성 위암 증상을 표로 구분하고, 증상만으로 판단하기 어려운 이유를 설명한다.",
+    "source_url": "https://cancer.go.kr/lay1/program/S1T211C213/cancer/view.do?cancer_seq=4661&menu_seq=4672",
+    "verified_sources": [
+      {
+        "url": "https://cancer.go.kr/lay1/program/S1T211C213/cancer/view.do?cancer_seq=4661&menu_seq=4672",
+        "original_url": "https://cancer.go.kr/lay1/program/S1T211C213/cancer/view.do?cancer_seq=4661&menu_seq=4672",
+        "title": "홈 >내가 알고 싶은 암>암의 종류>위암> 위암",
+        "checked_on": "2026-10-11",
+        "publication_dates": [],
+        "sha256": "3347f380c1ffa31717d15974af0584513fc16f42968da040a3cd5ca433330d32",
+        "excerpt": "내가 알고 싶은 암 암의 종류 전체암 보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 암이란 정의 발생부위 발생기전 진단 일반적인 증상 진단방법 CT(전산화단층촬영) 검사 진행단계 치료 치료원칙 인터벤션치료 수술 항암화학요법 방사선치료 핵의학치료 조혈모 세포이식 면역요법 임상시험 임상시험의 이해 재발 및 전이 말기 암환자 호스피스란? 호스피스 종류 호스피스 대상 환자 호스피스 이용 절차 호스피스전문병원 소아청소년완화의료 바로가기 서비스 공지사항 교육자료신청 정보사용신청 전체암  보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 위암 홈 내가 알고 싶은 암 암의 종류 전체암 보기 위암 공유하기 현재페이지 인쇄 페이지 공유 URL복사하기 요약설명 암이란 발생부위 정의 및 종류 관련통계 진단 일반적증상 진단방법 진행단계 치료 치료방법 치료의 부작용 재발 및 전이 치료현황 일반적증상 위암 은 초기엔 특별한 증상이 없으며 약간의 불편함을 느껴도 다른 일반적 위장 질환과 구분하기가 어려워서 암이 어느 정도 진행된 뒤에야 진단되는 경우가 많습니다. 조기 위암 특별한 자각 증상이 거의 없어 대부분 정기 건강검진을 통해 우연히 발견됩니다. 궤양 을 동반한 조기 위암의 경우에는 속쓰림 증상 등이 있을 수 있지만, 환자가 느끼는 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접적인 관계가 없습니다. 진행성 위암 암에 의한 특별한 증상은 없으나, 상복부의 불쾌감, 팽만감, 동통, 소화불량, 식욕감소, 체중감소, 빈혈 등이 나타날 수 있습니다. 병이 많이 진행되면 유문부(pylorus, 위와 십이지장 사이의 경계를 이루는 부분) 폐색에 의한 구토 , 출혈에 따른 토혈이나 흑변(검은색 변), 분문부(cardia, 위가 식도와 연결되는 부분) 침범이 진행되면 음식을 삼키기 힘든 연하곤란 등이 나타날 수 있으며, 그 밖에도 복부의 종괴 (덩이)가 손으로 만져질 수도 있습니다. 본 콘텐츠는 대함암학회, 대한위암학회 그리고 대한종양내과학회의 참여로 제작되었습니다. 최신 조기암 치료 어디까지 왔나?_위암 위암 수술 후 덤핑증후군 관리법 암정보사전 더보기 닫기 최종수정일 : 2026년 06월 18일 이 페이지에서 제공하는 정보에 만족하셨습니까? 매우만족 만족 보통 불만족 매우불만족 기타 평가 하기"
+      }
+    ],
+    "intent_results": [
+      "https://v.daum.net/v/20260823192949547",
+      "https://www.joongang.co.kr/article/25250382"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 25050,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "위암 초기 증상",
+    "organic_domains": [
+      "www.kumc.or.kr",
+      "www.hyunmyoung.co.kr",
+      "v.daum.net",
+      "pharmacy24.kr",
+      "www.khnmc.or.kr",
+      "moonmans-1.tistory.com",
+      "kormedi.com",
+      "www.joongang.co.kr",
+      "www.bbibic.kr",
+      "haw.finanandinvest.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.kumc.or.kr/upload/letter/guro/letter106.pdf",
+        "domain": "www.kumc.or.kr",
+        "title": "환자를 중심에 놓는 진료",
+        "snippet": "초기 위암의 80% 이상은 특별한 증상이 없거나 속 쓰림, 소화불량 등의 증상으로 나타나 위궤양, 위염 등으로 오해하기도 한다. ... 현재 초기 위암의 표준 치료 방법은"
+      },
+      {
+        "url": "https://www.hyunmyoung.co.kr/general-medicine/chronic-gastritis-early-signs/",
+        "domain": "www.hyunmyoung.co.kr",
+        "title": "위염 증상 — 만성 위염 초기 신호부터 확인하세요 | 현명내과 & 류마티스내과",
+        "snippet": "내과 전문의 취득 (2021) · 류마티스내과 분과전임의 취득 (2023) · 영남대학교 의과대학 내과학 석박사 수료 ... 만성 위염은 대개 뚜렷한 초기 증상이 없는 경우가 많고,"
+      },
+      {
+        "url": "https://v.daum.net/v/20260823192949547",
+        "domain": "v.daum.net",
+        "title": "위암, 증상 없어 더 위험…정기검진이 답 [9988 프로젝트]",
+        "snippet": "속쓰림이나 소화불량, 상복부 불편감이 나타나더라도 일반적인 위염이나 위궤양과 구분하기 어려워 대수롭지 않게 넘기기 쉽다. ... ◇증상과 진단=위암의 가장 큰 특징은 초기 증상이 거의 없다는 점이다."
+      },
+      {
+        "url": "https://pharmacy24.kr/guides/stomach-cancer-early-symptoms-check",
+        "domain": "pharmacy24.kr",
+        "title": "위암 초기 증상, 단순 소화불량과 어떻게 다를까요? | 약국24",
+        "snippet": "위암은 초기 단계에서 특별한 증상이 없거나, 있더라도 경미한 소화기 증상으로 나타나 발견이 늦어지는 경우가 많기 때문입니다.이 글에서는 단순 소화불량과 구분해야 할 위암의 초기 증상들, 그리고"
+      },
+      {
+        "url": "https://www.khnmc.or.kr/resources/webzine/2013/foryou_201304.pdf",
+        "domain": "www.khnmc.or.kr",
+        "title": "대한민국 암 발생률 1위, 위암",
+        "snippet": "의료에 대한 국민의식 수준의 향상과 건강검진에 대한 관심이 커지면서 조기에 위암, 대장암, 유방암 등을 진단 받고 신속하게 치료 받아 건강을 되찾는 이들이 과거에 비해 점점"
+      },
+      {
+        "url": "https://moonmans-1.tistory.com/18",
+        "domain": "moonmans-1.tistory.com",
+        "title": "[위암초기증상] 위암 초기 증상 및 진단 방법, 조기 발견이 중요한 이유",
+        "snippet": "# [위암초기증상] 위암 초기 증상 및 진단 방법, 조기 발견이 중요한 이유 ... 위암의 초기 증상은 일상적인 소화 장애와 비슷하기 때문에 많은 사람들이 무심코 지나칠"
+      },
+      {
+        "url": "https://kormedi.com/2805321/",
+        "domain": "kormedi.com",
+        "title": "“‘이 증상’ 있으면 당장 내시경하세요”… 의사가 경고한 ‘위암 신호’ - 코메디닷컴",
+        "snippet": "# “‘이 증상’ 있으면 당장 내시경하세요”… 의사가 경고한 ‘위암 신호’ ... 위암의 초기 증상은 속이 불편하고 자주 체하고 먹은 양에 비해 더부룩함을 느끼는 정도다."
+      },
+      {
+        "url": "https://www.joongang.co.kr/article/25250382",
+        "domain": "www.joongang.co.kr",
+        "title": "[건강한 가족] 위암 초기 증상 위염과 비슷, 내시경 조기 발견이 ‘답’ | 중앙일보",
+        "snippet": "# [건강한 가족] 위암 초기 증상 위염과 비슷, 내시경 조기 발견이 ‘답’ ... 레이저로 위암 부위만 선별적으로 제거하는 몇 차례의 시술로 암세포 제거에 성공했고 현재는"
+      },
+      {
+        "url": "https://www.bbibic.kr/magazine/?bmode=view&idx=168070200",
+        "domain": "www.bbibic.kr",
+        "title": "위암 초기 증상, 혹시 나도? - 증상부터 원인, 예방법까지 자세히 알아보기 : 삐빅매거진",
+        "snippet": "# [질병상식]위암 초기 증상, 혹시 나도? - 증상부터 원인, 예방법까지 자세히 알아보기 ... 위암 초기에는 상복부 불쾌감이나 통증, 식사 후 소화불량 및 팽만감, 식욕부진, 속쓰림"
+      },
+      {
+        "url": "https://haw.finanandinvest.kr/stomach-cancer-early-symptoms/",
+        "domain": "haw.finanandinvest.kr",
+        "title": "위암 초기증상, 소화불량과 어떻게 다를까",
+        "snippet": "위암 초기에는 특별한 증상이 거의 없거나, 있어도 소화불량·속쓰림처럼 흔한 위장 증상과 구분되지 않습니다. ... 위암은 국내 발생률이 높은 암이지만, 조기에 발견하면 치료 성적이 좋은 편이라"
+      }
+    ],
+    "dominant_result_ratio": 0.25,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 26.25,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-11T00:01:05.498889+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "위암초기증상"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "위암초기증상",
+      "executed_query": "위암 초기 증상",
+      "topic": "위암초기증상: 무증상 가능성과 위염·소화불량 구분의 한계",
+      "intent": "위암 초기에는 어떤 증상이 나타나며, 위염이나 소화불량과 증상만으로 구분할 수 있을까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-11T00:01:05.498889+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.25,
+      "search_review": {
+        "version": 1,
+        "query": "위암초기증상",
+        "executed_query": "위암 초기 증상",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-11T00:01:05.498889+00:00",
+        "raw_sha256": "547e8b7038ad8b68b991a225256b15913fe892a02bed88f1b6bd059dd6e2090b",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "초기 위암의 80% 이상은 특별한 증상이 없거나 속 쓰림, 소화불량 등의 증상으로 나타나 위궤양, 위염 등으로 오해하기도 한다. ... 현재 초기 위암의 표준 치료 방법은"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "위염 증상 — 만성 위염 초기 신호부터 확인하세요 | 현명내과 & 류마티스내과"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "속쓰림이나 소화불량, 상복부 불편감이 나타나더라도 일반적인 위염이나 위궤양과 구분하기 어려워 대수롭지 않게 넘기기 쉽다. ... ◇증상과 진단=위암의 가장 큰 특징은 초기 증상이 거의 없다는 점이다."
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "위암은 초기 단계에서 특별한 증상이 없거나, 있더라도 경미한 소화기 증상으로 나타나 발견이 늦어지는 경우가 많기 때문입니다.이 글에서는 단순 소화불량과 구분해야 할 위암의 초기 증상들, 그리고"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "의료에 대한 국민의식 수준의 향상과 건강검진에 대한 관심이 커지면서 조기에 위암, 대장암, 유방암 등을 진단 받고 신속하게 치료 받아 건강을 되찾는 이들이 과거에 비해 점점"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "# [위암초기증상] 위암 초기 증상 및 진단 방법, 조기 발견이 중요한 이유 ... 위암의 초기 증상은 일상적인 소화 장애와 비슷하기 때문에 많은 사람들이 무심코 지나칠"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "# “‘이 증상’ 있으면 당장 내시경하세요”… 의사가 경고한 ‘위암 신호’ ... 위암의 초기 증상은 속이 불편하고 자주 체하고 먹은 양에 비해 더부룩함을 느끼는 정도다."
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "[건강한 가족] 위암 초기 증상 위염과 비슷, 내시경 조기 발견이 ‘답’ | 중앙일보"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "# [질병상식]위암 초기 증상, 혹시 나도? - 증상부터 원인, 예방법까지 자세히 알아보기 ... 위암 초기에는 상복부 불쾌감이나 통증, 식사 후 소화불량 및 팽만감, 식욕부진, 속쓰림"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "위암 초기에는 특별한 증상이 거의 없거나, 있어도 소화불량·속쓰림처럼 흔한 위장 증상과 구분되지 않습니다. ... 위암은 국내 발생률이 높은 암이지만, 조기에 발견하면 치료 성적이 좋은 편이라"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 8,
+        "relevant_indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.25,
+        "site_concentration": 0.125,
+        "organic_opportunity": 26.25
+      },
+      "scope": "full_keyword",
+      "target_keyword": "위암초기증상",
+      "matches": [
+        {
+          "result_index": 2,
+          "quote": "위암의 가장 큰 특징은 초기 증상이 거의 없다는 점이다."
+        },
+        {
+          "result_index": 7,
+          "quote": "위암 초기 증상 위염과 비슷, 내시경 조기 발견이 ‘답’"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-11T00:01:05.498889+00:00",
+      "input_sha256": "4b9fb63ecd163e6cbf78a8174dd070a1e4c2b3336b82b54605e544caee80ce55",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "위암초기증상",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "내가 알고 싶은 암 암의 종류 전체암 보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 암이란 정의 발생부위 발생기전 진단 일반적인 증상 진단방법 CT(전산화단층촬영) 검사 진행단계 치료 치료원칙 인터벤션치료 수술 항암화학요법 방사선치료 핵의학치료 조혈모 세포이식 면역요법 임상시험 임상시험의 이해 재발 및 전이 말기 암환자 호스피스란? 호스피스 종류 호스피스 대상 환자 호스피스 이용 절차 호스피스전문병원 소아청소년완화의료 바로가기 서비스 공지사항 교육자료신청 정보사용신청 전체암  보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 위암 홈 내가 알고 싶은 암 암의 종류 전체암 보기 위암 공유하기 현재페이지 인쇄 페이지 공유 URL복사하기 요약설명 암이란 발생부위 정의 및 종류 관련통계 진단 일반적증상 진단방법 진행단계 치료 치료방법 치료의 부작용 재발 및 전이 치료현황 일반적증상 위암 은 초기엔 특별한 증상이 없으며 약간의 불편함을 느껴도 다른 일반적 위장 질환과 구분하기가 어려워서 암이 어느 정도 진행된 뒤에야 진단되는 경우가 많습니다. 조기 위암 특별한 자각 증상이 거의 없어 대부분 정기 건강검진을 통해 우연히 발견됩니다. 궤양 을 동반한 조기 위암의 경우에는 속쓰림 증상 등이 있을 수 있지만, 환자가 느끼는 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접적인 관계가 없습니다. 진행성 위암 암에 의한 특별한 증상은 없으나, 상복부의 불쾌감, 팽만감, 동통, 소화불량, 식욕감소, 체중감소, 빈혈 등이 나타날 수 있습니다. 병이 많이 진행되면 유문부(pylorus, 위와 십이지장 사이의 경계를 이루는 부분) 폐색에 의한 구토 , 출혈에 따른 토혈이나 흑변(검은색 변), 분문부(cardia, 위가 식도와 연결되",
+            "entity": "위암",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "위암 초기에는 어떤 증상이 있으며 무증상일 수 있는가?",
+            "answer": "조기 위암은 자각 증상이 거의 없어 검진에서 우연히 발견되며, 궤양을 동반하면 속쓰림이 있을 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "내가 알고 싶은 암 암의 종류 전체암 보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 암이란 정의 발생부위 발생기전 진단 일반적인 증상 진단방법 CT(전산화단층촬영) 검사 진행단계 치료 치료원칙 인터벤션치료 수술 항암화학요법 방사선치료 핵의학치료 조혈모 세포이식 면역요법 임상시험 임상시험의 이해 재발 및 전이 말기 암환자 호스피스란? 호스피스 종류 호스피스 대상 환자 호스피스 이용 절차 호스피스전문병원 소아청소년완화의료 바로가기 서비스 공지사항 교육자료신청 정보사용신청 전체암  보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 위암 홈 내가 알고 싶은 암 암의 종류 전체암 보기 위암 공유하기 현재페이지 인쇄 페이지 공유 URL복사하기 요약설명 암이란 발생부위 정의 및 종류 관련통계 진단 일반적증상 진단방법 진행단계 치료 치료방법 치료의 부작용 재발 및 전이 치료현황 일반적증상 위암 은 초기엔 특별한 증상이 없으며 약간의 불편함을 느껴도 다른 일반적 위장 질환과 구분하기가 어려워서 암이 어느 정도 진행된 뒤에야 진단되는 경우가 많습니다. 조기 위암 특별한 자각 증상이 거의 없어 대부분 정기 건강검진을 통해 우연히 발견됩니다. 궤양 을 동반한 조기 위암의 경우에는 속쓰림 증상 등이 있을 수 있지만, 환자가 느끼는 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접적인 관계가 없습니다. 진행성 위암 암에 의한 특별한 증상은 없으나, 상복부의 불쾌감, 팽만감, 동통, 소화불량, 식욕감소, 체중감소, 빈혈 등이 나타날 수 있습니다. 병이 많이 진행되면 유문부(pylorus, 위와 십이지장 사이의 경계를 이루는 부분) 폐색에 의한 구토 , 출혈에 따른 토혈이나 흑변(검은색 변), 분문부(cardia, 위가 식도와 연결되"
+          },
+          {
+            "facet": "증상만으로 위염이나 일반적인 소화불량과 구분할 수 있는가?",
+            "answer": "다른 위장 질환과 증상으로 구분하기 어렵다. 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접 관계가 없다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "내가 알고 싶은 암 암의 종류 전체암 보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 암이란 정의 발생부위 발생기전 진단 일반적인 증상 진단방법 CT(전산화단층촬영) 검사 진행단계 치료 치료원칙 인터벤션치료 수술 항암화학요법 방사선치료 핵의학치료 조혈모 세포이식 면역요법 임상시험 임상시험의 이해 재발 및 전이 말기 암환자 호스피스란? 호스피스 종류 호스피스 대상 환자 호스피스 이용 절차 호스피스전문병원 소아청소년완화의료 바로가기 서비스 공지사항 교육자료신청 정보사용신청 전체암  보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 위암 홈 내가 알고 싶은 암 암의 종류 전체암 보기 위암 공유하기 현재페이지 인쇄 페이지 공유 URL복사하기 요약설명 암이란 발생부위 정의 및 종류 관련통계 진단 일반적증상 진단방법 진행단계 치료 치료방법 치료의 부작용 재발 및 전이 치료현황 일반적증상 위암 은 초기엔 특별한 증상이 없으며 약간의 불편함을 느껴도 다른 일반적 위장 질환과 구분하기가 어려워서 암이 어느 정도 진행된 뒤에야 진단되는 경우가 많습니다. 조기 위암 특별한 자각 증상이 거의 없어 대부분 정기 건강검진을 통해 우연히 발견됩니다. 궤양 을 동반한 조기 위암의 경우에는 속쓰림 증상 등이 있을 수 있지만, 환자가 느끼는 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접적인 관계가 없습니다. 진행성 위암 암에 의한 특별한 증상은 없으나, 상복부의 불쾌감, 팽만감, 동통, 소화불량, 식욕감소, 체중감소, 빈혈 등이 나타날 수 있습니다. 병이 많이 진행되면 유문부(pylorus, 위와 십이지장 사이의 경계를 이루는 부분) 폐색에 의한 구토 , 출혈에 따른 토혈이나 흑변(검은색 변), 분문부(cardia, 위가 식도와 연결되"
+          },
+          {
+            "facet": "조기 위암과 진행성 위암의 증상은 어떻게 다른가?",
+            "answer": "조기는 대개 무증상이며, 진행성은 상복부 불쾌감·팽만감·동통·소화불량·식욕감소·체중감소·빈혈 등이 나타날 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "내가 알고 싶은 암 암의 종류 전체암 보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 암이란 정의 발생부위 발생기전 진단 일반적인 증상 진단방법 CT(전산화단층촬영) 검사 진행단계 치료 치료원칙 인터벤션치료 수술 항암화학요법 방사선치료 핵의학치료 조혈모 세포이식 면역요법 임상시험 임상시험의 이해 재발 및 전이 말기 암환자 호스피스란? 호스피스 종류 호스피스 대상 환자 호스피스 이용 절차 호스피스전문병원 소아청소년완화의료 바로가기 서비스 공지사항 교육자료신청 정보사용신청 전체암  보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 위암 홈 내가 알고 싶은 암 암의 종류 전체암 보기 위암 공유하기 현재페이지 인쇄 페이지 공유 URL복사하기 요약설명 암이란 발생부위 정의 및 종류 관련통계 진단 일반적증상 진단방법 진행단계 치료 치료방법 치료의 부작용 재발 및 전이 치료현황 일반적증상 위암 은 초기엔 특별한 증상이 없으며 약간의 불편함을 느껴도 다른 일반적 위장 질환과 구분하기가 어려워서 암이 어느 정도 진행된 뒤에야 진단되는 경우가 많습니다. 조기 위암 특별한 자각 증상이 거의 없어 대부분 정기 건강검진을 통해 우연히 발견됩니다. 궤양 을 동반한 조기 위암의 경우에는 속쓰림 증상 등이 있을 수 있지만, 환자가 느끼는 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접적인 관계가 없습니다. 진행성 위암 암에 의한 특별한 증상은 없으나, 상복부의 불쾌감, 팽만감, 동통, 소화불량, 식욕감소, 체중감소, 빈혈 등이 나타날 수 있습니다. 병이 많이 진행되면 유문부(pylorus, 위와 십이지장 사이의 경계를 이루는 부분) 폐색에 의한 구토 , 출혈에 따른 토혈이나 흑변(검은색 변), 분문부(cardia, 위가 식도와 연결되"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "내가 알고 싶은 암 암의 종류 전체암 보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 암이란 정의 발생부위 발생기전 진단 일반적인 증상 진단방법 CT(전산화단층촬영) 검사 진행단계 치료 치료원칙 인터벤션치료 수술 항암화학요법 방사선치료 핵의학치료 조혈모 세포이식 면역요법 임상시험 임상시험의 이해 재발 및 전이 말기 암환자 호스피스란? 호스피스 종류 호스피스 대상 환자 호스피스 이용 절차 호스피스전문병원 소아청소년완화의료 바로가기 서비스 공지사항 교육자료신청 정보사용신청 전체암  보기 갑상선암 폐암 위암 대장암 유방암 전립선암 간암 췌장암 담낭암 담도암 신장암 위암 홈 내가 알고 싶은 암 암의 종류 전체암 보기 위암 공유하기 현재페이지 인쇄 페이지 공유 URL복사하기 요약설명 암이란 발생부위 정의 및 종류 관련통계 진단 일반적증상 진단방법 진행단계 치료 치료방법 치료의 부작용 재발 및 전이 치료현황 일반적증상 위암 은 초기엔 특별한 증상이 없으며 약간의 불편함을 느껴도 다른 일반적 위장 질환과 구분하기가 어려워서 암이 어느 정도 진행된 뒤에야 진단되는 경우가 많습니다. 조기 위암 특별한 자각 증상이 거의 없어 대부분 정기 건강검진을 통해 우연히 발견됩니다. 궤양 을 동반한 조기 위암의 경우에는 속쓰림 증상 등이 있을 수 있지만, 환자가 느끼는 대부분의 소화기 증상은 비궤양성 소화불량으로 조기 위암과 직접적인 관계가 없습니다. 진행성 위암 암에 의한 특별한 증상은 없으나, 상복부의 불쾌감, 팽만감, 동통, 소화불량, 식욕감소, 체중감소, 빈혈 등이 나타날 수 있습니다. 병이 많이 진행되면 유문부(pylorus, 위와 십이지장 사이의 경계를 이루는 부분) 폐색에 의한 구토 , 출혈에 따른 토혈이나 흑변(검은색 변), 분문부(cardia, 위가 식도와 연결되",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 76.25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "위염증상",
+    "category": "건강",
+    "topic": "위염증상: 흔한 증상과 무증상 가능성, 진료가 필요한 신호",
+    "intent": "위염은 어떤 증상이 나타나며, 증상이 없을 수도 있는지와 언제 진료가 필요한지 알아보려는 질문",
+    "gap": "일반 증상과 출혈 경고 신호를 구분한 표, 지속되는 상복부 통증의 진료 안내와 진단 검사 목록 제공",
+    "source_url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+    "verified_sources": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+        "original_url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+        "title": "Symptoms & Causes of Gastritis & Gastropathy - NIDDK",
+        "checked_on": "2026-10-11",
+        "publication_dates": [
+          "2025-10-06 20:10:04 -04:00"
+        ],
+        "sha256": "5cc63acaba45619cf9862a622dcaaebe9f9b150d638c58222c0535b5433b54a7",
+        "excerpt": "Symptoms & Causes of Gastritis & Gastropathy What are the symptoms of gastritis and gastropathy? The majority of people with gastritis or gastropathy don’t have any symptoms. In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include pain or discomfort in the upper abdomen nausea or vomiting feeling full too soon during a meal feeling too full after a meal loss of appetite weight loss If gastritis or gastropathy leads to erosions or ulcers , the stomach lining may bleed. If you have symptoms of bleeding in your stomach, seek medical help right away. Symptoms of bleeding in your stomach may include black or tarry stool or red or maroon blood mixed with your stool cramps, discomfort, or pain in your abdomen feeling tired, short of breath, or light-headed red blood in vomit or vomit that looks like coffee grounds If you have mild bleeding in your stomach, you may have a small amount of blood in your stool and not notice it. This is called occult bleeding . What causes gastritis and gastropathy? Different types of gastritis and gastropathy have different causes. Common causes of gastritis and gastropathy Helicobacter pylori (H. pylori) gastritis. Infection with H. pylori bacteria causes H. pylori gastritis. Researchers are still studying how people become infected. H. pylori bacteria may spread from person to person through contact with an infected person’s vomit, stool, or saliva . Food or water contaminated with an infected person’s vomit, stool, or saliva may also spread the bacteria from person to person. Reactive gastropathy. Reactive gastropathy is caused by long-term contact with substances that irritate the stomach lining, most often nonsteroidal anti-inflammatory drugs (NSAIDs), alcohol, and bile reflux, which is backward flow of bile from the small intestine to the stomach. Surgery that removes part of the stomach—such as some types of weight-loss surgery , also called metabolic and bariatric surgery—is the most common cause of bile reflux. Long-term use of NSAIDs may cause reactive gastropathy. Autoimmune gastritis. In autoimmune gastritis, the immune system attacks healthy cells in the stomach lining. Acute erosive gastropathy. Serious health problems—such as severe injuries or burns, critical illness, or sepsis —can reduce the blood flow to the stomach lining, causing a form of acute erosive gastropathy called stress gastritis. Contact with substances that irritate the stomach lining—including NSAIDs, alcohol, and cocaine—can also cause acute erosive gastropathy. Other causes of gastritis and gastropathy Less common causes of gastritis and gastropathy include celiac disease chemotherapy and radiation therapy diseases that cause inflammation in the digestive tract, such as Crohn's disease and sarcoidosis food allergies infections with viruses , parasites , fungi , and bacteria other than H. pylori , typically in people with weakened immune systems portal hypertension Last Reviewed August 2019 Share this page Print Facebook X Email More Options WhatsApp LinkedIn Reddit Pinterest Copy Link Previous: Definition & Facts Next: Diagnosis This content is provided as a service of the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), part of the National Institutes of Health. NIDDK translates and disseminates research findings to increase knowledge and understanding about health and disease among patients, health professionals, and the public. Content produced by NIDDK is carefully reviewed by NIDDK scientists and other experts.",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://www.medlineplus.gov/ency/article/001150.htm",
+        "original_url": "https://www.medlineplus.gov/ency/article/001150.htm",
+        "title": "Gastritis: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-11",
+        "publication_dates": [],
+        "sha256": "ce136e1e2a55234b8fbb7518e0805a4545a8e07bcc345aeea254102d33c48808",
+        "excerpt": "Gastritis Gastritis occurs when the lining of the stomach becomes inflamed or swollen. Gastritis may last for only a short time (acute gastritis) or it may linger for months to years (chronic gastritis). Causes The most common causes of gastritis are: Certain medicines, such as aspirin, ibuprofen, or naproxen and other similar medicines Heavy alcohol drinking Infection of the stomach with a bacteria called Helicobacter pylori Less common causes are: Autoimmune disorders (such as pernicious anemia ) Backflow of bile into the stomach (bile reflux) Cocaine use Eating or drinking caustic or corrosive substances (such as poisons) Viral infection, such as cytomegalovirus and herpes simplex virus (more often occurs in people with a weak immune system) Trauma or a severe, sudden illness such as major surgery, kidney failure, or being placed on a breathing machine may cause gastritis. Symptoms Many people with gastritis do not have any symptoms. Symptoms you may notice are: Loss of appetite Nausea and vomiting Pain in the upper part of the belly or abdomen If gastritis is causing bleeding from the lining of the stomach, symptoms may include: Black stools Vomiting blood or coffee-ground-like material Exams and Tests Tests that may be needed are: Complete blood count (CBC) to check for anemia or low blood count Examination of the stomach with an endoscope ( esophagogastroduodenoscopy or EGD) with biopsy of stomach lining H pylori tests (breath test or stool test) Stool test to check for small amounts of blood in the stools, which may be a sign of bleeding in the stomach Treatment Treatment depends on what is causing the problem. Some of the causes will go away over time. You may need to stop taking aspirin, ibuprofen, naproxen, or other medicines that may be causing gastritis. Always talk to your health care provider before stopping any medicine. You may use other over-the-counter and prescription drugs that decrease the amount of acid in the stomach, such as: Antacids H2 antagonists: famotidine (Pepcid), cimetidine (Tagamet), and nizatidine (Axid) Proton pump inhibitors (PPIs): omeprazole (Prilosec), esomeprazole (Nexium), Iansoprazole (Prevacid), rabeprazole (AcipHex), and pantoprazole (Protonix) Newer acid blockers called potassium-competitive acid blockers (PCABs) (such as vonoprazan) Antibiotics may be used to treat gastritis caused by infection with Helicobacter pylori bacteria. They are taken with an acid blocker such as a PPI or PCAB. Outlook (Prognosis) The outlook depends on the cause, but is often very good. Possible Complications Blood loss and increased risk for gastric cancer can occur. When to Contact a Medical Professional Contact your provider if you develop: Pain in the upper part of the belly or abdomen that does not go away Black or tarry stools Vomiting blood or coffee-ground-like material Prevention Avoid long-term use of substances that can irritate your stomach such as aspirin, anti-inflammatory drugs, or alcohol. Patient Instructions Taking antacids Images Digestive system Stomach and stomach lining References Feldman M, Jensen PJ, Howden CW. Gastritis and gastropathy. In: Feldman M, Friedman LS, Brandt LJ, eds. Sleisenger and Fordtran's Gastrointestinal and Liver Disease. 11th ed. Philadelphia, PA: Elsevier; 2021:chap 52. Kuipers EJ. Acid peptic disease. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 125. Review Date 1/24/2025 Updated by: Jenifer K. Lehrer, MD, Gastroenterologist, Philadelphia, PA. Review provided by VeriMed Healthcare Network. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Foodborne Illness Stomach Disorders",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://bme.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31330",
+      "https://maltese2022.com/%EC%9C%84%EC%97%BC-%EC%A6%9D%EC%83%81-%EC%9B%90%EC%9D%B8-%EC%B9%98%EB%A3%8C/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 22910,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.medlineplus.gov/ency/article/001150.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/indigestion-dyspepsia/symptoms-causes/",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "위염 증상",
+    "organic_domains": [
+      "bme.amc.seoul.kr",
+      "bme.amc.seoul.kr",
+      "bme.amc.seoul.kr",
+      "mind.amc.seoul.kr",
+      "bme.amc.seoul.kr",
+      "maltese2022.com",
+      "chl.ascension.org",
+      "my-doctor.io",
+      "hello95.com",
+      "common.health.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://bme.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31330",
+        "domain": "bme.amc.seoul.kr",
+        "title": "위염(Gastritis) | 질환백과 | 의료정보 | 건강정보 | 서울아산병원",
+        "snippet": "무증상, 복부 통증, 오심, 위염, 복부 불편감, 구토 ... 위염은 병리학적으로 위 점막에 염증 세포의 침윤이 있는 상태로 정의합니다. ... 위염의 내시경적 소견에 따라 발적성"
+      },
+      {
+        "url": "https://bme.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31402",
+        "domain": "bme.amc.seoul.kr",
+        "title": "만성 위염(Chronic gastritis) | 질환백과 | 의료정보 | 건강정보 | 서울아산병원",
+        "snippet": "복부 통증, 오심, 가슴 답답, 설사, 권태감, 복부 압박 증상, 소화불량, 복부팽만감, 토혈 ... 만성 위염의 원인에는 헬리코박터균 감염, 약물(진통제, 소염제, 아스피린), 흡연, 조미료, 커피,"
+      },
+      {
+        "url": "https://bme.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31402&tabIndex=6",
+        "domain": "bme.amc.seoul.kr",
+        "title": "만성 위염(Chronic gastritis) | 질환백과 | 의료정보 | 건강정보 | 서울아산병원",
+        "snippet": "복부 통증, 오심, 가슴 답답, 설사, 권태감, 복부 압박 증상, 소화불량, 복부팽만감, 토혈 ... 위암, 위염, 위궤양, 진행성 위암, 조기 위암, 위장관 출혈, 헬리코박터균 감염"
+      },
+      {
+        "url": "https://mind.amc.seoul.kr/asan/healthtv/video/videoDetail.do?videoId=1226",
+        "domain": "mind.amc.seoul.kr",
+        "title": "위 | 건강TV | 건강정보 | 서울아산병원",
+        "snippet": "무증상, 위염, 오심, 구토, 복부 통증, 복부 불편감 ... 아메바성 이질, 장출혈성 대장균 감염증, 식중독, 위막성 대장염, 바이러스성 장염, 세균성 이질, 대장균 감염 ... 악취가"
+      },
+      {
+        "url": "https://bme.amc.seoul.kr/asan/healthtv/video/videoDetail.do?videoId=1226",
+        "domain": "bme.amc.seoul.kr",
+        "title": "위 | 건강TV | 건강정보 | 서울아산병원",
+        "snippet": "이때 가장 주요한 일을 맡고 있는 기관이 바로 ‘위’입니다. ... 이러한 위는 우리 배의 좌측에 위치해 있는데 ... 무증상, 위염, 오심, 구토, 복부 통증, 복부"
+      },
+      {
+        "url": "https://maltese2022.com/%EC%9C%84%EC%97%BC-%EC%A6%9D%EC%83%81-%EC%9B%90%EC%9D%B8-%EC%B9%98%EB%A3%8C/",
+        "domain": "maltese2022.com",
+        "title": "위염 증상｜속쓰림·명치 통증 반복된다면 원인과 치료 알아보기 - 말티즈 건강생활 노트",
+        "snippet": "위염 증상은 식사 후 속쓰림이나 명치 통증, 더부룩함처럼 소화불량과 비슷하게 나타나는 경우가 많습니다.혹시 식사 후 속이 쓰리거나 명치가 답답한 느낌이 자주 드시나요? ... 위염의 정의와"
+      },
+      {
+        "url": "https://chl.ascension.org/RelatedItems/3%2C82971ko",
+        "domain": "chl.ascension.org",
+        "title": "위염 이해하기",
+        "snippet": "위염은 통증성 염증으로 배벽을 덮습니다 여기에는 여러 가지 원인이 있습니다. ... 음식을 소화하기 위해 위는 강한 산과 효소를 만듭니다. ... ## 위염의 원인 ... *"
+      },
+      {
+        "url": "https://my-doctor.io/healthLab/info/4153/%EB%A7%8C%EC%84%B1%EC%9C%84%EC%97%BC-%EC%A6%9D%EC%83%81-%EC%B9%98%EB%A3%8C-%EC%9C%84%EB%82%B4%EC%8B%9C%EA%B2%BD%EC%A3%BC%EA%B8%B0",
+        "domain": "my-doctor.io",
+        "title": "만성 위염, 증상 없어도 치료해야 할까요? | 나에게 딱 맞는 건강 꿀팁",
+        "snippet": "만성 위염은 위 점막의 염증이 오래 이어진 상태라, 증상이 얼마나 심한지보다 점막이 어디까지 변했는지가 판단 기준이 됩니다.이번 글에서는 만성 위염 증상과 치료, 위축성 위염과 장상피화생의"
+      },
+      {
+        "url": "https://hello95.com/566?category=1189158",
+        "domain": "hello95.com",
+        "title": "위염 증상 – 종류별 특징부터 초기 자각 증상, 진단법, 치료 시기까지 완전 정리",
+        "snippet": "위염의 종류별 특징과 증상 차이 ... 하지만 그 범위와 양상은 매우 다양해서, 단순한 속 쓰림부터 만성적인 소화장애, 위 출혈, 위암 전단계까지 확장될 수 있는 질환입니다.특히"
+      },
+      {
+        "url": "https://common.health.kr/shared/images/insert_pdf/IN_2013011400006_01.pdf",
+        "domain": "common.health.kr",
+        "title": "위염·위궤양 치료제\n\nKGMP 우수의약품제조업체\n\n레비스정  \n(Rebamipide)\n\n전",
+        "snippet": "다음 질환의 위점막병변(미란(짓무름), 출혈, 발적(충혈되어 붉어짐), 부종(붓기))의 개선 : 급성위염, 만성위염의 급성악화기 ... (1) 쇼크, 아나필락시스모양 증상(빈도불명) : 쇼크, 아나필락시스모양 증상이 나타날 수 있으므로 관찰을"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 34.88,
+      "organic_opportunity": 22.86,
+      "trend": 0.14,
+      "intent_fit": 15
+    },
+    "trend_growth": 0.014,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 8,
+    "selected_at": "2026-10-11T00:01:05.498889+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "위염증상"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+          "title": "Symptoms & Causes of Gastritis & Gastropathy - NIDDK",
+          "excerpt_chars": 3573
+        },
+        {
+          "url": "https://www.medlineplus.gov/ency/article/001150.htm",
+          "title": "Gastritis: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 3803
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/indigestion-dyspepsia/symptoms-causes/",
+          "title": "Symptoms & Causes of Indigestion - NIDDK",
+          "excerpt_chars": 3556
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://www.cancer.go.kr/lay1/program/S1T211C222/cancer/view.do?cancer_seq=4637&menu_seq=4645",
+              "title": "홈 >내가 알고 싶은 암>암의 종류>비호지킨 림프종> 위림프종",
+              "excerpt_chars": 647
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gastritis-gastropathy/symptoms-causes",
+              "title": "Symptoms & Causes of Gastritis & Gastropathy - NIDDK",
+              "excerpt_chars": 3573
+            },
+            {
+              "url": "https://www.medlineplus.gov/ency/article/001150.htm",
+              "title": "Gastritis: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 3803
+            },
+            {
+              "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/indigestion-dyspepsia/symptoms-causes/",
+              "title": "Symptoms & Causes of Indigestion - NIDDK",
+              "excerpt_chars": 3556
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "위염증상",
+      "executed_query": "위염 증상",
+      "topic": "위염증상: 흔한 증상과 무증상 가능성, 진료가 필요한 신호",
+      "intent": "위염은 어떤 증상이 나타나며, 증상이 없을 수도 있는지와 언제 진료가 필요한지 알아보려는 질문",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-11T00:01:05.498889+00:00",
+      "result_count": 10,
+      "domain_count": 6,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "위염증상",
+        "executed_query": "위염 증상",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-11T00:01:05.498889+00:00",
+        "raw_sha256": "ae9418b51e33a3fe2b09b8fce5fff27f0da2f748e6904994e4393f2e35581046",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "무증상, 복부 통증, 오심, 위염, 복부 불편감, 구토 ... 위염은 병리학적으로 위 점막에 염증 세포의 침윤이 있는 상태로 정의합니다. ... 위염의 내시경적 소견에 따라 발적성"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "복부 통증, 오심, 가슴 답답, 설사, 권태감, 복부 압박 증상, 소화불량, 복부팽만감, 토혈 ... 만성 위염의 원인에는 헬리코박터균 감염, 약물(진통제, 소염제, 아스피린), 흡연, 조미료, 커피,"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "복부 통증, 오심, 가슴 답답, 설사, 권태감, 복부 압박 증상, 소화불량, 복부팽만감, 토혈 ... 위암, 위염, 위궤양, 진행성 위암, 조기 위암, 위장관 출혈, 헬리코박터균 감염"
+          },
+          {
+            "result_index": 3,
+            "relevant": false,
+            "quote": "무증상, 위염, 오심, 구토, 복부 통증, 복부 불편감 ... 아메바성 이질, 장출혈성 대장균 감염증, 식중독, 위막성 대장염, 바이러스성 장염, 세균성 이질, 대장균 감염 ... 악취가"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "이때 가장 주요한 일을 맡고 있는 기관이 바로 ‘위’입니다. ... 이러한 위는 우리 배의 좌측에 위치해 있는데 ... 무증상, 위염, 오심, 구토, 복부 통증, 복부"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "위염 증상은 식사 후 속쓰림이나 명치 통증, 더부룩함처럼 소화불량과 비슷하게 나타나는 경우가 많습니다.혹시 식사 후 속이 쓰리거나 명치가 답답한 느낌이 자주 드시나요? ... 위염의 정의와"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "위염은 통증성 염증으로 배벽을 덮습니다 여기에는 여러 가지 원인이 있습니다. ... 음식을 소화하기 위해 위는 강한 산과 효소를 만듭니다. ... ## 위염의 원인 ... *"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "만성 위염은 위 점막의 염증이 오래 이어진 상태라, 증상이 얼마나 심한지보다 점막이 어디까지 변했는지가 판단 기준이 됩니다.이번 글에서는 만성 위염 증상과 치료, 위축성 위염과 장상피화생의"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "위염의 종류별 특징과 증상 차이 ... 하지만 그 범위와 양상은 매우 다양해서, 단순한 속 쓰림부터 만성적인 소화장애, 위 출혈, 위암 전단계까지 확장될 수 있는 질환입니다.특히"
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "다음 질환의 위점막병변(미란(짓무름), 출혈, 발적(충혈되어 붉어짐), 부종(붓기))의 개선 : 급성위염, 만성위염의 급성악화기 ... (1) 쇼크, 아나필락시스모양 증상(빈도불명) : 쇼크, 아나필락시스모양 증상이 나타날 수 있으므로 관찰을"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 7,
+        "relevant_site_count": 5,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "relevance_ratio": 0.7,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.42857142857142855,
+        "organic_opportunity": 22.86
+      },
+      "scope": "full_keyword",
+      "target_keyword": "위염증상",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "무증상, 복부 통증, 오심, 위염, 복부 불편감, 구토"
+        },
+        {
+          "result_index": 5,
+          "quote": "위염 증상은 식사 후 속쓰림이나 명치 통증, 더부룩함처럼 소화불량과 비슷하게 나타나는 경우가 많습니다."
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-11T00:01:05.498889+00:00",
+      "input_sha256": "72e47f4eca6b408cfaf465e8740074010db95a4cf7db8bb7494213bf62d614f5",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "위염증상",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "Symptoms & Causes of Gastritis & Gastropathy What are the symptoms of gastritis and gastropathy? The majority of people with gastritis or gastropathy don’t have any symptoms. In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include pain or discomfort in the upper abdomen nausea or vomiting feeling full too soon during a meal feeling too full after a meal loss of appetite weight loss If gastritis or gastropathy leads to erosions or ulcers , the stomach lining may bleed. If you have symptoms of bleeding in your stomach, seek medical help right away. Symptoms of bleeding in your stomach may include black or tarry stool or red or maroon blood mixed with your stool cramps, discomfort, or pain in your abdomen feeling tired, short of breath, or light-headed red blood in vomit or vomit that looks like coffee grounds If you have mild ble",
+            "entity": "gastritis and gastropathy",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "tem) Trauma or a severe, sudden illness such as major surgery, kidney failure, or being placed on a breathing machine may cause gastritis. Symptoms Many people with gastritis do not have any symptoms. Symptoms you may notice are: Loss of appetite Nausea and vomiting Pain in the upper part of the belly or abdomen If gastritis is causing bleeding from the lining of the stomach, symptoms may include: Black stools Vomiting blood or coffee-ground-like material Exams and Tests Tests that may be needed are: Complete blood count (CBC) to check for anemia or low blood count Examination of the stomach with an endoscope ( esophagogastroduodenoscopy or EGD) with biopsy of stomach lining H pylori tests (breath test or stool test) Stool test to check for small amounts of blood in the stools, which may be a sign of bleeding in the stomach Treatment Treatment depends on what is causing the problem. Some",
+            "entity": "gastritis",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "위염의 흔한 증상은 무엇이며 무증상일 수도 있는가?",
+            "answer": "대부분 무증상이며, 상복부 통증·불편감, 오심·구토, 조기 포만감, 식후 포만감, 식욕·체중 감소가 가능하다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Symptoms & Causes of Gastritis & Gastropathy What are the symptoms of gastritis and gastropathy? The majority of people with gastritis or gastropathy don’t have any symptoms. In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include pain or discomfort in the upper abdomen nausea or vomiting feeling full too soon during a meal feeling too full after a meal loss of appetite weight loss If gastritis or gastropathy leads to erosions or ulcers , the stomach lining may bleed. If you have symptoms of bleeding in your stomach, seek medical help right away. Symptoms of bleeding in your stomach may include black or tarry stool or red or maroon blood mixed with your stool cramps, discomfort, or pain in your abdomen feeling tired, short of breath, or light-headed red blood in vomit or vomit that looks like coffee grounds If you have mild ble"
+          },
+          {
+            "facet": "어떤 증상이 있으면 진료를 받아야 하는가?",
+            "answer": "지속되는 상복부 통증, 검거나 타르 같은 변, 피 또는 커피 찌꺼기 같은 구토가 있으면 진료가 필요하다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "led potassium-competitive acid blockers (PCABs) (such as vonoprazan) Antibiotics may be used to treat gastritis caused by infection with Helicobacter pylori bacteria. They are taken with an acid blocker such as a PPI or PCAB. Outlook (Prognosis) The outlook depends on the cause, but is often very good. Possible Complications Blood loss and increased risk for gastric cancer can occur. When to Contact a Medical Professional Contact your provider if you develop: Pain in the upper part of the belly or abdomen that does not go away Black or tarry stools Vomiting blood or coffee-ground-like material Prevention Avoid long-term use of substances that can irritate your stomach such as aspirin, anti-inflammatory drugs, or alcohol. Patient Instructions Taking antacids Images Digestive system Stomach and stomach lining References Feldman M, Jensen PJ, Howden CW. Gastritis and gastropathy. In: Feldma"
+          },
+          {
+            "facet": "일반 증상과 구분하여 즉시 도움을 받아야 할 출혈 신호는 무엇인가?",
+            "answer": "검은 타르변·혈변, 토혈·커피 찌꺼기 같은 구토 등 위 출혈 증상이 있으면 즉시 의료 도움을 받아야 한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Symptoms & Causes of Gastritis & Gastropathy What are the symptoms of gastritis and gastropathy? The majority of people with gastritis or gastropathy don’t have any symptoms. In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include pain or discomfort in the upper abdomen nausea or vomiting feeling full too soon during a meal feeling too full after a meal loss of appetite weight loss If gastritis or gastropathy leads to erosions or ulcers , the stomach lining may bleed. If you have symptoms of bleeding in your stomach, seek medical help right away. Symptoms of bleeding in your stomach may include black or tarry stool or red or maroon blood mixed with your stool cramps, discomfort, or pain in your abdomen feeling tired, short of breath, or light-headed red blood in vomit or vomit that looks like coffee grounds If you have mild ble"
+          },
+          {
+            "facet": "위염이 의심될 때 어떤 진단 검사가 필요한가?",
+            "answer": "필요에 따라 혈구검사, 위내시경·점막 생검, 헬리코박터 호흡·대변검사, 대변 잠혈검사를 시행한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "tem) Trauma or a severe, sudden illness such as major surgery, kidney failure, or being placed on a breathing machine may cause gastritis. Symptoms Many people with gastritis do not have any symptoms. Symptoms you may notice are: Loss of appetite Nausea and vomiting Pain in the upper part of the belly or abdomen If gastritis is causing bleeding from the lining of the stomach, symptoms may include: Black stools Vomiting blood or coffee-ground-like material Exams and Tests Tests that may be needed are: Complete blood count (CBC) to check for anemia or low blood count Examination of the stomach with an endoscope ( esophagogastroduodenoscopy or EGD) with biopsy of stomach lining H pylori tests (breath test or stool test) Stool test to check for small amounts of blood in the stools, which may be a sign of bleeding in the stomach Treatment Treatment depends on what is causing the problem. Some"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Symptoms & Causes of Gastritis & Gastropathy What are the symptoms of gastritis and gastropathy? The majority of people with gastritis or gastropathy don’t have any symptoms. In some cases, gastritis and gastropathy cause symptoms of indigestion , also called dyspepsia. Symptoms may include pain or discomfort in the upper abdomen nausea or vomiting feeling full too soon during a meal feeling too full after a meal loss of appetite weight loss If gastritis or gastropathy leads to erosions or ulcers , the stomach lining may bleed. If you have symptoms of bleeding in your stomach, seek medical help right away. Symptoms of bleeding in your stomach may include black or tarry stool or red or maroon blood mixed with your stool cramps, discomfort, or pain in your abdomen feeling tired, short of breath, or light-headed red blood in vomit or vomit that looks like coffee grounds If you have mild ble",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 72.88,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

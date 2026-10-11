@@ -4758,5 +4758,15 @@
     "category": "생산성",
     "identifier": "엑셀차트만들기",
     "created_at": "2026-10-10T14:05:03.998186"
+  },
+  {
+    "topic": "온디바이스AI란? 클라우드 AI와의 차이와 NPU 역할",
+    "title": "온디바이스AI란? 클라우드 AI 차이와 NPU 역할 총정리",
+    "keywords": [
+      "온디바이스AI"
+    ],
+    "category": "테크",
+    "identifier": "npu",
+    "created_at": "2026-10-11T03:09:24.353741"
   }
 ]

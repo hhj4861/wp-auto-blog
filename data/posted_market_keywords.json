@@ -798,5 +798,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-10T14:05:03.167669+00:00"
+  },
+  {
+    "key": "온디바이스ai",
+    "keyword": "온디바이스AI",
+    "topic": "온디바이스AI란? 클라우드 AI와의 차이와 NPU 역할",
+    "category": "테크",
+    "post_id": 1916,
+    "url": "https://trendpulse.blog/on-device-ai-npu-2026/",
+    "selection_version": 8,
+    "monthly_search": 2630,
+    "score": 76.05,
+    "score_components": {
+      "demand": 27.36,
+      "organic_opportunity": 35.0,
+      "trend": -1.31,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-11T03:09:23.187417+00:00"
   }
 ]

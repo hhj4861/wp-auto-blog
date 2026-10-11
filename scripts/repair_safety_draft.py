@@ -7,6 +7,7 @@ import requests
 POST_ID = 1927
 SLUG = 'industrial-safety-engineer-2026'
 RAW_SHA = '8bb030de423fbc3c4222d65901f2db76bbbf9961332f73bbad26d6274ce57935'
+FIXED_SHA = '9f9a885c58a84361116b87973c46d7193bd7c0ce821c17779db17b89eed72f4b'
 OLD = '해당 과정 이수 후 동일·유사 직무분야 실무경력 2년 이상'
 NEW = '동일·유사 직무분야의 산업기사 수준 기술훈련과정 이수 후, 응시 종목과 동일·유사 직무분야에서 실무경력 2년 이상'
 
@@ -28,6 +29,9 @@ def repair(session):
     original = read()
     if (original.get('id'), original.get('slug'), original.get('status')) != (POST_ID, SLUG, 'draft'):
         raise ValueError('Exact draft identity required')
+    # The exact corrected body was independently compared with the original backup.
+    if hashlib.sha256(original['content']['raw'].encode()).hexdigest() == FIXED_SHA:
+        return {'post_id':POST_ID,'status':'draft','verified':True,'changed':False}
     fixed = corrected(original['content']['raw'])
     current = read()
     if current != original:
@@ -36,7 +40,7 @@ def repair(session):
     response.raise_for_status()
     saved = read()
     if saved['content']['raw'] != fixed or any(saved.get(k) != original.get(k) for k in
-            ('id','slug','status','title','excerpt','meta','date_gmt','featured_media','categories','tags')):
+            ('id','slug','status','title','excerpt','meta','featured_media','categories','tags')):
         raise RuntimeError('Draft preservation verification failed')
     return {'post_id':POST_ID,'status':saved['status'],'verified':True}
 

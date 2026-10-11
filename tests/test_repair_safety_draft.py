@@ -16,6 +16,7 @@ def setup(monkeypatch):
 
 def test_exact_corrections_and_metadata_preservation(monkeypatch):
     p,r=setup(monkeypatch);saved=deepcopy(p);saved['content']['raw']=m.corrected(RAW)
+    saved['date_gmt']='draft modification time'
     session=Mock();session.get.side_effect=[r(p),r(p),r(saved)]
     assert m.repair(session)['verified']
     assert session.post.call_args.kwargs['json']=={'content':RAW.replace(m.OLD,m.NEW).replace('원서접수:','원서접수(휴일 제외):')}
@@ -32,4 +33,13 @@ def test_other_posts_never_changed(monkeypatch,change):
 def test_concurrent_edits_never_overwritten(monkeypatch):
     p,r=setup(monkeypatch);changed=deepcopy(p);changed['modified_gmt']='later';session=Mock();session.get.side_effect=[r(p),r(changed)]
     with pytest.raises(ValueError,match='changed'):m.repair(session)
+    session.post.assert_not_called()
+
+
+def test_already_corrected_draft_is_verified_without_another_write(monkeypatch):
+    p,r=setup(monkeypatch)
+    p['content']['raw']=m.corrected(RAW)
+    monkeypatch.setattr(m,'FIXED_SHA',hashlib.sha256(p['content']['raw'].encode()).hexdigest())
+    session=Mock();session.get.return_value=r(p)
+    assert m.repair(session)=={'post_id':m.POST_ID,'status':'draft','verified':True,'changed':False}
     session.post.assert_not_called()

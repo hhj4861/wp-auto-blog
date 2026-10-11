@@ -20276,7 +20276,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-10-11T03:54:13.624333+00:00",
+    "selected_at": "2026-10-11T04:36:46.405240+00:00",
     "seeds": [
       "무선청소기흡입력",
       "공기청정기평수",
@@ -20287,7 +20287,7 @@
     "research_rounds": 2,
     "latest_issue_discovery": {
       "window_start": "2026-10-10T00:00:00+09:00",
-      "window_end": "2026-10-11T12:54:13.624333+09:00",
+      "window_end": "2026-10-11T13:36:46.405240+09:00",
       "queries": [
         {
           "query": "신제품 공식 출시 발표 after:2026-10-10 before:2026-10-12",
@@ -20318,12 +20318,6 @@
               "snippet": "신신제약, ‘캐네펜 카타플라스마’ 출시…신신파스 플렉스 3종 라인업 완성 <신신제약 ‘캐네펜 카타플라스마’ 출시…신신파스 플렉스 3종 라인업 완성> [신신제약 보도자료] - 자료 배포일: 2025년 1월 14일(화) 아렉스"
             },
             {
-              "url": "https://www.jobkorea.co.kr/company/1396412/?C_IDX=1131",
-              "domain": "www.jobkorea.co.kr",
-              "title": "삼진제약㈜ 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
-              "snippet": "신제품 제이틴주사 출시 ... 본사 사옥 신축 기공식"
-            },
-            {
               "url": "https://www.cmn.co.kr/",
               "domain": "www.cmn.co.kr",
               "title": "주간신문씨엠엔(CMN)",
@@ -20333,7 +20327,7 @@
               "url": "https://www.shop.ivenet.co.kr/",
               "domain": "www.shop.ivenet.co.kr",
               "title": "아이배냇",
-              "snippet": "* 신제품 출시 ... 장기간 실온보관이 가능한 배냇밀 짜먹는 이유식 32,000원 54% 14,900원롱고구마스틱 2개세트 신제품 롱고구마스틱 출시! ... 순한양념세트5종 (국물간장+비빔간장+소금+된장+참기름) 우리아이 처음먹는 순한 양념세트 5종"
+              "snippet": "* 신제품 출시 ... 장기간 실온보관이 가능한 배냇밀 짜먹는 이유식 32,000원 54% 14,900원롱고구마스틱 2개세트 신제품 롱고구마스틱 출시!"
             },
             {
               "url": "https://www.shinpoong.co.kr/main/main.php",
@@ -20352,6 +20346,12 @@
               "domain": "shinpoong.co.kr",
               "title": "신풍제약주식회사 : 신풍소식",
               "snippet": "437 | 신풍제약 애드마일스, 기초 영양을 위한 가성비 신제품 '칸휴 밀크씨슬 에너지' 및 '칼슘 마그네슘 비타민D 아연 플러스' 출시 | 부관리자 | 2026.04.01 | 4135436"
+            },
+            {
+              "url": "https://www.reon.co.kr/main/index.php?pcView=y",
+              "domain": "www.reon.co.kr",
+              "title": "건강은 자연가득",
+              "snippet": "* [리온공지] 구매금액의 10%를 적립해 ... ... * [리온공지] 다이어터21 시즌1 : 참가... * [리온공지] KB카드 결제 오류 수정 완... ... * 삼성 프리미엄 데커신"
             }
           ]
         },
@@ -20360,8 +20360,14 @@
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://www.play-didim.com/",
-              "domain": "www.play-didim.com",
+              "url": "https://shop.wisely.store/new",
+              "domain": "shop.wisely.store",
+              "title": "신제품 | 와이즐리",
+              "snippet": "신제품 ... 가전 · 디지털 ... 와이즐리 기미 커버 토닝 쿠션 ... 딜라잇가든 국내산 100% 냉동 딸기 1kg"
+            },
+            {
+              "url": "https://www.playdidim.com/",
+              "domain": "www.playdidim.com",
               "title": "디딤",
               "snippet": "본 논문은 DIDIM이 단순히 “운동 게임을 제공하는 제품”에 그치지 않고, 체력측정 기능을 통해 추출되는 운동 데이터가 전통적 임상 신체기능 측정치와 연관될 가능성을 학술논문을 통해 보여주었다는"
             },
@@ -20376,6 +20382,12 @@
               "domain": "gdonif.com",
               "title": "그돈이면 - 가격은 같아도 가치는 다르니까 · 소비자를 위한 가전 비교",
               "snippet": "전체[Button: 생활가전][Button: 주방가전][Button: 계절가전][Button: 디지털IT] ... 3131개 제품 스펙을 하나하나 비교해보니 진짜 차이가 나는 항목이 있었어요. ... 스타일러 스타일러 구매가이드 2026년 7월 10일 업데이트 김치냉장고"
+            },
+            {
+              "url": "https://www.petclub.co.kr/",
+              "domain": "www.petclub.co.kr",
+              "title": "Petclub",
+              "snippet": "* Image Image: 장바구니 담기상품명 : [30개세트] 데이스포 모이스트 황태오리버거 100g ... * 가전/디지털/컴퓨터 ... 상품명 : [펫클럽] 한삼인 펫츠밀 체중관리 영양보충제 200g 강아지영양제"
             },
             {
               "url": "https://dealmate.ai.kr/",
@@ -20399,25 +20411,13 @@
               "url": "https://reviewloger.com/category/digital/national",
               "domain": "reviewloger.com",
               "title": "전국 디지털 체험단 112건 | 신청자·마감·경쟁률 비교 - 리뷰로거",
-              "snippet": "디지털 전국 디지털 D-2 에이바바 휴대용 생수병 미니 가습기 — 디지털 체험단 출처 아싸뷰 · 신청은 원본에서 최근 수집에서 확인 안 됨 · 원본 확인"
+              "snippet": "유형은 배송형 112건이고, 마감이 3일 이내인 공고가 27건 있습니다. ... 전국 배송형 디지털 체험단 112건을 리뷰로거가 매일 모아 정리합니다. ... 디지털 전국 디지털 D-1 관절마사지기"
             },
             {
-              "url": "https://info.nyanietoon.com/",
-              "domain": "info.nyanietoon.com",
-              "title": "스마트한 소비를 돕는 알짜 정보",
-              "snippet": "지금 많이 보는 상품 조회수로 알아본 진짜 인기 상품 할인율 높은 순 정가 대비 많이 내린 순서로 한눈에 ... N 바디·스킨·뷰티 N 골프용품 추천 선물세트"
-            },
-            {
-              "url": "https://blog.dimad.kr/blog/convenience-store-dubai-chewy-ball-comparison/",
-              "domain": "blog.dimad.kr",
-              "title": "편의점 두쫀볼 두바이쫀들볼 | 두쫀쿠 차이부터 GS25 CU 세븐 이마트24 가격·맛까지 | Laon",
-              "snippet": "2025년 하반기부터 시작된 두바이 쫀득쿠키(두쫀쿠) 열풍이 2026년 현재까지 식을 줄 모르고 있습니다. ... 두쫀볼은 두바이 초콜릿의 핵심 재료인 피스타치오 스프레드와 카다이프(중동식 얇은 면)를 마시멜로로 감싼"
-            },
-            {
-              "url": "https://reviewloger.com/category/digital",
-              "domain": "reviewloger.com",
-              "title": "디지털 체험단 모음 137건 | 신청자·마감·경쟁률 비교 - 리뷰로거",
-              "snippet": "디지털 전국 디지털 오늘 마감 토븐 웨이브X O5 귀안아픈 오픈형 — 페이백 49,900원 체험단 페이백 49,900원 출처 스타일씨 · 신청은 원본에서 ... 디지털 전국 디지털"
+              "url": "https://gall.dcinside.com/board/lists/?id=appliance",
+              "domain": "gall.dcinside.com",
+              "title": "가전 갤러리 - 커뮤니티 포털 디시인사이드",
+              "snippet": "글쓰기 ... 공지 | 가전 갤러리 이용 안내 | 운영자 Image: ** : 갤로그로 이동합니다. ... 21666 | 가전구독이 구매보다 좋을까요?"
             }
           ]
         }
@@ -20432,7 +20432,7 @@
       "candidates": [],
       "status": "no_verified_recent_issue"
     },
-    "source_recovery_attempts": 1,
+    "source_recovery_attempts": 0,
     "cak_import": {
       "status": "not_applicable",
       "reason": "health_only",
@@ -20444,7 +20444,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-11T03:54:13.624333+00:00",
+      "checked_at": "2026-10-11T04:36:46.405240+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -20480,9 +20480,11 @@
     },
     "search_review_recovery_attempts": 0,
     "search_review_diagnostics": [],
-    "shortlist_research_attempts": 2,
+    "shortlist_research_attempts": 1,
     "unresearched_budget_keywords": [],
-    "deferred_research_family_keywords": [],
+    "deferred_research_family_keywords": [
+      "ddr48g"
+    ],
     "researched_fallback_families": [
       {
         "products": [
@@ -20492,662 +20494,155 @@
           "규격",
           "용량"
         ]
-      },
-      {
-        "products": [
-          "노트북"
-        ],
-        "facets": [
-          "메모리"
-        ]
       }
     ],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 336,
-    "evaluated_candidates": 2,
+    "evaluated_candidates": 1,
     "research_pool_size": 4,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "DDR48GB",
+        "keyword": "DDR416G",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "concentrated_search_results"
+          "insufficient_relevant_results",
+          "low_search_relevance"
         ],
-        "monthly_search": 1340,
+        "monthly_search": 12450,
         "organic_provider": "codex_native_search",
-        "organic_query": "DDR48GB",
+        "organic_query": "DDR416G",
         "organic_results": [
           {
-            "url": "https://search.danawa.com/dsearch.php?query=ddr48gb",
+            "url": "https://search.danawa.com/dsearch.php?query=%EC%82%BC%EC%84%B1DDR416G",
             "domain": "search.danawa.com",
-            "title": "ddr48gb : 다나와 통합검색",
-            "snippet": "[Input] 48GB 48GB ... G.SKILL DDR4-3600 CL18 TRIDENT Z RGB 패키지"
+            "title": "삼성DDR416G : 다나와 통합검색",
+            "snippet": "# 삼성DDR416G : 다나와 통합검색"
           },
           {
-            "url": "https://search.danawa.com/mobile/dsearch.php?keyword=ddr48gb",
+            "url": "https://search.danawa.com/dsearch.php?query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90DDR416G",
             "domain": "search.danawa.com",
-            "title": "ddr48gb : 다나와 통합검색",
-            "snippet": "* TeamGroup T-Force DDR4-3600 CL18 Delta RGB 패키지 서린 (16GB(8Gx2)) 226,990 원 (78몰)"
+            "title": "삼성전자DDR416G : 다나와 통합검색",
+            "snippet": "[Input] DDR4 ... [Input] 5200MHz (PC5-41600) 5200MHz (PC5-41600)"
           },
           {
-            "url": "https://detail.zol.com.cn/memory/p26895_s3722/good_pic.html",
-            "domain": "detail.zol.com.cn",
-            "title": "〖评分高DDR48GB内存〗评分高DDR48GB内存报价及图片大全-列表版-ZOL中关村在线",
-            "snippet": "# DDR48GB内存报价"
-          },
-          {
-            "url": "https://search.danawa.com/dsearch.php?query=DDR48GB%EB%85%B8%ED%8A%B8%EB%B6%8119200",
+            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=DDR416G%EA%B2%8C%EC%9D%BC&sort=saveDESC&tab=goods&volumeType=allvs",
             "domain": "search.danawa.com",
-            "title": "DDR48GB노트북19200 : 다나와 통합검색",
-            "snippet": "상품상세설명 참조 DS OY DDR3 2400 PC3 12800 8GB 노트북 2133 4GB 19200 2666MHZ 16GB RAM 21300 DDR4 10600 PC4 SO DDR3L 메모리"
+            "title": "DDR416G게일 : 다나와 통합검색",
+            "snippet": "# DDR416G게일 : 다나와 통합검색"
           },
           {
-            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=%EB%A0%88%EB%85%B8%EB%B2%84%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9A%A9DDR48GB%EB%9E%A8&sort=saveDESC&tab=goods&volumeType=allvs",
+            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=DDR416G%EB%9E%A8&sort=saveDESC&tab=goods&volumeType=allvs",
             "domain": "search.danawa.com",
-            "title": "레노버노트북용DDR48GB램 : 다나와 통합검색",
-            "snippet": "# 레노버노트북용DDR48GB램 : 다나와 통합검색"
+            "title": "DDR416G램 : 다나와 통합검색",
+            "snippet": "패트리어트 바이퍼 스틸 DDR4 RAM 16GB(2X8GB) 3600MHz CL18 1.35V UDIMM 데스크톱 게이밍 메모리 키트 XMP와 호환 - PVS416G360C8K"
           },
           {
-            "url": "https://paypayfleamarket.yahoo.co.jp/search/ddr48gb",
-            "domain": "paypayfleamarket.yahoo.co.jp",
-            "title": "〖2026年最新〗ddr48gbの新品・未使用品・中古品｜Yahoo!フリマ（旧PayPayフリマ）",
-            "snippet": "# ddr48gbの検索結果"
+            "url": "https://www.teamgroupinc.com/de/product-detail/memory/T-FORCE/dark-rog-ddr4-gray/dark-rog-ddr4-gray-TDRGD416G3000HC16CDC01/",
+            "domain": "www.teamgroupinc.com",
+            "title": "DARK ROG DDR4 DESKTOP MEMORY GRAY 16GB(2x8GB) 3000MHz CL16 | TEAMGROUP",
+            "snippet": "DARK ROG DDR4 DESKTOP MEMORY | 16GB(2x8GB) | 3000MHz | CL16 | 24000 MB/s | 1.35V | Intel: Z390 / Z490 / Z590 AMD: B550"
           },
           {
-            "url": "https://detail.zol.com.cn/memory/p26895_s3722/new_pic.html",
-            "domain": "detail.zol.com.cn",
-            "title": "〖最新DDR48GB内存〗最新DDR48GB内存报价及图片大全-列表版-ZOL中关村在线",
-            "snippet": "# DDR48GB内存报价"
-          },
-          {
-            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9A%A9DDR48GB%EB%9E%A82133&sort=saveDESC&tab=goods&volumeType=allvs",
+            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=%EC%82%BC%EC%84%B1DDR416G&sort=saveDESC&tab=goods&volumeType=allvs",
             "domain": "search.danawa.com",
-            "title": "노트북용DDR48GB램2133 : 다나와 통합검색",
-            "snippet": "# 노트북용DDR48GB램2133 : 다나와 통합검색"
+            "title": "삼성DDR416G : 다나와 통합검색",
+            "snippet": "# 삼성DDR416G : 다나와 통합검색"
           },
           {
-            "url": "https://www.hankyung.com/koreamarket/consensus/pdf/2026-01-ee53aa50f76d45f345794c8f7e7fe541",
-            "domain": "www.hankyung.com",
-            "title": "Daishin Research | 2025.12.29(월)~2026.01.02(금)",
-            "snippet": "DDR48Gb"
+            "url": "https://tw.buy.yahoo.com/search/product?kw=DDR416G&p=DDR416G",
+            "domain": "tw.buy.yahoo.com",
+            "title": "DDR416G-優惠推薦 2026年6月 | Yahoo購物中心",
+            "snippet": "# 全部分類 中搜尋 “DDR416G”"
           },
           {
-            "url": "https://www.bacabal.ma.gov.br/uploads/avisos/2025/10/373-1761775166.pdf",
-            "domain": "www.bacabal.ma.gov.br",
-            "title": "PREFEITURA MUNICIPAL DE BACABAL-MA",
-            "snippet": "DDR48GB"
+            "url": "https://www.mouser.de/ProductDetail/ATP-Electronics/D416G0UD218AFMW?qs=dbcCsuKDzFV4HJ8LIQfwZA%3D%3D",
+            "domain": "www.mouser.de",
+            "title": "D416G0UD218AFMW ATP Electronics | Mouser Deutschland",
+            "snippet": "Speichergröße: [Input] | 16 GB [Input]Speichertyp: [Input] | DDR4 [Input]"
+          },
+          {
+            "url": "https://www.teamgroupinc.com/cn/product-detail/memory/T-FORCE/dark-rog-ddr4-gray/dark-rog-ddr4-gray-TDRGD416G3000HC16CDC01/",
+            "domain": "www.teamgroupinc.com",
+            "title": "DARK ROG DDR4 台式机内存 灰 16GB(2x8GB) 3000MHz CL16 | TEAMGROUP",
+            "snippet": "首页 产品介紹 内存 T-FORCE DARK ROG DDR4 台式机内存 灰 16GB(2x8GB) 3000MHz CL16"
+          },
+          {
+            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=DDR416G%EB%85%B8%ED%8A%B8%EB%B6%81%EB%9E%A8&sort=saveDESC&tab=goods&volumeType=allvs",
+            "domain": "search.danawa.com",
+            "title": "DDR416G노트북램 : 다나와 통합검색",
+            "snippet": "# DDR416G노트북램 : 다나와 통합검색"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "DDR48GB",
-          "executed_query": "DDR48GB",
+          "query": "DDR416G",
+          "executed_query": "DDR416G",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-11T03:54:13.624333+00:00",
-          "raw_sha256": "8f2bb1eb8db63a12d9cae7799af2190238edb2caa7f9d2373ded2bdc16409189",
+          "checked_at": "2026-10-11T04:36:46.405240+00:00",
+          "raw_sha256": "c7a19958c2653387eb453a91bb5b24421d48592e9eb195971f50ea4402a084b1",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "[Input] 48GB 48GB ... G.SKILL DDR4-3600 CL18 TRIDENT Z RGB 패키지"
+              "quote": "# 삼성DDR416G : 다나와 통합검색"
             },
             {
               "result_index": 1,
-              "relevant": true,
-              "quote": "* TeamGroup T-Force DDR4-3600 CL18 Delta RGB 패키지 서린 (16GB(8Gx2)) 226,990 원 (78몰)"
+              "relevant": false,
+              "quote": "[Input] DDR4 ... [Input] 5200MHz (PC5-41600) 5200MHz (PC5-41600)"
             },
             {
               "result_index": 2,
-              "relevant": true,
-              "quote": "〖评分高DDR48GB内存〗评分高DDR48GB内存报价及图片大全-列表版-ZOL中关村在线"
+              "relevant": false,
+              "quote": "# DDR416G게일 : 다나와 통합검색"
             },
             {
               "result_index": 3,
               "relevant": true,
-              "quote": "DDR48GB노트북19200 : 다나와 통합검색"
+              "quote": "패트리어트 바이퍼 스틸 DDR4 RAM 16GB(2X8GB) 3600MHz CL18 1.35V UDIMM 데스크톱 게이밍 메모리 키트 XMP와 호환 - PVS416G360C8K"
             },
             {
               "result_index": 4,
               "relevant": true,
-              "quote": "레노버노트북용DDR48GB램 : 다나와 통합검색"
+              "quote": "DARK ROG DDR4 DESKTOP MEMORY | 16GB(2x8GB) | 3000MHz | CL16 | 24000 MB/s | 1.35V | Intel: Z390 / Z490 / Z590 AMD: B550"
             },
             {
               "result_index": 5,
-              "relevant": true,
-              "quote": "〖2026年最新〗ddr48gbの新品・未使用品・中古品｜Yahoo!フリマ（旧PayPayフリマ）"
+              "relevant": false,
+              "quote": "# 삼성DDR416G : 다나와 통합검색"
             },
             {
               "result_index": 6,
-              "relevant": true,
-              "quote": "〖最新DDR48GB内存〗最新DDR48GB内存报价及图片大全-列表版-ZOL中关村在线"
+              "relevant": false,
+              "quote": "# 全部分類 中搜尋 “DDR416G”"
             },
             {
               "result_index": 7,
               "relevant": true,
-              "quote": "노트북용DDR48GB램2133 : 다나와 통합검색"
+              "quote": "Speichergröße: [Input] | 16 GB [Input]Speichertyp: [Input] | DDR4 [Input]"
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "Daishin Research | 2025.12.29(월)~2026.01.02(금)"
+              "relevant": true,
+              "quote": "DARK ROG DDR4 台式机内存 灰 16GB(2x8GB) 3000MHz CL16 | TEAMGROUP"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "PREFEITURA MUNICIPAL DE BACABAL-MA"
+              "quote": "# DDR416G노트북램 : 다나와 통합검색"
             }
           ]
         }
-      },
-      {
-        "keyword": "노트북메모리",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-              "title": "Samsung 대한민국",
-              "excerpt_chars": 959
-            },
-            {
-              "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-              "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GU7BK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-              "excerpt_chars": 7912
-            },
-            {
-              "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-              "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GS5LK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-              "excerpt_chars": 7912
-            }
-          ],
-          "analysis_status": "supported_false",
-          "review_inputs": {
-            "keyword": "노트북메모리",
-            "category": "리뷰",
-            "checked_at": "2026-10-11T03:54:13.624333+00:00",
-            "evidence_mode": "serp",
-            "search_results": [
-              {
-                "url": "https://www.intel.co.kr/content/www/kr/ko/support/articles/000007393/processors.html",
-                "domain": "www.intel.co.kr",
-                "title": "인텔® 노트북(모바일) 프로세서를 지원하는 메모리 유형",
-                "snippet": "인텔® 모바일 프로세서(노트북 프로세서)를 지원하는 메모리 유형은 제품 사양 페이지(ark.intel.com)에서 확인할 수 있습니다. ... 참고 | 노트북, 노트북, 2-in-1 및 올인원에 지원되는 메모리와 관련된 질문이"
-              },
-              {
-                "url": "https://learn.microsoft.com/ko-kr/windows-hardware/drivers/display/examples-of-graphics-memory-reporting",
-                "domain": "learn.microsoft.com",
-                "title": "그래픽 메모리 보고의 예 - Windows drivers | Microsoft Learn",
-                "snippet": "다음 스크린샷에서는 Intel Iris 불연속 그래픽 어댑터가 있는 Windows 11을 실행하는 Surface 노트북 컴퓨터의 계산된 그래픽 메모리 번호를 보여 줍니다. ... Image: Surface 노트북 컴퓨터에서"
-              },
-              {
-                "url": "https://support.hp.com/kr-ko/document/c00848900",
-                "domain": "support.hp.com",
-                "title": "HP 노트북 PC - 추가 메모리 설치를 통한 성능 향상 | HP® 지원",
-                "snippet": "추가 또는 교체용 메모리를 주문하기 전에 사용하는 노트북의 현재 메모리 구성 및 최대 메모리 구성을 파악하려면 다음 절차를 수행합니다. ... 노트북 모델에 따라 필요한 메모리"
-              },
-              {
-                "url": "https://www.corsair.com/lm/ko/c/memory/laptop-ram",
-                "domain": "www.corsair.com",
-                "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-                "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-              },
-              {
-                "url": "https://support.hp.com/kr-ko/document/c01079541",
-                "domain": "support.hp.com",
-                "title": "HP 노트북 PC - 주 메모리 제거 및 교체 절차 | HP® 지원",
-                "snippet": "이 문서는 HP Compaq 모델 5400c, 6500b, 6700b, 6700s 시리즈 노트북 PC에서의 주 메모리 제거 및 교체 방법을 설명합니다. ... 키보드를 평평하게 누르고 4개의 플라스틱"
-              },
-              {
-                "url": "https://download.lenovo.com/pccbbs/mobiles_pdf/p16_gen1_ug_ko.pdf",
-                "domain": "download.lenovo.com",
-                "title": "메모리 모듈\n\n<visual_element id=\"e1\">\n상단 설치 절차 그림: 노트북",
-                "snippet": "상단 설치 절차 그림: 노트북 내부의 메모리 모듈을 교체하는 3단계 확대도와 본체 내부 위치 표시가 있음. ... 아래의 노트북 본체 그림에는 메모리 모듈 위치가 빨간"
-              },
-              {
-                "url": "https://prod.danawa.com/info/?pcode=105474137",
-                "domain": "prod.danawa.com",
-                "title": "크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교",
-                "snippet": "# 크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 상품비교"
-              },
-              {
-                "url": "https://support.hp.com/kr-ko/document/c02490404",
-                "domain": "support.hp.com",
-                "title": "컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 | HP® 지원",
-                "snippet": "# 컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 ... 이 문서는 컴팩 621 노트북 PC에서 메모리 모듈을 제거하고 교체하는 방법을 설명합니다."
-              },
-              {
-                "url": "https://prod.danawa.com/info/?pcode=106991672",
-                "domain": "prod.danawa.com",
-                "title": "크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교",
-                "snippet": "# 크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교"
-              },
-              {
-                "url": "https://www.corsair.com/kr/ko/c/memory/laptop-ram?filter-tested-speed-%28up-to%29=1066",
-                "domain": "www.corsair.com",
-                "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-                "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-              }
-            ],
-            "official_sources": [
-              {
-                "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-                "title": "Samsung 대한민국",
-                "excerpt": "운영체제 Windows 11 Home 프로세서/칩셋 CPU Intel® Core™ Ultra 5 Processor 226V (P-core Up to 4.5 GHz 8 MB LLC Cache) 그래픽카드 Intel® Arc™ 130V GPU (8GB) 그래픽카드 타입 Shared NPU Intel® AI Boost 디스플레이 크기 40.6 cm (16.0 inch) 해상도 2880 x 1800 (WQXGA+) 종류 Dynamic AMOLED 2X, Anti-Reflective 터치스크린 Yes 메모리/저장장치 메모리 16 GB 메모리 타입 LPDDR5X (On Package) 저장장치 용량 512 GB 저장장치 타입 NVMe SSD 총 저장장치 슬롯 2 기본 사양 색상 Gray 형태 Laptop 멀티미디어 스피커 Quad Speakers 스마트 앰프 Yes 사운드 효과 Dolby Atmos® 마이크 Dual Array Digital Mic 카메라 2.0 MP 네트워크 Wi-Fi Wi-Fi 7, 802.11 be 2x2 블루투스 버전 Bluetooth v5.4 포트 HDMI 1 HDMI 2.1 (Supports 8K@60Hz, 5K@120Hz) USB 2 Thunderbolt™ 4, 1 USB3.2 외장 스토리지 지원 MicroSD 이어잭 1 Headphone out/Mic-in Combo 입력장치 키보드 Pro keyboard with Numeric key 키보드 백라이트 Yes 터치패드 Clickpad 보안기능 TPM Yes 지문인식 Yes 배터리 배터리 용량 (Typical)(Wh) 76.1 전원 충전기 65W USB Type-C Adapter 소비전력 (kWh) 3.8 정격 전압 100 ~ 240 V 외관 사양 크기 (가로x세로x두께)(mm) 355.4 x 250.4 x 12.5 무게 (kg) 1.56 센서 Ambient Light Sensor 서비스 SmartThings 지원 Yes",
-                "sha256": "70a7c8dc721f8a2baefe58a4649f332c320eb5a6506cb25c8d0be33c895177cc",
-                "checked_on": "2026-10-11"
-              },
-              {
-                "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-                "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GU7BK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-                "excerpt": "제품 상세 스펙 스펙 요약 정보 OS : Windows 11 Home (64 비트) CPU : 인텔® 코어™ Ultra 7 프로세서 258V 무게 (g) : 약 1,239 제품 스펙 더보기 운영체제 OS Windows 11 Home (64 비트) 디스플레이 화면크기 (cm) 40.6 해상도 WQXGA (2560 x 1600) 패널형태 IPS LCD 디스플레이 (Anti glare / ~144Hz VRR) 프로세서 CPU 인텔® 코어™ Ultra 7 프로세서 258V CPU 클럭 (GHz) 2.2 * CPU 클럭은 P 코어 기준입니다. 터보부스트 (GHz) 4.8 * CPU 클럭은 P 코어 기준입니다. L3 캐시 메모리 (MB) 12 메인메모리 메모리 용량 (GB) 32 메모리 종류 LPDDR5x (온보드) 멀티미디어 그래픽 Intel ARC 140V GPU 그래픽메모리 내장형 오디오&사운드 Dolby Atmos, Stereo speakers, Smart Amp (Max 5.0 W x 2) 웹캠 FHD IR 웹캠 (듀얼 마이크) 저장장치 SSD 1 TB (NVMe™) + 확장 슬롯 1 (PCIe 4.0 x 4) 입력장치 키보드 백라이트 키보드 풀 사이즈 97키 (3열 숫자 전용키 포함) 터치패드 터치패드 파워 AC (W) 65 배터리 (Wh) 77 (리튬 이온 배터리) 크기/무게 크기 (WxH, mm) 358 x 252 두께 (mm) 12.4 ~ 12.8 무게 (g) 약 1,239 네트워크 무선랜 Intel® Wi-Fi7 BE201 (Wi-Fi 7, 2x2, BT Combo) 블루투스 O (5.4) 유선랜 Gigabit (랜젠더 별매) 기타 Port USB Type-A x 2 (USB 3.2 Gen 1x1), USB Type-C x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) HDMI, 헤드폰 출력 PC 카드 슬롯 X 제공 S/W My gram LG Update & Renew LG Easy Guide LG On Screen Display LG Glance by Mirametrix LG gram Link gram chat On-Device Dolby Atmos Microsoft 365 (30 Days Trial) McAfee Live Safe (30 Days Trial) Google Quick Share 색상 메타 그레이 보안시스템 얼굴인식 (Face Login) 액세서리 X 노트북 가방(파우치) X 비고 * 제품 사양은 성능 향상을 위해 사전 예고없이 변경될 수 있습니다. * 무게는 제품 구성 및 제조 여건에 따라 달라질 수 있습니다. * USB PD 기능 지원 모델입니다. 기본정보 품명 및 모델명 노트북 컴퓨터 (16Z90TS) KC 인증 필 유무 R-R-LGE-16Z90TS(전자파 적합등록) ZU10899-23006(전기용품 안전확인) KC인증조회 공정거래위원회(소비자24)제공 인증정보 조회 정격전압 (V/Hz) 100-240 V~ 50/60 Hz 동일 모델의 출시년월 2025년 1월 제조자 LG전자(주) 제조국 중국 품질보증기준 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제 16조) 에 따라 보상 가능 A/S 책임자와 전화번호 LG전자서비스센터 / 1544-7777 인쇄하기 그램 AI 경험 아이콘 입니다. 프로의 멀티 AI gram AI 경험 CPU 아이콘 입니다. AI를 위해 탄생한 Intel® Core™ Ultra 200V 시리즈 프로세서 배터리 아이콘 입니다. AI를 만나 오래 지속되는 배터리 초경량 그램 아이콘 입니다. 더 크게, 여전히 가볍게 초경량 gram * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * Copilot+ PC 의 일부 S/W 및 기능은 향후 업데이트를 통해 지원할 예정입니다. 지원 시기는 기기 및 지역에 따라 다를 수 있습니다. * 자세한 내용은 https://aka.ms/copilotpluspc 를 참조하시기 바랍니다. 영상 일시정지 해설 한 사람이 테이블 위에 놓인 흰색 노트북을 열고 있습니다. 테이블 위에는 검은색 컵과 작은 흰색 물체가 놓여 있으며, 배경은 흐릿하게 처리된 실내 공간입니다. 이어서 화면은 보라색과 흰색의 빛이 나선형으로 회전하는 장면으로 전환됩니다. 빛의 선들이 화면 중앙을 향해 소용돌이치며, 밝은 빛이 화면 왼쪽에서 오른쪽으로 퍼져 나갑니다. 이 장면에서는 intel CORE ULTRA라는 문구가 적힌 칩이 공중에 떠 있는 모습이 보이며, 칩의 표면은 어두운 색조를 띠고 있습니다. 다음으로, 중앙에 위치한 컴퓨터 프로세서의 표면에도 intel CORE ULTRA라는 문구가 적혀 있고, 프로세서는 회로 기판 위에 장착되어 있습니다. 주변에는 복잡한 회로 패턴이 보이며, 전체적인 색상은 보라색 계열입니다. 이후 노트북 화면이 중앙에 위치하며, 화면에는 AI 아프리카에 프로젝트라는 문구가 보입니다. 주변에는 다양한 디지털 이미지와 텍스트가 떠 있으며, 왼쪽 상단에는 문서 파일과 Algorithm이라는 단어가, 오른쪽 상단에는 BIG DATA라는 텍스트가 포함된 이미지가 있습니다. 마지막으로, 노트북 화면에는 AI 아틀리에 프로젝트라는 문구가 중앙에 표시되어 있습니다. 화면 주위에는 다양한 그래픽과 텍스트가 떠다니고 있으며, 왼쪽 상단에는 원형 그래프와 문서가, 오른쪽 상단에는 복잡한 회로도와 BIG DATA라는 텍스트가 있는 구체가 보입니다. 오른쪽 하단에는 그래프와 예술 작품 이미지가 있으며, 그 옆에는 텍스트가 나열되어 있습니다. 전체적으로 다양한 데이터와 시각적 요소들이 노트북을 중심으로 배치되어 있습니다. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 영상이며, 제품별 색상 및 스펙은 다를 수 있습니다. * gram AI란? 25년 gram 제품에 탑재된 On-Device, Cloud AI 서비스 입니다. 이전 다음 기억보다 정확한 기록 AI가 대신해요. 어제 본 유튜브 아무리 찾아도 안보일 때, 삭제한 초안이 간절할 때, 타임 트래블로 사라진 아이디어를 붙잡아 보세요. PC 화면은 이미지로, 내가 본 영상 속 음성은 텍스트로 기억해 gram chat에서 키워드만 입력하면 AI가 PC 화면을 빠르게 찾아주죠. 영상 일시정지 해설 기억보다 정확한 기록 AI가 대신해요. 노트북의 화면과 흰색 키보드가 보이는 장면입니다. 화면 하단에는 여러 아이콘이 정렬되어 있으며, 화면의 주된 색상은 파란색과 보라색 계열입니다. 노트북은 열려 있는 상태로, 키보드 중앙에 전원 버튼이 위치해 있습니다. 화면에는 다양한 색상의 예술 작품들이 전시된 갤러리 이미지가 보이며, 중앙에는 여러 사람이 작품을 감상하고 있는 모습이 보입니다. 상단에는 Time Travel이라는 텍스트가 있고, 그 아래에는 250117. AI 아트워크 타임트래블 pptrk라는 문구가 있습니다. 화면의 여러 부분에는 Rainbow in Wave, Colorful Flowers, Colorful Pattern 등의 텍스트가 포함된 작은 창들이 나타나며, 각 창에는 작품의 이름과 크기 정보가 표시되어 있습니다. 작품들은 주로 추상적이고 다채로운 색상을 특징으로 합니다. 찾는 일은 걱정말고 창작에만 몰두하세요. 업무에 더 집중할 수 있도록 번거로운 일은 gram AI에 맡겨주세요. 정리 안된 폴더를 헤맬 필요 없이 파일 속 텍스트는 물론 이미지 속 텍스트까지 빠르게 찾아줘요. 영상 일시정지 해설 찾는 일은 걱정말고 창작에만 몰두하세요. 노트북의 모니터가 화면 중앙에 위치해 있으며, 검색창에 한 달간 모은 AI 인테라는 문구가 입력되어 있습니다. 검색창은 보라색 테두리로 강조되어 있고, 오른쪽에는 돋보기 모양의 검색 아이콘이 있습니다. 화면 하단에는 윈도우 작업 표시줄이 보이며, 여러 개의 아이콘이 나열되어 있습니다. 키보드의 일부가 화면 하단에 보이며, 손가락이 키보드를 누르고 있는 모습이 나타납니다.<br/><br/>이어서 화면에는 노트북의 디스플레이가 보이며, 검색창에 한 달간 모은 AI 인터랙티브 art라는 문구가 입력되어 있습니다. 검색창과 검색 아이콘의 위치와 강조는 이전과 동일합니다. 화면 오른쪽 아래에는 손이 키보드를 사용하고 있는 모습이 보입니다.<br/><br/>다음 장면에서는 노트북 화면에 채팅 인터페이스가 표시되며, 상단에는 AI와의 대화라는 제목이 보입니다. 그 아래에는 사용자가 입력한 질문과 AI의 응답이 나타나 있습니다. 하단에는 할 일로 온 AI 인터뷰어는 AI가 자료라는 문구가 포함된 버튼이 있습니다. 배경은 흐릿하게 처리되어 있으며, 사람들의 실루엣이 보입니다.<br/><br/>마지막으로, 테이블 위에 놓인 전자 기기와 그 위로 펼쳐진 디지털 인터페이스가 보입니다. 화면 중앙에는 여러 개의 이미지와 텍스트가 겹쳐져 있으며, 이는 홀로그램처럼 보입니다. 화면 왼쪽에는 텍스트가 포함된 카드 형태의 요소가 있고, 오른쪽에는 다양한 색상의 그래픽이 나타나 있습니다. 테이블 위에는 손이 보이며, 이는 기기를 조작하는 듯한 모습입니다. 주변은 어두운 색조로 되어 있어 디\n[중간 본문 생략]\n통화 기록, 즐겨찾기, 연락처 등의 메뉴가 나열되어 있고, 중앙에는 이름과 시간 정보가 포함된 통화 목록이 있습니다. 오른쪽에는 프로필 이미지와 함께 발신이라는 텍스트가 보이며, 아래쪽에는 빨간색과 녹색 버튼이 위치해 있습니다. 화면 왼쪽 외부에는 이제 통화도 gram에서 바로라는 문구가 검은색 글씨로 적혀 있습니다. 통화 기록 목록에는 각 항목에 전화번호와 통화 아이콘이 있으며, 오른쪽에는 통화 중인 사람의 프로필 이미지와 이름이 나타나 있습니다. 하단의 녹색과 빨간색 버튼은 각각 통화 수락과 종료를 나타내는 아이콘으로 배치되어 있습니다. 영상 일시정지 해설 노트북이 화면 중앙에 배치되어 있으며, 노트북 화면에는 한 여성이 노트북을 들고 있는 모습이 보입니다. 여성은 야외 테라스에 서 있고, 뒤로는 난간과 나무가 보입니다. 노트북 왼쪽에는 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 검은색 글씨로 적혀 있습니다. 이 문구는 노트북의 기능을 설명하는 것으로 보입니다. 이어서, 노트북 화면에는 한 사람이 노트북을 바라보고 있는 모습이 나타나며, 노트북의 뒷면에는 gram이라는 로고가 표시되어 있습니다. 배경에는 나무와 하늘이 보입니다. 같은 문구가 화면 왼쪽에 반복적으로 나타나며, 노트북의 기능을 강조합니다. 다음 장면에서는 노트북 화면에 두 사람의 영상 통화 화면이 표시됩니다. 왼쪽에는 책장이 배경인 사람, 오른쪽에는 밝은 배경의 사람이 있으며, 화면 하단에는 통화 관련 아이콘들이 보입니다. 노트북 옆에는 손이 화면을 가리키고 있고, 나무 테이블 위에 놓여 있습니다. 또한, 노트북 화면에는 야외에서 스마트폰을 들고 있는 여성의 모습이 보이며, 배경에는 산과 하늘이 있습니다. 긴 머리의 인물이 스마트폰을 들고 사진을 찍는 듯한 자세를 취하고 있는 장면도 나타납니다. 모든 장면에서 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 노트북 왼쪽에 적혀 있어, 제품의 특정 기능을 지속적으로 강조하고 있습니다. 슬라이드 일시 정지 이전 다음 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * LG gram Link : 최초 1회 연결 시에는 gram 노트북과 연결하고자 하는 대상인 모바일 기기가 같은 네트워크망에 있어야 합니다. * 모바일 기기에 LG gram Link 앱 설치가 필요하며, 최소사양은 iOS 16.4이상, 안드로이드 P OS 이상이어야 합니다. * 파일 공유 기능은 블루투스 기능을 활용하여 네트워크 연결 없이도 사용이 가능합니다. 파일 공유를 제외한 모든 기능은 노트북과 모바일 기기가 동일한 네트워크에 연결된 상태에서 사용이 가능합니다. 원하는 기능을 한곳에서 My gram 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. 함께할 때 더욱 빛나는 엑스붐 버즈 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 노트북 단독 구매 시 엑스붐 버즈는 별도 구매 제품이며, 상세 내용은 엑스붐 버즈 제품 상세 페이지를 확인해 주세요. 원하는 기능을 한곳에서 My gram 다양한 LG 소프트웨어를 한 곳에서 만나는 My gram gram chat On-Device, LG gram Link, gram 꿀팁 그리고 간편 설정 등 다양한 기능을 My gram에서 만나보세요. * 소비자의 이해를 돕기 위해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 함께할 때 더욱 빛나는 엑스붐 버즈 gram의 가장 좋은 친구, 엑스붐 버즈 엑스붐 버즈가 근처에 있으면 gram 속 팝업 이미지로 현재 연결 상태, 연결 여부를 손쉽게 확인할 수 있습니다. 모바일을 따로 확인할 필요 없이 gram 안에서 액티브 노이즈 캔슬링, EQ 세팅을 바로 설정할 수 있습니다. * 엑스붐 전용 앱이 gram에 내장되어 있어, gram으로 엑스붐 설정이 가능합니다. * PC에 이어버드는 동봉되어 있지 않으며 별도 구매가 필요합니다. * 25년도 gram 신제품, 엑스붐 버즈 신제품에 해당하는 내용입니다. 적용 모델에 제한이 있을 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 A부터 C까지 필요한 건 다 갖췄죠 슬림한 바디에 다양한 포트로 별도의 USB 허브가 필요 없는 높은 호환성을 자랑하죠. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 포트 상세 설명 1) USB-A x 2 포트 (USB 3.2 Gen 1x1) 2) 헤드폰 포트 3) HDMI 포트 4) USB-C 포트 x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) - USB Type-C 포트에 Thunderbolt™ 기기가 연결되면 이를 화면에 아이콘으로 알려줍니다. 25년 LG gram 한눈에 비교하기 25년 LG gram의 라인별 특장점, 핵심 기능, 주요 스펙 등을 아래 표로 확인하고 나의 라이프스타일에 맞는 노트북을 선택해 보세요. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다. * 상세 제품 이미지는 이해를 돕기 위한 이미지로 실제품 컬러와 다를 수 있습니다.",
-                "sha256": "30f1762dce538946988a7f84fb27e44e543916d51c455457a2764b6e15178a05",
-                "checked_on": "2026-10-11"
-              },
-              {
-                "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-                "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GS5LK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-                "excerpt": "제품 상세 스펙 스펙 요약 정보 OS : Windows 11 Home (64 비트) CPU : 인텔® 코어™ Ultra 5 프로세서 226V 무게 (g) : 약 1,199 제품 스펙 더보기 운영체제 OS Windows 11 Home (64 비트) 디스플레이 화면크기 (cm) 40.6 해상도 WQXGA (2560 x 1600) 패널형태 IPS LCD 디스플레이 (Anti glare / ~144Hz VRR) 프로세서 CPU 인텔® 코어™ Ultra 5 프로세서 226V CPU 클럭 (GHz) 2.1 * CPU 클럭은 P 코어 기준입니다. 터보부스트 (GHz) 4.5 * CPU 클럭은 P 코어 기준입니다. L3 캐시 메모리 (MB) 12 메인메모리 메모리 용량 (GB) 16 메모리 종류 LPDDR5x (온보드) 멀티미디어 그래픽 Intel ARC 130V GPU 그래픽메모리 내장형 오디오&사운드 Dolby Atmos, Stereo speakers, Smart Amp (Max 5.0 W x 2) 웹캠 FHD IR 웹캠 (듀얼 마이크) 저장장치 SSD 512 GB (NVMe™) + 확장 슬롯 1 (PCIe 4.0 x 4) 입력장치 키보드 백라이트 키보드 풀 사이즈 97키 (3열 숫자 전용키 포함) 터치패드 터치패드 파워 AC (W) 65 배터리 (Wh) 77 (리튬 이온 배터리) 크기/무게 크기 (WxH, mm) 358 x 252 두께 (mm) 12.4 ~ 12.8 무게 (g) 약 1,199 네트워크 무선랜 Intel® Wi-Fi7 BE201 (Wi-Fi 7, 2x2, BT Combo) 블루투스 O (5.4) 유선랜 Gigabit (랜젠더 별매) 기타 Port USB Type-A x 2 (USB 3.2 Gen 1x1), USB Type-C x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) HDMI, 헤드폰 출력 PC 카드 슬롯 X 제공 S/W My gram LG Update & Renew LG Easy Guide LG On Screen Display LG Glance by Mirametrix LG gram Link gram chat On-Device Dolby Atmos Microsoft 365 (30 Days Trial) McAfee Live Safe (30 Days Trial) Google Quick Share 색상 에센스 화이트 보안시스템 얼굴인식 (Face Login) 액세서리 X 노트북 가방(파우치) X 비고 * 제품 사양은 성능 향상을 위해 사전 예고없이 변경될 수 있습니다. * 무게는 제품 구성 및 제조 여건에 따라 달라질 수 있습니다. * USB PD 기능 지원 모델입니다. 기본정보 품명 및 모델명 노트북 컴퓨터 (16Z90TS) KC 인증 필 유무 R-R-LGE-16Z90TS(전자파 적합등록) ZU10899-23006(전기용품 안전확인) KC인증조회 공정거래위원회(소비자24)제공 인증정보 조회 정격전압 (V/Hz) 100-240 V~ 50/60 Hz 동일 모델의 출시년월 2025년 2월 제조자 LG전자(주) 제조국 중국 품질보증기준 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제 16조) 에 따라 보상 가능 A/S 책임자와 전화번호 LG전자서비스센터 / 1544-7777 인쇄하기 그램 AI 경험 아이콘 입니다. 프로의 멀티 AI gram AI 경험 CPU 아이콘 입니다. AI를 위해 탄생한 Intel® Core™ Ultra 200V 시리즈 프로세서 배터리 아이콘 입니다. AI를 만나 오래 지속되는 배터리 초경량 그램 아이콘 입니다. 더 크게, 여전히 가볍게 초경량 gram * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 에센스 화이트, 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * Copilot+ PC 의 일부 S/W 및 기능은 향후 업데이트를 통해 지원할 예정입니다. 지원 시기는 기기 및 지역에 따라 다를 수 있습니다. * 자세한 내용은 https://aka.ms/copilotpluspc 를 참조하시기 바랍니다. 영상 일시정지 해설 한 사람이 테이블 위에 놓인 흰색 노트북을 열고 있습니다. 테이블 위에는 검은색 컵과 작은 흰색 물체가 놓여 있으며, 배경은 흐릿하게 처리된 실내 공간입니다. 이어서 화면은 보라색과 흰색의 빛이 나선형으로 회전하는 장면으로 전환됩니다. 빛의 선들이 화면 중앙을 향해 소용돌이치며, 밝은 빛이 화면 왼쪽에서 오른쪽으로 퍼져 나갑니다. 이 장면에서는 intel CORE ULTRA라는 문구가 적힌 칩이 공중에 떠 있는 모습이 보이며, 칩의 표면은 어두운 색조를 띠고 있습니다. 다음으로, 중앙에 위치한 컴퓨터 프로세서의 표면에도 intel CORE ULTRA라는 문구가 적혀 있고, 프로세서는 회로 기판 위에 장착되어 있습니다. 주변에는 복잡한 회로 패턴이 보이며, 전체적인 색상은 보라색 계열입니다. 이후 노트북 화면이 중앙에 위치하며, 화면에는 AI 아프리카에 프로젝트라는 문구가 보입니다. 주변에는 다양한 디지털 이미지와 텍스트가 떠 있으며, 왼쪽 상단에는 문서 파일과 Algorithm이라는 단어가, 오른쪽 상단에는 BIG DATA라는 텍스트가 포함된 이미지가 있습니다. 마지막으로, 노트북 화면에는 AI 아틀리에 프로젝트라는 문구가 중앙에 표시되어 있습니다. 화면 주위에는 다양한 그래픽과 텍스트가 떠다니고 있으며, 왼쪽 상단에는 원형 그래프와 문서가, 오른쪽 상단에는 복잡한 회로도와 BIG DATA라는 텍스트가 있는 구체가 보입니다. 오른쪽 하단에는 그래프와 예술 작품 이미지가 있으며, 그 옆에는 텍스트가 나열되어 있습니다. 전체적으로 다양한 데이터와 시각적 요소들이 노트북을 중심으로 배치되어 있습니다. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 영상이며, 제품별 색상 및 스펙은 다를 수 있습니다. * gram AI란? 25년 gram 제품에 탑재된 On-Device, Cloud AI 서비스 입니다. 이전 다음 기억보다 정확한 기록 AI가 대신해요. 어제 본 유튜브 아무리 찾아도 안보일 때, 삭제한 초안이 간절할 때, 타임 트래블로 사라진 아이디어를 붙잡아 보세요. PC 화면은 이미지로, 내가 본 영상 속 음성은 텍스트로 기억해 gram chat에서 키워드만 입력하면 AI가 PC 화면을 빠르게 찾아주죠. 영상 일시정지 해설 기억보다 정확한 기록 AI가 대신해요. 노트북의 화면과 흰색 키보드가 보이는 장면입니다. 화면 하단에는 여러 아이콘이 정렬되어 있으며, 화면의 주된 색상은 파란색과 보라색 계열입니다. 노트북은 열려 있는 상태로, 키보드 중앙에 전원 버튼이 위치해 있습니다. 화면에는 다양한 색상의 예술 작품들이 전시된 갤러리 이미지가 보이며, 중앙에는 여러 사람이 작품을 감상하고 있는 모습이 보입니다. 상단에는 Time Travel이라는 텍스트가 있고, 그 아래에는 250117. AI 아트워크 타임트래블 pptrk라는 문구가 있습니다. 화면의 여러 부분에는 Rainbow in Wave, Colorful Flowers, Colorful Pattern 등의 텍스트가 포함된 작은 창들이 나타나며, 각 창에는 작품의 이름과 크기 정보가 표시되어 있습니다. 작품들은 주로 추상적이고 다채로운 색상을 특징으로 합니다. 찾는 일은 걱정말고 창작에만 몰두하세요. 업무에 더 집중할 수 있도록 번거로운 일은 gram AI에 맡겨주세요. 정리 안된 폴더를 헤맬 필요 없이 파일 속 텍스트는 물론 이미지 속 텍스트까지 빠르게 찾아줘요. 영상 일시정지 해설 찾는 일은 걱정말고 창작에만 몰두하세요. 노트북의 모니터가 화면 중앙에 위치해 있으며, 검색창에 한 달간 모은 AI 인테라는 문구가 입력되어 있습니다. 검색창은 보라색 테두리로 강조되어 있고, 오른쪽에는 돋보기 모양의 검색 아이콘이 있습니다. 화면 하단에는 윈도우 작업 표시줄이 보이며, 여러 개의 아이콘이 나열되어 있습니다. 키보드의 일부가 화면 하단에 보이며, 손가락이 키보드를 누르고 있는 모습이 나타납니다.<br/><br/>이어서 화면에는 노트북의 디스플레이가 보이며, 검색창에 한 달간 모은 AI 인터랙티브 art라는 문구가 입력되어 있습니다. 검색창과 검색 아이콘의 위치와 강조는 이전과 동일합니다. 화면 오른쪽 아래에는 손이 키보드를 사용하고 있는 모습이 보입니다.<br/><br/>다음 장면에서는 노트북 화면에 채팅 인터페이스가 표시되며, 상단에는 AI와의 대화라는 제목이 보입니다. 그 아래에는 사용자가 입력한 질문과 AI의 응답이 나타나 있습니다. 하단에는 할 일로 온 AI 인터뷰어는 AI가 자료라는 문구가 포함된 버튼이 있습니다. 배경은 흐릿하게 처리되어 있으며, 사람들의 실루엣이 보입니다.<br/><br/>마지막으로, 테이블 위에 놓인 전자 기기와 그 위로 펼쳐진 디지털 인터페이스가 보입니다. 화면 중앙에는 여러 개의 이미지와 텍스트가 겹쳐져 있으며, 이는 홀로그램처럼 보입니다. 화면 왼쪽에는 텍스트가 포함된 카드 형태의 요소가 있고, 오른쪽에는 다양한 색상의 그래픽이 나타나 있습니다. 테이블 위에는 손이 보이며, 이는 기기를 조작하는 듯한 모습입니다. 주변은 어두운\n[중간 본문 생략]\n화 기록, 즐겨찾기, 연락처 등의 메뉴가 나열되어 있고, 중앙에는 이름과 시간 정보가 포함된 통화 목록이 있습니다. 오른쪽에는 프로필 이미지와 함께 발신이라는 텍스트가 보이며, 아래쪽에는 빨간색과 녹색 버튼이 위치해 있습니다. 화면 왼쪽 외부에는 이제 통화도 gram에서 바로라는 문구가 검은색 글씨로 적혀 있습니다. 통화 기록 목록에는 각 항목에 전화번호와 통화 아이콘이 있으며, 오른쪽에는 통화 중인 사람의 프로필 이미지와 이름이 나타나 있습니다. 하단의 녹색과 빨간색 버튼은 각각 통화 수락과 종료를 나타내는 아이콘으로 배치되어 있습니다. 영상 일시정지 해설 노트북이 화면 중앙에 배치되어 있으며, 노트북 화면에는 한 여성이 노트북을 들고 있는 모습이 보입니다. 여성은 야외 테라스에 서 있고, 뒤로는 난간과 나무가 보입니다. 노트북 왼쪽에는 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 검은색 글씨로 적혀 있습니다. 이 문구는 노트북의 기능을 설명하는 것으로 보입니다. 이어서, 노트북 화면에는 한 사람이 노트북을 바라보고 있는 모습이 나타나며, 노트북의 뒷면에는 gram이라는 로고가 표시되어 있습니다. 배경에는 나무와 하늘이 보입니다. 같은 문구가 화면 왼쪽에 반복적으로 나타나며, 노트북의 기능을 강조합니다. 다음 장면에서는 노트북 화면에 두 사람의 영상 통화 화면이 표시됩니다. 왼쪽에는 책장이 배경인 사람, 오른쪽에는 밝은 배경의 사람이 있으며, 화면 하단에는 통화 관련 아이콘들이 보입니다. 노트북 옆에는 손이 화면을 가리키고 있고, 나무 테이블 위에 놓여 있습니다. 또한, 노트북 화면에는 야외에서 스마트폰을 들고 있는 여성의 모습이 보이며, 배경에는 산과 하늘이 있습니다. 긴 머리의 인물이 스마트폰을 들고 사진을 찍는 듯한 자세를 취하고 있는 장면도 나타납니다. 모든 장면에서 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 노트북 왼쪽에 적혀 있어, 제품의 특정 기능을 지속적으로 강조하고 있습니다. 슬라이드 일시 정지 이전 다음 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * LG gram Link : 최초 1회 연결 시에는 gram 노트북과 연결하고자 하는 대상인 모바일 기기가 같은 네트워크망에 있어야 합니다. * 모바일 기기에 LG gram Link 앱 설치가 필요하며, 최소사양은 iOS 16.4이상, 안드로이드 P OS 이상이어야 합니다. * 파일 공유 기능은 블루투스 기능을 활용하여 네트워크 연결 없이도 사용이 가능합니다. 파일 공유를 제외한 모든 기능은 노트북과 모바일 기기가 동일한 네트워크에 연결된 상태에서 사용이 가능합니다. 원하는 기능을 한곳에서 My gram 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. 함께할 때 더욱 빛나는 엑스붐 버즈 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 노트북 단독 구매 시 엑스붐 버즈는 별도 구매 제품이며, 상세 내용은 엑스붐 버즈 제품 상세 페이지를 확인해 주세요. 원하는 기능을 한곳에서 My gram 다양한 LG 소프트웨어를 한 곳에서 만나는 My gram gram chat On-Device, LG gram Link, gram 꿀팁 그리고 간편 설정 등 다양한 기능을 My gram에서 만나보세요. * 소비자의 이해를 돕기 위해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 함께할 때 더욱 빛나는 엑스붐 버즈 gram의 가장 좋은 친구, 엑스붐 버즈 엑스붐 버즈가 근처에 있으면 gram 속 팝업 이미지로 현재 연결 상태, 연결 여부를 손쉽게 확인할 수 있습니다. 모바일을 따로 확인할 필요 없이 gram 안에서 액티브 노이즈 캔슬링, EQ 세팅을 바로 설정할 수 있습니다. * 엑스붐 전용 앱이 gram에 내장되어 있어, gram으로 엑스붐 설정이 가능합니다. * PC에 이어버드는 동봉되어 있지 않으며 별도 구매가 필요합니다. * 25년도 gram 신제품, 엑스붐 버즈 신제품에 해당하는 내용입니다. 적용 모델에 제한이 있을 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 A부터 C까지 필요한 건 다 갖췄죠 슬림한 바디에 다양한 포트로 별도의 USB 허브가 필요 없는 높은 호환성을 자랑하죠. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 포트 상세 설명 1) USB-A x 2 포트 (USB 3.2 Gen 1x1) 2) 헤드폰 포트 3) HDMI 포트 4) USB-C 포트 x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) - USB Type-C 포트에 Thunderbolt™ 기기가 연결되면 이를 화면에 아이콘으로 알려줍니다. 25년 LG gram 한눈에 비교하기 25년 LG gram의 라인별 특장점, 핵심 기능, 주요 스펙 등을 아래 표로 확인하고 나의 라이프스타일에 맞는 노트북을 선택해 보세요. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다. * 상세 제품 이미지는 이해를 돕기 위한 이미지로 실제품 컬러와 다를 수 있습니다.",
-                "sha256": "0273851398b309208d0f0e1ad96b9f24e0b44592087a4f1625f46802ae7d4bdb",
-                "checked_on": "2026-10-11"
-              }
-            ]
-          },
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "source_missing_detail"
-          },
-          "source_recovery": {
-            "attempted": true,
-            "initial_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.lge.co.kr/upload/PC_HTML/P430_P530_UG_110427/help/ko-KR/ch06_s03_specification.html",
-                  "title": "제품 규격 및 사양",
-                  "excerpt_chars": 2176
-                },
-                {
-                  "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
-                  "title": "소비자시대 웹진",
-                  "excerpt_chars": 3931
-                },
-                {
-                  "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989",
-                  "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-                  "excerpt_chars": 8000
-                }
-              ],
-              "analysis_status": "supported_false",
-              "review_inputs": {
-                "keyword": "노트북메모리",
-                "category": "리뷰",
-                "checked_at": "2026-10-11T03:54:13.624333+00:00",
-                "evidence_mode": "serp",
-                "search_results": [
-                  {
-                    "url": "https://www.intel.co.kr/content/www/kr/ko/support/articles/000007393/processors.html",
-                    "domain": "www.intel.co.kr",
-                    "title": "인텔® 노트북(모바일) 프로세서를 지원하는 메모리 유형",
-                    "snippet": "인텔® 모바일 프로세서(노트북 프로세서)를 지원하는 메모리 유형은 제품 사양 페이지(ark.intel.com)에서 확인할 수 있습니다. ... 참고 | 노트북, 노트북, 2-in-1 및 올인원에 지원되는 메모리와 관련된 질문이"
-                  },
-                  {
-                    "url": "https://learn.microsoft.com/ko-kr/windows-hardware/drivers/display/examples-of-graphics-memory-reporting",
-                    "domain": "learn.microsoft.com",
-                    "title": "그래픽 메모리 보고의 예 - Windows drivers | Microsoft Learn",
-                    "snippet": "다음 스크린샷에서는 Intel Iris 불연속 그래픽 어댑터가 있는 Windows 11을 실행하는 Surface 노트북 컴퓨터의 계산된 그래픽 메모리 번호를 보여 줍니다. ... Image: Surface 노트북 컴퓨터에서"
-                  },
-                  {
-                    "url": "https://support.hp.com/kr-ko/document/c00848900",
-                    "domain": "support.hp.com",
-                    "title": "HP 노트북 PC - 추가 메모리 설치를 통한 성능 향상 | HP® 지원",
-                    "snippet": "추가 또는 교체용 메모리를 주문하기 전에 사용하는 노트북의 현재 메모리 구성 및 최대 메모리 구성을 파악하려면 다음 절차를 수행합니다. ... 노트북 모델에 따라 필요한 메모리"
-                  },
-                  {
-                    "url": "https://www.corsair.com/lm/ko/c/memory/laptop-ram",
-                    "domain": "www.corsair.com",
-                    "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-                    "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-                  },
-                  {
-                    "url": "https://support.hp.com/kr-ko/document/c01079541",
-                    "domain": "support.hp.com",
-                    "title": "HP 노트북 PC - 주 메모리 제거 및 교체 절차 | HP® 지원",
-                    "snippet": "이 문서는 HP Compaq 모델 5400c, 6500b, 6700b, 6700s 시리즈 노트북 PC에서의 주 메모리 제거 및 교체 방법을 설명합니다. ... 키보드를 평평하게 누르고 4개의 플라스틱"
-                  },
-                  {
-                    "url": "https://download.lenovo.com/pccbbs/mobiles_pdf/p16_gen1_ug_ko.pdf",
-                    "domain": "download.lenovo.com",
-                    "title": "메모리 모듈\n\n<visual_element id=\"e1\">\n상단 설치 절차 그림: 노트북",
-                    "snippet": "상단 설치 절차 그림: 노트북 내부의 메모리 모듈을 교체하는 3단계 확대도와 본체 내부 위치 표시가 있음. ... 아래의 노트북 본체 그림에는 메모리 모듈 위치가 빨간"
-                  },
-                  {
-                    "url": "https://prod.danawa.com/info/?pcode=105474137",
-                    "domain": "prod.danawa.com",
-                    "title": "크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교",
-                    "snippet": "# 크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 상품비교"
-                  },
-                  {
-                    "url": "https://support.hp.com/kr-ko/document/c02490404",
-                    "domain": "support.hp.com",
-                    "title": "컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 | HP® 지원",
-                    "snippet": "# 컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 ... 이 문서는 컴팩 621 노트북 PC에서 메모리 모듈을 제거하고 교체하는 방법을 설명합니다."
-                  },
-                  {
-                    "url": "https://prod.danawa.com/info/?pcode=106991672",
-                    "domain": "prod.danawa.com",
-                    "title": "크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교",
-                    "snippet": "# 크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교"
-                  },
-                  {
-                    "url": "https://www.corsair.com/kr/ko/c/memory/laptop-ram?filter-tested-speed-%28up-to%29=1066",
-                    "domain": "www.corsair.com",
-                    "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-                    "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-                  }
-                ],
-                "official_sources": [
-                  {
-                    "url": "https://www.lge.co.kr/upload/PC_HTML/P430_P530_UG_110427/help/ko-KR/ch06_s03_specification.html",
-                    "title": "제품 규격 및 사양",
-                    "excerpt": "부록 HOME > 부록 > 제품 규격 및 사양 제품 규격 및 사양 노트북 사양 디스플레이 35.5 cm (14 inch) LED TFT 컬러 LCD 또는 39.5\ncm (15.6 inch) LED TFT 컬러 LCD CPU Intel ®Core™ i7 / i5 / i3 processor CPU는 모델에 따라 다르며, 사용자가 임의로 교체할 수 없습니다. 그래픽스 NVIDIA® Geforce® GT 520M (NVIDIA® Optimus™ Technology ) 또는 Intel® HD Graphics 3000(Dynamic Video Memory Technology) 대용량 그래픽 메모리를 필요로 하는 3D 그래픽 처리 시에는 시스템 메모리 일부를 동적으로 할당해서 사용하며,\n시스템 메모리 용량에 따라 할당되는 메모리 용량이 다릅니다. 메인 메모리 DDR3 SODIMM 각 슬롯당 1024 MB 에서 4096 MB까지 지원 가능하며 메인보드의 최대 지원 용량은 8 GB(8192\nMB)입니다. 4 GB 이상의 메모리 용량은 64 bit O/S에서만 지원되며, Windows® XP, 32 bit Windows®7 O/S 에서는\nO/S Spec상 4GB 이상을 지원하지 않습니다. 메인보드 칩셋 Intel HM65 하드 디스크 6.35 cm(2.5 inch) SATA 하드 디스크 드라이브 블루투스 블루투스 3.0 + HS 블루투스장치와 무선 랜을 동시 접속하여 사용할\n경우 속도가 저하될 수 있습니다. 블루투스 3.0을 사용하기 위해서는 연결하려는 장치가 블루투스 3.0을 지원해야합니다. 무선랜 Ralink RT3090BC4 (802.11bgn,\nWiFi / Bluetooth combo card) 또는 Intel® 11230BNHMW (802.11bgn, WiFi\n/ Bluetooth combo card) 제작자 및 설치자는 해당 무선설비가 전파혼신\n가능성이 있으므로 인명안전과 관련된 서비스는 할 수 없습니다. 웹캠 1.3 M / HD 또는 HD 웹캠 랜 Gigabit Ethernet 제품 중량 P430 Series : 약 1.94 kg (6cell\n배터리, ODD 포함) P530 Series : 약 2.2kg (6cell 배터리, ODD 포함) 제품 중량은 모델에 따라 다릅니다. 배터리 중량 320g (6cell) 디스플레이, CPU, 그래픽스, 하드 디스크, 블루투스, 무선 랜, 웹캠 종류 및 사양은 모델에\n따라 다르며, 사용자가 임의로 교체할 수 없습니다. 전원공급기 및 허용환경 AC 어댑터 (Free Voltage) 전원용량: 65 W / 90 W 입력: 교류 100 V 에서 240\nV, 1.5~20 A 50 / 60 Hz 출력: 직류 19 V 3.42 A(65 W) 또는 직류\n19 V 4.74 A(90 W) 배터리(Li-Ion) 정격용량: 11.1 V 또는 10.8 V 충전시간: 상온(10°C\n에서 40°C), Power off시 - 3시간 미만 (모델에 따라 충전시간의 차이가 있을 수 있습니다.) 0°C 이하에서는 충전이 되지 않습니다. 위의 온도는 배터리 팩 내부의 온도이므로\n실제 주위 온도와 차이가 있을 수 있습니다. 사용 및 보관 환경조건 동작 온도: 10°C 에서 35°C 동작 습도:\n20 % RH 에서 80 % RH 보관 온도: -10°C 에서 60°C 보관 습도: 10 % RH\n에서 80 % RH 소비전력(P530 Series) 동작상태 약 22 W 동영상 미디어 구동 시 대기상태 (Idle state) 약 7 W Display off 시 절전모드 (Sleep Mode) 1 W 이하 S3(Suspend) 시 오프모드 (Standby(off) Mode) 0.5 W 이하 시스템 종료 시 소비전력(P430 Series) 동작상태 약 21W 동영상 미디어 구동 시 대기상태 (Idle state) 약 7 W Display off 시 절전모드 (Sleep Mode) 1 W 이하 S3(Suspend) 시 오프모드 (Standby(off) Mode) 0.5 W 이하 시스템 종료 시 상기 소비전력은 배터리가 완전히  충전된 상태에서의 조건입니다. 동작상태, 대기상태,\n절전모드, 오프모드의 소비전력은 사용프로그램, 제품사양 및 아답터 종류에 따라 달라 질 수 있습니다. 전원이\n연결된 상태에서는 시스템이 꺼지더라도 약간의 전력 소비가 발생합니다. 시스템의 전원공급을 완전히 차단하기 위해서는 전원코드를\n전원콘센트에서 분리하여야 합니다.",
-                    "sha256": "75c00fc053a4c76f6ad6916a2d3de84ded03363b49db2c49dd3e26be19f01ed0",
-                    "checked_on": "2026-10-11"
-                  },
-                  {
-                    "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
-                    "title": "소비자시대 웹진",
-                    "excerpt": "상품테스트 노트북 품질비교! 휴대성 · 구동속도 등 차이 있어 글 · 백승일 팀장, 민태홍 부연구위원  <스마트제품시험국 디지털정보통신팀> 노트북은 현대인이 직장과 일상에서 스마트폰만큼 자주 사용하는 전자기기 중 하나입니다. 카페, 공유 오피스 등 콘센트가 마련된 공간이 많아지고 공공 와이파이가 널리 보급되면서, 노트북을 구매하려는 소비자도 늘고 있는데요. 한국소비자원은 소비자의 제품 선택에 도움을 드리고자 2025년 출시된 인기 노트북 5개 제품의 품질과 안전성 등을 시험·평가했습니다. 주요 테스트 항목 제품 품질 제품 특성 휴대성 안전성 테스트 제품 소비자 보유율이 높은 16인치대 디스플레이, 메모리 16GB, 저장용량 512GB, 내장그래픽 카드를 탑재한 2025년 출시 5개 제품 * 삼성전자 NT960XHA 16인치 1,999,000원 애플 A3241 15.3인치 2,190,000원 ASUS TP3607S 16인치 1,700,000원 LENOVO ThinkPad X9-15Gen1 15.3인치 2,090,000원 LG전자 16Z90TS 16인치 2,340,000원 * 최근 2년 이내 노트북을 구입 및 사용한 경험이 있는 소비자 1,000명 설문조사 결과 바탕으로 테스트 제품 선정 ** 2025년 4월 온·오프라인 구입가 기준이며, 구입처·수량 및 구입 시기에 따라 다를 수 있음. 테스트 제품 상세보기 01 제품 품질 Q 프로그램 구동속도, 양호한가? A 충전기 연결 시, 2개 제품 상대적으로 우수! 한국소비자원은 테스트 제품의 성능을 알아보고자 각 제품이 웹 페이지, 엑셀(Excel) · PDF 파일을 구동하는 데 소요되는 시간을 확인했습니다. 충전기를 연결한 상태에서는 삼성전자(NT960XHA)와 LG전자(16Z90TS) 2개 제품의 속도가 빨라 상대적으로 우수했습니다. 충전기 미연결 시에는 모든 제품이 양호한 수준을 보였습니다. 충전기 연결 시, 구동속도 ‘상대적 우수’ 제품 삼성전자 (NT960XHA) LG전자 (16Z90TS) Q 디스플레이 품질이 좋은 제품은? A 애플 제품, 디스플레이 상대적으로 우수! SDR * 환경에서 White 밝기, Black 밝기, 명암비, 감마(EOTF), 색 정확성, 색 영역을 종합적으로 고려하여 디스플레이 품질을 평가한 결과, 애플(A3241) 제품이 상대적으로 우수했습니다. \r\n\t\t\t\t\t\t\t\t\t\t삼성전자(NT960XHA)와 LENOVO(ThinkPad X9-15Gen1), LG전자(16Z90TS) 3개 제품은 양호한 수준을 보였으며 ASUS(TP3607S) 제품은 보통 수준으로 나타났습니다. * Standard Dynamic Range : ITU-R BT.709 기준에 따른 색상과 밝기를 가지는 일반적인 영상 디스플레이 품질 우수제품 시험평가 항목 애플 A3241 Q 배터리 완전 충전 후 연속 사용가능시간은? A LENOVO 제품, 13시간 2분으로 가장 길어 전 제품 모두 배터리를 완전히 충전한 뒤 기본 테마 * , 동일 밝기(350nit) 조건에서 여러 작업 ** 을 반복하는 방법으로 제품의 연속 사용가능시간(배터리 사용가능시간)을 확인한 결과, LENOVO(ThinkPad X9-15Gen1) 제품이 13시간 2분으로 가장 길었습니다. 애플(A3241) 제품은 6시간 6분, LG전자(16Z90TS) 제품은 5시간 42분으로 가장 짧아 제품 간 최대 2.3배 차이를 보였습니다. * 운영체제에 설정된 화면의 색상 구성 ** 웹브라우징, Excel(2024버전), Word(2024버전), 한글(2024버전), 동영상(10분) 재생 등 연속 사용가능시간 테스트 결과 최장시간 사용가능 제품 LENOVA (Think Pad X9-15Gen1) 13시간 2분 최단시간 사용가능 제품 LG전자 (16Z90TS) 5시간 42분 Q 네트워크 응답 속도는 준수한가? A 4개 제품이 상대적으로 우수! 실드룸 * 에서 시험용 네트워크(2.4GHz, 5GHz의 TCP ** 환경)로 연결된 노트북에 패킷 *** 의 업·다운로드를 동시에 실행하여 네트워크 속도 **** 를 종합적으로 시험·평가한 결과, 삼성전자(NT960XHA), ASUS(TP3607S), LENOVO(ThinkPad X9-15Gen1), LG전자(16Z90TS) 등 4개 제품이 상대적으로 우수했고, 애플(A3241) 제품은 보통 수준을 보였습니다. * 주변 네트워크 신호가 차단된 공간 ** Transmission Control Protocol의 약자로 데이터를 순서대로 빠짐없이 보내는 방식 *** 데이터를 모아서 보내는 단위 **** iperf3 3.18 버전 소프트웨어로 측정 네트워크 속도 테스트 결과 상대적 우수 삼성전자 NT960XHA ASUS TP3607S LENOVO ThinkPad X9-15Gen1 LG전자 16Z90TS 보통 애플 A3241 품질 테스트 결과보기 02 제품 특성 Q 제품별 구성품, 연결단자 구성은? A 제공되는 구성품과 USB-C단자, HDMI 단자 수 차이 있어 5개 테스트 제품의 연결단자구성을 확인한 결과, 모든 제품군이 USB-C단자를 2개씩 제공하고 그 외 USB-A단자, HDMI단자 등은 제공 여부 및 개수에 일부 차이가 있었습니다. \r\n\t\t\t\t\t\t\t\t\t\t구성품의 경우 모든 제품이 충전기와 충전케이블을 기본적으로 제공했으며 충전기의 용량은 65W ~ 70W 수준으로 나타났습니다. 테스트 제품 연결단자구성 브랜드 모델명 USB-C USB-A HDMI 마이크로 SD 슬롯 3.5mm 이어폰 삼성전자 NT960XHA 2개 1개 1개 1개 1개 애플 A3241 2개 0개 0개 0개 1개 ASUS TP3607S 2개 1개 1개 1개 1개 LENOVO ThinkPad X9-15Gen1 2개 1개 1개 0개 1개 LG전자 16Z90TS 2개 2개 1개 0개 1개 제품특성 테스트 결과보기 03 휴대성 Q 휴대하기 편한 제품은? A LG전자 제품이 1,220g(본체)으로 가장 가벼워 본체와 충전기를 합산한 총 제품 무게는 LG전자(16Z90TS) 제품이 1,374g으로 가장 가벼웠으며 ASUS(TP3607S) 제품은 2,085g으로 가장 무거웠습니다.\r\n \t\t\t\t\t\t\t\t\t\tLG전자(16Z90TS) 제품은 본체와 충전기 무게를 합쳐도 다른 브랜드 제품의 본체 무게보다 가벼운 것으로 나타났습니다. 제품무게 (휴대성) 테스트 결과 * 가장 가벼운 제품 LG전자 (16Z90TS) 1,374g 가장 무거운 제품 ASUS (TP3607S) 2,085g * 제품별 표기 무게는 본체와 충전기, 케이블 무게를 합산한 값임 04 안전성 Q 테스트 제품, 안전하게 사용할 수 있는가? A 정전기 내성, 접촉전류 모두 이상 없어 작동 중인 제품에 정전기를 노출시켰을 때 발생하는 오작동 여부(정전기 내성), 절연 미흡으로 인한 누전 및 감전 위험(접촉전류)을 확인한 결과, \r\n\t\t\t\t\t\t\t\t\t\t모든 제품이 이상 없었습니다. 인증번호 등 법정표시사항 역시 모든 제품이 관련 기준에 적합했습니다. 안전성 테스트 결과보기 노트북 사용 시 주의사항 사용 통풍구를 막거나 근처에 물건을 놓지 마세요. 최대한 물 또는 기타 액체류에 닿지 않도록 주의하세요. 배터리 지나치게 온도가 높거나 낮은 환경에서 제품을 사용하는 경우, 제품이 손상되거나 배터리 \r\n수명이 단축될 수 있으므로 주의하세요. 제품의 충전 프로토콜을 지원하는 충전기를 사용하세요. 충전기 연결부, 배터리 연결 단자에 이물질이 닿지 않도록 주의하세요. 보안 운영체제와 백신 프로그램은 항상 최신 상태를 유지하세요. 보안이 취약한 공용 와이파이 환경에서는 금융 거래나 로그인 등 민감한 작업을 피하세요. 이메일 첨부파일이나 웹사이트에서 출처가 불분명한 파일을 다운로드하거나 실행하지 마세요. 제품 관리 주기적으로 키보드 사이와 통풍구의 먼지를 제거하며 사용하세요. 클리너를 노트북에 직접 뿌리지 말고, 천에 묻혀서 닦으세요. 화면이나 본체를 닦을 때 전용 클리너와 극세사 천을 사용하세요. 해당 내용을 카드뉴스로 보시려면 ‘소비자24’링크를 클릭해\r\n\t\t\t\t\t\t\t\t\t주세요. 바로보기",
-                    "sha256": "79f0129c4936c61a5e3c7ebefb5cf4516c27bab338055b6582dfed652653639c",
-                    "checked_on": "2026-10-11"
-                  },
-                  {
-                    "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989",
-                    "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-                    "excerpt": "소비에 가치를! 시장에 신뢰를! 보 도 자 료 보도 일시 2025. 12. 4.(목) 12:00 <12. 5.(금) 조간> 배포일 2025. 12. 3.(수) 담당 부서 스마트제품시험국 담당자 디지털정보통신팀 [노트북 품질비교 결과] 휴대성·구동속도 등 주요 성능, 제품 간 차이 있어 ‘노트북’에 관한 품질 비교정보는 ‘소비자24(www.consumer.go.kr)’ 내 ‘비교공감’란을 통해 소비자에게 제공될 예정임. 노트북은 업무와 일상에서 자주 사용하고 구매 가격대가 높아 소비자들의 관심이 높은 제품이다. 이에 한국소비자원(원장 윤수현)이 2025년 출시된 인기 노트북 5개 제품의 품질 (휴대성·구동소요시간·디스플레이 품질·연속 사용가능시간 등) , 안전성 등을 시험평가했다. 시험평가 결과, 제품별로 휴대성 (무게) ·구동소요시간 (구동속도) ·디스플레이 품질· 연속 사용가능시간 등 주요 성능에 차이가 있어 구매 전 확인이 필요했다. <시험평가 대상 제품> 브랜드 모델명 제조국 화면크기 [인치] CPU 메모리 [GB] 저장용량 [GB] 가격* [만원] 삼성전자 NT960XHA 베트남 16 226V 16 512 199 애플 A3241 중국 15.3 M4 16 512 219 ASUS TP3607S 중국 16 226V 16 512 170 LENOVO ThinkPad X9-15Gen1 중국 15.3 226V 16 512 209 LG전자 16Z90TS 중국 16 226V 16 512 234 * 2025년 4월 온·오프라인 구입가 기준이며, 구입처·수량 및 구입 시기에 따라 상이할 수 있음. 가장 가벼운 제품은 가장 무거운 제품 대비 66% 수준 (세부내용, 8페이지) 시험평가 대상 제품의 본체 · 충전기 합산 무게는 LG전자 (16Z90TS) (TP3607S) 수준이었다. ☐ 구동소요시간, 2개 제품이 상대적으로 우수해 (세부내용, 8페이지) 일반적인 사무용 프로그램 * 의 구동소요시간 (구동속도) 을 종합적으로 평가한 결과, 충전기 연결시에는 삼성전자 (NT960XHA) 와 LG전자 (16Z90TS) 제품의 속도가 빨라 상대적으로 우수했다. 충전기 미연결시에는 전 제품이 양호한 수준이었다. ☐ 디스플레이 품질, 1개 제품이 상대적으로 우수해 (세부내용, 9페이지) SDR * 환경에서 디스플레이 품질을 종합적으로 평가 ** 한 결과, 애 플 (A3241) 제품이 상대적으로 우수했고 , 삼성전자 (NT960XHA) ·LENOVO (ThinkPad X9-15Gen1) · LG전자 (16Z90TS) 등 3개 제품은 양호, ASUS (TP3607S) 제품은 보통 수준이었다. ☐ 연속 사용가능시간, 제품 간 최대 2.3배 차이 있어 (세부내용, 9페이지) 배터리를 완전히 충전 후 기본 테마 * ·동일 밝기 조건에서 여러 작업 ** 을 반복하는 방법으로 제품의 연속 사용가능시간 (배터리 사용가능시간) 을 확인했다. 그 결과, LENOVO (ThinkPad X9-15Gen1) 제품이 13시간 2분으로 가장 길었고, 애플 (A3241) 제품은 6시간 6분, LG전자 (16Z90TS) 제품은 5시간 42분으로 가장 짧아 제품 간에 최대 2.3배 차이가 있었다. ☐ 음향 품질, 3개 제품이 상대적으로 우수해 (세부내용, 10페이지) 원음 (原音) 을 왜곡 없이 재생하는 음향 품질 * 은 애플 (A3241) ·LENOVO (ThinkPad X9-15Gen1) ·LG전자 (16Z90TS) 등 3개 제품이 상대적으로 우수했고, 삼성전자 (NT960XHA) 제품은 양호, ASUS (TP3607S) 제품은 보통 수준이었다. 왜곡률을 종합적으로 평가함. ☐ 카메라 품질, 전 제품 우수해 (세부내용, 11페이지) 노트북의 전면 카메라의 품질 * 을 종합적으로 평가한 결과, 전 제품이 화상회의용으로 우수한 수준이었다. 유효해상력, 감마(OETF), 노이즈(SNR), 색수차, 색 정확성, 화이트밸런스, 렌즈왜곡, 이미지플레어, 렌즈쉐이딩 등을 종합적으로 평가함. (4개) 제품이 우수해 (세부내용, 12페이지) 네트워크에 연결된 제품의 업·다운로드 속도 * 를 종합적으로 평가한 결과, 애플 (A3241) 제품을 제외한 4개 제품 ** 이 상대적으로 우수했다. ☐ 안전성 및 표시사항, 전 제품 이상 없어 (세부내용, 12페이지) 안전성 (정전기 내성·접촉전류 등) 및 법정표시사항은 전 제품이 이상 없었다. (세부내용, 13페이지) 제품별로 충전기 용량, 크기 (부피) , 주요 보유기능 등에 차이가 있었다. 제품 3 3 수준으로 제품 간 차이가 있었다. 스위블 * , 터치스크린 ** 등의 기능을 제공하는 제품 *** 이 있었다. *** ASUS(TP3607S)는 두 기능 모두 제공하고 삼성전자(NT960XHA)는 터치스크린 기능 제공 <한국소비자원의 노트북 구매‧선택 가이드> 노트북의 구동소요시간 (구동속도) 은 전 제품이 우수하거나 양호한 수준이었지만, 휴대성 (무게) , 디스플레이 품질, 연속 사용가능시간, 음향 품질 등은 제품별로 차이가 있어 평소 사용 습관을 고려하여 제품을 선택하는 것이 바람직하다. 한국소비자원은 앞으로도 소비자의 합리적인 소비생활을 지원하기 위해 AI· 디지털·정보통신 제품의 품질비교·안전성 정보를 지속적으로 제공할 예정이다. 2. 종합평가표 3. 사용 시 주의사항 4. 제품 사진 소비생활 중 불만‧피해가 발생했거나 궁금한 점이 있을 때, 1372소비자상담센터 (국번없이 1372, 발신자 부담) 에 상담 신청하세요. 붙임 1 ‘노트북 품질비교 시험평가’ 결과 1 시험평가 대상 □ 소비자 설문조사 최근 2년 이내에 노트북을 구입 및 사용한 경험이 있는 소비자 1,000명 대상(한국소비자원, 2025.03.) 결과를 바탕으로 5개 브랜드, 5개 제품 선정 <시험평가 대상 제품> 브랜드 모델명 제조국 화면크기 [인치] CPU 메모리 [GB] 저장용량 [GB] 가격* [만원] 삼성전자 NT960XHA 베트남 16 226V 16 512 199 애플 A3241 중국 15.3 M4 16 512 219 ASUS TP3607S 중국 16 226V 16 512 170 LENOVO ThinkPad X9-15Gen1 중국 15.3 226V 16 512 209 LG전자 16Z90TS 중국 16 226V 16 512 234 2 시험평가 항목 및 내용 소비자 설문조사 결과를 바탕으로 관련 기준 (한국산업표준(KS), 전자파적합성기준 등) 등을 참고하여 전문위원회 심의를 거쳐 선정 품질 (구동소요시간, 디스플레이 품질, 연속 사용가능시간, 음향 품질, 카메라 품질, 네트워크 속도 등) , 안전성 (정전기 내성, 접촉전류 등) , 제품특성 (제품 무게, 크기, 보유기능, 구성품 등) , 표시사항 등을 시험평가·검증 <시험평가 항목 및 방법> 시험평가 항목 시험평가 내용 시험방법 품 질 구동소요시간 웹페이지, EXCEL파일, PDF파일을 구동하는데 소요되는 시간 확인 확인시험 디스 플레이 품질 White 밝기 Information Display Measurements Standard by ICDM ICDM(International Committee for Display Metrology, 국제 디스플레이 계측 위원회) 준용 및 확인시험 Black 밝기 명암비 감마(EOTF) 색 정확성 Red, Green Blue, Cyan, Magenta, Yellow 색상(ITU-R BT.709) 정확성 확인 색 영역 기준(ITU-R BT.709) 색 영역 대비 얼마나 많은 색을 표현할 수 있는지 확인 연속 사용가능시간 확인시험 음향 품질 주파수응답 가청주파수 내의 저음에서 고음까지 얼마나 균일한 크기(음압레벨)로 재생되는지 확인 KS C IEC 60268-1 KS C IEC 60268-1 : 음향 시스템 기기-제1부 : 일반 , KS C IEC 60268-5 KS C IEC 60268-5 : 음향 시스템 장비-제5부 : 스피커 준용 및 확인시험 유효주파수 총고조파 왜곡률 (THD) 소리를 재생할 때 원음 이외에 발생하는 잡음 (고조파 왜곡) 비율 확인 카메라 품질 유효해상력 피사체의 정보를 얼마나 자세하게 표현하는지 확인 확인시험 감마(OETF) 밝기 단계의 정확성 확인 노이즈 (SNR) 전자 신호처리 또는 영상처리 과정에서 발생하는 잡음(신호 대 노이즈 비율) 확인 색수차 렌즈 초점에 의한 중심부 대비 주변부의 색상 왜곡 확인 색 정확성 피사체 색상 표현의 정확성 확인 화이트 밸런스 무채색 빛의 색온도 표현에 대한 정확성 확인 렌즈왜곡 이미지 평면에 변형(왜곡)이 가해지는 정도 확인 이미지 플레어 렌즈에 직접 들어오는 빛이 이미지 품질에 영향을 미치는지 확인 렌즈쉐이딩 화면의 중심부와 가장자리의 밝기 차이 확인 네트워크 속도 801.11ax TCP 환경에서 업로드, 다운로드 속도 확인 안전 정전기 내성 외부의 정전기 충격에 제품이 견딜 수 있는지 여부 확인 전자파적합성 기준 국립전파연구원 고시 제2023-13호 접촉전류 누전 및 감전에 대한 안전성 확인 KS C IEC 62368-1 KC 62368-1 : 오디오/비디오 및 정보통신기술기기-제1부 : 안전 요구 사항 제품특성 제품 무게, 크기, 보유기능, 구성품 등 확인 확인시험 표시사항 법정표시사항(인증번호 등) 확인 관련 법령 전파법(적합성평가 표시기준), 전기용품 및 생활용품 안전관리법 3 주요 항목별 시험평가 결과 가. 휴대성 본체 · 충전기의 합산 무게는 (16Z90TS) ASUS (TP3607S) 으로 본체와 충전기 무게를 합쳐도 다른 브랜드 제품의 본체 무게보다 가벼웠음. [ 휴대성(무게) ] 브랜드 모델명 무게 본체[g] 충전기[g] (케이블 포함) 합계[g] 삼성전자 NT960XHA 1,560 177 1,737 애플 A3241 1,510 234 1,744 ASUS TP3607S 1,750 335 2,085 LENOVO ThinkPad X9-15Gen1 1,400 294 1,694 LG전자 16Z90TS 1,220 154 1,374 나. 품질 (1) 구동소요시간 ☐ 충전기 연결 시 삼성전자, LG전자 제품이 상대적으로 우수해 ㅇ 웹페이지·Excel 및 PDF파일의 구동소요시간 (구동속도) 을 종합적으로 시험평가한 결과, 충전기 연결시에는 삼성전자 (NT960XHA) ·LG전자 (16Z90TS) 등 2개 제품의 속도가 빨라 상대적으로 우수했고, 애플 (A3241) ·ASUS (TP3607S) · LENOVO (ThinkPad X9-15Gen1) 등 3개 제품은 양호 수준이었음. ㅇ 충전기 미연결시에는 전 제품이 양호한 수준이었음. [ 구동소요시간 종합결과 ] 브랜드 모델명 구동소요시간 주1 충전기 연결 충전기 미연결 삼성전자 NT960XHA ★★★ ★★ 애플 A3241 ★★ ★★ ASUS TP3607S ★★ ★★ LENOVO ThinkPad X9-15Gen1 ★★ ★★ LG전자 16Z90TS ★★★ ★★ <기호의 표시> ★★★ : 상대적 우수, ★★ : 양호, ★ : 보통 주1. 웹페이지, EXCEL파일, PDF파일 구동 시 소요되는 시간을 종합적으로 고려한 평가 결과임. (2) 디스플레이 품질 ☐ 애플 제품이 상대적으로 우수해 SDR * 환경에서 White 밝기, Black 밝기, 명암비, 감마 (EOTF) , 색 정확성, 색 영역을 종합적으로 고려한 디스플레이 품질은 애플 (A3241) 제품이 상대적으로 우수했고, 삼성전자 (NT960XHA) ·LENOVO (ThinkPad X9-15Gen1) ·LG전자 (16Z90TS) 등 3개 제품은 양호, ASUS (TP3607S) 제품은 보통 수준이었음 . S tandard Dynamic Range : ITU-R BT.709 기준에 따른 색상과 밝기를 가지는 일반적인 영상 [ 디스플레이 품질 세부 시험평가 항목 ] 시험평가 항목 시험평가 내용 White 밝기 Black 밝기 명암비 감마(EOTF) 색 정확성 Red, Green Blue, Cyan, Magenta, Yellow 색상(ITU-R BT.709) 정확성 확인 색 영역 기준(ITU-R BT.709) 색 영역 대비 얼마나 많은 색을 표현할 수 있는지 확인 [ 디스플레이 품질 종합결과 ] 브랜드 모델명 디스플레이 품질 주1 삼성전자 NT960XHA ★★ 애플 A3241 ★★★ ASUS TP3607S ★ LENOVO ThinkPad X9-15Gen1 ★★ LG전자 16Z90TS ★★ <기호의 표시> ★★★ : 상대적 우수, ★★ : 양호, ★ : 보통 주1. SDR 조건에서 White 밝기, Black 밝기, 명암비, 감마(EOTF), 색 정확성, 색 영역 등을 종합적으로 고려한 평가 결과임. (3) 연속 사용가능시간 ☐ 제품 간 최대 2.3배 차이나 ㅇ 배터리를 완전히 충전 후 전 제품 기본 테마 * , 동일 밝기 조건에서 여러 작업 ** 을 반복하는 방법으로 제품의 연속 사용가능시간 (배터리 사용가능시간) 을 확인한 결과, LENOVO (ThinkPad X9-15Gen1) 제품이 13시간 2분으로 가장 길었고, 애플 (A3241) 제품은 6시간 6분, LG전자 (16Z90TS) 제품은 5시간 42분으로 가장 짧아 제품 간 최대 2.3배 차이가 있었음. 운영체제에 설정된 화면의 색상 구성 [ 연속 사용가능시간(배터리 사용가능시간) 종합결과 ] 브랜드 모델명 연속 사용가능시간 주1 (배터리 사용가능시간) [시간:분] 삼성전자 NT960XHA 8:56 애플 A3241 6:06 ASUS TP3607S 9:19 LENOVO ThinkPad X9-15Gen1 13:02 LG전자 16Z90TS 5:42 주1. 배터리를 완전히 충전 후 Word작업, 한글작업, 동영상(10분) 재생을 반복하여 전원부족 팝업(배터리 6%)이 나올 때까지 확인한 결과임. (4) 음향 품질 ☐ 애플, LENOVO, LG전자 제품이 상대적으로 우수해 ㅇ 원음 (原音) * 을 왜곡 없이 재생하는지 주파수응답, 유효주파수, 총고조파 왜곡률 (THD) 을 종합적으로 시험평가한 결과, 애플 (A3241) ·LENOVO (ThinkPad X9-15Gen1) · LG전자 (16Z90TS) 등 3개 제품 이 상대적으로 우수했고, 삼성전자 (NT960XHA) 제품은 양호, ASUS (TP3607S) 제품은 보통 수준이었음. [ 음향 품질 세부 시험평가 항목 ] 시험평가 항목 시험평가 내용 주파수응답 가청주파수 대역의 저음에서 고음까지 얼마나 균일한 소리의 크기(음압레벨)로 재생되는지 확인 유효주파수 총고조파왜곡률 (THD) 소리를 재생할 때 원음 이외에 발생하는 잡음(고조파왜곡) 비율 확인 [ 음향 품질 종합결과 ] 브랜드 모델명 음향 품질 주1 삼성전자 NT960XHA ★★ 애플 A3241 ★★★ ASUS TP3607S ★ LENOVO ThinkPad X9-15Gen1 ★★★ LG전자 16Z90TS ★★★ <기호의 표시> ★★★ : 상대적 우수, ★★ : 양호, ★ : 보통 주1. 주파수응답, 유효주파수, 총고조파왜곡률(THD) 등을 종합적으로 고려한 평가 결과임. (5) 카메라 품질 ☐ 전 제품 우수해 ㅇ 노트북 전면 카메라의 유효해상력, 감마 (OETF) , 노이즈 (SNR) , 색수차, 색 정확성, 화이트밸런스, 렌즈왜곡, 이미지플레어, 렌즈쉐이딩 등을 종합적으로 시험평가한 결과, 전 제품이 화상회의용으로 우수한 수준이었 음. [ 카메라 품질 시험평가 항목 ] 시험평가 항목 시험평가 내용 유효해상력 피사체의 정보를 얼마나 자세하게 표현하는지 확인 감마(OETF) 밝기 단계의 정확성 확인 노이즈(SNR) 전자 신호처리 또는 영상처리 과정에서 발생하는 잡음(신호 대 노이즈 비율) 확인 색수차 렌즈 초점에 의한 중심부 대비 주변부의 색상 왜곡 확인 색 정확성 피사체 색상 표현의 정확성 확인 화이트밸런스 무채색 빛의 색온도 표현에 대한 정확성 확인 렌즈왜곡 이미지 평면에 변형(왜곡)이 가해지는 정도 확인 이미지플레어 렌즈에 직접 들어오는 빛이 이미지 품질에 영향을 미치는지 확인 렌즈쉐이딩 화면의 중심부와 가장자리의 밝기 차이 확인 [ 카메라 품질 종합결과 ] 브랜드 모델명 카메라 품질 주1 삼성전자 NT960XHA ★★★ 애플 A3241 ★★★ ASUS TP3607S ★★★ LENOVO ThinkPad X9-15Gen1 ★★★ LG전자 16Z90TS ★★★ <기호의 표시> ★★★ : 상대적 우수, ★★ : 양호, ★ : 보통 주1. 유효해상력, 감마(OETF), 노이즈(SNR), 색수차, 색",
-                    "sha256": "b309f7254be82a2ebffeab213e65450afe3a41b5b474ef5b6c8a3073a76d0545",
-                    "checked_on": "2026-10-11"
-                  }
-                ]
-              },
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            },
-            "outcome": "review_rejected",
-            "retry_review": {
-              "official_sources": [
-                {
-                  "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-                  "title": "Samsung 대한민국",
-                  "excerpt_chars": 959
-                },
-                {
-                  "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-                  "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GU7BK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-                  "excerpt_chars": 7912
-                },
-                {
-                  "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-                  "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GS5LK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-                  "excerpt_chars": 7912
-                }
-              ],
-              "analysis_status": "supported_false",
-              "review_inputs": {
-                "keyword": "노트북메모리",
-                "category": "리뷰",
-                "checked_at": "2026-10-11T03:54:13.624333+00:00",
-                "evidence_mode": "serp",
-                "search_results": [
-                  {
-                    "url": "https://www.intel.co.kr/content/www/kr/ko/support/articles/000007393/processors.html",
-                    "domain": "www.intel.co.kr",
-                    "title": "인텔® 노트북(모바일) 프로세서를 지원하는 메모리 유형",
-                    "snippet": "인텔® 모바일 프로세서(노트북 프로세서)를 지원하는 메모리 유형은 제품 사양 페이지(ark.intel.com)에서 확인할 수 있습니다. ... 참고 | 노트북, 노트북, 2-in-1 및 올인원에 지원되는 메모리와 관련된 질문이"
-                  },
-                  {
-                    "url": "https://learn.microsoft.com/ko-kr/windows-hardware/drivers/display/examples-of-graphics-memory-reporting",
-                    "domain": "learn.microsoft.com",
-                    "title": "그래픽 메모리 보고의 예 - Windows drivers | Microsoft Learn",
-                    "snippet": "다음 스크린샷에서는 Intel Iris 불연속 그래픽 어댑터가 있는 Windows 11을 실행하는 Surface 노트북 컴퓨터의 계산된 그래픽 메모리 번호를 보여 줍니다. ... Image: Surface 노트북 컴퓨터에서"
-                  },
-                  {
-                    "url": "https://support.hp.com/kr-ko/document/c00848900",
-                    "domain": "support.hp.com",
-                    "title": "HP 노트북 PC - 추가 메모리 설치를 통한 성능 향상 | HP® 지원",
-                    "snippet": "추가 또는 교체용 메모리를 주문하기 전에 사용하는 노트북의 현재 메모리 구성 및 최대 메모리 구성을 파악하려면 다음 절차를 수행합니다. ... 노트북 모델에 따라 필요한 메모리"
-                  },
-                  {
-                    "url": "https://www.corsair.com/lm/ko/c/memory/laptop-ram",
-                    "domain": "www.corsair.com",
-                    "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-                    "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-                  },
-                  {
-                    "url": "https://support.hp.com/kr-ko/document/c01079541",
-                    "domain": "support.hp.com",
-                    "title": "HP 노트북 PC - 주 메모리 제거 및 교체 절차 | HP® 지원",
-                    "snippet": "이 문서는 HP Compaq 모델 5400c, 6500b, 6700b, 6700s 시리즈 노트북 PC에서의 주 메모리 제거 및 교체 방법을 설명합니다. ... 키보드를 평평하게 누르고 4개의 플라스틱"
-                  },
-                  {
-                    "url": "https://download.lenovo.com/pccbbs/mobiles_pdf/p16_gen1_ug_ko.pdf",
-                    "domain": "download.lenovo.com",
-                    "title": "메모리 모듈\n\n<visual_element id=\"e1\">\n상단 설치 절차 그림: 노트북",
-                    "snippet": "상단 설치 절차 그림: 노트북 내부의 메모리 모듈을 교체하는 3단계 확대도와 본체 내부 위치 표시가 있음. ... 아래의 노트북 본체 그림에는 메모리 모듈 위치가 빨간"
-                  },
-                  {
-                    "url": "https://prod.danawa.com/info/?pcode=105474137",
-                    "domain": "prod.danawa.com",
-                    "title": "크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교",
-                    "snippet": "# 크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 상품비교"
-                  },
-                  {
-                    "url": "https://support.hp.com/kr-ko/document/c02490404",
-                    "domain": "support.hp.com",
-                    "title": "컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 | HP® 지원",
-                    "snippet": "# 컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 ... 이 문서는 컴팩 621 노트북 PC에서 메모리 모듈을 제거하고 교체하는 방법을 설명합니다."
-                  },
-                  {
-                    "url": "https://prod.danawa.com/info/?pcode=106991672",
-                    "domain": "prod.danawa.com",
-                    "title": "크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교",
-                    "snippet": "# 크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교"
-                  },
-                  {
-                    "url": "https://www.corsair.com/kr/ko/c/memory/laptop-ram?filter-tested-speed-%28up-to%29=1066",
-                    "domain": "www.corsair.com",
-                    "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-                    "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-                  }
-                ],
-                "official_sources": [
-                  {
-                    "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-                    "title": "Samsung 대한민국",
-                    "excerpt": "운영체제 Windows 11 Home 프로세서/칩셋 CPU Intel® Core™ Ultra 5 Processor 226V (P-core Up to 4.5 GHz 8 MB LLC Cache) 그래픽카드 Intel® Arc™ 130V GPU (8GB) 그래픽카드 타입 Shared NPU Intel® AI Boost 디스플레이 크기 40.6 cm (16.0 inch) 해상도 2880 x 1800 (WQXGA+) 종류 Dynamic AMOLED 2X, Anti-Reflective 터치스크린 Yes 메모리/저장장치 메모리 16 GB 메모리 타입 LPDDR5X (On Package) 저장장치 용량 512 GB 저장장치 타입 NVMe SSD 총 저장장치 슬롯 2 기본 사양 색상 Gray 형태 Laptop 멀티미디어 스피커 Quad Speakers 스마트 앰프 Yes 사운드 효과 Dolby Atmos® 마이크 Dual Array Digital Mic 카메라 2.0 MP 네트워크 Wi-Fi Wi-Fi 7, 802.11 be 2x2 블루투스 버전 Bluetooth v5.4 포트 HDMI 1 HDMI 2.1 (Supports 8K@60Hz, 5K@120Hz) USB 2 Thunderbolt™ 4, 1 USB3.2 외장 스토리지 지원 MicroSD 이어잭 1 Headphone out/Mic-in Combo 입력장치 키보드 Pro keyboard with Numeric key 키보드 백라이트 Yes 터치패드 Clickpad 보안기능 TPM Yes 지문인식 Yes 배터리 배터리 용량 (Typical)(Wh) 76.1 전원 충전기 65W USB Type-C Adapter 소비전력 (kWh) 3.8 정격 전압 100 ~ 240 V 외관 사양 크기 (가로x세로x두께)(mm) 355.4 x 250.4 x 12.5 무게 (kg) 1.56 센서 Ambient Light Sensor 서비스 SmartThings 지원 Yes",
-                    "sha256": "70a7c8dc721f8a2baefe58a4649f332c320eb5a6506cb25c8d0be33c895177cc",
-                    "checked_on": "2026-10-11"
-                  },
-                  {
-                    "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-                    "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GU7BK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-                    "excerpt": "제품 상세 스펙 스펙 요약 정보 OS : Windows 11 Home (64 비트) CPU : 인텔® 코어™ Ultra 7 프로세서 258V 무게 (g) : 약 1,239 제품 스펙 더보기 운영체제 OS Windows 11 Home (64 비트) 디스플레이 화면크기 (cm) 40.6 해상도 WQXGA (2560 x 1600) 패널형태 IPS LCD 디스플레이 (Anti glare / ~144Hz VRR) 프로세서 CPU 인텔® 코어™ Ultra 7 프로세서 258V CPU 클럭 (GHz) 2.2 * CPU 클럭은 P 코어 기준입니다. 터보부스트 (GHz) 4.8 * CPU 클럭은 P 코어 기준입니다. L3 캐시 메모리 (MB) 12 메인메모리 메모리 용량 (GB) 32 메모리 종류 LPDDR5x (온보드) 멀티미디어 그래픽 Intel ARC 140V GPU 그래픽메모리 내장형 오디오&사운드 Dolby Atmos, Stereo speakers, Smart Amp (Max 5.0 W x 2) 웹캠 FHD IR 웹캠 (듀얼 마이크) 저장장치 SSD 1 TB (NVMe™) + 확장 슬롯 1 (PCIe 4.0 x 4) 입력장치 키보드 백라이트 키보드 풀 사이즈 97키 (3열 숫자 전용키 포함) 터치패드 터치패드 파워 AC (W) 65 배터리 (Wh) 77 (리튬 이온 배터리) 크기/무게 크기 (WxH, mm) 358 x 252 두께 (mm) 12.4 ~ 12.8 무게 (g) 약 1,239 네트워크 무선랜 Intel® Wi-Fi7 BE201 (Wi-Fi 7, 2x2, BT Combo) 블루투스 O (5.4) 유선랜 Gigabit (랜젠더 별매) 기타 Port USB Type-A x 2 (USB 3.2 Gen 1x1), USB Type-C x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) HDMI, 헤드폰 출력 PC 카드 슬롯 X 제공 S/W My gram LG Update & Renew LG Easy Guide LG On Screen Display LG Glance by Mirametrix LG gram Link gram chat On-Device Dolby Atmos Microsoft 365 (30 Days Trial) McAfee Live Safe (30 Days Trial) Google Quick Share 색상 메타 그레이 보안시스템 얼굴인식 (Face Login) 액세서리 X 노트북 가방(파우치) X 비고 * 제품 사양은 성능 향상을 위해 사전 예고없이 변경될 수 있습니다. * 무게는 제품 구성 및 제조 여건에 따라 달라질 수 있습니다. * USB PD 기능 지원 모델입니다. 기본정보 품명 및 모델명 노트북 컴퓨터 (16Z90TS) KC 인증 필 유무 R-R-LGE-16Z90TS(전자파 적합등록) ZU10899-23006(전기용품 안전확인) KC인증조회 공정거래위원회(소비자24)제공 인증정보 조회 정격전압 (V/Hz) 100-240 V~ 50/60 Hz 동일 모델의 출시년월 2025년 1월 제조자 LG전자(주) 제조국 중국 품질보증기준 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제 16조) 에 따라 보상 가능 A/S 책임자와 전화번호 LG전자서비스센터 / 1544-7777 인쇄하기 그램 AI 경험 아이콘 입니다. 프로의 멀티 AI gram AI 경험 CPU 아이콘 입니다. AI를 위해 탄생한 Intel® Core™ Ultra 200V 시리즈 프로세서 배터리 아이콘 입니다. AI를 만나 오래 지속되는 배터리 초경량 그램 아이콘 입니다. 더 크게, 여전히 가볍게 초경량 gram * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * Copilot+ PC 의 일부 S/W 및 기능은 향후 업데이트를 통해 지원할 예정입니다. 지원 시기는 기기 및 지역에 따라 다를 수 있습니다. * 자세한 내용은 https://aka.ms/copilotpluspc 를 참조하시기 바랍니다. 영상 일시정지 해설 한 사람이 테이블 위에 놓인 흰색 노트북을 열고 있습니다. 테이블 위에는 검은색 컵과 작은 흰색 물체가 놓여 있으며, 배경은 흐릿하게 처리된 실내 공간입니다. 이어서 화면은 보라색과 흰색의 빛이 나선형으로 회전하는 장면으로 전환됩니다. 빛의 선들이 화면 중앙을 향해 소용돌이치며, 밝은 빛이 화면 왼쪽에서 오른쪽으로 퍼져 나갑니다. 이 장면에서는 intel CORE ULTRA라는 문구가 적힌 칩이 공중에 떠 있는 모습이 보이며, 칩의 표면은 어두운 색조를 띠고 있습니다. 다음으로, 중앙에 위치한 컴퓨터 프로세서의 표면에도 intel CORE ULTRA라는 문구가 적혀 있고, 프로세서는 회로 기판 위에 장착되어 있습니다. 주변에는 복잡한 회로 패턴이 보이며, 전체적인 색상은 보라색 계열입니다. 이후 노트북 화면이 중앙에 위치하며, 화면에는 AI 아프리카에 프로젝트라는 문구가 보입니다. 주변에는 다양한 디지털 이미지와 텍스트가 떠 있으며, 왼쪽 상단에는 문서 파일과 Algorithm이라는 단어가, 오른쪽 상단에는 BIG DATA라는 텍스트가 포함된 이미지가 있습니다. 마지막으로, 노트북 화면에는 AI 아틀리에 프로젝트라는 문구가 중앙에 표시되어 있습니다. 화면 주위에는 다양한 그래픽과 텍스트가 떠다니고 있으며, 왼쪽 상단에는 원형 그래프와 문서가, 오른쪽 상단에는 복잡한 회로도와 BIG DATA라는 텍스트가 있는 구체가 보입니다. 오른쪽 하단에는 그래프와 예술 작품 이미지가 있으며, 그 옆에는 텍스트가 나열되어 있습니다. 전체적으로 다양한 데이터와 시각적 요소들이 노트북을 중심으로 배치되어 있습니다. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 영상이며, 제품별 색상 및 스펙은 다를 수 있습니다. * gram AI란? 25년 gram 제품에 탑재된 On-Device, Cloud AI 서비스 입니다. 이전 다음 기억보다 정확한 기록 AI가 대신해요. 어제 본 유튜브 아무리 찾아도 안보일 때, 삭제한 초안이 간절할 때, 타임 트래블로 사라진 아이디어를 붙잡아 보세요. PC 화면은 이미지로, 내가 본 영상 속 음성은 텍스트로 기억해 gram chat에서 키워드만 입력하면 AI가 PC 화면을 빠르게 찾아주죠. 영상 일시정지 해설 기억보다 정확한 기록 AI가 대신해요. 노트북의 화면과 흰색 키보드가 보이는 장면입니다. 화면 하단에는 여러 아이콘이 정렬되어 있으며, 화면의 주된 색상은 파란색과 보라색 계열입니다. 노트북은 열려 있는 상태로, 키보드 중앙에 전원 버튼이 위치해 있습니다. 화면에는 다양한 색상의 예술 작품들이 전시된 갤러리 이미지가 보이며, 중앙에는 여러 사람이 작품을 감상하고 있는 모습이 보입니다. 상단에는 Time Travel이라는 텍스트가 있고, 그 아래에는 250117. AI 아트워크 타임트래블 pptrk라는 문구가 있습니다. 화면의 여러 부분에는 Rainbow in Wave, Colorful Flowers, Colorful Pattern 등의 텍스트가 포함된 작은 창들이 나타나며, 각 창에는 작품의 이름과 크기 정보가 표시되어 있습니다. 작품들은 주로 추상적이고 다채로운 색상을 특징으로 합니다. 찾는 일은 걱정말고 창작에만 몰두하세요. 업무에 더 집중할 수 있도록 번거로운 일은 gram AI에 맡겨주세요. 정리 안된 폴더를 헤맬 필요 없이 파일 속 텍스트는 물론 이미지 속 텍스트까지 빠르게 찾아줘요. 영상 일시정지 해설 찾는 일은 걱정말고 창작에만 몰두하세요. 노트북의 모니터가 화면 중앙에 위치해 있으며, 검색창에 한 달간 모은 AI 인테라는 문구가 입력되어 있습니다. 검색창은 보라색 테두리로 강조되어 있고, 오른쪽에는 돋보기 모양의 검색 아이콘이 있습니다. 화면 하단에는 윈도우 작업 표시줄이 보이며, 여러 개의 아이콘이 나열되어 있습니다. 키보드의 일부가 화면 하단에 보이며, 손가락이 키보드를 누르고 있는 모습이 나타납니다.<br/><br/>이어서 화면에는 노트북의 디스플레이가 보이며, 검색창에 한 달간 모은 AI 인터랙티브 art라는 문구가 입력되어 있습니다. 검색창과 검색 아이콘의 위치와 강조는 이전과 동일합니다. 화면 오른쪽 아래에는 손이 키보드를 사용하고 있는 모습이 보입니다.<br/><br/>다음 장면에서는 노트북 화면에 채팅 인터페이스가 표시되며, 상단에는 AI와의 대화라는 제목이 보입니다. 그 아래에는 사용자가 입력한 질문과 AI의 응답이 나타나 있습니다. 하단에는 할 일로 온 AI 인터뷰어는 AI가 자료라는 문구가 포함된 버튼이 있습니다. 배경은 흐릿하게 처리되어 있으며, 사람들의 실루엣이 보입니다.<br/><br/>마지막으로, 테이블 위에 놓인 전자 기기와 그 위로 펼쳐진 디지털 인터페이스가 보입니다. 화면 중앙에는 여러 개의 이미지와 텍스트가 겹쳐져 있으며, 이는 홀로그램처럼 보입니다. 화면 왼쪽에는 텍스트가 포함된 카드 형태의 요소가 있고, 오른쪽에는 다양한 색상의 그래픽이 나타나 있습니다. 테이블 위에는 손이 보이며, 이는 기기를 조작하는 듯한 모습입니다. 주변은 어두운 색조로 되어 있어 디\n[중간 본문 생략]\n통화 기록, 즐겨찾기, 연락처 등의 메뉴가 나열되어 있고, 중앙에는 이름과 시간 정보가 포함된 통화 목록이 있습니다. 오른쪽에는 프로필 이미지와 함께 발신이라는 텍스트가 보이며, 아래쪽에는 빨간색과 녹색 버튼이 위치해 있습니다. 화면 왼쪽 외부에는 이제 통화도 gram에서 바로라는 문구가 검은색 글씨로 적혀 있습니다. 통화 기록 목록에는 각 항목에 전화번호와 통화 아이콘이 있으며, 오른쪽에는 통화 중인 사람의 프로필 이미지와 이름이 나타나 있습니다. 하단의 녹색과 빨간색 버튼은 각각 통화 수락과 종료를 나타내는 아이콘으로 배치되어 있습니다. 영상 일시정지 해설 노트북이 화면 중앙에 배치되어 있으며, 노트북 화면에는 한 여성이 노트북을 들고 있는 모습이 보입니다. 여성은 야외 테라스에 서 있고, 뒤로는 난간과 나무가 보입니다. 노트북 왼쪽에는 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 검은색 글씨로 적혀 있습니다. 이 문구는 노트북의 기능을 설명하는 것으로 보입니다. 이어서, 노트북 화면에는 한 사람이 노트북을 바라보고 있는 모습이 나타나며, 노트북의 뒷면에는 gram이라는 로고가 표시되어 있습니다. 배경에는 나무와 하늘이 보입니다. 같은 문구가 화면 왼쪽에 반복적으로 나타나며, 노트북의 기능을 강조합니다. 다음 장면에서는 노트북 화면에 두 사람의 영상 통화 화면이 표시됩니다. 왼쪽에는 책장이 배경인 사람, 오른쪽에는 밝은 배경의 사람이 있으며, 화면 하단에는 통화 관련 아이콘들이 보입니다. 노트북 옆에는 손이 화면을 가리키고 있고, 나무 테이블 위에 놓여 있습니다. 또한, 노트북 화면에는 야외에서 스마트폰을 들고 있는 여성의 모습이 보이며, 배경에는 산과 하늘이 있습니다. 긴 머리의 인물이 스마트폰을 들고 사진을 찍는 듯한 자세를 취하고 있는 장면도 나타납니다. 모든 장면에서 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 노트북 왼쪽에 적혀 있어, 제품의 특정 기능을 지속적으로 강조하고 있습니다. 슬라이드 일시 정지 이전 다음 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * LG gram Link : 최초 1회 연결 시에는 gram 노트북과 연결하고자 하는 대상인 모바일 기기가 같은 네트워크망에 있어야 합니다. * 모바일 기기에 LG gram Link 앱 설치가 필요하며, 최소사양은 iOS 16.4이상, 안드로이드 P OS 이상이어야 합니다. * 파일 공유 기능은 블루투스 기능을 활용하여 네트워크 연결 없이도 사용이 가능합니다. 파일 공유를 제외한 모든 기능은 노트북과 모바일 기기가 동일한 네트워크에 연결된 상태에서 사용이 가능합니다. 원하는 기능을 한곳에서 My gram 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. 함께할 때 더욱 빛나는 엑스붐 버즈 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 노트북 단독 구매 시 엑스붐 버즈는 별도 구매 제품이며, 상세 내용은 엑스붐 버즈 제품 상세 페이지를 확인해 주세요. 원하는 기능을 한곳에서 My gram 다양한 LG 소프트웨어를 한 곳에서 만나는 My gram gram chat On-Device, LG gram Link, gram 꿀팁 그리고 간편 설정 등 다양한 기능을 My gram에서 만나보세요. * 소비자의 이해를 돕기 위해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 함께할 때 더욱 빛나는 엑스붐 버즈 gram의 가장 좋은 친구, 엑스붐 버즈 엑스붐 버즈가 근처에 있으면 gram 속 팝업 이미지로 현재 연결 상태, 연결 여부를 손쉽게 확인할 수 있습니다. 모바일을 따로 확인할 필요 없이 gram 안에서 액티브 노이즈 캔슬링, EQ 세팅을 바로 설정할 수 있습니다. * 엑스붐 전용 앱이 gram에 내장되어 있어, gram으로 엑스붐 설정이 가능합니다. * PC에 이어버드는 동봉되어 있지 않으며 별도 구매가 필요합니다. * 25년도 gram 신제품, 엑스붐 버즈 신제품에 해당하는 내용입니다. 적용 모델에 제한이 있을 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 A부터 C까지 필요한 건 다 갖췄죠 슬림한 바디에 다양한 포트로 별도의 USB 허브가 필요 없는 높은 호환성을 자랑하죠. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 포트 상세 설명 1) USB-A x 2 포트 (USB 3.2 Gen 1x1) 2) 헤드폰 포트 3) HDMI 포트 4) USB-C 포트 x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) - USB Type-C 포트에 Thunderbolt™ 기기가 연결되면 이를 화면에 아이콘으로 알려줍니다. 25년 LG gram 한눈에 비교하기 25년 LG gram의 라인별 특장점, 핵심 기능, 주요 스펙 등을 아래 표로 확인하고 나의 라이프스타일에 맞는 노트북을 선택해 보세요. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다. * 상세 제품 이미지는 이해를 돕기 위한 이미지로 실제품 컬러와 다를 수 있습니다.",
-                    "sha256": "30f1762dce538946988a7f84fb27e44e543916d51c455457a2764b6e15178a05",
-                    "checked_on": "2026-10-11"
-                  },
-                  {
-                    "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-                    "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GS5LK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-                    "excerpt": "제품 상세 스펙 스펙 요약 정보 OS : Windows 11 Home (64 비트) CPU : 인텔® 코어™ Ultra 5 프로세서 226V 무게 (g) : 약 1,199 제품 스펙 더보기 운영체제 OS Windows 11 Home (64 비트) 디스플레이 화면크기 (cm) 40.6 해상도 WQXGA (2560 x 1600) 패널형태 IPS LCD 디스플레이 (Anti glare / ~144Hz VRR) 프로세서 CPU 인텔® 코어™ Ultra 5 프로세서 226V CPU 클럭 (GHz) 2.1 * CPU 클럭은 P 코어 기준입니다. 터보부스트 (GHz) 4.5 * CPU 클럭은 P 코어 기준입니다. L3 캐시 메모리 (MB) 12 메인메모리 메모리 용량 (GB) 16 메모리 종류 LPDDR5x (온보드) 멀티미디어 그래픽 Intel ARC 130V GPU 그래픽메모리 내장형 오디오&사운드 Dolby Atmos, Stereo speakers, Smart Amp (Max 5.0 W x 2) 웹캠 FHD IR 웹캠 (듀얼 마이크) 저장장치 SSD 512 GB (NVMe™) + 확장 슬롯 1 (PCIe 4.0 x 4) 입력장치 키보드 백라이트 키보드 풀 사이즈 97키 (3열 숫자 전용키 포함) 터치패드 터치패드 파워 AC (W) 65 배터리 (Wh) 77 (리튬 이온 배터리) 크기/무게 크기 (WxH, mm) 358 x 252 두께 (mm) 12.4 ~ 12.8 무게 (g) 약 1,199 네트워크 무선랜 Intel® Wi-Fi7 BE201 (Wi-Fi 7, 2x2, BT Combo) 블루투스 O (5.4) 유선랜 Gigabit (랜젠더 별매) 기타 Port USB Type-A x 2 (USB 3.2 Gen 1x1), USB Type-C x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) HDMI, 헤드폰 출력 PC 카드 슬롯 X 제공 S/W My gram LG Update & Renew LG Easy Guide LG On Screen Display LG Glance by Mirametrix LG gram Link gram chat On-Device Dolby Atmos Microsoft 365 (30 Days Trial) McAfee Live Safe (30 Days Trial) Google Quick Share 색상 에센스 화이트 보안시스템 얼굴인식 (Face Login) 액세서리 X 노트북 가방(파우치) X 비고 * 제품 사양은 성능 향상을 위해 사전 예고없이 변경될 수 있습니다. * 무게는 제품 구성 및 제조 여건에 따라 달라질 수 있습니다. * USB PD 기능 지원 모델입니다. 기본정보 품명 및 모델명 노트북 컴퓨터 (16Z90TS) KC 인증 필 유무 R-R-LGE-16Z90TS(전자파 적합등록) ZU10899-23006(전기용품 안전확인) KC인증조회 공정거래위원회(소비자24)제공 인증정보 조회 정격전압 (V/Hz) 100-240 V~ 50/60 Hz 동일 모델의 출시년월 2025년 2월 제조자 LG전자(주) 제조국 중국 품질보증기준 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제 16조) 에 따라 보상 가능 A/S 책임자와 전화번호 LG전자서비스센터 / 1544-7777 인쇄하기 그램 AI 경험 아이콘 입니다. 프로의 멀티 AI gram AI 경험 CPU 아이콘 입니다. AI를 위해 탄생한 Intel® Core™ Ultra 200V 시리즈 프로세서 배터리 아이콘 입니다. AI를 만나 오래 지속되는 배터리 초경량 그램 아이콘 입니다. 더 크게, 여전히 가볍게 초경량 gram * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 에센스 화이트, 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * Copilot+ PC 의 일부 S/W 및 기능은 향후 업데이트를 통해 지원할 예정입니다. 지원 시기는 기기 및 지역에 따라 다를 수 있습니다. * 자세한 내용은 https://aka.ms/copilotpluspc 를 참조하시기 바랍니다. 영상 일시정지 해설 한 사람이 테이블 위에 놓인 흰색 노트북을 열고 있습니다. 테이블 위에는 검은색 컵과 작은 흰색 물체가 놓여 있으며, 배경은 흐릿하게 처리된 실내 공간입니다. 이어서 화면은 보라색과 흰색의 빛이 나선형으로 회전하는 장면으로 전환됩니다. 빛의 선들이 화면 중앙을 향해 소용돌이치며, 밝은 빛이 화면 왼쪽에서 오른쪽으로 퍼져 나갑니다. 이 장면에서는 intel CORE ULTRA라는 문구가 적힌 칩이 공중에 떠 있는 모습이 보이며, 칩의 표면은 어두운 색조를 띠고 있습니다. 다음으로, 중앙에 위치한 컴퓨터 프로세서의 표면에도 intel CORE ULTRA라는 문구가 적혀 있고, 프로세서는 회로 기판 위에 장착되어 있습니다. 주변에는 복잡한 회로 패턴이 보이며, 전체적인 색상은 보라색 계열입니다. 이후 노트북 화면이 중앙에 위치하며, 화면에는 AI 아프리카에 프로젝트라는 문구가 보입니다. 주변에는 다양한 디지털 이미지와 텍스트가 떠 있으며, 왼쪽 상단에는 문서 파일과 Algorithm이라는 단어가, 오른쪽 상단에는 BIG DATA라는 텍스트가 포함된 이미지가 있습니다. 마지막으로, 노트북 화면에는 AI 아틀리에 프로젝트라는 문구가 중앙에 표시되어 있습니다. 화면 주위에는 다양한 그래픽과 텍스트가 떠다니고 있으며, 왼쪽 상단에는 원형 그래프와 문서가, 오른쪽 상단에는 복잡한 회로도와 BIG DATA라는 텍스트가 있는 구체가 보입니다. 오른쪽 하단에는 그래프와 예술 작품 이미지가 있으며, 그 옆에는 텍스트가 나열되어 있습니다. 전체적으로 다양한 데이터와 시각적 요소들이 노트북을 중심으로 배치되어 있습니다. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 영상이며, 제품별 색상 및 스펙은 다를 수 있습니다. * gram AI란? 25년 gram 제품에 탑재된 On-Device, Cloud AI 서비스 입니다. 이전 다음 기억보다 정확한 기록 AI가 대신해요. 어제 본 유튜브 아무리 찾아도 안보일 때, 삭제한 초안이 간절할 때, 타임 트래블로 사라진 아이디어를 붙잡아 보세요. PC 화면은 이미지로, 내가 본 영상 속 음성은 텍스트로 기억해 gram chat에서 키워드만 입력하면 AI가 PC 화면을 빠르게 찾아주죠. 영상 일시정지 해설 기억보다 정확한 기록 AI가 대신해요. 노트북의 화면과 흰색 키보드가 보이는 장면입니다. 화면 하단에는 여러 아이콘이 정렬되어 있으며, 화면의 주된 색상은 파란색과 보라색 계열입니다. 노트북은 열려 있는 상태로, 키보드 중앙에 전원 버튼이 위치해 있습니다. 화면에는 다양한 색상의 예술 작품들이 전시된 갤러리 이미지가 보이며, 중앙에는 여러 사람이 작품을 감상하고 있는 모습이 보입니다. 상단에는 Time Travel이라는 텍스트가 있고, 그 아래에는 250117. AI 아트워크 타임트래블 pptrk라는 문구가 있습니다. 화면의 여러 부분에는 Rainbow in Wave, Colorful Flowers, Colorful Pattern 등의 텍스트가 포함된 작은 창들이 나타나며, 각 창에는 작품의 이름과 크기 정보가 표시되어 있습니다. 작품들은 주로 추상적이고 다채로운 색상을 특징으로 합니다. 찾는 일은 걱정말고 창작에만 몰두하세요. 업무에 더 집중할 수 있도록 번거로운 일은 gram AI에 맡겨주세요. 정리 안된 폴더를 헤맬 필요 없이 파일 속 텍스트는 물론 이미지 속 텍스트까지 빠르게 찾아줘요. 영상 일시정지 해설 찾는 일은 걱정말고 창작에만 몰두하세요. 노트북의 모니터가 화면 중앙에 위치해 있으며, 검색창에 한 달간 모은 AI 인테라는 문구가 입력되어 있습니다. 검색창은 보라색 테두리로 강조되어 있고, 오른쪽에는 돋보기 모양의 검색 아이콘이 있습니다. 화면 하단에는 윈도우 작업 표시줄이 보이며, 여러 개의 아이콘이 나열되어 있습니다. 키보드의 일부가 화면 하단에 보이며, 손가락이 키보드를 누르고 있는 모습이 나타납니다.<br/><br/>이어서 화면에는 노트북의 디스플레이가 보이며, 검색창에 한 달간 모은 AI 인터랙티브 art라는 문구가 입력되어 있습니다. 검색창과 검색 아이콘의 위치와 강조는 이전과 동일합니다. 화면 오른쪽 아래에는 손이 키보드를 사용하고 있는 모습이 보입니다.<br/><br/>다음 장면에서는 노트북 화면에 채팅 인터페이스가 표시되며, 상단에는 AI와의 대화라는 제목이 보입니다. 그 아래에는 사용자가 입력한 질문과 AI의 응답이 나타나 있습니다. 하단에는 할 일로 온 AI 인터뷰어는 AI가 자료라는 문구가 포함된 버튼이 있습니다. 배경은 흐릿하게 처리되어 있으며, 사람들의 실루엣이 보입니다.<br/><br/>마지막으로, 테이블 위에 놓인 전자 기기와 그 위로 펼쳐진 디지털 인터페이스가 보입니다. 화면 중앙에는 여러 개의 이미지와 텍스트가 겹쳐져 있으며, 이는 홀로그램처럼 보입니다. 화면 왼쪽에는 텍스트가 포함된 카드 형태의 요소가 있고, 오른쪽에는 다양한 색상의 그래픽이 나타나 있습니다. 테이블 위에는 손이 보이며, 이는 기기를 조작하는 듯한 모습입니다. 주변은 어두운\n[중간 본문 생략]\n화 기록, 즐겨찾기, 연락처 등의 메뉴가 나열되어 있고, 중앙에는 이름과 시간 정보가 포함된 통화 목록이 있습니다. 오른쪽에는 프로필 이미지와 함께 발신이라는 텍스트가 보이며, 아래쪽에는 빨간색과 녹색 버튼이 위치해 있습니다. 화면 왼쪽 외부에는 이제 통화도 gram에서 바로라는 문구가 검은색 글씨로 적혀 있습니다. 통화 기록 목록에는 각 항목에 전화번호와 통화 아이콘이 있으며, 오른쪽에는 통화 중인 사람의 프로필 이미지와 이름이 나타나 있습니다. 하단의 녹색과 빨간색 버튼은 각각 통화 수락과 종료를 나타내는 아이콘으로 배치되어 있습니다. 영상 일시정지 해설 노트북이 화면 중앙에 배치되어 있으며, 노트북 화면에는 한 여성이 노트북을 들고 있는 모습이 보입니다. 여성은 야외 테라스에 서 있고, 뒤로는 난간과 나무가 보입니다. 노트북 왼쪽에는 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 검은색 글씨로 적혀 있습니다. 이 문구는 노트북의 기능을 설명하는 것으로 보입니다. 이어서, 노트북 화면에는 한 사람이 노트북을 바라보고 있는 모습이 나타나며, 노트북의 뒷면에는 gram이라는 로고가 표시되어 있습니다. 배경에는 나무와 하늘이 보입니다. 같은 문구가 화면 왼쪽에 반복적으로 나타나며, 노트북의 기능을 강조합니다. 다음 장면에서는 노트북 화면에 두 사람의 영상 통화 화면이 표시됩니다. 왼쪽에는 책장이 배경인 사람, 오른쪽에는 밝은 배경의 사람이 있으며, 화면 하단에는 통화 관련 아이콘들이 보입니다. 노트북 옆에는 손이 화면을 가리키고 있고, 나무 테이블 위에 놓여 있습니다. 또한, 노트북 화면에는 야외에서 스마트폰을 들고 있는 여성의 모습이 보이며, 배경에는 산과 하늘이 있습니다. 긴 머리의 인물이 스마트폰을 들고 사진을 찍는 듯한 자세를 취하고 있는 장면도 나타납니다. 모든 장면에서 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 노트북 왼쪽에 적혀 있어, 제품의 특정 기능을 지속적으로 강조하고 있습니다. 슬라이드 일시 정지 이전 다음 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * LG gram Link : 최초 1회 연결 시에는 gram 노트북과 연결하고자 하는 대상인 모바일 기기가 같은 네트워크망에 있어야 합니다. * 모바일 기기에 LG gram Link 앱 설치가 필요하며, 최소사양은 iOS 16.4이상, 안드로이드 P OS 이상이어야 합니다. * 파일 공유 기능은 블루투스 기능을 활용하여 네트워크 연결 없이도 사용이 가능합니다. 파일 공유를 제외한 모든 기능은 노트북과 모바일 기기가 동일한 네트워크에 연결된 상태에서 사용이 가능합니다. 원하는 기능을 한곳에서 My gram 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. 함께할 때 더욱 빛나는 엑스붐 버즈 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 노트북 단독 구매 시 엑스붐 버즈는 별도 구매 제품이며, 상세 내용은 엑스붐 버즈 제품 상세 페이지를 확인해 주세요. 원하는 기능을 한곳에서 My gram 다양한 LG 소프트웨어를 한 곳에서 만나는 My gram gram chat On-Device, LG gram Link, gram 꿀팁 그리고 간편 설정 등 다양한 기능을 My gram에서 만나보세요. * 소비자의 이해를 돕기 위해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 함께할 때 더욱 빛나는 엑스붐 버즈 gram의 가장 좋은 친구, 엑스붐 버즈 엑스붐 버즈가 근처에 있으면 gram 속 팝업 이미지로 현재 연결 상태, 연결 여부를 손쉽게 확인할 수 있습니다. 모바일을 따로 확인할 필요 없이 gram 안에서 액티브 노이즈 캔슬링, EQ 세팅을 바로 설정할 수 있습니다. * 엑스붐 전용 앱이 gram에 내장되어 있어, gram으로 엑스붐 설정이 가능합니다. * PC에 이어버드는 동봉되어 있지 않으며 별도 구매가 필요합니다. * 25년도 gram 신제품, 엑스붐 버즈 신제품에 해당하는 내용입니다. 적용 모델에 제한이 있을 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 A부터 C까지 필요한 건 다 갖췄죠 슬림한 바디에 다양한 포트로 별도의 USB 허브가 필요 없는 높은 호환성을 자랑하죠. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 포트 상세 설명 1) USB-A x 2 포트 (USB 3.2 Gen 1x1) 2) 헤드폰 포트 3) HDMI 포트 4) USB-C 포트 x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) - USB Type-C 포트에 Thunderbolt™ 기기가 연결되면 이를 화면에 아이콘으로 알려줍니다. 25년 LG gram 한눈에 비교하기 25년 LG gram의 라인별 특장점, 핵심 기능, 주요 스펙 등을 아래 표로 확인하고 나의 라이프스타일에 맞는 노트북을 선택해 보세요. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다. * 상세 제품 이미지는 이해를 돕기 위한 이미지로 실제품 컬러와 다를 수 있습니다.",
-                    "sha256": "0273851398b309208d0f0e1ad96b9f24e0b44592087a4f1625f46802ae7d4bdb",
-                    "checked_on": "2026-10-11"
-                  }
-                ]
-              },
-              "model_rejection_opinion": {
-                "kind": "model_opinion",
-                "code": "source_missing_detail"
-              }
-            }
-          }
-        },
-        "monthly_search": 720,
-        "organic_provider": "codex_native_search",
-        "organic_query": "노트북 메모리",
-        "organic_results": [
-          {
-            "url": "https://www.intel.co.kr/content/www/kr/ko/support/articles/000007393/processors.html",
-            "domain": "www.intel.co.kr",
-            "title": "인텔® 노트북(모바일) 프로세서를 지원하는 메모리 유형",
-            "snippet": "인텔® 모바일 프로세서(노트북 프로세서)를 지원하는 메모리 유형은 제품 사양 페이지(ark.intel.com)에서 확인할 수 있습니다. ... 참고 | 노트북, 노트북, 2-in-1 및 올인원에 지원되는 메모리와 관련된 질문이"
-          },
-          {
-            "url": "https://learn.microsoft.com/ko-kr/windows-hardware/drivers/display/examples-of-graphics-memory-reporting",
-            "domain": "learn.microsoft.com",
-            "title": "그래픽 메모리 보고의 예 - Windows drivers | Microsoft Learn",
-            "snippet": "다음 스크린샷에서는 Intel Iris 불연속 그래픽 어댑터가 있는 Windows 11을 실행하는 Surface 노트북 컴퓨터의 계산된 그래픽 메모리 번호를 보여 줍니다. ... Image: Surface 노트북 컴퓨터에서"
-          },
-          {
-            "url": "https://support.hp.com/kr-ko/document/c00848900",
-            "domain": "support.hp.com",
-            "title": "HP 노트북 PC - 추가 메모리 설치를 통한 성능 향상 | HP® 지원",
-            "snippet": "추가 또는 교체용 메모리를 주문하기 전에 사용하는 노트북의 현재 메모리 구성 및 최대 메모리 구성을 파악하려면 다음 절차를 수행합니다. ... 노트북 모델에 따라 필요한 메모리"
-          },
-          {
-            "url": "https://www.corsair.com/lm/ko/c/memory/laptop-ram",
-            "domain": "www.corsair.com",
-            "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-            "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-          },
-          {
-            "url": "https://support.hp.com/kr-ko/document/c01079541",
-            "domain": "support.hp.com",
-            "title": "HP 노트북 PC - 주 메모리 제거 및 교체 절차 | HP® 지원",
-            "snippet": "이 문서는 HP Compaq 모델 5400c, 6500b, 6700b, 6700s 시리즈 노트북 PC에서의 주 메모리 제거 및 교체 방법을 설명합니다. ... 키보드를 평평하게 누르고 4개의 플라스틱"
-          },
-          {
-            "url": "https://download.lenovo.com/pccbbs/mobiles_pdf/p16_gen1_ug_ko.pdf",
-            "domain": "download.lenovo.com",
-            "title": "메모리 모듈\n\n<visual_element id=\"e1\">\n상단 설치 절차 그림: 노트북",
-            "snippet": "상단 설치 절차 그림: 노트북 내부의 메모리 모듈을 교체하는 3단계 확대도와 본체 내부 위치 표시가 있음. ... 아래의 노트북 본체 그림에는 메모리 모듈 위치가 빨간"
-          },
-          {
-            "url": "https://prod.danawa.com/info/?pcode=105474137",
-            "domain": "prod.danawa.com",
-            "title": "크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교",
-            "snippet": "# 크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 상품비교"
-          },
-          {
-            "url": "https://support.hp.com/kr-ko/document/c02490404",
-            "domain": "support.hp.com",
-            "title": "컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 | HP® 지원",
-            "snippet": "# 컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 ... 이 문서는 컴팩 621 노트북 PC에서 메모리 모듈을 제거하고 교체하는 방법을 설명합니다."
-          },
-          {
-            "url": "https://prod.danawa.com/info/?pcode=106991672",
-            "domain": "prod.danawa.com",
-            "title": "크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교",
-            "snippet": "# 크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교"
-          },
-          {
-            "url": "https://www.corsair.com/kr/ko/c/memory/laptop-ram?filter-tested-speed-%28up-to%29=1066",
-            "domain": "www.corsair.com",
-            "title": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR",
-            "snippet": "# 노트북 메모리 ... 다양한 인기 Intel 및 AMD 게이밍 및 고성능 노트북은 물론 소형 폼 팩터 PC와도 호환됩니다."
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "노트북메모리",
-          "executed_query": "노트북 메모리",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-11T03:54:13.624333+00:00",
-          "raw_sha256": "6bffdd45cca79862c04f0dfb3bf805ff04345926f315dd89b098f195475ac7e3",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "인텔® 모바일 프로세서(노트북 프로세서)를 지원하는 메모리 유형은 제품 사양 페이지(ark.intel.com)에서 확인할 수 있습니다. ... 참고 | 노트북, 노트북, 2-in-1 및 올인원에 지원되는 메모리와 관련된 질문이"
-            },
-            {
-              "result_index": 1,
-              "relevant": false,
-              "quote": "그래픽 메모리 보고의 예 - Windows drivers | Microsoft Learn"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "추가 또는 교체용 메모리를 주문하기 전에 사용하는 노트북의 현재 메모리 구성 및 최대 메모리 구성을 파악하려면 다음 절차를 수행합니다. ... 노트북 모델에 따라 필요한 메모리"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "이 문서는 HP Compaq 모델 5400c, 6500b, 6700b, 6700s 시리즈 노트북 PC에서의 주 메모리 제거 및 교체 방법을 설명합니다. ... 키보드를 평평하게 누르고 4개의 플라스틱"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "상단 설치 절차 그림: 노트북 내부의 메모리 모듈을 교체하는 3단계 확대도와 본체 내부 위치 표시가 있음. ... 아래의 노트북 본체 그림에는 메모리 모듈 위치가 빨간"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "크루셜 노트북 메모리 32GB 2x16GB DDR4 2666 MHz CL1 CT2K16G4SFRA266 : 다나와 가격비교"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "# 컴팩 621 노트북 PC - 메모리 모듈 제거 및 교체 ... 이 문서는 컴팩 621 노트북 PC에서 메모리 모듈을 제거하고 교체하는 방법을 설명합니다."
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "크루셜 램 노트북 메모리 8GB DDR4 2666MHz CL19 CT8G4SFRA266 : 다나와 가격비교"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "노트북 RAM | DDR4 & DDR5 게이밍 노트북 메모리 | CORSAIR"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": [
-          {
-            "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-            "title": "Samsung 대한민국",
-            "excerpt": "운영체제 Windows 11 Home 프로세서/칩셋 CPU Intel® Core™ Ultra 5 Processor 226V (P-core Up to 4.5 GHz 8 MB LLC Cache) 그래픽카드 Intel® Arc™ 130V GPU (8GB) 그래픽카드 타입 Shared NPU Intel® AI Boost 디스플레이 크기 40.6 cm (16.0 inch) 해상도 2880 x 1800 (WQXGA+) 종류 Dynamic AMOLED 2X, Anti-Reflective 터치스크린 Yes 메모리/저장장치 메모리 16 GB 메모리 타입 LPDDR5X (On Package) 저장장치 용량 512 GB 저장장치 타입 NVMe SSD 총 저장장치 슬롯 2 기본 사양 색상 Gray 형태 Laptop 멀티미디어 스피커 Quad Speakers 스마트 앰프 Yes 사운드 효과 Dolby Atmos® 마이크 Dual Array Digital Mic 카메라 2.0 MP 네트워크 Wi-Fi Wi-Fi 7, 802.11 be 2x2 블루투스 버전 Bluetooth v5.4 포트 HDMI 1 HDMI 2.1 (Supports 8K@60Hz, 5K@120Hz) USB 2 Thunderbolt™ 4, 1 USB3.2 외장 스토리지 지원 MicroSD 이어잭 1 Headphone out/Mic-in Combo 입력장치 키보드 Pro keyboard with Numeric key 키보드 백라이트 Yes 터치패드 Clickpad 보안기능 TPM Yes 지문인식 Yes 배터리 배터리 용량 (Typical)(Wh) 76.1 전원 충전기 65W USB Type-C Adapter 소비전력 (kWh) 3.8 정격 전압 100 ~ 240 V 외관 사양 크기 (가로x세로x두께)(mm) 355.4 x 250.4 x 12.5 무게 (kg) 1.56 센서 Ambient Light Sensor 서비스 SmartThings 지원 Yes",
-            "sha256": "70a7c8dc721f8a2baefe58a4649f332c320eb5a6506cb25c8d0be33c895177cc",
-            "checked_on": "2026-10-11"
-          },
-          {
-            "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-            "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GU7BK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-            "excerpt": "제품 상세 스펙 스펙 요약 정보 OS : Windows 11 Home (64 비트) CPU : 인텔® 코어™ Ultra 7 프로세서 258V 무게 (g) : 약 1,239 제품 스펙 더보기 운영체제 OS Windows 11 Home (64 비트) 디스플레이 화면크기 (cm) 40.6 해상도 WQXGA (2560 x 1600) 패널형태 IPS LCD 디스플레이 (Anti glare / ~144Hz VRR) 프로세서 CPU 인텔® 코어™ Ultra 7 프로세서 258V CPU 클럭 (GHz) 2.2 * CPU 클럭은 P 코어 기준입니다. 터보부스트 (GHz) 4.8 * CPU 클럭은 P 코어 기준입니다. L3 캐시 메모리 (MB) 12 메인메모리 메모리 용량 (GB) 32 메모리 종류 LPDDR5x (온보드) 멀티미디어 그래픽 Intel ARC 140V GPU 그래픽메모리 내장형 오디오&사운드 Dolby Atmos, Stereo speakers, Smart Amp (Max 5.0 W x 2) 웹캠 FHD IR 웹캠 (듀얼 마이크) 저장장치 SSD 1 TB (NVMe™) + 확장 슬롯 1 (PCIe 4.0 x 4) 입력장치 키보드 백라이트 키보드 풀 사이즈 97키 (3열 숫자 전용키 포함) 터치패드 터치패드 파워 AC (W) 65 배터리 (Wh) 77 (리튬 이온 배터리) 크기/무게 크기 (WxH, mm) 358 x 252 두께 (mm) 12.4 ~ 12.8 무게 (g) 약 1,239 네트워크 무선랜 Intel® Wi-Fi7 BE201 (Wi-Fi 7, 2x2, BT Combo) 블루투스 O (5.4) 유선랜 Gigabit (랜젠더 별매) 기타 Port USB Type-A x 2 (USB 3.2 Gen 1x1), USB Type-C x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) HDMI, 헤드폰 출력 PC 카드 슬롯 X 제공 S/W My gram LG Update & Renew LG Easy Guide LG On Screen Display LG Glance by Mirametrix LG gram Link gram chat On-Device Dolby Atmos Microsoft 365 (30 Days Trial) McAfee Live Safe (30 Days Trial) Google Quick Share 색상 메타 그레이 보안시스템 얼굴인식 (Face Login) 액세서리 X 노트북 가방(파우치) X 비고 * 제품 사양은 성능 향상을 위해 사전 예고없이 변경될 수 있습니다. * 무게는 제품 구성 및 제조 여건에 따라 달라질 수 있습니다. * USB PD 기능 지원 모델입니다. 기본정보 품명 및 모델명 노트북 컴퓨터 (16Z90TS) KC 인증 필 유무 R-R-LGE-16Z90TS(전자파 적합등록) ZU10899-23006(전기용품 안전확인) KC인증조회 공정거래위원회(소비자24)제공 인증정보 조회 정격전압 (V/Hz) 100-240 V~ 50/60 Hz 동일 모델의 출시년월 2025년 1월 제조자 LG전자(주) 제조국 중국 품질보증기준 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제 16조) 에 따라 보상 가능 A/S 책임자와 전화번호 LG전자서비스센터 / 1544-7777 인쇄하기 그램 AI 경험 아이콘 입니다. 프로의 멀티 AI gram AI 경험 CPU 아이콘 입니다. AI를 위해 탄생한 Intel® Core™ Ultra 200V 시리즈 프로세서 배터리 아이콘 입니다. AI를 만나 오래 지속되는 배터리 초경량 그램 아이콘 입니다. 더 크게, 여전히 가볍게 초경량 gram * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * Copilot+ PC 의 일부 S/W 및 기능은 향후 업데이트를 통해 지원할 예정입니다. 지원 시기는 기기 및 지역에 따라 다를 수 있습니다. * 자세한 내용은 https://aka.ms/copilotpluspc 를 참조하시기 바랍니다. 영상 일시정지 해설 한 사람이 테이블 위에 놓인 흰색 노트북을 열고 있습니다. 테이블 위에는 검은색 컵과 작은 흰색 물체가 놓여 있으며, 배경은 흐릿하게 처리된 실내 공간입니다. 이어서 화면은 보라색과 흰색의 빛이 나선형으로 회전하는 장면으로 전환됩니다. 빛의 선들이 화면 중앙을 향해 소용돌이치며, 밝은 빛이 화면 왼쪽에서 오른쪽으로 퍼져 나갑니다. 이 장면에서는 intel CORE ULTRA라는 문구가 적힌 칩이 공중에 떠 있는 모습이 보이며, 칩의 표면은 어두운 색조를 띠고 있습니다. 다음으로, 중앙에 위치한 컴퓨터 프로세서의 표면에도 intel CORE ULTRA라는 문구가 적혀 있고, 프로세서는 회로 기판 위에 장착되어 있습니다. 주변에는 복잡한 회로 패턴이 보이며, 전체적인 색상은 보라색 계열입니다. 이후 노트북 화면이 중앙에 위치하며, 화면에는 AI 아프리카에 프로젝트라는 문구가 보입니다. 주변에는 다양한 디지털 이미지와 텍스트가 떠 있으며, 왼쪽 상단에는 문서 파일과 Algorithm이라는 단어가, 오른쪽 상단에는 BIG DATA라는 텍스트가 포함된 이미지가 있습니다. 마지막으로, 노트북 화면에는 AI 아틀리에 프로젝트라는 문구가 중앙에 표시되어 있습니다. 화면 주위에는 다양한 그래픽과 텍스트가 떠다니고 있으며, 왼쪽 상단에는 원형 그래프와 문서가, 오른쪽 상단에는 복잡한 회로도와 BIG DATA라는 텍스트가 있는 구체가 보입니다. 오른쪽 하단에는 그래프와 예술 작품 이미지가 있으며, 그 옆에는 텍스트가 나열되어 있습니다. 전체적으로 다양한 데이터와 시각적 요소들이 노트북을 중심으로 배치되어 있습니다. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 영상이며, 제품별 색상 및 스펙은 다를 수 있습니다. * gram AI란? 25년 gram 제품에 탑재된 On-Device, Cloud AI 서비스 입니다. 이전 다음 기억보다 정확한 기록 AI가 대신해요. 어제 본 유튜브 아무리 찾아도 안보일 때, 삭제한 초안이 간절할 때, 타임 트래블로 사라진 아이디어를 붙잡아 보세요. PC 화면은 이미지로, 내가 본 영상 속 음성은 텍스트로 기억해 gram chat에서 키워드만 입력하면 AI가 PC 화면을 빠르게 찾아주죠. 영상 일시정지 해설 기억보다 정확한 기록 AI가 대신해요. 노트북의 화면과 흰색 키보드가 보이는 장면입니다. 화면 하단에는 여러 아이콘이 정렬되어 있으며, 화면의 주된 색상은 파란색과 보라색 계열입니다. 노트북은 열려 있는 상태로, 키보드 중앙에 전원 버튼이 위치해 있습니다. 화면에는 다양한 색상의 예술 작품들이 전시된 갤러리 이미지가 보이며, 중앙에는 여러 사람이 작품을 감상하고 있는 모습이 보입니다. 상단에는 Time Travel이라는 텍스트가 있고, 그 아래에는 250117. AI 아트워크 타임트래블 pptrk라는 문구가 있습니다. 화면의 여러 부분에는 Rainbow in Wave, Colorful Flowers, Colorful Pattern 등의 텍스트가 포함된 작은 창들이 나타나며, 각 창에는 작품의 이름과 크기 정보가 표시되어 있습니다. 작품들은 주로 추상적이고 다채로운 색상을 특징으로 합니다. 찾는 일은 걱정말고 창작에만 몰두하세요. 업무에 더 집중할 수 있도록 번거로운 일은 gram AI에 맡겨주세요. 정리 안된 폴더를 헤맬 필요 없이 파일 속 텍스트는 물론 이미지 속 텍스트까지 빠르게 찾아줘요. 영상 일시정지 해설 찾는 일은 걱정말고 창작에만 몰두하세요. 노트북의 모니터가 화면 중앙에 위치해 있으며, 검색창에 한 달간 모은 AI 인테라는 문구가 입력되어 있습니다. 검색창은 보라색 테두리로 강조되어 있고, 오른쪽에는 돋보기 모양의 검색 아이콘이 있습니다. 화면 하단에는 윈도우 작업 표시줄이 보이며, 여러 개의 아이콘이 나열되어 있습니다. 키보드의 일부가 화면 하단에 보이며, 손가락이 키보드를 누르고 있는 모습이 나타납니다.<br/><br/>이어서 화면에는 노트북의 디스플레이가 보이며, 검색창에 한 달간 모은 AI 인터랙티브 art라는 문구가 입력되어 있습니다. 검색창과 검색 아이콘의 위치와 강조는 이전과 동일합니다. 화면 오른쪽 아래에는 손이 키보드를 사용하고 있는 모습이 보입니다.<br/><br/>다음 장면에서는 노트북 화면에 채팅 인터페이스가 표시되며, 상단에는 AI와의 대화라는 제목이 보입니다. 그 아래에는 사용자가 입력한 질문과 AI의 응답이 나타나 있습니다. 하단에는 할 일로 온 AI 인터뷰어는 AI가 자료라는 문구가 포함된 버튼이 있습니다. 배경은 흐릿하게 처리되어 있으며, 사람들의 실루엣이 보입니다.<br/><br/>마지막으로, 테이블 위에 놓인 전자 기기와 그 위로 펼쳐진 디지털 인터페이스가 보입니다. 화면 중앙에는 여러 개의 이미지와 텍스트가 겹쳐져 있으며, 이는 홀로그램처럼 보입니다. 화면 왼쪽에는 텍스트가 포함된 카드 형태의 요소가 있고, 오른쪽에는 다양한 색상의 그래픽이 나타나 있습니다. 테이블 위에는 손이 보이며, 이는 기기를 조작하는 듯한 모습입니다. 주변은 어두운 색조로 되어 있어 디\n[중간 본문 생략]\n통화 기록, 즐겨찾기, 연락처 등의 메뉴가 나열되어 있고, 중앙에는 이름과 시간 정보가 포함된 통화 목록이 있습니다. 오른쪽에는 프로필 이미지와 함께 발신이라는 텍스트가 보이며, 아래쪽에는 빨간색과 녹색 버튼이 위치해 있습니다. 화면 왼쪽 외부에는 이제 통화도 gram에서 바로라는 문구가 검은색 글씨로 적혀 있습니다. 통화 기록 목록에는 각 항목에 전화번호와 통화 아이콘이 있으며, 오른쪽에는 통화 중인 사람의 프로필 이미지와 이름이 나타나 있습니다. 하단의 녹색과 빨간색 버튼은 각각 통화 수락과 종료를 나타내는 아이콘으로 배치되어 있습니다. 영상 일시정지 해설 노트북이 화면 중앙에 배치되어 있으며, 노트북 화면에는 한 여성이 노트북을 들고 있는 모습이 보입니다. 여성은 야외 테라스에 서 있고, 뒤로는 난간과 나무가 보입니다. 노트북 왼쪽에는 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 검은색 글씨로 적혀 있습니다. 이 문구는 노트북의 기능을 설명하는 것으로 보입니다. 이어서, 노트북 화면에는 한 사람이 노트북을 바라보고 있는 모습이 나타나며, 노트북의 뒷면에는 gram이라는 로고가 표시되어 있습니다. 배경에는 나무와 하늘이 보입니다. 같은 문구가 화면 왼쪽에 반복적으로 나타나며, 노트북의 기능을 강조합니다. 다음 장면에서는 노트북 화면에 두 사람의 영상 통화 화면이 표시됩니다. 왼쪽에는 책장이 배경인 사람, 오른쪽에는 밝은 배경의 사람이 있으며, 화면 하단에는 통화 관련 아이콘들이 보입니다. 노트북 옆에는 손이 화면을 가리키고 있고, 나무 테이블 위에 놓여 있습니다. 또한, 노트북 화면에는 야외에서 스마트폰을 들고 있는 여성의 모습이 보이며, 배경에는 산과 하늘이 있습니다. 긴 머리의 인물이 스마트폰을 들고 사진을 찍는 듯한 자세를 취하고 있는 장면도 나타납니다. 모든 장면에서 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 노트북 왼쪽에 적혀 있어, 제품의 특정 기능을 지속적으로 강조하고 있습니다. 슬라이드 일시 정지 이전 다음 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * LG gram Link : 최초 1회 연결 시에는 gram 노트북과 연결하고자 하는 대상인 모바일 기기가 같은 네트워크망에 있어야 합니다. * 모바일 기기에 LG gram Link 앱 설치가 필요하며, 최소사양은 iOS 16.4이상, 안드로이드 P OS 이상이어야 합니다. * 파일 공유 기능은 블루투스 기능을 활용하여 네트워크 연결 없이도 사용이 가능합니다. 파일 공유를 제외한 모든 기능은 노트북과 모바일 기기가 동일한 네트워크에 연결된 상태에서 사용이 가능합니다. 원하는 기능을 한곳에서 My gram 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. 함께할 때 더욱 빛나는 엑스붐 버즈 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 노트북 단독 구매 시 엑스붐 버즈는 별도 구매 제품이며, 상세 내용은 엑스붐 버즈 제품 상세 페이지를 확인해 주세요. 원하는 기능을 한곳에서 My gram 다양한 LG 소프트웨어를 한 곳에서 만나는 My gram gram chat On-Device, LG gram Link, gram 꿀팁 그리고 간편 설정 등 다양한 기능을 My gram에서 만나보세요. * 소비자의 이해를 돕기 위해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 함께할 때 더욱 빛나는 엑스붐 버즈 gram의 가장 좋은 친구, 엑스붐 버즈 엑스붐 버즈가 근처에 있으면 gram 속 팝업 이미지로 현재 연결 상태, 연결 여부를 손쉽게 확인할 수 있습니다. 모바일을 따로 확인할 필요 없이 gram 안에서 액티브 노이즈 캔슬링, EQ 세팅을 바로 설정할 수 있습니다. * 엑스붐 전용 앱이 gram에 내장되어 있어, gram으로 엑스붐 설정이 가능합니다. * PC에 이어버드는 동봉되어 있지 않으며 별도 구매가 필요합니다. * 25년도 gram 신제품, 엑스붐 버즈 신제품에 해당하는 내용입니다. 적용 모델에 제한이 있을 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 A부터 C까지 필요한 건 다 갖췄죠 슬림한 바디에 다양한 포트로 별도의 USB 허브가 필요 없는 높은 호환성을 자랑하죠. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 포트 상세 설명 1) USB-A x 2 포트 (USB 3.2 Gen 1x1) 2) 헤드폰 포트 3) HDMI 포트 4) USB-C 포트 x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) - USB Type-C 포트에 Thunderbolt™ 기기가 연결되면 이를 화면에 아이콘으로 알려줍니다. 25년 LG gram 한눈에 비교하기 25년 LG gram의 라인별 특장점, 핵심 기능, 주요 스펙 등을 아래 표로 확인하고 나의 라이프스타일에 맞는 노트북을 선택해 보세요. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다. * 상세 제품 이미지는 이해를 돕기 위한 이미지로 실제품 컬러와 다를 수 있습니다.",
-            "sha256": "30f1762dce538946988a7f84fb27e44e543916d51c455457a2764b6e15178a05",
-            "checked_on": "2026-10-11"
-          },
-          {
-            "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-            "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GS5LK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-            "excerpt": "제품 상세 스펙 스펙 요약 정보 OS : Windows 11 Home (64 비트) CPU : 인텔® 코어™ Ultra 5 프로세서 226V 무게 (g) : 약 1,199 제품 스펙 더보기 운영체제 OS Windows 11 Home (64 비트) 디스플레이 화면크기 (cm) 40.6 해상도 WQXGA (2560 x 1600) 패널형태 IPS LCD 디스플레이 (Anti glare / ~144Hz VRR) 프로세서 CPU 인텔® 코어™ Ultra 5 프로세서 226V CPU 클럭 (GHz) 2.1 * CPU 클럭은 P 코어 기준입니다. 터보부스트 (GHz) 4.5 * CPU 클럭은 P 코어 기준입니다. L3 캐시 메모리 (MB) 12 메인메모리 메모리 용량 (GB) 16 메모리 종류 LPDDR5x (온보드) 멀티미디어 그래픽 Intel ARC 130V GPU 그래픽메모리 내장형 오디오&사운드 Dolby Atmos, Stereo speakers, Smart Amp (Max 5.0 W x 2) 웹캠 FHD IR 웹캠 (듀얼 마이크) 저장장치 SSD 512 GB (NVMe™) + 확장 슬롯 1 (PCIe 4.0 x 4) 입력장치 키보드 백라이트 키보드 풀 사이즈 97키 (3열 숫자 전용키 포함) 터치패드 터치패드 파워 AC (W) 65 배터리 (Wh) 77 (리튬 이온 배터리) 크기/무게 크기 (WxH, mm) 358 x 252 두께 (mm) 12.4 ~ 12.8 무게 (g) 약 1,199 네트워크 무선랜 Intel® Wi-Fi7 BE201 (Wi-Fi 7, 2x2, BT Combo) 블루투스 O (5.4) 유선랜 Gigabit (랜젠더 별매) 기타 Port USB Type-A x 2 (USB 3.2 Gen 1x1), USB Type-C x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) HDMI, 헤드폰 출력 PC 카드 슬롯 X 제공 S/W My gram LG Update & Renew LG Easy Guide LG On Screen Display LG Glance by Mirametrix LG gram Link gram chat On-Device Dolby Atmos Microsoft 365 (30 Days Trial) McAfee Live Safe (30 Days Trial) Google Quick Share 색상 에센스 화이트 보안시스템 얼굴인식 (Face Login) 액세서리 X 노트북 가방(파우치) X 비고 * 제품 사양은 성능 향상을 위해 사전 예고없이 변경될 수 있습니다. * 무게는 제품 구성 및 제조 여건에 따라 달라질 수 있습니다. * USB PD 기능 지원 모델입니다. 기본정보 품명 및 모델명 노트북 컴퓨터 (16Z90TS) KC 인증 필 유무 R-R-LGE-16Z90TS(전자파 적합등록) ZU10899-23006(전기용품 안전확인) KC인증조회 공정거래위원회(소비자24)제공 인증정보 조회 정격전압 (V/Hz) 100-240 V~ 50/60 Hz 동일 모델의 출시년월 2025년 2월 제조자 LG전자(주) 제조국 중국 품질보증기준 결함·하자 등에 따른 소비자피해에 대해서는 소비자분쟁해결기준(소비자기본법 제 16조) 에 따라 보상 가능 A/S 책임자와 전화번호 LG전자서비스센터 / 1544-7777 인쇄하기 그램 AI 경험 아이콘 입니다. 프로의 멀티 AI gram AI 경험 CPU 아이콘 입니다. AI를 위해 탄생한 Intel® Core™ Ultra 200V 시리즈 프로세서 배터리 아이콘 입니다. AI를 만나 오래 지속되는 배터리 초경량 그램 아이콘 입니다. 더 크게, 여전히 가볍게 초경량 gram * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 에센스 화이트, 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * Copilot+ PC 의 일부 S/W 및 기능은 향후 업데이트를 통해 지원할 예정입니다. 지원 시기는 기기 및 지역에 따라 다를 수 있습니다. * 자세한 내용은 https://aka.ms/copilotpluspc 를 참조하시기 바랍니다. 영상 일시정지 해설 한 사람이 테이블 위에 놓인 흰색 노트북을 열고 있습니다. 테이블 위에는 검은색 컵과 작은 흰색 물체가 놓여 있으며, 배경은 흐릿하게 처리된 실내 공간입니다. 이어서 화면은 보라색과 흰색의 빛이 나선형으로 회전하는 장면으로 전환됩니다. 빛의 선들이 화면 중앙을 향해 소용돌이치며, 밝은 빛이 화면 왼쪽에서 오른쪽으로 퍼져 나갑니다. 이 장면에서는 intel CORE ULTRA라는 문구가 적힌 칩이 공중에 떠 있는 모습이 보이며, 칩의 표면은 어두운 색조를 띠고 있습니다. 다음으로, 중앙에 위치한 컴퓨터 프로세서의 표면에도 intel CORE ULTRA라는 문구가 적혀 있고, 프로세서는 회로 기판 위에 장착되어 있습니다. 주변에는 복잡한 회로 패턴이 보이며, 전체적인 색상은 보라색 계열입니다. 이후 노트북 화면이 중앙에 위치하며, 화면에는 AI 아프리카에 프로젝트라는 문구가 보입니다. 주변에는 다양한 디지털 이미지와 텍스트가 떠 있으며, 왼쪽 상단에는 문서 파일과 Algorithm이라는 단어가, 오른쪽 상단에는 BIG DATA라는 텍스트가 포함된 이미지가 있습니다. 마지막으로, 노트북 화면에는 AI 아틀리에 프로젝트라는 문구가 중앙에 표시되어 있습니다. 화면 주위에는 다양한 그래픽과 텍스트가 떠다니고 있으며, 왼쪽 상단에는 원형 그래프와 문서가, 오른쪽 상단에는 복잡한 회로도와 BIG DATA라는 텍스트가 있는 구체가 보입니다. 오른쪽 하단에는 그래프와 예술 작품 이미지가 있으며, 그 옆에는 텍스트가 나열되어 있습니다. 전체적으로 다양한 데이터와 시각적 요소들이 노트북을 중심으로 배치되어 있습니다. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 영상이며, 제품별 색상 및 스펙은 다를 수 있습니다. * gram AI란? 25년 gram 제품에 탑재된 On-Device, Cloud AI 서비스 입니다. 이전 다음 기억보다 정확한 기록 AI가 대신해요. 어제 본 유튜브 아무리 찾아도 안보일 때, 삭제한 초안이 간절할 때, 타임 트래블로 사라진 아이디어를 붙잡아 보세요. PC 화면은 이미지로, 내가 본 영상 속 음성은 텍스트로 기억해 gram chat에서 키워드만 입력하면 AI가 PC 화면을 빠르게 찾아주죠. 영상 일시정지 해설 기억보다 정확한 기록 AI가 대신해요. 노트북의 화면과 흰색 키보드가 보이는 장면입니다. 화면 하단에는 여러 아이콘이 정렬되어 있으며, 화면의 주된 색상은 파란색과 보라색 계열입니다. 노트북은 열려 있는 상태로, 키보드 중앙에 전원 버튼이 위치해 있습니다. 화면에는 다양한 색상의 예술 작품들이 전시된 갤러리 이미지가 보이며, 중앙에는 여러 사람이 작품을 감상하고 있는 모습이 보입니다. 상단에는 Time Travel이라는 텍스트가 있고, 그 아래에는 250117. AI 아트워크 타임트래블 pptrk라는 문구가 있습니다. 화면의 여러 부분에는 Rainbow in Wave, Colorful Flowers, Colorful Pattern 등의 텍스트가 포함된 작은 창들이 나타나며, 각 창에는 작품의 이름과 크기 정보가 표시되어 있습니다. 작품들은 주로 추상적이고 다채로운 색상을 특징으로 합니다. 찾는 일은 걱정말고 창작에만 몰두하세요. 업무에 더 집중할 수 있도록 번거로운 일은 gram AI에 맡겨주세요. 정리 안된 폴더를 헤맬 필요 없이 파일 속 텍스트는 물론 이미지 속 텍스트까지 빠르게 찾아줘요. 영상 일시정지 해설 찾는 일은 걱정말고 창작에만 몰두하세요. 노트북의 모니터가 화면 중앙에 위치해 있으며, 검색창에 한 달간 모은 AI 인테라는 문구가 입력되어 있습니다. 검색창은 보라색 테두리로 강조되어 있고, 오른쪽에는 돋보기 모양의 검색 아이콘이 있습니다. 화면 하단에는 윈도우 작업 표시줄이 보이며, 여러 개의 아이콘이 나열되어 있습니다. 키보드의 일부가 화면 하단에 보이며, 손가락이 키보드를 누르고 있는 모습이 나타납니다.<br/><br/>이어서 화면에는 노트북의 디스플레이가 보이며, 검색창에 한 달간 모은 AI 인터랙티브 art라는 문구가 입력되어 있습니다. 검색창과 검색 아이콘의 위치와 강조는 이전과 동일합니다. 화면 오른쪽 아래에는 손이 키보드를 사용하고 있는 모습이 보입니다.<br/><br/>다음 장면에서는 노트북 화면에 채팅 인터페이스가 표시되며, 상단에는 AI와의 대화라는 제목이 보입니다. 그 아래에는 사용자가 입력한 질문과 AI의 응답이 나타나 있습니다. 하단에는 할 일로 온 AI 인터뷰어는 AI가 자료라는 문구가 포함된 버튼이 있습니다. 배경은 흐릿하게 처리되어 있으며, 사람들의 실루엣이 보입니다.<br/><br/>마지막으로, 테이블 위에 놓인 전자 기기와 그 위로 펼쳐진 디지털 인터페이스가 보입니다. 화면 중앙에는 여러 개의 이미지와 텍스트가 겹쳐져 있으며, 이는 홀로그램처럼 보입니다. 화면 왼쪽에는 텍스트가 포함된 카드 형태의 요소가 있고, 오른쪽에는 다양한 색상의 그래픽이 나타나 있습니다. 테이블 위에는 손이 보이며, 이는 기기를 조작하는 듯한 모습입니다. 주변은 어두운\n[중간 본문 생략]\n화 기록, 즐겨찾기, 연락처 등의 메뉴가 나열되어 있고, 중앙에는 이름과 시간 정보가 포함된 통화 목록이 있습니다. 오른쪽에는 프로필 이미지와 함께 발신이라는 텍스트가 보이며, 아래쪽에는 빨간색과 녹색 버튼이 위치해 있습니다. 화면 왼쪽 외부에는 이제 통화도 gram에서 바로라는 문구가 검은색 글씨로 적혀 있습니다. 통화 기록 목록에는 각 항목에 전화번호와 통화 아이콘이 있으며, 오른쪽에는 통화 중인 사람의 프로필 이미지와 이름이 나타나 있습니다. 하단의 녹색과 빨간색 버튼은 각각 통화 수락과 종료를 나타내는 아이콘으로 배치되어 있습니다. 영상 일시정지 해설 노트북이 화면 중앙에 배치되어 있으며, 노트북 화면에는 한 여성이 노트북을 들고 있는 모습이 보입니다. 여성은 야외 테라스에 서 있고, 뒤로는 난간과 나무가 보입니다. 노트북 왼쪽에는 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 검은색 글씨로 적혀 있습니다. 이 문구는 노트북의 기능을 설명하는 것으로 보입니다. 이어서, 노트북 화면에는 한 사람이 노트북을 바라보고 있는 모습이 나타나며, 노트북의 뒷면에는 gram이라는 로고가 표시되어 있습니다. 배경에는 나무와 하늘이 보입니다. 같은 문구가 화면 왼쪽에 반복적으로 나타나며, 노트북의 기능을 강조합니다. 다음 장면에서는 노트북 화면에 두 사람의 영상 통화 화면이 표시됩니다. 왼쪽에는 책장이 배경인 사람, 오른쪽에는 밝은 배경의 사람이 있으며, 화면 하단에는 통화 관련 아이콘들이 보입니다. 노트북 옆에는 손이 화면을 가리키고 있고, 나무 테이블 위에 놓여 있습니다. 또한, 노트북 화면에는 야외에서 스마트폰을 들고 있는 여성의 모습이 보이며, 배경에는 산과 하늘이 있습니다. 긴 머리의 인물이 스마트폰을 들고 사진을 찍는 듯한 자세를 취하고 있는 장면도 나타납니다. 모든 장면에서 모바일 카메라가 촬영하는 화면을 gram에서 실시간 확인이라는 문구가 노트북 왼쪽에 적혀 있어, 제품의 특정 기능을 지속적으로 강조하고 있습니다. 슬라이드 일시 정지 이전 다음 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * LG gram Link : 최초 1회 연결 시에는 gram 노트북과 연결하고자 하는 대상인 모바일 기기가 같은 네트워크망에 있어야 합니다. * 모바일 기기에 LG gram Link 앱 설치가 필요하며, 최소사양은 iOS 16.4이상, 안드로이드 P OS 이상이어야 합니다. * 파일 공유 기능은 블루투스 기능을 활용하여 네트워크 연결 없이도 사용이 가능합니다. 파일 공유를 제외한 모든 기능은 노트북과 모바일 기기가 동일한 네트워크에 연결된 상태에서 사용이 가능합니다. 원하는 기능을 한곳에서 My gram 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 메타 그레이 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. 함께할 때 더욱 빛나는 엑스붐 버즈 더보기 * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TP) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 노트북 단독 구매 시 엑스붐 버즈는 별도 구매 제품이며, 상세 내용은 엑스붐 버즈 제품 상세 페이지를 확인해 주세요. 원하는 기능을 한곳에서 My gram 다양한 LG 소프트웨어를 한 곳에서 만나는 My gram gram chat On-Device, LG gram Link, gram 꿀팁 그리고 간편 설정 등 다양한 기능을 My gram에서 만나보세요. * 소비자의 이해를 돕기 위해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 함께할 때 더욱 빛나는 엑스붐 버즈 gram의 가장 좋은 친구, 엑스붐 버즈 엑스붐 버즈가 근처에 있으면 gram 속 팝업 이미지로 현재 연결 상태, 연결 여부를 손쉽게 확인할 수 있습니다. 모바일을 따로 확인할 필요 없이 gram 안에서 액티브 노이즈 캔슬링, EQ 세팅을 바로 설정할 수 있습니다. * 엑스붐 전용 앱이 gram에 내장되어 있어, gram으로 엑스붐 설정이 가능합니다. * PC에 이어버드는 동봉되어 있지 않으며 별도 구매가 필요합니다. * 25년도 gram 신제품, 엑스붐 버즈 신제품에 해당하는 내용입니다. 적용 모델에 제한이 있을 수 있습니다. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장별로 취급 여부가 다를 수 있습니다. 다른 상세보기 닫기 A부터 C까지 필요한 건 다 갖췄죠 슬림한 바디에 다양한 포트로 별도의 USB 허브가 필요 없는 높은 호환성을 자랑하죠. * 소비자의 이해를 돕기 위해 LG gram Pro (16Z90TS) 에센스 화이트 모델을 활용해 연출된 이미지이며, 제품별 색상 및 스펙은 다를 수 있습니다. * 포트 상세 설명 1) USB-A x 2 포트 (USB 3.2 Gen 1x1) 2) 헤드폰 포트 3) HDMI 포트 4) USB-C 포트 x 2 (USB4 Gen 3x2, USB PD, 썬더볼트4) - USB Type-C 포트에 Thunderbolt™ 기기가 연결되면 이를 화면에 아이콘으로 알려줍니다. 25년 LG gram 한눈에 비교하기 25년 LG gram의 라인별 특장점, 핵심 기능, 주요 스펙 등을 아래 표로 확인하고 나의 라이프스타일에 맞는 노트북을 선택해 보세요. * 제품 이미지 및 특장점 등에는 광고적 표현이 포함되어 실제 제품과 차이가 있을 수 있으며 제품 외관, 스펙 등은 제품 개량을 위해 사전 예고 없이 변경될 수 있습니다. * 모든 제품 이미지는 촬영 컷으로 실제 제품과 차이가 있을 수 있으며, 제품 색상은 모니터 해상도, 밝기 설정 및 컴퓨터 사양에 따라 차이가 있을 수 있습니다. * 해당 제품의 성능은 사용 환경에 따라 일부 상이할 수 있으며, 매장 별로 취급여부가 다를 수 있습니다. * 상세 제품 이미지는 이해를 돕기 위한 이미지로 실제품 컬러와 다를 수 있습니다.",
-            "sha256": "0273851398b309208d0f0e1ad96b9f24e0b44592087a4f1625f46802ae7d4bdb",
-            "checked_on": "2026-10-11"
-          }
-        ]
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
+      "DDR48GB",
       "깨끗한화장지",
+      "노트북메모리",
       "램16기가",
       "램8기가",
       "로봇청소기직배수설치",
@@ -21157,8 +20652,8 @@
     ],
     "research_stop_reason": "pool_exhausted",
     "retry_keywords": [
-      "DDR48GB",
-      "노트북메모리"
+      "DDR416G",
+      "DDR48G"
     ],
     "discovery_rejections": [
       {
@@ -22397,6 +21892,8 @@
       }
     ],
     "deferred_measured_keywords": [
+      "DDR48GB",
+      "노트북메모리",
       "램16기가",
       "램8기가",
       "로봇청소기직배수설치",
@@ -22408,41 +21905,34 @@
       {
         "round": 1,
         "offered_keywords": [
-          "DDR48GB",
-          "노트북메모리"
+          "DDR416G",
+          "DDR48G"
         ],
         "proposals": [],
         "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
           {
-            "keyword": "DDR48GB",
+            "keyword": "DDR416G",
             "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "노트북메모리",
-            "reason_code": "insufficient_specificity",
+            "keyword": "DDR48G",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "DDR48GB",
-            "search_query": "DDR48GB",
+            "keyword": "DDR416G",
+            "search_query": "DDR416G",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "purchase_intent_unclear"
-          },
-          {
-            "keyword": "노트북메모리",
-            "search_query": "노트북 메모리",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
           }
         ],
         "research_fallback_attempted": [
-          "DDR48GB",
-          "노트북메모리"
+          "DDR416G"
         ]
       },
       {
@@ -22472,22 +21962,22 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "DDR48GB",
+        "keyword": "DDR416G",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 1340,
-        "organic_query": "DDR48GB"
-      },
-      {
-        "keyword": "노트북메모리",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 720,
-        "organic_query": "노트북 메모리"
+        "monthly_search": 12450,
+        "organic_query": "DDR416G"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "DDR416G",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-11T04:36:46.405240+00:00",
+        "retry_after": "2026-10-12T04:36:46.405240+00:00",
+        "attempts": 3
+      },
       {
         "keyword": "노트북메모리",
         "reason_code": "source_coverage",
@@ -22613,13 +22103,6 @@
         "failed_at": "2026-10-07T00:01:02.845912+00:00",
         "retry_after": "2026-10-08T00:01:02.845912+00:00",
         "attempts": 1
-      },
-      {
-        "keyword": "DDR416G",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-04T13:23:19.387339+00:00",
-        "retry_after": "2026-10-05T13:23:19.387339+00:00",
-        "attempts": 2
       },
       {
         "keyword": "퓨리케어공기청정기필터",
@@ -23069,91 +22552,43 @@
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9029
+        "elapsed_ms": 8968
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9038
+        "elapsed_ms": 7701
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11562
+        "elapsed_ms": 7179
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11156
+        "elapsed_ms": 6940
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 13270
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 5542
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 7936
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10056
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6027
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 5465
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 13669
-      },
-      {
-        "stage": "official_research",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 50076
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 24540
+        "elapsed_ms": 8990
       },
       {
         "stage": "review_question_discovery",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 13568
+        "elapsed_ms": 11738
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6118
+        "elapsed_ms": 5838
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -23190,12 +22625,6 @@
             "snippet": "신신제약, ‘캐네펜 카타플라스마’ 출시…신신파스 플렉스 3종 라인업 완성 <신신제약 ‘캐네펜 카타플라스마’ 출시…신신파스 플렉스 3종 라인업 완성> [신신제약 보도자료] - 자료 배포일: 2025년 1월 14일(화) 아렉스"
           },
           {
-            "url": "https://www.jobkorea.co.kr/company/1396412/?C_IDX=1131",
-            "domain": "www.jobkorea.co.kr",
-            "title": "삼진제약㈜ 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
-            "snippet": "신제품 제이틴주사 출시 ... 본사 사옥 신축 기공식"
-          },
-          {
             "url": "https://www.cmn.co.kr/",
             "domain": "www.cmn.co.kr",
             "title": "주간신문씨엠엔(CMN)",
@@ -23205,7 +22634,7 @@
             "url": "https://www.shop.ivenet.co.kr/",
             "domain": "www.shop.ivenet.co.kr",
             "title": "아이배냇",
-            "snippet": "* 신제품 출시 ... 장기간 실온보관이 가능한 배냇밀 짜먹는 이유식 32,000원 54% 14,900원롱고구마스틱 2개세트 신제품 롱고구마스틱 출시! ... 순한양념세트5종 (국물간장+비빔간장+소금+된장+참기름) 우리아이 처음먹는 순한 양념세트 5종"
+            "snippet": "* 신제품 출시 ... 장기간 실온보관이 가능한 배냇밀 짜먹는 이유식 32,000원 54% 14,900원롱고구마스틱 2개세트 신제품 롱고구마스틱 출시!"
           },
           {
             "url": "https://www.shinpoong.co.kr/main/main.php",
@@ -23224,6 +22653,12 @@
             "domain": "shinpoong.co.kr",
             "title": "신풍제약주식회사 : 신풍소식",
             "snippet": "437 | 신풍제약 애드마일스, 기초 영양을 위한 가성비 신제품 '칸휴 밀크씨슬 에너지' 및 '칼슘 마그네슘 비타민D 아연 플러스' 출시 | 부관리자 | 2026.04.01 | 4135436"
+          },
+          {
+            "url": "https://www.reon.co.kr/main/index.php?pcView=y",
+            "domain": "www.reon.co.kr",
+            "title": "건강은 자연가득",
+            "snippet": "* [리온공지] 구매금액의 10%를 적립해 ... ... * [리온공지] 다이어터21 시즌1 : 참가... * [리온공지] KB카드 결제 오류 수정 완... ... * 삼성 프리미엄 데커신"
           }
         ]
       },
@@ -23235,8 +22670,14 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://www.play-didim.com/",
-            "domain": "www.play-didim.com",
+            "url": "https://shop.wisely.store/new",
+            "domain": "shop.wisely.store",
+            "title": "신제품 | 와이즐리",
+            "snippet": "신제품 ... 가전 · 디지털 ... 와이즐리 기미 커버 토닝 쿠션 ... 딜라잇가든 국내산 100% 냉동 딸기 1kg"
+          },
+          {
+            "url": "https://www.playdidim.com/",
+            "domain": "www.playdidim.com",
             "title": "디딤",
             "snippet": "본 논문은 DIDIM이 단순히 “운동 게임을 제공하는 제품”에 그치지 않고, 체력측정 기능을 통해 추출되는 운동 데이터가 전통적 임상 신체기능 측정치와 연관될 가능성을 학술논문을 통해 보여주었다는"
           },
@@ -23251,6 +22692,12 @@
             "domain": "gdonif.com",
             "title": "그돈이면 - 가격은 같아도 가치는 다르니까 · 소비자를 위한 가전 비교",
             "snippet": "전체[Button: 생활가전][Button: 주방가전][Button: 계절가전][Button: 디지털IT] ... 3131개 제품 스펙을 하나하나 비교해보니 진짜 차이가 나는 항목이 있었어요. ... 스타일러 스타일러 구매가이드 2026년 7월 10일 업데이트 김치냉장고"
+          },
+          {
+            "url": "https://www.petclub.co.kr/",
+            "domain": "www.petclub.co.kr",
+            "title": "Petclub",
+            "snippet": "* Image Image: 장바구니 담기상품명 : [30개세트] 데이스포 모이스트 황태오리버거 100g ... * 가전/디지털/컴퓨터 ... 상품명 : [펫클럽] 한삼인 펫츠밀 체중관리 영양보충제 200g 강아지영양제"
           },
           {
             "url": "https://dealmate.ai.kr/",
@@ -23274,25 +22721,13 @@
             "url": "https://reviewloger.com/category/digital/national",
             "domain": "reviewloger.com",
             "title": "전국 디지털 체험단 112건 | 신청자·마감·경쟁률 비교 - 리뷰로거",
-            "snippet": "디지털 전국 디지털 D-2 에이바바 휴대용 생수병 미니 가습기 — 디지털 체험단 출처 아싸뷰 · 신청은 원본에서 최근 수집에서 확인 안 됨 · 원본 확인"
+            "snippet": "유형은 배송형 112건이고, 마감이 3일 이내인 공고가 27건 있습니다. ... 전국 배송형 디지털 체험단 112건을 리뷰로거가 매일 모아 정리합니다. ... 디지털 전국 디지털 D-1 관절마사지기"
           },
           {
-            "url": "https://info.nyanietoon.com/",
-            "domain": "info.nyanietoon.com",
-            "title": "스마트한 소비를 돕는 알짜 정보",
-            "snippet": "지금 많이 보는 상품 조회수로 알아본 진짜 인기 상품 할인율 높은 순 정가 대비 많이 내린 순서로 한눈에 ... N 바디·스킨·뷰티 N 골프용품 추천 선물세트"
-          },
-          {
-            "url": "https://blog.dimad.kr/blog/convenience-store-dubai-chewy-ball-comparison/",
-            "domain": "blog.dimad.kr",
-            "title": "편의점 두쫀볼 두바이쫀들볼 | 두쫀쿠 차이부터 GS25 CU 세븐 이마트24 가격·맛까지 | Laon",
-            "snippet": "2025년 하반기부터 시작된 두바이 쫀득쿠키(두쫀쿠) 열풍이 2026년 현재까지 식을 줄 모르고 있습니다. ... 두쫀볼은 두바이 초콜릿의 핵심 재료인 피스타치오 스프레드와 카다이프(중동식 얇은 면)를 마시멜로로 감싼"
-          },
-          {
-            "url": "https://reviewloger.com/category/digital",
-            "domain": "reviewloger.com",
-            "title": "디지털 체험단 모음 137건 | 신청자·마감·경쟁률 비교 - 리뷰로거",
-            "snippet": "디지털 전국 디지털 오늘 마감 토븐 웨이브X O5 귀안아픈 오픈형 — 페이백 49,900원 체험단 페이백 49,900원 출처 스타일씨 · 신청은 원본에서 ... 디지털 전국 디지털"
+            "url": "https://gall.dcinside.com/board/lists/?id=appliance",
+            "domain": "gall.dcinside.com",
+            "title": "가전 갤러리 - 커뮤니티 포털 디시인사이드",
+            "snippet": "글쓰기 ... 공지 | 가전 갤러리 이용 안내 | 운영자 Image: ** : 갤로그로 이동합니다. ... 21666 | 가전구독이 구매보다 좋을까요?"
           }
         ]
       },
@@ -23303,401 +22738,6 @@
         "url": "https://www.dsninfo.or.kr/estimate/index.do?flag=01",
         "status": "no_recent_date",
         "observed_dates": []
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_search_requested",
-        "query": "노트북 메모리 제품 사양 site:samsung.com/sec"
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_search",
-        "query": "노트북 메모리 제품 사양 site:samsung.com/sec",
-        "provider": "codex_native_search",
-        "results": [
-          {
-            "url": "https://www.samsung.com/sec/memory-storage/all-memory-storage/",
-            "title": "메모리/스토리지 | Samsung 대한민국",
-            "snippet": "해당 가격은 회원가에 카드사별 결제 혜택이 반영된 가격입니다. ... * 해당 가격은 회원가에 카드사별 결제 혜택이 반영된 가격입니다."
-          },
-          {
-            "url": "https://www.samsung.com/sec/notebook/all-notebook/",
-            "title": "노트북 | Samsung 대한민국",
-            "snippet": "[Input] 노트북 오디세이 ... 시스템메모리 ... 저장용량 표기는 HDD나 SSD 등 저장 장치 제조업체 계산 방식인 1 KB = 1000 Byte를 따릅니다. ... OS(Windows)에서 보이는"
-          },
-          {
-            "url": "https://www.samsung.com/sec/support/model/SM-P550NZBEKOO/",
-            "title": "Samsung 대한민국",
-            "snippet": "Image: 삼성 노트북 9 Style삼성 노트북 9 Style ... 외관 사양 ... 메모리/스토리지(저장 용량) ... TV, 스마트폰, PC 제품에 대한 원격 서비스를 받으실 수 있습니다."
-          },
-          {
-            "url": "https://www.samsung.com/sec/business/notebook/all-notebook/",
-            "title": "노트북 | Samsung Business 대한민국",
-            "snippet": "## 노트북 ... * 저장용량 표기는 HDD나 SSD 등 저장 장치 제조업체 계산 방식인 1KB = 1000Byte를 따릅니다.* OS(Windows)에서 보이는 용량은 상기 표기보다 작게 나타나"
-          },
-          {
-            "url": "https://www.samsung.com/sec/micro-wave-ovens/all-micro-wave-ovens/",
-            "title": "전자레인지 | Samsung 대한민국",
-            "snippet": "추천순은 상품의 판매 실적, 할인 및 이벤트 진행 여부, ... 매일 02시 업데이트한 순위입니다. ... * Image: 왼쪽에는 FAQ 텍스트가 있고 오른쪽에는 삼성전자 Bespoke 전자레인지"
-          },
-          {
-            "url": "https://www.samsung.com/sec/notebook/all-notebook/?msockid=0cb50410f7eb6b9b0237128bf6b66ac6",
-            "title": "노트북 | Samsung 대한민국",
-            "snippet": "[Input] 노트북 오디세이 ... 시스템메모리 ... 저장용량 표기는 HDD나 SSD 등 저장 장치 제조업체 계산 방식인 1 KB = 1000 Byte를 따릅니다. ... OS(Windows)에서 보이는"
-          },
-          {
-            "url": "https://www.samsung.com/sec/business/micro-wave-ovens/all-micro-wave-ovens/",
-            "title": "전자레인지 | Samsung Business 대한민국",
-            "snippet": "* [Input] 빌트인 전자레인지 ... 삼성전자 주식회사 대표이사 : 전영현, 노태문 사업자등록번호 : 124-81-00998 사업자 정보확인 통신판매업 신고 : 2000-경기수원-0515사업장주소 : 경기도 수원시 영통구 삼성로"
-          },
-          {
-            "url": "https://www.samsung.com/sec/rings/galaxy-ring/specs/",
-            "title": "스펙 | 삼성 갤럭시 링 | Samsung 대한민국",
-            "snippet": "메모리/스토리지(저장 용량) ... 가속도 센서, 광학 심박 센서, 온도 센서외관 사양 ... 제품명 ... 제조자/수입자 ... 베트남 ... Image: KC 인증 로고 R-C-SEC-SMQ503 ... 동일모델의"
-          },
-          {
-            "url": "https://www.samsung.com/sec/memory-storage/evo-plus-micro-sd-card-with-sd-adapter-1-tb/MB-MC1T0SA/KR/",
-            "title": "마이크로SD 메모리카드 EVO Plus 1 TB | MB-MC1T0SA/KR | Samsung 대한민국",
-            "snippet": "* 삼성은 메모리 카드 데이터 복구로 인해 발생하는 어떠한 피해 및/또는 데이터나 비용상의 손실에 대해 책임을 지지 않습니다. ... 제품의 정품 여부를 확인하고, ... 노트북"
-          },
-          {
-            "url": "https://www.samsung.com/sec/Mychef/all-Mychef/",
-            "title": "마이셰프 | Samsung 대한민국",
-            "snippet": "갤럭시 Z 폴드8 울트라 ... 주문/배송조회 멤버십 나의 제품 관리 쿠폰존 삼성닷컴 회원 혜택 ... 최신 AI 제품을 구매하는 최선의 방법 ... * 갤럭시 북"
-          }
-        ]
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_search_requested",
-        "query": "노트북 메모리 제품 사양 site:lge.co.kr"
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_search",
-        "query": "노트북 메모리 제품 사양 site:lge.co.kr",
-        "provider": "codex_native_search",
-        "results": [
-          {
-            "url": "https://www.lge.co.kr/upload/PC_HTML/P430_P530_UG_110427/help/ko-KR/ch06_s03_specification.html",
-            "title": "제품 규격 및 사양",
-            "snippet": "# 제품 규격 및 사양## 노트북 사양 ... 그래픽스 | NVIDIA® Geforce® GT 520M (NVIDIA® Optimus™ Technology) 또는 Intel® HD Graphics 3000(Dynamic Video Memory Technology)"
-          },
-          {
-            "url": "https://www.lge.co.kr/business/notebook",
-            "title": "노트북 | PC/모니터 | 제품 | 사업자몰 | LG전자",
-            "snippet": "그램북 일상에서 데일리로 편하게 사용할 수 있는 기본에 충실한 스펙 구성으로 실용성을 갖춘 노트북 ... * 듀얼 업그레이드 여분 슬롯으로 성능과 저장공간을 확장해 놀랍고 강력한"
-          },
-          {
-            "url": "https://www.lge.co.kr/support/solutions-20154245175354?category=CT50019563&cstFlag=Y&mktModelCd=15Z980-L&page=0&seq=281&sort=update&subCategory=CT50019564",
-            "title": "[LG 노트북] 2025년 노트북 메모리, SSD 업그레이드 지원 용량이 궁금해요 | 스스로 해결 | 고객지원 | LG전자",
-            "snippet": "# [LG 노트북] 2025년 노트북 메모리, SSD 업그레이드 지원 용량이 궁금해요 ... ※ 서비스센터에서 업그레이드하는 경우 서비스는 비용이 발생됩니다. ... 제품명 | 모델명 | 메모리"
-          },
-          {
-            "url": "https://www.lge.co.kr/business/notebook?lineupId=CD00000341",
-            "title": "노트북 | PC/모니터 | 제품 | 사업자몰 | LG전자",
-            "snippet": "메모리 용량 ... [Input] 내일배송 ... [Input] 나의 보유제품 소모품만 보기 ... 59 개의 상품이 있습니다. ... LG 그램 Pro AI 2026, Copilot+ PC 제품"
-          },
-          {
-            "url": "https://www.lge.co.kr/kr/ebook/2026/march/best/catImage/630/20260304_best_catalogue.pdf",
-            "title": "e-Book",
-            "snippet": "모델명 CPU | 16T95TP-KA70K 인텔Ⓡ 코어™ Ultra 7 프로세서 255H 인텔Ⓡ 코어™ Ultra 5 프로세서 225H | 16T95TP-KA5HK None --- | --- | --- 모델명"
-          },
-          {
-            "url": "https://www.lge.co.kr/business/care-solutions/notebook",
-            "title": "노트북 | TV/노트북 | 가전 구독 | 사업자몰 | LG전자",
-            "snippet": "* 노트북 ... * 메모리 용량 ... [Input] 고사양 멀티태스킹 ... [Input] 나의 보유제품 소모품만 보기 ... 39 개의 상품이 있습니다. ... LG 그램북 AI"
-          },
-          {
-            "url": "https://www.lge.co.kr/story/faq/notebook-faq",
-            "title": "LG 노트북, 자주 묻는 질문 살펴보기 | FAQ | 가이드 | 스토리 | LG전자",
-            "snippet": "더 자세한 사양이 궁금하다면 각 제품 페이지를 확인해 보세요. ... PC 사양이 어떤 것인지, 내 작업에 맞는 최적의 사양은 무엇인지 계속 고민만 하고 계신가요? ..."
-          },
-          {
-            "url": "https://bestshop.lge.co.kr/story/insight/detail/IN10030001",
-            "title": "고등학생이 쓰기 좋은 노트북 추천, 사용 패턴부터 봐요 | 무게·저장 용량 기준과 LG 그램북 비교 안내 | 베스트 인사이트 | 스토리 | LG전자 : BEST SHOP",
-            "snippet": "* 고등학생 노트북, 패턴이 먼저 사양표보다 노트북으로 실제로 하는 일(인강 시청·문서 작성·자료 검색·영상 감상)을 먼저 확인하면 필요한 사양이 정해져요. ... 게임용 고사양부터 실속형까지 모델은 수십"
-          },
-          {
-            "url": "https://www.lge.co.kr/kr/ebook/2025/july/pc_mart/catImage/591/202507_pc_mart_catalogue.pdf",
-            "title": "Windows 11에서 더욱 다양한 작업 지원",
-            "snippet": "노트북 제품 이미지 3개가 배치되어 있음: 상단에는 정면에서 본 열린 노트북, 좌하단에는 측면/후면 각도의 닫힌 노트북, 우하단에는 정면 사선 각도의 열린 노트북. ... 2024년 대한민국"
-          },
-          {
-            "url": "https://www.lge.co.kr/business/notebook?lineupId=CD00000361",
-            "title": "노트북 | PC/모니터 | 제품 | 사업자몰 | LG전자",
-            "snippet": "[Input] 내일배송 ... * 메모리 용량 ... [Input: 4,840,000] 최대가 삭제 ... [Input] 나의 보유제품 소모품만 보기 ... 69 개의 상품이 있습니다.LG 그램 AI, Copilot+"
-          }
-        ]
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_search_requested",
-        "query": "노트북 메모리 제품 사양 site:kca.go.kr"
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_search",
-        "query": "노트북 메모리 제품 사양 site:kca.go.kr",
-        "provider": "codex_native_search",
-        "results": [
-          {
-            "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
-            "title": "소비자시대 웹진",
-            "snippet": "카페, 공유 오피스 등 콘센트가 마련된 공간이 많아지고 공공 와이파이가 널리 보급되면서, 노트북을 구매하려는 소비자도 늘고 있는데요. ... 소비자 보유율이 높은 16인치대 디스플레이, 메모리 16GB,저장용량"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?cate=00000049&menukey=4004&mode=view&no=1003972319&page=1",
-            "title": "한국소비자원 > 소비자뉴스 > 카드뉴스 > 상세보기",
-            "snippet": "[주요 항목별 시험평가 결과] - 휴대성 : 가장 가벼운 제품은 가장 무거운 제품 대비 66% 수준이에요 - 구동소요시간 : 2개 제품이 상대적으로 우수해요 - 디스플레이"
-          },
-          {
-            "url": "https://www.kca.go.kr/kca/sub.do?menukey=5293&mode=view&no=1003972319&page=12",
-            "title": "한국소비자원 > KCA소개 > 정보공개 > 사전정보공표 > 민원 주요 Q&A > 상세보기",
-            "snippet": "[주요 항목별 시험평가 결과] - 휴대성 : 가장 가벼운 제품은 가장 무거운 제품 대비 66% 수준이에요 - 구동소요시간 : 2개 제품이 상대적으로 우수해요 - 디스플레이"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989",
-            "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-            "snippet": "[노트북 품질비교 결과] 휴대성·구동속도 등 주요 성능, 제품 간 차이 있어 게시글 상세보기 - 등록일, 조회수, 첨부파일, 상세내용, 이전글 제공 ... 이 게시물은 \"공공누리 제0유형(공공저작물의"
-          },
-          {
-            "url": "https://www.kca.go.kr/smartconsumer/sub.do?menukey=7301&mode=view&no=1003980150",
-            "title": "스마트컨슈머 > 소비자정보 > KCA보고서 > 상세보기",
-            "snippet": "* 상품 구매·선택 가이드 ... 시험평가 대상 제품 ... [첨부2] 노트북 사용 시 주의사항 ... 이 게시물은 \"공공누리 제1유형(출처표시)\" 조건에 따라 자유롭게 이용이 가능합니다.(27738) 충청북도"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989&page=4",
-            "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-            "snippet": "[노트북 품질비교 결과] 휴대성·구동속도 등 주요 성능, 제품 간 차이 있어 게시글 상세보기 - 등록일, 조회수, 첨부파일, 상세내용, 이전글 제공[노트북 품질비교 결과] 휴대성·구동속도 등 주요"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989&page=2",
-            "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-            "snippet": "[노트북 품질비교 결과] 휴대성·구동속도 등 주요 성능, 제품 간 차이 있어 게시글 상세보기 - 등록일, 조회수, 첨부파일, 상세내용, 이전글 제공 ... 이 게시물은 \"공공누리 제0유형(공공저작물의"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989&page=7",
-            "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-            "snippet": "[노트북 품질비교 결과] 휴대성·구동속도 등 주요 성능, 제품 간 차이 있어 게시글 상세보기 - 등록일, 조회수, 첨부파일, 상세내용, 이전글 제공[노트북 품질비교 결과] 휴대성·구동속도 등 주요"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1002044130",
-            "title": "한국소비자원 > 소비자뉴스 > 피해예방주의보 > 상세보기",
-            "snippet": "차량용 블랙박스를 무료로 장착 해준다거나 무료통화권을 제공한다는 말에 현혹되지 말고, 신용카드 번호·비밀번호·주민등록번호 등 금융거래에 활용될 수 있는 정보를 함부로 알려주지 않는다. ... 신고된 업체인지, 청약철회"
-          },
-          {
-            "url": "https://www.kca.go.kr/home/sub.do?cate=00000049&menukey=4004&mode=list&page=2",
-            "title": "한국소비자원 > 소비자뉴스 > 카드뉴스 > 품질비교 목록",
-            "snippet": "### 인덕션 보호매트, 기름요리·수분 증발 후 가열 시 화재 위험 있어요 ... 253 | 품질비교 | 식기세척기 세제 품질비교 결과 세척성능·경제성은 제품 간 차이있고 생분해성"
-          }
-        ]
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.samsung.com/sec/memory-storage/all-memory-storage/",
-        "outcome": "fetch_failed",
-        "failure_codes": [
-          "short_body"
-        ],
-        "final_url": null,
-        "title": "",
-        "excerpt_chars": 0
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.lge.co.kr/upload/PC_HTML/P430_P530_UG_110427/help/ko-KR/ch06_s03_specification.html",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.lge.co.kr/upload/PC_HTML/P430_P530_UG_110427/help/ko-KR/ch06_s03_specification.html",
-        "title": "제품 규격 및 사양",
-        "excerpt_chars": 2176
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
-        "title": "소비자시대 웹진",
-        "excerpt_chars": 3931
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.samsung.com/sec/notebook/all-notebook/",
-        "outcome": "fetch_failed",
-        "failure_codes": [
-          "short_body"
-        ],
-        "final_url": null,
-        "title": "",
-        "excerpt_chars": 0
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.lge.co.kr/business/notebook",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.lge.co.kr/business/notebook",
-        "title": "노트북 | PC/모니터 | 제품 | 사업자몰 | LG전자",
-        "excerpt_chars": 438
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.kca.go.kr/home/sub.do?cate=00000049&menukey=4004&mode=view&no=1003972319&page=1",
-        "outcome": "fetch_failed",
-        "failure_codes": [
-          "short_body"
-        ],
-        "final_url": null,
-        "title": "",
-        "excerpt_chars": 0
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.samsung.com/sec/support/model/SM-P550NZBEKOO/",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.samsung.com/sec/support/model/SM-P550NZBEKOO/",
-        "title": "Samsung 대한민국",
-        "excerpt_chars": 1023
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.lge.co.kr/support/solutions-20154245175354?category=CT50019563&cstFlag=Y&mktModelCd=15Z980-L&page=0&seq=281&sort=update&subCategory=CT50019564",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.lge.co.kr/support/solutions-20154245175354?category=CT50019563&cstFlag=Y&mktModelCd=15Z980-L&page=0&seq=281&sort=update&subCategory=CT50019564",
-        "title": "[LG 노트북] 2025년 노트북 메모리, SSD 업그레이드 지원 용량이 궁금해요 | 스스로 해결 | 고객지원 | LG전자",
-        "excerpt_chars": 285
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.kca.go.kr/kca/sub.do?menukey=5293&mode=view&no=1003972319&page=12",
-        "outcome": "fetch_failed",
-        "failure_codes": [
-          "short_body"
-        ],
-        "final_url": null,
-        "title": "",
-        "excerpt_chars": 0
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.samsung.com/sec/business/notebook/all-notebook/",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.samsung.com/sec/business/notebook/all-notebook/",
-        "title": "노트북 | Samsung Business 대한민국",
-        "excerpt_chars": 1837
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.lge.co.kr/business/notebook?lineupId=CD00000341",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.lge.co.kr/business/notebook?lineupId=CD00000341",
-        "title": "노트북 | PC/모니터 | 제품 | 사업자몰 | LG전자",
-        "excerpt_chars": 438
-      },
-      {
-        "keyword": "노트북 메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989",
-        "outcome": "fetched",
-        "failure_codes": [
-          "timeout"
-        ],
-        "final_url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1003971989",
-        "title": "한국소비자원 > 소비자뉴스 > 보도자료 > 상세보기",
-        "excerpt_chars": 8000
-      },
-      {
-        "keyword": "노트북메모리",
-        "category": "리뷰",
-        "stage": "native_source_research",
-        "locators": [
-          {
-            "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://www.lge.co.kr/product/notebook/16z90su-gr56k?modelId=MD10334831&pdpType=PURCHASE&sKwd=LG+%EA%B7%B8%EB%9E%A8&sRank=14&sTab=unit_product_list",
-            "origin": "model_reported_locator"
-          }
-        ],
-        "searched": true,
-        "coverage_gaps": null
-      },
-      {
-        "keyword": "노트북메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.samsung.com/sec/support/model/NT960XHA-KC51G/",
-        "title": "Samsung 대한민국",
-        "excerpt_chars": 959
-      },
-      {
-        "keyword": "노트북메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.lge.co.kr/product/notebook/16z90ts-gu7bk",
-        "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GU7BK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-        "excerpt_chars": 7912
-      },
-      {
-        "keyword": "노트북메모리",
-        "category": "리뷰",
-        "stage": "source_fetch",
-        "url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://www.lge.co.kr/product/notebook/16z90ts-gs5lk?modelId=MD10560827&pdpType=PURCHASE",
-        "title": "LG 그램 Pro AI, Copilot+ PC | 16Z90TS-GS5LK | 노트북 | PC/모니터 | 제품/소모품 | LG전자",
-        "excerpt_chars": 7912
       }
     ],
     "selection_outcome": "no_pass_among_evaluated",
@@ -23705,9 +22745,9 @@
       "measured": 336,
       "pool": 4,
       "shortlist_offered_unique": 4,
-      "evaluated": 2,
+      "evaluated": 1,
       "held": 0,
-      "rejected": 2,
+      "rejected": 1,
       "selected": 0,
       "stop_reason": "pool_exhausted"
     }

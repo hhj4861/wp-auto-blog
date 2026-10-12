@@ -32481,7 +32481,7 @@
     "keywords": [
       "AI 중소·스타트업 집중 지원"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-11T14:00:44.338810+00:00",
@@ -32566,7 +32566,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 1932,
+    "url": "https://trendpulse.blog/ai-startup-tax-support-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-12T00:10:38.349184"
   },
   {
     "keyword": "AI역검",

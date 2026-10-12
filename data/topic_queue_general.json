@@ -32910,7 +32910,7 @@
     "keywords": [
       "전세사기피해자등 623건 추가 결정"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-12T00:54:38.220029+00:00",
@@ -32988,7 +32988,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 1935,
+    "url": "https://trendpulse.blog/jeonse-victim-decision-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-12T09:07:20.351121"
   },
   {
     "keyword": "지방소멸대응기금 광역지원계정",

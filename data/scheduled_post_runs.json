@@ -492,7 +492,9 @@
       "category": "생활정보",
       "slot": "evening",
       "claimed_at": "2026-10-12T18:01:47.922841+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-12T09:07:23.424597+00:00",
+      "published_category": "생활정보"
     }
   }
 }

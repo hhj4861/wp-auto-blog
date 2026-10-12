@@ -31107,7 +31107,7 @@
     "keywords": [
       "생성형AI"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "생성형AI",
@@ -33279,6 +33279,277 @@
       "intent_fit": 15
     },
     "score": 25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "웨이퍼",
+    "category": "테크",
+    "topic": "웨이퍼란? 반도체 재료와 칩·주요 부위 명칭 이해하기",
+    "intent": "웨이퍼는 어떤 반도체 재료이며, 칩과 주요 부위는 무엇을 뜻하나요?",
+    "gap": "공식 정의로 재료와 잉곳의 관계를 설명하고, Chip·Scribe Line·TEG·Edge Die·Flat Zone의 뜻을 표로 정리합니다.",
+    "source_url": "https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductor-glossary-wafer/",
+    "verified_sources": [
+      {
+        "url": "https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductor-glossary-wafer/",
+        "original_url": "https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductor-glossary-wafer/",
+        "title": "웨이퍼 | 삼성반도체",
+        "checked_on": "2026-10-13",
+        "publication_dates": [],
+        "sha256": "d6186cf1cd1d49a79c318cfb71ea28721757549a0cbf02246b433543f5922785",
+        "excerpt": "웨이퍼 페이스북 X 링크드인 메일 공유 웨이퍼 [Wafer]\n\n반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의 판. ※ 웨이퍼 부위 별 명칭 ① Chip: 웨이퍼 위 전자회로가 새겨진 얇고 작은 조각으로, IC칩이 되는 부분.\n② Scribe Line: Chip 사이의 경계로, 아무 전자회로가 없는 부분이며, 웨이퍼를 개개의 칩으로 나누기 위한 분리 선.\n③ TEG(Test Element Group): 칩의 동작 여부를 판단하기 위한 테스트용 칩.\n④ Edge Die: 손실 부분. 직경이 작은 웨이퍼보다 큰 웨이퍼의 손실 부분이 적고, 손실률도 줄어든다.\n⑤ Flat Zone: 둥근 웨이퍼의 구조를 판별하기 위해 만든 평평한 부분. *source : 삼성전자 반도체 뉴스룸↗ #용어사전 #Foundry Related contents 관련 컨텐츠 다음 아티클"
+      }
+    ],
+    "intent_results": [
+      "https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductor-glossary-wafer/",
+      "https://enhawiki.kr/wiki/%EC%9B%A8%EC%9D%B4%ED%8D%BC"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 2910,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "낮음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "웨이퍼",
+    "organic_domains": [
+      "semiconductor.samsung.com",
+      "d.namu.moe",
+      "enhawiki.kr",
+      "www.mss.go.kr",
+      "support.minitab.com",
+      "kisrating.com",
+      "tilnote.io",
+      "www.e-pg.co.kr",
+      "www.renishaw.com",
+      "www.pngarts.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://semiconductor.samsung.com/kr/support/tools-resources/dictionary/semiconductor-glossary-wafer/",
+        "domain": "semiconductor.samsung.com",
+        "title": "웨이퍼 | 삼성반도체",
+        "snippet": "* 웨이퍼 [Wafer] 반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의"
+      },
+      {
+        "url": "https://d.namu.moe/w/%EC%9B%A8%EC%9D%B4%ED%8D%BC",
+        "domain": "d.namu.moe",
+        "title": "웨이퍼",
+        "snippet": "현대에는 얇게 구운 빵이나 쿠키 사이에 잼이나 크림을 바른 과자류도 웨이퍼로 부르고 있으나 한국에서는 일본식 명칭인 웨하스 가 통용된다. ... 그럼 간혹 뉴스나 기사에서 웨이퍼가"
+      },
+      {
+        "url": "https://enhawiki.kr/wiki/%EC%9B%A8%EC%9D%B4%ED%8D%BC",
+        "domain": "enhawiki.kr",
+        "title": "웨이퍼 - 리브레 위키",
+        "snippet": "저마늄 웨이퍼보다 Energy band gap이 넓어 (1.2eV) 비교적 고온(200℃)에서도 소자가 동작할 수 있고, 표면에 산화물 절연막을 쉽게 형성시킬 수 있다는 장점이 있다. ... 웨이퍼가 커지면"
+      },
+      {
+        "url": "https://www.mss.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000001003796&fileSn=1",
+        "domain": "www.mss.go.kr",
+        "title": "□ 웨이퍼 (Solar Wafer)",
+        "snippet": "○ (기술동향) 태양광 웨이퍼 업체들은 원가 절감을 위해 폴리실리콘에서 웨이퍼에 이르는 수직계열화를 추진하고 신기술을 도입 중임 ... * (넥솔론) 고효율 웨이퍼의 생산 비중 증가 및"
+      },
+      {
+        "url": "https://support.minitab.com/ko-kr/minitab/help-and-how-to/graphs/wafer-plot/before-you-start/overview/",
+        "domain": "support.minitab.com",
+        "title": "웨이퍼 그림 개요 - Minitab",
+        "snippet": "예를 들어, 반도체 제조업체는 웨이퍼 플롯을 사용하여 각 X 및 Y 좌표에 대한 다이의 결함을 검사합니다."
+      },
+      {
+        "url": "https://kisrating.com/fileDown.do?fileName=rs20250430-54.pdf&gubun=2&menuCd=R8",
+        "domain": "kisrating.com",
+        "title": "SK실트론(주)\n\n웨이퍼 산업의 우호적인 수요 전망과 장기공급계약 중심의 판매구조\n\n웨이퍼",
+        "snippet": "AI, 빅데이터, 클라우드 컴퓨팅, 로봇공학, 자율주행 등 4차산업 발전에 따른 반도체 산업의 구조적인 성장을 고려하면 우호적인 웨이퍼 수요가 지속될 것으로 예상되며, 동사의 양호한 시장지위와 안정적인"
+      },
+      {
+        "url": "https://tilnote.io/pages/6a09d4ae215f88a030b7307b",
+        "domain": "tilnote.io",
+        "title": "웨이퍼 테스트와 다이싱 - TILNOTE",
+        "snippet": "이 접촉부가 웨이퍼 위 각 다이의 패드에 닿아 전기 신호를 주고받는다. ... 웨이퍼 위에서 가능한 한 빨리 불량을 찾아야 뒤 단계의 비용을 줄일 수 있다."
+      },
+      {
+        "url": "https://www.e-pg.co.kr/main",
+        "domain": "www.e-pg.co.kr",
+        "title": "(주)이피지",
+        "snippet": "* SOI Wafer Silicon-on-Insulator 웨이퍼 실리콘 기판 사이에 절연체(산화물) 층을 끼워 넣어, 누설 전류를 차단하고 동작 속도와 전력 효율을 대폭 향상시킨 특수 반도체 기판 ..."
+      },
+      {
+        "url": "https://www.renishaw.com/ko/39097--39097",
+        "domain": "www.renishaw.com",
+        "title": "신뢰할 수 있는 웨이퍼 이송 로봇",
+        "snippet": "한국 로봇 제조업체인 Robot and Design(RND)에서는 RLS(슬로베니아의 Renishaw 협력사) LM10 시리즈 증분 마그네틱 엔코더 시스템을 사용하여 웨이퍼 이송 로봇의 성능을 최적화하고 있습니다. ... 반도체에 널리"
+      },
+      {
+        "url": "https://www.pngarts.com/ko/explore/2136",
+        "domain": "www.pngarts.com",
+        "title": "웨이퍼 PNG 그림",
+        "snippet": "# 웨이퍼 PNG 그림무료 다운로드 웨이퍼 PNG 그림 최고 품질의 픽셀로 제공됩니다."
+      }
+    ],
+    "dominant_result_ratio": 0.16666666666666666,
+    "score_components": {
+      "demand": 27.71,
+      "organic_opportunity": 27.78,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-12T16:44:21.662279+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "웨이퍼"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "웨이퍼",
+      "executed_query": "웨이퍼",
+      "topic": "웨이퍼란? 반도체 재료와 칩·주요 부위 명칭 이해하기",
+      "intent": "웨이퍼는 어떤 반도체 재료이며, 칩과 주요 부위는 무엇을 뜻하나요?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-12T16:44:21.662279+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.16666666666666666,
+      "search_review": {
+        "version": 1,
+        "query": "웨이퍼",
+        "executed_query": "웨이퍼",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-12T16:44:21.662279+00:00",
+        "raw_sha256": "489a36f3b299b91953edb8b9d7a5f063ad19b3acc35f19fb492ed09bd71ab5e8",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "* 웨이퍼 [Wafer] 반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "현대에는 얇게 구운 빵이나 쿠키 사이에 잼이나 크림을 바른 과자류도 웨이퍼로 부르고 있으나 한국에서는 일본식 명칭인 웨하스 가 통용된다. ... 그럼 간혹 뉴스나 기사에서 웨이퍼가"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "저마늄 웨이퍼보다 Energy band gap이 넓어 (1.2eV) 비교적 고온(200℃)에서도 소자가 동작할 수 있고, 표면에 산화물 절연막을 쉽게 형성시킬 수 있다는 장점이 있다. ... 웨이퍼가 커지면"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "○ (기술동향) 태양광 웨이퍼 업체들은 원가 절감을 위해 폴리실리콘에서 웨이퍼에 이르는 수직계열화를 추진하고 신기술을 도입 중임 ... * (넥솔론) 고효율 웨이퍼의 생산 비중 증가 및"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "웨이퍼 그림 개요 - Minitab"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "AI, 빅데이터, 클라우드 컴퓨팅, 로봇공학, 자율주행 등 4차산업 발전에 따른 반도체 산업의 구조적인 성장을 고려하면 우호적인 웨이퍼 수요가 지속될 것으로 예상되며, 동사의 양호한 시장지위와 안정적인"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "이 접촉부가 웨이퍼 위 각 다이의 패드에 닿아 전기 신호를 주고받는다. ... 웨이퍼 위에서 가능한 한 빨리 불량을 찾아야 뒤 단계의 비용을 줄일 수 있다."
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "* SOI Wafer Silicon-on-Insulator 웨이퍼 실리콘 기판 사이에 절연체(산화물) 층을 끼워 넣어, 누설 전류를 차단하고 동작 속도와 전력 효율을 대폭 향상시킨 특수 반도체 기판 ..."
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "한국 로봇 제조업체인 Robot and Design(RND)에서는 RLS(슬로베니아의 Renishaw 협력사) LM10 시리즈 증분 마그네틱 엔코더 시스템을 사용하여 웨이퍼 이송 로봇의 성능을 최적화하고 있습니다. ... 반도체에 널리"
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "# 웨이퍼 PNG 그림무료 다운로드 웨이퍼 PNG 그림 최고 품질의 픽셀로 제공됩니다."
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 6,
+        "relevant_site_count": 6,
+        "relevant_indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "relevance_ratio": 0.6,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.16666666666666666,
+        "site_concentration": 0.16666666666666666,
+        "organic_opportunity": 27.78
+      },
+      "scope": "full_keyword",
+      "target_keyword": "웨이퍼",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs)"
+        },
+        {
+          "result_index": 2,
+          "quote": "저마늄 웨이퍼보다 Energy band gap이 넓어 (1.2eV) 비교적 고온(200℃)에서도 소자가 동작할 수 있고"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-12T16:44:21.662279+00:00",
+      "input_sha256": "b26fefdf248b4341f5a2c45700460fd297c8521542d195cd11ca504e5cda03ce",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "웨이퍼",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "웨이퍼 페이스북 X 링크드인 메일 공유 웨이퍼 [Wafer]\n\n반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의 판. ※ 웨이퍼 부위 별 명칭 ① Chip: 웨이퍼 위 전자회로가 새겨진 얇고 작은 조각으로, IC칩이 되는 부분.\n② Scribe Line: Chip 사이의 경계로, 아무 전자회로가 없는 부분이며, 웨이퍼를 개개의 칩으로 나누기 위한 분리 선.\n③ TEG(Test Element Group): 칩의 동작 여부를 판단하기 위한 테스트용 칩.\n④ Edge Die: 손실 부분. 직경이 작은 웨이퍼보다 큰 웨이퍼의 손실 부분이 적고, 손실률도 줄어든다.\n⑤ Flat Zone: 둥근 웨이퍼의 구조를 판별하기 위해 만든 평평한 부분. *source : 삼성전자 반도체 뉴스룸↗ #용어사전 #Foundry Related contents 관련 컨텐츠 다음 아티클",
+            "entity": "웨이퍼",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "웨이퍼란 무엇이며 어떤 재료와 형태로 만들어지나요?",
+            "answer": "반도체 집적회로의 주요 재료로, 실리콘·갈륨 아세나이드 등의 단결정 기둥을 얇게 썬 원판입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "웨이퍼 페이스북 X 링크드인 메일 공유 웨이퍼 [Wafer]\n\n반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의 판. ※ 웨이퍼 부위 별 명칭 ① Chip: 웨이퍼 위 전자회로가 새겨진 얇고 작은 조각으로, IC칩이 되는 부분.\n② Scribe Line: Chip 사이의 경계로, 아무 전자회로가 없는 부분이며, 웨이퍼를 개개의 칩으로 나누기 위한 분리 선.\n③ TEG(Test Element Group): 칩의 동작 여부를 판단하기 위한 테스트용 칩.\n④ Edge Die: 손실 부분. 직경이 작은 웨이퍼보다 큰 웨이퍼의 손실 부분이 적고, 손실률도 줄어든다.\n⑤ Flat Zone: 둥근 웨이퍼의 구조를 판별하기 위해 만든 평평한 부분. *source : 삼성전자 반도체 뉴스룸↗ #용어사전 #Foundry Related contents 관련 컨텐츠 다음 아티클"
+          },
+          {
+            "facet": "웨이퍼의 칩과 주요 부위 명칭은 무엇을 뜻하나요?",
+            "answer": "Chip은 회로 조각, Scribe Line은 분리선, TEG는 테스트용 칩, Edge Die는 손실부, Flat Zone은 구조 판별용 평평한 부분입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "웨이퍼 페이스북 X 링크드인 메일 공유 웨이퍼 [Wafer]\n\n반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의 판. ※ 웨이퍼 부위 별 명칭 ① Chip: 웨이퍼 위 전자회로가 새겨진 얇고 작은 조각으로, IC칩이 되는 부분.\n② Scribe Line: Chip 사이의 경계로, 아무 전자회로가 없는 부분이며, 웨이퍼를 개개의 칩으로 나누기 위한 분리 선.\n③ TEG(Test Element Group): 칩의 동작 여부를 판단하기 위한 테스트용 칩.\n④ Edge Die: 손실 부분. 직경이 작은 웨이퍼보다 큰 웨이퍼의 손실 부분이 적고, 손실률도 줄어든다.\n⑤ Flat Zone: 둥근 웨이퍼의 구조를 판별하기 위해 만든 평평한 부분. *source : 삼성전자 반도체 뉴스룸↗ #용어사전 #Foundry Related contents 관련 컨텐츠 다음 아티클"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "웨이퍼 페이스북 X 링크드인 메일 공유 웨이퍼 [Wafer]\n\n반도체 집적회로를 만드는데 사용하는 주요 재료로, 주로 실리콘(규소, Si), 갈륨 아세나이드(GaAs) 등을 성장시켜 얻은 단결정 기둥(Ingot)을 적당한 지름으로 얇게 썬 얇은 원판모양의 판. ※ 웨이퍼 부위 별 명칭 ① Chip: 웨이퍼 위 전자회로가 새겨진 얇고 작은 조각으로, IC칩이 되는 부분.\n② Scribe Line: Chip 사이의 경계로, 아무 전자회로가 없는 부분이며, 웨이퍼를 개개의 칩으로 나누기 위한 분리 선.\n③ TEG(Test Element Group): 칩의 동작 여부를 판단하기 위한 테스트용 칩.\n④ Edge Die: 손실 부분. 직경이 작은 웨이퍼보다 큰 웨이퍼의 손실 부분이 적고, 손실률도 줄어든다.\n⑤ Flat Zone: 둥근 웨이퍼의 구조를 판별하기 위해 만든 평평한 부분. *source : 삼성전자 반도체 뉴스룸↗ #용어사전 #Foundry Related contents 관련 컨텐츠 다음 아티클",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 70.49,
     "publish_eligible": true,
     "hold_reasons": []
   }

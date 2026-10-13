@@ -33174,7 +33174,7 @@
     "keywords": [
       "제6차 자살예방기본계획"
     ],
-    "status": "pending",
+    "status": "held_draft",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-12T11:49:31.392809+00:00",
@@ -33280,7 +33280,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 1938,
+    "url": "https://trendpulse.blog/?p=1938",
+    "post_status": "draft",
+    "held_at": "2026-10-13T00:08:15.681034"
   },
   {
     "keyword": "웨이퍼",

@@ -12861,7 +12861,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-10-12T16:40:11.922729+00:00",
+    "selected_at": "2026-10-13T00:01:39.251637+00:00",
     "seeds": [
       "무선청소기흡입력",
       "공기청정기평수",
@@ -12872,18 +12872,12 @@
     "research_rounds": 2,
     "latest_issue_discovery": {
       "window_start": "2026-10-12T00:00:00+09:00",
-      "window_end": "2026-10-13T01:40:11.922729+09:00",
+      "window_end": "2026-10-13T09:01:39.251637+09:00",
       "queries": [
         {
           "query": "신제품 공식 출시 발표 after:2026-10-12 before:2026-10-14",
           "provider": "codex_native_search",
           "results": [
-            {
-              "url": "https://www.nongshim.com/main/index",
-              "domain": "www.nongshim.com",
-              "title": "농심 : 인생을 맛있게 (Lovely Life Lovely Food)",
-              "snippet": "시골 청년 ❝DJ YANG❞의 화끈한 귀환😎 『양파링』과 『너구리』가 만나 맵짠고소 신제품 『너구링』이 탄생했습니다! ... #한글날잔치 ❝자랑스러운 〖한글날〗을 기념해 가로세로 낱말 맞히기를 준비했습니다❞ 여러분의 농심력을 점검해보세요🙏"
-            },
             {
               "url": "https://www.scjfood.com/news",
               "domain": "www.scjfood.com",
@@ -12906,7 +12900,13 @@
               "url": "https://www.jobkorea.co.kr/company/1396412/?C_IDX=1131",
               "domain": "www.jobkorea.co.kr",
               "title": "삼진제약㈜ 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
-              "snippet": "신제품 에이알비 정 출시 ... 신제품 제이틴주사 출시 ... 본사 사옥 신축 기공식"
+              "snippet": "주요사업 | 의약품(게보린,세트라졸,염산나록손) 제조,판매,수출입,약초재배 | 4대보험 | 국민연금, 건강보험, 고용보험, 산재보험 ... 제2차 한국형ARPA-H프로젝트 주관기관 선정, 퀀텀기술 활용한 혁신신약 개발 착수 ... 케이메디허브(대구경북첨단의료산업진흥재단)와 신약개발 공동연구"
+            },
+            {
+              "url": "https://en.gosfg.co.kr/event/",
+              "domain": "en.gosfg.co.kr",
+              "title": "Event - 커뮤니티 | SFG 신화푸드",
+              "snippet": "* [발표] 3대갈비 3대가족 이벤트 당첨자 발표 ... * [NEW] SFG 신메뉴 출시 이벤트! ... * [오픈] 바다의 생기를 먹음은 생선구이 한상, 바다를먹은 고등어 ..."
             },
             {
               "url": "https://www.shop.ivenet.co.kr/",
@@ -12921,22 +12921,22 @@
               "snippet": "두 제품 모두 신세계푸드 자체 냉동공법을 접목해 장시간 보관해도 맛과 품질이 유지될 수 있도록 개발됐다.신세계푸드의 이번에 출시한 ‘꿔바로우’, ‘바삭 고추튀김’과 같은 실속형 대용량 간편식을 지속적으로"
             },
             {
-              "url": "https://www.bbia.co.kr/",
-              "domain": "www.bbia.co.kr",
-              "title": "BBIA 삐아 공식 온라인 몰",
-              "snippet": "* 7월 신제품 포토 리뷰 이벤트 당첨자 발표 ... * [NEWS] 삐아, 라스트 벨벳 틴트 25종 리뉴얼 출시 ... * [NEWS] 삐아, 공식몰 및 지그재그서"
+              "url": "https://shinpoong.co.kr/sub5/5_1.php",
+              "domain": "shinpoong.co.kr",
+              "title": "신풍제약주식회사 : 신풍소식",
+              "snippet": "437 | 신풍제약 애드마일스, 기초 영양을 위한 가성비 신제품 '칸휴 밀크씨슬 에너지' 및 '칼슘 마그네슘 비타민D 아연 플러스' 출시 | 부관리자 | 2026.04.01 | 4144436"
+            },
+            {
+              "url": "https://trend.zimcary.com/posts/pokemon-bread-tibuseal-1013-30th",
+              "domain": "trend.zimcary.com",
+              "title": "포켓몬빵 띠부씰 1013종, 30주년 신제품 7종 총정리 · trend.zimcary.com",
+              "snippet": "6월 스페셜 에디션 소비자가격이 2000원대였다는 보도는 있지만, 이번 7종의 채널별 판매가는 공식 확정 발표가 없어요. ... * ▶ 유튜브 보기 — JTBC News, 「포켓몬빵 큰"
             },
             {
               "url": "https://www.shinpoong.co.kr/main/main.php",
               "domain": "www.shinpoong.co.kr",
               "title": "신풍제약주식회사",
               "snippet": "하이알플렉스주(헥사메틸렌디아민으로가교결합된히알루론산나트륨겔) ... * 신풍제약, 창립 64주년 기념식 개최… “흑자 전환 발판 삼아 ‘재도약’ 선포” * 신풍제약 ‘피라맥스’, 말라리아 진료가이드(제3판)에 국내발생 말라리아 치료제로 등재 국내 개발"
-            },
-            {
-              "url": "https://trend.zimcary.com/posts/pokemon-bread-tibuseal-1013-30th",
-              "domain": "trend.zimcary.com",
-              "title": "포켓몬빵 띠부씰 1013종, 30주년 신제품 7종 총정리 · trend.zimcary.com",
-              "snippet": "삼립의 2026년 8월 27일 공식 발표 에 나온 리뉴얼 라인업입니다. ... * ▶ 유튜브 보기 — JTBC News, 「포켓몬빵 큰 거 온다…30주년 기념 띠부씰 1013종"
             }
           ]
         },
@@ -12945,22 +12945,22 @@
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://shop.wisely.store/new",
-              "domain": "shop.wisely.store",
-              "title": "신제품 | 와이즐리",
-              "snippet": "신제품 ... 가전 · 디지털 ... 와이즐리 기미 커버 토닝 쿠션 ... 딜라잇가든 국내산 100% 냉동 딸기 1kg"
+              "url": "https://drdifferent.com/category/%EC%A0%84%EC%A0%9C%ED%92%88/112/",
+              "domain": "drdifferent.com",
+              "title": "닥터디퍼런트｜DR.DIFFERENT",
+              "snippet": "전제품 ... ## 전제품 ... 신상품 상품명 낮은가격 높은가격 사용후기 ... 월 원 / 개월 상품요약정보 : 슬로우에이징 립 케어, 국내 최초 레티날 립 밤(택"
             },
             {
-              "url": "https://keypang.kr/shopping/",
-              "domain": "keypang.kr",
-              "title": "지금 뜨는 상품 검색어 순위 (월간 검색량은 확인분부터) | 키팡",
-              "snippet": "전체 패션의류 패션잡화 화장품/미용 디지털/가전 가구/인테리어 출산/육아 식품 생활/건강 여가/생활편의 도서제미나이 681만 월 6,813,600회 · 높음 · 7일 2회 갤럭시폴드8 황금 178만 월 1,779,800회 ·"
+              "url": "https://gdonif.com/",
+              "domain": "gdonif.com",
+              "title": "그돈이면 - 가격은 같아도 가치는 다르니까 · 소비자를 위한 가전 비교",
+              "snippet": "전체[Button: 생활가전][Button: 주방가전][Button: 계절가전][Button: 디지털IT] ... 3131개 제품 스펙을 하나하나 비교해보니 진짜 차이가 나는 항목이 있었어요. ... 스타일러 스타일러 구매가이드 2026년 7월 10일 업데이트 김치냉장고"
             },
             {
-              "url": "https://playdidim.com/",
-              "domain": "playdidim.com",
-              "title": "디딤",
-              "snippet": "본 논문은 DIDIM이 단순히 “운동 게임을 제공하는 제품”에 그치지 않고, 체력측정 기능을 통해 추출되는 운동 데이터가 전통적 임상 신체기능 측정치와 연관될 가능성을 학술논문을 통해 보여주었다는"
+              "url": "https://www.lg.co.kr/media/release/30286",
+              "domain": "www.lg.co.kr",
+              "title": "보도자료 | 미디어 | LG",
+              "snippet": "내부에는 AI 가전과 IoT 기기, 냉난방공조(HVAC) 기술을 집약한 풀옵션 사양이 적용돼 방문객들은 차별화된 AI 홈을 경험할 수 있다. ... LG전자는 이번 신제품으로 8평(단층·2층)/14평(단층·2층)/16평(단층·2층)/22평(단층)/24평(단층) 등 총"
             },
             {
               "url": "https://dealmate.ai.kr/",
@@ -12969,22 +12969,16 @@
               "snippet": "* 최신 가격정보 확인 ... ## 어떤 제품 찾으세요? ... 식품 엘빈즈 클래식 이유식 후기｜만10~13개월 고기듬뿍 4종 세트 가격·구성 총정리 ★ 5 (9,896) 16,400원 식품"
             },
             {
-              "url": "https://petclub.co.kr/",
-              "domain": "petclub.co.kr",
-              "title": "Petclub",
-              "snippet": "* Image Image: 장바구니 담기상품명 : [30개세트] 데이스포 모이스트 황태오리버거 100g ... * 가전/디지털/컴퓨터"
+              "url": "https://www.jealit.com/",
+              "domain": "www.jealit.com",
+              "title": "질릿",
+              "snippet": "Image: 장바구니 담기 Image: 관심상품 등록 전 ... 상품명 : [가슴볼륨&리프팅] 세리업 가슴 마사지기 ... 득템은 타이밍, 기회는 지금뿐! ... 신제품"
             },
             {
-              "url": "https://pick.reportej.com/",
-              "domain": "pick.reportej.com",
-              "title": "알고보니픽 | Smart Shopping Guide",
-              "snippet": "## 어떤 제품 찾으세요? ... 뷰티·패션 N 주방·생활 N 식품·건강식품 가전·디지털 추석선물추천 건강·휴식 출산·육아 가구·인테리어 전체보기 ... 뷰티·패션 샤르드 아이백 리프트 1100샷 리들 패치 4매입"
-            },
-            {
-              "url": "https://www.jeilpet.co.kr/dogs/list_dry.php",
-              "domain": "www.jeilpet.co.kr",
-              "title": "제일펫푸드",
-              "snippet": "[Input]아이디얼레시피 [Input]슈슈 [Input]뉴트리웰 [Input]자연가득 [Input]도그매니아 [Input]원더독스 [Input]천하제일 * 나이 ... [Input]1세 이하 [Input]1세 이상 [Input]6세 이상 [Input]전연령 ... [Input]유기농 [Input]천연원료 [Input]그레인프리 [Input]관절 [Inpu"
+              "url": "https://pro.wellroutine.co.kr/",
+              "domain": "pro.wellroutine.co.kr",
+              "title": "심플 라이프 | 더 나은 일상을 위한 선택",
+              "snippet": "여아 한복 더예한복 아린색동 04호 어린이집 추석 행사 의상 추천 쿠팡 최저가 확인하기 ... ## 어떤 제품 찾으세요? ... 디지털·가전상품 13개 보러가기 푸드상품 12개 보러가기"
             },
             {
               "url": "https://kdpharma.co.kr/",
@@ -12993,16 +12987,22 @@
               "snippet": "[Input] [Input] 제품검색 ... * 경동제약 50기 결산공고 0000.00.00 ... 주가정보 011040 ... [Button: 홍보영상] [Button: 그날엔 TV광고] ... 최첨단의 생산시설과 순수한 우리 기술로 ..."
             },
             {
-              "url": "https://beauticslab.com/compare/JCOIL6",
-              "domain": "beauticslab.com",
-              "title": "피지오겔 DMT vs 레드수딩, 민감성 여드름 지복합성 피부엔 어떤 크림이 맞을까? | 뷰틱스랩",
-              "snippet": "[세라마이드 장벽 크림] 세라마이드와 인지질(레시틴) 조합의 막 구조 설계로 손상된 피부 장벽 회복에 초점을 맞춘 제형입니다. ... [카페인 시카 카밍 크림] 나이아신아마이드와 함께 카페인을 배합해"
+              "url": "https://keypang.kr/shopping/",
+              "domain": "keypang.kr",
+              "title": "지금 뜨는 상품 검색어 순위 (월간 검색량은 확인분부터) | 키팡",
+              "snippet": "상품 검색어 · 2026.10.12 (월요일) 21:04 수집 기준 · 3시간마다 갱신 ... 전체 패션의류 패션잡화 화장품/미용 디지털/가전 가구/인테리어 출산/육아 식품 생활/건강 여가/생활편의 도서제미나이 681만 월"
             },
             {
-              "url": "https://www.jw-pharma.co.kr/mobile/pharma/ko/promotion/m_all_view.jsp?contentsCd=260827100851775VQZ2Z",
-              "domain": "www.jw-pharma.co.kr",
-              "title": "JW중외제약",
-              "snippet": "이번에 선보이는 신제품 2종은 JW메디칼이 지난 5월 글로벌 현장진단 초음파기기 선도 기업 ‘후지필름 소노사이트(Fujifilm Sonosite)’와 국내 한국 총판 계약을 체결한 이후, 국내 시장에 선보이는 최상위"
+              "url": "https://didiballyhoo.com/category/%EC%A0%9C%ED%92%88/53/",
+              "domain": "didiballyhoo.com",
+              "title": "제품 - 제품 - DIDIBALLYHOO",
+              "snippet": "* 신제품 () ... Image: 장바구니 담기 Image: 관심상품 등록 전상품명 : 디디발리후 쇼핑백 판매가 : 2,000원 ... 이메일 : support@didiballyhoo.com"
+            },
+            {
+              "url": "https://reviewloger.com/category/digital",
+              "domain": "reviewloger.com",
+              "title": "디지털 체험단 모음 129건 | 신청자·마감·경쟁률 비교 - 리뷰로거",
+              "snippet": "디지털 전국 디지털 오늘 마감 SK텔레콤 에스알 — 키즈폰 1년 무료체험 체험단 키즈폰 1년 무료체험(기기값-갤럭시A17, 유심비, 1년 요금 모두지원)(송파구/고양/동두천/평택 중 원하는 지점 방문 후 체험)"
             }
           ]
         }
@@ -13023,7 +13023,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-12T16:40:11.922729+00:00",
+      "checked_at": "2026-10-13T00:01:39.251637+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -13065,161 +13065,161 @@
     "researched_fallback_families": [
       {
         "products": [
-          "노트북"
+          "램"
         ],
         "facets": [
-          "메모리"
+          "규격",
+          "용량"
         ]
       }
     ],
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
-    "measured_candidates": 333,
+    "measured_candidates": 337,
     "evaluated_candidates": 1,
     "research_pool_size": 4,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "노트북램",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
-          "insufficient_relevant_results",
-          "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
-        ],
-        "monthly_search": 1310,
+        "keyword": "DDR416GB",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        },
+        "monthly_search": 1740,
         "organic_provider": "codex_native_search",
-        "organic_query": "노트북 램",
+        "organic_query": "DDR416GB",
         "organic_results": [
           {
-            "url": "https://plan.danawa.com/info/?nPlanSeq=3587",
-            "domain": "plan.danawa.com",
-            "title": "노트북 램 교체하기 전에꼭 보세요!! : 다나와 쇼핑기획전",
-            "snippet": "ESSENCORE KLEVV 노트북 DDR4-3200 CL22 파인인포 (32GB) 노트북용 / DDR4 / 3200MHz (PC4-25600) / 램타이밍:CL22-22-22-51 / 1.20V / 램개수:1개 / 히트싱크:미포함 / 모듈제조사:SK하이닉스"
+            "url": "https://search.danawa.com/dsearch.php?query=%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9A%A9DDR416GB%EB%9E%A82666",
+            "domain": "search.danawa.com",
+            "title": "노트북용DDR416GB램2666 : 다나와 통합검색",
+            "snippet": "# 노트북용DDR416GB램2666 : 다나와 통합검색"
           },
           {
-            "url": "https://plan.danawa.com/info/index.php?nPlanSeq=3587",
-            "domain": "plan.danawa.com",
-            "title": "노트북 램 교체하기 전에꼭 보세요!! : 다나와 쇼핑기획전",
-            "snippet": "ESSENCORE KLEVV 노트북 DDR4-3200 CL22 파인인포 (32GB) 노트북용 / DDR4 / 3200MHz (PC4-25600) / 램타이밍:CL22-22-22-51 / 1.20V / 램개수:1개 / 히트싱크:미포함 / 모듈제조사:SK하이닉스"
+            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90DDR416GB&sort=saveDESC&tab=goods&volumeType=allvs",
+            "domain": "search.danawa.com",
+            "title": "삼성전자DDR416GB : 다나와 통합검색",
+            "snippet": "# 삼성전자DDR416GB : 다나와 통합검색"
           },
           {
-            "url": "https://www.coupang.com/vp/products/9193835072",
+            "url": "https://detail.zol.com.cn/memory/p26895_s6508/cheap_pic.html",
+            "domain": "detail.zol.com.cn",
+            "title": "〖最便宜DDR416GB内存〗最便宜DDR416GB内存报价及图片大全-列表版-ZOL中关村在线",
+            "snippet": "# DDR416GB内存报价"
+          },
+          {
+            "url": "https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81ddr416gb",
             "domain": "www.coupang.com",
-            "title": "램 DDR5 16GB 32GB 8GB 4800MHz 5200MHz 5600MHz 노트북 메모리 DDR5 노트북 메모리 SODIMM 램 (노트북용 1 - 노트북용 | 쿠팡",
-            "snippet": "# 램 DDR5 16GB 32GB 8GB 4800MHz 5200MHz 5600MHz 노트북 메모리 DDR5 노트북 메모리 SODIMM 램 (노트북용 1 ... 판매자가 현금거래를 요구하면 거부하시고 즉시 사기"
+            "title": "쿠팡이 추천하는 노트북ddr416gb 관련 혜택과 특가",
+            "snippet": "# '노트북ddr416gb'에 대한 검색결과"
           },
           {
-            "url": "https://prod.danawa.com/info/?pcode=15587468",
-            "domain": "prod.danawa.com",
-            "title": "삼성전자 노트북 NT350XCR-AD5WA 12GB램 (SSD 256GB) : 다나와 가격비교",
-            "snippet": "# 삼성전자 노트북 NT350XCR-AD5WA 12GB램 (SSD 256GB) : 다나와 가격비교 ... 노트북 / 39.62cm(15.6인치) / 1.81kg / OS미포함(프리도스) / 화면정보 해상도: 1920x1080(FHD) / 프로세서 인텔"
+            "url": "https://detail.zol.com.cn/memory/ju-hor/s11119_s6508_s11119/new_pic.html",
+            "domain": "detail.zol.com.cn",
+            "title": "〖最新玖合DDR416GB内存〗最新玖合DDR416GB内存报价及图片大全-列表版-ZOL中关村在线",
+            "snippet": "# 玖合DDR416GB内存报价"
           },
           {
-            "url": "https://plan.danawa.com/mobile/info/index.php?nPlanSeq=4034",
-            "domain": "plan.danawa.com",
-            "title": "모바일 워크스테이션쿼드로 탑재 노트북 : 다나와 쇼핑기획전",
-            "snippet": "노트북/39.6cm(15.6인치)/1.8kg/윈도우11프로/[화면]/1920x1080(FHD)/sRGB:100%/60Hz/400nit/[CPU]/인텔/코어 울트라9/185H (5.1GHz)/11TOPS/[그래픽]/외장그래픽/RTX2000 Ada/[구성]/16GB/램 교체:가능/용량:1TB/USB-PD/64Wh ... 리퍼비시/노트북/43.94cm(17.3인"
+            "url": "https://detail.zol.com.cn/memory/unika_apacer_kingbox_yingruida_zadak/p26895_s6508/pic.html",
+            "domain": "detail.zol.com.cn",
+            "title": "〖双敏、宇瞻、黑金刚、英睿达、扎达克DDR416GB内存〗双敏、宇瞻、黑金刚、英睿达、扎达克DDR416GB内存报价及图片大全-列表版-ZOL中关村在线",
+            "snippet": "# DDR416GB内存报价"
           },
           {
-            "url": "https://www.yna.co.kr/view/AKR20160524149000003",
-            "domain": "www.yna.co.kr",
-            "title": "스마트폰이 노트북 넘는다…6기가 램 시대 '활짝' | 연합뉴스",
-            "snippet": "이르면 올해부터 램(RAM·랜덤액세스메모리)의 처리능력 면에서 스마트폰의 노트북 추월 현상이 일어날 것으로 보인다.25일 IT전자업계에 따르면 삼성전자[005930]는 최근 중국 선전에서 열린 '모바일 솔루션 포럼'에서 다양한 종류의 메모리,"
+            "url": "https://shopping.yahoo.co.jp/products/zzoea4nt7u",
+            "domain": "shopping.yahoo.co.jp",
+            "title": "Corsair DDR416GB 3200 MHz CL22 ノートPC用 メモリ VENGANCE SODIMMシリーズ 16GB 8GB×2枚 C - 最安値・価格比較 - Yahoo!ショッピング",
+            "snippet": "Image: Corsair DDR416GB 3200 MHz CL22 ノートPC用 メモリ VENGANCE SODIMMシリーズ 16GB 8GB×2枚 Cの商品画像"
           },
           {
-            "url": "https://plan.danawa.com/info/?nPlanSeq=6437",
-            "domain": "plan.danawa.com",
-            "title": "인텔® 코어™ 노트북 : 다나와 쇼핑기획전",
-            "snippet": "삼성전자 갤럭시북 프로 SE NT950XFT-A51A (SSD 512GB) 노트북 / 39.6cm(15.6인치) / 1.11kg / OS미포함(프리도스) / 화면정보 / 해상도:1920x1080(FHD) / 프로세서 / 인텔 / 코어i5-13세대 /"
-          },
-          {
-            "url": "https://store.ohou.se/goods/3693514",
-            "domain": "store.ohou.se",
-            "title": "노트북 > ExpertBook PM1503CDA-S70119 램32G 가성비 노트북 | 오늘의집 쇼핑",
-            "snippet": "ASUS 에이수스ExpertBook PM1503CDA-S70119 램32G 가성비 노트북리뷰 남기기 첫 리뷰 두 배 적립 ... 제주도/도서산간 지역 5,000원 ... [Button: 장바구니][Button: 바로구매] ... 제조자, 수입품의 경우 수입자를"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/9103998752",
+            "url": "https://www.coupang.com/np/search?q=%EC%82%BC%EC%84%B1ddr416gb%EB%85%B8%ED%8A%B8%EB%B6%813200",
             "domain": "www.coupang.com",
-            "title": "삼성 올웨이즈 9 램16GB 노트북 13.3인치 초경량 - 노트북 | 쿠팡",
-            "snippet": "# 삼성 올웨이즈 9 램16GB 노트북 13.3인치 초경량 실버 · NT900 · 256GB · 16GB · WIN10 ... PC에서도 간편한 결제 ... * 내장마이크 탑재여부:"
+            "title": "쿠팡이 추천하는 삼성ddr416gb노트북3200 관련 혜택과 특가",
+            "snippet": "# '삼성ddr416gb노트북3200'에 대한 검색결과"
           },
           {
-            "url": "https://plan.danawa.com/info/index.php?nPlanSeq=4034",
-            "domain": "plan.danawa.com",
-            "title": "모바일 워크스테이션쿼드로 탑재 노트북 : 다나와 쇼핑기획전",
-            "snippet": "DELL 프리시전 M3591 Ultra9 64GB램 (SSD 1TB) 노트북 / 39.6cm(15.6인치) / 1.8kg / 윈도우11프로 / [화면] / 해상도:1920x1080(FHD) / 밝기:400nit / 주사율:60Hz / [CPU] /"
+            "url": "https://moajung.com/price/ddr416gb%EB%85%B8%ED%8A%B8%EB%B6%81",
+            "domain": "moajung.com",
+            "title": "ddr416gb노트북 중고 시세 — 최신 평균가 확인 | 모아줌",
+            "snippet": "# ddr416gb노트북 중고 시세"
+          },
+          {
+            "url": "https://search.danawa.com/dsearch.php?adult=0&boost=Y&limit=40&list=list&page=2&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90DDR416GB%EB%A9%94%EB%AA%A8%EB%A6%AC&sort=saveDESC&tab=goods&volumeType=allvs",
+            "domain": "search.danawa.com",
+            "title": "삼성전자DDR416GB메모리 : 다나와 통합검색",
+            "snippet": "'삼성전자DDR416GB메모리' 검색 결과 어떠셨나요?"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "노트북램",
-          "executed_query": "노트북 램",
+          "query": "DDR416GB",
+          "executed_query": "DDR416GB",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-12T16:40:11.922729+00:00",
-          "raw_sha256": "dbc56d3e69f3a75f92a73a62e15976328c51af7a736b4e6920c3703c2bb059a9",
+          "checked_at": "2026-10-13T00:01:39.251637+00:00",
+          "raw_sha256": "5ca71e49c524bf61d8787846886a59e180182532e9c29c963a4c89588bc497b4",
           "decisions": [
             {
               "result_index": 0,
               "relevant": true,
-              "quote": "ESSENCORE KLEVV 노트북 DDR4-3200 CL22 파인인포 (32GB) 노트북용 / DDR4 / 3200MHz (PC4-25600) / 램타이밍:CL22-22-22-51 / 1.20V / 램개수:1개 / 히트싱크:미포함 / 모듈제조사:SK하이닉스"
+              "quote": "노트북용DDR416GB램2666 : 다나와 통합검색"
             },
             {
               "result_index": 1,
               "relevant": true,
-              "quote": "ESSENCORE KLEVV 노트북 DDR4-3200 CL22 파인인포 (32GB) 노트북용 / DDR4 / 3200MHz (PC4-25600) / 램타이밍:CL22-22-22-51 / 1.20V / 램개수:1개 / 히트싱크:미포함 / 모듈제조사:SK하이닉스"
+              "quote": "삼성전자DDR416GB : 다나와 통합검색"
             },
             {
               "result_index": 2,
               "relevant": true,
-              "quote": "램 DDR5 16GB 32GB 8GB 4800MHz 5200MHz 5600MHz 노트북 메모리 DDR5 노트북 메모리 SODIMM 램 (노트북용 1 - 노트북용 | 쿠팡"
+              "quote": "〖最便宜DDR416GB内存〗最便宜DDR416GB内存报价及图片大全-列表版-ZOL中关村在线"
             },
             {
               "result_index": 3,
-              "relevant": false,
-              "quote": "# 삼성전자 노트북 NT350XCR-AD5WA 12GB램 (SSD 256GB) : 다나와 가격비교 ... 노트북 / 39.62cm(15.6인치) / 1.81kg / OS미포함(프리도스) / 화면정보 해상도: 1920x1080(FHD) / 프로세서 인텔"
+              "relevant": true,
+              "quote": "쿠팡이 추천하는 노트북ddr416gb 관련 혜택과 특가"
             },
             {
               "result_index": 4,
-              "relevant": false,
-              "quote": "모바일 워크스테이션쿼드로 탑재 노트북 : 다나와 쇼핑기획전"
+              "relevant": true,
+              "quote": "〖最新玖合DDR416GB内存〗最新玖合DDR416GB内存报价及图片大全-列表版-ZOL中关村在线"
             },
             {
               "result_index": 5,
-              "relevant": false,
-              "quote": "스마트폰이 노트북 넘는다…6기가 램 시대 '활짝' | 연합뉴스"
+              "relevant": true,
+              "quote": "〖双敏、宇瞻、黑金刚、英睿达、扎达克DDR416GB内存〗双敏、宇瞻、黑金刚、英睿达、扎达克DDR416GB内存报价及图片大全-列表版-ZOL中关村在线"
             },
             {
               "result_index": 6,
-              "relevant": false,
-              "quote": "삼성전자 갤럭시북 프로 SE NT950XFT-A51A (SSD 512GB) 노트북 / 39.6cm(15.6인치) / 1.11kg / OS미포함(프리도스) / 화면정보 / 해상도:1920x1080(FHD) / 프로세서 / 인텔 / 코어i5-13세대 /"
+              "relevant": true,
+              "quote": "Corsair DDR416GB 3200 MHz CL22 ノートPC用 メモリ VENGANCE SODIMMシリーズ 16GB 8GB×2枚 C - 最安値・価格比較 - Yahoo!ショッピング"
             },
             {
               "result_index": 7,
-              "relevant": false,
-              "quote": "노트북 > ExpertBook PM1503CDA-S70119 램32G 가성비 노트북 | 오늘의집 쇼핑"
+              "relevant": true,
+              "quote": "쿠팡이 추천하는 삼성ddr416gb노트북3200 관련 혜택과 특가"
             },
             {
               "result_index": 8,
-              "relevant": false,
-              "quote": "삼성 올웨이즈 9 램16GB 노트북 13.3인치 초경량 - 노트북 | 쿠팡"
+              "relevant": true,
+              "quote": "ddr416gb노트북 중고 시세 — 최신 평균가 확인 | 모아줌"
             },
             {
               "result_index": 9,
-              "relevant": false,
-              "quote": "DELL 프리시전 M3591 Ultra9 64GB램 (SSD 1TB) 노트북 / 39.6cm(15.6인치) / 1.8kg / 윈도우11프로 / [화면] / 해상도:1920x1080(FHD) / 밝기:400nit / 주사율:60Hz / [CPU] /"
+              "relevant": true,
+              "quote": "삼성전자DDR416GB메모리 : 다나와 통합검색"
             }
           ]
-        }
+        },
+        "evidence_mode": "serp",
+        "verified_sources": []
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
       "DDR432G",
-      "DDR48G",
+      "노트북램",
       "노트북메모리",
       "램16기가",
       "램8기가",
@@ -13229,7 +13229,7 @@
     "research_stop_reason": "pool_exhausted",
     "retry_keywords": [
       "가벼운청소기",
-      "노트북램"
+      "DDR416GB"
     ],
     "discovery_rejections": [
       {
@@ -13313,11 +13313,11 @@
         "reason": "review_recommendation_unbounded"
       },
       {
-        "keyword": "가정용청소기",
+        "keyword": "머리카락청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "머리카락청소기",
+        "keyword": "가정용청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -13329,11 +13329,11 @@
         "reason": "review_recommendation_unbounded"
       },
       {
-        "keyword": "무선청소기가격비교",
+        "keyword": "무선청소기비교",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "무선청소기비교",
+        "keyword": "무선청소기가격비교",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -13345,11 +13345,11 @@
         "reason": "review_recommendation_unbounded"
       },
       {
-        "keyword": "스틱청소기",
+        "keyword": "청소기헤드",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "청소기헤드",
+        "keyword": "스틱청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -13461,10 +13461,6 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "가성비로봇청소기",
-        "reason": "review_recommendation_unbounded"
-      },
-      {
         "keyword": "ROBOROCK",
         "reason": "review_purchase_question_unbounded"
       },
@@ -13473,15 +13469,19 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "가성비로봇청소기",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
         "keyword": "자동청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "인덕션프레임",
+        "keyword": "로보락S6MAXV",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "로보락S6MAXV",
+        "keyword": "인덕션프레임",
         "reason": "review_product_unidentified"
       },
       {
@@ -13497,16 +13497,12 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "인덕션거치대",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "천연대리석",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "로봇청소기가격",
-        "reason": "review_purchase_question_unbounded"
+        "keyword": "인덕션거치대",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "로보락큐레보",
@@ -13517,6 +13513,10 @@
         "reason": "review_product_unidentified"
       },
       {
+        "keyword": "로봇청소기가격",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
         "keyword": "로보락S5MAX",
         "reason": "review_product_unidentified"
       },
@@ -13525,256 +13525,24 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "국산로봇청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "로보락신제품",
         "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "국산로봇청소기",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "청소로봇",
         "reason": "review_product_unidentified"
       },
       {
+        "keyword": "식기세척기이전설치",
+        "reason": "review_product_unidentified"
+      },
+      {
         "keyword": "타마로봇청소기",
         "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "미세먼지",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "욕실환풍기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "집진기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "전열교환기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "차량용공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "위닉스공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "엘지공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "새집증후군",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "자동차에어컨필터교체",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "공기청정기추천",
-        "reason": "review_recommendation_unbounded"
-      },
-      {
-        "keyword": "후드필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG퓨리케어공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "전열교환기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG퓨리케어360",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "헤파필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "발뮤다공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "삼성큐브공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "LG공기청정기청소",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "아파트전열교환기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "엘지퓨리케어공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "FILTER",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "WF19T6000KW",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "호환필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "에어필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "휴대용공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "LG공기청정기렌탈",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "활성탄필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "삼성공기청정기청소",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "CFX-G100D",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG공기청정기퓨리케어",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "공기순환기",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "탈취필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "환풍기설치",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "삼성비스포크공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "프리필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "롤부직포",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "CFX-D100D",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "LG전자공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "비염차",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "코앤잠",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "삼성블루스카이공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "공기청정기LG",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "블루스카이3100",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "차량공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "담배냄새제거",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "엘지공청기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "엘지필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "부직포필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "신생아공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "FFU",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "PAO",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "AS153HWWC",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "비염공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "아기방공기청정기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "환풍기필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "공기청정기청소",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "해파필터",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "백필터",
-        "reason": "review_product_unidentified"
       },
       {
         "keyword": "조립PC",
@@ -13913,11 +13681,15 @@
         "reason": "review_product_unidentified"
       },
       {
+        "keyword": "스팀청소기대여",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
         "keyword": "차량용청소기추천",
         "reason": "review_recommendation_unbounded"
       },
       {
-        "keyword": "스팀청소기대여",
+        "keyword": "테팔청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -13925,12 +13697,12 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "테팔청소기",
+        "keyword": "차이슨청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "차이슨청소기",
-        "reason": "review_purchase_question_unbounded"
+        "keyword": "크리스마스선물",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "휴대용청소기",
@@ -13938,10 +13710,6 @@
       },
       {
         "keyword": "새차선물",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "크리스마스선물",
         "reason": "review_product_unidentified"
       },
       {
@@ -13953,11 +13721,11 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "핸드청소기",
+        "keyword": "스팀로봇청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "스팀로봇청소기",
+        "keyword": "핸드청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -13965,12 +13733,12 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "인덕션청소",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "무선소형청소기",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "인덕션청소",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "무선핸드청소기",
@@ -14009,19 +13777,19 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "LG코드제로청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "진공물걸레청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "차량용진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "LG코드제로청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
         "keyword": "무선침구청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "진공물걸레청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -14037,11 +13805,11 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "5만원선물",
+        "keyword": "30만원대선물",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "30만원대선물",
+        "keyword": "5만원선물",
         "reason": "review_product_unidentified"
       },
       {
@@ -14053,20 +13821,20 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "한경희청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
         "keyword": "센스있는집들이선물",
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "미니핸디청소기",
+        "keyword": "이직선물",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "한경희청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "이직선물",
-        "reason": "review_product_unidentified"
+        "keyword": "미니핸디청소기",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "습건식청소기",
@@ -14081,19 +13849,11 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "소형진공청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "강아지털청소기",
-        "reason": "review_purchase_question_unbounded"
-      },
-      {
-        "keyword": "가성비무선청소기추천",
-        "reason": "review_recommendation_unbounded"
-      },
-      {
         "keyword": "업소용진공청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "소형진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -14101,12 +13861,20 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "창틀청소기",
+        "keyword": "가성비무선청소기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "강아지털청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "차량용품선물",
         "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "창틀청소기",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "책상청소기",
@@ -14133,23 +13901,19 @@
         "reason": "review_product_unidentified"
       },
       {
-        "keyword": "스팀진공청소기",
-        "reason": "review_purchase_question_unbounded"
+        "keyword": "결혼선물추천",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "화장실스팀청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "결혼선물추천",
-        "reason": "review_product_unidentified"
-      },
-      {
-        "keyword": "무선물걸레",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "핸디무선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "스팀진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -14157,7 +13921,11 @@
         "reason": "review_recommendation_unbounded"
       },
       {
-        "keyword": "틈새청소기",
+        "keyword": "무선물걸레",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG진공청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -14165,7 +13933,7 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "LG진공청소기",
+        "keyword": "틈새청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -14173,12 +13941,20 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "삼성청소기청소",
+        "keyword": "집들이선물세트",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "무선걸레청소기",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "집들이선물세트",
+        "keyword": "이사집선물",
         "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성청소기청소",
+        "reason": "review_purchase_question_unbounded"
       },
       {
         "keyword": "노트북",
@@ -14261,12 +14037,12 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "1테라",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "노트북키보드",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "1테라",
+        "reason": "review_product_unidentified"
       },
       {
         "keyword": "삼성SSD외장하드",
@@ -14293,11 +14069,15 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
+        "keyword": "레노버AS",
+        "reason": "review_product_unidentified"
+      },
+      {
         "keyword": "노트북윈도우설치",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "레노버AS",
+        "keyword": "삼성T71TB",
         "reason": "review_product_unidentified"
       },
       {
@@ -14305,12 +14085,12 @@
         "reason": "review_maintenance_intent"
       },
       {
-        "keyword": "삼성T71TB",
-        "reason": "review_product_unidentified"
-      },
-      {
         "keyword": "레노버노트북AS",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "노트북메인보드수리",
+        "reason": "review_maintenance_intent"
       },
       {
         "keyword": "SSD하드",
@@ -14325,15 +14105,11 @@
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "노트북메인보드수리",
-        "reason": "review_maintenance_intent"
-      },
-      {
-        "keyword": "SSD하드디스크",
+        "keyword": "SSD128G",
         "reason": "review_purchase_question_unbounded"
       },
       {
-        "keyword": "SSD128G",
+        "keyword": "SSD하드디스크",
         "reason": "review_purchase_question_unbounded"
       },
       {
@@ -14347,121 +14123,357 @@
       {
         "keyword": "로봇물걸레청소기",
         "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "미세먼지",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "욕실환풍기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "집진기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "전열교환기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "차량용공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "위닉스공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "엘지공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "새집증후군",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "자동차에어컨필터교체",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "공기청정기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "후드필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG퓨리케어공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "전열교환기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG퓨리케어360",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "헤파필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "발뮤다공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "삼성큐브공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "LG공기청정기청소",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "엘지퓨리케어공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "FILTER",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "아파트전열교환기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "WF19T6000KW",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "호환필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "에어필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG공기청정기렌탈",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "휴대용공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "활성탄필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성공기청정기청소",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "CFX-G100D",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG공기청정기퓨리케어",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "공기순환기",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "탈취필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "프리필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "환풍기설치",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성비스포크공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "롤부직포",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "CFX-D100D",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "LG전자공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "비염차",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "코앤잠",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성블루스카이공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "블루스카이3100",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "공기청정기LG",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "엘지필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "담배냄새제거",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "부직포필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "FFU",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "차량공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "엘지공청기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "신생아공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "AS153HWWC",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "PAO",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "비염공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "아기방공기청정기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "환풍기필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "공기청정기청소",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "백필터",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "해파필터",
+        "reason": "review_product_unidentified"
       }
     ],
     "discovery_replenishment": [
       {
-        "seed": "공기청정기필터",
-        "available_before": 0,
-        "added_count": 73,
-        "status": "measured",
-        "trigger": "available_pool_exhausted",
-        "measured_count": 74,
-        "available_after": 1
-      },
-      {
         "seed": "스마트폰배터리",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "모니터해상도",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 1,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 1,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "무선청소기소음",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "노트북배터리",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 11,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 11,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "제습기평수",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "로봇청소기먼지비움",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "모니터주사율",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 1,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 1,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "제습기소비전력",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 0,
         "status": "no_measured_demand",
         "trigger": "available_pool_exhausted",
         "measured_count": 0,
-        "available_after": 1
+        "available_after": 0
       },
       {
         "seed": "가벼운무선청소기",
-        "available_before": 1,
-        "added_count": 93,
+        "available_before": 0,
+        "added_count": 96,
         "status": "measured",
         "trigger": "available_pool_exhausted",
-        "measured_count": 128,
-        "available_after": 1
+        "measured_count": 131,
+        "available_after": 0
       },
       {
         "seed": "노트북SSD",
-        "available_before": 1,
+        "available_before": 0,
         "added_count": 60,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 62,
-        "available_after": 2
+        "available_after": 1
       },
       {
         "seed": "로봇청소기직배수설치",
-        "available_before": 2,
+        "available_before": 1,
         "added_count": 3,
         "status": "measured",
         "trigger": "available_pool_exhausted",
         "measured_count": 12,
+        "available_after": 1
+      },
+      {
+        "seed": "공기청정기필터",
+        "available_before": 1,
+        "added_count": 73,
+        "status": "measured",
+        "trigger": "available_pool_exhausted",
+        "measured_count": 74,
         "available_after": 2
       }
     ],
     "deferred_measured_keywords": [
       "DDR432G",
-      "DDR48G",
+      "노트북램",
       "노트북메모리",
       "램16기가",
       "램8기가",
@@ -14474,7 +14486,7 @@
         "round": 1,
         "offered_keywords": [
           "가벼운청소기",
-          "노트북램"
+          "DDR416GB"
         ],
         "proposals": [],
         "measured_fallback": true,
@@ -14486,21 +14498,21 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "노트북램",
+            "keyword": "DDR416GB",
             "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "노트북램",
-            "search_query": "노트북 램",
+            "keyword": "DDR416GB",
+            "search_query": "DDR416GB",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "purchase_intent_unclear"
           }
         ],
         "research_fallback_attempted": [
-          "노트북램"
+          "DDR416GB"
         ]
       },
       {
@@ -14530,15 +14542,22 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "노트북램",
+        "keyword": "DDR416GB",
         "status": "rejected",
-        "reason": "search quality insufficient",
-        "monthly_search": 1310,
-        "organic_query": "노트북 램"
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 1740,
+        "organic_query": "DDR416GB"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "DDR416GB",
+        "reason_code": "temporary_failure",
+        "failed_at": "2026-10-13T00:01:39.251637+00:00",
+        "retry_after": "2026-10-13T06:01:39.251637+00:00",
+        "attempts": 3
+      },
       {
         "keyword": "노트북램",
         "reason_code": "search_quality",
@@ -14593,13 +14612,6 @@
         "reason_code": "source_coverage",
         "failed_at": "2026-10-10T10:37:23.041637+00:00",
         "retry_after": "2026-10-13T10:37:23.041637+00:00",
-        "attempts": 2
-      },
-      {
-        "keyword": "DDR416GB",
-        "reason_code": "temporary_failure",
-        "failed_at": "2026-10-10T10:37:23.041637+00:00",
-        "retry_after": "2026-10-10T16:37:23.041637+00:00",
         "attempts": 2
       },
       {
@@ -15128,43 +15140,67 @@
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 10592
+        "elapsed_ms": 10608
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6489
+        "elapsed_ms": 8554
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11648
+        "elapsed_ms": 11758
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7585
+        "elapsed_ms": 5510
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 8779
+        "elapsed_ms": 8086
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6229
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7039
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 5663
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 40001
       },
       {
         "stage": "review_question_discovery",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 13426
+        "elapsed_ms": 11109
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 5443
+        "elapsed_ms": 5095
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -15176,12 +15212,6 @@
         "query": "신제품 공식 출시 발표 after:2026-10-12 before:2026-10-14",
         "provider": "codex_native_search",
         "results": [
-          {
-            "url": "https://www.nongshim.com/main/index",
-            "domain": "www.nongshim.com",
-            "title": "농심 : 인생을 맛있게 (Lovely Life Lovely Food)",
-            "snippet": "시골 청년 ❝DJ YANG❞의 화끈한 귀환😎 『양파링』과 『너구리』가 만나 맵짠고소 신제품 『너구링』이 탄생했습니다! ... #한글날잔치 ❝자랑스러운 〖한글날〗을 기념해 가로세로 낱말 맞히기를 준비했습니다❞ 여러분의 농심력을 점검해보세요🙏"
-          },
           {
             "url": "https://www.scjfood.com/news",
             "domain": "www.scjfood.com",
@@ -15204,7 +15234,13 @@
             "url": "https://www.jobkorea.co.kr/company/1396412/?C_IDX=1131",
             "domain": "www.jobkorea.co.kr",
             "title": "삼진제약㈜ 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
-            "snippet": "신제품 에이알비 정 출시 ... 신제품 제이틴주사 출시 ... 본사 사옥 신축 기공식"
+            "snippet": "주요사업 | 의약품(게보린,세트라졸,염산나록손) 제조,판매,수출입,약초재배 | 4대보험 | 국민연금, 건강보험, 고용보험, 산재보험 ... 제2차 한국형ARPA-H프로젝트 주관기관 선정, 퀀텀기술 활용한 혁신신약 개발 착수 ... 케이메디허브(대구경북첨단의료산업진흥재단)와 신약개발 공동연구"
+          },
+          {
+            "url": "https://en.gosfg.co.kr/event/",
+            "domain": "en.gosfg.co.kr",
+            "title": "Event - 커뮤니티 | SFG 신화푸드",
+            "snippet": "* [발표] 3대갈비 3대가족 이벤트 당첨자 발표 ... * [NEW] SFG 신메뉴 출시 이벤트! ... * [오픈] 바다의 생기를 먹음은 생선구이 한상, 바다를먹은 고등어 ..."
           },
           {
             "url": "https://www.shop.ivenet.co.kr/",
@@ -15219,22 +15255,22 @@
             "snippet": "두 제품 모두 신세계푸드 자체 냉동공법을 접목해 장시간 보관해도 맛과 품질이 유지될 수 있도록 개발됐다.신세계푸드의 이번에 출시한 ‘꿔바로우’, ‘바삭 고추튀김’과 같은 실속형 대용량 간편식을 지속적으로"
           },
           {
-            "url": "https://www.bbia.co.kr/",
-            "domain": "www.bbia.co.kr",
-            "title": "BBIA 삐아 공식 온라인 몰",
-            "snippet": "* 7월 신제품 포토 리뷰 이벤트 당첨자 발표 ... * [NEWS] 삐아, 라스트 벨벳 틴트 25종 리뉴얼 출시 ... * [NEWS] 삐아, 공식몰 및 지그재그서"
+            "url": "https://shinpoong.co.kr/sub5/5_1.php",
+            "domain": "shinpoong.co.kr",
+            "title": "신풍제약주식회사 : 신풍소식",
+            "snippet": "437 | 신풍제약 애드마일스, 기초 영양을 위한 가성비 신제품 '칸휴 밀크씨슬 에너지' 및 '칼슘 마그네슘 비타민D 아연 플러스' 출시 | 부관리자 | 2026.04.01 | 4144436"
+          },
+          {
+            "url": "https://trend.zimcary.com/posts/pokemon-bread-tibuseal-1013-30th",
+            "domain": "trend.zimcary.com",
+            "title": "포켓몬빵 띠부씰 1013종, 30주년 신제품 7종 총정리 · trend.zimcary.com",
+            "snippet": "6월 스페셜 에디션 소비자가격이 2000원대였다는 보도는 있지만, 이번 7종의 채널별 판매가는 공식 확정 발표가 없어요. ... * ▶ 유튜브 보기 — JTBC News, 「포켓몬빵 큰"
           },
           {
             "url": "https://www.shinpoong.co.kr/main/main.php",
             "domain": "www.shinpoong.co.kr",
             "title": "신풍제약주식회사",
             "snippet": "하이알플렉스주(헥사메틸렌디아민으로가교결합된히알루론산나트륨겔) ... * 신풍제약, 창립 64주년 기념식 개최… “흑자 전환 발판 삼아 ‘재도약’ 선포” * 신풍제약 ‘피라맥스’, 말라리아 진료가이드(제3판)에 국내발생 말라리아 치료제로 등재 국내 개발"
-          },
-          {
-            "url": "https://trend.zimcary.com/posts/pokemon-bread-tibuseal-1013-30th",
-            "domain": "trend.zimcary.com",
-            "title": "포켓몬빵 띠부씰 1013종, 30주년 신제품 7종 총정리 · trend.zimcary.com",
-            "snippet": "삼립의 2026년 8월 27일 공식 발표 에 나온 리뉴얼 라인업입니다. ... * ▶ 유튜브 보기 — JTBC News, 「포켓몬빵 큰 거 온다…30주년 기념 띠부씰 1013종"
           }
         ]
       },
@@ -15246,22 +15282,22 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://shop.wisely.store/new",
-            "domain": "shop.wisely.store",
-            "title": "신제품 | 와이즐리",
-            "snippet": "신제품 ... 가전 · 디지털 ... 와이즐리 기미 커버 토닝 쿠션 ... 딜라잇가든 국내산 100% 냉동 딸기 1kg"
+            "url": "https://drdifferent.com/category/%EC%A0%84%EC%A0%9C%ED%92%88/112/",
+            "domain": "drdifferent.com",
+            "title": "닥터디퍼런트｜DR.DIFFERENT",
+            "snippet": "전제품 ... ## 전제품 ... 신상품 상품명 낮은가격 높은가격 사용후기 ... 월 원 / 개월 상품요약정보 : 슬로우에이징 립 케어, 국내 최초 레티날 립 밤(택"
           },
           {
-            "url": "https://keypang.kr/shopping/",
-            "domain": "keypang.kr",
-            "title": "지금 뜨는 상품 검색어 순위 (월간 검색량은 확인분부터) | 키팡",
-            "snippet": "전체 패션의류 패션잡화 화장품/미용 디지털/가전 가구/인테리어 출산/육아 식품 생활/건강 여가/생활편의 도서제미나이 681만 월 6,813,600회 · 높음 · 7일 2회 갤럭시폴드8 황금 178만 월 1,779,800회 ·"
+            "url": "https://gdonif.com/",
+            "domain": "gdonif.com",
+            "title": "그돈이면 - 가격은 같아도 가치는 다르니까 · 소비자를 위한 가전 비교",
+            "snippet": "전체[Button: 생활가전][Button: 주방가전][Button: 계절가전][Button: 디지털IT] ... 3131개 제품 스펙을 하나하나 비교해보니 진짜 차이가 나는 항목이 있었어요. ... 스타일러 스타일러 구매가이드 2026년 7월 10일 업데이트 김치냉장고"
           },
           {
-            "url": "https://playdidim.com/",
-            "domain": "playdidim.com",
-            "title": "디딤",
-            "snippet": "본 논문은 DIDIM이 단순히 “운동 게임을 제공하는 제품”에 그치지 않고, 체력측정 기능을 통해 추출되는 운동 데이터가 전통적 임상 신체기능 측정치와 연관될 가능성을 학술논문을 통해 보여주었다는"
+            "url": "https://www.lg.co.kr/media/release/30286",
+            "domain": "www.lg.co.kr",
+            "title": "보도자료 | 미디어 | LG",
+            "snippet": "내부에는 AI 가전과 IoT 기기, 냉난방공조(HVAC) 기술을 집약한 풀옵션 사양이 적용돼 방문객들은 차별화된 AI 홈을 경험할 수 있다. ... LG전자는 이번 신제품으로 8평(단층·2층)/14평(단층·2층)/16평(단층·2층)/22평(단층)/24평(단층) 등 총"
           },
           {
             "url": "https://dealmate.ai.kr/",
@@ -15270,22 +15306,16 @@
             "snippet": "* 최신 가격정보 확인 ... ## 어떤 제품 찾으세요? ... 식품 엘빈즈 클래식 이유식 후기｜만10~13개월 고기듬뿍 4종 세트 가격·구성 총정리 ★ 5 (9,896) 16,400원 식품"
           },
           {
-            "url": "https://petclub.co.kr/",
-            "domain": "petclub.co.kr",
-            "title": "Petclub",
-            "snippet": "* Image Image: 장바구니 담기상품명 : [30개세트] 데이스포 모이스트 황태오리버거 100g ... * 가전/디지털/컴퓨터"
+            "url": "https://www.jealit.com/",
+            "domain": "www.jealit.com",
+            "title": "질릿",
+            "snippet": "Image: 장바구니 담기 Image: 관심상품 등록 전 ... 상품명 : [가슴볼륨&리프팅] 세리업 가슴 마사지기 ... 득템은 타이밍, 기회는 지금뿐! ... 신제품"
           },
           {
-            "url": "https://pick.reportej.com/",
-            "domain": "pick.reportej.com",
-            "title": "알고보니픽 | Smart Shopping Guide",
-            "snippet": "## 어떤 제품 찾으세요? ... 뷰티·패션 N 주방·생활 N 식품·건강식품 가전·디지털 추석선물추천 건강·휴식 출산·육아 가구·인테리어 전체보기 ... 뷰티·패션 샤르드 아이백 리프트 1100샷 리들 패치 4매입"
-          },
-          {
-            "url": "https://www.jeilpet.co.kr/dogs/list_dry.php",
-            "domain": "www.jeilpet.co.kr",
-            "title": "제일펫푸드",
-            "snippet": "[Input]아이디얼레시피 [Input]슈슈 [Input]뉴트리웰 [Input]자연가득 [Input]도그매니아 [Input]원더독스 [Input]천하제일 * 나이 ... [Input]1세 이하 [Input]1세 이상 [Input]6세 이상 [Input]전연령 ... [Input]유기농 [Input]천연원료 [Input]그레인프리 [Input]관절 [Inpu"
+            "url": "https://pro.wellroutine.co.kr/",
+            "domain": "pro.wellroutine.co.kr",
+            "title": "심플 라이프 | 더 나은 일상을 위한 선택",
+            "snippet": "여아 한복 더예한복 아린색동 04호 어린이집 추석 행사 의상 추천 쿠팡 최저가 확인하기 ... ## 어떤 제품 찾으세요? ... 디지털·가전상품 13개 보러가기 푸드상품 12개 보러가기"
           },
           {
             "url": "https://kdpharma.co.kr/",
@@ -15294,23 +15324,389 @@
             "snippet": "[Input] [Input] 제품검색 ... * 경동제약 50기 결산공고 0000.00.00 ... 주가정보 011040 ... [Button: 홍보영상] [Button: 그날엔 TV광고] ... 최첨단의 생산시설과 순수한 우리 기술로 ..."
           },
           {
-            "url": "https://beauticslab.com/compare/JCOIL6",
-            "domain": "beauticslab.com",
-            "title": "피지오겔 DMT vs 레드수딩, 민감성 여드름 지복합성 피부엔 어떤 크림이 맞을까? | 뷰틱스랩",
-            "snippet": "[세라마이드 장벽 크림] 세라마이드와 인지질(레시틴) 조합의 막 구조 설계로 손상된 피부 장벽 회복에 초점을 맞춘 제형입니다. ... [카페인 시카 카밍 크림] 나이아신아마이드와 함께 카페인을 배합해"
+            "url": "https://keypang.kr/shopping/",
+            "domain": "keypang.kr",
+            "title": "지금 뜨는 상품 검색어 순위 (월간 검색량은 확인분부터) | 키팡",
+            "snippet": "상품 검색어 · 2026.10.12 (월요일) 21:04 수집 기준 · 3시간마다 갱신 ... 전체 패션의류 패션잡화 화장품/미용 디지털/가전 가구/인테리어 출산/육아 식품 생활/건강 여가/생활편의 도서제미나이 681만 월"
           },
           {
-            "url": "https://www.jw-pharma.co.kr/mobile/pharma/ko/promotion/m_all_view.jsp?contentsCd=260827100851775VQZ2Z",
-            "domain": "www.jw-pharma.co.kr",
-            "title": "JW중외제약",
-            "snippet": "이번에 선보이는 신제품 2종은 JW메디칼이 지난 5월 글로벌 현장진단 초음파기기 선도 기업 ‘후지필름 소노사이트(Fujifilm Sonosite)’와 국내 한국 총판 계약을 체결한 이후, 국내 시장에 선보이는 최상위"
+            "url": "https://didiballyhoo.com/category/%EC%A0%9C%ED%92%88/53/",
+            "domain": "didiballyhoo.com",
+            "title": "제품 - 제품 - DIDIBALLYHOO",
+            "snippet": "* 신제품 () ... Image: 장바구니 담기 Image: 관심상품 등록 전상품명 : 디디발리후 쇼핑백 판매가 : 2,000원 ... 이메일 : support@didiballyhoo.com"
+          },
+          {
+            "url": "https://reviewloger.com/category/digital",
+            "domain": "reviewloger.com",
+            "title": "디지털 체험단 모음 129건 | 신청자·마감·경쟁률 비교 - 리뷰로거",
+            "snippet": "디지털 전국 디지털 오늘 마감 SK텔레콤 에스알 — 키즈폰 1년 무료체험 체험단 키즈폰 1년 무료체험(기기값-갤럭시A17, 유심비, 1년 요금 모두지원)(송파구/고양/동두천/평택 중 원하는 지점 방문 후 체험)"
           }
         ]
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_search_requested",
+        "query": "DDR416GB 제품 사양 site:semiconductor.samsung.com"
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_search",
+        "query": "DDR416GB 제품 사양 site:semiconductor.samsung.com",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/ddr/ddr4/k4aag085wb-mcrc/",
+            "title": "K4AAG085WB-MCRC(16 Gb) | DRAM | 삼성반도체",
+            "snippet": "사양 ... 다른 제품의 정보는 이곳 에서 확인하세요. ... 고성능, 고신뢰성, 저전력소비의 DDR4 ... 16 Gb"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/gddr/",
+            "title": "GDDR | DRAM | 삼성반도체",
+            "snippet": "삼성 GDDR (Graphic DDR)은 그래픽 렌더링과 AI 연산에 필요한 고속 데이터 처리를 위해 높은 핀당 전송 속도를 제공합니다. ... 삼성 GDDR (Graphic DDR)은 그래픽 렌더링과"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/ddr/ddr4/k4aag165wb-mctd/",
+            "title": "K4AAG165WB-MCTD(16 Gb) | DRAM | 삼성반도체",
+            "snippet": "사양 ... 다른 제품의 정보는 이곳 에서 확인하세요. ... 고성능, 고신뢰성, 저전력소비의 DDR4 ... 16 Gb"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/ddr/",
+            "title": "DDR | DRAM | 삼성반도체",
+            "snippet": "DDR 제품군은 원활한 데이터 처리와 안정적인 확장성을 제공하며, 급격히 증가하는 워크로드에서도 흔들림 없는 성능을 유지합니다. ... DDR 제품군은 원활한 데이터 처리와 안정적인 확장성을 제공하며, 급격히"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/news-events/news/samsung-begins-mass-production-of-industrys-first-16gb-lpddr5-dram/",
+            "title": "삼성전자, 역대 최고 16GB 모바일 D램 시대 열어 | 삼성반도체",
+            "snippet": "삼성전자는 작년 7월 12GB LPDDR5 모바일 D램을 세계 최초로 출시한 데 이어 5개월 만에 업계 유일 16GB 모바일 D램을 양산하며 프리미엄 메모리 시장을 한 단계"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/news-events/news/samsung-begins-mass-production-of-industrys-thinnest-lpddr5x-dram-packages-for-on-device-ai/",
+            "title": "삼성전자, 업계 최소 두께 LPDDR5X D램 양산 | 삼성반도체",
+            "snippet": "* 전 세대 제품 대비 두께 약 9% 감소, 열 저항 21.2% 개선 ... 삼성전자가 업계 최소 두께 12나노급 LPDDR5X D램 12∙16GB(기가바이트) 패키지 양산을 시작하며"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/lpddr/lpddr4/k4f6e3d4hb-mhcj/",
+            "title": "K4F6E3D4HB-MHCJ(16 Gb) | DRAM | 삼성반도체",
+            "snippet": "사양 ... 다른 제품의 정보는 이곳 에서 확인하세요. ... 16 Gb ... * 모든 제품 Spec은 내부결과를 반영한 것이고, 사용자 시스템 구성에 따라 변동될 수"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/lpddr/",
+            "title": "LPDDR | DRAM | 삼성반도체",
+            "snippet": "이러한 특성은 모바일·엣지 디바이스부터 AI 기반 시스템까지 실시간 처리가 필요한 다양한 환경에서 우수한 에너지 효율과 안정적인 성능을 구현합니다. ... 교체 가능한 소형 모듈 설계와 듀얼"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/lpddr/lpddr4/",
+            "title": "LPDDR4 | DRAM | 성능 및 스펙 | 삼성반도체",
+            "snippet": "삼성전자의 획기적인 제품, LPDDR4는 에너지 효율성과 속도를 동시에 잡은 제품으로 울트라 씬 디바이스, AI, VR 및 웨어러블 등을 위해 다양한 Solution을 제공합니다. ... 삼성 LPDDR4는"
+          },
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/module/rdimm/m393b1g73eb0-yk0/",
+            "title": "Module | DRAM | 삼성반도체",
+            "snippet": "전력 효율, 일관된 성능, 확장 가능한 구성을 균형 있게 구성한 다양한 옵션을 갖추어 워크로드별 요구에 최적화된 메모리 솔루션을 제공합니다. ... up to 256GB ... 이러한"
+          }
+        ]
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_search_requested",
+        "query": "DDR416GB 제품 사양 site:kingston.com"
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_search",
+        "query": "DDR416GB 제품 사양 site:kingston.com",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://media.kingston.com/pdfs/emmc/dram_ddr4_flyer_kr.pdf",
+            "title": "DRAM\n\n시장 부문\n\n산업용 IoT/로봇 공장 및 공장 자동화\n\n5G 네트워킹/텔레커뮤니",
+            "snippet": "산업용 IoT/로봇 공장 및 공장 자동화 ... 스마트 시티(HVAC, 조명, 전력 모니터링/미터링, 주차 미터기)DDR4 부품 번호 및 사양 ... <td>8Gb</td> ... - 고속 데이터 전송은"
+          },
+          {
+            "url": "https://media.kingston.com/pdfs/emmc/dram-lpddr4-kr.pdf",
+            "title": "kingston.com/embedded",
+            "snippet": "부품 번호 D1621PM4CDGUIW-U | 용량 16Gb | 설명 200 ball FBGA LPDDR4 I-Temp | 패키지 10x14.5x0.8 | 구성(단어 x 비트) 512Mx32 | 속도 Mbps 3733Mbps"
+          },
+          {
+            "url": "https://media.kingston.com/pdfs/HyperX_Impact_DDR4_KR.pdf",
+            "title": "HyperX Impact DDR4 SODIMM",
+            "snippet": "> 시스템 메모리 최대화 — 노트북 또는 소형 폼 팩터 시스템에 4GB–16GB 모듈 사용 가능하고 2개와 4개 키트로 구성해 최대 64GB 용량을 제공하는 HyperX Impact"
+          },
+          {
+            "url": "https://media.kingston.com/pdfs/HX_FURY_DDR4_KR.pdf",
+            "title": "HyperX FURY DDR4 메모리",
+            "snippet": "> 낮은 프로파일의 스타일리쉬한 열 확산장치 — FURY의 비대칭 시그니처 열 확산장치는 당신을 더욱 돋보이게 만들어줍니다. ... 사양> 용량 4GB–16GB 용량의 모듈 및 8GB–64GB 용량의"
+          },
+          {
+            "url": "https://media.kingston.com/pdfs/emmc/MKF-995-dram-lpddr4-kr.pdf",
+            "title": "kingston.com/embedded",
+            "snippet": "LPDDR4 부품 번호 및 사양 ... 부품 번호 D0811PM2FDGUK | 용량 8Gb | 설명 200 ball FBGA LPDDR4 C-Temp | 패키지 10x14.5x1.0 | 구성(단어 x"
+          },
+          {
+            "url": "https://www.kingston.com/kr/ssd/kc3000-nvme-m2-solid-state-drive?capacity=2048gb",
+            "title": "KC3000 PCIe 4.0 NVMe M.2 SSD 데스크톱 및 노트북 PC를 위한 고성능 - Kingston Technology",
+            "snippet": "3D 렌더링 및 4K+ 콘텐츠 제작에 이상적인 이 제품은 원활한 작업 흐름과 빠른 로딩 시간을 보장하며, 로우 프로파일 그래핀 알루미늄 히트 스프레더가 드라이브를 시원하게 유지합니다.컴팩트한"
+          },
+          {
+            "url": "https://www.kingston.com/kr/memory/gaming/kingston-fury-beast-ddr4-rgb-memory?dram+density=16gbit&kit=kit+of+4&speed=3200mhz&total+%28kit%29+capacity=128gb",
+            "title": "FURY Kingston FURY™ DDR4 RGB 메모리 – 8GB-128GB 2666MT/s-3733MT/s - Kingston Technology",
+            "snippet": "세련된 블랙 히트 스프레더와 최대 3733MT/s{{Footnote.A65242}} 의 인상적인 속도를 보완하는 멋진 RGB 조명{{Footnote.N63221}} 이 특징입니다. ... ## 사양 ... * 최대 3600MT/s의 속도 및 최대"
+          },
+          {
+            "url": "https://media.kingston.com/pdfs/HyperX_Predator_DDR4_KR.pdf",
+            "title": "HyperX Predator DDR4 메모리",
+            "snippet": "> 강렬하고 새로운 외형의 알루미늄 열 확산장치 — 블랙 알루미늄의 더욱 새롭고 강력해진 열 확산장치는 최상의 안정성을 위해 더 많은 열 방출이 가능하도록 합니다. ..."
+          },
+          {
+            "url": "https://www.kingston.com/en/embedded/embedded-dram",
+            "title": "Embedded discrete DRAM solutions - Kingston Technology",
+            "snippet": "Embedded discrete DRAM solutions include DDR3, DDR4, and LPDDR4 memory families, delivering long lifecycle support and consistent performance for commercial, industrial, and automotive applications. ."
+          },
+          {
+            "url": "https://www.kingston.com/en/blog/servers-and-data-centers/server-memory-buying-guide",
+            "title": "Server Memory Buying Guide: Top 10 Tips You Need to Know - Kingston Technology",
+            "snippet": "* DDR5"
+          }
+        ]
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_search_requested",
+        "query": "DDR416GB 제품 사양 site:kca.go.kr"
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_search",
+        "query": "DDR416GB 제품 사양 site:kca.go.kr",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://www.kca.go.kr/webzine/board/view?div=kca_1912&linkId=117&menuId=MENU00307",
+            "title": "소비자시대 웹진",
+            "snippet": "소비전력량416Wh연간 전기요금6,900원^{*}음식물의 종류, 양 등에 따라 소비전력량이 달라질 수 있음 ... 9개 제품 모두 전기용품안전기준(K60335-2-9), 전자파 인체보호기준 등의 안전기준에 적합했습니다. ... 그 결과 제품 모두"
+          },
+          {
+            "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
+            "title": "소비자시대 웹진",
+            "snippet": "카페, 공유 오피스 등 콘센트가 마련된 공간이 많아지고 공공 와이파이가 널리 보급되면서, 노트북을 구매하려는 소비자도 늘고 있는데요. ... 저장용량 512GB, 내장그래픽 카드를 탑재한 2025년 출시"
+          },
+          {
+            "url": "https://www.kca.go.kr/smartconsumer/sub.do?menukey=7714&mode=view&no=1003933578",
+            "title": "스마트컨슈머 > 소비자정보 > 카드뉴스 > 상세보기",
+            "snippet": "Image: 새치커버 제품 품질비교 쉽고 고르게 발라지는 정도와 색상 유지성능은 제품 간 차이 있어요 Image: 새치커버 시험 대상 제품 [스틱형] - 나틴다 매직 헤어 커버"
+          },
+          {
+            "url": "https://www.kca.go.kr/home/sub.do?menukey=4004&mode=view&no=1003873095&page=27",
+            "title": "한국소비자원 > 소비자뉴스 > 카드뉴스 > 상세보기",
+            "snippet": "한국소비자원은 다이어트 건강기능식품 12개 제품에 대해 품질 및 안전성을 시험·평가했어요 항목별 주요 시험평가 결과 [체지방 감소 기능성분 함량] : 전 제품 관련 기준을 충족했어요 [영양성분]"
+          },
+          {
+            "url": "https://www.kca.go.kr/home/sub.do?menukey=4004&mode=view&no=1003795145",
+            "title": "한국소비자원 > 소비자뉴스 > 카드뉴스 > 상세보기",
+            "snippet": "Image: (펫드라이룸 품질비교 결과) 품질·성능(건조성능,·소음 등) 차이 있어 꼼꼼히 확인하고 제품 선택해야해요 Image: 한국소비자원이 시중에 유통 중인 주요 브랜드 7개 제품의 펫드라이룸을 시험·평가했어요 [펫드라이룸 항목별"
+          },
+          {
+            "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2509&linkId=895&menuId=MENU00307",
+            "title": "소비자시대 웹진",
+            "snippet": "소화되지 않고 대장까지 도달할 수 있어 장내 미생물의 불균형을 초래할 수 있고 과다 섭취 시 설사, 복부 팽만감, 가스 생성 등을 유발할 수 있어 과량"
+          }
+        ]
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://semiconductor.samsung.com/kr/dram/ddr/ddr4/k4aag085wb-mcrc/",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://semiconductor.samsung.com/kr/dram/ddr/ddr4/",
+        "title": "DDR4 | DRAM | 성능 및 스펙 | 삼성반도체",
+        "excerpt_chars": 3917
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://media.kingston.com/pdfs/emmc/dram_ddr4_flyer_kr.pdf",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "non_html"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://www.kca.go.kr/webzine/board/view?div=kca_1912&linkId=117&menuId=MENU00307",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://www.kca.go.kr/webzine/board/view?div=kca_1912&linkId=117&menuId=MENU00307",
+        "title": "소비자시대 웹진",
+        "excerpt_chars": 672
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://semiconductor.samsung.com/kr/dram/gddr/",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://semiconductor.samsung.com/kr/dram/gddr/",
+        "title": "GDDR | DRAM | 삼성반도체",
+        "excerpt_chars": 2995
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://media.kingston.com/pdfs/emmc/dram-lpddr4-kr.pdf",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "non_html"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://www.kca.go.kr/webzine/board/view?div=kca_2602&linkId=978&menuId=MENU00307",
+        "title": "소비자시대 웹진",
+        "excerpt_chars": 3931
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://semiconductor.samsung.com/kr/dram/ddr/ddr4/k4aag165wb-mctd/",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://semiconductor.samsung.com/kr/dram/ddr/ddr4/",
+        "title": "DDR4 | DRAM | 성능 및 스펙 | 삼성반도체",
+        "excerpt_chars": 3917
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://media.kingston.com/pdfs/HyperX_Impact_DDR4_KR.pdf",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "non_html"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://www.kca.go.kr/smartconsumer/sub.do?menukey=7714&mode=view&no=1003933578",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "short_body"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://semiconductor.samsung.com/kr/dram/ddr/",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://semiconductor.samsung.com/kr/dram/ddr/",
+        "title": "DDR | DRAM | 삼성반도체",
+        "excerpt_chars": 7912
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://media.kingston.com/pdfs/HX_FURY_DDR4_KR.pdf",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "non_html"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://www.kca.go.kr/home/sub.do?menukey=4004&mode=view&no=1003873095&page=27",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "short_body"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "native_source_research",
+        "locators": [
+          {
+            "url": "https://semiconductor.samsung.com/kr/dram/ddr/",
+            "origin": "model_reported_locator"
+          },
+          {
+            "url": "https://www.kingston.com/en/memory/search?partId=KVR32N22S8%2F16",
+            "origin": "model_reported_locator"
+          }
+        ],
+        "searched": true,
+        "coverage_gaps": null
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://semiconductor.samsung.com/kr/dram/ddr/",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://semiconductor.samsung.com/kr/dram/ddr/",
+        "title": "DDR | DRAM | 삼성반도체",
+        "excerpt_chars": 7912
+      },
+      {
+        "keyword": "DDR416GB",
+        "category": "리뷰",
+        "stage": "source_fetch",
+        "url": "https://www.kingston.com/en/memory/search?partId=KVR32N22S8%2F16",
+        "outcome": "fetch_failed",
+        "failure_codes": [
+          "http_status"
+        ],
+        "final_url": null,
+        "title": "",
+        "excerpt_chars": 0
       }
     ],
     "selection_outcome": "no_pass_among_evaluated",
     "selection_funnel": {
-      "measured": 333,
+      "measured": 337,
       "pool": 4,
       "shortlist_offered_unique": 4,
       "evaluated": 1,

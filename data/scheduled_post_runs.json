@@ -505,7 +505,9 @@
       "category": "리뷰",
       "slot": "morning",
       "claimed_at": "2026-10-13T09:00:14.496662+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-13T00:08:16.550101+00:00",
+      "published_category": "건강"
     }
   }
 }

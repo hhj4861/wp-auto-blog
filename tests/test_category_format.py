@@ -23,6 +23,7 @@ def test_format_preserves_content_sources_schema_and_visible_monetization(catego
     assert '\n' not in style and '\r' not in style  # WordPress wpautop must not paragraph CSS
     assert len(soup.select('[data-reader-panel]')) == 5
     assert len(soup.select('[data-reader-menu] a')) == 6
+    assert soup.select_one('[data-reader-menu] a').get_text() == '전체 보기'
     assert not soup.select('[data-reader-panel][hidden]')
     assert not soup.select('[data-reader-panel] [data-monetization], [data-reader-panel] #verified-sources, [data-reader-panel] #policy-notice')
     assert len(soup.select('ins.adsbygoogle')) == 2

@@ -7,8 +7,12 @@
       const nav = article.querySelector(':scope > [data-reader-menu]');
       const container = article.querySelector(':scope > [data-reader-panels]');
       if (!nav || !container || 2 > panels.length) return;
-      const links = [...nav.querySelectorAll('a')];
-      if (links.length !== panels.length + 1) return;
+      const originalLinks = [...nav.querySelectorAll('a')];
+      if (originalLinks.length !== panels.length + 1) return;
+      // Both existing (all last) and new (all first) article markup are supported.
+      const allLink = originalLinks.find(link => link.getAttribute('href') === '#quick-answer');
+      if (!allLink) return;
+      const links = [allLink, ...originalLinks.filter(link => link !== allLink)];
       // IDs generated per instance avoid collisions on multi-article pages.
       const prefix = 'wpab-reader-' + [...document.querySelectorAll('.wpab-menu-reader')].indexOf(article);
       container.id = prefix + '-all';
@@ -18,7 +22,7 @@
         tab.type = 'button'; tab.textContent = link.textContent;
         tab.id = prefix + '-tab-' + i;
         tab.setAttribute('role', 'tab');
-        tab.setAttribute('aria-controls', panels.length > i ? panels[i].id : container.id);
+        tab.setAttribute('aria-controls', i === 0 ? container.id : panels[i - 1].id);
         link.replaceWith(tab); return tab;
       });
       // Flatten any paragraphs inserted around anchors by WordPress wpautop.
@@ -63,7 +67,7 @@
         if (Math.abs(delta) > 2) window.scrollBy({top:delta, behavior:'instant'});
       }
       function activate(index, focus = false, scroll = false) {
-        const all = index === panels.length;
+        const all = index === 0;
         tabs.forEach((tab, i) => {
           tab.setAttribute('aria-selected', String(i === index));
           tab.tabIndex = i === index ? 0 : -1;
@@ -75,11 +79,11 @@
           container.setAttribute('aria-labelledby', tabs[index].id); container.tabIndex = 0;
         }
         panels.forEach((panel, i) => {
-          panel.hidden = !all && i !== index;
+          panel.hidden = !all && i + 1 !== index;
           ['role', 'aria-labelledby', 'tabindex'].forEach(name => panel.removeAttribute(name));
           if (!all) {
             panel.setAttribute('role', 'tabpanel');
-            panel.setAttribute('aria-labelledby', tabs[i].id); panel.tabIndex = 0;
+            panel.setAttribute('aria-labelledby', tabs[i + 1].id); panel.tabIndex = 0;
           }
         });
         if (focus) tabs[index].focus({preventScroll:true});
@@ -101,7 +105,7 @@
         const target = [...article.querySelectorAll('[id]')].find(node => node.id === id);
         const index = panels.findIndex(panel => panel === target || panel.contains(target));
         if (0 > index) return false;
-        activate(index);
+        activate(index + 1);
         return true;
       }
       // Anchor links from inside the post still reveal their destination panel.
@@ -111,7 +115,7 @@
         const id = link.getAttribute('href').slice(1);
         const target = [...article.querySelectorAll('[id]')].find(node => node.id === id);
         const index = panels.findIndex(panel => panel === target || panel.contains(target));
-        if (index >= 0) activate(index);
+        if (index >= 0) activate(index + 1);
       });
       window.addEventListener('hashchange', revealHash);
       activate(0); revealHash();

@@ -169,7 +169,7 @@ def apply_category_layout(html, category):
     if len(panels.find_all(recursive=False)) >= 2:
         all_link = soup.new_tag('a', href='#quick-answer')
         all_link.string = '전체 보기'
-        nav.append(all_link)
+        nav.insert(0, all_link)
         quick = article.find(id='quick-answer', recursive=False)
         if quick:
             quick.insert_after(nav)

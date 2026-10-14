@@ -918,5 +918,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-14T00:17:34.617216+00:00"
+  },
+  {
+    "key": "국민화재안심프로젝트",
+    "keyword": "국민 화재안심 프로젝트",
+    "topic": "국민 화재안심 프로젝트 10월 13일 협약, 연기감지기 보급·구매 접근성 확대 계획",
+    "category": "생활정보",
+    "post_id": 1956,
+    "url": "https://trendpulse.blog/fire-safety-project-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-14T09:18:30.246537+00:00"
   }
 ]

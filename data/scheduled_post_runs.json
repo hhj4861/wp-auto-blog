@@ -544,7 +544,9 @@
       "category": "건강",
       "slot": "evening",
       "claimed_at": "2026-10-14T18:00:15.522445+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-14T09:18:35.301868+00:00",
+      "published_category": "생활정보"
     }
   }
 }

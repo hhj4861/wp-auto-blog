@@ -899,5 +899,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-12T09:07:19.315990+00:00"
+  },
+  {
+    "key": "러시아원인불명폐렴폐페스트의심",
+    "keyword": "러시아 원인불명 폐렴(폐페스트 의심)",
+    "topic": "러시아 원인불명 폐렴(폐페스트 의심): 10월 13일 발표한 국내 위험도와 입국자 감시 강화",
+    "category": "건강",
+    "post_id": 1953,
+    "url": "https://trendpulse.blog/russia-pneumonia-korea-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-14T00:17:34.617216+00:00"
   }
 ]

@@ -33607,7 +33607,7 @@
     "keywords": [
       "러시아 원인불명 폐렴(폐페스트 의심)"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-13T02:48:25.559696+00:00",
@@ -33685,7 +33685,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 1953,
+    "url": "https://trendpulse.blog/russia-pneumonia-korea-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-14T00:17:35.728629"
   },
   {
     "keyword": "청평고등학교 훈련성과 공유 간담회",

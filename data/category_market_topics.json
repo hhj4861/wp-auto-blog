@@ -9291,11 +9291,2116 @@
   },
   "생산성": {
     "category": "생산성",
-    "selected_at": "2026-10-14T12:51:23.168933+00:00",
+    "selected_at": "2026-10-14T13:19:17.914749+00:00",
+    "seeds": [
+      "엑셀",
+      "노션",
+      "구글스프레드시트",
+      "시간관리"
+    ],
+    "selection_version": 8,
+    "research_rounds": 4,
+    "latest_issue_discovery": {
+      "window_start": "2026-10-13T00:00:00+09:00",
+      "window_end": "2026-10-14T22:19:17.914749+09:00",
+      "queries": [
+        {
+          "query": "업무 도구 신규 기능 공식 발표 after:2026-10-13 before:2026-10-15",
+          "provider": "codex_native_search",
+          "results": [
+            {
+              "url": "https://daouoffice.com/blog/work-platform-selection-guide",
+              "domain": "daouoffice.com",
+              "title": "업무플랫폼 선택 가이드, 그룹웨어만으로 충분할까? - 다우오피스 공식 블로그",
+              "snippet": "업무플랫폼과 그룹웨어, 뭐가 다른가 그룹웨어 개별 도입 vs 올인원 업무플랫폼 도입 시 차이 그룹웨어 개별 도입 시 발생하는 문제 올인원 업무플랫폼이 해결하는 것 업무플랫폼 선택"
+            },
+            {
+              "url": "https://kois.co.kr/geo/answers/moq-37b5adda",
+              "domain": "kois.co.kr",
+              "title": "산업용 부품의 최소주문수량(MOQ)·샘플·금형비·양산단가는 어떻게 비교해야 하나요?",
+              "snippet": "# 산업용 부품의 최소주문수량(MOQ)·샘플·금형비·양산단가는 어떻게 비교해야 하나요? ... 샘플이 양산 공정으로 만든 승인용 시제품인지, MOQ가 발주·품번·옵션·연간약정 중 어디에 적용되는지, 금형 소유·수명·보관·수정·반환 조건이 무엇인지, 양산단가에 검사·성적서·포장·운송·불량대체가"
+            },
+            {
+              "url": "https://www.factory-platform.com/",
+              "domain": "www.factory-platform.com",
+              "title": "식품제조업체 매칭 팩토리플랫폼",
+              "snippet": "* 가격 변동 큰 식품원료 최신 가격 반영으로 ... 사후분쟁을 대비한 제조/원료의뢰계약서 ... * 도라지배즙 제조사 모집 파트너 모집중 건강기능/음료 추정 예산 : 상담 후"
+            },
+            {
+              "url": "https://www.kriss.re.kr/board.es?act=view&bid=0006&cg_code=&list_no=63177&mid=a10502020000&nPage=1&tag=",
+              "domain": "www.kriss.re.kr",
+              "title": "한국표준과학연구원 2025년 1차 정규직 공개채용 | 채용공고 | 채용공고 | 알림소식 : 한국표준과학연구원",
+              "snippet": "채용절차 및 세부내용 연구직 전형절차 내용 응시원서 내용을 토대로 채용예정분야 전문성 및 적격성 평가 - 평가항목: 실적, 경험, 역량 및 적격성 등 1차 전형 서류전형"
+            },
+            {
+              "url": "https://www.ranketai.com/ko/glossary/ai-visibility-tools-comparison-2026-05",
+              "domain": "www.ranketai.com",
+              "title": "AI 가시성 측정 도구 비교 — 12종 매트릭스 + ROI 가이드 (2026-08 갱신) · RanketAI",
+              "snippet": "Profound·Otterly·Peec·KIME·Ahrefs·Semrush·블루닷·ChainShift·NNT·팀하이·온더AI·RanketAI 12종을 진입가·기능 매트릭스·비즈니스 규모별 ROI 가이드 3축으로 비교한다. ... AI 가시성 측정 도구 (업계 통칭 AI SEO 도구·AI 브랜드 가시성 진단 서비스, 학술 용어"
+            },
+            {
+              "url": "https://smallppt.com/ko/blog/ai-tools/best-ai-ppt-generator-ko",
+              "domain": "smallppt.com",
+              "title": "한국 인기 AI PPT 생성기 12선 | 기능·가격·사용법·후기 총정리 (2026)",
+              "snippet": "# 한국 인기 AI PPT 생성기 12선 | 기능·가격·사용법·후기 총정리 (2026) ... AI PPT 생성기란, 인공지능을 활용해 발표 자료(슬라이드)를 자동으로 만들어 주는 도구를 말합니다. ..."
+            },
+            {
+              "url": "https://www.adiga.kr/jbp/jnf/jobInfoDetail.do?menuId=PCJBPJNF2000&searchCrCd=K000001024&searchCrSeClsfCd=D999",
+              "domain": "www.adiga.kr",
+              "title": "직업정보 - 대입정보포털",
+              "snippet": "[ 정보제공 : 한국고용정보원 고용24(구 워크넷) ] ... | 식품가공기능사(국가기술) | 제분·도정 기계 조작원 ... 능력/지식/환경 | 업무수행능력 | 지식 | 환경 ... 심신의 안녕(25)"
+            },
+            {
+              "url": "https://sjmom.net/cert/%EC%96%91%EC%8B%9D%EC%A1%B0%EB%A6%AC%EA%B8%B0%EB%8A%A5%EC%82%AC/",
+              "domain": "sjmom.net",
+              "title": "양식조리기능사 - 시험일정, 응시자격, 합격기준 | 자격증 누리집",
+              "snippet": "양식조리기능사 분야의 설치, 조작, 점검 및 정비 업무를 수행합니다. ... 2과목 총 60문제 60분, 객관식 4지 택일형, 60문항(60분) ... * • 합격 발표: 시험 직후"
+            },
+            {
+              "url": "https://www.sekyungapparel.com/journal/team-uniform-oem-essentials",
+              "domain": "www.sekyungapparel.com",
+              "title": "단체복 제작 OEM, 200~500벌 발주 전 알아야 할 6가지 · 의류 제작 발주 가이드 — 세경실업",
+              "snippet": "기업 워크숍·전사 행사를 준비하는 인사·총무팀, 프랜차이즈 본사의 지점 유니폼 담당, 대학교 단대·동문회의 행사 담당. ... 도수가 늘어도 한 벌당 단가 상승이 미미해서, 풀컬러·여러 위치 인쇄가"
+            },
+            {
+              "url": "https://www.dsninfo.or.kr/cost/standard.do?category=WAGE&type=PRICE",
+              "domain": "www.dsninfo.or.kr",
+              "title": "디자인대가기준종합정보시스템",
+              "snippet": "노임단가고시(발표)를 위한 *통계청 승인 ... (사)한국디자인산업연합회 산업디자인 표준품셈 공표(2020.02.28) ... 디자인 산업은 무형의 가치를 중요시하는 서비스업으로서 대상 사업의 규모에 대한 유형적 설정이 어렵지만 규모와 업무내용에"
+            }
+          ]
+        },
+        {
+          "query": "생산성 소프트웨어 업데이트 출시 after:2026-10-13 before:2026-10-15",
+          "provider": "codex_native_search",
+          "results": [
+            {
+              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4?nomo=1",
+              "domain": "www.saramin.co.kr",
+              "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "기타 게임 소프트웨어 개발 및 공급업 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
+            },
+            {
+              "url": "https://m.saramin.co.kr/job-search/company-info-view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
+              "domain": "m.saramin.co.kr",
+              "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "NICE 평가정보 출처 : 기업형태, 매출액, 설립일, 주소, 대표자명, 사업내용, 업종 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... 대표이사 유래형 사임,대표이사"
+            },
+            {
+              "url": "https://mwm.ai/ko/apps/ai-asking-writing-chatart/6447418798",
+              "domain": "mwm.ai",
+              "title": "AI Chatbot&AI Writer-ChatArt - 생산성 앱 | MWM",
+              "snippet": "모두 같은 기간에 출시된 전체 앱을 기준으로 산출했습니다. ... 2023년 출시 앱 중 Challenger ... MWM Intelligence 플랫폼이 제공하는 메타데이터, 랭킹 맥락, 스토어 신호입니다. ..."
+            },
+            {
+              "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=UC80WFlDV24yNmdHeWpZZEVBNUVSQT09",
+              "domain": "www.saramin.co.kr",
+              "title": "(주)스포잇 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "* 출산의 기쁨을 함께 ... 기업형태: 중소기업, 주식회사, 수출입 기업 ... 소프트웨어 개발,공급/스포츠영상분석장치,전자감지장치,비디오,영상기기 제조/풋살장,축구장 운영/스포츠 컨설팅 ... 그리고 이른 나이에 은퇴한 선수들에게 강사 경험, 진로교육"
+            },
+            {
+              "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=SHlGT0tPcVlwUXZKMjNZbnJpNTVvZz09",
+              "domain": "www.saramin.co.kr",
+              "title": "(주)에스피소프트 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "Image: (주)에스피소프트의 기업로고 ... 컴퓨터 프로그래밍 서비스업 ... * 남성출산휴가 기업! ... 소규모 조직을 위한 VDI올인원패키지, 브이패스(V-Pass) 출시 ... 주문, 결제, 관리까지 시스템 자동화가 적용된"
+            },
+            {
+              "url": "https://www.sfacspace.com/",
+              "domain": "www.sfacspace.com",
+              "title": "스팩스페이스",
+              "snippet": "기술 장벽 없이 아이디어를 실현하고, 제작 효율과 창작의 범위를 넓히는 환경을 제공합니다. ... 방송 영상, 3D 등 각 도메인의 고유한 데이터 특성을 정밀하게 반영하고, AI가"
+            },
+            {
+              "url": "https://www.jobplanet.co.kr/job/search?posting_ids%5B%5D=1536997",
+              "domain": "www.jobplanet.co.kr",
+              "title": "(주)스팬딧 채용공고 - Problem Solver (Product & Design), 서울 채용, 3.8 기업 만족도, 20개 기업리뷰",
+              "snippet": "기업들은 임직원의 업무 환경에 최적화된 비용 관리 및 정산 프로세스가 구축 가능하며 비용 절감, 생산성 향상, 재무 가시성 증가 등 혁신적인 효과까지 얻을 수 있습니다."
+            },
+            {
+              "url": "https://kbench.com/?q=node%2F275925",
+              "domain": "kbench.com",
+              "title": "삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 | 케이벤치 주요뉴스",
+              "snippet": "# 삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 ... 주요 변경 사항으로는 2026년 1월 보안 패치 적용과 함께 기기 전반의 안정성 및"
+            },
+            {
+              "url": "https://kingtools.kr/ko/",
+              "domain": "kingtools.kr",
+              "title": "킹툴즈 KingTools - 무료 유틸리티 소프트웨어",
+              "snippet": "강력한 기능의 무료 소프트웨어 ... 2026-10-05 킹뷰 v1.3.0 업데이트 2026-10-02 킹캡처 KingCapture v1.3.0 업데이트 2026-09-29 킹메모 v1.5.0 업데이트 2026-09-07 킹캡처 KingCapture 출시 신규 2026-08-28 킹캠"
+            },
+            {
+              "url": "https://www.space-dust.com/",
+              "domain": "www.space-dust.com",
+              "title": "스페이스 : 청소의 상식에 도전한다.",
+              "snippet": "#### NEW 프리미엄급 신장비 출시 ... 법인명(상호) : (주)스페이스 / 대표자(성명) : 조현행, 임진섭 ... 본사> 주소 : 경기도 김포시 양촌읍 학운산단5로라길 31 | 전화"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.dsninfo.or.kr/cost/standard.do?category=WAGE&type=PRICE",
+          "status": "no_recent_date",
+          "observed_dates": [
+            "2019-12-20",
+            "2020-02-28"
+          ]
+        }
+      ],
+      "candidates": [],
+      "status": "no_verified_recent_issue"
+    },
+    "source_recovery_attempts": 0,
+    "cak_import": {
+      "status": "not_applicable",
+      "reason": "health_only",
+      "direct_count": 0,
+      "expanded_seed_count": 0,
+      "related_count": 0,
+      "seed_lookup_failed_count": 0
+    },
+    "youtube_discovery": {
+      "provider": "youtube_data_api_v3",
+      "status": "api_unavailable",
+      "checked_at": "2026-10-14T13:19:17.914749+00:00",
+      "lookback_days": 90,
+      "ranking": "viewCount_within_recent_search_sample",
+      "videos": [],
+      "seeds": [],
+      "note": "Video views are not search demand or measured trend growth.",
+      "error": {
+        "endpoint": "search",
+        "code": "api_key_invalid",
+        "http_status": 400
+      }
+    },
+    "recruitment_discovery": {
+      "status": "not_applicable"
+    },
+    "review_question_discovery": {
+      "status": "not_needed",
+      "seeds": [],
+      "measured": []
+    },
+    "search_review_recovery_attempts": 0,
+    "search_review_diagnostics": [],
+    "shortlist_research_attempts": 3,
+    "unresearched_budget_keywords": [
+      "animate",
+      "fastcampus",
+      "googlesheet",
+      "jira",
+      "kaggle",
+      "microsoftoffice",
+      "microsoftstore",
+      "msoffice365",
+      "msteams",
+      "msword",
+      "ms오피스",
+      "ms워드",
+      "office",
+      "powerbi",
+      "runwayai",
+      "sharepoint",
+      "visualstudio",
+      "webhard",
+      "가계부어플",
+      "가계부추천",
+      "계획표",
+      "공여사들",
+      "노션ai",
+      "노션캘린더",
+      "데이콤웹하드",
+      "마이크로소프트팀즈",
+      "마이크로오피스365",
+      "무료논문사이트",
+      "불렛저널다이어리",
+      "비주얼스튜디오",
+      "비쥬얼스튜디오",
+      "서베이몽키",
+      "스테이블디퓨전",
+      "아이폰가계부",
+      "액세스",
+      "엑셀서식",
+      "엑셀온라인",
+      "엑셀정품",
+      "엑셀프로그램",
+      "오피스",
+      "온라인엑셀",
+      "온리웹하드",
+      "워드클라우드",
+      "웹하드사이트",
+      "출퇴근기록기",
+      "태블로",
+      "파일다운로드",
+      "페이퍼로지",
+      "프레지",
+      "한글워드"
+    ],
+    "deferred_research_family_keywords": [],
+    "researched_fallback_families": [
+      {
+        "products": [],
+        "facets": []
+      }
+    ],
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 342,
+    "evaluated_candidates": 3,
+    "research_pool_size": 209,
     "selected": [],
     "held": [],
-    "rejected": [],
+    "rejected": [
+      {
+        "keyword": "MS365",
+        "reason": "search intent or official evidence does not support an article",
+        "decision_diagnostics": {
+          "official_sources": [
+            {
+              "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
+              "title": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 | Microsoft Support",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/share-your-microsoft-365-subscription",
+              "title": "Microsoft 365 구독 공유 | Microsoft Support",
+              "excerpt_chars": 2465
+            },
+            {
+              "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/manage-microsoft-365-subscription-sharing",
+              "title": "Microsoft 365 구독 공유 관리 | Microsoft Support",
+              "excerpt_chars": 1442
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "keyword_navigation"
+          }
+        },
+        "monthly_search": 4450,
+        "organic_provider": "codex_native_search",
+        "organic_query": "MS365",
+        "organic_results": [
+          {
+            "url": "https://www.ms365.in/",
+            "domain": "www.ms365.in",
+            "title": "MS365",
+            "snippet": "As a Technical Lead and 3× Microsoft Certified Professional, I share practical implementation guides, architecture patterns, migration strategies, automation techniques, and real-world technical knowl"
+          },
+          {
+            "url": "https://www.microsoft365.com/?pubDate=20250511",
+            "domain": "www.microsoft365.com",
+            "title": "Login | Microsoft 365 Copilot",
+            "snippet": "Microsoft 365 empowers your organization to organize, and safely store files in OneDrive with intuitive and easy organizational tools."
+          },
+          {
+            "url": "https://github.com/Cklaus1/ms365-cli",
+            "domain": "github.com",
+            "title": "GitHub - Cklaus1/ms365-cli: A standalone CLI for Microsoft 365 via the Microsoft Graph API · GitHub",
+            "snippet": "ms365-cli uses MSAL (Microsoft Authentication Library) with the device code flow."
+          },
+          {
+            "url": "https://m365.cloud.microsoft/apps?from=NoAccountOnStart",
+            "domain": "m365.cloud.microsoft",
+            "title": "Microsoft 365 apps",
+            "snippet": "# Microsoft 365 apps"
+          },
+          {
+            "url": "https://www.microsoft365.com/?omkt=en-IE",
+            "domain": "www.microsoft365.com",
+            "title": "Login | Microsoft 365 Copilot",
+            "snippet": "Microsoft 365 empowers your organization to organize, and safely store files in OneDrive with intuitive and easy organizational tools."
+          },
+          {
+            "url": "https://support.pvs.agency/support/solutions/articles/11000095892",
+            "domain": "support.pvs.agency",
+            "title": "[MS365] Connexion à Microsoft 365 : PVS - Support",
+            "snippet": "# [MS365] Connexion à Microsoft 365"
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/answers/questions/5872347/transferring-from-ms365-personal-to-ms365-basic",
+            "domain": "learn.microsoft.com",
+            "title": "Transferring from MS365 personal to MS365 basic - Microsoft Q&A",
+            "snippet": "# Transferring from MS365 personal to MS365 basic"
+          },
+          {
+            "url": "https://github.com/bcharleson/ms365-cli/blob/main/README.md",
+            "domain": "github.com",
+            "title": "ms365-cli/README.md at main · bcharleson/ms365-cli · GitHub",
+            "snippet": "To give an OpenClaw agent access to Microsoft 365, install `ms365-cli` on the agent's droplet and authenticate once."
+          },
+          {
+            "url": "https://www.ipaddress.com/website/ms365.com/",
+            "domain": "www.ipaddress.com",
+            "title": "Ms365.com Domain Information & Lookup Data",
+            "snippet": "ms365.com is a website that provides information and resources related to Microsoft 365, a cloud-based suite of productivity applications and services."
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "MS365",
+          "executed_query": "MS365",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-14T13:19:17.914749+00:00",
+          "raw_sha256": "d95d17ab9f89d5c2dbe8e9c53c7d0ae2e0ce765e61293ba9bad320f961c96eff",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "As a Technical Lead and 3× Microsoft Certified Professional, I share practical implementation guides, architecture patterns, migration strategies, automation techniques, and real-world technical knowl"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "Microsoft 365 empowers your organization to organize, and safely store files in OneDrive with intuitive and easy organizational tools."
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "GitHub - Cklaus1/ms365-cli: A standalone CLI for Microsoft 365 via the Microsoft Graph API · GitHub"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "Microsoft 365 apps"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "Microsoft 365 empowers your organization to organize, and safely store files in OneDrive with intuitive and easy organizational tools."
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "[MS365] Connexion à Microsoft 365 : PVS - Support"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "Transferring from MS365 personal to MS365 basic - Microsoft Q&A"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "To give an OpenClaw agent access to Microsoft 365, install `ms365-cli` on the agent's droplet and authenticate once."
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "Ms365.com Domain Information & Lookup Data"
+            }
+          ]
+        },
+        "evidence_mode": "serp",
+        "verified_sources": [
+          {
+            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
+            "title": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 | Microsoft Support",
+            "excerpt": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 적용 대상 Office 2024 Mac용 Office 2024 가정용 Microsoft 365 Microsoft Office 365 Small Business Microsoft 365 관리자 Mac용 Microsoft 365 Microsoft 365 또는 Office 2024를 설치할 준비가 되셨나요? 시작하기 전에 PC 또는 Mac이 시스템 요구 사항을 충족하는지 확인합니다. 제품 키를 이미 사용했거나, 앱을 다시 설치했거나, 회사나 학교를 통해 할당된 라이선스가 있는 경우 건너뛰고 로그인 섹션으로 이동하여 Microsoft 365 또는 Office를 다운로드하고 설치할 수 있습니다. 그러나 Microsoft 365 또는 Office를 처음 설치하는 경우 먼저 몇 가지 단계를 수행해야 할 수 있습니다. 자세한 내용을 확인하려면 자세한 정보 섹션을 확장하세요. 브라우저의 가이드 지원은 Office 문제에 대한 디지털 솔루션을 제공할 수 있습니다. 안내 지원을 사용해 보세요 제품 키, 할당된 라이선스, 직장 할인 프로그램 및 볼륨 라이선스 버전에 대해 자세히 알아보세요. 로그인하여 Microsoft 365 또는 Office 2024 다운로드 및 설치 PC에 설치 Mac에 설치 도움이 필요하세요? 로그인하여 PC에서 Microsoft 365 또는 Office 2024 다운로드 m365.cloud.microsoft/apps 로 이동합니다. 아직 로그인하지 않은 경우 로그인을 선택한 다음 앱 설치 드롭다운을 선택합니다. 이 버전의 Microsoft 365와 연결된 계정으로 로그인합니다. 이 계정은 Microsoft 계정이나 회사 또는 학교 계정일 수 있습니다. 로그인 후, 로그인 형식에 따라 알맞은 단계를 따릅니다. Microsoft 계정으로 로그인했습니다 Microsoft 365 앱 페이지에서 앱 설치 를 선택합니다. 설치 를 선택하거나 버전에 따라 앱> 설치 를 선택합니다. 회사 또는 학교 계정으로 로그인했습니다. 홈페이지에서 앱 설치 를 선택합니다. (또는 왼쪽 탐색 창에서 앱을 선택한 다음 앱 설치 를 선택해야 할 수 있습니다.) Microsoft 365 앱을 선택하여 설치를 시작합니다. Microsoft 365 또는 Office가 이미 설치된 32비트 버전의 Microsoft 365 또는 Office(또는 Project 또는 Visio 등의 독립 실행형 앱)가 설치되어 있음을 감지하지 않는 한 64비트 버전이 기본적으로 설치됩니다. 이 경우 32비트 버전의 Microsoft 365 또는 Office가 대신 설치됩니다. 32비트 버전에서 64비트 버전으로 또는 그 반대로 변경하려면 먼저 Microsoft 365(Project of Visio와 같이 보유한 독립 실행형 Microsoft 365 앱 포함)를 제거해야 합니다. 제거가 완료되면 m365.cloud.microsoft/apps 에 다시 로그인하고 앱 설치를 선택합니다. 앱 설치 창에서 원하는 언어와 버전(64비트 또는 32비트)을 선택한 다음, 설치 를 선택합니다. (제거한 독립 실행형 앱을 다시 설치해야 하는 경우 Visio 설치 또는 Project 설치 를 참조하세요.) 이 단계를 통해 장치에 Microsoft 365가 다운로드됩니다. 설치 및 정품 인증 단계를 완료하려면 다음 설치 및 정품 인증 섹션의 메시지를 따르세요. 팁 로그인 후 설치 옵션이 표시되지 않나요? 계정에 문제가 있을 수 있습니다. 위의 도움이 필요하신가요? 탭을 선택하고 계정 관련 질문 에서 해결 방법을 검토합니다. PC에 Microsoft 365 또는 Office 2024 설치 사용 중인 브라우저에 따라 실행 (Microsoft Edge 또는 Internet Explorer), 설치 (Chrome) 또는 파일 저장 (Firefox)을 선택합니다. 이 앱에서 장치를 변경하도록 허용하시겠습니까? 라는 사용자 계정 컨트롤 프롬프트가 표시되면 예 를 클릭합니다. 설치가 시작됩니다. 설치가 완료된 것입니다 . \"설정이 완료되었습니다! Office가 지금 설치되었습니다.\"라는 메시지가 표시되고, 컴퓨터에서 Microsoft 365 응용 프로그램을 찾을 수 있는 위치를 알려주는 애니메이션이 재생됩니다. 닫기 를 선택합니다. 설치 또는 로그인 문제 팁 PC의 Microsoft 365 또는 Office 설치 문제에 대한 도움이 필요하면 Microsoft 365 문제 해결사 로 이동하여 Microsoft 365 설치 문제 해결사 옵션을 선택하세요. Microsoft 365 설치에 시간이 오래 걸리는 것과 같은 설치 문제가 있는 경우 도움이 필요하신가요? 탭을 선택하여 일반적인 문제 목록을 확인하세요. PC에서 Microsoft 365 또는 Office 2024 정품 인증 앱을 열려면 시작 단추(화면의 왼쪽 아래 모서리)를 선택하고 앱 이름(예: Word )을 입력합니다. 앱을 열려면 검색 결과에서 해당 아이콘을 선택합니다. 앱이 열리면 사용권 계약에 동의합니다. Microsoft 365 또는 Office가 정품 인증되고 사용할 준비가 되었습니다. 참고 Microsoft 365 또는 Office에서 정품 인증하는 데 문제가 있는 경우 정품 인증 마법사가 나타납니다. 마법사의 단계를 완료하여 정품 인증을 마칩니다. 로그인하여 Mac에서 Microsoft 365 또는 Office 2024 다운로드 m365.cloud.microsoft/apps 로 이동합니다. 아직 로그인하지 않은 경우 로그인을 선택한 다음 앱 설치 드롭다운을 선택합니다. 참고 21 Vianet에서 운영하는 Microsoft 365를 사용하는 경우 회사 또는 학교 계정으로 로그인하여 login.partner.microsoftonline.cn . Microsoft 365 Germany를 사용하는 경우 회사 또는 학교 계정으로 로그인하여 portal.office.de . 이 버전의 Microsoft 365 또는 Office와 연결된 계정으로 로그인합니다. 이 계정은 Microsoft 계정이나 회사 또는 학교 계정일 수 있습니다. 로그인 후, 로그인 형식에 따라 알맞은 단계를 따릅니다. Microsoft 계정으로 로그인했습니다 Microsoft 365 앱 페이지에서 앱 설치 를 선택하여 다운로드를 시작합니다. 회사 또는 학교 계정으로 로그인했습니다. Microsoft 365 앱 페이지에서 앱 설치 를 선택합니다. (또는 왼쪽 탐색 창에서 앱을 선택한 다음 앱 설치 를 선택해야 할 수 있습니다.) Microsoft 365 앱을 선택하여 다운로드를 시작합니다. 참고 로그인 후 설치 옵션이 표시되지 않나요? 계정에 문제가 있을 수 있습니다. 위의 도움이 필요하신가요? 탭을 선택하고 계정 질문 섹션에 나열된 문제를 검토합니다. 아래 지침에 따라 Microsoft 365 앱 설치를 완료합니다. Mac에 Microsoft 365 또는 Office 2024 설치 다운로드가 완료되면 Finder를 열고 다운로드 로 이동하여 Microsoft Office installer.pkg 파일을 두 번 클릭합니다(이름은 약간 다를 수 있음). 팁 Microsoft Office installer.pkg 를 열 수 없다는 오류가 표시되는 것은 확인되지 않은 개발자가 개발했기 때문입니다. 10초 정도 기다렸다가 다운로드한 파일을 바탕 화면으로 옮깁니다. Control 을 누른 상태에서 파일을 클릭하여 설치 프로그램을 실행합니다. 첫 번째 설치 화면에서 계속 을 선택하여 설치 프로세스를 시작합니다. 소프트웨어 사용권 계약을 검토한 다음 계속 을 클릭합니다. 동의함 을 선택하여 소프트웨어 사용권 계약 내용에 동의합니다. Microsoft 365를 설치할 방법을 선택하고 계속을 클릭합니다. 디스크 공간 요구 사항을 검토하거나 설치 위치를 변경한 다음 설치 를 클릭합니다. 참고 제품 전체가 아닌 특정 Microsoft 365 앱만 설치하려면 사용자 지정 단추를 클릭하고 원하지 않는 프로그램의 선택을 해제합니다. 메시지가 나타나면 Mac 로그인 암호를 입력한 다음 소프트웨어 설치 를 클릭합니다. Mac에 로그인하는 데 사용할 암호입니다. 소프트웨어가 설치되기 시작합니다. 설치가 완료되면 닫기 를 클릭합니다. Microsoft 365 설치에 실패하는 경우 Mac용 Office를 설치하거나 정품 인증할 수 없는 경우 시도할 작업을 참조하세요. Mac에서 Microsoft 365 또는 Office 2024 정품 인증 모든 앱을 표시하려면 Dock에서 실행 패드 아이콘을 클릭합니다. 실행 패드에서 Microsoft Word 아이콘(또는 다른 Microsoft 365 또는 Office 아이콘)을 클릭합니다. Word를 시작하면 새로운 기능 창이 자동으로 열립니다. 시작 을 클릭하여 정품 인증을 시작합니다. Microsoft 365 또는 Office 정품 인증에 도움이 필요한 경우 Microsoft 365 또는 Mac용 Office 정품 인증을 참조하세요. 정품 인증에 실패하는 경우 Microsoft 365 또는 Mac용 Office를 설치하거나 정품 인증할 수 없는 경우 시도할 작업을 참조하세요. Mac용 Microsoft 365 또는 Office 2024 설치 참고 사항 설치 참고 사항 앱 아이콘을 Dock에 고정하려면 어떻게 할까요? Finder > 응용 프로그램 으로 이동하여 원하는 Office 앱을 엽니다. Dock에서 앱 아이콘을 Control+클릭하거나 마우스 오른쪽 단추로 클릭하고 Dock에 유지 옵션을 > 선택합니다. 설치할 수 있나요? iPhone 또는 iPad에 Microsoft 365를 사용 중이신가요? 예, iPhone 또는 iPad에 Microsoft 365 앱 설치 및 설정 및 iOS 장치(iPhone 또는 iPad)에서 전자 메일 설정을 참조하세요. Microsoft 365 또는 Office 2024 로그인 또는 설치 FAQ 다음은 Microsoft 365 또는 Office를 설치하려는 몇 가지 더 일반적인 질문 또는 문제입니다. 팁 문제가 목록에 표시되지 않나요? 추가 문제 및 가능한 해결 방법에 대해서는 Microsoft 365 또는 Office 설치 문제 해결 을 시도해 보세요. 계정 관련 질문: 아직 Microsoft 계정이 없거나 사용자 이름 또는 암호를 잊음 Microsoft 365 또는 Office를 설치하려면 먼저 Microsoft 계정이나 회사 또는 학교 계정에 연결해야 합니다. 가정용 제품이 있고 소매점이나 온라인 스토어에서 Microsoft 365 또는 Office를 구입했지만 Microsoft 계정이 없는 경우 제품 키를 아직 사용하지 않았거나(제품 키가 있는 경우) 최근 구입을 계정과 연결하는 단계를 생략했을 수 있습니다. 계정을 Microsoft 365 또는 Office에 연결하려면 다음을 수행합니다. 가정용 Office 제품의 경우 setup.office.com 로 이동하여 새 Microsoft 계정을 만들거나 기존 계정으로 로그인한 다음 제품 키(있는 경우) 입력과 같은 해당 페이지의 나머지 단계를 수행합니다. 페이지, 내 Office 계정 다음에 Microsoft 계정 전자 메일 주소 및 앱 설치 단추가 표시되면 계정이 Microsoft 365 또는 Office와 성공적으로 연결된 것입니다. 이 문서에서 PC 또는 Mac 탭을 선택하여 나머지 설치 프로세스에 대한 도움말을 확인하세요. Microsoft 계정 또는 회사 또는 학교 계정이 작동하지 않는 경우 Office에서 사용하는 계정의 사용자 이름 또는 암호를 잊어버 렸습니다. 회사 또는 학교 계정으로 로그인한 후 Microsoft 365 또는 Office 설치 옵션이 표시되지 않음 회사 또는 학교 계정으로 로그인한 후 Microsoft 365 홈 페이지에 데스크톱 응용 프로그램을 설치하는 옵션이 표시되지 않고 대신 Microsoft 365 소프트웨어 페이지로 직접 이동합니다. 원하는 언어 및 비트 버전(PC 사용자는 32비트와 64비트 중에서 선택할 수 있음)을 선택한 다음 설치 를 클릭합니다. 위의 PC 또는 Mac 탭에서 2단계와 3단계를 보고 나머지 설치 프로세스에 대한 도움말을 확인하세요. 참고 organization에서 중국의 21Vianet에서 운영하는 Microsoft 365를 사용하는 경우 https://portal.partner.microsoftonline.cn/OLS/MySoftware.aspx 에서 Microsoft 365 소프트웨어 페이지에 로그인합니다. organization에서 Microsoft 365 Germany를 사용하는 경우 https://portal.office.de/OLS/MySoftware.aspx 에서 Microsoft 365 소프트웨어 페이지에 로그인합니다. Microsoft 365 소프트웨어 페이지에 Microsoft 365를 설치하는 옵션이 계속 표시되지 않으면 관리자가 사용자에게 라이선스를 할당하지 않았을 수 있습니다. Microsoft 365를 설치할 수 있는 라이선스가 있는지 확인합니다 . 학생 또는 교사이고 교육 기관에서 라이선스를 제공하지 않은 경우 Microsoft 365를 무료로 받을 수 있는지 확인하세요. 회사 또는 학교 계정으로 로그인할 수 없음 회사 또는 학교 계정으로 로그인하여 www.office.com 하려는데 로그인이 차단된 경우 Microsoft 365 관리자가 해당 위치에서 로그인하지 못하도록 하는 보안 정책을 설정했을 수 있습니다. 도움이 필요하면 IT 관리자에게 문의하세요. 제품 키, 구매 및 이전 버전의 Microsoft 365 설치: Microsoft 365용 제품 키 모든 Microsoft 365 버전에 키가 포함되어 있는 것은 아니지만, 키가 포함되어 있는 경우 Microsoft 365를 설치하기 전에 사용해야 합니다. microsoft365.com/setup 로 이동하여 기존 Microsoft 계정으로 로그인하거나 새 계정을 만든 다음 제품 키를 입력합니다. 나머지 프롬프트에 따라 Microsoft 계정을 이 버전의 Microsoft 365와 연결하는 작업을 완료합니다. 제품 키가 없거나 제품 키가 필요한지 확실하지 않으신가요? Office에서 제품 키 사용 을 참조하세요. 최신 버전의 Microsoft 365 또는 Office를 어떻게 할까요? 구입하나요? 이 항목의 단계에서는 Microsoft 365 또는 Office를 설치하거나 다시 설치할 준비가 되었다고 가정합니다. 아직 최신 버전이 없으신가요? Microsoft 365 구입 또는 체험 Microsoft 365와 비구독 버전 간의 차이점 에 대해 자세히 알아보세요. Office 2019, Office 2016, Office 2013 또는 Microsoft 365를 어떻게 할까요? 이전 버전의 Office에 대한 설치 도움말: Office 2019, Office 2016 또는 Office 2013 설치 관련 질문 또는 설치 중 오류 몇 대의 컴퓨터에 Microsoft 365 또는 Office를 설치할 수 있나요? Microsoft 365 구독 전용: 모든 장치에 Microsoft 365를 설치하고 동시에 5대에 로그인할 수 있습니다. 자세한 내용은 Microsoft 365에서 로그인이 작동하는 방법 을 참조하세요. Microsoft 365 Family가 있는 경우 최대 5명의 가족 구성원 또는 다른 사람과 Microsoft 365 Family 구독을 공유할 수도 있습니다. 각 사용자가 모든 장치에 Microsoft 365를 설치하고 동시에 5대에 로그인할 수 있습니다. Office Home, Office Home & Business 또는 Office Professional와 같은 Office의 일회성 구매: 이러한 비구독 버전의 Office는 한 대의 컴퓨터에만 설치할 수 있습니다. 단, 하드웨어 결함이 발생하거나 새 컴퓨터를 구입하는 경우 본인 소유의 다른 컴퓨터로 Office을 옮길 수 있습니다. 자세한 내용은 Microsoft 사용 조건 을 참조하세요. 컴퓨터에 대한 관리자 권한이 있는지 확인 PC에 Office를 설치하려면 Office를 설치하려는 PC 컴퓨터의 관리자여야 합니다. 확실하지 않은 경우에는 Office를 설치할 수 있는 로컬 관리자 권한이 있는지 ",
+            "sha256": "a61db4b23539eeda700430c47279b55b58e4bf54e9ae82d010078eefd0485177",
+            "checked_on": "2026-10-14"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/share-your-microsoft-365-subscription",
+            "title": "Microsoft 365 구독 공유 | Microsoft Support",
+            "excerpt": "Microsoft 365 구독 공유 적용 대상 Microsoft 365 Microsoft 365 Family Microsoft 365 Premium Microsoft 365 Pro Copilot 도움말 보기 '이미 있는 것 같습니다' 문제를 해결하려면 어떻게 해야 하나요? Microsoft 365 구독을 공유하려면 어떻게 해야 하나요? Microsoft 365 가족을 공유할 수 있나요? Microsoft 365 Family, Microsoft 365 Premium 및 Microsoft 365 Pro 구독자는 전자 메일을 보내거나 링크를 복사 & 공유하여 가족 그룹의 최대 5명의 다른 사용자와 구독 혜택을 공유할 수 있습니다. 참고 Microsoft 365 Basic 또는 Microsoft 365 Personal 구독에서는 공유를 사용할 수 없습니다. 초대 대상자가 구독 소유자의 공유 초대를 수락하면 초대 대상자는 자동으로 구독 소유자의 가족 그룹의 구성원이 됩니다. 공유는 초대받은 사람이 구독 소유자의 가족 그룹에 남아 있는 경우에만 가능합니다. 초대받은 사람이 이미 다른 가족 그룹에 있고 공유 초대를 수락하려고 하면 이미 다른 가족 그룹의 구성원이라는 메시지가 표시됩니다. 구독 소유자의 공유 초대를 다시 수락하기 전에 먼저 해당 가족 그룹을 나가야 합니다. 확장 저장소 옵션과 Word, Excel, PowerPoint, Outlook의 Copilot과 같은 AI 기능은 구독 소유자만 사용할 수 있으며 추가 가족 그룹 구성원과 공유할 수 없습니다. Microsoft 365 제품 키를 공유하지 마세요. 제품 키는 구독을 공유하는 데 사용할 수 없습니다. 아래 단계를 사용하여 공유할 각 사용자에 대한 전자 메일 또는 링크를 보내세요. Microsoft 365 구독을 공유하는 방법 account.microsoft.com/services/office/sharing 에서 Microsoft 365 서비스 & 구독 공유 페이지로 이동합니다. 로그인 공유 를 선택합니다. 참고 공유 시작 단추가 표시되지 않으면 Microsoft 365 Family, Microsoft 365 Premium 또는 Microsoft 365 Pro 구독의 소유자가 아닐 수 있습니다. 다른 사람이 귀하와 공유한 Microsoft 365 구독을 사용 중이거나 다른 유형의 Microsoft 365 구독이 있는 경우 다른 사람과 구독을 공유할 수 없습니다. Microsoft 365 Family, Microsoft 365 Premium 또는 Microsoft 365 Pro 구독을 공유하려는 사람이 아직 가족 그룹에 없는 경우 가족 그룹에 가입하라는 이메일 초대 또는 링크를 보내세요. 이미 다른 가족 그룹에 있는 경우 해당 가족 그룹에서 나가야 내 가족 그룹에 가입할 수 있습니다. 공유할 방법을 선택하고 Email invite 를 선택한 다음 이메일을 입력하고 초대를 선택합니다. 링크 만들기 를 선택한 다음 링크 복사를 선택합니다. 그런 다음 전자 메일, 텍스트 또는 기타 메시지에 링크를 붙여넣고 공유할 사용자에게 보낼 수 있습니다. 참고 다른 사람과 구독을 공유하면 그 사람은 Microsoft에서 Microsoft 365 구독을 공유했다는 전자 메일을 받게 됩니다. 공유한 각 사용자는 받은 전자 메일에서 시작 을 선택하여 Microsoft Family Safety 사이트로 이동해야 합니다. Microsoft 계정이 없는 경우 계속 진행하려면 계정을 만들라는 메시지가 표시됩니다. 그런 다음 Microsoft 365 구독의 혜택을 이용하려면 먼저 지금 가입 을 선택하여 가족 그룹 가입 초대를 수락해야 합니다. 초대를 다시 보내야 하는 경우 초대장 이름을 찾아 초대 다시 보내 기를 선택합니다. 상대방은 48시간 이내에 초대를 수락해야 합니다. 이 기간 동안 Microsoft 365 구독 dashboard에 \"초대 보류 중\"이 표시됩니다. 참고 공유가 완료되면 계정 dashboard의 모든 디바이스에 Microsoft 365 설치 옵션을 선택하여 Microsoft 365를 설치하고 OneDrive 저장소에 액세스할 수 있습니다. 문제 해결 \"이미 가족 그룹에 있는 것 같습니다\" 오류 메시지 문제 해결 공유는 초대 받은 사람이 구독 소유자의 가족 그룹에 가입한 경우에만 가능합니다. 초대 대상자가 이미 다른 가족 그룹에 있는 경우 구독 소유자의 가족 그룹에 가입하려면 해당 그룹을 나가야 합니다. 초대 대상자가 가족 그룹에 가입하면 구독 소유자는 Microsoft 365 Family, Microsoft 365 Premium 또는 Microsoft 365 Pro 혜택을 공유할 수 있습니다. 참고 항목 Microsoft 365 구독 공유 관리 Microsoft Family Safety 설정 PC 또는 Mac에 Office 설치 모바일 장치에서 Office 앱 및 전자 메일 설정 누군가가 Microsoft 365 구독을 공유하도록 초대했습니다. Microsoft 365 공유 초대를 찾을 수 없음",
+            "sha256": "a0093f4beb85eb90a7d492e526d05c6bf3a170bf5c165dc037140f738e44cc24",
+            "checked_on": "2026-10-14"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/manage-microsoft-365-subscription-sharing",
+            "title": "Microsoft 365 구독 공유 관리 | Microsoft Support",
+            "excerpt": "Microsoft 365 구독 공유 관리 시간이 지남에 따라 다른 사용자와 공유하거나 새 장치에서 Microsoft 365에 로그인할 수 있습니다. 아래에서는 장치에서 다른 사용자와 공유를 중지하거나 Microsoft 365에서 로그아웃하는 방법을 알아볼 수 있습니다. 중요 공유는 Microsoft 365 Family, Premium 및 Pro 구독자만 사용할 수 있으며 초대 받은 사람이 구독 소유자의 가족 그룹에 가입한 경우에만 가능합니다. 초대 대상자가 가입하면 구독 소유자가 Microsoft 365 혜택을 공유할 수 있습니다. Microsoft 365 Family, Premium & Pro 구독 멤버 관리 Microsoft 365 Family 구독의 소유자인 경우 구독 혜택을 공유하는 사용자를 보고 관리할 수 있습니다. 구독 소유자가 아닌 경우 Microsoft 365 Family를 공유하는 사람을 확인하고 원하는 경우 구독 중단을 선택할 수 있습니다. 공유 보기 참고 최대 다섯 명의 다른 사용자와만 공유할 수 있습니다. 이미 5명의 사용자와 구독을 공유하고 있고 새로운 사용자와 공유하려는 경우 새로운 사용자와 공유하기 전에 다른 사용자와 공유를 중지해야 합니다. 구독 dashboard에는 사용 및 남은 공유 수가 다음 영역으로 분류되어 표시됩니다. 아직 공유하지 않은 Microsoft 가족 그룹의 구성원입니다. 이미 공유 한 Microsoft 가족 그룹의 구성원입니다. 이미 공유한 다른 사용자 . 각 그룹화에 사용할 수 있는 작업은 다음과 같습니다. 이미 공유한 사용자의 경우 공유 중지 옵션이 표시됩니다 . 중요 공유를 중지하면 추가 OneDrive 저장소와 Microsoft 365 데스크톱 앱을 사용하는 기능을 비롯한 모든 구독 혜택을 잃게 되지만, 가족 그룹에서 자동으로 제거되지는 않으므로 수동으로 제거 해야 합니다. 아직 공유하지 않은 가족 그룹 구성원의 경우 공유 시작 옵션이 표시됩니다 . 공유했지만 아직 Microsoft 가족 그룹에 속하지 않은 사용자의 경우 가족에 초대가 표시됩니다 . Microsoft 가족 그룹에 대해 자세히 알아보세요 . Microsoft 365 장치 및 설치 관리 Microsoft 365 Family 구독 소유자 및 구독이 공유된 모든 사용자는 모든 장치에 Microsoft 365 데스크톱 앱을 설치할 수 있습니다. Microsoft 365 설치 참고 동시에 5개의 장치에서만 Microsoft 365에 로그인할 수 있으므로 5개 이상의 장치를 보유한 경우 로그인 제한 내에서 유지되도록 첫 번째 장치에서 자동으로 로그아웃됩니다. 로그아웃한 장치에서 Microsoft 365를 사용하려면 다시 로그인하면 됩니다. 자세한 내용은 Microsoft 365에서 로그인이 작동하는 방법 을 참조하세요. 참고 항목 Microsoft 365 Family, Premium 및 Pro 구독 공유에 대해 자세히 알아보기",
+            "sha256": "3e7ea05e9eb75c34e32eece281ffaaecf144ccdcd0709390c54896194f441420",
+            "checked_on": "2026-10-14"
+          }
+        ]
+      },
+      {
+        "keyword": "어도비파이어플라이",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "low_search_relevance"
+        ],
+        "monthly_search": 4410,
+        "organic_provider": "codex_native_search",
+        "organic_query": "어도비파이어플라이",
+        "organic_results": [
+          {
+            "url": "https://news.adobe.com/ko/news/downloads/pdfs/files/adobekr230511.pdf",
+            "domain": "news.adobe.com",
+            "title": "어도비파이어플라이,구글바드에크리에이터중심의상업적활용가능한생성형AI제공",
+            "snippet": "• CAI의오픈소스기술,파이어플라이-바드통합으로생성된이미지에투명성부여; 유니버설뮤직그룹, 스태빌리티AI등합류하며CAI 회원1,000곳돌파2023년5월11일, 서울–어도비가새로운구글바드(Bard)와의통합및콘텐츠진위이니셔티브(Content Authenticity Initiative, CAI) 확장등크리에이티브생성형AI 모델군인어도비파이어플라이(Adobe Fir"
+          },
+          {
+            "url": "https://www.adeeple.com/",
+            "domain": "www.adeeple.com",
+            "title": "애디플",
+            "snippet": "애디플의 강력한 퍼포먼스 마케팅 솔루션으로 수익의 한계를 돌파하세요. ... 처음엔 과연 제가 잘할 수 있을까도 고민도 많이 했고 소재 찍어내는 게 재미는 있었지만 포기할까 싶을"
+          },
+          {
+            "url": "https://edu-i.ice.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_000000000137499&bbsId=BBSMSTR_000000004155&fileSn=1&nttId=125930&trgetId=SYSTEM_DEFAULT_BOARD",
+            "domain": "edu-i.ice.go.kr",
+            "title": "수업자료 공모전 안내",
+            "snippet": "<td>오토드로우 프로그램을 활용한 내 이름 디자인 하기</td> ... <td>미디어 리터러시의 이해: 정보의 홍수에서 살아남기</td> ... <td>국어, 언어와 매체</td> ... <td>퀴튼, 아숙업, 어도비파이어플라이</td> ... <td>PPT, 활동지,"
+          },
+          {
+            "url": "https://news.adobe.com/ko/news/downloads/pdfs/files/adobekr230323.pdf",
+            "domain": "news.adobe.com",
+            "title": "어도비, 엔드투엔드마케팅워크플로우를재정의하는새로운‘센세이GenAI’ 서비스발표",
+            "snippet": "어도비파이어플라이, 어도비익스피리언스클라우드의이미지생성지원어도비는새로운크리에이티브생성형AI 모델군인'파이어플라이(Firefly)'를어도비익스피리언스클라우드에직접통합할예정이다. ... 파이어플라이를통해브랜드가이드라인을유지하면서빠르고간편하게콘텐츠에무한한변화를주고수정할수있으며, 향후마케터가파이어플라이에브랜드의자체자료를학습시켜원하는스타일과디자인언어를반영한콘텐츠를생"
+          },
+          {
+            "url": "https://he.knou.ac.kr/bbs/mas/2106/238332/download.do",
+            "domain": "he.knou.ac.kr",
+            "title": "PowerPoint 프레젠테이션",
+            "snippet": "어도비파이어플라이 ... 어도비의AI 기반디자인도"
+          },
+          {
+            "url": "https://www.jobplanet.co.kr/companies/62648/landing/%EC%98%A4%EB%94%94%ED%94%BC",
+            "domain": "www.jobplanet.co.kr",
+            "title": "오디피(주) 2026년 기업정보 | 기업리뷰 10건, 연봉정보 7건, 면접후기 0건, 복지정보 0건, 채용공고 0건",
+            "snippet": "# 오디피(주) ... * Image: 기업형태 기업형태- ... * 대표이종복 * 매출 ... 경기 안양시 동안구 관양2동 954-6 인덕원성지스타위드 1111호 ... * 연혁"
+          },
+          {
+            "url": "https://hyangpro.com/products/eau-de-parfum",
+            "domain": "hyangpro.com",
+            "title": "오드퍼퓸 30ml | HYANG PRO 향프로",
+            "snippet": "오드퍼퓸 30ml WOODLY↗신뢰감 있는 분위기를 만드는 향 125,000원 오드퍼퓸 30ml ROUX↗존재감을 자연스럽게 드러내는 향 125,000원 오드퍼퓸 30ml OZON↗첫 인상을 맑고 깨끗하게 만드는 향 125,000원 오드퍼퓸"
+          },
+          {
+            "url": "https://www.bookprice.co.kr/compare.jsp?isbn=9791161266572",
+            "domain": "www.bookprice.co.kr",
+            "title": "AI를 활용한 유아디지털교육 - 북프라이스",
+            "snippet": "서점 | 할인가 | 할인률 | 배송비 | 혜택/추가 | 실질최저가 | 구매하기 ... ■ 머리말 / 3 ... 한국형 챗GPT, 뤼튼(Wrtn) 쉽게 이해하기 59"
+          },
+          {
+            "url": "https://m.kin.naver.com/qna/dirs/31402/docs/451267490?d1id=3&enc=utf8&qb=YWk%3D&rank=240&search_sort=0&section=kin.qna&spq=1",
+            "domain": "m.kin.naver.com",
+            "title": "ai사진 만들수 있는 사이트는 어디인가요? : 네이버 지식iN",
+            "snippet": "여러 사이트가 있지만 그중에서도 가장 성능이 좋다고 생각하는 어도비파이어플라이 추천드릴게요! ... 말씀주신 것과 동일한 것을 생각해보니 어도비의 파이어플라이 같습니다!"
+          },
+          {
+            "url": "https://www.inflearn.com/studies/1292358/%EC%83%9D%EC%84%B1%ED%98%95-ai-%EB%8F%84%EA%B5%AC-%EB%AF%B8%EB%93%9C%EC%A0%80%EB%8B%88-%EC%96%B4%EB%8F%84%EB%B9%84%ED%8C%8C%EC%9D%B4%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4-%EB%93%B1-%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%8A%A4%ED%84%B0%EB%94%94-%EB%AA%A8%EC%A7%91",
+            "domain": "www.inflearn.com",
+            "title": "생성형 AI 도구(미드저니, 어도비파이어플라이 등)를 활용한 디자인 스터디 모집 - 인프런 | 스터디",
+            "snippet": "# 생성형 AI 도구(미드저니, 어도비파이어플라이 등)를 활용한 디자인 스터디 모집 ... 디자이너가 아니여도 상관없고 직장인, 취준생 모두 가능합니다.스터디 내용은 생성형 이미지 AI툴을 다뤄보고 싶었던 분들,"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "어도비파이어플라이",
+          "executed_query": "어도비파이어플라이",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-14T13:19:17.914749+00:00",
+          "raw_sha256": "b42dcc6506d4098288faf26096edfa8e4d0e660af7aac0c60085549a14b9796e",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "어도비파이어플라이,구글바드에크리에이터중심의상업적활용가능한생성형AI제공"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "애디플의 강력한 퍼포먼스 마케팅 솔루션으로 수익의 한계를 돌파하세요. ... 처음엔 과연 제가 잘할 수 있을까도 고민도 많이 했고 소재 찍어내는 게 재미는 있었지만 포기할까 싶을"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "<td>오토드로우 프로그램을 활용한 내 이름 디자인 하기</td> ... <td>미디어 리터러시의 이해: 정보의 홍수에서 살아남기</td> ... <td>국어, 언어와 매체</td> ... <td>퀴튼, 아숙업, 어도비파이어플라이</td> ... <td>PPT, 활동지,"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "어도비파이어플라이, 어도비익스피리언스클라우드의이미지생성지원어도비는새로운크리에이티브생성형AI 모델군인'파이어플라이(Firefly)'를어도비익스피리언스클라우드에직접통합할예정이다. ... 파이어플라이를통해브랜드가이드라인을유지하면서빠르고간편하게콘텐츠에무한한변화를주고수정할수있으며, 향후마케터가파이어플라이에브랜드의자체자료를학습시켜원하는스타일과디자인언어를반영한콘텐츠를생"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "어도비파이어플라이 ... 어도비의AI 기반디자인도"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "오디피(주) 2026년 기업정보 | 기업리뷰 10건, 연봉정보 7건, 면접후기 0건, 복지정보 0건, 채용공고 0건"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "오드퍼퓸 30ml WOODLY↗신뢰감 있는 분위기를 만드는 향 125,000원 오드퍼퓸 30ml ROUX↗존재감을 자연스럽게 드러내는 향 125,000원 오드퍼퓸 30ml OZON↗첫 인상을 맑고 깨끗하게 만드는 향 125,000원 오드퍼퓸"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "서점 | 할인가 | 할인률 | 배송비 | 혜택/추가 | 실질최저가 | 구매하기 ... ■ 머리말 / 3 ... 한국형 챗GPT, 뤼튼(Wrtn) 쉽게 이해하기 59"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "여러 사이트가 있지만 그중에서도 가장 성능이 좋다고 생각하는 어도비파이어플라이 추천드릴게요! ... 말씀주신 것과 동일한 것을 생각해보니 어도비의 파이어플라이 같습니다!"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "# 생성형 AI 도구(미드저니, 어도비파이어플라이 등)를 활용한 디자인 스터디 모집 ... 디자이너가 아니여도 상관없고 직장인, 취준생 모두 가능합니다.스터디 내용은 생성형 이미지 AI툴을 다뤄보고 싶었던 분들,"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "어도비익스프레스",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        },
+        "monthly_search": 2770,
+        "organic_provider": "codex_native_search",
+        "organic_query": "어도비익스프레스",
+        "organic_results": [
+          {
+            "url": "https://www.coupang.com/np/search?q=%EC%96%B4%EB%8F%84%EB%B9%84%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%8A%A4+%ED%8A%B9%EA%B0%80",
+            "domain": "www.coupang.com",
+            "title": "쿠팡이 추천하는 어도비익스프레스 특가 관련 혜택과 특가",
+            "snippet": "* 디자이너를 위한 AI 디자인 크리에이티브 아트워크:파이어플라이 포토샵 어도비 익스프레스 실무 활용 가이드, 제이펍, 정승용~~25,000원~~10%22,500원 모레(목) 도착 예정 무료배송 최대 1,125원 적립 1 * 디자이너를"
+          },
+          {
+            "url": "https://www.minitries.co.kr/206",
+            "domain": "www.minitries.co.kr",
+            "title": "어도비익스프레스",
+            "snippet": "누구나 쉽게 사용할 수 있는 인터페이스 덕분에 디자인 경험이 없는 사용자도 손쉽게 고품질의 콘텐츠를 만들 수 있습니다. ... ✅어도비 익스프레스는 모바일 앱으로도 제공되기 때문에 언제"
+          },
+          {
+            "url": "https://www.aesop.com/kr/p/fragrance/opulent/eidesis-eau-de-parfum/",
+            "domain": "www.aesop.com",
+            "title": "이더시스 오 드 퍼퓸 | Aesop 대한민국",
+            "snippet": "밝은 오프닝 노트로 시작해 깊은 스파이스, 풍부한 흙내음, 건조한 우디 노트로 이어지는 묘한 매력의 향수 ... 이더시스 오 드 퍼퓸은 우디하고 스파이시한 앰버리 아로마로 몸에"
+          },
+          {
+            "url": "https://gptskorea.com/Apps/?bmode=view&idx=169203065",
+            "domain": "gptskorea.com",
+            "title": "[디자인] 게시물, 전단지 등을 디자인하세요 \"어도비 익스프레스(Adobe Express)\" 💎💎💎💎💎 : 앱 GPT 무료 GPTs 메뉴 - by GPTsKOREA 지피티스코리아",
+            "snippet": "# 생산성[디자인] 게시물, 전단지 등을 디자인하세요 \"어도비 익스프레스(Adobe Express)\" 💎💎💎💎💎 ... Adobe Express 어도비 익스프레스 ... 더 자세한 편집이 필요하면 한 번의 클릭으로 Express 전체"
+          },
+          {
+            "url": "https://branding-space.tistory.com/entry/%EC%96%B4%EB%8F%84%EB%B9%84-%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%8A%A4-%ED%95%9C%EA%B8%80-%ED%8F%B0%ED%8A%B8-%EC%B6%94%EA%B0%80%ED%95%98%EB%8A%94-%EB%B2%95",
+            "domain": "branding-space.tistory.com",
+            "title": "어도비 익스프레스 한글 폰트 추가하는 법",
+            "snippet": "이럴 때 어도비 익스프레스에서 한글 글꼴 폰트를 추가하는 방법을 알아보자. ... 글꼴 선택 후 우측으로 드래그하면 아래와 같이 어도비 폰트라는 항목이 나오는데 거기서 [+] 버튼을"
+          },
+          {
+            "url": "https://bestit.tistory.com/entry/%EC%96%B4%EB%8F%84%EB%B9%84-%EC%9D%B5%EC%8A%A4%ED%94%84%EB%A0%88%EC%8A%A4-%EB%88%84%EB%81%BC-%EB%94%B0%EB%8A%94-%EB%B2%95",
+            "domain": "bestit.tistory.com",
+            "title": "(무료) 어도비 익스프레스로 간단하게 누끼 따는 법 배경 제거하는 법",
+            "snippet": "그럼 바로 어도비 익스프레스로 누끼 따는 법 (배경 지우는 법)을 설명드리겠습니다. ... Image: 어도비익스프레스-배경-복원 Image: 어도비-익스프레스-배경제거-복원영역선택 Image: 어도비익스프레스-배경제거-복원배경제거(컷아웃) 편집에서 복원 버튼을 누르시면 배경이 빨간색으로 제거된"
+          },
+          {
+            "url": "https://www.minitries.co.kr/70",
+            "domain": "www.minitries.co.kr",
+            "title": "무료다운로드",
+            "snippet": "* 벤처스퀘어 ... * 애니 메이커 ... * 픽사베이 비디오 ... * 언스플래쉬 ... * 구글폰트 ... * 어도비익스프레스"
+          },
+          {
+            "url": "https://www.audrey.kr/",
+            "domain": "www.audrey.kr",
+            "title": "오드리햅반",
+            "snippet": "* 상품요약정보 : 연어 초저분자300달톤 콜라겐 1500mg함유 * 판매가 : 81,600원 ... 상품명 : 오드리햅닭 저염닭가슴살(밀크씨슬) 10 / 30 /50 ... 밥 한 그릇의 따뜻함,"
+          },
+          {
+            "url": "https://1412.tistory.com/entry/%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80%EB%B6%80%ED%84%B0-%EC%98%81%EC%83%81%EC%9E%91%EC%97%85%EA%B9%8C%EC%A7%80-%EA%B0%80%EB%8A%A5%ED%95%9C-%EB%AC%B4%EB%A3%8C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8Adobe-Express",
+            "domain": "1412.tistory.com",
+            "title": "간단한 이미지부터 영상작업까지 가능한 무료 프로그램 어도비익스프레스(Adobe Express)",
+            "snippet": "# 간단한 이미지부터 영상작업까지 가능한 무료 프로그램 어도비익스프레스(Adobe Express) ... 웹 페이지에서 이용 가능한 Adobe Stock 기능과 데스크탑 앱의 비디오 기능이 제한됩니다. ... -Adobe Fonts"
+          },
+          {
+            "url": "https://itrum.tistory.com/392",
+            "domain": "itrum.tistory.com",
+            "title": "영상크기 용량 변경 방법(무설치 무료)해상도 크게 작게 어도비익스프레스",
+            "snippet": "어도비 익스프레스 사이트에 방문합니다. ... 어도비 익스프레스 사이트에서 '영상 이미지 문서 등' 다양한 SNS 마케팅 관련 작업이 가능하다고 합니다. ... 본래 약 200MB(4k)였던 영상 파일이"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "어도비익스프레스",
+          "executed_query": "어도비익스프레스",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-14T13:19:17.914749+00:00",
+          "raw_sha256": "521e708871b64486a02d050320a227b4ab4d59557faba4124ccc5ed583fc1c11",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "* 디자이너를 위한 AI 디자인 크리에이티브 아트워크:파이어플라이 포토샵 어도비 익스프레스 실무 활용 가이드, 제이펍, 정승용~~25,000원~~10%22,500원 모레(목) 도착 예정 무료배송 최대 1,125원 적립 1 * 디자이너를"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "누구나 쉽게 사용할 수 있는 인터페이스 덕분에 디자인 경험이 없는 사용자도 손쉽게 고품질의 콘텐츠를 만들 수 있습니다. ... ✅어도비 익스프레스는 모바일 앱으로도 제공되기 때문에 언제"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "이더시스 오 드 퍼퓸 | Aesop 대한민국"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "# 생산성[디자인] 게시물, 전단지 등을 디자인하세요 \"어도비 익스프레스(Adobe Express)\" 💎💎💎💎💎 ... Adobe Express 어도비 익스프레스 ... 더 자세한 편집이 필요하면 한 번의 클릭으로 Express 전체"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "이럴 때 어도비 익스프레스에서 한글 글꼴 폰트를 추가하는 방법을 알아보자. ... 글꼴 선택 후 우측으로 드래그하면 아래와 같이 어도비 폰트라는 항목이 나오는데 거기서 [+] 버튼을"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "그럼 바로 어도비 익스프레스로 누끼 따는 법 (배경 지우는 법)을 설명드리겠습니다. ... Image: 어도비익스프레스-배경-복원 Image: 어도비-익스프레스-배경제거-복원영역선택 Image: 어도비익스프레스-배경제거-복원배경제거(컷아웃) 편집에서 복원 버튼을 누르시면 배경이 빨간색으로 제거된"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "* 벤처스퀘어 ... * 애니 메이커 ... * 픽사베이 비디오 ... * 언스플래쉬 ... * 구글폰트 ... * 어도비익스프레스"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "* 상품요약정보 : 연어 초저분자300달톤 콜라겐 1500mg함유 * 판매가 : 81,600원 ... 상품명 : 오드리햅닭 저염닭가슴살(밀크씨슬) 10 / 30 /50 ... 밥 한 그릇의 따뜻함,"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "간단한 이미지부터 영상작업까지 가능한 무료 프로그램 어도비익스프레스(Adobe Express)"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "어도비 익스프레스 사이트에 방문합니다. ... 어도비 익스프레스 사이트에서 '영상 이미지 문서 등' 다양한 SNS 마케팅 관련 작업이 가능하다고 합니다. ... 본래 약 200MB(4k)였던 영상 파일이"
+            }
+          ]
+        },
+        "evidence_mode": "serp",
+        "verified_sources": []
+      }
+    ],
+    "excluded_keywords": [],
+    "deferred_keywords": [
+      "AI이미지만들기",
+      "EXCEL",
+      "FIREFLY",
+      "MS오피스365",
+      "OFFICE365",
+      "가계부쓰는법",
+      "노션템플릿",
+      "마이크로소프트365",
+      "마이크로소프트365구독",
+      "마이크로오피스",
+      "스프레드시트",
+      "엑셀가계부",
+      "여행일정표",
+      "워드프로세서"
+    ],
+    "research_stop_reason": "round_limit",
+    "retry_keywords": [
+      "결혼준비엑셀",
+      "캔바사용법"
+    ],
+    "discovery_rejections": [],
+    "discovery_replenishment": [],
+    "deferred_measured_keywords": [
+      "AI이미지만들기",
+      "EXCEL",
+      "FIREFLY",
+      "MS오피스365",
+      "OFFICE365",
+      "가계부쓰는법",
+      "노션템플릿",
+      "마이크로소프트365",
+      "마이크로소프트365구독",
+      "마이크로오피스",
+      "스프레드시트",
+      "엑셀가계부",
+      "여행일정표",
+      "워드프로세서"
+    ],
+    "selection_scope": "evergreen_fallback_after_no_latest_issue",
+    "proposal_rounds": [
+      {
+        "round": 1,
+        "offered_keywords": [
+          "컴퓨터활용능력2급시험일정",
+          "캘린더",
+          "컴퓨터활용능력시험일정",
+          "한국사능력검정",
+          "노트북초기화",
+          "한능검",
+          "컴활1급시험일정",
+          "그래픽카드",
+          "컴퓨터활용능력1급시험일정",
+          "컴활2급필기",
+          "결혼식준비순서",
+          "한국실용글쓰기",
+          "NOTION사용법",
+          "한국사검정능력시험",
+          "주식공부방법",
+          "컴퓨터활용능력2급",
+          "결혼준비리스트",
+          "자기계발",
+          "삼성노트북포맷",
+          "한국어능력시험",
+          "결혼준비카페",
+          "심리상담센터",
+          "결혼식준비",
+          "회계사",
+          "우울증초기증상",
+          "컴활1급필기",
+          "고교학점제",
+          "김승호회장",
+          "심리상담",
+          "컴활2급",
+          "아두이노",
+          "윈도우11업데이트",
+          "자기개발",
+          "HTML",
+          "윈도우11다운로드",
+          "윈도우10",
+          "윈도우정품인증",
+          "컴활2급실기",
+          "생성형AI",
+          "가계부어플추천",
+          "엑셀구매",
+          "결혼식2부드레스",
+          "윈도우11시디키",
+          "RESEARCH",
+          "컴활1급실기",
+          "MS365",
+          "어도비파이어플라이",
+          "컴활1급2급차이",
+          "WINDOWS11",
+          "컴퓨터활용능력시험",
+          "GRID",
+          "머메이드드레스",
+          "MICROSOFTSTORE",
+          "직업적성테스트",
+          "엔트리코딩",
+          "인간관계론",
+          "출퇴근기록기",
+          "OFFICE",
+          "RPA",
+          "한국사검정시험"
+        ],
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "컴퓨터활용능력2급시험일정",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "캘린더",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력시험일정",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국사능력검정",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노트북초기화",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한능검",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급시험일정",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "그래픽카드",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력1급시험일정",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활2급필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼식준비순서",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국실용글쓰기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "NOTION사용법",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국사검정능력시험",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "주식공부방법",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력2급",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼준비리스트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "자기계발",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "삼성노트북포맷",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국어능력시험",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼준비카페",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "심리상담센터",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼식준비",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "회계사",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "우울증초기증상",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "고교학점제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "김승호회장",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "심리상담",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활2급",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아두이노",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11업데이트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "자기개발",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "HTML",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11다운로드",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우10",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우정품인증",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활2급실기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "생성형AI",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "가계부어플추천",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼식2부드레스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11시디키",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "RESEARCH",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급실기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "어도비파이어플라이",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급2급차이",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WINDOWS11",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력시험",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "GRID",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "머메이드드레스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MICROSOFTSTORE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "직업적성테스트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엔트리코딩",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인간관계론",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "출퇴근기록기",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "OFFICE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "RPA",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국사검정시험",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "MS365",
+            "search_query": "MS365",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          },
+          {
+            "keyword": "어도비파이어플라이",
+            "search_query": "어도비파이어플라이",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "MS365",
+          "어도비파이어플라이"
+        ]
+      },
+      {
+        "round": 2,
+        "offered_keywords": [
+          "마이크로소프트엣지",
+          "웹하드순위",
+          "어도비익스프레스",
+          "컨설턴트",
+          "인간관계",
+          "워드클라우드",
+          "RUNWAYAI",
+          "컴활2급필기독학",
+          "자신감",
+          "카네기인간관계론",
+          "웨딩카페",
+          "FGI",
+          "AI동영상",
+          "마이크로소프트팀즈",
+          "윈도우10다운로드",
+          "페이퍼로지",
+          "패스트캠프",
+          "컴활시험",
+          "가계부어플",
+          "윈도우11프로",
+          "프레지",
+          "FTP",
+          "스몰웨딩비용",
+          "노션캘린더",
+          "VISUALSTUDIO",
+          "컴활2급필기기출문제",
+          "컴활필기",
+          "웹하드사이트",
+          "비주얼스튜디오",
+          "윈도우정품",
+          "컴퓨터활용2급",
+          "아동심리상담센터",
+          "POWERBI",
+          "컴퓨터활용능력2급필기",
+          "컴활1급필기독학",
+          "온리웹하드",
+          "노션AI",
+          "웨딩스튜디오촬영",
+          "MSOFFICE365",
+          "KAGGLE",
+          "ANIMATE",
+          "코딩프로그램",
+          "데이콤웹하드",
+          "멀티모달",
+          "윈도우11PRO",
+          "계획표",
+          "근태관리",
+          "윈도우11홈",
+          "JIRA",
+          "아이폰가계부",
+          "엑셀VBA",
+          "윈도우키",
+          "오피스2021",
+          "액세스",
+          "윈도우7",
+          "마이크로오피스365",
+          "불렛저널다이어리",
+          "퍼포먼스마케팅",
+          "컴활1급독학",
+          "파일다운로드"
+        ],
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "마이크로소프트엣지",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "웹하드순위",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "어도비익스프레스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컨설턴트",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "인간관계",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "워드클라우드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "RUNWAYAI",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활2급필기독학",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "자신감",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "카네기인간관계론",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "웨딩카페",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "FGI",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "AI동영상",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트팀즈",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우10다운로드",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "페이퍼로지",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "패스트캠프",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활시험",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "가계부어플",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11프로",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "프레지",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "FTP",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "스몰웨딩비용",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노션캘린더",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "VISUALSTUDIO",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활2급필기기출문제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "웹하드사이트",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "비주얼스튜디오",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우정품",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용2급",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아동심리상담센터",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "POWERBI",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력2급필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급필기독학",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "온리웹하드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노션AI",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "웨딩스튜디오촬영",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSOFFICE365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "KAGGLE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "ANIMATE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "코딩프로그램",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "데이콤웹하드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "멀티모달",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11PRO",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "계획표",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "근태관리",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11홈",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "JIRA",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "아이폰가계부",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀VBA",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우키",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "오피스2021",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "액세스",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우7",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로오피스365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "불렛저널다이어리",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퍼포먼스마케팅",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급독학",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "파일다운로드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": [
+          {
+            "keyword": "어도비익스프레스",
+            "search_query": "어도비익스프레스",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "insufficient_specificity"
+          }
+        ],
+        "research_fallback_attempted": [
+          "어도비익스프레스"
+        ]
+      },
+      {
+        "round": 3,
+        "offered_keywords": [
+          "윈도우11FPP",
+          "엑셀브이룩업",
+          "온라인엑셀",
+          "수원역웨딩홀",
+          "NLP",
+          "서울예식장",
+          "컴포넌트",
+          "공여사들",
+          "태블로",
+          "컴활실기2급",
+          "컴활2급실기기출문제",
+          "설문지",
+          "스테이블디퓨전",
+          "MS오피스2021",
+          "폐백음식",
+          "게으름",
+          "연봉순위",
+          "온라인강의",
+          "웨딩드레스구매",
+          "WEBHARD",
+          "한글워드",
+          "MICROSOFTOFFICE",
+          "예식장비용",
+          "한국어실용글쓰기",
+          "한복웨딩드레스",
+          "무료논문사이트",
+          "엑셀가격",
+          "내신5등급대학",
+          "엑셀정품",
+          "MS워드",
+          "GOOGLESHEET",
+          "WINDOW11",
+          "MSTEAMS",
+          "UXUI디자인",
+          "경제적자유",
+          "FASTCAMPUS",
+          "엑셀프로그램",
+          "빅사이즈드레스",
+          "마이크로오피스구매",
+          "마이크로소프트오피스구매",
+          "영상통화",
+          "WINDOWS11PRO",
+          "MSWORD",
+          "컴퓨터활용능력필기",
+          "가계부추천",
+          "프롬프트엔지니어링",
+          "파워포인트구매",
+          "SHAREPOINT",
+          "일잘러",
+          "서베이몽키",
+          "비쥬얼스튜디오",
+          "지게차작업계획서",
+          "데이터사이언스학과",
+          "윈도우11가격",
+          "컴활기출문제",
+          "엑셀학원",
+          "엑셀온라인",
+          "윈도우11구매",
+          "컴퓨터활용능력1급필기",
+          "엑셀서식"
+        ],
+        "proposals": [],
+        "measured_fallback": false,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "윈도우11FPP",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀브이룩업",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "온라인엑셀",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "수원역웨딩홀",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "NLP",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "서울예식장",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴포넌트",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "공여사들",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "태블로",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활실기2급",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활2급실기기출문제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "설문지",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "스테이블디퓨전",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS오피스2021",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "폐백음식",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "게으름",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "연봉순위",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "온라인강의",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "웨딩드레스구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WEBHARD",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한글워드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MICROSOFTOFFICE",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "예식장비용",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한국어실용글쓰기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한복웨딩드레스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "무료논문사이트",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "내신5등급대학",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀정품",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS워드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "GOOGLESHEET",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WINDOW11",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSTEAMS",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "UXUI디자인",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "경제적자유",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "FASTCAMPUS",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀프로그램",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "빅사이즈드레스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로오피스구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트오피스구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "영상통화",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WINDOWS11PRO",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSWORD",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "가계부추천",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "프롬프트엔지니어링",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "파워포인트구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "SHAREPOINT",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "일잘러",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "서베이몽키",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "비쥬얼스튜디오",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "지게차작업계획서",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "데이터사이언스학과",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활기출문제",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀학원",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀온라인",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력1급필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀서식",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": []
+      },
+      {
+        "round": 4,
+        "offered_keywords": [
+          "웹하드추천",
+          "컴활1급실기독학",
+          "한글2018",
+          "ADOBESTOCK",
+          "퍼포먼스마케터",
+          "컴활인강",
+          "파워포인트뷰어",
+          "마케팅책",
+          "엑셀매크로만들기",
+          "웨딩홀잔여타임",
+          "마이크로소프트엑셀구매",
+          "윈도우FPP",
+          "컴퓨터활용능력2급독학",
+          "유튜브엑셀",
+          "텍스트마이닝",
+          "한글엑셀",
+          "윈도우정품가격",
+          "CS2",
+          "빅데이터분석기사필기",
+          "파워BI",
+          "컴퓨터활용1급",
+          "PANDAS",
+          "IT회사",
+          "구글시트공유",
+          "MLOPS",
+          "마이크로소프트오피스365",
+          "마이크로소프트구매",
+          "결혼준비엑셀",
+          "캔바사용법"
+        ],
+        "proposals": [],
+        "measured_fallback": false,
+        "no_eligible_proposal": true,
+        "skipped": [
+          {
+            "keyword": "웹하드추천",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활1급실기독학",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한글2018",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "ADOBESTOCK",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "퍼포먼스마케터",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴활인강",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "파워포인트뷰어",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마케팅책",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀매크로만들기",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "웨딩홀잔여타임",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트엑셀구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우FPP",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력2급독학",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "유튜브엑셀",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "텍스트마이닝",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "한글엑셀",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우정품가격",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "CS2",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "빅데이터분석기사필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "파워BI",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용1급",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "PANDAS",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "IT회사",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "구글시트공유",
+            "reason_code": "duplicate_intent",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MLOPS",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트오피스365",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "마이크로소프트구매",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "결혼준비엑셀",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "캔바사용법",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          }
+        ],
+        "research_fallback": []
+      }
+    ],
+    "ranked_candidates": [],
+    "candidate_decisions": [
+      {
+        "keyword": "MS365",
+        "status": "rejected",
+        "reason": "search intent or official evidence does not support an article",
+        "monthly_search": 4450,
+        "organic_query": "MS365"
+      },
+      {
+        "keyword": "어도비파이어플라이",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 4410,
+        "organic_query": "어도비파이어플라이"
+      },
+      {
+        "keyword": "어도비익스프레스",
+        "status": "rejected",
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 2770,
+        "organic_query": "어도비익스프레스"
+      }
+    ],
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "MS365",
+        "reason_code": "intent_mismatch",
+        "failed_at": "2026-10-14T13:19:17.914749+00:00",
+        "retry_after": "2026-10-21T13:19:17.914749+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "어도비파이어플라이",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-14T13:19:17.914749+00:00",
+        "retry_after": "2026-10-15T13:19:17.914749+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "어도비익스프레스",
+        "reason_code": "temporary_failure",
+        "failed_at": "2026-10-14T13:19:17.914749+00:00",
+        "retry_after": "2026-10-14T19:19:17.914749+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "노션템플릿",
         "reason_code": "intent_mismatch",
@@ -9878,29 +11983,736 @@
         "attempts": 1
       }
     ],
-    "research_stop_reason": "analysis_unavailable",
-    "operational_error": "usage_limit",
+    "latest_issue_attempt": {
+      "research_stop_reason": "latest_listing_exhausted",
+      "evaluated_candidates": 4,
+      "seeds": [
+        "제미나이 4 아르곤",
+        "구글 AI 스튜디오",
+        "애스크 플레이",
+        "플레이 인 제미나이",
+        "게임 파인더",
+        "패밀리 링크"
+      ],
+      "held": [
+        {
+          "keyword": "제미나이 4 아르곤",
+          "category": "생산성",
+          "topic": "제미나이 4 아르곤 안티그래비티 제공 시작: 이용 대상과 업무 활용 변화",
+          "intent": "KST 10월 14일 발표된 안티그래비티 제공으로 누가 언제 어디서 아르곤을 쓰며, 업무에 어떤 변화가 생기나?",
+          "gap": "구독·이용자별 제공 경로 표와 최신 버전 업데이트 체크리스트, 구글이 발표한 직무별 활용 사례를 정리합니다.",
+          "source_url": "https://blog.google/intl/ko-kr/products/gemini-4-argon-in-google-antigravity-kr/",
+          "verified_sources": [
+            {
+              "url": "https://blog.google/intl/ko-kr/products/gemini-4-argon-in-google-antigravity-kr/",
+              "original_url": "https://blog.google/intl/ko-kr/products/gemini-4-argon-in-google-antigravity-kr/",
+              "title": "구글 안티그래비티에 탑재된 제미나이 4 아르곤",
+              "checked_on": "2026-10-14",
+              "publication_dates": [
+                "2026-10-13",
+                "2026-10-13T16:00:00+00:00"
+              ],
+              "sha256": "ba5151e705ef78a54977eccc7bf0603ec4bcc7959749b7560aaea9f00e36b30d",
+              "excerpt": "구글 안티그래비티에 탑재된 제미나이 4 아르곤 2026년 10월 13일 | x.com 페이스북 링크드인 이메일 링크복사 안티그래비티 팀(Antigravity Team) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글은 처음부터 에이전트 중심의 미래를 염두에 두고 ‘구글 안티그래비티(Google Antigravity)’를 설계해 왔으며, 모델의 지능이 발전함에 따라 함께 확장될 수 있는 기초적인 프레임워크를 정립해 왔습니다. 이제 ‘제미나이 4 아르곤(Gemini 4 Argon)’의 도입과 함께, 안티그래비티 앱에서 에이전트 중심 경험이 본격 구현됩니다. 이달 초, 구글은 실제 소프트웨어 엔지니어링 환경은 물론, 법률, 금융과 같은 엔터프라이즈 지식 기반 업무, 사이버 보안 방어에 이르기까지  까다롭고 복잡한 워크플로우 전반에서 프론티어급 성능을 발휘하는 최신 AI 모델인 ‘제미나이 4 아르곤(Gemini 4 Argon)’을 공개 했습니다. 오늘부터 구글 AI 울트라(Google AI Ultra) 구독자는 구글 안티그래비티에서에 제미나이 4 아르곤을 바로 이용할 수 있습니다. 해당 모델은 안티그래비티 데스크톱 앱과 안티그래비티 CLI(명령행 인터페이스) 에서 제공됩니다. 기업 고객 또한 제미나이 엔터프라이즈(Gemini Enterprise) 구독을 통해 API와 안티그래비티 플랫폼에서 제미나이 4 아르곤을 이용할 수 있습니다. 아르곤은 가장 어려운 비즈니스 난제들을 해결하도록 설계된 모델입니다. 동시에, 구글은 보다 넓은 스펙트럼의 개발자분들이 일상적인 작업에 활용할 수 있는 향후 모델에도 큰 기대를 갖고, 연구를 지속하고 있습니다. 구글 전반의 개발 프로세스 가속화 새로운 기술을 시험하기에 가장 확실한 테스트 베드는 다름 아닌 구글의 엔지니어링 팀입니다. 구글은 안티그래비티를 통해 외부 개발자에 아르곤을 선보이기에 앞서, 먼저 내부에서 이를 활용하는 검증 과정을 거쳤습니다. 현재 매달 10만 명이 넘는 구글 직원들이 내부 버전의 안티그래비티에서 아르곤을 활용해 구글 코드베이스 전반의 복잡하고 까다로운 제품 문제를 해결하고 있습니다. 약 4주 동안의 테스트를 진행한 결과, 에이전트 기반 코드(agentic code)의 비율이 35% 증가했으며, 개발 속도뿐 아니라 배포 후 롤백(rollback)율이 30% 감소하는 등 코드의 안정성 및 품질 측면에서도 눈에 띄는 개선점을 확인했습니다. 알파벳(Alphabet) 전반의 여러 팀은 이용자들이 애용하는 제품의 까다로운 엔지니어링 과제를 해결하기 위해, 안티그래비티의 아르곤을 활용하고 있습니다. 대표적인 사례는 다음과 같습니다. 유튜브(YouTube) 댓글 최적화: 안티그래비티에 탑재된 아르곤은 유튜브 댓글 프런트엔드의 CPU 사용량을 절반으로 줄이는 데 크게 기여했습니다. 아르곤은 실제 프로덕션 프로필 데이터를 추적 및 분석해, 불필요한 이모지 렌더링만으로 전체 서버 부하의 약 45%가 발생한다는 점을 발견했습니다. 이를 바탕으로 12개의 최적화 작업을 진행했으며, 그 결과 서버 댓글 로드 지연시간(latency)은 30ms, 클라이언트엔드투엔드 지연 시간은 20ms 단축됐습니다. 윙(Wing) 드론 물리 시뮬레이터 디버깅: 안티그래비티의 아르곤은 알파벳의 자율 드론 기업인 윙(Wing)의 사내 전용 드론 물리 시뮬레이터를 검토했습니다. 단순히 코드 구조를 읽는 데 그치지 않고, 그 기반이 되는 복잡한 물리 법칙과 수학적 인과 관계를 깊이 추론했습니다. 그 결과, 2018년부터 코드베이스에 남아 있던 중요한 버그를 찾아냈고, 팀이 18가지 개선 사항에 대한 수정 방향을 검토하는 데 도움을 주었습니다. 구글 규모의 초대형 시스템에서 운영되어야 한다는 조건은 안티그래비티를 처음부터 기업 환경에 완벽히 호환되도록 하는 강력한 밑거름이 되었으며, 이는 구글 내부의 일상적인 개발 문화를 혁신적으로 바꾸었습니다. 기존의 레거시 코드를 현대화하는 리팩토링부터 자동화 테스트 커버리지 구축, 빌드 오류 해결에 이르기까지, 아르곤은 기업 개발팀이 자주 겪는 반복 작업을 간소화함으로써 엔지니어들이 더 높은 수준의 아키텍처 구상과 제품 혁신에 집중할 수 있도록 돕고 있습니다. 밀린 버그 리포트(Backlog) 정리: 안티그래비티 내의 아르곤은 여러 서비스에 걸쳐 오랫동안 방치되어 온 134개의 미결 버그 리포트 큐(Queue)를 대상으로 에이전트를 실행했습니다. 아르곤은 코드 커밋 내역을 교차 검증하고, 패치 작업이 실제 운영 서버까지 제대로 반영되었는지 확인하며, 실시간 원격 분석 데이터를 추적해 오류가 여전히 발생하는지 정밀 조사했습니다. 결과적으로 단 3시간 만에 버그의 원인과 커밋 증적을 완벽하게 밝혀내 97개의 중복되거나 무의미한 미결 버그를 성공적으로 종료 처리(전체 처리율 72.4%)했으며, 남은 37개의 리포트 역시 담당자를 지정해 미할당 상태의 유령 티켓을 완전히 해결했습니다. 레거시 코드 전환: 수십 년 동안 귀중한 과학 연구 데이터와 로직들이 포트란(Fortran)과 같이 관리하기 어렵고 파편화된 레거시 코드베이스 내에 묶여 있었습니다. 연구 개발팀은 안티그래비티의 맞춤형 기능(custom skill)을 활용해 아르곤을 배포하고, 기존 코드를 현대적인 러스트(Rust) 언어로 변환하는 작업을 완전히 자율적으로 실행했습니다. 아르곤은 현대화된 코드베이스를 스스로 구성해 냈으며, 메모리 안전성을 완벽히 확보함과 동시에 성능을 1.8배 끌어올려 연구원들이 향후 더 폭넓은 연구 활동을 이어갈 수 있는 탄탄한 기술적 기반을 제공했습니다. 보안 취약점 감사: 개발 환경에서 접근 권한 설정과 관련해 새로 변경된 이력들을 감사(Audit)하기 위해 안티그래비티의 아르곤이 투입되었습니다. 아르곤은 단순히 코드의 변경된 차이점(diff)만 대조하지 않고, 실제 런타임 환경에서 권한이 어떻게 흘러가는지 면밀히 추적했습니다. 그 결과, 다른 두 종류의 최첨단 거대 언어 모델들이 완벽하게 안전하다고 진단하며 놓쳤던 보안 취약점 속 심각한 오류 4개를 완벽히 찾아냈습니다. 운영 서비스 기술 지원 티켓 우선순위 지정 및 분류: 온콜(on-call) 당직 순번에 접수되는 수십 건의 기술 지원 티켓들을 안티그래비티의 아르곤을 통해 일괄 처리하고 있습니다. 아르곤은 오류 유형별로 티켓을 빠르게 정렬하고 코드와 로그 데이터를 조회해 근본적인 원인을 추적한 다음, 해결 방안을 제시하고 담당자가 즉시 승인 및 전송할 수 있는 맞춤형 답변 초안을 작성합니다. 이 조치 덕분에 당직 엔지니어들은 근무 시간당 2~3시간을 절약할 수 있게 되었으며, 보다 복잡한 고난도 문제 상황을 빠르게 정상화하는 본연의 가치 있는 업무에 더욱 몰두할 수 있게 되었습니다. 구글은 안티그래비티를 통해 경험해 온 일상적인 개발 가속화 효과를 제미나이 비즈니스 고객에게도 제공하게 되어 기쁘게 생각합니다. 다방면에서 활용되는 아르곤 사내 테스트를 진행하며 확인한 가장 고무적인 사실 중 하나는, 엔지니어링 부서가 아닌 다른 직무의 팀들도 안티그래비티에 탑재된 아르곤을 일상 업무에 매우 빠르고 유연하게 접목해 나가고 있다는 점이었습니다. 실제로 기술 영업(Cloud Sales) 조직의 절반 이상, 재무(Finance) 부서의 절반가량, 그리고 사업 운영(Business & Operations) 담당 구글러의 3분의 1이상이 안티그래비티를 적극적으로 사용하면서 비엔지니어 직군의 월간 활성 사용자 수(MAU)가 급격히 상승하고 있습니다. 플러그인, 스킬, 그리고 MCP(Model Context Protocol) 연동 기능 덕분에 전문적인 사내 데이터 소스 및 독자적인 개별 워크플로우에 에이전트를 직관적으로 연결할 수 있기 때문입니다. 이러한 맞춤 설정 기능을 아르곤과 함께 사용하면 아래와 같이 고도의 전문성이 요구되는 수직적 업무 영역에 에이전트를 쉽게 이식할 수 있습니다. 마케팅 웹사이트 현지화: 안티그래비티 개발자 관계(DevRel) 팀은 안티그래비티 내 아르곤을 사용해 수백 페이지에 달하는 방대한 개발자 기술 문서를 단 몇 시간 만에 17개 언어로 완전히 번역 및 현지화했습니다. 이를 통해 수 주일이 소요되던 고단한 수작업 프로세스를 단 몇 시간 단위로 단축시켰으며, 담당 직원들은 오직 최종 품질 검수 및 세밀한 검토 단계에만 집중하도록 업무 효율을 높여 웹사이트의 접근성과 사용자 경험(UX)을 비약적으로 업그레이드했습니다. 데이터 대시보드 장애 복구: 어느 기술 프로그램 매니저(TPM)는 안티그래비티의 아르곤을 사용해 무려 4개월 이상 원인을 찾지 못해 지연되고 있던 중요 대시보드의 먹통 장애(P0 등급) 문제를 해결했습니다. 별도의 개발 엔지니어 지원 없이도, TPM 스스로 여러 계층의 인프라 스택 전반에 걸친 복잡한 데이터베이스 오류들을 원활하게 진단했으며, 단 며칠 만에 3,200줄에 달하는 데이터 파이프라인 전체를 전면 개편하고 실시간 모니터링 모듈을 복구하는 데 성공했습니다. 잠재 고객(Sales Prospect) 분석 및 검증: 광고 영업(Ads Sales)의 담당 AE를 지원하기 위해, 안티그래비티의 아르곤 기반의 자동화된 고객 발굴 워크플로우를 개설했습니다. 이 시스템은 타겟 기업 웹사이트의 트래픽을 자동으로 추적하고, 실제 비즈니스 전환 경로가 올바르게 확보되어 있는지 확인한 후, 기존 세일즈 데이터베이스와 교차 대조해 해당 기업이 적합한 영업 대상인지를 엄격하게 판별합니다. 이를 통해 신규 잠재 고객 리서치에 소요되는 시간을 무려 90% 이상 절감해, AE들이 매주 10시간 이상의 단순 반복 작업에서 벗어나 고객과의 직접적인 소통에 더 많은 시간을 할애할 수 있게 했습니다. 재무 계획 및 분석(FP&A): 한 재무 부서장은 재무 전문 플러그인들을 활용해 안티그래비티의 아르곤으로 복잡한 엔드투엔드 재무 조정 예산 집행 현황 모니터링, 계약서 핵심 조항 자동 추출 및 일일 경영진 업무 보고 등 총 80여 개의 다양한 업무를  자동화해 처리했습니다. 영업일 기준 7일 동안 사람이 15.5시간 분량의 방향성 조율 및 지시만 내려준 결과 검증된 재무 산출물 기준 약 335시간에 해당하는 작업이 완료되었고,  8주가 넘는 수작업을 절감할 수 있었습니다. 시작하기 제미나이 4 아르곤은 오늘부터 구글 AI 울트라 구독자, 적격 제미나이 엔터프라이즈 구독자 , 그리고 제미나이 API 이용자를 대상으로 구글 안티그래비티 데스크톱 앱과 CLI에서순차적으로 제공됩니다. 안티그래비티를 최신 버전으로 업데이트하고 가장 복잡한 워크플로우에적용해 보세요. 구글은 여러분이 무엇을 개발할지, 그리고 어떤 부분에서 경험을 더 개선할 수 있을지에 대한 의견을 기다리고 있습니다. 관련 키워드:"
+            }
+          ],
+          "intent_results": [
+            "https://blog.google/intl/ko-kr/products/gemini-4-argon-in-google-antigravity-kr/"
+          ],
+          "valid_until": null,
+          "article_type": "information",
+          "monthly_search": null,
+          "demand_scope": "latest_issue_exempt",
+          "demand_provider": null,
+          "evidence_mode": "latest_issue",
+          "latest_issue_listing": {
+            "url": "https://blog.google/intl/ko-kr/products/gemini-4-argon-in-google-antigravity-kr/",
+            "title": "구글 안티그래비티에 탑재된 제미나이 4 아르곤",
+            "publisher": "google_korea_blog",
+            "published": "2026-10-14"
+          },
+          "organic_provider": null,
+          "organic_query": null,
+          "organic_results": [],
+          "organic_domains": [],
+          "dominant_result_ratio": null,
+          "trend_growth": null,
+          "trend_provider": null,
+          "trend_status": "not_applicable",
+          "selection_version": 8,
+          "selected_at": "2026-10-14T13:17:31.445718+00:00",
+          "source": "category_market_v1",
+          "keywords": [
+            "제미나이 4 아르곤"
+          ],
+          "status": "pending",
+          "suitability_evidence": {
+            "version": 1,
+            "checked_at": "2026-10-14T13:17:31.445718+00:00",
+            "input_sha256": "89dca73066a96a149f25d8b84e1bd21e2c0ecad3255d8db84ab6892745ec5271",
+            "review": {
+              "scope": "narrower_query",
+              "target_keyword": "제미나이 4 아르곤",
+              "sources": [
+                {
+                  "source_index": 0,
+                  "quote": "구글 안티그래비티에 탑재된 제미나이 4 아르곤 2026년 10월 13일 | x.com 페이스북 링크드인 이메일 링크복사 안티그래비티 팀(Antigravity Team) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글은 처음부터 에이전트 중심의 미래를 염두에 두고 ‘구글 안티그래비티(Google Antigravity)’를 설계해 왔으며, 모델의 지능이 발전함에 따라 함께 확장될 수 있는 기초적인 프레임워크를 정립해 왔습니다. 이제 ‘제미나이 4 아르곤(Gemini 4 Argon)’의 도입과 함께, 안티그래비티 앱에서 에이전트 중심 경험이 본격 구현됩니다. 이달 초, 구글은 실제 소프트웨어 엔지니어링 환경은 물론, 법률, 금융과 같은 엔터프라이즈 지식 기반 업무, 사이버 보안 방어에 이르기까지  까다롭고 복잡한 워크플로우 전반에서 프론티어급 성능을 발휘하는 최신 AI 모델인 ‘제미나이 4 아르곤(Gemini 4 Argon)’을 공개 했습니다. 오늘부터 구글 AI 울트라(Google AI Ultra) 구독자는 구글 안티그래비티에서에 제미나이 4 아르곤을 바로 이용할 수 있습니다. 해당 모델은 안티그래비티 데스크톱 앱과 안티그래비티 CLI(명령행 인터페이스) 에서 제공됩니다. 기업 고객 또한 제미나이 엔터프라이즈(Gemini Enterprise) 구독을 통해 API와 안티그래비티 플랫폼에서 제미나이 4 아르곤을 이용할 수 있습니다. 아르곤은 가장 어려운 비즈니스 난제들을 해결하도록 설계된 모델입니다. 동시에, 구글은 보다 넓은 스펙트럼의 개발자분들이 일상적인 작업에 활용할 수 있는 향후 모델에도 큰 기대를 갖고, 연구를 지속하고 있습니다. 구글 전반의 개발 프로세스 가속화 새로운 기술을 시험하기에 가장 확실한 테스트 베드는 다름 아닌 구글의 엔지니어링 팀입니다. 구글은 안티그래비티",
+                  "entity": "구글",
+                  "context": "general"
+                }
+              ],
+              "required_facets": [
+                {
+                  "facet": "제미나이 4 아르곤은 무엇이며 어떤 기능을 제공하는가?",
+                  "answer": "복잡한 개발·지식 업무용 모델이라는 소개는 있으나, 기획은 안티그래비티 제공과 활용으로 한정된다.",
+                  "supported": true,
+                  "source_index": 0,
+                  "quote": "구글 안티그래비티에 탑재된 제미나이 4 아르곤 2026년 10월 13일 | x.com 페이스북 링크드인 이메일 링크복사 안티그래비티 팀(Antigravity Team) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글은 처음부터 에이전트 중심의 미래를 염두에 두고 ‘구글 안티그래비티(Google Antigravity)’를 설계해 왔으며, 모델의 지능이 발전함에 따라 함께 확장될 수 있는 기초적인 프레임워크를 정립해 왔습니다. 이제 ‘제미나이 4 아르곤(Gemini 4 Argon)’의 도입과 함께, 안티그래비티 앱에서 에이전트 중심 경험이 본격 구현됩니다. 이달 초, 구글은 실제 소프트웨어 엔지니어링 환경은 물론, 법률, 금융과 같은 엔터프라이즈 지식 기반 업무, 사이버 보안 방어에 이르기까지  까다롭고 복잡한 워크플로우 전반에서 프론티어급 성능을 발휘하는 최신 AI 모델인 ‘제미나이 4 아르곤(Gemini 4 Argon)’을 공개 했습니다. 오늘부터 구글 AI 울트라(Google AI Ultra) 구독자는 구글 안티그래비티에서에 제미나이 4 아르곤을 바로 이용할 수 있습니다. 해당 모델은 안티그래비티 데스크톱 앱과 안티그래비티 CLI(명령행 인터페이스) 에서 제공됩니다. 기업 고객 또한 제미나이 엔터프라이즈(Gemini Enterprise) 구독을 통해 API와 안티그래비티 플랫폼에서 제미나이 4 아르곤을 이용할 수 있습니다. 아르곤은 가장 어려운 비즈니스 난제들을 해결하도록 설계된 모델입니다. 동시에, 구글은 보다 넓은 스펙트럼의 개발자분들이 일상적인 작업에 활용할 수 있는 향후 모델에도 큰 기대를 갖고, 연구를 지속하고 있습니다. 구글 전반의 개발 프로세스 가속화 새로운 기술을 시험하기에 가장 확실한 테스트 베드는 다름 아닌 구글의 엔지니어링 팀입니다. 구글은 안티그래비티"
+                },
+                {
+                  "facet": "누가 언제 어디에서 이용할 수 있는가?",
+                  "answer": "울트라·적격 엔터프라이즈·API 이용자 대상 앱·CLI 순차 제공을 안내한다. 구체적 적격 조건은 없다.",
+                  "supported": false,
+                  "source_index": 0,
+                  "quote": "동으로 추적하고, 실제 비즈니스 전환 경로가 올바르게 확보되어 있는지 확인한 후, 기존 세일즈 데이터베이스와 교차 대조해 해당 기업이 적합한 영업 대상인지를 엄격하게 판별합니다. 이를 통해 신규 잠재 고객 리서치에 소요되는 시간을 무려 90% 이상 절감해, AE들이 매주 10시간 이상의 단순 반복 작업에서 벗어나 고객과의 직접적인 소통에 더 많은 시간을 할애할 수 있게 했습니다. 재무 계획 및 분석(FP&A): 한 재무 부서장은 재무 전문 플러그인들을 활용해 안티그래비티의 아르곤으로 복잡한 엔드투엔드 재무 조정 예산 집행 현황 모니터링, 계약서 핵심 조항 자동 추출 및 일일 경영진 업무 보고 등 총 80여 개의 다양한 업무를  자동화해 처리했습니다. 영업일 기준 7일 동안 사람이 15.5시간 분량의 방향성 조율 및 지시만 내려준 결과 검증된 재무 산출물 기준 약 335시간에 해당하는 작업이 완료되었고,  8주가 넘는 수작업을 절감할 수 있었습니다. 시작하기 제미나이 4 아르곤은 오늘부터 구글 AI 울트라 구독자, 적격 제미나이 엔터프라이즈 구독자 , 그리고 제미나이 API 이용자를 대상으로 구글 안티그래비티 데스크톱 앱과 CLI에서순차적으로 제공됩니다. 안티그래비티를 최신 버전으로 업데이트하고 가장 복잡한 워크플로우에적용해 보세요. 구글은 여러분이 무엇을 개발할지, 그리고 어떤 부분에서 경험을 더 개선할 수 있을지에 대한 의견을 기다리고 있습니다. 관련 키워드:"
+                },
+                {
+                  "facet": "직무별 업무 활용에서 어떤 변화가 확인됐는가?",
+                  "answer": "구글 내부의 현지화·대시보드 복구·영업 분석 사례를 지원한다. 모든 이용자의 성과를 보장하지 않는다.",
+                  "supported": true,
+                  "source_index": 0,
+                  "quote": "결할 수 있기 때문입니다. 이러한 맞춤 설정 기능을 아르곤과 함께 사용하면 아래와 같이 고도의 전문성이 요구되는 수직적 업무 영역에 에이전트를 쉽게 이식할 수 있습니다. 마케팅 웹사이트 현지화: 안티그래비티 개발자 관계(DevRel) 팀은 안티그래비티 내 아르곤을 사용해 수백 페이지에 달하는 방대한 개발자 기술 문서를 단 몇 시간 만에 17개 언어로 완전히 번역 및 현지화했습니다. 이를 통해 수 주일이 소요되던 고단한 수작업 프로세스를 단 몇 시간 단위로 단축시켰으며, 담당 직원들은 오직 최종 품질 검수 및 세밀한 검토 단계에만 집중하도록 업무 효율을 높여 웹사이트의 접근성과 사용자 경험(UX)을 비약적으로 업그레이드했습니다. 데이터 대시보드 장애 복구: 어느 기술 프로그램 매니저(TPM)는 안티그래비티의 아르곤을 사용해 무려 4개월 이상 원인을 찾지 못해 지연되고 있던 중요 대시보드의 먹통 장애(P0 등급) 문제를 해결했습니다. 별도의 개발 엔지니어 지원 없이도, TPM 스스로 여러 계층의 인프라 스택 전반에 걸친 복잡한 데이터베이스 오류들을 원활하게 진단했으며, 단 며칠 만에 3,200줄에 달하는 데이터 파이프라인 전체를 전면 개편하고 실시간 모니터링 모듈을 복구하는 데 성공했습니다. 잠재 고객(Sales Prospect) 분석 및 검증: 광고 영업(Ads Sales)의 담당 AE를 지원하기 위해, 안티그래비티의 아르곤 기반의 자동화된 고객 발굴 워크플로우를 개설했습니다. 이 시스템은 타겟 기업 웹사이트의 트래픽을 자동으로 추적하고, 실제 비즈니스 전환 경로가 올바르게 확보되어 있는지 확인한 후, 기존 세일즈 데이터베이스와 교차 대조해 해당 기업이 적합한 영업 대상인지를 엄격하게 판별합니다. 이를 통해 신규 잠재 고객 리서치에 소요되는 시간을 무려 90% 이상 절감해, AE들이 매"
+                },
+                {
+                  "facet": "최신 버전 업데이트와 이용 준비는 어떻게 하는가?",
+                  "answer": "최신 버전으로 업데이트하라는 권고만 있어, 약속한 업데이트 체크리스트의 구체적 절차는 지원하지 않는다.",
+                  "supported": false,
+                  "source_index": 0,
+                  "quote": "동으로 추적하고, 실제 비즈니스 전환 경로가 올바르게 확보되어 있는지 확인한 후, 기존 세일즈 데이터베이스와 교차 대조해 해당 기업이 적합한 영업 대상인지를 엄격하게 판별합니다. 이를 통해 신규 잠재 고객 리서치에 소요되는 시간을 무려 90% 이상 절감해, AE들이 매주 10시간 이상의 단순 반복 작업에서 벗어나 고객과의 직접적인 소통에 더 많은 시간을 할애할 수 있게 했습니다. 재무 계획 및 분석(FP&A): 한 재무 부서장은 재무 전문 플러그인들을 활용해 안티그래비티의 아르곤으로 복잡한 엔드투엔드 재무 조정 예산 집행 현황 모니터링, 계약서 핵심 조항 자동 추출 및 일일 경영진 업무 보고 등 총 80여 개의 다양한 업무를  자동화해 처리했습니다. 영업일 기준 7일 동안 사람이 15.5시간 분량의 방향성 조율 및 지시만 내려준 결과 검증된 재무 산출물 기준 약 335시간에 해당하는 작업이 완료되었고,  8주가 넘는 수작업을 절감할 수 있었습니다. 시작하기 제미나이 4 아르곤은 오늘부터 구글 AI 울트라 구독자, 적격 제미나이 엔터프라이즈 구독자 , 그리고 제미나이 API 이용자를 대상으로 구글 안티그래비티 데스크톱 앱과 CLI에서순차적으로 제공됩니다. 안티그래비티를 최신 버전으로 업데이트하고 가장 복잡한 워크플로우에적용해 보세요. 구글은 여러분이 무엇을 개발할지, 그리고 어떤 부분에서 경험을 더 개선할 수 있을지에 대한 의견을 기다리고 있습니다. 관련 키워드:"
+                }
+              ],
+              "current_relevance": {
+                "kind": "unknown",
+                "source_index": 0,
+                "quote": "구글 안티그래비티에 탑재된 제미나이 4 아르곤 2026년 10월 13일 | x.com 페이스북 링크드인 이메일 링크복사 안티그래비티 팀(Antigravity Team) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글은 처음부터 에이전트 중심의 미래를 염두에 두고 ‘구글 안티그래비티(Google Antigravity)’를 설계해 왔으며, 모델의 지능이 발전함에 따라 함께 확장될 수 있는 기초적인 프레임워크를 정립해 왔습니다. 이제 ‘제미나이 4 아르곤(Gemini 4 Argon)’의 도입과 함께, 안티그래비티 앱에서 에이전트 중심 경험이 본격 구현됩니다. 이달 초, 구글은 실제 소프트웨어 엔지니어링 환경은 물론, 법률, 금융과 같은 엔터프라이즈 지식 기반 업무, 사이버 보안 방어에 이르기까지  까다롭고 복잡한 워크플로우 전반에서 프론티어급 성능을 발휘하는 최신 AI 모델인 ‘제미나이 4 아르곤(Gemini 4 Argon)’을 공개 했습니다. 오늘부터 구글 AI 울트라(Google AI Ultra) 구독자는 구글 안티그래비티에서에 제미나이 4 아르곤을 바로 이용할 수 있습니다. 해당 모델은 안티그래비티 데스크톱 앱과 안티그래비티 CLI(명령행 인터페이스) 에서 제공됩니다. 기업 고객 또한 제미나이 엔터프라이즈(Gemini Enterprise) 구독을 통해 API와 안티그래비티 플랫폼에서 제미나이 4 아르곤을 이용할 수 있습니다. 아르곤은 가장 어려운 비즈니스 난제들을 해결하도록 설계된 모델입니다. 동시에, 구글은 보다 넓은 스펙트럼의 개발자분들이 일상적인 작업에 활용할 수 있는 향후 모델에도 큰 기대를 갖고, 연구를 지속하고 있습니다. 구글 전반의 개발 프로세스 가속화 새로운 기술을 시험하기에 가장 확실한 테스트 베드는 다름 아닌 구글의 엔지니어링 팀입니다. 구글은 안티그래비티",
+                "event_start": null,
+                "event_end": null,
+                "date_quote": null
+              }
+            }
+          },
+          "score_components": {
+            "latest_issue": 10,
+            "intent_fit": 15
+          },
+          "score": 25,
+          "publish_eligible": false,
+          "hold_reasons": [
+            "narrower_source_coverage",
+            "unverified_source_coverage"
+          ]
+        },
+        {
+          "keyword": "구글 AI 스튜디오",
+          "category": "생산성",
+          "topic": "구글 AI 스튜디오 개인용 앱 실행 지원 발표: 이용 대상과 공유 일정",
+          "intent": "10월 14일 발표된 개인용 앱 실행 지원은 무엇이며, 계정·연령·지역 조건과 향후 공유 일정은 어떻게 되나요?",
+          "gap": "개발자 계정 필요 여부, 비공개 실행 범위, 순차 제공 대상, 향후 공유 계획을 표로 정리하고 한국 지원 여부는 미확정으로 표시합니다.",
+          "source_url": "https://blog.google/intl/ko-kr/products/android-play-hardware/google-play-updates-october-2026-kr/",
+          "verified_sources": [
+            {
+              "url": "https://blog.google/intl/ko-kr/products/android-play-hardware/google-play-updates-october-2026-kr/",
+              "original_url": "https://blog.google/intl/ko-kr/products/android-play-hardware/google-play-updates-october-2026-kr/",
+              "title": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법",
+              "checked_on": "2026-10-14",
+              "publication_dates": [
+                "2026-10-14",
+                "2026-10-14T00:00:00+00:00"
+              ],
+              "sha256": "a2871a6b1a4e565f2d9893504167f3962097983a219ba050e7b1e2222170c5ed",
+              "excerpt": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법 2026년 10월 14일 | x.com 페이스북 링크드인 이메일 링크복사 구글플레이가 AI를 활용한 나만의 앱 제작부터 개인화된 앱·게임 추천, 친구들과 함께하는 새로운 게임 경험과 풍성한 보상까지, 이용자들이 더 쉽게 콘텐츠를 발견하고 즐기며 직접 창작할 수 있도록 돕는 다양한 신규 기능을 소개합니다. 샘 브라이트(Sam Bright) 구글플레이 및 개발자 생태계 총괄 부사장 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글플레이는 이용자가 즐기는 앱과 게임을 연결해 줍니다. 오늘날 구글플레이는 이용자들이 직접 만든 콘텐츠와 연결되는 공간으로 진화하고 있습니다. 이제 아이디어만 있다면 누구나 개인용 앱을 만들고 구글플레이에서 실행할 수 있게 되었습니다. 또한, 여러분이 주도적으로 제어할 수 있는 새로운 탐색 및 플레이 방식도 함께 소개합니다. 구글플레이의 새로운 소식을 확인해 보세요. 나만의 앱을 만들고 출시하는 새로운 방법 \"'어떤 상황이든 맞는 앱이 있는(there's an app for that)’ 시대에서 '나만을 위한 앱이 있는(there's an app for me)' 시대로.\" 구글 AI 스튜디오(Google AI Studio)를 사용하면 맞춤형 안드로이드 앱을 '바이브 코딩(vibe code, 자연어 지시만으로 코딩)'할 수 있습니다. 이러한 앱의 상당수는 개인적인 프로젝트로 시작되므로, 이제 구글플레이를 통해 본인의 기기에서 개인용 앱을 바로 실행할 수 있도록 지원합니다. 즉, 여러분의 창작물은 퍼블릭 스토어 카탈로그와 분리되어 비공개로 안전하게 유지됩니다. 일반 구글 계정만 있으면 되며, 별도의 개발자 계정은 필요하지 않습니다. 이 기능은 오늘부터 미국을 포함한 일부 시장의 18세 이상 이용자에게 순차적으로 제공됩니다. 앞으로 몇 달 안에, 이러한 개인용 앱을 가까운 친구 및 가족과 공유할 수 있게 될 것입니다. 그리고 마침내 이 앱을 전 세계 사람들과 공유하고 싶어진다면, 구글플레이가 전문 개발자 계정으로 원활하게 전환할 수 있도록 도와드립니다. 이때부터 여러분의 앱은 다른 모든 전문 개발자와 동일한 신뢰 및 안전(Trust & Safety) 검토 및 품질 기준을 거치게 됩니다. 콘텐츠를 발견하는 더 스마트하고 개인화된 방법 모든 화면에서 콘텐츠를 발견하세요. 탐색은 휴대전화 화면에만 국한되지 않아야 합니다. 구글 빌트인 차량 에서는 업데이트된 플레이 스토어 가 차량 화면에 맞춰 최적화됩니다. XR(확장현실) 기기에서의 플레이 스토어는 앱을 둘러볼 때 내 주변을 둘러싼 몰입형 3D 공간으로 구현되고, 구글북에서는 대화면에 최적화된 앱들이 전면에 돋보이게 배치됩니다. 여러분이 열정을 쏟는 다양한 콘텐츠를 발견할 수 있도록, 이제 스포츠 주제 페이지(Sports Topic Pages)에서 프리미어 리그, 챔피언스 리그, 라리가, 리가 MX, 메이저 리그 사커와 같은 글로벌 축구 리그 콘텐츠를 다룹니다. AI 기반 검색 ‘애스크 플레이’와 ‘플레이 인 제미나이’ ‘애스크 플레이(Ask Play)’는 질문을 던지고 즉시 맞춤형 추천을 받을 수 있는 기능입니다. 오늘부터 애스크 플레이를 활용하면 앱 간의 비교 결과를 생성하여, 주요 차이점과 사용자 반응을 한눈에 보여줄 수 있습니다. 한편, '플레이 인 제미나이(Play in Gemini)' 기능은 구글플레이의 앱, 게임 및 개발자 콘텐츠를 여러분의 제미나이 대화 속으로 바로 가져옵니다. 이 기능은 조만간 모든 제미나이 사용자에게 순차적으로 제공될 예정입니다. 취향에 딱 맞는 게임 발견 게이머들은 단순히 인기가 많은 게임을 원하는 것이 아니라, 메커니즘, 아트 스타일 등 다양한 요소에 기반해 게임을 평가합니다. 구글플레이의 새로운 게임 파인더(Game Finder)는 구글플레이의 게임 관련 지식과 12억 명 이상의 플레이어로 구성된 커뮤니티를 결합하여, 이용자의 취향에 딱 맞는 게임을 쉽게 찾을 수 있게 해줍니다. 그 핵심에는 여러분이 플레이하는 방식과 공유한 선호도를 분석한 게이머 DNA(Gamer DNA)가 있습니다. 게임, 장르, 메커니즘 등을 세밀하게 지정하여 게이머 DNA를 조정하고, 내가 진정으로 원하는 게임을 더 많이 만나보세요. 또한, 나와 비슷한 게이머 DNA를 가진 플레이어들이 특정 타이틀을 어떻게 즐기고 있는지 확인하고, 내가 팔로우하는 사람 중 몇 명이 그 게임을 플레이하는지 알아보며, 이용자 리뷰 요약을 읽고 어떤 게임이 왜 유행하는지 알아볼 수 있습니다. 게임 파인더는 오늘 미국 이용자를 대상으로 영어 버전을 먼저 선보이며, 곧 더 많은 국가에 출시될 예정입니다. 이와 더불어 게임 컬렉션을 직접 큐레이션할 수 있는 게임 플레이리스트(Game Playlists)도 도입됩니다. 조만간 플레이리스트를 공유하고 다른 게이머의 리스트도 탐색할 수 있게 될 것입니다. 소셜 경쟁, 새로운 게임, 그리고 풍성한 보상 멋진 게임을 찾는 것은 즐거움의 시작일 뿐입니다. 플레이어들이 계속해서 연결되고 게임의 몰입감을 유지하는 것이야말로 진정한 재미이자 다시 접속하게 만드는 원동력입니다. 구글플레이가 이를 위해 마련한 세 가지 새로운 방법을 소개합니다. 오늘 모든 시장에 출시되는 스프린트(Sprints)는 48시간 동안 빠르게 진행되는 에너지 넘치는 마이크로 챌린지입니다. 2~5명의 플레이어 그룹과 매칭되어 속도감 있는 경쟁을 즐길 수 있습니다. 일부 기기에 순차적으로 적용되는 구글플레이의 인게임 오버레이인 사이드킥(Sidekick)을 통해, 이제 30초 분량의 Playbacks(플레이백)을 녹화할 수 있습니다. 커뮤니티 게시물(Community Posts)은 게임의 상세 페이지에서 직접 질문을 묻고 답할 수 있는 기능입니다. 이 기능은 오늘부터 모든 게임과 모든 언어에서 자동 번역 기능과 함께 제공됩니다. 앞으로 몇 주 내에 개발자 게시물 및 공식 공지사항에 대한 지원도 추가될 예정입니다. 모바일과 PC를 아우르는 더 많은 명작 게임 데이브 더 다이버(Dave the Diver), 워해머 40,000: 볼트건(Warhammer 40,000: Boltgun)과 같이 가장 큰 사랑을 받은 PC 타이틀 중 일부를 구글플레이에서 선보입니다. 향후 몇 달 동안 리플레이스드(REPLACED), 초즌 바이 오딘(Chosen by Odin), 오버 더 힐(Over the Hill) 등 더 많은 신작이 출시될 예정이며, 이 모든 게임은 클라우드 저장을 통해 안드로이드 모바일과 PC를 자유롭게 오가며 플레이할 수 있습니다. 또한, 모바일 게임에만 적용되던 게임 트라이얼(Game Trials)을 PC 게임으로 확대해, 구매 전 한정된 시간 동안 프리미엄 정식 게임 전반을 체험해 볼 수 있게 됩니다. 구글플레이 포인트로 즐기는 더 큰 가치와 현실 세계의 팬덤 구글플레이 포인트(Google Play Points)는 모바일과 PC를 넘나드는 여러분의 모든 활동에 가치를 더해줍니다. 오늘, 구글플레이는 플레이 페스트(Play Fest) 를 엽니다. 일주일간 열리는 이 축제 기간에 구글플레이 포인트 적립 혜택(멀티플라이어)을 잠금 해제하고, 인게임 아이템 및 개발자 혜택을 획득하며, 현실 세계의 경품이 걸린 특별한 이벤트에도 참여해 보세요. 가족을 위한 신뢰와 혁신 구글플레이는 업계 최고 수준의 보안 및 개인정보 보호 기능을 기반으로 구축되었습니다. 기술이 발전함에 따라, 구글플레이는 누구나 자신의 기기에서 맞춤형 AI 앱을 실행할 수 있도록 지원하는 동시에 가족을 안전하게 보호하는 새로운 방법들을 지속적으로 도입하고 있습니다. 연령에 적합한 환경에 접근하기 이제 부모님들은 구글플레이의 패밀리 링크(Family Link) 앱을 사용하여 자녀의 연령대(또는 본인의 연령대)를 앱에 직접 공유할 수 있습니다. 이 새로운 기능을 통해 사용자는 안전하고 연령에 적합한 환경을 경험하는 데 필요한 최소한의 정보만 앱에 제공할 수 있게 됩니다. 지금 바로 구글플레이에 방문하여 이러한 업데이트를 직접 확인해 보세요. 개발자이시라면 이러한 새로운 기능들이 비즈니스 성장에 어떻게 도움이 되는지 자세히 알아보시기 바랍니다. 관련 키워드:"
+            }
+          ],
+          "intent_results": [
+            "https://blog.google/intl/ko-kr/products/android-play-hardware/google-play-updates-october-2026-kr/"
+          ],
+          "valid_until": null,
+          "article_type": "information",
+          "monthly_search": null,
+          "demand_scope": "latest_issue_exempt",
+          "demand_provider": null,
+          "evidence_mode": "latest_issue",
+          "latest_issue_listing": {
+            "url": "https://blog.google/intl/ko-kr/products/android-play-hardware/google-play-updates-october-2026-kr/",
+            "title": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법",
+            "publisher": "google_korea_blog",
+            "published": "2026-10-14"
+          },
+          "organic_provider": null,
+          "organic_query": null,
+          "organic_results": [],
+          "organic_domains": [],
+          "dominant_result_ratio": null,
+          "trend_growth": null,
+          "trend_provider": null,
+          "trend_status": "not_applicable",
+          "selection_version": 8,
+          "selected_at": "2026-10-14T13:17:31.445718+00:00",
+          "source": "category_market_v1",
+          "keywords": [
+            "구글 AI 스튜디오"
+          ],
+          "status": "pending",
+          "suitability_evidence": {
+            "version": 1,
+            "checked_at": "2026-10-14T13:17:31.445718+00:00",
+            "input_sha256": "4134515b88aaa858e42803eb33bc544e7cf93c4b8d57bd46107521d949d2dc2f",
+            "review": {
+              "scope": "narrower_query",
+              "target_keyword": "구글 AI 스튜디오",
+              "sources": [
+                {
+                  "source_index": 0,
+                  "quote": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법 2026년 10월 14일 | x.com 페이스북 링크드인 이메일 링크복사 구글플레이가 AI를 활용한 나만의 앱 제작부터 개인화된 앱·게임 추천, 친구들과 함께하는 새로운 게임 경험과 풍성한 보상까지, 이용자들이 더 쉽게 콘텐츠를 발견하고 즐기며 직접 창작할 수 있도록 돕는 다양한 신규 기능을 소개합니다. 샘 브라이트(Sam Bright) 구글플레이 및 개발자 생태계 총괄 부사장 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글플레이는 이용자가 즐기는 앱과 게임을 연결해 줍니다. 오늘날 구글플레이는 이용자들이 직접 만든 콘텐츠와 연결되는 공간으로 진화하고 있습니다. 이제 아이디어만 있다면 누구나 개인용 앱을 만들고 구글플레이에서 실행할 수 있게 되었습니다. 또한, 여러분이 주도적으로 제어할 수 있는 새로운 탐색 및 플레이 방식도 함께 소개합니다. 구글플레이의 새로운 소식을 확인해 보세요. 나만의 앱을 만들고 출시하는 새로운 방법 \"'어떤 상황이든 맞는 앱이 있는(there's an app for that)’ 시대에서 '나만을 위한 앱이 있는(there's an app for me)' 시대로.\" 구글 AI 스튜디오(Google AI Studio)를 사용하면 맞춤형 안드로이드 앱을 '바이브 코딩(vibe code, 자연어 지시만으로 코딩)'할 수 있습니다. 이러한 앱의 상당수는 개인적인 프로젝트로 시작되므로, 이제 구글플레이를 통해 본인의 기기에서 개인용 앱을 바로 실행할 수 있도록 지원합니다. 즉, 여러분의 창작물은 퍼블릭 스토어 카탈로그와 분리되어 비공개로 안전하게 유지됩니다. 일반 구글 계정만 있으면 되며, 별도의 개발자 계정은 필요하지 않습니다. 이 기능은 오늘부터 미국을 포함한 일부 시장의 18세 이",
+                  "entity": "구글 AI 스튜디오(Google AI Studio)",
+                  "context": "system_rules"
+                }
+              ],
+              "required_facets": [
+                {
+                  "facet": "구글 AI 스튜디오는 무엇이며 어떻게 이용하나요?",
+                  "answer": "맞춤형 안드로이드 앱 제작만 설명하며, 서비스 전반의 기능과 기본 이용 방법을 뒷받침하지 않습니다.",
+                  "supported": false,
+                  "source_index": 0,
+                  "quote": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법 2026년 10월 14일 | x.com 페이스북 링크드인 이메일 링크복사 구글플레이가 AI를 활용한 나만의 앱 제작부터 개인화된 앱·게임 추천, 친구들과 함께하는 새로운 게임 경험과 풍성한 보상까지, 이용자들이 더 쉽게 콘텐츠를 발견하고 즐기며 직접 창작할 수 있도록 돕는 다양한 신규 기능을 소개합니다. 샘 브라이트(Sam Bright) 구글플레이 및 개발자 생태계 총괄 부사장 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글플레이는 이용자가 즐기는 앱과 게임을 연결해 줍니다. 오늘날 구글플레이는 이용자들이 직접 만든 콘텐츠와 연결되는 공간으로 진화하고 있습니다. 이제 아이디어만 있다면 누구나 개인용 앱을 만들고 구글플레이에서 실행할 수 있게 되었습니다. 또한, 여러분이 주도적으로 제어할 수 있는 새로운 탐색 및 플레이 방식도 함께 소개합니다. 구글플레이의 새로운 소식을 확인해 보세요. 나만의 앱을 만들고 출시하는 새로운 방법 \"'어떤 상황이든 맞는 앱이 있는(there's an app for that)’ 시대에서 '나만을 위한 앱이 있는(there's an app for me)' 시대로.\" 구글 AI 스튜디오(Google AI Studio)를 사용하면 맞춤형 안드로이드 앱을 '바이브 코딩(vibe code, 자연어 지시만으로 코딩)'할 수 있습니다. 이러한 앱의 상당수는 개인적인 프로젝트로 시작되므로, 이제 구글플레이를 통해 본인의 기기에서 개인용 앱을 바로 실행할 수 있도록 지원합니다. 즉, 여러분의 창작물은 퍼블릭 스토어 카탈로그와 분리되어 비공개로 안전하게 유지됩니다. 일반 구글 계정만 있으면 되며, 별도의 개발자 계정은 필요하지 않습니다. 이 기능은 오늘부터 미국을 포함한 일부 시장의 18세 이"
+                },
+                {
+                  "facet": "개인용 앱 실행 지원은 무엇이며 이용 조건과 공개 범위는 어떻게 되나요?",
+                  "answer": "일반 구글 계정으로 비공개 실행하며 개발자 계정은 불필요합니다. 미국 등 일부 시장의 성인 대상이며 한국은 확인되지 않습니다.",
+                  "supported": true,
+                  "source_index": 0,
+                  "quote": "서 개인용 앱을 바로 실행할 수 있도록 지원합니다. 즉, 여러분의 창작물은 퍼블릭 스토어 카탈로그와 분리되어 비공개로 안전하게 유지됩니다. 일반 구글 계정만 있으면 되며, 별도의 개발자 계정은 필요하지 않습니다. 이 기능은 오늘부터 미국을 포함한 일부 시장의 18세 이상 이용자에게 순차적으로 제공됩니다. 앞으로 몇 달 안에, 이러한 개인용 앱을 가까운 친구 및 가족과 공유할 수 있게 될 것입니다. 그리고 마침내 이 앱을 전 세계 사람들과 공유하고 싶어진다면, 구글플레이가 전문 개발자 계정으로 원활하게 전환할 수 있도록 도와드립니다. 이때부터 여러분의 앱은 다른 모든 전문 개발자와 동일한 신뢰 및 안전(Trust & Safety) 검토 및 품질 기준을 거치게 됩니다. 콘텐츠를 발견하는 더 스마트하고 개인화된 방법 모든 화면에서 콘텐츠를 발견하세요. 탐색은 휴대전화 화면에만 국한되지 않아야 합니다. 구글 빌트인 차량 에서는 업데이트된 플레이 스토어 가 차량 화면에 맞춰 최적화됩니다. XR(확장현실) 기기에서의 플레이 스토어는 앱을 둘러볼 때 내 주변을 둘러싼 몰입형 3D 공간으로 구현되고, 구글북에서는 대화면에 최적화된 앱들이 전면에 돋보이게 배치됩니다. 여러분이 열정을 쏟는 다양한 콘텐츠를 발견할 수 있도록, 이제 스포츠 주제 페이지(Sports Topic Pages)에서 프리미어 리그, 챔피언스 리그, 라리가, 리가 MX, 메이저 리그 사커와 같은 글로벌 축구 리그 콘텐츠를 다룹니다. AI 기반 검색 ‘애스크 플레이’와 ‘플레이 인 제미나이’ ‘애스크 플레이(Ask Play)’는 질문을 던지고 즉시 맞춤형 추천을 받을 수 있는 기능입니다. 오늘부터 애스크 플레이를 활용하면 앱 간의 비교 결과를 생성하여, 주요 차이점과 사용자 반응을 한눈에 보여줄 수 있습니다. 한편, '플레이 인 제미"
+                },
+                {
+                  "facet": "개인용 앱의 공유 일정과 전체 공개 조건은 무엇인가요?",
+                  "answer": "친구·가족 공유는 앞으로 몇 달 안으로 예고됐습니다. 전체 공개에는 전문 개발자 계정 전환과 안전·품질 검토가 필요합니다.",
+                  "supported": true,
+                  "source_index": 0,
+                  "quote": "서 개인용 앱을 바로 실행할 수 있도록 지원합니다. 즉, 여러분의 창작물은 퍼블릭 스토어 카탈로그와 분리되어 비공개로 안전하게 유지됩니다. 일반 구글 계정만 있으면 되며, 별도의 개발자 계정은 필요하지 않습니다. 이 기능은 오늘부터 미국을 포함한 일부 시장의 18세 이상 이용자에게 순차적으로 제공됩니다. 앞으로 몇 달 안에, 이러한 개인용 앱을 가까운 친구 및 가족과 공유할 수 있게 될 것입니다. 그리고 마침내 이 앱을 전 세계 사람들과 공유하고 싶어진다면, 구글플레이가 전문 개발자 계정으로 원활하게 전환할 수 있도록 도와드립니다. 이때부터 여러분의 앱은 다른 모든 전문 개발자와 동일한 신뢰 및 안전(Trust & Safety) 검토 및 품질 기준을 거치게 됩니다. 콘텐츠를 발견하는 더 스마트하고 개인화된 방법 모든 화면에서 콘텐츠를 발견하세요. 탐색은 휴대전화 화면에만 국한되지 않아야 합니다. 구글 빌트인 차량 에서는 업데이트된 플레이 스토어 가 차량 화면에 맞춰 최적화됩니다. XR(확장현실) 기기에서의 플레이 스토어는 앱을 둘러볼 때 내 주변을 둘러싼 몰입형 3D 공간으로 구현되고, 구글북에서는 대화면에 최적화된 앱들이 전면에 돋보이게 배치됩니다. 여러분이 열정을 쏟는 다양한 콘텐츠를 발견할 수 있도록, 이제 스포츠 주제 페이지(Sports Topic Pages)에서 프리미어 리그, 챔피언스 리그, 라리가, 리가 MX, 메이저 리그 사커와 같은 글로벌 축구 리그 콘텐츠를 다룹니다. AI 기반 검색 ‘애스크 플레이’와 ‘플레이 인 제미나이’ ‘애스크 플레이(Ask Play)’는 질문을 던지고 즉시 맞춤형 추천을 받을 수 있는 기능입니다. 오늘부터 애스크 플레이를 활용하면 앱 간의 비교 결과를 생성하여, 주요 차이점과 사용자 반응을 한눈에 보여줄 수 있습니다. 한편, '플레이 인 제미"
+                }
+              ],
+              "current_relevance": {
+                "kind": "unknown",
+                "source_index": 0,
+                "quote": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법 2026년 10월 14일 | x.com 페이스북 링크드인 이메일 링크복사 구글플레이가 AI를 활용한 나만의 앱 제작부터 개인화된 앱·게임 추천, 친구들과 함께하는 새로운 게임 경험과 풍성한 보상까지, 이용자들이 더 쉽게 콘텐츠를 발견하고 즐기며 직접 창작할 수 있도록 돕는 다양한 신규 기능을 소개합니다. 샘 브라이트(Sam Bright) 구글플레이 및 개발자 생태계 총괄 부사장 공유하기 x.com 페이스북 링크드인 이메일 링크복사 구글플레이는 이용자가 즐기는 앱과 게임을 연결해 줍니다. 오늘날 구글플레이는 이용자들이 직접 만든 콘텐츠와 연결되는 공간으로 진화하고 있습니다. 이제 아이디어만 있다면 누구나 개인용 앱을 만들고 구글플레이에서 실행할 수 있게 되었습니다. 또한, 여러분이 주도적으로 제어할 수 있는 새로운 탐색 및 플레이 방식도 함께 소개합니다. 구글플레이의 새로운 소식을 확인해 보세요. 나만의 앱을 만들고 출시하는 새로운 방법 \"'어떤 상황이든 맞는 앱이 있는(there's an app for that)’ 시대에서 '나만을 위한 앱이 있는(there's an app for me)' 시대로.\" 구글 AI 스튜디오(Google AI Studio)를 사용하면 맞춤형 안드로이드 앱을 '바이브 코딩(vibe code, 자연어 지시만으로 코딩)'할 수 있습니다. 이러한 앱의 상당수는 개인적인 프로젝트로 시작되므로, 이제 구글플레이를 통해 본인의 기기에서 개인용 앱을 바로 실행할 수 있도록 지원합니다. 즉, 여러분의 창작물은 퍼블릭 스토어 카탈로그와 분리되어 비공개로 안전하게 유지됩니다. 일반 구글 계정만 있으면 되며, 별도의 개발자 계정은 필요하지 않습니다. 이 기능은 오늘부터 미국을 포함한 일부 시장의 18세 이",
+                "event_start": null,
+                "event_end": null,
+                "date_quote": null
+              }
+            }
+          },
+          "score_components": {
+            "latest_issue": 10,
+            "intent_fit": 15
+          },
+          "score": 25,
+          "publish_eligible": false,
+          "hold_reasons": [
+            "narrower_source_coverage",
+            "unverified_source_coverage"
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "keyword": "애스크 플레이",
+          "reason": "same announcement already evaluated"
+        },
+        {
+          "keyword": "플레이 인 제미나이",
+          "reason": "search intent or official evidence does not support an article",
+          "decision_diagnostics": {
+            "official_sources": [
+              {
+                "url": "https://blog.google/intl/ko-kr/products/android-play-hardware/2026-10-new-tools-for-discovery-and-engagement-kr/",
+                "title": "구글플레이에서 더 스마트한 앱 발견, 참여도 향상, 그리고 비즈니스 성장을 이끄는 새로운 방법",
+                "excerpt_chars": 4290
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "category_mismatch"
+            }
+          }
+        }
+      ],
+      "latest_issue_listing": [
+        {
+          "url": "https://workspaceupdates.googleblog.com/2026/10/an-update-on-launch-of-skills-in-gemini-app-and-workspace.html",
+          "title": "An update on the launch of skills in the Gemini app and Workspace",
+          "lead": "",
+          "published": "2026-10-14",
+          "publisher": "google_workspace_updates"
+        },
+        {
+          "url": "https://blog.google/intl/ko-kr/products/android-play-hardware/2026-10-new-tools-for-discovery-and-engagement-kr/",
+          "title": "구글플레이에서 더 스마트한 앱 발견, 참여도 향상, 그리고 비즈니스 성장을 이끄는 새로운 방법",
+          "lead": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Developer_Blogger_Banner_4209_1.max-600x600.format-webp.webp\">애스크 플레이(Ask Play)의 앱 비교 기능, 새로운 게임 참여 도구, 앱 경험(Apps Experience program) 프로그램 및 레벨업(Level Up) 프로그램 등 구글플레이의 최신 업데이트를 만나보세요.",
+          "published": "2026-10-14",
+          "publisher": "google_korea_blog"
+        },
+        {
+          "url": "https://workspaceupdates.googleblog.com/2026/10/switch-from-live-stream-viewer-to-contributor-in-Google-Meet-on-Android.html",
+          "title": "Switch from live stream viewer to contributor in Google Meet on Android",
+          "lead": "",
+          "published": "2026-10-14",
+          "publisher": "google_workspace_updates"
+        },
+        {
+          "url": "https://blog.google/intl/ko-kr/products/android-play-hardware/google-play-updates-october-2026-kr/",
+          "title": "구글플레이의 새로운 소식: 발견하고, 플레이하고, 창작하는 더 많은 방법",
+          "lead": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New_on_Google_Play_More_ways_to.max-600x600.format-webp_PkNr9fI.webp\">AI로 나만의 앱을 만들고, 취향에 맞는 게임을 발견하며, 새로운 소셜 플레이와 보상까지 즐겨보세요. 구글플레이의 최신 업데이트를 소개합니다.",
+          "published": "2026-10-14",
+          "publisher": "google_korea_blog"
+        },
+        {
+          "url": "https://workspaceupdates.googleblog.com/2026/10/find-your-routine-next-steps-on-post-meeting-screen-in-Google-Meet.html",
+          "title": "Find your routine next steps on the post-meeting screen in Google Meet",
+          "lead": "",
+          "published": "2026-10-13",
+          "publisher": "google_workspace_updates"
+        },
+        {
+          "url": "https://blog.google/intl/ko-kr/products/gemini-4-argon-in-google-antigravity-kr/",
+          "title": "구글 안티그래비티에 탑재된 제미나이 4 아르곤",
+          "lead": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4-Argon---Wide.max-600x600.format-webp.webp\">이제 ‘제미나이 4 아르곤(Gemini 4 Argon)’의 도입과 함께, 안티그래비티 앱에서 에이전트 중심 경험이 본격 구현됩니다.",
+          "published": "2026-10-14",
+          "publisher": "google_korea_blog"
+        },
+        {
+          "url": "https://workspaceupdates.googleblog.com/2026/10/configure-access-management-and-access-Approvals-policies-using-classification-labels-with-rules-in-Assured-Controls.html",
+          "title": "Configure Access Management and Access Approvals policies using classification labels with rules in Assured Controls",
+          "lead": "",
+          "published": "2026-10-13",
+          "publisher": "google_workspace_updates"
+        },
+        {
+          "url": "https://blog.google/intl/ko-kr/products/gemini-4-argon-availability-kr/",
+          "title": "제미나이 4 아르곤, 이제 제미나이 앱에서 만나보세요",
+          "lead": "<img src=\"https://i.ytimg.com/vi_webp/frgCYZ_TEwY/maxresdefault.webp\">이제 제미나이(Gemini) 앱에서 '제미나이 4 아르곤(Gemini 4 Argon)'을 이용할 수 있습니다. 아르곤은 복잡한 워크플로우 전반에서 한층 발전한 프론티어급 추론 역량과 향상된 성능을 제공합니다. 질문에 더 직접적으로 답하고, 불확실한 표현은 줄이며, 불필요한 반복과 상투적인 표현도 덜어냈…",
+          "published": "2026-10-14",
+          "publisher": "google_korea_blog"
+        },
+        {
+          "url": "https://workspaceupdates.googleblog.com/2026/10/google-meet-now-uses-post-quantum-cryptography.html",
+          "title": "Google Meet now uses post-quantum cryptography",
+          "lead": "",
+          "published": "2026-10-13",
+          "publisher": "google_workspace_updates"
+        },
+        {
+          "url": "https://blog.google/intl/ko-kr/products/introducing-gemini-4-argon-kr/",
+          "title": "제미나이 4 아르곤: 가장 까다로운 난제를 해결하도록 설계된 모델",
+          "lead": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-argon__blog-header__27.max-600x600.format-webp.webp\">이제 개발자와 기업 고객은 제미나이 API(Gemini API)를 통해 제미나이 4 아르곤(Gemini 4 Argon)을 이용할 수 있습니다.",
+          "published": "2026-10-14",
+          "publisher": "google_korea_blog"
+        }
+      ]
+    },
     "analysis_diagnostics": [
       {
         "stage": "shortlist",
         "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11611
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10937
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 22699
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 22702
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11676
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 20779
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
         "status": "error",
-        "code": "usage_limit",
-        "elapsed_ms": 2983
+        "code": "invalid_schema",
+        "elapsed_ms": 20781,
+        "validation": {
+          "reason": "source_duplicate",
+          "row_index": 1
+        }
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 15892
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 2,
+        "status": "returned",
+        "elapsed_ms": 15895
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9751
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9198
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9197
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 25486
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8012
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11883
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 29681
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 11389
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8147
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 9593
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 30573
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8334
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10811
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 85576
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 30222
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 19949
       }
     ],
-    "analysis_recovery_attempts": 0,
-    "source_discovery_audit": [],
-    "selection_outcome": "analysis_unavailable",
+    "analysis_recovery_attempts": 1,
+    "source_discovery_audit": [
+      {
+        "keyword": "",
+        "category": "생산성",
+        "stage": "latest_issue_search",
+        "query": "업무 도구 신규 기능 공식 발표 after:2026-10-13 before:2026-10-15",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://daouoffice.com/blog/work-platform-selection-guide",
+            "domain": "daouoffice.com",
+            "title": "업무플랫폼 선택 가이드, 그룹웨어만으로 충분할까? - 다우오피스 공식 블로그",
+            "snippet": "업무플랫폼과 그룹웨어, 뭐가 다른가 그룹웨어 개별 도입 vs 올인원 업무플랫폼 도입 시 차이 그룹웨어 개별 도입 시 발생하는 문제 올인원 업무플랫폼이 해결하는 것 업무플랫폼 선택"
+          },
+          {
+            "url": "https://kois.co.kr/geo/answers/moq-37b5adda",
+            "domain": "kois.co.kr",
+            "title": "산업용 부품의 최소주문수량(MOQ)·샘플·금형비·양산단가는 어떻게 비교해야 하나요?",
+            "snippet": "# 산업용 부품의 최소주문수량(MOQ)·샘플·금형비·양산단가는 어떻게 비교해야 하나요? ... 샘플이 양산 공정으로 만든 승인용 시제품인지, MOQ가 발주·품번·옵션·연간약정 중 어디에 적용되는지, 금형 소유·수명·보관·수정·반환 조건이 무엇인지, 양산단가에 검사·성적서·포장·운송·불량대체가"
+          },
+          {
+            "url": "https://www.factory-platform.com/",
+            "domain": "www.factory-platform.com",
+            "title": "식품제조업체 매칭 팩토리플랫폼",
+            "snippet": "* 가격 변동 큰 식품원료 최신 가격 반영으로 ... 사후분쟁을 대비한 제조/원료의뢰계약서 ... * 도라지배즙 제조사 모집 파트너 모집중 건강기능/음료 추정 예산 : 상담 후"
+          },
+          {
+            "url": "https://www.kriss.re.kr/board.es?act=view&bid=0006&cg_code=&list_no=63177&mid=a10502020000&nPage=1&tag=",
+            "domain": "www.kriss.re.kr",
+            "title": "한국표준과학연구원 2025년 1차 정규직 공개채용 | 채용공고 | 채용공고 | 알림소식 : 한국표준과학연구원",
+            "snippet": "채용절차 및 세부내용 연구직 전형절차 내용 응시원서 내용을 토대로 채용예정분야 전문성 및 적격성 평가 - 평가항목: 실적, 경험, 역량 및 적격성 등 1차 전형 서류전형"
+          },
+          {
+            "url": "https://www.ranketai.com/ko/glossary/ai-visibility-tools-comparison-2026-05",
+            "domain": "www.ranketai.com",
+            "title": "AI 가시성 측정 도구 비교 — 12종 매트릭스 + ROI 가이드 (2026-08 갱신) · RanketAI",
+            "snippet": "Profound·Otterly·Peec·KIME·Ahrefs·Semrush·블루닷·ChainShift·NNT·팀하이·온더AI·RanketAI 12종을 진입가·기능 매트릭스·비즈니스 규모별 ROI 가이드 3축으로 비교한다. ... AI 가시성 측정 도구 (업계 통칭 AI SEO 도구·AI 브랜드 가시성 진단 서비스, 학술 용어"
+          },
+          {
+            "url": "https://smallppt.com/ko/blog/ai-tools/best-ai-ppt-generator-ko",
+            "domain": "smallppt.com",
+            "title": "한국 인기 AI PPT 생성기 12선 | 기능·가격·사용법·후기 총정리 (2026)",
+            "snippet": "# 한국 인기 AI PPT 생성기 12선 | 기능·가격·사용법·후기 총정리 (2026) ... AI PPT 생성기란, 인공지능을 활용해 발표 자료(슬라이드)를 자동으로 만들어 주는 도구를 말합니다. ..."
+          },
+          {
+            "url": "https://www.adiga.kr/jbp/jnf/jobInfoDetail.do?menuId=PCJBPJNF2000&searchCrCd=K000001024&searchCrSeClsfCd=D999",
+            "domain": "www.adiga.kr",
+            "title": "직업정보 - 대입정보포털",
+            "snippet": "[ 정보제공 : 한국고용정보원 고용24(구 워크넷) ] ... | 식품가공기능사(국가기술) | 제분·도정 기계 조작원 ... 능력/지식/환경 | 업무수행능력 | 지식 | 환경 ... 심신의 안녕(25)"
+          },
+          {
+            "url": "https://sjmom.net/cert/%EC%96%91%EC%8B%9D%EC%A1%B0%EB%A6%AC%EA%B8%B0%EB%8A%A5%EC%82%AC/",
+            "domain": "sjmom.net",
+            "title": "양식조리기능사 - 시험일정, 응시자격, 합격기준 | 자격증 누리집",
+            "snippet": "양식조리기능사 분야의 설치, 조작, 점검 및 정비 업무를 수행합니다. ... 2과목 총 60문제 60분, 객관식 4지 택일형, 60문항(60분) ... * • 합격 발표: 시험 직후"
+          },
+          {
+            "url": "https://www.sekyungapparel.com/journal/team-uniform-oem-essentials",
+            "domain": "www.sekyungapparel.com",
+            "title": "단체복 제작 OEM, 200~500벌 발주 전 알아야 할 6가지 · 의류 제작 발주 가이드 — 세경실업",
+            "snippet": "기업 워크숍·전사 행사를 준비하는 인사·총무팀, 프랜차이즈 본사의 지점 유니폼 담당, 대학교 단대·동문회의 행사 담당. ... 도수가 늘어도 한 벌당 단가 상승이 미미해서, 풀컬러·여러 위치 인쇄가"
+          },
+          {
+            "url": "https://www.dsninfo.or.kr/cost/standard.do?category=WAGE&type=PRICE",
+            "domain": "www.dsninfo.or.kr",
+            "title": "디자인대가기준종합정보시스템",
+            "snippet": "노임단가고시(발표)를 위한 *통계청 승인 ... (사)한국디자인산업연합회 산업디자인 표준품셈 공표(2020.02.28) ... 디자인 산업은 무형의 가치를 중요시하는 서비스업으로서 대상 사업의 규모에 대한 유형적 설정이 어렵지만 규모와 업무내용에"
+          }
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "생산성",
+        "stage": "latest_issue_source",
+        "url": "https://www.dsninfo.or.kr/cost/standard.do?category=WAGE&type=PRICE",
+        "status": "no_recent_date",
+        "observed_dates": [
+          "2019-12-20",
+          "2020-02-28"
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "생산성",
+        "stage": "latest_issue_search",
+        "query": "생산성 소프트웨어 업데이트 출시 after:2026-10-13 before:2026-10-15",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4?nomo=1",
+            "domain": "www.saramin.co.kr",
+            "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "기타 게임 소프트웨어 개발 및 공급업 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
+          },
+          {
+            "url": "https://m.saramin.co.kr/job-search/company-info-view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
+            "domain": "m.saramin.co.kr",
+            "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "NICE 평가정보 출처 : 기업형태, 매출액, 설립일, 주소, 대표자명, 사업내용, 업종 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... 대표이사 유래형 사임,대표이사"
+          },
+          {
+            "url": "https://mwm.ai/ko/apps/ai-asking-writing-chatart/6447418798",
+            "domain": "mwm.ai",
+            "title": "AI Chatbot&AI Writer-ChatArt - 생산성 앱 | MWM",
+            "snippet": "모두 같은 기간에 출시된 전체 앱을 기준으로 산출했습니다. ... 2023년 출시 앱 중 Challenger ... MWM Intelligence 플랫폼이 제공하는 메타데이터, 랭킹 맥락, 스토어 신호입니다. ..."
+          },
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=UC80WFlDV24yNmdHeWpZZEVBNUVSQT09",
+            "domain": "www.saramin.co.kr",
+            "title": "(주)스포잇 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "* 출산의 기쁨을 함께 ... 기업형태: 중소기업, 주식회사, 수출입 기업 ... 소프트웨어 개발,공급/스포츠영상분석장치,전자감지장치,비디오,영상기기 제조/풋살장,축구장 운영/스포츠 컨설팅 ... 그리고 이른 나이에 은퇴한 선수들에게 강사 경험, 진로교육"
+          },
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=SHlGT0tPcVlwUXZKMjNZbnJpNTVvZz09",
+            "domain": "www.saramin.co.kr",
+            "title": "(주)에스피소프트 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "Image: (주)에스피소프트의 기업로고 ... 컴퓨터 프로그래밍 서비스업 ... * 남성출산휴가 기업! ... 소규모 조직을 위한 VDI올인원패키지, 브이패스(V-Pass) 출시 ... 주문, 결제, 관리까지 시스템 자동화가 적용된"
+          },
+          {
+            "url": "https://www.sfacspace.com/",
+            "domain": "www.sfacspace.com",
+            "title": "스팩스페이스",
+            "snippet": "기술 장벽 없이 아이디어를 실현하고, 제작 효율과 창작의 범위를 넓히는 환경을 제공합니다. ... 방송 영상, 3D 등 각 도메인의 고유한 데이터 특성을 정밀하게 반영하고, AI가"
+          },
+          {
+            "url": "https://www.jobplanet.co.kr/job/search?posting_ids%5B%5D=1536997",
+            "domain": "www.jobplanet.co.kr",
+            "title": "(주)스팬딧 채용공고 - Problem Solver (Product & Design), 서울 채용, 3.8 기업 만족도, 20개 기업리뷰",
+            "snippet": "기업들은 임직원의 업무 환경에 최적화된 비용 관리 및 정산 프로세스가 구축 가능하며 비용 절감, 생산성 향상, 재무 가시성 증가 등 혁신적인 효과까지 얻을 수 있습니다."
+          },
+          {
+            "url": "https://kbench.com/?q=node%2F275925",
+            "domain": "kbench.com",
+            "title": "삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 | 케이벤치 주요뉴스",
+            "snippet": "# 삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 ... 주요 변경 사항으로는 2026년 1월 보안 패치 적용과 함께 기기 전반의 안정성 및"
+          },
+          {
+            "url": "https://kingtools.kr/ko/",
+            "domain": "kingtools.kr",
+            "title": "킹툴즈 KingTools - 무료 유틸리티 소프트웨어",
+            "snippet": "강력한 기능의 무료 소프트웨어 ... 2026-10-05 킹뷰 v1.3.0 업데이트 2026-10-02 킹캡처 KingCapture v1.3.0 업데이트 2026-09-29 킹메모 v1.5.0 업데이트 2026-09-07 킹캡처 KingCapture 출시 신규 2026-08-28 킹캠"
+          },
+          {
+            "url": "https://www.space-dust.com/",
+            "domain": "www.space-dust.com",
+            "title": "스페이스 : 청소의 상식에 도전한다.",
+            "snippet": "#### NEW 프리미엄급 신장비 출시 ... 법인명(상호) : (주)스페이스 / 대표자(성명) : 조현행, 임진섭 ... 본사> 주소 : 경기도 김포시 양촌읍 학운산단5로라길 31 | 전화"
+          }
+        ]
+      },
+      {
+        "keyword": "MS365",
+        "category": "생산성",
+        "stage": "native_source_research",
+        "locators": [
+          {
+            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
+            "origin": "model_reported_locator"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/share-your-microsoft-365-subscription",
+            "origin": "model_reported_locator"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/manage-microsoft-365-subscription-sharing",
+            "origin": "model_reported_locator"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/microsoft-365-copilot/frequently-asked-questions-about-copilot-in-microsoft-365-subscriptions",
+            "origin": "model_reported_locator"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/switch-between-microsoft-365-subscriptions",
+            "origin": "model_reported_locator"
+          },
+          {
+            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/update-m365-office-macos-ios",
+            "origin": "model_reported_locator"
+          }
+        ],
+        "searched": true,
+        "coverage_gaps": null
+      },
+      {
+        "keyword": "MS365",
+        "category": "생산성",
+        "stage": "source_fetch",
+        "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
+        "title": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 | Microsoft Support",
+        "excerpt_chars": 8000
+      },
+      {
+        "keyword": "MS365",
+        "category": "생산성",
+        "stage": "source_fetch",
+        "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/share-your-microsoft-365-subscription",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/share-your-microsoft-365-subscription",
+        "title": "Microsoft 365 구독 공유 | Microsoft Support",
+        "excerpt_chars": 2465
+      },
+      {
+        "keyword": "MS365",
+        "category": "생산성",
+        "stage": "source_fetch",
+        "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/manage-microsoft-365-subscription-sharing",
+        "outcome": "fetched",
+        "failure_codes": [],
+        "final_url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/manage-microsoft-365-subscription-sharing",
+        "title": "Microsoft 365 구독 공유 관리 | Microsoft Support",
+        "excerpt_chars": 1442
+      },
+      {
+        "keyword": "어도비익스프레스",
+        "category": "생산성",
+        "stage": "native_source_research",
+        "locators": [],
+        "searched": true,
+        "coverage_gaps": null
+      }
+    ],
+    "selection_outcome": "research_budget_exhausted",
     "selection_funnel": {
-      "measured": 0,
-      "pool": 0,
-      "shortlist_offered_unique": 0,
-      "evaluated": 0,
+      "measured": 342,
+      "pool": 209,
+      "shortlist_offered_unique": 209,
+      "evaluated": 3,
       "held": 0,
-      "rejected": 0,
+      "rejected": 3,
       "selected": 0,
-      "stop_reason": "analysis_unavailable"
+      "stop_reason": "round_limit"
     }
   },
   "리뷰": {

@@ -242,7 +242,10 @@ class TestMarketEvidenceRepair:
             'META_DESCRIPTION: 당화혈색소정상수치를 제공된 공식 자료의 정상 기준으로 확인합니다.\n'
             'SLUG: hba1c-normal-range\n---CONTENT---\n'
             '<h1>당화혈색소정상수치: 기준 확인</h1>'
-            '<section id="quick-answer"><p>당화혈색소정상수치를 확인하세요.</p></section>'
+            '<section id="quick-answer" data-highlights="1">'
+            '<p data-highlight="conclusion">당화혈색소정상수치를 확인하세요.</p>'
+            '<dl data-highlight="facts"><div><dt>근거</dt><dd>제공된 공식 기준</dd></div></dl>'
+            '<aside data-highlight="action"><p>개인 상태와 구분해 원문 기준을 확인하세요.</p></aside></section>'
             '<section id="reader-overview"><h2 id="normal">정상 기준</h2>'
             '<p>제공되지 않은 NIDDK 주장입니다.</p><p>개인 상태와 구분해 읽습니다.</p></section>'
             '<section id="reader-process"><h2>기록 순서</h2><ol data-visual="steps">'
@@ -354,6 +357,18 @@ class TestMarketEvidenceRepair:
         assert writer.call_count == 2
         repair.assert_not_called()
         assert content.editorial_issues == ['검수 이슈']
+
+
+    def test_final_gate_catches_highlights_removed_during_repair(self, setup_writer, monkeypatch):
+        generator, _, brief, article = setup_writer
+        monkeypatch.setattr('src.content_generator.review_evidence',
+                            Mock(side_effect=[['조건 확인'], []]))
+        monkeypatch.setattr('src.content_generator.repair_evidence',
+                            lambda html, *a, **kw: html.replace('data-highlights="1"', ''))
+        with patch.object(generator, '_call_llm', return_value=article):
+            content = generator.generate(brief['topic'], [brief['keyword']], ContentType.GUIDE,
+                                         category='건강', market_brief=brief)
+        assert any('article-highlights-v1' in issue for issue in content.editorial_issues)
 
 
 class TestPromptLoading:

@@ -3,6 +3,7 @@ import json
 import pytest
 from bs4 import BeautifulSoup
 from src.article_format import format_general_article
+from tests.test_article_highlights import QUICK
 from src.category_format import CATEGORY_SECTIONS, SECTION_IDS, apply_category_layout, category_format_issues, category_writing_rules
 
 RAW = '''<section id="quick-answer"><p>핵심 답변과 원문을 확인하세요.</p></section>
@@ -79,7 +80,8 @@ def test_generator_retries_then_holds_missing_category_sections(monkeypatch, cat
     monkeypatch.setattr('src.content_generator.review_evidence', lambda *a: [])
     prefix = '---SEO-META---\nFOCUS_KEYPHRASE: 안내\nMETA_DESCRIPTION: 공식 자료 안내입니다.\nSLUG: reader-test\n---CONTENT---\n<h1>공식 자료 안내</h1>'
     missing = '<section id="quick-answer"><p>요약</p></section><h2>FAQ</h2>'
-    writer = Mock(side_effect=[prefix + missing, prefix + RAW])
+    complete = RAW.replace(RAW[:RAW.index("</section>") + len("</section>")], QUICK, 1)
+    writer = Mock(side_effect=[prefix + missing, prefix + complete])
     monkeypatch.setattr(generator, '_call_llm', writer)
     result = generator.generate('공식 자료 안내', ['안내'], ContentType.GUIDE, category=category)
     assert writer.call_count == 2
@@ -88,3 +90,28 @@ def test_generator_retries_then_holds_missing_category_sections(monkeypatch, cat
     writer.side_effect = [prefix + missing, prefix + missing]
     failed = generator.generate('공식 자료 안내', ['안내'], ContentType.GUIDE, category=category)
     assert any('카테고리 포맷 필수 섹션' in issue for issue in failed.editorial_issues)
+
+
+def test_generator_retries_and_holds_missing_highlights(monkeypatch):
+    from unittest.mock import Mock, patch
+    from src.content_generator import ContentGenerator, ContentConfig, ContentType
+    monkeypatch.delenv('BLOG_OFFICIAL_SOURCE_URLS', raising=False)
+    with patch.object(ContentGenerator, '_setup_apis'):
+        generator = ContentGenerator(ContentConfig(language='ko'))
+    def research(**kwargs):
+        generator._research_sources = [dict(SOURCE)]
+        return ''
+    monkeypatch.setattr(generator, 'research_with_grounding', research)
+    monkeypatch.setattr(generator, '_validate', lambda html: (True, []))
+    monkeypatch.setattr('src.content_generator.review_evidence', lambda *a: [])
+    prefix = '---SEO-META---\nFOCUS_KEYPHRASE: 안내\nMETA_DESCRIPTION: 공식 자료 안내입니다.\nSLUG: reader-test\n---CONTENT---\n<h1>공식 자료 안내</h1>'
+    complete = RAW.replace(RAW[:RAW.index('</section>') + len('</section>')], QUICK, 1)
+    writer = Mock(side_effect=[prefix + RAW, prefix + complete])
+    monkeypatch.setattr(generator, '_call_llm', writer)
+    result = generator.generate('공식 자료 안내', ['안내'], ContentType.GUIDE, category='테크')
+    assert writer.call_count == 2
+    assert 'article-highlights-v1' in writer.call_args_list[0].args[0]
+    assert not result.editorial_issues
+    writer.side_effect = [prefix + RAW, prefix + RAW]
+    failed = generator.generate('공식 자료 안내', ['안내'], ContentType.GUIDE, category='테크')
+    assert any('article-highlights-v1' in issue for issue in failed.editorial_issues)

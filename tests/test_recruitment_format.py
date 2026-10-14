@@ -79,7 +79,9 @@ def test_generation_retries_missing_format_and_gates_final_failure(monkeypatch):
     prefix = ('---SEO-META---\nFOCUS_KEYPHRASE: 채용\nMETA_DESCRIPTION: 채용 안내입니다.\n'
               'SLUG: hiring-test\n---CONTENT---\n<h1>채용 안내</h1>')
     missing = '<section id="quick-answer"><p>요약</p></section><h2>FAQ</h2>'
-    writer = Mock(side_effect=[prefix + missing, prefix + RAW])
+    from tests.test_article_highlights import QUICK
+    complete = RAW.replace(RAW[:RAW.index("</section>") + len("</section>")], QUICK, 1)
+    writer = Mock(side_effect=[prefix + missing, prefix + complete])
     monkeypatch.setattr(generator, '_call_llm', writer)
     result = generator.generate('채용 안내', ['채용'], ContentType.GUIDE, category='취업')
     assert writer.call_count == 2

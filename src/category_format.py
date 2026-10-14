@@ -2,6 +2,7 @@
 from pathlib import Path
 from bs4 import BeautifulSoup, Tag
 from .recruitment_format import RECRUITMENT_CSS
+from .article_highlights import HIGHLIGHTS_CSS, add_highlights_sources
 
 VERSION = 'category-menu-v1'
 CATEGORY_SECTIONS = {
@@ -106,7 +107,7 @@ def reader_styles(category):
     """One line prevents WordPress wpautop from corrupting owned CSS."""
     if category not in COLORS:
         raise ValueError('Unknown reader category')
-    return ' '.join(CSS.split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
+    return ' '.join((CSS + HIGHLIGHTS_CSS).split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
 
 
 def apply_category_layout(html, category):
@@ -195,6 +196,7 @@ def apply_category_layout(html, category):
     if style is None:
         style = soup.new_tag('style', id='wpab-reading-styles'); article.insert_before(style)
     style.string = reader_styles(category)
+    add_highlights_sources(soup, article)
     script = soup.new_tag('script', id='wpab-category-reader')
     script.string = Path(__file__).with_name('category_reader.js').read_text(encoding='utf-8')
     article.insert_after(script)

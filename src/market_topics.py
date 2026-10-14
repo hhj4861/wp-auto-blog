@@ -119,6 +119,20 @@ def norm(value):
     return re.sub(r'[^가-힣a-z0-9]', '', value)
 
 
+def research_seed_keywords():
+    """Extra discovery hints, never approved topics or substitutes for demand."""
+    raw = os.getenv('BLOG_RESEARCH_SEEDS', '')
+    if len(raw) > 800:
+        raise ValueError('Research seeds input is too long')
+    seeds = list(dict.fromkeys(line.strip() for line in raw.splitlines() if line.strip()))
+    if len(seeds) > 8 or any(len(seed) > 80 or not norm(seed)
+                             or any(ord(char) < 32 for char in seed) for seed in seeds):
+        raise ValueError('Use up to eight research keywords, at most 80 characters each')
+    if seeds and shared_discovery.enabled():
+        raise ValueError('Research seeds cannot override shared discovery')
+    return seeds
+
+
 def inferred_keyword_category(keyword):
     key = norm(keyword)
     if any(term in key for term in CATEGORY_TERMS['취업']) or re.search(r'자격증(?!명|빙)', key):
@@ -1366,6 +1380,7 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
 @source_fetch_scope()
 def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
     """Latest issues first; a verified evergreen topic only when none passes (2026-10-09)."""
+    research_seed_keywords()  # Validate before the latest-issue or fallback route.
     if not (LATEST_LISTING_SELECTION and category in latest_listings.SOURCES):
         return _select_measured_category(category, top_n, titles, excluded_keywords=excluded_keywords,
                                          failure_history=failure_history)
@@ -1421,7 +1436,7 @@ def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywor
         seeds = list(dict.fromkeys(p['keyword'] for p in proposals))
         approved_keys = {norm(k) for k in seeds}
     else:
-        seeds = list(CATEGORIES[category])
+        seeds = list(dict.fromkeys([*research_seed_keywords(), *CATEGORIES[category]]))
     latest_seeds, latest_audit = latest_issues.discover(
         category, clock, search_results, fetch_source, ask, deadline=started + 240)
     seeds = list(dict.fromkeys([*latest_seeds, *seeds]))

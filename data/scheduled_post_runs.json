@@ -531,7 +531,9 @@
       "category": "테크",
       "slot": "morning",
       "claimed_at": "2026-10-14T09:00:12.339249+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-14T00:17:39.213801+00:00",
+      "published_category": "건강"
     }
   }
 }

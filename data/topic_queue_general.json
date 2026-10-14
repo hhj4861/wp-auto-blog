@@ -34226,5 +34226,878 @@
     "score": 57.91,
     "publish_eligible": true,
     "hold_reasons": []
+  },
+  {
+    "keyword": "엽산효능",
+    "category": "건강",
+    "topic": "엽산효능: 몸에서 하는 역할·부족 증상·하루 필요량과 음식",
+    "intent": "엽산은 어떤 효능이 있으며, 부족하면 어떤 증상이 생기고 음식과 보충제로 얼마나 섭취해야 할까?",
+    "gap": "효능별 근거와 한계 비교표, 미국 기준 생애주기별 필요량표, DFE·폴산 함량을 구분하는 라벨 체크리스트를 제공한다.",
+    "source_url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/?source=post_page---------------------------",
+    "verified_sources": [
+      {
+        "url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/?source=post_page---------------------------",
+        "original_url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/?source=post_page---------------------------",
+        "title": "Folate - Consumer",
+        "checked_on": "2026-10-14",
+        "publication_dates": [],
+        "sha256": "d68c2cddaa9440a1169e59b1f58dd8f6882ca866ab7d0526bff70f7a53862252",
+        "excerpt": "Folate Fact Sheet for Consumers Have a question? Ask ODS Join the ODS Email List This is a general overview.  For more in-depth information, see our health professional fact sheet . What is folate and what does it do? Folate is a B- vitamin that is naturally present in many foods. Your body needs folate to make DNA and other genetic material. Your body also needs folate for your cells to divide. A form of folate, called folic acid , is used in fortified foods and most dietary supplements . How much folate do I need? The amount of folate you need depends on your age. Average daily recommended amounts are listed below in micrograms (mcg) of dietary folate equivalents (DFEs). Life Stage Recommended Amount Birth to 6 months 65 mcg DFE Infants 7–12 months 80 mcg DFE Children 1–3 years 150 mcg DFE Children 4–8 years 200 mcg DFE Children 9–13 years 300 mcg DFE Teens 14–18 years 400 mcg DFE Adults 19+ years 400 mcg DFE Pregnant teens and women 600 mcg DFE Breastfeeding teens and women 500 mcg DFE The measure of mcg DFE is used because your body absorbs more folic acid from fortified foods and dietary supplements than folate found naturally in foods. Compared to folate found naturally in foods, you actually need less folic acid to get recommended amounts. For example, 240 mcg of folic acid and 400 mcg of folate are both equal to 400 mcg DFE. All women and teen girls who could become pregnant should consume 400 mcg of folic acid daily from supplements, fortified foods, or both in addition to the folate they get from following a healthy eating pattern. What foods provide folate? Folate is naturally present in many foods, and folic acid is added to some foods. You can get recommended amounts by eating a variety of foods, including the following. Folate is naturally present in: Beef liver Vegetables (especially asparagus, brussels sprouts, and dark green leafy vegetables such as spinach and mustard greens) Fruits and fruit juices (especially oranges and orange juice) Nuts, beans, and peas (such as peanuts, black-eyed peas, and kidney beans) Folic acid is added to the following foods: Enriched bread, flour, cornmeal, pasta, and rice Fortified breakfast cereals Fortified corn masa flour (used to make corn tortillas and tamales, for example) To find out whether a food has added folic acid, look for folic acid on its Nutrition Facts label . What kinds of folate dietary supplements are available? Folate is available in multivitamins and prenatal vitamins. It is also available in B-complex dietary supplements and supplements containing only folate. In dietary supplements, folate is usually in the form of folic acid, but methylfolate (5-MTHF) is also used. Dietary supplements containing 5-MTHF might be better than folic acid for some individuals who have a gene variant called MTHFR C677T because their bodies can use this form more easily. However, all women and teen girls who could become pregnant should get 400 mcg a day of folic acid, not 5-MTHF, even if they have an MTHFR C677T gene variant (see Neural tube defects below). Am I getting enough folate? Most people in the United States get enough folate. However, certain people are more likely than others to have trouble getting enough folate: Teen girls age 14–18 years, women age 19–30 years, and non-Hispanic black women People with alcohol use disorder People with disorders that lower nutrient absorption (such as celiac disease and inflammatory bowel disease ) People with an MTHFR gene variant What happens if I don’t get enough folate? Folate deficiency is rare in the United States, but some people do not get enough. Getting too little folate can result in megaloblastic anemia , a blood disorder that causes weakness, fatigue , trouble concentrating, irritability, headache, heart palpitations , and shortness of breath. Folate deficiency can also cause open sores on the tongue and inside the mouth as well as changes in the color of the skin, hair, or fingernails. Women who don't get enough folate are at risk of having babies with neural tube defects , such as spina bifida . Folate deficiency can also increase the likelihood of having a premature or low birth weight baby. What are some effects of folate on health? Scientists are studying folate to understand how it affects health. Here are several examples of what this research has shown. Neural tube defects Taking folic acid before becoming pregnant and during early pregnancy helps prevent neural tube defects in babies. Neural tube defects are major birth defects in a baby’s brain ( anencephaly ) or spine (spina bifida). However, about half of all pregnancies are unplanned. Therefore, all women and teen girls who could become pregnant should consume 400 mcg of folic acid daily from supplements, fortified foods, or both—even if they have an MTHFR C677T gene variant—in addition to the folate they get from following a healthy eating pattern. Since 1998, the U.S. Food and Drug Administration (FDA) has required food companies to add folic acid to enriched bread, flour, cornmeal, pasta, rice, and other grain products sold in the United States. In 2016, FDA allowed manufacturers to voluntarily add folic acid to corn masa flour. Because most people in the United States eat these foods, folic acid intakes have increased since 1998, and the number of babies born with neural tube defects has decreased. Cancer Folate that is naturally present in food may decrease the risk of several forms of cancer, but folate supplements might have different effects on cancer risk depending on how much the person takes and when. People who take recommended amounts of folic acid before cancer develops might decrease cancer risk, but taking high doses after cancer (especially colorectal cancer ) begins might speed up its progression . For this reason, people should be cautious about taking high doses of folic acid supplements (more than the upper limit of 1,000 mcg), especially if they have a history of colorectal adenomas (which sometimes turn into cancer). More research is needed to understand the roles of dietary folate and folic acid supplements in cancer risk. Depression People with low blood levels of folate might be more likely to have depression. In addition, they might not respond as well to antidepressant treatment as people with normal folate levels. Folate supplements, particularly those that contain 5-MTHF, might make antidepressant medications more effective. However, whether supplements help both people with normal folate levels and those with folate deficiency isn’t clear. More research is needed to better understand the role of folate in depression and whether folate supplements are helpful when used in combination with standard treatment . Heart disease and stroke Folic acid supplements lower levels of homocysteine , an amino acid in the blood that’s linked to a higher risk of cardiovascular disease , but the supplements don’t directly decrease the risk of heart disease. Some studies have shown that a combination of folic acid with other B-vitamins, however, helps prevent stroke . Dementia, cognitive function, and Alzheimer's disease Folic acid supplements, with or without other B-vitamins, do not seem to improve cognitive function or prevent dementia or Alzheimer’s disease . However, more research on these topics is needed. Preterm birth, congenital heart defects, and other birth defects Taking folic acid might reduce the risk of having a premature baby or a baby with birth defects, such as certain types of heart problems. However, more research is needed to understand how folic acid affects the risk of these conditions. Autism spectrum disorder Autism spectrum disorder (ASD) affects communication and behavior, usually beginning by age 2. People with ASD have limited interests, repetitive behaviors, and difficulty communicating and interacting with others. Some studies have shown that taking recommended amounts of folic acid before and during early pregnancy may help reduce the ",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/000354.htm",
+        "original_url": "https://medlineplus.gov/ency/article/000354.htm",
+        "title": "Folate deficiency: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-14",
+        "publication_dates": [],
+        "sha256": "08808567179a7c9526e8639431207349c61812a1ea0cf0c63692ce17866119d7",
+        "excerpt": "Folate deficiency Folate deficiency means you have a lower-than-normal amount of folic acid , a type of vitamin B, in your blood. Causes Folic acid (vitamin B9) works with vitamin B12 and vitamin C to help the body break down, use, and make new proteins. The vitamin helps form red and white blood cells. It also helps produce DNA, the building block of the human body, which carries genetic information. Folic acid is a water-soluble type of vitamin B. This means it is not stored in the fat tissues of the body. Leftover amounts of the vitamin leave the body through the urine. Because folate is not stored in the body in large amounts, your blood levels will get low after only a few weeks of eating a diet low in folate. Folate is found primarily in legumes, leafy greens, eggs, beets, bananas, citrus fruits, and liver. Contributors to folate deficiency include: Diseases in which folic acid is not well absorbed in the digestive system (such as celiac disease or Crohn disease ) Drinking too much alcohol Eating overcooked fruits and vegetables. Folic acid can be easily destroyed by heat. Hemolytic anemia which results in the need for more folic acid to make red blood cells Certain medicines (such as phenytoin, sulfasalazine, or trimethoprim-sulfamethoxazole) Eating a diet that does not include enough fruits and vegetables Kidney dialysis Symptoms Folic acid deficiency may cause: Fatigue, irritability, or diarrhea Poor growth Smooth and tender tongue Exams and Tests Folate deficiency can be diagnosed with a blood test . Pregnant women commonly have this blood test at prenatal checkups. Possible Complications Complications include: Anemia (low red blood cell count) Low levels of white blood cells and platelets (in severe cases) In folate-deficiency anemia , the red blood cells are abnormally large (megaloblastic). Pregnant women need to get enough folic acid. The vitamin is important to the growth of the fetus's spinal cord and brain. Folic acid deficiency can cause severe birth defects known as neural tube defects . The Recommended Dietary Allowance (RDA) for folate during pregnancy is 600 micrograms (µg)/day. Prevention The best way to get vitamins your body needs is to eat a balanced diet . Most people in the United States eat enough folic acid because it is plentiful in the food supply. Folate occurs naturally in the following foods: Beans and legumes Citrus fruits and juices Dark green leafy vegetables such as spinach, asparagus, and broccoli Liver Mushrooms Poultry, pork, and shellfish Wheat bran and other whole grains The recommended daily amount of folic acid for adults is 400 µg of folate daily. Women who may become pregnant should take folic acid supplements to ensure that they get enough each day. Specific recommendations depend on a person's age, sex, and other factors (such as pregnancy and lactation). Many foods, such as fortified breakfast cereals, now have extra folic acid added to help prevent birth defects. Alternative Names Deficiency - folic acid; Folic acid deficiency Images First trimester of pregnancy Folic acid Early weeks of pregnancy References Antony AC. Megaloblastic anemias. In: Hoffman R, Benz EJ, Silberstein LE, et al, eds. Hematology: Basic Principles and Practice . 8th ed. Philadelphia, PA: Elsevier; 2023:chap 40. Kiefer M, Samuels P. Hematologic complications of pregnancy. In: Landon MB, Galan HL, Jauniaux ERM, et al, eds. Gabbe's Obstetrics: Normal and Problem Pregnancies . 9th ed. Philadelphia, PA: Elsevier; 2025:chap 49. Koppel BS, Weimer LH, Daras M. Nutritional and alcohol-related neurologic disorders. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 384. Review Date 7/9/2025 Updated by: Warren Brenner, MD, Oncologist, Lynn Cancer Institute, Boca Raton, FL. Review provided by VeriMed Healthcare Network. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Folic Acid",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://www.cdc.gov/folic-acid/about/intake-and-sources.html",
+        "original_url": "https://www.cdc.gov/folic-acid/about/intake-and-sources.html",
+        "title": "Folic Acid: Sources and Recommended Intake | Folic Acid | CDC",
+        "checked_on": "2026-10-14",
+        "publication_dates": [],
+        "sha256": "76060284f7bb50811774bcb8e998c6c1d6e95f6612f655e1e4f44c3dc8d40147",
+        "excerpt": "Folic Acid: Sources and Recommended Intake For Everyone July 15, 2026 Key points Folic acid is a type of folate (vitamin B9) found in fortified foods and vitamins. Eat healthy, balanced meals with folate-rich foods and include fortified foods or a vitamin to help you get 400 mcg of folic acid daily. Read nutrition and supplement labels on products to ensure they contain folic acid. Overview CDC recommends all women capable of becoming pregnant get 400 micrograms (mcg) of folic acid daily. Getting 400 mcg of folic acid each day helps prevent some serious birth defects called neural tube defects (NTDs). There are many ways to meet this recommendation. You can get folic acid from supplements, such as vitamins, or from foods where folic acid has been added, such as enriched bread. It is also important to eat a balanced diet with folate-rich foods such as leafy green vegetables, beans, or oranges. Terms to know Fortification is a way to add vitamins or minerals, or both, to foods. Flours, pastas, breads, rice, and breakfast cereals fortified with folic acid are labeled \"enriched.\" Mandatory fortification requires food manufacturers to add certain vitamins or minerals, or both, to specified foods. This is done to address a significant public health need. For example, fortification of cereal grains with folic acid is mandated in the United States to help prevent NTDs. Voluntary fortification allows food manufacturers to add vitamins or minerals, or both, to foods. Manufacturers need to follow the Food and Drug Administration (FDA) food additive regulations. Dietary supplements are products taken by mouth that contain ingredients intended to add nutrients to your diet. Vitamins are a type of dietary supplement that can contain folic acid. Folic acid is a proven option for NTD prevention. Folic acid is a type of folate (vitamin B9) that is more stable to heat and light than food folate. Folic acid remains stable even through cooking or baking. This allows it to remain active in supplements and fortified foods. Folic acid is the only type of folate shown to help prevent NTDs. Sources of folic acid Fortified foods Fortified foods provide an important source of folic acid. Folic acid is added to some staple foods to help people meet their daily needs. Foods fortified with folic acid include some flours, breads, pastas, rice, and breakfast cereals. These products are labeled as \"enriched.\" 1 Supplements Taking a daily vitamin with 400 mcg of folic acid helps ensure you're getting enough to prevent NTDs. Generally, vitamins contain folic acid and have 400 to 800 mcg of folic acid.  However, some vitamins now list other types of folate  (such as 5-MTHF) instead of folic acid. These types of folate found in supplements are called \"natural,\" but they are not the same as food folate found in leafy greens and beans. It's important to check the Supplement Facts label to ensure your vitamins contain folic acid. Folic acid is the only type of folate shown to help prevent NTDs. No scientific studies exist that show that supplements containing other types of folate can prevent these conditions. What the science shows Folic acid fortification and supplementation have proven effective in preventing NTDs. Since mandatory fortification began in 1998, about 1,300 babies are born each year without an NTD who might otherwise have been affected. 2 Folic acid in foods helps prevent 1,300 NTDs annually in the United States. However, certain groups remain at higher risk for having a pregnancy affected by NTDs. Research shows Hispanic/Latina women still have lower folate levels. 3 4 In an effort to help more women get the nutrients they need, the FDA allowed voluntary folic acid fortification of corn masa flour in 2016. Keep Reading Improving Folic Acid Intake National surveys in the United States show daily multivitamin use has declined among women aged 18–44 years. Specifically, daily use declined among women aged 25-44 years and among Hispanic/Latina and non-Hispanic White women, while use among other groups remained unchanged. 5 A CDC study found that about half of women report eating enriched cereal grain products as their only source of folic acid. 6 Consuming folic acid from both supplements and fortified foods could help more women meet the recommended 400 mcg daily. This could potentially prevent up to 700 additional NTDs annually. Tips for getting enough folic acid Here are some tips to help ensure you're getting enough folic acid: 1. Take a vitamin with folic acid . When taking supplements, more is not better. Look for vitamins that have 400 mcg of folic acid.  You can find them at pharmacies, grocery stores, or discount stores. If taking a vitamin upsets your stomach, try taking it with food or just before bed. If you have trouble taking pills, try a chewable vitamin. Also, be sure to take it with a full glass of water. 2. Eat fortified foods . Some flours, breads, pastas, rice, and breakfast cereals have folic acid added. These products are labeled as \"enriched.\" 3. Combine both approaches. You can take a vitamin with folic acid and eat fortified foods to ensure you are getting enough folic acid. It is also important to eat folate-rich foods as part of a balanced diet. Checking the label Nutrition and supplement labels show folate content in mcg dietary folate equivalent (DFE) and mcg folic acid per serving. For example, the label below shows \"667 mcg DFE (400 mcg folic acid).\" This means that 400 mcg of folic acid is part of the total folate (667 mcg DFE) per serving. It's important to check your vitamins and food labels to ensure they contain folic acid. This supplement label shows it contains 400 mcg of folic acid. On This Page Overview Terms to know Sources of folic acid What the science shows Tips for getting enough folic acid July 15, 2026 Sources Print Share Facebook LinkedIn Twitter Syndicate Content Source: Folic Acid References U.S. Food and Drug Administration. Food Standards: Amendment of Standards of Identity for Enriched Grain Products to Require Addition of Folic Acid: Final Rule. 21 CFR Parts 136, 137, and 139. Federal Register 1996;61(44):8781-97. Williams J, Mai CT, Mulinare J, Isenburg J, Flood TJ, Ethen M, Frohnert B, Kirby RS, Centers for Disease C, Prevention. Updated estimates of neural tube defects prevented by mandatory folic Acid fortification — United States, 1995–2011. MMWR Morb Mortal Wkly Rep 2015;64(1):1-5. Centers for Disease Control and Prevention (CDC). Racial/ethnic differences in the birth prevalence of spina bifida — United States, 1995–2005. MMWR Morb Mortal Wkly Rep. 2009;57(53):1409–1413. MA, Mai CT, Wang Y, et al. The association between race/ethnicity and major birth defects in the United States, 1999–2007. Am J Public Health. 2014;104(9):e14–23. Wong, EC, Rose CE, Flores AL, and Yeung LF. Trends in Multivitamin Use Among Women of Reproductive Age: United States, 2006–2016. Journal of Women's Health. 2019;28(1): https://doi.org/10.1089/jwh.2018.7075 . KS, Qi YP, Devine O, Tinker SC, Berry RJ. Modeling the impact of folic acid fortification and supplementation on red blood cell folate concentrations and predicted neural tube defect risk in the United States: Have we reached optimal prevention? Am J Clin Nutr. 2018;107(6):1027–1034. Sources Hendler SS, Rorvik DR. PDR for Nutritional Supplements. Montvale: Medical Economics Company, Inc., 2001.",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://nutritionpedia.co.kr/ingredients/folate",
+      "https://bangongi.com/folate-benefits/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 10840,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "엽산",
+        "capturedAt": "2026-10-13T06:04:22.613Z",
+        "expiresAt": "2026-10-14T06:04:22.613Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-09-29",
+          "endDate": "2026-10-13",
+          "latestPeriod": "2026-10-12",
+          "previousPeriod": "2026-10-11",
+          "baselineStart": "2026-10-05",
+          "baselineEnd": "2026-10-11",
+          "latestRatio": 100,
+          "previousRatio": 65.01196,
+          "baselineMean": 60.381061428571435,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 53.81785136150332,
+          "baselinePct": 65.61484285647464,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 32,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-13T06:06:03.775Z",
+          "measuredAt": "2026-10-13T06:06:04.433Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "엽산",
+          "monthlyPc": 4650,
+          "monthlyMobile": 26600,
+          "monthlyTotal": 31250,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "high",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-13T06:06:34.272Z",
+        "expiresAt": "2026-10-14T06:04:20.828Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 172,
+          "exportedCount": 80,
+          "truncatedCount": 92
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 6,
+          "missingPreviousDay": 4,
+          "insufficientBaseline": 0
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 38354628813,
+        "artifactId": 11792875596,
+        "headSha": "3f38a86f89c6e4b1170c1abb355c7e9469a24a06",
+        "sourceRunCreatedAt": "2026-10-13T06:03:32Z"
+      },
+      "relatedKeyword": "엽산효능",
+      "relatedMonthly": 10840,
+      "relatedMeasuredAt": "2026-10-14T00:52:25.608527+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/?source=post_page---------------------------",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/000354.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/folic-acid/about/intake-and-sources.html",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/folic-acid/about/safety.html",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/birth-defects/about/neural-tube-defects.html",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "엽산 효능",
+    "organic_domains": [
+      "nutritionpedia.co.kr",
+      "www.nibli.org",
+      "prod.danawa.com",
+      "common.health.kr",
+      "common.health.kr",
+      "kbthink.com",
+      "v.daum.net",
+      "m.stcarollo.or.kr",
+      "agri.jeju.go.kr",
+      "bangongi.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://nutritionpedia.co.kr/ingredients/folate",
+        "domain": "nutritionpedia.co.kr",
+        "title": "엽산(비타민B9) 효능·하루 권장량·음식 | 부족 증상과 영양제 고르는 법",
+        "snippet": "# 엽산(비타민B9) 효능과 하루 권장량 ... ## 엽산 효능"
+      },
+      {
+        "url": "https://www.nibli.org/ko/agi-yeopsan",
+        "domain": "www.nibli.org",
+        "title": "아기를 위한 엽산: 공급원, 효능, 하루 필요량",
+        "snippet": "이 안내서에서는 엽산이 실제로 하는 일, 어디에서 찾을 수 있는지, 엽산(식품에서 얻는 것)과 엽산제(폴산, 보충제와 강화 식품에서 얻는 것)의 차이, 채식 가정을 위한 고려 사항,"
+      },
+      {
+        "url": "https://prod.danawa.com/list/?cate=16325252",
+        "domain": "prod.danawa.com",
+        "title": "엽산 : 다나와 가격비교",
+        "snippet": "인기 순위 17 일양약품 활성 엽산 60정 1박스 2개월분 / 임산부 수유부 ... [효능] 태아발달/에너지생산/영양보충/신경, 근육기능지원/관절,뼈건강/성장발달"
+      },
+      {
+        "url": "https://common.health.kr/shared/healthkr/pharmreview/%ED%95%AD%EA%B7%A0%EC%A0%9C.pdf",
+        "domain": "common.health.kr",
+        "title": "<table id=\"e1\">",
+        "snippet": "<td rowspan=\"2\">엽산 합성 저해제</td> ... 유효한 균종 등 효능·효과에 관한 상세한 정보는 제품설명서 또는 제품별 허가정보에서 확인할 수 있다."
+      },
+      {
+        "url": "https://common.health.kr/shared/healthkr/pharmreview/%EB%B9%88%ED%98%88%EC%B9%98%EB%A3%8C%EC%A0%9C.pdf",
+        "domain": "common.health.kr",
+        "title": "약물백과 DRUG ENCYCLOPEDIA",
+        "snippet": "<td>엽산</td> ... 빈혈치료제의 종류에 따른 효능·효과"
+      },
+      {
+        "url": "https://kbthink.com/main/living-finance/life-health/kb-golden-life-health-240307.html",
+        "domain": "kbthink.com",
+        "title": "엽산 부족 증상은? 엽산 효능 알고먹기! | KB의 생각",
+        "snippet": "미국 나소 유니버시티 메디컬 센터(Nassau University Medical Center)의 린 셰퍼 박사는 “모든 비타민 B군이 두뇌 건강에 도움이 되지만, 엽산은 치매 예방에 가장 큰 가능성을 보인"
+      },
+      {
+        "url": "https://v.daum.net/v/8NmVmCTN67",
+        "domain": "v.daum.net",
+        "title": "엽산 효능 - 약사가 알려주는 놀라운 효능 5가지 | 노써치",
+        "snippet": "오늘은 엽산의 다양한 효능에 대해서 추가로 알아볼까 합니다."
+      },
+      {
+        "url": "https://m.stcarollo.or.kr/data/file/050505/1888594394__8bfc60d8d0406e784d91190ebab353501ba5d260.pdf",
+        "domain": "m.stcarollo.or.kr",
+        "title": "untitled",
+        "snippet": "※효능 및 효과 ... - 체력이 떨어지고 심한 피로를 느끼는 중년 남성은 엽산 보충제를 꾸준히 복용하면 도움이 되며, 나이 들면서 상실해 가는 기억력을 유지하려면 엽산을"
+      },
+      {
+        "url": "https://agri.jeju.go.kr/files/board/%EC%83%88%ED%95%B4%EC%98%81%EB%86%8D%28%EB%82%B4%EB%AA%B8%EC%9D%84%EC%82%B4%EB%A6%AC%EB%8A%94%EC%9A%B0%EB%A6%AC%EB%86%8D%EC%82%B0%EB%AC%BC%29.pdf",
+        "domain": "agri.jeju.go.kr",
+        "title": "untitled",
+        "snippet": "시금치는 보통 비타민의 보고로 알려져 있지만 최근에는 눈의 건강에 도움을 주는 효능 때문에 더 주목받고 있다. ... 의학계에서는 엽산 결핍이 손상된 DNA를 복구시키는 능력을 떨어뜨리고"
+      },
+      {
+        "url": "https://bangongi.com/folate-benefits/",
+        "domain": "bangongi.com",
+        "title": "엽산 효능 — 임신 준비부터 하루 권장량까지 - 반공기",
+        "snippet": "엽산 효능은 식약처가 인정한 세 가지로 정리된다."
+      }
+    ],
+    "dominant_result_ratio": 0.2222222222222222,
+    "score_components": {
+      "demand": 32.28,
+      "organic_opportunity": 27.65,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-14T00:52:25.608527+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "엽산효능"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/?source=post_page---------------------------",
+          "title": "Folate - Consumer",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/000354.htm",
+          "title": "Folate deficiency: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 4053
+        },
+        {
+          "url": "https://www.cdc.gov/folic-acid/about/intake-and-sources.html",
+          "title": "Folic Acid: Sources and Recommended Intake | Folic Acid | CDC",
+          "excerpt_chars": 7400
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://cancer.go.kr/lay1/S1T226C240/contents.do",
+              "title": "홈 >암예방과 검진>예방>식이>질문과 답변",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/?source=post_page---------------------------",
+              "title": "Folate - Consumer",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://medlineplus.gov/ency/article/000354.htm",
+              "title": "Folate deficiency: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 4053
+            },
+            {
+              "url": "https://www.cdc.gov/folic-acid/about/intake-and-sources.html",
+              "title": "Folic Acid: Sources and Recommended Intake | Folic Acid | CDC",
+              "excerpt_chars": 7400
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "엽산효능",
+      "executed_query": "엽산 효능",
+      "topic": "엽산효능: 몸에서 하는 역할·부족 증상·하루 필요량과 음식",
+      "intent": "엽산은 어떤 효능이 있으며, 부족하면 어떤 증상이 생기고 음식과 보충제로 얼마나 섭취해야 할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-14T00:52:25.608527+00:00",
+      "result_count": 10,
+      "domain_count": 9,
+      "dominant_ratio": 0.2222222222222222,
+      "search_review": {
+        "version": 1,
+        "query": "엽산효능",
+        "executed_query": "엽산 효능",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-14T00:52:25.608527+00:00",
+        "raw_sha256": "bf28bf209e8a3a645febcf3b872d8069d6d6e5f20445c963260768c848cbce4a",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "엽산(비타민B9) 효능·하루 권장량·음식 | 부족 증상과 영양제 고르는 법"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "이 안내서에서는 엽산이 실제로 하는 일, 어디에서 찾을 수 있는지, 엽산(식품에서 얻는 것)과 엽산제(폴산, 보충제와 강화 식품에서 얻는 것)의 차이, 채식 가정을 위한 고려 사항,"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "인기 순위 17 일양약품 활성 엽산 60정 1박스 2개월분 / 임산부 수유부 ... [효능] 태아발달/에너지생산/영양보충/신경, 근육기능지원/관절,뼈건강/성장발달"
+          },
+          {
+            "result_index": 3,
+            "relevant": false,
+            "quote": "<td rowspan=\"2\">엽산 합성 저해제</td> ... 유효한 균종 등 효능·효과에 관한 상세한 정보는 제품설명서 또는 제품별 허가정보에서 확인할 수 있다."
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "<td>엽산</td> ... 빈혈치료제의 종류에 따른 효능·효과"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "미국 나소 유니버시티 메디컬 센터(Nassau University Medical Center)의 린 셰퍼 박사는 “모든 비타민 B군이 두뇌 건강에 도움이 되지만, 엽산은 치매 예방에 가장 큰 가능성을 보인"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "오늘은 엽산의 다양한 효능에 대해서 추가로 알아볼까 합니다."
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "※효능 및 효과 ... - 체력이 떨어지고 심한 피로를 느끼는 중년 남성은 엽산 보충제를 꾸준히 복용하면 도움이 되며, 나이 들면서 상실해 가는 기억력을 유지하려면 엽산을"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "시금치는 보통 비타민의 보고로 알려져 있지만 최근에는 눈의 건강에 도움을 주는 효능 때문에 더 주목받고 있다. ... 의학계에서는 엽산 결핍이 손상된 DNA를 복구시키는 능력을 떨어뜨리고"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "엽산 효능은 식약처가 인정한 세 가지로 정리된다."
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 9,
+        "relevant_site_count": 9,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.9,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.2222222222222222,
+        "site_concentration": 0.1111111111111111,
+        "organic_opportunity": 27.65
+      },
+      "scope": "full_keyword",
+      "target_keyword": "엽산효능",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "엽산(비타민B9) 효능·하루 권장량·음식 | 부족 증상과 영양제 고르는 법"
+        },
+        {
+          "result_index": 9,
+          "quote": "엽산 효능 — 임신 준비부터 하루 권장량까지 - 반공기"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-14T00:52:25.608527+00:00",
+      "input_sha256": "8468e4b7060979e0bd646f6904ebedb189f6ed7f7e724b6cc22bf1009a92203d",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "엽산효능",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "–12 months 80 mcg DFE Children 1–3 years 150 mcg DFE Children 4–8 years 200 mcg DFE Children 9–13 years 300 mcg DFE Teens 14–18 years 400 mcg DFE Adults 19+ years 400 mcg DFE Pregnant teens and women 600 mcg DFE Breastfeeding teens and women 500 mcg DFE The measure of mcg DFE is used because your body absorbs more folic acid from fortified foods and dietary supplements than folate found naturally in foods. Compared to folate found naturally in foods, you actually need less folic acid to get recommended amounts. For example, 240 mcg of folic acid and 400 mcg of folate are both equal to 400 mcg DFE. All women and teen girls who could become pregnant should consume 400 mcg of folic acid daily from supplements, fortified foods, or both in addition to the folate they get from following a healthy eating pattern. What foods provide folate? Folate is naturally present in many foods, and folic ac",
+            "entity": "Adults 19+ years",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "Folate deficiency Folate deficiency means you have a lower-than-normal amount of folic acid , a type of vitamin B, in your blood. Causes Folic acid (vitamin B9) works with vitamin B12 and vitamin C to help the body break down, use, and make new proteins. The vitamin helps form red and white blood cells. It also helps produce DNA, the building block of the human body, which carries genetic information. Folic acid is a water-soluble type of vitamin B. This means it is not stored in the fat tissues of the body. Leftover amounts of the vitamin leave the body through the urine. Because folate is not stored in the body in large amounts, your blood levels will get low after only a few weeks of eating a diet low in folate. Folate is found primarily in legumes, leafy greens, eggs, beets, bananas, citrus fruits, and liver. Contributors to folate deficiency include: Diseases in which folic acid is ",
+            "entity": "Folate deficiency",
+            "context": "general"
+          },
+          {
+            "source_index": 2,
+            "quote": "Folic Acid: Sources and Recommended Intake For Everyone July 15, 2026 Key points Folic acid is a type of folate (vitamin B9) found in fortified foods and vitamins. Eat healthy, balanced meals with folate-rich foods and include fortified foods or a vitamin to help you get 400 mcg of folic acid daily. Read nutrition and supplement labels on products to ensure they contain folic acid. Overview CDC recommends all women capable of becoming pregnant get 400 micrograms (mcg) of folic acid daily. Getting 400 mcg of folic acid each day helps prevent some serious birth defects called neural tube defects (NTDs). There are many ways to meet this recommendation. You can get folic acid from supplements, such as vitamins, or from foods where folic acid has been added, such as enriched bread. It is also important to eat a balanced diet with folate-rich foods such as leafy green vegetables, beans, or ora",
+            "entity": "CDC",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "엽산은 몸에서 어떤 역할을 하는가?",
+            "answer": "DNA 생성과 세포 분열에 필요하다. 영양소의 필수 기능을 보충제의 추가 효과와 구분해 설명할 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Folate Fact Sheet for Consumers Have a question? Ask ODS Join the ODS Email List This is a general overview.  For more in-depth information, see our health professional fact sheet . What is folate and what does it do? Folate is a B- vitamin that is naturally present in many foods. Your body needs folate to make DNA and other genetic material. Your body also needs folate for your cells to divide. A form of folate, called folic acid , is used in fortified foods and most dietary supplements . How much folate do I need? The amount of folate you need depends on your age. Average daily recommended amounts are listed below in micrograms (mcg) of dietary folate equivalents (DFEs). Life Stage Recommended Amount Birth to 6 months 65 mcg DFE Infants 7–12 months 80 mcg DFE Children 1–3 years 150 mcg DFE Children 4–8 years 200 mcg DFE Children 9–13 years 300 mcg DFE Teens 14–18 years 400 mcg DFE Adul"
+          },
+          {
+            "facet": "임신 준비와 초기 임신에서 어떤 예방 효과가 있는가?",
+            "answer": "임신 전과 초기의 폴산 섭취는 태아 신경관결손 예방에 도움이 된다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " irritability, headache, heart palpitations , and shortness of breath. Folate deficiency can also cause open sores on the tongue and inside the mouth as well as changes in the color of the skin, hair, or fingernails. Women who don't get enough folate are at risk of having babies with neural tube defects , such as spina bifida . Folate deficiency can also increase the likelihood of having a premature or low birth weight baby. What are some effects of folate on health? Scientists are studying folate to understand how it affects health. Here are several examples of what this research has shown. Neural tube defects Taking folic acid before becoming pregnant and during early pregnancy helps prevent neural tube defects in babies. Neural tube defects are major birth defects in a baby’s brain ( anencephaly ) or spine (spina bifida). However, about half of all pregnancies are unplanned. Therefore"
+          },
+          {
+            "facet": "질환 예방이나 인지 기능 개선 효과는 어디까지 입증됐는가?",
+            "answer": "호모시스테인 감소가 심장병 위험 감소를 뜻하지 않으며, 인지 개선·치매 예방 효과도 뚜렷하지 않다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "and stroke Folic acid supplements lower levels of homocysteine , an amino acid in the blood that’s linked to a higher risk of cardiovascular disease , but the supplements don’t directly decrease the risk of heart disease. Some studies have shown that a combination of folic acid with other B-vitamins, however, helps prevent stroke . Dementia, cognitive function, and Alzheimer's disease Folic acid supplements, with or without other B-vitamins, do not seem to improve cognitive function or prevent dementia or Alzheimer’s disease . However, more research on these topics is needed. Preterm birth, congenital heart defects, and other birth defects Taking folic acid might reduce the risk of having a premature baby or a baby with birth defects, such as certain types of heart problems. However, more research is needed to understand how folic acid affects the risk of these conditions. Autism spectru"
+          },
+          {
+            "facet": "부족하면 어떤 증상이 나타나며 어떻게 확인하는가?",
+            "answer": "피로·과민·설사·성장 부진·매끈하고 아픈 혀가 나타날 수 있고, 혈액검사로 결핍을 확인한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": " in legumes, leafy greens, eggs, beets, bananas, citrus fruits, and liver. Contributors to folate deficiency include: Diseases in which folic acid is not well absorbed in the digestive system (such as celiac disease or Crohn disease ) Drinking too much alcohol Eating overcooked fruits and vegetables. Folic acid can be easily destroyed by heat. Hemolytic anemia which results in the need for more folic acid to make red blood cells Certain medicines (such as phenytoin, sulfasalazine, or trimethoprim-sulfamethoxazole) Eating a diet that does not include enough fruits and vegetables Kidney dialysis Symptoms Folic acid deficiency may cause: Fatigue, irritability, or diarrhea Poor growth Smooth and tender tongue Exams and Tests Folate deficiency can be diagnosed with a blood test . Pregnant women commonly have this blood test at prenatal checkups. Possible Complications Complications include: A"
+          },
+          {
+            "facet": "생애주기별 하루 필요량과 임신 가능자의 보충 기준은 무엇인가?",
+            "answer": "미국 기준 성인 400, 임신 600, 수유 500mcg DFE이며, 임신 가능자는 식사 외 폴산 400mcg을 권고한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "–12 months 80 mcg DFE Children 1–3 years 150 mcg DFE Children 4–8 years 200 mcg DFE Children 9–13 years 300 mcg DFE Teens 14–18 years 400 mcg DFE Adults 19+ years 400 mcg DFE Pregnant teens and women 600 mcg DFE Breastfeeding teens and women 500 mcg DFE The measure of mcg DFE is used because your body absorbs more folic acid from fortified foods and dietary supplements than folate found naturally in foods. Compared to folate found naturally in foods, you actually need less folic acid to get recommended amounts. For example, 240 mcg of folic acid and 400 mcg of folate are both equal to 400 mcg DFE. All women and teen girls who could become pregnant should consume 400 mcg of folic acid daily from supplements, fortified foods, or both in addition to the folate they get from following a healthy eating pattern. What foods provide folate? Folate is naturally present in many foods, and folic ac"
+          },
+          {
+            "facet": "어떤 음식으로 엽산을 섭취할 수 있는가?",
+            "answer": "간·녹색 잎채소·감귤류·콩·견과류가 공급원이다. 폴산 첨가 강화식품은 표시를 확인한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ion to the folate they get from following a healthy eating pattern. What foods provide folate? Folate is naturally present in many foods, and folic acid is added to some foods. You can get recommended amounts by eating a variety of foods, including the following. Folate is naturally present in: Beef liver Vegetables (especially asparagus, brussels sprouts, and dark green leafy vegetables such as spinach and mustard greens) Fruits and fruit juices (especially oranges and orange juice) Nuts, beans, and peas (such as peanuts, black-eyed peas, and kidney beans) Folic acid is added to the following foods: Enriched bread, flour, cornmeal, pasta, and rice Fortified breakfast cereals Fortified corn masa flour (used to make corn tortillas and tamales, for example) To find out whether a food has added folic acid, look for folic acid on its Nutrition Facts label . What kinds of folate dietary suppl"
+          },
+          {
+            "facet": "보충제 라벨에서 DFE와 폴산 함량을 어떻게 구분하는가?",
+            "answer": "667mcg DFE(400mcg folic acid)는 총 엽산 환산량과 포함된 폴산량을 구분한 표시다.",
+            "supported": true,
+            "source_index": 2,
+            "quote": "ing the label Nutrition and supplement labels show folate content in mcg dietary folate equivalent (DFE) and mcg folic acid per serving. For example, the label below shows \"667 mcg DFE (400 mcg folic acid).\" This means that 400 mcg of folic acid is part of the total folate (667 mcg DFE) per serving. It's important to check your vitamins and food labels to ensure they contain folic acid. This supplement label shows it contains 400 mcg of folic acid. On This Page Overview Terms to know Sources of folic acid What the science shows Tips for getting enough folic acid July 15, 2026 Sources Print Share Facebook LinkedIn Twitter Syndicate Content Source: Folic Acid References U.S. Food and Drug Administration. Food Standards: Amendment of Standards of Identity for Enriched Grain Products to Require Addition of Folic Acid: Final Rule. 21 CFR Parts 136, 137, and 139. Federal Register 1996;61(44):8"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Folate Fact Sheet for Consumers Have a question? Ask ODS Join the ODS Email List This is a general overview.  For more in-depth information, see our health professional fact sheet . What is folate and what does it do? Folate is a B- vitamin that is naturally present in many foods. Your body needs folate to make DNA and other genetic material. Your body also needs folate for your cells to divide. A form of folate, called folic acid , is used in fortified foods and most dietary supplements . How much folate do I need? The amount of folate you need depends on your age. Average daily recommended amounts are listed below in micrograms (mcg) of dietary folate equivalents (DFEs). Life Stage Recommended Amount Birth to 6 months 65 mcg DFE Infants 7–12 months 80 mcg DFE Children 1–3 years 150 mcg DFE Children 4–8 years 200 mcg DFE Children 9–13 years 300 mcg DFE Teens 14–18 years 400 mcg DFE Adul",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 74.93,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "임신준비비타민D",
+    "category": "건강",
+    "topic": "임신준비비타민D, 필요한 이유와 섭취량·중복 복용 확인사항",
+    "intent": "임신 준비 중 비타민D가 왜 필요하고, 하루 필요량과 영양제 중복 섭취는 어떻게 확인할까?",
+    "gap": "미국 MedlinePlus의 성인·임신부 필요량 표와 식품·영양제 함량 확인 체크리스트로 일반 필요량과 개인 보충량을 구분한다.",
+    "source_url": "https://www.medlineplus.gov/vitaminddeficiency.html",
+    "verified_sources": [
+      {
+        "url": "https://www.medlineplus.gov/vitaminddeficiency.html",
+        "original_url": "https://www.medlineplus.gov/vitaminddeficiency.html",
+        "title": "Vitamin D Deficiency: MedlinePlus",
+        "checked_on": "2026-10-14",
+        "publication_dates": [],
+        "sha256": "d35314b7f73bc7751e998ae75028d75730b8cef1a4f13aae68f887a1bc176405",
+        "excerpt": "Vitamin D Deficiency Also called: Hypovitaminosis D, Low Vitamin D Summary What is vitamin D deficiency? Vitamin D deficiency means that your body is not getting enough vitamin D to stay healthy. Why do I need vitamin D and how do I get it? Vitamin D helps your body absorb calcium . Calcium is one of the main building blocks of bone. Vitamin D also has a role in your nervous, muscle, and immune systems. You can get vitamin D in three ways: through your skin, from your diet, and from supplements. Your body forms vitamin D naturally after exposure to sunlight. But too much sun exposure can lead to skin aging and skin cancer, so many people try to get their vitamin D from other sources. How much vitamin D do I need? The amount of vitamin D you need each day depends on your age.  The recommended amounts, in international units (IU), are: Birth to 12 months: 400 IU Children 1-13 years: 600 IU Teens 14-18 years: 600 IU Adults 19-70 years: 600 IU Adults 71 years and older: 800 IU Pregnant and breastfeeding women: 600 IU People at high risk of vitamin D deficiency may need more. Check with your health care provider about how much you need. What causes vitamin D deficiency? You can become deficient in vitamin D for different reasons: You don't get enough vitamin D in your diet You don't absorb enough vitamin D from food (a malabsorption problem ) You don't get enough exposure to sunlight Your liver or kidneys cannot convert vitamin D to its active form in the body You take medicines that interfere with your body's ability to convert or absorb vitamin D Who is at risk of vitamin D deficiency? Some people are at higher risk of vitamin D deficiency: Breastfed infants, because human milk is a poor source of vitamin D. If you are breastfeeding , give your infant a supplement of 400 IU of vitamin D every day. Older adults, because your skin doesn't make vitamin D when exposed to sunlight as efficiently as when you were young, and your kidneys are less able to convert vitamin D to its active form. People with dark skin, which has less ability to produce vitamin D from the sun. People with conditions that make it difficult to absorb nutrients from food, such as Crohn's disease , ulcerative colitis , and celiac disease . People who have obesity , because their body fat binds to some vitamin D and prevents it from getting into the blood. People who have had gastric bypass surgery, a type of weight loss surgery which creates a bypass of part of the small intestine. Since vitamin D is absorbed there, bypassing part of it makes it harder to absorb enough vitamin D. People with chronic kidney or liver disease , which can affect your ability to change vitamin D into a form your body can use. People who take medicines that affect vitamin D levels, including certain cholesterol , anti-seizure, steroid , and weight-loss medicines. Talk with your provider if you are at risk for vitamin D deficiency.  There is a blood test that can measure how much vitamin D is in your body. What problems does vitamin D deficiency cause? Vitamin D deficiency can lead to a loss of bone density , which can contribute to osteoporosis and fractures (broken bones). Severe vitamin D deficiency can also lead to other diseases: In children, it can cause rickets . Rickets is a rare disease that causes the bones to become soft and bend. African American infants and children are at higher risk of getting rickets. In adults, severe vitamin D deficiency leads to osteomalacia. Osteomalacia causes weak bones, bone pain, and muscle weakness. How can I get more vitamin D? There are a few foods that naturally have some vitamin D: Fatty fish such as salmon, tuna, and mackerel Beef liver Cheese Mushrooms Egg yolks You can also get vitamin D from fortified foods. You can check the food labels to find out whether a food has vitamin D. Foods that often have added vitamin D include: Milk Breakfast cereals Orange juice Other dairy products, such as yogurt Soy drinks Vitamin D is in many multivitamins. There are also vitamin D supplements, both in pills and in a liquid for babies. If you have vitamin D deficiency, the treatment is with supplements. Check with your provider about how much you need to take, how often you need to take it, and how long you need to take it. Can too much vitamin D be harmful? Getting too much vitamin D (known as vitamin D toxicity) can be harmful. Signs of toxicity include nausea and vomiting , poor appetite, constipation , weakness, and weight loss. Very high levels of vitamin D can damage the kidneys. It also raises the level of calcium in your blood. High levels of blood calcium (hypercalcemia) can cause confusion, kidney failure , and irregular heartbeat (arrhythmia). Most cases of vitamin D toxicity happen when someone overuses vitamin D supplements. You cannot get too much vitamin D from sun exposure because the skin limits the amount of vitamin D it makes. Learn More 25-hydroxy vitamin D test (Medical Encyclopedia) Also in Spanish Osteomalacia (Medical Encyclopedia) Also in Spanish Rickets: MedlinePlus Health Topic (National Library of Medicine) Also in Spanish Vitamin D (National Institutes of Health, Office of Dietary Supplements) Also in Spanish Vitamin D (Harvard School of Public Health) Vitamin D Test (National Library of Medicine) Also in Spanish Clinical Trials ClinicalTrials.gov: Osteomalacia (National Institutes of Health) ClinicalTrials.gov: Vitamin D Deficiency (National Institutes of Health) Journal Articles References and abstracts from MEDLINE/PubMed (National Library of Medicine) Article: Low Prevalence of Exploratory Biochemical Patterns Compatible with Osteomalacia in a... Article: Vitamin D supplementation and central adiposity in male shift workers: a... Article: Vitamin D Deficiency During Pregnancy Is Associated With Greater LDL-C Increase,... Vitamin D Deficiency -- see more articles Patient Handouts 25-hydroxy vitamin D test (Medical Encyclopedia) Also in Spanish Topic Image National Institutes of Health The primary NIH organization for research on Vitamin D Deficiency is the NIH Office of Dietary Supplements Disclaimers MedlinePlus links to health information from the National Institutes of Health and other federal government agencies. MedlinePlus also links to health information from non-government Web sites. See our disclaimer about external links and our quality guidelines ."
+      }
+    ],
+    "intent_results": [
+      "https://www.enuri.com/knowcom/detail.jsp?bbsname=guide&kbno=3905933",
+      "https://doctornow.co.kr/content/qna/065dc0bf4b3b4be5a2a37233b27eda46"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 980,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "엽산",
+        "capturedAt": "2026-10-13T06:04:22.613Z",
+        "expiresAt": "2026-10-14T06:04:22.613Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-09-29",
+          "endDate": "2026-10-13",
+          "latestPeriod": "2026-10-12",
+          "previousPeriod": "2026-10-11",
+          "baselineStart": "2026-10-05",
+          "baselineEnd": "2026-10-11",
+          "latestRatio": 100,
+          "previousRatio": 65.01196,
+          "baselineMean": 60.381061428571435,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 53.81785136150332,
+          "baselinePct": 65.61484285647464,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 32,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-13T06:06:03.775Z",
+          "measuredAt": "2026-10-13T06:06:04.433Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "엽산",
+          "monthlyPc": 4650,
+          "monthlyMobile": 26600,
+          "monthlyTotal": 31250,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "high",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-13T06:06:34.272Z",
+        "expiresAt": "2026-10-14T06:04:20.828Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 172,
+          "exportedCount": 80,
+          "truncatedCount": 92
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 6,
+          "missingPreviousDay": 4,
+          "insufficientBaseline": 0
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 38354628813,
+        "artifactId": 11792875596,
+        "headSha": "3f38a86f89c6e4b1170c1abb355c7e9469a24a06",
+        "sourceRunCreatedAt": "2026-10-13T06:03:32Z"
+      },
+      "relatedKeyword": "임신준비비타민D",
+      "relatedMonthly": 980,
+      "relatedMeasuredAt": "2026-10-14T00:52:25.608527+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "임신 준비 비타민D",
+    "organic_domains": [
+      "www.enuri.com",
+      "doctornow.co.kr",
+      "m.himganae.com",
+      "doctornow.co.kr",
+      "www.nibn.go.jp",
+      "m.kimspharm.com",
+      "daynote.blog",
+      "www.ssg.com",
+      "www.11st.co.kr",
+      "nutridatalab.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.enuri.com/knowcom/detail.jsp?bbsname=guide&kbno=3905933",
+        "domain": "www.enuri.com",
+        "title": "임신 준비부터 출산까지, 꼭 챙겨야 할 6가지 영양제 - 에누리 쇼핑지식 구매가이드",
+        "snippet": "☀️ 비타민D (Vitamin D) ... 비타민D는 태아의 뼈 형성과 칼슘 흡수, ... 임신 준비 시기부터 하루 1,000~2,000IU 보충을 권장해요."
+      },
+      {
+        "url": "https://doctornow.co.kr/content/qna/065dc0bf4b3b4be5a2a37233b27eda46",
+        "domain": "doctornow.co.kr",
+        "title": "임신준비 중인데 영양제 섭취량 확인 부탁해요 - 닥터나우",
+        "snippet": "임신준비중인데 영양제 용량 괜찮은지 확인 부탁해요 비타민D 152.5㎍ 엽산 833㎍ 비오틴 300㎍ 마그네슘 299.5mg 비타민c 200mg 비타민b1 1.4mg 비타민b2 1.6mg 비타민b6 2mg 비타민b12 18㎍ 비타민b1"
+      },
+      {
+        "url": "https://m.himganae.com/board/magazine/read.html?board_no=5&no=131020",
+        "domain": "m.himganae.com",
+        "title": "임신 준비 영양제 추천, 엽산부터 꼭 챙겨야 할 성분과 복용 시기 | 힘가네 건강정보",
+        "snippet": "### 임신 준비 영양제 추천, 엽산부터 꼭 챙겨야 할 성분과 복용 시기 ... 비타민D, 철분, 오메가3, 요오드와 콜린은 무조건 제품을 하나씩 추가하기보다 평소 식사와 현재"
+      },
+      {
+        "url": "https://doctornow.co.kr/content/qna/1e0be5ba23e94a4c9f5d12c0a82c4d99",
+        "domain": "doctornow.co.kr",
+        "title": "임신 준비 중 영양제 동시 복용해도 되나요? - 닥터나우",
+        "snippet": "하나는 임산부 종합 영양제이고, 하나는 칼슘 마그네슘 비타민D 아연이 들어간 영양제인데 두 영양제를 함께 복용해도 될지, 과잉섭취는 아닐지 알려주세요. ... 하지만 개인에 따라 영양제 효과가"
+      },
+      {
+        "url": "https://www.nibn.go.jp/eiken/kenkounippon21/download_files/foreign/foreign_kijun_korea.pdf",
+        "domain": "www.nibn.go.jp",
+        "title": "<323031352DBFB5BEE7BCD220BCB7C3EBB1E2C1D828B8F1C2F7BFDC292D302E687770>",
+        "snippet": "비타민 D 섭취기준은 한국인의 최적 건강유지를 목표로, 비타민 D 영양 결핍을 예방하는 최적 필요량, 과다섭취가 되지 않도록 하는 섭취 수준, 그리고 한국인의 섭취행동과 생활패턴을 고려하여"
+      },
+      {
+        "url": "https://m.kimspharm.com/product/list_thumb.html?cate_no=355&parent_cate_no=1",
+        "domain": "m.kimspharm.com",
+        "title": "다나음 - 킴스팜",
+        "snippet": "* 다나음 액티브 엽산 + 비타민D3 (30정x2박스, 2개월분) (엽산800㎍) / 4세대 활성형 / 임신 준비 임산부 남편"
+      },
+      {
+        "url": "https://daynote.blog/%EC%9E%84%EC%82%B0%EB%B6%80-%EB%B9%84%ED%83%80%EB%AF%BCd-top-6-%EC%97%BD%EC%82%B0%EC%A0%9C%EB%A7%8C%EC%9C%BC%EB%A1%9C-%EB%AA%A8%EC%9E%90%EB%9E%80-%EA%B2%BD%EC%9A%B0/",
+        "domain": "daynote.blog",
+        "title": "임산부 비타민D TOP 6, 엽산제만으로 모자란 경우",
+        "snippet": "임신부 아연 상한섭취량은 하루 35mg이라 3mg 정도로 넘길 일은 드물지만, 아연 단일 제품을 따로 먹고 있다면 한 번은 라벨을 확인하는 편이 좋습니다. ... 기준선부터 정리하면,"
+      },
+      {
+        "url": "https://www.ssg.com/item/itemView.ssg?itemId=1000520778764",
+        "domain": "www.ssg.com",
+        "title": "아임비타 비타민D 2000IU 1박스 (2개월분) - SSG.COM",
+        "snippet": "주원료/함량(원료 원산지) | 비타민D3혼합제제분말(비타민D3, 아라비아검, 자당, 옥수수전분, 가공유지, 이산화규소, dl-알파-토코페롤), 비타민E혼합제제분말(dl-알파-토코페릴아세테이트, 변성전분, 포도당시럽분말, 이산화규소), 산화아연, 정제포도당, D-소비톨, 자일리톨, 오렌지맛분말[오렌지분말, 백설탕, 덱스트린, 혼합제제{덱스트린, 오렌지농축액,"
+      },
+      {
+        "url": "https://www.11st.co.kr/products/7734323735",
+        "domain": "www.11st.co.kr",
+        "title": "엔젯 리포좀비타민D 임신 초기 준비 임산부 비타민D 부족 골다공증 약6달분 영양제",
+        "snippet": "* Image: 엔젯 리포좀비타민D 임신 초기 준비 임산부 비타민D 부족 골다공증 약6달분 영양제 이미지 1 * Image: 엔젯 리포좀비타민D 임신 초기 준비 임산부 비타민D 부족"
+      },
+      {
+        "url": "https://nutridatalab.com/blog/%EC%9E%84%EC%82%B0%EB%B6%80-%EB%B9%84%ED%83%80%EB%AF%BCd-%EA%B6%8C%EC%9E%A5%EB%9F%89/",
+        "domain": "nutridatalab.com",
+        "title": "임산부 비타민D 권장량 기관마다 다른 이유와 IU 단위 읽는 법",
+        "snippet": "임산부 종합 영양제 라벨에 “비타민D 25μg(1,000IU)“처럼 두 단위를 함께 표기하는 경우가 많아요. μg 숫자에 40을 곱하면 IU로 환산돼요. ... 비타민D 수요는 임신 단계마다 달라요."
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 23.93,
+      "organic_opportunity": 30.0,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-14T00:52:25.608527+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "임신준비비타민D"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "임신준비비타민D",
+      "executed_query": "임신 준비 비타민D",
+      "topic": "임신준비비타민D, 필요한 이유와 섭취량·중복 복용 확인사항",
+      "intent": "임신 준비 중 비타민D가 왜 필요하고, 하루 필요량과 영양제 중복 섭취는 어떻게 확인할까?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-14T00:52:25.608527+00:00",
+      "result_count": 10,
+      "domain_count": 9,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "임신준비비타민D",
+        "executed_query": "임신 준비 비타민D",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-14T00:52:25.608527+00:00",
+        "raw_sha256": "43029b0bd9cce4e5e4aee68106a754978d194b3c57ba36e12f36c956764e3cc7",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "☀️ 비타민D (Vitamin D) ... 비타민D는 태아의 뼈 형성과 칼슘 흡수, ... 임신 준비 시기부터 하루 1,000~2,000IU 보충을 권장해요."
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "임신준비중인데 영양제 용량 괜찮은지 확인 부탁해요 비타민D 152.5㎍ 엽산 833㎍ 비오틴 300㎍ 마그네슘 299.5mg 비타민c 200mg 비타민b1 1.4mg 비타민b2 1.6mg 비타민b6 2mg 비타민b12 18㎍ 비타민b1"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "### 임신 준비 영양제 추천, 엽산부터 꼭 챙겨야 할 성분과 복용 시기 ... 비타민D, 철분, 오메가3, 요오드와 콜린은 무조건 제품을 하나씩 추가하기보다 평소 식사와 현재"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "하나는 임산부 종합 영양제이고, 하나는 칼슘 마그네슘 비타민D 아연이 들어간 영양제인데 두 영양제를 함께 복용해도 될지, 과잉섭취는 아닐지 알려주세요. ... 하지만 개인에 따라 영양제 효과가"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "비타민 D 섭취기준은 한국인의 최적 건강유지를 목표로, 비타민 D 영양 결핍을 예방하는 최적 필요량, 과다섭취가 되지 않도록 하는 섭취 수준, 그리고 한국인의 섭취행동과 생활패턴을 고려하여"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "* 다나음 액티브 엽산 + 비타민D3 (30정x2박스, 2개월분) (엽산800㎍) / 4세대 활성형 / 임신 준비 임산부 남편"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "임산부 비타민D TOP 6, 엽산제만으로 모자란 경우"
+          },
+          {
+            "result_index": 7,
+            "relevant": false,
+            "quote": "아임비타 비타민D 2000IU 1박스 (2개월분) - SSG.COM"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "엔젯 리포좀비타민D 임신 초기 준비 임산부 비타민D 부족 골다공증 약6달분 영양제"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "임산부 종합 영양제 라벨에 “비타민D 25μg(1,000IU)“처럼 두 단위를 함께 표기하는 경우가 많아요. μg 숫자에 40을 곱하면 IU로 환산돼요. ... 비타민D 수요는 임신 단계마다 달라요."
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.25,
+        "organic_opportunity": 30.0
+      },
+      "scope": "full_keyword",
+      "target_keyword": "임신준비비타민D",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "임신 준비 시기부터 하루 1,000~2,000IU 보충을 권장해요."
+        },
+        {
+          "result_index": 1,
+          "quote": "임신준비중인데 영양제 용량 괜찮은지 확인 부탁해요"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-14T00:52:25.608527+00:00",
+      "input_sha256": "fe2072f60594cb2c0a81c5f9b4e9dc3160cf92bdd0c4379a24e2eb894849e2d5",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "임신준비비타민D",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": " need each day depends on your age.  The recommended amounts, in international units (IU), are: Birth to 12 months: 400 IU Children 1-13 years: 600 IU Teens 14-18 years: 600 IU Adults 19-70 years: 600 IU Adults 71 years and older: 800 IU Pregnant and breastfeeding women: 600 IU People at high risk of vitamin D deficiency may need more. Check with your health care provider about how much you need. What causes vitamin D deficiency? You can become deficient in vitamin D for different reasons: You don't get enough vitamin D in your diet You don't absorb enough vitamin D from food (a malabsorption problem ) You don't get enough exposure to sunlight Your liver or kidneys cannot convert vitamin D to its active form in the body You take medicines that interfere with your body's ability to convert or absorb vitamin D Who is at risk of vitamin D deficiency? Some people are at higher risk of vitami",
+            "entity": "Pregnant and breastfeeding women",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "임신 준비 중 비타민D가 필요한 이유는 무엇인가?",
+            "answer": "칼슘 흡수와 뼈 건강에 필요하다. 일반 생리적 역할의 근거이며 임신 성공률 향상 효과를 입증하지는 않는다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Vitamin D Deficiency Also called: Hypovitaminosis D, Low Vitamin D Summary What is vitamin D deficiency? Vitamin D deficiency means that your body is not getting enough vitamin D to stay healthy. Why do I need vitamin D and how do I get it? Vitamin D helps your body absorb calcium . Calcium is one of the main building blocks of bone. Vitamin D also has a role in your nervous, muscle, and immune systems. You can get vitamin D in three ways: through your skin, from your diet, and from supplements. Your body forms vitamin D naturally after exposure to sunlight. But too much sun exposure can lead to skin aging and skin cancer, so many people try to get their vitamin D from other sources. How much vitamin D do I need? The amount of vitamin D you need each day depends on your age.  The recommended amounts, in international units (IU), are: Birth to 12 months: 400 IU Children 1-13 years: 600 IU"
+          },
+          {
+            "facet": "하루 필요량과 개인별 영양제 보충량은 어떻게 구분하는가?",
+            "answer": "미국 자료상 19~70세 성인과 임신부는 하루 600IU가 권장된다. 개인 보충량은 결핍 위험 등을 고려해 의료진과 확인한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " need each day depends on your age.  The recommended amounts, in international units (IU), are: Birth to 12 months: 400 IU Children 1-13 years: 600 IU Teens 14-18 years: 600 IU Adults 19-70 years: 600 IU Adults 71 years and older: 800 IU Pregnant and breastfeeding women: 600 IU People at high risk of vitamin D deficiency may need more. Check with your health care provider about how much you need. What causes vitamin D deficiency? You can become deficient in vitamin D for different reasons: You don't get enough vitamin D in your diet You don't absorb enough vitamin D from food (a malabsorption problem ) You don't get enough exposure to sunlight Your liver or kidneys cannot convert vitamin D to its active form in the body You take medicines that interfere with your body's ability to convert or absorb vitamin D Who is at risk of vitamin D deficiency? Some people are at higher risk of vitami"
+          },
+          {
+            "facet": "종합영양제와 비타민D를 함께 먹을 때 무엇을 확인해야 하는가?",
+            "answer": "강화식품 표시와 종합·단일 영양제의 비타민D 함량을 확인한다. 과량은 해로우며 개인 복용량·횟수·기간은 의료진과 상의한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "fortified foods. You can check the food labels to find out whether a food has vitamin D. Foods that often have added vitamin D include: Milk Breakfast cereals Orange juice Other dairy products, such as yogurt Soy drinks Vitamin D is in many multivitamins. There are also vitamin D supplements, both in pills and in a liquid for babies. If you have vitamin D deficiency, the treatment is with supplements. Check with your provider about how much you need to take, how often you need to take it, and how long you need to take it. Can too much vitamin D be harmful? Getting too much vitamin D (known as vitamin D toxicity) can be harmful. Signs of toxicity include nausea and vomiting , poor appetite, constipation , weakness, and weight loss. Very high levels of vitamin D can damage the kidneys. It also raises the level of calcium in your blood. High levels of blood calcium (hypercalcemia) can cause"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": " need each day depends on your age.  The recommended amounts, in international units (IU), are: Birth to 12 months: 400 IU Children 1-13 years: 600 IU Teens 14-18 years: 600 IU Adults 19-70 years: 600 IU Adults 71 years and older: 800 IU Pregnant and breastfeeding women: 600 IU People at high risk of vitamin D deficiency may need more. Check with your health care provider about how much you need. What causes vitamin D deficiency? You can become deficient in vitamin D for different reasons: You don't get enough vitamin D in your diet You don't absorb enough vitamin D from food (a malabsorption problem ) You don't get enough exposure to sunlight Your liver or kidneys cannot convert vitamin D to its active form in the body You take medicines that interfere with your body's ability to convert or absorb vitamin D Who is at risk of vitamin D deficiency? Some people are at higher risk of vitami",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 68.93,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

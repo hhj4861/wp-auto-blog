@@ -937,5 +937,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-14T09:18:30.246537+00:00"
+  },
+  {
+    "key": "애스크플레이askplay",
+    "keyword": "애스크 플레이(Ask Play)",
+    "topic": "애스크 플레이(Ask Play), 10월 14일 발표한 앱 비교 기능은 무엇이 달라졌나",
+    "category": "테크",
+    "post_id": 1959,
+    "url": "https://trendpulse.blog/ask-play-app-comparison-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-14T13:41:50.122796+00:00"
   }
 ]

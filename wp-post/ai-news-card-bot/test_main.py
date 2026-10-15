@@ -1,3 +1,4 @@
+import datetime as dt
 import json
 import os
 import tempfile
@@ -28,6 +29,26 @@ class BotTests(unittest.TestCase):
         rows = [item(age_hours=40, score=1000), item(title='new', url='https://github.com/openai/codex/releases/tag/v2')]
         self.assertEqual(bot.select_news(rows), [rows[1]])
         self.assertEqual(len(bot.select_news([item(), item(title='different')])), 1)
+
+    def test_release_dates_and_stable_only(self):
+        valid = dict(published_at=(bot.NOW-dt.timedelta(hours=1)).isoformat(), body='Changes',
+                     html_url=item()['url'], name='v1', tag_name='v1')
+        releases = [valid, dict(valid, published_at=(bot.NOW+dt.timedelta(hours=1)).isoformat()),
+                    dict(valid, published_at=(bot.NOW-dt.timedelta(hours=73)).isoformat()),
+                    dict(valid, prerelease=True), dict(valid, draft=True), dict(valid, body='')]
+        with patch.object(bot, 'github', return_value=Mock(status_code=200, json=lambda: releases)):
+            self.assertEqual(len(bot.fetch_source(bot.SOURCES[0])), 1)
+
+    @patch.dict(os.environ, {'OPENAI_API_KEY':'test', 'DRY_RUN':'1'})
+    def test_no_news_does_not_fabricate(self):
+        with patch.object(bot, 'fetch', return_value=[]), patch.object(bot, 'editorial') as editorial, tempfile.TemporaryDirectory() as tmp, patch.object(bot, 'OUT', Path(tmp)):
+            bot.main(); editorial.assert_not_called()
+            self.assertEqual(json.loads((Path(tmp)/'status.json').read_text())['status'], 'no_news')
+
+    @patch.dict(os.environ, {}, clear=True)
+    def test_missing_config_names_only(self):
+        with self.assertRaisesRegex(ValueError, 'Missing required configuration: OPENAI_API_KEY'):
+            bot.main()
 
     def test_editorial_mapping_and_limits(self):
         bot.validate_edits([edit()], [item()])

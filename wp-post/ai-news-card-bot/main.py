@@ -199,13 +199,6 @@ def wrap(draw, text, f, max_width, max_lines):
     return lines
 
 
-def block(draw,text,x,y,size,color,max_lines=4,line_height=None,bold=False):
-    f=font(size,bold)
-    for line in wrap(draw,text,f,904,max_lines):
-        draw.text((x,y),line,font=f,fill=color)
-        y += line_height or int(size*1.55)
-    return y
-
 def base(index,total,kicker):
     im=Image.new("RGB",(1080,1350),BG)
     d=ImageDraw.Draw(im)

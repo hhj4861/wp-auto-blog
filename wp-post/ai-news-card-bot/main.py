@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 from contextlib import ExitStack
 import html
 import sys
+import traceback
 
 import feedparser
 import requests
@@ -365,6 +366,7 @@ def main():
         (OUT/"status.json").write_text('{"status":"no_news"}')
         return
     edits = editorial(items)
+    print(f"Editorial validated: {len(edits)} items")
     paths = render(items, edits)
     (OUT/"news.json").write_text(json.dumps({"generated_at": NOW.isoformat(), "items": items, "edits": edits},
         ensure_ascii=False, indent=2), encoding="utf-8")
@@ -385,5 +387,7 @@ if __name__ == "__main__":
             value = os.getenv(key)
             if value:
                 safe = safe.replace(value, "<REDACTED>")
+        for frame in traceback.extract_tb(exc.__traceback__):
+            print(f"error_location={Path(frame.filename).name}:{frame.lineno}")
         print("::error::" + safe)
         sys.exit(1)

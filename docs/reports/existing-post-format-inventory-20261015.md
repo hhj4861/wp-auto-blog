@@ -1,14 +1,16 @@
 # 기존 공개 글 포맷 전수 점검 — 2026-10-15
 
+**최종 상태: 사용자 승인 후 PR #116 머지 및 메뉴형 13편 운영 적용·공개 검증 완료. 이전 포맷 381편은 미변경.**
+
 - 조회 시각: 2026-10-15T12:11:13+09:00
-- 범위/소유: 현재 Codex 단독, 공개 GET만 수행. 운영 글 저장·발행·PR 머지 없음.
+- 범위/소유: 현재 Codex 단독. 최초 전수 점검은 공개 GET만 수행했고, 후속 명시 승인 후 아래 기록대로 13편에만 운영 보정을 적용했다.
 - 기준 코드: PR #116의 reader 자산 업그레이드와 광고 재배치 로직(코드 d2330ad).
 - 발견: post-sitemap.xml의 395항목 중 루트 홈/중복 제외 394개 글 URL.
 - 자료: https://trendpulse.blog/post-sitemap.xml 및 아래 각 공개 글의 실제 HTML.
 - 공개 HTML은 WordPress가 가공한 결과다. 적용 후보는 인증 원문(context=edit)의 dry-run·정확한 ID/slug 확인을 거쳐야 확정된다.
 - 인증 조회 대조: Audit Broken Posts 실행 38674829606이 completed/success. dry_run=true에서 공개 글 394편 확인, 사이트맵 글 수와 일치한다. 400자 미만 본문은 0편(내용 정확성/품질 보증을 뜻하지 않음). ID 전체 집합을 인증 API와 대조한 것은 아니다.
 
-## 분류 결과
+## 최초 점검 시점의 분류 결과
 
 | 분류 | 글 수 | 다음 처리 |
 |---|---:|---|
@@ -18,7 +20,7 @@
 
 ## 적용 순서와 범위
 
-1. PR #116의 명시적 머지 승인 이후 메뉴형 후보 13편을 인증 원문 dry-run으로 확인한다. 통과한 글만 원문 백업·CSS/JS 및 기존 광고 위치를 보정한다. 본문 재작성은 포함하지 않는다.
+1. 메뉴형 후보 13편의 인증 원문 dry-run 통과 후 사용자 승인에 따라 PR #116을 머지하고, 원문 백업·CSS/JS 및 기존 광고 위치 보정을 완료했다. 본문은 재작성하지 않았다.
 2. 메뉴형 후보 중 광고 2개인 글은 11편이다. 한국언론진흥재단·도시가스 글 2편은 소유 광고 블록이 없으며 이 보정은 새 광고를 추가하지 않는다.
 3. 나머지 381편은 이번 보정 도구의 지원 포맷이 아니다. 최근 검색 유입이 있는 글부터 공식 출처·기간·내용을 검토하고 카테고리에 맞는 메뉴형 전환을 준비한다. 전체 재작성·운영 반영은 이번 점검에 포함하지 않는다.
 4. 현재 리뷰 카테고리의 메뉴형 글은 0편이다. 이전에 제작한 시안과 실제 발행 적용 여부를 혼동하지 않는다.
@@ -41,7 +43,7 @@
 - 최초 7편에서 .post-content/.entry-content 선택자가 없어 미분류됐다. HTTP 200과 postid는 확인됐으므로 통신 재시도 대신 article .entry.themeform 구조를 확인했다. 해당 선택자로 7편 모두 본문을 확인하고 최종 분류에 포함했다.
 - 예전 글의 카테고리 속성에 포함된 백틱 표기 8편은 보고서 집계에서만 정규화했다. 실제 글은 수정하지 않았다.
 - 공개 페이지는 JavaScript를 실행하지 않고 GET HTML만 점검했다. 메뉴 클릭/모바일 화면 검증을 394편 모두 수행한 것은 아니다.
-- 메뉴형 후보 13편은 PR #116의 upgrade_assets 및 reflow_reader_ads를 공개 렌더 HTML에서 메모리로 실행하고 광고 재배치의 재실행 결과 동일성을 확인했다. 실제 WordPress raw 검증이 완료된 것은 기존 1962 글 1편뿐이다.
+- 메뉴형 후보 13편은 PR #116의 upgrade_assets 및 reflow_reader_ads를 공개 렌더 HTML에서 메모리로 실행하고 광고 재배치의 재실행 결과 동일성을 확인했다. 최초 전수 점검 당시 WordPress raw 검증이 완료된 것은 1962 글 1편이었고, 이후 아래 기록대로 13편 모두 인증 원문 검증과 운영 적용을 완료했다.
 - 광고 수는 직접 삽입한 data-monetization=ad 블록 수이며 Google 자동광고 노출 수가 아니다. 공개 HTML/인증정보를 별도 저장하지 않았다.
 - 채용 상태·의료/법률 사실·상품 가격의 최신성은 구조 점검으로 검증하지 않았다.
 - 인증 공개 글 총수 확인 실행: https://github.com/hhj4861/wp-auto-blog/actions/runs/38674829606 (성공, 변경 없음).
@@ -444,3 +446,145 @@
 | 1843 | 테크 | [TypeSafe Jev란? 판단 모델의 원리·활용법과 정확도 오해 정리](https://trendpulse.blog/typesafe-jev-decision-model-guide/) | 이전 공통 포맷 | 0 | 메뉴형 포맷 전환 및 내용 검토 필요 |
 | 1784 | 테크 | [노트북인터넷연결: 와이파이·유선 연결 방법과 오류 점검 순서](https://trendpulse.blog/laptop-internet-connection-guide/) | 이전 공통 포맷 | 0 | 메뉴형 포맷 전환 및 내용 검토 필요 |
 | 1796 | 테크 | [윈도우11정품인증 방법: 제품 키·디지털 라이선스와 재설치 총정리](https://trendpulse.blog/windows-activation-guide-2026/) | 이전 공통 포맷 | 0 | 메뉴형 포맷 전환 및 내용 검토 필요 |
+
+## 13편 인증 원문 미리보기 — 2026-10-15
+
+WordPress 쓰기 없이 dry_run=true로 실행. 아래 실행은 upgrade_reader_assets=true, reflow_reader_ads=true이며 코드 ref는 fix/reader-monetization-20261015(d2a9934)이다.
+
+| 글 ID | 슬러그 | 미리보기 실행 |
+|---:|---|---|
+| 1953 | russia-pneumonia-korea-2026 | [38683701696](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683701696) |
+| 1919 | cervical-screening-guide-2026 | [38683705746](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683705746) |
+| 1907 | excel-chart-guide | [38683710330](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683710330) |
+| 1932 | ai-startup-tax-support-2026 | [38683719382](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683719382) |
+| 1956 | fire-safety-project-2026 | [38683728784](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683728784) |
+| 1935 | jeonse-victim-decision-2026 | [38683733183](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683733183) |
+| 1897 | citygas-recruitment-2026 | [38683742147](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683742147) |
+| 1927 | industrial-safety-engineer-2026 | [38683746576](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683746576) |
+| 1894 | kpf-recruitment-2026 | [38683755289](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683755289) |
+| 1922 | pt-interview-preparation | [38683759975](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683759975) |
+| 1962 | game-finder-launch-korea-2026 | [38683768356](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683768356) |
+| 1959 | ask-play-app-comparison-2026 | [38683776816](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683776816) |
+| 1916 | on-device-ai-npu-2026 | [38683785702](https://github.com/hhj4861/wp-auto-blog/actions/runs/38683785702) |
+
+### 인증 원문 검증 결과
+
+| 글 ID | 실행 ID | 결론 | 원문 검증 | 변경 예정 |
+|---:|---:|---|---|---|
+| 1953 | 38683701696 | success | 통과 | True |
+| 1919 | 38683705746 | success | 통과 | True |
+| 1907 | 38683710330 | success | 통과 | True |
+| 1932 | 38683719382 | success | 통과 | True |
+| 1956 | 38683728784 | success | 통과 | True |
+| 1935 | 38683733183 | success | 통과 | True |
+| 1897 | 38683742147 | success | 통과 | True |
+| 1927 | 38683746576 | success | 통과 | True |
+| 1894 | 38683755289 | success | 통과 | True |
+| 1922 | 38683759975 | success | 통과 | True |
+| 1962 | 38683768356 | success | 통과 | True |
+| 1959 | 38683776816 | failure | 미확인/실패 | None |
+| 1916 | 38683785702 | success | 통과 | True |
+
+미리보기 실행에서 WordPress 본문 저장은 수행하지 않았다. 사용자로부터 PR #116 머지 및 원문 검증을 통과한 13편 적용 승인을 받았다.
+
+- 애스크 플레이(1959)의 최초 미리보기는 원문 GET 단계의 GitHub runner 네트워크 연결 오류([Errno 101] Network is unreachable)로 실패했다. 본문 저장 전 실패이며 구조 검증 실패가 아니다. 뒤의 1916 실행은 정상 성공해 일시적 runner 네트워크 문제로 보고 동일 읽기 전용 실행을 새 runner에서 1회 재실행한다.
+
+## 승인 후 운영 적용
+
+- 사용자 승인 후 PR #116 머지 완료: 0d8a05b5b9e5366221d98b1a8287bed42d82f450.
+- 첫 적용 글 1962, game-finder-launch-korea-2026: [38684273120](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684273120), main, dry_run=false, 원문 백업 사용.
+- 첫 적용 결과: success, verified=True, changed=True. 원문/SEO 메타데이터 저장 후 대조 통과, 백업 artifact 존재 확인.
+
+- 1959 재검증 attempt=2: completed/success, post_id=1959, dry_run=True, changed=True 확인. 13편 모두 인증 원문 미리보기 통과.
+- 첫 글 공개 검증: 원본 백업과 변환 결과의 자산/광고 외 원문 바이트 동일. 공개 본문 텍스트·링크·섹션 동일, 광고 블록 해시 동일. 공개 HTML 전체 해시는 렌더링 차이로 달라 전체 문자열 동일성 대신 위 보존 항목을 직접 대조했다.
+
+### 나머지 12편 적용 실행
+
+| 글 ID | 슬러그 | 운영 적용 실행 |
+|---:|---|---|
+| 1953 | russia-pneumonia-korea-2026 | [38684576854](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684576854) |
+| 1919 | cervical-screening-guide-2026 | [38684582747](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684582747) |
+| 1907 | excel-chart-guide | [38684587239](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684587239) |
+| 1932 | ai-startup-tax-support-2026 | [38684591635](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684591635) |
+| 1956 | fire-safety-project-2026 | [38684597159](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684597159) |
+| 1935 | jeonse-victim-decision-2026 | [38684607501](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684607501) |
+| 1897 | citygas-recruitment-2026 | [38684613785](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684613785) |
+| 1927 | industrial-safety-engineer-2026 | [38684618668](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684618668) |
+| 1894 | kpf-recruitment-2026 | [38684623753](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684623753) |
+| 1922 | pt-interview-preparation | [38684628871](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684628871) |
+| 1959 | ask-play-app-comparison-2026 | [38684639356](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684639356) |
+| 1916 | on-device-ai-npu-2026 | [38684649897](https://github.com/hhj4861/wp-auto-blog/actions/runs/38684649897) |
+
+### 운영 저장·백업 검증 결과
+
+| 글 ID | 적용 실행 ID | 결론 | 원문/메타데이터 저장 후 대조 | 백업 artifact |
+|---:|---:|---|---|---|
+| 1953 | 38684576854 | success | 통과 | 확인 |
+| 1919 | 38684582747 | success | 통과 | 확인 |
+| 1907 | 38684587239 | success | 통과 | 확인 |
+| 1932 | 38684591635 | success | 통과 | 확인 |
+| 1956 | 38684597159 | success | 통과 | 확인 |
+| 1935 | 38684607501 | success | 통과 | 확인 |
+| 1897 | 38684613785 | success | 통과 | 확인 |
+| 1927 | 38684618668 | success | 통과 | 확인 |
+| 1894 | 38684623753 | success | 통과 | 확인 |
+| 1922 | 38684628871 | success | 통과 | 확인 |
+| 1959 | 38684639356 | success | 통과 | 확인 |
+| 1916 | 38684649897 | success | 통과 | 확인 |
+
+### 전체 13편 공개 반영 및 보존 검증
+
+원본 백업은 메모리로만 내려받아 대조했다. 자산/광고 외 원문 바이트, 공개 본문 텍스트·링크·섹션, 적용 전 광고 블록 해시, 새 카테고리 CSS, canonical URL, 제목, 요약/본문 밖 광고 순서를 확인했다.
+
+| 글 ID | 공개 HTTP | 원문 보존 | 공개 내용 | 광고 보존 | 새 CSS | URL/제목 | 광고 순서 |
+|---:|---:|---|---|---|---|---|---|
+| 1894 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+| 1897 | 200 | 통과 | 실패 | 통과 | 실패 | 통과 | 통과 |
+| 1907 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+| 1916 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+| 1919 | 200 | 통과 | 실패 | 통과 | 실패 | 통과 | 통과 |
+| 1922 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+| 1927 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+| 1932 | 200 | 통과 | 실패 | 통과 | 실패 | 통과 | 통과 |
+| 1935 | 200 | 통과 | 실패 | 통과 | 실패 | 통과 | 통과 |
+| 1953 | 200 | 통과 | 실패 | 통과 | 실패 | 통과 | 통과 |
+| 1956 | 200 | 통과 | 실패 | 통과 | 실패 | 통과 | 통과 |
+| 1959 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+| 1962 | 200 | 통과 | 통과 | 통과 | 실패 | 통과 | 통과 |
+
+일부 공개 검증 미통과. 전체 완료로 보고하지 않음.
+
+### 공개 렌더링 차이 진단 및 최종 재검증
+
+최초 공개 비교는 CSS 문자열 전체 동일성을 요구해 사이트의 CSS 압축(공백·마지막 세미콜론 제거, transparent 축약 등)으로 13편을 불일치 처리했다. 일부 출처 제목의 ASCII 하이픈이 WordPress에서 en dash로 표시되어 본문 비교도 불일치했다. 원문은 저장 후 exact readback을 이미 통과했으므로 재저장하지 않고 다음 기준으로 검증했다.
+
+- 원문 자산/광고 외 바이트 동일성을 그대로 유지한다.
+- 공개 텍스트와 링크 표시는 곡선 따옴표·대시·말줄임표만 정규화한다. 링크 URL과 섹션 ID는 정규화하지 않는다.
+- 공개 CSS는 전체 압축 문자열 대신 실제 새 변경의 표지 높이/비율 해제, 배경 그림 숨김, 요약 20~26px·행간·너비 규칙의 최종 선언을 대조한다.
+- 공개 URL·제목·광고 순서·광고 해시는 앞선 전수 검사에서 모두 통과했다.
+
+| 글 ID | HTTP | 원문 바이트 | 공개 내용·링크·섹션 | 광고 해시 | 새 CSS 핵심 규칙 |
+|---:|---:|---|---|---|---|
+| 1894 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1897 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1907 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1916 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1919 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1922 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1927 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1932 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1935 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1953 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1956 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1959 | 200 | 통과 | 통과 | 통과 | 통과 |
+| 1962 | 200 | 통과 | 통과 | 통과 | 통과 |
+
+최종 13편 모두 검증 통과. 운영 적용 완료. 기존 본문/메타데이터 및 광고 코드를 보존했고 원문 백업 artifact도 모두 확인했다. 이전 포맷 381편은 미변경.
+
+### 대표 공개 글의 실제 브라우저 확인
+
+- 대상: https://trendpulse.blog/game-finder-launch-korea-2026/
+- PC 1728px: 표지 38.5px, 요약 시작 약 643.6px, 요약 결론 26px, 사이드 sticky 메뉴 vertical, 가로 넘침 없음. 전체 5개 패널 → 개별 1개 전환, 소유 광고 2개가 숨김 패널 밖에 유지됨.
+- 모바일 390×844 새 로드: 표지 38.5px, 요약 결론 20px, 가로 넘침 없음. 전체 5개 → 개별 1개 → 전체 5개 정상 전환, 광고 2개 유지. 대표 1편의 실제 UI 검증이며 13편 모두를 모바일 브라우저에서 개별 클릭한 것은 아님.
+- 데스크톱에서 모바일로 폭만 바꿨을 때 기존 데스크톱 자동광고가 남아 가렸으므로 모바일 폭으로 새 로드해 확인했다. Google 상단 자동광고와 쇼핑 앵커는 별도 계정 설정이며 이번 수정에서 제거하지 않았다.
+- 검증 중 브라우저 연결이 끊겨 대상 URL만으로 탭을 재연결했다. 최종 viewport 1728×828 원복 확인, 본 작업 검증 탭 닫기 완료.

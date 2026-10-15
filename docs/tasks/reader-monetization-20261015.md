@@ -5,8 +5,8 @@
 - 기준: origin/main 7d2cdae. 브랜치 fix/reader-monetization-20261015.
 - 완료 기준: 광고 원문·개수 보존, 요약/본문 밖의 광고 2곳, 메뉴 전환 시 광고 유지, 기존 글 본문 바이트·메타데이터 보존 및 백업, PC/모바일 브라우저 확인, 본인 변경 커밋·push·PR. 실제 머지는 사용자 승인 후.
 - 디자인: 기존 흰 바탕·카테고리 강조색·본문 폭과 글꼴을 유지한다. 이미지 중심 표지는 날짜/카테고리의 짧은 행으로 줄이고 제목·핵심 답변을 우선한다. 광고는 요약과 상세 설명을 다 읽는 지점에 둔다.
-- 진행: 구현·로컬 검증 완료, PR 준비 중. 운영 사이트는 아직 미반영. AdSense 자동광고 설정은 별도 계정 영역이며 CSS로 숨기지 않는다.
-- 다음: 관련 회귀·공개 HTML을 사용한 로컬 PC/모바일 확인 후 PR 준비.
+- 진행: 구현·검증·원격 push 완료. PR #116 열림, 머지 승인 대기. 운영 사이트는 아직 미반영. AdSense 자동광고 설정은 별도 계정 영역이며 CSS로 숨기지 않는다.
+- 다음: PR #116 사용자 머지 승인 후 기존 글의 원문 백업·적용·공개 검증.
 
 ## 검증 중 발견 및 수정
 
@@ -33,3 +33,10 @@
 첫 보정 대상은 https://trendpulse.blog/game-finder-launch-korea-2026/ (1962, game-finder-launch-korea-2026). 해당 브랜치의 TrendPulse Maintenance에서 dry_run=true, upgrade_reader_assets=true, reflow_reader_ads=true로 먼저 실제 WordPress 원문을 검증한다. 승인 후 main에서 같은 ID/slug와 dry_run=false로 적용하고 공개 화면·동일 URL·메타데이터 보존을 확인한다. 다른 기존 글은 정확한 ID/slug와 지원 포맷을 확인한 뒤 같은 경로로 적용한다.
 
 AdSense 자동광고의 상단 배치/요약 영역 제외는 별도 계정 설정이다. 본 변경은 Google 소유 광고를 CSS로 숨기거나 제거하지 않는다. JAL 등 기존 콘텐츠 갱신과 상품 비교 실험은 별도 사실 검토가 필요한 후속 작업이다.
+
+## 원격 검증 결과
+
+- PR: https://github.com/hhj4861/wp-auto-blog/pull/116 (OPEN, MERGEABLE).
+- 코드 커밋 d2330ad를 작업 upstream origin/fix/reader-monetization-20261015에 정상 push했다.
+- 실제 원문 미리보기 실행 38672789819 완료/success. 결과: post_id=1962, dry_run=True, changed=True. 본문 저장 요청 없이 지원되는 실제 WordPress raw 구조와 새 보정 경로를 확인했다.
+- 운영 사이트 적용/머지/AdSense 계정 설정 변경은 수행하지 않았다. 최종 글자 크기까지 실제 Chrome 검증 후 viewport 원복을 완료했다.

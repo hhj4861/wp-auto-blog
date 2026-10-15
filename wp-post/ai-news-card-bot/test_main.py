@@ -67,6 +67,26 @@ class BotTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'Gemini fallback HTTP 403'):
                 bot.editorial([item()])
 
+    def test_model_envelopes_and_product_only_headline(self):
+        for envelope in ([edit()], {'cards':[edit()]}):
+            self.assertEqual(bot.parse_cards(json.dumps(envelope)), [edit()])
+        card = dict(edit(), headline='Codex v1.0')
+        self.assertEqual(bot.validate_edits([card], [item()])[0]['headline'], 'Codex v1.0 업데이트')
+        with self.assertRaises(ValueError): bot.validate_edits([None], [item()])
+
+    def test_editorial_retry_is_bounded(self):
+        with patch.object(bot, 'editorial_once', side_effect=[ValueError('length'), [edit()]]) as call:
+            self.assertEqual(bot.editorial([item()]), [edit()])
+            self.assertEqual(call.call_count, 2)
+        with patch.object(bot, 'editorial_once', side_effect=ValueError('length')) as call:
+            with self.assertRaises(ValueError): bot.editorial([item()])
+            self.assertEqual(call.call_count, 2)
+
+    def test_blog_excludes_marketing(self):
+        self.assertFalse(bot.technical_blog('The next chapter is agentic', 'New analysis shows enterprise adoption'))
+        self.assertFalse(bot.technical_blog('Amp puts AI agents to work', 'See how Amp uses models'))
+        self.assertTrue(bot.technical_blog('Introducing Codex SDK', 'New API features for developers'))
+
     def test_wrap_long_tokens(self):
         d = ImageDraw.Draw(Image.new('RGB', (1080, 1350)))
         f = bot.font(35)

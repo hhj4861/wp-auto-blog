@@ -85,6 +85,12 @@ def fetch_source(source):
         return []
 
 
+def technical_blog(title, body):
+    if re.search(r"see how|adoption|enterprises|customer stor|market|new analysis|puts .* to work", title + " " + body, re.I):
+        return False
+    return bool(re.search(r"\b(introducing|launching|releasing|release|updates?|available|api|sdk|codex)\b", title, re.I))
+
+
 def fetch_blog():
     try:
         r = requests.get("https://openai.com/news/rss.xml", timeout=25)
@@ -99,7 +105,7 @@ def fetch_blog():
             title, body = clean(entry.get("title")), clean(entry.get("summary"))
             url = entry.get("link", "")
             if (0 <= age <= 72 and urlsplit(url).hostname == "openai.com"
-                    and re.search(r"codex|agent|api|sdk|developer|model|gpt", title, re.I)
+                    and technical_blog(title, body)
                     and body):
                 items.append(dict(title=title, body=body[:6500], url=url, source="OpenAI",
                     category="AI TECH", published=published.astimezone(KST).isoformat(),
@@ -228,12 +234,21 @@ def wrap(draw, text, f, max_width, max_lines):
     lines = []
     for paragraph in text.split("\n"):
         line = ""
-        for char in paragraph:
-            if line and draw.textlength(line + char, font=f) > max_width:
-                lines.append(line.rstrip())
+        for word in paragraph.split():
+            trial = (line + " " + word).strip()
+            if draw.textlength(trial, font=f) <= max_width:
+                line = trial
+                continue
+            if line:
+                lines.append(line)
                 line = ""
-            line += char
-        lines.append(line.rstrip())
+            # Split only tokens that cannot fit on an otherwise empty line.
+            for char in word:
+                if line and draw.textlength(line + char, font=f) > max_width:
+                    lines.append(line)
+                    line = ""
+                line += char
+        lines.append(line)
     if len(lines) > max_lines:
         lines = lines[:max_lines]
         while lines[-1] and draw.textlength(lines[-1] + "…", font=f) > max_width:
@@ -260,6 +275,7 @@ def save(im,index):
     return path
 
 def fit(draw, text, box, size=36, color=FG, bold=False):
+    text = text.replace("`", "")
     x, y, width, height = box
     for candidate in range(size, 21, -1):
         f = font(candidate, bold)

@@ -9,7 +9,7 @@ on:
         type: boolean
         default: false
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: wp-post-ai-news-card-bot
   cancel-in-progress: false
@@ -32,8 +32,12 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y fonts-noto-cjk
           python -m pip install -r requirements.txt
+      - name: Unit and layout tests
+        run: python -m unittest -v test_main
       - name: Generate and deliver
         env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -42,6 +46,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: ai-news-card-output
+          name: ai-news-card-output-${{ github.run_id }}-${{ github.run_attempt }}
           path: wp-post/ai-news-card-bot/output/
-          retention-days: 7
+          retention-days: 14

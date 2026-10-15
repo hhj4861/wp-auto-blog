@@ -34483,7 +34483,7 @@
     "keywords": [
       "엽산효능"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -34946,7 +34946,7 @@
     "keywords": [
       "임신준비비타민D"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "임신준비비타민D",
@@ -35965,6 +35965,136 @@
       }
     },
     "score": 56.71,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "유전자검사 가능 유전질환 7개 추가 선정",
+    "category": "건강",
+    "topic": "유전자검사 가능 유전질환 7개 추가 선정: 10월 15일 발표된 배아·태아 검사 대상 264개 확대",
+    "intent": "10월 15일 추가된 7개 질환은 무엇이며, 임신·출산을 계획하는 가족이 확인할 목록과 추가 검토 요청 절차는?",
+    "gap": "신규 7개 질환의 국·영문명 표, 검토 중인 4개 질환 구분, 목록 확인 경로와 검토 요청 필수정보 체크리스트 제공",
+    "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785324",
+    "verified_sources": [
+      {
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785324",
+        "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785324",
+        "title": "배아 또는 태아 대상유전자검사 가능 유전질환 7개 추가 선정 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+        "checked_on": "2026-10-16",
+        "publication_dates": [
+          "2026-10-15T15:08:47+09:00"
+        ],
+        "sha256": "b419967f5d63fe64eac83e1c7461c7647d5d514a65b2069a9d61a5ea4add9203",
+        "excerpt": "광 보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 10. 15.(목) 유전자검사 가능 유전질환 7개 추가 선정 - 연골모발형성저하증, 피어슨 증후군 등 총 264개 질환으로 확대 - 보건복지부 (장관 정은경) 는 10월 15일(목) 배아 또는 태아 대상 유전자검사가 가능 한 유전질환 7개 * 를 추가로 선정 하고, 이를 포함한 전체 264개 유전질환 을 보건복지부 누리집 (https://www.mohw.go.kr) ** 에 공고 했다. * ➊ 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 , ➋ 연골모발형성저하증 , ➌ TOR1A연관 근육긴장이상증, ➍ SGCE연관 근육긴장이상증 , ➎ DPAGT1연관 선천성근무력증후군 , ➏ 피어슨 증후군 , ➐ 표피박리성 수장족저 각피증 1형 ** ‘보건복지부 누리집 > 알림 > 공지사항’에서 확인 가능 배아 또는 태아 대상 유전자검사 가능 유전질환은 환자의 요청을 반영하여 지속 관리하며, 추가 검토 요청을 받은 질환에 대하여 ▲ 증상 발병 연령, ▲ 치명도 및 중증도, ▲ 치료 및 관리 가능성 등을 전문가 위원회 * 에서 종합적으로 검토하여 선정한다. 이번 위원회 검토는 2026년 7월 15일까지 접수된 질환 에 대해서 이루어졌다. 다만, 접수된 질환 중 유전성 종양 소인 증후군 또는 심근병증 관련 4개 질환 ** 에 대해서는 추가 검토가 진행 중이다. * 해당 위원회는 임상유전체의학과, 소아청소년학과, 산부인과, 진단검사의학과 등 다양한 전공분야의 의료계 및 법학 전문가 등으로 구성 ** ➊ SDHB연관 유전성 종양 소인 증후군, ➋ MYH7연관 심근병증, ➌ FLNC연관 심근병증, ➍ ACTN2연관 심장 및 골격근 근병증 질환 검토는 국민신문고(www.epeople.go.kr) 민원을 통해 요청 할 수 있으며, 신청 시에 신청질환명 , 원인 유전자명 , 환자에서의 유전변이 확인 , 유전자검사 결과지 , 환자-신청자의 관계 및 주요 증상 , 신청 사유를 반드시 입력 하여야 한다. 해당 정보는 신청 내용의 정확한 확인과 효율적인 검토를 위해 활용된다. <배아 또는 태아 대상 유전자검사 가능 질환 검토 요청 시 필수 제출 정보> 필수 제출 정보 기재내용 1. 신청 질환명 국문명 / 영문명 2. 원인 유전자명 필수기재 3. 환자에서의 유전변이 확인 해당 질환의 원인이 되는 유전변이가 환자에게서 확인된 경우에 한하여 신청 4. 유전자검사 결과지 환자의 변이 확인이 가능한 검사결과지 첨부 5. 환자와 신청자의 관계 본인 / 자녀 / 배우자 / 기타 가족, 주요 증상 및 발병 시기 6. 신청 사유 PGT-M(착상 전 단일 유전자 질환 검사) 희망 / 산전 유전자검사 희망 / 향후 임신·출산 계획 / 기타 곽순헌 보건의료정책관 은 “ 본 제도 를 통해 유전질환내력이 있는 가족이 치명적 유전질환을 가진 아이를 임신할 수도 있다는 불안감을 덜고 안전한 출산 계획을 세울 수 있도록 지원 하고 있다”라고 밝히며, “다만 신청서에 기재한 유전자변이가 해당 질환의 원인인지 불분명한 경우 등 유전질환에 대한 과도한 우려로부터 배아 또는 태아의 생명권을 보호할 필요 가 있어 의료 및 윤리계 전문가들과 함께 신중하게 검토 하고 있다”라고 강조하였다. 배아 ‧ 태아 대상 유전자검사 가능 유전질환 목록(264개) 담당 부서 보건의료정책관 책임자 과 장 모두순 (044-202-2450) 생명윤리정책과 담당자 사무관 최은경 (044-202-2453) 붙임 1 배아‧태아 대상 유전자검사 신규 질환 목록(7개) 순번 카테고리 유전질환 1 다기관 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 (Homocystinuria-megaloblastic anemia, cbl E type) 2 다기관 연골모발형성저하증 (Cartilage-hair hypoplasia) 3 신경근육계 TOR1A연관 근육긴장이상증 (TOR1A-related dystonia) 4 신경근육계 SGCE연관 근육긴장이상증 (SGCE-related dystonia) 5 신경근육계 DPAGT1연관 선천성근무력증후군 (DPAGT1-related congenital myasthenic syndrome) 6 신요로계 피어슨 증후군 (Pierson syndrome) 7 외피계 표피박리성 수장족저 각피증 1형 (Palmoplantar keratoderma, epidermolytic, 1) ※ 검토기준: 아래 항목을 종합적으로 검토 및 평가 ① 발병 연령: 해당 질환이 출생 직후 또는 생후 수개월 이내 발현되는지 여부 ② 질병의 치명도: 질병이 생명을 위협하거나 사망률이 높은지 여부 ③ 증상의 중증도: 질병이 지속적이고 심각한 신체적, 인지적, 감각적 기능 장애를 유발하는지 여부 ④ 치료 가능 유무: 질병에 대한 치료가 존재하는지 여부 ⑤ 삶의 질: 질병이 개인과 가족의 삶에 미치는 심리적‧사회적 영향의 정도 붙임 2 배아‧태아 대상 유전자검사 가능 유전질환 목록(264개) ※ 신규질환 형광펜 표기 카테고리 유전질환명 골격계 연골무형성증 (Achondroplasia) 불완전 골형성증 (Osteogenesis imperfecta) 골화석증 (Osteopetrosis) 유전성 다발성 골연골종증 (Hereditary multiple osteochondromas) 점상연골 이형성증 (Rhizomelic chondrodysplasia punctata) 선천성 척추뼈끝 형성이상 (Spondylo-epiphyseal dysplasia congenita) 다발성골단 이형성증 (Multiple epiphyseal dysplasia) 연골저형성증 (Hypochondroplasia) 가성연골무형성증 (Pseudoachondroplasia) 골간단연골형성이상, 슈미드형 (Metaphyseal chondrodysplasia, Schmid type) 드뷔쿠아 형성이상 1형 (Desbuquois dysplasia 1) 진행성 골화 섬유이형성증(Fibrodysplasia ossificans progressiva) 조갑-슬개골 증후군(Nail-patella syndrome) 내분비계 선천성 부신 과형성증 (Congenital adrenal hyperplasia) 비타민D 저항성 구루병 (Vitamin D resistant rickets) 저인산효소증 (Hypophosphatasia) 가성 부갑상샘 기능저하증 (Pseudohypoparathyroidism) 선천성부신 저형성증 (Adrenal hypoplasia congenita) 다발성 내분비샘 종양 1형 ( Multiple endocrine neoplasia type 1 ) 다발성 내분비종양 증후군 2형 (Multiple endocrine neoplasm type 2) 또는 갑상선수질암 다기관 수적 이상 염색체이상질환 (Numerical chromosome abnormalities) 병적염색체구조적이상 (Pathogenic/Likely pathogenic structural chromosome rearrangements) 디 조지 증후군 (DiGeorge syndrome) 고셰병 (Gaucher disease) 레쉬 니한 증후군 (Lesch Nyhan syndrome) 마르판 증후군 (Marfan syndrome) 오르니틴 트랜스카바밀레이즈 결핍 (Ornithine transcarbamylase deficiency) 테이삭스병 (Tay-Sachs disease) 윌슨병 (Wilson disease) 판코니 빈혈 (Fanconi anemia) 블룸 증후군 (Bloom syndrome) 부신백질 영양장애 (Adrenoleukodystrophy) 알포트 증후군 (Alport syndrome) 파브리(-안더슨)병 (Fabry(-Anderson) disease) 바르트 증후군 (Barth syndrome) 코핀-로리 증후군 (Coffin-Lowry syndrome) 크루존 증후군 (Crouzon syndrome) 골츠 증후군 (Goltz syndrome) 헌터 증후군 (Hunter syndrome) 색소 실조증 (Incontinentia pigmenti) 로웨 증후군 (Lowe syndrome) 신경섬유종증 (Neurofibromatosis) 구안지(입얼굴손가락)증후군 (Orofaciodigital syndrome) 피르브산 탈수소효소 결핍 (Pyruvate dehydrogenase deficiency) 산필립포 증후군 (Sanfilippo disease) 스틱클러 증후군 (Stickler syndrome) 결절성 경화증 (Tuberous sclerosis) 폰 히펠-린다우 증후군 (Von Hippel-Lindau disease) 비스코트-올드리치 증후군 (Wiskott-Aldrich syndrome) 니만-피크병 (Niemann-Pick Disease) 헐러 증후군 (Hurler syndrome) 프로피온산혈증 (Propionic acidemia) 메틸말론산혈증 (Methylmalonic acidemia) 페닐케톤뇨증 (Phenylketonuria) 티로신혈증 (Tyrosinemia) 울프-허쉬호른 증후군 (Wolf-Hirschhorn syndrome) 시투룰린혈증 (Citrullinemia) 크리글러-나자르증후군 (Crigler-Najjar syndrome) 갈락토스혈증 (Galactosemia) 글루타릭산혈증 (Glutaric acidemia) 당원축적병 (Glycogen storage disease) 장쇄수산화 acyl-CoA 탈수소효소 결핍증 (Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency) 단풍당밀뇨병 (Maple syrup urine disease) 멘케스 증후군 (Menkes syndrome) 월만병 (Wolman disease) 젤웨거 증후군 (Zellweger peroxisome syndrome) 모세혈관확장성 운동실조 (Ataxia telangiectasia) 점액다당질증 (Mucopolysaccharidosis) 레트 증후군 (Rett syndrome) 안피부형백색증 (Oculocutaneous albinism) 알라질 증후군 (Alagille syndrome) 유전성 과당불내증 (Hereditary fructose intolerance 또는 Aldolase B deficiency) 카나반병 (Canavan disease) 선천성 당화부전 (Congenital disorder of glycosylation) 시스틴축적증 (Cystinosis) 데니스-드래쉬 증후군 (Denys-Drash syndrome) GM1 강글리오사이드증 (GM1 gangliosidosis) 할러포르텐-스파츠병 (Hallervorden-Spatz disease) 아페르 증후군 (Apert syndrome) 쇄골두개골 형성이상 (Cleidocranial dysplasia) 코케인 증후군 (Cockayne syndrome) 선천성 조혈기성 포르피린증 (Congenital erythropoietic porphyria) 누난 증후군 (Noonan syndrome) 눈․코․치아․골격 이형성증 (Oculodentodigital dysplasia) 파이퍼 증후군 (Pfeiffer syndrome) 천골무형성증 (Sacral agenesis syndrome 또는 Currarino syndrome) 스미스-렘리-오피쯔 증후군 (Smith-Lemli-Opitz syndrome) 트레처 콜린스 증후군 (Treacher Collins syndrome) 바르덴부르크 증후군 (Waardenburg syndrome) 블랙판-다이아몬드 증후군 (Blackfan-Diamond syndrome) 림프관기형 (Lymphatic malformation) 밸라-제롤드 증후군 (Baller-Gerold syndrome 또는 Saethre-Chotzen syndrome) 이영양성 형성이상 (Diastrophic dysplasia) 오르니틴 아미노전환효소 결핍증 (Ornithine aminotransferase deficiency) 아가미귀콩팥증후군 (Branchiootorenal syndrome) 로이디에츠신드롬 (Loeys-Dietz syndrome) 멕켈그루버 증후군 (Meckel Gruber syndrome) Combined oxidative phosphorylation deficiency 14 (mCOXPD14) ARC 증후군 (Arthrogryposis-renal dysfunction-cholestasis syndrome) 차지 증후군 (CHARGE syndrome) 샌드호프병 (Sandhoff’s disease) 치사성이형성증 (Thanatophoric dysplasia) 쉼케면역골이형성이상증 (Schimke immunoosseous dysplasia) 소토스 증후군 (Sotos syndrome) 루빈스타인-테이비 증후군 (Rubinstein-Taybi syndrome) 홀트-오람 증후군 (Holt-Oram syndrome) 가부키증후군 (Kabuki syndrome) 포이츠제거스 증후군 (Peutz-Jeghers syndrome) 코넬리아드랑에 증후군 (Cornelia de Lange syndrome) 화버 증후군 (Farber syndrome) 비키 증후군 (VICI Syndrome) 피르빈산키나아제 결핍증 (Pyruvate kinase deficiency) 멜라스 증후군 (MELAS syndrome) 바터증후군 (Bartter syndrome) 옥살산뇨증 (Hyperoxaluria, primary) 주버트 증후군 (Joubert syndrome) 싱글턴머튼 증후군 (atypical Singleton-Merten syndrome) 질식성흉곽 이형성증 (Jeunes syndrome) 치명적 선천성 구축증후군 2 (Lethal congenital contracture syndrome 2) 쇼그렌-라손 증후군 (Sjogren-Larsson syndrome) 앤틀리-빅슬러 증후군 (Antley-Bixler syndrome) 알파 지중해빈혈 X-염색체 연관 정신지체 증후군 (Alpha thalassemia X-linked mental retardation syndrome) 영아간부전 증후군 1형 (Infantile liver failure syndrome type 1/LARS) ※ 해당 분야 전문의의 판단에 따른 LARS 유전자의 열성유전에 의한 영아간부전증후군 1형 유전병 검사에 한함 엘러스단로스 증후군 (Ehlers-Danlos syndrome) ※ 해당 분야 전문의의 판단에 따른 혈관성 엘로스 단로스 증후군(Vascular Ehlers-Danlos Syndrome) 유전병 검사에 한함 코헨증후군 (Cohen syndrome) ※ 해당 분야 전문의의 판단에 따라 검사의 필요성이 인정된 경우에 한함 선천성다발성관절구축증 (Arthrogryposis multiplex congenita) ※ 해당 분야 전문의의 판단에 따라 유전적 원인이 밝혀진 유형에 대한 검사에 한함 치사성 다발성 익상편 증후군 (Multiple pterygium syndrome, lethal type) 린치 증후군 (Lynch syndrome) 에스코바 증후군 (Escobar syndrome) 초장쇄 acyl-CoA 탈수소효소 결핍증 (Very long-chain acyl-CoA dehydrogenase deficiency) 리씨 증후군 (Leigh syndrome) ※ 해당 분야 전문의의 판단에 따라 원인 유전자가 확인된 가족의 중증도를 고려한 선별적인 검사에 한함 뮤코지질증 (Mucolipidosis) 선상골병증-두개경화증 (Osteopathia striata with cranial sclerosis) 유전성 아밀로이드증 (Hereditary amyloidosis) 아이카디-구티에레스 증후군 (Aicardi-Goutieres syndrome) 리 프라우메니 증후군 (Li-Fraumeni syndrome) Renpenning 증후군 (Renpenning syndrome) 바르데 비들 증후군 2 (Bardet-Biedl syndrome 2) 척추, 심장, 신장 및 사지 결함 증후군 3형 ( Vertebral cardiac renal and limb defects syndrome 3) 위커-울프 증후군 (Wieacker-Wolff syndrome) 상염색체열성 피부 이완증 IC형 (Cutis laxa, ",
+        "attachment_url": "https://www.korea.kr/common/download.do?fileId=198570504&tblKey=GMN"
+      }
+    ],
+    "intent_results": [
+      "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785324"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785324",
+      "title": "배아 또는 태아 대상유전자검사 가능 유전질환 7개 추가 선정",
+      "publisher": "보건복지부",
+      "published": "2026-10-15"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-10-15T21:02:23.477486+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "유전자검사 가능 유전질환 7개 추가 선정"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-15T21:02:23.477486+00:00",
+      "input_sha256": "ca2f48077bac19568c2afe31dcf0fc01baba9f9cee5056126b91a3b695c69ca2",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "유전자검사 가능 유전질환 7개 추가 선정",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "광 보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 10. 15.(목) 유전자검사 가능 유전질환 7개 추가 선정 - 연골모발형성저하증, 피어슨 증후군 등 총 264개 질환으로 확대 - 보건복지부 (장관 정은경) 는 10월 15일(목) 배아 또는 태아 대상 유전자검사가 가능 한 유전질환 7개 * 를 추가로 선정 하고, 이를 포함한 전체 264개 유전질환 을 보건복지부 누리집 (https://www.mohw.go.kr) ** 에 공고 했다. * ➊ 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 , ➋ 연골모발형성저하증 , ➌ TOR1A연관 근육긴장이상증, ➍ SGCE연관 근육긴장이상증 , ➎ DPAGT1연관 선천성근무력증후군 , ➏ 피어슨 증후군 , ➐ 표피박리성 수장족저 각피증 1형 ** ‘보건복지부 누리집 > 알림 > 공지사항’에서 확인 가능 배아 또는 태아 대상 유전자검사 가능 유전질환은 환자의 요청을 반영하여 지속 관리하며, 추가 검토 요청을 받은 질환에 대하여 ▲ 증상 발병 연령, ▲ 치명도 및 중증도, ▲ 치료 및 관리 가능성 등을 전문가 위원회 * 에서 종합적으로 검토하여 선정한다. 이번 위원회 검토는 2026년 7월 15일까지 접수된 질환 에 대해서 이루어졌다. 다만, 접수된 질환 중 유전성 종양 소인 증후군 또는 심근병증 관련 4개 질환 ** 에 대해서는 추가 검토가 진행 중이다. * 해당 위원회는 임상유전체의학과, 소아청소년학과, 산부인과, 진단검사의학과 등 다양한 전공분야의 의료계 및 법학 전문가 등으로 구성 ** ➊ SDHB연관 유전성 종양 소인 증후군, ➋ MYH7연관 심근병증, ➌ FLNC연관 심근병증, ➍ ACTN2연관 심장 및 골격근 근병증 질환 검토는 국민신문고(www.epeople.go.kr) 민원을 통해 요청 할 수 있으며, 신청 시에 신청질환명 ,",
+            "entity": "보건복지부",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "추가 선정된 7개 질환의 국문명과 영문명은 무엇인가?",
+            "answer": "붙임 1에 연골모발형성저하증, 피어슨 증후군 등 신규 7개 질환의 국문명과 영문명이 모두 제시돼 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " 우려로부터 배아 또는 태아의 생명권을 보호할 필요 가 있어 의료 및 윤리계 전문가들과 함께 신중하게 검토 하고 있다”라고 강조하였다. 배아 ‧ 태아 대상 유전자검사 가능 유전질환 목록(264개) 담당 부서 보건의료정책관 책임자 과 장 모두순 (044-202-2450) 생명윤리정책과 담당자 사무관 최은경 (044-202-2453) 붙임 1 배아‧태아 대상 유전자검사 신규 질환 목록(7개) 순번 카테고리 유전질환 1 다기관 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 (Homocystinuria-megaloblastic anemia, cbl E type) 2 다기관 연골모발형성저하증 (Cartilage-hair hypoplasia) 3 신경근육계 TOR1A연관 근육긴장이상증 (TOR1A-related dystonia) 4 신경근육계 SGCE연관 근육긴장이상증 (SGCE-related dystonia) 5 신경근육계 DPAGT1연관 선천성근무력증후군 (DPAGT1-related congenital myasthenic syndrome) 6 신요로계 피어슨 증후군 (Pierson syndrome) 7 외피계 표피박리성 수장족저 각피증 1형 (Palmoplantar keratoderma, epidermolytic, 1) ※ 검토기준: 아래 항목을 종합적으로 검토 및 평가 ① 발병 연령: 해당 질환이 출생 직후 또는 생후 수개월 이내 발현되는지 여부 ② 질병의 치명도: 질병이 생명을 위협하거나 사망률이 높은지 여부 ③ 증상의 중증도: 질병이 지속적이고 심각한 신체적, 인지적, 감각적 기능 장애를 유발하는지 여부 ④ 치료 가능 유무: 질병에 대한 치료가 존재하는지 여부 ⑤ 삶의 질: 질병이 개인과 가족의 삶에 미치는 심리적‧사회적 영향의 정도 붙임 2 배아‧태아 대상 유전자검사 가능 유전질환 목록("
+          },
+          {
+            "facet": "확대된 검사 대상의 적용 범위와 전체 목록 확인 경로는?",
+            "answer": "배아 또는 태아 대상 검사 가능 질환이 총 264개로 확대됐다. 전체 목록은 보건복지부 누리집 알림 > 공지사항에서 확인한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "광 보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 10. 15.(목) 유전자검사 가능 유전질환 7개 추가 선정 - 연골모발형성저하증, 피어슨 증후군 등 총 264개 질환으로 확대 - 보건복지부 (장관 정은경) 는 10월 15일(목) 배아 또는 태아 대상 유전자검사가 가능 한 유전질환 7개 * 를 추가로 선정 하고, 이를 포함한 전체 264개 유전질환 을 보건복지부 누리집 (https://www.mohw.go.kr) ** 에 공고 했다. * ➊ 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 , ➋ 연골모발형성저하증 , ➌ TOR1A연관 근육긴장이상증, ➍ SGCE연관 근육긴장이상증 , ➎ DPAGT1연관 선천성근무력증후군 , ➏ 피어슨 증후군 , ➐ 표피박리성 수장족저 각피증 1형 ** ‘보건복지부 누리집 > 알림 > 공지사항’에서 확인 가능 배아 또는 태아 대상 유전자검사 가능 유전질환은 환자의 요청을 반영하여 지속 관리하며, 추가 검토 요청을 받은 질환에 대하여 ▲ 증상 발병 연령, ▲ 치명도 및 중증도, ▲ 치료 및 관리 가능성 등을 전문가 위원회 * 에서 종합적으로 검토하여 선정한다. 이번 위원회 검토는 2026년 7월 15일까지 접수된 질환 에 대해서 이루어졌다. 다만, 접수된 질환 중 유전성 종양 소인 증후군 또는 심근병증 관련 4개 질환 ** 에 대해서는 추가 검토가 진행 중이다. * 해당 위원회는 임상유전체의학과, 소아청소년학과, 산부인과, 진단검사의학과 등 다양한 전공분야의 의료계 및 법학 전문가 등으로 구성 ** ➊ SDHB연관 유전성 종양 소인 증후군, ➋ MYH7연관 심근병증, ➌ FLNC연관 심근병증, ➍ ACTN2연관 심장 및 골격근 근병증 질환 검토는 국민신문고(www.epeople.go.kr) 민원을 통해 요청 할 수 있으며, 신청 시에 신청질환명 ,"
+          },
+          {
+            "facet": "추가 선정과 구분해야 할 검토 중 질환은 무엇인가?",
+            "answer": "SDHB연관 유전성 종양 소인 증후군, MYH7·FLNC연관 심근병증, ACTN2연관 심장 및 골격근 근병증은 추가 검토 중이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "광 보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 10. 15.(목) 유전자검사 가능 유전질환 7개 추가 선정 - 연골모발형성저하증, 피어슨 증후군 등 총 264개 질환으로 확대 - 보건복지부 (장관 정은경) 는 10월 15일(목) 배아 또는 태아 대상 유전자검사가 가능 한 유전질환 7개 * 를 추가로 선정 하고, 이를 포함한 전체 264개 유전질환 을 보건복지부 누리집 (https://www.mohw.go.kr) ** 에 공고 했다. * ➊ 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 , ➋ 연골모발형성저하증 , ➌ TOR1A연관 근육긴장이상증, ➍ SGCE연관 근육긴장이상증 , ➎ DPAGT1연관 선천성근무력증후군 , ➏ 피어슨 증후군 , ➐ 표피박리성 수장족저 각피증 1형 ** ‘보건복지부 누리집 > 알림 > 공지사항’에서 확인 가능 배아 또는 태아 대상 유전자검사 가능 유전질환은 환자의 요청을 반영하여 지속 관리하며, 추가 검토 요청을 받은 질환에 대하여 ▲ 증상 발병 연령, ▲ 치명도 및 중증도, ▲ 치료 및 관리 가능성 등을 전문가 위원회 * 에서 종합적으로 검토하여 선정한다. 이번 위원회 검토는 2026년 7월 15일까지 접수된 질환 에 대해서 이루어졌다. 다만, 접수된 질환 중 유전성 종양 소인 증후군 또는 심근병증 관련 4개 질환 ** 에 대해서는 추가 검토가 진행 중이다. * 해당 위원회는 임상유전체의학과, 소아청소년학과, 산부인과, 진단검사의학과 등 다양한 전공분야의 의료계 및 법학 전문가 등으로 구성 ** ➊ SDHB연관 유전성 종양 소인 증후군, ➋ MYH7연관 심근병증, ➌ FLNC연관 심근병증, ➍ ACTN2연관 심장 및 골격근 근병증 질환 검토는 국민신문고(www.epeople.go.kr) 민원을 통해 요청 할 수 있으며, 신청 시에 신청질환명 ,"
+          },
+          {
+            "facet": "추가 질환 검토는 어디로 요청하며 어떤 정보를 제출해야 하는가?",
+            "answer": "국민신문고로 요청한다. 질환 국·영문명, 원인 유전자명, 환자의 원인 변이 확인과 결과지, 신청자 관계·증상·발병 시기, 신청 사유가 필요하다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "으로 구성 ** ➊ SDHB연관 유전성 종양 소인 증후군, ➋ MYH7연관 심근병증, ➌ FLNC연관 심근병증, ➍ ACTN2연관 심장 및 골격근 근병증 질환 검토는 국민신문고(www.epeople.go.kr) 민원을 통해 요청 할 수 있으며, 신청 시에 신청질환명 , 원인 유전자명 , 환자에서의 유전변이 확인 , 유전자검사 결과지 , 환자-신청자의 관계 및 주요 증상 , 신청 사유를 반드시 입력 하여야 한다. 해당 정보는 신청 내용의 정확한 확인과 효율적인 검토를 위해 활용된다. <배아 또는 태아 대상 유전자검사 가능 질환 검토 요청 시 필수 제출 정보> 필수 제출 정보 기재내용 1. 신청 질환명 국문명 / 영문명 2. 원인 유전자명 필수기재 3. 환자에서의 유전변이 확인 해당 질환의 원인이 되는 유전변이가 환자에게서 확인된 경우에 한하여 신청 4. 유전자검사 결과지 환자의 변이 확인이 가능한 검사결과지 첨부 5. 환자와 신청자의 관계 본인 / 자녀 / 배우자 / 기타 가족, 주요 증상 및 발병 시기 6. 신청 사유 PGT-M(착상 전 단일 유전자 질환 검사) 희망 / 산전 유전자검사 희망 / 향후 임신·출산 계획 / 기타 곽순헌 보건의료정책관 은 “ 본 제도 를 통해 유전질환내력이 있는 가족이 치명적 유전질환을 가진 아이를 임신할 수도 있다는 불안감을 덜고 안전한 출산 계획을 세울 수 있도록 지원 하고 있다”라고 밝히며, “다만 신청서에 기재한 유전자변이가 해당 질환의 원인인지 불분명한 경우 등 유전질환에 대한 과도한 우려로부터 배아 또는 태아의 생명권을 보호할 필요 가 있어 의료 및 윤리계 전문가들과 함께 신중하게 검토 하고 있다”라고 강조하였다. 배아 ‧ 태아 대상 유전자검사 가능 유전질환 목록(264개) 담당 부서 보건의료정책관 책임자 과 장 모두순 (044-202-2450)"
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "광 보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 10. 15.(목) 유전자검사 가능 유전질환 7개 추가 선정 - 연골모발형성저하증, 피어슨 증후군 등 총 264개 질환으로 확대 - 보건복지부 (장관 정은경) 는 10월 15일(목) 배아 또는 태아 대상 유전자검사가 가능 한 유전질환 7개 * 를 추가로 선정 하고, 이를 포함한 전체 264개 유전질환 을 보건복지부 누리집 (https://www.mohw.go.kr) ** 에 공고 했다. * ➊ 호모시스틴뇨증-거대적혈모구빈혈 cbl E형 , ➋ 연골모발형성저하증 , ➌ TOR1A연관 근육긴장이상증, ➍ SGCE연관 근육긴장이상증 , ➎ DPAGT1연관 선천성근무력증후군 , ➏ 피어슨 증후군 , ➐ 표피박리성 수장족저 각피증 1형 ** ‘보건복지부 누리집 > 알림 > 공지사항’에서 확인 가능 배아 또는 태아 대상 유전자검사 가능 유전질환은 환자의 요청을 반영하여 지속 관리하며, 추가 검토 요청을 받은 질환에 대하여 ▲ 증상 발병 연령, ▲ 치명도 및 중증도, ▲ 치료 및 관리 가능성 등을 전문가 위원회 * 에서 종합적으로 검토하여 선정한다. 이번 위원회 검토는 2026년 7월 15일까지 접수된 질환 에 대해서 이루어졌다. 다만, 접수된 질환 중 유전성 종양 소인 증후군 또는 심근병증 관련 4개 질환 ** 에 대해서는 추가 검토가 진행 중이다. * 해당 위원회는 임상유전체의학과, 소아청소년학과, 산부인과, 진단검사의학과 등 다양한 전공분야의 의료계 및 법학 전문가 등으로 구성 ** ➊ SDHB연관 유전성 종양 소인 증후군, ➋ MYH7연관 심근병증, ➌ FLNC연관 심근병증, ➍ ACTN2연관 심장 및 골격근 근병증 질환 검토는 국민신문고(www.epeople.go.kr) 민원을 통해 요청 할 수 있으며, 신청 시에 신청질환명 ,",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-16T06:02:23.477486+09:00",
+      "window_start": "2026-10-15T00:00:00+09:00",
+      "input_sha256": "086c0689471d739c12b543f410249488ba4e287f4ead5a78e8bc14877b9a5648",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "policy_change",
+        "event_date": "2026-10-15",
+        "source_index": 0,
+        "date_quote": "2026-10-15T15:08:47+09:00",
+        "event_quote": "보건복지부 (장관 정은경) 는 10월 15일(목) 배아 또는 태아 대상 유전자검사가 가능 한 유전질환 7개 * 를 추가로 선정 하고, 이를 포함한 전체 264개 유전질환 을 보건복지부 누리집 (https://www.mohw.go.kr) ** 에 공고 했다."
+      }
+    },
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "score": 20,
     "publish_eligible": true,
     "hold_reasons": []
   }

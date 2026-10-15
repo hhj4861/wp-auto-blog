@@ -43,3 +43,5 @@ engagement는 sessions/section_views/official_clicks/affiliate_clicks, monetizat
 - 관련 Python 66개 통과, 새 src.site_measurement 모듈 커버리지 86%(전체 저장소 커버리지 아님). Python 3.14에서 기존 Google SDK deprecation 경고 1건.
 - 계측 DOM: 활성 노출/비활성 탭·숨김 패널/중복 방지, GA 함수 호출, 링크 분류, 개인 체크 및 쿼리 비전송, 광고 보존 통과. 기존 reader DOM 회귀도 통과.
 - Workflow YAML, 4분할·fail-fast=false·부분 산출물 always 보존·contents:read 확인. 실제 branch 실행은 다음 단계.
+
+- 자체 검토: URL Inspection은 shard당 시작 간격 0.5초로 제한해 4분할 합계 최대 약 480회/분으로 조절했다. 캐시 적중은 호출하지 않는다. Google 공식 제한(사이트별 600회/분, 2,000회/일): https://developers.google.com/webmaster-tools/limits . 기존 별도 작업의 일일 사용량까지 예약하는 전역 쿼터 관리자는 아니며 초과 오류는 미확인으로 보존한다.

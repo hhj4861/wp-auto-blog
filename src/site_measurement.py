@@ -9,6 +9,7 @@ import json
 import math
 import re
 import time
+import threading
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
@@ -131,7 +132,7 @@ def metrics(row):
 
 def collect_shard(inventory, query, inspect, *, shard=0, shards=4, cache=None, refresh=False,
                   now=None, on_progress=lambda value: None, workers=4, budget_seconds=480,
-                  monotonic=time.monotonic):
+                  monotonic=time.monotonic, sleep=time.sleep, inspection_interval=0.5):
     validate_inventory(inventory)
     if not 0 <= shard < shards or not 1 <= shards <= 16:
         raise ValueError('Invalid shard')
@@ -191,8 +192,11 @@ def collect_shard(inventory, query, inspect, *, shard=0, shards=4, cache=None, r
         report['posts'].append(row)
     on_progress(report)
     deadline = monotonic() + budget_seconds
+    pacing_lock = threading.Lock()
+    next_start = 0.0
 
     def inspect_one(row):
+        nonlocal next_start
         old = cache.get(row['url'], {})
         try:
             age = (now-parse_time(old['checked_at'])).total_seconds()
@@ -202,8 +206,15 @@ def collect_shard(inventory, query, inspect, *, shard=0, shards=4, cache=None, r
                 return row['url'], {**old, 'cached': True}
         except (KeyError, TypeError, ValueError):
             pass
-        if monotonic() + 195 > deadline:
-            return row['url'], {'status':'unavailable','reason':'time_budget'}
+        # Four workflow shards stay below the per-site 600/min URL-inspection quota.
+        # Cache hits never consume a slot; holding the lock avoids delayed burst starts.
+        with pacing_lock:
+            delay = max(0.0, next_start - monotonic())
+            if monotonic() + delay + 195 > deadline:
+                return row['url'], {'status':'unavailable','reason':'time_budget'}
+            if delay:
+                sleep(delay)
+            next_start = monotonic() + inspection_interval
         try:
             result = inspect(row['url'])
             if result.get('error') or result.get('verdict') not in ('PASS','PARTIAL','FAIL','NEUTRAL'):

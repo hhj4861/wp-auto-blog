@@ -127,3 +127,17 @@ def test_html_escaping_csv_formula_safety_and_unknown_rendering():
     assert '<script>' not in html and '&lt;script&gt;' in html
     assert list(csv.reader(io.StringIO(csv_text)))[1][2].startswith("'=")
     assert '일부 미완료' in html and 'not_connected' in html
+
+
+def test_inspection_starts_are_paced_and_cached_results_need_no_slot():
+    clock=[100.0]; starts=[]; waits=[]; cache={}
+    def sleep(seconds):
+        waits.append(seconds);clock[0]+=seconds
+    def reader(url):
+        starts.append(clock[0]);return inspect(url)
+    args=dict(shards=1,now=NOW,workers=1,cache=cache,monotonic=lambda:clock[0],sleep=sleep)
+    collect_shard(inventory(4),query,reader,**args)
+    assert starts==[100.0,100.5,101.0,101.5] and waits==[.5,.5,.5]
+    starts.clear();waits.clear()
+    collect_shard(inventory(4),query,reader,**args)
+    assert starts==[] and waits==[]

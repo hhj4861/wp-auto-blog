@@ -55,6 +55,18 @@ class BotTests(unittest.TestCase):
         for changes in [dict(url='https://wrong.example'), dict(index=1), dict(summary='x'*120), dict(importance='critical')]:
             with self.assertRaises(ValueError): bot.validate_edits([dict(edit(), **changes)], [item()])
 
+    @patch.dict(os.environ, {'OPENAI_API_KEY':'test', 'GOOGLE_AI_API_KEY':'test'})
+    def test_existing_provider_fallback(self):
+        limited = Mock(status_code=429, json=lambda: {'error': {'code':'insufficient_quota'}})
+        success = Mock(status_code=200, json=lambda: {'candidates':[{'content':{'parts':[{'text':json.dumps({'cards':[edit()]})}]}}]})
+        with patch.object(bot.session, 'post', side_effect=[limited, success]) as post:
+            self.assertEqual(bot.editorial([item()]), [edit()])
+            self.assertEqual(post.call_count, 2)
+            self.assertNotIn('key=', post.call_args.args[0])
+        with patch.object(bot.session, 'post', side_effect=[limited, Mock(status_code=403)]):
+            with self.assertRaisesRegex(RuntimeError, 'Gemini fallback HTTP 403'):
+                bot.editorial([item()])
+
     def test_wrap_long_tokens(self):
         d = ImageDraw.Draw(Image.new('RGB', (1080, 1350)))
         f = bot.font(35)

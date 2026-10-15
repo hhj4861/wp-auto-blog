@@ -8,6 +8,10 @@ on:
         description: Generate cards without Telegram delivery
         type: boolean
         default: false
+      force_legacy:
+        description: Rollback only - send from this repository after the cutover date
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -42,6 +46,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          FORCE_LEGACY: ${{ inputs.force_legacy && '1' || '0' }}
+          CARD_NEWS_CUTOVER_DATE: ${{ vars.CARD_NEWS_CUTOVER_DATE }}
         run: python main.py
       - uses: actions/upload-artifact@v4
         if: always()

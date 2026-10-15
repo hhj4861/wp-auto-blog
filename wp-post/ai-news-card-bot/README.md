@@ -1,5 +1,15 @@
 # 한국어 AI 기술 카드뉴스 Telegram 봇
 
+> **이전 진행 중 (2026-10-15).** 이 봇은 `hhj4861/commerce-automation-kit`의 `apps/shopshorts/card-news`로
+> 옮겨집니다. 운영 절차와 전환·롤백은 그쪽 README가 기준입니다.
+>
+> - 저장소 변수 `CARD_NEWS_CUTOVER_DATE`(YYYY-MM-DD, KST)가 오늘 이하이면 이 봇은 아무것도 보내지 않고 정상 종료합니다.
+> - 변수가 없거나 미래 날짜면 지금처럼 보냅니다. 단 보내기 전과 claim 직전에 새 저장소의 같은 날짜
+>   `ai-card-claimed|sent` 태그를 읽습니다. sent가 있으면 건너뛰고, claimed만 있거나 200/404 외 응답이면 보내지 않고 실패합니다.
+> - 전환 뒤 당일 롤백이 필요하면 워크플로를 다시 켜고 `force_legacy=true`로 수동 실행합니다. 새 저장소에 그날
+>   태그가 없을 때만 한 번 보냅니다.
+> - 새 저장소에서 14일 안정 운영을 확인하면 이 디렉터리와 워크플로를 삭제합니다. `ai-card-*` 태그는 보존합니다.
+
 기존 WordPress 실행과 독립된 일일 브리핑입니다. 기존 `OPENAI_API_KEY`,
 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`를 재사용하며 새 서비스나 Secret은 필요 없습니다.
 `GITHUB_TOKEN`은 Actions가 자동 발급합니다. OpenAI 할당량/접근 오류에는 저장소의 기존

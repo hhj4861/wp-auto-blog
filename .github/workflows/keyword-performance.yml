@@ -94,6 +94,7 @@ jobs:
           name: published-measurement-inventory
           path: ${{ runner.temp }}/measurement
       - uses: actions/download-artifact@v4
+        continue-on-error: true # Even zero surviving shards must render the complete inventory as unavailable.
         with:
           pattern: measurement-shard-*
           path: ${{ runner.temp }}/measurement/parts

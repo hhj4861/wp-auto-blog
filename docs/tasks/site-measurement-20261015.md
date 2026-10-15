@@ -5,7 +5,7 @@
 - 기준: aaf35a1, feat/site-measurement-20261015. 설계: docs/reports/seo-demand-measurement-20261015.md.
 - 범위: 인증 공개 인벤토리, 완결 GSC 기간/페이지네이션, 분할 색인·체크포인트, JSON/CSV/HTML 보고서, 선택적 외부 측정 자료 입력, reader 행동 이벤트.
 - 완료 기준: 미확인/대기/실패를 0으로 채우지 않음, 공개 글 전체 포함, 누락 shard 명시, 원문/광고 불변, 의미 있는 Python/JS 테스트, branch의 실제 읽기 전용 실행, 커밋·push·PR. 머지/운영 reader 갱신/GA4 계정 변경은 별도 승인 경계.
-- 현재: 구현 중. GA4/AdSense/검색량 계정의 연결 및 실제 GA4 수신은 아직 확인하지 않았다.
+- 현재: 구현·로컬 검증 및 작업 브랜치 push 완료, 실제 수집 검증 중. GA4/AdSense/검색량 계정의 연결 및 실제 GA4 수신은 아직 확인하지 않았다.
 - 다음: 구현과 로컬 검증 후 branch에서 읽기 전용 데이터 수집 E2E.
 
 - 첫 로컬 실행: reader 계측/기존 메뉴 DOM 테스트 통과. 재사용 venv에 pytest-cov가 없어 기존 pyproject의 커버리지 옵션 파싱에서 Python 테스트가 시작되지 않았다. 의존성 환경을 보완한 뒤 대상 테스트/대상 모듈 커버리지를 실행한다.
@@ -40,8 +40,11 @@ engagement는 sessions/section_views/official_clicks/affiliate_clicks, monetizat
 
 ## 로컬 검증
 
-- 관련 Python 66개 통과, 새 src.site_measurement 모듈 커버리지 86%(전체 저장소 커버리지 아님). Python 3.14에서 기존 Google SDK deprecation 경고 1건.
+- 관련 Python 67개 통과, 새 src.site_measurement 모듈 커버리지 86%(전체 저장소 커버리지 아님). Python 3.14에서 기존 Google SDK deprecation 경고 1건.
 - 계측 DOM: 활성 노출/비활성 탭·숨김 패널/중복 방지, GA 함수 호출, 링크 분류, 개인 체크 및 쿼리 비전송, 광고 보존 통과. 기존 reader DOM 회귀도 통과.
 - Workflow YAML, 4분할·fail-fast=false·부분 산출물 always 보존·contents:read 확인. 실제 branch 실행은 다음 단계.
 
 - 자체 검토: URL Inspection은 shard당 시작 간격 0.5초로 제한해 4분할 합계 최대 약 480회/분으로 조절했다. 캐시 적중은 호출하지 않는다. Google 공식 제한(사이트별 600회/분, 2,000회/일): https://developers.google.com/webmaster-tools/limits . 기존 별도 작업의 일일 사용량까지 예약하는 전역 쿼터 관리자는 아니며 초과 오류는 미확인으로 보존한다.
+
+- Chrome 실제 엔진의 로컬 가상 GA 수신기로 노출 3건·메뉴 1건·공식 링크 1건의 분류, 개인 체크 미전송과 링크 쿼리 미포함을 확인했다. 이는 GA4 서버/운영 수신 증거가 아니다. 검증용 서버/탭은 종료한다.
+- 전체 shard 인증 실패 시에도 인벤토리 기준 미확인 보고서를 남기도록, report의 shard 다운로드 실패 후 merge를 계속한다. 완전 실패를 성공 수집으로 처리하지 않는다.

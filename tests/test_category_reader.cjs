@@ -5,10 +5,10 @@ const {JSDOM} = require('jsdom');
 const script = fs.readFileSync('src/category_reader.js', 'utf8');
 // WordPress text filters can mistake < ... > in inline JS for markup and entity-escape &&.
 assert.ok(!script.includes('<'));
-const article = n => `<div class="wpab-menu-reader"><nav data-reader-menu>
+const article = n => `<div class="wpab-menu-reader"><div data-monetization="ad"><ins data-ad-slot="first-${n}"></ins></div><nav data-reader-menu>
 <a href="#p-${n}-1">이해</a><a href="#p-${n}-2">점검</a><a href="#quick-answer">전체 보기</a></nav>
 <div data-reader-panels><section data-reader-panel><h2 id="p-${n}-1">이해</h2><p>중요 본문</p><a href="#p-${n}-2">점검 이동</a></section>
-<section data-reader-panel><h2 id="p-${n}-2">점검</h2><ul data-visual="checklist"><li>공식 안내 확인</li><li>실제 설정 확인</li></ul><details><summary>질문</summary><p>답변</p></details></section></div></div>`;
+<section data-reader-panel><h2 id="p-${n}-2">점검</h2><ul data-visual="checklist"><li>공식 안내 확인</li><li>실제 설정 확인</li></ul><details><summary>질문</summary><p>답변</p></details></section></div><div data-monetization="ad"><ins data-ad-slot="last-${n}"></ins></div></div>`;
 const dom = new JSDOM(article(1) + article(2), {url:'https://example.org/post/#p-1-2', runScripts:'outside-only',pretendToBeVisual:true});
 const {window:w} = dom, d = w.document;
 // jsdom has no layout frames; measurement is exercised explicitly via resize.
@@ -41,6 +41,16 @@ assert.equal(d.activeElement,tabs[1]);assert.equal(panels[0].hidden,false);
 tabs[1].dispatchEvent(new w.KeyboardEvent('keydown',{key:'Home',bubbles:true}));
 assert.ok(panels.every(p=>!p.hidden));
 assert.equal(first.querySelector('.wpab-reader-layout').children.length,2);
+const ownedAds = [...first.querySelectorAll('[data-monetization="ad"]')];
+assert.equal(ownedAds.length, 2);
+for (const tab of tabs) {
+  tab.click();
+  assert.equal(first.querySelectorAll('[data-monetization="ad"]').length, 2);
+  ownedAds.forEach(ad => {
+    assert.equal(ad.parentElement, first);
+    assert.equal(ad.closest('[hidden]'), null);
+  });
+}
 const ad=d.createElement('ins'); ad.setAttribute('data-anchor-status','displayed');ad.style.position='fixed';
 ad.getBoundingClientRect=()=>({top:0,bottom:124,height:124});d.documentElement.append(ad);
 w.dispatchEvent(new w.Event('resize'));

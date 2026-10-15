@@ -16,6 +16,10 @@ on:
         description: 'Update only owned reader CSS/JS on the exact repair target'
         type: boolean
         default: false
+      reflow_reader_ads:
+        description: 'Move existing owned ads after the summary and detail panels; back up first'
+        type: boolean
+        default: false
       repair_reader_post_id:
         description: 'Repair only reader CSS whitespace on this exact post'
         type: string
@@ -30,6 +34,11 @@ on:
         description: '비공개 대상의 정확한 슬러그 (ID와 함께 필수)'
         required: false
         type: string
+
+concurrency:
+  group: trendpulse-general-posting
+  cancel-in-progress: false
+  queue: max
 
 jobs:
   maintain:
@@ -55,12 +64,14 @@ jobs:
           WP_PROXY: ${{ secrets.WP_PROXY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
           UPGRADE_READER_ASSETS: ${{ inputs.upgrade_reader_assets }}
+          REFLOW_READER_ADS: ${{ inputs.reflow_reader_ads }}
+          READER_BACKUP_DIR: data/editorial-backups/reader-reflow
           REPAIR_READER_POST_ID: ${{ inputs.repair_reader_post_id }}
           REPAIR_READER_POST_SLUG: ${{ inputs.repair_reader_post_slug }}
           CLOSE_POST_ID: ${{ inputs.close_post_id }}
           CLOSE_POST_SLUG: ${{ inputs.close_post_slug }}
         run: |
-          if [ "$UPGRADE_READER_ASSETS" = "true" ]; then
+          if [ "$UPGRADE_READER_ASSETS" = "true" ] || [ "$REFLOW_READER_ADS" = "true" ]; then
             test -n "$REPAIR_READER_POST_ID"
             test -n "$REPAIR_READER_POST_SLUG"
           fi
@@ -72,3 +83,11 @@ jobs:
           else
             python scripts/trendpulse_maintenance.py
           fi
+      - name: Preserve reader reflow backups
+        if: always() && inputs.reflow_reader_ads
+        uses: actions/upload-artifact@v4
+        with:
+          name: reader-reflow-backups-${{ github.run_id }}
+          path: data/editorial-backups/reader-reflow/
+          if-no-files-found: ignore
+          retention-days: 90

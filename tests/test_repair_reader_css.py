@@ -65,3 +65,50 @@ def test_upgrade_preserves_every_byte_outside_owned_assets():
     assert upgrade_assets(fixed) == fixed
     for bad in [raw.replace('category-menu-v1', 'unknown'), raw.replace('wpab-category-reader', 'foreign'), raw + raw]:
         with pytest.raises(ValueError): upgrade_assets(bad)
+
+
+def test_reflow_preview_and_apply_backup_preserve_body_and_metadata(tmp_path):
+    import json
+    from src.article_format import format_general_article
+    from tests.test_category_format import RAW as BODY, SOURCE
+    from scripts.repair_reader_css import upgrade_assets
+    from src.reader_monetization import reflow_reader_ads
+    # Build old footer placement with valid owned assets, as in persisted WP raw.
+    raw = format_general_article(BODY, category='생산성', sources=[SOURCE])
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(raw, 'html.parser'); article = soup.select_one('.wpab-menu-reader')
+    for ad in list(article.select('[data-monetization="ad"]')): article.append(ad.extract())
+    raw = str(soup)
+    fixed = reflow_reader_ads(upgrade_assets(raw))
+    session, post, saved, response = client()
+    post['content']['raw'] = raw; saved['content']['raw'] = fixed
+    session.get.side_effect = [response(post)]
+    assert repair(session,1907,'excel-chart-guide',upgrade=True,reflow=True)['changed']
+    session.post.assert_not_called(); assert not list(tmp_path.iterdir())
+    session.get.side_effect = [response(post),response(post),response(saved)]
+    result = repair(session,1907,'excel-chart-guide',apply=True,upgrade=True,reflow=True,backup_dir=tmp_path)
+    assert result['verified']
+    from pathlib import Path
+    assert json.loads(Path(result['backup']).read_text(encoding='utf-8')) == post
+    assert session.post.call_args.kwargs['json'] == {'content':fixed}
+    session.get.side_effect = [response(post),response(post)]
+    session.post.reset_mock()
+    with pytest.raises(ValueError,match='backup directory'):
+        repair(session,1907,'excel-chart-guide',apply=True,upgrade=True,reflow=True)
+    session.post.assert_not_called()
+
+
+def test_same_second_metadata_edit_is_not_overwritten():
+    session, post, _, response = client()
+    changed = deepcopy(post); changed['meta'] = {'_yoast_wpseo_metadesc':'다른 편집'}
+    session.get.side_effect = [response(post), response(changed)]
+    with pytest.raises(RuntimeError,match='changed since'):
+        repair(session,1907,'excel-chart-guide',apply=True)
+    session.post.assert_not_called()
+
+
+def test_readback_detects_changed_seo_metadata():
+    session, post, saved, response = client(); saved['meta'] = {'_yoast_wpseo_metadesc':'변경됨'}
+    session.get.side_effect = [response(post), response(post), response(saved)]
+    with pytest.raises(RuntimeError,match='preservation'):
+        repair(session,1907,'excel-chart-guide',apply=True)

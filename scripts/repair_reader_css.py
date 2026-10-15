@@ -1,9 +1,14 @@
-"""Repair owned reader assets; preserve all other content bytes."""
+"""Repair owned reader assets or explicitly reflow owned ads; preserve other bytes."""
 import os
+import json
+from pathlib import Path
+from time import time_ns
 import re
 import requests
 
 BASE = 'https://trendpulse.blog'
+PRESERVED_FIELDS = ('id', 'slug', 'status', 'title', 'featured_media', 'date_gmt',
+                    'categories', 'tags', 'excerpt', 'meta')
 STYLE = re.compile(r'(<style\b[^>]*\bid=[\"\']wpab-reading-styles[\"\'][^>]*>)(.*?)(</style\s*>)', re.S | re.I)
 
 
@@ -22,7 +27,6 @@ def upgrade_assets(html):
     """Replace only our CSS/JS bodies. Editorial HTML stays byte-for-byte intact."""
     from bs4 import BeautifulSoup
     from src.category_format import reader_styles
-    from pathlib import Path
     soup = BeautifulSoup(html, 'html.parser')
     articles = soup.select('.wpab-menu-reader')
     if len(articles) != 1 or articles[0].get('data-reader-version') != 'category-menu-v1':
@@ -41,7 +45,7 @@ def upgrade_assets(html):
     return script.sub(lambda m: m[1] + js + m[3], fixed)
 
 
-def repair(session, post_id, slug, *, apply=False, upgrade=False):
+def repair(session, post_id, slug, *, apply=False, upgrade=False, reflow=False, backup_dir=None):
     if type(post_id) is not int or post_id <= 0 or not slug or '/' in slug:
         raise ValueError('Exact post ID and slug required')
     url = f'{BASE}/wp-json/wp/v2/posts/{post_id}'
@@ -54,19 +58,33 @@ def repair(session, post_id, slug, *, apply=False, upgrade=False):
         raise RuntimeError('Published post identity mismatch')
     raw = original['content']['raw']
     fixed = upgrade_assets(raw) if upgrade else compact_style(raw)
+    if reflow:
+        from src.reader_monetization import reflow_reader_ads
+        fixed = reflow_reader_ads(fixed)
     if not apply:
         return {'post_id': post_id, 'dry_run': True, 'changed': fixed != raw}
+    backup = None
     if fixed != raw:
         current = read()
-        if current.get('modified_gmt') != original.get('modified_gmt') or current['content']['raw'] != raw:
+        if (current.get('modified_gmt') != original.get('modified_gmt')
+                or current['content']['raw'] != raw
+                or any(current.get(key) != original.get(key) for key in PRESERVED_FIELDS)):
             raise RuntimeError('Post changed since inspection; no update made')
+        if reflow:
+            if not backup_dir:
+                raise ValueError('A backup directory is required before applying ad reflow')
+            directory = Path(backup_dir)
+            directory.mkdir(parents=True, exist_ok=True)
+            backup = directory / f'reader-{post_id}-{time_ns()}.json'
+            with backup.open('x', encoding='utf-8') as handle:
+                json.dump(original, handle, ensure_ascii=False)
         response = session.post(url, json={'content': fixed}, timeout=45, allow_redirects=False)
         response.raise_for_status()
     saved = read()
     if saved['content']['raw'] != fixed or any(saved.get(k) != original.get(k) for k in
-            ('id', 'slug', 'status', 'title', 'featured_media', 'date_gmt', 'categories', 'tags', 'excerpt')):
+            PRESERVED_FIELDS):
         raise RuntimeError('Readback preservation verification failed')
-    return {'post_id': post_id, 'verified': True, 'url': saved['link'], 'changed': fixed != raw}
+    return {'post_id': post_id, 'verified': True, 'url': saved['link'], 'changed': fixed != raw, 'backup': str(backup) if backup else None}
 
 
 def main():
@@ -77,7 +95,9 @@ def main():
     session.headers['User-Agent'] = 'Mozilla/5.0 (TrendPulse reader CSS repair)'
     print(repair(session, int(os.environ['REPAIR_READER_POST_ID']), os.environ['REPAIR_READER_POST_SLUG'],
                  apply=os.environ.get('DRY_RUN') == 'false',
-                 upgrade=os.environ.get('UPGRADE_READER_ASSETS') == 'true'), flush=True)
+                 upgrade=os.environ.get('UPGRADE_READER_ASSETS') == 'true',
+                 reflow=os.environ.get('REFLOW_READER_ADS') == 'true',
+                 backup_dir=os.environ.get('READER_BACKUP_DIR')), flush=True)
 
 
 if __name__ == '__main__':

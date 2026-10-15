@@ -3,6 +3,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup, Tag
 from .recruitment_format import RECRUITMENT_CSS
 from .article_highlights import HIGHLIGHTS_CSS, add_highlights_sources
+from .reader_monetization import reflow_reader_ads
 
 VERSION = 'category-menu-v1'
 CATEGORY_SECTIONS = {
@@ -69,6 +70,25 @@ def category_format_issues(html, category):
 # Match the approved reading width, with navigation scoped to reader posts only.
 CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
 .single-post .wrapper-outer:has(.wpab-menu-reader){overflow:clip}
+/* Keep archive/social covers; on a reader post the real title and answer lead. */
+.single-post:has(.wpab-menu-reader) .blog-card-single-head{margin-bottom:12px}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-right{height:auto;min-height:0;aspect-ratio:auto;padding:0;background:none;float:none;width:auto;flex:0 0 auto;order:0}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-right-inner{display:none}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-date{position:static;display:block;float:none;max-width:none;padding:8px 14px;background:transparent;color:inherit}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .sharrre-header{display:none}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-bottom{position:static;width:auto;flex:0 0 auto;order:1}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-bottom-list li{padding:8px 14px;border:0}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head .blog-card-more{display:none}
+.single-post:has(.wpab-menu-reader) .blog-card-single-head:before,.single-post:has(.wpab-menu-reader) .blog-card-single-head:after{display:none}
+.single-post:has(.wpab-menu-reader) .blog-card-single-content{margin-top:0;margin-inline:0;padding-top:24px}
+.single-post:has(.wpab-menu-reader) .entry-header{box-sizing:border-box;width:100%;max-width:1040px;margin:0 auto 20px;padding:0 36px}
+.single-post:has(.wpab-menu-reader) .entry-title{font-size:clamp(24px,3vw,36px);line-height:1.35}
+.single-post:has(.wpab-menu-reader) .entry-header .blog-card-author-avatar{display:none}
+.single-post:has(.wpab-menu-reader) .entry-header .blog-card-author{padding:0;margin:8px 0 0}
+@media(max-width:600px){.single-post:has(.wpab-menu-reader) .entry-header{padding:0 18px}}
+.wpab-menu-reader>[data-monetization="ad"]{box-sizing:border-box;width:100%;max-width:800px;margin:32px auto;padding:18px 0;border-block:1px solid var(--line)}
+.wpab-menu-reader>[data-monetization="ad"]>p{margin:0 0 8px;text-align:center;font-size:12px;color:var(--muted)}
 .single-post .entry .post-content:has(>.wpab-menu-reader){width:100%;max-width:1040px;margin-inline:auto}
 .single-post .entry:has(.wpab-menu-reader){box-sizing:border-box;width:100%;max-width:1120px}
 .wpab-article.wpab-menu-reader{width:100%;max-width:1040px;--reader-top:16px;--reader-scroll-offset:150px;--tint:color-mix(in srgb,var(--blue) 7%,white)}
@@ -103,11 +123,16 @@ CSS = RECRUITMENT_CSS.replace('wpab-recruitment', 'wpab-menu-reader') + '''
 '''
 
 
+COMPACT_SUMMARY_CSS = '''
+.wpab-menu-reader #quick-answer [data-highlight="conclusion"],.wpab-menu-reader #quick-answer:not([data-highlights])>p:first-of-type{font-size:clamp(20px,2.1vw,26px);line-height:1.55;letter-spacing:-.35px;max-width:none}
+'''
+
+
 def reader_styles(category):
     """One line prevents WordPress wpautop from corrupting owned CSS."""
     if category not in COLORS:
         raise ValueError('Unknown reader category')
-    return ' '.join((CSS + HIGHLIGHTS_CSS).split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
+    return ' '.join((CSS + HIGHLIGHTS_CSS + COMPACT_SUMMARY_CSS).split()) + '.wpab-article.wpab-menu-reader[data-reader-category="' + category + '"]{--blue:' + COLORS[category] + ';}'
 
 
 def apply_category_layout(html, category):
@@ -200,4 +225,7 @@ def apply_category_layout(html, category):
     script = soup.new_tag('script', id='wpab-category-reader')
     script.string = Path(__file__).with_name('category_reader.js').read_text(encoding='utf-8')
     article.insert_after(script)
-    return str(soup)
+    rendered = str(soup)
+    if article.find(id='quick-answer', recursive=False) and article.find(attrs={'data-reader-panels':'1'}, recursive=False):
+        rendered = reflow_reader_ads(rendered)
+    return rendered

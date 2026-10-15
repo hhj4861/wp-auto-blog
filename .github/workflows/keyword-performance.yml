@@ -1,33 +1,111 @@
-name: Keyword Performance Review
+name: Site Performance Measurement
 
 permissions:
   contents: read
 
 on:
   workflow_dispatch:
+    inputs:
+      refresh_index:
+        description: 'Ignore the successful inspection cache (read-only)'
+        type: boolean
+        default: false
   schedule:
-    - cron: '30 3 * * *' # 12:30 KST, read-only per-keyword 7/28-day cohorts
+    - cron: '30 3 * * *' # 12:30 KST; complete GSC dates only
+
+concurrency:
+  group: site-measurement-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  report:
+  inventory:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: Read the authenticated published inventory
+        env:
+          WP_GENERAL_URL: ${{ secrets.WP_GENERAL_URL }}
+          WP_GENERAL_USERNAME: ${{ secrets.WP_GENERAL_USERNAME }}
+          WP_GENERAL_APP_PASSWORD: ${{ secrets.WP_GENERAL_APP_PASSWORD }}
+        run: python scripts/site_measurement.py inventory --output "$RUNNER_TEMP/measurement/inventory.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: published-measurement-inventory
+          path: ${{ runner.temp }}/measurement/inventory.json
+          retention-days: 90
+  collect:
+    needs: inventory
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install requests google-auth
-      - name: Read published keyword performance
+      - uses: actions/download-artifact@v4
+        with:
+          name: published-measurement-inventory
+          path: ${{ runner.temp }}/measurement
+      - uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/measurement/index-cache.json
+          key: site-index-${{ github.ref_name }}-${{ matrix.shard }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: site-index-${{ github.ref_name }}-${{ matrix.shard }}-
+      - name: Read final search performance and independent URL inspections
         env:
           GSC_SA_KEY_B64: ${{ secrets.GSC_SA_KEY_B64 }}
           GSC_SITE_URL: https://trendpulse.blog/
-        run: python scripts/report_keyword_performance.py --output "$RUNNER_TEMP/keyword-performance.json"
-      - name: Save evidence including pending or unavailable windows
+          SHARD: ${{ matrix.shard }}
+          REFRESH_INDEX: ${{ inputs.refresh_index || false }}
+        run: |
+          flags=()
+          if [ "$REFRESH_INDEX" = "true" ]; then flags+=(--refresh-index); fi
+          python scripts/site_measurement.py collect --inventory "$RUNNER_TEMP/measurement/inventory.json" --output "$RUNNER_TEMP/measurement/shard-$SHARD.json" --cache "$RUNNER_TEMP/measurement/index-cache.json" --shard "$SHARD" --shards 4 "${flags[@]}"
+      - name: Retain partial shard evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: keyword-performance
-          path: ${{ runner.temp }}/keyword-performance.json
+          name: measurement-shard-${{ matrix.shard }}
+          path: ${{ runner.temp }}/measurement/shard-*.json
+          if-no-files-found: warn
+          retention-days: 90
+  report:
+    needs: [inventory, collect]
+    if: always() && needs.inventory.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: published-measurement-inventory
+          path: ${{ runner.temp }}/measurement
+      - uses: actions/download-artifact@v4
+        continue-on-error: true # Even zero surviving shards must render the complete inventory as unavailable.
+        with:
+          pattern: measurement-shard-*
+          path: ${{ runner.temp }}/measurement/parts
+          merge-multiple: true
+      - name: Merge all published posts, including missing measurements
+        run: python scripts/site_measurement.py merge --inventory "$RUNNER_TEMP/measurement/inventory.json" --parts "$RUNNER_TEMP/measurement/parts" --output "$RUNNER_TEMP/measurement/report.json"
+      - name: Save HTML, CSV and JSON report even on partial failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: measurement-report
+          path: ${{ runner.temp }}/measurement/report.*
           if-no-files-found: warn
           retention-days: 90

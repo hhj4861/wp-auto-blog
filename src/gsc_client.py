@@ -67,7 +67,7 @@ def _headers() -> dict:
 
 def query(start_date: str, end_date: str, dimensions: list[str],
           row_limit: int = 25000, filters: list[dict] | None = None,
-          data_state: str = 'all') -> list[dict]:
+          data_state: str = 'all', start_row: int = 0) -> list[dict]:
     """Search Analytics 조회. rows(dict 리스트) 반환.
 
     각 row: {keys: [...], clicks, impressions, ctr, position}
@@ -82,6 +82,10 @@ def query(start_date: str, end_date: str, dimensions: list[str],
         "rowLimit": row_limit,
         "dataState": data_state,
     }
+    if type(start_row) is not int or start_row < 0:
+        raise ValueError("Invalid Search Console offset")
+    if start_row:
+        body["startRow"] = start_row
     if filters:
         body["dimensionFilterGroups"] = [{"filters": filters}]
     url = f"{API}/sites/{requests.utils.quote(SITE_URL, safe='')}/searchAnalytics/query"
@@ -103,6 +107,25 @@ def query(start_date: str, end_date: str, dimensions: list[str],
             item[dim] = key
         out.append(item)
     return out
+
+
+def query_all(start_date, end_date, dimensions, *, filters=None, page_size=25000, max_rows=50000):
+    """Bounded pagination. Truncation and private/omitted queries are not zeros."""
+    if not 1 <= page_size <= 25000 or max_rows < page_size:
+        raise ValueError('Invalid Search Console pagination bounds')
+    rows = []
+    while len(rows) < max_rows:
+        limit = min(page_size, max_rows - len(rows))
+        batch = query(start_date, end_date, dimensions, row_limit=limit,
+                      filters=filters, data_state='final', start_row=len(rows))
+        if any(any(not isinstance(row.get(dim), str) for dim in dimensions) for row in batch):
+            raise ValueError('Missing Search Console dimensions')
+        rows.extend(batch)
+        if len(batch) < limit:
+            return {'status': 'reported', 'complete': True, 'rows': rows,
+                    'query_privacy_omissions_possible': 'query' in dimensions}
+    return {'status': 'truncated', 'complete': False, 'rows': rows,
+            'query_privacy_omissions_possible': 'query' in dimensions}
 
 
 def list_sites() -> list[str]:

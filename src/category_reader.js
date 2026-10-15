@@ -1,5 +1,62 @@
 /* Progressive enhancement: HTML retains every section if scripts are filtered. */
 (() => {
+  // Exposure is a visible heading/summary for one active second, never a completion claim.
+  function installMeasurement(article, panels) {
+    const id = [...document.body.classList].find(name => /^postid-[0-9]+$/.test(name));
+    const categories = ['취업','건강','리뷰','생활정보','생산성','테크','뷰티','비즈니스'];
+    if (!id) return {select:()=>{},refresh:()=>{}};
+    const category = article.dataset.readerCategory;
+    const base = {article_id:id.slice(7),article_category:categories.includes(category) ? category : 'other',reader_version:'measurement-v1'};
+    function send(name, params = {}) {
+      if (window.wpabReaderMeasurement === false || typeof window.gtag !== 'function') return false;
+      try { window.gtag('event', name, {...base,...params}); return true; } catch (_) { return false; }
+    }
+    function sectionId(panel) {
+      const value = panel.querySelector('section[id]')?.id || panel.id;
+      return /^[a-zA-Z][a-zA-Z0-9_-]{0,79}$/.test(value) ? value : 'section';
+    }
+    const targets = [];
+    const summary = article.querySelector('#quick-answer');
+    if (summary) targets.push({node:summary.querySelector('p') || summary,name:'summary_view',section:'quick-answer'});
+    panels.forEach(panel => { const node = panel.querySelector('h2') || panel;
+      targets.push({node,panel,name:'reader_section_view',section:sectionId(panel)}); });
+    const visible = new Set(), sent = new Set(), timers = new Map();
+    function refresh() {
+      targets.forEach(target => {
+        const key = target.name + ':' + target.section;
+        const eligible = document.visibilityState === 'visible' && visible.has(target.node) && !target.node.closest('[hidden]');
+        if (!eligible && timers.has(key)) { clearTimeout(timers.get(key)); timers.delete(key); }
+        if (eligible && !sent.has(key) && !timers.has(key)) {
+          timers.set(key,setTimeout(() => {
+            timers.delete(key);
+            if (document.visibilityState === 'visible' && visible.has(target.node) && !target.node.closest('[hidden]') &&
+                send(target.name,{section_id:target.section,view_mode:article.querySelector('.wpab-all-view') ? 'all' : 'single'})) sent.add(key);
+          },1000));
+        }
+      });
+    }
+    if (typeof IntersectionObserver === 'function') {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (entry.isIntersecting && entry.intersectionRatio >= 0.5) visible.add(entry.target); else visible.delete(entry.target); });
+        refresh();
+      },{threshold:[0,0.5]});
+      targets.forEach(target => observer.observe(target.node));
+      document.addEventListener('visibilitychange',refresh);
+      window.addEventListener('pagehide',() => {timers.forEach(clearTimeout);timers.clear();});
+    }
+    article.addEventListener('click',event => {
+      const link = event.target.closest('a[href]');
+      if (!link || link.closest('[data-monetization="ad"]')) return;
+      let url; try {url = new URL(link.href,location.href);} catch (_) {return;}
+      if (!['https:','http:'].includes(url.protocol)) return;
+      let name;
+      if (link.closest('#verified-sources')) name = 'official_source_click';
+      else if ((link.rel || '').split(/\s+/).includes('sponsored') || link.matches('[data-affiliate]')) name = 'affiliate_outbound_click';
+      else if (link.closest('[data-monetization="related"]') && url.origin === location.origin) name = 'related_article_click';
+      if (name) send(name,{link_domain:url.hostname});
+    });
+    return {select:index => send('reader_menu_select',{section_id:index === 0 ? 'all' : sectionId(panels[index-1])}),refresh};
+  }
   function start() {
     document.querySelectorAll('.wpab-menu-reader').forEach(article => {
       if (article.dataset.readerReady) return;
@@ -66,6 +123,7 @@
         // A sticky menu can be clicked far down a long panel: reveal the new start.
         if (Math.abs(delta) > 2) window.scrollBy({top:delta, behavior:'instant'});
       }
+      const measurement = installMeasurement(article, panels);
       function activate(index, focus = false, scroll = false) {
         const all = index === 0;
         tabs.forEach((tab, i) => {
@@ -87,14 +145,15 @@
           }
         });
         if (focus) tabs[index].focus({preventScroll:true});
+        measurement.refresh();
         if (scroll) showStart();
       }
       tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => activate(index, false, true));
+        tab.addEventListener('click', () => { measurement.select(index); activate(index, false, true); });
         tab.addEventListener('keydown', event => {
           const next = {ArrowRight:(index+1)%tabs.length, ArrowLeft:(index+tabs.length-1)%tabs.length, ArrowDown:(index+1)%tabs.length, ArrowUp:(index+tabs.length-1)%tabs.length, Home:0, End:tabs.length-1};
           if (Object.prototype.hasOwnProperty.call(next, event.key)) {
-            event.preventDefault(); activate(next[event.key], true, true);
+            event.preventDefault(); measurement.select(next[event.key]); activate(next[event.key], true, true);
           }
         });
       });

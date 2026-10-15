@@ -7,7 +7,7 @@
   3. 상위 페이지 (노출순) — 유지할 글
   4. 상위 검색어
   5. 리프레시 후보 (평균순위 8~20위, 노출 있음) — 조금만 밀면 1페이지
-  6. 정리 후보 (기간 내 노출 0) — 여기 있는 것만 정리 대상
+  6. 판단 보류 — 미노출만으로 정리하지 않음
 
 기간은 GSC_DAYS(기본 90)일. dry한 조회만 하며 아무것도 변경하지 않는다.
 """
@@ -40,7 +40,7 @@ def main():
     avg_pos = (sum(p["position"] * p["impressions"] for p in pages) / total_impr
                if total_impr else 0)
     print(f"[요약] 클릭 {total_clicks} · 노출 {total_impr} · "
-          f"색인·노출된 페이지 {len(pages)}개 · 가중평균순위 {avg_pos:.1f}\n")
+          f"노출 기록이 있는 URL {len(pages)}개 (색인 총수 아님) · 가중평균순위 {avg_pos:.1f}\n")
 
     # 일자별 추이 — 최근 증가/감소를 눈으로 확인 (최근 21일 또는 기간 내)
     daily = query(s, e, ["date"])
@@ -80,9 +80,7 @@ def main():
         slug = p["page"].rstrip("/").split("/")[-1][:44]
         print(f"  노출{p['impressions']:>5} 순위{p['position']:>5.1f}  /{slug}/")
 
-    print(f"\n[정리 후보 판단] 노출 있는 페이지 {len(pages)}개는 '유지'. "
-          f"이 목록에 없는 발행글이 '기간 내 노출 0' = 정리 후보입니다.")
-    print("  (발행글 전체와 대조하려면 gsc_prune.py 참조 — 별도 실행)")
+    print("\n[판단 보류] 목록에 없는 글은 색인/수요/순위/기간/누락을 따로 확인해야 합니다. 자동 정리 근거가 아닙니다.")
 
 
 if __name__ == "__main__":

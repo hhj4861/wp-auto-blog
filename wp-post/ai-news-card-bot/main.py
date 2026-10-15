@@ -173,9 +173,26 @@ def editorial(items):
                            {"role": "user", "content": json.dumps([
                                dict(item, index=i) for i, item in enumerate(items)], ensure_ascii=False)}],
               "response_format": {"type": "json_object"}, "temperature": 0.15}, timeout=90)
-    if response.status_code != 200:
-        raise RuntimeError(f"OpenAI HTTP {response.status_code}; check API billing/key/model access")
-    return validate_edits(json.loads(response.json()["choices"][0]["message"]["content"])["cards"], items)
+    if response.status_code == 200:
+        return validate_edits(json.loads(response.json()["choices"][0]["message"]["content"])["cards"], items)
+    code = response.json().get("error", {}).get("code", "unknown")
+    code = code if re.fullmatch(r"[a-z_]{1,60}", str(code)) else "unknown"
+    print(f"OpenAI HTTP {response.status_code} code={code}")
+    if response.status_code not in (401, 403, 429, 500, 502, 503) or not os.getenv("GOOGLE_AI_API_KEY"):
+        raise RuntimeError(f"OpenAI HTTP {response.status_code} code={code}; check API billing/key/model access")
+    # Reuse the repository's existing Gemini provider/key, never create a new service.
+    print("Using existing GOOGLE_AI_API_KEY fallback")
+    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    fallback = session.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        headers={"x-goog-api-key": os.environ["GOOGLE_AI_API_KEY"]},
+        json={"systemInstruction": {"parts": [{"text": prompt}]},
+              "contents": [{"role": "user", "parts": [{"text": json.dumps([
+                  dict(item, index=i) for i, item in enumerate(items)], ensure_ascii=False)}]}],
+              "generationConfig": {"responseMimeType": "application/json", "temperature": 0.15}}, timeout=90)
+    if fallback.status_code != 200:
+        raise RuntimeError(f"Gemini fallback HTTP {fallback.status_code}; check existing provider quota/access")
+    text = "".join(part.get("text", "") for part in fallback.json()["candidates"][0]["content"]["parts"] if not part.get("thought"))
+    return validate_edits(json.loads(text)["cards"], items)
 
 
 def font(size,bold=False):
@@ -352,7 +369,7 @@ if __name__ == "__main__":
     except Exception as exc:
         # Never emit request objects/tracebacks: Telegram request URLs contain credentials.
         safe = str(exc) if isinstance(exc, (ValueError, RuntimeError)) else type(exc).__name__
-        for key in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "OPENAI_API_KEY", "GITHUB_TOKEN"):
+        for key in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "OPENAI_API_KEY", "GOOGLE_AI_API_KEY", "GITHUB_TOKEN"):
             value = os.getenv(key)
             if value:
                 safe = safe.replace(value, "<REDACTED>")

@@ -2,7 +2,8 @@
 
 기존 WordPress 실행과 독립된 일일 브리핑입니다. 기존 `OPENAI_API_KEY`,
 `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`를 재사용하며 새 서비스나 Secret은 필요 없습니다.
-`GITHUB_TOKEN`은 Actions가 자동 발급합니다. API 사용료는 기존 OpenAI 계정에 발생합니다.
+`GITHUB_TOKEN`은 Actions가 자동 발급합니다. OpenAI 할당량/접근 오류에는 저장소의 기존
+`GOOGLE_AI_API_KEY`와 Gemini 2.5 Flash를 보조 경로로 재사용합니다. 새 Secret은 생성하지 않습니다. API 사용료는 기존 OpenAI 계정에 발생합니다.
 
 ## 실행
 

@@ -141,3 +141,16 @@ def test_inspection_starts_are_paced_and_cached_results_need_no_slot():
     starts.clear();waits.clear()
     collect_shard(inventory(4),query,reader,**args)
     assert starts==[] and waits==[]
+
+
+def test_site_wide_segments_ignore_home_and_other_sites_without_losing_article_data():
+    def site_query(start,end,dims):
+        result=query(start,end,dims)
+        if 'query' in dims:
+            result['rows'] += [{**result['rows'][0], 'page':url}
+                              for url in (SITE+'/', 'https://other.example/post/')]
+        return result
+    part=collect_shard(inventory(1),site_query,inspect,shards=1,now=NOW)
+    assert part['posts'][0]['search_segments']['status']=='reported'
+    assert len(part['posts'][0]['search_segments']['rows'])==1
+    assert merge_report(inventory(1),[part])['collection_complete']

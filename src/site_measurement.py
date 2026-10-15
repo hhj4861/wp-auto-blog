@@ -170,7 +170,11 @@ def collect_shard(inventory, query, inspect, *, shard=0, shards=4, cache=None, r
     grouped = {}
     for row in query_rows:
         try:
-            url = normalize_url(row['page']); m = metrics(row)
+            try:
+                url = normalize_url(row['page'])
+            except ValueError:
+                continue  # The site-wide query also returns the home page and archives.
+            m = metrics(row)
             if any(not isinstance(row.get(k), str) for k in ('query','device','country')):
                 raise ValueError('Missing segment')
             grouped.setdefault(url, []).append({**m, **{k:row[k] for k in ('query','device','country')}})

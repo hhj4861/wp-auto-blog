@@ -136,4 +136,87 @@ class BotTests(unittest.TestCase):
         with patch.object(bot, 'github', return_value=Mock(status_code=422)):
             with self.assertRaises(RuntimeError): bot.mark_delivery('claimed')
 
+
+TODAY = bot.NOW.date().isoformat()
+TOMORROW = (bot.NOW.date() + dt.timedelta(days=1)).isoformat()
+LIVE = {'OPENAI_API_KEY':'test', 'DRY_RUN':'0', 'TELEGRAM_BOT_TOKEN':'test', 'TELEGRAM_CHAT_ID':'test',
+        'GITHUB_TOKEN':'test', 'GITHUB_REPOSITORY':'test/test', 'GITHUB_SHA':'test'}
+
+
+class CutoverGuardTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        patcher = patch.object(bot, 'OUT', Path(self.tmp.name))
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        self.addCleanup(self.tmp.cleanup)
+
+    def status(self):
+        return json.loads((Path(self.tmp.name)/'status.json').read_text())
+
+    @patch.dict(os.environ, {'CARD_NEWS_CUTOVER_DATE': TODAY}, clear=True)
+    def test_retired_from_cutover_without_keys(self):
+        with patch.object(bot, 'fetch') as fetch, patch.object(bot, 'delivery_exists') as ledger:
+            bot.main()
+        fetch.assert_not_called(); ledger.assert_not_called()
+        self.assertEqual(self.status()['status'], 'retired')
+
+    @patch.dict(os.environ, {'CARD_NEWS_CUTOVER_DATE': TOMORROW, 'DRY_RUN': '1', 'OPENAI_API_KEY': 'test'}, clear=True)
+    def test_runs_normally_before_cutover(self):
+        with patch.object(bot, 'fetch', return_value=[]) as fetch:
+            bot.main()
+        fetch.assert_called_once()
+        self.assertEqual(self.status()['status'], 'no_news')
+
+    def test_invalid_cutover(self):
+        for bad in ('2026/10/20', '20261020', '2026-02-30'):
+            with patch.dict(os.environ, {'CARD_NEWS_CUTOVER_DATE': bad}, clear=True):
+                with self.assertRaisesRegex(ValueError, 'YYYY-MM-DD'): bot.main()
+
+    def successor(self, *codes, repo=None):
+        repo = repo or Mock(status_code=200, json=lambda: {'full_name': bot.SUCCESSOR_REPOSITORY})
+        with patch.object(bot, 'github', side_effect=[repo] + [Mock(status_code=c) for c in codes]) as github:
+            result = bot.successor_status()
+        self.assertTrue(all(bot.SUCCESSOR_REPOSITORY in c.args[1] for c in github.call_args_list))
+        return result
+
+    def test_successor_states(self):
+        self.assertEqual(self.successor(404, 404), 'none')
+        self.assertEqual(self.successor(200, 404), 'sent')
+        with self.assertRaisesRegex(RuntimeError, 'claimed but unconfirmed'): self.successor(404, 200)
+        for code in (403, 500):
+            with self.assertRaisesRegex(RuntimeError, f'HTTP {code}; not sending'): self.successor(code)
+        for repo in (Mock(status_code=404, json=lambda: {}), Mock(status_code=200, json=lambda: {'full_name': 'other/repo'})):
+            with self.assertRaisesRegex(RuntimeError, 'unreadable'): self.successor(404, 404, repo=repo)
+        with patch.object(bot, 'SUCCESSOR_REPOSITORY', 'off'), patch.object(bot, 'github') as github:
+            self.assertEqual(bot.successor_status(), 'disabled')
+            github.assert_not_called()
+
+    @patch.dict(os.environ, LIVE, clear=True)
+    def test_successor_delivery_skips_before_fetch(self):
+        with patch.object(bot, 'delivery_exists', return_value=False), patch.object(bot, 'successor_status', return_value='sent'), \
+                patch.object(bot, 'fetch') as fetch:
+            bot.main()
+        fetch.assert_not_called()
+
+    @patch.dict(os.environ, LIVE, clear=True)
+    def test_successor_rechecked_immediately_before_claim(self):
+        with patch.object(bot, 'delivery_exists', return_value=False), \
+                patch.object(bot, 'successor_status', side_effect=['none', 'sent']), \
+                patch.object(bot, 'fetch', return_value=[item()]), patch.object(bot, 'editorial', return_value=[edit()]), \
+                patch.object(bot, 'render', return_value=[]), patch.object(bot, 'send_telegram') as send:
+            bot.main()
+        send.assert_not_called()
+
+    @patch.dict(os.environ, dict(LIVE, CARD_NEWS_CUTOVER_DATE=TODAY, FORCE_LEGACY='1'), clear=True)
+    def test_force_legacy_rollback_still_checks_successor(self):
+        receipt = {'cards': 3, 'message_ids': [1, 2, 3]}
+        with patch.object(bot, 'delivery_exists', return_value=False), \
+                patch.object(bot, 'successor_status', return_value='none') as successor, \
+                patch.object(bot, 'fetch', return_value=[item()]), patch.object(bot, 'editorial', return_value=[edit()]), \
+                patch.object(bot, 'render', return_value=[]), patch.object(bot, 'send_telegram', return_value=receipt) as send:
+            bot.main()
+        send.assert_called_once()
+        self.assertEqual(successor.call_count, 2)
+
 if __name__ == '__main__': unittest.main()

@@ -40,6 +40,10 @@ SOURCES = [
     ("GitHub Copilot CLI", "OPEN SOURCE", "github/copilot-cli", 80),
     ("Dify", "AGENT", "langgenius/dify", 70),
 ]
+# The briefing moved to the shopshorts platform. Until this copy is deleted, both repositories
+# read each other's delivery tags so the same KST date is never delivered twice.
+# Only the explicit value "off" disables the check; an empty variable keeps the default.
+SUCCESSOR_REPOSITORY = os.getenv("CARD_NEWS_SUCCESSOR_REPOSITORY", "").strip() or "hhj4861/commerce-automation-kit"
 session = requests.Session()
 session.headers.update({"User-Agent": "AI-News-Card-Bot/2.0"})
 
@@ -344,6 +348,43 @@ def mark_delivery(kind):
         raise RuntimeError(f"Delivery ledger {kind} HTTP {r.status_code}; no automatic resend")
 
 
+def cutover_date():
+    raw = os.getenv("CARD_NEWS_CUTOVER_DATE", "").strip()
+    if not raw:
+        return None
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", raw):
+        raise ValueError("CARD_NEWS_CUTOVER_DATE must be YYYY-MM-DD")
+    try:
+        return dt.date.fromisoformat(raw)
+    except ValueError:
+        raise ValueError("CARD_NEWS_CUTOVER_DATE must be YYYY-MM-DD") from None
+
+
+def successor_status():
+    """Read the successor repository's ledger for today. Fail closed on anything unexpected."""
+    if SUCCESSOR_REPOSITORY == "off":
+        return "disabled"
+    # A missing tag and an unreadable repository both return 404; prove the repository first.
+    r = github("GET", f"repos/{SUCCESSOR_REPOSITORY}")
+    try:
+        body = r.json() if r.status_code == 200 else {}
+    except ValueError:
+        body = {}
+    if not isinstance(body, dict) or str(body.get("full_name", "")).lower() != SUCCESSOR_REPOSITORY.lower():
+        raise RuntimeError(f"Successor repository unreadable (HTTP {r.status_code}); not sending")
+    found = {}
+    for kind in ("sent", "claimed"):
+        r = github("GET", f"repos/{SUCCESSOR_REPOSITORY}/git/ref/{delivery_ref(kind)}")
+        if r.status_code not in (200, 404):
+            raise RuntimeError(f"Successor ledger read HTTP {r.status_code}; not sending")
+        found[kind] = r.status_code == 200
+    if found["sent"]:
+        return "sent"
+    if found["claimed"]:
+        raise RuntimeError("Successor delivery claimed but unconfirmed; inspect its run and chat, no automatic send")
+    return "none"
+
+
 def send_telegram(paths, items, edits):
     if not 2 <= len(paths) <= 10:
         raise ValueError("Telegram album requires 2–10 images")
@@ -377,6 +418,12 @@ def send_telegram(paths, items, edits):
 
 def main():
     dry_run = os.getenv("DRY_RUN") == "1"
+    cutover = cutover_date()
+    if cutover and NOW.date() >= cutover and os.getenv("FORCE_LEGACY") != "1":
+        print(f"Retired on {cutover}: {SUCCESSOR_REPOSITORY} sends the AI card news; nothing sent here")
+        (OUT/"status.json").write_text(json.dumps({"status": "retired", "cutover": cutover.isoformat(),
+            "successor": SUCCESSOR_REPOSITORY}))
+        return
     required = ["OPENAI_API_KEY"]
     if not dry_run:
         required += ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "GITHUB_TOKEN", "GITHUB_REPOSITORY", "GITHUB_SHA"]
@@ -389,6 +436,9 @@ def main():
             return
         if delivery_exists("claimed"):
             raise RuntimeError("Previous delivery claimed but not confirmed; inspect chat/run, no automatic resend")
+        if successor_status() == "sent":
+            print("Successor repository already delivered for this KST date; skipped")
+            return
     items = fetch()
     if not items:
         print("No verified news in last 72 hours; nothing sent")
@@ -401,6 +451,10 @@ def main():
     paths = render(items, edits)
     if dry_run:
         print(f"DRY_RUN generated {len(paths)} cards; no delivery claim or Telegram call")
+        return
+    # Re-read immediately before claiming: the successor's schedule may have run meanwhile.
+    if successor_status() == "sent":
+        print("Successor repository delivered while generating; skipped")
         return
     receipt = send_telegram(paths, items, edits)
     print(f"Delivered {receipt['cards']} cards; Telegram confirmed {len(receipt['message_ids'])} messages")

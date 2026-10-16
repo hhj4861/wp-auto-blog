@@ -36018,7 +36018,7 @@
     "keywords": [
       "유전자검사 가능 유전질환 7개 추가 선정"
     ],
-    "status": "pending",
+    "status": "superseded",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-15T21:02:23.477486+00:00",
@@ -36367,5 +36367,981 @@
     "url": "https://trendpulse.blog/convenience-gimbap-comparison-2026/",
     "post_status": "publish",
     "completed_at": "2026-10-16T09:09:00.188981"
+  },
+  {
+    "keyword": "저혈압수치",
+    "category": "건강",
+    "topic": "저혈압수치 90/60 기준과 증상·원인, 위험 신호",
+    "intent": "저혈압은 어느 수치부터이며, 증상이 없을 때와 어지럼증·실신이 있을 때 의미가 어떻게 다른가?",
+    "gap": "공식 자료의 90/60 미만·이하 표현을 비교하고, 동반 증상·응급 신호 표와 진료 시 전달할 정보 체크리스트를 제공한다.",
+    "source_url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+    "verified_sources": [
+      {
+        "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+        "original_url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+        "title": "Low Blood Pressure - Low Blood Pressure | NHLBI, NIH",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "7b3872806a5d475e4c45a66777196c95e07ce0e21e949873d08a7c49326abb50",
+        "excerpt": "Low Blood Pressure Home < Back To Health Topics Low Blood Pressure 0 Low Blood Pressure Low Blood Pressure Low Blood Pressure IN THIS ARTICLE Low blood pressure occurs when blood flows through your blood vessels at lower than normal pressures. The medical term for low blood pressure is hypotension. Blood pressure is the force of blood pushing against the walls of your arteries artery (ARR-tuh-ree): A blood vessel that carries blood from the heart to the organs. Most arteries carry oxygenated blood. The pulmonary arteries carry deoxygenated blood away from the heart to the lungs. as the heart pumps blood. It is usually described as two numbers: systolic systolic (sis-TOL-ik): The phase of circulation when the heart pumps and the pressure of blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, regulate blood pressure. For example, the autonomic nervous system autonomic nervous system (AW-toh-NAH-mik NER-vus SIS-tem): The part of the nervous system that controls muscles of internal organs, such as the heart, blood vessels, lungs, and stomach. sends the “fight-or-flight” signal that, depending on the situation, tells the heart and other systems in the body to increase or decrease blood pressure. Problems with the autonomic nervous system, such as in Parkinson’s disease, can cause low blood pressure. Other causes of low blood pressure include: Blood loss from an injury that causes a sudden drop in blood pressure Dehydration Diabetes Heart problems such as arrhythmias (irregular heartbeat) Medicines to treat high blood pressure , depression, or Parkinson’s Pregnancy Older adults also have a higher risk for symptoms of low blood pressure, such as falling, fainting, or dizziness upon standing up or after a meal. Older adults are more likely to develop low blood pressure as a side effect of medicines taken to control high blood pressure . What are the symptoms? For many people, low blood pressure goes unnoticed. Others may feel symptoms such as: Confusion Dizziness or lightheadedness Fainting Feeling tired or weak Blurry vision Headache Neck or back pain Nausea Heart palpitations, or feelings that your heart is skipping a beat, fluttering, or beating too hard or too fast What should you do if you have symptoms? Sitting down may relieve the symptoms. If your blood pressure drops too low, your body’s vital organs do not get enough oxygen and nutrients. When this happens, low blood pressure can lead to shock shock (shok): A state in which not enough blood flows throughout the body, causing damage to the cells and tissues. , which requires immediate medical attention. Signs of shock include cold and sweaty skin, rapid breathing, a blue skin tone, or a weak and rapid pulse. Call 9-1-1 if you notice signs of shock in yourself or someone else. Talk to your doctor about your symptoms. Your doctor will use a blood pressure test to diagnose low blood pressure. Other tests may include blood, urine, or imaging tests and a tilt table test if you faint often. How is it treated? You may not need treatment for low blood pressure. Depending on your symptoms, treatment may include drinking more fluids to prevent dehydration, taking medicines to raise your blood pressure, or adjusting medicines that cause low blood pressure. Your doctor may talk to you about lifestyle changes, including changing what and how you eat and how you sit and stand up. Your doctor may also recommend compression stockings if you stand for long periods. Learn more about Low Blood Pressure from the U.S. National Library of Medicine. Last updated on March 24, 2022",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/007278.htm",
+        "original_url": "https://medlineplus.gov/ency/article/007278.htm",
+        "title": "Low blood pressure: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "25fbfa40835ab3710e5f9ffa796d3046fdb6f20c1b8f9e04f55f10859dc2bda2",
+        "excerpt": "Low blood pressure Low blood pressure occurs when blood pressure is below normal. This means the heart, brain, and other parts of the body may not get enough blood. In adults, the normal blood pressure is between 90/60 mmHg and 120/80 mmHg. The medical word for low blood pressure is hypotension. Causes Blood pressure varies from one person to another and also over time for any given person. A drop of as little as 20 mmHg can cause problems for some people. There are different types and causes of low blood pressure. Severe hypotension (shock) can be caused by sudden loss of blood ( shock ), severe infection, heart attack , or severe allergic reaction ( anaphylaxis ). Orthostatic hypotension means your blood pressure drops when you shift from lying down to standing. This type of low blood pressure usually lasts only a few seconds or minutes. If this type of low blood pressure occurs after eating, it is called postprandial orthostatic hypotension. This type most often affects older adults, those with high blood pressure, and people with Parkinson disease . Neurally mediated hypotension (NMH) most often affects young adults and children. It can occur when a person has been standing for a long time. Children usually outgrow this type of hypotension. Certain medicines and substances can lead to low blood pressure, including: Alcohol Anti-anxiety medicines Certain antidepressants Diuretics Heart medicines, including those used to treat high blood pressure and coronary heart disease Medicines used for surgery Painkillers Other causes of low blood pressure include: Nerve damage from diabetes or other disorders Changes in heart rhythm ( arrhythmias ) Not drinking enough fluids ( dehydration ) Heart failure Symptoms Symptoms of low blood pressure may include: Blurry vision Confusion Dizziness Fainting (syncope) Lightheadedness Nausea or vomiting Sleepiness Weakness Exams and Tests Your health care provider will examine you to determine the cause of your low blood pressure. Your vital signs (temperature, pulse , rate of breathing, and blood pressure) will be checked frequently. You may need to stay in the hospital for a while. Your provider will ask questions, including: What is your normal blood pressure? What medicines do you take? Have you been eating and drinking normally? Have you had any recent illness, accident, or injury? What other symptoms do you have? Did you faint or become less alert? Do you feel dizzy or lightheaded when standing or sitting after lying down? The following tests may be done: Basic metabolic pane l Blood cultures to check for infection Complete blood count ( CBC ), including white blood cell differential Electrocardiogram ( ECG ) Urinalysis X-ray of the abdomen X-ray of the chest Treatment Lower than normal blood pressure in a healthy person that does not cause any symptoms often does not need treatment. Otherwise, treatment depends on the cause of your low blood pressure and your symptoms. When you have symptoms from low blood pressure, sit or lie down right away. Then raise your feet above heart level. Severe hypotension caused by shock is a medical emergency. You may be given: Blood or other fluids through a needle ( IV ) Medicines to increase blood pressure and improve heart strength Other medicines, such as antibiotics Treatments for low blood pressure after standing up too quickly include: If medicines are the cause, your provider may change the dosage or switch you to a different medicine. Do not stop taking any medicines before talking to your provider. Your provider may suggest drinking more fluids to treat dehydration. Wearing compression stockings can help keep blood from collecting in the legs. This keeps more blood in the upper body. People with NMH should avoid triggers, such as standing for a long period of time. Other treatments include drinking fluids and increasing salt in your diet. Talk to your provider before trying these measures. In severe cases, medicines may be prescribed. Outlook (Prognosis) Low blood pressure can usually be treated with success. Possible Complications Falls due to low blood pressure in older adults can lead to a broken hip or spine fracture. These injuries can reduce a person's health and ability to move about. Sudden severe drops in your blood pressure starve your body of oxygen. This can lead to damage of the heart, brain, and other organs. This type of low blood pressure can be life threatening if not treated right away. When to Contact a Medical Professional If low blood pressure causes a person to pass out (become unconscious), seek treatment right away. Or call 911 or the local emergency number. If the person is not breathing or has no pulse, begin CPR . Call your provider right away if you have any of the following symptoms: Black or maroon stools Chest pain Dizziness, lightheadedness Fainting Fever higher than 101°F (38.3°C) Irregular heartbeat Shortness of breath Prevention Your provider may recommend certain steps to prevent or reduce your symptoms including: Drinking more fluids Getting up slowly after sitting or lying down Not drinking alcohol Not standing for a long time (if you have NMH) Using compression stockings so blood does not collect in the legs Alternative Names Hypotension; Blood pressure - low; Postprandial hypotension; Orthostatic hypotension; Neurally mediated hypotension; NMH References Calkins H, Everett TH, Chen P-S. Hypotension and syncope. In: Libby P, Bonow RO, Mann DL, Tomaselli GF, Bhatt DL, Solomon SD, eds. Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine . 12th ed. Philadelphia, PA: Elsevier; 2022:chap 71. Schrigern DL. Approach to the patient with abnormal vital signs. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 7. Review Date 1/1/2025 Updated by: Linda J. Vorvick, MD, Clinical Professor Emeritus, Department of Family Medicine, UW Medicine, School of Medicine, University of Washington, Seattle, WA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Low Blood Pressure",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/lowbloodpressure.html",
+        "original_url": "https://medlineplus.gov/lowbloodpressure.html",
+        "title": "Low Blood Pressure | Hypotension | MedlinePlus",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "b1e89ea76b8159abd9c217e9bdf32e4c22fbee7996a95b8f6cc6175cd2ceaa2b",
+        "excerpt": "Low Blood Pressure Also called: Hypotension, LBP On this page Basics Summary Start Here Diagnosis and Tests Learn More Related Issues Specifics Genetics See, Play and Learn Videos and Tutorials Research Clinical Trials Journal Articles Resources Find an Expert For You Older Adults Patient Handouts Summary You've probably heard that high blood pressure is a problem. Sometimes blood pressure that is too low can also cause problems. Blood pressure is the force of your blood pushing against the walls of your arteries. Each time your heart beats, it pumps out blood into the arteries. Your blood pressure is highest when your heart beats, pumping the blood. This is called systolic pressure. When your heart is at rest, between beats, your blood pressure falls. This is the diastolic pressure. Your blood pressure reading uses these two numbers. Usually they're written one above or before the other, such as 120/80. If your blood pressure reading is 90/60 or lower, you have low blood pressure. Some people have low blood pressure all the time. They have no symptoms and their low readings are normal for them. In other people, blood pressure drops below normal because of a medical condition or certain medicines. Some people may have symptoms of low blood pressure when standing up too quickly.  Low blood pressure is a problem only if it causes dizziness , fainting or in extreme cases, shock . NIH: National Heart, Lung, and Blood Institute Start Here Low Blood Pressure (Hypotension) (Mayo Foundation for Medical Education and Research) Also in Spanish Low Blood Pressure (Hypotension) (National Heart, Lung, and Blood Institute) Diagnosis and Tests Arterial Catheterization (American Thoracic Society) - PDF Measuring Blood Pressure (National Library of Medicine) Also in Spanish Tilt Table Test (Mayo Foundation for Medical Education and Research) Also in Spanish Related Issues Related Conditions (Parkinson's Disease) (Parkinson's Foundation) Syncope (Fainting) (American Heart Association) Specifics Multiple System Atrophy (MSA) (Mayo Foundation for Medical Education and Research) Also in Spanish Orthostatic Hypotension (Postural Hypotension) (Mayo Foundation for Medical Education and Research) Also in Spanish Genetics Orthostatic hypotension: MedlinePlus Genetics (National Library of Medicine) Videos and Tutorials Blood pressure (Medical Encyclopedia) Also in Spanish Clinical Trials ClinicalTrials.gov: Hypotension (National Institutes of Health) ClinicalTrials.gov: Hypotension, Orthostatic (National Institutes of Health) Journal Articles References and abstracts from MEDLINE/PubMed (National Library of Medicine) Article: Intraoperative hypotension and postoperative acute kidney injury or myocardial injury after... Article: Associations between eating practices during hemodialysis and nutritional status, dialysis adequacy,... Article: Admission ionised calcium disturbances and adverse outcomes in paediatric major trauma:... Low Blood Pressure -- see more articles Find an Expert American Heart Association National Heart, Lung, and Blood Institute National Institute of Neurological Disorders and Stroke Older Adults Fainting (Syncope) (AGS Health in Aging Foundation) Postprandial Hypotension (Merck & Co., Inc.) Also in Spanish Patient Handouts Low blood pressure (Medical Encyclopedia) Also in Spanish Topic Image MEDICAL ENCYCLOPEDIA Blood pressure Hepatic ischemia Low blood pressure Related Health Topics Autonomic Nervous System Disorders High Blood Pressure National Institutes of Health The primary NIH organization for research on Low Blood Pressure is the National Heart, Lung, and Blood Institute Disclaimers MedlinePlus links to health information from the National Institutes of Health and other federal government agencies. MedlinePlus also links to health information from non-government Web sites. See our disclaimer about external links and our quality guidelines .",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://blood-health.manual365.co.kr/221",
+      "https://www.healthtranquility.com/low-blood-pressure-levels/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 30900,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "중간",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "혈행 개선 영양제",
+        "capturedAt": "2026-10-16T11:00:22.166Z",
+        "expiresAt": "2026-10-17T11:00:22.166Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-10-02",
+          "endDate": "2026-10-16",
+          "latestPeriod": "2026-10-15",
+          "previousPeriod": "2026-10-14",
+          "baselineStart": "2026-10-08",
+          "baselineEnd": "2026-10-14",
+          "latestRatio": 100,
+          "previousRatio": 48.03921,
+          "baselineMean": 40.68626714285715,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 108.16328994585882,
+          "baselinePct": 145.78317703337385,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 53,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-16T11:04:21.898Z",
+          "measuredAt": "2026-10-16T11:04:23.868Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "혈행개선영양제",
+          "monthlyPc": 340,
+          "monthlyMobile": 4880,
+          "monthlyTotal": 5220,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-16T11:04:57.132Z",
+        "expiresAt": "2026-10-17T10:59:41.365Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 171,
+          "exportedCount": 80,
+          "truncatedCount": 91
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 6,
+          "missingPreviousDay": 5,
+          "insufficientBaseline": 0
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 38890754734,
+        "artifactId": 12042456110,
+        "headSha": "6fda2bcf0c7d4ad1fd4a53937d57b7cfe973db17",
+        "sourceRunCreatedAt": "2026-10-16T10:58:49Z"
+      },
+      "relatedKeyword": "저혈압수치",
+      "relatedMonthly": 30900,
+      "relatedMeasuredAt": "2026-10-16T20:36:25.224493+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/007278.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/lowbloodpressure.html",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "저혈압 수치",
+    "organic_domains": [
+      "blood-health.manual365.co.kr",
+      "pulin.co.kr",
+      "www.healthtranquility.com",
+      "classytip.tistory.com",
+      "metagirl.net",
+      "jangsunote.com",
+      "randomstory.tistory.com",
+      "tmdan12.tistory.com",
+      "common.health.kr",
+      "kpbm.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://blood-health.manual365.co.kr/221",
+        "domain": "blood-health.manual365.co.kr",
+        "title": "저혈압 수치, 90 60 기준과 증상 원인 확인 - 혈행 건강 매뉴얼365",
+        "snippet": "저혈압으로 뇌와 장기에 공급되는 혈액이 부족해지면 어지럼증, 눈앞이 흐려지는 느낌, 힘 빠짐, 메스꺼움, 실신 같은 증상이 나타날 수 있다. ... 땀이나 설사, 구토로 인한 탈수,"
+      },
+      {
+        "url": "https://pulin.co.kr/%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98%ED%91%9C/",
+        "domain": "pulin.co.kr",
+        "title": "저혈압 수치표 정상 범위와 진단 기준 한눈에 - Pulin",
+        "snippet": "세게 누를 때와 풀 때의 힘이 둘 다 약하면 흐름 자체가 약해진 것이다. ... * 증후성 저혈압: 심장 질환, 내분비 질환 등 기저 질환에 동반기립성"
+      },
+      {
+        "url": "https://www.healthtranquility.com/low-blood-pressure-levels/",
+        "domain": "www.healthtranquility.com",
+        "title": "2026 저혈압 진단 수치 기준 및 관리 포인트 - 건강팩트연구소",
+        "snippet": "2026년 최신 의학 가이드라인을 바탕으로 저혈압의 일반적인 기준과 주의해야 할 수치를 정리해 드립니다. ... 의학적으로 저혈압은 단순히 수치만으로 판단하기보다 ‘증상이 동반되는가’를 중요하게 봅니다. ... *"
+      },
+      {
+        "url": "https://classytip.tistory.com/336",
+        "domain": "classytip.tistory.com",
+        "title": "저혈압 수치 / 기준과 위험 신호 / 증상별 대처법까지 완벽 정리",
+        "snippet": "혈압은 우리 몸 구석구석에 산소와 영양분을 실어 나르는 '압력'인데, 이 압력이 낮아지면 뇌나 심장 같은 주요 장기에 혈액 공급이 원활하지 않게 되기 때문입니다.특히 기온 변화가"
+      },
+      {
+        "url": "https://metagirl.net/%EC%A0%80%ED%98%88%EC%95%95-%EC%A6%9D%EC%83%81%EA%B3%BC-%EC%88%98%EC%B9%98-%EC%9B%90%EC%9D%B8%EA%B9%8C%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-%EC%89%BD%EA%B2%8C-%EC%A0%95%EB%A6%AC%ED%96%88/",
+        "domain": "metagirl.net",
+        "title": "저혈압 증상과 수치, 원인까지! 이해하기 쉽게 정리했어요 – 메타걸",
+        "snippet": "2 저혈압이란 무엇이며, 수치 기준은? ... 하지만 단순히 수치만으로 저혈압을 판단하기보다는, 평소 혈압과 동반되는 증상의 유무가 더욱 중요합니다. ... 본태성 저혈압은 특별한 원인 질환 없이"
+      },
+      {
+        "url": "https://jangsunote.com/entry/%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98-%EC%A6%9D%EC%83%81-%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8-%ED%95%B4%EB%B3%B4%EA%B8%B0-%ED%98%88%EC%95%95-%EC%A0%95%EC%83%81-%EC%88%98%EC%B9%98/",
+        "domain": "jangsunote.com",
+        "title": "저혈압 수치, 증상, 자가진단 해보기 (혈압 정상 수치) - 장수노트",
+        "snippet": "얼마전 건강검진을 하고 결과가 나왔는데요. ... 팔을 압박해서 수축시켰을 때 최대 수치가 얼마인지, 이완시켰을 때 최저 수치가 얼마인지를 보는 것으로 이해하면 됩니다. ... 심장에서 나온"
+      },
+      {
+        "url": "https://randomstory.tistory.com/entry/%EC%A0%80%ED%98%88%EC%95%95%EA%B3%BC-%EA%B8%B0%EB%A6%BD%EC%84%B1-%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98-%EB%B2%94%EC%9C%84-%EB%8C%80%EC%B2%98",
+        "domain": "randomstory.tistory.com",
+        "title": "저혈압과 기립성 저혈압. 어디까지 괜찮고 언제 위험할까?",
+        "snippet": "평소 혈압이 낮아도 어지럼증이나 실신이 없다면 큰 문제 없이 지낼 수 있다.### 임상적으로 위험하다고 보는 저혈압 수치 ... 저관류 위험 (조심해야 할 단계) | 수축기"
+      },
+      {
+        "url": "https://tmdan12.tistory.com/entry/%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98",
+        "domain": "tmdan12.tistory.com",
+        "title": "저혈압 수치",
+        "snippet": "하지만 전문가들은 **'수치 그 자체보다 증상의 유무'**가 훨씬 중요하다고 강조합니다. ... ### ② 미주신경성 실신 ... 출혈, 탈수, 심근경색, 패혈증 등으로 인해 갑자기 혈압이 떨어지는"
+      },
+      {
+        "url": "https://common.health.kr/shared/docs/healthkr/approval_result/%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C_%ED%97%88%EA%B0%80%EB%B3%B4%EA%B3%A0%EC%84%9C_%EB%8B%A4%ED%8F%AC%EC%A7%84%EC%A0%95.pdf",
+        "domain": "common.health.kr",
+        "title": "<table id=\"e1\">",
+        "snippet": "<th>포시가정10mg(다파글리플로진프로판디올수화물) (대조약)</th> ... a 이 표는 혈당 규제에 관계없이, 24주(단기간)까지의 자료를 나타낸 것이다. ... c 외음부질염, 귀두염 및 관련 생식기 감염은 사전 정의된 선호 용어로서"
+      },
+      {
+        "url": "https://kpbm.kr/NFUpload/nfupload_down.php?name=20231121_%ED%99%98%EC%9E%90%ED%98%88%EC%95%A1%EA%B4%80%EB%A6%AC+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8_.pdf&tmp_name=1938708689_3d1e8714.pdf",
+        "domain": "kpbm.kr",
+        "title": "핵심질문3-5\n\n출혈이 있는 환자에게서 젖산 수치(lactate)와 염기 결핍(base d",
+        "snippet": "출혈과 쇼크의 정도를 관찰하고 추정하기 위하여 젖산 수치와 염기 결핍을 측정하는 것을 권고한다. ... 저혈압 허용 전략은 외상성 뇌손상(traumatic brain injury, TBI)이 의심되는 환자에게는 금기이며,"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 35.0,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-16T20:36:25.224493+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "저혈압수치"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+          "title": "Low Blood Pressure - Low Blood Pressure | NHLBI, NIH",
+          "excerpt_chars": 4421
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/007278.htm",
+          "title": "Low blood pressure: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 6187
+        },
+        {
+          "url": "https://medlineplus.gov/lowbloodpressure.html",
+          "title": "Low Blood Pressure | Hypotension | MedlinePlus",
+          "excerpt_chars": 3914
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://www.cancer.go.kr/lay1/program/S1T211C212/cancer/view.do?cancer_seq=3533&menu_seq=3552",
+              "title": "홈 >내가 알고 싶은 암>암의 종류>갑상선암> 급성 림프모구백혈병",
+              "excerpt_chars": 2407
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+              "title": "Low Blood Pressure - Low Blood Pressure | NHLBI, NIH",
+              "excerpt_chars": 4421
+            },
+            {
+              "url": "https://medlineplus.gov/ency/article/007278.htm",
+              "title": "Low blood pressure: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 6187
+            },
+            {
+              "url": "https://medlineplus.gov/lowbloodpressure.html",
+              "title": "Low Blood Pressure | Hypotension | MedlinePlus",
+              "excerpt_chars": 3914
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "저혈압수치",
+      "executed_query": "저혈압 수치",
+      "topic": "저혈압수치 90/60 기준과 증상·원인, 위험 신호",
+      "intent": "저혈압은 어느 수치부터이며, 증상이 없을 때와 어지럼증·실신이 있을 때 의미가 어떻게 다른가?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-16T20:36:25.224493+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "저혈압수치",
+        "executed_query": "저혈압 수치",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-16T20:36:25.224493+00:00",
+        "raw_sha256": "4597b270a3fbe6f0c22c4c7ec888b69e46f4d06ebd9dc01166a0e953148b72ac",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "저혈압 수치, 90 60 기준과 증상 원인 확인 - 혈행 건강 매뉴얼365"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "저혈압 수치표 정상 범위와 진단 기준 한눈에 - Pulin"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "2026 저혈압 진단 수치 기준 및 관리 포인트 - 건강팩트연구소"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "저혈압 수치 / 기준과 위험 신호 / 증상별 대처법까지 완벽 정리"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "2 저혈압이란 무엇이며, 수치 기준은? ... 하지만 단순히 수치만으로 저혈압을 판단하기보다는, 평소 혈압과 동반되는 증상의 유무가 더욱 중요합니다. ... 본태성 저혈압은 특별한 원인 질환 없이"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "저혈압 수치, 증상, 자가진단 해보기 (혈압 정상 수치) - 장수노트"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "평소 혈압이 낮아도 어지럼증이나 실신이 없다면 큰 문제 없이 지낼 수 있다.### 임상적으로 위험하다고 보는 저혈압 수치 ... 저관류 위험 (조심해야 할 단계) | 수축기"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "하지만 전문가들은 **'수치 그 자체보다 증상의 유무'**가 훨씬 중요하다고 강조합니다. ... ### ② 미주신경성 실신 ... 출혈, 탈수, 심근경색, 패혈증 등으로 인해 갑자기 혈압이 떨어지는"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "<th>포시가정10mg(다파글리플로진프로판디올수화물) (대조약)</th> ... a 이 표는 혈당 규제에 관계없이, 24주(단기간)까지의 자료를 나타낸 것이다. ... c 외음부질염, 귀두염 및 관련 생식기 감염은 사전 정의된 선호 용어로서"
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "출혈과 쇼크의 정도를 관찰하고 추정하기 위하여 젖산 수치와 염기 결핍을 측정하는 것을 권고한다. ... 저혈압 허용 전략은 외상성 뇌손상(traumatic brain injury, TBI)이 의심되는 환자에게는 금기이며,"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 8,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.125,
+        "organic_opportunity": 35.0
+      },
+      "scope": "full_keyword",
+      "target_keyword": "저혈압수치",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "저혈압 수치, 90 60 기준과 증상 원인 확인"
+        },
+        {
+          "result_index": 2,
+          "quote": "의학적으로 저혈압은 단순히 수치만으로 판단하기보다 ‘증상이 동반되는가’를 중요하게 봅니다."
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-16T20:36:25.224493+00:00",
+      "input_sha256": "b577186016f2017eafc02fead83a78cec465ba46fb59740335eb2e92a8a39edc",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "저혈압수치",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, ",
+            "entity": "adults",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "Low blood pressure Low blood pressure occurs when blood pressure is below normal. This means the heart, brain, and other parts of the body may not get enough blood. In adults, the normal blood pressure is between 90/60 mmHg and 120/80 mmHg. The medical word for low blood pressure is hypotension. Causes Blood pressure varies from one person to another and also over time for any given person. A drop of as little as 20 mmHg can cause problems for some people. There are different types and causes of low blood pressure. Severe hypotension (shock) can be caused by sudden loss of blood ( shock ), severe infection, heart attack , or severe allergic reaction ( anaphylaxis ). Orthostatic hypotension means your blood pressure drops when you shift from lying down to standing. This type of low blood pressure usually lasts only a few seconds or minutes. If this type of low blood pressure occurs after ",
+            "entity": "adults",
+            "context": "general"
+          },
+          {
+            "source_index": 2,
+            "quote": "ssure falls. This is the diastolic pressure. Your blood pressure reading uses these two numbers. Usually they're written one above or before the other, such as 120/80. If your blood pressure reading is 90/60 or lower, you have low blood pressure. Some people have low blood pressure all the time. They have no symptoms and their low readings are normal for them. In other people, blood pressure drops below normal because of a medical condition or certain medicines. Some people may have symptoms of low blood pressure when standing up too quickly.  Low blood pressure is a problem only if it causes dizziness , fainting or in extreme cases, shock . NIH: National Heart, Lung, and Blood Institute Start Here Low Blood Pressure (Hypotension) (Mayo Foundation for Medical Education and Research) Also in Spanish Low Blood Pressure (Hypotension) (National Heart, Lung, and Blood Institute) Diagnosis and",
+            "entity": "NIH: National Heart, Lung, and Blood Institute",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "저혈압의 수치 기준과 혈압 단위는 무엇인가?",
+            "answer": "NHLBI는 90/60 mm Hg 미만으로 설명하며, 수축기/이완기 순서로 표기한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, "
+          },
+          {
+            "facet": "90/60 경계값 표현과 증상 유무는 어떻게 해석하는가?",
+            "answer": "MedlinePlus는 90/60 이하로 표현한다. 무증상 저혈압은 개인의 정상일 수 있으며 어지럼·실신 동반 여부가 중요하다.",
+            "supported": true,
+            "source_index": 2,
+            "quote": "ssure falls. This is the diastolic pressure. Your blood pressure reading uses these two numbers. Usually they're written one above or before the other, such as 120/80. If your blood pressure reading is 90/60 or lower, you have low blood pressure. Some people have low blood pressure all the time. They have no symptoms and their low readings are normal for them. In other people, blood pressure drops below normal because of a medical condition or certain medicines. Some people may have symptoms of low blood pressure when standing up too quickly.  Low blood pressure is a problem only if it causes dizziness , fainting or in extreme cases, shock . NIH: National Heart, Lung, and Blood Institute Start Here Low Blood Pressure (Hypotension) (Mayo Foundation for Medical Education and Research) Also in Spanish Low Blood Pressure (Hypotension) (National Heart, Lung, and Blood Institute) Diagnosis and"
+          },
+          {
+            "facet": "저혈압을 일으킬 수 있는 주요 원인은 무엇인가?",
+            "answer": "출혈, 탈수, 당뇨병, 부정맥 등 심장 문제와 자율신경계 문제가 원인이 될 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, regulate blood pressure. For example, the autonomic nervous system autonomic nervous system (AW-toh-NAH-mik NER-vus SIS-tem): The part of the nervous system that controls muscles of internal organs, such as the heart, blood vessels, lungs, and stomach. sends the “fight-or-flight” signal that, depending on the situation, tells the heart and other systems in the body to increase or decrease blood pressure. Problems with the autonomic nervous system, such as in Parkinson’s disease, can cause low blood pressure. Other causes of low blood pressure include: Blood loss from an injury that causes a sudden drop in blood pressure Dehydration Diabetes Heart problems such as arrhythmias (irregular heartbeat) Medicines to treat high blood pressure , dep"
+          },
+          {
+            "facet": "어떤 동반 증상과 위험 신호에 즉시 대응해야 하는가?",
+            "answer": "차갑고 땀나는 피부, 빠른 호흡, 푸른 피부색, 약하고 빠른 맥박은 즉각적인 응급진료가 필요한 쇼크 신호다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "at, fluttering, or beating too hard or too fast What should you do if you have symptoms? Sitting down may relieve the symptoms. If your blood pressure drops too low, your body’s vital organs do not get enough oxygen and nutrients. When this happens, low blood pressure can lead to shock shock (shok): A state in which not enough blood flows throughout the body, causing damage to the cells and tissues. , which requires immediate medical attention. Signs of shock include cold and sweaty skin, rapid breathing, a blue skin tone, or a weak and rapid pulse. Call 9-1-1 if you notice signs of shock in yourself or someone else. Talk to your doctor about your symptoms. Your doctor will use a blood pressure test to diagnose low blood pressure. Other tests may include blood, urine, or imaging tests and a tilt table test if you faint often. How is it treated? You may not need treatment for low blood pr"
+          },
+          {
+            "facet": "진료 시 어떤 정보를 전달해야 하는가?",
+            "answer": "평소 혈압, 복용약, 식사·수분 섭취, 최근 질병·사고·부상과 동반 증상을 전달한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "Medicines used for surgery Painkillers Other causes of low blood pressure include: Nerve damage from diabetes or other disorders Changes in heart rhythm ( arrhythmias ) Not drinking enough fluids ( dehydration ) Heart failure Symptoms Symptoms of low blood pressure may include: Blurry vision Confusion Dizziness Fainting (syncope) Lightheadedness Nausea or vomiting Sleepiness Weakness Exams and Tests Your health care provider will examine you to determine the cause of your low blood pressure. Your vital signs (temperature, pulse , rate of breathing, and blood pressure) will be checked frequently. You may need to stay in the hospital for a while. Your provider will ask questions, including: What is your normal blood pressure? What medicines do you take? Have you been eating and drinking normally? Have you had any recent illness, accident, or injury? What other symptoms do you have? Did you"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, ",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 85.0,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "혈당정상수치",
+    "category": "건강",
+    "topic": "혈당정상수치: 공복·식후 2시간·당화혈색소 기준과 검사 조건",
+    "intent": "공복·식후 혈당과 당화혈색소의 정상 범위는 얼마이며, 측정 조건에 따라 어떻게 구분해야 하나?",
+    "gap": "정상·전당뇨병·당뇨병 기준표와 검사 조건 체크리스트로 일반 식후 측정과 당부하검사, 자가측정과 진단을 구분한다.",
+    "source_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+    "verified_sources": [
+      {
+        "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+        "original_url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+        "title": "Diabetes Tests & Diagnosis - NIDDK",
+        "checked_on": "2026-10-17",
+        "publication_dates": [
+          "2025-10-06 20:06:56 -04:00"
+        ],
+        "sha256": "c54dd35d2ca2181446bbdb5e2ab9aac01e92b9e9bf8b6ac447afb5384d37fad2",
+        "excerpt": "Diabetes Tests & Diagnosis In this section: Who should be tested for diabetes? What tests are used to diagnose diabetes? What test results tell me if I have diabetes or prediabetes? Which tests help my doctor know what kind of diabetes I have? Your doctor can diagnose diabetes , prediabetes , and gestational diabetes using blood tests. The blood tests show if your blood glucose level , also called blood sugar, is higher than the range that is healthy for you. Blood tests can also help identify the type of diabetes you have. Don’t try to diagnose yourself if you think you might have diabetes. Blood testing equipment that you can buy over the counter, such as a blood glucose meter , cannot diagnose diabetes. Who should be tested for diabetes? Anyone who has symptoms of diabetes should be tested for the disease. Some people will not have any symptoms but may have risk factors for type 2 diabetes and need to be tested. Most pregnant women should also be tested for gestational diabetes. Testing helps doctors find diabetes sooner, so they can work with their patients to manage the disease and prevent health problems . If you have Medicare, it may cover the cost of tests if you have certain risk factors for diabetes. If you have different insurance, ask your insurance company if it covers diabetes tests. Blood tests help doctors diagnose diabetes and prediabetes. Type 1 diabetes Doctors often diagnose type 1 diabetes in children and young adults when they have diabetes symptoms, such as feeling thirsty and having to urinate more often, or if they may have diabetic ketoacidosis . Symptoms in adults may be less specific. 1 Type 1 diabetes can run in families. A study called TrialNet offers free testing to relatives of people with type 1 diabetes, even if the relatives don’t have symptoms. Type 2 diabetes Experts recommend routine testing for type 2 diabetes if you have certain risk factors . You may have a higher risk of developing type 2 diabetes if you are age 35 or older American Indian, Black or African American, Asian American, Hispanic/Latino, or Pacific Islander overweight or have obesity and have at least one other risk factor a woman who had gestational diabetes Take the American Diabetes Association Diabetes Risk Test to see if you are at risk for type 2 diabetes. Children can also develop type 2 diabetes. Experts recommend testing children and teens between the ages of 10 and 18 who are overweight or have obesity and have at least one more risk factor, such as a low birth weight, a parent who had diabetes while pregnant, or another factor. 1 Adults and children with normal diabetes test results should be retested every 3 years. 1 If your blood glucose levels are higher than the target range, but not high enough to be diagnosed with diabetes, doctors will diagnose you with prediabetes . Having prediabetes is serious because it raises the chance of developing type 2 diabetes. But developing type 2 diabetes can be prevented . Adults and children diagnosed with prediabetes should be tested for type 2 diabetes every year. Testing for type 2 diabetes before and during pregnancy All women who are planning to get pregnant should be tested for type 2 diabetes, especially if they have risk factors. If you are already pregnant, you should be tested for type 2 diabetes at the first prenatal appointment, or in the first 15 weeks of pregnancy. If you have diabetes, you should receive special care during your pregnancy to avoid problems for you and the baby. Gestational diabetes All pregnant women who do not have a previous diagnosis of diabetes should be tested for gestational diabetes between 24 and 28 weeks of pregnancy. 1 If you have gestational diabetes, you should get tested after your baby is born to see if you have type 2 diabetes, usually within 12 weeks after delivery. What tests are used to diagnose diabetes? Doctors use a variety of tests to diagnose diabetes and prediabetes. Your doctor may recommend different tests depending on whether you have symptoms or not, or whether you are pregnant. Fasting plasma glucose test The fasting plasma glucose (FPG) test measures your blood glucose level at a single point in time. For the most reliable results, your doctor will give you the test in the morning after you have fasted for at least 8 hours. Fasting means having nothing to eat or drink except sips of water. A1C test The A1C test is a blood test that provides your average levels of blood glucose over the last 3 months. Other names for the A1C test are hemoglobin A1C, HbA1C, glycated hemoglobin, and glycosylated hemoglobin test. You can eat and drink before this test. Before using the A1C test to diagnose diabetes, your doctor will consider factors, such as whether you are in your second or third trimester of pregnancy or whether you have certain types of anemia or another problem with your blood. 1 The A1C test might not be accurate in those cases. Certain types of hemoglobin , called hemoglobin variants, can interfere with measuring A1C levels. Most A1C tests used in the United States are not affected by the most common variants. If your A1C test results and blood glucose levels do not match, your doctor should consider that the A1C test may not be a reliable test for you. Your doctor will report your A1C test result as a percentage, such as an A1C of 7%. The higher the percentage is, the higher your average blood glucose levels are. Random plasma glucose test Sometimes doctors use the random plasma glucose test to diagnose diabetes when you have symptoms of diabetes and they do not want to wait until you have fasted for 8 hours. You may have this blood test at any time. Glucose challenge test If you are pregnant, your doctor might test you for gestational diabetes with the glucose challenge test. Another name for this test is the glucose screening test. In this test, a health care professional will take a sample of your blood 1 hour after you drink a sweet liquid containing glucose. You do not need to fast for this test. If your blood glucose level is too high—135 mg/dL to 140 mg/dL or higher—you may need to return for an oral glucose tolerance test while fasting. Oral glucose tolerance test The oral glucose tolerance test (OGTT) helps doctors detect type 2 diabetes, prediabetes, and gestational diabetes. However, the OGTT is a more expensive test than the FPG test and the glucose challenge test, and it is not as easy to give. Before the test, you will need to fast for at least 8 hours. A health care professional will take a blood sample to measure your glucose level after fasting. Next, you will drink a liquid that is high in sugar. Another blood sample is taken 2 hours later to check your blood glucose level. If your blood glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels are high two or more times during the OGTT, you may have gestational diabetes. What test results tell me if I have diabetes or prediabetes? Each test to detect diabetes and prediabetes uses a different measurement. Usually, your doctor will use a second test to confirm you have diabetes. The table below helps you understand what your test results mean if you are not pregnant. 1 If you are pregnant, some tests use different cutoffs. Ask your doctor what your test results mean. Test results for diagnosis of prediabetes and diabetes Diagnosis A1C Fasting Plasma Glucose Oral Glucose Tolerance Test* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/003482.htm",
+        "original_url": "https://medlineplus.gov/ency/article/003482.htm",
+        "title": "Blood sugar test: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "55ece5a4dd406ea815e7c67007bb0351ca215e114781f74a69625dafbb562004",
+        "excerpt": "Blood sugar test A blood sugar test measures the amount of sugar (glucose) in a sample of your blood. Glucose is a major source of energy for most cells of the body, including brain cells. Glucose is a building block for carbohydrates. Carbohydrates are found in fruit, cereal, bread, pasta, and rice. Carbohydrates are quickly turned into glucose in your body. This can raise your blood glucose level. The hormone insulin made in the body helps control the blood glucose level. How the Test is Performed A blood sample is needed. How to Prepare for the Test The test may be done in the following ways: After you have not eaten anything for at least 8 hours (fasting) At any time of the day (random) Two hours after you drink a fluid with a certain amount of glucose (2 hour post-prandial glucose test or oral glucose tolerance test ) How the Test will Feel When the needle is inserted to draw blood, some people feel moderate pain. Others feel only a prick or stinging. Afterward, there may be some throbbing or slight bruising. This soon goes away. Why the Test is Performed Your health care provider may order this test if you have signs of diabetes . More than likely, your provider will order a fasting blood sugar test. The blood glucose test is also used to monitor people who already have diabetes. The test may also be done if you have: An increase in how often you need to urinate Recently gained a lot of weight Blurred vision Confusion or a change in the way you normally talk or behave Fainting spells Seizures (for the first time) Unconsciousness or coma SCREENING FOR DIABETES This test may also be used to screen for diabetes. High blood sugar and diabetes may not cause symptoms in the early stages. A fasting blood sugar test is the most common test done to screen for diabetes, usually starting at age 35. If you have no other diabetes risk factors, you should be tested every 3 years (in some cases, more often if your weight is rising). If you're overweight and have any of the other risk factors below, ask your provider about getting tested at an earlier age or more often: High blood sugar level on a previous test Blood pressure of 140/90 mm Hg or higher, or unhealthy cholesterol levels History of heart disease Member of a high-risk ethnic group (African American, Latino, Native American, Asian American, or Pacific Islander) Woman who has been previously diagnosed with gestational diabetes Polycystic ovary disease (a condition in which a woman has an imbalance of female sex hormones which may cause cysts in the ovaries) Close relative with diabetes (such as a parent, brother, or sister) Not physically active Children age 10 and older who are overweight and have at least two of the risk factors listed above should be tested for type 2 diabetes every 3 years, even if they have no symptoms. In 2022, the US Preventive Services Task Force concluded that there was not enough evidence to recommend screening for type 2 diabetes in people 18 years old or younger. Some experts do advocate such screening for overweight children. Ask your child’s provider what is best for them. Normal Results If you had a fasting blood glucose test, a level of 70 to 99 mg/dL (3.9 and 5.5 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be 125 mg/dL (6.9 mmol/L) or lower. The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories. Some labs use different measurements or may test different specimens. Talk to your provider about the meaning of your specific test results. Blood glucose measured by a blood test from a vein is considered more accurate than blood glucose measured from a fingerstick with a blood glucose meter, or blood glucose measured by a continuous glucose monitor. What Abnormal Results Mean If you had a fasting blood glucose test: A level of 100 to 125 mg/dL (5.6 to 6.9 mmol/L) means you have impaired fasting glucose, a type of prediabetes. This increases your risk of developing type 2 diabetes and you should consult with your provider. A level of 126 mg/dL (7 mmol/L) or higher usually means you have diabetes. If you had a random blood glucose test: A level of 200 mg/dL (11.1 mmol/L) or higher often means you have diabetes. Your provider will order a fasting blood glucose, A1C test , or glucose tolerance test , depending on your random blood glucose test result. In someone who has diabetes, an abnormal result on the random blood glucose test may mean that the diabetes is not well controlled. Talk with your provider about your blood glucose goals if you have diabetes. Other medical problems can also cause a higher-than-normal blood glucose level, including: Overactive thyroid gland Pancreatic cancer Swelling and inflammation of the pancreas ( pancreatitis ) Stress due to trauma, stroke , heart attack , or surgery Rare tumors, including pheochromocytoma , acromegaly , Cushing syndrome , or glucagonoma A lower-than-normal blood glucose level ( hypoglycemia ) may be due to: Hypopituitarism (a pituitary gland disorder) Underactive thyroid gland or adrenal gland Tumor in the pancreas ( insulinoma - very rare) Too little food Too much insulin or other diabetes medicines Liver or kidney disease Weight loss after weight loss surgery Vigorous exercise Some medicines can raise or lower your blood glucose level. Before having the test, tell your provider about all the medicines you are taking. For some people, mainly those who are thin and young, a fasting blood sugar level below 70 mg/dL (3.9 mmol/L) may be normal. Risks There is little risk involved with having your blood taken. Veins and arteries vary in size from one person to another and from one side of the body to the other. Obtaining a blood sample from some people may be more difficult than from others. Other risks associated with having blood drawn are slight, but may include: Excessive bleeding Fainting or feeling lightheaded Multiple punctures to locate veins Hematoma (blood accumulating under the skin) Infection (a slight risk any time the skin is broken) Alternative Names Random blood sugar; Blood sugar level; Fasting blood sugar; Glucose test; Diabetic screening - blood sugar test; Diabetes - blood sugar test Patient Instructions Type 2 diabetes - what to ask your doctor Images Blood test References American Diabetes Association Professional Practice Committee. 2. Diagnosis and classification of diabetes: standards of care in diabetes - 2025. Diabetes Care . 2025;48(Supplement_1):S27-S49. PMID: 39651986 pubmed.ncbi.nlm.nih.gov/39651986/ . US Preventive Services Task Force; Davidson KW, et al. Screening for prediabetes and type 2 diabetes: US Preventive Services Task Force Recommendation Statement. JAMA . 2021;326(8):736-743. PMID: 34427594 pubmed.ncbi.nlm.nih.gov/34427594/ . US Preventive Services Task Force; Mangione CM, Barry MJ, et al. Screening for prediabetes and type 2 diabetes in children and adolescents: US Preventive Services Task Force Recommendation Statement. JAMA . 2022;328(10):963-967. PMID: 36098719 pubmed.ncbi.nlm.nih.gov/36098719/ . Review Date 1/10/2025 Updated by: Sandeep K. Dhaliwal, MD, board-certified in Diabetes, Endocrinology, and Metabolism, Springfield, VA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Blood Glucose Diabetes Diabetes in Children and Teens Prediabetes",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://roberin.com/blood-sugar-checker/",
+      "https://www.deokgye.com/life/blood-glucose-normal-numbers-check/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 30440,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "혈행 개선 영양제",
+        "capturedAt": "2026-10-16T11:00:22.166Z",
+        "expiresAt": "2026-10-17T11:00:22.166Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-10-02",
+          "endDate": "2026-10-16",
+          "latestPeriod": "2026-10-15",
+          "previousPeriod": "2026-10-14",
+          "baselineStart": "2026-10-08",
+          "baselineEnd": "2026-10-14",
+          "latestRatio": 100,
+          "previousRatio": 48.03921,
+          "baselineMean": 40.68626714285715,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 108.16328994585882,
+          "baselinePct": 145.78317703337385,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 53,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-16T11:04:21.898Z",
+          "measuredAt": "2026-10-16T11:04:23.868Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "혈행개선영양제",
+          "monthlyPc": 340,
+          "monthlyMobile": 4880,
+          "monthlyTotal": 5220,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-16T11:04:57.132Z",
+        "expiresAt": "2026-10-17T10:59:41.365Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 171,
+          "exportedCount": 80,
+          "truncatedCount": 91
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 6,
+          "missingPreviousDay": 5,
+          "insufficientBaseline": 0
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 38890754734,
+        "artifactId": 12042456110,
+        "headSha": "6fda2bcf0c7d4ad1fd4a53937d57b7cfe973db17",
+        "sourceRunCreatedAt": "2026-10-16T10:58:49Z"
+      },
+      "relatedKeyword": "혈당정상수치",
+      "relatedMonthly": 30440,
+      "relatedMeasuredAt": "2026-10-16T20:36:25.224493+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5305",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/003482.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/003466.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.cdc.gov/diabetes/diabetes-testing/monitoring-blood-sugar.html",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "혈당 정상 수치",
+    "organic_domains": [
+      "diabetes.or.kr",
+      "kdca.go.kr",
+      "m.korea.kr",
+      "common.health.kr",
+      "repository.hira.or.kr",
+      "roberin.com",
+      "health.ambitstock.com",
+      "www.deokgye.com",
+      "www.deokgye.com",
+      "www.deokgye.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://diabetes.or.kr/upload/bbs/ebook/edu_01_08.pdf",
+        "domain": "diabetes.or.kr",
+        "title": "[기본] 8. 자가혈당측정",
+        "snippet": "<th>정상 수치</th> ... (약 복용 또는 인슐린 주사 전) ... 나의 식전, 식후 혈당, 당화혈색소 목표를"
+      },
+      {
+        "url": "https://kdca.go.kr/bbs/kdca/42/309414/download.do",
+        "domain": "kdca.go.kr",
+        "title": "□ 인터넷 배너\n\n○ 질병관리청 누리집(https://www.kdca.go.kr)\n\n- 알",
+        "snippet": "인터넷 배너 예시 이미지 4개가 배치되어 있으며, 모두 질병관리청의 “자기혈관 숫자알기 / 레드서클” 홍보 배너이다.각 이미지에는 분홍색 배경, 캐릭터 그림, 원형 “레드서클” 로고, 그리고 혈압·혈당·콜레스테롤"
+      },
+      {
+        "url": "https://m.korea.kr/expertWeb/resources/files/data/document_file/2017/2017%EB%85%84_%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C_%ED%86%B5%ED%95%A9%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%82%AC%EC%97%85_%EC%95%88%EB%82%B4%28%EC%8B%A0%EC%B2%B4%ED%99%9C%EB%8F%99_%EB%B6%84%EC%95%BC%29462.pdf",
+        "domain": "m.korea.kr",
+        "title": "체활동]",
+        "snippet": "식후 2시간 혈당치 | 200mg/dL 이 | 상구분 | 정상 | 수치 | 조절목표 ... 대사증후군 복부비만, ... 중성지방, HDL, 혈압, 공복혈당 ... 의 자각증상"
+      },
+      {
+        "url": "https://common.health.kr/shared/docs/healthkr/approval_result/%28%EC%8B%A0%EC%95%BD%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C%29_%EC%8B%9C%EA%B7%B8%EB%8B%88%ED%8F%AC%EB%9D%BC%EB%A5%B4%EC%A3%BC%EC%82%AC20%2C40%2C60%EB%B0%80%EB%A6%AC%EA%B7%B8%EB%9E%A8%28%EB%9D%BC%EC%8B%9C%EB%A0%88%EC%98%A4%ED%83%80%EC%9D%B4%EB%93%9C%ED%8C%8C%EB%AA%A8%EC%82%B0%EC%97%BC%29%20%ED%97%88%EA%B0%80%EB%B3%B4%EA%B3%A0%EC%84%9C%28%EC%B5%9C%EC%A2%85%29.pdf",
+        "domain": "common.health.kr",
+        "title": "의약품 품목허가 보고서",
+        "snippet": "아틴포스포키나제(CPK) 증가 | 혈중 아밀라아제 증가 ... 말단비대증 환자 임상시험(C2305)에서 5명의 환자(2명은 이 약 개시 시점에서 혈당 정상수치)가 359~506mg/dL의 혈당 수치로 인하여 입원하였다. ... 로"
+      },
+      {
+        "url": "https://repository.hira.or.kr/bitstream/2019.oak/3096/2/%EA%B0%80%EC%B9%98%EA%B8%B0%EB%B0%98%20%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C%EC%A4%91%EC%8B%AC%20%EC%9D%BC%EC%B0%A8%EC%9D%98%EB%A3%8C%20%EA%B1%B4%EA%B0%95%EA%B4%80%EB%A6%AC%20%EB%AA%A8%EB%8D%B8%20%ED%9A%A8%EA%B3%BC%EB%B6%84%EC%84%9D%20%EC%97%B0%EA%B5%AC.pdf",
+        "domain": "repository.hira.or.kr",
+        "title": "(2D(_˝ÝÀ½)",
+        "snippet": "제4장 지역사회 중심 일차의료 건강관리 모형 시범 운영 효과성 평가• 혈당 수치가 확보된 125명을 기준으로 비중을 산출할 경우 8.0%가 정상 혈당, 40.0%가 당뇨병 경계, 52.0%가"
+      },
+      {
+        "url": "https://roberin.com/blood-sugar-checker/",
+        "domain": "roberin.com",
+        "title": "당화혈색소 수치·공복/식후 혈당 정상 범위 확인 | ROBERIN",
+        "snippet": "당화혈색소 수치, 공복혈당 정상 수치, 식후혈당 정상 수치를 한 표로만 비교하면 검사 조건을 놓치기 쉽습니다. ... HbA1c는 적혈구의 혈색소에 포도당이 결합한 비율로 최근 수개월의 혈당"
+      },
+      {
+        "url": "https://health.ambitstock.com/guides/health-checkup-results-guide/",
+        "domain": "health.ambitstock.com",
+        "title": "건강검진 결과 보는 법 — 혈압·혈당·콜레스테롤 수치 완전 정리 — 건강모아",
+        "snippet": "국가건강검진 결과표의 판정 등급(정상A·정상B·질환의심)과 혈압·혈당·콜레스테롤·간수치 정상 기준을 항목별로 쉽게 읽는 법. ... 이 글에서는 혈압·혈당·콜레스테롤·간수치 등 핵심 항목의 정상 기준과, 어떤 결과일 때 병원을 찾아야"
+      },
+      {
+        "url": "https://www.deokgye.com/life/blood-glucose-normal-numbers-check/",
+        "domain": "www.deokgye.com",
+        "title": "혈당 정상 수치, 공복과 식후 기준은 얼마일까 | 덕계",
+        "snippet": "# 혈당 정상 수치, 공복과 식후 기준은 얼마일까 ... 혈당 정상 수치는 공복 상태에서 100mg/dL 미만, 식사 후 2시간 뒤 140mg/dL 미만이 기준입니다. ... 대한당뇨병학회"
+      },
+      {
+        "url": "https://www.deokgye.com/life/diabetes-blood-sugar-diagnosis-criteria/",
+        "domain": "www.deokgye.com",
+        "title": "공복 100, 식후 140 아래면 정상, 당뇨 혈당 수치 기준 | 덕계",
+        "snippet": "# 공복 100, 식후 140 아래면 정상, 당뇨 혈당 수치 기준 ... 공복이냐 식후냐, 그리고 당화혈색소까지 기준선이 세 갈래로 나뉘기 때문입니다. ... 질병관리청 자료에 따르면"
+      },
+      {
+        "url": "https://www.deokgye.com/life/blood-glucose-normal-range-fasting-postprandial/",
+        "domain": "www.deokgye.com",
+        "title": "혈당 정상 수치, 공복·식후·당화혈색소 한눈에 보기 | 덕계",
+        "snippet": "# 혈당 정상 수치, 공복·식후·당화혈색소 한눈에 보기 ... 전체 국내 성인 7명 중 1명, 약 16.7%가 당뇨를 앓고 있다는 2022년 국민건강영양조사 결과가 있습니다. ... 공복"
+      }
+    ],
+    "dominant_result_ratio": 0.2857142857142857,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 16.33,
+      "trend": -0.77,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": -0.077,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 8,
+    "selected_at": "2026-10-16T20:36:25.224493+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "혈당정상수치"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+          "title": "Diabetes Tests & Diagnosis - NIDDK",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test",
+          "title": "The A1C Test & Diabetes - NIDDK",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/003482.htm",
+          "title": "Blood sugar test: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 7594
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://kdca.go.kr/kdca/2854/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa2RjYSUyRjQ2JTJGMzEyMTYyJTJGYXJ0Y2xWaWV3LmRvJTNGcGFzc3dvcmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNmZpbmRPcG53cmQlM0QlMjZmaW5kV29yZCUzRCUyNnJnc0VuZGRlU3RyJTNEJTI2ZmluZFR5cGUlM0QlMjZmaW5kQ2xTZXElM0QlMjZwYWdlJTNEMiUyNg%3D%3D",
+              "title": "홍보지",
+              "excerpt_chars": 1139
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis",
+              "title": "Diabetes Tests & Diagnosis - NIDDK",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/a1c-test",
+              "title": "The A1C Test & Diabetes - NIDDK",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://medlineplus.gov/ency/article/003482.htm",
+              "title": "Blood sugar test: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 7594
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "혈당정상수치",
+      "executed_query": "혈당 정상 수치",
+      "topic": "혈당정상수치: 공복·식후 2시간·당화혈색소 기준과 검사 조건",
+      "intent": "공복·식후 혈당과 당화혈색소의 정상 범위는 얼마이며, 측정 조건에 따라 어떻게 구분해야 하나?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-16T20:36:25.224493+00:00",
+      "result_count": 10,
+      "domain_count": 8,
+      "dominant_ratio": 0.2857142857142857,
+      "search_review": {
+        "version": 1,
+        "query": "혈당정상수치",
+        "executed_query": "혈당 정상 수치",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-16T20:36:25.224493+00:00",
+        "raw_sha256": "2bf68d7f9f9f551686bc14af7aac96624d3bc73c9e3605cf70073400ef029d59",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "<th>정상 수치</th> ... (약 복용 또는 인슐린 주사 전) ... 나의 식전, 식후 혈당, 당화혈색소 목표를"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "인터넷 배너 예시 이미지 4개가 배치되어 있으며, 모두 질병관리청의 “자기혈관 숫자알기 / 레드서클” 홍보 배너이다.각 이미지에는 분홍색 배경, 캐릭터 그림, 원형 “레드서클” 로고, 그리고 혈압·혈당·콜레스테롤"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "식후 2시간 혈당치 | 200mg/dL 이 | 상구분 | 정상 | 수치 | 조절목표 ... 대사증후군 복부비만, ... 중성지방, HDL, 혈압, 공복혈당 ... 의 자각증상"
+          },
+          {
+            "result_index": 3,
+            "relevant": false,
+            "quote": "아틴포스포키나제(CPK) 증가 | 혈중 아밀라아제 증가 ... 말단비대증 환자 임상시험(C2305)에서 5명의 환자(2명은 이 약 개시 시점에서 혈당 정상수치)가 359~506mg/dL의 혈당 수치로 인하여 입원하였다. ... 로"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "제4장 지역사회 중심 일차의료 건강관리 모형 시범 운영 효과성 평가• 혈당 수치가 확보된 125명을 기준으로 비중을 산출할 경우 8.0%가 정상 혈당, 40.0%가 당뇨병 경계, 52.0%가"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "당화혈색소 수치·공복/식후 혈당 정상 범위 확인 | ROBERIN"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "국가건강검진 결과표의 판정 등급(정상A·정상B·질환의심)과 혈압·혈당·콜레스테롤·간수치 정상 기준을 항목별로 쉽게 읽는 법. ... 이 글에서는 혈압·혈당·콜레스테롤·간수치 등 핵심 항목의 정상 기준과, 어떤 결과일 때 병원을 찾아야"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "# 혈당 정상 수치, 공복과 식후 기준은 얼마일까 ... 혈당 정상 수치는 공복 상태에서 100mg/dL 미만, 식사 후 2시간 뒤 140mg/dL 미만이 기준입니다. ... 대한당뇨병학회"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "공복 100, 식후 140 아래면 정상, 당뇨 혈당 수치 기준 | 덕계"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "혈당 정상 수치, 공복·식후·당화혈색소 한눈에 보기 | 덕계"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 7,
+        "relevant_site_count": 5,
+        "relevant_indices": [
+          0,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 0.7,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.2857142857142857,
+        "site_concentration": 0.42857142857142855,
+        "organic_opportunity": 16.33
+      },
+      "scope": "full_keyword",
+      "target_keyword": "혈당정상수치",
+      "matches": [
+        {
+          "result_index": 5,
+          "quote": "당화혈색소 수치, 공복혈당 정상 수치, 식후혈당 정상 수치를 한 표로만 비교하면 검사 조건을 놓치기 쉽습니다."
+        },
+        {
+          "result_index": 7,
+          "quote": "혈당 정상 수치, 공복과 식후 기준은 얼마일까"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-16T20:36:25.224493+00:00",
+      "input_sha256": "53a627d2e429acd6e43e0f26e06217e2898178d25cd06df531830acbfad31e8b",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "혈당정상수치",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav",
+            "entity": "American Diabetes Association",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": " experts do advocate such screening for overweight children. Ask your child’s provider what is best for them. Normal Results If you had a fasting blood glucose test, a level of 70 to 99 mg/dL (3.9 and 5.5 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be 125 mg/dL (6.9 mmol/L) or lower. The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories. Some labs use different measurements or may test different specimens. Talk to your provider about the meaning of your specific test results. Blood glucose measured by a blood test from a vein is considered more accurate than blood glucose measured from a fingerstick with a blood glucose meter, or blood glucose measured by a continuous glucose monitor",
+            "entity": "fasting blood glucose test",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "공복혈당 정상 범위는 얼마인가?",
+            "answer": "공복혈당 정상 범위는 70~99mg/dL이며 검사실별 참고 범위에 차이가 있을 수 있다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": " experts do advocate such screening for overweight children. Ask your child’s provider what is best for them. Normal Results If you had a fasting blood glucose test, a level of 70 to 99 mg/dL (3.9 and 5.5 mmol/L) is considered normal. If you had a random blood glucose test, a normal result depends on when you last ate. Most of the time, the blood glucose level will be 125 mg/dL (6.9 mmol/L) or lower. The examples above show the common measurements for results of these tests. Normal value ranges may vary slightly among different laboratories. Some labs use different measurements or may test different specimens. Talk to your provider about the meaning of your specific test results. Blood glucose measured by a blood test from a vein is considered more accurate than blood glucose measured from a fingerstick with a blood glucose meter, or blood glucose measured by a continuous glucose monitor"
+          },
+          {
+            "facet": "공복혈당·당부하 2시간·당화혈색소의 정상·전당뇨병·당뇨병 기준은?",
+            "answer": "정상은 ≤99/≤139mg/dL·<5.7%, 전당뇨는 100~125/140~199·5.7~6.4%, 당뇨는 ≥126/≥200·≥6.5%다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav"
+          },
+          {
+            "facet": "공복혈당과 당화혈색소 검사 조건은 어떻게 다른가?",
+            "answer": "공복혈당은 최소 8시간 금식 후 검사한다. 당화혈색소는 최근 3개월 평균 혈당을 반영하며 금식이 필요 없다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "by is born to see if you have type 2 diabetes, usually within 12 weeks after delivery. What tests are used to diagnose diabetes? Doctors use a variety of tests to diagnose diabetes and prediabetes. Your doctor may recommend different tests depending on whether you have symptoms or not, or whether you are pregnant. Fasting plasma glucose test The fasting plasma glucose (FPG) test measures your blood glucose level at a single point in time. For the most reliable results, your doctor will give you the test in the morning after you have fasted for at least 8 hours. Fasting means having nothing to eat or drink except sips of water. A1C test The A1C test is a blood test that provides your average levels of blood glucose over the last 3 months. Other names for the A1C test are hemoglobin A1C, HbA1C, glycated hemoglobin, and glycosylated hemoglobin test. You can eat and drink before this test. B"
+          },
+          {
+            "facet": "일반 식후 2시간 측정과 당부하검사 기준을 어떻게 구분하는가?",
+            "answer": "제시된 2시간 기준은 8시간 이상 금식 후 당 용액을 마시는 당부하검사 기준이다. 일반 식사 후 측정에 그대로 적용하지 않는다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "not need to fast for this test. If your blood glucose level is too high—135 mg/dL to 140 mg/dL or higher—you may need to return for an oral glucose tolerance test while fasting. Oral glucose tolerance test The oral glucose tolerance test (OGTT) helps doctors detect type 2 diabetes, prediabetes, and gestational diabetes. However, the OGTT is a more expensive test than the FPG test and the glucose challenge test, and it is not as easy to give. Before the test, you will need to fast for at least 8 hours. A health care professional will take a blood sample to measure your glucose level after fasting. Next, you will drink a liquid that is high in sugar. Another blood sample is taken 2 hours later to check your blood glucose level. If your blood glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels "
+          },
+          {
+            "facet": "자가혈당측정 수치만으로 당뇨병을 진단할 수 있는가?",
+            "answer": "시판 혈당측정기로 당뇨병을 진단할 수 없으며 의료진의 혈액검사가 필요하다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Diabetes Tests & Diagnosis In this section: Who should be tested for diabetes? What tests are used to diagnose diabetes? What test results tell me if I have diabetes or prediabetes? Which tests help my doctor know what kind of diabetes I have? Your doctor can diagnose diabetes , prediabetes , and gestational diabetes using blood tests. The blood tests show if your blood glucose level , also called blood sugar, is higher than the range that is healthy for you. Blood tests can also help identify the type of diabetes you have. Don’t try to diagnose yourself if you think you might have diabetes. Blood testing equipment that you can buy over the counter, such as a blood glucose meter , cannot diagnose diabetes. Who should be tested for diabetes? Anyone who has symptoms of diabetes should be tested for the disease. Some people will not have any symptoms but may have risk factors for type 2 dia"
+          },
+          {
+            "facet": "기준표의 적용 대상과 확진 조건은 무엇인가?",
+            "answer": "기준표는 비임신 대상이며 임신 중에는 일부 기준이 다르다. 당뇨병 확진에는 보통 두 번째 검사를 사용한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "glucose level is high, you may have diabetes. If you are pregnant, your blood will be drawn every hour for 2 to 3 hours. If your blood glucose levels are high two or more times during the OGTT, you may have gestational diabetes. What test results tell me if I have diabetes or prediabetes? Each test to detect diabetes and prediabetes uses a different measurement. Usually, your doctor will use a second test to confirm you have diabetes. The table below helps you understand what your test results mean if you are not pregnant. 1 If you are pregnant, some tests use different cutoffs. Ask your doctor what your test results mean. Test results for diagnosis of prediabetes and diabetes Diagnosis A1C Fasting Plasma Glucose Oral Glucose Tolerance Test* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "* Random Plasma Glucose Test‡ Normal below 5.7% 99 mg/dL or below 139 mg/dL or below N/A Prediabetes 5.7% to 6.4% 100 to 125 mg/dL 140 to 199 mg/dL N/A Diabetes 6.5% or above 126 mg/dL or above 200 mg/dL or above 200 mg/dL or above * 2 hours after glucose intake ‡ Used when there are symptoms Source: American Diabetes Association Which tests help my doctor know what kind of diabetes I have? Even though the tests described above can confirm you have diabetes, they can’t identify what type you hav",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 65.56,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

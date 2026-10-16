@@ -994,5 +994,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-16T00:07:08.882323+00:00"
+  },
+  {
+    "key": "편의점김밥품질비교결과",
+    "keyword": "편의점 김밥 품질비교 결과",
+    "topic": "편의점 김밥 품질비교 결과: 10월 15일 발표된 12개 제품의 구매 선택 기준",
+    "category": "리뷰",
+    "post_id": 1996,
+    "url": "https://trendpulse.blog/convenience-gimbap-comparison-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 20,
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-16T09:08:59.084898+00:00"
   }
 ]

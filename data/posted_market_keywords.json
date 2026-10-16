@@ -975,5 +975,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-15T00:41:20.504500+00:00"
+  },
+  {
+    "key": "중증장애인체험형청년인턴단시간일4시간채용공고",
+    "keyword": "중증장애인 체험형 청년인턴(단시간_일4시간) 채용 공고",
+    "topic": "중증장애인 체험형 청년인턴(단시간_일4시간) 채용 공고: 10월 16일 발표된 광주보훈요양원 3명 모집",
+    "category": "취업",
+    "post_id": 1993,
+    "url": "https://trendpulse.blog/gwangju-disabled-youth-intern-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-16T00:07:08.882323+00:00"
   }
 ]

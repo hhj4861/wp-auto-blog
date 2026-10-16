@@ -571,6 +571,17 @@
       "claimed_at": "2026-10-15T18:00:15.168614+09:00",
       "status": "failure",
       "completed_at": "2026-10-15T09:08:48.683658+00:00"
+    },
+    "2026-10-16:morning": {
+      "scheduled_for": "2026-10-16T09:00:00+09:00",
+      "run_created_at": "2026-10-16T09:00:03+09:00",
+      "start_delay_seconds": 11,
+      "trigger": "external_timer",
+      "run_id": "38826901297",
+      "category": "취업",
+      "slot": "morning",
+      "claimed_at": "2026-10-16T09:00:11.883721+09:00",
+      "status": "started"
     }
   }
 }

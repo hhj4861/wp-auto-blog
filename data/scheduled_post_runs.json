@@ -597,6 +597,17 @@
       "status": "success",
       "completed_at": "2026-10-16T09:09:03.954400+00:00",
       "published_category": "리뷰"
+    },
+    "2026-10-17:morning": {
+      "scheduled_for": "2026-10-17T09:00:00+09:00",
+      "run_created_at": "2026-10-17T09:00:04+09:00",
+      "start_delay_seconds": 13,
+      "trigger": "external_timer",
+      "run_id": "38984273157",
+      "category": "건강",
+      "slot": "morning",
+      "claimed_at": "2026-10-17T09:00:13.955823+09:00",
+      "status": "started"
     }
   }
 }

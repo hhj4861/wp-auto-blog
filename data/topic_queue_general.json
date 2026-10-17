@@ -36612,7 +36612,7 @@
     "keywords": [
       "저혈압수치"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -37102,7 +37102,7 @@
     "keywords": [
       "혈당정상수치"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -37341,6 +37341,951 @@
       }
     },
     "score": 65.56,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "저혈압수치",
+    "category": "건강",
+    "topic": "저혈압수치: 90/60mmHg 기준과 증상·위험 신호",
+    "intent": "저혈압은 몇부터이며, 수치가 낮아도 증상이 없으면 괜찮은지와 진료가 필요한 신호를 알아본다.",
+    "gap": "공식 자료로 수치 기준·무증상·응급 신호 구분표와 측정 전 준비 체크리스트를 제공한다.",
+    "source_url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+    "verified_sources": [
+      {
+        "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+        "original_url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+        "title": "Low Blood Pressure - Low Blood Pressure | NHLBI, NIH",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "7b3872806a5d475e4c45a66777196c95e07ce0e21e949873d08a7c49326abb50",
+        "excerpt": "Low Blood Pressure Home < Back To Health Topics Low Blood Pressure 0 Low Blood Pressure Low Blood Pressure Low Blood Pressure IN THIS ARTICLE Low blood pressure occurs when blood flows through your blood vessels at lower than normal pressures. The medical term for low blood pressure is hypotension. Blood pressure is the force of blood pushing against the walls of your arteries artery (ARR-tuh-ree): A blood vessel that carries blood from the heart to the organs. Most arteries carry oxygenated blood. The pulmonary arteries carry deoxygenated blood away from the heart to the lungs. as the heart pumps blood. It is usually described as two numbers: systolic systolic (sis-TOL-ik): The phase of circulation when the heart pumps and the pressure of blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, regulate blood pressure. For example, the autonomic nervous system autonomic nervous system (AW-toh-NAH-mik NER-vus SIS-tem): The part of the nervous system that controls muscles of internal organs, such as the heart, blood vessels, lungs, and stomach. sends the “fight-or-flight” signal that, depending on the situation, tells the heart and other systems in the body to increase or decrease blood pressure. Problems with the autonomic nervous system, such as in Parkinson’s disease, can cause low blood pressure. Other causes of low blood pressure include: Blood loss from an injury that causes a sudden drop in blood pressure Dehydration Diabetes Heart problems such as arrhythmias (irregular heartbeat) Medicines to treat high blood pressure , depression, or Parkinson’s Pregnancy Older adults also have a higher risk for symptoms of low blood pressure, such as falling, fainting, or dizziness upon standing up or after a meal. Older adults are more likely to develop low blood pressure as a side effect of medicines taken to control high blood pressure . What are the symptoms? For many people, low blood pressure goes unnoticed. Others may feel symptoms such as: Confusion Dizziness or lightheadedness Fainting Feeling tired or weak Blurry vision Headache Neck or back pain Nausea Heart palpitations, or feelings that your heart is skipping a beat, fluttering, or beating too hard or too fast What should you do if you have symptoms? Sitting down may relieve the symptoms. If your blood pressure drops too low, your body’s vital organs do not get enough oxygen and nutrients. When this happens, low blood pressure can lead to shock shock (shok): A state in which not enough blood flows throughout the body, causing damage to the cells and tissues. , which requires immediate medical attention. Signs of shock include cold and sweaty skin, rapid breathing, a blue skin tone, or a weak and rapid pulse. Call 9-1-1 if you notice signs of shock in yourself or someone else. Talk to your doctor about your symptoms. Your doctor will use a blood pressure test to diagnose low blood pressure. Other tests may include blood, urine, or imaging tests and a tilt table test if you faint often. How is it treated? You may not need treatment for low blood pressure. Depending on your symptoms, treatment may include drinking more fluids to prevent dehydration, taking medicines to raise your blood pressure, or adjusting medicines that cause low blood pressure. Your doctor may talk to you about lifestyle changes, including changing what and how you eat and how you sit and stand up. Your doctor may also recommend compression stockings if you stand for long periods. Learn more about Low Blood Pressure from the U.S. National Library of Medicine. Last updated on March 24, 2022",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/007278.htm",
+        "original_url": "https://medlineplus.gov/ency/article/007278.htm",
+        "title": "Low blood pressure: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "25fbfa40835ab3710e5f9ffa796d3046fdb6f20c1b8f9e04f55f10859dc2bda2",
+        "excerpt": "Low blood pressure Low blood pressure occurs when blood pressure is below normal. This means the heart, brain, and other parts of the body may not get enough blood. In adults, the normal blood pressure is between 90/60 mmHg and 120/80 mmHg. The medical word for low blood pressure is hypotension. Causes Blood pressure varies from one person to another and also over time for any given person. A drop of as little as 20 mmHg can cause problems for some people. There are different types and causes of low blood pressure. Severe hypotension (shock) can be caused by sudden loss of blood ( shock ), severe infection, heart attack , or severe allergic reaction ( anaphylaxis ). Orthostatic hypotension means your blood pressure drops when you shift from lying down to standing. This type of low blood pressure usually lasts only a few seconds or minutes. If this type of low blood pressure occurs after eating, it is called postprandial orthostatic hypotension. This type most often affects older adults, those with high blood pressure, and people with Parkinson disease . Neurally mediated hypotension (NMH) most often affects young adults and children. It can occur when a person has been standing for a long time. Children usually outgrow this type of hypotension. Certain medicines and substances can lead to low blood pressure, including: Alcohol Anti-anxiety medicines Certain antidepressants Diuretics Heart medicines, including those used to treat high blood pressure and coronary heart disease Medicines used for surgery Painkillers Other causes of low blood pressure include: Nerve damage from diabetes or other disorders Changes in heart rhythm ( arrhythmias ) Not drinking enough fluids ( dehydration ) Heart failure Symptoms Symptoms of low blood pressure may include: Blurry vision Confusion Dizziness Fainting (syncope) Lightheadedness Nausea or vomiting Sleepiness Weakness Exams and Tests Your health care provider will examine you to determine the cause of your low blood pressure. Your vital signs (temperature, pulse , rate of breathing, and blood pressure) will be checked frequently. You may need to stay in the hospital for a while. Your provider will ask questions, including: What is your normal blood pressure? What medicines do you take? Have you been eating and drinking normally? Have you had any recent illness, accident, or injury? What other symptoms do you have? Did you faint or become less alert? Do you feel dizzy or lightheaded when standing or sitting after lying down? The following tests may be done: Basic metabolic pane l Blood cultures to check for infection Complete blood count ( CBC ), including white blood cell differential Electrocardiogram ( ECG ) Urinalysis X-ray of the abdomen X-ray of the chest Treatment Lower than normal blood pressure in a healthy person that does not cause any symptoms often does not need treatment. Otherwise, treatment depends on the cause of your low blood pressure and your symptoms. When you have symptoms from low blood pressure, sit or lie down right away. Then raise your feet above heart level. Severe hypotension caused by shock is a medical emergency. You may be given: Blood or other fluids through a needle ( IV ) Medicines to increase blood pressure and improve heart strength Other medicines, such as antibiotics Treatments for low blood pressure after standing up too quickly include: If medicines are the cause, your provider may change the dosage or switch you to a different medicine. Do not stop taking any medicines before talking to your provider. Your provider may suggest drinking more fluids to treat dehydration. Wearing compression stockings can help keep blood from collecting in the legs. This keeps more blood in the upper body. People with NMH should avoid triggers, such as standing for a long period of time. Other treatments include drinking fluids and increasing salt in your diet. Talk to your provider before trying these measures. In severe cases, medicines may be prescribed. Outlook (Prognosis) Low blood pressure can usually be treated with success. Possible Complications Falls due to low blood pressure in older adults can lead to a broken hip or spine fracture. These injuries can reduce a person's health and ability to move about. Sudden severe drops in your blood pressure starve your body of oxygen. This can lead to damage of the heart, brain, and other organs. This type of low blood pressure can be life threatening if not treated right away. When to Contact a Medical Professional If low blood pressure causes a person to pass out (become unconscious), seek treatment right away. Or call 911 or the local emergency number. If the person is not breathing or has no pulse, begin CPR . Call your provider right away if you have any of the following symptoms: Black or maroon stools Chest pain Dizziness, lightheadedness Fainting Fever higher than 101°F (38.3°C) Irregular heartbeat Shortness of breath Prevention Your provider may recommend certain steps to prevent or reduce your symptoms including: Drinking more fluids Getting up slowly after sitting or lying down Not drinking alcohol Not standing for a long time (if you have NMH) Using compression stockings so blood does not collect in the legs Alternative Names Hypotension; Blood pressure - low; Postprandial hypotension; Orthostatic hypotension; Neurally mediated hypotension; NMH References Calkins H, Everett TH, Chen P-S. Hypotension and syncope. In: Libby P, Bonow RO, Mann DL, Tomaselli GF, Bhatt DL, Solomon SD, eds. Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine . 12th ed. Philadelphia, PA: Elsevier; 2022:chap 71. Schrigern DL. Approach to the patient with abnormal vital signs. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine . 27th ed. Philadelphia, PA: Elsevier; 2024:chap 7. Review Date 1/1/2025 Updated by: Linda J. Vorvick, MD, Clinical Professor Emeritus, Department of Family Medicine, UW Medicine, School of Medicine, University of Washington, Seattle, WA. Also reviewed by David C. Dugdale, MD, Medical Director, Brenda Conaway, Editorial Director, and the A.D.A.M. Editorial team. Learn how to cite this page Related MedlinePlus Health Topics Low Blood Pressure",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/lab-tests/measuring-blood-pressure/",
+        "original_url": "https://medlineplus.gov/lab-tests/measuring-blood-pressure/",
+        "title": "Measuring Blood Pressure: MedlinePlus Medical Test",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "b01fd4a7b7503a78a77e60af3e60bb7e32e4c72a8021e87942893142c6fc85b1",
+        "excerpt": "Measuring Blood Pressure What is a blood pressure measurement? Each time your heart beats, it pumps blood into your arteries (the blood vessels that carry blood from your heart to the tissues and organs in your body). A blood pressure measurement is a test that measures the force (pressure) in your arteries as your heart pumps. Blood pressure is measured as two numbers: Systolic blood pressure (the first and higher number) measures pressure inside your arteries when your heart beats. Diastolic blood pressure (the second and lower number) measures the pressure inside the artery when your heart rests between beats. For example, a blood pressure reading of 120/80 means a systolic of 120 and a diastolic of 80. Many things can change your blood pressure. It can increase or decrease based on: Whether you're resting or exercising If you eat or drink foods with caffeine , alcohol, or tobacco Your age If you're taking certain medicines Your position, such as whether you're sitting, lying down, or standing If your blood pressure is high on several different measurements on different days, you might have high blood pressure , also known as hypertension. Around half of American adults have high blood pressure. It increases the risk of life-threatening conditions, including heart attack and stroke . But high blood pressure rarely causes symptoms. A blood pressure measurement helps diagnose high blood pressure early, so it may be treated before it leads to serious complications. Other names: blood pressure reading, blood pressure test, blood pressure screening, sphygmomanometry What is it used for? A blood pressure measurement is most often used to diagnose high blood pressure. Blood pressure that's too low, known as hypotension, is much less common. But you may get tested for low blood pressure if you have certain symptoms. Unlike high blood pressure, low blood pressure usually causes symptoms. These include: Dizziness or lightheadedness Nausea Cold, sweaty skin Pale skin Fainting Weakness Why do I need a blood pressure test? A blood pressure measurement is often included as part of a regular checkup . Everyone age 3 or older should have their blood pressure checked by their provider at least once a year. If you have high blood pressure or are at higher risk for it, you may need testing more often. You may be at higher risk if you: Are 40 years old or older. Are overweight or have obesity . Have a family history of heart disease or diabetes . Have a family history of high blood pressure. Take birth control pills or other medicines that can increase your blood pressure. Are Black/African American. Black/African Americans are more likely than other racial and ethnic groups to have high blood pressure. Your provider can tell you how often you should get your blood pressure checked. You may also need to have your blood pressure checked: To see how well your blood pressure medicine is working (if you have high blood pressure) If you are being treated in the hospital To check if it's safe for you to have a medical or surgical procedure To check if it's safe for you to play sports or do other strenuous activities or jobs If you have symptoms of low blood pressure What happens during a blood pressure test? A blood pressure test includes the following steps: You will sit in a chair with your feet flat on the floor. You will rest your arm on a table or other surface, so your arm is level with your heart. You may be asked to roll up your sleeve. Your health care provider will wrap a blood pressure cuff around your arm. A blood pressure cuff is a strap-like device. It should fit snugly around your upper arm, with the bottom edge placed just above your elbow. Your provider will inflate the blood pressure cuff using a small hand pump or by pressing a button on an automated device. Your provider will measure the pressure manually (by hand) or with an automated device. If done manually, they will place a stethoscope over the major artery (brachial artery) in your upper arm and elbow joint to listen to the blood flow and pulse as the cuff inflates and deflates. If using an automated device, the blood pressure cuff automatically inflates, deflates, and measures pressure. As the blood pressure cuff inflates, you'll feel it tighten around your arm. This blocks the blood flow in that part of your arm for a short time. Your provider will then open a valve on the cuff to slowly release air. As the cuff deflates, blood flow will start again in your arm. As the pressure falls, a measurement is taken when the sound of blood pulsing is first heard. This is the systolic pressure. As the air continues to be let out, the blood pulsing sound will start to go away. When it completely stops, another measurement is taken. This is the diastolic pressure. This test only takes about one minute to complete. Your provider may also ask to take your blood pressure while you stand or lie down. They may also want to repeat the blood pressure measurement on your other arm. Will I need to do anything to prepare for the test? Several things can increase your blood pressure measurement. Tell your provider if you take any medicines, since some medicines may affect your results. To get a more accurate blood pressure measurement, avoid these things for at least 30 minutes before having your blood pressure taken: Exercise Alcohol Tobacco products Food or drinks containing caffeine Also, make sure to go to the bathroom before the test. Are there any risks to the test? You may have a little discomfort when the blood pressure cuff inflates and squeezes your arm. But this feeling only lasts for a few seconds. What do the results mean? Your results, also known as a blood pressure reading, will contain two numbers. The top or first number is the systolic pressure. The bottom or second number is the diastolic pressure. Blood pressure readings are also labeled by categories, ranging from normal to crisis. Blood pressure is measured in millimeters of mercury (mm Hg). Your reading may show your blood pressure is: Blood Pressure Category Systolic Blood Pressure Diastolic Blood Pressure Normal Less than 120 and Less than 80 Elevated 120 - 129 and Less than 80 High Blood Pressure Stage 1 130 - 139 or 80 - 89 High Blood Pressure Stage 2 140 or higher or 90 or higher Hypertensive Crisis (dangerously high blood pressure - seek medical care right away Higher than 180 and Higher than 120 Your blood pressure measurement can go up and down. Your provider will only usually diagnose you with high blood pressure if you have two or more high blood pressure readings on different days. They may also consider your blood pressure readings over a period of time, your medical and family history, and if you have other symptoms before diagnosing you with high blood pressure. If your child is younger than 13, your provider will compare their blood pressure readings with what is common for children the same age, sex, and height. If you've been diagnosed with high blood pressure , your provider may recommend: Lifestyle changes and/or medicines to control your blood pressure. You to regularly check your blood pressure at home with an automated blood pressure monitor. An at-home blood pressure monitor usually includes a blood pressure cuff and a digital device to record and display blood pressure readings. At-home blood pressure monitoring is not a replacement for regular visits with your provider. But it can provide important information, such as whether your treatment is working or if your condition may have gotten worse. Also, home monitoring may make the test less stressful. Many people get nervous about getting their blood pressure taken at a provider's office. This is called \"white coat syndrome.\" It can cause a temporary rise in blood pressure, making the results less accurate. To get the most accurate results when taking your blood pressure at home: Make sure the blood pressure cuff fits snugly but isn't too small. Use a blood pressure cuf",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://blood-health.manual365.co.kr/221",
+      "https://pulin.co.kr/%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98%ED%91%9C/",
+      "https://classytip.tistory.com/336"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 30900,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "중간",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "혈행 개선 영양제",
+        "capturedAt": "2026-10-16T11:00:22.166Z",
+        "expiresAt": "2026-10-17T11:00:22.166Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-10-02",
+          "endDate": "2026-10-16",
+          "latestPeriod": "2026-10-15",
+          "previousPeriod": "2026-10-14",
+          "baselineStart": "2026-10-08",
+          "baselineEnd": "2026-10-14",
+          "latestRatio": 100,
+          "previousRatio": 48.03921,
+          "baselineMean": 40.68626714285715,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 108.16328994585882,
+          "baselinePct": 145.78317703337385,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 53,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-16T11:04:21.898Z",
+          "measuredAt": "2026-10-16T11:04:23.868Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "혈행개선영양제",
+          "monthlyPc": 340,
+          "monthlyMobile": 4880,
+          "monthlyTotal": 5220,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-16T11:04:57.132Z",
+        "expiresAt": "2026-10-17T10:59:41.365Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 171,
+          "exportedCount": 80,
+          "truncatedCount": 91
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 6,
+          "missingPreviousDay": 5,
+          "insufficientBaseline": 0
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 38890754734,
+        "artifactId": 12042456110,
+        "headSha": "6fda2bcf0c7d4ad1fd4a53937d57b7cfe973db17",
+        "sourceRunCreatedAt": "2026-10-16T10:58:49Z"
+      },
+      "relatedKeyword": "저혈압수치",
+      "relatedMonthly": 30900,
+      "relatedMeasuredAt": "2026-10-17T00:01:41.258157+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/007278.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/lab-tests/measuring-blood-pressure/",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "저혈압 수치",
+    "organic_domains": [
+      "blood-health.manual365.co.kr",
+      "pulin.co.kr",
+      "brainhackers.kr",
+      "www.healthtranquility.com",
+      "classytip.tistory.com",
+      "metagirl.net",
+      "randomstory.tistory.com",
+      "jangsunote.com",
+      "beijina.kr",
+      "kpbm.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://blood-health.manual365.co.kr/221",
+        "domain": "blood-health.manual365.co.kr",
+        "title": "저혈압 수치, 90 60 기준과 증상 원인 확인 - 혈행 건강 매뉴얼365",
+        "snippet": "저혈압으로 뇌와 장기에 공급되는 혈액이 부족해지면 어지럼증, 눈앞이 흐려지는 느낌, 힘 빠짐, 메스꺼움, 실신 같은 증상이 나타날 수 있다. ... 땀이나 설사, 구토로 인한 탈수,"
+      },
+      {
+        "url": "https://pulin.co.kr/%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98%ED%91%9C/",
+        "domain": "pulin.co.kr",
+        "title": "저혈압 수치표 정상 범위와 진단 기준 한눈에 - Pulin",
+        "snippet": "세게 누를 때와 풀 때의 힘이 둘 다 약하면 흐름 자체가 약해진 것이다. ... * 증후성 저혈압: 심장 질환, 내분비 질환 등 기저 질환에 동반기립성"
+      },
+      {
+        "url": "https://brainhackers.kr/entry/%EC%A0%80%ED%98%88%EC%95%95-%EC%B9%98%EB%A3%8C%EB%B2%95-%EC%88%98%EC%B9%98-%EB%82%AE%EC%9D%84-%EB%95%8C-%EB%94%B0%EB%9D%BC%EC%95%BC-%ED%95%A0-%EA%B0%80%EC%9D%B4%EB%93%9C",
+        "domain": "brainhackers.kr",
+        "title": "저혈압 치료법 수치 낮을 때 따라야 할 가이드 :: 브레인해커스",
+        "snippet": "일상 속에서 이유 없는 피로감이나 멍한 느낌, 혹은 갑작스러운 어지러움을 자주 느낀 적이 있으신가요? ... 처음엔 단순히 수면 부족이나 스트레스 탓이라 여겼지만, 건강검진에서 수축기 혈압이"
+      },
+      {
+        "url": "https://www.healthtranquility.com/low-blood-pressure-levels/",
+        "domain": "www.healthtranquility.com",
+        "title": "2026 저혈압 진단 수치 기준 및 관리 포인트 - 건강팩트연구소",
+        "snippet": "2026년 최신 의학 가이드라인을 바탕으로 저혈압의 일반적인 기준과 주의해야 할 수치를 정리해 드립니다. ... 의학적으로 저혈압은 단순히 수치만으로 판단하기보다 ‘증상이 동반되는가’를 중요하게 봅니다. ... *"
+      },
+      {
+        "url": "https://classytip.tistory.com/336",
+        "domain": "classytip.tistory.com",
+        "title": "저혈압 수치 / 기준과 위험 신호 / 증상별 대처법까지 완벽 정리",
+        "snippet": "혈압은 우리 몸 구석구석에 산소와 영양분을 실어 나르는 '압력'인데, 이 압력이 낮아지면 뇌나 심장 같은 주요 장기에 혈액 공급이 원활하지 않게 되기 때문입니다.특히 기온 변화가"
+      },
+      {
+        "url": "https://metagirl.net/%EC%A0%80%ED%98%88%EC%95%95-%EC%A6%9D%EC%83%81%EA%B3%BC-%EC%88%98%EC%B9%98-%EC%9B%90%EC%9D%B8%EA%B9%8C%EC%A7%80-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-%EC%89%BD%EA%B2%8C-%EC%A0%95%EB%A6%AC%ED%96%88/",
+        "domain": "metagirl.net",
+        "title": "저혈압 증상과 수치, 원인까지! 이해하기 쉽게 정리했어요 – 메타걸",
+        "snippet": "2 저혈압이란 무엇이며, 수치 기준은? ... 혈압은 우리 몸의 혈액 순환을 나타내는 중요한 지표이며, 너무 낮아도 건강에 여러 문제를 일으킬 수 있습니다. ... 하지만 단순히"
+      },
+      {
+        "url": "https://randomstory.tistory.com/entry/%EC%A0%80%ED%98%88%EC%95%95%EA%B3%BC-%EA%B8%B0%EB%A6%BD%EC%84%B1-%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98-%EB%B2%94%EC%9C%84-%EB%8C%80%EC%B2%98",
+        "domain": "randomstory.tistory.com",
+        "title": "저혈압과 기립성 저혈압. 어디까지 괜찮고 언제 위험할까?",
+        "snippet": "평소 혈압이 낮아도 어지럼증이나 실신이 없다면 큰 문제 없이 지낼 수 있다.### 임상적으로 위험하다고 보는 저혈압 수치 ... 저관류 위험 (조심해야 할 단계) | 수축기"
+      },
+      {
+        "url": "https://jangsunote.com/entry/%EC%A0%80%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98-%EC%A6%9D%EC%83%81-%EC%9E%90%EA%B0%80%EC%A7%84%EB%8B%A8-%ED%95%B4%EB%B3%B4%EA%B8%B0-%ED%98%88%EC%95%95-%EC%A0%95%EC%83%81-%EC%88%98%EC%B9%98/",
+        "domain": "jangsunote.com",
+        "title": "저혈압 수치, 증상, 자가진단 해보기 (혈압 정상 수치) - 장수노트",
+        "snippet": "얼마전 건강검진을 하고 결과가 나왔는데요. ... 팔을 압박해서 수축시켰을 때 최대 수치가 얼마인지, 이완시켰을 때 최저 수치가 얼마인지를 보는 것으로 이해하면 됩니다. ... 심장에서 나온"
+      },
+      {
+        "url": "https://beijina.kr/%EC%A0%80%ED%98%88%EC%95%95%EC%9D%98-%EA%B8%B0%EC%B4%88%EC%A7%80%EC%8B%9D-%EC%88%98%EC%B9%98-%EC%A6%9D%EC%83%81-%EC%9B%90%EC%9D%B8-%EB%8C%80%EC%B2%98%EB%B2%95%EC%9D%84-%EC%95%8C%EC%95%84%EB%91%90/",
+        "domain": "beijina.kr",
+        "title": "저혈압의 기초지식. 수치, 증상, 원인, 대처법을 알아두자! - 베이지나",
+        "snippet": "수치, 증상, 원인, 대처법을 알아두자! ... 여성이 저혈압에 걸리기 쉬운 이유는 여성호르몬이 혈관을 확장시키기 때문인 것으로 여겨진다. ... 대표적인 증상으로는 현기증, 두통, 어깨 결림, 이명,"
+      },
+      {
+        "url": "https://kpbm.kr/NFUpload/nfupload_down.php?name=20231121_%ED%99%98%EC%9E%90%ED%98%88%EC%95%A1%EA%B4%80%EB%A6%AC+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8_.pdf&tmp_name=1938708689_3d1e8714.pdf",
+        "domain": "kpbm.kr",
+        "title": "핵심질문3-5\n\n출혈이 있는 환자에게서 젖산 수치(lactate)와 염기 결핍(base d",
+        "snippet": "출혈과 쇼크의 정도를 관찰하고 추정하기 위하여 젖산 수치와 염기 결핍을 측정하는 것을 권고한다. ... 저혈압 허용 전략은 외상성 뇌손상(traumatic brain injury, TBI)이 의심되는 환자에게는 금기이며,"
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 35.56,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-17T00:01:41.258157+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "저혈압수치"
+    ],
+    "status": "completed",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+          "title": "Low Blood Pressure - Low Blood Pressure | NHLBI, NIH",
+          "excerpt_chars": 4421
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/007278.htm",
+          "title": "Low blood pressure: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 6187
+        },
+        {
+          "url": "https://medlineplus.gov/lab-tests/measuring-blood-pressure/",
+          "title": "Measuring Blood Pressure: MedlinePlus Medical Test",
+          "excerpt_chars": 8000
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://edu.cancer.go.kr/lay1/S1T864C867/contents.do",
+              "title": "홈 >내가 알고 싶은 암>치료>핵의학치료>핵의학치료의 종류",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://www.nhlbi.nih.gov/health/low-blood-pressure",
+              "title": "Low Blood Pressure - Low Blood Pressure | NHLBI, NIH",
+              "excerpt_chars": 4421
+            },
+            {
+              "url": "https://medlineplus.gov/ency/article/007278.htm",
+              "title": "Low blood pressure: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 6187
+            },
+            {
+              "url": "https://medlineplus.gov/lab-tests/measuring-blood-pressure/",
+              "title": "Measuring Blood Pressure: MedlinePlus Medical Test",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "저혈압수치",
+      "executed_query": "저혈압 수치",
+      "topic": "저혈압수치: 90/60mmHg 기준과 증상·위험 신호",
+      "intent": "저혈압은 몇부터이며, 수치가 낮아도 증상이 없으면 괜찮은지와 진료가 필요한 신호를 알아본다.",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-17T00:01:41.258157+00:00",
+      "result_count": 10,
+      "domain_count": 10,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "저혈압수치",
+        "executed_query": "저혈압 수치",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-17T00:01:41.258157+00:00",
+        "raw_sha256": "06195e397ab98e89f6630e3e78cf3f0ff65523e106a3d7b4ad1108b38ba49318",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "저혈압 수치, 90 60 기준과 증상 원인 확인 - 혈행 건강 매뉴얼365"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "저혈압 수치표 정상 범위와 진단 기준 한눈에 - Pulin"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "저혈압 치료법 수치 낮을 때 따라야 할 가이드 :: 브레인해커스"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "2026년 최신 의학 가이드라인을 바탕으로 저혈압의 일반적인 기준과 주의해야 할 수치를 정리해 드립니다. ... 의학적으로 저혈압은 단순히 수치만으로 판단하기보다 ‘증상이 동반되는가’를 중요하게 봅니다. ... *"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "저혈압 수치 / 기준과 위험 신호 / 증상별 대처법까지 완벽 정리"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "2 저혈압이란 무엇이며, 수치 기준은? ... 혈압은 우리 몸의 혈액 순환을 나타내는 중요한 지표이며, 너무 낮아도 건강에 여러 문제를 일으킬 수 있습니다. ... 하지만 단순히"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "평소 혈압이 낮아도 어지럼증이나 실신이 없다면 큰 문제 없이 지낼 수 있다.### 임상적으로 위험하다고 보는 저혈압 수치 ... 저관류 위험 (조심해야 할 단계) | 수축기"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "저혈압 수치, 증상, 자가진단 해보기 (혈압 정상 수치) - 장수노트"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "저혈압의 기초지식. 수치, 증상, 원인, 대처법을 알아두자! - 베이지나"
+          },
+          {
+            "result_index": 9,
+            "relevant": false,
+            "quote": "출혈과 쇼크의 정도를 관찰하고 추정하기 위하여 젖산 수치와 염기 결핍을 측정하는 것을 권고한다. ... 저혈압 허용 전략은 외상성 뇌손상(traumatic brain injury, TBI)이 의심되는 환자에게는 금기이며,"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 9,
+        "relevant_site_count": 9,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "relevance_ratio": 0.9,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.1111111111111111,
+        "organic_opportunity": 35.56
+      },
+      "scope": "full_keyword",
+      "target_keyword": "저혈압수치",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "저혈압 수치, 90 60 기준과 증상 원인 확인"
+        },
+        {
+          "result_index": 1,
+          "quote": "저혈압 수치표 정상 범위와 진단 기준 한눈에"
+        },
+        {
+          "result_index": 4,
+          "quote": "저혈압 수치 / 기준과 위험 신호 / 증상별 대처법까지 완벽 정리"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-17T00:01:41.258157+00:00",
+      "input_sha256": "d9425cbc4ba11f857211d98a956ce11965921c77b2a2a29d0293a39909a1c958",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "저혈압수치",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, ",
+            "entity": "adults",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "o you take? Have you been eating and drinking normally? Have you had any recent illness, accident, or injury? What other symptoms do you have? Did you faint or become less alert? Do you feel dizzy or lightheaded when standing or sitting after lying down? The following tests may be done: Basic metabolic pane l Blood cultures to check for infection Complete blood count ( CBC ), including white blood cell differential Electrocardiogram ( ECG ) Urinalysis X-ray of the abdomen X-ray of the chest Treatment Lower than normal blood pressure in a healthy person that does not cause any symptoms often does not need treatment. Otherwise, treatment depends on the cause of your low blood pressure and your symptoms. When you have symptoms from low blood pressure, sit or lie down right away. Then raise your feet above heart level. Severe hypotension caused by shock is a medical emergency. You may be giv",
+            "entity": "healthy person",
+            "context": "general"
+          },
+          {
+            "source_index": 2,
+            "quote": "Measuring Blood Pressure What is a blood pressure measurement? Each time your heart beats, it pumps blood into your arteries (the blood vessels that carry blood from your heart to the tissues and organs in your body). A blood pressure measurement is a test that measures the force (pressure) in your arteries as your heart pumps. Blood pressure is measured as two numbers: Systolic blood pressure (the first and higher number) measures pressure inside your arteries when your heart beats. Diastolic blood pressure (the second and lower number) measures the pressure inside the artery when your heart rests between beats. For example, a blood pressure reading of 120/80 means a systolic of 120 and a diastolic of 80. Many things can change your blood pressure. It can increase or decrease based on: Whether you're resting or exercising If you eat or drink foods with caffeine , alcohol, or tobacco You",
+            "entity": "Measuring Blood Pressure",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "저혈압의 수치 기준과 수축기·이완기 표기는 무엇인가?",
+            "answer": "일반적인 저혈압 기준은 90/60mmHg 미만이다. 위 숫자는 수축기, 아래 숫자는 이완기 혈압이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, "
+          },
+          {
+            "facet": "혈압이 낮아도 증상이 없으면 치료가 필요한가?",
+            "answer": "건강한 사람이 낮은 혈압에도 증상이 없다면 치료가 필요하지 않은 경우가 많다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "o you take? Have you been eating and drinking normally? Have you had any recent illness, accident, or injury? What other symptoms do you have? Did you faint or become less alert? Do you feel dizzy or lightheaded when standing or sitting after lying down? The following tests may be done: Basic metabolic pane l Blood cultures to check for infection Complete blood count ( CBC ), including white blood cell differential Electrocardiogram ( ECG ) Urinalysis X-ray of the abdomen X-ray of the chest Treatment Lower than normal blood pressure in a healthy person that does not cause any symptoms often does not need treatment. Otherwise, treatment depends on the cause of your low blood pressure and your symptoms. When you have symptoms from low blood pressure, sit or lie down right away. Then raise your feet above heart level. Severe hypotension caused by shock is a medical emergency. You may be giv"
+          },
+          {
+            "facet": "어떤 동반 증상에 진료나 응급 대응이 필요한가?",
+            "answer": "어지럼·실신·흉통·호흡곤란 등은 즉시 의료진에게 연락한다. 의식 소실은 즉시 치료나 응급 연락이 필요하다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "ional If low blood pressure causes a person to pass out (become unconscious), seek treatment right away. Or call 911 or the local emergency number. If the person is not breathing or has no pulse, begin CPR . Call your provider right away if you have any of the following symptoms: Black or maroon stools Chest pain Dizziness, lightheadedness Fainting Fever higher than 101°F (38.3°C) Irregular heartbeat Shortness of breath Prevention Your provider may recommend certain steps to prevent or reduce your symptoms including: Drinking more fluids Getting up slowly after sitting or lying down Not drinking alcohol Not standing for a long time (if you have NMH) Using compression stockings so blood does not collect in the legs Alternative Names Hypotension; Blood pressure - low; Postprandial hypotension; Orthostatic hypotension; Neurally mediated hypotension; NMH References Calkins H, Everett TH, Che"
+          },
+          {
+            "facet": "정확한 혈압 측정을 위해 무엇을 준비해야 하는가?",
+            "answer": "측정 전 최소 30분간 운동·음주·담배·카페인 음식과 음료를 피하고, 측정 전에 화장실에 간다.",
+            "supported": true,
+            "source_index": 2,
+            "quote": "ure measurement, avoid these things for at least 30 minutes before having your blood pressure taken: Exercise Alcohol Tobacco products Food or drinks containing caffeine Also, make sure to go to the bathroom before the test. Are there any risks to the test? You may have a little discomfort when the blood pressure cuff inflates and squeezes your arm. But this feeling only lasts for a few seconds. What do the results mean? Your results, also known as a blood pressure reading, will contain two numbers. The top or first number is the systolic pressure. The bottom or second number is the diastolic pressure. Blood pressure readings are also labeled by categories, ranging from normal to crisis. Blood pressure is measured in millimeters of mercury (mm Hg). Your reading may show your blood pressure is: Blood Pressure Category Systolic Blood Pressure Diastolic Blood Pressure Normal Less than 120 a"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "blood against the vessels is highest. and diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. . The numbers record blood pressure in millimeters of mercury (mm Hg), with systolic listed above diastolic. For most adults, a normal blood pressure is usually less than 120/80 mm Hg. Low blood pressure is blood pressure that is lower than 90/60 mm Hg. Some people have low blood pressure all the time, and it is normal for them. Other people experience a sudden drop in blood pressure or have low blood pressure that may be linked to a health problem. This can be dangerous, as it could mean your heart, brain, or other vital organs are not getting enough blood flow and you are at risk for a heart attack or stroke . What causes low blood pressure? Many systems of the body, including organs, hormones, and nerves, ",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 85.56,
+    "publish_eligible": true,
+    "hold_reasons": [],
+    "post_id": 1999,
+    "url": "https://trendpulse.blog/low-blood-pressure-guide-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-17T00:22:08.570775"
+  },
+  {
+    "keyword": "혈압정상수치",
+    "category": "건강",
+    "topic": "혈압정상수치: 성인 정상 범위와 수축기·이완기 의미, 올바른 측정법",
+    "intent": "성인 혈압은 얼마가 정상이며, 120/80의 의미와 정확한 측정 방법은 무엇인가?",
+    "gap": "정상 범위의 두 조건을 표로 정리하고 측정 전 준비·반복 측정 체크리스트를 제공한다. 미국 자료의 분류임을 명시한다.",
+    "source_url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+    "verified_sources": [
+      {
+        "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+        "original_url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+        "title": "High Blood Pressure - Diagnosis | NHLBI, NIH",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "6ec74069121e9555d92bc1dc5c6f5ce9d8d9de24cf60dee157704137b129a38a",
+        "excerpt": "High Blood Pressure Home Health Topics < Back To High Blood Pressure Diagnosis 0 High Blood Pressure MENU Home Health Topics < Back To High Blood Pressure Diagnosis What Is High Blood Pressure? Symptoms Diagnosis Causes and Risk Factors Treatment Living With High Blood Pressure Pregnancy and High Blood Pressure MORE INFORMATION Participate in a Study Fact Sheets and Handouts Research High Blood Pressure High Blood Pressure Diagnosis Screening tests Everyone who’s age 3 or older should have their blood pressure checked by a healthcare provider at least once a year. Your provider measures your blood pressure to see if it’s in a healthy range. Regular checks can also show how well treatment for high blood pressure is working. Getting ready for a blood pressure measurement Video about the importance of getting your blood pressure checked regularly and understanding what your numbers mean so you can better manage your heart disease risk. Your provider will measure your blood pressure to see if you have higher-than-normal blood pressure. A blood pressure measurement is easy and painless and can be done in the provider’s office or clinic or at home. The provider uses a gauge, stethoscope, or electronic sensor and a blood pressure cuff to measure your blood pressure. Prepare for the test by following a few simple steps: Do not exercise, drink coffee, or smoke cigarettes for 30 minutes before the test. Go to the bathroom before the test. For at least 5 minutes before the test, sit in a chair and relax. Make sure your feet are flat on the floor. Do not talk while you are relaxing or during the test. Uncover your arm for the cuff. Rest your arm on a table so it is supported and at the level of your heart. Even if you do prepare, your blood pressure reading may not be accurate if: You are excited or nervous. “White coat hypertension” refers to blood pressure readings that are higher in a provider’s office than readings at home or in a pharmacy. To detect this type of high blood pressure, your provider may review readings from the office and from other places. Your blood pressure tends to be lower when measured at a provider’s office. Sometimes those with elevated blood pressure levels may show lower readings when taken at a provider’s office. This is called “masked high blood pressure.” When this happens, your provider will have difficulty detecting high blood pressure. Your provider can recognize this type of high blood pressure by looking at readings taken at the office and at home, especially at night. The wrong blood pressure cuff was used. Your readings can be different if the cuff is too small or too big. It is important for your provider to use the correct pressure cuff for your sex and age. You can also take your blood pressure at home or at a pharmacy. The Self-Measured Blood Pressure Fact Sheet has more information about how to measure your blood pressure outside of a provider’s office. If you take your own blood pressure at home, use an approved home blood pressure device to make sure the readings are correct. What the numbers mean Your blood pressure reading is made up of two numbers, the top, systolic systolic (sis-TOL-ik): The phase of circulation when the heart pumps and the pressure of blood against the vessels is highest. , number and the bottom, diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. , number. These numbers measure pressure in mm HG mm HG (Mm aich-Gee): millimeters of mercury (mm Hg), the unit of measurement for blood pressure (millimeters of mercury). To learn more about systolic and diastolic pressure, visit How the Heart Works . For most adults, a healthy blood pressure is less than 120/80 mm Hg. Your blood pressure is considered high when you have consistent systolic readings of 130 mm Hg or higher or diastolic readings of 80 mm Hg or higher. Talk to your provider if your blood pressure readings are consistently higher than 120/80 mm Hg. NHLBI-supported research research (REE-serch): The scientific study of nature that sometimes includes processes of health and disease in people. Biomedical research can be defined as basic and pre-clinical, clinical and population science, implementation, and translational.\n\nBasic research seeks to understand the mechanisms of biology, disease, or behavior. Pre-clinical research connects basic science with clinical research. Clinical and population science research includes clinical trials that find safe and effective ways to prevent, detect, or treat diseases. Implementation research involves the adoption of interventions into routine clinical care for the general population. Translational research moves scientific discovery from basic and pre-clinical research to clinical studies and finally to clinical practice. has shown that systolic blood pressure higher than 120 mm Hg can cause harm to health over time, including organ damage. Readings above 180/120 mm Hg are dangerously high and require immediate medical attention. For children younger than 13, blood pressure readings are compared with readings that are common for children of the same, age, sex, and height. Blood Pressure Levels Blood Pressure Category Systolic and Diastolic Pressure (mm Hg) Normal Less than 120 systolic pressure AND Less than 80 diastolic pressure Elevated 120 to 129 systolic pressure AND Less than 80 diastolic pressure High Blood Pressure Stage 1 130 to 139 systolic pressure OR 80 to 89 diastolic pressure High Blood Pressure Stage 2 140 or higher systolic pressure OR 90 or higher diastolic pressure Hypertensive Crisis Higher than 180 systolic pressure OR Higher than 120 diastolic pressure Contact your provider immediately. How will my provider find out if I have high blood pressure? Your provider may diagnose high blood pressure if your blood pressure readings are consistently high. You may also need tests to look for medical conditions that cause high blood pressure or to see if high blood pressure has affected your organs. Medical history Your provider will want to understand your risk factors and get general health information. They will ask about your eating patterns, physical activity level, sleep, body weight, stress, smoking status, and family’s health history. The information will help your provider work with you to set up a treatment plan . They will ask questions to see if your high blood pressure has caused any health problems . This will help them decide if you need other tests. Confirming high blood pressure You will need two or more blood pressure readings at separate medical appointments to diagnose high blood pressure. Last updated on June 26, 2025",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://medlineplus.gov/ency/article/007490.htm",
+        "original_url": "https://medlineplus.gov/ency/article/007490.htm",
+        "title": "Blood pressure measurement: MedlinePlus Medical Encyclopedia",
+        "checked_on": "2026-10-17",
+        "publication_dates": [],
+        "sha256": "4427b3f05c5b63edaeb8aa378b0fe72aca9f8a5fa6028fe14e3587869f4f17a6",
+        "excerpt": "Blood pressure measurement Blood pressure is a measurement of the force on the walls of your arteries as your heart pumps blood through your body. You can measure your blood pressure at home. You can also have it checked at your health care provider's office, many pharmacies, or even at some fire stations. How the Test is Performed Sit in a chair with your back supported. Your legs should be uncrossed, and your feet on the floor. Your arm should be supported so that your upper arm is at heart level. Roll up your sleeve so that your arm is bare. Be sure the sleeve is not bunched up and squeezing your arm. If it is, take your arm out of the sleeve, or remove the shirt entirely. You or your provider will wrap the blood pressure cuff snugly around your upper arm. The lower edge of the cuff should be 1 inch (2.5 cm) above the skin fold at the bend of your elbow. The cuff will be inflated quickly. This is done either by pumping the squeeze bulb or pushing a button on the device attached to the cuff. You will feel tightness around your arm. Next, the valve of the cuff is opened slightly, allowing the pressure to slowly fall. This happens automatically with most devices used at home. As the pressure falls, the reading when the sound of blood pulsing is first heard is recorded. This is the systolic pressure. As the air continues to be let out, the sounds will disappear. The point at which the sound stops is recorded. This is the diastolic pressure. Inflating the cuff too slowly or not inflating it to a high enough pressure may cause a false reading. If you loosen the valve too much, you will not be able to measure your blood pressure. The procedure should be done two or more times after proper preparation. How to Prepare for the Test Before you measure your blood pressure: Empty your bladder beforehand DO NOT take your blood pressure when you are under stress, have had a meal, caffeine, or used tobacco in the past 30 minutes, or have exercised recently. Rest for at least 5 minutes, 10 minutes is better, before blood pressure is taken. Be seated with your back against the back of a chair, your arm supported at the level of your heart, your feet flat on the floor, and your legs uncrossed. Take 2 or 3 readings at a sitting. Take the readings 1 minute apart. Remain seated. When checking your blood pressure on your own, note the time of the readings. Your provider may suggest that you do your readings at certain times of the day. A typical approach for home blood pressure checks is to take your blood pressure before breakfast and dinner for 5 days. This will give you at least 10 readings and will help your provider make decisions about your blood pressure treatment. How the Test will Feel You will feel slight discomfort when the blood pressure cuff is inflated to its highest level. Why the Test is Performed High blood pressure has no symptoms (except in rare, extreme situations), so you may not know if you have this problem. High blood pressure is often discovered during a visit to your provider for another reason, such as a routine physical exam. Finding high blood pressure and treating it early can help prevent heart disease, stroke , eye problems, or chronic kidney disease . All adults 18 years and older should have their blood pressure checked regularly: Once a year for adults aged 40 years and older Once a year for people at increased risk for high blood pressure, including people who are overweight or obese, African Americans, and those with an elevated blood pressure (120/80 mm Hg or higher) Every 3 to 5 years for adults aged 18 to 39 years with blood pressure lower than 120/80 mm Hg who do not have other risk factors Your provider may recommend more frequent checks based on your blood pressure levels and other health conditions. Normal Results Blood pressure readings are usually given as two numbers. For example, your provider might tell you that your blood pressure is 120 over 80 (written as 120/80 mm Hg). One or both of these numbers can be too high. Normal blood pressure is when the top number (systolic blood pressure) is below 120 and the bottom number (diastolic blood pressure) is below 80 (written as 120/80 mm Hg). What Abnormal Results Mean If your systolic blood pressure is 120 to 129 and your diastolic blood pressure is less than 80, you have elevated blood pressure. Your provider will recommend lifestyle changes to bring your blood pressure down to a normal range. Medicines are rarely used at this stage. If your blood pressure is 130/80 or higher but lower than 140/90 mm Hg, you have Stage 1 high blood pressure (hypertension). When thinking about the best treatment, you and your provider must consider: If you have no other diseases or risk factors, your provider may recommend lifestyle changes and repeat the measurements after a few months. If your blood pressure remains 130/80 or higher but lower than 140/90 mm Hg, your provider may recommend medicines to treat high blood pressure. If you have other diseases or risk factors for heart disease, your provider may be more likely to recommend medicines to treat high blood pressure and make lifestyle changes. If your blood pressure is 140/90 mm Hg or higher, you have Stage 2 high blood pressure (hypertension). Your provider will most likely recommend you start medicines and make lifestyle changes. Most of the time, high blood pressure does not cause symptoms. Considerations It is normal for your blood pressure to vary at different times of the day: It is usually higher when you are at work. It drops slightly when you are at home. It is usually lowest when you are sleeping. It is normal for your blood pressure to increase suddenly when you wake up. In people with very high blood pressure, this is when they are most at risk for a heart attack and stroke. Blood pressure readings taken at home are usually a better measure of your current blood pressure than those taken at your provider's office. Make sure your home blood pressure monitor is accurate. Ask your provider to compare your home readings with those taken in the office. Many people get nervous at their provider's office and have higher readings than they have at home. This is called white coat hypertension. Home blood pressure readings can help detect this problem. Alternative Names Diastolic blood pressure; Systolic blood pressure; Blood pressure reading; Measuring blood pressure; Hypertension - blood pressure measurement; High blood pressure - blood pressure measurement; Sphygmomanometry References American Diabetes Association Professional Practice Committee. 10. Cardiovascular disease and risk management: standards of care in diabetes-2025. Diabetes Care. 2025;48:S207-S238. PMID: 39651970 pubmed.ncbi.nlm.nih.gov/39651970/ . American Heart Association (AHA), American Medical Association (AMA) website. Target: BP. targetbp.org . Accessed June 19, 2025. Arnett DK, Blumenthal RS, Albert MA, et al. 2019 ACC/AHA guideline on the primary prevention of cardiovascular disease: a report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;140(11):e596-e646. PMID: 30879355 pubmed.ncbi.nlm.nih.gov/30879355/ . Ball JW, Dains JE, Flynn JA, Solomon BS, Stewart RW. Examination techniques and equipment. In: Ball JW, Dains JE, Flynn JA, Solomon BS, Stewart RW, eds. Seidel's Guide to Physical Examination. 10th ed. Philadelphia, PA: Elsevier; 2023:chap 3. Flack JM. Arterial hypertension. In: Goldman L, Cooney KA, eds. Goldman-Cecil Medicine. 27th ed. Philadelphia, PA: Elsevier; 2024:chap 64. Laffin LJ, Bakris GL. Systemic hypertension: mechanisms, diagnosis and treatment. In: Bonow RO, Mann DL, Tomaselli GF, et al, eds. Braunwald's Heart Disease: A Textbook of Cardiovascular Medicine. 13th ed. Philadelphia, PA: Elsevier; 2026:chap 24. Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA guideline for the prevention, detection, evaluation, and mana",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://makemyway.tistory.com/entry/%EA%B3%A0%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98-12080%EC%9D%B4-%EC%A0%95%EC%83%81-%EC%95%84%EB%8B%88%EB%9D%BC%EA%B3%A0%EC%9A%94-%EB%82%98%EC%9D%B4%EB%B3%84-%EC%A0%95%EC%83%81-%ED%98%88%EC%95%95-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+      "https://daytwopost.co.kr/blood-pressure-normal-range/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 71080,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "cak_provenance": {
+      "relationship": "related_seed",
+      "item": {
+        "keyword": "혈행 개선 영양제",
+        "capturedAt": "2026-10-16T11:00:22.166Z",
+        "expiresAt": "2026-10-17T11:00:22.166Z",
+        "trend": {
+          "source": "naver_datalab_search",
+          "timeUnit": "date",
+          "timeUnitOrigin": "provider_response",
+          "startDate": "2026-10-02",
+          "endDate": "2026-10-16",
+          "latestPeriod": "2026-10-15",
+          "previousPeriod": "2026-10-14",
+          "baselineStart": "2026-10-08",
+          "baselineEnd": "2026-10-14",
+          "latestRatio": 100,
+          "previousRatio": 48.03921,
+          "baselineMean": 40.68626714285715,
+          "expectedBaselineDays": 7,
+          "observedBaselineDays": 7,
+          "dayPct": 108.16328994585882,
+          "baselinePct": 145.78317703337385,
+          "dayPctStatus": "measured",
+          "baselinePctStatus": "measured",
+          "hotScore": 53,
+          "calculationVersion": "daily_observed_v2"
+        },
+        "searchad": {
+          "attemptedAt": "2026-10-16T11:04:21.898Z",
+          "measuredAt": "2026-10-16T11:04:23.868Z",
+          "lookupStatus": "exact",
+          "matchMode": "whitespace_exact",
+          "matchedKeyword": "혈행개선영양제",
+          "monthlyPc": 340,
+          "monthlyMobile": 4880,
+          "monthlyTotal": 5220,
+          "monthlyPcStatus": "measured",
+          "monthlyMobileStatus": "measured",
+          "monthlyTotalStatus": "measured",
+          "advertisingCompetition": "mid",
+          "failureCode": null
+        }
+      },
+      "export": {
+        "schemaVersion": 1,
+        "kind": "cak_keyword_candidates",
+        "profile": "blog-kr",
+        "generatedAt": "2026-10-16T11:04:57.132Z",
+        "expiresAt": "2026-10-17T10:59:41.365Z",
+        "compliance": {
+          "resaleRestricted": true,
+          "cacheTtlHours": 24
+        },
+        "scope": {
+          "seedSet": "g2-seeds",
+          "requestedKeywordCount": 182,
+          "storedKeywordCount": 182,
+          "eligibleDailyCount": 171,
+          "exportedCount": 80,
+          "truncatedCount": 91
+        },
+        "exclusionCounts": {
+          "expired": 0,
+          "unknownTimeUnit": 0,
+          "nonDaily": 0,
+          "invalidSeries": 6,
+          "missingPreviousDay": 5,
+          "insufficientBaseline": 0
+        }
+      },
+      "transport": {
+        "status": "ok",
+        "reason": "downloaded",
+        "sourceRunId": 38890754734,
+        "artifactId": 12042456110,
+        "headSha": "6fda2bcf0c7d4ad1fd4a53937d57b7cfe973db17",
+        "sourceRunCreatedAt": "2026-10-16T10:58:49Z"
+      },
+      "relatedKeyword": "혈압정상수치",
+      "relatedMonthly": 71080,
+      "relatedMeasuredAt": "2026-10-17T00:01:41.258157+00:00"
+    },
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6765",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://medlineplus.gov/ency/article/007490.htm",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "혈압 정상 수치",
+    "organic_domains": [
+      "sanche.co.kr",
+      "doh.wa.gov",
+      "blood-health.manual365.co.kr",
+      "makemyway.tistory.com",
+      "j1e-4up.co.kr",
+      "www.heart.org",
+      "doh.wa.gov",
+      "daytwopost.co.kr",
+      "m.korea.kr",
+      "doh.wa.gov"
+    ],
+    "organic_results": [
+      {
+        "url": "https://sanche.co.kr/blood-pressure-checker/",
+        "domain": "sanche.co.kr",
+        "title": "혈압 정상 수치 판정기 – 수축기·이완기 혈압으로 고혈압 단계 확인(대한고혈압학회 기준) - 산채 라이프 연구소",
+        "snippet": "# 혈압 정상 수치 판정기 – 수축기·이완기 혈압으로 고혈압 단계 확인(대한고혈압학회 기준) ... 건강검진 결과지나 가정용 혈압계에 찍힌 숫자가 정상인지 헷갈릴 때가 많습니다. ... *"
+      },
+      {
+        "url": "https://doh.wa.gov/sites/default/files/legacy/Documents/8380/340-268-BPnosPst-ko-L.pdf",
+        "domain": "doh.wa.gov",
+        "title": "혈압 수치를 알아두세요",
+        "snippet": "- 의사의 지시를 따르고 생활 습관을 바꾸면 수치가 개선될 것입니다.혈압 수치의 의미: ... 정상 혈압 범위입니다.</td> ... <td>고혈압 위기(응급 치료 필요)<br>혈압이 위험할 정도로 높습니다.<br>당장 911을"
+      },
+      {
+        "url": "https://blood-health.manual365.co.kr/275",
+        "domain": "blood-health.manual365.co.kr",
+        "title": "이완기 혈압이란(정상 수치, 높은 경우, 낮은 경우, 측정법) - 혈행 건강 매뉴얼365",
+        "snippet": "# 이완기 혈압이란(정상 수치, 높은 경우, 낮은 경우, 측정법) ... 수축기 혈압과 함께 심혈관 상태를 판단하는 기본 지표로 사용하며, 한 번의 숫자보다 반복해서 측정한 평균과"
+      },
+      {
+        "url": "https://makemyway.tistory.com/entry/%EA%B3%A0%ED%98%88%EC%95%95-%EC%88%98%EC%B9%98-12080%EC%9D%B4-%EC%A0%95%EC%83%81-%EC%95%84%EB%8B%88%EB%9D%BC%EA%B3%A0%EC%9A%94-%EB%82%98%EC%9D%B4%EB%B3%84-%EC%A0%95%EC%83%81-%ED%98%88%EC%95%95-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+        "domain": "makemyway.tistory.com",
+        "title": "고혈압 수치, 120/80이 정상 아니라고요? 나이별 정상 혈압 총정리",
+        "snippet": "고혈압 수치, 120/80이 정상 아니라고요? ... 📅 2026년 기준 (대한고혈압학회 진료지침 반영) | ⏱ 읽는 시간 약 6분 | 👤 40·50·60대 ... 혈압은 심장이 피를"
+      },
+      {
+        "url": "https://j1e-4up.co.kr/numbers/",
+        "domain": "j1e-4up.co.kr",
+        "title": "건강검진 수치 판독 — 혈압·공복혈당·콜레스테롤·BMI 기준표",
+        "snippet": "구간 | 수축기 | 이완기 ... 정상 | 120 미만 | 80 미만 ... 고혈압 전단계 | 130~139 | 80~89 ... 질병의 진단·치료를 대신하지 않으며,"
+      },
+      {
+        "url": "https://www.heart.org/-/media/Healthy-Living-Files/LE8-Fact-Sheets/LE8_Blood_Pressure_Korean.pdf?sc_lang=en",
+        "domain": "www.heart.org",
+        "title": "혈압 관리 방법",
+        "snippet": "심장마비, 뇌졸중, 치매, 심부전, 신장 질환/신부전, 시력 상실 등 다른 건강 문제의 원인이 될 수 있습니다. ... 두 숫자 중 더 큰 숫자, 즉 가장"
+      },
+      {
+        "url": "https://doh.wa.gov/sites/default/files/legacy/Documents/8380//345-273-BloodPressHm-ko-L.pdf",
+        "domain": "doh.wa.gov",
+        "title": "혈압 \n수치\n측정 방법",
+        "snippet": "혈압 수치의 의미혈압 분류 | 수축기 혈압 mm Hg ... 정상 혈압 범위입니다. ... 혈압이 다소 높은 상태입니다. ... Heart Disease, Stroke and Diabetes Prevention"
+      },
+      {
+        "url": "https://daytwopost.co.kr/blood-pressure-normal-range/",
+        "domain": "daytwopost.co.kr",
+        "title": "혈압 정상 수치 총정리｜고혈압·저혈압 기준과 연령별 혈압 관리 방법 - daytwopost.co.kr",
+        "snippet": "혈압은 심장에서 나온 혈액이 동맥을 따라 흐르면서 혈관 벽에 가하는 압력을 의미합니다. ... 혈압은 측정 환경에 따라 달라질 수 있으므로 특별한 응급상황이 아니라면 한 번의"
+      },
+      {
+        "url": "https://m.korea.kr/expertWeb/resources/files/data/document_file/2017/2017%EB%85%84_%EC%A7%80%EC%97%AD%EC%82%AC%ED%9A%8C_%ED%86%B5%ED%95%A9%EA%B1%B4%EA%B0%95%EC%A6%9D%EC%A7%84%EC%82%AC%EC%97%85_%EC%95%88%EB%82%B4%28%EC%8B%A0%EC%B2%B4%ED%99%9C%EB%8F%99_%EB%B6%84%EC%95%BC%29462.pdf",
+        "domain": "m.korea.kr",
+        "title": "체활동]",
+        "snippet": "식후 2시간 혈당치 | 200mg/dL 이 | 상구분 | 정상 | 수치 | 조절목표 ... 질환별 생화학 지표 기준 | | 수 | 축기 혈압"
+      },
+      {
+        "url": "https://doh.wa.gov/sites/default/files/legacy/Documents/8380/345-273-BloodPressHm-ko-L.pdf",
+        "domain": "doh.wa.gov",
+        "title": "혈압 수치 측정 방법",
+        "snippet": "혈압 수치의 의미 ... 정상 혈압 범위입니다.</td> ... <td>고혈압 위기(응급 치료 필요)<br>혈압이 위험할 정도로 높습니다.<br>당장 911을 부르십시오.*</td>"
+      }
+    ],
+    "dominant_result_ratio": 0.375,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 15.62,
+      "trend": 3.95,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": 0.395,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 8,
+    "selected_at": "2026-10-17T00:01:41.258157+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "혈압정상수치"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://medlineplus.gov/ency/article/007490.htm",
+          "title": "Blood pressure measurement: MedlinePlus Medical Encyclopedia",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+          "title": "High Blood Pressure - Diagnosis | NHLBI, NIH",
+          "excerpt_chars": 6709
+        },
+        {
+          "url": "https://www.cancer.go.kr/lay1/S1T864C867/contents.do",
+          "title": "홈 >내가 알고 싶은 암>치료>핵의학치료>핵의학치료의 종류",
+          "excerpt_chars": 8000
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://www.cancer.go.kr/lay1/S1T864C867/contents.do",
+              "title": "홈 >내가 알고 싶은 암>치료>핵의학치료>핵의학치료의 종류",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://medlineplus.gov/ency/article/007490.htm",
+              "title": "Blood pressure measurement: MedlinePlus Medical Encyclopedia",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure/diagnosis",
+              "title": "High Blood Pressure - Diagnosis | NHLBI, NIH",
+              "excerpt_chars": 6709
+            },
+            {
+              "url": "https://www.cancer.go.kr/lay1/S1T864C867/contents.do",
+              "title": "홈 >내가 알고 싶은 암>치료>핵의학치료>핵의학치료의 종류",
+              "excerpt_chars": 8000
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "혈압정상수치",
+      "executed_query": "혈압 정상 수치",
+      "topic": "혈압정상수치: 성인 정상 범위와 수축기·이완기 의미, 올바른 측정법",
+      "intent": "성인 혈압은 얼마가 정상이며, 120/80의 의미와 정확한 측정 방법은 무엇인가?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-17T00:01:41.258157+00:00",
+      "result_count": 10,
+      "domain_count": 8,
+      "dominant_ratio": 0.375,
+      "search_review": {
+        "version": 1,
+        "query": "혈압정상수치",
+        "executed_query": "혈압 정상 수치",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-17T00:01:41.258157+00:00",
+        "raw_sha256": "d9ea7bb1558c406d0060385a8d8ab5b1ccbe4901b2a1cbb1bd0bbea69fe93467",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "혈압 정상 수치 판정기 – 수축기·이완기 혈압으로 고혈압 단계 확인(대한고혈압학회 기준) - 산채 라이프 연구소"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "- 의사의 지시를 따르고 생활 습관을 바꾸면 수치가 개선될 것입니다.혈압 수치의 의미: ... 정상 혈압 범위입니다.</td> ... <td>고혈압 위기(응급 치료 필요)<br>혈압이 위험할 정도로 높습니다.<br>당장 911을"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "이완기 혈압이란(정상 수치, 높은 경우, 낮은 경우, 측정법) - 혈행 건강 매뉴얼365"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "고혈압 수치, 120/80이 정상 아니라고요? 나이별 정상 혈압 총정리"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "구간 | 수축기 | 이완기 ... 정상 | 120 미만 | 80 미만 ... 고혈압 전단계 | 130~139 | 80~89 ... 질병의 진단·치료를 대신하지 않으며,"
+          },
+          {
+            "result_index": 5,
+            "relevant": false,
+            "quote": "심장마비, 뇌졸중, 치매, 심부전, 신장 질환/신부전, 시력 상실 등 다른 건강 문제의 원인이 될 수 있습니다. ... 두 숫자 중 더 큰 숫자, 즉 가장"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "혈압 수치의 의미혈압 분류 | 수축기 혈압 mm Hg ... 정상 혈압 범위입니다. ... 혈압이 다소 높은 상태입니다. ... Heart Disease, Stroke and Diabetes Prevention"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "혈압 정상 수치 총정리｜고혈압·저혈압 기준과 연령별 혈압 관리 방법 - daytwopost.co.kr"
+          },
+          {
+            "result_index": 8,
+            "relevant": false,
+            "quote": "식후 2시간 혈당치 | 200mg/dL 이 | 상구분 | 정상 | 수치 | 조절목표 ... 질환별 생화학 지표 기준 | | 수 | 축기 혈압"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "혈압 수치의 의미 ... 정상 혈압 범위입니다.</td> ... <td>고혈압 위기(응급 치료 필요)<br>혈압이 위험할 정도로 높습니다.<br>당장 911을 부르십시오.*</td>"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 8,
+        "relevant_site_count": 6,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          9
+        ],
+        "relevance_ratio": 0.8,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.375,
+        "site_concentration": 0.375,
+        "organic_opportunity": 15.62
+      },
+      "scope": "full_keyword",
+      "target_keyword": "혈압정상수치",
+      "matches": [
+        {
+          "result_index": 3,
+          "quote": "고혈압 수치, 120/80이 정상 아니라고요?"
+        },
+        {
+          "result_index": 7,
+          "quote": "혈압 정상 수치 총정리｜고혈압·저혈압 기준과 연령별 혈압 관리 방법"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-17T00:01:41.258157+00:00",
+      "input_sha256": "bfcf3b43af62050e838c905b086206042ddea713211a1dd9e0d3dea082791ce3",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "혈압정상수치",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "ome blood pressure device to make sure the readings are correct. What the numbers mean Your blood pressure reading is made up of two numbers, the top, systolic systolic (sis-TOL-ik): The phase of circulation when the heart pumps and the pressure of blood against the vessels is highest. , number and the bottom, diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. , number. These numbers measure pressure in mm HG mm HG (Mm aich-Gee): millimeters of mercury (mm Hg), the unit of measurement for blood pressure (millimeters of mercury). To learn more about systolic and diastolic pressure, visit How the Heart Works . For most adults, a healthy blood pressure is less than 120/80 mm Hg. Your blood pressure is considered high when you have consistent systolic readings of 130 mm Hg or higher or diastolic readings",
+            "entity": "most adults",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "ered during a visit to your provider for another reason, such as a routine physical exam. Finding high blood pressure and treating it early can help prevent heart disease, stroke , eye problems, or chronic kidney disease . All adults 18 years and older should have their blood pressure checked regularly: Once a year for adults aged 40 years and older Once a year for people at increased risk for high blood pressure, including people who are overweight or obese, African Americans, and those with an elevated blood pressure (120/80 mm Hg or higher) Every 3 to 5 years for adults aged 18 to 39 years with blood pressure lower than 120/80 mm Hg who do not have other risk factors Your provider may recommend more frequent checks based on your blood pressure levels and other health conditions. Normal Results Blood pressure readings are usually given as two numbers. For example, your provider might t",
+            "entity": "All adults 18 years and older",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "성인 정상 혈압은 얼마이며 두 수치의 조건은 무엇인가?",
+            "answer": "미국 자료상 정상은 수축기 120 미만이면서 이완기 80 미만이다. 정확히 120/80은 정상 조건에 해당하지 않는다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " Systolic and Diastolic Pressure (mm Hg) Normal Less than 120 systolic pressure AND Less than 80 diastolic pressure Elevated 120 to 129 systolic pressure AND Less than 80 diastolic pressure High Blood Pressure Stage 1 130 to 139 systolic pressure OR 80 to 89 diastolic pressure High Blood Pressure Stage 2 140 or higher systolic pressure OR 90 or higher diastolic pressure Hypertensive Crisis Higher than 180 systolic pressure OR Higher than 120 diastolic pressure Contact your provider immediately. How will my provider find out if I have high blood pressure? Your provider may diagnose high blood pressure if your blood pressure readings are consistently high. You may also need tests to look for medical conditions that cause high blood pressure or to see if high blood pressure has affected your organs. Medical history Your provider will want to understand your risk factors and get general heal"
+          },
+          {
+            "facet": "120/80의 위·아래 숫자와 단위는 무엇을 뜻하는가?",
+            "answer": "위는 심장이 혈액을 내보낼 때의 수축기압, 아래는 심장이 채워질 때의 이완기압이며 단위는 mm Hg이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ome blood pressure device to make sure the readings are correct. What the numbers mean Your blood pressure reading is made up of two numbers, the top, systolic systolic (sis-TOL-ik): The phase of circulation when the heart pumps and the pressure of blood against the vessels is highest. , number and the bottom, diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. , number. These numbers measure pressure in mm HG mm HG (Mm aich-Gee): millimeters of mercury (mm Hg), the unit of measurement for blood pressure (millimeters of mercury). To learn more about systolic and diastolic pressure, visit How the Heart Works . For most adults, a healthy blood pressure is less than 120/80 mm Hg. Your blood pressure is considered high when you have consistent systolic readings of 130 mm Hg or higher or diastolic readings"
+          },
+          {
+            "facet": "정확한 혈압 측정을 위한 준비·자세·반복 측정법은 무엇인가?",
+            "answer": "방광을 비우고 직전 식사·카페인·흡연·운동을 피한다. 5분 이상 쉰 뒤 등·팔을 받치고 1분 간격으로 2~3회 측정한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": " inflating it to a high enough pressure may cause a false reading. If you loosen the valve too much, you will not be able to measure your blood pressure. The procedure should be done two or more times after proper preparation. How to Prepare for the Test Before you measure your blood pressure: Empty your bladder beforehand DO NOT take your blood pressure when you are under stress, have had a meal, caffeine, or used tobacco in the past 30 minutes, or have exercised recently. Rest for at least 5 minutes, 10 minutes is better, before blood pressure is taken. Be seated with your back against the back of a chair, your arm supported at the level of your heart, your feet flat on the floor, and your legs uncrossed. Take 2 or 3 readings at a sitting. Take the readings 1 minute apart. Remain seated. When checking your blood pressure on your own, note the time of the readings. Your provider may sug"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "ome blood pressure device to make sure the readings are correct. What the numbers mean Your blood pressure reading is made up of two numbers, the top, systolic systolic (sis-TOL-ik): The phase of circulation when the heart pumps and the pressure of blood against the vessels is highest. , number and the bottom, diastolic diastolic (DY-uh-stol-ik): The phase of circulation when the heart fills and the pressure of blood against the vessels is lowest. , number. These numbers measure pressure in mm HG mm HG (Mm aich-Gee): millimeters of mercury (mm Hg), the unit of measurement for blood pressure (millimeters of mercury). To learn more about systolic and diastolic pressure, visit How the Heart Works . For most adults, a healthy blood pressure is less than 120/80 mm Hg. Your blood pressure is considered high when you have consistent systolic readings of 130 mm Hg or higher or diastolic readings",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 69.57,
     "publish_eligible": true,
     "hold_reasons": []
   }

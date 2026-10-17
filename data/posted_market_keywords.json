@@ -1013,5 +1013,27 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-16T09:08:59.084898+00:00"
+  },
+  {
+    "key": "저혈압수치",
+    "keyword": "저혈압수치",
+    "topic": "저혈압수치: 90/60mmHg 기준과 증상·위험 신호",
+    "category": "건강",
+    "post_id": 1999,
+    "url": "https://trendpulse.blog/low-blood-pressure-guide-2026/",
+    "selection_version": 8,
+    "monthly_search": 30900,
+    "score": 85.56,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 35.56,
+      "trend": 0,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-17T00:22:07.544050+00:00"
   }
 ]

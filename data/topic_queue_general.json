@@ -38067,7 +38067,7 @@
     "keywords": [
       "혈압정상수치"
     ],
-    "status": "pending",
+    "status": "completed",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -38287,6 +38287,10 @@
     },
     "score": 69.57,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2002,
+    "url": "https://trendpulse.blog/normal-blood-pressure-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-17T09:11:52.466566"
   }
 ]

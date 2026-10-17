@@ -1035,5 +1035,27 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-17T00:22:07.544050+00:00"
+  },
+  {
+    "key": "혈압정상수치",
+    "keyword": "혈압정상수치",
+    "topic": "혈압정상수치: 성인 정상 범위와 수축기·이완기 의미, 올바른 측정법",
+    "category": "건강",
+    "post_id": 2002,
+    "url": "https://trendpulse.blog/normal-blood-pressure-2026/",
+    "selection_version": 8,
+    "monthly_search": 71080,
+    "score": 69.57,
+    "score_components": {
+      "demand": 35,
+      "organic_opportunity": 15.62,
+      "trend": 3.95,
+      "cak_trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "measured",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-17T09:11:51.230602+00:00"
   }
 ]

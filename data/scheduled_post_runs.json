@@ -623,6 +623,17 @@
       "status": "success",
       "completed_at": "2026-10-17T09:11:55.592425+00:00",
       "published_category": "건강"
+    },
+    "2026-10-18:morning": {
+      "scheduled_for": "2026-10-18T09:00:00+09:00",
+      "run_created_at": "2026-10-18T09:00:03+09:00",
+      "start_delay_seconds": 11,
+      "trigger": "external_timer",
+      "run_id": "39081118211",
+      "category": "생산성",
+      "slot": "morning",
+      "claimed_at": "2026-10-18T09:00:11.421723+09:00",
+      "status": "started"
     }
   }
 }

@@ -38581,7 +38581,7 @@
     "keywords": [
       "종합소득세중간예납"
     ],
-    "status": "pending",
+    "status": "completed",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -38843,6 +38843,10 @@
     },
     "score": 70.04,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2005,
+    "url": "https://trendpulse.blog/income-tax-interim-payment-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-18T00:08:05.156319"
   }
 ]

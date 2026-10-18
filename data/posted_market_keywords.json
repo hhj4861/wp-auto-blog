@@ -1057,5 +1057,26 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-17T09:11:51.230602+00:00"
+  },
+  {
+    "key": "종합소득세중간예납",
+    "keyword": "종합소득세중간예납",
+    "topic": "종합소득세중간예납 2026년 대상·조회·납부기한·분납·추계신고 안내",
+    "category": "생활정보",
+    "post_id": 2005,
+    "url": "https://trendpulse.blog/income-tax-interim-payment-2026/",
+    "selection_version": 8,
+    "monthly_search": 980,
+    "score": 70.04,
+    "score_components": {
+      "demand": 23.93,
+      "organic_opportunity": 31.11,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-18T00:08:04.314568+00:00"
   }
 ]

@@ -11183,7 +11183,7 @@
   },
   "생산성": {
     "category": "생산성",
-    "selected_at": "2026-10-17T20:11:55.822624+00:00",
+    "selected_at": "2026-10-18T00:00:57.483202+00:00",
     "seeds": [
       "엑셀",
       "노션",
@@ -11194,18 +11194,12 @@
     "research_rounds": 4,
     "latest_issue_discovery": {
       "window_start": "2026-10-17T00:00:00+09:00",
-      "window_end": "2026-10-18T05:11:55.822624+09:00",
+      "window_end": "2026-10-18T09:00:57.483202+09:00",
       "queries": [
         {
           "query": "업무 도구 신규 기능 공식 발표 after:2026-10-17 before:2026-10-19",
           "provider": "codex_native_search",
           "results": [
-            {
-              "url": "https://gandandogu.co.kr/",
-              "domain": "gandandogu.co.kr",
-              "title": "간단도구 — 1인 사업자·소상공인을 위한 초저가 업무 도구 플랫폼",
-              "snippet": "무료 계산기 22종 서식 만들기 11종 사장님 도구 ... 물건은 받았는데 아직 안 낸 돈이 얼마인지 모르면 통장 잔고가 내 돈처럼 보이고, 월말에 거래처 계산서가"
-            },
             {
               "url": "https://www.gonggoitda.com/",
               "domain": "www.gonggoitda.com",
@@ -11225,16 +11219,28 @@
               "snippet": "업무플랫폼과 그룹웨어, 뭐가 다른가 그룹웨어 개별 도입 vs 올인원 업무플랫폼 도입 시 차이 그룹웨어 개별 도입 시 발생하는 문제 올인원 업무플랫폼이 해결하는 것 업무플랫폼 선택"
             },
             {
-              "url": "https://techhaedap.com/",
-              "domain": "techhaedap.com",
-              "title": "테크해답 – 공식 자료로 확인한 PC·스마트폰·앱·AI 해답",
-              "snippet": "챗GPT 보이스 한국어 목소리 변경 설정 방법과 신규 음성 확인 ChatGPT Live의 한국어 음성 햇살·한울은 계정에 표시되는 목록에서 선택합니다. ... 공식 문서의 대상 제품·발표 내용을"
+              "url": "https://kind.krx.co.kr/external/dst/irReference/17239/%5B2025%5D%20%EC%9C%A0%EB%B9%84%EC%98%A8%20IR%20Book_25%EB%85%84%203%EB%B6%84%EA%B8%B0.pdf",
+              "domain": "kind.krx.co.kr",
+              "title": "Microsoft PowerPoint - [Coporate day]  D( IR Deck_8.21_˘\u0015",
+              "snippet": "| 서비스 | 기반 및 기능 | 상세 내용 | ... | 퀴즈 자동생성 | 강의 자료 기반<br>퀴즈 자동 생성 | • 교수가 선택한 자료(텍스트,"
+            },
+            {
+              "url": "https://kois.co.kr/geo/answers/moq-37b5adda",
+              "domain": "kois.co.kr",
+              "title": "산업용 부품의 최소주문수량(MOQ)·샘플·금형비·양산단가는 어떻게 비교해야 하나요?",
+              "snippet": "샘플이 양산 공정으로 만든 승인용 시제품인지, MOQ가 발주·품번·옵션·연간약정 중 어디에 적용되는지, 금형 소유·수명·보관·수정·반환 조건이 무엇인지, 양산단가에 검사·성적서·포장·운송·불량대체가 포함됐는지를 확인합니다. ... * MOQ가 품번별인지, 여러 규격을"
+            },
+            {
+              "url": "https://start.zuzu.network/resource/blog/daouoffice-hr-shiftee-shopl-vs-zuzu-hr/",
+              "domain": "start.zuzu.network",
+              "title": "우리 기업에 맞는 인사 툴 고르기 – 다우오피스HR·시프티·샤플·ZUZU start 비교",
+              "snippet": "엑셀로 버티던 이 업무가 직원 10명 안팎에서 부담스러워지면서 다우오피스HR·시프티·샤플 같은 근태관리 서비스를 찾아보게 됩니다. ... 이 글은 2026년 10월 기준 각 서비스의 공식 웹사이트에 공개된"
             },
             {
               "url": "https://baro-order.com/solution/process/prototype/",
               "domain": "baro-order.com",
               "title": "시제품 · 목업 제작 | 바로발주",
-              "snippet": "시제품은 완성품이 아니라 검증 도구입니다. ... 시제품 제작이 필요하신가요? ... * 외형·조립은 3D 프린팅, 실소재 기능은 CNC, 소량 복제는 진공주형, 파일럿 양산은 QDM입니다. ... 워킹"
+              "snippet": "시제품은 완성품이 아니라 검증 도구입니다. ... 시제품 제작이 필요하신가요? ... * 외형·조립은 3D 프린팅, 실소재 기능은 CNC, 소량 복제는 진공주형, 파일럿 양산은 QDM입니다. ... 시제품은"
             },
             {
               "url": "https://www.adiga.kr/jbp/jnf/jobInfoDetail.do?menuId=PCJBPJNF2000&searchCrCd=K000001024&searchCrSeClsfCd=D999",
@@ -11249,10 +11255,10 @@
               "snippet": "Profound·Otterly·Peec·KIME·Ahrefs·Semrush·블루닷·ChainShift·NNT·팀하이·온더AI·RanketAI 12종을 진입가·기능 매트릭스·비즈니스 규모별 ROI 가이드 3축으로 비교한다. ... AI 가시성 측정 도구 (업계 통칭 AI SEO 도구·AI 브랜드 가시성 진단 서비스, 학술 용어"
             },
             {
-              "url": "https://www.doogo.co/entry.html",
-              "domain": "www.doogo.co",
-              "title": "두고 :: 도매 오픈마켓, 누구나 쉽게 입점하는 B2B 플랫폼",
-              "snippet": "신청하신 카테고리를 기준으로 담당 MD가 꼼꼼하게 심사합니다. ... 점심시간 : 오후 1시 - 2시 / 주말 및 공휴일 휴무 ... 호주·뉴질랜드는 주 3회 (월·수·토), 캐나다·미국은"
+              "url": "https://wwww.dsninfo.or.kr/cost/standard.do?category=LEVEL&type=PRICE",
+              "domain": "wwww.dsninfo.or.kr",
+              "title": "디자인대가기준종합정보시스템",
+              "snippet": "* 사후정산 단계 사업이 종료된 후에 사전 산정된 사업비와 집행된 사업비의 차이를 파악하여 필요 시 정산을 위한 대가를 산정하는 단계 ... 대가기준에 의한 업무의 효율성"
             }
           ]
         },
@@ -11261,10 +11267,16 @@
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://m.saramin.co.kr/job-search/company-info-view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
-              "domain": "m.saramin.co.kr",
+              "url": "https://update.hyundai.com/KR/KO/updateNoticeList?division=2&searchWord=%EC%95%84%EB%B0%98%EB%96%BCad",
+              "domain": "update.hyundai.com",
+              "title": "최신 업데이트 | 내 차를 최신으로, 스마트하게 | 현대 차량 소프트웨어 업데이트",
+              "snippet": "차량 시스템 2026년 10월 차량 무선 소프트웨어 업데이트 안내 (코나, 코나 하이브리드)N 2026-10-14조회수 1,128 차량 시스템 2026년 10월 차량 무선 소프트웨어 업데이트 안내 (아이오닉 5"
+            },
+            {
+              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4?nomo=1",
+              "domain": "www.saramin.co.kr",
               "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "NICE 평가정보 출처 : 기업형태, 매출액, 설립일, 주소, 대표자명, 사업내용, 업종 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... 대표이사 유래형 사임,대표이사"
+              "snippet": "기타 게임 소프트웨어 개발 및 공급업 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
             },
             {
               "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=UC80WFlDV24yNmdHeWpZZEVBNUVSQT09&popup_yn=y",
@@ -11273,16 +11285,22 @@
               "snippet": "기업형태: 중소기업, 주식회사, 수출입 기업 ... 소프트웨어 개발,공급/스포츠영상분석장치,전자감지장치,비디오,영상기기 제조/풋살장,축구장 운영/스포츠 컨설팅 ... 그리고 이른 나이에 은퇴한 선수들에게 강사 경험, 진로교육 등의 서비스를 제공하여 안정적으로 제2의"
             },
             {
+              "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=UC80WFlDV24yNmdHeWpZZEVBNUVSQT09",
+              "domain": "www.saramin.co.kr",
+              "title": "(주)스포잇 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "* 출산의 기쁨을 함께 ... 기업형태: 중소기업, 주식회사, 수출입 기업 ... 소프트웨어 개발,공급/스포츠영상분석장치,전자감지장치,비디오,영상기기 제조/풋살장,축구장 운영/스포츠 컨설팅 ... 그리고 이른 나이에 은퇴한 선수들에게 강사 경험, 진로교육"
+            },
+            {
+              "url": "https://m.saramin.co.kr/job-search/company-info-view?csn=M25lOC9pVDhWY0lSVHV3VUpZNDF1Zz09&searchType=search&searchword=%EA%B0%95%EB%82%A8",
+              "domain": "m.saramin.co.kr",
+              "title": "(주)마키나락스 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "소프트웨어 개발,공급/전자상거래/자연과학,공학연구 개발 ... 마키나락스는 AI로 초생산성 시대를 실현합니다. ... 데이터 통합, 멀티 모델 개발 및 관리, CI/CD/CT 등 AI 모델의 배포와 운영(MLOps)에 필요한 모든"
+            },
+            {
               "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/SHc3YlZPc2c3bk82bFBZenpLZVEvdz09/company_nm/%25ED%2595%259C%25EA%25B5%25AD%25EC%258C%2594%25EC%258A%25A4%25EC%2586%258C%25ED%2594%2584%25ED%258A%25B8%25EC%259B%25A8%25EC%2596%25B4%28%25EC%259C%25A0%29%3Fsrsltid%3DAfmBOor0cR0ZjZEBBURsYkwQbuoWYKmXj0_9a6rofMsstR3aga3NfQOb",
               "domain": "www.saramin.co.kr",
               "title": "한국쌔스소프트웨어(유) 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
               "snippet": "# 한국쌔스소프트웨어(유)기업정보 ... 주요 사업내용 : SAS Group에서 개발한 Software의 사용권 판매 및 유지보수, 소프트웨어와 관련된 교육, 훈련, 컨설팅주요 취급품목 : 고객관계관리솔루션, 데이터웨어하우스 ... 하이퍼포먼스"
-            },
-            {
-              "url": "https://www.seoulsoft.kr/",
-              "domain": "www.seoulsoft.kr",
-              "title": "서울소프트",
-              "snippet": "서울소프트는 ERP·IoT·스마트팩토리·모바일 플랫폼 구축 경험을 바탕으로 제조설비와 생산현장을 데이터 기반으로 전환하는 전문기업입니다.센서·PLC·설비 데이터를 수집하고 실시간 모니터링과 분석을 통해 생산성 향상과 품질 개선을 지원하며, ... *"
             },
             {
               "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=SHlGT0tPcVlwUXZKMjNZbnJpNTVvZz09",
@@ -11307,23 +11325,32 @@
               "domain": "www.sfacspace.com",
               "title": "스팩스페이스",
               "snippet": "* 2026.08.13 AI가 먼저 만들고 사람은 검수…스팩스페이스, 생산성 6.5배 성과로 ‘서비스 AI 리더상’ 수상 * 2026.08.04 스팩스페이스, ‘2025년 데이터바우처 지원사업’ 수요기업 모집 ... * 2025.04.16"
-            },
-            {
-              "url": "https://m.saramin.co.kr/job-search/company-info-view?csn=TTFCM1p6YW12aGNGU0o5TDFBUFVOdz09",
-              "domain": "m.saramin.co.kr",
-              "title": "(주)유피소프트 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "Image: (주)유피소프트의 기업로고 ... 응용 소프트웨어 개발 및 공급업 ... 서울 성동구 성수이로10길 14, 11층 1106호,1107호,1108호 (성수동2가,에이스 하이앤드 성수타워) 복사하기 ... NICE 평가정보 출처 :"
-            },
-            {
-              "url": "https://m.saramin.co.kr/job-search/company-info-view?csn=SHlGT0tPcVlwUXZKMjNZbnJpNTVvZz09&t_ref_content=generic",
-              "domain": "m.saramin.co.kr",
-              "title": "(주)에스피소프트 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "# (주)에스피소프트 기업정보 ... 컴퓨터 프로그래밍 서비스업 ... 경기 과천시 과천대로7나길 34, 3층 (갈현동,가비아 앳) 복사하기 ... 소규모 조직을 위한 VDI올인원패키지, 브이패스(V-Pass) 출시 ... 주문,"
             }
           ]
         }
       ],
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://wwww.dsninfo.or.kr/cost/standard.do?category=LEVEL&type=PRICE",
+          "status": "fetch_failed"
+        },
+        {
+          "url": "https://update.hyundai.com/KR/KO/updateNoticeList?division=2&searchWord=%EC%95%84%EB%B0%98%EB%96%BCad",
+          "status": "no_recent_date",
+          "observed_dates": [
+            "2026-06-01",
+            "2026-06-10",
+            "2026-07-09",
+            "2026-07-27",
+            "2026-08-10",
+            "2026-09-10",
+            "2026-09-18",
+            "2026-10-08",
+            "2026-10-12",
+            "2026-10-14"
+          ]
+        }
+      ],
       "candidates": [],
       "status": "no_verified_recent_issue"
     },
@@ -11339,7 +11366,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-17T20:11:55.822624+00:00",
+      "checked_at": "2026-10-18T00:00:57.483202+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -11379,24 +11406,22 @@
       "sharepoint",
       "visualstudio",
       "webhard",
-      "가계부어플",
-      "게으름",
+      "가계부추천",
       "계획표",
       "공여사들",
       "노션ai",
       "노션캘린더",
       "데이콤웹하드",
-      "마이크로소프트엣지",
       "마이크로오피스365",
       "무료논문사이트",
       "불렛저널다이어리",
       "비주얼스튜디오",
       "비쥬얼스튜디오",
       "서베이몽키",
-      "설문지",
       "스테이블디퓨전",
       "아이폰가계부",
       "액세스",
+      "엑셀구매",
       "엑셀서식",
       "엑셀온라인",
       "엑셀정품",
@@ -11406,11 +11431,8 @@
       "온리웹하드",
       "웹하드사이트",
       "유튜브엑셀",
-      "일잘러",
-      "카네기인간관계론",
       "태블로",
       "파워포인트뷰어",
-      "파일다운로드",
       "프레지",
       "한글",
       "한글엑셀",
@@ -11427,402 +11449,90 @@
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 336,
     "evaluated_candidates": 3,
-    "research_pool_size": 191,
+    "research_pool_size": 188,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "OFFICE",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://support.microsoft.com/ko-kr/office/system-requirements/end-of-support-for-office-2021",
-              "title": "Office 2021에 대한 지원 종료 | Microsoft Support",
-              "excerpt_chars": 1399
-            },
-            {
-              "url": "https://support.microsoft.com/ko-kr/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024",
-              "title": "Microsoft 365와 Office 2024의 차이점은 무엇인가요? | Microsoft Support",
-              "excerpt_chars": 6038
-            },
-            {
-              "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
-              "title": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 | Microsoft Support",
-              "excerpt_chars": 8000
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "category_mismatch"
-          }
-        },
-        "monthly_search": 3330,
-        "organic_provider": "codex_native_search",
-        "organic_query": "OFFICE",
-        "organic_results": [
-          {
-            "url": "https://dictionary.cambridge.org/dictionary/english/office",
-            "domain": "dictionary.cambridge.org",
-            "title": "OFFICE | English meaning - Cambridge Dictionary",
-            "snippet": "the office of vice president ... ### office noun (GOVERNMENT DEPARTMENT)"
-          },
-          {
-            "url": "https://dictionary.cambridge.org/us/dictionary/english/office",
-            "domain": "dictionary.cambridge.org",
-            "title": "OFFICE | definition in the Cambridge English Dictionary",
-            "snippet": "the office of vice president ... ### office noun (GOVERNMENT DEPARTMENT)"
-          },
-          {
-            "url": "https://en.wikipedia.org/wiki/Office",
-            "domain": "en.wikipedia.org",
-            "title": "Office",
-            "snippet": "The word \"office\" may also denote a position within an organization with specific duties attached to it (see officer or official); the latter is an"
-          },
-          {
-            "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/office",
-            "domain": "www.oxfordlearnersdictionaries.com",
-            "title": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
-            "snippet": "* The president holds office for a period of four years. ... Word Origin Middle English: via Old French from Latin officium ‘performance of a"
-          },
-          {
-            "url": "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/office",
-            "domain": "www.oxfordlearnersdictionaries.com",
-            "title": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced American Dictionary at OxfordLearnersDictionaries.com",
-            "snippet": "5. 5[uncountable, countable] an important position of authority, especially in government; the work and duties connected with this She held office as governor for eight"
-          },
-          {
-            "url": "https://www.oxfordlearnersdictionaries.com/definition/american_english/office",
-            "domain": "www.oxfordlearnersdictionaries.com",
-            "title": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced American Dictionary at OxfordLearnersDictionaries.com",
-            "snippet": "5. 5[uncountable, countable] an important position of authority, especially in government; the work and duties connected with this She held office as governor for eight"
-          },
-          {
-            "url": "https://dictionary.cambridge.org/us/dictionary/english/office?topic=office-practices",
-            "domain": "dictionary.cambridge.org",
-            "title": "OFFICE | definition in the Cambridge English Dictionary",
-            "snippet": "the office of vice president ... ### office noun (GOVERNMENT DEPARTMENT)"
-          },
-          {
-            "url": "https://dictionary.cambridge.org/dictionary/essential-british-english/office",
-            "domain": "dictionary.cambridge.org",
-            "title": "OFFICE | English meaning - Cambridge Essential British",
-            "snippet": "# Meaning of office in Essential English Dictionary"
-          },
-          {
-            "url": "https://www.collinsdictionary.com/us/dictionary/english/office",
-            "domain": "www.collinsdictionary.com",
-            "title": "OFFICE definition in American English | Collins English Dictionary",
-            "snippet": "If someone holds office in a government, they have an important job or position of authority.The events to mark the president's four years in office"
-          },
-          {
-            "url": "https://www.oxfordlearnersdictionaries.co.uk/us/definition/english/office",
-            "domain": "www.oxfordlearnersdictionaries.co.uk",
-            "title": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
-            "snippet": "* The president holds office for a period of four years. ... Word Origin Middle English: via Old French from Latin officium ‘performance of a"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "OFFICE",
-          "executed_query": "OFFICE",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-17T20:11:55.822624+00:00",
-          "raw_sha256": "9f9757ad5783171f7ef419629f7759216a6eba094b1b50e73434d27a631f7a74",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "OFFICE | English meaning - Cambridge Dictionary"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "OFFICE | definition in the Cambridge English Dictionary"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "The word \"office\" may also denote a position within an organization with specific duties attached to it (see officer or official); the latter is an"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced American Dictionary at OxfordLearnersDictionaries.com"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced American Dictionary at OxfordLearnersDictionaries.com"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "OFFICE | definition in the Cambridge English Dictionary"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "OFFICE | English meaning - Cambridge Essential British"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "OFFICE definition in American English | Collins English Dictionary"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "office noun - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/system-requirements/end-of-support-for-office-2021",
-            "title": "Office 2021에 대한 지원 종료 | Microsoft Support",
-            "excerpt": "Office 2021에 대한 지원 종료 Office 2021에 대한 지원은 2026년 10월 13일에 종료 되었으며 연장 및 확장된 보안 업데이트는 없습니다. 모든 Office 2021 앱은 계속 작동할 수 있습니다. 그러나 심각하고 위험성이 있는 보안 위험에 노출될 수 있습니다. Microsoft 365 구입 또는 체험 팁 사용 중인 Office 버전의 확인이 필요한가요? 현재 실행 중인 버전을 확인하려면 Office의 다른 버전에 대한 세부 정보 찾기 를 참조하세요. 2026년 10월 13일 이후 지원 종료의 의미 Microsoft는 이후에 보고되거나 발견될 수 있는 Office 2021 취약성에 대해 더 이상 기술 지원, 버그 수정 또는 보안 수정을 제공하지 않습니다. 여기에는 유해한 바이러스, 스파이웨어 및 기타 악의적인 소프트웨어로부터 PC를 보호할 수 있는 보안 업데이트가 포함됩니다. 더 이상 Office 2021 소프트웨어 업데이트를 받을 수 없습니다. 더 이상 전화나 채팅을 통한 기술 지원을 받을 수 없습니다. 콘텐츠를 지원하기 위한 추가 업데이트도 제공되지 않고 대부분의 온라인 도움말 콘텐츠는 사용 중지됩니다. 어떤 옵션이 있나요? Office를 업그레이드하는 것이 좋습니다. 업그레이드 옵션은 가정에서 Office 2021을 사용하고 있는지 또는 회사 또는 학교 의 IT 부서나 IT 관리자가 Office 2021 버전을 관리하는지 여부에 따라 달라집니다. 가정용 Office 2021 회사 또는 학교에서 Office 2021 가정용 Office 2021(예: Office Home & Student 2021 또는 Office Home & Business 2021)를 사용하는 경우 여전히 사용할 수 있지만 모든 최신 기능, 패치 및 보안 업데이트를 최신 상태로 유지할 수 있도록 최신 버전의 Office로 업그레이드 하는 것이 좋습니다. 업그레이드에 대해 자세히 알아보려면 Office를 업그레이드하려면 어떻게 하나요? 를 참조하세요. 또한 최신 버전의 Office를 구입하거나 사용해 볼 수 있습니다. Microsoft 365 구입 또는 체험 회사에서의 개별 사용자: 사용 중인 Office 2021 버전을 회사 또는 학교에서 관리하는 경우 IT 헬프 데스크에 업그레이드 방법에 대해 문의하세요. IT 부서는 자체 업그레이드 계획을 가지고 있을 것입니다. IT 전문가 및 Microsoft 365 관리자용: organization에서 아직 Office 2021을 실행 중인 관리자인 경우 가능한 한 빨리 사용자를 최신 버전의 Office로 업그레이드하는 것이 좋습니다. 추가 지침은 다음을 검토하세요. 엔터프라이즈 에서 Office 2021 업그레이드에 대해 자세히 알아보려면 Office 2021 클라이언트에서 업그레이드하는 데 도움이 되는 리소스를 참조하세요.",
-            "sha256": "46942f557f90f11f05ae2226f3f5cd3a7c747f3184b646760d33eb9c61169c56",
-            "checked_on": "2026-10-18"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024",
-            "title": "Microsoft 365와 Office 2024의 차이점은 무엇인가요? | Microsoft Support",
-            "excerpt": "Microsoft 365와 Office 2024의 차이점은 무엇인가요? 적용 대상 Office 2024 Mac용 Office 2024 Office 2021 Mac용 Office 2021 Office 2019 가정용 Microsoft 365 Microsoft 365는 Microsoft에서 제공하는 현대적 생산성 도구를 최신 버전으로 항상 사용할 수 있도록 하는 구독 서비스입니다. 가정 및 개인, 중소기업, 대기업, 학교 및 비영리용의 Microsoft 365 플랜이 있습니다. 이제 가정용 또는 비즈니스용 Microsoft 365 플랜 에 Copilot이 포함되어 Word, PowerPoint, Excel과 같은 자주 사용하는 데스크톱 앱에 AI 기반 기능을 제공합니다. 충분한 클라우드 저장소와 고급 보안을 통해 Microsoft 365를 사용하면 하루를 최적화하든 콘텐츠를 빠르게 만들든 관계없이 더 많은 것을 달성할 수 있습니다. 또한 Microsoft 365 Family, Premium 및 Pro 요금제를 사용하면 최대 5명의 추가 사용자와 구독 혜택을 공유할 수 있습니다. 참고 AI 혜택은 구독 소유자만 사용할 수 있으며 추가 Microsoft 365 Family, Premium 또는 Pro 멤버와 공유할 수 없습니다. Microsoft 365 Basic은 1인 구독입니다. 여기에는 100GB의 클라우드 저장소, 안전한 광고 없는 전자 메일, 안전한 사진 및 파일 저장소, Microsoft 지원이 포함됩니다. 자세한 내용은 Microsoft 365 Basic FAQ 를 참조하세요. 비즈니스, 학교 및 비영리 조직을 위한 대부분의 Microsoft 365 플랜에는 완전히 설치된 데스크톱 앱이 포함되지만, Microsoft에서는 온라인 버전의 Microsoft 365, 파일 저장소 및 전자 메일을 포함하는 기본 플랜도 제공합니다. 소규모 비즈니스 , 대기업 , 학교 또는 비영리 조직 중 가장 적합한 것을 결정합니다. Office 2024 는 일회성 구매 로 판매됩니다. 즉, 단일 선불 비용을 지불하고 컴퓨터 한 대에 대한 Microsoft 365 앱을 다운로드합니다. 일회성 구입은 PC와 Mac 모두에서 가능합니다. 그러나 일회성 구입은 업그레이드 옵션이 없으므로 다음의 주 릴리스로 업그레이드하려면 정가로 구입해야 합니다. 웹용 Microsoft 365 는 웹 브라우저에서 사용할 수 있는 무료 버전의 Microsoft 365입니다. 새 전자 메일 주소 또는 기존 전자 메일 주소로 Microsoft 계정에 등록하면 됩니다. 웹에서 Word, Excel, PowerPoint 등을 무료로 사용하세요. 팁 Microsoft 365를 설정하는 방법에 대한 자세한 내용을 찾고 있는 중소기업 소유자인 경우 소규모 비즈니스 도움말 & 학습 을 방문하세요. 지금 보유한 버전을 모르시나요? 현재 사용 중인 Office 버전이 무엇입니까? 를 참조하십시오. Microsoft 365 앱을 설치할 준비가 되셨나요? PC 또는 Mac에 Office 설치 를 참조하세요. 제품 정보 및 가격을 알고 싶으신가요? Microsoft 365 구입 또는 체험 Microsoft 365 구독과 Office 2024(일회성 구독) 비교 항목 일회성 구독 (예: Office Home & Business 2024) Microsoft 365 구독 (예: Microsoft 365 Personal, Family, Premium 또는 Pro) Cost 일회성으로 한 번의 비용을 지불합니다. 월간 요금을 지불하거나 1년치 요금을 지불하여 비용을 절감하세요. Microsoft 365 응용 프로그램 Excel, Word, PowerPoint와 같은 Microsoft 365 앱을 다운로드합니다. 완전히 설치된 최신 버전의 Excel, Word, PowerPoint, Outlook과 Windows 또는 Mac용 OneNote를 다운로드하세요. 항상 최신 기능, 새로운 도구, 보안 업데이트 및 버그 수정을 받을 수 있습니다. (PC 사용자도 Access 및 Publisher를 사용할 수 있습니다.) 이제 Microsoft 365에는 Word, Excel, PowerPoint, Outlook 및 OneNote에서 Copilot을 통해 가능한 작업을 재정의하는 AI 기반 기능이 포함되어 있습니다. 기능 업데이트 보안 업데이트는 포함되지만 새로운 기능은 제공되지 않습니다. 주 릴리스에 대한 업그레이드는 포함되지 않습니다. 앱은 항상 개선될 것입니다. 모든 최신 기능 및 업데이트 외에 보안 업데이트와 버그 수정도 받습니다. 두 대 이상의 컴퓨터(Mac 또는 PC)에 Microsoft 365 설치 일회성 구독은 PC 또는 Mac에서 한 번만 설치할 수 있습니다. 모든 장치에 Microsoft 365 Personal, Family, Premium 또는 Pro를 설치하고 동시에 5대에 로그인할 수 있습니다. 즉, 어디에 있든 어떤 장치를 사용하든 상관없이 Microsoft 365 앱을 사용할 수 있습니다. 여기에는 PC, Mac, 태블릿 및 휴대폰이 포함됩니다. Microsoft 365 Family, Premium 또는 Pro를 사용하면 최대 다섯 명의 다른 사용자와 구독을 공유할 수도 있습니다. 태블릿 및 휴대폰에서 고급 기능 사용 모바일 앱을 무료로 설치하고 10.1인치 이하의 태블릿 또는 휴대폰에서 기본 편집 기능을 사용합니다. 모바일 앱을 무료로 설치하고 장치에서 Microsoft 365 앱에 로그인할 때 추가 기능을 사용하세요. 추가 온라인 저장소 포함되지 않습니다. 클라우드에 파일을 안전하게 저장한 후 어디서나 액세스할 수 있습니다. Microsoft 365 Personal로 1TB의 클라우드 저장소를 받으세요. Microsoft 365 Family Premium에서는 총 2TB를, Microsoft 365 Pro에서는 총 5TB를 제공합니다. 참고 : 2026년 10월 8일부터 모든 신규(만료 및 재구매 포함) Microsoft 365 Family 및 Premium 구독자에게는 2TB의 풀링된 OneDrive 클라우드 저장소가 제공되고, Microsoft 365 Pro 구독자에게는 5TB의 풀링된 저장소가 제공됩니다. 2027년 5월 2일부터 모든 기존 Microsoft 365 Family 및 Premium 구독자는 구독 갱신 시 2TB의 풀링된 클라우드 스토리지를 받게 됩니다. 풀링된 저장소는 클라우드 저장소 허용량이 공유 구독의 모든 구성원 간에 공유된다는 것을 의미합니다. 각 사용자의 사서함, 파일 및 폴더는 계속해서 비공개로 유지됩니다. 모든 구독 유형을 최대 10TB까지 확장하여 모든 사용자에게 더 많은 OneDrive 저장소 를 제공할 수 있습니다. 기술 지원 지원 리소스에 대한 액세스. Chat을 사용할 수 있습니다(활성화를 위해서만 콜백). Call Back 및 Chat을 통해 지속적인 지원을 사용할 수 있습니다. Windows 10 & 11에는 기술 지원도 포함됩니다. 비즈니스용 Microsoft 365 플랜을 선택하는 데 도움이 필요하세요? 계획 결정은 특정 비즈니스 요구 사항에 따라 달라질 수 있습니다. Microsoft 365 플랜 선택기는 이를 지원하도록 설계되었습니다. 선택기는 비즈니스 규모, 작업 분야, 사용하는 장치, 찾고 있는 기능, IT 지원 및 보안의 종류와 같은 질문에 대한 답변을 기반으로 권장 사항을 만듭니다. 내 비즈니스에 적합한 플랜을 찾는 데 도움을 주세요를 참조하세요. FAQ 비용은 얼마인가요? 가격 비교 . 구독 또는 일회성 구독 옵션 Microsoft 365 구독 가정용 또는 개인용 : Microsoft 365 Pro(최대 5명의 추가 사용자와 공유) Microsoft 365 Premium (최대 5명의 추가 사용자와 공유) Microsoft 365 Family (최대 5명의 추가 사용자와 공유) Microsoft 365 Personal (1명) Microsoft 365 Basic 비즈니스용 : Microsoft 365 중소기업 플랜 비교 (사용자 최대 300명) Microsoft 365 Enterprise 요금제 비교 비영리 단체용 : Microsoft 365 비영리 단체 요금제 Microsoft 365 일회성 구독 Office Home 2024 Office Home & Business 2024 Office Home & Business 2024 PowerPoint와 같은 앱을 하나만 구입할 수 있나요? Project 또는 Visio의 경우 어떻나요? 예. 독립 실행형 버전의 Mac 또는 PC용 Word, Excel, PowerPoint를 구입할 수 있습니다. Microsoft Store로 이동하여 원하는 앱을 검색합니다. 또한 일회성 구입 또는 구독 버전의 Visio 또는 Project를 구입하여 PC에서만 사용할 수 있습니다. Visio를 구입 하거나 Project를 구입 합니다. 저는 Mac을 사용합니다. 어떻게 구입해야 하나요? Microsoft 365 구독 및 Office 2024는 Mac 또는 PC에 설치할 수 있습니다. 가격 비교 Microsoft 365를 사용하려면 인터넷에 연결해야 하나요? Microsoft 365 앱이 장치에 설치되고 활성화된 후에는 Microsoft 365 앱을 사용하기 위해 온라인 상태가 될 필요가 없습니다. 그러나 처음에는 Microsoft 365를 설치 및 활성화하고, 업데이트를 설치하고, 청구를 관리하려면 인터넷에 액세스해야 합니다. 또한 OneDrive 데스크톱 앱을 설치하지 않은 경우 OneDrive에 저장된 문서에 액세스하려면 인터넷에 액세스해야 합니다. 그러나 Microsoft 365 앱(예: Word, PowerPoint, Excel)을 설치한 후에는 오프라인으로 사용할 수 있습니다. 앱을 최신 상태로 유지하고 자동 업그레이드를 활용하려면 인터넷에 정기적으로 연결해야 합니다. 한 달에 한 번 이상 인터넷에 연결하지 않으면 응용 프로그램이 기능 제한 모드로 전환되고 사용이 허가되지 않은 제품 오류가 표시될 수 있습니다. Microsoft 365 애플리케이션을 다시 활성화하려면 인터넷에 다시 연결하고 Microsoft 365에 로그인합니다. 로그인하는 방법을 알아보세요 . Office 2024를 사용하려면 인터넷에 연결해야 하나요? Office 2024 앱을 장치에 설치하고 정품 인증한 후에는 Office 2024 앱을 사용하기 위해 온라인 상태가 될 필요가 없습니다. 그러나 처음에는 Office 2024를 설치 및 정품 인증하고 업데이트를 설치하려면 인터넷에 액세스해야 합니다. 또한 Office 2024는 주기적으로 다시 정품 인증해야 하며, 장치 구성 요소의 변경으로 인해 인터넷 연결이 필요할 수도 있습니다. 다시 활성화하지 않으면 응용 프로그램이 기능 제한 모드로 전환되거나 사용 허가되지 않은 제품 오류가 발생할 수 있습니다. 인터넷에 연결할 수 없는 경우 Office LTSC 를 고려해야 합니다. 파일을 클라우드에 저장해야 하나요? 아니요. 클라우드에 파일을 저장하면 장점이 있지만 선택은 여러분의 몫입니다. Microsoft 365 및 비구독 버전의 Office 모두에서 문서를 저장할 위치를 선택합니다. 로컬 장치에 저장하거나 OneDrive와 같은 서비스를 사용하여 클라우드에 저장할 수 있습니다. 클라우드에 파일을 저장하도록 선택할 수도 있지만, 온라인 상태인지 오프라인 상태인지에 관계없이 장치에서 계속 파일에 액세스할 수 있습니다. 파일을 장치와 동기화하고 오프라인 액세스가 가능하도록 만들어 이렇게 합니다. Windows에서 OneDrive를 사용하여 파일 동기화 또는 macOS에서 OneDrive를 사용하여 파일 동기화를 참조하세요. 클라우드에 저장할 때의 이점에 대해 자세히 알아보려면 비디오: 클라우드에 파일을 저장하는 이유를 참조하세요. 파일을 저장할 위치에 대한 선택 항목에 대한 자세한 내용은 파일 저장 및 Microsoft Office에서 파일 저장, 백업 및 복구 를 참조하세요. 질문이 더 있습니다. 이야기할 수 있는 곳이 있나요? 이 페이지의 맨 아래에 있는 Contact us (연락처)를 사용하세요. 감사합니다. 참고 항목 어떤 Office 적합 한지 확인해 보세요. Microsoft 365의 새로운 기능 PC 또는 Mac에 Office 설치",
-            "sha256": "68e664d9b5273719f3fcdc3dc1103a624ddfdc54034fabe4d03837d54009a01a",
-            "checked_on": "2026-10-18"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
-            "title": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 | Microsoft Support",
-            "excerpt": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 적용 대상 Office 2024 Mac용 Office 2024 가정용 Microsoft 365 Microsoft Office 365 Small Business Microsoft 365 관리자 Mac용 Microsoft 365 Microsoft 365 또는 Office 2024를 설치할 준비가 되셨나요? 시작하기 전에 PC 또는 Mac이 시스템 요구 사항을 충족하는지 확인합니다. 제품 키를 이미 사용했거나, 앱을 다시 설치했거나, 회사나 학교를 통해 할당된 라이선스가 있는 경우 건너뛰고 로그인 섹션으로 이동하여 Microsoft 365 또는 Office를 다운로드하고 설치할 수 있습니다. 그러나 Microsoft 365 또는 Office를 처음 설치하는 경우 먼저 몇 가지 단계를 수행해야 할 수 있습니다. 자세한 내용을 확인하려면 자세한 정보 섹션을 확장하세요. 브라우저의 가이드 지원은 Office 문제에 대한 디지털 솔루션을 제공할 수 있습니다. 안내 지원을 사용해 보세요 제품 키, 할당된 라이선스, 직장 할인 프로그램 및 볼륨 라이선스 버전에 대해 자세히 알아보세요. 로그인하여 Microsoft 365 또는 Office 2024 다운로드 및 설치 PC에 설치 Mac에 설치 도움이 필요하세요? 로그인하여 PC에서 Microsoft 365 또는 Office 2024 다운로드 m365.cloud.microsoft/apps 로 이동합니다. 아직 로그인하지 않은 경우 로그인을 선택한 다음 앱 설치 드롭다운을 선택합니다. 이 버전의 Microsoft 365와 연결된 계정으로 로그인합니다. 이 계정은 Microsoft 계정이나 회사 또는 학교 계정일 수 있습니다. 로그인 후, 로그인 형식에 따라 알맞은 단계를 따릅니다. Microsoft 계정으로 로그인했습니다 Microsoft 365 앱 페이지에서 앱 설치 를 선택합니다. 설치 를 선택하거나 버전에 따라 앱> 설치 를 선택합니다. 회사 또는 학교 계정으로 로그인했습니다. 홈페이지에서 앱 설치 를 선택합니다. (또는 왼쪽 탐색 창에서 앱을 선택한 다음 앱 설치 를 선택해야 할 수 있습니다.) Microsoft 365 앱을 선택하여 설치를 시작합니다. Microsoft 365 또는 Office가 이미 설치된 32비트 버전의 Microsoft 365 또는 Office(또는 Project 또는 Visio 등의 독립 실행형 앱)가 설치되어 있음을 감지하지 않는 한 64비트 버전이 기본적으로 설치됩니다. 이 경우 32비트 버전의 Microsoft 365 또는 Office가 대신 설치됩니다. 32비트 버전에서 64비트 버전으로 또는 그 반대로 변경하려면 먼저 Microsoft 365(Project of Visio와 같이 보유한 독립 실행형 Microsoft 365 앱 포함)를 제거해야 합니다. 제거가 완료되면 m365.cloud.microsoft/apps 에 다시 로그인하고 앱 설치를 선택합니다. 앱 설치 창에서 원하는 언어와 버전(64비트 또는 32비트)을 선택한 다음, 설치 를 선택합니다. (제거한 독립 실행형 앱을 다시 설치해야 하는 경우 Visio 설치 또는 Project 설치 를 참조하세요.) 이 단계를 통해 장치에 Microsoft 365가 다운로드됩니다. 설치 및 정품 인증 단계를 완료하려면 다음 설치 및 정품 인증 섹션의 메시지를 따르세요. 팁 로그인 후 설치 옵션이 표시되지 않나요? 계정에 문제가 있을 수 있습니다. 위의 도움이 필요하신가요? 탭을 선택하고 계정 관련 질문 에서 해결 방법을 검토합니다. PC에 Microsoft 365 또는 Office 2024 설치 사용 중인 브라우저에 따라 실행 (Microsoft Edge 또는 Internet Explorer), 설치 (Chrome) 또는 파일 저장 (Firefox)을 선택합니다. 이 앱에서 장치를 변경하도록 허용하시겠습니까? 라는 사용자 계정 컨트롤 프롬프트가 표시되면 예 를 클릭합니다. 설치가 시작됩니다. 설치가 완료된 것입니다 . \"설정이 완료되었습니다! Office가 지금 설치되었습니다.\"라는 메시지가 표시되고, 컴퓨터에서 Microsoft 365 응용 프로그램을 찾을 수 있는 위치를 알려주는 애니메이션이 재생됩니다. 닫기 를 선택합니다. 설치 또는 로그인 문제 팁 PC의 Microsoft 365 또는 Office 설치 문제에 대한 도움이 필요하면 Microsoft 365 문제 해결사 로 이동하여 Microsoft 365 설치 문제 해결사 옵션을 선택하세요. Microsoft 365 설치에 시간이 오래 걸리는 것과 같은 설치 문제가 있는 경우 도움이 필요하신가요? 탭을 선택하여 일반적인 문제 목록을 확인하세요. PC에서 Microsoft 365 또는 Office 2024 정품 인증 앱을 열려면 시작 단추(화면의 왼쪽 아래 모서리)를 선택하고 앱 이름(예: Word )을 입력합니다. 앱을 열려면 검색 결과에서 해당 아이콘을 선택합니다. 앱이 열리면 사용권 계약에 동의합니다. Microsoft 365 또는 Office가 정품 인증되고 사용할 준비가 되었습니다. 참고 Microsoft 365 또는 Office에서 정품 인증하는 데 문제가 있는 경우 정품 인증 마법사가 나타납니다. 마법사의 단계를 완료하여 정품 인증을 마칩니다. 로그인하여 Mac에서 Microsoft 365 또는 Office 2024 다운로드 m365.cloud.microsoft/apps 로 이동합니다. 아직 로그인하지 않은 경우 로그인을 선택한 다음 앱 설치 드롭다운을 선택합니다. 참고 21 Vianet에서 운영하는 Microsoft 365를 사용하는 경우 회사 또는 학교 계정으로 로그인하여 login.partner.microsoftonline.cn . Microsoft 365 Germany를 사용하는 경우 회사 또는 학교 계정으로 로그인하여 portal.office.de . 이 버전의 Microsoft 365 또는 Office와 연결된 계정으로 로그인합니다. 이 계정은 Microsoft 계정이나 회사 또는 학교 계정일 수 있습니다. 로그인 후, 로그인 형식에 따라 알맞은 단계를 따릅니다. Microsoft 계정으로 로그인했습니다 Microsoft 365 앱 페이지에서 앱 설치 를 선택하여 다운로드를 시작합니다. 회사 또는 학교 계정으로 로그인했습니다. Microsoft 365 앱 페이지에서 앱 설치 를 선택합니다. (또는 왼쪽 탐색 창에서 앱을 선택한 다음 앱 설치 를 선택해야 할 수 있습니다.) Microsoft 365 앱을 선택하여 다운로드를 시작합니다. 참고 로그인 후 설치 옵션이 표시되지 않나요? 계정에 문제가 있을 수 있습니다. 위의 도움이 필요하신가요? 탭을 선택하고 계정 질문 섹션에 나열된 문제를 검토합니다. 아래 지침에 따라 Microsoft 365 앱 설치를 완료합니다. Mac에 Microsoft 365 또는 Office 2024 설치 다운로드가 완료되면 Finder를 열고 다운로드 로 이동하여 Microsoft Office installer.pkg 파일을 두 번 클릭합니다(이름은 약간 다를 수 있음). 팁 Microsoft Office installer.pkg 를 열 수 없다는 오류가 표시되는 것은 확인되지 않은 개발자가 개발했기 때문입니다. 10초 정도 기다렸다가 다운로드한 파일을 바탕 화면으로 옮깁니다. Control 을 누른 상태에서 파일을 클릭하여 설치 프로그램을 실행합니다. 첫 번째 설치 화면에서 계속 을 선택하여 설치 프로세스를 시작합니다. 소프트웨어 사용권 계약을 검토한 다음 계속 을 클릭합니다. 동의함 을 선택하여 소프트웨어 사용권 계약 내용에 동의합니다. Microsoft 365를 설치할 방법을 선택하고 계속을 클릭합니다. 디스크 공간 요구 사항을 검토하거나 설치 위치를 변경한 다음 설치 를 클릭합니다. 참고 제품 전체가 아닌 특정 Microsoft 365 앱만 설치하려면 사용자 지정 단추를 클릭하고 원하지 않는 프로그램의 선택을 해제합니다. 메시지가 나타나면 Mac 로그인 암호를 입력한 다음 소프트웨어 설치 를 클릭합니다. Mac에 로그인하는 데 사용할 암호입니다. 소프트웨어가 설치되기 시작합니다. 설치가 완료되면 닫기 를 클릭합니다. Microsoft 365 설치에 실패하는 경우 Mac용 Office를 설치하거나 정품 인증할 수 없는 경우 시도할 작업을 참조하세요. Mac에서 Microsoft 365 또는 Office 2024 정품 인증 모든 앱을 표시하려면 Dock에서 실행 패드 아이콘을 클릭합니다. 실행 패드에서 Microsoft Word 아이콘(또는 다른 Microsoft 365 또는 Office 아이콘)을 클릭합니다. Word를 시작하면 새로운 기능 창이 자동으로 열립니다. 시작 을 클릭하여 정품 인증을 시작합니다. Microsoft 365 또는 Office 정품 인증에 도움이 필요한 경우 Microsoft 365 또는 Mac용 Office 정품 인증을 참조하세요. 정품 인증에 실패하는 경우 Microsoft 365 또는 Mac용 Office를 설치하거나 정품 인증할 수 없는 경우 시도할 작업을 참조하세요. Mac용 Microsoft 365 또는 Office 2024 설치 참고 사항 설치 참고 사항 앱 아이콘을 Dock에 고정하려면 어떻게 할까요? Finder > 응용 프로그램 으로 이동하여 원하는 Office 앱을 엽니다. Dock에서 앱 아이콘을 Control+클릭하거나 마우스 오른쪽 단추로 클릭하고 Dock에 유지 옵션을 > 선택합니다. 설치할 수 있나요? iPhone 또는 iPad에 Microsoft 365를 사용 중이신가요? 예, iPhone 또는 iPad에 Microsoft 365 앱 설치 및 설정 및 iOS 장치(iPhone 또는 iPad)에서 전자 메일 설정을 참조하세요. Microsoft 365 또는 Office 2024 로그인 또는 설치 FAQ 다음은 Microsoft 365 또는 Office를 설치하려는 몇 가지 더 일반적인 질문 또는 문제입니다. 팁 문제가 목록에 표시되지 않나요? 추가 문제 및 가능한 해결 방법에 대해서는 Microsoft 365 또는 Office 설치 문제 해결 을 시도해 보세요. 계정 관련 질문: 아직 Microsoft 계정이 없거나 사용자 이름 또는 암호를 잊음 Microsoft 365 또는 Office를 설치하려면 먼저 Microsoft 계정이나 회사 또는 학교 계정에 연결해야 합니다. 가정용 제품이 있고 소매점이나 온라인 스토어에서 Microsoft 365 또는 Office를 구입했지만 Microsoft 계정이 없는 경우 제품 키를 아직 사용하지 않았거나(제품 키가 있는 경우) 최근 구입을 계정과 연결하는 단계를 생략했을 수 있습니다. 계정을 Microsoft 365 또는 Office에 연결하려면 다음을 수행합니다. 가정용 Office 제품의 경우 setup.office.com 로 이동하여 새 Microsoft 계정을 만들거나 기존 계정으로 로그인한 다음 제품 키(있는 경우) 입력과 같은 해당 페이지의 나머지 단계를 수행합니다. 페이지, 내 Office 계정 다음에 Microsoft 계정 전자 메일 주소 및 앱 설치 단추가 표시되면 계정이 Microsoft 365 또는 Office와 성공적으로 연결된 것입니다. 이 문서에서 PC 또는 Mac 탭을 선택하여 나머지 설치 프로세스에 대한 도움말을 확인하세요. Microsoft 계정 또는 회사 또는 학교 계정이 작동하지 않는 경우 Office에서 사용하는 계정의 사용자 이름 또는 암호를 잊어버 렸습니다. 회사 또는 학교 계정으로 로그인한 후 Microsoft 365 또는 Office 설치 옵션이 표시되지 않음 회사 또는 학교 계정으로 로그인한 후 Microsoft 365 홈 페이지에 데스크톱 응용 프로그램을 설치하는 옵션이 표시되지 않고 대신 Microsoft 365 소프트웨어 페이지로 직접 이동합니다. 원하는 언어 및 비트 버전(PC 사용자는 32비트와 64비트 중에서 선택할 수 있음)을 선택한 다음 설치 를 클릭합니다. 위의 PC 또는 Mac 탭에서 2단계와 3단계를 보고 나머지 설치 프로세스에 대한 도움말을 확인하세요. 참고 organization에서 중국의 21Vianet에서 운영하는 Microsoft 365를 사용하는 경우 https://portal.partner.microsoftonline.cn/OLS/MySoftware.aspx 에서 Microsoft 365 소프트웨어 페이지에 로그인합니다. organization에서 Microsoft 365 Germany를 사용하는 경우 https://portal.office.de/OLS/MySoftware.aspx 에서 Microsoft 365 소프트웨어 페이지에 로그인합니다. Microsoft 365 소프트웨어 페이지에 Microsoft 365를 설치하는 옵션이 계속 표시되지 않으면 관리자가 사용자에게 라이선스를 할당하지 않았을 수 있습니다. Microsoft 365를 설치할 수 있는 라이선스가 있는지 확인합니다 . 학생 또는 교사이고 교육 기관에서 라이선스를 제공하지 않은 경우 Microsoft 365를 무료로 받을 수 있는지 확인하세요. 회사 또는 학교 계정으로 로그인할 수 없음 회사 또는 학교 계정으로 로그인하여 www.office.com 하려는데 로그인이 차단된 경우 Microsoft 365 관리자가 해당 위치에서 로그인하지 못하도록 하는 보안 정책을 설정했을 수 있습니다. 도움이 필요하면 IT 관리자에게 문의하세요. 제품 키, 구매 및 이전 버전의 Microsoft 365 설치: Microsoft 365용 제품 키 모든 Microsoft 365 버전에 키가 포함되어 있는 것은 아니지만, 키가 포함되어 있는 경우 Microsoft 365를 설치하기 전에 사용해야 합니다. microsoft365.com/setup 로 이동하여 기존 Microsoft 계정으로 로그인하거나 새 계정을 만든 다음 제품 키를 입력합니다. 나머지 프롬프트에 따라 Microsoft 계정을 이 버전의 Microsoft 365와 연결하는 작업을 완료합니다. 제품 키가 없거나 제품 키가 필요한지 확실하지 않으신가요? Office에서 제품 키 사용 을 참조하세요. 최신 버전의 Microsoft 365 또는 Office를 어떻게 할까요? 구입하나요? 이 항목의 단계에서는 Microsoft 365 또는 Office를 설치하거나 다시 설치할 준비가 되었다고 가정합니다. 아직 최신 버전이 없으신가요? Microsoft 365 구입 또는 체험 Microsoft 365와 비구독 버전 간의 차이점 에 대해 자세히 알아보세요. Office 2019, Office 2016, Office 2013 또는 Microsoft 365를 어떻게 할까요? 이전 버전의 Office에 대한 설치 도움말: Office 2019, Office 2016 또는 Office 2013 설치 관련 질문 또는 설치 중 오류 몇 대의 컴퓨터에 Microsoft 365 또는 Office를 설치할 수 있나요? Microsoft 365 구독 전용: 모든 장치에 Microsoft 365를 설치하고 동시에 5대에 로그인할 수 있습니다. 자세한 내용은 Microsoft 365에서 로그인이 작동하는 방법 을 참조하세요. Microsoft 365 Family가 있는 경우 최대 5명의 가족 구성원 또는 다른 사람과 Microsoft 365 Family 구독을 공유할 수도 있습니다. 각 사용자가 모든 장치에 Microsoft 365를 설치하고 동시에 5대에 로그인할 수 있습니다. Office Home, Office Home & Business 또는 Office Professional와 같은 Office의 일회성 구매: 이러한 비구독 버전의 Office는 한 대의 컴퓨터에만 설치할 수 있습니다. 단, 하드웨어 결함이 발생하거나 새 컴퓨터를 구입하는 경우 본인 소유의 다른 컴퓨터로 Office을 옮길 수 있습니다. 자세한 내용은 Microsoft 사용 조건 을 참조하세요. 컴퓨터에 대한 관리자 권한이 있는지 확인 PC에 Office를 설치하려면 Office를 설치하려는 PC 컴퓨터의 관리자여야 합니다. 확실하지 않은 경우에는 Office를 설치할 수 있는 로컬 관리자 권한이 있는지 ",
-            "sha256": "a61db4b23539eeda700430c47279b55b58e4bf54e9ae82d010078eefd0485177",
-            "checked_on": "2026-10-18"
-          }
-        ]
-      },
-      {
-        "keyword": "출퇴근기록기",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        },
-        "monthly_search": 3320,
-        "organic_provider": "codex_native_search",
-        "organic_query": "출퇴근기록기",
-        "organic_results": [
-          {
-            "url": "https://web.joongna.com/search/%EC%B6%9C%ED%87%B4%EA%B7%BC%EA%B8%B0%EB%A1%9D%EA%B8%B0",
-            "domain": "web.joongna.com",
-            "title": "출퇴근기록기 중고거래 | 중고나라 - 안심되는 중고거래",
-            "snippet": "소규모 업장 근태관리 & 급여계산 앱 (출퇴근기록기)30,000원 1 무료배송"
-          },
-          {
-            "url": "https://web.joongna.com/product/229598840",
-            "domain": "web.joongna.com",
-            "title": "출퇴근기록기 | 중고나라 - 안심되는 중고거래",
-            "snippet": "출퇴근기록기 현대오피스 EF-123 어댑터포함 용지는 없습니다"
-          },
-          {
-            "url": "https://web.joongna.com/product/228941608",
-            "domain": "web.joongna.com",
-            "title": "출퇴근기록기 | 중고나라 - 안심되는 중고거래",
-            "snippet": "출퇴근기록기 현대오피스 EF-123 어댑터포함 용지는 없습니다"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8719195630",
-            "domain": "www.coupang.com",
-            "title": "카피어랜드 출퇴근기록기 - 출퇴근기록기 | 쿠팡",
-            "snippet": "# 카피어랜드 출퇴근기록기 ... * 공개 게시판이므로 전화번호, 메일 주소 등 고객님의 소중한 개인정보는 절대 남기지 말아주세요."
-          },
-          {
-            "url": "https://hd2.co.kr/product/%EC%B6%9C%ED%87%B4%EA%B7%BC%EA%B8%B0%EB%A1%9D%EA%B8%B0-ef-123-%EC%B9%B4%EB%93%9C100%EB%A7%A4/2377",
-            "domain": "hd2.co.kr",
-            "title": "출퇴근기록기",
-            "snippet": "* 출퇴근기록기 리본 EF-123PLUS용 ... 259 | | Image: 답변 Image: 비밀글 출퇴근 기록기 보상판매 | 현대오피스 유한책임회사 | 2026-09-21 | 1"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/8734332119",
-            "domain": "www.coupang.com",
-            "title": "카피어랜드 출퇴근기록기 - 출퇴근기록기 | 쿠팡",
-            "snippet": "# 카피어랜드 출퇴근기록기 ... * 공개 게시판이므로 전화번호, 메일 주소 등 고객님의 소중한 개인정보는 절대 남기지 말아주세요."
-          },
-          {
-            "url": "https://hd2.co.kr/product/%EC%B6%9C%ED%87%B4%EA%B7%BC%EA%B8%B0%EB%A1%9D%EA%B8%B0-ef-123-%EC%B9%B4%EB%93%9C100%EB%A7%A4/2377/category/658/display/1/",
-            "domain": "hd2.co.kr",
-            "title": "출퇴근기록기",
-            "snippet": "* 출퇴근기록기 리본 EF-123PLUS용 ... 출퇴근기록기 EF-5600D + 카드 100매/ 6란인자 지각조퇴표시 자동인자 출력위치조절 알람기능 ... (예 : 가전제품, 식품, 음반 등, 단 액정화면이 부착된"
-          },
-          {
-            "url": "https://couhots.shop/product/3GJWPk7RzPZaL",
-            "domain": "couhots.shop",
-            "title": "본사직판 타임북 지문인식 근태관리기 출퇴근기록기, 1개",
-            "snippet": "Image: 본사직판 타임북 지문인식 근태관리기 출퇴근기록기, 1개 ... 출퇴근기록기와 연동 가능한 소프트웨어는 CSV·엑셀 형식의 데이터 추출을 지원하는지 확인하고, 인사·급여 시스템과의 호환성을 검토해야 합니다."
-          },
-          {
-            "url": "https://hd2.co.kr/product/%EC%B6%9C%ED%87%B4%EA%B7%BC%EA%B8%B0%EB%A1%9D%EA%B8%B0-ef-123-%EC%B9%B4%EB%93%9C100%EB%A7%A4/2377/category/85/display/1/",
-            "domain": "hd2.co.kr",
-            "title": "출퇴근기록기",
-            "snippet": "* 출퇴근기록기 리본 EF-123PLUS용 ... 259 | | Image: 답변 Image: 비밀글 출퇴근 기록기 보상판매 | 현대오피스 유한책임회사 | 2026-09-21 | 2"
-          },
-          {
-            "url": "https://www.coupang.com/vp/products/9492651998",
-            "domain": "www.coupang.com",
-            "title": "로컬코리아 출퇴근기록기 근태기록기 - 출퇴근기록기 | 쿠팡",
-            "snippet": "# 로컬코리아 출퇴근기록기 근태기록기 ... * 공개 게시판이므로 전화번호, 메일 주소 등 고객님의 소중한 개인정보는 절대 남기지 말아주세요."
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "출퇴근기록기",
-          "executed_query": "출퇴근기록기",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-17T20:11:55.822624+00:00",
-          "raw_sha256": "adcc665b43ad00983f8b3ecf230f0f0f599280e250c2b629a6386ee15b552941",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "소규모 업장 근태관리 & 급여계산 앱 (출퇴근기록기)30,000원 1 무료배송"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "출퇴근기록기 현대오피스 EF-123 어댑터포함 용지는 없습니다"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "출퇴근기록기 현대오피스 EF-123 어댑터포함 용지는 없습니다"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "카피어랜드 출퇴근기록기 - 출퇴근기록기 | 쿠팡"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "* 출퇴근기록기 리본 EF-123PLUS용 ... 259 | | Image: 답변 Image: 비밀글 출퇴근 기록기 보상판매 | 현대오피스 유한책임회사 | 2026-09-21 | 1"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "카피어랜드 출퇴근기록기 - 출퇴근기록기 | 쿠팡"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "* 출퇴근기록기 리본 EF-123PLUS용 ... 출퇴근기록기 EF-5600D + 카드 100매/ 6란인자 지각조퇴표시 자동인자 출력위치조절 알람기능 ... (예 : 가전제품, 식품, 음반 등, 단 액정화면이 부착된"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "Image: 본사직판 타임북 지문인식 근태관리기 출퇴근기록기, 1개 ... 출퇴근기록기와 연동 가능한 소프트웨어는 CSV·엑셀 형식의 데이터 추출을 지원하는지 확인하고, 인사·급여 시스템과의 호환성을 검토해야 합니다."
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "* 출퇴근기록기 리본 EF-123PLUS용 ... 259 | | Image: 답변 Image: 비밀글 출퇴근 기록기 보상판매 | 현대오피스 유한책임회사 | 2026-09-21 | 2"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "로컬코리아 출퇴근기록기 근태기록기 - 출퇴근기록기 | 쿠팡"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": []
-      },
-      {
-        "keyword": "마이크로소프트팀즈",
+        "keyword": "마이크로소프트엣지",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
           "insufficient_relevant_sites",
-          "low_search_relevance",
-          "concentrated_search_results"
+          "low_search_relevance"
         ],
-        "monthly_search": 2070,
+        "monthly_search": 3030,
         "organic_provider": "codex_native_search",
-        "organic_query": "마이크로소프트팀즈",
+        "organic_query": "마이크로소프트엣지",
         "organic_results": [
           {
             "url": "https://www.macarong.net/",
             "domain": "www.macarong.net",
             "title": "마이클 - 정비소 예약 앱",
-            "snippet": "쉽고 편한 정비 예약 앱 마이클 ... 브레이크 패드 마모가 의심됩니다. ... 당일, 주말 도 ... (주)마카롱팩토리|대표 김기풍경기도 성남시 분당구 대왕판교로644번길 49 7층 ... [인증범위]"
+            "snippet": "쉽고 편한 정비 예약 앱 마이클 ... 증상만 말하면 AI가 원인, 예상 비용, 정비 방법을 ... 브레이크 패드 마모가 의심됩니다. ... 눈치보며 물어보지 마세요! ..."
           },
           {
-            "url": "https://www.myprotein.co.kr/",
-            "domain": "www.myprotein.co.kr",
-            "title": "마이프로틴 | 유럽 No.1 단백질보충제 & 건강보조식품 | Myprotein KR",
-            "snippet": "# 마이프로틴 | 유럽 No.1 단백질보충제 & 건강보조식품 ... 클리어 웨이 프로틴 4.51 out of 5 stars(146) ... 딜리셔스 바"
+            "url": "https://myckro.com/about",
+            "domain": "myckro.com",
+            "title": "About | MYCKRO",
+            "snippet": "MYCKRO(마이크로)는 산업용 로봇 티칭과 시운전을 전문으로 하는 엔지니어링 기업입니다. ... MYCKRO (마이크로) ... ‘MR’은 MYCKRO의 약칭이자 두 가지 메시지를 담고 있습니다. ... 20년 이상의 산업"
           },
           {
-            "url": "https://www.ecron.co.kr/",
-            "domain": "www.ecron.co.kr",
-            "title": "(주)이크론소프트 — 제조 현장을 위한 MES·ERP·스마트팩토리",
-            "snippet": "제조 현장의 문제, (주)이크론소프트가 함께 풀겠습니다. ... 자동차·전기/전자·우주항공 등 제조업의 공정 및 통합관리 시스템 구축에 전념해 왔으며, 고객사 이슈 분석을 통한 정보시스템 기획·설계부터 구축·적용, 사후"
-          },
-          {
-            "url": "https://search.danawa.com/mobile/dsearch.php?keyword=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%86%8C%ED%94%84%ED%8A%B8%ED%8C%80%EC%A6%88",
-            "domain": "search.danawa.com",
-            "title": "마이크로소프트팀즈 : 다나와 통합검색",
-            "snippet": "[Input: 검색어를 입력해주세요.] ... 인기순 배송비포함 가격대검색 상품구분 결과내검색 VS상품비교 쇼핑몰선택 빠른배송 이미지형으로 보기 ... 로그인 후 ‘항상 와우할인가로 보기’ 설정하시면 와우할인 혜택이 반영된 최저가로"
-          },
-          {
-            "url": "https://www.imagefactory.co.kr/",
-            "domain": "www.imagefactory.co.kr",
-            "title": "이미지팩토리 | 마케팅 AI 에이전트가 알아서 광고해요",
-            "snippet": "광고주 대행사 1인 마케터 ... 메타 광고, 스토리랑 피드랑 사이즈가 다 다르던데 다들 어떻게 하세요? ... 나이트 크림 기획전이 열렸어요. ... 연관키워드 | 검색수(모바일) |"
-          },
-          {
-            "url": "https://jumpit.saramin.co.kr/company/ODUwODEwMDA4Mg%3D%3D?company_nm=%EB%A7%88%EC%B9%B4%EB%A1%B1%ED%8C%A9%ED%86%A0%EB%A6%AC",
-            "domain": "jumpit.saramin.co.kr",
-            "title": "점핏 | 마카롱팩토리 기업정보",
-            "snippet": "차량 관리 앱 1위 ‘마이클’을 운영하는 마카롱팩토리입니다. ... *전국 정비소 10곳 중 1곳이 마이클 ... 우리가 만들어낸 성장은 전체 정비 시장의 단 1%에 불과합니다. 이제"
-          },
-          {
-            "url": "https://d.namu.moe/w/%EB%A7%88%EC%9D%B4%ED%94%84%EB%A1%9C%ED%8B%B4",
-            "domain": "d.namu.moe",
-            "title": "마이프로틴",
-            "snippet": "2010년대 중후반 들어서 팀메이트라는 개념으로 말왕, 키다리형, 권혁TV, 헬마드 등 각종 운동 유튜버들을 중심으로 매우 공격적인 마케팅을 벌이고 있다. ... 국산 보충제들의 각종 사건사고와 처참한"
+            "url": "https://play.mycle.co.kr/about",
+            "domain": "play.mycle.co.kr",
+            "title": "마이클 - 대한민국 1등 차량관리 앱 | 서비스 소개 | 마이클",
+            "snippet": "마이클은 (주)마카롱팩토리가 운영하는 대한민국 대표 차량관리 플랫폼입니다. ... 차량 고장 증상, 이상 소음, 경고등 등을 설명하면 AI가 가능한 원인과 예상 수리 비용, 정비 방법을 안내합니다."
           },
           {
             "url": "https://mycle.career.greetinghr.com/ko/mycle",
             "domain": "mycle.career.greetinghr.com",
             "title": "마카롱팩토리(마이클) 채용",
-            "snippet": "차계부로 내 차의 점검, 교체 주기도 한눈에 관리할 수 있는 ... 예약이 불가능했던 기존의 비효율적인 시장을 개선하고자 하였습니다. ... 우리 집에서 10분 거리, 믿을 수"
+            "snippet": "차계부로 내 차의 점검, 교체 주기도 한눈에 관리할 수 있는 ... 예약이 불가능했던 기존의 비효율적인 시장을 개선하고자 하였습니다.O2O 플랫폼을 구축하여 온라인 사용자들을 유입시켰고, ... 차량관리"
           },
           {
             "url": "https://www.i-boss.co.kr/company/3522/%EB%A7%88%EC%B9%B4%EB%A1%B1%ED%8C%A9%ED%86%A0%EB%A6%AC",
             "domain": "www.i-boss.co.kr",
             "title": "마카롱팩토리 기업정보 - 아이보스",
-            "snippet": "* 주소 경기 성남시 분당구 대왕판교로644번길 49 (삼평동, DTC타워) ... 차량관리 앱 마이클 작년 매출 630억 원 5년 연속 성장 차량관리 앱 마이클을 운영하는 마카롱팩토리가"
+            "snippet": "* 대표자 김기풍 ... * 주소 경기 성남시 분당구 대왕판교로644번길 49 (삼평동, DTC타워) ... 차량관리 앱 마이클 작년 매출 630억 원 5년 연속 성장 차량관리"
           },
           {
-            "url": "https://bnue.itaz.co.kr/file/downloadn?realname=%EB%B6%80%EC%82%B0%EA%B5%90%EC%9C%A1%EB%8C%80%ED%95%99%EA%B5%90_Teams_%EC%82%AC%EC%9A%A9%EC%84%A4%EB%AA%85%EC%84%9C.pdf&savename=teams_howto.pdf",
-            "domain": "bnue.itaz.co.kr",
-            "title": "마이크로소프트 팀즈 매뉴얼_학생용",
-            "snippet": "마이크로소프트팀즈"
+            "url": "https://www.jobkorea.co.kr/company/44387121",
+            "domain": "www.jobkorea.co.kr",
+            "title": "마카롱팩토리 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+            "snippet": "대표자 | 김기풍 | 대졸초임 | 4,759만원 ... 홈페이지 | https://mycle.career.greetinghr.com/ko/home | 주소 | 경기 성남시 분당구 대왕판교로644번길 49 (삼평동, DTC타워) 7층, 마카롱팩토리 ... 투명하고"
+          },
+          {
+            "url": "https://www.jobkorea.co.kr/Recruit/Co_Read/C/25435688",
+            "domain": "www.jobkorea.co.kr",
+            "title": "마카롱팩토리 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+            "snippet": "대표자 | 김기풍 | 대졸초임 | 4,759만원 ... 홈페이지 | https://mycle.career.greetinghr.com/ko/home | 주소 | 경기 성남시 분당구 대왕판교로644번길 49 (삼평동, DTC타워) 7층, 마카롱팩토리 ... 차계부부터"
+          },
+          {
+            "url": "https://www.myprotein.co.kr/c/performance/prepare-optimise/",
+            "domain": "www.myprotein.co.kr",
+            "title": "준비 & 집중 | Myprotein KR",
+            "snippet": "마이프로틴 하이록스 리사이클 메탈 쉐이커 - 블랙 ... 마이프로틴 하이록스 재활용 메탈 플립 스트로우 보틀 1L - 블랙"
+          },
+          {
+            "url": "https://m.jobkorea.co.kr/company/44387121/info",
+            "domain": "m.jobkorea.co.kr",
+            "title": "마카롱팩토리 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아",
+            "snippet": "경기 성남시 분당구 대왕판교로644번길 49 (삼평동, DTC타워) 7층, 마카롱팩토리 ... 차계부부터 엔진오일·타이어 교체 등 정비 예약까지투명하고 편리한 차량 관리 플랫폼, 마이클입니다.마이클은 지난 5년 연속 성장,"
+          },
+          {
+            "url": "https://mylacto.com/index.html",
+            "domain": "mylacto.com",
+            "title": "마이락토 쇼핑몰",
+            "snippet": "* * 마이락토 오가닉 포 패밀리 30포 ... * 온가족 장 건강 유산균, 분말형 ... * * 마이락토 키즈 플러스 30포 * 모유유래 균주, 아연함유"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "마이크로소프트팀즈",
-          "executed_query": "마이크로소프트팀즈",
+          "query": "마이크로소프트엣지",
+          "executed_query": "마이크로소프트엣지",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-17T20:11:55.822624+00:00",
-          "raw_sha256": "f9a39c405cca192d4e0667bea00e202f413f92737f0302464059e0fa4cb82171",
+          "checked_at": "2026-10-18T00:00:57.483202+00:00",
+          "raw_sha256": "63e66e7db7e5bc5907d0b97698984b429fcbd3dba8afdd063d4dcf754bb4f05d",
           "decisions": [
             {
               "result_index": 0,
@@ -11832,60 +11542,331 @@
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "마이프로틴 | 유럽 No.1 단백질보충제 & 건강보조식품 | Myprotein KR"
+              "quote": "MYCKRO(마이크로)는 산업용 로봇 티칭과 시운전을 전문으로 하는 엔지니어링 기업입니다. ... MYCKRO (마이크로) ... ‘MR’은 MYCKRO의 약칭이자 두 가지 메시지를 담고 있습니다. ... 20년 이상의 산업"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "(주)이크론소프트 — 제조 현장을 위한 MES·ERP·스마트팩토리"
+              "quote": "마이클 - 대한민국 1등 차량관리 앱 | 서비스 소개 | 마이클"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "[Input: 검색어를 입력해주세요.] ... 인기순 배송비포함 가격대검색 상품구분 결과내검색 VS상품비교 쇼핑몰선택 빠른배송 이미지형으로 보기 ... 로그인 후 ‘항상 와우할인가로 보기’ 설정하시면 와우할인 혜택이 반영된 최저가로"
+              "quote": "마카롱팩토리(마이클) 채용"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "이미지팩토리 | 마케팅 AI 에이전트가 알아서 광고해요"
+              "quote": "마카롱팩토리 기업정보 - 아이보스"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "차량 관리 앱 1위 ‘마이클’을 운영하는 마카롱팩토리입니다. ... *전국 정비소 10곳 중 1곳이 마이클 ... 우리가 만들어낸 성장은 전체 정비 시장의 단 1%에 불과합니다. 이제"
+              "quote": "마카롱팩토리 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "2010년대 중후반 들어서 팀메이트라는 개념으로 말왕, 키다리형, 권혁TV, 헬마드 등 각종 운동 유튜버들을 중심으로 매우 공격적인 마케팅을 벌이고 있다. ... 국산 보충제들의 각종 사건사고와 처참한"
+              "quote": "마카롱팩토리 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아"
             },
             {
               "result_index": 7,
               "relevant": false,
-              "quote": "마카롱팩토리(마이클) 채용"
+              "quote": "마이프로틴 하이록스 리사이클 메탈 쉐이커 - 블랙 ... 마이프로틴 하이록스 재활용 메탈 플립 스트로우 보틀 1L - 블랙"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "* 주소 경기 성남시 분당구 대왕판교로644번길 49 (삼평동, DTC타워) ... 차량관리 앱 마이클 작년 매출 630억 원 5년 연속 성장 차량관리 앱 마이클을 운영하는 마카롱팩토리가"
+              "quote": "마카롱팩토리 2026년 기업정보 - 직원수, 근무환경, 복리후생 등 | 잡코리아"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "* * 마이락토 오가닉 포 패밀리 30포 ... * 온가족 장 건강 유산균, 분말형 ... * * 마이락토 키즈 플러스 30포 * 모유유래 균주, 아연함유"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "AI동영상",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results",
+          "insufficient_relevant_sites",
+          "low_search_relevance",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 2290,
+        "organic_provider": "codex_native_search",
+        "organic_query": "AI동영상",
+        "organic_results": [
+          {
+            "url": "https://www.aigov.go.kr/",
+            "domain": "www.aigov.go.kr",
+            "title": "AI 민주정부",
+            "snippet": "국민이 주인이 되는 AI시대 AI기술을 활용해 국민과 함께 만들어가는 유능하고 친절한 정부 ... 국민이 쉽게 아이디어를 제시하고 묻히기 쉬운 목소리까지 AI를 통해 정책 검토 과정에"
+          },
+          {
+            "url": "https://www.ddm.go.kr/www/contents.do?key=593",
+            "domain": "www.ddm.go.kr",
+            "title": "교육과정소개 - 동대문구",
+            "snippet": "* 이미지 생성형 AI ... * 음악, 동영상 생성형 AI ... 정보화교육에 처음 신청하시는 분은 입문 과정인 기본과정부터 이수한 후 선택과정에서 본인에게 맞는 과정을 선택하여"
+          },
+          {
+            "url": "https://www.media.io/ai/ko/home",
+            "domain": "www.media.io",
+            "title": "미디어 AI 생성기 – 무료 온라인 AI 영상·이미지·오디오 도구 | Media.io",
+            "snippet": "텍스트/이미지를 동영상으로 변환ToMoviee 2.0 Fast & ToMoviee 3.0 & MiniMax H3 무제한 사용 잠금 해제 회원은 이 VIP 무료 모델로 크레딧 차감 없이 생성할 수"
+          },
+          {
+            "url": "https://www.ultralytics.com/ko/glossary/ai-video-editing",
+            "domain": "www.ultralytics.com",
+            "title": "AI 동영상 편집: 작동 방식과 실제 활용 사례 | Ultralytics",
+            "snippet": "동영상 이해 는 클립의 내용이나 사건을 해석하는 것을 의미하고, 편집은 그 해석을 활용해 영상이 제시되는 방식을 변경합니다.동영상 생성 은 새로운 영상을 만드는 반면, AI 동영상"
+          },
+          {
+            "url": "https://www.media.io/ko/",
+            "domain": "www.media.io",
+            "title": "Media.io – 올인원 AI 동영상·이미지·음악 플랫폼",
+            "snippet": "텍스트로 영상 만들기 이미지 동영상 변환 AI 캐릭터 모션 컨트롤 AI 영상 화질 개선 모든 도구 보기 > ... AI 책 일러스트 애니메이션 프레젠테이션 졸업"
+          },
+          {
+            "url": "https://www.saramin.co.kr/api/jobs/job/content?rec_idx=54281052",
+            "domain": "www.saramin.co.kr",
+            "title": "AI 동영상 제작 담당자 1명 채용합니다. (자차 필수)",
+            "snippet": "(자차 필수)Image 모집분야 AI 동영상 제작 및 편집 담당자 채용(1명)📋 주요업무• AI를 활용한 숏폼 광고/홍보 콘텐츠 기획 및 제작• 생성형 AI 툴 및 편집 툴을"
+          },
+          {
+            "url": "https://www.bok.or.kr/portal/bbs/B0000168/view.do?menuNo=200058&nttId=10098509",
+            "domain": "www.bok.or.kr",
+            "title": "BOK 이슈해설ㅣ AI만 쓰면 칼퇴각 ...? 근데 아낀 시간 어디감 | 영상보고서(상세) | 동영상 | 멀티콘텐츠 | 한국은행 홈페이지",
+            "snippet": "플레이 버튼을 클릭하면, 동영상 열람 가능합니다. ... 예를 들어 자영업자는 일한 만큼 곧바로 내 소득이 되니까, 시간을 아끼면 그만큼 더 일하려는 동기가 분명하죠. ... 또한"
+          },
+          {
+            "url": "https://www.kodia.kr/",
+            "domain": "www.kodia.kr",
+            "title": "한국AI데이터산업협회",
+            "snippet": "대한민국 데이터 산업계의 핵심 리더가 함께하는 한국AI데이터산업협회는 4차 산업혁명의 원유인 데이터를 통해 국가 데이터 경제 발전을 견인하며, 회원기업의 권익 보호와 데이터 산업 발전을 위해 열정을"
+          },
+          {
+            "url": "https://cloud.google.com/learn/what-is-artificial-intelligence?hl=ko",
+            "domain": "cloud.google.com",
+            "title": "인공지능(AI)이란 무엇인가요? | Google Cloud",
+            "snippet": "* 컴퓨터 비전: 이 영역에서는 컴퓨터가 이미지와 동영상 등 세상의 시각적 정보를 '보고' 해석할 수 있습니다. ... 다른 형태의 AI와 마찬가지로 ASI가 인류의 생존에 위협이"
+          },
+          {
+            "url": "https://www.ailandscape.net/",
+            "domain": "www.ailandscape.net",
+            "title": "AI landscape",
+            "snippet": "* 동영상 ... 서울특별시 서초구 태봉로 108, 서울 AI 허브 4층 405호"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "AI동영상",
+          "executed_query": "AI동영상",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-18T00:00:57.483202+00:00",
+          "raw_sha256": "7990cd1b78e8d955c170637f1399d10b11d1a47ee168dea8977202813b378c1c",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "국민이 주인이 되는 AI시대 AI기술을 활용해 국민과 함께 만들어가는 유능하고 친절한 정부 ... 국민이 쉽게 아이디어를 제시하고 묻히기 쉬운 목소리까지 AI를 통해 정책 검토 과정에"
+            },
+            {
+              "result_index": 1,
+              "relevant": false,
+              "quote": "* 이미지 생성형 AI ... * 음악, 동영상 생성형 AI ... 정보화교육에 처음 신청하시는 분은 입문 과정인 기본과정부터 이수한 후 선택과정에서 본인에게 맞는 과정을 선택하여"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "텍스트/이미지를 동영상으로 변환ToMoviee 2.0 Fast & ToMoviee 3.0 & MiniMax H3 무제한 사용 잠금 해제 회원은 이 VIP 무료 모델로 크레딧 차감 없이 생성할 수"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "AI 동영상 편집: 작동 방식과 실제 활용 사례 | Ultralytics"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "텍스트로 영상 만들기 이미지 동영상 변환 AI 캐릭터 모션 컨트롤 AI 영상 화질 개선 모든 도구 보기 > ... AI 책 일러스트 애니메이션 프레젠테이션 졸업"
+            },
+            {
+              "result_index": 5,
+              "relevant": false,
+              "quote": "AI 동영상 제작 담당자 1명 채용합니다. (자차 필수)"
+            },
+            {
+              "result_index": 6,
+              "relevant": false,
+              "quote": "BOK 이슈해설ㅣ AI만 쓰면 칼퇴각 ...? 근데 아낀 시간 어디감 | 영상보고서(상세) | 동영상 | 멀티콘텐츠 | 한국은행 홈페이지"
+            },
+            {
+              "result_index": 7,
+              "relevant": false,
+              "quote": "대한민국 데이터 산업계의 핵심 리더가 함께하는 한국AI데이터산업협회는 4차 산업혁명의 원유인 데이터를 통해 국가 데이터 경제 발전을 견인하며, 회원기업의 권익 보호와 데이터 산업 발전을 위해 열정을"
+            },
+            {
+              "result_index": 8,
+              "relevant": false,
+              "quote": "* 컴퓨터 비전: 이 영역에서는 컴퓨터가 이미지와 동영상 등 세상의 시각적 정보를 '보고' 해석할 수 있습니다. ... 다른 형태의 AI와 마찬가지로 ASI가 인류의 생존에 위협이"
+            },
+            {
+              "result_index": 9,
+              "relevant": false,
+              "quote": "* 동영상 ... 서울특별시 서초구 태봉로 108, 서울 AI 허브 4층 405호"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "가계부어플",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        },
+        "monthly_search": 2050,
+        "organic_provider": "codex_native_search",
+        "organic_query": "가계부어플",
+        "organic_results": [
+          {
+            "url": "https://ebook-product.kyobobook.co.kr/dig/epd/sam/E000013393103",
+            "domain": "ebook-product.kyobobook.co.kr",
+            "title": "구글시트로 앱 만들기 | 전명섭 | 이페이지 - 교보문고 구독서비스 sam",
+            "snippet": "회의실예약어플,가계부어플 만들어보기 ... 전화로 회의실 4개 예약 관리하던 업무를 구글시트로 앱을 만들어 전화통화 없이 예약을 관리하고 정산까지 자동으로 관리하는 혁신적인 앱 만들기와 간단한 가계부 앱을"
+          },
+          {
+            "url": "https://comclothing.tistory.com/190",
+            "domain": "comclothing.tistory.com",
+            "title": "가계부어플 선택 기준: 입력 방식과 자동화 범위 확인하기 총정리",
+            "snippet": "이 글은 특정 앱을 추천하지 않고, 가계부어플 선택 시 점검해야 할 기준과 절차를 정리합니다. ... 가계부어플은 자동 연동이 필수인가요?"
+          },
+          {
+            "url": "https://play.google.com/store/books/details/%EC%A0%84%EB%AA%85%EC%84%AD_%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8%EB%A1%9C_%EC%95%B1_%EB%A7%8C%EB%93%A4%EA%B8%B0?id=rLMMEgAAQBAJ",
+            "domain": "play.google.com",
+            "title": "구글시트로 앱 만들기: 회의실예약어플,가계부어플 만들어보기 by 전명섭 - Books on Google Play",
+            "snippet": "# 구글시트로 앱 만들기: 회의실예약어플,가계부어플 만들어보기 ... 전화로 회의실 4개 예약 관리하던 업무를 구글시트로 앱을 만들어 전화통화 없이 예약을 관리하고 정산까지 자동으로 관리하는 혁신적인 앱"
+          },
+          {
+            "url": "https://www.daily.co.kr/life312715771",
+            "domain": "www.daily.co.kr",
+            "title": "데일리 - 앱하나로 지출내역 확인! 가계부 앱 추천 디지털 IT,앱,어플,가계부,가계부앱,가계부어플,돈,돈관리",
+            "snippet": "* 똑똑가계부는 심플한 기능으로 수입과 지출을 관리하며, 카드 결제 내역을 자동으로 인식하고 통계 기능을 제공합니다. ... 문구점에 가서 맘에 드는 가계부와 새로 쓸 펜을 사고"
+          },
+          {
+            "url": "https://www.gpflor.co.kr/about/company.php",
+            "domain": "www.gpflor.co.kr",
+            "title": "COMPANY | 지피플로어",
+            "snippet": "지피플로어(GPFLOR)는 대한민국에 기반을 둔 상업·주거용 바닥재 전문 기업으로, 2011년에 설립되었습니다.업계 최초로 전 제품에 대해 탄소중립을 실현한 글로벌 바닥재 브랜드 Interface와 이탈리아의 장인 정신이 깃든 프리미엄"
+          },
+          {
+            "url": "https://www.korea-iphone.com/blog/JJLIRCmJiRby.html",
+            "domain": "www.korea-iphone.com",
+            "title": "더쎈카드 카테크 아이폰 가계부어플 추천! 앱테크와 카드관리 팁까지",
+            "snippet": "# 더쎈카드 카테크 아이폰 가계부어플 추천! ... 이 포인트는 나중에 페이로 인출 가능하고 편의점 기프티콘으로 교환도 가능하니까 다 뽑아먹어 보아요. ... 사실 저는 가계부어플로는 다른"
+          },
+          {
+            "url": "https://m.miz.co.kr/momboard/read.php?location=event&number=292109&table=GDA_003",
+            "domain": "m.miz.co.kr",
+            "title": "미즈 모바일",
+            "snippet": "자산관리의 시작, 가계부 어플 3가지 ... PC, 안드로이드폰, 아이폰, 아이패드 등에서 사용할 수 있는 어플리케이션으로 외부에서 수집된 카드결제 정보, 통장거래내역 및 다른 가계부어플리케이션의 정보를 일괄하여"
+          },
+          {
+            "url": "https://modoo.io/content/132482",
+            "domain": "modoo.io",
+            "title": "가계부어플 처음 쓰는 사람도 오래 유지하는 방법",
+            "snippet": "가계부어플은 이런 순간을 숫자로 바로 보여줘서, 돈을 아끼겠다는 막연한 마음을 꽤 현실적인 행동으로 바꿔줍니다. ... 가계부어플은 반성문이 아니라 지도에 가깝습니다. ... 커피 한 잔, 편의점"
+          },
+          {
+            "url": "https://kin.naver.com/tag/tagDetail.naver?tag=%EA%B0%80%EA%B3%84%EB%B6%80%EC%96%B4%ED%94%8C%EC%B6%94%EC%B2%9C",
+            "domain": "kin.naver.com",
+            "title": "#가계부어플추천 - Q&A 태그 대표페이지 : 지식iN",
+            "snippet": "계좌나 카드랑 자동 연동이 되어서 일일이 기입하지 않아도 한번에 보여주는 가계부 어플 있을까요? ... 저는 아이폰을 쓸때 mini budget 이라는 가계부 어플을 썼었는데 이 어플이"
+          },
+          {
+            "url": "https://apps.appfollow.io/android/1money-expense-tracker-budget/org.pixelrush.moneyiq?country=kr",
+            "domain": "apps.appfollow.io",
+            "title": "1Money: expense tracker budget | AppFollow | App’s reputation platform",
+            "snippet": "지금까지 가계부어플 총7년정도 사용.단언컨데 이 어플 최고 저는 인앱구매후 사용중인데 동기화도 아주잘됌 만족후 사용중~~"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "가계부어플",
+          "executed_query": "가계부어플",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-18T00:00:57.483202+00:00",
+          "raw_sha256": "f4c96711c2598c11fbd03724c51bf767ef6bed0dc296aac3f7f8a537f62d8009",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": false,
+              "quote": "회의실예약어플,가계부어플 만들어보기 ... 전화로 회의실 4개 예약 관리하던 업무를 구글시트로 앱을 만들어 전화통화 없이 예약을 관리하고 정산까지 자동으로 관리하는 혁신적인 앱 만들기와 간단한 가계부 앱을"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "이 글은 특정 앱을 추천하지 않고, 가계부어플 선택 시 점검해야 할 기준과 절차를 정리합니다. ... 가계부어플은 자동 연동이 필수인가요?"
+            },
+            {
+              "result_index": 2,
+              "relevant": false,
+              "quote": "구글시트로 앱 만들기: 회의실예약어플,가계부어플 만들어보기 by 전명섭 - Books on Google Play"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "* 똑똑가계부는 심플한 기능으로 수입과 지출을 관리하며, 카드 결제 내역을 자동으로 인식하고 통계 기능을 제공합니다. ... 문구점에 가서 맘에 드는 가계부와 새로 쓸 펜을 사고"
+            },
+            {
+              "result_index": 4,
+              "relevant": false,
+              "quote": "지피플로어(GPFLOR)는 대한민국에 기반을 둔 상업·주거용 바닥재 전문 기업으로, 2011년에 설립되었습니다.업계 최초로 전 제품에 대해 탄소중립을 실현한 글로벌 바닥재 브랜드 Interface와 이탈리아의 장인 정신이 깃든 프리미엄"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "더쎈카드 카테크 아이폰 가계부어플 추천! 앱테크와 카드관리 팁까지"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "자산관리의 시작, 가계부 어플 3가지 ... PC, 안드로이드폰, 아이폰, 아이패드 등에서 사용할 수 있는 어플리케이션으로 외부에서 수집된 카드결제 정보, 통장거래내역 및 다른 가계부어플리케이션의 정보를 일괄하여"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "가계부어플 처음 쓰는 사람도 오래 유지하는 방법"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "계좌나 카드랑 자동 연동이 되어서 일일이 기입하지 않아도 한번에 보여주는 가계부 어플 있을까요? ... 저는 아이폰을 쓸때 mini budget 이라는 가계부 어플을 썼었는데 이 어플이"
             },
             {
               "result_index": 9,
               "relevant": true,
-              "quote": "마이크로소프트 팀즈 매뉴얼_학생용"
+              "quote": "지금까지 가계부어플 총7년정도 사용.단언컨데 이 어플 최고 저는 인앱구매후 사용중인데 동기화도 아주잘됌 만족후 사용중~~"
             }
           ]
-        }
+        },
+        "evidence_mode": "serp",
+        "verified_sources": []
       }
     ],
     "excluded_keywords": [],
     "deferred_keywords": [
       "MS365",
+      "OFFICE",
       "OFFICE365",
       "RESEARCH",
       "가계부쓰는법",
       "노션템플릿",
-      "마이크로소프트365구독",
+      "마이크로소프트팀즈",
+      "출퇴근기록기",
       "캘린더",
       "페이퍼로지"
     ],
@@ -11898,11 +11879,13 @@
     "discovery_replenishment": [],
     "deferred_measured_keywords": [
       "MS365",
+      "OFFICE",
       "OFFICE365",
       "RESEARCH",
       "가계부쓰는법",
       "노션템플릿",
-      "마이크로소프트365구독",
+      "마이크로소프트팀즈",
+      "출퇴근기록기",
       "캘린더",
       "페이퍼로지"
     ],
@@ -11960,8 +11943,6 @@
           "머메이드드레스",
           "직업적성테스트",
           "엔트리코딩",
-          "OFFICE",
-          "출퇴근기록기",
           "RPA",
           "한국사검정시험",
           "마이크로소프트엣지",
@@ -11970,7 +11951,9 @@
           "인간관계",
           "웨딩카페",
           "카네기인간관계론",
-          "자신감"
+          "자신감",
+          "AI동영상",
+          "FGI"
         ],
         "proposals": [],
         "measured_fallback": true,
@@ -12173,7 +12156,7 @@
           },
           {
             "keyword": "엑셀구매",
-            "reason_code": "category_mismatch",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12222,16 +12205,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "OFFICE",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "출퇴근기록기",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "RPA",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
@@ -12268,42 +12241,49 @@
           },
           {
             "keyword": "카네기인간관계론",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "자신감",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "AI동영상",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "FGI",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "OFFICE",
-            "search_query": "OFFICE",
+            "keyword": "마이크로소프트엣지",
+            "search_query": "마이크로소프트엣지",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           },
           {
-            "keyword": "출퇴근기록기",
-            "search_query": "출퇴근기록기",
+            "keyword": "AI동영상",
+            "search_query": "AI동영상",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           }
         ],
         "research_fallback_attempted": [
-          "OFFICE",
-          "출퇴근기록기"
+          "마이크로소프트엣지",
+          "AI동영상"
         ]
       },
       {
         "round": 2,
         "offered_keywords": [
-          "AI동영상",
-          "FGI",
           "컴활2급필기독학",
           "윈도우10다운로드",
-          "마이크로소프트팀즈",
           "가계부어플",
           "패스트캠프",
           "윈도우11프로",
@@ -12358,22 +12338,15 @@
           "스테이블디퓨전",
           "공여사들",
           "퍼포먼스마케팅",
-          "컴활2급실기기출문제"
+          "컴활2급실기기출문제",
+          "폐백음식",
+          "NLP",
+          "게으름"
         ],
         "proposals": [],
         "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
-          {
-            "keyword": "AI동영상",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "FGI",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "컴활2급필기독학",
             "reason_code": "category_mismatch",
@@ -12382,11 +12355,6 @@
           {
             "keyword": "윈도우10다운로드",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "마이크로소프트팀즈",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12486,7 +12454,7 @@
           },
           {
             "keyword": "컴활1급필기독학",
-            "reason_code": "duplicate_intent",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12606,7 +12574,7 @@
           },
           {
             "keyword": "파일다운로드",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12631,7 +12599,7 @@
           },
           {
             "keyword": "컴활1급독학",
-            "reason_code": "duplicate_intent",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12641,7 +12609,7 @@
           },
           {
             "keyword": "설문지",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12663,26 +12631,38 @@
             "keyword": "컴활2급실기기출문제",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "폐백음식",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "NLP",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "게으름",
+            "reason_code": "scope_too_broad",
+            "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "마이크로소프트팀즈",
-            "search_query": "마이크로소프트팀즈",
+            "keyword": "가계부어플",
+            "search_query": "가계부어플",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           }
         ],
         "research_fallback_attempted": [
-          "마이크로소프트팀즈"
+          "가계부어플"
         ]
       },
       {
         "round": 3,
         "offered_keywords": [
-          "폐백음식",
-          "NLP",
-          "게으름",
           "컴활실기2급",
           "연봉순위",
           "예식장비용",
@@ -12739,27 +12719,15 @@
           "퍼포먼스마케터",
           "마케팅책",
           "ADOBESTOCK",
-          "한글엑셀"
+          "한글엑셀",
+          "웨딩홀잔여타임",
+          "텍스트마이닝",
+          "윈도우정품가격"
         ],
         "proposals": [],
         "measured_fallback": false,
         "no_eligible_proposal": true,
         "skipped": [
-          {
-            "keyword": "폐백음식",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "NLP",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "게으름",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "컴활실기2급",
             "reason_code": "category_mismatch",
@@ -12837,7 +12805,7 @@
           },
           {
             "keyword": "엑셀정품",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12897,7 +12865,7 @@
           },
           {
             "keyword": "가계부추천",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -12907,7 +12875,7 @@
           },
           {
             "keyword": "일잘러",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -13044,29 +13012,7 @@
             "keyword": "한글엑셀",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": []
-      },
-      {
-        "round": 4,
-        "offered_keywords": [
-          "웨딩홀잔여타임",
-          "텍스트마이닝",
-          "윈도우정품가격",
-          "컴퓨터활용능력2급독학",
-          "CS2",
-          "구글시트공유",
-          "마이크로소프트엑셀구매",
-          "파워BI",
-          "빅데이터분석기사필기",
-          "결혼준비엑셀",
-          "캔바사용법"
-        ],
-        "proposals": [],
-        "measured_fallback": false,
-        "no_eligible_proposal": true,
-        "skipped": [
+          },
           {
             "keyword": "웨딩홀잔여타임",
             "reason_code": "category_mismatch",
@@ -13081,7 +13027,26 @@
             "keyword": "윈도우정품가격",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
-          },
+          }
+        ],
+        "research_fallback": []
+      },
+      {
+        "round": 4,
+        "offered_keywords": [
+          "컴퓨터활용능력2급독학",
+          "CS2",
+          "구글시트공유",
+          "마이크로소프트엑셀구매",
+          "파워BI",
+          "빅데이터분석기사필기",
+          "결혼준비엑셀",
+          "캔바사용법"
+        ],
+        "proposals": [],
+        "measured_fallback": false,
+        "no_eligible_proposal": true,
+        "skipped": [
           {
             "keyword": "컴퓨터활용능력2급독학",
             "reason_code": "category_mismatch",
@@ -13104,7 +13069,7 @@
           },
           {
             "keyword": "파워BI",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -13129,29 +13094,50 @@
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "OFFICE",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 3330,
-        "organic_query": "OFFICE"
-      },
-      {
-        "keyword": "출퇴근기록기",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 3320,
-        "organic_query": "출퇴근기록기"
-      },
-      {
-        "keyword": "마이크로소프트팀즈",
+        "keyword": "마이크로소프트엣지",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 2070,
-        "organic_query": "마이크로소프트팀즈"
+        "monthly_search": 3030,
+        "organic_query": "마이크로소프트엣지"
+      },
+      {
+        "keyword": "AI동영상",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 2290,
+        "organic_query": "AI동영상"
+      },
+      {
+        "keyword": "가계부어플",
+        "status": "rejected",
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 2050,
+        "organic_query": "가계부어플"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "마이크로소프트엣지",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-18T00:00:57.483202+00:00",
+        "retry_after": "2026-10-19T00:00:57.483202+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "AI동영상",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-18T00:00:57.483202+00:00",
+        "retry_after": "2026-10-19T00:00:57.483202+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "가계부어플",
+        "reason_code": "temporary_failure",
+        "failed_at": "2026-10-18T00:00:57.483202+00:00",
+        "retry_after": "2026-10-18T06:00:57.483202+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "OFFICE",
         "reason_code": "intent_mismatch",
@@ -13840,91 +13826,11 @@
       }
     ],
     "latest_issue_attempt": {
-      "research_stop_reason": "latest_listing_exhausted",
-      "evaluated_candidates": 4,
-      "seeds": [
-        "post-quantum cryptography",
-        "Assured Controls rules",
-        "skills in the Gemini app",
-        "client-side encrypted PDF",
-        "AI Inbox",
-        "Gmail Live"
-      ],
+      "research_stop_reason": "no_latest_sources",
+      "evaluated_candidates": 0,
+      "seeds": [],
       "held": [],
-      "rejected": [
-        {
-          "keyword": "post-quantum cryptography",
-          "reason": "search intent or official evidence does not support an article",
-          "decision_diagnostics": {
-            "official_sources": [
-              {
-                "url": "https://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-16-2026.html",
-                "title": "Google Workspace Updates: Google Workspace Weekly Recap - October 16, 2026",
-                "excerpt_chars": 3461
-              }
-            ],
-            "analysis_status": "supported_false",
-            "model_rejection_opinion": {
-              "kind": "model_opinion",
-              "code": "category_mismatch"
-            }
-          }
-        },
-        {
-          "keyword": "Assured Controls rules",
-          "reason": "search intent or official evidence does not support an article",
-          "decision_diagnostics": {
-            "official_sources": [
-              {
-                "url": "https://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-16-2026.html",
-                "title": "Google Workspace Updates: Google Workspace Weekly Recap - October 16, 2026",
-                "excerpt_chars": 3461
-              }
-            ],
-            "analysis_status": "supported_false",
-            "model_rejection_opinion": {
-              "kind": "model_opinion",
-              "code": "source_missing_detail"
-            }
-          }
-        },
-        {
-          "keyword": "skills in the Gemini app",
-          "reason": "search intent or official evidence does not support an article",
-          "decision_diagnostics": {
-            "official_sources": [
-              {
-                "url": "https://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-16-2026.html",
-                "title": "Google Workspace Updates: Google Workspace Weekly Recap - October 16, 2026",
-                "excerpt_chars": 3461
-              }
-            ],
-            "analysis_status": "supported_false",
-            "model_rejection_opinion": {
-              "kind": "model_opinion",
-              "code": "other"
-            }
-          }
-        },
-        {
-          "keyword": "client-side encrypted PDF",
-          "reason": "search intent or official evidence does not support an article",
-          "decision_diagnostics": {
-            "official_sources": [
-              {
-                "url": "https://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-16-2026.html",
-                "title": "Google Workspace Updates: Google Workspace Weekly Recap - October 16, 2026",
-                "excerpt_chars": 3461
-              }
-            ],
-            "analysis_status": "supported_false",
-            "model_rejection_opinion": {
-              "kind": "model_opinion",
-              "code": "source_missing_detail"
-            }
-          }
-        }
-      ],
+      "rejected": [],
       "latest_issue_listing": [
         {
           "url": "https://workspaceupdates.googleblog.com/2026/10/weekly-recap-10-16-2026.html",
@@ -13937,124 +13843,82 @@
     },
     "analysis_diagnostics": [
       {
-        "stage": "shortlist",
+        "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 12483
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6149
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 11573
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8781
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10805
+        "elapsed_ms": 9692
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 5549
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6159
+        "elapsed_ms": 6643
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 20929
+        "elapsed_ms": 22093
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 5613
+        "elapsed_ms": 7567
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7137
+        "elapsed_ms": 5947
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6232
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 7125
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 22519
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8181
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8888
       },
       {
         "stage": "official_research",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 30094
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 10520
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6002
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8004
-      },
-      {
-        "stage": "official_research",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 26951
+        "elapsed_ms": 38097
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 22239
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 5857
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 5746
+        "elapsed_ms": 22901
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 24417
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 13039
+        "elapsed_ms": 14512
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -14066,12 +13930,6 @@
         "query": "업무 도구 신규 기능 공식 발표 after:2026-10-17 before:2026-10-19",
         "provider": "codex_native_search",
         "results": [
-          {
-            "url": "https://gandandogu.co.kr/",
-            "domain": "gandandogu.co.kr",
-            "title": "간단도구 — 1인 사업자·소상공인을 위한 초저가 업무 도구 플랫폼",
-            "snippet": "무료 계산기 22종 서식 만들기 11종 사장님 도구 ... 물건은 받았는데 아직 안 낸 돈이 얼마인지 모르면 통장 잔고가 내 돈처럼 보이고, 월말에 거래처 계산서가"
-          },
           {
             "url": "https://www.gonggoitda.com/",
             "domain": "www.gonggoitda.com",
@@ -14091,16 +13949,28 @@
             "snippet": "업무플랫폼과 그룹웨어, 뭐가 다른가 그룹웨어 개별 도입 vs 올인원 업무플랫폼 도입 시 차이 그룹웨어 개별 도입 시 발생하는 문제 올인원 업무플랫폼이 해결하는 것 업무플랫폼 선택"
           },
           {
-            "url": "https://techhaedap.com/",
-            "domain": "techhaedap.com",
-            "title": "테크해답 – 공식 자료로 확인한 PC·스마트폰·앱·AI 해답",
-            "snippet": "챗GPT 보이스 한국어 목소리 변경 설정 방법과 신규 음성 확인 ChatGPT Live의 한국어 음성 햇살·한울은 계정에 표시되는 목록에서 선택합니다. ... 공식 문서의 대상 제품·발표 내용을"
+            "url": "https://kind.krx.co.kr/external/dst/irReference/17239/%5B2025%5D%20%EC%9C%A0%EB%B9%84%EC%98%A8%20IR%20Book_25%EB%85%84%203%EB%B6%84%EA%B8%B0.pdf",
+            "domain": "kind.krx.co.kr",
+            "title": "Microsoft PowerPoint - [Coporate day]  D( IR Deck_8.21_˘\u0015",
+            "snippet": "| 서비스 | 기반 및 기능 | 상세 내용 | ... | 퀴즈 자동생성 | 강의 자료 기반<br>퀴즈 자동 생성 | • 교수가 선택한 자료(텍스트,"
+          },
+          {
+            "url": "https://kois.co.kr/geo/answers/moq-37b5adda",
+            "domain": "kois.co.kr",
+            "title": "산업용 부품의 최소주문수량(MOQ)·샘플·금형비·양산단가는 어떻게 비교해야 하나요?",
+            "snippet": "샘플이 양산 공정으로 만든 승인용 시제품인지, MOQ가 발주·품번·옵션·연간약정 중 어디에 적용되는지, 금형 소유·수명·보관·수정·반환 조건이 무엇인지, 양산단가에 검사·성적서·포장·운송·불량대체가 포함됐는지를 확인합니다. ... * MOQ가 품번별인지, 여러 규격을"
+          },
+          {
+            "url": "https://start.zuzu.network/resource/blog/daouoffice-hr-shiftee-shopl-vs-zuzu-hr/",
+            "domain": "start.zuzu.network",
+            "title": "우리 기업에 맞는 인사 툴 고르기 – 다우오피스HR·시프티·샤플·ZUZU start 비교",
+            "snippet": "엑셀로 버티던 이 업무가 직원 10명 안팎에서 부담스러워지면서 다우오피스HR·시프티·샤플 같은 근태관리 서비스를 찾아보게 됩니다. ... 이 글은 2026년 10월 기준 각 서비스의 공식 웹사이트에 공개된"
           },
           {
             "url": "https://baro-order.com/solution/process/prototype/",
             "domain": "baro-order.com",
             "title": "시제품 · 목업 제작 | 바로발주",
-            "snippet": "시제품은 완성품이 아니라 검증 도구입니다. ... 시제품 제작이 필요하신가요? ... * 외형·조립은 3D 프린팅, 실소재 기능은 CNC, 소량 복제는 진공주형, 파일럿 양산은 QDM입니다. ... 워킹"
+            "snippet": "시제품은 완성품이 아니라 검증 도구입니다. ... 시제품 제작이 필요하신가요? ... * 외형·조립은 3D 프린팅, 실소재 기능은 CNC, 소량 복제는 진공주형, 파일럿 양산은 QDM입니다. ... 시제품은"
           },
           {
             "url": "https://www.adiga.kr/jbp/jnf/jobInfoDetail.do?menuId=PCJBPJNF2000&searchCrCd=K000001024&searchCrSeClsfCd=D999",
@@ -14115,10 +13985,10 @@
             "snippet": "Profound·Otterly·Peec·KIME·Ahrefs·Semrush·블루닷·ChainShift·NNT·팀하이·온더AI·RanketAI 12종을 진입가·기능 매트릭스·비즈니스 규모별 ROI 가이드 3축으로 비교한다. ... AI 가시성 측정 도구 (업계 통칭 AI SEO 도구·AI 브랜드 가시성 진단 서비스, 학술 용어"
           },
           {
-            "url": "https://www.doogo.co/entry.html",
-            "domain": "www.doogo.co",
-            "title": "두고 :: 도매 오픈마켓, 누구나 쉽게 입점하는 B2B 플랫폼",
-            "snippet": "신청하신 카테고리를 기준으로 담당 MD가 꼼꼼하게 심사합니다. ... 점심시간 : 오후 1시 - 2시 / 주말 및 공휴일 휴무 ... 호주·뉴질랜드는 주 3회 (월·수·토), 캐나다·미국은"
+            "url": "https://wwww.dsninfo.or.kr/cost/standard.do?category=LEVEL&type=PRICE",
+            "domain": "wwww.dsninfo.or.kr",
+            "title": "디자인대가기준종합정보시스템",
+            "snippet": "* 사후정산 단계 사업이 종료된 후에 사전 산정된 사업비와 집행된 사업비의 차이를 파악하여 필요 시 정산을 위한 대가를 산정하는 단계 ... 대가기준에 의한 업무의 효율성"
           }
         ]
       },
@@ -14130,10 +14000,16 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://m.saramin.co.kr/job-search/company-info-view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
-            "domain": "m.saramin.co.kr",
+            "url": "https://update.hyundai.com/KR/KO/updateNoticeList?division=2&searchWord=%EC%95%84%EB%B0%98%EB%96%BCad",
+            "domain": "update.hyundai.com",
+            "title": "최신 업데이트 | 내 차를 최신으로, 스마트하게 | 현대 차량 소프트웨어 업데이트",
+            "snippet": "차량 시스템 2026년 10월 차량 무선 소프트웨어 업데이트 안내 (코나, 코나 하이브리드)N 2026-10-14조회수 1,128 차량 시스템 2026년 10월 차량 무선 소프트웨어 업데이트 안내 (아이오닉 5"
+          },
+          {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4?nomo=1",
+            "domain": "www.saramin.co.kr",
             "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "NICE 평가정보 출처 : 기업형태, 매출액, 설립일, 주소, 대표자명, 사업내용, 업종 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... 대표이사 유래형 사임,대표이사"
+            "snippet": "기타 게임 소프트웨어 개발 및 공급업 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
           },
           {
             "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=UC80WFlDV24yNmdHeWpZZEVBNUVSQT09&popup_yn=y",
@@ -14142,16 +14018,22 @@
             "snippet": "기업형태: 중소기업, 주식회사, 수출입 기업 ... 소프트웨어 개발,공급/스포츠영상분석장치,전자감지장치,비디오,영상기기 제조/풋살장,축구장 운영/스포츠 컨설팅 ... 그리고 이른 나이에 은퇴한 선수들에게 강사 경험, 진로교육 등의 서비스를 제공하여 안정적으로 제2의"
           },
           {
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=UC80WFlDV24yNmdHeWpZZEVBNUVSQT09",
+            "domain": "www.saramin.co.kr",
+            "title": "(주)스포잇 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "* 출산의 기쁨을 함께 ... 기업형태: 중소기업, 주식회사, 수출입 기업 ... 소프트웨어 개발,공급/스포츠영상분석장치,전자감지장치,비디오,영상기기 제조/풋살장,축구장 운영/스포츠 컨설팅 ... 그리고 이른 나이에 은퇴한 선수들에게 강사 경험, 진로교육"
+          },
+          {
+            "url": "https://m.saramin.co.kr/job-search/company-info-view?csn=M25lOC9pVDhWY0lSVHV3VUpZNDF1Zz09&searchType=search&searchword=%EA%B0%95%EB%82%A8",
+            "domain": "m.saramin.co.kr",
+            "title": "(주)마키나락스 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "소프트웨어 개발,공급/전자상거래/자연과학,공학연구 개발 ... 마키나락스는 AI로 초생산성 시대를 실현합니다. ... 데이터 통합, 멀티 모델 개발 및 관리, CI/CD/CT 등 AI 모델의 배포와 운영(MLOps)에 필요한 모든"
+          },
+          {
             "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/SHc3YlZPc2c3bk82bFBZenpLZVEvdz09/company_nm/%25ED%2595%259C%25EA%25B5%25AD%25EC%258C%2594%25EC%258A%25A4%25EC%2586%258C%25ED%2594%2584%25ED%258A%25B8%25EC%259B%25A8%25EC%2596%25B4%28%25EC%259C%25A0%29%3Fsrsltid%3DAfmBOor0cR0ZjZEBBURsYkwQbuoWYKmXj0_9a6rofMsstR3aga3NfQOb",
             "domain": "www.saramin.co.kr",
             "title": "한국쌔스소프트웨어(유) 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
             "snippet": "# 한국쌔스소프트웨어(유)기업정보 ... 주요 사업내용 : SAS Group에서 개발한 Software의 사용권 판매 및 유지보수, 소프트웨어와 관련된 교육, 훈련, 컨설팅주요 취급품목 : 고객관계관리솔루션, 데이터웨어하우스 ... 하이퍼포먼스"
-          },
-          {
-            "url": "https://www.seoulsoft.kr/",
-            "domain": "www.seoulsoft.kr",
-            "title": "서울소프트",
-            "snippet": "서울소프트는 ERP·IoT·스마트팩토리·모바일 플랫폼 구축 경험을 바탕으로 제조설비와 생산현장을 데이터 기반으로 전환하는 전문기업입니다.센서·PLC·설비 데이터를 수집하고 실시간 모니터링과 분석을 통해 생산성 향상과 품질 개선을 지원하며, ... *"
           },
           {
             "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=SHlGT0tPcVlwUXZKMjNZbnJpNTVvZz09",
@@ -14176,89 +14058,30 @@
             "domain": "www.sfacspace.com",
             "title": "스팩스페이스",
             "snippet": "* 2026.08.13 AI가 먼저 만들고 사람은 검수…스팩스페이스, 생산성 6.5배 성과로 ‘서비스 AI 리더상’ 수상 * 2026.08.04 스팩스페이스, ‘2025년 데이터바우처 지원사업’ 수요기업 모집 ... * 2025.04.16"
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/company-info-view?csn=TTFCM1p6YW12aGNGU0o5TDFBUFVOdz09",
-            "domain": "m.saramin.co.kr",
-            "title": "(주)유피소프트 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "Image: (주)유피소프트의 기업로고 ... 응용 소프트웨어 개발 및 공급업 ... 서울 성동구 성수이로10길 14, 11층 1106호,1107호,1108호 (성수동2가,에이스 하이앤드 성수타워) 복사하기 ... NICE 평가정보 출처 :"
-          },
-          {
-            "url": "https://m.saramin.co.kr/job-search/company-info-view?csn=SHlGT0tPcVlwUXZKMjNZbnJpNTVvZz09&t_ref_content=generic",
-            "domain": "m.saramin.co.kr",
-            "title": "(주)에스피소프트 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "# (주)에스피소프트 기업정보 ... 컴퓨터 프로그래밍 서비스업 ... 경기 과천시 과천대로7나길 34, 3층 (갈현동,가비아 앳) 복사하기 ... 소규모 조직을 위한 VDI올인원패키지, 브이패스(V-Pass) 출시 ... 주문,"
           }
         ]
       },
       {
-        "keyword": "OFFICE",
+        "keyword": "",
         "category": "생산성",
-        "stage": "native_source_research",
-        "locators": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/system-requirements/end-of-support-for-office-2021",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/microsoft-365-activation-licensing/office-install/using-product-keys-with-microsoft-365",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/troubleshoot-installing-office",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/system-requirements/office-suites",
-            "origin": "model_reported_locator"
-          }
-        ],
-        "searched": true,
-        "coverage_gaps": null
+        "stage": "latest_issue_source",
+        "url": "https://update.hyundai.com/KR/KO/updateNoticeList?division=2&searchWord=%EC%95%84%EB%B0%98%EB%96%BCad",
+        "status": "no_recent_date",
+        "observed_dates": [
+          "2026-06-01",
+          "2026-06-10",
+          "2026-07-09",
+          "2026-07-27",
+          "2026-08-10",
+          "2026-09-10",
+          "2026-09-18",
+          "2026-10-08",
+          "2026-10-12",
+          "2026-10-14"
+        ]
       },
       {
-        "keyword": "OFFICE",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://support.microsoft.com/ko-kr/office/system-requirements/end-of-support-for-office-2021",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://support.microsoft.com/ko-kr/office/system-requirements/end-of-support-for-office-2021",
-        "title": "Office 2021에 대한 지원 종료 | Microsoft Support",
-        "excerpt_chars": 1399
-      },
-      {
-        "keyword": "OFFICE",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://support.microsoft.com/ko-kr/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://support.microsoft.com/ko-kr/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024",
-        "title": "Microsoft 365와 Office 2024의 차이점은 무엇인가요? | Microsoft Support",
-        "excerpt_chars": 6038
-      },
-      {
-        "keyword": "OFFICE",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac",
-        "title": "PC 또는 Mac에서 Microsoft 365 또는 Office 2024 다운로드, 설치 또는 다시 설치 | Microsoft Support",
-        "excerpt_chars": 8000
-      },
-      {
-        "keyword": "출퇴근기록기",
+        "keyword": "가계부어플",
         "category": "생산성",
         "stage": "native_source_research",
         "locators": [],
@@ -14269,8 +14092,8 @@
     "selection_outcome": "research_budget_exhausted",
     "selection_funnel": {
       "measured": 336,
-      "pool": 191,
-      "shortlist_offered_unique": 191,
+      "pool": 188,
+      "shortlist_offered_unique": 188,
       "evaluated": 3,
       "held": 0,
       "rejected": 3,

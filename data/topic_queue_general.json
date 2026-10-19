@@ -38971,7 +38971,7 @@
     "keywords": [
       "이력서작성법"
     ],
-    "status": "pending",
+    "status": "skipped_duplicate",
     "opportunity_evidence": {
       "version": 2,
       "query": "이력서작성법",
@@ -39129,6 +39129,7 @@
     },
     "score": 56.56,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "skipped_at": "2026-10-19T00:07:27.182170"
   }
 ]

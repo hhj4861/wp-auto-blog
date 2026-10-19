@@ -661,6 +661,17 @@
       "status": "failure",
       "completed_at": "2026-10-19T00:07:55.292236+00:00",
       "published_category": "취업"
+    },
+    "2026-10-19:evening": {
+      "scheduled_for": "2026-10-19T18:00:00+09:00",
+      "run_created_at": "2026-10-19T18:00:04+09:00",
+      "start_delay_seconds": 13,
+      "trigger": "external_timer",
+      "run_id": "39226789449",
+      "category": "취업",
+      "slot": "evening",
+      "claimed_at": "2026-10-19T18:00:13.799281+09:00",
+      "status": "started"
     }
   }
 }

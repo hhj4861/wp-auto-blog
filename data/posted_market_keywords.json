@@ -1097,5 +1097,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-20T00:09:14.270295+00:00"
+  },
+  {
+    "key": "제14회호스피스의날기념식",
+    "keyword": "제14회 호스피스의 날 기념식",
+    "topic": "제14회 호스피스의 날 기념식 개최와 11월 생애 말 관련 제도 통합 홍보 자료 배포",
+    "category": "건강",
+    "post_id": 2011,
+    "url": "https://trendpulse.blog/hospice-day-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-20T09:10:21.322217+00:00"
   }
 ]

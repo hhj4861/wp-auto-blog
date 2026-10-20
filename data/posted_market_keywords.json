@@ -1078,5 +1078,24 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-18T00:08:04.314568+00:00"
+  },
+  {
+    "key": "내국수출입부가가치세환급지연",
+    "keyword": "내국수출입 부가가치세 환급지연",
+    "topic": "내국수출입 부가가치세 환급지연 해결 발표: 베트남 과거 거래도 환급 검토",
+    "category": "생활정보",
+    "post_id": 2008,
+    "url": "https://trendpulse.blog/vietnam-vat-refund-delay/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-20T00:09:14.270295+00:00"
   }
 ]

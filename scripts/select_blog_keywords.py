@@ -63,6 +63,12 @@ def main():
     parser.add_argument('--enqueue', action='store_true')
     parser.add_argument('--reuse', action='store_true', help='Reuse a verified report up to 36 hours old')
     args = parser.parse_args()
+    research_seeds = market_module.research_seed_keywords()
+    if research_seeds and (args.category not in CATEGORIES
+            or os.getenv('GITHUB_EVENT_NAME', 'workflow_dispatch') != 'workflow_dispatch'
+            or os.getenv('BLOG_SLOT_TEST') == 'true'
+            or os.getenv('SCHEDULE_RECOVERY') == 'true'):
+        raise ValueError('Research seeds require one explicit manual category')
     if args.category == 'scheduled':
         args.category = category_for_date(datetime.now(KST).date(), args.slot)
     top_n = int(os.getenv('SELECT_TOP_N') or '2')
@@ -111,7 +117,7 @@ def main():
                       if fresh_market_item(x, category) and not duplicate(x['keyword'], x['topic'], titles)
                       and x['keyword'] not in writer_done
                       and (not latest_mode or latest_issues.required(x))]
-            if args.reuse and usable:
+            if args.reuse and usable and not research_seeds:
                 diagnostics = {'checked_at': datetime.now(timezone.utc).isoformat(),
                                'failed_candidates': [], 'reused_keywords': [], 'outcome': 'checking_sources'}
                 accessible = []

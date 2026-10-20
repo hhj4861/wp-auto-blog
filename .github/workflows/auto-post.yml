@@ -33,6 +33,9 @@ on:
       source_urls:
         description: 'Optional official source URLs, one per line (fetched and verified)'
         type: string
+      research_seeds:
+        description: 'Queue only: extra research keywords, one per line (max 8; all gates still apply)'
+        type: string
       resume_draft_id:
         description: 'Existing Codex draft ID to verify and publish; market drafts may receive one evidence repair'
         type: string
@@ -762,6 +765,7 @@ jobs:
       queue: max
     env:
       BLOG_MODE: queue
+      BLOG_RESEARCH_SEEDS: ${{ inputs.research_seeds || '' }}
       BLOG_THUMBNAIL_PROVIDER: codex
       BLOG_COUPANG_TELEGRAM: ${{ (github.event_name != 'workflow_dispatch' || inputs.notify_telegram) && '1' || '0' }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -886,6 +890,10 @@ jobs:
           CONTENT_THINKING_TOKENS: ${{ secrets.CONTENT_THINKING_TOKENS }}
           SCHEDULE_CATEGORY: ${{ steps.daily.outputs.category }}
         run: |
+          if [ -n "$BLOG_RESEARCH_SEEDS" ] && { [ "$BLOG_SLOT_TEST" = true ] || [ "$SCHEDULE_RECOVERY" = true ] || [ -n "$SCHEDULE_CATEGORY" ] || [ -n "$BLOG_RESUME_DRAFT_ID" ]; }; then
+            echo "Research seeds require a normal manual queue run, without slot or draft recovery."
+            exit 1
+          fi
           if [ -n "$BLOG_RESUME_DRAFT_ID" ]; then
             python scripts/run_codex_worker.py
             exit 0

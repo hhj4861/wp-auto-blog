@@ -41528,7 +41528,7 @@
     "keywords": [
       "정신의료기관 입·퇴원 절차 16종 주요서식"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-20T21:20:44.545259+00:00",
@@ -41599,6 +41599,10 @@
     },
     "score": 20,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2017,
+    "url": "https://trendpulse.blog/mental-health-multilingual-forms-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-21T09:07:25.719073"
   }
 ]

@@ -9759,7 +9759,7 @@
   },
   "생산성": {
     "category": "생산성",
-    "selected_at": "2026-10-20T21:17:36.795231+00:00",
+    "selected_at": "2026-10-21T09:01:09.472458+00:00",
     "seeds": [
       "엑셀",
       "노션",
@@ -9767,20 +9767,20 @@
       "시간관리"
     ],
     "selection_version": 8,
-    "research_rounds": 4,
+    "research_rounds": 3,
     "latest_issue_discovery": {
       "window_start": "2026-10-20T00:00:00+09:00",
-      "window_end": "2026-10-21T06:17:36.795231+09:00",
+      "window_end": "2026-10-21T18:01:09.472458+09:00",
       "queries": [
         {
           "query": "업무 도구 신규 기능 공식 발표 after:2026-10-20 before:2026-10-22",
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://wesabok.kr/",
-              "domain": "wesabok.kr",
-              "title": "우리는 사회복지사다 | 사회복지 실무도구",
-              "snippet": "계산기부터 실무서식, 프로그램 아이디어와 동료의 경험까지 필요한 도구를 한곳에 모았습니다. ... 업무도구 사용하기 실무 질문 보기 ... 이미지 규격부터 접근성·QR·폰트·게시 문구까지 최종 홍보물을 단계별로 점검하세요."
+              "url": "https://www.kdca.go.kr/bbs/kdca/53/310394/download.do",
+              "domain": "www.kdca.go.kr",
+              "title": "# 5. 시험일정\n\n<table id=\"e1\">\n\n| 구 분 | 일 정 | 내 용 |\n|-",
+              "snippet": "목) | 질병관리청 홈페이지, 나라일터<br>※ 응시번호는 서류전형 합격자 발표 전까지 응시자의 휴대폰 SMS로 통보 예정 | ... | 서류합격자 발표 | 11. ... | 임용일"
             },
             {
               "url": "https://egovframe.go.kr/home/main.do",
@@ -9789,52 +9789,46 @@
               "snippet": "이 누리집은 대한민국 공식 전자정부 누리집입니다. ... * 2026 전자정부 표준프레임워크 신규 버전 발표회(11월 30일(월), 14시~) 안녕하세요 표준프레임워크센터입니다. ... * 2025 전자정부 표준프레임워크 신규버전 발표회"
             },
             {
+              "url": "https://www.daissong.com/",
+              "domain": "www.daissong.com",
+              "title": "다이쏭 필요한 계산, 다 있어요.",
+              "snippet": "수능 내 마치는 시각 확인탐구 과목 수와 제2외국어 응시를 고르면 내가 마치는 시각을 알려 줍니다지금 뜨는 수시 결과 발표일지원한 대학의 발표일을 넣으면 남은 날을 세고"
+            },
+            {
+              "url": "https://dodok.kr/",
+              "domain": "dodok.kr",
+              "title": "오더마켓",
+              "snippet": "🍽️ 오더마켓 · 오더테이블 식당·매장 주문, 웨이팅, 배달, 라이더 관리 › 🧩 다나가 · 직종별 플랫폼 농가·보험·건설 등 업종별 업무관리 › ... 신규 주문 실시간"
+            },
+            {
+              "url": "https://www.healtharchive.kr/",
+              "domain": "www.healtharchive.kr",
+              "title": "건강기능식품·개별인정 기능성원료 개발 플랫폼 | HealthArchive",
+              "snippet": "## 주요 업무 ... 블랙라즈베리한속단추출복합분말 제2026-27호 · 근력 개선 Lactiplantibacillus plantarum NK151과 Bifidobacterium bifidum NK175의&nbsp; 프로바이오틱스 복합물(LB101)제2026-26호 · 눈 건강 고소애가수분해물 제2026-25호 · 근력 개선"
+            },
+            {
               "url": "https://www.i-um.co.kr/kr/kr/index",
               "domain": "www.i-um.co.kr",
               "title": "I:UM(이음) - 중소기업 홍보·비즈니스 네트워킹 플랫폼",
               "snippet": "## 최신 등록 기업 ... (주)한국산업 배전반 및 전기 자동제어반 제조업 분전반·태양광 분전반·전기차 충전기용 분전반 주문 제작 전문, 대구 검단공단 ... 레치인터내셔널 볼트 및 너트류"
             },
             {
-              "url": "https://comento.kr/job-questions/%EB%AA%A8%EB%93%A0%ED%9A%8C%EC%82%AC/%EB%AA%A8%EB%93%A0%EC%A7%81%EB%AC%B4/%EC%9D%B4%EC%A7%81%ED%95%A0_%ED%9A%8C%EC%82%AC%EC%9D%98%20%EC%97%85%EB%AC%B4%20%EB%8F%84%EA%B5%AC%EB%A5%BC%20%EC%9E%85%EC%82%AC%20%EC%A0%84%EC%97%90%20%EB%AF%B8%EB%A6%AC%20%EB%B0%B0%EC%9B%8C%EC%95%BC%20%ED%95%A0%EA%B9%8C%EC%9A%94-639620",
-              "domain": "comento.kr",
-              "title": "이직할 회사의 업무 도구를 입사 전에 미리 배워야 할까요? | 코멘토",
-              "snippet": "우선 채용공고나 면접에서 해당 도구가 핵심 업무에 직접 사용된다고 확인됐다면 기본 기능을 익히고, 실제 회사 데이터나 내부 권한이 있어야 사용할 수 있는 기능은 입사 후"
+              "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54808782",
+              "domain": "www.saramin.co.kr",
+              "title": "[(사)한국아이알협의회] 2026년도 신입사원 채용공고 - 사람인",
+              "snippet": "• AI 기업분석 보고서 시스템 개발·운영 및 고도화 • 본회 홈페이지 개편 및 신규 기능 개발·운영 • 외부 데이터 연계 및 내부 업무 시스템 간"
             },
             {
-              "url": "https://www.i-um.co.kr/kr/kr",
-              "domain": "www.i-um.co.kr",
-              "title": "I:UM(이음) - 중소기업 홍보·비즈니스 네트워킹 플랫폼",
-              "snippet": "# I:UM(이음) — 중소기업 홍보·비즈니스 네트워킹 플랫폼 ... 전국 지식산업센터·산업단지에 입주한 기업은 우리 단지와 인근 단지의 협력사를 단지 단위로 찾을 수 있습니다. ... I:UM(이음)에서 최적의"
-            },
-            {
-              "url": "https://apps.apple.com/kr/app/%ED%83%80%EC%9E%84%ED%94%84%EB%A1%9C-%EC%8B%9C%EA%B0%84-%EA%B3%84%EC%82%B0%EA%B8%B0/id6748468456",
-              "domain": "apps.apple.com",
-              "title": "‎타임프로: 시간 계산기 앱 - App Store",
-              "snippet": "타임프로 PREMIUM 업그레이드하면 완전한 전문가용 도구 모음을 잠금 해제할 수 있습니다: • 무제한 업무, 로그, 결제 — 필요한 만큼 업무 기록 • 완전한 업무 대시보드"
+              "url": "https://doingbrand.kr/detail-page-production-steps/",
+              "domain": "doingbrand.kr",
+              "title": "상세페이지 제작, AI·캔바로 직접 만드는 법과 외주 비용·준비물 비교 | 스몰브랜드를 한다는 것",
+              "snippet": "신상품을 등록해야 하는데 준비된 자료가 사진 몇 장과 메모뿐이거나, 외주 견적을 받아 봤는데 이 가격이 적당한지 판단하기 어려운 경우입니다. ... 이 자료가 누락되면 촬영을 끝낸"
             },
             {
               "url": "https://comento.kr/job-questions/%EB%AA%A8%EB%93%A0%ED%9A%8C%EC%82%AC/%EB%AA%A8%EB%93%A0%EC%A7%81%EB%AC%B4/%EC%9E%85%EC%82%AC_%EC%A0%84%EC%97%90%EB%8A%94_%EC%97%85%EB%AC%B4_%EA%B3%B5%EB%B6%80%EB%A5%BC_%EC%96%B4%EB%8A%90_%EB%B2%94%EC%9C%84%EA%B9%8C%EC%A7%80_%ED%95%B4%EB%91%90%EB%8A%94_%EA%B2%83%EC%9D%B4_%EC%A2%8B%EC%9D%84%EA%B9%8C%EC%9A%94-639462",
               "domain": "comento.kr",
               "title": "입사 전에는 업무 공부를 어느 범위까지 해두는 것이 좋을까요? | 코멘토",
               "snippet": "내부 업무 방식은 입사 후에 배워야 할 것 같은데, 미리 공부할 부분과 입사 후 확인할 부분을 나누는 기준이 있다면 알려주세요. ... 회사가 별도로 안내한 사전"
-            },
-            {
-              "url": "https://www.gomuin.co.kr/",
-              "domain": "www.gomuin.co.kr",
-              "title": "에스엠프린팅 | 도장·고무인·스탬프 전문 제작",
-              "snippet": "업무 능률을 200% 올리는 스탬프 ... 업무 능률을 200% 올리는 스탬프 ... 축제 · 박람회 · 여행 ... * 사무·기업 ... * 자동스탬프 신형 S-843"
-            },
-            {
-              "url": "https://www.albamon.com/jobs/detail/119827488?productCode=miplus&sc=509",
-              "domain": "www.albamon.com",
-              "title": "[㈜유니에스&마리오쇼핑㈜] | 연월차 따로 드려요 ;) 일본 본점 한국 공식 아부라소바 #신입크루 모집 | 알바몬",
-              "snippet": "# 연월차 따로 드려요 ;) 일본 본점 한국 공식 아부라소바 #신입크루 모집~10/26(월) ... 기업인증 근로계약서약속 4대보험 성희롱예방교육수료 설립36년차 21년11월부터이용중 채용2,274회 적극채용 ... 2026년 최저시급 10,320원"
-            },
-            {
-              "url": "https://insaengfood.com/strength",
-              "domain": "insaengfood.com",
-              "title": "Our Strength | 인생푸드 | 인생아구찜·삼대미역·어화락 운영 외식 프랜차이즈 본사",
-              "snippet": "외식 시스템을 혁신하는 기업으로서 특허 기술부터 ... 3 해산물 이물질 및 냄새 제거용 조성물 및 처리기술 ... 기존 레시피의 지속적인 연구와 개선을 통해 메뉴를 보완하고"
             }
           ]
         },
@@ -9843,34 +9837,34 @@
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/NzNhSHl3T1p4bHc2TXVKN2xjK2RMQT09/company_nm/%28%EC%A3%BC%29%EC%97%90%EC%8A%A4%EC%9D%B4%ED%8B%B0",
-              "domain": "www.saramin.co.kr",
-              "title": "(주)에스이티 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "# (주)에스이티 기업정보응용 소프트웨어 개발 및 공급업 ... 경기 안산시 단원구 풍전로 37-9, 304동 308-비26호 (원곡동,트리플렉스) ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
-            },
-            {
               "url": "https://ymdt.co.kr/",
               "domain": "ymdt.co.kr",
               "title": "연월일시 YMDT | 사주 키오스크 창업·구매·렌탈",
               "snippet": "본사 수수료 매출의 9.9% · 본사 납입 ... 소프트웨어평생 업데이트 포함 · 신규 콘텐츠 자동 배포 · 원격 모니터링 24시간 ... 전액 본사 부담 ·"
             },
             {
-              "url": "https://m.jobkorea.co.kr/Recruit/GI_Read/49854913?sc=640",
-              "domain": "m.jobkorea.co.kr",
-              "title": "㈜소프트파워 채용 - SW개발자 출신 : 세일즈맨 모집 | 잡코리아",
-              "snippet": "㈜소프트파워SW개발자 출신 : 세일즈맨 모집 ... 서울 마포구 성암로 330 (상암동, DMC첨단산업센터) 503호[Button: 지도] ... 2026.08.24(월) ~ 2026.10.24(토) 14시 59분 ... 잡코리아 이력서 양식 ..."
+              "url": "https://www.seoulsoft.kr/",
+              "domain": "www.seoulsoft.kr",
+              "title": "서울소프트",
+              "snippet": "서울소프트는 ERP·IoT·스마트팩토리·모바일 플랫폼 구축 경험을 바탕으로 제조설비와 생산현장을 데이터 기반으로 전환하는 전문기업입니다. ... * 생산성 분석 ... 제조 현장 요구사항 | 서울소프트 제공 기능 ..."
             },
             {
-              "url": "https://www.adecco.com/en-kr/jobs/connected-service-digital-product-seoul-overseas/jn-102026-213696",
-              "domain": "www.adecco.com",
-              "title": "Connected Service & Digital Product | Seoul, 해외 Overseas",
-              "snippet": "차량 연계 디지털 서비스가 한국 시장에서 원활하게 출시·제공· ... •개발팀·Aftersales·CRM·딜러사와 출시 준비 및 운영 이슈 해결•소프트웨어 업데이트·원격 업그레이드(RSU) 및 서비스 개선 관리 ... •데이터 분석·문제해결·기획"
+              "url": "https://www.salted.ltd/",
+              "domain": "www.salted.ltd",
+              "title": "SALTED - Physical Data Platform for Digital Healthcare & Sports Performance",
+              "snippet": "시스템 점검 안내 2026. ... 신규 서비스 출시 안내 2026. ... 디지털 헬스 눈돌린 제약사, '근골격계 재활'서도 격돌 2026. ... 동아ST·솔티드, AI 보행분석 솔루션 '뉴로게이트'"
             },
             {
-              "url": "https://kbench.com/?q=node%2F275925",
-              "domain": "kbench.com",
-              "title": "삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 | 케이벤치 주요뉴스",
-              "snippet": "# 삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 ... 주요 변경 사항으로는 2026년 1월 보안 패치 적용과 함께 기기 전반의 안정성 및"
+              "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=czliU1BBOUFzemZSZmpDdzhWZWVudz09&popup_yn=y",
+              "domain": "www.saramin.co.kr",
+              "title": "골프유닷넷(주) 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+              "snippet": "시스템 소프트웨어 개발 및 공급업 ... 정보제공,시스템개발,소프트웨어개발및공급,회원권중개업,화장품 및 화장용품 도매업,비누 및 세정제 도매업,화장품, 비누 및 방향제 소매업,인터넷전자상거래( ... 국내 골프장 개발 업체 최초 골프장 운영"
+            },
+            {
+              "url": "https://snapshoot.co.kr/",
+              "domain": "snapshoot.co.kr",
+              "title": "스냅슛 | 산업안전 전문기업 | 3M · KStrong · Rothoblaas · Genesi · Honeywell · Ansell",
+              "snippet": "02 CONFINED SPACE & RESCUE 진입 전 측정부터 비상구조까지 밀폐공간 안전 프로그램 가스측정, 환기, 감시인 운영, 출입관리와 함께 데빗암·삼각대·윈치·구조장비를 구성하여 비진입 구조와 비상대응까지 연결되는 현장"
             },
             {
               "url": "https://shinysoft.biz/ko/",
@@ -9879,47 +9873,51 @@
               "snippet": "저희는 그것을 구축하고, 출시하고, 제대로 작동하는 상태로 고객사 팀에 이관하는 기술 파트너입니다. ... 저희는 25년간 소프트웨어가 트럭, 물류 창고, 건설 현장, 병원 등 실제 현장에서"
             },
             {
-              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Qy9LNUlyYjdkRE1YL3RVTEtYcy94Zz09/company_nm/%EC%9C%A0%EB%A1%9C%ED%85%8C%ED%81%AC",
-              "domain": "www.saramin.co.kr",
-              "title": "유로테크 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "컴퓨터 및 주변장치, 소프트웨어 도매업 ... 경남 창원시 성산구 상남로258번길 16-1 ... 해당 정보는 최신 정보와 상이할 수 있고, (주)사람인은 정보의 오류·누락 또는 지연에 대한"
+              "url": "https://kbench.com/?q=node%2F275925",
+              "domain": "kbench.com",
+              "title": "삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 | 케이벤치 주요뉴스",
+              "snippet": "# 삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 ... 주요 변경 사항으로는 2026년 1월 보안 패치 적용과 함께 기기 전반의 안정성 및"
             },
             {
-              "url": "https://www.bosoop.com/stocks/443670/",
-              "domain": "www.bosoop.com",
-              "title": "에스피소프트(443670) 주가·실적·재무제표 분석 | 보숲",
-              "snippet": "에스피소프트는 2023년 352억원에서 2025년 545억원으로 매출이 꾸준히 늘었으나 영업이익은 같은 기간 48억원에서 36억원으로 줄어 외형 성장과 수익성 사이의 괴리가 벌어졌고, 순이익은 2024년 3억원까지 급감한 뒤"
+              "url": "https://r1.community.samsung.com/t5/%EA%B0%A4%EB%9F%AD%EC%8B%9C-s/s25u-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EB%B3%B4%EC%95%88%ED%8C%A8%EC%B9%98/m-p/40004463",
+              "domain": "r1.community.samsung.com",
+              "title": "해결됨: S25U 소프트웨어 업데이트 보안패치 - Samsung Members",
+              "snippet": "# S25U 소프트웨어 업데이트 보안패치(게시글 작성 시간: 10-19-2026 04:52 PM)"
             },
             {
-              "url": "https://www.sourcingstart.co.kr/",
-              "domain": "www.sourcingstart.co.kr",
-              "title": "소싱스타트",
-              "snippet": "거래처(제조사, 유통사)와 소싱 상품을 가장 빠르게, 가장 많이 찾을 수 있는 국내 유일의 유통 B2B 전문 플랫폼 소싱스타트입니다! ... 6286 | 태산종합*** | 온라인몰 오프라인"
+              "url": "https://salespick.co.kr/index.php?quick=popular",
+              "domain": "salespick.co.kr",
+              "title": "세일즈픽 | 대리점·총판·영업아이템 비교",
+              "snippet": "1SP종합렌탈총판점에서 영업파트너 모집제이씨파트너스 주식회사 · 렌탈 신청 6조회 258→2SP무인인형뽑기방 가맹점 영업파트너 모집주식회사 신우정보 · 가맹점 신청 2조회 156→3SP독립형 온라인 통신 플랫폼 분양 및 셀러 모집에이치엔컴퍼니"
             },
             {
-              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/d2pua3dsMEN5VXlBT2pUSEVweXBUZz09/company_nm/%EC%83%81.%EC%A0%8A%ED%94%8C%EB%9E%AB%ED%8F%BC",
-              "domain": "www.saramin.co.kr",
-              "title": "상.젊플랫폼 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "이석한 ... 채소, 과실 및 뿌리작물 소매업,상품 종합 도매업,응용 소프트웨어 개발 및 공급업,광고 대행업,시각 디자인업,인테리어 디자인업,기타 기술 및 직업 훈련학원 ... 해당 정보는 최신 정보와"
+              "url": "https://www.data.go.kr/data/15088934/fileData.do",
+              "domain": "www.data.go.kr",
+              "title": "한국산업단지공단_팩토리온_필지관리_20210731 | 공공데이터포털",
+              "snippet": "이를 통해 산업단지 전체의 생산성 향상과 경쟁력 강화를 도모하고 있습니다. ... * 업데이트 주기수시 (1회성 데이터) ... \"21년 7월말 기준으로 집계된 공장설립온라인지원시스템(factoryon)에 등록된 공장들의 기본정보(회사명,"
             }
           ]
         }
       ],
       "sources": [
         {
+          "url": "https://www.kdca.go.kr/bbs/kdca/53/310394/download.do",
+          "status": "fetch_failed"
+        },
+        {
           "url": "https://egovframe.go.kr/home/main.do",
           "status": "fetch_failed"
         },
         {
-          "url": "https://apps.apple.com/kr/app/%ED%83%80%EC%9E%84%ED%94%84%EB%A1%9C-%EC%8B%9C%EA%B0%84-%EA%B3%84%EC%82%B0%EA%B8%B0/id6748468456",
+          "url": "https://r1.community.samsung.com/t5/%EA%B0%A4%EB%9F%AD%EC%8B%9C-s/s25u-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EB%B3%B4%EC%95%88%ED%8C%A8%EC%B9%98/m-p/40004463",
+          "status": "fetch_failed"
+        },
+        {
+          "url": "https://www.data.go.kr/data/15088934/fileData.do",
           "status": "no_recent_date",
           "observed_dates": [
-            "2025-07-17",
-            "2025-07-28",
-            "2025-07-31",
-            "2025-08-06",
-            "2025-08-15",
-            "2025-08-27"
+            "2021-09-23",
+            "2026-09-17"
           ]
         }
       ],
@@ -9938,7 +9936,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-20T21:17:36.795231+00:00",
+      "checked_at": "2026-10-21T09:01:09.472458+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -9963,7 +9961,6 @@
     "shortlist_research_attempts": 3,
     "unresearched_budget_keywords": [
       "adobestock",
-      "animate",
       "cs2",
       "fastcampus",
       "googlesheet",
@@ -9977,14 +9974,14 @@
       "ms워드",
       "powerbi",
       "sharepoint",
-      "visualstudio",
       "webhard",
-      "결혼준비엑셀",
+      "가계부추천",
       "계획표",
       "공여사들",
       "노션ai",
       "데이콤웹하드",
       "마이크로오피스365",
+      "무료논문사이트",
       "불렛저널다이어리",
       "비쥬얼스튜디오",
       "서베이몽키",
@@ -9998,7 +9995,9 @@
       "엑셀프로그램",
       "오피스",
       "온라인엑셀",
+      "웹하드추천",
       "유튜브엑셀",
+      "캔바사용법",
       "태블로",
       "파워bi",
       "파워포인트뷰어",
@@ -10018,407 +10017,406 @@
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 338,
     "evaluated_candidates": 3,
-    "research_pool_size": 181,
+    "research_pool_size": 178,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "패스트캠프",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        },
-        "monthly_search": 2010,
-        "organic_provider": "codex_native_search",
-        "organic_query": "패스트캠프",
-        "organic_results": [
-          {
-            "url": "https://hsmoa.com/search?query=%ED%8C%A8%EC%8A%A4%ED%8A%B8%EC%BA%A0%ED%94%84",
-            "domain": "hsmoa.com",
-            "title": "패스트캠프 홈쇼핑 검색결과 - 채널별 최저가·방송일정 비교 | 홈쇼핑모아",
-            "snippet": "* [GS샵] [코베아] 와우 패밀리 골드 팝업 텐트 KECX9TI-05 — 판매가 270,000원 ... 홈쇼핑모아 패스트캠프 검색 결과에서 현대홈쇼핑, GS샵, NS홈쇼핑 등 5개 판매 채널의 상품"
-          },
-          {
-            "url": "https://web.joongna.com/search/%ED%8C%A8%EC%8A%A4%ED%8A%B8%EC%BA%A0%ED%94%84",
-            "domain": "web.joongna.com",
-            "title": "패스트캠프 중고거래 | 중고나라 - 안심되는 중고거래",
-            "snippet": "패스트캠프 오페라 베이직3 다크그레이 30,000원 6시간 전 무료배송 ... 패스트캠프 고스펙 오페라스위트 플라이프로2 볼드 패키지 (텐트+플라이) [올리브그린]70,000원 1 18일 전 무료배송"
-          },
-          {
-            "url": "https://www.kca.go.kr/webzine/fileDownload?fileGubun=prewebzine&menuId=journal&systemFileName=20181012102140742.pdf&userFileName=2018+%EC%86%8C%EB%B9%84%EC%9E%90%EC%8B%9C%EB%8C%8009_04-09+%EC%9B%90%ED%84%B0%EC%B9%98+%ED%8C%9D%EC%97%85%ED%85%90%ED%8A%B8.pdf",
-            "domain": "www.kca.go.kr",
-            "title": "원터치 팝업텐트 품질비교",
-            "snippet": "품이 햇빛에 의한 색상변화가 상대적으로 적은 것으로 나 ... * \u0007발수성은 1급~5급으로 평가하며, 5급으로 갈수록 우수함** \u0007로티캠프(캐노피형 팝업텐트 4인용), 코오롱(팝업텐트 K HAUS), 패스트캠프 ... (원터치팝업텐트"
-          },
-          {
-            "url": "https://web.joongna.com/search/%ED%8C%A8%EC%8A%A4%ED%8A%B8%EC%BA%A0%ED%94%84%20%EC%98%A4%ED%86%A0",
-            "domain": "web.joongna.com",
-            "title": "패스트캠프 오토 중고거래 | 중고나라 - 안심되는 중고거래",
-            "snippet": "패스트캠프 오토6 윈도우 플러스(내림)40,000원 3일 전 ... 패스트캠프 오토4 울트라 와이드 원터치 텐트 캠핑입문용 85,000원 4"
-          },
-          {
-            "url": "https://idoogenimage.cafe24.com/designteam/Idoogen_catalog.pdf",
-            "domain": "idoogenimage.cafe24.com",
-            "title": "야전침대·해먹 Bed · Hammok",
-            "snippet": "장작 캔버스 불멍 캐리어 ... 패스트캠프 박스 ... 오거나이저 캠핑 키친툴 ... 사이드 오거나이저 백 ... 캠핑용품 수납가방 ... 패브릭 스트링 파우치 3종 세트"
-          },
-          {
-            "url": "https://thevc.kr/fasttrackasia",
-            "domain": "thevc.kr",
-            "title": "패스트트랙아시아(패스트캠프) - 기업정보 | 투자, 매출, 펀드 - THE VC",
-            "snippet": "Image: [안희철의 M&A 나침반] 창업과 M&A 잇는 벤처스튜디오 제도 - 뉴스 썸네일 이미지 ... 현재 Image: 패스트트랙아시아의 기업 로고 패스트트랙아시아 한국∙액셀러레이터 | 6억 5326만원 1억원"
-          },
-          {
-            "url": "https://www.ssg.com/item/itemView.ssg?itemId=1000028536603",
-            "domain": "www.ssg.com",
-            "title": "패스트캠프 원터치팝업텐트 오페라 스위트 착탈익스텐션 - SSG.COM",
-            "snippet": "패스트캠프 원터치팝업텐트 오페라 스위트 착탈익스텐션 ... 품명 및 모델명 | 패스트캠프 원터치팝업텐트 오페라 스위트 착탈익스텐션 ... 교환/반품 주소 | (08377) 서울 구로구 구로동 170-5번지 우림이비즈센터"
-          },
-          {
-            "url": "https://prod.danawa.com/info/?pcode=2697256",
-            "domain": "prod.danawa.com",
-            "title": "아이두젠 패스트캠프 메가 5 : 다나와 가격비교",
-            "snippet": "# 아이두젠 패스트캠프 메가 5 : 다나와 가격비교 ... 터널형텐트 / 5인용 / 팝업형(원터치) / 오토캠핑용 / 경량 / 무게: 3.2kg / [본체] 내수압: 약"
-          },
-          {
-            "url": "https://web.joongna.com/search/%ED%8C%A8%EC%8A%A4%ED%8A%B8%EC%BA%A0%ED%94%84%20%EC%9B%90%ED%84%B0%EC%B9%98",
-            "domain": "web.joongna.com",
-            "title": "패스트캠프 원터치 중고거래 | 중고나라 - 안심되는 중고거래",
-            "snippet": "이디야 EDIYA 패스트캠프 원터치 텐트 팝니다 76,000원 1 1일 전 무료배송"
-          },
-          {
-            "url": "https://prod.danawa.com/info/?pcode=3304326",
-            "domain": "prod.danawa.com",
-            "title": "아이두젠 패스트캠프 테라6 : 다나와 가격비교",
-            "snippet": "# 아이두젠 패스트캠프 테라6 : 다나와 가격비교### 아이두젠 패스트캠프 테라6 상품비교 ... 터널형텐트 / 6인용 / 오토캠핑용 / 무게: 7kg / [본체] 내수압: 2000mm /"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "패스트캠프",
-          "executed_query": "패스트캠프",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-20T21:17:36.795231+00:00",
-          "raw_sha256": "c6d02a5682ca422cc9961ce70670b8482c6a146a7478a3657d6b3d53ed2443e6",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "* [GS샵] [코베아] 와우 패밀리 골드 팝업 텐트 KECX9TI-05 — 판매가 270,000원 ... 홈쇼핑모아 패스트캠프 검색 결과에서 현대홈쇼핑, GS샵, NS홈쇼핑 등 5개 판매 채널의 상품"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "패스트캠프 오페라 베이직3 다크그레이 30,000원 6시간 전 무료배송 ... 패스트캠프 고스펙 오페라스위트 플라이프로2 볼드 패키지 (텐트+플라이) [올리브그린]70,000원 1 18일 전 무료배송"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "품이 햇빛에 의한 색상변화가 상대적으로 적은 것으로 나 ... * \u0007발수성은 1급~5급으로 평가하며, 5급으로 갈수록 우수함** \u0007로티캠프(캐노피형 팝업텐트 4인용), 코오롱(팝업텐트 K HAUS), 패스트캠프 ... (원터치팝업텐트"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "패스트캠프 오토6 윈도우 플러스(내림)40,000원 3일 전 ... 패스트캠프 오토4 울트라 와이드 원터치 텐트 캠핑입문용 85,000원 4"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "장작 캔버스 불멍 캐리어 ... 패스트캠프 박스 ... 오거나이저 캠핑 키친툴 ... 사이드 오거나이저 백 ... 캠핑용품 수납가방 ... 패브릭 스트링 파우치 3종 세트"
-            },
-            {
-              "result_index": 5,
-              "relevant": false,
-              "quote": "패스트트랙아시아(패스트캠프) - 기업정보 | 투자, 매출, 펀드 - THE VC"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "패스트캠프 원터치팝업텐트 오페라 스위트 착탈익스텐션 ... 품명 및 모델명 | 패스트캠프 원터치팝업텐트 오페라 스위트 착탈익스텐션 ... 교환/반품 주소 | (08377) 서울 구로구 구로동 170-5번지 우림이비즈센터"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "# 아이두젠 패스트캠프 메가 5 : 다나와 가격비교 ... 터널형텐트 / 5인용 / 팝업형(원터치) / 오토캠핑용 / 경량 / 무게: 3.2kg / [본체] 내수압: 약"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "이디야 EDIYA 패스트캠프 원터치 텐트 팝니다 76,000원 1 1일 전 무료배송"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "# 아이두젠 패스트캠프 테라6 : 다나와 가격비교### 아이두젠 패스트캠프 테라6 상품비교 ... 터널형텐트 / 6인용 / 오토캠핑용 / 무게: 7kg / [본체] 내수압: 2000mm /"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": []
-      },
-      {
-        "keyword": "비주얼스튜디오",
+        "keyword": "ANIMATE",
         "reason": "search quality insufficient",
         "hold_reasons": [
-          "insufficient_relevant_results",
-          "low_search_relevance"
+          "insufficient_relevant_sites",
+          "concentrated_search_results"
         ],
-        "monthly_search": 1600,
+        "monthly_search": 1580,
         "organic_provider": "codex_native_search",
-        "organic_query": "비주얼스튜디오",
+        "organic_query": "ANIMATE",
         "organic_results": [
           {
-            "url": "https://bizno.net/?query=%EB%B9%84%EC%A3%BC%EC%96%BC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4",
-            "domain": "bizno.net",
-            "title": "비주얼스튜디오",
-            "snippet": "유한회사 매버릭비주얼스튜디오 ... 이노비주얼스튜디오(INOvisualstudio) ... 서울특별시 강남구 도곡로3길 25"
+            "url": "https://dictionary.cambridge.org/dictionary/english/animate",
+            "domain": "dictionary.cambridge.org",
+            "title": "ANIMATE | English meaning - Cambridge Dictionary",
+            "snippet": "# Meaning of animate in English ... * interanimation ... * reanimation ... The boat halted at various mini-sets where animated figures played out episodes"
           },
           {
-            "url": "https://bejewelstudio.cafe24.com/",
-            "domain": "bejewelstudio.cafe24.com",
-            "title": "비주얼스튜디오",
-            "snippet": "Video Interview비주얼스튜디오와 성공적인 시작을 함께하세요. ... 이름: [Input] 연락처: [Input] 이메일: [Input] 내용: 브랜드/제품명 : 원하시는 서비스 : 상세페이지 제작(기획/디자인/촬영), 영상 촬영, 영상 편집 레퍼런스"
+            "url": "https://dictionary.cambridge.org/us/dictionary/english/animate",
+            "domain": "dictionary.cambridge.org",
+            "title": "ANIMATE | definition in the Cambridge English Dictionary",
+            "snippet": "A sparkle in his eyes animated his face whenever he smiled. ... Animate these blips, and a video like this is the result. ... Any"
           },
           {
-            "url": "https://bejewelstudio.cafe24.com/shopinfo/guide.html",
-            "domain": "bejewelstudio.cafe24.com",
-            "title": "비주얼스튜디오",
-            "snippet": "비회원 주문인경우 6단계에서 주문번호와 승인번호(카드결제시)를 꼭 메모해 두시기 바랍니다. ... - 디지털 콘텐츠의 제공이 개시된 경우, (다만, 가분적 용역 또는 가분적 디지털콘텐츠로 구성된 계약의 경우"
+            "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/animate",
+            "domain": "developer.mozilla.org",
+            "title": "<animate> - SVG | MDN",
+            "snippet": "# <animate> ... Consider providing a mechanism for pausing or disabling animation, as well as using the Reduced Motion Media Query or equivalent User Agent"
           },
           {
-            "url": "https://imweb.me/expert/portfolio-detail/p20240804afcde9ddfd25f",
-            "domain": "imweb.me",
-            "title": "아임웹 전문가 비주얼스튜디오 - 화장품 상세페이지 제작 전문",
-            "snippet": "전문가 홈 비주얼스튜디오비주얼스튜디오는 아임웹 전문가로, 이번 포트폴리오는 스마트스토어, 와디즈, 쿠팡 등 여러 온라인 쇼핑몰에 최적화된 화장품 상세페이지를 제작했어요."
+            "url": "https://dictionary.cambridge.org/us/dictionary/english/animate?topic=life-and-living",
+            "domain": "dictionary.cambridge.org",
+            "title": "ANIMATE | definition in the Cambridge English Dictionary",
+            "snippet": "A sparkle in his eyes animated his face whenever he smiled. ... Animate these blips, and a video like this is the result. ... Any"
           },
           {
-            "url": "https://imweb.me/expert/profile/yov03a65",
-            "domain": "imweb.me",
-            "title": "비주얼스튜디오 | 아임웹 전문가를 만나보세요",
-            "snippet": "# 비주얼스튜디오 ... 저와 함께 브랜드를 만들고 싶으신 분, 고정된 레이아웃 틀에서 벗어나고 싶으신 분, 단순 작업물이 아닌 브랜드의 가치를 담아내는 디자인이 필요하신 분은 언제든"
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/animate",
+            "domain": "developer.mozilla.org",
+            "title": "Element: animate() method - Web APIs | MDN",
+            "snippet": "The `Element` interface's `animate()` method is a shortcut method which creates a new `Animation`, applies it to the element, then plays the animation. ... The"
           },
           {
-            "url": "https://softinfo.co.kr/category/visual-studio/78/",
-            "domain": "softinfo.co.kr",
-            "title": "[Microsoft] Visual Studio 비주얼스튜디오",
-            "snippet": "* 상품명 : Visual Studio Professional 2026 비주얼 스튜디오 기업용 CSP영구 라이선스 (이메일발송/원격설치지원가능)"
+            "url": "https://dictionary.cambridge.org/dictionary/english/animate?topic=making-people-excited-and-interested",
+            "domain": "dictionary.cambridge.org",
+            "title": "ANIMATE | English meaning - Cambridge Dictionary",
+            "snippet": "# Meaning of animate in English ... The boat halted at various mini-sets where animated figures played out episodes of the story. ... Virtual reality"
           },
           {
-            "url": "https://softinfo.co.kr/category/visual-studio/78",
-            "domain": "softinfo.co.kr",
-            "title": "[Microsoft] Visual Studio 비주얼스튜디오",
-            "snippet": "* 상품명 : Visual Studio Professional 2026 비주얼 스튜디오 기업용 CSP영구 라이선스 (이메일발송/원격설치지원가능)"
+            "url": "https://www.oxfordlearnersdictionaries.com/definition/english/animate_1",
+            "domain": "www.oxfordlearnersdictionaries.com",
+            "title": "animate verb - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
+            "snippet": "Definition of animate verb from the Oxford Advanced Learner's Dictionary ... * be animated The much-loved characters have been animated in this new feature film."
           },
           {
-            "url": "https://etcsoft.kr/product/%EB%B9%84%EC%A3%BC%EC%96%BC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4-visualstudio-2022-professional-%EC%98%81%EA%B5%AC-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4/67/",
-            "domain": "etcsoft.kr",
-            "title": "비주얼스튜디오 Visual Studio 2019 Professional 영구라이선스",
-            "snippet": "# 비주얼스튜디오 VisualStudio 2026 Professional 영구 라이선스 ... 비주얼스튜디오 VisualStudio 2026 Professional 영구 라이선스 | [Input] 수량증가 수량감소 | 694000 ( ) ... 마이크로소프트에서는 비주얼"
+            "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/animate_2",
+            "domain": "www.oxfordlearnersdictionaries.com",
+            "title": "animate adjective - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
+            "snippet": "Definition of animate adjective from the Oxford Advanced Learner's Dictionary# animate"
           },
           {
-            "url": "https://it-technician.tistory.com/70",
-            "domain": "it-technician.tistory.com",
-            "title": "[비주얼스튜디오 2026] 단축키 설정 :: IT 기술자",
-            "snippet": "## [비주얼스튜디오 2026] 단축키 설정 ... 닫기\" 명령을 선택하고 선택한 명령의 바로가기에서 Ctrl+W 를 선택하고 제거 버튼을 누른다."
+            "url": "https://www.oxfordlearnersdictionaries.com/definition/english/animate_2",
+            "domain": "www.oxfordlearnersdictionaries.com",
+            "title": "animate adjective - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com",
+            "snippet": "Definition of animate adjective from the Oxford Advanced Learner's Dictionary# animate"
           },
           {
-            "url": "https://www.inflearn.com/community/questions/1090406/%EB%B9%84%EC%A3%BC%EC%96%BC%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EC%98%A4%EB%A5%98",
-            "domain": "www.inflearn.com",
-            "title": "비주얼스튜디오 한글 입력 오류 - 인프런 | 커뮤니티 질문&답변",
-            "snippet": "## 비주얼스튜디오 한글 입력 오류 ... 비주얼스튜디오에서 한글 입력 후 방향키를 누르면 아래 첨부한 사진과 같이 입력한 한글이 GS RS ..."
+            "url": "https://motion.dev/docs/animate",
+            "domain": "motion.dev",
+            "title": "animate() | Create JavaScript, SVG animations | Motion",
+            "snippet": "Any value supported by `animate` can be animated in sequences, mixing HTML & SVGs, motion values and objects in the same animation:"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "비주얼스튜디오",
-          "executed_query": "비주얼스튜디오",
+          "query": "ANIMATE",
+          "executed_query": "ANIMATE",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-20T21:17:36.795231+00:00",
-          "raw_sha256": "7809ec40ac38bf32537b9d2d4f1217a055c5c250807c9adbb09977d285f2b386",
+          "checked_at": "2026-10-21T09:01:09.472458+00:00",
+          "raw_sha256": "17f0d869547c77fc64fddf5de236b6254a705f8415a78388c6e686fc064bfb54",
           "decisions": [
             {
               "result_index": 0,
-              "relevant": false,
-              "quote": "유한회사 매버릭비주얼스튜디오 ... 이노비주얼스튜디오(INOvisualstudio) ... 서울특별시 강남구 도곡로3길 25"
+              "relevant": true,
+              "quote": "ANIMATE | English meaning - Cambridge Dictionary"
             },
             {
               "result_index": 1,
-              "relevant": false,
-              "quote": "Video Interview비주얼스튜디오와 성공적인 시작을 함께하세요. ... 이름: [Input] 연락처: [Input] 이메일: [Input] 내용: 브랜드/제품명 : 원하시는 서비스 : 상세페이지 제작(기획/디자인/촬영), 영상 촬영, 영상 편집 레퍼런스"
+              "relevant": true,
+              "quote": "ANIMATE | definition in the Cambridge English Dictionary"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "비회원 주문인경우 6단계에서 주문번호와 승인번호(카드결제시)를 꼭 메모해 두시기 바랍니다. ... - 디지털 콘텐츠의 제공이 개시된 경우, (다만, 가분적 용역 또는 가분적 디지털콘텐츠로 구성된 계약의 경우"
+              "quote": "<animate> - SVG | MDN"
             },
             {
               "result_index": 3,
-              "relevant": false,
-              "quote": "전문가 홈 비주얼스튜디오비주얼스튜디오는 아임웹 전문가로, 이번 포트폴리오는 스마트스토어, 와디즈, 쿠팡 등 여러 온라인 쇼핑몰에 최적화된 화장품 상세페이지를 제작했어요."
+              "relevant": true,
+              "quote": "ANIMATE | definition in the Cambridge English Dictionary"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "# 비주얼스튜디오 ... 저와 함께 브랜드를 만들고 싶으신 분, 고정된 레이아웃 틀에서 벗어나고 싶으신 분, 단순 작업물이 아닌 브랜드의 가치를 담아내는 디자인이 필요하신 분은 언제든"
+              "quote": "The `Element` interface's `animate()` method is a shortcut method which creates a new `Animation`, applies it to the element, then plays the animation. ... The"
             },
             {
               "result_index": 5,
               "relevant": true,
-              "quote": "* 상품명 : Visual Studio Professional 2026 비주얼 스튜디오 기업용 CSP영구 라이선스 (이메일발송/원격설치지원가능)"
+              "quote": "ANIMATE | English meaning - Cambridge Dictionary"
             },
             {
               "result_index": 6,
               "relevant": true,
-              "quote": "* 상품명 : Visual Studio Professional 2026 비주얼 스튜디오 기업용 CSP영구 라이선스 (이메일발송/원격설치지원가능)"
+              "quote": "animate verb - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com"
             },
             {
               "result_index": 7,
               "relevant": true,
-              "quote": "# 비주얼스튜디오 VisualStudio 2026 Professional 영구 라이선스 ... 비주얼스튜디오 VisualStudio 2026 Professional 영구 라이선스 | [Input] 수량증가 수량감소 | 694000 ( ) ... 마이크로소프트에서는 비주얼"
+              "quote": "animate adjective - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com"
             },
             {
               "result_index": 8,
               "relevant": true,
-              "quote": "## [비주얼스튜디오 2026] 단축키 설정 ... 닫기\" 명령을 선택하고 선택한 명령의 바로가기에서 Ctrl+W 를 선택하고 제거 버튼을 누른다."
+              "quote": "animate adjective - Definition, pictures, pronunciation and usage notes | Oxford Advanced Learner's Dictionary at OxfordLearnersDictionaries.com"
             },
             {
               "result_index": 9,
-              "relevant": true,
-              "quote": "## 비주얼스튜디오 한글 입력 오류 ... 비주얼스튜디오에서 한글 입력 후 방향키를 누르면 아래 첨부한 사진과 같이 입력한 한글이 GS RS ..."
+              "relevant": false,
+              "quote": "animate() | Create JavaScript, SVG animations | Motion"
             }
           ]
         }
       },
       {
-        "keyword": "온리웹하드",
+        "keyword": "VISUALSTUDIO",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_sites",
+          "concentrated_search_results"
+        ],
+        "monthly_search": 1570,
+        "organic_provider": "codex_native_search",
+        "organic_query": "VISUALSTUDIO",
+        "organic_results": [
+          {
+            "url": "https://learn.microsoft.com/en-us/visualstudio/get-started/visual-studio-ide",
+            "domain": "learn.microsoft.com",
+            "title": "What Is Visual Studio? | Microsoft Learn",
+            "snippet": "For a lightweight, cross-platform code editor, see Visual Studio Code."
+          },
+          {
+            "url": "https://visualstudio.microsoft.com/",
+            "domain": "visualstudio.microsoft.com",
+            "title": "Visual Studio: IDE and Code Editor for Software Development",
+            "snippet": "## Halo Studios builds the iconic Halo universe with native code in Visual Studio."
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/visualstudio/get-started/visual-studio-ide?view=vs-2022",
+            "domain": "learn.microsoft.com",
+            "title": "What Is Visual Studio? | Microsoft Learn",
+            "snippet": "For a lightweight, cross-platform code editor, see Visual Studio Code."
+          },
+          {
+            "url": "https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/ide/quickstart-ide-orientation.md",
+            "domain": "github.com",
+            "title": "visualstudio-docs/docs/ide/quickstart-ide-orientation.md at main · MicrosoftDocs/visualstudio-docs · GitHub",
+            "snippet": "The Editor shows the contents of files and is where you do most of your coding work in Visual Studio."
+          },
+          {
+            "url": "https://visualstudio.microsoft.com/products/",
+            "domain": "visualstudio.microsoft.com",
+            "title": "Visual Studio Family of Products - Platform Overview",
+            "snippet": "With an IDE for PC, a cross platform code editor, and cloud based DevOps solutions, developers who chose Visual Studio will always have the easy-to-use"
+          },
+          {
+            "url": "https://visualstudio.microsoft.com/downloads/?cid=learn-onpage-download-install-visual-studio-page-cta",
+            "domain": "visualstudio.microsoft.com",
+            "title": "Visual Studio Downloads for Windows",
+            "snippet": "Visual Studio Downloads for Windows 2026-06-17T07:40:24-07:00"
+          },
+          {
+            "url": "https://visualstudio.microsoft.com/es/downloads/",
+            "domain": "visualstudio.microsoft.com",
+            "title": "Descargas de Visual Studio y VS Code para Windows, Mac, Linux",
+            "snippet": "Descargar Visual Studio Tools, instalación gratuita para Windows, Mac, Linux 2026-02-27T10:16:50-08:00"
+          },
+          {
+            "url": "https://visualstudio.microsoft.com/vs/community/",
+            "domain": "visualstudio.microsoft.com",
+            "title": "Free IDE and Developer Tools - Visual Studio Community",
+            "snippet": "Visual Studio Community – Free IDE and Developer Tools 2026-06-18T12:07:34-07:00"
+          },
+          {
+            "url": "https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/get-started/visual-basic/visual-studio-ide.md",
+            "domain": "github.com",
+            "title": "visualstudio-docs/docs/get-started/visual-basic/visual-studio-ide.md at main · MicrosoftDocs/visualstudio-docs · GitHub",
+            "snippet": "When you open Visual Studio for the first time, you can sign in by using your Microsoft account or your work or school account."
+          },
+          {
+            "url": "https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/ide/advanced-feature-overview.md",
+            "domain": "github.com",
+            "title": "visualstudio-docs/docs/ide/advanced-feature-overview.md at main · MicrosoftDocs/visualstudio-docs · GitHub",
+            "snippet": "Visual Studio has tools to deploy your app to users or customers through options such as Azure, Microsoft Store, ClickOnce, and Windows Installer technologies."
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "VISUALSTUDIO",
+          "executed_query": "VISUALSTUDIO",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-21T09:01:09.472458+00:00",
+          "raw_sha256": "4a499fed75266f7e69a5c67f3798950e6a56a684797caf839e35b19a9f702140",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "What Is Visual Studio? | Microsoft Learn"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "Visual Studio: IDE and Code Editor for Software Development"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "What Is Visual Studio? | Microsoft Learn"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "The Editor shows the contents of files and is where you do most of your coding work in Visual Studio."
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "With an IDE for PC, a cross platform code editor, and cloud based DevOps solutions, developers who chose Visual Studio will always have the easy-to-use"
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "Visual Studio Downloads for Windows"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "Descargas de Visual Studio y VS Code para Windows, Mac, Linux"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "Free IDE and Developer Tools - Visual Studio Community"
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "When you open Visual Studio for the first time, you can sign in by using your Microsoft account or your work or school account."
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "Visual Studio has tools to deploy your app to users or customers through options such as Azure, Microsoft Store, ClickOnce, and Windows Installer technologies."
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "결혼준비엑셀",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
           "insufficient_relevant_sites",
           "low_search_relevance"
         ],
-        "monthly_search": 1590,
+        "monthly_search": 610,
         "organic_provider": "codex_native_search",
-        "organic_query": "온리웹하드",
+        "organic_query": "결혼준비엑셀",
         "organic_results": [
           {
-            "url": "https://www.on.com/ko-kr/shop/apparel/hoodies-sweatshirts",
-            "domain": "www.on.com",
-            "title": "후디 & 스웻셔츠 | On 대한민국",
-            "snippet": "* * * 새로운 색상 Climate Zip Hoodie 남성 – 쌀쌀한 날씨 러닝 아이템₩169,000 ... * * 리미티드 에디션 Club Collective Full Zip Hoodie FKA"
+            "url": "https://gyesannara.com/",
+            "domain": "gyesannara.com",
+            "title": "생활 계산기 - 계산나라",
+            "snippet": "급여·노무실수령액, 4대보험, 퇴직금, 실업급여, 연차계산기 12 · 글 4 자동차취등록세, 할부, 자동차세, 주유비계산기 4 · 글 2 부동산·대출복비, 전월세 전환, 대출 상환계산기 3 · 글"
           },
           {
-            "url": "https://www.on.com/ko-kr/shop/mens/apparel/hoodies-sweatshirts",
-            "domain": "www.on.com",
-            "title": "남성용 후디 & 스웻셔츠 | On 대한민국",
-            "snippet": "* * 리미티드 에디션 Hoodie LOEWE 남성 – 라이프스타일, 올데이₩1,300,000 ... * * * * 새로운 색상 Club Collective 1/4 Zip 남성 – 온종일 지속되는"
+            "url": "https://ulmaji.kr/",
+            "domain": "ulmaji.kr",
+            "title": "생활 계산기 | 월급·세금·대출·부동산 계산 - 얼마지?",
+            "snippet": "* 청약가점 ... 3.3%, 연말정산, 부동산 세금 ... 일상에서 도움이 되는 생활 정보를 확인해보세요. ... 주휴수당이 생기는 15시간 기준을 어떻게 보는지, 금액은 어떻게 계산하는지 정리했어요.2026.09.25"
           },
           {
-            "url": "https://www.on.com/ko-kr/shop/apparel/hoodies-sweatshirts/running",
-            "domain": "www.on.com",
-            "title": "러닝 후디 & 스웻셔츠 | On 대한민국",
-            "snippet": "* * * Climate Shirt 여성 – 추운 계절, 보온성, 아웃도어 어드벤처₩159,000 ... 베스트 셀러 7\" Core Shorts 러닝, 경량, 이너 브리프₩85,000 ... 새로운 색상"
+            "url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_15_01&ttab1=1",
+            "domain": "www.kosaf.go.kr",
+            "title": "한국장학재단",
+            "snippet": "* 기초생활수급자 범위: 생계급여 일반수급자, 생계급여 조건부 수급자, 의료급여 수급자, 보장시설 수급자 ※ 보건복지부 연계 확인 불가 시, 심사기간 내 수급자증명서 제출 필요(서류제출일 기준 1개월"
           },
           {
-            "url": "https://www.on.com/ko-kr/shop/mens/apparel/hoodies-sweatshirts/training",
-            "domain": "www.on.com",
-            "title": "남성용 피트니스 후디: 트레이닝 & 운동 | On 대한민국",
-            "snippet": "[Button: 제품 슬라이드쇼 앞으로 건너뛰기] ... 새로운 색상 Trail Long-T Solar 트레일 러닝, UPF40+, 무덥고 자외선이 강한 날씨 러닝₩129,000 ... 새로운 색상 Core Pants 로드"
+            "url": "https://calcnara.com/calculators/gift-tax",
+            "domain": "calcnara.com",
+            "title": "증여세 계산기 — 2026년 5단계 누진 + 결혼·출산공제 1억 자동 | CalcNara",
+            "snippet": "증여세 계산기는 증여재산가액과 증여자와의 관계, 10년 합산 기준 기 사용 공제액, 결혼·출산공제(2024년 신설) 적용 여부를 입력하면 산출세액에서 신고세액공제 3%를 차감한 납부할 증여세를 계산합니다. ... 단"
           },
           {
-            "url": "https://www.on.com/ko-kr/shop/apparel/road-running",
-            "domain": "www.on.com",
-            "title": "로드 러닝 어패럴 | On 대한민국",
-            "snippet": "* * * 새로운 색상 Core Pants 남성 – 로드 러닝, 장거리 러닝, 올데이₩159,000 ... * * * * * 베스트 셀러 7\" Core Shorts"
+            "url": "https://hohn.kr/",
+            "domain": "hohn.kr",
+            "title": "헌옷훈남이 고객님의 옷장을 비워드려요",
+            "snippet": "약속한 시간에 방문, 비대면으로 안전하게 수거합니다. ... 전체 합산 20kg 이상 시 수거 및 유상 매입 가능오염이 심하거나 훼손된 의류는 수거가 불가능할 수 있습니다. ..."
           },
           {
-            "url": "https://sparkview.co.kr/%EC%98%A8%EB%A6%AC%EC%9B%B9%ED%95%98%EB%93%9C-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%ED%99%9C%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%8C%8C%EC%9D%BC-%EA%B3%B5%EC%9C%A0%EC%99%80-%EB%8B%A4%EC%9A%B4/",
-            "domain": "sparkview.co.kr",
-            "title": "온리웹하드 사용법 및 활용 가이드: 파일 공유와 다운로드 완벽 정리 - MBTI 아카이브",
-            "snippet": "Image: 온리웹하드 사용법 및 활용 가이드: 파일 공유와 다운로드 완벽 정리 ... ## 온리웹하드, 쉽고 빠르게 시작하기 ... ### 온리웹하드는 모바일에서도 사용할 수 있나요? ..."
+            "url": "https://novalabs.co.kr/tools/unemployment-benefit",
+            "domain": "novalabs.co.kr",
+            "title": "실업급여 계산기 | 노바랩 공작소",
+            "snippet": "하루 지급액과 받을 수 있는 일수, 예상 총액을 보여주므로 재취업 준비 기간의 생활비 계획을 세울 때 참고하세요. ... 하한액은 최저임금의 80%에 하루 소정근로시간을 곱한 금액(2026년"
           },
           {
-            "url": "https://www.on.com/ko-kr/shop/tennis/off-court",
-            "domain": "www.on.com",
-            "title": "코트사이드 용품 | On 대한민국",
-            "snippet": "* * * 리미티드 에디션 THE ROGER Wildcard 여성 – 라이프스타일, 올데이₩209,000 * * * 리미티드 에디션 THE ROGER Wildcard 남성 – 라이프스타일, 올데이₩209,000 ..."
+            "url": "https://wonledger.co.kr/gift-tax/",
+            "domain": "wonledger.co.kr",
+            "title": "증여세 계산기 | 원레저",
+            "snippet": "가족에게 돈을 받아도 일정 금액까지는 세금이 없습니다. ... 자녀 결혼 자금 1억 5,000만 · 혼인 공제 배우자에게 6억 미성년 자녀에게 5,000만 손주에게 1억 · 세대"
           },
           {
-            "url": "https://infopolicy.co.kr/only-webhard/",
-            "domain": "infopolicy.co.kr",
-            "title": "온리웹하드 사용방법: 로그인부터 대용량 파일 다운로드까지 - INFOPOLICY",
-            "snippet": "온리웹하드는 로그인 후 파일·폴더를 올리고 내려받거나 다른 사용자와 자료를 공유할 수 있는 업무용 웹하드 서비스입니다. ... 이 글은 온리웹하드 공식 로그인, 기본서비스 이용안내, 프로그램 다운로드"
+            "url": "https://gyesan24.com/gift-tax/",
+            "domain": "gyesan24.com",
+            "title": "증여세 계산기 2026 — 공제 한도·세율표·혼인출산 공제 | 계산24",
+            "snippet": "[Input] 결혼·출산 공제 1억원 적용 ... * 그 밖의 친족 (4촌 이내 혈족, 3촌 이내 인척) 1천만원 ... 여기에 결혼(혼인신고일 전후 2년)이나 출산(출생일부터 2년)을 계기로"
           },
           {
-            "url": "https://www.wooriwear.com/",
-            "domain": "www.wooriwear.com",
-            "title": "우리웨어 공식 사이트 - 단체복·과잠·기업 유니폼 주문제작",
-            "snippet": "설레는 신학기를 위한 캠퍼스 룩 여러분의 단체를 더 특별하게 표현해 보세요.Cotton Products 자켓은 이제 옷장 속으로 우리웨어 면제품 오직 우리웨어에서만. ... 간단한 커스터마이징 유니폼 주문방법을"
+            "url": "https://www.21line.co.kr/new_boksu/?Flex=&form=&subMenu=9&tabIdx=0",
+            "domain": "www.21line.co.kr",
+            "title": "발주처별 투찰하한율- 시설(공사)입찰",
+            "snippet": "일반건설 및 전문건설업 | 50억 미만 ~ 10억 이상 | 88.745% Image: 적용 | 1배 | 3억 미만 ~ 2억 이상 시 종합공사 및 전기ㆍ정보통신ㆍ소방시설ㆍ문화재공사"
           },
           {
-            "url": "https://www.only1.co.kr/index.asp",
-            "domain": "www.only1.co.kr",
-            "title": "비상교육 온리원 | 1등 비상교육이 만든 단 하나의 몰입형 학습",
-            "snippet": "비상교육 온리원 하나로! ... * 오픈 26년 2학기 중간고사 대비 퀵답변 게시판 OPEN 2026.09.21 ... (주말 및 공휴일 휴무)재택/주5일 온리원 선생님 모집 온리원의 든든한파트너 선생님이"
+            "url": "https://www.calculators.ai.kr/unemployment/",
+            "domain": "www.calculators.ai.kr",
+            "title": "실업급여(구직급여) 계산기 — 소정급여일수·상한액 반영 | 계산기",
+            "snippet": "실제 하한액은 이직 전 1일 소정근로시간에 연동돼 8시간 미만이면 이보다 낮아집니다)과 상한액(2026년 고시액 68,100원) 사이로 제한합니다. ... 이직 전 3개월 동안 받은 임금 총액을 그"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "온리웹하드",
-          "executed_query": "온리웹하드",
+          "query": "결혼준비엑셀",
+          "executed_query": "결혼준비엑셀",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-20T21:17:36.795231+00:00",
-          "raw_sha256": "b2287aec8471288bd12de657336ce94429927443ca37b811a7171a144c7b50ca",
+          "checked_at": "2026-10-21T09:01:09.472458+00:00",
+          "raw_sha256": "8adcb0226f6974d3d56468ded8806e5b62a26d113762aad8e2a4f54dc29a923f",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "후디 & 스웻셔츠 | On 대한민국"
+              "quote": "생활 계산기 - 계산나라"
             },
             {
               "result_index": 1,
               "relevant": false,
-              "quote": "남성용 후디 & 스웻셔츠 | On 대한민국"
+              "quote": "생활 계산기 | 월급·세금·대출·부동산 계산 - 얼마지?"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "러닝 후디 & 스웻셔츠 | On 대한민국"
+              "quote": "* 기초생활수급자 범위: 생계급여 일반수급자, 생계급여 조건부 수급자, 의료급여 수급자, 보장시설 수급자 ※ 보건복지부 연계 확인 불가 시, 심사기간 내 수급자증명서 제출 필요(서류제출일 기준 1개월"
             },
             {
               "result_index": 3,
               "relevant": false,
-              "quote": "남성용 피트니스 후디: 트레이닝 & 운동 | On 대한민국"
+              "quote": "증여세 계산기 — 2026년 5단계 누진 + 결혼·출산공제 1억 자동 | CalcNara"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "로드 러닝 어패럴 | On 대한민국"
+              "quote": "헌옷훈남이 고객님의 옷장을 비워드려요"
             },
             {
               "result_index": 5,
-              "relevant": true,
-              "quote": "온리웹하드 사용법 및 활용 가이드: 파일 공유와 다운로드 완벽 정리 - MBTI 아카이브"
+              "relevant": false,
+              "quote": "실업급여 계산기 | 노바랩 공작소"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "코트사이드 용품 | On 대한민국"
+              "quote": "증여세 계산기 | 원레저"
             },
             {
               "result_index": 7,
-              "relevant": true,
-              "quote": "온리웹하드는 로그인 후 파일·폴더를 올리고 내려받거나 다른 사용자와 자료를 공유할 수 있는 업무용 웹하드 서비스입니다. ... 이 글은 온리웹하드 공식 로그인, 기본서비스 이용안내, 프로그램 다운로드"
+              "relevant": false,
+              "quote": "증여세 계산기 2026 — 공제 한도·세율표·혼인출산 공제 | 계산24"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "우리웨어 공식 사이트 - 단체복·과잠·기업 유니폼 주문제작"
+              "quote": "발주처별 투찰하한율- 시설(공사)입찰"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "비상교육 온리원 | 1등 비상교육이 만든 단 하나의 몰입형 학습"
+              "quote": "실업급여(구직급여) 계산기 — 소정급여일수·상한액 반영 | 계산기"
             }
           ]
         }
@@ -10430,11 +10428,12 @@
       "OFFICE",
       "RESEARCH",
       "노션캘린더",
-      "노션템플릿",
+      "비주얼스튜디오",
+      "온리웹하드",
       "웹하드사이트",
       "캘린더"
     ],
-    "research_stop_reason": "round_limit",
+    "research_stop_reason": "pool_exhausted",
     "retry_keywords": [
       "결혼준비엑셀",
       "캔바사용법"
@@ -10446,7 +10445,8 @@
       "OFFICE",
       "RESEARCH",
       "노션캘린더",
-      "노션템플릿",
+      "비주얼스튜디오",
+      "온리웹하드",
       "웹하드사이트",
       "캘린더"
     ],
@@ -10512,12 +10512,12 @@
           "자신감",
           "컴활2급필기독학",
           "윈도우10다운로드",
-          "패스트캠프",
           "스몰웨딩비용",
-          "컴활시험"
+          "컴활시험",
+          "FTP"
         ],
         "proposals": [],
-        "measured_fallback": true,
+        "measured_fallback": false,
         "no_eligible_proposal": true,
         "skipped": [
           {
@@ -10552,7 +10552,7 @@
           },
           {
             "keyword": "컴활1급시험일정",
-            "reason_code": "category_mismatch",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -10562,7 +10562,7 @@
           },
           {
             "keyword": "컴퓨터활용능력1급시험일정",
-            "reason_code": "category_mismatch",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -10806,11 +10806,6 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "패스트캠프",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "스몰웨딩비용",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
@@ -10819,31 +10814,23 @@
             "keyword": "컴활시험",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": [
+          },
           {
-            "keyword": "패스트캠프",
-            "search_query": "패스트캠프",
-            "reason": "bounded_research_of_shortlist_uncertainty",
-            "shortlist_reason_code": "insufficient_specificity"
+            "keyword": "FTP",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
           }
         ],
-        "research_fallback_attempted": [
-          "패스트캠프"
-        ]
+        "research_fallback": []
       },
       {
         "round": 2,
         "offered_keywords": [
-          "FTP",
           "윈도우11프로",
           "컴활2급필기기출문제",
           "컴활필기",
           "윈도우정품",
-          "비주얼스튜디오",
           "컴활1급필기독학",
-          "온리웹하드",
           "아동심리상담센터",
           "ANIMATE",
           "컴퓨터활용능력2급필기",
@@ -10895,17 +10882,15 @@
           "한글워드",
           "게으름",
           "한국어실용글쓰기",
-          "연봉순위"
+          "연봉순위",
+          "엑셀정품",
+          "WEBHARD",
+          "MS워드"
         ],
         "proposals": [],
         "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
-          {
-            "keyword": "FTP",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "윈도우11프로",
             "reason_code": "category_mismatch",
@@ -10927,18 +10912,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "비주얼스튜디오",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "컴활1급필기독학",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "온리웹하드",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11200,33 +11175,45 @@
             "keyword": "연봉순위",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "엑셀정품",
+            "reason_code": "purchase_intent_unclear",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "WEBHARD",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MS워드",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "비주얼스튜디오",
-            "search_query": "비주얼스튜디오",
+            "keyword": "ANIMATE",
+            "search_query": "ANIMATE",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           },
           {
-            "keyword": "온리웹하드",
-            "search_query": "온리웹하드",
+            "keyword": "VISUALSTUDIO",
+            "search_query": "VISUALSTUDIO",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           }
         ],
         "research_fallback_attempted": [
-          "비주얼스튜디오",
-          "온리웹하드"
+          "ANIMATE",
+          "VISUALSTUDIO"
         ]
       },
       {
         "round": 3,
         "offered_keywords": [
-          "엑셀정품",
-          "WEBHARD",
-          "MS워드",
           "엑셀가격",
           "마이크로오피스구매",
           "UXUI디자인",
@@ -11283,27 +11270,15 @@
           "컴퓨터활용1급",
           "마이크로소프트엑셀구매",
           "내신5등급대학",
-          "결혼준비엑셀"
+          "결혼준비엑셀",
+          "캔바사용법",
+          "POWERBI",
+          "노션AI"
         ],
         "proposals": [],
-        "measured_fallback": false,
+        "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
-          {
-            "keyword": "엑셀정품",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "WEBHARD",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MS워드",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "엑셀가격",
             "reason_code": "category_mismatch",
@@ -11316,7 +11291,7 @@
           },
           {
             "keyword": "UXUI디자인",
-            "reason_code": "category_mismatch",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11326,7 +11301,7 @@
           },
           {
             "keyword": "무료논문사이트",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11371,7 +11346,7 @@
           },
           {
             "keyword": "가계부추천",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11441,7 +11416,7 @@
           },
           {
             "keyword": "웹하드추천",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11461,7 +11436,7 @@
           },
           {
             "keyword": "컴활1급실기독학",
-            "reason_code": "duplicate_intent",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11526,7 +11501,7 @@
           },
           {
             "keyword": "텍스트마이닝",
-            "reason_code": "category_mismatch",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -11586,56 +11561,85 @@
           },
           {
             "keyword": "결혼준비엑셀",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": []
-      },
-      {
-        "round": 4,
-        "offered_keywords": [
-          "캔바사용법"
-        ],
-        "proposals": [],
-        "measured_fallback": false,
-        "no_eligible_proposal": true,
-        "skipped": [
+          },
           {
             "keyword": "캔바사용법",
+            "reason_code": "not_reported",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "POWERBI",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "노션AI",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           }
         ],
-        "research_fallback": []
+        "research_fallback": [
+          {
+            "keyword": "결혼준비엑셀",
+            "search_query": "결혼준비엑셀",
+            "reason": "bounded_research_of_shortlist_uncertainty",
+            "shortlist_reason_code": "not_reported"
+          }
+        ],
+        "research_fallback_attempted": [
+          "결혼준비엑셀"
+        ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "패스트캠프",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 2010,
-        "organic_query": "패스트캠프"
-      },
-      {
-        "keyword": "비주얼스튜디오",
+        "keyword": "ANIMATE",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 1600,
-        "organic_query": "비주얼스튜디오"
+        "monthly_search": 1580,
+        "organic_query": "ANIMATE"
       },
       {
-        "keyword": "온리웹하드",
+        "keyword": "VISUALSTUDIO",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 1590,
-        "organic_query": "온리웹하드"
+        "monthly_search": 1570,
+        "organic_query": "VISUALSTUDIO"
+      },
+      {
+        "keyword": "결혼준비엑셀",
+        "status": "rejected",
+        "reason": "search quality insufficient",
+        "monthly_search": 610,
+        "organic_query": "결혼준비엑셀"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "결혼준비엑셀",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-21T09:01:09.472458+00:00",
+        "retry_after": "2026-10-22T09:01:09.472458+00:00",
+        "attempts": 2
+      },
+      {
+        "keyword": "ANIMATE",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-21T09:01:09.472458+00:00",
+        "retry_after": "2026-10-22T09:01:09.472458+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "VISUALSTUDIO",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-21T09:01:09.472458+00:00",
+        "retry_after": "2026-10-22T09:01:09.472458+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "패스트캠프",
         "reason_code": "temporary_failure",
@@ -12393,13 +12397,6 @@
         "attempts": 1
       },
       {
-        "keyword": "결혼준비엑셀",
-        "reason_code": "temporary_failure",
-        "failed_at": "2026-09-27T13:12:59.222737+00:00",
-        "retry_after": "2026-09-27T19:12:59.222737+00:00",
-        "attempts": 1
-      },
-      {
         "keyword": "서류정리",
         "reason_code": "search_quality",
         "failed_at": "2026-09-27T13:12:59.222737+00:00",
@@ -12456,85 +12453,73 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7152
+        "elapsed_ms": 7131
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 5707
+        "elapsed_ms": 7490
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7743
+        "elapsed_ms": 8342
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 14337
+        "elapsed_ms": 26328
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 29828
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 8980
+        "elapsed_ms": 6222
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 9812
-      },
-      {
-        "stage": "official_research",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 39734
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 24968
+        "elapsed_ms": 8318
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6745
+        "elapsed_ms": 8472
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7300
+        "elapsed_ms": 7768
+      },
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 26378
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6689
+        "elapsed_ms": 5940
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6702
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 26700
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6996
+        "elapsed_ms": 7670
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -12547,10 +12532,10 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://wesabok.kr/",
-            "domain": "wesabok.kr",
-            "title": "우리는 사회복지사다 | 사회복지 실무도구",
-            "snippet": "계산기부터 실무서식, 프로그램 아이디어와 동료의 경험까지 필요한 도구를 한곳에 모았습니다. ... 업무도구 사용하기 실무 질문 보기 ... 이미지 규격부터 접근성·QR·폰트·게시 문구까지 최종 홍보물을 단계별로 점검하세요."
+            "url": "https://www.kdca.go.kr/bbs/kdca/53/310394/download.do",
+            "domain": "www.kdca.go.kr",
+            "title": "# 5. 시험일정\n\n<table id=\"e1\">\n\n| 구 분 | 일 정 | 내 용 |\n|-",
+            "snippet": "목) | 질병관리청 홈페이지, 나라일터<br>※ 응시번호는 서류전형 합격자 발표 전까지 응시자의 휴대폰 SMS로 통보 예정 | ... | 서류합격자 발표 | 11. ... | 임용일"
           },
           {
             "url": "https://egovframe.go.kr/home/main.do",
@@ -12559,68 +12544,47 @@
             "snippet": "이 누리집은 대한민국 공식 전자정부 누리집입니다. ... * 2026 전자정부 표준프레임워크 신규 버전 발표회(11월 30일(월), 14시~) 안녕하세요 표준프레임워크센터입니다. ... * 2025 전자정부 표준프레임워크 신규버전 발표회"
           },
           {
+            "url": "https://www.daissong.com/",
+            "domain": "www.daissong.com",
+            "title": "다이쏭 필요한 계산, 다 있어요.",
+            "snippet": "수능 내 마치는 시각 확인탐구 과목 수와 제2외국어 응시를 고르면 내가 마치는 시각을 알려 줍니다지금 뜨는 수시 결과 발표일지원한 대학의 발표일을 넣으면 남은 날을 세고"
+          },
+          {
+            "url": "https://dodok.kr/",
+            "domain": "dodok.kr",
+            "title": "오더마켓",
+            "snippet": "🍽️ 오더마켓 · 오더테이블 식당·매장 주문, 웨이팅, 배달, 라이더 관리 › 🧩 다나가 · 직종별 플랫폼 농가·보험·건설 등 업종별 업무관리 › ... 신규 주문 실시간"
+          },
+          {
+            "url": "https://www.healtharchive.kr/",
+            "domain": "www.healtharchive.kr",
+            "title": "건강기능식품·개별인정 기능성원료 개발 플랫폼 | HealthArchive",
+            "snippet": "## 주요 업무 ... 블랙라즈베리한속단추출복합분말 제2026-27호 · 근력 개선 Lactiplantibacillus plantarum NK151과 Bifidobacterium bifidum NK175의&nbsp; 프로바이오틱스 복합물(LB101)제2026-26호 · 눈 건강 고소애가수분해물 제2026-25호 · 근력 개선"
+          },
+          {
             "url": "https://www.i-um.co.kr/kr/kr/index",
             "domain": "www.i-um.co.kr",
             "title": "I:UM(이음) - 중소기업 홍보·비즈니스 네트워킹 플랫폼",
             "snippet": "## 최신 등록 기업 ... (주)한국산업 배전반 및 전기 자동제어반 제조업 분전반·태양광 분전반·전기차 충전기용 분전반 주문 제작 전문, 대구 검단공단 ... 레치인터내셔널 볼트 및 너트류"
           },
           {
-            "url": "https://comento.kr/job-questions/%EB%AA%A8%EB%93%A0%ED%9A%8C%EC%82%AC/%EB%AA%A8%EB%93%A0%EC%A7%81%EB%AC%B4/%EC%9D%B4%EC%A7%81%ED%95%A0_%ED%9A%8C%EC%82%AC%EC%9D%98%20%EC%97%85%EB%AC%B4%20%EB%8F%84%EA%B5%AC%EB%A5%BC%20%EC%9E%85%EC%82%AC%20%EC%A0%84%EC%97%90%20%EB%AF%B8%EB%A6%AC%20%EB%B0%B0%EC%9B%8C%EC%95%BC%20%ED%95%A0%EA%B9%8C%EC%9A%94-639620",
-            "domain": "comento.kr",
-            "title": "이직할 회사의 업무 도구를 입사 전에 미리 배워야 할까요? | 코멘토",
-            "snippet": "우선 채용공고나 면접에서 해당 도구가 핵심 업무에 직접 사용된다고 확인됐다면 기본 기능을 익히고, 실제 회사 데이터나 내부 권한이 있어야 사용할 수 있는 기능은 입사 후"
+            "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54808782",
+            "domain": "www.saramin.co.kr",
+            "title": "[(사)한국아이알협의회] 2026년도 신입사원 채용공고 - 사람인",
+            "snippet": "• AI 기업분석 보고서 시스템 개발·운영 및 고도화 • 본회 홈페이지 개편 및 신규 기능 개발·운영 • 외부 데이터 연계 및 내부 업무 시스템 간"
           },
           {
-            "url": "https://www.i-um.co.kr/kr/kr",
-            "domain": "www.i-um.co.kr",
-            "title": "I:UM(이음) - 중소기업 홍보·비즈니스 네트워킹 플랫폼",
-            "snippet": "# I:UM(이음) — 중소기업 홍보·비즈니스 네트워킹 플랫폼 ... 전국 지식산업센터·산업단지에 입주한 기업은 우리 단지와 인근 단지의 협력사를 단지 단위로 찾을 수 있습니다. ... I:UM(이음)에서 최적의"
-          },
-          {
-            "url": "https://apps.apple.com/kr/app/%ED%83%80%EC%9E%84%ED%94%84%EB%A1%9C-%EC%8B%9C%EA%B0%84-%EA%B3%84%EC%82%B0%EA%B8%B0/id6748468456",
-            "domain": "apps.apple.com",
-            "title": "‎타임프로: 시간 계산기 앱 - App Store",
-            "snippet": "타임프로 PREMIUM 업그레이드하면 완전한 전문가용 도구 모음을 잠금 해제할 수 있습니다: • 무제한 업무, 로그, 결제 — 필요한 만큼 업무 기록 • 완전한 업무 대시보드"
+            "url": "https://doingbrand.kr/detail-page-production-steps/",
+            "domain": "doingbrand.kr",
+            "title": "상세페이지 제작, AI·캔바로 직접 만드는 법과 외주 비용·준비물 비교 | 스몰브랜드를 한다는 것",
+            "snippet": "신상품을 등록해야 하는데 준비된 자료가 사진 몇 장과 메모뿐이거나, 외주 견적을 받아 봤는데 이 가격이 적당한지 판단하기 어려운 경우입니다. ... 이 자료가 누락되면 촬영을 끝낸"
           },
           {
             "url": "https://comento.kr/job-questions/%EB%AA%A8%EB%93%A0%ED%9A%8C%EC%82%AC/%EB%AA%A8%EB%93%A0%EC%A7%81%EB%AC%B4/%EC%9E%85%EC%82%AC_%EC%A0%84%EC%97%90%EB%8A%94_%EC%97%85%EB%AC%B4_%EA%B3%B5%EB%B6%80%EB%A5%BC_%EC%96%B4%EB%8A%90_%EB%B2%94%EC%9C%84%EA%B9%8C%EC%A7%80_%ED%95%B4%EB%91%90%EB%8A%94_%EA%B2%83%EC%9D%B4_%EC%A2%8B%EC%9D%84%EA%B9%8C%EC%9A%94-639462",
             "domain": "comento.kr",
             "title": "입사 전에는 업무 공부를 어느 범위까지 해두는 것이 좋을까요? | 코멘토",
             "snippet": "내부 업무 방식은 입사 후에 배워야 할 것 같은데, 미리 공부할 부분과 입사 후 확인할 부분을 나누는 기준이 있다면 알려주세요. ... 회사가 별도로 안내한 사전"
-          },
-          {
-            "url": "https://www.gomuin.co.kr/",
-            "domain": "www.gomuin.co.kr",
-            "title": "에스엠프린팅 | 도장·고무인·스탬프 전문 제작",
-            "snippet": "업무 능률을 200% 올리는 스탬프 ... 업무 능률을 200% 올리는 스탬프 ... 축제 · 박람회 · 여행 ... * 사무·기업 ... * 자동스탬프 신형 S-843"
-          },
-          {
-            "url": "https://www.albamon.com/jobs/detail/119827488?productCode=miplus&sc=509",
-            "domain": "www.albamon.com",
-            "title": "[㈜유니에스&마리오쇼핑㈜] | 연월차 따로 드려요 ;) 일본 본점 한국 공식 아부라소바 #신입크루 모집 | 알바몬",
-            "snippet": "# 연월차 따로 드려요 ;) 일본 본점 한국 공식 아부라소바 #신입크루 모집~10/26(월) ... 기업인증 근로계약서약속 4대보험 성희롱예방교육수료 설립36년차 21년11월부터이용중 채용2,274회 적극채용 ... 2026년 최저시급 10,320원"
-          },
-          {
-            "url": "https://insaengfood.com/strength",
-            "domain": "insaengfood.com",
-            "title": "Our Strength | 인생푸드 | 인생아구찜·삼대미역·어화락 운영 외식 프랜차이즈 본사",
-            "snippet": "외식 시스템을 혁신하는 기업으로서 특허 기술부터 ... 3 해산물 이물질 및 냄새 제거용 조성물 및 처리기술 ... 기존 레시피의 지속적인 연구와 개선을 통해 메뉴를 보완하고"
           }
-        ]
-      },
-      {
-        "keyword": "",
-        "category": "생산성",
-        "stage": "latest_issue_source",
-        "url": "https://apps.apple.com/kr/app/%ED%83%80%EC%9E%84%ED%94%84%EB%A1%9C-%EC%8B%9C%EA%B0%84-%EA%B3%84%EC%82%B0%EA%B8%B0/id6748468456",
-        "status": "no_recent_date",
-        "observed_dates": [
-          "2025-07-17",
-          "2025-07-28",
-          "2025-07-31",
-          "2025-08-06",
-          "2025-08-15",
-          "2025-08-27"
         ]
       },
       {
@@ -12631,34 +12595,34 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/NzNhSHl3T1p4bHc2TXVKN2xjK2RMQT09/company_nm/%28%EC%A3%BC%29%EC%97%90%EC%8A%A4%EC%9D%B4%ED%8B%B0",
-            "domain": "www.saramin.co.kr",
-            "title": "(주)에스이티 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "# (주)에스이티 기업정보응용 소프트웨어 개발 및 공급업 ... 경기 안산시 단원구 풍전로 37-9, 304동 308-비26호 (원곡동,트리플렉스) ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종,"
-          },
-          {
             "url": "https://ymdt.co.kr/",
             "domain": "ymdt.co.kr",
             "title": "연월일시 YMDT | 사주 키오스크 창업·구매·렌탈",
             "snippet": "본사 수수료 매출의 9.9% · 본사 납입 ... 소프트웨어평생 업데이트 포함 · 신규 콘텐츠 자동 배포 · 원격 모니터링 24시간 ... 전액 본사 부담 ·"
           },
           {
-            "url": "https://m.jobkorea.co.kr/Recruit/GI_Read/49854913?sc=640",
-            "domain": "m.jobkorea.co.kr",
-            "title": "㈜소프트파워 채용 - SW개발자 출신 : 세일즈맨 모집 | 잡코리아",
-            "snippet": "㈜소프트파워SW개발자 출신 : 세일즈맨 모집 ... 서울 마포구 성암로 330 (상암동, DMC첨단산업센터) 503호[Button: 지도] ... 2026.08.24(월) ~ 2026.10.24(토) 14시 59분 ... 잡코리아 이력서 양식 ..."
+            "url": "https://www.seoulsoft.kr/",
+            "domain": "www.seoulsoft.kr",
+            "title": "서울소프트",
+            "snippet": "서울소프트는 ERP·IoT·스마트팩토리·모바일 플랫폼 구축 경험을 바탕으로 제조설비와 생산현장을 데이터 기반으로 전환하는 전문기업입니다. ... * 생산성 분석 ... 제조 현장 요구사항 | 서울소프트 제공 기능 ..."
           },
           {
-            "url": "https://www.adecco.com/en-kr/jobs/connected-service-digital-product-seoul-overseas/jn-102026-213696",
-            "domain": "www.adecco.com",
-            "title": "Connected Service & Digital Product | Seoul, 해외 Overseas",
-            "snippet": "차량 연계 디지털 서비스가 한국 시장에서 원활하게 출시·제공· ... •개발팀·Aftersales·CRM·딜러사와 출시 준비 및 운영 이슈 해결•소프트웨어 업데이트·원격 업그레이드(RSU) 및 서비스 개선 관리 ... •데이터 분석·문제해결·기획"
+            "url": "https://www.salted.ltd/",
+            "domain": "www.salted.ltd",
+            "title": "SALTED - Physical Data Platform for Digital Healthcare & Sports Performance",
+            "snippet": "시스템 점검 안내 2026. ... 신규 서비스 출시 안내 2026. ... 디지털 헬스 눈돌린 제약사, '근골격계 재활'서도 격돌 2026. ... 동아ST·솔티드, AI 보행분석 솔루션 '뉴로게이트'"
           },
           {
-            "url": "https://kbench.com/?q=node%2F275925",
-            "domain": "kbench.com",
-            "title": "삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 | 케이벤치 주요뉴스",
-            "snippet": "# 삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 ... 주요 변경 사항으로는 2026년 1월 보안 패치 적용과 함께 기기 전반의 안정성 및"
+            "url": "https://www.saramin.co.kr/zf_user/company-info/view?csn=czliU1BBOUFzemZSZmpDdzhWZWVudz09&popup_yn=y",
+            "domain": "www.saramin.co.kr",
+            "title": "골프유닷넷(주) 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
+            "snippet": "시스템 소프트웨어 개발 및 공급업 ... 정보제공,시스템개발,소프트웨어개발및공급,회원권중개업,화장품 및 화장용품 도매업,비누 및 세정제 도매업,화장품, 비누 및 방향제 소매업,인터넷전자상거래( ... 국내 골프장 개발 업체 최초 골프장 운영"
+          },
+          {
+            "url": "https://snapshoot.co.kr/",
+            "domain": "snapshoot.co.kr",
+            "title": "스냅슛 | 산업안전 전문기업 | 3M · KStrong · Rothoblaas · Genesi · Honeywell · Ansell",
+            "snippet": "02 CONFINED SPACE & RESCUE 진입 전 측정부터 비상구조까지 밀폐공간 안전 프로그램 가스측정, 환기, 감시인 운영, 출입관리와 함께 데빗암·삼각대·윈치·구조장비를 구성하여 비진입 구조와 비상대응까지 연결되는 현장"
           },
           {
             "url": "https://shinysoft.biz/ko/",
@@ -12667,57 +12631,53 @@
             "snippet": "저희는 그것을 구축하고, 출시하고, 제대로 작동하는 상태로 고객사 팀에 이관하는 기술 파트너입니다. ... 저희는 25년간 소프트웨어가 트럭, 물류 창고, 건설 현장, 병원 등 실제 현장에서"
           },
           {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Qy9LNUlyYjdkRE1YL3RVTEtYcy94Zz09/company_nm/%EC%9C%A0%EB%A1%9C%ED%85%8C%ED%81%AC",
-            "domain": "www.saramin.co.kr",
-            "title": "유로테크 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "컴퓨터 및 주변장치, 소프트웨어 도매업 ... 경남 창원시 성산구 상남로258번길 16-1 ... 해당 정보는 최신 정보와 상이할 수 있고, (주)사람인은 정보의 오류·누락 또는 지연에 대한"
+            "url": "https://kbench.com/?q=node%2F275925",
+            "domain": "kbench.com",
+            "title": "삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 | 케이벤치 주요뉴스",
+            "snippet": "# 삼성 '갤럭시 핏 3' 10개월 만에 신규 소프트웨어 업데이트 출시 ... 주요 변경 사항으로는 2026년 1월 보안 패치 적용과 함께 기기 전반의 안정성 및"
           },
           {
-            "url": "https://www.bosoop.com/stocks/443670/",
-            "domain": "www.bosoop.com",
-            "title": "에스피소프트(443670) 주가·실적·재무제표 분석 | 보숲",
-            "snippet": "에스피소프트는 2023년 352억원에서 2025년 545억원으로 매출이 꾸준히 늘었으나 영업이익은 같은 기간 48억원에서 36억원으로 줄어 외형 성장과 수익성 사이의 괴리가 벌어졌고, 순이익은 2024년 3억원까지 급감한 뒤"
+            "url": "https://r1.community.samsung.com/t5/%EA%B0%A4%EB%9F%AD%EC%8B%9C-s/s25u-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EB%B3%B4%EC%95%88%ED%8C%A8%EC%B9%98/m-p/40004463",
+            "domain": "r1.community.samsung.com",
+            "title": "해결됨: S25U 소프트웨어 업데이트 보안패치 - Samsung Members",
+            "snippet": "# S25U 소프트웨어 업데이트 보안패치(게시글 작성 시간: 10-19-2026 04:52 PM)"
           },
           {
-            "url": "https://www.sourcingstart.co.kr/",
-            "domain": "www.sourcingstart.co.kr",
-            "title": "소싱스타트",
-            "snippet": "거래처(제조사, 유통사)와 소싱 상품을 가장 빠르게, 가장 많이 찾을 수 있는 국내 유일의 유통 B2B 전문 플랫폼 소싱스타트입니다! ... 6286 | 태산종합*** | 온라인몰 오프라인"
+            "url": "https://salespick.co.kr/index.php?quick=popular",
+            "domain": "salespick.co.kr",
+            "title": "세일즈픽 | 대리점·총판·영업아이템 비교",
+            "snippet": "1SP종합렌탈총판점에서 영업파트너 모집제이씨파트너스 주식회사 · 렌탈 신청 6조회 258→2SP무인인형뽑기방 가맹점 영업파트너 모집주식회사 신우정보 · 가맹점 신청 2조회 156→3SP독립형 온라인 통신 플랫폼 분양 및 셀러 모집에이치엔컴퍼니"
           },
           {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/d2pua3dsMEN5VXlBT2pUSEVweXBUZz09/company_nm/%EC%83%81.%EC%A0%8A%ED%94%8C%EB%9E%AB%ED%8F%BC",
-            "domain": "www.saramin.co.kr",
-            "title": "상.젊플랫폼 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "이석한 ... 채소, 과실 및 뿌리작물 소매업,상품 종합 도매업,응용 소프트웨어 개발 및 공급업,광고 대행업,시각 디자인업,인테리어 디자인업,기타 기술 및 직업 훈련학원 ... 해당 정보는 최신 정보와"
+            "url": "https://www.data.go.kr/data/15088934/fileData.do",
+            "domain": "www.data.go.kr",
+            "title": "한국산업단지공단_팩토리온_필지관리_20210731 | 공공데이터포털",
+            "snippet": "이를 통해 산업단지 전체의 생산성 향상과 경쟁력 강화를 도모하고 있습니다. ... * 업데이트 주기수시 (1회성 데이터) ... \"21년 7월말 기준으로 집계된 공장설립온라인지원시스템(factoryon)에 등록된 공장들의 기본정보(회사명,"
           }
         ]
       },
       {
-        "keyword": "패스트캠프",
+        "keyword": "",
         "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://www.kca.go.kr/webzine/fileDownload?fileGubun=prewebzine&menuId=journal&systemFileName=20181012102140742.pdf&userFileName=2018+%EC%86%8C%EB%B9%84%EC%9E%90%EC%8B%9C%EB%8C%8009_04-09+%EC%9B%90%ED%84%B0%EC%B9%98+%ED%8C%9D%EC%97%85%ED%85%90%ED%8A%B8.pdf",
-        "outcome": "institutional_source_for_technical_question"
-      },
-      {
-        "keyword": "패스트캠프",
-        "category": "생산성",
-        "stage": "native_source_research",
-        "locators": [],
-        "searched": true,
-        "coverage_gaps": null
+        "stage": "latest_issue_source",
+        "url": "https://www.data.go.kr/data/15088934/fileData.do",
+        "status": "no_recent_date",
+        "observed_dates": [
+          "2021-09-23",
+          "2026-09-17"
+        ]
       }
     ],
-    "selection_outcome": "research_budget_exhausted",
+    "selection_outcome": "no_pass_among_evaluated",
     "selection_funnel": {
       "measured": 338,
-      "pool": 181,
-      "shortlist_offered_unique": 181,
+      "pool": 178,
+      "shortlist_offered_unique": 178,
       "evaluated": 3,
       "held": 0,
       "rejected": 3,
       "selected": 0,
-      "stop_reason": "round_limit"
+      "stop_reason": "pool_exhausted"
     }
   },
   "리뷰": {

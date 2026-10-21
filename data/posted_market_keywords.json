@@ -1116,5 +1116,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-20T09:10:21.322217+00:00"
+  },
+  {
+    "key": "용인중앙시장캠페인",
+    "keyword": "용인중앙시장 캠페인",
+    "topic": "용인중앙시장 캠페인: 10월 20일 어르신 보행안전 교육과 시장 주변 점검",
+    "category": "생활정보",
+    "post_id": 2014,
+    "url": "https://trendpulse.blog/yongin-market-safety-campaign/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-21T00:04:17.215884+00:00"
   }
 ]

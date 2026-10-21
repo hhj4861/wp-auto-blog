@@ -41401,7 +41401,7 @@
     "keywords": [
       "용인중앙시장 캠페인"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-20T12:39:30.713738+00:00",
@@ -41472,7 +41472,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2014,
+    "url": "https://trendpulse.blog/yongin-market-safety-campaign/",
+    "post_status": "publish",
+    "completed_at": "2026-10-21T00:04:18.369171"
   },
   {
     "keyword": "정신의료기관 입·퇴원 절차 16종 주요서식",

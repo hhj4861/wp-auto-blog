@@ -36,3 +36,9 @@
 - 원격 영향: `[DRY RUN] Would create post - skipping actual publish` 및 `No queue/registry changes to commit` 확인. WordPress 게시·초안 생성/큐·이력 변경/Telegram 전송 없음. Codex 인증은 갱신 변경 없이 정리 성공.
 - 첫 403은 새 runner 재실행에서 재현되지 않았으며 차단 원인은 미확정. 인증 변경이나 검증 완화로 처리하지 않음. 이번 실행에서는 Codex 한도 오류가 없어 **실계정 Claude 폴백 성공은 미확인**.
 - 운영 반영 상태: 자동포스팅/키워드 선정 기본 브랜치의 BLOG_CODEX_USAGE_FALLBACK=claude 설정을 실제 Actions env에서 확인. 별도 상주 서버 배포 없이 예약 작업이 main을 checkout하는 운영 구조.
+
+## 추가 실계정 검증 — 2026-10-23
+
+- 기존 로컬 Claude 구독 자격을 메모리에서만 사용(설정·토큰 저장/변경 없음). 모의 Codex usage_limit → 실제 Claude JSON 응답 성공, 같은 실행 후속 JSON 응답도 Claude 성공, Codex 재호출 0회 확인. 운영 CI의 저장된 secret 값과 동일한 자격인지는 확인하지 않음.
+- 실제 Claude WebSearch 확인은 unexpected_search_query로 실패. 가설: 모델의 검색어 변경/추가 필터/복수 검색 중 어느 조건인지 도구 입력·결과의 공개 질의 메타데이터로 구분. 검증 기준을 완화하지 않고 원인을 확인 중.
+- 최초 실제 검증 명령은 자동 권한 검토 시간 초과로 실행되지 않았으며, 허용된 1회 재시도에서 위 생성 검증을 수행.

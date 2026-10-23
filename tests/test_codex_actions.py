@@ -285,7 +285,7 @@ def test_queue_workflow_researches_then_falls_back_to_other_category_stock(tmp_p
     result, calls, output = run_queue_step(tmp_path, '테크', stock='건강', select_exit=1)
     assert result.returncode == 0, result.stderr
     assert calls == ['scripts/pick_slot_category.py --preferred 테크 --latest-only',
-                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
+                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse --recover-slot',
                      'scripts/pick_slot_category.py --preferred 테크',
                      '-m src.main --mode general --from-queue --auto-publish --category 건강']
     assert output == 'category=건강\n'
@@ -297,7 +297,7 @@ def test_manual_slot_test_reproduces_the_scheduled_path_without_claiming(tmp_pat
         extra_env={'BLOG_SLOT_TEST': 'true', 'BLOG_CATEGORY': '테크', 'BLOG_PUBLISH': 'false'})
     assert result.returncode == 0, result.stderr
     assert calls == ['scripts/pick_slot_category.py --preferred 테크 --latest-only',
-                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse',
+                     'scripts/select_blog_keywords.py --category 테크 --enqueue --reuse --recover-slot',
                      'scripts/pick_slot_category.py --preferred 테크',
                      '-m src.main --mode general --from-queue --dry-run --category 건강']
     assert output == 'category=건강\n'

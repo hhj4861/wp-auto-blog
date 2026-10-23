@@ -498,7 +498,8 @@ def test_inventory_recovers_one_transient_get_on_same_page(inventory_read, error
     assert calls[failed_page - 1] == calls[failed_page]
     for call in calls:
         assert call.args == ('https://trendpulse.blog/wp-json/wp/v2/posts',)
-        assert call.kwargs['timeout'] == 45
+        assert call.kwargs['timeout'] == (10, 30)
+        assert call.kwargs['allow_redirects'] is False
         assert call.kwargs['auth'] == ('reader', 'synthetic-password')
         assert call.kwargs['params']['status'] == 'publish,draft,pending,future'
         assert call.kwargs['params']['per_page'] == 100
@@ -881,7 +882,7 @@ def test_inventory_refill_does_not_count_duplicate_stock(tmp_path, monkeypatch):
     queue_path.write_text(json.dumps([stock], ensure_ascii=False))
     monkeypatch.setattr(cli, 'existing_titles', lambda: [stock['topic']])
     seen = {}
-    def refill(queue, now, limit, fresh=None):
+    def refill(queue, now, limit, fresh=None, **_):
         seen['counted'] = fresh(queue[0], '취업', now)
         return []
     monkeypatch.setattr(cli, 'refill_categories', refill)
@@ -1303,7 +1304,7 @@ def test_all_categories_reserve_selected_keywords_from_other_categories(tmp_path
     monkeypatch.setattr(cli, 'existing_titles', lambda: [])
     monkeypatch.setattr('sys.argv', ['select', '--category', 'all'])
     seen = []
-    def select(category, top_n, titles):
+    def select(category, top_n, titles, **_):
         seen.append(list(titles))
         return {'category': category, 'selected': [candidate(category, keyword=category + '서류')]}
     monkeypatch.setattr(cli, 'select_category', select)

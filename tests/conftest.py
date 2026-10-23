@@ -109,3 +109,10 @@ def sample_images():
             "source": "unsplash",
         },
     ]
+
+
+@pytest.fixture(autouse=True)
+def isolated_selection_duplicate_transport(monkeypatch):
+    """Default tests mock the new model boundary; reliability tests exercise its policy."""
+    import src.market_topics as market
+    monkeypatch.setattr(market, 'review_candidate', lambda *a, **kw: False)

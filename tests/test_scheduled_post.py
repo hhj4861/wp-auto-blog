@@ -289,7 +289,9 @@ def test_start_delay_is_durable(tmp_path):
 def test_workflow_passes_target_and_keeps_input_limit():
     wf=yaml.safe_load(Path('.github/workflows/auto-post.yml').read_text())
     inputs=wf.get('on',wf.get(True))['workflow_dispatch']['inputs']
-    assert len(inputs)<=10 and inputs['scheduled_target']['type']=='string'
+    # GitHub.com raised the dispatch limit to 25 on 2025-12-04.
+    # https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs/
+    assert len(inputs)<=25 and inputs['scheduled_target']['type']=='string'
     assert wf['jobs']['post-queue']['env']['SCHEDULE_TARGET']=='${{ inputs.scheduled_target }}'
 
 

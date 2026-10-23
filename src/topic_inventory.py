@@ -48,11 +48,11 @@ def near_posting_slot(now):
     return False
 
 
-def refill_categories(queue, now, limit, *, fresh=fresh_market_item):
-    """Empty categories, nearest upcoming slots first, then spare stock for fallback."""
+def refill_categories(queue, now, limit, *, fresh=fresh_market_item, target=1):
+    """Categories below the reserve target, nearest upcoming slots first."""
     counts = fresh_counts(queue, now, fresh=fresh)
     order = list(dict.fromkeys([*upcoming_categories(now), *CATEGORY_ROTATION]))
-    return [category for category in order if counts[category] == 0][:max(0, limit)]
+    return [category for category in order if counts[category] < target][:max(0, limit)]
 
 
 def pick_category(queue, preferred, now, *, fresh=fresh_market_item):

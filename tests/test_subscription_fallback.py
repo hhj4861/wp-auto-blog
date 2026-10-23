@@ -311,3 +311,35 @@ def test_search_slots_are_not_backfilled_after_invalid_first_ten():
         {'url': 'https://example.com/later', 'title': 'Must not fill missing first-ten slots'}]
     result = claude._events(stream(*search_events(rows=rows)), web=True, query='query')
     assert result['search_rows'] == []
+
+
+def test_observed_standard_websearch_mode_preserves_exact_query_binding():
+    events = search_events(query='Claude Code official documentation')
+    events[0]['message']['content'][0]['input']['mode'] = 'standard'
+    result = claude._events(stream(*events), web=True, query='Claude Code official documentation')
+    assert result['searched'] is True
+    assert result['search_rows'] == [{'url': 'https://example.com/article',
+                                      'title': 'Actual tool title', 'snippet': ''}]
+
+
+@pytest.mark.parametrize('mode', [None, 'deep', 'research', '', True, 1, {}, []])
+def test_unrecognized_websearch_mode_is_not_accepted(mode):
+    events = search_events()
+    events[0]['message']['content'][0]['input']['mode'] = mode
+    with pytest.raises(codex_client.CodexResponseError) as error:
+        claude._events(stream(*events), web=True, query='query')
+    assert error.value.reason == 'unexpected_search_query'
+
+
+@pytest.mark.parametrize('extra', [
+    {'query': 'different', 'mode': 'standard'},
+    {'mode': 'standard', 'allowed_domains': ['example.com']},
+    {'mode': 'standard', 'blocked_domains': ['example.com']},
+    {'mode': 'standard', 'unknown_option': 'anything'},
+])
+def test_standard_mode_does_not_relax_query_filters_or_unknown_arguments(extra):
+    events = search_events()
+    events[0]['message']['content'][0]['input'].update(extra)
+    with pytest.raises(codex_client.CodexResponseError) as error:
+        claude._events(stream(*events), web=True, query='query')
+    assert error.value.reason == 'unexpected_search_query'

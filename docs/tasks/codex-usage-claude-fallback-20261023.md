@@ -16,3 +16,10 @@
 - 제공자 경계: API 과금 전환 없음, 원격 고정 runtime 계약은 명시적으로 유지. Claude native 검색의 빈 snippet은 합성하지 않고 기존 관련성·사이트 수·근거 검증을 적용.
 - 실제 CLI/OAuth 성공은 머지 후 비발행 slot_test로 확인할 항목. 기존 root checkout의 다른 세션 삭제 변경은 보존.
 - 참고: [Claude WebSearch/WebFetch DTO](https://code.claude.com/docs/en/agent-sdk/python#websearch), [Actions context availability](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability).
+
+- 통합 검토 보정: Codex 전용 auth/research 진단은 fallback을 명시적으로 금지하여 Claude 응답을 Codex 정상으로 오인하지 않게 함. 발행 확인은 실제 글 재조회 결과를 제공자와 독립적으로 표시. 이 보정 후 관련 검증 재실행.
+
+- 보정 후 1,278 통과/2 실패: 기존 auth probe 테스트 stand-in이 신규 allow_usage_fallback 인자를 받지 못한 TypeError. fixture에서 false 경계를 직접 검증하도록 갱신하고 중복 단순 테스트 제거 후 최종 검증.
+
+- 최종 통합 결과: 관련 14개 파일 **1,279개 테스트 전부 통과(27.95초)**. 후속 diff 공백 검사에서 발견한 테스트 EOF 빈 줄만 정리.
+- 검토 PR: https://github.com/hhj4861/wp-auto-blog/pull/120 . 작업 브랜치에만 반영하며 main/운영은 승인 대기.

@@ -23,6 +23,7 @@ def test_probe_distinguishes_tool_evidence_and_http_access(monkeypatch, capsys, 
     monkeypatch.setattr(probe, 'CodexSubscriptionClient', Mock(return_value=client))
     monkeypatch.setattr(probe, 'fetch_source', lambda _: {'excerpt': 'official'} if fetched else None)
     assert probe.main() == (0 if expected == 'ok' else 1)
+    assert client.research.call_args.kwargs['allow_usage_fallback'] is False
     output = capsys.readouterr().out
     report = json.loads(output)
     assert report['reason'] == expected

@@ -206,8 +206,11 @@ class CodexSubscriptionClient:
             home=self.home, model=self.model)
         return result
 
-    def research(self, prompt: str) -> dict:
+    def research(self, prompt: str, *, allow_usage_fallback: bool = True) -> dict:
         """Run live web discovery and return independently recorded tool activity."""
+        if not allow_usage_fallback:
+            self.last_provider = 'codex'
+            return self._run(prompt, research=True)
         from src.subscription_fallback import run
         from src.claude_subscription import ClaudeSubscriptionClient
         result, self.last_provider = run(lambda: self._run(prompt, research=True),

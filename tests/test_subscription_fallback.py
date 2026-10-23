@@ -269,13 +269,14 @@ def test_workflows_enable_only_subscription_quota_fallback():
             assert any('claude-agent-sdk' in step.get('run', '') for step in job['steps'])
 
 
-def test_remote_fixed_provider_contract_does_not_mislabel_claude(tmp_path, monkeypatch):
+@pytest.mark.parametrize("method", ["generate", "research"])
+def test_remote_fixed_provider_contract_does_not_mislabel_claude(tmp_path, monkeypatch, method):
     client = codex(tmp_path, monkeypatch)
     monkeypatch.setattr(client, '_run', Mock(side_effect=codex_client.CodexRequestError(1, 'usage limit')))
     backup = Mock()
     monkeypatch.setattr(claude, 'ClaudeSubscriptionClient', backup)
     with pytest.raises(codex_client.CodexRequestError):
-        client.generate('remote contract', draft_only=True, allow_usage_fallback=False)
+        getattr(client, method)('remote contract', allow_usage_fallback=False)
     backup.assert_not_called()
 
 

@@ -42473,7 +42473,7 @@
     "keywords": [
       "PHP2Shell"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-22T21:16:59.951644+00:00",
@@ -42572,6 +42572,10 @@
     },
     "score": 20,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2025,
+    "url": "https://trendpulse.blog/php2shell-security-alert-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-23T09:06:42.318315"
   }
 ]

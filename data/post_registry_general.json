@@ -4986,5 +4986,15 @@
     "category": "취업",
     "identifier": "벤처창업아이템",
     "created_at": "2026-10-22T00:09:15.406398"
+  },
+  {
+    "topic": "PHP2Shell: 10월 22일 사이버위기 ‘주의’ 상향과 PHP 운영자 긴급 대응",
+    "title": "PHP2Shell: 10월 22일 사이버위기 ‘주의’ 상향과 PHP 운영자 긴급 대응",
+    "keywords": [
+      "PHP2Shell"
+    ],
+    "category": "테크",
+    "identifier": "php2shell",
+    "created_at": "2026-10-23T09:06:42.313922"
   }
 ]

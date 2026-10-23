@@ -4,7 +4,7 @@
 - 범위/소유: 이 worktree의 호출 transport, 검색 provenance, Actions 설정/테스트. root의 미완료 파일 보존.
 - 기준: main 96dfdf56a8899e604552a1a58c165d269a320fc9.
 - 완료 기준: 생성/중복/공식조사/검색 한도 폴백, 실행 내 한도 기억, 기존 품질 검증 유지, 관련 테스트 통과, 작업 브랜치 commit/push와 PR 준비.
-- 현재: 사용자 승인으로 main/운영 반영 완료. main 통합 테스트와 실환경 비발행 검증 통과. 실제 한도가 발생한 뒤의 Claude 구독 응답은 아직 미확인. 기존 CLAUDE_CODE_OAUTH_TOKEN secret 사용, 인증 설정 변경 없음.
+- 현재: PR #120/#121 사용자 승인으로 main/운영 반영 완료. 운영 저장 Claude OAuth로 모의 Codex 한도 후 실제 Claude 생성·후속 호출·검색·페이지 조회까지 검증 통과. 인증 설정 변경 없음.
 - 다음: 기존 예약 자동화가 반영된 main을 실행. 실제 한도 발생 시 Claude 전환 로그는 별도 확인 대상이며 이번 비발행 실행에서 성공한 것으로 표시하지 않음.
 
 - 1차 검증: 303 통과, 9 실패. 모두 기존 Codex research dict에 provider 키를 추가한 API shape 변경 때문. Codex 응답 shape는 유지하고 Claude 응답에만 실제 provider를 추가하도록 수정.
@@ -42,3 +42,9 @@
 - 기존 로컬 Claude 구독 자격을 메모리에서만 사용(설정·토큰 저장/변경 없음). 모의 Codex usage_limit → 실제 Claude JSON 응답 성공, 같은 실행 후속 JSON 응답도 Claude 성공, Codex 재호출 0회 확인. 운영 CI의 저장된 secret 값과 동일한 자격인지는 확인하지 않음.
 - 실제 Claude WebSearch 확인은 unexpected_search_query로 실패. 가설: 모델의 검색어 변경/추가 필터/복수 검색 중 어느 조건인지 도구 입력·결과의 공개 질의 메타데이터로 구분. 검증 기준을 완화하지 않고 원인을 확인 중.
 - 최초 실제 검증 명령은 자동 권한 검토 시간 초과로 실행되지 않았으며, 허용된 1회 재시도에서 위 생성 검증을 수행.
+
+## 운영 Claude 검증 완료 — 2026-10-23
+
+- 검색 mode=standard 호환성 수정은 사용자 승인으로 PR #121 머지/운영 반영 완료(e3af2bd).
+- 운영 저장 토큰을 사용한 [실행 39911440077](https://github.com/hhj4861/wp-auto-blog/actions/runs/39911440077) success. 한도 오류만 모의, 실제 Claude 생성·후속 호출·검색 9건·페이지 조회 1건 성공. 로컬 구독 자격으로 대체하지 않음.
+- 운영 main 통합 회귀 908개 통과(9.03초). WordPress 발행/초안 생성·Telegram·인증 설정 변경 없음. 자세한 결과는 [후속 작업 기록](claude-websearch-mode-20261023.md)에 저장.

@@ -135,7 +135,8 @@ def finish(env, path=STATE):
 
 
 def failure_message(env):
-    stages = {'selection': '키워드 선정·검색 수요·출처 검증',
+    stages = {'inventory': '기존 글 목록 조회·연결 복구',
+              'selection': '키워드 선정·검색 수요·출처 검증',
               'generation': '본문 생성·품질 검수',
               'notification': '쿠팡 링크 요청 발송'}
     stage_path = Path(env.get('SCHEDULE_STAGE_PATH', '/nonexistent'))

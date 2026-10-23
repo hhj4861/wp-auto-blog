@@ -825,6 +825,7 @@ jobs:
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
+          echo "BLOG_INVENTORY_PATH=$RUNNER_TEMP/posting-inventory.json" >> "$GITHUB_ENV"
       - name: Restore Codex authentication
         if: steps.daily.outputs.run == 'true'
         env:
@@ -899,6 +900,10 @@ jobs:
           else
             CAT="생활정보"
           fi
+          if [ -n "${BLOG_INVENTORY_PATH:-}" ]; then
+            echo inventory > "$SCHEDULE_STAGE_PATH"
+            python scripts/prepare_posting_inventory.py
+          fi
           echo "Queue category: $CAT"
           echo selection > "$SCHEDULE_STAGE_PATH"
           PUBLISH_CAT="$CAT"
@@ -911,7 +916,7 @@ jobs:
             # Only latest-issue stock skips research; evergreen stock waits for it.
             PUBLISH_CAT="$(python scripts/pick_slot_category.py --preferred "$CAT" --latest-only || true)"
             if [ "$PUBLISH_CAT" != "$CAT" ]; then
-              if ! python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse; then
+              if ! python scripts/select_blog_keywords.py --category "$CAT" --enqueue --reuse --recover-slot; then
                 echo "::warning::$CAT selection held; falling back to verified stock"
               fi
               PUBLISH_CAT="$(python scripts/pick_slot_category.py --preferred "$CAT")"

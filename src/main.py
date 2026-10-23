@@ -367,7 +367,8 @@ def main() -> int:
             results = []
             skips = 0
             career_generated = False
-            while skips < 5:
+            max_skips = len(queue) + 1 if require_market else 5
+            while skips < max_skips:
                 pending_topic = _pick_next()
                 if pending_topic is None and not require_market and args.category == "취업" and not career_generated:
                     # 취업 카테고리는 검증된 니치(GSC 노출/클릭 최상위) —
@@ -421,7 +422,7 @@ def main() -> int:
                     _save_queue()
                     skips += 1
                     logger.warning(
-                        f"중복 판정 → 큐에서 스킵하고 다음 항목 진행 ({skips}/5): "
+                        f"중복 판정 → 큐에서 스킵하고 다음 항목 진행 ({skips}/{max_skips}): "
                         f"{pending_topic['topic']}"
                     )
                     continue

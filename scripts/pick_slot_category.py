@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from dotenv import load_dotenv
 from src.market_topics import CATEGORIES, ROOT, duplicate, existing_titles, fresh_market_item
 from src import latest_issues, topic_inventory
+from src import market_topics as market
 
 QUEUE = ROOT / 'data/topic_queue_general.json'
 
@@ -25,10 +26,26 @@ def main(argv=None):
     titles = existing_titles()
     # The writer skips stock that duplicates a post published after selection;
     # never pick a category whose only stock would be skipped.
-    category = topic_inventory.pick_category(queue, args.preferred, datetime.now(timezone.utc),
-        fresh=lambda row, category, now: (fresh_market_item(row, category, now)
-                                          and not duplicate(row['keyword'], row['topic'], titles)
-                                          and (not args.latest_only or latest_issues.required(row))))
+    now = datetime.now(timezone.utc)
+    while True:
+        category = topic_inventory.pick_category(queue, args.preferred, now,
+            fresh=lambda row, category, now: (fresh_market_item(row, category, now)
+                and not duplicate(row['keyword'], row['topic'], titles)
+                and (not args.latest_only or latest_issues.required(row))))
+        if category is None:
+            break
+        candidates = [row for row in queue if row.get('category') == category
+            and fresh_market_item(row, category, now)
+            and not duplicate(row['keyword'], row['topic'], titles)
+            and (not args.latest_only or latest_issues.required(row))]
+        candidate = max(candidates, key=latest_issues.priority)
+        if not market.review_candidate(candidate, titles):
+            break
+        candidate.update(status='skipped_duplicate', skipped_at=now.isoformat())
+        temp = QUEUE.with_suffix('.tmp')
+        temp.write_text(json.dumps(queue, ensure_ascii=False, indent=2) + '\n')
+        temp.replace(QUEUE)
+        print('Semantic duplicate removed from stock; selecting another topic', file=sys.stderr)
     if category is None:
         print(f'No verified stock for {args.preferred} or any fallback category', file=sys.stderr)
         return 1

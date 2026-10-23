@@ -43,8 +43,8 @@ on:
         options: [morning, evening]
   schedule:
     # Refill verified topic stock ahead of the 09:00/18:00 KST slots. Each run
-    # researches at most SELECT_INVENTORY_LIMIT empty categories (nearest slots
-    # first) and does nothing when every category already has fresh stock.
+    # researches at most SELECT_INVENTORY_LIMIT understocked categories (nearest slots
+    # first) and does nothing when every category has at least two fresh topics.
     - cron: '0 18 * * *'  # 03:00 KST
     - cron: '0 22 * * *'  # 07:00 KST
     - cron: '0 4 * * *'   # 13:00 KST

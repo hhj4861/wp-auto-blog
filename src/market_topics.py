@@ -140,7 +140,7 @@ def historical_terms():
         if not path.exists():
             continue
         for row in json.loads(path.read_text()):
-            if path == queue_path and row.get('status') not in ('completed', 'held_draft'):
+            if path == queue_path and row.get('status') not in ('completed', 'held_draft', 'skipped_duplicate'):
                 continue
             terms.extend(str(row.get(k, '')) for k in ('keyword', 'topic', 'title', 'intent') if row.get(k))
             terms.extend(row.get('keywords') or [])
@@ -179,13 +179,25 @@ def ask(prompt):
         runtime.parse_json)
 
 
+class InventoryUnavailable(RuntimeError):
+    """Closed transport reason; never carries credentials, URLs or response bodies."""
+    def __init__(self, reason):
+        self.reason = reason
+        self.retryable = reason in {'timeout', 'connection_failure', 'http_502', 'http_503', 'http_504'}
+        super().__init__('WordPress inventory unavailable')
+
+
 def existing_titles():
     """Read all published/draft titles, never treat a failed lookup as no duplicates."""
     base = os.environ['WP_GENERAL_URL'].rstrip('/')
     if base != 'https://trendpulse.blog':
         raise ValueError('Market selection is TrendPulse-only')
     auth = (os.environ['WP_GENERAL_USERNAME'], os.environ['WP_GENERAL_APP_PASSWORD'])
-    titles = historical_terms()
+    from src import wordpress_inventory_cache as inventory_cache
+    cached = inventory_cache.load()
+    if cached is not None:
+        return historical_terms() + cached
+    titles = []
     retry_available = True  # One extra GET across the whole inventory, not per page.
     for page in range(1, 101):
         failure = 'transport'
@@ -195,11 +207,26 @@ def existing_titles():
                     response = requests.get(base + '/wp-json/wp/v2/posts', auth=auth,
                         headers={'User-Agent': 'Mozilla/5.0 (TrendPulse topic selection)'},
                         params={'status': 'publish,draft,pending,future', 'per_page': 100,
-                                'page': page, '_fields': 'title,meta'}, timeout=45)
+                                'page': page, '_fields': 'title,meta'}, timeout=(10, 30), allow_redirects=False)
                 except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as error:
                     failure = ('tls_failure' if isinstance(error, requests.exceptions.SSLError)
                                else 'timeout' if isinstance(error, requests.exceptions.Timeout)
                                else 'connection_failure')
+                    import socket
+                    causes, pending = [], [error]
+                    while pending and len(causes) < 12:
+                        cause = pending.pop()
+                        if any(cause is old for old in causes):
+                            continue
+                        causes.append(cause)
+                        pending.extend(x for x in (getattr(cause, '__cause__', None),
+                            getattr(cause, '__context__', None), getattr(cause, 'reason', None),
+                            *getattr(cause, 'args', ())) if isinstance(x, BaseException))
+                    detail = ('dns_failure' if any(isinstance(x, socket.gaierror) for x in causes)
+                              else 'connection_refused' if any(isinstance(x, ConnectionRefusedError) for x in causes)
+                              else failure)
+                    logging.getLogger(__name__).warning('WordPress inventory GET failed: transport=%s page=%d',
+                                                       detail, page)
                     if isinstance(error, requests.exceptions.SSLError) or not retry_available:
                         raise
                     retry_available = False
@@ -230,18 +257,29 @@ def existing_titles():
                         titles.extend(x.strip() for x in meta[field].split(',') if x.strip())
             failure = 'invalid_pagination'
             if page >= int(response.headers.get('X-WP-TotalPages', '1')):
-                return titles
+                inventory_cache.save(titles)
+                return historical_terms() + titles
         except (requests.exceptions.RequestException, ValueError, TypeError, KeyError, AttributeError):
             # Never include response bodies, URLs, credentials or provider exceptions.
             logging.getLogger(__name__).warning('WordPress inventory unavailable: reason=%s page=%d',
                                                failure, page)
-            raise RuntimeError('WordPress inventory unavailable') from None
+            raise InventoryUnavailable(failure) from None
     raise RuntimeError('Duplicate inventory pagination incomplete')
 
 
 def duplicate(keyword, title, titles):
     key, target = norm(keyword), norm(title)
     return any(target == norm(old) or (key and key in norm(old)) for old in titles)
+
+
+def review_candidate(item, titles, selected=()):
+    """Reject semantic duplicates before accepting stock; failures remain operational errors."""
+    from src.topic_duplicates import is_duplicate
+    path = ROOT / 'data/post_registry_general.json'
+    posts = json.loads(path.read_text()) if path.exists() else []
+    # Selected sibling briefs also describe articles that must not overlap.
+    return is_duplicate(item['topic'], posts + [dict(row) for row in selected], titles,
+        home=os.environ.get('BLOG_CODEX_HOME', ''), model=os.environ.get('BLOG_CODEX_MODEL', ''))
 
 
 class NoMeasuredDemand(RuntimeError):
@@ -1295,11 +1333,14 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
     now = datetime.now(timezone.utc).isoformat()
     clock = datetime.fromisoformat(now)
     selected, held, rejected, decisions = [], [], [], []
+    started = monotonic()
     listing = [row for row in latest_listings.collect(category, clock)
                if is_official_url(row.get('url', '')) and category_matches(row.get('title'), category)
                and not duplicate(row['title'], row['title'], titles)]
     sources, rows_by_index = [], []
     for row in listing[:MAX_LATEST_SOURCES]:
+        if monotonic() - started >= MAX_RESEARCH_SECONDS:
+            break
         source = fetch_source(row['url'])
         if source and isinstance(source.get('excerpt'), str) and source['excerpt'].strip():
             sources.append(source)
@@ -1307,6 +1348,8 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
     keywords = latest_issues.extract_keywords(category, sources, clock, ask) if sources else []
     planned_sources = set()
     for keyword, index in keywords[:MAX_LATEST_EVALUATIONS]:
+        if monotonic() - started >= MAX_RESEARCH_SECONDS:
+            break
         if index in planned_sources:
             # One announcement is one article: no per-product or per-winner spin-offs.
             rejected.append({'keyword': keyword, 'reason': 'same announcement already evaluated'})
@@ -1339,6 +1382,9 @@ def select_latest_issues(category, top_n, titles, *, excluded_keys=frozenset(), 
         if not reasons:
             candidate['latest_issue_evidence'] = latest_issues.review(candidate, now, ask)
             reasons = latest_issues.issues(candidate, now)
+        if not reasons and review_candidate(candidate, titles, selected):
+            rejected.append({'keyword': keyword, 'reason': 'semantic_duplicate'})
+            continue
         components = latest_score_components(candidate)
         candidate.update(score_components=components, score=round(sum(components.values()), 2),
                          publish_eligible=not reasons, hold_reasons=reasons)
@@ -1378,6 +1424,7 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
             or any(not isinstance(keyword, str) or not norm(keyword) for keyword in excluded_keywords)):
         raise ValueError('Invalid excluded market keywords')
     clock = datetime.now(timezone.utc)
+    started = monotonic()
     titles = existing_titles() if titles is None else titles
     history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
     latest_report = select_latest_issues(category, top_n, titles,
@@ -1386,9 +1433,13 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
         return latest_report
     attempt = {key: latest_report.get(key) for key in (
         'research_stop_reason', 'evaluated_candidates', 'seeds', 'held', 'rejected', 'latest_issue_listing')}
+    remaining = MAX_RESEARCH_SECONDS - (monotonic() - started)
+    if remaining <= 0:
+        latest_report['research_stop_reason'] = 'time_budget'
+        return latest_report
     try:
         report = _select_measured_category(category, top_n, titles, excluded_keywords=excluded_keywords,
-                                           failure_history=failure_history)
+                                           failure_history=failure_history, research_seconds=remaining)
     except Exception as error:
         # Keep the latest-issue diagnostics; the evergreen fallback simply had nothing.
         latest_report['evergreen_fallback_error'] = runtime.error_code(error)
@@ -1398,7 +1449,8 @@ def select_category(category, top_n=2, titles=None, *, excluded_keywords=None, f
     return report
 
 
-def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None):
+def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywords=None, failure_history=None,
+                              research_seconds=None):
     if category not in CATEGORIES:
         raise ValueError('Unsupported scheduled category')
     if type(top_n) is not int or not 1 <= top_n <= 5:
@@ -1411,6 +1463,7 @@ def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywor
     now = datetime.now(timezone.utc).isoformat()
     clock = datetime.fromisoformat(now)
     started = monotonic()
+    research_seconds = min(MAX_RESEARCH_SECONDS, research_seconds or MAX_RESEARCH_SECONDS)
     history = load_history({'category': category, 'failure_history': failure_history}, category, clock)
     deferred = deferred_keywords(history, clock)
     titles = existing_titles() if titles is None else titles
@@ -1457,7 +1510,7 @@ def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywor
     if category == '취업':
         stats, recruitment_audit = recruitment_discovery.prepare(
             stats, demand_candidates, clock.astimezone(ZoneInfo('Asia/Seoul')).date(),
-            deadline=started + MAX_RESEARCH_SECONDS)
+            deadline=started + research_seconds)
         if approved_keys is not None:
             stats = {k: r for k, r in stats.items() if norm(r['keyword']) in approved_keys}
     past_failures = {measurement_key(row['keyword']): row for row in history}
@@ -1551,7 +1604,7 @@ def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywor
 
     for _ in range(MAX_RESEARCH_ROUNDS):
         runtime.raise_if_fatal()
-        if monotonic() - started >= MAX_RESEARCH_SECONDS:
+        if monotonic() - started >= research_seconds:
             stop_reason = 'time_budget'
             break
         if shortlist_research_attempts >= MAX_SHORTLIST_RESEARCH:
@@ -1576,29 +1629,29 @@ def _select_measured_category(category, top_n=2, titles=None, *, excluded_keywor
         # questions are measured. One exploration call still has a four-seed cap.
         if category == '리뷰' and rounds and not selected and (rejected or held) and not exploration_started:
             for seed in start_exploration('no_pass_after_round'):
-                if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                if monotonic() - started >= research_seconds:
                     break
                 available = measure_seed(seed, available, researched_families, 'no_pass_after_round')
-            if monotonic() - started >= MAX_RESEARCH_SECONDS:
+            if monotonic() - started >= research_seconds:
                 stop_reason = 'time_budget'
                 break
         # Re-measure other buying questions when the available pool is scarce.
         # Never reopen cooled-down failures, reuse seed volume, or force a shortlist.
         if category == '리뷰' and not available:
             while len(available) < PROPOSALS_PER_ROUND:
-                if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                if monotonic() - started >= research_seconds:
                     break
                 seed = next(refill_seeds, None)
                 if seed is None and not exploration_started:
                     refill_seeds = iter(start_exploration('fixed_seeds_exhausted'))
                     seed = next(refill_seeds, None)
                     runtime.raise_if_fatal()
-                    if monotonic() - started >= MAX_RESEARCH_SECONDS:
+                    if monotonic() - started >= research_seconds:
                         break
                 if seed is None:
                     break
                 available = measure_seed(seed, available, researched_families, 'available_pool_exhausted')
-            if monotonic() - started >= MAX_RESEARCH_SECONDS:
+            if monotonic() - started >= research_seconds:
                 stop_reason = 'time_budget'
                 break
         # Show unseen parts of the measured pool before recycling a shortlist.
@@ -1705,7 +1758,7 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
         attempted_before = len(seen)
         for proposal in candidates[:PROPOSALS_PER_ROUND]:
             runtime.raise_if_fatal()
-            if monotonic() - started >= MAX_RESEARCH_SECONDS:
+            if monotonic() - started >= research_seconds:
                 stop_reason = 'time_budget'
                 break
             keyword = proposal.get('keyword', '') if isinstance(proposal, dict) else ''
@@ -1855,7 +1908,10 @@ JSON만 반환: {{"candidates":[{{"keyword":"...","search_query":"같은 검색�
                     reasons.extend(_review_source_coverage(candidate, now, budget=recovery_budget))
             if category in ('리뷰', '테크') and reasons:
                 reasons = _recover_review_plan(candidate, now, reasons, budget=recovery_budget,
-                    titles=titles + [x['keyword'] for x in selected], deadline=started + MAX_RESEARCH_SECONDS)
+                    titles=titles + [x['keyword'] for x in selected], deadline=started + research_seconds)
+            if not reasons and review_candidate(candidate, titles, selected):
+                rejected.append({'keyword': keyword, 'reason': 'semantic_duplicate'})
+                continue
             # Lexical specificity is only for discovery. Final points require search-backed intent.
             components.pop('specificity')
             components['intent_fit'] = 15 if not reasons else 0
@@ -2090,9 +2146,16 @@ def enqueue_report(queue, report):
     selected = [x for x in report['selected'] if fresh_market_item(x, category)]
     if not selected:
         raise RuntimeError(f'{category}: no verified market topic; publication held')
-    # Keep manual/legacy entries; market-only consumption ignores them.
+    # Preserve fresh reserve stock. Only replace the same keyword or expired evidence.
+    done = {norm(row['keyword']) for row in queue if row.get('keyword')
+            and row.get('status') in ('skipped_duplicate', 'completed', 'held_draft')}
+    selected = [row for row in selected if norm(row['keyword']) not in done]
+    if not selected:
+        raise RuntimeError(f'{category}: selected keywords already used or rejected; publication held')
+    incoming = {norm(row['keyword']) for row in selected}
     for old in queue:
         if old.get('source') == SOURCE and old.get('category') == category and old.get('status') == 'pending':
-            old['status'] = 'superseded'
+            if norm(old.get('keyword', '')) in incoming or not fresh_market_item(old, category):
+                old['status'] = 'superseded'
     queue.extend(selected)
     return queue

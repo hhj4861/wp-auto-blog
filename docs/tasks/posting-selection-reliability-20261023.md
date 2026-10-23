@@ -29,5 +29,8 @@
 - 전체 실행은 1,382개 통과·2개 실패 시 WordPressClient 재시도 대기에서 중단. 전체 통과라고 주장하지 않는다. 두 실패(쿠팡 알림 고정값, 기본 이미지 수)는 기준 c3f8e17에서도 같은 테스트로 재현했다.
 - 기존 예약 테스트의 10개 입력 제한 단언은 GitHub.com의 현재 25개 제한에 맞췄다. 근거: https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs/
 - 증거 로그: 사용자 지정 iCloud 작업 루트의 `wp-auto-blog/posting-selection-reliability-20261023/final-pytest.log`, `full-pytest.log`. 인증정보는 새로 복사하지 않았다.
-- 코드·검증은 작업 worktree에 준비됨. 커밋/push/PR 후에도 main/운영 반영 및 실제 예약 발행 성공 검증은 머지 승인 후 단계다. 이번 작업에서 새 글을 발행하지 않았다.
-- 다음: PR 검토·명시적 머지 승인 후 운영 반영, `slot_test` 비발행 실행 및 다음 실제 회차 확인. 외부 WordPress의 지속 장애까지 코드만으로 제거했다고 주장하지 않는다.
+- 사용자 승인 후 PR #119를 2026-10-23 10:38 KST에 main으로 머지했다. 운영 기준 커밋: `beed4ff55b46f1bb1b502f9d1efb808033197ef5`. 현재 프로젝트도 fast-forward 반영했으며 다른 세션의 문서 삭제 변경은 보존했다.
+- 실제 운영 Actions 검증: [39885259869](https://github.com/hhj4861/wp-auto-blog/actions/runs/39885259869), 10:39:45~10:45:15 KST, `mode=slot_test`, `writer_provider=codex`, `publish=false`, `notify_telegram=false`, `category=건강`. 결과 success, 처리 1건·실패 0건.
+- 인증된 WordPress 전체 목록 조회 성공(10:40:42), 건강 카테고리 재고 선택(10:40:53), Codex 의미 중복 검토 완료(10:41:03), Codex 본문 생성 및 비발행 처리 완료(10:45:10)를 실제 로그로 확인했다.
+- 이 실행은 WordPress 글/초안을 생성하지 않았다. 텔레그램 요청·알림 단계와 정규 회차 기록은 skipped, 큐·등록부 변경도 없었다. 당시 연결이 운영 runner에서 정상임은 확인했으며 과거 장애의 세부 원인을 소급 확정하지 않는다.
+- 실제 발행 HTTP 요청과 게시 후 공개 URL 검증은 비발행 실행에 포함되지 않는다. 다음 정규 회차의 실제 발행 성공은 아직 미확인이다. 외부 WordPress의 지속 장애까지 코드만으로 제거했다고 주장하지 않는다.

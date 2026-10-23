@@ -13,7 +13,7 @@ from src.keyword_gate import gov_ratio
 from src.search_query import validated_search_query
 
 VERSION = 1
-PROVIDERS = {'google_custom_search', 'duckduckgo_proxy', 'codex_native_search'}
+PROVIDERS = {'google_custom_search', 'duckduckgo_proxy', 'codex_native_search', 'claude_native_search'}
 MIN_RELEVANT_RESULTS = 5
 MIN_RELEVANT_SITES = 3
 MIN_RELEVANCE_RATIO = 0.6

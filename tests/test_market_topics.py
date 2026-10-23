@@ -2935,3 +2935,26 @@ def test_v6_cached_suitability_cannot_be_reused_after_question_source_or_time_ch
     with pytest.raises(RuntimeError, match='no verified market topic'):
         market.enqueue_report([], {'category': '취업', 'selected': [changed]})
     assert market.fresh_market_item(original, '취업')
+
+
+def test_claude_research_preserves_http_evidence_and_distinct_provider(monkeypatch):
+    from src import codex_client
+    source = evidence()
+    client = Mock()
+    client.research.return_value = {'text': 'not a source', 'searched': True,
+        'opened_urls': [source['url']], 'provider': 'claude_web'}
+    monkeypatch.setattr(codex_client, 'CodexSubscriptionClient', Mock(return_value=client))
+    fetch = Mock(return_value=source)
+    monkeypatch.setattr(market, 'fetch_source', fetch)
+    sources, trace = market.research_official_sources('시험준비물', '취업', '2026-09-10')
+    assert trace['provider'] == 'claude_web'
+    assert sources == [{**source, 'locator_origin': 'native_open'}]
+    fetch.assert_called_once_with(source['url'])
+    fetch.return_value = None
+    assert market.research_official_sources('시험준비물', '취업', '2026-09-10')[0] == []
+    row = web_candidate()
+    row['research_evidence']['provider'] = 'claude_web'
+    assert market.fresh_research_item(row, '취업')
+    assert not market.fresh_market_item(row, '취업')
+    row['research_evidence']['searched'] = False
+    assert not market.fresh_research_item(row, '취업')

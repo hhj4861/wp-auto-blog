@@ -137,6 +137,7 @@ jobs:
       id-token: write
     env:
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      BLOG_CODEX_USAGE_FALLBACK: claude
       DISCOVERY_ENABLED: ${{ vars.DISCOVERY_ENABLED || '0' }}
       DISCOVERY_WORKFLOW: ${{ vars.DISCOVERY_WORKFLOW || '' }}
       DISCOVERY_URL: https://shared-ai-d5cy7m6i7q-uc.a.run.app/discovery
@@ -149,7 +150,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install research dependencies
-        run: pip install requests loguru python-dotenv beautifulsoup4 pytrends 'tldextract>=5.1,<6'
+        run: pip install requests loguru python-dotenv beautifulsoup4 pytrends 'tldextract>=5.1,<6' 'claude-agent-sdk>=0.2.173'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -161,6 +162,7 @@ jobs:
           WORKER_ADMIN_TOKEN: ${{ secrets.CODEX_SECRET_WRITE_TOKEN }}
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          echo "BLOG_CODEX_USAGE_STATE=$RUNNER_TEMP/trendpulse-codex-usage-state" >> "$GITHUB_ENV"
           python scripts/codex_worker_auth.py restore
       - name: Check restored Codex authentication
         if: inputs.auth_check_only == true
@@ -184,6 +186,7 @@ jobs:
       - name: Discover and verify category topics
         if: inputs.auth_check_only != true && inputs.research_check_only != true
         env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
           NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}

@@ -192,16 +192,35 @@ class CodexSubscriptionClient:
             raise RuntimeError("Codex CLI is not installed or is missing from PATH")
         self.model = model
         self.timeout = timeout
+        self.last_provider = "codex"
 
-    def generate(self, prompt: str, *, draft_only: bool = False) -> str:
-        return self._run(prompt, draft_only=draft_only)["text"]
+    def generate(self, prompt: str, *, draft_only: bool = False, allow_usage_fallback: bool = True) -> str:
+        if not allow_usage_fallback:
+            self.last_provider = 'codex'
+            return self._run(prompt, draft_only=draft_only)['text']
+        from src.subscription_fallback import run
+        from src.claude_subscription import ClaudeSubscriptionClient
+        result, self.last_provider = run(
+            lambda: self._run(prompt, draft_only=draft_only)["text"],
+            lambda: ClaudeSubscriptionClient(timeout=self.timeout).generate(prompt),
+            home=self.home, model=self.model)
+        return result
 
     def research(self, prompt: str) -> dict:
         """Run live web discovery and return independently recorded tool activity."""
-        return self._run(prompt, research=True)
+        from src.subscription_fallback import run
+        from src.claude_subscription import ClaudeSubscriptionClient
+        result, self.last_provider = run(lambda: self._run(prompt, research=True),
+            lambda: ClaudeSubscriptionClient(timeout=self.timeout).research(prompt),
+            home=self.home, model=self.model)
+        return {**result, 'provider': 'claude_web'} if self.last_provider == 'claude' else result
 
     def generate_image(self, prompt: str) -> Path:
         """Return only a new raster artifact from this invocation's native ImageGen."""
+        from src.subscription_fallback import exhausted
+        if exhausted(self.home, self.model):
+            # Claude is text-only here; the existing editorial image fallback owns raster recovery.
+            raise CodexResponseError('usage_limit', 'Codex image generation unavailable: usage_limit')
         return Path(self._run(prompt, image_generation=True)["image_path"])
 
     def _run(self, prompt: str, *, research: bool = False, draft_only: bool = False,

@@ -509,7 +509,7 @@ def inspect_native_search(query):
     return report
 
 
-def native_search(query: str) -> list[dict]:
+def _codex_native_search(query: str) -> list[dict]:
     """Return actual native URL/title/snippet DTOs from the first ten slots."""
     try:
         counts = _collect_search(query, empty_report())
@@ -523,3 +523,16 @@ def native_search(query: str) -> list[dict]:
         raise
     except Exception:
         raise NativeSearchError("native_search_failed") from None
+
+
+def native_search(query: str) -> list[dict]:
+    """Keep fallback inside the validated-call boundary so recovered quota is not fatal."""
+    from src.subscription_fallback import run, SearchRows
+    from src.claude_subscription import ClaudeSubscriptionClient
+    from pathlib import Path
+    query = _validated_query(query)
+    home = Path(os.environ.get('BLOG_CODEX_HOME', '')).expanduser().resolve()
+    result, provider = run(lambda: _codex_native_search(query),
+        lambda: ClaudeSubscriptionClient(timeout=TIMEOUT_SECONDS).search(query),
+        home=home, model=os.getenv('BLOG_CODEX_MODEL', ''))
+    return SearchRows(result, provider + '_native_search')

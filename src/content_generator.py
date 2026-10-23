@@ -2624,7 +2624,9 @@ Your H1 title MUST score 40+ on Headline Analyzer. Follow these rules:
         if self.config.provider == LLMProvider.CODEX:
             from .analysis_runtime import validated_call
             result = validated_call(self._codex_client.generate, prompt, label='writer')
-            logger.info("Content generated using: Codex CLI (ChatGPT subscription)")
+            actual = getattr(self._codex_client, 'last_provider', 'codex')
+            logger.info("Content generated using: " + ("Claude Code (subscription quota fallback)"
+                        if actual == 'claude' else "Codex CLI (ChatGPT subscription)"))
             return result
 
         # Build provider list with fallbacks

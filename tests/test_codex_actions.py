@@ -123,7 +123,8 @@ def test_auth_probe_reports_only_allowlisted_metadata(tmp_path, monkeypatch, cap
     monkeypatch.delenv('GITHUB_ACTIONS', raising=False)
     monkeypatch.setenv('BLOG_CODEX_HOME', str(tmp_path))
     client = Mock()
-    def generate(prompt):
+    def generate(prompt, *, allow_usage_fallback):
+        assert allow_usage_fallback is False
         assert 'secret' not in prompt
         if failure:
             raise CodexRequestError(1, 'refresh_token_reused; secret-refresh')

@@ -14,7 +14,7 @@ VERSION = 2
 MIN_RESULTS = 5
 MIN_DOMAINS = 3
 MAX_DOMINANCE = 0.6
-PROVIDERS = {'google_custom_search', 'duckduckgo_proxy', 'codex_native_search'}
+PROVIDERS = {'google_custom_search', 'duckduckgo_proxy', 'codex_native_search', 'claude_native_search'}
 
 
 def compact(value):

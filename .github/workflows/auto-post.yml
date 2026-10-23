@@ -120,6 +120,7 @@ jobs:
       TELEGRAM_ALLOWED_USER_ID: ${{ secrets.TELEGRAM_ALLOWED_USER_ID }}
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      BLOG_CODEX_USAGE_FALLBACK: claude
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
       BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
       BLOG_RESUME_DRAFT_ID: ${{ inputs.resume_draft_id }}
@@ -154,6 +155,7 @@ jobs:
       - name: Set writer runtime paths
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          echo "BLOG_CODEX_USAGE_STATE=$RUNNER_TEMP/trendpulse-codex-usage-state" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
       - name: Restore Codex authentication
         if: env.BLOG_WRITER_PROVIDER == 'codex'
@@ -769,6 +771,7 @@ jobs:
       TELEGRAM_ALLOWED_USER_ID: ${{ secrets.TELEGRAM_ALLOWED_USER_ID }}
       BLOG_WRITER_PROVIDER: ${{ inputs.writer_provider || vars.BLOG_WRITER_PROVIDER || 'anthropic' }}
       BLOG_CODEX_PUBLIC_AUTOMATION: '1'
+      BLOG_CODEX_USAGE_FALLBACK: claude
       BLOG_CODEX_MODEL: ${{ inputs.codex_model }}
       BLOG_OFFICIAL_SOURCE_URLS: ${{ inputs.source_urls }}
       BLOG_RESUME_DRAFT_ID: ${{ inputs.resume_draft_id }}
@@ -824,6 +827,7 @@ jobs:
         if: steps.daily.outputs.run == 'true'
         run: |
           echo "BLOG_CODEX_HOME=$RUNNER_TEMP/trendpulse-codex" >> "$GITHUB_ENV"
+          echo "BLOG_CODEX_USAGE_STATE=$RUNNER_TEMP/trendpulse-codex-usage-state" >> "$GITHUB_ENV"
           echo "BLOG_RESULT_PATH=$RUNNER_TEMP/blog-result.json" >> "$GITHUB_ENV"
           echo "BLOG_INVENTORY_PATH=$RUNNER_TEMP/posting-inventory.json" >> "$GITHUB_ENV"
       - name: Restore Codex authentication

@@ -4,7 +4,7 @@
 
 ## 인증과 실행 위치
 
-ChatGPT 로그인은 구독의 Codex 사용 한도를 이용한다. `openai` 제공자는 별도 API 키 과금 경로이다. Codex 오류·한도 초과 시 다른 제공자로 자동 전환하지 않는다. 조사용 Gemini, 이미지 등 다른 단계의 기존 API 사용까지 구독으로 바뀌는 것은 아니다.
+ChatGPT 로그인은 구독의 Codex 사용 한도를 이용한다. `openai` 제공자는 별도 API 키 과금 경로이다. 자동포스팅과 주제 선정 Actions는 `BLOG_CODEX_USAGE_FALLBACK=claude`로 **한도 초과(`usage_limit`)만 기존 Claude 구독으로 전환**한다. 인증·모델·네트워크·검증 오류는 이 전환의 대상이 아니다. 조사용 Gemini, 이미지 등 다른 단계의 기존 API 사용까지 구독으로 바뀌는 것은 아니다.
 
 ## GitHub Actions: 직접 작성과 발행
 
@@ -26,7 +26,7 @@ BLOG_WRITER_PROVIDER 환경변수로 작성 모델만 선택한다. 카테고리
 - 동시 인증 사용을 막기 위해 Codex 작업은 직렬화한다. 종료 시 갱신본을 Secret에 저장하고
   runner의 인증 파일을 제거한다. 복원본과 동일하면 Secret 쓰기를 생략하여
   저장 시각을 토큰 갱신 성공으로 오인하지 않게 한다. 인증은 로그나 artifact에 업로드하지 않는다.
-- PR, 임의 브랜치, 다른 공개 저장소에서는 실행하지 않는다. API 과금이나 Claude로 자동 전환하지 않는다.
+- PR, 임의 브랜치, 다른 공개 저장소에서는 실행하지 않는다. API 키 과금으로 전환하지 않는다. Claude 구독 폴백도 동일한 실행 신뢰 검사를 거친다.
 - 빈 큐·초안 저장은 공개 발행 성공으로 보고하지 않는다. 자동 재발행은 하지 않는다.
   작업 실패 시 WordPress와 실행 로그를 먼저 확인한다. 발행 이후 인증 저장/큐 저장이 실패했을 수도 있다.
 
@@ -144,3 +144,12 @@ WordPress의 중앙 정사각형 크롭 영역 안에 문구를 배치하고 제
 기존 대표 이미지를 교체할 때는 `scripts/repair_featured_images.py ID ... --replace`
 로 후보를 생성하고, 확인 후 `--apply`를 추가한다. 원본 글 백업과 변경 충돌 검사를
 거쳐 featured_media만 갱신하며 본문·제목·슬러그·공개 상태 보존을 재조회한다.
+
+## 한도 초과 시 Claude 구독 폴백 (2026-10-23)
+
+- 설정: `BLOG_CODEX_USAGE_FALLBACK=claude`, 기존 `CLAUDE_CODE_OAUTH_TOKEN` secret. 모델은 `BLOG_CLAUDE_MODEL`(기본 기존 `claude-opus-4-8`). OAuth가 없거나 Claude도 실패하면 실패로 처리한다. API 키는 전달하지 않는다. 비활성화는 해당 설정을 제거하거나 `off`로 변경한다.
+- 적용: 본문·LLM 검수·중복 검사·공식 자료 조사·기본 native 검색. 한 번 한도를 확인하면 같은 실행의 후속 호출은 Claude를 사용한다. Actions runner 임시 marker는 실행 ID/재실행 횟수/인증 경로/모델에 묶여 다음 실행을 오염시키지 않는다.
+- 검증: JSON/의미 중복/본문 근거/발행 직전 검증을 그대로 거친다. Claude 웹 조사는 실제 WebSearch/WebFetch 결과와 독립 HTTP 검증을 요구한다. 검색 결과는 실제 도구의 URL·제목만 사용하며, 도구에 없는 snippet은 빈 값으로 둔다. 검색 품질·관련 사이트 수 기준은 유지한다. provenance는 `claude_web`/`claude_native_search`로 남긴다.
+- 별도 원격 shared-discovery의 고정 `runtime=codex` 계약은 자동 전환하지 않아 제공자 기록을 보존한다(현재 자동포스팅의 기본 로컬 조사와 구분).
+- 이미지: Claude 텍스트 transport로 이미지를 생성했다고 표시하지 않는다. Codex 한도 시 기존 본문 기반 editorial 이미지 폴백을 사용한다.
+- 배포: 작업 브랜치 테스트와 운영 적용은 별개다. 운영은 이 변경 PR의 명시적 머지 승인 후 적용된다.

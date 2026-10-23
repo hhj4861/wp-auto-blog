@@ -790,7 +790,7 @@ def research_official_sources(keyword, category, now, *, coverage_gaps=None):
             break
     if category == '리뷰':
         sources = review_discovery.prioritize_sources(keyword, sources)
-    return sources, {'provider': 'codex_web', 'searched': True, 'locators': locators}
+    return sources, {'provider': trace.get('provider', 'codex_web'), 'searched': True, 'locators': locators}
 
 
 def _source_diagnostics(sources):
@@ -1042,7 +1042,7 @@ def _review_with_source_recovery(keyword, category, now, results, sources, *,
         recovered, retrace = research_official_sources(keyword, category, now, **options)
     except Exception:
         return None, reason, research, audit  # No arbitrary exception in a report.
-    if (not isinstance(retrace, dict) or retrace.get('provider') != 'codex_web'
+    if (not isinstance(retrace, dict) or retrace.get('provider') not in {'codex_web', 'claude_web'}
             or retrace.get('searched') is not True):
         recovery['outcome'] = 'unverified_research'
         return None, reason, research, audit
@@ -1112,7 +1112,7 @@ def _review_source_coverage(candidate, now, *, budget):
     try:
         recovered, trace = research_official_sources(candidate['keyword'], candidate['category'], now,
                                                      coverage_gaps=gaps)
-        if (not isinstance(trace, dict) or trace.get('provider') != 'codex_web'
+        if (not isinstance(trace, dict) or trace.get('provider') not in {'codex_web', 'claude_web'}
                 or trace.get('searched') is not True):
             audit['outcome'] = 'unverified_research'
             return reasons
@@ -1175,7 +1175,7 @@ def _recover_review_plan(candidate, now, reasons, *, budget, titles, deadline):
         if monotonic() >= deadline:
             audit['outcome'] = 'time_budget'
             return reasons
-        if (not isinstance(trace, dict) or trace.get('provider') != 'codex_web'
+        if (not isinstance(trace, dict) or trace.get('provider') not in {'codex_web', 'claude_web'}
                 or trace.get('searched') is not True):
             audit['outcome'] = 'unverified_research'
             return reasons
@@ -2063,7 +2063,7 @@ def fresh_research_item(item, category, now=None):
                            and source.get('original_url') in origins
                            and source.get('locator_origin') == origins[source['original_url']]}
             valid_search = (
-                research.get('provider') == 'codex_web' and research.get('searched') is True
+                research.get('provider') in {'codex_web', 'claude_web'} and research.get('searched') is True
                 and not item.get('organic_results') and not item.get('organic_domains')
                 and item.get('organic_provider') is None and item.get('dominant_result_ratio') is None
                 and (item.get('score_components') or {}).get('organic_opportunity') == 0

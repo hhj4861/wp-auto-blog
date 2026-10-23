@@ -45,7 +45,7 @@ def main():
     report = {"before": auth_metadata(before)}
     try:
         CodexSubscriptionClient(home=str(home), timeout=120).generate(
-            "Reply with OK only. Do not use tools."
+            "Reply with OK only. Do not use tools.", allow_usage_fallback=False
         )
         report["reason"] = "ok"
     except CodexRequestError as exc:

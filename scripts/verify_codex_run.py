@@ -61,9 +61,9 @@ def main():
                 summary.write(f'쿠팡 링크 답장 대기: 초안 #{post_id} (미발행)\n')
         return
     url = verify_published(results, session, os.environ['WP_GENERAL_URL'].rstrip('/'))
-    print('VERIFIED CODEX PUBLISHED', url, flush=True)
+    print('VERIFIED PUBLISHED', url, flush=True)
     with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as summary:
-        summary.write(f'Codex subscription: [verified published post]({url})\n')
+        summary.write(f'TrendPulse: [verified published post]({url})\n')
 
 
 if __name__ == '__main__':

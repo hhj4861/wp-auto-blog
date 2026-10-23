@@ -90,17 +90,22 @@ def _native_results(query):
         observed = validated_call(native_search, query, label='native_search')
         if not isinstance(observed, list):
             raise ValueError()
+        actual_provider = getattr(observed, 'provider', provider)
+        if actual_provider not in {'codex_native_search', 'claude_native_search'}:
+            raise ValueError()
+        provider = actual_provider
         rows = []
         for item in observed[:10]:
             if (not isinstance(item, dict)
                     or not all(isinstance(item.get(field), str) for field in ('url', 'title', 'snippet'))
-                    or not item['title'].strip() or not item['snippet'].strip()):
+                    or not item['title'].strip()
+                    or actual_provider == 'codex_native_search' and not item['snippet'].strip()):
                 continue
             row = result_row(item['url'], item['title'], item['snippet'])
             if row:
                 rows.append(row)
         if rows:
-            return provider, rows
+            return actual_provider, rows
     except Exception as error:
         from src.analysis_runtime import error_code, FATAL, AnalysisError
         code = error_code(error)

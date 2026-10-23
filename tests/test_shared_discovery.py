@@ -63,7 +63,7 @@ class SharedDiscoveryTests(unittest.TestCase):
         with patch('src.codex_client.CodexSubscriptionClient') as factory:
             factory.return_value.generate.return_value='{"candidates":[]}'
             shared.discover('테크',client=Client(),check=Mock())
-            factory.return_value.generate.assert_called_once_with('server draft',draft_only=True)
+            factory.return_value.generate.assert_called_once_with('server draft',draft_only=True,allow_usage_fallback=False)
     def test_unverified_related_keywords_cannot_enter_market_pool(self):
         from src import market_topics as market
         observed=[]

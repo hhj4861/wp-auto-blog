@@ -32170,7 +32170,7 @@
     "keywords": [
       "엑셀기초"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -42577,5 +42577,371 @@
     "url": "https://trendpulse.blog/php2shell-security-alert-2026/",
     "post_status": "publish",
     "completed_at": "2026-10-23T09:06:42.318315"
+  },
+  {
+    "keyword": "Gemini Notebook Connected App",
+    "category": "생산성",
+    "topic": "Gemini Notebook Connected App 10월 23일 출시: 채팅에서 노트 관리와 계정별 설정",
+    "intent": "새 연동으로 노트·자료를 어떻게 관리하며, 누가 지금 이용하고 어떤 활성화 설정을 확인해야 하나요?",
+    "gap": "지원 작업·대상 계정·즉시 제공 일정을 표로 정리하고, 관리자 접근 조건과 EEA 기본 비활성화를 점검합니다.",
+    "source_url": "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html",
+    "verified_sources": [
+      {
+        "url": "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html",
+        "original_url": "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html",
+        "title": "Google Workspace Updates: Take actions on your notebooks from Gemini Notebook directly in the Gemini app",
+        "checked_on": "2026-10-24",
+        "publication_dates": [],
+        "sha256": "3349fe0d0b3adfbcca6a9789f6e580e463a84144ce5cf3acdd28058ab10412a1",
+        "excerpt": "arrow_back Back October 23, 2026 Take actions on your notebooks from Gemini Notebook directly in the Gemini app Gemini Gemini App Gemini Notebook Rapid Release Scheduled Release Gemini Notebook is now also available as a Connected App in the Gemini app. This new integration allows you to manage and query notebooks directly within your chats using natural language. You can type @Gemini Notebook in a Gemini chat to quickly create new notebooks, add sources to a notebook, save key notes, or retrieve information from their existing notebooks. Gemini can also automatically detect when to use the Gemini Notebook Connected App for relevant prompts. For example, you can ask Gemini to: Create, edit, or delete a notebook (\"Create a Gemini Notebook about solar farm market trends\") Add, update, or delete sources in a notebook (\"Add a copy of this chat to my notebook about Bio 101 course\") List notebooks and their sources (“Show me a list of all the sources in my notebook about US National Parks”) Answer questions using context from your notebook (\"What do my Gemini Notebooks say about butterfly migration?\") Getting started Admins: Access to the Gemini Notebook Connected App is ON by default, and is controlled using the Gemini and Gemini Notebook access settings. As an administrator of your organization's Google Accounts, you can control who can use the Gemini Notebook Connected App. The Gemini Notebook Connected App is available to users who are in a group or OU with both Gemini Notebook and Gemini set to On. Visit the Help Center to learn more about turning Gemini and Gemini Notebook on or off for users. End users: This feature will be ON by default for users globally, except in the European Economic Area, where it will be OFF by default. This feature can be controlled in Settings > Connected Apps in the Gemini app. Visit the Help Center to learn more. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources Google Workspace Admin Help: Control Gemini App access to Workspace services Gemini Apps Help: Use & manage Connected Apps in Gemini"
+      }
+    ],
+    "intent_results": [
+      "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://workspaceupdates.googleblog.com/2026/10/take-actions-on-your-notebooks-from-Gemini-Notebook-directly-in-the-Gemini-app.html",
+      "title": "Take actions on your notebooks from Gemini Notebook directly in the Gemini app",
+      "publisher": "google_workspace_updates",
+      "published": "2026-10-24"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-10-23T21:02:03.672349+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "Gemini Notebook Connected App"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-23T21:02:03.672349+00:00",
+      "input_sha256": "dd4920ac06fcb90aed3e3931fedb3719df8d6d526a5ccbccb16dfbf0488a78f2",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "Gemini Notebook Connected App",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "arrow_back Back October 23, 2026 Take actions on your notebooks from Gemini Notebook directly in the Gemini app Gemini Gemini App Gemini Notebook Rapid Release Scheduled Release Gemini Notebook is now also available as a Connected App in the Gemini app. This new integration allows you to manage and query notebooks directly within your chats using natural language. You can type @Gemini Notebook in a Gemini chat to quickly create new notebooks, add sources to a notebook, save key notes, or retrieve information from their existing notebooks. Gemini can also automatically detect when to use the Gemini Notebook Connected App for relevant prompts. For example, you can ask Gemini to: Create, edit, or delete a notebook (\"Create a Gemini Notebook about solar farm market trends\") Add, update, or delete sources in a notebook (\"Add a copy of this chat to my notebook about Bio 101 course\") List noteb",
+            "entity": "Gemini Notebook",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "채팅에서 연동을 호출하고 어떤 노트·자료 작업을 할 수 있나요?",
+            "answer": "@Gemini Notebook으로 호출하며 자동 감지도 지원합니다. 노트·자료 생성·수정·삭제와 저장·조회가 가능합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "arrow_back Back October 23, 2026 Take actions on your notebooks from Gemini Notebook directly in the Gemini app Gemini Gemini App Gemini Notebook Rapid Release Scheduled Release Gemini Notebook is now also available as a Connected App in the Gemini app. This new integration allows you to manage and query notebooks directly within your chats using natural language. You can type @Gemini Notebook in a Gemini chat to quickly create new notebooks, add sources to a notebook, save key notes, or retrieve information from their existing notebooks. Gemini can also automatically detect when to use the Gemini Notebook Connected App for relevant prompts. For example, you can ask Gemini to: Create, edit, or delete a notebook (\"Create a Gemini Notebook about solar farm market trends\") Add, update, or delete sources in a notebook (\"Add a copy of this chat to my notebook about Bio 101 course\") List noteb"
+          },
+          {
+            "facet": "누가 이용할 수 있으며 언제 제공되나요?",
+            "answer": "모든 Workspace 고객, Individual 구독자와 개인 Google 계정이 대상이며 두 출시 도메인 모두 즉시 제공됩니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " and Gemini set to On. Visit the Help Center to learn more about turning Gemini and Gemini Notebook on or off for users. End users: This feature will be ON by default for users globally, except in the European Economic Area, where it will be OFF by default. This feature can be controlled in Settings > Connected Apps in the Gemini app. Visit the Help Center to learn more. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources Google Workspace Admin Help: Control Gemini App access to Workspace services Gemini Apps Help: Use & manage Connected Apps in Gemini"
+          },
+          {
+            "facet": "조직 관리자가 확인해야 할 접근 조건은 무엇인가요?",
+            "answer": "접근은 기본 활성화되며, 사용자가 속한 그룹 또는 OU에서 Gemini와 Gemini Notebook이 모두 켜져 있어야 합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "out solar farm market trends\") Add, update, or delete sources in a notebook (\"Add a copy of this chat to my notebook about Bio 101 course\") List notebooks and their sources (“Show me a list of all the sources in my notebook about US National Parks”) Answer questions using context from your notebook (\"What do my Gemini Notebooks say about butterfly migration?\") Getting started Admins: Access to the Gemini Notebook Connected App is ON by default, and is controlled using the Gemini and Gemini Notebook access settings. As an administrator of your organization's Google Accounts, you can control who can use the Gemini Notebook Connected App. The Gemini Notebook Connected App is available to users who are in a group or OU with both Gemini Notebook and Gemini set to On. Visit the Help Center to learn more about turning Gemini and Gemini Notebook on or off for users. End users: This feature will "
+          },
+          {
+            "facet": "사용자는 어디서 설정하며 지역별 기본값은 무엇인가요?",
+            "answer": "Gemini 앱의 Settings > Connected Apps에서 설정합니다. EEA는 기본 비활성화이며 그 외 지역은 기본 활성화입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " and Gemini set to On. Visit the Help Center to learn more about turning Gemini and Gemini Notebook on or off for users. End users: This feature will be ON by default for users globally, except in the European Economic Area, where it will be OFF by default. This feature can be controlled in Settings > Connected Apps in the Gemini app. Visit the Help Center to learn more. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources Google Workspace Admin Help: Control Gemini App access to Workspace services Gemini Apps Help: Use & manage Connected Apps in Gemini"
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "arrow_back Back October 23, 2026 Take actions on your notebooks from Gemini Notebook directly in the Gemini app Gemini Gemini App Gemini Notebook Rapid Release Scheduled Release Gemini Notebook is now also available as a Connected App in the Gemini app. This new integration allows you to manage and query notebooks directly within your chats using natural language. You can type @Gemini Notebook in a Gemini chat to quickly create new notebooks, add sources to a notebook, save key notes, or retrieve information from their existing notebooks. Gemini can also automatically detect when to use the Gemini Notebook Connected App for relevant prompts. For example, you can ask Gemini to: Create, edit, or delete a notebook (\"Create a Gemini Notebook about solar farm market trends\") Add, update, or delete sources in a notebook (\"Add a copy of this chat to my notebook about Bio 101 course\") List noteb",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-24T06:02:03.672349+09:00",
+      "window_start": "2026-10-23T00:00:00+09:00",
+      "input_sha256": "85b2a2aeb619423c9c9bf6d5513a1782a17682700e6c08220fe42e1f1240c81c",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "release",
+        "event_date": "2026-10-23",
+        "source_index": 0,
+        "date_quote": "October 23, 2026",
+        "event_quote": "Gemini Notebook is now also available as a Connected App in the Gemini app."
+      }
+    },
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "score": 25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "퇴직연금종류",
+    "category": "생활정보",
+    "topic": "퇴직연금종류: DB·DC·IRP의 차이와 역할",
+    "intent": "퇴직연금 DB·DC·IRP는 무엇이며, 운용 주체와 퇴직급여 결정 방식은 어떻게 다른가?",
+    "gap": "공식 설명에 근거해 DB·DC의 운용 주체·급여 결정 방식과 IRP의 퇴직급여 통산 역할을 비교표로 정리한다.",
+    "source_url": "https://moel.go.kr/retirementpay.do",
+    "verified_sources": [
+      {
+        "url": "https://moel.go.kr/retirementpay.do",
+        "original_url": "https://moel.go.kr/retirementpay.do",
+        "title": "고용노동부",
+        "checked_on": "2026-10-24",
+        "publication_dates": [],
+        "sha256": "23cb35b02ad59cc0e9b6b20927e4c2279b86b418b32a34cba0fb9cb0c003d92c",
+        "excerpt": "퇴직연금계산 퇴직연금 이란? 퇴직연금제도는 근로자들의 노후소득 보장을 위해 근로자 재직 기간 중 사용자가 근로자의 퇴직급여를 금융기관에 적립하고, 이 적립금을 사용자(DB) 또는 근로자(DC)가 운용하다가 55세 이후에 연금 또는 일시금으로 수령할 수 있도록 하는 제도 입니다. 확정급여형 퇴직연금제도 (DB : Defined Benefits Retirement Pension) 근로자가 퇴직할 때 받을 퇴직급여가 사전에 확정된 퇴직연금 제도 입니다. 사용자는 퇴직연금 부담금을 적립하여 자기의 책임으로 운용 합니다. 확정기여형 퇴직연금제도 (DC : Defind Contribution Retirement Pension) 사용자가 납입할 부담금이 매년 근로자 연간 임금총액의 1/12로 사전에 확정된 퇴직연금제도입니다. 근로자는 직접 자신의 퇴직연금 적립금을 운용하여, 적립금과 운용수익을 퇴직급여로 지급받습니다. 개인형퇴직연금제도 (IRP : Individual Retirement Pension) 근로자가 직장을 옮기거나 퇴직하면서 지급받은 퇴직급여를 한 계좌로 모아 노후재원으로 활용할 수 있도록 하는 퇴직연금 통산장치(전용계좌) 제도입니다. 퇴직연금 수익률·금융상품 정보 퇴직연금 금융회사별 수익률 고용노동부와 금융감독원은 매년 퇴직연금 금융회사별 수익률과 연간 총 비용부담 정보를 비교공시하고 있습니다. 퇴직연금 금융상품 정보 고용노동부와 근로복지공단 근로복지정책연구원에서는 퇴직급여를 운용하기 위한 원리금보장 및 실적배당형 금융상품 정보를 제공하고 있습니다. 노동포털 퇴직금 계산기 바로가기"
+      }
+    ],
+    "intent_results": [
+      "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=1&cciNo=2&cnpClsNo=1&csmSeq=999&menuType=cnpcls&popMenu=ov",
+      "https://kbthink.com/retirement-pension.html"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 500,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "codex_native_search",
+    "organic_query": "퇴직연금 종류",
+    "organic_domains": [
+      "www.popa.or.kr",
+      "www.easylaw.go.kr",
+      "prod.investments.miraeasset.com",
+      "kbthink.com",
+      "img.ezwelfare.net",
+      "develop.investments.miraeasset.com",
+      "www.aceetf.co.kr",
+      "incometax.calculate.co.kr"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.popa.or.kr/business/pensionPay",
+        "domain": "www.popa.or.kr",
+        "title": "별정우체국연금관리단 - 주요사업 > 연금사업 > 퇴직급여",
+        "snippet": "퇴직연금공제일시금 산정방법 표_구분(구간), 종전기간(1 구간(2011."
+      },
+      {
+        "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=1&cciNo=2&cnpClsNo=1&csmSeq=999&menuType=cnpcls&popMenu=ov",
+        "domain": "www.easylaw.go.kr",
+        "title": "퇴직급여제도 > 퇴직급여제도의 운영 > 퇴직연금 운영 사업장 > 퇴직연금의 종류 (본문) | 찾기쉬운 생활법령정보",
+        "snippet": "Image 퇴직연금의 종류는 다음과 같이 확정급여형 퇴직연금, 확정기여형 퇴직연금 및 개인형 퇴직연금이 있습니다(「근로자퇴직급여 보장법」 제2조 제7호). ... ▪ 근로자가 퇴직할 때 받을 퇴직급여가 사전에 확정된"
+      },
+      {
+        "url": "https://prod.investments.miraeasset.com/magi/annuity/pension/knowInstitution/system.do",
+        "domain": "prod.investments.miraeasset.com",
+        "title": "퇴직연금 - 연금제도 알아보기 < 연금투자 가이드 | 미래에셋자산운용",
+        "snippet": "#### 퇴직연금 제도의 종류 ... ※ DC중도인출 사유 : 무주택자의 주택구입, 주택임차보증금(전세금) / 본인 및 배우자, 부양가족의 6개월 이상 요양(연간 임금총액의 12.5% 초과 의료비 발생"
+      },
+      {
+        "url": "https://kbthink.com/retirement-pension.html",
+        "domain": "kbthink.com",
+        "title": "퇴직연금이란? 종류, 계산법부터 DB형 DC형 차이까지",
+        "snippet": "우리나라는 근로자의 노후소득을 보장하기 위해 고용주가 퇴직금과 퇴직연금 중 하나 이상의 제도를 운영하도록 법으로 정해져 있는데요. ... - 55세 이후에 퇴직하거나 퇴직급여액이 300만원 이하인 경우"
+      },
+      {
+        "url": "https://img.ezwelfare.net/welfare_upload/etc/2022/02/220214_pol_guide.pdf",
+        "domain": "img.ezwelfare.net",
+        "title": "1 퇴직연금 청구\n\n청구방법과 종류\n\n### 1) 청구방법\n- 퇴직 후 본인이 직접 공무원",
+        "snippet": "※ 제출서류 : 퇴직급여청구서, 퇴직발령통지서 사본, 퇴직소득원천 징수영수증 사본(명예퇴직 시), 징계의결서(퇴직사유가 해임인 경우), 연금지급개시연령확인서(조기퇴직연금을 지급받고자 하는 경우) ... ### 3) 퇴직급여의 종류"
+      },
+      {
+        "url": "https://develop.investments.miraeasset.com/magi/annuity/pension/knowInstitution/system.do",
+        "domain": "develop.investments.miraeasset.com",
+        "title": "퇴직연금 - 연금제도 알아보기 < 연금투자 가이드 | 미래에셋자산운용",
+        "snippet": "#### 퇴직연금 제도의 종류 ... 제도전환 | - | DC전환 가능 (*회사에서 DB형, DC형 모두 도입했고, 퇴직연금규약에 따라 제도 전환이 가능한 경우) | DB전환불가 ..."
+      },
+      {
+        "url": "https://www.aceetf.co.kr/pension/rpIntro",
+        "domain": "www.aceetf.co.kr",
+        "title": "한국투자 ACE ETF > ETF로 연금투자 > 개인/퇴직연금 소개 > 퇴직연금 소개",
+        "snippet": "### 퇴직연금 종류 ... (이연 퇴직소득세의 70%만 부과) ... 全금융기관 합산한도 기준, 분기별 한도 제한 없음 연금저축계좌 및 퇴직연금 DC/IRP 가입자 납입분 합산 ... *"
+      },
+      {
+        "url": "https://incometax.calculate.co.kr/general-income-tax-calculator",
+        "domain": "incometax.calculate.co.kr",
+        "title": "종합소득세 계산기 – 소득세 계산기",
+        "snippet": "* 2인 이상으로부터 받는 근로소득 · 공적연금소득 · 퇴직소득 또는 연말정산대상 사업소득이 있는 경우(주된 근무지에서 종된 근무지 소득을 합산하여 연말정산에 의하여 소득세를 납부함으로써 확정신고 납부할"
+      }
+    ],
+    "dominant_result_ratio": 0.2,
+    "score_components": {
+      "demand": 21.59,
+      "organic_opportunity": 19.2,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-23T21:06:23.838922+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "퇴직연금종류"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "퇴직연금종류",
+      "executed_query": "퇴직연금 종류",
+      "topic": "퇴직연금종류: DB·DC·IRP의 차이와 역할",
+      "intent": "퇴직연금 DB·DC·IRP는 무엇이며, 운용 주체와 퇴직급여 결정 방식은 어떻게 다른가?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-10-23T21:06:23.838922+00:00",
+      "result_count": 8,
+      "domain_count": 7,
+      "dominant_ratio": 0.2,
+      "search_review": {
+        "version": 1,
+        "query": "퇴직연금종류",
+        "executed_query": "퇴직연금 종류",
+        "provider": "codex_native_search",
+        "checked_at": "2026-10-23T21:06:23.838922+00:00",
+        "raw_sha256": "3e052fd4d11c8372be22309eee6c129d802707488c15e53eb54c5452b5872fbe",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": false,
+            "quote": "별정우체국연금관리단 - 주요사업 > 연금사업 > 퇴직급여"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "Image 퇴직연금의 종류는 다음과 같이 확정급여형 퇴직연금, 확정기여형 퇴직연금 및 개인형 퇴직연금이 있습니다(「근로자퇴직급여 보장법」 제2조 제7호). ... ▪ 근로자가 퇴직할 때 받을 퇴직급여가 사전에 확정된"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "#### 퇴직연금 제도의 종류 ... ※ DC중도인출 사유 : 무주택자의 주택구입, 주택임차보증금(전세금) / 본인 및 배우자, 부양가족의 6개월 이상 요양(연간 임금총액의 12.5% 초과 의료비 발생"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "퇴직연금이란? 종류, 계산법부터 DB형 DC형 차이까지"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "1 퇴직연금 청구\n\n청구방법과 종류\n\n### 1) 청구방법\n- 퇴직 후 본인이 직접 공무원"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "#### 퇴직연금 제도의 종류 ... 제도전환 | - | DC전환 가능 (*회사에서 DB형, DC형 모두 도입했고, 퇴직연금규약에 따라 제도 전환이 가능한 경우) | DB전환불가 ..."
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "### 퇴직연금 종류 ... (이연 퇴직소득세의 70%만 부과) ... 全금융기관 합산한도 기준, 분기별 한도 제한 없음 연금저축계좌 및 퇴직연금 DC/IRP 가입자 납입분 합산 ... *"
+          },
+          {
+            "result_index": 7,
+            "relevant": false,
+            "quote": "종합소득세 계산기 – 소득세 계산기"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 8,
+        "canonical_result_count": 8,
+        "relevant_result_count": 5,
+        "relevant_site_count": 4,
+        "relevant_indices": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "relevance_ratio": 0.625,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.2,
+        "site_concentration": 0.4,
+        "organic_opportunity": 19.2
+      },
+      "scope": "full_keyword",
+      "target_keyword": "퇴직연금종류",
+      "matches": [
+        {
+          "result_index": 1,
+          "quote": "퇴직연금의 종류는 다음과 같이 확정급여형 퇴직연금, 확정기여형 퇴직연금 및 개인형 퇴직연금이 있습니다"
+        },
+        {
+          "result_index": 3,
+          "quote": "퇴직연금이란? 종류, 계산법부터 DB형 DC형 차이까지"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-23T21:06:23.838922+00:00",
+      "input_sha256": "412a2c8e8aaeded18729acbc39452bbf05e06de3f2758d58770b06ae55464118",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "퇴직연금종류",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "퇴직연금계산 퇴직연금 이란? 퇴직연금제도는 근로자들의 노후소득 보장을 위해 근로자 재직 기간 중 사용자가 근로자의 퇴직급여를 금융기관에 적립하고, 이 적립금을 사용자(DB) 또는 근로자(DC)가 운용하다가 55세 이후에 연금 또는 일시금으로 수령할 수 있도록 하는 제도 입니다. 확정급여형 퇴직연금제도 (DB : Defined Benefits Retirement Pension) 근로자가 퇴직할 때 받을 퇴직급여가 사전에 확정된 퇴직연금 제도 입니다. 사용자는 퇴직연금 부담금을 적립하여 자기의 책임으로 운용 합니다. 확정기여형 퇴직연금제도 (DC : Defind Contribution Retirement Pension) 사용자가 납입할 부담금이 매년 근로자 연간 임금총액의 1/12로 사전에 확정된 퇴직연금제도입니다. 근로자는 직접 자신의 퇴직연금 적립금을 운용하여, 적립금과 운용수익을 퇴직급여로 지급받습니다. 개인형퇴직연금제도 (IRP : Individual Retirement Pension) 근로자가 직장을 옮기거나 퇴직하면서 지급받은 퇴직급여를 한 계좌로 모아 노후재원으로 활용할 수 있도록 하는 퇴직연금 통산장치(전용계좌) 제도입니다. 퇴직연금 수익률·금융상품 정보 퇴직연금 금융회사별 수익률 고용노동부와 금융감독원은 매년 퇴직연금 금융회사별 수익률과 연간 총 비용부담 정보를 비교공시하고 있습니다. 퇴직연금 금융상품 정보 고용노동부와 근로복지공단 근로복지정책연구원에서는 퇴직급여를 운용하기 위한 원리금보장 및 실적배당형 금융상품 정보를 제공하고 있습니다. 노동포털 퇴직금 계산기 바로가기",
+            "entity": "근로자",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "퇴직연금 DB·DC·IRP의 종류별 운용 주체, 급여 결정 방식과 역할은 무엇인가?",
+            "answer": "DB는 급여가 사전 확정되고 사용자가 운용한다. DC는 연간 임금총액의 1/12를 사용자가 납입하고 근로자가 운용한다. IRP는 퇴직급여를 모으는 통산계좌다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "퇴직연금계산 퇴직연금 이란? 퇴직연금제도는 근로자들의 노후소득 보장을 위해 근로자 재직 기간 중 사용자가 근로자의 퇴직급여를 금융기관에 적립하고, 이 적립금을 사용자(DB) 또는 근로자(DC)가 운용하다가 55세 이후에 연금 또는 일시금으로 수령할 수 있도록 하는 제도 입니다. 확정급여형 퇴직연금제도 (DB : Defined Benefits Retirement Pension) 근로자가 퇴직할 때 받을 퇴직급여가 사전에 확정된 퇴직연금 제도 입니다. 사용자는 퇴직연금 부담금을 적립하여 자기의 책임으로 운용 합니다. 확정기여형 퇴직연금제도 (DC : Defind Contribution Retirement Pension) 사용자가 납입할 부담금이 매년 근로자 연간 임금총액의 1/12로 사전에 확정된 퇴직연금제도입니다. 근로자는 직접 자신의 퇴직연금 적립금을 운용하여, 적립금과 운용수익을 퇴직급여로 지급받습니다. 개인형퇴직연금제도 (IRP : Individual Retirement Pension) 근로자가 직장을 옮기거나 퇴직하면서 지급받은 퇴직급여를 한 계좌로 모아 노후재원으로 활용할 수 있도록 하는 퇴직연금 통산장치(전용계좌) 제도입니다. 퇴직연금 수익률·금융상품 정보 퇴직연금 금융회사별 수익률 고용노동부와 금융감독원은 매년 퇴직연금 금융회사별 수익률과 연간 총 비용부담 정보를 비교공시하고 있습니다. 퇴직연금 금융상품 정보 고용노동부와 근로복지공단 근로복지정책연구원에서는 퇴직급여를 운용하기 위한 원리금보장 및 실적배당형 금융상품 정보를 제공하고 있습니다. 노동포털 퇴직금 계산기 바로가기"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "퇴직연금계산 퇴직연금 이란? 퇴직연금제도는 근로자들의 노후소득 보장을 위해 근로자 재직 기간 중 사용자가 근로자의 퇴직급여를 금융기관에 적립하고, 이 적립금을 사용자(DB) 또는 근로자(DC)가 운용하다가 55세 이후에 연금 또는 일시금으로 수령할 수 있도록 하는 제도 입니다. 확정급여형 퇴직연금제도 (DB : Defined Benefits Retirement Pension) 근로자가 퇴직할 때 받을 퇴직급여가 사전에 확정된 퇴직연금 제도 입니다. 사용자는 퇴직연금 부담금을 적립하여 자기의 책임으로 운용 합니다. 확정기여형 퇴직연금제도 (DC : Defind Contribution Retirement Pension) 사용자가 납입할 부담금이 매년 근로자 연간 임금총액의 1/12로 사전에 확정된 퇴직연금제도입니다. 근로자는 직접 자신의 퇴직연금 적립금을 운용하여, 적립금과 운용수익을 퇴직급여로 지급받습니다. 개인형퇴직연금제도 (IRP : Individual Retirement Pension) 근로자가 직장을 옮기거나 퇴직하면서 지급받은 퇴직급여를 한 계좌로 모아 노후재원으로 활용할 수 있도록 하는 퇴직연금 통산장치(전용계좌) 제도입니다. 퇴직연금 수익률·금융상품 정보 퇴직연금 금융회사별 수익률 고용노동부와 금융감독원은 매년 퇴직연금 금융회사별 수익률과 연간 총 비용부담 정보를 비교공시하고 있습니다. 퇴직연금 금융상품 정보 고용노동부와 근로복지공단 근로복지정책연구원에서는 퇴직급여를 운용하기 위한 원리금보장 및 실적배당형 금융상품 정보를 제공하고 있습니다. 노동포털 퇴직금 계산기 바로가기",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 55.79,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

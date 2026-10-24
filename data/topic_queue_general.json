@@ -42625,7 +42625,7 @@
     "keywords": [
       "Gemini Notebook Connected App"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-23T21:02:03.672349+00:00",
@@ -42703,7 +42703,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2028,
+    "url": "https://trendpulse.blog/gemini-notebook-connected-app-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-24T00:04:32.990299"
   },
   {
     "keyword": "퇴직연금종류",

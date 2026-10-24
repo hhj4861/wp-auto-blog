@@ -1192,5 +1192,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-23T09:06:41.204379+00:00"
+  },
+  {
+    "key": "gemininotebookconnectedapp",
+    "keyword": "Gemini Notebook Connected App",
+    "topic": "Gemini Notebook Connected App 10월 23일 출시: 채팅에서 노트 관리와 계정별 설정",
+    "category": "생산성",
+    "post_id": 2028,
+    "url": "https://trendpulse.blog/gemini-notebook-connected-app-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-24T00:04:31.581134+00:00"
   }
 ]

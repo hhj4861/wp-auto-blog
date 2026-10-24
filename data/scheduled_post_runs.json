@@ -800,7 +800,9 @@
       "category": "생활정보",
       "slot": "evening",
       "claimed_at": "2026-10-24T18:00:12.184289+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-24T09:09:22.004103+00:00",
+      "published_category": "생활정보"
     }
   }
 }

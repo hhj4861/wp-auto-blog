@@ -803,6 +803,17 @@
       "status": "success",
       "completed_at": "2026-10-24T09:09:22.004103+00:00",
       "published_category": "생활정보"
+    },
+    "2026-10-25:morning": {
+      "scheduled_for": "2026-10-25T09:00:00+09:00",
+      "run_created_at": "2026-10-25T09:00:04+09:00",
+      "start_delay_seconds": 10,
+      "trigger": "external_timer",
+      "run_id": "40144953230",
+      "category": "리뷰",
+      "slot": "morning",
+      "claimed_at": "2026-10-25T09:00:10.573800+09:00",
+      "status": "started"
     }
   }
 }

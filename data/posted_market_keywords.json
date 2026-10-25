@@ -1230,5 +1230,26 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-24T09:09:17.708677+00:00"
+  },
+  {
+    "key": "한국잡월드채용",
+    "keyword": "한국잡월드채용",
+    "topic": "한국잡월드채용 2026년 신입 5급·1급 개방형 직위 지원자격과 접수방법",
+    "category": "취업",
+    "post_id": 2034,
+    "url": "https://trendpulse.blog/koreajobworld-recruitment-2026/",
+    "selection_version": 8,
+    "monthly_search": 2870,
+    "score": 60.44,
+    "score_components": {
+      "demand": 27.66,
+      "organic_opportunity": 17.78,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-25T00:07:42.279182+00:00"
   }
 ]

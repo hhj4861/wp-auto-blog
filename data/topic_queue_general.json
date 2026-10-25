@@ -43217,7 +43217,7 @@
     "keywords": [
       "한국잡월드채용"
     ],
-    "status": "pending",
+    "status": "completed",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -43440,6 +43440,10 @@
     },
     "score": 60.44,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2034,
+    "url": "https://trendpulse.blog/koreajobworld-recruitment-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-25T00:07:43.729409"
   }
 ]

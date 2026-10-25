@@ -826,7 +826,9 @@
       "category": "취업",
       "slot": "evening",
       "claimed_at": "2026-10-25T18:00:11.689452+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-25T09:06:26.905627+00:00",
+      "published_category": "생활정보"
     }
   }
 }

@@ -44393,7 +44393,7 @@
     "keywords": [
       "동계 정기 항공편 일정 확정"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-25T20:27:48.290195+00:00",
@@ -44471,6 +44471,10 @@
     },
     "score": 20,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2037,
+    "url": "https://trendpulse.blog/winter-flight-schedule-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-26T00:07:56.606889"
   }
 ]

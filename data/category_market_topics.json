@@ -15394,7 +15394,7 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-10-25T20:25:49.860971+00:00",
+    "selected_at": "2026-10-26T00:01:50.354063+00:00",
     "seeds": [
       "AI에이전트",
       "인공지능",
@@ -15406,15 +15406,15 @@
     "research_rounds": 4,
     "latest_issue_discovery": {
       "window_start": "2026-10-25T00:00:00+09:00",
-      "window_end": "2026-10-26T05:25:49.860971+09:00",
+      "window_end": "2026-10-26T09:01:50.354063+09:00",
       "queries": [
         {
           "query": "AI 에이전트 모델 공식 출시 발표 after:2026-10-25 before:2026-10-27",
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://airound.kr/",
-              "domain": "airound.kr",
+              "url": "https://www.airound.kr/",
+              "domain": "www.airound.kr",
               "title": "AI:ROUND | 국내 AI 테크 행사",
               "snippet": "공식 출처를 확인하고 승인한 서울·경기 AI 테크 행사를 한곳에서 발견하세요. ... 이번 주 AI 행사 무료 AI 행사 개발자 AI 행사 전시회 AI 행사 서울"
             },
@@ -15429,18 +15429,6 @@
               "domain": "pulse.lazyest.com",
               "title": "2026-10-06 소식 | Lazyest Pulse",
               "snippet": "장관은 현재 플랫폼에 적용된 국내 모델이 독파모 1차 결과물이라고 설명했다. ... 거버넌스 모듈은 모델·에이전트·외부 도구에 공통 보안·사용 정책을 적용하며 AI 게이트웨이와 핀옵스 대시보드를 제공한다. *"
-            },
-            {
-              "url": "https://www.aifnetwork.kr/conference",
-              "domain": "www.aifnetwork.kr",
-              "title": "2026 AI 인프라 프런티어 컨퍼런스 | AIF",
-              "snippet": "AI가 산업 현장으로 들어오면서 데이터센터와 클라우드, GPU·NPU, 전력과 냉각, 보안의 역할이 커지고 있습니다.이번 컨퍼런스에서는 인프라를 구축·운영하는 기업과 AI를 도입하는 기업, 금융·공공 관계자, 산·학·연 전문가가 실제"
-            },
-            {
-              "url": "https://help-lb.openai.com/ko-kr/articles/10128477-chatgpt-enterprise-and-edu-release-notes",
-              "domain": "help-lb.openai.com",
-              "title": "ChatGPT Enterprise 및 Edu 릴리스 노트 | OpenAI Help Center",
-              "snippet": "대상 워크스페이스의 경우 PowerPoint용 ChatGPT는 워크스페이스 정책 적용, 범위가 지정된 소스 액세스, 프롬프트와 응답에 대한 Compliance API 적용 범위, EU 추론 레지던시, 엔터프라이즈 키 관리를"
             },
             {
               "url": "https://pulse.lazyest.com/?date=2026-10-06",
@@ -15461,16 +15449,28 @@
               "snippet": "AI 기술에 관심있는 학생과 예비 개발자, 주니어 개발자, 스타트업 관계자 등 누구나 참여할 수 있습니다. ... 예비 창업가 대상의 AI 에이전트 해커톤으로, 아이디어 발굴부터 실행∙검증까지,"
             },
             {
-              "url": "https://note.com/ai_gpt_take/n/nf46d3de2e865?hl=ko",
-              "domain": "note.com",
-              "title": "[기타 AI 기업 및 서비스] 2026년 9월 AI 뉴스 요약｜신규 모델의 즉각적인 대응과 영상 생성·개발 에이전트·실행 기반의 확산｜けたけけ／GPTsクリエイター",
-              "snippet": "카테고리: 🆕 신규 출시 ... 모든 레이어부터 키프레임까지 AI 채팅과 편집 컨트롤로 조정할 수 있으며, 원하는 파일을 참조하여 원하는 형식으로 내보낼 수 있습니다.공식 사이트에서는 Burp를"
-            },
-            {
               "url": "https://tau-home.com/category/ai-news/",
               "domain": "tau-home.com",
               "title": "AI 뉴스 | TAU-HOME.COM",
               "snippet": "일레븐랩스가 9월 28일 차세대 음성 모델 Eleven v4와 실시간용 Eleven v4 Turbo를 출시했습니다. ... Higgsfield AI가 고유한 가상 인플루언서 캐릭터를 생성하고 숏폼 트렌드 영상에 결합할"
+            },
+            {
+              "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf?chain_id=xdZSFYR5lPQQas.1ktn2tj&global_content=%7B%22promote_id%22%3A13766%2C%22sub_promote_id%22%3A14%2C%22f%22%3A%22www.futunn.com%2Flearn%2Fdetail-trump-released-the-u-s-ai-action-plan-these-four-major-investment-themes-are-essential-to-know-91481-250791041%22%7D",
+              "domain": "www.whitehouse.gov",
+              "title": "America’s AI Action Plan",
+              "snippet": "# AMERICA’S AI ACTION PLAN"
+            },
+            {
+              "url": "https://liverex.net/",
+              "domain": "liverex.net",
+              "title": "라이브렉스 LiveREX | 테크·AI·모바일·가전제품·자동차 리뷰",
+              "snippet": "Muse Wonder가 개인 AI 에이전트 Muse에 적용되는 것은 앞으로의 계획이며, 최초 적용 대상은 구독자입니다. ... 발표 당시 미국에서 순차 출시된다고 안내했습니다. ... 기존 한국 Meta"
+            },
+            {
+              "url": "https://note.com/ai_gpt_take/n/nf46d3de2e865?hl=ko",
+              "domain": "note.com",
+              "title": "[기타 AI 기업 및 서비스] 2026년 9월 AI 뉴스 요약｜신규 모델의 즉각적인 대응과 영상 생성·개발 에이전트·실행 기반의 확산｜けたけけ／GPTsクリエイター",
+              "snippet": "카테고리: 🆕 신규 출시 ... 모든 레이어부터 키프레임까지 AI 채팅과 편집 컨트롤로 조정할 수 있으며, 원하는 파일을 참조하여 원하는 형식으로 내보낼 수 있습니다.공식 사이트에서는 Burp를"
             }
           ]
         },
@@ -15479,28 +15479,46 @@
           "provider": "codex_native_search",
           "results": [
             {
+              "url": "https://www.spofl.co.kr/",
+              "domain": "www.spofl.co.kr",
+              "title": "스포츠 브랜드와 콘텐츠의 중심, 스포플",
+              "snippet": "나음케어 x KYK 파운데이션 스포츠 인재 성장 지원 물품후원 협약 ... 브랜드관 바로가기 ... 배드민턴 퍼포먼스의 기준을 경험하다 라켓부터 의류·악세서리까지 모든 라인업을 한 번에 만나보세요."
+            },
+            {
+              "url": "https://footnotes.co.kr/industry/software",
+              "domain": "footnotes.co.kr",
+              "title": "소프트웨어·IT서비스 관련주 — 밸류체인과 소속 종목 · 풋노트",
+              "snippet": "기업용 소프트웨어·SI·보안·클라우드상장 178곳 · 부 업종 7곳 최근 해설 5건+연관 업종 · AI·데이터센터 연관 업종 · 인터넷·플랫폼 연관 업종 · 운송·물류 연관 업종 · 통신"
+            },
+            {
+              "url": "https://press.todayan.com/",
+              "domain": "press.todayan.com",
+              "title": "투데이안 보도자료",
+              "snippet": "AI 소프트웨어 기업 센트리어(대표 최진백)가 PHP 보안취약점 ‘PHP2Shell’로 인한 홈페이지 해킹에 대응하는 무료 취약점 점검·긴급 대응 서비스 PHP2Shell 점검센터 를 열었다고 밝혔다.로그인 없이 서버를 장악하는"
+            },
+            {
+              "url": "https://jobs.pathsdog.com/jobs/3762-%ED%98%84%EB%8C%80%EC%98%A4%ED%86%A0%EC%97%90%EB%B2%84-2026%EB%85%84-4%EB%B6%84%EA%B8%B0-%EC%8B%A0%EC%9E%85%EC%82%AC%EC%9B%90-%EC%B1%84%EC%9A%A9-%EA%B3%BC%EC%A0%9C%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A0%84%ED%98%95-%EB%B3%B4%EC%95%88-%EC%9D%B8%ED%94%84%EB%9D%BC-erp-ux-ui-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8",
+              "domain": "jobs.pathsdog.com",
+              "title": "현대오토에버 2026년 4분기 신입사원 채용 - 과제테스트 전형 (보안/인프라/ERP/UX/UI/데이터/프로덕트) 채용공고 | Pathsdog",
+              "snippet": "# 2026년 4분기 신입사원 채용 - 과제테스트 전형 (보안/인프라/ERP/UX/UI/데이터/프로덕트) ... 마감된 공고 이전 모집의 역할과 자격 요건을 확인해 다음 채용을 준비할 수 있습니다. ... 지원"
+            },
+            {
               "url": "https://www.g-enews.com/view.php?ud=2026102422451767870c8c1c064d_1",
               "domain": "www.g-enews.com",
               "title": "中 딥시크·미니맥스, 신규 수출 등록 마치고 차세대 모델 오픈소스 공개 - 글로벌이코노믹",
               "snippet": "중국 정부가 대형언어모델(LLM)과 인공지능(AI) 에이전트 등 핵심 AI 기술에 대한 수출통제 지침을 발표하며 관리·감독을 강화한 가운데, 중국의 대표적 토종 AI 유니콘인 딥시크(DeepSeek)와 미니맥스(MiniMax)가 당국의 정식"
             },
             {
-              "url": "https://footnotes.co.kr/industry/software",
-              "domain": "footnotes.co.kr",
-              "title": "소프트웨어·IT서비스 관련주 — 밸류체인과 소속 종목 · 풋노트",
-              "snippet": "# 소프트웨어·IT서비스기업용 소프트웨어·SI·보안·클라우드상장 178곳 · 부 업종 7곳 최근 해설 5건+연관 업종 · AI·데이터센터 연관 업종 · 인터넷·플랫폼 연관 업종 · 운송·물류 연관 업종 ·"
+              "url": "https://www.boannews.com/news/articleView.html?idxno=137465",
+              "domain": "www.boannews.com",
+              "title": "[2025 자동차 보안 솔루션 리포트] 성공 3박자 갖춰진 자동차 보안 산업 < 보안 리포트 < 비즈니스 < 기사본문 - 보안뉴스",
+              "snippet": "[보안뉴스 원병철 기자] EU가 2024년 7월부터 유럽에서 생산 및 판매되는 모든 차에 자동차 보안 규제인 UNR155와 UNR156을 적용하도록 하면서 자동차 보안이 수면 위로 떠오르게 됐다.우리나라"
             },
             {
-              "url": "https://www.fsc.go.kr/no010101/87650?curPage=1&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=all&srchText=%EC%A0%84%EC%9E%90%EC%A6%9D%EA%B6%8C",
-              "domain": "www.fsc.go.kr",
-              "title": "보도자료 - 위원회 소식 - 알림마당 - 금융위원회",
-              "snippet": "지난 1차회의(’26.3.4일)에서 ^{➀}다양성과 확장성을 위한 혁신, ^{➁}맞춤형 투자자 보호, ^{➂}증권결제 시스템의 미래준비 라는 3대 정책방향을 제시하고, 2차회의(’26.5.15일)에서 인프라· 발행·유통 부문의 핵심과제 에 대한 세부 논의"
-            },
-            {
-              "url": "https://press.shjn.co.kr/",
-              "domain": "press.shjn.co.kr",
-              "title": "시흥저널 보도자료",
-              "snippet": "PHP에서 심각한 보안 취약점이 발견되고 정부가 민간 분야 사이버위기 경보를 ‘주의’ 단계로 상향한 가운데, 소프트웨어 개발 전문 기업 넥시얼(NEXIAL)이 기업 웹사이트를 대상으로 무료 보안 사전"
+              "url": "https://auto-cyber-news.vercel.app/news?q=Tier1",
+              "domain": "auto-cyber-news.vercel.app",
+              "title": "자동차 사이버보안 뉴스 | Auto Cyber News",
+              "snippet": "정책동향2026.09.15 국토교통부·KATRI·KISA·경찰청·현대차, 자동차 사이버보안 사고대응 민·관 합동 모의훈련 실시 — 협력사 침해·OTA 악성 SW 배포 시나리오 국토교통부가 9월 15일 현대자동차 판교 AVP본부에서 KATRI·KISA·경찰청·현대자동차와 함께 자동차"
             },
             {
               "url": "https://jobs.pathsdog.com/jobs/3760-%ED%98%84%EB%8C%80%EC%98%A4%ED%86%A0%EC%97%90%EB%B2%84-2026%EB%85%84-4%EB%B6%84%EA%B8%B0-%EC%8B%A0%EC%9E%85%EC%82%AC%EC%9B%90-%EC%B1%84%EC%9A%A9-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A0%84%ED%98%95-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C-ai-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B8%ED%94%84%EB%9D%BC",
@@ -15518,30 +15536,15 @@
               "url": "https://www.kiid.or.kr/pages/exhibition_list.vm",
               "domain": "www.kiid.or.kr",
               "title": "한국실내디자인대전 | 학회행사 :: 한국실내디자인학회",
-              "snippet": "※ 출력물의 전면에는 소속, 출품자의 인식이 되는 표시를 할 수 없음 ... - 파일명은 출품자 이름이 홍길동일 경우 홍길동.jpg으로 저장 ... (2) 제출방법 : 공모전"
-            },
-            {
-              "url": "https://council.sejong.go.kr/cms/mntsMmbrSimpleViewer.do?mntsId=6782&var08=MBR000074",
-              "domain": "council.sejong.go.kr",
-              "title": "제108회 제1차 행정복지위원회(2026.07.16 목요일) : 세종특별자치시의회",
-              "snippet": "○기획조정실장 조수창 핵테온입니다. ... ○위원장 김재형 그러면 사이버 경진대회를 추진하는 이유가 앞서 인재 양성 그리고 또 인재 발굴 또 보안 관련된 기업에 대한 유치를 위한"
-            },
-            {
-              "url": "https://asksurf.ai/pulse/kr/jto-infra-revaluation-phase",
-              "domain": "asksurf.ai",
-              "title": "JTO, 인프라 재평가 국면에 진입하다 | Surf AI",
-              "snippet": "이번 업그레이드는 200ms Solana 슬롯을 도입하고 밸리데이터 소프트웨어 변경을 요구하며, 전환 기간 동안 BAM 노드를 일시적으로 유지보수 모드에 둔다. ... 이 시점이 중요한 이유는 운영상"
+              "snippet": "[사전 접수기간] 2026년 6월 1일(월) ~ 9월 30일(수) 14:00까지[공식 접수기간] 2026년 11월 2일(월) ~ 11월 23일(월) 14:00까지 ... - 무통장입금 : 참가신청 대표자명으로 송금 (국민은행"
             }
           ]
         }
       ],
       "sources": [
         {
-          "url": "https://www.fsc.go.kr/no010101/87650?curPage=1&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=all&srchText=%EC%A0%84%EC%9E%90%EC%A6%9D%EA%B6%8C",
-          "status": "no_recent_date",
-          "observed_dates": [
-            "2026-09-04"
-          ]
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf?chain_id=xdZSFYR5lPQQas.1ktn2tj&global_content=%7B%22promote_id%22%3A13766%2C%22sub_promote_id%22%3A14%2C%22f%22%3A%22www.futunn.com%2Flearn%2Fdetail-trump-released-the-u-s-ai-action-plan-these-four-major-investment-themes-are-essential-to-know-91481-250791041%22%7D",
+          "status": "fetch_failed"
         },
         {
           "url": "https://www.technopark.or.kr/",
@@ -15557,13 +15560,6 @@
             "2026-11-25",
             "2026-12-02",
             "2026-12-04"
-          ]
-        },
-        {
-          "url": "https://council.sejong.go.kr/cms/mntsMmbrSimpleViewer.do?mntsId=6782&var08=MBR000074",
-          "status": "no_recent_date",
-          "observed_dates": [
-            "2026-07-16"
           ]
         }
       ],
@@ -15582,7 +15578,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-25T20:25:49.860971+00:00",
+      "checked_at": "2026-10-26T00:01:50.354063+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -15654,7 +15650,6 @@
       "부터달라지는저소득층구분모집",
       "산업기사시험일정",
       "세금계산서발행",
-      "심장에좋은음식",
       "애스크플레이askplay",
       "엑셀매크로",
       "엑셀조건부서식",
@@ -15662,7 +15657,6 @@
       "엑셀틀고정",
       "엑셀표만들기",
       "연말정산환급일",
-      "오메가3효능",
       "온디바이스ai",
       "용인중앙시장캠페인",
       "윈도우11설치",
@@ -15806,7 +15800,7 @@
           },
           {
             "keyword": "AI사용법",
-            "reason_code": "category_mismatch",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15816,7 +15810,7 @@
           },
           {
             "keyword": "평판조회",
-            "reason_code": "duplicate_intent",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15911,7 +15905,7 @@
           },
           {
             "keyword": "아두이노",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15941,7 +15935,7 @@
           },
           {
             "keyword": "컨퍼런스",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15976,7 +15970,7 @@
           },
           {
             "keyword": "AI교육",
-            "reason_code": "category_mismatch",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -15996,7 +15990,7 @@
           },
           {
             "keyword": "AI추천",
-            "reason_code": "category_mismatch",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -16543,7 +16537,7 @@
           },
           {
             "keyword": "오스람",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -16598,7 +16592,7 @@
           },
           {
             "keyword": "AI비서",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -16638,7 +16632,7 @@
           },
           {
             "keyword": "AI사이트",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -16733,7 +16727,7 @@
           },
           {
             "keyword": "HONEYWELL",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -17149,7 +17143,7 @@
           },
           {
             "keyword": "단열페인트",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -17799,32 +17793,11 @@
       }
     ],
     "latest_issue_attempt": {
-      "research_stop_reason": "latest_listing_exhausted",
-      "evaluated_candidates": 1,
-      "seeds": [
-        "2026년 하반기 삼성직무적성검사(GSAT)"
-      ],
+      "research_stop_reason": "no_latest_sources",
+      "evaluated_candidates": 0,
+      "seeds": [],
       "held": [],
-      "rejected": [
-        {
-          "keyword": "2026년 하반기 삼성직무적성검사(GSAT)",
-          "reason": "search intent or official evidence does not support an article",
-          "decision_diagnostics": {
-            "official_sources": [
-              {
-                "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1-2026%eb%85%84-%ed%95%98%eb%b0%98%ea%b8%b0-%ec%82%bc%ec%84%b1%ec%a7%81%eb%ac%b4%ec%a0%81%ec%84%b1%ea%b2%80%ec%82%acgsat-%ec%8b%a4%ec%8b%9c",
-                "title": "삼성, 2026년 하반기 삼성직무적성검사(GSAT) 실시 – Samsung Newsroom Korea",
-                "excerpt_chars": 3325
-              }
-            ],
-            "analysis_status": "supported_false",
-            "model_rejection_opinion": {
-              "kind": "model_opinion",
-              "code": "category_mismatch"
-            }
-          }
-        }
-      ],
+      "rejected": [],
       "latest_issue_listing": [
         {
           "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1-2026%eb%85%84-%ed%95%98%eb%b0%98%ea%b8%b0-%ec%82%bc%ec%84%b1%ec%a7%81%eb%ac%b4%ec%a0%81%ec%84%b1%ea%b2%80%ec%82%acgsat-%ec%8b%a4%ec%8b%9c",
@@ -17837,52 +17810,40 @@
     },
     "analysis_diagnostics": [
       {
-        "stage": "shortlist",
+        "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 4443
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 7790
+        "elapsed_ms": 6595
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6967
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6278
+        "elapsed_ms": 7261
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 17108
+        "elapsed_ms": 19838
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 18152
+        "elapsed_ms": 17202
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 18074
+        "elapsed_ms": 21008
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 17164
+        "elapsed_ms": 16461
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -17895,8 +17856,8 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://airound.kr/",
-            "domain": "airound.kr",
+            "url": "https://www.airound.kr/",
+            "domain": "www.airound.kr",
             "title": "AI:ROUND | 국내 AI 테크 행사",
             "snippet": "공식 출처를 확인하고 승인한 서울·경기 AI 테크 행사를 한곳에서 발견하세요. ... 이번 주 AI 행사 무료 AI 행사 개발자 AI 행사 전시회 AI 행사 서울"
           },
@@ -17911,18 +17872,6 @@
             "domain": "pulse.lazyest.com",
             "title": "2026-10-06 소식 | Lazyest Pulse",
             "snippet": "장관은 현재 플랫폼에 적용된 국내 모델이 독파모 1차 결과물이라고 설명했다. ... 거버넌스 모듈은 모델·에이전트·외부 도구에 공통 보안·사용 정책을 적용하며 AI 게이트웨이와 핀옵스 대시보드를 제공한다. *"
-          },
-          {
-            "url": "https://www.aifnetwork.kr/conference",
-            "domain": "www.aifnetwork.kr",
-            "title": "2026 AI 인프라 프런티어 컨퍼런스 | AIF",
-            "snippet": "AI가 산업 현장으로 들어오면서 데이터센터와 클라우드, GPU·NPU, 전력과 냉각, 보안의 역할이 커지고 있습니다.이번 컨퍼런스에서는 인프라를 구축·운영하는 기업과 AI를 도입하는 기업, 금융·공공 관계자, 산·학·연 전문가가 실제"
-          },
-          {
-            "url": "https://help-lb.openai.com/ko-kr/articles/10128477-chatgpt-enterprise-and-edu-release-notes",
-            "domain": "help-lb.openai.com",
-            "title": "ChatGPT Enterprise 및 Edu 릴리스 노트 | OpenAI Help Center",
-            "snippet": "대상 워크스페이스의 경우 PowerPoint용 ChatGPT는 워크스페이스 정책 적용, 범위가 지정된 소스 액세스, 프롬프트와 응답에 대한 Compliance API 적용 범위, EU 추론 레지던시, 엔터프라이즈 키 관리를"
           },
           {
             "url": "https://pulse.lazyest.com/?date=2026-10-06",
@@ -17943,16 +17892,28 @@
             "snippet": "AI 기술에 관심있는 학생과 예비 개발자, 주니어 개발자, 스타트업 관계자 등 누구나 참여할 수 있습니다. ... 예비 창업가 대상의 AI 에이전트 해커톤으로, 아이디어 발굴부터 실행∙검증까지,"
           },
           {
-            "url": "https://note.com/ai_gpt_take/n/nf46d3de2e865?hl=ko",
-            "domain": "note.com",
-            "title": "[기타 AI 기업 및 서비스] 2026년 9월 AI 뉴스 요약｜신규 모델의 즉각적인 대응과 영상 생성·개발 에이전트·실행 기반의 확산｜けたけけ／GPTsクリエイター",
-            "snippet": "카테고리: 🆕 신규 출시 ... 모든 레이어부터 키프레임까지 AI 채팅과 편집 컨트롤로 조정할 수 있으며, 원하는 파일을 참조하여 원하는 형식으로 내보낼 수 있습니다.공식 사이트에서는 Burp를"
-          },
-          {
             "url": "https://tau-home.com/category/ai-news/",
             "domain": "tau-home.com",
             "title": "AI 뉴스 | TAU-HOME.COM",
             "snippet": "일레븐랩스가 9월 28일 차세대 음성 모델 Eleven v4와 실시간용 Eleven v4 Turbo를 출시했습니다. ... Higgsfield AI가 고유한 가상 인플루언서 캐릭터를 생성하고 숏폼 트렌드 영상에 결합할"
+          },
+          {
+            "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf?chain_id=xdZSFYR5lPQQas.1ktn2tj&global_content=%7B%22promote_id%22%3A13766%2C%22sub_promote_id%22%3A14%2C%22f%22%3A%22www.futunn.com%2Flearn%2Fdetail-trump-released-the-u-s-ai-action-plan-these-four-major-investment-themes-are-essential-to-know-91481-250791041%22%7D",
+            "domain": "www.whitehouse.gov",
+            "title": "America’s AI Action Plan",
+            "snippet": "# AMERICA’S AI ACTION PLAN"
+          },
+          {
+            "url": "https://liverex.net/",
+            "domain": "liverex.net",
+            "title": "라이브렉스 LiveREX | 테크·AI·모바일·가전제품·자동차 리뷰",
+            "snippet": "Muse Wonder가 개인 AI 에이전트 Muse에 적용되는 것은 앞으로의 계획이며, 최초 적용 대상은 구독자입니다. ... 발표 당시 미국에서 순차 출시된다고 안내했습니다. ... 기존 한국 Meta"
+          },
+          {
+            "url": "https://note.com/ai_gpt_take/n/nf46d3de2e865?hl=ko",
+            "domain": "note.com",
+            "title": "[기타 AI 기업 및 서비스] 2026년 9월 AI 뉴스 요약｜신규 모델의 즉각적인 대응과 영상 생성·개발 에이전트·실행 기반의 확산｜けたけけ／GPTsクリエイター",
+            "snippet": "카테고리: 🆕 신규 출시 ... 모든 레이어부터 키프레임까지 AI 채팅과 편집 컨트롤로 조정할 수 있으며, 원하는 파일을 참조하여 원하는 형식으로 내보낼 수 있습니다.공식 사이트에서는 Burp를"
           }
         ]
       },
@@ -17964,28 +17925,46 @@
         "provider": "codex_native_search",
         "results": [
           {
+            "url": "https://www.spofl.co.kr/",
+            "domain": "www.spofl.co.kr",
+            "title": "스포츠 브랜드와 콘텐츠의 중심, 스포플",
+            "snippet": "나음케어 x KYK 파운데이션 스포츠 인재 성장 지원 물품후원 협약 ... 브랜드관 바로가기 ... 배드민턴 퍼포먼스의 기준을 경험하다 라켓부터 의류·악세서리까지 모든 라인업을 한 번에 만나보세요."
+          },
+          {
+            "url": "https://footnotes.co.kr/industry/software",
+            "domain": "footnotes.co.kr",
+            "title": "소프트웨어·IT서비스 관련주 — 밸류체인과 소속 종목 · 풋노트",
+            "snippet": "기업용 소프트웨어·SI·보안·클라우드상장 178곳 · 부 업종 7곳 최근 해설 5건+연관 업종 · AI·데이터센터 연관 업종 · 인터넷·플랫폼 연관 업종 · 운송·물류 연관 업종 · 통신"
+          },
+          {
+            "url": "https://press.todayan.com/",
+            "domain": "press.todayan.com",
+            "title": "투데이안 보도자료",
+            "snippet": "AI 소프트웨어 기업 센트리어(대표 최진백)가 PHP 보안취약점 ‘PHP2Shell’로 인한 홈페이지 해킹에 대응하는 무료 취약점 점검·긴급 대응 서비스 PHP2Shell 점검센터 를 열었다고 밝혔다.로그인 없이 서버를 장악하는"
+          },
+          {
+            "url": "https://jobs.pathsdog.com/jobs/3762-%ED%98%84%EB%8C%80%EC%98%A4%ED%86%A0%EC%97%90%EB%B2%84-2026%EB%85%84-4%EB%B6%84%EA%B8%B0-%EC%8B%A0%EC%9E%85%EC%82%AC%EC%9B%90-%EC%B1%84%EC%9A%A9-%EA%B3%BC%EC%A0%9C%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A0%84%ED%98%95-%EB%B3%B4%EC%95%88-%EC%9D%B8%ED%94%84%EB%9D%BC-erp-ux-ui-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A1%9C%EB%8D%95%ED%8A%B8",
+            "domain": "jobs.pathsdog.com",
+            "title": "현대오토에버 2026년 4분기 신입사원 채용 - 과제테스트 전형 (보안/인프라/ERP/UX/UI/데이터/프로덕트) 채용공고 | Pathsdog",
+            "snippet": "# 2026년 4분기 신입사원 채용 - 과제테스트 전형 (보안/인프라/ERP/UX/UI/데이터/프로덕트) ... 마감된 공고 이전 모집의 역할과 자격 요건을 확인해 다음 채용을 준비할 수 있습니다. ... 지원"
+          },
+          {
             "url": "https://www.g-enews.com/view.php?ud=2026102422451767870c8c1c064d_1",
             "domain": "www.g-enews.com",
             "title": "中 딥시크·미니맥스, 신규 수출 등록 마치고 차세대 모델 오픈소스 공개 - 글로벌이코노믹",
             "snippet": "중국 정부가 대형언어모델(LLM)과 인공지능(AI) 에이전트 등 핵심 AI 기술에 대한 수출통제 지침을 발표하며 관리·감독을 강화한 가운데, 중국의 대표적 토종 AI 유니콘인 딥시크(DeepSeek)와 미니맥스(MiniMax)가 당국의 정식"
           },
           {
-            "url": "https://footnotes.co.kr/industry/software",
-            "domain": "footnotes.co.kr",
-            "title": "소프트웨어·IT서비스 관련주 — 밸류체인과 소속 종목 · 풋노트",
-            "snippet": "# 소프트웨어·IT서비스기업용 소프트웨어·SI·보안·클라우드상장 178곳 · 부 업종 7곳 최근 해설 5건+연관 업종 · AI·데이터센터 연관 업종 · 인터넷·플랫폼 연관 업종 · 운송·물류 연관 업종 ·"
+            "url": "https://www.boannews.com/news/articleView.html?idxno=137465",
+            "domain": "www.boannews.com",
+            "title": "[2025 자동차 보안 솔루션 리포트] 성공 3박자 갖춰진 자동차 보안 산업 < 보안 리포트 < 비즈니스 < 기사본문 - 보안뉴스",
+            "snippet": "[보안뉴스 원병철 기자] EU가 2024년 7월부터 유럽에서 생산 및 판매되는 모든 차에 자동차 보안 규제인 UNR155와 UNR156을 적용하도록 하면서 자동차 보안이 수면 위로 떠오르게 됐다.우리나라"
           },
           {
-            "url": "https://www.fsc.go.kr/no010101/87650?curPage=1&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=all&srchText=%EC%A0%84%EC%9E%90%EC%A6%9D%EA%B6%8C",
-            "domain": "www.fsc.go.kr",
-            "title": "보도자료 - 위원회 소식 - 알림마당 - 금융위원회",
-            "snippet": "지난 1차회의(’26.3.4일)에서 ^{➀}다양성과 확장성을 위한 혁신, ^{➁}맞춤형 투자자 보호, ^{➂}증권결제 시스템의 미래준비 라는 3대 정책방향을 제시하고, 2차회의(’26.5.15일)에서 인프라· 발행·유통 부문의 핵심과제 에 대한 세부 논의"
-          },
-          {
-            "url": "https://press.shjn.co.kr/",
-            "domain": "press.shjn.co.kr",
-            "title": "시흥저널 보도자료",
-            "snippet": "PHP에서 심각한 보안 취약점이 발견되고 정부가 민간 분야 사이버위기 경보를 ‘주의’ 단계로 상향한 가운데, 소프트웨어 개발 전문 기업 넥시얼(NEXIAL)이 기업 웹사이트를 대상으로 무료 보안 사전"
+            "url": "https://auto-cyber-news.vercel.app/news?q=Tier1",
+            "domain": "auto-cyber-news.vercel.app",
+            "title": "자동차 사이버보안 뉴스 | Auto Cyber News",
+            "snippet": "정책동향2026.09.15 국토교통부·KATRI·KISA·경찰청·현대차, 자동차 사이버보안 사고대응 민·관 합동 모의훈련 실시 — 협력사 침해·OTA 악성 SW 배포 시나리오 국토교통부가 9월 15일 현대자동차 판교 AVP본부에서 KATRI·KISA·경찰청·현대자동차와 함께 자동차"
           },
           {
             "url": "https://jobs.pathsdog.com/jobs/3760-%ED%98%84%EB%8C%80%EC%98%A4%ED%86%A0%EC%97%90%EB%B2%84-2026%EB%85%84-4%EB%B6%84%EA%B8%B0-%EC%8B%A0%EC%9E%85%EC%82%AC%EC%9B%90-%EC%B1%84%EC%9A%A9-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A0%84%ED%98%95-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%9C%EB%B0%9C-ai-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9D%B8%ED%94%84%EB%9D%BC",
@@ -18003,30 +17982,8 @@
             "url": "https://www.kiid.or.kr/pages/exhibition_list.vm",
             "domain": "www.kiid.or.kr",
             "title": "한국실내디자인대전 | 학회행사 :: 한국실내디자인학회",
-            "snippet": "※ 출력물의 전면에는 소속, 출품자의 인식이 되는 표시를 할 수 없음 ... - 파일명은 출품자 이름이 홍길동일 경우 홍길동.jpg으로 저장 ... (2) 제출방법 : 공모전"
-          },
-          {
-            "url": "https://council.sejong.go.kr/cms/mntsMmbrSimpleViewer.do?mntsId=6782&var08=MBR000074",
-            "domain": "council.sejong.go.kr",
-            "title": "제108회 제1차 행정복지위원회(2026.07.16 목요일) : 세종특별자치시의회",
-            "snippet": "○기획조정실장 조수창 핵테온입니다. ... ○위원장 김재형 그러면 사이버 경진대회를 추진하는 이유가 앞서 인재 양성 그리고 또 인재 발굴 또 보안 관련된 기업에 대한 유치를 위한"
-          },
-          {
-            "url": "https://asksurf.ai/pulse/kr/jto-infra-revaluation-phase",
-            "domain": "asksurf.ai",
-            "title": "JTO, 인프라 재평가 국면에 진입하다 | Surf AI",
-            "snippet": "이번 업그레이드는 200ms Solana 슬롯을 도입하고 밸리데이터 소프트웨어 변경을 요구하며, 전환 기간 동안 BAM 노드를 일시적으로 유지보수 모드에 둔다. ... 이 시점이 중요한 이유는 운영상"
+            "snippet": "[사전 접수기간] 2026년 6월 1일(월) ~ 9월 30일(수) 14:00까지[공식 접수기간] 2026년 11월 2일(월) ~ 11월 23일(월) 14:00까지 ... - 무통장입금 : 참가신청 대표자명으로 송금 (국민은행"
           }
-        ]
-      },
-      {
-        "keyword": "",
-        "category": "테크",
-        "stage": "latest_issue_source",
-        "url": "https://www.fsc.go.kr/no010101/87650?curPage=1&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=all&srchText=%EC%A0%84%EC%9E%90%EC%A6%9D%EA%B6%8C",
-        "status": "no_recent_date",
-        "observed_dates": [
-          "2026-09-04"
         ]
       },
       {
@@ -18042,16 +17999,6 @@
           "2026-11-25",
           "2026-12-02",
           "2026-12-04"
-        ]
-      },
-      {
-        "keyword": "",
-        "category": "테크",
-        "stage": "latest_issue_source",
-        "url": "https://council.sejong.go.kr/cms/mntsMmbrSimpleViewer.do?mntsId=6782&var08=MBR000074",
-        "status": "no_recent_date",
-        "observed_dates": [
-          "2026-07-16"
         ]
       }
     ],

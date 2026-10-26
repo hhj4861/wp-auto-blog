@@ -43680,7 +43680,7 @@
     "keywords": [
       "오메가3효능"
     ],
-    "status": "pending",
+    "status": "held_draft",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -43912,7 +43912,11 @@
     },
     "score": 75.75,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2040,
+    "url": "https://trendpulse.blog/?p=2040",
+    "post_status": "draft",
+    "held_at": "2026-10-26T09:08:20.252538"
   },
   {
     "keyword": "심장에좋은음식",

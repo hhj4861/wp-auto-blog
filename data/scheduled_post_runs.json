@@ -829,6 +829,17 @@
       "status": "failure",
       "completed_at": "2026-10-25T09:06:26.905627+00:00",
       "published_category": "생활정보"
+    },
+    "2026-10-26:morning": {
+      "scheduled_for": "2026-10-26T09:00:00+09:00",
+      "run_created_at": "2026-10-26T09:00:04+09:00",
+      "start_delay_seconds": 12,
+      "trigger": "external_timer",
+      "run_id": "40247225394",
+      "category": "테크",
+      "slot": "morning",
+      "claimed_at": "2026-10-26T09:00:12.097738+09:00",
+      "status": "started"
     }
   }
 }

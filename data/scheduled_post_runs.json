@@ -839,7 +839,9 @@
       "category": "테크",
       "slot": "morning",
       "claimed_at": "2026-10-26T09:00:12.097738+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-26T00:08:00.344139+00:00",
+      "published_category": "생활정보"
     }
   }
 }

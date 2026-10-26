@@ -44480,5 +44480,611 @@
     "url": "https://trendpulse.blog/winter-flight-schedule-2026/",
     "post_status": "publish",
     "completed_at": "2026-10-26T00:07:56.606889"
+  },
+  {
+    "keyword": "파워포인트뷰어",
+    "category": "생산성",
+    "topic": "파워포인트뷰어 지원 종료 후 PPT 무료로 여는 방법",
+    "intent": "파워포인트 없이 pptx 파일을 무료로 열람·재생하려는 독자가 뷰어 설치처를 찾는다",
+    "gap": "뷰어 2018-04-30 은퇴 사실과 웹·모바일·OneDrive 대체 열람 경로를 단계표로 정리",
+    "source_url": "https://support.microsoft.com/en-us/powerpoint/view-a-presentation-without-powerpoint",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/view-a-presentation-without-powerpoint",
+        "original_url": "https://support.microsoft.com/en-us/powerpoint/view-a-presentation-without-powerpoint",
+        "title": "View a presentation without PowerPoint | Microsoft Support",
+        "checked_on": "2026-10-26",
+        "publication_dates": [],
+        "sha256": "c28e90f03eb428a19699211f400121bba483b3e52433313dc690ffe6b411b697",
+        "excerpt": "View a presentation without PowerPoint Applies To PowerPoint for Microsoft 365 PowerPoint 2021 PowerPoint 2019 PowerPoint 2016 PowerPoint Mobile If you don't have PowerPoint installed on your computer, you can still open and view presentations by using PowerPoint for the web ( here ) or PowerPoint on your mobile device. Use PowerPoint in a web browser If you have a Microsoft account (hotmail.com, outlook.com, live.com, msn.com) or a Microsoft 365 work or school account, you can view and edit a presentation for free in a web browser. Save the file to OneDrive or Dropbox and use PowerPoint for the web to open it. If you don't already have a Microsoft account, you can create one for free . Get PowerPoint for a smartphone or tablet The free mobile versions of PowerPoint let you open presentations on your smartphone or tablet: Get PowerPoint from Google Play Get PowerPoint from iTunes PowerPoint Viewer has been retired PowerPoint Viewer was retired on April 30, 2018. It's no longer available for download.",
+        "locator_origin": "native_open"
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/servicing/office/supported-versions-of-the-office-viewers",
+        "original_url": "https://support.microsoft.com/en-us/servicing/office/supported-versions-of-the-office-viewers",
+        "title": "Supported versions of the Office viewers | Microsoft Support",
+        "checked_on": "2026-10-26",
+        "publication_dates": [],
+        "sha256": "da4ff4f3394f4dee9a5775d23ad811034386077431730667c19d961ec8f49ea8",
+        "excerpt": "Supported versions of the Office viewers Discontinued versions of Office viewers Microsoft recently discontinued the older versions of Office viewers. Microsoft will not provide hotfix, service pack, or security update support for these products. The discontinued Office viewers are as follows: Word Viewer (all versions) Excel Viewer (all versions) PowerPoint Viewer (all versions) Visio Viewer 2002 Visio Viewer 2003 Supported Office viewers Note Office viewers being retired The Word Viewer, PowerPoint Viewer and Excel Viewer have been retired. These Viewers will no longer be available for download or receive security updates. To continue viewing Office files for free, we recommend installing the Office apps or storing documents in OneDrive or Dropbox, where Word Online, Excel Online or PowerPoint Online opens them in your browser. For the mobile apps, visit the store for your device. Store The Word app The Excel app The PowerPoint app Google Play Download Download Download iTunes Download Download Download Microsoft Store Download Download Download To obtain the latest supported versions of the Office viewers, go to the following Microsoft websites: Visio 2010: Visio Viewer Note Office viewers must be updated to a supported service pack level in order to remain in support. Use the following table to obtain applicable service pack information. Supported Office viewer Service pack applicability Notes Visio Viewer Apply service packs for Visio 2010 Viewer Visio Viewer is also known as Visio 2010 Viewer",
+        "locator_origin": "native_open"
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/powerpoint/basic-tasks-in-powerpoint-for-the-web-1",
+        "original_url": "https://support.microsoft.com/en-us/office/basic-tasks-in-powerpoint-for-the-web-0bd5e44c-bdcc-45fc-8f52-524f90e9413d",
+        "title": "Basic tasks in PowerPoint for the web | Microsoft Support",
+        "checked_on": "2026-10-26",
+        "publication_dates": [],
+        "sha256": "e7cd5477f365c385b294990c2771b15639a4d16c44275734bdc8e3089bbe5042",
+        "excerpt": "Basic tasks in PowerPoint for the web Get help with Copilot How can I add transitions between slides in PowerPoint? Explain reuse (import) slides from another presentation Give me basic tasks in PowerPoint for the web. With PowerPoint for the web, you create presentations in your web browser. They are stored in your OneDrive , and you can edit and share them online without needing other software. Following are some basic steps for creating and showing a presentation. Select a heading below to open it and see the detailed instructions. Edit a presentation in PowerPoint for the web If you have a presentation open in view-only mode, you can choose Edit in Browser to make changes to it in your browser. Select Edit Presentation . Select Edit in Browser . If you want to open the online folder where the presentation is stored, click OneDrive in the left upper corner. When that folder opens, you can delete a document, open another document, or navigate to other folders. Pick a theme PowerPoint comes with themes —sets of professionally designed color schemes and slide layouts. Just pick a theme, and all your slides will follow that look. On the Design tab, select a theme. Every theme has four color variations you can choose from in the Variants group. Pick a layout for your slides Each slide layout has placeholders for text, pictures, charts, shapes, and more. Pick the layout that works best with the content you plan to present. Select the slide whose layout you want to change. On the Home tab, click Layout in the Slides group. Pick the slide layout you want, and then select it. To change the size of slide, on View tab, click Slide Size to customize it. Add text To add text to your slide, click inside a text placeholder and start typing. For text bullets, place your cursor in the line of text, and on the Home tab, select a bullet style in the Paragraph group. Add a picture On the Insert tab, click Picture . In the Open dialog box, browse to the picture you want, and then select Open . Add transitions between slides For smooth, animated shifts between slides, add transitions. Select the slide you want to add a transition to. On the Transitions tab, select a transition. To open the complete gallery of Transition options, click the downward pointing arrow at the right end. To apply the transition to all the slides in your presentation, on the Transitions tab select Apply To All . Add an animation effect to an object Select the object you want to add animation to. On the Animations tab, select an animation. To apply an animation effect, click the downward pointing arrow on Effect Options and choose one. Present your slide show You can run your PowerPoint for the web presentation with an Internet connection and a web browser. To start your slide show, on the Slide Show tab, select From Beginning or From Current Slide . (If you've turned off the Simplified Ribbon, you don't have a Slide Show tab; instead use the View tab to start Slide Show.) To navigate your slide show, point your mouse at the bottom-left corner of the slide. Five navigation buttons (including Previous and Next , on the left end) appear: Share your presentation online As you work on your presentation in OneDrive, you might want to share it so other people can see it or work on it with you. Select your presentation in OneDrive, and then click the Share tab. Under Share , click Share . To share a view-only copy of your presentation, click the downward pointing arrow at the right end and select can View . To let others view and edit a copy of your presentation, click the downward pointing arrow at the right end and select can Edit . Add the names/email of the person you want to share with and click send . Other option is to copy the link by selecting copy link and paste the URL into an email, chat session, or social networking site. For more information about sharing presentations and co-authoring, see Work together on PowerPoint presentations . Print your slides You can print your slides and use them as handouts, or you can add your speaker notes to them and use them as a visual aid when you present. Select File > Print . PowerPoint for the web creates a printable PDF file and then opens the Print dialog box for your web browser. Use your printer's options and settings to choose the print layout options you want and print your presentation.",
+        "locator_origin": "native_open"
+      }
+    ],
+    "intent_results": [
+      "https://www.wps.com/blog/ko-KR/10-best-powerpoint-viewer-software/",
+      "https://yellowit.co.kr/it-review/%eb%ac%b4%eb%a3%8c-%ed%8c%8c%ec%9b%8c%ed%8f%ac%ec%9d%b8%ed%8a%b8-%eb%b7%b0%ec%96%b4-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8-pptx-%ec%8b%a4%ed%96%89%eb%b0%a9%eb%b2%95/",
+      "https://www.versio.io/fr/product-release-end-of-life-eol-microsoft-powerpoint-viewer.html"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 670,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "중간",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "claude_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://support.microsoft.com/en-us/powerpoint/view-a-presentation-without-powerpoint",
+          "origin": "native_open"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/servicing/office/supported-versions-of-the-office-viewers",
+          "origin": "native_open"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/office/basic-tasks-in-powerpoint-for-the-web-0bd5e44c-bdcc-45fc-8f52-524f90e9413d",
+          "origin": "native_open"
+        },
+        {
+          "url": "https://support.microsoft.com/ko-kr/powerpoint/view-a-presentation-without-powerpoint",
+          "origin": "native_open"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/powerpoint/how-certain-features-behave-in-web-based-powerpoint",
+          "origin": "native_open"
+        }
+      ]
+    },
+    "organic_provider": "claude_native_search",
+    "organic_query": "파워포인트 뷰어",
+    "organic_domains": [
+      "www.wps.com",
+      "yellowit.co.kr",
+      "en.wikipedia.org",
+      "en.wikipedia.org",
+      "www.versio.io",
+      "extranet.joa.org.jm",
+      "my.homepage.net",
+      "sourceforge.net",
+      "next.royakabuki.org"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.wps.com/blog/ko-KR/10-best-powerpoint-viewer-software/",
+        "domain": "www.wps.com",
+        "title": "10 best powerpoint viewer software",
+        "snippet": ""
+      },
+      {
+        "url": "https://yellowit.co.kr/it-review/%eb%ac%b4%eb%a3%8c-%ed%8c%8c%ec%9b%8c%ed%8f%ac%ec%9d%b8%ed%8a%b8-%eb%b7%b0%ec%96%b4-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8-pptx-%ec%8b%a4%ed%96%89%eb%b0%a9%eb%b2%95/",
+        "domain": "yellowit.co.kr",
+        "title": "%eb%ac%b4%eb%a3%8c %ed%8c%8c%ec%9b%8c%ed%8f%ac%ec%9d%b8%ed%8a%b8 %eb%b7%b0%ec%96%b4 %ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8 pptx %ec%8b%a4%ed%96%89%eb%b0%a9%eb%b2%95",
+        "snippet": ""
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Microsoft_3D_Viewer",
+        "domain": "en.wikipedia.org",
+        "title": "Microsoft 3D Viewer",
+        "snippet": ""
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Pocket_Viewer",
+        "domain": "en.wikipedia.org",
+        "title": "Pocket Viewer",
+        "snippet": ""
+      },
+      {
+        "url": "https://www.versio.io/fr/product-release-end-of-life-eol-microsoft-powerpoint-viewer.html",
+        "domain": "www.versio.io",
+        "title": "PowerPoint Viewer : versions, correctifs et fin de vie",
+        "snippet": ""
+      },
+      {
+        "url": "https://extranet.joa.org.jm/content/powerpoint-viewer-mac-os-2581854",
+        "domain": "extranet.joa.org.jm",
+        "title": "Powerpoint Viewer Mac Os - Jamaica Olympic Association",
+        "snippet": ""
+      },
+      {
+        "url": "https://my.homepage.net/news/microsoft-powerpoint-viewer",
+        "domain": "my.homepage.net",
+        "title": "Microsoft Powerpoint Viewer - HomePage Media",
+        "snippet": ""
+      },
+      {
+        "url": "https://sourceforge.net/app/microsoft-powerpoint-viewer-2007/",
+        "domain": "sourceforge.net",
+        "title": "Brief summary",
+        "snippet": ""
+      },
+      {
+        "url": "https://next.royakabuki.org/release/pptx-viewer-301389",
+        "domain": "next.royakabuki.org",
+        "title": "Pptx Viewer - Roya Kabuki",
+        "snippet": ""
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 22.61,
+      "organic_opportunity": 33.33,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_growth": null,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "unavailable",
+    "selection_version": 8,
+    "selected_at": "2026-10-26T10:06:48.673543+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "파워포인트뷰어"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "파워포인트뷰어",
+      "executed_query": "파워포인트 뷰어",
+      "topic": "파워포인트뷰어 지원 종료 후 PPT 무료로 여는 방법",
+      "intent": "파워포인트 없이 pptx 파일을 무료로 열람·재생하려는 독자가 뷰어 설치처를 찾는다",
+      "provider": "claude_native_search",
+      "checked_at": "2026-10-26T10:06:48.673543+00:00",
+      "result_count": 9,
+      "domain_count": 8,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "파워포인트뷰어",
+        "executed_query": "파워포인트 뷰어",
+        "provider": "claude_native_search",
+        "checked_at": "2026-10-26T10:06:48.673543+00:00",
+        "raw_sha256": "ce0d044ca27fc849567125069e137110d84f9eb94ec9da36b04a769e6e8a6e59",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "10 best powerpoint viewer software"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "%eb%ac%b4%eb%a3%8c %ed%8c%8c%ec%9b%8c%ed%8f%ac%ec%9d%b8%ed%8a%b8 %eb%b7%b0%ec%96%b4 %ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8 pptx %ec%8b%a4%ed%96%89%eb%b0%a9%eb%b2%95"
+          },
+          {
+            "result_index": 2,
+            "relevant": false,
+            "quote": "Microsoft 3D Viewer"
+          },
+          {
+            "result_index": 3,
+            "relevant": false,
+            "quote": "Pocket Viewer"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "PowerPoint Viewer : versions, correctifs et fin de vie"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "Powerpoint Viewer Mac Os - Jamaica Olympic Association"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "Microsoft Powerpoint Viewer - HomePage Media"
+          },
+          {
+            "result_index": 7,
+            "relevant": false,
+            "quote": "Brief summary"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "Pptx Viewer - Roya Kabuki"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 9,
+        "canonical_result_count": 9,
+        "relevant_result_count": 6,
+        "relevant_site_count": 6,
+        "relevant_indices": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          8
+        ],
+        "relevance_ratio": 0.6666666666666666,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.16666666666666666,
+        "organic_opportunity": 33.33
+      },
+      "scope": "full_keyword",
+      "target_keyword": "파워포인트뷰어",
+      "matches": [
+        {
+          "result_index": 0,
+          "quote": "powerpoint viewer software"
+        },
+        {
+          "result_index": 4,
+          "quote": "versions, correctifs et fin de vie"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-26T10:06:48.673543+00:00",
+      "input_sha256": "7a400c6e300c11aa7dbd033cf44b7b25d286506eb64776e2b5282bad8217b444",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "파워포인트뷰어",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "View a presentation without PowerPoint Applies To PowerPoint for Microsoft 365 PowerPoint 2021 PowerPoint 2019 PowerPoint 2016 PowerPoint Mobile If you don't have PowerPoint installed on your computer, you can still open and view presentations by using PowerPoint for the web ( here ) or PowerPoint on your mobile device. Use PowerPoint in a web browser If you have a Microsoft account (hotmail.com, outlook.com, live.com, msn.com) or a Microsoft 365 work or school account, you can view and edit a presentation for free in a web browser. Save the file to OneDrive or Dropbox and use PowerPoint for the web to open it. If you don't already have a Microsoft account, you can create one for free . Get PowerPoint for a smartphone or tablet The free mobile versions of PowerPoint let you open presentations on your smartphone or tablet: Get PowerPoint from Google Play Get PowerPoint from iTunes PowerPo",
+            "entity": "PowerPoint for the web",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "Supported versions of the Office viewers Discontinued versions of Office viewers Microsoft recently discontinued the older versions of Office viewers. Microsoft will not provide hotfix, service pack, or security update support for these products. The discontinued Office viewers are as follows: Word Viewer (all versions) Excel Viewer (all versions) PowerPoint Viewer (all versions) Visio Viewer 2002 Visio Viewer 2003 Supported Office viewers Note Office viewers being retired The Word Viewer, PowerPoint Viewer and Excel Viewer have been retired. These Viewers will no longer be available for download or receive security updates. To continue viewing Office files for free, we recommend installing the Office apps or storing documents in OneDrive or Dropbox, where Word Online, Excel Online or PowerPoint Online opens them in your browser. For the mobile apps, visit the store for your device. Stor",
+            "entity": "PowerPoint Viewer",
+            "context": "general"
+          },
+          {
+            "source_index": 2,
+            "quote": "Basic tasks in PowerPoint for the web Get help with Copilot How can I add transitions between slides in PowerPoint? Explain reuse (import) slides from another presentation Give me basic tasks in PowerPoint for the web. With PowerPoint for the web, you create presentations in your web browser. They are stored in your OneDrive , and you can edit and share them online without needing other software. Following are some basic steps for creating and showing a presentation. Select a heading below to open it and see the detailed instructions. Edit a presentation in PowerPoint for the web If you have a presentation open in view-only mode, you can choose Edit in Browser to make changes to it in your browser. Select Edit Presentation . Select Edit in Browser . If you want to open the online folder where the presentation is stored, click OneDrive in the left upper corner. When that folder opens, you",
+            "entity": "PowerPoint for the web",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "파워포인트뷰어를 지금 다운로드해 설치할 수 있나?",
+            "answer": "PowerPoint Viewer는 2018-04-30 은퇴해 더 이상 다운로드되지 않음.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ile versions of PowerPoint let you open presentations on your smartphone or tablet: Get PowerPoint from Google Play Get PowerPoint from iTunes PowerPoint Viewer has been retired PowerPoint Viewer was retired on April 30, 2018. It's no longer available for download."
+          },
+          {
+            "facet": "PowerPoint 없이 PPT를 무료로 어떻게 열람하나?",
+            "answer": "브라우저용 PowerPoint for the web, 무료 모바일 앱, OneDrive/Dropbox 저장 후 온라인 열람.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "View a presentation without PowerPoint Applies To PowerPoint for Microsoft 365 PowerPoint 2021 PowerPoint 2019 PowerPoint 2016 PowerPoint Mobile If you don't have PowerPoint installed on your computer, you can still open and view presentations by using PowerPoint for the web ( here ) or PowerPoint on your mobile device. Use PowerPoint in a web browser If you have a Microsoft account (hotmail.com, outlook.com, live.com, msn.com) or a Microsoft 365 work or school account, you can view and edit a presentation for free in a web browser. Save the file to OneDrive or Dropbox and use PowerPoint for the web to open it. If you don't already have a Microsoft account, you can create one for free . Get PowerPoint for a smartphone or tablet The free mobile versions of PowerPoint let you open presentations on your smartphone or tablet: Get PowerPoint from Google Play Get PowerPoint from iTunes PowerPo"
+          },
+          {
+            "facet": "뷰어 은퇴 후 Microsoft가 권장하는 무료 대체 경로는?",
+            "answer": "Office 앱 설치 또는 OneDrive/Dropbox 저장 후 PowerPoint Online 브라우저 열람 권장.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "Supported versions of the Office viewers Discontinued versions of Office viewers Microsoft recently discontinued the older versions of Office viewers. Microsoft will not provide hotfix, service pack, or security update support for these products. The discontinued Office viewers are as follows: Word Viewer (all versions) Excel Viewer (all versions) PowerPoint Viewer (all versions) Visio Viewer 2002 Visio Viewer 2003 Supported Office viewers Note Office viewers being retired The Word Viewer, PowerPoint Viewer and Excel Viewer have been retired. These Viewers will no longer be available for download or receive security updates. To continue viewing Office files for free, we recommend installing the Office apps or storing documents in OneDrive or Dropbox, where Word Online, Excel Online or PowerPoint Online opens them in your browser. For the mobile apps, visit the store for your device. Stor"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "ile versions of PowerPoint let you open presentations on your smartphone or tablet: Get PowerPoint from Google Play Get PowerPoint from iTunes PowerPoint Viewer has been retired PowerPoint Viewer was retired on April 30, 2018. It's no longer available for download.",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 70.94,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "온라인엑셀",
+    "category": "생산성",
+    "topic": "온라인엑셀 사용법: 브라우저에서 바로 쓰기",
+    "intent": "설치 없이 웹 브라우저에서 엑셀 통합문서를 만들고 공유·편집·인쇄하는 방법을 알고 싶다",
+    "gap": "OneDrive 통합문서 생성→공유 링크→편집 모드 전환→공동 작업→인쇄까지의 단계별 절차 체크리스트",
+    "source_url": "https://support.microsoft.com/en-us/excel/basic-tasks-in-excel-for-the-web",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/basic-tasks-in-excel-for-the-web",
+        "original_url": "https://support.microsoft.com/en-us/excel/basic-tasks-in-excel-for-the-web",
+        "title": "Basic tasks in Excel for the web | Microsoft Support",
+        "checked_on": "2026-10-26",
+        "publication_dates": [],
+        "sha256": "b3415c694ce640708f88482bb80c48afcc7e6b8439206564412c6f42131b250f",
+        "excerpt": "Basic tasks in Excel for the web Get help with Copilot What are the steps to share workbooks online in Excel? Show me how to print an Excel table. Give me basic tasks in Excel for the web. By using Excel for the web, you can use your web browser to create, view, and edit workbooks that you store on OneDrive or Dropbox. If your organization or school has a Microsoft 365 plan or SharePoint site, you can also create and store workbooks in libraries on your site. This article walks you through the basic tasks: creating a workbook, sharing it, editing in your browser, working with others, and printing. Create an online workbook Open your OneDrive by selecting the OneDrive icon in your system tray. Select + Create or upload > Excel workbook . To rename the workbook, select the generic name of the new file on the top ribbon (usually something like Book1 ). In the File Name box, enter a new name. Share workbooks online After you create your online workbook, you can share it with friends, coworkers, or the public. People can view your worksheets, sort and filter data, and drill into the details of PivotTables on the web or on a mobile device. To share a workbook, select Share , and then enter the email addresses of the people you want to share with or Copy Link to get a link that you can email to your contacts. Edit in the browser If you try to enter data, set up a formula, add charts, or apply basic formatting and nothing happens, you're probably in read-only view. Here's how to switch to editing view: Select Editing . For more advanced editing options, select Open in Desktop . Excel for the web saves your work automatically. However, if you change your mind about any changes you just made, select Undo or press Ctrl + Z . Work together on the same worksheet When you work with others in Excel for the web, you can edit the worksheet as you usually would. When others edit the worksheet, Excel for the web shows their presence and the updates right away. This feature works only when everyone is working in Excel for the web. Other versions of the Excel app also let you work with others at the same time. For more information, see Collaborate on Excel workbooks at the same time with co-authoring . Print in Excel for the web Select the cells or chart you want to print, and then go to File > Print . To print the entire worksheet, don't select anything before you go to the Print command. If you change your mind about printing a selected area, choose the Print Active Sheets or Print Entire Workbook print option, and then select Print . If the final print preview looks right, select Print . For more information, see Print gridlines in a worksheet ."
+      }
+    ],
+    "intent_results": [
+      "https://office.alibaba.com/officesoftware/how-do-i-access-excel-online",
+      "https://thebricks.com/resources/how-to-use-excel-online",
+      "https://ebaproject.worldagroforestry.org/edit-excel-file-online"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 1190,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": null,
+    "organic_provider": "claude_native_search",
+    "organic_query": "온라인 엑셀",
+    "organic_domains": [
+      "www.wps.com",
+      "techcrunch.com",
+      "en.wikipedia.org",
+      "office.alibaba.com",
+      "my-test.valpo.edu",
+      "ebaproject.worldagroforestry.org",
+      "office.alibaba.com",
+      "thebricks.com",
+      "ebaproject.worldagroforestry.org"
+    ],
+    "organic_results": [
+      {
+        "url": "https://www.wps.com/feature/ko-KR/excel-online/",
+        "domain": "www.wps.com",
+        "title": "엑셀 온라인 편집기",
+        "snippet": ""
+      },
+      {
+        "url": "https://techcrunch.com/2007/10/12/expresso-gets-2-million-to-grow-an-online-office-suite",
+        "domain": "techcrunch.com",
+        "title": "eXpresso Gets $2 Million To Grow An Online Office Suite",
+        "snippet": ""
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Microsoft_Excel",
+        "domain": "en.wikipedia.org",
+        "title": "Microsoft Excel",
+        "snippet": ""
+      },
+      {
+        "url": "https://office.alibaba.com/officesoftware/how-do-i-access-excel-online",
+        "domain": "office.alibaba.com",
+        "title": "how do i access excel online",
+        "snippet": ""
+      },
+      {
+        "url": "https://my-test.valpo.edu/compare-two-excel-sheets-and-highlight-differences-online-87840",
+        "domain": "my-test.valpo.edu",
+        "title": "Compare Excel Sheets Online: Highlight Differences Easily",
+        "snippet": ""
+      },
+      {
+        "url": "https://ebaproject.worldagroforestry.org/excel-for-free-online",
+        "domain": "ebaproject.worldagroforestry.org",
+        "title": "excel for free online",
+        "snippet": ""
+      },
+      {
+        "url": "https://office.alibaba.com/officesoftware/how-do-i-get-excel-online",
+        "domain": "office.alibaba.com",
+        "title": "Stop Installing Excel — Get Excel Online in 2 Clicks",
+        "snippet": ""
+      },
+      {
+        "url": "https://thebricks.com/resources/how-to-use-excel-online",
+        "domain": "thebricks.com",
+        "title": "how to use excel online",
+        "snippet": ""
+      },
+      {
+        "url": "https://ebaproject.worldagroforestry.org/edit-excel-file-online",
+        "domain": "ebaproject.worldagroforestry.org",
+        "title": "edit excel file online",
+        "snippet": ""
+      }
+    ],
+    "dominant_result_ratio": 0.0,
+    "score_components": {
+      "demand": 24.6,
+      "organic_opportunity": 26.67,
+      "trend": -0.96,
+      "intent_fit": 15
+    },
+    "trend_growth": -0.096,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 8,
+    "selected_at": "2026-10-26T10:06:48.673543+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "온라인엑셀"
+    ],
+    "status": "pending",
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "온라인엑셀",
+      "executed_query": "온라인 엑셀",
+      "topic": "온라인엑셀 사용법: 브라우저에서 바로 쓰기",
+      "intent": "설치 없이 웹 브라우저에서 엑셀 통합문서를 만들고 공유·편집·인쇄하는 방법을 알고 싶다",
+      "provider": "claude_native_search",
+      "checked_at": "2026-10-26T10:06:48.673543+00:00",
+      "result_count": 9,
+      "domain_count": 7,
+      "dominant_ratio": 0.0,
+      "search_review": {
+        "version": 1,
+        "query": "온라인엑셀",
+        "executed_query": "온라인 엑셀",
+        "provider": "claude_native_search",
+        "checked_at": "2026-10-26T10:06:48.673543+00:00",
+        "raw_sha256": "4d98bdbe58edcb48391801beff060185119c79f769a66a9b91368cea7ebb3540",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "엑셀 온라인 편집기"
+          },
+          {
+            "result_index": 1,
+            "relevant": false,
+            "quote": "eXpresso Gets $2 Million To Grow An Online Office Suite"
+          },
+          {
+            "result_index": 2,
+            "relevant": false,
+            "quote": "Microsoft Excel"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "how do i access excel online"
+          },
+          {
+            "result_index": 4,
+            "relevant": false,
+            "quote": "Compare Excel Sheets Online: Highlight Differences Easily"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "excel for free online"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "Stop Installing Excel — Get Excel Online in 2 Clicks"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "how to use excel online"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "edit excel file online"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 9,
+        "canonical_result_count": 9,
+        "relevant_result_count": 6,
+        "relevant_site_count": 4,
+        "relevant_indices": [
+          0,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "relevance_ratio": 0.6666666666666666,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.0,
+        "site_concentration": 0.3333333333333333,
+        "organic_opportunity": 26.67
+      },
+      "scope": "full_keyword",
+      "target_keyword": "온라인엑셀",
+      "matches": [
+        {
+          "result_index": 7,
+          "quote": "how to use excel online"
+        },
+        {
+          "result_index": 3,
+          "quote": "how do i access excel online"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-26T10:06:48.673543+00:00",
+      "input_sha256": "ecdbb4e13b9cff5a72519098d81a9b6bfcd99a1bc77aa9ddc948155d377cbbc4",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "온라인엑셀",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "Basic tasks in Excel for the web Get help with Copilot What are the steps to share workbooks online in Excel? Show me how to print an Excel table. Give me basic tasks in Excel for the web. By using Excel for the web, you can use your web browser to create, view, and edit workbooks that you store on OneDrive or Dropbox. If your organization or school has a Microsoft 365 plan or SharePoint site, you can also create and store workbooks in libraries on your site. This article walks you through the basic tasks: creating a workbook, sharing it, editing in your browser, working with others, and printing. Create an online workbook Open your OneDrive by selecting the OneDrive icon in your system tray. Select + Create or upload > Excel workbook . To rename the workbook, select the generic name of the new file on the top ribbon (usually something like Book1 ). In the File Name box, enter a new name",
+            "entity": "Excel for the web",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "브라우저에서 엑셀 통합문서를 만드는 방법은?",
+            "answer": "OneDrive에서 + Create 또는 업로드 > Excel 통합문서 선택 후 리본에서 이름 변경",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Basic tasks in Excel for the web Get help with Copilot What are the steps to share workbooks online in Excel? Show me how to print an Excel table. Give me basic tasks in Excel for the web. By using Excel for the web, you can use your web browser to create, view, and edit workbooks that you store on OneDrive or Dropbox. If your organization or school has a Microsoft 365 plan or SharePoint site, you can also create and store workbooks in libraries on your site. This article walks you through the basic tasks: creating a workbook, sharing it, editing in your browser, working with others, and printing. Create an online workbook Open your OneDrive by selecting the OneDrive icon in your system tray. Select + Create or upload > Excel workbook . To rename the workbook, select the generic name of the new file on the top ribbon (usually something like Book1 ). In the File Name box, enter a new name"
+          },
+          {
+            "facet": "온라인 통합문서를 공유하는 방법은?",
+            "answer": "Share 선택 후 이메일 주소 입력 또는 Copy Link로 링크 공유",
+            "supported": true,
+            "source_index": 0,
+            "quote": "rename the workbook, select the generic name of the new file on the top ribbon (usually something like Book1 ). In the File Name box, enter a new name. Share workbooks online After you create your online workbook, you can share it with friends, coworkers, or the public. People can view your worksheets, sort and filter data, and drill into the details of PivotTables on the web or on a mobile device. To share a workbook, select Share , and then enter the email addresses of the people you want to share with or Copy Link to get a link that you can email to your contacts. Edit in the browser If you try to enter data, set up a formula, add charts, or apply basic formatting and nothing happens, you're probably in read-only view. Here's how to switch to editing view: Select Editing . For more advanced editing options, select Open in Desktop . Excel for the web saves your work automatically. Howe"
+          },
+          {
+            "facet": "브라우저에서 편집 모드로 전환하는 방법은?",
+            "answer": "읽기 전용이면 Editing 선택, 고급 편집은 Open in Desktop, 작업은 자동 저장",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ch to editing view: Select Editing . For more advanced editing options, select Open in Desktop . Excel for the web saves your work automatically. However, if you change your mind about any changes you just made, select Undo or press Ctrl + Z . Work together on the same worksheet When you work with others in Excel for the web, you can edit the worksheet as you usually would. When others edit the worksheet, Excel for the web shows their presence and the updates right away. This feature works only when everyone is working in Excel for the web. Other versions of the Excel app also let you work with others at the same time. For more information, see Collaborate on Excel workbooks at the same time with co-authoring . Print in Excel for the web Select the cells or chart you want to print, and then go to File > Print . To print the entire worksheet, don't select anything before you go to the Pri"
+          },
+          {
+            "facet": "여러 사람이 동시에 공동 작업할 수 있나?",
+            "answer": "모두 Excel for the web에서 작업 시 상대 편집 내용이 즉시 표시됨",
+            "supported": true,
+            "source_index": 0,
+            "quote": "ch to editing view: Select Editing . For more advanced editing options, select Open in Desktop . Excel for the web saves your work automatically. However, if you change your mind about any changes you just made, select Undo or press Ctrl + Z . Work together on the same worksheet When you work with others in Excel for the web, you can edit the worksheet as you usually would. When others edit the worksheet, Excel for the web shows their presence and the updates right away. This feature works only when everyone is working in Excel for the web. Other versions of the Excel app also let you work with others at the same time. For more information, see Collaborate on Excel workbooks at the same time with co-authoring . Print in Excel for the web Select the cells or chart you want to print, and then go to File > Print . To print the entire worksheet, don't select anything before you go to the Pri"
+          },
+          {
+            "facet": "온라인에서 인쇄하는 방법은?",
+            "answer": "셀/차트 선택 후 File > Print, 전체 인쇄는 선택 없이 Print 실행",
+            "supported": true,
+            "source_index": 0,
+            "quote": "lect the cells or chart you want to print, and then go to File > Print . To print the entire worksheet, don't select anything before you go to the Print command. If you change your mind about printing a selected area, choose the Print Active Sheets or Print Entire Workbook print option, and then select Print . If the final print preview looks right, select Print . For more information, see Print gridlines in a worksheet ."
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Basic tasks in Excel for the web Get help with Copilot What are the steps to share workbooks online in Excel? Show me how to print an Excel table. Give me basic tasks in Excel for the web. By using Excel for the web, you can use your web browser to create, view, and edit workbooks that you store on OneDrive or Dropbox. If your organization or school has a Microsoft 365 plan or SharePoint site, you can also create and store workbooks in libraries on your site. This article walks you through the basic tasks: creating a workbook, sharing it, editing in your browser, working with others, and printing. Create an online workbook Open your OneDrive by selecting the OneDrive icon in your system tray. Select + Create or upload > Excel workbook . To rename the workbook, select the generic name of the new file on the top ribbon (usually something like Book1 ). In the File Name box, enter a new name",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 65.31,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

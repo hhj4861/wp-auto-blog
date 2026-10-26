@@ -842,6 +842,17 @@
       "status": "success",
       "completed_at": "2026-10-26T00:08:00.344139+00:00",
       "published_category": "생활정보"
+    },
+    "2026-10-26:evening": {
+      "scheduled_for": "2026-10-26T18:00:00+09:00",
+      "run_created_at": "2026-10-26T18:00:07+09:00",
+      "start_delay_seconds": 14,
+      "trigger": "external_timer",
+      "run_id": "40296229881",
+      "category": "건강",
+      "slot": "evening",
+      "claimed_at": "2026-10-26T18:00:14.916765+09:00",
+      "status": "started"
     }
   }
 }

@@ -45134,7 +45134,7 @@
     "keywords": [
       "장애인 일자리 정책·제도 연구를 위한 업무협약 체결"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-26T22:27:35.262817+00:00",
@@ -45205,6 +45205,10 @@
     },
     "score": 20,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2043,
+    "url": "https://trendpulse.blog/disability-employment-research-agreement-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-27T00:08:32.376096"
   }
 ]

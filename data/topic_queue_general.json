@@ -44643,7 +44643,7 @@
     "keywords": [
       "파워포인트뷰어"
     ],
-    "status": "pending",
+    "status": "completed",
     "opportunity_evidence": {
       "version": 2,
       "query": "파워포인트뷰어",
@@ -44804,7 +44804,11 @@
     },
     "score": 70.94,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2046,
+    "url": "https://trendpulse.blog/powerpoint-viewer-free-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-27T09:08:59.998018"
   },
   {
     "keyword": "온라인엑셀",

@@ -1289,5 +1289,26 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-27T00:08:30.964366+00:00"
+  },
+  {
+    "key": "파워포인트뷰어",
+    "keyword": "파워포인트뷰어",
+    "topic": "파워포인트뷰어 지원 종료 후 PPT 무료로 여는 방법",
+    "category": "생산성",
+    "post_id": 2046,
+    "url": "https://trendpulse.blog/powerpoint-viewer-free-2026/",
+    "selection_version": 8,
+    "monthly_search": 670,
+    "score": 70.94,
+    "score_components": {
+      "demand": 22.61,
+      "organic_opportunity": 33.33,
+      "trend": 0,
+      "intent_fit": 15
+    },
+    "trend_status": "unavailable",
+    "demand_provider": "naver_searchad_pc_mobile",
+    "youtube_discovery": null,
+    "published_at": "2026-10-27T09:08:59.149213+00:00"
   }
 ]

@@ -878,7 +878,9 @@
       "category": "생산성",
       "slot": "evening",
       "claimed_at": "2026-10-27T18:00:12.706550+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-27T09:09:03.478035+00:00",
+      "published_category": "생산성"
     }
   }
 }

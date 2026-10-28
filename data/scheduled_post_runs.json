@@ -881,6 +881,17 @@
       "status": "success",
       "completed_at": "2026-10-27T09:09:03.478035+00:00",
       "published_category": "생산성"
+    },
+    "2026-10-28:morning": {
+      "scheduled_for": "2026-10-28T09:00:00+09:00",
+      "run_created_at": "2026-10-28T09:00:04+09:00",
+      "start_delay_seconds": 11,
+      "trigger": "external_timer",
+      "run_id": "40605877665",
+      "category": "취업",
+      "slot": "morning",
+      "claimed_at": "2026-10-28T09:00:11.719226+09:00",
+      "status": "started"
     }
   }
 }

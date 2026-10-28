@@ -45742,5 +45742,258 @@
     "score": 25,
     "publish_eligible": true,
     "hold_reasons": []
+  },
+  {
+    "keyword": "지니 4(Genie 4)",
+    "category": "테크",
+    "topic": "지니 4(Genie 4) 10월 28일 공개: 오디오 생성과 연구 프리뷰 대상",
+    "intent": "새로 공개된 지니 4의 시뮬레이션·오디오 기능은 무엇이며, 지금 이용 가능한 대상과 향후 확대 계획은?",
+    "gap": "핵심 기능 표와 일부 테스터·향후 제공 대상 구분표를 제공하고, 정식 공개 일정은 미정임을 안내합니다.",
+    "source_url": "https://blog.google/intl/ko-kr/company-news/technology/genie-4-a-new-generation-of-world-simulation-kr/",
+    "verified_sources": [
+      {
+        "url": "https://blog.google/intl/ko-kr/company-news/technology/genie-4-a-new-generation-of-world-simulation-kr/",
+        "original_url": "https://blog.google/intl/ko-kr/company-news/technology/genie-4-a-new-generation-of-world-simulation-kr/",
+        "title": "지니 4(Genie 4): 월드 시뮬레이션의 새로운 세대",
+        "checked_on": "2026-10-29",
+        "publication_dates": [
+          "2026-10-28",
+          "2026-10-28T01:00:00+00:00"
+        ],
+        "sha256": "c7a4072f010fc4d38a5def8874e2e58ad6aec5bdaf43226a9006506aab3fc36c",
+        "excerpt": "지니 4(Genie 4): 월드 시뮬레이션의 새로운 세대 2026년 10월 28일 | x.com 페이스북 링크드인 이메일 링크복사 역대 가장 사실적이고 인터랙티브한 구글의 최신 월드 모델, ‘지니 4(Genie 4)’를 소개합니다. 라이아 해드셀(Raia Hadsell) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 오늘 구글은 한층 더 사실적인 가상 세계를 구현하며 실시간 인터랙티브 시뮬레이션 성능을 고도화한 새로운 월드 모델, ‘지니 4(Genie 4)’를 공개합니다. 지니 4는 멀티모달 기능을 갖춰 가상 세계를 생성하는 동시에, 음악과 주변 환경음, 인터랙티브 대화 등 다양한 오디오 요소도 함께 생성할 수 있습니다. 지니 4는 제미나이(Gemini) 모델 제품군의 다양한 역량을 통합하고 이를 바탕으로 한층 발전시킨 모델입니다. ‘제미나이 옴니(Gemini Omni)’가 시뮬레이션에 현실 세계의 외형과 움직임을 정교하게 반영해 중심을 잡아주는 한편, 다른 제미나이 모델들은 시뮬레이션의 일관성과 연속성을 유지하는 데 필요한 복합적인 추론 기능을 제공합니다. 이를 바탕으로 이용자가 특정 이벤트를 진행하면, 지니 4는 이후에 벌어질 상황을 시뮬레이션합니다. 이 과정에서 가상 세계의 반응과 소리, 그 안의 인물들 움직임과 반응, 대화까지 생생히 구현합니다. 세상을 이해하고 시뮬레이션하는 능력은 AGI(범용 인공지능) 개발에 있어 핵심적인 요소입니다. 지니 4는 안전하면서도 다양한 형태로 유연하게 변형할 수 있는 시뮬레이션 구현 역량을 한층 발전시켜, 로봇과 에이전트를 위한 학습 환경 개발부터 새로운 인터랙티브 경험 구현에 이르기까지 다양한 분야에 기여할 수 있습니다. 구글은 일반 이용자와 개발자 대상으로 모델을 정식 공개하기에 앞서, 일부 테스터를 대상으로 지니 4의 연구 프리뷰(research preview) 제공을 시작해 피드백을 받고 있습니다. 향후 ‘ 프로젝트 지니(Project Genie) ’를 이용하는 ‘구글 AI 울트라(Google AI Ultra)’ 구독자와 ‘제미나이 API(Gemini API)’ 및 ‘구글 AI 스튜디오(Google AI Studio)’ 얼리 액세스 파트너를 시작으로 제공 범위를 점차 확대할 예정입니다. 프로젝트 지니에서 지니 4를 경험하기 위해 대기자 명단에 등록하려면 여기 를 클릭하세요. 지니 4는 한층 향상된 실사 같은 그래픽(포토리얼리즘), 자연스러운 움직임, 그리고 자체 오디오 생성 기능을 제공합니다. 위 영상에 포함된 모든 사운드는 지니 4가 직접 생성했습니다. 네 가지 핵심 역량을 한층 발전시킨 지니 4 아래 영상은 지니 4와 실시간으로 상호작용하는 장면을 녹화한 것으로, 이용자가 기본적인 키보드 조작으로 가상 세계를 이동하고 카메라를 제어하는 한편, 텍스트 프롬프트를 입력해 장면을 원하는 방향으로 이끌어 가는 과정을 보여줍니다. 실시간으로 조율하는 월드 시뮬레이션 지니 4에서는 날씨를 바꾸거나 카메라를 움직이고 새로운 인물이나 사물을 등장시키는 등, 자연어를 사용해 시뮬레이션을 실시간으로 수정할 수 있습니다. 이때 제미나이는 주변 장면의 맥락에 맞춰 이용자의 요청을 자연스럽게 반영합니다. 또한 이용자가 별도로 입력하지 않는 동안에도 장면을 지속적으로 모니터링하고 조정해 시뮬레이션 속 세계가 일관된 흐름으로 전개되도록 합니다. Prompt: Use the reference image as the exact first frame and visual basis for the scene. Preserve the same floating rectangular platform, weathered concrete edges, wild grasses, ferns, twisted small tree, warm glowing amber sphere, and the same middle-aged man in a loose brown suit playing a brass saxophone. A cinematic, highly naturalistic documentary scene, photographed on 16mm film with subtle grain, soft photographic detail, extremely low contrast, muted natural colors, lifted shadows, gentle highlights, and soft diffuse overcast light. Absolutely no HDR, no dramatic contrast, no glossy digital rendering, no artificial cinematic lighting. The platform floats in the middle of a vast, quiet lake surrounded by distant misty forests. Thin layers of fog drift above the water. The sky is pale blue-gray and overcast, with a soft, almost monochromatic atmosphere. The warm amber sphere provides a delicate contrasting glow, softly illuminating the surrounding vegetation and reflecting in the lake. Begin with a slightly closer view of the saxophone player than in the reference image, while keeping the platform, glowing sphere, tree, and surrounding lake visible. The man continues playing his saxophone naturally, with subtle breathing, finger movements, and gentle body swaying. The camera moves independently and can freely explore the entire environment, gliding smoothly over the water with gentle, controlled movement. The camera is not attached to the man or the platform. Maintain realistic spatial continuity and natural camera movement. Everything must remain photographic, physically believable, documentary-like, extremely low-contrast, and softly desaturated throughout the entire experience. One continuous shot. Natural lake ambience, distant wind, soft water movement, and realistic saxophone sound. No background music beyond the instruments physically present in the scene. Environment prompt: A wide, sun-drenched hilltop meadow filled with tall green grass and scattered purple, white, and yellow wildflowers swaying in a warm breeze. Low green shrubs dot the right side of the field while distant blue-green rolling hills stretch along the left horizon beneath a bright, partly cloudy sky. Character: Winding in sweeping S-curves through the center of the grassy meadow from the immediate foreground far into the distance is a long, continuous stream of glossy bubblegum-pink satin fabric. The shimmering pink cloth billows, ripples, and lifts softly above the wildflowers like a flowing river of silk as the wind moves beneath its folds. Environment prompt: A sweeping aerial view over the vast, frozen landscape of Antarctica, featuring endless snow-covered glaciers, jagged icy mountain peaks, and sculpted blue icebergs bathed in crisp polar sunlight under a clear, pale blue sky. Numerous hot air balloons dot the horizon at varying altitudes, with a large cream, red, and blue striped balloon floating prominently in the mid-distance above the ice sheet. Character prompt: Shot from a first-person POV standing inside the woven wicker basket of a flying hot air balloon, looking out over the leather-trimmed basket edge on the right side of the frame, where black padded support poles, metal rigging chains, and the dark base of the balloon canopy overhead frame the drifting polar vista. 물리 현상과 인간 행동의 사실감 향상 지니 4는 실시간 인터랙티브 시뮬레이션의 사실감을 새로운 수준으로 끌어올립니다. 세상의 물리 법칙에 대한 정교한 이해를 바탕으로 공기역학과 충돌 등 현실 세계의 물리 현상을 시뮬레이션합니다. 가장 큰 진전은 사람을 시뮬레이션하는 방식에서 두드러집니다. 지니 4는 자연스럽게 움직이고 주변 환경에 유기적으로 반응하며, 이용자가 실시간 상호작용을 통해 제어할 수 있는 캐릭터를 생성합니다. Environment prompt: A sunlit outdoor courtyard featuring a weathered stone plinth set against a soft-focus background of lush green garden foliage and clear blue sky, bathed in bright, warm afternoon sunlight that backlights airborne droplets in crisp slow motion. Character prompt: A whole, glossy green-striped watermelon rests in the center of the stone plinth. Prompt: A macro close up of a maple seed falling from the tree into the grass Prompt: A crowded rural Japanese train station in the 1980s, packed with passengers waiting along the platform. The only railway inspector in a dark navy uniform stands close to the camera, observing the scene. A long, deep-red local train with many carriages occupies the railway track closest to the camera POV, stretching across the frame and extending far into the distance. The train is clearly visible in the immediate foreground, not on a distant track. People fill the platform naturally, standing, walking, boarding and waiting with luggage. Lush green mountains, cedar forests and humid summer haze surround the station. Authentic 1980s Japanese atmosphere, cinematic 35mm documentary photography, realistic perspective, asymmetrical composition, natural lighting, subtle film grain, photorealistic textures. The station must look genuinely busy, with a dense crowd of visible people throughout the platform. The red train must be on the nearest track, dominating the scene. No empty platforms, no distant train, no sparse crowds, no centered symmetrical composition. 세상의 소리를 구현하는 오디오 모델링 지니 4는 오디오를 자체적으로(natively) 생성하는 구글의 첫 번째 실시간 월드 모델입니다. 나뭇잎 사이를 스치는 바람 소리부터 해변에 부서지는 파도 소리까지, 각 가상 세계의 환경에 어울리는 주변 소리를 함께 생성합니다. 특히 주목할 부분은 사람의 음성(speech) 구현입니다. 지니 4는 상황 변화에 따라 실시간으로 반응하는 인터랙티브 대화를 선보입니다. 캐릭터들은 이용자의 입력이나 가상 세계에서 발생하는 사건에 반응하며 실시간으로 대화를 주고받습니다. Prompt: Create a fully three-dimensional immersive stained-glass landscape that feels like a handcrafted crystal window brought to life. The world should be explorable, as if the camera can move freely through a giant 3D stained-glass environment. The entire scene must have a stained-glass / crystal-window look: translucent colored glass, dark lead outlines, glowing layered panels, volumetric depth, and artisanal glass textures. Show a beautiful landscape with a flowing river running through green fields, flowers in the foreground, trees, distant mountains, clouds, and a radiant sun in the sky. The river should feel like flowing translucent blue glass, the flowers like upright stained-glass sculptures, the grass and trees like layered colored-glass forms, the mountains like stacked glass panels, and the sun like a luminous circular stained-glass element. Everything must feel spatial, cohesive, luminous, and handcrafted, with depth and the sensation that the viewer can move through i"
+      }
+    ],
+    "intent_results": [
+      "https://blog.google/intl/ko-kr/company-news/technology/genie-4-a-new-generation-of-world-simulation-kr/"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://blog.google/intl/ko-kr/company-news/technology/genie-4-a-new-generation-of-world-simulation-kr/",
+      "title": "지니 4(Genie 4): 월드 시뮬레이션의 새로운 세대",
+      "publisher": "google_korea_blog",
+      "published": "2026-10-28"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-10-28T22:13:57.146506+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "지니 4(Genie 4)"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-28T22:13:57.146506+00:00",
+      "input_sha256": "6287a19eb07a44f9e9f12191e5fb50b6094ff2f1d6012545766e4359c6c94fcf",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "지니 4(Genie 4)",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "지니 4(Genie 4): 월드 시뮬레이션의 새로운 세대 2026년 10월 28일 | x.com 페이스북 링크드인 이메일 링크복사 역대 가장 사실적이고 인터랙티브한 구글의 최신 월드 모델, ‘지니 4(Genie 4)’를 소개합니다. 라이아 해드셀(Raia Hadsell) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 오늘 구글은 한층 더 사실적인 가상 세계를 구현하며 실시간 인터랙티브 시뮬레이션 성능을 고도화한 새로운 월드 모델, ‘지니 4(Genie 4)’를 공개합니다. 지니 4는 멀티모달 기능을 갖춰 가상 세계를 생성하는 동시에, 음악과 주변 환경음, 인터랙티브 대화 등 다양한 오디오 요소도 함께 생성할 수 있습니다. 지니 4는 제미나이(Gemini) 모델 제품군의 다양한 역량을 통합하고 이를 바탕으로 한층 발전시킨 모델입니다. ‘제미나이 옴니(Gemini Omni)’가 시뮬레이션에 현실 세계의 외형과 움직임을 정교하게 반영해 중심을 잡아주는 한편, 다른 제미나이 모델들은 시뮬레이션의 일관성과 연속성을 유지하는 데 필요한 복합적인 추론 기능을 제공합니다. 이를 바탕으로 이용자가 특정 이벤트를 진행하면, 지니 4는 이후에 벌어질 상황을 시뮬레이션합니다. 이 과정에서 가상 세계의 반응과 소리, 그 안의 인물들 움직임과 반응, 대화까지 생생히 구현합니다. 세상을 이해하고 시뮬레이션하는 능력은 AGI(범용 인공지능) 개발에 있어 핵심적인 요소입니다. 지니 4는 안전하면서도 다양한 형태로 유연하게 변형할 수 있는 시뮬레이션 구현 역량을 한층 발전시켜, 로봇과 에이전트를 위한 학습 환경 개발부터 새로운 인터랙티브 경험 구현에 이르기까지 다양한 분야에 기여할 수 있습니다. 구글은 일반 이용자와 개발자 대상으로 모델을 정식 공개하기에 앞서, 일부 테스터를 대상으로 지니 4의 연구 프리뷰(",
+            "entity": "구글",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "지니 4는 무엇이며 어떤 시뮬레이션·오디오 기능을 제공하는가?",
+            "answer": "실시간 월드 모델로, 가상 세계와 음악·환경음·대화를 생성하고 사건에 따른 인물과 세계의 반응을 구현한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "지니 4(Genie 4): 월드 시뮬레이션의 새로운 세대 2026년 10월 28일 | x.com 페이스북 링크드인 이메일 링크복사 역대 가장 사실적이고 인터랙티브한 구글의 최신 월드 모델, ‘지니 4(Genie 4)’를 소개합니다. 라이아 해드셀(Raia Hadsell) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 오늘 구글은 한층 더 사실적인 가상 세계를 구현하며 실시간 인터랙티브 시뮬레이션 성능을 고도화한 새로운 월드 모델, ‘지니 4(Genie 4)’를 공개합니다. 지니 4는 멀티모달 기능을 갖춰 가상 세계를 생성하는 동시에, 음악과 주변 환경음, 인터랙티브 대화 등 다양한 오디오 요소도 함께 생성할 수 있습니다. 지니 4는 제미나이(Gemini) 모델 제품군의 다양한 역량을 통합하고 이를 바탕으로 한층 발전시킨 모델입니다. ‘제미나이 옴니(Gemini Omni)’가 시뮬레이션에 현실 세계의 외형과 움직임을 정교하게 반영해 중심을 잡아주는 한편, 다른 제미나이 모델들은 시뮬레이션의 일관성과 연속성을 유지하는 데 필요한 복합적인 추론 기능을 제공합니다. 이를 바탕으로 이용자가 특정 이벤트를 진행하면, 지니 4는 이후에 벌어질 상황을 시뮬레이션합니다. 이 과정에서 가상 세계의 반응과 소리, 그 안의 인물들 움직임과 반응, 대화까지 생생히 구현합니다. 세상을 이해하고 시뮬레이션하는 능력은 AGI(범용 인공지능) 개발에 있어 핵심적인 요소입니다. 지니 4는 안전하면서도 다양한 형태로 유연하게 변형할 수 있는 시뮬레이션 구현 역량을 한층 발전시켜, 로봇과 에이전트를 위한 학습 환경 개발부터 새로운 인터랙티브 경험 구현에 이르기까지 다양한 분야에 기여할 수 있습니다. 구글은 일반 이용자와 개발자 대상으로 모델을 정식 공개하기에 앞서, 일부 테스터를 대상으로 지니 4의 연구 프리뷰("
+          },
+          {
+            "facet": "이용자는 가상 세계와 어떻게 상호작용하는가?",
+            "answer": "키보드로 이동과 카메라를 제어하고 자연어로 날씨·인물·사물을 변경한다. 모델은 장면의 일관성을 유지한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "이션 구현 역량을 한층 발전시켜, 로봇과 에이전트를 위한 학습 환경 개발부터 새로운 인터랙티브 경험 구현에 이르기까지 다양한 분야에 기여할 수 있습니다. 구글은 일반 이용자와 개발자 대상으로 모델을 정식 공개하기에 앞서, 일부 테스터를 대상으로 지니 4의 연구 프리뷰(research preview) 제공을 시작해 피드백을 받고 있습니다. 향후 ‘ 프로젝트 지니(Project Genie) ’를 이용하는 ‘구글 AI 울트라(Google AI Ultra)’ 구독자와 ‘제미나이 API(Gemini API)’ 및 ‘구글 AI 스튜디오(Google AI Studio)’ 얼리 액세스 파트너를 시작으로 제공 범위를 점차 확대할 예정입니다. 프로젝트 지니에서 지니 4를 경험하기 위해 대기자 명단에 등록하려면 여기 를 클릭하세요. 지니 4는 한층 향상된 실사 같은 그래픽(포토리얼리즘), 자연스러운 움직임, 그리고 자체 오디오 생성 기능을 제공합니다. 위 영상에 포함된 모든 사운드는 지니 4가 직접 생성했습니다. 네 가지 핵심 역량을 한층 발전시킨 지니 4 아래 영상은 지니 4와 실시간으로 상호작용하는 장면을 녹화한 것으로, 이용자가 기본적인 키보드 조작으로 가상 세계를 이동하고 카메라를 제어하는 한편, 텍스트 프롬프트를 입력해 장면을 원하는 방향으로 이끌어 가는 과정을 보여줍니다. 실시간으로 조율하는 월드 시뮬레이션 지니 4에서는 날씨를 바꾸거나 카메라를 움직이고 새로운 인물이나 사물을 등장시키는 등, 자연어를 사용해 시뮬레이션을 실시간으로 수정할 수 있습니다. 이때 제미나이는 주변 장면의 맥락에 맞춰 이용자의 요청을 자연스럽게 반영합니다. 또한 이용자가 별도로 입력하지 않는 동안에도 장면을 지속적으로 모니터링하고 조정해 시뮬레이션 속 세계가 일관된 흐름으로 전개되도록 합니다. Prompt: Use t"
+          },
+          {
+            "facet": "현재 이용 대상과 향후 제공 범위·공개 일정은?",
+            "answer": "일부 테스터에게 연구 프리뷰를 제공한다. AI 울트라 구독자와 API·AI 스튜디오 얼리 액세스 파트너로 확대 예정이며 정식 공개일은 명시되지 않았다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "이션 구현 역량을 한층 발전시켜, 로봇과 에이전트를 위한 학습 환경 개발부터 새로운 인터랙티브 경험 구현에 이르기까지 다양한 분야에 기여할 수 있습니다. 구글은 일반 이용자와 개발자 대상으로 모델을 정식 공개하기에 앞서, 일부 테스터를 대상으로 지니 4의 연구 프리뷰(research preview) 제공을 시작해 피드백을 받고 있습니다. 향후 ‘ 프로젝트 지니(Project Genie) ’를 이용하는 ‘구글 AI 울트라(Google AI Ultra)’ 구독자와 ‘제미나이 API(Gemini API)’ 및 ‘구글 AI 스튜디오(Google AI Studio)’ 얼리 액세스 파트너를 시작으로 제공 범위를 점차 확대할 예정입니다. 프로젝트 지니에서 지니 4를 경험하기 위해 대기자 명단에 등록하려면 여기 를 클릭하세요. 지니 4는 한층 향상된 실사 같은 그래픽(포토리얼리즘), 자연스러운 움직임, 그리고 자체 오디오 생성 기능을 제공합니다. 위 영상에 포함된 모든 사운드는 지니 4가 직접 생성했습니다. 네 가지 핵심 역량을 한층 발전시킨 지니 4 아래 영상은 지니 4와 실시간으로 상호작용하는 장면을 녹화한 것으로, 이용자가 기본적인 키보드 조작으로 가상 세계를 이동하고 카메라를 제어하는 한편, 텍스트 프롬프트를 입력해 장면을 원하는 방향으로 이끌어 가는 과정을 보여줍니다. 실시간으로 조율하는 월드 시뮬레이션 지니 4에서는 날씨를 바꾸거나 카메라를 움직이고 새로운 인물이나 사물을 등장시키는 등, 자연어를 사용해 시뮬레이션을 실시간으로 수정할 수 있습니다. 이때 제미나이는 주변 장면의 맥락에 맞춰 이용자의 요청을 자연스럽게 반영합니다. 또한 이용자가 별도로 입력하지 않는 동안에도 장면을 지속적으로 모니터링하고 조정해 시뮬레이션 속 세계가 일관된 흐름으로 전개되도록 합니다. Prompt: Use t"
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "지니 4(Genie 4): 월드 시뮬레이션의 새로운 세대 2026년 10월 28일 | x.com 페이스북 링크드인 이메일 링크복사 역대 가장 사실적이고 인터랙티브한 구글의 최신 월드 모델, ‘지니 4(Genie 4)’를 소개합니다. 라이아 해드셀(Raia Hadsell) 공유하기 x.com 페이스북 링크드인 이메일 링크복사 오늘 구글은 한층 더 사실적인 가상 세계를 구현하며 실시간 인터랙티브 시뮬레이션 성능을 고도화한 새로운 월드 모델, ‘지니 4(Genie 4)’를 공개합니다. 지니 4는 멀티모달 기능을 갖춰 가상 세계를 생성하는 동시에, 음악과 주변 환경음, 인터랙티브 대화 등 다양한 오디오 요소도 함께 생성할 수 있습니다. 지니 4는 제미나이(Gemini) 모델 제품군의 다양한 역량을 통합하고 이를 바탕으로 한층 발전시킨 모델입니다. ‘제미나이 옴니(Gemini Omni)’가 시뮬레이션에 현실 세계의 외형과 움직임을 정교하게 반영해 중심을 잡아주는 한편, 다른 제미나이 모델들은 시뮬레이션의 일관성과 연속성을 유지하는 데 필요한 복합적인 추론 기능을 제공합니다. 이를 바탕으로 이용자가 특정 이벤트를 진행하면, 지니 4는 이후에 벌어질 상황을 시뮬레이션합니다. 이 과정에서 가상 세계의 반응과 소리, 그 안의 인물들 움직임과 반응, 대화까지 생생히 구현합니다. 세상을 이해하고 시뮬레이션하는 능력은 AGI(범용 인공지능) 개발에 있어 핵심적인 요소입니다. 지니 4는 안전하면서도 다양한 형태로 유연하게 변형할 수 있는 시뮬레이션 구현 역량을 한층 발전시켜, 로봇과 에이전트를 위한 학습 환경 개발부터 새로운 인터랙티브 경험 구현에 이르기까지 다양한 분야에 기여할 수 있습니다. 구글은 일반 이용자와 개발자 대상으로 모델을 정식 공개하기에 앞서, 일부 테스터를 대상으로 지니 4의 연구 프리뷰(",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-29T07:13:57.146506+09:00",
+      "window_start": "2026-10-28T00:00:00+09:00",
+      "input_sha256": "c5f3420d4027cd03233e066065066a538602764182afc785614bf6aa18f82add",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "announcement",
+        "event_date": "2026-10-28",
+        "source_index": 0,
+        "date_quote": "2026년 10월 28일",
+        "event_quote": "오늘 구글은 한층 더 사실적인 가상 세계를 구현하며 실시간 인터랙티브 시뮬레이션 성능을 고도화한 새로운 월드 모델, ‘지니 4(Genie 4)’를 공개합니다."
+      }
+    },
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "score": 20,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "2026 공공기관 AI 혁신 성과대회",
+    "category": "테크",
+    "topic": "2026 공공기관 AI 혁신 성과대회: 10월 28일 발표된 수상 기술과 국민 생활 영향",
+    "intent": "10월 28일 발표된 공공기관 AI 우수과제는 무엇이며, 발전·항공안전·정품인증에 어떤 기술과 변화가 소개됐나?",
+    "gap": "주요 사례의 적용 기술·대상·실증 및 운영 단계를 비교하고, 기대 효과와 현재 이용 가능 여부의 확인 범위를 구분한다.",
+    "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786820",
+    "verified_sources": [
+      {
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786820",
+        "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786820",
+        "title": "AI로 이룬 공공혁신, 국민이 누리는 변화 「2026 공공기관 AI 혁신 성과대회」 개최 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+        "checked_on": "2026-10-29",
+        "publication_dates": [
+          "2026-10-28T14:00:00+09:00"
+        ],
+        "sha256": "6186f9497a6290dc0faf336b4cec31a478429a0efe8c2c177acc126c5ae3eee8",
+        "excerpt": "보도자료 보도시점 2026.10.28.(수) 14:00 (2026.10.29.(목) 조간) 배포 2026.10. 28.(수) 09:00 AI로 이룬 공공혁신, 국민이 누리는 변화 「2026 공공기관 AI 혁신 성과대회」 개최 공공기관, AI 혁신 주체로 민생 체감 서비스와 행정 효율화 성과 창출 - 30개 혁신 우수과제 선정... 공공행정 AI 전환 첫걸음 내뎌 한국서부발전 ‘AI 운영 K-가스터빈’, 인천국제공항공사 ‘AI 기반 항공 안전관리’ 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’)와 재정경제부 (부총리 겸 재정경제부 장관 이형일)는 10월 28일(수) 서울 누리꿈스퀘어 에서 「 2026 공공기관 AI 혁신 성과대회」 를 공동 개최 했다. 이번 성과 대회는, 국민의 AI 활용 역량을 높이고 문화를 확산하기 위해 올 3월부터 추진된 「전 국민 AI 경진대회」 의 공공분야 트랙인 「2026 공공기관 AI 혁신 챌린지(이하 ‘AI 혁신 챌린지’)」 의 결실을 나누는 자리로, 30개 혁신 우수과제에 대한 시상은 물론 패널 토의, 우수사례 발표 및 전시부스 등 다채로운 AI 혁신 성과의 장으로 마련되었다. <행사 개요 > (일시·장소) ’26.10.28.(수) 14:00, 누리꿈스퀘어(서울 상암동 소재) (참석자) 이 형일 부총리 겸 재정경제부 장관, 류제명 과기정통부 제2차관, 민·학·연 AI 전문가, 공공기관 임직원 등 300여 명 (주요내용) ‘ AI 혁신 챌린지’ 우수기관 시상, 주제발표 및 패널 토의, 우수사례 발표 및 전시부스 운영 (주최) 재정경제부, 과학기술정보통신부 / (주관) 한국지능정보사회진흥원(NIA) 올해 처음 개최된 ‘AI 혁신 챌린지 * ’ 는 지난 6월부터 8월까지 105개 기관에서 316건의 과제를 제출 하는 등 적극적인 참여 속에 치러졌으며, 2단계에 걸친 전문가 심사(9월)를 거쳐 최종 30개 ** 의 AI 혁신 우수 과제 가 선정 되었다. * ‘AI 서비스 실증‧PoC’, ‘AI 활용 우수사례’ 부문으로 나누어 진행 ** (시상규모) 대상 2점, 최우수상 8점, 우수상 10점, AI혁신상 10점 (총 30점) ‘AI 서비스 실증‧PoC * ’ 부문 대상 을 수상한 한국서부발전 의 ‘AI가 운전하고 로봇이 점검하는 국내 최초 K-가스터빈’ 은 발전 설비 데이터를 AI로 분석하고 디지털트윈‧AI 에이전트‧로봇을 연계하여 구현하였다. 이 과정에서 국산 NPU 및 국산 AI 모델 등 국산 기술을 통합 적용한 ‘K-AI 풀스택 ** ’ 을 과감하게 도입 하여, 연간 약 21억원의 경제 효과가 기대된다. * 새로운 아이디어의 실현 가능성을 검증하는 과정을 뜻하는 ‘Proof of Concept’의 약자 ** AI 서비스 개발에 반도체, 모델, 서비스 등을 국내 독자적 기술력으로 구축 한편, ‘AI 활용 우수사례 * ’ 부문 대상 을 차지한 인천국제공항공사 는 육안 ‧ 인력 중심의 항공안전 관리를 24시간 AI 예측‧탐지 체계로 혁신했다. 이를 통해, 항공기 이· 착륙 전 과정에서 ‘보이지 않는 위험’ 까지 선제적으로 차단함으로써 ‘항공사 고 ZERO’라는 국민 안심 가치를 실현 하고 AI 기술 혜택을 국민의 안전과 일상으로 확산시켰다. * 기관 내부 실증·도입을 넘어, 서비스를 안정적으로 운영 중인 사례 각 부문 대상 수상작 은 물론, 수상작 중 국민의 일상과 밀접한 서비스 가 행사장 내 ‘AI 혁신 쇼케이스’ 에서 전시 되었다. 1인 가구의 전력 사용 등 생활패턴을 AI로 분석하고 이상 징후를 탐지하여 고독사 위험을 조기 발견하는 한국전력공사 의 ‘전력 빅데이터로 고독을 읽고, AI로 생명을 살리는 고독사 예방서비스’ 가 소개되었다. 또한, 한국조폐공사 는 ‘AI 워터마크 기반 K-브랜드 글로벌 정품인증 서비스 ’를 통해, AI가 제품 고유 디지털 워터마크를 생성‧식별하여 스마트폰 촬영만으로 K-브랜드의 정품 여부를 손쉽게 확인하는 과정을 시연하였다. 과기정통부 류제명 제2차관은 “이번 행사는, 공공기관 이 AI 혁신의 주체 로서 민생 체감 서비스 와 행정 효율화 를 실현하는 다양한 성과 를 선보이고 공유하기 위해 개최된 첫 행사 라는 점에서 의미가 깊다”며, “과기정통부는 독자 AI 모델 개발과 AI 컴퓨팅 기반 확충, 국산 NPU의 실증·확산을 지원해 국내 AI 기술이 공공 현장에서도 폭넓게 활용 되도록 뒷받침하겠다”고 밝혔다. 또한, “공공기관의 과감한 도전과 AI 혁신의 바람이 공공부문 전반으로 확산되어 국민이 일상에서 변화를 체감할 수 있도록 정책적 지원을 적극 추진 해 나가겠다”고 밝혔다. 담당부서 과학기술정보통신부 디지털사회기획과 책임자 과 장 박지현 (044-202-6130) 담당자 사무관 정선영 (044-202-6129) 유관기관 한국지능정보사회진흥원 공공AI전환지원센터 책임자 센터장 김원확 (053-230-1441) 담당자 책 임 이상준 (053-230-1455) 참고 「2026 공공기관 AI 혁신 챌린지」 수상 과제 부문 구분 훈격 기관명 과제명 대 상 부총리겸 과기정통부 장관상 한국서부발전(주) AI가 운전하고 로봇이 점검하는 국내 최초 K-가스터빈 최우수 국민건강보험공단 AI 기반 의료이용 이상탐지로 ‘건강보험 재정보호·환자 안전보호’ 최우수 대한무역투자진흥공사 모두의 수출 시대를 여는 「AI 수출비서」 최우수 한국지식재산보호원 AI 기반 해외 상표 무단선점 조기경보 및 유사상표 검색 서비스 구축·실증 최우수 한국임업진흥원 소나무재선충병 예찰 영상분석·방제지원 AI 시스템 개발 우수 한국조폐공사 AI 워터마크 기반 K-브랜드 글로벌 정품인증 서비스 실증 우수 한국수자원공사 On-device AI 기반의 상수도 관로 진단 시스템 실증 우수 중소기업은행 보이스피싱 피해 구제 프로세스 자동화 우수 한국도로공사 50년 데이터, 현장에서 답하다 - 고속도로 안전 AI 파트너 Dr.Bridge AI 우수 한국해양진흥공사 해운물류 안전을 위한 컨테이너 Vision AI 실증 혁신 NIA 원장상 한국석유공사 AI로 극복하는 고유가 : 지능형 해외유전 생산관리 자동화 혁신 한국환경공단 악조건 서류도 정밀 판독하는 AI 멀티엔진 기반 폐기물 인허가 서류 작성 자동화 혁신 한국가스공사 천연가스 배관망 최적화를 위한 AI 기반 공급량/송출량 예측 혁신 국토교통과학기술진흥원 멀티에이전트 AI 기반 국가R&D 기획보고서 자동생성 서비스 「KAIA R&D Architect」 혁신 인천국제공항공사 AI로 지키는 철도 안전, 인천공항 셔틀트레인 통합안전관제 실증 대 상 부총리 겸 재경부 장관상 인천국제공항공사 보이지 않는 위험까지 차단한 AI 안전관리로 ‘항공사고 ZERO!’ 국민 안심 인천공항! 최우수 해양환경공단 AI를 활용한 해양쓰레기 분포조사·수거 최우수 예금보험공사 최우수 한국전력공사 전력 빅데이터로 고독을 읽고, AI로 생명을 살리는 `고독사 예방 서비스` 최우수 한국도로공사 AI 기반 도로 시설 자동점검체계 구축을 통한 예방적 유지관리 실현 우수 한국수자원공사 AI·DT 기반 스마트 댐 안전관리 체계 구축·운영 및 확산 기반 마련 우수 한국전기안전공사 AI 전기화재 분석 서비스 구축·운영을 통한 화재 조사 업무 혁신 우수 한국고용정보원 일자리가 사람을 찾아오다. - 역량을 읽는 AI 일자리 추천 서비스 우수 한국부동산원 AI시세, 국민 신뢰와 부동산 정보 혁신의 시작 우수 한국사회보장정보원 데이터와 AI로 먼저 찾아가는 국민 체감형 복지안전망 혁신 NIA 원장상 한국자산관리공사 국유재산 실태조사를 위한 AI 기반 항공영상 변화탐지 시스템 구축 혁신 한전원자력연료(주) 숙련자의 눈을 AI로, 수작업을 자율제조로 - 핵연료 지지격자 제조혁신 - 혁신 근로복지공단 더 빠르게 더 공정하게, AI 자동심사로 산재 요양기간 결정 대전환 혁신 한국수력원자력(주) 한수원형 생성형AI \"Hy-NuRi\" 구축을 통한 초격차 원자력 실현 혁신 대한법률구조공단 생성형 AI 기반 법률구조 서비스 통합시스템 구축",
+        "attachment_url": "https://www.korea.kr/common/download.do?fileId=198578832&tblKey=GMN"
+      }
+    ],
+    "intent_results": [
+      "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786820"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786820",
+      "title": "AI로 이룬 공공혁신, 국민이 누리는 변화 「2026 공공기관 AI 혁신 성과대회」 개최",
+      "publisher": "과학기술정보통신부",
+      "published": "2026-10-28"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-10-28T22:13:57.146506+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "2026 공공기관 AI 혁신 성과대회"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-28T22:13:57.146506+00:00",
+      "input_sha256": "bf26e296ca397f4f4ed50514cf183a8066df3f2e59c6ffd924e4d03198ddfca9",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "2026 공공기관 AI 혁신 성과대회",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "보도자료 보도시점 2026.10.28.(수) 14:00 (2026.10.29.(목) 조간) 배포 2026.10. 28.(수) 09:00 AI로 이룬 공공혁신, 국민이 누리는 변화 「2026 공공기관 AI 혁신 성과대회」 개최 공공기관, AI 혁신 주체로 민생 체감 서비스와 행정 효율화 성과 창출 - 30개 혁신 우수과제 선정... 공공행정 AI 전환 첫걸음 내뎌 한국서부발전 ‘AI 운영 K-가스터빈’, 인천국제공항공사 ‘AI 기반 항공 안전관리’ 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’)와 재정경제부 (부총리 겸 재정경제부 장관 이형일)는 10월 28일(수) 서울 누리꿈스퀘어 에서 「 2026 공공기관 AI 혁신 성과대회」 를 공동 개최 했다. 이번 성과 대회는, 국민의 AI 활용 역량을 높이고 문화를 확산하기 위해 올 3월부터 추진된 「전 국민 AI 경진대회」 의 공공분야 트랙인 「2026 공공기관 AI 혁신 챌린지(이하 ‘AI 혁신 챌린지’)」 의 결실을 나누는 자리로, 30개 혁신 우수과제에 대한 시상은 물론 패널 토의, 우수사례 발표 및 전시부스 등 다채로운 AI 혁신 성과의 장으로 마련되었다. <행사 개요 > (일시·장소) ’26.10.28.(수) 14:00, 누리꿈스퀘어(서울 상암동 소재) (참석자) 이 형일 부총리 겸 재정경제부 장관, 류제명 과기정통부 제2차관, 민·학·연 AI 전문가, 공공기관 임직원 등 300여 명 (주요내용) ‘ AI 혁신 챌린지’ 우수기관 시상, 주제발표 및 패널 토의, 우수사례 발표 및 전시부스 운영 (주최) 재정경제부, 과학기술정보통신부 / (주관) 한국지능정보사회진흥원(NIA) 올해 처음 개최된 ‘AI 혁신 챌린지 * ’ 는 지난 6월부터 8월까지 105개 기관에서 316건의 과제를 제출 하",
+            "entity": "과학기술정보통신부",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "성과대회는 언제, 어떤 목적으로 열렸으며 선정 규모는 얼마인가?",
+            "answer": "2026년 10월 28일 공공기관 AI 성과 공유 행사로 개최됐으며, 30개 혁신 우수과제를 시상했다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "보도자료 보도시점 2026.10.28.(수) 14:00 (2026.10.29.(목) 조간) 배포 2026.10. 28.(수) 09:00 AI로 이룬 공공혁신, 국민이 누리는 변화 「2026 공공기관 AI 혁신 성과대회」 개최 공공기관, AI 혁신 주체로 민생 체감 서비스와 행정 효율화 성과 창출 - 30개 혁신 우수과제 선정... 공공행정 AI 전환 첫걸음 내뎌 한국서부발전 ‘AI 운영 K-가스터빈’, 인천국제공항공사 ‘AI 기반 항공 안전관리’ 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’)와 재정경제부 (부총리 겸 재정경제부 장관 이형일)는 10월 28일(수) 서울 누리꿈스퀘어 에서 「 2026 공공기관 AI 혁신 성과대회」 를 공동 개최 했다. 이번 성과 대회는, 국민의 AI 활용 역량을 높이고 문화를 확산하기 위해 올 3월부터 추진된 「전 국민 AI 경진대회」 의 공공분야 트랙인 「2026 공공기관 AI 혁신 챌린지(이하 ‘AI 혁신 챌린지’)」 의 결실을 나누는 자리로, 30개 혁신 우수과제에 대한 시상은 물론 패널 토의, 우수사례 발표 및 전시부스 등 다채로운 AI 혁신 성과의 장으로 마련되었다. <행사 개요 > (일시·장소) ’26.10.28.(수) 14:00, 누리꿈스퀘어(서울 상암동 소재) (참석자) 이 형일 부총리 겸 재정경제부 장관, 류제명 과기정통부 제2차관, 민·학·연 AI 전문가, 공공기관 임직원 등 300여 명 (주요내용) ‘ AI 혁신 챌린지’ 우수기관 시상, 주제발표 및 패널 토의, 우수사례 발표 및 전시부스 운영 (주최) 재정경제부, 과학기술정보통신부 / (주관) 한국지능정보사회진흥원(NIA) 올해 처음 개최된 ‘AI 혁신 챌린지 * ’ 는 지난 6월부터 8월까지 105개 기관에서 316건의 과제를 제출 하"
+          },
+          {
+            "facet": "발전·항공안전 대상 수상작의 적용 기술과 단계, 기대 효과는 무엇인가?",
+            "answer": "서부발전은 AI·디지털트윈·로봇 연계 실증으로 연간 약 21억원 효과를 기대하며, 인천공항은 24시간 AI 안전관리를 운영한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "수기관 시상, 주제발표 및 패널 토의, 우수사례 발표 및 전시부스 운영 (주최) 재정경제부, 과학기술정보통신부 / (주관) 한국지능정보사회진흥원(NIA) 올해 처음 개최된 ‘AI 혁신 챌린지 * ’ 는 지난 6월부터 8월까지 105개 기관에서 316건의 과제를 제출 하는 등 적극적인 참여 속에 치러졌으며, 2단계에 걸친 전문가 심사(9월)를 거쳐 최종 30개 ** 의 AI 혁신 우수 과제 가 선정 되었다. * ‘AI 서비스 실증‧PoC’, ‘AI 활용 우수사례’ 부문으로 나누어 진행 ** (시상규모) 대상 2점, 최우수상 8점, 우수상 10점, AI혁신상 10점 (총 30점) ‘AI 서비스 실증‧PoC * ’ 부문 대상 을 수상한 한국서부발전 의 ‘AI가 운전하고 로봇이 점검하는 국내 최초 K-가스터빈’ 은 발전 설비 데이터를 AI로 분석하고 디지털트윈‧AI 에이전트‧로봇을 연계하여 구현하였다. 이 과정에서 국산 NPU 및 국산 AI 모델 등 국산 기술을 통합 적용한 ‘K-AI 풀스택 ** ’ 을 과감하게 도입 하여, 연간 약 21억원의 경제 효과가 기대된다. * 새로운 아이디어의 실현 가능성을 검증하는 과정을 뜻하는 ‘Proof of Concept’의 약자 ** AI 서비스 개발에 반도체, 모델, 서비스 등을 국내 독자적 기술력으로 구축 한편, ‘AI 활용 우수사례 * ’ 부문 대상 을 차지한 인천국제공항공사 는 육안 ‧ 인력 중심의 항공안전 관리를 24시간 AI 예측‧탐지 체계로 혁신했다. 이를 통해, 항공기 이· 착륙 전 과정에서 ‘보이지 않는 위험’ 까지 선제적으로 차단함으로써 ‘항공사 고 ZERO’라는 국민 안심 가치를 실현 하고 AI 기술 혜택을 국민의 안전과 일상으로 확산시켰다. * 기관 내부 실증·도입을 넘어, 서비스를 안정적으로 운영 중인 사례 각 부문 대상 수상작 은"
+          },
+          {
+            "facet": "정품인증 기술은 어떻게 작동하며 국민이 체감할 변화는 무엇인가?",
+            "answer": "한국조폐공사는 AI가 디지털 워터마크를 생성·식별해 스마트폰 촬영으로 정품 여부를 확인하는 과정을 시연했다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "륙 전 과정에서 ‘보이지 않는 위험’ 까지 선제적으로 차단함으로써 ‘항공사 고 ZERO’라는 국민 안심 가치를 실현 하고 AI 기술 혜택을 국민의 안전과 일상으로 확산시켰다. * 기관 내부 실증·도입을 넘어, 서비스를 안정적으로 운영 중인 사례 각 부문 대상 수상작 은 물론, 수상작 중 국민의 일상과 밀접한 서비스 가 행사장 내 ‘AI 혁신 쇼케이스’ 에서 전시 되었다. 1인 가구의 전력 사용 등 생활패턴을 AI로 분석하고 이상 징후를 탐지하여 고독사 위험을 조기 발견하는 한국전력공사 의 ‘전력 빅데이터로 고독을 읽고, AI로 생명을 살리는 고독사 예방서비스’ 가 소개되었다. 또한, 한국조폐공사 는 ‘AI 워터마크 기반 K-브랜드 글로벌 정품인증 서비스 ’를 통해, AI가 제품 고유 디지털 워터마크를 생성‧식별하여 스마트폰 촬영만으로 K-브랜드의 정품 여부를 손쉽게 확인하는 과정을 시연하였다. 과기정통부 류제명 제2차관은 “이번 행사는, 공공기관 이 AI 혁신의 주체 로서 민생 체감 서비스 와 행정 효율화 를 실현하는 다양한 성과 를 선보이고 공유하기 위해 개최된 첫 행사 라는 점에서 의미가 깊다”며, “과기정통부는 독자 AI 모델 개발과 AI 컴퓨팅 기반 확충, 국산 NPU의 실증·확산을 지원해 국내 AI 기술이 공공 현장에서도 폭넓게 활용 되도록 뒷받침하겠다”고 밝혔다. 또한, “공공기관의 과감한 도전과 AI 혁신의 바람이 공공부문 전반으로 확산되어 국민이 일상에서 변화를 체감할 수 있도록 정책적 지원을 적극 추진 해 나가겠다”고 밝혔다. 담당부서 과학기술정보통신부 디지털사회기획과 책임자 과 장 박지현 (044-202-6130) 담당자 사무관 정선영 (044-202-6129) 유관기관 한국지능정보사회진흥원 공공AI전환지원센터 책임자 센터장 김원확 (053-230-1441) 담당자 "
+          },
+          {
+            "facet": "정품인증 서비스의 현재 이용 가능 여부는 어디까지 확인되는가?",
+            "answer": "수상 과제명은 서비스 실증으로 명시돼 있다. 일반 국민 대상 정식 출시나 이용 경로까지 확인되지는 않는다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " 나가겠다”고 밝혔다. 담당부서 과학기술정보통신부 디지털사회기획과 책임자 과 장 박지현 (044-202-6130) 담당자 사무관 정선영 (044-202-6129) 유관기관 한국지능정보사회진흥원 공공AI전환지원센터 책임자 센터장 김원확 (053-230-1441) 담당자 책 임 이상준 (053-230-1455) 참고 「2026 공공기관 AI 혁신 챌린지」 수상 과제 부문 구분 훈격 기관명 과제명 대 상 부총리겸 과기정통부 장관상 한국서부발전(주) AI가 운전하고 로봇이 점검하는 국내 최초 K-가스터빈 최우수 국민건강보험공단 AI 기반 의료이용 이상탐지로 ‘건강보험 재정보호·환자 안전보호’ 최우수 대한무역투자진흥공사 모두의 수출 시대를 여는 「AI 수출비서」 최우수 한국지식재산보호원 AI 기반 해외 상표 무단선점 조기경보 및 유사상표 검색 서비스 구축·실증 최우수 한국임업진흥원 소나무재선충병 예찰 영상분석·방제지원 AI 시스템 개발 우수 한국조폐공사 AI 워터마크 기반 K-브랜드 글로벌 정품인증 서비스 실증 우수 한국수자원공사 On-device AI 기반의 상수도 관로 진단 시스템 실증 우수 중소기업은행 보이스피싱 피해 구제 프로세스 자동화 우수 한국도로공사 50년 데이터, 현장에서 답하다 - 고속도로 안전 AI 파트너 Dr.Bridge AI 우수 한국해양진흥공사 해운물류 안전을 위한 컨테이너 Vision AI 실증 혁신 NIA 원장상 한국석유공사 AI로 극복하는 고유가 : 지능형 해외유전 생산관리 자동화 혁신 한국환경공단 악조건 서류도 정밀 판독하는 AI 멀티엔진 기반 폐기물 인허가 서류 작성 자동화 혁신 한국가스공사 천연가스 배관망 최적화를 위한 AI 기반 공급량/송출량 예측 혁신 국토교통과학기술진흥원 멀티에이전트 AI 기반 국가R&D 기획보고서 자동생성 서비스 「KAIA R&D Arc"
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "보도자료 보도시점 2026.10.28.(수) 14:00 (2026.10.29.(목) 조간) 배포 2026.10. 28.(수) 09:00 AI로 이룬 공공혁신, 국민이 누리는 변화 「2026 공공기관 AI 혁신 성과대회」 개최 공공기관, AI 혁신 주체로 민생 체감 서비스와 행정 효율화 성과 창출 - 30개 혁신 우수과제 선정... 공공행정 AI 전환 첫걸음 내뎌 한국서부발전 ‘AI 운영 K-가스터빈’, 인천국제공항공사 ‘AI 기반 항공 안전관리’ 대상 수상 과학기술정보통신부 (부총리 겸 과학기술정보통신부 장관 배경훈, 이하 ‘과기정통부’)와 재정경제부 (부총리 겸 재정경제부 장관 이형일)는 10월 28일(수) 서울 누리꿈스퀘어 에서 「 2026 공공기관 AI 혁신 성과대회」 를 공동 개최 했다. 이번 성과 대회는, 국민의 AI 활용 역량을 높이고 문화를 확산하기 위해 올 3월부터 추진된 「전 국민 AI 경진대회」 의 공공분야 트랙인 「2026 공공기관 AI 혁신 챌린지(이하 ‘AI 혁신 챌린지’)」 의 결실을 나누는 자리로, 30개 혁신 우수과제에 대한 시상은 물론 패널 토의, 우수사례 발표 및 전시부스 등 다채로운 AI 혁신 성과의 장으로 마련되었다. <행사 개요 > (일시·장소) ’26.10.28.(수) 14:00, 누리꿈스퀘어(서울 상암동 소재) (참석자) 이 형일 부총리 겸 재정경제부 장관, 류제명 과기정통부 제2차관, 민·학·연 AI 전문가, 공공기관 임직원 등 300여 명 (주요내용) ‘ AI 혁신 챌린지’ 우수기관 시상, 주제발표 및 패널 토의, 우수사례 발표 및 전시부스 운영 (주최) 재정경제부, 과학기술정보통신부 / (주관) 한국지능정보사회진흥원(NIA) 올해 처음 개최된 ‘AI 혁신 챌린지 * ’ 는 지난 6월부터 8월까지 105개 기관에서 316건의 과제를 제출 하",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-29T07:13:57.146506+09:00",
+      "window_start": "2026-10-28T00:00:00+09:00",
+      "input_sha256": "a9a4e2f529407aca161449ab0730d6362da6a3be45552e1abe72e38c0895182d",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "announcement",
+        "event_date": "2026-10-28",
+        "source_index": 0,
+        "date_quote": "2026-10-28T14:00:00+09:00",
+        "event_quote": "각 부문 대상 수상작 은 물론, 수상작 중 국민의 일상과 밀접한 서비스 가 행사장 내 ‘AI 혁신 쇼케이스’ 에서 전시 되었다."
+      }
+    },
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "score": 20,
+    "publish_eligible": true,
+    "hold_reasons": []
   }
 ]

@@ -891,7 +891,9 @@
       "category": "취업",
       "slot": "morning",
       "claimed_at": "2026-10-28T09:00:11.719226+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-10-28T00:11:37.712350+00:00",
+      "published_category": "생활정보"
     }
   }
 }

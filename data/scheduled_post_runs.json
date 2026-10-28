@@ -894,6 +894,17 @@
       "status": "success",
       "completed_at": "2026-10-28T00:11:37.712350+00:00",
       "published_category": "생활정보"
+    },
+    "2026-10-28:evening": {
+      "scheduled_for": "2026-10-28T18:00:00+09:00",
+      "run_created_at": "2026-10-28T18:00:04+09:00",
+      "start_delay_seconds": 13,
+      "trigger": "external_timer",
+      "run_id": "40660846067",
+      "category": "리뷰",
+      "slot": "evening",
+      "claimed_at": "2026-10-28T18:00:13.078286+09:00",
+      "status": "started"
     }
   }
 }

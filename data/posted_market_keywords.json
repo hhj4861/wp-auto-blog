@@ -1310,5 +1310,24 @@
     "demand_provider": "naver_searchad_pc_mobile",
     "youtube_discovery": null,
     "published_at": "2026-10-27T09:08:59.149213+00:00"
+  },
+  {
+    "key": "물순환촉진구역지정공모",
+    "keyword": "2027년 물순환 촉진구역 지정 공모",
+    "topic": "2027년 물순환 촉진구역 지정 공모 착수: 지방정부 신청요건과 주민 의견수렴·접수 일정",
+    "category": "생활정보",
+    "post_id": 2049,
+    "url": "https://trendpulse.blog/water-cycle-zone-2027/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-28T00:11:32.678638+00:00"
   }
 ]

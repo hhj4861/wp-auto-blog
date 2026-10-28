@@ -45399,7 +45399,7 @@
     "keywords": [
       "AI 건강도우미 챗봇"
     ],
-    "status": "pending",
+    "status": "held_draft",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-28T01:00:19.388501+00:00",
@@ -45470,7 +45470,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2052,
+    "url": "https://trendpulse.blog/?p=2052",
+    "post_status": "draft",
+    "held_at": "2026-10-28T09:07:44.595572"
   },
   {
     "keyword": "주요 다제내성균 감염증 특성 분석 및 대응전략 개발",

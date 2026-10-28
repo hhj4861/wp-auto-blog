@@ -904,7 +904,9 @@
       "category": "리뷰",
       "slot": "evening",
       "claimed_at": "2026-10-28T18:00:13.078286+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-28T09:07:45.257142+00:00",
+      "published_category": "건강"
     }
   }
 }

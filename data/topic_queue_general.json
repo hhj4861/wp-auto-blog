@@ -45797,7 +45797,7 @@
     "keywords": [
       "지니 4(Genie 4)"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-28T22:13:57.146506+00:00",
@@ -45868,7 +45868,11 @@
     },
     "score": 20,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2058,
+    "url": "https://trendpulse.blog/genie-four-audio-preview-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-29T09:05:45.033363"
   },
   {
     "keyword": "2026 공공기관 AI 혁신 성과대회",

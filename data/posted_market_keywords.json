@@ -1348,5 +1348,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-29T00:05:32.610561+00:00"
+  },
+  {
+    "key": "지니4genie4",
+    "keyword": "지니 4(Genie 4)",
+    "topic": "지니 4(Genie 4) 10월 28일 공개: 오디오 생성과 연구 프리뷰 대상",
+    "category": "테크",
+    "post_id": 2058,
+    "url": "https://trendpulse.blog/genie-four-audio-preview-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 20,
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-29T09:05:43.754991+00:00"
   }
 ]

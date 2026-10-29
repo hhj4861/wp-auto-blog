@@ -44926,7 +44926,7 @@
     "keywords": [
       "온라인엑셀"
     ],
-    "status": "pending",
+    "status": "superseded",
     "opportunity_evidence": {
       "version": 2,
       "query": "온라인엑셀",
@@ -46145,6 +46145,284 @@
         "source_index": 0,
         "date_quote": "2026-10-29T10:00:00+09:00",
         "event_quote": "이번에 나머지 7.67만호 의 신규택지 후보지 를 추가로 발표하였다."
+      }
+    },
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "score": 25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "Immersive explorations",
+    "category": "생산성",
+    "topic": "Immersive explorations 10월 28일 공개: Gemini 이용 대상과 한국어 이용 시 제한",
+    "intent": "새로 공개된 Immersive explorations는 누가 어디서 이용하며, 한국어 이용자에게 어떤 언어로 제공되나요?",
+    "gap": "접속 경로·계정별 이용 대상·지원 언어 표와 현재 제공 기능·향후 예정 기능 체크리스트를 제공합니다.",
+    "source_url": "https://workspaceupdates.googleblog.com/2026/10/immersive-explorations-now-available-in-the-Gemini-app.html",
+    "verified_sources": [
+      {
+        "url": "https://workspaceupdates.googleblog.com/2026/10/immersive-explorations-now-available-in-the-Gemini-app.html",
+        "original_url": "https://workspaceupdates.googleblog.com/2026/10/immersive-explorations-now-available-in-the-Gemini-app.html",
+        "title": "Google Workspace Updates: Immersive explorations now available in the Gemini app",
+        "checked_on": "2026-10-29",
+        "publication_dates": [],
+        "sha256": "e3b2b47d95ff397f5305ab8fea3f5788ec8e1078641059ae7798aa854a97e5ee",
+        "excerpt": "arrow_back Back October 28, 2026 Immersive explorations now available in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing a library of immersive explorations in the Gemini app, giving users an interactive, visual way to explore topics layer-by-layer, from microscopic systems to deep space. Users can access this library in the Gemini student hub by clicking on “Try immersive explorations” and will soon be able to access these immersive explorations directly in a chat conversation with Gemini. Whether it’s tracing trade routes on the Silk Road, peering inside a jet engine, or studying the physics of lightning, each scene unfolds into interactive nodes with guided explanations. Users can tap a layer to dig deeper, journeying from sweeping planetary scales straight down to molecules and atoms. Immersive explorations will soon include audio narration to walk users through each layer. This feature is available on web and mobile to all users in the following languages: English, Indonesian, Hindi, Brazilian Portuguese, French, and simplified Chinese. Users in all other languages currently receive an English-only experience, with more languages coming soon. Getting started Admins: There is no admin control for this feature. Visit the Help Center for more information on turning the Gemini app on or off . End users: There is no end user setting for this feature. To get started, visit gemini.google.com/immersive-explorations or select Students in the Gemini app menu. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability In the Gemini student hub: Available to Education Fundamentals, Standard, and Plus In the Gemini app at at gemini.google.com/immersive-explorations : Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources News from Google: Dive into new topics with immersive explorations in the Gemini app News from Google: Start the semester with one year of Gemini, on us Workspace Updates Blog: Find your learning tools all in one place with the student hub in Gemini"
+      }
+    ],
+    "intent_results": [
+      "https://workspaceupdates.googleblog.com/2026/10/immersive-explorations-now-available-in-the-Gemini-app.html"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://workspaceupdates.googleblog.com/2026/10/immersive-explorations-now-available-in-the-Gemini-app.html",
+      "title": "Immersive explorations now available in the Gemini app",
+      "publisher": "google_workspace_updates",
+      "published": "2026-10-29"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-10-29T10:47:08.756878+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "Immersive explorations"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-29T10:47:08.756878+00:00",
+      "input_sha256": "faf9677f5254d94d94b26decf49f1b05fa007e7af51f59f4a377864cee074f3c",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "Immersive explorations",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": " menu. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability In the Gemini student hub: Available to Education Fundamentals, Standard, and Plus In the Gemini app at at gemini.google.com/immersive-explorations : Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources News from Google: Dive into new topics with immersive explorations in the Gemini app News from Google: Start the semester with one year of Gemini, on us Workspace Updates Blog: Find your learning tools all in one place with the student hub in Gemini",
+            "entity": "Google Workspace",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "Immersive explorations는 어떤 기능인가요?",
+            "answer": "주제를 층별로 탐색하며 상호작용 노드와 안내 설명을 이용하는 시각적 학습 기능입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "arrow_back Back October 28, 2026 Immersive explorations now available in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing a library of immersive explorations in the Gemini app, giving users an interactive, visual way to explore topics layer-by-layer, from microscopic systems to deep space. Users can access this library in the Gemini student hub by clicking on “Try immersive explorations” and will soon be able to access these immersive explorations directly in a chat conversation with Gemini. Whether it’s tracing trade routes on the Silk Road, peering inside a jet engine, or studying the physics of lightning, each scene unfolds into interactive nodes with guided explanations. Users can tap a layer to dig deeper, journeying from sweeping planetary scales straight down to molecules and atoms. Immersive explorations will soon include audio narration to walk users t"
+          },
+          {
+            "facet": "누가 어디에서 이용할 수 있나요?",
+            "answer": "직접 주소는 모든 Workspace 고객·Individual 구독자·개인 계정에, 학생 허브는 Education 3개 등급에 제공됩니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " menu. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability In the Gemini student hub: Available to Education Fundamentals, Standard, and Plus In the Gemini app at at gemini.google.com/immersive-explorations : Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources News from Google: Dive into new topics with immersive explorations in the Gemini app News from Google: Start the semester with one year of Gemini, on us Workspace Updates Blog: Find your learning tools all in one place with the student hub in Gemini"
+          },
+          {
+            "facet": "지원 기기와 언어는 무엇이며 한국어 이용자는 어떻게 제공받나요?",
+            "answer": "웹·모바일에서 영어 등 6개 언어를 지원하며, 한국어 등 나머지 언어 이용자에게는 현재 영어로만 제공됩니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "urneying from sweeping planetary scales straight down to molecules and atoms. Immersive explorations will soon include audio narration to walk users through each layer. This feature is available on web and mobile to all users in the following languages: English, Indonesian, Hindi, Brazilian Portuguese, French, and simplified Chinese. Users in all other languages currently receive an English-only experience, with more languages coming soon. Getting started Admins: There is no admin control for this feature. Visit the Help Center for more information on turning the Gemini app on or off . End users: There is no end user setting for this feature. To get started, visit gemini.google.com/immersive-explorations or select Students in the Gemini app menu. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability In the Gemini student hub: Available to Education Fundamen"
+          },
+          {
+            "facet": "현재 제공 기능과 향후 예정 기능은 어떻게 구분되나요?",
+            "answer": "현재 학생 허브에서 탐색 라이브러리를 이용하며, Gemini 채팅에서 직접 접근하는 기능은 향후 제공 예정입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "arrow_back Back October 28, 2026 Immersive explorations now available in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing a library of immersive explorations in the Gemini app, giving users an interactive, visual way to explore topics layer-by-layer, from microscopic systems to deep space. Users can access this library in the Gemini student hub by clicking on “Try immersive explorations” and will soon be able to access these immersive explorations directly in a chat conversation with Gemini. Whether it’s tracing trade routes on the Silk Road, peering inside a jet engine, or studying the physics of lightning, each scene unfolds into interactive nodes with guided explanations. Users can tap a layer to dig deeper, journeying from sweeping planetary scales straight down to molecules and atoms. Immersive explorations will soon include audio narration to walk users t"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "urneying from sweeping planetary scales straight down to molecules and atoms. Immersive explorations will soon include audio narration to walk users through each layer. This feature is available on web and mobile to all users in the following languages: English, Indonesian, Hindi, Brazilian Portuguese, French, and simplified Chinese. Users in all other languages currently receive an English-only experience, with more languages coming soon. Getting started Admins: There is no admin control for this feature. Visit the Help Center for more information on turning the Gemini app on or off . End users: There is no end user setting for this feature. To get started, visit gemini.google.com/immersive-explorations or select Students in the Gemini app menu. Rollout pace Rapid Release and Scheduled Release domains: Available now Availability In the Gemini student hub: Available to Education Fundamen",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-29T19:47:08.756878+09:00",
+      "window_start": "2026-10-28T00:00:00+09:00",
+      "input_sha256": "c957cda7ad3d4e7645548483196b7fc769bb62ea8a1cff343227f82a215ac594",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "release",
+        "event_date": "2026-10-28",
+        "source_index": 0,
+        "date_quote": "October 28, 2026",
+        "event_quote": "We’re introducing a library of immersive explorations in the Gemini app, giving users an interactive, visual way to explore topics layer-by-layer, from microscopic systems to deep space."
+      }
+    },
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "score": 25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "집배원이 전달하는 그냥드림",
+    "category": "생활정보",
+    "topic": "집배원이 전달하는 그냥드림, 10월 29일 발표한 10개 지역 시범사업 대상과 신청 안내",
+    "intent": "10월 29일 발표한 방문 어려운 취약계층 대상 배달 지원은 어디서 언제 시작하며, 어떻게 신청하나요?",
+    "gap": "10개 지역별 신청 경로 표와 대면 수령 절차를 정리하고, 강화·영동·완주는 2027년 이후 개소 예정임을 안내합니다.",
+    "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787109",
+    "verified_sources": [
+      {
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787109",
+        "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787109",
+        "title": "편지와 함께 먹거리, 집배원이 그냥드림 전하며 어려움 살핍니다 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+        "checked_on": "2026-10-29",
+        "publication_dates": [
+          "2026-10-29T14:35:00+09:00"
+        ],
+        "sha256": "5b59d29de049ba646f1c083f629458595db40281008d93db74bc31cfdb2e7723",
+        "excerpt": "보도자료 보도시점 2026. 10. 29.(목) 협약식 시작(14:30) 이후 배포 2026. 10. 29.(목) 편지와 함께 먹거리 , 집배원이 그냥드림 전하며 어려움 살핍니다 - 보건복지부-우정사업본부 「집배원이 전달하는 그냥드림」 업무협약(MOU), 10개 지역 시범운영 - - 직접 방문 어려운 거동 불편 어르신·장애인, 섬·벽지 거주민 등 취약계층 위 한 특화 서비스 제공 - - 배달 과정에서 확인한 위기 징후로 추가 복지서비스 연계 - 보건복지부 (장관 정은경)는 10월 29일(목) 우정사업본부 와 「집배원이 전달하는 그냥드림」 시범사업 추진을 위한 업무협약을 체결 한다고 밝혔다. 이에 따라 전국 10개 시군구 에서 거동이 불편한 취약계층 가정으로 우체국 집배원 이 그냥드림 물품을 배달 하며 안부를 살필 예정이다. < ‘집배원이 전달하는 그냥드림’ 시범사업 개요 > ○ (이용 대상) 거동불편자, 섬·벽지 거주민 등 그냥드림 코너를 방문하기 어려운 국민 ○ (시범 지역) 10개 시군구 * * (서울) 서대문구·동대문구, (부산) 북구, (인천) 강화군, (경기) 광명시·부천시, (강원) 평창군, (경북) 김천시, (전북) 완주군, (충북) 영동군 ○ (이용 방법) 거주지 지방정부로 신청 * → 집배원 대면 배달·대면 수령 원칙 * 시군구·읍면동 행정복지센터·복지위기알림앱 등 지역별 상이 ‘그냥드림’ 은 복잡한 소득 증빙 절차 없이 생계가 어려운 국민 에게 먹거리와 생필품을 즉시 지원 하는 사업으로, 지난해 12월 전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. 보건복지부 는 거동이 불편한 어르신과 장애인, 도서벽지 주민 등 코너 직 접 방문이 어려운 취약계층을 위한 ‘찾아가는 그냥드림 * ’ 을 추진 중이다 . * (우수사례) 경기 부천시는 지역 우체국과 협업하여 집배원이 가정으로 그냥드림 먹거리를 전달하고 필요한 경우 읍면동 복지상담으로 연계하는 ‘집으로 그냥드림’ 운영 중 (6월~) 「집배원이 전달하는 그냥드림」 은 집배원이 매일 오가는 우체국 연결망 을 먹거리 지원의 전달 통로 로 활용하는 방식으로, 거동 불편자, 섬·벽지 주민 등 거주지 내 그냥드림 코너를 방문하기 어려운 국민 이 이용할 수 있다. 시군구의 콜센터, 행정복지센터 , 복지위기알림앱 등으로 신청하면 담당자가 유선 으로 기본적인 사정 을 확인 한 뒤 우체국에 배달을 요청 한다. 집배원 은 그냥드림 꾸러미를 전달하면서 건강·주거·위생 상태 등 을 함께 살피고, 그 결과를 관할 시군구에 알린다 . 시군구는 이를 바탕으로 필요한 경우 추가로 상담하고 복지서비스로 연계 한다. 이번 협약을 시작으로 사업에 참여하는 10개 시군구 는 지역 우체국과의 협 의 등 준비를 거쳐 서비스를 순차적으로 개시한다. 지역별 개시 시기 와 구체적인 신청 방법 은 각 시군구를 통해 안내 될 예정이며 , 시범사업 기간을 거치며 보건복지부와 우정사업본부는 더 많은 지역에서 서비스가 운영될 수 있도록 협력 해 나갈 계획이다. 은성호 인구사회서비스정책실장 은 “ 그냥드림 은 배고픔 앞에 어떤 증빙도 요구하지 않는 사업이지만, 코너까지 나오기 어려운 분들에게는 그마저도 먼 길 이다”라며, “ 집배원 이 문을 두드리고 안부를 묻는 순간 이 복지 위기를 가장 먼저 발견 하는 중요한 창구가 될 것이다 ”라고 밝혔다. 한편, 지역별 그냥드림 코너의 위치와 운영시간 등 자세한 정보는 포털사이트에 ‘그냥드림’을 검색 하거나 보건복지부 (mohw.go.kr) 및 전국 푸드뱅크 (foodbank1377.org) 공식 누리집을 통해 확인할 수 있다. <붙임> 1. 보건복지부-우정사업본부 업무협약식 개요 담당 부서 보건복지부 책임자 과 장 권혜나 (044-202-3250) 사회서비스정책관 사회서비스자원과 담당자 사무관 조승연 (044-202-3259) 붙임1 보건복지부-우정사업본부 업무협약식 개요 □ 추진 배경 ○ 그냥드림 코너를 직접 방문하기 어려운 거동 불편 어르신, 장애인, 도서·벽지 주민 등 을 위해 ‘찾아가는 그냥드림’ 3대 표준모델 * 운영 중 * ①읍면동 복지 연계형(전남 신안 ‘그냥드림카’) ②지역자원 연계형(충남 논산 ‘온동네 배달’) ③공공기관 협력형(경기 부천 ‘집으로 그냥드림’) ○ ‘공공기관 협력형’ 모델 을 전국으로 넓히기 위해 우정사업본부와 ‘집배원이 전달하는 그냥드림’ 시범사업 추진 - 우체국 집배원 인프라를 활용하여 그냥드림이 필요한 가구 * 에 물품 배달·안부 확인, 그 결과를 지 방정부 에 회신 하여 복지서비스 연계 * (선도사례) 복지위기알림앱 , 지 방정부 콜센터·당직실 등으로 신청 접수, 유선 상담(지원 필요 등 확인) □ 행사 개요 ○ (일시·장소) (우정사업본부(8동)) ○ (내용) 「집배원이 전달하는 그냥드림」 추진을 위한 업무협약 ○ (참석) 복지부 인구사회서비스정책실장, 우본 우정사업본부장 등 □ 세부 일정 시 간(30분) 내 용 비 고 14:30~14:35 5‘ 개회 및 참석자 소개 14:35~14:45 10‘ 인사말 보건복지부→우정사업본부 14:45~14:50 5‘ 협약서 서명 14:50~15:00 10‘ 기념 촬영 및 폐회 ※ 행사 전체 대외 공개 붙임2 집배원이 전달하는 그냥드림 사업 개요 □ 개요 ㅇ (추진 배경) ‘그냥드림’ 사업을 우정사업본부의 집배 인프라와 연계 하여 ‘찾아오는 복지’에서 ‘찾아가는 복지’로 전환 - 경기도 부천시 에서 현재 시행 중인 「집으로 그냥드림」 사업 (‘26.6.~) 을 선행사례 삼아 타 지방정부로 확대 추진 < 유사사례 : 안부살핌우편서비스 > • (안부살핌 우편서비스) 집배원이 사회적 고립가구 대상으로 월 2회 이상 생필품 배송 하며 안부를 확인, 그 결과를 지방정부에 회신하는 행정안전부·지방정부·우정사업본부 협업사업 ※ ’26년 현재 56개 시·군·구와 협업하여 운영 중으로, 가구당 우편요금 5,000원 ㅇ (추진 기간) * 세부적인 서비스 개시 예정일은 지 방정부 마다 상이하므로 개별 문의 ㅇ (재원 소요) 건당 우편요금 5,000원 * 시범기간 동안은 우체국공익재단이 절반(2,500원) 부담(~‘27.12) ㅇ (추진 방안) 지방정부 신청 접수·유선상담·대상자 선정, 우체국에 정보 전달·발송 요청 → 우체국 배달·생활실태 조사, 결과 지자체 보고 사전단계 ⇨ 신청접수·선정 ⇨ 배달·안부확인 ⇨ 필요시 복지 연계 지방정부-우체국 협의, 우체국 집배원 교육 지방정부 (관보·지역SNS) 지방정부 우체국 생필품 접수 및 배달·안부 확인 결과 회신 지방정부 체크리스트 결과에 따른 맞춤형 지원 □ 향후 계획 ㅇ 참여 희망 지 방정부 조사 (~’26.12) ※ 현재 10개 시군구 참여, 추가 수요 상시 접수 ㅇ 보건복지부-우정사업본부 업무협약 (’26.10.29.) ㅇ 집배원 교육 및 지역별 사업 홍보 붙임3 집배원이 전달하는 그냥드림 접수 연락처 시도 (시군구/ 개소수) 시군구 운영장소 (주소) 배달 신청 경로 서울 동대문구 동대문 푸드뱅크마켓 (서울특별시 동대문구 천호대로2길 23-9, 1층) 02-2127-5034 서대문구 서대문정담은푸드마켓 (서울특별시 서대문구 가좌로 84-1) 02-330-8758 부산 북구 북구 행복나눔 푸드마켓 (부산광역시 북구 의성로 115번길 11) 읍면동 행정복지센터 인천 강화군 강화군푸드마켓 (인천광역시 강화군 강화읍 향나무길 22번길 12) 읍면동 행정복지센터 경기 광명시 광명푸드뱅크마켓센터 (경기도 광명시 광삼로 9, 1층) 광명푸드뱅크마켓센터 소하점 (경기도 광명시 금하로 527번길 12, 1층) 읍면동 행정복지센터 부천시 부천시다사랑푸드마켓 (경기도 부천시 원미구 신흥로 275번길 19) 032-320-3000 강원 평창군 평창군푸드뱅크 (강원특별자치도 평창군 평창읍 종부로 60) 033-330-2339 충북 영동군 영동나눔푸드뱅크 (충청북도 영동군 영동읍 계산로 66) 043-740-3582 복지위기알림앱 전북 완주군 완주군기초푸드뱅크 (전북특별자치도 완주군 삼례읍 별산농원길 20) 063-290-2176 복지위기알림앱 경북 김천시 김천시기초푸드뱅크 (경상북도 김천시 모암길 3) 읍면동 행정복지센터 ※ 지역별 서비스 개시일 상이(강화·영동·완주의 경우 ‘27년 이후 개소 예정)",
+        "attachment_url": "https://www.korea.kr/common/download.do?fileId=198580140&tblKey=GMN"
+      }
+    ],
+    "intent_results": [
+      "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787109"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787109",
+      "title": "편지와 함께 먹거리, 집배원이 그냥드림 전하며 어려움 살핍니다",
+      "publisher": "보건복지부",
+      "published": "2026-10-29"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-10-29T10:49:30.911062+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "집배원이 전달하는 그냥드림"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-29T10:49:30.911062+00:00",
+      "input_sha256": "936a2e38eada6f01f1193e58ff74a62bd52d7ae57821bad989a697f7e46c20c5",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "집배원이 전달하는 그냥드림",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "보도자료 보도시점 2026. 10. 29.(목) 협약식 시작(14:30) 이후 배포 2026. 10. 29.(목) 편지와 함께 먹거리 , 집배원이 그냥드림 전하며 어려움 살핍니다 - 보건복지부-우정사업본부 「집배원이 전달하는 그냥드림」 업무협약(MOU), 10개 지역 시범운영 - - 직접 방문 어려운 거동 불편 어르신·장애인, 섬·벽지 거주민 등 취약계층 위 한 특화 서비스 제공 - - 배달 과정에서 확인한 위기 징후로 추가 복지서비스 연계 - 보건복지부 (장관 정은경)는 10월 29일(목) 우정사업본부 와 「집배원이 전달하는 그냥드림」 시범사업 추진을 위한 업무협약을 체결 한다고 밝혔다. 이에 따라 전국 10개 시군구 에서 거동이 불편한 취약계층 가정으로 우체국 집배원 이 그냥드림 물품을 배달 하며 안부를 살필 예정이다. < ‘집배원이 전달하는 그냥드림’ 시범사업 개요 > ○ (이용 대상) 거동불편자, 섬·벽지 거주민 등 그냥드림 코너를 방문하기 어려운 국민 ○ (시범 지역) 10개 시군구 * * (서울) 서대문구·동대문구, (부산) 북구, (인천) 강화군, (경기) 광명시·부천시, (강원) 평창군, (경북) 김천시, (전북) 완주군, (충북) 영동군 ○ (이용 방법) 거주지 지방정부로 신청 * → 집배원 대면 배달·대면 수령 원칙 * 시군구·읍면동 행정복지센터·복지위기알림앱 등 지역별 상이 ‘그냥드림’ 은 복잡한 소득 증빙 절차 없이 생계가 어려운 국민 에게 먹거리와 생필품을 즉시 지원 하는 사업으로, 지난해 12월 전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. ",
+            "entity": "보건복지부",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "어떤 서비스이며 누가 이용할 수 있나요?",
+            "answer": "코너 방문이 어려운 거동불편자·섬벽지 주민 등에게 집배원이 먹거리·생필품을 배달하고 안부를 확인합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "보도자료 보도시점 2026. 10. 29.(목) 협약식 시작(14:30) 이후 배포 2026. 10. 29.(목) 편지와 함께 먹거리 , 집배원이 그냥드림 전하며 어려움 살핍니다 - 보건복지부-우정사업본부 「집배원이 전달하는 그냥드림」 업무협약(MOU), 10개 지역 시범운영 - - 직접 방문 어려운 거동 불편 어르신·장애인, 섬·벽지 거주민 등 취약계층 위 한 특화 서비스 제공 - - 배달 과정에서 확인한 위기 징후로 추가 복지서비스 연계 - 보건복지부 (장관 정은경)는 10월 29일(목) 우정사업본부 와 「집배원이 전달하는 그냥드림」 시범사업 추진을 위한 업무협약을 체결 한다고 밝혔다. 이에 따라 전국 10개 시군구 에서 거동이 불편한 취약계층 가정으로 우체국 집배원 이 그냥드림 물품을 배달 하며 안부를 살필 예정이다. < ‘집배원이 전달하는 그냥드림’ 시범사업 개요 > ○ (이용 대상) 거동불편자, 섬·벽지 거주민 등 그냥드림 코너를 방문하기 어려운 국민 ○ (시범 지역) 10개 시군구 * * (서울) 서대문구·동대문구, (부산) 북구, (인천) 강화군, (경기) 광명시·부천시, (강원) 평창군, (경북) 김천시, (전북) 완주군, (충북) 영동군 ○ (이용 방법) 거주지 지방정부로 신청 * → 집배원 대면 배달·대면 수령 원칙 * 시군구·읍면동 행정복지센터·복지위기알림앱 등 지역별 상이 ‘그냥드림’ 은 복잡한 소득 증빙 절차 없이 생계가 어려운 국민 에게 먹거리와 생필품을 즉시 지원 하는 사업으로, 지난해 12월 전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. "
+          },
+          {
+            "facet": "어느 지역에서 시행하나요?",
+            "answer": "서대문·동대문·부산 북구·강화·광명·부천·평창·김천·완주·영동의 10개 시군구가 대상입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "보도자료 보도시점 2026. 10. 29.(목) 협약식 시작(14:30) 이후 배포 2026. 10. 29.(목) 편지와 함께 먹거리 , 집배원이 그냥드림 전하며 어려움 살핍니다 - 보건복지부-우정사업본부 「집배원이 전달하는 그냥드림」 업무협약(MOU), 10개 지역 시범운영 - - 직접 방문 어려운 거동 불편 어르신·장애인, 섬·벽지 거주민 등 취약계층 위 한 특화 서비스 제공 - - 배달 과정에서 확인한 위기 징후로 추가 복지서비스 연계 - 보건복지부 (장관 정은경)는 10월 29일(목) 우정사업본부 와 「집배원이 전달하는 그냥드림」 시범사업 추진을 위한 업무협약을 체결 한다고 밝혔다. 이에 따라 전국 10개 시군구 에서 거동이 불편한 취약계층 가정으로 우체국 집배원 이 그냥드림 물품을 배달 하며 안부를 살필 예정이다. < ‘집배원이 전달하는 그냥드림’ 시범사업 개요 > ○ (이용 대상) 거동불편자, 섬·벽지 거주민 등 그냥드림 코너를 방문하기 어려운 국민 ○ (시범 지역) 10개 시군구 * * (서울) 서대문구·동대문구, (부산) 북구, (인천) 강화군, (경기) 광명시·부천시, (강원) 평창군, (경북) 김천시, (전북) 완주군, (충북) 영동군 ○ (이용 방법) 거주지 지방정부로 신청 * → 집배원 대면 배달·대면 수령 원칙 * 시군구·읍면동 행정복지센터·복지위기알림앱 등 지역별 상이 ‘그냥드림’ 은 복잡한 소득 증빙 절차 없이 생계가 어려운 국민 에게 먹거리와 생필품을 즉시 지원 하는 사업으로, 지난해 12월 전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. "
+          },
+          {
+            "facet": "지역별로 언제 시작하나요?",
+            "answer": "지역별 개시일은 다르며 개별 확인이 필요합니다. 강화·영동·완주는 2027년 이후 개소 예정입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": ") 광명푸드뱅크마켓센터 소하점 (경기도 광명시 금하로 527번길 12, 1층) 읍면동 행정복지센터 부천시 부천시다사랑푸드마켓 (경기도 부천시 원미구 신흥로 275번길 19) 032-320-3000 강원 평창군 평창군푸드뱅크 (강원특별자치도 평창군 평창읍 종부로 60) 033-330-2339 충북 영동군 영동나눔푸드뱅크 (충청북도 영동군 영동읍 계산로 66) 043-740-3582 복지위기알림앱 전북 완주군 완주군기초푸드뱅크 (전북특별자치도 완주군 삼례읍 별산농원길 20) 063-290-2176 복지위기알림앱 경북 김천시 김천시기초푸드뱅크 (경상북도 김천시 모암길 3) 읍면동 행정복지센터 ※ 지역별 서비스 개시일 상이(강화·영동·완주의 경우 ‘27년 이후 개소 예정)"
+          },
+          {
+            "facet": "10개 지역별 신청 경로는 무엇인가요?",
+            "answer": "동대문·서대문·부천은 기재된 전화, 북구·강화·광명은 행정복지센터로 신청합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "스 개시 예정일은 지 방정부 마다 상이하므로 개별 문의 ㅇ (재원 소요) 건당 우편요금 5,000원 * 시범기간 동안은 우체국공익재단이 절반(2,500원) 부담(~‘27.12) ㅇ (추진 방안) 지방정부 신청 접수·유선상담·대상자 선정, 우체국에 정보 전달·발송 요청 → 우체국 배달·생활실태 조사, 결과 지자체 보고 사전단계 ⇨ 신청접수·선정 ⇨ 배달·안부확인 ⇨ 필요시 복지 연계 지방정부-우체국 협의, 우체국 집배원 교육 지방정부 (관보·지역SNS) 지방정부 우체국 생필품 접수 및 배달·안부 확인 결과 회신 지방정부 체크리스트 결과에 따른 맞춤형 지원 □ 향후 계획 ㅇ 참여 희망 지 방정부 조사 (~’26.12) ※ 현재 10개 시군구 참여, 추가 수요 상시 접수 ㅇ 보건복지부-우정사업본부 업무협약 (’26.10.29.) ㅇ 집배원 교육 및 지역별 사업 홍보 붙임3 집배원이 전달하는 그냥드림 접수 연락처 시도 (시군구/ 개소수) 시군구 운영장소 (주소) 배달 신청 경로 서울 동대문구 동대문 푸드뱅크마켓 (서울특별시 동대문구 천호대로2길 23-9, 1층) 02-2127-5034 서대문구 서대문정담은푸드마켓 (서울특별시 서대문구 가좌로 84-1) 02-330-8758 부산 북구 북구 행복나눔 푸드마켓 (부산광역시 북구 의성로 115번길 11) 읍면동 행정복지센터 인천 강화군 강화군푸드마켓 (인천광역시 강화군 강화읍 향나무길 22번길 12) 읍면동 행정복지센터 경기 광명시 광명푸드뱅크마켓센터 (경기도 광명시 광삼로 9, 1층) 광명푸드뱅크마켓센터 소하점 (경기도 광명시 금하로 527번길 12, 1층) 읍면동 행정복지센터 부천시 부천시다사랑푸드마켓 (경기도 부천시 원미구 신흥로 275번길 19) 032-320-3000 강원 평창군 평창군푸드뱅크 (강원특별자치도 평창군 평창읍 종부로 60) "
+          },
+          {
+            "facet": "나머지 지역의 신청 경로는 무엇인가요?",
+            "answer": "평창은 기재된 전화, 영동·완주는 기재된 전화나 복지위기알림앱, 김천은 행정복지센터입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": ") 광명푸드뱅크마켓센터 소하점 (경기도 광명시 금하로 527번길 12, 1층) 읍면동 행정복지센터 부천시 부천시다사랑푸드마켓 (경기도 부천시 원미구 신흥로 275번길 19) 032-320-3000 강원 평창군 평창군푸드뱅크 (강원특별자치도 평창군 평창읍 종부로 60) 033-330-2339 충북 영동군 영동나눔푸드뱅크 (충청북도 영동군 영동읍 계산로 66) 043-740-3582 복지위기알림앱 전북 완주군 완주군기초푸드뱅크 (전북특별자치도 완주군 삼례읍 별산농원길 20) 063-290-2176 복지위기알림앱 경북 김천시 김천시기초푸드뱅크 (경상북도 김천시 모암길 3) 읍면동 행정복지센터 ※ 지역별 서비스 개시일 상이(강화·영동·완주의 경우 ‘27년 이후 개소 예정)"
+          },
+          {
+            "facet": "신청 후 어떤 절차로 받나요?",
+            "answer": "담당자가 유선으로 사정을 확인한 뒤 배달을 요청하며, 집배원이 안부를 살피고 필요시 복지서비스로 연계합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. 보건복지부 는 거동이 불편한 어르신과 장애인, 도서벽지 주민 등 코너 직 접 방문이 어려운 취약계층을 위한 ‘찾아가는 그냥드림 * ’ 을 추진 중이다 . * (우수사례) 경기 부천시는 지역 우체국과 협업하여 집배원이 가정으로 그냥드림 먹거리를 전달하고 필요한 경우 읍면동 복지상담으로 연계하는 ‘집으로 그냥드림’ 운영 중 (6월~) 「집배원이 전달하는 그냥드림」 은 집배원이 매일 오가는 우체국 연결망 을 먹거리 지원의 전달 통로 로 활용하는 방식으로, 거동 불편자, 섬·벽지 주민 등 거주지 내 그냥드림 코너를 방문하기 어려운 국민 이 이용할 수 있다. 시군구의 콜센터, 행정복지센터 , 복지위기알림앱 등으로 신청하면 담당자가 유선 으로 기본적인 사정 을 확인 한 뒤 우체국에 배달을 요청 한다. 집배원 은 그냥드림 꾸러미를 전달하면서 건강·주거·위생 상태 등 을 함께 살피고, 그 결과를 관할 시군구에 알린다 . 시군구는 이를 바탕으로 필요한 경우 추가로 상담하고 복지서비스로 연계 한다. 이번 협약을 시작으로 사업에 참여하는 10개 시군구 는 지역 우체국과의 협 의 등 준비를 거쳐 서비스를 순차적으로 개시한다. 지역별 개시 시기 와 구체적인 신청 방법 은 각 시군구를 통해 안내 될 예정이며 , 시범사업 기간을 거치며 보건복지부와 우정사업본부는 더 많은 지역에서 서비스가 운영될 수 있도록 협력 해 나갈 계획이다. 은성호 인구사회서비스정책실장 은 “ 그냥드림 은 배고픔 앞에 어떤 증빙도 요구하지 않는 사업이지만, 코너까지 나오기 어"
+          },
+          {
+            "facet": "물품은 어떻게 수령하나요?",
+            "answer": "집배원의 대면 배달과 이용자의 대면 수령이 원칙입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "보도자료 보도시점 2026. 10. 29.(목) 협약식 시작(14:30) 이후 배포 2026. 10. 29.(목) 편지와 함께 먹거리 , 집배원이 그냥드림 전하며 어려움 살핍니다 - 보건복지부-우정사업본부 「집배원이 전달하는 그냥드림」 업무협약(MOU), 10개 지역 시범운영 - - 직접 방문 어려운 거동 불편 어르신·장애인, 섬·벽지 거주민 등 취약계층 위 한 특화 서비스 제공 - - 배달 과정에서 확인한 위기 징후로 추가 복지서비스 연계 - 보건복지부 (장관 정은경)는 10월 29일(목) 우정사업본부 와 「집배원이 전달하는 그냥드림」 시범사업 추진을 위한 업무협약을 체결 한다고 밝혔다. 이에 따라 전국 10개 시군구 에서 거동이 불편한 취약계층 가정으로 우체국 집배원 이 그냥드림 물품을 배달 하며 안부를 살필 예정이다. < ‘집배원이 전달하는 그냥드림’ 시범사업 개요 > ○ (이용 대상) 거동불편자, 섬·벽지 거주민 등 그냥드림 코너를 방문하기 어려운 국민 ○ (시범 지역) 10개 시군구 * * (서울) 서대문구·동대문구, (부산) 북구, (인천) 강화군, (경기) 광명시·부천시, (강원) 평창군, (경북) 김천시, (전북) 완주군, (충북) 영동군 ○ (이용 방법) 거주지 지방정부로 신청 * → 집배원 대면 배달·대면 수령 원칙 * 시군구·읍면동 행정복지센터·복지위기알림앱 등 지역별 상이 ‘그냥드림’ 은 복잡한 소득 증빙 절차 없이 생계가 어려운 국민 에게 먹거리와 생필품을 즉시 지원 하는 사업으로, 지난해 12월 전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. "
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "전국 56개소 시범운영으로 시작 해 올해 9월 전국 모든 시군구로 확대 되었다. 지금까지 약 33만 명의 국민 이 그냥드림 코너를 이용 했고, 이 중 70,830명 이 복지상담 을 받았으며, 상담을 통해 긴급복지 등 지역사회 보호로 연결 된 인원은 7,383명 이다. 보건복지부 는 거동이 불편한 어르신과 장애인, 도서벽지 주민 등 코너 직 접 방문이 어려운 취약계층을 위한 ‘찾아가는 그냥드림 * ’ 을 추진 중이다 . * (우수사례) 경기 부천시는 지역 우체국과 협업하여 집배원이 가정으로 그냥드림 먹거리를 전달하고 필요한 경우 읍면동 복지상담으로 연계하는 ‘집으로 그냥드림’ 운영 중 (6월~) 「집배원이 전달하는 그냥드림」 은 집배원이 매일 오가는 우체국 연결망 을 먹거리 지원의 전달 통로 로 활용하는 방식으로, 거동 불편자, 섬·벽지 주민 등 거주지 내 그냥드림 코너를 방문하기 어려운 국민 이 이용할 수 있다. 시군구의 콜센터, 행정복지센터 , 복지위기알림앱 등으로 신청하면 담당자가 유선 으로 기본적인 사정 을 확인 한 뒤 우체국에 배달을 요청 한다. 집배원 은 그냥드림 꾸러미를 전달하면서 건강·주거·위생 상태 등 을 함께 살피고, 그 결과를 관할 시군구에 알린다 . 시군구는 이를 바탕으로 필요한 경우 추가로 상담하고 복지서비스로 연계 한다. 이번 협약을 시작으로 사업에 참여하는 10개 시군구 는 지역 우체국과의 협 의 등 준비를 거쳐 서비스를 순차적으로 개시한다. 지역별 개시 시기 와 구체적인 신청 방법 은 각 시군구를 통해 안내 될 예정이며 , 시범사업 기간을 거치며 보건복지부와 우정사업본부는 더 많은 지역에서 서비스가 운영될 수 있도록 협력 해 나갈 계획이다. 은성호 인구사회서비스정책실장 은 “ 그냥드림 은 배고픔 앞에 어떤 증빙도 요구하지 않는 사업이지만, 코너까지 나오기 어",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-10-29T19:49:30.911062+09:00",
+      "window_start": "2026-10-28T00:00:00+09:00",
+      "input_sha256": "f783eed16e55aeaf543dca4c0672219e99dd03adbcafff2401750c7408620969",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "announcement",
+        "event_date": "2026-10-29",
+        "source_index": 0,
+        "date_quote": "2026-10-29T14:35:00+09:00",
+        "event_quote": "보건복지부 (장관 정은경)는 10월 29일(목) 우정사업본부 와 「집배원이 전달하는 그냥드림」 시범사업 추진을 위한 업무협약을 체결 한다고 밝혔다."
       }
     },
     "score_components": {

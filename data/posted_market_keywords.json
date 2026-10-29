@@ -1329,5 +1329,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-28T00:11:32.678638+00:00"
+  },
+  {
+    "key": "주요다제내성균감염증특성분석및대응전략개발",
+    "keyword": "주요 다제내성균 감염증 특성 분석 및 대응전략 개발",
+    "topic": "주요 다제내성균 감염증 특성 분석 및 대응전략 개발: 10월 28일 발표된 CRE 최우선 관리 근거와 대응 방향",
+    "category": "건강",
+    "post_id": 2055,
+    "url": "https://trendpulse.blog/cre-infection-control-priority-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-29T00:05:32.610561+00:00"
   }
 ]

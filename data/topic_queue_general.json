@@ -45526,7 +45526,7 @@
     "keywords": [
       "주요 다제내성균 감염증 특성 분석 및 대응전략 개발"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-28T01:00:19.388501+00:00",
@@ -45604,7 +45604,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2055,
+    "url": "https://trendpulse.blog/cre-infection-control-priority-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-29T00:05:33.720379"
   },
   {
     "keyword": "건강보험 수가 구조 혁신 방안 이행방안",

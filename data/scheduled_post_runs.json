@@ -943,7 +943,9 @@
       "category": "생산성",
       "slot": "morning",
       "claimed_at": "2026-10-30T09:00:13.552205+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-10-30T00:13:34.426427+00:00",
+      "published_category": "생활정보"
     }
   }
 }

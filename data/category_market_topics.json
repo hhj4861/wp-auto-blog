@@ -6712,7 +6712,7 @@
   },
   "생산성": {
     "category": "생산성",
-    "selected_at": "2026-10-29T22:29:08.294663+00:00",
+    "selected_at": "2026-10-30T00:01:23.480227+00:00",
     "seeds": [
       "엑셀",
       "노션",
@@ -6720,20 +6720,32 @@
       "시간관리"
     ],
     "selection_version": 8,
-    "research_rounds": 4,
+    "research_rounds": 3,
     "latest_issue_discovery": {
       "window_start": "2026-10-29T00:00:00+09:00",
-      "window_end": "2026-10-30T07:29:08.294663+09:00",
+      "window_end": "2026-10-30T09:01:23.480227+09:00",
       "queries": [
         {
           "query": "업무 도구 신규 기능 공식 발표 after:2026-10-29 before:2026-10-31",
           "provider": "codex_native_search",
           "results": [
             {
+              "url": "https://www.kdca.go.kr/bbs/kdca/53/310535/download.do",
+              "domain": "www.kdca.go.kr",
+              "title": "## 5. 시험일정\n\n<table id=\"e1\">\n\n| 구분 | 일정 | 내용 |\n|---",
+              "snippet": "금) | ▶ 서류전형 합격자에게 면접일시 및 장소 개별 통보<br>※ 부서 사정에 따라 일정 변경 가능 | | 서류합격자발표 | ’26. ... 목) | ▶"
+            },
+            {
               "url": "https://www.shifted.co.kr/guide/cert-entry",
               "domain": "www.shifted.co.kr",
               "title": "입찰 자격 이용 가이드 | 시프티드",
               "snippet": "인증별 업체 수는 Basic 요금제 이상 · 신청 안내와 준비서류 체크리스트·「직접생산확인」 화면은 Standard 요금제 이상(가입 후 7일 체험 기간에는 모든 요금제 기능 이용 가능) ..."
+            },
+            {
+              "url": "https://www.kamco.or.kr/portal/bbs/list.do?bIdx=10406&mId=0701050000&ptIdx=422",
+              "domain": "www.kamco.or.kr",
+              "title": "캠코TV 목록 | 공사소식 | 미디어룸 | 홈페이지",
+              "snippet": "자세히보기 식구 | 배우 현봉식 | 공식 예고편 홍보실 2026-08-14 ... 자세히보기 [전지적 캠코 시점] 서로의 업무 일상을 엿보다! ... 캠코 직원 쁘이로그) 홍보실 2026-07-14"
             },
             {
               "url": "https://www.contis.co.kr/toolkit/manual/production-planning/annual-production-plan/",
@@ -6742,10 +6754,10 @@
               "snippet": "* 인원 현황과 다기능 숙련도표 * 도구: 생산능력 계획, 판매 예측, 시나리오 계획 ... 2 판매계획 수령 | 9월 말 | 영업의 품목군·월별 판매계획을 받아"
             },
             {
-              "url": "https://m.bodnara.co.kr/",
-              "domain": "m.bodnara.co.kr",
-              "title": "보드나라 - 보드나라",
-              "snippet": "게임물관리위원회, 모바일 게임물 등급분류 업무 민간이양 ... 캡콤, PHP 보안 대응 위해 스트리트 파이터 V 판매와 온라인 기능 일시 중단 ... 엔비디아, RTX 스파크 윈도우"
+              "url": "https://m.jpt.co.kr/news/media.php",
+              "domain": "m.jpt.co.kr",
+              "title": "JPT 일본어 능력 시험 공식 사이트",
+              "snippet": "* 삼성그룹 공채 시작… 토익스피킹 성적 조기 발표 진행 2025.09.02 ... * ‘2025 K-EDU 창의력 경진대회’ 개최… YBM COS·COS Pro 성적, 예선에 활용 가능 2025.08.12"
             },
             {
               "url": "https://gansam.com/news/news.php",
@@ -6754,40 +6766,16 @@
               "snippet": "YOUTUBE[영상] 간삼건축 신입사원 인터뷰 | 13명의 신입사원이 말하는 간삼에서의 6개월 새로운 환경과 낯선 업무, 처음 마주하는 시스템 속에서 신입사원은 매일 새로운 질문을 마주합니다. ... GANSAM"
             },
             {
-              "url": "https://www.gonggoitda.com/",
-              "domain": "www.gonggoitda.com",
-              "title": "공고잇다 | 공식 뉴스·공고·지원사업·법잇다",
-              "snippet": "입찰공고 공개 판독 15건 법잇다 뉴스와 관련 법령 공식 뉴스 정책·공공 발표 지원사업 기업·소상공인 게시판 소식·해설 일자리 지역·업종별 채용 보조금사업 국고·지방 공모 정부지원금 생활·복지 혜택"
+              "url": "https://wikidocs.net/336671",
+              "domain": "wikidocs.net",
+              "title": "25 AI 나를 위해 일하게 하라 - 멘토링 프로그램",
+              "snippet": "AI의 도움을 받아 하루 업무를 체계적으로 설계하면 중요한 일부터 착실히 완료해나갈 수 있습니다. AI가 ‘우선순위 결정 + 일정 계획 + 프로젝트 분해’까지 도와주는 새로운 업무"
             },
             {
               "url": "https://press1.newswire.co.kr/newsRead.php?no=1044685",
               "domain": "press1.newswire.co.kr",
               "title": "NetBox Labs, NVIDIA·Grafana Labs와 파트너십 체결 및 NetBox 인프라 인텔리전스 플랫폼 신규 기능 발표… AI 데이터센터·기업 인프라 구축 위한 핵심 인텔리전스 계층 강화 - press test",
               "snippet": "Arista CloudVision, AWS VPC IPAM 및 Cisco Nexus Dashboard와의 통합 기능은 이번 달 정식 제공되며, Palo Alto Panorama, Tenable 및 Kubernetes와의 신규 통합 기능은 10월"
-            },
-            {
-              "url": "https://www.doogo.co/board/faq/list.html?board_no=3&page=2",
-              "domain": "www.doogo.co",
-              "title": "두고 :: 도매 오픈마켓, 누구나 쉽게 입점하는 B2B 플랫폼",
-              "snippet": "Basic 플랜 기능 포함 ... 두고 플랫폼에서는 해외 상품 결제를 신용카드로 진행하게 되며, 결제 시 발급되는 신용카드 매출전표가 제품 및 상품 대금으로 인정됩니다 ... 보다"
-            },
-            {
-              "url": "https://about.daangn.com/company/pr/",
-              "domain": "about.daangn.com",
-              "title": "당근 보도자료",
-              "snippet": "2023.07.05 당근페이, ‘사기 의심 계좌 알림’ 기능 도입 지역 기반 간편송금·결제 서비스 ‘당근페이’에 ‘사기 의심 계좌 알림’ 기능을 도입하여 더욱 강력한 이용자 보호망을 구축한다 2023.07.03"
-            },
-            {
-              "url": "https://www.ayventure.net/",
-              "domain": "www.ayventure.net",
-              "title": "안양산업진흥원",
-              "snippet": "대납 요구 : 긴급한 물품 구매를 이유로 업체에 대리 구매를 요청하거나, 비공식 물품 납품 및 대금을 먼저 입금(대납)하도록 유도 ... 발신인이 불명확하거나 휴대폰 번호로 온"
-            },
-            {
-              "url": "https://speciai.kr/db/briefs/2026-10-06",
-              "domain": "speciai.kr",
-              "title": "2026년 10월 6일 브리핑 | 스페시아이 네트워크",
-              "snippet": "이 항목은 해설 없이 제목·요약만 수록되었습니다. ... 뉴스 기술·AI🌐 업계 동향 ... 이 항목은 해설 없이 제목·요약만 수록되었습니다. ... ### 국내 반도체 소부장 ETF가 AI"
             }
           ]
         },
@@ -6796,28 +6784,40 @@
           "provider": "codex_native_search",
           "results": [
             {
+              "url": "https://kbench.com/?q=node%2F277511",
+              "domain": "kbench.com",
+              "title": "갤럭시 A57, 출시 후 첫 번째 업데이트 배포 | 케이벤치 주요뉴스",
+              "snippet": "Image 갤럭시 A57 5G 삼성전자가 2026년형 중급 스마트폰 ‘갤럭시 A57 5G’에 대한 첫 번째 소프트웨어 업데이트 배포를 시작했다. ... 업데이트에는 2026년 1월 보안 패치가 포함됐으며,"
+            },
+            {
+              "url": "https://kbench.com/?q=node%2F275867",
+              "domain": "kbench.com",
+              "title": "삼성, '갤럭시S21' 시리즈 보안 업데이트 지원 종료 | 케이벤치 주요뉴스",
+              "snippet": "Image 2021년 출시된 삼성전자 구형 플래그십 ‘갤럭시 S21’ 시리즈의 보안 업데이트가 공식 종료됐다. ... 업계에서는 S22 시리즈가 약 1년가량 최소한의 보안 지원을 받은 뒤, 2027년"
+            },
+            {
+              "url": "https://kbench.com/?q=node%2F281611",
+              "domain": "kbench.com",
+              "title": "갤럭시 폴드6·플립6도 베타 프로그램 합류…국내서 베타 업데이트 출시 | 케이벤치 주요뉴스",
+              "snippet": "# 갤럭시 폴드6·플립6도 베타 프로그램 합류…국내서 베타 업데이트 출시 ... 플립6 사용자는 삼성 멤버스 앱에서 One UI 베타 프로그램 배너를 선택해 등록할 수 있다. 등록"
+            },
+            {
               "url": "https://uplusez.co.kr/board/guide/394",
               "domain": "uplusez.co.kr",
               "title": "갤럭시 One UI 9.0 일정·활용법과 주의사항 | 유플러스이지",
               "snippet": "유플러스이지 IT 데이터랩 정밀 분석 리포트: 본 심층 가이드는 삼성전자 공식 릴리즈 노트와 국내외 공시 기술 문서, 그리고 실제 단말기 배포 로그 데이터를 바탕으로 작성되었습니다."
             },
             {
-              "url": "https://www.jobplanet.co.kr/job/search?posting_ids%5B%5D=1536997",
-              "domain": "www.jobplanet.co.kr",
-              "title": "(주)스팬딧 채용공고 - Problem Solver (Product & Design), 서울 채용, 3.8 기업 만족도, 20개 기업리뷰",
-              "snippet": "기업들은 임직원의 업무 환경에 최적화된 비용 관리 및 정산 프로세스가 구축 가능하며 비용 절감, 생산성 향상, 재무 가시성 증가 등 혁신적인 효과까지 얻을 수 있습니다."
+              "url": "https://biz.heraldcorp.com/article/10580363",
+              "domain": "biz.heraldcorp.com",
+              "title": "신한자산운용, 국내 최초 ‘SOL 한국AI소프트웨어 ETF’ 출시 - 헤럴드경제",
+              "snippet": "신한자산운용, 국내 최초 ‘SOL 한국AI소프트웨어 ETF’ 출시 ... [헤럴드경제=문이림 기자] 신한자산운용이 오는 23일 ‘SOL 한국AI소프트웨어 ETF’를 유가증권시장에 상장한다고 22일 밝혔다. ... 김 총괄은 “AI의 확산"
             },
             {
-              "url": "https://pro.soundcat.com/article/?page=9&q=YToyOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjtzOjQ6InBhZ2UiO2k6MTM7fQ%3D%3D",
-              "domain": "pro.soundcat.com",
-              "title": "프로음향 이야기",
-              "snippet": "‘이 마이크 뭐예요?’ ... 게시판 썸네일 ... 침대에 누워 최애 유튜버나 힙한 스트리머의 영상을 보다 보면, 귀에 쏙쏙 박히는 그 찰진 목소리와 맑... ... [업데이트]"
-            },
-            {
-              "url": "https://www2.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=c3p1K28vZktSeU0zaUt5SUxZV3dXZz09",
-              "domain": "www2.saramin.co.kr",
-              "title": "스포츠투아이(주) 채용 | 2026년 진행 중인 공고 7건 - 사람인",
-              "snippet": "Image: 스포츠투아이(주)의 기업로고 ... 데이터베이스 및 온라인정보 제공업 ... NET · Windows 응용프로그램 / API) 스크랩 ... * 경기 성남시 분당구 외 ... * 경기"
+              "url": "https://www.intoiti.com/post/18-ios",
+              "domain": "www.intoiti.com",
+              "title": "아이폰18 프로·프로맥스 패닉풀 현상! iOS 27.0.1 업데이트로 해결됐을까?",
+              "snippet": "Face ID 인증 실패와 관련된 예기치 않은 재시동 문제는 iOS 27.0.1에서 공식적으로 수정됐습니다. ... 설정 → 개인정보 보호 및 보안 → 분석 및 향상 →"
             },
             {
               "url": "https://www.seoulsoft.kr/",
@@ -6826,39 +6826,43 @@
               "snippet": "서울소프트는 ERP·IoT·스마트팩토리·모바일 플랫폼 구축 경험을 바탕으로 제조설비와 생산현장을 데이터 기반으로 전환하는 전문기업입니다. ... * 생산성 분석 ... Image: 모빌하이 운수사 ERP 화면 ... 근태출근·음주측정·DTG 대사"
             },
             {
-              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/aTIxRnRzZkZES1Z3VVNST1BhVllNUT09/company_nm/%28%EC%A3%BC%29%EC%95%A1%EC%85%98%EC%8A%A4%ED%80%98%EC%96%B4",
-              "domain": "www.saramin.co.kr",
-              "title": "(주)넥써쓰 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "모바일 게임 소프트웨어 개발 및 공급업 ... 경기 성남시 분당구 대왕판교로606번길 10, 15층 (백현동,알파리움 제타워 1동) ... 플랫폼 '크로쓰(CROSS)' 내 0% 수수료 결제 시스템 '크로쓰페이(CROSS"
+              "url": "https://www.kdca.go.kr/bbs/kdca/53/310535/download.do",
+              "domain": "www.kdca.go.kr",
+              "title": "## 5. 시험일정\n\n<table id=\"e1\">\n\n| 구분 | 일정 | 내용 |\n|---",
+              "snippet": "금) | ▶ 서류전형 합격자에게 면접일시 및 장소 개별 통보<br>※ 부서 사정에 따라 일정 변경 가능 | ... 질병관리청 채용시스템 QR 코드가 중앙에 있으며, 아래에"
             },
             {
-              "url": "https://m.saramin.co.kr/job-search/company-info-view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
-              "domain": "m.saramin.co.kr",
-              "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "NICE 평가정보 출처 : 기업형태, 매출액, 설립일, 주소, 대표자명, 사업내용, 업종 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... 대표이사 유래형 사임,대표이사"
+              "url": "https://investors.palantir.com/files/Apollo%20Demo%20Day%20-%20Transcript%20KR.pdf",
+              "domain": "investors.palantir.com",
+              "title": "Apollo in Action:",
+              "snippet": "Software Demo ... 이제 롤아웃이 완료되었고, Apollo는 배포된 모든 환경에서 소프트웨어를 업그레이드했습니다. ... Apollo는 소프트웨어를 대규모 스케일로 신속하게 관리하는데 특화한 최적의 플랫폼으로 보다 더 빠르고"
             },
             {
               "url": "https://www2.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=TU5yUVZCS01WTVR0RHo1VVNFYTBkdz09",
               "domain": "www2.saramin.co.kr",
               "title": "(주)아이서티 채용 | 2026년 진행 중인 공고 5건 - 사람인",
               "snippet": "Image: (주)아이서티의 기업로고 ... 응용 소프트웨어 개발 및 공급업 ... IT개발·데이터 ... * 서울 성동구 ... 기술영업 네트워크영업 솔루션기술영업 시스템영업 기술기획 외 ... 정보보안 AI(인공지능)C#C++C언어"
-            },
-            {
-              "url": "https://www.remio.ai/ko/post/apple-creator-studio-ai-updates-connect-creative-apps-and-document-workflows-ko",
-              "domain": "www.remio.ai",
-              "title": "Apple Creator Studio AI 업데이트, 크리에이티브 앱과 문서 워크플로 연결",
-              "snippet": "이는 기능의 출시 상태를 나타내지만 정확성이나 신뢰성을 수치화하지는 않는다. ... 이는 Apple 소프트웨어에서 입증된 결함이 아니라 검증해야 할 일반적인 실패 시나리오다. ... 기술적 수용 가능성과"
-            },
-            {
-              "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4?nomo=1",
-              "domain": "www.saramin.co.kr",
-              "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-              "snippet": "주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종, 대표자명, 사업내용, 주소 ... 대표이사 유래형 사임,대표이사"
             }
           ]
         }
       ],
-      "sources": [],
+      "sources": [
+        {
+          "url": "https://www.kdca.go.kr/bbs/kdca/53/310535/download.do",
+          "status": "fetch_failed"
+        },
+        {
+          "url": "https://www.kamco.or.kr/portal/bbs/list.do?bIdx=10406&mId=0701050000&ptIdx=422",
+          "status": "no_recent_date",
+          "observed_dates": [
+            "2026-07-14",
+            "2026-07-23",
+            "2026-08-14",
+            "2026-08-18",
+            "2026-09-03"
+          ]
+        }
+      ],
       "candidates": [],
       "status": "no_verified_recent_issue"
     },
@@ -6874,7 +6878,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-29T22:29:08.294663+00:00",
+      "checked_at": "2026-10-30T00:01:23.480227+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -6901,6 +6905,12 @@
     "deferred_research_family_keywords": [],
     "researched_fallback_families": [
       {
+        "products": [
+          "노트북"
+        ],
+        "facets": []
+      },
+      {
         "products": [],
         "facets": []
       }
@@ -6908,716 +6918,331 @@
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 347,
-    "evaluated_candidates": 5,
-    "research_pool_size": 166,
+    "evaluated_candidates": 3,
+    "research_pool_size": 162,
     "selected": [],
     "held": [],
     "rejected": [
       {
-        "keyword": "서류정리",
+        "keyword": "코딩프로그램",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
+          "insufficient_relevant_sites",
           "low_search_relevance"
         ],
-        "monthly_search": 510,
+        "monthly_search": 1280,
         "organic_provider": "codex_native_search",
-        "organic_query": "서류 정리",
+        "organic_query": "코딩프로그램",
         "organic_results": [
           {
-            "url": "https://krdict.korean.go.kr/jpn/dicSearch/SearchView?ParaWordNo=75781&captchaNumber=&comment_user_name=&nation=jpn&nationCode=7&viewTypes=on&wordComment=",
-            "domain": "krdict.korean.go.kr",
-            "title": "한국어기초사전",
-            "snippet": "* 서류 정리. ... * 김 작가는 이 책의 본문 집필을 끝내고 목차의 정리만을 남겨 두고 있다. ... * 경리는 서랍 속에 묵어 있는 오래된"
+            "url": "https://reservation-platform-nine.vercel.app/program/seoul-kidscafe-prog-10914",
+            "domain": "reservation-platform-nine.vercel.app",
+            "title": "코딩프로그램(심플카) 신청·일정·대상 정보 | 레큐",
+            "snippet": "# 코딩프로그램(심플카) ... 레큐는 정보를 모아 보여드릴 뿐, 신청은 서울형 키즈카페 프로그램 (우리동네키움포털)에서 진행됩니다."
           },
           {
-            "url": "https://nhimc.esafetykorea.or.kr/js/smarteditor2-2.8.2.3/files/20240206044959_170720579954465c1e4a784e9b_Name%3D7.%20%EC%A0%95%EB%A6%AC%EC%A0%95%EB%8F%88%EA%B3%BC%20%EC%9A%94%ED%86%B5%EC%9E%AC%ED%95%B4%EC%9D%98%20%EC%98%88%EB%B0%A9.pdf",
-            "domain": "nhimc.esafetykorea.or.kr",
-            "title": "정리정돈과 요통재해의 예방.hwp",
-            "snippet": "■ 최근 6개월 이상 사용하지 않는 문서 정리 ... ■ 다음의 행동 단계까지 고려해 서류 정리 ... ② 종이 서류와 전자 서류에 동일한 방법 사용"
+            "url": "https://reservation-platform-nine.vercel.app/program/seoul-kidscafe-prog-10917",
+            "domain": "reservation-platform-nine.vercel.app",
+            "title": "코딩프로그램(심플카) 신청·일정·대상 정보 | 레큐",
+            "snippet": "# 코딩프로그램(심플카) ... 서울형 키즈카페 프로그램 (우리동네키움포털)"
           },
           {
-            "url": "https://art.snu.ac.kr/wp-content/uploads/2020/02/1.-%EC%A0%9C145%EA%B8%B0-%ED%95%99%EC%82%AC%EC%82%AC%EA%B4%80%ED%9B%84%EB%B3%B4%EC%83%9D-%EB%AA%A8%EC%A7%91%EA%B3%84%ED%9A%8D.pdf",
-            "domain": "art.snu.ac.kr",
-            "title": "【참고 1】\n\n# 각종서류 정리 방법\n\n<table id=\"e1\">\n<tr>\n<th>구분<",
-            "snippet": "# 각종서류 정리 방법 ... 추가서류 전형부서 제출</td> ... - 일반전형 : 1~8번 순으로 정리하여 필기시험 당일 고사장에 직접 제출"
+            "url": "https://umppa.seoul.go.kr/icare/user/kidsCafeProgrm/BD_selectKidsCafeProgrmList.do?q_atdrcCode=11560&q_fcltyId=YF231001&q_hiddenVal=1&q_rowPerPage=10",
+            "domain": "umppa.seoul.go.kr",
+            "title": "서울형 키즈카페 프로그램 예약 : HOME > 예약신청 > 서울형키즈카페 > 서울형 키즈카페 프로그램 예약",
+            "snippet": "* Image: [코딩프로그램20~22년생] 메이큐 축음기 썸네일"
           },
           {
-            "url": "https://www.skku.edu/skku_bak/campus/skk_comm/notice01.do?articleNo=79608&attachNo=62626&mode=download",
-            "domain": "www.skku.edu",
-            "title": "붙임 #12\n\n# 신원조사 서류정리 요령\n\n아래 그림과 같이 순서대로 서류 정리 후  \n클",
-            "snippet": "아래 그림과 같이 순서대로 서류 정리 후 ... 개인정보 수집·이용·제공동의서 1부(신용조사용) 3. ... 하단 주의문은 “※ 신원조사 서류정리 요령대로 서류를 준비하여 구비서류와 함께 면접평가지 제출”이다."
+            "url": "https://www.requ.kr/program/seoul-kidscafe-prog-11040",
+            "domain": "www.requ.kr",
+            "title": "[코딩프로그램 20~22년생] 팀보로봇 고릴라 신청·일정·대상 정보 | 레큐",
+            "snippet": "* [코딩프로그램20~22년생] 메이큐 전동드릴접수예정신청 시작 11.3 15:00"
           },
           {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49925068",
-            "domain": "www.jobkorea.co.kr",
-            "title": "㈜스파르탄스톤 채용 - 서류 정리 및 워드 | 잡코리아",
-            "snippet": "# 서류 정리 및 워드 ... 서류보조"
+            "url": "https://reservation-platform-nine.vercel.app/program/seoul-kidscafe-prog-11040",
+            "domain": "reservation-platform-nine.vercel.app",
+            "title": "[코딩프로그램 20~22년생] 팀보로봇 고릴라 신청·일정·대상 정보 | 레큐",
+            "snippet": "# [코딩프로그램 20~22년생] 팀보로봇 고릴라 ... 레큐는 정보를 모아 보여드릴 뿐, 신청은 서울형 키즈카페 프로그램 (우리동네키움포털)에서 진행됩니다."
           },
           {
-            "url": "https://www.collinsdictionary.com/ko/dictionary/korean-english/%EC%84%9C%EB%A5%98",
-            "domain": "www.collinsdictionary.com",
-            "title": "\"서류\"의 영어 번역 | Collins 한국어-영어 사전",
-            "snippet": "# \"서류\" 의 영어 번역 ... 경찰이 검문한 젊은 모로코 인이 자신의 신분증을 보여 주기를 거부했다. ... 그녀가 죽은 뒤 출판되지 않은 글과 서신 등의"
+            "url": "https://koreaedu.org/72",
+            "domain": "koreaedu.org",
+            "title": "한국청소년교육사회적협동조합",
+            "snippet": "##### 중학교, 고등학교, 문화센터, 평생교육원 등에서 코딩프로그램 교육을 직접 진행할 수 있는 강사로 활동이 가능합니다."
           },
           {
-            "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49069089?Oem_Code=C1&PageGbn=ST&sc=225",
-            "domain": "www.jobkorea.co.kr",
-            "title": "쉐르파코리아 채용 - [공장 관리 및 서류 정리 담당자 모집] | 잡코리아",
-            "snippet": "# [공장 관리 및 서류 정리 담당자 모집] ... 사무보조 및 서류 정리 담당자 모집"
+            "url": "https://www.requ.kr/program/seoul-kidscafe-prog-11041",
+            "domain": "www.requ.kr",
+            "title": "[코딩프로그램 22~23년생] 팀보로봇 고릴라 신청·일정·대상 정보 | 레큐",
+            "snippet": "# [코딩프로그램 22~23년생] 팀보로봇 고릴라 ... * [코딩프로그램 20~22년생] 팀보로봇 고릴라접수중신청 마감 11.3 00:00"
           },
           {
-            "url": "https://www.shinhan.ac.kr/bbs/kr/197/60354/download.do",
-            "domain": "www.shinhan.ac.kr",
-            "title": "참고 3 각종서류 정리 방법",
-            "snippet": "참고 3 각종서류 정리 방법 ... 추가서류 전형부서 제출</td> ... - 일반전형 : 1~8번 순으로 정리하여 필기시험 당일 고사장에 직접 제출"
+            "url": "https://www.hjy.kr/center/index.php?cId=angelto1004",
+            "domain": "www.hjy.kr",
+            "title": "덕산지역아동센터",
+            "snippet": "26년 10월 7일 코딩프로그램 26년 10월 7일 코딩프로그램"
           },
           {
-            "url": "https://www.50plus.or.kr/upload/im/2023/06/c713a6af-23a9-4d75-a3c8-c868d4ef7740.pdf",
-            "domain": "www.50plus.or.kr",
-            "title": "중장년 인턴십(기업연계형) 참여기업(2차) 선발심사",
-            "snippet": "usp=drive_link None 079-온앤-경 100-몽당-홍 | 온앤오프라인뮤직\u0001주식 회사 몽당협동조합 | 서비스 서비스 | 클래식\u0001성악교육,\u0001콘서트\u0001및\u0001콘텐츠\u0001 제작 문화예술컨텐츠개발,\u0001교육 | 2 1 | 사업관리 홍보마케팅 | 경영지원 홍보마케팅 |"
+            "url": "https://reservation-platform-nine.vercel.app/program/seoul-kidscafe-prog-11041",
+            "domain": "reservation-platform-nine.vercel.app",
+            "title": "[코딩프로그램 22~23년생] 팀보로봇 고릴라 신청·일정·대상 정보 | 레큐",
+            "snippet": "# [코딩프로그램 22~23년생] 팀보로봇 고릴라 ... 레큐는 정보를 모아 보여드릴 뿐, 신청은 서울형 키즈카페 프로그램 (우리동네키움포털)에서 진행됩니다."
           },
           {
-            "url": "https://media.halla.ac.kr/lib/download.php?file_name=2025%EB%85%84+%EA%B2%A8%EC%9A%B8%EB%B0%A9%ED%95%99+%EB%8C%80%ED%95%99%EC%83%9D+%ED%96%89%EC%A0%95%EC%B2%B4%ED%97%98%EC%97%B0%EC%88%98+%EC%9A%B4%EC%98%81%EA%B3%84%ED%9A%8D_%28%EB%8C%80%ED%95%99%EA%B3%B5%EB%9E%8C%EC%9A%A9%29.pdf&meta=free&save_file=a_20241205161947_97563.pdf",
-            "domain": "media.halla.ac.kr",
-            "title": "「2025년 겨울방학 대학생 행정체험연수」운영계획",
-            "snippet": "대학생 행정체험연수 근무부서 ... (기록관리팀) | 2 | - 폐기대상 기록물 정리(서류이관 포함) | ... (경리팀) | 1 | - 문서 이관· 서류 정리 |"
+            "url": "https://reservation-platform-nine.vercel.app/program/seoul-kidscafe-prog-10319",
+            "domain": "reservation-platform-nine.vercel.app",
+            "title": "[코딩프로그램22~23년생] 팀보로봇 컬링 신청·일정·대상 정보 | 레큐",
+            "snippet": "# [코딩프로그램22~23년생] 팀보로봇 컬링 ... * [코딩프로그램 20~22년생] 팀보로봇 고릴라접수중신청 마감 11.3 00:00"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "서류정리",
-          "executed_query": "서류 정리",
+          "query": "코딩프로그램",
+          "executed_query": "코딩프로그램",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-29T22:29:08.294663+00:00",
-          "raw_sha256": "dca8a59cc6fa6b1422949f036ffdfed0d1d01c96844e61fbd2867e41df1e97b4",
+          "checked_at": "2026-10-30T00:01:23.480227+00:00",
+          "raw_sha256": "41d13331152377911a2c49beaefd5919b36df3d0b827e754a965da35f9733471",
           "decisions": [
             {
               "result_index": 0,
               "relevant": false,
-              "quote": "* 서류 정리. ... * 김 작가는 이 책의 본문 집필을 끝내고 목차의 정리만을 남겨 두고 있다. ... * 경리는 서랍 속에 묵어 있는 오래된"
+              "quote": "# 코딩프로그램(심플카) ... 레큐는 정보를 모아 보여드릴 뿐, 신청은 서울형 키즈카페 프로그램 (우리동네키움포털)에서 진행됩니다."
             },
             {
               "result_index": 1,
-              "relevant": true,
-              "quote": "■ 최근 6개월 이상 사용하지 않는 문서 정리 ... ■ 다음의 행동 단계까지 고려해 서류 정리 ... ② 종이 서류와 전자 서류에 동일한 방법 사용"
+              "relevant": false,
+              "quote": "# 코딩프로그램(심플카) ... 서울형 키즈카페 프로그램 (우리동네키움포털)"
             },
             {
               "result_index": 2,
-              "relevant": true,
-              "quote": "# 각종서류 정리 방법 ... 추가서류 전형부서 제출</td> ... - 일반전형 : 1~8번 순으로 정리하여 필기시험 당일 고사장에 직접 제출"
+              "relevant": false,
+              "quote": "* Image: [코딩프로그램20~22년생] 메이큐 축음기 썸네일"
             },
             {
               "result_index": 3,
-              "relevant": true,
-              "quote": "아래 그림과 같이 순서대로 서류 정리 후 ... 개인정보 수집·이용·제공동의서 1부(신용조사용) 3. ... 하단 주의문은 “※ 신원조사 서류정리 요령대로 서류를 준비하여 구비서류와 함께 면접평가지 제출”이다."
+              "relevant": false,
+              "quote": "[코딩프로그램 20~22년생] 팀보로봇 고릴라 신청·일정·대상 정보 | 레큐"
             },
             {
               "result_index": 4,
               "relevant": false,
-              "quote": "㈜스파르탄스톤 채용 - 서류 정리 및 워드 | 잡코리아"
+              "quote": "# [코딩프로그램 20~22년생] 팀보로봇 고릴라 ... 레큐는 정보를 모아 보여드릴 뿐, 신청은 서울형 키즈카페 프로그램 (우리동네키움포털)에서 진행됩니다."
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "\"서류\"의 영어 번역 | Collins 한국어-영어 사전"
+              "quote": "##### 중학교, 고등학교, 문화센터, 평생교육원 등에서 코딩프로그램 교육을 직접 진행할 수 있는 강사로 활동이 가능합니다."
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "쉐르파코리아 채용 - [공장 관리 및 서류 정리 담당자 모집] | 잡코리아"
+              "quote": "[코딩프로그램 22~23년생] 팀보로봇 고릴라 신청·일정·대상 정보 | 레큐"
             },
             {
               "result_index": 7,
-              "relevant": true,
-              "quote": "참고 3 각종서류 정리 방법 ... 추가서류 전형부서 제출</td> ... - 일반전형 : 1~8번 순으로 정리하여 필기시험 당일 고사장에 직접 제출"
+              "relevant": false,
+              "quote": "26년 10월 7일 코딩프로그램 26년 10월 7일 코딩프로그램"
             },
             {
               "result_index": 8,
               "relevant": false,
-              "quote": "usp=drive_link None 079-온앤-경 100-몽당-홍 | 온앤오프라인뮤직\u0001주식 회사 몽당협동조합 | 서비스 서비스 | 클래식\u0001성악교육,\u0001콘서트\u0001및\u0001콘텐츠\u0001 제작 문화예술컨텐츠개발,\u0001교육 | 2 1 | 사업관리 홍보마케팅 | 경영지원 홍보마케팅 |"
+              "quote": "# [코딩프로그램 22~23년생] 팀보로봇 고릴라 ... 레큐는 정보를 모아 보여드릴 뿐, 신청은 서울형 키즈카페 프로그램 (우리동네키움포털)에서 진행됩니다."
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "대학생 행정체험연수 근무부서 ... (기록관리팀) | 2 | - 폐기대상 기록물 정리(서류이관 포함) | ... (경리팀) | 1 | - 문서 이관· 서류 정리 |"
+              "quote": "[코딩프로그램22~23년생] 팀보로봇 컬링 신청·일정·대상 정보 | 레큐"
             }
           ]
         }
       },
       {
-        "keyword": "계획표",
+        "keyword": "온라인엑셀",
         "reason": "search quality insufficient",
         "hold_reasons": [
           "insufficient_relevant_results",
-          "low_search_relevance"
-        ],
-        "monthly_search": 1310,
-        "organic_provider": "codex_native_search",
-        "organic_query": "계획표",
-        "organic_results": [
-          {
-            "url": "https://wol.jw.org/ko/wol/d/r8/lp-ko/1200275095",
-            "domain": "wol.jw.org",
-            "title": "계획표(시간표) — 워치타워 온라인 라이브러리",
-            "snippet": "* 계획표(시간표) ... 가족 계획표: 사 05/5 3-6"
-          },
-          {
-            "url": "https://www.besd.kr/m_cal",
-            "domain": "www.besd.kr",
-            "title": "월중 계획표 1 페이지 | 범어대성당::천주교대구대교구100주년주교좌범어대성당",
-            "snippet": "2026년 7월 ... 12 | 13 | 14 (음)6.1 | 15 | 16 | 17 제헌절 | 18 ... 대구광역시 수성구 범어천로 90 천주교 대구대교구"
-          },
-          {
-            "url": "https://v.daum.net/v/daSspPouZo",
-            "domain": "v.daum.net",
-            "title": "'무한도전', '생활 계획표' 특집 통해 멤버들의 특별한 하루 공개",
-            "snippet": "하루 동안 멤버들이 직접 짠 계획대로 생활하는 ‘생활 계획표’ 특집이 방영을 앞두고 있다. ... 시청자들에 색다른 즐거움을 선사할 ‘무한도전’ ‘생활계획표’는 오는 19일 오후 6시25분에 방송된다."
-          },
-          {
-            "url": "https://v.daum.net/v/20260102110346637",
-            "domain": "v.daum.net",
-            "title": "[신년사] 김윤덕 국토장관 \"주택공급, 계획표 아닌 착공·입주로 평가받아야\"",
-            "snippet": "### [신년사] 김윤덕 국토장관 \"주택공급, 계획표 아닌 착공·입주로 평가받아야\" ... [더팩트｜이중삼 기자] 김윤덕 국토교통부 장관은 2일 \"주택공급은 계획표가 아니라 착공과 입주로 평가받아야 한다\"고 말했다."
-          },
-          {
-            "url": "https://cbck.org/ChurchSchool//BoardAdtDownload/8713",
-            "domain": "cbck.org",
-            "title": "초등 1부! 1월 계획표",
-            "snippet": "6월계획안 “하나님은영이시니그분께경배하는자들이반드시영과진리로그분께경배할지니라, 하시니라.” ... ②장아산둘레길산책 ... 섬김이: 정영희, 박정미, 박하늘, 김성민, 이예원, 공예진, 배정빈, 권순호"
-          },
-          {
-            "url": "https://play.google.com/store/apps/details?hl=ko&id=com.nexters.bandalart",
-            "domain": "play.google.com",
-            "title": "반다라트 - 부담 없는 만다라트 계획표 - Google Play 앱",
-            "snippet": "· 다양한 테마 색상과 대표 이모지로 나만의 만다라트 계획표를 만들 수 있어요. ... 부담 없는 만다라트 계획표로 당신의 목표를 더욱 선명하게, 반다라트"
-          },
-          {
-            "url": "https://enews.imbc.com/News/ViewAmp/449181",
-            "domain": "enews.imbc.com",
-            "title": "'복면가왕' '생활 계획표'는 펜타곤 우석 \"키 191cm…배바지 NO\"",
-            "snippet": "이날 '방학 숙제'와 '생활 계획표'는 '사랑합니다'를 선곡해 대결을 펼쳤다. 애절한 감성을 전한 '방학 숙제'와 편안한 보이스 '생활 계획표'의 매력 대결이었다."
-          },
-          {
-            "url": "https://www.learnwitholiver.com/korean/translate-word-7475-%EA%B3%84%ED%9A%8D%ED%91%9C",
-            "domain": "www.learnwitholiver.com",
-            "title": "계획표 - Translation from Korean into English - LearnWithOliver",
-            "snippet": "Korean Word: 계획표"
-          },
-          {
-            "url": "https://v.daum.net/v/20250216215814913",
-            "domain": "v.daum.net",
-            "title": "'복면가왕' '생활 계획표'는 펜타곤 우석 \"키 191cm…배바지 NO\"",
-            "snippet": "이날 '방학 숙제'와 '생활 계획표'는 '사랑합니다'를 선곡해 대결을 펼쳤다. 애절한 감성을 전한 '방학 숙제'와 편안한 보이스 '생활 계획표'의 매력 대결이었다."
-          },
-          {
-            "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=721929",
-            "domain": "www.spotvnews.co.kr",
-            "title": "'만찢남' 오타니 30세에 첫 아이 얻는다, '고3 시절' 인생 계획표 어디까지 완성했나",
-            "snippet": "오타니는 고3 시절 인생계획표에서 26살에 월드시리즈에서 우승한 뒤 결혼한다, 27살에 일본 WBC 대표팀에 합류해 대회 MVP가 되고, 28살에 첫 아이(아들)가 태어난다는 상상을 했다. ... 오타니의"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "계획표",
-          "executed_query": "계획표",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-29T22:29:08.294663+00:00",
-          "raw_sha256": "0934063a7b3f9118768fb38e5586d2eae90eb17b71d60660f65b4816094f3217",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": false,
-              "quote": "* 계획표(시간표) ... 가족 계획표: 사 05/5 3-6"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "2026년 7월 ... 12 | 13 | 14 (음)6.1 | 15 | 16 | 17 제헌절 | 18 ... 대구광역시 수성구 범어천로 90 천주교 대구대교구"
-            },
-            {
-              "result_index": 2,
-              "relevant": false,
-              "quote": "하루 동안 멤버들이 직접 짠 계획대로 생활하는 ‘생활 계획표’ 특집이 방영을 앞두고 있다. ... 시청자들에 색다른 즐거움을 선사할 ‘무한도전’ ‘생활계획표’는 오는 19일 오후 6시25분에 방송된다."
-            },
-            {
-              "result_index": 3,
-              "relevant": false,
-              "quote": "### [신년사] 김윤덕 국토장관 \"주택공급, 계획표 아닌 착공·입주로 평가받아야\" ... [더팩트｜이중삼 기자] 김윤덕 국토교통부 장관은 2일 \"주택공급은 계획표가 아니라 착공과 입주로 평가받아야 한다\"고 말했다."
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "6월계획안 “하나님은영이시니그분께경배하는자들이반드시영과진리로그분께경배할지니라, 하시니라.” ... ②장아산둘레길산책 ... 섬김이: 정영희, 박정미, 박하늘, 김성민, 이예원, 공예진, 배정빈, 권순호"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "· 다양한 테마 색상과 대표 이모지로 나만의 만다라트 계획표를 만들 수 있어요. ... 부담 없는 만다라트 계획표로 당신의 목표를 더욱 선명하게, 반다라트"
-            },
-            {
-              "result_index": 6,
-              "relevant": false,
-              "quote": "이날 '방학 숙제'와 '생활 계획표'는 '사랑합니다'를 선곡해 대결을 펼쳤다. 애절한 감성을 전한 '방학 숙제'와 편안한 보이스 '생활 계획표'의 매력 대결이었다."
-            },
-            {
-              "result_index": 7,
-              "relevant": false,
-              "quote": "Korean Word: 계획표"
-            },
-            {
-              "result_index": 8,
-              "relevant": false,
-              "quote": "이날 '방학 숙제'와 '생활 계획표'는 '사랑합니다'를 선곡해 대결을 펼쳤다. 애절한 감성을 전한 '방학 숙제'와 편안한 보이스 '생활 계획표'의 매력 대결이었다."
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "오타니는 고3 시절 인생계획표에서 26살에 월드시리즈에서 우승한 뒤 결혼한다, 27살에 일본 WBC 대표팀에 합류해 대회 MVP가 되고, 28살에 첫 아이(아들)가 태어난다는 상상을 했다. ... 오타니의"
-            }
-          ]
-        }
-      },
-      {
-        "keyword": "마이크로오피스365",
-        "reason": "search intent or official evidence does not support an article",
-        "decision_diagnostics": {
-          "official_sources": [
-            {
-              "url": "https://support.microsoft.com/ko-kr/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
-              "title": "가정용 Microsoft 365의 시스템 요구 사항 | Microsoft Support",
-              "excerpt_chars": 2542
-            },
-            {
-              "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/where-can-i-manage-my-microsoft-365-subscription",
-              "title": "어디에서 Microsoft 365 구독을 관리할 수 있나요? | Microsoft Support",
-              "excerpt_chars": 1869
-            },
-            {
-              "url": "https://support.microsoft.com/ko-kr/office/introducing-microsoft-365",
-              "title": "Microsoft 365 소개 | Microsoft Support",
-              "excerpt_chars": 816
-            }
-          ],
-          "analysis_status": "supported_false",
-          "model_rejection_opinion": {
-            "kind": "model_opinion",
-            "code": "category_mismatch"
-          }
-        },
-        "monthly_search": 1230,
-        "organic_provider": "codex_native_search",
-        "organic_query": "마이크로오피스365",
-        "organic_results": [
-          {
-            "url": "https://www.visionm.co.kr/product/list.html?cate_no=48&sort_method=1",
-            "domain": "www.visionm.co.kr",
-            "title": "마이크로소프트 - (주)비전엠",
-            "snippet": "상품명 : Microsoft 365 Business Basic 기업용 1년 라이선스 CSP 마이크로소프트365 (PC설치안됨) ... 상품명 : Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿"
-          },
-          {
-            "url": "https://www.visionm.co.kr/product/list.html?cate_no=48&page=2",
-            "domain": "www.visionm.co.kr",
-            "title": "마이크로소프트 - (주)비전엠",
-            "snippet": "상품명 : Microsoft 365 Personal 가정용 1년 라이선스 오피스365 퍼스널 제품키 이메일 발송 ... 상품명 : Microsoft 365 Apps for Business 기업용 1년 라이선스 CSP"
-          },
-          {
-            "url": "https://www.visionm.co.kr/product/list.html?cate_no=48&sort_method=5",
-            "domain": "www.visionm.co.kr",
-            "title": "마이크로소프트 - (주)비전엠",
-            "snippet": "상품명 : Microsoft 365 Family 1년 구독 (ESD) 마이크로소프트 365 패밀리 ... 상품명 : Microsoft 365 E3 기업용 CSP 1년 라이선스 마이크로소프트 MS 365 *"
-          },
-          {
-            "url": "https://lnj123.tistory.com/entry/%EC%98%A4%ED%94%BC%EC%8A%A4365",
-            "domain": "lnj123.tistory.com",
-            "title": "마이크로오피스365 종류별로 알려드릴께요.",
-            "snippet": "많은분들이 PC작업을 하실때 사용하시는 마이크로오피스365 제품의 종류별로 설명을 드려보겠습니다. 마이크로오피스365라는 제품은 정식제품명은 아니고 Microsoft365가 정식제품 이름입니다."
-          },
-          {
-            "url": "https://m.coocha.co.kr/search/search.do?keyword=%EC%98%A4%ED%94%BC%EC%8A%A4+365&searchLabel=%EC%98%A4%ED%94%BC%EC%8A%A4+365",
-            "domain": "m.coocha.co.kr",
-            "title": "'오피스 365' 최저가 검색, 최저가 9,350원 : 쿠차 | 시간을 줄여주는 쇼핑검색",
-            "snippet": "마이크로소프트 MS 오피스 365 패밀리 1년 구독 24시간 발송 ... 마이크로오피스 365 코파일럿 365 Copilot for Microsoft 365 한글 CSP 라이선스 1년사용"
-          },
-          {
-            "url": "https://globalbunjang.com/product/403062782",
-            "domain": "globalbunjang.com",
-            "title": "MS Microsoft 365 Personal #마이크로오피스,#엑셀,#워드,#한글 on Bunjang Global Site.",
-            "snippet": "MS 마이크로소프트 365 Personal ... • 최대한 꼼꼼히 검수하여 사진과 설명을 올렸으나, 미처 발견하 지 못한 미세한 생활감이 있을 수 있습니다. ... #마이크로오피스#엑셀#워드#한글"
-          },
-          {
-            "url": "https://onkorea.co.kr/plus/digitalinfo/3842",
-            "domain": "onkorea.co.kr",
-            "title": "마이크로오피스365를 무료로 이용할 수 있는 방법이 있을까요? 궁금해요. | 온코리아",
-            "snippet": "마이크로오피스365를 무료로 이용할 수 있는 방법에는 몇 가지가 있습니다. ... 셋째, 일부 비영리기관이나 사회적 기업은 마이크로소프트의 지원 프로그램을 통해 무료로 오피스365를 제공받을 수 있는 혜택이"
-          },
-          {
-            "url": "https://learn.microsoft.com/ko-kr/answers/questions/5012361/365",
-            "domain": "learn.microsoft.com",
-            "title": "마이크로오피스365 환불요청합니다. - Microsoft Q&A",
-            "snippet": "# 마이크로오피스365 환불요청합니다. ... Xbox Live 및 Office 365를 포함한 모든 Microsoft 구독 및 평가판 구독에 대해 구독을 취소하고 구매일로부터 30일 이내에, 또는 정기 구독의"
-          },
-          {
-            "url": "https://m.visionm.co.kr/product/microsoft-365-copilot-%ED%95%9C%EA%B8%80-csp-1%EB%85%84-%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%98%A4%ED%94%BC%EC%8A%A4-365-%EC%BD%94%ED%8C%8C%EC%9D%BC%EB%9F%BF/803/display/1/",
-            "domain": "m.visionm.co.kr",
-            "title": "Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿 - (주)비전엠",
-            "snippet": "# Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿 ... 상품명 | Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿"
-          },
-          {
-            "url": "https://web.joongna.com/product/114107521",
-            "domain": "web.joongna.com",
-            "title": "마이크로오피스 365 패밀리계정 오실분 | 중고나라 - 안심되는 중고거래",
-            "snippet": "Image: 마이크로오피스 365 패밀리계정 오실분 이미지 ... # 마이크로오피스 365 패밀리계정 오실분"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "마이크로오피스365",
-          "executed_query": "마이크로오피스365",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-29T22:29:08.294663+00:00",
-          "raw_sha256": "ac3f336051d0ebe71bfa98c6025b2cbbcdcc2e548506830ad70aa49d40a36adc",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "상품명 : Microsoft 365 Business Basic 기업용 1년 라이선스 CSP 마이크로소프트365 (PC설치안됨) ... 상품명 : Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿"
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "상품명 : Microsoft 365 Personal 가정용 1년 라이선스 오피스365 퍼스널 제품키 이메일 발송 ... 상품명 : Microsoft 365 Apps for Business 기업용 1년 라이선스 CSP"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "상품명 : Microsoft 365 Family 1년 구독 (ESD) 마이크로소프트 365 패밀리 ... 상품명 : Microsoft 365 E3 기업용 CSP 1년 라이선스 마이크로소프트 MS 365 *"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "많은분들이 PC작업을 하실때 사용하시는 마이크로오피스365 제품의 종류별로 설명을 드려보겠습니다. 마이크로오피스365라는 제품은 정식제품명은 아니고 Microsoft365가 정식제품 이름입니다."
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "마이크로소프트 MS 오피스 365 패밀리 1년 구독 24시간 발송 ... 마이크로오피스 365 코파일럿 365 Copilot for Microsoft 365 한글 CSP 라이선스 1년사용"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "MS Microsoft 365 Personal #마이크로오피스,#엑셀,#워드,#한글 on Bunjang Global Site."
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "마이크로오피스365를 무료로 이용할 수 있는 방법에는 몇 가지가 있습니다. ... 셋째, 일부 비영리기관이나 사회적 기업은 마이크로소프트의 지원 프로그램을 통해 무료로 오피스365를 제공받을 수 있는 혜택이"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "# 마이크로오피스365 환불요청합니다. ... Xbox Live 및 Office 365를 포함한 모든 Microsoft 구독 및 평가판 구독에 대해 구독을 취소하고 구매일로부터 30일 이내에, 또는 정기 구독의"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "# Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿 ... 상품명 | Microsoft 365 Copilot 한글 CSP 1년 라이선스 마이크로오피스 365 코파일럿"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "마이크로오피스 365 패밀리계정 오실분 | 중고나라 - 안심되는 중고거래"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
-            "title": "가정용 Microsoft 365의 시스템 요구 사항 | Microsoft Support",
-            "excerpt": "가정용 Microsoft 365의 시스템 요구 사항 적용 대상 Microsoft 365용 Excel Microsoft 365용 Word Microsoft 365용 Outlook Microsoft 365용 PowerPoint Microsoft 365용 Access Microsoft 365용 OneNote Mac용 Microsoft 365용 Excel Mac용 Microsoft 365용 Word Mac용 Microsoft 365용 Outlook Mac용 Microsoft 365용 PowerPoint Mac용 Microsoft 365 OneNote Microsoft365.com iPad용 Excel iPad용 Word iPad용 PowerPoint iPhone용 Excel iPhone용 Word iPhone용 PowerPoint Android 태블릿용 Word Android 태블릿용 Excel Android 태블릿용 PowerPoint Android 휴대폰용 Excel Excel Mobile Microsoft 365 Family Microsoft 365 Personal Android용 OneNote Android용 Outlook iOS용 Outlook Android 휴대폰용 PowerPoint Android 휴대폰용 Word 개인 및 가족을 위한 Microsoft 365 제품군은 모든 장치에서 생산성 앱의 프리미엄 버전, 월간 기능 업데이트, 1TB 또는 2TB 공유 OneDrive 클라우드 저장소를 포함하는 구독 플랜입니다. 참고 2026년 10월 8일부터 모든 신규(만료 및 재구매 포함) Microsoft 365 Family 및 Premium 구독자는 2TB의 풀 OneDrive 클라우드 스토리지를 받고, Microsoft 365 Pro 구독자는 5TB의 풀 스토리지를 받습니다. 2027년 5월 2일부터 모든 기존 Microsoft 365 Family 및 Premium 구독자는 구독 갱신 시 2TB의 풀 클라우드 스토리지를 받게 됩니다. 풀링된 저장소는 클라우드 저장소 허용량이 공유 구독의 모든 구성원 간에 공유된다는 것을 의미합니다. 각 사용자의 사서함, 파일 및 폴더는 계속해서 비공개로 유지됩니다. 모든 구독 유형을 최대 10TB까지 확장하여 모든 사용자에게 더 많은 OneDrive 저장소 를 제공할 수 있습니다. 설정 및 설치 Microsoft 365를 처음으로 설정하려면 Microsoft 365 설정 페이지를 방문하여 화면의 지침을 따릅니다. 또는 온라인으로 구매한 경우 Microsoft 365가 자동으로 설정되었으므로 Microsoft 365 내 계정 페이지로 직접 이동하여 계정 및 설치를 관리할 수 있습니다. 시스템 요구 사항 구성 요소 Windows Mac Android iOS 컴퓨터 및 프로세서 1.6GHz 이상, 2코어 Intel 프로세서 ARM 기반 또는 Intel x86 프로세서 해당 사항 없음 운영 체제 Windows 11 macOS의 가장 최근 세 가지 버전 중 하나입니다. macOS의 새 주 버전이 릴리스될 때 macOS 및 이전 두 버전. Android의 최근 4개 주 버전 iOS의 최신 버전 2개 메모리 4GB RAM; 2GB RAM(32비트) 4GB RAM 1GB 해당 사항이 없습니다. 하드 디스크 4GB의 사용 가능한 디스크 공간 10GB의 사용 가능한 디스크 공간, HFS+ 하드 디스크 형식(Mac OS 확장이라고도 함) 또는 APFS. 업데이트에는 시간이 지남에 따라 추가 저장소가 필요할 수 있습니다. 해당 사항이 없습니다. 해당 사항이 없습니다. 디스플레이 1280 x 768 화면 해상도(32비트에는 4K 이상용 하드웨어 가속이 필요) 1280 x 800 화면 해상도. 웹 앱에는 실행 중인 OS와 동일한 최소 해상도가 필요합니다. Microsoft Teams 내에서 실행되는 앱은 Teams 최소 해상도를 준수합니다. 최소 해상도는 확대/축소, DPI 설정 및 텍스트 크기 조정이 100%로 설정되어 있다고 가정합니다. 100%로 설정하지 않으면 최소 해상도의 크기를 적절하게 조정해야 합니다. 해당 사항이 없습니다. 해당 사항이 없습니다. 그래픽 그래픽 하드웨어 가속에는 DirectX 9 이상이 필요합니다. 그래픽 요구 사항이 없습니다. 해당 사항이 없습니다. 해당 사항이 없습니다. .NET 버전 일부 기능을 사용하려면 .NET 3.5 또는 4.6 이상도 설치해야 할 수 있습니다. 해당 사항이 없습니다. 해당 사항이 없습니다. 해당 사항이 없습니다. 참고 인터넷 기능을 사용하려면 인터넷 연결이 필요합니다. 요금이 부과될 수 있습니다. 일부 추가 Outlook 기능을 사용하려면 Microsoft Edge WebView2 를 설치해야 합니다. 터치 사용 장치는 모든 멀티터치 기능을 사용해야 하지만 키보드, 마우스 또는 기타 표준이거나 액세스 가능한 입력 장치를 사용하여 모든 기능을 항상 사용할 수 있습니다. 시스템 구성에 따라 제품 기능과 그래픽이 다를 수 있습니다. 일부 기능을 사용하려면 추가 또는 고급 하드웨어 또는 서버 연결이 필요할 수 있습니다. 서비스에 대한 라이선스 및 액세스에는 Microsoft 또는 조직 계정이 필요합니다.",
-            "sha256": "0562d05074d7ec969a5444ecabd796f0a0a3e77b9064378f1889660902363003",
-            "checked_on": "2026-10-30"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/where-can-i-manage-my-microsoft-365-subscription",
-            "title": "어디에서 Microsoft 365 구독을 관리할 수 있나요? | Microsoft Support",
-            "excerpt": "내 Microsoft 365 구독 관리 적용 대상 가정용 Microsoft 365 Microsoft 365 Family Microsoft 365 Personal Copilot 도움말 보기 Microsoft 365 구독을 어디에서 관리할 수 있나요? 서비스 및 구독에 대해 알아야 할 사항은 무엇인가요? 구독이 관리되는 위치를 어떻게 확인할 수 있나요? 요약​​ 구입한 위치에 따라 다른 위치에서 Microsoft 365 구독을 관리합니다. Microsoft에서 구입 : Microsoft 계정 구독 페이지에서 관리합니다 . 타사(예: Apple, Google, 소매점)에서 구입 : 해당 공급자를 통해 관리합니다. 구독이 관리되는 위치를 검사 방법 Microsoft 365를 구매하는 데 사용한 Microsoft 계정을 사용하여 account.microsoft.com/services Microsoft 구독 페이지에 로그인합니다. 로그인 Microsoft 365 구독 찾기 결제 관리 , 취소 또는 변경 과 같은 옵션이 표시되면 Microsoft에서 구독 요금이 청구됩니다. 관리 옵션이 제한되거나 누락된 경우 구독은 타사에서 관리할 수 있습니다. Microsoft에서 Microsoft 365 구독을 구입한 경우 Microsoft 구독은 전적으로 Microsoft 계정을 통해 관리됩니다. Microsoft에서 직접 구매한 경우(예: Microsoft Store 또는 온라인을 통해) 모든 구독 설정을 한 곳에서 관리할 수 있습니다. Microsoft 365 구독 관리로 이동합니다.\n여기에서 다음을 수행할 수 있습니다. 구독 공유 관리(해당하는 경우) 반복 청구 켜거나 끄기 결제 방법 변경 또는 업데이트 구독 갱신 플랜 전환 또는 업그레이드 구독 취소 만료 또는 다음 청구 날짜를 확인합니다. 앱 스토어 또는 소매점을 통해 구독을 구입한 경우 타사 공급자를 통해 Microsoft 365 구독을 구매한 경우(예: ) Apple App Store Google Play Amazon 또는 기타 소매 파트너 해당 공급자를 사용하여 청구 및 구독 설정을 직접 관리해야 합니다. Microsoft는 이러한 구독에 대한 청구를 취소, 환불 또는 수정할 수 없습니다. 공급자에게 문의하거나 해당 계정 설정을 사용해야 합니다. 타사 파트너는 결제 방법 취소, 갱신 또는 업데이트와 같은 작업을 처리합니다. 모바일 앱에서 구입한 Microsoft 365 구독 모바일 앱을 통해 Microsoft 365를 구입한 경우: iPhone/iPad : Apple ID 설정에서 구독을 관리합니다. Android : Google Play에서 구독을 관리합니다. 이러한 방식으로 구매한 구독은 앱 스토어 계정을 통해 청구되며 여기서 관리되어야 합니다. 중요 항상 구독을 구매하는 데 사용되는 것과 동일한 Microsoft 계정으로 로그인합니다. Microsoft는 타사 구매에 대한 환불 또는 취소를 처리할 수 없습니다. 일부 타사 공급자는 계획 간 전환을 지원하지 않을 수 있습니다. 팁 구독을 어디에서 구입했는지 확실하지 않은 경우 구독 페이지에서 시작합니다. 이는 청구를 관리하는 사람과 사용할 수 있는 옵션을 결정하는 가장 빠른 방법입니다. 참고 항목 Microsoft 365 Family/Premium 공유 되풀이 청구 켜기/끄기 Microsoft 365 구독 간 전환하기 Microsoft 365 구독 취소 타사를 통해 구매한 Microsoft 365 관리 추가 지원 고객 지원팀에 문의 기술 지원을 받으려면 Microsoft 지원 문의 로 이동하여 문제를 입력하고 도움말 가져오기를 선택합니다. 여전히 도움이 필요하면 고객 지원팀에 문의 를 선택하여 최상의 지원 옵션으로 연결됩니다. 사전 판매 지원 또는 구매 관련 문제는 판매 지원에 문의하세요 .",
-            "sha256": "4007d22b1ea9e41932d58af84c8720bdfcd23933b59fd64ec02e157c75ef5d18",
-            "checked_on": "2026-10-30"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/introducing-microsoft-365",
-            "title": "Microsoft 365 소개 | Microsoft Support",
-            "excerpt": "Microsoft 365 소개 적용 대상 가정용 Microsoft 365 Microsoft 365 Microsoft 365 Business Basic Microsoft 365 Business Premium Microsoft 365 Business Standard Microsoft 365 Family 비즈니스용 Microsoft 365 Mac용 Microsoft 365 Windows용 Microsoft 365 Microsoft 365 Personal Microsoft 365는 Word, Excel, PowerPoint와 같은 프리미엄 Office 앱을 1TB 또는 2TB의 공유 OneDrive 클라우드 저장소, 고급 보안 등과 결합하여 모든 장치에서 작업을 수행할 수 있도록 도와줍니다. 참고 2026년 10월 8일부터 모든 신규(만료 및 재구매 포함) Microsoft 365 Family 및 Premium 구독자에게는 2TB의 풀링된 OneDrive 클라우드 저장소가 제공되고, Microsoft 365 Pro 구독자에게는 5TB의 풀링된 저장소가 제공됩니다. 2027년 5월 2일부터 모든 기존 Microsoft 365 Family 및 Premium 구독자는 구독 갱신 시 2TB의 풀링된 클라우드 스토리지를 받게 됩니다. 풀링된 저장소는 클라우드 저장소 허용량이 공유 구독의 모든 구성원 간에 공유된다는 것을 의미합니다. 각 사용자의 사서함, 파일 및 폴더는 계속해서 비공개로 유지됩니다. 모든 구독 유형을 최대 10TB까지 확장하여 모든 사용자에게 더 많은 OneDrive 저장소 를 제공할 수 있습니다. Microsoft 365 무료 체험하기",
-            "sha256": "8227c5fb44064e85301d8e5fe9858c1c7b5abd5373299d799a87e9db52fb8222",
-            "checked_on": "2026-10-30"
-          }
-        ]
-      },
-      {
-        "keyword": "무료논문사이트",
-        "reason": "no accessible official source supports topic",
-        "decision_diagnostics": {
-          "official_sources": []
-        },
-        "monthly_search": 960,
-        "organic_provider": "codex_native_search",
-        "organic_query": "무료 논문 사이트",
-        "organic_results": [
-          {
-            "url": "https://dream.momisarang.com/%EB%AC%B4%EB%A3%8C-%EB%85%BC%EB%AC%B8%EA%B2%80%EC%83%89-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%B0%94%EB%A1%9C%EA%B0%80%EA%B8%B0/",
-            "domain": "dream.momisarang.com",
-            "title": "무료 논문검색 사이트 바로가기 - THE 지식",
-            "snippet": "오늘은 ‘무료 논문검색 사이트 바로가기’ 모음과 함께, 논문을 효율적으로 찾는 팁까지 알려드리겠습니다. ... 재학 중인 학교 계정을 통해 교내 무료 열람이 가능합니다."
-          },
-          {
-            "url": "https://go.lazyscheme.com/blog/paper-search-sites/",
-            "domain": "go.lazyscheme.com",
-            "title": "논문 검색 사이트 — 무료 원문 찾는 순서·서비스 선택",
-            "snippet": "# 논문 검색 사이트 — 무료 원문 찾는 순서·서비스 선택 ... 논문 검색 사이트에서 제목·초록을 찾는 것과 논문 전체를 무료로 읽는 것은 다른 단계입니다."
-          },
-          {
-            "url": "https://simt.tistory.com/90",
-            "domain": "simt.tistory.com",
-            "title": "무료 논문검색 사이트 RISS(리스) 이용방법",
-            "snippet": "다양한 논문들을 무료로 조회 열람하고 다운받을 수 있는 논문사이트 'RISS'에 대한 소개와 이용방법에 대해 확인해보시기 바랍니다. ... 보이는 결과창은 학위논문 페이지인데, ~~학위논문은 모두 무료로 원문보기"
-          },
-          {
-            "url": "https://orbi.kr/00075345784/%EB%AC%B4%EB%A3%8C-%EB%85%BC%EB%AC%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%97%86%EB%82%98%EC%9A%94",
-            "domain": "orbi.kr",
-            "title": "무료 논문 사이트 없나요 | 오르비",
-            "snippet": "# 무료 논문 사이트 없나요 ... 대학생이면 학교에서 보통 다 무료로 해줄텐디"
-          },
-          {
-            "url": "https://mindlab091908.tistory.com/564",
-            "domain": "mindlab091908.tistory.com",
-            "title": "무료로 논문 찾는 가장 실속 있는 방법, RISS 포함 TOP4 사이트 정리",
-            "snippet": "## 무료로 논문 찾는 가장 실속 있는 방법, RISS 포함 TOP4 사이트 정리 ... 다행히 최근에는 무료 논문 사이트가 다양하게 운영되고 있어, 졸업논문·리포트·학술 발표 자료를"
-          },
-          {
-            "url": "https://www.moket.kr/verdict/use/%ED%95%99%ED%9A%8C-%EB%B0%9C%ED%91%9C-%EB%85%BC%EB%AC%B8-%ED%88%AC%EA%B3%A0",
-            "domain": "www.moket.kr",
-            "title": "학회 발표·논문 투고 AI 도구 추천 — 무료·한국어 지원 (2026) | 모켓",
-            "snippet": "사이트 ... Allen AI가 운영하는 무료 학술 검색 엔진으로, AI가 논문의 핵심 내용을 분석하고 인용 관계를 추적합니다. ... 한국형 AI 플랫폼으로, 여러 AI 모델 기반"
-          },
-          {
-            "url": "https://wjthrwnd93.tistory.com/77",
-            "domain": "wjthrwnd93.tistory.com",
-            "title": "무료 논문 사이트 추천 리스트 3곳(RSS, KISS, KOSIS)",
-            "snippet": "많은 논문은 유료로 구입이 가능하나, 개중에 무료 논문 사이트도 존재하기 때문에 대학생활의 한줄기 빛을 만나볼 수 있답니다. ... 무료 논문 사이트 KOSIS는 우리나라의 거의 모든"
-          },
-          {
-            "url": "https://cjangela.tistory.com/entry/%EB%AC%B4%EB%A3%8C-%EB%85%BC%EB%AC%B8-%EA%B2%80%EC%83%89-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B5%AC%EA%B8%80-%EC%8A%A4%EC%B9%BC%EB%9D%BCGoogle-Scholar-%EB%8F%84%EB%82%B4-%EB%8F%84%EC%84%9C%EA%B4%80-%ED%95%99%EA%B5%90-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80feat-%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%A6%BD%EB%8C%80",
-            "domain": "cjangela.tistory.com",
-            "title": "무료 논문 검색 사이트: 구글 스칼라(Google Scholar), 도내 도서관, 학교 홈페이지(feat. 서울시립대), 논문 검색 팁",
-            "snippet": "# 무료 논문 검색 사이트: 구글 스칼라(Google Scholar), 도내 도서관, 학교 홈페이지(feat. ... 만약 논문이 유료라면, 논문 제목을 복사하여 기관 도서관 혹은 다른 무료 논문"
-          },
-          {
-            "url": "https://gentlenest.tistory.com/entry/%EB%AC%B4%EB%A3%8C-%EB%85%BC%EB%AC%B8-%EC%97%B4%EB%9E%8C-%EB%B0%8F-%EA%B2%80%EC%83%89-%EC%82%AC%EC%9D%B4%ED%8A%B8",
-            "domain": "gentlenest.tistory.com",
-            "title": "무료 논문 열람 및 검색 사이트",
-            "snippet": "# 무료 논문 열람 및 검색 사이트 ... 이 사이트는 RISS에 직접 회원가입 하지 않아도 네이버, 페이스북, 구글 아이디와 연동하여 간편하게 로그인 할 수 있다."
-          },
-          {
-            "url": "https://orbi.kr/00075345784",
-            "domain": "orbi.kr",
-            "title": "무료 논문 사이트 없나요 | 오르비",
-            "snippet": "# 무료 논문 사이트 없나요 ... 대학생이면 학교에서 보통 다 무료로 해줄텐디"
-          }
-        ],
-        "search_review": {
-          "version": 1,
-          "query": "무료논문사이트",
-          "executed_query": "무료 논문 사이트",
-          "provider": "codex_native_search",
-          "checked_at": "2026-10-29T22:29:08.294663+00:00",
-          "raw_sha256": "bc94a9b660011534d96e05a626b93627091c731584fd2ec6ee263d3b366724aa",
-          "decisions": [
-            {
-              "result_index": 0,
-              "relevant": true,
-              "quote": "오늘은 ‘무료 논문검색 사이트 바로가기’ 모음과 함께, 논문을 효율적으로 찾는 팁까지 알려드리겠습니다. ... 재학 중인 학교 계정을 통해 교내 무료 열람이 가능합니다."
-            },
-            {
-              "result_index": 1,
-              "relevant": true,
-              "quote": "논문 검색 사이트 — 무료 원문 찾는 순서·서비스 선택"
-            },
-            {
-              "result_index": 2,
-              "relevant": true,
-              "quote": "다양한 논문들을 무료로 조회 열람하고 다운받을 수 있는 논문사이트 'RISS'에 대한 소개와 이용방법에 대해 확인해보시기 바랍니다. ... 보이는 결과창은 학위논문 페이지인데, ~~학위논문은 모두 무료로 원문보기"
-            },
-            {
-              "result_index": 3,
-              "relevant": true,
-              "quote": "# 무료 논문 사이트 없나요 ... 대학생이면 학교에서 보통 다 무료로 해줄텐디"
-            },
-            {
-              "result_index": 4,
-              "relevant": true,
-              "quote": "무료로 논문 찾는 가장 실속 있는 방법, RISS 포함 TOP4 사이트 정리"
-            },
-            {
-              "result_index": 5,
-              "relevant": true,
-              "quote": "사이트 ... Allen AI가 운영하는 무료 학술 검색 엔진으로, AI가 논문의 핵심 내용을 분석하고 인용 관계를 추적합니다. ... 한국형 AI 플랫폼으로, 여러 AI 모델 기반"
-            },
-            {
-              "result_index": 6,
-              "relevant": true,
-              "quote": "무료 논문 사이트 추천 리스트 3곳(RSS, KISS, KOSIS)"
-            },
-            {
-              "result_index": 7,
-              "relevant": true,
-              "quote": "무료 논문 검색 사이트: 구글 스칼라(Google Scholar), 도내 도서관, 학교 홈페이지(feat. 서울시립대), 논문 검색 팁"
-            },
-            {
-              "result_index": 8,
-              "relevant": true,
-              "quote": "무료 논문 열람 및 검색 사이트"
-            },
-            {
-              "result_index": 9,
-              "relevant": true,
-              "quote": "# 무료 논문 사이트 없나요 ... 대학생이면 학교에서 보통 다 무료로 해줄텐디"
-            }
-          ]
-        },
-        "evidence_mode": "serp",
-        "verified_sources": []
-      },
-      {
-        "keyword": "엑셀단축키",
-        "reason": "search quality insufficient",
-        "hold_reasons": [
+          "insufficient_relevant_sites",
+          "low_search_relevance",
           "concentrated_search_results"
         ],
-        "monthly_search": 3080,
+        "monthly_search": 1200,
         "organic_provider": "codex_native_search",
-        "organic_query": "엑셀단축키",
+        "organic_query": "온라인엑셀",
         "organic_results": [
           {
-            "url": "https://coukey.co.kr/main/goods_view.php?num=5172",
-            "domain": "coukey.co.kr",
-            "title": "엑셀단축키 (A4사이즈 인쇄용_잉크절약형_흑백) 다운로드, 무제한 이용가능, 맞춤제작서비스제공, 중소기업용 쉬운 관리프로그램,칼퇴근",
-            "snippet": "Image: 엑셀단축키 (A4사이즈 인쇄용_잉크절약형_흑백) 썸네일 이미지 ... Image: 엑셀단축키 (A4사이즈 인쇄용_잉크절약형_흑백)를 즐겨찾기 한 횟수는 0 Image: 0입니다. ... 이용 기간에 따른 추가 비용이 발생하지 않아"
+            "url": "https://orijin1995.tistory.com/119?category=1255763",
+            "domain": "orijin1995.tistory.com",
+            "title": "온라인엑셀 추천 TOP 3 (2026) — 무료로 어디서든 스프레드시트 작업",
+            "snippet": "2026년 현재, 쓸 만한 온라인엑셀 서비스가 여러 개 있지만 막상 비교하려면 은근 시간이 걸립니다. ... 프로그램 설치가 필요 없고, 인터넷만 연결되면 PC든 태블릿이든 어디서든 작업할"
           },
           {
-            "url": "https://www.w.coukey.co.kr/main/goods_view.php?num=5140",
-            "domain": "www.w.coukey.co.kr",
-            "title": "칼퇴근을 돕는 엑셀단축키 35선 다운로드, 무제한 이용가능, 맞춤제작서비스제공, 중소기업용 쉬운 관리프로그램,칼퇴근",
-            "snippet": "Image: 칼퇴근을 돕는 엑셀단축키 35선 썸네일 이미지 ... 엑셀의 모든 단축키를 외울 필요는 없지만, 쿠키가 추천하는 필수 단축키 정도는 알고 가시면 업무시간 단축에 아주 유용하실꺼에요~"
+            "url": "https://kr.investing.com/equities/on-semiconductor",
+            "domain": "kr.investing.com",
+            "title": "ON Semiconductor Corporation 오늘의 주가 | ON 실시간 티커 - Investing.com",
+            "snippet": "ON Semiconductor Corporation 주가가 실시간인 경우 이 페이지에는 NASDAQ ON 증권 거래소 데이터가 표시됩니다. ... 추가 페이지를 방문하여 과거 데이터, 차트, 최신 뉴스, 분석을 보거나"
           },
           {
-            "url": "https://www.gmarket.co.kr/n/search?itemno=4070837165&jaehuid=200018358&keyword=%EC%97%91%EC%85%80%EB%8B%A8%EC%B6%95%ED%82%A4",
-            "domain": "www.gmarket.co.kr",
-            "title": "G마켓 - 엑셀단축키 검색결과",
-            "snippet": "갓샵상품명 엑셀 단축키 마우스패드 사무실필수템 신입사원 감동 취직 취업 선물 Excel 액셀 잘하는법 ... 상품명 엑셀 단축키 마우스패드 사무실필수템 신입사원 감동 취직 취업 선물 Excel"
+            "url": "https://kr.investing.com/equities/orient-cement-ltd",
+            "domain": "kr.investing.com",
+            "title": "Orient Cement Ltd 오늘의 주가 | ORCE 실시간 티커 - Investing.com",
+            "snippet": "현금흐름 할인법, 동종업계 밸류에이션 멀티플, 배당할인모형 등 가치평가 모형을 기반으로 산출한 주식의 실제 가격 추정치입니다. ... 밸류에이션은 강력한 잉여현금흐름 수익률을 의미합니다. ... 1분잠금 해제 5분잠금"
           },
           {
-            "url": "https://www.w.coukey.co.kr/00search/010000L_webzine.php?search_txt=%EC%82%AC%EC%9D%B4%EC%A6%88",
-            "domain": "www.w.coukey.co.kr",
-            "title": "사이즈 다운로드 맞춤엑셀 쿠키",
-            "snippet": "* 엑셀단축키 (A4사이즈 인쇄용) 셀삭제, 셀삽입, 셀서식, 행숨기기 등 엑셀에서 가장 많이 사용되는 단축키입니다."
+            "url": "https://www.inven.co.kr/board/wow/17/40813",
+            "domain": "www.inven.co.kr",
+            "title": "월드 오브 워크래프트 인벤 : 한밤 시즌1 드랍템 목록 - 온라인엑셀 링크 - 와우 인벤 확장팩 팁과노하우 게시판",
+            "snippet": "# 한밤 시즌1 드랍템 목록 - 온라인엑셀 링크 ... 목록 | 댓글(1) 3 0 [Button: 공유] 스크랩 신고하기 스팸신고 추천 확인 [Input] [Input] [Input] [Input]"
           },
           {
-            "url": "https://coukey.co.kr/00search/010000L_webzine.php?search_txt=%EC%82%AC%EC%9D%B4%EC%A6%88",
-            "domain": "coukey.co.kr",
-            "title": "사이즈 다운로드 맞춤엑셀 쿠키",
-            "snippet": "* 엑셀단축키 (A4사이즈 인쇄용) 셀삭제, 셀삽입, 셀서식, 행숨기기 등 엑셀에서 가장 많이 사용되는 단축키입니다."
+            "url": "https://www.etnews.com/20200518000327",
+            "domain": "www.etnews.com",
+            "title": "LG히다찌, 日 대기업에 비아이매트릭스 온라인엑셀 구축 - 전자신문",
+            "snippet": "LG히다찌가 일본 대기업에 비아이매트릭스 온라인엑셀 솔루션을 구축했다. ... 이혁근 LG히다찌 솔루션사업본부장은 “BRMS, 온라인엑셀 등 일본 수출 실적과 경험을 바탕으로 더욱 다양한 판매 경로를 개발할 것”이라면서"
           },
           {
-            "url": "https://www.gmarket.co.kr/n/search?keyword=%EC%97%91%EC%85%80%EB%8B%A8%EC%B6%95%ED%82%A4%EB%A7%88%EC%9A%B0%EC%8A%A4%ED%8C%A8%EB%93%9C",
-            "domain": "www.gmarket.co.kr",
-            "title": "G마켓 - 엑셀단축키마우스패드 검색결과",
-            "snippet": "애니존상품명 오피스 워드 한글 엑셀 단축키 장패드 데스크 사무용 사무실 장패드 마우스패드 ... 상품명 LOHACKASY 방수 엑셀 치트 시트 책상 패드 대형 XL 게이밍 마우스패드|오피스"
+            "url": "https://www.orionworld.com/stock/now/74",
+            "domain": "www.orionworld.com",
+            "title": "오리온",
+            "snippet": "# 주가정보 ... ### 내실있는 성장으로 새로운 도약을 준비하는 오리온 ... 오리온홀딩스 ... 상한가 | 144,900"
           },
           {
-            "url": "https://www.auction.co.kr/n/search?keyword=%EB%8B%A8%EC%B6%95%ED%82%A4+%EB%A7%88%EC%9A%B0%EC%8A%A4%ED%8C%A8%EB%93%9C",
-            "domain": "www.auction.co.kr",
-            "title": "옥션 - 단축키 마우스패드 : 모바일 쇼핑은 옥션",
-            "snippet": "해외직구상품명 온열마우스패드 EXCO 사무실 단축키 마우스 패드 대형 확장 키보드 엑셀 워드 파워포인트 게이밍 데스크 매 ... 상품명 마우스 게이밍 장패드 단체 사무실 매트 패드"
+            "url": "https://www.uc.ac.kr/attach/CONTENTS/PDF/ContentMgr/PDFViewer/2025/11/75z1mbNFJlKmV4se.PDF",
+            "domain": "www.uc.ac.kr",
+            "title": "레이아웃 1",
+            "snippet": "현대중공업∙현대중공업MOS·현대미포조선∙현대글로벌서비스98 ... 함O곤 최O영 허O훈 조O빈 이O영 이O석 이O철 문O오 안O혁 정O식 권O엽 ... LG화학·LG생활건강13 ... 한국석유공사∙한국도로공사∙한국동서발전∙울산시설공단5 ... 금호석유화학∙애경유화∙이수화학∙동서석유화학∙태광산업∙한국바스프∙쿠라레 ... 롯데건설∙롯데쇼핑∙롯데호텔7 ... 고"
           },
           {
-            "url": "https://2days.kr/17/03/16/12903/english/",
-            "domain": "2days.kr",
-            "title": "꼭 필요한 기초적인 '엑셀(EXCEL)단축키' 모음..",
-            "snippet": "# 꼭 필요한 기초적인 ‘엑셀(EXCEL)단축키’ 모음.. ... [엑셀단축키] 행/열 넣기"
+            "url": "https://thevc.kr/orionenc",
+            "domain": "thevc.kr",
+            "title": "오리온이엔씨(IRIS) - 기업정보 | 투자, 매출, 기업가치 - THE VC",
+            "snippet": "홈페이지 ... 환경/에너지∙원자력에너지 분야의 IRIS 가 주요 제품/서비스 이며, 방사성 폐기물 처리 설비 개발 기업 입니다. ... 국민연금(2026-10-23 갱신) ... [Input] | 현재 Image: 오리온이엔씨의"
           },
           {
-            "url": "https://fire-world.tistory.com/3",
-            "domain": "fire-world.tistory.com",
-            "title": "알아두면 좋은 엑셀단축키",
-            "snippet": "## 알아두면 좋은 엑셀단축키 비단장사 왕준호 2009. ... 주의: Windows 95와 Windows98에서는 이 단축키가 한글 입력 시스템 명령어로 사용되므로 PowerPoint의 단축키로 사용되지 않습니다. ... 1"
+            "url": "https://www.munyak.co.kr/product/detail/201906446",
+            "domain": "www.munyak.co.kr",
+            "title": "오나렌정 의약품 정보 | 먼약",
+            "snippet": "Image: 오나렌정(애엽95%에탄올연조엑스(20→1)) - 주식회사다나젠 - 성분 애엽95%에탄올 연조엑스(20→1) ... 애엽95%에탄올연조엑스로서 1회 60 mg을 1일 3회 경구투여한다."
           },
           {
-            "url": "https://www.coupang.com/vp/products/8416511335",
-            "domain": "www.coupang.com",
-            "title": "엑셀단축키 노트북 사무용 마우스 패드 마우스패드 PC - 손목 받침대 | 쿠팡",
-            "snippet": "# 엑셀단축키 노트북 사무용 마우스 패드 마우스패드 PC ... 내일(금) 5/29 도착 예정 (판매자배송) ... 이 판매자가 제공하는 전체적인 서비스에 대한 고객의 만족도입니다. (배송, 포장,"
+            "url": "https://www.orionworld.com/kr/",
+            "domain": "www.orionworld.com",
+            "title": "오리온",
+            "snippet": "진단키트 사업을 시작으로 백신, 신약 발굴 및 개발까지 제약/바이오 Platform 기업을 추구합니다. ... * “스테디셀러의 힙(Hip)한 변신… MZ세대가 반했다!” ... * 산/지/직/송 햇감자 포카칩, 우리집까지"
           }
         ],
         "search_review": {
           "version": 1,
-          "query": "엑셀단축키",
-          "executed_query": "엑셀단축키",
+          "query": "온라인엑셀",
+          "executed_query": "온라인엑셀",
           "provider": "codex_native_search",
-          "checked_at": "2026-10-29T22:29:08.294663+00:00",
-          "raw_sha256": "4e26f4cc795fd6442eae44cac8293e545b2f4e7fde1b6105c949ae889a608dcd",
+          "checked_at": "2026-10-30T00:01:23.480227+00:00",
+          "raw_sha256": "0986daba0f0aef9d90663de70ae47ff0bdc2cfaa9431a438d17271f34663706b",
           "decisions": [
             {
               "result_index": 0,
               "relevant": true,
-              "quote": "엑셀단축키 (A4사이즈 인쇄용_잉크절약형_흑백) 다운로드, 무제한 이용가능, 맞춤제작서비스제공, 중소기업용 쉬운 관리프로그램,칼퇴근"
+              "quote": "온라인엑셀 추천 TOP 3 (2026) — 무료로 어디서든 스프레드시트 작업"
             },
             {
               "result_index": 1,
-              "relevant": true,
-              "quote": "Image: 칼퇴근을 돕는 엑셀단축키 35선 썸네일 이미지 ... 엑셀의 모든 단축키를 외울 필요는 없지만, 쿠키가 추천하는 필수 단축키 정도는 알고 가시면 업무시간 단축에 아주 유용하실꺼에요~"
+              "relevant": false,
+              "quote": "ON Semiconductor Corporation 오늘의 주가 | ON 실시간 티커 - Investing.com"
             },
             {
               "result_index": 2,
               "relevant": false,
-              "quote": "갓샵상품명 엑셀 단축키 마우스패드 사무실필수템 신입사원 감동 취직 취업 선물 Excel 액셀 잘하는법 ... 상품명 엑셀 단축키 마우스패드 사무실필수템 신입사원 감동 취직 취업 선물 Excel"
+              "quote": "Orient Cement Ltd 오늘의 주가 | ORCE 실시간 티커 - Investing.com"
             },
             {
               "result_index": 3,
-              "relevant": true,
-              "quote": "* 엑셀단축키 (A4사이즈 인쇄용) 셀삭제, 셀삽입, 셀서식, 행숨기기 등 엑셀에서 가장 많이 사용되는 단축키입니다."
+              "relevant": false,
+              "quote": "월드 오브 워크래프트 인벤 : 한밤 시즌1 드랍템 목록 - 온라인엑셀 링크 - 와우 인벤 확장팩 팁과노하우 게시판"
             },
             {
               "result_index": 4,
-              "relevant": true,
-              "quote": "* 엑셀단축키 (A4사이즈 인쇄용) 셀삭제, 셀삽입, 셀서식, 행숨기기 등 엑셀에서 가장 많이 사용되는 단축키입니다."
+              "relevant": false,
+              "quote": "LG히다찌가 일본 대기업에 비아이매트릭스 온라인엑셀 솔루션을 구축했다. ... 이혁근 LG히다찌 솔루션사업본부장은 “BRMS, 온라인엑셀 등 일본 수출 실적과 경험을 바탕으로 더욱 다양한 판매 경로를 개발할 것”이라면서"
             },
             {
               "result_index": 5,
               "relevant": false,
-              "quote": "애니존상품명 오피스 워드 한글 엑셀 단축키 장패드 데스크 사무용 사무실 장패드 마우스패드 ... 상품명 LOHACKASY 방수 엑셀 치트 시트 책상 패드 대형 XL 게이밍 마우스패드|오피스"
+              "quote": "# 주가정보 ... ### 내실있는 성장으로 새로운 도약을 준비하는 오리온 ... 오리온홀딩스 ... 상한가 | 144,900"
             },
             {
               "result_index": 6,
               "relevant": false,
-              "quote": "해외직구상품명 온열마우스패드 EXCO 사무실 단축키 마우스 패드 대형 확장 키보드 엑셀 워드 파워포인트 게이밍 데스크 매 ... 상품명 마우스 게이밍 장패드 단체 사무실 매트 패드"
+              "quote": "현대중공업∙현대중공업MOS·현대미포조선∙현대글로벌서비스98 ... 함O곤 최O영 허O훈 조O빈 이O영 이O석 이O철 문O오 안O혁 정O식 권O엽 ... LG화학·LG생활건강13 ... 한국석유공사∙한국도로공사∙한국동서발전∙울산시설공단5 ... 금호석유화학∙애경유화∙이수화학∙동서석유화학∙태광산업∙한국바스프∙쿠라레 ... 롯데건설∙롯데쇼핑∙롯데호텔7 ... 고"
             },
             {
               "result_index": 7,
-              "relevant": true,
-              "quote": "# 꼭 필요한 기초적인 ‘엑셀(EXCEL)단축키’ 모음.. ... [엑셀단축키] 행/열 넣기"
+              "relevant": false,
+              "quote": "홈페이지 ... 환경/에너지∙원자력에너지 분야의 IRIS 가 주요 제품/서비스 이며, 방사성 폐기물 처리 설비 개발 기업 입니다. ... 국민연금(2026-10-23 갱신) ... [Input] | 현재 Image: 오리온이엔씨의"
             },
             {
               "result_index": 8,
-              "relevant": true,
-              "quote": "알아두면 좋은 엑셀단축키"
+              "relevant": false,
+              "quote": "오나렌정 의약품 정보 | 먼약"
             },
             {
               "result_index": 9,
               "relevant": false,
-              "quote": "엑셀단축키 노트북 사무용 마우스 패드 마우스패드 PC - 손목 받침대 | 쿠팡"
+              "quote": "진단키트 사업을 시작으로 백신, 신약 발굴 및 개발까지 제약/바이오 Platform 기업을 추구합니다. ... * “스테디셀러의 힙(Hip)한 변신… MZ세대가 반했다!” ... * 산/지/직/송 햇감자 포카칩, 우리집까지"
+            }
+          ]
+        }
+      },
+      {
+        "keyword": "어도비결제취소",
+        "reason": "search quality insufficient",
+        "hold_reasons": [
+          "insufficient_relevant_results"
+        ],
+        "monthly_search": 6380,
+        "organic_provider": "codex_native_search",
+        "organic_query": "어도비결제취소",
+        "organic_results": [
+          {
+            "url": "https://notavoid.tistory.com/503",
+            "domain": "notavoid.tistory.com",
+            "title": "어도비 결제 취소 방법 총정리: 환불, 자동결제 해지, 주의사항까지",
+            "snippet": "## 어도비결제취소 환불 조건 상세 분석 ... ## 어도비결제취소 자동결제 해지 방법"
+          },
+          {
+            "url": "https://www.gardenbom.com/category/blog-tips/photoshop/",
+            "domain": "www.gardenbom.com",
+            "title": "Photoshop 기준과 확인 흐름 - 봄블로그 :)♥",
+            "snippet": "어도비 무료체험 후 결제 취소하는 법은 PC·모바일 모두 몇 단계만 거치면 어렵지 않게 처리할 수 있습니다. 실제로 최근 이용자들의 문의가 급증하며, 공식 자료에 따르면 해지"
+          },
+          {
+            "url": "https://empathlog.tistory.com/entry/%EC%96%B4%EB%8F%84%EB%B9%84%EA%B2%B0%EC%A0%9C%EC%B7%A8%EC%86%8C-%EC%89%BD%EA%B2%8C-%ED%95%98%EB%8A%94%EB%B2%95-Creative-Cloud-%EA%B5%AC%EB%8F%85%ED%95%B4%EC%A7%80-%EA%B0%80%EC%9D%B4%EB%93%9C-%ED%99%98%EB%B6%88%EC%A0%95%EC%B1%85-%EC%99%84%EB%B2%BD%EC%9D%B4%ED%95%B4",
+            "domain": "empathlog.tistory.com",
+            "title": "어도비결제취소 쉽게 하는법 | Creative Cloud 구독해지 가이드 | 환불정책 완벽이해",
+            "snippet": "결제 정보 - 결제 수단의 업데이트가 가능합니다. ... 어도비 Creative Cloud 구독 해지를 원하신다면 아래의 절차를 따라 진행해주시면 됩니다."
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "어도비결제취소",
+          "executed_query": "어도비결제취소",
+          "provider": "codex_native_search",
+          "checked_at": "2026-10-30T00:01:23.480227+00:00",
+          "raw_sha256": "4efa1d32576b78980fb1ea78515ebba8fa018b5783093d8578aa436a82313444",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "어도비 결제 취소 방법 총정리: 환불, 자동결제 해지, 주의사항까지"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "어도비 무료체험 후 결제 취소하는 법은 PC·모바일 모두 몇 단계만 거치면 어렵지 않게 처리할 수 있습니다. 실제로 최근 이용자들의 문의가 급증하며, 공식 자료에 따르면 해지"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "어도비결제취소 쉽게 하는법 | Creative Cloud 구독해지 가이드 | 환불정책 완벽이해"
             }
           ]
         }
@@ -7664,7 +7289,6 @@
       "부터달라지는저소득층구분모집",
       "산업기사시험일정",
       "세금계산서발행",
-      "신규택지104만호",
       "애스크플레이askplay",
       "엑셀매크로",
       "엑셀조건부서식",
@@ -7695,7 +7319,6 @@
       "주요다제내성균감염증특성분석및대응전략개발",
       "중증장애인체험형청년인턴단시간일4시간채용공고",
       "지니4genie4",
-      "집배원이전달하는그냥드림",
       "청소년상담사자격증",
       "청평고등학교훈련성과공유간담회",
       "코세척방법",
@@ -7714,24 +7337,34 @@
       "JIRA",
       "MSOFFICE365",
       "compactformlayout",
+      "계획표",
       "구글스프레드시트사용법",
       "노션포트폴리오",
+      "마이크로오피스365",
+      "무료논문사이트",
+      "서류정리",
       "액세스",
+      "엑셀단축키",
       "엑셀피벗테이블"
     ],
-    "research_stop_reason": "round_limit",
+    "research_stop_reason": "time_budget",
     "retry_keywords": [
-      "엑셀단축키",
-      "불렛저널"
+      "불렛저널",
+      "어도비결제취소"
     ],
     "discovery_rejections": [],
     "discovery_replenishment": [],
     "deferred_measured_keywords": [
       "JIRA",
       "MSOFFICE365",
+      "계획표",
       "구글스프레드시트사용법",
       "노션포트폴리오",
+      "마이크로오피스365",
+      "무료논문사이트",
+      "서류정리",
       "액세스",
+      "엑셀단축키",
       "엑셀피벗테이블"
     ],
     "selection_scope": "evergreen_fallback_after_no_latest_issue",
@@ -7761,7 +7394,6 @@
           "심리상담센터",
           "삼성노트북포맷",
           "회계사",
-          "서류정리",
           "김승호회장",
           "고교학점제",
           "우울증초기증상",
@@ -7798,17 +7430,12 @@
           "FTP",
           "컴활시험",
           "윈도우10다운로드",
-          "스몰웨딩비용"
+          "스몰웨딩비용",
+          "윈도우11프로"
         ],
-        "proposals": [
-          {
-            "keyword": "서류정리",
-            "reason": "네이버 월 510회 실측 수요가 있다. 서류 분류·보관·검색 방법의 정보 수요와 공식 지침으로 답할 범위를 조사할 가치가 있다.",
-            "search_query": "서류 정리"
-          }
-        ],
+        "proposals": [],
         "measured_fallback": false,
-        "no_eligible_proposal": false,
+        "no_eligible_proposal": true,
         "skipped": [
           {
             "keyword": "컴퓨터활용능력2급시험일정",
@@ -8104,13 +7731,18 @@
             "keyword": "스몰웨딩비용",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "윈도우11프로",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
           }
-        ]
+        ],
+        "research_fallback": []
       },
       {
         "round": 2,
         "offered_keywords": [
-          "윈도우11프로",
           "컴활1급필기독학",
           "컴활필기",
           "컴퓨터활용능력2급필기",
@@ -8124,13 +7756,11 @@
           "윈도우7",
           "윈도우11홈",
           "윈도우키",
-          "계획표",
           "컴포넌트",
           "코딩프로그램",
           "수원역웨딩홀",
           "서울예식장",
           "엑셀브이룩업",
-          "마이크로오피스365",
           "컴활1급독학",
           "온라인엑셀",
           "공여사들",
@@ -8155,7 +7785,6 @@
           "한글워드",
           "예식장비용",
           "폐백음식",
-          "무료논문사이트",
           "MICROSOFTOFFICE",
           "마이크로소프트오피스구매",
           "엑셀가격",
@@ -8169,17 +7798,16 @@
           "FASTCAMPUS",
           "WINDOW11",
           "경제적자유",
-          "일잘러"
+          "일잘러",
+          "파워포인트구매",
+          "MSWORD",
+          "빅사이즈드레스",
+          "컴퓨터활용능력1급필기"
         ],
         "proposals": [],
         "measured_fallback": true,
         "no_eligible_proposal": true,
         "skipped": [
-          {
-            "keyword": "윈도우11프로",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "컴활1급필기독학",
             "reason_code": "category_mismatch",
@@ -8246,18 +7874,13 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "계획표",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "컴포넌트",
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
             "keyword": "코딩프로그램",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8276,13 +7899,8 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "마이크로오피스365",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "컴활1급독학",
-            "reason_code": "duplicate_intent",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8312,7 +7930,7 @@
           },
           {
             "keyword": "파일다운로드",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8377,7 +7995,7 @@
           },
           {
             "keyword": "엑셀정품",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8398,11 +8016,6 @@
           {
             "keyword": "폐백음식",
             "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "무료논문사이트",
-            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8442,7 +8055,7 @@
           },
           {
             "keyword": "가계부추천",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8474,34 +8087,50 @@
             "keyword": "일잘러",
             "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "파워포인트구매",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "MSWORD",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "빅사이즈드레스",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "컴퓨터활용능력1급필기",
+            "reason_code": "category_mismatch",
+            "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "계획표",
-            "search_query": "계획표",
+            "keyword": "코딩프로그램",
+            "search_query": "코딩프로그램",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           },
           {
-            "keyword": "마이크로오피스365",
-            "search_query": "마이크로오피스365",
+            "keyword": "온라인엑셀",
+            "search_query": "온라인엑셀",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "insufficient_specificity"
           }
         ],
         "research_fallback_attempted": [
-          "계획표",
-          "마이크로오피스365"
+          "코딩프로그램",
+          "온라인엑셀"
         ]
       },
       {
         "round": 3,
         "offered_keywords": [
-          "파워포인트구매",
-          "MSWORD",
-          "빅사이즈드레스",
-          "컴퓨터활용능력1급필기",
           "SHAREPOINT",
           "오피스2019",
           "영상통화",
@@ -8542,53 +8171,28 @@
           "설문조사이벤트",
           "윈도우구매",
           "엑셀정품구매",
-          "엑셀단축키",
           "불렛저널",
-          "온라인엑셀",
+          "어도비결제취소",
           "공여사들",
-          "파일다운로드",
           "스테이블디퓨전",
           "WEBHARD",
           "MS오피스2021",
           "엑셀정품",
           "MS워드",
           "한글워드",
-          "무료논문사이트",
           "MICROSOFTOFFICE",
           "MSTEAMS",
           "서베이몽키",
-          "GOOGLESHEET"
+          "GOOGLESHEET",
+          "가계부추천",
+          "엑셀프로그램",
+          "FASTCAMPUS",
+          "MSWORD"
         ],
-        "proposals": [
-          {
-            "keyword": "무료논문사이트",
-            "reason": "네이버 월 960회 수요가 있다. 무료 원문 열람 범위와 기관 로그인 필요 여부를 사이트별 공식 안내로 조사할 만하다.",
-            "search_query": "무료 논문 사이트"
-          }
-        ],
-        "measured_fallback": false,
-        "no_eligible_proposal": false,
+        "proposals": [],
+        "measured_fallback": true,
+        "no_eligible_proposal": true,
         "skipped": [
-          {
-            "keyword": "파워포인트구매",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MSWORD",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "빅사이즈드레스",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "컴퓨터활용능력1급필기",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
           {
             "keyword": "SHAREPOINT",
             "reason_code": "insufficient_specificity",
@@ -8621,7 +8225,7 @@
           },
           {
             "keyword": "컴활1급실기독학",
-            "reason_code": "category_mismatch",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8766,7 +8370,7 @@
           },
           {
             "keyword": "마이크로소프트구매",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8790,28 +8394,18 @@
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "엑셀단축키",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "불렛저널",
+            "reason_code": "insufficient_specificity",
+            "kind": "model_shortlist_opinion"
+          },
+          {
+            "keyword": "어도비결제취소",
             "reason_code": "not_reported",
             "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "온라인엑셀",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
             "keyword": "공여사들",
             "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "파일다운로드",
-            "reason_code": "scope_too_broad",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8863,102 +8457,10 @@
             "keyword": "GOOGLESHEET",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
-          }
-        ]
-      },
-      {
-        "round": 4,
-        "offered_keywords": [
-          "온라인엑셀",
-          "공여사들",
-          "스테이블디퓨전",
-          "WEBHARD",
-          "MS오피스2021",
-          "엑셀정품",
-          "MS워드",
-          "한글워드",
-          "MICROSOFTOFFICE",
-          "MSTEAMS",
-          "서베이몽키",
-          "GOOGLESHEET",
-          "엑셀프로그램",
-          "FASTCAMPUS",
-          "MSWORD",
-          "SHAREPOINT",
-          "오피스2019",
-          "한글2018",
-          "비쥬얼스튜디오",
-          "한글엑셀",
-          "ADOBESTOCK",
-          "파워BI",
-          "엑셀강의",
-          "CS2",
-          "마이크로소프트구매",
-          "엑셀단축키",
-          "불렛저널"
-        ],
-        "proposals": [],
-        "measured_fallback": true,
-        "no_eligible_proposal": true,
-        "skipped": [
-          {
-            "keyword": "온라인엑셀",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
           },
           {
-            "keyword": "공여사들",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "스테이블디퓨전",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "WEBHARD",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MS오피스2021",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "엑셀정품",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MS워드",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한글워드",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MICROSOFTOFFICE",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "MSTEAMS",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "서베이몽키",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "GOOGLESHEET",
-            "reason_code": "insufficient_specificity",
+            "keyword": "가계부추천",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -8975,121 +8477,68 @@
             "keyword": "MSWORD",
             "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "SHAREPOINT",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "오피스2019",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한글2018",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "비쥬얼스튜디오",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "한글엑셀",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "ADOBESTOCK",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "파워BI",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "엑셀강의",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "CS2",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "마이크로소프트구매",
-            "reason_code": "purchase_intent_unclear",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "엑셀단축키",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "불렛저널",
-            "reason_code": "not_reported",
-            "kind": "model_shortlist_opinion"
           }
         ],
         "research_fallback": [
           {
-            "keyword": "엑셀단축키",
-            "search_query": "엑셀단축키",
+            "keyword": "어도비결제취소",
+            "search_query": "어도비결제취소",
             "reason": "bounded_research_of_shortlist_uncertainty",
             "shortlist_reason_code": "not_reported"
           }
         ],
         "research_fallback_attempted": [
-          "엑셀단축키"
+          "어도비결제취소"
         ]
       }
     ],
     "ranked_candidates": [],
     "candidate_decisions": [
       {
-        "keyword": "서류정리",
+        "keyword": "코딩프로그램",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 510,
-        "organic_query": "서류 정리"
+        "monthly_search": 1280,
+        "organic_query": "코딩프로그램"
       },
       {
-        "keyword": "계획표",
+        "keyword": "온라인엑셀",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 1310,
-        "organic_query": "계획표"
+        "monthly_search": 1200,
+        "organic_query": "온라인엑셀"
       },
       {
-        "keyword": "마이크로오피스365",
-        "status": "rejected",
-        "reason": "search intent or official evidence does not support an article",
-        "monthly_search": 1230,
-        "organic_query": "마이크로오피스365"
-      },
-      {
-        "keyword": "무료논문사이트",
-        "status": "rejected",
-        "reason": "no accessible official source supports topic",
-        "monthly_search": 960,
-        "organic_query": "무료 논문 사이트"
-      },
-      {
-        "keyword": "엑셀단축키",
+        "keyword": "어도비결제취소",
         "status": "rejected",
         "reason": "search quality insufficient",
-        "monthly_search": 3080,
-        "organic_query": "엑셀단축키"
+        "monthly_search": 6380,
+        "organic_query": "어도비결제취소"
       }
     ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "어도비결제취소",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-30T00:01:23.480227+00:00",
+        "retry_after": "2026-10-31T00:01:23.480227+00:00",
+        "attempts": 2
+      },
+      {
+        "keyword": "코딩프로그램",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-30T00:01:23.480227+00:00",
+        "retry_after": "2026-10-31T00:01:23.480227+00:00",
+        "attempts": 1
+      },
+      {
+        "keyword": "온라인엑셀",
+        "reason_code": "search_quality",
+        "failed_at": "2026-10-30T00:01:23.480227+00:00",
+        "retry_after": "2026-10-31T00:01:23.480227+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "엑셀단축키",
         "reason_code": "search_quality",
@@ -10022,13 +9471,6 @@
         "attempts": 1
       },
       {
-        "keyword": "어도비결제취소",
-        "reason_code": "temporary_failure",
-        "failed_at": "2026-10-02T12:46:13.654348+00:00",
-        "retry_after": "2026-10-02T18:46:13.654348+00:00",
-        "attempts": 1
-      },
-      {
         "keyword": "엑셀사용법",
         "reason_code": "temporary_failure",
         "failed_at": "2026-09-30T01:28:18.921674+00:00",
@@ -10045,126 +9487,9 @@
     ],
     "latest_issue_attempt": {
       "research_stop_reason": "latest_listing_exhausted",
-      "evaluated_candidates": 1,
-      "seeds": [
-        "Gemini app"
-      ],
-      "held": [
-        {
-          "keyword": "Gemini app",
-          "category": "생산성",
-          "topic": "Gemini app 10월 29일 발표: 채팅에서 파일 생성·미리보기·편집 지원",
-          "intent": "10월 29일 발표된 Gemini app 파일 편집은 누가 언제부터 쓰며, 웹·모바일 지원 범위는 어떻게 다른가?",
-          "gap": "파일 형식별 웹·모바일 지원표와 내보내기 방식, 이용 대상·즉시 제공 여부를 확인하는 체크리스트를 제공한다.",
-          "source_url": "https://workspaceupdates.googleblog.com/2026/10/create-preview-and-edit-files-directly-in-the-Gemini-app.html",
-          "verified_sources": [
-            {
-              "url": "https://workspaceupdates.googleblog.com/2026/10/create-preview-and-edit-files-directly-in-the-Gemini-app.html",
-              "original_url": "https://workspaceupdates.googleblog.com/2026/10/create-preview-and-edit-files-directly-in-the-Gemini-app.html",
-              "title": "Google Workspace Updates: Create, preview, and edit files directly in the Gemini app",
-              "checked_on": "2026-10-30",
-              "publication_dates": [],
-              "sha256": "d303bea46e07cd96d9bf789587841b7873dd20b661dfcefee55b0087aad5415b",
-              "excerpt": "arrow_back Back October 29, 2026 Create, preview, and edit files directly in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing new ways to create and refine files and code in the Gemini app. You can now generate, preview, and edit files right within your Gemini app chat—expand to full screen to type edits directly, highlight text to ask questions, or have Gemini refine them. PDF preview and editing is supported on both the web and mobile, while all other formats (documents, spreadsheets, slide decks, Markdown files, TXT files, and code) are supported on the web only. Here are just some of the new things you can do: Generate and refine slide decks: Create presentation outlines or slide content, preview the layout in chat, and edit directly or ask Gemini to adjust the tone and structure before opening in Google Slides, or downloading as a PPTX or PDF. Build and export Google Sheets: Generate structured trackers, tables, and data models from a prompt, preview them in Gemini, and open them directly in Google Sheets. Edit documents and PDFs: Quickly draft PDFs, Google Docs, LaTeX, Markdown, or TXT files, and make manual or prompted edits inline on web or in a full-screen view—plus you can upload all of them to Drive. These capabilities are now available to all users in all languages where the Gemini app is available. Getting started Admins: There is no admin control for this feature. Visit the Help Center to learn more about turning the Gemini app on or off . End users: Users of all ages who have access to the Gemini app can generate files. To get started, ask Gemini to generate your desired file type. Visit the Help Center to learn more . Rollout pace Rapid Release and Scheduled Release domains: Available now Availability Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources News from Google: You can now preview and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini Google Workspace Updates Blog: Move from conversation to creation with file generation in Gemini Gemini Apps Help: Use Gemini Apps"
-            }
-          ],
-          "intent_results": [
-            "https://workspaceupdates.googleblog.com/2026/10/create-preview-and-edit-files-directly-in-the-Gemini-app.html"
-          ],
-          "valid_until": null,
-          "article_type": "information",
-          "monthly_search": null,
-          "demand_scope": "latest_issue_exempt",
-          "demand_provider": null,
-          "evidence_mode": "latest_issue",
-          "latest_issue_listing": {
-            "url": "https://workspaceupdates.googleblog.com/2026/10/create-preview-and-edit-files-directly-in-the-Gemini-app.html",
-            "title": "Create, preview, and edit files directly in the Gemini app",
-            "publisher": "google_workspace_updates",
-            "published": "2026-10-30"
-          },
-          "organic_provider": null,
-          "organic_query": null,
-          "organic_results": [],
-          "organic_domains": [],
-          "dominant_result_ratio": null,
-          "trend_growth": null,
-          "trend_provider": null,
-          "trend_status": "not_applicable",
-          "selection_version": 8,
-          "selected_at": "2026-10-29T22:28:29.450280+00:00",
-          "source": "category_market_v1",
-          "keywords": [
-            "Gemini app"
-          ],
-          "status": "pending",
-          "suitability_evidence": {
-            "version": 1,
-            "checked_at": "2026-10-29T22:28:29.450280+00:00",
-            "input_sha256": "acd4ab66e3f045532212a462232d76da6e3cd2eb08125bdb4a97600f3f068f8d",
-            "review": {
-              "scope": "narrower_query",
-              "target_keyword": "Gemini app",
-              "sources": [
-                {
-                  "source_index": 0,
-                  "quote": "arrow_back Back October 29, 2026 Create, preview, and edit files directly in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing new ways to create and refine files and code in the Gemini app. You can now generate, preview, and edit files right within your Gemini app chat—expand to full screen to type edits directly, highlight text to ask questions, or have Gemini refine them. PDF preview and editing is supported on both the web and mobile, while all other formats (documents, spreadsheets, slide decks, Markdown files, TXT files, and code) are supported on the web only. Here are just some of the new things you can do: Generate and refine slide decks: Create presentation outlines or slide content, preview the layout in chat, and edit directly or ask Gemini to adjust the tone and structure before opening in Google Slides, or downloading as a PPTX or PDF. Build and ex",
-                  "entity": "Gemini app",
-                  "context": "system_rules"
-                }
-              ],
-              "required_facets": [
-                {
-                  "facet": "Gemini app은 무엇이며 어떻게 이용하는가?",
-                  "answer": "파일 생성·편집 신기능만 설명하며, 앱 전반의 기능과 이용 방법을 포괄하지 않는다.",
-                  "supported": false,
-                  "source_index": 0,
-                  "quote": "arrow_back Back October 29, 2026 Create, preview, and edit files directly in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing new ways to create and refine files and code in the Gemini app. You can now generate, preview, and edit files right within your Gemini app chat—expand to full screen to type edits directly, highlight text to ask questions, or have Gemini refine them. PDF preview and editing is supported on both the web and mobile, while all other formats (documents, spreadsheets, slide decks, Markdown files, TXT files, and code) are supported on the web only. Here are just some of the new things you can do: Generate and refine slide decks: Create presentation outlines or slide content, preview the layout in chat, and edit directly or ask Gemini to adjust the tone and structure before opening in Google Slides, or downloading as a PPTX or PDF. Build and ex"
-                },
-                {
-                  "facet": "파일 생성·편집 기능은 누가 언제부터 이용할 수 있는가?",
-                  "answer": "모든 Workspace 고객, Individual 구독자, 개인 Google 계정 사용자에게 즉시 제공된다.",
-                  "supported": true,
-                  "source_index": 0,
-                  "quote": "ff . End users: Users of all ages who have access to the Gemini app can generate files. To get started, ask Gemini to generate your desired file type. Visit the Help Center to learn more . Rollout pace Rapid Release and Scheduled Release domains: Available now Availability Available to all Google Workspace customers, Workspace Individual subscribers, and users with personal Google accounts Resources News from Google: You can now preview and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini Google Workspace Updates Blog: Move from conversation to creation with file generation in Gemini Gemini Apps Help: Use Gemini Apps"
-                },
-                {
-                  "facet": "파일 형식별 웹·모바일 지원과 편집 방식은 무엇인가?",
-                  "answer": "PDF 미리보기·편집은 웹과 모바일, 나머지 열거된 형식은 웹에서 지원하며 직접 또는 요청으로 편집한다.",
-                  "supported": true,
-                  "source_index": 0,
-                  "quote": "arrow_back Back October 29, 2026 Create, preview, and edit files directly in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing new ways to create and refine files and code in the Gemini app. You can now generate, preview, and edit files right within your Gemini app chat—expand to full screen to type edits directly, highlight text to ask questions, or have Gemini refine them. PDF preview and editing is supported on both the web and mobile, while all other formats (documents, spreadsheets, slide decks, Markdown files, TXT files, and code) are supported on the web only. Here are just some of the new things you can do: Generate and refine slide decks: Create presentation outlines or slide content, preview the layout in chat, and edit directly or ask Gemini to adjust the tone and structure before opening in Google Slides, or downloading as a PPTX or PDF. Build and ex"
-                },
-                {
-                  "facet": "생성한 파일을 어떻게 내보내거나 다른 앱에서 여는가?",
-                  "answer": "슬라이드는 Slides 열기·PPTX/PDF 다운로드, 표는 Sheets 열기, 문서류는 Drive 업로드를 안내한다.",
-                  "supported": true,
-                  "source_index": 0,
-                  "quote": " chat, and edit directly or ask Gemini to adjust the tone and structure before opening in Google Slides, or downloading as a PPTX or PDF. Build and export Google Sheets: Generate structured trackers, tables, and data models from a prompt, preview them in Gemini, and open them directly in Google Sheets. Edit documents and PDFs: Quickly draft PDFs, Google Docs, LaTeX, Markdown, or TXT files, and make manual or prompted edits inline on web or in a full-screen view—plus you can upload all of them to Drive. These capabilities are now available to all users in all languages where the Gemini app is available. Getting started Admins: There is no admin control for this feature. Visit the Help Center to learn more about turning the Gemini app on or off . End users: Users of all ages who have access to the Gemini app can generate files. To get started, ask Gemini to generate your desired file type."
-                }
-              ],
-              "current_relevance": {
-                "kind": "unknown",
-                "source_index": 0,
-                "quote": "arrow_back Back October 29, 2026 Create, preview, and edit files directly in the Gemini app Gemini App Rapid Release Scheduled Release We’re introducing new ways to create and refine files and code in the Gemini app. You can now generate, preview, and edit files right within your Gemini app chat—expand to full screen to type edits directly, highlight text to ask questions, or have Gemini refine them. PDF preview and editing is supported on both the web and mobile, while all other formats (documents, spreadsheets, slide decks, Markdown files, TXT files, and code) are supported on the web only. Here are just some of the new things you can do: Generate and refine slide decks: Create presentation outlines or slide content, preview the layout in chat, and edit directly or ask Gemini to adjust the tone and structure before opening in Google Slides, or downloading as a PPTX or PDF. Build and ex",
-                "event_start": null,
-                "event_end": null,
-                "date_quote": null
-              }
-            }
-          },
-          "score_components": {
-            "latest_issue": 10,
-            "intent_fit": 15
-          },
-          "score": 25,
-          "publish_eligible": false,
-          "hold_reasons": [
-            "narrower_source_coverage",
-            "unverified_source_coverage"
-          ]
-        }
-      ],
+      "evaluated_candidates": 0,
+      "seeds": [],
+      "held": [],
       "rejected": [],
       "latest_issue_listing": [
         {
@@ -10202,139 +9527,73 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6701
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 12207
-      },
-      {
-        "stage": "topic_suitability",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 18764
-      },
-      {
-        "stage": "topic_suitability",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 18766
+        "elapsed_ms": 7848
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7448
+        "elapsed_ms": 11687
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6385
+        "elapsed_ms": 28383
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 21752
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9691
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 8518
+        "elapsed_ms": 20575
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 20510
+        "elapsed_ms": 22697
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7782
+        "elapsed_ms": 8367
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 11625
+        "elapsed_ms": 8623
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6483
+        "elapsed_ms": 8725
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7939
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 9157
-      },
-      {
-        "stage": "topic_plan",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 15037
+        "elapsed_ms": 8142
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 34455
+        "elapsed_ms": 29199
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 8868
+        "elapsed_ms": 9347
       },
       {
         "stage": "search_review",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 7164
-      },
-      {
-        "stage": "official_research",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 38349
-      },
-      {
-        "stage": "shortlist",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 18446
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 6654
-      },
-      {
-        "stage": "search_review",
-        "attempt": 1,
-        "status": "returned",
-        "elapsed_ms": 20839
+        "elapsed_ms": 5863
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -10347,10 +9606,22 @@
         "provider": "codex_native_search",
         "results": [
           {
+            "url": "https://www.kdca.go.kr/bbs/kdca/53/310535/download.do",
+            "domain": "www.kdca.go.kr",
+            "title": "## 5. 시험일정\n\n<table id=\"e1\">\n\n| 구분 | 일정 | 내용 |\n|---",
+            "snippet": "금) | ▶ 서류전형 합격자에게 면접일시 및 장소 개별 통보<br>※ 부서 사정에 따라 일정 변경 가능 | | 서류합격자발표 | ’26. ... 목) | ▶"
+          },
+          {
             "url": "https://www.shifted.co.kr/guide/cert-entry",
             "domain": "www.shifted.co.kr",
             "title": "입찰 자격 이용 가이드 | 시프티드",
             "snippet": "인증별 업체 수는 Basic 요금제 이상 · 신청 안내와 준비서류 체크리스트·「직접생산확인」 화면은 Standard 요금제 이상(가입 후 7일 체험 기간에는 모든 요금제 기능 이용 가능) ..."
+          },
+          {
+            "url": "https://www.kamco.or.kr/portal/bbs/list.do?bIdx=10406&mId=0701050000&ptIdx=422",
+            "domain": "www.kamco.or.kr",
+            "title": "캠코TV 목록 | 공사소식 | 미디어룸 | 홈페이지",
+            "snippet": "자세히보기 식구 | 배우 현봉식 | 공식 예고편 홍보실 2026-08-14 ... 자세히보기 [전지적 캠코 시점] 서로의 업무 일상을 엿보다! ... 캠코 직원 쁘이로그) 홍보실 2026-07-14"
           },
           {
             "url": "https://www.contis.co.kr/toolkit/manual/production-planning/annual-production-plan/",
@@ -10359,10 +9630,10 @@
             "snippet": "* 인원 현황과 다기능 숙련도표 * 도구: 생산능력 계획, 판매 예측, 시나리오 계획 ... 2 판매계획 수령 | 9월 말 | 영업의 품목군·월별 판매계획을 받아"
           },
           {
-            "url": "https://m.bodnara.co.kr/",
-            "domain": "m.bodnara.co.kr",
-            "title": "보드나라 - 보드나라",
-            "snippet": "게임물관리위원회, 모바일 게임물 등급분류 업무 민간이양 ... 캡콤, PHP 보안 대응 위해 스트리트 파이터 V 판매와 온라인 기능 일시 중단 ... 엔비디아, RTX 스파크 윈도우"
+            "url": "https://m.jpt.co.kr/news/media.php",
+            "domain": "m.jpt.co.kr",
+            "title": "JPT 일본어 능력 시험 공식 사이트",
+            "snippet": "* 삼성그룹 공채 시작… 토익스피킹 성적 조기 발표 진행 2025.09.02 ... * ‘2025 K-EDU 창의력 경진대회’ 개최… YBM COS·COS Pro 성적, 예선에 활용 가능 2025.08.12"
           },
           {
             "url": "https://gansam.com/news/news.php",
@@ -10371,41 +9642,31 @@
             "snippet": "YOUTUBE[영상] 간삼건축 신입사원 인터뷰 | 13명의 신입사원이 말하는 간삼에서의 6개월 새로운 환경과 낯선 업무, 처음 마주하는 시스템 속에서 신입사원은 매일 새로운 질문을 마주합니다. ... GANSAM"
           },
           {
-            "url": "https://www.gonggoitda.com/",
-            "domain": "www.gonggoitda.com",
-            "title": "공고잇다 | 공식 뉴스·공고·지원사업·법잇다",
-            "snippet": "입찰공고 공개 판독 15건 법잇다 뉴스와 관련 법령 공식 뉴스 정책·공공 발표 지원사업 기업·소상공인 게시판 소식·해설 일자리 지역·업종별 채용 보조금사업 국고·지방 공모 정부지원금 생활·복지 혜택"
+            "url": "https://wikidocs.net/336671",
+            "domain": "wikidocs.net",
+            "title": "25 AI 나를 위해 일하게 하라 - 멘토링 프로그램",
+            "snippet": "AI의 도움을 받아 하루 업무를 체계적으로 설계하면 중요한 일부터 착실히 완료해나갈 수 있습니다. AI가 ‘우선순위 결정 + 일정 계획 + 프로젝트 분해’까지 도와주는 새로운 업무"
           },
           {
             "url": "https://press1.newswire.co.kr/newsRead.php?no=1044685",
             "domain": "press1.newswire.co.kr",
             "title": "NetBox Labs, NVIDIA·Grafana Labs와 파트너십 체결 및 NetBox 인프라 인텔리전스 플랫폼 신규 기능 발표… AI 데이터센터·기업 인프라 구축 위한 핵심 인텔리전스 계층 강화 - press test",
             "snippet": "Arista CloudVision, AWS VPC IPAM 및 Cisco Nexus Dashboard와의 통합 기능은 이번 달 정식 제공되며, Palo Alto Panorama, Tenable 및 Kubernetes와의 신규 통합 기능은 10월"
-          },
-          {
-            "url": "https://www.doogo.co/board/faq/list.html?board_no=3&page=2",
-            "domain": "www.doogo.co",
-            "title": "두고 :: 도매 오픈마켓, 누구나 쉽게 입점하는 B2B 플랫폼",
-            "snippet": "Basic 플랜 기능 포함 ... 두고 플랫폼에서는 해외 상품 결제를 신용카드로 진행하게 되며, 결제 시 발급되는 신용카드 매출전표가 제품 및 상품 대금으로 인정됩니다 ... 보다"
-          },
-          {
-            "url": "https://about.daangn.com/company/pr/",
-            "domain": "about.daangn.com",
-            "title": "당근 보도자료",
-            "snippet": "2023.07.05 당근페이, ‘사기 의심 계좌 알림’ 기능 도입 지역 기반 간편송금·결제 서비스 ‘당근페이’에 ‘사기 의심 계좌 알림’ 기능을 도입하여 더욱 강력한 이용자 보호망을 구축한다 2023.07.03"
-          },
-          {
-            "url": "https://www.ayventure.net/",
-            "domain": "www.ayventure.net",
-            "title": "안양산업진흥원",
-            "snippet": "대납 요구 : 긴급한 물품 구매를 이유로 업체에 대리 구매를 요청하거나, 비공식 물품 납품 및 대금을 먼저 입금(대납)하도록 유도 ... 발신인이 불명확하거나 휴대폰 번호로 온"
-          },
-          {
-            "url": "https://speciai.kr/db/briefs/2026-10-06",
-            "domain": "speciai.kr",
-            "title": "2026년 10월 6일 브리핑 | 스페시아이 네트워크",
-            "snippet": "이 항목은 해설 없이 제목·요약만 수록되었습니다. ... 뉴스 기술·AI🌐 업계 동향 ... 이 항목은 해설 없이 제목·요약만 수록되었습니다. ... ### 국내 반도체 소부장 ETF가 AI"
           }
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "생산성",
+        "stage": "latest_issue_source",
+        "url": "https://www.kamco.or.kr/portal/bbs/list.do?bIdx=10406&mId=0701050000&ptIdx=422",
+        "status": "no_recent_date",
+        "observed_dates": [
+          "2026-07-14",
+          "2026-07-23",
+          "2026-08-14",
+          "2026-08-18",
+          "2026-09-03"
         ]
       },
       {
@@ -10416,28 +9677,40 @@
         "provider": "codex_native_search",
         "results": [
           {
+            "url": "https://kbench.com/?q=node%2F277511",
+            "domain": "kbench.com",
+            "title": "갤럭시 A57, 출시 후 첫 번째 업데이트 배포 | 케이벤치 주요뉴스",
+            "snippet": "Image 갤럭시 A57 5G 삼성전자가 2026년형 중급 스마트폰 ‘갤럭시 A57 5G’에 대한 첫 번째 소프트웨어 업데이트 배포를 시작했다. ... 업데이트에는 2026년 1월 보안 패치가 포함됐으며,"
+          },
+          {
+            "url": "https://kbench.com/?q=node%2F275867",
+            "domain": "kbench.com",
+            "title": "삼성, '갤럭시S21' 시리즈 보안 업데이트 지원 종료 | 케이벤치 주요뉴스",
+            "snippet": "Image 2021년 출시된 삼성전자 구형 플래그십 ‘갤럭시 S21’ 시리즈의 보안 업데이트가 공식 종료됐다. ... 업계에서는 S22 시리즈가 약 1년가량 최소한의 보안 지원을 받은 뒤, 2027년"
+          },
+          {
+            "url": "https://kbench.com/?q=node%2F281611",
+            "domain": "kbench.com",
+            "title": "갤럭시 폴드6·플립6도 베타 프로그램 합류…국내서 베타 업데이트 출시 | 케이벤치 주요뉴스",
+            "snippet": "# 갤럭시 폴드6·플립6도 베타 프로그램 합류…국내서 베타 업데이트 출시 ... 플립6 사용자는 삼성 멤버스 앱에서 One UI 베타 프로그램 배너를 선택해 등록할 수 있다. 등록"
+          },
+          {
             "url": "https://uplusez.co.kr/board/guide/394",
             "domain": "uplusez.co.kr",
             "title": "갤럭시 One UI 9.0 일정·활용법과 주의사항 | 유플러스이지",
             "snippet": "유플러스이지 IT 데이터랩 정밀 분석 리포트: 본 심층 가이드는 삼성전자 공식 릴리즈 노트와 국내외 공시 기술 문서, 그리고 실제 단말기 배포 로그 데이터를 바탕으로 작성되었습니다."
           },
           {
-            "url": "https://www.jobplanet.co.kr/job/search?posting_ids%5B%5D=1536997",
-            "domain": "www.jobplanet.co.kr",
-            "title": "(주)스팬딧 채용공고 - Problem Solver (Product & Design), 서울 채용, 3.8 기업 만족도, 20개 기업리뷰",
-            "snippet": "기업들은 임직원의 업무 환경에 최적화된 비용 관리 및 정산 프로세스가 구축 가능하며 비용 절감, 생산성 향상, 재무 가시성 증가 등 혁신적인 효과까지 얻을 수 있습니다."
+            "url": "https://biz.heraldcorp.com/article/10580363",
+            "domain": "biz.heraldcorp.com",
+            "title": "신한자산운용, 국내 최초 ‘SOL 한국AI소프트웨어 ETF’ 출시 - 헤럴드경제",
+            "snippet": "신한자산운용, 국내 최초 ‘SOL 한국AI소프트웨어 ETF’ 출시 ... [헤럴드경제=문이림 기자] 신한자산운용이 오는 23일 ‘SOL 한국AI소프트웨어 ETF’를 유가증권시장에 상장한다고 22일 밝혔다. ... 김 총괄은 “AI의 확산"
           },
           {
-            "url": "https://pro.soundcat.com/article/?page=9&q=YToyOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjtzOjQ6InBhZ2UiO2k6MTM7fQ%3D%3D",
-            "domain": "pro.soundcat.com",
-            "title": "프로음향 이야기",
-            "snippet": "‘이 마이크 뭐예요?’ ... 게시판 썸네일 ... 침대에 누워 최애 유튜버나 힙한 스트리머의 영상을 보다 보면, 귀에 쏙쏙 박히는 그 찰진 목소리와 맑... ... [업데이트]"
-          },
-          {
-            "url": "https://www2.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=c3p1K28vZktSeU0zaUt5SUxZV3dXZz09",
-            "domain": "www2.saramin.co.kr",
-            "title": "스포츠투아이(주) 채용 | 2026년 진행 중인 공고 7건 - 사람인",
-            "snippet": "Image: 스포츠투아이(주)의 기업로고 ... 데이터베이스 및 온라인정보 제공업 ... NET · Windows 응용프로그램 / API) 스크랩 ... * 경기 성남시 분당구 외 ... * 경기"
+            "url": "https://www.intoiti.com/post/18-ios",
+            "domain": "www.intoiti.com",
+            "title": "아이폰18 프로·프로맥스 패닉풀 현상! iOS 27.0.1 업데이트로 해결됐을까?",
+            "snippet": "Face ID 인증 실패와 관련된 예기치 않은 재시동 문제는 iOS 27.0.1에서 공식적으로 수정됐습니다. ... 설정 → 개인정보 보호 및 보안 → 분석 및 향상 →"
           },
           {
             "url": "https://www.seoulsoft.kr/",
@@ -10446,177 +9719,36 @@
             "snippet": "서울소프트는 ERP·IoT·스마트팩토리·모바일 플랫폼 구축 경험을 바탕으로 제조설비와 생산현장을 데이터 기반으로 전환하는 전문기업입니다. ... * 생산성 분석 ... Image: 모빌하이 운수사 ERP 화면 ... 근태출근·음주측정·DTG 대사"
           },
           {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/aTIxRnRzZkZES1Z3VVNST1BhVllNUT09/company_nm/%28%EC%A3%BC%29%EC%95%A1%EC%85%98%EC%8A%A4%ED%80%98%EC%96%B4",
-            "domain": "www.saramin.co.kr",
-            "title": "(주)넥써쓰 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "모바일 게임 소프트웨어 개발 및 공급업 ... 경기 성남시 분당구 대왕판교로606번길 10, 15층 (백현동,알파리움 제타워 1동) ... 플랫폼 '크로쓰(CROSS)' 내 0% 수수료 결제 시스템 '크로쓰페이(CROSS"
+            "url": "https://www.kdca.go.kr/bbs/kdca/53/310535/download.do",
+            "domain": "www.kdca.go.kr",
+            "title": "## 5. 시험일정\n\n<table id=\"e1\">\n\n| 구분 | 일정 | 내용 |\n|---",
+            "snippet": "금) | ▶ 서류전형 합격자에게 면접일시 및 장소 개별 통보<br>※ 부서 사정에 따라 일정 변경 가능 | ... 질병관리청 채용시스템 QR 코드가 중앙에 있으며, 아래에"
           },
           {
-            "url": "https://m.saramin.co.kr/job-search/company-info-view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4%EC%97%94%ED%84%B0%ED%85%8C%EC%9D%B8%EB%A8%BC%ED%8A%B8",
-            "domain": "m.saramin.co.kr",
-            "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "NICE 평가정보 출처 : 기업형태, 매출액, 설립일, 주소, 대표자명, 사업내용, 업종 ... 주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... 대표이사 유래형 사임,대표이사"
+            "url": "https://investors.palantir.com/files/Apollo%20Demo%20Day%20-%20Transcript%20KR.pdf",
+            "domain": "investors.palantir.com",
+            "title": "Apollo in Action:",
+            "snippet": "Software Demo ... 이제 롤아웃이 완료되었고, Apollo는 배포된 모든 환경에서 소프트웨어를 업그레이드했습니다. ... Apollo는 소프트웨어를 대규모 스케일로 신속하게 관리하는데 특화한 최적의 플랫폼으로 보다 더 빠르고"
           },
           {
             "url": "https://www2.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=TU5yUVZCS01WTVR0RHo1VVNFYTBkdz09",
             "domain": "www2.saramin.co.kr",
             "title": "(주)아이서티 채용 | 2026년 진행 중인 공고 5건 - 사람인",
             "snippet": "Image: (주)아이서티의 기업로고 ... 응용 소프트웨어 개발 및 공급업 ... IT개발·데이터 ... * 서울 성동구 ... 기술영업 네트워크영업 솔루션기술영업 시스템영업 기술기획 외 ... 정보보안 AI(인공지능)C#C++C언어"
-          },
-          {
-            "url": "https://www.remio.ai/ko/post/apple-creator-studio-ai-updates-connect-creative-apps-and-document-workflows-ko",
-            "domain": "www.remio.ai",
-            "title": "Apple Creator Studio AI 업데이트, 크리에이티브 앱과 문서 워크플로 연결",
-            "snippet": "이는 기능의 출시 상태를 나타내지만 정확성이나 신뢰성을 수치화하지는 않는다. ... 이는 Apple 소프트웨어에서 입증된 결함이 아니라 검증해야 할 일반적인 실패 시나리오다. ... 기술적 수용 가능성과"
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/Mlczbm9hbEdhcXhoZGFCc0ZNZnBHdz09/company_nm/%28%EC%A3%BC%29%EC%86%8C%ED%94%84%ED%86%A4?nomo=1",
-            "domain": "www.saramin.co.kr",
-            "title": "(주)소프톤 2026년 기업정보 | 직원수, 근무환경, 복리후생 등 - 사람인",
-            "snippet": "주요 사업내용 : 온라인 게임 개발주요 취급품목 : 게임소프트웨어 ... NICE 평가정보 출처 : 설립일, 기업형태, 매출액, 업종, 대표자명, 사업내용, 주소 ... 대표이사 유래형 사임,대표이사"
           }
         ]
-      },
-      {
-        "keyword": "마이크로오피스365",
-        "category": "생산성",
-        "stage": "source_search_requested",
-        "query": "마이크로오피스365 site:support.microsoft.com"
-      },
-      {
-        "keyword": "마이크로오피스365",
-        "category": "생산성",
-        "stage": "source_search",
-        "query": "마이크로오피스365 site:support.microsoft.com",
-        "provider": "codex_native_search",
-        "results": [
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
-            "title": "가정용 Microsoft 365의 시스템 요구 사항 | Microsoft Support",
-            "snippet": "개인 및 가족을 위한 Microsoft 365 제품군은 모든 장치에서 생산성 앱의 프리미엄 버전, 월간 기능 업데이트, 1TB 또는 2TB 공유 OneDrive 클라우드 저장소를 포함하는 구독"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/where-can-i-manage-my-microsoft-365-subscription",
-            "title": "어디에서 Microsoft 365 구독을 관리할 수 있나요? | Microsoft Support",
-            "snippet": "Microsoft 365를 구매하는 데 사용한 Microsoft 계정을 사용하여 account.microsoft.com/services Microsoft 구독 페이지에 로그인합니다. ... * 관리 옵션이 제한되거나 누락된 경우 구독은 타사에서 관리할 수 있습니다."
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/introducing-microsoft-365",
-            "title": "Microsoft 365 소개 | Microsoft Support",
-            "snippet": "2026년 10월 8일부터 모든 신규(만료 및 재구매 포함) Microsoft 365 Family 및 Premium 구독자에게는 2TB의 풀링된 OneDrive 클라우드 저장소가 제공되고, Microsoft 365 Pro 구독자에게는 5TB의"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-KR/accounts-billing/subscriptions/where-can-i-manage-my-microsoft-365-subscription",
-            "title": "어디에서 Microsoft 365 구독을 관리할 수 있나요? | Microsoft Support",
-            "snippet": "Microsoft 365를 구매하는 데 사용한 Microsoft 계정을 사용하여 account.microsoft.com/services Microsoft 구독 페이지에 로그인합니다. ... * 관리 옵션이 제한되거나 누락된 경우 구독은 타사에서 관리할 수 있습니다."
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/onedrive/set-up-multi-factor-authentication-for-microsoft-365",
-            "title": "Microsoft 365에 대한 다단계 인증 설정 | Microsoft Support",
-            "snippet": "그것은 당신이 말하는 사람이라는 것을 증명하는 방법입니다. 암호를 잊어버리거나 암호가 노출될 수 있으므로 MFA는 다른 사용자가 계정에 로그인하기 어렵게 만들어 계정을 보호하는 추가 보안 단계입니다."
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/support/supported-products/microsoft-365-supported-products",
-            "title": "Microsoft 365에 포함된 제품 | Microsoft Support",
-            "snippet": "# Microsoft 365에는 어떤 제품이 포함되어 있나요? Microsoft가 소비자에게 제공하는 지원 유형은 질문하는 제품 또는 서비스에 따라 다릅니다. ... 참고: 지원되는 Windows 버전 및 Microsoft"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/office/lifecycle/officeinstall/update-m365-office-macos-ios",
-            "title": "macOS 또는 iOS 장치에서 Microsoft 365 또는 Office 업데이트 | Microsoft Support",
-            "snippet": "Office 응용 프로그램을 시작하고 도움말 메뉴에서 업데이트 확인을 선택하면 됩니다. ... * Microsoft 365가 표시되면 Microsoft 365 구독이 있는 것입니다 * Office 2021 또는 Office"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/switch-between-microsoft-365-subscriptions",
-            "title": "Microsoft 365 구독 간 전환하기 | Microsoft Support",
-            "snippet": "2027년 5월 2일부터 모든 기존 Microsoft 365 Family 및 Premium 구독자는 구독 갱신 시 2TB의 풀 클라우드 스토리지를 받게 됩니다. ... 가족 | Microsoft 365"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/microsoft-365-activation-licensing/manage-microsoft-365/what-s-the-difference-between-microsoft-365-plans-for-home-or-business",
-            "title": "가정용과 비즈니스용 Microsoft 365 요금제의 차이점은 무엇인가요? | Microsoft Support",
-            "snippet": "## 비즈니스 요금제와 개인 및 가족 요금제 비교 ... Microsoft 365 비즈니스 구독 은 한 명 이상의 팀인지에 관계없이 비즈니스를 성장시키는 데 도움이 될 수"
-          },
-          {
-            "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/find-out-when-your-microsoft-365-subscription-expires",
-            "title": "Microsoft 365 구독 만료일 확인 | Microsoft Support",
-            "snippet": "Microsoft 365 구독이 만료되는 경우 검사 방법은 다음과 같습니다. ... 메시지가 표시되면 로그인 을 선택하고 Microsoft 365 구독과 연결된 Microsoft 계정 전자 메일 및 암호를"
-          }
-        ]
-      },
-      {
-        "keyword": "마이크로오피스365",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://support.microsoft.com/ko-kr/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://support.microsoft.com/ko-kr/office/system-requirements/system-requirements-for-microsoft-365-for-home-use",
-        "title": "가정용 Microsoft 365의 시스템 요구 사항 | Microsoft Support",
-        "excerpt_chars": 2542
-      },
-      {
-        "keyword": "마이크로오피스365",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/where-can-i-manage-my-microsoft-365-subscription",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://support.microsoft.com/ko-kr/accounts-billing/subscriptions/where-can-i-manage-my-microsoft-365-subscription",
-        "title": "어디에서 Microsoft 365 구독을 관리할 수 있나요? | Microsoft Support",
-        "excerpt_chars": 1869
-      },
-      {
-        "keyword": "마이크로오피스365",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://support.microsoft.com/ko-kr/office/introducing-microsoft-365",
-        "outcome": "fetched",
-        "failure_codes": [],
-        "final_url": "https://support.microsoft.com/ko-kr/office/introducing-microsoft-365",
-        "title": "Microsoft 365 소개 | Microsoft Support",
-        "excerpt_chars": 816
-      },
-      {
-        "keyword": "무료논문사이트",
-        "category": "생산성",
-        "stage": "native_source_research",
-        "locators": [
-          {
-            "url": "https://www.nl.go.kr/NL/contents/N71240000000.do",
-            "origin": "model_reported_locator"
-          },
-          {
-            "url": "https://pmc.ncbi.nlm.nih.gov/about/userguide/",
-            "origin": "model_reported_locator"
-          }
-        ],
-        "searched": true,
-        "coverage_gaps": null
-      },
-      {
-        "keyword": "무료논문사이트",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://www.nl.go.kr/NL/contents/N71240000000.do",
-        "outcome": "institutional_source_for_technical_question"
-      },
-      {
-        "keyword": "무료논문사이트",
-        "category": "생산성",
-        "stage": "source_fetch",
-        "url": "https://pmc.ncbi.nlm.nih.gov/about/userguide/",
-        "outcome": "institutional_source_for_technical_question"
       }
     ],
     "selection_outcome": "research_budget_exhausted",
     "selection_funnel": {
       "measured": 347,
-      "pool": 166,
-      "shortlist_offered_unique": 166,
-      "evaluated": 5,
+      "pool": 162,
+      "shortlist_offered_unique": 162,
+      "evaluated": 3,
       "held": 0,
-      "rejected": 5,
+      "rejected": 3,
       "selected": 0,
-      "stop_reason": "round_limit"
+      "stop_reason": "time_budget"
     }
   },
   "리뷰": {

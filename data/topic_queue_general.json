@@ -46054,7 +46054,7 @@
     "keywords": [
       "신규택지 10.4만호"
     ],
-    "status": "pending",
+    "status": "held_draft",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-29T01:33:53.047030+00:00",
@@ -46153,7 +46153,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2061,
+    "url": "https://trendpulse.blog/?p=2061",
+    "post_status": "draft",
+    "held_at": "2026-10-30T00:13:33.541358"
   },
   {
     "keyword": "Immersive explorations",

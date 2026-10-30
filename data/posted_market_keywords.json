@@ -1367,5 +1367,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-29T09:05:43.754991+00:00"
+  },
+  {
+    "key": "집배원이전달하는그냥드림",
+    "keyword": "집배원이 전달하는 그냥드림",
+    "topic": "집배원이 전달하는 그냥드림, 10월 29일 발표한 10개 지역 시범사업 대상과 신청 안내",
+    "category": "생활정보",
+    "post_id": 2064,
+    "url": "https://trendpulse.blog/postal-care-delivery-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-30T09:06:25.249893+00:00"
   }
 ]

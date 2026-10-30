@@ -933,6 +933,17 @@
       "status": "success",
       "completed_at": "2026-10-29T09:05:48.536095+00:00",
       "published_category": "테크"
+    },
+    "2026-10-30:morning": {
+      "scheduled_for": "2026-10-30T09:00:00+09:00",
+      "run_created_at": "2026-10-30T09:00:05+09:00",
+      "start_delay_seconds": 13,
+      "trigger": "external_timer",
+      "run_id": "40976829046",
+      "category": "생산성",
+      "slot": "morning",
+      "claimed_at": "2026-10-30T09:00:13.552205+09:00",
+      "status": "started"
     }
   }
 }

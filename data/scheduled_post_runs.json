@@ -959,6 +959,17 @@
       "status": "success",
       "completed_at": "2026-10-30T09:06:30.819428+00:00",
       "published_category": "생활정보"
+    },
+    "2026-10-31:morning": {
+      "scheduled_for": "2026-10-31T09:00:00+09:00",
+      "run_created_at": "2026-10-31T09:00:04+09:00",
+      "start_delay_seconds": 11,
+      "trigger": "external_timer",
+      "run_id": "41147697396",
+      "category": "리뷰",
+      "slot": "morning",
+      "claimed_at": "2026-10-31T09:00:11.247379+09:00",
+      "status": "started"
     }
   }
 }

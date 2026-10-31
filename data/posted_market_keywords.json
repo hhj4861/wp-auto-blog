@@ -1386,5 +1386,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-30T09:06:25.249893+00:00"
+  },
+  {
+    "key": "광주보훈병원계약직업무지원직고객지원검사코디",
+    "keyword": "[광주보훈병원] 계약직 업무지원직(고객지원_검사코디)",
+    "topic": "[광주보훈병원] 계약직 업무지원직(고객지원_검사코디) 10월 30일 휴직대체 채용 공고·지원 요건",
+    "category": "취업",
+    "post_id": 2070,
+    "url": "https://trendpulse.blog/gwangju-bohun-recruitment-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-10-31T09:06:10.140195+00:00"
   }
 ]

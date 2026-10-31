@@ -46615,7 +46615,7 @@
     "keywords": [
       "[광주보훈병원] 계약직 업무지원직(고객지원_검사코디)"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-10-30T11:00:34.373187+00:00",
@@ -46693,7 +46693,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2070,
+    "url": "https://trendpulse.blog/gwangju-bohun-recruitment-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-10-31T09:06:10.905280"
   },
   {
     "keyword": "저소음청소기",

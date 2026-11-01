@@ -19816,7 +19816,7 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-10-31T21:02:13.839732+00:00",
+    "selected_at": "2026-11-01T00:01:28.420433+00:00",
     "seeds": [
       "AI에이전트",
       "인공지능",
@@ -19825,10 +19825,10 @@
       "소프트웨어업데이트"
     ],
     "selection_version": 8,
-    "research_rounds": 4,
+    "research_rounds": 3,
     "latest_issue_discovery": {
       "window_start": "2026-10-31T00:00:00+09:00",
-      "window_end": "2026-11-01T06:02:13.839732+09:00",
+      "window_end": "2026-11-01T09:01:28.420433+09:00",
       "queries": [
         {
           "query": "AI 에이전트 모델 공식 출시 발표 after:2026-10-31 before:2026-11-02",
@@ -19841,22 +19841,22 @@
               "snippet": "공식 자료를 바탕으로 답하는 모비전트와 캐릭터 관리, 숙제표, 크루 플래너, 시즌 2 도감을 이용해보세요. ... 공지 모비노기용 AI 에이전트인 모비전트 출시 ... 도감 룬, 인챈트,"
             },
             {
+              "url": "https://aikorea24.kr/chronicle/",
+              "domain": "aikorea24.kr",
+              "title": "AI 주요 사건 타임라인 — 2024~2026 AI 연대기 | AI코리아24",
+              "snippet": "#Meta#Muse#AI 에이전트#실행형 AI 9.01🤖 모델 출시 Anthropic, Claude Fable 5.1·Mythos 5.1 출시 Anthropic이 Claude Fable 5.1과 Mythos 5.1을 동시 출시. ... AI 사업 부문을 별도"
+            },
+            {
               "url": "https://www.i-boss.co.kr/ab-7460?PB_1330918089=45&nic=%EB%89%B4%EC%8A%A4%EA%B4%91%EA%B3%B5",
               "domain": "www.i-boss.co.kr",
               "title": "뉴스광공님의 활동로그 - 게시글",
               "snippet": "구글, 검색에 제미나이 3.5·AI 에이전트 도입 구글은 I/O에서 전 세계 이용자를 대상으로 'AI 모드'의 기본 모델을 제미나이 3.5 플래시 로 업그레이드했다고 발표했으며, 해당 모드는 출시"
             },
             {
-              "url": "https://aiart386.tistory.com/413",
-              "domain": "aiart386.tistory.com",
-              "title": "구글 제미나이 4 아르곤 출시 일정은? 후속 모델 ‘카본’ 내부 테스트와 Claude Opus 5.5 성능 비교",
-              "snippet": "Gemini 기업용 에이전트 발표 | 10월 8일 | 공식 발표 ... * 아르곤은 유료 API 고객과 Google AI Ultra 구독자부터 순차 공개할 예정이지만, 10월 10일"
-            },
-            {
-              "url": "https://mediadream.me/church-media-ai-agents-2026-10/",
-              "domain": "mediadream.me",
-              "title": "AI 에이전트 비교 2026｜뮤즈·피클·제미나이 스파크·ChatGPT dots",
-              "snippet": "뮤즈·피클·제미나이 스파크·ChatGPT dots·Claude Duet까지, AI 에이전트 대격돌을 가격·특장점으로 비교하고 지금 설치 가능한 피클과 VPN 우회 가입이 필요한 뮤즈 소식을 교회 사역자 관점으로 정리했습니다. ... 서비스"
+              "url": "https://m.namu.moe/w/%EC%97%90%EC%9D%B4%EB%8B%B7",
+              "domain": "m.namu.moe",
+              "title": "에이닷",
+              "snippet": "SK텔레콤 에서 2022년 5월에 공개한 AI 에이전트 서비스. 한국어 GPT 기반이며 초거대 언어모델(LLM)[2]과 ChatGPT가 하이브리드로 운영되는 대화형 AI 서비스로, 이용자의 질문과 요청에 맞춰 다양한 정보를"
             },
             {
               "url": "https://event-us.kr/modu/event",
@@ -19865,22 +19865,16 @@
               "snippet": "아이펠 AI 에이전트 2기 ... [모두의연구소] 2027년 채용 담당자가 주목하는 NEW 스펙, 실전 AI 에이전트! ... 모두의연구소 '인공지능(AI) 모델 활용 백엔드 개발 과정 교육생 모집"
             },
             {
-              "url": "https://internal.pickstock.ai/calendar?theme=ai-agent",
-              "domain": "internal.pickstock.ai",
-              "title": "AI 에이전트 관련 증시 일정 캘린더 | FOMC·CPI·금통위·실적 발표와 관련주 | 픽스톡",
-              "snippet": "# AI 에이전트 증시 일정 캘린더 ... ★★★ 중요도: 시총이 크거나 시장 전체에 영향이 큰 일정일수록 별이 많아요 · 실적 표시(한국시간): 새벽 미국 장 마감"
+              "url": "https://www.coursium.ai/ko/blog/myujeu-seupakeu",
+              "domain": "www.coursium.ai",
+              "title": "뮤즈 스파크란? 메타 AI 모델과 \"뮤즈\" 앱, 헷갈리는 이름부터 정리",
+              "snippet": "메타 AI 앱과 meta.ai가 이 모델로 바뀌었어요. ... 06 9월 8일: 에이전트 앱 뮤즈 출시. ... 메타가 한국 출시 일정을 발표한 적도 없어요."
             },
             {
-              "url": "https://ai.trend.imaginationgroup.co.kr/",
-              "domain": "ai.trend.imaginationgroup.co.kr",
-              "title": "AI TREND — 실시간 AI 성능 지표",
-              "snippet": "공식 상태판을 1분마다 확인하고 이용자 제보를 나란히 둡니다. ... AI 모델 IQ 랭킹 이미지 생성 랭킹 영상 생성 랭킹 코딩 랭킹 응답속도 랭킹 AI 선호도"
-            },
-            {
-              "url": "https://polarad.co.kr/marketing-news/category/ai-news",
-              "domain": "polarad.co.kr",
-              "title": "AI 뉴스 | 폴라애드",
-              "snippet": "OpenAI, Google, Anthropic 등 주요 AI 기업의 최신 모델 출시, 서비스 업데이트, 기술 동향을 빠르게 전달합니다. ... 한국어 시리 AI는 이전 연락을 찾아 이메일 초안을"
+              "url": "https://aiart386.tistory.com/413",
+              "domain": "aiart386.tistory.com",
+              "title": "구글 제미나이 4 아르곤 출시 일정은? 후속 모델 ‘카본’ 내부 테스트와 Claude Opus 5.5 성능 비교",
+              "snippet": "Gemini 기업용 에이전트 발표 | 10월 8일 | 공식 발표 ... * 아르곤은 유료 API 고객과 Google AI Ultra 구독자부터 순차 공개할 예정이지만, 10월 10일"
             },
             {
               "url": "https://ad.re.kr/trends",
@@ -19889,10 +19883,16 @@
               "snippet": "이번 주 광고 플랫폼 업데이트: 구글·틱톡·메타의 AI 광고/요약 기능 강화 광고 운영 자동화와 AI 요약·추천 기능이 주요 플랫폼 업데이트의 중심으로 부상.2026-10-31자세히 보기 →에이전틱(Agentic) AI 확산:"
             },
             {
-              "url": "https://aipie.kr/",
-              "domain": "aipie.kr",
-              "title": "AIPie | AI 서비스 큐레이션·랭킹·비교",
-              "snippet": "브랜더진 0.0 브랜드가 원하는 조건에 맞는 크리에이터를 찾고 직접 섭외하는 플랫폼 크리에이터 마케팅협찬 관리콘텐츠 제작 그로우킷 0.0 네이버 광고·플레이스·블로그 운영을 한 화면에서 관리하는 마케팅 도구"
+              "url": "https://airound.kr/",
+              "domain": "airound.kr",
+              "title": "AI:ROUND | 국내 AI 테크 행사",
+              "snippet": "공식 출처를 확인하고 승인한 서울·경기 AI 테크 행사를 한곳에서 발견하세요. ... (화) · 서울 AIoT Korea Exhibition 2026 | AIoT 국제전시회 서울 강남구 영동대로 513"
+            },
+            {
+              "url": "https://polarad.co.kr/marketing-news/category/ai-news",
+              "domain": "polarad.co.kr",
+              "title": "AI 뉴스 | 폴라애드",
+              "snippet": "OpenAI, Google, Anthropic 등 주요 AI 기업의 최신 모델 출시, 서비스 업데이트, 기술 동향을 빠르게 전달합니다. ... 한국어 시리 AI는 이전 연락을 찾아 이메일 초안을"
             }
           ]
         },
@@ -19901,10 +19901,10 @@
           "provider": "codex_native_search",
           "results": [
             {
-              "url": "https://search.kisa.or.kr/search/search.jsp?debugQuery=&explainOther=&facet=false&facet_field=cat1&field=all&fl=%2A%2Cscore&hl=on&hl_fl=subject&indent=on&keyword=%ED%8C%A8%EC%B9%98&qt=standard&rows=10&sortField=score&start=0&version=2.2",
-              "domain": "search.kisa.or.kr",
-              "title": "KISA 홈페이지 통합검색",
-              "snippet": "한국인터넷진흥원에서는 입찰참여 기회균등과 공정한 경쟁을 위해 다음과 같이 제안요청서(규격서)를 사전 공개하오니 참고하시기 바랍니다. o 사업명 : 보안 취약점 검증 및 패치 후보군 생성 기술 개발"
+              "url": "https://media1.or.kr/2026/10/ksnc-2026-automotive-software-safety-ai-conference/",
+              "domain": "media1.or.kr",
+              "title": "KSNC 2026 서울 개최, 차량 소프트웨어 안전·AI 논의",
+              "snippet": "소프트웨어 정의 차량(SDV)의 개발 과정과 차량 운행 이후의 보안·업데이트 관리, 차량용 인공지능(AI)의 안전성 입증을 함께 논의한다. 한국첨단자동차기술협회(KAATA)는 Korean SPICE Network(KSN)가 주최하고 협회가 주관하는 이번 행사의"
             },
             {
               "url": "https://search.kisa.or.kr/search/search.jsp?keyword=%EB%B3%B4%EC%95%88%EA%B0%9C%EB%B0%9C%EA%B0%80%EC%9D%B4%EB%93%9C",
@@ -19913,22 +19913,10 @@
               "snippet": "한국인터넷진흥원에서는 입찰참여 기회균등과 공정한 경쟁을 위해 다음과 같이 제안요청서(규격서)를 사전 공개하오니 참고하시기 바랍니다. o 사업명 : 소프트웨어 개발보안 가이드 개정 용역 o 예산액 : 90,000,000원(부가세"
             },
             {
-              "url": "https://tech.viaweb.co.kr/rb/new.php",
-              "domain": "tech.viaweb.co.kr",
-              "title": "새글 | 서버호스팅 전문 기업 - 비아웹 기술블로그",
-              "snippet": "비아웹 2026-10-06 보안뉴스"
-            },
-            {
-              "url": "https://eraonedu.com/exam/01",
-              "domain": "eraonedu.com",
-              "title": "흥달쌤 공식 홈페이지 이라온에듀 - 정보처리기사 안내 < 시험정보",
-              "snippet": "이에 따라 우수한 프로그램을 개발하여 업무의 효율성을 높이고, 궁극적으로 국가 발전에 이바지하기 위해서 컴퓨터에 관한 전문적인 지식과 기술을 갖춘 사람을 양성할 목적으로 제정된 시험입니다. ..."
-            },
-            {
-              "url": "https://developers.cafe24.com/cs/front/notice/491",
-              "domain": "developers.cafe24.com",
-              "title": "Cafe24 Developers",
-              "snippet": "PHP 공식 보안 권고 및 사용 중인 운영체제·배포업체의 안내에 따라, 이번 취약점의 수정 사항이 반영된 버전 또는 보안 패키지를 적용해 주세요. ... 업데이트 전에는 백업과"
+              "url": "https://medchem.korea.ac.kr/bbs/emse/411/274115/artclView.do",
+              "domain": "medchem.korea.ac.kr",
+              "title": "K2Web Wizard",
+              "snippet": "ㆍ시스템 구축 및 변경 시 보안성 평가 ... (웹 취약점 진단 및 이행점검 등) ... MI Engineer 바로가기 정보보안 바로가기 ... 모집대상 ㆍ기술사무직 공통 :"
             },
             {
               "url": "https://clauseit.net/search/admrul/2100000239022/",
@@ -19937,10 +19925,28 @@
               "snippet": "「정보통신기반 보호법」 및 같은 법 시행령에 따른 주요정보통신기반시설을 관리하는 기관의 장은 「행정안전부 소관 주요정보통신기반시설 보호지침」을 준수하여야 한다. ... ① 각급기관의 장은 다음 각 호의 어느"
             },
             {
-              "url": "https://bulldogwealth.co.kr/%ED%85%8C%EC%8A%AC%EB%9D%BC-fsd-%EB%B6%88%EB%B2%95-%ED%99%9C%EC%84%B1%ED%99%94-80%EB%AA%85-%EC%86%A1%EC%B9%98/",
-              "domain": "bulldogwealth.co.kr",
-              "title": "테슬라 FSD 불법 활성화 80명 송치, 징역 2년·벌금 2000만원…내 차도 위험할까 5가지 확인 - 불독경제",
-              "snippet": "경찰과 국토부는 정식 인증 없이 안전 관련 소프트웨어를 바꾸는 행위 자체를 문제로 봅니다. 주행 여부에 따라 처분이 어떻게 달라지는지는 공식 기준이 발표되지 않았으므로, 해당되는 분은"
+              "url": "https://tech.viaweb.co.kr/rb/new.php",
+              "domain": "tech.viaweb.co.kr",
+              "title": "새글 | 서버호스팅 전문 기업 - 비아웹 기술블로그",
+              "snippet": "비아웹 2026-10-06 보안뉴스"
+            },
+            {
+              "url": "https://developers.cafe24.com/cs/front/notice/491",
+              "domain": "developers.cafe24.com",
+              "title": "Cafe24 Developers",
+              "snippet": "PHP 공식 보안 권고 및 사용 중인 운영체제·배포업체의 안내에 따라, 이번 취약점의 수정 사항이 반영된 버전 또는 보안 패키지를 적용해 주세요. ... 업데이트 전에는 백업과"
+            },
+            {
+              "url": "https://biz.chosun.com/it-science/ict/2026/10/22/EKJSINZBZNF3XLJCMPU7HCMATA/",
+              "domain": "biz.chosun.com",
+              "title": "“최신 버전 업데이트 안 하면 서버 뚫려”… 전 세계 덮친 PHP 보안 위협, 대응책은",
+              "snippet": "국내 보안기업도 취약점 점검·차단 지원 ... 특히 이번 취약점은 개별 홈페이지 프로그램이 아닌 PHP 자체에서 발생한 것으로, 홈페이지 프로그램의 보안 조치를 강화했더라도 서버가 공격에 노출될"
+            },
+            {
+              "url": "https://www.hancomwith.com/about/about.php",
+              "domain": "www.hancomwith.com",
+              "title": "한컴위드",
+              "snippet": "27년간 고객에 의해 검증된 소프트웨어 기업 ... Image: 보안SW부문 우수상 수상 ... 과학기술정보통신부 장관표창 수상 ... Image: FIDO 공식 인증 획득 ... 협회/기관 | 대한상공회의소,"
             },
             {
               "url": "https://sw.daegu.ac.kr/page/2041",
@@ -19949,28 +19955,33 @@
               "snippet": "시스템 생명주기 전반에 걸친 프로젝트 업무를 수행하는 직무로 계획수립, 분석, 설계, 구현, 시험, 운영, 유지보수 등의 업무 수행 ... (예정자) 발표 | 실기원서접수 | 실기시험"
             },
             {
-              "url": "https://intramagazine.com/wiki/one-ui-9/",
-              "domain": "intramagazine.com",
-              "title": "One UI 9 - 인트라매거진",
-              "snippet": "One UI 9의 개인화 AI에는 삼성 Knox 기반 보안 기술이 사용된다. ... 기능에 따라 네트워크와 클라우드, 제3자 서비스가 필요할 수 있으므로 실제 데이터 처리 조건은"
-            },
-            {
-              "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54110159",
-              "domain": "www.saramin.co.kr",
-              "title": "[한국전자기술연구원] 한국전자기술연구원 전문계약직 연구원 채용 공고 - 사람인",
-              "snippet": "(변경 가능) 근무지 채용 ... 연구센터 1 이학, 공학 등 VLM 기반 응용 기술 ... 기술개발 지원 ② 리눅스, 시스템 S/W 개발 지원 ... 데이터·"
+              "url": "https://clauseit.net/search/admrul/2100000285110/",
+              "domain": "clauseit.net",
+              "title": "산업통상부 사이버보안 세부지침 | 법률 AI 플랫폼",
+              "snippet": "다만, 외국인의 출입이 꼭 필요한 경우 국가정보원장과 사전 협의하여 출입을 허용할 수 있다. ③ 각급기관의 장은 해외지사등의 정보통신시설에 대해 외국인의 출입이 꼭 필요하다고 판단하는 경우"
             }
           ]
         }
       ],
       "sources": [
         {
-          "url": "https://search.kisa.or.kr/search/search.jsp?debugQuery=&explainOther=&facet=false&facet_field=cat1&field=all&fl=%2A%2Cscore&hl=on&hl_fl=subject&indent=on&keyword=%ED%8C%A8%EC%B9%98&qt=standard&rows=10&sortField=score&start=0&version=2.2",
-          "status": "fetch_failed"
+          "url": "https://media1.or.kr/2026/10/ksnc-2026-automotive-software-safety-ai-conference/",
+          "status": "no_recent_date",
+          "observed_dates": [
+            "2026-10-29"
+          ]
         },
         {
           "url": "https://search.kisa.or.kr/search/search.jsp?keyword=%EB%B3%B4%EC%95%88%EA%B0%9C%EB%B0%9C%EA%B0%80%EC%9D%B4%EB%93%9C",
           "status": "fetch_failed"
+        },
+        {
+          "url": "https://medchem.korea.ac.kr/bbs/emse/411/274115/artclView.do",
+          "status": "recent_date_observed",
+          "observed_dates": [
+            "2026-10-29",
+            "2026-11-01"
+          ]
         },
         {
           "url": "https://sw.daegu.ac.kr/page/2041",
@@ -20025,7 +20036,7 @@
     "youtube_discovery": {
       "provider": "youtube_data_api_v3",
       "status": "api_unavailable",
-      "checked_at": "2026-10-31T21:02:13.839732+00:00",
+      "checked_at": "2026-11-01T00:01:28.420433+00:00",
       "lookback_days": 90,
       "ranking": "viewCount_within_recent_search_sample",
       "videos": [],
@@ -20054,11 +20065,146 @@
     "analyst": "codex_subscription",
     "discovery_provider": "naver_related_keywords",
     "measured_candidates": 457,
-    "evaluated_candidates": 0,
-    "research_pool_size": 300,
+    "evaluated_candidates": 1,
+    "research_pool_size": 240,
     "selected": [],
     "held": [],
-    "rejected": [],
+    "rejected": [
+      {
+        "keyword": "CE인증",
+        "reason": "no accessible official source supports topic",
+        "decision_diagnostics": {
+          "official_sources": []
+        },
+        "monthly_search": 2260,
+        "organic_provider": "codex_native_search",
+        "organic_query": "CE 인증",
+        "organic_results": [
+          {
+            "url": "https://www.khidi.or.kr/board/view?linkId=13838985&menuId=MENU01834",
+            "domain": "www.khidi.or.kr",
+            "title": "주요 인증제도>무역환경>국가별 정보-제약산업정보포털",
+            "snippet": "헝가리 주요인증제도 : 작성자, 작성일, 조회수, 원문,출처, 정보 제공 ... CE 마크는 유럽시장에 진출하기 위한 필수 인증으로 완구류, 저전압기기, 의료기기, 선박용품, 승강기, 기계류, 통신단말기, 건축자재,"
+          },
+          {
+            "url": "https://isciso.kr/ce%EC%9D%B8%EC%A6%9D-%EB%B3%B5%EC%A0%9C/",
+            "domain": "isciso.kr",
+            "title": "CE인증 (복제) - 국제표준인증진흥원",
+            "snippet": "CE 인증은 유럽연합(EU) 내에서 제품을 유통하기 위해 필수적으로 요구되는 인증으로, 제품이 EU의 안전, 건강, 환경 및 소비자 보호 관련 요구사항을 준수함을 나타냅니다. ... 전기전자, 기계류,"
+          },
+          {
+            "url": "https://standardiso.co.kr/ce%EC%9D%B8%EC%A6%9D-2/",
+            "domain": "standardiso.co.kr",
+            "title": "CE인증 - 한국표준인증진흥원",
+            "snippet": "CE는 프랑스어 “Communaute Europeen” 의 약자이며 영어로는 “European Communities” 이고 유럽공동체 (유럽연합) 를 의미하며, CE 마크를 제품에 부착한다는 의미는 제품 또는 제조자가 EC이사회 관련규정(Regulations) 또는"
+          },
+          {
+            "url": "https://energy.ketep.re.kr/globalenergy/site/main/board/standard_certificate/388",
+            "domain": "energy.ketep.re.kr",
+            "title": "에너지 기술표준/인증",
+            "snippet": "Conformit é Europ é enne MARK(CE MARK) 유럽연합의 통합인증 마크로 유럽연합 내에서 유통되는 소비자 안전관련 제품은 의무적으로 CE 마크 부착이 필수로 요구됨. ... 인증 마크"
+          },
+          {
+            "url": "https://isciso.kr/ce%EC%9D%B8%EC%A6%9D/",
+            "domain": "isciso.kr",
+            "title": "CE인증 - 국제표준인증진흥원",
+            "snippet": "전기전자, 기계류, 의료기기 등 다양한 제품군에 적용되며, EU 시장 접근성을 보장합니다. ... CE 인증을 받은 제품은 EU 27개국과 EEA(유럽경제지역) 국가들에서 자유롭게 유통될 수 있습니다. ..."
+          },
+          {
+            "url": "https://www.fiti.re.kr/web/contents/FT0202020700.do",
+            "domain": "www.fiti.re.kr",
+            "title": "CE | 해외 | 인증·검증 | 주요사업 | FITI시험연구원",
+            "snippet": "* CE 인증은 주로 유럽 연합(EU) 국가들에 필요한 규정으로 요구되며, 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아이슬란드, 아일랜드,"
+          },
+          {
+            "url": "https://www.ktc.re.kr/web_united/task/task.asp?pagen=1733",
+            "domain": "www.ktc.re.kr",
+            "title": "KTC | 한국기계전기전자시험연구원 - 국가공인 시험 인증 기관",
+            "snippet": "유럽연합의 통합 규격 인증 마크로 유럽 내에서 유통되는 소비자 안전 관련제품은 의무적으로 CE마크를 부착CE는 프랑스어인 Conformity European의 약자이며, CE Marking은 제품이 안전, 건강, 환경 그리고"
+          },
+          {
+            "url": "https://www.tnccert.com/official.php/home/info/2122",
+            "domain": "www.tnccert.com",
+            "title": "(주)티앤씨인증원 : CE",
+            "snippet": "해당 제품 및 제조자가 EU의 요구조건에 적합하다는 것을 증명하는 인증제도로 품목군에 따라 강제인증 대상, 임의인증 대상으로 나뉘어 운영되며, EU지역 내 자유로운 유통을 보장하는 인증제도. ..."
+          },
+          {
+            "url": "https://www.sciencetr.com/ko/ce-belgelendirme-nedir-ve-ne-ise-yarar",
+            "domain": "www.sciencetr.com",
+            "title": "CE 인증이란 무엇인가?",
+            "snippet": "신규제 지침에 해당하는 제품 중 CE 라벨(CE 인증서)이 없는 제품은 유럽연합(EU) 국가로 반입할 수 없습니다. ... 이와 관련하여 CE 마킹에 대한 의문이 있거나 CE 인증의"
+          },
+          {
+            "url": "https://www.origin.or.kr/download.do?uuid=6e8dc9e0-a57e-4612-8a35-dd59596e081b.pdf",
+            "domain": "www.origin.or.kr",
+            "title": "CE 인증48)\n\nCE 인증 마크\n\nCE 인증마크는 EU 회원국별로 상이한 규격을 통합시키",
+            "snippet": "CE 인증마크는 EU 회원국별로 상이한 규격을 통합시키고 해당 상품이 EU 공통 규격에 적합하다는 것을 인증하는 표식임 ... ○ CE 마크는 유럽 내에서 유통되는 상품 중"
+          }
+        ],
+        "search_review": {
+          "version": 1,
+          "query": "CE인증",
+          "executed_query": "CE 인증",
+          "provider": "codex_native_search",
+          "checked_at": "2026-11-01T00:01:28.420433+00:00",
+          "raw_sha256": "378a49802ef2ff32f8d0fb257bb66df4c7bea85f6e5643903c3861d5f4e508a7",
+          "decisions": [
+            {
+              "result_index": 0,
+              "relevant": true,
+              "quote": "헝가리 주요인증제도 : 작성자, 작성일, 조회수, 원문,출처, 정보 제공 ... CE 마크는 유럽시장에 진출하기 위한 필수 인증으로 완구류, 저전압기기, 의료기기, 선박용품, 승강기, 기계류, 통신단말기, 건축자재,"
+            },
+            {
+              "result_index": 1,
+              "relevant": true,
+              "quote": "CE 인증은 유럽연합(EU) 내에서 제품을 유통하기 위해 필수적으로 요구되는 인증으로, 제품이 EU의 안전, 건강, 환경 및 소비자 보호 관련 요구사항을 준수함을 나타냅니다. ... 전기전자, 기계류,"
+            },
+            {
+              "result_index": 2,
+              "relevant": true,
+              "quote": "CE는 프랑스어 “Communaute Europeen” 의 약자이며 영어로는 “European Communities” 이고 유럽공동체 (유럽연합) 를 의미하며, CE 마크를 제품에 부착한다는 의미는 제품 또는 제조자가 EC이사회 관련규정(Regulations) 또는"
+            },
+            {
+              "result_index": 3,
+              "relevant": true,
+              "quote": "Conformit é Europ é enne MARK(CE MARK) 유럽연합의 통합인증 마크로 유럽연합 내에서 유통되는 소비자 안전관련 제품은 의무적으로 CE 마크 부착이 필수로 요구됨. ... 인증 마크"
+            },
+            {
+              "result_index": 4,
+              "relevant": true,
+              "quote": "전기전자, 기계류, 의료기기 등 다양한 제품군에 적용되며, EU 시장 접근성을 보장합니다. ... CE 인증을 받은 제품은 EU 27개국과 EEA(유럽경제지역) 국가들에서 자유롭게 유통될 수 있습니다. ..."
+            },
+            {
+              "result_index": 5,
+              "relevant": true,
+              "quote": "* CE 인증은 주로 유럽 연합(EU) 국가들에 필요한 규정으로 요구되며, 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아이슬란드, 아일랜드,"
+            },
+            {
+              "result_index": 6,
+              "relevant": true,
+              "quote": "유럽연합의 통합 규격 인증 마크로 유럽 내에서 유통되는 소비자 안전 관련제품은 의무적으로 CE마크를 부착CE는 프랑스어인 Conformity European의 약자이며, CE Marking은 제품이 안전, 건강, 환경 그리고"
+            },
+            {
+              "result_index": 7,
+              "relevant": true,
+              "quote": "해당 제품 및 제조자가 EU의 요구조건에 적합하다는 것을 증명하는 인증제도로 품목군에 따라 강제인증 대상, 임의인증 대상으로 나뉘어 운영되며, EU지역 내 자유로운 유통을 보장하는 인증제도. ..."
+            },
+            {
+              "result_index": 8,
+              "relevant": true,
+              "quote": "신규제 지침에 해당하는 제품 중 CE 라벨(CE 인증서)이 없는 제품은 유럽연합(EU) 국가로 반입할 수 없습니다. ... 이와 관련하여 CE 마킹에 대한 의문이 있거나 CE 인증의"
+            },
+            {
+              "result_index": 9,
+              "relevant": true,
+              "quote": "CE 인증마크는 EU 회원국별로 상이한 규격을 통합시키고 해당 상품이 EU 공통 규격에 적합하다는 것을 인증하는 표식임 ... ○ CE 마크는 유럽 내에서 유통되는 상품 중"
+            }
+          ]
+        },
+        "evidence_mode": "serp",
+        "verified_sources": []
+      }
+    ],
     "excluded_keywords": [
       "1tb외장하드",
       "ai건강도우미챗봇",
@@ -20073,7 +20219,6 @@
       "pt면접",
       "vlookup",
       "가벼운무선청소기",
-      "건강보험료조회",
       "게임파인더gamefinder",
       "경력기술서",
       "경영지도사자격증",
@@ -20120,7 +20265,6 @@
       "이력서작성법",
       "자궁경부암검사",
       "장애인일자리정책제도연구를위한업무협약체결",
-      "저소음청소기",
       "저혈압수치",
       "전기기사과목",
       "전기기사시험일정",
@@ -20138,9 +20282,7 @@
       "집배원이전달하는그냥드림",
       "청소년상담사자격증",
       "청평고등학교훈련성과공유간담회",
-      "컴퓨터자격증종류",
       "코세척방법",
-      "콘드로이친효능",
       "콜레스테롤낮추는방법",
       "퇴직금중간정산",
       "파워포인트뷰어",
@@ -20157,7 +20299,7 @@
       "제5차한-캐나다과학기술혁신공동위원회",
       "캘리브레이션"
     ],
-    "research_stop_reason": "round_limit",
+    "research_stop_reason": "time_budget",
     "retry_keywords": [
       "파이썬설치",
       "생성형AI종류"
@@ -20279,7 +20421,7 @@
           },
           {
             "keyword": "평판조회",
-            "reason_code": "category_mismatch",
+            "reason_code": "duplicate_intent",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -20319,7 +20461,7 @@
           },
           {
             "keyword": "갤럭시S24",
-            "reason_code": "insufficient_specificity",
+            "reason_code": "purchase_intent_unclear",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -20409,7 +20551,7 @@
           },
           {
             "keyword": "제품안전정보센터",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -20630,7 +20772,7 @@
           },
           {
             "keyword": "CRP",
-            "reason_code": "category_mismatch",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -20795,7 +20937,7 @@
           },
           {
             "keyword": "데이터구매",
-            "reason_code": "purchase_intent_unclear",
+            "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -20975,15 +21117,16 @@
           "A6000",
           "데이터분석가"
         ],
-        "proposals": [],
-        "measured_fallback": false,
-        "no_eligible_proposal": true,
-        "skipped": [
+        "proposals": [
           {
             "keyword": "CE인증",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
+            "reason": "네이버 월 2,260회 수요가 있어 기기의 CE 표시 의미와 적용 대상·적합성 확인 절차를 공식 문서로 조사할 가치가 있다.",
+            "search_query": "CE 인증"
+          }
+        ],
+        "measured_fallback": false,
+        "no_eligible_proposal": false,
+        "skipped": [
           {
             "keyword": "오스람",
             "reason_code": "purchase_intent_unclear",
@@ -21021,7 +21164,7 @@
           },
           {
             "keyword": "AI비서",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21071,7 +21214,7 @@
           },
           {
             "keyword": "반도체회사",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21086,7 +21229,7 @@
           },
           {
             "keyword": "AI사이트",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21121,7 +21264,7 @@
           },
           {
             "keyword": "이미지AI",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21171,7 +21314,7 @@
           },
           {
             "keyword": "AI그림",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21206,7 +21349,7 @@
           },
           {
             "keyword": "AI게임",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21266,7 +21409,7 @@
           },
           {
             "keyword": "사진AI",
-            "reason_code": "scope_too_broad",
+            "reason_code": "insufficient_specificity",
             "kind": "model_shortlist_opinion"
           },
           {
@@ -21279,385 +21422,28 @@
             "reason_code": "category_mismatch",
             "kind": "model_shortlist_opinion"
           }
-        ],
-        "research_fallback": []
-      },
-      {
-        "round": 4,
-        "offered_keywords": [
-          "PST",
-          "중장년일자리",
-          "ALLIED",
-          "서울체험",
-          "AI광고",
-          "H200",
-          "전자부품",
-          "인피니언",
-          "AI검색",
-          "AI스튜디오",
-          "AI사진편집",
-          "AI동영상제작",
-          "AICC",
-          "학술논문",
-          "AI배우기",
-          "CVD",
-          "AI툴",
-          "표절검사",
-          "블로그수익화",
-          "정보보안",
-          "무료논문사이트",
-          "글러브박스",
-          "포토샵AI",
-          "단열페인트",
-          "OCR스캔",
-          "AI챗",
-          "AI부업",
-          "폴리셔",
-          "AI엑스포",
-          "LMM",
-          "AI플랫폼",
-          "문서작성알바",
-          "산업용가습기",
-          "코그넥스",
-          "AI뉴스",
-          "박사학위",
-          "POLISHING",
-          "치과예약",
-          "SAFETYKOREA",
-          "스팟조명",
-          "PLC교육",
-          "K디지털트레이닝",
-          "R프로그램",
-          "야간대학원",
-          "STABLEDIFFUSION",
-          "AI이미지만들기",
-          "대학원대학교",
-          "참고문헌",
-          "그래픽디자이너",
-          "AI홈페이지제작",
-          "문서스캔",
-          "플로우AI",
-          "직장인대학원",
-          "오픈API",
-          "배관공사",
-          "AI회사",
-          "챗GPT플러스",
-          "추계학술대회",
-          "학위논문검색",
-          "클라우드컴퓨팅"
-        ],
-        "proposals": [],
-        "measured_fallback": false,
-        "no_eligible_proposal": true,
-        "skipped": [
-          {
-            "keyword": "PST",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "중장년일자리",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "ALLIED",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "서울체험",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI광고",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "H200",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "전자부품",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "인피니언",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI검색",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI스튜디오",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI사진편집",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI동영상제작",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AICC",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "학술논문",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI배우기",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "CVD",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI툴",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "표절검사",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "블로그수익화",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "정보보안",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "무료논문사이트",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "글러브박스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "포토샵AI",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "단열페인트",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "OCR스캔",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI챗",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI부업",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "폴리셔",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI엑스포",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "LMM",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI플랫폼",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "문서작성알바",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "산업용가습기",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "코그넥스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI뉴스",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "박사학위",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "POLISHING",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "치과예약",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "SAFETYKOREA",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "스팟조명",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "PLC교육",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "K디지털트레이닝",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "R프로그램",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "야간대학원",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "STABLEDIFFUSION",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI이미지만들기",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "대학원대학교",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "참고문헌",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "그래픽디자이너",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI홈페이지제작",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "문서스캔",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "플로우AI",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "직장인대학원",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "오픈API",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "배관공사",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "AI회사",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "챗GPT플러스",
-            "reason_code": "insufficient_specificity",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "추계학술대회",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "학위논문검색",
-            "reason_code": "category_mismatch",
-            "kind": "model_shortlist_opinion"
-          },
-          {
-            "keyword": "클라우드컴퓨팅",
-            "reason_code": "scope_too_broad",
-            "kind": "model_shortlist_opinion"
-          }
-        ],
-        "research_fallback": []
+        ]
       }
     ],
     "ranked_candidates": [],
-    "candidate_decisions": [],
+    "candidate_decisions": [
+      {
+        "keyword": "CE인증",
+        "status": "rejected",
+        "reason": "no accessible official source supports topic",
+        "monthly_search": 2260,
+        "organic_query": "CE 인증"
+      }
+    ],
     "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
+      {
+        "keyword": "CE인증",
+        "reason_code": "temporary_failure",
+        "failed_at": "2026-11-01T00:01:28.420433+00:00",
+        "retry_after": "2026-11-01T06:01:28.420433+00:00",
+        "attempts": 1
+      },
       {
         "keyword": "제5차 한-캐나다 과학기술혁신공동위원회",
         "reason_code": "intent_mismatch",
@@ -22317,37 +22103,55 @@
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6742
+        "elapsed_ms": 9457
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6715
+        "elapsed_ms": 7723
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 15320
+        "elapsed_ms": 6771
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 16755
+        "elapsed_ms": 15803
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 19651
+        "elapsed_ms": 14311
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 16657
+        "elapsed_ms": 23770
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 5983
+      },
+      {
+        "stage": "search_review",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 5909
+      },
+      {
+        "stage": "official_research",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 28258
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -22366,22 +22170,22 @@
             "snippet": "공식 자료를 바탕으로 답하는 모비전트와 캐릭터 관리, 숙제표, 크루 플래너, 시즌 2 도감을 이용해보세요. ... 공지 모비노기용 AI 에이전트인 모비전트 출시 ... 도감 룬, 인챈트,"
           },
           {
+            "url": "https://aikorea24.kr/chronicle/",
+            "domain": "aikorea24.kr",
+            "title": "AI 주요 사건 타임라인 — 2024~2026 AI 연대기 | AI코리아24",
+            "snippet": "#Meta#Muse#AI 에이전트#실행형 AI 9.01🤖 모델 출시 Anthropic, Claude Fable 5.1·Mythos 5.1 출시 Anthropic이 Claude Fable 5.1과 Mythos 5.1을 동시 출시. ... AI 사업 부문을 별도"
+          },
+          {
             "url": "https://www.i-boss.co.kr/ab-7460?PB_1330918089=45&nic=%EB%89%B4%EC%8A%A4%EA%B4%91%EA%B3%B5",
             "domain": "www.i-boss.co.kr",
             "title": "뉴스광공님의 활동로그 - 게시글",
             "snippet": "구글, 검색에 제미나이 3.5·AI 에이전트 도입 구글은 I/O에서 전 세계 이용자를 대상으로 'AI 모드'의 기본 모델을 제미나이 3.5 플래시 로 업그레이드했다고 발표했으며, 해당 모드는 출시"
           },
           {
-            "url": "https://aiart386.tistory.com/413",
-            "domain": "aiart386.tistory.com",
-            "title": "구글 제미나이 4 아르곤 출시 일정은? 후속 모델 ‘카본’ 내부 테스트와 Claude Opus 5.5 성능 비교",
-            "snippet": "Gemini 기업용 에이전트 발표 | 10월 8일 | 공식 발표 ... * 아르곤은 유료 API 고객과 Google AI Ultra 구독자부터 순차 공개할 예정이지만, 10월 10일"
-          },
-          {
-            "url": "https://mediadream.me/church-media-ai-agents-2026-10/",
-            "domain": "mediadream.me",
-            "title": "AI 에이전트 비교 2026｜뮤즈·피클·제미나이 스파크·ChatGPT dots",
-            "snippet": "뮤즈·피클·제미나이 스파크·ChatGPT dots·Claude Duet까지, AI 에이전트 대격돌을 가격·특장점으로 비교하고 지금 설치 가능한 피클과 VPN 우회 가입이 필요한 뮤즈 소식을 교회 사역자 관점으로 정리했습니다. ... 서비스"
+            "url": "https://m.namu.moe/w/%EC%97%90%EC%9D%B4%EB%8B%B7",
+            "domain": "m.namu.moe",
+            "title": "에이닷",
+            "snippet": "SK텔레콤 에서 2022년 5월에 공개한 AI 에이전트 서비스. 한국어 GPT 기반이며 초거대 언어모델(LLM)[2]과 ChatGPT가 하이브리드로 운영되는 대화형 AI 서비스로, 이용자의 질문과 요청에 맞춰 다양한 정보를"
           },
           {
             "url": "https://event-us.kr/modu/event",
@@ -22390,22 +22194,16 @@
             "snippet": "아이펠 AI 에이전트 2기 ... [모두의연구소] 2027년 채용 담당자가 주목하는 NEW 스펙, 실전 AI 에이전트! ... 모두의연구소 '인공지능(AI) 모델 활용 백엔드 개발 과정 교육생 모집"
           },
           {
-            "url": "https://internal.pickstock.ai/calendar?theme=ai-agent",
-            "domain": "internal.pickstock.ai",
-            "title": "AI 에이전트 관련 증시 일정 캘린더 | FOMC·CPI·금통위·실적 발표와 관련주 | 픽스톡",
-            "snippet": "# AI 에이전트 증시 일정 캘린더 ... ★★★ 중요도: 시총이 크거나 시장 전체에 영향이 큰 일정일수록 별이 많아요 · 실적 표시(한국시간): 새벽 미국 장 마감"
+            "url": "https://www.coursium.ai/ko/blog/myujeu-seupakeu",
+            "domain": "www.coursium.ai",
+            "title": "뮤즈 스파크란? 메타 AI 모델과 \"뮤즈\" 앱, 헷갈리는 이름부터 정리",
+            "snippet": "메타 AI 앱과 meta.ai가 이 모델로 바뀌었어요. ... 06 9월 8일: 에이전트 앱 뮤즈 출시. ... 메타가 한국 출시 일정을 발표한 적도 없어요."
           },
           {
-            "url": "https://ai.trend.imaginationgroup.co.kr/",
-            "domain": "ai.trend.imaginationgroup.co.kr",
-            "title": "AI TREND — 실시간 AI 성능 지표",
-            "snippet": "공식 상태판을 1분마다 확인하고 이용자 제보를 나란히 둡니다. ... AI 모델 IQ 랭킹 이미지 생성 랭킹 영상 생성 랭킹 코딩 랭킹 응답속도 랭킹 AI 선호도"
-          },
-          {
-            "url": "https://polarad.co.kr/marketing-news/category/ai-news",
-            "domain": "polarad.co.kr",
-            "title": "AI 뉴스 | 폴라애드",
-            "snippet": "OpenAI, Google, Anthropic 등 주요 AI 기업의 최신 모델 출시, 서비스 업데이트, 기술 동향을 빠르게 전달합니다. ... 한국어 시리 AI는 이전 연락을 찾아 이메일 초안을"
+            "url": "https://aiart386.tistory.com/413",
+            "domain": "aiart386.tistory.com",
+            "title": "구글 제미나이 4 아르곤 출시 일정은? 후속 모델 ‘카본’ 내부 테스트와 Claude Opus 5.5 성능 비교",
+            "snippet": "Gemini 기업용 에이전트 발표 | 10월 8일 | 공식 발표 ... * 아르곤은 유료 API 고객과 Google AI Ultra 구독자부터 순차 공개할 예정이지만, 10월 10일"
           },
           {
             "url": "https://ad.re.kr/trends",
@@ -22414,10 +22212,16 @@
             "snippet": "이번 주 광고 플랫폼 업데이트: 구글·틱톡·메타의 AI 광고/요약 기능 강화 광고 운영 자동화와 AI 요약·추천 기능이 주요 플랫폼 업데이트의 중심으로 부상.2026-10-31자세히 보기 →에이전틱(Agentic) AI 확산:"
           },
           {
-            "url": "https://aipie.kr/",
-            "domain": "aipie.kr",
-            "title": "AIPie | AI 서비스 큐레이션·랭킹·비교",
-            "snippet": "브랜더진 0.0 브랜드가 원하는 조건에 맞는 크리에이터를 찾고 직접 섭외하는 플랫폼 크리에이터 마케팅협찬 관리콘텐츠 제작 그로우킷 0.0 네이버 광고·플레이스·블로그 운영을 한 화면에서 관리하는 마케팅 도구"
+            "url": "https://airound.kr/",
+            "domain": "airound.kr",
+            "title": "AI:ROUND | 국내 AI 테크 행사",
+            "snippet": "공식 출처를 확인하고 승인한 서울·경기 AI 테크 행사를 한곳에서 발견하세요. ... (화) · 서울 AIoT Korea Exhibition 2026 | AIoT 국제전시회 서울 강남구 영동대로 513"
+          },
+          {
+            "url": "https://polarad.co.kr/marketing-news/category/ai-news",
+            "domain": "polarad.co.kr",
+            "title": "AI 뉴스 | 폴라애드",
+            "snippet": "OpenAI, Google, Anthropic 등 주요 AI 기업의 최신 모델 출시, 서비스 업데이트, 기술 동향을 빠르게 전달합니다. ... 한국어 시리 AI는 이전 연락을 찾아 이메일 초안을"
           }
         ]
       },
@@ -22429,10 +22233,10 @@
         "provider": "codex_native_search",
         "results": [
           {
-            "url": "https://search.kisa.or.kr/search/search.jsp?debugQuery=&explainOther=&facet=false&facet_field=cat1&field=all&fl=%2A%2Cscore&hl=on&hl_fl=subject&indent=on&keyword=%ED%8C%A8%EC%B9%98&qt=standard&rows=10&sortField=score&start=0&version=2.2",
-            "domain": "search.kisa.or.kr",
-            "title": "KISA 홈페이지 통합검색",
-            "snippet": "한국인터넷진흥원에서는 입찰참여 기회균등과 공정한 경쟁을 위해 다음과 같이 제안요청서(규격서)를 사전 공개하오니 참고하시기 바랍니다. o 사업명 : 보안 취약점 검증 및 패치 후보군 생성 기술 개발"
+            "url": "https://media1.or.kr/2026/10/ksnc-2026-automotive-software-safety-ai-conference/",
+            "domain": "media1.or.kr",
+            "title": "KSNC 2026 서울 개최, 차량 소프트웨어 안전·AI 논의",
+            "snippet": "소프트웨어 정의 차량(SDV)의 개발 과정과 차량 운행 이후의 보안·업데이트 관리, 차량용 인공지능(AI)의 안전성 입증을 함께 논의한다. 한국첨단자동차기술협회(KAATA)는 Korean SPICE Network(KSN)가 주최하고 협회가 주관하는 이번 행사의"
           },
           {
             "url": "https://search.kisa.or.kr/search/search.jsp?keyword=%EB%B3%B4%EC%95%88%EA%B0%9C%EB%B0%9C%EA%B0%80%EC%9D%B4%EB%93%9C",
@@ -22441,22 +22245,10 @@
             "snippet": "한국인터넷진흥원에서는 입찰참여 기회균등과 공정한 경쟁을 위해 다음과 같이 제안요청서(규격서)를 사전 공개하오니 참고하시기 바랍니다. o 사업명 : 소프트웨어 개발보안 가이드 개정 용역 o 예산액 : 90,000,000원(부가세"
           },
           {
-            "url": "https://tech.viaweb.co.kr/rb/new.php",
-            "domain": "tech.viaweb.co.kr",
-            "title": "새글 | 서버호스팅 전문 기업 - 비아웹 기술블로그",
-            "snippet": "비아웹 2026-10-06 보안뉴스"
-          },
-          {
-            "url": "https://eraonedu.com/exam/01",
-            "domain": "eraonedu.com",
-            "title": "흥달쌤 공식 홈페이지 이라온에듀 - 정보처리기사 안내 < 시험정보",
-            "snippet": "이에 따라 우수한 프로그램을 개발하여 업무의 효율성을 높이고, 궁극적으로 국가 발전에 이바지하기 위해서 컴퓨터에 관한 전문적인 지식과 기술을 갖춘 사람을 양성할 목적으로 제정된 시험입니다. ..."
-          },
-          {
-            "url": "https://developers.cafe24.com/cs/front/notice/491",
-            "domain": "developers.cafe24.com",
-            "title": "Cafe24 Developers",
-            "snippet": "PHP 공식 보안 권고 및 사용 중인 운영체제·배포업체의 안내에 따라, 이번 취약점의 수정 사항이 반영된 버전 또는 보안 패키지를 적용해 주세요. ... 업데이트 전에는 백업과"
+            "url": "https://medchem.korea.ac.kr/bbs/emse/411/274115/artclView.do",
+            "domain": "medchem.korea.ac.kr",
+            "title": "K2Web Wizard",
+            "snippet": "ㆍ시스템 구축 및 변경 시 보안성 평가 ... (웹 취약점 진단 및 이행점검 등) ... MI Engineer 바로가기 정보보안 바로가기 ... 모집대상 ㆍ기술사무직 공통 :"
           },
           {
             "url": "https://clauseit.net/search/admrul/2100000239022/",
@@ -22465,10 +22257,28 @@
             "snippet": "「정보통신기반 보호법」 및 같은 법 시행령에 따른 주요정보통신기반시설을 관리하는 기관의 장은 「행정안전부 소관 주요정보통신기반시설 보호지침」을 준수하여야 한다. ... ① 각급기관의 장은 다음 각 호의 어느"
           },
           {
-            "url": "https://bulldogwealth.co.kr/%ED%85%8C%EC%8A%AC%EB%9D%BC-fsd-%EB%B6%88%EB%B2%95-%ED%99%9C%EC%84%B1%ED%99%94-80%EB%AA%85-%EC%86%A1%EC%B9%98/",
-            "domain": "bulldogwealth.co.kr",
-            "title": "테슬라 FSD 불법 활성화 80명 송치, 징역 2년·벌금 2000만원…내 차도 위험할까 5가지 확인 - 불독경제",
-            "snippet": "경찰과 국토부는 정식 인증 없이 안전 관련 소프트웨어를 바꾸는 행위 자체를 문제로 봅니다. 주행 여부에 따라 처분이 어떻게 달라지는지는 공식 기준이 발표되지 않았으므로, 해당되는 분은"
+            "url": "https://tech.viaweb.co.kr/rb/new.php",
+            "domain": "tech.viaweb.co.kr",
+            "title": "새글 | 서버호스팅 전문 기업 - 비아웹 기술블로그",
+            "snippet": "비아웹 2026-10-06 보안뉴스"
+          },
+          {
+            "url": "https://developers.cafe24.com/cs/front/notice/491",
+            "domain": "developers.cafe24.com",
+            "title": "Cafe24 Developers",
+            "snippet": "PHP 공식 보안 권고 및 사용 중인 운영체제·배포업체의 안내에 따라, 이번 취약점의 수정 사항이 반영된 버전 또는 보안 패키지를 적용해 주세요. ... 업데이트 전에는 백업과"
+          },
+          {
+            "url": "https://biz.chosun.com/it-science/ict/2026/10/22/EKJSINZBZNF3XLJCMPU7HCMATA/",
+            "domain": "biz.chosun.com",
+            "title": "“최신 버전 업데이트 안 하면 서버 뚫려”… 전 세계 덮친 PHP 보안 위협, 대응책은",
+            "snippet": "국내 보안기업도 취약점 점검·차단 지원 ... 특히 이번 취약점은 개별 홈페이지 프로그램이 아닌 PHP 자체에서 발생한 것으로, 홈페이지 프로그램의 보안 조치를 강화했더라도 서버가 공격에 노출될"
+          },
+          {
+            "url": "https://www.hancomwith.com/about/about.php",
+            "domain": "www.hancomwith.com",
+            "title": "한컴위드",
+            "snippet": "27년간 고객에 의해 검증된 소프트웨어 기업 ... Image: 보안SW부문 우수상 수상 ... 과학기술정보통신부 장관표창 수상 ... Image: FIDO 공식 인증 획득 ... 협회/기관 | 대한상공회의소,"
           },
           {
             "url": "https://sw.daegu.ac.kr/page/2041",
@@ -22477,17 +22287,32 @@
             "snippet": "시스템 생명주기 전반에 걸친 프로젝트 업무를 수행하는 직무로 계획수립, 분석, 설계, 구현, 시험, 운영, 유지보수 등의 업무 수행 ... (예정자) 발표 | 실기원서접수 | 실기시험"
           },
           {
-            "url": "https://intramagazine.com/wiki/one-ui-9/",
-            "domain": "intramagazine.com",
-            "title": "One UI 9 - 인트라매거진",
-            "snippet": "One UI 9의 개인화 AI에는 삼성 Knox 기반 보안 기술이 사용된다. ... 기능에 따라 네트워크와 클라우드, 제3자 서비스가 필요할 수 있으므로 실제 데이터 처리 조건은"
-          },
-          {
-            "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54110159",
-            "domain": "www.saramin.co.kr",
-            "title": "[한국전자기술연구원] 한국전자기술연구원 전문계약직 연구원 채용 공고 - 사람인",
-            "snippet": "(변경 가능) 근무지 채용 ... 연구센터 1 이학, 공학 등 VLM 기반 응용 기술 ... 기술개발 지원 ② 리눅스, 시스템 S/W 개발 지원 ... 데이터·"
+            "url": "https://clauseit.net/search/admrul/2100000285110/",
+            "domain": "clauseit.net",
+            "title": "산업통상부 사이버보안 세부지침 | 법률 AI 플랫폼",
+            "snippet": "다만, 외국인의 출입이 꼭 필요한 경우 국가정보원장과 사전 협의하여 출입을 허용할 수 있다. ③ 각급기관의 장은 해외지사등의 정보통신시설에 대해 외국인의 출입이 꼭 필요하다고 판단하는 경우"
           }
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "테크",
+        "stage": "latest_issue_source",
+        "url": "https://media1.or.kr/2026/10/ksnc-2026-automotive-software-safety-ai-conference/",
+        "status": "no_recent_date",
+        "observed_dates": [
+          "2026-10-29"
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "테크",
+        "stage": "latest_issue_source",
+        "url": "https://medchem.korea.ac.kr/bbs/emse/411/274115/artclView.do",
+        "status": "recent_date_observed",
+        "observed_dates": [
+          "2026-10-29",
+          "2026-11-01"
         ]
       },
       {
@@ -22529,18 +22354,52 @@
           "2025-11-21",
           "2025-12-24"
         ]
+      },
+      {
+        "keyword": "CE 인증",
+        "category": "테크",
+        "stage": "source_fetch",
+        "url": "https://www.khidi.or.kr/board/view?linkId=13838985&menuId=MENU01834",
+        "outcome": "institutional_source_for_technical_question"
+      },
+      {
+        "keyword": "CE 인증",
+        "category": "테크",
+        "stage": "source_fetch",
+        "url": "https://www.origin.or.kr/download.do?uuid=6e8dc9e0-a57e-4612-8a35-dd59596e081b.pdf",
+        "outcome": "institutional_source_for_technical_question"
+      },
+      {
+        "keyword": "CE인증",
+        "category": "테크",
+        "stage": "native_source_research",
+        "locators": [
+          {
+            "url": "https://m.ktr.or.kr/certification/overseas/contentsid/2326/index.do",
+            "origin": "model_reported_locator"
+          }
+        ],
+        "searched": true,
+        "coverage_gaps": null
+      },
+      {
+        "keyword": "CE인증",
+        "category": "테크",
+        "stage": "source_fetch",
+        "url": "https://m.ktr.or.kr/certification/overseas/contentsid/2326/index.do",
+        "outcome": "institutional_source_for_technical_question"
       }
     ],
     "selection_outcome": "research_budget_exhausted",
     "selection_funnel": {
       "measured": 457,
-      "pool": 300,
-      "shortlist_offered_unique": 240,
-      "evaluated": 0,
+      "pool": 240,
+      "shortlist_offered_unique": 180,
+      "evaluated": 1,
       "held": 0,
-      "rejected": 0,
+      "rejected": 1,
       "selected": 0,
-      "stop_reason": "round_limit"
+      "stop_reason": "time_budget"
     }
   }
 }

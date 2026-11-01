@@ -47943,7 +47943,7 @@
     "keywords": [
       "콘드로이친효능"
     ],
-    "status": "pending",
+    "status": "held_draft",
     "opportunity_evidence": {
       "version": 2,
       "query": "콘드로이친효능",
@@ -48104,7 +48104,11 @@
     },
     "score": 81.83,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2073,
+    "url": "https://trendpulse.blog/?p=2073",
+    "post_status": "draft",
+    "held_at": "2026-11-01T00:08:13.106046"
   },
   {
     "keyword": "건강보험료조회",

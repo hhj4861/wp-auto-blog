@@ -49748,7 +49748,7 @@
     "keywords": [
       "대한적십자사 인천사할린동포복지회관 직원(요양보호사) 채용 공고"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-11-01T21:50:12.765778+00:00",
@@ -49840,6 +49840,10 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2076,
+    "url": "https://trendpulse.blog/redcross-incheon-caregiver-recruitment-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-11-02T00:07:47.103342"
   }
 ]

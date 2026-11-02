@@ -1405,5 +1405,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-10-31T09:06:10.140195+00:00"
+  },
+  {
+    "key": "대한적십자사인천사할린동포복지회관직원요양보호사채용공고",
+    "keyword": "대한적십자사 인천사할린동포복지회관 직원(요양보호사) 채용 공고",
+    "topic": "대한적십자사 인천사할린동포복지회관 직원(요양보호사) 채용 공고: 11월 2일 접수 시작, 지원 조건과 일정",
+    "category": "취업",
+    "post_id": 2076,
+    "url": "https://trendpulse.blog/redcross-incheon-caregiver-recruitment-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-02T00:07:45.756317+00:00"
   }
 ]

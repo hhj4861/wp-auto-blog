@@ -1,7 +1,7 @@
 {
   "취업": {
     "category": "취업",
-    "selected_at": "2026-11-02T12:12:36.034301+00:00",
+    "selected_at": "2026-11-02T17:01:44.329999+00:00",
     "selected": [],
     "held": [],
     "rejected": [],
@@ -1911,17 +1911,72 @@
         "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 16416
+        "elapsed_ms": 11991
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 14695
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 23312
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "error",
+        "code": "invalid_schema",
+        "elapsed_ms": 23313,
+        "validation": {
+          "reason": "source_duplicate",
+          "row_index": 1
+        }
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 25869
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 2,
+        "status": "returned",
+        "elapsed_ms": 25871
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 13534
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "error",
+        "code": "unclassified",
+        "elapsed_ms": 3810
+      },
+      {
+        "stage": "topic_suitability",
+        "attempt": 1,
+        "status": "error",
+        "code": "unclassified",
+        "elapsed_ms": 3810
       },
       {
         "stage": "topic_plan",
         "attempt": 1,
         "status": "error",
         "code": "unclassified",
-        "elapsed_ms": 3828
+        "elapsed_ms": 1150
       }
     ],
-    "analysis_recovery_attempts": 0,
+    "analysis_recovery_attempts": 1,
     "source_discovery_audit": [],
     "selection_outcome": "analysis_unavailable",
     "selection_funnel": {
@@ -8575,7 +8630,7 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-11-02T12:12:36.116220+00:00",
+    "selected_at": "2026-11-02T17:01:44.387599+00:00",
     "seeds": [],
     "selection_version": 8,
     "selection_scope": "latest_issue_listing",
@@ -8599,20 +8654,6 @@
         "title": "이재용 삼성전자 회장, 미래 반도체 패키징 기술 일본 현장 점검",
         "lead": "이재용 삼성전자 회장이 1일 일본 요코하마에 위치한 첨단 반도체 패키징 연구거점 ‘Advanced Package Lab(APL)’을 찾아 차세대 패키징 요소기술 연구 현황을 점검했다. 이 회장은 APL 연구진과 함께 첨단 패키지 소재∙공정 요소기술 개발 현황과 일본 소재∙부품∙장비 업계와의 협력 방안을 논의했으며, AI 시대 반도체 경쟁력의 핵심인 첨단 패키징 기술 확보를 당부했다. APL은 지난 9월 8일 공식 개소한 삼성전자의 […]",
         "published": "2026-11-02",
-        "publisher": "samsung_newsroom"
-      },
-      {
-        "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-ai-%ea%b0%80%ec%a0%84-%ed%81%ac%eb%a6%ac%ec%97%90%ec%9d%b4%ed%84%b0-%ec%82%bc%ec%84%b1-%ed%81%ac%eb%a3%a8-%ec%9a%b4%ec%98%81",
-        "title": "삼성전자, AI 가전 크리에이터 ‘삼성 크루’ 운영",
-        "lead": "삼성전자가 AI 가전 크리에이터 ‘삼성 크루(Samsung Crew)’와 함께 ‘삼성 AI 가전’을 주제로 소비자 공감 콘텐츠 확산에 나선다. 새롭게 출범하는 ‘삼성 크루’는 유튜브·인스타그램·블로그 등에서 리빙·인테리어·육아·일상 등 다양한 라이프스타일을 주제로 활동해 온 크리에이터들로 구성됐다. 이들은 삼성 가전을 오랫동안 사용해 온 경험을 바탕으로, 삼성 AI 가전이 일상에 가져다주는 변화를 다양한 콘텐츠로 선보일 예정이다. 삼성전자는 30일 청담 CGV 더 […]",
-        "published": "2026-11-01",
-        "publisher": "samsung_newsroom"
-      },
-      {
-        "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1-%ec%83%98-%ec%98%ac%ed%8a%b8%eb%a8%bc%ea%b3%bc-ai-%ed%98%81%ec%8b%a0-%ea%b0%84%eb%8b%b4%ed%9a%8c-%ea%b0%9c%ec%b5%9c-ai-driven-%ea%b2%bd%ec%98%81-%ea%b0%95%ed%99%94",
-        "title": "삼성, 샘 올트먼과 ‘AI 혁신’ 간담회 개최 ‘AI Driven’ 경영 강화… 전사적 AX 추진 가속",
-        "lead": "삼성, 샘 올트먼 CEO 초청해 AI 시대 미래 경영 전략 논의 삼성은 31일 경기도 용인 삼성인력개발원에서 삼성전자 등 주요 관계사 사장단을 대상으로 샘 올트먼(Sam Altman) OpenAI CEO 초청 간담회를 개최했다. 이날 간담회에는 전자·금융·바이오 등 삼성 관계사 사장단 50여 명이 참석했으며, 샘 올트먼 CEO와 함께 ‘AI가 바꿀 다음 10년, 기업의 선택’을 주제로 진행됐다. 삼성 사장단과 샘 […]",
-        "published": "2026-11-01",
         "publisher": "samsung_newsroom"
       }
     ],
@@ -9012,21 +9053,21 @@
         "attempt": 1,
         "status": "error",
         "code": "unclassified",
-        "elapsed_ms": 1425
+        "elapsed_ms": 1180
       },
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "error",
         "code": "unclassified",
-        "elapsed_ms": 1311
+        "elapsed_ms": 1157
       },
       {
         "stage": "shortlist",
         "attempt": 1,
         "status": "error",
         "code": "unclassified",
-        "elapsed_ms": 1360
+        "elapsed_ms": 1192
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -9035,7 +9076,7 @@
         "keyword": "",
         "category": "리뷰",
         "stage": "latest_issue_search",
-        "query": "신제품 공식 출시 발표 after:2026-11-01 before:2026-11-03",
+        "query": "신제품 공식 출시 발표 after:2026-11-02 before:2026-11-04",
         "provider": "codex_native_search",
         "results": []
       },
@@ -9043,7 +9084,7 @@
         "keyword": "",
         "category": "리뷰",
         "stage": "latest_issue_search",
-        "query": "가전 디지털 기기 신제품 발표 after:2026-11-01 before:2026-11-03",
+        "query": "가전 디지털 기기 신제품 발표 after:2026-11-02 before:2026-11-04",
         "provider": "codex_native_search",
         "results": []
       }

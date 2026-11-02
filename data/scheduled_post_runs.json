@@ -1011,6 +1011,17 @@
       "status": "failure",
       "completed_at": "2026-11-01T09:06:34.453850+00:00",
       "published_category": "건강"
+    },
+    "2026-11-02:morning": {
+      "scheduled_for": "2026-11-02T09:00:00+09:00",
+      "run_created_at": "2026-11-02T09:00:03+09:00",
+      "start_delay_seconds": 10,
+      "trigger": "external_timer",
+      "run_id": "41364800125",
+      "category": "생활정보",
+      "slot": "morning",
+      "claimed_at": "2026-11-02T09:00:10.560392+09:00",
+      "status": "started"
     }
   }
 }

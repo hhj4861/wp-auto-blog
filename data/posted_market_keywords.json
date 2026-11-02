@@ -1424,5 +1424,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-11-02T00:07:45.756317+00:00"
+  },
+  {
+    "key": "국립청소년인터넷드림마을직원모집공고",
+    "keyword": "국립청소년인터넷드림마을 직원 모집 공고",
+    "topic": "국립청소년인터넷드림마을 직원 모집 공고: 11월 2일 시작된 2명 채용 자격·일정",
+    "category": "취업",
+    "post_id": 2079,
+    "url": "https://trendpulse.blog/dream-village-recruitment-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-02T09:08:45.465504+00:00"
   }
 ]

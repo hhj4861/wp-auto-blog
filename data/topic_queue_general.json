@@ -49458,7 +49458,7 @@
     "keywords": [
       "피벗테이블"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -49893,7 +49893,7 @@
     "keywords": [
       "국립청소년인터넷드림마을 직원 모집 공고"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-11-02T01:11:40.647105+00:00",
@@ -49971,7 +49971,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2079,
+    "url": "https://trendpulse.blog/dream-village-recruitment-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-11-02T09:08:46.456704"
   },
   {
     "keyword": "저소음청소기",
@@ -50258,6 +50262,418 @@
       }
     },
     "score": 69.5,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "피벗테이블",
+    "category": "생산성",
+    "topic": "피벗테이블 사용법: 엑셀 데이터 요약부터 필드 배치·새로 고침까지",
+    "intent": "엑셀 피벗테이블로 데이터를 요약하고 행·열·값을 배치하며, 집계 방식과 원본 변경을 반영하려면?",
+    "gap": "생성·필드 배치 절차, 합계와 개수의 차이 표, 원본 범위 변경·새로 고침 체크리스트를 제공한다.",
+    "source_url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data?wt.mc_id=otc_excel",
+    "verified_sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data?wt.mc_id=otc_excel",
+        "original_url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data?wt.mc_id=otc_excel",
+        "title": "Create a PivotTable to analyze worksheet data | Microsoft Support",
+        "checked_on": "2026-11-02",
+        "publication_dates": [],
+        "sha256": "ee7f2ea1c159d9f59ddff595c690f74b3096cc9e6af227d64cb567ab369bfc30",
+        "excerpt": "Create a PivotTable to analyze worksheet data Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2024 for Mac Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2016 Get help with Copilot Tell me how to create a PivotTable What are the steps to delete an entire PivotTable? Design a PivotTable for my dataset A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data. PivotTables work a little bit differently depending on what platform you are using to run Excel. If you have the right license requirements , you can ask Copilot to help you create a PivotTable . Windows Web macOS Office for iOS Create a PivotTable in Excel for Windows Select the cells you want to create a PivotTable from. Note Your data should be organized in columns with a single header row. See the Data format tips and tricks section for more details. Select Insert > PivotTable . This creates a PivotTable based on an existing table or range. Note Selecting Add this data to the Data Model adds the table or range being used for this PivotTable into the workbook's Data Model. Learn more . Choose where you want the PivotTable report to be placed. Select New Worksheet to place the PivotTable in a new worksheet or Existing Worksheet and select where you want the new PivotTable to appear. Select OK . PivotTables from other sources By clicking the down arrow on the button, you can select from other possible sources for your PivotTable. In addition to using an existing table or range, there are three other sources you can select from to populate your PivotTable. Note Depending on your organization's IT settings you might see your organization's name included in the list. For example, \"From Power BI (Microsoft).\" Get from External Data Source Get from Data Model Use this option if your workbook contains a Data Model , and you want to create a PivotTable from multiple tables, enhance the PivotTable with custom measures, or are working with very large datasets. Get from Power BI Use this option if your organization uses Power BI and you want to discover and connect to endorsed cloud datasets you have access to. Building out your PivotTable To add a field to your PivotTable, select the field name checkbox in the PivotTables Fields pane. Note Selected fields are added to their default areas: non-numeric fields are added to Rows , date and time hierarchies are added to Columns , and numeric fields are added to Values . To move a field from one area to another, drag the field to the target area. Refreshing PivotTables If you add new data to your PivotTable data source, any PivotTables that were built on that data source need to be refreshed. To refresh just one PivotTable, you can right-click anywhere in the PivotTable range, and then select Refresh . If you have multiple PivotTables, first select any cell in any PivotTable, then on the ribbon go to PivotTable Analyze > select the arrow under the Refresh button, and then select Refresh All . Working with PivotTable Values Summarize Values By By default, PivotTable fields placed in the Values area are displayed as a SUM . If Excel interprets your data as text, the data is displayed as a COUNT . This is why it's so important to make sure you don't mix data types for value fields. You can change the default calculation by first selecting the arrow to the right of the field name, and then select the Value Field Settings option. Next, change the calculation in the Summarize Values By section. Note that when you change the calculation method, Excel automatically appends it in the Custom Name section, like \"Sum of FieldName\", but you can change it. If you select Number Format , you can change the number format for the entire field. Tip Since changing the calculation in the Summarize Values By section changes the PivotTable field name, it's best not to rename your PivotTable fields until you're finished setting up your PivotTable. One trick is to use Find & Replace ( Ctrl+H ) > Find what > \" Sum of \", and then Replace with > leave blank to replace everything at once instead of manually retyping. Show Values As Instead of using a calculation to summarize the data, you can also display it as a percentage of a field. In the following example, we changed our household expense amounts to display as a % of Grand Total instead of the sum of the values. Once you've opened the Value Field Setting dialog box, you can make your selections from the Show Values As tab. Display a value as both a calculation and percentage. Simply drag the item into the Values section twice, and then set the Summarize Values By and Show Values As options for each one. Insert a PivotTable Open a spreadsheet in Excel for the web . Select a table or range of data in your sheet and select Insert > PivotTable to open the Insert PivotTable pane. You can either manually create your own PivotTable or choose a recommended PivotTable to be created for you. Do one of the following: On the Create your own PivotTable card, select either New sheet or Existing sheet to choose the destination of the PivotTable. On a recommended PivotTable, select either New sheet or Existing sheet to choose the destination of the PivotTable. Note Recommended PivotTables are available only to Microsoft 365 subscribers. Change the source data You can change the data source  for the PivotTable data as you are creating it. In the Insert PivotTable pane, select the text box under Source . While changing the Source , cards in the pane won't be available. Make a selection of data on the grid or enter a range in the text box. Press Enter on your keyboard or the button to confirm your selection. The pane updates with new recommended PivotTables based on the new source of data. Get from Power BI Use this option if your organization uses Power BI and you want to discover and connect to endorsed cloud datasets you have access to. Working with the PivotTable Fields pane In the PivotTable Fields pane, select the check box for any field you want to add to your PivotTable. By default, non-numeric fields are added to the Rows area, date and time fields are added to the Columns area, and numeric fields are added to the Values area. You can also manually drag-and-drop any available item into any of the PivotTable fields, or if you no longer want an item in your PivotTable, drag it out from the list or uncheck it. Working with PivotTable Values Summarize Values By By default, PivotTable fields in the Values area are displayed as a SUM . If Excel interprets your data as text, it is displayed as a COUNT . This is why it's so important to make sure you don't mix data types for value fields. Change the default calculation by right-clicking any value in the row and selecting the Summarize Values By option. Show Values As Instead of using a calculation to summarize the data, you can also display it as a percentage of a field. In the following example, we changed our household expense amounts to display as a % of Grand Total instead of the sum of the values. Right-click any value in the column you'd like to show the value for. Select Show Values As in the menu. A list of available values displays. Make your selection from the list. To show as a % of Parent Total , hover over that item in the list and select the parent field you want to use as the basis of the calculation. Refreshing PivotTables If you add new data to your PivotTable data source, any PivotTables built on that data source must be refreshed. Right-click anywhere in the PivotTable range, and then select Refresh . Delete a PivotTable If you created a PivotTable and decide you no longer want it, select the entire PivotTable range and press Delete . This won't have any effect on other data or PivotTables or charts around it. If your PivotTable is on a separate sheet that has no other data you want to keep, deleting the sheet is a fast way to remove the PivotTable. Get started with",
+        "locator_origin": "model_reported_locator"
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/excel/change-the-source-data-for-a-pivottable",
+        "original_url": "https://support.microsoft.com/en-us/excel/change-the-source-data-for-a-pivottable",
+        "title": "Change the source data for a PivotTable | Microsoft Support",
+        "checked_on": "2026-11-02",
+        "publication_dates": [],
+        "sha256": "4449763206a92fba4611f4e1fa2949e3777b31f1bcef59deea283c896c74aabe",
+        "excerpt": "Change the source data for a PivotTable Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2021 Get help with Copilot How do I change the source data for a PivotTable? How do I connect to (import) external data? What's the best way to change the source data? After you create a PivotTable, you can change the range of its source data. For example, you can expand the source data to include more rows of data. However, if the source data has been changed substantially—such as having more or fewer columns, consider creating a new PivotTable. You can change the data source of a PivotTable to a different Excel table or a cell range or change to a different external data source. Windows Web macOS Office for iOS Change the source data Select the PivotTable report. On the Analyze tab, in the Data group, select Change Data Source , and then select Change Data Source . The Change PivotTable Data Source dialog box is displayed. Do one of the following: To use a different connection Select Use an external data source , and then select Choose Connection . The Existing Connections dialog box is displayed. In the Show drop-down list at the top of the dialog box, select the category of connections for which you want to choose a connection or select All Existing Connections (which is the default). Select a connection from the Select a Connection list box, and then select Open . What if your connection is not listed? Note If you choose a connection from the Connections in this Workbook category, you will be reusing or sharing an existing connection. If you choose a connection from the Connection files on the network or Connection files on this computer category, the connection file is copied into the workbook as a new workbook connection, and then used as the new connection for the PivotTable report. For more information, see Manage connections to data in a workbook . Select OK . To change the data source of a PivotTable to a different Excel table or a cell range Click Select a table or range and then enter the first cell in the Table/Range text box and select OK. What if your connection is not listed? If your connection is not listed in the Existing Connections dialog box, select Browse for More , and then look for the data source you want to connect to in the Select Data Source dialog box. Select New Source if appropriate, and follow the steps in the Data Connection Wizard , and then return to the Select Data Source dialog box. If your PivotTable is based on a connection to a range or table in the Data Model , you can choose another Data Model table or connection on the Tables tab. However, if your PivotTable is based on the Workbook Data Model , you can’t change the data source. Pick the connection you want and select Open . Select Only Create Connection . Select Properties , and select the Definition tab. If your .odc connection file has been moved, browse to its new location in the Connection file box. If you need to change values in the Connection string box, contact your database administrator. Change the source data Select the PivotTable report. On the Options tab, in the Data group, select Change Data Source , and then select Change Data Source . The Change PivotTable Data source dialog box is displayed. Do one of the following: To use a different Excel table or cell range, click Select a table or range , and then enter the first cell in the Table/Range text box. Alternatively, select Collapse Dialog to temporarily hide the dialog box, select the beginning cell on the worksheet, and then press Expand Dialog . To use a different connection, select Use an external data source , and then select Choose Connection . The Existing Connections dialog box is displayed. In the Show drop-down list at the top of the dialog box, select the category of connections for which you want to choose a connection or select All Existing Connections (which is the default). Select a connection from the Select a Connection list box, and then select Open . Note If you choose a connection from the Connections in this Workbook category, you will be reusing or sharing an existing connection. If you choose a connection from the Connection files on the network or Connection files on this computer category, the connection file is copied into the workbook as a new workbook connection, and then used as the new connection for the PivotTable report. For more information, see Manage connections to data in a workbook . Select OK . What if your connection is not listed? If your connection is not listed in the Existing Connections dialog box, select Browse for More , and then look for the data source you want to connect to in the Select Data Source dialog box. Select New Source if appropriate, and follow the steps in the Data Connection Wizard , and then return to the Select Data Source dialog box. If your PivotTable is based on a connection to a range or table in the Data Model , you can choose another Data Model table or connection on the Tables tab. However, if your PivotTable is based on the Workbook Data Model , you can’t change the data source. Pick the connection you want, and select Open . Select Only Create Connection . Select Properties , and select the Definition tab. If your .odc connection file has been moved, browse to its new location in the Connection file box. If you need to change values in the Connection string box, contact your database administrator. Change the source data For more information about what data sources are supported, see Import and shape data in Excel for Mac (Power Query). Select the PivotTable report. On the Analyze tab, in the Data group, select Change Data Source , and then select Change Data Source . The Change PivotTable Data Source dialog box is displayed. Do one of the following: To change the data source of a PivotTable to a different Excel table or a cell range, click Select a table or range , and then enter the first cell in the Table/Range text box, and select OK To use a different connection, do the following: Select Use an external data source , and then select Choose Connection . The Existing Connections dialog box is displayed. In the Show drop-down list at the top of the dialog box, select the category of connections for which you want to choose a connection or select All Existing Connections (which is the default). Select a connection from the Select a Connection list box, and then select Open . What if your connection is not listed? Note If you choose a connection from the Connections in this Workbook category, you will be reusing or sharing an existing connection. If you choose a connection from the Connection files on the network or Connection files on this computer category, the connection file is copied into the workbook as a new workbook connection, and then used as the new connection for the PivotTable report. For more information, see Manage connections to data in a workbook . Select OK . What if your connection is not listed? If your connection is not listed in the Existing Connections dialog box, select Browse for More , and then look for the data source you want to connect to in the Select Data Source dialog box. Select New Source if appropriate, and follow the steps in the Data Connection Wizard , and then return to the Select Data Source dialog box. If your PivotTable is based on a connection to a range or table in the Data Model , you can choose another Data Model table or connection on the Tables tab. However, if your PivotTable is based on the Workbook Data Model , you can’t change the data source. Pick the connection you want, and select Open . Select Only Create Connection . Select Properties , and select the Definition tab. If your .odc connection file has been moved, browse to its new location in the Connection file box. If you need to change values in the Connection string box, contact your database administrator. Tap anywhere in the PivotTable to show the PivotTable tab on the ribbon. Tap Chan",
+        "locator_origin": "model_reported_locator"
+      }
+    ],
+    "intent_results": [
+      "https://www.mtrace.go.kr/pdf/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%9C%EB%B0%A9%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+      "https://kackac.tistory.com/24"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": 2190,
+    "demand_provider": "naver_searchad_pc_mobile",
+    "demand_scope": "keyword_total",
+    "advertising_competition": "높음",
+    "evidence_mode": "serp",
+    "research_evidence": {
+      "provider": "codex_web",
+      "searched": true,
+      "locators": [
+        {
+          "url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data?wt.mc_id=otc_excel",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/excel/change-the-source-data-for-a-pivottable",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://support.microsoft.com/en-gb/excel/refresh-pivottable-data?nochrome=true",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/excel/get-started/group-or-ungroup-data-in-a-pivottable",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/excel/design-the-layout-and-format-of-a-pivottable",
+          "origin": "model_reported_locator"
+        },
+        {
+          "url": "https://support.google.com/docs/answer/1272900?co=GENIE.Platform%3DDesktop&hl=ko",
+          "origin": "model_reported_locator"
+        }
+      ]
+    },
+    "organic_provider": "codex_native_search",
+    "organic_query": "피벗 테이블",
+    "organic_domains": [
+      "support.microsoft.com",
+      "support.microsoft.com",
+      "support.microsoft.com",
+      "www.ibm.com",
+      "www.mtrace.go.kr",
+      "api.products.aspose.app",
+      "kackac.tistory.com",
+      "flylight.kr",
+      "worktip.kr",
+      "support.microsoft.com"
+    ],
+    "organic_results": [
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/move-a-pivottable",
+        "domain": "support.microsoft.com",
+        "title": "피벗 테이블 이동 | Microsoft Support",
+        "snippet": "* 기존 워크시트에 피벗 테이블을 배치하려면 기존 워크시트를 선택한 다음 피벗 테이블을 찾을 셀 범위의 첫 번째 셀을 입력합니다. ... ## iPad의 피벗 테이블은 iPad"
+      },
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/change-the-style-of-your-pivottable",
+        "domain": "support.microsoft.com",
+        "title": "피벗 테이블 스타일 변경 | Microsoft Support",
+        "snippet": "예를 들어 피벗 테이블에 많은 데이터가 있는 경우 쉽게 스캔할 수 있도록 줄무늬 행 또는 열을 표시하거나 중요한 데이터를 강조 표시 하여 눈에 띄게 하는"
+      },
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/delete-a-pivottable",
+        "domain": "support.microsoft.com",
+        "title": "피벗 테이블 삭제 | Microsoft Support",
+        "snippet": "iPad에서 키보드를 표시하려면 피벗 테이블 범위 외부의 셀을 탭한 다음 워크시트 영역 맨 위에 있는 수식 입력줄을 탭합니다. ... 피벗 테이블이 보관할 다른 데이터가 없는"
+      },
+      {
+        "url": "https://www.ibm.com/docs/SSLVMB_26.0.0/pdf/ko/IBM_SPSS_Statistics_Core_System_User_Guide.pdf",
+        "domain": "www.ibm.com",
+        "title": "IBM SPSS Statistics 25 Core System",
+        "snippet": "여러 결과가 대화형 피벗 테이블로 표시됩니다. ... 자세한 정보는 185 페이지의 『레거시 테이블』 주제를 참조하십시오. ... 피벗 테이블 작업에는 다음과 같은 옵션이 있습니다. ... 바로가기"
+      },
+      {
+        "url": "https://www.mtrace.go.kr/pdf/%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B0%9C%EB%B0%A9%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%A7%A4%EB%89%B4%EC%96%BC.pdf",
+        "domain": "www.mtrace.go.kr",
+        "title": "□ 엑셀 피벗 테이블 이용방법",
+        "snippet": "왼쪽 피벗 테이블에는 행 레이블로 시도명이 나열되고, 열에는 “육우”, “한우” 등의 분류와 “암소”, “수소”, “젖소” 등의 세부 항목이 배치되어 있으며 값은 “합계: 출생두수”로 집계됨. 오른쪽"
+      },
+      {
+        "url": "https://api.products.aspose.app/cells/ko/pivottable",
+        "domain": "api.products.aspose.app",
+        "title": "피벗 테이블 온라인 만들기",
+        "snippet": "피벗 테이블이 성공적으로 생성되었습니다. ... 스프레드시트를 업로드하고, 도구가 최적의 레이아웃을 제안하도록 하세요. ... 몇 초 만에 피벗 테이블을 다운로드할 수 있습니다. ... 제공자 Aspose.Cells 모든"
+      },
+      {
+        "url": "https://kackac.tistory.com/24",
+        "domain": "kackac.tistory.com",
+        "title": "피벗 테이블, 클릭 몇 번으로 수만 줄의 데이터를 요약하는 마법 :: 퇴근 후 성장하는 직장인을 위한 블로그",
+        "snippet": "## 피벗 테이블, 클릭 몇 번으로 수만 줄의 데이터를 요약하는 마법 ... 새로운 시트가 생기면서 오른쪽에 **'피벗 테이블 필드'**라는 설정창이 나타납니다. ... * 대안: **[파일]"
+      },
+      {
+        "url": "https://flylight.kr/bbs/mn01_01/view/%ED%94%BC%EB%B2%97-%ED%85%8C%EC%9D%B4%EB%B8%94-%ED%94%BC%EB%B2%97-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%A0%95%EB%A6%AC%ED%94%BC%EB%B2%97-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%98%B5%EC%85%98%EA%B3%BC-%EB%B3%B4%EA%B3%A0%EC%84%9C-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83",
+        "domain": "flylight.kr",
+        "title": "피벗 테이블 ❼ 피벗 테이블 정리(피벗 테이블 옵션과 보고서 레이아웃)",
+        "snippet": "데이터베이스형 표(레이블과 레코드만으로 만들어진 표)에 익숙한 저한테는 많은 통계치가 뭘 말하는 건지 이해하기 힘들었던 것이죠. ... 열의 끝과 행의 끝에 자동으로 추가된 통계는 우리가 요구한"
+      },
+      {
+        "url": "https://worktip.kr/compal2-practical-analysis-set02/",
+        "domain": "worktip.kr",
+        "title": "컴활 2급 피벗 테이블·정렬 연습 문제(실기 분석작업 세트 2) | Worktip",
+        "snippet": "Image: 컴활 2급 피벗 테이블 문제 파일 '분석작업-1' 시트 원본: 출장비 정산 내역 16건 문제 파일 원본 화면 1(엑셀 2021에서 PDF로 내보낸 뒤 PNG로 변환)"
+      },
+      {
+        "url": "https://support.microsoft.com/ko-kr/excel/rename-a-pivottable-or-pivotchart",
+        "domain": "support.microsoft.com",
+        "title": "피벗 테이블 또는 피벗 차트 이름 바꾸기 | Microsoft Support",
+        "snippet": "피벗 테이블 또는 피벗 차트를 만들 때 Excel은 피벗 테이블1, 피벗 테이블2 등의 명명 규칙을 사용하여 각 개체에 기본 이름을 할당합니다. ... ## iPad의 피벗"
+      }
+    ],
+    "dominant_result_ratio": 0.1,
+    "score_components": {
+      "demand": 26.72,
+      "organic_opportunity": 21.6,
+      "trend": 0.4,
+      "intent_fit": 15
+    },
+    "trend_growth": 0.04,
+    "trend_provider": "google_trends_relative_7d_vs_previous_7d",
+    "trend_status": "measured",
+    "selection_version": 8,
+    "selected_at": "2026-11-02T09:01:15.952553+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "피벗테이블"
+    ],
+    "status": "pending",
+    "decision_diagnostics": {
+      "official_sources": [
+        {
+          "url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data?wt.mc_id=otc_excel",
+          "title": "Create a PivotTable to analyze worksheet data | Microsoft Support",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/excel/change-the-source-data-for-a-pivottable",
+          "title": "Change the source data for a PivotTable | Microsoft Support",
+          "excerpt_chars": 8000
+        },
+        {
+          "url": "https://support.microsoft.com/en-gb/excel/refresh-pivottable-data?nochrome=true",
+          "title": "Refresh PivotTable data | Microsoft Support",
+          "excerpt_chars": 7722
+        }
+      ],
+      "analysis_status": "supported_true",
+      "source_recovery": {
+        "attempted": true,
+        "initial_review": {
+          "official_sources": [
+            {
+              "url": "https://support.microsoft.com/ko-kr/excel/move-a-pivottable",
+              "title": "피벗 테이블 이동 | Microsoft Support",
+              "excerpt_chars": 966
+            },
+            {
+              "url": "https://support.microsoft.com/ko-kr/excel/change-the-style-of-your-pivottable",
+              "title": "피벗 테이블 스타일 변경 | Microsoft Support",
+              "excerpt_chars": 1511
+            }
+          ],
+          "analysis_status": "supported_false",
+          "model_rejection_opinion": {
+            "kind": "model_opinion",
+            "code": "source_missing_detail"
+          }
+        },
+        "outcome": "review_passed",
+        "retry_review": {
+          "official_sources": [
+            {
+              "url": "https://support.microsoft.com/en-us/excel/get-started/create-a-pivottable-to-analyze-worksheet-data?wt.mc_id=otc_excel",
+              "title": "Create a PivotTable to analyze worksheet data | Microsoft Support",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://support.microsoft.com/en-us/excel/change-the-source-data-for-a-pivottable",
+              "title": "Change the source data for a PivotTable | Microsoft Support",
+              "excerpt_chars": 8000
+            },
+            {
+              "url": "https://support.microsoft.com/en-gb/excel/refresh-pivottable-data?nochrome=true",
+              "title": "Refresh PivotTable data | Microsoft Support",
+              "excerpt_chars": 7722
+            }
+          ],
+          "analysis_status": "supported_true"
+        }
+      }
+    },
+    "opportunity_evidence": {
+      "version": 2,
+      "query": "피벗테이블",
+      "executed_query": "피벗 테이블",
+      "topic": "피벗테이블 사용법: 엑셀 데이터 요약부터 필드 배치·새로 고침까지",
+      "intent": "엑셀 피벗테이블로 데이터를 요약하고 행·열·값을 배치하며, 집계 방식과 원본 변경을 반영하려면?",
+      "provider": "codex_native_search",
+      "checked_at": "2026-11-02T09:01:15.952553+00:00",
+      "result_count": 10,
+      "domain_count": 7,
+      "dominant_ratio": 0.1,
+      "search_review": {
+        "version": 1,
+        "query": "피벗테이블",
+        "executed_query": "피벗 테이블",
+        "provider": "codex_native_search",
+        "checked_at": "2026-11-02T09:01:15.952553+00:00",
+        "raw_sha256": "4f1869564bcd8f75000836936348bfd936738a8fe512dcb29a626f675dd71e9c",
+        "decisions": [
+          {
+            "result_index": 0,
+            "relevant": true,
+            "quote": "* 기존 워크시트에 피벗 테이블을 배치하려면 기존 워크시트를 선택한 다음 피벗 테이블을 찾을 셀 범위의 첫 번째 셀을 입력합니다. ... ## iPad의 피벗 테이블은 iPad"
+          },
+          {
+            "result_index": 1,
+            "relevant": true,
+            "quote": "예를 들어 피벗 테이블에 많은 데이터가 있는 경우 쉽게 스캔할 수 있도록 줄무늬 행 또는 열을 표시하거나 중요한 데이터를 강조 표시 하여 눈에 띄게 하는"
+          },
+          {
+            "result_index": 2,
+            "relevant": true,
+            "quote": "피벗 테이블 삭제 | Microsoft Support"
+          },
+          {
+            "result_index": 3,
+            "relevant": true,
+            "quote": "여러 결과가 대화형 피벗 테이블로 표시됩니다. ... 자세한 정보는 185 페이지의 『레거시 테이블』 주제를 참조하십시오. ... 피벗 테이블 작업에는 다음과 같은 옵션이 있습니다. ... 바로가기"
+          },
+          {
+            "result_index": 4,
+            "relevant": true,
+            "quote": "왼쪽 피벗 테이블에는 행 레이블로 시도명이 나열되고, 열에는 “육우”, “한우” 등의 분류와 “암소”, “수소”, “젖소” 등의 세부 항목이 배치되어 있으며 값은 “합계: 출생두수”로 집계됨. 오른쪽"
+          },
+          {
+            "result_index": 5,
+            "relevant": true,
+            "quote": "피벗 테이블이 성공적으로 생성되었습니다. ... 스프레드시트를 업로드하고, 도구가 최적의 레이아웃을 제안하도록 하세요. ... 몇 초 만에 피벗 테이블을 다운로드할 수 있습니다. ... 제공자 Aspose.Cells 모든"
+          },
+          {
+            "result_index": 6,
+            "relevant": true,
+            "quote": "## 피벗 테이블, 클릭 몇 번으로 수만 줄의 데이터를 요약하는 마법 ... 새로운 시트가 생기면서 오른쪽에 **'피벗 테이블 필드'**라는 설정창이 나타납니다. ... * 대안: **[파일]"
+          },
+          {
+            "result_index": 7,
+            "relevant": true,
+            "quote": "피벗 테이블 ❼ 피벗 테이블 정리(피벗 테이블 옵션과 보고서 레이아웃)"
+          },
+          {
+            "result_index": 8,
+            "relevant": true,
+            "quote": "컴활 2급 피벗 테이블·정렬 연습 문제(실기 분석작업 세트 2) | Worktip"
+          },
+          {
+            "result_index": 9,
+            "relevant": true,
+            "quote": "피벗 테이블 또는 피벗 차트를 만들 때 Excel은 피벗 테이블1, 피벗 테이블2 등의 명명 규칙을 사용하여 각 개체에 기본 이름을 할당합니다. ... ## iPad의 피벗"
+          }
+        ]
+      },
+      "search_metrics": {
+        "raw_result_count": 10,
+        "canonical_result_count": 10,
+        "relevant_result_count": 10,
+        "relevant_site_count": 7,
+        "relevant_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "relevance_ratio": 1.0,
+        "duplicate_ratio": 0.0,
+        "known_dominant_ratio": 0.1,
+        "site_concentration": 0.4,
+        "organic_opportunity": 21.6
+      },
+      "scope": "full_keyword",
+      "target_keyword": "피벗테이블",
+      "matches": [
+        {
+          "result_index": 4,
+          "quote": "엑셀 피벗 테이블 이용방법"
+        },
+        {
+          "result_index": 6,
+          "quote": "피벗 테이블, 클릭 몇 번으로 수만 줄의 데이터를 요약하는 마법"
+        }
+      ]
+    },
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-02T09:01:15.952553+00:00",
+      "input_sha256": "275410f1efc4190d6ea56c1d891a0fcadb8c8c5212affcd433c56fe23d7e3b3a",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "피벗테이블",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "Create a PivotTable to analyze worksheet data Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2024 for Mac Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2016 Get help with Copilot Tell me how to create a PivotTable What are the steps to delete an entire PivotTable? Design a PivotTable for my dataset A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data. PivotTables work a little bit differently depending on what platform you are using to run Excel. If you have the right license requirements , you can ask Copilot to help you create a PivotTable . Windows Web macOS Office for iOS Create a PivotTable in Excel for Windows Select the cells you want to create a PivotTable from. Note Your data should be organized in columns with a single header row. See the Data format tips ",
+            "entity": "Excel for Microsoft 365",
+            "context": "general"
+          },
+          {
+            "source_index": 1,
+            "quote": "Change the source data for a PivotTable Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2021 Get help with Copilot How do I change the source data for a PivotTable? How do I connect to (import) external data? What's the best way to change the source data? After you create a PivotTable, you can change the range of its source data. For example, you can expand the source data to include more rows of data. However, if the source data has been changed substantially—such as having more or fewer columns, consider creating a new PivotTable. You can change the data source of a PivotTable to a different Excel table or a cell range or change to a different external data source. Windows Web macOS Office for iOS Change the source data Select the PivotTable report. On the Analyze tab, in the Data group, select Change Data Source , and then select Change Data Source ",
+            "entity": "Excel for Microsoft 365",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "피벗테이블은 무엇이며 어디에 사용하는가?",
+            "answer": "데이터를 계산·요약·분석하여 비교, 패턴과 추세를 파악하는 기능이다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "Create a PivotTable to analyze worksheet data Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2024 for Mac Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2016 Get help with Copilot Tell me how to create a PivotTable What are the steps to delete an entire PivotTable? Design a PivotTable for my dataset A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data. PivotTables work a little bit differently depending on what platform you are using to run Excel. If you have the right license requirements , you can ask Copilot to help you create a PivotTable . Windows Web macOS Office for iOS Create a PivotTable in Excel for Windows Select the cells you want to create a PivotTable from. Note Your data should be organized in columns with a single header row. See the Data format tips "
+          },
+          {
+            "facet": "원본 데이터에서 피벗테이블을 어떻게 생성하는가?",
+            "answer": "단일 머리글 행으로 정리한 범위를 선택하고 삽입 > 피벗테이블에서 배치할 워크시트를 지정한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "lect the cells you want to create a PivotTable from. Note Your data should be organized in columns with a single header row. See the Data format tips and tricks section for more details. Select Insert > PivotTable . This creates a PivotTable based on an existing table or range. Note Selecting Add this data to the Data Model adds the table or range being used for this PivotTable into the workbook's Data Model. Learn more . Choose where you want the PivotTable report to be placed. Select New Worksheet to place the PivotTable in a new worksheet or Existing Worksheet and select where you want the new PivotTable to appear. Select OK . PivotTables from other sources By clicking the down arrow on the button, you can select from other possible sources for your PivotTable. In addition to using an existing table or range, there are three other sources you can select from to populate your PivotTabl"
+          },
+          {
+            "facet": "행·열·값 필드를 어떻게 배치하고 이동하는가?",
+            "answer": "필드를 선택하면 유형별 기본 영역에 추가되며, 원하는 영역으로 끌어 이동할 수 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "eld to your PivotTable, select the field name checkbox in the PivotTables Fields pane. Note Selected fields are added to their default areas: non-numeric fields are added to Rows , date and time hierarchies are added to Columns , and numeric fields are added to Values . To move a field from one area to another, drag the field to the target area. Refreshing PivotTables If you add new data to your PivotTable data source, any PivotTables that were built on that data source need to be refreshed. To refresh just one PivotTable, you can right-click anywhere in the PivotTable range, and then select Refresh . If you have multiple PivotTables, first select any cell in any PivotTable, then on the ribbon go to PivotTable Analyze > select the arrow under the Refresh button, and then select Refresh All . Working with PivotTable Values Summarize Values By By default, PivotTable fields placed in the Va"
+          },
+          {
+            "facet": "합계와 개수 집계는 어떻게 달라지며 변경하는가?",
+            "answer": "값은 기본적으로 합계로 표시되지만 텍스트로 인식되면 개수가 된다. 값 필드 설정에서 집계 방식을 바꾼다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "er the Refresh button, and then select Refresh All . Working with PivotTable Values Summarize Values By By default, PivotTable fields placed in the Values area are displayed as a SUM . If Excel interprets your data as text, the data is displayed as a COUNT . This is why it's so important to make sure you don't mix data types for value fields. You can change the default calculation by first selecting the arrow to the right of the field name, and then select the Value Field Settings option. Next, change the calculation in the Summarize Values By section. Note that when you change the calculation method, Excel automatically appends it in the Custom Name section, like \"Sum of FieldName\", but you can change it. If you select Number Format , you can change the number format for the entire field. Tip Since changing the calculation in the Summarize Values By section changes the PivotTable field "
+          },
+          {
+            "facet": "원본 범위가 늘거나 바뀌면 어떻게 반영하는가?",
+            "answer": "분석 탭의 데이터 원본 변경으로 범위를 확장하거나 교체한다. 열 구성이 크게 바뀌면 재생성을 고려한다.",
+            "supported": true,
+            "source_index": 1,
+            "quote": "Change the source data for a PivotTable Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2021 Get help with Copilot How do I change the source data for a PivotTable? How do I connect to (import) external data? What's the best way to change the source data? After you create a PivotTable, you can change the range of its source data. For example, you can expand the source data to include more rows of data. However, if the source data has been changed substantially—such as having more or fewer columns, consider creating a new PivotTable. You can change the data source of a PivotTable to a different Excel table or a cell range or change to a different external data source. Windows Web macOS Office for iOS Change the source data Select the PivotTable report. On the Analyze tab, in the Data group, select Change Data Source , and then select Change Data Source "
+          },
+          {
+            "facet": "원본 데이터를 수정한 뒤 집계 결과를 어떻게 갱신하는가?",
+            "answer": "피벗테이블에서 새로 고침을 실행한다. 여러 피벗테이블은 분석 탭에서 모두 새로 고침을 선택한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "eld to your PivotTable, select the field name checkbox in the PivotTables Fields pane. Note Selected fields are added to their default areas: non-numeric fields are added to Rows , date and time hierarchies are added to Columns , and numeric fields are added to Values . To move a field from one area to another, drag the field to the target area. Refreshing PivotTables If you add new data to your PivotTable data source, any PivotTables that were built on that data source need to be refreshed. To refresh just one PivotTable, you can right-click anywhere in the PivotTable range, and then select Refresh . If you have multiple PivotTables, first select any cell in any PivotTable, then on the ribbon go to PivotTable Analyze > select the arrow under the Refresh button, and then select Refresh All . Working with PivotTable Values Summarize Values By By default, PivotTable fields placed in the Va"
+          }
+        ],
+        "current_relevance": {
+          "kind": "evergreen",
+          "source_index": 0,
+          "quote": "Create a PivotTable to analyze worksheet data Applies To Excel for Microsoft 365 Excel for Microsoft 365 for Mac Excel 2024 Excel 2024 for Mac Excel 2021 Excel 2021 for Mac Excel 2019 Excel 2016 Get help with Copilot Tell me how to create a PivotTable What are the steps to delete an entire PivotTable? Design a PivotTable for my dataset A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data. PivotTables work a little bit differently depending on what platform you are using to run Excel. If you have the right license requirements , you can ask Copilot to help you create a PivotTable . Windows Web macOS Office for iOS Create a PivotTable in Excel for Windows Select the cells you want to create a PivotTable from. Note Your data should be organized in columns with a single header row. See the Data format tips ",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "score": 63.72,
     "publish_eligible": true,
     "hold_reasons": []
   }

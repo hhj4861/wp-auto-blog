@@ -1060,7 +1060,9 @@
       "category": "리뷰",
       "slot": "evening",
       "claimed_at": "2026-11-03T18:00:11.037484+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-11-03T09:08:34.050615+00:00",
+      "published_category": "리뷰"
     }
   }
 }

@@ -7667,44 +7667,199 @@
   },
   "리뷰": {
     "category": "리뷰",
-    "selected_at": "2026-11-03T03:15:30.544900+00:00",
-    "seeds": [],
-    "selection_version": 8,
-    "selection_scope": "latest_issue_listing",
-    "latest_issue_listing": [
-      {
-        "url": "https://news.samsung.com/kr/%ec%98%81%ec%83%81-%ea%b1%b0%ea%b1%b0%ec%9d%b5%ec%84%a0%ec%9d%98-%ec%8b%9c%eb%8c%80-%ec%83%89%ec%9d%84-%ed%82%a4%ec%9a%b8-%ec%b0%a8%eb%a1%80%ec%9e%85%eb%8b%88%eb%8b%a4-%ec%82%bc%ec%84%b1-micro-rgb",
-        "title": "[영상] 거거익선의 시대, 색을 키울 차례입니다: 삼성 Micro RGB TV [삼분컷 EP.7]",
-        "lead": "거실에서 가장 큰 존재감을 드러내는 가전 TV. 화면이 클수록 화질의 차이가 그대로 드러난다. 삼성 Micro RGB TV는 크기 100㎛ 이하의 RGB 컬러 LED 자체를 광원으로 사용해 색을 더 넓고 정확한 색을 표현하고, AI 엔진으로 일상 속 콘텐츠의 화질까지 끌어올린다. 여기에 반사를 줄이는 Glare-Free 기술과 지문 방지 기능을 더해 관리도 한결 편해졌다. 광원 기술부터 AI 화질, […]",
-        "published": "2026-11-03",
-        "publisher": "samsung_newsroom"
-      },
-      {
-        "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-2026-%eb%8b%a4%ec%b9%b4%eb%a5%b4-%ec%b2%ad%ec%86%8c%eb%85%84%ec%98%ac%eb%a6%bc%ed%94%bd-%ea%b3%b5%ec%8b%9d-%ed%9b%84%ec%9b%90",
-        "title": "삼성전자, ‘2026 다카르 청소년올림픽’ 공식 후원",
-        "lead": "삼성전자가 10월 31일부터 세네갈 다카르에서 열리는 ‘2026 다카르 청소년올림픽’에 국제올림픽위원회(IOC)의 무선 통신 분야 공식 파트너(Worldwide Partner)로 참여한다. 삼성전자는 갤럭시 스마트폰을 활용해 빅토리 셀피(Victory Selfie)와 경기 중계를 지원하고, 선수촌 내 체험 공간인 삼성 오픈 스테이션(Samsung Open Station)과 멘토링 프로그램 등 다양한 활동을 선보일 계획이다. 특히 이번 대회에서는 삼성전자의 올림픽 대표 프로그램인 빅토리 셀피가 청소년올림픽 최초로 도입된다. […]",
-        "published": "2026-11-02",
-        "publisher": "samsung_newsroom"
-      },
-      {
-        "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-kt-ai%c2%b7%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%ec%9c%88-%ea%b8%b0%eb%b0%98-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9e%90%ec%9c%a8-%ec%9a%b4%ec%9a%a9-%ea%b8%b0",
-        "title": "삼성전자-KT, AI·디지털 트윈 기반 네트워크 자율 운용 기술 상용망 검증",
-        "lead": "삼성전자가 KT와 공동으로 AI·디지털 트윈을 활용한 네트워크 자율 운용 기술을 상용망에서 검증했다. 양사는 이번 검증을 통해 사람의 개입 없이 네트워크가 상황 변화를 스스로 인지하고 최적의 설정을 찾아 적용하는 자율 운용의 기반을 마련했다. ※ 디지털 트윈(Digital Twin): 현실의 물리적 실체를 가상 세계에 복제하는 기술 AI가 ‘판단’하고 디지털 트윈이 ‘검증’한다 양사는 AI의 분석과 디지털 트윈의 사전 검증을 […]",
-        "published": "2026-11-02",
-        "publisher": "samsung_newsroom"
-      },
-      {
-        "url": "https://news.samsung.com/kr/%ec%9d%b4%ec%9e%ac%ec%9a%a9-%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ed%9a%8c%ec%9e%a5-%eb%af%b8%eb%9e%98-%eb%b0%98%eb%8f%84%ec%b2%b4-%ed%8c%a8%ed%82%a4%ec%a7%95-%ea%b8%b0%ec%88%a0-%ec%9d%bc%eb%b3%b8",
-        "title": "이재용 삼성전자 회장, 미래 반도체 패키징 기술 일본 현장 점검",
-        "lead": "이재용 삼성전자 회장이 1일 일본 요코하마에 위치한 첨단 반도체 패키징 연구거점 ‘Advanced Package Lab(APL)’을 찾아 차세대 패키징 요소기술 연구 현황을 점검했다. 이 회장은 APL 연구진과 함께 첨단 패키지 소재∙공정 요소기술 개발 현황과 일본 소재∙부품∙장비 업계와의 협력 방안을 논의했으며, AI 시대 반도체 경쟁력의 핵심인 첨단 패키징 기술 확보를 당부했다. APL은 지난 9월 8일 공식 개소한 삼성전자의 […]",
-        "published": "2026-11-02",
-        "publisher": "samsung_newsroom"
-      }
+    "selected_at": "2026-11-03T09:03:46.583350+00:00",
+    "seeds": [
+      "무선청소기흡입력",
+      "공기청정기평수",
+      "노트북램",
+      "로봇청소기문턱"
     ],
+    "selection_version": 8,
+    "research_rounds": 0,
+    "latest_issue_discovery": {
+      "window_start": "2026-11-02T00:00:00+09:00",
+      "window_end": "2026-11-03T18:03:46.583350+09:00",
+      "queries": [
+        {
+          "query": "신제품 공식 출시 발표 after:2026-11-02 before:2026-11-04",
+          "provider": "codex_native_search",
+          "results": [
+            {
+              "url": "https://www.maccosmetics.co.kr/collections",
+              "domain": "www.maccosmetics.co.kr",
+              "title": "신제품 | 맥 공식 온라인 몰",
+              "snippet": "신제품 출시!"
+            },
+            {
+              "url": "https://kind.krx.co.kr/external/dst/irReference/17329/%EB%85%B8%EC%9D%84%20IR%20BOOK_202509.pdf",
+              "domain": "kind.krx.co.kr",
+              "title": "4. 비즈니스 - 하반기 주요 마일스톤",
+              "snippet": "신제품 CBC 및 자궁경부암 진단 솔루션 출시로 본격적인 성장 모멘텀 마련 및 매출 총이익률 개선 고부가가치 신제품 2종 출시로 이익률 개선 및 선진국 시장 본격"
+            },
+            {
+              "url": "https://interai.kr/",
+              "domain": "interai.kr",
+              "title": "InterAI(인터AI) — 세대가 달라도, 대화는 통하게",
+              "snippet": "보도자료 · 실적 발표★★★ ... 회사의 신제품 출시 보도자료 초안을 작성했고, 언론에 배포하기 전 데스크 검수를 받으려 합니다. ... 당사는 업계 1위 기술력으로 세계 최초의"
+            },
+            {
+              "url": "https://www.crfood.kr/",
+              "domain": "www.crfood.kr",
+              "title": "씨알푸드",
+              "snippet": "* [신제품] 저당 프로틴 그래놀라 출시 ... 니즈를 파악한 고객맞춤형 제품부터 트렌디하고 독창적인 제품까지 다양한 자체 브랜드 제품을 제조, 판매하고 있습니다. ... 씨알푸드는 2007년을 시작으로"
+            },
+            {
+              "url": "https://press.efocus.co.kr/?md=A06&tno=259",
+              "domain": "press.efocus.co.kr",
+              "title": "신제품 출시 보도자료 - 부천포커스",
+              "snippet": "국내 1위 자동차용품 전문 기업 불스원의 저자극 향기 큐레이션 브랜드 팅커벨이 생활 속 불쾌한 냄새를 제거하고 은은한 편백 향을 남기는 ‘팅커벨 더 편백 고체 탈취제’를"
+            },
+            {
+              "url": "https://kind.krx.co.kr/external/dst/irReference/17199/%EB%85%B8%EC%9D%84%20IR%20BOOK_2025%EB%85%84%208%EC%9B%94.pdf",
+              "domain": "kind.krx.co.kr",
+              "title": "4) 제품 포트폴리오 확대 및 인증 로드맵",
+              "snippet": "신제품 출시와 글로벌 인증 전략의 결합으로 판매 지역과 매출 다각화 진행 중 ... - **혈액분석(CBC):** CBC 제품 출시 완료, 유럽 및 중남미 주요 국가 신규"
+            },
+            {
+              "url": "https://www.newswire.co.kr/?md=A11&no=259&page=13&perpage=100",
+              "domain": "www.newswire.co.kr",
+              "title": "신제품 출시 보도자료 - 뉴스와이어",
+              "snippet": "##### 마테오에이아이스튜디오, 자회사 크릭스에이아이 통해 ESG 문화예술 플랫폼 3종 10월 중순 동시 베타 출시 ... ##### 투썸플레이스, Z세대 인기 캐릭터 ‘가나디’와 함께 한정판 신제품 출시"
+            },
+            {
+              "url": "https://ss-food.com/",
+              "domain": "ss-food.com",
+              "title": "상신종합식품에 오신 걸 환영합니다.",
+              "snippet": "다양한 규격의 제품생산이 가능합니다. ... 1994년 설립된 국내 최대 규모의 돈까스 제조 기업으로 ... Image: CJ제일제당 Image: 풀무원 Image: 대상 Image: 오뚜기 Image: 사조대림 Image:"
+            },
+            {
+              "url": "https://techtrends.kr/apple-new-products-release-schedule/",
+              "domain": "techtrends.kr",
+              "title": "애플 신제품 출시 일정 총정리 - 아이폰 듀오, 홈팟 미니 2, 애플 TV 4K 4세대 국내 가격 - 테크트렌드",
+              "snippet": "10월 말부터 11월 중순까지 이어지는 애플 신제품 출시 일정과 국내 가격을 정리해 보겠습니다. ... 아이폰 듀오와 홈팟 미니 2, 애플 TV 4K 4세대, 애플 홈뷰는"
+            },
+            {
+              "url": "https://www.shinpoong.co.kr/main/main.php",
+              "domain": "www.shinpoong.co.kr",
+              "title": "신풍제약주식회사",
+              "snippet": "하이알플렉스주(헥사메틸렌디아민으로가교결합된히알루론산나트륨겔) ... * 신풍제약, 창립 64주년 기념식 개최… “흑자 전환 발판 삼아 ‘재도약’ 선포” ... * 공 장 : 경기도 안산시 단원구 원시로7 신풍제약 ..."
+            }
+          ]
+        },
+        {
+          "query": "가전 디지털 기기 신제품 발표 after:2026-11-02 before:2026-11-04",
+          "provider": "codex_native_search",
+          "results": [
+            {
+              "url": "https://saleyebo.com/",
+              "domain": "saleyebo.com",
+              "title": "세일예보 | 브랜드 세일·신제품 출시 일정 캘린더",
+              "snippet": "가전·디지털11월 2일 같은 상품 5개를 11번가·쿠팡·G마켓·알리익스프레스에서 확인했습니다. ... 장보기이마트 쓱데이가 8일(일)에 끝납니다. ... 백화점 겨울 정기세일은 현대·롯데가 지난 3년 모두 금요일에 시작해 13일(금) 전후, 신세계는"
+            },
+            {
+              "url": "https://xn--b01b05e837ahc.com/?category=digital",
+              "domain": "xn--b01b05e837ahc.com",
+              "title": "오늘 뜬 핫딜 · 하루핫딜",
+              "snippet": "디지털·가전 네이버쇼핑 8시간 전 올라옴 드롱기 마그니피카S 전자동 에스프레소머신 399,200원 상품 보기 디지털·가전 쿠팡 8시간 전 올라옴 MSI 코어리퀴드 P22 360 수냉쿨러 블랙 99,000원 상품"
+            },
+            {
+              "url": "https://proxy.audy.io/v/s-d3d3LnBybmV3c3dpcmUuY29t/kr/news-releases/consumer-products-retail-latest-news/household-products-list/?page=3&pagesize=25",
+              "domain": "proxy.audy.io",
+              "title": "생활용품 | PR Newswire",
+              "snippet": "주방 기기, 가전 제품, 청소 제품, 반려동물 관리, 아웃도어 및 철물 도구 및 기타 가정용품 분야의 신제품 및 기존 제품 출시, 업그레이드 및 공급을 포함한"
+            },
+            {
+              "url": "https://www.newstap.co.kr/news/articleList.html?sc_sub_section_code=S2N6&view_type=sm",
+              "domain": "www.newstap.co.kr",
+              "title": "가전/디지털/테크 < 신상품뉴스 < 기사목록 - 뉴스탭",
+              "snippet": "고물가 상황이 장기화하면서 가성비를 중시하는 소비자가 늘어나는 가운데 프리미엄 모델의 핵심 기술과 신규 기능을 실속형 제품에 적용해 마사지 성능과 사용 편의성을 강화했다. ... 국내 종합가전기업"
+            },
+            {
+              "url": "https://nqbrief.com/ko/tech/topic/gadgets/",
+              "domain": "nqbrief.com",
+              "title": "디지털 기기 — 테크 뉴스 — NQ Brief",
+              "snippet": "디지털 기기 2026-11-01 ... ### 배민라이더스쿨, 한국건축가협회상·AMP 교육용 건물 부문 수상 지상 3층·연면적 8000㎡ 규모로 전 층이 실내 공간인 하남 배민라이더스쿨이 건축 디자인 부문에서 잇따라"
+            },
+            {
+              "url": "https://blog.newswire.co.kr/?p=19201",
+              "domain": "blog.newswire.co.kr",
+              "title": "IFA Berlin 2026 뉴스룸 오픈 - 홍보의 모든 것",
+              "snippet": "또한 전시회 참가기업들이 신제품과 기술, 시장 전망 등을 잇달아 발표하면서 전시장뿐 아니라 기업들의 보도자료를 통해서도 IFA 2026의 최신 기술 흐름을 확인할 수 있습니다. ... AI가"
+            },
+            {
+              "url": "https://techtech.kr/",
+              "domain": "techtech.kr",
+              "title": "테크테크 - IT·가전·모빌리티, 확인해서 정리합니다",
+              "snippet": "* 가전 ... 공식 발표·공개 자료를 확인해 정리합니다 ... 영어 베타는 9월 14일 시작됐고 기기 언어를 영어로 바꾸면 한국에서도 쓸 수 있습니다. ... ## 최신"
+            },
+            {
+              "url": "https://www.kdpharma.co.kr/",
+              "domain": "www.kdpharma.co.kr",
+              "title": "경동제약",
+              "snippet": "[Input] [Input] 제품검색 ... * 경동제약 50기 결산공고 0000.00.00 ... 주가정보 011040 ... [Button: 홍보영상] [Button: 그날엔 TV광고] ... 최첨단의 생산시설과 순수한 우리 기술로 ..."
+            },
+            {
+              "url": "https://lnk.bio/samsungnewsroom",
+              "domain": "lnk.bio",
+              "title": "@samsungnewsroom Lnk.Bio · link in bio",
+              "snippet": "‘갤럭시 Z 폴드8’과 함께한 가을 독서 나들이 80년의 혁신이 쌓아 올린 사운드 헤리티지…‘JBL 플레이백 갤러리’를 가다 삼성전자, JBL 80주년·바워스앤윌킨스 60주년 특별 기념 행사 개최 지역마다"
+            },
+            {
+              "url": "https://sfcmall.emart.com/disp/category.ssg?dispCtgId=6000214719",
+              "domain": "sfcmall.emart.com",
+              "title": "디지털/가전/렌탈 - 이마트몰",
+              "snippet": "* 장바구니 담기 {\"advertBidId\":\"\",\"displayPrc\":\"471550\",\"giftBtnShowType\":\"\",\"giftBtnActType\":\"Y\",\"itemChrctDivCd\":\"10\",\"giftBtnMsg\":\"\",\"itemNm\":\"[동계캠핑은 신일] 신일 1200 팬히터 SFH-1200MG(화이트) / 등유난로 9L\",\"shppTypeC"
+            }
+          ]
+        }
+      ],
+      "sources": [],
+      "candidates": [],
+      "status": "no_verified_recent_issue"
+    },
+    "source_recovery_attempts": 0,
+    "cak_import": {
+      "status": "not_applicable",
+      "reason": "health_only",
+      "direct_count": 0,
+      "expanded_seed_count": 0,
+      "related_count": 0,
+      "seed_lookup_failed_count": 0
+    },
+    "youtube_discovery": {
+      "provider": "youtube_data_api_v3",
+      "status": "api_unavailable",
+      "checked_at": "2026-11-03T09:03:46.583350+00:00",
+      "lookback_days": 90,
+      "ranking": "viewCount_within_recent_search_sample",
+      "videos": [],
+      "seeds": [],
+      "note": "Video views are not search demand or measured trend growth.",
+      "error": {
+        "endpoint": "search",
+        "code": "api_key_invalid",
+        "http_status": 400
+      }
+    },
+    "recruitment_discovery": {
+      "status": "not_applicable"
+    },
+    "review_question_discovery": {
+      "status": "not_needed",
+      "seeds": [],
+      "measured": []
+    },
+    "search_review_recovery_attempts": 0,
+    "search_review_diagnostics": [],
+    "shortlist_research_attempts": 0,
+    "unresearched_budget_keywords": [],
+    "deferred_research_family_keywords": [],
+    "researched_fallback_families": [],
     "analyst": "codex_subscription",
-    "discovery_provider": "official_dated_listings",
-    "measured_candidates": 0,
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 96,
     "evaluated_candidates": 0,
+    "research_pool_size": 2,
     "selected": [],
     "held": [],
     "rejected": [],
@@ -7770,7 +7925,6 @@
       "이력서작성법",
       "자궁경부암검사",
       "장애인일자리정책제도연구를위한업무협약체결",
-      "저소음청소기",
       "저혈압수치",
       "전기기사과목",
       "전기기사시험일정",
@@ -7796,17 +7950,370 @@
       "편의점김밥품질비교결과",
       "폐암초기증상",
       "폴리텍직업교육과정교육생모집",
-      "피벗테이블",
       "한국잡월드채용",
       "한이집트사회보장협정서명",
       "혈압정상수치",
       "화장실용화장지품질비교결과",
       "황새치st2호"
     ],
-    "research_stop_reason": "no_latest_sources",
+    "deferred_keywords": [
+      "HDD1TB",
+      "SSD2TB",
+      "SSD500GB",
+      "노트북SSD",
+      "노트북램",
+      "로봇청소기직배수설치",
+      "모니터주사율",
+      "모니터해상도",
+      "삼성SSD1TB",
+      "삼성SSD2TB",
+      "외장SSD4TB"
+    ],
+    "research_stop_reason": "time_budget",
+    "retry_keywords": [
+      "가벼운청소기",
+      "청소기필터"
+    ],
+    "discovery_rejections": [
+      {
+        "keyword": "무선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "물걸레청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "유선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "무선청소기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "청소기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "진공청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "원룸청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "저렴한청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "청소기비교",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "청소기가격",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "청소기순위",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "테팔무선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "무선청소기순위",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "무선진공청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "가성비청소기",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "유선청소기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "가정용청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "원룸무선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "무선청소기비교",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "원룸청소",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "홈쇼핑무선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "가성비무선청소기",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "아파트청소",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "가정용무선청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "머리카락청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "무선청소기가격비교",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "진공청소기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "무선청소기가성비",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "흡입력좋은청소기",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "스틱청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "청소기헤드",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "CPU",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "RAM",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "램가격",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "라데온",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "SSD가격",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "NZXT",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "CPU가격",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "그래픽카드추천",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "컴퓨터그래픽카드",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "GTA5사양",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성램",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "베어본",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "LG로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로봇청소기추천",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "로보락QREVO",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로보락물걸레청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락AS",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "인덕션받침대",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로보락Q8",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "인덕션설치",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로봇청소기비교",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로봇청소기순위",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "식기세척기설치",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로봇청소기가격",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로봇청소기로보락",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락물걸레",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성AI로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "가성비로봇청소기",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "저렴한로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락S6MAXV",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "ROBOROCK",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "인덕션설치비용",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "자동청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로봇청소기가성비",
+        "reason": "review_recommendation_unbounded"
+      },
+      {
+        "keyword": "인덕션프레임",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "인덕션거치대",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "천연대리석",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로보락큐레보",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "삼성식기세척기이전설치",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로보락S5MAX",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "미니로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로보락S7MAXVULTRA",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "로보락습건식청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "로봇청소기물걸레",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "원룸로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      },
+      {
+        "keyword": "청소로봇",
+        "reason": "review_product_unidentified"
+      },
+      {
+        "keyword": "무선로봇청소기",
+        "reason": "review_purchase_question_unbounded"
+      }
+    ],
+    "discovery_replenishment": [],
+    "deferred_measured_keywords": [
+      "노트북램",
+      "로봇청소기직배수설치"
+    ],
+    "selection_scope": "evergreen_fallback_after_no_latest_issue",
+    "proposal_rounds": [],
     "ranked_candidates": [],
     "candidate_decisions": [],
-    "notes": "Latest issues come from dated official listings; monthly search volume is exempt.",
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
       {
         "keyword": "DDR432G",
@@ -8080,49 +8587,64 @@
         "failed_at": "2026-10-04T13:23:19.387339+00:00",
         "retry_after": "2026-10-07T13:23:19.387339+00:00",
         "attempts": 1
-      },
-      {
-        "keyword": "퓨리케어필터",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-04T09:00:46.407050+00:00",
-        "retry_after": "2026-10-05T09:00:46.407050+00:00",
-        "attempts": 1
       }
     ],
-    "evergreen_fallback_error": "unclassified",
+    "latest_issue_attempt": {
+      "research_stop_reason": "no_latest_sources",
+      "evaluated_candidates": 0,
+      "seeds": [],
+      "held": [],
+      "rejected": [],
+      "latest_issue_listing": [
+        {
+          "url": "https://www.kca.go.kr/home/sub.do?menukey=4002&mode=view&no=1004577250",
+          "title": "[토핑 요거트 품질 및 안전성 시험 결과] 토핑 종류에 따라 토핑 양의 차이는 있으나 열량 차이는 적어",
+          "lead": "",
+          "published": "2026-11-03",
+          "publisher": "한국소비자원"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%98%81%ec%83%81-%ea%b1%b0%ea%b1%b0%ec%9d%b5%ec%84%a0%ec%9d%98-%ec%8b%9c%eb%8c%80-%ec%83%89%ec%9d%84-%ed%82%a4%ec%9a%b8-%ec%b0%a8%eb%a1%80%ec%9e%85%eb%8b%88%eb%8b%a4-%ec%82%bc%ec%84%b1-micro-rgb",
+          "title": "[영상] 거거익선의 시대, 색을 키울 차례입니다: 삼성 Micro RGB TV [삼분컷 EP.7]",
+          "lead": "거실에서 가장 큰 존재감을 드러내는 가전 TV. 화면이 클수록 화질의 차이가 그대로 드러난다. 삼성 Micro RGB TV는 크기 100㎛ 이하의 RGB 컬러 LED 자체를 광원으로 사용해 색을 더 넓고 정확한 색을 표현하고, AI 엔진으로 일상 속 콘텐츠의 화질까지 끌어올린다. 여기에 반사를 줄이는 Glare-Free 기술과 지문 방지 기능을 더해 관리도 한결 편해졌다. 광원 기술부터 AI 화질, […]",
+          "published": "2026-11-03",
+          "publisher": "samsung_newsroom"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-2026-%eb%8b%a4%ec%b9%b4%eb%a5%b4-%ec%b2%ad%ec%86%8c%eb%85%84%ec%98%ac%eb%a6%bc%ed%94%bd-%ea%b3%b5%ec%8b%9d-%ed%9b%84%ec%9b%90",
+          "title": "삼성전자, ‘2026 다카르 청소년올림픽’ 공식 후원",
+          "lead": "삼성전자가 10월 31일부터 세네갈 다카르에서 열리는 ‘2026 다카르 청소년올림픽’에 국제올림픽위원회(IOC)의 무선 통신 분야 공식 파트너(Worldwide Partner)로 참여한다. 삼성전자는 갤럭시 스마트폰을 활용해 빅토리 셀피(Victory Selfie)와 경기 중계를 지원하고, 선수촌 내 체험 공간인 삼성 오픈 스테이션(Samsung Open Station)과 멘토링 프로그램 등 다양한 활동을 선보일 계획이다. 특히 이번 대회에서는 삼성전자의 올림픽 대표 프로그램인 빅토리 셀피가 청소년올림픽 최초로 도입된다. […]",
+          "published": "2026-11-02",
+          "publisher": "samsung_newsroom"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-kt-ai%c2%b7%eb%94%94%ec%a7%80%ed%84%b8-%ed%8a%b8%ec%9c%88-%ea%b8%b0%eb%b0%98-%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-%ec%9e%90%ec%9c%a8-%ec%9a%b4%ec%9a%a9-%ea%b8%b0",
+          "title": "삼성전자-KT, AI·디지털 트윈 기반 네트워크 자율 운용 기술 상용망 검증",
+          "lead": "삼성전자가 KT와 공동으로 AI·디지털 트윈을 활용한 네트워크 자율 운용 기술을 상용망에서 검증했다. 양사는 이번 검증을 통해 사람의 개입 없이 네트워크가 상황 변화를 스스로 인지하고 최적의 설정을 찾아 적용하는 자율 운용의 기반을 마련했다. ※ 디지털 트윈(Digital Twin): 현실의 물리적 실체를 가상 세계에 복제하는 기술 AI가 ‘판단’하고 디지털 트윈이 ‘검증’한다 양사는 AI의 분석과 디지털 트윈의 사전 검증을 […]",
+          "published": "2026-11-02",
+          "publisher": "samsung_newsroom"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%9d%b4%ec%9e%ac%ec%9a%a9-%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ed%9a%8c%ec%9e%a5-%eb%af%b8%eb%9e%98-%eb%b0%98%eb%8f%84%ec%b2%b4-%ed%8c%a8%ed%82%a4%ec%a7%95-%ea%b8%b0%ec%88%a0-%ec%9d%bc%eb%b3%b8",
+          "title": "이재용 삼성전자 회장, 미래 반도체 패키징 기술 일본 현장 점검",
+          "lead": "이재용 삼성전자 회장이 1일 일본 요코하마에 위치한 첨단 반도체 패키징 연구거점 ‘Advanced Package Lab(APL)’을 찾아 차세대 패키징 요소기술 연구 현황을 점검했다. 이 회장은 APL 연구진과 함께 첨단 패키지 소재∙공정 요소기술 개발 현황과 일본 소재∙부품∙장비 업계와의 협력 방안을 논의했으며, AI 시대 반도체 경쟁력의 핵심인 첨단 패키징 기술 확보를 당부했다. APL은 지난 9월 8일 공식 개소한 삼성전자의 […]",
+          "published": "2026-11-02",
+          "publisher": "samsung_newsroom"
+        }
+      ]
+    },
     "analysis_diagnostics": [
       {
         "stage": "native_search",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 6271
+        "elapsed_ms": 9051
       },
       {
         "stage": "native_search",
-        "attempt": 1,
-        "status": "error",
-        "code": "turn_failed",
-        "elapsed_ms": 1727
-      },
-      {
-        "stage": "shortlist",
         "attempt": 1,
         "status": "returned",
-        "elapsed_ms": 18544
-      },
-      {
-        "stage": "native_search",
-        "attempt": 1,
-        "status": "error",
-        "code": "unclassified",
-        "elapsed_ms": 2936
-      },
-      {
-        "stage": "review_question_discovery",
-        "attempt": 1,
-        "status": "error",
-        "code": "unclassified",
-        "elapsed_ms": 1280
+        "elapsed_ms": 8612
       }
     ],
     "analysis_recovery_attempts": 0,
@@ -8135,16 +8657,16 @@
         "provider": "codex_native_search",
         "results": [
           {
+            "url": "https://www.maccosmetics.co.kr/collections",
+            "domain": "www.maccosmetics.co.kr",
+            "title": "신제품 | 맥 공식 온라인 몰",
+            "snippet": "신제품 출시!"
+          },
+          {
             "url": "https://kind.krx.co.kr/external/dst/irReference/17329/%EB%85%B8%EC%9D%84%20IR%20BOOK_202509.pdf",
             "domain": "kind.krx.co.kr",
             "title": "4. 비즈니스 - 하반기 주요 마일스톤",
             "snippet": "신제품 CBC 및 자궁경부암 진단 솔루션 출시로 본격적인 성장 모멘텀 마련 및 매출 총이익률 개선 고부가가치 신제품 2종 출시로 이익률 개선 및 선진국 시장 본격"
-          },
-          {
-            "url": "https://www.bodnara.co.kr/bbs/list.html?cate=12&menu2=news&section=life&start=20",
-            "domain": "www.bodnara.co.kr",
-            "title": "뉴스 리스트 :: 보드나라",
-            "snippet": "Image: 휴롬, 착즙기 선택의 기준을 다시 쓰는 ‘H75’ 신제품 출시 휴롬, 착즙기 선택의 기준을 다시 쓰는 ‘H75’ 신제품 출시 ㈜휴롬(대표 김재원)은 착즙 성능과 활용성, 세척"
           },
           {
             "url": "https://interai.kr/",
@@ -8159,40 +8681,40 @@
             "snippet": "* [신제품] 저당 프로틴 그래놀라 출시 ... 니즈를 파악한 고객맞춤형 제품부터 트렌디하고 독창적인 제품까지 다양한 자체 브랜드 제품을 제조, 판매하고 있습니다. ... 씨알푸드는 2007년을 시작으로"
           },
           {
-            "url": "https://hens-lab.com/entry/how-to-navigate-bandai",
-            "domain": "hens-lab.com",
-            "title": "반다이 몰 내비게이션: 상품 검색과 구매 방법",
-            "snippet": "이 글에서는 반다이 몰의 사용 방법, 재입고 및 신제품 출시 요일 정보까지 포함하여 반다이 몰을 최대한 활용하는 방법을 알려드립니다. ... * 반다이 공식 웹사이트와 SNS"
-          },
-          {
-            "url": "https://saleyebo.com/",
-            "domain": "saleyebo.com",
-            "title": "세일예보 | 브랜드 세일·신제품 출시 일정 캘린더",
-            "snippet": "18개 계열사 참여(할인 규모 약 2조 원), 한우 50%(브랜드 한우 최대 50%), 신세계라이브쇼핑·신세계인터내셔날 패션·뷰티 최대 70%, 신세계면세점 최대 70%, 글렌알라키 16년 한정판 19만9800원 ... *"
-          },
-          {
             "url": "https://press.efocus.co.kr/?md=A06&tno=259",
             "domain": "press.efocus.co.kr",
             "title": "신제품 출시 보도자료 - 부천포커스",
             "snippet": "국내 1위 자동차용품 전문 기업 불스원의 저자극 향기 큐레이션 브랜드 팅커벨이 생활 속 불쾌한 냄새를 제거하고 은은한 편백 향을 남기는 ‘팅커벨 더 편백 고체 탈취제’를"
           },
           {
-            "url": "https://www.ss-food.com/",
-            "domain": "www.ss-food.com",
-            "title": "상신종합식품에 오신 걸 환영합니다.",
-            "snippet": "다양한 규격의 제품생산이 가능합니다. ... 1994년 설립된 국내 최대 규모의 돈까스 제조 기업으로 ... Image: CJ제일제당 Image: 풀무원 Image: 대상 Image: 오뚜기 Image: 사조대림 Image:"
-          },
-          {
-            "url": "https://www.bodnara.co.kr/bbs/list.html?cate=26&menu2=news&section=mobile&start=20",
-            "domain": "www.bodnara.co.kr",
-            "title": "뉴스 리스트 :: 보드나라",
-            "snippet": "구체적인 발표 제품은 공개되지 않았지만 공개된 티저 이미지에는 렌즈의 조리개 조절 링으로 추정되는 부품이 등장해 새로운 교환식 렌즈 .. ... 글로벌 가전 브랜드 TCL이 21일"
-          },
-          {
             "url": "https://kind.krx.co.kr/external/dst/irReference/17199/%EB%85%B8%EC%9D%84%20IR%20BOOK_2025%EB%85%84%208%EC%9B%94.pdf",
             "domain": "kind.krx.co.kr",
             "title": "4) 제품 포트폴리오 확대 및 인증 로드맵",
             "snippet": "신제품 출시와 글로벌 인증 전략의 결합으로 판매 지역과 매출 다각화 진행 중 ... - **혈액분석(CBC):** CBC 제품 출시 완료, 유럽 및 중남미 주요 국가 신규"
+          },
+          {
+            "url": "https://www.newswire.co.kr/?md=A11&no=259&page=13&perpage=100",
+            "domain": "www.newswire.co.kr",
+            "title": "신제품 출시 보도자료 - 뉴스와이어",
+            "snippet": "##### 마테오에이아이스튜디오, 자회사 크릭스에이아이 통해 ESG 문화예술 플랫폼 3종 10월 중순 동시 베타 출시 ... ##### 투썸플레이스, Z세대 인기 캐릭터 ‘가나디’와 함께 한정판 신제품 출시"
+          },
+          {
+            "url": "https://ss-food.com/",
+            "domain": "ss-food.com",
+            "title": "상신종합식품에 오신 걸 환영합니다.",
+            "snippet": "다양한 규격의 제품생산이 가능합니다. ... 1994년 설립된 국내 최대 규모의 돈까스 제조 기업으로 ... Image: CJ제일제당 Image: 풀무원 Image: 대상 Image: 오뚜기 Image: 사조대림 Image:"
+          },
+          {
+            "url": "https://techtrends.kr/apple-new-products-release-schedule/",
+            "domain": "techtrends.kr",
+            "title": "애플 신제품 출시 일정 총정리 - 아이폰 듀오, 홈팟 미니 2, 애플 TV 4K 4세대 국내 가격 - 테크트렌드",
+            "snippet": "10월 말부터 11월 중순까지 이어지는 애플 신제품 출시 일정과 국내 가격을 정리해 보겠습니다. ... 아이폰 듀오와 홈팟 미니 2, 애플 TV 4K 4세대, 애플 홈뷰는"
+          },
+          {
+            "url": "https://www.shinpoong.co.kr/main/main.php",
+            "domain": "www.shinpoong.co.kr",
+            "title": "신풍제약주식회사",
+            "snippet": "하이알플렉스주(헥사메틸렌디아민으로가교결합된히알루론산나트륨겔) ... * 신풍제약, 창립 64주년 기념식 개최… “흑자 전환 발판 삼아 ‘재도약’ 선포” ... * 공 장 : 경기도 안산시 단원구 원시로7 신풍제약 ..."
           }
         ]
       },
@@ -8202,19 +8724,80 @@
         "stage": "latest_issue_search",
         "query": "가전 디지털 기기 신제품 발표 after:2026-11-02 before:2026-11-04",
         "provider": "codex_native_search",
-        "results": []
+        "results": [
+          {
+            "url": "https://saleyebo.com/",
+            "domain": "saleyebo.com",
+            "title": "세일예보 | 브랜드 세일·신제품 출시 일정 캘린더",
+            "snippet": "가전·디지털11월 2일 같은 상품 5개를 11번가·쿠팡·G마켓·알리익스프레스에서 확인했습니다. ... 장보기이마트 쓱데이가 8일(일)에 끝납니다. ... 백화점 겨울 정기세일은 현대·롯데가 지난 3년 모두 금요일에 시작해 13일(금) 전후, 신세계는"
+          },
+          {
+            "url": "https://xn--b01b05e837ahc.com/?category=digital",
+            "domain": "xn--b01b05e837ahc.com",
+            "title": "오늘 뜬 핫딜 · 하루핫딜",
+            "snippet": "디지털·가전 네이버쇼핑 8시간 전 올라옴 드롱기 마그니피카S 전자동 에스프레소머신 399,200원 상품 보기 디지털·가전 쿠팡 8시간 전 올라옴 MSI 코어리퀴드 P22 360 수냉쿨러 블랙 99,000원 상품"
+          },
+          {
+            "url": "https://proxy.audy.io/v/s-d3d3LnBybmV3c3dpcmUuY29t/kr/news-releases/consumer-products-retail-latest-news/household-products-list/?page=3&pagesize=25",
+            "domain": "proxy.audy.io",
+            "title": "생활용품 | PR Newswire",
+            "snippet": "주방 기기, 가전 제품, 청소 제품, 반려동물 관리, 아웃도어 및 철물 도구 및 기타 가정용품 분야의 신제품 및 기존 제품 출시, 업그레이드 및 공급을 포함한"
+          },
+          {
+            "url": "https://www.newstap.co.kr/news/articleList.html?sc_sub_section_code=S2N6&view_type=sm",
+            "domain": "www.newstap.co.kr",
+            "title": "가전/디지털/테크 < 신상품뉴스 < 기사목록 - 뉴스탭",
+            "snippet": "고물가 상황이 장기화하면서 가성비를 중시하는 소비자가 늘어나는 가운데 프리미엄 모델의 핵심 기술과 신규 기능을 실속형 제품에 적용해 마사지 성능과 사용 편의성을 강화했다. ... 국내 종합가전기업"
+          },
+          {
+            "url": "https://nqbrief.com/ko/tech/topic/gadgets/",
+            "domain": "nqbrief.com",
+            "title": "디지털 기기 — 테크 뉴스 — NQ Brief",
+            "snippet": "디지털 기기 2026-11-01 ... ### 배민라이더스쿨, 한국건축가협회상·AMP 교육용 건물 부문 수상 지상 3층·연면적 8000㎡ 규모로 전 층이 실내 공간인 하남 배민라이더스쿨이 건축 디자인 부문에서 잇따라"
+          },
+          {
+            "url": "https://blog.newswire.co.kr/?p=19201",
+            "domain": "blog.newswire.co.kr",
+            "title": "IFA Berlin 2026 뉴스룸 오픈 - 홍보의 모든 것",
+            "snippet": "또한 전시회 참가기업들이 신제품과 기술, 시장 전망 등을 잇달아 발표하면서 전시장뿐 아니라 기업들의 보도자료를 통해서도 IFA 2026의 최신 기술 흐름을 확인할 수 있습니다. ... AI가"
+          },
+          {
+            "url": "https://techtech.kr/",
+            "domain": "techtech.kr",
+            "title": "테크테크 - IT·가전·모빌리티, 확인해서 정리합니다",
+            "snippet": "* 가전 ... 공식 발표·공개 자료를 확인해 정리합니다 ... 영어 베타는 9월 14일 시작됐고 기기 언어를 영어로 바꾸면 한국에서도 쓸 수 있습니다. ... ## 최신"
+          },
+          {
+            "url": "https://www.kdpharma.co.kr/",
+            "domain": "www.kdpharma.co.kr",
+            "title": "경동제약",
+            "snippet": "[Input] [Input] 제품검색 ... * 경동제약 50기 결산공고 0000.00.00 ... 주가정보 011040 ... [Button: 홍보영상] [Button: 그날엔 TV광고] ... 최첨단의 생산시설과 순수한 우리 기술로 ..."
+          },
+          {
+            "url": "https://lnk.bio/samsungnewsroom",
+            "domain": "lnk.bio",
+            "title": "@samsungnewsroom Lnk.Bio · link in bio",
+            "snippet": "‘갤럭시 Z 폴드8’과 함께한 가을 독서 나들이 80년의 혁신이 쌓아 올린 사운드 헤리티지…‘JBL 플레이백 갤러리’를 가다 삼성전자, JBL 80주년·바워스앤윌킨스 60주년 특별 기념 행사 개최 지역마다"
+          },
+          {
+            "url": "https://sfcmall.emart.com/disp/category.ssg?dispCtgId=6000214719",
+            "domain": "sfcmall.emart.com",
+            "title": "디지털/가전/렌탈 - 이마트몰",
+            "snippet": "* 장바구니 담기 {\"advertBidId\":\"\",\"displayPrc\":\"471550\",\"giftBtnShowType\":\"\",\"giftBtnActType\":\"Y\",\"itemChrctDivCd\":\"10\",\"giftBtnMsg\":\"\",\"itemNm\":\"[동계캠핑은 신일] 신일 1200 팬히터 SFH-1200MG(화이트) / 등유난로 9L\",\"shppTypeC"
+          }
+        ]
       }
     ],
-    "selection_outcome": "no_pass_among_evaluated",
+    "selection_outcome": "research_budget_exhausted",
     "selection_funnel": {
-      "measured": 0,
-      "pool": 0,
+      "measured": 96,
+      "pool": 2,
       "shortlist_offered_unique": 0,
       "evaluated": 0,
       "held": 0,
       "rejected": 0,
       "selected": 0,
-      "stop_reason": "no_latest_sources"
+      "stop_reason": "time_budget"
     }
   },
   "테크": {

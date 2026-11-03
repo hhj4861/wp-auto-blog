@@ -1037,6 +1037,17 @@
       "status": "success",
       "completed_at": "2026-11-02T09:08:50.186190+00:00",
       "published_category": "취업"
+    },
+    "2026-11-03:morning": {
+      "scheduled_for": "2026-11-03T09:00:00+09:00",
+      "run_created_at": "2026-11-03T09:00:06+09:00",
+      "start_delay_seconds": 13,
+      "trigger": "external_timer",
+      "run_id": "41549610871",
+      "category": "취업",
+      "slot": "morning",
+      "claimed_at": "2026-11-03T09:00:13.682227+09:00",
+      "status": "started"
     }
   }
 }

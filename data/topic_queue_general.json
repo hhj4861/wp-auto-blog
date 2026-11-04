@@ -50868,7 +50868,7 @@
     "keywords": [
       "필수의료분야 수사 가이드라인"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-11-03T11:45:49.604345+00:00",
@@ -50939,7 +50939,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2088,
+    "url": "https://trendpulse.blog/essential-medical-investigation-guidelines-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-11-04T09:08:47.089902"
   },
   {
     "keyword": "제9차 생명존중정책 민관협의회",

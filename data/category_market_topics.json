@@ -4564,10 +4564,337 @@
   },
   "테크": {
     "category": "테크",
-    "selected_at": "2026-11-04T00:01:34.921396+00:00",
+    "selected_at": "2026-11-04T09:03:41.728055+00:00",
+    "seeds": [
+      "AI에이전트",
+      "인공지능",
+      "오픈AI",
+      "반도체",
+      "소프트웨어업데이트"
+    ],
+    "selection_version": 8,
+    "research_rounds": 0,
+    "latest_issue_discovery": {
+      "window_start": "2026-11-03T00:00:00+09:00",
+      "window_end": "2026-11-04T18:03:41.728055+09:00",
+      "queries": [
+        {
+          "query": "AI 에이전트 모델 공식 출시 발표 after:2026-11-03 before:2026-11-05",
+          "provider": "codex_native_search",
+          "results": [
+            {
+              "url": "https://mobilab.me/",
+              "domain": "mobilab.me",
+              "title": "모비랩 - 마비노기 모바일 연구소",
+              "snippet": "공식 자료를 바탕으로 답하는 모비전트와 캐릭터 관리, 숙제표, 크루 플래너, 시즌 2 도감을 이용해보세요. ... 공지 모비노기용 AI 에이전트인 모비전트 출시 ... 안내 12월 17일"
+            },
+            {
+              "url": "https://apps.apple.com/kr/app/%EB%AF%B8%EC%9A%B0-ai-meeaww-ai-%EB%8F%99%EC%98%81%EC%83%81-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%83%9D%EC%84%B1%EA%B8%B0/id6476824412",
+              "domain": "apps.apple.com",
+              "title": "‎미우 AI (MeeAww): AI 동영상·이미지 생성기 앱 - App Store",
+              "snippet": "· 마음에 든 영상의 연출을 내 제품으로 그대로 · 스튜디오도 모델도 촬영 스태프도 필요 없습니다 신규 — AI AD STUDIO: 영상 광고와 이미지 광고 ·"
+            },
+            {
+              "url": "https://17nas.com/llm-leaderboard.php?lang=ko-KR&view=open",
+              "domain": "17nas.com",
+              "title": "오픈소스 LLM 순위 2026: 오픈 웨이트 모델 비교 | 17NAS | 한국어",
+              "snippet": "* Arena 발표 10월 28일 ... # | 모델 | arena.ai 에이전트 | 텍스트↓ | AA 지수 | 가격 $/100만 토큰 | 지연(초)·속도 | 컨텍스트"
+            },
+            {
+              "url": "https://www.aaia.kr/",
+              "domain": "www.aaia.kr",
+              "title": "에이전틱 AI 얼라이언스 Agentic AI Alliance (AAIA)",
+              "snippet": "아시아경제 아시아경제 2026.07.23 정부, AI 생태계 선점 위한 '에이전틱 AI 이니셔티브' 발표 기사 보기 연합인포맥스 연합인포맥스 2026.07.23 '에이전틱 AI' 생태계 선점 나선다…연내 안전 가이드라인 마련"
+            },
+            {
+              "url": "https://docs.wrks.ai/2026-ai",
+              "domain": "docs.wrks.ai",
+              "title": "2026년 웍스AI 한눈에 보기 ★ | 웍스AI 이용가이드",
+              "snippet": "* 2027년에는 에이전트와 워크플로우를 하나로 합치고, 회사와 한몸이 되는 AI로 나아가요(아래 '2027년 비전'). ... 70종+ | AI 모델 | 주요 모델사의 최신 모델을 출시 당일"
+            },
+            {
+              "url": "https://www.i-boss.co.kr/ab-7460?PB_1330918089=14&nic=%EC%9A%B4%EC%98%81%EB%B3%B4%EC%8A%A4",
+              "domain": "www.i-boss.co.kr",
+              "title": "운영보스님의 활동로그 - 게시글",
+              "snippet": "구글, 제미나이 기반 광고용 AI 에이전트 12월 공개 구글이 제미나이 모델을 적용한 광고 AI 에이전트 두 가지를 12월 초 출시한다. ... 중앙일보는 KT is에서 분할된"
+            },
+            {
+              "url": "https://www.coursium.ai/ko/blog/myujeu-seupakeu",
+              "domain": "www.coursium.ai",
+              "title": "뮤즈 스파크란? 메타 AI 모델과 \"뮤즈\" 앱, 헷갈리는 이름부터 정리",
+              "snippet": "메타 AI 앱과 meta.ai가 이 모델로 바뀌었어요. ... 06 9월 8일: 에이전트 앱 뮤즈 출시. ... 메타 한국어 뉴스룸 은 5월 13일부터 앱과 웹사이트에서 한국어로"
+            },
+            {
+              "url": "https://it.donga.com/109832/",
+              "domain": "it.donga.com",
+              "title": "[위클리AI] 구글·오픈AI·아마존, 업무에서 일상까지 AI 쓰임새 넓혔다",
+              "snippet": "구글은 10월 28일(이하 현지 시간) 공식 블로그에 \"제미나이 4 카본은 최첨단 사이버보안과 장시간 작업 역량을 갖춘 가장 강력한 모델\"이라고 소개했습니다. ... AI에게 장시간 업무를 맡기려는"
+            },
+            {
+              "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf?chain_id=1qINd-VP7ZwnmW.1kv7mtk&global_content=%7B%22promote_id%22%3A13766%2C%22sub_promote_id%22%3A14%2C%22f%22%3A%22www.futunn.com%2Flearn%2Fdetail-trump-released-the-u-s-ai-action-plan-these-four-major-investment-themes-are-essential-to-know-91481-250791041%22%7D",
+              "domain": "www.whitehouse.gov",
+              "title": "America’s AI Action Plan",
+              "snippet": "# AI ACTION PLAN"
+            },
+            {
+              "url": "https://ad.re.kr/trends",
+              "domain": "ad.re.kr",
+              "title": "AI 트렌드·리포트 허브 - 한국광고연구소 KIAD | 한국광고연구소 KIAD",
+              "snippet": "이번 주 광고 플랫폼 업데이트: 구글·틱톡·메타의 AI 광고/요약 기능 강화 광고 운영 자동화와 AI 요약·추천 기능이 주요 플랫폼 업데이트의 중심으로 부상.2026-11-03자세히 보기 →에이전틱(Agentic) AI 확산:"
+            }
+          ]
+        },
+        {
+          "query": "기술 보안 소프트웨어 공식 발표 변경 after:2026-11-03 before:2026-11-05",
+          "provider": "codex_native_search",
+          "results": [
+            {
+              "url": "https://www.apple.com/legal/internet-services/icloud/kr/terms.html",
+              "domain": "www.apple.com",
+              "title": "Legal - iCloud - Apple",
+              "snippet": "귀하는 설정에서 iCloud를 비활성화할 수 있습니다. iCloud가 활성화되면, 귀하의 콘텐츠는 자동으로 Apple의 서버 또는 제3자 제공업체의 서버에 저장되며, 귀하는 이후 해당 콘텐츠에 접근하거나 iCloud가 활성화된"
+            },
+            {
+              "url": "https://intramagazine.com/wiki/one-ui-9/",
+              "domain": "intramagazine.com",
+              "title": "One UI 9 - 인트라매거진",
+              "snippet": "지원되는 기기에서는 ‘설정 → 소프트웨어 업데이트 → 다운로드 및 설치’ 메뉴에서 업데이트 여부를 확인할 수 있다. ... One UI 9은 One UI 8의 후속 주요"
+            },
+            {
+              "url": "https://speciai.kr/db/briefs/2026-10-16",
+              "domain": "speciai.kr",
+              "title": "2026년 10월 16일 브리핑 | 스페시아이 네트워크",
+              "snippet": "개정 노조법 시행 이후 자회사 노조가 원청을 상대로 교섭을 요구한 사례로 제시돼, 원·하청 관계의 사용자성 및 교섭 대응 문제가 주목된다. ... 민주노총 공공운수노조 인천공항지역지부는 인천국제공항보안,"
+            },
+            {
+              "url": "https://www.securecodewarrior.com/ko/resources?910ff8f8_page=2&97c8c720_page=13&b3529362_page=16",
+              "domain": "www.securecodewarrior.com",
+              "title": "보안 코딩 및 AI 소프트웨어 거버넌스 리소스 | Secure Code Warrior",
+              "snippet": "AI 기반 코딩이 개발 방식을 바꾸고 있습니다. 실제 업무 환경에서 코드를 안전하게 검토, 분석 및 수정할 수 있는 새로운 Copilot 스타일의 AI 챌린지를 지금 경험해"
+            },
+            {
+              "url": "https://bidpro.co.kr/n0_ipchal/konggo/item/konggo_view.asp?num=5519908",
+              "domain": "bidpro.co.kr",
+              "title": "열응력 해석을 위한 Ansys Discovery Enterprise 소프트웨어,R26BK01806349-000 - 비드프로 입찰정보",
+              "snippet": "본 소프트웨어는 외부 CAD 시스탬의 의존 없이 단독으로 용접 대상물(모재 및 비드)의 3D 모델링, 격자 생성, 열-구조 연성해석, 그리고 설계 파라미터 사전 검토하는 것을 목적으로"
+            },
+            {
+              "url": "https://bulldogwealth.co.kr/%ED%85%8C%EC%8A%AC%EB%9D%BC-fsd-%EB%B6%88%EB%B2%95-%ED%99%9C%EC%84%B1%ED%99%94-80%EB%AA%85-%EC%86%A1%EC%B9%98/",
+              "domain": "bulldogwealth.co.kr",
+              "title": "테슬라 FSD 불법 활성화 80명 송치, 징역 2년·벌금 2000만원…내 차도 위험할까 5가지 확인 - 불독경제",
+              "snippet": "이 글은 2026년 10월 28일 기준으로 경찰 발표, 국토교통부 입장, 주요 언론 보도로 확인된 내용만 모아 테슬라 FSD 불법 활성화의 처벌 기준과 차주가 지금 확인할"
+            },
+            {
+              "url": "https://www.mathworks.com/company/events/conferences/automotive-conference-korea/2026.html",
+              "domain": "www.mathworks.com",
+              "title": "MathWorks Automotive Conference 2026 Korea - MATLAB & Simulink",
+              "snippet": "16:10 | Agentic AI 도입에서 성과까지: Consulting을 통한 엔지니어링 혁신 Agentic AI 도입에서 성과까지: Consulting을 통한 엔지니어링 혁신 엔지니어링 조직이 에이전틱 AI의 초기 실험 단계를"
+            },
+            {
+              "url": "https://www.mhlw.go.jp/content/10900000/001598200.pdf",
+              "domain": "www.mhlw.go.jp",
+              "title": "대한민국 농림축산식품부 동물검역증명서",
+              "snippet": "대한민국 농림축산식품부 동물검역증명서 ... | 예방약의 종류 및 예방접종 연월일 (Kind and Date of Vaccination or Test etc.) ... 위의 동물은 대한민국 「가축전염병 예방법」에 따라"
+            },
+            {
+              "url": "https://yellowit.co.kr/it-review/%EA%B0%A4%EB%9F%AD%EC%8B%9Cs23-%EC%9A%B8%ED%8A%B8%EB%9D%BC-one-ui-8-5-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EB%82%B4%EC%9A%A9%EF%BD%9C%EC%A7%80%EC%9B%90-%EB%AA%A8%EB%8D%B8%C2%B77%EC%9B%94-%EB%B3%B4/",
+              "domain": "yellowit.co.kr",
+              "title": "갤럭시S23 울트라 One UI 8.5 업데이트 내용｜지원 모델·7월 보안패치·설치방법 - 노랗IT월드",
+              "snippet": "웹페이지의 버튼을 누른다고 스마트폰에 업데이트 파일이 바로 설치되는 것은 아닙니다. 갤럭시 OTA 업데이트는 기기 내부의 소프트웨어 업데이트 메뉴에서 직접 확인해야 합니다. ... 금융·인증 앱 |"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://apps.apple.com/kr/app/%EB%AF%B8%EC%9A%B0-ai-meeaww-ai-%EB%8F%99%EC%98%81%EC%83%81-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%83%9D%EC%84%B1%EA%B8%B0/id6476824412",
+          "status": "no_recent_date",
+          "observed_dates": [
+            "2025-05-16",
+            "2025-08-06",
+            "2025-08-19",
+            "2025-09-24",
+            "2025-09-26",
+            "2025-11-04",
+            "2025-11-05",
+            "2025-11-12",
+            "2025-11-26",
+            "2025-12-10",
+            "2025-12-13",
+            "2025-12-26"
+          ]
+        },
+        {
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf?chain_id=1qINd-VP7ZwnmW.1kv7mtk&global_content=%7B%22promote_id%22%3A13766%2C%22sub_promote_id%22%3A14%2C%22f%22%3A%22www.futunn.com%2Flearn%2Fdetail-trump-released-the-u-s-ai-action-plan-these-four-major-investment-themes-are-essential-to-know-91481-250791041%22%7D",
+          "status": "fetch_failed"
+        },
+        {
+          "url": "https://www.apple.com/legal/internet-services/icloud/kr/terms.html",
+          "status": "no_recent_date",
+          "observed_dates": []
+        }
+      ],
+      "candidates": [],
+      "status": "no_verified_recent_issue"
+    },
+    "source_recovery_attempts": 0,
+    "cak_import": {
+      "status": "not_applicable",
+      "reason": "health_only",
+      "direct_count": 0,
+      "expanded_seed_count": 0,
+      "related_count": 0,
+      "seed_lookup_failed_count": 0
+    },
+    "youtube_discovery": {
+      "provider": "youtube_data_api_v3",
+      "status": "api_unavailable",
+      "checked_at": "2026-11-04T09:03:41.728055+00:00",
+      "lookback_days": 90,
+      "ranking": "viewCount_within_recent_search_sample",
+      "videos": [],
+      "seeds": [],
+      "note": "Video views are not search demand or measured trend growth.",
+      "error": {
+        "endpoint": "search",
+        "code": "api_key_invalid",
+        "http_status": 400
+      }
+    },
+    "recruitment_discovery": {
+      "status": "not_applicable"
+    },
+    "review_question_discovery": {
+      "status": "not_needed",
+      "seeds": [],
+      "measured": []
+    },
+    "search_review_recovery_attempts": 0,
+    "search_review_diagnostics": [],
+    "shortlist_research_attempts": 0,
+    "unresearched_budget_keywords": [],
+    "deferred_research_family_keywords": [],
+    "researched_fallback_families": [],
+    "analyst": "codex_subscription",
+    "discovery_provider": "naver_related_keywords",
+    "measured_candidates": 457,
+    "evaluated_candidates": 0,
+    "research_pool_size": 120,
     "selected": [],
     "held": [],
     "rejected": [],
+    "excluded_keywords": [
+      "1tb외장하드",
+      "ai건강도우미챗봇",
+      "ai중소스타트업집중지원",
+      "earlibot",
+      "gemininotebookconnectedapp",
+      "hrdk국민성장추진위원회",
+      "itq자격증조회",
+      "php2shell",
+      "playstore서비스장애정상화",
+      "psyconeuvision",
+      "pt면접",
+      "vlookup",
+      "가벼운무선청소기",
+      "게임파인더gamefinder",
+      "경력기술서",
+      "경영지도사자격증",
+      "고지혈증수치",
+      "고지혈증원인",
+      "광주보훈병원계약직업무지원직고객지원검사코디",
+      "구글스프레드시트공유",
+      "구내염빨리낫는법",
+      "국가자격증종류",
+      "국립청소년인터넷드림마을직원모집공고",
+      "국민화재안심프로젝트",
+      "기관지에좋은음식",
+      "내국수출입부가가치세환급지연",
+      "노션사용법",
+      "노트북인터넷연결",
+      "당화혈색소정상수치",
+      "대상포진초기증상",
+      "대장내시경비용",
+      "대장내시경전음식",
+      "대한적십자사인천사할린동포복지회관직원요양보호사채용공고",
+      "동계정기항공편일정확정",
+      "러시아원인불명폐렴폐페스트의심",
+      "레퍼런스체크",
+      "로봇청소기문턱",
+      "물순환촉진구역지정공모",
+      "발톱무좀치료방법",
+      "보세건설장제도개선",
+      "보타닉포레소프트",
+      "부터달라지는저소득층구분모집",
+      "산업기사시험일정",
+      "세금계산서발행",
+      "신규택지104만호",
+      "애스크플레이askplay",
+      "엑셀매크로",
+      "엑셀조건부서식",
+      "엑셀차트만들기",
+      "엑셀틀고정",
+      "엑셀표만들기",
+      "연말정산환급일",
+      "오메가3효능",
+      "온디바이스ai",
+      "용인중앙시장캠페인",
+      "윈도우11설치",
+      "윈도우11정품인증",
+      "윈도우재설치",
+      "이력서작성법",
+      "자궁경부암검사",
+      "장애인일자리정책제도연구를위한업무협약체결",
+      "저혈압수치",
+      "전기기사과목",
+      "전기기사시험일정",
+      "전세사기피해자등623건추가결정",
+      "정신의료기관입퇴원절차16종주요서식",
+      "제10회벤처창업아이템경진대회",
+      "제14회호스피스의날기념식",
+      "제6차자살예방기본계획",
+      "종합소득과세표준",
+      "종합소득세기한후신고환급",
+      "종합소득세중간예납",
+      "주요다제내성균감염증특성분석및대응전략개발",
+      "중증장애인체험형청년인턴단시간일4시간채용공고",
+      "지니4genie4",
+      "집배원이전달하는그냥드림",
+      "청소년상담사자격증",
+      "청평고등학교훈련성과공유간담회",
+      "코세척방법",
+      "콘드로이친효능",
+      "콜레스테롤낮추는방법",
+      "퇴직금중간정산",
+      "파워포인트뷰어",
+      "편의점김밥품질비교결과",
+      "폐암초기증상",
+      "폴리텍직업교육과정교육생모집",
+      "한국잡월드채용",
+      "한이집트사회보장협정서명",
+      "혈압정상수치",
+      "화장실용화장지품질비교결과",
+      "황새치st2호"
+    ],
+    "deferred_keywords": [
+      "제5차한-캐나다과학기술혁신공동위원회",
+      "캘리브레이션"
+    ],
+    "research_stop_reason": "time_budget",
+    "retry_keywords": [
+      "파이썬설치",
+      "생성형AI종류"
+    ],
+    "discovery_rejections": [],
+    "discovery_replenishment": [],
+    "deferred_measured_keywords": [
+      "캘리브레이션"
+    ],
+    "selection_scope": "evergreen_fallback_after_no_latest_issue",
+    "proposal_rounds": [],
+    "ranked_candidates": [],
+    "candidate_decisions": [],
+    "notes": "Priority score is a heuristic, not predicted traffic. Demand is Naver; organic provider is recorded per candidate. Independently fetched official pages are source evidence; model-reported locators prove neither indexing nor native page visits. Missing competition or unverified topic intent prevents automatic publication. Monthly demand belongs to the exact keyword, never an unmeasured narrower question. The executed organic query may change ASCII spacing only; its binding is retained. CAK exact rising candidates use their own daily trend score; related discoveries use only their own Google trend. Null Google trend means unavailable or not requested.",
     "failure_history": [
       {
         "keyword": "CE인증",
@@ -5142,72 +5469,361 @@
         "failed_at": "2026-10-08T00:00:44.218807+00:00",
         "retry_after": "2026-10-11T00:00:44.218807+00:00",
         "attempts": 1
-      },
-      {
-        "keyword": "삼성닷컴",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-06T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "아이폰17",
-        "reason_code": "intent_mismatch",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-12T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "세탁기건조기",
-        "reason_code": "intent_mismatch",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-12T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "컴퓨터포맷하는법",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-06T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "와이파이설치",
-        "reason_code": "source_coverage",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-08T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "노트북초기화",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-06T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "데이터쉐어링",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-06T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "윈도우10다운로드",
-        "reason_code": "search_quality",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-06T09:00:57.597349+00:00",
-        "attempts": 1
-      },
-      {
-        "keyword": "와이파이속도",
-        "reason_code": "source_coverage",
-        "failed_at": "2026-10-05T09:00:57.597349+00:00",
-        "retry_after": "2026-10-08T09:00:57.597349+00:00",
-        "attempts": 1
       }
     ],
-    "research_stop_reason": "selection_failed",
-    "operational_error": "unexpected_error"
+    "latest_issue_attempt": {
+      "research_stop_reason": "latest_listing_exhausted",
+      "evaluated_candidates": 2,
+      "seeds": [
+        "AI 기반 통합인허가 사전진단 서비스",
+        "2027년 호라이즌 유럽 참여 전략 포럼"
+      ],
+      "held": [],
+      "rejected": [
+        {
+          "keyword": "AI 기반 통합인허가 사전진단 서비스",
+          "reason": "search intent or official evidence does not support an article",
+          "decision_diagnostics": {
+            "official_sources": [
+              {
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787945",
+                "title": "[관계부처 합동] 이 땅에 집 지을 수 있나요? 복잡한 토지개발 인허가, 인공지능(AI)으로 쉽게 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+                "excerpt_chars": 2081
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "category_mismatch"
+            }
+          }
+        },
+        {
+          "keyword": "2027년 호라이즌 유럽 참여 전략 포럼",
+          "reason": "search intent or official evidence does not support an article",
+          "decision_diagnostics": {
+            "official_sources": [
+              {
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787926",
+                "title": "호라이즌 유럽 참여 확대 넘어 전략적 공동연구 강화 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+                "excerpt_chars": 1761
+              }
+            ],
+            "analysis_status": "supported_false",
+            "model_rejection_opinion": {
+              "kind": "model_opinion",
+              "code": "category_mismatch"
+            }
+          }
+        }
+      ],
+      "latest_issue_listing": [
+        {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787945",
+          "title": "[관계부처 합동] 이 땅에 집 지을 수 있나요? 복잡한 토지개발 인허가, 인공지능(AI)으로 쉽게",
+          "lead": "- 「AI 민생 10대 프로젝트」 지원을 통해 내년 1월부터 시범운영 -- K-Geo Festa서 AI 통합인허가 사전진단 서비스 첫선 - - 복잡한 법령 몰라도, 평소 쓰는 말로 질문하면 AI가 인허가 사전 진단 -",
+          "published": "2026-11-04",
+          "publisher": "과학기술정보통신부"
+        },
+        {
+          "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+          "title": "Accelerating engineering for the physical world",
+          "lead": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ea%b0%a4%eb%9f%ad%ec%8b%9c-%eb%b2%84%ec%a6%88-%ec%b2%ad%eb%a0%a5-%ec%b2%b4%ed%81%ac-%ef%82%9e-%ec%b2%ad%eb%a0%a5-%ec%bc%80%ec%96%b4-%ea%b8%b0%eb%8a%a5",
+          "title": "삼성전자, 갤럭시 버즈 ‘청력 체크’ · ‘청력 케어’ 기능 식약처 허가 획득",
+          "lead": "삼성전자가 갤럭시 버즈에 탑재될 ‘청력 체크(Hearing Test)’와 ‘청력 케어(Hearing Aid)’ 기능으로 식품의약품안전처(이하 식약처)의 의료기기 허가를 획득했다. 이번 허가로 갤럭시 버즈4 프로와 갤럭시 버즈3 프로 사용자는 기존에 사용하던 갤럭시 버즈를 ‘청력 체크’와 ‘청력 케어’ 용도로 활용할 수 있다. 갤럭시 버즈의 ‘청력 체크’와 ‘청력 케어’ 기능은 국내 갤럭시 버즈4 프로와 갤럭시 버즈3 프로에 소프트웨어 업데이트를 통해 내년 […]",
+          "published": "2026-11-04",
+          "publisher": "samsung_newsroom"
+        },
+        {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787926",
+          "title": "호라이즌 유럽 참여 확대 넘어 전략적 공동연구 강화",
+          "lead": "- 과기정통부, 「2027년 호라이즌 유럽 참여 전략 포럼」 개최 -- 인공지능·디지털, 첨단바이오·의료, 기후·에너지 등 분야별 공모 분석 및 맞춤형 참여전략 공유 -- 유럽 우수 연구기관과의 전략적 공동연구 확대를 위한 연구자 지원 강화 -",
+          "published": "2026-11-04",
+          "publisher": "과학기술정보통신부"
+        },
+        {
+          "url": "https://openai.com/index/cisco-cyber",
+          "title": "How Cisco defends at machine speed with OpenAI",
+          "lead": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%95%9c%ea%b5%ad%ec%84%9c%eb%b9%84%ec%8a%a4%ed%92%88%ec%a7%88%ec%a7%80%ec%88%98-%ec%97%90%ec%96%b4%ec%bb%a8-as-%eb%b6%80%eb%ac%b8-2",
+          "title": "삼성전자서비스, 한국서비스품질지수 에어컨 AS 부문 2년 연속 1위",
+          "lead": "삼성전자서비스(대표이사 김영호 부사장)가 한국표준협회가 주관하는 2026 한국서비스품질지수(KS-SQI) 에어컨 AS 부문에서 2년 연속 1위에 선정됐다. * KS-SQI: Korean Standard-Service Quality Index 삼성전자서비스는 지난해 에어컨 AS 부문에서 원년 1위에 선정된데 이어 올해도 정상을 지키며 업계 최고의 자리를 다시 한번 입증했다. 실제로 2월 ‘한국에서 가장 존경받는 기업’ 서비스센터 부문 1위, 6월 ‘국가서비스대상’ 가전 AS 대상, 7월 ‘한국서비스품질지수(KS-SQI)’, ‘국가고객만족도(NCSI)’, […]",
+          "published": "2026-11-04",
+          "publisher": "samsung_newsroom"
+        },
+        {
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787901",
+          "title": "대한민국 과학기술인상 11월 수상자 이종원 단장 선정",
+          "lead": "-한국형 AI 휴머노이드 'KAPEX' 개발…핵심부품 국산화·20kg 이상 작업능력 구현 - -기술이전·산학연 협력으로 K-휴머노이드 산업 생태계 구축…피지컬AI 글로벌 1강 박차 -",
+          "published": "2026-11-04",
+          "publisher": "과학기술정보통신부"
+        },
+        {
+          "url": "https://openai.com/index/heimstaden",
+          "title": "Heimstaden is changing residential real estate management with AI",
+          "lead": "Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://news.samsung.com/kr/%ec%98%81%ec%83%81-%ea%b1%b0%ea%b1%b0%ec%9d%b5%ec%84%a0%ec%9d%98-%ec%8b%9c%eb%8c%80-%ec%83%89%ec%9d%84-%ed%82%a4%ec%9a%b8-%ec%b0%a8%eb%a1%80%ec%9e%85%eb%8b%88%eb%8b%a4-%ec%82%bc%ec%84%b1-micro-rgb",
+          "title": "[영상] 거거익선의 시대, 색을 키울 차례입니다: 삼성 Micro RGB TV [삼분컷 EP.7]",
+          "lead": "거실에서 가장 큰 존재감을 드러내는 가전 TV. 화면이 클수록 화질의 차이가 그대로 드러난다. 삼성 Micro RGB TV는 크기 100㎛ 이하의 RGB 컬러 LED 자체를 광원으로 사용해 색을 더 넓고 정확한 색을 표현하고, AI 엔진으로 일상 속 콘텐츠의 화질까지 끌어올린다. 여기에 반사를 줄이는 Glare-Free 기술과 지문 방지 기능을 더해 관리도 한결 편해졌다. 광원 기술부터 AI 화질, […]",
+          "published": "2026-11-03",
+          "publisher": "samsung_newsroom"
+        },
+        {
+          "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+          "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+          "lead": "Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://openai.com/index/scaling-git-at-openai",
+          "title": "Scaling Git at OpenAI",
+          "lead": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://openai.com/index/grid-protectors-program",
+          "title": "Introducing the Grid Protectors Program",
+          "lead": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+          "title": "Preparing our next security sprint to harden OpenAI",
+          "lead": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        },
+        {
+          "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+          "title": "Rewarding defenders with bigger bug bounties",
+          "lead": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
+          "published": "2026-11-03",
+          "publisher": "openai_news"
+        }
+      ]
+    },
+    "analysis_diagnostics": [
+      {
+        "stage": "shortlist",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6225
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 16448
+      },
+      {
+        "stage": "topic_plan",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 10654
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 8293
+      },
+      {
+        "stage": "native_search",
+        "attempt": 1,
+        "status": "returned",
+        "elapsed_ms": 6628
+      }
+    ],
+    "analysis_recovery_attempts": 0,
+    "source_discovery_audit": [
+      {
+        "keyword": "",
+        "category": "테크",
+        "stage": "latest_issue_search",
+        "query": "AI 에이전트 모델 공식 출시 발표 after:2026-11-03 before:2026-11-05",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://mobilab.me/",
+            "domain": "mobilab.me",
+            "title": "모비랩 - 마비노기 모바일 연구소",
+            "snippet": "공식 자료를 바탕으로 답하는 모비전트와 캐릭터 관리, 숙제표, 크루 플래너, 시즌 2 도감을 이용해보세요. ... 공지 모비노기용 AI 에이전트인 모비전트 출시 ... 안내 12월 17일"
+          },
+          {
+            "url": "https://apps.apple.com/kr/app/%EB%AF%B8%EC%9A%B0-ai-meeaww-ai-%EB%8F%99%EC%98%81%EC%83%81-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%83%9D%EC%84%B1%EA%B8%B0/id6476824412",
+            "domain": "apps.apple.com",
+            "title": "‎미우 AI (MeeAww): AI 동영상·이미지 생성기 앱 - App Store",
+            "snippet": "· 마음에 든 영상의 연출을 내 제품으로 그대로 · 스튜디오도 모델도 촬영 스태프도 필요 없습니다 신규 — AI AD STUDIO: 영상 광고와 이미지 광고 ·"
+          },
+          {
+            "url": "https://17nas.com/llm-leaderboard.php?lang=ko-KR&view=open",
+            "domain": "17nas.com",
+            "title": "오픈소스 LLM 순위 2026: 오픈 웨이트 모델 비교 | 17NAS | 한국어",
+            "snippet": "* Arena 발표 10월 28일 ... # | 모델 | arena.ai 에이전트 | 텍스트↓ | AA 지수 | 가격 $/100만 토큰 | 지연(초)·속도 | 컨텍스트"
+          },
+          {
+            "url": "https://www.aaia.kr/",
+            "domain": "www.aaia.kr",
+            "title": "에이전틱 AI 얼라이언스 Agentic AI Alliance (AAIA)",
+            "snippet": "아시아경제 아시아경제 2026.07.23 정부, AI 생태계 선점 위한 '에이전틱 AI 이니셔티브' 발표 기사 보기 연합인포맥스 연합인포맥스 2026.07.23 '에이전틱 AI' 생태계 선점 나선다…연내 안전 가이드라인 마련"
+          },
+          {
+            "url": "https://docs.wrks.ai/2026-ai",
+            "domain": "docs.wrks.ai",
+            "title": "2026년 웍스AI 한눈에 보기 ★ | 웍스AI 이용가이드",
+            "snippet": "* 2027년에는 에이전트와 워크플로우를 하나로 합치고, 회사와 한몸이 되는 AI로 나아가요(아래 '2027년 비전'). ... 70종+ | AI 모델 | 주요 모델사의 최신 모델을 출시 당일"
+          },
+          {
+            "url": "https://www.i-boss.co.kr/ab-7460?PB_1330918089=14&nic=%EC%9A%B4%EC%98%81%EB%B3%B4%EC%8A%A4",
+            "domain": "www.i-boss.co.kr",
+            "title": "운영보스님의 활동로그 - 게시글",
+            "snippet": "구글, 제미나이 기반 광고용 AI 에이전트 12월 공개 구글이 제미나이 모델을 적용한 광고 AI 에이전트 두 가지를 12월 초 출시한다. ... 중앙일보는 KT is에서 분할된"
+          },
+          {
+            "url": "https://www.coursium.ai/ko/blog/myujeu-seupakeu",
+            "domain": "www.coursium.ai",
+            "title": "뮤즈 스파크란? 메타 AI 모델과 \"뮤즈\" 앱, 헷갈리는 이름부터 정리",
+            "snippet": "메타 AI 앱과 meta.ai가 이 모델로 바뀌었어요. ... 06 9월 8일: 에이전트 앱 뮤즈 출시. ... 메타 한국어 뉴스룸 은 5월 13일부터 앱과 웹사이트에서 한국어로"
+          },
+          {
+            "url": "https://it.donga.com/109832/",
+            "domain": "it.donga.com",
+            "title": "[위클리AI] 구글·오픈AI·아마존, 업무에서 일상까지 AI 쓰임새 넓혔다",
+            "snippet": "구글은 10월 28일(이하 현지 시간) 공식 블로그에 \"제미나이 4 카본은 최첨단 사이버보안과 장시간 작업 역량을 갖춘 가장 강력한 모델\"이라고 소개했습니다. ... AI에게 장시간 업무를 맡기려는"
+          },
+          {
+            "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf?chain_id=1qINd-VP7ZwnmW.1kv7mtk&global_content=%7B%22promote_id%22%3A13766%2C%22sub_promote_id%22%3A14%2C%22f%22%3A%22www.futunn.com%2Flearn%2Fdetail-trump-released-the-u-s-ai-action-plan-these-four-major-investment-themes-are-essential-to-know-91481-250791041%22%7D",
+            "domain": "www.whitehouse.gov",
+            "title": "America’s AI Action Plan",
+            "snippet": "# AI ACTION PLAN"
+          },
+          {
+            "url": "https://ad.re.kr/trends",
+            "domain": "ad.re.kr",
+            "title": "AI 트렌드·리포트 허브 - 한국광고연구소 KIAD | 한국광고연구소 KIAD",
+            "snippet": "이번 주 광고 플랫폼 업데이트: 구글·틱톡·메타의 AI 광고/요약 기능 강화 광고 운영 자동화와 AI 요약·추천 기능이 주요 플랫폼 업데이트의 중심으로 부상.2026-11-03자세히 보기 →에이전틱(Agentic) AI 확산:"
+          }
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "테크",
+        "stage": "latest_issue_source",
+        "url": "https://apps.apple.com/kr/app/%EB%AF%B8%EC%9A%B0-ai-meeaww-ai-%EB%8F%99%EC%98%81%EC%83%81-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%83%9D%EC%84%B1%EA%B8%B0/id6476824412",
+        "status": "no_recent_date",
+        "observed_dates": [
+          "2025-05-16",
+          "2025-08-06",
+          "2025-08-19",
+          "2025-09-24",
+          "2025-09-26",
+          "2025-11-04",
+          "2025-11-05",
+          "2025-11-12",
+          "2025-11-26",
+          "2025-12-10",
+          "2025-12-13",
+          "2025-12-26"
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "테크",
+        "stage": "latest_issue_search",
+        "query": "기술 보안 소프트웨어 공식 발표 변경 after:2026-11-03 before:2026-11-05",
+        "provider": "codex_native_search",
+        "results": [
+          {
+            "url": "https://www.apple.com/legal/internet-services/icloud/kr/terms.html",
+            "domain": "www.apple.com",
+            "title": "Legal - iCloud - Apple",
+            "snippet": "귀하는 설정에서 iCloud를 비활성화할 수 있습니다. iCloud가 활성화되면, 귀하의 콘텐츠는 자동으로 Apple의 서버 또는 제3자 제공업체의 서버에 저장되며, 귀하는 이후 해당 콘텐츠에 접근하거나 iCloud가 활성화된"
+          },
+          {
+            "url": "https://intramagazine.com/wiki/one-ui-9/",
+            "domain": "intramagazine.com",
+            "title": "One UI 9 - 인트라매거진",
+            "snippet": "지원되는 기기에서는 ‘설정 → 소프트웨어 업데이트 → 다운로드 및 설치’ 메뉴에서 업데이트 여부를 확인할 수 있다. ... One UI 9은 One UI 8의 후속 주요"
+          },
+          {
+            "url": "https://speciai.kr/db/briefs/2026-10-16",
+            "domain": "speciai.kr",
+            "title": "2026년 10월 16일 브리핑 | 스페시아이 네트워크",
+            "snippet": "개정 노조법 시행 이후 자회사 노조가 원청을 상대로 교섭을 요구한 사례로 제시돼, 원·하청 관계의 사용자성 및 교섭 대응 문제가 주목된다. ... 민주노총 공공운수노조 인천공항지역지부는 인천국제공항보안,"
+          },
+          {
+            "url": "https://www.securecodewarrior.com/ko/resources?910ff8f8_page=2&97c8c720_page=13&b3529362_page=16",
+            "domain": "www.securecodewarrior.com",
+            "title": "보안 코딩 및 AI 소프트웨어 거버넌스 리소스 | Secure Code Warrior",
+            "snippet": "AI 기반 코딩이 개발 방식을 바꾸고 있습니다. 실제 업무 환경에서 코드를 안전하게 검토, 분석 및 수정할 수 있는 새로운 Copilot 스타일의 AI 챌린지를 지금 경험해"
+          },
+          {
+            "url": "https://bidpro.co.kr/n0_ipchal/konggo/item/konggo_view.asp?num=5519908",
+            "domain": "bidpro.co.kr",
+            "title": "열응력 해석을 위한 Ansys Discovery Enterprise 소프트웨어,R26BK01806349-000 - 비드프로 입찰정보",
+            "snippet": "본 소프트웨어는 외부 CAD 시스탬의 의존 없이 단독으로 용접 대상물(모재 및 비드)의 3D 모델링, 격자 생성, 열-구조 연성해석, 그리고 설계 파라미터 사전 검토하는 것을 목적으로"
+          },
+          {
+            "url": "https://bulldogwealth.co.kr/%ED%85%8C%EC%8A%AC%EB%9D%BC-fsd-%EB%B6%88%EB%B2%95-%ED%99%9C%EC%84%B1%ED%99%94-80%EB%AA%85-%EC%86%A1%EC%B9%98/",
+            "domain": "bulldogwealth.co.kr",
+            "title": "테슬라 FSD 불법 활성화 80명 송치, 징역 2년·벌금 2000만원…내 차도 위험할까 5가지 확인 - 불독경제",
+            "snippet": "이 글은 2026년 10월 28일 기준으로 경찰 발표, 국토교통부 입장, 주요 언론 보도로 확인된 내용만 모아 테슬라 FSD 불법 활성화의 처벌 기준과 차주가 지금 확인할"
+          },
+          {
+            "url": "https://www.mathworks.com/company/events/conferences/automotive-conference-korea/2026.html",
+            "domain": "www.mathworks.com",
+            "title": "MathWorks Automotive Conference 2026 Korea - MATLAB & Simulink",
+            "snippet": "16:10 | Agentic AI 도입에서 성과까지: Consulting을 통한 엔지니어링 혁신 Agentic AI 도입에서 성과까지: Consulting을 통한 엔지니어링 혁신 엔지니어링 조직이 에이전틱 AI의 초기 실험 단계를"
+          },
+          {
+            "url": "https://www.mhlw.go.jp/content/10900000/001598200.pdf",
+            "domain": "www.mhlw.go.jp",
+            "title": "대한민국 농림축산식품부 동물검역증명서",
+            "snippet": "대한민국 농림축산식품부 동물검역증명서 ... | 예방약의 종류 및 예방접종 연월일 (Kind and Date of Vaccination or Test etc.) ... 위의 동물은 대한민국 「가축전염병 예방법」에 따라"
+          },
+          {
+            "url": "https://yellowit.co.kr/it-review/%EA%B0%A4%EB%9F%AD%EC%8B%9Cs23-%EC%9A%B8%ED%8A%B8%EB%9D%BC-one-ui-8-5-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EB%82%B4%EC%9A%A9%EF%BD%9C%EC%A7%80%EC%9B%90-%EB%AA%A8%EB%8D%B8%C2%B77%EC%9B%94-%EB%B3%B4/",
+            "domain": "yellowit.co.kr",
+            "title": "갤럭시S23 울트라 One UI 8.5 업데이트 내용｜지원 모델·7월 보안패치·설치방법 - 노랗IT월드",
+            "snippet": "웹페이지의 버튼을 누른다고 스마트폰에 업데이트 파일이 바로 설치되는 것은 아닙니다. 갤럭시 OTA 업데이트는 기기 내부의 소프트웨어 업데이트 메뉴에서 직접 확인해야 합니다. ... 금융·인증 앱 |"
+          }
+        ]
+      },
+      {
+        "keyword": "",
+        "category": "테크",
+        "stage": "latest_issue_source",
+        "url": "https://www.apple.com/legal/internet-services/icloud/kr/terms.html",
+        "status": "no_recent_date",
+        "observed_dates": []
+      }
+    ],
+    "selection_outcome": "research_budget_exhausted",
+    "selection_funnel": {
+      "measured": 457,
+      "pool": 120,
+      "shortlist_offered_unique": 0,
+      "evaluated": 0,
+      "held": 0,
+      "rejected": 0,
+      "selected": 0,
+      "stop_reason": "time_budget"
+    }
   }
 }

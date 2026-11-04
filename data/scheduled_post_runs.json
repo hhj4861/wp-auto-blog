@@ -1085,7 +1085,9 @@
       "category": "테크",
       "slot": "evening",
       "claimed_at": "2026-11-04T18:00:14.751803+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-11-04T09:08:50.472921+00:00",
+      "published_category": "건강"
     }
   }
 }

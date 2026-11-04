@@ -1073,7 +1073,8 @@
       "category": "건강",
       "slot": "morning",
       "claimed_at": "2026-11-04T09:00:14.378025+09:00",
-      "status": "started"
+      "status": "failure",
+      "completed_at": "2026-11-04T00:01:36.655229+00:00"
     }
   }
 }

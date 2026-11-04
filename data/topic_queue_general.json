@@ -48622,7 +48622,7 @@
     "keywords": [
       "연말정산간소화"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -49037,7 +49037,7 @@
     "keywords": [
       "오피스2019"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -50427,7 +50427,7 @@
     "keywords": [
       "피벗테이블"
     ],
-    "status": "pending",
+    "status": "superseded",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -51065,6 +51065,386 @@
         "source_index": 0,
         "date_quote": "2026-11-03T14:05:00+09:00",
         "event_quote": "보건복지부(장관 정은경) 는 11월 3일 (화) 오후 2시 삼정호텔 제라늄홀 (서울시 강남구)에서 정부 부처와 종교계, 재계, 노동계 등 사회 각 분야가 함께 참여하는 「제9차 생명존중정책 민관협의회」를 개최 해 지난 10월 발표한 제6차 자살예방기본계획의 주요내용과 민간 각 분야에서의 다양한 자살예방 활동 성과를 공유하고, 향후 발전 방향을 논의하였다고 밝혔다."
+      }
+    },
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "score": 25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "Display Custom Policy in the Green Room",
+    "category": "생산성",
+    "topic": "Display Custom Policy in the Green Room: 11월 3일 발표된 Meet 입장 전 정책 안내",
+    "intent": "새 정책 안내는 누구에게 제공되며, 관리자는 표시 조건을 어떻게 정하고 사용자는 언제부터 보게 되나요?",
+    "gap": "지원 요금제 표와 기본 비활성화·조직 단위 설정·표시 조건 체크리스트, 11월 2일 시작된 순차 배포 일정을 제공합니다.",
+    "source_url": "https://workspaceupdates.googleblog.com/2026/10/display-custom-policy-in-green-room-before-Google-Meet-Calls.html",
+    "verified_sources": [
+      {
+        "url": "https://workspaceupdates.googleblog.com/2026/10/display-custom-policy-in-green-room-before-Google-Meet-Calls.html",
+        "original_url": "https://workspaceupdates.googleblog.com/2026/10/display-custom-policy-in-green-room-before-Google-Meet-Calls.html",
+        "title": "Google Workspace Updates: Display Custom Policy in the Green Room before Google Meet Calls",
+        "checked_on": "2026-11-04",
+        "publication_dates": [],
+        "sha256": "5a9ce729021714436619336e54b8dc6db86342ff4fe4874d90e1d39d339572bd",
+        "excerpt": "arrow_back Back November 3, 2026 Display Custom Policy in the Green Room before Google Meet Calls Google Meet Rapid Release Scheduled Release To help ensure end users at your organization are familiar with your organization’s policies for handling meeting artifacts like recordings, transcriptions and notes by Gemini, we’re introducing the ability to set custom policy text from the admin console that is displayed prior to users joining Google Meet calls. As an admin, you’ll be able to display a custom, short message that appears in the Green Room prior to users joining a Meet call and even include a URL to a webpage that includes more information about your company's policies. You can choose to have this policy always be displayed or only when the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by default and can be enabled at the OU level under Meet Safety Settings. Visit the Help Center to learn more about displaying a notice before video meetings . End users: No action needed. Rollout pace Rapid Release and Scheduled Release domains: Extended rollout (potentially longer than 15 days for feature visibility) started on November 2, 2026. Availability Business: Business Standard, and Plus Enterprise: Enterprise Standard, and Plus Education: Education Fundamentals, Standard, and Plus Other Editions: Frontline Plus Education Add-ons: Google AI Pro for Education Resources Google Workspace Admin Help: Display a policy or notice before video meetings Google Meet Help: Take notes for me in Google Meet"
+      }
+    ],
+    "intent_results": [
+      "https://workspaceupdates.googleblog.com/2026/10/display-custom-policy-in-green-room-before-Google-Meet-Calls.html"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://workspaceupdates.googleblog.com/2026/10/display-custom-policy-in-green-room-before-Google-Meet-Calls.html",
+      "title": "Display Custom Policy in the Green Room before Google Meet Calls",
+      "publisher": "google_workspace_updates",
+      "published": "2026-11-03"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-11-04T11:57:57.418564+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "Display Custom Policy in the Green Room"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-04T11:57:57.418564+00:00",
+      "input_sha256": "b7a65eb0de8d39e8ab42f0b9c8ca7372b77a01d1cb17e35ff0ba592b93e01678",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "Display Custom Policy in the Green Room",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "en the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by default and can be enabled at the OU level under Meet Safety Settings. Visit the Help Center to learn more about displaying a notice before video meetings . End users: No action needed. Rollout pace Rapid Release and Scheduled Release domains: Extended rollout (potentially longer than 15 days for feature visibility) started on November 2, 2026. Availability Business: Business Standard, and Plus Enterprise: Enterprise Standard, and Plus Education: Education Fundamentals, Standard, and Plus Other Editions: Frontline Plus Education Add-ons: Google AI Pro for Education Resources Google Workspace Admin Help: Display a policy or notice before video meetings Google Meet Help: Take notes for me in Google Meet",
+            "entity": "Google Meet",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "어떤 기능이며 언제 정책 안내가 표시되나요?",
+            "answer": "입장 전 Green Room에 짧은 정책 문구와 URL을 표시합니다. 항상 또는 녹화·전사·Gemini 메모 중에만 표시할 수 있습니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "arrow_back Back November 3, 2026 Display Custom Policy in the Green Room before Google Meet Calls Google Meet Rapid Release Scheduled Release To help ensure end users at your organization are familiar with your organization’s policies for handling meeting artifacts like recordings, transcriptions and notes by Gemini, we’re introducing the ability to set custom policy text from the admin console that is displayed prior to users joining Google Meet calls. As an admin, you’ll be able to display a custom, short message that appears in the Green Room prior to users joining a Meet call and even include a URL to a webpage that includes more information about your company's policies. You can choose to have this policy always be displayed or only when the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by defau"
+          },
+          {
+            "facet": "관리자는 어떻게 활성화하며 사용자는 무엇을 해야 하나요?",
+            "answer": "기본 비활성화이며 관리자가 Meet Safety Settings에서 조직 단위로 활성화합니다. 사용자 조치는 없습니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "en the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by default and can be enabled at the OU level under Meet Safety Settings. Visit the Help Center to learn more about displaying a notice before video meetings . End users: No action needed. Rollout pace Rapid Release and Scheduled Release domains: Extended rollout (potentially longer than 15 days for feature visibility) started on November 2, 2026. Availability Business: Business Standard, and Plus Enterprise: Enterprise Standard, and Plus Education: Education Fundamentals, Standard, and Plus Other Editions: Frontline Plus Education Add-ons: Google AI Pro for Education Resources Google Workspace Admin Help: Display a policy or notice before video meetings Google Meet Help: Take notes for me in Google Meet"
+          },
+          {
+            "facet": "어떤 요금제와 교육 부가서비스가 지원되나요?",
+            "answer": "Business·Enterprise Standard/Plus, Education Fundamentals/Standard/Plus, Frontline Plus, Google AI Pro for Education입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "en the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by default and can be enabled at the OU level under Meet Safety Settings. Visit the Help Center to learn more about displaying a notice before video meetings . End users: No action needed. Rollout pace Rapid Release and Scheduled Release domains: Extended rollout (potentially longer than 15 days for feature visibility) started on November 2, 2026. Availability Business: Business Standard, and Plus Enterprise: Enterprise Standard, and Plus Education: Education Fundamentals, Standard, and Plus Other Editions: Frontline Plus Education Add-ons: Google AI Pro for Education Resources Google Workspace Admin Help: Display a policy or notice before video meetings Google Meet Help: Take notes for me in Google Meet"
+          },
+          {
+            "facet": "사용자는 언제부터 기능을 보게 되나요?",
+            "answer": "두 출시 트랙 모두 2026년 11월 2일 순차 배포를 시작했습니다. 표시까지 15일보다 오래 걸릴 수 있으며 완료일은 미정입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "en the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by default and can be enabled at the OU level under Meet Safety Settings. Visit the Help Center to learn more about displaying a notice before video meetings . End users: No action needed. Rollout pace Rapid Release and Scheduled Release domains: Extended rollout (potentially longer than 15 days for feature visibility) started on November 2, 2026. Availability Business: Business Standard, and Plus Enterprise: Enterprise Standard, and Plus Education: Education Fundamentals, Standard, and Plus Other Editions: Frontline Plus Education Add-ons: Google AI Pro for Education Resources Google Workspace Admin Help: Display a policy or notice before video meetings Google Meet Help: Take notes for me in Google Meet"
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "en the meeting is currently being recorded, transcribed, or notes are being taken by Gemini. Getting started Admins: This feature will be OFF by default and can be enabled at the OU level under Meet Safety Settings. Visit the Help Center to learn more about displaying a notice before video meetings . End users: No action needed. Rollout pace Rapid Release and Scheduled Release domains: Extended rollout (potentially longer than 15 days for feature visibility) started on November 2, 2026. Availability Business: Business Standard, and Plus Enterprise: Enterprise Standard, and Plus Education: Education Fundamentals, Standard, and Plus Other Editions: Frontline Plus Education Add-ons: Google AI Pro for Education Resources Google Workspace Admin Help: Display a policy or notice before video meetings Google Meet Help: Take notes for me in Google Meet",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-04T20:57:57.418564+09:00",
+      "window_start": "2026-11-03T00:00:00+09:00",
+      "input_sha256": "e36c02b307621149219854906e17e4edf519e29baec7dd9d34e8710e1f0a62e1",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "announcement",
+        "event_date": "2026-11-03",
+        "source_index": 0,
+        "date_quote": "November 3, 2026",
+        "event_quote": "To help ensure end users at your organization are familiar with your organization’s policies for handling meeting artifacts like recordings, transcriptions and notes by Gemini, we’re introducing the ability to set custom policy text from the admin console that is displayed prior to users joining Google Meet calls."
+      }
+    },
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "score": 20,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "AI 기반 통합인허가 사전진단 서비스",
+    "category": "생활정보",
+    "topic": "AI 기반 통합인허가 사전진단 서비스 첫 공개, 2027년 시범운영 지역과 일정",
+    "intent": "11월 4일 공개된 서비스는 무엇을 사전진단하며, 어느 지역에서 언제부터 이용할 수 있나요?",
+    "gap": "5개 시범지역과 단계별 공개 일정을 표로 정리하고, 현재 공개 단계와 향후 이용 계획을 구분합니다.",
+    "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787948",
+    "verified_sources": [
+      {
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787948",
+        "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787948",
+        "title": "이 땅에 집 지을 수 있나요? \"복잡한 인허가, 인공지능(AI)으로 쉽게\" - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+        "checked_on": "2026-11-04",
+        "publication_dates": [
+          "2026-11-04T16:00:00+09:00"
+        ],
+        "sha256": "1a114132ffc8289b23553993f25bf2eb152f88035abcfc1a1e50e2777ff609ef",
+        "excerpt": "보도자료 보도시점 : 2026. 11. 4.(수) 16:00 이후 (11. 5.(수) 조간) / 배포 : 2026. 11. 4.(수) 이 땅에 집 지을 수 있나요? “복잡한 인허가, 인공지능(AI)으로 쉽게” - AI 민생 10대 프로젝트 중 하나로 국토교통부 과제 중 유일하게 선정 - 4일 열리는 ‘ K-Geo Festa’에서 서비스 첫선… 내년 1월부터 서비스 시범운영 - 복잡한 법령 몰라도, 평소 쓰는 말로 질문하면 AI가 인허가 사전 진단 □ 국 토교통부(장관 홍지선)와 과학기술정보통신부(부총리 겸 과학기술정보 통신부장관 배경훈)는 11월 4일 열리는 제18회 K-Geo Festa에서 ‘AI 기반 통합인허가 사전진단 서비스’ 개발 및 실증성과 보고회 를 개최한다 . ㅇ ‘ AI 기반 통합인허가 사전진단 서비스’ 는 국민이 인공지능(AI) 혜택을 체감할 수 있도록 추진하는 범정부 공공 AI 전환(AX) 과제인 'AI 민생 1 0대 프로젝트' 의 하나다. ㅇ 과학기술정 보 통신부 공모에서 국토교통부 과제 로는 유일하게 선정 되었으며, 올해 4월 착수해 ’27년 12월까지 개발 을 목표로 추진하고 있다. * 비 아이매트릭스 컨소시엄(주관사: AI·데이터 분석 솔루션 전문기업 비아이매트릭스 , 공동사업자: 공간정보 기업 웨이버스·아이씨티웨이) □ 성과보고회는 유관기관, 지방정부, 업계 산학연 등 관계자 130여 명이 참석한 가운데 열린다. 보고회에서는 서비스 개발 현황과 주요 개발 성과를 공유하고, 지방정부 대상 실증 계획과 향후 서비스 활용 방향을 소개한다. ㅇ 이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다. - 여러 AI 에이전트의 기능을 통합, 조정하는 오케스트레이터와 각 에이전트 간 연동 개발 을 마쳤으며, 실증과 시범 운영을 위한 환경도 구축 하였다. - 특히, 국민 누구나 쉽게 이용할 수 있도록 일상적인 언어 로 입력한 질문의 의도를 분석하는 AI 기술을 적용하였다. □ 이번 성과 보고회에서는 내년 1월 시범 운영 을 시작하는 5개 지방 정부 (인천 계양구, 충북 음성군, 충남 아산시, 경북 경산시·영천시)를 대상으로 구축한 실증용 서비스 를 우선 선보인다. ㅇ 5 개 지방정부 실증과 시범운영을 통해 시스템을 점검하고 사전 진단의 신뢰성을 확보한 뒤, ’27년 6월 부터는 18개 지방정부로 시범 운영 을 확대하고, 사전 진단 서비스 인허가 추가 개발과 시스템 고도화를 거쳐 ’27년 12월 모바일 서비스 와 공무원 행정업무 서비스 를 공개할 예정이다. □ K-Geo Festa 행사 기간 (11.4.~11.6.) 중 홍보부스 도 운영한다. 이곳에서 AI 통합인허가 사전 진단 서비스를 체험 할 수 있고, 서비 스 편의성과 개발 요구사항 등의 의견도 제시 할 수 있다. □ 국토교통부 이대섭 국토정보정책관은 “ 이번 보고회는 국민의 최접점에 선 지방정부 담당자들에게 서비스 실증 성과 를 처음 선보인 뜻깊은 자리 였다”며, ㅇ “앞으로 시범 운영을 통해 완성도와 안정성을 높이고 정식 오픈까지 차질 없이 준비해, 국민이 일상에서 체감할 수 있는 AI 서비스 를 차질 없이 구현 하고 , AI 기술 혁신의 성과 가 국민 삶의 질 향상 으로 이어질 수 있도록 적극 지원하겠다”고 밝혔다. □ 과 학기술정보통신부 홍성완 정보통신 정책관은 \" 이번에 공개되는 ‘AI 기반 통합인허가 사전진단 서비스’는 전문지식이 없어도 복잡한 인허가 요건과 절차를 쉽게 이해하고 준비할 수 있도록 도움으로써, 국민이 일상에서 AI의 혜택을 직접 체감하는 계기가 될 것으로 기대한다”라며, ㅇ “과 기정통부는 앞으로도 관계부처와 긴밀히 협력 하여 공공 분야 AI 전환을 가속화 하고 국민 누구나 쉽고 편리하게 누릴 수 있는 AI 서비스를 제공 해 나가겠다”고 밝혔다. 국토교통부 국토정보정책과 책임자 과 장 김태형 (044-201-3478) 담당자 사무관 박일웅 (044-201-3457) 주무관 최재원 (044-201-3462) 과기정통부 디지털사회기획과 책임자 과 장 박지현 (044-202-6130) 담당자 사무관 황지윤 (044-202-6134) 주무관 성재민 (044-202-6136)",
+        "attachment_url": "https://www.korea.kr/common/download.do?fileId=198584146&tblKey=GMN"
+      }
+    ],
+    "intent_results": [
+      "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787948"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787948",
+      "title": "이 땅에 집 지을 수 있나요? \"복잡한 인허가, 인공지능(AI)으로 쉽게\"",
+      "publisher": "국토교통부",
+      "published": "2026-11-04"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-11-04T11:59:00.390741+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "AI 기반 통합인허가 사전진단 서비스"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-04T11:59:00.390741+00:00",
+      "input_sha256": "7cfe8118eb2073ef3e50cd1bca42392830e70e0449c435fdb27721116dd5bfe8",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "AI 기반 통합인허가 사전진단 서비스",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "획과 향후 서비스 활용 방향을 소개한다. ㅇ 이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다. - 여러 AI 에이전트의 기능을 통합, 조정하는 오케스트레이터와 각 에이전트 간 연동 개발 을 마쳤으며, 실증과 시범 운영을 위한 환경도 구축 하였다. - 특히, 국민 누구나 쉽게 이용할 수 있도록 일상적인 언어 로 입력한 질문의 의도를 분석하는 AI 기술을 적용하였다. □ 이번 성과 보고회에서는 내년 1월 시범 운영 을 시작하는 5개 지방 정부 (인천 계양구, 충북 음성군, 충남 아산시, 경북 경산시·영천시)를 대상으로 구축한 실증용 서비스 를 우선 선보인다. ㅇ 5 개 지방정부 실증과 시범운영을 통해 시스템을 점검하고 사전 진단의 신뢰성을 확보한 뒤, ’27년 6월 부터는 18개 지방정부로 시범 운영 을 확대하고, 사전 진단 서비스 인허가 추가 개발과 시스템 고도화를 거쳐 ’27년 12월 모바일 서비스 와 공무원 행정업무 서비스 를 공개할 예정이다. □ K-Geo Festa 행사 기간 (11.4.~11.6.) 중 홍보부스 도 운영한다. 이곳에서 AI 통합인허가 사전 진단 서비스를 체험 할 수 있고, 서비 스 편의성과 개발 요구사항 등의 의견도 제시 할 수 있다. □ 국토교통부 이대섭 국토정보정책관은 “ 이번 보고회는 국민의 최접점에 선 지방정부 담당자들에게 서비스 실증 성과 를 처음 선보인 뜻깊은 자리 였다”며, ㅇ “앞으로 시범 운영을 통해 완성도와 안정성을 높이고 정식 오픈까지 차질 없이 준비해, 국민이 일상에서 체감할 수 있는 AI 서비스 를 차질 없이 구현 하고 , AI 기술 혁신의 성과 가 국민 삶의 질 향상 으로 이어질 수 있도록 적극 지원하겠다”고 밝혔다. □ 과 학기술정보통신부 홍성완 정보통신 정책관은 \" 이",
+            "entity": "국토교통부",
+            "context": "general"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "무엇을 어떤 방식으로 사전진단하나요?",
+            "answer": "일상어 질문을 분석하고 토지개발 규제 법령과 지방정부 조례에 따라 인허가 가능 여부를 사전진단합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "획과 향후 서비스 활용 방향을 소개한다. ㅇ 이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다. - 여러 AI 에이전트의 기능을 통합, 조정하는 오케스트레이터와 각 에이전트 간 연동 개발 을 마쳤으며, 실증과 시범 운영을 위한 환경도 구축 하였다. - 특히, 국민 누구나 쉽게 이용할 수 있도록 일상적인 언어 로 입력한 질문의 의도를 분석하는 AI 기술을 적용하였다. □ 이번 성과 보고회에서는 내년 1월 시범 운영 을 시작하는 5개 지방 정부 (인천 계양구, 충북 음성군, 충남 아산시, 경북 경산시·영천시)를 대상으로 구축한 실증용 서비스 를 우선 선보인다. ㅇ 5 개 지방정부 실증과 시범운영을 통해 시스템을 점검하고 사전 진단의 신뢰성을 확보한 뒤, ’27년 6월 부터는 18개 지방정부로 시범 운영 을 확대하고, 사전 진단 서비스 인허가 추가 개발과 시스템 고도화를 거쳐 ’27년 12월 모바일 서비스 와 공무원 행정업무 서비스 를 공개할 예정이다. □ K-Geo Festa 행사 기간 (11.4.~11.6.) 중 홍보부스 도 운영한다. 이곳에서 AI 통합인허가 사전 진단 서비스를 체험 할 수 있고, 서비 스 편의성과 개발 요구사항 등의 의견도 제시 할 수 있다. □ 국토교통부 이대섭 국토정보정책관은 “ 이번 보고회는 국민의 최접점에 선 지방정부 담당자들에게 서비스 실증 성과 를 처음 선보인 뜻깊은 자리 였다”며, ㅇ “앞으로 시범 운영을 통해 완성도와 안정성을 높이고 정식 오픈까지 차질 없이 준비해, 국민이 일상에서 체감할 수 있는 AI 서비스 를 차질 없이 구현 하고 , AI 기술 혁신의 성과 가 국민 삶의 질 향상 으로 이어질 수 있도록 적극 지원하겠다”고 밝혔다. □ 과 학기술정보통신부 홍성완 정보통신 정책관은 \" 이"
+          },
+          {
+            "facet": "어느 지역에서 언제 이용할 수 있으며 현재 공개 단계는 무엇인가요?",
+            "answer": "현재 실증용 공개 단계이며, 2027년 1월 계양구·음성군·아산시·경산시·영천시에서 시범운영합니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "획과 향후 서비스 활용 방향을 소개한다. ㅇ 이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다. - 여러 AI 에이전트의 기능을 통합, 조정하는 오케스트레이터와 각 에이전트 간 연동 개발 을 마쳤으며, 실증과 시범 운영을 위한 환경도 구축 하였다. - 특히, 국민 누구나 쉽게 이용할 수 있도록 일상적인 언어 로 입력한 질문의 의도를 분석하는 AI 기술을 적용하였다. □ 이번 성과 보고회에서는 내년 1월 시범 운영 을 시작하는 5개 지방 정부 (인천 계양구, 충북 음성군, 충남 아산시, 경북 경산시·영천시)를 대상으로 구축한 실증용 서비스 를 우선 선보인다. ㅇ 5 개 지방정부 실증과 시범운영을 통해 시스템을 점검하고 사전 진단의 신뢰성을 확보한 뒤, ’27년 6월 부터는 18개 지방정부로 시범 운영 을 확대하고, 사전 진단 서비스 인허가 추가 개발과 시스템 고도화를 거쳐 ’27년 12월 모바일 서비스 와 공무원 행정업무 서비스 를 공개할 예정이다. □ K-Geo Festa 행사 기간 (11.4.~11.6.) 중 홍보부스 도 운영한다. 이곳에서 AI 통합인허가 사전 진단 서비스를 체험 할 수 있고, 서비 스 편의성과 개발 요구사항 등의 의견도 제시 할 수 있다. □ 국토교통부 이대섭 국토정보정책관은 “ 이번 보고회는 국민의 최접점에 선 지방정부 담당자들에게 서비스 실증 성과 를 처음 선보인 뜻깊은 자리 였다”며, ㅇ “앞으로 시범 운영을 통해 완성도와 안정성을 높이고 정식 오픈까지 차질 없이 준비해, 국민이 일상에서 체감할 수 있는 AI 서비스 를 차질 없이 구현 하고 , AI 기술 혁신의 성과 가 국민 삶의 질 향상 으로 이어질 수 있도록 적극 지원하겠다”고 밝혔다. □ 과 학기술정보통신부 홍성완 정보통신 정책관은 \" 이"
+          },
+          {
+            "facet": "이후 서비스 확대와 추가 공개 일정은 어떻게 되나요?",
+            "answer": "2027년 6월 18개 지방정부로 시범운영을 확대하고, 12월 모바일·공무원 행정업무 서비스를 공개할 예정입니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "획과 향후 서비스 활용 방향을 소개한다. ㅇ 이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다. - 여러 AI 에이전트의 기능을 통합, 조정하는 오케스트레이터와 각 에이전트 간 연동 개발 을 마쳤으며, 실증과 시범 운영을 위한 환경도 구축 하였다. - 특히, 국민 누구나 쉽게 이용할 수 있도록 일상적인 언어 로 입력한 질문의 의도를 분석하는 AI 기술을 적용하였다. □ 이번 성과 보고회에서는 내년 1월 시범 운영 을 시작하는 5개 지방 정부 (인천 계양구, 충북 음성군, 충남 아산시, 경북 경산시·영천시)를 대상으로 구축한 실증용 서비스 를 우선 선보인다. ㅇ 5 개 지방정부 실증과 시범운영을 통해 시스템을 점검하고 사전 진단의 신뢰성을 확보한 뒤, ’27년 6월 부터는 18개 지방정부로 시범 운영 을 확대하고, 사전 진단 서비스 인허가 추가 개발과 시스템 고도화를 거쳐 ’27년 12월 모바일 서비스 와 공무원 행정업무 서비스 를 공개할 예정이다. □ K-Geo Festa 행사 기간 (11.4.~11.6.) 중 홍보부스 도 운영한다. 이곳에서 AI 통합인허가 사전 진단 서비스를 체험 할 수 있고, 서비 스 편의성과 개발 요구사항 등의 의견도 제시 할 수 있다. □ 국토교통부 이대섭 국토정보정책관은 “ 이번 보고회는 국민의 최접점에 선 지방정부 담당자들에게 서비스 실증 성과 를 처음 선보인 뜻깊은 자리 였다”며, ㅇ “앞으로 시범 운영을 통해 완성도와 안정성을 높이고 정식 오픈까지 차질 없이 준비해, 국민이 일상에서 체감할 수 있는 AI 서비스 를 차질 없이 구현 하고 , AI 기술 혁신의 성과 가 국민 삶의 질 향상 으로 이어질 수 있도록 적극 지원하겠다”고 밝혔다. □ 과 학기술정보통신부 홍성완 정보통신 정책관은 \" 이"
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": "획과 향후 서비스 활용 방향을 소개한다. ㅇ 이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다. - 여러 AI 에이전트의 기능을 통합, 조정하는 오케스트레이터와 각 에이전트 간 연동 개발 을 마쳤으며, 실증과 시범 운영을 위한 환경도 구축 하였다. - 특히, 국민 누구나 쉽게 이용할 수 있도록 일상적인 언어 로 입력한 질문의 의도를 분석하는 AI 기술을 적용하였다. □ 이번 성과 보고회에서는 내년 1월 시범 운영 을 시작하는 5개 지방 정부 (인천 계양구, 충북 음성군, 충남 아산시, 경북 경산시·영천시)를 대상으로 구축한 실증용 서비스 를 우선 선보인다. ㅇ 5 개 지방정부 실증과 시범운영을 통해 시스템을 점검하고 사전 진단의 신뢰성을 확보한 뒤, ’27년 6월 부터는 18개 지방정부로 시범 운영 을 확대하고, 사전 진단 서비스 인허가 추가 개발과 시스템 고도화를 거쳐 ’27년 12월 모바일 서비스 와 공무원 행정업무 서비스 를 공개할 예정이다. □ K-Geo Festa 행사 기간 (11.4.~11.6.) 중 홍보부스 도 운영한다. 이곳에서 AI 통합인허가 사전 진단 서비스를 체험 할 수 있고, 서비 스 편의성과 개발 요구사항 등의 의견도 제시 할 수 있다. □ 국토교통부 이대섭 국토정보정책관은 “ 이번 보고회는 국민의 최접점에 선 지방정부 담당자들에게 서비스 실증 성과 를 처음 선보인 뜻깊은 자리 였다”며, ㅇ “앞으로 시범 운영을 통해 완성도와 안정성을 높이고 정식 오픈까지 차질 없이 준비해, 국민이 일상에서 체감할 수 있는 AI 서비스 를 차질 없이 구현 하고 , AI 기술 혁신의 성과 가 국민 삶의 질 향상 으로 이어질 수 있도록 적극 지원하겠다”고 밝혔다. □ 과 학기술정보통신부 홍성완 정보통신 정책관은 \" 이",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-04T20:59:00.390741+09:00",
+      "window_start": "2026-11-03T00:00:00+09:00",
+      "input_sha256": "746b74e6144b11d8120dcf8e31cb0c36a7e466b47ca64d7e1ff959143761976d",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "announcement",
+        "event_date": "2026-11-04",
+        "source_index": 0,
+        "date_quote": "2026-11-04T16:00:00+09:00",
+        "event_quote": "이번에 공개하는 서비스 는 토지개발 규제 법령과 지방정부 조례 등을 바탕으로 인허가 가능 여부를 사전에 진단 한다."
+      }
+    },
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "score": 25,
+    "publish_eligible": true,
+    "hold_reasons": []
+  },
+  {
+    "keyword": "2027년 통합지원 지역계획",
+    "category": "생활정보",
+    "topic": "2027년 통합지원 지역계획, 11월 4일 발표한 수립 방향과 지역 돌봄 개선 과제",
+    "intent": "11월 4일 안내된 지역계획의 수립 주체와 추진 일정은 무엇이며, 주민 돌봄에 어떤 개선을 추진하나?",
+    "gap": "지방정부별 역할·전문가 자문·11~12월 인력 점검을 표로 정리하고, 주민 지원의 확정 여부를 구분한다.",
+    "source_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787928",
+    "verified_sources": [
+      {
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787928",
+        "original_url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787928",
+        "title": "첫 통합돌봄 지역계획 수립 위한 중앙-지방 협력방안 논의 - 보도자료 | 브리핑룸 | 대한민국 정책브리핑",
+        "checked_on": "2026-11-04",
+        "publication_dates": [
+          "2026-11-04T14:04:32+09:00"
+        ],
+        "sha256": "c827d7db47d2b01cf74926071feb48ae0373fd1f738777a0c9638be4f028e287",
+        "excerpt": "보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 11. 4.(수) 첫 통합돌봄 지역계획 수립 위한 중앙-지방 협력방안 논의 - 통합지원 지역계획 수립방향 및 전담인력 배치 현장점검 계획 논의 - - 금융 위기가구 긴급 의뢰체계 개편사항 안내 및 협조요청 - 보건복지부 (장관 정은경)는 16개 시‧도 와 올해 처음으로 수립 할 예정인 통합지원 지역계획에 대한 방향성 을 논의하고, 지방정부 통합돌봄 전담조직 및 인력 확대 를 위한 현장 점검 계획 에 협조를 요청하는 등 하반기 통합돌봄 주요 정책 추진 사항 관련 중앙-지방 간 협력 방안 을 논의하였다. 보건복지부는 11월 4일(수) 오후 2시, 현수엽 제1차관 주재 로 16개 시·도 복지국장 이 참석한 가운데 ‘통합돌봄 시·도 복지국장 회의’ 를 개최 하였다. 이번 회의에서는 ▲ 통합지원 지역계획 수립 방향 ▲ 국공립 돌봄센터 수요 조사 안내 ▲통합돌봄 전담조직 및 인력 배치현황 현장점검 계획 ▲ 통합돌봄 시행 100일 계기 현장 개선의견 및 검토 결과 등을 논의하였다. 아울러 ▲ 금융 위기가구 발굴 및 긴급의뢰체계 개선 방안 ▲ 제4차 기초생활보장 종합계획(안) 도 함께 안내하였다. 먼저, 통합지원 지역계획 수립 방향 을 안내하였다. 통합지원 지역계획은 돌봄통합지원법 제6조에 따라 지방정부가 매년 수립 하는 것으로 올해 첫 번째 계획 을 수립 할 예정이다. 이날 회의에서는 실태조사 결과와 현장 경험을 바탕으로 지역별 돌봄 여건을 진단 하고, 실질적인 개선과제를 도출 할 것을 강조하는 한편, 시군구 계획 수립 지원과 광역 차원의 지원방안 마련 등 시도의 적극적인 역할을 당부 하였다. 또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다. 이어서 각 지방정부의 통합돌봄 전담조직 구성 및 전담인력 배치현황 을 확인 하기 위해 11~12월 중 행정안전부와 합동으로 현장점검을 실시 할 계획임 을 안내하며 시‧도에 사전점검 등의 협조를 요청하였다. 중앙정부 가 2026년 기준인건비 에 통합돌봄 전담인력 총 5,346명 을 반영 하고 신규인력 확충 예산 192억 원 (2,400명) 을 지원함에 따라, 현재 각 지방 정부 에서는 전담인력 확보를 위한 신규채용 및 배치가 진행 중 이다. 보건복지부 는 이번 현장점검 을 통해 지방정부 전담인력 배치 확대를 독려 하고 애로사항 등을 청취 하고자 한다. 아울러 통합돌봄 시행 100일 을 맞아 시행한 전국 지방정부 담당자 건의사항 수렴 결과 를 공유 하고 제도 개선방안에 대한 의견을 나눴다. 앞서 보건복지부 는 7월 6일부터 20일까지 2주간 행복이음 게시판 을 통해 지방정부 담당자를 대상으로 제도개선 의견을 수렴 하였고, 그 결과 총 72 건이 접수되었다. 주요 건의사항 으로 시군구-읍면동 간 전달체계 개선 , 전산 시스템 이용 편의 향상, 지역특화서비스 등 관련 예산 확대 등이 제기되었다. 보건복지부 는 현장의견을 고려하여 제도개선이 필요한 사항을 내년도 사업 안내 지침 및 2단계 전산시스템 구축 에 반영할 계획이다. 이와 함께 제5차 복지사각지대 발굴·조사 추진현황 을 점검 하고 금융 위기가구 긴급의뢰 체계 개편 사항 을 안내 하였다. 이번 5차 발굴 ․ 조사는 10월 19일부터 12월 11일까지 금융 위기가구 1만 7천 명을 포함한 약 19 만 명을 대상으로 진행된다. 각 시·도에는 발굴된 대상에게 공공 및 민간 서비스를 적극 연계하고, 잠재적 고위험군 * 관리 를 강화 할 것을 당부했다. * 반복발굴, 복합위기로 중복발굴, 소재 파악이 안 된 대상자로 지속 관리 필요 또한, 지난 10월 30일부터 시작된 금융관계기관 (금융감독원·신용회복위원회 ) 과 지방정부 간 긴급의뢰 체계 를 안내 하여 불법사금융 피해자 에게 필요한 복지서비스를 신속 하게 지원·연계 할 것을 당부하며, 위기 상황에 따른 긴급복지 지원 과 관계 법령에 따른 직권 신청 을 적극 검토하고 , 복지상담 중 금융 지원이 필요한 대상자 는 금융관계기관 으로 적극 연계 를 요청하였다. 끝으로 제4차 기초생활보장 종합계획(안) 에 대한 지방정부의 의견 도 함 께 수렴하였다. 지난 10월 28일 공청회에서 제시된 주요 과제들을 중심으로 ▲ 급여별 보장수준 개선 ▲ 기초생활보장 사각지대 해소 ▲ 근로유인 및 자립기반 강화 ▲ 제도 운영 기반 내실화 등 제4차 종합계획의 추진 방향 을 마련하고, 이에 대한 지방정부의 의견을 요청하였다. 이를 반영하여 보건복지부는 11월 중 제4차 기초생활보장 종합계획을 확정 할 계획이다. 현수엽 제1차관은 “통합돌봄과 복지 사각지대 해소는 중앙정부와 지방정부 가 긴밀히 협력할 때 국민이 체감하는 성과 로 이어질 수 있다”라며, “이번 회의에서 논의된 현장의 의견을 적극적으로 반영해 지역별 통합돌봄 추진 기반을 강화 하고, 위기가구가 필요한 지원을 적기에 받을 수 있도록 제도개선과 현장 지원을 지속해 나가겠다”라고 밝혔다. <붙임> 통합돌봄 시·도 복지국장 회의 개요 담당 부서 보건복지부 책임자 과 장 변성미 (044-202-3590) <총괄> 통합돌봄사업과 담당자 사무관 김윤섭 (044-202-3596) 담당부서 통합돌봄정책과 책임자 과 장 정혜은 (044-202-3580) <지역계획> <전담인력> <돌봄센터> 담당자 서기관 이라향 (044-202-3581) 담당자 사무관 김희진 (044-202-3584) 담당자 사무관 이석원 (044-202-3582) 담당부서 복지정보기획과 책임자 과 장 홍화영 (044-202-3170) <복지 사각지대> 담당자 서기관 최병익 (044-202-3161) 담당부서 <기초생활보장> 기초생활보장과 책임자 과 장 김은영 (044-202-3050) 담당자 사무관 이현희 (044-202-3056) 붙임 통합돌봄 시·도 복지국장 회의 개요 □ 개요 ○ ( 일시 ) ’26. 11. 4. (수) 14:00~15:00 ○ ( 장소 ) 영상회의 (본관 1차관실 국제회의실) ○ ( 참석자 ) - (복지부) 제1차관 (주재), 통합돌봄지원관, 복지행정지원관, 복지정책관, 통합돌봄정책과장, 통합돌봄사업과장, 복지정보기획과장, 기초생활보장과장 등 - (지방정부) 16개 시·도 복지국장 ○ ( 주요내용 ) - 2027년 통합지원 지역계획 수립 안내 - 국공립 돌봄센터 수요조사 안내 - 통합돌봄 전담 조직·인력 현황 현장점검 실시 안내 - 통합돌봄 100일 계기 제도개선 의견 수렴 검토 결과 안내 - 금융위기가구 발굴 및 긴급의뢰체계 개편사항 안내 - 제4차 기초생활보장 종합계획(안) 의견 수렴 등 □ 세부일정 (안) 시 간 주 요 내 용 비 고 14:00∼14:05 5‘ 개회 및 인사말 복지부 제1차관 14:05∼14:35 30‘ ▪ (안건 ❶) 2027년 통합지원 지역계획 수립 안내 ▪ (안건 ❷) 국공립 돌봄센터 수요조사 안내 ▪ (안건 ❸) 전담 조직·인력 현황 현장점검 실시 안내 ▪ (안건 ❹) 100일 계기 제도개선 의견 검토 결과 안내 ▪ (안건 ❺) 금융위기가구 발굴 및 긴급의뢰체계 개편 안내 ▪ (안건 ❻) 제4차 기초생활보장 종합계획(안) 의견 수렴 ❶통합돌봄정책과 ❷ “ ❸ ” ❹ 통합돌봄사업과 ❺ 복지정보기획과 ❻기초생활보장과기초의료보장과 14:35~14:55 20‘ 의견 수렴 지방정부 14:55~15:00 5‘ 폐회 및 마무리 복지부 제1차관",
+        "attachment_url": "https://www.korea.kr/common/download.do?fileId=198584020&tblKey=GMN"
+      }
+    ],
+    "intent_results": [
+      "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787928"
+    ],
+    "valid_until": null,
+    "article_type": "information",
+    "monthly_search": null,
+    "demand_scope": "latest_issue_exempt",
+    "demand_provider": null,
+    "evidence_mode": "latest_issue",
+    "latest_issue_listing": {
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156787928",
+      "title": "첫 통합돌봄 지역계획 수립 위한 중앙-지방 협력방안 논의",
+      "publisher": "보건복지부",
+      "published": "2026-11-04"
+    },
+    "organic_provider": null,
+    "organic_query": null,
+    "organic_results": [],
+    "organic_domains": [],
+    "dominant_result_ratio": null,
+    "trend_growth": null,
+    "trend_provider": null,
+    "trend_status": "not_applicable",
+    "selection_version": 8,
+    "selected_at": "2026-11-04T11:59:00.390741+00:00",
+    "source": "category_market_v1",
+    "keywords": [
+      "2027년 통합지원 지역계획"
+    ],
+    "status": "pending",
+    "suitability_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-04T11:59:00.390741+00:00",
+      "input_sha256": "a9fabe5a13f9ee5b4767bd523adc034119e1533dec67c12990e80085e30a0c61",
+      "review": {
+        "scope": "full_keyword",
+        "target_keyword": "2027년 통합지원 지역계획",
+        "sources": [
+          {
+            "source_index": 0,
+            "quote": "보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 11. 4.(수) 첫 통합돌봄 지역계획 수립 위한 중앙-지방 협력방안 논의 - 통합지원 지역계획 수립방향 및 전담인력 배치 현장점검 계획 논의 - - 금융 위기가구 긴급 의뢰체계 개편사항 안내 및 협조요청 - 보건복지부 (장관 정은경)는 16개 시‧도 와 올해 처음으로 수립 할 예정인 통합지원 지역계획에 대한 방향성 을 논의하고, 지방정부 통합돌봄 전담조직 및 인력 확대 를 위한 현장 점검 계획 에 협조를 요청하는 등 하반기 통합돌봄 주요 정책 추진 사항 관련 중앙-지방 간 협력 방안 을 논의하였다. 보건복지부는 11월 4일(수) 오후 2시, 현수엽 제1차관 주재 로 16개 시·도 복지국장 이 참석한 가운데 ‘통합돌봄 시·도 복지국장 회의’ 를 개최 하였다. 이번 회의에서는 ▲ 통합지원 지역계획 수립 방향 ▲ 국공립 돌봄센터 수요 조사 안내 ▲통합돌봄 전담조직 및 인력 배치현황 현장점검 계획 ▲ 통합돌봄 시행 100일 계기 현장 개선의견 및 검토 결과 등을 논의하였다. 아울러 ▲ 금융 위기가구 발굴 및 긴급의뢰체계 개선 방안 ▲ 제4차 기초생활보장 종합계획(안) 도 함께 안내하였다. 먼저, 통합지원 지역계획 수립 방향 을 안내하였다. 통합지원 지역계획은 돌봄통합지원법 제6조에 따라 지방정부가 매년 수립 하는 것으로 올해 첫 번째 계획 을 수립 할 예정이다. 이날 회의에서는 실태조사 결과와 현장 경험을 바탕으로 지역별 돌봄 여건을 진단 하고, 실질적인 개선과제를 도출 할 것을 강조하는 한편, 시군구 계획 수립 지원과 광역 차원의 지원방안 마련 등 시도의 적극적인 역할을 당부 하였다. 또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다. 이",
+            "entity": "보건복지부",
+            "context": "system_rules"
+          }
+        ],
+        "required_facets": [
+          {
+            "facet": "이번 안내는 2027년 통합지원 지역계획에 관한 것인가?",
+            "answer": "회의 주요내용에 ‘2027년 통합지원 지역계획 수립 안내’가 명시돼 있다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " 현수엽 제1차관은 “통합돌봄과 복지 사각지대 해소는 중앙정부와 지방정부 가 긴밀히 협력할 때 국민이 체감하는 성과 로 이어질 수 있다”라며, “이번 회의에서 논의된 현장의 의견을 적극적으로 반영해 지역별 통합돌봄 추진 기반을 강화 하고, 위기가구가 필요한 지원을 적기에 받을 수 있도록 제도개선과 현장 지원을 지속해 나가겠다”라고 밝혔다. <붙임> 통합돌봄 시·도 복지국장 회의 개요 담당 부서 보건복지부 책임자 과 장 변성미 (044-202-3590) <총괄> 통합돌봄사업과 담당자 사무관 김윤섭 (044-202-3596) 담당부서 통합돌봄정책과 책임자 과 장 정혜은 (044-202-3580) <지역계획> <전담인력> <돌봄센터> 담당자 서기관 이라향 (044-202-3581) 담당자 사무관 김희진 (044-202-3584) 담당자 사무관 이석원 (044-202-3582) 담당부서 복지정보기획과 책임자 과 장 홍화영 (044-202-3170) <복지 사각지대> 담당자 서기관 최병익 (044-202-3161) 담당부서 <기초생활보장> 기초생활보장과 책임자 과 장 김은영 (044-202-3050) 담당자 사무관 이현희 (044-202-3056) 붙임 통합돌봄 시·도 복지국장 회의 개요 □ 개요 ○ ( 일시 ) ’26. 11. 4. (수) 14:00~15:00 ○ ( 장소 ) 영상회의 (본관 1차관실 국제회의실) ○ ( 참석자 ) - (복지부) 제1차관 (주재), 통합돌봄지원관, 복지행정지원관, 복지정책관, 통합돌봄정책과장, 통합돌봄사업과장, 복지정보기획과장, 기초생활보장과장 등 - (지방정부) 16개 시·도 복지국장 ○ ( 주요내용 ) - 2027년 통합지원 지역계획 수립 안내 - 국공립 돌봄센터 수요조사 안내 - 통합돌봄 전담 조직·인력 현황 현장점검 실시 안내 - 통합돌봄 100일 계기"
+          },
+          {
+            "facet": "누가 어떤 방향으로 지역계획을 수립하며 어떤 지원을 받는가?",
+            "answer": "지방정부가 매년 수립하며 지역 여건을 진단한다. 시도는 시군구를 지원하고 전문가 110명이 맞춤형 자문을 제공한다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": "보도참고자료 보도시점 배포 후 즉시 사용 배포 2026. 11. 4.(수) 첫 통합돌봄 지역계획 수립 위한 중앙-지방 협력방안 논의 - 통합지원 지역계획 수립방향 및 전담인력 배치 현장점검 계획 논의 - - 금융 위기가구 긴급 의뢰체계 개편사항 안내 및 협조요청 - 보건복지부 (장관 정은경)는 16개 시‧도 와 올해 처음으로 수립 할 예정인 통합지원 지역계획에 대한 방향성 을 논의하고, 지방정부 통합돌봄 전담조직 및 인력 확대 를 위한 현장 점검 계획 에 협조를 요청하는 등 하반기 통합돌봄 주요 정책 추진 사항 관련 중앙-지방 간 협력 방안 을 논의하였다. 보건복지부는 11월 4일(수) 오후 2시, 현수엽 제1차관 주재 로 16개 시·도 복지국장 이 참석한 가운데 ‘통합돌봄 시·도 복지국장 회의’ 를 개최 하였다. 이번 회의에서는 ▲ 통합지원 지역계획 수립 방향 ▲ 국공립 돌봄센터 수요 조사 안내 ▲통합돌봄 전담조직 및 인력 배치현황 현장점검 계획 ▲ 통합돌봄 시행 100일 계기 현장 개선의견 및 검토 결과 등을 논의하였다. 아울러 ▲ 금융 위기가구 발굴 및 긴급의뢰체계 개선 방안 ▲ 제4차 기초생활보장 종합계획(안) 도 함께 안내하였다. 먼저, 통합지원 지역계획 수립 방향 을 안내하였다. 통합지원 지역계획은 돌봄통합지원법 제6조에 따라 지방정부가 매년 수립 하는 것으로 올해 첫 번째 계획 을 수립 할 예정이다. 이날 회의에서는 실태조사 결과와 현장 경험을 바탕으로 지역별 돌봄 여건을 진단 하고, 실질적인 개선과제를 도출 할 것을 강조하는 한편, 시군구 계획 수립 지원과 광역 차원의 지원방안 마련 등 시도의 적극적인 역할을 당부 하였다. 또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다. 이"
+          },
+          {
+            "facet": "전담조직과 인력 확보를 위한 추진 일정은 무엇인가?",
+            "answer": "신규채용·배치가 진행 중이며 11~12월 행정안전부와 합동 현장점검을 계획한다. 이는 지역계획 제출기한은 아니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " 할 것을 강조하는 한편, 시군구 계획 수립 지원과 광역 차원의 지원방안 마련 등 시도의 적극적인 역할을 당부 하였다. 또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다. 이어서 각 지방정부의 통합돌봄 전담조직 구성 및 전담인력 배치현황 을 확인 하기 위해 11~12월 중 행정안전부와 합동으로 현장점검을 실시 할 계획임 을 안내하며 시‧도에 사전점검 등의 협조를 요청하였다. 중앙정부 가 2026년 기준인건비 에 통합돌봄 전담인력 총 5,346명 을 반영 하고 신규인력 확충 예산 192억 원 (2,400명) 을 지원함에 따라, 현재 각 지방 정부 에서는 전담인력 확보를 위한 신규채용 및 배치가 진행 중 이다. 보건복지부 는 이번 현장점검 을 통해 지방정부 전담인력 배치 확대를 독려 하고 애로사항 등을 청취 하고자 한다. 아울러 통합돌봄 시행 100일 을 맞아 시행한 전국 지방정부 담당자 건의사항 수렴 결과 를 공유 하고 제도 개선방안에 대한 의견을 나눴다. 앞서 보건복지부 는 7월 6일부터 20일까지 2주간 행복이음 게시판 을 통해 지방정부 담당자를 대상으로 제도개선 의견을 수렴 하였고, 그 결과 총 72 건이 접수되었다. 주요 건의사항 으로 시군구-읍면동 간 전달체계 개선 , 전산 시스템 이용 편의 향상, 지역특화서비스 등 관련 예산 확대 등이 제기되었다. 보건복지부 는 현장의견을 고려하여 제도개선이 필요한 사항을 내년도 사업 안내 지침 및 2단계 전산시스템 구축 에 반영할 계획이다. 이와 함께 제5차 복지사각지대 발굴·조사 추진현황 을 점검 하고 금융 위기가구 긴급의뢰 체계 개편 사항 을 안내 하였다. 이번 5차 발굴 ․ 조사는 10월 19일부터 12월 11일까지 금융 위기가구 1만 7천 "
+          },
+          {
+            "facet": "주민 돌봄 개선 과제는 무엇이며 지원이 확정됐는가?",
+            "answer": "전달체계·전산 편의·지역특화서비스 예산 개선 건의를 내년도 지침과 시스템에 반영할 계획이며 개별 지원 확정은 아니다.",
+            "supported": true,
+            "source_index": 0,
+            "quote": " 할 것을 강조하는 한편, 시군구 계획 수립 지원과 광역 차원의 지원방안 마련 등 시도의 적극적인 역할을 당부 하였다. 또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다. 이어서 각 지방정부의 통합돌봄 전담조직 구성 및 전담인력 배치현황 을 확인 하기 위해 11~12월 중 행정안전부와 합동으로 현장점검을 실시 할 계획임 을 안내하며 시‧도에 사전점검 등의 협조를 요청하였다. 중앙정부 가 2026년 기준인건비 에 통합돌봄 전담인력 총 5,346명 을 반영 하고 신규인력 확충 예산 192억 원 (2,400명) 을 지원함에 따라, 현재 각 지방 정부 에서는 전담인력 확보를 위한 신규채용 및 배치가 진행 중 이다. 보건복지부 는 이번 현장점검 을 통해 지방정부 전담인력 배치 확대를 독려 하고 애로사항 등을 청취 하고자 한다. 아울러 통합돌봄 시행 100일 을 맞아 시행한 전국 지방정부 담당자 건의사항 수렴 결과 를 공유 하고 제도 개선방안에 대한 의견을 나눴다. 앞서 보건복지부 는 7월 6일부터 20일까지 2주간 행복이음 게시판 을 통해 지방정부 담당자를 대상으로 제도개선 의견을 수렴 하였고, 그 결과 총 72 건이 접수되었다. 주요 건의사항 으로 시군구-읍면동 간 전달체계 개선 , 전산 시스템 이용 편의 향상, 지역특화서비스 등 관련 예산 확대 등이 제기되었다. 보건복지부 는 현장의견을 고려하여 제도개선이 필요한 사항을 내년도 사업 안내 지침 및 2단계 전산시스템 구축 에 반영할 계획이다. 이와 함께 제5차 복지사각지대 발굴·조사 추진현황 을 점검 하고 금융 위기가구 긴급의뢰 체계 개편 사항 을 안내 하였다. 이번 5차 발굴 ․ 조사는 10월 19일부터 12월 11일까지 금융 위기가구 1만 7천 "
+          }
+        ],
+        "current_relevance": {
+          "kind": "unknown",
+          "source_index": 0,
+          "quote": " 할 것을 강조하는 한편, 시군구 계획 수립 지원과 광역 차원의 지원방안 마련 등 시도의 적극적인 역할을 당부 하였다. 또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다. 이어서 각 지방정부의 통합돌봄 전담조직 구성 및 전담인력 배치현황 을 확인 하기 위해 11~12월 중 행정안전부와 합동으로 현장점검을 실시 할 계획임 을 안내하며 시‧도에 사전점검 등의 협조를 요청하였다. 중앙정부 가 2026년 기준인건비 에 통합돌봄 전담인력 총 5,346명 을 반영 하고 신규인력 확충 예산 192억 원 (2,400명) 을 지원함에 따라, 현재 각 지방 정부 에서는 전담인력 확보를 위한 신규채용 및 배치가 진행 중 이다. 보건복지부 는 이번 현장점검 을 통해 지방정부 전담인력 배치 확대를 독려 하고 애로사항 등을 청취 하고자 한다. 아울러 통합돌봄 시행 100일 을 맞아 시행한 전국 지방정부 담당자 건의사항 수렴 결과 를 공유 하고 제도 개선방안에 대한 의견을 나눴다. 앞서 보건복지부 는 7월 6일부터 20일까지 2주간 행복이음 게시판 을 통해 지방정부 담당자를 대상으로 제도개선 의견을 수렴 하였고, 그 결과 총 72 건이 접수되었다. 주요 건의사항 으로 시군구-읍면동 간 전달체계 개선 , 전산 시스템 이용 편의 향상, 지역특화서비스 등 관련 예산 확대 등이 제기되었다. 보건복지부 는 현장의견을 고려하여 제도개선이 필요한 사항을 내년도 사업 안내 지침 및 2단계 전산시스템 구축 에 반영할 계획이다. 이와 함께 제5차 복지사각지대 발굴·조사 추진현황 을 점검 하고 금융 위기가구 긴급의뢰 체계 개편 사항 을 안내 하였다. 이번 5차 발굴 ․ 조사는 10월 19일부터 12월 11일까지 금융 위기가구 1만 7천 ",
+          "event_start": null,
+          "event_end": null,
+          "date_quote": null
+        }
+      }
+    },
+    "latest_issue_evidence": {
+      "version": 1,
+      "checked_at": "2026-11-04T20:59:00.390741+09:00",
+      "window_start": "2026-11-03T00:00:00+09:00",
+      "input_sha256": "7ad58628ce062bbfafbdd76ddd8960cb13eaacf7cb5c321d4db7f049cc7a3269",
+      "review": {
+        "is_new_event": true,
+        "topic_is_about_event": true,
+        "scope": "full_topic",
+        "event_kind": "announcement",
+        "event_date": "2026-11-04",
+        "source_index": 0,
+        "date_quote": "2026-11-04T14:04:32+09:00",
+        "event_quote": "또한, 보건복지부와 중앙사회서비스원 이 지역계획 전문가 (컨설턴트) 110명을 양성하여 추진하는 1:1 맞춤형 자문 (컨설팅) 계획을 공유하였다."
       }
     },
     "score_components": {

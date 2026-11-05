@@ -1111,7 +1111,9 @@
       "category": "생활정보",
       "slot": "evening",
       "claimed_at": "2026-11-05T18:00:13.945853+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-11-05T09:09:15.489230+00:00",
+      "published_category": "생활정보"
     }
   }
 }

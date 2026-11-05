@@ -51379,7 +51379,7 @@
     "keywords": [
       "2027년 통합지원 지역계획"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-11-04T11:59:00.390741+00:00",
@@ -51457,7 +51457,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2094,
+    "url": "https://trendpulse.blog/integrated-care-regional-plan/",
+    "post_status": "publish",
+    "completed_at": "2026-11-05T09:09:11.631176"
   },
   {
     "keyword": "설문조사만들기",

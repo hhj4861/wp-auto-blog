@@ -1481,5 +1481,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-11-05T00:08:17.405511+00:00"
+  },
+  {
+    "key": "통합지원지역계획",
+    "keyword": "2027년 통합지원 지역계획",
+    "topic": "2027년 통합지원 지역계획, 11월 4일 발표한 수립 방향과 지역 돌봄 개선 과제",
+    "category": "생활정보",
+    "post_id": 2094,
+    "url": "https://trendpulse.blog/integrated-care-regional-plan/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-05T09:09:10.479995+00:00"
   }
 ]

@@ -1462,5 +1462,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-11-04T09:08:45.825423+00:00"
+  },
+  {
+    "key": "ai기반통합인허가사전진단서비스",
+    "keyword": "AI 기반 통합인허가 사전진단 서비스",
+    "topic": "AI 기반 통합인허가 사전진단 서비스 첫 공개, 2027년 시범운영 지역과 일정",
+    "category": "생활정보",
+    "post_id": 2091,
+    "url": "https://trendpulse.blog/ai-permit-pilot-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-05T00:08:17.405511+00:00"
   }
 ]

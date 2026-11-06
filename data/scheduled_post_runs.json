@@ -1137,7 +1137,9 @@
       "category": "취업",
       "slot": "evening",
       "claimed_at": "2026-11-06T18:00:14.539438+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-11-06T09:07:47.379542+00:00",
+      "published_category": "취업"
     }
   }
 }

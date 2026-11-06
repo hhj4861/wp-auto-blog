@@ -52849,7 +52849,7 @@
     "keywords": [
       "연말정산간소화"
     ],
-    "status": "pending",
+    "status": "held_draft",
     "decision_diagnostics": {
       "official_sources": [
         {
@@ -53093,7 +53093,11 @@
     },
     "score": 69.18,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2097,
+    "url": "https://trendpulse.blog/?p=2097",
+    "post_status": "draft",
+    "held_at": "2026-11-06T00:11:40.713725"
   },
   {
     "keyword": "안전관리자자격증",

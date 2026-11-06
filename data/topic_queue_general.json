@@ -53478,7 +53478,7 @@
     "keywords": [
       "부산경남서부권역본부 기간제근로자 채용 공고"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-11-06T01:57:54.474320+00:00",
@@ -53549,7 +53549,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2100,
+    "url": "https://trendpulse.blog/busan-gyeongnam-recruitment-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-11-06T09:07:43.161403"
   },
   {
     "keyword": "「땀에서 명장까지」 직업탐색 특강",

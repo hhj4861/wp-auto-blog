@@ -1500,5 +1500,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-11-05T09:09:10.479995+00:00"
+  },
+  {
+    "key": "부산경남서부권역본부기간제근로자채용공고",
+    "keyword": "부산경남서부권역본부 기간제근로자 채용 공고",
+    "topic": "부산경남서부권역본부 기간제근로자 채용 공고: 11월 6일 발표, 수납원 44명 지원 조건과 일정",
+    "category": "취업",
+    "post_id": 2100,
+    "url": "https://trendpulse.blog/busan-gyeongnam-recruitment-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-06T09:07:42.319614+00:00"
   }
 ]

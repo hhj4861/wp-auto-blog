@@ -1538,5 +1538,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-11-07T00:04:42.820201+00:00"
+  },
+  {
+    "key": "한국장기이식연구단공동기자간담회심포지엄",
+    "keyword": "한국장기이식연구단 공동 기자간담회·심포지엄",
+    "topic": "한국장기이식연구단 공동 기자간담회·심포지엄: 11월 6일 공개한 연구성과와 향후 방향",
+    "category": "건강",
+    "post_id": 2106,
+    "url": "https://trendpulse.blog/transplant-research-symposium-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 20,
+    "score_components": {
+      "latest_issue": 5,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-07T09:10:05.347831+00:00"
   }
 ]

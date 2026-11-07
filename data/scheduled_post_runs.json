@@ -1163,7 +1163,9 @@
       "category": "건강",
       "slot": "evening",
       "claimed_at": "2026-11-07T18:00:11.107143+09:00",
-      "status": "started"
+      "status": "success",
+      "completed_at": "2026-11-07T09:10:10.200010+00:00",
+      "published_category": "건강"
     }
   }
 }

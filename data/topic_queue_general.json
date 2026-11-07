@@ -53718,7 +53718,7 @@
     "keywords": [
       "에이전틱 AI 제로트러스트 안내서"
     ],
-    "status": "pending",
+    "status": "completed",
     "suitability_evidence": {
       "version": 1,
       "checked_at": "2026-11-06T02:01:10.069661+00:00",
@@ -53789,7 +53789,11 @@
     },
     "score": 25,
     "publish_eligible": true,
-    "hold_reasons": []
+    "hold_reasons": [],
+    "post_id": 2103,
+    "url": "https://trendpulse.blog/agentic-ai-zero-trust-2026/",
+    "post_status": "publish",
+    "completed_at": "2026-11-07T00:04:44.012975"
   },
   {
     "keyword": "고혈압낮추는방법",

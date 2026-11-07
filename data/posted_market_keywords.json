@@ -1519,5 +1519,24 @@
     "demand_provider": null,
     "youtube_discovery": null,
     "published_at": "2026-11-06T09:07:42.319614+00:00"
+  },
+  {
+    "key": "에이전틱ai제로트러스트안내서",
+    "keyword": "에이전틱 AI 제로트러스트 안내서",
+    "topic": "에이전틱 AI 제로트러스트 안내서 발간: 기업이 알아야 할 행위 검증과 권한 통제",
+    "category": "테크",
+    "post_id": 2103,
+    "url": "https://trendpulse.blog/agentic-ai-zero-trust-2026/",
+    "selection_version": 8,
+    "monthly_search": null,
+    "score": 25,
+    "score_components": {
+      "latest_issue": 10,
+      "intent_fit": 15
+    },
+    "trend_status": "not_applicable",
+    "demand_provider": null,
+    "youtube_discovery": null,
+    "published_at": "2026-11-07T00:04:42.820201+00:00"
   }
 ]
